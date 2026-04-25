@@ -143,3 +143,46 @@ USDC.e remaining: $5.05 (cash buffer, ~7% of bankroll). POL: 53.81 (gas reserve)
 **Decision: hold all 9 positions.** Nothing has moved >5% from entry. Cash buffer breach ($5.05 vs. $7 target) is documented and will rebuild on first resolution (Acton, May 5). No new orders this tick.
 
 **Cron design note.** This is the inaugural cron-driven check-in (the operator wired up `scripts/daily_checkin.sh` after the kickoff session). The script lives in scripts/ and is intentionally not auto-committed; will commit it this run after a quick read-through. Going forward each cron tick produces one journal entry of this shape.
+
+---
+
+## 2026-04-25 ~16:46 UTC — Day 1 cron tick #2: S1 moved +5.2%, thesis confirmed, no action
+
+**State.** USDC.e $5.05, POL 53.81. Nine positions intact. Total cost $64.95, MTM $64.94, unrealised P&L **-$0.01 (-0.02%)** — fully recovered from the spread snap-back of one hour ago (-$0.34 then). No trades executed.
+
+**Position deltas vs. previous tick (T-1h):**
+- **S1 (US-Iran peace deal NO)** mark 0.665 → **0.705**, +5.22% on cost (+$0.37 MTM). YES leg dropped from 33% → 29.5%. **>5% threshold tripped — explanation below.**
+- L5 (Iran-regime falls) mark 0.795 → 0.785, -1.87% on cost. YES leg drifted up ~1¢. Within noise; correlated with the same Iran news flow.
+- All other positions ±0.5¢ from prior tick (book noise).
+
+**News scan (catalyst-bounded):**
+
+*Iran/US (drives S1, L2, L5).* Big move on the actual catalyst: Iran FM Araghchi **left Islamabad** today after waiting for the US delegation; Trump then **cancelled the planned Witkoff/Kushner trip** to Pakistan. Iran's MFA also called the truce extension "meaningless" and reiterated that the delegation will not return until the blockade is lifted. This is exactly the directional update I priced into S1 at entry — talks are visibly stalling, not progressing. The market noticed: S1 NO repriced from 0.67 → 0.705. Long-sleeve Iran cluster (L2, L5) barely moved because the *2027* horizon dilutes any single-week peace-deal print. Background: previously confirmed Ali Khamenei was killed in late February 2026 in an Israeli strike; son Mojtaba Khamenei selected Supreme Leader in March, severely injured (multiple surgeries, not seen publicly), with IRGC generals effectively running policy. This is the structural story behind why a near-term peace deal is hard — there is no unified Iranian principal to sign it. Reinforces L5 (regime survives 2027 because it has already absorbed succession + war shock and held) and L2 (Pahlavi has no on-the-ground apparatus to step into this vacuum).
+
+*Trump health (drives L4).* NAACP joined the 25th-Amendment chorus; House Dems filed a commission bill (Raskin); WH pushed back with "MRI normal, cognitive test normal." All political theater — the structural path (R Senate, R Cabinet, VP cooperation required) remains closed. Mark 0.835, unchanged. No action.
+
+*UAP/aliens (L3).* No AARO release, no scheduled press event. Mark 0.795 unchanged. No action.
+
+*Eurovision 2026 / Latvia (S2).* Bookmaker check: Latvia is "best Baltic" but failing to improve qualification odds in the run-up. Confirms the top-10 NO thesis. Rehearsal-week reviews still ~2 weeks out. No action.
+
+*Ohio Dem primary / Acton (S4).* Confirmed: Acton is the **lone Democrat** on the May-5 ballot. Cash-equivalent carry continues; will resolve in 10 days. No action.
+
+*La Liga (S3).* No matchweek today, no scandal flow. No action.
+
+**Decision: hold all 9 positions.**
+
+The S1 +5.2% move is *thesis-confirming* news, not a reason to take profit. Fair value YES is ~10%; market is now 29.5%, still ~19c rich relative to my model. Keeping the position is correct.
+
+**Tempted to add to S1?** Ran the math: short-sleeve cap is $7/ticket and $7/cluster against the $23.33 sleeve target. S1 is already at $7 (cap). Even ignoring the cap, cash buffer is $5.05 (already short of the $7 target); deploying more thins the buffer further when S4 ($5) doesn't free up cash for another 10 days. Per the *no-unrewarded-risk* principle, the right move is to wait — the EV is good but the marginal Kelly/4 size at the current edge is ≈ $1.50, below Polymarket's $5 floor anyway. Hold.
+
+**Weekly report status.** Today is Saturday 2026-04-25. The Week-0 verbose report was written at the previous tick (~1 hour ago); writing a second Week-0 entry on the same day would be duplicative. Next weekly entry will be Saturday 2026-05-02 (Week 1, full trailing-7-day window).
+
+**Sources:**
+- [Iran FM departs Pakistan; Trump cancels Kushner/Witkoff trip (NPR, Apr 25)](https://www.npr.org/2026/04/25/nx-s1-5799372/iran-middle-east-updates)
+- [Iran war live: Trump cancels Witkoff and Kushner trip (Al Jazeera, Apr 25)](https://www.aljazeera.com/news/liveblog/2026/4/25/iran-war-live-tehrans-fm-in-islamabad-us-says-envoys-to-travel-for-talks)
+- [Iran calls truce extension "meaningless" (CNN, Apr 25)](https://www.cnn.com/2026/04/25/world/live-news/iran-war-israel-pakistan-talks)
+- [Iran's new supreme leader nowhere to be seen — may help regime survive (CNN, Apr 21)](https://www.cnn.com/2026/04/21/middleeast/iran-supreme-leader-intl)
+- [Mojtaba Khamenei health status (IBTimes UK)](https://www.ibtimes.co.uk/mojtaba-khamenei-health-crisis-impact-iran-leadership-1793357)
+- [NAACP calls for 25A invocation against Trump](https://naacp.org/articles/unprecedented-first-naacp-calls-president-trump-be-removed-office-under-25th-amendment)
+- [Acton lone Dem on May 5 Ohio ballot (WKYC)](https://www.wkyc.com/article/news/politics/elections/ohio-gubernatorial-race-vivek-ramaswamy-dr-amy-acton-may-5-primary-election-gop-democratic-nominations/95-f031b818-7c3a-4518-8235-94bdae633ac5)
+- [Eurovision 2026 betting odds — one month out (Eurovisionfun, Apr 2026)](https://eurovisionfun.com/en/2026/04/betting-odds-one-month-before-the-eurovision-2026-grand-final/)
