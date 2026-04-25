@@ -75,6 +75,8 @@ cd "${POLYCLAUDE_DIR}"
   pwd
   echo "$ claude -p (headless)"
   echo "${PROMPT}" | claude -p \
+    --model opus \
+    --effort max \
     --permission-mode acceptEdits \
     --allowed-tools "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,TaskCreate,TaskUpdate,TaskList" \
     2>&1
