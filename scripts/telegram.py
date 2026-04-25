@@ -25,7 +25,7 @@ from pathlib import Path
 
 import httpx
 
-TOKEN_PATH = Path("<HOME>/telegram_token.txt")
+TOKEN_PATH = Path("<SECRETS>/telegram_token.txt")
 STATE_PATH = Path("<HOME>/.polyclaude_telegram.json")
 API = "https://api.telegram.org"
 TEXT_CHUNK = 3500  # < 4096 Telegram limit, leaves room for markdown formatting

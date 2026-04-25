@@ -42,7 +42,7 @@ from web3 import Web3
 # ----- constants ----------------------------------------------------------------
 
 WALLET_PATH = Path("<SECRETS>/wallet.json")
-CREDS_PATH = Path("<HOME>/.polyclaude_creds.json")  # outside the repo
+CREDS_PATH = Path("<SECRETS>/polyclaude_creds.json")  # outside the repo
 
 CHAIN_ID = 137
 CLOB_HOST = "https://clob.polymarket.com"
