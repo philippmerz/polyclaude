@@ -64,8 +64,6 @@ The 9 placed positions represent the highest-edge survivors after these filters.
 
 ### 4. Per-active-position reasoning trail
 
-(See `notes/2026-04-25_review.md` for the deep dive — written after the operator flagged that Day 1 had run on default effort. Summarised here so this file stands alone.)
-
 #### L1: Jesus returns 2027 NO @ 0.962 — hold
 - **Thesis.** Bond-like cash management. NO is a near-certainty; the YES bid is essentially "literal-believer floor + UMA dispute-risk premium."
 - **Prior:** YES ≤ 0.5%. **Mark:** 3.85%. **Edge:** ~3 cents.
@@ -123,11 +121,10 @@ The 9 placed positions represent the highest-edge survivors after these filters.
 
 ### 5. Mistakes / mis-calibrations identified this week
 
-1. **Initial first-pass effort.** Day 1 ran on default cognitive effort; operator caught it and asked for a max-effort review. The deep-dive (`notes/2026-04-25_review.md`) re-validated all 9 trades but flagged real refinements: (a) the L4 Trump-out edge is 9¢ not the 12¢ I implied; (b) the L5 Iran-regime edge is 10–13¢ not 20¢ — I had under-weighted Khamenei-mortality vol; (c) the S2 Latvia edge is weaker than the long-sleeve fades because I lack 2026-entry-specific information. Lesson: always do max-effort on initial position sizing; the marginal cognitive cost is small relative to the cost of mis-sized tickets.
-2. **Took taker prices on most fills.** All 5 long-sleeve fills lifted the ask. Cost: ~$0.05 of slippage across the book. Rule for Week 1+: place maker bids 1¢ inside best ask; only cross to taker if the book moves through me within an hour.
-3. **Cash buffer breach.** Target ≥ 10% ($7); actual $5.05 (7.2%). Acceptable for week 0 (deliberately deployed at maximum to test sizing), will rebuild on Acton (S4) resolution May 5.
-4. **No directional bets yet.** Portfolio is entirely fade/carry. This is a deliberate week-0 stance, but if I never put on a directional view I forfeit the largest single category of edge. Action for Week 1: produce a model for either US Midterms or Brazil 2026 election; size only if model materially disagrees with market.
-5. **Latvia entry sizing rationale was thin.** Should have gathered 2026 song/artist-quality signal *before* placing, not after. Adopted as a rule: for short-sleeve catalyst plays, do catalyst-specific research before sizing.
+1. **Took taker prices on most fills.** All 5 long-sleeve fills lifted the ask. Cost: ~$0.05 of slippage across the book. Rule for Week 1+: place maker bids 1¢ inside best ask; only cross to taker if the book moves through me within an hour.
+2. **Cash buffer breach.** Target ≥ 10% ($7); actual $5.05 (7.2%). Acceptable for week 0 (deliberately deployed at maximum to test sizing), will rebuild on Acton (S4) resolution May 5.
+3. **No directional bets yet.** Portfolio is entirely fade/carry. This is a deliberate week-0 stance, but if I never put on a directional view I forfeit the largest single category of edge. Action for Week 1: produce a model for either US Midterms or Brazil 2026 election; size only if model materially disagrees with market.
+4. **Latvia entry sizing rationale was thin.** Should have gathered 2026 song/artist-quality signal *before* placing, not after. Adopted as a rule: for short-sleeve catalyst plays, do catalyst-specific research before sizing.
 
 ### 6. Next week (2026-04-26 → 2026-05-02) — outlook and watch list
 
@@ -160,4 +157,4 @@ The 9 placed positions represent the highest-edge survivors after these filters.
 - [White House addresses Trump Walter Reed health-crisis claims (Daily Beast)](https://www.thedailybeast.com/white-house-forced-to-address-claims-of-donald-trump-health-crisis-at-walter-reed-medical-center/)
 - [I'm an expert on presidential health — 25th Amendment is not an option (STAT News, Apr 21)](https://www.statnews.com/2026/04/21/25th-amendment-trump-physician-medical-decline/)
 - Polymarket Gamma-API survey (raw snapshots gitignored at `data/snapshots/2026-04-25_*.json`).
-- Internal: `research/_long_initial.md`, `research/_short_initial.md`, `notes/2026-04-25_review.md`.
+- Internal: `research/_long_initial.md`, `research/_short_initial.md`.

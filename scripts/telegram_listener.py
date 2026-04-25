@@ -151,8 +151,9 @@ def cmd_start(_args: argparse.Namespace) -> int:
                 state["last_update_id"] = uid
                 continue
             print(f"recv update {uid}: {text[:120]!r}", flush=True)
+            tagged = f"telegram: {text}"
             try:
-                _send_keys(pane, text)
+                _send_keys(pane, tagged)
                 state["last_update_id"] = uid  # only advance on success
                 _save_state(state)
             except (subprocess.CalledProcessError, RuntimeError) as e:

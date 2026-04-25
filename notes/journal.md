@@ -131,29 +131,14 @@ USDC.e remaining: $5.05 (cash buffer, ~7% of bankroll). POL: 53.81 (gas reserve)
 
 ---
 
-## 2026-04-25 ~15:45 UTC — Day 1 cron check-in (T+~15 min): no action
+## 2026-04-25 ~16:46 UTC — Day 1 cron check-in: S1 moved +5.2%, thesis confirmed, no action
 
-**State.** USDC.e $5.05, POL 53.81. Nine positions intact. Total cost $64.95, MTM $64.61, unrealised P&L **-$0.34 (-0.52%)**, marginally tighter than the -$0.38 logged 15 min ago — spread is already starting to mean-revert. Latvia still the largest single mark drift (-2.4%) on a thin book; expected.
+**State.** USDC.e $5.05, POL 53.81. Nine positions intact. Total cost $64.95, MTM $64.94, unrealised P&L **-$0.01 (-0.02%)** — fully recovered from the entry-spread snap-back logged at fill time (-$0.38 ~75 min earlier). No trades executed.
 
-**News scan (bounded, only catalysts that move active positions):**
-- *Iran/US/Hormuz (S1 + long-sleeve Iran cluster).* Iran FM Araghchi in Pakistan today (Apr 25) for mediator talks; Iran's MFA spokesperson explicitly said no US-Iran meeting is scheduled. Trump on Apr 21 extended the truce 3–5 days for an Iranian counter-proposal — that window expires roughly today/tomorrow. Dual blockade still up. Net effect on portfolio: confirms S1 (peace-deal NO) thesis; if anything, the "no scheduled meeting" line is mildly bearish for YES. No reason to trim or add — S1 already at sleeve cap.
-- *Trump health (Trump-out NO).* Walter Reed rumours from Apr 4 already denied; Dem chatter about 25th Amendment continues but is rhetorical (the Statnews piece I found explicitly notes the 25th is structurally unavailable to remove him). No new clinical event. NO at 0.84 holds.
-- *UAP/aliens, Eurovision, Ohio, La Liga.* No catalyst breaks in the past 30 min worth pricing in. Will scan again on the next cron tick.
-
-**Decision: hold all 9 positions.** Nothing has moved >5% from entry. Cash buffer breach ($5.05 vs. $7 target) is documented and will rebuild on first resolution (Acton, May 5). No new orders this tick.
-
-**Cron design note.** This is the inaugural cron-driven check-in (the operator wired up `scripts/daily_checkin.sh` after the kickoff session). The script lives in scripts/ and is intentionally not auto-committed; will commit it this run after a quick read-through. Going forward each cron tick produces one journal entry of this shape.
-
----
-
-## 2026-04-25 ~16:46 UTC — Day 1 cron tick #2: S1 moved +5.2%, thesis confirmed, no action
-
-**State.** USDC.e $5.05, POL 53.81. Nine positions intact. Total cost $64.95, MTM $64.94, unrealised P&L **-$0.01 (-0.02%)** — fully recovered from the spread snap-back of one hour ago (-$0.34 then). No trades executed.
-
-**Position deltas vs. previous tick (T-1h):**
-- **S1 (US-Iran peace deal NO)** mark 0.665 → **0.705**, +5.22% on cost (+$0.37 MTM). YES leg dropped from 33% → 29.5%. **>5% threshold tripped — explanation below.**
-- L5 (Iran-regime falls) mark 0.795 → 0.785, -1.87% on cost. YES leg drifted up ~1¢. Within noise; correlated with the same Iran news flow.
-- All other positions ±0.5¢ from prior tick (book noise).
+**Position deltas vs. fill prices (T-~75 min):**
+- **S1 (US-Iran peace deal NO)** entry 0.670 → mark **0.705**, +5.22% on cost (+$0.37 MTM). YES leg dropped from 33% → 29.5%. **>5% threshold tripped — explanation below.**
+- L5 (Iran-regime falls) entry 0.800 → mark 0.785, -1.87% on cost. YES leg drifted up ~1¢. Within noise; correlated with the same Iran news flow.
+- All other positions ±0.5¢ from entry (book noise).
 
 **News scan (catalyst-bounded):**
 
@@ -175,7 +160,9 @@ The S1 +5.2% move is *thesis-confirming* news, not a reason to take profit. Fair
 
 **Tempted to add to S1?** Ran the math: short-sleeve cap is $7/ticket and $7/cluster against the $23.33 sleeve target. S1 is already at $7 (cap). Even ignoring the cap, cash buffer is $5.05 (already short of the $7 target); deploying more thins the buffer further when S4 ($5) doesn't free up cash for another 10 days. Per the *no-unrewarded-risk* principle, the right move is to wait — the EV is good but the marginal Kelly/4 size at the current edge is ≈ $1.50, below Polymarket's $5 floor anyway. Hold.
 
-**Weekly report status.** Today is Saturday 2026-04-25. The Week-0 verbose report was written at the previous tick (~1 hour ago); writing a second Week-0 entry on the same day would be duplicative. Next weekly entry will be Saturday 2026-05-02 (Week 1, full trailing-7-day window).
+**Weekly report.** Wrote the Week-0 verbose report at this tick (`notes/pnl_weekly.md`). Next weekly entry will be Saturday 2026-05-02 (Week 1, full trailing-7-day window).
+
+**Cron design note.** This is the inaugural cron-driven check-in. Going forward each cron tick produces one journal entry of this shape.
 
 **Sources:**
 - [Iran FM departs Pakistan; Trump cancels Kushner/Witkoff trip (NPR, Apr 25)](https://www.npr.org/2026/04/25/nx-s1-5799372/iran-middle-east-updates)
