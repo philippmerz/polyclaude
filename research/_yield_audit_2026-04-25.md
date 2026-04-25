@@ -68,7 +68,12 @@ The user's "anything that fits into the project" is broader than yield. Quick su
 3. **PredictIt**. US-regulated, $850/market cap, requires US identity. Not viable.
 4. **Augur / Omen / Zeitgeist**. Historically interesting decentralised prediction markets; in 2026 most have ≪ Polymarket liquidity and worse resolution-source quality. **Pass.**
 5. **Hyperliquid / dYdX / GMX (perps)**. Could express directional macro views (oil futures for Iran thesis, SPX for general stress, BTC for crypto regime) with leverage. Higher capital efficiency than Polymarket binary tokens. *Real concern:* liquidation risk, especially with a $70 bankroll where a $5 ticket at 5× leverage is one bad move from -100% on the leg. **Defer until I have either (a) a directional view I can't express on Polymarket, or (b) bankroll ≥ $500 so a $20 unleveraged or 2× leveraged position is meaningful.**
-6. **Crypto options (Lyra, Aevo, Premia)**. Could buy cheap OTM puts/calls as tail hedges. Same scale-economy story as perps; defer.
+6. **Ostium** (operator-flagged 2026-04-25). RWA perps on Arbitrum: stocks, commodities (gold, silver, copper, crude oil), indices (S&P/Nikkei/Dow), FX. Up to 200× leverage (asset-dependent), USDC collateral on Arbitrum, **$5 minimum position size** (genuinely retail-accessible at our scale), 2 audits done, $56M TVL per DefiLlama. Mechanically usable today. *Two real frictions at $70 bankroll:*
+   - **Bridge overhead.** Our wallet is on Polygon (USDC.e); Ostium needs USDC on Arbitrum. Polygon→Arbitrum via Across or Stargate is ~0.05–0.2% + $0.20–0.50 of L2 gas. On a $5–10 deployment that's 3–6% overhead before the trade — eats most of the edge unless the position is held long enough for funding/PnL to dwarf it.
+   - **Thesis overlap.** The most natural Ostium trade given our analyst stance is *long crude oil* on the continued-Iran-tension view. But that's the *exact same factor* that drives our S1 (Iran-peace NO), S5 (Iran-regime NO), and L2 (Pahlavi NO) Polymarket positions. Adding oil long would compound the Iran-cluster exposure past the 30% cluster cap. The same logic kills *short oil* (peace deal) — that's just a hedge against my own book.
+   - **Where Ostium would actually shine:** a directional macro view I can't cleanly express on Polymarket (e.g., a USD/EUR view, a specific gold-level-by-date that Polymarket doesn't list, an SPX path with continuous payoff that beats the closest Polymarket binary's R/R). I don't have one of those today.
+
+7. **Crypto options (Lyra, Aevo, Premia)**. Could buy cheap OTM puts/calls as tail hedges. Same scale-economy story as perps; defer.
 
 ## Recommendation
 
@@ -76,8 +81,9 @@ The user's "anything that fits into the project" is broader than yield. Quick su
 
 **Trigger conditions for revisiting** (write into the journal so future ticks know to re-evaluate):
 - Bankroll ≥ **$500** → activate Aave / BUIDL allocation for genuinely-idle capital between Polymarket trades.
+- Bankroll ≥ **$200–300** → bridge cost to Arbitrum becomes negligible (≤1%); Ostium becomes usable for any directional view that has no Polymarket counterpart, even at small ticket sizes.
 - Bankroll ≥ **$2,000** → consider a small Hyperliquid sleeve for directional macro views (Iran/oil/SPX) that don't have a liquid Polymarket expression.
-- New high-conviction directional macro thesis with no Polymarket counterpart → consider a one-off perps entry even at smaller size, sized so that a 100% loss is < 5% of bankroll.
+- New high-conviction directional macro thesis with no Polymarket counterpart → consider a one-off Ostium / perps entry even at smaller size, sized so that a 100% loss is < 5% of bankroll. Ostium's $5 minimum makes this structurally accessible; only the bridge-overhead is the gating factor.
 - POL price >> current and idle POL balance > $50 of yield-eligible value → evaluate native staking with non-essential POL.
 
 ## Sources
@@ -87,3 +93,6 @@ The user's "anything that fits into the project" is broader than yield. Quick su
 - [Polygon staking — Everstake calculator](https://everstake.one/staking/polygon)
 - [BlackRock BUIDL (tokenized T-bill) on Polygon — DefiLlama page](https://defillama.com/protocol/blackrock-buidl)
 - [Pendle finance — fixed-yield AMM](https://app.pendle.finance/)
+- [Ostium Labs (RWA perps on Arbitrum)](https://www.ostium.com/)
+- [Ostium documentation](https://ostium-labs.gitbook.io/ostium-docs)
+- [Ostium TVL — DefiLlama](https://defillama.com/protocol/ostium)
