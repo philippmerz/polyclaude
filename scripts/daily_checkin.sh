@@ -1,8 +1,10 @@
 #!/bin/bash
-# Polyclaude daily check-in.
-# Invoked by cron. Each run is a fresh headless Claude session that loads context
-# from polyclaude/ + memory, monitors positions, scans news, journals, and trades
-# if conviction warrants it.
+# Polyclaude check-in driver.
+# Invoked by cron. Forks a headless session from the operator's interactive
+# Claude (so the tick inherits full conversation context) and asks it to do
+# its scheduled check-in. Token-heavier than a fresh primer-only session, but
+# avoids the prompt-engineering trap and keeps the cron Claude in lockstep
+# with the live thread.
 
 set -euo pipefail
 
@@ -17,42 +19,36 @@ LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export HOME="<HOME>"
 
-# Cron-driver prompt. Goal-only, minimal directive style — the operator wants
-# Claude Opus to think for itself, not follow a checklist. Use your judgment.
+# Session to fork from. The interactive Claude lives in <HOME>'s project
+# scope; this id was captured when the project began and is updated only when
+# the operator starts a new conversation thread.
+SESSION_ID=$(cat <SECRETS>/polyclaude_session.txt 2>/dev/null | tr -d '[:space:]')
+
+# Cron prompt — short, since this is a forked-resume session and inherits all
+# prior context (PRIMER, philosophy, current portfolio, ongoing decisions).
 read -r -d '' PROMPT <<'EOF' || true
-You are continuing the polyclaude project — autonomous Polymarket trading on a Linux VM.
-Goal: maximize return on the bankroll, constrained by what's legal and inside the budget.
-
-This is a fresh session triggered by cron. The operator may not be watching.
-Secrets live in <SECRETS>/ (wallet.json, telegram_token.txt) — outside the repo, never commit.
-Repo: <PROJECT> (public GitHub). Python venv: ./.venv.
-
-Read polyclaude/PRIMER.md first — that's the operator's founding charter. Then load
-MEMORY.md (and linked files), polyclaude/strategy/, tail of polyclaude/notes/journal.md,
-polyclaude/research/, polyclaude/questions.md. Mark state via scripts/positions.py
-and scripts/wallet_status.py.
-
-Tools you have for outbound contact: scripts/telegram.py {msg,file,md} sends to the
-operator's Telegram. Use it when something material happens — your judgment on what
-counts as material. For weekly reports / longer artifacts, a GitHub permalink to the
-just-pushed file (https://github.com/philippmerz/polyclaude/blob/main/notes/...) in
-a Telegram message renders nicely on click-through.
-
-Exercise judgment: monitor, research, trade, journal, write the weekly report when
-it's due, answer questions, surface anything blocking. Append to the journal — never
-rewrite history. Audit every commit diff for secrets before `git push`. If it's a
-quiet day with no real news and no real moves, a one-line "stable, no action" entry
-is the right answer.
+Cron tick. Do your scheduled polyclaude check-in: mark portfolio + wallet state, scan
+for catalysts on active positions, decide hold/adjust/add/close, journal the result,
+write a weekly report if it's been ~7 days since the last one, commit + push (audit
+secrets in the diff first), and ping the operator on Telegram if anything material
+moved. Brief if nothing happened.
 EOF
 
-cd "${POLYCLAUDE_DIR}"
+# Run from <HOME> so claude sees the right project scope for --resume.
+cd <HOME>
 
 {
   echo "=== polyclaude daily check-in ${TS} ==="
-  echo "$ pwd"
-  pwd
-  echo "$ claude -p (headless)"
+  echo "$ pwd"; pwd
+  echo "$ session=${SESSION_ID}"
+  echo "$ claude -p --resume \${SESSION_ID} --fork-session (headless)"
+  if [ -z "${SESSION_ID}" ]; then
+    echo "ERROR: no session id at <SECRETS>/polyclaude_session.txt; cannot fork-resume"
+    exit 2
+  fi
   echo "${PROMPT}" | claude -p \
+    --resume "${SESSION_ID}" \
+    --fork-session \
     --model opus \
     --effort max \
     --permission-mode acceptEdits \
