@@ -173,3 +173,17 @@ The S1 +5.2% move is *thesis-confirming* news, not a reason to take profit. Fair
 - [NAACP calls for 25A invocation against Trump](https://naacp.org/articles/unprecedented-first-naacp-calls-president-trump-be-removed-office-under-25th-amendment)
 - [Acton lone Dem on May 5 Ohio ballot (WKYC)](https://www.wkyc.com/article/news/politics/elections/ohio-gubernatorial-race-vivek-ramaswamy-dr-amy-acton-may-5-primary-election-gop-democratic-nominations/95-f031b818-7c3a-4518-8235-94bdae633ac5)
 - [Eurovision 2026 betting odds — one month out (Eurovisionfun, Apr 2026)](https://eurovisionfun.com/en/2026/04/betting-odds-one-month-before-the-eurovision-2026-grand-final/)
+
+---
+
+## 2026-04-25 ~20:40 UTC — Non-Polymarket yield + venue audit (operator-prompted)
+
+Operator asked via Telegram whether the lower-yield slices of the book might be better placed in DeFi staking / Aave-style lending. Pulled live yields off DefiLlama and walked through the comparison. Full write-up: `research/_yield_audit_2026-04-25.md`.
+
+**Headline:** every active Polymarket position out-yields every comparable-risk DeFi alternative. Best Aave V3 Polygon stable yields right now are 2.8–4.0% APY (USDC 2.80%, USDT0 3.89%, DAI 3.99%); BUIDL T-bill is 3.55% but gates on institutional KYC. Our lowest-yield position (Jesus NO at 5.8% annualised) still beats them, and the rest of the book is dominant by tens of percentage points.
+
+**The idle balance** ($5.05 USDC.e + 53.81 POL) is too small to deploy profitably: round-trip swap fees ≈ a year of stable-lending yield at this size, and POL staking adds 9-day unbonding optionality cost for ~$0.50/yr.
+
+**Trigger conditions captured in the write-up** for re-evaluating: bankroll ≥ $500 → Aave/BUIDL allocation for between-trade idle capital; ≥ $2k → small Hyperliquid sleeve for macro views without a Polymarket counterpart; new directional thesis without a Polymarket expression → perps entry even at smaller size with tight bankroll-fraction cap.
+
+**Decision: no action today, no change to the book.** Documented the analysis so future-me / cron-me doesn't re-litigate the same question every month.
