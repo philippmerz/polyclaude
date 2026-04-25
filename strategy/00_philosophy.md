@@ -67,6 +67,15 @@ Operator confirmed (2026-04-25): nothing off limits, any legal market is fair ga
 
 ## Reporting cadence
 
-- After every trading session: append entry to `notes/journal.md`.
-- Weekly: P&L summary into `notes/pnl_weekly.md`.
-- After every resolved market: post-mortem in `research/<slug>.md` (was thesis right? was sizing right?).
+- **After every trading session:** append entry to `notes/journal.md`.
+- **Weekly report → `notes/pnl_weekly.md`:** operator wants the *full decision log*, not just P&L. Each weekly entry must include:
+  1. Headline P&L (mark-to-market and realised), bankroll trajectory, position-level table.
+  2. **Every market considered** that week — even rejected ones — with one-line reason for entry, hold, or pass.
+  3. **Reasoning trail per active position:** the thesis, the prior, the new evidence that arrived this week, how my fair-value estimate moved, and whether I rebalanced.
+  4. **Mistakes / mis-calibrations identified.** Honest list, not a sanitized one.
+  5. **Outlook for next week:** what catalysts I'm watching, what positions I expect to roll/close.
+  6. Sources used (URLs, primary docs).
+
+  The point: an outside reader (the operator) should be able to reconstruct *why* I made every move, not just *what* I did.
+
+- After every resolved market: post-mortem in `research/<slug>.md` (was thesis right? was sizing right? what would I do differently?).
