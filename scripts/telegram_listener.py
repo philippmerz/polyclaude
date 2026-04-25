@@ -56,20 +56,46 @@ def _token() -> str:
     return TOKEN_PATH.read_text().strip()
 
 
+def _pane_is_busy(pane: str) -> bool:
+    """Heuristic: Claude Code's TUI shows a Braille spinner glyph in the pane
+    title while generating. If we see one of those characters, assume busy.
+
+    Returns True if we believe the pane should not receive injected input yet.
+    """
+    try:
+        out = subprocess.run(
+            ["tmux", "display-message", "-p", "-t", pane, "#{pane_title}"],
+            capture_output=True, text=True, check=True,
+        ).stdout
+    except subprocess.CalledProcessError:
+        return False
+    # Braille spinner code points used by Claude Code's TUI. If any appear,
+    # the pane is animating and not in a stable input state.
+    return any(0x2800 <= ord(c) <= 0x28FF for c in out)
+
+
 def _send_keys(pane: str, text: str) -> None:
     """Inject a message into a tmux pane as if typed there.
 
-    Uses send-keys -l (literal) for the text so special chars don't trigger
-    keybindings; sends Enter as a separate send-keys to submit.
+    Waits for the pane to look idle (no Braille spinner in the title), then
+    sends the text via -l (literal mode) followed by Enter. Raises
+    subprocess.CalledProcessError on tmux failure; raises RuntimeError if the
+    pane never goes idle within the wait budget so the caller can retry the
+    whole update on the next poll cycle.
     """
-    # Normalise line endings: tmux send-keys -l preserves newlines literally,
-    # but Claude Code's TUI interprets them as line-breaks. Replace \n with a
-    # space so multi-line messages submit as one user turn.
     flat = text.replace("\r\n", " ").replace("\n", " ").strip()
     if not flat:
         return
+    # Wait up to ~5 minutes for the pane to look idle. If the human is typing
+    # or Claude is generating, retry every few seconds.
+    for _ in range(60):
+        if not _pane_is_busy(pane):
+            break
+        time.sleep(5)
+    else:
+        raise RuntimeError(f"pane {pane} stayed busy too long; will retry next poll")
     subprocess.run(["tmux", "send-keys", "-t", pane, "-l", flat], check=True)
-    time.sleep(0.15)
+    time.sleep(0.2)
     subprocess.run(["tmux", "send-keys", "-t", pane, "Enter"], check=True)
 
 
@@ -110,25 +136,32 @@ def cmd_start(_args: argparse.Namespace) -> int:
 
         for update in data["result"]:
             uid = update["update_id"]
-            state["last_update_id"] = uid
             msg = update.get("message")
             if not msg:
+                state["last_update_id"] = uid
                 continue
             chat = msg.get("chat", {})
             if chat.get("id") != chat_id:
                 print(f"drop foreign chat {chat.get('id')}", flush=True)
+                state["last_update_id"] = uid
                 continue
             text = msg.get("text") or msg.get("caption") or ""
             if not text:
-                # Could be a sticker, photo, etc. — for now we skip.
+                # Sticker / photo / etc. — skip and advance.
+                state["last_update_id"] = uid
                 continue
             print(f"recv update {uid}: {text[:120]!r}", flush=True)
             try:
                 _send_keys(pane, text)
-            except subprocess.CalledProcessError as e:
-                print(f"tmux send-keys failed: {e}", file=sys.stderr, flush=True)
-        if data["result"]:
-            _save_state(state)
+                state["last_update_id"] = uid  # only advance on success
+                _save_state(state)
+            except (subprocess.CalledProcessError, RuntimeError) as e:
+                # Don't advance the cursor; this update will be re-fetched on
+                # the next poll, and we'll retry the inject when the pane is
+                # idle. Break so we don't process later updates ahead of this
+                # one.
+                print(f"send-keys failed for update {uid}: {e}; will retry", file=sys.stderr, flush=True)
+                break
 
 
 def cmd_status(_args: argparse.Namespace) -> int:
