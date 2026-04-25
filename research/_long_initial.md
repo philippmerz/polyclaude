@@ -1,6 +1,8 @@
-# Initial Portfolio — 2026-04-25
+# Long-horizon sleeve — initial portfolio (2026-04-25)
 
-> First-trade plan. Awaiting MATIC top-up to set on-chain allowances; then execute.
+> **Sleeve:** long-horizon (1-year eval window, 2/3 of bankroll)
+> **Target capital:** $46.67 (2/3 of $70). Currently $42.99 deployed.
+> **Status as of 2026-04-25 15:22 UTC: all 5 orders filled.**
 
 ## Bankroll & sizing framework
 - Starting USDC.e: $70.00 on Polygon
