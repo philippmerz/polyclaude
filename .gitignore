@@ -1,0 +1,35 @@
+# NEVER commit secrets
+wallet.json
+*.key
+*.pem
+.env
+.env.*
+*secret*
+*private*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Logs may contain addresses, balances, order ids - keep local
+logs/
+*.log
+
+# Local cache of market data — re-generatable, would bloat repo
+data/raw/
+data/cache/
+data/snapshots/
+
+# Editor swap files
+*.swp
+*.swo
+.*.swp
+.*.swo
+
+# OS
+.DS_Store
