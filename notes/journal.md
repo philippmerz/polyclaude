@@ -187,3 +187,27 @@ Operator asked via Telegram whether the lower-yield slices of the book might be 
 **Trigger conditions captured in the write-up** for re-evaluating: bankroll ≥ $500 → Aave/BUIDL allocation for between-trade idle capital; ≥ $2k → small Hyperliquid sleeve for macro views without a Polymarket counterpart; new directional thesis without a Polymarket expression → perps entry even at smaller size with tight bankroll-fraction cap.
 
 **Decision: no action today, no change to the book.** Documented the analysis so future-me / cron-me doesn't re-litigate the same question every month.
+
+---
+
+## 2026-04-25 ~22:00 UTC — Day 1 cron tick #2 (scheduled, max-effort): no action
+
+**State.** USDC.e $5.05, POL 53.81. Nine positions intact. Total cost $64.95, MTM $64.56, unrealised P&L **-$0.39 (-0.60%)** — ~0.4 pp wider than the 16:46 UTC tick (-$0.01 then) but well inside book noise.
+
+**Position deltas vs. previous tick (T-~5h):**
+- **L5 (Iran-regime falls before 2027) NO** mark 0.795 → **0.775**, -3.12% on cost (-$0.22 MTM). YES leg drifted up to ~22.5%.
+- **S1 (Iran-peace-by-May-31) NO** mark 0.665 → 0.675, +0.75% on cost. YES leg back to 32.5% (still ~22 pp above my fair-value estimate).
+- L1, L2, L3, L4, S2, S3, S4 within ±0.5¢ of fill — book noise.
+
+**News scan.** No structural break in the last 5 hours. State is the same as the 16:46 read: ceasefire extended, naval blockade still on (USS Peralta intercepted an Iranian-flagged ship today), Iran FM in Pakistan with no US counterpart, Pezeshkian publicly says "blockade and threats are hindering negotiations." Trump's Apr 21 "seriously fractured Iranian government" line continues to circulate. Nothing on Trump health (US Saturday evening — quiet desk), nothing on UAP, nothing on Eurovision rehearsal-week (still 10 days out), no Ohio primary news (Acton remains lone Dem), no La Liga matchweek today.
+
+**Reading the L5 drift.** Two non-mutually-exclusive explanations: (a) the same news flow that's pushing S1 NO higher (no peace deal soon → war continues) is pushing L5 YES higher because a longer war raises the conditional probability of regime collapse; (b) Pezeshkian's "blockade and threats are hindering negotiations" + Trump's fracture-language framing is being read by some traders as Iranian-internal-instability evidence. Either way, the move is within the volatility I sized for. Thesis (regime survives because it has already absorbed the Khamenei-killing + war shocks and held intact for 8 weeks) is unchanged — and the position resolves Dec 31, with another 250 days for the price to mean-revert toward my ~7-10% fair value as the war news cycle cools.
+
+**Decision: hold all 9 positions.** No catalyst justifies a trim, an add, or a close. Cash buffer still $5.05; will rebuild on Acton (May 5) and Latvia/peace-deal as those resolve.
+
+**Telegram ping?** No — this is routine maintenance, no thesis-changing news. Operator just set up the cron and will see this entry on next check-in.
+
+**Sources:**
+- [Day 56 of Middle East conflict (CNN, Apr 24)](https://www.cnn.com/2026/04/24/world/live-news/iran-war-trump-israel-lebanon)
+- [USS Peralta intercepts Iranian-flagged ship under blockade (NBC News live blog, Apr 24)](https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-peace-talks-vance-ceasefire-ship-hormuz-rcna341149)
+- [Trump extends ceasefire citing "seriously fractured" Iranian government (CNBC, Apr 21)](https://www.cnbc.com/2026/04/21/trump-iran-war-ceasefire.html)
