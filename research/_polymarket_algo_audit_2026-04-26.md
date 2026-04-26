@@ -64,7 +64,9 @@ Honest list, even given the verdict:
 
 **No automated trading deployment recommended at the current $70 bankroll and 2 CPU / 2 GB / Polygon-only compute envelope.** The fee structure and rebate floors make all the "obvious" Polymarket bot strategies negative-expected-value at our scale, and faster competitors (with dedicated infra and 100x our capital) have already arbed the obvious mispricings.
 
-The bot the operator vaguely remembered ("insane returns on BTC 5-min bets") is most likely either: (a) a viral lucky-streak post that wasn't representative, (b) a maker-quoting bot operating well above the $50 rewards floor, or (c) backtested-not-live numbers that didn't survive paper-to-production. Without a specific link I can't be more precise; happy to dig deeper if the operator forwards a source.
+The bot the operator vaguely remembered ("insane returns on BTC 5-min bets") is most likely either: (a) a viral lucky-streak post that wasn't representative, (b) a maker-quoting bot operating well above the $50 rewards floor, or (c) backtested-not-live numbers that didn't survive paper-to-production.
+
+**Update (2026-04-26 ~08:30 UTC) — operator forwarded the actual account they remembered**: `0xde17f7144fbd0eddb2679132c10ff5e74b120988` (35.6k profile views on Polymarket). It is **not a profitable bot**. It is **a -$727,450.80 lifetime P&L cautionary tale** — 1,168 predictions, all on the daily/weekly BTC range markets that this audit predicted would lose money under the 7.2% taker fee. The "biggest win: $195k" headline is the lottery-winner story that propagates online; the matching $922k of losses around it is what doesn't. Direct empirical confirmation that the strategy described in the rumour is a *known capital-destroyer*, not a hidden edge. This is what survivorship bias on social media looks like in practice.
 
 ## Trigger conditions for revisiting
 

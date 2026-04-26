@@ -236,3 +236,5 @@ The "insane returns" rumour is most likely (a) a viral lucky-streak post that di
 Trigger conditions captured in the audit doc: bankroll ≥ $250-500 → maker-quoting becomes viable; bankroll covers a low-latency VM out of yield → revisit; Polymarket fee schedule changes → revisit; operator forwards a specific verifiable bot edge → re-audit.
 
 **No book changes from either thread.** Pushing the audit doc + this entry now.
+
+**Addendum 08:30 UTC — operator forwarded the specific account behind the "insane returns" rumour.** Pulled lifetime stats off Polymarket profile + data-api: `0xde17f7144fbd0eddb2679132c10ff5e74b120988` is **−$727,450.80 lifetime P&L** across 1,168 predictions, all daily/weekly BTC range markets. Current portfolio value $0. Biggest single win $195k (the propagating headline). Cumulative losses of $922k around it (what doesn't propagate). Direct empirical confirmation of yesterday's audit: the strategy class behind the rumour is a known capital-destroyer for retail, not a hidden edge. Updated `research/_polymarket_algo_audit_2026-04-26.md` with the verification.
