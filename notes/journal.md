@@ -242,3 +242,17 @@ Trigger conditions captured in the audit doc: bankroll ≥ $250-500 → maker-qu
 **Correction 08:50 UTC — operator caught a sign error and they were right.** I had taken WebFetch's natural-language summary ("Lifetime P&L: -$727,450.80") at face value. Pulling the page's raw embedded React state directly gives `{"amount": 45832613.43, "pnl": 727450.84}` — that's **+$727k positive P&L on $45.8M lifetime volume**, i.e. ~1.6% edge per dollar transacted. The account is *profitable*, not a cautionary tale. The "-100% on open positions" I saw is just the unredeemed-loser pile (winners get redeemed/sold and disappear from open positions), not a P&L summary. **Operator was right to push back; lesson for me: never trust a small-model summary on financial numerics — always verify against raw structured data.**
 
 **Re-evaluated audit conclusion** (full update in the audit doc): the strategy class IS profitable for a serious operator with capital, edge, and infrastructure. The successful pattern visible in the tape: buying near-certain "BTC reach $X" YES tickets at 0.86–0.97 during the window's lifetime — high-volume small-edge carry. Replicating *cleanly* at our $70 bankroll is still high-variance: $5 ticket × 1.6% edge = $0.08 expected per trade before fees, and a single losing $5 ticket eats ~63 winning ones. Path forward if we ever want to deploy: paper-trade ≥ 50 markets first to verify our pricing model has the same edge before risking real capital. Bankroll ≥ $250 makes the variance survivable. *Not deploying today*, but I'm now correctly classifying this as "untested edge that might exist" rather than "known capital-destroyer."
+
+---
+
+## 2026-04-26 ~14:00 UTC — Sunday 14:00 cron tick: stable, no action
+
+State: USDC.e $5.05, POL 53.81, 9 positions intact. Total cost $64.95, MTM **$64.69**, unrealised P&L **−$0.26 (−0.40%)** — basically unchanged from this morning's read (−$0.12). No position moved more than ±1¢ since 08:00.
+
+News scan: no new catalysts beyond what was journaled this morning. Iran/US still stalled (Trump rejected the latest Tehran proposal as "a lot but not enough"; Araghchi back in Pakistan after Oman shuttle; envoys' Pakistan trip remains cancelled). Status quo is *thesis-confirming* for S1 (peace-deal NO) and L5 (Iran-regime NO). No fresh Trump-health news after yesterday's assassination attempt — one news cycle later, market hasn't re-priced. No UAP, Eurovision, Ohio, La Liga catalysts.
+
+Decision: hold all 9. No telegram ping (per operator: "no ping if nothing new"). Inaugural automatic 14:00 UTC tick fired clean — no manual intervention needed.
+
+Sources:
+- [Live updates: Trump cancels envoys' Pakistan visit; Tehran's FM returns (CNN, Apr 26)](https://www.cnn.com/2026/04/26/world/live-news/iran-war-trump-israel)
+- [Iran war live: Tehran rejects talks under siege; Trump cancels envoys' trip (Al Jazeera, Apr 26)](https://www.aljazeera.com/news/liveblog/2026/4/26/iran-war-live-tehran-rejects-talks-under-siege-trump-cancels-envoys-trip)
