@@ -66,7 +66,23 @@ Honest list, even given the verdict:
 
 The bot the operator vaguely remembered ("insane returns on BTC 5-min bets") is most likely either: (a) a viral lucky-streak post that wasn't representative, (b) a maker-quoting bot operating well above the $50 rewards floor, or (c) backtested-not-live numbers that didn't survive paper-to-production.
 
-**Update (2026-04-26 ~08:30 UTC) — operator forwarded the actual account they remembered**: `0xde17f7144fbd0eddb2679132c10ff5e74b120988` (35.6k profile views on Polymarket). It is **not a profitable bot**. It is **a -$727,450.80 lifetime P&L cautionary tale** — 1,168 predictions, all on the daily/weekly BTC range markets that this audit predicted would lose money under the 7.2% taker fee. The "biggest win: $195k" headline is the lottery-winner story that propagates online; the matching $922k of losses around it is what doesn't. Direct empirical confirmation that the strategy described in the rumour is a *known capital-destroyer*, not a hidden edge. This is what survivorship bias on social media looks like in practice.
+**Update (2026-04-26 ~08:30 UTC) — operator forwarded the actual account they remembered**: `0xde17f7144fbd0eddb2679132c10ff5e74b120988` (35.6k profile views on Polymarket).
+
+**Correction (2026-04-26 ~08:50 UTC) — I initially mis-read this profile.** WebFetch's natural-language summary returned "Lifetime P&L: -$727,450.80 (significant losses)" and I trusted it without checking the raw page state. The operator caught it; pulling the embedded React-state JSON directly gives `{"amount": 45832613.43, "pnl": 727450.84, ...}` — **positive $727,450.84 P&L** on **$45.8M lifetime trading volume**, i.e. ~1.6% edge on volume across 1,168 trades. The "-100% on every position" view I read off the data API is just the *unredeemed losing-ticket pile* — winning tickets get redeemed/sold and disappear from the open-positions list, so what I was looking at was a one-sided slice, not a P&L summary.
+
+**Re-interpretation of the strategy.** Looking at the actual trade tape (from `data-api.polymarket.com/trades`): this trader is **buying near-certain "BTC will reach $X" YES tokens at 0.86–0.97** during the lifetime of weekly windows. That's high-volume small-edge carry on directional confirmation — equivalent to fading the residual tail probability of BTC *not* reaching a level it's already very close to. With $45M of volume and a ~1.6% edge per dollar transacted, you arrive at +$727k. Big-ticket wins (the public "biggest win: $195k") are the right tail of the distribution, not isolated lottery hits.
+
+**Does this strategy scale down to a $70 bankroll? Honestly assessing:**
+- 1.6% edge per dollar of volume × $5 ticket = **$0.08 expected profit per ticket** before fees.
+- These near-certain markets price at p ≈ 0.86–0.97, so the edge-aware fee = `0.072 × min(p, 1-p)` runs ~1.0–2.5% of notional. On a $5 buy at p = 0.95 the fee is **$0.018**, leaving ~$0.06 of expected profit per ticket if our edge matches the operator's.
+- Variance is the killer: each $5 ticket has a binary +$0.10 / -$5 outcome. With our $70 bankroll, six consecutive losses (probability ~10⁻⁵ at p = 0.95 but realistically much higher because losing trades cluster on adverse moves) wipes 40% of bankroll.
+- Profile-target equivalent: 1,168 trades at $5 each = $5,840 of volume → $93 of expected profit if we replicate the 1.6%-on-volume edge. That's six months of deal-flow at the cron cadence, *if* we have the same edge — and we don't have evidence we do.
+- **The successful trader's edge is almost certainly identification of mispriced "near-certain" tickets**, not a generic systematic strategy. They're picking individual markets where price < their model. Without that pricing model — built from a Binance feed, options-implied-vol of BTC, time-of-day patterns, etc. — replicating their volume just replicates the random walk, and 7.2% × adverse-tail-fraction eats us alive.
+
+**Updated trigger conditions for our project:**
+- If we want to test the strategy class: paper-trade for ≥ 50 markets first, *measure realised win rate vs. price-implied probability*, only deploy real capital when paper edge is statistically significant (≥ 2σ) and exceeds the breakeven fee threshold.
+- Bankroll ≥ $250 → can run $5 tickets across 50 markets in parallel without exceeding 30%-cluster cap, making the variance survivable.
+- Specific build: a price-feed-aware Binance ↔ Polymarket-strike model + a maker-quoting bot operating in the higher-priced ladder rungs. Worth designing on paper as a Q3 2026 candidate if the discretionary book is going well.
 
 ## Trigger conditions for revisiting
 
