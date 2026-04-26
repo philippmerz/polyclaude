@@ -211,3 +211,28 @@ Operator asked via Telegram whether the lower-yield slices of the book might be 
 - [Day 56 of Middle East conflict (CNN, Apr 24)](https://www.cnn.com/2026/04/24/world/live-news/iran-war-trump-israel-lebanon)
 - [USS Peralta intercepts Iranian-flagged ship under blockade (NBC News live blog, Apr 24)](https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-peace-talks-vance-ceasefire-ship-hormuz-rcna341149)
 - [Trump extends ceasefire citing "seriously fractured" Iranian government (CNBC, Apr 21)](https://www.cnbc.com/2026/04/21/trump-iran-war-ceasefire.html)
+
+---
+
+## 2026-04-26 ~08:15 UTC — Trump assassination attempt + algo-trading audit (operator-prompted)
+
+Operator pinged via Telegram with two threads.
+
+**(1) Trump assassination attempt — White House Correspondents' Dinner, evening of Apr 25.** Cole Tomas Allen (31, California) fired shots near the security perimeter; one Secret Service agent took a round in his vest, no other casualties, suspect in custody. **Trump entirely uninjured** ("perfect condition" per his own post). Suspect to be charged with using a firearm during a crime of violence.
+
+*Position implication:* L4 Trump-out NO 0.84 entry → live mark **0.835** (essentially unchanged). The market priced this as a non-event because Trump survived. My fair-value mortality + assassination + removal model already had a 1–2% assassination tail baked in, and a *failed* attempt doesn't update the conditional probability of *future* attempts much above baseline (Reagan-1981 was the last serious survival case; no quick re-attempt followed). **Hold L4. No trade.**
+
+Second-order concern: a successful security failure could in theory accelerate a 25th-Amendment Section-4 conversation, but the structural blockers (R-Senate, R-Cabinet, VP cooperation) remain — same logic as before. Watching for Trump health follow-ups (if he was rattled enough to skip events, that creates its own narrative), but nothing actionable today.
+
+**(2) Algorithmic Polymarket trading feasibility — full write-up at `research/_polymarket_algo_audit_2026-04-26.md`.** Operator flagged hearing about a bot with "insane returns on BTC 5-minute bets" and asked whether anything similar fits our setup.
+
+Verdict: **no algorithmic deployment at this scale.** The decisive number is the fee schedule — Polymarket's short-tenor crypto markets (5-min, hourly, daily ladders) all fire `{rate: 0.072, takerOnly: true, rebateRate: 0.2}`, which is *edge-aware* (`fee = rate × min(p, 1-p) × notional`):
+- At p ≈ 0.5 (5-min coin-flip case), round-trip taker fee is **7.2%** — exceeds any retail TA edge I've seen documented (live bots win 25-27% vs 53% breakeven).
+- Maker rebates are real but require **≥ $50/order** (`rewardsMinSize: 50`), an order of magnitude above our $5 minimum.
+- Latency: 100-300ms RTT to Polygon CLOB on our 2-CPU box; transient mispricings are gone in milliseconds when a co-located bot competes.
+
+The "insane returns" rumour is most likely (a) a viral lucky-streak post that didn't survive sample size, (b) a serious market-maker operating well above $50/quote with rebate income, or (c) backtested-not-live numbers. No verifiable source available — happy to dig if the operator forwards a specific link.
+
+Trigger conditions captured in the audit doc: bankroll ≥ $250-500 → maker-quoting becomes viable; bankroll covers a low-latency VM out of yield → revisit; Polymarket fee schedule changes → revisit; operator forwards a specific verifiable bot edge → re-audit.
+
+**No book changes from either thread.** Pushing the audit doc + this entry now.
