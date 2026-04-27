@@ -297,3 +297,38 @@ Decision: hold all 9. No telegram ping (per operator: "no ping if nothing new").
 Sources:
 - [Live updates: Trump cancels envoys' Pakistan visit; Tehran's FM returns (CNN, Apr 26)](https://www.cnn.com/2026/04/26/world/live-news/iran-war-trump-israel)
 - [Iran war live: Tehran rejects talks under siege; Trump cancels envoys' trip (Al Jazeera, Apr 26)](https://www.aljazeera.com/news/liveblog/2026/4/26/iran-war-live-tehran-rejects-talks-under-siege-trump-cancels-envoys-trip)
+
+---
+
+## 2026-04-27 ~21:20 UTC — Crypto landscape audit for separate $50 bankroll (operator-prompted)
+
+Operator: "considering expanding into a different context with around 50 dollars. Research the entire crypto landscape in depth and rank the most promising opportunities for a < 6 month timeframe... include lesser-known novel ones, the largest alpha could be hidden in lesser-known projects."
+
+Memo at `research/_crypto_landscape_2026-04-27.md` (214 lines). Built by spawning 4 parallel research agents (macro state, yield, speculation, novel/lesser-known) and synthesizing into a tier-ranked, fee-vetted list with concrete portfolio splits.
+
+**TL;DR of verdict.** At $50 / < 6mo / Polygon-self-custody constraint, three Tier-1 plays cleared the fee/compute screen with structural retail edge:
+
+1. **Ostium (Arbitrum) — points-farming + RWA-perp directional.** $58M TVL, $25B cumulative volume, 54 RWA-perp pairs (gold, SPY, NVDA, 22 US equities), Jump+General-Catalyst-backed at $250M post-money, $5 minimum trade size, Arbitrum sub-cent gas. **No public token yet — points are explicitly retroactive-airdrop-shaped.** Single highest-conviction novel play. Comparable retroactive-airdrop precedents (Hyperliquid, Jito, Jupiter) returned 5-50x of cumulative-fee-paid for active retail farmers.
+2. **Bittensor subnet alpha (SN64 Chutes via TAO entry).** Sector cap ~$1.12B, dTAO live, top performers up 200-450% in 30d. SN64 Chutes (Rayon Labs serverless inference, 9.1T tokens served, 400K users) is the cleanest cashflow story. Easier alternative: just buy spot TAO on a CEX for diversified emissions exposure.
+3. **Limitless ↔ Polymarket arbitrage on Base.** Limitless hit $1B/mo prediction-market notional Q1 2026, zero gas (Coinbase-subsidized). Identical political/sports markets often spread 2-4% across the two venues — net of Polymarket's edge-aware fee, ~1% per cycle. 4-hour Python script to monitor and ping Telegram. Bonus: doubles as scaffolding for any future POLY-airdrop farming.
+
+**Tier-2 yield floor:** Pendle PT-sUSDe-Jun-2026 on Arbitrum (4.31% fixed APR) or Aave V3 USDT0 Polygon (3.88%). PLUME (RWA chain native, $0.0138, ~95% off ATH) and Akash (sleeper GPU-DePIN) as small directional sector beta.
+
+**Recommended split (Balanced):** $15 Ostium, $10 TAO spot, $10 Pendle floor, $10 Limitless arb working capital, $5 reserve. Aggressive variant adds $3 to a MegaETH-MEGA-TGE-on-Apr-30 event-trade (only if Day-1 pricing leaves runway — fade FOMO).
+
+**Tier-3 actively-skip list (with reasons):**
+- pump.fun retail sniping — 0.63% of launches graduate, 3% of users earn > $1K. Negative-EV.
+- HLP vault — 12-mo realized max DD **−55%**. Risk profile is trend-following CTA, not yield.
+- Funding-rate basis trade — perp min orders + dust funding payments mechanically OOS at $50.
+- LRTs (weETH/rsETH/ezETH) — Kelp DAO drained $293M April 19 (rsETH 18% supply hit), USDe -34% on contagion. Major airdrops already paid. Forward thesis is restaking-without-airdrop-with-tail-risk-priced. Bad R/R.
+- MOVE — -99% from ATH, founder-fraud, delisting risk.
+- Plasma (XPL) before July 28 — 25% supply unlock to US public-sale buyers will distribute heavy.
+- Sei — 1.5-2%/month inflation drag.
+- Inscriptions/Runes/BRC-20 — sector dead, BTC fees alone wreck $50.
+- Resolv — $25M exploit March 22 2026 (unauthorized 50M USR mint).
+
+**Why I'm confident.** Same fee-structure lens that proved the Polymarket-algo audit on April 26: at small size, the fee/rebate math determines feasibility before strategy quality. Tier-1 plays each have **a specific structural edge** retail at $50 can capture (Ostium = retroactive airdrop on real product; SN64 = revenue-driven token; Limitless arb = liquidity-fragmentation between two real markets). Tier-3 rejections are quantitatively grounded (DD, fee, hack-event, supply-unlock).
+
+**What this audit does *not* cover.** Memo intentionally separate from the polyclaude $70 Polymarket book — no commingling. If operator decides to deploy, the funding source, wallet (same or new EVM addr), and bookkeeping should be a separate decision from the Polymarket sleeve. I'd recommend a NEW wallet for this so the Polymarket book's audit trail stays clean. Trigger conditions in the memo §9 cover when to revisit.
+
+**Token cost of this work.** 4 parallel general-purpose research agents (Sonnet 4.6) returning ~600-900 words each, synthesized in main session. Within reasonable bounds vs the operator's Max subscription budget; no /usage check needed unless this kind of audit becomes routine.
