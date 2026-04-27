@@ -1,0 +1,46 @@
+{
+  "_comment": "Feeds + keyword tiers for the polyclaude news watcher. Keywords are matched case-insensitively against feed entry titles + summaries. Tiers: 1=urgent (auto-fires cron tick + Telegram pings); 2=notable (Telegram only). Edit freely; daemon re-reads on every poll.",
+
+  "poll_interval_seconds": 300,
+  "alert_cooldown_seconds": 1800,
+  "max_entries_per_feed": 30,
+
+  "feeds": [
+    {"name": "BBC World",            "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
+    {"name": "BBC Middle East",      "url": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"},
+    {"name": "BBC Politics",         "url": "https://feeds.bbci.co.uk/news/politics/rss.xml"},
+    {"name": "Al Jazeera",           "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+    {"name": "NPR World",            "url": "https://feeds.npr.org/1004/rss.xml"},
+    {"name": "NPR Politics",         "url": "https://feeds.npr.org/1003/rss.xml"},
+    {"name": "Guardian World",       "url": "https://www.theguardian.com/world/rss"},
+    {"name": "Guardian US",          "url": "https://www.theguardian.com/us-news/rss"},
+    {"name": "France24",             "url": "https://www.france24.com/en/rss"},
+    {"name": "CBS Latest",           "url": "https://www.cbsnews.com/latest/rss/main"},
+    {"name": "Fox World",            "url": "https://moxie.foxnews.com/google-publisher/world.xml"}
+  ],
+
+  "tier1_keywords": [
+    "trump dies", "trump dead", "president trump killed", "trump assassinated", "trump shot", "trump incapacitat",
+    "trump resigns", "trump resigned", "25th amendment invoked", "25th amendment sustained", "trump removed from office",
+    "iranian regime collapsed", "tehran regime falls", "iranian regime overthrown", "islamic republic falls",
+    "khamenei dies", "khamenei dead", "supreme leader dies", "mojtaba khamenei dies", "irgc coup", "iran coup",
+    "us-iran peace deal", "us iran peace deal signed", "iran peace agreement signed", "permanent ceasefire iran",
+    "pahlavi takes power", "pahlavi installed", "reza pahlavi leader", "shah restored",
+    "aliens confirmed", "extraterrestrial life confirmed", "et disclosure", "non-human technology confirmed",
+    "aaro confirms", "pentagon ufo confirmed", "pentagon alien", "nasa confirms aliens",
+    "jesus christ returns", "jesus christ returned", "second coming confirmed",
+    "iran strikes european", "iran missile europe", "iran nuclear test"
+  ],
+
+  "tier2_keywords": [
+    "trump health", "trump hospital", "trump walter reed", "trump medical",
+    "trump security", "secret service trump", "trump shooting", "trump shooter",
+    "iran ceasefire", "hormuz blockade", "strait of hormuz", "iran ship attack", "iranian vessel",
+    "iran negotiation", "us iran talks", "witkoff iran", "kushner iran",
+    "khamenei health", "iranian leader health", "tehran protest", "iranian protest",
+    "uap report", "ufo congressional", "aaro report", "pentagon ufo", "uap disclosure",
+    "eurovision rehears", "eurovision favorit", "eurovision odds", "eurovision semi-final",
+    "ohio gubernatorial", "ohio primary", "amy acton",
+    "atletico madrid", "la liga title", "champions league atletico"
+  ]
+}

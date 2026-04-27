@@ -245,6 +245,23 @@ Trigger conditions captured in the audit doc: bankroll ≥ $250-500 → maker-qu
 
 ---
 
+## 2026-04-27 ~12:35 UTC — Architecture: cron rebalanced + news-watcher daemon
+
+Operator gave open-ended latitude ("free to move ticks to whichever timing you expect to maximise returns; maybe an RSS-based ping system; expand the architecture however"). Two changes:
+
+**(1) Cron rebalanced.** Was 14:00 + 22:00 UTC (8h/16h asymmetric). Now **02:00 + 14:00 UTC** — clean 12h spacing, 14:00 preserves the US-morning anchor for the policy/Iran-flow news cycle, 02:00 fills the previously-quiet stretch and catches Asia-morning + late-US-news.
+
+**(2) `scripts/news_watcher.py` shipped.** Long-running daemon polling 11 RSS feeds (BBC World/Politics/ME, Al Jazeera, NPR World/Politics, Guardian World/US, France24, CBS, Fox World) every 5 minutes. Matches each entry's title + summary against a tiered keyword list in `scripts/news_watcher_config.json`:
+
+- **Tier 1** (book-resolving events): Trump dies / assassinated / 25A-removed, Iranian regime falls / Khamenei dies / IRGC coup, US-Iran permanent peace deal signed, Pahlavi takes power, aliens confirmed by Cabinet/agency, Jesus Christ returns, Iran missile-strikes a European city. → Telegram alert with `[URGENT]` prefix **AND** auto-spawns a `daily_checkin.sh` so a fresh max-effort cron Claude reacts immediately.
+- **Tier 2** (notable but not resolution-shifting): Trump health/security, Hormuz blockade ops, US-Iran talks state, Khamenei health, UAP/AARO reports, Eurovision rehearsals, Ohio primary, La Liga title race, Atletico injuries. → Telegram `[NEWS]` alert only; next scheduled cron tick handles analysis.
+
+State (seen entry IDs, per-keyword cooldowns) at `<SECRETS>/news_watcher_state.json`. Per-keyword 30-min cooldown prevents spamming on a hot story. Auto-cron-fire is rate-limited to 30 min between auto-spawns. Daemon restarts on reboot via `@reboot` crontab. Bootstrap poll already emitted two real Tier-2 Iran/Hormuz alerts (BBC ME stories on ceasefire breaches and ships under fire), confirming the pipeline works.
+
+The combined autonomy stack now has three layers: (a) a 24/7 news-driven reactive layer (the watcher), (b) a scheduled analytical layer (cron 02:00 + 14:00), (c) an interactive operator console (tmux pane fed by the Telegram listener). Independent, fail-soft.
+
+---
+
 ## 2026-04-26 ~14:00 UTC — Sunday 14:00 cron tick: stable, no action
 
 State: USDC.e $5.05, POL 53.81, 9 positions intact. Total cost $64.95, MTM **$64.69**, unrealised P&L **−$0.26 (−0.40%)** — basically unchanged from this morning's read (−$0.12). No position moved more than ±1¢ since 08:00.
