@@ -8,7 +8,9 @@
 
 set -euo pipefail
 
-POLYCLAUDE_DIR="<PROJECT>"
+# Resolve repo root from this script's location (no hardcoded user path).
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 LOG_DIR="${POLYCLAUDE_DIR}/logs/cron"
 mkdir -p "${LOG_DIR}"
 
@@ -17,12 +19,18 @@ LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 
 # Ensure we have a working PATH for cron (cron runs with minimal env)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-export HOME="<HOME>"
+export HOME="${HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 
-# Session to fork from. The interactive Claude lives in <HOME>'s project
-# scope; this id was captured when the project began and is updated only when
-# the operator starts a new conversation thread.
-SESSION_ID=$(cat <SECRETS>/polyclaude_session.txt 2>/dev/null | tr -d '[:space:]')
+# Load polyclaude path config (env vars for secret/state file locations).
+# File lives outside the repo at $HOME/.polyclaude/env, mode 0600.
+if [[ -f "${HOME}/.polyclaude/env" ]]; then
+    # shellcheck disable=SC1091
+    set -a; source "${HOME}/.polyclaude/env"; set +a
+fi
+
+# Session id to fork from. The interactive Claude session id was captured when
+# the project began and is updated only when the operator starts a new thread.
+SESSION_ID=$(cat "${POLYCLAUDE_SESSION:-/dev/null}" 2>/dev/null | tr -d '[:space:]')
 
 # Cron prompt — short, since this is a forked-resume session and inherits all
 # prior context (PRIMER, philosophy, current portfolio, ongoing decisions).
@@ -34,8 +42,8 @@ secrets in the diff first), and ping the operator on Telegram if anything materi
 moved. Brief if nothing happened.
 EOF
 
-# Run from <HOME> so claude sees the right project scope for --resume.
-cd <HOME>
+# Run from $HOME so claude sees the right project scope for --resume.
+cd "${HOME}"
 
 {
   echo "=== polyclaude daily check-in ${TS} ==="
@@ -43,7 +51,7 @@ cd <HOME>
   echo "$ session=${SESSION_ID}"
   echo "$ claude -p --resume \${SESSION_ID} --fork-session (headless)"
   if [ -z "${SESSION_ID}" ]; then
-    echo "ERROR: no session id at <SECRETS>/polyclaude_session.txt; cannot fork-resume"
+    echo "ERROR: no session id resolvable from POLYCLAUDE_SESSION; cannot fork-resume"
     exit 2
   fi
   echo "${PROMPT}" | claude -p \

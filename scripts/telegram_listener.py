@@ -5,7 +5,7 @@ existing interactive `claude` session living in a known tmux pane. This makes
 the bot a thin remote keyboard: the operator texts, the message lands as a
 fresh user turn in the same Claude instance with full conversation context.
 
-Config (in <HOME>/.polyclaude_telegram.json):
+Config (file pointed to by POLYCLAUDE_TELEGRAM_STATE):
   {
     "chat_id": <int>,
     "tmux_pane": "session:window.pane",   # e.g. "0:0.0"
@@ -30,13 +30,14 @@ import signal
 import subprocess
 import sys
 import time
-from pathlib import Path
 
 import httpx
 
-TOKEN_PATH = Path("<SECRETS>/telegram_token.txt")
-STATE_PATH = Path("<HOME>/.polyclaude_telegram.json")
-PID_PATH = Path("<HOME>/.polyclaude_telegram_listener.pid")
+import _paths as _secrets
+
+TOKEN_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_TOKEN")
+STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
+PID_PATH = _secrets.path("POLYCLAUDE_LISTENER_PID")
 API = "https://api.telegram.org"
 LONG_POLL_TIMEOUT = 30  # seconds
 

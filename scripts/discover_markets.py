@@ -16,7 +16,7 @@ from typing import Any
 import httpx
 
 GAMMA = "https://gamma-api.polymarket.com"
-DATA = Path("<PROJECT>/data")
+DATA = Path(__file__).resolve().parent.parent / "data"
 SNAP_DIR = DATA / "snapshots"
 
 

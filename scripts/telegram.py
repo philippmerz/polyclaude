@@ -1,8 +1,8 @@
 """Telegram bridge for polyclaude.
 
-Reads bot token from <HOME>/telegram_token.txt (outside the repo) and
-caches the operator's chat_id to <HOME>/.polyclaude_telegram.json
-(also outside the repo, 0600). Subcommands:
+Reads bot token from POLYCLAUDE_TELEGRAM_TOKEN and caches the operator's chat_id
+to POLYCLAUDE_TELEGRAM_STATE (both env vars resolved via _secrets, 0600).
+Subcommands:
 
     setup            Poll for the latest incoming message and store its chat_id.
                      Operator must send a message to the bot first.
@@ -25,8 +25,10 @@ from pathlib import Path
 
 import httpx
 
-TOKEN_PATH = Path("<SECRETS>/telegram_token.txt")
-STATE_PATH = Path("<HOME>/.polyclaude_telegram.json")
+import _paths as _secrets
+
+TOKEN_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_TOKEN")
+STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
 API = "https://api.telegram.org"
 TEXT_CHUNK = 3500  # < 4096 Telegram limit, leaves room for markdown formatting
 SMALL_MD_LIMIT = 3000  # send shorter md as text

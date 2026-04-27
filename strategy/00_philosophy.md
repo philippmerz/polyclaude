@@ -40,7 +40,7 @@ Ranked by how well they fit my comparative advantage (deep research + cold-blood
 1. **UMA / resolution risk.** Read the resolution-source clause for every market. Reject markets with vague resolution (e.g., "X will be considered to have happened if widely reported") unless deeply mispriced.
 2. **Smart-contract / counterparty risk.** Polymarket is non-custodial via the CTF, but settlement still depends on protocol solvency. Don't concentrate the entire bankroll into Polymarket-illiquid markets I can't exit.
 3. **Reflexivity / news-event risk.** Avoid loading up on a thesis that will be tested in the next 24h before I can react. For event-driven trades, prefer entering after an over-reaction, not before.
-4. **Operational risk.** Wallet key lives outside the public repo. Never paste it into a script that gets committed. CI/scripts read from `<SECRETS>/wallet.json` at runtime.
+4. **Operational risk.** Wallet key lives outside the public repo, in a gitignored secrets directory. Never paste it into a script that gets committed. Scripts read its location from a non-committed env file (loaded by `scripts/_secrets.py`) at runtime — no filesystem path strings in the public source.
 5. **Conflict of interest / model-self-trading.** I will not place trades on markets that resolve based on AI-model performance leaderboards (Anthropic / OpenAI / DeepMind / xAI / DeepSeek "best model" markets). Even if I have an edge, the optics are wrong and the operator deserves clean books.
 
 ## Restrictions

@@ -2,7 +2,7 @@
 
 > Operator asked: where would a *new, separate* ~$50 sleeve get the highest EV in crypto over a < 6 month window, fees and compute included? This memo is *not* the polyclaude $70 Polymarket book — it's a clean-slate exploration covering the entire crypto landscape from blue-chip yield to sub-$30M-FDV speculation. Verdict at the bottom; tier-ranked plays in between.
 >
-> **TL;DR.** At $50 / < 6mo / fully-decentralized self-custody, two plays clear the fee-and-compute screen with structural retail edge AND are 100% Claude-executable: **(1) Ostium points-farming on Arbitrum** (no token yet, $25B cumulative volume, Jump+General-Catalyst-backed — the single strongest novel bet) and **(2) Limitless ↔ Polymarket prediction-market arbitrage on Base** (zero-gas, $1B/mo notional, structural liquidity-fragmentation edge). **Default split: $30 Ostium / $15 Limitless / $5 gas reserve.** Bittensor / TAO is **dropped permanently** — operator's no-CEX/no-KYC constraint rules out the only viable funding rail at $50; on-chain bridges (TaoFi at $192K TVL) charge 5-15% slippage at our size. New crypto-sleeve wallet generated 2026-04-27 at `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` (credentials in `<SECRETS>/wallet_crypto.json`, mode 0o600). Operator's only required action: send $50 USDC.e to that address on Polygon. Skip pump.fun retail sniping, HLP, funding-rate arb, LRTs (post-Kelp), inscriptions/runes, MOVE, Plasma post-July.
+> **TL;DR.** At $50 / < 6mo / fully-decentralized self-custody, two plays clear the fee-and-compute screen with structural retail edge AND are 100% Claude-executable: **(1) Ostium points-farming on Arbitrum** (no token yet, $25B cumulative volume, Jump+General-Catalyst-backed — the single strongest novel bet) and **(2) Limitless ↔ Polymarket prediction-market arbitrage on Base** (zero-gas, $1B/mo notional, structural liquidity-fragmentation edge). **Default split: $30 Ostium / $15 Limitless / $5 gas reserve.** Bittensor / TAO is **dropped permanently** — operator's no-CEX/no-KYC constraint rules out the only viable funding rail at $50; on-chain bridges (TaoFi at $192K TVL) charge 5-15% slippage at our size. New crypto-sleeve wallet generated 2026-04-27 — address `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`, credentials stored in the gitignored secrets directory (mode 0o600). Operator's only required action: send $50 USDC.e to that address on Polygon. Skip pump.fun retail sniping, HLP, funding-rate arb, LRTs (post-Kelp), inscriptions/runes, MOVE, Plasma post-July.
 
 ---
 
@@ -156,7 +156,7 @@ This split is the explicit minimum-operator-effort plan: every component is some
 Operator's full task list:
 1. **Send $50 USDC.e to the new crypto-sleeve wallet** `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` on Polygon. One on-chain transfer. (Greenlight already given by the same instruction; no separate "go" needed.)
 
-That's it. No CEX work, no bridge UI clicks, no monitoring scripts to babysit, no manual rebalances. The new wallet was generated locally on 2026-04-27 with credentials in `<SECRETS>/wallet_crypto.json` (mode 0o600), separate from the existing Polymarket wallet — operator's preference for clean ledger separation honored.
+That's it. No CEX work, no bridge UI clicks, no monitoring scripts to babysit, no manual rebalances. The new wallet was generated locally on 2026-04-27 with credentials stored in the gitignored secrets directory (mode 0o600), separate from the existing Polymarket wallet — operator's preference for clean ledger separation honored.
 
 Claude's tasks (no further input needed after greenlight):
 - Bridge $20-25 USDC → Arbitrum (Across), open Ostium account, deposit, ladder $5-10 RWA-perp positions (5x leverage cap, mixed long/short to avoid macro wipeout), cycle volume for points
@@ -185,8 +185,8 @@ If at any point operator wants to redirect, change strategy, or claw back capita
 **Decided 2026-04-27: new wallet for the crypto sleeve.** Operator confirmed full agency, including wallet generation. New keypair created locally on the VM via `eth_account.Account.create_with_mnemonic(num_words=12)`:
 
 - **Address**: `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`
-- **Credentials file**: `<SECRETS>/wallet_crypto.json` (mode 0o600, schema `{address, private_key, mnemonic}` — same shape as `wallet.json`)
-- **Gitignore**: `wallet_crypto.json` and `*mnemonic*` patterns added defensively, though the file is outside the repo
+- **Credentials**: stored in the gitignored secrets directory, mode 0o600, schema `{address, private_key, mnemonic}`. Path resolved at runtime by `scripts/_secrets.py` from a non-committed env file — no filesystem path strings in the public source.
+- **Gitignore**: defensive patterns added (`wallet_crypto.json`, `*mnemonic*`) on top of the existing `wallet.json` exclusion
 
 Existing polyclaude (Polymarket) wallet `0x9032…267B` is untouched. The two sleeves now have clean separation: distinct keypairs, distinct ledgers, distinct journal narratives. If at any point a strategy needs to move capital across sleeves, that's an explicit operator-or-Claude decision, not an accident.
 

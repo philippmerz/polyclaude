@@ -9,7 +9,7 @@
 **State at start.** Fresh VM. Wallet 0x9032…267B funded with $70 USDC.e on Polygon, 0 MATIC. Repo `polyclaude` (public github) initialized. Memory file system primed.
 
 **What I built:**
-- Project skeleton with `.gitignore` excluding wallet/keys/snapshots/swap files. Wallet stays at `<SECRETS>/wallet.json`, never inside the repo.
+- Project skeleton with `.gitignore` excluding wallet/keys/snapshots/swap files. Wallet stays in a gitignored secrets directory, never inside the repo.
 - `scripts/wallet_status.py`: read-only Polygon balance check across 4 fail-over RPC endpoints (the canonical `polygon-rpc.com` is "tenant disabled" as of today).
 - `scripts/discover_markets.py`: Gamma-API survey, category heuristic, 80-row shortlist snapshots into `data/snapshots/` (gitignored, regenerable).
 - `scripts/long_horizon.py`: filter by resolution-date window.
@@ -256,7 +256,7 @@ Operator gave open-ended latitude ("free to move ticks to whichever timing you e
 - **Tier 1** (book-resolving events): Trump dies / assassinated / 25A-removed, Iranian regime falls / Khamenei dies / IRGC coup, US-Iran permanent peace deal signed, Pahlavi takes power, aliens confirmed by Cabinet/agency, Jesus Christ returns, Iran missile-strikes a European city. → Telegram alert with `[URGENT]` prefix **AND** auto-spawns a `daily_checkin.sh` so a fresh max-effort cron Claude reacts immediately.
 - **Tier 2** (notable but not resolution-shifting): Trump health/security, Hormuz blockade ops, US-Iran talks state, Khamenei health, UAP/AARO reports, Eurovision rehearsals, Ohio primary, La Liga title race, Atletico injuries. → Telegram `[NEWS]` alert only; next scheduled cron tick handles analysis.
 
-State (seen entry IDs, per-keyword cooldowns) at `<SECRETS>/news_watcher_state.json`. Per-keyword 30-min cooldown prevents spamming on a hot story. Auto-cron-fire is rate-limited to 30 min between auto-spawns. Daemon restarts on reboot via `@reboot` crontab. Bootstrap poll already emitted two real Tier-2 Iran/Hormuz alerts (BBC ME stories on ceasefire breaches and ships under fire), confirming the pipeline works.
+State (seen entry IDs, per-keyword cooldowns) lives in the gitignored secrets directory. Per-keyword 30-min cooldown prevents spamming on a hot story. Auto-cron-fire is rate-limited to 30 min between auto-spawns. Daemon restarts on reboot via `@reboot` crontab. Bootstrap poll already emitted two real Tier-2 Iran/Hormuz alerts (BBC ME stories on ceasefire breaches and ships under fire), confirming the pipeline works.
 
 The combined autonomy stack now has three layers: (a) a 24/7 news-driven reactive layer (the watcher), (b) a scheduled analytical layer (cron 02:00 + 14:00), (c) an interactive operator console (tmux pane fed by the Telegram listener). Independent, fail-soft.
 
@@ -343,7 +343,7 @@ Operator's reply to the minimum-interface revision: *"You're free to create a ne
 
 Two decisions locked in:
 
-**(1) New wallet created for the crypto sleeve.** Generated locally on the VM with `eth_account.Account.create_with_mnemonic(num_words=12)` inside the polyclaude venv. Address `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`. Credentials at `<SECRETS>/wallet_crypto.json` (mode 0o600, same `{address, private_key, mnemonic}` schema as the existing Polymarket `wallet.json`). Defensive `.gitignore` lines added (`wallet_crypto.json`, `*mnemonic*`) — file lives outside the repo regardless. The two sleeves are now structurally separate: distinct keypairs, distinct journal narratives, no commingling possible by accident.
+**(1) New wallet created for the crypto sleeve.** Generated locally on the VM with `eth_account.Account.create_with_mnemonic(num_words=12)` inside the polyclaude venv. Address `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`. Credentials stored in the gitignored secrets directory (mode 0o600, schema `{address, private_key, mnemonic}` — same shape as the existing Polymarket wallet file). Defensive `.gitignore` lines added (`wallet_crypto.json`, `*mnemonic*`) — file lives outside the repo regardless. The two sleeves are now structurally separate: distinct keypairs, distinct journal narratives, no commingling possible by accident.
 
 **(2) Hard constraint registered: no CEX, no KYC, fully decentralized.** Saved to `user_profile.md` memory. This kills the optional TAO/Bittensor leg of the crypto memo permanently — the only on-chain rail at $50 (TaoFi at $192K TVL, 5-15% slippage) is too thin to be worth it. Diversified Bittensor exposure is unreachable at this size under the constraint; re-evaluate only if a deeper on-chain TAO bridge appears. Memo §7 + §10 + TL;DR updated.
 
@@ -357,3 +357,35 @@ Two decisions locked in:
 - For Telegram alerts: the existing `scripts/telegram.py` is wallet-agnostic; just need to include sleeve identifier in the message body.
 
 I will start no on-chain action until the new wallet's USDC balance is non-zero — the wallet is empty and any pre-funding setup work would just burn cycles. When funding lands, plan is: bridge $30 to Arbitrum + Ostium setup, $15 to Base + Limitless setup, $5 USDC.e + $1-2 of POL on Polygon retained for gas/bridges.
+
+---
+
+## 2026-04-27 ~21:50 UTC — Path-leak hygiene scrub (operator-flagged)
+
+Operator: *"Do not leak the location of the secrets."* Caught me having committed absolute filesystem paths to the crypto-sleeve credentials file across the new crypto memo, journal entry, and earlier across 6 scripts. Scrubbed.
+
+**Architectural change.** All secret-bearing file locations now resolved at runtime via env vars. New module `scripts/_paths.py` auto-loads `~/.polyclaude/env` (gitignored, 0o600, outside the repo) on import and exposes `path("VAR_NAME") -> Path`. Importing scripts use `import _paths as _secrets` then `_secrets.path("VAR_NAME")`. Public source references env-var names only — no filesystem path strings. (Module is named `_paths.py` not `_secrets.py` because the existing `*secret*` line in `.gitignore` was matching `_secrets.py` and stopping it from being tracked.)
+
+**Files refactored:**
+- `scripts/wallet_status.py` — uses `POLYCLAUDE_WALLET`
+- `scripts/polyclaude_client.py` — uses `POLYCLAUDE_WALLET`, `POLYCLAUDE_CREDS`
+- `scripts/telegram.py` — uses `POLYCLAUDE_TELEGRAM_TOKEN`, `POLYCLAUDE_TELEGRAM_STATE`
+- `scripts/telegram_listener.py` — uses `POLYCLAUDE_TELEGRAM_TOKEN`, `POLYCLAUDE_TELEGRAM_STATE`, `POLYCLAUDE_LISTENER_PID`
+- `scripts/news_watcher.py` — uses `POLYCLAUDE_NEWS_STATE`, `POLYCLAUDE_NEWS_PID`, `POLYCLAUDE_TELEGRAM_TOKEN`, `POLYCLAUDE_TELEGRAM_STATE`; in-repo paths (config, log, cron-script) now resolved via `Path(__file__).resolve().parent`
+- `scripts/daily_checkin.sh` — sources `${HOME}/.polyclaude/env`, resolves `POLYCLAUDE_DIR` from `${BASH_SOURCE[0]}` instead of hardcoded
+- `scripts/place_initial_orders.py`, `scripts/place_short_orders.py`, `scripts/discover_markets.py`, `scripts/long_horizon.py` — in-repo `LOG_DIR`/`DATA`/`SNAP` paths now `Path(__file__).resolve().parent.parent / ...`
+
+Daemons restarted with refactored code: `news_watcher` PID 85333, `telegram_listener` PID 85368. Smoke test: `wallet_status.py` still prints correct balances; all 8 scripts import without error.
+
+**Docs scrubbed:**
+- `research/_crypto_landscape_2026-04-27.md` (TL;DR, §8, §10)
+- `notes/journal.md` (Day 1 setup entry, news_watcher entry, my crypto-sleeve entry)
+- `strategy/00_philosophy.md` operational-risk paragraph
+- Docstrings of `wallet_status.py`, `telegram.py`, `telegram_listener.py`, `news_watcher.py`
+
+**Memory updated:**
+- `user_profile.md` — genericized the wallet-storage line
+- `reference_polyclaude_layout.md` — secrets dir referenced generically; documents the env-file indirection mechanism
+- New `feedback_no_path_leaks.md` — durable rule + Why + How to apply for future sessions
+
+**Sanity grep:** `grep -rn "home/" --include="*.md" --include="*.py" --include="*.sh" --include="*.json"` returns zero hits across the repo. Verified.

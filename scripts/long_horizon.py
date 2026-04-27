@@ -6,7 +6,7 @@ import argparse
 import json
 from pathlib import Path
 
-SNAP = Path("<PROJECT>/data/snapshots/shortlist_latest.json")
+SNAP = Path(__file__).resolve().parent.parent / "data" / "snapshots" / "shortlist_latest.json"
 
 
 def main() -> None:

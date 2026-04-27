@@ -39,10 +39,12 @@ from py_clob_client.clob_types import (
 from py_clob_client.order_builder.constants import BUY, SELL
 from web3 import Web3
 
+import _paths as _secrets
+
 # ----- constants ----------------------------------------------------------------
 
-WALLET_PATH = Path("<SECRETS>/wallet.json")
-CREDS_PATH = Path("<SECRETS>/polyclaude_creds.json")  # outside the repo
+WALLET_PATH = _secrets.path("POLYCLAUDE_WALLET")
+CREDS_PATH = _secrets.path("POLYCLAUDE_CREDS")
 
 CHAIN_ID = 137
 CLOB_HOST = "https://clob.polymarket.com"

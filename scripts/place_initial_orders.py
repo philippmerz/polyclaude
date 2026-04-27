@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from polyclaude_client import Polyclaude  # type: ignore
 
-LOG_DIR = Path("<PROJECT>/logs")
+LOG_DIR = Path(__file__).resolve().parent.parent / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 # (label, NO-token-id, plan_limit, usd_size, slug)

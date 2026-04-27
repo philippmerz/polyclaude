@@ -9,8 +9,8 @@ matches entry titles + summaries against tiered keyword lists, and:
 - Tier 2 (notable but not resolution-shifting) → Telegram alert with [NEWS]
   prefix only; the next scheduled cron tick will pick it up.
 
-Config: `polyclaude/scripts/news_watcher_config.json` (in repo, editable).
-State (seen entry ids, last alerts): `<SECRETS>/news_watcher_state.json`.
+Config: `news_watcher_config.json` colocated with this script (in repo, editable).
+State (seen entry ids, last alerts): file pointed to by POLYCLAUDE_NEWS_STATE.
 
 Subcommands: start | status | stop | once  (the last polls one cycle and exits,
 useful for testing).
@@ -32,13 +32,18 @@ from pathlib import Path
 import feedparser
 import httpx
 
-CONFIG_PATH = Path("<PROJECT>/scripts/news_watcher_config.json")
-STATE_PATH = Path("<SECRETS>/news_watcher_state.json")
-PID_PATH = Path("<HOME>/.polyclaude_news_watcher.pid")
-LOG_PATH = Path("<PROJECT>/logs/news_watcher.log")
-TELEGRAM_TOKEN_PATH = Path("<SECRETS>/telegram_token.txt")
-TELEGRAM_STATE_PATH = Path("<HOME>/.polyclaude_telegram.json")
-CRON_SCRIPT = Path("<PROJECT>/scripts/daily_checkin.sh")
+import _paths as _secrets
+
+_SCRIPT_DIR = Path(__file__).resolve().parent
+_REPO_ROOT = _SCRIPT_DIR.parent
+
+CONFIG_PATH = _SCRIPT_DIR / "news_watcher_config.json"
+STATE_PATH = _secrets.path("POLYCLAUDE_NEWS_STATE")
+PID_PATH = _secrets.path("POLYCLAUDE_NEWS_PID")
+LOG_PATH = _REPO_ROOT / "logs" / "news_watcher.log"
+TELEGRAM_TOKEN_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_TOKEN")
+TELEGRAM_STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
+CRON_SCRIPT = _SCRIPT_DIR / "daily_checkin.sh"
 
 
 def load_config() -> dict:

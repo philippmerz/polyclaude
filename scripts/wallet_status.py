@@ -1,15 +1,16 @@
 """Read-only wallet status: MATIC + USDC.e + USDC native balances on Polygon.
 
-Loads <SECRETS>/wallet.json (outside the repo). Only reads the address — does NOT
-require or surface the private key. Safe to run any time.
+Reads the wallet file pointed to by POLYCLAUDE_WALLET (resolved via _secrets).
+Only reads the address — does NOT require or surface the private key.
+Safe to run any time.
 """
 
 import json
 import sys
-from pathlib import Path
 from web3 import Web3
+import _paths as _secrets
 
-WALLET_PATH = Path("<SECRETS>/wallet.json")
+WALLET_PATH = _secrets.path("POLYCLAUDE_WALLET")
 # Default RPC https://polygon-rpc.com began returning "tenant disabled" 2026-04-25.
 # Fall through a list of public endpoints; first that answers wins.
 POLYGON_RPCS = [
