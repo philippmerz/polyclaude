@@ -314,7 +314,9 @@ Memo at `research/_crypto_landscape_2026-04-27.md` (214 lines). Built by spawnin
 
 **Tier-2 yield floor:** Pendle PT-sUSDe-Jun-2026 on Arbitrum (4.31% fixed APR) or Aave V3 USDT0 Polygon (3.88%). PLUME (RWA chain native, $0.0138, ~95% off ATH) and Akash (sleeper GPU-DePIN) as small directional sector beta.
 
-**Recommended split (Balanced):** $15 Ostium, $10 TAO spot, $10 Pendle floor, $10 Limitless arb working capital, $5 reserve. Aggressive variant adds $3 to a MegaETH-MEGA-TGE-on-Apr-30 event-trade (only if Day-1 pricing leaves runway — fade FOMO).
+**Recommended split (Default — lean concentrated, 100% Claude-executable):** $30 Ostium / $15 Limitless arb / $5 gas reserve. *Optional add-ons*: $10-15 TAO on a CEX the operator already uses (skip if no existing CEX seat — not worth fresh KYC for $15 of Bittensor beta), $3-5 MegaETH-MEGA-TGE-on-Apr-30 event-trade (skip unless Day-1 pricing obviously leaves runway).
+
+**Operator-side feedback after first pass: original §8 had too many operator-action steps.** Revised: the only operator actions are (a) send $50 USDC.e to existing wallet `0x9032…267B`, (b) reply "go". Default to same wallet (separate ledger in `notes/positions_crypto.md`), no fresh keypair required. All bridging, account-opening, position management, and the Polymarket↔Limitless spread monitor are Claude tasks. Memo §8 + §10 rewritten accordingly. **Lesson learned**: when proposing a new sleeve, lead with the minimum-input operator interface, not the full menu of "things one could do."
 
 **Tier-3 actively-skip list (with reasons):**
 - pump.fun retail sniping — 0.63% of launches graduate, 3% of users earn > $1K. Negative-EV.

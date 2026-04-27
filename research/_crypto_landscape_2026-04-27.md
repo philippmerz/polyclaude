@@ -2,7 +2,7 @@
 
 > Operator asked: where would a *new, separate* ~$50 sleeve get the highest EV in crypto over a < 6 month window, fees and compute included? This memo is *not* the polyclaude $70 Polymarket book — it's a clean-slate exploration covering the entire crypto landscape from blue-chip yield to sub-$30M-FDV speculation. Verdict at the bottom; tier-ranked plays in between.
 >
-> **TL;DR.** At $50 / < 6mo / Polygon-native self-custody, three plays carry materially asymmetric R/R and clear my fee-and-compute screen: **(1) Ostium points-farming on Arbitrum** (no token yet, $25B cumulative volume, Jump+General-Catalyst-backed — the single strongest novel bet), **(2) Bittensor subnet alpha via TAO entry** (specifically SN64 Chutes for revenue thesis), and **(3) Limitless ↔ Polymarket prediction-market arbitrage on Base** (zero-gas, $1B/mo notional, structural retail edge). A 5-10% sleeve in **Pendle PT-sUSDe-Jun-2026 on Arbitrum** sets a low-vol floor. Skip pump.fun retail sniping, HLP, funding-rate arb, LRTs (post-Kelp), inscriptions/runes, MOVE, Plasma post-July.
+> **TL;DR.** At $50 / < 6mo / Polygon-native self-custody, two plays clear the fee-and-compute screen with structural retail edge AND are 100% Claude-executable from the existing wallet: **(1) Ostium points-farming on Arbitrum** (no token yet, $25B cumulative volume, Jump+General-Catalyst-backed — the single strongest novel bet) and **(2) Limitless ↔ Polymarket prediction-market arbitrage on Base** (zero-gas, $1B/mo notional, structural liquidity-fragmentation edge). **Default split: $30 Ostium / $15 Limitless / $5 gas reserve.** A third play — Bittensor subnet alpha (SN64 Chutes via TAO) — is *higher conviction* but requires a CEX seat for funding, so it's an *optional add-on* rather than the default. Operator's only required actions: (a) send $50 USDC.e to the existing wallet, (b) reply "go". Skip pump.fun retail sniping, HLP, funding-rate arb, LRTs (post-Kelp), inscriptions/runes, MOVE, Plasma post-July.
 
 ---
 
@@ -136,36 +136,38 @@ Akash (AKT) is the cleanest GPU-DePIN with revenue-paying tenants and FDV ~$200M
 
 ## 7. Recommended portfolio ($50 total)
 
-**Aggressive (highest expected variance):**
-- $20 → Ostium on Arbitrum: $5-10 RWA-perp positions (5x leverage cap), volume-rotated for points
-- $15 → TAO spot or SN64 Chutes alpha (TAO if you want easy, SN64 if you want concentrated thesis)
-- $10 → Limitless on Base for active arb against Polymarket on identical markets
-- $3 → MegaETH MEGA on Apr 30 if first-hour pricing leaves runway (skip if obvious top)
-- $2 → reserve for gas (Arbitrum + Base + Polygon)
+**Default (lean concentrated, 100% on-chain, zero CEX dependency):**
+- **$30 → Ostium** on Arbitrum: $5-10 RWA-perp positions (5x leverage cap), volume-rotated for points
+- **$15 → Limitless** on Base for active arb against Polymarket on identical markets (operated via a Polymarket↔Limitless spread-monitor script feeding Telegram)
+- **$5 → gas + reserve** spread across Polygon / Arbitrum / Base
 
-**Balanced:**
-- $15 → Ostium points-farming
-- $10 → TAO spot
-- $10 → Pendle PT-sUSDe-Jun-2026 (Arbitrum) for yield floor
-- $10 → Limitless arb working capital
-- $5 → reserve
+This split is the explicit minimum-operator-effort plan: every component is something Claude can deploy and manage from the existing wallet without further input. No CEX, no Subtensor wallet, no extra KYC.
 
-**Conservative (capital-preservation-with-edge):**
-- $20 → Pendle PT-sUSDe-Jun-2026 (Arbitrum) — locked ~4.3% APR
-- $15 → Aave V3 USDT0 Polygon at 3.88%
-- $10 → Ostium points (small directional + points)
-- $5 → reserve
+**Optional add-ons (require operator effort or extra capital):**
+- *+ $10-15 TAO* on a CEX the operator already uses (Coinbase / Kraken). Diversified Bittensor subnet beta. Skip if no existing CEX seat — not worth fresh KYC for this size. Reallocate to more Ostium if skipped.
+- *+ $10 PLUME* directional buy on Plume DEX (RWA narrative beta). Doable on-chain by Claude if operator wants this exposure. Default off because Tier-1 plays already cover the budget.
+- *+ $3-5 MegaETH MEGA* on Apr 30 TGE if first-hour pricing leaves runway. Doable on-chain by Claude. Default off — fade FOMO unless operator explicitly wants this.
 
-**My recommendation:** the *Balanced* split. The aggressive split has too much in Limitless arb where the realized op-lift to capture 1-2% / cycle isn't worth it for $10 of capital — you'd be working hard for $0.20/week. Concentrate in Ostium + TAO with a Pendle floor. Skip the MegaETH TGE unless the operator actively wants to babysit it on Apr 30 — fade to safety is fine.
+**Yield-floor variant** (if operator wants ~half the capital in capital-preservation mode): swap $15 of Ostium for $15 in Pendle PT-sUSDe-Jun-2026 (Arbitrum, 4.31% APR locked, $0.30 yield over the 50-day window — small in absolute terms but smart-contract-clean). Activate this on operator request only.
 
-## 8. Operational steps if greenlit
+## 8. What the operator actually does — and what Claude does
 
-1. **Bridge $30-40 USDC.e Polygon → USDC Arbitrum** via Across ([app.across.to](https://app.across.to/)). Cost: ~$0.05 + $0.005 source gas.
-2. **Open Ostium account** on Arbitrum, deposit $20 USDC. Bookmark the points dashboard. Confirm 2 audits before any size deployment.
-3. **Buy $10-15 TAO** on Coinbase or Kraken, hold spot in CEX (cheaper than withdrawing) OR withdraw to Subtensor wallet for SN64 staking if pursuing that. Note: TAO/USDC pair on Coinbase has $1 minimum.
-4. **Open a Base wallet, fund $10 USDC via Polygon→Base bridge** (Across, ~$0.04). Top up Limitless via [limitless.exchange](https://limitless.exchange/).
-5. **Build Polymarket-Limitless identical-market spread monitor** (4 hours of dev work; pings Telegram when net-of-fee spread > 2%). Tied into existing news_watcher infra so Telegram path is reused.
-6. **Set a 30-day mark**: review on May 27 — measure points-balance accumulated on Ostium, TAO PnL, any Limitless arb crosses captured. Re-balance.
+Operator's full task list:
+1. **Send $50 USDC.e to the existing polyclaude wallet** (`0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` on Polygon). One on-chain transfer.
+2. **Reply "go"** to greenlight deployment.
+
+That's it. No CEX work, no bridge UI clicks, no monitoring scripts to babysit, no manual rebalances. By default I keep using the existing wallet with a separate journal ledger for the new sleeve — no custody change, no fresh keypair to store. Operator can override with "go new wallet" if they want strict separation.
+
+Claude's tasks (no further input needed after greenlight):
+- Bridge $20-25 USDC → Arbitrum (Across), open Ostium account, deposit, ladder $5-10 RWA-perp positions (5x leverage cap, mixed long/short to avoid macro wipeout), cycle volume for points
+- Bridge $15 USDC → Base (Across), fund Limitless, **build the Polymarket↔Limitless spread-monitor script** (4 hours of dev work, reuses existing news_watcher Telegram pipeline). Auto-cross when net-of-fee spread > 2%
+- Maintain $5 in reserve gas across Polygon/Arbitrum/Base
+- Track positions in `notes/positions_crypto.md` (parallel to existing Polymarket positions tracking), append journal entries on each material trade, weekly P&L summary in `notes/pnl_weekly.md` alongside Polymarket
+- Cron-tick (existing 02:00 + 14:00 UTC schedule already covers this; no new infra) checks Ostium points balance, Limitless arb captures, Pendle PT mark (if applicable). Telegram-alert on > $5 PnL move or any liquidation risk
+- 30-day review on 2026-05-27: aggregate points/PnL, decide rebalance
+- Trigger conditions (memo §9) executed without further operator input — e.g., if Kelp-style hack hits Ostium, pull capital immediately
+
+If at any point operator wants to redirect, change strategy, or claw back capital, a single Telegram message or tmux interaction is all that's needed.
 
 ## 9. Trigger conditions for revisiting
 
@@ -178,7 +180,13 @@ Akash (AKT) is the cleanest GPU-DePIN with revenue-paying tenants and FDV ~$200M
 - **BTC dominance < 50%** (currently 56-57%): altseason regime; tilt aggressive split toward TAO/PLUME/Akash and away from Pendle floor.
 - **Reverse**: if BTC dominance > 62% or BTC < $65K, retreat toward Pendle/Aave floor — alts will bleed harder than the floor in a deeper drawdown.
 
-## 10. What this audit explicitly does *not* recommend
+## 10. Custody / wallet decision
+
+Default: **same wallet** (existing polyclaude address `0x9032…267B`), separate ledger in `notes/positions_crypto.md`. Rationale: zero custody change, zero new keypair to back up, instant deploy. The "audit-trail clean" argument from a prior draft was wrong for an operator who explicitly prioritized minimal effort over bookkeeping purity.
+
+Operator can override with "new wallet" if they want strict separation — that adds: (a) generating a fresh keypair locally, (b) saving it to `<SECRETS>/wallet_crypto.json`, (c) Claude updating scripts to read either wallet by sleeve. Roughly 15 minutes of operator time. Not recommended unless there's a specific reason.
+
+## 11. What this audit explicitly does *not* recommend
 
 - **No CEX funding-rate desk strategies**: too small + no margin headroom.
 - **No NFT trading / sniping**: thin retail edge at $50.
@@ -187,13 +195,13 @@ Akash (AKT) is the cleanest GPU-DePIN with revenue-paying tenants and FDV ~$200M
 - **No options strategies (Lyra, Aevo)**: bid-ask + size minimums break the bankroll.
 - **No yield-aggregator vaults (Yearn, Beefy, Idle)**: no rate edge over picking the underlying directly at our size.
 
-## 11. Why I'm confident in this ranking
+## 12. Why I'm confident in this ranking
 
 - The fee-structure analysis is the *same lens* that proved the polymarket-algo audit on April 26 — at small size, the fee/rebate math determines feasibility before strategy quality does.
 - Tier 1 plays each have **a specific structural edge** retail at $50 can capture: Ostium = retroactive airdrop on a real product; SN64 = revenue-driven token; Limitless arb = liquidity-fragmentation between two real markets.
 - Tier 3 rejections are quantitatively grounded (DD, fee, hack-event, supply-unlock) — not vibes.
 
-## 12. Sources (deduped, all April 23-27 2026 unless noted)
+## 13. Sources (deduped, all April 23-27 2026 unless noted)
 
 **Market data:** [CoinMarketCap](https://coinmarketcap.com/), [CoinGecko](https://www.coingecko.com/), [DefiLlama protocols](https://api.llama.fi/protocols), [DefiLlama yields](https://yields.llama.fi/pools), [DefiLlama stablecoins](https://defillama.com/stablecoins), [Hyperliquid info API](https://api.hyperliquid.xyz/info).
 
