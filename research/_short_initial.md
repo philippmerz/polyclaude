@@ -1,8 +1,6 @@
 # Short-horizon sleeve — initial portfolio (2026-04-25)
 
-> **Sleeve:** short-horizon (1-month eval window, 1/3 of bankroll)
-> **Target capital:** $23.33 (1/3 of $70). Initial deploy target $22, $1 cash reserve.
-> **Eval checkpoint:** 2026-05-25.
+> Short-horizon sleeve, 1-month eval window. Allocation framework in `strategy/01_horizon_split.md`; sizing rules in `strategy/00_philosophy.md`. **Eval checkpoint:** 2026-05-25.
 
 ## Strategy — concentrated short-tenor edge
 

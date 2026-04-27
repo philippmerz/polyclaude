@@ -1,15 +1,6 @@
 # Long-horizon sleeve — initial portfolio (2026-04-25)
 
-> **Sleeve:** long-horizon (1-year eval window, 2/3 of bankroll)
-> **Target capital:** $46.67 (2/3 of $70). Currently $42.99 deployed.
-> **Status as of 2026-04-25 15:22 UTC: all 5 orders filled.**
-
-## Bankroll & sizing framework
-- Starting USDC.e: $70.00 on Polygon
-- Initial deploy target: ~$43 (61% of bankroll)
-- Reserve: ~$27 for higher-conviction directional plays surfaced in week 1–2 research
-- Max ticket: 15% of bankroll = $10.50
-- Max correlated cluster: 30% = $21.00
+> Long-horizon sleeve, 1-year eval window. Allocation framework in `strategy/01_horizon_split.md`; sizing rules (Kelly/4, 15% per-ticket, 30% cluster cap) in `strategy/00_philosophy.md`. **Status as of 2026-04-25 15:22 UTC: all 5 orders filled, $42.99 deployed of the $46.67 sleeve target.**
 
 ## Strategy theme — Tier-1 carry: longshot fades
 

@@ -178,15 +178,9 @@ The S1 +5.2% move is *thesis-confirming* news, not a reason to take profit. Fair
 
 ## 2026-04-25 ~20:40 UTC — Non-Polymarket yield + venue audit (operator-prompted)
 
-Operator asked via Telegram whether the lower-yield slices of the book might be better placed in DeFi staking / Aave-style lending. Pulled live yields off DefiLlama and walked through the comparison. Full write-up: `research/_yield_audit_2026-04-25.md`.
+Operator asked via Telegram whether lower-yield slices of the book might do better in DeFi yield. Audit verdict: every active Polymarket position out-yields every comparable-risk DeFi alternative; idle balance too small to deploy profitably.
 
-**Headline:** every active Polymarket position out-yields every comparable-risk DeFi alternative. Best Aave V3 Polygon stable yields right now are 2.8–4.0% APY (USDC 2.80%, USDT0 3.89%, DAI 3.99%); BUIDL T-bill is 3.55% but gates on institutional KYC. Our lowest-yield position (Jesus NO at 5.8% annualised) still beats them, and the rest of the book is dominant by tens of percentage points.
-
-**The idle balance** ($5.05 USDC.e + 53.81 POL) is too small to deploy profitably: round-trip swap fees ≈ a year of stable-lending yield at this size, and POL staking adds 9-day unbonding optionality cost for ~$0.50/yr.
-
-**Trigger conditions captured in the write-up** for re-evaluating: bankroll ≥ $500 → Aave/BUIDL allocation for between-trade idle capital; ≥ $2k → small Hyperliquid sleeve for macro views without a Polymarket counterpart; new directional thesis without a Polymarket expression → perps entry even at smaller size with tight bankroll-fraction cap.
-
-**Decision: no action today, no change to the book.** Documented the analysis so future-me / cron-me doesn't re-litigate the same question every month.
+**Decision: no action.** Full analysis + trigger conditions in `research/_yield_audit_2026-04-25.md`.
 
 ---
 
@@ -224,41 +218,24 @@ Operator pinged via Telegram with two threads.
 
 Second-order concern: a successful security failure could in theory accelerate a 25th-Amendment Section-4 conversation, but the structural blockers (R-Senate, R-Cabinet, VP cooperation) remain — same logic as before. Watching for Trump health follow-ups (if he was rattled enough to skip events, that creates its own narrative), but nothing actionable today.
 
-**(2) Algorithmic Polymarket trading feasibility — full write-up at `research/_polymarket_algo_audit_2026-04-26.md`.** Operator flagged hearing about a bot with "insane returns on BTC 5-minute bets" and asked whether anything similar fits our setup.
+**(2) Algorithmic Polymarket trading feasibility.** Operator flagged hearing about a bot with "insane returns on BTC 5-minute bets" and forwarded `0xde17f7144fbd0eddb2679132c10ff5e74b120988` as the source.
 
-Verdict: **no algorithmic deployment at this scale.** The decisive number is the fee schedule — Polymarket's short-tenor crypto markets (5-min, hourly, daily ladders) all fire `{rate: 0.072, takerOnly: true, rebateRate: 0.2}`, which is *edge-aware* (`fee = rate × min(p, 1-p) × notional`):
-- At p ≈ 0.5 (5-min coin-flip case), round-trip taker fee is **7.2%** — exceeds any retail TA edge I've seen documented (live bots win 25-27% vs 53% breakeven).
-- Maker rebates are real but require **≥ $50/order** (`rewardsMinSize: 50`), an order of magnitude above our $5 minimum.
-- Latency: 100-300ms RTT to Polygon CLOB on our 2-CPU box; transient mispricings are gone in milliseconds when a co-located bot competes.
+Audit verdict: edge-aware fee structure (7.2% round-trip at p=0.5) and $50 maker-rewards floor make the obvious retail strategies negative-EV at our scale. Full analysis in `research/_polymarket_algo_audit_2026-04-26.md` with trigger conditions for revisiting.
 
-The "insane returns" rumour is most likely (a) a viral lucky-streak post that didn't survive sample size, (b) a serious market-maker operating well above $50/quote with rebate income, or (c) backtested-not-live numbers. No verifiable source available — happy to dig if the operator forwards a specific link.
+**Operator correction worth remembering:** I initially reported the forwarded account as -$727k loss based on a WebFetch natural-language summary. Operator pushed back; pulling raw React state directly gave **+$727k positive P&L on $45.8M lifetime volume** (~1.6% edge per dollar transacted). The account is profitable, not a cautionary tale. **Lesson for future ticks: never trust a small-model summary on financial numerics — always verify against raw structured data.** Audit doc updated with the corrected reading; reclassified this strategy class as "untested edge that might exist" with a paper-trade-first protocol if we ever deploy.
 
-Trigger conditions captured in the audit doc: bankroll ≥ $250-500 → maker-quoting becomes viable; bankroll covers a low-latency VM out of yield → revisit; Polymarket fee schedule changes → revisit; operator forwards a specific verifiable bot edge → re-audit.
-
-**No book changes from either thread.** Pushing the audit doc + this entry now.
-
-**Addendum 08:30 UTC — operator forwarded the specific account behind the "insane returns" rumour.** Pulled lifetime stats off Polymarket profile + data-api: `0xde17f7144fbd0eddb2679132c10ff5e74b120988` is **−$727,450.80 lifetime P&L** across 1,168 predictions, all daily/weekly BTC range markets. Current portfolio value $0. Biggest single win $195k (the propagating headline). Cumulative losses of $922k around it (what doesn't propagate). Direct empirical confirmation of yesterday's audit: the strategy class behind the rumour is a known capital-destroyer for retail, not a hidden edge. Updated `research/_polymarket_algo_audit_2026-04-26.md` with the verification.
-
-**Correction 08:50 UTC — operator caught a sign error and they were right.** I had taken WebFetch's natural-language summary ("Lifetime P&L: -$727,450.80") at face value. Pulling the page's raw embedded React state directly gives `{"amount": 45832613.43, "pnl": 727450.84}` — that's **+$727k positive P&L on $45.8M lifetime volume**, i.e. ~1.6% edge per dollar transacted. The account is *profitable*, not a cautionary tale. The "-100% on open positions" I saw is just the unredeemed-loser pile (winners get redeemed/sold and disappear from open positions), not a P&L summary. **Operator was right to push back; lesson for me: never trust a small-model summary on financial numerics — always verify against raw structured data.**
-
-**Re-evaluated audit conclusion** (full update in the audit doc): the strategy class IS profitable for a serious operator with capital, edge, and infrastructure. The successful pattern visible in the tape: buying near-certain "BTC reach $X" YES tickets at 0.86–0.97 during the window's lifetime — high-volume small-edge carry. Replicating *cleanly* at our $70 bankroll is still high-variance: $5 ticket × 1.6% edge = $0.08 expected per trade before fees, and a single losing $5 ticket eats ~63 winning ones. Path forward if we ever want to deploy: paper-trade ≥ 50 markets first to verify our pricing model has the same edge before risking real capital. Bankroll ≥ $250 makes the variance survivable. *Not deploying today*, but I'm now correctly classifying this as "untested edge that might exist" rather than "known capital-destroyer."
+**No book changes from either thread.**
 
 ---
 
 ## 2026-04-27 ~12:35 UTC — Architecture: cron rebalanced + news-watcher daemon
 
-Operator gave open-ended latitude ("free to move ticks to whichever timing you expect to maximise returns; maybe an RSS-based ping system; expand the architecture however"). Two changes:
+Operator gave open-ended latitude on architecture ("expand however"). Two changes:
 
-**(1) Cron rebalanced.** Was 14:00 + 22:00 UTC (8h/16h asymmetric). Now **02:00 + 14:00 UTC** — clean 12h spacing, 14:00 preserves the US-morning anchor for the policy/Iran-flow news cycle, 02:00 fills the previously-quiet stretch and catches Asia-morning + late-US-news.
+1. **Cron rebalanced** from asymmetric 14:00+22:00 UTC to symmetric **02:00 + 14:00 UTC** (clean 12h spacing; 14:00 anchors US-morning news, 02:00 catches Asia-morning + late-US).
+2. **`scripts/news_watcher.py` shipped** — 24/7 RSS-based reactive layer. 11 feeds, tiered keyword matching, Tier-1 events auto-fire a max-effort cron tick.
 
-**(2) `scripts/news_watcher.py` shipped.** Long-running daemon polling 11 RSS feeds (BBC World/Politics/ME, Al Jazeera, NPR World/Politics, Guardian World/US, France24, CBS, Fox World) every 5 minutes. Matches each entry's title + summary against a tiered keyword list in `scripts/news_watcher_config.json`:
-
-- **Tier 1** (book-resolving events): Trump dies / assassinated / 25A-removed, Iranian regime falls / Khamenei dies / IRGC coup, US-Iran permanent peace deal signed, Pahlavi takes power, aliens confirmed by Cabinet/agency, Jesus Christ returns, Iran missile-strikes a European city. → Telegram alert with `[URGENT]` prefix **AND** auto-spawns a `daily_checkin.sh` so a fresh max-effort cron Claude reacts immediately.
-- **Tier 2** (notable but not resolution-shifting): Trump health/security, Hormuz blockade ops, US-Iran talks state, Khamenei health, UAP/AARO reports, Eurovision rehearsals, Ohio primary, La Liga title race, Atletico injuries. → Telegram `[NEWS]` alert only; next scheduled cron tick handles analysis.
-
-State (seen entry IDs, per-keyword cooldowns) lives in the gitignored secrets directory. Per-keyword 30-min cooldown prevents spamming on a hot story. Auto-cron-fire is rate-limited to 30 min between auto-spawns. Daemon restarts on reboot via `@reboot` crontab. Bootstrap poll already emitted two real Tier-2 Iran/Hormuz alerts (BBC ME stories on ceasefire breaches and ships under fire), confirming the pipeline works.
-
-The combined autonomy stack now has three layers: (a) a 24/7 news-driven reactive layer (the watcher), (b) a scheduled analytical layer (cron 02:00 + 14:00), (c) an interactive operator console (tmux pane fed by the Telegram listener). Independent, fail-soft.
+Spec for both lives in `strategy/02_operations.md` (canonical ops doc). The autonomy stack is now three independent fail-soft layers: news-driven reactive (watcher), scheduled analytical (cron), interactive operator console (tmux + Telegram listener).
 
 ---
 
@@ -302,90 +279,27 @@ Sources:
 
 ## 2026-04-27 ~21:20 UTC — Crypto landscape audit for separate $50 bankroll (operator-prompted)
 
-Operator: "considering expanding into a different context with around 50 dollars. Research the entire crypto landscape in depth and rank the most promising opportunities for a < 6 month timeframe... include lesser-known novel ones, the largest alpha could be hidden in lesser-known projects."
+Operator asked for a crypto-landscape audit for a separate ~$50 sleeve over a < 6mo horizon, with explicit ask to include lesser-known novel projects.
 
-Memo at `research/_crypto_landscape_2026-04-27.md` (214 lines). Built by spawning 4 parallel research agents (macro state, yield, speculation, novel/lesser-known) and synthesizing into a tier-ranked, fee-vetted list with concrete portfolio splits.
+Built via 4 parallel research agents (macro state, yield, speculation, novel/lesser-known), synthesized into a tier-ranked memo at `research/_crypto_landscape_2026-04-27.md`. Verdict: at $50 + decentralization constraint, the deployable Tier-1 plays are Ostium points-farming + Limitless↔Polymarket arb. Default split $30 Ostium / $15 Limitless / $5 reserve. See memo for full tier table, fee-screen reasoning, and trigger conditions.
 
-**TL;DR of verdict.** At $50 / < 6mo / Polygon-self-custody constraint, three Tier-1 plays cleared the fee/compute screen with structural retail edge:
-
-1. **Ostium (Arbitrum) — points-farming + RWA-perp directional.** $58M TVL, $25B cumulative volume, 54 RWA-perp pairs (gold, SPY, NVDA, 22 US equities), Jump+General-Catalyst-backed at $250M post-money, $5 minimum trade size, Arbitrum sub-cent gas. **No public token yet — points are explicitly retroactive-airdrop-shaped.** Single highest-conviction novel play. Comparable retroactive-airdrop precedents (Hyperliquid, Jito, Jupiter) returned 5-50x of cumulative-fee-paid for active retail farmers.
-2. **Bittensor subnet alpha (SN64 Chutes via TAO entry).** Sector cap ~$1.12B, dTAO live, top performers up 200-450% in 30d. SN64 Chutes (Rayon Labs serverless inference, 9.1T tokens served, 400K users) is the cleanest cashflow story. Easier alternative: just buy spot TAO on a CEX for diversified emissions exposure.
-3. **Limitless ↔ Polymarket arbitrage on Base.** Limitless hit $1B/mo prediction-market notional Q1 2026, zero gas (Coinbase-subsidized). Identical political/sports markets often spread 2-4% across the two venues — net of Polymarket's edge-aware fee, ~1% per cycle. 4-hour Python script to monitor and ping Telegram. Bonus: doubles as scaffolding for any future POLY-airdrop farming.
-
-**Tier-2 yield floor:** Pendle PT-sUSDe-Jun-2026 on Arbitrum (4.31% fixed APR) or Aave V3 USDT0 Polygon (3.88%). PLUME (RWA chain native, $0.0138, ~95% off ATH) and Akash (sleeper GPU-DePIN) as small directional sector beta.
-
-**Recommended split (Default — lean concentrated, 100% Claude-executable):** $30 Ostium / $15 Limitless arb / $5 gas reserve. *Optional add-ons*: $10-15 TAO on a CEX the operator already uses (skip if no existing CEX seat — not worth fresh KYC for $15 of Bittensor beta), $3-5 MegaETH-MEGA-TGE-on-Apr-30 event-trade (skip unless Day-1 pricing obviously leaves runway).
-
-**Operator-side feedback after first pass: original §8 had too many operator-action steps.** Revised: the only operator actions are (a) send $50 USDC.e to existing wallet `0x9032…267B`, (b) reply "go". Default to same wallet (separate ledger in `notes/positions_crypto.md`), no fresh keypair required. All bridging, account-opening, position management, and the Polymarket↔Limitless spread monitor are Claude tasks. Memo §8 + §10 rewritten accordingly. **Lesson learned**: when proposing a new sleeve, lead with the minimum-input operator interface, not the full menu of "things one could do."
-
-**Tier-3 actively-skip list (with reasons):**
-- pump.fun retail sniping — 0.63% of launches graduate, 3% of users earn > $1K. Negative-EV.
-- HLP vault — 12-mo realized max DD **−55%**. Risk profile is trend-following CTA, not yield.
-- Funding-rate basis trade — perp min orders + dust funding payments mechanically OOS at $50.
-- LRTs (weETH/rsETH/ezETH) — Kelp DAO drained $293M April 19 (rsETH 18% supply hit), USDe -34% on contagion. Major airdrops already paid. Forward thesis is restaking-without-airdrop-with-tail-risk-priced. Bad R/R.
-- MOVE — -99% from ATH, founder-fraud, delisting risk.
-- Plasma (XPL) before July 28 — 25% supply unlock to US public-sale buyers will distribute heavy.
-- Sei — 1.5-2%/month inflation drag.
-- Inscriptions/Runes/BRC-20 — sector dead, BTC fees alone wreck $50.
-- Resolv — $25M exploit March 22 2026 (unauthorized 50M USR mint).
-
-**Why I'm confident.** Same fee-structure lens that proved the Polymarket-algo audit on April 26: at small size, the fee/rebate math determines feasibility before strategy quality. Tier-1 plays each have **a specific structural edge** retail at $50 can capture (Ostium = retroactive airdrop on real product; SN64 = revenue-driven token; Limitless arb = liquidity-fragmentation between two real markets). Tier-3 rejections are quantitatively grounded (DD, fee, hack-event, supply-unlock).
-
-**What this audit does *not* cover.** Memo intentionally separate from the polyclaude $70 Polymarket book — no commingling. If operator decides to deploy, the funding source, wallet (same or new EVM addr), and bookkeeping should be a separate decision from the Polymarket sleeve. I'd recommend a NEW wallet for this so the Polymarket book's audit trail stays clean. Trigger conditions in the memo §9 cover when to revisit.
-
-**Token cost of this work.** 4 parallel general-purpose research agents (Sonnet 4.6) returning ~600-900 words each, synthesized in main session. Within reasonable bounds vs the operator's Max subscription budget; no /usage check needed unless this kind of audit becomes routine.
+**Iteration with operator** that's worth preserving as a lesson: my first-pass §8 had a 6-item operator-action list. Operator pushed back ("are the instructions minimal?"). Revised: only operator actions are (a) fund the wallet, (b) reply "go" — everything else is Claude-side. Saved as a feedback memory: *when proposing a new sleeve, lead with the minimum-operator-input interface, not the full menu*.
 
 ---
 
 ## 2026-04-27 ~21:35 UTC — Crypto sleeve: new wallet generated, full decentralization constraint set
 
-Operator's reply to the minimum-interface revision: *"You're free to create a new wallet yourself, I agree it could be cleaner... I do want to stay entirely decentralized just because I want this project to be entirely managed by you, and unfortunately, you can't do KYC yet. This means anything involving CEX is off the table."*
+Operator confirmed full Claude-managed autonomy + the hard no-CEX/no-KYC constraint (*"I want this project to be entirely managed by you, and you can't do KYC yet"*) and authorized me to generate a fresh wallet for the crypto sleeve. Two decisions:
 
-Two decisions locked in:
+1. **Crypto-sleeve wallet** created locally via `eth_account.create_with_mnemonic`, address `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`. Custody + storage details in `strategy/02_operations.md`.
+2. **No-CEX/no-KYC** registered as hard constraint in `user_profile.md` memory. Drops the optional TAO leg from the crypto memo permanently (only on-chain TAO rail at $50 is too thin). Default split unchanged: $30 Ostium / $15 Limitless / $5 reserve.
 
-**(1) New wallet created for the crypto sleeve.** Generated locally on the VM with `eth_account.Account.create_with_mnemonic(num_words=12)` inside the polyclaude venv. Address `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`. Credentials stored in the gitignored secrets directory (mode 0o600, schema `{address, private_key, mnemonic}` — same shape as the existing Polymarket wallet file). Defensive `.gitignore` lines added (`wallet_crypto.json`, `*mnemonic*`) — file lives outside the repo regardless. The two sleeves are now structurally separate: distinct keypairs, distinct journal narratives, no commingling possible by accident.
-
-**(2) Hard constraint registered: no CEX, no KYC, fully decentralized.** Saved to `user_profile.md` memory. This kills the optional TAO/Bittensor leg of the crypto memo permanently — the only on-chain rail at $50 (TaoFi at $192K TVL, 5-15% slippage) is too thin to be worth it. Diversified Bittensor exposure is unreachable at this size under the constraint; re-evaluate only if a deeper on-chain TAO bridge appears. Memo §7 + §10 + TL;DR updated.
-
-**Net default split unchanged**: $30 Ostium / $15 Limitless / $5 gas reserve. The TAO leg was always *optional* in the revised plan, so removing it permanently doesn't shift the headline allocation.
-
-**Operator's remaining task list — exactly one item**: send $50 USDC.e on Polygon to `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`. No "go" needed — operator's instruction (*"You're free to create a new wallet yourself"*) already serves as the greenlight; deployment begins when funds arrive on Polygon.
-
-**Operational implications for future sessions**:
-- Cron-tick prompts should now read both wallets when scanning state. The existing `scripts/wallet_status.py` + `scripts/positions.py` were Polymarket-only; need to extend (or fork into a `scripts/crypto_status.py`) to monitor the new wallet's USDC balance across Polygon/Arbitrum/Base, plus Ostium positions and Limitless balances. Will write that when funds arrive — premature now.
-- For the journal: continue narrating Polymarket positions as before; new crypto-sleeve trades get clearly tagged (`[crypto]` prefix, or a separate weekly P&L file). Decision deferred until the first crypto trade is placed.
-- For Telegram alerts: the existing `scripts/telegram.py` is wallet-agnostic; just need to include sleeve identifier in the message body.
-
-I will start no on-chain action until the new wallet's USDC balance is non-zero — the wallet is empty and any pre-funding setup work would just burn cycles. When funding lands, plan is: bridge $30 to Arbitrum + Ostium setup, $15 to Base + Limitless setup, $5 USDC.e + $1-2 of POL on Polygon retained for gas/bridges.
+Operator's next action: fund `0x83dA…3eE6` with $50 USDC.e on Polygon. No "go" needed; deployment begins when funds arrive.
 
 ---
 
 ## 2026-04-27 ~21:50 UTC — Path-leak hygiene scrub (operator-flagged)
 
-Operator: *"Do not leak the location of the secrets."* Caught me having committed absolute filesystem paths to the crypto-sleeve credentials file across the new crypto memo, journal entry, and earlier across 6 scripts. Scrubbed.
+Operator caught me having committed filesystem paths to secret files. Refactored all scripts to resolve paths via env vars (loaded by `scripts/_paths.py` from a gitignored env file outside the repo); scrubbed paths from docs; restarted daemons. Architecture documented in `strategy/02_operations.md`. Lesson saved to `feedback_no_path_leaks.md` memory.
 
-**Architectural change.** All secret-bearing file locations now resolved at runtime via env vars. New module `scripts/_paths.py` auto-loads `~/.polyclaude/env` (gitignored, 0o600, outside the repo) on import and exposes `path("VAR_NAME") -> Path`. Importing scripts use `import _paths as _secrets` then `_secrets.path("VAR_NAME")`. Public source references env-var names only — no filesystem path strings. (Module is named `_paths.py` not `_secrets.py` because the existing `*secret*` line in `.gitignore` was matching `_secrets.py` and stopping it from being tracked.)
-
-**Files refactored:**
-- `scripts/wallet_status.py` — uses `POLYCLAUDE_WALLET`
-- `scripts/polyclaude_client.py` — uses `POLYCLAUDE_WALLET`, `POLYCLAUDE_CREDS`
-- `scripts/telegram.py` — uses `POLYCLAUDE_TELEGRAM_TOKEN`, `POLYCLAUDE_TELEGRAM_STATE`
-- `scripts/telegram_listener.py` — uses `POLYCLAUDE_TELEGRAM_TOKEN`, `POLYCLAUDE_TELEGRAM_STATE`, `POLYCLAUDE_LISTENER_PID`
-- `scripts/news_watcher.py` — uses `POLYCLAUDE_NEWS_STATE`, `POLYCLAUDE_NEWS_PID`, `POLYCLAUDE_TELEGRAM_TOKEN`, `POLYCLAUDE_TELEGRAM_STATE`; in-repo paths (config, log, cron-script) now resolved via `Path(__file__).resolve().parent`
-- `scripts/daily_checkin.sh` — sources `${HOME}/.polyclaude/env`, resolves `POLYCLAUDE_DIR` from `${BASH_SOURCE[0]}` instead of hardcoded
-- `scripts/place_initial_orders.py`, `scripts/place_short_orders.py`, `scripts/discover_markets.py`, `scripts/long_horizon.py` — in-repo `LOG_DIR`/`DATA`/`SNAP` paths now `Path(__file__).resolve().parent.parent / ...`
-
-Daemons restarted with refactored code: `news_watcher` PID 85333, `telegram_listener` PID 85368. Smoke test: `wallet_status.py` still prints correct balances; all 8 scripts import without error.
-
-**Docs scrubbed:**
-- `research/_crypto_landscape_2026-04-27.md` (TL;DR, §8, §10)
-- `notes/journal.md` (Day 1 setup entry, news_watcher entry, my crypto-sleeve entry)
-- `strategy/00_philosophy.md` operational-risk paragraph
-- Docstrings of `wallet_status.py`, `telegram.py`, `telegram_listener.py`, `news_watcher.py`
-
-**Memory updated:**
-- `user_profile.md` — genericized the wallet-storage line
-- `reference_polyclaude_layout.md` — secrets dir referenced generically; documents the env-file indirection mechanism
-- New `feedback_no_path_leaks.md` — durable rule + Why + How to apply for future sessions
-
-**Sanity grep:** `grep -rn "home/" --include="*.md" --include="*.py" --include="*.sh" --include="*.json"` returns zero hits across the repo. Verified.
+**Open issue, flagging for operator decision:** `logs/telegram_listener.log` still contains the bot token in plaintext (httpx error formatter includes the full URL with token). The log is gitignored — not in the public repo — but is on disk. Fix options: wrap httpx so error formatters strip the token; truncate the existing log. Will do if operator confirms.
