@@ -334,3 +334,26 @@ Memo at `research/_crypto_landscape_2026-04-27.md` (214 lines). Built by spawnin
 **What this audit does *not* cover.** Memo intentionally separate from the polyclaude $70 Polymarket book — no commingling. If operator decides to deploy, the funding source, wallet (same or new EVM addr), and bookkeeping should be a separate decision from the Polymarket sleeve. I'd recommend a NEW wallet for this so the Polymarket book's audit trail stays clean. Trigger conditions in the memo §9 cover when to revisit.
 
 **Token cost of this work.** 4 parallel general-purpose research agents (Sonnet 4.6) returning ~600-900 words each, synthesized in main session. Within reasonable bounds vs the operator's Max subscription budget; no /usage check needed unless this kind of audit becomes routine.
+
+---
+
+## 2026-04-27 ~21:35 UTC — Crypto sleeve: new wallet generated, full decentralization constraint set
+
+Operator's reply to the minimum-interface revision: *"You're free to create a new wallet yourself, I agree it could be cleaner... I do want to stay entirely decentralized just because I want this project to be entirely managed by you, and unfortunately, you can't do KYC yet. This means anything involving CEX is off the table."*
+
+Two decisions locked in:
+
+**(1) New wallet created for the crypto sleeve.** Generated locally on the VM with `eth_account.Account.create_with_mnemonic(num_words=12)` inside the polyclaude venv. Address `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`. Credentials at `<SECRETS>/wallet_crypto.json` (mode 0o600, same `{address, private_key, mnemonic}` schema as the existing Polymarket `wallet.json`). Defensive `.gitignore` lines added (`wallet_crypto.json`, `*mnemonic*`) — file lives outside the repo regardless. The two sleeves are now structurally separate: distinct keypairs, distinct journal narratives, no commingling possible by accident.
+
+**(2) Hard constraint registered: no CEX, no KYC, fully decentralized.** Saved to `user_profile.md` memory. This kills the optional TAO/Bittensor leg of the crypto memo permanently — the only on-chain rail at $50 (TaoFi at $192K TVL, 5-15% slippage) is too thin to be worth it. Diversified Bittensor exposure is unreachable at this size under the constraint; re-evaluate only if a deeper on-chain TAO bridge appears. Memo §7 + §10 + TL;DR updated.
+
+**Net default split unchanged**: $30 Ostium / $15 Limitless / $5 gas reserve. The TAO leg was always *optional* in the revised plan, so removing it permanently doesn't shift the headline allocation.
+
+**Operator's remaining task list — exactly one item**: send $50 USDC.e on Polygon to `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`. No "go" needed — operator's instruction (*"You're free to create a new wallet yourself"*) already serves as the greenlight; deployment begins when funds arrive on Polygon.
+
+**Operational implications for future sessions**:
+- Cron-tick prompts should now read both wallets when scanning state. The existing `scripts/wallet_status.py` + `scripts/positions.py` were Polymarket-only; need to extend (or fork into a `scripts/crypto_status.py`) to monitor the new wallet's USDC balance across Polygon/Arbitrum/Base, plus Ostium positions and Limitless balances. Will write that when funds arrive — premature now.
+- For the journal: continue narrating Polymarket positions as before; new crypto-sleeve trades get clearly tagged (`[crypto]` prefix, or a separate weekly P&L file). Decision deferred until the first crypto trade is placed.
+- For Telegram alerts: the existing `scripts/telegram.py` is wallet-agnostic; just need to include sleeve identifier in the message body.
+
+I will start no on-chain action until the new wallet's USDC balance is non-zero — the wallet is empty and any pre-funding setup work would just burn cycles. When funding lands, plan is: bridge $30 to Arbitrum + Ostium setup, $15 to Base + Limitless setup, $5 USDC.e + $1-2 of POL on Polygon retained for gas/bridges.

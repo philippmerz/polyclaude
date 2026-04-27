@@ -2,7 +2,7 @@
 
 > Operator asked: where would a *new, separate* ~$50 sleeve get the highest EV in crypto over a < 6 month window, fees and compute included? This memo is *not* the polyclaude $70 Polymarket book — it's a clean-slate exploration covering the entire crypto landscape from blue-chip yield to sub-$30M-FDV speculation. Verdict at the bottom; tier-ranked plays in between.
 >
-> **TL;DR.** At $50 / < 6mo / Polygon-native self-custody, two plays clear the fee-and-compute screen with structural retail edge AND are 100% Claude-executable from the existing wallet: **(1) Ostium points-farming on Arbitrum** (no token yet, $25B cumulative volume, Jump+General-Catalyst-backed — the single strongest novel bet) and **(2) Limitless ↔ Polymarket prediction-market arbitrage on Base** (zero-gas, $1B/mo notional, structural liquidity-fragmentation edge). **Default split: $30 Ostium / $15 Limitless / $5 gas reserve.** A third play — Bittensor subnet alpha (SN64 Chutes via TAO) — is *higher conviction* but requires a CEX seat for funding, so it's an *optional add-on* rather than the default. Operator's only required actions: (a) send $50 USDC.e to the existing wallet, (b) reply "go". Skip pump.fun retail sniping, HLP, funding-rate arb, LRTs (post-Kelp), inscriptions/runes, MOVE, Plasma post-July.
+> **TL;DR.** At $50 / < 6mo / fully-decentralized self-custody, two plays clear the fee-and-compute screen with structural retail edge AND are 100% Claude-executable: **(1) Ostium points-farming on Arbitrum** (no token yet, $25B cumulative volume, Jump+General-Catalyst-backed — the single strongest novel bet) and **(2) Limitless ↔ Polymarket prediction-market arbitrage on Base** (zero-gas, $1B/mo notional, structural liquidity-fragmentation edge). **Default split: $30 Ostium / $15 Limitless / $5 gas reserve.** Bittensor / TAO is **dropped permanently** — operator's no-CEX/no-KYC constraint rules out the only viable funding rail at $50; on-chain bridges (TaoFi at $192K TVL) charge 5-15% slippage at our size. New crypto-sleeve wallet generated 2026-04-27 at `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` (credentials in `<SECRETS>/wallet_crypto.json`, mode 0o600). Operator's only required action: send $50 USDC.e to that address on Polygon. Skip pump.fun retail sniping, HLP, funding-rate arb, LRTs (post-Kelp), inscriptions/runes, MOVE, Plasma post-July.
 
 ---
 
@@ -143,20 +143,20 @@ Akash (AKT) is the cleanest GPU-DePIN with revenue-paying tenants and FDV ~$200M
 
 This split is the explicit minimum-operator-effort plan: every component is something Claude can deploy and manage from the existing wallet without further input. No CEX, no Subtensor wallet, no extra KYC.
 
-**Optional add-ons (require operator effort or extra capital):**
-- *+ $10-15 TAO* on a CEX the operator already uses (Coinbase / Kraken). Diversified Bittensor subnet beta. Skip if no existing CEX seat — not worth fresh KYC for this size. Reallocate to more Ostium if skipped.
-- *+ $10 PLUME* directional buy on Plume DEX (RWA narrative beta). Doable on-chain by Claude if operator wants this exposure. Default off because Tier-1 plays already cover the budget.
-- *+ $3-5 MegaETH MEGA* on Apr 30 TGE if first-hour pricing leaves runway. Doable on-chain by Claude. Default off — fade FOMO unless operator explicitly wants this.
+**Optional add-ons (all on-chain, Claude can execute without operator input):**
+- *+ $10 PLUME* directional buy on Plume DEX (RWA narrative beta). Default off because Tier-1 plays already cover the budget.
+- *+ $3-5 MegaETH MEGA* on Apr 30 TGE if first-hour pricing leaves runway. Default off — fade FOMO unless operator explicitly opts in.
+
+**Removed: TAO / Bittensor subnet alpha.** Original draft had this as Tier-1, then optional. With operator's no-CEX/no-KYC constraint (2026-04-27), the only on-chain funding rail is TaoFi (Bittensor EVM, $192K TVL → 5-15% slippage at $10) — not worth it. The diversified Bittensor exposure thesis remains valid; it is unreachable at our size under the decentralization constraint. Re-evaluate if a deeper on-chain TAO bridge or higher-TVL DEX wrapper appears.
 
 **Yield-floor variant** (if operator wants ~half the capital in capital-preservation mode): swap $15 of Ostium for $15 in Pendle PT-sUSDe-Jun-2026 (Arbitrum, 4.31% APR locked, $0.30 yield over the 50-day window — small in absolute terms but smart-contract-clean). Activate this on operator request only.
 
 ## 8. What the operator actually does — and what Claude does
 
 Operator's full task list:
-1. **Send $50 USDC.e to the existing polyclaude wallet** (`0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` on Polygon). One on-chain transfer.
-2. **Reply "go"** to greenlight deployment.
+1. **Send $50 USDC.e to the new crypto-sleeve wallet** `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` on Polygon. One on-chain transfer. (Greenlight already given by the same instruction; no separate "go" needed.)
 
-That's it. No CEX work, no bridge UI clicks, no monitoring scripts to babysit, no manual rebalances. By default I keep using the existing wallet with a separate journal ledger for the new sleeve — no custody change, no fresh keypair to store. Operator can override with "go new wallet" if they want strict separation.
+That's it. No CEX work, no bridge UI clicks, no monitoring scripts to babysit, no manual rebalances. The new wallet was generated locally on 2026-04-27 with credentials in `<SECRETS>/wallet_crypto.json` (mode 0o600), separate from the existing Polymarket wallet — operator's preference for clean ledger separation honored.
 
 Claude's tasks (no further input needed after greenlight):
 - Bridge $20-25 USDC → Arbitrum (Across), open Ostium account, deposit, ladder $5-10 RWA-perp positions (5x leverage cap, mixed long/short to avoid macro wipeout), cycle volume for points
@@ -182,9 +182,13 @@ If at any point operator wants to redirect, change strategy, or claw back capita
 
 ## 10. Custody / wallet decision
 
-Default: **same wallet** (existing polyclaude address `0x9032…267B`), separate ledger in `notes/positions_crypto.md`. Rationale: zero custody change, zero new keypair to back up, instant deploy. The "audit-trail clean" argument from a prior draft was wrong for an operator who explicitly prioritized minimal effort over bookkeeping purity.
+**Decided 2026-04-27: new wallet for the crypto sleeve.** Operator confirmed full agency, including wallet generation. New keypair created locally on the VM via `eth_account.Account.create_with_mnemonic(num_words=12)`:
 
-Operator can override with "new wallet" if they want strict separation — that adds: (a) generating a fresh keypair locally, (b) saving it to `<SECRETS>/wallet_crypto.json`, (c) Claude updating scripts to read either wallet by sleeve. Roughly 15 minutes of operator time. Not recommended unless there's a specific reason.
+- **Address**: `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`
+- **Credentials file**: `<SECRETS>/wallet_crypto.json` (mode 0o600, schema `{address, private_key, mnemonic}` — same shape as `wallet.json`)
+- **Gitignore**: `wallet_crypto.json` and `*mnemonic*` patterns added defensively, though the file is outside the repo
+
+Existing polyclaude (Polymarket) wallet `0x9032…267B` is untouched. The two sleeves now have clean separation: distinct keypairs, distinct ledgers, distinct journal narratives. If at any point a strategy needs to move capital across sleeves, that's an explicit operator-or-Claude decision, not an accident.
 
 ## 11. What this audit explicitly does *not* recommend
 

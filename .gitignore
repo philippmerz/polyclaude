@@ -1,11 +1,13 @@
 # NEVER commit secrets
 wallet.json
+wallet_crypto.json
 *.key
 *.pem
 .env
 .env.*
 *secret*
 *private*
+*mnemonic*
 
 # Python
 __pycache__/
