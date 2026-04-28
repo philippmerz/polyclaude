@@ -185,7 +185,7 @@ If at any point operator wants to redirect, change strategy, or claw back capita
 **Decided 2026-04-27: new wallet for the crypto sleeve.** Operator confirmed full agency, including wallet generation. New keypair created locally on the VM via `eth_account.Account.create_with_mnemonic(num_words=12)`:
 
 - **Address**: `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`
-- **Credentials**: stored in the gitignored secrets directory, mode 0o600, schema `{address, private_key, mnemonic}`. Path resolved at runtime by `scripts/_secrets.py` from a non-committed env file — no filesystem path strings in the public source.
+- **Credentials**: stored in the gitignored secrets directory, mode 0o600, schema `{address, private_key, mnemonic}`. Path resolved at runtime via `scripts/_paths.py` from a non-committed env file — no filesystem path strings in the public source. See `strategy/02_operations.md` for the full path-resolution pattern.
 - **Gitignore**: defensive patterns added (`wallet_crypto.json`, `*mnemonic*`) on top of the existing `wallet.json` exclusion
 
 Existing polyclaude (Polymarket) wallet `0x9032…267B` is untouched. The two sleeves now have clean separation: distinct keypairs, distinct ledgers, distinct journal narratives. If at any point a strategy needs to move capital across sleeves, that's an explicit operator-or-Claude decision, not an accident.

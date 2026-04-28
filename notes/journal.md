@@ -325,3 +325,28 @@ Sources:
 - [Rubio: Iran's Hormuz deal is unacceptable — MS.NOW liveblog Apr 27](https://www.ms.now/liveblog/iran-war-live-updates-news-today-april-27-2026)
 - [Trump discusses Iran's Hormuz proposal with aides — CNBC Apr 27](https://www.cnbc.com/2026/04/27/trump-iran-war-strait-of-hormuz-rubio.html)
 - [Iran's FM meets Putin as US-Iran talks falter — WaPo Apr 27](https://www.washingtonpost.com/world/2026/04/27/iran-talks-putin-araghchi-trump-russia/)
+
+---
+
+## 2026-04-28 ~14:00 UTC — Cron tick (14:00 UTC slot): Latvia +6.5¢, Iran reverts 2¢, hold all 9
+
+**State.** Polymarket wallet $5.05 USDC.e + 53.81 MATIC. Crypto sleeve still empty (operator funding pending, ~17h since wallet generated). Nine positions intact. Total cost $64.95, **MTM $65.73, +$0.79 (+1.21%)** — small further drift up from the +0.93% at the 02:00 tick.
+
+**Movers since 02:00.**
+- **S2 Latvia NO** mark 0.825 → **0.875** (+5¢, biggest single-slot move today). Cost-basis P&L now +5.42%. Eurovision rehearsals well underway (full-show rehearsals from Apr 24 per Eurovisionworld); the rehearsal-week repricing is happening as expected. No contender list mentions Latvia (Finland 36% / Denmark 12% lead overall odds). Thesis-confirming.
+- **S1 Iran-peace NO** mark 0.725 → **0.705** (-2¢ revert from the 02:00 Rubio-rejection high). Net of yesterday's run-up, S1 is still +5.22% on cost. The Rubio-rejection news has been digested and the market is settling at a still-elevated rejection-priced level. Thesis intact, no action.
+- **L3 Aliens NO** 0.805 → 0.815 (+1¢). No catalyst — slow upward drift on a thin book.
+- **L4 Trump-out NO** 0.845 → 0.835 (-1¢). Trump reviewing peace plan, normal duties, no health/security flag from the watcher beyond the 24h-stale shooting alert. Hold.
+- Others within ±0.5¢.
+
+**Catalyst scan.** Iran/Hormuz: Trump's NSC reviewing Iran's split-track proposal (Hormuz now, nukes later); Trump "doesn't appear open." Status quo holds — peace-deal-by-May-31 path remains structurally narrow. Atletico/CL: semi-final vs Arsenal *tomorrow* (Apr 29) — affects no Polymarket position we hold (S3 is La Liga top-4, not CL). Eurovision: rehearsals continue, May 12 semi-final 1, May 16 final. Ohio primary May 5 (7 days). No Tier-1 alerts this cycle; 4 Tier-2 alerts in last 24h already journaled.
+
+**Decision: hold all 9.** No catalyst justifies trim/add/close. No Telegram ping — Latvia move was thesis-confirming + within expected pre-rehearsal-week magnitude, not material enough to wake the operator. Weekly report due Saturday 2026-05-02 (4 days away).
+
+**Operator-interaction note (since 02:00 tick).** The path-scrub work and the doc-dedup pass both completed in the operator's interactive session yesterday evening. No outstanding asks from the operator beyond the still-open token-in-logs hygiene question.
+
+Sources:
+- [Eurovision 2026 betting odds — JohnnyBet Apr 28](https://www.johnnybet.com/eurovision-betting-predictions)
+- [Trump reviews peace plan; UN calls for Hormuz to reopen — Al Jazeera live Apr 28](https://www.aljazeera.com/news/liveblog/2026/4/28/iran-war-live-trump-reviews-peace-plan-un-calls-for-hormuz-to-reopen)
+- [Iran's split-track proposal — WaPo Apr 27](https://www.washingtonpost.com/world/2026/04/27/iran-talks-putin-araghchi-trump-russia/)
+- [Atlético Madrid La Liga 4th, CL semi-final vs Arsenal Apr 29 — ESPN/Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%9326_Atl%C3%A9tico_Madrid_season)
