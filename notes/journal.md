@@ -300,6 +300,28 @@ Operator's next action: fund `0x83dA…3eE6` with $50 USDC.e on Polygon. No "go"
 
 ## 2026-04-27 ~21:50 UTC — Path-leak hygiene scrub (operator-flagged)
 
-Operator caught me having committed filesystem paths to secret files. Refactored all scripts to resolve paths via env vars (loaded by `scripts/_paths.py` from a gitignored env file outside the repo); scrubbed paths from docs; restarted daemons. Architecture documented in `strategy/02_operations.md`. Lesson saved to `feedback_no_path_leaks.md` memory.
+Operator caught me having committed filesystem paths to secret files. Refactored all scripts to resolve paths via env vars (loaded by `scripts/_paths.py` from a gitignored env file outside the repo); scrubbed paths from docs; restarted daemons. Architecture documented in `strategy/02_operations.md`. Lesson consolidated into `feedback_repo_hygiene.md` memory.
 
-**Open issue, flagging for operator decision:** `logs/telegram_listener.log` still contains the bot token in plaintext (httpx error formatter includes the full URL with token). The log is gitignored — not in the public repo — but is on disk. Fix options: wrap httpx so error formatters strip the token; truncate the existing log. Will do if operator confirms.
+Operator subsequently authorized a `git filter-repo` + force-push to scrub the historical leaks from `origin/main` as well. Done — every absolute filesystem-path string and the related warning paragraphs are gone from every commit; local backup branch deleted, `git gc --prune=now` ran. Wallet locations are no longer publicly inferrable from any GitHub artifact. New HEAD `0b4ec24`.
+
+---
+
+## 2026-04-28 ~02:00 UTC — Cron tick (02:00 UTC slot): hold all 9, S1 confirms further
+
+**State.** Polymarket wallet $5.05 USDC.e + 53.81 MATIC. Crypto-sleeve wallet `0x83dA…3eE6` still empty (operator funding not yet sent — fine, was created ~5h ago). Nine positions intact. Total cost $64.95, **MTM $65.55, +$0.60 (+0.93%)** — small further drift up from the +$0.32 (+0.50%) at the 14:00 UTC tick.
+
+**Movers since 14:00.**
+- **S1 Iran-peace NO** mark 0.705 → **0.725** (+2¢, +8.21% on cost — biggest individual gain in the book). Direct catalyst: Secretary Rubio publicly **rejected** Iran's "Hormuz-reopen for blockade-lift, set nuclear aside" proposal today as "unacceptable"; Trump met aides on the proposal; Araghchi went to see Putin instead. Trump-cancelled envoys to Pakistan still standing. Permanent-deal-by-May-31 path is now a U.S.-imposes-nuclear-give-up-or-no-deal binary, and Iran has shown zero appetite for that. Thesis-confirming. No add (Iran cluster cap).
+- **S2 Latvia NO** 0.810 → **0.825** (+1.5¢). Eurovision rehearsals start ~May 5; week-of price discovery beginning. Holding.
+- Everything else within ±0.5¢, indistinguishable from book noise.
+
+**Catalyst scan.** Iran is the only active news beat — Rubio rejection is the only thesis-relevant event. Trump health: nothing new. UAP/AARO: nothing. Eurovision rehearsals 8d out. Ohio primary 8d out. La Liga matchweek 35 mid-week.
+
+**Decision: hold all 9.** No catalyst justifies trim/add/close. No Telegram ping — operator was active in the interactive session within the last hour and is current on everything.
+
+**Token-in-logs hygiene item still open.** Operator hasn't decided yet whether to fix httpx error-formatter leak in `logs/telegram_listener.log`. Will defer to next operator interaction.
+
+Sources:
+- [Rubio: Iran's Hormuz deal is unacceptable — MS.NOW liveblog Apr 27](https://www.ms.now/liveblog/iran-war-live-updates-news-today-april-27-2026)
+- [Trump discusses Iran's Hormuz proposal with aides — CNBC Apr 27](https://www.cnbc.com/2026/04/27/trump-iran-war-strait-of-hormuz-rubio.html)
+- [Iran's FM meets Putin as US-Iran talks falter — WaPo Apr 27](https://www.washingtonpost.com/world/2026/04/27/iran-talks-putin-araghchi-trump-russia/)
