@@ -104,11 +104,38 @@ def entry_id(entry) -> str:
     return hashlib.sha1(base.encode("utf-8", errors="ignore")).hexdigest()
 
 
+import re as _re
+
+_KW_REGEX_CACHE: dict[str, _re.Pattern] = {}
+
+
+def _kw_regex(kw: str) -> _re.Pattern:
+    """Compile a word-boundary regex for a keyword phrase, cached.
+
+    Avoids substring false-positives like "et disclosure" matching
+    "asset disclosure" or "trump dead" matching "trump deadline".
+    """
+    if kw in _KW_REGEX_CACHE:
+        return _KW_REGEX_CACHE[kw]
+    # Match the phrase with \b on each end. Allow flexible whitespace
+    # between tokens so "trump  dies" (double space) still matches.
+    tokens = kw.lower().split()
+    pat = r"\b" + r"\s+".join(_re.escape(t) for t in tokens) + r"\b"
+    rx = _re.compile(pat, _re.IGNORECASE)
+    _KW_REGEX_CACHE[kw] = rx
+    return rx
+
+
 def match_keywords(text: str, keywords: list[str]) -> str | None:
-    """Return the first matching keyword (lowercased), or None."""
-    lo = text.lower()
+    """Return the first matching keyword phrase, or None.
+
+    Uses word-boundary matching so a keyword like "et disclosure" does
+    not fire on substrings like "asset disclosure".
+    """
+    if not text:
+        return None
     for kw in keywords:
-        if kw.lower() in lo:
+        if _kw_regex(kw).search(text):
             return kw
     return None
 

@@ -16,7 +16,11 @@
     {"name": "Guardian US",          "url": "https://www.theguardian.com/us-news/rss"},
     {"name": "France24",             "url": "https://www.france24.com/en/rss"},
     {"name": "CBS Latest",           "url": "https://www.cbsnews.com/latest/rss/main"},
-    {"name": "Fox World",            "url": "https://moxie.foxnews.com/google-publisher/world.xml"}
+    {"name": "Fox World",            "url": "https://moxie.foxnews.com/google-publisher/world.xml"},
+    {"name": "CoinDesk",             "url": "https://www.coindesk.com/arc/outboundfeeds/rss/"},
+    {"name": "The Block",            "url": "https://www.theblock.co/rss.xml"},
+    {"name": "Decrypt",              "url": "https://decrypt.co/feed"},
+    {"name": "CoinTelegraph",        "url": "https://cointelegraph.com/rss"}
   ],
 
   "tier1_keywords": [
@@ -29,7 +33,24 @@
     "aliens confirmed", "extraterrestrial life confirmed", "et disclosure", "non-human technology confirmed",
     "aaro confirms", "pentagon ufo confirmed", "pentagon alien", "nasa confirms aliens",
     "jesus christ returns", "jesus christ returned", "second coming confirmed",
-    "iran strikes european", "iran missile europe", "iran nuclear test"
+    "iran strikes european", "iran missile europe", "iran nuclear test",
+
+    "ostium hack", "ostium hacked", "ostium exploit", "ostium exploited",
+    "ostium drained", "ostium rugged", "ostium rug",
+    "across protocol hack", "across protocol hacked", "across protocol exploit", "across protocol exploited",
+    "across spokepool", "across drained", "across rugged",
+    "layerzero exploit", "layerzero exploited", "layerzero hacked", "layerzero drained",
+    "limitless exchange hack", "limitless exchange hacked", "limitless exchange exploit", "limitless exchange exploited",
+    "limitless prediction hack", "limitless prediction hacked",
+    "polymarket halted", "polymarket banned", "polymarket sec lawsuit", "polymarket shutdown", "polymarket frozen",
+    "arbitrum sequencer halt", "arbitrum sequencer halted", "arbitrum chain halt", "arbitrum chain halted",
+    "arbitrum exploit", "arbitrum exploited", "arbitrum drained",
+    "base sequencer halt", "base sequencer halted", "base chain halt", "base chain halted",
+    "base exploit", "base exploited", "base drained",
+    "usdc depeg", "usdc depegs", "usdc depegged", "usdc breaks peg", "usdc loses peg",
+    "circle insolvent", "circle bankrupt",
+    "usdt depeg", "usdt depegs", "usdt depegged",
+    "tether depeg", "tether depegs", "tether depegged", "tether breaks peg", "tether collapse"
   ],
 
   "tier2_keywords": [
@@ -41,6 +62,15 @@
     "uap report", "ufo congressional", "aaro report", "pentagon ufo", "uap disclosure",
     "eurovision rehears", "eurovision favorit", "eurovision odds", "eurovision semi-final",
     "ohio gubernatorial", "ohio primary", "amy acton",
-    "atletico madrid", "la liga title", "champions league atletico"
+    "atletico madrid", "la liga title", "champions league atletico",
+
+    "stablecoin depeg", "stablecoin redemption halt", "stablecoin run",
+    "ethena depeg", "usde depeg", "susde depeg",
+    "defi exploit", "defi hack", "perp dex hack", "rwa protocol hack",
+    "bridge exploit", "bridge hack", "cross-chain exploit",
+    "btc flash crash", "eth flash crash", "crypto liquidation cascade", "billion liquidated",
+    "sec crypto enforcement", "sec defi lawsuit", "cftc crypto", "treasury crypto sanction",
+    "polymarket regulator", "polymarket cftc", "polymarket subpoena",
+    "ostium", "limitless exchange", "across protocol"
   ]
 }
