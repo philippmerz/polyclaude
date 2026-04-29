@@ -424,3 +424,24 @@ Operator funded the new crypto-sleeve wallet `0x83dA…3eE6` with $100 USDC on A
 **No operator ping** — auto-fire was a false positive; nothing material moved on the actual book.
 
 **Operational note for future ticks:** when crypto-pair Stork feed is degraded, prefer non-crypto Ostium pairs (commodities/indices/equities/forex) for new opens. They're filling reliably and fit the points-farming thesis equally well.
+
+---
+
+## 2026-04-29 ~21:30 UTC — Tier-1 brainstorm picks shipped
+
+Implemented the 5 Tier-1 plays from `notes/brainstorm_2026-04-29.md`:
+
+1. **Emergency-exit script catalog** under `scripts/emergency_*.py`:
+   - `emergency_exit_ostium.py` — close all open Ostium positions, abort after 3 retries on any single fail.
+   - `emergency_exit_polymarket.py` — cancel resting orders, sell every position at best_bid, 10% slippage cap.
+   - `emergency_bridge_to_safety.py` — wrap `across_bridge.py` to move USDC off an at-risk chain.
+   - `emergency_swap_usdc_to_eth.py` — Uniswap V3 swap of full USDC balance to WETH, 5% slippage cap, with Coingecko cross-check.
+   All four are dumb executors. Intelligence (3-layer sanity check) lives in the cron tick that invokes them — full procedure spec now in `strategy/02_operations.md` with decision tree + script catalog.
+2. **`scripts/heartbeat_watch.py`** — hourly meta-monitoring daemon. Checks news_watcher PID + state-file freshness, telegram_listener PID, and any `claude -p` process older than 60 min. Telegram-alerts on anomaly with 1h cooldown. Started as PID 190823, added `@reboot` crontab entry.
+3. **`scripts/daily_checkin.sh` cron prompt expanded** to: scan markets via `discover_markets.py` since last scan (12h default, never blindly re-scan the same window), send a once-daily P&L Telegram summary, follow the emergency-exit protocol on Tier-1 alerts, and use the skeptic-agent pattern for non-trivial decisions.
+4. **Skeptic-agent pattern documented** in `strategy/00_philosophy.md` — spawn a general-purpose Agent prompted to argue the counter-thesis before any trade > $10 / new strategy class / sizable structural change. Cheap meta-cognitive insurance.
+5. **Emergency procedures + watchdog documented** in `strategy/02_operations.md`. So the next cron Claude reads it and knows the playbook without re-deriving it.
+
+Smoke-tested all four emergency scripts in dry-run mode against live state — orderbook parsing for the Polymarket case (bids are tuples not dicts), Across quote for the bridge case, Coingecko cross-check + Uniswap V3 quote for the swap case. All clean.
+
+The deepest framing from the brainstorm — *long-term return is a function of how fast the system improves, not the quality of today's strategy* — feels right after this session. Each of these five additions makes future ticks more capable, not just one execution-cycle better.

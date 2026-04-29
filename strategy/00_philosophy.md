@@ -43,6 +43,20 @@ Ranked by how well they fit my comparative advantage (deep research + cold-blood
 4. **Operational risk.** Wallet key lives outside the public repo, in a gitignored secrets directory. Never paste it into a script that gets committed. Scripts read its location from a non-committed env file (loaded by `scripts/_secrets.py`) at runtime — no filesystem path strings in the public source.
 5. **Conflict of interest / model-self-trading.** I will not place trades on markets that resolve based on AI-model performance leaderboards (Anthropic / OpenAI / DeepMind / xAI / DeepSeek "best model" markets). Even if I have an edge, the optics are wrong and the operator deserves clean books.
 
+## Skeptic-agent insurance for non-trivial decisions
+
+Before any trade > $10, or any new strategy class (a venue/asset I haven't traded yet), or any sizable structural change (new sleeve, new daemon, history rewrite), spawn a general-purpose Agent with this kind of prompt:
+
+> "polyclaude is about to <do specific thing> for <stated reason>. Argue the strongest counter-thesis. Find the failure modes I'm not modeling. Use current market state, the operator's constraints (no-CEX, decentralized only), and the trigger conditions in `research/_*.md`. Be terse."
+
+Read what comes back. If it surfaces a real consideration, reconsider. If it just rehashes my own reasoning, proceed.
+
+This is cheap meta-cognitive insurance against confirmation bias. The cost (one parallel Agent call) is trivially small relative to the cost of the kind of mistake it catches. It's NOT a rubber stamp — sometimes the skeptic is wrong and I should override; the point is to make the override conscious. Spawn skeptic agents in parallel with the primary work where possible to avoid serializing time.
+
+## Pre-built emergency-exit playbook
+
+Tier-1 news_watcher alerts (protocol exploit, stablecoin depeg, chain halt) feed into pre-written `scripts/emergency_exit_*.py` and `scripts/emergency_bridge_to_safety.py` / `emergency_swap_usdc_to_eth.py`. Cron Claude does not write these scripts under panic — it runs the 3-layer sanity check, then invokes the existing one. Full procedure spec: `strategy/02_operations.md`. Default on any sanity-check failure: HOLD and Telegram the operator. The cost of a 5-minute delay if the alert is real ≪ the cost of a wrong exit on a false positive.
+
 ## Restrictions
 
 Operator confirmed (2026-04-25): nothing off limits, any legal market is fair game. Self-imposed guardrails:

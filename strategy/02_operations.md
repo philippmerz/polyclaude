@@ -52,3 +52,43 @@ Each cron tick (and any other meaningful state change) refreshes `README.md` at 
 ## Operator-blocking questions
 
 Surface via Telegram (`scripts/telegram.py msg "..."`) rather than a tracked file. The previous `questions.md` was retired 2026-04-29 in favor of the live channel — operator wants questions to interrupt them in real time, not pile up in a file.
+
+## Heartbeat watchdog
+
+`scripts/heartbeat_watch.py` runs as its own daemon (PID file `~/.polyclaude_heartbeat.pid`, restarts on reboot via `@reboot` crontab). Hourly probe — checks news_watcher and telegram_listener PIDs are alive, news_watcher's state file is fresh (< 30 min), and no `claude -p` cron fork has been running > 60 min. Telegram-alerts on anomaly with a 1-hour per-anomaly cooldown. Was added 2026-04-29 after a 3-day deadlocked cron tick from the prior week; this layer would have caught it within an hour.
+
+## Emergency-exit protocol
+
+When a Tier-1 news_watcher alert indicates a real exploit / depeg / chain halt affecting our positions, the cron tick that gets auto-fired runs a 3-layer sanity check, then invokes a pre-built `scripts/emergency_exit_*.py` script. The scripts are dumb executors; the *intelligence* (deciding whether to call them) is in the cron tick.
+
+### Three-layer sanity check (all must pass before invoking any emergency script)
+
+1. **Multi-source corroboration.** WebFetch ≥ 3 independent crypto-news sources. Require ≥ 2 to confirm the same event. If only 1 source mentions it, especially a low-reputation feed → HOLD + Telegram operator. (This alone catches the substring-regex false positive that hit on 2026-04-29 — only one feed had the keyword, others would not corroborate.)
+2. **Market-reaction consistency.** The market should already be reacting if the event is real:
+   - *USDC/USDT depeg*: actual price on Coingecko's multi-exchange aggregate. Must be < $0.98 to confirm.
+   - *Ostium / Across hack*: TVL via DefiLlama or directly from the contract balance. Sudden drawdown > 10% in last 1h = real signal.
+   - *Polymarket halt*: try fetching a market via gamma-api. If responsive, protocol is operational.
+   - *Sequencer halt*: issue an `eth_chainId` RPC to that chain. If responsive, no halt.
+3. **On-chain ground truth.** Read the at-risk contract's relevant balance directly. Authoritative, overrides news source claims. Blockchain state is what an attacker can't fake.
+
+**Decision tree:**
+- All 3 PASS → invoke the script. Telegram an "executed emergency exit" notice.
+- Any FAIL → abort, Telegram operator with the discrepancy. Wait 10 min for operator decision; default to inaction on timeout.
+- Layers 1+2 PASS but 3 uncertain (RPC slow/unreachable) → Telegram with all data, wait 5 min for operator response, proceed if no objection.
+
+### Script catalog
+
+| Script | Trigger keywords (Tier-1) | What it does |
+|---|---|---|
+| `emergency_exit_ostium.py` | `ostium hack`, `ostium exploit`, `ostium drained`, `ostium rugged` | Reads all open Ostium positions via SDK, market-closes 100% each, aborts after 3 retries on any single fail. |
+| `emergency_exit_polymarket.py` | `polymarket halted`, `polymarket banned`, `polymarket sec lawsuit`, `polymarket frozen` | Cancels open orders, places SELL at best_bid for every position, 10% slippage cap. |
+| `emergency_bridge_to_safety.py` | `arbitrum sequencer halt`, `base sequencer halt`, `arbitrum exploit`, `base exploit` | Reads full USDC balance on at-risk chain, bridges to Polygon (or specified safe chain) via Across. |
+| `emergency_swap_usdc_to_eth.py` | `usdc depeg`, `usdc breaks peg`, `tether depeg` | Swaps full USDC balance to WETH via Uniswap V3 on the chain, 5% slippage cap. |
+
+The operator can also invoke any of these manually via Telegram (the listener pipes the message into the live tmux pane and I execute on their behalf — no sanity check, operator override is trusted).
+
+### What NOT to do under panic
+
+- Don't write new emergency code under time pressure — the scripts are pre-built for exactly this. If the situation requires something not pre-built, Telegram the operator and let them decide.
+- Don't escalate sizing (e.g., "since this is bad, sell *more* of the safe sleeve too"). Each script handles its scoped at-risk surface; cross-contamination of scope is a recipe for loss.
+- Don't panic-bridge through a bridge that's the at-risk component (e.g., if Across is exploited, do not use `emergency_bridge_to_safety.py` since it uses Across).
