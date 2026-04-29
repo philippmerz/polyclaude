@@ -381,3 +381,28 @@ Sources:
 **Decision: hold all 9. No action, no Telegram ping** (operator was actively engaged in this session ~36h ago through the path-scrub work; book flat; nothing material to surface).
 
 **Note on this tick:** the cron fork (PID 174292) is running in parallel from the same scheduled trigger. If it commits first, this entry may collide on push and need rebase — both forks will reach the same hold-all-9 conclusion.
+
+---
+
+## 2026-04-29 ~19:55 UTC — Crypto sleeve: funded, bridged, first Ostium position pending
+
+Operator funded the new crypto-sleeve wallet `0x83dA…3eE6` with $100 USDC on Arbitrum (a bit more than the planned $50 — they upsized after sending). Gas funding via Bungee took a retry loop (initial swap timed out from price drift, refund issued, second attempt landed 0.000638 ETH at 19:45 UTC).
+
+**Deployment progress (in flight):**
+- ✅ Bridged $30 USDC Arbitrum → Base via Across (`0x83e789…5512` approve, `0x943231…8741` deposit; ~2s fill, $0.0075 fee). Base sleeve now holds $29.99 USDC; will fund Limitless arb once the Polymarket↔Limitless monitor script is built.
+- ⏳ First Ostium position submitted at 19:54 UTC: long ETH/USD (pair_id=1) 5x leverage, $5 collateral = $25 notional, ±8% TP/SL. Tx `0x3dc820…4ae8`, Ostium order id 1848330. Currently `isPending=true` while the Stork oracle fills — usually <1 min, occasionally a few. Will close + journal outcome on the next tick if not filled by then.
+- 🟡 PLUME ($10 directional) and additional Ostium positions deferred to next tick once the first one fills cleanly and I've validated the SDK round-trip end-to-end.
+
+**Tooling shipped this session:**
+- `scripts/across_bridge.py` — generalized Across V3 USDC bridge (CLI; arbitrum/base/polygon/optimism)
+- `scripts/ostium_client.py` — thin CLI on top of `ostium-python-sdk` (status / pairs / open / close)
+- `scripts/crypto_status.py` — multi-chain balance reader for the crypto sleeve
+- `requirements.txt` — pinned runtime deps including `ostium-python-sdk==3.2.0`
+
+**Operator-flagged dedup pass** (separate from the crypto deployment): journal recaps of yield/algo/crypto audits collapsed to memo-link summaries, `strategy/02_operations.md` consolidated cron + news watcher + telegram + secrets policy + wallet registry. Research-init-file headers reference the canonical strategy docs instead of restating allocation. New `README.md` at repo root acts as the living portfolio dashboard (GitHub front page).
+
+**Operator interface change**: `questions.md` retired in favor of Telegram. Blocking questions now go through the live channel; operations doc + memory updated.
+
+**Path-leak hygiene completed earlier in session**: filter-repo rewrote all history to scrub `/home/philipp/...` strings, force-pushed to `origin/main`, local backup deleted, gc pruned old objects. Bot-token-in-logs separately fixed (`_paths.scrub` + scrubbing excepthook in telegram + news_watcher scripts; existing logs truncated; daemons restarted).
+
+**Next steps (any session):** confirm Ostium order 1848330 filled, then start volume-rotated points-farming (mix of long/short tickets across crypto + commodity pairs to stay roughly delta-neutral); fund Base ETH gas (~0.0003 ETH via Across) when Limitless monitor is ready; consider PLUME entry once Plume Network bridge cost is verified.

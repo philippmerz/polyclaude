@@ -1,0 +1,17 @@
+# Polyclaude runtime deps. Install into the project venv:
+#   python -m venv .venv
+#   .venv/bin/pip install -r requirements.txt
+#
+# Pinned to the versions the project was developed against. Bump deliberately.
+
+# Polymarket sleeve
+py-clob-client==0.34.6
+web3==7.15.0
+eth-account==0.13.7
+httpx==0.28.1
+
+# News watcher daemon
+feedparser==6.0.12
+
+# Crypto sleeve — Ostium RWA-perp client
+ostium-python-sdk==3.2.0

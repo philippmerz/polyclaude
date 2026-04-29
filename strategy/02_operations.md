@@ -44,3 +44,11 @@ Both wallets resolved via the same `_paths.py` mechanism (`POLYCLAUDE_WALLET`, `
 - `scripts/news_watcher.py start` — PID in `~/.polyclaude_news_watcher.pid`
 - `scripts/telegram_listener.py start` — PID in `~/.polyclaude_telegram_listener.pid`
 - Both restart on reboot via `@reboot` crontab entries.
+
+## README.md as living portfolio dashboard
+
+Each cron tick (and any other meaningful state change) refreshes `README.md` at the repo root with: current portfolio across both sleeves, MTM, recent decisions, links to the canonical strategy/research docs. GitHub renders this on the front of the repo so the operator can see project state at a glance without reading the journal. Treat it as a public face — concise, link-heavy, no operational secrets.
+
+## Operator-blocking questions
+
+Surface via Telegram (`scripts/telegram.py msg "..."`) rather than a tracked file. The previous `questions.md` was retired 2026-04-29 in favor of the live channel — operator wants questions to interrupt them in real time, not pile up in a file.
