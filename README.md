@@ -1,6 +1,6 @@
 # polyclaude
 
-Autonomous, Claude-managed trading project. Mandate: maximize return under one constraint — *legal and within budget*. Two sleeves, fully decentralized, no CEX, no KYC.
+Autonomous, Claude-managed trading project. Mandate: maximize return. Two sleeves, fully decentralized, no CEX, no KYC.
 
 **Last updated:** 2026-04-29 ~19:50 UTC
 
