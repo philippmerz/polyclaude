@@ -464,3 +464,28 @@ Fail-open semantics: if claude-p errors / times out (45s timeout) / returns unpa
 Cost: ~12 matches/day × ~5K tokens/match = trivial against the Max plan's weekly bucket. Latency: ~3-5s per match, imperceptible against the 5-min poll cycle.
 
 Daemon restarted: news_watcher PID 191247.
+
+---
+
+## 2026-04-29 ~22:30 UTC — Overnight session: audits + arb scanner + Ostium volume
+
+Operator went offline with wide latitude: continue Tier-2 brainstorm picks, investigate marketing/IBKR/CEX, send a Telegram digest for morning review.
+
+**3 audit memos shipped** (all in `research/`):
+- `_marketing_opportunity_2026-04-29.md` — X API basic tier ($200/mo) > our $170 bankroll; airdrop-tier inflation from public identity is unproven across HYPE/JTO/JUP. Skip until $5k.
+- `_ibkr_audit_2026-04-29.md` — IBKR options data ~$11.50/mo = 6.8% monthly drag at $170. Recommend Alpaca for sub-$5k non-crypto exposure (cloud REST, free data tier, options included). IBKR at $5-10k+.
+- `_cex_revisit_2026-04-29.md` — single concrete action: KYC Kraken as EUR off-ramp infrastructure (saves 1.5-3% vs MoonPay on profit conversion). Trading capital stays on-chain. Everything else (TAO, IDOs, CEX yields, airdrop programs) fails the "outsizes friction" test at our size.
+
+**`scripts/limitless_arb_scan.py` shipped.** Polymarket gamma-api `?q=` search is broken (returns same default page regardless of query); switched to local-side fuzzy matching against ~3K active markets. Two-layer match: distinctive-word overlap ≥ 3 with Jaccard ≥ 0.35 + numeric-token parity ($1B ≠ $4B, May 31 ≠ June 30). First run: 117 `isPolyArbitrage:true` Limitless markets, 12 with positive theoretical net edge after Polymarket fees. Plausible real candidates: Messi 2026 WC (Lim 0.934 vs PM 0.900), Ostium token launch (Lim 0.805 vs PM 0.735), several Theo FDV pairs. Output to gitignored `logs/limitless_arb_<ts>.md`. Phase 1 = candidate generation only; phase 2 (auto-execution) deferred until operator validates a few cycles manually.
+
+**Ostium volume rotation started.** Opened 2 new positions tonight: long SPX 5x + short NDX 5x ($5 collateral each). Both filled in ~8s. Now have 3 open Ostium tickets (gold long + SPX long + NDX short), total ~$15 of $50 budget deployed. Conservative scope while operator offline; rest for tomorrow's greenlight. Pair-trade structure (long SPX + short NDX) keeps me roughly delta-neutral on US-equity-vs-tech rather than directionally exposed.
+
+**Telegram digest sent** with the three memo links + overnight progress so operator has one entry point in the morning. Message id 70.
+
+**Wallet state:** Polymarket sleeve unchanged. Crypto sleeve: $55 USDC + 0.000591 ETH on Arbitrum, $30 USDC on Base, 3 Ostium positions ($14.67 collateral total). 
+
+**Recovered Tier-2 brainstorm picks** still queued for the operator's discretion: Ostium funding-rate harvester, Polymarket cross-market consistency scanner, whale-tracking, decision-quality tracker. None blocking; building any when operator picks the priority.
+
+**Risk-rationale for overnight autonomy.** Total new at-risk capital deployed tonight: $10 of Ostium collateral on hedged pair-trade (max loss = $10 if both legs hit SL, ~6% of total $170 bankroll). Within sizing rules. No new Polymarket positions, no PLUME entry, no Limitless arb crossings (those wait for operator review).
+
+**Lesson for the cron prompt that the Limitless scanner exposed**: Polymarket gamma-api's `?q=` search parameter is silently broken (returns default page regardless of query); future scripts that need to search Polymarket markets must paginate via `offset` and filter client-side, not trust `q`.
