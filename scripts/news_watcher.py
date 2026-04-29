@@ -34,6 +34,8 @@ import httpx
 
 import _paths as _secrets
 
+_secrets.install_scrubbing_excepthook()
+
 _SCRIPT_DIR = Path(__file__).resolve().parent
 _REPO_ROOT = _SCRIPT_DIR.parent
 
@@ -77,9 +79,9 @@ def telegram_send(text: str) -> None:
             timeout=10,
         )
         if not r.json().get("ok"):
-            print(f"[watcher] telegram error: {r.text[:200]}", flush=True)
+            print(f"[watcher] telegram error: {_secrets.scrub(r.text[:200])}", flush=True)
     except Exception as e:
-        print(f"[watcher] telegram exception: {e}", flush=True)
+        print(f"[watcher] telegram exception: {_secrets.scrub(str(e))}", flush=True)
 
 
 def fire_cron_tick() -> None:
@@ -199,7 +201,7 @@ def cmd_start(_args: argparse.Namespace) -> int:
             print("[watcher] interrupted", flush=True)
             return 0
         except Exception as e:
-            print(f"[watcher] loop exception: {e}; sleeping {backoff:.1f}s", flush=True)
+            print(f"[watcher] loop exception: {_secrets.scrub(str(e))}; sleeping {backoff:.1f}s", flush=True)
             time.sleep(backoff)
             backoff = min(backoff * 2, 300)
 

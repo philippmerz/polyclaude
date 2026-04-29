@@ -27,6 +27,8 @@ import httpx
 
 import _paths as _secrets
 
+_secrets.install_scrubbing_excepthook()
+
 TOKEN_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_TOKEN")
 STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
 API = "https://api.telegram.org"

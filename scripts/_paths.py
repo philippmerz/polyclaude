@@ -1,4 +1,4 @@
-"""Resolve secret/state file paths from env vars.
+"""Resolve secret/state file paths from env vars + scrub secrets from log lines.
 
 Public-repo-safe: this module never references actual filesystem locations.
 On import, it auto-loads `~/.polyclaude/env` if present, populating env vars
@@ -13,6 +13,7 @@ Variables read by callers:
 """
 from __future__ import annotations
 import os
+import re
 from pathlib import Path
 
 _ENV_FILE = Path.home() / ".polyclaude" / "env"
@@ -40,3 +41,26 @@ def path(env_var: str) -> Path:
             f"required env var {env_var!r} not set; populate the polyclaude env file"
         )
     return Path(val)
+
+
+# Telegram bot tokens look like `bot<digits>:<base64-ish>` in URLs. Match and
+# replace before any error message hits a log file.
+_TELEGRAM_TOKEN_RE = re.compile(r"bot\d+:[A-Za-z0-9_-]{20,}")
+
+
+def scrub(text: str) -> str:
+    """Strip known-credential patterns from arbitrary text before logging."""
+    return _TELEGRAM_TOKEN_RE.sub("bot<TOKEN>", text)
+
+
+def install_scrubbing_excepthook() -> None:
+    """Replace sys.excepthook so any unhandled exception's traceback is
+    written to stderr with credential patterns stripped first."""
+    import sys
+    import traceback
+
+    def _hook(exc_type, exc_val, exc_tb):
+        text = "".join(traceback.format_exception(exc_type, exc_val, exc_tb))
+        sys.stderr.write(scrub(text))
+
+    sys.excepthook = _hook

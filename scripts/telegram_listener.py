@@ -35,6 +35,8 @@ import httpx
 
 import _paths as _secrets
 
+_secrets.install_scrubbing_excepthook()
+
 TOKEN_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_TOKEN")
 STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
 PID_PATH = _secrets.path("POLYCLAUDE_LISTENER_PID")
@@ -125,13 +127,13 @@ def cmd_start(_args: argparse.Namespace) -> int:
             data = r.json()
             backoff = 1.0
         except Exception as e:
-            print(f"poll error: {e}; sleeping {backoff:.1f}s", file=sys.stderr, flush=True)
+            print(f"poll error: {_secrets.scrub(str(e))}; sleeping {backoff:.1f}s", file=sys.stderr, flush=True)
             time.sleep(backoff)
             backoff = min(backoff * 2, 60)
             continue
 
         if not data.get("ok"):
-            print(f"telegram API not ok: {data}", file=sys.stderr, flush=True)
+            print(f"telegram API not ok: {_secrets.scrub(str(data))}", file=sys.stderr, flush=True)
             time.sleep(5)
             continue
 
