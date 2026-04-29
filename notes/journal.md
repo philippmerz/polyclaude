@@ -403,7 +403,7 @@ Operator funded the new crypto-sleeve wallet `0x83dA…3eE6` with $100 USDC on A
 
 **Operator interface change**: `questions.md` retired in favor of Telegram. Blocking questions now go through the live channel; operations doc + memory updated.
 
-**Path-leak hygiene completed earlier in session**: filter-repo rewrote all history to scrub `/home/philipp/...` strings, force-pushed to `origin/main`, local backup deleted, gc pruned old objects. Bot-token-in-logs separately fixed (`_paths.scrub` + scrubbing excepthook in telegram + news_watcher scripts; existing logs truncated; daemons restarted).
+**Path-leak hygiene completed earlier in session**: filter-repo rewrote all history to scrub absolute filesystem-path strings, force-pushed to `origin/main`, local backup deleted, gc pruned old objects. Bot-token-in-logs separately fixed (`_paths.scrub` + scrubbing excepthook in telegram + news_watcher scripts; existing logs truncated; daemons restarted).
 
 **Next steps (any session):** confirm Ostium order 1848330 filled, then start volume-rotated points-farming (mix of long/short tickets across crypto + commodity pairs to stay roughly delta-neutral); fund Base ETH gas (~0.0003 ETH via Across) when Limitless monitor is ready; consider PLUME entry once Plume Network bridge cost is verified.
 
@@ -445,3 +445,22 @@ Implemented the 5 Tier-1 plays from `notes/brainstorm_2026-04-29.md`:
 Smoke-tested all four emergency scripts in dry-run mode against live state — orderbook parsing for the Polymarket case (bids are tuples not dicts), Across quote for the bridge case, Coingecko cross-check + Uniswap V3 quote for the swap case. All clean.
 
 The deepest framing from the brainstorm — *long-term return is a function of how fast the system improves, not the quality of today's strategy* — feels right after this session. Each of these five additions makes future ticks more capable, not just one execution-cycle better.
+
+---
+
+## 2026-04-29 ~22:00 UTC — Tier-2 agent-evaluation layer
+
+Operator was getting ~12 Hormuz-related Telegram pings/day because Tier-2 keyword matching had no semantic filter. First-pass quick fix (broad-keyword trim, commit `7a03468`) worked but at the cost of recall — phrasings like "Iran lifts Hormuz blockade" weren't matching "hormuz reopens". Operator's correct push: tokens are not the constraint; build the agent-eval layer.
+
+Two-stage filter now live:
+
+1. **Broad keyword recall.** Restored noise-prone keywords (`strait of hormuz`, `hormuz blockade`, `iran ceasefire`, `iranian vessel`, `iran negotiation`, etc.). Tier-2 fires on anything plausibly position-relevant.
+2. **Agent precision.** Each Tier-2 match calls `claude -p --model haiku` from `/tmp` cwd (no project context loaded — fast cold start) with a tight prompt: position list + article + SEND/SUPPRESS instruction. The agent decides; SUPPRESS = silent log, SEND = Telegram with the agent's one-line "why" appended. Tier-1 still bypasses the filter — never want to suppress regime-changing events.
+
+Smoke-tested end-to-end: noise pattern ("Iran reiterates Hormuz position at UN") → SUPPRESS, real state change ("Iran lifts Hormuz blockade after 6-month closure") → SEND with reason "concrete de-escalation affecting regime-stability/peace-deal probabilities and geopolitical risk premium on XAU/USD position." The agent even noticed the cross-asset link to the Ostium gold long.
+
+Fail-open semantics: if claude-p errors / times out (45s timeout) / returns unparseable text, the filter defaults to SEND. Operator never silently misses an alert because the agent had a bad day.
+
+Cost: ~12 matches/day × ~5K tokens/match = trivial against the Max plan's weekly bucket. Latency: ~3-5s per match, imperceptible against the 5-min poll cycle.
+
+Daemon restarted: news_watcher PID 191247.

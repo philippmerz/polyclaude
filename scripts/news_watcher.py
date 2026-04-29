@@ -98,6 +98,94 @@ def fire_cron_tick() -> None:
         print(f"[watcher] failed to spawn cron tick: {e}", flush=True)
 
 
+# --- smart filter for Tier-2 alerts ---------------------------------------
+
+# In-process cache of formatted positions; refreshed every 5 min so the
+# agent always sees roughly-current book without hammering data-api.
+_POSITIONS_CACHE: dict = {"text": None, "ts": 0.0}
+_POSITIONS_CACHE_TTL_SECONDS = 300
+
+
+def _positions_summary_blocking() -> str:
+    """Fetch + format current positions for inclusion in agent prompts.
+
+    Cached for 5 min in-process. On any failure, returns a short string
+    so the agent still has something to reason about.
+    """
+    now = time.time()
+    if _POSITIONS_CACHE["text"] and now - _POSITIONS_CACHE["ts"] < _POSITIONS_CACHE_TTL_SECONDS:
+        return _POSITIONS_CACHE["text"]
+
+    lines: list[str] = ["Polymarket sleeve:"]
+    try:
+        addr = json.loads(_secrets.path("POLYCLAUDE_WALLET").read_text())["address"]
+        r = httpx.get(
+            "https://data-api.polymarket.com/positions",
+            params={"user": addr.lower(), "limit": "50"},
+            timeout=10,
+        )
+        for p in (r.json() or []):
+            cur = float(p.get("curPrice") or 0)
+            cost = float(p.get("initialValue") or 0)
+            lines.append(f"- {p['outcome']} {cur:.3f} (${cost:.2f}) — {p['title'][:70]}")
+    except Exception as e:
+        lines.append(f"  (positions read failed: {_secrets.scrub(str(e))[:120]})")
+
+    # Crypto sleeve — keep simple; agent gets enough context from the headline.
+    lines.append("\nCrypto sleeve: small Ostium positions (currently long XAU/USD 5x ~$5 collateral).")
+
+    text = "\n".join(lines)
+    _POSITIONS_CACHE["text"] = text
+    _POSITIONS_CACHE["ts"] = now
+    return text
+
+
+def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str) -> tuple[bool, str]:
+    """Ask claude -p whether a Tier-2 match should reach Telegram.
+
+    Returns (should_send, one_line_reason). On agent error/timeout/unparseable
+    output, returns (True, "agent unavailable: <err>") — fail-OPEN so the
+    operator sees raw alerts rather than silent drops.
+    """
+    pos = _positions_summary_blocking()
+    body = (summary or "")[:600].replace("\n", " ").strip()
+    prompt = (
+        "You filter news for polyclaude (autonomous trading project). "
+        "Open positions:\n\n"
+        f"{pos}\n\n"
+        f"News article (matched keyword \"{kw}\", source {feed_name}):\n"
+        f"Title: {title}\n"
+        f"Summary: {body}\n\n"
+        "Decide whether this article should reach the operator's Telegram:\n"
+        "- SEND = the article moves a probability the operator cares about, in either direction (state change, named officials taking action, hard numbers, named-entity events).\n"
+        "- SUPPRESS = recycled noise that doesn't update probabilities (rephrasing of existing facts, opinion pieces about ongoing events, generic topic mentions).\n\n"
+        "Respond on ONE line, exactly: SEND: <one-line why> OR SUPPRESS: <one-line why>"
+    )
+
+    try:
+        r = subprocess.run(
+            ["claude", "-p", "--model", "haiku", prompt],
+            capture_output=True,
+            text=True,
+            timeout=45,
+            cwd="/tmp",  # avoid loading polyclaude project context (CLAUDE.md, tools)
+        )
+        out = (r.stdout or "").strip()
+        first_line = out.splitlines()[0] if out else ""
+    except (subprocess.TimeoutExpired, subprocess.CalledProcessError, FileNotFoundError) as e:
+        return (True, f"agent unavailable: {_secrets.scrub(str(e))[:120]}")
+
+    upper = first_line.upper()
+    if upper.startswith("SEND"):
+        reason = first_line[4:].lstrip(": ").strip() or "(no reason)"
+        return (True, reason)
+    if upper.startswith("SUPPRESS"):
+        reason = first_line[8:].lstrip(": ").strip() or "(no reason)"
+        return (False, reason)
+    # Couldn't parse — fail open
+    return (True, f"agent unparseable: {first_line[:120]}")
+
+
 def entry_id(entry) -> str:
     """Stable id for an RSS entry — prefer guid/link, fall back to title hash."""
     base = entry.get("id") or entry.get("guid") or entry.get("link") or entry.get("title", "")
@@ -184,10 +272,23 @@ def poll_once(config: dict, state: dict) -> int:
                 continue
             last_alerts[cooldown_key] = now
 
+            # Tier-2 goes through agent-filter (broad keyword recall + agent
+            # precision). Tier-1 always sends — those are auto-cron-firing,
+            # we never want to suppress a regime-changing event.
+            agent_reason = None
+            if tier == 2:
+                send, agent_reason = _agent_filter_tier2(feed["name"], kw, title, summary)
+                if not send:
+                    print(f"[watcher] suppressed tier2 kw={kw!r} feed={feed['name']} "
+                          f"reason={agent_reason[:120]!r} title={title[:80]!r}", flush=True)
+                    continue
+
             prefix = "[URGENT]" if tier == 1 else "[NEWS]"
+            why_line = f"\nwhy: {agent_reason}\n" if agent_reason else "\n"
             msg = (
                 f"{prefix} {feed['name']}\n"
-                f"matched: {kw}\n"
+                f"matched: {kw}"
+                f"{why_line}"
                 f"\n{title}\n"
                 f"\n{link}"
             )
