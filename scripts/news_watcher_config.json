@@ -53,24 +53,35 @@
     "tether depeg", "tether depegs", "tether depegged", "tether breaks peg", "tether collapse"
   ],
 
+  "_tier2_note": "Tier-2 keywords must be SPECIFIC enough to imply a position-changing state change, not just a topic mention. 'strait of hormuz' fires daily on routine reporting; 'hormuz reopens' fires only on the actual event. When in doubt, prefer specificity — operator gets the ping when something happens, not when someone discusses something happening.",
+
   "tier2_keywords": [
     "trump health", "trump hospital", "trump walter reed", "trump medical",
-    "trump security", "secret service trump", "trump shooting", "trump shooter",
-    "iran ceasefire", "hormuz blockade", "strait of hormuz", "iran ship attack", "iranian vessel",
-    "iran negotiation", "us iran talks", "witkoff iran", "kushner iran",
-    "khamenei health", "iranian leader health", "tehran protest", "iranian protest",
-    "uap report", "ufo congressional", "aaro report", "pentagon ufo", "uap disclosure",
-    "eurovision rehears", "eurovision favorit", "eurovision odds", "eurovision semi-final",
-    "ohio gubernatorial", "ohio primary", "amy acton",
-    "atletico madrid", "la liga title", "champions league atletico",
+    "trump security incident", "secret service trump", "trump shooting", "trump shooter",
+    "khamenei health", "khamenei hospitalized", "iranian leader health",
+
+    "iran ceasefire collapsed", "iran ceasefire collapse", "iran ceasefire ended", "iran ceasefire breaks",
+    "iran ceasefire signed", "iran ceasefire formalized",
+    "hormuz reopens", "hormuz fully cleared", "strait of hormuz reopens",
+    "us iran agreement signed", "us iran deal signed", "iran sanctions lifted", "iran sanctions reimposed",
+    "iran nuclear deal signed", "iran nuclear deal collapse",
+
+    "uap report", "ufo congressional hearing", "aaro report", "uap disclosure act", "pentagon ufo briefing",
+
+    "eurovision favorit", "eurovision odds shift", "eurovision rehearsal week",
+    "eurovision withdraws", "eurovision banned",
+
+    "ohio gubernatorial primary", "ohio primary results", "amy acton",
+    "atletico madrid top 4", "la liga title race",
+    "atletico champions league final", "atletico injury crisis",
 
     "stablecoin depeg", "stablecoin redemption halt", "stablecoin run",
     "ethena depeg", "usde depeg", "susde depeg",
     "defi exploit", "defi hack", "perp dex hack", "rwa protocol hack",
     "bridge exploit", "bridge hack", "cross-chain exploit",
-    "btc flash crash", "eth flash crash", "crypto liquidation cascade", "billion liquidated",
-    "sec crypto enforcement", "sec defi lawsuit", "cftc crypto", "treasury crypto sanction",
-    "polymarket regulator", "polymarket cftc", "polymarket subpoena",
-    "ostium", "limitless exchange", "across protocol"
+    "btc flash crash", "eth flash crash", "crypto liquidation cascade",
+    "sec crypto enforcement", "sec defi lawsuit", "cftc crypto enforcement", "treasury crypto sanction",
+    "polymarket regulator action", "polymarket cftc", "polymarket subpoena",
+    "ostium hack", "ostium exploit", "ostium drained", "limitless exchange hack", "across protocol hack"
   ]
 }
