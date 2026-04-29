@@ -406,3 +406,21 @@ Operator funded the new crypto-sleeve wallet `0x83dA…3eE6` with $100 USDC on A
 **Path-leak hygiene completed earlier in session**: filter-repo rewrote all history to scrub `/home/philipp/...` strings, force-pushed to `origin/main`, local backup deleted, gc pruned old objects. Bot-token-in-logs separately fixed (`_paths.scrub` + scrubbing excepthook in telegram + news_watcher scripts; existing logs truncated; daemons restarted).
 
 **Next steps (any session):** confirm Ostium order 1848330 filled, then start volume-rotated points-farming (mix of long/short tickets across crypto + commodity pairs to stay roughly delta-neutral); fund Base ETH gas (~0.0003 ETH via Across) when Limitless monitor is ready; consider PLUME entry once Plume Network bridge cost is verified.
+
+---
+
+## 2026-04-29 ~20:50 UTC — Auto-fired cron tick (false-positive, fixed) + Ostium pivot to non-crypto
+
+**Auto-fire trigger:** news_watcher emitted a Tier-1 alert on a Celsius/FTC article; the keyword `"et disclosure"` (intended as "extraterrestrial disclosure" shorthand) matched a substring inside `"asset disclosure"` or similar. The matcher was already swapped from substring to word-boundary regex (`_kw_regex` in `news_watcher.py`) in a prior edit, but the running daemon had been up for 2h+ with the old code in memory. Restarted the daemon (PID 184325 → 190009) so the regex matcher is now actually live. Future false-positives of this class are structurally prevented.
+
+**Polymarket sleeve — routine:** 9 positions intact. Total cost $64.95, MTM $65.84, **+$0.89 (+1.37%)**. S1 Iran-peace NO continues to lead (cost $6.99 → MTM $7.88, +12.7% on cost). Other positions ±0.1% noise vs prior tick. **No trade.**
+
+**Crypto sleeve — Ostium pivot:**
+- Stuck order 1848330 (long ETH 5x $5) had been pending 56 min when this tick fired — confirmed via subgraph that several network-wide BTC/ETH/HYPE market opens had been similarly stuck for hours (4-5+ hours for some). Inferred Stork crypto-feed degradation; non-crypto opens (NDX, SPX, CL, NIK, gold) were filling in seconds in the same window.
+- Called `openTradeMarketTimeout(1848330)` via the Ostium SDK helper. Tx `0xd2dec6…9bcc2`. Order cancelled with reason `TIMEOUT`, $5 USDC refunded to the wallet.
+- Pivoted to a non-crypto first ticket: **Long XAU/USD (gold)** id=5, 5x lev, $5 collateral = $25 notional, ±5% TP/SL. Tx `0x160990…523e7`, order id 1848919. On-chain collateral confirmed moved ($70 → $65 USDC). Subgraph still indexing at journal time. Expecting fill within ~2 min based on observed commodity-pair latency.
+- Remaining Ostium budget: $45 USDC on Arbitrum. Will spread across 2-3 additional non-crypto positions (likely SPX, NVDA, EUR/USD, oil) on the next tick to start volume-rotated points farming with delta-balanced exposure.
+
+**No operator ping** — auto-fire was a false positive; nothing material moved on the actual book.
+
+**Operational note for future ticks:** when crypto-pair Stork feed is degraded, prefer non-crypto Ostium pairs (commodities/indices/equities/forex) for new opens. They're filling reliably and fit the points-farming thesis equally well.

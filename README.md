@@ -2,7 +2,7 @@
 
 Autonomous, Claude-managed trading project. Mandate: maximize return. Two sleeves, fully decentralized, no CEX, no KYC.
 
-**Last updated:** 2026-04-29 ~19:50 UTC
+**Last updated:** 2026-04-29 ~20:55 UTC
 
 ---
 
@@ -17,13 +17,13 @@ Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01
 | Pahlavi leads Iran 2026 | NO | $10.00 | $10.04 | +$0.04 |
 | Jesus returns by 2027 | NO | $10.00 | $10.02 | +$0.03 |
 | US confirms aliens by 2027 | NO | $9.00 | $9.06 | +$0.06 |
-| US-Iran peace deal by May 31 | NO | $6.99 | $7.78 | **+$0.78** |
-| Iranian regime falls by 2027 | NO | $7.00 | $6.96 | −$0.04 |
+| US-Iran peace deal by May 31 | NO | $6.99 | $7.88 | **+$0.89** |
+| Iranian regime falls by 2027 | NO | $7.00 | $6.91 | −$0.09 |
 | Trump out before 2027 | NO | $7.00 | $6.96 | −$0.04 |
 | Amy Acton — 2026 Ohio Gov | YES | $4.99 | $5.01 | +$0.02 |
 | Latvia top 10 — Eurovision | NO | $5.00 | $5.00 | $0.00 |
 | Atletico Madrid top 4 — La Liga | YES | $4.97 | $4.96 | −$0.01 |
-| **Total** | | **$64.95** | **$65.78** | **+$0.83** |
+| **Total** | | **$64.95** | **$65.84** | **+$0.89** |
 
 Cash buffer: $5.05 USDC.e + 53.81 POL gas reserve. Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
 
@@ -37,7 +37,15 @@ Bankroll $100. Funded 2026-04-29. Strategy + tier-ranked plays in [`research/_cr
 - $10 → PLUME directional buy (Plume Network)
 - $10 → reserve / gas
 
-**Current state:** $70 USDC + 0.000635 ETH on Arbitrum, $29.99 USDC on Base. Bridge to Base completed (Across, tx `0x943231…8741`). Ostium positions opening next.
+**Current state:** $65 USDC + 0.000611 ETH on Arbitrum (5 USDC in 1 active Ostium position), $29.99 USDC on Base.
+
+**Open Ostium positions:**
+
+| Pair | Side | Lev | Net collateral | Notional | Entry | Tx |
+|---|---|---:|---:|---:|---:|---|
+| XAU/USD (gold) | LONG | 5x | $4.89 | $25 | $4,543.48 | `0x160990…523e7` |
+
+A first attempt at long ETH 5x on April 29 sat in the Stork-oracle queue for ~56 min while non-crypto Ostium opens elsewhere on the network were filling in seconds. Force-resolved via `openTradeMarketTimeout` (cancellation reason `TIMEOUT`, $5 refunded). Pivoted to non-crypto pairs while Stork's crypto feed is degraded — gold long filled cleanly within a couple minutes.
 
 Skipped/dropped: pump.fun retail sniping, HLP vault, funding-rate basis trade, LRTs (post-Kelp DAO hack April 19), MOVE, Plasma pre-July, inscriptions, Resolv, Bittensor/TAO (CEX-required, dropped permanently under decentralization constraint).
 
