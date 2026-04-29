@@ -350,3 +350,22 @@ Sources:
 - [Trump reviews peace plan; UN calls for Hormuz to reopen — Al Jazeera live Apr 28](https://www.aljazeera.com/news/liveblog/2026/4/28/iran-war-live-trump-reviews-peace-plan-un-calls-for-hormuz-to-reopen)
 - [Iran's split-track proposal — WaPo Apr 27](https://www.washingtonpost.com/world/2026/04/27/iran-talks-putin-araghchi-trump-russia/)
 - [Atlético Madrid La Liga 4th, CL semi-final vs Arsenal Apr 29 — ESPN/Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%9326_Atl%C3%A9tico_Madrid_season)
+
+---
+
+## 2026-04-29 ~02:00 UTC — Cron tick (02:00 UTC slot): hold all 9, Latvia gives back its pop
+
+**State.** Polymarket wallet $5.05 USDC.e + 53.81 MATIC. Crypto sleeve still empty (operator hasn't funded). Nine positions intact. Total cost $64.95, **MTM $65.45, +$0.50 (+0.77%)** — book gave back $0.28 vs the +1.21% reading 12h ago, all of it from Latvia retracing.
+
+**Movers since prior tick (Apr 28 14:00 UTC).**
+- **S2 Latvia NO** mark **0.875 → 0.830** (-4.5¢, biggest move). Gives back the rehearsal-week pop in full. Eurovision rehearsals still in progress (semi-1 May 12, final May 16). On a thin market with shallow depth this is normal book noise the day after a thesis-confirming bid spike. Still flat-to-positive on cost, no thesis change. Hold.
+- **L3 Aliens NO** 0.815 → 0.815 (flat). **L4 Trump-out NO** 0.835 → 0.835 (flat). **S1 Iran-peace NO** 0.705 → 0.705 (flat).
+- All other positions ±0.5¢.
+
+**Catalyst scan.** Iran/Hormuz: status quo, no permanent deal, Iran's split-track proposal (Hormuz now, nukes later) still being reviewed; early signals Trump admin "unlikely to accept" ([Bloomberg/Axios Apr 27](https://www.bloomberg.com/news/articles/2026-04-27/iran-offers-deal-to-us-to-reopen-strait-delay-nuclear-talks-axios-says), [Al Jazeera Apr 28](https://www.aljazeera.com/news/2026/4/28/whats-in-irans-latest-proposal-and-how-has-the-us-responded), [NPR Apr 28](https://www.npr.org/2026/04/28/nx-s1-5802283/iran-middle-east-updates)). Russian oligarch's superyacht reportedly transited the Strait — symbolic puncture of the blockade but no policy implication. Gas prices at $4.15/gal four-year high. All directionally thesis-confirming for S1 (no permanent deal by May 31) and L5 (regime intact). Trump-shooting alert was a Hinckley callback, not a new event. Atletico CL semi vs Arsenal happens later today — irrelevant for S3 (La Liga top-4 market). No Tier-1 alerts since startup; 4 Tier-2 alerts in last 36h, all journaled and consistent with theses.
+
+**Decision: hold all 9.** No action. No Telegram ping (book essentially flat, operator interactively active <12h ago, nothing material moved).
+
+**Crypto sleeve:** still 0 USDC.e at `0x83dA…3eE6`. No on-chain work pending until funded. The operator's only remaining task is the deposit; deployment begins when funds arrive.
+
+**Weekly report:** due Saturday 2026-05-02 (3 days). Not yet.
