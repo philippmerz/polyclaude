@@ -40,6 +40,11 @@ for catalysts on active positions, decide hold/adjust/add/close, journal the res
 write a weekly report if it's been ~7 days since the last one, commit + push (audit
 secrets in the diff first), and ping the operator on Telegram if anything material
 moved. Brief if nothing happened.
+
+If you detect a peer cron tick running in parallel (other claude -p with the same
+session id, or a freshly-running scripts/news_watcher-spawned daily_checkin.sh):
+do NOT block waiting for it. Journal a one-line "deferring to peer tick" note and
+exit. Otherwise stuck-process risk: a 3-day deadlock has happened before.
 EOF
 
 # Run from $HOME so claude sees the right project scope for --resume.
