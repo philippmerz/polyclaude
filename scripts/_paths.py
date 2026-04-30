@@ -17,7 +17,8 @@ import re
 from pathlib import Path
 
 _ENV_FILE = Path.home() / ".polyclaude" / "env"
-_LIMITLESS_KEY_FILE = Path.home() / "ll_creds.txt"
+_LIMITLESS_JSON_FILE = Path.home() / "secrets" / "limitless_creds.json"
+_LIMITLESS_TXT_FILE = Path.home() / "ll_creds.txt"
 
 
 def _autoload_env() -> None:
@@ -29,17 +30,26 @@ def _autoload_env() -> None:
             key, _, value = line.partition("=")
             os.environ.setdefault(key.strip(), value.strip().strip("'\""))
 
-    # Limitless creds: operator drops a file at ~/ll_creds.txt with two lines:
-    # line 1 = API key, line 2 = API secret. Sets LIMITLESS_API_KEY and
-    # LIMITLESS_API_SECRET in os.environ if not already set. Also accepts
-    # KEY=value style lines as a fallback if formatting drifts.
-    if _LIMITLESS_KEY_FILE.exists():
+    # Limitless creds: prefer JSON file in secrets dir (canonical location),
+    # fall back to ll_creds.txt (two-line bare format) for compat. JSON shape:
+    # {"key": "...", "secret": "..."}.
+    if _LIMITLESS_JSON_FILE.exists():
+        try:
+            import json as _json
+            d = _json.loads(_LIMITLESS_JSON_FILE.read_text())
+            if isinstance(d, dict):
+                if d.get("key"):
+                    os.environ.setdefault("LIMITLESS_API_KEY", d["key"])
+                if d.get("secret"):
+                    os.environ.setdefault("LIMITLESS_API_SECRET", d["secret"])
+        except Exception:
+            pass
+    elif _LIMITLESS_TXT_FILE.exists():
         usable: list[str] = []
-        for raw in _LIMITLESS_KEY_FILE.read_text().splitlines():
+        for raw in _LIMITLESS_TXT_FILE.read_text().splitlines():
             line = raw.strip()
             if not line or line.startswith("#"):
                 continue
-            # Strip KEY=value if used; otherwise take the bare line
             if "=" in line:
                 k, _, v = line.partition("=")
                 k_up = k.strip().upper()
@@ -47,7 +57,6 @@ def _autoload_env() -> None:
                     os.environ.setdefault(k_up, v.strip().strip("'\""))
                     continue
             usable.append(line.strip("'\""))
-        # Positional fallback for the two-line bare format
         if usable:
             os.environ.setdefault("LIMITLESS_API_KEY", usable[0])
         if len(usable) >= 2:
