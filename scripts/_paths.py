@@ -17,17 +17,41 @@ import re
 from pathlib import Path
 
 _ENV_FILE = Path.home() / ".polyclaude" / "env"
+_LIMITLESS_KEY_FILE = Path.home() / "ll_creds.txt"
 
 
 def _autoload_env() -> None:
-    if not _ENV_FILE.exists():
-        return
-    for raw in _ENV_FILE.read_text().splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, _, value = line.partition("=")
-        os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+    if _ENV_FILE.exists():
+        for raw in _ENV_FILE.read_text().splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+    # Limitless creds: operator drops a file at ~/ll_creds.txt with two lines:
+    # line 1 = API key, line 2 = API secret. Sets LIMITLESS_API_KEY and
+    # LIMITLESS_API_SECRET in os.environ if not already set. Also accepts
+    # KEY=value style lines as a fallback if formatting drifts.
+    if _LIMITLESS_KEY_FILE.exists():
+        usable: list[str] = []
+        for raw in _LIMITLESS_KEY_FILE.read_text().splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#"):
+                continue
+            # Strip KEY=value if used; otherwise take the bare line
+            if "=" in line:
+                k, _, v = line.partition("=")
+                k_up = k.strip().upper()
+                if k_up in ("LIMITLESS_API_KEY", "LIMITLESS_API_SECRET"):
+                    os.environ.setdefault(k_up, v.strip().strip("'\""))
+                    continue
+            usable.append(line.strip("'\""))
+        # Positional fallback for the two-line bare format
+        if usable:
+            os.environ.setdefault("LIMITLESS_API_KEY", usable[0])
+        if len(usable) >= 2:
+            os.environ.setdefault("LIMITLESS_API_SECRET", usable[1])
 
 
 _autoload_env()

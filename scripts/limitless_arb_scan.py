@@ -90,19 +90,51 @@ def fetch_arb_candidates() -> list[dict]:
     return out
 
 
-def polymarket_fee_per_side(p: float) -> float:
-    """Return the Polymarket fee as a fraction of notional, given price p."""
+def polymarket_buy_fee(p: float) -> float:
+    """Polymarket edge-aware fee on buying a token at price p.
+
+    Source: gamma-api fee schedule on short-tenor markets.
+    fee = 0.072 × min(p, 1-p) × notional
+    """
     return POLYMARKET_FEE_RATE * min(p, 1 - p)
 
 
-def round_trip_breakeven(p_yes: float) -> float:
-    """Min cross-venue spread (fraction) needed to break even after Polymarket fees.
+def limitless_buy_fee(p: float) -> float:
+    """Limitless buy fee at price p, in fraction of notional.
 
-    Assumes Limitless side is fee-free (Coinbase-subsidized gas, plus
-    Limitless's own fee — small but non-zero; we treat as 0 here for
-    simplicity. Refine when phase-2 arrives.)
+    Per docs.limitless.exchange/user-guide/fees: 0.40% near parity, up to
+    3.00% at extremes. Modeling as symmetric around p=0.5 since the docs
+    are unclear on asymmetry; this is the conservative assumption (slightly
+    over-estimates fees at high p, which suppresses false positives).
+    Maker rebates exist but the arb requires takers on both legs.
     """
-    return polymarket_fee_per_side(p_yes) * 2
+    distance_from_parity = abs(p - 0.5) * 2  # 0 at p=0.5, 1 at p=0 or p=1
+    return 0.004 + (0.030 - 0.004) * distance_from_parity
+
+
+def arb_breakeven(p_lim: float, p_pm: float) -> float:
+    """Minimum spread |p_pm - p_lim| needed to clear fees on a paired arb.
+
+    The trade (when lim_yes < pm_yes): buy Lim YES at p_lim + buy PM NO at
+    (1 - p_pm). Pays one Limitless buy fee at p_lim and one Polymarket buy
+    fee at (1 - p_pm). Symmetric for the inverse case.
+    """
+    if p_lim < p_pm:
+        # Buy Lim YES at p_lim, Buy PM NO at (1 - p_pm)
+        return limitless_buy_fee(p_lim) + polymarket_buy_fee(1 - p_pm)
+    else:
+        # Buy PM YES at p_pm, Buy Lim NO at (1 - p_lim)
+        return polymarket_buy_fee(p_pm) + limitless_buy_fee(1 - p_lim)
+
+
+def round_trip_breakeven(p_yes: float) -> float:
+    """Approximate breakeven assuming the Polymarket side is at the same price.
+    Used for the initial sort before Polymarket prices are looked up.
+    """
+    # Conservative estimate: Lim fee at this price + PM fee at (1-p_yes)
+    # (we don't yet know p_pm; assume similar to p_yes and use the more
+    # demanding of the two arb directions)
+    return limitless_buy_fee(p_yes) + polymarket_buy_fee(1 - p_yes)
 
 
 _STOPWORDS = {
@@ -169,9 +201,12 @@ def fetch_polymarket_universe(max_markets: int = 3000) -> list[dict]:
     return out
 
 
-def index_polymarket(markets: list[dict]) -> list[tuple[set[str], set[str], float, str, str]]:
-    """Build index: (word-set, numeric-set, yes_price, question, slug)."""
-    idx: list[tuple[set[str], set[str], float, str, str]] = []
+def index_polymarket(markets: list[dict]) -> list[dict]:
+    """Build index entries with all fields needed downstream.
+
+    Each entry: {words, nums, yes_price, question, slug, description}
+    """
+    idx: list[dict] = []
     for m in markets:
         q = m.get("question") or m.get("title") or ""
         if not q:
@@ -184,21 +219,79 @@ def index_polymarket(markets: list[dict]) -> list[tuple[set[str], set[str], floa
             yes_price = float(prices[0])
         except Exception:
             continue
-        idx.append((_distinctive_words(q), _numeric_tokens(q), yes_price, q, m.get("slug") or ""))
+        idx.append({
+            "words": _distinctive_words(q),
+            "nums": _numeric_tokens(q),
+            "yes_price": yes_price,
+            "question": q,
+            "slug": m.get("slug") or "",
+            "description": m.get("description") or "",
+        })
     return idx
 
 
-def fuzzy_match(title: str, pm_index: list[tuple[set[str], set[str], float, str, str]],
-                min_overlap: int = 3) -> tuple[float, str, float] | None:
+def verify_resolution_match(lim_desc: str, pm_desc: str,
+                             lim_title: str, pm_question: str) -> tuple[str, str]:
+    """Ask claude -p haiku whether two resolution criteria will resolve identically.
+
+    Returns (verdict, reason) where verdict is one of IDENTICAL / SIMILAR /
+    DIFFERENT / UNCERTAIN. On agent error, returns (UNCERTAIN, reason).
+
+    Used to gate autonomous arb execution. Only IDENTICAL pairs are eligible
+    for cross-venue capital deployment — anything less is too risky given the
+    asymmetric loss (a single resolution-language mismatch wipes both legs).
+    """
+    import subprocess as _sp
+
+    # Strip HTML, keep readable text
+    import re as _re
+    def _clean(s: str) -> str:
+        s = _re.sub(r"<[^>]+>", " ", s or "")
+        s = _re.sub(r"\s+", " ", s)
+        return s.strip()[:1500]
+
+    prompt = (
+        "Compare the resolution criteria of two prediction markets that claim "
+        "to resolve on the same event. Will they ALWAYS resolve to the same "
+        "outcome (both YES or both NO), or could they disagree in some scenario "
+        "due to different language, oracle source, deadline, or definitions?\n\n"
+        f"Market A (Limitless): {lim_title}\n"
+        f"Resolution: {_clean(lim_desc)}\n\n"
+        f"Market B (Polymarket): {pm_question}\n"
+        f"Resolution: {_clean(pm_desc)}\n\n"
+        "Respond on ONE line, exactly:\n"
+        "- IDENTICAL: <one-line why they always agree>\n"
+        "- SIMILAR: <one-line on edge case where they might differ>\n"
+        "- DIFFERENT: <one-line on clear divergence>\n"
+        "- UNCERTAIN: <one-line on what's missing>\n\n"
+        "Be strict. Subtle differences in deadlines, oracle source, or "
+        "language can cause edge-case disagreement. Default to UNCERTAIN if "
+        "not 100% sure both markets always agree."
+    )
+
+    try:
+        r = _sp.run(
+            ["claude", "-p", "--model", "haiku", prompt],
+            capture_output=True, text=True, timeout=45, cwd="/tmp",
+        )
+        line = (r.stdout or "").strip().splitlines()[0] if r.stdout else ""
+    except (_sp.TimeoutExpired, _sp.CalledProcessError, FileNotFoundError) as e:
+        return ("UNCERTAIN", f"agent error: {_secrets.scrub(str(e))[:120]}")
+
+    upper = line.upper()
+    for v in ("IDENTICAL", "SIMILAR", "DIFFERENT", "UNCERTAIN"):
+        if upper.startswith(v):
+            reason = line[len(v):].lstrip(": ").strip() or "(no reason)"
+            return (v, reason)
+    return ("UNCERTAIN", f"unparseable: {line[:120]}")
+
+
+def fuzzy_match(title: str, pm_index: list[dict],
+                min_overlap: int = 3) -> dict | None:
     """Find the best Polymarket match for a Limitless title.
 
-    Requires:
-      - >= min_overlap distinctive-word matches
-      - numeric tokens (thresholds, dates) must match exactly: if Limitless
-        has '$4B' and best PM candidate has '$1B', that's a different market
-
-    Returns (yes_price, question, confidence) where confidence is Jaccard
-    similarity, or None if no match.
+    Returns the full pm_index entry (yes_price, question, slug, description,
+    plus a `_jaccard` annotation) of the best match, or None.
     """
     lim_words = _distinctive_words(title)
     lim_nums = _numeric_tokens(title)
@@ -207,23 +300,21 @@ def fuzzy_match(title: str, pm_index: list[tuple[set[str], set[str], float, str,
 
     best = None  # (overlap, jaccard, entry)
     for entry in pm_index:
-        pm_words, pm_nums, _, _, _ = entry
+        pm_words = entry["words"]
+        pm_nums = entry["nums"]
         common = lim_words & pm_words
         if len(common) < min_overlap:
             continue
-        # If both sides have numeric tokens, they must match (modulo subset)
+        # If both sides have numeric tokens, require at least one in common
         if lim_nums and pm_nums:
-            num_overlap = lim_nums & pm_nums
-            # Require at least one numeric token in common when both have any
-            if not num_overlap:
+            if not (lim_nums & pm_nums):
                 continue
         # If Limitless has nums but PM has none → likely different (PM is the
-        # general market, Limitless splits by threshold). Penalize.
+        # general market, Limitless splits by threshold). Skip.
         elif lim_nums and not pm_nums:
             continue
         union = lim_words | pm_words
         jaccard = len(common) / len(union) if union else 0
-        # Require reasonable confidence
         if jaccard < 0.35:
             continue
         if best is None or (len(common), jaccard) > (best[0], best[1]):
@@ -232,14 +323,15 @@ def fuzzy_match(title: str, pm_index: list[tuple[set[str], set[str], float, str,
     if best is None:
         return None
     overlap, jaccard, entry = best
-    _, _, yes_price, question, _ = entry
-    return (yes_price, question, jaccard)
+    out = dict(entry)
+    out["_jaccard"] = jaccard
+    return out
 
 
 def main() -> int:
     p = argparse.ArgumentParser()
-    p.add_argument("--threshold-edge", type=float, default=0.02,
-                   help="alert if Polymarket-side breakeven < this fraction (i.e., near-certain markets where small spreads pencil)")
+    p.add_argument("--threshold-edge", type=float, default=0.015,
+                   help="net-edge threshold for autonomous-execution eligibility (default 1.5%)")
     p.add_argument("--notify", action="store_true",
                    help="post a Telegram if any candidate clears the threshold")
     p.add_argument("--max-show", type=int, default=40)
@@ -276,15 +368,39 @@ def main() -> int:
     for m in top_for_lookup:
         result = fuzzy_match(m["title"], pm_index)
         if result:
-            pm_yes, pm_q, conf = result
-            m["_pm_yes"] = pm_yes
-            m["_pm_question"] = pm_q
-            m["_match_confidence"] = conf
-            m["_spread"] = pm_yes - m["_yes_price"]  # positive = Polymarket richer
+            m["_pm_yes"] = result["yes_price"]
+            m["_pm_question"] = result["question"]
+            m["_pm_slug"] = result["slug"]
+            m["_pm_description"] = result["description"]
+            m["_match_confidence"] = result["_jaccard"]
+            m["_spread"] = result["yes_price"] - m["_yes_price"]
+            # Real fee-aware breakeven uses both sides' actual fees
+            m["_breakeven"] = arb_breakeven(m["_yes_price"], result["yes_price"])
             m["_net_edge"] = abs(m["_spread"]) - m["_breakeven"]
         else:
             m["_pm_yes"] = None
             m["_net_edge"] = None
+
+    # Agent-verify resolution criteria for the top profitable candidates only
+    # (verification is the expensive step; gate by net edge first)
+    matched_for_verify = sorted(
+        [m for m in top_for_lookup
+         if (m.get("_net_edge") or -1) > 0
+         and (m.get("_match_confidence") or 0) >= 0.5],
+        key=lambda m: -(m.get("_net_edge") or 0),
+    )[:10]
+    print(f"\nverifying resolution-language equivalence on top {len(matched_for_verify)} "
+          f"profitable matches with claude -p haiku...")
+    for m in matched_for_verify:
+        verdict, reason = verify_resolution_match(
+            lim_desc=m.get("description", ""),
+            pm_desc=m.get("_pm_description", ""),
+            lim_title=m["title"],
+            pm_question=m.get("_pm_question", ""),
+        )
+        m["_verify_verdict"] = verdict
+        m["_verify_reason"] = reason
+        print(f"  {verdict:9}  net_edge={m['_net_edge']*100:+.2f}%  {m['title'][:60]}")
 
     # Re-sort the top by net edge (matched markets first, descending edge)
     matched = [m for m in top_for_lookup if m.get("_net_edge") is not None]
@@ -299,26 +415,62 @@ def main() -> int:
         f.write(f"# Limitless arb scan — {ts} UTC\n\n")
         f.write(f"Total `isPolyArbitrage:true` markets: {len(cands)}\n")
         f.write(f"Polymarket-matched (top {len(top_for_lookup)} by breakeven): {len(matched)}\n\n")
-        f.write("**Manual verification required before any trade.** Matching is heuristic ")
-        f.write("(distinctive-word overlap + numeric-token parity, Jaccard ≥ 0.35). ")
-        f.write("Threshold-variant markets (e.g., 'X above $1B' vs 'X above $4B') often ")
-        f.write("evade the numeric-token guard if one side phrases the threshold differently. ")
-        f.write("Always click through to both venues before crossing capital.\n\n")
+        f.write("Three-layer screening: (1) distinctive-word overlap ≥ 3 with Jaccard ≥ 0.35, ")
+        f.write("(2) numeric-token parity, (3) agent-verified resolution-language equivalence ")
+        f.write("(claude -p haiku). Only `IDENTICAL` verdicts qualify for autonomous execution; ")
+        f.write("`SIMILAR`/`UNCERTAIN`/`DIFFERENT` are visibility-only.\n\n")
         f.write(f"Polymarket fee = {POLYMARKET_FEE_RATE} × min(p, 1-p) per side. ")
-        f.write(f"Net edge = |spread| − breakeven. Positive = arb-profitable in theory.\n\n")
+        f.write(f"Limitless buy fee = 0.4-3.0% (rises away from parity). ")
+        f.write(f"Net edge = |spread| − (lim_fee + pm_fee). Positive = arb-profitable.\n\n")
         f.write("## Matched (sorted by net edge)\n\n")
-        f.write(f"| Lim YES | PM YES | Spread | Breakeven | Net Edge | Conf | Lim title / PM question |\n")
-        f.write(f"|---:|---:|---:|---:|---:|---:|---|\n")
+        f.write(f"| Lim YES | PM YES | Spread | Breakeven | Net Edge | Conf | Verdict | Lim title / PM question |\n")
+        f.write(f"|---:|---:|---:|---:|---:|---:|:---:|---|\n")
         for m in matched:
+            verdict = m.get("_verify_verdict", "—")
             f.write(f"| {m['_yes_price']:.3f} | {m['_pm_yes']:.3f} | "
                     f"{m['_spread']*100:+.2f}% | {m['_breakeven']*100:.2f}% | "
                     f"{m['_net_edge']*100:+.2f}% | {m.get('_match_confidence', 0):.2f} | "
+                    f"{verdict} | "
                     f"L: {m['title'][:60]}<br>PM: {m.get('_pm_question','')[:60]} |\n")
         f.write("\n## Unmatched (Limitless markets with no clear Polymarket counterpart)\n\n")
         for m in unmatched[:20]:
             f.write(f"- YES {m['_yes_price']:.3f}  breakeven {m['_breakeven']*100:.2f}%  — {m['title'][:80]}\n")
 
-    print(f"wrote {out_path}\n")
+    # Also dump a machine-readable JSON for the executor to consume
+    out_json = OUT_DIR / "limitless_arb_latest.json"
+    payload = {
+        "generated_at": ts,
+        "total_candidates": len(cands),
+        "matched_count": len(matched),
+        "verified_identical": [],
+        "verified_other": [],
+    }
+    for m in matched:
+        record = {
+            "lim_id": m["id"],
+            "lim_title": m["title"],
+            "lim_yes_price": m["_yes_price"],
+            "lim_yes_token": (m.get("tokens") or {}).get("yes"),
+            "lim_no_token": (m.get("tokens") or {}).get("no"),
+            "lim_condition_id": m.get("conditionId"),
+            "pm_question": m.get("_pm_question"),
+            "pm_slug": m.get("_pm_slug"),
+            "pm_yes_price": m["_pm_yes"],
+            "spread": m["_spread"],
+            "breakeven": m["_breakeven"],
+            "net_edge": m["_net_edge"],
+            "match_confidence": m.get("_match_confidence"),
+            "verify_verdict": m.get("_verify_verdict"),
+            "verify_reason": m.get("_verify_reason"),
+        }
+        if m.get("_verify_verdict") == "IDENTICAL":
+            payload["verified_identical"].append(record)
+        else:
+            payload["verified_other"].append(record)
+    out_json.write_text(json.dumps(payload, indent=2, default=str))
+
+    print(f"wrote {out_path}")
+    print(f"wrote {out_json}\n")
 
     # Stdout summary
     print(f"matched {len(matched)} of {len(top_for_lookup)} top candidates")
@@ -327,14 +479,25 @@ def main() -> int:
         print(f"{m['_yes_price']:>6.3f} {m['_pm_yes']:>6.3f} {m['_spread']*100:>+7.2f}% "
               f"{m['_breakeven']*100:>9.2f}% {m['_net_edge']*100:>+8.2f}%  {m['title'][:80]}")
 
-    # Notify if any actually-profitable markets found
-    profitable = [m for m in matched if m["_net_edge"] > 0]
-    print(f"\n{len(profitable)} markets with positive net edge after Polymarket fees")
-    if profitable and args.notify:
-        lines = [f"limitless arb: {len(profitable)} markets with positive net edge"]
-        for m in profitable[:5]:
-            lines.append(f"  Lim {m['_yes_price']:.3f} vs PM {m['_pm_yes']:.3f} "
-                         f"(net +{m['_net_edge']*100:.2f}%) — {m['title'][:80]}")
+    # Notify only on agent-verified IDENTICAL candidates above the edge threshold —
+    # those are the autonomous-execution-eligible ones. Visibility-only for
+    # SIMILAR/UNCERTAIN/DIFFERENT (logged in the markdown but not telegrammed).
+    identical = [m for m in matched
+                 if m.get("_verify_verdict") == "IDENTICAL"
+                 and (m.get("_net_edge") or 0) >= args.threshold_edge]
+    print(f"\n{len(identical)} IDENTICAL candidates with net edge >= {args.threshold_edge*100:.1f}%")
+    if identical and args.notify:
+        lines = [f"limitless arb: {len(identical)} IDENTICAL candidate(s) above {args.threshold_edge*100:.1f}% net edge"]
+        for m in identical[:5]:
+            direction = "LONG Lim YES + LONG PM NO" if m["_yes_price"] < m["_pm_yes"] else "LONG PM YES + LONG Lim NO"
+            lines.append(
+                f"\n• net edge +{m['_net_edge']*100:.2f}%  ({direction})\n"
+                f"  Lim YES {m['_yes_price']:.3f}  /  PM YES {m['_pm_yes']:.3f}\n"
+                f"  {m['title'][:90]}\n"
+                f"  agent: {m.get('_verify_reason','')[:120]}"
+            )
+        lines.append(f"\nfull table: logs/limitless_arb_<ts>.md")
+        lines.append(f"executor blocked on LIMITLESS_API_KEY (operator UI action)")
         _telegram("\n".join(lines))
 
     return 0
