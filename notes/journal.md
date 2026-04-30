@@ -489,3 +489,22 @@ Operator went offline with wide latitude: continue Tier-2 brainstorm picks, inve
 **Risk-rationale for overnight autonomy.** Total new at-risk capital deployed tonight: $10 of Ostium collateral on hedged pair-trade (max loss = $10 if both legs hit SL, ~6% of total $170 bankroll). Within sizing rules. No new Polymarket positions, no PLUME entry, no Limitless arb crossings (those wait for operator review).
 
 **Lesson for the cron prompt that the Limitless scanner exposed**: Polymarket gamma-api's `?q=` search parameter is silently broken (returns default page regardless of query); future scripts that need to search Polymarket markets must paginate via `offset` and filter client-side, not trust `q`.
+
+---
+
+## 2026-04-30 ~02:00 UTC — Cron tick (daily): hold all, no peer, daily Telegram sent
+
+**State.** Polymarket sleeve $66.09 MTM (+$1.15 / +1.76% on $64.95 cost) — best mover **S1 Iran-peace NO 0.67→0.765 = +14.18% on cost** (the standout single-position gain to date). Aliens NO +1.86%. Trump-out NO -0.59%. Iran-regime NO -0.62%. Others within ±0.4%. Crypto sleeve idle USDC unchanged ($55 Arb / $30 Base) plus 3 Ostium positions (XAU long +$0.20, SPX long +$0.02, NDX short -$0.08) = $14.81 MTM on $14.67 cost. Total project position MTM $80.90, +$1.28 unrealized.
+
+**News scan** (recent watcher alerts since yesterday's tick): two Hormuz-related Tier-2 alerts (CBS demining-robots piece, Al Jazeera "Trump urges Tehran to 'just give up' as oil prices surge") and one Atletico-Arsenal CL draw. Trump's escalating rhetoric on Iran is *thesis-confirming* for the Iran cluster (Iran-peace NO, Iran-regime NO, Pahlavi NO) — no peace and no regime collapse fits "war continues". Atletico CL draw doesn't affect S3 La-Liga-top-4. No Tier-1 alerts; no emergency-protocol triggered.
+
+**Prospecting.** Re-ran `discover_markets.py`. New candidates surfaced:
+- "Strait of Hormuz traffic returns to normal by May 15?" YES 0.085 (= 91.5% NO). 14.9 days. Direct correlation with S1 Iran-peace NO. **Skipped** — would push Iran cluster past 30% cap.
+- "Will there be no change in Fed rates after the June 2026 meeting?" YES 0.955. 47.9 days. Considered as macro-carry; passed on it after a skeptic check: at 95.5% the market already reflects the small chance of a 25bps cut (SEP shows median 1 cut in 2026), and my subjective 99% confidence is wishful. The 4.5pp gap I'd be claiming as edge is probably noise. **Skipped.**
+- 24h-BTC level markets (multiple): fee-disqualified per the algo audit. Skip.
+
+**Decision: hold all 12 positions. No new entries. No close.**
+
+**Daily Telegram sent** (msg id 72). Weekly P&L report not due until Saturday 2026-05-02.
+
+**Daemons all healthy** (heartbeat last poll OK; news_watcher logs growing; telegram_listener PID alive). No peer cron tick detected — this fork is the only active claude -p.
