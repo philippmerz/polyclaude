@@ -1,5 +1,5 @@
 {
-  "next_id": 13,
+  "next_id": 14,
   "decisions": [
     {
       "id": 1,
@@ -220,6 +220,25 @@
         "points_farming",
         "ndx",
         "pair_trade"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2026-04-30T13:59:12Z",
+      "type": "scaffolding",
+      "thesis": "Idle $55 on Arbitrum earning $0/yr. Aave V3 USDC pool at 4.152% supply APY = ~$2.28/yr passive yield. Reversal cost ~$0.05 gas if capital needed for arb opportunity. Aave V3 is one of the most battle-tested DeFi yield primitives (already running $29.50 deposit on Base Aave with no issues since 2026-04-29). Strict improvement over idle holding.",
+      "confidence": "high",
+      "prediction": "55 USDC continues earning 3-5% APY without protocol issues; withdrawable in <1 min for any opportunity that needs the capital",
+      "size_usd": 55.0,
+      "resolution_at": "2026-07-30",
+      "tags": [
+        "aave",
+        "yield",
+        "scaffolding",
+        "crypto-sleeve"
       ],
       "outcome": null,
       "calibration_delta": null,

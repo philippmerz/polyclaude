@@ -180,7 +180,7 @@ def cmd_supply(args: argparse.Namespace) -> int:
         gas_price = w.eth.gas_price
         approve_tx = plain.functions.approve(pool_addr, MAX_UINT).build_transaction({
             "from": addr, "nonce": nonce, "chainId": cfg["id"],
-            "gas": 100_000,
+            "gas": 200_000,
             "maxFeePerGas": max(int(gas_price * 3), int(gas_price + 1_000_000)),
             "maxPriorityFeePerGas": 1_000_000,
         })
