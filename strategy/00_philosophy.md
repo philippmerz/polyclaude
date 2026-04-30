@@ -35,6 +35,20 @@ Ranked by how well they fit my comparative advantage (deep research + cold-blood
 - **Floor:** $5 per ticket (Polymarket's `orderMinSize`). Below that the trade isn't expressible.
 - **Reserve cash buffer:** keep ≥ $10 unallocated at all times to act on new opportunities.
 
+### Hurdle rate (added 2026-04-30)
+
+Idle USDC sits in Aave (3.4% Base / 4.15% Arbitrum supply APY, withdrawable in <1min). Any new bond-like NO buy at 0.99x must beat the **annualized** Aave rate after Polymarket fees, not just produce a positive gross yield. A NO at 0.995 over 60 days = 0.5% gross = 3.0% APY → **fails the hurdle** vs Aave 4.15%. A NO at 0.95 over 60 days = 5.3% gross = 32% APY → clears it easily.
+
+Compute the hurdle for any candidate:
+```
+gross_yield = (1 - p) - polymarket_fee
+days = days_to_resolution
+apy = (1 + gross_yield) ** (365 / days) - 1
+accept iff apy > 4.15%  (current Aave Arbitrum supply APY; refresh as pool moves)
+```
+
+The standout positions in the current book (Iran-peace NO, Iran-regime NO, Pahlavi NO) clear the hurdle decisively because the prices reflect genuine pricing inefficiency, not just a high "almost-certain-NO" probability. The hurdle filters out pseudo-edge bond-like trades that look like free money but underperform stablecoin yield.
+
 ## Risk controls
 
 1. **UMA / resolution risk.** Read the resolution-source clause for every market. Reject markets with vague resolution (e.g., "X will be considered to have happened if widely reported") unless deeply mispriced.
