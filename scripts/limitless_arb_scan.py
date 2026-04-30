@@ -446,6 +446,8 @@ def main() -> int:
         "verified_other": [],
     }
     for m in matched:
+        chainlink_enabled = bool((m.get("metadata") or {})
+                                  .get("chainlinkDataStream", {}).get("enabled"))
         record = {
             "lim_id": m["id"],
             "lim_title": m["title"],
@@ -453,6 +455,8 @@ def main() -> int:
             "lim_yes_token": (m.get("tokens") or {}).get("yes"),
             "lim_no_token": (m.get("tokens") or {}).get("no"),
             "lim_condition_id": m.get("conditionId"),
+            "lim_chainlink_enabled": chainlink_enabled,
+            "lim_categories": m.get("categories") or [],
             "pm_question": m.get("_pm_question"),
             "pm_slug": m.get("_pm_slug"),
             "pm_yes_price": m["_pm_yes"],
@@ -479,25 +483,37 @@ def main() -> int:
         print(f"{m['_yes_price']:>6.3f} {m['_pm_yes']:>6.3f} {m['_spread']*100:>+7.2f}% "
               f"{m['_breakeven']*100:>9.2f}% {m['_net_edge']*100:>+8.2f}%  {m['title'][:80]}")
 
-    # Notify only on agent-verified IDENTICAL candidates above the edge threshold —
-    # those are the autonomous-execution-eligible ones. Visibility-only for
-    # SIMILAR/UNCERTAIN/DIFFERENT (logged in the markdown but not telegrammed).
+    # Notify only on candidates that are (a) agent-verified IDENTICAL,
+    # (b) above the edge threshold, AND (c) have mechanical resolution
+    # (Limitless Chainlink Data Stream). Subjective-resolution markets carry
+    # outsized resolution-language divergence risk that's not worth the small
+    # absolute edge at our size — they get logged for visibility but not
+    # telegrammed.
     identical = [m for m in matched
                  if m.get("_verify_verdict") == "IDENTICAL"
                  and (m.get("_net_edge") or 0) >= args.threshold_edge]
-    print(f"\n{len(identical)} IDENTICAL candidates with net edge >= {args.threshold_edge*100:.1f}%")
-    if identical and args.notify:
-        lines = [f"limitless arb: {len(identical)} IDENTICAL candidate(s) above {args.threshold_edge*100:.1f}% net edge"]
-        for m in identical[:5]:
+    mechanical = [m for m in identical
+                  if (m.get("metadata") or {}).get("chainlinkDataStream", {}).get("enabled")]
+    subjective = [m for m in identical if m not in mechanical]
+    print(f"\n{len(identical)} IDENTICAL above net edge >= {args.threshold_edge*100:.1f}% — "
+          f"{len(mechanical)} mechanical resolution, {len(subjective)} subjective")
+    if subjective:
+        print("subjective-resolution candidates (logged, not alerted):")
+        for m in subjective[:5]:
+            print(f"  +{m['_net_edge']*100:.2f}%  {m['title'][:80]}")
+    if mechanical and args.notify:
+        lines = [f"limitless arb: {len(mechanical)} mechanical-resolution IDENTICAL "
+                 f"candidate(s) above {args.threshold_edge*100:.1f}% net edge"]
+        for m in mechanical[:5]:
             direction = "LONG Lim YES + LONG PM NO" if m["_yes_price"] < m["_pm_yes"] else "LONG PM YES + LONG Lim NO"
             lines.append(
-                f"\n• net edge +{m['_net_edge']*100:.2f}%  ({direction})\n"
+                f"\n• midpoint net edge +{m['_net_edge']*100:.2f}%  ({direction})\n"
                 f"  Lim YES {m['_yes_price']:.3f}  /  PM YES {m['_pm_yes']:.3f}\n"
                 f"  {m['title'][:90]}\n"
-                f"  agent: {m.get('_verify_reason','')[:120]}"
+                f"  agent: {m.get('_verify_reason','')[:120]}\n"
+                f"  manual review required: midpoint estimate; check real orderbook depth before trading"
             )
         lines.append(f"\nfull table: logs/limitless_arb_<ts>.md")
-        lines.append(f"executor blocked on LIMITLESS_API_KEY (operator UI action)")
         _telegram("\n".join(lines))
 
     return 0
