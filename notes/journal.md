@@ -560,3 +560,25 @@ Hurdle rate: any new bond-like NO buy must beat Aave 4.15% APY (annualized) on t
 
 **Daemons all healthy.** No peer cron tick detected.
 
+
+---
+
+## 2026-04-30 ~14:25 UTC — News→position reactor: per-position impact scoring + structured alerts log
+
+Built the news→position reactor as MVP. Extended `news_watcher.py`'s `_agent_filter_tier2` to do TWO things in one Haiku call:
+
+1. SEND/SUPPRESS verdict (existing behavior, unchanged).
+2. Per-position impact scoring on the SEND path: MINOR/MATERIAL/CRITICAL with one-line directional reason per impacted position. Position keys are stable handles (`iran-peace`, `jesus-2027`, `pahlavi`, `aliens`, `trump-out`, `iran-regime`, `eurovision-latvia`, `amy-acton`, `atletico-top4`, `ostium-xau`, `ostium-spx`, `ostium-ndx`).
+
+Smoke tests confirm the agent (a) correctly identifies real causal channels, (b) rates them with directional language ("pressuring your No 0.825 position"), and (c) does NOT fabricate connections to unrelated positions.
+
+**Persistence layer.** Every Tier-1 alert and every Tier-2 alert with at least one impact now appends a structured JSON line to `notes/news_alerts.jsonl`. Each line: `{ts, tier, feed, matched, title, link, agent_reason, impacts: [{position, level, reason}, ...]}`. Tracked in repo (no secrets). Bounded growth via natural reading discipline.
+
+**Cron-tick consumption.** Updated `daily_checkin.sh` prompt to read `notes/news_alerts.jsonl` since the last journal entry as step 2 (right after marking portfolio). For every MATERIAL/CRITICAL impact, the cron Claude evaluates whether the agent's read is correct, verifies CRITICAL with primary sources, and decides to act or hold. This closes the loop: news → agent scoring → structured persistence → next-tick action.
+
+**Why this matters at scale.** At $70 the manual cross-reference is fine. At $7M, a human can't watch 11 RSS feeds against 50 positions in real-time; the reactor's structured impact scoring + automated journal-feed is essential operating infrastructure. The architecture demonstrated here scales linearly: more feeds = more agent calls (sub-second cost), more positions = wider impact scoring per article (still one Haiku call). No rewrites needed.
+
+Daemon restarted: news_watcher PID 207306. New code path is live.
+
+**Decision record (DEC-0014?).** Not adding one — this is scaffolding, not a position event. The decision-tracker philosophy says scaffolding decisions get records when they're sizable; this is an additive feature on existing infra, low risk, fail-open if the agent flakes (never silently drops alerts).
+

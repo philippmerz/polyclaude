@@ -43,9 +43,25 @@ CONFIG_PATH = _SCRIPT_DIR / "news_watcher_config.json"
 STATE_PATH = _secrets.path("POLYCLAUDE_NEWS_STATE")
 PID_PATH = _secrets.path("POLYCLAUDE_NEWS_PID")
 LOG_PATH = _REPO_ROOT / "logs" / "news_watcher.log"
+ALERTS_LOG_PATH = _REPO_ROOT / "notes" / "news_alerts.jsonl"
 TELEGRAM_TOKEN_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_TOKEN")
 TELEGRAM_STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
 CRON_SCRIPT = _SCRIPT_DIR / "daily_checkin.sh"
+
+
+def _append_news_alert(record: dict) -> None:
+    """Append one structured alert line to notes/news_alerts.jsonl.
+
+    Consumed by the cron tick: each tick reads recent records and decides
+    whether to act on MATERIAL/CRITICAL impacts. Bounded growth: kept
+    reasonable by manual rotation; check-in script drops processed entries.
+    """
+    try:
+        ALERTS_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with ALERTS_LOG_PATH.open("a") as f:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    except Exception as e:
+        print(f"[watcher] alerts-log append failed: {_secrets.scrub(str(e))}", flush=True)
 
 
 def load_config() -> dict:
@@ -140,26 +156,39 @@ def _positions_summary_blocking() -> str:
     return text
 
 
-def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str) -> tuple[bool, str]:
-    """Ask claude -p whether a Tier-2 match should reach Telegram.
+def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str) -> tuple[bool, str, list[dict]]:
+    """Ask claude -p whether a Tier-2 match should reach Telegram + per-position impact.
 
-    Returns (should_send, one_line_reason). On agent error/timeout/unparseable
-    output, returns (True, "agent unavailable: <err>") — fail-OPEN so the
-    operator sees raw alerts rather than silent drops.
+    Returns (should_send, one_line_reason, per_position_impacts).
+    Each impact is {"position": str, "level": NONE|MINOR|MATERIAL|CRITICAL, "reason": str}.
+    On agent error/timeout/unparseable output, returns (True, "agent unavailable: ...", [])
+    — fail-OPEN so the operator sees raw alerts rather than silent drops.
     """
     pos = _positions_summary_blocking()
     body = (summary or "")[:600].replace("\n", " ").strip()
     prompt = (
-        "You filter news for polyclaude (autonomous trading project). "
-        "Open positions:\n\n"
+        "You filter news for polyclaude (autonomous trading project) AND assess "
+        "per-position impact. Open positions:\n\n"
         f"{pos}\n\n"
         f"News article (matched keyword \"{kw}\", source {feed_name}):\n"
         f"Title: {title}\n"
         f"Summary: {body}\n\n"
-        "Decide whether this article should reach the operator's Telegram:\n"
-        "- SEND = the article moves a probability the operator cares about, in either direction (state change, named officials taking action, hard numbers, named-entity events).\n"
-        "- SUPPRESS = recycled noise that doesn't update probabilities (rephrasing of existing facts, opinion pieces about ongoing events, generic topic mentions).\n\n"
-        "Respond on ONE line, exactly: SEND: <one-line why> OR SUPPRESS: <one-line why>"
+        "FIRST LINE: SEND or SUPPRESS verdict.\n"
+        "  - SEND = the article moves a probability the operator cares about (state change, named officials taking action, hard numbers, named-entity events).\n"
+        "  - SUPPRESS = recycled noise (rephrasing of existing facts, opinion pieces, generic topic mentions).\n\n"
+        "FOLLOWING LINES (only if SEND, only for IMPACTED positions): one line per "
+        "materially-affected position, in this exact format:\n"
+        "  IMPACT: <short-position-key>: <MINOR|MATERIAL|CRITICAL>: <one-line directional reason>\n"
+        "  - MINOR = thesis still holds; tiny mark-to-market drift expected.\n"
+        "  - MATERIAL = thesis pressure or confirmation; consider rebalance/scale on next tick.\n"
+        "  - CRITICAL = thesis-invalidating or thesis-resolving; urgent re-evaluation.\n"
+        "Use position keys like 'iran-peace', 'jesus-2027', 'trump-out', 'aliens', "
+        "'pahlavi', 'iran-regime', 'eurovision-latvia', 'amy-acton', 'atletico-top4', "
+        "'ostium-xau', 'ostium-spx', 'ostium-ndx'. Skip positions where the news has "
+        "no causal channel — don't fabricate connections.\n\n"
+        "Respond:\n"
+        "LINE 1: SEND: <why> OR SUPPRESS: <why>\n"
+        "LINE 2+: IMPACT lines (only if SEND and positions are actually impacted)"
     )
 
     try:
@@ -167,23 +196,43 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str) -> tu
             ["claude", "-p", "--model", "haiku", prompt],
             capture_output=True,
             text=True,
-            timeout=45,
+            timeout=60,
             cwd="/tmp",  # avoid loading polyclaude project context (CLAUDE.md, tools)
         )
         out = (r.stdout or "").strip()
-        first_line = out.splitlines()[0] if out else ""
+        lines = [l.strip() for l in out.splitlines() if l.strip()]
+        first_line = lines[0] if lines else ""
     except (subprocess.TimeoutExpired, subprocess.CalledProcessError, FileNotFoundError) as e:
-        return (True, f"agent unavailable: {_secrets.scrub(str(e))[:120]}")
+        return (True, f"agent unavailable: {_secrets.scrub(str(e))[:120]}", [])
+
+    impacts: list[dict] = []
+    for line in lines[1:]:
+        # IMPACT: <key>: <LEVEL>: <reason>
+        if not line.upper().startswith("IMPACT:"):
+            continue
+        try:
+            _, rest = line.split(":", 1)
+            parts = [p.strip() for p in rest.split(":", 2)]
+            if len(parts) < 3:
+                continue
+            key, level, reason = parts[0], parts[1].upper(), parts[2]
+            if level not in ("MINOR", "MATERIAL", "CRITICAL", "NONE"):
+                continue
+            if level == "NONE":
+                continue
+            impacts.append({"position": key, "level": level, "reason": reason[:240]})
+        except Exception:
+            continue
 
     upper = first_line.upper()
     if upper.startswith("SEND"):
         reason = first_line[4:].lstrip(": ").strip() or "(no reason)"
-        return (True, reason)
+        return (True, reason, impacts)
     if upper.startswith("SUPPRESS"):
         reason = first_line[8:].lstrip(": ").strip() or "(no reason)"
-        return (False, reason)
+        return (False, reason, [])
     # Couldn't parse — fail open
-    return (True, f"agent unparseable: {first_line[:120]}")
+    return (True, f"agent unparseable: {first_line[:120]}", impacts)
 
 
 def entry_id(entry) -> str:
@@ -276,8 +325,9 @@ def poll_once(config: dict, state: dict) -> int:
             # precision). Tier-1 always sends — those are auto-cron-firing,
             # we never want to suppress a regime-changing event.
             agent_reason = None
+            impacts: list[dict] = []
             if tier == 2:
-                send, agent_reason = _agent_filter_tier2(feed["name"], kw, title, summary)
+                send, agent_reason, impacts = _agent_filter_tier2(feed["name"], kw, title, summary)
                 if not send:
                     print(f"[watcher] suppressed tier2 kw={kw!r} feed={feed['name']} "
                           f"reason={agent_reason[:120]!r} title={title[:80]!r}", flush=True)
@@ -285,14 +335,36 @@ def poll_once(config: dict, state: dict) -> int:
 
             prefix = "[URGENT]" if tier == 1 else "[NEWS]"
             why_line = f"\nwhy: {agent_reason}\n" if agent_reason else "\n"
+            # Build impact summary (highest-level per position; sorted CRITICAL > MATERIAL > MINOR)
+            impact_block = ""
+            if impacts:
+                level_order = {"CRITICAL": 0, "MATERIAL": 1, "MINOR": 2}
+                sorted_impacts = sorted(impacts, key=lambda i: level_order.get(i["level"], 9))
+                impact_lines = "\n".join(
+                    f"  · {i['position']} [{i['level']}]: {i['reason']}" for i in sorted_impacts
+                )
+                impact_block = f"\nposition impact:\n{impact_lines}\n"
             msg = (
                 f"{prefix} {feed['name']}\n"
                 f"matched: {kw}"
                 f"{why_line}"
+                f"{impact_block}"
                 f"\n{title}\n"
                 f"\n{link}"
             )
             telegram_send(msg)
+            # Persist to structured alerts log for next cron tick to consume
+            if tier == 1 or impacts:
+                _append_news_alert({
+                    "ts": dt.datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                    "tier": tier,
+                    "feed": feed["name"],
+                    "matched": kw,
+                    "title": title,
+                    "link": link,
+                    "agent_reason": agent_reason,
+                    "impacts": impacts,
+                })
             print(f"[watcher] alert tier{tier} kw={kw!r} feed={feed['name']} title={title[:80]!r}", flush=True)
             new_alerts += 1
             if tier == 1:
