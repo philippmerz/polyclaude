@@ -508,3 +508,28 @@ Operator went offline with wide latitude: continue Tier-2 brainstorm picks, inve
 **Daily Telegram sent** (msg id 72). Weekly P&L report not due until Saturday 2026-05-02.
 
 **Daemons all healthy** (heartbeat last poll OK; news_watcher logs growing; telegram_listener PID alive). No peer cron tick detected — this fork is the only active claude -p.
+
+---
+
+## 2026-04-30 ~13:55 UTC — Polymarket consistency scanner: shipped + DEAD-ENDED via live-quote validation
+
+Built `scripts/polymarket_consistency_scan.py` to scan Polymarket negRisk multi-outcome events for sum(YES) deviation from 1.0. Two directions handled with explicit asymmetry:
+- `sum(YES) > 1` → buy-all-NO is a genuine free arb (exactly one wins, n-1 NOs pay $1)
+- `sum(YES) < 1` → buy-all-YES is a directional bet against unlisted/missing-mass outcomes (NOT free arb)
+
+First-pass run on 5,000 active markets, 1,019 events: 197 sum>1 candidates, 181 sum<1 candidates above 0.5% gross deviation. Top candidates by displayed midpoint showed +25-47% net edge. Looked exciting.
+
+**Then I checked one orderbook.**
+
+"Eurozone Annual Inflation 2026" — 9 buckets, displayed sum(YES) = 2.98. Pulled live CLOB orderbooks for every NO token. Result: every NO ask sat at $0.99 (stub orders, top of book), and every YES bid sat at $0.01 (stub bids). The "displayed midpoint" of YES≈0.46 was a calculated mean between two stale stubs with NO live counter-side. Sum of NO asks = 8.89; payout if exactly one YES wins = 8.00 → real edge = **−$0.89 (LOSS)**. Same lesson as the Limitless arb story.
+
+**Hardened the scanner with a pass-2 live-quote validator.** For any candidate above 5% gross midpoint deviation, fetch CLOB `/book?token_id=...` for every member and walk top-of-book asks for the side we'd buy (5-share target). Re-run result: **0 of 125 live-validated candidates have positive net edge**. Every midpoint-flagged "free arb" evaporates under real CLOB asks.
+
+This is a definitive negative result: there is no free arb on Polymarket negRisk consistency violations at executable prices in current market state. The scanner is now valuable as a *defensive* tool — it warns me away from phantom-arb temptation rather than feeding me trades.
+
+**Saved as feedback memory** (`feedback_polymarket_midpoints_unreliable.md`): never trust gamma-api outcomePrices midpoints alone — always walk live CLOB before deploying capital on a Polymarket-arb signal.
+
+**Telegram filter:** Now gates on `live_net_edge_frac > threshold`, not midpoint-derived edge. Should produce ≈0 alerts in normal market conditions, which is correct behavior.
+
+**No capital deployed.** No decision record needed (scanner is scaffolding, not a position-opening event).
+
