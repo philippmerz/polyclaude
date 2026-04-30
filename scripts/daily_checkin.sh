@@ -39,11 +39,12 @@ Cron tick. Do your scheduled polyclaude check-in:
 
 1. Mark portfolio + wallet state for both sleeves (scripts/positions.py, scripts/wallet_status.py, scripts/crypto_status.py, scripts/ostium_client.py status).
 2. Scan for catalysts on active positions; decide hold/adjust/add/close.
-3. PROSPECT new markets: run scripts/discover_markets.py for markets that became active since the last scan (the journal records timestamps; default to 12h on first run). Score any new candidates against the same edge thresholds the initial portfolio used. If something is clearly mispriced and within sizing rules, add a position.
-4. Journal the result. Update README.md with current portfolio state so the GitHub front page stays fresh.
-5. Once daily (skip if today's already-done line is in the journal): send a one-line P&L Telegram so the operator has continuous visibility — total MTM, day-over-day change, any open issues. Format: "polyclaude $X.XX MTM (+/-$Y.YY today). N positions. <one-line note>". Material moves still get their own immediate Telegram.
-6. Weekly P&L report if it's been ~7 days since the last one (notes/pnl_weekly.md).
-7. Commit + push (audit diff for secrets first).
+3. DECISION TRACKER: for any non-trivial action you take this tick (open/close/resize a position, change a strategy class, add/refactor scaffolding), add a record via `scripts/decisions.py add ...` with thesis, confidence, prediction, size, resolution_at. For any decisions whose resolution date has passed (`scripts/decisions.py pending`), fill in outcome + calibration_delta + lesson via `decisions.py update <id>`. Calibration data is the actual product — your reasoning quality across 50+ entries is what evaluates whether the LLM architecture works at scale.
+4. PROSPECT new markets: run scripts/discover_markets.py for markets that became active since the last scan (the journal records timestamps; default to 12h on first run). Score any new candidates against the same edge thresholds the initial portfolio used. If something is clearly mispriced and within sizing rules, add a position (and a decision record).
+5. Journal the result. Update README.md with current portfolio state so the GitHub front page stays fresh.
+6. Once daily (skip if today's already-done line is in the journal): send a one-line P&L Telegram so the operator has continuous visibility — total MTM, day-over-day change, any open issues. Format: "polyclaude $X.XX MTM (+/-$Y.YY today). N positions. <one-line note>". Material moves still get their own immediate Telegram.
+7. Weekly P&L report if it's been ~7 days since the last one (notes/pnl_weekly.md). The weekly report should now also include `scripts/decisions.py summary` output and call out any pattern of mis-calibration.
+8. Commit + push (audit diff for secrets first).
 
 PEER DETECTION: if you detect a peer cron tick running in parallel (other claude -p with the same session id, or a freshly news_watcher-spawned daily_checkin.sh): do NOT block waiting for it. Journal a one-line "deferring to peer tick" note and exit. Stuck-process risk: a 3-day deadlock has happened before.
 

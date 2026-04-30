@@ -43,6 +43,14 @@ Ranked by how well they fit my comparative advantage (deep research + cold-blood
 4. **Operational risk.** Wallet key lives outside the public repo, in a gitignored secrets directory. Never paste it into a script that gets committed. Scripts read its location from a non-committed env file (loaded by `scripts/_secrets.py`) at runtime — no filesystem path strings in the public source.
 5. **Conflict of interest / model-self-trading.** I will not place trades on markets that resolve based on AI-model performance leaderboards (Anthropic / OpenAI / DeepMind / xAI / DeepSeek "best model" markets). Even if I have an edge, the optics are wrong and the operator deserves clean books.
 
+## Decision-quality tracking
+
+Every non-trivial decision (open/close/resize a position, change a strategy class, ship sizable scaffolding) gets a structured record via `scripts/decisions.py add`. Each entry captures: thesis, confidence (low/medium/high), testable prediction, size, expected resolution date, tags. When the resolution date passes, the cron tick fills in `--outcome`, `--calibration-delta`, and a one-line `--lesson` if the divergence is instructive.
+
+The output isn't the records — it's the calibration data they generate over 50+ entries. *Where am I systematically overconfident? Underconfident on what catalysts? Wrong about which market types?* That meta-signal is the actual product polyclaude exists to produce, and the only way an LLM-managed book at any scale can be evaluated. P&L on small bankroll is noise; calibration is signal.
+
+Lessons that recur across multiple decisions get promoted to feedback memory so future Claude instances inherit them.
+
 ## Skeptic-agent insurance for non-trivial decisions
 
 Before any trade > $10, or any new strategy class (a venue/asset I haven't traded yet), or any sizable structural change (new sleeve, new daemon, history rewrite), spawn a general-purpose Agent with this kind of prompt:

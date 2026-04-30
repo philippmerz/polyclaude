@@ -1,0 +1,229 @@
+{
+  "next_id": 13,
+  "decisions": [
+    {
+      "id": 1,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: Jesus returns by 2027 NO. Tail-fade \u2014 second-coming is mechanically vanishing-probability over 8mo, but Polymarket re-prices on news (Pope statements, religious holidays). 3.95% expected yield over 8mo.",
+      "confidence": "high",
+      "prediction": "Resolves NO. Hold to maturity. Mark-to-market drift < 5% absolute over hold period unless major religious event; no position adjustment expected.",
+      "size_usd": 10.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "tail_fade",
+        "jesus"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: Pahlavi leads Iran 2026 NO at 0.91. Iran-cluster trade. Pahlavi has no on-ground organization or coup pathway despite Iranian regime being weak. 10.1% expected yield.",
+      "confidence": "high",
+      "prediction": "Resolves NO. Iran regime change is plausible (cluster has real probability mass) but not via Pahlavi specifically.",
+      "size_usd": 10.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "iran_cluster",
+        "pahlavi"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: US confirms aliens 2027 NO at 0.80. Conditional on AARO/Pentagon NOT making a definitive disclosure statement before resolution. Recent UAP hearings have surfaced anecdotes but not confirmation.",
+      "confidence": "high",
+      "prediction": "Resolves NO. Some risk of partial-disclosure events that move price 10-20% but not to YES.",
+      "size_usd": 9.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "aliens",
+        "uap"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: Trump out as President before 2027 NO at 0.84. 25A/impeachment require structural blockers (R-Senate, R-Cabinet, VP cooperation) that don't currently exist. Failed assassination attempt Apr-25 already absorbed.",
+      "confidence": "medium",
+      "prediction": "Resolves NO. Real but bounded mortality + assassination tail (~2%); 25A path is closed at current Senate composition.",
+      "size_usd": 7.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "trump_out"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: Iranian regime falls before 2027 NO at 0.80. Cluster correlated with Pahlavi NO. Despite war + protests, regime has held; no credible succession plan visible. 25% yield.",
+      "confidence": "medium",
+      "prediction": "Resolves NO. Cluster risk: if regime DOES fall, this and Pahlavi NO both lose simultaneously \u2014 sized within 30% cluster cap.",
+      "size_usd": 7.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "iran_cluster",
+        "regime_fall"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Short-sleeve: US-Iran permanent peace deal by May 31 NO at 0.67. Best EV on the board \u2014 market pricing 33% conditional probability of a permanent treaty in 5 weeks during an active blockade is structurally implausible. Decomposition arbitrage on resolution-language strictness.",
+      "confidence": "high",
+      "prediction": "Resolves NO. Even if a ceasefire/framework deal happens, the resolution criterion 'permanent' is rarely met in 5w during active conflict. Hold to May 31.",
+      "size_usd": 7.0,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "short_sleeve",
+        "iran_cluster",
+        "peace_deal",
+        "best_ev"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 7,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Short-sleeve: Latvia top 10 Eurovision NO at 0.83. Latvia hasn't been in top 10 since 2005; structural floor in Eurovision political-bloc voting. Eurovision-tail mispricing pattern.",
+      "confidence": "high",
+      "prediction": "Resolves NO with ~92% confidence. Eurovision-tail markets historically over-price small-country top-10 outcomes.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-16",
+      "tags": [
+        "short_sleeve",
+        "eurovision",
+        "tail_fade"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 8,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Short-sleeve: Atletico Madrid top-4 La Liga 2026 YES at 0.99. Bond-like carry trade \u2014 Atletico is +14 points clear of 5th with 4 matches left. 1% gross yield over 30d at near-zero risk.",
+      "confidence": "high",
+      "prediction": "Resolves YES with > 99% probability. Outcome ladder requires Atletico to lose 4 in a row + competing teams to win out \u2014 P < 0.01.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-30",
+      "tags": [
+        "short_sleeve",
+        "sports",
+        "carry"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 9,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Short-sleeve: Amy Acton wins Ohio Dem Gov primary YES at 0.99. She's the consensus Dem candidate with no serious challenger filed. 1% gross yield over 10d.",
+      "confidence": "high",
+      "prediction": "Resolves YES with > 99%. Resolution date is May 5 primary.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-05",
+      "tags": [
+        "short_sleeve",
+        "politics",
+        "carry",
+        "primary"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 10,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Ostium gold long, 5x leverage,  collateral. Pivoted from stuck ETH-long after Stork crypto feed was congested. Volume rotation for points-farming, not directional alpha.",
+      "confidence": "medium",
+      "prediction": "Held to \u00b18% TP/SL or 30 days, whichever first. Realized P&L expected near 0; primary value is points-farming volume.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-29",
+      "tags": [
+        "ostium",
+        "points_farming",
+        "xau"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2026-04-30T13:26:22Z",
+      "type": "open_position",
+      "thesis": "Ostium SPX long 5x  collateral. Pair-trade with NDX short to be roughly delta-neutral on US-equity-vs-tech dispersion. Volume rotation for points.",
+      "confidence": "medium",
+      "prediction": "Held to \u00b18% TP/SL or 30 days. Realized P&L on the pair near 0 if SPX/NDX correlation holds; positive if SPX outperforms tech (RWA narrative).",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-29",
+      "tags": [
+        "ostium",
+        "points_farming",
+        "spx",
+        "pair_trade"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2026-04-30T13:26:22Z",
+      "type": "open_position",
+      "thesis": "Ostium NDX short 5x  collateral. Pair-trade short leg vs SPX long. Volume for points; small directional bet against US-tech dominance continuing in May.",
+      "confidence": "medium",
+      "prediction": "Held to \u00b18% TP/SL or 30 days. Same horizon as paired SPX long.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-29",
+      "tags": [
+        "ostium",
+        "points_farming",
+        "ndx",
+        "pair_trade"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    }
+  ]
+}

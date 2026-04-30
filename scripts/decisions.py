@@ -1,0 +1,258 @@
+"""Decision-quality tracker for polyclaude.
+
+Records every non-trivial decision (trade open/close, strategy-class change,
+scaffolding choice) as a structured entry. Outcomes get filled in
+retrospectively. Aggregated calibration data tells us where reasoning is
+weak — overconfident on which market types, underconfident on which
+catalysts, etc.
+
+This is the foundation for evaluating "can an LLM architecture manage a
+trading book". P&L is noise on small samples; calibration is the actual
+signal.
+
+Storage: `notes/decisions.json` (structured, machine-readable). The cron
+tick reads this file to (a) propose retrospective updates on resolved
+decisions and (b) flag patterns of mis-calibration in the weekly report.
+
+CLI:
+    python scripts/decisions.py add --type open_position --thesis "..." --confidence high --prediction "..." --size 7
+    python scripts/decisions.py list [--unresolved] [--type open_position]
+    python scripts/decisions.py update <id> --outcome "..." --calibration-delta "..." [--lesson "..."]
+    python scripts/decisions.py summary
+    python scripts/decisions.py pending  # list decisions whose resolution date has passed without an outcome
+"""
+
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import json
+import sys
+from pathlib import Path
+
+import _paths as _secrets
+
+_secrets.install_scrubbing_excepthook()
+
+
+_SCRIPT_DIR = Path(__file__).resolve().parent
+_REPO_ROOT = _SCRIPT_DIR.parent
+DECISIONS_PATH = _REPO_ROOT / "notes" / "decisions.json"
+
+
+VALID_TYPES = {
+    "open_position",     # opening any new position (Polymarket/Ostium/etc.)
+    "close_position",    # closing an existing position
+    "size_change",       # adjusting an existing position's size
+    "strategy_change",   # entering / exiting a strategy class (e.g., "started Ostium")
+    "scaffolding",       # building a system capability (a script, an audit, a process change)
+    "skip",              # explicitly NOT taking an action that was considered
+}
+
+VALID_CONFIDENCE = {"low", "medium", "high"}
+
+
+def _load() -> dict:
+    if not DECISIONS_PATH.exists():
+        return {"next_id": 1, "decisions": []}
+    return json.loads(DECISIONS_PATH.read_text())
+
+
+def _save(d: dict) -> None:
+    DECISIONS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    DECISIONS_PATH.write_text(json.dumps(d, indent=2, default=str))
+
+
+def _now_utc() -> str:
+    return dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def cmd_add(args: argparse.Namespace) -> int:
+    if args.type not in VALID_TYPES:
+        print(f"invalid --type {args.type!r}; valid: {sorted(VALID_TYPES)}")
+        return 2
+    if args.confidence not in VALID_CONFIDENCE:
+        print(f"invalid --confidence {args.confidence!r}; valid: {sorted(VALID_CONFIDENCE)}")
+        return 2
+
+    store = _load()
+    decision = {
+        "id": store["next_id"],
+        "timestamp": _now_utc(),
+        "type": args.type,
+        "thesis": args.thesis,
+        "confidence": args.confidence,
+        "prediction": args.prediction,
+        "size_usd": args.size,
+        "resolution_at": args.resolution_at,
+        "tags": args.tags or [],
+        "outcome": None,
+        "calibration_delta": None,
+        "lesson": None,
+    }
+    store["decisions"].append(decision)
+    store["next_id"] += 1
+    _save(store)
+    print(f"DEC-{decision['id']:04d} added")
+    return 0
+
+
+def cmd_list(args: argparse.Namespace) -> int:
+    store = _load()
+    rows = store["decisions"]
+    if args.type:
+        rows = [r for r in rows if r["type"] == args.type]
+    if args.unresolved:
+        rows = [r for r in rows if r.get("outcome") is None]
+    if args.tag:
+        rows = [r for r in rows if args.tag in (r.get("tags") or [])]
+
+    if not rows:
+        print("(none)")
+        return 0
+    for r in rows[-args.limit:]:
+        status = "PENDING" if r.get("outcome") is None else "RESOLVED"
+        print(f"DEC-{r['id']:04d}  {r['timestamp'][:10]}  {r['type']:18s}  {r['confidence']:6s}  ${r.get('size_usd') or 0:>6.2f}  [{status}]")
+        print(f"  thesis:     {r['thesis']}")
+        print(f"  prediction: {r['prediction']}")
+        if r.get("outcome"):
+            print(f"  outcome:    {r['outcome']}")
+        if r.get("calibration_delta"):
+            print(f"  delta:      {r['calibration_delta']}")
+        if r.get("lesson"):
+            print(f"  lesson:     {r['lesson']}")
+        print()
+    return 0
+
+
+def cmd_update(args: argparse.Namespace) -> int:
+    store = _load()
+    target = next((r for r in store["decisions"] if r["id"] == args.id), None)
+    if not target:
+        print(f"DEC-{args.id:04d} not found")
+        return 2
+    if args.outcome is not None:
+        target["outcome"] = args.outcome
+        target["resolved_at"] = _now_utc()
+    if args.calibration_delta is not None:
+        target["calibration_delta"] = args.calibration_delta
+    if args.lesson is not None:
+        target["lesson"] = args.lesson
+    _save(store)
+    print(f"DEC-{args.id:04d} updated")
+    return 0
+
+
+def cmd_summary(_args: argparse.Namespace) -> int:
+    store = _load()
+    rows = store["decisions"]
+    total = len(rows)
+    resolved = [r for r in rows if r.get("outcome")]
+    pending = [r for r in rows if not r.get("outcome")]
+
+    print(f"decisions total={total}  resolved={len(resolved)}  pending={len(pending)}")
+
+    # by type
+    print("\nby type:")
+    by_type: dict[str, list] = {}
+    for r in rows:
+        by_type.setdefault(r["type"], []).append(r)
+    for t, lst in sorted(by_type.items(), key=lambda x: -len(x[1])):
+        n_res = sum(1 for r in lst if r.get("outcome"))
+        print(f"  {t:18s}  total={len(lst):3d}  resolved={n_res:3d}")
+
+    # by confidence
+    print("\nby confidence:")
+    by_conf: dict[str, list] = {}
+    for r in rows:
+        by_conf.setdefault(r["confidence"], []).append(r)
+    for c in ("high", "medium", "low"):
+        lst = by_conf.get(c, [])
+        n_res = sum(1 for r in lst if r.get("outcome"))
+        print(f"  {c:6s}  total={len(lst):3d}  resolved={n_res:3d}")
+
+    # capital-weighted exposure of pending decisions
+    pending_capital = sum((r.get("size_usd") or 0) for r in pending)
+    print(f"\npending capital (sum of sizes): ${pending_capital:.2f}")
+
+    # lessons recorded
+    lessons = [r["lesson"] for r in rows if r.get("lesson")]
+    if lessons:
+        print(f"\nlessons recorded: {len(lessons)}")
+        for l in lessons[-5:]:
+            print(f"  • {l}")
+
+    return 0
+
+
+def cmd_pending(_args: argparse.Namespace) -> int:
+    """List decisions whose stated resolution date has passed without an outcome."""
+    store = _load()
+    today = dt.datetime.now(dt.timezone.utc).date()
+    overdue = []
+    for r in store["decisions"]:
+        if r.get("outcome"):
+            continue
+        rd = r.get("resolution_at")
+        if not rd:
+            continue
+        try:
+            rd_date = dt.datetime.fromisoformat(rd).date()
+        except ValueError:
+            continue
+        if rd_date < today:
+            overdue.append((r, (today - rd_date).days))
+    if not overdue:
+        print("(no overdue decisions)")
+        return 0
+    overdue.sort(key=lambda x: -x[1])
+    for r, days in overdue:
+        print(f"DEC-{r['id']:04d}  resolution_at={r.get('resolution_at')}  ({days} days overdue)")
+        print(f"  {r['thesis']}")
+    return 0
+
+
+def main() -> int:
+    p = argparse.ArgumentParser()
+    sub = p.add_subparsers(dest="cmd", required=True)
+
+    s = sub.add_parser("add", help="record a new decision")
+    s.add_argument("--type", required=True, help=f"one of: {sorted(VALID_TYPES)}")
+    s.add_argument("--thesis", required=True, help="one-paragraph rationale")
+    s.add_argument("--confidence", required=True, choices=sorted(VALID_CONFIDENCE))
+    s.add_argument("--prediction", required=True,
+                   help="testable prediction; what should be true if the thesis holds")
+    s.add_argument("--size", type=float, default=0.0,
+                   help="capital at risk in USD (0 for non-trade decisions)")
+    s.add_argument("--resolution-at", default=None,
+                   help="ISO date when outcome should be evaluable (YYYY-MM-DD)")
+    s.add_argument("--tags", nargs="*", default=None)
+    s.set_defaults(fn=cmd_add)
+
+    s = sub.add_parser("list", help="show decisions")
+    s.add_argument("--type", default=None)
+    s.add_argument("--unresolved", action="store_true")
+    s.add_argument("--tag", default=None)
+    s.add_argument("--limit", type=int, default=50)
+    s.set_defaults(fn=cmd_list)
+
+    s = sub.add_parser("update", help="fill in outcome / calibration / lesson")
+    s.add_argument("id", type=int)
+    s.add_argument("--outcome", default=None)
+    s.add_argument("--calibration-delta", default=None,
+                   help="how prediction vs outcome diverged (e.g., 'overconfident; price moved 4% not 1%')")
+    s.add_argument("--lesson", default=None)
+    s.set_defaults(fn=cmd_update)
+
+    s = sub.add_parser("summary", help="aggregate stats")
+    s.set_defaults(fn=cmd_summary)
+
+    s = sub.add_parser("pending", help="list decisions overdue for outcome")
+    s.set_defaults(fn=cmd_pending)
+
+    args = p.parse_args()
+    return args.fn(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

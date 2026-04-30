@@ -19,6 +19,10 @@ Quick map for any Claude (or human) reading the repo cold. For deeper context: [
 - `ostium_client.py` — thin CLI on `ostium-python-sdk`. Subcommands: `status`, `pairs`, `open`, `close`. Used for Arbitrum RWA-perp positions.
 - `_paths.py` — secret/state file resolution from `~/.polyclaude/env` (canonical), plus `~/secrets/limitless_creds.json`. Provides `path()` and `scrub()` + `install_scrubbing_excepthook()` so secrets never reach logs.
 
+## Decision-quality tracking
+
+- `decisions.py` — record/list/update/summarize structured decision entries. Stored in `notes/decisions.json`. Foundation for evaluating reasoning quality at scale; spec in `strategy/00_philosophy.md`.
+
 ## Status / inspection (read-only)
 
 - `wallet_status.py` — Polymarket-sleeve MATIC + USDC balance on Polygon.
