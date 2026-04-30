@@ -19,6 +19,29 @@ GAMMA = "https://gamma-api.polymarket.com"
 DATA = Path(__file__).resolve().parent.parent / "data"
 SNAP_DIR = DATA / "snapshots"
 
+POLYMARKET_FEE_RATE = 0.072  # edge-aware: fee = rate * min(p, 1-p) of notional
+# Hurdle APY: any new bond-like NO/YES buy must beat this (idle USDC in Aave).
+# Refresh periodically when Aave pool moves materially. Last update 2026-04-30.
+HURDLE_APY = 0.0415  # Aave V3 USDC supply APY on Arbitrum
+
+
+def annualized_yield_after_fee(p_buy: float, days: float) -> float | None:
+    """For a buy at price p_buy resolving in `days` days, return APY assuming
+    the buy side wins. None if degenerate (p_buy >= 1, days <= 1)."""
+    if p_buy >= 0.999 or days < 1.0:
+        return None
+    fee_fraction = POLYMARKET_FEE_RATE * min(p_buy, 1 - p_buy)
+    cost = p_buy * (1 + fee_fraction)
+    if cost >= 1.0:
+        return None
+    gross = (1.0 - cost) / cost
+    # Cap gross at 99x to avoid overflow on tiny p_buy (e.g. 0.01 → 99x gross)
+    gross = min(gross, 99.0)
+    try:
+        return (1.0 + gross) ** (365.0 / days) - 1.0
+    except OverflowError:
+        return float("inf")  # effectively infinite APY for ultra-short tail trades
+
 
 def fetch_active(limit_per_page: int = 500, max_pages: int = 8) -> list[dict[str, Any]]:
     """Fetch active+open markets sorted by 24h volume desc, paginated."""
@@ -155,14 +178,28 @@ def shortlist(
         prices = parse_outcome_prices(m)
         if prices is None:
             yes = None
+            no = None
+            apy_dominant = None
+            dominant_side = None
         else:
-            yes = prices[0]
+            yes, no = prices
+            # Bond-like trade = buy the EXPENSIVE side (= bet against the tail).
+            # If YES > 0.5 the bond-like buy is YES at p_yes; if YES < 0.5 it's
+            # NO at p_no. APY = annualized yield-to-resolution if the dominant
+            # outcome wins, after Polymarket fees.
+            if yes >= 0.5:
+                dominant_side = "YES"
+                apy_dominant = annualized_yield_after_fee(yes, ttr)
+            else:
+                dominant_side = "NO"
+                apy_dominant = annualized_yield_after_fee(no, ttr)
         rows.append({
             "id": m.get("id"),
             "slug": m.get("slug"),
             "question": m.get("question"),
             "category": category_of(m),
             "yes_price": yes,
+            "no_price": no,
             "spread": float(m.get("spread") or 0),
             "best_bid": float(m.get("bestBid") or 0),
             "best_ask": float(m.get("bestAsk") or 0),
@@ -178,6 +215,15 @@ def shortlist(
             "clob_token_ids": m.get("clobTokenIds"),
             "end_date": m.get("endDate"),
             "url": f"https://polymarket.com/market/{m.get('slug')}",
+            "dominant_side": dominant_side,
+            "apy_dominant": round(apy_dominant, 4) if apy_dominant is not None and apy_dominant != float("inf") else None,
+            # Require ≥ 7 days to resolution for hurdle filter — sub-week APYs
+            # are too volatile to compare against stablecoin yield.
+            "clears_hurdle": bool(
+                apy_dominant is not None
+                and apy_dominant > HURDLE_APY
+                and ttr >= 7
+            ),
         })
     rows.sort(key=lambda r: (-r["vol24h"], -r["liquidity"]))
     return rows[:top_n]
@@ -192,6 +238,8 @@ def main() -> None:
     ap.add_argument("--top", type=int, default=80)
     ap.add_argument("--max-pages", type=int, default=10)
     ap.add_argument("--no-snapshot", action="store_true")
+    ap.add_argument("--clears-hurdle-only", action="store_true",
+                    help="filter to candidates whose dominant-side APY beats the Aave hurdle")
     args = ap.parse_args()
 
     SNAP_DIR.mkdir(parents=True, exist_ok=True)
@@ -206,6 +254,9 @@ def main() -> None:
         horizon_days=args.horizon_days,
         top_n=args.top,
     )
+    if args.clears_hurdle_only:
+        short = [r for r in short if r.get("clears_hurdle")]
+        print(f"filtered to {len(short)} candidates clearing {HURDLE_APY*100:.2f}% APY hurdle")
 
     if not args.no_snapshot:
         ts = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -229,7 +280,10 @@ def main() -> None:
         print(f"\n=== {cat} ({sum(r['vol24h'] for r in by_cat[cat]):.0f} vol24h, {len(by_cat[cat])} mkts) ===")
         for r in rows:
             yp = f"{r['yes_price']:.3f}" if r["yes_price"] is not None else "  -  "
-            print(f"  yes={yp}  spd={r['spread']:.3f}  liq={r['liquidity']:>9.0f}  v24={r['vol24h']:>9.0f}  d={r['days_to_resolve']:>6.1f}  {r['question'][:90]}")
+            apy = f"{r['apy_dominant']*100:>+5.1f}%" if r.get('apy_dominant') is not None else "   -  "
+            hurdle = "✓" if r.get("clears_hurdle") else " "
+            side = r.get('dominant_side') or "-"
+            print(f"  yes={yp}  apy_{side}={apy}{hurdle}  spd={r['spread']:.3f}  liq={r['liquidity']:>9.0f}  v24={r['vol24h']:>9.0f}  d={r['days_to_resolve']:>6.1f}  {r['question'][:80]}")
 
 
 if __name__ == "__main__":
