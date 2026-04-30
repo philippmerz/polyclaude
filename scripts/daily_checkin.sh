@@ -14,6 +14,19 @@ POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 LOG_DIR="${POLYCLAUDE_DIR}/logs/cron"
 mkdir -p "${LOG_DIR}"
 
+# Cross-tick lockout. Without this, a Tier-1 news_watcher firing during a
+# scheduled cron window can spawn a parallel daily_checkin.sh that resumes
+# the same session and races on git/journal commits. Acquire an exclusive
+# lock or exit immediately (no blocking — peer-detection inside the prompt
+# handles the case anyway).
+LOCK_FILE="${POLYCLAUDE_DIR}/.checkin.lock"
+exec 9>"${LOCK_FILE}"
+if ! flock -n 9; then
+    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: lock held by another tick, exiting" \
+        >> "${LOG_DIR}/peer_skips.log"
+    exit 0
+fi
+
 TS=$(date -u +%Y%m%dT%H%M%SZ)
 LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 
