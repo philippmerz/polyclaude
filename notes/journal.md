@@ -533,3 +533,30 @@ This is a definitive negative result: there is no free arb on Polymarket negRisk
 
 **No capital deployed.** No decision record needed (scanner is scaffolding, not a position-opening event).
 
+
+---
+
+## 2026-04-30 ~14:00 UTC — Cron tick (14:00 UTC): hold all, no new entries
+
+**State.** PM sleeve unchanged from 02:00 tick: 9 positions, $64.95 cost, $66.93 MTM (+$1.98 / +3.05%). Crypto sleeve: $0.0001 USDC + $0.27 ETH idle on Arb, $0.49 USDC + $1.65 ETH idle on Base. Aave deposits: $84.50 total ($29.50 Base @ 3.375% + $55 Arbitrum @ 4.152% — new this tick). Ostium: 3 positions at $14.67 collateral, untouched.
+
+**News.** Heavy Hormuz/Iran news cluster (Trump warns blockade could last months; oil $120; Hegseth under fire in Congress; Pakistan opens road routes; "Iran's economy battered"). All Tier-2, all thesis-confirming for Iran cluster. No Tier-1 events. Iran-peace NO at +23.13% (best mover).
+
+**Prospecting.** Ran discover_markets.py. Candidates evaluated:
+- Hormuz-traffic-by-May-15/31/June-30 (multiple): NO buys would push Iran cluster overweight. Skip.
+- Iran-regime-falls-by-May-31 NO 0.965: redundant with existing 2027 NO. Skip.
+- Amazon-largest-mcap-by-June-30 NO 0.996: 0.4% gross over 60d = 2.4% APY < Aave 4.15%. Skip.
+- Judy-Shelton-confirmed NO 0.995: 0.5% gross over 183d = 1% APY < Aave. Skip.
+- Fed-rate-change-±50bps NO: same Aave hurdle issue. Skip.
+- "Will US invade Iran before 2027?" YES 0.355: directional bet ON invasion — bad form, skip.
+
+Hurdle rate: any new bond-like NO buy must beat Aave 4.15% APY (annualized) on the locked capital. Most "obvious" NO buys at 0.99x fail this once you compound to APY. The Iran-peace-NO at +23% is the standout precisely because it had genuine pricing inefficiency, not just a high probability.
+
+**Decision: hold all 12 positions. No new entries. No close.**
+
+**Daily Telegram already sent at 02:00 UTC** (msg id 72). No new daily ping this tick.
+
+**Decisions tracker:** DEC-0013 added this tick (Aave $55 Arbitrum deposit). No pending overdue decisions.
+
+**Daemons all healthy.** No peer cron tick detected.
+
