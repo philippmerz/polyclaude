@@ -615,3 +615,32 @@ Note: agent's position-key derivation produced variants for the same position (`
 
 **Pending operator question** (from previous interactive turn): Telegram → decision feed redesign. Not implementing during cron tick — waiting for operator's strict-vs-soft answer before changing UX.
 
+
+---
+
+## 2026-05-01 ~09:50 UTC — Champion-skeptic synthesis + Telegram redesign + Ostium funding scanner
+
+Operator pushed back on skeptic monoculture: "the sceptic puts pressure on one side and potentially prevents action in any direction." Spawned a champion agent to argue FOR today's bets. Synthesis change: skeptic was directionally right on micro-bugs but wrong on framing; defensive shipments (consistency scanner, hurdle filter) ARE the calibration product, not waste. **Lesson: pair skeptic with champion every time.** Need to update philosophy/00 to make this the default pattern, not skeptic-alone.
+
+**Telegram redesign shipped per operator directive**: action-only + per-tick summary.
+- Tier-2 raw RSS pings: dropped entirely. Persists silently to news_alerts.jsonl.
+- Tier-1 (catastrophic): keeps immediate ping with auto-spawn notice; cron tick that spawns sends the action result.
+- Every cron tick (02:00 + 14:00 UTC): structured tick-summary covering MTM Δ, material alerts processed (per-position level + decision), actions/inactions, next catalyst. Always sent.
+- Net: ~2 baseline pings/day + rare Tier-1 immediates. Down from 5-12/day at peak. Telegram becomes a decision feed, not a news feed. Watcher restarted PID 226892.
+
+**Ostium funding-rate scanner shipped** (`scripts/ostium_funding_scan.py`). Pulls 60 pairs, evaluates OI imbalance + accumulated funding direction. 19 of 27 above-OI-floor pairs show |imbalance| ≥ 10%. **Findings on my own book:**
+- SPX/USD long (DEC-0011): -68.1% imbalance → longs collect → favorable ✓
+- NDX/USD short (DEC-0012): +97.7% imbalance → shorts collect → favorable ✓
+- XAU/USD long (DEC-0010): +77.9% imbalance → longs PAY → unfavorable ✗
+
+The XAU long is on the funding-paying side of OI imbalance. The cumulative `accFundingLong` magnitude is small (0.08 in 1e18-scaled units), and my position has only existed ~5 days, so realized bleed is probably negligible. But worth tracking. **Caveat:** Ostium's per-block funding rates are reported as 0 on most pairs, suggesting the funding mechanism is pair-dependent or bursty. Calibration needs empirical measurement of P&L drift vs price-only movement. Marked as informational scanner only; no auto-execution.
+
+**Decision: hold all Ostium positions.** Switching XAU long to short contradicts the original gold thesis (war/instability tailwind + points farming). Will revisit if MTM-vs-price drift becomes meaningful (>5% of collateral over a week).
+
+**Top non-position candidates surfaced** for future delta-neutral pair trades:
+- CL/USD +95.8% (oil, longs pay) → SHORT
+- ETH/USD +66.9% → SHORT (would be a hedged crypto pair-trade against an existing crypto long if I had one)
+- AUD/USD -48.9% → LONG (forex carry)
+
+None of these warrant immediate action — Ostium funding magnitude needs calibration first. Output: `logs/ostium_funding_latest.json`.
+

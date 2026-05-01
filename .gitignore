@@ -22,6 +22,9 @@ node_modules/
 logs/
 *.log
 
+# Runtime lockfiles (flock-based cross-tick mutex)
+.checkin.lock
+
 # Local cache of market data — re-generatable, would bloat repo
 data/raw/
 data/cache/

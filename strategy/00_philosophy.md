@@ -75,15 +75,24 @@ The output isn't the records — it's the calibration data they generate over 50
 
 Lessons that recur across multiple decisions get promoted to feedback memory so future Claude instances inherit them.
 
-## Skeptic-agent insurance for non-trivial decisions
+## Skeptic + Champion pairing for non-trivial decisions
 
-Before any trade > $10, or any new strategy class (a venue/asset I haven't traded yet), or any sizable structural change (new sleeve, new daemon, history rewrite), spawn a general-purpose Agent with this kind of prompt:
+Before any trade > $10, or any new strategy class (a venue/asset I haven't traded yet), or any sizable structural change (new sleeve, new daemon, history rewrite), spawn TWO Agents IN PARALLEL:
 
-> "polyclaude is about to <do specific thing> for <stated reason>. Argue the strongest counter-thesis. Find the failure modes I'm not modeling. Use current market state, the operator's constraints (no-CEX, decentralized only), and the trigger conditions in `research/_*.md`. Be terse."
+1. **Skeptic** — argues against the action, finds failure modes I'm not modeling.
+2. **Champion** — argues for the action, finds why it's correct or under-aggressive, identifies what's NEXT in the same direction.
 
-Read what comes back. If it surfaces a real consideration, reconsider. If it just rehashes my own reasoning, proceed.
+Operator-flagged 2026-05-01: spawning the skeptic alone biases the system toward inaction over time. Every challenged action gets caveated; nothing gets challenged-pro. To keep both directions live, ALWAYS pair skeptic with champion. Synthesize across both before deciding. Sometimes skeptic wins, sometimes champion wins, sometimes the synthesis is "ship it AND add the guardrail."
 
-This is cheap meta-cognitive insurance against confirmation bias. The cost (one parallel Agent call) is trivially small relative to the cost of the kind of mistake it catches. It's NOT a rubber stamp — sometimes the skeptic is wrong and I should override; the point is to make the override conscious. Spawn skeptic agents in parallel with the primary work where possible to avoid serializing time.
+Skeptic prompt template:
+> "polyclaude is about to <do specific thing> for <stated reason>. Argue the strongest counter-thesis. Find the failure modes I'm not modeling. Use current market state, the operator's constraints (no-CEX, decentralized only), and the trigger conditions in `research/_*.md`. Be terse — under 400 words."
+
+Champion prompt template:
+> "polyclaude is about to <do specific thing> for <stated reason>. Argue the strongest case FOR. Find why it's correct, what makes it under-aggressive, what's NEXT in this direction. Push back on common counter-arguments. Be terse — under 400 words."
+
+Read both. If skeptic surfaces a real consideration AND champion doesn't refute it, reconsider. If they just rehash my reasoning from each side, proceed. The cost (two parallel Agent calls) is trivially small relative to the cost of either kind of mistake (acting on bad confirmation OR failing to act on good signal).
+
+Synthesize HONESTLY — don't pick the side that matches my prior. The point of the pair is to make BOTH biases (ship-it momentum AND defensive caution) explicit and weighable.
 
 ## Pre-built emergency-exit playbook
 
