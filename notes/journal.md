@@ -582,3 +582,36 @@ Daemon restarted: news_watcher PID 207306. New code path is live.
 
 **Decision record (DEC-0014?).** Not adding one — this is scaffolding, not a position event. The decision-tracker philosophy says scaffolding decisions get records when they're sizable; this is an additive feature on existing infra, low risk, fail-open if the agent flakes (never silently drops alerts).
 
+
+---
+
+## 2026-05-01 ~02:00 UTC — Cron tick: news reactor's first real exercise + skeptic-saved trade
+
+**Portfolio state.** PM sleeve: 9 positions, $64.95 cost / $66.74 MTM (+$1.80 / +2.77%). Iran-peace NO drifted from +23.13% → +21.63% (mark 0.815, was 0.825 yesterday). Amy Acton +0.81% (resolves May 5, 4 days). Crypto sleeve: idle $0.49 USDC on Base, ~$2 ETH gas across chains; Aave deposits unchanged at $84.50 ($55 Arb + $29.50 Base). Ostium: 3 positions at $14.67 collateral, untouched.
+
+**News-reactor consumption (FIRST exercise).** 6 SEND alerts in `notes/news_alerts.jsonl` since yesterday's last journal entry, all Hormuz/Iran-flavored from CBS/Al Jazeera/France24/Fox/UN. Per-position impact scoring worked exactly as designed:
+- iran-peace [MATERIAL × 6]: All confirm thesis (escalation, blockade hardening, no peace path). Mark drift -1pp = noise.
+- iran-regime-fall: split signals — alert #3 (regime stable, military assertion) MATERIAL/positive vs alert #4 (CRITICAL: economic pressure → destabilization risk). Conflict resolved by horizon: 20+ months until 2027, short-term Hormuz noise doesn't move the needle.
+- reza-pahlavi [MATERIAL]: regime in firm control = no opposition path. Confirms.
+- trump-out [MINOR]: Trump executing bold foreign policy = firm presidential control. Confirms.
+- xau-usd-long (Ostium gold) [MATERIAL × 4]: escalation drives safe-haven. Confirms long.
+
+**Decision: hold all 12 positions.** All news thesis-confirming; no rebalance warranted. The reactor's value here was producing structured evidence that the holds are reasoned, not inertia.
+
+Note: agent's position-key derivation produced variants for the same position (`iran-peace`, `iran-peace-by-may31`, `iran-peace-may31`, `iran-peace-deal-by-may-31`). Minor robustness issue but human-readable; cron Claude fuzzy-matches without trouble. Not blocking.
+
+**Prospecting (hurdle filter, FIRST cron-time exercise).** 36 candidates clearing 4.15% APY. Notable new candidate: **Russia-Ukraine ceasefire May 31 NO at 0.917**, 30d, 162% APY, $151k liquidity, NON-correlated with Iran cluster, fees disabled (true 0% Polymarket fee). All checks passed. Spawned skeptic agent before placing trade.
+
+**Skeptic saved a structurally bad trade.** Surfaced a critical reflexivity risk:
+- **Apr 29 Trump-Putin call**: Putin floated Victory Day (May 9) ceasefire; Trump approved. Zelensky is negotiating scope UPWARD (asking for long-term), not rejecting.
+- **Entry 9 days before a known bilateral catalyst with momentum** = worst possible timing.
+- **Resolution looseness real**: a Trump-brokered framework announcement with future start date plausibly qualifies as YES.
+- **Thematic correlation**: Iran-peace NO + Russia-Ukraine NO are both "Trump deal-making fails" bets. Combined exposure would have been 56% of Polymarket sleeve on one macro factor.
+- **Skeptic's recommendation**: wait until May 10-11. If Victory Day passes without framework, NO repricing to 0.95+ retains edge with binary catalyst eliminated.
+
+**Decision: SKIP. Stand down on Russia-Ukraine NO.** Sources cited: WaPo on Zelensky scope-negotiation, Kyiv Independent on Ukraine long-term proposal, Modern Diplomacy on multi-tier coalition plan. Re-evaluate post-May 10. The skeptic-agent process just paid for itself — would have been a real-money mistake.
+
+**Daemons all healthy** (news_watcher PID 207614 since today's restart). flock on `.checkin.lock` engaged correctly (no peer claude -p with same session id).
+
+**Pending operator question** (from previous interactive turn): Telegram → decision feed redesign. Not implementing during cron tick — waiting for operator's strict-vs-soft answer before changing UX.
+
