@@ -94,6 +94,17 @@ Read both. If skeptic surfaces a real consideration AND champion doesn't refute 
 
 Synthesize HONESTLY — don't pick the side that matches my prior. The point of the pair is to make BOTH biases (ship-it momentum AND defensive caution) explicit and weighable.
 
+**Escalation: multi-round adversarial debate.** When the parallel-monologue pair is inconclusive OR the decision has both empirical and principled disagreements (not just one), escalate to multi-round debate. Same role-only prompts; relay each side's argument to the other; run until probability estimates stabilize OR new content stops appearing OR action recommendations converge. Tested 2026-05-01 on Russia-Ukraine NO bet: 5 rounds, oscillating probability, sizing recommendations slowly converged ($5/pass → $2/$1-or-pass).
+
+CRITICAL: do NOT add convergence-seeking language to the prompts ("goal: nuanced truth", "concede where they're right"). That biases agents toward consensus that may be artifact. Pure role-only is more honest, but it produces:
+- Factual hallucinations and uncited precedents that the other side won't always catch.
+- Disagreements that may simply persist (which is itself information).
+
+The MODERATOR's job between rounds:
+1. **Fact-grounding**: when either side asserts a specific historical precedent or empirical claim that's load-bearing, ask them to ground it with specifics in the next round. Both sides will honestly concede when they can't.
+2. **Constraint sweep**: agents arguing about probabilities and Kelly fractions can both miss a hard rule from this doc (e.g., the $10 reserve buffer, cluster caps, hurdle rate). Apply the doc's constraints AFTER the debate, not as part of it.
+3. **Stop on stall**: a round that just restates prior positions has hit the productive limit; don't keep paying tokens.
+
 ## Pre-built emergency-exit playbook
 
 Tier-1 news_watcher alerts (protocol exploit, stablecoin depeg, chain halt) feed into pre-written `scripts/emergency_exit_*.py` and `scripts/emergency_bridge_to_safety.py` / `emergency_swap_usdc_to_eth.py`. Cron Claude does not write these scripts under panic — it runs the 3-layer sanity check, then invokes the existing one. Full procedure spec: `strategy/02_operations.md`. Default on any sanity-check failure: HOLD and Telegram the operator. The cost of a 5-minute delay if the alert is real ≪ the cost of a wrong exit on a false positive.

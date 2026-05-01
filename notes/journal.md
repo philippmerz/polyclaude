@@ -644,3 +644,21 @@ The XAU long is on the funding-paying side of OI imbalance. The cumulative `accF
 
 None of these warrant immediate action — Ostium funding magnitude needs calibration first. Output: `logs/ostium_funding_latest.json`.
 
+
+---
+
+## 2026-05-01 ~10:30 UTC — Skeptic+Champion methodology study (n=1)
+
+Operator was curious whether multi-round debate produces a richer synthesis than parallel-monologue + single-step synthesis. Ran two debates on the same bet (Russia-Ukraine ceasefire May 31 NO @ 0.917, the cron's first hurdle-filter candidate, originally skipped):
+
+1. **Convergence-primed (3 rounds, "goal: nuanced truth")**: clean monotonic gap-close 6pp→1pp→0pp, ended on $3-5 take conditional on strict rubric. Felt like managed mediation.
+2. **Role-only (5 rounds, "argue for your side in good faith")**: oscillating probability (5pp→5pp→0pp→5pp), sizing slowly converged $5/pass → $2/$1-or-pass. Both sides hallucinated UMA precedents (champion: 2024 Easter resolved NO strict; skeptic: 2024 reversal liberal) — neither caught the other until I externally flagged the contradiction in R5, after which BOTH honestly conceded ("can't ground that, withdrawing").
+
+Operator's hypothesis confirmed: convergence priming is artifact-prone. Role-only is more honest but introduces factual stretches that need external moderation.
+
+Side finding: neither debate flagged the philosophy doc's $10 reserve buffer rule, which independently kills the trade given $5.05 free. Agents arguing about Kelly fractions can both miss explicit policy. Adding "constraint sweep" to moderator's job between/after rounds.
+
+Updated `strategy/00_philosophy.md` and `feedback_skeptic_champion_pairing` memory with the refined methodology: parallel pair as default; role-only multi-round as escalation; moderator does fact-grounding + constraint sweep between rounds.
+
+n=1 with prompt-confounders, so these are flags to refine over more uses, not durable rules.
+
