@@ -662,3 +662,30 @@ Updated `strategy/00_philosophy.md` and `feedback_skeptic_champion_pairing` memo
 
 n=1 with prompt-confounders, so these are flags to refine over more uses, not durable rules.
 
+
+---
+
+## 2026-05-01 ~14:00 UTC — Cron tick (14:00): hold all, retrospective on Russia-Ukraine skip
+
+**State.** PM sleeve $66.10 MTM (Δ-$0.83 since 02:08 tick at $66.93). Iran-peace NO mark 0.825→0.74 (still +10.45% on cost; entry 0.67). Aliens NO +3.12% (best mover today). Atletico YES 0.989→0.989. Crypto sleeve unchanged: $84.50 in Aave (Arb $55 @ 4.15% + Base $29.50 @ 3.375%), $0.49 USDC + 0.000496 ETH idle on Base. Ostium 3 trades unchanged at $4.89 collateral each.
+
+**News alerts consumed.** 2 SEND-verdict entries since 02:08:
+- 08:47 "Iran war threatens Asia food security" — MATERIAL × 3 (iran-peace, iran-regime, pahlavi). Confirmation of escalation thesis on iran-peace NO; mild pressure on regime/pahlavi NOs (escalation could → regime change).
+- 11:18 "US-Iran ceasefire reset War Powers" — MATERIAL on iran-peace (ceasefire = step toward settlement), MINOR on iran-regime (negotiation = continuity).
+
+The two alerts cut OPPOSITE directions on iran-peace NO. Polymarket priced in net-toward-YES (mark dropped 0.825→0.74, implying YES probability rose from 17.5% to 26%). My read: mark drift is reasonable but doesn't invalidate thesis. "PERMANENT peace deal" in 30 days during active conflict + War Powers Act controversy is still tail-priced even at 26% YES. **Decision: hold.** Position +10% on cost is comfortable cushion.
+
+**Iran cluster summary.** Cluster exposure: $33 across 4 positions (Pahlavi NO $10, Iran-regime NO $7, Iran-peace NO $7, plus Aliens/Trump-out softly correlated). 47% of PM cost. Within 30% cluster cap if you exclude the soft-correlations; right at edge if you include them. No add.
+
+**Prospecting (hurdle filter, 14:00 run).** 15 candidates clearing 4.15% APY. Iran cluster overrepresented as expected. Two non-cluster items:
+- China-invade-Taiwan-by-2026 NO at 0.926, 11.4% APY, 243d. Marginal — clears hurdle thinly, long lock-up. Pass.
+- Russia-Ukraine ceasefire May 31 NO **NOW at 0.939** (was 0.917 when 02:08 cron skipped it). The skip was retrospectively right — price moved AWAY from us by 2.2pp toward fair. Skeptic agent earned its keep. APY now 107% (was 162%). Still passes.
+
+**Bankroll constraint binding.** $5.05 free < $10 philosophy-mandated reserve buffer. Cannot open new positions until something resolves. Amy Acton resolves May 5 (4d) → frees $5; Atletico ~May 25 → frees $5; Iran-peace May 31 → frees $7. Buffer regime restored after May 5.
+
+**Decision: hold all 12 positions. No new entries. No close.** No DEC-NNNN added (no actionable decisions taken).
+
+**Daemons healthy.** No peer cron tick, no .checkin.lock present (this tick is operator-prompted not daily_checkin.sh-driven, so flock didn't engage — that's expected).
+
+**Weekly P&L** due Saturday May 2 (6 days since kickoff Apr 25). Will write at next 02:00 UTC tick.
+
