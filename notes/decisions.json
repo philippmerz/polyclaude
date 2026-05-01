@@ -1,5 +1,5 @@
 {
-  "next_id": 14,
+  "next_id": 15,
   "decisions": [
     {
       "id": 1,
@@ -239,6 +239,25 @@
         "yield",
         "scaffolding",
         "crypto-sleeve"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2026-05-01T02:07:48Z",
+      "type": "skip",
+      "thesis": "Russia-Ukraine ceasefire by May 31 NO at 0.917, 162% APY, non-correlated with Iran cluster. Skeptic agent surfaced Apr 29 Putin-Trump Victory Day (May 9) ceasefire proposal with Zelensky engaging scope-upward. Entry 9 days before known bilateral catalyst with momentum = bad timing. Resolution criteria looser than initially modeled (Trump-brokered framework with future start could resolve YES). Thematic correlation with iran-peace NO (combined exposure would have been 56% of PM sleeve on Trump-deals-fail factor).",
+      "confidence": "high",
+      "prediction": "Russia-Ukraine ceasefire by May 31 resolves NO. Re-evaluate trade post-May 10 if Victory Day passes without framework announcement; expected re-entry price 0.95+ (similar edge, catalyst eliminated).",
+      "size_usd": 0.0,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "polymarket",
+        "russia-ukraine",
+        "skeptic-saved",
+        "skip"
       ],
       "outcome": null,
       "calibration_delta": null,
