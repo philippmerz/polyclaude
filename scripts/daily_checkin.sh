@@ -56,7 +56,20 @@ Cron tick. Do your scheduled polyclaude check-in:
 4. DECISION TRACKER: for any non-trivial action you take this tick (open/close/resize a position, change a strategy class, add/refactor scaffolding), add a record via `scripts/decisions.py add ...` with thesis, confidence, prediction, size, resolution_at. For any decisions whose resolution date has passed (`scripts/decisions.py pending`), fill in outcome + calibration_delta + lesson via `decisions.py update <id>`. Calibration data is the actual product — your reasoning quality across 50+ entries is what evaluates whether the LLM architecture works at scale.
 5. PROSPECT new markets: run scripts/discover_markets.py for markets that became active since the last scan (the journal records timestamps; default to 12h on first run). Score any new candidates against the same edge thresholds the initial portfolio used. If something is clearly mispriced and within sizing rules, add a position (and a decision record).
 6. Journal the result. Update README.md with current portfolio state so the GitHub front page stays fresh.
-7. Once daily (skip if today's already-done line is in the journal): send a one-line P&L Telegram so the operator has continuous visibility — total MTM, day-over-day change, any open issues. Format: "polyclaude $X.XX MTM (+/-$Y.YY today). N positions. <one-line note>". Material moves still get their own immediate Telegram.
+7. EVERY TICK: send a Telegram tick-summary covering the material work this run. Telegram is now ACTION-ONLY — the operator dropped raw news pings, so this summary is their primary visibility. Format (drop sections that have nothing):
+
+```
+polyclaude tick HH:MM UTC
+MTM $X.XX (Δ$Y.YY since prior tick), N positions
+
+material alerts processed: <count>  (omit line if 0)
+  · <position-key> [LEVEL]: <action taken | "hold: <one-line reason>">
+  ...
+actions this tick: <"none" | bulleted list, e.g. "closed atletico-top4 YES at $0.99 → $5.06">
+next catalyst: <one-liner if known, e.g. "Amy Acton primary May 5">
+```
+
+Single Telegram message, body ≤ 700 chars. Always send (even on a no-action tick — the inaction reasoning IS the operator's signal that the system is alive and reasoning). Material moves taken between ticks still get their own immediate Telegram from the actor (only Tier-1 news_watcher firings auto-ping outside cron).
 8. Weekly P&L report if it's been ~7 days since the last one (notes/pnl_weekly.md). The weekly report should now also include `scripts/decisions.py summary` output and call out any pattern of mis-calibration.
 9. Commit + push (audit diff for secrets first).
 

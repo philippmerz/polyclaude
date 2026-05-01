@@ -334,26 +334,23 @@ def poll_once(config: dict, state: dict) -> int:
                           f"reason={agent_reason[:120]!r} title={title[:80]!r}", flush=True)
                     continue
 
-            prefix = "[URGENT]" if tier == 1 else "[NEWS]"
-            why_line = f"\nwhy: {agent_reason}\n" if agent_reason else "\n"
-            # Build impact summary (highest-level per position; sorted CRITICAL > MATERIAL > MINOR)
-            impact_block = ""
-            if impacts:
-                level_order = {"CRITICAL": 0, "MATERIAL": 1, "MINOR": 2}
-                sorted_impacts = sorted(impacts, key=lambda i: level_order.get(i["level"], 9))
-                impact_lines = "\n".join(
-                    f"  · {i['position']} [{i['level']}]: {i['reason']}" for i in sorted_impacts
+            # Telegram pings are ACTION-ONLY (operator is autonomous, raw news
+            # adds noise without value). Only Tier-1 catastrophic events ping
+            # immediately — those auto-fire a cron tick that does the work.
+            # Tier-2 (incl. MATERIAL/CRITICAL impacts) silently persists to
+            # news_alerts.jsonl; the next scheduled cron tick reads, decides,
+            # and includes the digest in its tick-summary Telegram.
+            if tier == 1:
+                why_line = f"\nwhy: {agent_reason}\n" if agent_reason else "\n"
+                msg = (
+                    f"[URGENT] {feed['name']}\n"
+                    f"matched: {kw}"
+                    f"{why_line}"
+                    f"\n{title}\n"
+                    f"\n{link}\n"
+                    f"\nauto-spawning cron tick for sanity-check + decision."
                 )
-                impact_block = f"\nposition impact:\n{impact_lines}\n"
-            msg = (
-                f"{prefix} {feed['name']}\n"
-                f"matched: {kw}"
-                f"{why_line}"
-                f"{impact_block}"
-                f"\n{title}\n"
-                f"\n{link}"
-            )
-            telegram_send(msg)
+                telegram_send(msg)
             # Persist to structured alerts log for next cron tick to consume
             if tier == 1 or impacts:
                 _append_news_alert({
