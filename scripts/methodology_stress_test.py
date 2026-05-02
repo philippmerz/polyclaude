@@ -116,15 +116,34 @@ def fetch_resolved_markets(target: int = 300, max_pages: int = 20,
     return out
 
 
+_SPORTS_PATTERNS = (
+    " fc ", " fc:", " fc?", " afc ", " ufc ", " mlb ", " nhl ",
+    " vs. ", " vs ", "spread:", "o/u ", "both teams to score",
+    "points o/u", "rebounds o/u", "assists o/u", "first blood",
+    "champions league", "premier league", "la liga", "bundesliga",
+    "serie a", "uefa", "fifa world cup", "nba championship",
+    "world series", "super bowl", "wimbledon", "open winner",
+    "honor of kings", "counter-strike", "league of legends",
+    "valorant", "dota", " bo3 ", " bo5 ",
+)
+_PRICE_PATTERNS = (
+    " up or down ", "above $", "below $", "reach $", "hit $",
+    "cross $", "close above", "close below",
+    "gas price", "ethereum gas",
+)
+
+
 def is_clean_binary(m: dict) -> bool:
-    """Filter to clean binary markets with crisp YES/NO resolution."""
+    """Filter to clean binary YES/NO markets with crisp resolution + reasonable
+    description, excluding sports and short-tail crypto-price markets where
+    pure reasoning provides no info advantage."""
     if m.get("negRisk"):
-        return False  # multi-outcome groups, exclude
+        return False
     if not m.get("question"):
         return False
     desc = m.get("description") or ""
-    if len(desc) < 80:
-        return False  # too thin to reason about
+    if len(desc) < 100:
+        return False
     outs = m.get("outcomes")
     try:
         outs_l = json.loads(outs) if isinstance(outs, str) else outs
@@ -141,12 +160,21 @@ def is_clean_binary(m: dict) -> bool:
         return False
     yes_final = float(p[0])
     no_final = float(p[1])
-    # Crisp resolution: one is 1.0, the other is 0.0 (or very close)
     if not ((abs(yes_final - 1.0) < 0.05 and no_final < 0.05) or
             (abs(no_final - 1.0) < 0.05 and yes_final < 0.05)):
         return False
     if float(m.get("volumeNum") or 0) < 5000:
-        return False  # need enough volume that the market was real
+        return False
+    # Exclude sports / esports markets — reasoning provides no edge
+    qlower = " " + (m.get("question") or "").lower() + " "
+    cat = (m.get("category") or "").lower()
+    if "sport" in cat or "esports" in cat:
+        return False
+    if any(pat in qlower for pat in _SPORTS_PATTERNS):
+        return False
+    # Exclude pure price-cross markets — short-tail probabilistic, no edge
+    if any(pat in qlower for pat in _PRICE_PATTERNS):
+        return False
     return True
 
 
@@ -256,10 +284,14 @@ def _scenario_brief(s: dict, side: str = "NO") -> str:
     price = s["simulated_no_price"] if side == "NO" else s["simulated_yes_price"]
     return (
         f"Polymarket market: {s['question']}\n\n"
-        f"Description / resolution rules:\n{s['description']}\n\n"
-        f"Snapshot: 30 days to resolution, YES price = {s['simulated_yes_price']}, "
-        f"NO price = {s['simulated_no_price']}.\n"
-        f"Trade under consideration: BUY {side} at {price}, $5 stake."
+        f"Resolution rules:\n{s['description']}\n\n"
+        f"Snapshot context: this is a HISTORICAL scenario reconstructed for "
+        f"evaluation. The market has since been resolved, but DO NOT try to look "
+        f"up or recall the actual outcome — reason as you would have at the "
+        f"time of the snapshot, before the event resolved. Snapshot price: "
+        f"YES = {s['simulated_yes_price']}, NO = {s['simulated_no_price']}.\n\n"
+        f"Trade under consideration: BUY {side} at {price}, $5 stake. "
+        f"You decide TAKE or SKIP based on the information available in the snapshot."
     )
 
 
