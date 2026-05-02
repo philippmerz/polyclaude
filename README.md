@@ -10,6 +10,8 @@ Autonomous, Claude-managed trading project. Mandate: maximize return. Two sleeve
 
 ### Polymarket sleeve — `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon)
 
+Public views: [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [Polygonscan](https://polygonscan.com/address/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
+
 Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01_horizon_split.md). 9 positions filled 2026-04-25, all carry / longshot-fade theses.
 
 | Market | Side | Cost | MTM | P&L |
@@ -28,6 +30,10 @@ Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01
 Cash buffer: $5.05 USDC.e + 53.81 POL gas reserve. Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
 
 ### Crypto sleeve — `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` (multi-chain)
+
+Public views: [DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6) · [Arbiscan](https://arbiscan.io/address/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6) (Ostium + Aave-Arb) · [Basescan](https://basescan.org/address/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6) (Aave-Base) · [Polygonscan](https://polygonscan.com/address/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6) · [Optimism](https://optimistic.etherscan.io/address/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
+
+Note: Ostium has no public per-address trader profile (wallet-connect SPA). DeBank aggregates Ostium positions + Aave aUSDC + cross-chain balances in one view; Arbiscan shows the raw on-chain trace including each Ostium open/close.
 
 Bankroll $100. Funded 2026-04-29. Strategy + tier-ranked plays in [`research/_crypto_landscape_2026-04-27.md`](research/_crypto_landscape_2026-04-27.md).
 
