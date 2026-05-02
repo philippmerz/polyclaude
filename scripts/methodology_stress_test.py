@@ -504,6 +504,44 @@ VARIANT_FUNCS = {
 
 # ---------- run + analyze ------------------------------------------------
 
+def _classify_regime(s: dict) -> str:
+    """Classify a scenario by its simulated-price regime relative to ground truth.
+    Same buckets used at scenario-build time."""
+    truth = s["resolved_yes"]
+    sy = s["simulated_yes_price"]
+    if (truth and sy > 0.85) or (not truth and sy < 0.15):
+        return "near_truth"
+    if 0.30 <= sy <= 0.70:
+        return "middle"
+    if sy < 0.05 or sy > 0.95:
+        return "extreme"
+    return "against_truth"
+
+
+def _run_one(s: dict, v: str) -> tuple[dict, dict]:
+    """Run variant `v` on scenario `s`, return (rec, raw_res)."""
+    t0 = time.time()
+    fn = VARIANT_FUNCS[v]
+    try:
+        res = fn(s)
+    except Exception as e:
+        res = {"verdict": "ERROR", "transcript": str(e)[:500], "calls": 0}
+    elapsed = time.time() - t0
+    rec = {
+        "scenario_id": s["market_id"],
+        "question": s["question"][:120],
+        "variant": v,
+        "yes_price": s["simulated_yes_price"],
+        "ground_truth": s["ground_truth_outcome"],
+        "regime": _classify_regime(s),
+        "verdict": res["verdict"],
+        "calls": res["calls"],
+        "seconds": round(elapsed, 1),
+        "transcript": res["transcript"],
+    }
+    return rec, res
+
+
 def cmd_run(args: argparse.Namespace) -> int:
     scenarios_path = DATA_DIR / "scenarios.json"
     if not scenarios_path.exists():
@@ -517,44 +555,53 @@ def cmd_run(args: argparse.Namespace) -> int:
         sample = scenarios
 
     variants = args.variants or VARIANTS
-    print(f"running {len(sample)} scenarios × {len(variants)} variants = {len(sample) * len(variants)} debates")
+    total = len(sample) * len(variants)
+    print(f"running {len(sample)} scenarios × {len(variants)} variants = {total} debates "
+          f"(parallel={args.parallel})")
 
     ts = dt.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
     out_path = DATA_DIR / f"results_{ts}.jsonl"
     print(f"writing → {out_path}")
 
-    # Run sequentially per (scenario, variant) — each variant already parallelizes internally
+    # Build the workqueue
+    work = [(s, v) for s in sample for v in variants]
+
     started = time.time()
     completed = 0
-    total = len(sample) * len(variants)
     with out_path.open("w") as f:
-        for i, s in enumerate(sample):
-            for v in variants:
-                t0 = time.time()
-                fn = VARIANT_FUNCS[v]
-                try:
-                    res = fn(s)
-                except Exception as e:
-                    res = {"verdict": "ERROR", "transcript": str(e)[:500], "calls": 0}
-                elapsed = time.time() - t0
-                rec = {
-                    "scenario_id": s["market_id"],
-                    "question": s["question"][:120],
-                    "variant": v,
-                    "yes_price": s["simulated_yes_price"],
-                    "ground_truth": s["ground_truth_outcome"],
-                    "verdict": res["verdict"],
-                    "calls": res["calls"],
-                    "seconds": round(elapsed, 1),
-                    "transcript": res["transcript"],
-                }
-                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-                f.flush()
+        if args.parallel <= 1:
+            # Sequential
+            for s, v in work:
+                rec, _ = _run_one(s, v)
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n"); f.flush()
                 completed += 1
                 rate = completed / max(time.time() - started, 1)
                 eta = (total - completed) / max(rate, 1e-6)
-                print(f"  [{completed}/{total}] {v:<20} {res['verdict']:<12} "
-                      f"{elapsed:>5.1f}s  eta {eta/60:.1f}m  {s['question'][:50]}")
+                print(f"  [{completed}/{total}] {v:<20} {rec['verdict']:<12} "
+                      f"{rec['seconds']:>5.1f}s  eta {eta/60:.1f}m  {s['question'][:50]}")
+        else:
+            # Parallel across (scenario, variant) work items
+            with ThreadPoolExecutor(max_workers=args.parallel) as ex:
+                futures = {ex.submit(_run_one, s, v): (s, v) for s, v in work}
+                for fut in as_completed(futures):
+                    s, v = futures[fut]
+                    try:
+                        rec, _ = fut.result()
+                    except Exception as e:
+                        rec = {
+                            "scenario_id": s["market_id"], "question": s["question"][:120],
+                            "variant": v, "yes_price": s["simulated_yes_price"],
+                            "ground_truth": s["ground_truth_outcome"],
+                            "regime": _classify_regime(s),
+                            "verdict": "ERROR", "calls": 0, "seconds": 0,
+                            "transcript": str(e)[:500],
+                        }
+                    f.write(json.dumps(rec, ensure_ascii=False) + "\n"); f.flush()
+                    completed += 1
+                    rate = completed / max(time.time() - started, 1)
+                    eta = (total - completed) / max(rate, 1e-6)
+                    print(f"  [{completed}/{total}] {v:<20} {rec['verdict']:<12} "
+                          f"{rec['seconds']:>5.1f}s  eta {eta/60:.1f}m  {s['question'][:50]}")
     print(f"\ndone in {(time.time() - started)/60:.1f}m → {out_path}")
     return 0
 
@@ -614,17 +661,63 @@ def cmd_analyze(args: argparse.Namespace) -> int:
         print(f"{v:<22} {len(rs):>4} {take:>5} {skip:>5} {bad:>4} "
               f"{avg_pnl:>+9.4f}  {win_pct:>5.1f}%  {avg_calls:>9.1f} {avg_sec:>7.1f}s")
 
+    # Per-regime breakdown — which variant is best on which scenario type?
+    print("\n=== per-regime P&L per dollar staked (TAKE only; SKIP = 0) ===")
+    regimes_seen = sorted({r.get("regime") or "unknown" for r in rows})
+    print(f"{'variant':<22} " + " ".join(f"{rg[:13]:>13}" for rg in regimes_seen))
+    for v, rs in by_variant.items():
+        cells = []
+        for rg in regimes_seen:
+            sub = [r for r in rs if r.get("regime") == rg]
+            if not sub:
+                cells.append(f"{'-':>13}")
+                continue
+            takes = [r for r in sub if r["verdict"] == "TAKE"]
+            if not takes:
+                # Show (n_take/n) and skip-only
+                cells.append(f"{0}/{len(sub)} skip ".rjust(13))
+                continue
+            pnls = [_ev_per_dollar(r["verdict"], r["yes_price"], r["ground_truth"]) for r in takes]
+            avg = sum(pnls) / len(pnls)
+            cells.append(f"{avg:+.3f}({len(takes)}/{len(sub)})".rjust(13))
+        print(f"{v:<22} " + " ".join(cells))
+
     # Where did variants disagree?
     print("\n=== disagreements (same scenario, different verdict across variants) ===")
     by_scenario: dict[str, dict] = {}
     for r in rows:
-        by_scenario.setdefault(r["scenario_id"], {})[r["variant"]] = r["verdict"]
+        by_scenario.setdefault(r["scenario_id"], {})[r["variant"]] = (r["verdict"], r.get("regime", "?"), r["ground_truth"])
     disagreements = 0
     for sid, verdicts in by_scenario.items():
-        vals = set(verdicts.values())
+        vals = set(v[0] for v in verdicts.values())
         if len(vals) > 1:
             disagreements += 1
     print(f"  {disagreements}/{len(by_scenario)} scenarios had ≥2 variants disagreeing on verdict")
+
+    # Agreement against ground truth
+    # For each scenario, was the dominant verdict correct?
+    print("\n=== majority-verdict accuracy (per scenario, ignoring SKIP) ===")
+    correct_take = 0
+    correct_skip = 0
+    incorrect_take = 0
+    incorrect_skip = 0
+    for sid, verdicts in by_scenario.items():
+        takes = sum(1 for v in verdicts.values() if v[0] == "TAKE")
+        skips = sum(1 for v in verdicts.values() if v[0] == "SKIP")
+        truth = next(iter(verdicts.values()))[2]
+        # If majority TAKE → effective verdict = TAKE (else SKIP)
+        if takes > skips:
+            if truth == "NO":
+                correct_take += 1
+            else:
+                incorrect_take += 1
+        else:
+            if truth == "NO":
+                incorrect_skip += 1
+            else:
+                correct_skip += 1
+    print(f"  majority-TAKE → won: {correct_take}, lost: {incorrect_take}")
+    print(f"  majority-SKIP → missed-winner: {incorrect_skip}, avoided-loss: {correct_skip}")
 
     return 0
 
@@ -647,6 +740,8 @@ def main() -> int:
     p.add_argument("--n", type=int, default=10, help="sample size (0 = all)")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--variants", nargs="+", choices=VARIANTS, default=None)
+    p.add_argument("--parallel", type=int, default=1,
+                   help="run this many (scenario, variant) work items concurrently")
     p.set_defaults(fn=cmd_run)
 
     p = sub.add_parser("analyze", help="aggregate latest results")
