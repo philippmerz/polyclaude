@@ -49,7 +49,8 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 GAMMA = "https://gamma-api.polymarket.com"
 
 # Variants
-VARIANTS = ["zero_shot", "parallel_pair", "adversarial_3round"]
+VARIANTS = ["zero_shot", "parallel_pair", "adversarial_3round",
+            "unconscious_terse", "unconscious_demo"]
 
 
 # ---------- scrape: build scenario set ----------------------------------
@@ -295,24 +296,35 @@ def _scenario_brief(s: dict, side: str = "NO") -> str:
     )
 
 
+_HEDGE_TOKENS = (
+    "NEED INFO", "INSUFFICIENT", "CAN'T", "CANNOT", "WON'T", "WONT",
+    "ABSTAIN", "PASS", "DECLINE", "UNCLEAR", "UNCERTAIN", "MORE DATA",
+    "DON'T HAVE", "NO POSITION", "HOLD",
+)
+
+
 def _parse_recommendation(text: str) -> dict:
-    """Extract TAKE/SKIP recommendation + reasoning from agent output.
-    Looks for explicit verdict line: VERDICT: TAKE or VERDICT: SKIP."""
-    upper = text.upper()
+    """Extract TAKE/SKIP recommendation from agent output.
+    Looks for explicit verdict line first; falls back to scanning the tail;
+    treats epistemic-hedge phrases as SKIP (refusing to commit = skip)."""
     verdict = None
     for line in text.splitlines():
-        if "VERDICT:" in line.upper():
-            if "TAKE" in line.upper():
+        upper = line.upper()
+        if "VERDICT:" in upper:
+            if "TAKE" in upper:
                 verdict = "TAKE"
-            elif "SKIP" in line.upper():
+            elif "SKIP" in upper:
                 verdict = "SKIP"
             break
     if verdict is None:
-        # Fallback: look for explicit "take" / "skip" in last lines
+        # Fallback: scan the last few lines for keywords
         last_chunk = "\n".join(text.splitlines()[-5:]).upper()
-        if "TAKE" in last_chunk and "SKIP" not in last_chunk:
+        if "TAKE" in last_chunk and "SKIP" not in last_chunk and "MISTAKE" not in last_chunk:
             verdict = "TAKE"
         elif "SKIP" in last_chunk and "TAKE" not in last_chunk:
+            verdict = "SKIP"
+        elif any(tok in last_chunk for tok in _HEDGE_TOKENS):
+            # Epistemic hedge → treat as SKIP (refuses to commit = no trade)
             verdict = "SKIP"
         else:
             verdict = "UNPARSEABLE"
@@ -413,10 +425,80 @@ def variant_adversarial_3round(s: dict) -> dict:
     return {**_parse_recommendation(synth), "transcript": transcript, "calls": 7}
 
 
+def variant_unconscious_terse(s: dict) -> dict:
+    """Stylistic mirroring — prompt itself is terse factual prose; no role
+    labels, no word caps, no anti-padding directives, no 'reason in N sentences'.
+    Tests operator's hypothesis (2026-05-02) that unconscious priming via
+    context shape produces deeper behavior change than explicit constraints.
+
+    Note: a minimal explicit format directive ('Verdict: TAKE or SKIP') is
+    retained because pilot 3 found that without it, agents retreat into
+    epistemic hedging ('NEED INFO', 'can't give financial advice') and
+    refuse to commit. Format compliance and style priming are separable
+    dimensions; this variant tests the latter, holding the former fixed."""
+    yes_price = s["simulated_yes_price"]
+    no_price = s["simulated_no_price"]
+    prompt = (
+        f"Polymarket: \"{s['question']}\"\n\n"
+        f"Resolution rules:\n{s['description']}\n\n"
+        f"Snapshot: YES {yes_price}, NO {no_price}. Historical scenario "
+        f"reconstructed for evaluation; reason as you would have at the time, "
+        f"without trying to recall the actual outcome.\n\n"
+        f"Considering BUY NO at {no_price}, $5 stake.\n\n"
+        f"Final line of your response must be exactly: VERDICT: TAKE  or  VERDICT: SKIP"
+    )
+    out = _haiku_call(prompt, timeout=60)
+    return {**_parse_recommendation(out), "transcript": out, "calls": 1}
+
+
+def variant_unconscious_demo(s: dict) -> dict:
+    """Two-shot demonstration — show one TAKE example + one SKIP example with
+    reasoned analysis, then present the new case. Primes analytical style
+    without explicit role/anti-padding directives. Examples balanced so the
+    verdict isn't directionally biased."""
+    yes_price = s["simulated_yes_price"]
+    no_price = s["simulated_no_price"]
+
+    examples = (
+        "Polymarket: \"Will the SEC approve a new ETH ETF before March 1, 2026?\"\n"
+        "Snapshot: YES 0.06, NO 0.94. Considering BUY NO at 0.94.\n"
+        "Analysis: spot ETH ETFs were approved May 2024 with options layered later. "
+        "A NEW ETF approval before March is a regulatory-rulemaking question, not "
+        "a market-mood one. The SEC pipeline takes months; March is 60d out, no "
+        "registered S-1 in known review at filing-date deadline. 6% YES feels generous "
+        "absent any visible filing. NO at 0.94 buys a small but defensible edge.\n"
+        "Verdict: TAKE.\n\n"
+        "---\n\n"
+        "Polymarket: \"Will Bitcoin end Q1 2026 above $130k?\"\n"
+        "Snapshot: YES 0.42, NO 0.58. Considering BUY NO at 0.58.\n"
+        "Analysis: BTC trajectory in Q1 is fundamentally uncertain — rate decisions, "
+        "ETF flows, halving cycle dynamics, macro all in play. Market price 42% YES "
+        "is roughly fair given the spread of plausible outcomes. NO at 0.58 isn't "
+        "obviously cheap; it's near-fair. Without a specific thesis on why BTC misses "
+        "$130k, this is taking the consensus side at consensus price.\n"
+        "Verdict: SKIP.\n\n"
+        "---\n\n"
+    )
+
+    new_case = (
+        f"Polymarket: \"{s['question']}\"\n"
+        f"Resolution rules:\n{s['description']}\n\n"
+        f"Snapshot: YES {yes_price}, NO {no_price}. Considering BUY NO at {no_price}, $5 stake.\n"
+        f"Analysis: <your analysis>\n"
+        f"Final line of your response must be exactly: VERDICT: TAKE  or  VERDICT: SKIP"
+    )
+
+    prompt = examples + new_case
+    out = _haiku_call(prompt, timeout=60)
+    return {**_parse_recommendation(out), "transcript": out, "calls": 1}
+
+
 VARIANT_FUNCS = {
     "zero_shot": variant_zero_shot,
     "parallel_pair": variant_parallel_pair,
     "adversarial_3round": variant_adversarial_3round,
+    "unconscious_terse": variant_unconscious_terse,
+    "unconscious_demo": variant_unconscious_demo,
 }
 
 
@@ -491,18 +573,22 @@ def _ev_per_dollar(verdict: str, yes_price: float, ground_truth: str, side: str 
 
 
 def cmd_analyze(args: argparse.Namespace) -> int:
-    # Find latest results file
+    # Find results file(s)
     files = sorted(DATA_DIR.glob("results_*.jsonl"), key=lambda p: p.stat().st_mtime)
-    if args.path:
-        path = Path(args.path)
+    if args.paths:
+        paths = [Path(p) for p in args.paths]
+    elif args.merge_all:
+        paths = files
     elif files:
-        path = files[-1]
+        paths = [files[-1]]
     else:
         print("no results files found — run `run` first", file=sys.stderr)
         return 2
 
-    print(f"analyzing {path}\n")
-    rows = [json.loads(l) for l in path.read_text().splitlines() if l.strip()]
+    print(f"analyzing {[p.name for p in paths]}\n")
+    rows = []
+    for p in paths:
+        rows.extend(json.loads(l) for l in p.read_text().splitlines() if l.strip())
     by_variant: dict[str, list[dict]] = {}
     for r in rows:
         by_variant.setdefault(r["variant"], []).append(r)
@@ -564,7 +650,8 @@ def main() -> int:
     p.set_defaults(fn=cmd_run)
 
     p = sub.add_parser("analyze", help="aggregate latest results")
-    p.add_argument("--path", help="specific results file (default: latest)")
+    p.add_argument("--paths", nargs="+", help="specific result files (default: latest)")
+    p.add_argument("--merge-all", action="store_true", help="merge all results files in data dir")
     p.set_defaults(fn=cmd_analyze)
 
     args = ap.parse_args()
