@@ -713,3 +713,29 @@ The two alerts cut OPPOSITE directions on iran-peace NO. Polymarket priced in ne
 
 **Weekly P&L** — first weekly report shipping this tick to `notes/pnl_weekly.md`.
 
+
+---
+
+## 2026-05-02 ~14:00 UTC — Cron tick: hold all, 1 new alert (thesis-confirming)
+
+**State.** PM sleeve $66.68 MTM (Δ+$0.19 since 02:00 tick at $66.49), 9 positions, $64.95 cost (+2.67%). Iran-peace NO stable at mark 0.775 (+15.67% on entry 0.67) — no further drift after Apr 30 14:00 peak at 0.825. Aliens NO +3.12% (mark 0.825). Trump-out NO +2.98%. Atletico YES +0.71%, Amy Acton YES +0.71% (resolves May 5, 3d). Iran-regime NO +1.86%, Jesus NO +0.26%, Pahlavi NO 0.0%, Latvia NO -0.60%. Crypto sleeve unchanged: $84.50 Aave, $0.49 idle. Ostium unchanged.
+
+**News alerts consumed.** 1 SEND since 02:00 tick:
+- 11:57 "Trump says US Navy acting 'like pirates' to enforce Iran blockade" — MATERIAL × 3:
+  - **iran-peace** [MATERIAL]: blockade endorsement reduces peace-deal probability → CONFIRMS NO thesis. Hold.
+  - **gold-long** (Ostium XAU) [MATERIAL]: geopolitical escalation → safe-haven bid → CONFIRMS long thesis. Hold.
+  - **iran-regime-fall** [MATERIAL]: pressure accelerates fall timeline → mild pressure on NO position, but 8mo to resolution, regime structurally intact, thesis still holds. Hold.
+- All 3 impacts are thesis-compatible or confirmatory. Mark on Iran-peace NO stable since 02:00, no market re-pricing reaction to absorb.
+
+**Catalyst monitoring.**
+- Amy Acton OH primary May 5 (3d) → resolves $5. First buffer restoration.
+- May 9 Putin Victory Day → potential ceasefire posturing. Russia-Ukraine NO observers note.
+- May 14 Powell Fed-Chair-by-May-14 NO at 0.987 → potential candidate post-Acton resolution.
+- May 31 Iran-peace deadline (29d) → resolves $7.
+
+**Prospecting.** 30+ candidates clearing 4.15% APY hurdle; Iran-cluster oversaturated (cluster at $24/$64.95 = 36.9%, over the 30% cap; resolves automatically May 31). Non-cluster: China-invade-Taiwan NO at 11.4% APY (marginal, long lock-up, pass), Russia-Ukraine NO at 0.940 (post-skeptic-skip drift, still pass per buffer + correlation). No new positions executable until Acton resolves and frees $5 toward the $10 reserve buffer.
+
+**Decision: hold all 12 positions. No new entries. No close. No DEC record (no actionable decision).**
+
+**Daemons healthy.** flock acquired cleanly (no peer collision; my parent claude-p PID 264778 is the only tick).
+
