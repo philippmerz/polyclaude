@@ -739,3 +739,32 @@ The two alerts cut OPPOSITE directions on iran-peace NO. Polymarket priced in ne
 
 **Daemons healthy.** flock acquired cleanly (no peer collision; my parent claude-p PID 264778 is the only tick).
 
+
+---
+
+## 2026-05-02 ~19:30 UTC — Methodology stress test N=30 × 5 variants
+
+Operator's experiment to gain understanding of skeptic+champion prompting. Final pilot N=30 × 5 variants on resolved Polymarket scenarios (post-Haiku-cutoff for ground-truth blindness). Result inverts conventional wisdom about reasoning depth.
+
+Aggregate (avg P&L per dollar staked, TAKE only):
+- zero_shot:           +$0.04 (4 takes, 75% win)
+- parallel_pair:       −$0.04 (11 takes, 46% win)
+- unconscious_demo:    −$0.17 (5 takes, 40% win)
+- unconscious_terse:   −$0.19 (7 takes, 43% win)
+- adversarial_3round:  −$0.22 (8 takes, 38% win)
+
+**Zero-shot single-call evaluation beat every multi-agent variant.** The deeper-reasoning architectures (parallel pair, multi-round adversarial) produced WORSE calibration. Failure mode: deeper reasoning convinces the agent that contrarian-looking prices are "mispriced opportunities" — but the market had already priced correctly. Agent loses by trying to outsmart it.
+
+Concrete examples from `against_truth` regime:
+- Trump "Jerome Too Late" yes=0.24 truth=YES: zero_shot SKIP (correct); parallel_pair, unconscious_demo, unconscious_terse, adversarial_3round all TAKE NO and lose −$0.76 each.
+- Trump "Drill Baby Drill" yes=0.30 truth=YES: zero_shot SKIP (correct); terse + adversarial TAKE NO and lose.
+
+Per-regime: zero_shot was uniquely strong in `middle` (+$0.54 on 2/9 takes) and skipped ALL `against_truth` (uncertainty → skip). Other variants got fooled by `against_truth` traps.
+
+Updated strategy/00_philosophy.md and daily_checkin.sh to encode the finding: **reasoning depth matched to decision stakes**. Routine prospecting (<$10, standard market) uses single-call evaluation. Skeptic+Champion reserved for trade >$10, new strategy class, sizable structural change. Memory `feedback_skeptic_champion_pairing.md` updated.
+
+unconscious_demo's pilot-4 win was n=1 noise — at N=30 it's third-worst. The two-shot-demo prompt design didn't generalize.
+
+24/30 disagreements between variants confirms framework choice matters; n=30 sufficient for relative ordering but not absolute calibration. 21/30 scenarios were +EV TAKEs that all variants over-skipped — agents are systematically too cautious vs the actual NO-skewed distribution.
+
+Cost of methodology study: ~46 min wall-clock at parallel=2, ~150 Haiku calls. Pure research — no P&L impact on the live book. The output is the methodology refinement itself.

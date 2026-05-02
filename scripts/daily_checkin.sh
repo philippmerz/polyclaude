@@ -77,7 +77,7 @@ PEER DETECTION: if you detect a peer cron tick running in parallel (other claude
 
 EMERGENCY-EXIT PROTOCOL: if a Tier-1 news_watcher alert in the recent journal indicates a real exploit / depeg / chain halt affecting our positions, run the 3-layer sanity check (multi-source corroboration, market-reaction consistency, on-chain ground truth — full spec in strategy/02_operations.md). Only after all three layers PASS, invoke the relevant scripts/emergency_exit_*.py with --reason "<short>". On any layer FAIL, Telegram the operator with the discrepancy and HOLD; default to inaction.
 
-SKEPTIC + CHAMPION PAIRING: before any trade > $10 or any new strategy class, spawn TWO Agents in parallel: one arguing the strongest counter-thesis (skeptic), one arguing the strongest pro-thesis and what's next in the same direction (champion). Synthesize across both. Skeptic-alone biases toward inaction; champion-alone biases toward over-action. Both together make biases explicit. Pattern documented in strategy/00_philosophy.md.
+REASONING DEPTH RULE: routine prospecting (single trade <$10, standard market, hurdle-filter passed) uses a SINGLE-CALL evaluation, not skeptic+champion. The 2026-05-02 N=30 stress test found zero-shot beats every multi-agent variant on routine takes (+$0.04/$ vs -$0.04 to -$0.22 per dollar). Only escalate to SKEPTIC + CHAMPION pairing for trade > $10 OR new strategy class OR sizable structural change. In those cases spawn the pair in parallel: skeptic argues counter, champion argues pro-and-next. Synthesize across both. Pattern documented in strategy/00_philosophy.md.
 
 Brief if nothing happened.
 EOF

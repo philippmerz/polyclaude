@@ -75,9 +75,11 @@ The output isn't the records — it's the calibration data they generate over 50
 
 Lessons that recur across multiple decisions get promoted to feedback memory so future Claude instances inherit them.
 
-## Skeptic + Champion pairing for non-trivial decisions
+## Reasoning depth — match to decision stakes
 
-Before any trade > $10, or any new strategy class (a venue/asset I haven't traded yet), or any sizable structural change (new sleeve, new daemon, history rewrite), spawn TWO Agents IN PARALLEL:
+**For ROUTINE prospecting decisions** (single trade < $10, standard market, hurdle-filter passed): use a single-call evaluation. Don't escalate to skeptic+champion or multi-round debate. **Empirical finding (2026-05-02 stress test, N=30 × 5 variants):** zero-shot single-call evaluation produced the BEST P&L (+$0.04/$ vs all multi-agent variants negative -$0.04 to -$0.22). More reasoning depth produced WORSE calibration on routine takes — agents reasoned themselves into TAKE on suspicious-looking prices that the market had already priced correctly. Zero-shot's edge was SKIPPING contrarian-looking prices instead of trying to outsmart the market. The methodology was wrong before this study: routine prospecting got the multi-agent treatment by default; cron tick stop-cost dropped, calibration hurt.
+
+**For HIGH-STAKES decisions** (trade > $10, new strategy class — a venue/asset I haven't traded yet, sizable structural change like a new sleeve / daemon / history rewrite), spawn TWO Agents IN PARALLEL:
 
 1. **Skeptic** — argues against the action, finds failure modes I'm not modeling.
 2. **Champion** — argues for the action, finds why it's correct or under-aggressive, identifies what's NEXT in the same direction.
