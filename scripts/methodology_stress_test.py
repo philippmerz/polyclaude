@@ -722,6 +722,195 @@ def cmd_analyze(args: argparse.Namespace) -> int:
     return 0
 
 
+# ---------- prospective (open-market) airtight test --------------------
+
+def fetch_active_markets(target: int = 60, max_pages: int = 20,
+                         min_days: int = 14, max_days: int = 90,
+                         min_liq: float = 20_000) -> list[dict]:
+    """Pull currently-OPEN binary YES/NO markets within a resolution-date window."""
+    out: list[dict] = []
+    seen = set()
+    now = dt.datetime.now(dt.timezone.utc)
+    for page in range(max_pages):
+        try:
+            r = httpx.get(
+                f"{GAMMA}/markets",
+                params={"closed": "false", "active": "true", "limit": "500",
+                        "offset": str(page * 500), "order": "volume24hr",
+                        "ascending": "false"},
+                timeout=25,
+            )
+            r.raise_for_status()
+            batch = r.json()
+        except Exception as e:
+            print(f"  page {page} failed: {e}", file=sys.stderr); break
+        if not batch: break
+        for m in batch:
+            mid = str(m.get("id"))
+            if mid in seen: continue
+            seen.add(mid)
+            if m.get("negRisk"): continue
+            outs = m.get("outcomes")
+            try:
+                outs_l = json.loads(outs) if isinstance(outs, str) else outs
+            except Exception: continue
+            if set(map(str, outs_l or [])) != {"Yes", "No"}: continue
+            desc = m.get("description") or ""
+            if len(desc) < 100: continue
+            if float(m.get("liquidityNum") or 0) < min_liq: continue
+            end = m.get("endDate") or m.get("endDateIso")
+            if not end: continue
+            try:
+                end_dt = dt.datetime.fromisoformat(end.replace("Z", "+00:00"))
+            except Exception: continue
+            days = (end_dt - now).total_seconds() / 86400
+            if not (min_days <= days <= max_days): continue
+            qlower = " " + (m.get("question") or "").lower() + " "
+            if any(pat in qlower for pat in _SPORTS_PATTERNS): continue
+            out.append(m)
+        if len(out) >= target * 2: break
+    return out[:target * 2]
+
+
+def cmd_prospective_setup(args: argparse.Namespace) -> int:
+    print(f"pulling active markets (min_days={args.min_days}, max_days={args.max_days}, "
+          f"min_liq=${args.min_liquidity:,.0f})...")
+    raw = fetch_active_markets(target=args.n, min_days=args.min_days, max_days=args.max_days,
+                                min_liq=args.min_liquidity)
+    print(f"  found {len(raw)} eligible open markets")
+    if len(raw) < args.n:
+        print(f"  WARNING: only {len(raw)} markets matched filter; running on all of them")
+        sample = raw
+    else:
+        rng = random.Random(99)
+        sample = rng.sample(raw, args.n)
+
+    snapshots = []
+    for m in sample:
+        prices = m.get("outcomePrices")
+        try:
+            p = json.loads(prices) if isinstance(prices, str) else prices
+        except Exception: continue
+        snapshots.append({
+            "market_id": str(m.get("id")),
+            "question": m.get("question"),
+            "description": (m.get("description") or "")[:1500],
+            "category": m.get("category"),
+            "simulated_yes_price": float(p[0]),  # REAL current price; field name kept for variant compat
+            "simulated_no_price": float(p[1]),
+            "snapshot_date": dt.datetime.utcnow().isoformat() + "Z",
+            "end_date": m.get("endDate"),
+            "liquidity": float(m.get("liquidityNum") or 0),
+            "volume_num": float(m.get("volumeNum") or 0),
+            # NO ground_truth — to be filled in at resolution. Use placeholders.
+            "resolved_yes": None,
+            "ground_truth_outcome": "PENDING",
+        })
+
+    snap_path = DATA_DIR / "prospective_snapshots.json"
+    snap_path.write_text(json.dumps(snapshots, indent=2, default=str))
+    print(f"  wrote {len(snapshots)} snapshots → {snap_path}")
+
+    variants = args.variants or VARIANTS
+    print(f"\nrunning {len(snapshots)} scenarios × {len(variants)} variants = "
+          f"{len(snapshots) * len(variants)} debates (parallel={args.parallel})")
+
+    ts = dt.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+    out_path = DATA_DIR / f"prospective_results_{ts}.jsonl"
+    print(f"writing → {out_path}")
+
+    work = [(s, v) for s in snapshots for v in variants]
+    started = time.time()
+    completed = 0
+    total = len(work)
+    with out_path.open("w") as f:
+        with ThreadPoolExecutor(max_workers=args.parallel) as ex:
+            futures = {ex.submit(_run_one, s, v): (s, v) for s, v in work}
+            for fut in as_completed(futures):
+                s, v = futures[fut]
+                try:
+                    rec, _ = fut.result()
+                except Exception as e:
+                    rec = {
+                        "scenario_id": s["market_id"], "question": s["question"][:120],
+                        "variant": v, "yes_price": s["simulated_yes_price"],
+                        "ground_truth": "PENDING", "regime": "open",
+                        "verdict": "ERROR", "calls": 0, "seconds": 0,
+                        "transcript": str(e)[:500],
+                    }
+                # Mark prospective in record so we know to wait for resolution
+                rec["prospective"] = True
+                rec["snapshot_date"] = s["snapshot_date"]
+                rec["end_date"] = s["end_date"]
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n"); f.flush()
+                completed += 1
+                rate = completed / max(time.time() - started, 1)
+                eta = (total - completed) / max(rate, 1e-6)
+                print(f"  [{completed}/{total}] {v:<20} {rec['verdict']:<12} "
+                      f"{rec['seconds']:>5.1f}s  eta {eta/60:.1f}m  {s['question'][:50]}")
+    print(f"\ndone in {(time.time() - started)/60:.1f}m → {out_path}")
+    print(f"\nNext step: run `prospective_resolve` after markets close (~{args.max_days} days).")
+    return 0
+
+
+def cmd_prospective_resolve(args: argparse.Namespace) -> int:
+    """Check prospective snapshots for resolutions; score variants vs ground truth."""
+    snap_path = DATA_DIR / "prospective_snapshots.json"
+    if not snap_path.exists():
+        print(f"no prospective snapshots found at {snap_path}", file=sys.stderr); return 2
+    snapshots = json.loads(snap_path.read_text())
+    market_ids = [s["market_id"] for s in snapshots]
+    print(f"checking {len(market_ids)} snapshotted markets for resolution...")
+
+    resolved: dict[str, str] = {}
+    for mid in market_ids:
+        try:
+            r = httpx.get(f"{GAMMA}/markets/{mid}", timeout=15)
+            if r.status_code != 200: continue
+            m = r.json()
+            if not m.get("closed"): continue
+            prices = m.get("outcomePrices")
+            try:
+                p = json.loads(prices) if isinstance(prices, str) else prices
+            except Exception: continue
+            yes_final = float(p[0])
+            if abs(yes_final - 1.0) < 0.05:
+                resolved[mid] = "YES"
+            elif abs(yes_final) < 0.05:
+                resolved[mid] = "NO"
+        except Exception:
+            continue
+
+    print(f"  {len(resolved)}/{len(market_ids)} markets have resolved")
+    if not resolved:
+        print("  no resolved markets yet; come back after the resolution window.")
+        return 0
+
+    # Score variants on the resolved subset
+    files = sorted(DATA_DIR.glob("prospective_results_*.jsonl"), key=lambda p: p.stat().st_mtime)
+    if not files:
+        print("no prospective_results files", file=sys.stderr); return 2
+    rows = [json.loads(l) for l in files[-1].read_text().splitlines() if l.strip()]
+    rows = [r for r in rows if r["scenario_id"] in resolved]
+    for r in rows:
+        r["ground_truth"] = resolved[r["scenario_id"]]
+
+    # Per-variant scoring
+    by_v: dict[str, list[dict]] = {}
+    for r in rows:
+        by_v.setdefault(r["variant"], []).append(r)
+    print(f"\n{'variant':<22} {'n':>4} {'TAKE':>5} {'win%':>6} {'avg PnL/$':>10}")
+    for v, rs in by_v.items():
+        takes = [r for r in rs if r["verdict"] == "TAKE"]
+        if not takes:
+            print(f"{v:<22} {len(rs):>4} {0:>5} {'-':>6} {'-':>10}"); continue
+        pnls = [_ev_per_dollar(r["verdict"], r["yes_price"], r["ground_truth"]) for r in takes]
+        avg = sum(pnls) / len(pnls)
+        wins = sum(1 for p in pnls if p > 0)
+        print(f"{v:<22} {len(rs):>4} {len(takes):>5} {100*wins/len(takes):>5.1f}% {avg:>+9.4f}")
+    return 0
+
+
 # ---------- main --------------------------------------------------------
 
 def main() -> int:
@@ -748,6 +937,21 @@ def main() -> int:
     p.add_argument("--paths", nargs="+", help="specific result files (default: latest)")
     p.add_argument("--merge-all", action="store_true", help="merge all results files in data dir")
     p.set_defaults(fn=cmd_analyze)
+
+    p = sub.add_parser("prospective_setup",
+                       help="snapshot N currently-OPEN markets at real prices, run variants, "
+                            "store for ground-truth-blind validation. Resolves naturally in 30-90 days.")
+    p.add_argument("--n", type=int, default=20)
+    p.add_argument("--min-days", type=int, default=14, help="min days to resolution (avoid imminent resolves)")
+    p.add_argument("--max-days", type=int, default=90, help="max days to resolution (avoid long-dated)")
+    p.add_argument("--min-liquidity", type=float, default=20_000)
+    p.add_argument("--variants", nargs="+", choices=VARIANTS, default=None)
+    p.add_argument("--parallel", type=int, default=2)
+    p.set_defaults(fn=cmd_prospective_setup)
+
+    p = sub.add_parser("prospective_resolve",
+                       help="check the open-market snapshots for resolutions, score against verdicts")
+    p.set_defaults(fn=cmd_prospective_resolve)
 
     args = ap.parse_args()
     return args.fn(args)
