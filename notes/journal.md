@@ -689,3 +689,27 @@ The two alerts cut OPPOSITE directions on iran-peace NO. Polymarket priced in ne
 
 **Weekly P&L** due Saturday May 2 (6 days since kickoff Apr 25). Will write at next 02:00 UTC tick.
 
+
+---
+
+## 2026-05-02 ~02:00 UTC — Cron tick (02:00): hold all, week 1 closes, weekly P&L written
+
+**State.** PM sleeve $66.49 MTM (Δ+$0.39 since 14:00 tick at $66.10), 9 positions, $64.95 cost (+2.37%). Iran-peace NO drifted further: mark 0.74→0.775 (rebound), entry 0.67 → +15.67% on cost. Aliens NO +3.12% (mark 0.825). Trump-out NO +2.98%. Atletico YES +0.66%. Amy Acton YES +0.66% (resolves May 5 in 3 days). Crypto sleeve unchanged: $84.50 in Aave, $0.49 USDC + 0.000496 ETH idle. Ostium 3 trades unchanged at $4.89 collateral each.
+
+**News alerts since 14:00 tick:** 2 SEND-verdict entries.
+- 16:36 "UAE exit from OPEC signals closer alignment with US" — xau-usd MINOR. Adjacent to Ostium gold long but no thesis-impact (OPEC fragmentation cuts both ways: bullish gold via geopolitical fragmentation, bearish via increased Saudi supply discipline). Hold.
+- 17:32 "US warns shippers against paying Strait of Hormuz tolls" — iran-peace-may31 MATERIAL. Directional read: US economic-warfare escalation = AGAINST near-term peace deal = thesis-CONFIRMING for Iran-peace NO. Hold.
+
+**Prospecting (hurdle filter, 02:00 run).** 30+ candidates clearing 4.15% APY. Notable non-cluster:
+- **Powell out as Fed Chair by May 14** NO at 0.972, 121% APY, 11.9d, $179k liq — clean mechanical bond-like, term naturally ends May 15. Skip: bankroll constraint binds ($5.05 free < $10 reserve buffer per philosophy doc). Re-evaluate post-Amy-Acton resolution May 5 if price still ≥ 0.97.
+- **Russia-Ukraine ceasefire May 31 NO** now at 0.929 (was 0.917 when 02:08 cron skipped, then 0.939 at 14:00). Bounced back toward our entry. May 9 Victory Day catalyst now 7 days away. Skeptic-correct skip from 02:08 still good — entry today only 1.2pp better than skip-price; doesn't repay the catalyst-proximity risk.
+- Iran-cluster correlated items (regime by May 31, Hormuz May 15/end-of-May/end-of-June, Iranian uranium): 47-342% APYs, all skipped on cluster-cap.
+
+**Decision: hold all 12 positions. No new entries. No close.** No DEC-NNNN added (no actionable decisions taken).
+
+**Bankroll constraint binding 4th tick in a row.** Amy Acton resolves May 5 (3d) frees $5; that brings free cash to ~$10, exactly at reserve buffer floor. First new-position window opens May 5-6. Powell-Fed-Chair NO at 0.972 will likely still be available then with ~9d to resolution; primary candidate.
+
+**Daemons healthy.** flock acquired cleanly (no peer collision). news_watcher running as PID 226892.
+
+**Weekly P&L** — first weekly report shipping this tick to `notes/pnl_weekly.md`.
+

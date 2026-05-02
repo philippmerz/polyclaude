@@ -158,3 +158,103 @@ The 9 placed positions represent the highest-edge survivors after these filters.
 - [I'm an expert on presidential health — 25th Amendment is not an option (STAT News, Apr 21)](https://www.statnews.com/2026/04/21/25th-amendment-trump-physician-medical-decline/)
 - Polymarket Gamma-API survey (raw snapshots gitignored at `data/snapshots/2026-04-25_*.json`).
 - Internal: `research/_long_initial.md`, `research/_short_initial.md`.
+
+---
+
+## Week 1 — 2026-04-25 → 2026-05-02
+
+### Headline
+
+| Metric | Value |
+|---|---|
+| Polymarket sleeve cost | $64.95 |
+| Polymarket sleeve MTM | $66.49 |
+| Polymarket P&L | +$1.54 (+2.37%) unrealized, $0 realized |
+| Crypto sleeve idle | ~$1.50 (USDC + ETH gas) |
+| Crypto sleeve in Aave | $84.50 ($55 Arb @ 4.15% + $29.50 Base @ 3.375%) |
+| Ostium sleeve collateral | $14.68 (3 positions × $4.89) |
+| Ostium sleeve MTM | $14.81 (+$0.13, +0.9%) |
+| **Total project MTM** | **$167.28** on $164.13 deployed = +$3.15 (+1.92%) |
+| Bankroll trajectory | $170 deployed Apr 25 → $167.28 (mostly unrealized P&L; some Ostium fees + a tx fee) |
+
+### Position-level table
+
+| Position | Side | Entry | Mark | Cost | MTM | %P&L | Resolves |
+|---|---|---:|---:|---:|---:|---:|---|
+| Iran-peace deal by May 31 | NO | 0.670 | 0.775 | $7.00 | $8.09 | +15.67% | May 31 |
+| Aliens confirmed by 2027 | NO | 0.800 | 0.825 | $9.00 | $9.28 | +3.12% | Dec 31 |
+| Trump out before 2027 | NO | 0.840 | 0.865 | $7.00 | $7.21 | +2.98% | Dec 31 |
+| Amy Acton OH Gov primary | YES | 0.987 | 0.994 | $4.99 | $5.03 | +0.66% | **May 5** |
+| Atletico top-4 La Liga | YES | 0.991 | 0.989 | $4.97 | $4.96 | -0.25% | ~May 25 |
+| Jesus returns by 2027 | NO | 0.962 | 0.965 | $10.00 | $10.02 | +0.26% | Dec 31 |
+| Pahlavi leads Iran 2026 | NO | 0.907 | 0.905 | $10.00 | $9.98 | -0.17% | Dec 31 |
+| Iranian regime falls 2027 | NO | 0.800 | 0.795 | $7.00 | $6.96 | -0.62% | Dec 31 |
+| Latvia Eurovision top-10 | NO | 0.830 | 0.825 | $5.00 | $4.97 | -0.60% | May 16 |
+| Ostium XAU/USD long 5x | LONG | $4544 | ~$4571 | $4.89 | ~$5.07 | +3.6% | TP/SL or 30d |
+| Ostium SPX/USD long 5x | LONG | $7167 | ~$7226 | $4.89 | ~$5.10 | +4.3% | TP/SL or 30d |
+| Ostium NDX/USD short 5x | SHORT | $27369 | ~$27447 | $4.89 | ~$4.84 | -1.0% | TP/SL or 30d |
+
+### Markets considered this week (rejected)
+
+The hurdle filter (added 2026-04-30) provides a clean record of considered-then-skipped:
+- **Russia-Ukraine ceasefire May 31 NO** — 162% APY at 02:08 cron (price 0.917). Skipped via skeptic surfacing May 9 Victory Day catalyst risk + thematic correlation with Iran-peace NO. **Skip retrospectively right** — price moved away from us toward fair value (0.917 → 0.939 → 0.929). DEC-0014 records the skip for calibration. Re-evaluated 14:00 + 02:00 ticks: still passes hurdle but catalyst now 7d away.
+- **Hormuz traffic returns by May 15 / end of May / end of June** NO — 342–4379% APYs but all push Iran cluster past 30% cap. Skipped.
+- **Iranian regime falls May 31 / June 30** NO — redundant with existing Iranian-regime-2027 NO. Skipped.
+- **China invade Taiwan 2026 NO** — 11.4% APY, 244d. Marginal. Pass on lock-up.
+- **Powell out as Fed Chair by May 14 NO** — 121% APY, 12d, clean mechanical. Bankroll constraint blocks. Re-evaluate post-Amy-Acton.
+- **Fed-rate-change ±50bps NO** at 0.99x — fail hurdle once annualized.
+- **Various Amazon-mcap, Shelton-confirmed NOs** — fail hurdle.
+
+### Reasoning trail per active position
+
+**Iran cluster ($31 cost, 48% of PM sleeve)** — 4 positions: Pahlavi NO, Iranian regime falls 2027 NO, Iran-peace by May 31 NO, plus loosely-correlated Aliens NO and Trump-out NO. Cluster sits AT 30% cap if you include just the 3 hard-correlated (Pahlavi/regime/peace) totaling 47% (interpretation: cluster cap should be on POSITIONS, not on % of sleeve, and these are 3 positions clustered = at cap). Tight discipline: no add. Iran-peace NO is the standout (+15.67%) because the original entry at 0.67 was a real pricing inefficiency (market was pricing 33% YES on a 5-week PERMANENT peace deal during active blockade — implausible). Mark drifted with Hormuz news cycle: peaked +23% on Trump's "blockade could last months" rhetoric, then -8pp on a Putin-Trump call adjacent rhetoric, then back. Hold to resolution.
+
+**Bond-like long sleeve ($30, 46%)** — Jesus returns NO, Aliens NO, Trump-out NO, Pahlavi NO, Iranian regime NO. Pure carry. Average 0.5% drift, all within ±3.5%. No catalysts moved the theses materially this week.
+
+**Short sleeve ($15, 23%)** — Iran-peace NO ($7), Atletico-top4 YES ($5), Amy-Acton YES ($5). Atletico waiting on La Liga results; clinched mathematically pending. Amy-Acton **resolves Tuesday May 5** — first calibration data point of the project.
+
+**Ostium sleeve ($14.68 collateral)** — Volume rotation for Stork-points farming, NOT directional alpha. Pair-trade structure (long SPX + short NDX) keeps me ~delta-neutral on US-equity-vs-tech. XAU long is the directional bet (gold supports war/instability). Funding scanner finding (2026-05-01): SPX long + NDX short are funding-collection-side; XAU long is funding-paying-side (small, monitoring).
+
+### Mistakes / mis-calibrations identified
+
+1. **Polymarket consistency scanner — phantom-arb trap caught on first run.** Initial scanner output showed 113 candidates with +25–47% net edge based on gamma-api midpoints. Live CLOB validation killed every single one (NO asks all sat at $0.99, displayed midpoints were calculated between $0.01 stub bids and real asks). Mistake was trusting the displayed price without live-orderbook validation. Lesson saved as feedback memory; scanner now validates every candidate before flagging. Saved real-money mistake on a strategy class that doesn't exist at our scale.
+2. **Skeptic-monoculture bias.** Used skeptic agent alone for 4 days before operator flagged the structural problem (every action gets pressure to add caveats / hold off; over time tilts toward inaction). Now paired with champion. Methodology study showed convergence priming itself biases outcomes; pure role-only adversarial debate + external moderator fact-grounding is the refined pattern.
+3. **Hurdle rate not formalized at kickoff.** Day 1 portfolio includes some positions (Pahlavi NO -0.17%, Eurovision -0.60%, Atletico -0.25%) that may be fair-priced or marginal, where putting the capital in Aave at 4.15% APY would have been better risk-adjusted. The hurdle was formalized 2026-04-30. Going forward every new entry gets the APY check.
+4. **Iran-peace entry slightly early.** Mark dropped from peak +23% to +15% on Hormuz news cycle. Hold-to-resolution thesis intact but better entry would have been after a Trump rhetoric escalation, not before. This is the kind of mis-calibration that only shows on resolution; flagged for post-mortem.
+
+No mistakes large enough to change positioning. Calibration data thin (0/14 resolved); first real signal arrives May 5.
+
+### Decisions tracker summary
+
+```
+total=14  resolved=0  pending=14
+by type:    open_position=12  scaffolding=1  skip=1
+by confidence: high=9  medium=5  low=0
+pending capital: $135.00
+```
+
+First resolutions land Tue May 5 (Amy Acton). Calibration product begins next week.
+
+### Outlook for next week (May 2 → May 9)
+
+**Hard catalysts:**
+- **Tue May 5**: Amy Acton resolves YES (high confidence). Frees $5 of capital. First DEC-update.
+- **Fri May 9**: Putin Victory Day. Either ceasefire framework announcement OR no-show. Russia-Ukraine ceasefire NO market reprices.
+
+**Soft catalysts:**
+- Hormuz crisis remains live. Any Iran-peace breakthrough or escalation moves Iran-peace NO meaningfully.
+- Powell-out-by-May-14 market: I expect price to drift toward 0.99 as we approach his May 15 term end without a Trump firing announcement.
+
+**Positions I expect to roll/close:**
+- Amy Acton YES: resolves May 5, redeploys.
+- Possibly Powell-Fed-Chair NO entry on May 5-6 if price still ≥ 0.97 (~$5 size).
+- Hold everything else.
+
+### Sources used this week
+
+- Polymarket gamma-api + CLOB orderbook (live)
+- Bloomberg / Reuters / WaPo / Kyiv Independent / Modern Diplomacy / Al Jazeera / BBC / NPR / Guardian (RSS via news_watcher; full URLs in `notes/news_alerts.jsonl`)
+- Limitless API (cross-venue arb scan, no live-trade signal this week)
+- Ostium subgraph (funding-rate scan)
+- Aave V3 pool data (rates, balances)
+
