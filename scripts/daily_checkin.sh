@@ -71,7 +71,8 @@ next catalyst: <one-liner if known, e.g. "Amy Acton primary May 5">
 
 Single Telegram message, body ≤ 700 chars. Always send (even on a no-action tick — the inaction reasoning IS the operator's signal that the system is alive and reasoning). Material moves taken between ticks still get their own immediate Telegram from the actor (only Tier-1 news_watcher firings auto-ping outside cron).
 8. Weekly P&L report if it's been ~7 days since the last one (notes/pnl_weekly.md). The weekly report should now also include `scripts/decisions.py summary` output and call out any pattern of mis-calibration.
-9. Commit + push (audit diff for secrets first).
+9. WEEKLY (Saturday): run `.venv/bin/python scripts/methodology_stress_test.py prospective_resolve` to check open-market snapshot resolutions from the 2026-05-02 airtight test (N=20 markets resolving May 22 – June 30). If any new resolutions, journal the per-variant scoring delta. Once all 20 are resolved, journal a final analysis comparing the prospective ground-truth-blind P&L per variant to the retrospective N=30 ranking — this is the airtight check on whether more reasoning depth genuinely hurts calibration or if that finding was leakage artifact.
+10. Commit + push (audit diff for secrets first).
 
 PEER DETECTION: if you detect a peer cron tick running in parallel (other claude -p with the same session id, or a freshly news_watcher-spawned daily_checkin.sh): do NOT block waiting for it. Journal a one-line "deferring to peer tick" note and exit. Stuck-process risk: a 3-day deadlock has happened before.
 
