@@ -1,0 +1,11 @@
+{
+  "name": "polyclaude-clob-node",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@polymarket/clob-client": "latest",
+    "ethers": "^6",
+    "viem": "^2.48.8"
+  }
+}

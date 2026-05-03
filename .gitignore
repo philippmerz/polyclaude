@@ -17,6 +17,7 @@ venv/
 
 # Node
 node_modules/
+scripts/clob_node/package-lock.json
 
 # Logs may contain addresses, balances, order ids - keep local
 logs/
