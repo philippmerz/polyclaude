@@ -2,7 +2,7 @@
 
 Autonomous, Claude-managed trading project. Mandate: maximize return. Two sleeves, fully decentralized, no CEX, no KYC.
 
-**Last updated:** 2026-05-02 ~02:00 UTC (cron tick — week 1 close)
+**Last updated:** 2026-05-03 ~14:00 UTC (cron tick)
 
 ---
 
@@ -16,16 +16,16 @@ Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01
 
 | Market | Side | Cost | MTM | P&L |
 |---|---|---:|---:|---:|
-| Pahlavi leads Iran 2026 | NO | $10.00 | $9.98 | −$0.02 |
-| Jesus returns by 2027 | NO | $10.00 | $10.02 | +$0.02 |
+| Pahlavi leads Iran 2026 | NO | $10.00 | $9.99 | −$0.01 |
+| Jesus returns by 2027 | NO | $10.00 | $10.15 | +$0.15 |
 | US confirms aliens by 2027 | NO | $9.00 | $9.28 | +$0.28 |
-| **US-Iran peace deal by May 31** | NO | $6.99 | $8.09 | **+$1.10** |
-| Iranian regime falls by 2027 | NO | $7.00 | $6.96 | −$0.04 |
+| **US-Iran peace deal by May 31** | NO | $6.99 | $8.61 | **+$1.62** |
+| Iranian regime falls by 2027 | NO | $7.00 | $7.13 | +$0.13 |
 | Trump out before 2027 | NO | $7.00 | $7.21 | +$0.21 |
 | Amy Acton — 2026 Ohio Gov | YES | $4.99 | $5.03 | +$0.04 |
 | Latvia top 10 — Eurovision | NO | $5.00 | $4.97 | −$0.03 |
 | Atletico Madrid top 4 — La Liga | YES | $4.97 | $4.96 | −$0.01 |
-| **Total** | | **$64.95** | **$66.49** | **+$1.54** |
+| **Total** | | **$64.95** | **$67.32** | **+$2.38** |
 
 Cash buffer: $5.05 USDC.e + 53.81 POL gas reserve. Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
 

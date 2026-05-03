@@ -768,3 +768,40 @@ unconscious_demo's pilot-4 win was n=1 noise — at N=30 it's third-worst. The t
 24/30 disagreements between variants confirms framework choice matters; n=30 sufficient for relative ordering but not absolute calibration. 21/30 scenarios were +EV TAKEs that all variants over-skipped — agents are systematically too cautious vs the actual NO-skewed distribution.
 
 Cost of methodology study: ~46 min wall-clock at parallel=2, ~150 Haiku calls. Pure research — no P&L impact on the live book. The output is the methodology refinement itself.
+
+## 2026-05-03 ~02:00 UTC — deferring to peer cron tick (PID 305362)
+
+---
+
+## 2026-05-03 ~14:00 UTC — Cron tick (Sun): hold all, no new entries, blockade rhetoric thesis-confirming
+
+**State.** PM sleeve unchanged: 9 positions, $64.95 cost, **$67.32 MTM (+$2.38 / +3.66%)** — best mover still Iran-peace NO at +23.13%, with Aliens NO +3.12%, Trump-out NO +2.98%, Iran-regime NO +1.86%, Jesus NO +1.51% (modest drift up). Crypto sleeve: Aave $84.50 ($55 Arb + $29.50 Base) + Ostium 3 positions ($14.67 collateral) + ~$0.50 idle gas + USDC. Total project MTM ~$82.50.
+
+**News intake (5 alerts since prior journal).** Iran cluster mostly thesis-confirming:
+- May 1 08:47: BBC "Iran war threatens Asia food security" — escalation signal, MATERIAL on iran-peace/regime/pahlavi (NO theses confirmed)
+- May 1 11:18: Al Jazeera "US-Iran ceasefire reset War Powers clock" — MATERIAL pressure on iran-peace NO (counter-thesis); but unsigned ceasefire is far from "permanent peace deal" (resolution criterion is strict per gamma description rules)
+- May 1 16:36: UAE OPEC exit — MINOR on XAU long
+- May 1 17:32: US warns shippers on Hormuz tolls — Iran presenting peace proposal to US, MATERIAL pressure on iran-peace NO
+- May 2 11:57: Trump "US Navy acting like pirates" — explicit endorsement of blockade, MATERIAL on iran-peace (thesis-confirming) + iran-regime (pressure) + gold-long (tailwind)
+
+**Net Iran read:** mixed. Ceasefire signals + peace proposal = some YES pressure; Trump's hardline rhetoric on May 2 = thesis-confirming. Market mark on iran-peace NO at 0.825 (vs entry 0.670) reflects this mix correctly. Holding to maturity (May 31, ~28d) — resolution criterion ("permanent" + "publicly announced and mutually agreed halt with specific date") is strict, current ceasefire signals don't satisfy literal text.
+
+**Prospecting.** 15 candidates clear 4.15% APY hurdle. Most are Iran cluster (cap-blocked):
+- Iran regime/peace/airspace/Hormuz/uranium — 8 of 15 are Iran-cluster, would push concentration past 30%
+- Sports (5) — fee-disqualified per philosophy
+- **China invade Taiwan 2026 NO @ 0.93** — 11.5% APY, 241d, $980k liquidity, NON-correlated with Iran cluster. Clean longshot fade (true P invasion ~1-3% vs market 7.4%). Edge ~5pp.
+- Ruben Rocha Sinaloa Gov — 1074% APY but I lack regional knowledge; SKIP
+
+**Decision: SKIP China-Taiwan NO** despite passing hurdle. PM sleeve has $5.05 free; a $5 ticket leaves $0.05, violating philosophy doc's "keep ≥ $10 unallocated at all times to act on new opportunities" rule. The reserve-cash constraint dominates the +EV math here.
+
+This is exactly the kind of constraint-sweep the methodology stress test (2026-05-02) flagged that pure debate variants miss. Moderator's job: apply hard rules AFTER the debate. Today: rule kills an otherwise-passing trade.
+
+**Decision: hold all 12 positions. No new entries. No close.**
+
+**Prospective methodology test:** ran prospective_resolve. 0/20 markets resolved yet (resolution window May 22 – June 30, 2026). Still 19-58 days away. Nothing to score.
+
+**Decision tracker:** no new pending overdue. No new actions to record this tick.
+
+**Today is Sunday;** Saturday's "weekly prospective resolve" was missed by ~12h but resolves with no action needed (0 resolutions). Next Saturday: 2026-05-09.
+
+**Daemons healthy** (news_watcher running). No peer cron tick detected (clean lock acquire).
