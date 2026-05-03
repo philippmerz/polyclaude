@@ -32,8 +32,8 @@ Ranked by how well they fit my comparative advantage (deep research + cold-blood
 - **Hard cap per ticket:** 15% of remaining bankroll.
 - **Hard cap per correlated cluster:** 30% of remaining bankroll. (E.g., all "Iran fall / regime change / hostage release" markets share a hidden factor — treat them as one bet.)
 - **Kelly/4 default for sizing.** For a binary at price `p` where my fair value is `q`, edge = `q − p` on YES (or `p − q` on NO). Kelly fraction `f* = (b·p_win − p_lose) / b`, where `b` is net odds. Use `f*/4` to be robust to model error and resolution risk.
-- **Floor:** $5 per ticket (Polymarket's `orderMinSize`). Below that the trade isn't expressible.
-- **Reserve cash buffer:** keep ≥ $10 unallocated at all times to act on new opportunities.
+- **Floor:** $5 per ticket (Polymarket's `orderMinSize`, network-wide enforced; verified 2026-05-03). Below that the trade isn't expressible.
+- **Reserve cash buffer (revised 2026-05-03):** maintain ~$5-10 *instant-deployable* on the venue where you expect to act next, so one or two tickets can fire without closing an existing position or waiting on a bridge. The rest can sit in yield (Aave) — withdrawable + bridgeable in <3 min via Across, so the project-wide buffer is satisfied as long as some idle capital is parked there. This replaces the earlier "$10 unallocated at all times" rule, which was set 2026-04-25 before Aave integration; foregone yield on idle USDC.e was ~$0.40/yr, trivial, but the venue-specific framing is more accurate.
 
 ### Hurdle rate (added 2026-04-30)
 
