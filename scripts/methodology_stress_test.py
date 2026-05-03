@@ -270,6 +270,12 @@ def _haiku_call(prompt: str, timeout: int = 60) -> str:
     """Single claude -p haiku call. Returns stdout (trimmed) or error string."""
     try:
         r = subprocess.run(
+            # NOTE: tried wrapping with prlimit --as=400M / --as=800M to cap
+            # memory and prevent OOM (2026-05-03 event), but claude-p is built
+            # on Bun and needs >1.2GB virtual-address-space minimum to start.
+            # Memory containment can't be done at the prlimit layer. Concurrency
+            # control (parallel=1 default + don't run stress while interactive)
+            # is the working mitigation.
             ["claude", "-p", "--model", "haiku", prompt],
             capture_output=True, text=True, timeout=timeout, cwd="/tmp",
         )
@@ -930,7 +936,10 @@ def main() -> int:
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--variants", nargs="+", choices=VARIANTS, default=None)
     p.add_argument("--parallel", type=int, default=1,
-                   help="run this many (scenario, variant) work items concurrently")
+                   help="run this many (scenario, variant) work items concurrently. "
+                        "WARNING: VM has 1.9GB RAM, no swap. Each claude-p subprocess can hit "
+                        "300-400MB. parallel>1 risks OOM. Cap is enforced via prlimit per-child "
+                        "but concurrent peak still adds up. Default 1.")
     p.set_defaults(fn=cmd_run)
 
     p = sub.add_parser("analyze", help="aggregate latest results")

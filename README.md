@@ -2,7 +2,7 @@
 
 Autonomous, Claude-managed trading project. Mandate: maximize return. Two sleeves, fully decentralized, no CEX, no KYC.
 
-**Last updated:** 2026-05-03 ~14:00 UTC (cron tick)
+**Last updated:** 2026-05-03 ~17:10 UTC (post-OOM recovery)
 
 ---
 
@@ -16,18 +16,20 @@ Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01
 
 | Market | Side | Cost | MTM | P&L |
 |---|---|---:|---:|---:|
-| Pahlavi leads Iran 2026 | NO | $10.00 | $9.99 | −$0.01 |
+| Pahlavi leads Iran 2026 | NO | $10.00 | $10.00 | $0.00 |
 | Jesus returns by 2027 | NO | $10.00 | $10.15 | +$0.15 |
 | US confirms aliens by 2027 | NO | $9.00 | $9.28 | +$0.28 |
-| **US-Iran peace deal by May 31** | NO | $6.99 | $8.61 | **+$1.62** |
+| **US-Iran peace deal by May 31** | NO | $6.99 | $8.30 | **+$1.31** |
 | Iranian regime falls by 2027 | NO | $7.00 | $7.13 | +$0.13 |
 | Trump out before 2027 | NO | $7.00 | $7.21 | +$0.21 |
 | Amy Acton — 2026 Ohio Gov | YES | $4.99 | $5.03 | +$0.04 |
 | Latvia top 10 — Eurovision | NO | $5.00 | $4.97 | −$0.03 |
 | Atletico Madrid top 4 — La Liga | YES | $4.97 | $4.96 | −$0.01 |
-| **Total** | | **$64.95** | **$67.32** | **+$2.38** |
+| **Total** | | **$64.95** | **$67.02** | **+$2.07** |
 
-Cash buffer: $5.05 USDC.e + 53.81 POL gas reserve. Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
+Venue-specific buffer: $5.05 USDC.e + 53.81 POL gas reserve. Project-wide buffer is implicitly satisfied by Aave deposits below (withdrawable + bridgeable in <3 min). Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
+
+> **Operational note (2026-05-03)**: Polymarket pushed an exchange contract upgrade to v2 (new EIP-712 domain version + revised Order schema). Both first-party SDKs (py-clob-client 0.34.6, TS @polymarket/clob-client 5.8.1) still send v1 orders and get rejected with `400 order_version_mismatch`. New entries, early closes, and emergency-exit orders are all blocked until the SDKs catch up or we ship a v2 signer. Reads (positions, orderbook, balances) work fine. Existing 9 positions resolve naturally regardless. Schema details + addresses extracted from the frontend bundle: [`research/_polymarket_v2_schema_2026-05-03.md`](research/_polymarket_v2_schema_2026-05-03.md).
 
 ### Crypto sleeve — `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` (multi-chain)
 
@@ -37,13 +39,11 @@ Note: Ostium has no public per-address trader profile (wallet-connect SPA). DeBa
 
 Bankroll $100. Funded 2026-04-29. Strategy + tier-ranked plays in [`research/_crypto_landscape_2026-04-27.md`](research/_crypto_landscape_2026-04-27.md).
 
-**Default split (deployment in progress):**
-- $50 → Ostium points-farming + RWA-perp directional (Arbitrum)
-- $30 → Limitless ↔ Polymarket prediction-market arb (Base)
-- $10 → PLUME directional buy (Plume Network)
-- $10 → reserve / gas
-
-**Current state:** 3 active Ostium positions ($14.67 collateral). Idle USDC parked in Aave V3: **$55 on Arbitrum @ 4.152% APY** (deposited 2026-04-30) + **$29.50 on Base @ 3.375% APY** (deposited 2026-04-29). Withdrawable in <1 min for any opportunity. $35 of the Ostium budget still pending operator greenlight.
+**Original allocation plan (2026-04-29):** $50 Ostium / $30 Limitless arb / $10 PLUME / $10 reserve. Deployed differently after live diligence:
+- **Ostium**: 3 active positions ($14.67 collateral). Remaining budget held back; volume rotation as positions close.
+- **Limitless ↔ Polymarket arb**: scanner shipped (`scripts/limitless_arb_scan.py`), live-quote auto-executor downgraded to inspector-only after EV analysis showed expected value goes negative at our size given resolution-divergence risk on subjective markets. Capital re-routed to Aave.
+- **PLUME**: directional buy parked indefinitely; no entry placed.
+- **Aave V3 (idle yield)**: **$55.02 on Arbitrum @ 4.27% APY** (deposited 2026-04-30) + **$29.51 on Base @ 3.33% APY** (deposited 2026-04-29). Withdrawable + bridgeable in <3 min. Sets the *hurdle rate* for any new bond-like NO buy on Polymarket.
 
 **Open Ostium positions:**
 
@@ -74,11 +74,16 @@ Strategy: [`strategy/00_philosophy.md`](strategy/00_philosophy.md) — sizing ru
 
 ```
 strategy/   — philosophy, sleeve allocation, operations spec
-research/   — per-question audit memos (yield, algo trading, crypto landscape, initial portfolios)
-scripts/    — runnable Python tooling (clob client, ostium client, news watcher, telegram, bridges, status readers)
-notes/      — chronological journal + weekly P&L reports
+research/   — per-question audit memos (yield, algo trading, crypto landscape, initial portfolios, PM v2 schema)
+scripts/    — Python tooling: CLOB + Ostium clients, news watcher, telegram, bridges, Aave deposits,
+              decision tracker, methodology stress-test harness, status readers, emergency exits.
+              clob_node/ holds a TS clob-client probe used for SDK-version diagnosis.
+notes/      — chronological journal + weekly P&L reports + structured news_alerts.jsonl + decisions.json
+data/       — gitignored: methodology snapshots, market discovery snapshots
 ```
 
 ## Operator interface
 
-Operator messages via Telegram → land in the live Claude tmux pane. Cron Claude updates this README each tick with current portfolio state. Blocking questions surfaced via Telegram from the live session.
+Operator messages via Telegram → `scripts/telegram_listener.py` injects them into the live Claude tmux pane. Telegram replies are **action-only** by convention: cron tick sends a structured summary (MTM Δ, material news alerts processed, actions/inactions taken, next catalyst), and material moves outside the tick window get an immediate ping. Raw RSS pings were dropped 2026-05-02 — the operator wanted decision feed, not news feed.
+
+Convention for inbound Telegram messages: prefixing with `telegram:` or `reply on telegram:` signals the operator is on phone and a Telegram reply is required. Non-prefixed messages = at the laptop, local reply suffices.
