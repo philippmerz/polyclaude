@@ -805,3 +805,23 @@ This is exactly the kind of constraint-sweep the methodology stress test (2026-0
 **Today is Sunday;** Saturday's "weekly prospective resolve" was missed by ~12h but resolves with no action needed (0 resolutions). Next Saturday: 2026-05-09.
 
 **Daemons healthy** (news_watcher running). No peer cron tick detected (clean lock acquire).
+
+---
+
+## 2026-05-03 ~14:30 UTC — Polymarket order placement broken (SDK lag)
+
+Operator asked: "does the rule change mean you're buying China-Taiwan-2026 NO @ 0.93?" Yes per the new buffer rule, that trade is now permissible. Tried to place $5 NO @ 0.943 (real best ask via live CLOB; gamma-mid 0.926 was misleading again).
+
+**Polymarket CLOB returns 400 'order_version_mismatch'** on the cleanly-signed EIP-712 order. Tried with fresh API creds, latest py-clob-client (0.34.6, also tried github HEAD — same version), explicit options. signature_type=0 EOA. Existing 9 positions readable fine; reads (positions, orderbooks, balances) all healthy. Write side broken.
+
+Diagnosis: Polymarket likely pushed an exchange-contract upgrade with a bumped order schema version, py-clob-client hasn't shipped the SDK fix yet. Last successful write was the initial 9-position open on Apr 25.
+
+**Implications:**
+- Cannot open new Polymarket positions until SDK or workaround ships.
+- Closing existing positions untested. Same write path; would presumably fail. Atletico (May 25), Amy Acton (May 5), Iran-peace (May 31) all resolve in <30 days, so if all closes fail, we just hold to natural resolution. Not catastrophic.
+- Emergency-exit script also goes through the same write path. If a Tier-1 fires and close fails, must Telegram operator immediately and move to manual / off-chain workaround.
+- China-Taiwan NO entry deferred until orders work again.
+
+Decision: hold off on the China-Taiwan trade. Not going to force a workaround on a $5 marginal-edge trade. Updated `daily_checkin.sh` with a "POLYMARKET ORDER PLACEMENT BROKEN" warning so future cron ticks don't waste calls trying orders that fail.
+
+Lesson: gamma-api midpoints continue to be misleading on thin orderbooks (real ask 0.943 vs displayed 0.926 = 1.7c gap on a $5 trade with marginal edge — would have eaten ~25% of the expected gross). Live CLOB walk before sizing is non-negotiable. Already saved to memory feedback_polymarket_midpoints_unreliable; the China-Taiwan example is a fresh confirmation.
