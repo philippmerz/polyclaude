@@ -282,7 +282,9 @@ def cancel_order(order_id: str) -> dict:
     body = {"orderID": order_id}
     headers = _hmac_headers("DELETE", "/order", body, creds, address)
     body_str = json.dumps(body, separators=(",", ":"), ensure_ascii=False)
-    r = httpx.delete(f"{CLOB_HOST}/order", content=body_str.encode(), headers=headers, timeout=15)
+    # httpx.delete() doesn't accept `content=` kwarg; use explicit request().
+    r = httpx.request("DELETE", f"{CLOB_HOST}/order",
+                      content=body_str.encode(), headers=headers, timeout=15)
     return {"status_code": r.status_code, "body": _safe_json(r)}
 
 

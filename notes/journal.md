@@ -855,3 +855,24 @@ Per-position impact reads from the agent (all MATERIAL, none CRITICAL):
 
 **Daemons all healthy** post-OOM recovery: news_watcher PID 385, telegram_listener PID 384, heartbeat_watch PID 386. Free RAM 1.2GB / 1.9GB.
 
+
+---
+
+## 2026-05-04 ~17:00 UTC — v2 signer working end-to-end + OOM fixed via swap
+
+Operator pointed out (a) recurring OOM on the VM, (b) the prior turn I hadn't actually done web research on the v2 breakage, just one shallow WebFetch. Fixed both.
+
+**Recurring OOM root cause**: 1.9GB RAM, 0 swap. Heavy claude-p subprocesses (1GB+ each during stress work) trip OOM-killer. Added 2GB swap file (persistent in /etc/fstab). Cold pages now page out instead of process kills.
+
+**v2 SDK breakage — full diagnosis via web search this time**:
+- Polymarket Apr 28 2026 cutover: new CLOB v2 + new collateral token pUSD ([help.polymarket.com](https://help.polymarket.com/en/articles/14762452-polymarket-exchange-upgrade-april-28-2026), [docs.polymarket.com/v2-migration](https://docs.polymarket.com/v2-migration)). Both first-party SDKs lag. GitHub issues #336/#337 on py-clob-client confirm widespread `order_version_mismatch`.
+- Built `scripts/clob_v2.py` — direct REST + EIP-712, no SDK. Body shape: BOTH v1 backward-compat fields (taker/expiration/nonce/feeRateBps) AND v2 new fields (timestamp/metadata/builder), salt as JSON number, side as "BUY"/"SELL" string.
+- v2 collateral is **pUSD** (`0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB`), backed 1:1 by USDC. Wrap path: approve USDC.e → CollateralOnramp (`0x93070a847efEf7F70739046A929D47a521F5B8ee`), then call `wrap(USDC.e, recipient, amount)`. Offramp at `0x2957922Eb93258b93368531d39fAcCA3B4dC5854`.
+- Wrapped 5 USDC.e → 5 pUSD. Set pUSD approvals to both v2 exchanges (CTF Exchange V2 `0xE111180000d2663C0091e4f400237545B87B996B` + NegRisk V2 `0xe2222d279d744050d28e00520010520000310F59`).
+- **End-to-end verified**: placed test BUY $5 NO at 0.10 on Trump-out (deeply below market 0.86, won't fill) — order accepted, status="live", orderID returned. Cancelled — 200 OK, returned to no-orders state. Place + cancel both work.
+
+Cost of the validation: 5 on-chain txs (approves + wrap + place + cancel) ≈ $0.005 in MATIC gas. The wrap moved my Polymarket sleeve liquid buffer from $5.05 USDC.e to $5.00 pUSD (with $0.05 USDC.e dust left).
+
+**Decision: not opening the China-Taiwan-2026 NO trade tonight** despite tooling now unblocked. Reasons: (a) edge is thin (~5pp gross before fees, $0.20 expected net over 8mo after Aave hurdle), (b) it adds correlation to the existing "Trump-era stability holds" book, (c) $5 stake is the entire pUSD float; would leave zero on-venue buffer. The infra work itself is enough for one session — better to deploy on a higher-conviction candidate when one surfaces. The relevant change for going forward: write capability is restored; the cron tick can resume opening positions when the hurdle filter surfaces something worth taking.
+
+Existing 9 v1 positions are unaffected — they resolve naturally on v1 contracts and pay USDC.e on redemption. No early closes needed for any of them.
