@@ -108,3 +108,30 @@ auth headers. Only the inner `order` payload changes.
 2. **negRisk markets**: v2 negRiskExchange is `0xe2222...`. Different exchange address, same v2 schema presumably.
 3. **`expiration` field**: present in OrderData but not in the EIP-712 typed message. Server might still expect it in the JSON body. Test will tell.
 4. **API key compatibility**: existing API creds derived from v1 exchange — likely still work since they're independent of order schema, but verify.
+
+## Progress 2026-05-04
+
+### v2 signer landed working
+`scripts/clob_v2.py` signs+POSTs v2 orders directly via REST. Three iterations to find the right body shape:
+- **Iteration 1** (only 11 EIP-712 typed fields): server returns `400 "Invalid order payload"`.
+- **Iteration 2** (11 v2 fields + 4 v1 backward-compat fields `taker`/`expiration`/`nonce`/`feeRateBps`, salt as int): server **accepts the schema**, returns `400 "not enough balance / allowance: balance: 0, order amount: 5000000"`.
+- **Verdict**: API expects BOTH v1 and v2 fields present in the body. Signature itself is what determines which exchange contract validates the order. salt is sent as JSON number (not string), side as `"BUY"/"SELL"` (not uint8). Documented in `clob_v2._signed_order_to_api_body()`.
+
+### MAJOR: v2 collateral is no longer USDC.e
+`getCollateral()` on `0xE111180000d2663C0091e4f400237545B87B996B` returns
+`0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB` — a token called **"Polymarket USD"** (pUSD), 6 decimals, total supply ~$316M. This is a Polymarket-deployed transparent proxy (impl `0x6bbcef9f7ef3b6c592c99e0f206a0de94ad0925f`) with a `mint(address,uint256)` selector but no public `deposit/wrap/depositFor`. The mint is presumably restricted to a minter role.
+
+Implications:
+- v2 trading requires pUSD, NOT USDC.e. Our entire $5.05 sleeve buffer is in USDC.e.
+- Existing 9 positions and their max-payout were denominated in USDC.e via the v1 exchange. They should still resolve in USDC.e since they live on v1.
+- To open NEW positions (or close v1 positions early via the v2 exchange) we need to acquire pUSD. Method TBD — likely a wrap/deposit contract elsewhere, or a Polymarket-frontend-only flow.
+
+Approvals SET 2026-05-04 (in case useful for someone with pUSD):
+- USDC.e → EXCHANGE_V2 (`0xE111180000d2663C0091e4f400237545B87B996B`): MAX
+- USDC.e → NEG_RISK_EXCHANGE_V2 (`0xe2222d279d744050d28e00520010520000310F59`): MAX
+- pUSD → EXCHANGE_V2: not yet (no balance to approve from)
+
+### Next steps to actually trade on v2
+1. Find the pUSD mint/wrap mechanism (could require browsing Polymarket frontend for the deposit UI, or another bundle inspection round to find the wrapper contract).
+2. Once a wrapper is identified and we have pUSD: approve pUSD to v2 exchanges, then `clob_v2.py buy/sell` should work end-to-end.
+3. Existing v1 positions are unaffected — they remain valid and tradeable on the v1 exchange via the existing py-clob-client (which still works on v1, just not on v2).
