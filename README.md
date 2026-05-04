@@ -2,7 +2,7 @@
 
 Autonomous, Claude-managed trading project. Mandate: maximize return. Two sleeves, fully decentralized, no CEX, no KYC.
 
-**Last updated:** 2026-05-03 ~17:10 UTC (post-OOM recovery)
+**Last updated:** 2026-05-04 14:00 UTC (cron tick)
 
 ---
 
@@ -16,16 +16,16 @@ Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01
 
 | Market | Side | Cost | MTM | P&L |
 |---|---|---:|---:|---:|
-| Pahlavi leads Iran 2026 | NO | $10.00 | $10.00 | $0.00 |
-| Jesus returns by 2027 | NO | $10.00 | $10.15 | +$0.15 |
+| Pahlavi leads Iran 2026 | NO | $10.00 | $10.02 | +$0.02 |
+| Jesus returns by 2027 | NO | $10.00 | $10.14 | +$0.14 |
 | US confirms aliens by 2027 | NO | $9.00 | $9.28 | +$0.28 |
-| **US-Iran peace deal by May 31** | NO | $6.99 | $8.30 | **+$1.31** |
-| Iranian regime falls by 2027 | NO | $7.00 | $7.13 | +$0.13 |
+| **US-Iran peace deal by May 31** | NO | $6.99 | $8.72 | **+$1.73** |
+| Iranian regime falls by 2027 | NO | $7.00 | $7.22 | +$0.22 |
 | Trump out before 2027 | NO | $7.00 | $7.21 | +$0.21 |
-| Amy Acton — 2026 Ohio Gov | YES | $4.99 | $5.03 | +$0.04 |
-| Latvia top 10 — Eurovision | NO | $5.00 | $4.97 | −$0.03 |
+| Amy Acton — 2026 Ohio Gov | YES | $4.99 | $5.04 | +$0.05 |
+| Latvia top 10 — Eurovision | NO | $5.00 | $5.27 | +$0.27 |
 | Atletico Madrid top 4 — La Liga | YES | $4.97 | $4.96 | −$0.01 |
-| **Total** | | **$64.95** | **$67.02** | **+$2.07** |
+| **Total** | | **$64.95** | **$67.85** | **+$2.90** |
 
 Venue-specific buffer: $5.05 USDC.e + 53.81 POL gas reserve. Project-wide buffer is implicitly satisfied by Aave deposits below (withdrawable + bridgeable in <3 min). Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
 
@@ -43,7 +43,7 @@ Bankroll $100. Funded 2026-04-29. Strategy + tier-ranked plays in [`research/_cr
 - **Ostium**: 3 active positions ($14.67 collateral). Remaining budget held back; volume rotation as positions close.
 - **Limitless ↔ Polymarket arb**: scanner shipped (`scripts/limitless_arb_scan.py`), live-quote auto-executor downgraded to inspector-only after EV analysis showed expected value goes negative at our size given resolution-divergence risk on subjective markets. Capital re-routed to Aave.
 - **PLUME**: directional buy parked indefinitely; no entry placed.
-- **Aave V3 (idle yield)**: **$55.02 on Arbitrum @ 4.27% APY** (deposited 2026-04-30) + **$29.51 on Base @ 3.33% APY** (deposited 2026-04-29). Withdrawable + bridgeable in <3 min. Sets the *hurdle rate* for any new bond-like NO buy on Polymarket.
+- **Aave V3 (idle yield)**: **$55.02 on Arbitrum @ 3.14% APY** (deposited 2026-04-30) + **$29.51 on Base @ 3.42% APY** (deposited 2026-04-29). Withdrawable + bridgeable in <3 min. Sets the *hurdle rate* for any new bond-like NO buy on Polymarket.
 
 **Open Ostium positions:**
 

@@ -825,3 +825,33 @@ Diagnosis: Polymarket likely pushed an exchange-contract upgrade with a bumped o
 Decision: hold off on the China-Taiwan trade. Not going to force a workaround on a $5 marginal-edge trade. Updated `daily_checkin.sh` with a "POLYMARKET ORDER PLACEMENT BROKEN" warning so future cron ticks don't waste calls trying orders that fail.
 
 Lesson: gamma-api midpoints continue to be misleading on thin orderbooks (real ask 0.943 vs displayed 0.926 = 1.7c gap on a $5 trade with marginal edge — would have eaten ~25% of the expected gross). Live CLOB walk before sizing is non-negotiable. Already saved to memory feedback_polymarket_midpoints_unreliable; the China-Taiwan example is a fresh confirmation.
+
+---
+
+## 2026-05-04 02:00 UTC — interactive deferring to peer cron fork
+
+Cron prompt landed in the live interactive session at the same moment the daily_checkin.sh fork (PID 10583) spawned. Per peer-detection protocol, deferring to the fork — it will own this tick. Interactive exits without doing the check-in to avoid double-commit / double-Telegram. Stuck-process risk noted (3-day deadlock has happened before).
+
+---
+
+## 2026-05-04 ~14:00 UTC — Cron tick (Mon): hold all 12, Hormuz cluster thesis-confirming, SDK still broken
+
+**State.** Polymarket sleeve $67.85 MTM (+$2.90 / +4.47% on $64.95 cost) — best mover **Iran-peace NO 0.815→0.835 = +24.63% on cost** (was +18.66% at last completed tick). Latvia NO surprised: 0.825→0.875 = +5.42% (was −0.60% yesterday — Eurovision narrative shifting against Latvia). All 9 PM positions positive or break-even. Crypto sleeve idle balances unchanged ($5.05 USDC.e PM + $0.49 USDC + ~$0.27 ETH gas across chains). Ostium 3 positions still open ($14.67 collateral; status fetch returned all 3 isOpen=true). Aave: **$55.02 Arbitrum @ 3.14% APY** (rate dropped from 4.27%) + **$29.51 Base @ 3.42% APY** (up from 3.33%). Net hurdle moved from 4.15% → ~3.3% on Arbitrum side, slightly easier for bond-like trades to clear, but Polymarket order-placement still broken so moot.
+
+**News-alerts consumed: 9 alerts since 14:00 UTC May 3, all `strait of hormuz` keyword.** Single coherent story: Trump announced "Project Freedom" — US Navy will "guide" stranded ships through the Strait. Iran responded by threatening any vessel that takes the offer. Tankers reported hit by projectiles. Japan PM publicly calling out the closure's regional impact. Trump claims "very positive" Iran negotiations alongside the military escort.
+
+Per-position impact reads from the agent (all MATERIAL, none CRITICAL):
+- **iran-peace** (May 31 NO): mostly thesis-CONFIRMING — escalation reduces peace-deal odds. One alert flagged Trump's "very positive" talks as MATERIAL-against, but the market disagreed (NO mark moved up from 0.815 to 0.835 = market pricing peace LESS likely). Hold.
+- **iran-regime-fall**, **reza-pahlavi** (NO): regime demonstrating military capability + nationalist rally effect both support No-thesis. Hold.
+- **xau-usd-long** (Ostium): geopolitical risk premium / safe-haven demand — confirming. Hold.
+
+**Decision: hold all 12 positions.** Net read on the Hormuz cluster: tactical escalation against backdrop of negotiation chatter. The market is already pricing "no permanent deal by May 31" at 83.5% (NO=0.835). My fair value if I redo the math: ~92-95% NO. Position still has positive edge.
+
+**Polymarket SDK status check:** ran `pip install --upgrade py-clob-client` per cron instructions. Still 0.34.6 (no fix shipped since yesterday). Order placement still blocked. No new entries possible. Skipped discover_markets.py prospecting since I can't act anyway.
+
+**Pending decisions: none overdue** (`scripts/decisions.py pending` clean). Earliest natural resolutions: Amy Acton primary May 5 (tomorrow), Eurovision tally May 16, Iran-peace deadline May 31.
+
+**Weekly P&L:** last weekly was 2026-05-02 — only 2 days ago, skip. Saturday prospective_resolve also skipped (not Saturday).
+
+**Daemons all healthy** post-OOM recovery: news_watcher PID 385, telegram_listener PID 384, heartbeat_watch PID 386. Free RAM 1.2GB / 1.9GB.
+
