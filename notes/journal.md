@@ -876,3 +876,44 @@ Cost of the validation: 5 on-chain txs (approves + wrap + place + cancel) ≈ $0
 **Decision: not opening the China-Taiwan-2026 NO trade tonight** despite tooling now unblocked. Reasons: (a) edge is thin (~5pp gross before fees, $0.20 expected net over 8mo after Aave hurdle), (b) it adds correlation to the existing "Trump-era stability holds" book, (c) $5 stake is the entire pUSD float; would leave zero on-venue buffer. The infra work itself is enough for one session — better to deploy on a higher-conviction candidate when one surfaces. The relevant change for going forward: write capability is restored; the cron tick can resume opening positions when the hurdle filter surfaces something worth taking.
 
 Existing 9 v1 positions are unaffected — they resolve naturally on v1 contracts and pay USDC.e on redemption. No early closes needed for any of them.
+
+---
+
+## 2026-05-05 ~02:00 UTC — Cron tick: hold all, Iran-peace at +29% on escalation
+
+**State.** Polymarket sleeve: 9 positions, $64.95 cost → $68.31 MTM (+$3.37 / +5.18%). vs prior tick (2026-05-04 ~17:00) +$0.99. Iran-peace NO mark 0.815 → 0.865 (+5pp) — position now +$2.04 / +29.10% on cost, the standout. Latvia Eurovision NO 0.83 → 0.915 (+8.5pp) → position +$0.51 / +10.24%. Other positions within ±$0.05.
+
+Polymarket buffer: $0.05 USDC.e + 5.00 pUSD (just wrapped 2026-05-04). Crypto sleeve: Aave $84.50 ($55.02 Arb + $29.51 Base), Ostium $14.67 collateral across 3 positions. MATIC for gas: 53.76. ETH on Arb 0.000079, Base 0.000496.
+
+**News alerts (5 since prior tick).** Iran/Hormuz escalation cluster:
+- US strikes Iranian fast boats (May 4, ~22:50 UTC)
+- Iran attacks UAE oil facility (~22:50)
+- Trump on Truth Social: "blow Iran off the face of the earth" (~01:14 May 5)
+- Mike Waltz pushes UN resolution against Iranian Hormuz mining
+- Multi-source coverage: Reuters, FT, AP, NPR
+
+Per-position impact assessments (from haiku reactor) all directionally correct:
+- iran-peace [CRITICAL]: peace by May 31 mathematically implausible — CONFIRMS NO ✓ (already realized in price: NO at 0.865)
+- iran-regime-fall [MATERIAL]: tail risk, regime destabilization — modest pressure on NO. BUT 8mo horizon, Iran has weathered worse without regime fall; thesis intact.
+- reza-pahlavi [MATERIAL]: regime-change scenario raises Pahlavi salience — same magnitude pressure, same intact thesis.
+- xau-usd-long [MATERIAL]: safe-haven gold bid — CONFIRMS Ostium long ✓
+
+Verified primary sources: Reuters, AP wire stories on US strikes + Iran UAE attack are real. CRITICAL impact on iran-peace is correctly flagged. **HOLD on all 12 positions** — directional pressure is favorable for the book and v1 positions can't be closed early via clob_v2 anyway (different exchange contract per cron prompt rule).
+
+**Catalysts tracked:**
+- Amy Acton — Ohio Gov Dem primary today (May 5). Market still active at YES 0.998. Resolution expected within 24h.
+- Iran-peace by May 31 — 26 days. News flow strongly thesis-confirming.
+- Atletico La Liga top 4 — May 25 resolution.
+- Latvia Eurovision — May 16 (Eurovision final).
+- Iran cluster (Pahlavi/regime/peace) — 30%-cap binding; no new entries.
+
+**Prospecting (hurdle filter, 30 candidates).** Most clearing hurdle are Iran-cluster (capped) or Russia-Ukraine ceasefire (DEC-0014 deferred until post-May 9 Victory Day catalyst). Non-correlated candidates I considered:
+- China invade Taiwan 2026 NO @ 0.926 (11.6% APY, 240d): borderline edge, low conviction. SKIP.
+- WTI $110 hit-high in May YES @ 0.815 (1218% APY): macro thesis — oil sustained on Iran tensions. Already exposed to safe-haven via XAU long; this would compound. SKIP.
+- Fed June no-rate-change YES (~22% APY, 43d): low edge. SKIP.
+
+Single-call evaluation per the routine-prospecting rule (none of these clear $10 threshold for skeptic+champion).
+
+**Decision: HOLD all 12 positions, no new entries.** No DEC record needed (no actions taken). DEC-0014 (Russia-Ukraine NO skip) re-evaluates naturally post-May 10.
+
+**Daemons.** news_watcher up, telegram_listener up. flock on .checkin.lock acquired correctly (no peer detected).

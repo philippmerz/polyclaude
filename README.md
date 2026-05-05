@@ -2,7 +2,7 @@
 
 Autonomous, Claude-managed trading project. Mandate: maximize return. Two sleeves, fully decentralized, no CEX, no KYC.
 
-**Last updated:** 2026-05-04 14:00 UTC (cron tick)
+**Last updated:** 2026-05-05 02:00 UTC (cron tick)
 
 ---
 
@@ -16,18 +16,18 @@ Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01
 
 | Market | Side | Cost | MTM | P&L |
 |---|---|---:|---:|---:|
-| Pahlavi leads Iran 2026 | NO | $10.00 | $10.02 | +$0.02 |
+| Pahlavi leads Iran 2026 | NO | $10.00 | $10.01 | +$0.01 |
 | Jesus returns by 2027 | NO | $10.00 | $10.14 | +$0.14 |
 | US confirms aliens by 2027 | NO | $9.00 | $9.28 | +$0.28 |
-| **US-Iran peace deal by May 31** | NO | $6.99 | $8.72 | **+$1.73** |
-| Iranian regime falls by 2027 | NO | $7.00 | $7.22 | +$0.22 |
+| **US-Iran peace deal by May 31** | NO | $6.99 | $9.03 | **+$2.04** |
+| Iranian regime falls by 2027 | NO | $7.00 | $7.13 | +$0.13 |
 | Trump out before 2027 | NO | $7.00 | $7.21 | +$0.21 |
-| Amy Acton — 2026 Ohio Gov | YES | $4.99 | $5.04 | +$0.05 |
-| Latvia top 10 — Eurovision | NO | $5.00 | $5.27 | +$0.27 |
+| Amy Acton — 2026 Ohio Gov | YES | $4.99 | $5.05 | +$0.05 |
+| Latvia top 10 — Eurovision | NO | $5.00 | $5.51 | +$0.51 |
 | Atletico Madrid top 4 — La Liga | YES | $4.97 | $4.96 | −$0.01 |
-| **Total** | | **$64.95** | **$67.85** | **+$2.90** |
+| **Total** | | **$64.95** | **$68.31** | **+$3.37** |
 
-Venue-specific buffer: $5.05 USDC.e + 53.81 POL gas reserve. Project-wide buffer is implicitly satisfied by Aave deposits below (withdrawable + bridgeable in <3 min). Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
+Venue-specific buffer: 5.00 pUSD (v2-trade-ready) + $0.05 USDC.e dust + 53.76 POL gas. Project-wide buffer is implicitly satisfied by Aave deposits below (withdrawable + bridgeable in <3 min). Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
 
 > **Operational note (2026-05-04)**: Polymarket migrated to CLOB v2 + a new collateral token pUSD on Apr 28, 2026 (per their [help docs](https://help.polymarket.com/en/articles/14762452)). Both first-party SDKs are still on v1 schemas and get rejected. Polyclaude ships its own v2 signer ([`scripts/clob_v2.py`](scripts/clob_v2.py)) — direct REST + EIP-712, no SDK dependency. Verified end-to-end 2026-05-04 (place + cancel both 200 OK on a test order). Onramp set: 5 USDC.e wrapped to pUSD via [CollateralOnramp](https://polygonscan.com/address/0x93070a847efEf7F70739046A929D47a521F5B8ee), pUSD approved to both v2 exchanges. Existing 9 v1 positions resolve naturally on the v1 stack (USDC.e settlement). Schema details: [`research/_polymarket_v2_schema_2026-05-03.md`](research/_polymarket_v2_schema_2026-05-03.md).
 
