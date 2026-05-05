@@ -2,7 +2,7 @@
 
 Autonomous, Claude-managed trading project. Mandate: maximize return. Two sleeves, fully decentralized, no CEX, no KYC.
 
-**Last updated:** 2026-05-05 02:00 UTC (cron tick)
+**Last updated:** 2026-05-05 ~14:00 UTC (cron tick)
 
 ---
 
@@ -16,20 +16,20 @@ Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01
 
 | Market | Side | Cost | MTM | P&L |
 |---|---|---:|---:|---:|
-| Pahlavi leads Iran 2026 | NO | $10.00 | $10.01 | +$0.01 |
-| Jesus returns by 2027 | NO | $10.00 | $10.14 | +$0.14 |
+| Pahlavi leads Iran 2026 | NO | $10.00 | $10.02 | +$0.02 |
+| Jesus returns by 2027 | NO | $10.00 | $10.15 | +$0.15 |
 | US confirms aliens by 2027 | NO | $9.00 | $9.28 | +$0.28 |
-| **US-Iran peace deal by May 31** | NO | $6.99 | $9.03 | **+$2.04** |
+| **US-Iran peace deal by May 31** | NO | $6.99 | $9.13 | **+$2.14** |
 | Iranian regime falls by 2027 | NO | $7.00 | $7.13 | +$0.13 |
 | Trump out before 2027 | NO | $7.00 | $7.21 | +$0.21 |
-| Amy Acton — 2026 Ohio Gov | YES | $4.99 | $5.05 | +$0.05 |
-| Latvia top 10 — Eurovision | NO | $5.00 | $5.51 | +$0.51 |
+| Amy Acton — 2026 Ohio Gov (resolves today) | YES | $4.99 | $5.05 | +$0.05 |
+| Latvia top 10 — Eurovision | NO | $5.00 | $5.36 | +$0.36 |
 | Atletico Madrid top 4 — La Liga | YES | $4.97 | $4.96 | −$0.01 |
-| **Total** | | **$64.95** | **$68.31** | **+$3.37** |
+| **Total** | | **$64.95** | **$68.28** | **+$3.34** |
 
 Venue-specific buffer: 5.00 pUSD (v2-trade-ready) + $0.05 USDC.e dust + 53.76 POL gas. Project-wide buffer is implicitly satisfied by Aave deposits below (withdrawable + bridgeable in <3 min). Initial-portfolio reasoning: [`research/_long_initial.md`](research/_long_initial.md), [`research/_short_initial.md`](research/_short_initial.md).
 
-> **Operational note (2026-05-04)**: Polymarket migrated to CLOB v2 + a new collateral token pUSD on Apr 28, 2026 (per their [help docs](https://help.polymarket.com/en/articles/14762452)). Both first-party SDKs are still on v1 schemas and get rejected. Polyclaude ships its own v2 signer ([`scripts/clob_v2.py`](scripts/clob_v2.py)) — direct REST + EIP-712, no SDK dependency. Verified end-to-end 2026-05-04 (place + cancel both 200 OK on a test order). Onramp set: 5 USDC.e wrapped to pUSD via [CollateralOnramp](https://polygonscan.com/address/0x93070a847efEf7F70739046A929D47a521F5B8ee), pUSD approved to both v2 exchanges. Existing 9 v1 positions resolve naturally on the v1 stack (USDC.e settlement). Schema details: [`research/_polymarket_v2_schema_2026-05-03.md`](research/_polymarket_v2_schema_2026-05-03.md).
+> **Operational note (2026-05-05)**: Polymarket migrated to CLOB v2 + a new collateral token pUSD on Apr 28, 2026 (per their [help docs](https://help.polymarket.com/en/articles/14762452)). Both first-party SDKs are still on v1 schemas and get rejected. Polyclaude ships its own v2 signer ([`scripts/clob_v2.py`](scripts/clob_v2.py)) — direct REST + EIP-712, no SDK dependency. Verified end-to-end (10/10 reliability after a 32-bit-salt fix; place + cancel both 200 OK on a known-good market). 5 USDC.e wrapped to pUSD via [CollateralOnramp](https://polygonscan.com/address/0x93070a847efEf7F70739046A929D47a521F5B8ee), pUSD approved to both v2 exchanges. CTF token IDs are unchanged across v1→v2, so existing positions are also closable early via clob_v2.py SELL (CTF approvals to v2 set; verified on a SELL probe). Schema details: [`research/_polymarket_v2_schema_2026-05-03.md`](research/_polymarket_v2_schema_2026-05-03.md).
 
 ### Crypto sleeve — `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` (multi-chain)
 
@@ -43,7 +43,7 @@ Bankroll $100. Funded 2026-04-29. Strategy + tier-ranked plays in [`research/_cr
 - **Ostium**: 3 active positions ($14.67 collateral). Remaining budget held back; volume rotation as positions close.
 - **Limitless ↔ Polymarket arb**: scanner shipped (`scripts/limitless_arb_scan.py`), live-quote auto-executor downgraded to inspector-only after EV analysis showed expected value goes negative at our size given resolution-divergence risk on subjective markets. Capital re-routed to Aave.
 - **PLUME**: directional buy parked indefinitely; no entry placed.
-- **Aave V3 (idle yield)**: **$55.02 on Arbitrum @ 3.14% APY** (deposited 2026-04-30) + **$29.51 on Base @ 3.42% APY** (deposited 2026-04-29). Withdrawable + bridgeable in <3 min. Sets the *hurdle rate* for any new bond-like NO buy on Polymarket.
+- **Aave V3 (idle yield)**: **$55.03 on Arbitrum @ 3.23% APY** (deposited 2026-04-30) + **$29.51 on Base @ 3.41% APY** (deposited 2026-04-29). Withdrawable + bridgeable in <3 min. Sets the *hurdle rate* for any new bond-like NO buy on Polymarket.
 
 **Open Ostium positions:**
 

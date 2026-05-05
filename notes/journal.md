@@ -936,3 +936,31 @@ Fixed:
 Net: write capability is fully restored, including early-exits on existing positions. The previous "naturally resolve only" framing was overcautious. If a Tier-1 emergency-exit fires, `scripts/clob_v2.py sell` can dump every position immediately (assuming the markets accept orders during the panic — same caveat as v1).
 
 Decision still: not opening the China-Taiwan trade tonight (same reasons as yesterday — thin edge, correlated, $5 is the float). But the option exists if a higher-conviction candidate appears.
+
+---
+
+## 2026-05-05 ~14:00 UTC — Cron tick: hold all, news thesis-confirming, hurdle candidates skip
+
+**State.** PM 9 positions $68.28 MTM (+$3.34 / +5.14% on $64.95 cost). Iran-peace NO at +30.6% (mark 0.875, was 0.67 entry — best mover). Latvia NO popped to +7.2% (oversold last week). Atletico still slightly underwater. Ostium 3 positions ($14.67 collateral) — XAU long, SPX long, NDX short. Aave $84.54 ($55.03 Arb @ 3.23% + $29.51 Base @ 3.41%; rates dropped slightly). pUSD float 5.00 on Polymarket. PM USDC.e dust $0.05.
+
+**News intake.** 11 Tier-2 Hormuz/Iran alerts since 02:00 UTC tick. All ESCALATION-themed (US Navy fending off Iranian attacks, Trump rhetoric, "blow Iran off the face of the earth", Hegseth on ceasefire-not-permanent). Per-position scoring all directionally CONFIRMING the book:
+- iran-peace NO (MATERIAL × multiple, one CRITICAL-on-our-side): escalation drops peace-deal probability further. Already +30%; thesis playing out perfectly.
+- iran-regime NO (MINOR × multiple): regime showing strength via military response — confirms NO.
+- pahlavi NO (MINOR × few): same — regime stability reduces opposition prospects.
+- trump-out NO (MATERIAL × one): Trump actively directing operations confirms presidential authority — confirms NO.
+- xau-usd-long (MATERIAL × one): geopolitical tension supports gold — confirms long.
+
+**Decision: hold all. No rebalancing.** All news aligned with theses; no surprise that warrants action. Iran-peace NO at mark 0.875 has 26 days to resolution — holding to maturity captures ~14% remaining + the entire upside if the deal collapses. No higher-EV use of the $9.13 MTM.
+
+**Amy Acton Ohio Gov primary** end_date is today 2026-05-05 00:00 UTC — already past. Market still active per gamma but mark at 0.998 (near-resolved YES). UMA hasn't formally settled. Will redeem when it does. No action.
+
+**Hurdle filter (17 candidates).** Iran-cluster names dominant but blocked by 30% cluster cap (already $30 in Iran exposure). Three non-cluster candidates evaluated:
+- *Fed -25bps June NO at 0.970*: real ask is 0.970 (walked CLOB). Gross yield 3.1% over 42d = 28% APY at-NO. But EV adjusted for the implied 3% YES tail at FAIR pricing is ≈ 0. I have no differentiated view vs market consensus. SKIP.
+- *China invade Taiwan 2026 NO at 0.926*: same candidate as before. 11.6% APY-at-NO over 239d. Modest edge over fair (consensus invasion P ≈ 1-3% vs market 7.4%), but 8mo lock + would zero out pUSD float. SKIP.
+- *Russia-Ukraine ceasefire by May 31 NO at 0.939*: Putin Victory Day May 9 is the same catalyst the cron correctly stood down on previously. Re-evaluate post May 10. SKIP.
+
+**Reasoning-depth check**: per the new philosophy rule, all three are <$10 routine takes → single-call evaluation. Skipped via single-call without escalating to skeptic+champion. Methodology study showed zero-shot SKIP on uncertain edge beats deeper analysis — applying that here.
+
+**No daemons issues.** news_watcher PID 226892 still running (2 days post-restart). flock guard on .checkin.lock held cleanly.
+
+**Next catalyst**: Putin Victory Day May 9 (4d) — could move Russia-Ukraine and Iran-peace markets. Iran-peace May 31 deadline (26d).
