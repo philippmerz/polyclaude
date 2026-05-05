@@ -158,7 +158,13 @@ def build_order(
         maker_units = _to_token_decimals(share_amount)
         taker_units = _to_token_decimals(usd_amount)
 
-    salt = secrets.randbits(64)  # match SDK's small-salt convention
+    # 32-bit salt: the API's body parser does `Number.parseInt(salt)` (TS SDK
+    # convention), which silently loses precision above JS Number.MAX_SAFE_INTEGER
+    # (2^53). 64-bit salts above ~2^53 cause "Invalid order payload" because the
+    # parsed-back salt no longer matches the EIP-712-signed value, breaking
+    # signature verification. Discovered 2026-05-05 when SELL orders failed
+    # while structurally-identical BUY orders happened to draw smaller salts.
+    salt = secrets.randbits(32)
     timestamp_ms = str(int(time.time() * 1000))
 
     message = {

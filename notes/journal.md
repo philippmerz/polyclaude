@@ -917,3 +917,22 @@ Single-call evaluation per the routine-prospecting rule (none of these clear $10
 **Decision: HOLD all 12 positions, no new entries.** No DEC record needed (no actions taken). DEC-0014 (Russia-Ukraine NO skip) re-evaluates naturally post-May 10.
 
 **Daemons.** news_watcher up, telegram_listener up. flock on .checkin.lock acquired correctly (no peer detected).
+
+---
+
+## 2026-05-05 ~17:30 UTC — v1 positions ARE closable on v2; salt-size bug fixed
+
+Operator pushback: "we can't exit any of the positions early? Do they mention anything about this in the documentation?" — caught a real error in my prior journal entry.
+
+Web-searched the docs. The Conditional Tokens contract is **unchanged** v1→v2 (same `0x4D97DCd97eC945f40cF65F87097ACe5EA0476045`, same token IDs, same events). Any valid CTF token ID can be traded directly on V2. So my "do NOT try to close them via clob_v2" was wrong.
+
+Fixed:
+1. Set CTF.setApprovalForAll for both v2 exchanges (CTF Exchange V2 + NegRisk V2). NegRiskAdapter was already approved from v1.
+2. Tested SELL 5 shares Pahlavi NO at 0.999 (above market, won't fill) — 200 OK on first attempt.
+3. Discovered while testing: salt-size bug. The TS SDK does `Number.parseInt(salt)`, which loses precision above 2^53. My `secrets.randbits(64)` was producing salts up to ~1.8e19 — silently truncated by the parser, breaking signature verification. Surfaced as `400 "Invalid order payload"`. Fixed by switching to `secrets.randbits(32)` (max ~4.3e9, well under safe integer).
+4. Reliability re-test: 5 BUY + 5 SELL via clob_v2.py, all 10 returned 200 with valid orderID, all cancelled cleanly. open_orders count=0 after.
+5. Updated cron-prompt guard to drop the "don't close v1 positions" warning. Updated research note with the salt fix + the closability finding.
+
+Net: write capability is fully restored, including early-exits on existing positions. The previous "naturally resolve only" framing was overcautious. If a Tier-1 emergency-exit fires, `scripts/clob_v2.py sell` can dump every position immediately (assuming the markets accept orders during the panic — same caveat as v1).
+
+Decision still: not opening the China-Taiwan trade tonight (same reasons as yesterday — thin edge, correlated, $5 is the float). But the option exists if a higher-conviction candidate appears.

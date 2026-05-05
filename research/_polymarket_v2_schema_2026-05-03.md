@@ -131,7 +131,19 @@ Approvals SET 2026-05-04 (in case useful for someone with pUSD):
 - USDC.e → NEG_RISK_EXCHANGE_V2 (`0xe2222d279d744050d28e00520010520000310F59`): MAX
 - pUSD → EXCHANGE_V2: not yet (no balance to approve from)
 
-### Next steps to actually trade on v2
-1. Find the pUSD mint/wrap mechanism (could require browsing Polymarket frontend for the deposit UI, or another bundle inspection round to find the wrapper contract).
-2. Once a wrapper is identified and we have pUSD: approve pUSD to v2 exchanges, then `clob_v2.py buy/sell` should work end-to-end.
-3. Existing v1 positions are unaffected — they remain valid and tradeable on the v1 exchange via the existing py-clob-client (which still works on v1, just not on v2).
+### Next steps to actually trade on v2 — RESOLVED 2026-05-04 / -05
+- Wrap path: approve USDC.e → CollateralOnramp `0x93070a847efEf7F70739046A929D47a521F5B8ee`, then `wrap(USDC.e, eoa, amount_6dec)` mints pUSD 1:1.
+- pUSD approvals to both v2 exchanges set on-chain.
+- `clob_v2.py buy/sell/cancel` working end-to-end (10/10 reliability test).
+
+### Salt-size bug found 2026-05-05
+The TS SDK's `orderToJson` does `salt: Number.parseInt(order.salt, 10)`. JS `Number` loses precision above `2^53` (≈ 9e15). The server appears to roundtrip the salt through that parse. So 64-bit salts (`secrets.randbits(64)`, range up to ~1.8e19) sometimes get silently truncated, breaking signature verification — surfaces as `400 "Invalid order payload"`. Fixed in `clob_v2.py` by using 32-bit salts. Symptom that exposed it: SELL orders failing while BUY orders happened to draw smaller salts.
+
+### Closing existing v1 positions via v2
+**v1 positions ARE tradeable on v2.** Per Polymarket docs (`docs.polymarket.com/v2-migration`), the Conditional Tokens contract is unchanged across v1 → v2 — same address (`0x4D97DCd97eC945f40cF65F87097ACe5EA0476045`), same token IDs, same events. Any valid CTF token ID can be traded directly on V2.
+
+To close existing v1 holdings via v2 SELL:
+1. CTF.setApprovalForAll(EXCHANGE_V2, true) — set 2026-05-05.
+2. CTF.setApprovalForAll(NEG_RISK_EXCHANGE_V2, true) — set 2026-05-05.
+3. NegRiskAdapter approval — was already set from v1 era.
+4. Call `clob_v2.py sell <token_id> <price> <shares>`. Min size = 5 shares, not 5 USDC. Verified end-to-end on Pahlavi NO 2026-05-05.
