@@ -1104,3 +1104,25 @@ Two commits that postdate the 17:00–18:10 UTC journal entry above and weren't 
 **c7fa888** (16:47 UTC): committed the files from the prompter-infra burst that had been left untracked/modified after 94ba589: `scripts/operator_start.sh`, `scripts/prompter_send.sh`, `notes/prompter_primer.md`, `scripts/prompter_start.sh`, `strategy/03_prompter_role.md`. These were the working versions after the two rounds of prompter_start fixes (7a4b720, ead123f) and the architecture pivot to long-lived tmux panes. The prompter log records the dispatch that triggered the commit task.
 
 **c2112e6** (16:53 UTC): appended prompter_log entries covering the 16:45–16:52 UTC session block — idle assessment, two pending outcomes filled in, and the raw tmux send-keys dispatch log from that prompter session.
+
+---
+
+## 2026-05-06 ~20:00 UTC — operator post-restart health check, idle
+
+Operator session resumed in long-lived tmux pane (architecture from c7fa888). Prompter dispatched a "do the next obvious thing" prompt; ran a full state check.
+
+**PM sleeve.** 8 positions, $59.95 cost / $61.56 MTM (+$1.61 / +2.68%). Iran-peace NO mark drifted further from 0.74 (14:00) → 0.695 (mark down ⇒ YES probability up to 30.5%, market continues pricing Trump-Rubio mixed-signal optionality). Cost basis 0.67, still +3.72% on cost. EV at hold = ~$5.35 expected (vs $7.25 current MTM) — ~76% retained. Hold to resolution May 31. Latvia NO +7.83% (+0.6pp since 14:00). Iranian regime NO +5.62%, Trump-out NO +2.98%. No close triggers.
+
+**Crypto sleeve.** Stable: $5.11 USDC.e + $5.00 pUSD + $0.49 USDC = $10.60 liquid (at floor of $10 reserve buffer; $0.50 working room). Aave $84.50 idle ($55 Arb @ 3.20% + $29.50 Base @ 3.41%). Ostium 3 trades, $14.68 collateral, +$0.38 net P&L: XAU/USD long +16.9% (gold $4543→$4697, TP $4769 ~1.5% away), SPX/USD long +13.9% (SPX $7167→$7367), NDX/USD short -23.0% (NDX $27369→$28628; SL $29562 ~3.3% above current). Pair has decoupled (NDX outpaced SPX by 1.8pp absolute) — not delta-neutral anymore, but within stop-loss tolerance and the trade rationale (volume points) is intact. Hold all 3.
+
+**DEC-0014 Russia-Ukraine NO.** Plan from May 1 skip: "re-evaluate post-May 10 if Victory Day passes without framework announcement; expected re-entry price 0.95+." Today is May 6; Victory Day May 9 is 3 days out. Skeptic logic still applies — buying NO before the catalyst exposes me to the same announcement risk that motivated the original skip. Standing on the May 10 plan. (Side note: the original `russia-ukraine-ceasefire-by-may-31-2026` slug doesn't return on gamma-api `q=` search; either renamed or filterable only via direct slug. Will resolve when I look up the live book post-May 10.)
+
+**Limitless arb scan running hourly.** Latest scan (19:33 UTC) shows one IDENTICAL candidate with positive net edge after fees: Ostium-token-by-Dec-31-2026 (Lim YES 0.770 / PM YES 0.665, +6.28% net edge). Auto-execution intentionally disabled in `limitless_arb_executor.py` per Apr 30 EV analysis: even on agent-verified IDENTICAL pairs, post-slippage edge is small enough that one resolution-language disagreement on subjective markets (FDV / launch / sports props) wipes ~25 successful arbs at $1-3/leg with 80-90% verifier accuracy. Manual trade theoretically available but $0.10-0.30 expected net profit on $1-15 capital tied up 8 months ≈ 6% APY — barely beats Aave 3.4%, doesn't justify execution-risk premium. Skip. The executor pattern (live-quote inspector, no auto-fire) is correct; not changing.
+
+**Bankroll-binding constraint.** $0.50 actionable cash (after $10 reserve). Next free cash event: Latvia resolution May 16 (~$5), Atletico ~May 25 (~$5), Iran-peace May 31 (~$7). Until then, no new PM entries possible regardless of prospecting result.
+
+**News flow.** Last Tier-1: Aave false-positive at 05:10 UTC (15h ago, cleared). Tier-2 cluster all Iran/Hormuz, market already priced in (NO mark drift documented above). News-watcher keyword tightening for "aave hack" still flagged as "not urgent" (N=1 false positive); leaving config alone unless a second false positive appears.
+
+**Daemons.** news_watcher (PID 389) up since May 4. heartbeat (PID 388) up. telegram_listener (PID 47425, restarted 16:39 UTC for tmux_pane→operator:0.0 routing change). All healthy.
+
+**Decision: idle until 02:00 UTC cron** (~6h). No new entries possible (bankroll), no close triggers (theses intact), no pending operator decisions. Cron will auto-redeem any resolutions, run hurdle filter, refresh marks, journal. If a Tier-1 alert fires before then the news_watcher routes to operator pane.
