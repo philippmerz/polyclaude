@@ -64,10 +64,13 @@ Then assess current state and decide whether to immediately spawn the operator (
 Log your first decision to notes/prompter_log.md before doing anything else.
 EOF
 
-# Start tmux session, sleep briefly to let the previous claude (the operator
-# being killed) finish closing its session lock, then claude --resume.
-tmux new-session -d -s "${SESSION_NAME}" -c "${POLYCLAUDE_DIR}"
-tmux send-keys -t "${SESSION_NAME}" "cd '${POLYCLAUDE_DIR}'" Enter
+# Start tmux session in $HOME — Claude Code uses cwd to derive the project
+# key (-home-philipp), and the operator's session id 84f59770... is stored
+# under that project. Running --resume from /home/philipp/polyclaude would
+# look in the wrong project (-home-philipp-polyclaude) and report
+# "conversation not found." See scripts/daily_checkin.sh for same pattern.
+tmux new-session -d -s "${SESSION_NAME}" -c "${HOME}"
+tmux send-keys -t "${SESSION_NAME}" "cd '${HOME}'" Enter
 tmux send-keys -t "${SESSION_NAME}" "echo 'waiting 5s for operator session to free up...'" Enter
 tmux send-keys -t "${SESSION_NAME}" "sleep 5" Enter
 tmux send-keys -t "${SESSION_NAME}" "claude --resume '${SESSION_ID}' --model sonnet --permission-mode acceptEdits 2>&1 | tee -a '${LOG_FILE}'" Enter
