@@ -1039,3 +1039,56 @@ Realized P&L on Acton: +$0.07 ($4.99 cost → $5.06 redeemed). Tiny but matches 
 Polymarket sleeve now: 8 positions ($59.95 cost / $61.84 MTM / +$1.89), $5.11 USDC.e, $5.00 pUSD, 53.74 MATIC. Total liquid: $10.11 across the two stables (USDC.e for v1 settlements, pUSD for v2 trading).
 
 Lesson for future autonomy: when a position resolves, the cron tick should redeem on-chain, not just mark the decision RESOLVED. Adding a redeem CLI to clob_v2.py is the next concrete improvement so future resolutions auto-redeem.
+
+---
+
+## 2026-05-06 ~17:00-18:10 UTC — redeem-all CLI + prompter infrastructure
+
+Four commits shipped in this burst, none of which had journal entries. Documenting now.
+
+### cf6c97e — clob_v2: redeem-all CLI + cron auto-redeem
+
+**What was built.** The Acton redemption (documented just above) exposed a gap: the cron tick was marking decisions RESOLVED but never executing the on-chain redemption call. The operator had to be prompted manually ("did you redeem Acton?"). Fixed that structural gap.
+
+Added `redeem_all()` to `scripts/clob_v2.py`:
+- Calls data-api `/positions` for the wallet, filters positions where `redeemable=true`.
+- Routes correctly by market type: negRisk markets (Polymarket's internal grouped events) go through `NegRiskAdapter.redeemPositions(conditionId, [YES_bal, NO_bal])`. Standard binary markets go through the raw `CTF.redeemPositions(USDC_E_ADDR, 0x0, conditionId, [1,2])`. Both approval paths were already set during the v2 migration.
+- Uses live on-chain `CTF.balanceOf()` rather than trusting data-api balances (data-api sometimes lags the chain state).
+- Smoke-tested post-Acton: correctly finds 0/8 redeemable, handles the already-redeemed case gracefully.
+
+Exposed as `python scripts/clob_v2.py redeem-all` on the CLI.
+
+Wired into `scripts/daily_checkin.sh` as step 5 (after decision-tracker review, before prospecting). Each cron tick now auto-redeems any resolved positions before doing the rest of the check-in. Going forward: the pattern of "market resolves → cron tick marks RESOLVED → USDC.e lands in wallet" is fully automated. The Acton incident won't repeat.
+
+**Why it matters at scale.** At 8 positions across a month, manual redemption is a small chore. At 80 positions across multiple sleeves, missing redemptions locks up capital and distorts free-cash accounting. The automation cost was ~100 lines of code and one cron-step insert.
+
+### 5b17fb7 — operator-agent infrastructure (initial MVP, same turn)
+
+The user flagged a structural problem: the operator (me) has an RLHF prior toward concluding answers cleanly — wrapping up, summarizing, ending the turn. This is correct behavior in chat; in agentic mode with full autonomy, it's the opposite of what's wanted. The user had been manually injecting continuation pressure ("what's next?", "did you redeem X?", "reevaluate"). They wanted that role automated.
+
+First implementation: a role called "operator-agent" that would act as a gating layer for trade authorization. Files: `strategy/03_operator_role.md`, `notes/operator_primer.md`, `scripts/operator_agent.sh`, `notes/operator_log.md`. This MVP had the wrong authority model — it made the new agent a gate, not a pusher — and the naming was inverted (the actual decision-maker is the operator, so a "second agent" that applies pressure should have a different name).
+
+### 94ba589 — prompter agent (corrects naming + role from 5b17fb7)
+
+User correction: the agent doing the work IS the operator (full agency, no authorization gates). The second agent's role is continuation pressure only — pushing past RLHF wrap-up bias, not vetting decisions. User called this the "prompter" (evocative: injects prompts to keep the operator moving).
+
+The 5b17fb7 operator-* files were removed and replaced:
+- `strategy/03_prompter_role.md` — role definition: authority = none, single job = inject high-agency continuation tokens. Explicitly lists what it does NOT do (authorize trades, override strategy, make commits, send Telegram).
+- `notes/prompter_primer.md` — startup primer for the prompter agent: when to spawn the operator (post-clean-wrap-up, cron tick, news alert, user input); when NOT to spawn (no state change, awaiting external input, token ceiling); how to counter premature-conclusion patterns explicitly. Self-scheduling guidance.
+- `notes/prompter_log.md` — append-only spawn-decision log (separate from journal).
+- `scripts/prompter_start.sh` — tmux launcher (initial version used `claude --resume` on the operator's session id).
+
+Architecture: prompter runs in long-lived `tmux new-session -s prompter`. Operator runs in the default session. Prompter spawns operator via the `Agent` tool when continuation pressure is warranted. Operator decides everything autonomously. Memory namespaces are separate (`~/.claude/projects/-home-philipp-prompter/memory/` for prompter vs `-home-philipp/memory/` for operator); both can read across, neither writes the other's.
+
+### 7a4b720 + ead123f — prompter_start: two rounds of fixes
+
+**7a4b720**: First run failed — `claude --resume <session_id>` run from `POLYCLAUDE_DIR` (`/home/philipp/polyclaude`) looked for the session under `-home-philipp-polyclaude` project key, but the operator's session lives under `-home-philipp` (cwd at session creation was `$HOME`). The fix: `tmux new-session -c "${HOME}"` and `cd '${HOME}'` before launching. Same fix the cron's `daily_checkin.sh` had used from day one (`cd $HOME`).
+
+**ead123f**: Second run failed differently — `claude --resume` requires a deferred-tool-marker (it resumes a paused tool call), so it errored with "No deferred tool marker found." The approach was wrong: `--resume` is for continuing a mid-tool-call session, not for inheriting conversation history. Simplified to fresh claude session + bootstrap message pointing to `notes/prompter_primer.md` + `strategy/03_prompter_role.md`. The primer has all necessary context. If the prompter needs actual conversation history, `/resume` inside the running TUI uses the session picker (which doesn't require the deferred-marker check). Also added: poll the log for claude's banner before sending bootstrap, preventing the previous failure where bootstrap text was typed into bash before the TUI had initialized.
+
+### Operational impact going forward
+
+- **Cron ticks**: Each 02:00 + 14:00 UTC tick auto-redeems resolved positions (step 5), so cash hits the wallet automatically without manual intervention.
+- **Prompter**: Runs in `tmux -s prompter`. Spawned daily by the user (or via cron eventually). Applies continuation pressure. User observes via `tmux attach -t prompter`. No user manual role in the operator continuation loop.
+- **Operator autonomy**: Unchanged. Decisions follow philosophy doc. Trades >$10 get skeptic+champion pair internally. Strategic pivots surface to user via Telegram.
+- **Lesson from the MVP churn**: naming matters — the agent that has full autonomy is "operator"; the agent that just pushes is "prompter". Getting the vocabulary right in one turn would have saved the remove+recreate cycle.

@@ -27,9 +27,10 @@ logs/
 .checkin.lock
 
 # Local cache of market data — re-generatable, would bloat repo
-data/raw/
-data/cache/
-data/snapshots/
+# data/ contains methodology snapshots, shortlists, prospective-resolve results.
+# All subdirs (raw/, cache/, snapshots/, methodology/) are regenerable from
+# scripts; nothing here is source of truth for decisions (those live in journal).
+data/
 
 # Editor swap files
 *.swp
