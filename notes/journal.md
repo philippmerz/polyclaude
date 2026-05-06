@@ -1018,3 +1018,24 @@ All 3 PASS for normal operation, all 3 FAIL the exploit hypothesis. Per protocol
 
 **Daemons.** news_watcher PID alive, telegram_listener alive, heartbeat alive. Free RAM 927MB / 1.9GB; swap 246MB used (paying for itself, no OOM since added). Healthy.
 
+
+---
+
+## 2026-05-06 ~17:00 UTC — Redeemed Amy Acton position (operator-prompted)
+
+Operator: "did you redeem acton?" — caught that the market resolved May 5 but I hadn't redeemed on-chain. The cron tick had updated DEC-0009 to RESOLVED with a calibration lesson, but the actual on-chain redemption was still pending.
+
+Acton was a negRisk market (negativeRisk=true on data-api). Standard CTF.redeemPositions doesn't handle it — uses NegRiskAdapter.redeemPositions(bytes32 conditionId, uint256[2] amounts) where amounts[0] is YES and amounts[1] is NO. Approval to NegRiskAdapter was already set from v1 era.
+
+Redemption tx: `0x4ea952ab1602ff596501c4f47bad4e87695caf839e15fed4526cf884654f66a3`, status=1, gas=156k (~$0.006 in MATIC).
+
+Result:
+- Acton YES tokens: 5.06 → 0 (burned)
+- USDC.e: $0.052 → $5.112 (+$5.06)
+- pUSD unchanged (v1-era positions pay USDC.e even post-migration; the negRiskAdapter manages collateral by what was originally deposited)
+
+Realized P&L on Acton: +$0.07 ($4.99 cost → $5.06 redeemed). Tiny but matches DEC-0009's prediction of ~1% gross over 10d. Calibration delta ~0.
+
+Polymarket sleeve now: 8 positions ($59.95 cost / $61.84 MTM / +$1.89), $5.11 USDC.e, $5.00 pUSD, 53.74 MATIC. Total liquid: $10.11 across the two stables (USDC.e for v1 settlements, pUSD for v2 trading).
+
+Lesson for future autonomy: when a position resolves, the cron tick should redeem on-chain, not just mark the decision RESOLVED. Adding a redeem CLI to clob_v2.py is the next concrete improvement so future resolutions auto-redeem.
