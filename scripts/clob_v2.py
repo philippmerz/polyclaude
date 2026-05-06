@@ -307,6 +307,111 @@ def get_orderbook(token_id: str) -> dict:
     return r.json()
 
 
+# --- redemption (post-resolution) ---------------------------------------
+
+CTF_ADDR = "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045"
+NEG_RISK_ADAPTER = "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296"
+USDC_E_ADDR = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+POLYGON_RPC = "https://polygon.drpc.org"
+
+_NEG_RISK_REDEEM_ABI = [{
+    "inputs": [
+        {"name": "_conditionId", "type": "bytes32"},
+        {"name": "_amounts", "type": "uint256[]"},
+    ],
+    "name": "redeemPositions", "outputs": [],
+    "stateMutability": "nonpayable", "type": "function",
+}]
+_CTF_REDEEM_ABI = [{
+    "inputs": [
+        {"name": "collateralToken", "type": "address"},
+        {"name": "parentCollectionId", "type": "bytes32"},
+        {"name": "conditionId", "type": "bytes32"},
+        {"name": "indexSets", "type": "uint256[]"},
+    ],
+    "name": "redeemPositions", "outputs": [],
+    "stateMutability": "nonpayable", "type": "function",
+}]
+_CTF_BAL_ABI = [{
+    "inputs": [{"name": "a", "type": "address"}, {"name": "id", "type": "uint256"}],
+    "name": "balanceOf", "outputs": [{"type": "uint256"}],
+    "stateMutability": "view", "type": "function",
+}]
+
+
+def _data_api_positions(address: str) -> list[dict]:
+    r = httpx.get("https://data-api.polymarket.com/positions",
+                  params={"user": address.lower(), "limit": 50}, timeout=15)
+    return r.json() or []
+
+
+def redeem_all() -> dict:
+    """Iterate user's positions; redeem any with redeemable=true. Routes negRisk
+    markets through NegRiskAdapter and binary non-negRisk through standard CTF.
+    Returns a summary of attempts."""
+    from web3 import Web3
+    from eth_account import Account
+    address, pk = _load_wallet()
+    w = Web3(Web3.HTTPProvider(POLYGON_RPC))
+    addr_cs = Web3.to_checksum_address(address)
+    ctf = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR), abi=_CTF_BAL_ABI)
+    adapter = w.eth.contract(address=Web3.to_checksum_address(NEG_RISK_ADAPTER),
+                              abi=_NEG_RISK_REDEEM_ABI)
+    ctf_redeem = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
+                                 abi=_CTF_REDEEM_ABI)
+
+    positions = _data_api_positions(address)
+    redeemables = [p for p in positions if p.get("redeemable")]
+    print(f"found {len(redeemables)}/{len(positions)} redeemable positions")
+
+    summary = []
+    for p in redeemables:
+        title = (p.get("title") or "")[:60]
+        cond_id_hex = p["conditionId"]
+        is_neg = bool(p.get("negativeRisk"))
+        outcome_idx = int(p.get("outcomeIndex", 0))  # 0 = YES, 1 = NO
+        yes_tok = int(p["asset"])
+        no_tok = int(p["oppositeAsset"])
+
+        # Pull on-chain CTF balance (data-api sometimes lags, on-chain is source of truth)
+        bal_yes = ctf.functions.balanceOf(addr_cs, yes_tok).call()
+        bal_no = ctf.functions.balanceOf(addr_cs, no_tok).call()
+        if bal_yes == 0 and bal_no == 0:
+            print(f"  SKIP (zero balance) {title}")
+            continue
+        cond_id = bytes.fromhex(cond_id_hex.replace("0x", ""))
+
+        nonce = w.eth.get_transaction_count(addr_cs)
+        gp = w.eth.gas_price
+        common_tx = {
+            "from": addr_cs, "nonce": nonce, "chainId": 137,
+            "gas": 250_000,
+            "maxFeePerGas": max(int(gp * 3), int(gp + 1_000_000_000)),
+            "maxPriorityFeePerGas": 30_000_000_000,
+        }
+        if is_neg:
+            tx = adapter.functions.redeemPositions(cond_id, [bal_yes, bal_no]).build_transaction(common_tx)
+        else:
+            # Standard CTF: indexSets = [1] (YES) | [2] (NO) — pass both, contract no-ops the loser
+            tx = ctf_redeem.functions.redeemPositions(
+                Web3.to_checksum_address(USDC_E_ADDR),
+                b"\x00" * 32,
+                cond_id,
+                [1, 2],
+            ).build_transaction(common_tx)
+
+        h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
+        r = w.eth.wait_for_transaction_receipt(h, timeout=120)
+        ok = r.status == 1
+        print(f"  {'OK' if ok else 'FAIL'} {title}  tx 0x{r.transactionHash.hex()}  yes={bal_yes/1e6} no={bal_no/1e6}")
+        summary.append({
+            "title": title, "conditionId": cond_id_hex, "negRisk": is_neg,
+            "tx": "0x" + r.transactionHash.hex(), "ok": ok,
+            "yes_redeemed": bal_yes / 1e6, "no_redeemed": bal_no / 1e6,
+        })
+    return {"redemptions": summary}
+
+
 def _safe_json(r: httpx.Response) -> Any:
     try:
         return r.json()
@@ -402,6 +507,9 @@ def main():
     p = sub.add_parser("orderbook")
     p.add_argument("token_id")
     p.set_defaults(fn=cmd_orderbook)
+
+    p = sub.add_parser("redeem-all", help="redeem every redeemable position via the right adapter")
+    p.set_defaults(fn=lambda _a: (print(json.dumps(redeem_all(), indent=2)), 0)[1])
 
     args = ap.parse_args()
     sys.exit(args.fn(args))
