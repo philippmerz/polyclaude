@@ -1126,3 +1126,13 @@ Operator session resumed in long-lived tmux pane (architecture from c7fa888). Pr
 **Daemons.** news_watcher (PID 389) up since May 4. heartbeat (PID 388) up. telegram_listener (PID 47425, restarted 16:39 UTC for tmux_pane→operator:0.0 routing change). All healthy.
 
 **Decision: idle until 02:00 UTC cron** (~6h). No new entries possible (bankroll), no close triggers (theses intact), no pending operator decisions. Cron will auto-redeem any resolutions, run hurdle filter, refresh marks, journal. If a Tier-1 alert fires before then the news_watcher routes to operator pane.
+
+---
+
+## 2026-05-06 ~20:15 UTC — 75ba0c5: drop bare 'aave hack' tier1 keyword
+
+User asked to override the "wait for N=2" rule and tighten the keyword now. Config edit: removed bare `"aave hack"` from `tier1_keywords` in `scripts/news_watcher_config.json` (113 → 112 entries). Verb forms (`aave hacked`, `aave exploit`, `aave exploited`, `aave drained`) plus operational signals (`aave protocol paused`, `aave pool paused`, `aave guardian`, `aave emergency`, `aave governance attack`, `atokens frozen`, `aave withdrawal halted`) retain coverage of any real exploit phrasing — breaking-exploit headlines almost always use a verb form. The bare-noun phrase is what matched the May 6 05:10 UTC false positive (Lazarus-laundering legal action mentioning "Aave hack" in retrospective summary).
+
+Daemon restarted: PID 389 → 56478, `seen=4531` carried over via state file, so no re-alert flood on already-processed entries.
+
+Lesson: my "wait for N=2" framing was reasonable defensive heuristic but the cost of one config-line edit is so low that user-judgment override is correct. For low-cost reversible config tightening, "user asked, do it" beats "wait for stronger evidence."
