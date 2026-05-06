@@ -964,3 +964,30 @@ Decision still: not opening the China-Taiwan trade tonight (same reasons as yest
 **No daemons issues.** news_watcher PID 226892 still running (2 days post-restart). flock guard on .checkin.lock held cleanly.
 
 **Next catalyst**: Putin Victory Day May 9 (4d) — could move Russia-Ukraine and Iran-peace markets. Iran-peace May 31 deadline (26d).
+
+---
+
+## 2026-05-06 ~02:00 UTC — Cron tick (02:00 UTC): Amy Acton resolved YES, hold all others
+
+**State.** PM sleeve $67.79 MTM (+$2.84 / +4.37%); Iran-peace NO standout at +23.13%; Latvia Eurovision NO drifted to mark 0.890 (+7.23% — was -0.6% earlier). Ostium 3 positions ($14.67 collateral) untouched. Aave $84.55 (Arb $55.03 + Base $29.52, both accruing).
+
+**News intake.** 21 alerts since last tick, all Iran-cluster. Pattern: morning had escalation theme (US Navy in Strait, Iranian attacks on UAE / Fujairah), then late-day Trump pause on Project Freedom + Hegseth/Rubio statements that ceasefire holds. Net: market-neutral noise within an active ceasefire framework. Iran-peace NO mark held at 0.825 throughout — market absorbed both directions.
+
+**Material/critical alerts:**
+- Several MATERIAL on iran-peace (mostly thesis-confirming via escalation, then mixed by Trump-pause-for-talks)
+- 1 CRITICAL: Trump pauses Project Freedom (alert 23:51 UTC) — explicitly to "finalize agreement with Iran". Real upside risk to NO position. **Held: market price didn't move on this; "permanent peace deal" in 26 days during active mine-laying remains structurally unlikely. EV holds: P(NO)≈0.85 → expected $0.85/share vs current 0.825 = small positive carry.**
+- 1 CRITICAL: Vivek Ramaswamy projected GOP nominee → confirms Acton clinched DEM primary → DEC-0009 resolves YES.
+
+**Decision: hold all 9 positions.** No actions this tick. Iran-peace asymmetric risk is real but bounded (worst case ~$8.61 → $0; expected hold gain $0.26 vs locking now). Hold to maturity (May 31).
+
+**DEC-0009 resolved.** Amy Acton YES @ 0.987 entry, mark 1.00, payout $5.06. Calibration: predicted YES >99%, resolved YES. Delta ~0. Lesson: short-tenor consensus-candidate primaries are reliable but tiny-edge.
+
+**Daemons.** news_watcher PID alive, telegram_listener alive, heartbeat alive. Free RAM 959MB / 1.9GB; 2GB swap unused. Healthy.
+
+**Polymarket v2 write path verified.** clob_v2.py operational; CTF approvals to v2 exchanges set; pUSD float at 5. Could close any position via v2 if needed but no reason to.
+
+**Pending:**
+- Iran-peace NO resolves May 31
+- Latvia Eurovision May 16
+- Atletico La Liga May 25 (or close to)
+- All others 2026-12-31 horizons

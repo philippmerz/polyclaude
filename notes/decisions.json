@@ -165,9 +165,10 @@
         "carry",
         "primary"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Resolved YES \u2014 Amy Acton clinched Ohio Democratic primary May 5; CBS confirmed she faces Vivek Ramaswamy in November.",
+      "calibration_delta": "0.0",
+      "lesson": "High-confidence consensus-candidate primary went exactly as priced (0.987 entry, resolved 1.00). Calibration delta ~0 \u2014 predicted YES at >99%, resolved YES. The trade was minimal-edge ($0.04 gross over 10d) but execution-rule-confirming. Pattern: short-tenor consensus-candidate primaries with no filed challenger are reliable but tiny-edge.",
+      "resolved_at": "2026-05-06T02:02:17Z"
     },
     {
       "id": 10,
