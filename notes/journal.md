@@ -997,3 +997,24 @@ Decision still: not opening the China-Taiwan trade tonight (same reasons as yest
 ## 2026-05-06 ~05:10 UTC — deferring to peer cron tick
 
 Cron prompt arrived in the interactive session while a parallel `claude -p --resume --fork-session` (PID 35076, spawned by `scripts/daily_checkin.sh` PID 35065 at 05:10:32) was already running the same check-in. Per peer-detection rule in cron prompt, exiting without running the duplicate work.
+
+---
+
+## 2026-05-06 ~14:00 UTC — Cron tick (14:00 UTC): hold all, false-positive Aave alert cleared
+
+**State.** PM sleeve $67.22 MTM (+$2.28 / +3.50%) on $64.95 cost. Mark drift since 02:00 tick: Iran-peace NO retraced from +23.13% → +11.19% on Trump-pause-and-deal-talk news; Latvia NO held +7.23%; Iranian regime NO ticked up to +4.37%. Amy Acton remains at 1.000 (resolved YES from 02:00 tick; redemption pending — separate effort to write the CTF.redeemPositions helper, ~$5.06 to recover). Crypto sleeve idle (USDC near-zero on Polygon/Arb after pUSD wrap; $0.49 USDC + $0.0005 ETH on Base). Aave: $55.03 Arb @ 3.20% APY (rate dropped from 4.15%) + $29.52 Base @ 3.41%. Ostium 3 positions ($14.67) untouched.
+
+**News intake (15+ alerts since 02:00 tick).** Heavy Iran/Hormuz cluster — Trump pausing "Project Freedom" + claiming deal progress (HURTS NO position) vs ongoing Iranian strikes on UAE + Iranian mines in strait + nuclear precondition stalemate (HELPS NO). Net market reaction: NO mark down to 0.745 from 0.825, reflecting raised YES probability in line with the news. My differential view: I'm not significantly more confident than the new market consensus on either side. **HOLD iran-peace NO.** Same logic for iran-regime-fall NO + pahlavi-2026 NO — market priced in.
+
+**Tier-1 alert at 05:10 UTC: "North Korea terror victims escalate fight to seize $71 million from Aave hack".** False positive. 3-layer sanity check:
+- Layer 1 (multi-source corroboration): Single source, the keyword "aave hack" matched a LEGAL action by NK-terror-victim plaintiffs to seize previously-laundered Lazarus funds that touched Aave addresses. NOT a new protocol exploit.
+- Layer 2 (market reaction): AAVE token at $92.98, -0.96% 24h. Real exploit would be -10-30% intraday.
+- Layer 3 (on-chain ground truth): aUSDC accruing normally on both chains. Withdrawals testable.
+All 3 PASS for normal operation, all 3 FAIL the exploit hypothesis. Per protocol: HOLD, no emergency exit. Note: keyword "aave hack" is too generic, could be tightened to "aave protocol exploit" / "aave drained" later, but not urgent.
+
+**Hurdle filter** (16 candidates clearing 4.15% APY): all geopolitics names are Iran-cluster — blocked by 30% cluster cap. Japan-WC blocked by sports rule. BTC-$35k-dip blocked by crypto-price rule + thin 0.4pp edge. **No new entries.**
+
+**Decisions.** Nothing new this tick. DEC-0009 already resolved by 02:00 tick.
+
+**Daemons.** news_watcher PID alive, telegram_listener alive, heartbeat alive. Free RAM 927MB / 1.9GB; swap 246MB used (paying for itself, no OOM since added). Healthy.
+

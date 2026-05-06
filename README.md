@@ -17,10 +17,10 @@ Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01
 | Market | Side | Cost | MTM | P&L |
 |---|---|---:|---:|---:|
 | Pahlavi leads Iran 2026 | NO | $10.00 | $10.02 | +$0.02 |
-| Jesus returns by 2027 | NO | $10.00 | $10.15 | +$0.15 |
+| Jesus returns by 2027 | NO | $10.00 | $10.23 | +$0.23 |
 | US confirms aliens by 2027 | NO | $9.00 | $9.28 | +$0.28 |
 | **US-Iran peace deal by May 31** | NO | $6.99 | $9.13 | **+$2.14** |
-| Iranian regime falls by 2027 | NO | $7.00 | $7.13 | +$0.13 |
+| Iranian regime falls by 2027 | NO | $7.00 | $7.31 | +$0.31 |
 | Trump out before 2027 | NO | $7.00 | $7.21 | +$0.21 |
 | Amy Acton — 2026 Ohio Gov (resolves today) | YES | $4.99 | $5.05 | +$0.05 |
 | Latvia top 10 — Eurovision | NO | $5.00 | $5.36 | +$0.36 |
