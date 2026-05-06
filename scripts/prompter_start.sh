@@ -24,19 +24,6 @@ LOG_FILE="${LOG_DIR}/prompter_$(date -u +%Y%m%dT%H%M%SZ).log"
 
 mkdir -p "${LOG_DIR}"
 
-# Load env (POLYCLAUDE_SESSION points to the saved session id file)
-if [[ -f "${HOME}/.polyclaude/env" ]]; then
-    # shellcheck disable=SC1091
-    set -a; source "${HOME}/.polyclaude/env"; set +a
-fi
-
-SESSION_ID=$(cat "${POLYCLAUDE_SESSION:-/dev/null}" 2>/dev/null | tr -d '[:space:]')
-if [[ -z "${SESSION_ID}" ]]; then
-    echo "ERROR: no Claude session id resolvable from POLYCLAUDE_SESSION"
-    echo "Cannot --resume. Aborting."
-    exit 2
-fi
-
 # Idempotent
 if tmux has-session -t "${SESSION_NAME}" 2>/dev/null; then
     echo "prompter session already running."
@@ -45,45 +32,35 @@ if tmux has-session -t "${SESSION_NAME}" 2>/dev/null; then
     exit 0
 fi
 
-echo "starting prompter session (resuming Claude session ${SESSION_ID:0:8}...)"
+echo "starting prompter session (fresh claude, will read prompter_primer.md for context)"
 echo "  attach:  tmux attach -t ${SESSION_NAME}"
 echo "  log:     ${LOG_FILE}"
 
-# Initial bootstrap message: tells claude to read the role + primer first
-read -r -d '' BOOTSTRAP <<EOF || true
-You are now the polyclaude PROMPTER (not the operator). The conversation you've inherited is the operator's history; from here forward you operate in prompter mode. Read these in order before anything else:
+# Start tmux session in $POLYCLAUDE_DIR so the prompter's relative paths
+# (notes/, strategy/, scripts/) work.
+tmux new-session -d -s "${SESSION_NAME}" -c "${POLYCLAUDE_DIR}"
+tmux send-keys -t "${SESSION_NAME}" "cd '${POLYCLAUDE_DIR}'" Enter
+# Run claude under script(1) so we get a clean log without breaking the TUI
+tmux send-keys -t "${SESSION_NAME}" "script -q -c 'claude --model sonnet --permission-mode acceptEdits' '${LOG_FILE}'" Enter
 
-1. strategy/03_prompter_role.md
-2. notes/prompter_primer.md
-3. tail -200 notes/journal.md
-4. notes/prompter_log.md
-5. scripts/decisions.py summary
-
-Then assess current state and decide whether to immediately spawn the operator (via the Agent tool, subagent_type=general-purpose) or idle until a trigger. The operator has full autonomy — your job is continuation pressure only, no authority gates.
-
-Log your first decision to notes/prompter_log.md before doing anything else.
-EOF
-
-# Start tmux session in $HOME — Claude Code uses cwd to derive the project
-# key (-home-philipp), and the operator's session id 84f59770... is stored
-# under that project. Running --resume from /home/philipp/polyclaude would
-# look in the wrong project (-home-philipp-polyclaude) and report
-# "conversation not found." See scripts/daily_checkin.sh for same pattern.
-tmux new-session -d -s "${SESSION_NAME}" -c "${HOME}"
-tmux send-keys -t "${SESSION_NAME}" "cd '${HOME}'" Enter
-tmux send-keys -t "${SESSION_NAME}" "echo 'waiting 5s for operator session to free up...'" Enter
-tmux send-keys -t "${SESSION_NAME}" "sleep 5" Enter
-tmux send-keys -t "${SESSION_NAME}" "claude --resume '${SESSION_ID}' --model sonnet --permission-mode acceptEdits 2>&1 | tee -a '${LOG_FILE}'" Enter
-
-# Send the bootstrap message after claude has initialized
-sleep 8
-printf '%s' "${BOOTSTRAP}" | while IFS= read -r line; do
-    tmux send-keys -t "${SESSION_NAME}" -- "${line}"
-    tmux send-keys -t "${SESSION_NAME}" Enter
+# Wait for claude TUI to be ready before injecting the bootstrap.
+# Poll the log: claude prints its banner ("Welcome" / version) when ready.
+echo "waiting for claude to initialize..."
+for i in {1..30}; do
+    sleep 1
+    if grep -q -E 'Try .* to' "${LOG_FILE}" 2>/dev/null; then
+        echo "claude is ready (after ${i}s)"
+        break
+    fi
 done
+sleep 2  # extra buffer for the prompt input to be focused
+
+# Send a short bootstrap. The prompter primer has all the verbose details.
+BOOTSTRAP="You are the polyclaude prompter (NOT the operator). Read notes/prompter_primer.md and strategy/03_prompter_role.md in full, then follow the primer. The user is observing this tmux pane."
+tmux send-keys -t "${SESSION_NAME}" -- "${BOOTSTRAP}"
 tmux send-keys -t "${SESSION_NAME}" Enter
 
 echo
-echo "prompter is starting up. Attach when ready:"
+echo "prompter started. Attach when ready:"
 echo "  tmux attach -t ${SESSION_NAME}"
 echo "  (Ctrl-B then D to detach without stopping)"
