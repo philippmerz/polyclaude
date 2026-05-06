@@ -1092,3 +1092,7 @@ Architecture: prompter runs in long-lived `tmux new-session -s prompter`. Operat
 - **Prompter**: Runs in `tmux -s prompter`. Spawned daily by the user (or via cron eventually). Applies continuation pressure. User observes via `tmux attach -t prompter`. No user manual role in the operator continuation loop.
 - **Operator autonomy**: Unchanged. Decisions follow philosophy doc. Trades >$10 get skeptic+champion pair internally. Strategic pivots surface to user via Telegram.
 - **Lesson from the MVP churn**: naming matters — the agent that has full autonomy is "operator"; the agent that just pushes is "prompter". Getting the vocabulary right in one turn would have saved the remove+recreate cycle.
+
+### c69b9e3 — prompter: --dangerously-skip-permissions
+
+Small follow-up: the initial `prompter_start.sh` launched claude with `--permission-mode acceptEdits`. That still prompts for tool approvals on bash commands, breaking autonomous operation. Changed to `--dangerously-skip-permissions` per user direction. The prompter needs to spawn the operator via Agent tool, read files, and append logs without any approval gates — `acceptEdits` was too conservative for an autonomous agent role.
