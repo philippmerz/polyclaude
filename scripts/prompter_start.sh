@@ -41,7 +41,7 @@ echo "  log:     ${LOG_FILE}"
 tmux new-session -d -s "${SESSION_NAME}" -c "${POLYCLAUDE_DIR}"
 tmux send-keys -t "${SESSION_NAME}" "cd '${POLYCLAUDE_DIR}'" Enter
 # Run claude under script(1) so we get a clean log without breaking the TUI
-tmux send-keys -t "${SESSION_NAME}" "script -q -c 'claude --model sonnet --permission-mode acceptEdits' '${LOG_FILE}'" Enter
+tmux send-keys -t "${SESSION_NAME}" "script -q -c 'claude --model sonnet --dangerously-skip-permissions' '${LOG_FILE}'" Enter
 
 # Wait for claude TUI to be ready before injecting the bootstrap.
 # Poll the log: claude prints its banner ("Welcome" / version) when ready.
