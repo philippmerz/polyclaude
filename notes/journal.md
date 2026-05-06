@@ -1096,3 +1096,11 @@ Architecture: prompter runs in long-lived `tmux new-session -s prompter`. Operat
 ### c69b9e3 — prompter: --dangerously-skip-permissions
 
 Small follow-up: the initial `prompter_start.sh` launched claude with `--permission-mode acceptEdits`. That still prompts for tool approvals on bash commands, breaking autonomous operation. Changed to `--dangerously-skip-permissions` per user direction. The prompter needs to spawn the operator via Agent tool, read files, and append logs without any approval gates — `acceptEdits` was too conservative for an autonomous agent role.
+
+### c7fa888 + c2112e6 — prompter-infra git cleanup (2026-05-06 ~16:47–16:53 UTC)
+
+Two commits that postdate the 17:00–18:10 UTC journal entry above and weren't covered there.
+
+**c7fa888** (16:47 UTC): committed the files from the prompter-infra burst that had been left untracked/modified after 94ba589: `scripts/operator_start.sh`, `scripts/prompter_send.sh`, `notes/prompter_primer.md`, `scripts/prompter_start.sh`, `strategy/03_prompter_role.md`. These were the working versions after the two rounds of prompter_start fixes (7a4b720, ead123f) and the architecture pivot to long-lived tmux panes. The prompter log records the dispatch that triggered the commit task.
+
+**c2112e6** (16:53 UTC): appended prompter_log entries covering the 16:45–16:52 UTC session block — idle assessment, two pending outcomes filled in, and the raw tmux send-keys dispatch log from that prompter session.
