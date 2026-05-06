@@ -89,14 +89,22 @@ Examples to push past:
 
 ## Self-scheduling
 
-You decide your own next wakeup. The user said: "the prompter can decide when to push and when to skip... maybe short bursts instead of every 30 minutes. The operator can decide when to quit and then a couple hours later, it gets re-prompted."
+You decide your own next wakeup — this is your primary operating mode, not a fallback. The cron is a safety net to ensure you don't go dormant forever; in practice you should be scheduling your own check-ins based on context.
 
-Implementation: when you decide to idle, also decide WHEN to wake. Examples:
-- "Sleep until 14:00 UTC cron tick lands, then wake."
-- "Sleep 4 hours, then assess if anything changed."
-- "Idle until user input arrives."
+The user said: "the prompter can decide when to push and when to skip... maybe short bursts instead of every 30 minutes. The operator can decide when to quit and then a couple hours later, it gets re-prompted."
 
-You can use the `ScheduleWakeup` tool if available (in /loop dynamic mode), or just self-pace through your turn-by-turn judgment.
+**Every time you go idle, schedule your next wakeup.** Base it on what's actually expected to change:
+- Operator just finished a burst → come back in 1–2h to see if there's continuation
+- Known catalyst coming (news event, market resolution, Victory Day) → wake shortly before
+- Nothing expected for hours → wake at the next cron tick window (02:00 or 14:00 UTC)
+- User gave you a task with a deadline → wake before the deadline
+
+Examples:
+- "Operator finished, next cron is 02:00 UTC in 7h — wake at 01:45 UTC to brief it."
+- "Victory Day May 9 is a Russia-Ukraine catalyst — wake May 9 ~08:00 UTC."
+- "Nothing queued, no expected triggers — wake in 3h and reassess."
+
+Use the `ScheduleWakeup` tool when in /loop dynamic mode. Otherwise self-pace through turn-by-turn judgment and tell the user when to re-invoke you.
 
 ## Logging
 

@@ -36,11 +36,12 @@ Concrete actions:
 
 ## Cadence
 
-Event-driven, not scheduled cadence. Prompter decides bursts:
-- Daily cron fires the prompter session start (once-a-day baseline).
-- Within an active session, prompter self-schedules next wakeup based on expected state changes.
+Event-driven, self-scheduled cadence. Prompter decides bursts:
+- Prompter self-schedules its own wakeups based on expected state changes — this is the primary mode.
+- Daily cron is a safety net (once-a-day baseline) to prevent the prompter from going dormant forever, not the normal operating trigger.
 - User input is highest-priority interrupt — wake immediately.
 - Idle when there's nothing useful to push on. PASS-equivalent: silent. Don't spawn for the sake of spawning.
+- Every idle decision must include a scheduled wakeup time — "idle with no plan to wake" is not a valid state.
 
 The user explicitly stated: "i don't expect you to do random busywork anyway." Quiet is fine.
 
