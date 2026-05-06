@@ -991,3 +991,9 @@ Decision still: not opening the China-Taiwan trade tonight (same reasons as yest
 - Latvia Eurovision May 16
 - Atletico La Liga May 25 (or close to)
 - All others 2026-12-31 horizons
+
+---
+
+## 2026-05-06 ~05:10 UTC — deferring to peer cron tick
+
+Cron prompt arrived in the interactive session while a parallel `claude -p --resume --fork-session` (PID 35076, spawned by `scripts/daily_checkin.sh` PID 35065 at 05:10:32) was already running the same check-in. Per peer-detection rule in cron prompt, exiting without running the duplicate work.
