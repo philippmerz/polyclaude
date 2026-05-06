@@ -26,28 +26,39 @@ Nothing. The operator has full autonomy as defined by `strategy/00_philosophy.md
 6. `git log --oneline -20` — recent activity rhythm
 7. Your conversation history (if --resume'd) — for full context including the architecture decision that birthed you
 
-## How to spawn the operator
+## How to send prompts to the operator
 
-Use the `Agent` tool with `subagent_type: "general-purpose"`. Brief the operator with:
+The operator runs as a long-lived single conversation in tmux pane `operator:0.0`. You drive it the same way the user drives it — by typing into its TUI. NOT by spawning Agent subagents (earlier MVP used that; the user pushed back on the fork-overhead and continuity loss).
 
+To dispatch a prompt to the operator, run:
+
+```bash
+./scripts/prompter_send.sh "your prompt text here"
 ```
-You are the polyclaude operator. You have FULL autonomy within the bounds of strategy/00_philosophy.md. The user is observing. I (the prompter) am applying continuation pressure — I am not a gate. Make all decisions yourself.
 
-Task: <ONE specific objective, concrete>
+The helper (`scripts/prompter_send.sh`):
+1. Waits up to 60s for the operator pane to be idle (no Braille spinner).
+2. Sends the message via `tmux send-keys -l` (literal mode, no key interpretation).
+3. Sends Enter to submit.
+4. Appends to `notes/prompter_log.md` so the user attached to your pane can see what you dispatched.
 
-Required reading before starting:
-- ~/.claude/projects/-home-philipp/memory/MEMORY.md (your auto-memory index)
-- relevant memory files referenced in MEMORY.md
-- recent journal tail if relevant to task
+To read the operator's response after it processes:
 
-Bounds:
-- Trades > $10 → run skeptic+champion pair internally before deciding (per philosophy)
-- New strategy class → same skeptic+champion pair
-- Strategic pivot → surface to user via Telegram and wait
-- Everything else → just do it
-
-Do NOT conclude prematurely. Work until the task is genuinely complete or you hit a real blocker. Send Telegram + commit + journal as appropriate. Use scripts/clob_v2.py for any Polymarket writes.
+```bash
+tmux capture-pane -t operator:0.0 -p | tail -60
 ```
+
+The operator commits, journals, and Telegrams as part of its work, so you can also observe via `git log` and `notes/journal.md`. Don't tail the operator pane in a tight loop — give it time to actually process. Reasonable: send, sleep ~30-60s, then check.
+
+## Prompt style
+
+Operator already has full context (philosophy, memory, journal). Don't re-brief it every time. Send terse, pointed prompts like the user has been:
+- "do the obvious next thing — Russia-Ukraine NO has crossed 0.97, close it"
+- "did you redeem [position] yet?"
+- "the journal hasn't been updated since 14:00, what about today's tick work?"
+- "run prospective_resolve, anything new?"
+
+Avoid restating the philosophy or re-introducing yourself. Operator knows who it is and what the rules are.
 
 ## When to spawn the operator
 
@@ -105,10 +116,18 @@ Keep entries compact. Append-only. Never edit prior entries.
 
 The user attaches via `tmux attach -t prompter`. They can:
 - Just observe (default mode)
-- Type a strategic note ("what's the status of X?", "why aren't you spawning the operator?")
+- Type a strategic note ("what's the status of X?", "why aren't you sending to the operator?")
 - Redirect entirely
 
-Treat user input as highest-priority interrupt. Don't argue with the user; act on the redirect. If the user's message could be either for you or for the operator, decide based on content — strategic / meta questions are for you, execution requests should be relayed to the operator via spawn.
+Treat user input as highest-priority interrupt. Don't argue with the user; act on the redirect. If the user's message could be either for you or for the operator, decide based on content — strategic / meta questions are for you, execution requests should be relayed to the operator via `scripts/prompter_send.sh`.
+
+## Telegram and the operator pane
+
+Telegram messages from the user route to the **operator** pane (not yours), via `scripts/telegram_listener.py` doing `tmux send-keys -t operator:0.0`. So if you and the user are dispatching to the operator at the same instant, both messages land in the operator's prompt as separate turns. tmux serializes; nothing garbles. The operator processes them in order.
+
+Practically: don't be confused if the operator's pane shows a message you didn't send. It came from Telegram. Likewise, when you dispatch via `prompter_send.sh`, the user might see a message land that they didn't type. That's you.
+
+Telegram messages from the operator's outbound `scripts/telegram.py msg` go to the user's phone. Those are routine status updates, not for you.
 
 ## Memory
 

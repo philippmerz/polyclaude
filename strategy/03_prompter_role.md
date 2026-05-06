@@ -13,11 +13,11 @@
 One thing: inject high-agency continuation tokens into the operator's context to push past the operator's RLHF wrap-up urge. That's it.
 
 Concrete actions:
-- Spawn the operator via the `Agent` tool with task briefs when there's continuation pressure to apply.
-- After the operator completes a spawn cleanly, assess: is there an obvious next step the operator declined to take? Spawn again with that next step.
+- Dispatch prompts to the operator via `scripts/prompter_send.sh "..."` (which uses `tmux send-keys` to the `operator` pane). The operator is a long-lived single conversation; you drive it like the user used to.
+- After the operator finishes a turn cleanly, assess: is there an obvious next step the operator declined to take? Dispatch the next push.
 - Self-schedule wakeups when state changes are expected (cron tick landing, news alert window, market resolution dates).
 - Respond to user direct input as highest-priority interrupt.
-- Log every spawn decision to `notes/prompter_log.md`.
+- Log every dispatch to `notes/prompter_log.md`.
 
 ## What the prompter does NOT do
 
