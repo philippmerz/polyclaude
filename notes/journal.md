@@ -1142,3 +1142,46 @@ Lesson: my "wait for N=2" framing was reasonable defensive heuristic but the cos
 ## 2026-05-07 ~02:00 UTC — deferring to peer cron tick
 
 Cron tick prompt arrived in the operator pane (likely dispatched by the prompter at 02:00 UTC per its self-scheduling). At the same time, the actual `daily_checkin.sh` cron job at 0 2 * * * fired and spawned `claude -p --resume 84f59770-... --fork-session --model opus --effort max` (PID 62531, parent 62520, holding `.checkin.lock`). Per peer-detection rule, exiting without running the duplicate work — the forked headless opus tick is the authoritative one.
+
+> **Correction (~02:08 UTC):** the above defer was wrong — PID 62531 itself also deferred (saw the operator pane as its peer) and exited with only the defer note. Result: mutual deadlock-defer, no actual work. User flagged it. Running the tick manually below.
+
+---
+
+## 2026-05-07 ~02:08 UTC — Cron tick (02:00 UTC, manual): hold all, no new entries
+
+**Peer-detection bug.** Architecture now has three layers with the same session id: (1) operator pane (long-lived `claude` reading session 84f59770), (2) prompter pane (separate session, dispatches into operator), (3) cron-forked headless `claude -p --resume <session> --fork-session`. The peer-detection rule was written for layer (3)-vs-(3) races (two cron ticks within the same minute). It now misfires when (3) sees (1) and defers, AND simultaneously (1) sees (3) via the prompter and defers. Fix is structural: the cron prompt should distinguish "long-lived interactive operator on this session id" (always present, expected) from "another headless tick claiming the same window" (the actual race). Adding to backlog — does not need to fix tonight, just don't trust ff13200's premise. For tonight, manual tick.
+
+**Mark.** PM sleeve $59.95 cost / **$61.93 MTM (+$1.98 / +3.30%)**, up from $61.56 at 20:00 UTC = +$0.37 in 6h. Movers: Iran-peace NO 0.695 → 0.715 (+3pp NO mark, was +3.72% on cost, now +6.71%); Iranian regime NO 0.845 → 0.865 (+8.12% on cost); Pahlavi NO 0.915 → 0.917 unchanged-ish. Latvia NO 0.890 (+7.23% — slipped 0.6pp from 20:00 UTC). The Hormuz-pause/skirmish framing is hardening NO interpretation across the Iran-cluster: market is pricing "Trump downgrades Iran framing → war narrative dies → less likely a 'permanent peace deal' will be formally signed" (vs. de-escalation = more peace deal). Counter-intuitive but the news bias was toward NO.
+
+**Crypto + Ostium.** Aave $84.50 idle (Arb $55 @ 3.20% + Base $29.50 @ 3.41%). Stables ~$10.60 (USDC.e $5.11 + pUSD $5.00 + USDC $0.49). Ostium 3 trades, $14.68 collateral, **+$0.51 net P&L** (up from +$0.38 at 20:00 UTC): XAU/USD long +18.7% (gold $4543→$4714, TP $4769 ~1.2% away — could trigger this week), SPX/USD long +13.9% (unchanged), NDX/USD short -22.3% (NDX $28628→$28587 retraced 0.1pp, SL $29562 ~3.4% above current). Net Ostium positive. No close triggers.
+
+**News intake (since 20:00 UTC, ~6h).** 2 alerts, both Tier-2 Iran/Hormuz:
+- 20:34 UTC: "Could Iran use 'kamikaze dolphins' against the US in the Strait of Hormuz?" — speculative escalation tone, supports NO on iran-peace; market priced this in (mark moved up).
+- 00:28 UTC: "Trump pauses Project Freedom, calls Iran conflict a 'skirmish'" — operator pre-flagged this. Trump's "skirmish" framing is dismissive: minimizes the conflict, signals he wants to move on, NOT a path to a "permanent peace deal" (which requires bilateral negotiation, treaty, formal terms). Net: mildly supports NO on iran-peace. Market interpretation aligned (NO mark drifted up).
+
+Neither alert is MATERIAL/CRITICAL by impact tier. No action triggered. Note: keyword tightening from `75ba0c5` (drop bare 'aave hack') is live; news_watcher PID 56478 is the post-restart daemon.
+
+**Decision tracker.** `decisions.py pending` — no overdue resolutions. DEC-0009 (Acton) closed. Next resolutions: DEC-0007 Latvia May 16 (9d), DEC-0008 Atletico ~May 25 (18d), DEC-0006 Iran-peace May 31 (24d). DEC-0014 Russia-Ukraine NO re-eval scheduled post-May 10 (3d).
+
+**Hurdle filter (Step 6 prospecting).** 2497 active markets → 22 clearing 4.15% APY hurdle. Distribution:
+- Iran cluster (12 markets): peace-deal-by-May15 NO 0.836 (+220K% APY math glitch, 8d), peace-by-May31 NO 0.715 (already hold), peace-by-June30 NO 0.515 (split), regime-by-June30 NO 0.955 (+33%, sub-thresh), airspace closures, etc. **All blocked by 30% Iran cluster cap.**
+- Hormuz cluster (3 markets): traffic-normal-May15 NO 0.955, end-of-May NO 0.705, end-of-June YES 0.535. **Same Iran-correlated factor; cluster-blocked.**
+- Sports (2): PSG CL YES 0.575, France WC NO 0.832. **Sports rule blocks.**
+- Crypto (4): BTC $150k May NO sub-thresh, WTI $200/$150 May NO sub-thresh, US-obtains-Iranian-uranium NO 0.925 (+203% but Iran-cluster).
+- Macro (1): Aliens NO 0.805 already hold (DEC-0003).
+
+Genuinely new non-cluster, non-sport candidates clearing hurdle: **0**. (France WC NO at +133%/74d is the closest non-blocked candidate but blocked by sports rule.)
+
+**Bankroll.** $0.50 actionable cash after $10 reserve buffer + gas. Cannot open new positions until Latvia (~$5 May 16) or Atletico (~$5 May 25) frees cash. **No new entries this tick** regardless.
+
+Side observation worth banking: Iran-peace **by May 15** NO at 0.836 implies market gives 16.4% chance of a permanent deal in 8 days; my held May-31 NO at mark 0.715 implies 28.5% chance by May 31. The 12pp delta is the May-16-to-31 window. If I were unconstrained, the May 15 leg would be a tighter calendar bet on the same factor — but cluster + bankroll block. Worth re-checking post-Latvia resolution if cluster cap loosens.
+
+**DEC-0014 Russia-Ukraine NO re-eval.** Plan stands: wait until post-May 10 (Victory Day May 9 + 1d settlement). Today is May 7, 2 days to catalyst, 3 days to re-eval window. Skeptic logic still binds.
+
+**Decision: hold all 8 PM positions + 3 Ostium positions + 1 Aave position. No new entries. No close.** All theses intact. No DEC-NNNN added. Calibration: the 02:00 UTC tick adds nothing to the trading record — the work is documenting that nothing requires action and that the peer-detection deadlock did not result in a missed move.
+
+**Daemons.** news_watcher PID 56478 (post-restart May 6 ~20:15 UTC, after `75ba0c5` config edit). heartbeat PID 388. telegram_listener PID 47425 (routes to operator pane). All healthy.
+
+**Telegram tick summary** sent (per Step 8). Single-message, action-only. Next catalyst: Victory Day May 9.
+
+**Backlog from this tick:** fix the peer-detection rule in the cron prompt to distinguish long-lived operator session from a competing headless tick. Currently latent risk of every cron tick deadlocking the same way. Not blocking; the manual fallback (this entry) works.
