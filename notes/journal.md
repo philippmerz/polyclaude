@@ -1185,3 +1185,21 @@ Side observation worth banking: Iran-peace **by May 15** NO at 0.836 implies mar
 **Telegram tick summary** sent (per Step 8). Single-message, action-only. Next catalyst: Victory Day May 9.
 
 **Backlog from this tick:** fix the peer-detection rule in the cron prompt to distinguish long-lived operator session from a competing headless tick. Currently latent risk of every cron tick deadlocking the same way. Not blocking; the manual fallback (this entry) works.
+
+---
+
+## 2026-05-07 ~02:30 UTC — 1e346e1: peer-detection deadlock fix
+
+User asked to fix the peer-detection rule immediately rather than carry as backlog. Two-layer fix shipped:
+
+**Layer 1 — Bash-level pre-check in `daily_checkin.sh`.** Before the heredoc prompt is even built, the script now checks `tmux has-session -t operator` and `tmux display-message -p '#{pane_current_command}'` for one of `{script, claude, node}` (the operator pane wraps claude with `script(1)` for log capture, so `script` is the typical foreground proc). If matched: poll up to 60s for pane idle (no Braille spinner via `#{pane_title}`), `tmux send-keys -l "Cron tick ${TS}. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened."` + Enter, log to `peer_skips.log`, exit 0. The forked headless `claude -p` (rest of the script) is now a fallback for operator-pane-down only.
+
+**Layer 2 — `PEER DETECTION` block rewrite in the prompt.** Reflects the new architecture: by the time a forked claude is running, the bash guard already filtered out the operator-pane case. Long-lived `claude` processes (no -p flag) are NOT peers — only another `claude -p` with the same session id and a different PID is a real race target, which the `.checkin.lock` flock already guards. Detection: `pgrep -af 'claude -p' | grep -v "^$$"` (excludes self).
+
+**Layer 3 (separate file) — `notes/prompter_primer.md`.** Removed "cron tick fires" from the prompter's spawn-trigger list; replaced with "post-cron verification (~02:30 / 14:30 UTC)" — confirm the operator processed the cron prompt and dispatch a follow-up if the journal/commits don't reflect it. Note added explaining that 02:00 / 14:00 UTC dispatches are now bash-level, not prompter-level.
+
+**Tested locally.** Bash syntax check passes. Smoke test: `pane_current_command=script` matched `case` arm, would dispatch + exit 0. The fallback path is the unchanged existing flow.
+
+**Side observation worth flagging.** `ps -ef | grep claude` shows three orphan claude processes from yesterday's setup churn (PIDs 46692, 47453, 47651, all `claude --model sonnet --dangerously-skip-permissions` from the pre-`--effort max` reset cycles). Each has a `script(1)` parent that's also alive. These aren't load-bearing and don't break the new peer-detection fix (which uses tmux state, not `pgrep`), but they're consuming a small amount of memory and would be reaped on the next reboot. Leaving them for the user to decide whether to `kill -TERM` or ignore. Not a blocker.
+
+**Decision.** Fix shipped. Next 02:00 / 14:00 UTC cron tick will exercise the bash guard for real. If the operator pane is up at the time, `peer_skips.log` will get a "dispatched via send-keys" entry and the operator pane will receive the cron prompt directly.
