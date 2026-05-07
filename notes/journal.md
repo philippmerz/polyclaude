@@ -1136,3 +1136,9 @@ User asked to override the "wait for N=2" rule and tighten the keyword now. Conf
 Daemon restarted: PID 389 → 56478, `seen=4531` carried over via state file, so no re-alert flood on already-processed entries.
 
 Lesson: my "wait for N=2" framing was reasonable defensive heuristic but the cost of one config-line edit is so low that user-judgment override is correct. For low-cost reversible config tightening, "user asked, do it" beats "wait for stronger evidence."
+
+---
+
+## 2026-05-07 ~02:00 UTC — deferring to peer cron tick
+
+Cron tick prompt arrived in the operator pane (likely dispatched by the prompter at 02:00 UTC per its self-scheduling). At the same time, the actual `daily_checkin.sh` cron job at 0 2 * * * fired and spawned `claude -p --resume 84f59770-... --fork-session --model opus --effort max` (PID 62531, parent 62520, holding `.checkin.lock`). Per peer-detection rule, exiting without running the duplicate work — the forked headless opus tick is the authoritative one.
