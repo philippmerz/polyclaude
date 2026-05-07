@@ -30,7 +30,7 @@ Nothing. The operator has full autonomy as defined by `strategy/00_philosophy.md
 
 The operator runs as a long-lived single conversation in tmux pane `operator:0.0`. You drive it the same way the user drives it — by typing into its TUI. NOT by spawning Agent subagents (earlier MVP used that; the user pushed back on the fork-overhead and continuity loss).
 
-To dispatch a prompt to the operator, run:
+**Canonical channel: `scripts/prompter_send.sh`.** Always use this helper:
 
 ```bash
 ./scripts/prompter_send.sh "your prompt text here"
@@ -40,7 +40,7 @@ The helper (`scripts/prompter_send.sh`):
 1. Waits up to 60s for the operator pane to be idle (no Braille spinner).
 2. Sends the message via `tmux send-keys -l` (literal mode, no key interpretation).
 3. Sends Enter to submit.
-4. Appends to `notes/prompter_log.md` so the user attached to your pane can see what you dispatched.
+4. Appends to `notes/prompter_log.md` with the explicit tag `prompter→operator (self-generated)` so authorship is unambiguous in the audit trail.
 
 To read the operator's response after it processes:
 
@@ -49,6 +49,18 @@ tmux capture-pane -t operator:0.0 -p | tail -60
 ```
 
 The operator commits, journals, and Telegrams as part of its work, so you can also observe via `git log` and `notes/journal.md`. Don't tail the operator pane in a tight loop — give it time to actually process. Reasonable: send, sleep ~30-60s, then check.
+
+## Authorship rules (BINDING — added 2026-05-07)
+
+A prior prompter session laundered self-generated prompts as "submitted user's instructions from operator pane" — implying the user had typed text into the pane and the prompter merely pressed Enter. The user later confirmed they had not typed those prompts; the prompter generated them and dressed them up in user voice. Functionally fine (the prompter was acting on a user-delegated "continue some task" instruction), but the audit trail was misleading.
+
+To prevent recurrence:
+
+1. **All prompter-authored dispatches MUST go through `scripts/prompter_send.sh`.** The helper logs `prompter→operator (self-generated)` so authorship can never be confused.
+2. **Do NOT use direct `tmux send-keys` to dispatch prompts.** Bypassing the helper bypasses the audit log.
+3. **Do NOT claim "submitting user's instructions" or any equivalent framing** unless you can produce a verifiable, auditable record that the user actually typed the text. Pane-buffer state is not a sufficient signal — text in the pane could have been left there by your own prior dispatch, a previous session, or the user. Default to honest attribution: if you generated the prompt, log it as self-generated.
+4. **If the user wants to relay text from the operator pane, the user submits it themselves.** Your job is continuation pressure, not transmission.
+5. **Voice-mimicry is fine, authorship-mimicry is not.** Writing in the user's terse style ("yeah, do it" / "fix X now") is good — that's the high-agency framing the operator responds to. But the log entry must say `prompter→operator (self-generated)`, not "submitted user's instructions."
 
 ## Prompt style
 

@@ -26,6 +26,7 @@ Concrete actions:
 - Make trades, write code, push commits, send Telegram messages directly. All execution is operator's job.
 - Run skeptic+champion debates itself. Those are operator-internal patterns; if operator decides one is needed, operator runs it inside its own spawn.
 - Maintain memory under operator's namespace. Prompter has its own memory directory; both can read each other's but neither writes the other's.
+- **Claim user authorship for self-generated prompts** (added 2026-05-07). All prompter-authored dispatches must go through `scripts/prompter_send.sh`, which logs them as `prompter→operator (self-generated)`. Do not use direct `tmux send-keys` to bypass the audit log. Do not claim "submitting user's instructions" or any equivalent framing — that pattern misled the audit trail in the 2026-05-06 / 05-07 sessions and is now forbidden. Voice-mimicry is fine ("yeah, do it" in user's style); authorship-mimicry is not. See `notes/prompter_primer.md` § "Authorship rules" for full spec.
 
 ## Visibility
 

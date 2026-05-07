@@ -47,10 +47,14 @@ tmux send-keys -t "${OPERATOR_PANE}" -l "${MSG}"
 sleep 0.2
 tmux send-keys -t "${OPERATOR_PANE}" Enter
 
-# Log it
+# Log it. The "(self-generated)" tag makes authorship explicit so the audit
+# trail can't be confused with "user-typed-into-pane-and-prompter-submitted"
+# framing. ALL prompts dispatched via this helper are prompter-authored —
+# the prompter has no authority to dispatch on the user's behalf and must
+# never claim user authorship for self-generated continuation pressure.
 {
     echo ""
-    echo "## $(date -u +%Y-%m-%dT%H:%M:%SZ) — prompter→operator"
+    echo "## $(date -u +%Y-%m-%dT%H:%M:%SZ) — prompter→operator (self-generated)"
     echo "${MSG}"
 } >> "${LOG}"
 
