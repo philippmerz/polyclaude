@@ -48,14 +48,6 @@ Quick map for any Claude (or human) reading the repo cold. For deeper context: [
 
 - `telegram.py` — outbound. Subcommands: `setup`, `msg`, `file`, `md`.
 
-## Archived (`_archive/`)
-
-One-shot scripts from Day 1 setup. **Do not re-run** — they were intended to fire once and won't make sense in current state.
-
-- `place_initial_orders.py` — fired the initial 5-position long-sleeve carry portfolio.
-- `place_short_orders.py` — fired the initial 4-position short sleeve.
-- `long_horizon.py` — Day-1 market filter helper, never used since.
-
 ## Conventions
 
 - All paths to secret-bearing files come from `_paths.path("ENV_VAR")`. No absolute paths in source.
