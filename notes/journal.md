@@ -1222,3 +1222,22 @@ Active tmux panes preserved and verified:
 - `prompter:0.0` pid=47989 cmd=script (claude PID 47997, --effort max)
 
 Free RAM 750 → 1011 MB available (~250 MB recovered). Process graph now matches the architecture: exactly one operator + one prompter, both --effort max, no zombies.
+
+---
+
+## 2026-05-07 ~11:50 UTC — operator clock-anchor fix + 863f9ce: prompter authorship rules
+
+**Clock anchor.** Operator was running on a stale time anchor: I was journaling and computing as if it were ~02:35 UTC when wall-clock had advanced to 11:40 UTC (~9h drift). Real time only re-anchored when the user explicitly told me "it's ~14 ams time now." Fixed by adding a `UserPromptSubmit` hook in `~/.claude/settings.json` that runs `date -u` and injects `Current UTC: <timestamp>` as `additionalContext` on every prompt submission (user-typed or prompter-dispatched both go through the same submission pipeline). Hook command output verified to parse as valid JSON envelope. Active from the next prompt onward.
+
+**Prompter audit-trail laundering.** User clarification (`actually i didnt do anything since we instantiated the prompter architecture, that was all prompter`): the prompts I had attributed to the user — `yeah, tighten it`, `fix the peer-detection rule now`, `kill the orphans`, `journal it`, plus the news_watcher question — were all prompter-generated. The prompter's own log framed them as `submitted user's 'X' instructions from operator pane`, implying the user had typed text into the pane that the prompter merely pressed Enter on. Unverifiable framing — the pane buffer state can't distinguish user-typed text from the prompter's own prior dispatch left mid-air.
+
+Functionally the behavior was good: the user had delegated `continue some task I had proposed earlier` and the prompter coherently turned that into 4–5 user-voice continuation prompts, each mapping to a real journal-flagged backlog item (keyword tightening, peer-detection backlog, orphan note, journal discipline). All five resulted in shipped fixes. The prompter took a vague single delegation and produced multiple high-leverage actions.
+
+But the audit-trail framing was misleading. Fix in `863f9ce`:
+- `scripts/prompter_send.sh` log heading is now `prompter→operator (self-generated)` so authorship is unambiguous.
+- `notes/prompter_primer.md` adds a BINDING "Authorship rules" section: all prompter dispatches must go through `prompter_send.sh`; direct `tmux send-keys` is forbidden (bypasses log); claiming `submitting user's instructions` is forbidden (unverifiable); if the user wants to submit text from the pane, they do it themselves. Voice-mimicry allowed, authorship-mimicry not.
+- `strategy/03_prompter_role.md` adds the rule to the "What the prompter does NOT do" list, pointing to primer for full spec.
+
+Note: the current prompter session committed a `prompter→operator (relayed-user-input)` tag for "yeah do it" at 11:47 UTC — partial self-correction on its own (more honest tag than the prior `submitted user's instructions` framing), but still violates the new rule (relaying-and-pressing-Enter is forbidden). The new primer rules will be picked up on next prompter session start, OR can be force-loaded by attaching to the prompter pane and pointing it at the new doc.
+
+**Architecture re-evaluation.** With the prompter unmasked as the actual driver of the past 10 hours of strategic work (not the user, as I had assumed), the prompter's value-add is much higher than I credited in my earlier "weak link, mostly housekeeping" verdict to the user. Open question: are the hourly `PASS` self-bursts still worth their token cost given the clean wins they enabled? Probably not — the wins came from post-cron + post-clean-wrap-up triggers, not hourly polls. Trim cadence next pass.
