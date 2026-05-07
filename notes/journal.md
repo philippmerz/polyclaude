@@ -754,3 +754,49 @@ But the audit-trail framing was misleading. Fix in `863f9ce`:
 Note: the current prompter session committed a `prompter→operator (relayed-user-input)` tag for "yeah do it" at 11:47 UTC — partial self-correction on its own (more honest tag than the prior `submitted user's instructions` framing), but still violates the new rule (relaying-and-pressing-Enter is forbidden). The new primer rules will be picked up on next prompter session start, OR can be force-loaded by attaching to the prompter pane and pointing it at the new doc.
 
 **Architecture re-evaluation.** With the prompter unmasked as the actual driver of the past 10 hours of strategic work (not the user, as I had assumed), the prompter's value-add is much higher than I credited in my earlier "weak link, mostly housekeeping" verdict to the user. Open question: are the hourly `PASS` self-bursts still worth their token cost given the clean wins they enabled? Probably not — the wins came from post-cron + post-clean-wrap-up triggers, not hourly polls. Trim cadence next pass.
+
+---
+
+## 2026-05-07 ~14:00 UTC — Cron tick (14:00 UTC): hold all, bash guard validated, Iran-peace big mover
+
+**Bash guard validated.** First real-world fire of the new `daily_checkin.sh` pre-check from `1e346e1`. `logs/cron/peer_skips.log` line 1: `20260507T140001Z cron: dispatched to operator pane (cmd=script) via send-keys; exiting`. The forked-headless-claude path didn't run (no `checkin_20260507T140001Z.log` was created — the guard exited 0 before opening the cron log). The cron prompt landed in the operator pane via `tmux send-keys`, the operator processed it, peer-detection deadlock pattern eliminated. Architecture proven.
+
+**State.** PM sleeve $59.95 cost / **$60.67 MTM (+$0.72 / +1.20%)**, down from $61.93 at 02:08 UTC = -$1.26 in 12h. Single dominant mover: **Iran-peace NO 0.715 → 0.585** (-13pp NO mark, +14pp YES probability) on the Iran-reviewing-proposal news flow. Cost basis 0.67, position now -12.69% on cost ($6.11 MTM vs $6.99 cost). Other movers small: Latvia NO +0.5pp (mark 0.905, +9.04% on cost), Iranian regime NO unchanged (+8.12%). Crypto sleeve unchanged: $84.50 Aave passive. Ostium $14.68 collateral, **+$0.59 net P&L** (XAU/USD +22.2% / +$1.09 — TP $4769 now ~0.5% above current, could trigger this week; SPX/USD +13.9%; NDX/USD short -24.0% / -$1.18, SL still ~3% above).
+
+**News intake (since 02:00 UTC, ~12h).** 5 Tier-2 alerts, 4 of 5 are coordinated diplomatic-thaw narrative:
+- 04:35 UTC: Dogecoin/BTC slide as Iran ceasefire optimism lifts equities — risk-on rotation off Iran de-escalation.
+- 06:16 UTC: Stranded ship in Hormuz tells BBC of "pressure" — humanitarian pressure for de-escalation.
+- 08:28 UTC: PSG into CL final after beating Bayern — sports, irrelevant to active positions.
+- 08:58 UTC: Iran reviewing peace proposal as Trump says a deal "very possible".
+- 09:54 UTC: Trump sees swift end to war as Iran reviews US peace proposal.
+
+The shift from Trump's May 6 "skirmish" framing to today's "deal very possible" + Iran "reviewing" is a concrete diplomatic moment. Market priced it in: Iran-peace NO mark dropped 13pp.
+
+**DEC-0006 Iran-peace decision: HOLD.** Reasoning:
+
+- **Magnitude:** -12.69% drawdown is within reasonable variance for a binary prediction market 24 days from resolution. Position is $6.99 cost / 12% of PM sleeve — bearable as full loss if NO loses.
+- **Resolution criteria:** market resolves on a "permanent peace deal" — strict bar. A framework agreement or ceasefire-extension announcement may NOT qualify even if announced. Skeptic agent flagged this in May 1 (DEC-0014 skip rationale). Iran "reviewing" ≠ "agreeing"; Iran's foreign ministry historically takes weeks for formal responses.
+- **Trump-rhetoric overshoot history:** "very possible" / "swift end" / "great deal" predictions from Trump have a high false-positive rate; the market is reactive to the rhetoric, possibly more than the underlying probability warrants. Symmetric counter: market may be more informed than my prior — the new mark could reflect smart-money positioning, not just news reaction.
+- **At current 41.5% YES, would I open?** Marginal — 41.5% is closer to my fair-value estimate (~35% YES) than 26% YES was. Marginal entry → marginal hold. NOT a strong-edge-flipped scenario.
+- **Capital reallocation argument for closing:** if I close at 0.585, I free $6.11. But hurdle filter shows zero non-blocked deployable candidates this tick (all credible items are Iran-cluster, sports-ruled, sub-thresh, or already-held). Freed capital sits idle — no benefit.
+- **Friction cost of closing:** ~$0.09 in fees + spread. Locks loss at -$0.97 vs current -$0.88 unrealized. Slightly worse than hold's expected value.
+- **Bag-holding bias check:** am I holding because thesis is alive or because I don't want to book a loss? Honest answer: thesis is genuinely alive (strict resolution criteria + 24-day window + Iran's slow consensus process + Trump-rhetoric pattern). Not bag-holding.
+
+**Calibration note.** This is a data point for the calibration record. Position was opened at 0.67 NO (33% YES). Market repriced to 41.5% YES on news flow within 7 days. By May 31 we'll know whether 41.5% was correctly elevated (deal lands) or news-flow noise (no deal). The decision to hold becomes the data point.
+
+**Hurdle filter (Step 6).** 1998 markets → 13 clearing 4.15% APY. Distribution:
+- Iran cluster (8): peace-deal-by-May15 NO 0.771, peace-by-May31 NO 0.585 (already hold), peace-by-June30 NO 0.455 (split), regime-by-June30 NO 0.955 sub-thresh, US-invade NO 0.805 sub-thresh, etc. **All blocked by 30% cluster cap.**
+- Sports (3): PSG CL YES 0.575 (in finals), Switzerland WC NO 0.991 sub-thresh, 76ers NBA NO 0.993 sub-thresh. **Sports rule blocks.**
+- Other (2): Hormuz-normal-May15 NO 0.933, Hormuz-end-May NO 0.635. **Iran-correlated, blocked.**
+
+Genuinely new non-cluster, non-sport candidates clearing hurdle: **0**.
+
+**Bankroll.** $0.50 actionable cash (after $10 reserve buffer + gas). Cannot open new positions. **No new entries this tick.**
+
+**Decision tracker.** No overdue resolutions. DEC-0006 (Iran-peace) tracked through May 31; DEC-0007 (Latvia) May 16 (9d); DEC-0008 (Atletico) ~May 25 (18d); DEC-0014 (Russia-Ukraine NO skip) re-eval post-May 10 (3d).
+
+**Daemons.** news_watcher PID 56478, heartbeat PID 388, telegram_listener PID 47425. Healthy.
+
+**Telegram tick** sent (per Step 8). Single-message, action-only. Next catalyst: Victory Day May 9 (DEC-0014 trigger).
+
+**Decision: hold all 8 PM + 3 Ostium + 1 Aave. No new entries. No close.** Cron architecture working as designed. Next tick: 02:00 UTC May 8.
