@@ -1203,3 +1203,22 @@ User asked to fix the peer-detection rule immediately rather than carry as backl
 **Side observation worth flagging.** `ps -ef | grep claude` shows three orphan claude processes from yesterday's setup churn (PIDs 46692, 47453, 47651, all `claude --model sonnet --dangerously-skip-permissions` from the pre-`--effort max` reset cycles). Each has a `script(1)` parent that's also alive. These aren't load-bearing and don't break the new peer-detection fix (which uses tmux state, not `pgrep`), but they're consuming a small amount of memory and would be reaped on the next reboot. Leaving them for the user to decide whether to `kill -TERM` or ignore. Not a blocker.
 
 **Decision.** Fix shipped. Next 02:00 / 14:00 UTC cron tick will exercise the bash guard for real. If the operator pane is up at the time, `peer_skips.log` will get a "dispatched via send-keys" entry and the operator pane will receive the cron prompt directly.
+
+---
+
+## 2026-05-07 ~02:35 UTC — orphan claude reap
+
+User asked to kill the 3 orphan claude processes flagged in the prior entry. Two-step SIGTERM (script parents first, then re-parented children):
+
+```
+kill 46691 47452 47650   # script(1) wrappers
+kill 46692 47453 47651   # claude PIDs (re-parented to PID 1 after parent died)
+```
+
+All 3 (script, claude) pairs reaped cleanly. PID 46692's second-step kill returned "no such process" because the child cascade had already completed it.
+
+Active tmux panes preserved and verified:
+- `operator:0.0` pid=47960 cmd=script (claude PID 47968, --effort max — this session)
+- `prompter:0.0` pid=47989 cmd=script (claude PID 47997, --effort max)
+
+Free RAM 750 → 1011 MB available (~250 MB recovered). Process graph now matches the architecture: exactly one operator + one prompter, both --effort max, no zombies.
