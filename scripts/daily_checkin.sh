@@ -34,6 +34,41 @@ LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export HOME="${HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 
+# Bash-level pre-check: if the long-lived operator pane is alive, dispatch the
+# cron-tick prompt via `tmux send-keys` and exit. The forked headless claude
+# below is a fallback for operator-pane-down scenarios. This rule fixes the
+# mutual-defer deadlock observed 2026-05-07 02:00 UTC (commit ff13200): the
+# forked tick saw the operator pane in `pgrep claude` and deferred to it,
+# while the operator pane simultaneously deferred to the forked tick — no
+# work happened.
+#
+# Detection: tmux session "operator" exists AND its pane's current command
+# is one of {script, claude, node} (the operator pane wraps claude with
+# script(1) for log capture, so `script` is the typical foreground proc).
+# `bash` means claude exited and we should fall through to fallback.
+if command -v tmux >/dev/null 2>&1 && tmux has-session -t operator 2>/dev/null; then
+    PANE_CMD=$(tmux display-message -p -t operator:0.0 '#{pane_current_command}' 2>/dev/null || echo "")
+    case "${PANE_CMD}" in
+        claude|node|script)
+            # Wait up to 60s for operator pane to be idle (no Braille spinner).
+            for _ in {1..60}; do
+                title=$(tmux display-message -p -t operator:0.0 '#{pane_title}' 2>/dev/null || echo "")
+                if ! grep -qE 'Manifesting|Percolating|Pondering|Synthesizing|Thinking|Processing' <<<"${title}"; then
+                    break
+                fi
+                sleep 1
+            done
+            CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened."
+            tmux send-keys -t operator:0.0 -l "${CRON_MSG}"
+            sleep 0.2
+            tmux send-keys -t operator:0.0 Enter
+            echo "$(date -u +%Y%m%dT%H%M%SZ) cron: dispatched to operator pane (cmd=${PANE_CMD}) via send-keys; exiting" \
+                >> "${LOG_DIR}/peer_skips.log"
+            exit 0
+            ;;
+    esac
+fi
+
 # Load polyclaude path config (env vars for secret/state file locations).
 # File lives outside the repo at $HOME/.polyclaude/env, mode 0600.
 if [[ -f "${HOME}/.polyclaude/env" ]]; then
@@ -75,7 +110,7 @@ Single Telegram message, body ≤ 700 chars. Always send (even on a no-action ti
 10. WEEKLY (Saturday): run `.venv/bin/python scripts/methodology_stress_test.py prospective_resolve` to check open-market snapshot resolutions from the 2026-05-02 airtight test (N=20 markets resolving May 22 – June 30). If any new resolutions, journal the per-variant scoring delta. Once all 20 are resolved, journal a final analysis comparing the prospective ground-truth-blind P&L per variant to the retrospective N=30 ranking — this is the airtight check on whether more reasoning depth genuinely hurts calibration or if that finding was leakage artifact.
 11. Commit + push (audit diff for secrets first).
 
-PEER DETECTION: if you detect a peer cron tick running in parallel (other claude -p with the same session id, or a freshly news_watcher-spawned daily_checkin.sh): do NOT block waiting for it. Journal a one-line "deferring to peer tick" note and exit. Stuck-process risk: a 3-day deadlock has happened before.
+PEER DETECTION (2026-05-07+): you (a forked headless `claude -p`) are running ONLY because the bash-level pre-check in daily_checkin.sh did not find a live operator pane to dispatch to. You are the FALLBACK path. Long-lived operator/prompter `claude` processes (no `-p` flag) are NOT peers — do not defer to them. The .checkin.lock flock prevents another daily_checkin.sh-spawned tick from running concurrently with you, including news_watcher-triggered ones. Real race target: another `claude -p` (note the -p) with the same session id and a different PID from your own. Detect with `pgrep -af 'claude -p' | grep -v "^$$"`. If found, defer with a one-line journal note. If not — proceed even if `pgrep claude` shows other processes; those are panes, not peers. Mutual-defer deadlock previously observed 2026-05-07 02:00 UTC (commit ff13200) is fixed by the bash guard upstream and this clarification.
 
 EMERGENCY-EXIT PROTOCOL: if a Tier-1 news_watcher alert in the recent journal indicates a real exploit / depeg / chain halt affecting our positions, run the 3-layer sanity check (multi-source corroboration, market-reaction consistency, on-chain ground truth — full spec in strategy/02_operations.md). Only after all three layers PASS, invoke the relevant scripts/emergency_exit_*.py with --reason "<short>". On any layer FAIL, Telegram the operator with the discrepancy and HOLD; default to inaction.
 

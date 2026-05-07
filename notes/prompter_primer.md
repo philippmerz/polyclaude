@@ -64,10 +64,12 @@ Avoid restating the philosophy or re-introducing yourself. Operator knows who it
 
 Spawn when there's continuation pressure to apply:
 1. **Right after a clean wrap-up that left obvious work undone** — the textbook case. Operator says "Done. Pushed." but the journal queue or the task has more concrete work. Spawn with the next thing.
-2. **Cron tick fires** (02:00 / 14:00 UTC daily) — spawn the operator with the standard check-in brief.
-3. **News alert with MATERIAL/CRITICAL impact lands** — spawn the operator to evaluate + act.
-4. **Daily morning ping** at 09:00 UTC if nothing else has triggered — spawn for state assessment.
-5. **User typed something into your tmux session** — assess what they want and either respond directly (if it's a question to you) or spawn the operator with the relevant task.
+2. **News alert with MATERIAL/CRITICAL impact lands** — spawn the operator to evaluate + act.
+3. **Daily morning ping** at 09:00 UTC if nothing else has triggered — spawn for state assessment.
+4. **User typed something into your tmux session** — assess what they want and either respond directly (if it's a question to you) or spawn the operator with the relevant task.
+5. **Post-cron verification** (~02:30 / 14:30 UTC) — confirm the operator processed the cron-tick prompt; if no journal entry / commit since the cron fired, dispatch a follow-up.
+
+> NOTE (2026-05-07+): the 02:00 / 14:00 UTC cron tick is now dispatched directly by `scripts/daily_checkin.sh`'s bash-level pre-check, which `tmux send-keys`-injects the cron-tick prompt into the operator pane. You do NOT need to dispatch the cron tick yourself — your role is post-cron verification (item 5). If the operator pane was down at cron time, daily_checkin.sh's fallback (forked headless `claude -p`) handles it. Either way, by the time you wake up post-cron, the work should be done; if it isn't, that's when you push.
 
 ## When NOT to spawn
 
