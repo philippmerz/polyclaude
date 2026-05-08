@@ -130,6 +130,28 @@ Status: speculative; thesis depends on geopolitical cycle.
 - **Catalyst-check pipeline extension**: `catalyst_check.py` currently targets event-driven Polymarket questions with explicit resolution criteria. For long-term equity/crypto, the framework needs adaptation — there's no "resolution date" or oracle, just a multi-year hold horizon. May need a separate script `longterm_thesis_check.py` that queries 1-3-5y outlook + downside scenarios + analogous-historical-cases.
 - **IBKR sleeve interface**: how do I surface candidates? Live doc + Telegram alerts on thesis-significant news. User executes manually.
 
+## Verdicts (deepened 2026-05-08 ~21:00 UTC via `scripts/longterm_check.py`)
+
+Ran the new tool on 6 of the 8 seed candidates. Full per-candidate reports in `notes/longterm_log.md`. Summary:
+
+| Candidate | Score | Verdict | Entry trigger / next event |
+|---|---|---|---|
+| Solana ($SOL) | 3.5/4 | WATCH | $92 now / $110 breakout / $75-80 dip; Western Union USDPT consumer rollout Q2-Q3; Alpenglow Q3 |
+| Arbitrum ($ARB) | 3/4 | WATCH | $0.12 now (50% conviction) / $0.09-0.10 dip / wait for March 2027 token-unlock completion (key inflection) |
+| Optimism ($OP) | 2/4 | FOLLOW-UP | Below threshold; reassess mid-July post-vesting + Interop launch + Q2/Q3 sequencer revenue |
+| Ondo ($ONDO) | WATCH | WATCH | $0.25-0.28 dip + fee-switch DAO vote H2 2026 (currently $0.44) |
+| EigenLayer ($EIGEN) | 2.5/4 | FOLLOW-UP | Reassess Q3 2026 post-EigenDA scaling + first AVS fee metrics |
+| Micron ($MU) | 2/4 | WATCH | $450-520 entry (30-40% from current $743); Q4 FY2026/Q1 FY2027 AI-extension proof |
+| Constellation ($CEG) | 2.75/4 | WATCH | $265-280 entry (12-15% from current $307) + TMI NRC milestone + PJM clarity Q4 2026 |
+
+**Pending checks** (next batch): Stacks ($STX), Babylon ($BABY), SK Hynix, Western Digital ($WDC), Vistra ($VST), GE Vernova ($GEV), Palantir ($PLTR), Centrifuge ($CFG).
+
+**Important pattern surfacing.** None of the 6 surveyed candidates triggered ENTER NOW. The SanDisk PATTERN is real and the framework is correctly identifying analogous candidates, but **the SanDisk MOMENT — bottom-of-cycle entry — has passed for the obvious memory names** (Micron at 62x P/E, peak-cycle euphoria). Other categories (AI power infra: CEG, Vistra) are mid-thesis with insufficient margin of safety at current prices. Crypto-native (SOL, ARB, ONDO) sit at WATCH for specific entry triggers.
+
+**Translation:** the user's prompt was timely (start hunting for the NEXT generational opportunity), but the visible candidates today are post-bottom or pre-catalyst. Discipline = wait for trigger conditions; don't force entry on already-visible names. The hunt should continue across less-obvious categories (energy storage? specific RWA primitives? specialty semis outside memory? defense tech sub-sectors?).
+
+**Operational implication for polyclaude.** No immediate capital deployment from the long-term axis warranted. The watchlist becomes a set of price-trigger / event-trigger alerts to monitor. When SOL hits $80 OR ARB unlock completes OR ONDO dips to $0.28 OR Micron retests $500 — that's when conviction-sized entries make sense.
+
 ## Last updated
 
-2026-05-08 — initial bootstrap. Seed candidates are RESEARCH SEEDS not buy lists. Each candidate needs fresh catalyst-check + accessibility verification before any real-money commitment.
+2026-05-08 ~21:00 UTC — first analytical pass across 6 seeds via longterm_check.py. Tool validated end-to-end: produces structured 4-dimensional thesis with entry triggers + scenario probabilities + sources. All current verdicts: WATCH or FOLLOW-UP, none ENTER NOW. Hunt continues for less-obvious convergences.
