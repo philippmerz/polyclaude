@@ -513,3 +513,133 @@ Russo-Ukrainian peace negotiations have been stalled for 2+ months with no subst
 - [Ukraine peace talks - House of Commons Library](https://commonslibrary.parliament.uk/research-briefings/cbp-10411/)
 - [Zelensky signals US wants Russia-Ukraine to agree to peace deal by June](https://thehill.com/policy/international/5727697-zelensky-trump-us-ukraine-russia-peace-deal-deadline/)
 ```
+
+---
+
+## 2026-05-08T18:26:26Z — catalyst_check
+
+**Query:** `Will there be no change in Fed interest rates after the June 2026 meeting?` resolves 2026-06-17 (40d)
+
+## CATALYST CHECK: Will there be no change in Fed interest rates after the June 2026 meeting?
+
+**Resolution:** 2026-06-17 | Days: 40 | Today: 2026-05-08
+
+### Base rate
+In the current economic environment (April 2026), the Fed held rates at 3.5%–3.75% despite four FOMC members dissenting for a 25 bps cut—the highest dissent count since October 1992. Sticky core inflation (2.6% YoY) and a strong labor market (+115K jobs in April) support rate persistence. The CME FedWatch tool currently prices 95.5% probability of no change in June, indicating strong market consensus on a hold.
+
+### Catalysts in window
+- [HIGH] 2026-05-12 – CPI (April data) release at 8:30 a.m. – Last major inflation data point before FOMC meeting. Core CPI currently 2.6% YoY (above 2% target); any significant downside surprise could shift cut probability higher. – [BLS Schedule](https://www.bls.gov/schedule/news_release/cpi.htm)
+- [MEDIUM] 2026-05-15 – Kevin Warsh becomes Fed Chair – Leadership transition from Powell signals continuity rather than policy pivot. Warsh is Trump-aligned but takes office after FOMC voting committee is set for June meeting. – [Federal Reserve](https://www.federalreserve.gov/newsevents.htm)
+- [HIGH] 2026-06-05 – Employment Situation (May data) release at 8:30 a.m. – Final labor-market read before FOMC decision. April was strong (115K vs. 62K forecast); weaker May jobs could increase cut pressure, but resilience would support hold. – [BLS Schedule](https://www.bls.gov/schedule/news_release/empsit.htm)
+- [MEDIUM] 2026-06-16-17 – FOMC June Meeting – 2-day meeting; decision and Warsh's first press conference. Middle East oil uncertainty noted in April statement as contributing to higher uncertainty. – [Federal Reserve](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
+
+### Recent news (last 14d)
+- 2026-04-29 – FOMC April decision: Hold rates at 3.5%–3.75% with 8-4 vote; 4 dissents for 25 bps cut (highest since 1992). Sticky inflation and oil-price uncertainty cited as reasons to pause. – [CNBC](https://www.cnbc.com/2026/04/29/fed-interest-rate-decision-april-2026.html)
+- 2026-04-29 – Kevin Warsh Senate Banking Committee approval (13-11 party-line vote) to proceed to full Senate floor. Warsh takes office May 15. – [Al Jazeera](https://www.aljazeera.com/economy/2026/4/29/senate-panel-advances-kevin-warshs-nomination-for-us-fed-chair)
+
+### P(YES) estimate
+- **Low:** 92%
+- **Central:** 95%
+- **High:** 97%
+
+**Reasoning:** The market is already pricing 95.5% probability of no change, anchored by sticky core inflation (2.6%) and strong labor market (115K+ jobs). The two remaining data catalysts (May CPI and May jobs) are the primary volatility drivers, but the FOMC's April messaging—holding despite 4 dissents—suggests the bar for a June cut remains high. An inflation surprise below 2.5% core or weak jobs (>60K miss) could shift probability lower; stronger May data would reinforce the hold. Warsh's May 15 arrival is unlikely to materially alter the June decision given the committee composition.
+
+**Multiplicative breakdown:** P(no significant data shock) × P(FOMC maintains hold consensus | April messaging) × P(Warsh continuity holds) ≈ 0.93 × 0.95 × 0.99 ≈ 95% (aligns with current market pricing of 95.5%).
+
+### Sources
+- [CME Group FedWatch Tool](https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html)
+- [Federal Reserve FOMC Statement April 29, 2026](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm)
+- [CNBC: Fed Interest Rate Decision April 2026](https://www.cnbc.com/2026/04/29/fed-interest-rate-decision-april-2026.html)
+- [Federal Reserve FOMC Meeting Calendar](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
+- [BLS Consumer Price Index Schedule](https://www.bls.gov/schedule/news_release/cpi.htm)
+- [BLS Employment Situation Schedule](https://www.bls.gov/schedule/news_release/empsit.htm)
+- [Al Jazeera: Kevin Warsh Fed Chair Nomination](https://www.aljazeera.com/economy/2026/4/29/senate-panel-advances-kevin-warshs-nomination-for-us-fed-chair)
+- [NPR: Jerome Powell Remains on Fed Board](https://www.npr.org/2026/04/29/nx-s1-5802911/federal-reserve-meeting-jerome-powell-kevin-warsh)
+
+---
+
+## 2026-05-08T18:28:04Z — catalyst_check
+
+**Query:** `Will China invade Taiwan by end of 2026?` resolves 2026-12-31 (237d)
+
+## CATALYST CHECK: Will China invade Taiwan by end of 2026?
+
+Resolution: 2026-12-31 | Days: 237 | Today: 2026-05-08
+
+### Base rate
+U.S. intelligence (March 2026) assessed China has no "fixed timeline" for invasion and is not planning 2026–2027 kinetic action. 83% of China experts reject kinetic action by 2027. Historical precedent: Taiwan Strait crises (1995–96, 1999–2000, 2016–2020) involved coercion and posturing but not invasion. The "Davidson window" (2021–2027) marks capability development, not intent. Gray-zone coercion remains China's preferred tool; strategic and economic costs of invasion make 2026 unlikely in expert consensus.
+
+### Catalysts in window
+None identified. Forward catalysts (May 8 – Dec 31, 2026):
+- No scheduled formal military operations, congressional hearings, UN votes, or defense report deadlines found in the remaining window that would trigger or materially shift probability.
+- China conducts exercises on recurring annual schedules (not published forward), most recently "Justice Mission-2025" blockade drills (Dec 29–30, 2025, already completed).
+- Taiwan's military readiness overhaul (completed May 2026) is defensive posturing, not a resolution catalyst.
+- Pentagon drone-system deadline (Mar 1, 2026) already passed.
+- Congress hearings on China/Taiwan (Feb 11, 2026) already completed.
+
+### Recent news (last 14d)
+- **2026-05-04**: Taiwan overhauled combat readiness framework with three alert levels (Taiwan News). Defensive restructuring; does not meet invasion criteria.
+- **2026-04-21**: U.S. FY2027 budget request includes $2 billion for Taiwan ($1B direct, $1B equipment replenishment). Policy continuity; supports deterrence.
+- **2026-04-10**: Xi invoked Taiwan "threat" in cross-strait talks (CNBC). Rhetorical escalation; no concrete timeline or intent signal.
+
+### P(YES) estimate
+- **Low: 3%**
+- **Central: 6%**
+- **High: 12%**
+
+**Reasoning:** U.S. intelligence consensus (no 2026–2027 timeline) and expert supermajority (83% reject kinetic action by 2027) anchor the low end. Current market at ~7% reflects baseline tail risk: miscalculation, internal Chinese politics, or undetected mobilization. No identified catalysts in the remaining 237-day window; no forward scheduled events that could materially shift probability. Resolution criteria requires "military offensive intended to establish control" — blockades, exercises, and rhetorical escalation do not satisfy this bar without actual ground/air assault.
+
+**Multiplicative breakdown:**
+- P(China initiates major offensive by Dec 31, 2026) ≈ 4–5% (intelligence consensus + low intent)
+- P(offensive explicitly intends to establish territorial control | offensive occurs) ≈ 85% (given offensive, high likelihood of control intent)
+- P(resolution confirmed by market deadline | invasion occurs) ≈ 95% (timing/reporting)
+- **Joint: 4.5% × 85% × 95% ≈ 3.6% base; market at 6–7% implies ~2–3% additional probability from tail risks (miscalculation, escalation), risk premium, or market inefficiency.**
+
+### Sources
+- [U.S. Intelligence: China Not on Taiwan Timeline](https://www.armscontrol.org/act/2026-04/news-briefs/us-intelligence-china-not-taiwan-timeline)
+- [Xi's Taiwan scorecard: why 2026 is not the year](https://www.aspistrategist.org.au/xis-taiwan-scorecard-why-2026-is-not-the-year/)
+- [The PLA's "Justice Mission-2025" Exercise Around Taiwan](https://globaltaiwan.org/2026/01/pla-justice-mission-2025/)
+- [China's Xi invokes 'threat' of Taiwan independence in first cross-strait opposition talks](https://www.cnbc.com/2026/04/10/china-taiwan-reunification-cross-strait-relations-trump-visit-may-.html)
+- [Taiwan overhauls military readiness framework to counter China threats](https://www.taiwannews.com.tw/news/6353752)
+- [2026 U.S. National Defense Strategy](https://www.hscentre.org/latest-articles/2026-u-s-national-defense-strategy-still-china-taiwan/)
+
+---
+
+## 2026-05-08T18:44:41Z — catalyst_check
+
+**Query:** `Russia x Ukraine ceasefire by May 31, 2026?` resolves 2026-05-31 (23d)
+
+```
+## CATALYST CHECK: Russia x Ukraine ceasefire by May 31, 2026
+
+Resolution: 2026-05-31 | Days: 23 | Today: 2026-05-08
+
+### Base rate
+Ceasefires fail ~80% of the time overall; 4-year conflicts with fundamentally incompatible territorial positions (Ukraine refuses permanent land surrender, Russia demands recognition) have low agreement rates. This conflict has had multiple failed negotiation rounds since 2025.
+
+### Catalysts in window
+- [LOW] 2026-05-08/09 - Russia unilateral Victory Day ceasefire; Ukraine responded with separate unilateral ceasefire (not mutually agreed). Russia violated within 24h with 140+ attacks. Does NOT meet criteria (unilateral, non-mutual, violated). - https://www.aljazeera.com/news/2026/5/4/russia-and-ukraine-declare-competing-ceasefires
+- [LOW] 2026-05-12 - Ukraine & European allies demanded 30-day ceasefire starting May 12. Kremlin rejected on May 10, citing Kyiv "advantage." Proposal dead. - https://www.cbsnews.com/news/ukraine-allies-push-30-day-ceasefire-russia/
+- [MED] 2026-05-15 - Putin proposed direct talks without preconditions in Istanbul. First substantive diplomatic signal in May window. Talks ≠ agreement, but necessary first step. - https://kyivindependent.com/ukraine-european-allies-demand-russia-agree-to-30-day-ceasefire-starting-may-12
+
+### Recent news (last 14d)
+- 2026-05-04 - Russia/Ukraine competing unilateral ceasefires announced: significance is nil because (1) unilateral, not mutually agreed; (2) Russian side violated immediately; (3) no general pause occurred.
+- 2026-05-10 - Russia explicitly rejected 30-day ceasefire: signals no rush to agreement on current terms.
+- 2026-05-07 - Financial Times reported EU unsure who to send to negotiate with Putin: suggests diplomatic channel unclear.
+
+### P(YES) estimate
+- Low: 2%
+- Central: 3%
+- High: 6%
+- Reasoning: May 15 Istanbul talks are the only substantive catalyst. Resolution requires mutually agreed formal announcement by both parties; the immediate failure of May 8-9 unilateral attempts (rejected/violated within hours) and explicit May 12 rejection indicate entrenched positions. Trump administration set June deadline (extending slightly beyond window), creating some urgency, but 23 days is very short for a 4-year stalemate to resolve into a mutually announced agreement that meets strict "general pause" criteria.
+- Multiplicative breakdown: P(talks occur & are substantive) × P(agreement reached | talks) × P(mutually announced & meets criteria | agreement) = 40% × 8% × 95% = 3%
+
+### Sources
+- [Russia and Ukraine declare competing ceasefires](https://www.aljazeera.com/news/2026/5/4/russia-and-ukraine-declare-competing-ceasefires)
+- [Putin, Zelenskyy proclaim rival ceasefires around Russia's Victory day commemorations](https://www.nbcnews.com/world/russia/putin-announces-2-day-ceasefire-ukraine-rcna343502)
+- [Zelensky Accuses Putin of 'Utter Cynicism' After Russia hits Ukraine Energy Plants Despite Cease-Fire Claims](https://time.com/article/2026/05/05/zelensky-putin-energy-strikes-ceasefire/)
+- [Ukraine, European allies demand Russia agree to 30-day ceasefire starting May 12](https://www.cbsnews.com/news/ukraine-allies-push-30-day-ceasefire-russia/)
+- [The EU is preparing for possible negotiations with Putin, but doesn't know who to send to them](https://trump.news-pravda.com/world/2026/05/07/342990.html)
+- [Zelensky signals US wants Russia-Ukraine to agree to peace deal by June](https://thehill.com/policy/international/5727697-zelensky-trump-us-ukraine-russia-peace-deal-deadline/)
+- [Historical ceasefire success rates](https://www.tandfonline.com/doi/full/10.1080/13533312.2021.1894934)
+```

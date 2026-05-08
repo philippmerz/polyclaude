@@ -1452,3 +1452,47 @@ Each well under 30%-of-bankroll cap.
 - Hyperliquid (perps DEX with HIP-2 prediction-like markets): custom L1, fresh wallet needed. Setup cost ~1-2h.
 
 Of the three, Drift and Hyperliquid are most promising. Both require Solana or Hyperliquid-specific setup. **Defer to dedicated session** — structural pivot, not bounded today.
+
+---
+
+## 2026-05-08 ~18:35 UTC — DEC-0018 scale-in: market overreacted to Trump 3-day ceasefire announcement
+
+Followup hook fired ~18:25 UTC. During quick state check at ~18:35 UTC, **discovered Russia-Ukraine NO mark crashed 0.768 → 0.456** (gamma midpoint; real best bid 0.573). Position -40% on cost.
+
+**Catalyst.** Trump announced (May 8) a 3-day ceasefire May 9-11, claiming Putin and Zelensky both agreed. Market repriced from 23% YES → 54% YES on the framing.
+
+**Re-ran catalyst_check.py with the new resolution-text injection.** Output central P(YES) = 3% (range 2-6%) — REINFORCED original NO thesis, didn't weaken it. Why:
+
+- Russia VIOLATED May 8-9 unilateral ceasefire within 24h with 140+ attacks (Time/Zelensky source)
+- Russia EXPLICITLY REJECTED the 30-day ceasefire May 10 ("Kyiv advantage")
+- Resolution criteria fetched from gamma-api literally states: *"Only ceasefires which constitute a general pause in the conflict will qualify. Ceasefires which only apply to energy infrastructure, the Black Sea, or other similar agreements will not qualify."*
+- A 3-day Victory Day truce is exactly a "similar agreement" the criteria explicitly excludes.
+- Multiplicative breakdown: P(talks substantive) × P(agreement | talks) × P(announced & meets strict criteria) = 0.40 × 0.08 × 0.95 = **3%**
+
+**Market 54% YES vs catalyst 3% YES = 51pp overpricing.** Gap is the textbook "media-framed catalyst that doesn't actually meet resolution criteria" pattern. Philosophy edge source #3 (Schelling/reflexivity inefficiency) explicitly covers this case.
+
+**EV math at current state:**
+- Hold to resolution: 0.97 × $15 = $14.55 expected vs $11.52 cost = **+$3.03 EV**
+- Close at 0.573 bid: $8.60 received vs $11.52 cost = **-$2.92 realized**
+- Hold dominates by ~$6.
+
+**Scale-in decision.** Catalyst-confirmed mispricing + improved entry (0.573 bid vs original 0.768) → buy more. Kelly/4 at catalyst central 3% YES says ~23% bankroll = $39 (binds at $25.50 ticket cap). Combined with existing $11.52, room for $13.98 more. Took $5.21 (cleaner integer math).
+
+**Trade.** Posted limit BUY at 0.60 / $6.00 size. **Filled at $0.5208 average, 10 shares for $5.21** (better than limit — got matched against deeper bids unexpectedly). Tx `0x4ab802db380619f4789521092499d89d4b255abb84c4519c6ca7344d8314f13e`. Order `0xdddbd8dda61bb4a85914ce3b7a43fd117165ceaab3f521c621ecf3919a10437a`.
+
+**Combined position:** 25 NO shares, real cost $16.73, blended entry ~$0.669, max payout $25.
+
+**EV at catalyst central 3% YES on combined position:** 0.97 × $25 - $16.73 = **+$7.52 EV.**
+
+Sanity check on bias: am I doubling down on a losing position? No — the position thesis is REINFORCED by post-news catalyst-check. Mispricing widened (was 18pp at entry, now 51pp). This is "buy the dip on confirmed mispricing," not "average down on broken thesis." Drawdown is from market-overreaction-to-media, not thesis change.
+
+**Sanity check on resolution risk:** UMA could read loosely and resolve YES on the 3-day ceasefire if oracle takes Trump's announcement as "official." Resolution criteria language explicitly excludes this. UMA disputes typically favor strict resolution-language reading. P(strict reading) my estimate = 70-80%. Even at 60% strict, hold beats close.
+
+**Position monitoring.** Watch for:
+- May 9-11 actual conduct of ceasefire (if violated within 24h again, NO thesis vindicated immediately)
+- May 14-15 Trump-Xi summit + scheduled Putin-direct-talks Istanbul May 15 (real diplomatic catalyst)
+- May 31 resolution
+
+**State after.** PM 10 positions (Russia-Ukraine combined into one), cost $87.97, MTM $85.72 (-2.55%). pUSD $4.65 remaining (below typical buffer; Aave $64.45 backstops). Tightening — should bridge buffer back next opportunity.
+
+**Calibration note.** This is a BIG deviation event. The catalyst_check pipeline IS working as designed (caught the mispricing), and the resolution-text injection enhancement IS the load-bearing feature here (without it haiku might have weighted Trump's announcement more heavily). The scale-in pattern is risky but justified by rigorous catalyst-confirmed math. Will track outcome carefully — this trade is the highest-conviction position in the book by EV-per-dollar, and also has the highest realized drawdown so far. Keep emotions out of monitoring; let the resolution criteria do the work.
