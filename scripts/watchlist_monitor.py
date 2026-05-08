@@ -100,6 +100,8 @@ def evaluate(trigger: dict, current: float | None) -> dict:
         "rationale": rationale,
         "type": trigger.get("type"),
         "currency": trigger.get("currency", "USD"),
+        "route": trigger.get("route", "polyclaude"),
+        "horizon": trigger.get("horizon", "?"),
     }
 
 
@@ -160,14 +162,16 @@ def main() -> int:
         print()
 
     for r in results:
+        route_tag = "POLYCLAUDE" if r["route"] == "polyclaude" else "IBKR_SURFACE"
         if r["status"] == "TRIGGER_HIT":
-            print(f"ENTRY_TRIGGER_HIT  {r['ticker']:8s} ({r['type']})  current ${r['current']} {r['currency']} {r['direction']}")
-            print(f"                   {r['rationale']}")
+            action = "POLYCLAUDE_BUY" if r["route"] == "polyclaude" else "IBKR_SURFACE_TO_OPERATOR"
+            print(f"ENTRY_TRIGGER_HIT [{action}]  {r['ticker']:8s} ({r['type']}, {r['horizon']})  current ${r['current']} {r['currency']} {r['direction']}")
+            print(f"                  {r['rationale']}")
         elif r["status"] == "NO_DATA" and not args.hits_only:
-            print(f"NO_DATA            {r['ticker']:8s} ({r['type']})  — fetch failed")
+            print(f"NO_DATA   [{route_tag}]  {r['ticker']:8s} ({r['type']})  — fetch failed")
         elif not args.hits_only:
             tgt = f"<=${r['entry_max']}" if r['entry_max'] else f">=${r['entry_min']}"
-            print(f"WATCH              {r['ticker']:8s} ({r['type']})  current ${r['current']} {r['currency']}  trigger {tgt}")
+            print(f"WATCH     [{route_tag}]  {r['ticker']:8s} ({r['type']}, {r['horizon']})  current ${r['current']} {r['currency']}  trigger {tgt}")
 
     return 0 if not hits else 0  # always exit 0; cron consumer parses output
 
