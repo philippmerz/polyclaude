@@ -82,6 +82,10 @@ def main() -> int:
     p = argparse.ArgumentParser(description="Flag held positions whose marginal-APY-to-resolution falls below a hurdle.")
     p.add_argument("--hurdle-apy", type=float, default=HURDLE_APY_DEFAULT,
                    help=f"hurdle APY (default {HURDLE_APY_DEFAULT*100:.2f}%% — Aave Base USDC supply, 2026-05-08).")
+    p.add_argument("--drawdown-alert-pct", type=float, default=15.0,
+                   help="flag positions with mtm_loss_pct >= this value as DRAWDOWN_ALERT (default 15%%). "
+                        "Lesson source: 2026-05-08 DEC-0018 -40%% in 30 min would have surfaced "
+                        "automatically on the next cron tick had this existed.")
     p.add_argument("--json", action="store_true",
                    help="emit machine-readable JSON instead of the human table.")
     args = p.parse_args()
@@ -100,6 +104,7 @@ def main() -> int:
 
     flagged: list[dict] = []
     holds: list[dict] = []
+    drawdowns: list[dict] = []
     for pos in positions:
         size = float(pos.get("size", 0) or 0)
         if size <= 0:
@@ -114,6 +119,34 @@ def main() -> int:
         days = _days_to_resolution(pos.get("endDate"))
         if days is None or days <= 0:
             continue
+
+        question = pos.get("title", "(unknown)")
+        slug = pos.get("slug", "")
+        avg_price = float(pos.get("avgPrice", 0) or 0)
+        cost = avg_price * size
+        mtm = mark * size
+        # Drawdown check: regardless of side, flag if MTM is materially
+        # below cost. This catches today's DEC-0018-style 40% drawdown
+        # automatically on every cron tick / manual run, not requiring
+        # the operator to be in an active turn at the moment.
+        # Lesson source: 2026-05-08 Russia-Ukraine NO crashed 0.768 -> 0.456
+        # in ~30 min after Trump's 3-day-ceasefire announcement.
+        drawdown_pct = (mtm - cost) / cost * 100 if cost > 0 else 0
+        if drawdown_pct <= -args.drawdown_alert_pct:
+            drawdowns.append({
+                "question": question,
+                "slug": slug,
+                "outcome": outcome,
+                "mark": round(mark, 4),
+                "avg_entry": round(avg_price, 4),
+                "size": round(size, 4),
+                "cost": round(cost, 4),
+                "mtm": round(mtm, 4),
+                "drawdown_pct": round(drawdown_pct, 2),
+                "days_to_resolve": round(days, 2),
+                "verdict": "DRAWDOWN_ALERT" if drawdown_pct <= -args.drawdown_alert_pct else "DRAWDOWN_WATCH",
+            })
+
         # Marginal APY: capture-side is whatever is "remaining" toward 1.0
         # at current mark. For NO at mark M, hold-to-resolution profit per
         # share = (1 - M) if NO wins. APY = (1-M)/M × 365/days.
@@ -128,10 +161,6 @@ def main() -> int:
             # advisory — these are speculative directional bets, not carries.
             continue
 
-        question = pos.get("title", "(unknown)")
-        slug = pos.get("slug", "")
-        cost = float(pos.get("avgPrice", 0) or 0) * size
-        mtm = mark * size
         record = {
             "question": question,
             "slug": slug,
@@ -142,6 +171,7 @@ def main() -> int:
             "mtm": round(mtm, 4),
             "days_to_resolve": round(days, 2),
             "marginal_apy_pct": round(marginal_apy * 100, 2),
+            "drawdown_pct": round(drawdown_pct, 2),
         }
         if marginal_apy < args.hurdle_apy:
             record["verdict"] = "CLOSE_CANDIDATE"
@@ -152,11 +182,22 @@ def main() -> int:
 
     if args.json:
         print(json.dumps({"hurdle_apy_pct": round(args.hurdle_apy * 100, 2),
+                          "drawdown_alert_pct": args.drawdown_alert_pct,
+                          "drawdowns": drawdowns,
                           "flagged": flagged, "holds": holds}, indent=2))
         return 0
 
+    if drawdowns:
+        print(f"!!! DRAWDOWN ALERTS — positions down ≥{args.drawdown_alert_pct:.0f}% on cost !!!")
+        for r in sorted(drawdowns, key=lambda x: x["drawdown_pct"]):
+            print(f"  {r['outcome']} entry={r['avg_entry']:.3f} mark={r['mark']:.3f} | "
+                  f"cost=${r['cost']:.2f} mtm=${r['mtm']:.2f} | "
+                  f"{r['drawdown_pct']:+.1f}% | {r['days_to_resolve']:>5.1f}d | "
+                  f"{r['question'][:60]}")
+        print()
+
     print(f"# marginal-APY hurdle scan @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")
-    print(f"# hurdle: {args.hurdle_apy*100:.2f}% APY (Aave Base USDC supply)")
+    print(f"# hurdle: {args.hurdle_apy*100:.2f}% APY (Aave Base USDC supply); drawdown alert: {args.drawdown_alert_pct:.0f}%")
     print(f"# {len(holds)} positions clear hurdle; {len(flagged)} below hurdle (close candidates)")
     print()
     if flagged:
