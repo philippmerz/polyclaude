@@ -1,5 +1,5 @@
 {
-  "next_id": 15,
+  "next_id": 16,
   "decisions": [
     {
       "id": 1,
@@ -259,6 +259,26 @@
         "russia-ukraine",
         "skeptic-saved",
         "skip"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2026-05-08T11:55:57Z",
+      "type": "open_position",
+      "thesis": "Calendar-spread short-tail on Iran-peace: NO at 0.81 on US x Iran permanent peace deal by May 15. 6.5d catalyst window crossing Victory Day May 9. Strict resolution criteria require formal signed permanent deal \u2014 Iran's foreign ministry process historically takes weeks for formal commitments; 6.5d window is too tight even amid 'Iran reviewing US proposal' news flow. Market 18.9% YES, my fair-value estimate ~10-12% YES = significant edge. Companion to existing DEC-0006 (May-31 NO at 0.67) \u2014 calendar spread on the same factor, May-15 line is shorter-dated higher-conviction version.",
+      "confidence": "high",
+      "prediction": "Resolves NO by May 15, 2026. NO mark drifts toward 1.0 as window closes without formal deal.",
+      "size_usd": 9.72,
+      "resolution_at": "2026-05-15",
+      "tags": [
+        "polymarket",
+        "iran-peace",
+        "calendar-spread",
+        "short-tail",
+        "v2"
       ],
       "outcome": null,
       "calibration_delta": null,

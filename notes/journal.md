@@ -837,3 +837,63 @@ Net market reaction: Iran-peace NO mark RECOVERED from 0.585 to 0.675, suggestin
 **Telegram tick** sent. Single-message.
 
 **Decision: hold all 8 PM + 3 Ostium + 1 Aave. No new entries.** Brief tick — nothing actionable. Next tick: 14:00 UTC May 8 (~12h).
+
+---
+
+## 2026-05-08 ~04:00 UTC — DEC-0015 opened: Iran-peace-by-May-15 NO @ $0.81
+
+**Trigger.** User Telegram (msg 154/156): "Now we have pretty significant unallocated resources right" + "Go ahead, whatever promises profit. Why are we avoiding sports again?"
+
+**Framing-error correction (the actual win this turn).** User's challenge surfaced three compounding errors in my prior "bankroll-bound, no entries" framing:
+
+1. **Cluster cap was on bankroll, not PM sleeve.** Per `strategy/00_philosophy.md`: "Hard cap per correlated cluster: 30% of remaining bankroll." Iran cluster cost $23.99, bankroll $170 → 14% utilization, not 40%. **$27 of headroom unused.**
+2. **Hardcoded hurdle 4.15% in `discover_markets.py` is above current Aave 3.2-3.4%.** True hurdle is lower; more candidates clear it.
+3. **`discover_markets.py` 7-day floor on hurdle filter** suppressed strong short-tail trades (May 15 candidate was hidden because horizon = 6.5d).
+
+Sports rule (per philosophy): pure-sports outcomes are skipped due to 3% Polymarket fee + no scouting/injury edge. Exception clause active for extreme base-rate trades (Atletico top-4 at 0.99, Latvia top-10 NO at 0.83 — both in book). PSG CL YES 0.575 / France WC NO 0.832 are exactly what the rule blocks (need match-by-match prediction skill). Rule stays.
+
+**Trade executed.**
+- Market: "US x Iran permanent peace deal by May 15, 2026?" — slug `us-x-iran-permanent-peace-deal-by-may-15-2026-144-885-839`
+- NO token id: 74106961297441804122404565448852295289442372706468216938279361169799682393163
+- Best ask 0.812; book deep ($1252 notional at top-of-book)
+- Order: `clob_v2.py buy <token> 0.812 9.744` → fill price 0.81, 12 shares, $9.72 spent, $12 max payout
+- Tx: `0x6ef31699941765bca159a536335768456c454e6b6a85d55351a0e8d46fb5592a` (status 1, EXCHANGE_V2)
+- Order ID: 0xc8ef92001ff19e50fde312206cbea2aca09e3770416e70f020b1ea75b7c28cc3
+
+**Workflow notes.** `clob_v2.py buy <token> 0.812 10` first attempt rejected with "Price (0.8119999957776) breaks minimum tick size" — float-precision artifact. The fix: pick a `usd_size` that divides cleanly by `price`. $9.744 / 0.812 = exactly 12 shares; clean integer round-trip through `_to_token_decimals`. The fill price came in at 0.81 (1 tick better than the 0.812 ask — book moved slightly while I was setting up), so actual cost was $9.72 not $9.744.
+
+**Operational steps before the trade:**
+1. Walked live CLOB book (per memory: gamma midpoints unreliable). Confirmed $1252 notional at 0.812 ask.
+2. Wrapped $5 USDC.e → pUSD via `CollateralOnramp.wrap()` (USDC.e→Onramp approval already MAX from prior wraps). First wrap tx (`0x0817ed1f...` at 100 gwei maxFee) dropped because Polygon base fee was 400 gwei during a network-load spike; replacement at nonce 15 with 1000 gwei maxFee (`0xed297f4e...`) mined in block 86572295. Net: pUSD $5→$10, USDC.e $5.11→$0.11.
+
+**Sizing rationale.** Kelly/4 on this trade:
+- NO mark 0.812 implies 18.9% YES (deal in 6.5d)
+- My fair-value estimate: 8-12% YES
+  - Iran "reviewing" ≠ signed; foreign-ministry process slow
+  - Strict "permanent peace deal" resolution language
+  - Trump "very possible" rhetoric overshoot pattern
+  - Saudis blocking US bases removes military leverage = no incentive for Iran to sign quickly
+- At 10% midpoint: edge = 0.9 - 0.81 = 0.09; Kelly = 36.5%; Kelly/4 = 9.1% bankroll = $15.5
+- At 12% (more conservative): Kelly/4 = $9.5
+- Hard cap per ticket: 15% bankroll = $25.5
+- Cluster cap headroom: $27 (Iran cluster pre-trade $24, post-trade $33.7, cap $51)
+- Picked $9.72: middle of conservative-Kelly band, well within both caps. Resolution-criteria-loose risk warranted Kelly/4 → conservative end.
+
+**Risk assessment.**
+- Max loss: $9.72 if YES (signed permanent deal in 6.5d)
+- Expected value at my 10% YES: 0.9 × $12 − 0.1 × $0 − $9.72 = $0.96 expected profit (~10% on stake)
+- Concentration: combined Iran-peace exposure now $9.72 + $6.99 = $16.71. If deal lands by May 15, both NO positions lose simultaneously. Cluster cap still respected ($33.7 / $51 cap).
+- UMA-resolution risk: explicit bar is "permanent peace deal" — clean phrasing. If a Trump-announced framework triggers liberal interpretation, I could lose despite no actual signed deal. Real but bounded.
+
+**Skeptic+champion deferred.** Trade was $9.72 (< $10 threshold per philosophy "Trades > $10 / new strategy class"). Self-reasoned both sides above. Not a new strategy class — extends existing iran-peace NO thesis with shorter-dated leg.
+
+**Bankroll post-trade.** PM cost basis $59.95 → $69.67 (+$9.72). pUSD $10 → $0.28. USDC.e on Polygon $0.11. Aave $84.50 unchanged. Total deployed $69.67 PM + $14.68 Ostium + $84.50 Aave = $168.85. Free liquid ~$0.39 on Polymarket — below buffer. Will top up via Aave→Polygon bridge on next trade decision (Aave is treated as buffer per philosophy revision 2026-05-03).
+
+**Calibration.** This is the first trade after the framing-error correction. If NO resolves correctly by May 15, the bet validates: (a) the calendar-spread structure on Iran-peace, (b) the corrected cluster-cap interpretation, (c) the corrected hurdle understanding, (d) the lifted 7-day floor.
+
+**Pending follow-ups (from user authorization "go ahead, whatever promises profit"):**
+- Cluster cap analytical review — formal skeptic+champion on whether 30% is right or should adjust given current Iran-themed market density. Bounded analytical exercise.
+- Non-Polymarket venue DD (Drift / Kalshi / Hyperliquid) — multi-hour structural research.
+- Buffer top-up — bridge $20-30 from Aave Arbitrum→Polygon to restore Polymarket reserve.
+
+Telegram update sent. Next: cron tick at 14:00 UTC May 8.
