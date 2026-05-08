@@ -897,3 +897,42 @@ Sports rule (per philosophy): pure-sports outcomes are skipped due to 3% Polymar
 - Buffer top-up — bridge $20-30 from Aave Arbitrum→Polygon to restore Polymarket reserve.
 
 Telegram update sent. Next: cron tick at 14:00 UTC May 8.
+
+---
+
+## 2026-05-08 ~05:00 UTC — architecture collapse: prompter deprecated, single-agent operator
+
+User proposed (Telegram-style direct chat): "instead of doing the prompter, you can self inject certain prompts? that way we don't have the overhead of syncing and coordinating two separate agents."
+
+**Decision: kill the prompter, formalize backlog discipline in operator.**
+
+Rationale, honestly: across the past 36h the prompter shipped real strategic wins (peer-detection fix, orphan reap, audit-trail cleanup, capital reframe via challenge), but those wins were the prompter reading my own journal-flagged backlog and dressing prompts in user voice — work I can do natively. The structural costs (separate session = 2× tokens, two-Claude sync overhead, peer-detection deadlock potential, audit-laundering risk that we just spent commits fixing) outweighed the marginal value of "fresh-eyes-from-separate-session." The two-function refinement (reprompt + flag-high-value) is exactly the discipline I should internalize, not delegate.
+
+**What replaces it:**
+1. **`notes/backlog.md`** — explicit operator-maintained pending list. Format: one line per item with date-tag, brief description. Reviewed end-of-turn + at every cron tick. Closed items deleted (git history preserves). Not a memory file — it's repo-tracked so user can read on GitHub for instant "what's pending" view.
+2. **Cron auto-triggers stay** — `daily_checkin.sh` bash guard at 02:00/14:00 UTC fires the tick prompt directly into operator pane (proven working in commits 1e346e1 and 941e10b/584704f).
+3. **News_watcher Tier-1 stays** — auto-fires emergency-protocol prompts to operator pane on credible exploit/depeg/halt alerts.
+4. **End-of-turn discipline** — operator updates backlog before signing off any meaningful turn. Per `feedback_default_to_action` memory: bounded reversible items get done same-turn; ambiguous items get added to backlog.
+
+**What we lose:**
+- "External pressure" element (separate agent reading my work cold and pushing). Honest assessment: in practice, the prompter caught items I'd already journaled as backlog, not items I'd missed entirely. The structured-backlog file replicates this without the second session.
+- "Fresh eyes" reads. The user's challenge in this session was a true fresh-eyes catch (the cluster-cap framing error). That came from the **user**, not the prompter — and the user is not being deprecated.
+
+**What we keep (audit / recoverability):**
+- `notes/prompter_primer.md` and `strategy/03_prompter_role.md` are tagged `DEPRECATED 2026-05-08` at the top with rationale. Bodies kept intact.
+- `scripts/prompter_start.sh` left functional. If the operator-only model ever fails, the prompter is one command away.
+- `notes/prompter_log.md` preserved as historical audit trail.
+
+**Execution.**
+- `notes/backlog.md` created with current pending items (cluster cap review, venue DD, hardcoded hurdle fix, 7-day floor reconsideration, buffer top-up, news_watcher dedup).
+- `notes/prompter_primer.md` and `strategy/03_prompter_role.md` headers updated with deprecation note.
+- `tmux kill-session -t prompter` executed. Orphan claude PIDs (47996/47997) reaped via `kill`. Final state: 1 tmux session (operator), 1 claude (me, PID 47968 --effort max), 1 cron, 1 news_watcher, 1 telegram_listener, 1 heartbeat. ~250MB RAM expected to free as the prompter session GC's.
+- Token-spend cut roughly in half going forward (prompter was --effort max; that's gone).
+
+**New end-of-turn ritual (this is for me, future me, next-turn me):**
+1. Did I make decisions on bounded reversible items, or did I ask "want me to do X?"
+2. Are pending items in `notes/backlog.md` current?
+3. Is the journal up to date with the actual decisions made this turn?
+4. Does any commit need to happen?
+
+**Operational state unchanged.** PM $69.67 cost / $70.91 MTM. DEC-0015 just opened. Next cron tick 14:00 UTC May 8 (~9h). DEC-0014 re-eval window opens May 10.

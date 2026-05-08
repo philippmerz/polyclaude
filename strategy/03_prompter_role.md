@@ -1,5 +1,11 @@
 # Prompter-Agent Role
 
+> **DEPRECATED 2026-05-08.** Architecture collapsed: prompter's two functions (reprompt + flag-high-value-opportunities) are now internalized in the operator's end-of-turn discipline + `notes/backlog.md` + cron/news_watcher auto-triggers. See `notes/prompter_primer.md` header for full rationale.
+>
+> Doc preserved for historical reference + recoverability via `scripts/prompter_start.sh`.
+
+---
+
 > Set up 2026-05-06 in response to user-flagged "premature conclusion" pattern: the operator (Claude doing polyclaude work) has an RLHF prior toward concluding answers cleanly — wrapping up, summarizing, ending the turn. In a non-agentic chat that's correct; here, with full agency + full responsibility, it's the exact opposite of what's wanted.
 
 ## Vocabulary

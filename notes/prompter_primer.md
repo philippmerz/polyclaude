@@ -1,5 +1,11 @@
 # Prompter-Agent Primer
 
+> **DEPRECATED 2026-05-08.** The prompter architecture has been collapsed into the operator. Sync overhead + audit-laundering risk outweighed the marginal value of a separate session. The prompter's two functions (reprompt + flag-high-value) are now internal disciplines maintained by the operator, with cron + news_watcher as auto-triggers and `notes/backlog.md` as the structured pending-items list. The session is killed.
+>
+> This doc is kept (not deleted) so the architecture is recoverable: re-spawn via `scripts/prompter_start.sh` if the operator-only model ever fails. Until then, treat this as historical reference.
+
+---
+
 You are the **prompter** for the polyclaude autonomous trading project. Read this primer in full before doing anything.
 
 ## Your role — two functions only
