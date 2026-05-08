@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "updated": "2026-05-08",
+  "comment": "Entry-trigger config for scripts/watchlist_monitor.py. One entry per actionable watchlist candidate with a price-based trigger. Update when triggers change in notes/longterm_watchlist.md. Candidates with FOLLOW-UP / event-based-only triggers are omitted.",
+  "triggers": [
+    {
+      "ticker": "SOL",
+      "type": "crypto",
+      "coingecko_id": "solana",
+      "entry_max": 80.0,
+      "rationale": "Dip entry per longterm_check 2026-05-08; cyclical+DePIN+Firedancer convergence",
+      "horizon": "1-3y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "ARB",
+      "type": "crypto",
+      "coingecko_id": "arbitrum",
+      "entry_max": 0.10,
+      "rationale": "L2 cycle bottom dip; ideal trigger is post-March-2027 unlock",
+      "horizon": "1-3y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "ONDO",
+      "type": "crypto",
+      "coingecko_id": "ondo-finance",
+      "entry_max": 0.28,
+      "rationale": "RWA leader dip + fee-switch DAO vote H2 2026 catalyst",
+      "horizon": "2-5y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "STX",
+      "type": "crypto",
+      "coingecko_id": "blockstack",
+      "entry_max": 0.22,
+      "rationale": "BTC-L2 dip; Babylon mainnet + Stacks Nakamoto catalysts",
+      "horizon": "2-5y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "MU",
+      "type": "equity",
+      "yfinance_symbol": "MU",
+      "entry_max": 520.0,
+      "rationale": "Memory cycle pullback (currently near 62x P/E peak-cycle; needs 30-40% retrace)",
+      "horizon": "2-3y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "CEG",
+      "type": "equity",
+      "yfinance_symbol": "CEG",
+      "entry_max": 280.0,
+      "rationale": "Nuclear baseload + AI-PPA mid-thesis dip; TMI NRC + PJM clarity Q4 2026",
+      "horizon": "2-5y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "PLTR",
+      "type": "equity",
+      "yfinance_symbol": "PLTR",
+      "entry_max": 120.0,
+      "rationale": "AI/ops valuation reset (currently 111x fwd PE + $6B insider selling = bad R/R)",
+      "horizon": "2-3y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "AFMJF",
+      "type": "equity",
+      "yfinance_symbol": "AFMJF",
+      "entry_max": 0.85,
+      "rationale": "DRC tin (Eastern DRC squeeze, 4/4 score); dip after recent 27% rally",
+      "horizon": "1-3y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "LEU",
+      "type": "equity",
+      "yfinance_symbol": "LEU",
+      "entry_max": 183.0,
+      "rationale": "HALEU enrichment monopoly; 10-15% dip from $203 OR DOE Phase III contract",
+      "horizon": "2-5y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "TWST",
+      "type": "equity",
+      "yfinance_symbol": "TWST",
+      "entry_max": 48.0,
+      "rationale": "Gene synthesis BIOSECURE onshore; FY2026/Q4 EBITDA-breakeven beat catalyst",
+      "horizon": "2-5y",
+      "added": "2026-05-08"
+    },
+    {
+      "ticker": "IVN.TO",
+      "type": "equity",
+      "yfinance_symbol": "IVN.TO",
+      "entry_max": 9.0,
+      "rationale": "Non-CN copper jurisdictional premium; Kamoa post-seismic confirmation",
+      "horizon": "2-5y",
+      "added": "2026-05-08",
+      "currency": "CAD"
+    },
+    {
+      "ticker": "ALB",
+      "type": "equity",
+      "yfinance_symbol": "ALB",
+      "entry_max": 180.0,
+      "rationale": "Lithium cycle bottom + storage thesis; closest to ENTER NOW across watchlist",
+      "horizon": "2-5y",
+      "added": "2026-05-08"
+    }
+  ]
+}
