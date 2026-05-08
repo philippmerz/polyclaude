@@ -1496,3 +1496,36 @@ Sanity check on bias: am I doubling down on a losing position? No — the positi
 **State after.** PM 10 positions (Russia-Ukraine combined into one), cost $87.97, MTM $85.72 (-2.55%). pUSD $4.65 remaining (below typical buffer; Aave $64.45 backstops). Tightening — should bridge buffer back next opportunity.
 
 **Calibration note.** This is a BIG deviation event. The catalyst_check pipeline IS working as designed (caught the mispricing), and the resolution-text injection enhancement IS the load-bearing feature here (without it haiku might have weighted Trump's announcement more heavily). The scale-in pattern is risky but justified by rigorous catalyst-confirmed math. Will track outcome carefully — this trade is the highest-conviction position in the book by EV-per-dollar, and also has the highest realized drawdown so far. Keep emotions out of monitoring; let the resolution criteria do the work.
+
+---
+
+## 2026-05-08 ~18:50 UTC — buffer top-up via NEW bridge infrastructure (--recipient + --token-out validated)
+
+Followup hook fire prompted state check. pUSD $4.65 was below typical $5-10 buffer floor. Bridged $20 from Aave Arb back to Polygon using the `--recipient` + `--token-out` flags I shipped earlier this session.
+
+**End-to-end validation of the new bridge flow:**
+
+1. `aave_deposit.py withdraw --chain arbitrum --amount-usdc 20 --yes` → withdraw to crypto sleeve. Tx `0x990c199f`.
+2. `across_bridge.py --sleeve crypto --from-chain arbitrum --to-chain polygon --token USDC --token-out USDC.e --amount 20 --recipient 0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B --yes` → single bridge tx, lands as USDC.e directly on polymarket sleeve. Tx `0x90cb4ab3`. Across fee $0.0048.
+3. Verified arrival: $20.0065 USDC.e on polymarket sleeve.
+4. Wrapped $15 USDC.e → pUSD via CollateralOnramp (Tx `0x8ae6c900`) for instant-deployable buffer.
+
+**Compared to yesterday's setup** (DEC-0017 path with old bridge):
+- Yesterday: 5 distinct steps (Aave withdraw, Across to crypto sleeve, MATIC transfer to crypto, USDC transfer crypto→polymarket, Uniswap V3 USDC→USDC.e swap, then wrap, then trade) — ~$0.31 gas, 30 min wallclock.
+- Today: 3 steps (Aave withdraw, Across with --recipient + --token-out, wrap) — ~$0.10 gas, 30s wallclock.
+- Net savings: ~$0.20 + 29.5 min per future bridge.
+
+The two backlog items that closed this session for `across_bridge.py` are paying off immediately.
+
+**Final state after wrap.**
+- pUSD: $19.54 (instant-deployable for v2 trades)
+- USDC.e: $5.01 (reserve, wrap-on-demand)
+- USDC native: $0.10 dust
+- MATIC: ~51.7 (gas)
+- Aave: $44.45 Arb + $29.50 Base = $73.95 (was $64.45 + $20 withdrawn = $44.45 Arb + $29.50 Base post-tx)
+
+Total Polygon-side actionable: $24.54. Aave reserve: $73.95. Combined liquid: ~$98.50.
+
+**Why bridge now vs at next-trade trigger:** the followup hook fired RIGHT when I noticed buffer was tight. Catching that moment with the new infrastructure validated the loop. Future bridges should now be near-friction-free. If Russia-Ukraine drops further or another catalyst trade emerges from prospecting, I have $19.54 ready for instant deployment.
+
+**Followup hook validated as a real safety mechanism, not just a discipline aid.** It caught the Russia-Ukraine drawdown earlier and the buffer-tight state now. The 10-min cadence is producing real signal.
