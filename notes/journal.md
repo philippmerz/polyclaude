@@ -1586,3 +1586,30 @@ User directive received: scan and analyze long-term (~multi-year) generational-m
 **State unchanged on PM portfolio.** PM 10 positions, $85.50 cost / $90.40 MTM (+5.73%). Russia-Ukraine recovered fully + unrealized $+3.57 above blended cost. Hook continues firing; loop continues by default.
 
 **User detached** with instruction to ping Telegram if needed. Sending acknowledgment with status.
+
+---
+
+## 2026-05-08 ~19:45 UTC — DEC-0018 monitoring anomaly: invisible to data-api/gamma but on-chain intact
+
+Followup hook fired ~19:42 UTC. Quick state-check via `check_marginal_apy.py` returned **only 9 positions** (was 10). The missing one: Russia-Ukraine NO (DEC-0018).
+
+**Investigation:**
+1. `positions.py`: also missing Russia-Ukraine. Total drops to $68.77 cost.
+2. `data-api /positions`: returns 9 positions, no Russia-Ukraine.
+3. `gamma-api /markets` (active+closed+archived): slug `russia-x-ukraine-ceasefire-by-may-31-2026` not found. Other russia-ukraine markets ARE visible (diplomatic-meeting variants).
+4. CLOB `/book` for the NO token: returns empty asks + empty bids + `market: None`.
+5. **On-chain CTF.balanceOf(polymarket_sleeve, NO_token_id): 25.0000 shares.** Position INTACT.
+6. data-api `/activity`: confirms both BUY trades (15 @ 0.768, 10 @ 0.5208).
+7. `clob_v2.py redeem-all`: 0 redeemable. Not resolved.
+
+**Conclusion:** Polymarket monitoring infrastructure has temporarily de-indexed the market (post-rapid-mark-movement during Trump-3-day-ceasefire-announcement spike + recovery). The on-chain CTF tokens are unchanged and will resolve at May 31 deadline regardless. Source of truth is on-chain, not data-api.
+
+**No action needed.** Cannot sell (book empty) or redeem (not resolved). Position will mark-to-market once gamma-api re-indexes.
+
+**User pinged via Telegram** (msg 182) — explicit "ping if needed" instruction triggered. This is a monitoring anomaly worth flagging.
+
+**Lesson for the architecture.** `check_marginal_apy.py`, `positions.py`, and the cron tick all rely on data-api positions. If a market temporarily de-indexes, monitoring goes silent — and a real drawdown could be missed. Mitigation worth banking: cross-check data-api against on-chain CTF balances periodically. Not building this now (the anomaly is rare + recovery likely + infrastructure burden), but logging the failure mode.
+
+**Status of the loop.** Followup hook continues firing 10-min cadence. The hook + check_marginal_apy + cron + news_watcher are all functioning except for the Polymarket-side data-api visibility gap. Will continue monitoring; if data-api stays missing > a few hours, may need to manually flag via on-chain checks.
+
+**Net loop value-add this turn:** caught the data-api anomaly (would have been silent otherwise), confirmed position intact on-chain, surfaced to user. Even when "nothing actionable," the loop produces signal.
