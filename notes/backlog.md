@@ -29,13 +29,27 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 - ~~**2026-05-08** — Add to `strategy/00_philosophy.md` edge-source-1 ("longshot fade"): explicit rule that bond-like fades require 5-minute web search for window-specific catalysts BEFORE sizing.~~ **DONE 2026-05-08, commit `6c9d171`** — philosophy updated with mandatory catalyst_check.py pre-trade gate. discover_markets.py also got `--check-catalysts N` flag for auto-prefilter on hurdle-clearance candidates.
 
 - **2026-05-08** — Cron-tick auto-check for marginal-APY-below-hurdle on held positions. Per DEC-0001 close lesson: any long-tail NO with `(1-mark)/mark * 365/days < hurdle_apy` is a close candidate. Bounded ~20 LOC: add to `daily_checkin.sh` step 3 (catalyst scan) or a helper invoked by the prompt. Surface flagged positions in the cron output so future operator notices same-day rather than weeks later.
+
+- **2026-05-08** — `scripts/catalyst_check.py` prompt enhancement: for multi-conditional questions ("Will X happen by date" where X = "Y AND Z"), require haiku to show the multiplicative breakdown explicitly. Pahlavi market needs Iran-regime fall AND Pahlavi installed — haiku gave joint 14% but didn't show the 28% × 50% breakdown. Adding "if the resolution criteria implies a conjunction, list each component probability and show the multiplication" to the prompt would prevent operator double-discounting (lesson from 2026-05-08 sweep).
 - **2026-05-08** — `news_watcher.py` dedup-by-title-hash within 24h window. Currently dedups by GUID, so same WaPo-syndicated story across feeds fires N alerts (saw 9× of "Trump shelved Project Freedom"). ~30 LOC. Low priority — Tier-2 only, no false-positive emergency response.
 
 ## Calendar
 
 - **2026-05-09** (~tomorrow): Russia Victory Day. Catalyst for DEC-0014 re-eval window.
-- **2026-08-18** (~102d): Trump UAP-EO 300-day declassification deadline. Reassessment trigger for DEC-0003 — if market YES drifts up, reconsider close.
+- **2026-05-10** (~2d): Atletico vs Celta Vigo (home) — DEC-0008.
+- **2026-05-13** (~5d): Osasuna vs Atletico (away) — DEC-0008.
+- **2026-05-14** (~6d): Eurovision Semi-Final 2 — Latvia must qualify (DEC-0007 gating). Same day, **Trump-Xi summit** with Iran a central agenda item — major catalyst for DEC-0006 (Iran-peace May 31) and DEC-0015 (Iran-peace May 15). Post-summit market repricing likely.
+- **2026-05-15** (~7d): DEC-0015 resolves (Iran-peace May 15 NO).
+- **2026-05-16** (~8d): Eurovision Grand Final — DEC-0007 resolves.
+- **2026-05-17** (~9d): Atletico vs Girona (home) — DEC-0008.
+- **2026-05-24** (~16d): Villarreal vs Atletico (away, final La Liga matchday) — DEC-0008 effectively resolves.
+- **2026-05-25** (~17d): DEC-0008 Atletico La Liga formal resolve.
+- **2026-05-31** (~23d): DEC-0006 Iran-peace May 31 NO resolves.
+- **2026-06-24** (~47d): Trump ceasefire-extension expiration — Iran cluster reassessment trigger.
+- **2026-07-27** (~80d): EU sanctions on Iran review — Iran cluster reassessment.
+- **2026-08-18** (~102d): Trump UAP-EO 300-day declassification deadline. Reassessment trigger for DEC-0003.
 - **2026-10-31** (~176d): Annual DNI UAP report deadline. Final pre-resolution catalyst for DEC-0003.
+- **2026-11-03** (~179d): US midterm elections. Catalyst for DEC-0004 (Trump-out NO) — even if Dems take House, Senate conviction implausible.
 - **2026-05-10** (~2d): DEC-0014 Russia-Ukraine NO re-eval window opens. Plan from May 1 skip: re-evaluate at NO 0.95+ once Victory Day passes without framework announcement.
 - **2026-05-15** (~7d): DEC-0015 resolves. Iran-peace-by-May-15 NO.
 - **2026-05-16** (~8d): DEC-0007 Latvia Eurovision resolves.

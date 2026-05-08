@@ -86,3 +86,277 @@ No US government report in 75+ years of official UAP investigation has confirmed
 - [Trump teases imminent UFO file release](https://fortune.com/2026/05/03/trump-ufo-files-pentagon-uap-all-domain-anomaly-resolution-office/)
 - [H.R.1187 UAP Transparency Act](https://www.congress.gov/bill/119th-congress/house-bill/1187/text)
 ```
+
+---
+
+## 2026-05-08T16:39:31Z — catalyst_check
+
+**Query:** `Will Reza Pahlavi lead Iran in 2026?` resolves 2026-12-31 (237d)
+
+## CATALYST CHECK: Will Reza Pahlavi lead Iran in 2026?
+
+Resolution: 2026-12-31 | Days: 237 | Today: 2026-05-08
+
+### Base rate
+Regime changes via opposition coalition require internal security force defection, external military support, and institutional collapse. Iran has had one successful revolution (1979); Pahlavi has been exiled for 47 years. Current context: active US-Israel military campaign, Supreme Leader assassinated (Feb 28) and replaced (March 9), mass protests ongoing since Dec 2025, two-week ceasefire agreed April 7. Rapid transition in 237 days is possible but requires regime collapse acceleration.
+
+### Catalysts in window
+- [HIGH] 2026-04-07 – Two-week ceasefire announcement (now extended to June 24 per Trump); expiration/breakdown could trigger renewed military pressure accelerating regime change. – [2026 Iran war ceasefire - Wikipedia](https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire)
+- [HIGH] 2026-05-XX – Iran local elections (May 2026 date unspecified); potential measure of regime legitimacy and opposition strength in aftermath of war. – [Iran's factions gear up for local elections despite public apathy](https://www.iranintl.com/en/202510244851)
+- [MEDIUM] 2026-05-07 – Iran reviewing 14-point US-brokered peace framework MOU; acceptance could reset political terms and create window for constitutional transition under Pahlavi leadership. – [U.S. and Iran Offer Mixed Messages on Deal to End War](https://time.com/article/2026/05/07/us-iran-war-deal-mou-axios-report-negotiations-strait-nuclear/)
+- [MEDIUM] 2026-06-24 – Trump ceasefire declaration; conditions for "comprehensive peace agreement" negotiations to follow. Outcome will determine trajectory of regime stability vs. collapse. – [2026 Iran war ceasefire - Wikipedia](https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire)
+- [MEDIUM] 2026-Q3/Q4 – Pahlavi's constitutional convention / 100-day transitional framework execution (if regime collapse triggers). Plan includes pluralistic assembly and referendum on form of government. – [Prince Reza Pahlavi's Hundred-Day Transition Framework](https://www.faf.ae/home/2026/1/15/reza-pahlavis-hundred-day-transition-framework)
+
+### Recent news (last 14d)
+- 2026-05-07 – Iran reviewing US-proposed 14-point peace deal; officials assessing whether framework viable. Outcome will signal regime's readiness to negotiate exit vs. intensify resistance.
+
+### P(YES) estimate
+- Low: 8%
+- Central: 14%
+- High: 28%
+- Reasoning: Regime stabilization under new Supreme Leader (Mojtaba Khamenei, appointed March 9) despite war and protests suggests institutional resilience. Pahlavi's ascension requires regime collapse, opposition unity (contested), and Western commitment to monarchy—achievable only if ceasefire breaks down and military intervention/internal defection accelerates. Current trajectory: slow negotiation favors regime continuity over revolutionary transition within 237-day window.
+
+### Sources
+- [2026 Iran war ceasefire - Wikipedia](https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire)
+- [Iran's factions gear up for local elections despite public apathy](https://www.iranintl.com/en/202510244851)
+- [U.S. and Iran Offer Mixed Messages on Deal to End War](https://time.com/article/2026/05/07/us-iran-war-deal-mou-axios-report-negotiations-strait-nuclear/)
+- [2025–2026 Iran–United States negotiations - Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+- [Prince Reza Pahlavi's Hundred-Day Transition Framework](https://www.faf.ae/home/2026/1/15/reza-pahlavis-hundred-day-transition-framework)
+- ['End of isolation': exiled prince presents roadmap for post-theocracy Iran](https://www.iranintl.com/en/202601154243)
+- [Regime change efforts in the 2026 Iran war - Wikipedia](https://en.wikipedia.org/wiki/Regime_change_efforts_in_the_2026_Iran_war)
+- [2026 Iranian supreme leader election - Wikipedia](https://en.wikipedia.org/wiki/2026_Iranian_supreme_leader_election)
+
+---
+
+## 2026-05-08T16:40:50Z — catalyst_check
+
+**Query:** `Will the Iranian regime fall before 2027?` resolves 2026-12-31 (237d)
+
+```
+## CATALYST CHECK: Will the Iranian regime fall before 2027?
+
+Resolution: 2026-12-31 | Days: 237 | Today: 2026-05-08
+
+### Base rate
+The Iranian regime has survived 47 years despite multiple internal and external crises. Regime collapse over an 8-month window is uncommon historically, but the current regime is uniquely weakened: the Supreme Leader was assassinated Feb 28, 2026, massive protests killed 30,000–36,500 in Jan–Feb alone, military conflict concluded May 5 with significant losses, and the currency has collapsed amid 60% projected inflation. A successor (Mojtaba Khamenei) was designated March 8 and remains in consolidation phase.
+
+### Catalysts in window
+- [HIGH] 2026-07-27 - EU sanctions restrictive measures review; currently set to expire; extension or lapse will impact economic pressure on regime - [EU sanctions timeline](https://www.consilium.europa.eu/en/policies/sanctions-against-iran/timeline-eu-sanctions-against-iran/)
+- [MED] Ongoing - US–Iran ceasefire negotiations (temporary 2-week ceasefire announced April 7); breakdown could restart military conflict; success could ease pressure - [US-Iran ceasefire and nuclear talks in 2026](https://commonslibrary.parliament.uk/research-briefings/cbp-10637/)
+- [MED] 2026-05 through 12-31 - Economic collapse acceleration; inflation heading to 60%, rial already collapsed; civil unrest or military defections possible - [Iran: What challenges face the country in 2026?](https://commonslibrary.parliament.uk/research-briefings/cbp-10456/)
+- [MED] 2026-03 through 12-31 - Mojtaba Khamenei succession consolidation; new Supreme Leader faces factional opposition within regime; internal power struggle could destabilize - [2026 Supreme Leader election](https://www.wikipedia.org/wiki/2026_Iranian_Supreme_Leader_election)
+- [LOW] Ongoing - Second wave of student-led protests (began Feb 21, 2026); government has demonstrated willingness to use lethal force - [2025–2026 Iranian protests](https://www.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests)
+
+### Recent news (last 14d)
+- 2026-05-01 - US Treasury imposes new Iran-related sanctions (6 individuals, 21 entities); part of Operation "Economic Fury" intensification: continued pressure but no regime-level announcement - [US Imposes New Iran-Related Sanctions](https://www.globalsecurity.org/wmd/library/news/iran/2026/05/)
+- 2026-04-18 onwards - Ongoing US-Iran nuclear and ceasefire negotiations; status unclear from public statements; no major breakthrough or breakdown signaled - [Two Wars Later, Iran's Nuclear Question](https://carnegieendowment.org/emissary/2026/05/iran-nuclear-program-progress-deal)
+
+### P(YES) estimate
+- Low: 12%
+- Central: 28%
+- High: 48%
+- Reasoning: The regime is severely weakened (leadership assassination, 30k+ dead in protests, military losses, economic collapse) but technically operational with a successor in consolidation. The 237-day window is tight for full regime collapse. Catalysts favor degradation (sanctions review, ceasefire breakdown, economic crisis) over rapid collapse. Central estimate assumes current trajectory continues without major shocks; high estimate assumes ceasefire fails or economy implodes faster.
+
+### Sources
+- [2026 Iran war](https://www.britannica.com/event/2026-Iran-war)
+- [2025–2026 Iranian protests](https://www.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests)
+- [2026 Supreme Leader election](https://www.wikipedia.org/wiki/2026_Iranian_Supreme_Leader_election)
+- [US-Iran ceasefire and nuclear talks in 2026](https://commonslibrary.parliament.uk/research-briefings/cbp-10637/)
+- [Iran: What challenges face the country in 2026?](https://commonslibrary.parliament.uk/research-briefings/cbp-10456/)
+- [EU sanctions timeline](https://www.consilium.europa.eu/en/policies/sanctions-against-iran/timeline-eu-sanctions-against-iran/)
+- [Operation Economic Fury sanctions](https://www.state.gov/releases/office-of-the-spokesperson/2026/05/u-s-sanctions-tighten-grip-on-iran-china-oil-trade/)
+```
+
+---
+
+## 2026-05-08T16:42:10Z — catalyst_check
+
+**Query:** `Trump out as President before 2027?` resolves 2026-12-31 (237d)
+
+```
+## CATALYST CHECK: Trump out as President before 2027?
+
+Resolution: 2026-12-31 | Days: 237 | Today: 2026-05-08
+
+### Base rate
+No US president has ever been successfully removed via impeachment; 25th Amendment has never been invoked for removal. Modern historical base rate for presidential removal in an 8-month window: ~0%.
+
+### Catalysts in window
+- [MED] 2026-11-03 - Midterm elections determine House/Senate control; if Dems take House, could embolden impeachment push, but Senate conviction requires 67 votes and GOP retention likely - [CNN Politics](https://www.cnn.com/2026/05/06/politics/gop-trump-midterm-elections), [Ballotpedia](https://ballotpedia.org/United_States_Congress_elections,_2026)
+- [LOW] 2026-04-06+ - Multiple impeachment resolutions filed (H.Res.353, 939, 537, 1155) but no scheduled votes or trial dates; party leadership avoiding impeachment before midterms - [Congress.gov](https://www.congress.gov/bill/119th-congress/house-resolution/353)
+- [LOW] 2026-04-14+ - Democratic 25th Amendment removal calls post-Iran conflict; politically non-viable (requires VP Vance and Cabinet majority, neither incentivized) - [Axios](https://www.axios.com/2026/04/14/trump-25th-amendment-impeachment-iran-democrats), [Time](https://time.com/article/2026/04/06/25th-amendment-constitution-trump-war-iran-threat-insanity/)
+- [LOW] Ongoing - Georgia criminal case and NY appeal proceeding, no specific conviction-trigger scheduled within window - [Just Security](https://www.justsecurity.org/88039/trumps-legal-and-political-calendar-all-the-dates-you-need-to-know/)
+
+### Recent news (last 14d)
+- 2026-05-07 - Iran conflict Day 68-69: Trump negotiating peace deal; poll numbers sinking to historic lows but president remains in office
+- 2026-04-26 - Shooting at White House Correspondents' dinner; Trump delivers remarks (security incident without constitutional consequence)
+
+### P(YES) estimate
+- Low: 1%
+- Central: 2%
+- High: 5%
+- Reasoning: Removal requires House impeachment + 67-vote Senate conviction (GOP controls Senate; even if Dems take House in Nov, conviction politically implausible without massive GOP defection) OR 25th Amendment action from VP Vance + Cabinet (no incentive). Tail risk skewed toward unexpected death/incapacity.
+
+### Sources
+- [Congress.gov H.Res.353](https://www.congress.gov/bill/119th-congress/house-resolution/353)
+- [Ballotpedia 2026 Elections](https://ballotpedia.org/United_States_Congress_elections,_2026)
+- [CNN: GOP Trump Midterms](https://www.cnn.com/2026/05/06/politics/gop-trump-midterm-elections)
+- [Axios: 25th Amendment Bill](https://www.axios.com/2026/04/14/trump-25th-amendment-impeachment-iran-democrats)
+- [Time: 25th Amendment Overview](https://time.com/article/2026/04/06/25th-amendment-constitution-trump-war-iran-threat-insanity/)
+- [Just Security: Trump Legal Calendar](https://www.justsecurity.org/88039/trumps-legal-and-political-calendar-all-the-dates-you-need-to-know/)
+- [CNN: Iran War Day 68](https://www.cnn.com/2026/05/07/world/live-news/trump-iran-war-news)
+```
+
+---
+
+## 2026-05-08T16:43:32Z — catalyst_check
+
+**Query:** `US x Iran permanent peace deal by May 31, 2026?` resolves 2026-05-31 (23d)
+
+```
+## CATALYST CHECK: US × Iran permanent peace deal by May 31, 2026
+
+Resolution: 2026-05-31 | Days: 23 | Today: 2026-05-08
+
+### Base rate
+Active war negotiations with scheduled talks rarely resolve to "permanent" treaty status within 3 weeks; historical precedent (2015 JCPOA) took months; current framework involves unresolved gaps on uranium enrichment, Hormuz reopening, and sanctions release.
+
+### Catalysts in window
+- [HIGH] 2026-05-08/09 - Iran's formal response to 14-point MOU due (still under review as of May 8; could reject or accept framework for further talks) - [CNN](https://www.cnn.com/2026/05/08/world/live-news/iran-war-news)
+- [HIGH] 2026-05-14/15 - Scheduled formal talks between US envoys (Witkoff, Kushner) and Iranian officials; could produce signed MOU formally ending war - [Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+- [MEDIUM] 2026-05-25+ - Hajj pilgrimage begins (political pressure window; escalation during pilgrimage carries reputational costs; implicit deadline to show progress) - [CNBC](https://www.cnbc.com/2026/05/06/us-iran-peace-deal-nuclear-moratorium.html)
+
+### Recent news (last 14d)
+- 2026-05-07 - US and Iran described as "closing in" on MOU; Trump: "very possible that we'll make a deal" - [Axios](https://www.axios.com/2026/05/06/iran-us-deal-one-page-memo)
+- 2026-05-08 - Iran still reviewing; no formal response delivered; exchange of strikes on Hormuz; Secretary of State Rubio expects response "end of Friday" - [CNBC](https://www.cnbc.com/2026/05/08/marco-rubio-says-us-expects-iran-response-on-peace-deal-today.html)
+- 2026-05-14 - 52 senators + 177 representatives send letter rejecting any deal allowing uranium enrichment - [Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+
+### P(YES) estimate
+- Low: 5%
+- Central: 12%
+- High: 25%
+- Reasoning: Scheduled May 14–15 talks create real catalyst; "closing in" language suggests both sides motivated. However, "permanent peace deal" likely requires nuclear agreement (enrichment limits still contested: US wants 12–20yr, Iran proposes 5yr), Strait of Hormuz reopening, sanctions relief, and UN guarantees—complex issues rarely resolved in 23 days. MOU signing (ceasefire + 30-day negotiation window) could be misclassified as "permanent" by market, raising probability. Congressional opposition to enrichment adds friction. Central case assumes talks proceed but gaps persist past May 31.
+
+### Sources
+- [Axios: US, Iran closing in on one-page memo](https://www.axios.com/2026/05/06/iran-us-deal-one-page-memo)
+- [Al Jazeera: What are US proposals to end war](https://www.aljazeera.com/news/2026/5/7/what-are-us-proposals-to-end-war-and-will-iran-agree-to-them)
+- [CNN: Live updates Iran response](https://www.cnn.com/2026/05/08/world/live-news/iran-war-news)
+- [CNBC: Rubio expects Iranian response](https://www.cnbc.com/2026/05/08/marco-rubio-says-us-expects-iran-response-on-peace-deal-today.html)
+- [CNBC: What we know about Iran's response](https://www.cnbc.com/2026/05/06/us-iran-peace-deal-nuclear-moratorium.html)
+- [Wikipedia: 2025–2026 Iran–United States negotiations](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+```
+
+---
+
+## 2026-05-08T16:44:33Z — catalyst_check
+
+**Query:** `US x Iran permanent peace deal by May 15, 2026?` resolves 2026-05-15 (7d)
+
+## CATALYST CHECK: US x Iran permanent peace deal by May 15, 2026?
+
+Resolution: 2026-05-15 | Days: 7 | Today: 2026-05-08
+
+### Base rate
+US-Iran permanent peace agreements are historically rare and slow to negotiate. A 7-day window for finalizing a binding permanent deal (vs. a framework MOU) is historically unprecedented in similar conflicts; recent Iran negotiations have taken months to years for final agreements.
+
+### Catalysts in window
+- [HIGH] 2026-05-08 - Iran response to US 14-point MOU proposal due (expected within 48 hours of May 6) - [Axios](https://www.axios.com/2026/05/06/iran-us-deal-one-page-memo), [CNN](https://www.cnn.com/2026/05/06/politics/trump-iran-war-talks-plan)
+- [HIGH] 2026-05-14/15 - Trump-Xi summit; Iran a central agenda item; potential framework announcement or signature window - [CNBC](https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html), [Bloomberg](https://www.bloomberg.com/news/articles/2026-05-07/trump-s-summit-with-xi-is-on-despite-china-s-iran-concerns)
+- [MED] 2026-05-14/15 - Trump statement/announcement during summit addressing Iran resolution status - [The Japan Times](https://www.japantimes.co.jp/news/2026/05/08/asia-pacific/politics/trump-china-summit-iran-war-loom/)
+
+### Recent news (last 14d)
+- 2026-05-06/07 - "Closing in" on 14-point one-page MOU to end war and frame 30-day nuclear negotiations: deal structure confirms MOU ≠ final permanent agreement.
+- 2026-05-06 - China pressing Iran to accept ceasefire and reopen Strait of Hormuz ahead of summit.
+- 2026-05-08 - Trump claims "great progress"; Iran response expected by May 8-9.
+
+### P(YES) estimate
+- Low: 2%
+- Central: 8%
+- High: 20%
+- Reasoning: Public reporting explicitly distinguishes MOU (framework to start 30-day detailed negotiations) from permanent deal (requires completion of those negotiations). Even if MOU signed by May 15, the permanent agreement would occur after the 30-day window. Only a surprise fast-track completion or loose market definition (accepting MOU as "permanent") could trigger YES by deadline.
+
+### Sources
+- [Axios: US, Iran closing in on one-page memo to end war](https://www.axios.com/2026/05/06/iran-us-deal-one-page-memo)
+- [CNN: US and Iran closing in on agreement aimed at ending war](https://www.cnn.com/2026/05/06/politics/trump-iran-war-talks-plan)
+- [The Times of Israel: Closing in on framework for permanent deal](https://www.timesofisrael.com/us-iran-said-closing-in-on-framework-for-permanent-deal-as-trump-renews-bomb-threats/)
+- [CNBC: Iran focus at Trump-Xi summit](https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html)
+- [Bloomberg: Trump-Xi Summit stays on track despite China's Iran concerns](https://www.bloomberg.com/news/articles/2026-05-07/trump-s-summit-with-xi-is-on-despite-china-s-iran-concerns)
+- [The Japan Times: Trump heads for Xi summit overshadowed by Iran war](https://www.japantimes.co.jp/news/2026/05/08/asia-pacific/politics/trump-china-summit-iran-war-loom/)
+- [The Hill: What's in the US's 1-page proposal for Iran peace deal?](https://thehill.com/policy/international/5866955-us-iran-peace-deal-strait-of-hormuz/)
+- [Al Jazeera: What are US proposals to end war, and will Iran agree to them?](https://www.aljazeera.com/news/2026/5/7/what-are-us-proposals-to-end-war-and-will-iran-agree-to-them)
+
+---
+
+## 2026-05-08T16:45:38Z — catalyst_check
+
+**Query:** `Will Latvia be in the top 10 at Eurovision 2026?` resolves 2026-05-16 (8d)
+
+```
+## CATALYST CHECK: Will Latvia be in the top 10 at Eurovision 2026?
+
+Resolution: 2026-05-16 | Days: 8 | Today: 2026-05-08
+
+### Base rate
+Eurovision ballads on dark personal themes (father's alcoholism, family trauma) have historically underperformed at Eurovision, especially when competing against high-energy pop entries. Latvia's 0.4% current betting odds rank among the lowest in the entire 2026 contest, reflecting market consensus that top-10 placement is extremely unlikely.
+
+### Catalysts in window
+- [HIGH] 2026-05-14 - Semi-Final 2 qualification vote. Latvia must qualify from the second semi-final to compete in the Grand Final. Failure to qualify eliminates any chance of top-10 finish. - [Eurovision Song Contest 2026](https://www.eurovision.com/eurovision-song-contest/vienna-2026/)
+- [HIGH] 2026-05-16 - Grand Final voting and ranking. Final determination of placement. - [Eurovision Song Contest 2026](https://www.eurovision.com/eurovision-song-contest/vienna-2026/)
+
+### Recent news (last 14d)
+- 2026-05-06 - First rehearsal completed with scaled-up staging from Supernova-winning performance. No material shift in forecast. - [That Eurovision Site](https://thateurovisionsite.com/2026/05/05/latvia-eurovision-2026-rehearsal-one/)
+- 2026-05-08 - Second rehearsal completed. No reported issues or standout improvements. - [Eurovision News](https://eurovisionfun.com/en/2026/05/eurovision-2026-the-day-7-rehearsal-schedule-friday-may-8/)
+
+### P(YES) estimate
+- Low: 0.2%
+- Central: 0.4%
+- High: 1.0%
+- Reasoning: Current market odds at 0.4% are priced on fundamentals—ballad with introspective, dark lyrical content competing against high-energy pop acts in a contest optimized for spectacle and uplift. No scheduled announcements, rule changes, or external events in the window will materially shift P(YES). Semi-final and final voting are standard contest process, already reflected in current odds. Upside limited to Atvara significantly outperforming on-stage performance expectations.
+
+### Sources
+- [Eurovision Song Contest 2026 - Vienna](https://www.eurovision.com/eurovision-song-contest/vienna-2026/)
+- [Eurovision 2026 Betting Odds - Eurovoix](https://eurovoix.com/2026/05/07/eurovision-betting-odds-may-7/)
+- [Latvia Eurovision 2026 Entry - Wikipedia](https://en.wikipedia.org/wiki/Latvia_in_the_Eurovision_Song_Contest_2026)
+- [Atvara First Rehearsal - That Eurovision Site](https://thateurovisionsite.com/2026/05/05/latvia-eurovision-2026-rehearsal-one/)
+```
+
+---
+
+## 2026-05-08T16:46:31Z — catalyst_check
+
+**Query:** `Will Atletico Madrid finish in the top 4 of the La Liga 2025-2026 season?` resolves 2026-05-25 (17d)
+
+```
+## CATALYST CHECK: Will Atletico Madrid finish in the top 4 of the La Liga 2025-2026 season?
+
+Resolution: 2026-05-25 | Days: 17 | Today: 2026-05-08
+
+### Base rate
+Four-game sprint with 7-point gap over 5th place: empirically >90% for maintaining top-4 position absent catastrophic collapse (e.g., <3 points from 4 matches).
+
+### Catalysts in window
+- [HIGH] 2026-05-10 - Atletico Madrid vs Celta Vigo (home) - Direct playoff consequence
+- [HIGH] 2026-05-13 - Osasuna vs Atletico Madrid (away) - Direct playoff consequence
+- [HIGH] 2026-05-17 - Atletico Madrid vs Girona (home) - Direct playoff consequence
+- [HIGH] 2026-05-24 - Villarreal vs Atletico Madrid (away, final day) - Final standings determination
+- [LOW] Arsenal Champions League SF elimination (May 5) - Potential morale/fatigue bleed-through
+
+### Recent news (last 14d)
+- 2026-05-05: Arsenal defeats Atletico 2-1 aggregate in Champions League semi-final; squad exits European competition
+- 2026-05-02: Atletico 2-0 Valencia (La Liga)
+- 2026-04-29: Atletico 1-1 Arsenal (Champions League away)
+- 2026-04-25: Atletico 3-2 Athletic Club (La Liga)
+
+### P(YES) estimate
+- Low: 85%
+- Central: 93%
+- High: 97%
+- Reasoning: Atletico holds 4th with 57-63 points; Real Betis (5th) sits 7+ points behind with 4 matches remaining. Arsenal exit removes European distraction but creates potential morale dip. Four remaining home/away fixtures control Atletico's fate; 2-3 wins from 4 matches secures top 4. Gap is substantial; collapse threshold is <3 points from 12 available.
+
+### Sources
+- [2025–26 Atlético Madrid season - Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%9326_Atl%C3%A9tico_Madrid_season)
+- [Calendar and Upcoming Matches of the Atlético de Madrid - LALIGA](https://www.laliga.com/en-GB/clubs/atletico-de-madrid/next-matches)
+- [La Liga table — Standings, top scorers for 2025-26 season - Yahoo Sports](https://sports.yahoo.com/articles/la-liga-2025-26-season-151235306.html)
+- [Arsenal defeats Atlético Madrid to book a place in the Champions League final - CNN](https://www.cnn.com/2026/05/05/sport/live-news/champions-league-semifinal-atletico-madrid-arsenal)
+- [Villarreal v Atletico Madrid - 24 May 2026 - Goal.com](https://www.goal.com/en/match/villarreal-vs-atletico-madrid/03h42Hs0CUSwBAkovJpoY)
+```

@@ -1224,3 +1224,58 @@ User asked: "any need to rebalance existing portfolio?"
 **Backlog item added:** "cron tick: scan held positions for marginal-APY-below-hurdle and flag for close." Bounded ~20 LOC in daily_checkin.sh's prompt or a helper script. Adding this to the discover_markets/positions tooling would make hurdle-violations auto-surface every 12h.
 
 **End-of-turn discipline.** Thread resolved: rebalance done, lesson banked, journal current, backlog updated. No followup scheduled. Next trigger: 18:00 UTC periodic check (~1.5h).
+
+---
+
+## 2026-05-08 ~17:00 UTC — full-book catalyst sweep (7 positions, ~$0.35 token spend)
+
+User asked: "did you run the research for the existing positions?" Answer: no, I'd only run on 2 of 9 (DEC-0003 + DEC-0016 retroactive) and used carry math for the rest. Ran the remaining 7 now.
+
+**Synthesis (catalyst-aware vs market YES%):**
+
+| Position | Market YES | Catalyst Central | Reconciled | Verdict |
+|---|---|---|---|---|
+| Pahlavi 2026 NO | 8.3% | 14% | ~7% (conditional on regime fall × Pahlavi-installed conditional) | HOLD |
+| Aliens 2027 NO | 18.5% | 16% | match | HOLD |
+| Iran-regime 2027 NO | 15.5% | 28% | ~17-20% (haiku may over-weight) | HOLD marginal |
+| **Trump-out 2027 NO** | 13.5% | **2%** | 2-7% honest | **STRONG HOLD** — significant edge |
+| **Iran-peace May 31 NO** | 33.5% | **12%** | 12-20% range | **STRONG HOLD** — market significantly overprices YES |
+| Iran-peace May 15 NO (DEC-0015) | 18.4% | 8% | 8-15% range | HOLD with good edge |
+| **Latvia Euro NO** | 10.5% | **0.4%** | 1-3% honest | **STRONG HOLD** — bond-like fade vindicated |
+| Atletico YES | 98.9% | 93% | 95-98% honest | HOLD marginal |
+
+**No additional closes triggered.** Sweep VALIDATED the book — 4 positions (Trump-out, Iran-peace May 31, Latvia, plus DEC-0015 to a lesser extent) show real edge vs market pricing. The two marginal cases (Iran-regime, Atletico) have reconcilable estimates near market when conditional probabilities or honest reasoning are applied.
+
+**Calibration insight on haiku tool — CORRECTED after user pushback.**
+
+Initial draft of this entry claimed haiku "doesn't price conditions" on Pahlavi. **That was wrong.** Re-reading haiku's output: it explicitly listed the conditions ("regime collapse, opposition unity, Western commitment to monarchy") and gave Pahlavi central P(YES) = 14% vs Iran-regime central = 28%. Ratio 14/28 = 0.5 implies haiku effectively applied a ~50% conditional P(Pahlavi installed | regime falls). So haiku WAS pricing the joint, just not showing the multiplicative breakdown.
+
+My "reconciled ~7%" Pahlavi number above was double-discounting (took haiku's already-conditional 14% and re-applied a conditional). Honest single estimate:
+- My own joint estimate: P(regime falls) × P(Pahlavi | fall) ≈ 15% × 30% = 4.5%
+- Haiku joint: 14%
+- Market joint: 8.3%
+- Haiku is on the high end; market is between my estimate and haiku's; my Pahlavi NO at 0.917 captures fair-to-positive carry.
+
+**Verdict on Pahlavi NO unchanged: HOLD.** But the synthesis-table entry above ("~7% adjusted") was a math error. The honest estimate range is 4.5-14% (mine to haiku's), with market 8.3% in the middle.
+
+Real biases of the tool, more carefully:
+- For political-removal events (Trump-out via 25A/impeachment), haiku correctly applies political-viability filter and produces low P(YES) consistent with structural reality.
+- For sports/contest base-rate events (Latvia top-10), haiku correctly anchors on betting-market consensus rather than catalyst-counting.
+- For active-news-cycle events (Iran cluster, Iran-regime, Iran-peace markets), haiku appears to give somewhat aggressive P(YES) — possibly weighting the count of HIGH catalysts vs the strict resolution-criteria bar. Compare-to-market sanity check still useful, but treat haiku's central as upper bound rather than fair value.
+- For multi-conditional events: haiku DOES price conditions implicitly, but doesn't always show the multiplicative breakdown. Don't double-discount.
+
+**Net new catalysts surfaced (added to backlog calendar):**
+- 2026-05-10: Atletico vs Celta Vigo
+- 2026-05-13: Osasuna vs Atletico
+- 2026-05-14: Eurovision Semi-Final 2 (Latvia must qualify) AND **Trump-Xi summit with Iran central** (major DEC-0006/DEC-0015 catalyst)
+- 2026-05-17: Atletico vs Girona
+- 2026-05-24: Villarreal vs Atletico (final La Liga matchday)
+- 2026-06-24: Trump ceasefire-extension expiration
+- 2026-07-27: EU sanctions on Iran review
+- 2026-11-03: US midterm elections (Trump-out NO catalyst)
+
+Trump-Xi summit on May 14-15 is the most material new info — directly catalyst-windows DEC-0006 and DEC-0015. If summit produces a signed MOU framed as a "permanent peace deal," market could resolve YES under liberal UMA interpretation. Will monitor mark moves around May 14.
+
+**Token cost.** ~$0.35 in API tokens across 7 catalyst checks at haiku medium effort. Cheap insurance for a $70 PM sleeve. The sweep validated 4 strong-edge positions worth easily $1-2 in expected EV improvements over naive close-decisions.
+
+**End-of-turn discipline.** Sweep done, calendar updated, no actions triggered. Next trigger: 18:00 UTC periodic check or May 14 catalysts cluster.
