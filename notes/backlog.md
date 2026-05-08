@@ -23,6 +23,10 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 - **2026-05-08** — `scripts/across_bridge.py`: when bridging to Polygon, prefer `--token USDC.e` over `--token USDC` to avoid the native→USDC.e swap step on the receiving side. Test that Across V3 supports USDC.e on the destination chain. ~10 LOC patch.
 
 - **2026-05-08** — `scripts/across_bridge.py`: support `--recipient` flag so Aave-funded bridges can land directly on the polymarket sleeve instead of the crypto sleeve. Currently: `addr → addr` hardcoded, requires extra wallet hop. ~5 LOC patch.
+
+- **2026-05-08** — Re-evaluate DEC-0003 (US confirm aliens before 2027 NO @ entry 0.80, current mark 0.815). Trump's PURSUE program launched May 8 (162 UAP files released, ongoing tranches every few weeks). 22-month horizon means more time for "confirmation" event. May still be net-positive carry given the strict "confirm aliens" UMA bar, but not a no-brainer anymore. Don't act blind — analyze the Polymarket resolution criteria carefully against likely PURSUE program outcomes.
+
+- **2026-05-08** — Add to `strategy/00_philosophy.md` edge-source-1 ("longshot fade"): explicit rule that bond-like fades require 5-minute web search for window-specific catalysts BEFORE sizing. Calibration lesson from DEC-0016 (closed at -$0.08): intuition is not a model. The philosophy already says "modelled fair value" — make it operational by requiring catalyst-calendar check.
 - **2026-05-08** — `news_watcher.py` dedup-by-title-hash within 24h window. Currently dedups by GUID, so same WaPo-syndicated story across feeds fires N alerts (saw 9× of "Trump shelved Project Freedom"). ~30 LOC. Low priority — Tier-2 only, no false-positive emergency response.
 
 ## Calendar

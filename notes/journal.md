@@ -1109,3 +1109,52 @@ Recommendation: (b) + (c). Don't actively merge; remove the friction at the brid
 **Backlog updates.** DEC-0016 added. Aliens-by-May-31 calendar tracked. Two `across_bridge.py` patches still pending (recipient + USDC.e default for Polygon).
 
 **End-of-turn discipline.** Trade executed. No followup scheduled — this thread is fully resolved (trade in, journaled, all backlog items current). Next trigger: 16:00 UTC periodic check (~30 min).
+
+---
+
+## 2026-05-08 ~15:30 UTC — DEC-0016 closed at -$0.08 net; calibration lesson, philosophy update needed
+
+User pushed: "and odds of aliens confirmed by then are 1% according to your analysis" — challenging my P(YES) claim.
+
+**Acknowledged my "1%" was unmodeled intuition,** not an analytical estimate. Offered to do a 5-min web search to refine. User: "up to you." Per "Default to action," ran the search.
+
+**Critical finding from search.** Today, 2026-05-08, the Pentagon launched the **PURSUE** (Presidential Unsealing and Reporting System for UAP Encounters) program AND released the first batch — **162 declassified UAP files** including FBI, DoD, NASA, State Department documents, Apollo 12/17 footage, the "football-shaped UAP" photo. Trump's Feb 19, 2026 Truth Social directive driving it. Hegseth in lockstep. **New tranches every few weeks.** Disclosure window includes May 8-31 (the resolution window of DEC-0016).
+
+**P(YES) revised honestly.**
+- Pre-PURSUE base rate: ~1%
+- With active disclosure program ongoing: +3-5pp for catalyst risk
+- Trump's "people will be amazed" rhetoric + scheduled future tranches: +1-2pp
+- Updated central estimate: **4-7% YES**, with 5% as my best honest guess
+- Market 3.5% YES is plausibly correct or slightly underpriced
+
+**Trade EV under updated estimate.**
+- At P(YES)=5%: 0.95 × $10 = $9.50 expected vs $9.66 cost = **-$0.16 EV**
+- At P(YES)=7%: -$0.36 EV
+- At market's 3.5%: -$0.01 EV (break-even)
+
+The original "+$0.24 EV" claim was based on the unmodeled 1% P(YES). Under any honest revised estimate, trade is at best break-even and likely modestly negative.
+
+**Closed the position.** Sold 10 shares NO at 0.961 (best bid; market had moved 0.964 → 0.961 in ~10 minutes, validating the disclosure-news repricing thesis). Tx `0x5a44da720bd61d921951ad0b611f05762f846fddca746ac50041f758e0e2f063`. Order ID `0x553e5f99c20e65eca8ce9cd003b3ccfe69dc0bc6dc569ec3be7b4475a07b5218`.
+
+**P&L on DEC-0016 round trip (~30 min hold).**
+- Buy: 10 shares @ $0.966 → $9.66 spent
+- Sell: 10 shares @ $0.961 → $9.61 received
+- Polymarket fees: ~$0.03 (taker on sell)
+- **Net realized: -$0.08**
+
+Plus the ~$0.31 sunk on path infrastructure (Aave withdraw + bridge + cross-wallet + swap + wrap). Path-infrastructure is reusable; effective marginal cost of this trade alone was the $0.08 round-trip.
+
+**Decision tracker updated.** DEC-0016 marked closed with outcome, calibration_delta -0.06, lesson banked.
+
+**Calibration lesson** (banked to backlog → philosophy doc update):
+> Bond-like longshot fades require 5-minute web search for window-specific catalysts BEFORE sizing. Philosophy edge source #1 explicitly says "markets pricing tail events at 2-8% where my **MODELLED** fair value is near 0%" — emphasis on modelled. Intuition is not a model. The market's 3% on aliens-by-May-31 reflected aggregate trader knowledge of PURSUE that I missed.
+
+**DEC-0003 (aliens-2027 NO @ entry 0.80, mark 0.815) re-eval added to backlog.** 22-month horizon means more time for "confirmation" — same disclosure environment but much longer window. Don't act blindly; need careful UMA-resolution-criteria analysis.
+
+**Two backlog items added:** philosophy update (operationalize the catalyst-check rule), DEC-0003 re-eval.
+
+**State after close.** PM 9 positions, $69.67 cost / $71.16 MTM (+$1.48 / +2.13%). pUSD ~$20.27 buffer (received $9.61 from close on top of $10.62 leftover). USDC.e $0.01. Path-infrastructure sunk; future trades using leftover pUSD only need wrap+buy ~$0.05.
+
+**Net session impact: -$0.08 realized loss, full Aave→Polymarket pipeline validated, calibration lesson banked, two backlog items added, philosophy doc update queued.** The pipeline validation is genuinely useful — every future bond-like fade I find is now a 1-tx execute path instead of 6-tx setup.
+
+**End-of-turn discipline.** Thread fully resolved (closed + journaled + backlog updated). No manual followup scheduled. Next trigger: 16:00 UTC periodic check (~25 min).

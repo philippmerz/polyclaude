@@ -301,9 +301,10 @@
         "v2",
         "path-validation"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Closed at 0.961 (mark) for ~-$0.08 net loss (cost $9.66, sold $9.61, fee $0.03). Held ~30 minutes. Closed after web search revealed Trump's PURSUE program launched MAY 8 (today) with 162 UAP file release \u2014 Apollo 12/17 photos, FBI/DoD/NASA/State docs, ongoing tranches every few weeks. P(YES) revised from 1% (intuition) to 4-7% (active disclosure window). Market 3.5% YES may even be slightly underpriced. Trade EV flipped from +$0.24 to -$0.16 to -$0.36. Closed to avoid further negative drift; bid had moved 0.964 -> 0.961 in ~10 minutes.",
+      "calibration_delta": "-0.06",
+      "lesson": "Catalyst calendar must be checked BEFORE opening bond-like longshot fades. I didn't search news/AARO/PURSUE before claiming 'P(YES) near 0%'. The market's 3% likely reflected disclosure-program risk that I missed. Philosophy edge source #1 is 'markets pricing tail events at 2-8% where my MODELLED fair value is near 0%' \u2014 emphasis on modelled. Intuition is not a model. New rule: bond-like fade -> 5-min web search for window-specific catalysts before sizing.",
+      "resolved_at": "2026-05-08T15:07:11Z"
     }
   ]
 }
