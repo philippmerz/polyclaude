@@ -240,6 +240,10 @@ def main() -> None:
     ap.add_argument("--no-snapshot", action="store_true")
     ap.add_argument("--clears-hurdle-only", action="store_true",
                     help="filter to candidates whose dominant-side APY beats the Aave hurdle")
+    ap.add_argument("--check-catalysts", type=int, default=0, metavar="N",
+                    help="run scripts/catalyst_check.py on the top N candidates (after filtering). "
+                         "Each check spawns claude -p haiku with WebSearch (~5-10K tokens, ~30-60s). "
+                         "0 = skip (default).")
     args = ap.parse_args()
 
     SNAP_DIR.mkdir(parents=True, exist_ok=True)
@@ -284,6 +288,33 @@ def main() -> None:
             hurdle = "✓" if r.get("clears_hurdle") else " "
             side = r.get('dominant_side') or "-"
             print(f"  yes={yp}  apy_{side}={apy}{hurdle}  spd={r['spread']:.3f}  liq={r['liquidity']:>9.0f}  v24={r['vol24h']:>9.0f}  d={r['days_to_resolve']:>6.1f}  {r['question'][:80]}")
+
+    # Optional: run catalyst_check.py on top N candidates (post-philosophy update
+    # 2026-05-08, mandatory for any bond-like fade actually being entered).
+    if args.check_catalysts > 0:
+        import subprocess
+        catalyst_script = Path(__file__).resolve().parent / "catalyst_check.py"
+        candidates = short[: args.check_catalysts]
+        print(f"\n=== catalyst_check.py on top {len(candidates)} candidate(s) ===")
+        for i, r in enumerate(candidates, 1):
+            q = r.get("question", "")
+            end_date = r.get("end_date", "")
+            if not q or not end_date:
+                print(f"\n[{i}/{len(candidates)}] SKIP — missing question or end_date: {q[:60]}")
+                continue
+            resolve_iso = end_date[:10]  # YYYY-MM-DD prefix
+            print(f"\n[{i}/{len(candidates)}] {q[:80]} (resolves {resolve_iso})")
+            try:
+                proc = subprocess.run(
+                    ["python", str(catalyst_script), q, resolve_iso, "--no-log"],
+                    capture_output=True, text=True, timeout=180,
+                )
+                if proc.returncode != 0:
+                    print(f"  ERROR rc={proc.returncode}: {proc.stderr[:200]}")
+                    continue
+                print(proc.stdout)
+            except subprocess.TimeoutExpired:
+                print("  TIMEOUT after 180s")
 
 
 if __name__ == "__main__":
