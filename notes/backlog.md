@@ -8,6 +8,12 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 ## Active
 
+> **End-of-turn discipline (2026-05-08+).** If the current thread isn't fully resolved, run:
+> ```bash
+> ./scripts/operator_followup.sh "anything else on <topic>?" 20
+> ```
+> The auto-followup fires after 20 min and re-injects via `inject_prompt.sh`. When the thread is fully resolved, run `./scripts/cancel_followup.sh` to stop the loop. Periodic 6/10/18/22 UTC cron checks ("anything else to take care of?") catch anything I miss between turns.
+
 - **2026-05-08** — Cluster cap formal skeptic+champion review (user-authorized). Question: is 30%-of-bankroll right when Iran-themed markets dominate high-APY supply? Bounded analytical exercise, no $ at risk in the analysis itself.
 - **2026-05-08** — Non-PM venue DD: Drift / Kalshi / Hyperliquid (user-authorized). Multi-hour structural research; surface findings before any wallet creation / capital deployment.
 - **2026-05-08** — `discover_markets.py` hardcodes hurdle `HURDLE_APY = 0.0415` (line 25); current Aave is 3.2-3.4%. Fix to read live Aave rate or pass via CLI flag. Bounded ~10 LOC.

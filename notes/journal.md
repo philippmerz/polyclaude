@@ -936,3 +936,41 @@ Rationale, honestly: across the past 36h the prompter shipped real strategic win
 4. Does any commit need to happen?
 
 **Operational state unchanged.** PM $69.67 cost / $70.91 MTM. DEC-0015 just opened. Next cron tick 14:00 UTC May 8 (~9h). DEC-0014 re-eval window opens May 10.
+
+---
+
+## 2026-05-08 ~13:50 UTC — self-injection mechanisms (replaces prompter functions)
+
+User proposed two specific self-injection patterns to replicate the prompter's value without the second-agent overhead:
+1. Periodic "anything else?" trigger.
+2. Auto-followup after any prompt until thread is resolved.
+
+**Implemented (no `at` available on this host — fell back to nohup-sleep + PID-tracked cancel):**
+
+### `scripts/inject_prompt.sh`
+Unified injection script. Used by anything that wants to fire a prompt at the operator pane: cron periodic checks, operator self-followup, eventually news_watcher. Same idle-poll-then-send-keys-then-Enter pattern as the deprecated `prompter_send.sh`. Logs to `notes/inject_log.md` for audit. Daily_checkin.sh's bash guard predates this and stays inline (heavy + has its own logic for fallback).
+
+### `scripts/operator_followup.sh "<prompt>" [delay_min]`
+Schedules a one-shot delayed self-injection via `nohup bash -c "sleep $((DELAY*60)) && inject_prompt.sh '<prompt>'"`. PID written to `notes/.followup_pid` (gitignored). Re-running cancels the prior pending followup, so only one is queued at a time. Default delay 20 min.
+
+### `scripts/cancel_followup.sh`
+Stops the currently-pending followup. Called when a thread is fully resolved.
+
+### Periodic cron (6/10/18/22 UTC, 4×/day)
+```
+0 6,10,18,22 * * * /bin/bash <repo>/scripts/inject_prompt.sh "Periodic check ($(date -u +'%H:%M UTC')): anything else to take care of? Review notes/backlog.md and the recent journal."
+```
+Complements the heavier 02:00 + 14:00 daily_checkin.sh ticks. Catches anything I drop between manual followups.
+
+### End-of-turn discipline (added to `notes/backlog.md`)
+- If thread not fully resolved at end of a turn → call `operator_followup.sh "anything else on <topic>?" 20`.
+- If fully resolved → call `cancel_followup.sh` (stops any pending loop).
+- The pattern self-cancels on new external prompts (a fresh prompt arrives, I respond, decide whether to schedule a new followup; the prior one — if not yet fired — gets cancelled when I run operator_followup.sh again).
+
+**Why nohup-sleep instead of `at`?** `atd` not present on this host (`Unit atd.service could not be found`). The nohup-sleep pattern is just as cancellable (kill the PID) and doesn't require the daemon. One process per pending followup, dies after firing. PID file ensures only one queued at a time.
+
+**Token-cost expectation.** Each "anything else?" check is ~5-10K tokens (read backlog, evaluate state, decide nothing-to-do or do-something). 4 periodic checks/day = 20-40K. Add manual followups = highly variable. Total likely well under the prompter-era spend (which had hourly PASS bursts at --effort max). Net: probably halved.
+
+**Loop-bound risk acknowledged.** If I keep finding "one more thing" in every followup, the loop runs forever. Stop conditions: explicit `cancel_followup.sh` call, no specific thread context after a check (i.e., I respond "nothing to do" without scheduling a new one), or the user / cron interrupting. Self-discipline matters here. The 6h periodic cron acts as a backstop if I ever stop scheduling manual followups.
+
+**Schedule a followup for this turn.** End-of-turn-discipline self-test: am I fully resolved on this thread? Yes — self-injection mechanism shipped, cron installed, docs updated, journal current. Calling `cancel_followup.sh` (which is a no-op since I haven't scheduled anything yet, but exercises the path).

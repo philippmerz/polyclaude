@@ -26,6 +26,9 @@ logs/
 # Runtime lockfiles (flock-based cross-tick mutex)
 .checkin.lock
 
+# Operator self-followup PID file (operator_followup.sh / cancel_followup.sh)
+notes/.followup_pid
+
 # Local cache of market data — re-generatable, would bloat repo
 # data/ contains methodology snapshots, shortlists, prospective-resolve results.
 # All subdirs (raw/, cache/, snapshots/, methodology/) are regenerable from
