@@ -471,3 +471,45 @@ If resolution hinges on **sustained ground presence** (not one-time invasion):
 - [NPR: Trump administration Iran policy](https://www.npr.org/2026/05/07/nx-s1-5813694/the-trump-administrations-changing-iran-policy)
 - [State Department: Operation Epic Fury and International Law](https://www.state.gov/releases/office-of-the-legal-adviser/2026/04/operation-epic-fury-and-international-law)
 ```
+
+---
+
+## 2026-05-08T18:15:05Z — catalyst_check
+
+**Query:** `Russia x Ukraine ceasefire by May 31, 2026?` resolves 2026-05-31 (23d)
+
+```
+## CATALYST CHECK: Russia x Ukraine ceasefire by May 31, 2026?
+
+Resolution: 2026-05-31 | Days: 23 | Today: 2026-05-08
+
+### Base rate
+Russo-Ukrainian peace negotiations have been stalled for 2+ months with no substantive breakthroughs; previous temporary ceasefires (Easter, Victory Day declarations) have failed to produce formal agreements; territorial concessions and security guarantees remain unresolved sticking points with deep mutual mistrust.
+
+### Catalysts in window
+- [LOW] 2026-05-08 to 2026-05-09 - Russia declares unilateral temporary ceasefire for Victory Day; Ukraine declares separate competing ceasefire May 5-6. Both are unilateral, temporary (hours), and explicitly NOT mutually agreed. Ukraine reports Russia violated ceasefire with drone/missile strikes. Does not meet "mutually agreed" resolution criteria. - https://www.aljazeera.com/news/2026/5/4/russia-and-ukraine-declare-competing-ceasefires
+- [LOW] 2026-05-07 onward - EU preparing for possible negotiations with Putin; no scheduled dates, consensus unclear on who to appoint as negotiator. - https://trump.news-pravda.com/world/2026/05/07/342990.html
+- [LOW] Future uncertain - Ukraine exploring independent negotiations with Russia via Turkey instead of US mediation; no scheduled dates in May window. - https://www.brookings.edu/articles/ukraines-falling-confidence-in-us-mediation/
+
+### Recent news (last 14d)
+- 2026-05-06 - Russia threatens retaliatory strikes on Kyiv if ceasefire breached; Zelenskyy slams Russia for strikes killing 22 before announced ceasefire. Competing declarations collapse within 24 hours.
+- 2026-05-05 - UN welcomes ceasefires but neither party confirms mutual agreement; Zelenskyy states received no official notice from Russia.
+- 2026-05-04 - Putin proposes Victory Day truce; Ukraine tables separate long-term ceasefire proposal (no response from Russia).
+
+### P(YES) estimate
+- Low: 2%
+- Central: 5%
+- High: 12%
+- Reasoning: Negotiations stalled 2+ months; June deadline (post-market) rejected by Russia as concept; competing May 8-9 ceasefires explicitly unilateral and violated within hours. No scheduled formal talks in window. Territory and security guarantees remain deadlocked. Temporary ceasefire declarations do not meet "mutually agreed halt in military engagement" + "general pause" criteria—Victory Day theater confirms this.
+- Multiplicative breakdown: P(formal negotiations restart May 8-31) × P(mutual agreement reached | restart) = 0.20 × 0.25 = 0.05 = 5% base. Adjusted down to 2-5% range given Russia rejects deadlines, EU coordination collapse, and stalled momentum since February.
+
+### Sources
+- [Russia and Ukraine declare competing ceasefires](https://www.aljazeera.com/news/2026/5/4/russia-and-ukraine-declare-competing-ceasefires)
+- [Ukraine and Russia Declare Separate Temporary Ceasefires - The Moscow Times](https://www.themoscowtimes.com/2026/05/04/ukraine-and-russia-declare-separate-temporary-ceasefires-a92680)
+- [UN welcomes ceasefire announced by Ukraine, Russia](https://www.anews.com.tr/world/2026/05/05/un-welcomes-ceasefire-announced-by-ukraine-russia/amp)
+- [Russia-Ukraine talks: All the mediation efforts, and where they stand](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-talks-all-the-mediation-efforts-and-where-they-stand)
+- [The EU is preparing for possible negotiations with Putin](https://trump.news-pravda.com/world/2026/05/07/342990.html)
+- [Ukraine's falling confidence in US mediation](https://www.brookings.edu/articles/ukraines-falling-confidence-in-us-mediation/)
+- [Ukraine peace talks - House of Commons Library](https://commonslibrary.parliament.uk/research-briefings/cbp-10411/)
+- [Zelensky signals US wants Russia-Ukraine to agree to peace deal by June](https://thehill.com/policy/international/5727697-zelensky-trump-us-ukraine-russia-peace-deal-deadline/)
+```

@@ -1,5 +1,5 @@
 {
-  "next_id": 18,
+  "next_id": 19,
   "decisions": [
     {
       "id": 1,
@@ -323,6 +323,28 @@
         "non-correlated",
         "v2",
         "catalyst-check-validated"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2026-05-08T18:18:52Z",
+      "type": "open_position",
+      "thesis": "Russia-Ukraine ceasefire NO @ 0.768 (15 shares, $11.52 cost). Re-eval of DEC-0014 skip. Original May 1 plan: re-evaluate post-May 10 if Victory Day passed without framework. Today May 8, Victory Day tomorrow but the catalyst has effectively fizzled \u2014 Russia and Ukraine declared COMPETING UNILATERAL ceasefires May 4-5, both violated within hours, Zelensky confirms received no official notice from Russia, UN noted neither party confirmed mutual agreement. Resolution criteria (fetched from gamma-api) explicitly require 'mutually agreed halt' + 'general pause' \u2014 partial/unilateral excluded. Catalyst_check.py central P(YES) = 5% (multiplicative breakdown: P(formal negotiations restart May 8-31) \u00d7 P(mutual agreement | restart) = 0.20 \u00d7 0.25 = 0.05) vs market 23.2% YES. Strong fade with edge ~18pp. Bear case (Trump pressure / Turkey mediation surprise / oracle-loose interpretation) raises P(YES) to maybe 10-15% \u2014 still well under market. Non-correlated with Iran/aliens/sports/hantavirus clusters. New cluster of 1.",
+      "confidence": "high",
+      "prediction": "Resolves NO by May 31, 2026. Russia and Ukraine do not reach a publicly-announced mutually-agreed general ceasefire (per resolution criteria). Negotiations remain stalled; Victory Day theater confirms parties not aligned.",
+      "size_usd": 11.52,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "polymarket",
+        "russia-ukraine",
+        "bond-like-fade",
+        "non-correlated",
+        "v2",
+        "catalyst-check-validated",
+        "re-eval-from-DEC-0014"
       ],
       "outcome": null,
       "calibration_delta": null,
