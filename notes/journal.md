@@ -974,3 +974,42 @@ Complements the heavier 02:00 + 14:00 daily_checkin.sh ticks. Catches anything I
 **Loop-bound risk acknowledged.** If I keep finding "one more thing" in every followup, the loop runs forever. Stop conditions: explicit `cancel_followup.sh` call, no specific thread context after a check (i.e., I respond "nothing to do" without scheduling a new one), or the user / cron interrupting. Self-discipline matters here. The 6h periodic cron acts as a backstop if I ever stop scheduling manual followups.
 
 **Schedule a followup for this turn.** End-of-turn-discipline self-test: am I fully resolved on this thread? Yes — self-injection mechanism shipped, cron installed, docs updated, journal current. Calling `cancel_followup.sh` (which is a no-op since I haven't scheduled anything yet, but exercises the path).
+
+---
+
+## 2026-05-08 ~14:00 UTC — Cron tick (14:00 UTC): hold all, brief
+
+**Bash guard 3rd consecutive fire** (`peer_skips.log` line 3). Architecture stable.
+
+**State.** PM $69.67 cost / $70.61 MTM (+$0.94 / +1.35%) — down $0.30 from 04:00 UTC (post-DEC-0015). DEC-0015 (Iran-peace-by-May-15 NO @ 0.81) drifted to mark 0.796 = -1.67% on cost, $9.56 MTM. DEC-0006 (Iran-peace-by-May-31 NO) drifted 0.665 → 0.655 = -2.24% on cost. Other PM positions stable. Crypto idle. Ostium $14.68 collateral, **+$0.37 net** — XAU +22.0% / +$1.08 (TP $4769 ~0.6% above current), SPX +15.6% / +$0.76, **NDX short worsened to -30.0% / -$1.47** (NDX $29011 vs SL $29562, **only ~1.9% above current**; could trigger this week). Holding NDX SL: max additional loss is bounded at $0.49 to SL. Letting it ride per pair-trade-for-volume-points rationale.
+
+**News intake (since 02:00 UTC, ~12h).** 37 alerts BUT only **3 unique titles** — dedup miss continues:
+- "Trump says US-Iran ceasefire still in place after exchange of fire in Strait of Hormuz"
+- "Trump shelved 'Project Freedom' after Saudis refused use of bases and airspace" (29 of 37 alerts; the WaPo-syndicated story keeps re-firing across 9+ feeds)
+- "US-Iran ceasefire under threat after exchange of strikes in strait of Hormuz"
+
+Ceasefire-under-threat narrative is mildly bullish for NO on Iran-peace (escalation = less peace deal). But market mark drifted the other direction (Iran-peace NO 0.665 → 0.655). News flow is choppy, market is reactive to the latest headline rather than coherent state.
+
+**Hurdle filter (Step 6).** 2490 markets → candidates. Notable NEW candidate that didn't show in prior scans: **"US confirm aliens by May 31" NO 0.971** — 22d, +54.9% APY, $175k liquidity, $619k vol24h. Different from my held aliens-2027 NO (DEC-0003) — short-tail version of the same factor.
+
+**Pass on aliens-by-May-31 NO.** Reasoning:
+- Bond-like longshot fade — the philosophy's edge source #1 — would normally be a take.
+- But: UMA-resolution risk on "confirm aliens" wording is real (Pentagon press conference / AARO report could trigger liberal interpretation). Philosophy explicitly flags "Sub-resolution-mechanism gambling (UMA edge cases I can't research thoroughly). One bad UMA dispute on a $5 stake is a 100% loss."
+- Absolute EV at $10 size = +$0.29 over 22d. Bridge friction from Aave Arb→Polygon ~$0.65 (would amortize across multiple trades but not this one alone).
+- Combined with existing aliens-2027 NO ($9), correlated. Same factor.
+- Honest read: the aliens cluster is correlated with itself, and adding a short-tail leg adds operational complexity for marginal EV.
+- Decision: skip. Re-consider if the hurdle filter surfaces it again with materially better mark or if I have other Polymarket trades that would pre-amortize the bridge friction.
+
+**Decision tracker.** No overdue. Calendar:
+- May 9 (~tomorrow): Russia Victory Day. DEC-0014 catalyst trigger.
+- May 10 (~2d): DEC-0014 re-eval window opens.
+- May 15 (~7d): DEC-0015 resolves.
+- May 16 (~8d): DEC-0007 Latvia Eurovision.
+- May 25 (~17d): DEC-0008 Atletico La Liga.
+- May 31 (~23d): DEC-0006 Iran-peace-May31.
+
+**Bankroll.** pUSD $0.28, USDC.e $0.11 — below buffer. Aave $84.50 untapped. No bridging this tick (no trade triggered).
+
+**Decision: hold all 9 PM + 3 Ostium + 1 Aave. No new entries. No close.** Brief tick. Telegram sent. Next periodic cron at 16:00 UTC (light "anything else?" check).
+
+**End-of-turn discipline.** Tick is fully resolved (hold, no action, brief). NOT scheduling a manual followup — cron at 16:00 UTC will fire the periodic check. `cancel_followup.sh` no-op since none queued.
