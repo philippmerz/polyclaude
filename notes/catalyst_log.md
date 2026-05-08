@@ -414,3 +414,60 @@ P(YES) requires:
 - [CNN: What the Numbers Tell Us About Hantavirus](https://www.cnn.com/2026/05/08/health/hantavirus-by-the-numbers)
 - [MV Hondius Outbreak Wiki](https://en.wikipedia.org/wiki/MV_Hondius_hantavirus_outbreak)
 ```
+
+---
+
+## 2026-05-08T17:58:41Z — catalyst_check
+
+**Query:** `Will the U.S. invade Iran before 2027?` resolves 2026-12-31 (237d)
+
+```
+## CATALYST CHECK: Will the U.S. invade Iran before 2027?
+
+Resolution: 2026-12-31 | Days: 237 (from 2026-05-08) | Today: 2026-05-08
+
+### CRITICAL STATUS
+**As of May 8, 2026, the U.S. has already conducted military operations that likely trigger resolution YES.** Operation Epic Fury began February 28, 2026 with air strikes; ground invasion commenced March 17, 2026. A ceasefire took effect April 8, 2026; Secretary of State Rubio declared the operation "concluded" May 5, 2026. However, US-Iran clashes continue in the Strait of Hormuz as of May 7-8, 2026, raising risk of resumed hostilities.
+
+### Base rate
+Invasion/major armed conflict between US and Iran within a 237-day window is now empirically observed to have occurred in this exact window (Feb 28 – May 8, 2026). No historical analogue required.
+
+### Catalysts in window (COMPLETED/ONGOING)
+- [HIGH] 2026-02-28 - Operation Epic Fury launches: US-Israeli air strikes on Iranian nuclear, missile, and military facilities; assassination of Iranian leadership including Supreme Leader Khamenei - [Wikipedia: 2026 Iran war](https://en.wikipedia.org/wiki/2026_Iran_war)
+- [HIGH] 2026-03-17 - Limited ground invasion begins: Marines deploy into Iranian territory; Pentagon prepares for potential weeks of sustained ground operations - [Military Times](https://www.militarytimes.com/news/your-military/2026/03/29/pentagon-reportedly-preparing-for-weeks-of-ground-operations-in-iran/)
+- [HIGH] 2026-04-08 - Ceasefire takes effect after 40 days of combat - [Al Jazeera](https://www.aljazeera.com/news/2026/5/8/us-iran-clash-in-hormuz-as-war-escalates-what-happened-why-it-matters)
+- [MED] 2026-05-05 to 2026-05-08 - Escalation risk: US-Iran clashes resume in Strait of Hormuz; Trump rejects Iran's latest diplomatic proposal; military options (strikes, blockade, special ops) remain under active review - [CNN May 7](https://www.cnn.com/2026/05/07/world/live-news/trump-iran-war-news)
+
+### Recent news (last 14d)
+- 2026-05-07: Trump warns Iran to sign deal "fast"; US military strikes Iranian facilities; US-Iran exchange fire in Hormuz - ceasefire fragile
+- 2026-05-03: Iran submits 14-point proposal to end war; Trump rejects it
+- 2026-04-30: CENTCOM briefs Trump on new military options: blockade (primary leverage), strike package, special ops to seize uranium stockpile
+- 2026-05-01: War Powers Act clock paused during ceasefire; legality of resumed operations contested in Congress
+
+### P(YES) estimate
+- Low: 95%
+- Central: 98%
+- High: 99%
+- **Reasoning:** Ground invasion has already occurred (March 17, 2026). Market likely already resolved YES unless oracle requires sustained occupation or full-scale operations. Tail risk: ceasefire holds through Dec 31, 2026, creating ambiguity on whether limited prior operations count. Upside risk (99%): resumed military operations in Hormuz escalate to renewed ground campaign before year-end.
+
+### Multiplicative breakdown
+If resolution hinges on **sustained ground presence** (not one-time invasion):
+- P(initial invasion occurred) = 99.8% (already empirically observed)
+- P(ceasefire broken before Dec 31 | initial invasion) = 70% (given fragility, ongoing Hormuz clashes, Trump's military options on the table)
+- P(sustained ground campaign resumes | ceasefire broken) = 85%
+- **Joint: 99.8% × 70% × 85% ≈ 59%** (if strict definition of "sustained invasion" applies)
+
+**Most likely:** Oracle accepts March 2026 ground operations as sufficient; P(YES) = 98%.
+
+### Sources
+- [Wikipedia: 2026 Iran war](https://en.wikipedia.org/wiki/2026_Iran_war)
+- [Britannica: 2026 Iran war](https://www.britannica.com/event/2026-Iran-war)
+- [CNN: Day 69 conflict, Trump warns Iran](https://www.cnn.com/2026/05/07/world/live-news/trump-iran-war-news)
+- [CNN: US military strikes Iranian facilities](https://www.cnn.com/2026/05/07/politics/us-forces-strike-military-facilities-in-iran)
+- [Al Jazeera: US-Iran clash in Hormuz](https://www.aljazeera.com/news/2026/5/8/us-iran-clash-in-hormuz-as-war-escalates-what-happened-why-it-matters)
+- [Military Times: Pentagon ground operations prep](https://www.militarytimes.com/news/your-military/2026/03/29/pentagon-reportedly-preparing-for-weeks-of-ground-operations-in-iran/)
+- [Washington Post: Pentagon prepares ground troop deployment](https://www.washingtonpost.com/national-security/2026/03/28/trump-iran-ground-troops-marines/)
+- [Al Jazeera: War Powers Act deadline](https://www.aljazeera.com/news/2026/5/1/has-the-us-iran-ceasefire-reset-the-clock-on-war-powers-act-deadline)
+- [NPR: Trump administration Iran policy](https://www.npr.org/2026/05/07/nx-s1-5813694/the-trump-administrations-changing-iran-policy)
+- [State Department: Operation Epic Fury and International Law](https://www.state.gov/releases/office-of-the-legal-adviser/2026/04/operation-epic-fury-and-international-law)
+```

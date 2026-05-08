@@ -40,12 +40,51 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "notes" / "catalyst_log.md"
 
 
+def _fetch_resolution_description(question: str) -> str | None:
+    """Look up the market on Polymarket gamma-api and return its description.
+
+    Why: lesson from 2026-05-08 US-invade-Iran NO check. Haiku read media
+    framing ("invasion happened") and gave central 98% P(YES), but the
+    literal resolution criteria says "intended to establish control" —
+    a narrower bar. Without the literal text, haiku biases toward
+    media-framed event descriptions. Injecting the description anchors
+    the analysis on the actual oracle-resolution language.
+
+    Returns the description string, or None on any failure (network,
+    no match, etc.) — best-effort.
+    """
+    try:
+        import httpx
+        # Search by paginated active markets, pick best fuzzy match
+        # on question. Keeps it simple — full text match is fine since
+        # operator passes the exact market question.
+        with httpx.Client(timeout=15.0) as c:
+            for page in range(6):
+                r = c.get(
+                    "https://gamma-api.polymarket.com/markets",
+                    params={"closed": "false", "archived": "false", "active": "true",
+                            "limit": 500, "offset": page * 500,
+                            "order": "volume24hr", "ascending": "false"},
+                )
+                if r.status_code != 200:
+                    continue
+                for m in r.json() or []:
+                    if (m.get("question") or "").strip() == question.strip():
+                        return (m.get("description") or "").strip() or None
+        return None
+    except Exception:
+        return None
+
+
 PROMPT_TEMPLATE = """You are doing a catalyst-calendar check for a Polymarket market.
 
 Market question: {question}
 Resolution date: {resolve_date} ({days_to_resolve} days from today {today_iso})
+{resolution_block}
 
 Task: identify catalysts in the {days_to_resolve}-day window that could shift P(YES) above the historical base rate. The point is to catch known catalysts (scheduled hearings, reports, deadlines, programs, elections, releases, deliverables) that might be priced into the market but missed by a naive analyst who relies on intuition.
+
+**Critical: anchor your P(YES) on the LITERAL resolution-criteria language above (when present), not on media framing of the underlying event.** Lesson source: 2026-05-08 US-invade-Iran check returned 98% P(YES) on "ground operations occurred" media framing, but the literal criteria required "intended to establish control over any portion of Iran" — a narrower bar that punitive strikes / freedom-of-navigation / uranium-seizure don't satisfy. Market priced 22.5% YES, which was correct under strict reading. ALWAYS check the literal resolution language and flag if media catalysts don't meet the strict bar.
 
 Steps:
 
@@ -125,11 +164,22 @@ def main() -> int:
         print(f"ERROR: resolution date {resolve} is in the past", file=sys.stderr)
         return 2
 
+    # Best-effort fetch of the literal resolution description so haiku anchors
+    # on oracle language, not media framing.
+    resolution_description = _fetch_resolution_description(args.question)
+    if resolution_description:
+        resolution_block = f"\nLITERAL RESOLUTION CRITERIA (from Polymarket gamma-api):\n```\n{resolution_description}\n```\n"
+        print(f"# resolution criteria fetched ({len(resolution_description)} chars)", file=sys.stderr)
+    else:
+        resolution_block = "\n(No literal resolution criteria fetched — analyze under reasonable strict interpretation of the question.)\n"
+        print("# resolution criteria unavailable; haiku will use strict interpretation of question text", file=sys.stderr)
+
     prompt = PROMPT_TEMPLATE.format(
         question=args.question,
         resolve_date=args.resolve_date,
         days_to_resolve=days,
         today_iso=today.isoformat(),
+        resolution_block=resolution_block,
     )
 
     cmd = [
