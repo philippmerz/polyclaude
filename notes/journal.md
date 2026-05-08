@@ -1279,3 +1279,40 @@ Trump-Xi summit on May 14-15 is the most material new info — directly catalyst
 **Token cost.** ~$0.35 in API tokens across 7 catalyst checks at haiku medium effort. Cheap insurance for a $70 PM sleeve. The sweep validated 4 strong-edge positions worth easily $1-2 in expected EV improvements over naive close-decisions.
 
 **End-of-turn discipline.** Sweep done, calendar updated, no actions triggered. Next trigger: 18:00 UTC periodic check or May 14 catalysts cluster.
+
+---
+
+## 2026-05-08 ~17:30 UTC — DEC-0017 opened: Hantavirus pandemic NO @ $0.909 (catalyst-check pipeline validated end-to-end)
+
+User: "continuation opportunity" — operator-self-prompted to keep working highest-leverage. Did:
+
+**Tooling fixes (commit `11e89bb`).**
+- `catalyst_check.py` prompt now requires multiplicative breakdown for conjunction questions. Lesson source: Pahlavi double-discount error.
+- `discover_markets.py` HURDLE_APY default 0.0415 → 0.034 (live Aave Base rate). 7-day-floor → 3-day-floor. Both as CLI overrides. The 7-day floor had hidden the May 15 Iran-peace candidate from prior ticks.
+- Smoke test: 16-17 candidates clear hurdle (was 9), including previously-hidden sub-week candidates and Hantavirus.
+
+**Subprocess bug fix.** First `--check-catalysts` run failed because subprocess used `python` not `sys.executable`. Fixed.
+
+**Pipeline run + catalyst-check on Hantavirus 2026 NO (the most novel non-Iran candidate).** Output:
+- Resolution criteria STRICT: requires WHO to explicitly characterize hantavirus as "pandemic" in official communication.
+- Recent catalyst landscape: MV Hondius cruise-ship outbreak May 6-7 with multi-country contact tracing; WHO already statements indicating "low risk" / "not pandemic" / "PHEIC-at-most" posture.
+- **Multiplicative breakdown shown** (the new prompt enhancement working as designed):
+  - P(community spread chains establish) ≈ 5%
+  - P(WHO pandemic call | community spread) ≈ 25%
+  - **Joint = 1.25%**
+- Central P(YES) = 1.5% (range 0.5-3%). Market 9.1% YES (NO mark 0.909).
+- **Edge: 7.6pp.** Well outside the 1pp threshold. Active-news premium is inflating market YES; fundamentals (low H2H transmission, WHO posture) put real P(YES) much lower.
+
+**Trade executed.** 10 NO shares at 0.909 → $9.09 cost / $10 max payout / +$0.91 profit if NO. Tx `0x3830ea72c0f159e5059f270226ba7ef73c9c406a06b7a977e159be7c8cf45718`. Order `0x298e3e6dd70311b5c33bb487951212347d95894b256965dc74b2029723b678de`. Sized $9.09 (clean integer fp at 0.909 × 10 = 9.09); below Kelly/4 ($35 capped at $25.5) given resolution-criteria-loose risk on UMA + first trade in this cluster.
+
+**EV at catalyst central 1.5% YES:** 0.985 × $10 = $9.85 vs $9.09 cost = **+$0.76 EV** over 236d (~33% APY).
+
+**Path validated, philosophy compliance complete.** Per the new MANDATORY catalyst-check rule from `strategy/00_philosophy.md`: I ran the tool BEFORE sizing, output showed clear edge with conjunction breakdown, then placed the trade. Exactly the workflow the rule prescribes. Compare: DEC-0016 was opened on intuition without catalyst-check → lost $0.08. DEC-0017 opened with rigorous tool-validated edge → expected +$0.76. Tool paying for itself many times over.
+
+**Cluster fit.** Hantavirus is non-correlated with my Iran/aliens/Trump-out/sports clusters. New cluster of 1. Cluster cap room: $51 - $9.09 = $41.91 in this cluster — plenty if I want to scale or add adjacent (e.g., other epidemic NO bonds).
+
+**State after trade.** PM 9 positions, cost $68.77 / MTM $70.13 (+1.98%). pUSD remaining ~$21.38 (was $30.47, spent $9.09). Aave $64.45. Total bankroll ~$170. Iran-cluster combined exposure: ~$33 (within 30%-of-bankroll = $51 cap). Diversifying with Hantavirus reduces Iran-concentration as a fraction of book.
+
+**Session running P&L.** DEC-0016 round-trip −$0.08 + DEC-0001 close +$0.19 + DEC-0017 unrealized −$0.01 (touch slippage). Plus catalyst_check pipeline shipped + philosophy operationalized + 4-position-edge confirmed by sweep + 7d-floor/hurdle-rate fixed. Productive day even with the calibration miss on aliens.
+
+**End-of-turn discipline.** Trade executed. No followup scheduled. Next trigger: 18:00 UTC periodic check (~30 min) or May 14 catalyst cluster (Trump-Xi summit + Eurovision SF2). Pending backlog: across_bridge.py --recipient + --token USDC.e patches; cron-tick auto-marginal-APY-check; longer-term cluster-cap skeptic+champion review and non-PM venue DD.

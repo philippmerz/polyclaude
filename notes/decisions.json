@@ -1,5 +1,5 @@
 {
-  "next_id": 17,
+  "next_id": 18,
   "decisions": [
     {
       "id": 1,
@@ -306,6 +306,27 @@
       "calibration_delta": "-0.06",
       "lesson": "Catalyst calendar must be checked BEFORE opening bond-like longshot fades. I didn't search news/AARO/PURSUE before claiming 'P(YES) near 0%'. The market's 3% likely reflected disclosure-program risk that I missed. Philosophy edge source #1 is 'markets pricing tail events at 2-8% where my MODELLED fair value is near 0%' \u2014 emphasis on modelled. Intuition is not a model. New rule: bond-like fade -> 5-min web search for window-specific catalysts before sizing.",
       "resolved_at": "2026-05-08T15:07:11Z"
+    },
+    {
+      "id": 17,
+      "timestamp": "2026-05-08T17:18:05Z",
+      "type": "open_position",
+      "thesis": "Bond-like longshot fade on hantavirus pandemic. Resolution criteria STRICT: requires WHO to explicitly characterize hantavirus as 'pandemic' in official communication. WHO has already said 'low risk' / 'not pandemic' as of May 7-8, 2026 in response to MV Hondius cruise ship outbreak (multi-country contact tracing, no community spread chains established). Catalyst_check.py central P(YES) = 1.5% (multiplicative breakdown shown: P(community spread 5%) x P(WHO pandemic call | spread 25%) = 1.25%) vs market 9.1% YES. Active-news premium inflating market. Long horizon (236d) but capital constraint not binding given $30+ pUSD buffer. Pipeline-validated: this trade is exactly the kind the new catalyst-check pipeline was built to catch \u2014 significant edge after rigorous catalyst-aware analysis, NOT operator intuition.",
+      "confidence": "high",
+      "prediction": "Resolves NO by Dec 31, 2026. WHO does not declare hantavirus a pandemic. Outbreak contains, no sustained community transmission, WHO maintains current 'low risk' / PHEIC-at-most posture.",
+      "size_usd": 9.09,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "hantavirus",
+        "bond-like-fade",
+        "non-correlated",
+        "v2",
+        "catalyst-check-validated"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

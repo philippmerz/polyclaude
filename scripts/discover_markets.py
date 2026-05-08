@@ -306,6 +306,7 @@ def main() -> None:
     # 2026-05-08, mandatory for any bond-like fade actually being entered).
     if args.check_catalysts > 0:
         import subprocess
+        import sys
         catalyst_script = Path(__file__).resolve().parent / "catalyst_check.py"
         candidates = short[: args.check_catalysts]
         print(f"\n=== catalyst_check.py on top {len(candidates)} candidate(s) ===")
@@ -319,7 +320,7 @@ def main() -> None:
             print(f"\n[{i}/{len(candidates)}] {q[:80]} (resolves {resolve_iso})")
             try:
                 proc = subprocess.run(
-                    ["python", str(catalyst_script), q, resolve_iso, "--no-log"],
+                    [sys.executable, str(catalyst_script), q, resolve_iso, "--no-log"],
                     capture_output=True, text=True, timeout=180,
                 )
                 if proc.returncode != 0:

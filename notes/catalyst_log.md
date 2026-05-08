@@ -360,3 +360,57 @@ Four-game sprint with 7-point gap over 5th place: empirically >90% for maintaini
 - [Arsenal defeats Atlético Madrid to book a place in the Champions League final - CNN](https://www.cnn.com/2026/05/05/sport/live-news/champions-league-semifinal-atletico-madrid-arsenal)
 - [Villarreal v Atletico Madrid - 24 May 2026 - Goal.com](https://www.goal.com/en/match/villarreal-vs-atletico-madrid/03h42Hs0CUSwBAkovJpoY)
 ```
+
+---
+
+## 2026-05-08T17:16:27Z — catalyst_check
+
+**Query:** `Hantavirus pandemic in 2026?` resolves 2026-12-31 (237d)
+
+```
+## CATALYST CHECK: Hantavirus pandemic in 2026?
+
+Resolution: 2026-12-31 | Days: 237 | Today: 2026-05-08
+
+### Base rate
+WHO must explicitly call hantavirus a "pandemic" in official communication by Dec 31, 2026. Historical: no hantavirus has ever been declared a pandemic. Current outbreak (MV Hondius, 6 confirmed cases globally as of May 8) is already being characterized as low-risk by WHO; Andes virus shows rare human-to-human transmission only under very close prolonged contact, not sustained community spread.
+
+### Catalysts in window
+- [MED] 2026-05-02 - MV Hondius cruise ship outbreak detected (6 confirmed, 3 deaths across 5+ countries); cases still being traced through June - [WHO Disease Outbreak News](https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599)
+- [LOW] 2026-06-30 (est.) - WHO monthly epidemiological updates on cruise ship cluster; emergence of secondary transmission chains outside ship contacts would raise probability
+- [LOW] 2026-12-31 - End-of-year WHO assessments and reports; pandemic declaration unlikely absent dramatic escalation
+
+(Additional catalysts not found: no scheduled WHO emergency committee meetings on hantavirus, no planned formal pandemic reviews announced.)
+
+### Recent news (last 14d)
+- 2026-05-08: WHO confirms outbreak contained to cruise ship and direct contacts; Maria Van Kerkhove states "not the start of a COVID pandemic"; global risk assessed as LOW
+- 2026-05-07: Passengers disembarked in Tenerife; Spain conducting epidemiological investigation and disinfection
+- 2026-05-06: Contact tracing ongoing across multiple countries (South Africa, Netherlands, Germany, Saint Helena, Switzerland, Singapore, Canada); no evidence of sustained chains
+
+### P(YES) estimate
+
+**Decomposition of joint probability:**
+
+P(YES) requires:
+1. **P(ongoing transmission establishes community spread chains)** ≈ 5%
+   - Andes virus requires very close/prolonged contact; no evidence of secondary chains from ship disembarkation yet
+   
+2. **P(WHO formally declares pandemic | community spread occurs)** ≈ 25%
+   - WHO has already signaled low risk; burden of proof is extremely high to reverse course and call it pandemic vs. PHEIC
+   
+3. **Joint: P(community spread AND WHO pandemic call)** ≈ 5% × 25% = **1.25%**
+
+- Low: 0.5%
+- Central: 1.5%
+- High: 3%
+- Reasoning: Pandemic requires both sustained community transmission AND explicit WHO pandemic language. Andes virus biology (rare H2H transmission, requires close contact) and current containment (no secondary chains detected) make escalation unlikely. Even if spread resumes, WHO has already telegraphed "not a pandemic" and would likely use PHEIC language instead. Crowd pricing at 9% YES appears overestimated.
+
+### Sources
+- [WHO Disease Outbreak News](https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599)
+- [WHO Response Statement May 7, 2026](https://www.who.int/news/item/07-05-2026-who-s-response-to-hantavirus-cases-linked-to-a-cruise-ship)
+- [WHO Hantavirus Fact Sheet](https://www.who.int/news-room/fact-sheets/detail/hantavirus)
+- [Polymarket Resolution Criteria](https://polymarket.com/event/hantavirus-pandemic-in-2026)
+- [NPR: Hantavirus Likely Not the Next COVID](https://www.npr.org/2026/05/07/nx-s1-5814761/hantavirus-likely-not-the-next-covid)
+- [CNN: What the Numbers Tell Us About Hantavirus](https://www.cnn.com/2026/05/08/health/hantavirus-by-the-numbers)
+- [MV Hondius Outbreak Wiki](https://en.wikipedia.org/wiki/MV_Hondius_hantavirus_outbreak)
+```
