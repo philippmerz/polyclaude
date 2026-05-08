@@ -1388,3 +1388,67 @@ Real book (walked, per memory "polymarket midpoints unreliable"): NO ask 0.768 (
 **Session running P&L** (today): DEC-0016 round-trip −$0.08 + DEC-0001 close +$0.19 + DEC-0017 unrealized +$0.01 + DEC-0018 unrealized −$0.09 = +$0.03. Plus catalyst pipeline shipped end-to-end + 4 backlog items closed + 2 new positions opened (Hantavirus + Russia-Ukraine) with rigorous catalyst-check anchoring. Strong session.
 
 **End-of-turn discipline.** Hook auto-schedules next followup. NOT cancelling — backlog still has cluster-cap analytical review + venue DD (multi-hour items). Continue by default.
+
+---
+
+## 2026-05-08 ~18:30 UTC — cluster-cap analytical review (bounded conclusion)
+
+User-authorized backlog item, addressed during autonomous burst with hook firing 10-min followups.
+
+**Current cluster exposure.** Bankroll ~$170, 30% cap = $51 per cluster.
+
+| Cluster | # | Cost | %bank | %cap | MaxPayout |
+|---|---|---|---|---|---|
+| Iran | 4 | $33.71 | 19.8% | 66.1% | $42.21 |
+| Russia-Ukraine | 1 | $11.52 | 6.8% | 22.6% | $15.00 |
+| Sports/Contest | 2 | $9.97 | 5.9% | 19.5% | $11.04 |
+| Pandemic | 1 | $9.09 | 5.3% | 17.8% | $10.00 |
+| Aliens | 1 | $9.00 | 5.3% | 17.6% | $11.25 |
+| Trump-removal | 1 | $7.00 | 4.1% | 13.7% | $8.33 |
+
+Total PM cost: $80.29 (47.2% of bankroll). Aave $64.45 + pUSD $9.86 + Ostium $14.68 = $89 stable+leveraged. Plus tiny dust. Total ~$169.
+
+**Iran-cluster sub-analysis.** The 4 Iran positions resolve on different factors:
+- Pahlavi NO: Pahlavi specifically takes power (conditional on regime fall × Pahlavi-installed-conditional)
+- Iran-regime 2027 NO: regime falls/changes (primary factor)
+- Iran-peace May 15 NO: no mutual permanent deal (different factor — peace deal mechanics, not regime mechanics)
+- Iran-peace May 31 NO: same as May 15 but longer-dated (same factor as May 15)
+
+Scenario test:
+- Trump-brokered framework deal lands by May 31: 2 lose (peace markets), 2 win (regime+Pahlavi → deal stabilizes regime)
+- Iranian regime collapses by Dec 31: 1 loses (regime-2027), 1 partial (Pahlavi conditional on Pahlavi-not-installed), 2 ambiguous (peace markets depend on collapse timing)
+- Status quo (no deal, regime survives): all 4 win
+
+**Iran cluster has differentiated outcomes across scenarios.** Not "one bet" in the strong sense the philosophy implies. Genuine within-cluster diversification.
+
+**Argument for sub-cluster decomposition** (e.g., 20% cap on each sub-factor):
+- Peace-deal sub-cluster: $16.71 (May 15 + May 31, same factor)
+- Regime-fall sub-cluster: $7 (Iran-regime 2027)
+- Iran-leadership sub-cluster: $10 (Pahlavi specifically; conditional on regime fall × Pahlavi-installed)
+
+Each well under 30%-of-bankroll cap.
+
+**Argument against decomposition (keep topic-level rule):**
+- In crisis scenarios (e.g., massive Iran ground-war escalation), ALL Iran positions could move together regardless of differentiated theses (correlation in tail events).
+- Topic-level cap provides defense against systemic Iran-news drawdown.
+- Keeping the rule simple is operationally cleaner (fewer judgment calls per trade).
+
+**Synthesis. Keep existing 30% topic-cluster rule.** Iran cluster has $17.29 of headroom remaining ($51 - $33.71). The existing rule:
+1. Correctly captures correlated-drawdown risk in tail scenarios.
+2. Doesn't over-constrain within-cluster diversification (because it's a $-cap, not a count-cap — multiple Iran positions can coexist as long as $-sum stays under cap).
+3. Operationally simple.
+
+**Refinement worth banking but NOT formalizing as a rule:** when adding a 5th Iran position, prefer one with a DIFFERENT primary resolution factor than existing positions (e.g., uranium-transfer or US-invade are different factors than peace-deal/regime-fall). This naturally diversifies within the cluster cap.
+
+**No skeptic+champion formal pair spawned.** The cluster-cap question is structural, not a single trade decision. Skeptic+champion is for trade decisions; for structural rules, the trade-off framing above (drawdown risk vs deployment opportunity) is the analytical pair.
+
+**No immediate action.** Iran cluster at $33.71 ($17.29 headroom). If a strong-edge non-correlated-with-existing Iran candidate appears (e.g., uranium-transfer or US-invade), can deploy up to ~$15 more without breaching cap. Currently no such compelling candidate post-catalyst-check.
+
+**Backlog item closed.**
+
+**Pending: non-PM venue DD** (multi-hour structural research). Next session topic. Quick screen:
+- Drift (Solana perps): would need Solana wallet + bridge to SOL. Volume points farming similar to Ostium. Setup cost ~1-2h.
+- Kalshi (regulated CFTC prediction market): US-only signup, KYC required. **Blocked by no-KYC constraint** (per `feedback_repo_hygiene` memory). Skip.
+- Hyperliquid (perps DEX with HIP-2 prediction-like markets): custom L1, fresh wallet needed. Setup cost ~1-2h.
+
+Of the three, Drift and Hyperliquid are most promising. Both require Solana or Hyperliquid-specific setup. **Defer to dedicated session** — structural pivot, not bounded today.
