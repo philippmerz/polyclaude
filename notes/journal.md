@@ -1052,3 +1052,60 @@ User asked "explain the aliens by may skip" after my brief tick mentioned passin
 **State unchanged from 14:00 UTC tick.** PM $69.67 cost / $70.61 MTM. No new entries. Polymarket sleeve has +$19.99 native USDC sitting as deferred buffer. Cron architecture still working; next periodic at 16:00 UTC.
 
 **End-of-turn discipline.** Thread fully resolved (skip + journaled lesson). No manual followup scheduled. `cancel_followup.sh` ran no-op earlier in tick.
+
+---
+
+## 2026-05-08 ~15:00 UTC — DEC-0016 opened: aliens-by-May-31 NO @ $0.966; framing-error correction round 2
+
+User challenged my "$1.15 friction" framing: "your time is basically free until you hit token limits, which has never happened. what's the sunk cost exactly?"
+
+**Recomputed costs honestly.** I had been quoting $0.20 per Polygon tx. Real numbers from the receipts: ~21K-130K gas at 100-1500 gwei * MATIC ~$0.50 = ~$0.005-0.10 per tx. Itemized:
+- Aave Arb withdraw: ~$0.05
+- Across protocol fee (the $20 → $19.99 difference): $0.005
+- Polymarket→crypto MATIC transfer: ~$0.02
+- Crypto→polymarket USDC transfer: ~$0.04
+- Approve USDC→Uniswap SwapRouter: ~$0.04
+- Uniswap V3 swap USDC→USDC.e (0.01% fee tier): ~$0.10 + $0.001 slippage
+- Wrap $20 USDC.e→pUSD: ~$0.05
+- Buy NO order: $0 (offchain)
+
+**Total real cost: ~$0.31.** My original $1.15 estimate was 4× overstated — I was using a $0.20-per-Polygon-tx rule of thumb that's correct for 1000+ gwei base fees but not the current 100-400 gwei range, plus I was double-counting bridge fee with bridge gas.
+
+**Plus my time/tokens are free** per the user's framing. So "operational complexity" was a non-cost. The trade decision should rest purely on $$$ EV.
+
+**At honest costs, trade is positive EV.** $9.66 cost / $10 max payout = +$0.34 if NO wins (P~99%). Net EV at P(YES)=1%: $9.90 expected payoff − $9.66 cost = +$0.24. Per-trade marginal cost going forward: $0.05 (wrap only — swap path now sunk; pUSD pool ready for future trades).
+
+**Trade execution.**
+- Best ask had moved from 0.972 (when I first checked) to 0.965 (when I checked after the swap). Lifted at 0.966.
+- `clob_v2.py buy <NO_token> 0.966 9.66` → 10 shares fill, $9.66 spent, max payout $10.
+- Tx `0xa6b5bbb5a03a9485161edcd6aa3803f5c0e6ba27215ecd643ffd595df37b92d0`.
+- Order ID `0x836486cd5d2f829ea31adf5ba3487b64d503c710cd4af1a9d5afc799f0cc3c18`.
+
+**Path validated end-to-end.** The full Aave-Arb → Polymarket-pUSD pipeline now demonstrably works:
+1. Aave V3 withdraw on Arbitrum
+2. Across V3 bridge USDC Arb→Polygon (lands as native USDC, not USDC.e)
+3. Cross-wallet transfer crypto→polymarket sleeve (only because `across_bridge.py` doesn't yet support `--recipient`)
+4. Uniswap V3 swap native USDC → USDC.e (0.01% pool, ~$0.001 slippage on $19.9)
+5. CollateralOnramp.wrap() USDC.e→pUSD
+6. clob_v2.py buy
+
+Each step now documented with tx hashes for reproducibility. Future trades using leftover $20 USDC.e / pUSD on polymarket sleeve will only need step 6.
+
+**Wallet-merge question** (user followup): not journaled previously. Two-wallet was set up 2026-04-27 deliberately for sleeve segmentation when the crypto sleeve wallet was generated. For $170 bankroll, segmentation/risk-isolation benefit is small; today's friction is the cost. Three paths:
+- (a) Full merge — withdraw Aave + bridge + close Ostium + re-open. High operational cost.
+- (b) Gradual merge — let Ostium resolve naturally on crypto sleeve; route new deposits to polymarket sleeve.
+- (c) Patch `across_bridge.py --recipient` (already in backlog) — future Aave bridges land directly on polymarket sleeve.
+
+Recommendation: (b) + (c). Don't actively merge; remove the friction at the bridge step.
+
+**Calibration lessons.**
+1. Estimating $$$ costs: use receipts, not rules-of-thumb. Polygon gas is highly variable (100-2000 gwei range); a single multiplier is misleading.
+2. Operational-complexity-as-cost is wrong when time is free. Only $ and capital lockup matter.
+3. The original "skip" rationale was three things bundled: UMA risk (real, low), gas cost (overstated), operational complexity (non-cost). After unbundling: trade is genuinely take-able.
+4. Pre-flight evaluation should include "walk the operational path" but only to identify $$$ blockers — wallet hops + token conversions cost gas, not "complexity."
+
+**State after trade.** PM 10 positions, $79.33 cost / $80.83 MTM (+$1.49 / +1.88%). pUSD $10.62 remaining (proper buffer). USDC.e $0.01 dust. 53.7 - 2 = 51.7 MATIC for gas. Crypto sleeve: 2 MATIC + 0 USDC. Aave $84.50 - $20 - $0.05 gas = $64.45 (pre-tx; let me re-check). Total deployed PM + Ostium ($14.68) + Aave ($64.45) + reserves ($10.62 + dust) = ~$170.
+
+**Backlog updates.** DEC-0016 added. Aliens-by-May-31 calendar tracked. Two `across_bridge.py` patches still pending (recipient + USDC.e default for Polygon).
+
+**End-of-turn discipline.** Trade executed. No followup scheduled — this thread is fully resolved (trade in, journaled, all backlog items current). Next trigger: 16:00 UTC periodic check (~30 min).

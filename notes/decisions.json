@@ -1,5 +1,5 @@
 {
-  "next_id": 16,
+  "next_id": 17,
   "decisions": [
     {
       "id": 1,
@@ -279,6 +279,27 @@
         "calendar-spread",
         "short-tail",
         "v2"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 16,
+      "timestamp": "2026-05-08T14:51:58Z",
+      "type": "open_position",
+      "thesis": "Aliens-cluster short-tail companion: NO at 0.966 on US x confirm aliens by May 31. 22d horizon, ~50% APY annualized. Strict resolution criteria (per existing aliens-2027 NO at DEC-0003 setting precedent \u2014 Pentagon UAP statements + AARO reports + congressional hearings have not triggered YES resolution despite multiple opportunities through 2026). Bond-like longshot fade \u2014 philosophy edge source #1. Took as part of validating Aave-Arb -> Polygon-pUSD pipeline (full path: Aave withdraw + Across bridge + cross-wallet transfer + USDC->USDC.e Uniswap V3 swap + onramp wrap + clob_v2 buy). Original skip on this trade was driven by overestimated gas friction ($1.15) which after walking the path resolved to ~$0.30 total. User challenged the framing; recompute showed positive net EV.",
+      "confidence": "high",
+      "prediction": "Resolves NO by May 31, 2026. Pentagon makes no formal alien confirmation in 22d (base rate <0.5% historically; market 2.9% YES is overpriced longshot).",
+      "size_usd": 9.66,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "polymarket",
+        "aliens",
+        "bond-like-fade",
+        "short-tail",
+        "v2",
+        "path-validation"
       ],
       "outcome": null,
       "calibration_delta": null,
