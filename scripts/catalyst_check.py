@@ -64,6 +64,8 @@ Steps:
 
 4. Note historical base rate from analogous cases or markets that have resolved.
 
+4b. **If the resolution criteria implies a CONJUNCTION (e.g., "Will X lead Iran" requires regime fall AND X installed; "Will X be confirmed" requires a specific event AND oracle interpretation), break the joint probability into components and SHOW THE MULTIPLICATIVE BREAKDOWN explicitly.** Don't just give a single number — give P(component A) × P(component B | A) × ... = joint. This prevents the operator from double-discounting (a real error encountered 2026-05-08 on the Pahlavi market: haiku gave joint 14% but didn't show the breakdown, operator re-applied a conditional adjustment thinking it was unconditional).
+
 5. Output a STRUCTURED REPORT in the following format. Be concise.
 
 ```
@@ -88,6 +90,7 @@ Resolution: <resolve_date> | Days: <N> | Today: <today_iso>
 - Central: Y%
 - High: Z%
 - Reasoning: <1-3 sentences explaining the range>
+- Multiplicative breakdown (if conjunction): P(A) × P(B|A) × ... = joint Y%
 
 ### Sources
 - [Title](URL)

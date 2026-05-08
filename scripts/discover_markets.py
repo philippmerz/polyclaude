@@ -22,7 +22,14 @@ SNAP_DIR = DATA / "snapshots"
 POLYMARKET_FEE_RATE = 0.072  # edge-aware: fee = rate * min(p, 1-p) of notional
 # Hurdle APY: any new bond-like NO/YES buy must beat this (idle USDC in Aave).
 # Refresh periodically when Aave pool moves materially. Last update 2026-04-30.
-HURDLE_APY = 0.0415  # Aave V3 USDC supply APY on Arbitrum
+HURDLE_APY_DEFAULT = 0.034  # Aave V3 USDC Base supply APY (lower of the two; 2026-05-08 actual)
+# 2026-05-08: dropped from hardcoded 0.0415 (was Arb rate at project start) to current
+# Base rate 0.034. Override via --hurdle-apy CLI flag if rates have moved further.
+# 2026-05-08: 7-day-to-resolution floor relaxed to 3 days — sub-week catalyst trades
+# (e.g. DEC-0015 at 6.5d) have positive expected value despite annualization noise.
+# The hurdle filter compares APY-equivalent yield, so sub-week trades that pass the
+# threshold ARE genuinely attractive — the prior floor was overcautious.
+HURDLE_DAYS_FLOOR_DEFAULT = 3
 
 
 def annualized_yield_after_fee(p_buy: float, days: float) -> float | None:
@@ -166,6 +173,8 @@ def shortlist(
     max_spread: float,
     horizon_days: float,
     top_n: int,
+    hurdle_apy: float = HURDLE_APY_DEFAULT,
+    hurdle_days_floor: float = HURDLE_DAYS_FLOOR_DEFAULT,
 ) -> list[dict[str, Any]]:
     now = dt.datetime.now(dt.timezone.utc)
     rows: list[dict[str, Any]] = []
@@ -217,12 +226,10 @@ def shortlist(
             "url": f"https://polymarket.com/market/{m.get('slug')}",
             "dominant_side": dominant_side,
             "apy_dominant": round(apy_dominant, 4) if apy_dominant is not None and apy_dominant != float("inf") else None,
-            # Require ≥ 7 days to resolution for hurdle filter — sub-week APYs
-            # are too volatile to compare against stablecoin yield.
             "clears_hurdle": bool(
                 apy_dominant is not None
-                and apy_dominant > HURDLE_APY
-                and ttr >= 7
+                and apy_dominant > hurdle_apy
+                and ttr >= hurdle_days_floor
             ),
         })
     rows.sort(key=lambda r: (-r["vol24h"], -r["liquidity"]))
@@ -240,6 +247,10 @@ def main() -> None:
     ap.add_argument("--no-snapshot", action="store_true")
     ap.add_argument("--clears-hurdle-only", action="store_true",
                     help="filter to candidates whose dominant-side APY beats the Aave hurdle")
+    ap.add_argument("--hurdle-apy", type=float, default=HURDLE_APY_DEFAULT,
+                    help=f"hurdle APY for clears-hurdle filter (default: {HURDLE_APY_DEFAULT*100:.1f}%% — Aave Base 2026-05-08)")
+    ap.add_argument("--hurdle-days-floor", type=float, default=HURDLE_DAYS_FLOOR_DEFAULT,
+                    help=f"minimum days-to-resolution for hurdle filter (default: {HURDLE_DAYS_FLOOR_DEFAULT})")
     ap.add_argument("--check-catalysts", type=int, default=0, metavar="N",
                     help="run scripts/catalyst_check.py on the top N candidates (after filtering). "
                          "Each check spawns claude -p haiku with WebSearch (~5-10K tokens, ~30-60s). "
@@ -257,10 +268,12 @@ def main() -> None:
         max_spread=args.max_spread,
         horizon_days=args.horizon_days,
         top_n=args.top,
+        hurdle_apy=args.hurdle_apy,
+        hurdle_days_floor=args.hurdle_days_floor,
     )
     if args.clears_hurdle_only:
         short = [r for r in short if r.get("clears_hurdle")]
-        print(f"filtered to {len(short)} candidates clearing {HURDLE_APY*100:.2f}% APY hurdle")
+        print(f"filtered to {len(short)} candidates clearing {args.hurdle_apy*100:.2f}% APY / {args.hurdle_days_floor:.0f}d-floor hurdle")
 
     if not args.no_snapshot:
         ts = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
