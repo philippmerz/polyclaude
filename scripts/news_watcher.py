@@ -423,6 +423,21 @@ def poll_once(config: dict, state: dict) -> int:
 
 
 def cmd_start(_args: argparse.Namespace) -> int:
+    # Refuse to start if an existing daemon is alive — running 2 daemons in
+    # parallel races on state-file reads/writes, causing duplicate alerts.
+    # Lesson source: 2026-05-08 ~22:57 UTC saw same Al Jazeera headline fire
+    # 2x within 10s; root cause was 2 daemons running since 18:13 because
+    # the prior restart-via-bash-heredoc spawned both an orphan and a
+    # tracked instance.
+    if PID_PATH.exists():
+        try:
+            existing = int(PID_PATH.read_text().strip())
+            os.kill(existing, 0)  # raises if not alive
+            print(f"[watcher] refusing to start: pid={existing} is already running. "
+                  f"Stop with `news_watcher.py stop` first.", flush=True)
+            return 2
+        except (ValueError, OSError):
+            pass  # PID file stale or process dead; ok to claim
     PID_PATH.write_text(str(os.getpid()))
     print(f"[watcher] up pid={os.getpid()}", flush=True)
     backoff = 1.0
