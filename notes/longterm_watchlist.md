@@ -155,6 +155,15 @@ Ran the new tool on 10 candidates across crypto + equity. Full per-candidate rep
 | Vistra ($VST) | 3/4 | WATCH | Escalate to ENTER if Cogentrix closes + H2 2026 deleverage; if 2027 guidance confirmed early 2027 → re-rate to $210-230 |
 | Palantir ($PLTR) | 3.5/4 | WATCH | $110-120 entry (20-30% pullback); 111x forward PE current with $6B insider selling = bad R/R now |
 
+### Crypto-perps venues (operational DD vs token thesis)
+
+| Candidate | Score | Verdict | Note |
+|---|---|---|---|
+| Drift ($DRIFT) | 3/4 FOLLOW-UP | NOT DEPLOYABLE NOW | $286M DPRK-linked exploit April 1 2026; deposits/withdrawals SUSPENDED; relaunch May-June 2026 with Tether $148M recovery fund. Reassess June 15 post-relaunch with TVL re-entry data. |
+| Hyperliquid ($HYPE) | 2.5/4 WATCH | $20-25 entry vs current $42.86 | Top perps DEX (44-70% share). Launched HIP-4 zero-fee outcome markets targeting Polymarket. NOT NOW: mid-cycle pullback, supply overhang (54% locked through Dec 2027), high P/S 29-88x, regulatory tail risk. Wait for cycle reset OR HIP-4 traction proof OR ETF approval. |
+
+**Operational venue conclusion (2026-05-08): NO new perps venue setup warranted today.** Drift is post-exploit non-deployable; Hyperliquid is mid-cycle without margin of safety. Continue with existing venues (Polymarket + Ostium + Aave). HIP-4 (Hyperliquid's outcome markets) is a Polymarket-arb angle worth monitoring — same markets with potentially different prices. Backlog: extend limitless_arb_scan.py pattern to scan Hyperliquid HIP-4 vs Polymarket.
+
 **Pending in next batch (less obvious / wider net needed):** SK Hynix, Western Digital ($WDC), GE Vernova ($GEV), Babylon ($BABY), Wolfspeed (compound semis), Albemarle (lithium cycle), Anduril/Kratos/AeroVironment (defense-tech), Rocket Lab/AST SpaceMobile (space economy), DeFi blue chips at depressed multiples (UNI, AAVE, MKR), BTC-mining infra.
 
 **Pattern reinforced across all 10 surveyed candidates: NONE triggered ENTER NOW.** The SanDisk PATTERN is real and the framework correctly identifies analogous candidates, but the SanDisk MOMENT — bottom-of-cycle entry — has passed across the visible candidate set. Specifically:

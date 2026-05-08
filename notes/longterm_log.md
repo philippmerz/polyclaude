@@ -747,3 +747,125 @@ Strong absolute position: zero debt, $8.0B cash reserves (up from $7.2B end-2025
 - [IBTimes: Competitive Landscape Palantir vs. Databricks/Snowflake](https://www.ibtimes.com.au/top-5-best-palantir-competitors-2026-led-databricks-snowflake-microsoft-fabric-data-ai-platforms-1865435)
 - [Yahoo Finance: Palantir Stock Price & Chart](https://finance.yahoo.com/quote/PLTR/)
 ```
+
+---
+
+## 2026-05-08T21:12:12Z — longterm_check
+
+**Query:** `Drift Protocol ($DRIFT) - Solana perps DEX` (crypto, 3y horizon)
+
+```
+## LONGTERM CHECK: Drift Protocol ($DRIFT) - Solana perps DEX
+
+Date: 2026-05-08 | Type: crypto | Horizon: 3y
+
+### Current state
+Price $0.0359 (down 98.5% from $2.96 ATH in Nov 2024). Market cap $22M, FDV $36M. Post-exploit (April 1, 2026) — $286M loss, TVL collapsed from $550M to $250M, deposits/withdrawals suspended. Recovery plan: ~$150M from Tether + partners. Relaunch targeted May-June 2026.
+
+### Cyclical position
+Drift is at a catastrophic bottom: down 98.5% from ATH, community destroyed, but not capitulation from markets — Tether's $127.5M commitment + partner funding ($20M+) signals institutional conviction in protocol recovery. This is not a gradual cycle trough; it's a crisis-to-recovery arc. If relaunch executes, token has repriced for binary outcome: protocol viability. Valuation collapsed because trust was broken, not because the underlying market (Solana perps) disappeared.
+
+### Secular tailwind
+Solana derivatives market remains intact and growing: $5.18B open interest (18.76% YoY growth), stablecoin liquidity at $14.1B (up 36.5% Q3-Q4 2025), DeFi TVL at ATH (80M SOL ~$10B). Drift's position was dominant pre-exploit (largest Solana perps DEX, $400M OI, $1B+ daily volumes recorded). Exploit was operational/security failure, not demand destruction. Solana Alpenglow (H2 2026) targets 100-150ms finality, enabling sub-100ms trade confirmation — vertical alignment with perp trading execution model.
+
+### Catalyst window
+- [HIGH] 2026-Q2 (May-June) — Relaunch with Ottersec + Asymmetric security audits; USDT settlement layer go-live; deposits/withdrawals resume — Drift protocol updates
+- [HIGH] 2026-Q2 (concurrent) — Recovery token distribution to affected users; governance signal on protocol path forward — Drift updates + CoinDesk reporting
+- [MED] 2026-H2 — Solana Alpenglow mainnet activation; potential liquidity migration from CEX perps to on-chain if finality improves — Bitcoin Foundation / Solana roadmap
+- [MED] 2026-H2+ — Drift Liquidity Provider (DLP) full deployment, mobile app launch — previously scheduled v3 rollout
+
+### Margin of safety
+Extremely weak. Token trades at $0.036 on $36M FDV — pricing in zero recovery probability. BUT: counterparty risk is high. Recovery depends entirely on (1) successful relaunch execution, (2) Tether maintaining commitment ($127.5M is meaningful but not insurance guarantee), (3) user re-entry at sufficient scale to justify token value. Protocol has zero balance-sheet moat — only network effects and product execution. Recovery tokens may dilute equity holders. No profitability baseline; entirely TAM-dependent. Entry at $0.036 captures downside of failed relaunch (token → $0.01) and upside if successful (token → $0.20-$0.50 on moderate recovery).
+
+### Top 3 risks
+1. **Relaunch execution failure** — Audits uncover additional critical bugs; timeline slips past June; users remain uncertain; competitor protocols (Jupiter, others) consolidate market share during downtime. This would break the thesis entirely.
+2. **User trust not recovered** — Relaunch completes on schedule but trading volumes remain 50-70% of pre-exploit levels; slowing recovery; fee revenue insufficient to fund recovery token buyback; spiral down.
+3. **Regulatory/security escalation** — Similar attack discovered post-relaunch; another perps protocol on Solana hacked; SEC/regulators scrutinize on-chain derivatives; institutional appetite for Solana DeFi cools. Network-level risk that damages Drift's recovery thesis.
+
+### 5-year scenario probabilities
+- Generational (10x+): 15%
+- Strong (3-5x): 20%
+- Modest (1.5-3x): 25%
+- Flat (-30% to +50%): 25%
+- Thesis broken (-50%+): 15%
+
+### Entry trigger
+**Do not enter yet.** Relaunch must complete successfully (Ottersec audit sign-off, trading live, deposits working) AND show 2-3 weeks of positive TVL re-entry before entry. Conditional entry trigger: trading resumes May-June 2026 + TVL recovers to $300M+ within 4 weeks post-relaunch + no follow-up security issues → buy 1% of position size (Kelly/4 sizing) with hard stop if TVL re-collapse occurs.
+
+### Verdict: FOLLOW-UP NEEDED (3/4 dimensions) — Relaunch execution in 4-6 weeks determines viability; assess May 28 - June 15.
+Drift scores strongly on cyclical (bottom, recovery capital committed), secular (Solana derivatives tailwind intact), and catalyst (imminent relaunch + Alpenglow), but margin of safety is destroyed (counterparty risk + trust broken). Too early post-exploit to judge execution. Retry thesis assessment post-relaunch with concrete TVL, volume, and user-return data.
+
+### Sources
+- [Drift Protocol exploited for $286 million in suspected DPRK-linked attack](https://www.elliptic.co/blog/drift-protocol-exploited-for-286-million-in-suspected-dprk-linked-attack)
+- [Drift outlines a recovery plan for users after $295 million DPRK-linked exploit](https://www.coindesk.com/business/2026/05/05/drift-outlines-a-recovery-plan-for-users-after-usd295-million-dprk-linked-exploit)
+- [Drift gets $148 million rescue fund and Tether will replace Circle's USDC for settlement after massive exploit](https://www.coindesk.com/business/2026/04/16/drift-gets-usd148-million-funding-from-tether-and-partners-as-it-replaces-circle-stablecoin-with-usdt-after-massive-exploit)
+- [Drift Protocol Recovery Update – April 16, 2026](https://www.drift.trade/updates/incident-recovery-update-april-16-2026-now)
+- [Drift TVL, Fees, Revenue & Volume](https://defillama.com/protocol/drift)
+- [CoinGecko - Drift Protocol Price](https://www.coingecko.com/en/coins/drift-protocol)
+- [Solana in 2026: A Guide for Financial Institutions](https://www.blockdaemon.com/blog/solana-in-2026-a-guide-for-financial-institutions)
+- [Update to Drift Tokenomics (November 2025)](https://www.drift.trade/updates/update-to-drift-tokenomics-november-2025)
+```
+
+---
+
+## 2026-05-08T21:13:53Z — longterm_check
+
+**Query:** `Hyperliquid ($HYPE) - perps DEX on custom L1` (crypto, 3y horizon)
+
+```
+## LONGTERM CHECK: Hyperliquid ($HYPE) - perps DEX on custom L1
+
+Date: 2026-05-08 | Type: crypto | Horizon: 3y
+
+### Current state
+$42.86 | down 27% from $59.39 ATH (Sept 2025) | circulating market cap $10.3B | P/S 29.4x (circulating) / 88x (fully diluted) | annualized protocol revenue $34.8M with $225.5M net profit post-buyback
+
+### Cyclical position
+Hyperliquid is in mid-cycle pullback, not cycle bottom. The token rallied 1,200% from $3.20 launch (Nov 2024) to $59.39 ATH (Sept 2025) in 6 months, then corrected 27% in 5 months to current $42.86. Whales are at record net long positions—a bullish signal—but price is declining, suggesting conviction/valuation divergence. The ongoing team token unlock (1.2M HYPE/month through Dec 2027 = ~1.3B annually in sell pressure) and high P/S valuation (29-88x) imply more downside if the cycle turns. Not yet at margin-of-safety entry price.
+
+### Secular tailwind
+STRONG. Hyperliquid commands 70% of on-chain perpetual futures volume ($180B+ 30-day volume, $9.57B open interest). The perpetual DEX market itself is growing explosively: on-chain perp volume has captured institutional and retail hedging flows. HIP-3 (real-world asset perps) drove record volumes in commodities—$3.5B in silver, $2B+ in oil. HIP-4 (outcome markets, launched May 2, 2026) targets $5B+ prediction market volumes from Polymarket/Kalshi. Multi-year tailwind from retail adoption + institutional infrastructure (Ripple Prime, Gold-i FIX integration, BitGo custody as of Aug 2025) deepening access. Secular driver is intact and accelerating.
+
+### Catalyst window
+- [HIGH] 2026-Q2/Q3 — HIP-4 adoption ramp and Polymarket-size volume capture; validator launch with Unit Labs (May 11, 2026 target) boosting L1 yield; Ripple Prime institutional volume scaling — sources: Hyperliquid announcements, press releases
+- [MED] 2026-Q3/Q4 — Spot HYPE ETF filing (21Shares exploring) could unlock $100M+ AUM institutional entry — source: Hyperliquid Strategies financial results (May 2026)
+- [MED] 2026 H2 — RWA perps ecosystem depth (bonds, commodities, FX) commoditizing on-chain derivatives; institutional trading style repositioning — source: Hyperliquid Strategies Q3 2026 earnings
+- [LOW] 2027 — Potential L1 scaling milestone or cross-chain interop reducing single-chain risk — source: Hyperliquid roadmap (implicit)
+
+### Margin of safety
+WEAK. Valuation (P/S 29-88x) is venture-scale despite $225.5M annualized profit—implies high growth expectations already priced in. Token supply is 46% circulating, 54% locked with 1.2M/month unlock through Dec 2027; if market turns, vesting-induced supply could pressure price 20-30%. Regulatory overhang is real: SEC/CFTC intensifying focus on crypto derivatives; Hyperliquid's geo-blocking (no true KYC/AML) does not meet proposed rulemaking standards. No hard-asset backing or sustainable moat beyond speed/UX—Aster proved market share can rotate fast (0% → 20% in <12 months; now ~15% vs Hyperliquid's 44-70% depending on metric). Downside is bounded by protocol profitability ($225M+ buyback power), but upside multiple is not justified by current cycle position.
+
+### Top 3 risks
+1. **Regulatory crackdown** — SEC/CFTC may tighten stance on no-KYC perpetual platforms; geo-blocking is not compliance; money-laundering vulnerability could trigger hostile rulemaking or platform restrictions (impacts volume, valuation multiples downward 40-60%)
+2. **Market share rotation** — Aster's rise from <2% to 20% in one year proves retail capital is hot-potato in perp DEXs; if Jupiter/Solana ecosystem or L2-based perp DEXs gain traction, Hyperliquid's 70% dominance could halve in 12-24 months (revenue and profit compression of 50%+)
+3. **Token supply cliff + negative cycle** — 54% of supply still locked; if broader crypto enters bear market, vesting + whale profit-taking could create 40-50% downside; high P/S valuation leaves no cushion for cycle reset
+
+### 5-year scenario probabilities
+- Generational (10x+): 12% — requires full institutional adoption (Ripple/JPMorgan/CME-scale volume), regulatory clarity, and command >60% of global on-chain derivatives; possible but high execution bar given competition
+- Strong (3-5x): 32% — Hyperliquid solidifies 50%+ perp DEX share, HIP-4 captures 5-10% of Polymarket's TAM, institutional inflows sustain via ETF/prime brokerage; median base case
+- Modest (1.5-3x): 28% — perp DEX market grows 30-50% but share erodes to 30-40% vs competitors; HIP-4/RWAs grow but face regulatory friction; L1 network effects don't translate to token value
+- Flat (-30% to +50%): 20% — cycle-driven, market share holds but growth stalls; token valuation multiples compress to 15-20x P/S; supply dilution neutral
+- Thesis broken (-50%+): 8% — regulatory crackdown forces platform retreat; market share collapses to <20%; competitor captures institutional flow; L1 struggles with adoption
+
+### Entry trigger
+**NOT NOW.** Current $42.86 is mid-cycle pullback with vesting headwind and regulatory overhang unresolved. 
+
+**Actionable triggers:**
+- **Price-based**: Enter 40-50% lower on broader crypto bear to $20-25/HYPE, contingent on thesis still intact (market share, volume, profitability intact; regulatory not yet prohibitive). This price re-establishes margin of safety vs vesting dilution.
+- **Event-based**: Wait for (1) HIP-4 to prove $500M+ quarterly run-rate volume by Q4 2026, OR (2) spot HYPE ETF filing + approval (reduces regulatory binary risk), OR (3) 12-month runway of zero regulatory escalation + Ripple/institutional volume confirmation. Then enter at then-current price with Kelly/4 sizing into that catalyst.
+- **Cycle-based**: Hyperliquid may be ~50-60% of the way through its correction cycle given macro. If it tests $15-20 on a broader crypto 30-40% bear market, it becomes a ENTER NOW if HIP-4 + institutional partnerships prove traction.
+
+### Verdict: 2.5/4 — WATCH
+Hyperliquid scores strongly on secular tailwind (perp DEX growth + institutional partnerships + RWA expansion) and medium on catalysts (HIP-4, ETF, validator), but cyclical position is mid-pullback not bottom, and margin of safety is absent (high valuation, supply overhang, regulatory tail risk, competitive share rotation proven possible). Thesis is solid but entry price must wait for cycle reset to $20-25 or for HIP-4/institutional adoption to de-risk regulatory binary. Monitor for: (a) HIP-4 adoption curve, (b) ETF progress, (c) regulatory clarity from SEC/CFTC on perp DEX AML standards, (d) price support at $30 or breakdown below $25. Keep on watchlist; do not enter until one of: cycle bottom retest, catalyst confirmation, or regulatory clarity.
+
+### Sources
+- [Hyperliquid Price: HYPE/USD Live Price Chart, Market Cap & News Today | CoinGecko](https://www.coingecko.com/en/coins/hyperliquid)
+- [Hyperliquid TVL, Fees, Revenue & Volume | DefiLlama](https://defillama.com/protocol/hyperliquid)
+- [Perpetual DEXs in 2026: Hyperliquid, Aster, and the New Race for On-Chain Futures | Atomic Wallet](https://atomicwallet.io/academy/articles/perpetual-dexs-2026)
+- [Hyperliquid Launches HIP-4 and Targets Polymarket With Zero-Fee Outcome Markets – Bitcoin News](https://news.bitcoin.com/hyperliquid-launches-hip-4-and-targets-polymarket-with-zero-fee-outcome-markets/)
+- [Hyperliquid Strategies Inc Reports Financial Results for the Quarter Ended March 31, 2026 | PR Newswire](https://www.prnewswire.com/news-releases/hyperliquid-strategies-inc-reports-financial-results-for-the-quarter-ended-march-31-2026-302766207.html)
+- [Hyperliquid HYPE Token Unlocks, Vesting Schedule & Tokenomics | DropsTab](https://dropstab.com/coins/hyperliquid/vesting)
+- [Ripple Prime Adds Hyperliquid to Institutional DeFi Access | FinTech Weekly](https://www.fintechweekly.com/news/ripple-prime-hyperliquid-institutional-defi-derivatives)
+- [High-Leverage Trading on Hyperliquid: Risks, Red Flags, and Implications for Crypto Investors](https://www.ainvest.com/news/high-leverage-trading-hyperliquid-risks-red-flags-implications-crypto-investors-2601/)
+- [Hyperliquid Owns 13% Of All Perp Volume, So Why Is Nobody Asking How | Yellow.com](https://yellow.com/research/hyperliquid-perp-volume-dominance-how-2026)
+```
