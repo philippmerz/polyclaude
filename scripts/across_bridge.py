@@ -197,6 +197,19 @@ def main() -> int:
                    help="amount in token units (e.g., 0.0005 ETH or 30 USDC)")
     p.add_argument("--yes", action="store_true",
                    help="skip the manual confirmation prompt")
+    p.add_argument("--recipient", default=None,
+                   help="destination address on the to-chain. Defaults to the depositor "
+                        "(same wallet bridging cross-chain). Use this to land bridged funds "
+                        "directly on a different sleeve's wallet — e.g. crypto sleeve withdraws "
+                        "from Aave, bridges with --recipient=<polymarket-sleeve-addr>, lands "
+                        "directly as deployable Polymarket buffer without an extra ERC20 hop. "
+                        "Backlog item from 2026-05-08 DEC-0017 setup friction.")
+    p.add_argument("--token-out", default=None, choices=list(TOKEN_DECIMALS.keys()),
+                   help="destination token symbol (default: same as --token). For Polygon "
+                        "destination, USDC bridges as native USDC; pass --token-out USDC.e to "
+                        "land directly as the bridged-USDC variant that Polymarket's "
+                        "CollateralOnramp.wrap() accepts. NOTE: Across may not support all "
+                        "(token, chain) combinations — falls back to error if unsupported.")
     args = p.parse_args()
 
     if args.amount is None and args.amount_usdc is None:
@@ -206,7 +219,12 @@ def main() -> int:
 
     src, dst = CHAIN[args.from_chain], CHAIN[args.to_chain]
     src_token = Web3.to_checksum_address(src["tokens"][args.token])
-    dst_token = Web3.to_checksum_address(dst["tokens"][args.token])
+    # Destination token: default same as source; allow override via --token-out
+    dst_token_sym = args.token_out or args.token
+    if dst_token_sym not in dst["tokens"]:
+        print(f"ERROR: --token-out {dst_token_sym} not registered for {args.to_chain}")
+        return 2
+    dst_token = Web3.to_checksum_address(dst["tokens"][dst_token_sym])
     spoke_addr = Web3.to_checksum_address(src["spoke"])
     decimals = TOKEN_DECIMALS[args.token]
     amount = int(amount_human * 10**decimals)
@@ -214,9 +232,13 @@ def main() -> int:
 
     env = "POLYCLAUDE_WALLET" if args.sleeve == "polymarket" else "POLYCLAUDE_WALLET_CRYPTO"
     addr, pk = load_wallet(env)
+    # Recipient: default to depositor (same wallet); allow override.
+    recipient = Web3.to_checksum_address(args.recipient) if args.recipient else Web3.to_checksum_address(addr)
     w = pick_rpc(src["rpcs"], src["id"])
-    print(f"sleeve: {args.sleeve}  addr: {addr}")
-    print(f"  bridge: {amount_human} {args.token}  {args.from_chain} -> {args.to_chain}")
+    print(f"sleeve: {args.sleeve}  depositor: {addr}")
+    if recipient.lower() != addr.lower():
+        print(f"  recipient (cross-wallet): {recipient}")
+    print(f"  bridge: {amount_human} {args.token} -> {dst_token_sym}  {args.from_chain} -> {args.to_chain}")
     print(f"  source spoke: {spoke_addr}")
     print(f"  ETH balance: {w.eth.get_balance(addr) / 1e18:.6f}")
 
@@ -288,7 +310,7 @@ def main() -> int:
     gas_price = w.eth.gas_price
     deposit_tx = spoke.functions.depositV3(
         addr,
-        addr,
+        recipient,
         src_token,
         dst_token,
         amount,
