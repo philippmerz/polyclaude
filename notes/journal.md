@@ -800,3 +800,40 @@ Genuinely new non-cluster, non-sport candidates clearing hurdle: **0**.
 **Telegram tick** sent (per Step 8). Single-message, action-only. Next catalyst: Victory Day May 9 (DEC-0014 trigger).
 
 **Decision: hold all 8 PM + 3 Ostium + 1 Aave. No new entries. No close.** Cron architecture working as designed. Next tick: 02:00 UTC May 8.
+
+---
+
+## 2026-05-08 ~02:00 UTC — Cron tick (02:00 UTC): hold all, Iran-peace mark recovered
+
+**Bash guard (2nd fire).** `peer_skips.log` line 2: `20260508T020002Z cron: dispatched to operator pane (cmd=script) via send-keys; exiting`. Architecture stable.
+
+**State.** PM sleeve $59.95 cost / **$61.29 MTM (+$1.34 / +2.23%)**, recovered from $60.67 at 14:00 UTC (+$0.62 in 12h). **Iran-peace NO mark partial recovery: 0.585 → 0.675** (+9pp NO, retracing ~2/3 of yesterday's 13pp drop). Position now +0.75% on cost (was -12.69% at 14:00 UTC). The yo-yo reflects 24h news-cycle reactivity rather than fundamental shift; yesterday's HOLD reasoning vindicated. Latvia NO -2.5pp (0.905 → 0.880, +6.02% on cost), Iranian regime NO -2pp (0.865 → 0.845, +5.62%). Other PM positions stable. Crypto: Aave $84.50 idle. Ostium $14.68 collateral, **+$0.46 net** (XAU/USD +19.8% / +$0.97 — pulled back from yesterday's $4745 high to $4723; SPX/USD +13.0%; NDX/USD short -23.5% / -$1.15, SL ~3.2% above).
+
+**News intake (since 14:00 UTC, ~12h).** 13 alerts. Dominant: **"Trump shelved 'Project Freedom' after Saudis refused use of bases and airspace"** — but that single headline fired 9 separate alerts between 21:22 UTC and 01:58 UTC (every ~30 min, matching the cooldown_seconds), suggesting `news_watcher.py` dedup is GUID-based and the same WaPo-syndicated story published with new GUIDs across 9 feeds. The other 4 alerts: French aircraft carrier prepositioning, Iran mocking Project Freedom, Gulf states urging UN action, generic Iran-talks coverage.
+
+Substantively: Saudis refusing US bases/airspace is a real shift — Trump's military leverage to forcibly reopen Hormuz is dead. Reads ambiguously for "permanent peace deal":
+- Bullish for YES: no military leverage means must negotiate.
+- Bullish for NO: Iran knows Trump can't pressure militarily, less reason to concede strict terms.
+
+Net market reaction: Iran-peace NO mark RECOVERED from 0.585 to 0.675, suggesting market read this as net-bullish for NO (no peace deal). My read aligns: Iran with leverage doesn't sign in 24 days.
+
+**No MATERIAL/CRITICAL action triggered.** All Tier-2.
+
+**Backlog flag (low priority): news_watcher dedup.** The 9-firing of "Trump shelved Project Freedom" wastes alert-budget and inflates `notes/news_alerts.jsonl` by ~6 entries / day if pattern repeats. Fix candidate: dedup by normalized title hash within a 24h window, not just GUID. Bounded ~30 LOC change in `news_watcher.py`. Not urgent — Tier-2 only, no false-positive emergency response — but worth doing on a quiet tick. Adding to operator backlog.
+
+**DEC-0014 Russia-Ukraine NO re-eval.** Today is May 8 (Friday). Victory Day May 9 (Saturday). Plan: re-eval post-May 10 (Sunday). Holding plan.
+
+**Hurdle filter (Step 6).** 1496 markets → 9 clearing 4.15% APY. All Iran-cluster (6: peace-deal markets, regime-fall, US-invade, airspace), sports (Switzerland WC NO sub-thresh), Hormuz-correlated, or sub-thresh. **Zero non-blocked deployable candidates.** Same as yesterday's tick. Bankroll $0.50 actionable; cannot open regardless.
+
+**Decision tracker.** No overdue. Calendar:
+- May 10 (~2d): DEC-0014 re-eval window opens
+- May 16 (~8d): DEC-0007 Latvia Eurovision resolves
+- May 25 (~17d): DEC-0008 Atletico La Liga resolves
+- May 31 (~23d): DEC-0006 Iran-peace resolves
+- Dec 31: long-sleeve carries (Pahlavi/Jesus/aliens/Trump-out/Iran-regime)
+
+**Daemons.** All healthy.
+
+**Telegram tick** sent. Single-message.
+
+**Decision: hold all 8 PM + 3 Ostium + 1 Aave. No new entries.** Brief tick — nothing actionable. Next tick: 14:00 UTC May 8 (~12h).
