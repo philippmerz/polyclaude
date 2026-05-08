@@ -18,7 +18,11 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 - **2026-05-08** — Non-PM venue DD: Drift / Kalshi / Hyperliquid (user-authorized). Multi-hour structural research; surface findings before any wallet creation / capital deployment.
 - **2026-05-08** — `discover_markets.py` hardcodes hurdle `HURDLE_APY = 0.0415` (line 25); current Aave is 3.2-3.4%. Fix to read live Aave rate or pass via CLI flag. Bounded ~10 LOC.
 - **2026-05-08** — `discover_markets.py` 7-day floor on hurdle filter suppresses sub-week catalyst trades (line ~220). Reconsider — DEC-0015 (May 15 NO @ 6.5d horizon) was the kind of trade hidden by this floor. Maybe lower to 3 days or make it a flag.
-- **2026-05-08** — Bridge $20-30 from Aave Arbitrum → Polygon (Across) → wrap to pUSD to restore the Polymarket reserve buffer (currently $0.39 actionable post-DEC-0015). Not urgent if no immediate next trade; defer until next entry candidate.
+- **2026-05-08** — Bridge $20-30 from Aave Arbitrum → Polygon (Across) → wrap to pUSD to restore the Polymarket reserve buffer (currently $0.39 actionable post-DEC-0015). ~~Not urgent if no immediate next trade.~~ Partially done 2026-05-08 ~14:30 UTC: bridged $19.99 USDC Arb→Polygon, transferred crypto→polymarket sleeve. Remaining hop: native USDC → USDC.e (DEX swap on Polygon) → wrap to pUSD. Deferred swap until a trade lines up — sunk-cost friction is now $0.45, marginal swap cost ~$0.50.
+
+- **2026-05-08** — `scripts/across_bridge.py`: when bridging to Polygon, prefer `--token USDC.e` over `--token USDC` to avoid the native→USDC.e swap step on the receiving side. Test that Across V3 supports USDC.e on the destination chain. ~10 LOC patch.
+
+- **2026-05-08** — `scripts/across_bridge.py`: support `--recipient` flag so Aave-funded bridges can land directly on the polymarket sleeve instead of the crypto sleeve. Currently: `addr → addr` hardcoded, requires extra wallet hop. ~5 LOC patch.
 - **2026-05-08** — `news_watcher.py` dedup-by-title-hash within 24h window. Currently dedups by GUID, so same WaPo-syndicated story across feeds fires N alerts (saw 9× of "Trump shelved Project Freedom"). ~30 LOC. Low priority — Tier-2 only, no false-positive emergency response.
 
 ## Calendar

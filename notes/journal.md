@@ -1013,3 +1013,42 @@ Ceasefire-under-threat narrative is mildly bullish for NO on Iran-peace (escalat
 **Decision: hold all 9 PM + 3 Ostium + 1 Aave. No new entries. No close.** Brief tick. Telegram sent. Next periodic cron at 16:00 UTC (light "anything else?" check).
 
 **End-of-turn discipline.** Tick is fully resolved (hold, no action, brief). NOT scheduling a manual followup — cron at 16:00 UTC will fire the periodic check. `cancel_followup.sh` no-op since none queued.
+
+---
+
+## 2026-05-08 ~14:30 UTC — aliens-by-May-31 NO: skip rationale + buffer-bridge attempt + retreat
+
+User asked "explain the aliens by may skip" after my brief tick mentioned passing on the bond-like longshot fade.
+
+**Original skip reasoning.** Trade math: $10 NO at 0.971/0.972 → max profit $0.30 over 22d (~50% APY). At my P(YES) ≈ 1%, gross EV ≈ $0.20. Friction (Aave Arb withdraw + Across bridge + wrap + buy) estimated $0.20-0.65. Single-trade execution: friction eats most of EV. UMA-resolution risk on "confirm aliens" wording: real but bounded by the existing aliens-2027 NO setting a high resolution bar.
+
+**Reversed myself: take the trade.** Argued buffer top-up was in backlog regardless ($0.39 actionable on Polymarket), so bridge friction was sunk-cost; marginal trade EV was therefore ~$0.20 net. Per "Default to action" + bounded reversible.
+
+**Walked the path. Path bit back.**
+
+1. Withdrew $20 USDC from Aave Arbitrum (crypto sleeve). Tx `0xa219a2b3` — clean, ~$0.05 gas.
+2. Bridged $20 USDC Arb→Polygon via `across_bridge.py --sleeve crypto`. Tx `0xce91e908` — landed as $19.99 native USDC. Across fee $0.005, ETA 2s, all clean.
+3. **Wrong wallet.** `across_bridge.py` hardcodes `recipient = depositor` — funds landed in crypto-sleeve-on-Polygon, not polymarket-sleeve. Backlog item added: support `--recipient` flag.
+4. Crypto sleeve had 0 MATIC for further txs → polymarket sleeve sent 2 MATIC to crypto sleeve (tx `0x13fa1126`).
+5. Crypto sleeve transferred $19.99 USDC native to polymarket sleeve (tx `0xcf55413e`).
+6. Tried `wrap(NATIVE_USDC, poly, $1)` simulation via `eth_call`. **Reverted** with `0x49b8b3ac` (custom error). Same call with USDC.e succeeds. So the CollateralOnramp accepts USDC.e only, not native USDC. Backlog item added: `across_bridge.py --token USDC.e` for Polygon destination.
+
+**Total accumulated friction.** ~$0.45 spent (Aave withdraw + bridge fee + 2 Polygon txs at ~$0.20 each at the current 100+ gwei base fee). To complete the path: $0.50+ more (USDC→USDC.e DEX swap + wrap + buy). Total friction ~$0.95-1.15 vs trade gross EV $0.30.
+
+**Trade is firmly negative EV.** Even amortized across future trades, the per-trade friction of the remaining USDC→USDC.e swap is comparable to the EV of the aliens trade alone. Original skip rationale vindicated by walking the path.
+
+**Pivot.** 
+- Aliens-by-May-31 NO: SKIP definitively.
+- $19.99 native USDC sits on polymarket sleeve as deferred-buffer. Not deployable until USDC→USDC.e swap, but that swap can be batched with a future trade execution.
+- Backlog updated with two `across_bridge.py` improvements (`--recipient` flag + Polygon-destination USDC.e token preference) so this friction doesn't repeat.
+
+**Lesson, journaled for calibration.** I overestimated the bridge friction's amortization potential when I reversed the skip. The reversal was driven by "buffer top-up is in backlog anyway" reasoning — but I conflated "buffer top-up needed" with "buffer top-up trivial." It wasn't trivial: the wallet structure (Aave funds in crypto sleeve, Polymarket funds in polymarket sleeve, USDC.e ≠ native USDC, MATIC required for tx gas) required 5 distinct steps, of which only 2 are reusable. The original skip had implicitly priced this complexity correctly; my reversal underweighted it.
+
+**What I'd do differently going forward.**
+1. When evaluating a marginal trade, walk the operational path mentally before deciding — not just the "happy path" from the schema doc.
+2. The "bridge once, amortize across many trades" argument is only valid if the bridge produces immediately-usable funds. USDC native on Polymarket sleeve is NOT immediately usable for v2 trading; needs additional swap. Should have caught this in pre-flight.
+3. The aliens-by-May-31 NO trade itself is a *good trade in principle* — bond-like longshot fade with 50% APY in non-correlated cluster. The blocker was specifically friction. After the backlog `across_bridge.py` patches land, similar trades become genuinely take-able.
+
+**State unchanged from 14:00 UTC tick.** PM $69.67 cost / $70.61 MTM. No new entries. Polymarket sleeve has +$19.99 native USDC sitting as deferred buffer. Cron architecture still working; next periodic at 16:00 UTC.
+
+**End-of-turn discipline.** Thread fully resolved (skip + journaled lesson). No manual followup scheduled. `cancel_followup.sh` ran no-op earlier in tick.
