@@ -70,15 +70,43 @@ def load_config() -> dict:
 
 def load_state() -> dict:
     if not STATE_PATH.exists():
-        return {"seen_ids": [], "last_alerts": {}, "last_cron_trigger": 0}
-    return json.loads(STATE_PATH.read_text())
+        return {"seen_ids": [], "last_alerts": {}, "last_cron_trigger": 0,
+                "seen_titles": {}}
+    s = json.loads(STATE_PATH.read_text())
+    # Migration: old state files may not have seen_titles
+    s.setdefault("seen_titles", {})
+    return s
 
 
 def save_state(s: dict) -> None:
     s["seen_ids"] = s.get("seen_ids", [])[-5000:]  # bounded
+    # Prune seen_titles older than 24h to keep state file bounded.
+    # Title-dedup is intra-day; older syndicated copies of the same story
+    # are rare enough that re-firing once a day is acceptable.
+    now = time.time()
+    cutoff = now - 86400  # 24h
+    s["seen_titles"] = {t: ts for t, ts in s.get("seen_titles", {}).items()
+                        if ts >= cutoff}
     STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
     STATE_PATH.write_text(json.dumps(s, indent=2))
     os.chmod(STATE_PATH, 0o600)
+
+
+def _normalize_title(title: str) -> str:
+    """Normalize a feed-entry title for cross-feed dedup.
+
+    Lowercase, collapse whitespace, strip leading/trailing non-word chars.
+    Keeps numerics (date-tagged headlines stay distinct) and punctuation
+    inside (don't accidentally collide unrelated headlines that happen to
+    overlap on stripped form).
+
+    Example: "Trump shelved 'Project Freedom' after Saudis refused use of
+    bases and airspace" — same across all 9 syndicated feeds, normalizes
+    identically, dedups.
+    """
+    if not title:
+        return ""
+    return " ".join(title.lower().split()).strip()
 
 
 def telegram_send(text: str) -> None:
@@ -281,6 +309,7 @@ def match_keywords(text: str, keywords: list[str]) -> str | None:
 def poll_once(config: dict, state: dict) -> int:
     """Run one polling cycle. Returns number of new alerts emitted."""
     seen = set(state.get("seen_ids", []))
+    seen_titles: dict[str, float] = state.get("seen_titles", {})  # title-hash → first-seen-ts
     last_alerts = state.get("last_alerts", {})
     cooldown = config.get("alert_cooldown_seconds", 1800)
     max_entries = config.get("max_entries_per_feed", 30)
@@ -303,6 +332,16 @@ def poll_once(config: dict, state: dict) -> int:
                 continue
             seen.add(eid)
             title = entry.get("title", "")
+            # Title-hash dedup across feeds: same syndicated story
+            # republished with new GUIDs across N feeds was firing N alerts.
+            # Normalize title and check the seen_titles dict (24h window).
+            # Lesson source: 2026-05-08 saw "Trump shelved Project Freedom"
+            # fire 9× in 4h across syndicated feeds.
+            tnorm = _normalize_title(title)
+            if tnorm and tnorm in seen_titles:
+                continue
+            if tnorm:
+                seen_titles[tnorm] = now
             summary = entry.get("summary", "") or entry.get("description", "")
             blob = f"{title}. {summary}"
             link = entry.get("link", "")
@@ -378,6 +417,7 @@ def poll_once(config: dict, state: dict) -> int:
 
     state["seen_ids"] = list(seen)
     state["last_alerts"] = last_alerts
+    state["seen_titles"] = seen_titles
     save_state(state)
     return new_alerts
 
