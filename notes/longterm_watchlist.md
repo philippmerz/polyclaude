@@ -132,7 +132,9 @@ Status: speculative; thesis depends on geopolitical cycle.
 
 ## Verdicts (deepened 2026-05-08 ~21:00 UTC via `scripts/longterm_check.py`)
 
-Ran the new tool on 6 of the 8 seed candidates. Full per-candidate reports in `notes/longterm_log.md`. Summary:
+Ran the new tool on 10 candidates across crypto + equity. Full per-candidate reports in `notes/longterm_log.md`. Complete summary table:
+
+### Crypto-native (polyclaude-accessible)
 
 | Candidate | Score | Verdict | Entry trigger / next event |
 |---|---|---|---|
@@ -140,17 +142,35 @@ Ran the new tool on 6 of the 8 seed candidates. Full per-candidate reports in `n
 | Arbitrum ($ARB) | 3/4 | WATCH | $0.12 now (50% conviction) / $0.09-0.10 dip / wait for March 2027 token-unlock completion (key inflection) |
 | Optimism ($OP) | 2/4 | FOLLOW-UP | Below threshold; reassess mid-July post-vesting + Interop launch + Q2/Q3 sequencer revenue |
 | Ondo ($ONDO) | WATCH | WATCH | $0.25-0.28 dip + fee-switch DAO vote H2 2026 (currently $0.44) |
+| Centrifuge ($CFG) | 3.5/4 | WATCH | Post-Coinbase-catalyst stabilization; do NOT chase rally; RWA narrative intact |
 | EigenLayer ($EIGEN) | 2.5/4 | FOLLOW-UP | Reassess Q3 2026 post-EigenDA scaling + first AVS fee metrics |
+| Stacks ($STX) | 3/4 | WATCH | $0.18-0.22 dip OR proof of Bitcoin staking adoption Q2-Q3 2026 |
+
+### Traditional equities (IBKR-only)
+
+| Candidate | Score | Verdict | Entry trigger / next event |
+|---|---|---|---|
 | Micron ($MU) | 2/4 | WATCH | $450-520 entry (30-40% from current $743); Q4 FY2026/Q1 FY2027 AI-extension proof |
 | Constellation ($CEG) | 2.75/4 | WATCH | $265-280 entry (12-15% from current $307) + TMI NRC milestone + PJM clarity Q4 2026 |
+| Vistra ($VST) | 3/4 | WATCH | Escalate to ENTER if Cogentrix closes + H2 2026 deleverage; if 2027 guidance confirmed early 2027 → re-rate to $210-230 |
+| Palantir ($PLTR) | 3.5/4 | WATCH | $110-120 entry (20-30% pullback); 111x forward PE current with $6B insider selling = bad R/R now |
 
-**Pending checks** (next batch): Stacks ($STX), Babylon ($BABY), SK Hynix, Western Digital ($WDC), Vistra ($VST), GE Vernova ($GEV), Palantir ($PLTR), Centrifuge ($CFG).
+**Pending in next batch (less obvious / wider net needed):** SK Hynix, Western Digital ($WDC), GE Vernova ($GEV), Babylon ($BABY), Wolfspeed (compound semis), Albemarle (lithium cycle), Anduril/Kratos/AeroVironment (defense-tech), Rocket Lab/AST SpaceMobile (space economy), DeFi blue chips at depressed multiples (UNI, AAVE, MKR), BTC-mining infra.
 
-**Important pattern surfacing.** None of the 6 surveyed candidates triggered ENTER NOW. The SanDisk PATTERN is real and the framework is correctly identifying analogous candidates, but **the SanDisk MOMENT — bottom-of-cycle entry — has passed for the obvious memory names** (Micron at 62x P/E, peak-cycle euphoria). Other categories (AI power infra: CEG, Vistra) are mid-thesis with insufficient margin of safety at current prices. Crypto-native (SOL, ARB, ONDO) sit at WATCH for specific entry triggers.
+**Pattern reinforced across all 10 surveyed candidates: NONE triggered ENTER NOW.** The SanDisk PATTERN is real and the framework correctly identifies analogous candidates, but the SanDisk MOMENT — bottom-of-cycle entry — has passed across the visible candidate set. Specifically:
 
-**Translation:** the user's prompt was timely (start hunting for the NEXT generational opportunity), but the visible candidates today are post-bottom or pre-catalyst. Discipline = wait for trigger conditions; don't force entry on already-visible names. The hunt should continue across less-obvious categories (energy storage? specific RWA primitives? specialty semis outside memory? defense tech sub-sectors?).
+- **Memory/storage cycle** (Micron 62x P/E peak-cycle euphoria) → already had its run.
+- **AI-power infrastructure** (CEG / VST) → mid-thesis, needs catalyst clarity + margin of safety dip.
+- **AI software / defense** (PLTR 111x forward PE + $6B insider selling) → too rich.
+- **Crypto L1/L2 ecosystem** (SOL / ARB / OP / STX) → at WATCH for specific entry triggers (price levels OR token-unlock completions OR catalyst execution proof).
+- **Crypto RWA** (ONDO / CFG) → at WATCH for catalyst confirmation + pullback. Don't chase.
+- **Crypto restaking** (EIGEN) → premature, fee economics not proven yet.
 
-**Operational implication for polyclaude.** No immediate capital deployment from the long-term axis warranted. The watchlist becomes a set of price-trigger / event-trigger alerts to monitor. When SOL hits $80 OR ARB unlock completes OR ONDO dips to $0.28 OR Micron retests $500 — that's when conviction-sized entries make sense.
+**Translation.** The user's directive was timely (start hunting for the NEXT generational opportunity), but the visible candidates today are POST-bottom or PRE-catalyst. Discipline = wait for trigger conditions; don't force entry on already-visible names. **The next batch needs to widen the net** to less-obvious categories (specialty semis outside memory: SiC / advanced packaging; lithium cycle bottom: ALB; defense-tech sub-sectors: KTOS / AVAV; space economy: RKLB / ASTS; DeFi blue chips at depressed multiples: UNI / AAVE / MKR; BTC mining infra: CIFR / HUT).
+
+**Operational implication for polyclaude.** No immediate capital deployment from the long-term axis warranted today. The watchlist becomes a set of **price-trigger / event-trigger alerts** to monitor. When SOL hits $80 OR ARB unlock completes (March 2027) OR ONDO dips to $0.28 OR Micron retests $500 OR PLTR pulls back 20-30% — that's when conviction-sized entries make sense.
+
+**Mechanism for monitoring.** Need a script `scripts/watchlist_monitor.py` that checks current prices on watchlist names and flags any that have hit entry triggers. Wire into cron tick step 3. Bounded ~50 LOC. Backlog-worthy.
 
 ## Last updated
 
