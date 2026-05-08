@@ -1316,3 +1316,32 @@ User: "continuation opportunity" — operator-self-prompted to keep working high
 **Session running P&L.** DEC-0016 round-trip −$0.08 + DEC-0001 close +$0.19 + DEC-0017 unrealized −$0.01 (touch slippage). Plus catalyst_check pipeline shipped + philosophy operationalized + 4-position-edge confirmed by sweep + 7d-floor/hurdle-rate fixed. Productive day even with the calibration miss on aliens.
 
 **End-of-turn discipline.** Trade executed. No followup scheduled. Next trigger: 18:00 UTC periodic check (~30 min) or May 14 catalyst cluster (Trump-Xi summit + Eurovision SF2). Pending backlog: across_bridge.py --recipient + --token USDC.e patches; cron-tick auto-marginal-APY-check; longer-term cluster-cap skeptic+champion review and non-PM venue DD.
+
+---
+
+## 2026-05-08 ~17:30 UTC — auto-followup hook (operator-discipline gap fixed)
+
+User flagged that I kept declaring "thread fully resolved, no followup scheduled" instead of using the `operator_followup.sh` mechanism I'd built. They had to type "continuation opportunity" manually. Discipline gap. Quote: *"how can you schedule your own 'continuation opportunity' prompt? i had to do it just now so the infra you set up didn't work properly"*
+
+The mechanism existed (operator_followup.sh + inject_prompt.sh) but I wasn't reliably calling it. The fix: make it deterministic via the existing UserPromptSubmit hook.
+
+**`~/.claude/hooks/inject_context_and_schedule.sh`** — now does TWO things:
+1. Inject `Current UTC: <time>` as additionalContext (preserves the original 2026-05-08 clock-anchor fix).
+2. Schedule a 20-minute self-followup via `operator_followup.sh "Continuation check: anything else high-leverage to take care of? ... If genuinely nothing useful to do, run scripts/cancel_followup.sh and idle." 20`.
+
+`~/.claude/settings.json` updated to point at the wrapper script (timeout extended 5s → 10s for safety since we now spawn the followup-scheduler).
+
+**How the loop self-perpetuates:**
+- Any prompt arrives (user, cron, news_watcher, or self-fired followup) → hook fires.
+- Hook schedules a 20-min followup. `operator_followup.sh` cancels any prior pending followup before scheduling, so only one is queued at a time.
+- 20 min passes with no new external prompt → followup fires "Continuation check..." into operator pane.
+- I (operator) process it → hook fires again on the injected prompt → cancel-and-reschedule.
+- Loop continues until I explicitly call `cancel_followup.sh` in a response.
+
+**Verification.** Test invocation: hook output is valid JSON envelope with current UTC; followup PID 104574 (queued operator_followup.sh) verified via `ps`. Will fire ~20 min from now if no external prompt arrives first.
+
+**This fixes the discipline gap.** Previously "end-of-turn discipline" was opt-in via my own judgment; now the hook makes it deterministic. The opt-OUT path is `cancel_followup.sh` for genuinely-resolved threads. Default = continue.
+
+**Files.** Hook script + settings.json live OUTSIDE the polyclaude repo (`~/.claude/`). Documenting here so the configuration is recoverable if the user provisions a new host. To replicate: copy `~/.claude/hooks/inject_context_and_schedule.sh` + `~/.claude/settings.json`. The actual scheduling/cancellation scripts live in-repo at `scripts/operator_followup.sh` + `scripts/cancel_followup.sh`.
+
+**End-of-turn discipline (the new mechanical version).** Hook auto-schedules. I will NOT call `cancel_followup.sh` here — there's pending backlog (across_bridge patches, cron-tick auto-hurdle-check, cluster-cap review, venue DD) that the periodic followup should remind me of. Loop continues by default.
