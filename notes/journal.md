@@ -1188,3 +1188,39 @@ DEC-0003 entry was 0.80 NO (20% YES); current mark 0.815 (18.5% YES). Catalyst-c
 - (Pending) Update `strategy/00_philosophy.md` to require catalyst_check for any bond-like longshot fade regardless of size, separate from the >$10 skeptic+champion rule.
 
 **End-of-turn discipline.** Thread fully resolved: tool shipped, both validations done, DEC-0003 decision logged, backlog updated, telegram msgs 164 + 165 sent, commit pushed. No followup scheduled.
+
+---
+
+## 2026-05-08 ~16:30 UTC — portfolio rebalance: closed DEC-0001 (Jesus 2027 NO) for +$0.19
+
+User asked: "any need to rebalance existing portfolio?"
+
+**Carry analysis on each position** (marginal APY = `(1 - mark) / mark × 365 / days_to_resolve`):
+
+| Position | Mark | Days | Marginal APY | Action |
+|---|---|---|---|---|
+| Pahlavi 2026 NO | 0.917 | 237 | +13.94% | HOLD |
+| **Jesus 2027 NO** | **0.984** | **237** | **+2.50%** | **CLOSE** |
+| Aliens 2027 NO | 0.815 | 237 | +34.96% | HOLD (catalyst-checked above) |
+| Iran-regime 2027 NO | 0.845 | 237 | +28.25% | HOLD |
+| Trump-out 2027 NO | 0.865 | 237 | +24.04% | HOLD |
+| Iran-peace May 31 NO | 0.665 | 23 | +799% | HOLD (high tail risk priced) |
+| Iran-peace May 15 NO | 0.816 | 7 | +1176% | HOLD (DEC-0015) |
+| Latvia Euro NO | 0.895 | 8 | +535% | HOLD |
+| Atletico YES | 0.989 | 18 | +22.55% | HOLD |
+
+**Only Jesus 2027 NO falls below the Aave hurdle** (3.4% Base / 4.15% Arb). Marginal hold APY 2.5% < both. Even at my optimistic P(YES) = 0.0001 belief, expected hold profit ($0.39 over 237d ≈ 2.5% APY) is below redeployment alternatives.
+
+**Closed DEC-0001.** Sold all 10.39 shares at 0.982 (best bid, $24K depth — clean fill). $10.20 received vs $10.00 cost = **+$0.19 realized** (+1.9% on cost over ~13d hold). Tx `0xb6c599e55a5d11aa76559cde8a7006e204bc28068a37714b533f6d86351ad4bf`. Order ID `0x0692d08408d3ea893f6aec000d243a3aca425b71367ec28ebd126dc770232213`.
+
+**DEC-0001 calibration update.** Outcome logged. Lesson banked: *long-tail NO with mark > 0.97 and 6+ months remaining → marginal APY drops below stablecoin hurdle → CLOSE-and-redeploy beats hold even at near-zero P(YES) belief.* Should be a cron-tick check: scan held positions for hurdle-violating carry at every cron and flag for close.
+
+**Capital freed: $10.20 in pUSD on polymarket sleeve.** Combined with prior buffer = **$30.47 pUSD ready** for next entries. Not redeploying to Aave — bridge friction (~$0.10) eats most of the 237-day Aave income (~$0.22) and the pipeline has cheaper near-term uses (catalyst-checked candidates surfacing from prospecting).
+
+**Other position holds verified by carry math, not rebalanced.** Long-tail NOs (Pahlavi, Aliens 2027, Iran-regime, Trump-out) all clearing 13-35% marginal APY = strong holds. Short-tail NOs (Latvia, Atletico, Iran-peace markets, DEC-0015) clearing 22-1175% marginal APY by virtue of approaching resolution dates. Ostium positions untouched (XAU TP $4769 still ~0.6% above current; SPX/NDX pair on volume-points thesis; NDX SL $29562 ~1.9% above is the binding risk).
+
+**Net session P&L** (counting both today's trades): DEC-0016 round-trip −$0.08, DEC-0001 close +$0.19. **Total: +$0.11 realized.** Plus the catalyst_check pipeline shipped, philosophy updated, hurdle-carry rule banked. Strong session even with the calibration miss on aliens-by-May-31.
+
+**Backlog item added:** "cron tick: scan held positions for marginal-APY-below-hurdle and flag for close." Bounded ~20 LOC in daily_checkin.sh's prompt or a helper script. Adding this to the discover_markets/positions tooling would make hurdle-violations auto-surface every 12h.
+
+**End-of-turn discipline.** Thread resolved: rebalance done, lesson banked, journal current, backlog updated. No followup scheduled. Next trigger: 18:00 UTC periodic check (~1.5h).

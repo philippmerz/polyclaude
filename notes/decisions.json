@@ -16,9 +16,10 @@
         "tail_fade",
         "jesus"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Closed early at 0.982 (mark) for +$0.19 realized (+1.9% on $10 cost over ~13d, ~53% APY annualized \u2014 but only on the captured portion). Cost basis 0.962 entry, sold 10.39 shares at 0.982 = $10.20 net. Tx 0xb6c599e5. Closed because remaining hold APY was 2.50% (vs Aave Arb hurdle 4.15% and Base 3.41%) \u2014 capital better deployed elsewhere. Marginal carry math: (1-0.982)/0.982 * 365/237 = 2.50% APY. Even at my P(YES)~0.0001 estimate, expected hold profit was $0.39 over 237d = 1.6% gross / 2.5% APY, below redeployment alternative.",
+      "calibration_delta": "0",
+      "lesson": "Carry math on long-tail NOs as resolution approaches: at mark > 0.97 with 6+ months remaining, marginal APY drops below stablecoin yield. Close-and-redeploy beats hold even at zero P(YES) belief, because the captured portion (entry to current mark) is already realized while the remaining capture is small. Rule: any long-tail NO whose marginal APY at current mark falls below the Aave hurdle is a CLOSE candidate. Add this to the cron-tick checklist.",
+      "resolved_at": "2026-05-08T16:33:40Z"
     },
     {
       "id": 2,
