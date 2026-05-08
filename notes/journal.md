@@ -1647,3 +1647,19 @@ primary_sources.md
 **State.** PM 9 positions visible to data-api (DEC-0018 still de-indexed but on-chain intact at 25 NO shares). All 9 positions clear hurdle. No close candidates. No watchlist hits. Aave reserve unchanged. Followup hook firing 8-min cadence.
 
 **Idle on followup.** Backlog drained of small-LOC compounding items. Remaining items either deferred (HIP-4 awaiting TVL, bridge restoration awaiting trade) or operator-touching (Solana wallet only at trigger). No high-leverage action this tick.
+
+---
+
+## 2026-05-08 ~23:10 UTC — Pentagon strike video + duplicate-daemon root cause
+
+**News alert at 22:57 UTC.** Al Jazeera "Pentagon releases video of strikes on Iranian oil tankers" — material escalation event with named-actor verification (Pentagon official video release). Tier-2 alerts fired TWICE within 10 seconds (22:57:43 + 22:57:53) for the SAME headline from the SAME feed. The title-hash dedup should have caught the second fire.
+
+**Root cause investigation.** ps -ef showed TWO news_watcher daemons running (PIDs 105739 and 105743), both started at 18:13 UTC. The earlier restart command spawned both: an orphan child of the bash heredoc (105739) AND a properly-daemonized instance (105743, ppid=1). PID file tracked 105743 but 105739 polled independently, racing on state file. When two daemons each see the same new feed entry within their poll cycles, both pass the `seen_ids` check (eid not in seen for either), both add the title to `seen_titles`, both fire the alert, then both save state.
+
+**Fix (commit 5bea7eb).** Added start-guard to news_watcher.py: at startup, check if PID file exists and PID is alive. If yes, refuse start with exit 2. Bounded ~10 LOC. Compounding across every future restart — can't accidentally spawn duplicate daemons.
+
+**Manual cleanup.** Killed 105739 (orphan); 105743 (tracked) continues. No daemon restart needed — the running 105743 has correct behavior; only the spawn-race was the issue and that won't recur with the new guard.
+
+**Position implications.** Pentagon strike video reinforces NO on iran-peace-may15 (6d) and iran-peace-may31 (22d). Marks unchanged from 30-min prior check (0.816 + 0.645 respectively). Market either already priced or hasn't reacted yet. No scaling action — Iran cluster cap binding (≈$53 vs $51 target with current 4 positions). HOLD.
+
+**Net.** Step-wise fix shipped (start-guard), substantive news-event verified (no action), idle.
