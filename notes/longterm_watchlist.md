@@ -164,7 +164,27 @@ Ran the new tool on 10 candidates across crypto + equity. Full per-candidate rep
 
 **Operational venue conclusion (2026-05-08): NO new perps venue setup warranted today.** Drift is post-exploit non-deployable; Hyperliquid is mid-cycle without margin of safety. Continue with existing venues (Polymarket + Ostium + Aave). HIP-4 (Hyperliquid's outcome markets) is a Polymarket-arb angle worth monitoring — same markets with potentially different prices. Backlog: extend limitless_arb_scan.py pattern to scan Hyperliquid HIP-4 vs Polymarket.
 
-**Pending in next batch (less obvious / wider net needed):** SK Hynix, Western Digital ($WDC), GE Vernova ($GEV), Babylon ($BABY), Wolfspeed (compound semis), Albemarle (lithium cycle), Anduril/Kratos/AeroVironment (defense-tech), Rocket Lab/AST SpaceMobile (space economy), DeFi blue chips at depressed multiples (UNI, AAVE, MKR), BTC-mining infra.
+**Pending in next batch (less obvious / wider net needed):** SK Hynix, Western Digital ($WDC), GE Vernova ($GEV), Babylon ($BABY), Wolfspeed (compound semis), Anduril/Kratos/AeroVironment (defense-tech), Rocket Lab/AST SpaceMobile (space economy), DeFi blue chips at depressed multiples (UNI, AAVE, MKR), BTC-mining infra.
+
+### Artifact-derived candidates (added 2026-05-08 ~21:30 UTC)
+
+User shared a research artifact distilling underreported geopolitical phenomena + nth-order effects + mispriced asset implications (FORGE/Pax Silica critical-minerals pact, Eastern DRC tin squeeze, Sodium-ion battery deployment, SMR pipelines, Legacy pollutant remobilization, GLP-1 food demand reset, BBNJ ocean treaty Jan 2026, Perovskite-silicon tandem, BIOSECURE Act biotech decoupling, Room-temp quantum + AI seismic). Framework: identify low-visibility-but-high-impact themes → derive nth-order consequences → extract mispriced equities. Strong intellectual artifact — surfaced non-obvious sub-categories that pure ticker scans miss.
+
+Ran longterm_check on 5 novel actionable candidates (1 batched VIE timed out, retry separately):
+
+| Candidate | Score | Verdict | Theme | Entry trigger |
+|---|---|---|---|---|
+| Alphamin Resources ($AFMJF / AFM.V) | **4/4** | WATCH | DRC tin (Eastern DRC squeeze) | $0.75-0.85 dip OR sustained 18k+ tonnes Q3 (+ stable security) |
+| Centrus Energy ($LEU) | 3/4 | WATCH | HALEU enrichment (SMR fuel monopoly) | 10-15% dip from $203 OR DOE Phase III contract Q2-Q3 2026 |
+| Twist Biosciences ($TWST) | 3.25/4 | WATCH | Gene synthesis (BIOSECURE onshore) | $42-48 entry OR post-Q4-FY2026 EBITDA-breakeven beat |
+| Ivanhoe Mines ($IVN.TO) | 3/4 | WATCH | Non-CN copper (FORGE/Pax Silica jurisdictional premium) | CAD 8-9 dip OR Kamoa production targets confirm post-seismic |
+| Albemarle ($ALB) | 3/4 | **WATCH (closest to ENTER)** | Lithium cycle bottom + storage thesis | "Currently at entry-trigger price IF storage thesis durability believed"; accumulate <$180 on weakness; full-conviction on H2 2026 BESS data |
+
+**ALB stands out** — verdict reads "currently at entry-trigger price IF [thesis] is believed" + "accumulate on any weakness below $180." Closest thing to ENTER NOW across all 17 candidates analyzed today. The lithium-cycle-bottom + sodium-ion-substitution-overpriced thesis converges with storage-deployment secular tailwind. Worth specific attention.
+
+**AFMJF is the highest-scoring (4/4)** but still WATCH because of recent 27% rally pricing in some of the squeeze. DRC-tin thesis intact; entry at $0.75-0.85 dip.
+
+**Framework verdict.** The artifact-driven seed-extraction adds genuine value. The nth-order consequence chains surface candidates the canonical-list scan misses (BIOSECURE onshore = TWST; DRC tin + Western JVs = AFMJF; HALEU monopoly vs broad nuclear = LEU). However, even with these novel candidates, the SanDisk PATTERN holds: visible mispricings today are mid-cycle, not bottom — all 5 require dip or catalyst confirmation. **Continue using the framework methodology** (artifact → ticker extraction → longterm_check verdict) as a recurring weekly process; it's compounding.
 
 **Pattern reinforced across all 10 surveyed candidates: NONE triggered ENTER NOW.** The SanDisk PATTERN is real and the framework correctly identifies analogous candidates, but the SanDisk MOMENT — bottom-of-cycle entry — has passed across the visible candidate set. Specifically:
 
