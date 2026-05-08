@@ -60,6 +60,18 @@ Skipped/dropped: pump.fun retail sniping, HLP vault, funding-rate basis trade, L
 
 ---
 
+## Long-term watchlist (added 2026-05-08)
+
+Multi-year (~1-5y) generational-mispricing candidates. Living document at [`notes/longterm_watchlist.md`](notes/longterm_watchlist.md). Reference pattern: SanDisk 2023-2025 (memory-cycle bottom + AI compute secular + spinoff catalyst + balance-sheet margin of safety = generational return). Hunt for analogous convergences elsewhere.
+
+**Polyclaude-accessible (crypto-native):** ARB / OP / SOL (wrapped via Wormhole/Allbridge or via future Solana sleeve) / EIGEN / ONDO / CFG. Each requires fresh catalyst-check + book-walk before any entry.
+
+**IBKR-side (user's personal sleeve):** Micron / SK Hynix / Western Digital (memory + storage cycle, SanDisk-pattern); Constellation Energy / Vistra / GE Vernova (AI-compute power-infrastructure secular); selectively Palantir / defense-tech.
+
+Selection framework: candidate must score on ≥3 of 4 dimensions — cyclical position (near multi-year bottom), secular tailwind (multi-year demand driver), specific catalyst (event forcing re-rating in window), margin of safety (downside bounded). Generational ≠ YOLO.
+
+Cadence: weekly review, monthly prune, quarterly calibration.
+
 ## Architecture
 
 Three independent autonomy layers (full spec: [`strategy/02_operations.md`](strategy/02_operations.md)):

@@ -1529,3 +1529,60 @@ Total Polygon-side actionable: $24.54. Aave reserve: $73.95. Combined liquid: ~$
 **Why bridge now vs at next-trade trigger:** the followup hook fired RIGHT when I noticed buffer was tight. Catching that moment with the new infrastructure validated the loop. Future bridges should now be near-friction-free. If Russia-Ukraine drops further or another catalyst trade emerges from prospecting, I have $19.54 ready for instant deployment.
 
 **Followup hook validated as a real safety mechanism, not just a discipline aid.** It caught the Russia-Ukraine drawdown earlier and the buffer-tight state now. The 10-min cadence is producing real signal.
+
+---
+
+## 2026-05-08 ~19:15 UTC — Russia-Ukraine recovers; drawdown-alert enhancement; new memory
+
+**DEC-0018 turnaround.** Just ran `positions.py` and Russia-Ukraine NO mark recovered from 0.456 trough back to **0.812** — combined position now **+$3.57 / +21.35%** on $16.73 cost. The scale-in at 0.5208 is up ~56%. Market unwound the Trump-3-day-ceasefire overreaction within ~45 min as fundamentals reasserted (Russia rejection of 30-day, ongoing strikes despite "ceasefire," resolution criteria's strict-language explicitly excluding "similar agreements").
+
+PM total: $85.50 cost / **$90.40 MTM (+$4.90 / +5.73%)** across 10 positions. Was $87.97 / $85.72 (-2.55%) one hour ago. Net session swing: +$8.20 unrealized.
+
+**catalyst_check pipeline thesis VINDICATED in real time.** Caught the mispricing, scaled in at the bottom, market repriced back within an hour. Highest-EV position in the book is also delivering the highest realized gain pattern.
+
+**Step-wise compounding feedback memory saved** (`feedback_stepwise_compounding.md`). User comment 2026-05-08: *"Such a simple change, such an immense unlock"* — articulating the preferred operating mode. Bounded infrastructure improvements (--recipient flag + auto-followup hook + resolution-text injection + check_marginal_apy.py) compound across every future autonomous action. Distinct from the existing "Default to action" memory; this one is about COMPOUNDING dimension specifically.
+
+**New bounded improvement: drawdown alerts** (commit `8d7d119`). `check_marginal_apy.py` now flags any position with mtm-loss-on-cost ≥ 15% (configurable via `--drawdown-alert-pct`). Output: `!!! DRAWDOWN ALERTS !!!` section at top when triggered. JSON output includes `"drawdowns"` array. Wired into `daily_checkin.sh` step 3 (already runs check_marginal_apy.py per earlier commit). Compounds: every cron tick + manual run + future positions auto-surface drawdown without operator needing to be in active turn at moment of drawdown. Lesson source: today's DEC-0018 -40% caught only because hook fired during state-check; with this enhancement, similar drawdowns surface automatically.
+
+**Net of this autonomous burst (~17:50 → 19:15 UTC, ~85 min):**
+- 10 commits pushed (`e8c38bb` → `8d7d119`)
+- 7 backlog items closed, 1 deferred (venue DD)
+- 3 new positions: DEC-0017 Hantavirus (+$0.91 unrealized), DEC-0018 Russia-Ukraine (+$3.57 unrealized after scale-in)
+- 1 position closed: DEC-0001 Jesus 2027 (+$0.19 realized) on marginal-APY rebalance
+- 1 position aborted: DEC-0016 Aliens-by-May-31 NO (-$0.08 round-trip — calibration miss before catalyst_check shipped)
+- New infra: across_bridge.py --recipient + --token-out, check_marginal_apy.py + drawdown alerts, catalyst_check.py resolution-text injection + multiplicative-breakdown prompt, news_watcher title-dedup, auto-followup hook
+- Philosophy update: catalyst_check mandatory pre-trade gate for bond-like fades
+- Calibration lessons banked: catalyst_check anchors on oracle resolution language not media framing; bounded compounding improvements > multi-hour structural projects
+
+**Realized P&L this burst:** +$0.11 (DEC-0001 +$0.19 close + DEC-0016 -$0.08 round-trip)
+**Unrealized P&L this burst:** +$4.59 from new positions (DEC-0017 +$0.05 + DEC-0018 +$3.57 after scale-in + DEC-0015 +$0.25 + others stable; offset by Russia-Ukraine drawdown that recovered)
+
+**Hook still running.** No cancel. Next followup ~19:25 UTC. Continue by default.
+
+---
+
+## 2026-05-08 ~19:30 UTC — long-term watchlist bootstrapped (new strategic axis)
+
+User directive received: scan and analyze long-term (~multi-year) generational-mispricing investments across stocks / crypto / other; invest from polyclaude where accessible; surface IBKR-side candidates for personal-sleeve execution. Reference: SanDisk's 2023-2025 generational run (memory-cycle bottom + AI-compute secular + spinoff catalyst + balance-sheet margin of safety).
+
+**Bootstrapped `notes/longterm_watchlist.md`** with operating model + accessibility map + 8 seed candidates across two categories.
+
+**Operating model:**
+- Cadence: weekly review, monthly prune, quarterly calibration.
+- Selection framework: 4-dimensional fit (cyclical position / secular tailwind / specific catalyst / margin of safety) — need ≥3 of 4 strongly.
+- Polyclaude-accessible candidates get catalyst-check + entry sizing per existing philosophy.
+- IBKR-side candidates get full-thesis memo via Telegram + watchlist doc; user executes manually on personal limited capital.
+
+**Initial seed candidates:**
+- Crypto-native (polyclaude-accessible): SOL (needs new wallet/wrapped), ARB+OP (high access), EIGEN (medium access), BTC-L2s (Stacks/Babylon, medium access), RWA infrastructure (ONDO/CFG, high access).
+- Traditional equities (IBKR-only): Micron / SK Hynix / Western Digital (memory-storage cycle, SanDisk pattern); Constellation Energy / Vistra / GE Vernova (AI-compute power infrastructure secular); Palantir / defense-tech (speculative).
+
+**README updated** with a short "Long-term watchlist" section pointing to the living document. Backlog item added for weekly iteration cadence.
+
+**Step-wise compounding consistent.** Bootstrapped framework is bounded (~30 min, one doc + README section + backlog item); future followups iterate. The watchlist becomes infrastructure that compounds — every weekly scan adds to the candidate pool, market repricings get caught, new pattern recognition compounds across analyses.
+
+**Adaptation needed for catalyst_check.py.** Current pipeline targets Polymarket event-driven questions with explicit oracle resolution. Multi-year equity/crypto theses don't have resolution dates or oracles — they have continuous markets. Need a separate `longterm_thesis_check.py` (or extension) that asks: 1-3-5y outlook, secular driver still intact, downside scenarios, analogous historical precedents. Backlog item.
+
+**State unchanged on PM portfolio.** PM 10 positions, $85.50 cost / $90.40 MTM (+5.73%). Russia-Ukraine recovered fully + unrealized $+3.57 above blended cost. Hook continues firing; loop continues by default.
+
+**User detached** with instruction to ping Telegram if needed. Sending acknowledgment with status.
