@@ -643,3 +643,43 @@ Ceasefires fail ~80% of the time overall; 4-year conflicts with fundamentally in
 - [Zelensky signals US wants Russia-Ukraine to agree to peace deal by June](https://thehill.com/policy/international/5727697-zelensky-trump-us-ukraine-russia-peace-deal-deadline/)
 - [Historical ceasefire success rates](https://www.tandfonline.com/doi/full/10.1080/13533312.2021.1894934)
 ```
+
+---
+
+## 2026-05-08T22:32:19Z — catalyst_check
+
+**Query:** `Will the US confirm that aliens exist before 2027?` resolves 2026-12-31 (237d)
+
+## CATALYST CHECK: Will the US confirm that aliens exist before 2027?
+
+Resolution: 2026-12-31 | Days: 237 | Today: 2026-05-08
+
+### Base rate
+No US government official has issued a definitive confirmation of extraterrestrial life or technology in the past ~26 years (2000–2026) despite multiple UAP disclosure initiatives, congressional hearings, and executive orders. Historical base rate: ~0%. Prediction market pricing (Feb–May 2026): 29% peak, declining to ~24% post-May-8 file release.
+
+### Catalysts in window
+- [LOW] 2026-05-08 - Pentagon UFO file release, Tranche 1 (today). Pentagon explicitly stated files show "no indication that the U.S. government has had any interaction with beings from other planets." Negative signal for YES resolution. - [CNN Politics](https://www.cnn.com/2026/05/08/politics/ufo-files-pentagon-release-aliens), [NBC News](https://www.nbcnews.com/science/ufos-and-anomalous-phenomena/ufo-uap-files-pentagon-release-trump-rcna344204)
+- [LOW] 2026-05-08 onwards - Rolling declassification tranches every few weeks (Trump EO, 270-day UAP Transparency Act window). No evidence of extraterrestrial confirmation in Tranche 1; subsequent releases unlikely to shift the bar unless they contain hard proof of alien contact or technology. - [PBS News](https://www.pbs.org/newshour/politics/trump-drops-hints-of-whats-coming-in-new-batch-of-ufo-files-set-for-release)
+- [LOW-MED] 2026-08-01 - NDAA 2026 mandates AARO to brief Senate Armed Services Committee on integrated sensing roadmap and UAP intercepts dating to 2004. Briefing unlikely to include a definitive extraterrestrial confirmation unless classified materials reveal unexpected evidence. - [DefenseScoop](https://defensescoop.com/2025/12/10/uap-ufo-military-intercepts-north-america-fy-2026-ndaa/), [MeriTalk](https://www.meritalk.com/articles/pentagon-uap-briefings-added-in-ndaa/)
+- [LOW] 2026-10-31 - AARO Annual Report due to Congress. Statutory deadline but consistent with prior reports: no confirmation of extraterrestrial life expected. - [Disclosure Monitor](https://disclosuremonitor.com/analysis/aaro-uap-report-2026)
+- [LOW] Unscheduled - Congressional UAP hearings (House Oversight Committee, National Security Subcommittee). No specific 2026 dates found; even if held, hearings are unlikely to trigger a formal government confirmation without external catalyst. - [House Oversight Committee](https://oversight.house.gov/hearing/restoring-public-trust-through-uap-transparency-and-whistleblower-protection/)
+
+### Recent news (last 14d)
+- 2026-05-08 - Pentagon releases first tranche of declassified UFO files: Apollo 12/17 photos, FBI UAP images, no evidence of extraterrestrial interaction. Pentagon officially states files contain no indication of alien contact. Significant negative signal for market; odds likely declining from ~24% peak.
+
+### P(YES) estimate
+- Low: 8%
+- Central: 15%
+- High: 25%
+- Reasoning: Resolution requires a *definitive statement* from an eligible official (President, Cabinet, Joint Chiefs, federal agency). The May 8 file release ruled out the obvious catalyst scenario (that released documents would contain smoking-gun proof). Subsequent tranches are less likely to contain conclusive evidence than Tranche 1. Congressional pressure and AARO reports may increase transparency but fall short of the literal bar ("definitively states"). Base rate and post-release signal favor materially lower odds than the 24% current market price. Tail scenario (15–25% range) accounts for possibility that unreleased files contain genuine anomalies forcing political confirmation.
+- Multiplicative breakdown: P(evidence of extraterrestrial origin in unreleased materials) × P(government official decides transparency/admission politically necessary | evidence) × P(definitive statement made) × P(made before Dec 31) = ~0.25 × 0.35 × 0.80 × 0.95 ≈ 6–8% (low estimate), vs. ~0.35 × 0.50 × 0.90 × 0.95 ≈ 15% (central), vs. ~0.50 × 0.65 × 0.95 × 0.95 ≈ 29% (high).
+
+### Sources
+- [CNN Politics - Pentagon releases initial batch of declassified files](https://www.cnn.com/2026/05/08/politics/ufo-files-pentagon-release-aliens)
+- [NBC News - UFO sightings from Apollo missions](https://www.nbcnews.com/science/ufos-and-anomalous-phenomena/ufo-uap-files-pentagon-release-trump-rcna344204)
+- [PBS News - Trump drops hints of what's coming](https://www.pbs.org/newshour/politics/trump-drops-hints-of-whats-coming-in-new-batch-of-ufo-files-set-for-release)
+- [DefenseScoop - Congress wants to know more about military's UAP intercepts](https://defensescoop.com/2025/12/10/uap-ufo-military-intercepts-north-america-fy-2026-ndaa/)
+- [MeriTalk - Pentagon UAP Briefings Added in NDAA](https://www.meritalk.com/articles/pentagon-uap-briefings-added-in-ndaa/)
+- [Disclosure Monitor - AARO UAP Report 2026](https://disclosuremonitor.com/analysis/aaro-uap-report-2026)
+- [House Oversight Committee - Restoring Public Trust Through UAP Transparency](https://oversight.house.gov/hearing/restoring-public-trust-through-uap-transparency-and-whistleblower-protection/)
+- [Yahoo News - Aliens.gov Registration](https://www.yahoo.com/news/articles/white-house-quietly-registers-aliens-153801567.html)

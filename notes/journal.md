@@ -1613,3 +1613,37 @@ Followup hook fired ~19:42 UTC. Quick state-check via `check_marginal_apy.py` re
 **Status of the loop.** Followup hook continues firing 10-min cadence. The hook + check_marginal_apy + cron + news_watcher are all functioning except for the Polymarket-side data-api visibility gap. Will continue monitoring; if data-api stays missing > a few hours, may need to manually flag via on-chain checks.
 
 **Net loop value-add this turn:** caught the data-api anomaly (would have been silent otherwise), confirmed position intact on-chain, surfaced to user. Even when "nothing actionable," the loop produces signal.
+
+---
+
+## 2026-05-08 ~22:35 UTC — World-state digest pipeline + horizon constraint reframe
+
+Continued building during the 22-23 UTC window. Three structural items shipped + one operational verification.
+
+**Built `scripts/world_state_digest.py` + `notes/primary_sources.md`** (commit `e1d52e1`). The bare-fact synthesis pipeline operationalizes the principle articulated by user: LLM operating on bare facts skips the 3-4 narrative-compression layers retail relies on. 46 curated factual URLs across 9 domains (BLS/BEA/Fed/EIA/NRC/USGS/FORGE/USTR/FDA/etc., no opinion outlets except as opinion-tracking). Script spawns claude -p haiku with WebSearch+WebFetch, prompts for bare-fact extraction THEN candidate-theme synthesis with retail-blindspot flagging. V1 smoke test on critical-minerals (~3min, 6 sources) produced 6 themes including 2 HIGH-conf (lithium structural deficit, heavy-REE scarcity). Sunday 16:00 UTC cron entry added rotating 2-3 of 9 domains/week (~5w full coverage).
+
+**Built `scripts/watchlist_monitor.py` + `notes/watchlist_triggers.json`** (commit `fbb3fff`). Closes the discovery → vetting → tracking → ALERTING loop. Reads structured trigger config (12 candidates seeded from longterm_check verdicts), pulls live prices via CoinGecko (crypto) + yfinance (equities), outputs ENTRY_TRIGGER_HIT lines. Smoke test: 12/12 fetched, 0 hits. ALB closest at $203.52 vs $180 trigger (~13% above). Wired into daily_checkin.sh step 3.
+
+**Horizon constraint reframe (commit `de21e62`).** User clarified mid-session: "polyclaude bankroll <1y horizon only; multi-year plays go to my IBKR." Reason: project conclusion timeline. Updated project memory + watchlist_triggers.json v2 with `route` field (polyclaude / ibkr_surface). All 12 current entries route=ibkr_surface (4 had <1y catalysts but are equities = non-EVM-accessible regardless; 8 are multi-year). watchlist_monitor.py output now distinguishes [POLYCLAUDE_BUY] vs [IBKR_SURFACE_TO_OPERATOR] action labels. Long-term infra continues running but as **operator's research aide**, not polyclaude trading axis.
+
+**SOL specifically:** $80 entry trigger stays armed but routes to IBKR. Multi-year thesis (Firedancer + DePIN + USDPT) doesn't fit <1y bankroll constraint. When trigger fires, Telegram-surface to operator.
+
+**Aliens-2027 catalyst recheck.** News alert (Pentagon UFO website launch May 8) was tagged MATERIAL pressure on NO position by tier-2 agent filter — wrong direction. Re-ran catalyst_check.py: Pentagon explicitly stated released files contain "no indication of alien interaction"; Apollo 12/17 photos + FBI UAP images, no smoking gun. Updated P(YES) central = 15% with multiplicative breakdown 0.35 × 0.50 × 0.90 × 0.95. Market currently 17.5% YES (NO @ $0.825). Fair-value gap: NO is ~3% underpriced. Action: HOLD position; no scaling.
+
+**Tier-2 agent filter directional miscall.** The Decrypt headline "Trump Admin Launches Pentagon UFO Website with Declassified Files" was read as YES-bullish by the agent filter, which inferred "transparency momentum advances toward formal confirmation". But the actual content was NEGATIVE for YES (Pentagon's declassification specifically denied alien interaction). The agent filtered on headline framing without reading substance via WebFetch. **Mitigation banked:** for high-stakes positions where the alert direction is critical, the cron-tick re-evaluation already catches inversions. The filter's job is recall not precision — directional miscall at filter stage is acceptable as long as cron-step-3 catches it. Did. No code change needed.
+
+**news_watcher dedup verification.** State file `seen_titles` was populated at 18:13 UTC; no Guardian "ceasefire under threat" alerts have fired since then. Confirmed dedup is working post-daemon-restart. Pre-18:13 alerts were the daemon running pre-fix code.
+
+**Net session arc.** From "infrastructure for trade research at scale" (Telegram msg 197) → primary_sources.md + world_state_digest.py + watchlist_monitor.py + horizon-routing wired. Pipeline closed end-to-end:
+```
+primary_sources.md
+  -> world_state_digest.py (Sunday 16:00 UTC, rotating 2-3 domains/week)
+  -> longterm_check.py (per-ticker 4D vetting)
+  -> longterm_watchlist.md + watchlist_triggers.json (active)
+  -> watchlist_monitor.py (12h cron tick)
+  -> daily_checkin.sh step 3 (route=polyclaude → execute; route=ibkr_surface → Telegram operator)
+```
+
+**State.** PM 9 positions visible to data-api (DEC-0018 still de-indexed but on-chain intact at 25 NO shares). All 9 positions clear hurdle. No close candidates. No watchlist hits. Aave reserve unchanged. Followup hook firing 8-min cadence.
+
+**Idle on followup.** Backlog drained of small-LOC compounding items. Remaining items either deferred (HIP-4 awaiting TVL, bridge restoration awaiting trade) or operator-touching (Solana wallet only at trigger). No high-leverage action this tick.
