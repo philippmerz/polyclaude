@@ -1158,3 +1158,33 @@ Plus the ~$0.31 sunk on path infrastructure (Aave withdraw + bridge + cross-wall
 **Net session impact: -$0.08 realized loss, full Aave→Polymarket pipeline validated, calibration lesson banked, two backlog items added, philosophy doc update queued.** The pipeline validation is genuinely useful — every future bond-like fade I find is now a 1-tx execute path instead of 6-tx setup.
 
 **End-of-turn discipline.** Thread fully resolved (closed + journaled + backlog updated). No manual followup scheduled. Next trigger: 16:00 UTC periodic check (~25 min).
+
+---
+
+## 2026-05-08 ~15:50 UTC — `catalyst_check.py` shipped + validated, DEC-0003 re-eval done
+
+User Telegram: "Infra for researching and distilling information on potential trades at scale? Maybe an efficient pipeline?" — flagging the high-leverage build right after the DEC-0016 calibration miss.
+
+Built MVP: `scripts/catalyst_check.py "<market question>" <resolve_date>`. Spawns `claude -p --model haiku --allowed-tools WebSearch,WebFetch,Bash` with a structured prompt asking for: base rate, catalysts in window classified HIGH/MED/LOW, recent news, P(YES) range with reasoning, sources. Output to stdout + appended to `notes/catalyst_log.md`. ~50 LOC, ~30 min build. Commit `65cadba`.
+
+**Validation 1 (retroactive on DEC-0016):** ran the tool on the exact aliens-by-May-31 query I'd just lost $0.08 on. Output correctly identified PURSUE program / Pentagon UAP file release on 2026-05-08, Luna's 46-video deadline, NDAA 2026 briefing requirement. Central P(YES) = 3% — matches market 2.95% almost exactly. **If I had run this BEFORE opening DEC-0016, I would have seen "no edge" and skipped.** The $0.08 loss was the cost of learning this lesson without the tool.
+
+**Validation 2 (DEC-0003 re-eval, aliens-2027 NO).** Backlog item from this morning: re-evaluate the 22-month aliens-2027 NO position given PURSUE. Tool found:
+- **HIGH 2026-08-18:** Trump-EO 300-day declassification deadline. Hard deadline.
+- **HIGH 2026-10-31:** Annual DNI UAP report.
+- **MED:** Aliens.gov portal launch ~Jun-Aug, H.R.1187 UAP Transparency Act (pending).
+- **LOW:** Disclosure Project conference (private, not government confirmation).
+- Central P(YES) = 16%. Range 8-28%.
+
+DEC-0003 entry was 0.80 NO (20% YES); current mark 0.815 (18.5% YES). Catalyst-check 16% YES vs market 18.5% YES → NO has ~2.5pp edge. Expected EV at hold: $9.45 vs $9 cost = +$0.45 over 237d (~7.7% APY). **HOLD DEC-0003.** Added Aug 18 + Oct 31 to backlog calendar as reassessment triggers — if market YES drifts up materially as either deadline approaches, reconsider close.
+
+**Calibration insight (banked).** When I lack a real model, the tool's P(YES) estimate converges toward market consensus. That's the correct calibration force — it tempers BOTH overconfident intuition (my "1%" on aliens-by-May-31) AND over-correction after fresh data (my "5-7%" post-search). The market price is itself a model; without my own model, I should default to it.
+
+**Token cost.** ~5-10K per check at haiku medium effort. Cheap. At 5-10 candidates/week running this pre-trade, ~50-100K/week. Pays for itself the first time it catches a missed catalyst on a sub-$10 trade.
+
+**Integration paths (backlog).**
+- (Done) Standalone CLI for manual pre-trade evaluation.
+- (Pending) `--check-catalysts` flag in `discover_markets.py` for auto-pre-filter on hurdle-clearance candidates.
+- (Pending) Update `strategy/00_philosophy.md` to require catalyst_check for any bond-like longshot fade regardless of size, separate from the >$10 skeptic+champion rule.
+
+**End-of-turn discipline.** Thread fully resolved: tool shipped, both validations done, DEC-0003 decision logged, backlog updated, telegram msgs 164 + 165 sent, commit pushed. No followup scheduled.

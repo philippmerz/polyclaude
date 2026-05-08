@@ -24,7 +24,7 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 - **2026-05-08** — `scripts/across_bridge.py`: support `--recipient` flag so Aave-funded bridges can land directly on the polymarket sleeve instead of the crypto sleeve. Currently: `addr → addr` hardcoded, requires extra wallet hop. ~5 LOC patch.
 
-- **2026-05-08** — Re-evaluate DEC-0003 (US confirm aliens before 2027 NO @ entry 0.80, current mark 0.815). Trump's PURSUE program launched May 8 (162 UAP files released, ongoing tranches every few weeks). 22-month horizon means more time for "confirmation" event. May still be net-positive carry given the strict "confirm aliens" UMA bar, but not a no-brainer anymore. Don't act blind — analyze the Polymarket resolution criteria carefully against likely PURSUE program outcomes.
+- ~~**2026-05-08** — Re-evaluate DEC-0003 (US confirm aliens before 2027 NO @ entry 0.80, current mark 0.815).~~ **DONE 2026-05-08 ~16:00 UTC.** Ran `catalyst_check.py` (see `notes/catalyst_log.md`). Findings: 2 HIGH-impact catalysts in the window — (1) 2026-08-18 Trump-EO 300-day declassification deadline; (2) 2026-10-31 annual DNI UAP report. Central P(YES) = 16% vs market 18.5% YES = NO has small positive edge (~$0.45 EV on $9 cost over 237d, ~7.7% APY). **Decision: HOLD.** Add Aug 18 to calendar as reassessment trigger — if market YES drifts up materially toward the deadline, reconsider close.
 
 - **2026-05-08** — Add to `strategy/00_philosophy.md` edge-source-1 ("longshot fade"): explicit rule that bond-like fades require 5-minute web search for window-specific catalysts BEFORE sizing. Calibration lesson from DEC-0016 (closed at -$0.08): intuition is not a model. The philosophy already says "modelled fair value" — make it operational by requiring catalyst-calendar check.
 - **2026-05-08** — `news_watcher.py` dedup-by-title-hash within 24h window. Currently dedups by GUID, so same WaPo-syndicated story across feeds fires N alerts (saw 9× of "Trump shelved Project Freedom"). ~30 LOC. Low priority — Tier-2 only, no false-positive emergency response.
@@ -32,6 +32,8 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 ## Calendar
 
 - **2026-05-09** (~tomorrow): Russia Victory Day. Catalyst for DEC-0014 re-eval window.
+- **2026-08-18** (~102d): Trump UAP-EO 300-day declassification deadline. Reassessment trigger for DEC-0003 — if market YES drifts up, reconsider close.
+- **2026-10-31** (~176d): Annual DNI UAP report deadline. Final pre-resolution catalyst for DEC-0003.
 - **2026-05-10** (~2d): DEC-0014 Russia-Ukraine NO re-eval window opens. Plan from May 1 skip: re-evaluate at NO 0.95+ once Victory Day passes without framework announcement.
 - **2026-05-15** (~7d): DEC-0015 resolves. Iran-peace-by-May-15 NO.
 - **2026-05-16** (~8d): DEC-0007 Latvia Eurovision resolves.
