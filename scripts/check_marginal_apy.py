@@ -132,7 +132,17 @@ def main() -> int:
         # Lesson source: 2026-05-08 Russia-Ukraine NO crashed 0.768 -> 0.456
         # in ~30 min after Trump's 3-day-ceasefire announcement.
         drawdown_pct = (mtm - cost) / cost * 100 if cost > 0 else 0
-        if drawdown_pct <= -args.drawdown_alert_pct:
+        # De-indexed-market guard: when Polymarket de-indexes a market (e.g.,
+        # post-rapid-mark-movement), data-api sometimes returns mark=0.001
+        # (the minimum tick) even though the position is intact on-chain.
+        # Without this guard, a de-indexed market would always fire DRAWDOWN
+        # ALERT at -99.9%. Lesson source: 2026-05-09 07:52 UTC Russia-Ukraine
+        # NO showed -99.9% drawdown via data-api while on-chain balance was
+        # 25 NO shares intact.
+        if mark <= 0.005 and drawdown_pct < -50:
+            # Treat as de-indexed; suppress drawdown alert but flag for review
+            drawdown_pct = None  # mark unreliable
+        if drawdown_pct is not None and drawdown_pct <= -args.drawdown_alert_pct:
             drawdowns.append({
                 "question": question,
                 "slug": slug,
