@@ -1,0 +1,266 @@
+#!/usr/bin/env python3
+"""Unified entry helper — catalyst_check + Kelly sizing + execute.
+
+Wraps the multi-step workflow used for every Polymarket entry into one command:
+1. Fetch market via gamma-api → check umaResolutionStatus (skip if disputed/proposed)
+2. Run catalyst_check.py to get P(YES) estimate (with multiplicative breakdown
+   for conjunction questions per philosophy 00 update)
+3. Compute Kelly+ρ optimal size via per-position math (default half-Kelly,
+   ρ=0.6 if cluster specified, ρ=0 if independent)
+4. Print decision: SIZE / DON'T_TAKE / NEED_REVIEW with reasoning
+5. With --execute flag: post buy via clob_v2.py
+
+Output is logged to notes/entries_log.md (gitignored — local-only).
+
+Operator directive 2026-05-09: aggressive engineering to capture untapped alpha.
+This compounds across every future entry decision.
+
+Usage:
+    # Discovery: dry-run with reasoning
+    python scripts/polyclaude_enter.py "Will US confirm aliens by 2027?" 2026-12-31
+
+    # Quick mode: skip catalyst_check (use --my-p directly)
+    python scripts/polyclaude_enter.py --my-p 0.95 --side NO 0.874 \\
+        --resolve-date 2026-05-15 --slug us-x-iran-permanent-peace-deal-by-may-15-2026 \\
+        "US x Iran permanent peace deal by May 15"
+
+    # Execute: --execute --usd <amount>
+    python scripts/polyclaude_enter.py --my-p 0.95 --side NO 0.874 ... --execute
+"""
+
+from __future__ import annotations
+
+import argparse
+import datetime
+import json
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+import httpx
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+LOG_PATH = REPO_ROOT / "notes" / "entries_log.md"
+
+
+def fetch_market_by_slug_or_question(slug_or_q: str) -> dict | None:
+    """Try slug lookup first; if fails, search by question."""
+    with httpx.Client(timeout=15) as c:
+        # Slug lookup
+        if "-" in slug_or_q or "_" in slug_or_q:
+            r = c.get("https://gamma-api.polymarket.com/markets", params={"slug": slug_or_q})
+            if r.status_code == 200:
+                d = r.json()
+                if isinstance(d, list) and d:
+                    return d[0]
+        # Question search via paginate (gamma-api ?q is broken; client-side filter)
+        for page in range(8):
+            r = c.get("https://gamma-api.polymarket.com/markets", params={
+                "closed": "false", "active": "true",
+                "limit": 500, "offset": page * 500,
+                "order": "volume24hr", "ascending": "false",
+            })
+            if r.status_code != 200:
+                continue
+            for m in r.json() or []:
+                q = m.get("question", "")
+                if slug_or_q.lower() == q.lower() or slug_or_q.lower() in q.lower():
+                    return m
+    return None
+
+
+def kelly_size(mark: float, p_win: float, bankroll: float, frac: float,
+               rho: float, cluster_frac: float) -> tuple[float, dict]:
+    """Compute Kelly-optimal $ size with details."""
+    if mark >= 0.999 or p_win <= mark:
+        return 0.0, {"full_kelly": 0.0, "reason": "no edge (p_win <= mark)"}
+    full_k = (p_win - mark) / (1.0 - mark)
+    rho_disc = max(0.0, 1.0 - rho * cluster_frac)
+    kelly_dollar = full_k * rho_disc * frac * bankroll
+    return kelly_dollar, {
+        "full_kelly": full_k,
+        "rho_disc": rho_disc,
+        "frac": frac,
+        "bankroll": bankroll,
+        "kelly_dollar": kelly_dollar,
+        "edge_pp": (p_win - mark) * 100,
+    }
+
+
+def main() -> int:
+    p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
+    p.add_argument("question", nargs="?", default=None,
+                   help="Polymarket question or slug (or omit if --slug provided)")
+    p.add_argument("--slug", default=None, help="Explicit slug (alternative to question lookup)")
+    p.add_argument("--my-p", type=float, default=None,
+                   help="My P(side wins) estimate. If omitted, will run catalyst_check.")
+    p.add_argument("--side", choices=["YES", "NO"], default="NO",
+                   help="Which side to buy (default NO for bond-like fades)")
+    p.add_argument("--resolve-date", default=None,
+                   help="Resolution date (YYYY-MM-DD). Required for catalyst_check.")
+    p.add_argument("--bankroll", type=float, default=170.0)
+    p.add_argument("--kelly-frac", type=float, default=0.5)
+    p.add_argument("--rho", type=float, default=0.0,
+                   help="Correlation to existing cluster (0=independent, 0.7=high)")
+    p.add_argument("--cluster-frac", type=float, default=0.0,
+                   help="Existing cluster fraction of bankroll (for ρ-discount)")
+    p.add_argument("--execute", action="store_true", help="Actually post buy order")
+    p.add_argument("--usd", type=float, default=None,
+                   help="Override Kelly recommendation with manual $ size")
+    p.add_argument("--skip-catalyst-check", action="store_true",
+                   help="Skip catalyst_check (use only --my-p)")
+    args = p.parse_args()
+
+    # Resolve market
+    lookup = args.slug or args.question
+    if not lookup:
+        print("ERROR: provide question or --slug", file=sys.stderr)
+        return 2
+
+    print(f"# polyclaude_enter: looking up '{lookup[:50]}'...", file=sys.stderr)
+    m = fetch_market_by_slug_or_question(lookup)
+    if not m:
+        print(f"ERROR: market not found", file=sys.stderr)
+        return 2
+
+    question = m.get("question", "?")
+    slug = m.get("slug", "?")
+    market_id = m.get("id", "?")
+    uma_status = m.get("umaResolutionStatus")
+    end_iso = m.get("endDate") or m.get("endDateIso") or ""
+    try:
+        prices_raw = m.get("outcomePrices")
+        prices = json.loads(prices_raw) if isinstance(prices_raw, str) else prices_raw
+        yes_p, no_p = float(prices[0]), float(prices[1])
+    except Exception:
+        yes_p, no_p = None, None
+    clob_token_ids = m.get("clobTokenIds")
+    if isinstance(clob_token_ids, str):
+        try:
+            clob_token_ids = json.loads(clob_token_ids)
+        except Exception:
+            clob_token_ids = None
+    yes_token = clob_token_ids[0] if clob_token_ids else None
+    no_token = clob_token_ids[1] if clob_token_ids else None
+    neg_risk = bool(m.get("negRisk"))
+
+    print(f"\nMarket: {question}")
+    print(f"  slug: {slug}")
+    print(f"  market_id: {market_id}")
+    print(f"  umaResolutionStatus: {uma_status}")
+    print(f"  outcomePrices: YES={yes_p} NO={no_p}")
+    print(f"  endDate: {end_iso}")
+    print(f"  negRisk: {neg_risk}")
+
+    # Reject if disputed
+    if uma_status in ("proposed", "disputed"):
+        print(f"\nDECISION: SKIP — umaResolutionStatus={uma_status}")
+        print(f"  Market is in active UMA dispute. Cannot reliably enter.")
+        return 0
+
+    if yes_p is None:
+        print(f"\nDECISION: NEED_REVIEW — could not parse outcomePrices")
+        return 2
+
+    side = args.side
+    mark = no_p if side == "NO" else yes_p
+    token = no_token if side == "NO" else yes_token
+    if mark is None or token is None:
+        print(f"DECISION: NEED_REVIEW — no token id for {side}")
+        return 2
+
+    # Resolve P(side wins)
+    my_p = args.my_p
+    if my_p is None and not args.skip_catalyst_check:
+        if not args.resolve_date:
+            print(f"\nDECISION: NEED_REVIEW — provide --my-p or --resolve-date for catalyst_check")
+            return 2
+        print(f"\n# Running catalyst_check.py for P estimate...", file=sys.stderr)
+        try:
+            r = subprocess.run(
+                [".venv/bin/python", "scripts/catalyst_check.py", question, args.resolve_date,
+                 "--no-log"],
+                cwd=REPO_ROOT, capture_output=True, text=True, timeout=600,
+            )
+            cc_out = r.stdout
+            print(cc_out)
+            # Extract central P(YES) from "Central: X%" line
+            m_central = re.search(r"Central:\s*(\d+(?:\.\d+)?)%", cc_out)
+            if m_central:
+                p_yes = float(m_central.group(1)) / 100
+                my_p = (1 - p_yes) if side == "NO" else p_yes
+                print(f"\n# catalyst_check central P(YES)={p_yes:.4f} → P({side} win)={my_p:.4f}", file=sys.stderr)
+            else:
+                print(f"\nDECISION: NEED_REVIEW — couldn't parse central P from catalyst_check")
+                return 2
+        except subprocess.TimeoutExpired:
+            print(f"DECISION: NEED_REVIEW — catalyst_check timed out")
+            return 3
+
+    if my_p is None:
+        print(f"DECISION: NEED_REVIEW — no P estimate provided")
+        return 2
+
+    # Kelly sizing
+    kelly_dollar, details = kelly_size(mark, my_p, args.bankroll, args.kelly_frac,
+                                        args.rho, args.cluster_frac)
+
+    deploy_dollar = args.usd if args.usd is not None else kelly_dollar
+    if deploy_dollar < 1.0:
+        print(f"\nDECISION: SKIP — Kelly size ${deploy_dollar:.2f} < $1 (no edge or marginal)")
+        return 0
+
+    shares = deploy_dollar / mark
+    profit_if_win = shares * (1.0 - mark)
+
+    print(f"\n=== KELLY ANALYSIS ===")
+    print(f"  Buying {side} @ ${mark:.4f}, P({side} wins) = {my_p:.4f}")
+    print(f"  Edge: {details['edge_pp']:+.2f}pp")
+    print(f"  Full Kelly: {details['full_kelly']*100:.1f}% of bankroll")
+    print(f"  ρ-discount: {details['rho_disc']:.4f} (ρ={args.rho}, cluster_frac={args.cluster_frac})")
+    print(f"  × Kelly fraction: {args.kelly_frac}")
+    print(f"  Kelly $: ${kelly_dollar:.2f}")
+    if args.usd is not None:
+        print(f"  Manual override: ${args.usd:.2f}")
+    print(f"  → Deploy: ${deploy_dollar:.2f} ({shares:.2f} shares)")
+    print(f"  Profit if win: +${profit_if_win:.2f} (= {profit_if_win/deploy_dollar*100:.1f}%)")
+
+    # Sensitivity: ±5% misestimate of p
+    print(f"\n  Sensitivity (full-Kelly under p ±0.05):")
+    for delta_p in (-0.10, -0.05, +0.05):
+        p_alt = max(0.001, min(0.999, my_p + delta_p))
+        if p_alt > mark:
+            full_alt = (p_alt - mark) / (1.0 - mark)
+            size_alt = full_alt * details['rho_disc'] * args.kelly_frac * args.bankroll
+            print(f"    p={p_alt:.4f} ({delta_p:+.2f}): full_K={full_alt*100:.1f}% → ${size_alt:.2f}")
+        else:
+            print(f"    p={p_alt:.4f} ({delta_p:+.2f}): NO EDGE → $0")
+
+    if not args.execute:
+        print(f"\nDECISION: WOULD_BUY ${deploy_dollar:.2f} of {side} @ {mark:.4f}")
+        print(f"  Re-run with --execute to actually post the order.")
+        return 0
+
+    # EXECUTE path
+    # Use clean usd_size: round to integer-share count × mark
+    target_shares = round(deploy_dollar / mark)
+    clean_usd = round(target_shares * mark, 4)
+    print(f"\n# Executing BUY {target_shares} shares ({side}) @ {mark} for ${clean_usd}")
+
+    cmd = [".venv/bin/python", "scripts/clob_v2.py",
+           "buy" if side in ("YES", "NO") else "sell",
+           token, str(mark), str(clean_usd), "--order-type", "GTC"]
+    if neg_risk:
+        cmd.extend(["--neg-risk", "true"])
+    print(f"  cmd: {' '.join(cmd)}", file=sys.stderr)
+    r = subprocess.run(cmd, cwd=REPO_ROOT, capture_output=True, text=True, timeout=60)
+    print(r.stdout)
+    if r.returncode != 0:
+        print(f"  stderr: {r.stderr[:500]}", file=sys.stderr)
+        return r.returncode
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

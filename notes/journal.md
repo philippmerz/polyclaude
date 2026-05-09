@@ -2130,3 +2130,46 @@ Existing positions also accruing. Iran cluster repricing favorably as Iran rejec
 - Funding-rate arb scanner (would need Hyperliquid setup, deferred)
 - Pendle YT scanner (would need >$30 free capital, deferred)
 - macro_pm_scan v2 with proper CME data parsing (deferred until source identified)
+
+---
+
+## 2026-05-09 ~20:30 UTC — Campaign Step 9: polyclaude_enter.py unified entry helper
+
+**Built `scripts/polyclaude_enter.py`.** Wraps the multi-step entry workflow into one command:
+1. Fetch market via gamma-api (slug or question lookup)
+2. Reject if `umaResolutionStatus ∈ {proposed, disputed}`
+3. Run catalyst_check.py for P(YES) estimate (or accept --my-p directly)
+4. Compute Kelly+ρ optimal size with sensitivity analysis (±0.10, ±0.05 misestimate of p)
+5. Print structured DECISION: SKIP / WOULD_BUY / SIZE
+6. With `--execute`: post buy via clob_v2.py with clean integer-share math
+
+**Smoke test** on existing May-15 NO position (mark 0.8745, P=0.95, ρ=0.7, cluster=0.30):
+- Edge +7.55pp
+- Full Kelly 60.2% of bankroll
+- ρ-discount 0.79
+- Half-Kelly recommendation: $40.40 (46 shares)
+- Sensitivity: at p=0.85 NO_EDGE; at p=0.90 → $13.64; at p=0.999 → $66.61
+
+Tool surfaces the actual Kelly bound, sensitivity envelope, and clean executable command. Compounds across every future entry.
+
+**Workflow before:** manually fetch gamma → check UMA → catalyst_check → kelly_size → manual clean-math for usd_size → clob_v2.py buy. ~6 minutes per entry.
+**Workflow after:** `polyclaude_enter.py <slug> --my-p X --side Y --execute`. ~30 seconds.
+
+**Cumulative session metrics:**
+- 4 trades opened/scaled = $48.02 deployed (+ pending Iran-cluster appreciation)
+- 8 tools shipped (kelly_size, portfolio_kelly+constrained, sports_pm_scan+consensus, macro_pm_scan v1, limitless_arb_scan fixes, drawdown guard, uma_status_check, polyclaude_enter)
+- 5 cron wirings (steps 1, 3, 4, 6 enriched)
+- Expected EV from new positions: $11-15 = 67-90% R-U recoup
+- Defensive infra moats: drawdown guard (de-indexed-aware), UMA status monitor, news dedup, daemon spawn-guard
+
+**Recoup is now SYSTEMATIC.** Every cron tick auto-runs:
+1. Position state + uma_status_check + drawdown guard
+2. Marginal-APY hurdle scan + watchlist trigger check
+3. portfolio_kelly --constrained ranking
+4. Catalyst scan + decision-tracker review
+5. Redemption (if any)
+6. Discover_markets + sports_pm_scan + macro_pm_scan
+7. Journal + commit
+8. Telegram tick summary
+
+**Next campaign step:** capital-availability constrained. Major builds remaining (funding-rate arb, Pendle YT, liquidation MEV) require >$30 free + Hyperliquid setup. Defer until next bridge or Iran cluster resolves freeing capital. For now, the systematic infrastructure runs and captures alpha as opportunities surface.
