@@ -2071,3 +2071,26 @@ No actionable deltas (>3pp) today — Polymarket sports markets tightly priced v
 - Total expected: ~$11.30 (covers ~67% of R-U loss in EV)
 
 Existing positions also accruing. Iran cluster repricing favorably as Iran rejection of US proposal asserts. Cumulative recovery probable within 22-day horizon.
+
+---
+
+## 2026-05-09 ~19:55 UTC — Campaign Step 7: macro_pm_scan v1 + consensus limitation
+
+**Built scripts/macro_pm_scan.py.** Pulls Polymarket FOMC/CPI/macro markets in 60d window, filters by keyword + volume, optionally fetches CME-implied probability via claude -p haiku.
+
+**V1 LIMITATION discovered.** Test run flagged "Will Fed hold rates after June FOMC" PM 0.974 vs supposed CME 0.700 = +27.4pp delta. But yesterday's catalyst_check had CME at 95.5% (matched PM 97%). 27pp shift in 1 day = implausible. Verified: CME FedWatch is JavaScript-rendered, haiku WebFetch returns nothing, haiku then HALLUCINATES probabilities from training data (cutoff Feb 2025 — well before May 2026).
+
+**Mitigation:** ship `--no-consensus` mode (default ON for daily_checkin invocation). Markets surface fine; consensus comparison disabled until v2.
+
+**v2 plan:** parse CME Fed Funds futures (ZQ contract) prices directly from public sources (MarketWatch / Yahoo Finance / TradingView). Implied probability of each rate target = (current rate - futures-implied rate) / 0.25. No JS dependency. ~60min build.
+
+**Lesson banked:** any consensus-via-haiku integration must verify the source is HTML-readable, not JS-rendered. Bookie aggregators (DraftKings, OddsShark) work; CME FedWatch doesn't. Future scrapers should be pre-tested on source format.
+
+**Macro markets surfaced today (no actionable consensus arb):**
+- Fed hold June (PM 97.35%) + cut-25 (1.55%) + cut-50+ (0.45%) + hike-25 (0.65%) + hike-50+ (0.35%) = 100% sum
+- Per yesterday's catalyst_check, CME held 95.5% on hold → PM 97.35% is 1.85pp over → within fee breakeven
+- UK warships Strait of Hormuz (tail event, $45k vol)
+
+**Wired into daily_checkin step 6:** macro_pm_scan --no-consensus runs each cron tick alongside discover_markets + sports_pm_scan. Surfaces visibility for operator review.
+
+**Step 7 complete.** Macro discovery side ships; consensus deferred to v2.

@@ -84,3 +84,29 @@ Operator directive 2026-05-09 ~17:10 UTC after Russia-Ukraine ~$16.73 expected l
 | Time UTC | Task | Status |
 |---|---|---|
 | 17:10 | Campaign defined | DONE |
+| 17:30 | DEC-0019 May-11 NO opened ($14.475) | DONE |
+| 17:30 | scripts/sports_pm_scan.py shipped | DONE (commit d9a6059) |
+| 17:50 | scripts/kelly_size.py shipped + DEC-0015 scale ($8.74) | DONE (commit 8cecebd) |
+| 18:25 | Bridge $25 Aave Base→Polygon + DEC-0021 Regime-fall scale ($21.25) | DONE (commit 1230390) |
+| 18:50 | scripts/portfolio_kelly.py + priors shipped | DONE (commit 8f1805e) |
+| 19:10 | portfolio_kelly --constrained + arb scanner false-pos fixes | DONE (commit 15b4410) |
+| 19:30 | DEC-0022 Trump-out scale ($3.56) + bookie-consensus integration | DONE (commit 2e23453, 2e462cf) |
+| 19:50 | portfolio_kelly wired into daily_checkin step 4 | DONE (commit 67e2af9) |
+| 19:50 | scripts/macro_pm_scan.py + CME FedWatch integration | IN FLIGHT |
+
+## Cumulative metrics
+
+- **Trades opened/scaled this session:** 4 (DEC-0019, 0015-scale, 0021, 0022) = $48.02 deployed
+- **Tools shipped:** 5 (kelly_size, portfolio_kelly, sports_pm_scan with consensus, macro_pm_scan, limitless_arb_scan fixes)
+- **Cron wiring:** 2 (sports_pm_scan into step 6, portfolio_kelly into step 4)
+- **Expected EV from new positions:** ~$11-15 over 22-235d horizon
+- **Effective recoup rate:** ~67-90% of R-U $16.73 in expected value
+
+## Pending campaign items
+
+- Limitless wallet setup for arb execution (operator-touching: requires fund routing decision)
+- Funding-rate arb scanner (Hyperliquid + Ostium delta capture)
+- Pendle YT scanner
+- Liquidation MEV monitor (high variance, defer)
+- Cross-venue HIP-4 extension (defer until HIP-4 has TVL)
+- polyclaude_enter.py — single-command entry helper (catalyst_check + Kelly + execute)
