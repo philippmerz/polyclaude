@@ -1,5 +1,5 @@
 {
-  "next_id": 21,
+  "next_id": 22,
   "decisions": [
     {
       "id": 1,
@@ -383,6 +383,28 @@
       "tags": [
         "polymarket",
         "iran-peace",
+        "bond-like-fade",
+        "scale-in",
+        "v2",
+        "recoup-campaign",
+        "kelly-sized"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 21,
+      "timestamp": "2026-05-09T17:46:45Z",
+      "type": "size_change",
+      "thesis": "Regime-fall NO scale-in: +25 shares @ $0.85 = $21.25. Position now 33.75 shares / $28.25 cost / $33.75 max payout. Kelly: mark 0.85, P(NO)=0.93, full Kelly 53% bankroll = $90. Half-Kelly+\u03c1-discount = $35. At $28.25 now (81% of half-Kelly+\u03c1 optimal). Robust sensitivity: even at conservative P=0.85, full Kelly stays positive. Operator directive: rigorous Kelly+correlation-adjusted sizing supersedes cluster-cap heuristic. Insight banked: Iran cluster has ANTI-correlated tail paths (peace-deal scenario LOSES may-X NOs but WINS regime+pahlavi NOs; regime-fall scenario does opposite) \u2014 naive 'positively correlated cluster' assumption was wrong; max realized worst-case loss is ~$40 not $77.",
+      "confidence": "high",
+      "prediction": "Resolves NO by Dec 31 2026. Regime stable; even US de-escalation (shelved Project Freedom) reduces regime-change pressure. Strict criteria require formal recognized regime fall.",
+      "size_usd": 21.25,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "iran-regime",
         "bond-like-fade",
         "scale-in",
         "v2",

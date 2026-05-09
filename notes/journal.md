@@ -1883,3 +1883,46 @@ Translation: the cluster-cap and "Kelly/4" rules-of-thumb I've been using are cr
 - Other Iran positions appreciating per news flow
 - Total expected from current book + scaled positions: $25-35 over 22-day horizon
 - Recoup likely complete or exceeded by May 31 if Iran cluster resolves NO (high probability)
+
+---
+
+## 2026-05-09 ~18:25 UTC — Campaign Step 3: Aave→Polygon bridge + Regime-fall scale-in
+
+**Bridge orchestration:**
+- Withdrew $25 USDC from Aave Base (tx 0x1e1e42dc) → crypto sleeve
+- Bridged $24.5 Base→Polygon via Across with --recipient=PM_sleeve --token-out=USDC.e (block 45779637)
+- Wrapped $24 USDC.e → pUSD via CollateralOnramp (~30s confirmation at 1000 gwei replacement)
+
+Total cost: ~$0.20 gas across the chain. Lands $24 pUSD on PM sleeve.
+
+**Regime-fall NO scale-in (DEC-0021):** 25 shares @ $0.85 = $21.25 (tx 0x2c1d8554). Total position 33.75 shares / $28.25 cost / $33.75 max payout. Now at 81% of Kelly+ρ-discount half-Kelly optimal (was 16%).
+
+**Anti-correlation insight banked.** When I assumed Iran cluster was positively correlated, naive worst-case was all 5 positions losing = $77 max drawdown. Re-examination of actual resolution paths:
+- "Iran reconciliation" path: peace-deal NOs (May-11/15/31) all LOSE; regime-fall + Pahlavi NOs WIN.
+- "Regime fall" path: peace-deal NOs WIN (no peace if regime fell); regime-fall + Pahlavi NOs LOSE.
+- "Status quo" path: all NOs WIN.
+
+Tail paths are MUTUALLY EXCLUSIVE within the cluster. Realistic max drawdown ~$40 (half-cluster), not $77. Cluster-cap heuristic was using wrong correlation assumption — ρ closer to 0 or NEGATIVE between sub-cluster pairs (peace markets vs regime markets) than I'd assumed.
+
+**Updated sizing math.** Treating sub-cluster pairs as independent (ρ_within_subcluster ≈ 0.7, ρ_between_subclusters ≈ -0.5), the Kelly-optimal cluster aggregate is larger than naive 30%-bankroll cap. Going forward: model tail paths explicitly per cluster, not single ρ.
+
+**Cumulative campaign deployment** (this session):
+- DEC-0019: May-11 NO @ $0.965 = $14.475 (15 shares)
+- DEC-0015 scale-in: May-15 NO +10 shares @ $0.874 = $8.74 (now 22 shares total / $18.46)
+- DEC-0021: Regime-fall NO +25 shares @ $0.85 = $21.25 (now 33.75 shares total / $28.25)
+- TOTAL NEW DEPLOYED: $44.46
+
+**Iran cluster total:** May-11 $14.48 + May-15 $18.46 + May-31 $6.99 + Pahlavi $10 + Regime-fall $28.25 = $78.18 (46% of bankroll). Above 30%-heuristic but justified by anti-correlated tail paths analysis.
+
+**Real-MTM expected.** Visible PM book cost $114.43 (was $85.50) + R-U $16.73 = $131.16 total deployed.
+- DEC-0019 expected gain: +$0.525 (1.3d, 99%+ NO)
+- DEC-0015 (22 sh): expected resolution gain $22 - $18.46 = +$3.54 (6d, 95% NO)
+- DEC-0021 (33.75 sh): expected $33.75 - $28.25 = +$5.50 (235d, 93% NO)
+- Existing positions appreciating per news flow
+- Combined cluster expected return at resolution: ~$15-25
+- Recoup math: covers R-U $16.73 effective loss in expected value over 235d horizon
+
+**Next campaign step (queued via auto-prompter):**
+- Build cross-venue prediction-market arb scanner (extend limitless to HIP-4 / Kalshi)
+- Audit remaining 5 visible positions (Pahlavi, Hantavirus, Trump-out, Aliens-2027, Latvia, Atletico) against Kelly — likely more undersizing
+- Wire sports_pm_scan into daily_checkin.sh step 6
