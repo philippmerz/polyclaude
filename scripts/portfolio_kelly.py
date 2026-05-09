@@ -85,6 +85,13 @@ def main() -> int:
     p.add_argument("--wallet", default="/home/philipp/secrets/wallet.json")
     p.add_argument("--check-uma", action="store_true",
                    help="Fetch umaResolutionStatus per market (slow). Default skip.")
+    p.add_argument("--constrained", action="store_true",
+                   help="Apply portfolio budget constraint: scale per-position Kelly so "
+                        "total deployment <= bankroll. Per-position Kelly summed across high-edge "
+                        "book typically exceeds bankroll (>200%); --constrained scales each by "
+                        "(bankroll / sum_kelly) so allocation respects budget while preserving "
+                        "the ranking. This is the closed-form CONSTRAINED-PORTFOLIO-KELLY: "
+                        "maximize E[log(B + Σ wᵢ Δᵢ)] s.t. Σ wᵢ ≤ 1.")
     args = p.parse_args()
 
     wallet_addr = json.load(open(args.wallet))["address"]
@@ -155,6 +162,21 @@ def main() -> int:
             "title": title[:50],
             "edge_pp": round((p_win - mark) * 100, 2),
         })
+
+    # If --constrained, rescale per-position Kelly$ so total <= bankroll.
+    # Closed-form portfolio Kelly under budget constraint when correlations are
+    # already absorbed via per-position rho-discount: scale each position's
+    # absolute Kelly$ by ratio (bankroll / total_kelly) when total > bankroll.
+    if args.constrained:
+        actives_pre = [r for r in rows if r["status"] == "ACTIVE" and r["kelly_dollar"] is not None]
+        total_unconstrained = sum(r["kelly_dollar"] for r in actives_pre)
+        if total_unconstrained > args.bankroll:
+            scale = args.bankroll / total_unconstrained
+            for r in rows:
+                if r["status"] == "ACTIVE" and r["kelly_dollar"] is not None:
+                    r["kelly_dollar"] = round(r["kelly_dollar"] * scale, 2)
+                    r["delta"] = round(r["kelly_dollar"] - r["cost"], 2)
+            print(f"# constrained: scaled by {scale:.4f} (= {args.bankroll}/{total_unconstrained:.2f})", file=sys.stderr)
 
     rows.sort(key=lambda r: r.get("delta") or -9e9, reverse=True)
 

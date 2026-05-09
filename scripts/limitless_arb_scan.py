@@ -152,6 +152,40 @@ def _distinctive_words(title: str) -> set[str]:
     return {w.lower() for w in cleaned.split() if len(w) > 2 and w.lower() not in _STOPWORDS}
 
 
+def _proper_nouns(title: str) -> set[str]:
+    """Extract proper nouns (capitalized non-leading words) from a title.
+
+    Used to require entity-name overlap on matches: 'Will Neymar play in the
+    2026 FIFA WC' vs 'Will Lionel Messi play in the 2026 FIFA WC' share many
+    distinctive words (play, fifa, world, cup, 2026) but DIFFERENT subjects.
+    Without proper-noun overlap, fuzzy_match generates a false positive.
+
+    Strips leading interrogative ("Will", "Does", "Is") and common
+    framework tokens. Returns lowercased.
+
+    Lesson source: 2026-05-09 limitless_arb_scan surfaced 'Neymar play 2026 WC'
+    matched to 'Messi play 2026 WC' as +68% net-edge — both shared FIFA/WC/2026
+    distinctive words but DIFFERENT player names.
+    """
+    import re as _re
+    leading_skip = {"Will", "Does", "Is", "Can", "Has", "Did", "Should", "Would"}
+    framework_skip = {"FIFA", "WC", "World", "Cup", "Olympics", "League", "Open",
+                      "Premier", "Series", "Final", "Cup", "Day", "Year",
+                      "Q1", "Q2", "Q3", "Q4", "USA", "US", "UK", "EU"}
+    # Find capitalized word runs (1+ consecutive Cap-prefixed tokens)
+    out: set[str] = set()
+    tokens = _re.findall(r"[A-Z][A-Za-z]+", title)
+    for i, t in enumerate(tokens):
+        if i == 0 and t in leading_skip:
+            continue
+        if t in framework_skip:
+            continue
+        if len(t) <= 2:
+            continue
+        out.add(t.lower())
+    return out
+
+
 def _numeric_tokens(title: str) -> set[str]:
     """Extract numeric tokens (thresholds, dates, prices) from a title.
 
@@ -222,6 +256,7 @@ def index_polymarket(markets: list[dict]) -> list[dict]:
         idx.append({
             "words": _distinctive_words(q),
             "nums": _numeric_tokens(q),
+            "propers": _proper_nouns(q),
             "yes_price": yes_price,
             "question": q,
             "slug": m.get("slug") or "",
@@ -295,6 +330,7 @@ def fuzzy_match(title: str, pm_index: list[dict],
     """
     lim_words = _distinctive_words(title)
     lim_nums = _numeric_tokens(title)
+    lim_propers = _proper_nouns(title)
     if len(lim_words) < min_overlap:
         return None
 
@@ -302,6 +338,7 @@ def fuzzy_match(title: str, pm_index: list[dict],
     for entry in pm_index:
         pm_words = entry["words"]
         pm_nums = entry["nums"]
+        pm_propers = entry.get("propers", set())
         common = lim_words & pm_words
         if len(common) < min_overlap:
             continue
@@ -313,9 +350,22 @@ def fuzzy_match(title: str, pm_index: list[dict],
         # general market, Limitless splits by threshold). Skip.
         elif lim_nums and not pm_nums:
             continue
+        # PROPER-NOUN OVERLAP: if EITHER title has proper nouns, require at
+        # least one common entity. Asymmetric (one has names, other doesn't)
+        # → likely different markets. Lesson source: 2026-05-09 +68% false-
+        # positive (Neymar vs Messi same template, then Neymar vs USA same
+        # template) — both passed weaker overlap rule. Strict rule: any-side
+        # has-propers AND no overlap → reject.
+        if (lim_propers or pm_propers):
+            if not (lim_propers & pm_propers):
+                continue
         union = lim_words | pm_words
         jaccard = len(common) / len(union) if union else 0
-        if jaccard < 0.35:
+        # Bumped 0.35 -> 0.55 to reject same-subject-different-verb matches:
+        # "Cristiano Ronaldo announce retirement 2026" vs "Cristiano Ronaldo
+        # win Ballon d'Or 2026" share {cristiano,ronaldo,2026} (jaccard 0.43)
+        # but ask different questions. 0.55 requires more semantic alignment.
+        if jaccard < 0.55:
             continue
         if best is None or (len(common), jaccard) > (best[0], best[1]):
             best = (len(common), jaccard, entry)

@@ -1977,3 +1977,29 @@ Going forward: portfolio_kelly will be extended to compute the budget-constraine
 Decision: skip the tiny $3.54 deploy this turn. Instead bank the constrained-Kelly insight, ship the tool, and let the auto-prompter pick up next iteration which can address the Regime-fall over-allocation issue (e.g., scale BACK regime-fall by $8 to free capital for higher-edge positions).
 
 **Commit:** portfolio_kelly.py + priors + this journal entry.
+
+---
+
+## 2026-05-09 ~19:10 UTC — Campaign Step 5: Constrained-Kelly + arb scanner fixes
+
+**A. portfolio_kelly --constrained flag.** Added closed-form budget-bound:
+- Sum per-position Kelly$, if total > bankroll, scale all by (bankroll / total)
+- Yields exactly 100% bankroll utilization at the optimal allocation
+- Surfaces over/under-deployed positions correctly (Regime-fall now correctly shows -$7.77 over-allocation post-scale-in)
+
+**B. limitless_arb_scan false-positive fixes.** Two issues:
+1. Player-name false positive: "Will Neymar play 2026 WC" matched "Will Messi play 2026 WC" because both shared distinctive words (play/world/cup/2026) + numeric (2026). Fix: require proper-noun overlap (entity names) — _proper_nouns() function extracts capitalized non-leading non-framework tokens; if either side has propers, require at least one common.
+2. Same-subject-different-verb false positive: "Cristiano Ronaldo announce retirement 2026" matched "Cristiano Ronaldo win Ballon d'Or 2026" — proper nouns overlapped (cristiano/ronaldo) but questions differ. Fix: bumped Jaccard threshold 0.35 → 0.55 to require more semantic alignment.
+
+After fixes: 4 real subjective-resolution arbs surface (Reya FDV $200M, Ostium Dec 31, Pacifica Dec 31, Theo June 30), no obvious-mismatch false positives.
+
+**Subjective-resolution arbs** (token-launch markets) carry venue-disagreement risk: PM and Limitless might rule differently on "did the token actually launch?" Worth executing only when criteria explicitly match between venues. Currently no Limitless wallet set up, so deferred to Phase 2 of arb infrastructure.
+
+**Observation: real cross-venue arb opportunities are mostly subjective-resolution.** Mechanical-resolution markets (sports, crypto-price-by-date, election outcomes) tend to be efficient between venues. Subjective resolution markets where venues might rule differently is where pricing diverges — but executing requires venue-criteria-match analysis on top of price comparison.
+
+**Next campaign step (queued):** 
+- Bookie-consensus integration for sports_pm_scan (haiku WebFetch on ESPN/etc per market) — biggest mid-market alpha angle
+- Limitless wallet setup to enable arb execution (operator-touching: requires fund routing decision)
+- Or: refine sizing on under-deployed Trump-out NO ($26 optimal vs $7 current per constrained Kelly)
+
+**State.** pUSD $3.57 remaining. Aave Base $4.52 leftover. Bankroll utilization 66.6% cost basis; Kelly-optimal 100% post-constraint.
