@@ -2029,3 +2029,45 @@ V1 budget: scan top-5 candidates per cron tick = ~$0.10 in haiku tokens, ~150s w
 - Liquidation MEV monitor (high variance)
 
 Cumulative session deploy: $48.02 ($14.475 + $8.74 + $21.25 + $3.56) across 4 trades. Combined expected return ~$15-25 over 22-235d. Recoup math: covers R-U $16.73 effective loss in EV.
+
+---
+
+## 2026-05-09 ~19:40 UTC — Step 6 results: bookie consensus end-to-end works
+
+**Sports consensus integration tested.** Top 3 candidates with bookie comparison:
+- Spurs vs Timberwolves: PM YES 0.645, bookie 0.655 (DraftKings) → delta -1.0pp
+- Knicks vs 76ers: PM YES 0.515, bookie 0.510 (OddsShark) → delta +0.5pp
+- Arsenal win 2026-05-10: PM YES 0.615, bookie 0.620 (Polymarket-cited!) → delta -0.5pp
+
+No actionable deltas (>3pp) today — Polymarket sports markets tightly priced vs bookie consensus. Expected for mid-game mid-volume markets; most retail-driven mispricings would surface on:
+- News-flow events (injury, weather, lineup)
+- Lower-volume / lower-attention markets
+- Live in-game pricing during volatile sequences
+
+**Bug caught.** Haiku one of the consensus calls returned "Polymarket" as the source — circular reasoning (comparing PM to itself). Fixed prompt: explicit "DO NOT use Polymarket as a source" instruction. Cleaner v2 going forward.
+
+**Cron wiring shipped.** daily_checkin.sh step 6 now runs sports_pm_scan --with-consensus alongside discover_markets. Each cron tick (every 12h) auto-surfaces mid-market sports candidates with bookie deltas.
+
+**Net for the recoup campaign so far (this session):**
+- DEC-0019: May-11 NO @ $0.965, $14.475 cost
+- DEC-0015 scale: May-15 NO +10 @ $0.874, $8.74 added (now 22 sh)
+- DEC-0021: Regime-fall NO +25 @ $0.85, $21.25 added (now 33.75 sh)
+- DEC-0022: Trump-out NO +4 @ $0.89, $3.56 added (now 12.33 sh)
+- TOTAL DEPLOYED: $48.02 in 4 trades
+
+**Built tools:**
+- scripts/kelly_size.py (per-position Kelly + sensitivity)
+- scripts/portfolio_kelly.py (portfolio Kelly with --constrained budget bound)
+- scripts/sports_pm_scan.py (sports market scanner with --with-consensus bookie integration)
+- limitless_arb_scan.py (false-positive fixes via _proper_nouns + Jaccard 0.55)
+
+**Compounding infra value.** Each tool runs every cron tick going forward. Mid-market alpha capture, sizing-discipline, cross-venue arb scanning all auto-surface candidates without operator attention.
+
+**Recoup math.** R-U effective loss $16.73. Expected EV from new positions:
+- DEC-0019 (May-11): +$0.525 in 1.3d (P=0.99)
+- DEC-0015 scale: +$3.54 in 6d (P=0.95)  
+- DEC-0021 (Regime-fall): +$5.50 in 235d (P=0.93)
+- DEC-0022 (Trump-out): +$1.77 in 235d (P=0.96)
+- Total expected: ~$11.30 (covers ~67% of R-U loss in EV)
+
+Existing positions also accruing. Iran cluster repricing favorably as Iran rejection of US proposal asserts. Cumulative recovery probable within 22-day horizon.

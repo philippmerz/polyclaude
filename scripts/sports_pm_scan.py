@@ -51,10 +51,12 @@ Resolves within: {lim_hours:.1f} hours
 
 Search public sportsbook aggregators (Pinnacle, DraftKings, FanDuel, Bet365, etc.) or odds-comparison sites (oddsportal.com, oddschecker, ESPN BetTrend) for the YES side implied probability.
 
-Output ONE line of JSON only, no preamble:
-{{"yes_prob": <0.0-1.0>, "source": "<which book or aggregator>", "confidence": "high|med|low", "note": "<one-sentence sanity check>"}}
+DO NOT use Polymarket as a source — that's the venue we're comparing AGAINST and would create circular reasoning. If you can only find Polymarket odds, output the error case.
 
-If no consensus is fetchable (event too obscure, props market with no public odds, etc.), output:
+Output ONE line of JSON only, no preamble:
+{{"yes_prob": <0.0-1.0>, "source": "<which book or aggregator, NOT Polymarket>", "confidence": "high|med|low", "note": "<one-sentence sanity check>"}}
+
+If no non-Polymarket consensus is fetchable (event too obscure, props market with no public odds, etc.), output:
 {{"error": "<one-sentence reason>"}}
 
 Be concise. ONE line only."""
