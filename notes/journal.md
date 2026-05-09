@@ -1736,3 +1736,22 @@ Strict reading "ceasefire by May 31" = sustained formal cessation. A 3-day tacti
 **Tier-2 agent filter directional miscalls now 2 in 24h.** Pentagon UFO yesterday (read as YES-bullish, was NEGATIVE), today's Project-Freedom-pause (read as YES-imminent, was Iran-rejecting). Both got caught at cron-tick re-evaluation. The pattern: the filter reasons from headline framing without WebFetching the body, missing critical counter-signal (Pentagon's "no aliens" statement; Iran's "wish-list" rejection). Mitigation banked: for CRITICAL impacts on positions in held book, the filter could be enhanced to require WebFetch of article body before tagging CRITICAL. ~30 LOC change to news_watcher.py. Bounded; compounding (every CRITICAL-tagged alert avoids miscall). Adding to backlog.
 
 **Net.** Verification → HOLD → no trade. Step-wise improvement banked for backlog.
+
+---
+
+## 2026-05-09 ~14:00 UTC — 14:00 cron tick (light maintenance)
+
+**State.** 9 PM positions visible clear hurdle, 0 below, 0 redeemable. Russia-Ukraine NO 25 shares on-chain intact (data-api mark 0.001 = de-indexed; new drawdown guard correctly suppressed false-positive alert).
+
+**Material moves since 02:00 UTC:**
+- May-15 NO: 0.855 → 0.874 (+1.9pp), +7.90% on cost
+- May-31 NO: 0.705 → 0.755 (+5.0pp), +12.69% on cost
+- Latvia NO: 0.870 → 0.890 (+2.0pp), +7.23% on cost
+
+Market correctly pricing in Iran's "wish-list" rejection of US proposal (verified at 09:35 UTC). The headline "Trump pause Project Freedom" framing pushed marks DOWN briefly (overnight); the substance (Iran rejected, demands reparations) reasserted and marks recovered above prior levels.
+
+**Discover_markets.** 1 hurdle-clearer surfaced (Hantavirus 2026 — existing position). No new entries.
+
+**Total real MTM estimate.** Visible $71.88 + Russia-Ukraine fair-value est $23.75 (at 0.95 strict-criteria fair) = ~$95.63 vs cost $85.50 = +11.85% real return. Data-api MTM display of -15.92% is misleading due to de-indexed mark. Note for future: when communicating P&L to operator via Telegram, use real-MTM with de-indexed positions estimated at fair value, not data-api mark.
+
+**Net.** Routine tick. No actions. Backlog tier-2-filter-WebFetch-enhancement still pending; all small-LOC compounding items shipped. Idle on followup loop (20min cadence active).
