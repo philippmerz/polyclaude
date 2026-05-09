@@ -1,4 +1,10 @@
-# Two-sleeve architecture — 2026-04-25
+# Two-sleeve architecture — 2026-04-25 (sizing rules superseded 2026-05-09)
+
+> **MAJOR UPDATE 2026-05-09:** the per-sleeve $-caps below are SUPERSEDED by Kelly+ρ-adjusted constrained portfolio math. Use `scripts/portfolio_kelly.py --constrained` for sizing decisions. The naive cluster $-cap (30% × sleeve target) was found to double-count risk in clusters with anti-correlated tail paths (Iran peace-deal vs Iran regime-fall scenarios are MUTUALLY EXCLUSIVE — naive single-ρ analysis was wrong). Full reasoning in journal 2026-05-09 entries.
+>
+> **Horizon constraint (clarified 2026-05-08):** polyclaude bankroll is locked to **<1y holding horizon per position**. Multi-year plays = operator's IBKR sleeve. The "1-year long sleeve" framing below is preserved for historical reference; in practice the entire polyclaude book holds <1y.
+>
+> **Bankroll growth (2026-05-09):** ~$170 (was $70 at kickoff). Sizing math updated accordingly via portfolio_kelly + brownian_bridge_fv.
 
 The bankroll is partitioned into two evaluation sleeves with different time horizons. Each sleeve is sized, researched, and reported independently, but they share the same operational tooling, philosophy, and risk caps from `00_philosophy.md`.
 

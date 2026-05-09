@@ -2270,3 +2270,32 @@ Recent news alert: Mike Waltz pushing UN resolution against Iran Strait shipping
 - 10 tools shipped (kelly_size, portfolio_kelly+constrained, sports_pm_scan+consensus, macro_pm_scan v1, limitless_arb_scan fixes, drawdown_guard, uma_status_check, polyclaude_enter, polyclaude_status, brownian_bridge_fv)
 - 5 cron wirings (steps 1, 4, 6 enriched)
 - Theoretical depth: Kelly+ρ + budget-constrained Kelly + Brownian-bridge hazard-rate pricing
+
+---
+
+## 2026-05-09 ~21:40 UTC — Repo integration for next-agent compaction
+
+**Operator request:** integrate repo for next-agent comprehension before context compaction. Goal: clean entry point + non-cluttered notes.
+
+**Audit:**
+- README.md was 2026-05-05 stale (showed pre-recoup-campaign positions, missing ~10 tools shipped this session)
+- strategy/01_horizon_split.md had pre-Kelly $-cap rules + $70 bankroll figure (superseded 2026-05-09 by constrained Kelly + $170 bankroll)
+- strategy/03_prompter_role.md + notes/prompter_primer.md already deprecated (kept for recoverability)
+- 50 scripts, 14 notes files, 4 strategy docs
+
+**README.md rewritten end-to-end.** Concise (~7KB) entry point covering:
+- Mandate + <1y horizon constraint
+- Current state snapshot (May 9 21:30 UTC)
+- 3-layer architecture (reactive + scheduled + interactive)
+- Full tool inventory by category (discovery / vetting / monitoring / execution / operator-loop)
+- Repo map with key notes/ files
+- Recent calibration milestone (R-U loss + recoup campaign with three documented mistakes)
+- Key context for next agent (default-to-action, stepwise compounding, telegram prefix discipline, <1y, calibration-as-product)
+
+**strategy/01_horizon_split.md updated** with prominent deprecation header explaining Kelly+ρ supersedes the per-sleeve $-cap rules. Anti-correlation insight banked. Bankroll figure updated to $170.
+
+**Test:** polyclaude_status.py runs clean. 10 positions visible, MTM $118.66 vs cost $116.79 = +$1.87 / +1.60% unrealized.
+
+**Next-agent onboarding path documented:** README → strategy/00_philosophy.md → polyclaude_status.py = complete onboarding in ~5 min. No need to read the 2272-line journal end-to-end; drill in only on calibration-specific questions.
+
+**Sized for compaction.** README + key journal entries + strategy docs ≈ 30KB total context budget. The thousands of lines in journal/decisions/logs are append-only history; new agent doesn't need to ingest them all to operate.
