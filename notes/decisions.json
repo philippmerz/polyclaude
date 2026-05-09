@@ -1,5 +1,5 @@
 {
-  "next_id": 20,
+  "next_id": 21,
   "decisions": [
     {
       "id": 1,
@@ -366,6 +366,28 @@
         "bond-like-fade",
         "v2",
         "recoup-campaign"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 20,
+      "timestamp": "2026-05-09T17:35:31Z",
+      "type": "size_change",
+      "thesis": "DEC-0015 May-15 Iran-peace NO scale-in: 10 shares @ $0.874 added. Position now 22 shares / $18.46. Kelly+\u03c1-adjusted half-Kelly says optimal $54; was at 18% of optimal, now 34%. Cluster-cap heuristic superseded by Kelly+\u03c1 math.",
+      "confidence": "high",
+      "prediction": "Resolves NO May 15. Iran wish-list rejection makes signing in 6d implausible.",
+      "size_usd": 8.74,
+      "resolution_at": "2026-05-15",
+      "tags": [
+        "polymarket",
+        "iran-peace",
+        "bond-like-fade",
+        "scale-in",
+        "v2",
+        "recoup-campaign",
+        "kelly-sized"
       ],
       "outcome": null,
       "calibration_delta": null,
