@@ -106,6 +106,20 @@ def main() -> int:
                 summary.append(line)
         print("\n".join(summary) if summary else out[-1500:])
 
+        # 5b. Brownian-bridge fair-value
+        print("\n## Brownian-bridge fair-value (time-decay-adjusted)")
+        out = run_script(["scripts/brownian_bridge_fv.py"], timeout=30)
+        # Show only TRIM/SCALE_UP summary
+        lines = out.split("\n")
+        summary = []
+        capture = False
+        for line in lines:
+            if "TRIM candidates" in line or "SCALE_UP candidates" in line or "(no TRIM" in line or "(no SCALE_UP" in line:
+                capture = True
+            if capture:
+                summary.append(line)
+        print("\n".join(summary) if summary else "(see brownian_bridge_fv.py for details)")
+
     # 6. News alerts (last 6h)
     print("\n## News alerts (last 6h)")
     cutoff = (datetime.datetime.utcnow() - datetime.timedelta(hours=6)).isoformat()

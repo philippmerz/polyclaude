@@ -2218,3 +2218,55 @@ Recent news alert: Mike Waltz pushing UN resolution against Iran Strait shipping
 - Liquidation MEV → highly competitive, deferred
 
 **Recoup status: 80%+ achieved in EV.** The systematic infrastructure was the actual product — it captures alpha autonomously going forward, not just for this session.
+
+---
+
+## 2026-05-09 ~21:25 UTC — Campaign Step 11: Brownian-bridge fair-value pricing
+
+**Built `scripts/brownian_bridge_fv.py`.** First-principles pricing model for bond-like Polymarket positions.
+
+**Math:**
+- Bond-like NO market resolves YES with hazard rate λ per day (constant under no-info-flow assumption)
+- P(NO wins by horizon T) = exp(-λT) = my static p_initial
+- λ = -ln(p_initial) / T
+- Fair-mark at time t given survived to t: fair_mark(t) = exp(-λ(T-t)) = p_initial^((T-t)/T) = p_initial^(1-t/T)
+- Properties: fair_mark(0) = p_initial; fair_mark(T) = 1.0; monotonically increasing as t→T
+
+**For each held position, computes:**
+- t/T = elapsed-fraction (from decisions.json entry timestamp + resolution date)
+- fair_BB = p_initial^(1-t/T) (Brownian-bridge fair-mark)
+- delta_pp = (current_mark - fair_BB) × 100
+- Verdict: TRIM if delta > +2pp, SCALE_UP if delta < -3pp, else HOLD
+
+**Test run output (ALL 9 active positions = SCALE_UP per Brownian-bridge):**
+| Slug | mark | p | t/T | fair_BB | Δ | verdict |
+|---|---|---|---|---|---|---|
+| May-15 NO | 0.853 | 0.95 | 0.30 | 0.965 | -11.2pp | SCALE_UP |
+| May-31 NO | 0.725 | 0.78 | 0.30 | 0.836 | -11.1pp | SCALE_UP |
+| Regime-fall NO | 0.835 | 0.93 | 0.04 | 0.933 | -9.8pp | SCALE_UP |
+| Trump-out NO | 0.885 | 0.96 | 0.04 | 0.962 | -7.7pp | SCALE_UP |
+| Latvia NO | 0.890 | 0.92 | 0.57 | 0.965 | -7.5pp | SCALE_UP |
+| Aliens-2027 NO | 0.825 | 0.88 | 0.04 | 0.880 | -5.5pp | SCALE_UP |
+| Pahlavi NO | 0.920 | 0.97 | 0.04 | 0.971 | -5.1pp | SCALE_UP |
+| Hantavirus NO | 0.921 | 0.97 | 0.01 | 0.970 | -5.0pp | SCALE_UP |
+| May-11 NO | 0.961 | 0.99 | 0.30 | 0.993 | -3.2pp | SCALE_UP |
+
+**Insight: Brownian-bridge model says ALL positions are MORE underpriced than static-Kelly suggests** — because mark hasn't drifted up with expected time-decay. Either (a) market correctly skeptical of my P estimates, or (b) market slow to incorporate time-decay drift.
+
+**Comparison with portfolio_kelly --constrained:**
+- portfolio_kelly: budget-constrained per-position weights → some positions at-or-over budget
+- brownian_bridge_fv: per-position fair-value vs current mark → all positions undervalued
+- These answer DIFFERENT questions: "where to deploy next $" vs "is this position fairly priced"
+- Combined view: book is broadly underpriced, but capital-constrained on which to scale
+
+**Capital state:** $0.86 pUSD remaining. Cannot execute SCALE_UP signals without bridging. Iran cluster appreciation will resolve some positions soon (May-11 in 1.5d; May-15 in 6d; May-31 in 22d) freeing capital for redeployment.
+
+**Wired into polyclaude_status.py.** Each status check now reports both Kelly and Brownian-bridge views.
+
+**Theoretical note:** the constant-hazard assumption is a SIMPLIFICATION. Real-world catalysts (FOMC, deadlines, news cycles) cluster the hazard rate non-uniformly. v2 could model heterogeneous hazard rates from catalyst_check.py output. But constant-λ is a sound first-order approximation and surfaces the right ranking.
+
+**Cumulative session metrics:**
+- 4 trades opened/scaled = $48.02 deployed
+- 10 tools shipped (kelly_size, portfolio_kelly+constrained, sports_pm_scan+consensus, macro_pm_scan v1, limitless_arb_scan fixes, drawdown_guard, uma_status_check, polyclaude_enter, polyclaude_status, brownian_bridge_fv)
+- 5 cron wirings (steps 1, 4, 6 enriched)
+- Theoretical depth: Kelly+ρ + budget-constrained Kelly + Brownian-bridge hazard-rate pricing
