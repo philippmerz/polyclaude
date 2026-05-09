@@ -1691,3 +1691,26 @@ Strict reading "ceasefire by May 31" = sustained formal cessation. A 3-day tacti
 **Tooling note.** Public RPC `polygon-rpc.com` returned stale state (0 shares) for the on-chain check. `polygon.drpc.org` returned correct state (25 shares). Bank for future: use multiple RPCs cross-check when state seems anomalous. Not building a layer for it now (rare anomaly + manual cross-check is cheap), but flagging.
 
 **Net.** Calendar trigger executed correctly; thesis confirmed intact; position cannot be accelerated. Default hold-to-resolution. No code change needed.
+
+---
+
+## 2026-05-09 ~02:00 UTC — Saturday cron tick (light)
+
+**State.** PM 9 positions visible to data-api (DEC-0018 still de-indexed; 25 NO confirmed on-chain via drpc.org). Cost $68.77 + DEC-0018 $16.73 = total $85.50. MTM $70.03 visible + ~$20 implied DEC-0018 = ~$90. PM sleeve liquid: USDC.e $5.00 + USDC $0.10 + MATIC $51.6 gas. Aave Base reserve $29.52. Crypto sleeve dust on Arb/Base/Polygon.
+
+**Step 3 — hurdle scan.** 9/9 clear, 0 below. Same as 2h prior.
+
+**Step 5 — redeem.** 0/9 redeemable.
+
+**Step 6 — discover_markets.** 3 candidates clear hurdle:
+- aliens-2027 NO @ 0.845 (existing position)
+- hantavirus-2026 NO @ 0.911 (existing position)
+- aliens-by-May-31 NO @ 0.974 (NEW, +50% APY 21.9d)
+
+**Decision on aliens-by-May-31 NO: SKIP.** Tiny absolute return ($5 → ~$0.13 over 22d net of friction), redundant correlation with existing aliens-2027 NO, no incremental thesis. Per stepwise-compounding rule: small bounded improvements should compound across the system, not tiny trades duplicating existing edge.
+
+**Step 10 — methodology_stress_test prospective_resolve.** 1/20 markets resolved (unchanged from prior week). Variant scoring meaningless at N=1; full data by June 30.
+
+**Step 11 — commit.** Pending journal push at end.
+
+**Net.** Routine maintenance tick. No new entries, no closes, no escalations. DEC-0018 monitoring continues (CLOB still de-indexed). Followup cadence reverted to 20min default.
