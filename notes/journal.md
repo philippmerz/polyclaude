@@ -1714,3 +1714,25 @@ Strict reading "ceasefire by May 31" = sustained formal cessation. A 3-day tacti
 **Step 11 — commit.** Pending journal push at end.
 
 **Net.** Routine maintenance tick. No new entries, no closes, no escalations. DEC-0018 monitoring continues (CLOB still de-indexed). Followup cadence reverted to 20min default.
+
+---
+
+## 2026-05-09 ~09:35 UTC — CRITICAL alert verification: Trump Iran "progress" overstated
+
+**Alert.** BBC Middle East 09:28 UTC: "Trump says US to pause operation to guide vessels through Strait of Hormuz." Tier-2 agent filter tagged CRITICAL on iran-peace-may15 + iran-peace-may31, citing "Trump explicitly citing progress toward a deal" + "thesis-invalidating risk."
+
+**Verification (claude -p haiku web search).** Substantive facts:
+1. Trump's "Great Progress... Complete and Final Agreement" statement was from May 5, not today. Today's BBC piece is follow-up reporting.
+2. NOT a signed deal. 14-point MOU being negotiated. "Closest parties have been since war began" but "nothing agreed."
+3. No specific timeline; pause "for a short period."
+4. **Iranian response: REJECTED initially.** Lawmaker Rezaei: "more of an American wish-list than a reality." Demands include war reparations, US troop withdrawal, frozen-asset release, future-attack guarantees.
+
+**Strict-criteria analysis.**
+- **May 15 NO @ 0.855 (6d):** Resolution requires FORMAL SIGNED PERMANENT DEAL. With Iran demanding reparations + troop withdrawal + asset release as preconditions, formal signing in 6 days is implausible. Updated P(YES) 5-10%. Market 14.5% YES. NO edge marginal but intact. HOLD.
+- **May 31 NO @ 0.705 (21d):** 21 days is more time but Iran's demands are major sticking points. Updated P(YES) 15-25%. Market 29.5% YES. NO mildly underpriced. Marginal APY hold-to-resolve: 728%. HOLD.
+
+**Decision: HOLD both positions.** Agent filter overstated severity (consistent with yesterday's Pentagon UFO false-bullish read pattern). Cron step-3 re-evaluation caught it as designed — filter precision-recall trade biases toward recall, the trader's job is precision.
+
+**Tier-2 agent filter directional miscalls now 2 in 24h.** Pentagon UFO yesterday (read as YES-bullish, was NEGATIVE), today's Project-Freedom-pause (read as YES-imminent, was Iran-rejecting). Both got caught at cron-tick re-evaluation. The pattern: the filter reasons from headline framing without WebFetching the body, missing critical counter-signal (Pentagon's "no aliens" statement; Iran's "wish-list" rejection). Mitigation banked: for CRITICAL impacts on positions in held book, the filter could be enhanced to require WebFetch of article body before tagging CRITICAL. ~30 LOC change to news_watcher.py. Bounded; compounding (every CRITICAL-tagged alert avoids miscall). Adding to backlog.
+
+**Net.** Verification → HOLD → no trade. Step-wise improvement banked for backlog.
