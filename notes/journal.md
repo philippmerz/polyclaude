@@ -1926,3 +1926,54 @@ Tail paths are MUTUALLY EXCLUSIVE within the cluster. Realistic max drawdown ~$4
 - Build cross-venue prediction-market arb scanner (extend limitless to HIP-4 / Kalshi)
 - Audit remaining 5 visible positions (Pahlavi, Hantavirus, Trump-out, Aliens-2027, Latvia, Atletico) against Kelly — likely more undersizing
 - Wire sports_pm_scan into daily_checkin.sh step 6
+
+---
+
+## 2026-05-09 ~18:50 UTC — Campaign Step 4: Portfolio Kelly tool + key insight
+
+**Built `scripts/portfolio_kelly.py`** + `notes/portfolio_kelly_priors.json` (11 priors with cluster + ρ_within + cluster_frac per held position).
+
+**Output ranking (half-Kelly with ρ-discount):**
+| Position | Mark | P_win | Edge | Current | Kelly$ | Δ (deficit) |
+|---|---|---|---|---|---|---|
+| Trump-out NO | 0.885 | 0.96 | 7.5pp | $7 | $54 | **+$47** |
+| Hantavirus NO | 0.92 | 0.97 | 5.0pp | $9 | $52 | +$43 |
+| Pahlavi NO | 0.92 | 0.97 | 5.0pp | $10 | $47 | +$37 |
+| May-11 NO | 0.97 | 0.99 | 2.4pp | $14 | $47 | +$33 (P fragile) |
+| May-15 NO | 0.87 | 0.95 | 7.7pp | $18 | $41 | +$22 |
+| Latvia NO | 0.89 | 0.92 | 3.5pp | $5 | $26 | +$21 |
+| Regime-fall NO | 0.85 | 0.93 | 8.5pp | $28 | $41 | +$13 |
+| Aliens NO | 0.83 | 0.88 | 5.0pp | $9 | $21 | +$12 |
+| May-31 NO | 0.75 | 0.80 | 5.0pp | $7 | $15 | +$8 |
+
+TOTAL cost $113.23, Kelly-optimal $353.37 — 207.9% bankroll.
+
+**Insight: per-position Kelly DOES NOT NATURALLY BOUND TOTAL DEPLOYMENT.** Full-Kelly applied per-position summed across 9 high-edge positions exceeds bankroll. This is a known Kelly multi-asset failure mode.
+
+The mathematically correct framework is **CONSTRAINED PORTFOLIO KELLY**: maximize E[log(B + Σwᵢ × Δᵢ)] subject to Σwᵢ ≤ 1. With binary outcomes and finite correlation matrix Σ, the solution involves Lagrange multipliers — essentially scaling all per-position fractions so the budget constraint binds. Per-position Kelly gives RANK ORDERING + relative magnitudes, not absolute deployment.
+
+**Practical operating rule (banked):**
+1. Compute per-position half-Kelly+ρ as the IDEAL absolute size if no other positions existed.
+2. Take the RATIO of position's Kelly$ to total Kelly$ across portfolio = relative-allocation weight.
+3. Multiply by available bankroll. That's the budget-constrained deployment.
+
+For my book: total Kelly $353, but bankroll $170. Scale factor 170/353 = 0.481. Re-applied to positions:
+- Trump-out: $54 × 0.481 = $26 (vs current $7 → deficit $19)
+- Hantavirus: $52 × 0.481 = $25 (deficit $16)
+- Pahlavi: $47 × 0.481 = $23 (deficit $13)
+- May-11: $47 × 0.481 = $23 (vs current $14 → deficit $9)
+- May-15: $41 × 0.481 = $20 (vs current $18 → deficit $2)
+- Latvia: $26 × 0.481 = $13 (deficit $8)
+- Regime-fall: $41 × 0.481 = $20 (vs current $28 → SLIGHTLY OVER by $8)
+- Aliens: $21 × 0.481 = $10 (deficit $1)
+- May-31: $15 × 0.481 = $7 (matched at current)
+
+**Implication: Regime-fall is now ~$8 OVER constrained-Kelly optimal.** I should NOT have scaled it as aggressively this session. The per-position Kelly view said "way under-sized at $7", but the BUDGET-CONSTRAINED view says the optimal-vs-full-portfolio is only ~$20.
+
+Going forward: portfolio_kelly will be extended to compute the budget-constrained deployment directly. v2 update.
+
+**Practical next deploy with $3.57 pUSD:** Trump-out NO (highest-deficit + robust + no other constraints). 4 NO @ $0.885 = $3.54. Brings Trump-out to $10.54 vs constrained-Kelly $26 = still 40% of optimal. Captures ~$0.46 expected gain over 235d.
+
+Decision: skip the tiny $3.54 deploy this turn. Instead bank the constrained-Kelly insight, ship the tool, and let the auto-prompter pick up next iteration which can address the Regime-fall over-allocation issue (e.g., scale BACK regime-fall by $8 to free capital for higher-edge positions).
+
+**Commit:** portfolio_kelly.py + priors + this journal entry.

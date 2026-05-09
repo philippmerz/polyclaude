@@ -1,0 +1,82 @@
+{
+  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor.",
+  "_updated": "2026-05-09",
+
+  "us-x-iran-permanent-peace-deal-by-may-11-2026": {
+    "p_no": 0.99,
+    "cluster": "iran-peace",
+    "rho_within": 0.7,
+    "cluster_frac": 0.30,
+    "rationale": "Strict criteria require formal SIGNED permanent deal. Iran rejected US proposal; 14pt MOU not signed. P(YES) <1% in 1.3d window. P fragile to estimation error."
+  },
+  "us-x-iran-permanent-peace-deal-by-may-15-2026-144-885-839": {
+    "p_no": 0.95,
+    "cluster": "iran-peace",
+    "rho_within": 0.7,
+    "cluster_frac": 0.30,
+    "rationale": "6-day window. Iran demands reparations + troop withdrawal infeasible to sign in 6d. P robust."
+  },
+  "us-x-iran-permanent-peace-deal-by-may-31-2026": {
+    "p_no": 0.80,
+    "cluster": "iran-peace",
+    "rho_within": 0.7,
+    "cluster_frac": 0.30,
+    "rationale": "21-day window. More plausible deal could emerge but Iran preconditions (reparations) are hard."
+  },
+  "russia-x-ukraine-ceasefire-by-may-31-2026": {
+    "p_no": 0.005,
+    "cluster": "russia-ukraine-DISPUTED",
+    "rho_within": 0.0,
+    "cluster_frac": 0.10,
+    "rationale": "umaResolutionStatus=disputed. Market pricing YES at 99.95%. Forced hold; effectively lost capital."
+  },
+  "will-the-iranian-regime-fall-by-the-end-of-2026": {
+    "p_no": 0.93,
+    "cluster": "iran-regime",
+    "rho_within": 0.6,
+    "cluster_frac": 0.20,
+    "rationale": "Regime stable; US shelved Project Freedom (de-escalation). 235d window. ANTI-correlated with iran-peace cluster."
+  },
+  "will-reza-pahlavi-lead-iran-in-2026": {
+    "p_no": 0.97,
+    "cluster": "iran-regime",
+    "rho_within": 0.6,
+    "cluster_frac": 0.20,
+    "rationale": "Conjunction P(regime falls AND Pahlavi installed) very low. ANTI-correlated with iran-peace."
+  },
+  "trump-out-as-president-before-2027": {
+    "p_no": 0.96,
+    "cluster": "us-politics",
+    "rho_within": 0.5,
+    "cluster_frac": 0.05,
+    "rationale": "Even with Dem house gains in midterms Nov 2026, Senate conviction implausible. P robust."
+  },
+  "hantavirus-pandemic-in-2026": {
+    "p_no": 0.97,
+    "cluster": "biothreat",
+    "rho_within": 0.5,
+    "cluster_frac": 0.05,
+    "rationale": "Hantavirus outbreak constrained; pandemic in 2026 very low base rate."
+  },
+  "will-the-us-confirm-that-aliens-exist-before-2027": {
+    "p_no": 0.85,
+    "cluster": "uap",
+    "rho_within": 0.5,
+    "cluster_frac": 0.05,
+    "rationale": "Pentagon files released May 8 with explicit 'no alien interaction' statement. Catalyst-check 2026-05-08 P(YES) central 15%."
+  },
+  "will-latvia-be-in-the-top-10-at-eurovision-2026": {
+    "p_no": 0.92,
+    "cluster": "eurovision",
+    "rho_within": 0.0,
+    "cluster_frac": 0.03,
+    "rationale": "Latvia must qualify SF2 (May 14) AND finish top 10 in Grand Final (May 16). Bookies favor non-Baltic odds."
+  },
+  "will-atletico-madrid-finish-in-the-top-4-of-the-la-liga-2025-26-standings": {
+    "p_yes": 0.99,
+    "cluster": "la-liga",
+    "rho_within": 0.0,
+    "cluster_frac": 0.03,
+    "rationale": "Atletico mathematically locked in top 4 with 3 games left. Near-certain."
+  }
+}
