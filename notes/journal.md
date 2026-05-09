@@ -1663,3 +1663,31 @@ primary_sources.md
 **Position implications.** Pentagon strike video reinforces NO on iran-peace-may15 (6d) and iran-peace-may31 (22d). Marks unchanged from 30-min prior check (0.816 + 0.645 respectively). Market either already priced or hasn't reacted yet. No scaling action — Iran cluster cap binding (≈$53 vs $51 target with current 4 positions). HOLD.
 
 **Net.** Step-wise fix shipped (start-guard), substantive news-event verified (no action), idle.
+
+---
+
+## 2026-05-09 ~00:15 UTC — Russia Victory Day re-eval; framework absent; position locked
+
+**Calendar trigger fired (May 9 = Russia Victory Day).** Per backlog plan: "re-evaluate at NO 0.95+ once Victory Day passes without framework announcement."
+
+**Web-search verification (claude -p haiku).** Status of US-Russia-Ukraine peace track May 8-9 2026:
+- 3-day Trump ceasefire announced May 8 (May 9-11). **Tactical, not framework.** Suspends kinetic activity + 1000-prisoner exchange. Zelenskyy decree limits ceasefire primarily to Russia's Victory Day parade.
+- **No formal framework announced.** Geneva (Feb 2026) + Abu Dhabi (Jan-Feb 2026) talks did not breakthrough. Russia demands Donetsk surrender; Ukraine demands security guarantees. June 2026 US target.
+- **Already being violated.** Ukraine reported 140+ Russian attacks by early May 9 despite truce.
+
+Strict reading "ceasefire by May 31" = sustained formal cessation. A 3-day tactical truce being violated does NOT satisfy. **P(YES) for sustained ceasefire by May 31 ≈ 5%; fair NO ≈ 0.95.**
+
+**Position state.** On-chain CTF.balanceOf(wallet, NO_token) = **25 shares INTACT** (confirmed via polygon.drpc.org; polygon-rpc.com returned 0 due to public-RPC staleness — root cause of yesterday's brief panic). Cost $16.73 (15@0.768 + 10@0.5208 per data-api activity log). 22d to resolution.
+
+**Cannot sell.** Both clob orderbook query and `clob_v2.py sell` returned "orderbook does not exist" — Polymarket de-indexed the market entirely at CLOB level, not just data-api. Cannot post any limit order. Tested 25 shares @ 0.97 GTC post-only; rejected.
+
+**Hold-to-resolution APY.** $25 - $16.73 = $8.27 unrealized over 22d = +49.4% absolute = ~830% APY. Very strong return if market resolves NO as expected.
+
+**Action plan:**
+1. Monitor daily for re-indexing (positions.py + clob_v2.py orderbook check). If re-indexes, immediately try posting 0.95+ SELL to capture early exit.
+2. If still de-indexed at May 31, `clob_v2.py redeem-all` (cron step 5) auto-redeems for $25 USDC.e payout.
+3. No-action default: HOLD.
+
+**Tooling note.** Public RPC `polygon-rpc.com` returned stale state (0 shares) for the on-chain check. `polygon.drpc.org` returned correct state (25 shares). Bank for future: use multiple RPCs cross-check when state seems anomalous. Not building a layer for it now (rare anomaly + manual cross-check is cheap), but flagging.
+
+**Net.** Calendar trigger executed correctly; thesis confirmed intact; position cannot be accelerated. Default hold-to-resolution. No code change needed.
