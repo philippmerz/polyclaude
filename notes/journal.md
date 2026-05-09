@@ -1807,3 +1807,32 @@ The Trump May 8 announcement of the May 9-11 ceasefire (publicly announced, mutu
 **Action: HOLD (forced).** Cannot trade. Monitor UMA outcome. If YES wins (likely) the redeem-all script will skip (zero payout); if NO wins (unlikely) it'll redeem to USDC.e on May 31.
 
 **Calibration delta.** This is a meaningful negative on my reasoning. The 4D analysis shipped today (longterm_check) and world_state_digest pipeline are unaffected; this was a specific research-thoroughness gap on the de-indexed market investigation.
+
+---
+
+## 2026-05-09 ~17:30 UTC — Recoup campaign Step 1: May-11 NO opened + sports scanner shipped
+
+**Context.** Operator directive after R-U loss: aggressive engineering + autonomous campaign to recoup ~10% bankroll drawdown via untapped alpha. Switched followup hook to 10min sprint cadence; created notes/recoup_campaign.md.
+
+**Step 1A: Found wrong pUSD address in research/_polymarket_v2_schema_2026-05-03.md.** That doc said pUSD = 0x6bbcef9f7ef3b6c592c99e0f206a0de94ad0925f. Real pUSD on Polygon is **0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb**. Logs from the wrap tx revealed the truth — that contract emitted Transfer events on the wrap. Stranded $24 pUSD discovered (was treating as $0). Need to update research doc.
+
+**Step 1B: Wrap 4.5 USDC.e -> pUSD.** First tx submitted at 150 gwei maxFee, dropped from mempool when Polygon base fee spiked to 251 gwei. Replaced at nonce 21 with 1000 gwei maxFee. Confirmed.
+
+**Step 1C: Open DEC-0019 — May-11 Iran-peace NO.** Discover_markets surfaced "US x Iran permanent peace deal by May 11, 2026?" at NO 0.965, 1.3d to resolve. Resolution criteria require a SIGNED PERMANENT peace deal explicitly indicating military hostilities have ended. With Iran's "wish-list" rejection (demanding war reparations + US troop withdrawal + asset release as preconditions) + 14-point MOU still under negotiation, formal signing in 1.3d implausible. P(YES) <1%; market 3.75% YES. Bought 15 NO @ $0.965 = **$14.475 cost** (sized within Iran cluster cap). Profit if NO wins: +$0.525 = +3.6% in 1.3d = ~1080% APY. Order matched at tx 0xab18b4c6...
+
+**Step 1D: Sports scanner shipped (scripts/sports_pm_scan.py).** Pulls Polymarket sports markets with vol24h>$30k, categorizes by lens (BOND_LIKE_FADE_NO/YES, MID_50_50, STRONG_FAVORITE, OTHER), surfaces top candidates in <=48h window. Bug fix during build: `endDateIso` returns date-only (collapses to 00:00 UTC = past for afternoon scans); switched to `endDate` field with full datetime. APY overflow on sub-day windows capped at 1e6%; output now shows profit-per-dollar instead of APY for short-tail trades. V1 successfully surfaces today's NBA/UFC/EPL/IPL markets.
+
+Smoke test output: 185 sports markets passing thresholds; 20 candidates surfaced in 48h window. Notable:
+- UFC 328 main card (Strickland-Chimaev) NO @ 0.815 = +22.7% per $1 (Chimaev favored)
+- Pistons-Cavaliers NO @ 0.615 (Cavaliers favored — game live now)
+- Multiple UFC prelim under-cards in MID_50_50 territory needing fair-value model
+
+**State.** Campaign ongoing. pUSD $9.6 remaining (24.04 - 14.475). USDC.e $0.51. Aave Base $29.52. Iran cluster: $33.71 + $14.475 = $48.18 (under $50 cap, $1.82 headroom).
+
+**Next campaign step (queued via auto-prompter at 10min):**
+- Update research/_polymarket_v2_schema_2026-05-03.md with correct pUSD address
+- Wire sports_pm_scan into daily_checkin.sh step 6 (alongside discover_markets)
+- Build cross-venue prediction-market arb (extend limitless_arb_scan to HIP-4 / Kalshi)
+- Consider opening UFC 328 NO position (Chimaev) per scanner output if liquidity supports
+
+**Real-MTM expected.** Visible PM book $71.88 (data-api) + DEC-0018 R-U fair-value $0 (UMA dispute pricing YES at 99.95%) + DEC-0019 May-11 expected $14.475 → $15.00 = +$14.475 + $0.525 = $15.00. Total real MTM ~$87 vs cost ~$100 = ~-13% (post R-U). Goal: recoup to flat or better via continued alpha capture.

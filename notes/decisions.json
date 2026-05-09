@@ -1,5 +1,5 @@
 {
-  "next_id": 19,
+  "next_id": 20,
   "decisions": [
     {
       "id": 1,
@@ -345,6 +345,27 @@
         "v2",
         "catalyst-check-validated",
         "re-eval-from-DEC-0014"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 19,
+      "timestamp": "2026-05-09T17:28:24Z",
+      "type": "open_position",
+      "thesis": "US x Iran permanent peace deal by May 11 NO @ 0.965 (15 shares, $14.475 cost). Resolution requires formal SIGNED permanent peace agreement explicitly indicating military hostilities have ended or will permanently cease. Iran rejected US proposal as 'American wish-list', demanding war reparations + US troop withdrawal + frozen-asset release as preconditions. 14-point MOU under negotiation, NOT signed. Formal signing within 1.3d implausible. Strict-criteria reading P(YES) <1%; market 3.75% YES = NO underpriced. Bond-like fade with bounded $14.475 risk.",
+      "confidence": "high",
+      "prediction": "Resolves NO by May 11 23:59 ET. NO mark drifts to 1.0 as window closes without formal deal.",
+      "size_usd": 14.475,
+      "resolution_at": "2026-05-11",
+      "tags": [
+        "polymarket",
+        "iran-peace",
+        "short-tail",
+        "bond-like-fade",
+        "v2",
+        "recoup-campaign"
       ],
       "outcome": null,
       "calibration_delta": null,
