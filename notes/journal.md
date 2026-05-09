@@ -1755,3 +1755,55 @@ Market correctly pricing in Iran's "wish-list" rejection of US proposal (verifie
 **Total real MTM estimate.** Visible $71.88 + Russia-Ukraine fair-value est $23.75 (at 0.95 strict-criteria fair) = ~$95.63 vs cost $85.50 = +11.85% real return. Data-api MTM display of -15.92% is misleading due to de-indexed mark. Note for future: when communicating P&L to operator via Telegram, use real-MTM with de-indexed positions estimated at fair value, not data-api mark.
 
 **Net.** Routine tick. No actions. Backlog tier-2-filter-WebFetch-enhancement still pending; all small-LOC compounding items shipped. Idle on followup loop (20min cadence active).
+
+---
+
+## 2026-05-09 ~16:50 UTC — MAJOR CORRECTION: R-U is in active UMA dispute, not benign de-indexing
+
+**Operator question prompted research I should have done yesterday.** Direct fetch of `gamma-api/markets/1795527` (the market ID from snapshot) revealed:
+- `umaResolutionStatus: disputed`
+- `umaResolutionStatuses: ["proposed", "disputed"]`
+- `outcomePrices: ["0.9995", "0.0005"]` — YES=\$0.9995, NO=\$0.0005
+- `volume24hr: \$19.37M`, `lastTradePrice: 0.999`, `bestBid: 0.999`
+- `oneDayPriceChange: +0.963`
+
+Market is NOT de-indexed in the benign sense. It's in active UMA dispute resolution after someone proposed YES (Trump's May 9-11 ceasefire qualifies) and was disputed.
+
+**Resolution criteria (fetched today, should have fetched yesterday):**
+> "resolves YES if there is an official ceasefire agreement, defined as a publicly announced and mutually agreed halt in military engagement... If the agreement is officially reached before the resolution date, this market will resolve Yes, **regardless of whether the ceasefire officially starts afterward**... A peace deal or political framework will qualify if it includes a publicly announced and mutually agreed halt in military engagement, effective on a specific date."
+
+The Trump May 8 announcement of the May 9-11 ceasefire (publicly announced, mutually agreed by Russia + Ukraine, effective on a specific date, with 1000-prisoner exchange begun) literally satisfies these criteria. The "general pause / not just energy" caveat is the only NO grounds. Disputers presumably argue the violations within hours mean it didn't constitute a "general pause," but market consensus is overwhelming YES.
+
+**Position value reality check:**
+- 25 NO shares, cost \$16.73
+- Expected payout under YES resolution: \$0
+- NO bids empty in CLOB; cannot sell at any price
+- Locked until UMA resolution (DVM voting 4-7 days, OR second-round proposal cycle 4-6 days)
+- ~0.05% lottery-ticket upside (\$25) if disputers prevail in DVM
+
+**EV at current pricing: -\$16.72.** Substantial loss locked in.
+
+**Why I missed this yesterday.**
+1. When the market disappeared from data-api/positions, I investigated:
+   - On-chain CTF balance ✓ (showed 25 shares intact)
+   - Activity log ✓ (BUY trades confirmed)
+   - CLOB orderbook ✓ (empty book)
+   - gamma-api search by slug ✗ (returned nothing — but I should have fetched by ID)
+2. I did NOT call `gamma-api/markets/{id}` directly to read the market record's umaResolutionStatus + description fields.
+3. I framed it as "de-indexed monitoring anomaly" and computed +49.4% hold-to-resolve based on assumed NO win. WRONG.
+
+**Lesson banked.** When a held position disappears from `data-api/positions`:
+1. First check: `gamma-api/markets/{market_id}` for `umaResolutionStatus` field
+2. If `"proposed"` or `"disputed"`: the market is in UMA resolution flow, NOT benign de-indexing. Read description + outcomePrices to assess realistic outcome.
+3. On-chain balance confirms what shares we hold but does NOT determine payout — UMA does.
+
+**Code fix needed (backlog).** Update `positions.py` and/or `check_marginal_apy.py` to:
+- Fetch `gamma-api/markets/{id}` for any position visible only by activity log (not in positions endpoint)
+- Surface `umaResolutionStatus` + outcomePrices from gamma if available
+- If UMA-disputed AND mark vs cost suggests adverse resolution, fire DRAWDOWN_ALERT (override the de-indexed-market guard I added today, which was based on the wrong premise)
+
+**Operator notified via Telegram msg 219.** Honest correction, apology for prior +49.4% framing.
+
+**Action: HOLD (forced).** Cannot trade. Monitor UMA outcome. If YES wins (likely) the redeem-all script will skip (zero payout); if NO wins (unlikely) it'll redeem to USDC.e on May 31.
+
+**Calibration delta.** This is a meaningful negative on my reasoning. The 4D analysis shipped today (longterm_check) and world_state_digest pipeline are unaffected; this was a specific research-thoroughness gap on the de-indexed market investigation.
