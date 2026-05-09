@@ -1,5 +1,5 @@
 {
-  "next_id": 22,
+  "next_id": 23,
   "decisions": [
     {
       "id": 1,
@@ -405,6 +405,28 @@
       "tags": [
         "polymarket",
         "iran-regime",
+        "bond-like-fade",
+        "scale-in",
+        "v2",
+        "recoup-campaign",
+        "kelly-sized"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2026-05-09T18:26:15Z",
+      "type": "size_change",
+      "thesis": "Trump-out NO scale-in: +4 shares @ $0.89 = $3.56. Position now 12.33 shares / $10.56 cost / $12.33 max payout. Per constrained-Kelly: optimal $26, currently 40% of optimal. Remaining ~$15 deficit. Trump-out thesis: even with Dem house gains in Nov 2026 midterms, Senate conviction implausible. P=0.96 robust to misestimation. Operator authorized aggressive sizing per Kelly.",
+      "confidence": "high",
+      "prediction": "Resolves NO before 2027. No realistic path to removal.",
+      "size_usd": 3.56,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "us-politics",
         "bond-like-fade",
         "scale-in",
         "v2",

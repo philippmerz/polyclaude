@@ -2003,3 +2003,29 @@ After fixes: 4 real subjective-resolution arbs surface (Reya FDV $200M, Ostium D
 - Or: refine sizing on under-deployed Trump-out NO ($26 optimal vs $7 current per constrained Kelly)
 
 **State.** pUSD $3.57 remaining. Aave Base $4.52 leftover. Bankroll utilization 66.6% cost basis; Kelly-optimal 100% post-constraint.
+
+---
+
+## 2026-05-09 ~19:30 UTC — Campaign Step 6: Trump-out scale-in + bookie consensus integration
+
+**A. Trump-out NO scale-in (DEC-0022).** +4 shares @ $0.89 = $3.56 (tx 0xd33e3c7c). Position now 12.33 sh / $10.56 cost. Constrained-Kelly optimal $26 → at 40% of optimal. Used remaining pUSD; no further deploy capacity until next bridge or sell.
+
+**B. Built bookie-consensus extension for sports_pm_scan.** New `--with-consensus` flag spawns claude -p haiku (low effort, WebSearch/WebFetch tools) per top-N candidate with structured prompt:
+- "Find bookie-consensus implied probability for this sports event"
+- "Output ONE line of JSON: {yes_prob, source, confidence, note}"
+- Falls back to `{"error": "..."}` if not fetchable
+
+Sport_pm_scan output now includes `consensus_summary` per top-N: e.g. `bookie=0.350 delta=+18.0pp (high/Pinnacle)` flagging Polymarket-vs-bookie pricing deltas.
+
+**The mid-market alpha thesis.** Bond-like fades (markets at 0.9+) are efficiently priced by Polymarket — discover_markets surfaces all of them. The MID-MARKET range (0.30-0.70) where edges live requires a fair-value signal source. Bookie consensus is the most accurate per-game fair-value proxy for sports. Polymarket vs bookie deltas > 3-5% historically indicate either Polymarket retail mispricing OR genuine information asymmetry (live betting flow). Both can be exploited.
+
+V1 budget: scan top-5 candidates per cron tick = ~$0.10 in haiku tokens, ~150s wall time. Bounded.
+
+**Remaining campaign queue:**
+- Wire sports_pm_scan --with-consensus into daily_checkin.sh (5min)
+- Limitless wallet setup (operator-touching)
+- Funding-rate arb scanner (Hyperliquid + Ostium delta capture)
+- Pendle YT scanner
+- Liquidation MEV monitor (high variance)
+
+Cumulative session deploy: $48.02 ($14.475 + $8.74 + $21.25 + $3.56) across 4 trades. Combined expected return ~$15-25 over 22-235d. Recoup math: covers R-U $16.73 effective loss in EV.

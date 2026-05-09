@@ -28,7 +28,58 @@ import datetime
 import json
 import sys
 
+import re
+import subprocess
+
 import httpx
+
+
+def fetch_bookie_consensus(question: str, lim_hours: float, timeout: int = 120) -> dict:
+    """Spawn claude -p haiku with WebSearch to fetch bookie-consensus odds.
+
+    Returns {"yes_prob": float, "source": str, "confidence": "high|med|low",
+             "note": str} or {"error": "..."} on failure.
+
+    Lesson source: 2026-05-09 operator directive — bookie consensus is the
+    single biggest mid-market alpha signal; Polymarket vs sharps-book deltas
+    > 3pp suggest mispricing. Cron-friendly via haiku (cheap/fast).
+    """
+    prompt = f"""Find the bookie-consensus implied probability for the following sports event/market.
+
+Market question: {question}
+Resolves within: {lim_hours:.1f} hours
+
+Search public sportsbook aggregators (Pinnacle, DraftKings, FanDuel, Bet365, etc.) or odds-comparison sites (oddsportal.com, oddschecker, ESPN BetTrend) for the YES side implied probability.
+
+Output ONE line of JSON only, no preamble:
+{{"yes_prob": <0.0-1.0>, "source": "<which book or aggregator>", "confidence": "high|med|low", "note": "<one-sentence sanity check>"}}
+
+If no consensus is fetchable (event too obscure, props market with no public odds, etc.), output:
+{{"error": "<one-sentence reason>"}}
+
+Be concise. ONE line only."""
+    try:
+        r = subprocess.run(
+            ["claude", "-p", "--model", "haiku", "--effort", "low",
+             "--allowed-tools", "WebSearch,WebFetch",
+             "--permission-mode", "acceptEdits"],
+            input=prompt, capture_output=True, text=True, timeout=timeout,
+        )
+    except subprocess.TimeoutExpired:
+        return {"error": f"haiku timeout after {timeout}s"}
+    if r.returncode != 0:
+        return {"error": f"haiku exited {r.returncode}: {r.stderr[:100]}"}
+
+    out = r.stdout.strip()
+    # Extract first JSON object from the output (haiku may add commentary)
+    m = re.search(r"\{[^{}]*\}", out)
+    if not m:
+        return {"error": "no JSON in haiku output"}
+    try:
+        import json as _json
+        return _json.loads(m.group(0))
+    except Exception as e:
+        return {"error": f"json parse: {e}"}
 
 
 def fetch_active_sports_markets(min_vol24: float = 30000, min_liq: float = 5000) -> list[dict]:
@@ -141,6 +192,13 @@ def main() -> int:
                    help="Hurdle APY for bond-like-fade surfacing (default 3.4%%).")
     p.add_argument("--json", action="store_true")
     p.add_argument("--limit", type=int, default=20)
+    p.add_argument("--with-consensus", action="store_true",
+                   help="Fetch bookie-consensus odds per top-5 candidate via "
+                        "claude -p haiku WebSearch. Slower (~30s per market) "
+                        "but surfaces Polymarket-vs-bookie pricing deltas.")
+    p.add_argument("--consensus-top-n", type=int, default=5,
+                   help="Number of top candidates to fetch consensus for "
+                        "(default 5, to bound haiku token cost).")
     args = p.parse_args()
 
     print(f"# sports_pm_scan window=<={args.hours}h vol24h>=${args.min_vol24:.0f} liq>=${args.min_liq:.0f}", file=sys.stderr)
@@ -182,6 +240,24 @@ def main() -> int:
     rows.sort(key=lambda r: r["apy_pct"] if r["apy_pct"] != float("inf") else 9e9, reverse=True)
     rows = rows[: args.limit]
 
+    # Fetch bookie consensus for top-N if requested
+    if args.with_consensus:
+        print(f"# fetching bookie consensus for top {args.consensus_top_n} candidates "
+              f"(~30s each via haiku)...", file=sys.stderr)
+        for i, r in enumerate(rows[: args.consensus_top_n]):
+            cons = fetch_bookie_consensus(r["question"], r["days_to_resolve"] * 24)
+            r["consensus"] = cons
+            if "yes_prob" in cons:
+                bookie_yes = float(cons["yes_prob"])
+                pm_yes = r["yes"]
+                # Delta: PM YES - bookie YES (positive = PM overprices YES)
+                r["pm_vs_bookie_pp"] = round((pm_yes - bookie_yes) * 100, 2)
+                r["consensus_summary"] = f"bookie={bookie_yes:.3f} delta={r['pm_vs_bookie_pp']:+.1f}pp ({cons.get('confidence','?')}/{cons.get('source','?')[:25]})"
+            else:
+                r["pm_vs_bookie_pp"] = None
+                r["consensus_summary"] = f"NO_CONSENSUS: {cons.get('error', '?')[:60]}"
+            print(f"  [{i+1}/{args.consensus_top_n}] {r['question'][:50]}: {r.get('consensus_summary','?')}", file=sys.stderr)
+
     if args.json:
         print(json.dumps({"results": rows}, indent=2, default=str))
         return 0
@@ -197,7 +273,10 @@ def main() -> int:
         else:
             apy_str = f"{apy_pct:>9.1f}%"
         hurdle = "✓" if r['clears_hurdle'] else " "
-        print(f"  {r['lens']:20s} {r['buy_side']}@${r['mark']:.4f}  +{profit_per_dollar*100:5.2f}%  d={r['days_to_resolve']:.1f}  v24=${r['vol24h']:>7.0f}  {r['question'][:55]}")
+        cons_str = ""
+        if "consensus_summary" in r:
+            cons_str = f"  {r['consensus_summary']}"
+        print(f"  {r['lens']:20s} {r['buy_side']}@${r['mark']:.4f}  +{profit_per_dollar*100:5.2f}%  d={r['days_to_resolve']:.1f}  v24=${r['vol24h']:>7.0f}  {r['question'][:55]}{cons_str}")
     return 0
 
 
