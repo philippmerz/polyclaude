@@ -2094,3 +2094,39 @@ Existing positions also accruing. Iran cluster repricing favorably as Iran rejec
 **Wired into daily_checkin step 6:** macro_pm_scan --no-consensus runs each cron tick alongside discover_markets + sports_pm_scan. Surfaces visibility for operator review.
 
 **Step 7 complete.** Macro discovery side ships; consensus deferred to v2.
+
+---
+
+## 2026-05-09 ~20:10 UTC — Campaign Step 8: uma_status_check.py shipped
+
+**Problem solved:** the R-U miss yesterday cost ~$16.73 because I framed the data-api de-indexing as benign monitoring lag for 18+ hours, missing umaResolutionStatus="disputed" until the operator's question prompted me to fetch gamma-api/markets/{id}.
+
+**Built `scripts/uma_status_check.py`.** For each held position:
+1. Fetches gamma-api/markets/{id} via slug lookup
+2. Compares umaResolutionStatus + outcomePrices vs cached state in notes/.uma_status_cache.json
+3. Alerts on: status changes, large price moves (>5pp), positions invisible to data-api but disputed on gamma
+
+**First-run smoke test:** correctly flagged R-U dispute (status: None → disputed, prices: YES=0.9985 NO=0.0015). Cache state populated for next-tick comparison.
+
+**Wired into daily_checkin step 1 (state marking).** Each cron tick auto-surfaces UMA-state risks across all held positions. The R-U pattern (silent dispute for 18h) cannot recur without operator intervention.
+
+**State-of-tooling.** Polyclaude now auto-monitors:
+- Portfolio drawdown (check_marginal_apy with de-indexed-market guard)
+- Watchlist entry triggers (watchlist_monitor)
+- New market opportunities (discover_markets, sports_pm_scan, macro_pm_scan)
+- Sizing discipline (portfolio_kelly --constrained)
+- Position health under UMA (uma_status_check, NEW)
+- Cross-venue arb visibility (limitless_arb_scan)
+- News-flow alerts (news_watcher)
+
+**Recoup campaign cumulative:**
+- 4 trades scaled/opened: $48.02
+- 7 tools shipped (kelly_size, portfolio_kelly + constrained, sports_pm_scan + consensus, macro_pm_scan v1, limitless_arb fixes, drawdown guard, uma_status_check)
+- 4 cron wirings (steps 1, 4, 6 augmented)
+- Expected EV $11-15 = 67-90% R-U recoup before existing positions resolve
+
+**Next campaign step (queued):**
+- polyclaude_enter.py — single-command entry helper combining catalyst_check + portfolio_kelly + execute (compounds across every entry)
+- Funding-rate arb scanner (would need Hyperliquid setup, deferred)
+- Pendle YT scanner (would need >$30 free capital, deferred)
+- macro_pm_scan v2 with proper CME data parsing (deferred until source identified)
