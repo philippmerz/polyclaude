@@ -166,6 +166,21 @@ Ran the new tool on 10 candidates across crypto + equity. Full per-candidate rep
 
 **Pending in next batch (less obvious / wider net needed):** SK Hynix, Western Digital ($WDC), GE Vernova ($GEV), Babylon ($BABY), Wolfspeed (compound semis), Anduril/Kratos/AeroVironment (defense-tech), Rocket Lab/AST SpaceMobile (space economy), DeFi blue chips at depressed multiples (UNI, AAVE, MKR), BTC-mining infra.
 
+### Sunday 2026-05-10 weekly digest additions (geopolitics-security + energy-power-infrastructure)
+
+| Candidate | Score | Verdict | Theme | Entry trigger |
+|---|---|---|---|---|
+| Exxon Mobil ($XOM) | 2/4 | PASS at \$144 | Oil Supply Shock (Hormuz closed, OPEC+ damaged) | \$110-125 on Q2/Q3 earnings disappointment OR oil correction; \$90-100 generational |
+| Cameco ($CCJ) | 3.5/4 | WATCH at \$116-123 | Advanced Nuclear (DOE Jul 4 deadline, TerraPower, AI data centers) | \$100-110 on 20% pullback OR spot uranium >\$95/lb + Q2 beat |
+
+**Other digest themes (not run via longterm_check yet):**
+- LNG Export Leverage (MED conf): Cheniere ($LNG), Sempra ($SDG), Star Bulk ($SBLK), Golden Pass benefit. Multi-year repricing on Hormuz closure.
+- Data Center Power Bottleneck (MED conf): Duke ($DUK), NextEra ($NEE), AEP, Emerson ($EMR), Eaton (\$ETN). FERC interconnection reform + Virginia demand spike.
+
+Plus Oil Supply Shock alternatives: Chevron ($CVX), Marathon ($MPC), Phillips66 ($PSX). And uranium alternatives: Uranium Energy ($UEC), Energy Fuels ($UUUU).
+
+Run longterm_check on alternatives in subsequent weekly reviews.
+
 ### Artifact-derived candidates (added 2026-05-08 ~21:30 UTC)
 
 User shared a research artifact distilling underreported geopolitical phenomena + nth-order effects + mispriced asset implications (FORGE/Pax Silica critical-minerals pact, Eastern DRC tin squeeze, Sodium-ion battery deployment, SMR pipelines, Legacy pollutant remobilization, GLP-1 food demand reset, BBNJ ocean treaty Jan 2026, Perovskite-silicon tandem, BIOSECURE Act biotech decoupling, Room-temp quantum + AI seismic). Framework: identify low-visibility-but-high-impact themes → derive nth-order consequences → extract mispriced equities. Strong intellectual artifact — surfaced non-obvious sub-categories that pure ticker scans miss.

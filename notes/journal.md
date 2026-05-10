@@ -2365,3 +2365,39 @@ Whichever — Brownian-bridge fair-value at t/T=0.30, p=0.78 = 0.836. Mark 0.675
 **Recoup math.** Iran cluster cost basis now $43.04 (up from $33.71 pre-campaign) + $11.82 May-31 (up from $6.99) = ~$60 in iran-peace + iran-regime. Expected gain on full cluster resolution ~$15-25 covers R-U $16.73 in EV.
 
 **Net.** First non-trivial post-campaign trade. Atletico-to-May-31 capital reallocation per Brownian-bridge marginal-edge rule. ~$0.67 EV captured vs hold.
+
+---
+
+## 2026-05-10 ~16:30 UTC — Sunday weekly long-term review
+
+**Cron-fired** at 16:00 UTC. Picked geopolitics-security + energy-power-infrastructure (fresh, never run; high relevance to active Iran cluster + AI-power-infra theme).
+
+**world_state_digest output (4 themes from 11 sources):**
+1. **Oil Supply Shock** (HIGH conf): Strait of Hormuz closed Feb 28, OPEC+ output increase (206 kb/d) NOT executable due to war damage. UAE exited OPEC. Plays: XOM, CVX, MPC, PSX. Long crude.
+2. **U.S. LNG Export Leverage** (MED conf): "Trump Peace Pipelines Framework" + Hormuz vacuum = US LNG fills gap. Plays: SDG (Sempra), LNG (Cheniere), SBLK/GOGL (LNG shipping).
+3. **Advanced Nuclear Deployment** (HIGH conf): DOE July 4 deadline for 3+ reactors at criticality. TerraPower Wyoming approved May 2. NRC fast-tracking microreactors (June 24 rule due). FERC inverter standards. Plays: UEC, CCJ, UUUU (uranium), SMR component makers.
+4. **Data Center Power Bottleneck** (MED conf): Virginia demand spike from data centers; FERC Order 1920 transmission reforms. Plays: DUK, NEE, AEP, EMR, EATON.
+
+**longterm_check on top 2 (XOM + CCJ):**
+
+**XOM 2/4 — PASS at $144.** Currently 24x P/E peak-cycle, 51% YTD. Cyclical position is at-or-near peak; secular tailwind mixed (Guyana production ramp real, but LNG glut + energy transition offset). Entry triggers:
+- $110-125 reasonable margin of safety on $80+ oil scenario
+- $90-100 compelling on $60-70 oil scenario
+Q1 2026 EPS down YoY; Q2/Q3 disappointment + oil pullback would create entry.
+
+**CCJ 3.5/4 — WATCH at $116-123.** Strong on AI nuclear secular + term-to-spot convergence catalyst. Margin weak (P/E 115x stretched). Entry triggers:
+- $100-110 on 20% pullback
+- Current levels with 1% Kelly only if uranium >$95/lb + Q2 beat
+- $150 fair-value analyst convergence as signal
+Generational (10x+) prob 15%; strong (3-5x) 35%; modest 30%; flat 15%; broken 5%.
+
+**Watchlist updates:**
+- Added XOM (\$125 entry trigger, route=ibkr_surface) to notes/watchlist_triggers.json
+- Added CCJ (\$110 entry trigger, route=ibkr_surface) to notes/watchlist_triggers.json
+- Updated notes/longterm_watchlist.md with Sunday additions table + theme-derived alternatives queue
+
+**Watchlist trigger check:** 14 candidates now (was 12), 0 hits. SOL $94.43 (was $92.32, drift +2pp), no equity moves on Sunday market closure.
+
+**No polyclaude-side action.** Both new candidates are equities, route=ibkr_surface. Next weekly review: 2026-05-17 (rotate to next 2-3 fresh domains: macro-fiscal-labor, trade-regulation, tech-ai-chips, biotech-health).
+
+**Cron tick performed steps 1-7 (state, news, hurdle, decisions, redeem, prospect, journal). Step 11 commit pending.**

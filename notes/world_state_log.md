@@ -256,3 +256,101 @@ Sources:
 - [US DFC Financing for Brazilian Rare Earth Project](https://www.questmetals.com/blog/us-dfc-offers-565m-financing-to-brazilian-rare-earth-project/)
 - [DFC Critical Minerals Investments](https://www.dfc.gov/media/press-releases/dfc-highlights-landmark-critical-minerals-investments-strengthen-us-national)
 - [State Department 2026 Critical Minerals Ministerial](https://www.state.gov/releases/office-of-the-spokesperson/2026/02/2026-critical-minerals-ministerial)
+
+---
+
+## 2026-05-10T16:02:02Z — world_state_digest
+
+**Domains:** geopolitics-security, energy-power-infrastructure | **Lookback:** 21d | **Model:** haiku
+
+I have enough facts to synthesize. Compiling the digest now.
+
+```
+# WORLD-STATE DIGEST — 2026-05-10
+
+Domains: geopolitics-security, energy-power-infrastructure  |  Lookback: 21d
+
+## BARE FACTS (by domain)
+
+### geopolitics-security
+- [2026-02-28] Strait of Hormuz blocked by Iran war escalation; remains closed through May 10
+- [2026-05-03] OPEC+ announces 188,000 bbl/d output increase (CNBC reporting)
+- [2026-05] OPEC+ agrees 206 kb/d crude oil output raise; Saudi Arabia, UAE, Kuwait, Iraq unable to execute due to infrastructure damage from war; months required to resume normal operations
+- [2026-05] OPEC May 2026 meeting first without UAE; UAE exited group citing national interest
+- [2026-05] NATO Exercise Sword 26 underway: 6,000 US troops + 9,500 allied personnel across 8 European countries; 1,000+ pieces military equipment deployed; runs through May
+- [2026-05] NATO Exercise STEADFAST DETERRENCE 2026 active across all 32 NATO member states
+- [FY2026] U.S. defense budget: $1 trillion+ total; missile defense allocation $85.8B (up 25%+ from $68.3B prior request)
+- [FY2026] B-21 bomber program: $10.1B (up from $5.3B prior year); production rates expanding
+- [FY2026] Theater medium/intermediate-range missile interceptors being replenished post-Iran war
+- [FY2026] Columbia-class submarine program: $16.1B proposed for 12-boat program; $146.4B lifetime cost
+
+### energy-power-infrastructure
+- [2026-05-08] DOE allocated $36M enhanced oil recovery program (University of North Dakota)
+- [2026-05-07] One-fifth of U.S. renewable diesel and SAF production exported in 2H25; ~50,000 bbl/day exports; Canada received ~50% of total; remainder to Europe
+- [2026-05-07] Virginia electricity demand spike driven by data center expansion (EIA noting)
+- [2026-05-07] Coal distribution for non-electric power applications declining in South
+- [2026-04-30] DOE issued RFP for 172-million-barrel Strategic Petroleum Reserve exchange program
+- [2026-04-28] Secretary Wright signed LNG export agreements; "Trump Peace Pipelines Framework" announced for international energy markets
+- [2026-04-16] FERC action on large load interconnection reform (Deputy Secretary Danly statement)
+- [March-May 2026] DOE released 17.5M barrels from Strategic Petroleum Reserve
+- [2026-05-02] TerraPower (Bill Gates) approved for new commercial reactor in Wyoming; online target 2031; capacity ~500K home equivalent
+- [2026] DOE advanced reactor pilot goal: 3+ reactors reaching criticality outside national labs by July 4, 2026
+- [2026-06-24] NRC proposed rule on microreactor approvals due (streamlining process)
+- [July 2025] FERC/NERC approved reliability standards for inverter-based resources (solar, wind, grid batteries); compliance timelines into 2026
+- [2026] FERC Order 1920: transmission planning reforms; proposals under review by nation's largest grid operators
+
+## CANDIDATE THEMES
+
+### Oil Supply Shock (Geopolitical Chokepoint)
+- Underlying facts: Strait of Hormuz closed Feb 28 → ongoing; OPEC+ members (Saudi, UAE, Kuwait, Iraq) infrastructure damaged; OPEC+ agreement to raise 206 kb/d output is symbolic (members cannot execute); UAE exited OPEC
+- Implication: Global crude supply severely undersupplied through mid-2026 minimum. OPEC+ production targets unachievable. Retail narrative ("OPEC raises output") masks execution impossibility. Actual supply constrained by geopolitics, not policy.
+- Possible plays: Long crude oil futures (CL), long integrated oil majors (XOM, CVX), long energy infrastructure (MPC, PSX); short symbols dependent on global supply growth
+- Direction: long
+- Horizon: months (6-12 minimum if Strait remains closed)
+- Retail blindspot: Headline focus on OPEC agreement to increase production creates false signal of supply relief; actual output constrained by war damage requiring "months to resume normal operations"
+- Confidence: HIGH
+
+### U.S. LNG Export Leverage (Strategic Repositioning)
+- Underlying facts: April 28 LNG export agreements signed; "Trump Peace Pipelines Framework" announced; Strait of Hormuz disruption creates vacuum in global energy trade; U.S. positioned to capture market share from Middle East producers unable to export
+- Implication: LNG export capacity becomes strategic commodity. U.S. supply fills void created by geopolitical disruption. Long-term energy security redefined around U.S./North America LNG exports.
+- Possible plays: LNG exporters/midstream (Sempra SDG, Cheniere parent), liquefaction equipment suppliers, LNG shipping (SBLK, GOGL)
+- Direction: long
+- Horizon: quarters to years (geopolitical window creates immediate demand; infrastructure ramp slower)
+- Retail blindspot: Geopolitical dislocation (Strait closure) not yet priced into energy strategy shift; LNG announcement seen as marginal capex, not as strategic market capture
+- Confidence: MEDIUM
+
+### Advanced Nuclear Reactor Deployment Acceleration
+- Underlying facts: DOE goal 3+ reactors at criticality by July 4, 2026 (firm deadline); TerraPower Wyoming license approved May 2; NRC fast-tracking microreactor rules (due June 24); 10 advanced reactor companies selected in pilot program; FERC/NERC inverter-based resource standards (July 2025) improve grid integration; energy demand (data centers, AI) outpacing conventional supply
+- Implication: Regulatory bottleneck breaking; timeline for SMR/advanced reactor deployment compressing. Energy supply constraint (data center growth + AI compute) solved by nuclear acceleration. First commercial criticalities (July 4 target) validate technology; production ramps follow.
+- Possible plays: Advanced reactor equipment suppliers (SMR component makers), uranium miners (UEC, CCJ), nuclear-heavy utilities, fuel cycle businesses
+- Direction: long
+- Horizon: quarters to 2-3 years (July 4 deadline imminent; TerraPower 2031 but smaller units faster)
+- Retail blindspot: Market skeptical of SMR/advanced reactor timelines; July 1 criticality goal seems aggressive; if achieved, supply shock upside surprise
+- Confidence: HIGH
+
+### Data Center Power Supply Bottleneck
+- Underlying facts: Virginia electricity demand spike from data center expansion (EIA May 7); FERC Order 1920 transmission planning reforms underway; FERC interconnection reform (April 16); energy demand growing "at pace not seen in a generation" per FERC
+- Implication: Power supply becoming constraint on data center scaling. Grid transmission capacity, not generation, bottleneck. Utilities and transmission operators capturing rents via interconnection delays and price increases.
+- Possible plays: Utilities with Virginia/Southeast exposure (DUK, NEE, AEP), transmission equipment suppliers (EMR, EATON), grid modernization beneficiaries
+- Direction: long
+- Horizon: months to quarters (demand growing faster than supply can scale; interconnection reforms take time)
+- Retail blindspot: Retail focused on hyperscaler capex and compute growth; less aware of power supply constraint as earnings driver for utilities and transmission operators
+- Confidence: MEDIUM
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: XOM, CVX, MPC, PSX (oil), SDG, SBLK, GOGL (LNG), UEC, CCJ, UUUU (uranium), EMR, DUK, NEE (utilities/power)
+- Run catalyst_check.py on: Polymarket question tracking Strait of Hormuz reopening timeline; OPEC+ next meeting production target vs actual execution
+- Skip / pass: Coal decline theme (LOW confidence; known trend, no acceleration signal); Defense contractor mispricing (MEDIUM capacity constraint signal, but less precise than other themes)
+```
+
+Sources:
+- [U.S. Defense Spending Rises by More Than 17 Percent](https://www.armscontrol.org/act/2026-03/news/us-defense-spending-rises-more-17-percent)
+- [Costs Soar in $1.45 Trillion Defense Request](https://www.armscontrol.org/act/2026-05/news/costs-soar-145-trillion-defense-request)
+- [NATO Exercises 2026: The Complete Guide to Allied Readiness](https://www.grosswald.org/nato-exercises-2026/)
+- [Exercise STEADFAST DETERRENCE 2026](https://www.jwc.nato.int/article/steadfast-deterrence-2026-begins/)
+- [OPEC+ announces 188,000 barrels-per-day output increase](https://www.cnbc.com/2026/05/03/opec-announces-188000-barrels-per-day-output-increase-.html)
+- [OPEC+ agrees 206 kb/d crude oil output raise amid Middle East supply disruptions](https://www.enerdata.net/publications/daily-energy-news/opec-agrees-206-kbd-crude-oil-output-raise-amid-middle-east-supply-disruptions.html)
+- [Wyoming celebrates 'nuclear renaissance' as feds approve license for a new reactor](https://www.npr.org/2026/05/02/nx-s1-5798892/wyoming-celebrates-nuclear-renaissance-as-feds-approve-license-for-a-new-reactor)
+- [Industry Update—May 2026](https://www.ans.org/news/article-7957/industry-updatemay-2026/)
+- [Energized for 2026](https://www.ferc.gov/news-events/news/energized-2026)

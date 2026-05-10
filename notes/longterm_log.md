@@ -1192,3 +1192,135 @@ Cyclical recovery + storage tailwind + fortress balance sheet, but catalysts are
 - [Albemarle Q1 2026: Posts Strong Results and Cuts $1.3B Debt](https://www.stocktitan.net/sec-filings/ALB/8-k-albemarle-corp-reports-material-event-5b1602686828.html)
 - [Albemarle 15-Year Stock Price History](https://www.macrotrends.net/stocks/charts/ALB/albemarle/stock-price-history)
 ```
+
+---
+
+## 2026-05-10T16:03:43Z — longterm_check
+
+**Query:** `Exxon Mobil ($XOM)` (equity, 2y horizon)
+
+```
+## LONGTERM CHECK: Exxon Mobil ($XOM)
+
+Date: 2026-05-10 | Type: equity | Horizon: 2y
+
+### Current state
+$144.30 (52-week: $101–$176), up 51% YTD (including dividends); P/E 24.02x (47% above 10-yr median 16.3); Q1 2026 net income $4.2B down from $7.7B YoY; EV/EBITDA 10.97x.
+
+### Cyclical position
+At or near peak cycle, facing headwinds into 2027. EIA forecasts Brent crude to peak $115/bbl in Q2 2026, then contract to <$90 by Q4 2026 and average $76 in 2027. Goldman Sachs more bullish ($85 avg, $110 peak on Hormuz shock), JP Morgan bearish ($60 avg). Current P/E of 24x is 53.7% above Oil & Gas median (15.6x), indicating the market has priced in sustained high energy prices. If crude falls to $60–70 range, earnings guidance will compress sharply, leaving little margin of safety at current valuation.
+
+### Secular tailwind
+Two competing tailwinds: (1) **Guyana production ramp** — Currently 900k bopd, Uaru startup 2026 (+250k bopd), Whiptail 2027 (+250k bopd), targeting 1.7M bopd by 2030. Low-cost, high-IRR offshore output offsets mature asset declines. (2) **Golden Pass LNG** — Train 1 came online March 31, 2026; U.S. LNG exports up 5% in 2026 vs 2025. However, global LNG supply headwind undermines this: capacity adding 57 MTPA in 2026 and 44 MTPA in 2027 (largest growth on record), while demand growth is ~2% annually. BloombergNEF expects supply to exceed demand 2027–2030, pressuring pricing. Net result: Guyana production growth is real, but energy transition + LNG supply glut limit sustained demand tailwind over 2-year horizon.
+
+### Catalyst window
+- [HIGH] 2026-Q3 — Uaru first production, adds ~250k bopd to Stabroek block. De-risks production schedule, extends reserve life, improves Guyana unit economics. ExxonMobil investor day guidance; operationally on track. — [ExxonMobil Guyana](https://corporate.exxonmobil.com/locations/guyana/news-releases/11122025-daily-oil-production-hits-900000-barrels-in-guyanas-stabroek-block)
+- [HIGH] 2027-Q2 — Whiptail first production, adds another 250k bopd, pushing Stabroek toward 1.4M bopd. Execution risk is low (Yellowtail and Uaru de-risk learnings). — [EIA Guyana forecast](https://www.eia.gov/todayinenergy/detail.php?id=66884)
+- [MED] 2026-2027 — Oil price bifurcation: if Brent holds $90+, earnings re-ratings possible; if $50–70, profit warnings likely. Geopolitical (Hormuz) is binary. — [EIA STEO April 2026](https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf)
+- [LOW] 2026-2027 — Dividend/buyback expansion: strong FCF ($8.7B operating CF in Q1 2026) supports continued capital return. Not a re-rating catalyst, but shareholder-friendly. — [Q1 2026 earnings](https://investor.exxonmobil.com/company-information/press-releases/detail/1204/exxonmobil-announces-first-quarter-2026-results)
+
+### Margin of safety
+Moderate. Balance sheet is fortress-grade (debt-to-capital 15.4%, net-debt-to-capital 13.1%, $8.4B cash, financial leverage 1.73x down from 2.10 in 2022), supporting dividend through downturns. However, current valuation offers scant margin: at 24x P/E, XOM is priced for sustained high oil prices (>$85 Brent). If crude falls to $60–70 (consistent with EIA and JP Morgan scenarios), normalized earnings power contracts 40–50%, implying fair value ~$90–110/share (−25% downside). Already profitable and cash-generative, but not cheap at current price.
+
+### Top 3 risks
+1. **Oil price collapse to $50–70** — Earnings guidance would contract sharply; Q1 2026 $1.16 EPS ex-items falls to ~$0.60–0.70 range. At 20x trough multiples, fair value ~$80–90. Probability ~35% by end 2027 (EIA base case trajectory).
+2. **Energy transition acceleration + demand destruction** — EV adoption, renewable energy growth, and climate policy tightening (carbon tax, stranded asset risk) reduce long-term oil demand. Guyana ramp masks this for 2–3 years, but by 2028 the structural headwind becomes visible. Dividend yield alone (~3.5% at current price) may not offset volume declines.
+3. **Execution risk on Uaru/Whiptail or LNG ramp** — Delays beyond stated timelines, cost overruns, or operational underperformance would defer cash generation. Golden Pass ramp depends on continued demand; any demand destruction or LNG supply collapse could strand export capacity. Low probability (~10–15%), but high impact.
+
+### 5-year scenario probabilities
+- Generational (10x+): 3% — Requires oil >$100 sustained through 2028, flawless Guyana execution, LNG rebound. Structural headwinds rule this out.
+- Strong (3–5x): 12% — Oil $80–90 average 2026–2028, Guyana ramps 60%+ on schedule, buybacks compound ROIC. Possible but requires luck on commodity.
+- Modest (1.5–3x): 40% — Baseline: oil $70–80 avg, Guyana ramps 50–60% (Uaru and Whiptail on time), dividends sustained, minimal buybacks. Most likely outcome.
+- Flat/mild loss (-30% to +50%): 35% — Oil falls to $60–70 mid-cycle, earnings contract, dividend held but stock flat or down 15–25%. Guyana helps, but insufficient to offset commodity headwind.
+- Thesis broken (-50%+): 10% — Oil crashes <$50, demand shocks hit suddenly, dividend cut forced, stranded assets material. Low probability near-term, higher structural risk beyond 2y horizon.
+
+### Entry trigger
+**Now: PASS. Current price $144.30 is expensive on 24x P/E. Wait for pullback.** Entry zones:
+- **$120–125 range (−15% from current)**: Reasonable entry if oil holds $80+, provides margin of safety on earnings contraction scenario.
+- **$110–115 range (−23% from current)**: Strong entry; aligns with $60–70 oil scenario valuations, provides 40%+ upside if Guyana ramps and oil stabilizes.
+- **$90–100 range (−35% from current)**: Compelling margin of safety; likely needs oil shock or policy change to reach this level, but would represent generational entry for contrarian Guyana thesis.
+
+### Verdict: 2/4 — PASS
+Cyclical position (peak cycle, headwinds 2027) and secular tailwind (Guyana strong, but LNG glut + energy transition offset) score moderately; catalysts (Uaru/Whiptail, Golden Pass) are largely baked into 51% YTD move and full valuation; no margin of safety at $144. Guyana production ramp is genuine, but insufficient to overcome oil price cycle risk and premium valuation. Better entry at $110–125 range on any crude correction or Q2/Q3 earnings disappointment. Not a generational mispricing at current price.
+
+### Sources
+- [Exxon Mobil Q1 2026 Earnings](https://investor.exxonmobil.com/company-information/press-releases/detail/1204/exxonmobil-announces-first-quarter-2026-results)
+- [Yahoo Finance XOM Price & History](https://finance.yahoo.com/quote/XOM/)
+- [EIA Short-Term Energy Outlook (STEO) April 2026](https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf)
+- [Exxon Mobil Guyana Production Milestone](https://corporate.exxonmobil.com/locations/guyana/news-releases/11122025-daily-oil-production-hits-900000-barrels-in-guyanas-stabroek-block)
+- [IEA Global LNG Outlook 2026](https://www.iea.org/news/growth-in-global-demand-for-natural-gas-is-set-to-accelerate-in-2026-as-lng-wave-spreads-through-markets)
+- [Exxon Mobil Balance Sheet & Debt Metrics](https://investor.exxonmobil.com/earnings/balance-sheet)
+- [XOM P/E Ratio & Valuation (GuroFocus)](https://www.gurufocus.com/term/pettm/XOM)
+- [EIA Guyana Oil & Gas Forecast](https://www.eia.gov/todayinenergy/detail.php?id=66884)
+```
+
+---
+
+## 2026-05-10T16:03:47Z — longterm_check
+
+**Query:** `Cameco ($CCJ)` (equity, 2y horizon)
+
+```
+## LONGTERM CHECK: Cameco ($CCJ)
+
+Date: 2026-05-10 | Type: equity | Horizon: 2y
+
+### Current state
+$116-123 USD; 1Y return ~+139% from $48.81 52-week low; P/E 115.4x (elevated for commodity play); Q1 2026 beat EPS by 30% ($0.34 actual vs $0.26 consensus), revenue $845M, net earnings +87% YoY to $131M.
+
+### Cyclical position
+Uranium market is mid-cycle inflection, shifting from inventory-driven to production-driven regime. Spot U3O8 trades $80-92/lb while term market (utility long-term contracts for 2028-2030 delivery) has broken to $150/lb—a 60% premium. This divergence signals utilities are rationing supply and locking in contracts at structural peaks before supply tightens further. Inventories at "strategic lows" globally; secondary sources diminishing. Not at the bottom, but at a critical inflection where supply scarcity is now pricing in future production constraints.
+
+### Secular tailwind
+**AI data center power demand is structural and accelerating.** Global data center electricity consumption forecast to rise 4x by 2034 (400 TWh 2024 → 1,600 TWh 2034). Capex from 5 major tech companies: $400B in 2025, +75% planned for 2026. Nuclear is the only source delivering constant, carbon-free baseload at required scale. SMR conditional offtake pipeline: 45 GW (up from 25 GW in Q4 2024). 45-50% of planned US data centers in 2026 already delayed due to grid constraints—driving direct corporate nuclear contracting. DoE allocated $2.7B in Jan 2026 for domestic enrichment capacity. This tailwind is accelerating, policy-supported, and crosses political cycles.
+
+### Catalyst window
+- [HIGH] 2026–Q1 2027 — Spot uranium convergence toward term price ($120–140 range); utilities accelerate long-term contracting as inventories deplete and supply tightens. — UxC, Sprott
+- [MED] 2026–2027 — Cameco production ramp execution: Cigar Lake 17.5–18M lbs, McArthur River/Key Lake 14–16.5M lbs; mine life extensions to 2036 assuming operational discipline. — Cameco Q1 2026 guidance
+- [MED] 2026–2027 — Westinghouse Czech Dukovany nuclear construction project; Cameco's 49% stake expected to deliver $525–580M USD adjusted EBITDA. — Cameco Q1 2026
+- [MED] 2026–2027 — Policy momentum for domestic enrichment and fuel fabrication expansion (existing $2.7B DoE commitment); additional incentive pricing support. — US DoE
+
+### Margin of safety
+**Balance sheet is solid but valuation multiple is stretched.** Cameco: $1.1B cash + short-term investments, $1.0B total debt = small net cash position. $1.0B undrawn revolver. Already profitable ($131M net earnings Q1, $509M adjusted EBITDA). No balance sheet stress or refinance risk. However, P/E of 115.4x is exceptionally high for a uranium cyclical play. Requires sustained uranium pricing $120–150/lb through 2028 and Westinghouse execution to justify current valuation. Fair-value estimates range $136–175 USD (analyst consensus $136.44; Scotiabank $175), implying minimal upside at current levels if thesis does not deliver. **Margin of safety is weaker than ideal given the multiple; entry at $100–110 would provide better protection.**
+
+### Top 3 risks
+1. **Valuation reversion if uranium supercycle narrative fails** — P/E 115.4x requires sustained $120–150/lb uranium prices. If spot price reverts to $75–85/lb (historical cycle average) faster than supply-deficit narrative implies, or if AI data center nuclear adoption slows, multiple compression could halve the stock or more. Thesis breaks below $70/lb uranium.
+
+2. **Geopolitical supply shock cascades from Kazakhstan** — Kazakhstan represents 39% of global uranium production; Kazatomprom announced 10% production cut for 2026. Dec 2025 Subsoil Code changes and Rosatom sanctions complications deter foreign investment and could accelerate supply tightening faster than Cameco can ramp (McArthur River recovery assumes flawless execution; delays are common in Canadian mining). Supply disruption forces emergency term pricing above $150/lb, causing political/policy backlash and demand destruction.
+
+3. **Westinghouse execution and policy risk** — 49% stake now material to consolidated earnings ($525–580M USD EBITDA expected 2026–2027). Czech Dukovany project delays, cost overruns, or regulatory friction could derail guidance. Additionally, anti-nuclear sentiment or construction slowdowns in key markets could compress Westinghouse margins. Stake is illiquid; valuation opaque; earnings upside is priced in but downside risk is real.
+
+### 5-year scenario probabilities
+- Generational (10x+): 15%
+  - Uranium converges to $120–150/lb and sustains; Cameco executes production ramp flawlessly; Westinghouse Czech project succeeds and unlocks pipeline; AI nuclear adoption accelerates into mainstream.
+- Strong (3–5x): 35%
+  - Uranium settles in $100–130/lb band; Cameco + Westinghouse deliver to guidance; AI nuclear adoption continues steadily; term-to-spot convergence completes by end 2027.
+- Modest (1.5–3x): 30%
+  - Uranium in $80–110/lb range with volatility; execution issues at Cameco or Westinghouse; AI nuclear slower ramp than expected; modest dividend growth from cash generation.
+- Flat/mild loss (−30% to +50%): 15%
+  - Spot uranium reverts to $75–90/lb; geopolitical disruption or transportation constraints; Cameco production delays; Westinghouse slowdown; multiple compression on margin miss.
+- Thesis broken (−50%+): 5%
+  - Spot uranium crashes below $70/lb; AI data center demand disappoints or contracts; major geopolitical supply shock (Kazakhstan sanctions, Russian supply surge); regulatory anti-nuclear shift in key markets; structural oversupply emerges.
+
+### Entry trigger
+**WATCH for entry. Do not enter at current levels ($116–123) without additional confirmation.**
+- Trigger A: Spot uranium accelerates to $95+/lb in next 2–3 months + Q2 earnings beat confirmed → ENTER at $110–120 (1–2% Kelly size).
+- Trigger B: 20% pullback to $95–100 USD on spot weakness or profit-taking + reconfirm term prices holding $120+/lb → ENTER at $100 (2–3% Kelly size with tighter stop at $85).
+- Trigger C: Analyst consensus converges to $150+/lb fair value (away from current scattered $136–175 range) and Q2 2026 earnings confirm Q1 outperformance → ENTER at current levels (1% Kelly).
+- Current valuation (P/E 115.4x) is stretched. Ideal entry is on a 15–20% pullback or on firm external catalyst (uranium >$100/lb sustained).
+
+### Verdict: 3.5/4 — WATCH
+Cameco scores strongly on secular tailwind (+AI data center nuclear adoption is real, accelerating, policy-supported) and near-term catalysts (+term-to-spot convergence is a high-probability re-rating driver within 2 years). Cyclical position is mid-cycle inflection (not bottom, but at constraint shift). However, margin of safety is weak due to P/E of 115.4x and stretched analyst targets. Entry at current levels is aggressive; better risk/reward at $100–110 on a spot price dip or on Q2 earnings beat + sustained $95+/lb uranium. Keep on watchlist; become an ENTER NOW candidate if trigger conditions met.
+
+### Sources
+- [Yahoo Finance: Cameco (CCJ)](https://finance.yahoo.com/quote/CCJ/)
+- [Investing.com: Cameco Q1 2026 Earnings](https://www.investing.com/news/company-news/cameco-q1-2026-slides-earnings-beat-drives-stock-gain-93CH-4659596)
+- [Sprott: Uranium Outlook 2026](https://sprott.com/insights/uranium-s-tale-of-two-markets/)
+- [Skillings Mining Review: Uranium Price Forecast 2026](https://skillings.net/uranium-price-forecast-2026-drivers-of-the-150-breakout/)
+- [Crux Investor: AI-Driven Uranium Demand & Supply Constraints 2026](https://www.cruxinvestor.com/posts/ai-driven-demand-growth-supply-constraints-signal-uranium-structural-repricing-in-2026/)
+- [24/7 Wall St: Nuclear's AI Moment](https://247wallst.com/investing/2026/04/18/nuclears-ai-moment-is-here-there-is-only-1-play-for-the-4x-data-center-demand-explosion/)
+- [IAEA: Data Centres, AI, and Nuclear](https://www.iaea.org/bulletin/data-centres-artificial-intelligence-and-cryptocurrencies-eye-advanced-nuclear-to-meet-growing-power-needs/)
+- [Cameco Q1 2026 Report](https://www.cameco.com/invest/financial-information/quarterly-reports/2026/q1)
+- [National Interest: Kazakhstan Cuts Uranium Output 2026](https://nationalinterest.org/blog/energy-world/nuclear-energy-now-kazakhstan-cuts-uranium-output-in-2026/)
+- [PRNewswire: The Uranium Shortage](https://www.prnewswire.com/news-releases/the-uranium-shortage-78-gigawatts-under-construction-and-not-enough-fuel-302757133.html)
+```

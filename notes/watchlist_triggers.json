@@ -74,6 +74,18 @@
       "entry_max": 180.0, "horizon": "2-5y", "route": "ibkr_surface",
       "rationale": "Lithium cycle bottom + storage; H2 2026 BESS data (6-9mo catalyst). Closest-to-ENTER from artifact pass. Equity -> IBKR.",
       "added": "2026-05-08"
+    },
+    {
+      "ticker": "XOM", "type": "equity", "yfinance_symbol": "XOM",
+      "entry_max": 125.0, "horizon": "2-3y", "route": "ibkr_surface",
+      "rationale": "Oil Supply Shock theme (Strait of Hormuz closed, OPEC+ infra damaged). Currently $144 peak cycle 24x P/E. Entry $110-125 on Q2/Q3 earnings disappointment OR oil correction. 2/4 PASS at current.",
+      "added": "2026-05-10"
+    },
+    {
+      "ticker": "CCJ", "type": "equity", "yfinance_symbol": "CCJ",
+      "entry_max": 110.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "rationale": "Advanced Nuclear theme (DOE July 4 deadline, TerraPower Wyoming, AI data center demand). 3.5/4 WATCH. P/E 115x stretched; entry $100-110 on 20% pullback OR uranium >$95/lb sustained + Q2 beat.",
+      "added": "2026-05-10"
     }
   ]
 }
