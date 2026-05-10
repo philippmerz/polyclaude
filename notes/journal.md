@@ -2299,3 +2299,30 @@ Recent news alert: Mike Waltz pushing UN resolution against Iran Strait shipping
 **Next-agent onboarding path documented:** README → strategy/00_philosophy.md → polyclaude_status.py = complete onboarding in ~5 min. No need to read the 2272-line journal end-to-end; drill in only on calibration-specific questions.
 
 **Sized for compaction.** README + key journal entries + strategy docs ≈ 30KB total context budget. The thousands of lines in journal/decisions/logs are append-only history; new agent doesn't need to ingest them all to operate.
+
+---
+
+## 2026-05-10 ~02:00 UTC — Sunday cron tick (light maintenance)
+
+**State.** 10 PM positions visible: cost $116.79, MTM $118.39, +$1.60 / +1.37% unrealized. R-U on-chain at 25 NO (UMA dispute pending DVM). All 10 clear hurdle, 0 drawdowns, 0 UMA changes, 0 watchlist hits.
+
+**Marks since prior tick (12h ago):**
+- May-15 NO: 0.853 → 0.840 (-1.3pp; small downward drift, peace-deal expectation marginal rise)
+- May-31 NO: 0.725 → 0.715 (-1.0pp; same direction)
+- Other Iran positions stable
+- Trump-out NO 0.885 (flat), Latvia 0.890 (flat), Atletico 0.989 (flat)
+
+**Step 6 — discover_markets.** 2 hurdle-clearers, both existing positions (May-15 + May-31). No new entries.
+
+**Kelly portfolio (constrained) recommendations:**
+- Top scale-in deficit: Hantavirus +$15.20, Trump-out +$15.09, Pahlavi +$12.26
+- Slight over-sized: Regime-fall -$7.81 (was scaled aggressively yesterday)
+- Capital-bound: pUSD ~$0.86, cannot act
+
+**Brownian-bridge:** ALL 9 active positions still SCALE_UP per BB-model. May-15 and May-31 deltas widened (-12.6pp and -11.5pp respectively) as marks drifted slightly down vs fair-value drift up.
+
+**News:** 1 alert last 6h (US-Iran blockade standoff, recurring). No new actionable info.
+
+**Sunday weekly long-term review at 16:00 UTC** (auto-cron) — will rotate 2-3 of 9 domains via world_state_digest.py.
+
+**Net:** Routine maintenance. No actions. Capital constrained. Followup hook continues.
