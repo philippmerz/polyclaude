@@ -2326,3 +2326,42 @@ Recent news alert: Mike Waltz pushing UN resolution against Iran Strait shipping
 **Sunday weekly long-term review at 16:00 UTC** (auto-cron) — will rotate 2-3 of 9 domains via world_state_digest.py.
 
 **Net:** Routine maintenance. No actions. Capital constrained. Followup hook continues.
+
+---
+
+## 2026-05-10 ~14:05 UTC — 14:00 cron tick + capital reallocation (Atletico → May-31 NO)
+
+**Tick state.** 10 positions, MTM $118.48 vs cost $116.79 = +$1.68 / +1.44%. Iran cluster mixed: May-15 NO 0.840 → 0.856 (+1.6pp), May-31 NO 0.715 → 0.675 (-4pp anomalous given today's escalation news), Hantavirus 0.921 → 0.933 (+1.2pp). Latvia 0.890 → 0.895 stable.
+
+**Anomaly: May-31 NO -4pp despite multi-source escalation news today** (Gulf drone attacks, US blockade explainer, Iran slow-walking proposal). Either:
+1. Profit-taking by holders before resolution
+2. Liquidity-driven move (someone unwound at lower)
+3. Genuine fundamental shift toward higher P(deal-by-May-31)
+
+Whichever — Brownian-bridge fair-value at t/T=0.30, p=0.78 = 0.836. Mark 0.675 = 16pp underpriced. SCALE_UP signal strong.
+
+**Capital reallocation: Atletico → May-31 NO swap.**
+- Atletico YES (DEC-0008): near-zero remaining edge (mark 0.989, 15d to resolve, hold-to-resolve gain ~$0.05). Sold 5 of 5.02 shares @ $0.981 = $4.905 received (tx 0xafe5ef31). Dust 0.0199 shares to resolve naturally.
+- May-31 NO (DEC-0006): scaled +7 shares @ $0.69 = $4.83 (tx 0x8781d545). Position now 17.44 shares / $11.82 cost.
+- Net: spent $4.83 to buy +7 NO, freed $4.91 from Atletico, $0.08 buffer remaining.
+
+**EV captured:**
+- Atletico hold EV: ~$0 (near-zero remaining edge, hold-to-resolve worth $0.05, spread cost wipes ~$0.05)
+- May-31 NO scale at 0.69 entry, P(NO)=0.80: EV = 0.80 × $2.17 - 0.20 × $4.83 = +$0.77. Spread cost ~$0.10. Net +$0.67.
+- Swap EV: +$0.67 captured vs holding Atletico.
+
+**Rationale (Kelly + Brownian-bridge):**
+- Per portfolio_kelly --constrained, May-31 NO is no longer top-deficit (Trump-out and Hantavirus are larger). But May-31 NO has the BIGGEST Brownian-bridge underpricing (-16pp vs fair_BB) due to mark dropping today. Capital deployed where MARGINAL edge is highest.
+- Capital that was idle in near-resolved Atletico (no edge) is now in the highest-marginal-edge active position.
+
+**Decision tracker:** DEC-0023 (Atletico close), DEC-0024 (May-31 scale). Both logged.
+
+**Other steps:**
+- Redeem-all: 0 redeemable
+- Discover_markets: 2 hurdle-clearers, both existing (May-15 + Hantavirus)
+- Decisions pending: none overdue
+- Sunday weekly long-term review queued for 16:00 UTC
+
+**Recoup math.** Iran cluster cost basis now $43.04 (up from $33.71 pre-campaign) + $11.82 May-31 (up from $6.99) = ~$60 in iran-peace + iran-regime. Expected gain on full cluster resolution ~$15-25 covers R-U $16.73 in EV.
+
+**Net.** First non-trivial post-campaign trade. Atletico-to-May-31 capital reallocation per Brownian-bridge marginal-edge rule. ~$0.67 EV captured vs hold.

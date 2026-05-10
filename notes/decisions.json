@@ -1,5 +1,5 @@
 {
-  "next_id": 23,
+  "next_id": 25,
   "decisions": [
     {
       "id": 1,
@@ -432,6 +432,49 @@
         "v2",
         "recoup-campaign",
         "kelly-sized"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2026-05-10T14:03:14Z",
+      "type": "close_position",
+      "thesis": "Atletico YES partial close: sold 5 of 5.02 shares @ $0.981 = $4.905 received. Near-zero remaining edge (15d to resolve, mark 0.989, hold-to-resolve gain ~$0.05 vs spread cost ~$0.05). Swap to May-31 NO captures higher EV. Dust 0.0199 shares left, will resolve naturally.",
+      "confidence": "high",
+      "prediction": "5 shares already settled to USDC.e via CLOB; dust resolves YES May 25 for ~$0.02 redeem.",
+      "size_usd": -4.905,
+      "resolution_at": "2026-05-10",
+      "tags": [
+        "polymarket",
+        "atletico",
+        "close-rebalance",
+        "v2",
+        "recoup-campaign"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 24,
+      "timestamp": "2026-05-10T14:03:15Z",
+      "type": "size_change",
+      "thesis": "May-31 Iran-peace NO scale-in: +7 shares @ $0.69 = $4.83. Position now 17.44 shares / $11.82 cost / $17.44 max payout. Funded by Atletico close (above). Brownian-bridge fair-value: mark 0.675 vs fair_BB 0.836 (t/T=0.30, p=0.78). 16pp underpriced. Constrained-Kelly recommended; capital freed via Atletico swap. Today's escalation news (Gulf drone attacks, Iran slow on US proposal) reinforces NO thesis.",
+      "confidence": "high",
+      "prediction": "Resolves NO May 31. 21d window with active escalation reduces deal probability.",
+      "size_usd": 4.83,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "polymarket",
+        "iran-peace",
+        "bond-like-fade",
+        "scale-in",
+        "v2",
+        "recoup-campaign",
+        "kelly-sized",
+        "brownian-bridge"
       ],
       "outcome": null,
       "calibration_delta": null,
