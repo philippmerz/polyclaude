@@ -2502,3 +2502,47 @@ Script reporting note: redeem-all log labeled "yes_redeemed: 25.0" — misleadin
 - **Full-resolution trajectory: +$11-15 from current cluster = covers ~70-90% of R-U loss in realized terms.**
 
 The R-U loss is now fully crystallized; remaining recoup is whether the Iran cluster fully resolves NO. Per current marks (0.95-0.99 on near-term, 0.82-0.92 on long-tail), market consensus strongly aligns with our thesis. Plus Trump's explicit rejection of Iran proposal removes the largest acute threat to the May-31 NO position.
+
+---
+
+## 2026-05-11 ~14:30 UTC — Strategy pivot: post-R-U new operating rules
+
+**Operator pushed back on calibration-as-product framing** ("Goodhart's law; only focus is ROI"). Re-evaluating purely on expected returns conditional on new info (UI-vs-API asymmetry + training-data gap + subjective-resolution risk).
+
+**NEW OPERATING RULES (effective after Iran cluster resolves):**
+
+1. **Hold current cluster to resolution.** No premature close. Marks aligned with thesis.
+
+2. **Post-resolution 60/40 split:**
+   - 60% Aave V3 USDC (hurdle floor 3.4-3.8% APY)
+   - 40% PM/onchain selective opportunities
+
+3. **PM filters (mandatory going forward):**
+   - MECHANICAL resolution only — skip "permanent peace deal / ceasefire / qualifies-as-X" subjective markets
+   - 10pp+ edge bar (was 5pp); wider safety margin for API-blind risk
+   - polyclaude_enter.py mandatory for every entry
+   - Max 5 concurrent active positions (was 10); tighter focus
+
+4. **Build polymarket_ui_check.py** (~2h): WebFetch PM market HTML for held positions, parse warning banners + dispute indicators visually. Defensive infra replicating UI safety surface.
+
+5. **Skip Pendle YT integration.** Capital too small (~$60-80 post-resolution) to amortize the build vs Pendle 8-12% APY. Aave guaranteed + selective PM 15-25% per trade dominates at this scale.
+
+6. **Target: beat Aave 3.4% over remaining ~11 months.** Realistic 5-7% blended = $8-12 net. Plus Iran cluster lock-in +$8-11. Plus DEC-0019 +$0.53. Total trajectory: ~$15-19 = covers R-U $16.73 at parity-to-slight-gain.
+
+**Strategic rationale.**
+
+The R-U miss exposed a structural disadvantage: I operate on backend APIs while Polymarket UI shows safety-critical state (umaResolutionStatus, dispute warnings, resolution-criteria highlight) that humans see for free. Backend API parity requires explicit infrastructure (uma_status_check, gamma description fetch) which I built REACTIVELY.
+
+Subjective-resolution markets are where this disadvantage costs most: criteria-language interpretation, UMA voter discretion, dispute proposal/voting dynamics — all under-modeled by an LLM trader without UI signals.
+
+Mechanical-resolution markets eliminate the criteria-interpretation risk. Edge there is harder (sharp traders compete) but downside is bounded.
+
+The Aave anchor (60% allocation) caps possible losses on the project. The PM 40% slice can still capture asymmetric upside on rare mispricings without venue-asymmetry risk dominating.
+
+**Expected ROI lower-bound:** 60% × 3.4% = 2% guaranteed.
+**Expected ROI upper-bound:** if PM 40% returns 15% on average = +6% → blended 8%.
+**Realistic mid-point:** 5-6% blended over 11 months.
+
+**Trade-off accepted:** lower variance, lower upside, higher floor. Lean into hurdle yield + selective edge rather than broad opportunistic deployment.
+
+**Backlog item added:** polymarket_ui_check.py build (~2h).
