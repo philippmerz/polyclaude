@@ -367,9 +367,10 @@
         "v2",
         "recoup-campaign"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "NO won; market resolved YES=0/NO=1.00. 15 shares \u00d7 $1.00 = $15.00 redemption pending UMA payouts post-to-CTF. Cost $14.475; profit $0.525 = +3.6% in 3 days = ~440% APY net.",
+      "calibration_delta": "p_estimate 0.99 vs market priced 0.965; my edge ~+2.5pp realized correctly. Trade thesis (Iran wish-list rejection + 14pt MOU not signed within 1.3d) held.",
+      "lesson": "Short-tail bond-like fade on conjunction-style resolution criteria works when strict criteria align with our prior. P-fragility caveat (kelly_size sensitivity \u00b15%) was appropriate ex-ante.",
+      "resolved_at": "2026-05-11T00:55:40Z"
     },
     {
       "id": 20,

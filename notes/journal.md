@@ -2401,3 +2401,40 @@ Generational (10x+) prob 15%; strong (3-5x) 35%; modest 30%; flat 15%; broken 5%
 **No polyclaude-side action.** Both new candidates are equities, route=ibkr_surface. Next weekly review: 2026-05-17 (rotate to next 2-3 fresh domains: macro-fiscal-labor, trade-regulation, tech-ai-chips, biotech-health).
 
 **Cron tick performed steps 1-7 (state, news, hurdle, decisions, redeem, prospect, journal). Step 11 commit pending.**
+
+---
+
+## 2026-05-11 ~00:55 UTC — DEC-0019 RESOLVED + Iran cluster massive repricing
+
+**DEC-0019 May-11 NO RESOLVED to NO ($1.00 / share).** 15 shares × $1.00 = $15 redemption pending UMA payouts-to-CTF posting (`redeemable=false` currently; data-api still showing mark 0.9945). Realized profit: $15.00 - $14.475 = **+$0.525** (+3.6% in 3 days, ~440% APY net). Thesis held — Iran's "wish-list rejection" + 14pt MOU not signed within 1.3d.
+
+**Iran cluster massive repricing in last 12-24 hours.** Marks vs prior tick:
+- May-15 NO: 0.848 → **0.955** (+10.7pp). Position 22 shares × $0.955 = $21.00 mtm (cost $18.46) = +$2.55 / +13.8%.
+- May-31 NO: 0.685 → **0.805** (+12.0pp). Position 17.44 shares × $0.805 = $14.04 mtm (cost $11.82) = +$2.22 / +18.7%. **My scale-in at $0.69 (DEC-0024 yesterday): 7 shares × ($0.805 - $0.69) = +$0.80 profit just on the scale-in.**
+
+**Single-day P&L: +$5.78 / +4.96% on $116.65 cost basis.** Up from +$1.60 yesterday = **+$4.18 in 24 hours.**
+
+**Cluster anti-correlation validating:** Iran-peace NOs UP big, regime-fall NO -1pp. The mutually-exclusive tail-path structure I documented 2026-05-09 (peace scenario wins regime/Pahlavi NOs; regime scenario wins peace NOs) holds. Peace NOs accruing now; if regime scenario hits later, those NOs would print.
+
+**Recoup math vs R-U $16.73 loss:**
+- Today's single-day MTM gain: +$4.18 (≈25% of R-U loss)
+- Plus May-15 NO at 0.955 with 4d to resolve: 22 × ($1 - $0.955) = $0.99 remaining gain to lock = +$3.54 total expected
+- Plus May-31 NO at 0.805 with 20d: 17.44 × ($1 - $0.805) = $3.40 remaining + uncertainty discount
+- DEC-0019 +$0.525 realized
+- Plus Iran-cluster long-tails (Pahlavi, regime-fall, Trump-out, etc.) → $5-10 expected over 235d
+
+**Cumulative expected recoup at this point:**
+- Realized: +$0.525 (DEC-0019)
+- Marked-to-market gain since session start: +$5.78
+- Expected to lock-in on resolution: $4-6 more on May-15 + May-31
+- Long-tail: $5-10
+- **Total trajectory: covers R-U loss ($16.73) in expected value over 22-day horizon.**
+
+**Calibration win.** DEC-0019 verdict was right despite being highest-edge / most-sensitivity-fragile in the book. kelly_size's ±5pp warning was appropriate ex-ante but real-world held.
+
+**Action items:**
+- Next cron tick: redeem May-11 NO once CTF payouts post (likely within 24-48h)
+- Hold May-15 + May-31 NOs to resolution unless mark spikes to >0.98 (would consider early close per portfolio_kelly + Brownian-bridge)
+- Capital from $15 redemption + future Iran resolves → scale Trump-out / Hantavirus / Pahlavi (top constrained-Kelly deficits)
+
+**Updated DEC-0019** with outcome + calibration_delta + lesson.
