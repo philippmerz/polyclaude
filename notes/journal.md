@@ -2438,3 +2438,23 @@ Generational (10x+) prob 15%; strong (3-5x) 35%; modest 30%; flat 15%; broken 5%
 - Capital from $15 redemption + future Iran resolves → scale Trump-out / Hantavirus / Pahlavi (top constrained-Kelly deficits)
 
 **Updated DEC-0019** with outcome + calibration_delta + lesson.
+
+---
+
+## 2026-05-11 ~02:00 UTC — Monday 02:00 cron tick (post-resolution holding)
+
+**State.** 9 positions, MTM $122.45 vs cost $116.65 = +$5.80 / +4.97% unrealized (best mark since session start).
+
+**Marks holding:**
+- May-15 NO: 0.955 (4d to resolve; capture remaining $0.045/share ≈ $0.99 + $1.55 already realized)
+- May-31 NO: 0.805 (20d to resolve; capture $0.195/share ≈ $3.40 + $2.22 already realized)
+- May-11 NO: 0.996 (RESOLVED; CTF payouts not yet posted, redeem pending)
+- Other Iran positions stable
+
+**Step 5 — redeem.** 0/9 redeemable. May-11 NO market resolved per gamma but `redeemable=false` in data-api — UMA payouts-to-CTF posting may take 24-48h after resolution.
+
+**Step 6 — discover_markets.** 3 hurdle-clearers, all existing positions (May-15, May-31, Hantavirus). 1 other surfaced: "Strait of Hormuz traffic returns to normal by end of May?" NO @ 0.855, 20d, +1359% APY. Moderately interesting correlated-tail to May-31 NO thesis but no catalyst_check run; defer.
+
+**Capital state.** pUSD ~$0.86. Once May-11 redeems → +$15 → can deploy on top constrained-Kelly deficits (Trump-out, Hantavirus, Pahlavi).
+
+**Net.** Holding pattern, awaiting redemption. The +$4.18 single-day gain yesterday + +$5.80 cumulative this week recoups majority of R-U loss in MTM terms; realization pending Iran cluster resolutions May-15/May-31.
