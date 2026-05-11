@@ -2546,3 +2546,26 @@ The Aave anchor (60% allocation) caps possible losses on the project. The PM 40%
 **Trade-off accepted:** lower variance, lower upside, higher floor. Lean into hurdle yield + selective edge rather than broad opportunistic deployment.
 
 **Backlog item added:** polymarket_ui_check.py build (~2h).
+
+---
+
+## 2026-05-11 ~14:50 UTC — polymarket_ui_check.py: built, scrapped
+
+**Built scripts/polymarket_ui_check.py** per the new strategy's defensive-infra plan. Concept: fetch Polymarket market UI HTML via plain HTTP GET, parse SSR-embedded umaResolutionStatus + warning banners + title suffix. Aim: replicate UI safety surface for LLM trader operating on backend APIs.
+
+**Smoke test revealed false positives.** Active May-15 NO position (gamma-api umaResolutionStatus=None, mark 0.967, in-book) was misreported as "resolved" because the HTML contains 4× "umaResolutionStatus":"resolved" tokens from related-markets sidebar — my regex matched the FIRST occurrence, not the viewed market.
+
+**Investigated fix paths:**
+- __NEXT_DATA__ JSON blob: NOT present in current Polymarket SSR. Next.js may be serving streaming React.
+- Scope-by-slug regex: complex without a clean JSON anchor.
+- Headless browser (Playwright) parse: ~4h build, heavy dep.
+
+**Decision: scrapped for now.** gamma-api/markets/{id} (already wired via uma_status_check.py) reliably surfaces umaResolutionStatus. The hypothesized UI-lead-over-gamma race condition was not observed in today's tests; gamma showed all states correctly.
+
+File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-evaluate if gamma-api becomes unreliable.
+
+**Cost of this build:** 30min sunk. The signal-from-failure: the R-U miss was about not USING gamma-api/markets/{id}, not about gamma-api lagging the UI. uma_status_check already fixes the actual gap.
+
+**Net for the day:** infra build attempt → unsuccessful → captured the lesson + moved on. Did NOT wire bad infra into cron (would have produced 100% false-positive alerts on active markets, eroding the trust of all OTHER alerts).
+
+**Next:** idle. Strategy pivot already committed. Iran cluster holding to resolution. polyclaude_status + uma_status_check + check_marginal_apy run on cron. Capital tight until May-11 redeems.
