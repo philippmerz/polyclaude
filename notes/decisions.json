@@ -346,9 +346,10 @@
         "catalyst-check-validated",
         "re-eval-from-DEC-0014"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "RESOLVED YES by UMA dispute (proposed YES by Trump 3-day-ceasefire-announcement May 8-11; disputed; UMA DVM ruled YES via loose criteria interpretation 'regardless of whether ceasefire officially starts afterward'). 25 NO shares redeemed for $0 (tx 0x1eb4791e). REALIZED LOSS: -$16.73 = -10% of bankroll.",
+      "calibration_delta": "Catalyst_check.py central P(YES)=5%; UMA actual ruling: YES. Predictor was WRONG by ~95pp due to (1) loose-criteria interpretation not modeled, (2) Trump 3-day ceasefire announcement materializing post-entry, (3) scale-in error at 0.5208 when mark crashed \u2014 read overreaction, was new info.",
+      "lesson": "Three documented mistakes: (1) Scale-in error when mark crashed 30% on fundamental news \u2014 should read new info, not noise; (2) Investigation gap when position de-indexed from data-api \u2014 should FIRST check umaResolutionStatus on gamma-api/markets/{id}, not just on-chain balance; (3) Resolution-criteria language miss \u2014 operating under strict 'permanent deal' framing while actual criteria explicitly say 'regardless of whether ceasefire officially starts afterward'. ALL three fixes shipped 2026-05-09 via 11 systematic tools + uma_status_check + polyclaude_enter umaResolutionStatus reject + kelly_size sensitivity warnings + catalyst_check resolution-criteria injection.",
+      "resolved_at": "2026-05-11T14:02:51Z"
     },
     {
       "id": 19,

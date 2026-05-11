@@ -2458,3 +2458,47 @@ Generational (10x+) prob 15%; strong (3-5x) 35%; modest 30%; flat 15%; broken 5%
 **Capital state.** pUSD ~$0.86. Once May-11 redeems → +$15 → can deploy on top constrained-Kelly deficits (Trump-out, Hantavirus, Pahlavi).
 
 **Net.** Holding pattern, awaiting redemption. The +$4.18 single-day gain yesterday + +$5.80 cumulative this week recoups majority of R-U loss in MTM terms; realization pending Iran cluster resolutions May-15/May-31.
+
+---
+
+## 2026-05-11 ~14:05 UTC — Monday 14:00 cron tick: R-U LOSS REALIZED + May-11 still pending
+
+**STEP 5 redeem-all output:** redeem tx 0x1eb4791e burned the 25 R-U NO tokens for **$0 USDC** (UMA ruled YES per loose-criteria interpretation; my NO position lost completely). On-chain verified: R-U YES + NO balances both 0. **R-U LOSS REALIZED: -$16.73 cost basis written off.**
+
+DEC-0018 updated with outcome + calibration_delta + lesson (3 documented mistakes from 2026-05-09).
+
+Script reporting note: redeem-all log labeled "yes_redeemed: 25.0" — misleading misnomer; actually redeemed 25 NO tokens (got $0). Bug for v2.
+
+**Step 5 status — May-11 NO STILL PENDING redeemable=false.** Market resolved per gamma but UMA payouts not yet posted to CTF. data-api still shows position with mark 0.998. Wait another 12-24h.
+
+**Position state post-R-U-redemption:**
+- Cost basis without R-U: $116.65
+- Total cost basis with stale R-U entry (data-api hasn't refreshed): $133.38
+- MTM ex-R-U: $122.39
+- Unrealized P&L on active 9 positions: +$5.74 / +4.92% on $116.65 basis
+- Realized: -$16.73 (R-U closed at zero)
+- **Net session-to-date: -$10.99 ($133.38 - $122.39)**
+
+**Iran cluster CONTINUING UP:**
+- May-15 NO: 0.955 → 0.967 (+1.2pp); position +15.18% on cost
+- May-31 NO: 0.805 → 0.815 (+1pp); position +20.19% on cost
+- Other Iran positions stable
+- Regime-fall NO 0.825 → 0.805 (-2pp; anti-correlation continues)
+
+**News this cron window:**
+- Multiple recurring Hormuz/Iran-blockade stories (all direction-correct for our NO cluster)
+- Trump rejected Iran proposal (CRITICAL for NO thesis; supports)
+- No new actionable surface
+
+**Capital state:** pUSD $0.11, USDC.e $1.00. Tight; need May-11 redemption ($15) to unlock further deployment.
+
+**Discover_markets:** 0 new entries beyond existing positions.
+
+**Recoup math (HONEST accounting):**
+- Realized -$16.73 (R-U)
+- Unrealized +$5.74 (Iran cluster appreciation)
+- Net: -$10.99 to date
+- Pending realization on May-15 ($21 expected at $1.00 vs $18.46 cost = +$2.54), May-31 ($17.44 expected vs $11.82 cost = +$5.62), Latvia ($6.02 vs $5.00 = +$1.02), Trump-out ($12.33 vs $10.56 = +$1.77), other long-tails
+- **Full-resolution trajectory: +$11-15 from current cluster = covers ~70-90% of R-U loss in realized terms.**
+
+The R-U loss is now fully crystallized; remaining recoup is whether the Iran cluster fully resolves NO. Per current marks (0.95-0.99 on near-term, 0.82-0.92 on long-tail), market consensus strongly aligns with our thesis. Plus Trump's explicit rejection of Iran proposal removes the largest acute threat to the May-31 NO position.
