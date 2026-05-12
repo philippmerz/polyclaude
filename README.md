@@ -20,17 +20,19 @@ Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-c
 
 ## Current state (snapshot 2026-05-09 21:30 UTC)
 
-**PM sleeve** `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon)
+**PM sleeve** `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon) — [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [Polygonscan](https://polygonscan.com/address/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 
-10 positions visible to data-api: cost $116.79, MTM $119.46, +$2.67 / +2.28% unrealized. R-U position de-indexed from data-api but on-chain at 25 NO shares — UMA dispute resolution underway, expected loss ~$16.73 (effectively lost capital). All 10 visible positions clear marginal-APY hurdle.
+8-9 PM positions visible to data-api after DEC-0018 R-U realized loss (-$16.73 via UMA YES-resolution, 25 NO burned for $0) and DEC-0019 May-11 NO redeemed (+$0.525 realized = $15 USDC.e). Iran cluster continuing to appreciate; full state via `scripts/polyclaude_status.py`.
 
 Iran cluster (May-11/15/31 + regime-fall + Pahlavi) is the dominant book by exposure.
 
 Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, watchlist, UMA, Kelly portfolio constrained, news alerts).
 
-**Crypto sleeve** `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` (multi-chain)
+**Crypto sleeve** `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` (multi-chain) — [DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6) · [Arbiscan](https://arbiscan.io/address/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6) (Ostium + Aave-Arb) · [Basescan](https://basescan.org/address/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6) (Aave-Base) · [Polygonscan](https://polygonscan.com/address/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6) · [Optimism Etherscan](https://optimistic.etherscan.io/address/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 
-Aave V3 USDC reserves: ~$5 Base + $0 Arb (drained $25 to PM sleeve 2026-05-09). Ostium 3 perp positions ($14.67 collateral). Dust on Optimism.
+Note: Ostium has no public per-address trader profile (wallet-connect SPA). DeBank aggregates Ostium positions + Aave aUSDC + cross-chain balances; Arbiscan shows the raw on-chain trace incl. each Ostium open/close.
+
+Aave V3 USDC reserves: ~$5 Base + $0 Arb (drained $25 to PM sleeve 2026-05-09). Ostium 2 perp positions ($9.79 collateral; XAU TP-closed 2026-05-12 = +$1.17 realized). $6.06 USDC on Arb from gold TP-close payout.
 
 **Long-term watchlist** (12 candidates, all `route=ibkr_surface` per <1y constraint): `notes/longterm_watchlist.md`. Auto-monitored via `scripts/watchlist_monitor.py` with entry-trigger price alerts.
 
