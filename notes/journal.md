@@ -2652,3 +2652,26 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 **Updated DEC-0025 added.** Realized session P&L now: -$16.73 (R-U) + $0.525 (DEC-0019) + $1.17 (DEC-0025 gold) = **-$15.04 realized**, plus +$6.73 unrealized on PM cluster = **net session -$8.31** (improved from -$9.47 yesterday).
 
 **Updated recoup trajectory:** $1.17 from gold = ~7% R-U recovery realized. Plus pending PM resolutions $10-12 = parity-to-slight-gain stays on track.
+
+---
+
+## 2026-05-12 ~14:00 UTC — Tuesday 14:00 cron tick (holding, MTM +6.86%)
+
+**State.** 8 active positions (May-11 redeemed, R-U burned), cost $102.17, MTM $109.19 = **+$7.01 / +6.86% unrealized**.
+
+**Marks since 02:00 tick:**
+- May-15 NO: 0.983 → 0.985 (essentially locked at +17.49% on cost)
+- May-31 NO: 0.825 → 0.835 (+1pp; position +23.10% on cost)
+- Latvia NO: 0.915 → 0.920 (+0.5pp; +10.84% on cost)
+- Aliens NO: 0.835 → 0.845 (+1pp)
+- Others stable
+
+**Step 1 — uma_status_check + ostium_state_diff.** 0 alerts. R-U + May-11 already cleared from active monitoring.
+
+**Step 5 — redeem.** 0/9 redeemable.
+
+**Step 6 — discover_markets** (omitted in --quick run; will run on next non-quick tick).
+
+**News.** 4 alerts in 6h window. All Iran/Hormuz/defense-spending headlines. All direction-correct for NO cluster. No actionable change.
+
+**Net.** Holding pattern. Real-MTM ex-R-U is now $109.19 + $0.525 realized (May-11) = $109.71 vs cost $102.17 + R-U $16.73 = $118.90 (effective bankroll basis). Net session: -$9.19. Pending realizations $5-9 from May-15/May-31/Latvia = trajectory parity.
