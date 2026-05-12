@@ -2569,3 +2569,33 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 **Net for the day:** infra build attempt → unsuccessful → captured the lesson + moved on. Did NOT wire bad infra into cron (would have produced 100% false-positive alerts on active markets, eroding the trust of all OTHER alerts).
 
 **Next:** idle. Strategy pivot already committed. Iran cluster holding to resolution. polyclaude_status + uma_status_check + check_marginal_apy run on cron. Capital tight until May-11 redeems.
+
+---
+
+## 2026-05-12 ~02:00 UTC — Tuesday 02:00 cron tick (holding pattern)
+
+**State.** 9 positions (post-R-U-redemption), cost $116.65, MTM $123.90, **+$7.25 / +6.22% unrealized.**
+
+**Mark moves since prior tick (12h ago):**
+- May-11 NO: 0.998 → **1.000** (full lock-in; redemption still pending CTF payouts)
+- May-15 NO: 0.967 → 0.983 (+1.6pp); position +17.09%
+- May-31 NO: 0.815 → 0.825 (+1pp); position +21.68%
+- Regime-fall NO: 0.805 → 0.825 (+2pp recovery)
+- Latvia NO: 0.890 → 0.915 (+2.5pp; SF2 in 2 days)
+- Aliens NO: 0.825 → 0.835 (+1pp)
+- Other positions stable
+
+**Step 5 — redeem.** 0/9 redeemable. May-11 NO mark = 1.000 on data-api but `redeemable=false`. UMA payouts taking >40h. Will retry next cron.
+
+**News this window.** Multiple Iran-related stories, all direction-correct for NO cluster (Trump dismissive, ceasefire on "life support", standoff continuing). No actionable change.
+
+**Discover_markets / catalysts.** No new entries (per post-R-U strategy: mechanical-resolution + 10pp+ edge filters). Iran cluster holding to resolution.
+
+**Recoup math update:**
+- Realized: -$16.73 (R-U closed)
+- Unrealized: +$7.25
+- Net session: **-$9.48** ($1.50 better than yesterday)
+- Pending realization: May-11 +$0.53, May-15 +$0.37 to 1.000, May-31 +$3.05 to 1.000, Latvia +$0.51, plus long-tails
+- **Total trajectory: +$11-13 still expected, covering ~65-78% of R-U in realized terms.**
+
+**Net.** Holding pattern. May-14 Trump-Xi summit + Eurovision SF2 = next catalyst window.
