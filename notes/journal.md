@@ -2599,3 +2599,34 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 - **Total trajectory: +$11-13 still expected, covering ~65-78% of R-U in realized terms.**
 
 **Net.** Holding pattern. May-14 Trump-Xi summit + Eurovision SF2 = next catalyst window.
+
+---
+
+## 2026-05-12 ~10:00 UTC — DEC-0019 redeemed ($15 USDC.e received)
+
+**Tx 0x8c51bd6d** burned 15 May-11 NO tokens, paid out $15 USDC.e. Balance verified: USDC.e now $15.998 (was $1.0; +$14.998 from this redemption, consistent with 15 × $1.00 - gas).
+
+**Realized P&L on DEC-0019: +$0.525** ($15 - $14.475 cost) = +3.62% in 4 days (~330% APY net of fees).
+
+**Script naming quirk:** redeem-all output labeled "yes_redeemed: 15.0, no_redeemed: 0.0". Same misnomer as R-U redemption: counts BURNED tokens regardless of side. Bug to fix in v2 — should label by side held + payout received.
+
+**Capital state.**
+- USDC.e: $15.998 (just redeemed)
+- pUSD: $0.109
+- Aave Base: ~$4.52 (post-bridge drain May 9)
+- Aave Arb: $0
+- Plus 8 visible PM positions (cost $102.18, MTM ~$108.91 = +$6.73 unrealized)
+
+**No immediate rebalance.** Per strategy doc: post-resolution 60/40 split (60% Aave, 40% PM). But this is just the first resolution of a series — May-15 NO ($22 expected) and May-31 NO ($17.44 expected) follow over 3 + 19 days. Rebalancing after each tiny redemption would fragment + incur bridging gas. Defer rebalance until larger pool resolves.
+
+**Updated DEC-0019** with realized outcome already (yesterday). No change needed.
+
+**Recoup math update:**
+- Realized DEC-0018 (R-U): -$16.73
+- Realized DEC-0019: +$0.525
+- Unrealized 8 active positions: +$6.73
+- **Net session: -$9.48** (same as yesterday but $0.525 now realized vs unrealized)
+- Pending realizations: ~+$10-12 across May-15, May-31, Latvia, long-tails
+- Total trajectory: ~+$1-3 net session post all resolutions = parity recoup
+
+**Next action.** Wait for May-15 NO resolution (~3 days) → expected $22 redemption. Then re-evaluate rebalance vs hold pattern.
