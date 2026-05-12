@@ -45,3 +45,4 @@ data/
 .DS_Store
 notes/.uma_status_cache.json
 notes/entries_log.md
+notes/.ostium_state_cache.json
