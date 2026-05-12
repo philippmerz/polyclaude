@@ -1,5 +1,5 @@
 {
-  "next_id": 25,
+  "next_id": 26,
   "decisions": [
     {
       "id": 1,
@@ -477,6 +477,26 @@
         "recoup-campaign",
         "kelly-sized",
         "brownian-bridge"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2026-05-12T10:40:45Z",
+      "type": "close_position",
+      "thesis": "Ostium XAU/USD LONG 5x auto-closed at Take-Profit $4769 (entry $4543.48, collateral $4.89, notional $24.46). TP hit during Iran-war / Strait-of-Hormuz blockade dynamic that drove gold up. Payout ~$6.06 USDC on Arbitrum. Realized gain: ~+$1.17 on $4.89 collateral = +24% in ~13 days. Auto-triggered, not manually closed.",
+      "confidence": "high",
+      "prediction": "Already closed via TP-trigger; outcome locked.",
+      "size_usd": 1.17,
+      "resolution_at": "2026-05-12",
+      "tags": [
+        "ostium",
+        "gold",
+        "xau",
+        "auto-close",
+        "take-profit"
       ],
       "outcome": null,
       "calibration_delta": null,

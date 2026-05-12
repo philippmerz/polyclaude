@@ -2630,3 +2630,25 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 - Total trajectory: ~+$1-3 net session post all resolutions = parity recoup
 
 **Next action.** Wait for May-15 NO resolution (~3 days) → expected $22 redemption. Then re-evaluate rebalance vs hold pattern.
+
+---
+
+## 2026-05-12 ~10:30 UTC — DEC-0025: Ostium XAU/USD LONG auto-closed at TP
+
+**Triggered by operator question** ("Did you liquidate the gold position?"). I hadn't proactively tracked the TP-trigger. Verified via Ostium status (2 trades remaining vs 3 prior) + crypto sleeve balance ($6.06 USDC on Arb, matching expected TP payout).
+
+**Trade details:**
+- XAU/USD LONG 5x
+- Entry: $4543.48 (April 29 open)
+- TP: $4769 (4.98% above entry, ~25% on collateral with 5x lev)
+- Collateral: $4.89
+- Payout: ~$6.06 USDC.e on Arbitrum (close to theoretical $6.11; small slippage/fee diff)
+- Realized gain: **+$1.17 / +24%** in ~13 days
+
+**Driver:** Strait of Hormuz blockade + Iran war dynamic drove gold above $4769. The 21-day hold from April 29 entry to mid-May TP-trigger captured the geopolitical-risk-premium expansion thesis intact.
+
+**Process gap:** I should have proactively notified on auto-close. The cron tick checks Ostium status, but state-change detection (3 open → 2 open) wasn't surfaced as an event. Bank for v2: add state-diff alert on Ostium open-trades count.
+
+**Updated DEC-0025 added.** Realized session P&L now: -$16.73 (R-U) + $0.525 (DEC-0019) + $1.17 (DEC-0025 gold) = **-$15.04 realized**, plus +$6.73 unrealized on PM cluster = **net session -$8.31** (improved from -$9.47 yesterday).
+
+**Updated recoup trajectory:** $1.17 from gold = ~7% R-U recovery realized. Plus pending PM resolutions $10-12 = parity-to-slight-gain stays on track.
