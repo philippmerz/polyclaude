@@ -2675,3 +2675,18 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 **News.** 4 alerts in 6h window. All Iran/Hormuz/defense-spending headlines. All direction-correct for NO cluster. No actionable change.
 
 **Net.** Holding pattern. Real-MTM ex-R-U is now $109.19 + $0.525 realized (May-11) = $109.71 vs cost $102.17 + R-U $16.73 = $118.90 (effective bankroll basis). Net session: -$9.19. Pending realizations $5-9 from May-15/May-31/Latvia = trajectory parity.
+
+---
+
+## 2026-05-13 ~02:00 UTC — Wednesday 02:00 cron tick (holding)
+
+**State.** 8 positions, MTM $109.11 vs cost $102.17 = +$6.93 / +6.79% unrealized (essentially flat from yesterday's +6.86%).
+
+**Marks since 14:00 prior tick:**
+- Latvia NO: 0.920 → 0.900 (-2pp; Eurovision SF2 tomorrow May 14)
+- Aliens NO: 0.845 → 0.855 (+1pp)
+- Other positions stable
+
+**Cron tick:** 0 redeemable, 0 UMA changes, 0 ostium changes, 0 watchlist hits. News flow recurring Iran/Hormuz cost coverage.
+
+**Net.** Holding pattern. Big catalysts tomorrow: Eurovision SF2 (Latvia gate) + Trump-Xi summit. May-15 NO resolves in 2 days.
