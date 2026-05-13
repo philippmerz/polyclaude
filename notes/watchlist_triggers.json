@@ -35,9 +35,9 @@
     },
     {
       "ticker": "CEG", "type": "equity", "yfinance_symbol": "CEG",
-      "entry_max": 280.0, "horizon": "2-5y", "route": "ibkr_surface",
-      "rationale": "Nuclear baseload + AI-PPA. Equity -> IBKR.",
-      "added": "2026-05-08"
+      "entry_max": 250.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "rationale": "Nuclear baseload + AI-PPA. Original $280 trigger fired 2026-05-13 at $271 but fresh longterm_check 3/4 WATCH said still overvalued (20% above fair value, fwd P/E 24-27x vs utility median 15.2x, 56.5% YTD). Revised entry: $237-251 OR post-Q2 2026 guidance miss OR post-TMI NRC approval (catalysts: TMI Microsoft PPA 2027-Q1, Clinton Meta PPA 2027-Q2, Calpine synergies 2026-2027).",
+      "added": "2026-05-08", "revised": "2026-05-13"
     },
     {
       "ticker": "PLTR", "type": "equity", "yfinance_symbol": "PLTR",

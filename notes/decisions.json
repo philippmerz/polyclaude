@@ -455,9 +455,10 @@
         "v2",
         "recoup-campaign"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "5 of 5.02 Atletico YES sold at $0.981 on 2026-05-10 = $4.905 USDC.e received. Dust 0.0199 shares will resolve YES on La Liga top-4 confirmation ~$0.02. Realized loss vs hold-to-resolve: -$0.07 (sold at 0.981 vs final 1.0). Trade rationale (free Atletico \u2192 scale May-31 NO) realized: May-31 mark rallied 0.69 \u2192 0.84 = +$1.05 on the 7-share scale-in. Net swap captured ~+$0.98 EV.",
+      "calibration_delta": "Predicted near-zero remaining edge on Atletico; capital reallocation captured +$0.98 vs hold. Validated.",
+      "lesson": "Capital reallocation between high-conviction near-resolution positions (one with no remaining edge, one with high mid-cycle edge) captures alpha. Brownian-bridge fair-value pricing identifies the marginal-edge ranking.",
+      "resolved_at": "2026-05-13T14:01:46Z"
     },
     {
       "id": 24,
@@ -498,9 +499,10 @@
         "auto-close",
         "take-profit"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "XAU/USD LONG 5x auto-closed at Take-Profit $4769 on ~2026-05-12. Payout $6.06 USDC on Arb. Realized: +$1.17 / +24% in ~13 days.",
+      "calibration_delta": "Gold thesis (geopolitical-risk-premium expansion from Iran war) printed as expected. TP $4769 was set conservatively at entry; could have ridden longer with trailing-stop discipline.",
+      "lesson": "TP-set-at-entry leaves some upside on the table during major shocks. For high-conviction macro plays during ongoing crisis, consider trailing stop or no TP. But: TP execution is automatic and discipline-enforced; manual close decisions can miss.",
+      "resolved_at": "2026-05-13T14:01:46Z"
     }
   ]
 }

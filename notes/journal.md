@@ -2690,3 +2690,31 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 **Cron tick:** 0 redeemable, 0 UMA changes, 0 ostium changes, 0 watchlist hits. News flow recurring Iran/Hormuz cost coverage.
 
 **Net.** Holding pattern. Big catalysts tomorrow: Eurovision SF2 (Latvia gate) + Trump-Xi summit. May-15 NO resolves in 2 days.
+
+---
+
+## 2026-05-13 ~14:10 UTC — Wednesday 14:00 cron tick: CEG TRIGGER HIT but FRESH WATCH
+
+**State.** 8 positions, MTM $109.92 vs cost $102.17 = +$7.74 / +7.58% (new high). Marks all stable except Latvia 0.905 (+0.5pp).
+
+**MAJOR EVENT — Watchlist trigger hit: CEG @ $271.08 ≤ $280 entry.** Per strategy, route=ibkr_surface → re-vet thesis via longterm_check.py.
+
+**Fresh longterm_check verdict (running today vs initial 2026-05-08):**
+- **3/4 WATCH — do NOT enter at $271-279**
+- Stock up 56.5% YTD; forward P/E 24-27x vs utility median 15.2x (20% above fair-value estimate)
+- Catalysts intact: TMI Microsoft PPA restart 2027-Q1, Clinton Meta PPA 2027-Q2, Calpine synergies 2026-2027
+- BUT valuation stretched — entry triggers revised: $237-251 (10% premium to fair value) OR post-Q2 2026 guidance miss OR post-TMI NRC approval (~late 2026)
+
+**Lesson:** static $280 trigger from 2026-05-08 watchlist was based on $307 mark + my P-estimate at that time. Today CEG has dropped 12% to $271 but the FUNDAMENTAL fair-value didn't drop — it's still 20% above fair value. The pull-back to $271 didn't open margin of safety; fair-value is $230-240.
+
+**Watchlist trigger updated:** notes/watchlist_triggers.json CEG entry_max $280 → $250 with rationale. Stored fresh longterm_check verdict.
+
+**Other cron tick items:**
+- 0/8 redeemable (May-15 still 2 days)
+- discover_markets: 2 hurdle-clearers, Hantavirus (existing) + "Starmer out by May 15 NO @ 0.93" (NEW, 7% YES). Per new strategy 10pp+ edge bar: my P(NO) ~98%, edge 5pp, BELOW 10pp threshold. SKIP.
+- decisions.py overdue: DEC-0023 (Atletico close) + DEC-0025 (gold TP) both updated with outcomes.
+- Latvia mark recovered slightly (0.900 → 0.905); Eurovision SF2 tomorrow.
+
+**Net.** Watchlist filter working as designed — entry trigger surfaced, fresh longterm_check re-vetted, decision logged. NO polyclaude-side action (CEG is IBKR-only). Operator Telegram-alerted with the corrected verdict.
+
+**Pending tomorrow:** Eurovision SF2 (Latvia gate) + Trump-Xi summit. May-15 NO resolves day after (Friday). Big catalyst window.
