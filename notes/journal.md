@@ -2718,3 +2718,27 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 **Net.** Watchlist filter working as designed — entry trigger surfaced, fresh longterm_check re-vetted, decision logged. NO polyclaude-side action (CEG is IBKR-only). Operator Telegram-alerted with the corrected verdict.
 
 **Pending tomorrow:** Eurovision SF2 (Latvia gate) + Trump-Xi summit. May-15 NO resolves day after (Friday). Big catalyst window.
+
+---
+
+## 2026-05-14 ~02:00 UTC — Thursday 02:00 cron tick: Latvia mark spiked +8pp
+
+**State.** 8 positions, MTM $110.54 vs cost $102.17 = **+$8.37 / +8.19% (new high)**.
+
+**Marks since prior tick (12h ago):**
+- **Latvia NO: 0.905 → 0.980 (+7.5pp)** — market pricing in Latvia failing Eurovision SF2 (tonight ~21:00 UTC). Position +18.07% on cost.
+- Hantavirus NO: 0.913 → 0.928 (+1.5pp)
+- Aliens NO: stable 0.855
+- May-15 NO + May-31 NO: holding near locked levels
+- Trump-out + Pahlavi + Regime-fall: stable
+
+**Big day catalysts:**
+- ~21:00 UTC: Eurovision Semi-Final 2 (Latvia qualification gate; if fails to qualify, DEC-0007 prints NO immediately to ~1.0)
+- Trump-Xi summit: Iran on agenda; could re-price Iran cluster
+- Tomorrow May 15: DEC-0015 May-15 NO resolves
+
+**Step 5 — redeem.** 0/8 redeemable. May-15 NO mark 0.985 effectively locked.
+
+**Discover_markets / catalysts.** Per new strategy (mechanical-resolution only, 10pp+ edge), no new entries this tick.
+
+**Net.** Big catalyst day ahead. Will tighten autoprompt to track Latvia + Iran-news flow if anything material.
