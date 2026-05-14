@@ -2768,3 +2768,35 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 **Updated DEC-0007** with outcome + calibration_delta + lesson.
 
 **Capital state.** USDC.e $21.7 (was ~$16; +$5.7 from Latvia close), pUSD ~$0.11. Bankroll moving slowly into cash.
+
+---
+
+## 2026-05-14 ~14:00 UTC — Thursday 14:00 cron tick: May-31 NO breakout +2pp
+
+**State.** 7 active positions (Latvia closed earlier), cost $97.18, MTM $105.05 = **+$7.88 / +8.11% unrealized**.
+
+**Notable mark moves:**
+- May-15 NO: 0.990 → 0.994 (essentially locked, resolves tomorrow)
+- **May-31 NO: 0.865 → 0.885 (+2pp)** — position +30.53% on cost = $15.43 mtm
+- Regime-fall stable
+- Iran cluster (peace + regime + Pahlavi) continuing to firm up on multi-source escalation news
+
+**Step 5 — redeem.** 0/7 redeemable.
+
+**Step 6 — discover_markets.** Surfaced existing positions, no new entries per strategy filters.
+
+**Today's catalyst window:**
+- ~21:00 UTC Eurovision SF2 — Latvia gate (DEC-0007 already closed at $0.951; only dust 0.0199 remains)
+- Trump-Xi summit (Iran on agenda)
+- News flow today: Iran implementing fee-collection system for Hormuz ships, "must cooperate" sovereignty assertion = direction-correct for NO cluster
+
+**Tomorrow May 15 23:59 ET:**
+- DEC-0015 May-15 NO resolves (mark 0.994 = effectively locked $22 payout)
+
+**Recoup math update:**
+- Realized: -$16.73 (R-U) + $0.525 (May-11) + $1.17 (XAU gold) + $0.706 (Latvia) = **-$14.33 net realized**
+- Unrealized: +$7.88 across 7 active
+- Net session: **-$6.45** ($1.58 better than yesterday)
+- Pending May-15 (+$3.54) + May-31 (+$2.01 at current mark) + Iran long-tails = trajectory to slight-positive parity
+
+**Net.** Strong day. May-31 NO breakout is the most positive single move. Eurovision SF2 tonight will resolve Latvia. May-15 prints tomorrow.
