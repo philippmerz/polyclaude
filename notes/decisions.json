@@ -129,9 +129,10 @@
         "eurovision",
         "tail_fade"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Closed 6 of 6.02 Latvia NO @ $0.951 (tx 0x319ec594), $5.706 USDC.e received. Realized +$0.706 vs $5.00 cost = +14.1% in ~19 days. Trigger: bookie consensus P(top 10) = 9% vs market P(YES) = 3.75% (mark 0.9625 NO) = 5pp market over-confidence. Operator flagged 'sounds pretty good on first listen' aligning with bookie/rehearsal-reception data. SF2 hasn't fired yet but EV of close > hold-to-resolve under bookie probability.",
+      "calibration_delta": "Mark range over period: 0.83 entry \u2192 0.98 peak \u2192 0.95 close. Position rode bookie-vs-market discrepancy. Operator + bookie consensus triggered close at moment market over-confident.",
+      "lesson": "Always cross-check market implied probability against BOOKIE consensus for entertainment/sports markets. Polymarket can over-trend when bookies are more nuanced (especially as event approaches). Sports_pm_scan + bookie integration validated. Dust 0.0199 shares remain \u2014 will resolve naturally either way (~$0.02 max diff).",
+      "resolved_at": "2026-05-14T08:37:20Z"
     },
     {
       "id": 8,

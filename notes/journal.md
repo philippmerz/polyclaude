@@ -2742,3 +2742,29 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 **Discover_markets / catalysts.** Per new strategy (mechanical-resolution only, 10pp+ edge), no new entries this tick.
 
 **Net.** Big catalyst day ahead. Will tighten autoprompt to track Latvia + Iran-news flow if anything material.
+
+---
+
+## 2026-05-14 ~08:30 UTC — DEC-0007 Latvia NO partial close: \$0.706 realized
+
+**Triggered by operator question** ("Latvia's entry sounds pretty good on first listen. What's the basis for expecting failure to qualify?")
+
+**Quick web research surfaced:**
+- Artist: Atvara, song "Ēnā" (Latvian-language ballad on familial alcoholism)
+- Bookmaker odds: SF2 qualifying 46%, Grand Final top-10 9%
+- Rehearsal reception: highly positive ("flawless vocals", "should impress juries", "no controversy")
+
+**Market vs bookies arbitrage:**
+- Mark NO at 0.9625 → implied P(YES top 10) = 3.75%
+- Bookie consensus: 9% probability of Latvia top 10
+- **5pp gap** — market over-confident vs bookie consensus + rehearsal data
+
+**Action:** Sold 6 of 6.02 Latvia NO @ \$0.951 (tx 0x319ec594) = \$5.706 USDC.e received. Realized: +\$0.706 / +14.1% in ~19d. Dust 0.0199 shares retained (resolves naturally either way, ~\$0.02 max delta).
+
+**EV math.** Hold-to-resolve at bookie P(YES)=9%: 0.91 × \$6.02 = \$5.48 expected. Sell at \$0.951: \$5.706. **Net capture: +\$0.226** vs holding under bookie probability.
+
+**Lesson:** sports_pm_scan + bookie-consensus integration (built 2026-05-09) validated this trade. Cross-checking market against bookies catches market over-confidence/under-confidence, especially as event approaches.
+
+**Updated DEC-0007** with outcome + calibration_delta + lesson.
+
+**Capital state.** USDC.e $21.7 (was ~$16; +$5.7 from Latvia close), pUSD ~$0.11. Bankroll moving slowly into cash.
