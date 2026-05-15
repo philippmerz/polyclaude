@@ -2800,3 +2800,30 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 - Pending May-15 (+$3.54) + May-31 (+$2.01 at current mark) + Iran long-tails = trajectory to slight-positive parity
 
 **Net.** Strong day. May-31 NO breakout is the most positive single move. Eurovision SF2 tonight will resolve Latvia. May-15 prints tomorrow.
+
+---
+
+## 2026-05-15 ~02:00 UTC — Friday 02:00 cron tick (may-15 resolves today)
+
+**State.** 7 active positions (May-15 still on book), cost $97.18, MTM $105.25 = +$8.08 / +8.31% unrealized.
+
+**Marks stable since 14:00 yesterday:**
+- May-15 NO: 0.994 → 0.9965 (essentially full lock)
+- May-31 NO: 0.885 (stable, +30.53%)
+- Iran cluster strong
+- Latvia closed yesterday (dust 0.02 shares remain)
+
+**Resolution today.** May-15 NO resolves at 23:59 ET (~04:00 UTC May 16). 22 shares × $1.00 = **$22 redemption pending UMA proposal + posting (likely 2-4d post-resolution given May-11 precedent).** Expected realized: +$3.54 ($22 - $18.46 cost).
+
+**Step 5 — redeem.** 0/6 redeemable (May-11 already redeemed previously).
+
+**Step 6 — discover_markets.** Per new strategy filters, no new entries.
+
+**Recoup math update:**
+- Realized: -$16.73 (R-U) + $0.525 (May-11) + $1.17 (XAU) + $0.706 (Latvia close) = **-$14.33**
+- Unrealized: +$8.08 across active 7 positions
+- Net session: **-$6.25** ($0.20 better than yesterday)
+- Expected May-15 lock-in tonight: +$3.54
+- Post May-15 realization: net session would be **-$2.71** (78% recoup of R-U)
+
+**Net.** Routine tick before May-15 resolution. Standard hold.
