@@ -24,3 +24,9 @@ SCAN_RC=$?
 if [[ ${SCAN_RC} -eq 0 ]]; then
     .venv/bin/python scripts/limitless_arb_executor.py run >> logs/arb_executor.log 2>&1
 fi
+
+# Event-monotonicity scan (hourly). Looks for date-monotonic events where
+# YES priced higher on earlier date than later date (pure decomposition arb).
+# Built 2026-05-15 per operator suggestion. Logs to logs/event_monotonicity.log
+# for prospective frequency analysis. Telegram-alert in script if found.
+.venv/bin/python scripts/event_monotonicity_scan.py --json >> logs/event_monotonicity.log 2>&1

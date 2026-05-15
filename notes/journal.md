@@ -2853,3 +2853,32 @@ Iran cluster CONTINUES strong on multi-source escalation news (Iran fee system +
 - May-31 expected lock-in by month-end: +$5.62 → net post-lock-in: **+$3.21** (slight positive recoup beyond R-U)
 
 **Net.** Iran cluster appreciation now exceeding worst-case expectations. May-31 NO 33% on cost = strongest single position.
+
+---
+
+## 2026-05-15 ~17:30 UTC — Built event_monotonicity_scan.py
+
+**Per operator suggestion** ("simple straightforward bot: periodically scan multi-event markets for monotonicity violations"). Built scripts/event_monotonicity_scan.py.
+
+**Logic.** Polymarket events sometimes contain multi-market sets like "Will X happen by Y?" with child markets at different dates (e.g. by-May-15, by-May-31, by-June-30). For date-monotonic events:
+- P(YES by t1) ≤ P(YES by t2) when t1 < t2
+- Violation: YES_t1 > YES_t2 + fee tolerance → pure decomposition arb
+- Buy YES_t2 (cheap), Sell YES_t1 (expensive): guaranteed ≥ 0 profit per share = (YES_t1 - YES_t2 - fees)
+
+**V1 false-positive issue.** First pass flagged 1000+ "violations" but all were CATEGORICAL events (temperature thresholds, BTC price levels, sports outcomes) where multi-market doesn't imply date-monotonic. Fix: require pair to have DIFFERENT end dates AND event title contains "by ___" / "before ___" pattern.
+
+**V1 result after fix.** 225 multi-market events inspected, **0 violations >= 1pp.** All currently-active date-monotonic events are properly priced.
+
+**Wired into hourly arb_cron.sh.** Logs to logs/event_monotonicity.log. Each hour produces JSON snapshot. Over time we'll get prospective frequency data.
+
+**Expected hit rate:** likely rare. Polymarket arbitrageurs already correct most violations. Today's UI-cache-glitch incident (false alarm) suggests real violations might be transient (sub-hour-cache-glitch duration) before correction.
+
+**If a violation DOES land in a polling tick:**
+- Pure decomposition arb (no thesis required)
+- Mechanical resolution
+- Bounded fee cost
+- Per new strategy: MECHANICAL resolution + 10pp+ edge → if net_spread > 10pp, candidate for execution
+
+For v2 (deferred): wire violations > threshold into auto-execution with safety guards. For now: data collection only.
+
+**Backlog item from 2026-05-15 marked DONE**: event-monotonicity scanner shipped.
