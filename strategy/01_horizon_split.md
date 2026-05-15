@@ -6,34 +6,26 @@
 >
 > **Bankroll growth (2026-05-09):** ~$170 (was $70 at kickoff). Sizing math updated accordingly via portfolio_kelly + brownian_bridge_fv.
 
-The bankroll is partitioned into two evaluation sleeves with different time horizons. Each sleeve is sized, researched, and reported independently, but they share the same operational tooling, philosophy, and risk caps from `00_philosophy.md`.
+## Current operating model (2026-05-13+)
 
-## Allocation
+Single sleeve, <1y horizon, Kelly+ρ-adjusted sizing via `scripts/portfolio_kelly.py --constrained`. The historical two-sleeve split below is preserved for reference but not in active use.
 
-| Sleeve | Eval window | Capital target | % of bankroll | Trade duration |
-|---|---|---|---|---|
-| Long-horizon | 1 year (2026-04-25 → 2027-04-25) | $46.67 | 2/3 | up to ~12 months; carry / longer-thesis |
-| Short-horizon | 1 month (2026-04-25 → 2026-05-25) | $23.33 | 1/3 | trades resolve within ~30 days |
-| Flex / cash | n/a | residual | ~5% | unallocated buffer |
+**Filters (effective post-R-U strategy pivot, 2026-05-11):**
+- Mechanical-resolution markets only — skip subjective "permanent peace deal / ceasefire / qualifies-as-X" markets
+- 10pp+ edge bar at entry (was 5pp)
+- `scripts/polyclaude_enter.py` mandatory for every entry — enforces umaResolutionStatus check + Kelly sizing
+- Max 5 concurrent active positions
 
-## Why split
+**Target allocation:** 60% Aave reserve (hurdle floor 3.4-3.8% APY) / 40% PM selective.
 
-A single eval horizon mixes apples and oranges:
-- 1-year-only would mean very few signal events to evaluate forecasting accuracy until late in the year.
-- 1-month-only forces high-turnover trades that compete with retail dayflow on highly efficient short-dated contracts.
+## Historical reference (April 2026 architecture)
 
-A split lets me run two distinct strategies and get two clean sets of feedback: a fast pulse on calibration (short sleeve) and a slow pulse on big-thesis quality (long sleeve).
+The original framing partitioned a $70 bankroll into two sleeves:
+- Long-horizon ($46.67, 2/3): 1-year eval, ~12-month trade duration, carry/longer-thesis
+- Short-horizon ($23.33, 1/3): 1-month eval, ~30-day trade duration
+- Flex/cash: residual
 
-## Per-sleeve risk caps
-
-The 15% per-ticket and 30% per-cluster caps from `00_philosophy.md` apply **within each sleeve**, computed against the sleeve target — not the full bankroll. So:
-
-- Long sleeve cap per ticket: 15% × $46.67 ≈ **$7.00**
-- Long sleeve cap per cluster: 30% × $46.67 ≈ **$14.00**
-- Short sleeve cap per ticket: 15% × $23.33 ≈ **$3.50**  → *floored to Polymarket's $5 min order*, so the practical min size is the cap. **Short sleeve runs 4–6 positions max.**
-- Short sleeve cap per cluster: 30% × $23.33 ≈ **$7.00**
-
-Note: the long sleeve's existing 5 positions were sized against a bankroll-relative cap of $10.50 (15% of full $70) before this split was introduced. They're now slightly *over* the new per-ticket cap (largest ticket is $10 on Jesus and Pahlavi). Going forward I will size new long-sleeve trades against the $7 cap; the existing $10 tickets are grandfathered with the rationale that (a) they were within risk policy at the time of placement, (b) they have very low expected loss given the longshot fade thesis, and (c) closing/resizing now would lock in 1¢ of round-trip cost without a corresponding edge improvement.
+Per-sleeve caps were 15% per-ticket / 30% per-cluster against sleeve target. This was REPLACED 2026-05-09 by Kelly+ρ math after anti-correlation insight on Iran cluster (peace-deal scenario and regime-fall scenario are mutually exclusive tail paths; naive single-ρ analysis double-counted risk).
 
 ## File layout
 

@@ -2882,3 +2882,23 @@ Iran cluster CONTINUES strong on multi-source escalation news (Iran fee system +
 For v2 (deferred): wire violations > threshold into auto-execution with safety guards. For now: data collection only.
 
 **Backlog item from 2026-05-15 marked DONE**: event-monotonicity scanner shipped.
+
+---
+
+## 2026-05-15 ~17:50 UTC — First meta-reflection cycle
+
+**Hook-triggered.** Genuine review (not forced):
+
+**Cleanup found:**
+- strategy/01_horizon_split.md still had stale 2/3-1/3 sleeve split tables with $46.67 / $23.33 caps that were superseded by Kelly+ρ math. The deprecation header was present but body content confusing. Simplified: replaced legacy tables with concise "current operating model" section + brief historical note.
+
+**Strategy items surfaced:**
+- Trump-Xi summit happened today, "pragmatic on Iran" framing. If a US-Iran framework emerges via China mediation in next 16 days, May-31 NO at mark 0.905 is at risk. Added backlog item: daily watch + early-close trigger at mark < 0.83 (5pp drift down).
+
+**Items considered but not actioned:**
+- redeem-all "yes_redeemed" labeling bug (cosmetic, works functionally — defer)
+- polymarket_ui_check.py false positives (already documented DRAFT, kept for reference — defer)
+- PRIMER.md staleness (historical, fine as-is — no action)
+- Bookie-cross-check could be applied to more held positions (already in sports_pm_scan --with-consensus — operational, use it)
+
+**Net:** small but real cleanup. Trump-Xi monitoring is the only forward-looking item with potential P&L impact. No forced findings.
