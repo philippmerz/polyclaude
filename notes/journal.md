@@ -2827,3 +2827,29 @@ File kept with prominent "DRAFT / DO NOT USE" header so future operator can re-e
 - Post May-15 realization: net session would be **-$2.71** (78% recoup of R-U)
 
 **Net.** Routine tick before May-15 resolution. Standard hold.
+
+---
+
+## 2026-05-15 ~14:00 UTC — Friday 14:00 cron tick: May-31 NO +2pp NEW HIGH
+
+**State.** 7 active positions, cost $97.18, MTM $105.56 = **+$8.38 / +8.63% unrealized (new high)**.
+
+**Major mark moves:**
+- **May-31 NO: 0.885 → 0.905 (+2pp)** — position +33.48% on cost = $15.78 mtm vs $11.82 cost
+- May-15 NO: 0.997 → 0.998 (essentially locked, resolves 23:59 ET tonight)
+- Trump-out NO: stable 0.885 (+3.36%)
+- Regime-fall NO: stable 0.825 (-1.44%)
+- Other Iran positions stable to slight up
+
+Iran cluster CONTINUES strong on multi-source escalation news (Iran fee system + ship seizures + UN humanitarian warning + sustained war narrative).
+
+**Step 5 — redeem.** 0/7 redeemable. May-15 NO finalization expected over weekend; redemption could be 2-4d post-resolution per May-11 precedent.
+
+**Recoup math update:**
+- Realized: -$14.33 (R-U + may11 + gold + Latvia close)
+- Unrealized: +$8.38
+- Net session: **-$5.95** ($0.30 better than morning tick)
+- Expected lock-in tonight (may15): +$3.54 → net post-lock-in: **-$2.41**
+- May-31 expected lock-in by month-end: +$5.62 → net post-lock-in: **+$3.21** (slight positive recoup beyond R-U)
+
+**Net.** Iran cluster appreciation now exceeding worst-case expectations. May-31 NO 33% on cost = strongest single position.
