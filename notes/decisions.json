@@ -282,9 +282,10 @@
         "short-tail",
         "v2"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "NO won. UMA resolved May-15 question to NO ('US x Iran permanent peace deal by May 15' did not happen). Redeemed 22 shares \u00d7 $1.00 = $22 USDC.e (combined $16.30 USDC.e + $5.69 pUSD post-tx). Realized +$3.54 on $18.46 cost = +19.2% in 7 days = ~1100% APY net.",
+      "calibration_delta": "Thesis (Iran demands of reparations + troop withdrawal + asset release infeasible in 7-day window) correct. Market priced 18.9% YES at entry (mark NO 0.81), final NO win = real P(YES) was 0-1%. Edge ~18pp converted to realized.",
+      "lesson": "Calendar-spread shorts on Iran-peace formal-resolution markets validated. Strict criteria reading + multi-day Iran-rejection-pattern + Trump-rejection-of-proposal aligned with final outcome. Generalize: when both market AND bookies AND fundamental criteria all point one direction, the trade is high-conviction.",
+      "resolved_at": "2026-05-16T14:02:07Z"
     },
     {
       "id": 16,
@@ -392,9 +393,10 @@
         "recoup-campaign",
         "kelly-sized"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Scale-in portion redeemed alongside DEC-0015. 10 of 22 total shares \u00d7 $1.00 = $10 attributable to scale-in. Realized +$1.26 on $8.74 cost = +14.4% in 7d.",
+      "calibration_delta": "Kelly+\u03c1 scaling rationale validated: high-conviction NO with robust sensitivity. Scaling to ~34% of half-Kelly+\u03c1 optimal at the time captured incremental $1.26 vs hold-base alone.",
+      "lesson": "Mid-conviction scaling on bond-like fades with robust sensitivity windows works when underlying thesis intact + market drift favorable.",
+      "resolved_at": "2026-05-16T14:02:07Z"
     },
     {
       "id": 21,

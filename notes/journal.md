@@ -2976,3 +2976,30 @@ For v2 (deferred): wire violations > threshold into auto-execution with safety g
 - Pending may15 (+$3.54) tonight or weekend
 - Pending may31 (+$1.83 at current mark + more if drift up) over 15 days
 - Trajectory: net session ~+$0 to +$3 post all resolutions if Iran cluster resolves NO
+
+---
+
+## 2026-05-16 ~14:05 UTC — DEC-0015 + DEC-0020 REDEEMED, +$3.54 realized
+
+**May-15 NO RESOLVED + REDEEMED.** UMA processed faster than May-11 (~40h vs ~48h). 22 shares × $1.00 = $22 payout. Balance change verified: USDC.e $21.70 → $37.99 (+$16.29) + pUSD $0.11 → $5.80 (+$5.69) = +$21.98 total (matches $22 minus gas).
+
+**Realized P&L:**
+- DEC-0015 base: 12 shares × $1.00 - 12 × $0.81 = $2.28 (entry $9.72)
+- DEC-0020 scale-in: 10 shares × $1.00 - 10 × $0.874 = $1.26 (entry $8.74)
+- Combined: **+$3.54 / +19.2% in 7 days = ~1100% APY net**
+
+Both DEC-0015 + DEC-0020 updated with outcome + calibration_delta + lesson.
+
+**Updated recoup tally:**
+- Realized: -$16.73 (R-U) + $0.525 (may11) + $1.17 (XAU gold) + $0.706 (Latvia) + $3.54 (may15 + scale) = **-$10.79**
+- Unrealized: +$8.63 (active 7 positions, dominated by May-31 NO +$3.79)
+- **Net session: -$2.16** ($3.54 better than yesterday)
+- Pending may31 lock: +$1.83 at current mark 0.895
+- Iran long-tails (Pahlavi, regime-fall, Trump-out, etc.) accruing
+- **Trajectory: net session slight-positive (+$0 to +$3) post all resolutions = R-U recoup essentially complete in EV**
+
+**Capital state.** USDC.e $37.99 + pUSD $5.80 = $43.79 cash on PM sleeve. Plenty for next deployment opportunities OR rebalance to Aave per 60/40 strategy.
+
+**Per strategy:** post-resolution 60/40 split = $26 Aave, $17 PM selective. Should I bridge $26 USDC.e to Aave Base now? Capital free, no immediate PM opportunity matching new filter criteria. **Will plan rebalance once May-31 also resolves** to avoid bridge fragmentation per prior decision.
+
+**Net.** Major recoup milestone. May-15 fully realized. Trajectory restoring R-U loss in EV.
