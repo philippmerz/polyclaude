@@ -2949,3 +2949,30 @@ For v2 (deferred): wire violations > threshold into auto-execution with safety g
 
 **Net:** no major build today. Focus stays on May-31 resolution + post-resolution rebalance per 60/40 strategy. Backlog has the auto-re-vet enhancement queued.
 
+
+---
+
+## 2026-05-16 ~14:00 UTC — Saturday 14:00 cron tick
+
+**MTM new high: cost $97.18, mtm $105.81 = +$8.63 / +8.88% unrealized.**
+
+**Marks:**
+- May-15 NO: 1.000 locked (resolved trading-side; UMA finalization ~40h+)
+- May-31 NO: 0.885 → **0.895 (+1pp)** — position +32.00% on cost = $15.61 mtm
+- Other positions stable
+
+**Step 5 — redeem.** 0/6 redeemable. May-15 still pending UMA proposer. Pattern matches May-11 (UMA finalization took 36h+; CTF payouts post 1-3d post-resolution).
+
+**News.** UAE bypass pipeline (sustained-crisis infrastructure → supports NO thesis), recurring Trump-Iran coverage.
+
+**Saturday weekly methodology stress test deferred** — handled previously this week.
+
+**Net.** Holding to resolution. May-31 NO is the dominant near-term P&L driver (+$5.62 expected at lock-in covers 33% of R-U loss).
+
+**Recoup math:**
+- Realized: -$14.33 (R-U + may11 + gold + Latvia)
+- Unrealized: +$8.63
+- Net session: -$5.70 (best yet, $0.30 better than yesterday)
+- Pending may15 (+$3.54) tonight or weekend
+- Pending may31 (+$1.83 at current mark + more if drift up) over 15 days
+- Trajectory: net session ~+$0 to +$3 post all resolutions if Iran cluster resolves NO
