@@ -2902,3 +2902,29 @@ For v2 (deferred): wire violations > threshold into auto-execution with safety g
 - Bookie-cross-check could be applied to more held positions (already in sports_pm_scan --with-consensus — operational, use it)
 
 **Net:** small but real cleanup. Trump-Xi monitoring is the only forward-looking item with potential P&L impact. No forced findings.
+
+---
+
+## 2026-05-16 ~02:00 UTC — Saturday cron + TWO triggers hit (LEU+CCJ)
+
+**MTM unchanged from yesterday: cost $97.18, $105.60 mtm = +$8.42 / +8.67%.** Iran cluster stable; May-15 NO at 1.000 (awaiting redemption).
+
+**Trigger fires (both IBKR-surface, both revised after fresh longterm_check):**
+
+| Ticker | Static trigger | Fired price | Fresh verdict | Revised trigger |
+|---|---|---|---|---|
+| LEU | $183 | $182.60 | 3.5/4 WATCH (49x P/E vs 10x fair) | $125-135 first tranche, $100-115 core, $70-80 washout |
+| CCJ | $110 | $107.51 | 3/4 WATCH (fwd P/E 92x vs 24x historical) | $85-95 OR Q2 2027 earnings inflection |
+
+**Pattern confirmed (3rd time):** static price triggers fire on price drops, but FUNDAMENTAL fair-value also adjusts down → margin of safety doesn't open. Same as CEG yesterday. The trigger system catches "price dropped to threshold" but needs the FRESH longterm_check vetting before recommending entry.
+
+**Updated watchlist_triggers.json** with revised tighter triggers + rationale.
+
+**Both telegram-alerted** to operator with detailed verdicts.
+
+**Cron tick housekeeping:**
+- 0/7 redeemable (May-15 still pending UMA finalization)
+- discover_markets: per new strategy filters, nothing new
+- News: routine Iran/Hormuz coverage, direction-correct
+
+**Net.** System working as designed — surfaced triggers + re-vetted + revised + Telegram'd. No polyclaude-side action (both equities = IBKR-only).

@@ -53,9 +53,9 @@
     },
     {
       "ticker": "LEU", "type": "equity", "yfinance_symbol": "LEU",
-      "entry_max": 183.0, "horizon": "2-5y", "route": "ibkr_surface",
-      "rationale": "HALEU monopoly; DOE Phase III Q2-Q3 2026 (1-4mo catalyst). Equity -> IBKR.",
-      "added": "2026-05-08"
+      "entry_max": 135.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "rationale": "HALEU monopoly. Original $183 trigger fired 2026-05-16 at $182.60; fresh longterm_check 3.5/4 WATCH said still overvalued (49x P/E vs 10x fair, Q1 margin compression). Tiered revised entries: $125-135 (first tranche after Q3 2026 + HALEU extension confirmed), $100-115 (core), $70-80 (washout). Binary risk: HALEU contract expires June 2026.",
+      "added": "2026-05-08", "revised": "2026-05-16"
     },
     {
       "ticker": "TWST", "type": "equity", "yfinance_symbol": "TWST",
@@ -83,9 +83,9 @@
     },
     {
       "ticker": "CCJ", "type": "equity", "yfinance_symbol": "CCJ",
-      "entry_max": 110.0, "horizon": "2-5y", "route": "ibkr_surface",
-      "rationale": "Advanced Nuclear theme (DOE July 4 deadline, TerraPower Wyoming, AI data center demand). 3.5/4 WATCH. P/E 115x stretched; entry $100-110 on 20% pullback OR uranium >$95/lb sustained + Q2 beat.",
-      "added": "2026-05-10"
+      "entry_max": 95.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "rationale": "Advanced Nuclear. Original $110 trigger fired 2026-05-16 at $107.51; fresh longterm_check 3/4 WATCH said still overvalued (fwd P/E 92x vs 24x historical). Revised entry: $85-95 (on uranium dip to $70-75/lb) OR Q2 2027 earnings inflection. Don't chase rallies above $120. Thesis intact, valuation stretched.",
+      "added": "2026-05-10", "revised": "2026-05-16"
     }
   ]
 }
