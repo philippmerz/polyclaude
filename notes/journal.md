@@ -2928,3 +2928,24 @@ For v2 (deferred): wire violations > threshold into auto-execution with safety g
 - News: routine Iran/Hormuz coverage, direction-correct
 
 **Net.** System working as designed — surfaced triggers + re-vetted + revised + Telegram'd. No polyclaude-side action (both equities = IBKR-only).
+
+---
+
+## 2026-05-16 ~02:30 UTC — Second meta-reflection cycle
+
+**Items considered but not actioned (low marginal value vs current focus):**
+
+- **News-watcher content-similarity dedup**: Iran/Hormuz coverage floods alerts with semantically-similar but title-different stories. Title-hash dedup catches identical titles but not paraphrased ones. Could add shingle-hash content-similarity. Bounded ~30min. Marginal — the alerts are mostly direction-correct background, not actionable signal. Defer.
+
+- **Bookie-cross-check extension to held positions**: Currently sports_pm_scan --with-consensus only applies to UNSURVEYED markets. Could check held sports/entertainment positions periodically. BUT: I currently have ZERO sports/entertainment positions (Latvia closed). No current value. Defer until next sports position opened.
+
+- **Auto-re-vet on watchlist trigger fire**: pattern confirmed 3x (CEG, LEU, CCJ) — static trigger fires + manual fresh longterm_check needed + revised triggers shipped. Could codify into watchlist_monitor: on hit, auto-spawn longterm_check + output verdict. Bounded ~45min. Compounds across every future trigger fire. **Real but moderate-priority**: current manual flow works (operator gets the full picture via Telegram), and trigger rate is ~weekly. Time saved per fire ~5-10min × weekly = small productivity gain. Adding to backlog but not urgent.
+
+**Actionable insights surfaced:**
+
+- **May-31 NO is the dominant P&L event for next 16 days.** Position cost $11.82, current mark 0.885 = $15.43 mtm. Expected resolution to $17.44 = +$5.62 realized at lock-in. This single position covers ~33% of R-U loss. Trump-Xi-Iran-mediation is the binary risk. Backlog already has daily watch + early-close trigger at mark < 0.83.
+
+- **Pattern: 3-of-3 watchlist trigger fires (CEG/LEU/CCJ) needed revised tighter triggers.** Operator-mandate is IBKR-surface only on these (none are polyclaude-deployable). System working as designed — but for FUTURE NEW watchlist additions, set entry_max based on FRESH longterm_check fair-value, not just static price-derived numbers. Current watchlist is now all properly tightened.
+
+**Net:** no major build today. Focus stays on May-31 resolution + post-resolution rebalance per 60/40 strategy. Backlog has the auto-re-vet enhancement queued.
+
