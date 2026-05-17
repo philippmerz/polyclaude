@@ -79,3 +79,4 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 - 2026-05-07: News-watcher 'aave hack' keyword tightened (commit 75ba0c5).
 - 2026-05-07: Repo cleanup — journal split, stale memos deleted (commit acaea5d).
 - 2026-05-07: Operator clock-anchor hook in `~/.claude/settings.json`.
+- **2026-05-17** — Auto-re-vet on watchlist trigger fire. Pattern confirmed 3-of-3 (CEG/LEU/CCJ) needed manual fresh longterm_check + revised trigger after static fire. Codify: on hit, watchlist_monitor.py auto-spawns longterm_check, posts verdict (PASS/WATCH/ENTER) to Telegram, optionally suggests revised entry_max. NVDA was just added at $200 — when fires, this would auto-vet. Bounded ~45min. Saves ~10min × weekly. Modest compounding.
