@@ -3003,3 +3003,24 @@ Both DEC-0015 + DEC-0020 updated with outcome + calibration_delta + lesson.
 **Per strategy:** post-resolution 60/40 split = $26 Aave, $17 PM selective. Should I bridge $26 USDC.e to Aave Base now? Capital free, no immediate PM opportunity matching new filter criteria. **Will plan rebalance once May-31 also resolves** to avoid bridge fragmentation per prior decision.
 
 **Net.** Major recoup milestone. May-15 fully realized. Trajectory restoring R-U loss in EV.
+
+---
+
+## 2026-05-17 ~02:00 UTC — Sunday 02:00 cron tick (post may-15 redemption)
+
+**State.** 6 active positions (May-15 + Latvia gone), cost $78.72, MTM $84.47 = +$5.76 / +7.31% unrealized.
+
+**Marks stable:**
+- May-31 NO: 0.895 stable (+32% on cost)
+- Aliens NO: 0.865 → 0.875 (+1pp)
+- Other positions stable
+
+**Step 5 — redeem.** 0/6 redeemable.
+
+**News.** Iran tolls in Hormuz + Trump warning — direction-correct, no actionable change.
+
+**Sunday 16:00 UTC weekly long-term review queued.** Will rotate 2-3 domains via world_state_digest.py.
+
+**Net.** Routine tick. May-31 NO is the dominant position; everything else holding.
+
+**Cash state.** USDC.e $37.99 + pUSD $5.80 = $43.79. Deferring rebalance per prior decision (batch-bridge after may-31).
