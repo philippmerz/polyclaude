@@ -3024,3 +3024,19 @@ Both DEC-0015 + DEC-0020 updated with outcome + calibration_delta + lesson.
 **Net.** Routine tick. May-31 NO is the dominant position; everything else holding.
 
 **Cash state.** USDC.e $37.99 + pUSD $5.80 = $43.79. Deferring rebalance per prior decision (batch-bridge after may-31).
+
+---
+
+## 2026-05-17 ~02:30 UTC — Third meta-reflection cycle
+
+**Items considered, none actioned:**
+
+- **Journal size:** 3026 lines, grew 750 lines over 8 days. April archived; May would be the next split target but premature (still 14 days left in month). Mark for end-of-May.
+- **Stale watchlist triggers:** Last 3 fires (CEG/LEU/CCJ) all needed revision after fresh longterm_check. Could refresh ALL 12 watchlist priors via batch longterm_check runs. ~30min for 12 candidates. But all are IBKR-side, low polyclaude P&L impact. Defer.
+- **Priors-update-from-realized**: Iran cluster has resolved as expected (May-11, May-15 both NO won). Could update portfolio_kelly_priors.json with calibration-adjusted P values. But updating after-the-fact creates selection bias risk. Defer.
+- **Bridge $26 to Aave**: Operator asked yesterday, I explained bridge-fragmentation math (~break-even for 15-day parking). They didn't push back. Defer until May-31 also resolves.
+- **News content-similarity dedup**: noted previously, still marginal.
+
+**No genuine new findings.** Operational period is calm; major P&L event (May-31) is 14 days out.
+
+**Brief idle.** Cron handles 12h cycles. Hook handles 20-min checks. Trump-Xi-Iran-mediation watch active.
