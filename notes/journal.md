@@ -3048,3 +3048,29 @@ Both DEC-0015 + DEC-0020 updated with outcome + calibration_delta + lesson.
 6 active, MTM $84.65 vs cost $78.72 = +$5.93 / +7.53% unrealized. Stable.
 
 Sunday 16:00 UTC weekly long-term review queued via cron. May-31 NO is dominant remaining P&L event (15d).
+
+## 2026-05-17 Sunday weekly long-term review (cron)
+
+Ran world_state_digest on tech-ai-chips + macro-fiscal-labor (4-week rotation cadence; these slugs last hit 2026-04-19 + 2026-04-12 respectively per notes/world_state_log.md).
+
+**4 themes surfaced:**
+- HIGH: Inflation Resurgent + CB Divergence (CPI 3.8% +50bps, Fed dissent 8-4, ECB hike discussion, BoJ split 6-3) → SHORT-duration / LONG-yield direction
+- MED: AI Capex Plateauing (NVDA Q1 FY27 guidance flat sequential growth; TSMC April -1.1% MoM; SEMI wafer -4.7% QoQ)
+- MED: Real Wage Erosion (real wages -0.3% YoY)
+- MED: GDP Stalling + Fiscal Drag (Q1 2026 GDP +2.0% miss)
+
+**longterm_check on top 2 representatives (parallel):**
+- NVDA 3/4 WATCH at $224.41 — Fwd P/E 27x on 40% growth. Cyclical mature, secular still strong, catalyst (May 20 earnings + Q3 capex confirmation) WATCH, margin of safety thin. Entry $180-200 on weakness OR post-Q3 capex confirmation. Generational 8% / Strong 35% / Modest 40% / Flat 12% / Broken 5%.
+- TLT 1/4 PASS at $83.66 — Cyclical at support not floor; secular tailwinds NEGATIVE (deficits + supply pressure); catalyst window 17.5% recession odds in 1 year; margin of safety only if rates decline. Recommendation: hold cash or IEF/SHY. **This validates the digest's SHORT-TLT direction** (long-TLT thesis explicitly fails the framework).
+
+**Pattern observed:** 3rd consecutive weekly digest where top-of-funnel longterm_check finds current valuations stretched (recall CCJ/LEU/CEG static-trigger fire on 2026-05-16 all came back WATCH; XOM 2/4 PASS earlier). Discipline holding — no FOMO entries. Watchlist triggers serve their purpose: surface candidates without forcing premature entry.
+
+**Watchlist additions:**
+- NVDA entry_max $200 (route: ibkr_surface)
+- Queue for next reviews (not yet vetted): TBT (short-TLT), AMD (less capex-peak leverage), XLY (consumer discretionary short), QQQ/ARKK (growth short)
+
+Next weekly: 2026-05-24 — rotate to remaining 4 unvisited slugs: trade-regulation, biotech-health, crypto-on-chain, markets-corporate.
+
+Portfolio tick: 6 active positions, MTM +$5.93 / +7.53% unrealized. May-31 NO dominant near-term P&L event (mark 0.895, +32% on cost). Stable.
+
+Commit 6aad122 pushed. Telegram msg 308 delivered.
