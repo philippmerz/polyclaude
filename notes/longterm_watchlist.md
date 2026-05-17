@@ -219,3 +219,19 @@ Ran longterm_check on 5 novel actionable candidates (1 batched VIE timed out, re
 ## Last updated
 
 2026-05-08 ~21:00 UTC — first analytical pass across 6 seeds via longterm_check.py. Tool validated end-to-end: produces structured 4-dimensional thesis with entry triggers + scenario probabilities + sources. All current verdicts: WATCH or FOLLOW-UP, none ENTER NOW. Hunt continues for less-obvious convergences.
+
+### Sunday 2026-05-17 weekly digest additions (tech-ai-chips + macro-fiscal-labor)
+
+| Candidate | Score | Verdict | Theme | Entry trigger |
+|---|---|---|---|---|
+| NVIDIA ($NVDA) | 3/4 | WATCH at \$224 | AI Capex Plateauing | \$180-200 weakness OR post-Q3 2026 capex slowdown confirmation OR May 20 earnings catalyst |
+| iShares 20+Y Treasury ($TLT) | 1/4 | PASS at \$83.66 | (digest theme: SHORT direction) | LONG only if 10-yr yields panic-spike to 5.0%+ AND Fed pivots; otherwise hold cash / IEF / SHY |
+
+**Other digest themes (not run via longterm_check yet):**
+- Inflation Resurgent + CB Divergence (HIGH conf): CPI 3.8% (+50bps), Fed dissent 8-4, ECB hike discussion, BoJ split 6-3. SHORT-duration / LONG-yield. Plays: TBT, short TLT puts. Digest claim validated by TLT 1/4 PASS verdict (long-TLT thesis fails).
+- Real Wage Erosion → Demand Cliff (MED): real wages -0.3% YoY. SHORT consumer discretionary (XLY, Tesla).
+- GDP Stalling + Fiscal Drag (MED): Q1 2026 GDP +2.0% miss. SHORT growth equities (QQQ, ARKK).
+
+Plus AMD as alternative AI exposure (less leverage to capex peak); SOXL inverse if SMH short thesis confirms via NVDA May 20 earnings.
+
+Last weekly: 2026-05-10 (geopolitics + energy-power). Next weekly: 2026-05-24 (rotate to remaining: trade-regulation, biotech-health, crypto-on-chain, markets-corporate).

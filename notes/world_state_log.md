@@ -354,3 +354,101 @@ Sources:
 - [Wyoming celebrates 'nuclear renaissance' as feds approve license for a new reactor](https://www.npr.org/2026/05/02/nx-s1-5798892/wyoming-celebrates-nuclear-renaissance-as-feds-approve-license-for-a-new-reactor)
 - [Industry Update—May 2026](https://www.ans.org/news/article-7957/industry-updatemay-2026/)
 - [Energized for 2026](https://www.ferc.gov/news-events/news/energized-2026)
+
+---
+
+## 2026-05-17T16:02:24Z — world_state_digest
+
+**Domains:** tech-ai-chips, macro-fiscal-labor | **Lookback:** 21d | **Model:** haiku
+
+```
+# WORLD-STATE DIGEST — 2026-05-17
+
+Domains: tech-ai-chips, macro-fiscal-labor  |  Lookback: 21d
+
+## BARE FACTS (by domain)
+
+### tech-ai-chips
+
+- [2025-11-19] NVIDIA Q4 FY2026: Record quarterly revenue $68.1B (+20% QoQ, +73% YoY); Data Center $62.3B (+22% QoQ, +75% YoY); FY2026 full-year revenue $215.9B (+65% YoY)
+- [2026-05-20] NVIDIA Q1 FY2027 earnings preview: Consensus guidance $78.5B revenue, Data Center segment $72.8B (sequential growth moderating)
+- [2026-05-08] TSMC April 2026: NT$410.73B (~$12.6B USD); -1.1% MoM, +17.5% YoY. YTD Jan-Apr: NT$1,544.83B, +29.9% YoY growth
+- [2026-05-08] TSMC Q2 2026 guidance: $39–40.2B revenue; Q2 expected to challenge historical monthly highs
+- [2026-04-30] SEMI Q1 2026 wafer shipments: 3,275 MSI worldwide (+13.1% YoY); -4.7% QoQ (seasonal decline)
+- [2026-04-30] SEMI Equipment 2025: $135.1B global sales (+15% YoY from $117.1B in 2024)
+- [2026-04-23] Intel Q1 2026: Revenue $13.6B (+7% YoY, +$1.4B above guidance). Adjusted EPS $0.29 vs. est $0.01. DC/AI segment +22% YoY
+- [2026-05-05] AMD Q1 2026: Revenue $10.3B (+38% YoY, beats $9.9B est); gross profit +45%, net income +95%. Data Center $5.8B (+57% YoY). Q2 guidance ~$11.2B
+
+### macro-fiscal-labor
+
+- [2026-05-08] BLS April 2026 employment: Nonfarm payroll +115k; unemployment 4.3% (unchanged); labor force participation 61.8%; employment-pop ratio 59.1%
+- [2026-05-12] BLS CPI April 2026: Headline +0.6% MoM, +3.8% YoY (highest since May 2023, +0.5pp from March). Core +0.4% MoM, +2.8% YoY. Energy +3.8% MoM. Real avg hourly wages -0.5% MoM, -0.3% YoY
+- [2026-04-30] BEA Q1 2026 GDP: +2.0% annualized (0.5% quarterly rate); below 2.2% consensus forecast; slowdown from 0.5% Q4 2025
+- [2026-04-30] BEA April 2026 core PCE: 3.2% YoY (matched forecast); headline PCE 3.5% YoY
+- [2026-04-29] Federal Reserve FOMC decision (April 28–29): Held policy rate at 3.5%–3.75% (third consecutive meeting). Dissent vote 8–4 (Miran voted for 25bps cut; three others objected to easing-bias language). Fed policy statement uses "additional" (interpreted as easing bias)
+- [2026-05-14] Federal Reserve leadership: Jerome Powell pro tempore; Kevin M. Warsh sworn in as new chair by mid-June
+- [2026-04-30] ECB Governing Council: Held rates unchanged (deposit 2.00%, main refi 2.15%, marginal 2.40%). Rate hike discussed "at length." Eurozone inflation 3% (vs. 2% target). Oil prices elevated on Iran war. Market pricing 50bp hikes June/July
+- [2026-04-28] Bank of Japan: Held policy rate at 0.75% on 6–3 vote (unusually divided). Core inflation forecast raised to 2.8% from 1.9%. Board signaling possible June rate hike
+- [2026-05-06] US Treasury auctions: 3Y, 10Y, 30Y notes auctioned May 6. Treasury increasing short-dated bill issuance through May; peak liquidity demand end-May
+
+## CANDIDATE THEMES
+
+### Inflation Resurgent + Central Bank Divergence = Rate Repricing
+
+- Underlying facts: CPI 3.8% (up 50bps from prior month); core PCE 3.2%; real wages -0.3% YoY; energy spike (Iran war geopolitical tail risk); Fed dissent (8–4 vote shows hawkish undercurrent); ECB hike discussion; BoJ 6–3 split with June hike signaling
+- Implication: Consensus narrative prices in Fed rate cuts (easing bias from FOMC language). Reality: sticky inflation is re-accelerating, and central banks are divided/hedging. Fed dissents, ECB considering hikes, BoJ preparing June move. Retail misses the divergence between signals (easing) and data (hotter inflation, policy uncertainty).
+- Possible plays: SHORT long-dated Treasuries (TLT, VGIT); SHORT duration (BND short-duration tilt); LONG TBT (short treasuries via inverse); LONG bond volatility (MOVE index)
+- Direction: short duration / long yields
+- Horizon: 4–8 weeks (repricing likely on next data release or ECB/BoJ moves)
+- Retail blindspot: "Fed will cut rates" narrative from early May. Misses that inflation is not defeated, oil from geopolitical events sustains price pressure, and central bank dissent signals hawkishness underneath easing language.
+- Confidence: HIGH (multiple independent signals: CPI uptick, dissent vote, ECB hike discussion, BoJ split vote, energy elevated)
+
+### AI Capex Cycle Momentum Plateauing
+
+- Underlying facts: NVIDIA Q1 FY2027 guidance implies sequential revenue growth flattening ($78.5B guidance vs. $68.1B Q4; +15% QoQ implied vs. prior +20%); TSMC April sequentially down 1.1% MoM, YTD growth slowing from prior rates; SEMI wafer shipments -4.7% QoQ; AMD Q2 guidance ~$11.2B (only ~8% QoQ growth from ~$10.3B); Intel growth stabilizing (+22% DC but no acceleration signal)
+- Implication: Absolute capex levels remain high, but growth rates are decelerating. Hyperscalers moving to in-house chip design (benefiting AMD/Intel, hurting NVDA pricing power). HBM shortage forces triage of memory allocation, not expansion. Inventory absorption is underway. Retail sees "AI boom infinite demand." Reality: peak capex cycle is now; supply is catching up; unit prices normalize downward.
+- Possible plays: SHORT NVDA (timing: post-May 20 earnings if guidance signals deceleration); SHORT ASML, LRCX (equipment suppliers); LONG AMD (less leverage to capex peak); LONG SOXL inverse (SMH short)
+- Direction: short
+- Horizon: 2–3 months (NVDA May 20 earnings will signal guide reset; 2H26 revisions likely)
+- Retail blindspot: "AI demand is infinite, capex forever." Misses sequential slowdown in foundry utilization (TSMC April MoM decline), SEMI QoQ wafer drop, and moderation in guidance growth rates. Consensus still modeling accelerating growth; reality is flattening.
+- Confidence: MEDIUM (momentum is clear, but earnings revisions not yet announced—pattern matches prior capex cycles)
+
+### Real Wage Erosion = Demand Cliff Ahead
+
+- Underlying facts: Real avg hourly wages -0.3% YoY (nominal up, but inflation eroding purchasing power); April payroll +115k only (modest); labor force participation 61.8% (structurally low); unemployment flat 4.3% (not rising but static); core PCE 3.2% (wage growth can't keep up with prices)
+- Implication: Workers are losing real purchasing power. Wage growth does not match inflation. This will depress discretionary spending (retail, entertainment, travel). Consumer confidence will lag. Aggregate demand is decelerating even as headline payroll looks stable. Retail sees "strong jobs market" from +115k. Reality: hours + wages in real terms are stalling; consumer is tapped out.
+- Possible plays: SHORT consumer discretionary (XLY, Amazon, Tesla if demand-sensitive); LONG defensive (staples, utilities, healthcare); SHORT high-valuation consumer names
+- Direction: short cyclicals, long defensive
+- Horizon: 2–4 months (weakness will show in Q2/Q3 earnings as guidance misses)
+- Retail blindspot: Headline jobs number of +115k masks weakness in hours and real wages. Assumes wage growth supports spending. Misses that nominal wage gains are offset by inflation, reducing real demand.
+- Confidence: MEDIUM (wage stagnation is clear data, but consumer hasn't yet cut spending sharply—could stabilize if inflation moderates)
+
+### GDP Growth Stalling + Fiscal Drag = Equities Overvalued
+
+- Underlying facts: Q1 2026 GDP +2.0% (below 2.2% consensus, misses forecast); growth only 0.5% QoQ (deceleration from prior trend); Treasury increasing short-dated bill issuance (fiscal pressure); Fed rate hold at 3.5–3.75% keeps debt service costs high; leadership change to Warsh may signal policy shift
+- Implication: Economic growth is slowing. Fiscal deficits are large, and Treasury issuance is rising to fund them (crowding out private sector). Equity multiples are priced for faster growth. If growth slips below 2%, earnings revisions will follow. Valuation reset is likely.
+- Possible plays: SHORT growth equities (QQQ, ARKK, tech-heavy indices); LONG dividend payers (VYM, DGRO); SHORT unprofitable/high-multiple names
+- Direction: short growth, long value/dividend
+- Horizon: 2–4 months (Q2 earnings and revised guidance will show slowdown)
+- Retail blindspot: GDP is framed as "rebound from Q4 weakness." Reality: it's deceleration from prior trend and undershoots expectations. Fiscal drag from high rates and expanding deficits will persist.
+- Confidence: MEDIUM (GDP miss is factual, but not yet a recession signal; multiples haven't reset)
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: TLT, BND, NVDA, ASML, LRCX, XLY, QQQ, ARKK
+- Run catalyst_check.py on: NVDA earnings May 20; ECB rate decision June 6; BoJ rate decision June 16; FOMC June 17–18
+- Skip / pass: Specific plays on PBOC (no recent material data found); defensive play confidence still MEDIUM until wage weakness shows in Q2 earnings
+
+```
+
+Sources:
+- [BLS Employment Situation April 2026](https://www.bls.gov/news.release/empsit.htm)
+- [NVIDIA Financial Reports](https://investor.nvidia.com/financial-info/financial-reports/default.aspx)
+- [Federal Reserve Monetary Policy](https://www.federalreserve.gov/newsevents.htm)
+- [SEMI Semiconductor Reports](https://www.semi.org/en/news/billing-report)
+- [BLS CPI April 2026](https://www.bls.gov/news.release/cpi.nr0.htm)
+- [BEA Q1 2026 GDP](https://www.bea.gov/news/2026/gdp-advance-estimate-1st-quarter-2026)
+- [TSMC April 2026 Revenue](https://pr.tsmc.com/english/news/3305)
+- [ECB Monetary Policy Decision April 30, 2026](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260430~81b7179e6f.en.html)
+- [Bank of Japan Interest Rate Decision](https://www.boj.or.jp/en/about/calendar/index.htm)
+- [US Treasury Auction Schedule](https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/most-recent-quarterly-refunding-documents)

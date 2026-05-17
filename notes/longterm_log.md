@@ -1324,3 +1324,329 @@ Cameco scores strongly on secular tailwind (+AI data center nuclear adoption is 
 - [National Interest: Kazakhstan Cuts Uranium Output 2026](https://nationalinterest.org/blog/energy-world/nuclear-energy-now-kazakhstan-cuts-uranium-output-in-2026/)
 - [PRNewswire: The Uranium Shortage](https://www.prnewswire.com/news-releases/the-uranium-shortage-78-gigawatts-under-construction-and-not-enough-fuel-302757133.html)
 ```
+
+---
+
+## 2026-05-13T14:02:28Z — longterm_check
+
+**Query:** `Constellation Energy ($CEG)` (equity, 2y horizon)
+
+```
+## LONGTERM CHECK: Constellation Energy ($CEG)
+
+Date: 2026-05-13 | Type: equity | Horizon: 2y
+
+### Current state
+$279.14 (May 13, 2026); 52-week range $243.30–$412.70; 1-year return +56.5%; forward P/E 24.6–27x vs. utility median 15.2x; trading 20.5% above estimated fair value ($237.73 GuruFocus). 2026 EPS guidance $11.00–$12.00; Q1 2026 beat: $2.74 actual vs. $2.59 forecast.
+
+### Cyclical position
+Constellation is NOT at a cycle bottom; stock has appreciated 56.5% over 12 months and 70% from 52-week low ($243), suggesting late-stage valuation expansion. The nuclear industry itself is in a structural bull phase (capacity factors >90%, regulatory tailwinds under current admin), but the *equity* is priced for enthusiasm, not desperation. Calpine acquisition (closed Jan 2026, $26.6B enterprise value) closed at peak sentiment. This is mid-to-late in a multi-year run, not early.
+
+### Secular tailwind
+AI data center power demand is structural and accelerating. Goldman Sachs forecasts 165% increase in data center electricity demand by 2030; S&P Global projects data center load to triple by 2028 (35 GW → 108 GW, 17% CAGR 2025–2028). Constellation commands 21 US nuclear reactors (largest fleet) and signed major 20-year PPAs with Microsoft (837 MW Three Mile Island) and Meta (1.1 GW Clinton), securing baseload for hyperscalers through 2047. Calpine adds 25+ natural gas plants for peaking capacity—solving the "24/7 firm power" moat. Demand driver is intact and accelerating; execution risk is integration and regulatory, not demand.
+
+### Catalyst window
+- [HIGH] 2027-Q1 — Three Mile Island Unit 1 restart (837 MW Microsoft PPA) — [Constellation filings](https://www.power-eng.com/business/constellation-files-at-ferc-to-keep-crane-nuclear-restart-on-2027-timeline/); NRC licensing underway, 500+ on-site staff, second operator training class scheduled 2026.
+- [HIGH] 2027-Q2 — Clinton Clean Energy Center Meta PPA begins revenue (1,121 MW) — [Meta/Constellation agreement](https://about.fb.com/news/2025/06/meta-constellation-partner-clean-energy-project/); 30 MW uprate execution through 2029.
+- [MED] 2026–2027 — Calpine cost/revenue synergy realization ($300M cost + $150M revenue annually) — [Constellation earnings call Q1 2026](https://www.tikr.com/blog/constellation-energy-q1-2026-earnings-revenue-doubles-on-calpine-eps-guidance-affirmed); $2B+ incremental FCF target 2026–2027.
+- [MED] 2026–2027 — Data center co-location announcements — CEO flagged series of co-location deals throughout 2026 to avoid grid interconnection delays; architectural moat if realized.
+
+### Margin of safety
+Balance sheet is solid (debt-to-equity 60.2%, BBB+/Baa1 rated, $6.0 operating income per $1 interest expense) but valuation leaves little room for error. Current entry at $279 is 20% *above* fair-value estimate, forward P/E 24–27x vs. 15.2x utility median. Downside protection comes from: (1) 20-year contracted PPAs provide revenue visibility through 2047; (2) proven FCF generation ($1.83 operating cash per $1 reported earnings); (3) hard-asset moat (nuclear fleet + long-term contracts). But these don't offset stretched valuation—this is quality at a premium price, not a margin-of-safety entry.
+
+### Top 3 risks
+1. **Valuation reversion** — Stock has run 56.5% in 12 months and is 20% above fair value; even if thesis succeeds, P/E compression could offset upside. A 15% pullback is probable absent execution surprises. Entry at $279 carries near-term downside risk.
+
+2. **Regulatory/safety backlash** — Trump admin has loosened NRC oversight (removed "As Low As Reasonably Achievable" safety principle, cut inspection hours), raising environmental/safety concerns. A major incident or next-cycle political reversal could force capex, delays, or license challenges. Populist opposition to data center energy (Utah backlash documented) is real.
+
+3. **Integration execution risk** — Calpine closed only 5 months ago (Jan 2026). Synergy targets ($450M annually, $2B FCF) are achievable but untested under integration. Misstep on cost cuts, revenue synergies, or capex could force 2027 guidance cut and multiple compression.
+
+### 5-year scenario probabilities
+- Generational (10x+, $2,790+): 12% — Full Three Mile Island + Clinton ramp, data center co-location succeeds, Calpine synergies hit, multiple stays elevated. Requires flawless execution and sustained AI capex.
+- Strong (3–5x, $837–$1,395): 35% — PPAs ramp on schedule, synergies realized, modest multiple expansion. Data center demand softens slightly but margins hold.
+- Modest (1.5–3x, $419–$837): 30% — Catalysts hit but valuation compresses on maturation; growth slows after initial PPA ramp; macro headwind (recession, rate shock).
+- Flat/mild loss (−30% to +50%, $195–$419): 18% — Recession depresses data center capex; integration stumbles; regulatory backlash delays Three Mile Island or Clinton; FCF doesn't materialize.
+- Thesis broken (−50%+, <$140): 5% — Major safety incident or NRC action; political reversal; sustained recession + capex freeze by hyperscalers.
+
+### Entry trigger
+**WATCH, do not enter at current price.** Valuation is stretched and priced for perfection. Entry triggers:
+1. **Dip to $237–$251** (fair value to 10% premium): provides margin of safety and acceptable risk/reward.
+2. **After Q2 2026 guidance revision**: if management confirms $11–$12 EPS or raises, justifies premium; if miss or cut, re-prices to $220–$240.
+3. **Three Mile Island NRC approval (late 2026)**: derisks largest catalyst; acceptable entry at $250–$270 post-approval.
+Current entry at $279 assumes all catalysts execute flawlessly with no valuation relief—high confidence required.
+
+### Verdict: 3/4 — WATCH
+Constellation scores on secular tailwind (AI demand intact + accelerating), catalysts (TMI 2027, Clinton 2027, synergies 2026–2027), and adequate margin of safety (investment-grade balance sheet, 20-year PPAs). Does NOT score on cyclical position—stock is +56% YTD, late-stage, priced for enthusiasm not desperation. This is a quality business at a premium valuation, not a "generational mispricing." Monitor for entry trigger on dip to $237–$251 or post-Q2 guidance confirmation. Regulatory risk (NRC oversight cuts, safety backlash) and integration execution risk are real near-term headwinds.
+
+### Sources
+- [Constellation Energy Q1 2026 earnings results](https://www.tikr.com/blog/constellation-energy-q1-2026-earnings-revenue-doubles-on-calpine-eps-guidance-affirmed)
+- [CEG current price & analyst consensus](https://finance.yahoo.com/quote/CEG/)
+- [Goldman Sachs: AI data center power demand 165% by 2030](https://www.goldmansachs.com/insights/articles/ai-to-drive-165-increase-in-data-center-power-demand-by-2030)
+- [S&P Global: data center demand triple by 2028](https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/101425-data-center-grid-power-demand-to-rise-22-in-2025-nearly-triple-by-2030)
+- [Microsoft Three Mile Island 20-year PPA](https://www.constellationenergy.com/newsroom/2024/constellation-and-microsoft-announce-historic-20-year-agreement.html)
+- [Meta Clinton 20-year PPA](https://about.fb.com/news/2025/06/meta-constellation-partner-clean-energy-project/)
+- [Constellation Calpine acquisition details](https://www.constellationenergy.com/news/2026/01/constellation-completes-calpine-transaction-powering-americas-clean-energy-future.html)
+- [Three Mile Island 2027 restart timeline](https://www.power-eng.com/business/constellation-files-at-ferc-to-keep-crane-nuclear-restart-on-2027-timeline/)
+- [NRC oversight and safety concerns 2026](https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-rules-rewritten-trump)
+- [Constellation balance sheet & financial strength](https://simplywall.st/stocks/us/utilities/nasdaq-ceg/constellation-energy/health)
+- [Forward P/E vs. utility median](https://www.gurufocus.com/term/forward-pe-ratio/CEG)
+```
+
+---
+
+## 2026-05-16T02:01:34Z — longterm_check
+
+**Query:** `Cameco ($CCJ)` (equity, 2y horizon)
+
+```
+## LONGTERM CHECK: Cameco ($CCJ)
+
+Date: 2026-05-16 | Type: equity | Horizon: 2y
+
+### Current state
+$109.20 (down from $116.93 on May 12); 52-week range $50–$135; ~118% 1-year return. Forward P/E 92x on FY2027E EPS $1.78; trailing P/E 108x. Q1 2026 beat: $0.34 EPS vs $0.31 est., revenue $845M (+7% YoY), uranium segment EBIT $358M (+57% YoY).
+
+### Cyclical position
+Uranium market in early-to-mid cycle expansion from 2020 lows. Spot uranium peaked $101/lb in Jan 2026, now $86.15/lb (May 15)—mild pullback after 5-month rally. Cameco's own production economics remain strong; Q1 uranium EBITDA $423M (+48% YoY). Valuation at 92x forward P/E is elevated vs historical 24x 5-year average, reflecting consensus that current cycle is different. Production guidance 19.5–21.5M lbs U3O8 (2026) implies mid-cycle utilization, not capacity-constrained peak.
+
+### Secular tailwind
+AI data center power demand is rewriting nuclear fundamentals. Major tech (Amazon, Microsoft, Meta, Google, Oracle, Equinix) have signed nuclear PPAs or equity investments; Microsoft restarting Three Mile Island. Global uranium demand projected +28% by 2030, nearly 2x by 2040. Data center energy needs climb from ~400 TWh (2024) to 1,600 TWh by 2034. Cameco, as leading uranium producer + 49% stake in GLE laser enrichment JV + Westinghouse partnership (below), is positioned as the primary supply-chain beneficiary. This is not a near-term squeeze; it is a 15-year structural repricing.
+
+### Catalyst window
+- [HIGH] Q4 2026 — Westinghouse/Brookfield/$80B US Gov partnership execution; reactor permitting acceleration and contract signing — [Cameco press]
+- [HIGH] H2 2027 — GLE laser enrichment capacity ramp; addresses critical supply bottleneck in uranium fuel cycle — [Cameco investor relations]
+- [MED] 2027-Q3 — Utility forward contracting acceleration; spot market entry signals tightening inventory — [UxC, industry consensus]
+- [MED] 2028 — US import restrictions on Russian uranium take effect; supply gap widens — [Federal announcements]
+
+### Margin of safety
+**Strong**: Net cash $147M ($0.34/share), D/E 0.15, already profitable and cash-generative ($203M adjusted net earnings Q1). Westinghouse partnership reduces execution risk on fuel-supply expansion. Hard-asset backing in mines + fuel services = floor beneath valuation.
+
+**Weak**: Forward P/E 92x assumes flawless 13–15% EPS CAGR execution over next 5 years. Any earnings miss or multiple compression (to 60x = normalized) = 35% downside. Spot uranium at $86/lb leaves less buffer than the $100+ needed to fund aggressive capex.
+
+### Top 3 risks
+1. **Valuation mean reversion** — Forward P/E 92x vs 24x historical; if growth disappoints (enrichment delays, capex slowdown, data center pulls back) or sentiment shifts, re-rating to 50–60x = 35–45% downside. Thesis intact, entry price wrong.
+2. **Uranium spot price breakdown** — Peaked $101 (Jan 2026), now $86; if macro weakness or surprise supply (Kazakh restart?) drives price to $60–70/lb, Cameco's 2027–28 earnings guidance becomes unachievable. Leverage is high on commodity moves.
+3. **Enrichment bottleneck / geopolitical constraint** — GLE laser enrichment must ramp to 10M+ SWU/yr by 2030 to avoid supply crunch; regulatory delays, Russian import bans, or CFIUS scrutiny could stall JV. If unresolved, Cameco supply-contracts limited by enrichment capacity, not uranium ore.
+
+### 5-year scenario probabilities
+- Generational (10x+): 12% — Uranium spikes $150+/lb on supply crisis + Westinghouse executes at scale + GLE becomes differentiator
+- Strong (3–5x): 35% — Uranium $100–120/lb by 2028, Cameco grows EBITDA 12–15% CAGR, re-rates to 70x P/E on AI durability narrative
+- Modest (1.5–3x): 38% — Uranium $80–100/lb, Westinghouse ramp real but slower, growth 6–8%, multiple stays 60–80x, compounding wins on earnings
+- Flat (–30% to +50%): 12% — Enrichment delay, data center demand underperforms, uranium oscillates $60–90, multiple compresses to 50x
+- Thesis broken (–50%+): 3% — Black swan: major accident halts nuclear restart, uranium crashes $40/lb, Westinghouse deal stalls, Cameco cuts guidance sharply
+
+### Entry trigger
+**Current price ($109) is expensive.** Better entry: $85–95 on a uranium dip to $70–75/lb or temporary sentiment pullback. Alternatively, wait for Q2 2027 guidance revision; if 2028 EPS consensus rises to $2.00+, justify 90x forward multiple and enter. Do not chase rallies above $120.
+
+### Verdict: 3/4 — WATCH
+Cyclical (early expansion ✓) + Secular (AI nuclear demand intact ✓) + Catalysts (Westinghouse/enrichment ✓) + Margin of Safety (stretched ✗). Generational thesis is sound; entry multiple is not. Monitor for 15–20% pullback or Q2 2027 earnings inflection before sizing.
+
+### Sources
+- [Cameco Q1 2026 earnings beat](https://www.investing.com/news/transcripts/earnings-call-transcript-cameco-q1-2026-results-beat-eps-expectations-93CH-4679150)
+- [Cameco Q1 2026 results](https://www.cameco.com/media/news/cameco-reports-2026-first-quarter-results)
+- [Uranium market 2026 supply-demand outlook](https://carboncredits.com/uranium-prices-2026-supply-crunch-and-rising-demand-fuel-a-nuclear-bull-market/)
+- [Uranium forecast 2026-2030](https://www.cruxinvestor.com/posts/ai-driven-demand-growth-supply-constraints-signal-uranium-structural-repricing-in-2026)
+- [Westinghouse strategic partnership announcement](https://www.cameco.com/media/news/united-states-government-brookfield-and-cameco-announce-transformational-partnership)
+- [AI data center nuclear energy demand](https://www.iaea.org/bulletin/data-centres-artificial-intelligence-and-cryptocurrencies-eye-advanced-nuclear-to-meet-growing-power-needs)
+- [Cameco valuation & financials](https://finance.yahoo.com/quote/CCJ/key-statistics/)
+- [Uranium spot price May 2026](https://carboncredits.com/uranium-prices-today/)
+```
+
+---
+
+## 2026-05-16T02:01:44Z — longterm_check
+
+**Query:** `Centrus Energy ($LEU)` (equity, 2y horizon)
+
+```
+## LONGTERM CHECK: Centrus Energy ($LEU)
+
+Date: 2026-05-16 | Type: equity | Horizon: 2y
+
+### Current state
+$182 (down 61% from $464 peak in Dec 2025; +227% 2025 / -26% YTD 2026); P/E 49x, P/B 13.7x (207% above 3Y avg); TTM revenue $452M, Q1 EPS $0.45 down 72% YoY.
+
+### Cyclical position
+Post-peak correction in progress but not at cycle bottom. Stock fell 61% from $464 Dec 2025 peak but remains well above 52-week low of $70, suggesting consolidation mid-pullback. Valuation multiple compression underway but far from sector averages: P/E 49x vs 20x sector, P/B 13.7x vs historical 4.5x. Q1 earnings disappointing (net income -63% YoY, EPS -72% YoY) with margin compression from delayed Russian shipments and SWU volume collapse (-47%). Sentiment has shifted from parabolic euphoria (2025) to skepticism, but price still reflects execution risk premium. Entry near current levels assumes thesis inflection, not cycle bottom.
+
+### Secular tailwind
+STRONG and confirmed. U.S. nuclear demand inflection driven by AI data center electricity needs (DOE target: quadruple nuclear capacity to 2050). Centrus is positioned as sole U.S. commercial uranium enrichment supplier. Critical catalyst: Russia uranium import ban effective 2028 eliminates 25% of current supply (27% from Russia in 2023). U.S. has only 4.3M SWU domestic enrichment capacity vs. 15.6M needed — gap forces reliance on allies (Urenco, Orano) or Centrus expansion. Centrus backlog of $2.3B in enriched uranium sales reflects forward visibility. DOE unlocked $2.7B federal funding (Jan 2026) for domestic enrichment build-out, with Centrus receiving $900M task order for Ohio expansion. Secular driver is structural, not cyclical.
+
+### Catalyst window
+- [HIGH] 2026-06 — HALEU contract extension decision. Current Phase III contract expires June 30, 2026 (2 weeks). DOE has optional extension through 2027+. Non-renewal = material revenue cliff; extension confirms continuity and likely triggers upside re-rating.
+- [HIGH] 2028-01 — Russia uranium import ban waivers expire. Full decoupling effective; creates 6-month to 12-month supply gap before new domestic capacity online. Likely to drive SWU price appreciation and backlog conversion urgency.
+- [MED] 2027-2028 — Oak Ridge centrifuge plant expansion (with Fluor/Palantir) completion. $560M project advancing; cost savings target $300M identified. Success de-risks scalability and improves unit economics.
+- [MED] 2029-2030 — New Ohio enrichment facility operational. Not online until 2029 per guidance, creates critical timing window 2028-2029 (gap period) where Centrus has pricing power.
+
+### Margin of safety
+Moderate. Balance sheet: $1.87B cash, $1.21B debt, net cash $741M ($37.68/share). Debt/equity 1.59x elevated but offset by net cash position. Tangible equity cushion of $37.68/share limits downside if thesis breaks. However: Q1 2026 operating cash flow was -$35M (negative despite $76.7M revenue), driven by inventory builds and capex of $23.2M for expansion. Backlog contingencies and execution risks on supply-chain timing create leverage in both directions. Profitability stressed: Q1 margin compression from delayed Russian shipments, SWU gross profit down 66%. No cushion for further margin erosion if input costs or execution challenges persist. Entry at current valuation ($182, P/E 49x) leaves minimal margin of safety vs. 2026 earnings risk.
+
+### Top 3 risks
+1. **Valuation reversion** — Trading at 49x trailing P/E (vs 10x "fair value" implied, 20x sector average). Parabolic 2025 (+228%) unsustainable. Even if thesis succeeds, multiple compression from 49x to 20x offsets 3-5 years of earnings growth. Downside scenario: stock retreats to $100-120 on margin miss or macro slowdown, despite intact secular thesis.
+2. **HALEU contract cliff** — Current agreement expires June 2026 (imminent). DOE extension not guaranteed despite "optional" language; policy shifts, budget constraints, or strategic prioritization of other contractors could force non-renewal. Loss of HALEU revenue (~$32M+ quarterly based on Q1 technical solutions) = earnings cliff and narrative collapse despite underlying enrichment business intact.
+3. **Margin compression trajectory** — Q1 2026 showed 72% EPS decline despite 5% revenue growth. Drivers: SWU volumes down 47% (shift toward HALEU lower-margin mix), delayed Russian shipments, technical solutions gross profit collapse (-66%). If backlog conversion or expansion projects miss timing, or if SWU competitive pricing erodes, margins could compress further through 2027. Contingent portions of $2.3B backlog may not realize.
+
+### 5-year scenario probabilities
+- Generational (10x+): 8% — Requires Russia ban enforcement, Centrus monopoly margins hold, execution flawless, multiple re-rates post-2028 on earnings power.
+- Strong (3-5x): 18% — Russia ban forces Centrus reliance, backlog converts at attractive pricing, margins stabilize 15%+, multiple stays 20-25x.
+- Modest (1.5-3x): 28% — Some pricing power from Russia gap, margins recover modestly to 12-14%, multiple compresses to 15-20x; earnings growth offsets valuation mean-reversion.
+- Flat (-30% to +50%): 32% — Margins stay compressed, backlog contingencies cause 10-15% earnings misses, macro slowdown pressures nuclear spending; multiple reverts to 10-15x sector, erasing 2025 gains.
+- Thesis broken (-50%+): 14% — HALEU contract not renewed, Russia ban waived/delayed, competing enrichment sources emerge (Urenco, France), margin floor collapses, multiple re-rates to 5-8x on no-growth profile.
+
+### Entry trigger
+Current price ($182) does NOT merit entry. Thesis warrants watchlist, not deployment.
+
+Recommended entry ladder:
+1. **First tranche at $125-135** (Q3 2026, post-earnings visibility on margins, HALEU extension status confirmed). Represents 26-31% pullback; puts P/E at ~30-35x if 2027E EPS $4-5.
+2. **Core accumulation at $100-115** (Q4 2026 or Q1 2027, if Russia ban timeline confirmed, backlog trends visible). P/E ~20-25x; aligns with 2027-2028 inflection thesis.
+3. **Opportunistic at $70-80** (cyclical washout scenario; matches 52-week low range). P/E ~14-16x; offers generational upside asymmetry if thesis intact post-washout.
+
+Trigger priority: HALEU contract extension decision (June 2026) is binary; non-renewal kills thesis. Await June 2026 announcement before entry.
+
+### Verdict: 3.5/4 — WATCH
+
+Secular tailwind (Russia ban + nuclear renaissance) and catalyst window (2028 decoupling, June 2026 contract decision) are confirmed and high-conviction. Cyclical position is WRONG (post-peak, not pre-peak) and valuation is stretched (49x P/E vs 10x fair). Margin compression in Q1 contradicts execution narrative. Thesis is credible at 2y horizon but entry timing is critical. Monitor Q2 2026 earnings (margin trajectory), June 2026 HALEU decision (binary), and pullback levels below $140. Re-enter when valuation / cycle alignment improves.
+
+### Sources
+- [Yahoo Finance LEU Quote](https://finance.yahoo.com/quote/LEU/)
+- [Centrus Q1 2026 Earnings](https://www.stocktitan.net/sec-filings/LEU/10-q-centrus-energy-corp-quarterly-earnings-report-bcd93b464f33.html)
+- [Centrus Awarded $900M DOE Expansion](https://investors.centrusenergy.com/news-releases/news-release-details/centrus-awarded-900-million-expand-uranium-enrichment-ohio)
+- [Centrus HALEU Contract Extension](https://www.prnewswire.com/news-releases/centrus-energy-secures-contract-extension-from-department-energy-continue-haleu-production-302486995.html)
+- [DOE Russian Uranium Ban Impact](https://www.energy.gov/ne/articles/russian-uranium-ban-will-speed-development-us-nuclear-fuel-supply-chain)
+- [US Enrichment Supply Gap Analysis](https://investingnews.com/us-looming-uranium-enrichment-shortage/)
+- [Centrus Balance Sheet & Financials](https://simplywall.st/stocks/us/energy/nyse-leu/centrus-energy/health)
+- [Valuation Multiples P/E Analysis](https://intellectia.ai/stock/LEU/valuation)
+```
+
+---
+
+## 2026-05-17T16:04:14Z — longterm_check
+
+**Query:** `NVIDIA ($NVDA)` (equity, 1y horizon)
+
+```
+## LONGTERM CHECK: NVIDIA ($NVDA)
+
+Date: 2026-05-17 | Type: equity | Horizon: 1y
+
+### Current state
+$224.41, 1-year return +67.15%, trailing PE 45.97 (down from 3-year avg 66.2), forward PE 27.16 on $39.1B Q1 revenue (+73% YoY). Earnings beat 8%, but Q1 included $4.5B H20 inventory charge and $8B Q2 revenue headwind from China export controls.
+
+### Cyclical position
+Mid-to-late cycle, not at bottom. AI capex growth decelerated sharply: hyperscaler capex grew 75% YoY in Q3 2025, slowed to 49% Q4 2025, and is forecast to moderate to ~25% by end-2026. Valuation has compressed 31% (trailing PE down to 45.97 from 66.2 avg) as market prices slower growth. Semiconductor equipment spending is forecast to peak at $156B in 2027, consistent with late-cycle position. Stock off May 2024 all-time highs but up from $129.16 52-week low—consistent with mid-cycle recovery, not bottom formation.
+
+### Secular tailwind
+AI infrastructure capex remains structural, not cyclical. Big Tech capex expected to reach ~$700B in 2026 across Alphabet, Amazon, Meta, Microsoft; global semiconductor market forecast to reach $1.29T in 2026 (+52.8% growth). The $281B "intelligent datacenter" segment (CPUs, GPUs, custom ASICs, networking) is the largest identifiable non-memory category and remains AI-driven. H20 China loss is tactical; core enterprise AI (H100/H200/Blackwell) demand from hyperscalers remains intact. However, growth trajectory is clearly moderating: AI is the demand foundation (not a new catalyst), and capex growth is decelerating, signaling transition from hypergrowth to normalized growth phases.
+
+### Catalyst window
+- [HIGH] 2026-05-20 — Q1 FY2026 earnings (3 days); market expecting revenue beat given $45B Q2 guidance but focusing on full-year capex trajectory and China commentary — [CNBC]
+- [HIGH] 2026-Q2 — Rubin (R200) GPU production ramp; first with HBM4 memory and optical chip-to-chip interconnects, expected to enable 3x Blackwell performance — [NVIDIA Newsroom]
+- [MED] 2026-Q3 — AMD MI450 Series launch; incremental competitive pressure, though at lower performance tier — [Manufacturing Dive]
+- [MED] 2026-Q2/Q3 — H200 China revenue clarity; currently $0 despite Dec 2025 approval with 25% government revenue-share condition; resolution (positive or negative) removes uncertainty — [CNBC]
+- [MED] 2026-Q4 — Blackwell Ultra (B300) ramp completion; evidence of sustained upgrade velocity in installed base
+
+### Margin of safety
+Fortress balance sheet: $62.6B cash vs. $8.5B debt (0.05 debt-to-equity), 3.91 current ratio, Altman Z-Score 67.44 (deep safety zone). Generated $96.7B free cash flow in FY2026 (+58.9% YoY), covering debt 1213x via operating cash flow. Return on equity 76.3%, gross margins 85-88%. CUDA ecosystem moat remains unmatched—competitors (Huawei Ascend 910C at 60-80% NVIDIA performance, AMD MI450) lack software depth. Market structure supports 65-70% market share floor even in aggressive competitive scenario. However: no hard asset backing, equity-heavy capital structure, and margin leadership under pressure from new competitors entering at 30-40% lower pricing.
+
+### Top 3 risks
+1. Hyperscaler capex collapse faster than expected — Capex growth decelerated from 75% YoY (Q3 2025) to 49% (Q4 2025) in a single quarter. If trend accelerates due to GenAI ROI disappointment or macro downturn, NVIDIA's 40%+ revenue growth target becomes unrealistic. Combined with margin compression from competition, could trigger multiple compression from 27x forward PE to 18-20x = 25-35% downside. This breaks thesis.
+
+2. China market becomes permanent structural headwind — H20 now blacklisted by Beijing post-export-control reversal; H200 sales stalled at $0 despite Dec 2025 approval (25% revenue-share condition killed deal flow). Losing $8B+ TAM in potential $50B China AI market to Huawei/domestic competitors creates sustained drag and geopolitical tail risk if U.S.-China tension escalates further.
+
+3. Competitive margin compression — AMD MI450 2026 launch and Intel ramp 2026-2027 at 30-40% lower pricing force gross margin erosion from 85-88% to 75-80%. Even with flat revenue, this implies 15-20% EPS hit. NVIDIA's multiple is already priced for margin leadership; loss of 300-500 bps margin = significant multiple compression.
+
+### 5-year scenario probabilities
+- Generational (10x+ → >$2,244): Requires 40%+ CAGR + multiple expansion; possible only if capex stays robust AND China market unlocks. Low probability given deceleration signals. **8%**
+- Strong (3-5x → $673–$1,122): Requires 25-35% revenue CAGR + margin hold. Likely if AI capex normalizes to 20-30% growth and Rubin/Vera capture full upgrade cycle without catastrophic competitive loss. **35%**
+- Modest (1.5-3x → $336–$673): Requires 15-25% CAGR or 300-500 bps margin compression. Likely if competitive intensity increases but NVIDIA holds 65-70% market share. Most probable outcome given capex deceleration. **40%**
+- Flat (-30% to +50% → $157–$337): Requires capex collapse or macro recession offsetting AI demand; possible if hyperscaler ROI disappoints materially. **12%**
+- Thesis broken (-50%+ → <$112): Requires capex collapse + competitive erosion + China loss + macro recession simultaneously. Very unlikely given balance sheet, CUDA moat, and market structure. **5%**
+
+### Entry trigger
+Thesis is substantiated but NOT at compelling entry valuation. Current entry (May 17, 2026 at $224.41) is fair-to-reasonable for index weighting or existing positions. New capital entry triggers:
+- **Confirmation entry**: May 20 earnings + FY2027 guidance confirm 25-30% capex growth (vs. feared collapse). Hold/add at current.
+- **Weakness entry**: Q3 2026 capex slowdown confirmation OR Rubin launch delay → $180-200. This levels risk/reward.
+- **Catalyst resolution**: H200 China revenue clarity (either stabilization or write-off) removes overhang → reassess at outcome.
+
+### Verdict: 3/4 — WATCH
+Thesis scores 3 of 4 dimensions: secular tailwind intact (AI infrastructure structural), specific catalysts present (Rubin launch, earnings, H200 resolution), margin of safety strong (balance sheet, CUDA moat, market floor). **Cyclical position is mid-cycle, not at bottom** — capex growth decelerating, multiple compressed but not compressed enough to offset growth slowdown. Unlike SanDisk 2023 (cycle bottom + multiple compression + catalyst), NVIDIA is fairly valued at forward PE 27.16 on 40%+ expected growth, but margins face headwinds and capex trajectory is deteriorating. **Recommendation: Keep on watchlist for Rubin adoption clarity and Q3 capex confirmation; do not initiate new positions at current price unless sector-weighted. Entry signals on weakness or capex slowdown confirmation.**
+
+### Sources
+- [NVIDIA NVDA stock price May 2026 — Yahoo Finance](https://finance.yahoo.com/quote/NVDA/)
+- [NVIDIA 1-year performance — Financial Charts](https://www.financecharts.com/stocks/NVDA/performance/total-return)
+- [NVIDIA Q1 FY2026 earnings — 24/7 Wall St](https://247wallst.com/companies/nvda/earnings/2026/Q1)
+- [NVIDIA PE ratio — MacroTrends](https://www.macrotrends.net/stocks/charts/NVDA/nvidia/pe-ratio)
+- [AI capex growth 2026 — The AI Journal](https://aijourn.com/700-billion-ai-capex-in-2026-following-the-capital-flows-from-hyperscalers-to-chipmakers/)
+- [Semiconductor market 2026 — IDC](https://www.idc.com/resource-center/blog/semiconductor-market-to-surge-past-the-trillion-dollar-threshold-ai-infrastructure-drives-market-growth/)
+- [NVIDIA Blackwell and Rubin roadmap — NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing)
+- [NVIDIA financial strength 2026 — Stock Titan](https://www.stocktitan.net/financials/NVDA/)
+- [H20 China export controls impact — Computer Weekly](https://www.computerweekly.com/news/366625005/Nvidia-takes-4-5bn-hit-due-export-restrictions)
+- [AI GPU market competition 2026 — The Motley Fool](https://www.fool.com/investing/2026/01/25/nvidias-85-gpu-market-share-faces-growing-competit/)
+- [Manufacturing Dive — AMD MI450 roadmap](https://www.manufacturingdive.com/news/nvidia-details-ai-roadmap-Rubin-Blackwell-Ultra-chips-robots/742902/)
+```
+
+---
+
+## 2026-05-17T16:04:19Z — longterm_check
+
+**Query:** `iShares 20+ Year Treasury Bond ETF ($TLT)` (equity, 1y horizon)
+
+```
+## LONGTERM CHECK: iShares 20+ Year Treasury Bond ETF ($TLT)
+
+Date: 2026-05-17 | Type: equity | Horizon: 1y
+
+### Current state
+$83.66 | 52-week range $83.30–$92.19 | 1-year return ~0% (flat) | 2.5% dividend yield | effective duration 16.5 years
+
+### Cyclical position
+TLT is at/near 52-week lows, having rallied 10.5% from May 2025 lows to October 2025 peak ($92.19) then surrendered all gains by May 2026 ($83.66). This failed rally—despite 7 months of dividend collection—suggests the underlying yield cycle has reversed upward. The 10-year Treasury at 4.54% is higher than consensus year-end 2026 target of 3.75–4.25%, implying yields may stabilize or remain elevated. TLT is at support, not floor; no conviction cycle bottom yet. **Position: mid-cycle correction, not generational bottom.**
+
+### Secular tailwind
+NEGATIVE tailwinds dominate. US fiscal deficit at 5.8% of GDP (FY2026) rising to 6.7% by 2036 drives increasing Treasury supply. Rising supply + resilient growth + inflation at 2.7% (above Fed 2% target) create structural pressure on yields to remain elevated. Fed rate-cut path is decelerating: only ~1 quarter-point cut priced into 2026 vs. earlier expectations for 2–3 cuts. The bulk of future returns will come from coupon income (2.5% yield), not price appreciation. **Secular backdrop is bearish for long-duration bonds.**
+
+### Catalyst window
+- [LOW] Q3–Q4 2026 — Recession signals trigger Fed reversal + aggressive rate cuts → 10-year to 3.25%–3.5% → TLT +20% rally. Odds: ~17.5% recession probability for 2026.
+- [MED] Q1 2027 — Fed funds rate hike (50%+ market odds per May 2026 consensus) → 10-year to 5.0%+ → TLT -7% to -10%. **This is higher-odds catalyst.**
+- [LOW] 2027 onward — Geopolitical shock or credit event forces flight-to-safety into Treasuries. Unscheduled, low near-term probability.
+
+### Margin of safety
+US Treasury backstop eliminates credit risk; principal is fully guaranteed. Duration of 16.5 years means 1% rate decline yields ~16.5% price gain. However, valuation margin is thin: current yields at 4.54% offer limited cushion before price erosion. A 1% rate *rise* (to 5.54%) triggers ~16.5% loss. At $83.66 with $84.91 NAV, the fund trades below net asset value (discounted 1.6%), but this reflects duration risk, not opportunity. **Margin of safety exists only if rates decline; none if rates stabilize or rise.**
+
+### Top 3 risks
+1. **Rates hold/rise further (40% probability)**: Fed inflation concerns + fiscal deficits + market repricing of rate-hike odds. If 10-year drifts to 5.0%, TLT falls to $73–75 (-12% to -14% from current). Breaks the thesis of a near-cycle bottom.
+2. **Deficit/supply shock**: Congress faces debt ceiling crisis or creditor pushback forces yields higher (Japan/UK scenarios in recent years). 10-year could spike to 5.5%+, driving TLT to $68–70 (-18% to -20%). Breaks the margin-of-safety assumption.
+3. **Inflation reacceleration**: Current PCE at 2.7% remains above target. If core inflation re-accelerates (supply shock, wage pressures), Fed hikes in late 2026/early 2027 as implied by rate markets. Only recession prevents this. Medium-term thesis broken if this materializes.
+
+### 5-year scenario probabilities
+- Generational (10x+): 1% — Requires sustained economic collapse + rates to 1–2%; fiscal deficits make this unlikely.
+- Strong (3-5x): 10% — Recession scenario with aggressive Fed rate cuts to 2–3% range by 2031; structural tailwinds against this.
+- Modest (1.5-3x): 35% — Baseline: rates stabilize 3.0–4.0% by 2031, TLT compounds dividend income plus modest price gains.
+- Flat (-30% to +50%): 40% — Range-bound scenario; rates oscillate 3.5–4.5%, TLT returns ~2.5% annually in income.
+- Thesis broken (-50%+): 14% — Rates rise to 5.0–6.0% due to fiscal crisis or persistent inflation; deficits spiral.
+
+### Entry trigger
+**CURRENT**: Do not enter at $83.66. Cyclical position is uncertain (at support, not floor) and secular tailwinds are negative. The 2.5% yield does not compensate for 16.5-year duration risk in a potentially rising-rate environment.
+
+**BETTER ENTRIES**:
+1. If 10-year yields RISE to 5.0%+ (panic selling, TLT to $70–72), AND Fed signals imminent reversal → enter anticipating rate decline rally.
+2. If 10-year yields FALL below 4.0% on recession signal → indicates Fed pivot; enter for capital appreciation phase.
+3. If fiscal policy shifts decisively (major deficit reduction announced), reducing structural supply pressure → reasses tailwind.
+
+Otherwise, **hold cash or buy shorter-duration Treasury ETFs (IEF, SHY) with similar yield at lower rate risk.**
+
+### Verdict: 1/4 — PASS
+
+TLT fails the generational-mispricing framework. Only 1 of 4 dimensions scores positively: margin of safety (US government backstop). Cyclical position is weak (failed rally, support not floor). Secular tailwinds are NEGATIVE (fiscal deficits, supply pressure). Catalyst window is low-probability (17.5% recession odds in 1 year; Fed hike more likely). The asset is mature, well-priced, and offers income—suitable for liability-matching or duration exposure in a balanced portfolio—but not a "generational return" candidate. Structural macro headwinds (deficits, inflation) and weak near-term catalysts argue for PASS. Revisit only if recession probability spikes to >30% or fiscal policy shifts.
+
+### Sources
+- [TLT Current Price & 52-Week Range](https://finance.yahoo.com/quote/TLT/)
+- [1-Year Total Return Performance](https://www.morningstar.com/etfs/xnas/tlt/performance)
+- [Long-Term Treasury Bond Yields & 2026 Outlook](https://www.schwab.com/learn/story/fixed-income-outlook)
+- [Treasury Bond ETF Duration Metrics](https://www.heygotrade.com/en/blog/bond-etfs-in-2026-tlt-ief-and-agg-for-diversifying-your-portfolio)
+- [Federal Deficit & Fiscal Outlook 2026–2036](https://www.cbo.gov/publication/62105)
+- [Fed Rate Cut Expectations & Inflation](https://www.ishares.com/us/insights/fed-outlook-2026-interest-rate-forecast)
+- [Recession Risk 2026–2027](https://247wallst.com/investing/2026/05/11/wall-street-sees-recession-risk-fading-in-2026-but-2027-flashing-warning-signs/)
+- [TLT Fund Flows & Sentiment](https://danelfin.com/etf/TLT)
+- [iShares Fact Sheet (Mar 31, 2026)](https://www.ishares.com/us/literature/fact-sheet/tlt-ishares-20-year-treasury-bond-etf-fund-fact-sheet-en-us.pdf)
+```

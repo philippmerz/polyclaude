@@ -86,6 +86,12 @@
       "entry_max": 95.0, "horizon": "2-5y", "route": "ibkr_surface",
       "rationale": "Advanced Nuclear. Original $110 trigger fired 2026-05-16 at $107.51; fresh longterm_check 3/4 WATCH said still overvalued (fwd P/E 92x vs 24x historical). Revised entry: $85-95 (on uranium dip to $70-75/lb) OR Q2 2027 earnings inflection. Don't chase rallies above $120. Thesis intact, valuation stretched.",
       "added": "2026-05-10", "revised": "2026-05-16"
+    },
+    {
+      "ticker": "NVDA", "type": "equity", "yfinance_symbol": "NVDA",
+      "entry_max": 200.0, "horizon": "1-2y", "route": "ibkr_surface",
+      "rationale": "AI capex centerpiece. Surfaced via 2026-05-17 digest 'AI Capex Plateauing' theme (NVDA Q1 FY27 guidance flattening sequential growth; TSMC April -1.1% MoM; SEMI wafer -4.7% QoQ). Fresh longterm_check 3/4 WATCH at $224.41 (fwd P/E 27x on 40% growth). Don't initiate new positions at current; wait for capex slowdown confirmation. Entry: $180-200 on weakness OR post-Q3 2026 capex confirmation. Generational (10x+) 8%, Strong (3-5x) 35%, Modest 40%.",
+      "added": "2026-05-17"
     }
   ]
 }
