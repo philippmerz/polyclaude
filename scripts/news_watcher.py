@@ -31,6 +31,7 @@ from pathlib import Path
 
 import feedparser
 import httpx
+from bs4 import BeautifulSoup
 
 import _paths as _secrets
 
@@ -184,7 +185,36 @@ def _positions_summary_blocking() -> str:
     return text
 
 
-def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str) -> tuple[bool, str, list[dict]]:
+def _fetch_article_body(url: str, max_chars: int = 4000) -> str | None:
+    """Fetch and extract main article text. Returns None on failure (fail-OPEN: caller
+    proceeds with summary-only when body unavailable).
+
+    Lesson 2026-05-09: 2 false directional miscalls in 24h came from summary-only
+    framing (Pentagon UFO read bullish was negative; Trump Project-Freedom read
+    imminent was Iran-rejecting). Body has counter-signal headlines drop.
+    """
+    if not url:
+        return None
+    try:
+        r = httpx.get(url, timeout=15.0, follow_redirects=True,
+                      headers={"User-Agent": "Mozilla/5.0 (polyclaude news_watcher)"})
+        if r.status_code != 200 or not r.text:
+            return None
+        soup = BeautifulSoup(r.text, "html.parser")
+        for tag in soup(["script", "style", "nav", "footer", "aside", "form"]):
+            tag.decompose()
+        article = soup.find("article") or soup.find("main") or soup.body
+        if not article:
+            return None
+        paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")]
+        text = " ".join(p for p in paragraphs if len(p) > 40)
+        text = text[:max_chars]
+        return text or None
+    except Exception:
+        return None
+
+
+def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: str = "") -> tuple[bool, str, list[dict]]:
     """Ask claude -p whether a Tier-2 match should reach Telegram + per-position impact.
 
     Returns (should_send, one_line_reason, per_position_impacts).
@@ -254,14 +284,106 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str) -> tu
             continue
 
     upper = first_line.upper()
+    send_decision = None
+    send_reason = ""
     if upper.startswith("SEND"):
-        reason = first_line[4:].lstrip(": ").strip() or "(no reason)"
-        return (True, reason, impacts)
-    if upper.startswith("SUPPRESS"):
-        reason = first_line[8:].lstrip(": ").strip() or "(no reason)"
-        return (False, reason, [])
-    # Couldn't parse — fail open
-    return (True, f"agent unparseable: {first_line[:120]}", impacts)
+        send_decision = True
+        send_reason = first_line[4:].lstrip(": ").strip() or "(no reason)"
+    elif upper.startswith("SUPPRESS"):
+        send_decision = False
+        send_reason = first_line[8:].lstrip(": ").strip() or "(no reason)"
+    else:
+        send_decision = True
+        send_reason = f"agent unparseable: {first_line[:120]}"
+
+    if send_decision and url and any(i["level"] == "CRITICAL" for i in impacts):
+        body = _fetch_article_body(url)
+        if body and len(body) > 200:
+            impacts = _revalidate_critical_impacts(impacts, title, body, pos)
+
+    return (send_decision, send_reason, impacts)
+
+
+def _revalidate_critical_impacts(impacts: list[dict], title: str,
+                                  body: str, positions_text: str) -> list[dict]:
+    """Second-pass validation of CRITICAL tags using full article body.
+
+    Returns impacts list with CRITICAL levels possibly downgraded. MINOR/MATERIAL
+    impacts pass through unchanged (first pass is sufficient for non-urgent).
+    On agent error: returns original impacts unchanged (fail-OPEN).
+    """
+    critical = [i for i in impacts if i["level"] == "CRITICAL"]
+    if not critical:
+        return impacts
+    claims = "\n".join(
+        f"- {i['position']}: CRITICAL — {i['reason']}" for i in critical
+    )
+    prompt = (
+        "You re-validate per-position CRITICAL tags against the full article body "
+        "(first pass used only the RSS summary, which has caused directional miscalls). "
+        f"Open positions:\n\n{positions_text}\n\n"
+        f"Article title: {title}\n\n"
+        f"Article body (excerpt):\n{body[:3500]}\n\n"
+        f"First-pass CRITICAL claims to validate:\n{claims}\n\n"
+        "For each claim, output one line:\n"
+        "  VERDICT: <position-key>: <CONFIRM|MATERIAL|MINOR|NONE>: <one-line reason>\n"
+        "  - CONFIRM = body confirms CRITICAL (thesis-invalidating/resolving). Keep CRITICAL.\n"
+        "  - MATERIAL = body shows real pressure but not thesis-invalidating. Downgrade.\n"
+        "  - MINOR = body shows headline overstated; minor drift only. Downgrade.\n"
+        "  - NONE = body contradicts the claim entirely (counter-signal). Remove.\n"
+        "Examples of counter-signals: official rejects the framing; story is about "
+        "the OPPOSITE side acting; the named action was paused/canceled inside body; "
+        "the article is opinion/speculation citing unnamed sources only.\n"
+        "Use the EXACT position-key from the claims above."
+    )
+    try:
+        r = subprocess.run(
+            ["claude", "-p", "--model", "haiku", prompt],
+            capture_output=True, text=True, timeout=60, cwd="/tmp",
+        )
+        out = (r.stdout or "").strip()
+    except Exception:
+        return impacts
+
+    verdicts: dict[str, tuple[str, str]] = {}
+    for line in out.splitlines():
+        line = line.strip()
+        if not line.upper().startswith("VERDICT:"):
+            continue
+        try:
+            _, rest = line.split(":", 1)
+            parts = [p.strip() for p in rest.split(":", 2)]
+            if len(parts) < 3:
+                continue
+            key, level, reason = parts[0], parts[1].upper(), parts[2]
+            if level in ("CONFIRM", "MATERIAL", "MINOR", "NONE"):
+                verdicts[key] = (level, reason[:240])
+        except Exception:
+            continue
+
+    revised: list[dict] = []
+    for i in impacts:
+        if i["level"] != "CRITICAL":
+            revised.append(i)
+            continue
+        v = verdicts.get(i["position"])
+        if not v:
+            revised.append(i)  # no verdict — keep original (fail-open)
+            continue
+        level, reason = v
+        if level == "NONE":
+            continue  # drop
+        if level == "CONFIRM":
+            i = dict(i)
+            i["reason"] = f"{i['reason']} | body-confirmed: {reason}"
+            revised.append(i)
+        else:
+            revised.append({
+                "position": i["position"],
+                "level": level,
+                "reason": f"body-downgrade from CRITICAL: {reason}",
+            })
+    return revised
 
 
 def entry_id(entry) -> str:
@@ -367,7 +489,7 @@ def poll_once(config: dict, state: dict) -> int:
             agent_reason = None
             impacts: list[dict] = []
             if tier == 2:
-                send, agent_reason, impacts = _agent_filter_tier2(feed["name"], kw, title, summary)
+                send, agent_reason, impacts = _agent_filter_tier2(feed["name"], kw, title, summary, link)
                 if not send:
                     print(f"[watcher] suppressed tier2 kw={kw!r} feed={feed['name']} "
                           f"reason={agent_reason[:120]!r} title={title[:80]!r}", flush=True)
