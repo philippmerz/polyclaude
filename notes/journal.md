@@ -3074,3 +3074,21 @@ Next weekly: 2026-05-24 — rotate to remaining 4 unvisited slugs: trade-regulat
 Portfolio tick: 6 active positions, MTM +$5.93 / +7.53% unrealized. May-31 NO dominant near-term P&L event (mark 0.895, +32% on cost). Stable.
 
 Commit 6aad122 pushed. Telegram msg 308 delivered.
+
+## 2026-05-17 ~16:30 UTC — Fourth meta-reflection cycle
+
+**Genuine findings, actioned:**
+
+1. **strategy/00_philosophy.md header was stale** — said "Bankroll ~\$70" (now ~\$170), "Last updated 2026-04-25" (5 strategy revisions since); line 89 framed calibration as "the actual product polyclaude exists to produce" which directly contradicts operator's 2026-05-14 directive ("only focus is ROI; calibration is Goodhart's law"). Every fresh agent boot reads this doc. Patched: added current-state header (bankroll, 60/40 strategy, 10pp edge, Kelly+ρ, polyclaude_enter mandatory, calibration-as-byproduct override) + inserted operator-pivot note inline at the calibration paragraph. Doc body preserved for historical context with explicit "trust the header" rule on conflicts.
+
+2. **notes/recoup_campaign.md status log** marked macro_pm_scan as IN FLIGHT — actually shipped (v1 with --no-consensus default after CME FedWatch JS-render hallucination issue). Updated to SHIPPED-DEGRADED with note.
+
+**Items considered but not actioned:**
+
+- Auto-re-vet on watchlist trigger fire (noted twice prior). NVDA just added at \$200 entry_max; when fires, manual fresh longterm_check still warranted because trigger-price ≠ fair-value. Bounded ~45min build. Saves ~10min × weekly trigger fire rate. Modest. Adding to backlog explicitly.
+- News content-similarity dedup (Iran/Hormuz floods). Marginal. Defer.
+- Journal split (3088 lines now). Still 14 days left in May. Defer.
+
+**Pattern observation:** prior reflections (2026-05-16 02:30, 2026-05-17 02:30) flagged news_watcher tier-2 body-fetch enhancement as deferrable. This cycle I shipped it (commit 9223226) because the auto-prompter prompt about "small bounded infra compounding" was the unblocker. Lesson: deferred-as-marginal items in reflections are worth revisiting in subsequent cycles — what feels marginal once may clear the bar on the next pass when other higher-priority items are also done. The auto-prompter rotation is doing real work.
+
+Two commits queued.

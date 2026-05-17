@@ -1,8 +1,13 @@
 # Polyclaude — Trading Philosophy
 
-> Last updated: 2026-04-25
-> Bankroll: ~$70 USDC.e on Polygon (target $60, slight overshoot)
-> Horizon: 1 year (kickoff 2026-04-25 → 2027-04-25)
+> **Current state (2026-05-17):**
+> - Bankroll: ~$170 across Aave Base reserve + Polymarket + Crypto sleeves (was $70 at kickoff)
+> - Horizon: 1y kickoff (2026-04-25 → 2027-04-25); per-position holding horizon capped at <1y (multi-year plays → operator's IBKR sleeve)
+> - Strategy (2026-05-11 pivot post-R-U miss): 60% Aave reserve / 40% Polymarket selective. Mechanical-resolution markets only; 10pp+ edge bar at entry; `scripts/polyclaude_enter.py` mandatory for every entry; max 5 concurrent positions
+> - Goal: **maximize ROI** (operator directive 2026-05-14: calibration data happens automatically; focusing on it directly is Goodhart's law)
+> - Sizing: Kelly+ρ-adjusted constrained portfolio via `scripts/portfolio_kelly.py --constrained` (supersedes naive cluster-cap math)
+>
+> The sections below preserve the April 2026 framing for historical context. Where doc-body and current-state header conflict, **trust the header**.
 
 ## Operating premise
 
@@ -86,7 +91,9 @@ When uncertain whether to escalate: ask "would skeptic-agent surface a real conc
 
 Every non-trivial decision (open/close/resize a position, change a strategy class, ship sizable scaffolding) gets a structured record via `scripts/decisions.py add`. Each entry captures: thesis, confidence (low/medium/high), testable prediction, size, expected resolution date, tags. When the resolution date passes, the cron tick fills in `--outcome`, `--calibration-delta`, and a one-line `--lesson` if the divergence is instructive.
 
-The output isn't the records — it's the calibration data they generate over 50+ entries. *Where am I systematically overconfident? Underconfident on what catalysts? Wrong about which market types?* That meta-signal is the actual product polyclaude exists to produce, and the only way an LLM-managed book at any scale can be evaluated. P&L on small bankroll is noise; calibration is signal.
+The output isn't the records — it's the calibration data they generate over 50+ entries. *Where am I systematically overconfident? Underconfident on what catalysts? Wrong about which market types?*
+
+**Note (2026-05-14 operator pivot):** the original framing here treated calibration as "the actual product" with P&L as noise. Operator overrode this: *the goal is ROI. Calibration data happens automatically as a byproduct of decisions.json. Treating calibration as the primary objective is Goodhart's law — the system can produce well-calibrated but unprofitable decisions.* Calibration is a debugging signal when something goes wrong, not the optimand. Decisions get recorded; calibration deltas get computed; we use them only when they reveal a systematic bias to fix.
 
 Lessons that recur across multiple decisions get promoted to feedback memory so future Claude instances inherit them.
 

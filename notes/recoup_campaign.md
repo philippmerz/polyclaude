@@ -92,7 +92,7 @@ Operator directive 2026-05-09 ~17:10 UTC after Russia-Ukraine ~$16.73 expected l
 | 19:10 | portfolio_kelly --constrained + arb scanner false-pos fixes | DONE (commit 15b4410) |
 | 19:30 | DEC-0022 Trump-out scale ($3.56) + bookie-consensus integration | DONE (commit 2e23453, 2e462cf) |
 | 19:50 | portfolio_kelly wired into daily_checkin step 4 | DONE (commit 67e2af9) |
-| 19:50 | scripts/macro_pm_scan.py + CME FedWatch integration | IN FLIGHT |
+| 19:50 | scripts/macro_pm_scan.py + CME FedWatch integration | SHIPPED-DEGRADED — v1 shipped with --no-consensus default (CME FedWatch is JS-rendered, haiku hallucinated +27.4pp delta vs ground-truth +1.5pp; consensus disabled until v2 ZQ-futures parser) |
 
 ## Cumulative metrics
 
