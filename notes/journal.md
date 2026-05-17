@@ -3040,3 +3040,11 @@ Both DEC-0015 + DEC-0020 updated with outcome + calibration_delta + lesson.
 **No genuine new findings.** Operational period is calm; major P&L event (May-31) is 14 days out.
 
 **Brief idle.** Cron handles 12h cycles. Hook handles 20-min checks. Trump-Xi-Iran-mediation watch active.
+
+---
+
+## 2026-05-17 ~14:00 UTC — Sunday 14:00 cron tick (quiet)
+
+6 active, MTM $84.65 vs cost $78.72 = +$5.93 / +7.53% unrealized. Stable.
+
+Sunday 16:00 UTC weekly long-term review queued via cron. May-31 NO is dominant remaining P&L event (15d).
