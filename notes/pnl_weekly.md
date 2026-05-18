@@ -258,3 +258,133 @@ First resolutions land Tue May 5 (Amy Acton). Calibration product begins next we
 - Ostium subgraph (funding-rate scan)
 - Aave V3 pool data (rates, balances)
 
+
+## Week 3 + 4 (May 9 → May 18) — catch-up consolidated entry
+
+**Cadence note:** weekly cadence slipped during the R-U miss + recoup-campaign sprint. This entry consolidates ~10 days of activity (May 9–18). Next full weekly: 2026-05-24 (Sunday).
+
+### Bankroll snapshot
+
+- **2026-05-09 reference:** ~$170 (per project memory; PM ~$66 cost, Aave ~$30, Ostium ~$15 collat, crypto ~$60 cash)
+- **2026-05-18 02:00 UTC actual:** ~$148 MTM (PM cost $78.72 / MTM $84.46, Aave ~$10, Ostium ~$5 collat, crypto+poly cash ~$48)
+- **Net delta:** −$22 = R-U realized loss (−$16.73) + bridge/swap friction (~$1) + MTM swings (~−$4) offset by realized wins (+$7.83) and unrealized gains in held book (+$5.75 currently)
+
+### Realized P&L (May 9 → May 18)
+
+| Date | DEC | Position | Realized |
+|---|---|---|---:|
+| 2026-05-10 | 0023 | Atletico top-4 YES early close | −$0.07 |
+| 2026-05-11 | 0018 | **R-U Iran-Russia tunnel YES (UMA dispute → YES)** | **−$16.73** |
+| 2026-05-12 | 0019 | May-11 Iran-peace NO redeemed | +$0.525 |
+| 2026-05-12 | 0025 | Ostium gold (XAU) LONG 5x TP-triggered | +$1.17 |
+| 2026-05-13 | 0007 | Latvia Eurovision NO partial close | +$0.706 |
+| 2026-05-15 | 0015+0020 | May-15 Iran-peace NO redeemed (incl. scale-in) | +$3.54 |
+| 2026-05-18 | 0026 | Ostium NDX SHORT 5x TP-triggered | +$1.96 (est) |
+| | | **NET REALIZED** | **−$8.90** |
+
+### Held book MTM (2026-05-18 02:00 UTC)
+
+| Position | Side | Entry | Mark | Cost | MTM | %P&L | Resolves |
+|---|---|---:|---:|---:|---:|---:|---|
+| Iran regime falls 2027 | NO | 0.837 | 0.825 | $28.25 | $27.84 | −1.44% | Dec 31 |
+| US-Iran peace deal May 31 | NO | 0.678 | 0.925 | $11.82 | $16.13 | **+36.43%** | **May 31** |
+| Trump out before 2027 | NO | 0.856 | 0.905 | $10.56 | $11.16 | +5.70% | Dec 31 |
+| Reza Pahlavi leads Iran 2026 | NO | 0.907 | 0.925 | $10.00 | $10.20 | +2.04% | Dec 31 |
+| Hantavirus pandemic 2026 | NO | 0.909 | 0.928 | $9.09 | $9.29 | +2.15% | Dec 31 |
+| Aliens confirmed by 2027 | NO | 0.800 | 0.875 | $9.00 | $9.84 | +9.37% | Dec 31 |
+| Ostium SPX LONG 5x | LONG | 7167 | ~7167 | $4.89 | ~$4.89 | ~flat | TP/SL or 30d |
+| **TOTAL PM book** | | | | $78.72 | $84.46 | **+7.30%** | |
+
+### Strategy pivot (mid-window)
+
+2026-05-11 R-U miss triggered a strategy reset (post-mortem in journal):
+- **Mechanical-resolution markets only** — skip subjective "permanent peace deal / qualifies-as-X" markets that depend on UMA interpretation
+- **10pp+ edge bar at entry** (was 5pp)
+- **`polyclaude_enter.py` mandatory** for every new entry — enforces umaResolutionStatus check + catalyst_check resolution-criteria injection + Kelly+ρ sizing
+- **Max 5 concurrent positions** (currently at 6 inherited)
+- **Target allocation: 60% Aave reserve (3.4-3.8% APY hurdle) / 40% PM selective**
+
+### Infrastructure shipped (recoup campaign)
+
+| Tool | Purpose | Why ship |
+|---|---|---|
+| `scripts/uma_status_check.py` | Polls gamma-api umaResolutionStatus + outcomePrice for held positions; alerts on transitions + >5pp moves | Would have caught R-U dispute 18h earlier |
+| `scripts/polyclaude_enter.py` | Unified gamma-lookup + UMA-reject + catalyst_check + Kelly + execute | Single-entry-point enforces post-R-U filters |
+| `scripts/portfolio_kelly.py --constrained` | Per-position Kelly+ρ + budget-bound constrained portfolio | Replaces naive cluster-cap (double-counted risk on anti-correlated Iran tails) |
+| `scripts/brownian_bridge_fv.py` | Hazard-rate fair-value pricing: `fair(t) = p^(1-t/T)` | Per-position SCALE_UP/TRIM/HOLD verdicts using time-decay math |
+| `scripts/sports_pm_scan.py --with-consensus` | Sports mid-market scan w/ bookie-consensus delta | Validated on Latvia (close +$0.706 after consensus disagreement) |
+| `scripts/macro_pm_scan.py` | Macro markets ≤60d (Fed/CPI/etc.) | DEGRADED: --no-consensus default (CME FedWatch JS-render hallucinates) |
+| `scripts/event_monotonicity_scan.py` | Multi-market event monotonicity arb scanner | 225 events / 0 violations in first week; collecting prospective data |
+| `scripts/world_state_digest.py` + `scripts/longterm_check.py` | Sunday domain digests + per-ticker generational-mispricing framework | Watchlist surfacing — 12 candidates seeded, all route=ibkr_surface per <1y horizon |
+| `scripts/watchlist_monitor.py` + `notes/watchlist_triggers.json` v2 (`route` field) | Entry-trigger price alerts | Fired 3x on CEG/LEU/CCJ; all needed manual fresh longterm_check + tighter revised triggers |
+| `scripts/ostium_state_diff.py` | Ostium open-trades count change detector | Catches TP/SL/manual closes — caught XAU and NDX TPs |
+| `news_watcher` tier-2 CRITICAL re-validation | Article-body fetch + second-pass agent eval | Fix for 2026-05-09 false directional miscalls |
+
+11+ tools shipped over 10 days. All wired into daily_checkin.sh + cron + Telegram.
+
+### Markets considered, rejected
+
+- **R-U Iran-Russia tunnel YES re-entry post-resolution**: skipped, market closed
+- **Various Hormuz / Iran-cluster NOs** (May-15, May-31, June-30 peace-deal variants): added 2 (DEC-0015, DEC-0024); skipped multiple regime-fall + uranium-transfer markets due to cluster cap
+- **Russia-Ukraine ceasefire NO (post-Victory Day)**: not re-entered after May 9 — Victory Day passed without framework announcement, NO mark moved away from us
+- **Sports candidates** (Atletico, La Liga + UCL): closed Atletico early, skipped all others (cluster fees + off-season)
+- **TLT, NVDA, CCJ, LEU, CEG** (long-term watchlist triggers fired): all returned to WATCH/PASS via fresh longterm_check; route=ibkr_surface = surfaced to operator IBKR
+
+### Mistakes / mis-calibrations identified
+
+1. **R-U miss (−$16.73)** — three documented mistakes per DEC-0018 post-mortem:
+   - Scale-in error on news (read mark crash as overreaction, not new info)
+   - Investigation gap (didn't fetch gamma-api/markets/{id} for umaResolutionStatus)
+   - Resolution-criteria interpretation gap (operated under loose "permanent peace" framing while criteria explicitly said "regardless of whether ceasefire officially starts afterward")
+   All three FIXED via infra ship (uma_status_check, polyclaude_enter umaResolutionStatus reject, catalyst_check resolution-criteria injection).
+
+2. **macro_pm_scan CME FedWatch hallucination** — haiku WebFetch on JS-rendered CME page returned nothing → invented +27.4pp delta vs ground-truth +1.5pp. Disabled consensus comparison; v2 plan to parse ZQ futures.
+
+3. **limitless_arb_scan false positives** (Neymar/Messi + Cristiano Ronaldo): fixed via `_proper_nouns()` filter + Jaccard 0.35→0.55.
+
+4. **Watchlist trigger-fire pattern (CEG/LEU/CCJ 3-of-3)**: static price triggers fired on drop, but fundamental fair value also adjusted down → no margin of safety opened. Lesson: always run fresh longterm_check on trigger-fire; revise entry_max per fresh fair-value. All 3 watchlist entries now properly tightened.
+
+5. **Over-cancellation of autoprompter**: was cancel_followup at every idle turn → operator flagged "haven't seen continuation checks." Fixed: stop routine cancel, let 20-min cycle fire naturally + 1-in-4 meta-reflection rotation via hook.
+
+6. **strategy/00_philosophy.md staleness** (caught 2026-05-17 meta-reflection #4): header said bankroll $70 + framed calibration as "actual product" — operator explicitly pivoted to ROI-only on 2026-05-14. Patched with current-state banner + inline operator-pivot note.
+
+### Decisions tracker summary
+
+```
+total=26  resolved=10  pending=16
+by type: open_position=17 (7 resolved) · size_change=4 (1) · close_position=3 (2) · scaffolding=1 (0) · skip=1 (0)
+by confidence: high=21 (10 resolved) · medium=5 (0 resolved)
+pending capital: $158.62
+lessons recorded: 10
+```
+
+Notable lessons (selected): R-U three documented mistakes (above); TP-set-at-entry leaves upside in major shocks (XAU TP'd at +24% during Hormuz blockade); capital reallocation between high-conviction near-resolution positions captures alpha; Brownian-bridge fair-value identifies marginal-edge ranking.
+
+### Outlook for next week (May 18 → May 25)
+
+**Hard catalysts:**
+- **May 31 (~13d):** May-31 Iran-peace NO resolves. Currently at mark 0.925, +36.43% on cost, ~$1.31 more expected at lock-in. Dominant near-term P&L event.
+- **Trump-Xi-Iran-mediation watch:** daily — early-close trigger at mark < 0.83.
+- **Sunday May 24:** next weekly long-term review (rotation to trade-regulation, biotech-health, crypto-on-chain, markets-corporate).
+
+**Soft catalysts:**
+- Ostium SPX LONG 5x still open (DEC-0011, trade 1848511). NDX SHORT just TP'd; pair-trade now naked SPX-long. Could TP at +8% (~7742) or SL at −8% (~6595). Monitor.
+- Iran-cluster news flow (Hormuz, regime stability) shapes Pahlavi + regime-fall NO marks.
+
+**Positions to roll/close:**
+- None planned. May-31 NO will resolve naturally; everything else holds.
+
+**Capital next:**
+- $43.79 cash on PM sleeve + ~$17 expected from May-31 NO resolution = ~$60 to deploy into Aave Base post-May-31 (60/40 strategy rebalance). Bridge in one batch to amortize friction.
+
+### Sources used this week
+
+- Polymarket gamma-api + CLOB orderbook + data-api (live)
+- News: Reuters / Bloomberg / WaPo / BBC / NPR / Al Jazeera / Kyiv Independent / Times of Israel / SCMP (RSS via news_watcher; full URLs in `notes/news_alerts.jsonl`)
+- World-state digest: 2 Sunday domain rotations (energy-power-infrastructure + geopolitics-security on 2026-05-10; tech-ai-chips + macro-fiscal-labor on 2026-05-17)
+- Catalyst checks: haiku-WebSearch via `scripts/catalyst_check.py` (~10-15 invocations this window)
+- Bookie consensus: haiku-WebFetch via `sports_pm_scan --with-consensus` (Latvia Eurovision was the validating signal)
+- UMA Optimistic Oracle status (gamma-api + on-chain): via `scripts/uma_status_check.py`
+- Aave V3 pool data (Base + Arbitrum supply APYs)
+- Ostium subgraph + OpenSDK
+
