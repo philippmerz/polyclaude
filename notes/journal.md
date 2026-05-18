@@ -3116,3 +3116,19 @@ Two commits queued.
 **Weekly P&L overdue:** Last one was 2026-05-02 covering May 2 → May 9. Today is 2026-05-18 (16 days). Major events in this window (R-U miss, recoup campaign infrastructure ship, May-15 + Latvia resolutions, Atletico close, multiple meta-reflection cycles) all covered in journal already. Noted in backlog for next operator-attention window.
 
 **Net:** stable tick, no actions. May-31 NO is the dominant near-term P&L driver and is trending hard in our favor.
+
+## 2026-05-18 ~02:30 UTC — Fifth meta-reflection cycle
+
+**Scan run:** doc-header staleness, TODO/FIXME, orphan/unwired scripts, anti-pattern leftover (polymarket_ui_check.py).
+
+**No genuine new findings.**
+
+- Doc headers: all current after 2026-05-17 strategy/00 patch + 2026-05-18 README refresh.
+- TODO/FIXME: none in scripts/.
+- 23 "unwired" scripts (not in daily_checkin.sh) — all intentional CLI tools (catalyst_check, kelly_size, polyclaude_status, polyclaude_enter, emergency_*, telegram, etc.) or hourly-cron tools (arb_cron). Verified brownian_bridge_fv is called via polyclaude_status subprocess (not orphan).
+- polymarket_ui_check.py — scrapped DRAFT preserved with explicit warning header documenting why-not-to-re-implement. Could delete; commit history preserves. Keeping serves as anti-pattern doc. Marginal — leave.
+- News-flow / market patterns: Iran-cluster NO-fade thesis robust (3-of-3 May-resolving wins); AI-capex-plateau digest theme materialized via NDX SHORT TP at -7.99%; sector-rotation theme→Ostium pair-trade workflow is real but operator-decided, surfacing-to-operator is the right channel.
+
+This session has shipped: cron tick (DEC-0026 NDX close), news_watcher tier-2 body-fetch enhancement (commit 9223226), strategy/00 staleness fix + recoup_campaign IN-FLIGHT→SHIPPED-DEGRADED (commit 9c9f470), weekly P&L catch-up (commit 1ca0038), SPX-pair-unraveled surfaced to backlog (commit 5637156). Reflection cadence is doing real work — last 4 reflections shipped 5 items between them.
+
+Brief idle. Hook fires next cycle.
