@@ -3149,3 +3149,13 @@ Brief idle. Hook fires next cycle.
 - Portfolio Kelly --constrained: $91.28 deficit but 5-of-6 below 10pp edge filter. No scale-in.
 
 **Net:** MTM $84.46→$83.70 (-$0.76), 6 positions stable. 2 commits + bug fix = real LLM-functioning improvements compound on future cron ticks.
+
+## 2026-05-18 ~17:55 UTC — Mid-cycle news-alert evaluation (3 MATERIAL impacts)
+
+Continuation cycle surfaced 2 news_alerts since 14:00 with MATERIAL per-position impacts. Per daily_checkin step 2 protocol, evaluated each:
+
+- **iran-peace [MATERIAL, agent: thesis affirmed]**: New Iran Hormuz-managing-body + escalation + Trump-threats coverage. Agent right — confirms no-deal narrative. Position already captured most of the move (mark 0.925, +36.43% on cost). Only $0.87 of additional EV from 0.925→0.975. **Hold to resolution (12.2d).**
+- **iran-regime-fall [MATERIAL, agent: thesis under pressure]**: Agent direction plausible (escalation could destabilize). But UMA criteria requires formal regime change before 2027 (~7mo); external-pressure-induced collapse on that timeline remains low-prob. Mark 0.825 unchanged. **Hold.**
+- **reza-pahlavi-iran [MATERIAL, agent: thesis under pressure]**: Agent reads regime instability as elevating exile-return probability. But "lead Iran in 2026" = political installation by Dec-31 (30 weeks). Pahlavi has been exile for decades; instability ≠ installation pathway. Mark 0.933 (FAVORABLE +0.9pp since 14:00 — opposite of agent's directional read). **Hold.**
+
+**Net:** 3 MATERIAL alerts → 3 hold decisions. Mark moved +$0.87 favorable (May-31 NO recovered to 0.925 from 0.875 at 14:00 tick). MTM $84.57 vs $83.70 at 14:00 = +$0.87 / +1.05%. No action; no out-of-cycle Telegram (action-only filter). Confirms news_watcher tier-2 body-fetch CRITICAL gate works correctly: these are MATERIAL not CRITICAL, second-pass didn't trigger (correct).
