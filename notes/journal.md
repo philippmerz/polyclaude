@@ -3132,3 +3132,20 @@ Two commits queued.
 This session has shipped: cron tick (DEC-0026 NDX close), news_watcher tier-2 body-fetch enhancement (commit 9223226), strategy/00 staleness fix + recoup_campaign IN-FLIGHT→SHIPPED-DEGRADED (commit 9c9f470), weekly P&L catch-up (commit 1ca0038), SPX-pair-unraveled surfaced to backlog (commit 5637156). Reflection cadence is doing real work — last 4 reflections shipped 5 items between them.
 
 Brief idle. Hook fires next cycle.
+
+## 2026-05-18 ~14:00 UTC — Monday 14:00 cron tick (ALB trigger + sports_pm_scan bug catch)
+
+**Material this tick:**
+
+- **ALB watchlist trigger fired**: $178.68 ≤ $180 entry_max. Auto-re-vet via fresh longterm_check (4th-of-4 same pattern: CEG/LEU/CCJ/ALB). Verdict: 3/4 WATCH — margin of safety WEAK at 33x EV/EBITDA (2.5x historical median) post-204% 1yr rally; $90-130 downside if lithium cycle re-tests $12-15/kg. Revised entry: $140-150 (15-20% pullback) AND reaffirmed $20+/kg pricing trajectory; OR event entry after Mt. Holland online H1 2027. Revised entry_max $180→$150. Commit 04f2372.
+
+- **sports_pm_scan BUG caught + fixed**: Spurs/Thunder NBA scan surfaced "PM NO@\$0.665 vs bookie 71% delta -37.5pp." Investigation revealed gamma outcomes=["Spurs","Thunder"] (categorical, not YES/NO). Bookie returned Thunder=71% (favorite); script compared against PM Spurs=33.5% as if YES, falsely reporting -37.5pp. True delta is +4.5pp on Thunder (PM 66.5% vs bookie 71%) — normal spread, not arb. Bug existed since sports_pm_scan ship. **Could have caused a real wrong-side trade** if I'd acted without verification. Lesson reinforces: high deltas always require side-alignment + market-title verification BEFORE acting. Fix: pass outcomes list to fetch_bookie_consensus; categorical-team markets prompt explicitly asks for outcomes[0] probability. Binary YES/NO unchanged. Commit 5b2dee0. Compounds: all future sports scans on categorical 2-team markets now correctly aligned.
+
+- **May-31 Iran-peace NO**: pulled back 5pp adverse (YES 0.075→0.125 since 02:00). Mark 0.925→0.875. MTM dropped $16.13→$15.26 (-$0.87 unrealized). Still +29.05% on cost, 419% APY at 12.4d. No catalyst — just noise. Hold.
+- **Pahlavi NO**: +0.9pp favorable, mark 0.925→0.934, +3.03%.
+- **Iran $10B BTC Hormuz-insurance plan** (news, MINOR): no action — confirms regime continuity (favorable but minor for NO holds).
+- Macro_pm_scan: 3 Fed-June markets, no-change pricing at 99.0%+ efficient. Skip per philosophy.
+- discover_markets: 3 hurdle-clearers, all already-held or 99% bond-like with thin EV. No new entries.
+- Portfolio Kelly --constrained: $91.28 deficit but 5-of-6 below 10pp edge filter. No scale-in.
+
+**Net:** MTM $84.46→$83.70 (-$0.76), 6 positions stable. 2 commits + bug fix = real LLM-functioning improvements compound on future cron ticks.
