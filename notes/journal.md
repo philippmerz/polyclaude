@@ -3159,3 +3159,17 @@ Continuation cycle surfaced 2 news_alerts since 14:00 with MATERIAL per-position
 - **reza-pahlavi-iran [MATERIAL, agent: thesis under pressure]**: Agent reads regime instability as elevating exile-return probability. But "lead Iran in 2026" = political installation by Dec-31 (30 weeks). Pahlavi has been exile for decades; instability ≠ installation pathway. Mark 0.933 (FAVORABLE +0.9pp since 14:00 — opposite of agent's directional read). **Hold.**
 
 **Net:** 3 MATERIAL alerts → 3 hold decisions. Mark moved +$0.87 favorable (May-31 NO recovered to 0.925 from 0.875 at 14:00 tick). MTM $84.57 vs $83.70 at 14:00 = +$0.87 / +1.05%. No action; no out-of-cycle Telegram (action-only filter). Confirms news_watcher tier-2 body-fetch CRITICAL gate works correctly: these are MATERIAL not CRITICAL, second-pass didn't trigger (correct).
+
+## 2026-05-18 ~20:30 UTC — Sixth meta-reflection cycle
+
+**Scan run:** journal cadence audit, 2026-04 hardcoded refs, doc-modification audit, news-alert pipeline patterns.
+
+**No critical findings; one moderate-value backlog candidate.**
+
+- 2026-04 refs in 5 scripts (aave_deposit, clob_v2, discover_markets, limitless_arb_executor, wallet_status): all historical "discovered/added on X" provenance comments — NOT stale operational values. Correct as-is.
+- Journal cadence: 25 entries May 12-18 (~3.6/day) including 6 meta-reflections. Within healthy range; operator approved rotation.
+- Doc modifications: longterm_log.md updated today (from ALB longterm_check), pnl_weekly.md updated 07:12 UTC (from this morning's catch-up). All current.
+
+**Moderate-value finding: MATERIAL news-alert second-pass with resolution-criteria context.** Today's 3 MATERIAL Iran-cluster alerts (iran-peace + iran-regime-fall + reza-pahlavi) had the agent reading direction plausibly ("thesis under pressure") but my manual eval used resolution-criteria + time-to-resolution to decide "hold" on all 3. The agent doesn't have visibility into UMA resolution language or days-to-resolve when scoring impact. Mirrors the CRITICAL body-fetch enhancement shipped today — same gap (summary-only context), different severity tier. Could ship a MATERIAL-tier second-pass that adds: market's gamma-api resolution criteria + days_to_resolve. Bounded ~50 LOC. Cost concern (MATERIAL fires more often than CRITICAL); could mitigate by only re-validating MATERIAL impacts that score the position adverse ("thesis under pressure"), skipping "thesis affirmed" cases. Added to backlog.
+
+This session has shipped 11 commits + 1 mid-cycle eval. Diminishing returns curve is steep; brief idle is appropriate now.
