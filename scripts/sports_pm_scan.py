@@ -34,27 +34,46 @@ import subprocess
 import httpx
 
 
-def fetch_bookie_consensus(question: str, lim_hours: float, timeout: int = 120) -> dict:
+def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] | None = None,
+                            timeout: int = 120) -> dict:
     """Spawn claude -p haiku with WebSearch to fetch bookie-consensus odds.
 
     Returns {"yes_prob": float, "source": str, "confidence": "high|med|low",
              "note": str} or {"error": "..."} on failure.
 
+    `yes_prob` is the probability of `outcomes[0]` winning (the side PM lists
+    first). For binary YES/NO markets that's the YES side. For categorical
+    2-team markets like "Spurs vs Thunder" with outcomes=["Spurs","Thunder"]
+    it's specifically the FIRST team's win probability — this is the fix for
+    the 2026-05-18 Spurs/Thunder false-positive (haiku returned Thunder=71%
+    favorite probability; script compared against PM Spurs=33.5% as if YES,
+    falsely reporting -37.5pp delta vs the true +4.5pp on Thunder).
+
     Lesson source: 2026-05-09 operator directive — bookie consensus is the
     single biggest mid-market alpha signal; Polymarket vs sharps-book deltas
     > 3pp suggest mispricing. Cron-friendly via haiku (cheap/fast).
     """
+    if outcomes and len(outcomes) == 2 and outcomes[0].lower() not in ("yes", "no"):
+        target_desc = (
+            f'the probability that "{outcomes[0]}" wins (NOT the favorite — '
+            f'specifically the {outcomes[0]} side; the other outcome is "{outcomes[1]}")'
+        )
+        json_key_desc = f'"{outcomes[0]} wins"'
+    else:
+        target_desc = "the YES side implied probability"
+        json_key_desc = "YES side wins"
+
     prompt = f"""Find the bookie-consensus implied probability for the following sports event/market.
 
 Market question: {question}
 Resolves within: {lim_hours:.1f} hours
 
-Search public sportsbook aggregators (Pinnacle, DraftKings, FanDuel, Bet365, etc.) or odds-comparison sites (oddsportal.com, oddschecker, ESPN BetTrend) for the YES side implied probability.
+Search public sportsbook aggregators (Pinnacle, DraftKings, FanDuel, Bet365, etc.) or odds-comparison sites (oddsportal.com, oddschecker, ESPN BetTrend) for {target_desc}.
 
 DO NOT use Polymarket as a source — that's the venue we're comparing AGAINST and would create circular reasoning. If you can only find Polymarket odds, output the error case.
 
-Output ONE line of JSON only, no preamble:
-{{"yes_prob": <0.0-1.0>, "source": "<which book or aggregator, NOT Polymarket>", "confidence": "high|med|low", "note": "<one-sentence sanity check>"}}
+Output ONE line of JSON only, no preamble. The yes_prob value MUST be the probability that {json_key_desc} (range 0.0-1.0):
+{{"yes_prob": <0.0-1.0>, "source": "<which book or aggregator, NOT Polymarket>", "confidence": "high|med|low", "note": "<one-sentence sanity check confirming which side this probability is for>"}}
 
 If no non-Polymarket consensus is fetchable (event too obscure, props market with no public odds, etc.), output:
 {{"error": "<one-sentence reason>"}}
@@ -222,9 +241,14 @@ def main() -> int:
             apy = annualized_apy(no, days)
             buy_side = "NO"
             mark = no
+        try:
+            outcomes_list = json.loads(m.get("outcomes", "[]")) if isinstance(m.get("outcomes"), str) else m.get("outcomes", [])
+        except Exception:
+            outcomes_list = []
         rows.append({
             "question": m.get("question", "?"),
             "slug": m.get("slug", ""),
+            "outcomes": outcomes_list,
             "lens": lens,
             "yes": yes,
             "no": no,
@@ -247,7 +271,8 @@ def main() -> int:
         print(f"# fetching bookie consensus for top {args.consensus_top_n} candidates "
               f"(~30s each via haiku)...", file=sys.stderr)
         for i, r in enumerate(rows[: args.consensus_top_n]):
-            cons = fetch_bookie_consensus(r["question"], r["days_to_resolve"] * 24)
+            cons = fetch_bookie_consensus(r["question"], r["days_to_resolve"] * 24,
+                                          outcomes=r.get("outcomes"))
             r["consensus"] = cons
             if "yes_prob" in cons:
                 bookie_yes = float(cons["yes_prob"])
