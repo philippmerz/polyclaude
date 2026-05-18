@@ -71,9 +71,9 @@
     },
     {
       "ticker": "ALB", "type": "equity", "yfinance_symbol": "ALB",
-      "entry_max": 180.0, "horizon": "2-5y", "route": "ibkr_surface",
-      "rationale": "Lithium cycle bottom + storage; H2 2026 BESS data (6-9mo catalyst). Closest-to-ENTER from artifact pass. Equity -> IBKR.",
-      "added": "2026-05-08"
+      "entry_max": 150.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "rationale": "Lithium cycle bottom + storage; H2 2026 BESS data (6-9mo catalyst). Original $180 trigger fired 2026-05-18 at $178.68; fresh longterm_check 3/4 WATCH said margin of safety WEAK (33x EV/EBITDA = 2.5x historical median, +204% 1yr rally, $90-130 downside if cycle re-tests $12-15/kg). Revised entry: $140-150 (15-20% pullback) AND reaffirmed $20+/kg pricing trajectory; OR Event entry: after Mt. Holland online H1 2027. Equity -> IBKR.",
+      "added": "2026-05-08", "revised": "2026-05-18"
     },
     {
       "ticker": "XOM", "type": "equity", "yfinance_symbol": "XOM",
