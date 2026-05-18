@@ -29,13 +29,87 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+import subprocess
 import sys
+import time
 from pathlib import Path
 
 import httpx
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = REPO_ROOT / "notes" / "watchlist_triggers.json"
+REVET_CACHE = REPO_ROOT / "notes" / ".watchlist_revet_cache.json"
+REVET_TTL_HOURS = 24  # don't re-vet the same ticker within this window
+LONGTERM_CHECK = REPO_ROOT / "scripts" / "longterm_check.py"
+
+
+def auto_revet_ticker(ticker: str, asset_type: str) -> dict:
+    """Spawn scripts/longterm_check.py for ticker; parse verdict.
+
+    Returns {"verdict": "ENTER|WATCH|PASS|ERROR", "score": "N/4", "summary": str,
+             "fresh": bool, "from_cache": bool}.
+    Skips spawn if cached result <REVET_TTL_HOURS old.
+
+    Lesson source: 2026-05-13 → 2026-05-18 the watchlist had 4-of-4 trigger
+    fires (CEG/LEU/CCJ/ALB) where the static entry_max was stale and a manual
+    fresh longterm_check produced a tighter revised trigger. Codifying so each
+    fire auto-surfaces the fresh fundamental verdict — operator gets the
+    actionable picture without waiting for me to re-vet manually.
+    """
+    cache = {}
+    try:
+        if REVET_CACHE.exists():
+            cache = json.loads(REVET_CACHE.read_text())
+    except Exception:
+        cache = {}
+
+    now = time.time()
+    entry = cache.get(ticker)
+    if entry and now - entry.get("ts", 0) < REVET_TTL_HOURS * 3600:
+        return {**entry["result"], "from_cache": True}
+
+    # asset_type from config maps directly to longterm_check positional
+    lt_type = asset_type if asset_type in ("equity", "crypto", "tokenized-equity") else "equity"
+    try:
+        r = subprocess.run(
+            [sys.executable, str(LONGTERM_CHECK), ticker, lt_type, "--no-log"],
+            capture_output=True, text=True, timeout=180,
+        )
+        out = (r.stdout or "") + (r.stderr or "")
+    except subprocess.TimeoutExpired:
+        return {"verdict": "ERROR", "score": "?/4", "summary": "longterm_check timeout",
+                "fresh": False, "from_cache": False}
+    except Exception as e:
+        return {"verdict": "ERROR", "score": "?/4", "summary": f"spawn failed: {e}",
+                "fresh": False, "from_cache": False}
+
+    # Parse verdict line: "### Verdict: 3/4 — WATCH" or similar
+    score = "?/4"
+    verdict = "ERROR"
+    m = re.search(r"Verdict[:\s]+(\d+(?:\.\d+)?)/4\s*[—\-–]+\s*(ENTER|WATCH|PASS|FOLLOW-UP|FOLLOWUP)",
+                  out, re.IGNORECASE)
+    if m:
+        score = f"{m.group(1)}/4"
+        verdict_raw = m.group(2).upper().replace("FOLLOWUP", "WATCH").replace("FOLLOW-UP", "WATCH")
+        verdict = verdict_raw if verdict_raw in ("ENTER", "WATCH", "PASS") else "WATCH"
+
+    # Pull entry trigger one-liner if present
+    summary = ""
+    em = re.search(r"#{1,4}\s*Entry trigger\s*\n+([^\n]{20,400})", out)
+    if em:
+        summary = em.group(1).strip()[:240]
+    elif verdict == "ERROR":
+        # Surface first 200 chars of stdout/stderr for debugging
+        summary = out.strip()[:200].replace("\n", " ")
+
+    result = {"verdict": verdict, "score": score, "summary": summary, "fresh": True}
+    cache[ticker] = {"ts": now, "result": result}
+    try:
+        REVET_CACHE.write_text(json.dumps(cache, indent=2))
+    except Exception:
+        pass
+    return {**result, "from_cache": False}
 
 
 def fetch_crypto_prices(coingecko_ids: list[str]) -> dict[str, float]:
@@ -112,6 +186,12 @@ def main() -> int:
     p.add_argument("--json", action="store_true", help="Output as JSON.")
     p.add_argument("--hits-only", action="store_true",
                    help="Only print TRIGGER_HIT entries (silent if none).")
+    p.add_argument("--auto-revet", action="store_true",
+                   help="On TRIGGER_HIT, auto-spawn longterm_check for fresh fundamental verdict. "
+                        "Caches per ticker for 24h to avoid duplicate spawns across cron runs. "
+                        "Bounded to --max-revet hits per run.")
+    p.add_argument("--max-revet", type=int, default=2,
+                   help="Cap on auto-revet spawns per run (default 2, each ~90s).")
     args = p.parse_args()
 
     cfg_path = Path(args.config)
@@ -161,12 +241,18 @@ def main() -> int:
         print(f"# watchlist_monitor: {len(results)} candidates  ({len(hits)} HIT, {len(no_data)} NO_DATA)")
         print()
 
+    revet_done = 0
     for r in results:
         route_tag = "POLYCLAUDE" if r["route"] == "polyclaude" else "IBKR_SURFACE"
         if r["status"] == "TRIGGER_HIT":
             action = "POLYCLAUDE_BUY" if r["route"] == "polyclaude" else "IBKR_SURFACE_TO_OPERATOR"
             print(f"ENTRY_TRIGGER_HIT [{action}]  {r['ticker']:8s} ({r['type']}, {r['horizon']})  current ${r['current']} {r['currency']} {r['direction']}")
             print(f"                  {r['rationale']}")
+            if args.auto_revet and revet_done < args.max_revet:
+                rv = auto_revet_ticker(r['ticker'], r['type'])
+                tag = "cache" if rv.get("from_cache") else "fresh"
+                print(f"                  AUTO_REVET[{tag}]: {rv['verdict']} ({rv['score']})  {rv['summary'][:200]}")
+                revet_done += 1
         elif r["status"] == "NO_DATA" and not args.hits_only:
             print(f"NO_DATA   [{route_tag}]  {r['ticker']:8s} ({r['type']})  — fetch failed")
         elif not args.hits_only:
