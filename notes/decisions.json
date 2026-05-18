@@ -1,5 +1,5 @@
 {
-  "next_id": 26,
+  "next_id": 27,
   "decisions": [
     {
       "id": 1,
@@ -506,6 +506,25 @@
       "calibration_delta": "Gold thesis (geopolitical-risk-premium expansion from Iran war) printed as expected. TP $4769 was set conservatively at entry; could have ridden longer with trailing-stop discipline.",
       "lesson": "TP-set-at-entry leaves some upside on the table during major shocks. For high-conviction macro plays during ongoing crisis, consider trailing stop or no TP. But: TP execution is automatic and discipline-enforced; manual close decisions can miss.",
       "resolved_at": "2026-05-13T14:01:46Z"
+    },
+    {
+      "id": 26,
+      "timestamp": "2026-05-18T02:01:42Z",
+      "type": "close_position",
+      "thesis": "Ostium NDX short 5x (DEC-0012) closed since prior tick. Trade ID 1848512: entry 27368.69, TP set at 25182.57 (-7.99%), SL at 29562.15 (+8.00%), collat $4.8925, notional $24.46. Closed when NDX dropped through TP threshold during AI-capex-plateau period (consistent with 2026-05-17 digest theme). Estimated realized: +~$1.96 collat gain (5x\u00d78% TP) \u2192 payout ~$6.85 USDC on Arbitrum. Closes the NDX leg of the SPX/NDX pair-trade; SPX long (DEC-0011, trade 1848511) still open.",
+      "confidence": "high",
+      "prediction": "TP-triggered close already locked.",
+      "size_usd": 4.89,
+      "resolution_at": "2026-05-18",
+      "tags": [
+        "ostium",
+        "ndx",
+        "pair-trade",
+        "close"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

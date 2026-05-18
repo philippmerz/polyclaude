@@ -3092,3 +3092,27 @@ Commit 6aad122 pushed. Telegram msg 308 delivered.
 **Pattern observation:** prior reflections (2026-05-16 02:30, 2026-05-17 02:30) flagged news_watcher tier-2 body-fetch enhancement as deferrable. This cycle I shipped it (commit 9223226) because the auto-prompter prompt about "small bounded infra compounding" was the unblocker. Lesson: deferred-as-marginal items in reflections are worth revisiting in subsequent cycles — what feels marginal once may clear the bar on the next pass when other higher-priority items are also done. The auto-prompter rotation is doing real work.
 
 Two commits queued.
+
+## 2026-05-18 ~02:00 UTC — Monday 02:00 cron tick (May-31 NO surging, NDX SHORT closed)
+
+**Material state changes:**
+
+- **May-31 Iran-peace NO**: YES moved from 0.285 → 0.075 (-21.0pp) since prior tick. Our NO mark $0.925 (+3pp), MTM $16.13 on $11.82 cost = +36.43%. Expected resolution at $17.44 in 12.9 days = +$1.31 more realized. Strong momentum — Trump-Xi-Iran-mediation chatter trending toward "no permanent deal in 14 days" (consistent with our thesis). Early-close trigger remains mark <0.83; nowhere near.
+- **Ostium NDX SHORT closed** (trade 1848512, DEC-0012 leg): TP-triggered as NDX dropped through 25182.57 from entry 27368.69 (-7.99%). Consistent with 2026-05-17 digest "AI Capex Plateauing" theme. Estimated realized: +$1.96 collat gain → payout ~$6.85 USDC on Arb. SPX LONG (1848511, DEC-0011) still open. Closed via DEC-0026.
+- **Hormuz ship-seizure alert** (Tier-2, 2026-05-17 17:25Z): MINOR per-position impacts on iran-peace / iran-regime-fall / pahlavi. Body-fetch CRITICAL re-validation didn't fire (first-pass tagged as MINOR). No action.
+
+**Cron checklist outcomes:**
+
+1. Positions + UMA + Ostium-diff: all clean. UMA price-move alert is just May-31's favorable drift.
+2. News alerts since prior journal: 1 entry, MINOR-only, no action.
+3. Marginal APY: all 6 positions clear hurdle (lowest = Hantavirus at +12.39% APY). May-31 NO at +229% APY dominant.
+4. Watchlist hits: none.
+5. Portfolio Kelly --constrained: $91.28 deficit vs optimal, but 5 of 6 below 10pp edge filter (post-R-U bar). Iran-regime-fall at 10.5pp clears, but cluster-capped. No scale-in.
+6. Redeem-all: 0/6 redeemable.
+7. discover_markets: 1 hurdle-clearer (Reza Pahlavi YES at $0.074 = NO already held).
+8. sports_pm_scan: 0 candidates (off-season).
+9. macro_pm_scan: 3 Fed-June markets, no-change at $0.9785 = 26% APY but Fed-meeting markets are 99.7%+ efficient (philosophy doc skip rule).
+
+**Weekly P&L overdue:** Last one was 2026-05-02 covering May 2 → May 9. Today is 2026-05-18 (16 days). Major events in this window (R-U miss, recoup campaign infrastructure ship, May-15 + Latvia resolutions, Atletico close, multiple meta-reflection cycles) all covered in journal already. Noted in backlog for next operator-attention window.
+
+**Net:** stable tick, no actions. May-31 NO is the dominant near-term P&L driver and is trending hard in our favor.

@@ -2,7 +2,7 @@
 
 Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-chain sleeves. Fully decentralized — no CEX, no KYC.
 
-**Last updated:** 2026-05-09 ~21:30 UTC
+**Last updated:** 2026-05-18 ~02:00 UTC
 
 > **For the next agent:** read this README → `strategy/00_philosophy.md` → run `scripts/polyclaude_status.py` for current state. That's a complete onboarding in ~5 minutes. Drill into journal/decisions only when needed for specific calibration questions.
 
@@ -18,13 +18,13 @@ Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-c
 
 ---
 
-## Current state (snapshot 2026-05-09 21:30 UTC)
+## Current state (snapshot 2026-05-18 02:00 UTC)
 
 **PM sleeve** `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon) — [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [Polygonscan](https://polygonscan.com/address/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 
-8-9 PM positions visible to data-api after DEC-0018 R-U realized loss (-$16.73 via UMA YES-resolution, 25 NO burned for $0) and DEC-0019 May-11 NO redeemed (+$0.525 realized = $15 USDC.e). Iran cluster continuing to appreciate; full state via `scripts/polyclaude_status.py`.
+6 PM positions, cost $78.72, MTM $84.46, unrealised P&L +$5.75 (+7.30%). May-31 Iran-peace NO is the dominant near-term P&L event — YES priced at $0.075 (was $0.285 on 2026-05-17), our NO mark $0.925, +36.43% on entry, resolves in ~13 days at $17.44 (locked $+5.62 expected). Realized in last 7d: DEC-0015+DEC-0020 May-15 NOs redeemed (+$3.54), DEC-0019 May-11 NO redeemed (+$0.525), DEC-0025 gold TP (+$1.17), DEC-0007 Latvia partial close (+$0.706); DEC-0018 R-U realized loss (-$16.73).
 
-Iran cluster (May-11/15/31 + regime-fall + Pahlavi) is the dominant book by exposure.
+Iran cluster (regime-fall 2027 + Pahlavi + May-31 peace-deal) is the dominant book by exposure.
 
 Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, watchlist, UMA, Kelly portfolio constrained, news alerts).
 
@@ -32,7 +32,7 @@ Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, wat
 
 Note: Ostium has no public per-address trader profile (wallet-connect SPA). DeBank aggregates Ostium positions + Aave aUSDC + cross-chain balances; Arbiscan shows the raw on-chain trace incl. each Ostium open/close.
 
-Aave V3 USDC reserves: ~$5 Base + $0 Arb (drained $25 to PM sleeve 2026-05-09). Ostium 2 perp positions ($9.79 collateral; XAU TP-closed 2026-05-12 = +$1.17 realized). $6.06 USDC on Arb from gold TP-close payout.
+Aave V3 USDC reserves: ~$1 Base + $9 Arb. Ostium 1 perp position open (SPX long 5x, $4.89 collat); XAU TP-closed 2026-05-12 (+$1.17), NDX SHORT TP-closed 2026-05-18 (~+$1.96 est, DEC-0026). $43.79 cash sitting on PM sleeve awaiting May-31 resolution + batch-bridge.
 
 **Long-term watchlist** (12 candidates, all `route=ibkr_surface` per <1y constraint): `notes/longterm_watchlist.md`. Auto-monitored via `scripts/watchlist_monitor.py` with entry-trigger price alerts.
 
