@@ -3173,3 +3173,22 @@ Continuation cycle surfaced 2 news_alerts since 14:00 with MATERIAL per-position
 **Moderate-value finding: MATERIAL news-alert second-pass with resolution-criteria context.** Today's 3 MATERIAL Iran-cluster alerts (iran-peace + iran-regime-fall + reza-pahlavi) had the agent reading direction plausibly ("thesis under pressure") but my manual eval used resolution-criteria + time-to-resolution to decide "hold" on all 3. The agent doesn't have visibility into UMA resolution language or days-to-resolve when scoring impact. Mirrors the CRITICAL body-fetch enhancement shipped today — same gap (summary-only context), different severity tier. Could ship a MATERIAL-tier second-pass that adds: market's gamma-api resolution criteria + days_to_resolve. Bounded ~50 LOC. Cost concern (MATERIAL fires more often than CRITICAL); could mitigate by only re-validating MATERIAL impacts that score the position adverse ("thesis under pressure"), skipping "thesis affirmed" cases. Added to backlog.
 
 This session has shipped 11 commits + 1 mid-cycle eval. Diminishing returns curve is steep; brief idle is appropriate now.
+
+## 2026-05-19 ~02:00 UTC — Tuesday 02:00 cron tick (May-31 NO pullback, CRITICAL false-positive logged)
+
+**Material:**
+
+- **May-31 NO mark dropped** 0.925→0.855 (-7pp adverse) since yesterday 17:55. MTM $16.13→$14.91. Still +26.10% on cost; 11.9d to resolution; 519% APY. Above 0.83 early-close trigger — **hold per discipline**.
+
+- **Agent/market divergence noted**: 4 news_alerts on iran-peace today (3 MATERIAL + 1 CRITICAL) ALL agent-tagged favorable ("thesis affirmed", "no deal materializes"). But market moved opposite (-7pp adverse to our NO). Possible market readings: (a) Trump escalation forces Iran into a deal, (b) Strait closure plans = posturing not real escalation, (c) Trump-Xi joint pressure produces a deal frame, (d) backchannel talks not in news flow. Historical precedent (May-11, May-15 both resolved NO despite similar mid-cycle volatility) supports discipline.
+
+- **CRITICAL false-positive: Kenya fuel-protests article (France24)**. Agent inferred chain: Kenya fuel protests → high oil → Strait closure → Iran-US deal pressure → CRITICAL on us-iran-peace. Article TITLE was Kenya protests; agent inferred upstream. Body-fetch second-pass (commit 9223226 yesterday) should have caught this but France24 TV-show pages have minimal HTML text (mostly video) → body <200 chars → re-val skipped per fail-OPEN → CRITICAL preserved. Shipped operational logging fix (commit pending): print explicit "re-val SKIPPED body_len=N" line on skip + "before=[CRITICAL] after=[X]" on success. Now any future skip/downgrade is observable in logs/news_watcher.log. Bounded ~8 LOC. Daemon restarted PID 654036.
+
+- **sports_pm_scan fix verified**: Cavaliers vs Knicks test — bookie=0.318 (Cavaliers), PM Cavaliers (YES, outcomes[0])=0.305, delta=-1.2pp (correctly aligned). Pre-fix would have compared bookie 0.318 (Cavaliers/underdog?) against PM 0.305 (YES first outcome) — same alignment by coincidence here, but the prompt fix ensures explicit grounding.
+
+**Cron checklist outcomes:**
+- UMA: clean. Ostium: 1 open (SPX LONG unchanged). check_marginal_apy: 6/6 clear hurdle. Watchlist: 0 hits (auto-revet enabled but nothing fired).
+- discover_markets: 1 new (Croatia WC YES 0.009 = NO 0.991, 4.8% APY, below filter). Macro: 1 new (Fed-June 25bp cut YES 0.0085, ~11% APY, below filter). Sports: Cavaliers/Knicks normal-spread.
+- Portfolio Kelly: 5/6 below 10pp filter, Iran-regime-fall at 10.5pp cluster-capped. No scale-in.
+
+**Net:** MTM $84.57→$82.59 (-$1.98 / -2.34%) over 8h driven by May-31 pullback. 6 positions held. 1 commit (news_watcher logging fix).
