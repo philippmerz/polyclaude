@@ -3220,3 +3220,14 @@ Investigated the apparent agent/market divergence (4 favorable news_alerts + -7p
 **4. Updated May-31 prior**: p_no 0.80 → 0.87 (catalyst_check central).
 
 **Net:** Verified position is fine to hold via fresh catalyst_check; shipped portfolio_kelly slug-bug fix that was masking real priors for 2 positions; updated May-31 prior to match catalyst_check. No trades. Two commits pending.
+
+## 2026-05-19 ~14:00 UTC — Tuesday 14:00 cron tick (quiet, May-31 recovers)
+
+**Material:**
+- **May-31 NO recovered** 0.855→0.895 (+4pp favorable since 02:00). MTM $14.91→$15.61 = +$0.70. +32.00% on cost. 11.4d to resolution.
+- Total MTM $82.59→$83.95 = +$1.36 over 12h (+1.65%).
+- Zero news_alerts since 02:30 (12h quiet — unusual).
+
+**Post-priors-fix observations:** portfolio_kelly now flags May-31 (edge -2.5pp) and Aliens (edge -1.5pp) as "oversized" since marks now sit ABOVE updated priors. But for bond-like late-stage NO positions, Brownian-bridge (time-decay aware) is the right frame: May-31 fair_BB=0.944 vs mark 0.895 = -4.9pp = still SCALE_UP; Aliens fair_BB=0.861 vs mark 0.865 = +0.4pp = HOLD. Resolution: Kelly's static-edge view diverges from Brownian-bridge's time-decay view as positions approach resolution. **Use Brownian-bridge for late-stage NO sizing, not Kelly's static edge.** Worth noting in strategy/00_philosophy doc as a framework distinction. Adding to backlog.
+
+**Cron outcomes:** UMA clean, Ostium unchanged, no watchlist hits, no redeems, no new market candidates (only May-31 + Fed-no-change 0.9805 surfaced — both held/skip). No actions.
