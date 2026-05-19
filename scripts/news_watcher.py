@@ -298,8 +298,17 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
 
     if send_decision and url and any(i["level"] == "CRITICAL" for i in impacts):
         body = _fetch_article_body(url)
-        if body and len(body) > 200:
+        body_len = len(body) if body else 0
+        if body and body_len > 200:
+            before_levels = [i["level"] for i in impacts]
             impacts = _revalidate_critical_impacts(impacts, title, body, pos)
+            after_levels = [i["level"] for i in impacts]
+            print(f"[watcher] tier2-CRITICAL re-val body={body_len}ch before={before_levels} after={after_levels} url={url[:80]}",
+                  flush=True)
+        else:
+            # body fetch failed or too thin (paywall, video page, JS-rendered) — preserve CRITICAL (fail-OPEN)
+            print(f"[watcher] tier2-CRITICAL re-val SKIPPED body_len={body_len} (kept CRITICAL) url={url[:80]}",
+                  flush=True)
 
     return (send_decision, send_reason, impacts)
 
