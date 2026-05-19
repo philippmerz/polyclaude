@@ -152,8 +152,15 @@ def main() -> int:
                          "mark": mark, "cost": cost})
             continue
 
-        # Get my P from priors
+        # Get my P from priors (exact match first; prefix fallback for
+        # data-api slugs with random numeric suffixes — same bug pattern
+        # fixed in portfolio_kelly 2026-05-19 commit 98a5e43).
         prior = priors.get(slug, {})
+        if not prior:
+            for k, v in priors.items():
+                if slug.startswith(k):
+                    prior = v
+                    break
         p_my = prior.get("p_no" if side == "No" else "p_yes")
         if p_my is None:
             # Fallback: use mark + 0.05 as rough P
