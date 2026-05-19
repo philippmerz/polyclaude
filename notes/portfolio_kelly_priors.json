@@ -1,47 +1,46 @@
 {
-  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor.",
-  "_updated": "2026-05-09",
-
+  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor.",
+  "_updated": "2026-05-19",
   "us-x-iran-permanent-peace-deal-by-may-11-2026": {
     "p_no": 0.99,
     "cluster": "iran-peace",
     "rho_within": 0.7,
-    "cluster_frac": 0.30,
+    "cluster_frac": 0.3,
     "rationale": "Strict criteria require formal SIGNED permanent deal. Iran rejected US proposal; 14pt MOU not signed. P(YES) <1% in 1.3d window. P fragile to estimation error."
   },
   "us-x-iran-permanent-peace-deal-by-may-15-2026-144-885-839": {
     "p_no": 0.95,
     "cluster": "iran-peace",
     "rho_within": 0.7,
-    "cluster_frac": 0.30,
+    "cluster_frac": 0.3,
     "rationale": "6-day window. Iran demands reparations + troop withdrawal infeasible to sign in 6d. P robust."
   },
   "us-x-iran-permanent-peace-deal-by-may-31-2026": {
-    "p_no": 0.80,
+    "p_no": 0.87,
     "cluster": "iran-peace",
     "rho_within": 0.7,
-    "cluster_frac": 0.30,
-    "rationale": "21-day window. More plausible deal could emerge but Iran preconditions (reparations) are hard."
+    "cluster_frac": 0.3,
+    "rationale": "2026-05-19 fresh catalyst_check: central P(YES)=13% (range 6-24%). MOU under negotiation is NOT permanent deal; explicit 30-day window extends past May 31. Resolution criteria: 'temporary agreements will not qualify'. Mark 0.855 vs central P(NO) 0.87 = 1.5pp thin edge. Hold above 0.83 trigger. Was 0.80 (2026-05-09 prior); raised to match catalyst_check central."
   },
   "russia-x-ukraine-ceasefire-by-may-31-2026": {
     "p_no": 0.005,
     "cluster": "russia-ukraine-DISPUTED",
     "rho_within": 0.0,
-    "cluster_frac": 0.10,
+    "cluster_frac": 0.1,
     "rationale": "umaResolutionStatus=disputed. Market pricing YES at 99.95%. Forced hold; effectively lost capital."
   },
   "will-the-iranian-regime-fall-by-the-end-of-2026": {
     "p_no": 0.93,
     "cluster": "iran-regime",
     "rho_within": 0.6,
-    "cluster_frac": 0.20,
+    "cluster_frac": 0.2,
     "rationale": "Regime stable; US shelved Project Freedom (de-escalation). 235d window. ANTI-correlated with iran-peace cluster."
   },
   "will-reza-pahlavi-lead-iran-in-2026": {
     "p_no": 0.97,
     "cluster": "iran-regime",
     "rho_within": 0.6,
-    "cluster_frac": 0.20,
+    "cluster_frac": 0.2,
     "rationale": "Conjunction P(regime falls AND Pahlavi installed) very low. ANTI-correlated with iran-peace."
   },
   "trump-out-as-president-before-2027": {

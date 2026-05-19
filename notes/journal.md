@@ -3192,3 +3192,31 @@ This session has shipped 11 commits + 1 mid-cycle eval. Diminishing returns curv
 - Portfolio Kelly: 5/6 below 10pp filter, Iran-regime-fall at 10.5pp cluster-capped. No scale-in.
 
 **Net:** MTM $84.57→$82.59 (-$1.98 / -2.34%) over 8h driven by May-31 pullback. 6 positions held. 1 commit (news_watcher logging fix).
+
+## 2026-05-19 ~02:30 UTC — Mid-cycle: catalyst_check + portfolio_kelly slug-bug fix
+
+Investigated the apparent agent/market divergence (4 favorable news_alerts + -7pp adverse mark on May-31 NO). Findings:
+
+**1. Fresh catalyst_check on May-31 Iran-peace NO:**
+- Central P(YES) = 13% (range 6-24%); multiplicative: P(written+signed by May 31)=10% × P(permanent-language|signed)=85% × P(formally-confirmed|exists)=85% ≈ 7.2% raw, adjusted to 13% for Trump's tempo claims
+- Key: MOU under negotiation is NOT permanent deal; explicit 30-day window extends past May 31
+- Resolution criteria: "Agreements that are explicitly temporary will not qualify"
+- Market YES at 14.5% = within catalyst_check range; **not divergent from fundamentals, just slightly higher than central**
+
+**2. Resolution of "agent/market divergence" investigation:**
+- News-alert agent reads (favorable) ≠ market price reads (less favorable) is real but RESOLVED by catalyst_check
+- The "divergence" was that my STORED PRIOR (p_no=0.80) was stale; catalyst_check central P(NO)=0.87 matches market mark 0.855 closely
+- No action change (hold above 0.83 trigger, EV+ thin, +26.10% on cost)
+
+**3. Discovered + fixed portfolio_kelly slug-matching bug:**
+- portfolio_kelly's `priors.get(slug, {})` used exact match
+- Actual data-api position slugs append random suffixes like "...-333-871-241-192-799-449"
+- Priors JSON keys are canonical stems (no suffix)
+- 2 of 6 positions silently used default `mark+0.05` instead of priors: May-31 Iran-peace + Aliens 2027
+- Fix: prefix-match fallback after exact-match miss. ~10 LOC.
+- After fix: May-31 P_win 0.905 (default) → 0.870 (prior), edge 5pp → 1.5pp (real). Aliens P_win 0.915 (default) → 0.850 (prior), edge 5pp → -1.5pp (real).
+- Aliens now shows -1.5pp edge but Brownian-bridge fair_BB=0.861 vs mark 0.865 = within noise; not actionable.
+
+**4. Updated May-31 prior**: p_no 0.80 → 0.87 (catalyst_check central).
+
+**Net:** Verified position is fine to hold via fresh catalyst_check; shipped portfolio_kelly slug-bug fix that was masking real priors for 2 positions; updated May-31 prior to match catalyst_check. No trades. Two commits pending.

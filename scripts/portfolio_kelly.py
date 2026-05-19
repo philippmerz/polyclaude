@@ -115,8 +115,19 @@ def main() -> int:
         days = None  # not used in current Kelly calc; leave as placeholder
         title = pos.get("title", "?")
 
-        # Resolve P(win) from priors or default
+        # Resolve P(win) from priors or default.
+        # Exact match first; if none, prefix match (actual position slugs from
+        # data-api have random numeric suffixes like "...-333-871-241-192-799-449"
+        # appended to the canonical event-name stem stored in priors). 2026-05-19
+        # catalyst_check on May-31 revealed two positions silently using the
+        # default mark+0.05 because slug-suffix mismatch — priors were 5pp/10pp
+        # tighter and being ignored. Prefix match restores prior usage.
         prior = priors.get(slug, {})
+        if not prior:
+            for k, v in priors.items():
+                if slug.startswith(k):
+                    prior = v
+                    break
         if side == "Yes":
             p_win = prior.get("p_yes", min(0.99, mark + 0.05))
         else:
