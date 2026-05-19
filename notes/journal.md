@@ -3231,3 +3231,21 @@ Investigated the apparent agent/market divergence (4 favorable news_alerts + -7p
 **Post-priors-fix observations:** portfolio_kelly now flags May-31 (edge -2.5pp) and Aliens (edge -1.5pp) as "oversized" since marks now sit ABOVE updated priors. But for bond-like late-stage NO positions, Brownian-bridge (time-decay aware) is the right frame: May-31 fair_BB=0.944 vs mark 0.895 = -4.9pp = still SCALE_UP; Aliens fair_BB=0.861 vs mark 0.865 = +0.4pp = HOLD. Resolution: Kelly's static-edge view diverges from Brownian-bridge's time-decay view as positions approach resolution. **Use Brownian-bridge for late-stage NO sizing, not Kelly's static edge.** Worth noting in strategy/00_philosophy doc as a framework distinction. Adding to backlog.
 
 **Cron outcomes:** UMA clean, Ostium unchanged, no watchlist hits, no redeems, no new market candidates (only May-31 + Fed-no-change 0.9805 surfaced — both held/skip). No actions.
+
+## 2026-05-19 ~14:30 UTC — Seventh meta-reflection cycle
+
+**One genuine finding actioned, no other staleness.**
+
+**Shipped: strategy/00 framework note — Kelly vs Brownian-bridge.** Bounded ~20-line doc addition documenting:
+- Kelly = static edge, use for ENTRY sizing
+- Brownian-bridge = time-discounted fair value, use for HOLD/TRIM on existing positions
+- Concrete divergence example from this morning (May-31 NO: Kelly -2.5pp vs BB -4.9pp at t/T=0.59)
+- Rule: don't trim a late-stage bond-like NO just because Kelly's static edge has compressed
+
+Compounds across every future fresh LLM read interpreting Kelly + BB outputs. Was at risk of mis-trimming late-stage positions on Kelly's static signal. Backlog item closed.
+
+**Audit results (clean):**
+- Slug-bug pattern (exact-match dict lookup on data-api slugs): only 2 scripts (portfolio_kelly + brownian_bridge_fv) had it; both fixed. uma_status_check uses slug as cache key (round-trip), not vulnerable.
+- Watchlist staleness: 8 of 15 entries unrevised since 2026-05-08. Pattern shows triggered entries need revision (4-of-4 fires so far). Auto-revet (commit 44187d1) now handles this automatically on next fire. No preemptive batch refresh needed.
+
+This session has shipped 18 commits across cron ticks + 6+ small bounded improvements. Genuinely productive. Brief idle after this.

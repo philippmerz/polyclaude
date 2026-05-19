@@ -56,6 +56,19 @@ accept iff apy > 4.15%  (current Aave Arbitrum supply APY; refresh as pool moves
 
 The standout positions in the current book (Iran-peace NO, Iran-regime NO, Pahlavi NO) clear the hurdle decisively because the prices reflect genuine pricing inefficiency, not just a high "almost-certain-NO" probability. The hurdle filters out pseudo-edge bond-like trades that look like free money but underperform stablecoin yield.
 
+### Kelly vs Brownian-bridge: which tool for which decision (added 2026-05-19)
+
+The book uses two sizing/valuation tools that look similar but answer different questions. Mixing them up causes false TRIM/SCALE_UP signals on late-stage bond-like positions. Stress-tested 2026-05-19 when the priors-slug-bug fix (commits 98a5e43 + 993b1c4) made the divergence visible.
+
+- **`portfolio_kelly.py`** — *static edge*: `edge = P_win − mark`. Use for **ENTRY sizing**: if you're about to open or scale, this tells you how to size given correlation-discount + budget constraint. Time-agnostic — the calculation is identical at t=0 and t=T-1d.
+- **`brownian_bridge_fv.py`** — *time-discounted fair value*: `fair_BB(t) = P_win^(1 - t/T)`. For a bond-like NO with prior P_no=0.87, fair_BB starts at 0.87 (t=0) and climbs toward 1.0 (t=T). Use for **HOLD/TRIM signals on existing positions**: if mark < fair_BB by >3pp, the position is *still* underpriced even though Kelly's static edge says you wouldn't add at this price.
+
+Concrete divergence (2026-05-19, May-31 Iran-peace NO, t/T=0.59, P_no=0.87, mark=0.895):
+- Kelly: edge = 0.87 − 0.895 = **−2.5pp = "oversized, consider trim"**
+- Brownian-bridge: fair = 0.87^0.41 = 0.944 vs mark 0.895 = **−4.9pp = "SCALE_UP, still underpriced"**
+
+The Brownian-bridge read is correct for a position approaching resolution: mark *should* be migrating toward 1.0 even at a P_win = 0.87 prior, because each day passes without the YES event materializing. Kelly's static frame asks "would I enter at this price?" — a fair question that ignores time decay. Conversion: **use Kelly for entries, Brownian-bridge for holds**. Don't trim a late-stage bond-like NO just because Kelly's static edge has compressed.
+
 ## Risk controls
 
 1. **UMA / resolution risk.** Read the resolution-source clause for every market. Reject markets with vague resolution (e.g., "X will be considered to have happened if widely reported") unless deeply mispriced.
