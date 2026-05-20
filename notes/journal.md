@@ -3249,3 +3249,17 @@ Compounds across every future fresh LLM read interpreting Kelly + BB outputs. Wa
 - Watchlist staleness: 8 of 15 entries unrevised since 2026-05-08. Pattern shows triggered entries need revision (4-of-4 fires so far). Auto-revet (commit 44187d1) now handles this automatically on next fire. No preemptive batch refresh needed.
 
 This session has shipped 18 commits across cron ticks + 6+ small bounded improvements. Genuinely productive. Brief idle after this.
+
+## 2026-05-20 ~02:00 UTC — Wednesday 02:00 cron tick (quiet, May-31 +1pp favorable)
+
+**Material:**
+- May-31 NO +1pp favorable (0.895→0.905), MTM $15.61→$15.78, +33.48% on cost, 10.9d to resolution.
+- Regime-fall NO -1pp adverse to 0.815. Aliens -1pp adverse to 0.855.
+- Total MTM $83.95→$83.73 = -$0.22 within noise.
+- 1 news_alert overnight (Trump-turns-to-allies, MATERIAL favorable). No CRITICAL alerts (logging confirmed via grep — no new CRITICAL re-val events).
+
+**Considered + skipped:** Iranian-regime-falls-by-May-31 NO surfaced from discover_markets at $0.987 mark, 47.8% APY, 10.9d. Bond-like-fade lens looks attractive but FAILS post-R-U 10pp edge filter (edge=1.3pp) + already cluster-capped on iran-regime (regime-fall-2027 + Pahlavi = $38.25 cluster cost). Disciplined skip.
+
+**Cron outcomes:** UMA clean, Ostium unchanged, no watchlist hits, no redeems, macro Fed-June markets efficient (99% no-change). Kelly+BB output consistent with yesterday's framework note — Kelly flags May-31/Aliens "trim" but Brownian-bridge holds (May-31 fair_BB 0.962 vs mark 0.905 = SCALE_UP per time-decay; Aliens fair 0.86 vs mark 0.855 = HOLD).
+
+**Net:** no actions. Position approaching resolution as planned.
