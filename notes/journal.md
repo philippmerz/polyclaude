@@ -3263,3 +3263,11 @@ This session has shipped 18 commits across cron ticks + 6+ small bounded improve
 **Cron outcomes:** UMA clean, Ostium unchanged, no watchlist hits, no redeems, macro Fed-June markets efficient (99% no-change). Kelly+BB output consistent with yesterday's framework note — Kelly flags May-31/Aliens "trim" but Brownian-bridge holds (May-31 fair_BB 0.962 vs mark 0.905 = SCALE_UP per time-decay; Aliens fair 0.86 vs mark 0.855 = HOLD).
 
 **Net:** no actions. Position approaching resolution as planned.
+
+## 2026-05-20 ~14:00 UTC — Wednesday 14:00 cron tick (quiet)
+
+**Material:** essentially none. MTM $83.73→$84.07 = +$0.34 over 12h. May-31 NO unchanged at 0.905. Regime-fall +1pp recovery to 0.825. Hantavirus +0.4pp to 0.943. Pahlavi -0.4pp to 0.929.
+
+**Cron outcomes:** Zero news_alerts in 12h. Zero CRITICAL re-vals. UMA clean. Ostium unchanged. No watchlist hits. No redeems. discover_markets: 0 hurdle-clearers (filter narrowed since Iranian-regime-may31 closed/de-prioritized). Sports: only non-consensus or spread markets surfacing. No actions.
+
+10.4 days to May-31 resolution.
