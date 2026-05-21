@@ -3329,3 +3329,13 @@ Brief idle after this.
 **Kelly with updated P_NO=0.90:** May-31 edge 8.0pp = scale-in candidate but 8pp < 10pp post-R-U filter + cluster cap blocks. Iran-regime-fall 10.5pp edge but also cluster-capped. Aliens -0.5pp (trim candidate per Kelly) but Brownian-bridge HOLD per yesterday's framework doc.
 
 **Net MTM:** $81.64 → $82.60 = +$0.96 over 12h. No actions.
+
+## 2026-05-21 ~16:14 UTC — Off-schedule tick (Tier-1 false-positive autofire)
+
+**Trigger:** news_watcher fired Tier-1 on CoinTelegraph BTC-price article ("Bitcoin due '5%+' move...") because keyword "us-iran peace deal" matched in the body summary. Article had ZERO actual US-Iran peace deal content — just mentioned the geopolitical context in passing while discussing BTC price drivers.
+
+**Fix:** removed "us-iran peace deal" from tier1_keywords. The keyword was too generic — matches ANY mention rather than state-change events. Config already had the qualified variants ("us iran peace deal signed", "iran peace agreement signed", "permanent ceasefire iran") which are actual book-resolving signals. The unqualified version was redundant + false-positive prone. Bounded 1-line config change. Daemon re-reads config on every poll cycle, so no restart needed.
+
+**Position state (off-schedule):** May-31 NO mark dropped further 0.820 → 0.775 (-4.5pp adverse since 14:00). MTM $14.30 → $13.52 = -$0.78. Total MTM $82.60 → $81.81 = -$0.79 over ~2h. Still +14.30% on cost; mark now 5.5pp below 0.83 trigger. NO action — research confirmed P(YES)=10% this morning, holding per discipline. Operator already has full picture from morning dialogue.
+
+**Cron outcomes:** UMA clean, no watchlist hits, no redeems. Continued downward drift on May-31 mark but no NEW fundamental info; consistent with speculation/profit-taking pattern.
