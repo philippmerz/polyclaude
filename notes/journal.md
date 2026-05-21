@@ -3295,3 +3295,5 @@ This session has shipped 18 commits across cron ticks + 6+ small bounded improve
 **Updated:** prior P_NO 0.87 → 0.90 in portfolio_kelly_priors.json (matches catalyst_check central). Both portfolio_kelly + brownian_bridge_fv now use updated prior via the slug-prefix-match fix shipped 2026-05-19.
 
 **Position state:** cost $11.82, mark $0.805, MTM $14.04, +18.73% on cost (was +33.48% yesterday).
+
+**Cron tick 20260521T020002Z completed.** Remaining steps after trigger-hit handling: 0 redeems, 0 discover candidates, macro Fed-June markets all 99%+ efficient. Telegram alert (msg 315) substituted for routine tick-summary per action-only filter — the trigger event is the substantive message; a separate 'MTM +X' tick-summary would be noise.
