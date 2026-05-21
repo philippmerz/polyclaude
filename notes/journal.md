@@ -3309,3 +3309,23 @@ Could codify into cron step 2 (news-alert processing): on held position with mar
 **Other items:** Doc/staleness scan returned clean (just updated portfolio_kelly_priors.json _updated to 2026-05-21; strategy/00 + README current). Macro_pm_scan v1 still --no-consensus default — accurate status. No new findings on scripts/notes/strategy.
 
 Brief idle after this.
+
+## 2026-05-21 ~14:00 UTC — Wednesday 14:00 cron tick (recovery + body-fetch validated + log-redirect fix)
+
+**Material:**
+
+- **May-31 NO recovered** 0.805 → 0.820 (+1.5pp favorable since 02:00 trigger hit). MTM $14.04 → $14.30 = +$0.26. Still +20.94% on cost. Operator dialogue concluded with fresh Opus-level research (msgs 321 + supporting refs) confirming P(YES)=10% central, holding thesis intact, no factual basis for market 19.5% YES pricing.
+
+- **Body-fetch CRITICAL re-validation WORKS in production**: BBC Iran-Hormuz article ("Iran steps up claim to control Strait of Hormuz") was first-pass tagged CRITICAL on iran-peace; body-fetch (3692 chars) succeeded and second-pass DOWNGRADED to MATERIAL. The shipped logic (commit 9223226 + logging commit c97a467) catches chain-inference CRITICAL alerts at the second-pass stage. First production validation of the body-fetch path.
+
+- **Bug found + fixed: daemon log redirect**. The body-fetch re-val log line WAS firing but going to a stale `/tmp/claude-*/tasks/*.output` file from the bash background task that originally invoked `news_watcher.py start` two days earlier. The script defined LOG_PATH but never used it — `cmd_start` relied on caller's shell redirect. Fixed: explicit `os.dup2()` in cmd_start to point stdout/stderr at LOG_PATH (logs/news_watcher.log). Bounded ~10 LOC. Future audits will find re-val outcomes in the canonical log. Daemon restarted PID 773362; new fd 1 → logs/news_watcher.log confirmed.
+
+**Cron outcomes:**
+- UMA: 1 PRICE_MOVE alert (May-31 YES 0.095 → 0.180, +8.5pp; reflects overnight drop, already handled)
+- Ostium: unchanged. Watchlist: 0 hits. Redeems: 0.
+- discover_markets: only May-31 NO (held) + Norway WC 2026 NO at 97.5% (15% APY, too thin)
+- Sports/macro: no candidates pass filter.
+
+**Kelly with updated P_NO=0.90:** May-31 edge 8.0pp = scale-in candidate but 8pp < 10pp post-R-U filter + cluster cap blocks. Iran-regime-fall 10.5pp edge but also cluster-capped. Aliens -0.5pp (trim candidate per Kelly) but Brownian-bridge HOLD per yesterday's framework doc.
+
+**Net MTM:** $81.64 → $82.60 = +$0.96 over 12h. No actions.

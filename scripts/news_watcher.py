@@ -570,6 +570,19 @@ def cmd_start(_args: argparse.Namespace) -> int:
         except (ValueError, OSError):
             pass  # PID file stale or process dead; ok to claim
     PID_PATH.write_text(str(os.getpid()))
+    # Redirect stdout/stderr to LOG_PATH so daemon output persists even when
+    # invoked from ephemeral shells (background tasks, tmux session-exit, etc.).
+    # Lesson source: 2026-05-21 14:00 UTC cron tick — body-fetch CRITICAL re-val
+    # was correctly firing (BBC Iran-Hormuz article downgraded CRITICAL→MATERIAL)
+    # but the log lines were going to a stale /tmp/claude-*/tasks/*.output file
+    # from the bash background task that invoked `news_watcher.py start` two
+    # days earlier. Future audits couldn't find re-val outcomes in
+    # logs/news_watcher.log because the daemon's stdout had never been pointed
+    # at LOG_PATH.
+    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    _log_fp = open(LOG_PATH, "a", buffering=1)  # line-buffered append
+    os.dup2(_log_fp.fileno(), sys.stdout.fileno())
+    os.dup2(_log_fp.fileno(), sys.stderr.fileno())
     print(f"[watcher] up pid={os.getpid()}", flush=True)
     backoff = 1.0
     while True:
