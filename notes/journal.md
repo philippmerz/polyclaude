@@ -3271,3 +3271,27 @@ This session has shipped 18 commits across cron ticks + 6+ small bounded improve
 **Cron outcomes:** Zero news_alerts in 12h. Zero CRITICAL re-vals. UMA clean. Ostium unchanged. No watchlist hits. No redeems. discover_markets: 0 hurdle-clearers (filter narrowed since Iranian-regime-may31 closed/de-prioritized). Sports: only non-consensus or spread markets surfacing. No actions.
 
 10.4 days to May-31 resolution.
+
+## 2026-05-21 ~02:00 UTC — May-31 NO 0.83 trigger HIT, catalyst_check, HOLD decision
+
+**Trigger event:** May-31 NO mark dropped 0.905 → 0.805 (-10pp adverse) overnight. Crossed the 0.83 early-close trigger threshold (per backlog 2026-05-15 protocol).
+
+**Protocol followed:**
+1. Fresh catalyst_check spawned (commit pending — output /tmp/cc_may31_v2.txt)
+2. Verdict: central P(YES) = 10% (range 5-18%), **DOWN from 13% on 2026-05-19**
+3. Key drivers: Khamenei rejected Trump nuclear proposal May 16 ('excessive and outrageous'); Rome talks broke down; Israel reported preparing strike; uranium enrichment + sanctions deadlocked
+4. Multiplicative: P(breakthrough)=18% × P(formal signature|agreed)=65% × P(permanent language|signed)=85% = 10%
+
+**Analysis:**
+- Catalyst_check fundamentals IMPROVED for NO (10% vs prior 13%) while market price WORSENED (mark 0.805 vs prior 0.905). Pure divergence.
+- Mark of 0.805 implies P(YES)=19.5%; catalyst_check central=10%. **9.5pp edge on NO.**
+- Brownian-bridge with updated P_NO=0.90, t/T=0.65: fair_BB = 0.964 vs mark 0.805 = -15.9pp SCALE_UP.
+- UMA-resolution-criteria risk: ZERO (criteria explicit "permanent only; temporary will not qualify"; no ambiguity).
+
+**Decision: HOLD.**
+- DON'T close: trigger condition is mark-based, but underlying protocol requires "mark + UMA-resolution-criteria risk materially raises P(YES)" — UMA-risk is zero, mark drop is noise/speculation against fundamentals.
+- DON'T scale: edge 9.5pp just below 10pp post-R-U filter; cluster cap on iran-peace cluster already binding ($50+ exposure on $170 bankroll).
+
+**Updated:** prior P_NO 0.87 → 0.90 in portfolio_kelly_priors.json (matches catalyst_check central). Both portfolio_kelly + brownian_bridge_fv now use updated prior via the slug-prefix-match fix shipped 2026-05-19.
+
+**Position state:** cost $11.82, mark $0.805, MTM $14.04, +18.73% on cost (was +33.48% yesterday).
