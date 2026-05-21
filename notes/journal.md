@@ -3297,3 +3297,15 @@ This session has shipped 18 commits across cron ticks + 6+ small bounded improve
 **Position state:** cost $11.82, mark $0.805, MTM $14.04, +18.73% on cost (was +33.48% yesterday).
 
 **Cron tick 20260521T020002Z completed.** Remaining steps after trigger-hit handling: 0 redeems, 0 discover candidates, macro Fed-June markets all 99%+ efficient. Telegram alert (msg 315) substituted for routine tick-summary per action-only filter — the trigger event is the substantive message; a separate 'MTM +X' tick-summary would be noise.
+
+## 2026-05-21 ~02:15 UTC — Eighth meta-reflection cycle
+
+**One pattern observation worth flagging to backlog.**
+
+**Pattern: catalyst_check is the stable fundamental anchor when mark volatility spikes.** Today was the SECOND time in 4 days catalyst_check decided a May-31 NO trigger event (2026-05-19 mark 0.855 → P(YES)=13%; 2026-05-21 mark 0.805 → P(YES)=10%). Both times the fundamental verdict was stable while the market mark bounced 0.805-0.925. Insight: for positions with sustained mark volatility, catalyst_check provides the anchor; mark noise alone shouldn't trigger action.
+
+Could codify into cron step 2 (news-alert processing): on held position with mark move >5pp since last cron tick AND <30 days to resolution → auto-spawn catalyst_check. Rate-limit 24h per position to bound haiku cost. Bounded ~30 LOC. Saves manual protocol-follow each time + ensures protocol fires consistently. Adding to backlog as moderate-priority.
+
+**Other items:** Doc/staleness scan returned clean (just updated portfolio_kelly_priors.json _updated to 2026-05-21; strategy/00 + README current). Macro_pm_scan v1 still --no-consensus default — accurate status. No new findings on scripts/notes/strategy.
+
+Brief idle after this.
