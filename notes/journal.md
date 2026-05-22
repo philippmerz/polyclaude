@@ -3339,3 +3339,16 @@ Brief idle after this.
 **Position state (off-schedule):** May-31 NO mark dropped further 0.820 → 0.775 (-4.5pp adverse since 14:00). MTM $14.30 → $13.52 = -$0.78. Total MTM $82.60 → $81.81 = -$0.79 over ~2h. Still +14.30% on cost; mark now 5.5pp below 0.83 trigger. NO action — research confirmed P(YES)=10% this morning, holding per discipline. Operator already has full picture from morning dialogue.
 
 **Cron outcomes:** UMA clean, no watchlist hits, no redeems. Continued downward drift on May-31 mark but no NEW fundamental info; consistent with speculation/profit-taking pattern.
+
+## 2026-05-22 ~02:00 UTC — Thursday 02:00 cron tick (May-31 recovery continues)
+
+**Material:**
+- May-31 NO recovered 0.775 → 0.815 (+4pp favorable since 16:14 false-trigger tick). MTM $13.52 → $14.21 = +$0.69. Now 1.5pp below 0.83 trigger (was 5.5pp below). Trend reversing.
+- Regime-fall +1pp recovery to 0.835.
+- Total MTM $81.81 → $82.86 = +$1.05 over ~10h.
+
+**Body-fetch CRITICAL re-val fires correctly (now visible in logs):** Guardian article "Oil markets nearing red zone" — first-pass CRITICAL on us-iran-peace, body-fetch 4000 chars, second-pass DOWNGRADED to MATERIAL. Log line in logs/news_watcher.log (post-fix from yesterday 14:00 commit 6649a62). Re-val infrastructure working as designed: chain-inference CRITICALs get caught.
+
+**Kelly with current marks:** May-31 edge dropped 12.5pp → 8.5pp as mark recovered, now back below 10pp filter. Iran-regime-fall edge 9.5pp (just below filter). Aliens -0.5pp trim per Kelly, but Brownian-bridge HOLD per yesterday's framework doc.
+
+**Cron outcomes:** UMA clean, Ostium unchanged, 0 watchlist hits, 0 redeems, discover surfacing only held positions, macro Fed-June markets all efficient. No actions.
