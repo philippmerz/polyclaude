@@ -3352,3 +3352,29 @@ Brief idle after this.
 **Kelly with current marks:** May-31 edge dropped 12.5pp → 8.5pp as mark recovered, now back below 10pp filter. Iran-regime-fall edge 9.5pp (just below filter). Aliens -0.5pp trim per Kelly, but Brownian-bridge HOLD per yesterday's framework doc.
 
 **Cron outcomes:** UMA clean, Ostium unchanged, 0 watchlist hits, 0 redeems, discover surfacing only held positions, macro Fed-June markets all efficient. No actions.
+
+## 2026-05-22 ~14:00 UTC — Thursday 14:00 cron tick (SECOND material adverse move on May-31)
+
+**Material adverse:** May-31 NO mark dropped 0.815 → 0.735 (-8pp). MTM $14.21 → $12.82 = -$1.39 unrealized. Now +8.40% on cost (was +33% peak). Market YES at 29.5% — beyond yesterday's catalyst_check upper bound (18%).
+
+**Fresh Opus research (2nd round, complementing yesterday's):**
+- NEW: Trump quote "most points agreed except nuclear" (the only point that mattered) — Iran "unyielding"
+- NEW: Iran FM "agreement just inches away" but criticized "maximalist demands" from US
+- NEW: Rubio May 22 hardline on Hormuz tolls "not acceptable"
+- NEW: Iran reviewing latest US proposal (May 21); Trump willing to wait "a few days"
+- UNCHANGED: Khamenei May 16 rejection still standing on nuclear
+- UNCHANGED: Wikipedia ceasefire article confirms no permanent agreement, original framework was 15-20d temporary negotiations
+- KEY: any MOU signed in 9d will structurally include 30-day-further-negotiation window — that's TEMPORARY per resolution criteria ("explicitly temporary will not qualify")
+
+**Updated prior P_NO 0.90 → 0.85** (P(YES) 10% → 15% central, range 10-25%). Slight upward revision driven by Trump's "most agreed" rhetoric + Iran FM "inches away," but core nuclear sticking point unresolved.
+
+**Market reading 29.5% YES**: I see no factual basis. Likely market is (a) discounting the strict "permanent" criterion, (b) reading Trump's pressure tactics as deal-imminent, (c) speculative.
+
+**EV math at P(NO)=0.85:**
+- Hold to resolution: 0.85 × $17.44 + 0.15 × $0 = $14.82 expected
+- Close now: $12.82 realized
+- Hold advantage: +$2.00 EV
+
+**Decision: HOLD per analysis** but ESCALATE to operator (this is the second material adverse move; operator override appropriate). Sending Telegram update — concise vs morning's full dialogue.
+
+**Cron outcomes:** UMA 1 PRICE_MOVE alert (May-31 YES 0.185 → 0.295, +11pp — captured the move). Ostium unchanged. 0 watchlist hits. 0 redeems. Total MTM $82.86 → $82.09 = -$0.77 (May-31 alone -$1.39, other positions +$0.62 in offsetting moves: Pahlavi +2.6pp, Regime-fall +1pp).

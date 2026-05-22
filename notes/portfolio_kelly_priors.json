@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor.",
-  "_updated": "2026-05-21",
+  "_updated": "2026-05-22",
   "us-x-iran-permanent-peace-deal-by-may-11-2026": {
     "p_no": 0.99,
     "cluster": "iran-peace",
@@ -16,11 +16,11 @@
     "rationale": "6-day window. Iran demands reparations + troop withdrawal infeasible to sign in 6d. P robust."
   },
   "us-x-iran-permanent-peace-deal-by-may-31-2026": {
-    "p_no": 0.9,
+    "p_no": 0.85,
     "cluster": "iran-peace",
     "rho_within": 0.7,
     "cluster_frac": 0.3,
-    "rationale": "2026-05-21 fresh catalyst_check (trigger-hit re-eval at mark 0.805 < 0.83 trigger): central P(YES)=10% (range 5-18%), DOWN from 13% (2026-05-19). Khamenei rejected Trump nuclear proposal May 16 as 'excessive and outrageous'; talks deadlocked over uranium enrichment + sanctions; Israel reported preparing to strike. Multiplicative: 18% \u00d7 65% \u00d7 85% = 10%. Fundamentals MORE favorable to NO than 2 days ago; mark drop is noise not fundamentals. Mark 0.805 vs central P(NO) 0.90 = 9.5pp edge. Brownian-bridge fair=0.964 vs mark 0.805 = -15.9pp SCALE_UP. Hold (cluster cap binding for scale)."
+    "rationale": "2026-05-22 14:00 UTC trigger re-eval (mark 0.735, second adverse move >5pp). Fresh Opus WebSearch: Trump quote 'most points agreed except nuclear'; Iran FM 'inches away'; Iran reviewing US proposal May 21; Rubio hardline on Hormuz tolls May 22. Khamenei May 16 rejection still standing on nuclear (THE sticking point per Trump). Permanent-deal resolution criteria still bind: any MOU with 30-day-further-negotiation window is structurally TEMPORARY per criteria. Revised central P(YES)=15% (range 10-25%, up from 10% on 2026-05-21). Market at 29.5% YES (mark 0.735) is overpriced vs my range. EV math at P(NO)=0.85: hold EV $14.82 vs close $12.82 = +$2 hold advantage."
   },
   "russia-x-ukraine-ceasefire-by-may-31-2026": {
     "p_no": 0.005,
