@@ -3378,3 +3378,19 @@ Brief idle after this.
 **Decision: HOLD per analysis** but ESCALATE to operator (this is the second material adverse move; operator override appropriate). Sending Telegram update — concise vs morning's full dialogue.
 
 **Cron outcomes:** UMA 1 PRICE_MOVE alert (May-31 YES 0.185 → 0.295, +11pp — captured the move). Ostium unchanged. 0 watchlist hits. 0 redeems. Total MTM $82.86 → $82.09 = -$0.77 (May-31 alone -$1.39, other positions +$0.62 in offsetting moves: Pahlavi +2.6pp, Regime-fall +1pp).
+
+## 2026-05-22 ~14:40 UTC — Term-structure framework lesson + prior update
+
+Operator surfaced new Iran-peace sub-markets (May 22 = 5%, May 26 = 18%). Fetched full event term structure (14 sub-markets). Key insight:
+
+**Dec 31 sub-market priced 73% YES.** A strict reading of "permanent" criterion would put Dec 31 P(YES) at 30-40% max; the 73% pricing implies market expects UMA-LOOSE interpretation (framework MOUs with further-negotiation windows count as "permanent"). This is the same UMA-interpretation risk that bit R-U 2026-05-11 (-$16.73 realized).
+
+**Framework lesson shipped to strategy/00_philosophy.md** (alongside yesterday's Kelly-vs-Brownian-bridge framework note):
+- Section: "Term-structure-as-UMA-interpretation-signal"
+- Rule: when longest-dated sub-market > 60-70% YES on a "by date X" event, weight prior 70% strict / 30% loose
+- Example: May-31 NO prior shifted from P_NO=0.85 (strict) → P_NO=0.81 (UMA-adjusted)
+- EV impact: hold advantage shrunk +$2.00 → +$1.31 but still positive
+
+**Decision unchanged:** HOLD May-31 NO. New sub-markets (May-22, May-26) fail 10pp post-R-U filter after UMA adjustment.
+
+Compounds: future multi-date events get correct prior calibration without re-deriving. Operator-flagged signal (term structure) made into reusable framework rule.

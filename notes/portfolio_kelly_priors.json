@@ -16,11 +16,11 @@
     "rationale": "6-day window. Iran demands reparations + troop withdrawal infeasible to sign in 6d. P robust."
   },
   "us-x-iran-permanent-peace-deal-by-may-31-2026": {
-    "p_no": 0.85,
+    "p_no": 0.81,
     "cluster": "iran-peace",
     "rho_within": 0.7,
     "cluster_frac": 0.3,
-    "rationale": "2026-05-22 14:00 UTC trigger re-eval (mark 0.735, second adverse move >5pp). Fresh Opus WebSearch: Trump quote 'most points agreed except nuclear'; Iran FM 'inches away'; Iran reviewing US proposal May 21; Rubio hardline on Hormuz tolls May 22. Khamenei May 16 rejection still standing on nuclear (THE sticking point per Trump). Permanent-deal resolution criteria still bind: any MOU with 30-day-further-negotiation window is structurally TEMPORARY per criteria. Revised central P(YES)=15% (range 10-25%, up from 10% on 2026-05-21). Market at 29.5% YES (mark 0.735) is overpriced vs my range. EV math at P(NO)=0.85: hold EV $14.82 vs close $12.82 = +$2 hold advantage."
+    "rationale": "2026-05-22 14:30 UMA-risk-adjusted (post operator dialogue + term-structure analysis). Strict-criterion analysis gives P(YES)=15% central, but Iran-peace event term structure (May 22=6.8%, May 26=17.5%, May 31=26.5%, Jun 30=47%, Dec 31=73%) shows market is pricing UMA-LOOSE interpretation (a 73% YES by Dec 31 is incompatible with strict 'permanent only' reading). Weighted 70% strict \u00d7 15% + 30% loose \u00d7 27.5% = 19% P(YES). P_NO=0.81. EV math: hold 0.81 \u00d7 $17.44 = $14.13 vs close $12.82 = +$1.31 hold advantage. Cluster cap (per-cluster, iran-peace alone) has $39 headroom; 10pp filter on edge 7.5pp (0.81 - 0.735) FAILS for new entries. Hold existing position only. Decision unchanged."
   },
   "russia-x-ukraine-ceasefire-by-may-31-2026": {
     "p_no": 0.005,

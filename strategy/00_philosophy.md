@@ -69,6 +69,26 @@ Concrete divergence (2026-05-19, May-31 Iran-peace NO, t/T=0.59, P_no=0.87, mark
 
 The Brownian-bridge read is correct for a position approaching resolution: mark *should* be migrating toward 1.0 even at a P_win = 0.87 prior, because each day passes without the YES event materializing. Kelly's static frame asks "would I enter at this price?" — a fair question that ignores time decay. Conversion: **use Kelly for entries, Brownian-bridge for holds**. Don't trim a late-stage bond-like NO just because Kelly's static edge has compressed.
 
+### Term-structure-as-UMA-interpretation-signal (added 2026-05-22)
+
+For multi-date "by date X" events with sub-markets across a term (May 22, May 26, May 31, Jun 15, Jun 30, Jul 31, Dec 31...), the LONGEST-DATED sub-market's YES price is the single most useful signal about how UMA-loose-vs-strict the market's interpretation will be.
+
+Concrete example (2026-05-22, US-Iran permanent peace deal event):
+- May 31 sub-market: YES=26.5% (the position polyclaude holds NO on)
+- Dec 31 sub-market: **YES=73%** — market collectively assigns 73% probability to a "permanent" deal by year-end
+
+A strict reading of resolution criteria ("agreements that are explicitly temporary will not qualify; further-negotiation-window MOUs do not count") would put P(YES) by Dec 31 at maybe 30-40%, not 73%. The 73% pricing implies the marginal trader expects UMA to rule a framework MOU as qualifying, even if it includes "further details to be negotiated" structure. This is exactly the UMA-loose interpretation that bit the R-U position (-$16.73 realized loss 2026-05-11).
+
+**Operational rule:** when the longest-dated sub-market of a "by date X" event prices > 60-70% YES (and the criterion includes any term that could be interpreted loose vs strict), assume the market is using UMA-loose interpretation. Weight your prior accordingly:
+
+```
+P(YES adjusted) = 0.7 × P(YES strict reading) + 0.3 × P(YES loose reading)
+```
+
+The 70/30 weighting reflects that UMA usually rules per literal criteria but the R-U miss showed loose-interpretation risk is real. Adjust the prior used in portfolio_kelly + brownian_bridge_fv. On May-22 this shifted May-31 NO prior from P_NO=0.85 (strict) to P_NO=0.81 (UMA-adjusted) — EV at hold dropped +$2.00 → +$1.31 but still positive; decision unchanged but with more accurate uncertainty band.
+
+**When sub-markets DON'T exist:** apply the same logic by analogy. If the market title hints at a loose-interpretation possibility, weight 70/30 strict/loose.
+
 ## Risk controls
 
 1. **UMA / resolution risk.** Read the resolution-source clause for every market. Reject markets with vague resolution (e.g., "X will be considered to have happened if widely reported") unless deeply mispriced.
