@@ -3408,3 +3408,19 @@ Yesterday's framework note (commit ecf554c) explicitly says: for late-stage bond
 **Cron outcomes:** UMA 1 PRICE_MOVE alert (capturing favorable reversion); Ostium unchanged; 0 watchlist hits; 0 redeems. discover_markets only surfaces held May-31. 2 body-fetch CRITICAL re-vals overnight (Guardian + CBS articles, both downgraded or CRITICAL-confirmed as appropriate).
 
 **Net MTM:** $82.09 → $83.86 = +$1.77 over ~12h. No actions.
+
+## 2026-05-23 ~14:00 UTC — Saturday 14:00 cron tick (May-31 pullback again)
+
+**Material:** May-31 NO mark pulled back 0.865 → 0.815 (-5pp adverse since 02:00). MTM $15.09 → $14.21 = -$0.88. Still +20.19% on cost. Mark just below 0.83 trigger by 1.5pp. Pattern: now established mark volatility 0.735-0.925 over 5 days; bouncing in this range.
+
+- Iran-regime-fall -2pp adverse to 0.815. Pahlavi -1.5pp. Hantavirus +0.4pp recovery.
+- Total MTM $83.86 → $82.15 = -$1.71 over 12h.
+- 0 news_alerts in 12h (very quiet news flow).
+
+**Kelly + BB framework:** Kelly edge -0.49pp = static near-neutral. BB at P_NO=0.81, t/T=0.65 = 0.93 fair vs mark 0.815 = -11.5pp = SCALE_UP. Per framework note: BB is the right frame for late-stage holds, ignore Kelly's near-neutral signal. **Hold.**
+
+**Last catalyst_check** was 2026-05-21 02:21 at mark 0.805 (gave P_YES=10%). Today mark 0.815 = within 1pp of last check basis — NO re-run warranted per "mark move >5pp" threshold.
+
+**Cron outcomes:** UMA clean, Ostium unchanged, 0 watchlist hits, 0 redeems. discover only surfaces May-31 (held). Macro Fed-June 50bps cut YES 0.0045 = trivial. No actions.
+
+7.4d to resolution.
