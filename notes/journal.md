@@ -3394,3 +3394,17 @@ Operator surfaced new Iran-peace sub-markets (May 22 = 5%, May 26 = 18%). Fetche
 **Decision unchanged:** HOLD May-31 NO. New sub-markets (May-22, May-26) fail 10pp post-R-U filter after UMA adjustment.
 
 Compounds: future multi-date events get correct prior calibration without re-deriving. Operator-flagged signal (term structure) made into reusable framework rule.
+
+## 2026-05-23 ~02:00 UTC — Friday 02:00 cron tick (May-31 reversion confirmed)
+
+**Material:** May-31 NO recovered 0.735 → 0.865 since yesterday's 14:00 worst-case (+13pp favorable). MTM $12.82 → $15.09 = +$2.27 unrealized. Now +27.58% on cost; back above 0.83 trigger by 3.5pp. Yesterday's HOLD decision validated — adverse pricing was speculation/short-term flow as analysis indicated.
+
+**Kelly vs BB framework holding:** With UMA-adjusted P_NO=0.81:
+- Kelly static edge: -4.5pp (mark 0.855 vs P_NO 0.81) → "trim candidate" per static frame
+- Brownian-bridge time-decay: fair_BB(0.81, t/T=0.60) = 0.92 vs mark 0.855 = -6.5pp SCALE_UP
+
+Yesterday's framework note (commit ecf554c) explicitly says: for late-stage bond-like NO, use BB not Kelly for hold/trim signals. Position has 8d to resolution; mark should continue migrating toward 1.0 absent deal signing. **Hold.**
+
+**Cron outcomes:** UMA 1 PRICE_MOVE alert (capturing favorable reversion); Ostium unchanged; 0 watchlist hits; 0 redeems. discover_markets only surfaces held May-31. 2 body-fetch CRITICAL re-vals overnight (Guardian + CBS articles, both downgraded or CRITICAL-confirmed as appropriate).
+
+**Net MTM:** $82.09 → $83.86 = +$1.77 over ~12h. No actions.
