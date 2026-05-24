@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor.",
-  "_updated": "2026-05-22",
+  "_updated": "2026-05-24",
   "us-x-iran-permanent-peace-deal-by-may-11-2026": {
     "p_no": 0.99,
     "cluster": "iran-peace",
@@ -16,11 +16,11 @@
     "rationale": "6-day window. Iran demands reparations + troop withdrawal infeasible to sign in 6d. P robust."
   },
   "us-x-iran-permanent-peace-deal-by-may-31-2026": {
-    "p_no": 0.81,
+    "p_no": 0.73,
     "cluster": "iran-peace",
     "rho_within": 0.7,
     "cluster_frac": 0.3,
-    "rationale": "2026-05-22 14:30 UMA-risk-adjusted (post operator dialogue + term-structure analysis). Strict-criterion analysis gives P(YES)=15% central, but Iran-peace event term structure (May 22=6.8%, May 26=17.5%, May 31=26.5%, Jun 30=47%, Dec 31=73%) shows market is pricing UMA-LOOSE interpretation (a 73% YES by Dec 31 is incompatible with strict 'permanent only' reading). Weighted 70% strict \u00d7 15% + 30% loose \u00d7 27.5% = 19% P(YES). P_NO=0.81. EV math: hold 0.81 \u00d7 $17.44 = $14.13 vs close $12.82 = +$1.31 hold advantage. Cluster cap (per-cluster, iran-peace alone) has $39 headroom; 10pp filter on edge 7.5pp (0.81 - 0.735) FAILS for new entries. Hold existing position only. Decision unchanged."
+    "rationale": "2026-05-24 01:50 UTC \u2014 Trump 'largely negotiated' announcement triggered -47pp adverse market move (0.815\u21920.345). Fresh catalyst_check: P(YES strict) = 11% (multiplicative 0.65 \u00d7 0.17 = 11%). Term structure ALL durations shifted (May 26 = 57.5% YES). Deal structure per news: MOU ending war + 30-day nuclear negotiation window = STRUCTURALLY TEMPORARY per criteria. UMA-risk weighting 70% strict \u00d7 0.89 + 30% loose \u00d7 0.35 = P_NO 0.73. EV at hold = \\$12.73 vs close \\$6.01 = +\\$6.72 advantage. Decision: HOLD pending operator override. R-U pattern risk explicit."
   },
   "russia-x-ukraine-ceasefire-by-may-31-2026": {
     "p_no": 0.005,

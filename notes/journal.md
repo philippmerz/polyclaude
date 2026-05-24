@@ -3424,3 +3424,37 @@ Yesterday's framework note (commit ecf554c) explicitly says: for late-stage bond
 **Cron outcomes:** UMA clean, Ostium unchanged, 0 watchlist hits, 0 redeems. discover only surfaces May-31 (held). Macro Fed-June 50bps cut YES 0.0045 = trivial. No actions.
 
 7.4d to resolution.
+
+## 2026-05-24 ~01:50 UTC — Saturday late night — CATASTROPHIC ADVERSE EVENT on May-31 NO
+
+**Event:** Trump announced (Sat May 23) deal "largely negotiated" with Iran. Multiple major sources confirmed (NPR, Fox, NBC, Al Jazeera, Times of Israel, NBC). Qatar mediators in Tehran. Trump said "final aspects being discussed, will be announced shortly."
+
+**Market reaction:** May-31 NO mark dropped 0.815 → 0.345 (-47pp catastrophic). MTM $14.21 → $6.01 = **-$8.20 unrealized**. Position now -49.13% on cost. Term structure shifted ALL durations: May 26=57.5% YES, May 31=65.5% YES, Dec 31=88% YES. Volume 6M on May-31 sub-market today.
+
+**Fresh research:**
+- Deal STRUCTURE per news: MOU ending war + **30-day nuclear negotiation window** = structurally TEMPORARY per resolution criteria
+- catalyst_check verdict: P(YES strict) = 11% (range 4-22%). Multiplicative: P(announcement by May 31) = 65% × P(announcement qualifies as permanent|announced) = 17% = 11%
+- Opus WebSearch confirms: deal includes "two-month negotiations on Iran's nuclear program" — temporary structure
+- R-U PATTERN RISK explicit: same UMA-loose interpretation that lost -$16.73 on R-U could play out here
+
+**Updated P_NO via UMA-risk weighting:**
+- 70% strict × 0.89 + 30% loose × 0.35 = **P_NO = 0.73**
+
+**EV math at P_NO=0.73:**
+- Hold to resolution: 0.73 × $17.44 + 0.27 × $0 = $12.73
+- Close now: $6.01 realized
+- **Hold advantage: +$6.72 EV**
+
+**Robustness:**
+- At market view P_NO=0.345: hold EV $6.02 ≈ close
+- At my UMA-adjusted P_NO=0.73: hold +$6.72
+- At 50/50 weighting P_NO=0.62: hold +$4.81
+- Hold is EV+ across all reasonable P_NO scenarios (>0.345)
+
+**Decision: HOLD per EV math and strict-reading favor.** Operator escalation sent (msg 331). Default = hold, operator override welcome.
+
+**Prior updated** 0.81 → 0.73 in portfolio_kelly_priors.json. Catalyst_log.md updated.
+
+**Reflection:** This is the exact R-U pattern — UMA-loose interpretation risk against me. My strict-reading analysis says hold; market signal says I'm wrong about UMA. The decision turns on whether UMA will rule MOU-with-30-day-window as "permanent" (loose) or "temporary" (strict). Polymarket criteria language favors strict but UMA voters can rule either way.
+
+**Total MTM:** $82.15 → $76.27 = -$5.88 over 12h. May-31 dominant driver.
