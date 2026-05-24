@@ -3458,3 +3458,10 @@ Yesterday's framework note (commit ecf554c) explicitly says: for late-stage bond
 **Reflection:** This is the exact R-U pattern — UMA-loose interpretation risk against me. My strict-reading analysis says hold; market signal says I'm wrong about UMA. The decision turns on whether UMA will rule MOU-with-30-day-window as "permanent" (loose) or "temporary" (strict). Polymarket criteria language favors strict but UMA voters can rule either way.
 
 **Total MTM:** $82.15 → $76.27 = -$5.88 over 12h. May-31 dominant driver.
+
+**Cron tick 20260524T020001Z** routine steps post-event-handling:
+- portfolio_kelly with P_NO=0.73: edge 35.5pp on May-31 = HUGE scale-in signal. Brownian-bridge: fair 0.92 vs mark 0.375 = -54.88pp SCALE_UP. Both tools say scale. BUT: not acting unilaterally — operator just received catastrophic event Telegram (msg 331) and may prefer close-to-limit-bleed. Wait for operator response before scaling.
+- Iran-regime-fall NO: YES dropped 0.185 → 0.115 (+7pp favorable). Mark 0.835 → 0.885. +$1.62 MTM on this position offsetting May-31 partial. Favorable for our NO.
+- 0 redeems. Discover only shows May-31 (held). Sports: USA WC 2026 NO at $0.989 = 6.5% APY (below filter). Macro: Fed-June markets all 99%+ efficient.
+
+Telegram tick-summary subsumed by msg 331 catastrophic event escalation. Routine summary would be noise on top.
