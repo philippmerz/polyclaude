@@ -92,6 +92,18 @@
       "entry_max": 200.0, "horizon": "1-2y", "route": "ibkr_surface",
       "rationale": "AI capex centerpiece. Surfaced via 2026-05-17 digest 'AI Capex Plateauing' theme (NVDA Q1 FY27 guidance flattening sequential growth; TSMC April -1.1% MoM; SEMI wafer -4.7% QoQ). Fresh longterm_check 3/4 WATCH at $224.41 (fwd P/E 27x on 40% growth). Don't initiate new positions at current; wait for capex slowdown confirmation. Entry: $180-200 on weakness OR post-Q3 2026 capex confirmation. Generational (10x+) 8%, Strong (3-5x) 35%, Modest 40%.",
       "added": "2026-05-17"
+    },
+    {
+      "ticker": "LLY", "type": "equity", "yfinance_symbol": "LLY",
+      "entry_max": 800.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "rationale": "GLP-1 leader. Surfaced via 2026-05-24 digest 'GLP-1 Oral Formulation Expansion' HIGH-conf theme (EMA approved oral Wegovy May 22, removes injection barrier, market expansion). Fresh longterm_check 1.5/4 PASS at current ATH (fwd P/E 31x, debt $40.9B up 43% YoY, expensive valuation already prices 20%+ obesity growth perpetually). Entry: $745-800 (52-week low + modest discount) OR event entry on Mounjaro share drop <50% OR retatrutide P3 failure. Don't chase. Generational 3%, Strong 12%, Modest 40%, Flat 35%, Broken 10%.",
+      "added": "2026-05-24"
+    },
+    {
+      "ticker": "EIGEN", "type": "crypto", "coingecko_id": "eigenlayer",
+      "entry_max": 0.18, "horizon": "2-5y", "route": "ibkr_surface",
+      "rationale": "Restaking dominance. Surfaced via 2026-05-24 digest 'EigenLayer Restaking Dominance' HIGH-conf theme ($15.258B TVL, 93.9% market share). Fresh longterm_check 3/4 WATCH at $0.227. Cyclical/secular strong; margin-of-safety weak (pre-revenue, supply dilution). Hard catalyst: June 1 2026 unlock cliff (300M+ tokens vesting) — wait for selling pressure to subside. Entry $0.12-0.16 post-unlock washout (3-4% position with stop at $0.10), OR $0.20-0.25 small core position now if extra conviction. Generational 18%, Strong 22%, Modest 20%, Flat 28%, Broken 12%.",
+      "added": "2026-05-24"
     }
   ]
 }

@@ -235,3 +235,16 @@ Ran longterm_check on 5 novel actionable candidates (1 batched VIE timed out, re
 Plus AMD as alternative AI exposure (less leverage to capex peak); SOXL inverse if SMH short thesis confirms via NVDA May 20 earnings.
 
 Last weekly: 2026-05-10 (geopolitics + energy-power). Next weekly: 2026-05-24 (rotate to remaining: trade-regulation, biotech-health, crypto-on-chain, markets-corporate).
+
+### Sunday 2026-05-24 weekly digest additions (biotech-health + crypto-on-chain)
+
+| Candidate | Score | Verdict | Theme | Entry trigger |
+|---|---|---|---|---|
+| Eli Lilly ($LLY) | 1.5/4 | **PASS** at ATH | GLP-1 Oral Expansion (HIGH conf) | \$745-800 (52w low + discount) OR event entry on Mounjaro share<50% / retatrutide P3 fail |
+| EigenLayer (EIGEN) | 3/4 | WATCH at \$0.227 | Restaking Dominance (HIGH conf) | \$0.12-0.16 post-June-1-unlock washout (3-4% position, stop \$0.10) |
+
+**Other digest themes (not run via longterm_check yet):**
+- Base L2 Winner-Take-Most (HIGH conf): Base TVL 3x in 4mo, Arbitrum+Base = 77% of L2 liquidity. Plays: Long COIN (Base ecosystem), Underweight ARB. ARB already in watchlist at \$0.10 entry; consider rebalance away if both exist in IBKR sleeve.
+- Boehringer Ingelheim PDE4B (MED conf): Jascayd first-in-class IPF treatment in 10+ years. Play: BFVAF (OTC), hard to size given liquidity.
+
+Last weekly: 2026-05-17 (tech-ai-chips + macro-fiscal-labor). Next weekly: 2026-05-31 — Saturday — likely won't fire on the May-31-NO-resolution day; consider 06-01 manual sweep.

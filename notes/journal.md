@@ -3481,3 +3481,29 @@ Regime-fall NO also recovered: +1pp to 0.895. Total MTM $76.27 → $79.41 = +$3.
 **Position note:** Aliens NO mark 0.855 → 0.845 (-1pp). Edge dropped to +0.5pp per Kelly. BB at p=0.85: fair=0.86 vs mark 0.845 = +1.5pp — within noise. Hold.
 
 7 days to May-31 resolution. **HOLD decision stands. No scale. Awaiting actual signed-MOU text to make ultimate call.**
+
+## 2026-05-24 ~14:30 UTC — Sunday weekly long-term review
+
+Ran world_state_digest on biotech-health + crypto-on-chain (both 4-week-unrun domains).
+
+**4 themes surfaced (3 HIGH conf):**
+- HIGH: GLP-1 Oral Formulation Expansion (EMA approved oral Wegovy May 22; addressable market expansion)
+- HIGH: EigenLayer Restaking Dominance (93.9% market share, $15.258B TVL)
+- HIGH: Base L2 Winner-Take-Most (Base TVL 3x in 4mo; ARB+Base = 77% of L2 liquidity)
+- MED: Boehringer Ingelheim PDE4B (Jascayd first-in-class IPF treatment in 10+ years)
+
+**longterm_check on top 2:**
+- **LLY 1.5/4 PASS at ATH** — fwd P/E 31x, debt $40.9B (+43% YoY), valuation already prices 20%+ obesity growth perpetually. Entry $745-800 OR event-driven on Mounjaro share drop / retatrutide P3 fail. Same pattern as CCJ/LEU/CEG/NVDA — valuations stretched.
+- **EIGEN 3/4 WATCH at $0.227** — cyclical/secular strong, margin-of-safety weak (supply dilution, pre-revenue). Hard catalyst: **June 1 unlock cliff (300M+ tokens)**. Entry $0.12-0.16 post-washout (3-4% position with $0.10 stop) OR $0.20-0.25 small core now.
+
+**Watchlist additions:**
+- LLY entry_max $800 (route: ibkr_surface)
+- EIGEN entry_max $0.18 (route: ibkr_surface — post-unlock washout target)
+
+**Pattern observed:** 5 weekly digest rotations now done (2026-04-25 onward); 5-of-6 longterm_check runs on surfaced top candidates returned PASS/WATCH at current prices. Consistent: valuations are stretched in this cycle. Discipline holding: no IBKR-side entries triggered for operator. EIGEN is the most interesting — crypto with hard catalyst (June 1 unlock) creates a defined entry opportunity.
+
+Pre-end-of-May journal split flagged: file now 3344 lines; will batch on 2026-06-01.
+
+Next weekly: 2026-05-31 (likely no fire due to weekend cron + May-31 resolution event); manual sweep 2026-06-01 covering trade-regulation + markets-corporate (remaining unvisited slugs).
+
+**Brief meta-reflection note:** No new structural findings beyond what's been shipped recently (term-structure framework, body-fetch re-val, daemon log fix, prior updates). May-31 position management is active; framework holds. Brief idle on reflection cycle.

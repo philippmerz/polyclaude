@@ -1650,3 +1650,194 @@ TLT fails the generational-mispricing framework. Only 1 of 4 dimensions scores p
 - [TLT Fund Flows & Sentiment](https://danelfin.com/etf/TLT)
 - [iShares Fact Sheet (Mar 31, 2026)](https://www.ishares.com/us/literature/fact-sheet/tlt-ishares-20-year-treasury-bond-etf-fund-fact-sheet-en-us.pdf)
 ```
+
+---
+
+## 2026-05-18T14:04:31Z — longterm_check
+
+**Query:** `ALB` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: ALB
+
+Date: 2026-05-18 | Type: equity | Horizon: 3y
+
+### Current state
+Price $179.96 | +204% YTD, +235% from 52W low ($53.70) | -18% from 52W high ($221) | Market cap $21.3B | EV/EBITDA 31-33x (vs. 12.4x historical median) | Q1 2026 adj. EPS $2.95, EBITDA $664M (+148% YoY)
+
+### Cyclical position
+Albemarle is in early-cycle inflection from structural multi-year lithium oversupply to deficit. Spot lithium prices fell to ~$8/kg in mid-2025, recovered to ~$17-21/kg by May 2026—a 150%+ rebound in 6 months. Q1 2026 Energy Storage segment margins expanded to 62% from 36% YoY, and full-quarter EBITDA surged 148%, confirming pricing power has returned. Market forecasts 22,000-80,000 MT supply deficit by 2026 driven by supply project delays and accelerating demand. Albemarle's low-cost brine assets achieve cash breakeven well below $20/kg, providing cushion, but cycle downside risk is material if prices compress to $12-15/kg.
+
+### Secular tailwind
+Battery energy storage demand is the primary driver and accelerating: storage lithium demand grew 71% in 2025, forecast 55% growth in 2026, with long-term CAGR of 23% through 2031. EV demand is supporting but slower-growth (CAGR 14% to 2035); however, EV pack margins are compressing, making storage the more profitable segment. U.S. utility-scale battery storage capacity will reach 65 GW by end-2026. Global EV market share rising (EU 44% by 2028, China 32% by 2028) but at moderate unit growth. Storage tailwind is intact and accelerating; EV tailwind is steady but not exceptional.
+
+### Catalyst window
+- [HIGH] Q2-Q3 2026 — Meishan spodumene refinery completing integration; significant low-cost margin expansion expected H2 2026 — Albemarle Q1 2026 earnings
+- [HIGH] Q2-Q3 2026 — Lithium price momentum; structural deficit visibility tightens, Zimbabwe export ban (Feb 2026) reduces supply, constrains prices to $20+ range — BMI forecasts, industry reports
+- [MED] H1 2027 — Mt. Holland (SQM/Wesfarmers JV) first refinery output; market supply inflection point, tests whether prices stabilize or crack — Wood Mackenzie, Albemarle disclosures
+- [MED] 2027-2028 — Kings Mountain (North Carolina) reopening with DOE support; U.S.-sourced lithium qualifies for IRA credits at premium — Albemarle strategic initiatives
+
+### Margin of safety
+WEAK at current price. Albemarle's balance sheet is strong (1.0x net leverage, $2.7B liquidity, no major debt maturities until late 2028, generated $248M free cash flow in Q1 alone) and profitable. However, valuation at 31-33x EV/EBITDA is 2.5-2.7x historical median (12.4x), and stock has already rallied 204% in 1 year, pricing in substantial recovery. At $10/kg lithium (hypothetical downside), EBITDA would compress to ~$900M-1B, implying stock re-rates to $90-130 range (50%+ downside). Current entry at $180 offers minimal margin; no hard-asset backing or profitable cash return (dividend zero). Margin of safety adequate only if lithium prices sustain $20+ and storage demand trajectory holds; thin otherwise.
+
+### Top 3 risks
+1. **Lithium price cycle collapse** — If spot prices fall to $12-15/kg by 2028 (driven by Mt. Holland + Tianqi capacity ramps, weak demand), Albemarle's EBITDA could compress 60-70% to $1.0-1.5B range; at current 33x multiple, stock could fall to $90-130 (-50%+). This is the most asymmetric risk given elevated valuation.
+2. **Supply surge faster than expected** — Major projects (Mt. Holland, Arcadium, Livent expansions) coming online faster than management forecast could force price defense and accelerate cycle downturn. Risk is exacerbated if EV demand growth disappoints (e.g., recessionary environment 2027-2028).
+3. **IRA/geopolitical reversal** — Kemerton (Western Australia) hydroxide production does not qualify for U.S. IRA credits, limiting upside on "Western premium." Policy shifts (e.g., China restrictions eased, FEOC rules relaxed) or trade/tariff escalation could erode Albemarle's structural advantage vs. Chinese producers. Lower Western premium → lower realizable prices.
+
+### 5-year scenario probabilities
+- Generational (10x+): 10%
+- Strong (3-5x): 25%
+- Modest (1.5-3x): 40%
+- Flat (-30% to +50%): 20%
+- Thesis broken (-50%+): 5%
+
+### Entry trigger
+NOT NOW. Current valuation (33x EV/EBITDA, +204% 1YR rally, -18% from 52W peak) has priced in most of the near-term cycle recovery. Entry trigger:
+- **Dip entry**: price to $140-150 range (15-20% pullback from current) with reaffirmed $20+/kg pricing trajectory and Q2 results confirming margin stability
+- **Event entry**: After Mt. Holland comes online (H1 2027) and market tests whether prices sustain $18+ range; at that point, cycle visibility improves and multiple compression risk diminishes
+- Do NOT chase current momentum; insufficient margin of safety.
+
+### Verdict: 3/4 — WATCH
+Albemarle scores strongly on three of four dimensions (cyclical inflection ✓, secular storage tailwind ✓, visible catalysts ✓) but fails the margin-of-safety test. Valuation is extended post-205% rally, offering minimal downside cushion if the lithium cycle re-tests $12-15/kg or demand growth stalls. Keep on watchlist for entry on 15-20% dip or after Mt. Holland supply clarity in 2027. Current price risks $90-130 downside if cycle breaks; upside to 3-5x remains available from $140-150 entry point.
+
+### Sources
+- [Albemarle Q1 2026 Earnings (StockTitan)](https://www.stocktitan.net/sec-filings/ALB/8-k-albemarle-corp-reports-material-event-5b1602686828.html)
+- [Albemarle Q1 2026 EBITDA Surge (Investing.com)](https://www.investing.com/news/company-news/albemarle-q1-2026-slides-lithium-recovery-drives-148-ebitda-surge-93CH-4668743)
+- [Lithium Market Shift: Oversupply to Deficit (Mining Weekly/BMI Forecast)](https://www.miningweekly.com/article/bmi-revises-lithium-price-forecast-upwards-amid-supply-tightening-2026-04-24)
+- [Lithium Prices Q1 2026 (Carbon Credits)](https://carboncredits.com/lithium-prices-climb-again-in-2026-sending-stocks-skyward-nili/)
+- [Energy Storage Demand Growth (S&P Global)](https://www.spglobal.com/energy/en/news-research/latest-news/metals/010826-battery-storage-to-drive-lithium-demand-growth-globally)
+- [EV Sales Forecast 2026-2030 (ABI Research/EV Volumes)](https://ev-volumes.com/)
+- [Albemarle EV/EBITDA Valuation (GuruFocus)](https://www.gurufocus.com/term/enterprise-value-to-ebitda/ALB)
+- [Mt. Holland Project Timeline (Wood Mackenzie/EV in Focus)](https://www.evinfocus.com/most-mount-holland-spodumene-to-hit-market-until-2027/)
+- [Albemarle Debt & Leverage (Albemarle Earnings Call)](https://www.fool.com/earnings/call-transcripts/2026/05/07/albemarle-alb-q1-2026-earnings-transcript/)
+- [Lithium Price Sensitivity Analysis (Discovery Alert)](https://discoveryalert.com.au/albemarle-earnings-lithium-prices-q1-2026-recovery-cycle/)
+```
+
+---
+
+## 2026-05-24T20:18:19Z — longterm_check
+
+**Query:** `LLY` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: LLY
+
+Date: 2026-05-24 | Type: equity | Horizon: 3y
+
+### Current state
+$1,065 (near 52-week high of $1,134); +71% 1-year return from $623 lows; trading ~31x forward P/E on $34.2 annualized EPS; $1.0T market cap.
+
+### Cyclical position
+LLY is NOT at a cyclical bottom — stock sits near 52-week highs and valuation multiples have already expanded significantly on obesity drug adoption. The GLP-1 cycle itself is in early acceleration (market growing 24% CAGR through 2035), but the pharmaceutical sector's valuation expansion is midway through, not early-stage. Pharma multiples expanded from ~16x to ~31x on Lilly's obesity drug success. Relative to 2023 lows ($470), Lilly has run +127% with limited margin of safety on further expansion. Cyclical score: WEAK.
+
+### Secular tailwind
+GLP-1 obesity market is a genuine secular tailwind: global market size $10.1B (2026) → $66.6B (2035), 24% CAGR. Tirzepatide (Mounjaro/Zepbound) holds >60% US market share and is the fastest-growing segment. Q1 2026 revenue: Mounjaro/Zepbound generated $13.4B in key products sales, up 65% YoY; now world's best-selling medicine. International expansion underway (Medicare access, OTC consideration, non-US penetration). Retatrutide (GLP-1/GIP/glucagon triple agonist) in Phase 3 for obesity + comorbidities (T2D, osteoarthritis, psoriatic arthritis). Tailwind is substantive and intact, but largely already priced into current stock valuation. Secular score: STRONG.
+
+### Catalyst window
+- [HIGH] 2026-Q3 — Retatrutide Phase 3 obesity readout; expected mid-year; potential for faster weight loss and metabolic advantages vs tirzepatide — SEC filings, investor calls
+- [HIGH] 2026-Q2/Q3 — Mounjaro market share trend; oral GLP-1 (Foundayo) launched; potential saturation signals in US market — quarterly earnings
+- [MED] 2026-2027 — International obesity market expansion (EU approval, emerging markets); Medicare coverage expansion; older-adult adoption — regulatory approvals
+- [MED] 2027 — Retatrutide potential FDA approval for obesity if Phase 3 succeeds; could drive next cycle of revenue growth — regulatory calendar
+
+Catalyst score: MODERATE. Known events; limited surprise value because obesity drug tailwind already public knowledge.
+
+### Margin of safety
+Limited downside protection at current valuation. Gross margin 83% (FY2025), net margin 31.7% — profitable and efficient on obesity drugs alone. However, debt rose to $40.9B (up 43% YoY), with only $7.3B cash on hand; debt/capital ratio elevated. Forward P/E of ~31x assumes sustained obesity market growth and Mounjaro market-share stability. If obesity adoption curve slows, competitive share loss accelerates, or policy limits coverage (generic conversion, OTC pressure), stock has no margin of safety — significant downside to $745 (52-week low) or lower. Safety score: WEAK.
+
+### Top 3 risks
+1. **Valuation compression on growth disappointment** — Stock priced for 20%+ perpetual obesity market growth; any deceleration (saturation, pricing pressure, coverage limits) triggers multiple contraction from 31x toward 20x, implying 35% downside independent of earnings. Obesity adoption curves are uncertain; penetration ceiling unknown.
+
+2. **Competitive erosion** — Novo Nordisk (Ozempic/Wegovy, Rybelsus) still significant; Amgen, Viking Therapeutics, Structure Therapeutics entering space with GLP-1s. Tirzepatide's >60% share is vulnerable if competitors achieve parity efficacy or superior tolerability profile (GLP-1/GIP/glucagon advantage of retatrutide unproven clinically).
+
+3. **Policy and access headwinds** — Obesity drug market depends on insurance coverage expansion (Medicare, commercial). Risk of policy reversal (weight-loss drugs deprioritized), generic/OTC conversion pressure, or pricing reform reducing reimbursement. International expansion faces regulatory delays and pricing pressure in non-US markets.
+
+### 5-year scenario probabilities
+- Generational (10x+): 3% (would require $10,650+ per share; implies obesity market becomes $300B+ annual; unsustainable)
+- Strong (3-5x / $3,195-5,325): 12% (obesity market sustains 25%+ CAGR, retatrutide succeeds, Mounjaro holds >50% share, margin expansion)
+- Modest (1.5-3x / $1,597-3,195): 40% (obesity market grows 18-22% CAGR, competition tightens, multiple compresses to 22-24x, flat revenue growth in years 4-5)
+- Flat (-30% to +50% / $745-1,597): 35% (market saturates, Novo regains share, pricing pressure, multiple compresses to 16-18x, results flat)
+- Thesis broken (-50%+ / <$532): 10% (obesity adoption stalls, major safety issue, policy limits access, retatrutide fails, Mounjaro loses share to new entrants)
+
+### Entry trigger
+NOT NOW. Stock trades near 52-week highs with valuation already reflecting strong obesity-market growth assumptions. Entry would be:
+- **Price trigger**: $745-800 (back to 52-week lows + modest discount, offering margin of safety)
+- **Event trigger**: Retatrutide Phase 3 failure; Mounjaro market-share drop below 50%; Medicare coverage denial; competitive parity signal from Novo Phase 3 data
+- **Timeline**: Monitor Q2 2026 earnings (early August) for market-share trend and guidance confidence. If growth guidance reaffirmed + share held, reassess on 2027 macro weakness or competitive event.
+
+### Verdict: 1.5/4 — PASS
+LLY has a strong secular tailwind (obesity market 24% CAGR) and moderate catalysts (retatrutide, international expansion), but scores poorly on cyclical position (near all-time highs, valuation already expanded) and margin of safety (expensive multiple, rising debt, limited downside cushion). Does not meet ≥3/4 threshold for watchlist inclusion; recommend following on future dips or competitive risk signals, not entry at current price.
+
+### Sources
+- [Eli Lilly Q1 2026 Earnings](https://www.sec.gov/Archives/edgar/data/0000059478/000005947826000043/q126lillysalesandearningsp.htm)
+- [Yahoo Finance LLY Quote](https://finance.yahoo.com/quote/LLY/)
+- [Obesity GLP-1 Market Size to Hit USD 66.57 Billion by 2035](https://www.precedenceresearch.com/obesity-glp-1-market)
+- [Top Selling GLP-1 Medications in the U.S. 2026](https://www.accio.com/business/what-are-the-top-selling-glp-1-medications-in-the-u-s)
+- [LLY Drug Pipeline & Catalysts](https://catalystalert.io/company/LLY)
+- [Eli Lilly Balance Sheet](https://stockanalysis.com/stocks/lly/financials/balance-sheet/)
+```
+
+---
+
+## 2026-05-24T20:18:32Z — longterm_check
+
+**Query:** `EIGEN` (crypto, 3y horizon)
+
+```
+## LONGTERM CHECK: EIGEN
+
+Date: 2026-05-24 | Type: crypto | Horizon: 3y
+
+### Current state
+$0.227 current price | -90% 1-year return (from $3.53 peak Oct 2024) | 96% below ATH of $5.65 | Market cap $158M on ~750M circulating supply | TVL $19.5B (65,700x TVL-to-market-cap multiple).
+
+### Cyclical position
+EIGEN is near the bottom of its asset cycle — a 90% washout in 2025 followed by stabilization at $0.15 (Feb 2026) and recent recovery to $0.23. The token is only 8 months old (late Oct 2024 launch), so historical cycles don't apply; instead, this is capitulation in an early-stage protocol. The 7-day +19.5% bounce and lack of new lows since Feb suggest buying is returning. However, an imminent June 1, 2026 token unlock (vesting cliff) creates supply risk that could force another leg down before re-entry becomes attractive. **Cyclical evidence:** 52-week low $0.15, current only 50% above it; ATH-to-current spread of 96% is extreme; no new lows in 4 months despite bearish crypto backdrop.
+
+### Secular tailwind
+Restaking (ETH re-pledging for external validator sets) is a structural multi-year thesis. Ethereum staking TVL crossed $30B in 2024-2025; EigenLayer captures this via liquid restaking tokens (LRTs). EigenLayer's TVL of $19.5B with 93.9% market share and ~10x growth since early 2024 shows product-market fit. Competitors Symbiotic ($897M, 5.5% share) and Karak ($102M, 0.6%) are niche. The secular driver is Ethereum's transition to full Proof of Stake — staking demand is structural, not cyclical. Macro proof: 136,000+ addresses joined restaking; 1,900 active operators; 11 AVSs (Actively Validated Services) live with dozens in pipeline. **Secular evidence:** Restaking ecosystem 10x'd since early 2024; EigenDA throughput target 100+ MB/s vs. Ethereum's 8.2 MB/block; Ethereum validator count growing steadily.
+
+### Catalyst window
+- [HIGH] 2026-06-01 — Vesting cliff unlock; major supply dilution event. Could trigger 10-20% price drop or capitulation bottom. — [DefiLlama unlocks](https://defillama.com/unlocks/eigenlayer)
+- [HIGH] 2026-Q3-Q4 — EigenCompute mainnet launch (post-Q3 2025). Introduces verifiable off-chain compute; expands use cases beyond staking. — [Eigencloud roadmap](https://docs.eigencloud.xyz/eigenlayer/roadmap)
+- [MED] 2026-Q2-Q4 — EigenDA throughput scaling to 100+ MB/s, latency <1s. Proves scalability thesis; potential L2/L3 adoption catalyst. — [Eigencloud blog](https://blog.eigencloud.xyz/mainnet-launch-eigenlayer-eigenda/)
+- [MED] 2026-ongoing — Multi-chain AVS expansion. EigenLayer rolling out slashing/AVS tooling for non-Ethereum chains. Increases addressable market. — [ELIP-12 governance](https://tokenomist.ai/eigenlayer)
+- [LOW] 2027-Q4 — Full protocol maturity. All token unlocks complete (~Oct 2027); AVS ecosystem stabilized; fee-based buyback model active. — [Tokenomist vesting](https://tokenomist.ai/eigenlayer)
+
+### Margin of safety
+Weak. EIGEN is a pre-revenue protocol token with no balance sheet, profits, or hard-asset backing. The protocol's value hinges entirely on AVS adoption and future fee accrual (buyback model channels 20% of subsidized AVS rewards + 100% of infrastructure fees into EIGEN purchases — currently speculative). Upside: protocol generates real restaking yield (4.24% annual), and $19.5B TVL acts as a credibility anchor. Downside: token unlock of ~750M to 1.95B tokens by Oct 2027 creates 2.6x dilution risk; early-stage protocol may never monetize; competitors can fork/improve (Symbiotic's modularity, Karak's asset diversity). No moat beyond first-mover TVL. **Concrete metric:** Current $158M market cap vs. $19.5B TVL is either 60x undervaluation (if protocol sustains and monetizes) or 60x overvaluation (if adoption stalls). The +/- 60x skew defines the risk.
+
+### Top 3 risks
+1. **Token dilution / June unlock cliff** — Vesting schedule releases 300M+ tokens in June 2026. If selling pressure exceeds buy-side demand, price could fall 20-40%, breaking the "bottom" narrative and forcing fresh capitulation. Probability: 35%.
+2. **Restaking demand destruction** — If Ethereum L2 scaling reduces the value of ETH staking (lower fees, yield compression), or if macro liquidity crises trigger panic exits, restaking TVL could collapse from $19.5B to <$5B. EIGEN token has no use case outside restaking ecosystem. Probability: 20%.
+3. **Competitive erosion / regulatory risk** — Symbiotic's modularity or Karak's asset diversity could capture growing share of restaking market. Separately, SEC could challenge EIGEN as unregistered security if AVS rewards are framed as securities. Probability: 25%.
+
+### 5-year scenario probabilities
+- Generational (10x+ = $2.27+): 18% — EigenDA becomes standard L2 DA layer; EigenCompute scales; AVS ecosystem matures; restaking becomes $100B+; EIGEN captures 5%+ of value. Requires 2-3 catalysts to hit on schedule.
+- Strong (3-5x = $0.68-1.14): 22% — Restaking steady-states at $30-50B; AVS adoption moderate; protocol monetizes via fees; EIGEN value accrual begins. Thesis validated but not explosively.
+- Modest (1.5-3x = $0.34-0.68): 20% — Slow AVS adoption; restaking stays niche; token dilution offset by modest fee capture; sideways trading for 3y.
+- Flat (-30% to +50% = $0.16-0.34): 28% — June unlock triggers 30% drop; EIGEN consolidates; protocol finds limited traction; competitors take 10-20% share; token is a yield vehicle only (4% staking yield), no principal appreciation.
+- Thesis broken (-50%+ = <$0.11): 12% — Restaking collapses (ETH staking yield decimated); major exploits (repeat of Kelp DAO $300M hack); regulatory clampdown; protocol abandoned.
+Sum: 100%.
+
+### Entry trigger
+**Now:** Establish 1-2% core position at $0.20-0.25 if conviction on secular tailwind. Set stop at $0.14 (52-week low). Rationale: price near multi-month bottom; 7-day bounce shows bid; imminent catalyst (June unlock) is priced in (price already crushed 96%). Risk/reward ~3:1.
+**Better entry:** Wait for June 1 unlock to trigger selling. Enter at $0.12-0.16 (fresh washout) with 3-4% position. Stop at $0.10. Gives 60%+ upside to $0.25-0.30 with defined risk.
+**Alternative:** On-chain TVL data is leading indicator. If EigenLayer TVL drops below $15B, reduce position size by 50%. If it crosses $25B, size up to 2-3%.
+
+### Verdict: 3/4 — WATCH
+
+**Cyclical**: Strong (capitulation bottom, 96% drawdown, showing signs of recovery). **Secular**: Strong (ETH restaking is structural, 10x TVL growth, AVS ecosystem expanding). **Catalyst**: Medium (June unlock is sell pressure, not upside; EigenDA/EigenCompute 12-18mo away and unproven). **Margin of safety**: Weak (pre-revenue token, supply dilution risk, no profits, competitive threats). 
+
+**Recommendation:** Keep on watchlist. June 1 unlock creates defined entry opportunity; wait for selling pressure to subside before full position. Price must prove it can hold $0.15-0.18 post-unlock to justify entry. If it falls below $0.10, raise thesis conviction and add aggressively. Current price ($0.227) is fair value given binary nature of AVS adoption; not yet compelling vs. downside risk.
+
+### Sources
+- [EigenLayer price and historical data](https://coincodex.com/crypto/eigenlayer/)
+- [CoinGecko EIGEN tracking](https://www.coingecko.com/en/coins/eigencloud)
+- [DefiLlama EigenCloud metrics](https://defillama.com/protocol/eigencloud)
+- [Token unlock schedule](https://defillama.com/unlocks/eigenlayer)
+- [EigenLayer roadmap](https://docs.eigencloud.xyz/eigenlayer/roadmap)
+- [Restaking market analysis](https://blockeden.xyz/blog/2026/03/20/eigenlayer-18b-tvl-vertical-avs-specialization-restaking-evolution/)
+- [Tokenomics and vesting](https://tokenomist.ai/eigenlayer)
+- [EigenCloud blog mainnet launch](https://blog.eigencloud.xyz/mainnet-launch-eigenlayer-eigenda/)
+```

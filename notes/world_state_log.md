@@ -452,3 +452,120 @@ Sources:
 - [ECB Monetary Policy Decision April 30, 2026](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260430~81b7179e6f.en.html)
 - [Bank of Japan Interest Rate Decision](https://www.boj.or.jp/en/about/calendar/index.htm)
 - [US Treasury Auction Schedule](https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/most-recent-quarterly-refunding-documents)
+
+---
+
+## 2026-05-24T20:16:59Z — world_state_digest
+
+**Domains:** biotech-health, crypto-on-chain | **Lookback:** 30d | **Model:** haiku
+
+```
+# WORLD-STATE DIGEST — 2026-05-24
+
+Domains: biotech-health, crypto-on-chain  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### biotech-health
+
+**Regulatory Approvals (May 2026)**
+- [2026-05-01] FDA: Veppanu (vepdegestrant) approved for ER-positive HER2-negative ESR1-mutated advanced/metastatic breast cancer
+- [2026-05-08] FDA: VYVGART/VYVGART Hytrulo label expansion to all serotypes of generalized myasthenia gravis
+- [2026-05-13] FDA: Beqalzi (sonrotoclax), BCL-2 inhibitor, for relapsed/refractory mantle cell lymphoma
+- [2026-05-14] FDA: Trimbow (beclomethasone/formoterol/glycopyrrolate) for asthma maintenance
+- [2026-05-15] FDA: Baxfendy (baxdrostat), first-in-class aldosterone synthase inhibitor for hypertension
+- [2026-05-15] FDA: Immgolis/Immgolis Intri (golimumab-sldi), interchangeable TNF-blocker biosimilars for RA/UC
+- [2026-05-22] EMA CHMP: Jascayd (nerandomilast), first-in-class PDE4B inhibitor for idiopathic and progressive pulmonary fibrosis; first new IPF treatment in 10+ years; manufacturer Boehringer Ingelheim
+- [2026-05-22] EMA CHMP: Wegovy (tablets), first oral GLP-1 receptor agonist for weight management (alternative to subcutaneous injection)
+- [2026-05-22] EMA CHMP: Vijoice (alpelisib) for PIK3CA-related overgrowth spectrum (PROS) disorders, severe/life-threatening; addresses unmet medical need
+
+**Mechanism Research (NIH, late April–May 2026)**
+- [2026-05-22] NIH: Study on GLP-1 weight loss enhancement via modulating intracellular signaling to extend drug effects
+- [2026-05-14] NIH: First suite of human antibodies against measles virus developed
+- [2026-05-12] NIH: Pancreatic islet cell characterization for diabetes risk assessment via organ donation program
+- [2026-05-06] NIH: GLP-1 drugs' brain penetration mechanisms; testosterone and brain tumor risk studies
+- [2026-04-27/30] NIH: GLP-1 efficacy in alcohol use disorder; opioid withdrawal in newborns study
+
+**Epidemiology (CDC/MMWR, May 2026)**
+- [2026-05-21] CDC MMWR: Klebsiella pneumoniae Carbapenemase-producing outbreak in Ontario long-term care facility (May 2024–Jan 2025)
+- [2026-05-21] CDC MMWR: U.S. locally-acquired malaria cases documented; CDC issued operational guidance (2026)
+
+### crypto-on-chain
+
+**Layer 2 TVL and Activity Metrics (May 2026)**
+- [2026-05-24] L2BEAT/DefiLlama: Total L2 TVL across 73 active rollups: $48B+
+- [2026-05-24] L2BEAT: Arbitrum One TVL $16.9B (40–44% of L2 market)
+- [2026-05-02] DefiLlama: Base TVL $13.07B, bridged TVL surge reported
+- [2026-02] L2BEAT: Base daily transactions 12.89M, daily active users 382.5K (vs. Arbitrum higher TVL, lower activity)
+- [2026-05-24] L2BEAT: Arbitrum + Base combined = ~77% of all L2 DeFi liquidity; 50+ other rollups "dead"
+- [2026-05-24] L2BEAT: OP Mainnet $1.91B, Starknet $617M, Linea $421M, zkSync Era $404M
+- [2026-01-05] DefiLlama: Base TVL trajectory: $3.1B (Jan 2025) → $5.6B (early 2026) → $13.07B (May 2026); 46.6% of L2 DeFi TVL at one checkpoint
+- [2026-05] Coinbase: Base 2026 roadmap: L2 super-app, stablecoin/USDC payment scaling, developer tools expansion
+
+**Restaking & Liquid Staking (May 2026)**
+- [2026-05-24] DefiLlama: Liquid staking = largest DeFi category by TVL; Lido TVL $20B+
+- [2026-05-24] DefiLlama: Restaking = fastest-growing category; significantly expanding utility of staked assets
+- [2026-05] Restaking TVL: Category ATH $28.6B
+- [2026-02] EigenLayer: $15.258B TVL, 93.9% of restaking market share; 4.364M ETH restaked
+- [2026-02] EigenLayer: TVL growth $1.1B → $18B+ in ~18 months (fastest capital accumulation in DeFi history); all-time high $19.7B
+- [2026-04] DefiLlama: Top DeFi protocols by TVL: Lido $20B+, EigenCloud $9.8B, Morpho $7.6B, Sky $6.2B, Uniswap $3.3B
+
+---
+
+## CANDIDATE THEMES
+
+### GLP-1 Oral Formulation & Mechanism Expansion
+- **Underlying facts:** EMA approved Wegovy tablets (first oral GLP-1) May 22; multiple NIH studies on GLP-1 intracellular signaling and brain penetration mechanisms (May 2026); multiple FDA approvals in May targeting obesity, metabolic disorders, and adjacent indications (Veppanu, label expansions, Trimbow, Baxfendy).
+- **Implication:** Oral formulation removes injection barrier, expected to massively expand addressable market. Multiple concurrent mechanism-focused studies suggest category acceleration beyond existing understanding. Combination therapy potential with other agents (cardiac, metabolic) emerging.
+- **Possible plays:** Novo Nordisk (NVO), Eli Lilly (LLY), smaller biotech with oral GLP-1 candidates
+- **Direction:** Long
+- **Horizon:** Months (oral adoption) to years (market shift)
+- **Retail blindspot:** Assumes "GLP-1 is already fully priced"; doesn't quantify addressable market expansion from oral shift (barrier to entry removal). Focuses on known players, misses mechanism acceleration in support studies.
+- **Confidence:** HIGH
+
+### EigenLayer Restaking Dominance in Fastest-Growing Category
+- **Underlying facts:** Restaking is fastest-growing DeFi category; EigenLayer holds $15.258B TVL (93.9% market share), grew from $1.1B to $18B+ in ~18 months (fastest capital accumulation in DeFi history); whole category recently hit $28.6B ATH.
+- **Implication:** EigenLayer has near-monopoly position in the fastest-accelerating DeFi segment. Structural dominance via first-mover + network effects (AVS specialization, operator ecosystem) creates pricing power. Early-stage category means token value extraction may be underestimated vs. TVL growth.
+- **Possible plays:** EIGEN token
+- **Direction:** Long
+- **Horizon:** Months to years
+- **Retail blindspot:** Assumes competition will fragment market; doesn't price EigenLayer's 93.9% monopoly in a category growing faster than the rest of DeFi. Treats restaking as niche vs. structural shift in Ethereum security model.
+- **Confidence:** HIGH
+
+### Base L2 Winner-Take-Most Consolidation
+- **Underlying facts:** Base TVL grew from $3.1B (Jan 2025) → $13.07B (May 2026); daily transactions 12.89M, DAU 382.5K (Feb 2026). Arbitrum holds $16.9B TVL but lower activity. Arbitrum + Base = 77% of L2 liquidity; 73 rollups total; 50+ rollups "dead." Coinbase 2026 roadmap emphasizes Base L2 super-app expansion and stablecoin scaling.
+- **Implication:** Bifurcation reveals consolidation mechanics: Arbitrum consolidated deep TVL but lacks usage growth; Base is accumulating TVL at accelerating rate (3x growth in 4 months) with activity leadership. This trajectory suggests Base will capture future L2 TVL growth. Winner-take-most dynamics eliminate mid-tier L2s entirely.
+- **Possible plays:** ARB token (short/underweight relative to Base); COIN exposure to Base ecosystem upside; Base ecosystem dApps (if tokenized)
+- **Direction:** Long Base (via COIN, ecosystem), Short/Underweight ARB relative to Base
+- **Horizon:** Weeks to months (activity/TVL bifurcation visible now; consolidation tightens in near-term)
+- **Retail blindspot:** Assumes all 73 L2s remain viable; focuses on TVL rankings without calculating activity-to-TVL ratios or adoption velocity. Doesn't quantify that 77% duopoly + "dead" 50-rollup tail = near-winner-take-all dynamics already locked in.
+- **Confidence:** HIGH
+
+### Boehringer Ingelheim PDE4B Mechanism in Pulmonary Fibrosis
+- **Underlying facts:** Jascayd (nerandomilast), first-in-class PDE4B inhibitor, approved by EMA (May 22) and FDA for idiopathic and progressive pulmonary fibrosis; first new IPF treatment in 10+ years. Combination therapy shift observed in field (Jascayd enables multi-drug protocols).
+- **Implication:** Rare/orphan disease with large patient population (IPF: ~100K–200K patients globally); first-in-class commands premium pricing and combination upside. Boehringer Ingelheim expects global approvals throughout 2026 (Japan, UK pending).
+- **Possible plays:** Boehringer Ingelheim (BFVAF / BDRX German exchange)
+- **Direction:** Long
+- **Horizon:** Months (EU rollout) to years (global approvals)
+- **Retail blindspot:** Pulmonary fibrosis seen as "orphan / small market"; doesn't price first-in-class premium or combination therapy per-patient value uplift.
+- **Confidence:** MEDIUM
+
+---
+
+## NEXT-STEPS
+
+- Run `longterm_check.py` on: NVO, LLY, EIGEN, ARB, COIN, BFVAF
+- Run `catalyst_check.py` on: Boehringer Ingelheim earnings (Jascayd launch), Coinbase Base ecosystem milestones, EigenLayer AVS expansion announcements
+- Skip / Pass: PIK3CA disorders (Vijoice) — single approval, rare patient population, insufficient TVL/adoption data to establish mispricing
+```
+
+Sources:
+- [FDA Novel Drug Approvals 2026](https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026)
+- [NIH News Releases](https://www.nih.gov/news-events/news-releases)
+- [CDC MMWR](https://www.cdc.gov/mmwr/index.html)
+- [EMA Regulatory News (May 2026)](https://www.ema.europa.eu/en/news)
+- [DefiLlama DeFi Analytics](https://defillama.com/)
+- [L2Beat Layer 2 Dashboard](https://l2beat.com/)
+- [Boehringer Ingelheim Jascayd Approval](https://www.boehringer-ingelheim.com/human-health/lung-diseases/pulmonary-fibrosis/us-fda-approves-jascayd-nerandomilast-progressive-pulmonary-fibrosis)
+- [EigenLayer Restaking Growth Analysis](https://university.mitosis.org/eigenlayers-restaking-economy-hits-25b-tvl-too-big-to-fail/)
+- [Coinbase Base Network Surge](https://www.hokanews.com/2026/05/coinbase-base-hits-13b-tvl-is-this-new.html)
