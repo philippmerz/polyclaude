@@ -3465,3 +3465,19 @@ Yesterday's framework note (commit ecf554c) explicitly says: for late-stage bond
 - 0 redeems. Discover only shows May-31 (held). Sports: USA WC 2026 NO at $0.989 = 6.5% APY (below filter). Macro: Fed-June markets all 99%+ efficient.
 
 Telegram tick-summary subsumed by msg 331 catastrophic event escalation. Routine summary would be noise on top.
+
+## 2026-05-24 ~14:00 UTC — Sunday 14:00 cron tick — May-31 partial recovery
+
+**Material:** May-31 NO mark 0.345 → 0.505 (+16pp favorable since 02:00). MTM $6.01 → $8.81 = +$2.80 unrealized recovery. Position now -25.52% on cost (was -49% at low). UMA cache confirms YES dropped 0.625 → 0.495 (+13pp favorable).
+
+5 news alerts since 02:00, ALL MATERIAL on iran-peace ("largely negotiated", "Rubio significant progress", "Pakistan offers next talks"), all directionally adverse for our NO. Yet market RECOVERED — suggests market is absorbing the rhetoric and finding equilibrium. Either: (a) profit-taking on YES side, (b) realization that signing isn't actually today, (c) UMA-criterion-strict reading reasserting in market psychology.
+
+Regime-fall NO also recovered: +1pp to 0.895. Total MTM $76.27 → $79.41 = +$3.14 over 12h.
+
+**Kelly with P_NO=0.73:** May-31 edge now 22.5pp at mark 0.505 (was 35.5pp at 0.345). Still well above 10pp filter. BB fair=0.92 vs mark=0.505 = -41.5pp SCALE_UP. NOT scaling per yesterday's decision (R-U pattern risk + variance amplification on falling-knife position).
+
+**Cron outcomes:** UMA 1 PRICE_MOVE alert (favorable). Ostium unchanged. discover_markets surfaces Strait-of-Hormuz-traffic-returns-by-end-May NO at $0.912 (NEW candidate) — 6.4d to resolution. Need fresh evaluation if scaling cluster room available.
+
+**Position note:** Aliens NO mark 0.855 → 0.845 (-1pp). Edge dropped to +0.5pp per Kelly. BB at p=0.85: fair=0.86 vs mark 0.845 = +1.5pp — within noise. Hold.
+
+7 days to May-31 resolution. **HOLD decision stands. No scale. Awaiting actual signed-MOU text to make ultimate call.**
