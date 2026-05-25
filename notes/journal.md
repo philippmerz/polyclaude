@@ -3507,3 +3507,39 @@ Pre-end-of-May journal split flagged: file now 3344 lines; will batch on 2026-06
 Next weekly: 2026-05-31 (likely no fire due to weekend cron + May-31 resolution event); manual sweep 2026-06-01 covering trade-regulation + markets-corporate (remaining unvisited slugs).
 
 **Brief meta-reflection note:** No new structural findings beyond what's been shipped recently (term-structure framework, body-fetch re-val, daemon log fix, prior updates). May-31 position management is active; framework holds. Brief idle on reflection cycle.
+
+## 2026-05-25 ~02:00 UTC — Monday 02:00 cron tick (May-31 dramatic recovery, term structure reverted)
+
+**MAJOR recovery on May-31 NO:**
+- Mark 0.505 → 0.795 (+29pp favorable since 14:00)
+- MTM $8.81 → $13.86 = +$5.05 unrealized recovery
+- Position now +17.25% on cost (was -49.13% at low → -25.52% → now +17.25%)
+- UMA confirms YES dropped 0.495 → 0.205 (+29pp)
+
+**Term structure ALSO reverted:**
+- May 26: YES 0.575 → 0.075 (-50pp)
+- May 31: YES 0.655 → 0.205 (-45pp)
+- Jun 7: YES 0.69 → 0.275
+- Jun 30: YES 0.735 → 0.465
+- Dec 31: YES 0.88 → 0.76 (-12pp)
+
+This is decisive confirmation that yesterday's catastrophic move was SPECULATION/OVERREACTION, not a fundamental shift. Trump tempering + Tehran pushback brought it all back. The catalyst_check + Opus research framework worked correctly: identified the MOU + 30-day-window structure as TEMPORARY per criteria; market initially priced loose interpretation; reverted as no signing materialized.
+
+**Kelly vs BB framework hits real test:**
+- Kelly with P_NO=0.73: edge = -6.5pp (mark 0.795 > prior 0.73) → "trim/close candidate"
+- BB at t/T=0.78: fair_BB(0.73, 0.78) = 0.73^0.22 = 0.933 → mark 0.795 = -13.8pp SCALE_UP
+
+Per strategy/00 framework note (added 2026-05-19, commit ecf554c): **use BB for late-stage bond-like NO**. Don't trim on Kelly's static signal — at t/T=0.78 mark should be migrating toward 1.0, BB captures this. HOLD.
+
+**Position EV from current MTM:**
+- Hold to resolution: 0.73 × $17.44 + 0.27 × $0 = $12.73
+- Close at MTM: $13.86 realized
+- Close advantage: +$1.13 per static EV
+
+But: BB time-decay model says conditional P(NO from t=0.78 onward | no deal yet) ≈ 0.94 (via hazard-rate model p^(1-t/T)). At that conditional probability, hold EV = $16.36 vs close $13.86 = hold +$2.50 advantage. The Bayesian update for "no deal happened in 78% of window" is what BB captures.
+
+**Decision: HOLD per BB-framework dominance over Kelly-static for late-stage NO.** 5.9d to resolution.
+
+Total MTM $79.41 → $83.02 = +$3.61 over 12h. Iran-regime-fall also -2pp on regime-stays-stable signal (favorable for NO). Other positions stable.
+
+**Lesson reinforced:** Yesterday's framework framework lessons (term-structure-as-UMA-signal + Kelly-vs-BB) both validated through this volatility event. The HOLD decision (msg 333) was correct despite the catastrophic intermediate drawdown.
