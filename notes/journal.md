@@ -3551,3 +3551,22 @@ The May-31 volatility event (0.815 → 0.345 → 0.795 within 24h) revealed the 
 Updated the existing 2026-05-19 framework note in strategy/00_philosophy.md to make the mechanism explicit. This is a real reasoning refinement (not just doc cleanup) — the unconditional vs conditional probability distinction matters for future late-stage positions. Bounded ~5-line addition. Compounds.
 
 No other findings this cycle.
+
+## 2026-05-25 ~14:00 UTC — Monday 14:00 cron tick (May-31 adverse again, -7.5pp)
+
+**Material:** May-31 NO mark 0.795 → 0.720 (-7.5pp adverse since 02:00). MTM $13.86 → $12.56 = -$1.30 unrealized. Position +6.19% on cost. UMA shows YES moved 0.205 → 0.280.
+
+**Driver:** "Rubio says 'solid' Iran deal may come on Monday" (today). Market is pricing in the Monday hint. Counter-signals: "Iran denies deal imminent" + Iran chief negotiator pushback. Mixed = volatility.
+
+**Cross-position recovery offset:** Iran-regime-fall NO +3pp favorable to 0.885 (regime-stays-stable on deal-progress signaling). +$0.61 MTM. Total MTM $83.02 → $82.73 = only -$0.29 over 12h.
+
+**Body-fetch CRITICAL re-val production:** 3 more downgrades fired today across iran-peace alerts. System working.
+
+**Kelly + BB framework (post-Bayesian-mechanism note):**
+- Kelly edge: 1.0pp (mark 0.720 vs prior 0.73) → near-neutral
+- BB at t/T=0.80: fair=0.93^0.20 = 0.938 vs mark 0.720 = **-21.8pp SCALE_UP**
+- Per framework: hold per BB, ignore Kelly's near-neutral signal. Conditional-update interpretation: at t/T=0.80 with no deal yet, P(NO in remaining 5.4d) ≈ 0.94 — strongly favors NO.
+
+**Decision:** HOLD. 5.4d to resolution. Monday-deal-rumor is the catalyst risk; if no deal materializes today, expect reversion.
+
+Macro: only 2 Fed-June markets, no-change at $0.9765 = efficient.
