@@ -3543,3 +3543,11 @@ But: BB time-decay model says conditional P(NO from t=0.78 onward | no deal yet)
 Total MTM $79.41 → $83.02 = +$3.61 over 12h. Iran-regime-fall also -2pp on regime-stays-stable signal (favorable for NO). Other positions stable.
 
 **Lesson reinforced:** Yesterday's framework framework lessons (term-structure-as-UMA-signal + Kelly-vs-BB) both validated through this volatility event. The HOLD decision (msg 333) was correct despite the catastrophic intermediate drawdown.
+
+## 2026-05-25 ~02:15 UTC — Meta-reflection: Bayesian-conditional-update note added to strategy/00
+
+The May-31 volatility event (0.815 → 0.345 → 0.795 within 24h) revealed the underlying mechanism behind Brownian-bridge's "use BB for late-stage NO" rule: it's a Bayesian update via hazard-rate model. Conditional on "no YES event happened in 78% of the window," the probability of NO over the remaining 22% is `p^(1-t/T)` — strictly higher than the unconditional prior. At t/T=0.78 with P_NO=0.73, conditional ≈ 0.94.
+
+Updated the existing 2026-05-19 framework note in strategy/00_philosophy.md to make the mechanism explicit. This is a real reasoning refinement (not just doc cleanup) — the unconditional vs conditional probability distinction matters for future late-stage positions. Bounded ~5-line addition. Compounds.
+
+No other findings this cycle.

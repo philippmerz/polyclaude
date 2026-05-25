@@ -69,6 +69,8 @@ Concrete divergence (2026-05-19, May-31 Iran-peace NO, t/T=0.59, P_no=0.87, mark
 
 The Brownian-bridge read is correct for a position approaching resolution: mark *should* be migrating toward 1.0 even at a P_win = 0.87 prior, because each day passes without the YES event materializing. Kelly's static frame asks "would I enter at this price?" — a fair question that ignores time decay. Conversion: **use Kelly for entries, Brownian-bridge for holds**. Don't trim a late-stage bond-like NO just because Kelly's static edge has compressed.
 
+**Mechanism (refined 2026-05-25 after May-31 volatility event):** BB encodes a Bayesian update via the hazard-rate model. If `p` was the prior P(NO over the whole 0→T window), then conditional on "no YES event happened in the t/T portion already elapsed," the probability of NO over the remaining (1−t/T) portion is `p^(1−t/T)` — strictly higher than `p`. At t/T=0.78 with prior P_NO=0.73, the conditional becomes ≈0.94. Mark should track the conditional, not the unconditional prior. Kelly's static edge ignores this update; BB makes it explicit. Stress-tested 2026-05-24/25 when May-31 mark crashed 0.815→0.345 on Trump "largely negotiated" speculation then recovered to 0.795 within 24h — BB correctly held SCALE_UP throughout because the hazard-rate model expected mark migration toward 1.0 absent actual signing.
+
 ### Term-structure-as-UMA-interpretation-signal (added 2026-05-22)
 
 For multi-date "by date X" events with sub-markets across a term (May 22, May 26, May 31, Jun 15, Jun 30, Jul 31, Dec 31...), the LONGEST-DATED sub-market's YES price is the single most useful signal about how UMA-loose-vs-strict the market's interpretation will be.
