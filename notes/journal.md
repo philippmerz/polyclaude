@@ -3594,3 +3594,35 @@ Market continues drifting adverse despite favorable-for-NO news. Pattern: when n
 **Catalyst_check skipped:** last ran 2026-05-24 02:00 (P_YES strict = 11%). News flow since is net NO-favorable. Re-running would likely produce similar verdict. Sticking with current prior.
 
 **Decision: HOLD.** EV math at P_NO=0.73: hold $12.73 vs close $11.77 = +$0.96 hold advantage (thin but positive). BB framework dominant for late-stage. 4.9d to resolution.
+
+## 2026-05-26 ~14:00 UTC — Tuesday 14:00 cron tick (May-31 partial recovery, term structure tells story)
+
+**Material:** May-31 NO mark 0.675 → 0.725 (+5pp favorable since 02:00). MTM $11.77 → $12.64 = +$0.87 unrealized. Position +6.93% on cost. Iran-regime-fall NO +2pp favorable. Total MTM $80.62 → $82.14 = +$1.52 over 12h.
+
+**Term structure interpretation (most informative signal):**
+- May 26 (today, 4h remaining): YES 0.055 — market basically certain no deal today
+- May 31: YES 0.275 (recovered from 0.345 Sunday peak, 0.205 yesterday low, 0.295 today AM)
+- Jun 7: YES 0.395
+- Jun 15: YES 0.485 (was 0.335 Sunday — UP)
+- Jun 30: YES 0.545 (was 0.465 Sunday — UP)
+- Jul 31: YES 0.695
+- Dec 31: YES 0.805 (was 0.760 Sunday — UP)
+
+Pattern: probability mass is moving OUT in time. Market expects deal but NOT specifically by May 31. NO-favorable for our position. May-31 sub-market still well below Dec-31 base rate (0.805) suggesting "yes eventually but not in 4d."
+
+**News flow today (5 alerts, NET NO-favorable):**
+- Iran: "contradictory statements from US hindering deal"
+- US attacks near Strait of Hormuz (escalation)
+- Rubio "hopefully we can pull it off" (less confident than yest)
+- Missile strike in Hormuz (escalation)
+
+**Kelly + BB:**
+- Kelly edge 0.5pp at mark 0.725 vs P_NO 0.73 — neutral
+- BB at t/T=0.83: fair=0.947 vs mark 0.725 = -22.2pp SCALE_UP
+- Per framework + Bayesian mechanism: conditional P(NO in remaining 4.4d | no deal yet) ≈ 0.947 — strongly favors NO
+
+**EV math at P_NO=0.73:** hold $12.73 vs close $12.64 = +$0.09 (essentially indifferent per static EV). BB conditional says hold strongly favorable.
+
+**Decision:** HOLD per BB framework. 4.4d to resolution. Market collectively believes deal NOT by May 31.
+
+**Cron outcomes:** UMA clean, Ostium unchanged, 0 watchlist hits, 0 redeems. Discover: Strait-of-Hormuz-traffic-returns-by-end-May NO at $0.975 = 571% APY — interesting bond-like fade with mechanical resolution + 4.4d window, but iran-cluster cap binding for any new entry. Macro: no candidates.
