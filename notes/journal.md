@@ -3570,3 +3570,27 @@ No other findings this cycle.
 **Decision:** HOLD. 5.4d to resolution. Monday-deal-rumor is the catalyst risk; if no deal materializes today, expect reversion.
 
 Macro: only 2 Fed-June markets, no-change at $0.9765 = efficient.
+
+## 2026-05-26 ~02:00 UTC — Tuesday 02:00 cron tick (May-31 -4.5pp more, BB still strongly SCALE_UP)
+
+**Material:** May-31 NO mark 0.720 → 0.675 (-4.5pp adverse since 14:00). MTM $12.56 → $11.77 = -$0.79. Position now -0.45% on cost (essentially breakeven, vs +17.25% on Mon 02:00). UMA no alert (move just under 5pp threshold). Total MTM $82.73 → $80.62 = -$2.11 over 12h.
+
+**Iran-regime-fall NO:** +1pp favorable to 0.845; small offset.
+
+**News flow today NET NO-favorable but market moved adverse:**
+- "Nuclear issue remains key obstacle" (MATERIAL favorable)
+- "Both sides downplay rapid deal" (MATERIAL favorable)
+- "Trump's deal outline sparks alarm in Israel" — Israeli pushback adds friction
+- "Negotiations proceeding" (CRITICAL, body-fetch downgraded)
+- "Iran chief negotiator denies imminent deal" (yesterday, still standing)
+
+Market continues drifting adverse despite favorable-for-NO news. Pattern: when no signing materializes in 24-48h after Trump rhetoric, market should revert (as it did Mon overnight). Today is +24h from Rubio "Monday" hint; if no signing by Tue evening, expect reversion.
+
+**Kelly + BB framework:**
+- Kelly edge: 5.5pp (mark 0.675 vs prior 0.73) → modest entry candidate (below 10pp filter)
+- BB at t/T=0.81: fair=0.73^0.19 = 0.943 vs mark 0.675 = **-26.8pp SCALE_UP**
+- Per Bayesian-mechanism note: conditional P(NO in remaining 4.9d) ≈ 0.94 — strongly favors NO
+
+**Catalyst_check skipped:** last ran 2026-05-24 02:00 (P_YES strict = 11%). News flow since is net NO-favorable. Re-running would likely produce similar verdict. Sticking with current prior.
+
+**Decision: HOLD.** EV math at P_NO=0.73: hold $12.73 vs close $11.77 = +$0.96 hold advantage (thin but positive). BB framework dominant for late-stage. 4.9d to resolution.
