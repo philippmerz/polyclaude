@@ -3626,3 +3626,13 @@ Pattern: probability mass is moving OUT in time. Market expects deal but NOT spe
 **Decision:** HOLD per BB framework. 4.4d to resolution. Market collectively believes deal NOT by May 31.
 
 **Cron outcomes:** UMA clean, Ostium unchanged, 0 watchlist hits, 0 redeems. Discover: Strait-of-Hormuz-traffic-returns-by-end-May NO at $0.975 = 571% APY — interesting bond-like fade with mechanical resolution + 4.4d window, but iran-cluster cap binding for any new entry. Macro: no candidates.
+
+## 2026-05-27 ~02:00 UTC — Wednesday 02:00 cron tick (May-31 stable around 0.755-0.775)
+
+**Material:** May-31 NO mark at 0.755 (slight drift from 0.775 earlier this hour). Position +14% on cost. UMA clean. No new news_alerts since the 4 NO-favorable ones overnight (Trump "not to rush", Iran ceasefire complaints, "did Trump oversell" framing).
+
+**Kelly + BB:** Kelly edge -2.5pp at mark 0.755 vs P_NO 0.73 = trim candidate (static). BB at t/T=0.84 conditional: fair 0.952 vs mark 0.755 = -19.7pp SCALE_UP. Per Bayesian-mechanism framework: conditional P(NO in remaining 3.9d | no deal yet) = 0.952 — strongly favors NO. Hold.
+
+**Cron outcomes:** Ostium unchanged. 0 watchlist hits. 0 redeems. Discover: only Senegal-WC NO at 4.2% APY (below filter). No actions.
+
+3.9d to resolution. Mark stable in 0.72-0.78 range = market consensus "deal not by May-31."
