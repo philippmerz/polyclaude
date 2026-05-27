@@ -3636,3 +3636,13 @@ Pattern: probability mass is moving OUT in time. Market expects deal but NOT spe
 **Cron outcomes:** Ostium unchanged. 0 watchlist hits. 0 redeems. Discover: only Senegal-WC NO at 4.2% APY (below filter). No actions.
 
 3.9d to resolution. Mark stable in 0.72-0.78 range = market consensus "deal not by May-31."
+
+## 2026-05-27 ~14:00 UTC — Wednesday 14:00 cron tick (May-31 stable +2pp, MTM +\$0.66)
+
+**Material:** May-31 NO mark 0.755 → 0.775 (+2pp favorable). Position +14.30% on cost. Iran-regime-fall +1pp favorable. Total MTM $82.7 → $83.36 = +$0.66.
+
+2 news alerts (mixed: Lebanon escalation NO-favorable, Rubio "hopefully we can pull it off" NO-adverse). Body-fetch downgrade fired on Lebanon article.
+
+Kelly edge -4.5pp = trim per static. BB at t/T=0.86 conditional: fair 0.957 vs mark 0.775 = -18.2pp SCALE_UP. Per framework: HOLD.
+
+3.4d to resolution. No actions.
