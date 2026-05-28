@@ -1,5 +1,5 @@
 {
-  "next_id": 27,
+  "next_id": 28,
   "decisions": [
     {
       "id": 1,
@@ -521,6 +521,25 @@
         "ndx",
         "pair-trade",
         "close"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2026-05-28T10:42:53Z",
+      "type": "close_position",
+      "thesis": "Ostium SPX LONG 5x (DEC-0011) closed manually on operator direction (msg 348 acknowledgement of executive-continuation deferral). Trade ID 1848511: entry $7167.41, closed at $7510.66 (+4.79% on price = +24% on 5x = +$1.17 collat gain). Payout ~$6.06 USDC on Arb. Position was naked after NDX SHORT TP'd 2026-05-18 \u2014 no clear thesis, points-farming purpose marginal. Closing locks gain + ends 10d drift.",
+      "confidence": "high",
+      "prediction": "Manual close at +24% on collateral; outcome locked.",
+      "size_usd": 4.89,
+      "resolution_at": "2026-05-28",
+      "tags": [
+        "ostium",
+        "spx",
+        "close",
+        "pair-trade"
       ],
       "outcome": null,
       "calibration_delta": null,
