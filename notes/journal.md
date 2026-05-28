@@ -3646,3 +3646,25 @@ Pattern: probability mass is moving OUT in time. Market expects deal but NOT spe
 Kelly edge -4.5pp = trim per static. BB at t/T=0.86 conditional: fair 0.957 vs mark 0.775 = -18.2pp SCALE_UP. Per framework: HOLD.
 
 3.4d to resolution. No actions.
+
+## 2026-05-28 ~02:00 UTC — Thursday 02:00 cron tick (May-31 strong recovery +10pp)
+
+**Material:** May-31 NO mark 0.775 → 0.875 (+10pp favorable since 14:00). MTM $13.52 → $15.26 = +$1.74 unrealized. Position +29.05% on cost (best since pre-Sunday-catastrophe peak). UMA confirms YES dropped 0.225 → 0.125 (+10pp NO favorable).
+
+**Drivers:** Trump "tell negotiators NOT to rush" (escalation from "Monday deal" to "be patient"). Trump threatening to bomb Oman over Strait of Hormuz impasse — major escalation. Both confirm deal not imminent by May 31.
+
+**Kelly + BB:**
+- Kelly edge: -14.5pp at mark 0.875 vs P_NO 0.73 = trim per static
+- BB at t/T=0.88: fair=0.962 vs mark 0.875 = -8.7pp SCALE_UP (still)
+- Per framework: hold per BB. Conditional P(NO in remaining 2.9d) ≈ 0.96
+
+**Note:** Static EV math says close (close $15.26 > hold $12.73). But BB conditional says fair value is $16.78 ($17.44 × 0.962). The hazard-rate mechanism captures the "no deal yet despite 88% of window passing" Bayesian update. Hold per framework.
+
+Iran-regime-fall NO: minor drift -1pp to 0.865. Other positions stable. Total MTM $83.36 → $84.74 = +$1.38 over 12h.
+
+**Position trajectory recap:**
+- Sunday low: $6.01 (-49% on cost)
+- Today peak: $15.26 (+29% on cost)
+- Resolution in 2.9d at $17.44 if NO wins
+
+No actions. Hold per BB framework. Discover/macro nothing new.
