@@ -8,7 +8,7 @@ Single canonical home for the project's operational infrastructure. Other docs r
 - **Driver:** `scripts/daily_checkin.sh`. Resolves repo root from `${BASH_SOURCE[0]}`, sources `~/.polyclaude/env` for secret paths, forks the operator's interactive Claude session via `claude -p --resume <id> --fork-session --model opus --effort max --permission-mode acceptEdits`.
 - **Per-tick token cap:** ~100K (the prompt itself caps).
 - **Logs:** `polyclaude/logs/cron/checkin_<UTC ts>.log` (gitignored, auto-pruned at 30d).
-- **What each tick does:** load context (memory, journal tail, strategy, questions), mark portfolio + wallet state via `scripts/positions.py` and `scripts/wallet_status.py`, scan WebSearch for active-position catalysts, decide hold/adjust/add/close, journal it, write a weekly report if ≥7d since last, commit + push (audit diff for secrets first), Telegram-alert if anything material moved.
+- **What each tick does:** load context (memory, journal tail, strategy), mark portfolio + wallet state via `scripts/positions.py` and `scripts/wallet_status.py`, scan WebSearch for active-position catalysts, decide hold/adjust/add/close, journal it, write a weekly report if ≥7d since last, commit + push (audit diff for secrets first), Telegram-alert if anything material moved.
 
 ## News watcher — 24/7 reactive layer
 
