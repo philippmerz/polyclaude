@@ -3676,3 +3676,26 @@ Caught a sloppy application of the framework in last cron tick (commit 278c0b3):
 Added explicit gotcha note to strategy/00 framework section: "EV = unconditional × max_payout" is WRONG at intermediate time; must use conditional fair_BB. Kelly `edge = p - mark` is a sizing input, not a payout estimator.
 
 Bounded ~3-line addition. Compounds: prevents future LLM reads from making the same confused step in late-stage NO position EV-comparisons.
+
+## 2026-05-28 ~14:00 UTC — Thursday 14:00 cron tick (May-31 NO at all-time high mark)
+
+**Material:** May-31 NO mark 0.875 → 0.925 (+5pp favorable since 02:00). MTM $15.26 → $16.13 = +$0.87. Position **+36.43% on cost** — all-time high since entry. UMA confirms YES dropped 0.125 → 0.075. Total MTM $84.74 → $85.27 = +$0.53.
+
+**Drivers (5 news alerts, all NO-favorable):**
+- US/Iran trade air strikes — Trump dismisses Hormuz deal
+- US launches new strikes (day 90)
+- Trump threatens to "blow up" Oman over strait
+- Trump: "I don't care about war impact"
+
+Massive escalation = deal near-impossible by May 31 (2.4d). Market collectively agrees — 92.5% NO pricing.
+
+**Kelly + BB:**
+- Kelly edge: -19.5pp at mark 0.925 vs P_NO 0.73 (trim per static)
+- BB at t/T=0.89: fair=0.9664 vs mark 0.925 = -4.1pp SCALE_UP
+- Per framework + EV-gotcha note (commit 4d06e15): EV(hold) = 0.966 × $17.44 = $16.84 vs close $16.13 = +$0.71 hold advantage
+
+**Decision: HOLD.** 2.4d to resolution. If NO wins: +$1.31 more at lock-in.
+
+Iran-regime-fall NO -1pp to 0.855 (trade-off: same news that hurts iran-peace YES helps iran-regime YES via escalation = destabilization risk; small per-position offset). Position still +28.6% on cost.
+
+**Cron outcomes:** 0 redeems, 0 watchlist hits, 0 discover candidates, Ostium 0 open (closed yest). Trump-out NO holding 0.895 / +19.8%, others stable.
