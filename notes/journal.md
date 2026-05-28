@@ -3668,3 +3668,11 @@ Iran-regime-fall NO: minor drift -1pp to 0.865. Other positions stable. Total MT
 - Resolution in 2.9d at $17.44 if NO wins
 
 No actions. Hold per BB framework. Discover/macro nothing new.
+
+## 2026-05-28 ~02:30 UTC — Brief reflection cycle: framework EV-computation clarification
+
+Caught a sloppy application of the framework in last cron tick (commit 278c0b3): wrote "static Kelly EV says close (\$15.26 > \$12.73)" using unconditional P_NO=0.73 × \$17.44. The correct EV at t/T=0.88 uses CONDITIONAL fair_BB=0.962, giving expected payout \$16.78 vs close \$15.26 = +\$1.52 hold advantage. Decision was right (hold per BB framework explicit override) but the reasoning chain had a confused step.
+
+Added explicit gotcha note to strategy/00 framework section: "EV = unconditional × max_payout" is WRONG at intermediate time; must use conditional fair_BB. Kelly `edge = p - mark` is a sizing input, not a payout estimator.
+
+Bounded ~3-line addition. Compounds: prevents future LLM reads from making the same confused step in late-stage NO position EV-comparisons.
