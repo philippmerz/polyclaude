@@ -12,7 +12,7 @@ Single sleeve, <1y horizon, Kelly+ρ-adjusted sizing via `scripts/portfolio_kell
 
 **Filters (effective post-R-U strategy pivot, 2026-05-11):**
 - Mechanical-resolution markets only — skip subjective "permanent peace deal / ceasefire / qualifies-as-X" markets
-- 10pp+ edge bar at entry (was 5pp)
+- Edge bar = positive Kelly recommendation above $5 PM minimum (2026-05-29 relax from 10pp; the 10pp bar was an over-correction — R-U was an API-observability failure not edge-thinness, and uma_status_check.py closes that gap directly)
 - `scripts/polyclaude_enter.py` mandatory for every entry — enforces umaResolutionStatus check + Kelly sizing
 - Max 5 concurrent active positions
 
