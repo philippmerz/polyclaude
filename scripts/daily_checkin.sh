@@ -136,7 +136,7 @@ cd "${HOME}"
   echo "${PROMPT}" | claude -p \
     --resume "${SESSION_ID}" \
     --fork-session \
-    --model opus \
+    --model "claude-opus-4-8[1m]" \
     --effort max \
     --permission-mode acceptEdits \
     --allowed-tools "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,TaskCreate,TaskUpdate,TaskList" \
