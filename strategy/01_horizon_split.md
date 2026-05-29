@@ -12,7 +12,7 @@ Single sleeve, <1y horizon, Kelly+ρ-adjusted sizing via `scripts/portfolio_kell
 
 **Filters (effective post-R-U strategy pivot, 2026-05-11):**
 - Mechanical-resolution markets only — skip subjective "permanent peace deal / ceasefire / qualifies-as-X" markets
-- Edge bar = positive Kelly recommendation above $5 PM minimum (2026-05-29 relax from 10pp; the 10pp bar was an over-correction — R-U was an API-observability failure not edge-thinness, and uma_status_check.py closes that gap directly)
+- Edge bar = **robust positive EV**: trade must clear op-cost (~$0.05) at the PESSIMISTIC bound of the p estimate (`p_win − edge_haircut`, default haircut 0.05), enforced by polyclaude_enter.py's robust-edge gate. Retired the flat 10pp bar 2026-05-29 (over-correction; R-U was API-observability not edge-thinness, closed by uma_status_check.py). The haircut self-scales the effective floor: confident mechanical estimates clear thin edges; fuzzy estimates demand fat edges. It is NOT naive point-estimate +EV — Kelly punishes overbetting a believed-but-wrong edge.
 - `scripts/polyclaude_enter.py` mandatory for every entry — enforces umaResolutionStatus check + Kelly sizing
 - Max 5 concurrent active positions
 
