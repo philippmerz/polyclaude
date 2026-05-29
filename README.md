@@ -123,6 +123,7 @@ logs/              — gitignored: cron + news daemon logs
 - `watchlist_triggers.json` — entry-trigger config for `watchlist_monitor.py` (12 candidates, all `route=ibkr_surface`)
 - `primary_sources.md` — curated factual URLs for `world_state_digest.py`
 - `pnl_weekly.md` — weekly P&L reports
+- `capital_ledger.md` — authoritative record of operator deposits in/out ($170 trading capital + gas). Log every external flow here immediately.
 - `catalyst_log.md` / `longterm_log.md` / `world_state_log.md` — append-only outputs from per-script analyses
 - `prompter_primer.md` — DEPRECATED architecture, kept for recoverability
 
