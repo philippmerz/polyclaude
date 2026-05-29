@@ -3699,3 +3699,13 @@ Massive escalation = deal near-impossible by May 31 (2.4d). Market collectively 
 Iran-regime-fall NO -1pp to 0.855 (trade-off: same news that hurts iran-peace YES helps iran-regime YES via escalation = destabilization risk; small per-position offset). Position still +28.6% on cost.
 
 **Cron outcomes:** 0 redeems, 0 watchlist hits, 0 discover candidates, Ostium 0 open (closed yest). Trump-out NO holding 0.895 / +19.8%, others stable.
+
+## 2026-05-29 ~02:00 UTC — Friday 02:00 cron tick (May-31 mark stable 0.885, 1.9d to resolution)
+
+**Material:** May-31 NO mark stable at 0.885 (vs 0.885 at midnight, -4pp from yest 14:00 peak 0.925). Position +30.53% on cost. Other positions stable.
+
+**Kelly + BB:** Kelly -15.5pp trim (static), BB at t/T=0.91: fair 0.971 vs mark 0.885 = -8.6pp SCALE_UP. EV(hold) = 0.971 × $17.44 = $16.94 vs close $15.43 = +$1.51 hold advantage. Per framework + EV-gotcha: HOLD.
+
+**Cron outcomes:** UMA clean, Ostium 0 open (closed Wed), 0 watchlist hits, 0 redeems, 0 discover candidates. Macro: efficient. No actions.
+
+1.9d to resolution. Market still implies 11.5% YES probability for permanent deal in <2d.
