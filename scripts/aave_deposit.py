@@ -130,6 +130,26 @@ def _w3(chain: str) -> Web3:
     raise RuntimeError(f"no working rpc for {chain}")
 
 
+def _gas_fields(w: Web3, cfg: dict, gas_limit: int) -> dict:
+    """Chain-aware EIP-1559 gas fields. Polygon (chainId 137) enforces a
+    validator minimum priority fee (~25 gwei as of 2026-05; the old hardcoded
+    ~0 tip got txns rejected with 'gas price below minimum'). Base/Arb accept
+    the node-suggested tip (near-zero). Fix shipped 2026-05-29 after an
+    Aave-Polygon supply bounced on the stale 1_000_000-wei (0.001 gwei) tip."""
+    base = w.eth.gas_price
+    try:
+        tip = int(w.eth.max_priority_fee)
+    except Exception:
+        tip = 0
+    if cfg["id"] == 137:  # Polygon
+        tip = max(tip, 30_000_000_000)  # 30 gwei floor
+    return {
+        "gas": gas_limit,
+        "maxFeePerGas": int(base * 2) + tip,
+        "maxPriorityFeePerGas": tip,
+    }
+
+
 def cmd_rate(args: argparse.Namespace) -> int:
     cfg = CHAIN[args.chain]
     w = _w3(args.chain)
@@ -177,12 +197,9 @@ def cmd_supply(args: argparse.Namespace) -> int:
     if allow < amount_units:
         print(f"approving {args.token} -> Aave Pool...")
         nonce = w.eth.get_transaction_count(addr)
-        gas_price = w.eth.gas_price
         approve_tx = plain.functions.approve(pool_addr, MAX_UINT).build_transaction({
             "from": addr, "nonce": nonce, "chainId": cfg["id"],
-            "gas": 200_000,
-            "maxFeePerGas": max(int(gas_price * 3), int(gas_price + 1_000_000)),
-            "maxPriorityFeePerGas": 1_000_000,
+            **_gas_fields(w, cfg, 200_000),
         })
         h = w.eth.send_raw_transaction(
             Account.sign_transaction(approve_tx, pk).raw_transaction)
@@ -195,12 +212,9 @@ def cmd_supply(args: argparse.Namespace) -> int:
     print(f"supplying {args.amount_usdc} {args.token}...")
     pool = w.eth.contract(address=pool_addr, abi=POOL_ABI)
     nonce = w.eth.get_transaction_count(addr)
-    gas_price = w.eth.gas_price
     supply_tx = pool.functions.supply(asset, amount_units, addr, 0).build_transaction({
         "from": addr, "nonce": nonce, "chainId": cfg["id"],
-        "gas": 400_000,
-        "maxFeePerGas": int(gas_price * 2),
-        "maxPriorityFeePerGas": 0,
+        **_gas_fields(w, cfg, 400_000),
     })
     h = w.eth.send_raw_transaction(
         Account.sign_transaction(supply_tx, pk).raw_transaction)
@@ -237,12 +251,9 @@ def cmd_withdraw(args: argparse.Namespace) -> int:
 
     pool = w.eth.contract(address=pool_addr, abi=POOL_ABI)
     nonce = w.eth.get_transaction_count(addr)
-    gas_price = w.eth.gas_price
     tx = pool.functions.withdraw(asset, amount_units, addr).build_transaction({
         "from": addr, "nonce": nonce, "chainId": cfg["id"],
-        "gas": 400_000,
-        "maxFeePerGas": int(gas_price * 2),
-        "maxPriorityFeePerGas": 0,
+        **_gas_fields(w, cfg, 400_000),
     })
     h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
     print(f"  withdraw tx: 0x{h.hex()}")

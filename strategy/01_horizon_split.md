@@ -16,7 +16,7 @@ Single sleeve, <1y horizon, Kelly+ρ-adjusted sizing via `scripts/portfolio_kell
 - `scripts/polyclaude_enter.py` mandatory for every entry — enforces umaResolutionStatus check + Kelly sizing
 - Max 5 concurrent active positions
 
-**Target allocation (revised 2026-05-29):** No fixed ratio — operator removed the 60/40 constraint. Idle capital defaults to Aave (Base or Arb USDC supply, 3.4-3.8% APY hurdle floor + <1min withdrawability). High-conviction filter-passing PM entries may drain Aave without limit. Discipline lives in the entry filters + sizing math, not a static allocation ratio.
+**Target allocation (revised 2026-05-29):** No fixed ratio — operator removed the 60/40 constraint. Idle capital defaults to Aave. **Idle-home rule (corrected 2026-05-29): supply on the SAME chain the capital already sits on — don't bridge to chase a marginally higher rate.** PM-sleeve idle is USDC.e on Polygon → Aave Polygon USDC.e (~2.7% APY, zero bridge, <1min-withdrawable + same chain as Polymarket so instantly available for entries). Crypto-sleeve idle → Aave Base/Arb where it sits. A ~0.5pp rate gap to Base native USDC does NOT justify a ~$0.40 bridge on sub-$100 amounts (bridge cost > a year of the differential). High-conviction filter-passing PM entries may drain Aave without limit. Discipline lives in the entry filters + sizing math, not a static allocation ratio. **The prior "batch-bridge to Aave Base after May-31" plan was wrong** — it was premised on a stale "Aave home = Base" mental model; same-chain Polygon supply is strictly better for PM-sleeve capital.
 
 ## Historical reference (April 2026 architecture)
 
