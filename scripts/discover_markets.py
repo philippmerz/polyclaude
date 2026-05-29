@@ -50,8 +50,18 @@ def annualized_yield_after_fee(p_buy: float, days: float) -> float | None:
         return float("inf")  # effectively infinite APY for ultra-short tail trades
 
 
-def fetch_active(limit_per_page: int = 500, max_pages: int = 8) -> list[dict[str, Any]]:
-    """Fetch active+open markets sorted by 24h volume desc, paginated."""
+def fetch_active(limit_per_page: int = 100, max_pages: int = 8) -> list[dict[str, Any]]:
+    """Fetch active+open markets sorted by 24h volume desc, paginated.
+
+    NOTE (2026-05-29 fix): the gamma API hard-caps every response at 100 rows
+    regardless of the `limit` param. The prior default limit_per_page=500 meant
+    the very first page returned 100 < 500, tripping the short-batch break — so
+    the scan only ever saw the TOP 100 markets by volume (vol24h >= ~$225k) and
+    NEVER fetched the long tail. That silently capped sourcing at ~10% of intent
+    and excluded exactly the neglected by-date longshots the strategy names as
+    the edge zone ("the long tail is where mispricings live"). Setting page size
+    to the API's true 100 lets pagination walk the tail: max_pages=8 → ~800
+    markets, reaching down to ~$15-40k-vol mechanical-resolution fades."""
     out: list[dict[str, Any]] = []
     seen_ids: set[str] = set()
     with httpx.Client(timeout=20.0) as c:
@@ -77,6 +87,8 @@ def fetch_active(limit_per_page: int = 500, max_pages: int = 8) -> list[dict[str
                 if mid not in seen_ids:
                     seen_ids.add(mid)
                     out.append(m)
+            # The API caps at 100/page; only stop when a page comes back SHORT of
+            # that true cap (i.e., genuinely the end), not short of our request.
             if len(batch) < limit_per_page:
                 break
     return out
@@ -239,7 +251,12 @@ def shortlist(
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--min-liquidity", type=float, default=20_000)
-    ap.add_argument("--min-vol24", type=float, default=2_000)
+    ap.add_argument("--min-vol24", type=float, default=500,
+                    help="Min 24h volume. Lowered 2026-05-29 from 2000 → 500: for a TAKER "
+                         "lifting a resting NO/YES ask, fillability is guaranteed by --min-liquidity "
+                         "(book depth), not recent volume. A high volume floor re-excluded the quiet, "
+                         "neglected by-date tail — which is precisely where mispricings live (low volume "
+                         "BECAUSE neglected). Liquidity + spread floors keep junk out.")
     ap.add_argument("--max-spread", type=float, default=0.05)
     ap.add_argument("--horizon-days", type=float, default=370)
     ap.add_argument("--top", type=int, default=80)
