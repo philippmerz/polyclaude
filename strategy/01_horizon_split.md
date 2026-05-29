@@ -16,7 +16,7 @@ Single sleeve, <1y horizon, Kelly+ρ-adjusted sizing via `scripts/portfolio_kell
 - `scripts/polyclaude_enter.py` mandatory for every entry — enforces umaResolutionStatus check + Kelly sizing
 - Max 5 concurrent active positions
 
-**Target allocation:** 60% Aave reserve (hurdle floor 3.4-3.8% APY) / 40% PM selective.
+**Target allocation (revised 2026-05-29):** No fixed ratio — operator removed the 60/40 constraint. Idle capital defaults to Aave (Base or Arb USDC supply, 3.4-3.8% APY hurdle floor + <1min withdrawability). High-conviction filter-passing PM entries may drain Aave without limit. Discipline lives in the entry filters + sizing math, not a static allocation ratio.
 
 ## Historical reference (April 2026 architecture)
 

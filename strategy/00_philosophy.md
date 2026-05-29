@@ -3,7 +3,7 @@
 > **Current state (2026-05-17):**
 > - Bankroll: ~$170 across Aave Base reserve + Polymarket + Crypto sleeves (was $70 at kickoff)
 > - Horizon: 1y kickoff (2026-04-25 → 2027-04-25); per-position holding horizon capped at <1y (multi-year plays → operator's IBKR sleeve)
-> - Strategy (2026-05-11 pivot post-R-U miss): 60% Aave reserve / 40% Polymarket selective. Mechanical-resolution markets only; 10pp+ edge bar at entry; `scripts/polyclaude_enter.py` mandatory for every entry; max 5 concurrent positions
+> - Strategy (2026-05-11 pivot post-R-U miss, refined 2026-05-29): mechanical-resolution markets only; 10pp+ edge bar at entry; `scripts/polyclaude_enter.py` mandatory for every entry; max 5 concurrent positions. **No fixed Aave/PM ratio target — operator removed the 60/40 constraint 2026-05-29; idle capital defaults to Aave (yield + immediate withdrawability), but high-conviction filter-passing PM entries may drain Aave without limit. Discipline lives in the filters (10pp edge + mechanical resolution + cluster cap + Kelly+ρ sizing + Brownian-bridge late-stage signals), not a static allocation ratio.**
 > - Goal: **maximize ROI** (operator directive 2026-05-14: calibration data happens automatically; focusing on it directly is Goodhart's law)
 > - Sizing: Kelly+ρ-adjusted constrained portfolio via `scripts/portfolio_kelly.py --constrained` (supersedes naive cluster-cap math)
 >
