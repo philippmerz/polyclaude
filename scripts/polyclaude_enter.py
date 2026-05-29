@@ -110,6 +110,10 @@ def main() -> int:
                    help="Override Kelly recommendation with manual $ size")
     p.add_argument("--skip-catalyst-check", action="store_true",
                    help="Skip catalyst_check (use only --my-p)")
+    p.add_argument("--edge-haircut", type=float, default=0.05,
+                   help="Pessimistic shift applied to p for the robust-edge gate "
+                        "(default 0.05). Larger = demand fatter edge for fuzzier estimates; "
+                        "smaller only for genuinely high-confidence mechanical-market estimates.")
     args = p.parse_args()
 
     # Resolve market
@@ -213,6 +217,29 @@ def main() -> int:
 
     shares = deploy_dollar / mark
     profit_if_win = shares * (1.0 - mark)
+
+    # Robust-edge gate (2026-05-29: replaces the retired flat 10pp edge bar).
+    # The edge bar was relaxed to "positive EV after op-cost" — but EV computed
+    # on the CENTRAL p estimate is fragile: my p is itself uncertain, and Kelly
+    # punishes overbetting a believed-but-wrong edge. So gate on the PESSIMISTIC
+    # bound of the estimate, not the point estimate. This self-scales: a
+    # confident mechanical-market estimate (small --edge-haircut) clears thin
+    # edges; a fuzzy estimate (large haircut) demands a fat edge. Reproduces a
+    # margin-of-safety proportional to estimation uncertainty rather than a flat
+    # phantom floor. op_cost ≈ haiku catalyst_check (~$0.02) + gas + slippage.
+    OP_COST = 0.05
+    p_robust = my_p - args.edge_haircut
+    ev_robust = shares * (p_robust - mark)  # EV of position at pessimistic p
+    ev_central = shares * (my_p - mark)
+    if p_robust <= mark or ev_robust <= OP_COST:
+        print(f"\nDECISION: SKIP — edge not robust to estimation error.")
+        print(f"  central p={my_p:.4f} → EV ${ev_central:+.2f}; "
+              f"pessimistic p={p_robust:.4f} (haircut {args.edge_haircut:.2f}) → EV ${ev_robust:+.2f}")
+        print(f"  Need EV > ${OP_COST:.2f} at the pessimistic bound. "
+              f"Thin point-estimate edge dominated by estimation noise.")
+        print(f"  Override with a smaller --edge-haircut only if the p estimate is "
+              f"genuinely high-confidence (mechanical resolution, tight catalyst_check band).")
+        return 0
 
     print(f"\n=== KELLY ANALYSIS ===")
     print(f"  Buying {side} @ ${mark:.4f}, P({side} wins) = {my_p:.4f}")
