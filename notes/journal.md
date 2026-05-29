@@ -3709,3 +3709,20 @@ Iran-regime-fall NO -1pp to 0.855 (trade-off: same news that hurts iran-peace YE
 **Cron outcomes:** UMA clean, Ostium 0 open (closed Wed), 0 watchlist hits, 0 redeems, 0 discover candidates. Macro: efficient. No actions.
 
 1.9d to resolution. Market still implies 11.5% YES probability for permanent deal in <2d.
+
+## 2026-05-29 ~14:00 UTC — Friday 14:00 cron tick (May-31 +3pp; "60-day ceasefire" framing = TEMPORARY per criteria)
+
+**Material:** May-31 NO mark 0.885 → 0.915 (+3pp favorable). MTM $15.43 → $15.96 = +$0.53. Position +34.95% on cost. Total MTM $83.94 → $85.13 = +$1.19.
+
+**KEY news framing:** 5 alerts converge on "**60-day ceasefire framework / ceasefire EXTENSION**" — this is EXPLICITLY temporary per Polymarket resolution criteria ("agreements that are explicitly temporary will not qualify"). Even if signed by May 31, it would NOT meet permanent-deal threshold. NO-favorable strong.
+
+Body-fetch CRITICAL re-val fired on Vance article, downgraded to MATERIAL with explicit "ceasefire extension" reasoning. Infrastructure correctly identifying loose vs strict deal framings.
+
+**Kelly + BB:**
+- Kelly -18.5pp trim (static)
+- BB at t/T=0.92: fair 0.976 vs mark 0.915 = -6.1pp SCALE_UP
+- EV(hold) = 0.976 × $17.44 = $17.02 vs close $15.96 = +$1.06 hold advantage
+
+**Decision: HOLD.** 1.4d to resolution. The "60-day ceasefire" framing emerging in news flow is increasingly aligned with my strict-criterion thesis. Market correcting toward my view.
+
+Other positions: Iran-regime-fall unchanged 0.855. Pahlavi-NO recovery to 0.936 (+0.1pp). Hantavirus -1pp drift.
