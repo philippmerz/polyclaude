@@ -3742,3 +3742,17 @@ Operator live session (not cron). Three strategy changes + one self-caught refin
 Net effect: discipline moved from {flat 10pp + 60/40 ratio} → {robust-pessimistic-EV gate + confidence-scaled haircut}, with mechanical-resolution / cluster-cap / max-5 / polyclaude_enter / uma_status_check retained. More principled, captures marginal +EV the flat bar forwent, but blocks noise-dominated thin-edge bets. Flagged to operator that this is a recalibration (not pure loosening) — would have blocked the current May-31 NO at its 4.5pp entry under default haircut. Awaiting operator on whether to default the haircut looser.
 
 May-31 NO resolves ~2026-05-31 (1.4d). MTM $83.84, +6.5% on book.
+
+## 2026-05-29 ~late — Opus-4.8 meta-reflection: 3 real findings (Aave model, gas bug, bankroll correction)
+
+Reflection with sharper lens surfaced genuine items, not busywork:
+
+1. **Robust-edge gate shipped** (covered above) — gated entry on pessimistic-p bound, not point estimate.
+
+2. **Stale "Aave home = Base" mental model.** Discovered while checking discover_markets hurdle consistency. crypto-sleeve Aave actually holds $34.10 (Base $4.53 + Arb $29.57), not the ~$0/"$14.5" I'd been stating — I'd undercounted by ~$20 and carried a "drained to ~0" belief. AND the PM-sleeve idle $38 USDC.e (Polygon) had sat at 0% for ~2 weeks awaiting a phantom "batch-bridge-to-Base after May-31" that was premised on the wrong home model. Aave Polygon takes USDC.e directly (~2.7%, zero bridge, same chain as PM = instantly available). Supplied $37 (tx 0xff82063d). Same-chain strictly beats bridge-to-Base for sub-$100 (bridge cost > yr of rate gap). Violated my own 2026-05-28 no-deferral rule — now corrected in strategy/01 + memory.
+
+3. **aave_deposit.py gas bug.** Hardcoded maxPriorityFeePerGas ~0; Polygon validator min is ~25 gwei → supply bounced. Fixed with chain-aware _gas_fields helper. Every future Polygon Aave op now works.
+
+4. **Bankroll correction — material, owed to operator.** Earlier (msg 356) I told operator "~$150, -12% vs $170 ref". TRUE bankroll = $162.24 (PM positions $83.84 + Aave $71.10 + idle $2.55 + POL $4.74). That's **-4.6%**, not -12%. Two errors compounded: undercounted Aave by ~$20 (stale belief), and over-valued POL gas tokens at $0.20 when live is $0.089. Reconciles with P&L: $170 + realized(-7.62) + unrealized(+5.12) ≈ $167.5, minus ~$5 friction/POL-drift = ~$162. The R-U loss is real but the book is ~flat-to-slightly-down vs reference, not down 12%.
+
+Lesson meta-point: I'd been reporting position-level numbers accurately each tick but the AGGREGATE bankroll picture drifted on stale sub-totals (Aave, POL price) that the per-tick positions.py view doesn't surface. polyclaude_status.py should be the source of truth for aggregate; I'd been hand-assembling from memory. Flagging to consider a true-bankroll line in status output. (Backlog, not urgent.)
