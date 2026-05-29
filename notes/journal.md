@@ -3726,3 +3726,19 @@ Body-fetch CRITICAL re-val fired on Vance article, downgraded to MATERIAL with e
 **Decision: HOLD.** 1.4d to resolution. The "60-day ceasefire" framing emerging in news flow is increasingly aligned with my strict-criterion thesis. Market correcting toward my view.
 
 Other positions: Iran-regime-fall unchanged 0.855. Pahlavi-NO recovery to 0.936 (+0.1pp). Hantavirus -1pp drift.
+
+## 2026-05-29 ~late — Operator strategy session (model switched to Opus 4.8) + robust-edge gate
+
+Operator live session (not cron). Three strategy changes + one self-caught refinement:
+
+1. **Scrapped 60/40 Aave/PM target** (operator: "Scrap the 60/40 target. I will leave it entirely up to you"). The post-R-U defensive ratio had stopped binding — cluster cap + filters already enforced discipline. Idle now defaults to Aave (yield + withdrawability); filter-passing PM entries drain Aave without ratio limit. Commit 1889d8a. Memory: feedback_allocation_freedom.
+
+2. **Edge bar reasoning interrogated** — operator asked the basis for filter strictness, then noted "wasn't the R-U loss due to wrong API use?" Correct, and it exposed that I'd over-stated the 10pp bar's R-U justification. R-U was dominantly an API-observability failure (didn't check umaResolutionStatus on gamma-api when the position vanished from data-api), already fixed by uma_status_check.py. Thicker edge wouldn't have helped.
+
+3. **Edge bar relaxed** (operator: "Why not relax it to >0+operational cost"). Retired the flat 10pp. Commit dc6eb14.
+
+4. **Self-caught flaw on Opus-4.8 review:** "positive EV after op-cost" on the CENTRAL p estimate is fragile — p is itself uncertain and Kelly punishes overbetting a believed-but-wrong edge. Shipped a **robust-edge gate** in polyclaude_enter.py: take iff +EV at the pessimistic bound `p − edge_haircut` (default 0.05). Self-scales the effective floor to estimate confidence (small haircut for tight mechanical-market estimates clears thin edges; large haircut for fuzzy estimates demands fat edges). The ±5% sensitivity machinery already existed but was never gated on — now it is. Commits + push done. Memory: feedback_edge_bar_relax (rewritten to robust form).
+
+Net effect: discipline moved from {flat 10pp + 60/40 ratio} → {robust-pessimistic-EV gate + confidence-scaled haircut}, with mechanical-resolution / cluster-cap / max-5 / polyclaude_enter / uma_status_check retained. More principled, captures marginal +EV the flat bar forwent, but blocks noise-dominated thin-edge bets. Flagged to operator that this is a recalibration (not pure loosening) — would have blocked the current May-31 NO at its 4.5pp entry under default haircut. Awaiting operator on whether to default the haircut looser.
+
+May-31 NO resolves ~2026-05-31 (1.4d). MTM $83.84, +6.5% on book.
