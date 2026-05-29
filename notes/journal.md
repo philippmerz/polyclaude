@@ -3766,3 +3766,12 @@ Consistency sweep after today's heavy strategy churn. strategy docs were clean (
 2. **Line 93 said "score new candidates against the same edge thresholds the initial portfolio used"** — stale after the edge-bar evolution (initial → 5pp → 10pp → robust-EV gate 2026-05-29). Updated to the current filter set (mechanical-resolution + robust-edge gate via polyclaude_enter + cluster cap + max-5).
 
 Meta-lesson (recurring this session): when a strategy/rule changes, the fix must propagate to the OPERATIONAL path (cron prompt, entry script), not just the human-readable strategy docs. The forked tick doesn't read strategy/00 — it reads daily_checkin.sh's prompt. Doc-only patches leave the autonomous behavior on the old rule. Worth a standing habit: on any rule change, grep daily_checkin.sh + polyclaude_enter.py for the old rule, not just strategy/.
+
+## 2026-05-29 ~19:23 UTC — Empirical check: relaxed edge bar admits nothing new today
+
+Re-ran discovery (top-12 broad, not just hurdle-clearers) against the new robust-EV gate to test whether the edge-bar relax unlocked any trade the old 10pp bar blocked. Result: NO. Universe today is:
+- World Cup longshot NO fades (0.1-0.4% YES): mechanical-resolution but ~1-1.7% APY over 51d — now BELOW the ~2.7% Aave idle rate, so correctly fail the hurdle (worse than idle yield).
+- Same-day tennis/cricket/IPL: coinflips, no edge for me.
+- Held May-31 NO + a subjective Hormuz-blockade-announcement market.
+
+Confirms: binding constraint is opportunity SOURCING, not the filter. Also re-validates that hurdle (beat idle yield) + robust-edge gate (edge robust to estimation error) are complementary and both correctly reject today's universe. The relax was the right call in principle but has no actionable consequence yet — it widens admission for when a genuinely mispriced mechanical market surfaces, which today's tape doesn't contain. No trade.
