@@ -3793,3 +3793,19 @@ Probed the API directly to confirm: limit=500 returns 100; offset=100 → vol $9
 **Next-tick plan (NOT rushed tonight, May-31 resolving in ~1.2d):** methodically work the 37 through the full filter stack — drop sports (no edge), require mechanical resolution, run catalyst_check on the survivors, apply robust-edge gate + cluster cap + max-5, size via Kelly+ρ. Expect most to fail (sports/subjective/cluster-correlated), but even 1-2 genuine mispriced mechanical fades from a 10× funnel is the first NEW alpha source since the recoup campaign. This is the ROI-generative activity that was missing — the book was idle-on-discipline partly because discovery was broken, not only because the universe was dry.
 
 Session meta-arc: the Opus-4.8 reflection's recurring win was distrusting assumed state and re-deriving from ground truth — caught the bankroll misreport, the Aave-home model error, the gas bug, three stale-rule instances, and now the sourcing cap. The last is the highest forward-ROI: it compounds on every future scan.
+
+## 2026-05-29 ~20:55 UTC — Triaged the 37 (funnel fix validated: surfaced real non-cluster alpha)
+
+Screened the 37 hurdle-clearing candidates from the fixed (10×) discovery funnel:
+- **25 sports** → drop. No edge; mostly sub-hurdle World Cup longshots (4-13% APY, below ~2.7% idle once you account for 51d lock + fees) or same-day coinflips.
+- **8 iran-cluster** (June-7/15 peace, Hormuz-traffic, regime-fall-by-June, blockade-announce, Dec-31 peace) → skip. Cluster cap binding; already heavily exposed via the 5 held positions.
+- **4 other:** Fed rate markets (99%+ efficient, skip per philosophy); Aliens-by-June-30 NO (35% APY — shorter-horizon dup of held Aliens-2027 NO); Hantavirus (already held).
+- **1 GENUINE NEW non-cluster candidate: "MicroStrategy sells any Bitcoin by June 30, 2026?" NO** — ~$67-69k liquidity, ~32d, mechanical-ish. Saylor/MSTR never-sold-BTC + stated never-sell policy = strong NO prior. This is exactly the neglected-tail mechanical fade the funnel fix targeted — validates the fix surfaced real alpha, not just sports noise.
+
+**MSTR-sells-BTC NO — next-tick evaluation plan (NOT rushed; 32d = zero time pressure):**
+1. Pull exact resolution criteria from gamma-api — "sells ANY bitcoin" is broad; check whether tax-loss harvesting, collateral liquidation, subsidiary/treasury ops, or accounting reclassification could trigger YES. R-U lesson: read the literal criteria, not the headline.
+2. Walk the live CLOB orderbook (per the midpoints-unreliable memory) — confirm a real fillable NO ask, not a stub midpoint behind the gamma APY.
+3. catalyst_check for the 32d window (any MSTR earnings / forced-sale / margin event).
+4. If criteria are clean + ask is real + robust-edge gate passes at the pessimistic-p bound → size via Kelly+ρ (own cluster: "crypto-treasury", ρ≈0 to existing book) and enter via polyclaude_enter.
+
+Net: funnel fix → 1 genuine candidate on its first scan. Even a modest hit rate on a 10×-wider funnel is the first NEW alpha source since the recoup campaign. The triage is analysis (done now, no capital committed); the entry decision is correctly methodical-next-tick given the 32d horizon.
