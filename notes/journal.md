@@ -3809,3 +3809,17 @@ Screened the 37 hurdle-clearing candidates from the fixed (10×) discovery funne
 4. If criteria are clean + ask is real + robust-edge gate passes at the pessimistic-p bound → size via Kelly+ρ (own cluster: "crypto-treasury", ρ≈0 to existing book) and enter via polyclaude_enter.
 
 Net: funnel fix → 1 genuine candidate on its first scan. Even a modest hit rate on a 10×-wider funnel is the first NEW alpha source since the recoup campaign. The triage is analysis (done now, no capital committed); the entry decision is correctly methodical-next-tick given the 32d horizon.
+
+## 2026-05-29 ~21:05 UTC — MSTR candidate DROPPED on diligence (stale prior, inverted edge) — discipline win
+
+Did the cheap decisive diligence on the MSTR-sells-BTC NO lead BEFORE committing capital. Result: thesis was inverted; dropped.
+
+**Term structure (the tell):** sells-BTC-by May 31 = 18% YES, June 30 = 67% YES, Dec 31 = 88% YES. Market strongly expects a near-term sale — opposite of my "Saylor never sells" prior.
+
+**Why (60-sec web search confirmed):** BTC fell 23% in Q1 2026 ($87.5k→$67.7k); MSTR carries a $7.6B unrealized loss + $2.2B deferred-tax-asset opportunity under FASB fair-value accounting. **Saylor stated on the Q1 2026 earnings call MSTR "is ready to sell bitcoin"** for tax-loss harvesting, with direct 2022 precedent (sold 704 BTC for the same reason). "Sells ANY bitcoin" + stated intent + tax incentive + precedent = the 67%/88% pricing is correct.
+
+**My prior was 2 years stale** (HODL-forever narrative, obsolete since the Dec-2022 tax-loss sale). Buying NO at 0.326 would have been the R-U mistake exactly: trading my framing against a market pricing current information I lacked. The "683% APY" gamma figure was the naive-annualization / implied-risk trap, not free money. DROPPED — and no YES trade either (no edge on sale *timing* within window beyond what the 67→88 term structure already prices).
+
+**Net of tonight's funnel work:** the 10× sourcing fix is a permanent forward-ROI win and surfaced this candidate (invisible before); diligence correctly killed it. Zero trades, process worked as designed. The MSTR markets are now "checked, no edge — stale-prior trap" so future scans shouldn't re-lead on them.
+
+**Reinforced lesson (add to the R-U family):** a high gamma-APY on a bond-like fade is a *question*, not an answer — it often means the market prices real risk my prior is ignoring. Always read the term structure across sibling by-date markets + a 60-sec catalyst search BEFORE the prior hardens into a thesis. The relaxed edge bar makes this MORE important, not less, because more thin/high-APY candidates now clear the funnel.
