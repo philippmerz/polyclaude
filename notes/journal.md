@@ -3775,3 +3775,21 @@ Re-ran discovery (top-12 broad, not just hurdle-clearers) against the new robust
 - Held May-31 NO + a subjective Hormuz-blockade-announcement market.
 
 Confirms: binding constraint is opportunity SOURCING, not the filter. Also re-validates that hurdle (beat idle yield) + robust-edge gate (edge robust to estimation error) are complementary and both correctly reject today's universe. The relax was the right call in principle but has no actionable consequence yet — it widens admission for when a genuinely mispriced mechanical market surfaces, which today's tape doesn't contain. No trade.
+
+## 2026-05-29 ~20:42 UTC — MAJOR sourcing fix: discover_markets was blind to 90% of the market
+
+Chased the "sourcing is the binding constraint" thread from the prior reflection to its root and found a real bug with project-life-long impact.
+
+**The bug:** gamma API hard-caps every response at 100 rows regardless of the `limit` param. discover_markets requested limit_per_page=500 → page 0 returned 100 < 500 → tripped the `len(batch) < limit_per_page` short-batch break → loop exited after ONE page. So every scan ever run saw only the top 100 markets by volume (vol24h ≥ ~$225k). The entire long tail — markets ranked 100-1000+ by volume, down to ~$15-40k vol — was NEVER fetched. This directly contradicted the strategy's core edge thesis ("the long tail is where mispricings live"): the sourcing tool was structurally biased AWAY from the edge zone, running at ~10% of intended breadth.
+
+Probed the API directly to confirm: limit=500 returns 100; offset=100 → vol $90-224k; offset=200 → $57-90k; offset=300 → $37-56k. A deep, liquid, never-scanned tail.
+
+**Fix (commit pushed):** limit_per_page 500 → 100 (the API's true page size) so pagination walks the tail across max_pages. Verified: **fetched 996 markets (was 100)**.
+
+**Coupled tuning:** min_vol24 default 2000 → 500. For a taker lifting a resting ask, fillability = book depth (--min-liquidity $20k), NOT recent volume; the high volume floor re-excluded the quiet neglected tail. Liquidity + spread floors keep junk out.
+
+**Result:** default hurdle-clearing candidate count jumped from 4-8 → **37**. The opportunity funnel now reaches the documented edge zone. Flows automatically into the cron (daily_checkin step 6).
+
+**Next-tick plan (NOT rushed tonight, May-31 resolving in ~1.2d):** methodically work the 37 through the full filter stack — drop sports (no edge), require mechanical resolution, run catalyst_check on the survivors, apply robust-edge gate + cluster cap + max-5, size via Kelly+ρ. Expect most to fail (sports/subjective/cluster-correlated), but even 1-2 genuine mispriced mechanical fades from a 10× funnel is the first NEW alpha source since the recoup campaign. This is the ROI-generative activity that was missing — the book was idle-on-discipline partly because discovery was broken, not only because the universe was dry.
+
+Session meta-arc: the Opus-4.8 reflection's recurring win was distrusting assumed state and re-deriving from ground truth — caught the bankroll misreport, the Aave-home model error, the gas bug, three stale-rule instances, and now the sourcing cap. The last is the highest forward-ROI: it compounds on every future scan.
