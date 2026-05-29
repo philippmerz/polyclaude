@@ -6,9 +6,10 @@ retrospectively. Aggregated calibration data tells us where reasoning is
 weak — overconfident on which market types, underconfident on which
 catalysts, etc.
 
-This is the foundation for evaluating "can an LLM architecture manage a
-trading book". P&L is noise on small samples; calibration is the actual
-signal.
+Calibration is a DEBUGGING BYPRODUCT, not the objective (operator directive
+2026-05-14: the only goal is ROI; treating calibration as the product is
+Goodhart's law). Record deltas; use them only when they reveal a systematic
+bias worth fixing. P&L — not calibration — is the scorecard.
 
 Storage: `notes/decisions.json` (structured, machine-readable). The cron
 tick reads this file to (a) propose retrospective updates on resolved
