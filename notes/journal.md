@@ -3831,3 +3831,7 @@ May-31 NO stable at 0.945 (+39.37% on cost, all-time high), ~0.9d to resolution.
 Discovery fix live in cron (fetched 996 vs old 100) but 0 candidates clear hurdle+3d-floor this tick — the high-APY tail entries are all either <3d (floor-excluded), iran-cluster (capped), or sports (no edge). Consistent with last night's triage: MSTR was the only genuine non-cluster lead and diligence correctly killed it (stale-prior/inverted-edge). No new actionable candidate.
 
 No actions. May-31 NO resolves tomorrow (~2026-05-31); redeem-all wired into cron will handle it. Expected: NO wins → lock $17.44 (+$0.96 from current MTM, +$5.62 from $11.82 cost). Post-resolution: ~$17 freed → Aave Polygon same-chain (per corrected idle-home rule).
+
+## 2026-05-30 ~14:00 UTC — Saturday 14:00 cron tick (May-31 NO 0.966, ~0.4d to resolution)
+
+May-31 NO at 0.966 (+42.47% on cost), ~0.4d to resolution. UMA clean. 2 news alerts both thesis-confirming ("uncertainty remains over Iran ceasefire extension" — no permanent deal materialized). 0 redeemable, 0 new candidates clearing filters (998 fetched). Book +9.13%, all 6 positions stable/favorable. No actions. Redemption cron-wired for when it resolves (~tonight/tomorrow).
