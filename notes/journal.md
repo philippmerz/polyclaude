@@ -3823,3 +3823,11 @@ Did the cheap decisive diligence on the MSTR-sells-BTC NO lead BEFORE committing
 **Net of tonight's funnel work:** the 10× sourcing fix is a permanent forward-ROI win and surfaced this candidate (invisible before); diligence correctly killed it. Zero trades, process worked as designed. The MSTR markets are now "checked, no edge — stale-prior trap" so future scans shouldn't re-lead on them.
 
 **Reinforced lesson (add to the R-U family):** a high gamma-APY on a bond-like fade is a *question*, not an answer — it often means the market prices real risk my prior is ignoring. Always read the term structure across sibling by-date markets + a 60-sec catalyst search BEFORE the prior hardens into a thesis. The relaxed edge bar makes this MORE important, not less, because more thin/high-APY candidates now clear the funnel.
+
+## 2026-05-30 ~02:00 UTC — Saturday 02:00 cron tick (quiet, May-31 resolving in ~0.9d)
+
+May-31 NO stable at 0.945 (+39.37% on cost, all-time high), ~0.9d to resolution. UMA clean (no dispute as resolution approaches — the R-U risk window is passing cleanly). 0 news alerts, 0 redeems, Ostium 0 open. Book +8.66%.
+
+Discovery fix live in cron (fetched 996 vs old 100) but 0 candidates clear hurdle+3d-floor this tick — the high-APY tail entries are all either <3d (floor-excluded), iran-cluster (capped), or sports (no edge). Consistent with last night's triage: MSTR was the only genuine non-cluster lead and diligence correctly killed it (stale-prior/inverted-edge). No new actionable candidate.
+
+No actions. May-31 NO resolves tomorrow (~2026-05-31); redeem-all wired into cron will handle it. Expected: NO wins → lock $17.44 (+$0.96 from current MTM, +$5.62 from $11.82 cost). Post-resolution: ~$17 freed → Aave Polygon same-chain (per corrected idle-home rule).
