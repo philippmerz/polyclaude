@@ -3835,3 +3835,13 @@ No actions. May-31 NO resolves tomorrow (~2026-05-31); redeem-all wired into cro
 ## 2026-05-30 ~14:00 UTC — Saturday 14:00 cron tick (May-31 NO 0.966, ~0.4d to resolution)
 
 May-31 NO at 0.966 (+42.47% on cost), ~0.4d to resolution. UMA clean. 2 news alerts both thesis-confirming ("uncertainty remains over Iran ceasefire extension" — no permanent deal materialized). 0 redeemable, 0 new candidates clearing filters (998 fetched). Book +9.13%, all 6 positions stable/favorable. No actions. Redemption cron-wired for when it resolves (~tonight/tomorrow).
+
+## 2026-05-31 ~02:00 UTC — Sunday cron tick (RESOLUTION DAY for May-31 NO)
+
+May-31 NO at 0.980 (+44.46% on cost), resolves end of today UTC. Not yet redeemable (0/6; UMA settlement follows resolution). UMA clean. Book +9.62%.
+
+Two candidates cleared hurdle (995 fetched via funnel fix):
+- Netherlands win WC 2026 NO — sports, no edge, skip.
+- "Satoshi's identity revealed by Dec 31?" NO @ 0.945, 9.4% APY, 214d, $25k liq — evaluated (relaxed bar admits it) but SKIP on mechanical-resolution filter: "identity revealed" is subjective (a splashy unproven claim could trigger UMA-loose YES — the exact R-U risk category) + thin ~3.5pp edge barely beats ~2.7% Aave idle over a 214d lockup. Logged as checked/skip.
+
+No actions. May-31 NO resolves today; redeem-all cron-wired. Post-resolution: ~$17 → Aave Polygon (same-chain). Will be the first realized confirmation of the held-NO thesis through the full volatility cycle (0.815 → 0.345 catastrophe → 0.980 recovery, HOLD validated).
