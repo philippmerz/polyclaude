@@ -148,6 +148,12 @@ def main() -> int:
     yes_token = clob_token_ids[0] if clob_token_ids else None
     no_token = clob_token_ids[1] if clob_token_ids else None
     neg_risk = bool(m.get("negRisk"))
+    try:
+        tick = float(m.get("orderPriceMinTickSize") or 0.01)
+    except Exception:
+        tick = 0.01
+    if tick <= 0:
+        tick = 0.01
 
     print(f"\nMarket: {question}")
     print(f"  slug: {slug}")
@@ -270,14 +276,24 @@ def main() -> int:
         return 0
 
     # EXECUTE path
-    # Use clean usd_size: round to integer-share count × mark
-    target_shares = round(deploy_dollar / mark)
-    clean_usd = round(target_shares * mark, 4)
-    print(f"\n# Executing BUY {target_shares} shares ({side}) @ {mark} for ${clean_usd}")
+    # Round the limit price UP to the market's tick grid (to lift the ask). The
+    # raw gamma midpoint is often off-grid (e.g. 0.935 on a 0.01-tick market) and
+    # gets rejected with "breaks minimum tick size rule". Lesson: 2026-05-31
+    # Satoshi entry bounced on the 0.935 midpoint. Buying → round UP so the limit
+    # is marketable against the resting ask.
+    import math
+    tick_dec = max(0, -int(round(math.log10(tick))))  # 0.01 → 2 decimals
+    buy_price = round(math.ceil(round(mark / tick, 6)) * tick, tick_dec)
+    buy_price = min(buy_price, 0.99)  # never post above 0.99
+    # Integer shares × on-grid price → clean maker (2-dec) / taker (int) amounts,
+    # satisfying the CLOB's amount-precision rule.
+    target_shares = max(1, round(deploy_dollar / buy_price))
+    clean_usd = round(target_shares * buy_price, tick_dec)
+    print(f"\n# Executing BUY {target_shares} shares ({side}) @ {buy_price} (tick {tick}) for ${clean_usd}")
 
     cmd = [".venv/bin/python", "scripts/clob_v2.py",
            "buy" if side in ("YES", "NO") else "sell",
-           token, str(mark), str(clean_usd), "--order-type", "GTC"]
+           token, str(buy_price), str(clean_usd), "--order-type", "FAK"]
     if neg_risk:
         cmd.extend(["--neg-risk", "true"])
     print(f"  cmd: {' '.join(cmd)}", file=sys.stderr)
