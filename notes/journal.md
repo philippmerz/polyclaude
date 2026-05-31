@@ -3872,3 +3872,7 @@ Fix (committed): added `_best_ask(token)` hitting the CLOB book API directly; po
 Immediately validated: re-running the Satoshi market now shows live ask 0.95 (my $5.64 buy lifted the 0.94 level) → gate correctly SKIPs (p_robust 0.95 ≤ mark 0.95, no robust edge), whereas the old gamma-mid 0.935 path would have passed. So the fix just prevented a phantom-edge decision in real time, and confirms my 0.94 fill was at the viable edge — adding more at 0.95 would be -EV. Every future entry now gates on the price it would actually pay.
 
 Net: the funnel→gate→entry pipeline is now honest end-to-end (real ask in the gate + tick-rounded on-grid execution). Two of the three Satoshi-surfaced frictions fixed (tick-rounding + live-ask gate); pUSD-wrap script remains queued (not blocking).
+
+## 2026-05-31 ~14:00 UTC — Sunday 14:00 cron tick (May-31 resolving end-of-day; quiet)
+
+May-31 NO at 0.985 (+45.20%), resolves end of today UTC, 0/7 redeemable (settlement follows). UMA clean. 7 positions, book +9.86%. Satoshi NO (DEC-0028) holding at ~spread. 1 recycled-Hormuz news alert (no action). discover: 1 candidate (cluster/sports per recent pattern, skip). No actions. redeem-all cron-wired for when May-31 settles (~June 1).
