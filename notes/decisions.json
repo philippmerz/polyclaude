@@ -1,5 +1,5 @@
 {
-  "next_id": 28,
+  "next_id": 29,
   "decisions": [
     {
       "id": 1,
@@ -540,6 +540,25 @@
         "spx",
         "close",
         "pair-trade"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2026-05-31T08:34:06Z",
+      "type": "open_position",
+      "thesis": "Satoshi's identity revealed by Dec 31 2026 NO @ 0.94, 6 shares, $5.64. First entry from the fixed discovery funnel (10x fetch-cap fix 2026-05-29) + relaxed edge bar. P(NO not revealed) base rate ~0.99; honest P(NO) ~0.98 after small UMA-loose-resolution discount on the 'credible consensus of reporting' clause. Edge ~4pp at 0.94 ask, ~9% annualized expected. Operator challenged my initial over-cautious skip; conceded the UMA tail is small (strict 'definitively proven / wallet transfer' primary criterion + 15yr of failed Satoshi claims \u2014 Newsweek/Wright-ruled-not-Satoshi/HBO doc all failed the consensus bar). Sized small ($5.64, capped well below $58 Kelly) for the residual ~1-2% tail. Mechanical-ish resolution; primary risk is genuine reveal (~1%/214d) or UMA false-positive (~0.5-1%).",
+      "confidence": "high",
+      "prediction": "Resolves NO (Satoshi not definitively revealed by Dec 31 2026). Expected +$0.36 at lock-in (6 sh x $1 - $5.64), ~9% annualized.",
+      "size_usd": 5.64,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "satoshi",
+        "crypto",
+        "bond-like-fade",
+        "funnel-fix-first-entry"
       ],
       "outcome": null,
       "calibration_delta": null,

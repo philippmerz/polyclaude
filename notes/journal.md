@@ -3845,3 +3845,20 @@ Two candidates cleared hurdle (995 fetched via funnel fix):
 - "Satoshi's identity revealed by Dec 31?" NO @ 0.945, 9.4% APY, 214d, $25k liq — evaluated (relaxed bar admits it) but SKIP on mechanical-resolution filter: "identity revealed" is subjective (a splashy unproven claim could trigger UMA-loose YES — the exact R-U risk category) + thin ~3.5pp edge barely beats ~2.7% Aave idle over a 214d lockup. Logged as checked/skip.
 
 No actions. May-31 NO resolves today; redeem-all cron-wired. Post-resolution: ~$17 → Aave Polygon (same-chain). Will be the first realized confirmation of the held-NO thesis through the full volatility cycle (0.815 → 0.345 catastrophe → 0.980 recovery, HOLD validated).
+
+## 2026-05-31 ~late — FIRST funnel-fix entry: Satoshi NO (operator challenge → conceded over-caution)
+
+Operator pushed on my Satoshi skip ("how could this go wrong? would voters affirm a fake?"). Worked the concrete failure modes:
+- Genuine reveal ~1-1.5%/214d (legitimate loss, not "wrong").
+- UMA affirms a fake: LOW (~0.5-1%) — strict "definitively proven / wallet transfer" primary criterion + dispute mechanism + 15yr of failed claims (Newsweek 2014, Craig Wright legally ruled NOT Satoshi 2024, HBO doc 2024) all failing the consensus bar.
+
+Conceded: I overstated the UMA tail (~2-3% → ~0.5-1%) — the skeptic-bias-toward-inaction the memory warns about, over-applying the R-U scar to a market where the subjective channel is genuinely weak. Honest P(NO) ~0.98, edge ~4pp at the real 0.94 ask, ~9% annualized.
+
+**ENTERED: 6 shares Satoshi NO @ 0.94 = $5.64** (DEC-0028, tx 0x2c4d5a5b). Sized small (well below $58 Kelly) for the residual tail. First entry sourced from the fixed discovery funnel — validates the funnel-fix → relaxed-bar → diligence → entry pipeline end-to-end.
+
+**Execution friction logged (3 retries):**
+1. polyclaude_enter posted at gamma midpoint 0.935 → rejected (tick-size 0.01). It uses the gamma mid as limit price, which is often off-grid.
+2. clob_v2 buy $8/0.94 → rejected (share count >4 decimals). Need usd_size that yields clean 2-dec maker / 4-dec taker amounts.
+3. Real blocker: CLOB collateral is wrapped pUSD, NOT raw USDC.e. Exchange saw only $5.80 usable (residual pUSD); the $10 USDC.e I'd withdrawn from Aave was NOT usable without a CollateralOnramp.wrap (no script for it). Sized the buy to the available $5.80 pUSD ($5.64) — cleaner anyway. Redeposited the unneeded $9 USDC.e back to Aave Polygon (tx 0x0fa47fcd).
+
+Backlog-worthy: (a) polyclaude_enter should round limit price to the market tick size; (b) no pUSD-wrap script exists — entries depend on residual pUSD or a manual wrap.
