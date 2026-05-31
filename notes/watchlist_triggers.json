@@ -1,109 +1,192 @@
 {
   "version": 2,
   "updated": "2026-05-08",
-  "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) — equities default to ibkr_surface regardless.",
+  "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
-      "ticker": "SOL", "type": "crypto", "coingecko_id": "solana",
-      "entry_max": 80.0, "horizon": "1-3y", "route": "ibkr_surface",
+      "ticker": "SOL",
+      "type": "crypto",
+      "coingecko_id": "solana",
+      "entry_max": 80.0,
+      "horizon": "1-3y",
+      "route": "ibkr_surface",
       "rationale": "Dip entry per longterm_check 2026-05-08; Firedancer + DePIN + USDPT 2-3y catalyst convergence. Multi-year per project memory -> IBKR.",
       "added": "2026-05-08"
     },
     {
-      "ticker": "ARB", "type": "crypto", "coingecko_id": "arbitrum",
-      "entry_max": 0.10, "horizon": "1-3y", "route": "ibkr_surface",
+      "ticker": "ARB",
+      "type": "crypto",
+      "coingecko_id": "arbitrum",
+      "entry_max": 0.1,
+      "horizon": "1-3y",
+      "route": "ibkr_surface",
       "rationale": "L2 cycle bottom dip; ideal trigger is post-March-2027 unlock (22mo). Multi-year -> IBKR.",
       "added": "2026-05-08"
     },
     {
-      "ticker": "ONDO", "type": "crypto", "coingecko_id": "ondo-finance",
-      "entry_max": 0.28, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "ONDO",
+      "type": "crypto",
+      "coingecko_id": "ondo-finance",
+      "entry_max": 0.28,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "RWA leader dip + fee-switch DAO vote H2 2026; secular thesis 2-5y. Multi-year -> IBKR.",
       "added": "2026-05-08"
     },
     {
-      "ticker": "STX", "type": "crypto", "coingecko_id": "blockstack",
-      "entry_max": 0.22, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "STX",
+      "type": "crypto",
+      "coingecko_id": "blockstack",
+      "entry_max": 0.22,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "BTC-L2 dip; Babylon + Stacks Nakamoto catalysts. Multi-year -> IBKR.",
       "added": "2026-05-08"
     },
     {
-      "ticker": "MU", "type": "equity", "yfinance_symbol": "MU",
-      "entry_max": 520.0, "horizon": "2-3y", "route": "ibkr_surface",
+      "ticker": "MU",
+      "type": "equity",
+      "yfinance_symbol": "MU",
+      "entry_max": 520.0,
+      "horizon": "2-3y",
+      "route": "ibkr_surface",
       "rationale": "Memory cycle pullback. Equity -> IBKR regardless.",
       "added": "2026-05-08"
     },
     {
-      "ticker": "CEG", "type": "equity", "yfinance_symbol": "CEG",
-      "entry_max": 250.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "CEG",
+      "type": "equity",
+      "yfinance_symbol": "CEG",
+      "entry_max": 250.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "Nuclear baseload + AI-PPA. Original $280 trigger fired 2026-05-13 at $271 but fresh longterm_check 3/4 WATCH said still overvalued (20% above fair value, fwd P/E 24-27x vs utility median 15.2x, 56.5% YTD). Revised entry: $237-251 OR post-Q2 2026 guidance miss OR post-TMI NRC approval (catalysts: TMI Microsoft PPA 2027-Q1, Clinton Meta PPA 2027-Q2, Calpine synergies 2026-2027).",
-      "added": "2026-05-08", "revised": "2026-05-13"
+      "added": "2026-05-08",
+      "revised": "2026-05-13"
     },
     {
-      "ticker": "PLTR", "type": "equity", "yfinance_symbol": "PLTR",
-      "entry_max": 120.0, "horizon": "2-3y", "route": "ibkr_surface",
+      "ticker": "PLTR",
+      "type": "equity",
+      "yfinance_symbol": "PLTR",
+      "entry_max": 120.0,
+      "horizon": "2-3y",
+      "route": "ibkr_surface",
       "rationale": "AI/ops valuation reset. Equity -> IBKR.",
       "added": "2026-05-08"
     },
     {
-      "ticker": "AFMJF", "type": "equity", "yfinance_symbol": "AFMJF",
-      "entry_max": 0.85, "horizon": "1-3y", "route": "ibkr_surface",
+      "ticker": "AFMJF",
+      "type": "equity",
+      "yfinance_symbol": "AFMJF",
+      "entry_max": 0.85,
+      "horizon": "1-3y",
+      "route": "ibkr_surface",
       "rationale": "DRC tin (4/4); 18k+t Q3 production proof = ~5mo catalyst. Equity -> IBKR (would be polyclaude-eligible if it had a wrapped EVM equivalent).",
       "added": "2026-05-08"
     },
     {
-      "ticker": "LEU", "type": "equity", "yfinance_symbol": "LEU",
-      "entry_max": 135.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "LEU",
+      "type": "equity",
+      "yfinance_symbol": "LEU",
+      "entry_max": 135.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "HALEU monopoly. Original $183 trigger fired 2026-05-16 at $182.60; fresh longterm_check 3.5/4 WATCH said still overvalued (49x P/E vs 10x fair, Q1 margin compression). Tiered revised entries: $125-135 (first tranche after Q3 2026 + HALEU extension confirmed), $100-115 (core), $70-80 (washout). Binary risk: HALEU contract expires June 2026.",
-      "added": "2026-05-08", "revised": "2026-05-16"
+      "added": "2026-05-08",
+      "revised": "2026-05-16"
     },
     {
-      "ticker": "TWST", "type": "equity", "yfinance_symbol": "TWST",
-      "entry_max": 48.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "TWST",
+      "type": "equity",
+      "yfinance_symbol": "TWST",
+      "entry_max": 48.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "BIOSECURE gene synthesis; FY2026 Q4 EBITDA-breakeven (~6mo catalyst). Equity -> IBKR.",
       "added": "2026-05-08"
     },
     {
-      "ticker": "IVN.TO", "type": "equity", "yfinance_symbol": "IVN.TO",
-      "entry_max": 9.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "IVN.TO",
+      "type": "equity",
+      "yfinance_symbol": "IVN.TO",
+      "entry_max": 9.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "Non-CN copper jurisdictional premium. Equity -> IBKR.",
-      "added": "2026-05-08", "currency": "CAD"
+      "added": "2026-05-08",
+      "currency": "CAD"
     },
     {
-      "ticker": "ALB", "type": "equity", "yfinance_symbol": "ALB",
-      "entry_max": 150.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "ALB",
+      "type": "equity",
+      "yfinance_symbol": "ALB",
+      "entry_max": 150.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "Lithium cycle bottom + storage; H2 2026 BESS data (6-9mo catalyst). Original $180 trigger fired 2026-05-18 at $178.68; fresh longterm_check 3/4 WATCH said margin of safety WEAK (33x EV/EBITDA = 2.5x historical median, +204% 1yr rally, $90-130 downside if cycle re-tests $12-15/kg). Revised entry: $140-150 (15-20% pullback) AND reaffirmed $20+/kg pricing trajectory; OR Event entry: after Mt. Holland online H1 2027. Equity -> IBKR.",
-      "added": "2026-05-08", "revised": "2026-05-18"
+      "added": "2026-05-08",
+      "revised": "2026-05-18"
     },
     {
-      "ticker": "XOM", "type": "equity", "yfinance_symbol": "XOM",
-      "entry_max": 125.0, "horizon": "2-3y", "route": "ibkr_surface",
+      "ticker": "XOM",
+      "type": "equity",
+      "yfinance_symbol": "XOM",
+      "entry_max": 125.0,
+      "horizon": "2-3y",
+      "route": "ibkr_surface",
       "rationale": "Oil Supply Shock theme (Strait of Hormuz closed, OPEC+ infra damaged). Currently $144 peak cycle 24x P/E. Entry $110-125 on Q2/Q3 earnings disappointment OR oil correction. 2/4 PASS at current.",
       "added": "2026-05-10"
     },
     {
-      "ticker": "CCJ", "type": "equity", "yfinance_symbol": "CCJ",
-      "entry_max": 95.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "CCJ",
+      "type": "equity",
+      "yfinance_symbol": "CCJ",
+      "entry_max": 95.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "Advanced Nuclear. Original $110 trigger fired 2026-05-16 at $107.51; fresh longterm_check 3/4 WATCH said still overvalued (fwd P/E 92x vs 24x historical). Revised entry: $85-95 (on uranium dip to $70-75/lb) OR Q2 2027 earnings inflection. Don't chase rallies above $120. Thesis intact, valuation stretched.",
-      "added": "2026-05-10", "revised": "2026-05-16"
+      "added": "2026-05-10",
+      "revised": "2026-05-16"
     },
     {
-      "ticker": "NVDA", "type": "equity", "yfinance_symbol": "NVDA",
-      "entry_max": 200.0, "horizon": "1-2y", "route": "ibkr_surface",
+      "ticker": "NVDA",
+      "type": "equity",
+      "yfinance_symbol": "NVDA",
+      "entry_max": 200.0,
+      "horizon": "1-2y",
+      "route": "ibkr_surface",
       "rationale": "AI capex centerpiece. Surfaced via 2026-05-17 digest 'AI Capex Plateauing' theme (NVDA Q1 FY27 guidance flattening sequential growth; TSMC April -1.1% MoM; SEMI wafer -4.7% QoQ). Fresh longterm_check 3/4 WATCH at $224.41 (fwd P/E 27x on 40% growth). Don't initiate new positions at current; wait for capex slowdown confirmation. Entry: $180-200 on weakness OR post-Q3 2026 capex confirmation. Generational (10x+) 8%, Strong (3-5x) 35%, Modest 40%.",
       "added": "2026-05-17"
     },
     {
-      "ticker": "LLY", "type": "equity", "yfinance_symbol": "LLY",
-      "entry_max": 800.0, "horizon": "2-5y", "route": "ibkr_surface",
+      "ticker": "LLY",
+      "type": "equity",
+      "yfinance_symbol": "LLY",
+      "entry_max": 800.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
       "rationale": "GLP-1 leader. Surfaced via 2026-05-24 digest 'GLP-1 Oral Formulation Expansion' HIGH-conf theme (EMA approved oral Wegovy May 22, removes injection barrier, market expansion). Fresh longterm_check 1.5/4 PASS at current ATH (fwd P/E 31x, debt $40.9B up 43% YoY, expensive valuation already prices 20%+ obesity growth perpetually). Entry: $745-800 (52-week low + modest discount) OR event entry on Mounjaro share drop <50% OR retatrutide P3 failure. Don't chase. Generational 3%, Strong 12%, Modest 40%, Flat 35%, Broken 10%.",
       "added": "2026-05-24"
     },
     {
-      "ticker": "EIGEN", "type": "crypto", "coingecko_id": "eigenlayer",
-      "entry_max": 0.18, "horizon": "2-5y", "route": "ibkr_surface",
-      "rationale": "Restaking dominance. Surfaced via 2026-05-24 digest 'EigenLayer Restaking Dominance' HIGH-conf theme ($15.258B TVL, 93.9% market share). Fresh longterm_check 3/4 WATCH at $0.227. Cyclical/secular strong; margin-of-safety weak (pre-revenue, supply dilution). Hard catalyst: June 1 2026 unlock cliff (300M+ tokens vesting) — wait for selling pressure to subside. Entry $0.12-0.16 post-unlock washout (3-4% position with stop at $0.10), OR $0.20-0.25 small core position now if extra conviction. Generational 18%, Strong 22%, Modest 20%, Flat 28%, Broken 12%.",
+      "ticker": "EIGEN",
+      "type": "crypto",
+      "coingecko_id": "eigenlayer",
+      "entry_max": 0.18,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
+      "rationale": "Restaking dominance. Surfaced via 2026-05-24 digest 'EigenLayer Restaking Dominance' HIGH-conf theme ($15.258B TVL, 93.9% market share). Fresh longterm_check 3/4 WATCH at $0.227. Cyclical/secular strong; margin-of-safety weak (pre-revenue, supply dilution). Hard catalyst: June 1 2026 unlock cliff (300M+ tokens vesting) \u2014 wait for selling pressure to subside. Entry $0.12-0.16 post-unlock washout (3-4% position with stop at $0.10), OR $0.20-0.25 small core position now if extra conviction. Generational 18%, Strong 22%, Modest 20%, Flat 28%, Broken 12%.",
       "added": "2026-05-24"
+    },
+    {
+      "ticker": "LRCX",
+      "type": "equity",
+      "yfinance_symbol": "LRCX",
+      "entry_max": 280.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
+      "rationale": "Semi equipment / AI-capex + advanced packaging. Surfaced 2026-05-31 digest 'Semiconductor Equipment grace-period' (MED): export-control grace through Dec 31 2026 + AI capex cycle. Fresh longterm_check 2.5/4 WATCH at $318 (53.9x P/E, peak cycle, weak margin of safety). Entry $250-280 (25-30x fwd P/E) OR on first negative capex-guidance signal / China-revenue slowdown. Don't chase at peak. Gen 8% / Strong 20% / Modest 42%.",
+      "added": "2026-05-31"
     }
   ]
 }

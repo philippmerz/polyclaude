@@ -248,3 +248,22 @@ Last weekly: 2026-05-10 (geopolitics + energy-power). Next weekly: 2026-05-24 (r
 - Boehringer Ingelheim PDE4B (MED conf): Jascayd first-in-class IPF treatment in 10+ years. Play: BFVAF (OTC), hard to size given liquidity.
 
 Last weekly: 2026-05-17 (tech-ai-chips + macro-fiscal-labor). Next weekly: 2026-05-31 — Saturday — likely won't fire on the May-31-NO-resolution day; consider 06-01 manual sweep.
+
+### Sunday 2026-05-31 weekly digest (trade-regulation + markets-corporate)
+
+5 themes, none HIGH-conf — and notably most are SHORT/sector-rotation/tactical (IBKR-discretion ideas, not generational-LONG candidates):
+- **Oil Repricing (MED-HIGH):** Brent $120→$92.56 (-20%); war premium repricing out. Short energy-intensive industrials (airlines ALK/DAL/LUV, chemicals DD/APD/ECL, fertilizer CF/MOS); long renewables (NEE/ICLN). Tactical, Jun-Sept.
+- **Semi Equipment grace-period (MED):** export-control grace through Dec 31 + AI capex. AMAT/LRCX/ASML long into the window, China-exposure risk post-Dec. → LRCX vetted: **2.5/4 WATCH @ $318**, entry $250-280.
+- **USMCA auto RoO (LOW-MED):** rules-of-origin tightening; short F/GM/STLA Mexico exposure. Forward-looking, specifics unknown.
+- **Pharma MFN pricing erosion (MED):** $35-40B branded-pharma revenue cut; short JNJ/PFE/MRK/ABBV, long generics/PBMs.
+- **China ag commitments (LOW-MED):** $17B/yr purchases; long ADM/BUNGE (consensus-priced) + niche ag-input names.
+
+| Candidate | Score | Verdict | Entry |
+|---|---|---|---|
+| Lam Research ($LRCX) | 2.5/4 | WATCH @ $318 | $250-280 (25-30x fwd P/E) OR capex-guidance miss |
+
+LRCX added to watchlist_triggers ($280). The short/tactical themes are surfaced for operator IBKR discretion — they don't fit the generational-LONG longterm_check framework and aren't polyclaude-deployable.
+
+Pattern: 8 candidates vetted across the weekly rotations, 7 returned PASS/WATCH at current prices (only none ENTER). Valuations broadly stretched cyclewide; discipline holds.
+
+Next weekly: 2026-06-07 — rotate to the oldest-run slugs (critical-minerals 5-08, geopolitics/energy 5-10).

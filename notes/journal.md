@@ -3876,3 +3876,18 @@ Net: the funnel→gate→entry pipeline is now honest end-to-end (real ask in th
 ## 2026-05-31 ~14:00 UTC — Sunday 14:00 cron tick (May-31 resolving end-of-day; quiet)
 
 May-31 NO at 0.985 (+45.20%), resolves end of today UTC, 0/7 redeemable (settlement follows). UMA clean. 7 positions, book +9.86%. Satoshi NO (DEC-0028) holding at ~spread. 1 recycled-Hormuz news alert (no action). discover: 1 candidate (cluster/sports per recent pattern, skip). No actions. redeem-all cron-wired for when May-31 settles (~June 1).
+
+## 2026-05-31 ~late — Sunday weekly long-term review (trade-regulation + markets-corporate)
+
+Ran world_state_digest on the two never-run slugs. 5 themes, none HIGH-conf, and most are SHORT/sector-rotation/tactical (not generational-LONG, not polyclaude-deployable):
+- Oil Repricing (MED-HIGH): Brent -20% to $92.56; short energy-intensive industrials, long renewables.
+- Semi Equipment grace-period (MED): export-control grace to Dec 31 + AI capex; AMAT/LRCX/ASML.
+- USMCA auto RoO (LOW-MED): short F/GM/STLA Mexico exposure.
+- Pharma MFN erosion (MED): $35-40B branded cut; short JNJ/PFE/MRK, long generics/PBMs.
+- China ag commitments (LOW-MED): long ADM/BUNGE + niche ag-input.
+
+longterm_check on the one clean LONG (LRCX): **2.5/4 WATCH @ $318** — secular AI-capex real, but peak cycle + 53.9x P/E + weak margin of safety. Entry $250-280 OR capex-guidance miss. Added to watchlist ($280, ibkr_surface).
+
+Surfaced the short/tactical themes for operator IBKR discretion (they don't fit the generational-LONG framework). Pattern holds: 8 candidates vetted across rotations, 7 PASS/WATCH at current prices — valuations broadly stretched; discipline holds, 0 ENTER-NOW.
+
+Portfolio: 7 positions, MTM ~$92.5, +9.6% on cost. May-31 NO at 0.989 (+45.8%), resolves end-of-day, redemption cron-wired (~June 1). Next weekly 2026-06-07 (rotate to oldest-run: critical-minerals, geopolitics/energy).

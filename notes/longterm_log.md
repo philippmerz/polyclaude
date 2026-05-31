@@ -1841,3 +1841,65 @@ Sum: 100%.
 - [Tokenomics and vesting](https://tokenomist.ai/eigenlayer)
 - [EigenCloud blog mainnet launch](https://blog.eigencloud.xyz/mainnet-launch-eigenlayer-eigenda/)
 ```
+
+---
+
+## 2026-05-31T16:05:44Z — longterm_check
+
+**Query:** `LRCX` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: LRCX
+
+Date: 2026-05-31 | Type: equity | Horizon: 3y
+
+### Current state
+LRCX $318 (52-week high $333); +248% over 12 months; P/E 53.9x (trailing 51.6x, forward 36.6x) vs 10-year avg 19.7x. Q3 FY2026 EPS $1.47 (+41% YoY); Q4 guidance $6.6B revenue, $1.65 EPS.
+
+### Cyclical position
+LRCX sits at or near peak cyclical strength for memory and foundry/logic capex. WFE market forecast at $140B for 2026 (+4% from 2025) with consensus expecting peak in 2026-2027, followed by cyclical decline starting 2027-2028 in memory. Gross margins at 49.9% (near all-time highs), operating margins at 36.5%, suggest the cycle has advanced well past trough. Analyst consensus projects 15.7% EPS growth in 2026 and 16.2% in 2027, but these assume capex discipline holds. At peak cycle, downside risk to earnings is material if DRAM/NAND capex resets.
+
+### Secular tailwind
+AI-driven semiconductor capital expansion is real: TSMC raised 2026 capex guidance to $52-56B (+27-37% from 2025); Samsung and Micron similarly accelerating. Advanced packaging capex forecast >50% growth in calendar 2026. Lam generates ~90% of revenue from etch and deposition tools—essential for advanced 3D architectures. However, the structural constraint is not equipment supply but electricity, cooling, HBM availability, and backend packaging throughput. Secular tailwind is present but capacity-constrained; equipment makers are not the bottleneck. Growth in packaging and memory density does favor LRCX specifically.
+
+### Catalyst window
+- [HIGH] 2026-Q4 / 2027-Q1 — Peak cycle earnings materialize; memory capex visibility extends or softens; advanced packaging revenue ramp visible — Management guidance calls
+- [MED] 2027-H1 — TSMC 2027 capex guidance issued; decision point for cycle sustainability — Industry conferences, earnings calls
+- [MED] 2027-H2 — Memory capex peak likely passes; cyclical decline begins to show in orders/guidance — Industry data, earnings reports
+- [LOW] 2026-2027 — Export control policy shifts; new product launches with AI sensors/AI integration announced May 2026 — Regulatory/press
+
+### Margin of safety
+Net cash position of $1.02B ($4.75B cash, $3.73B debt). Free cash flow $6.0B in last 12 months. Operating margin 32% (FY2025), guided to 36.5% (Q4 2026). However, valuation offers minimal margin of safety. P/E of 53.9x is 173% above the 10-year historical average of 19.7x. Forward P/E of 36.6x is still 85% above historical. Earnings would need to sustain high-teen growth for 5+ years to justify current multiples. Entry at current price leaves little room for execution misses or cycle slowdown.
+
+### Top 3 risks
+1. **Cyclical downturn timing** — Memory capex consensus peaks 2026-2027, then contracts. If Q1-Q2 2027 capex guidance disappoints, LRCX revenues could decline 20-40% from peak, compressing multiples. Cycle peak is typically a poor entry.
+2. **China revenue cliff** — China currently 35% of revenue (peaked 43% one quarter prior). Export control cost ~$600M in 2026 calendar. Further geopolitical escalation or new BIS restrictions could force 10-15% revenue step-down and reputational drag on valuation.
+3. **Valuation compression** — Stock has priced in sustained capex through 2027+ and continued margin expansion. Any slowdown in guidance growth or broad tech multiple compression could trigger re-rating from 36-40x forward P/E to 25-30x, implying 25-35% downside.
+
+### 5-year scenario probabilities
+- Generational (10x+): 8%
+- Strong (3-5x): 20%
+- Modest (1.5-3x): 42%
+- Flat (-30% to +50%): 25%
+- Thesis broken (-50%+): 5%
+
+### Entry trigger
+Current price $318 is expensive on 53.9x P/E. Fair value at 30-35x forward P/E = $260-290 (based on forward EPS estimate ~$6.60). Better entry: **$250-280 range** (implies 25-30x P/E) OR on first negative capex guidance signal from major customer OR visible slowdown in China revenue growth (below consensus).
+
+### Verdict: 2.5/4 — WATCH
+Secular tailwind (AI capex) is real and substantial; advanced packaging is a genuine multi-year growth vector. Cyclical position is weak (at peak, not trough); margin of safety is weak (valuation highly stretched). Framework score reflects strong secular demand offset by poor cycle timing and rich entry price. Keep on watchlist for pullback entry or guidance miss trigger. Do not enter at current $318 price; risk-reward asymmetric to downside if memory cycle moderates on schedule in late 2027.
+
+### Sources
+- [Lam Research Q3 2026 Earnings & June Guidance](https://quartr.com/companies/lam-research-corporation_3483)
+- [LRCX Stock Price & Performance (May 2026)](https://stockanalysis.com/stocks/lrcx/)
+- [Lam Research P/E Ratio & Valuation](https://public.com/stocks/lrcx/pe-ratio)
+- [LRCX Fiscal 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/0000707549/000070754926000022/lrcx-20260329.htm)
+- [SEMI: 69% Growth in Advanced Chipmaking Capacity Through 2028 Due to AI](https://www.semi.org/en/semi-press-release/semi-forecasts-69-percent-growth-in-advanced-chipmaking-capacity-through-2028-due-to-ai)
+- [2026 Semiconductor Equipment Outlook - Deloitte](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html)
+- [AI Drives CapEx Chip Equipment to Record $156B in 2027](https://www.eetimes.com/ai-drives-capex-chip-equipment-to-record-156b-in-2027/)
+- [LRCX Balance Sheet & Cash Flow (2026)](https://stockanalysis.com/stocks/lrcx/financials/balance-sheet/)
+- [Lam Research Financial Health & Profitability](https://www.marketbeat.com/stocks/NASDAQ/LRCX/financials/)
+- [LRCX China Revenue Concentration & Export Control Impact](https://dcfmodeling.com/products/lrcx-pestel-analysis)
+- [LRCX Analyst Ratings & Price Targets](https://www.benzinga.com/quote/LRCX/analyst-ratings)
+- [LRCX vs ASML: Wafer Equipment Market Dynamics 2026](https://finance.yahoo.com/news/lrcx-vs-asml-semiconductor-equipment-125000053.html)
+```
