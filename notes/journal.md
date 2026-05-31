@@ -3862,3 +3862,13 @@ Conceded: I overstated the UMA tail (~2-3% → ~0.5-1%) — the skeptic-bias-tow
 3. Real blocker: CLOB collateral is wrapped pUSD, NOT raw USDC.e. Exchange saw only $5.80 usable (residual pUSD); the $10 USDC.e I'd withdrawn from Aave was NOT usable without a CollateralOnramp.wrap (no script for it). Sized the buy to the available $5.80 pUSD ($5.64) — cleaner anyway. Redeposited the unneeded $9 USDC.e back to Aave Polygon (tx 0x0fa47fcd).
 
 Backlog-worthy: (a) polyclaude_enter should round limit price to the market tick size; (b) no pUSD-wrap script exists — entries depend on residual pUSD or a manual wrap.
+
+## 2026-05-31 ~late — polyclaude_enter gate now walks the LIVE ASK (closes phantom-edge hole)
+
+Reflection finding: the robust-edge gate evaluated EV at the gamma midpoint (`mark`), contradicting the polymarket-midpoints-unreliable lesson (mids sit between stub bids and real asks). The Satoshi entry exposed it (gate saw 0.935, real ask 0.940). Trivial gap there — but the 10x funnel fix now surfaces thin-liquidity tail markets where the stub-mid↔real-ask gap can be multi-point, so the gate could pass phantom edge that evaporates on fill (the exact phantom-arb trap).
+
+Fix (committed): added `_best_ask(token)` hitting the CLOB book API directly; polyclaude_enter now uses the live lowest ask as `mark` for the gate (falls back to gamma mid only if the book is unreachable), and prints the mid→ask delta.
+
+Immediately validated: re-running the Satoshi market now shows live ask 0.95 (my $5.64 buy lifted the 0.94 level) → gate correctly SKIPs (p_robust 0.95 ≤ mark 0.95, no robust edge), whereas the old gamma-mid 0.935 path would have passed. So the fix just prevented a phantom-edge decision in real time, and confirms my 0.94 fill was at the viable edge — adding more at 0.95 would be -EV. Every future entry now gates on the price it would actually pay.
+
+Net: the funnel→gate→entry pipeline is now honest end-to-end (real ask in the gate + tick-rounded on-grid execution). Two of the three Satoshi-surfaced frictions fixed (tick-rounding + live-ask gate); pUSD-wrap script remains queued (not blocking).

@@ -70,6 +70,23 @@ def fetch_market_by_slug_or_question(slug_or_q: str) -> dict | None:
     return None
 
 
+def _best_ask(token_id: str, timeout: float = 12.0) -> float | None:
+    """Lowest ask for a CLOB token = the price we'd actually PAY to buy it.
+    Hits the CLOB book API directly (gamma midpoints are unreliable — they sit
+    between stub bids and real asks). Returns None if the book is empty/unreachable
+    so the caller can fall back to the gamma mark."""
+    import httpx
+    try:
+        with httpx.Client(timeout=timeout) as c:
+            r = c.get("https://clob.polymarket.com/book", params={"token_id": str(token_id)})
+            r.raise_for_status()
+            asks = r.json().get("asks") or []
+            prices = [float(a["price"]) for a in asks if a.get("price")]
+            return min(prices) if prices else None
+    except Exception:
+        return None
+
+
 def kelly_size(mark: float, p_win: float, bankroll: float, frac: float,
                rho: float, cluster_frac: float) -> tuple[float, dict]:
     """Compute Kelly-optimal $ size with details."""
@@ -174,11 +191,28 @@ def main() -> int:
         return 2
 
     side = args.side
-    mark = no_p if side == "NO" else yes_p
+    gamma_mark = no_p if side == "NO" else yes_p
     token = no_token if side == "NO" else yes_token
-    if mark is None or token is None:
+    if gamma_mark is None or token is None:
         print(f"DECISION: NEED_REVIEW — no token id for {side}")
         return 2
+
+    # Walk the LIVE CLOB ask — do NOT trust the gamma midpoint for the gate.
+    # Per the polymarket-midpoints-unreliable lesson, gamma outcomePrices sit
+    # between stub bids and real asks; the robust-edge gate must evaluate EV at
+    # the price we'd actually PAY (the ask), or it passes phantom edge that
+    # evaporates on fill. This matters more now that the discovery funnel
+    # (10x fix, 2026-05-29) surfaces thin-liquidity tail markets where the
+    # mid↔ask gap is large. Falls back to the gamma mark if the book is empty.
+    real_ask = _best_ask(token)
+    if real_ask is not None:
+        mark = real_ask
+        if abs(real_ask - gamma_mark) >= 0.01:
+            print(f"  [mark] gamma-mid {gamma_mark:.4f} → live ask {real_ask:.4f} "
+                  f"({(real_ask-gamma_mark)*100:+.1f}pp) — using live ask for the gate")
+    else:
+        mark = gamma_mark
+        print(f"  [mark] live ask unavailable; falling back to gamma mid {gamma_mark:.4f}")
 
     # Resolve P(side wins)
     my_p = args.my_p
