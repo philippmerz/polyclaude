@@ -3891,3 +3891,7 @@ longterm_check on the one clean LONG (LRCX): **2.5/4 WATCH @ $318** — secular 
 Surfaced the short/tactical themes for operator IBKR discretion (they don't fit the generational-LONG framework). Pattern holds: 8 candidates vetted across rotations, 7 PASS/WATCH at current prices — valuations broadly stretched; discipline holds, 0 ENTER-NOW.
 
 Portfolio: 7 positions, MTM ~$92.5, +9.6% on cost. May-31 NO at 0.989 (+45.8%), resolves end-of-day, redemption cron-wired (~June 1). Next weekly 2026-06-07 (rotate to oldest-run: critical-minerals, geopolitics/energy).
+
+## 2026-06-01 ~02:00 UTC — June 1 02:00 cron tick (May-31 NO at 0.998, settlement imminent)
+
+May-31 NO at 0.998 (+47.12%), ET deadline (11:59 PM ET May 31 = ~04:00 UTC) ~2h out, then UMA settles. Still 0/7 redeemable. News confirms no permanent deal ("Trump seeking edits to US-Iran deal" — still negotiating, nothing signed). Thesis fully validated through the full cycle (0.678 entry → 0.345 catastrophe → 0.998). UMA clean, Ostium 0, 0 new candidates (990 fetched). Book +9.76%. No actions; redeem-all will fire on the next post-settlement tick (~14:00 June 1) locking +$5.62 on cost.
