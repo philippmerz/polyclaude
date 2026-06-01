@@ -3895,3 +3895,13 @@ Portfolio: 7 positions, MTM ~$92.5, +9.6% on cost. May-31 NO at 0.989 (+45.8%), 
 ## 2026-06-01 ~02:00 UTC — June 1 02:00 cron tick (May-31 NO at 0.998, settlement imminent)
 
 May-31 NO at 0.998 (+47.12%), ET deadline (11:59 PM ET May 31 = ~04:00 UTC) ~2h out, then UMA settles. Still 0/7 redeemable. News confirms no permanent deal ("Trump seeking edits to US-Iran deal" — still negotiating, nothing signed). Thesis fully validated through the full cycle (0.678 entry → 0.345 catastrophe → 0.998). UMA clean, Ostium 0, 0 new candidates (990 fetched). Book +9.76%. No actions; redeem-all will fire on the next post-settlement tick (~14:00 June 1) locking +$5.62 on cost.
+
+## 2026-06-01 ~14:00 UTC — May-31 NO REDEEMED: +$5.62 realized (+47.5%), HOLD-through-catastrophe validated
+
+redeem-all settled the May-31 Iran-peace NO: **17.44 USDC.e received** (tx 0xef8766ab), realizing **+$5.62 on $11.82 cost (+47.5%)**. (Label-bug cosmetic note: logs "yes_redeemed 17.44" — burned 17.44 NO shares for $17.44 since NO won; functionally correct.) DEC-0006 updated with outcome + calibration + lesson.
+
+This closes the dominant position of the whole period and fully validates the HOLD decision through the catastrophe: entry 0.678 → 0.345 (-49% mark) on the 2026-05-24 Trump "largely negotiated" shock → 1.00 settle. The thesis (strict "permanent deal" criterion vs the 60-day-ceasefire reality) held; the mid-cycle crash was speculation/UMA-loose-pricing that reverted exactly as analysis predicted. The term-structure-as-UMA-signal + Kelly-vs-Brownian-bridge frameworks were built from this position and validated by it.
+
+**Capital redeployed immediately** (no-deferral idle-home rule): $16.5 of the freed $18.44 USDC.e → Aave Polygon same-chain (tx 0x370b7af4), ~$1.9 buffer left.
+
+Book now: 6 PM positions (5 long-dated NOs + Satoshi NO) + Aave. The 5 held NOs ride to Dec 31 (~$11 combined expected). Realized P&L since kickoff now: prior -$1.999 (incl R-U) + this +$5.62... net the May-31 win flips cumulative realized to roughly break-even-to-slightly-positive. uma_status_check GAMMA_LOOKUP_FAILED on the resolved May-31 slug is benign de-indexing (cache self-cleans).

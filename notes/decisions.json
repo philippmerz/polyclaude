@@ -111,9 +111,10 @@
         "peace_deal",
         "best_ev"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "RESOLVED NO (won). No permanent US-Iran peace deal by May 31 2026 \u2014 a 60-day ceasefire framework was the most that materialized (explicitly temporary, did not qualify). Redeemed 2026-06-01 tx 0xef8766ab for $17.44. Combined position (entry DEC-0006 + scale-in DEC-0024, total cost $11.82, 17.44 shares) realized +$5.62 (+47.5%). Held through the full volatility cycle: 0.678 entry \u2192 0.815 \u2192 0.345 catastrophe (Trump 'largely negotiated' shock 2026-05-24) \u2192 recovery \u2192 1.00 settle.",
+      "calibration_delta": "Well-calibrated. P(NO) thesis (strict 'permanent deal' criterion vs 60-day-ceasefire reality) held; the mid-cycle catastrophe was speculation/UMA-loose-pricing that reverted exactly as the strict-reading analysis predicted.",
+      "lesson": "HOLD through a -49% mark drawdown was correct when (a) catalyst_check + fresh research repeatedly reaffirmed fundamentals, (b) UMA-resolution-criteria risk was assessed as low (strict permanent-deal language), (c) Brownian-bridge conditional EV stayed positive. The term-structure-as-UMA-signal + Kelly-vs-BB frameworks (shipped this cycle) were built from and validated by this position.",
+      "resolved_at": "2026-06-01T14:01:23Z"
     },
     {
       "id": 7,
