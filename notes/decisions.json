@@ -575,7 +575,10 @@
    "price": 0.85,
    "shares": 2,
    "usd": 1.7,
-   "tx": "0x92d3e6371610407f6e143416efe0c04d06c81b9c7a4ef522f16f72d1a94a01fc"
+   "tx": "0x92d3e6371610407f6e143416efe0c04d06c81b9c7a4ef522f16f72d1a94a01fc",
+   "gate_post_hoc": "catalyst_check 2026-06-01: P(YES) central 1.0% (range 0.2-2.5%). PURSUE disclosure tranches (May8/May22/~Jun5) explicitly NON-confirming; no escalation. Edge REAL: NO@0.85 ~20-28% APY at P(YES) 1-5%. Loose-UMA tail small here (no ambiguous confirmation event for DVM to construe YES, unlike DEC-0018 R-U which had a real ceasefire announcement).",
+   "exposure_note": "Total aliens-2027 NO = DEC-0003 ($9 @0.80) + this ($1.70 @0.85) = $10.70. Against ~$160 total bankroll that's ~6-7% (NOT 29% -- earlier I wrongly used the $37 idle-sleeve denominator). 30%-cluster-cap is on bankroll, so concentration does NOT bind; room to scale. Real reason not to scale now: deployable capital sits in Arb Aave behind a ~$0.10 ETH gas wall; bridging $20 nets only ~$1-1.5 after gas-topup + bridge friction + stranding risk -- marginal, not worth forcing at high context. Legitimate deliberate-deployment candidate next cycle (top up Arb ETH first).",
+   "lesson": "TWO process slips (EV conclusion survived, process didn't): (1) added to a market I already held (DEC-0003) without checking existing exposure -> duplicate/over-concentration risk. (2) bought BEFORE running the mandatory catalyst_check gate (philosophy commit 6c9d171); got lucky it confirmed ~1%. FIX: add an existing-position + auto catalyst-gate check to polyclaude_enter.py before any buy."
   },
   {
    "id": 30,
