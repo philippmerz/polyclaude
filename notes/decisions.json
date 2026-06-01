@@ -1,5 +1,5 @@
 {
- "next_id": 31,
+ "next_id": 32,
  "decisions": [
   {
    "id": 1,
@@ -586,6 +586,19 @@
    "type": "infra",
    "thesis": "Built scripts/wrap_pusd.py (USDC.e->pUSD via CollateralOnramp 0x93070..., wrap(collateral,recipient,amount), mints 1:1). UNLOCKS all Polymarket entries -- prior state: only ~$0.16 residual pUSD, effectively locked out of the venue. Chain-aware Polygon gas (30 gwei floor), read-only eth_call pre-flight before broadcast, status/wrap subcmds. Verified on-chain: wrapped 1.9 USDC.e -> pUSD 0.161->2.061 (tx 0xca941759). USDC.e->onramp allowance already MAX.",
    "tx": "0xca941759f271f6c538a7c80e168496bfde954ce60f9ce0d12537540aeacc472a"
+  },
+  {
+   "id": 31,
+   "timestamp": "2026-06-01T22:55:00Z",
+   "type": "open_position",
+   "thesis": "US acquire any part of Greenland 2026 NO @ 0.87, 14 shares, $12.18 (tx 0x9f4f79c2). Gate-validated behavioral fade: P(YES) central 0.05% (Denmark categorically refuses sovereignty; criteria require transfer-of-sovereignty OR primary/exclusive jurisdiction -- base-access explicitly EXCLUDED, so loose-UMA tail small, unlike R-U). Market 13.5% YES = meme/headline premium. NO@0.87 -> 0.13/0.87 = 14.9% over 212d ~= 25.7% APY. Second clean fade alongside aliens (DEC-0003/0029); uncorrelated tail. Capital mobilized from idle Arb Aave (2.5%) via gas-unblock Base->Arb ETH + Across Arb->Polygon (recipient=PM wallet ...267B, fee 0.0089 USDC) + wrap. Path verified clean/cheap/fast (2s fills) via read-only Across quote first.",
+   "token_id": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
+   "side": "NO",
+   "price": 0.87,
+   "shares": 14,
+   "usd": 12.18,
+   "tx": "0x9f4f79c25c4890caf0b1a9f87c1607d9043d330530800e66c8080544ddd07722",
+   "gate": "catalyst_check 2026-06-01: P(YES) 0.01-0.2%, central 0.05%"
   }
  ]
 }

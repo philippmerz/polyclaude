@@ -24,7 +24,7 @@ the play is a **diversified basket** across uncorrelated tails.
 | Market | Side | Price | P(YES) gate | APY | Status |
 |---|---|---|---|---|---|
 | US confirm aliens before 2027 | NO | 0.85 | ~1% (PURSUE tranches non-confirming) | ~28% | **HELD** $10.70 (DEC-0003 $9 + DEC-0029 $1.70) |
-| US acquire any part of Greenland 2026 | NO | 0.865 | ~0.05% (Denmark refuses; sovereignty-only criteria, base-access excluded) | ~21-27% | **QUEUED** (validated, criteria clean) |
+| US acquire any part of Greenland 2026 | NO | 0.87 | ~0.05% (Denmark refuses; sovereignty-only criteria, base-access excluded) | ~25.7% | **DEPLOYED** $12.18 / 14sh @0.87 (DEC-31, tx 0x9f4f79c2) |
 | ~~GameStop acquire eBay~~ | ~~NO~~ | 0.855 | **18%** (active hostile bid — NOT a meme) | **−EV** | **DROPPED** by gate |
 
 Greenland NO token: `104895545296438735617666172336621441242754294947987367085791779928220778311973`
