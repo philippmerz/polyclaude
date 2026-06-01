@@ -110,3 +110,27 @@ Operator directive 2026-05-09 ~17:10 UTC after Russia-Ukraine ~$16.73 expected l
 - Liquidation MEV monitor (high variance, defer)
 - Cross-venue HIP-4 extension (defer until HIP-4 has TVL)
 - polyclaude_enter.py — single-command entry helper (catalyst_check + Kelly + execute)
+
+---
+
+## CAMPAIGN CLOSE-OUT — 2026-06-01
+
+**Status: effectively complete.** The May-31 Iran-peace NO redeemed +$5.62 (2026-06-01), the last of the campaign's recoup trades to settle.
+
+**Realized scorecard vs the R-U −$16.73 hole:**
+- R-U loss: −$16.73
+- Campaign + ambient realized wins since: May-11 NO +$0.525, May-15 NO +$3.54, Latvia +$0.706, gold TP +$1.17, NDX-SHORT TP +$1.96, SPX-LONG close +$1.17, Jesus +$0.19, May-31 NO +$5.62, minus small (Aliens-abort −$0.08, Atletico −$0.07)
+- **Net cumulative realized ≈ −$2.0** — the −$16.73 hole is ~88% refilled in realized terms.
+- Held book: 5 long-dated NOs to Dec-31 (~+$11 combined expected) + Satoshi NO. Expected to flip cumulative realized clearly positive at year-end.
+
+**Durable infra delivered (the campaign's real legacy, beyond the $):**
+- Sizing: kelly_size, portfolio_kelly --constrained, brownian_bridge_fv
+- Safety: uma_status_check (closes the actual R-U root cause), polyclaude_enter robust-edge gate + live-ask gate + tick-rounding
+- Sourcing: world_state_digest + longterm_check weekly review; discover_markets 10× fetch-cap fix; watchlist auto-revet
+- Scanning: sports_pm_scan +consensus, macro_pm_scan, event_monotonicity_scan
+- Frameworks (strategy/00): term-structure-as-UMA-signal, Kelly-vs-Brownian-bridge (+ Bayesian-conditional EV gotcha), edge-bar = robust-EV
+- Process: ostium_state_diff, news_watcher tier-2 body-fetch CRITICAL re-val, capital_ledger
+
+**Strategy shifts banked:** mechanical-resolution-only filter; 60/40 scrapped (operator); edge bar 10pp → robust-EV (operator); idle-home = same-chain Aave.
+
+Remaining "pending campaign items" (Limitless/Hyperliquid/Pendle/MEV scanners) are deferred new-venue expansions, not recoup-critical — they live in notes/backlog.md now. This tracker is closed.
