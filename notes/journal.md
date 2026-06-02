@@ -4005,3 +4005,41 @@ bucket, and ~24 bucket-tests across runs make a 2.7SE blip expected by chance. C
 
 FINAL: PM is calibrated; no robust mechanical favorite-longshot edge survives scrutiny across cuts. The
 real edges remain (a) gate-selected idiosyncratic meme-fades, (b) riskless arb scanners. Investigation closed.
+
+---
+
+## 2026-06-02 ~11:45 UTC — CORRECTION: favorite-longshot edge IS real at large N (operator: "run it all the way")
+
+Earlier today I concluded "PM calibrated, no mechanical favorite edge" from N=600. That was UNDERPOWERED.
+Operator pushed to run it all the way (cheap to check). Ran N=1513 (7d) + 747 (30d), clean (--require-full-lookback).
+
+7d-before-resolution, clean, large-N:
+  0.50-0.60  N=218  53.7% vs 54.6%  -1.0   (calibrated)
+  0.60-0.70  N=193  61.1% vs 64.0%  -2.9   (~calibrated)
+  0.70-0.80  N=198  71.7% vs 74.4%  -2.7   (~calibrated)
+  0.80-0.85  N=80   85.0% vs 82.2%  +2.8   (noise, 0.7σ)
+  0.85-0.90  N=91   89.0% vs 87.5%  +1.5   (noise)
+  0.90-0.95  N=111  97.3% vs 92.5%  +4.8   (3.2σ)  <-- REAL
+  0.95-0.98  N=156  99.4% vs 96.6%  +2.8   (4.7σ)  <-- REAL
+  0.98-0.99  N=152  100% vs 98.9%   +1.1   (152/152; partly luck)
+
+FINDING: classic favorite-longshot bias IS present on PM, but only visible at large N and CONCENTRATED in
+the extreme-favorite zone (0.90-0.98), entered NEAR resolution (7d). The 2-5% longshot side carries a
+persistent lottery premium -> the 95-98% favorite is underpriced by ~3pp. Survives Bonferroni (16 tests).
+This is a structural/capital-efficiency risk premium (locking 96c for 7d to make 3c isn't worth it to most
+capital, so near-certain favorites trade at a discount) -> exactly the bond-like-fade in philosophy edge-source-1,
+now EMPIRICALLY VALIDATED + localized to the 0.90-0.98 / short-horizon sweet spot.
+
+30d lookback: weaker/mixed (0.90-0.95 +3.7pp/1.9σ; 0.95-0.98 calibrated; mild favorites 0.50-0.70 strongly
+NEGATIVE -10 to -12pp -> mild favorites 30d out are NOT reliable). => enter NEAR resolution, high-confidence only.
+
+Caveats (tradeable but narrow): (1) fees/slippage ~1-1.5pp -> 0.90-0.95 nets ~+3pp, 0.95-0.98 thins to ~+1.8pp;
+(2) fat tail: win ~3c / lose ~96c, a correlated cluster of upsets hurts -> needs diversification + small (fractional-
+Kelly) sizing + the resolution-criteria (R-U) & tail-correlation filters; (3) require-full-lookback selection;
+(4) 0.98-0.99 100%-won is partly luck. NOT a free lunch — a risk premium, which is why it persists.
+
+ACTION: this validates + sharpens the existing bond-like-fade (my aliens/Greenland/Iran NO already live in
+this zone). Refining philosophy edge-source-1 with the localization. A dedicated mechanical scanner (auto-find
+0.90-0.97 favorites ~1-2wk out, filtered) is now worth building (revises earlier 'low priority') — but it's a
+new strategy CLASS for auto-deployment, so flag for operator sign-off, don't unilaterally auto-trade.
+Lesson: small-N noise hid a real 3-5σ effect; when a check is cheap, run it to adequate power before concluding.
