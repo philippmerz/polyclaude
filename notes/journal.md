@@ -3947,3 +3947,42 @@ No other material findings.
 ## 2026-06-02 02:00 UTC — Cron tick
 
 No-action tick. Guards all clean: uma_status_check 15 tracked / 0 disputes; check_marginal_apy 7 positions / 0 below hurdle; redeem-all 0/7 redeemable; arb scanners (monotonicity + consistency, now wired into step 6) found 0 real net-positive arbs. News flow = Iran/Israel/Hezbollah crisis headlines (fresh US-Iran strikes, Trump mediating Israel-Hezbollah) — relevant to pre-existing Iran cluster (regime-fall NO $28.25 = biggest book position, Pahlavi NO $10, Trump-out NO $10.56) but ongoing strikes are already priced, no regime collapse, no Tier-1 alert fired → monitor, no action (no info edge over headline-watchers per philosophy). PM book: 7 NO positions, cost $86.41 / MTM $89.45 / +$3.04 (+3.51%), max upside +16.1% to Dec-31. Aave idle ~$22 (no qualifying edge). No new entries (comprehensive scan + 2 fade deployments were ~4h ago this session).
+
+---
+
+## 2026-06-02 ~10:50 UTC — Investigation: mechanical favorite-longshot strategy (operator request)
+
+Operator (telegram) asked to investigate mechanical/systematic trading, example: buy the >80% side
+across all markets, reshift when less extreme. Built scripts/longshot_calibration_backtest.py — pulls
+resolved binary PM markets (gamma closed=true, vol>=20k), reads decisive outcome, takes YES-token
+CLOB price at (closedTime - lookback) as entry, buckets by favorite-side price, computes empirical
+win-rate vs implied. Ran N=599 at 7d and 30d lookbacks.
+
+RESULT — no robust favorite-longshot edge on PM (it's a sharp market):
+  bucket   7d edge    30d edge
+  0.50-60  -2.6 (ns)  +8.3 (1.9SE)
+  0.60-70  +4.2 (ns)  +16.4 (2.9SE, likely artifact)
+  0.70-80  +1.7 (ns)  -4.7 (ns)
+  0.80-85  +4.0 (ns)  +5.2 (ns)   <- operator's "80/20"; within 1 SE = noise
+  0.85-90  -5.7 (ns)  -4.9 (ns)
+  0.90-95  -0.8       -0.3        <- calibrated
+  0.95-98  -3.4       -3.5        <- CONSISTENT slight OVER-pricing of extreme favs (opposite of bias)
+  0.98-99  +1.1       -0.1
+  overall favorites won ~83%.
+
+Conclusions:
+1. Buying extreme favorites (>80%) = NO edge. All >=0.80 buckets within ~1 SE; PM favorites calibrated.
+   Naive 'buy all extremes' would earn ~0 EV while loading the fat tail (win 15c/lose 85c) + correlation.
+2. Only persistent directional signal: 0.95-0.98 favorites slightly OVERpriced (-3.4/-3.5pp, both lookbacks)
+   = weak FADE-the-favorite / buy-the-2-5%-longshot hint — opposite of the idea, too weak + fat-tailed to trade.
+3. 30d mid-favorite (0.60-0.70) +16pp is likely a fallback/selection artifact (markets younger than 30d
+   default to early, less-informed prices) + high variance. Flagged for a cleaner follow-up (filter to
+   markets >=Nd old), NOT traded.
+4. STRATEGIC: my aliens/Greenland fades work as SPECIFIC behavioral/meme mispricings caught case-by-case
+   by catalyst_check, NOT a generic favorite bias. So the thing worth mechanizing is the GATE (auto-detect
+   overpriced idiosyncratic-tail longshots + filter), not blind favorite-buying. Truly mechanical riskless
+   edge stays the arb scanners (monotonicity/consistency/cross-venue).
+
+Caveats: recent-resolution sample (selection), single-snapshot entry, no fee/slippage, multiple-comparison
+across 8 buckets. Directional, not definitive — but the broad calibration result is robust enough to
+reject the naive strategy.
