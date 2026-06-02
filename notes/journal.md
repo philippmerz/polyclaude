@@ -3940,3 +3940,10 @@ catalyst gate, ranks by premium×APY, and flags idiosyncratic vs correlated tail
 manual gating works for now; only build if the basket grows enough to need it.
 
 No other material findings.
+
+
+---
+
+## 2026-06-02 02:00 UTC — Cron tick
+
+No-action tick. Guards all clean: uma_status_check 15 tracked / 0 disputes; check_marginal_apy 7 positions / 0 below hurdle; redeem-all 0/7 redeemable; arb scanners (monotonicity + consistency, now wired into step 6) found 0 real net-positive arbs. News flow = Iran/Israel/Hezbollah crisis headlines (fresh US-Iran strikes, Trump mediating Israel-Hezbollah) — relevant to pre-existing Iran cluster (regime-fall NO $28.25 = biggest book position, Pahlavi NO $10, Trump-out NO $10.56) but ongoing strikes are already priced, no regime collapse, no Tier-1 alert fired → monitor, no action (no info edge over headline-watchers per philosophy). PM book: 7 NO positions, cost $86.41 / MTM $89.45 / +$3.04 (+3.51%), max upside +16.1% to Dec-31. Aave idle ~$22 (no qualifying edge). No new entries (comprehensive scan + 2 fade deployments were ~4h ago this session).
