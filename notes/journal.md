@@ -4043,3 +4043,25 @@ this zone). Refining philosophy edge-source-1 with the localization. A dedicated
 0.90-0.97 favorites ~1-2wk out, filtered) is now worth building (revises earlier 'low priority') — but it's a
 new strategy CLASS for auto-deployment, so flag for operator sign-off, don't unilaterally auto-trade.
 Lesson: small-N noise hid a real 3-5σ effect; when a check is cheap, run it to adequate power before concluding.
+
+---
+
+## 2026-06-02 14:00 UTC — Cron tick
+
+Guards clean: uma_status_check 15 tracked / 0 disputes; check_marginal_apy 7 positions / 0 below hurdle;
+redeem-all 0/7. PM book MTM $89.27 (cost $86.41, +$2.86 / +3.31%); -$0.18 since 02:00, noise.
+News: Iran nuclear-DEAL flavored (Grossi "next deal looks different", Trump "talks moving fast") —
+mildly FAVORABLE to my Iran-cluster NOs (regime-fall NO $28, Pahlavi NO) since deal/de-escalation = status
+quo = NO wins. No Tier-1, no action.
+
+OPERATIONAL FIX shipped: the monotonicity arb scanner (wired into the routine yesterday) flagged a +37.5pp
+"Propr launch a token" Jun-2027 vs Sep-2027 violation — but the Sep leg had $0 vol24hr = stale-midpoint stub,
+not an executable arb (all 9 flagged violations were the same illiquid-2027-token-launch pattern: Propr,
+Multipli, Concrete). Root cause: the scanner used gamma midpoints with no liquidity filter (unlike the
+consistency scanner which validates against live CLOB). Added --min-leg-vol24 (default $500, require BOTH
+legs to have real 24h volume). After the gate: 0 violations — confirming all were stubs. Routine scanner is
+now trustworthy. Follow-up (backlog): a full live-CLOB-validation pass would be even more robust than the
+vol filter (a market can have volume but still a stale midpoint vs real asks).
+
+No new entries (comprehensive scan 09:27 found only out-of-mandate longshot legs; nothing changed in 4.5h).
+Aave idle ~$22. Awaiting operator go on the favorite-fade mechanical scanner.

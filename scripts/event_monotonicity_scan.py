@@ -111,6 +111,10 @@ def main() -> int:
                    help="Minimum violation in pp to flag (default 1pp).")
     p.add_argument("--min-event-vol24", type=float, default=1000,
                    help="Skip events with vol24hr below this (default $1k).")
+    p.add_argument("--min-leg-vol24", type=float, default=500,
+                   help="Require BOTH legs of a pair to have >= this 24h volume "
+                        "(default $500). Filters stale-midpoint stub artifacts on "
+                        "illiquid markets that aren't executable arbs.")
     p.add_argument("--json", action="store_true")
     args = p.parse_args()
 
@@ -170,6 +174,14 @@ def main() -> int:
                 # multiple weekly games has different end dates but isn't monotonic).
                 title_low = (ev.get("title") or "").lower()
                 if " by " not in title_low and "before " not in title_low:
+                    continue
+                # Liquidity gate: a leg with ~no recent volume has a STALE gamma
+                # midpoint (sits between a stub bid and no real ask), so the
+                # "violation" is an artifact, not an executable arb. Require both
+                # legs to have real 24h volume. (Lesson 2026-06-02: "Propr launch
+                # a token" flagged +37.5pp but the t2 leg had $0 vol24hr — stub.)
+                if (market_rows[i]["vol24hr"] < args.min_leg_vol24 or
+                        market_rows[j]["vol24hr"] < args.min_leg_vol24):
                     continue
                 vt1 = market_rows[i]["yes"]
                 vt2 = market_rows[j]["yes"]
