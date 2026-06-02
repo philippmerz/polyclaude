@@ -3905,3 +3905,38 @@ This closes the dominant position of the whole period and fully validates the HO
 **Capital redeployed immediately** (no-deferral idle-home rule): $16.5 of the freed $18.44 USDC.e → Aave Polygon same-chain (tx 0x370b7af4), ~$1.9 buffer left.
 
 Book now: 6 PM positions (5 long-dated NOs + Satoshi NO) + Aave. The 5 held NOs ride to Dec 31 (~$11 combined expected). Realized P&L since kickoff now: prior -$1.999 (incl R-U) + this +$5.62... net the May-31 win flips cumulative realized to roughly break-even-to-slightly-positive. uma_status_check GAMMA_LOOKUP_FAILED on the resolved May-31 slug is benign de-indexing (cache self-cleans).
+
+
+---
+
+## 2026-06-02 ~00:10 UTC — Meta-reflection
+
+Two genuine findings documented (not forced):
+
+**1. Strategy refinement → philosophy edge-source-1 (tail-correlation filter).** The longshot-fade
+class needs an idiosyncratic-vs-correlated-tail distinction. Sell NO on idiosyncratic-tail longshots
+(aliens, Greenland, GME-eBay — if they hit, nothing else in the book moves); demand a much bigger
+premium for, or skip, correlated-catastrophe tails (China-Taiwan invasion, pandemic, NK-invades-SK)
+— those pay out exactly when broad risk-off also craters the crypto+Aave book (max loss when capital
+is scarcest). On 2026-06-01 took aliens-NO 0.85 + Greenland-NO 0.87 (~13-15% premium, idiosyncratic)
+but skipped China-Taiwan 6.6% / hantavirus 5.3% / NK-SK 5.2% despite similar "APY". Fade class is a
+BASKET play (diversify idiosyncratic tails). See notes/fade_basket.md.
+
+**2. Process gap → wired arb scanners into daily_checkin step 6.** event_monotonicity_scan.py
+(decomposition arb / edge-source #4) and polymarket_consistency_scan.py (multi-leg sum mispricing,
+live-CLOB-validated) were NOT in the routine (sports_pm_scan + macro_pm_scan already were). I eyeballed
+~1000 markets and missed them until operator pushed "nothing in 1000 markets?" — they exist so discovery
+is systematic, not eyeballed. Now run every cron tick. (Found 1 marginal arb this session: Multipli.fi
+Jul-2027 0.615 > Oct-2027 0.495, +5.66pp net but >1y/thin.)
+
+**Session capital actions (for the record):** built scripts/wrap_pusd.py (unlocks pUSD funding;
+was locked out of venue); deployed 2-fade basket aliens-NO $10.70 + Greenland-NO $12.18; gate caught
+GME-eBay as -EV (active hostile bid, P(YES)~18%); confirmed rest of universe broadly efficient
+(consistency=none, macro tight, Iran cluster coherent). ~$22.50 left idle in Aave (no qualifying edge).
+
+**Future idea (not yet actionable, low priority):** a dedicated behavioral-fade scanner that auto-finds
+overpriced idiosyncratic longshots (YES in meme-premium range on near-impossible events), auto-runs the
+catalyst gate, ranks by premium×APY, and flags idiosyncratic vs correlated tails. discover_markets +
+manual gating works for now; only build if the basket grows enough to need it.
+
+No other material findings.
