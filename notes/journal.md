@@ -4139,3 +4139,30 @@ monitoring burden -> setup/$ ratio does NOT justify it now. It's the right strat
 grows, not a build-now at current size. DD saved; revisit at larger capital or a persistent + spot-hedgeable
 high-funding setup. Reinforces: funding snapshots oversell — always check history before sizing (same family
 as the gamma-midpoint and small-N-noise lessons: verify before trusting a single-point signal).
+
+---
+
+## 2026-06-02 ~15:55 UTC — Directional crypto DD: systematic trend has a real edge (operator probe)
+
+Operator asked re directional crypto/RWA. Built scripts/crypto_momentum_backtest.py (HL daily candles,
+900d, lookahead-safe SMA-crossover long/flat, costs). Two-part answer:
+1. Directional on a VIEW = no edge (efficient liquid mkts; I have no forecast edge). Don't gamble.
+2. Systematic medium-horizon TREND (SMA 40-50 long/flat) = real, robust-ish historical edge:
+     BTC: Sharpe 0.93 vs 0.64 buy&hold; maxDD -26% vs -50%; CAGR 28% vs 21%
+     ETH: Sharpe 0.99 vs 0.25; maxDD -44% vs -64%; CAGR +39% vs -6%
+   Robustness sweep 30-80d: 40-60 is a PLATEAU on both BTC+ETH (not a lone SMA-50 spike) -> not pure overfit.
+   Main value = DRAWDOWN AVOIDANCE (sidesteps sustained bear stretches, halved DDs). FAILED on SOL.
+
+Caveats (why not deploy): single 2.5yr period (one cycle) -> needs OUT-OF-SAMPLE / walk-forward + longer
+history (HL only has ~900d; use Binance klines for years); still directional (crypto-beta, -26 to -44% DD);
+trend-following is crowded/decaying. At ~$22 capital the directional-beta variance is a real cost.
+
+Notable: the trend signal RIGHT NOW (BTC/ETH in drawdown, likely below 40-50d SMA) reads FLAT = stay out of
+crypto = exactly my current stance. Adopting trend wouldn't change today's position; its payoff is staying
+out of further downside + re-entering on the next sustained uptrend.
+
+VERDICT: promising directional candidate, more robust than my prior expected — validate walk-forward on
+longer history before any capital; deploy (small) only if it holds out-of-sample. META: 'check don't dismiss'
+has now corrected my too-quick 'no edge' prior TWICE (favorite-fade, momentum). Updating toward empirical
+checks over dismissive priors — but balancing against the opposite trap (funding snapshot OVERSOLD; small-N
+favorite-fade UNDERSOLD). Lesson: single-point signals mislead both ways; always pull the distribution/history.
