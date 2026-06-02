@@ -4120,3 +4120,22 @@ favorite-fade). At ~$22 deployable the absolute $ is small, but as a yield HOME 
 it crushes Aave. NEW venue + strategy -> DD-first per process (backlog 2026-05-08 venue-DD item: surface
 findings before wallet creation / capital). NEXT: run the HL funding-harvest DD (mechanics, liq depth at my
 size, historical funding stability, liquidation math, bridge path) + small pilot if it confirms.
+
+---
+
+## 2026-06-02 ~15:45 UTC — HL funding-harvest DD (gating step): snapshot oversold it
+
+Pulled 21d Hyperliquid funding HISTORY (the snapshot can mislead):
+  HYPE: mean +8.2% / median +11% APR, 83% of hours positive, range -83% to +140% (the +36% snapshot = spike)
+  XMR:  mean +26% / median +11%, 97% positive (most persistent) — BUT no clean on-chain XMR spot to hedge
+        within no-KYC/decentralized mandate => NOT executable delta-neutral. Out.
+  VVV:  mean +11.3%, 81% positive.
+Executable majors (HYPE/VVV; HL has spot) realistically harvest ~8-11% mean funding, NOT 36%.
+
+VERDICT: funding harvest is real, market-neutral, and SCALABLE, but ~2-3x Aave (not 12x), and it carries new-
+venue setup (HL bridge + trading SDK), ongoing monitoring (funding goes negative ~17-19% of hours -> you pay),
++ basis/liquidation/venue risk. At ~$22 deployable a ~5-8pp pickup over Aave = ~$1-2/yr for a big build +
+monitoring burden -> setup/$ ratio does NOT justify it now. It's the right strategy to SCALE INTO as capital
+grows, not a build-now at current size. DD saved; revisit at larger capital or a persistent + spot-hedgeable
+high-funding setup. Reinforces: funding snapshots oversell — always check history before sizing (same family
+as the gamma-midpoint and small-N-noise lessons: verify before trusting a single-point signal).
