@@ -44,6 +44,31 @@ def _parse(x):
     return ast.literal_eval(x) if isinstance(x, str) else x
 
 
+def categorize(q: str) -> str:
+    """Heuristic category from the question (gamma's category field is empty on
+    resolved markets). Used to find WHERE the favorite-longshot edge concentrates."""
+    s = (q or "").lower()
+    if any(k in s for k in [" vs ", " vs.", "world cup", "french open", "champion",
+                            "premier league", "super bowl", "stanley cup", "nba finals",
+                            "win the 2026 men", "win the 2026 women", " beat ", "grand prix",
+                            "f1 ", "drivers' champion", "iem ", "major 2026", "playoff"]):
+        return "sports"
+    if any(k in s for k in ["bitcoin", "ethereum", "btc", "eth ", "solana", " sol ",
+                            "hyperliquid", "dogecoin", "xrp", "price of", "launch a token",
+                            "all time high", "market cap"]):
+        return "crypto/price"
+    if any(k in s for k in ["fed ", "interest rate", "ecb", " cpi", "inflation", "recession",
+                            "gdp", "jobs report", "rate cut", "rate hike", "basis point"]):
+        return "macro"
+    if any(k in s for k in ["president", "election", "senate", "house", "governor",
+                            "prime minister", "regime", "coup", "nuclear", "invade", " war",
+                            "peace deal", "ceasefire", "sanction", "minister", "parliament",
+                            "nominee", "mayor", "impeach", "out as ", "airspace", "blockade",
+                            "strait", "leader of", "head of state"]):
+        return "politics/geo"
+    return "other/meme"
+
+
 def fetch_resolved(limit: int, min_volume: float, client: httpx.Client) -> list:
     """Paginate gamma closed=true for liquid binary Yes/No markets."""
     out, offset, retries = [], 0, 0
@@ -86,7 +111,8 @@ def fetch_resolved(limit: int, min_volume: float, client: httpx.Client) -> list:
             if not toks or not ct:
                 continue
             out.append({"q": m.get("question", ""), "yes_won": p0 == 1.0,
-                        "yes_tok": toks[0], "closedTime": ct})
+                        "yes_tok": toks[0], "closedTime": ct,
+                        "cat": categorize(m.get("question", ""))})
         offset += 100
     return out[:limit]
 
@@ -147,6 +173,9 @@ def main() -> int:
     ap.add_argument("--require-full-lookback", action="store_true",
                     help="skip markets younger than lookback instead of falling back to open price "
                          "(controls for the 'opens near 0.5, drifts to winner' artifact)")
+    ap.add_argument("--by-category", action="store_true",
+                    help="also break down the favorite edge by market category for fav>=0.90 "
+                         "(finds WHERE the favorite-longshot bias concentrates)")
     args = ap.parse_args()
 
     with httpx.Client() as client:
@@ -165,7 +194,7 @@ def main() -> int:
             fav = max(ep, 1 - ep)
             fav_is_yes = ep >= 0.5
             fav_won = (fav_is_yes == m["yes_won"])
-            rows.append((fav, fav_won))
+            rows.append((fav, fav_won, m.get("cat", "")))
             if (i + 1) % 50 == 0:
                 print(f"#  processed {i+1}/{len(mkts)}", file=sys.stderr)
 
@@ -175,7 +204,7 @@ def main() -> int:
     print("-" * 64)
     tot_n = tot_correct = 0
     for lo, hi in BUCKETS:
-        b = [(f, w) for f, w in rows if lo <= f < hi]
+        b = [(f, w) for f, w, c in rows if lo <= f < hi]
         n = len(b)
         if n == 0:
             continue
@@ -193,6 +222,26 @@ def main() -> int:
     print("-" * 64)
     if tot_n:
         print(f"  overall favorites: {tot_correct}/{tot_n} = {tot_correct/tot_n*100:.1f}% won")
+
+    if args.by_category:
+        from collections import defaultdict
+        cats = defaultdict(list)
+        for f, w, c in rows:
+            if f >= 0.90:  # the validated edge zone
+                cats[c or "(none)"].append((f, w))
+        print(f"\n# favorite edge by category (fav>=0.90 only):")
+        print(f"{'category':>14} {'N':>5} {'emp_win%':>9} {'implied%':>9} {'edge_pp':>8} {'SE_pp':>6}")
+        print("-" * 56)
+        for cat, b in sorted(cats.items(), key=lambda kv: -len(kv[1])):
+            n = len(b)
+            if n < 10:
+                continue
+            wins = sum(1 for _, w in b if w)
+            emp = wins / n
+            impl = sum(f for f, _ in b) / n
+            se = math.sqrt(emp * (1 - emp) / n) * 100
+            print(f"{cat[:14]:>14} {n:>5} {emp*100:>8.1f}% {impl*100:>8.1f}% "
+                  f"{(emp-impl)*100:>+7.1f} {se:>5.1f}")
     return 0
 
 
