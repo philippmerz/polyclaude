@@ -46,7 +46,7 @@ def _parse(x):
 
 def fetch_resolved(limit: int, min_volume: float, client: httpx.Client) -> list:
     """Paginate gamma closed=true for liquid binary Yes/No markets."""
-    out, offset = [], 0
+    out, offset, retries = [], 0, 0
     while len(out) < limit and offset < limit * 4:
         try:
             r = client.get(GAMMA, params={
@@ -55,10 +55,19 @@ def fetch_resolved(limit: int, min_volume: float, client: httpx.Client) -> list:
                 "volume_num_min": min_volume,
             }, timeout=25).json()
         except Exception:
-            break
+            r = None
+        if not isinstance(r, list):  # transient error / dict response -> retry same offset
+            retries += 1
+            if retries > 5:
+                break
+            time.sleep(1.5)
+            continue
         if not r:
             break
+        retries = 0
         for m in r:
+            if not isinstance(m, dict):
+                continue
             oc = _parse(m.get("outcomes"))
             op = _parse(m.get("outcomePrices"))
             if oc != ["Yes", "No"] or not op:
@@ -95,10 +104,18 @@ def _closed_ts(ct: str) -> int | None:
 def entry_price(yes_tok: str, closed_ts: int, lookback_days: float,
                 fidelity: int, client: httpx.Client,
                 require_full: bool = False) -> float | None:
-    try:
-        ph = client.get(CLOB_PH, params={"market": yes_tok, "interval": "max",
-                                          "fidelity": fidelity}, timeout=25).json()
-    except Exception:
+    ph = None
+    for _ in range(3):  # retry transient prices-history failures so we don't silently drop markets
+        try:
+            resp = client.get(CLOB_PH, params={"market": yes_tok, "interval": "max",
+                                               "fidelity": fidelity}, timeout=25).json()
+            if isinstance(resp, dict):
+                ph = resp
+                break
+        except Exception:
+            pass
+        time.sleep(0.8)
+    if ph is None:
         return None
     h = ph.get("history", [])
     if not h:
