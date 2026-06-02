@@ -58,6 +58,34 @@ def empirical_winrate(p: float) -> float | None:
     return None
 
 
+def categorize(q: str) -> str:
+    """Category from the question. Per the 2026-06-02 category-segmented backtest
+    (fav>=0.90), the favorite-longshot edge is REAL in other/meme (+1.9pp, 4.8sigma),
+    politics/geo (+2.3pp) and sports (+1.6pp) but ABSENT in crypto/price (+0.4pp, ns) —
+    so crypto/price + macro are excluded by default (efficient markets, spurious edge)."""
+    s = (q or "").lower()
+    if any(k in s for k in [" vs ", " vs.", "world cup", "french open", "champion",
+                            "premier league", "super bowl", "stanley cup", "nba finals",
+                            "win the 2026 men", "win the 2026 women", " beat ", "grand prix",
+                            "f1 ", "drivers' champion", "iem ", "major 2026", "playoff",
+                            "win on 2026"]):
+        return "sports"
+    if any(k in s for k in ["bitcoin", "ethereum", "btc", "eth ", "solana", " sol ",
+                            "hyperliquid", "dogecoin", "xrp", "price of", "launch a token",
+                            "all time high", "market cap"]):
+        return "crypto/price"
+    if any(k in s for k in ["fed ", "interest rate", "ecb", " cpi", "inflation", "recession",
+                            "gdp", "jobs report", "rate cut", "rate hike", "basis point"]):
+        return "macro"
+    if any(k in s for k in ["president", "election", "senate", "house", "governor",
+                            "prime minister", "regime", "coup", "nuclear", "invade", " war",
+                            "peace deal", "ceasefire", "sanction", "minister", "parliament",
+                            "nominee", "mayor", "impeach", "out as ", "airspace", "blockade",
+                            "strait", "leader of", "head of state"]):
+        return "politics/geo"
+    return "other/meme"
+
+
 def fetch_active(max_pages: int, client: httpx.Client) -> list:
     out, offset, retries = [], 0, 0
     while len(out) < max_pages * 100:
@@ -105,8 +133,12 @@ def main() -> int:
     ap.add_argument("--min-edge-pp", type=float, default=1.0)
     ap.add_argument("--max-walks", type=int, default=40)
     ap.add_argument("--max-pages", type=int, default=10)
+    ap.add_argument("--exclude-cats", default="crypto/price,macro",
+                    help="comma-separated categories to skip as efficient/no-edge "
+                         "(default crypto/price,macro per the category-segmented backtest)")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
+    exclude_cats = {c.strip() for c in args.exclude_cats.split(",") if c.strip()}
 
     now = datetime.now(timezone.utc)
     with httpx.Client() as client:
@@ -144,11 +176,14 @@ def main() -> int:
             toks = _parse(m.get("clobTokenIds") or "[]")
             if len(toks) != 2:
                 continue
+            cat = categorize(m.get("question", ""))
+            if cat in exclude_cats:
+                continue  # efficient category (no favorite-longshot edge) — skip
             fav_is_yes = yes >= 0.5
             cands.append({
                 "q": m.get("question", ""), "fav_is_yes": fav_is_yes,
                 "fav_tok": toks[0] if fav_is_yes else toks[1],
-                "days": days, "liq": liq, "cat": (m.get("category") or "")[:8],
+                "days": days, "liq": liq, "cat": cat,
                 "vol24": float(m.get("volume24hr") or 0),
             })
         cands.sort(key=lambda c: -c["liq"])

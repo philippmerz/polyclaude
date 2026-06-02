@@ -4065,3 +4065,33 @@ vol filter (a market can have volume but still a stale midpoint vs real asks).
 
 No new entries (comprehensive scan 09:27 found only out-of-mandate longshot legs; nothing changed in 4.5h).
 Aave idle ~$22. Awaiting operator go on the favorite-fade mechanical scanner.
+
+---
+
+## 2026-06-02 ~15:05 UTC — favorite-fade scanner built + category-refined (operator: capture alpha, iterate, no permission needed)
+
+Built scripts/favorite_fade_scan.py: finds liquid binary favorites trading (LIVE CLOB ask, not gamma
+midpoint) in the validated 0.90-0.98 zone, short horizon, edge from the calibration curve net of slippage,
+compute-bounded book-walks. Surfaces ranked buy-list; exec still via polyclaude_enter.py gates.
+
+ITERATION — category-segmented backtest (--by-category, fav>=0.90, N=1277) to find WHERE the edge lives:
+  other/meme    N=389  +1.9pp (4.8sigma)  <- most robust (aliens/GME-type idiosyncratic)
+  politics/geo  N=76   +2.3pp (100% won, small-N)
+  sports        N=70   +1.6pp (100% won)  <- positive even at heavy-favorite end (surprised me; my
+                                              earlier sports_pm_scan only showed mid-market efficiency)
+  crypto/price  N=115  +0.4pp (ns)        <- EFFICIENT, no edge (BTC-$72k "+4.4pp" was spurious)
+=> scanner now excludes crypto/price + macro by default (--exclude-cats).
+
+HONEST DEPLOY ASSESSMENT (not forcing activity): the edge is REAL but THIN (+1-3pp gross, ~+1pp net of
+slippage) with a FAT TAIL (win a few c / lose ~the stake). Realizing it needs MANY diversified bets (LLN);
+at ~$160 bankroll / ~$22 deployable + bridge/wrap friction, a handful of bets is variance-dominated and
+friction-eaten. Current live candidates are: thin sports (friction/variance), Iran/Israel-cluster politics
+(correlated w/ my book + R-U resolution risk — US-Iran-PEACE NO is the exact market type that cost 10%), or
+thin Elon-tweet metas. None is a clean big-edge idiosyncratic deploy at this scale. So the scanner is
+FORWARD-LOOKING INFRA: wired into cron step 6 (--min-edge-pp 3) to continuously surface candidates; deploy
+when a BIG-edge idiosyncratic one appears (single-bet edge beats variance) or capital grows enough to
+diversify. Deployment stays judgment-gated (catalyst_check for R-U + tail-correlation), never auto-trade.
+
+Meta: the favorite-fade is fundamentally a SCALE strategy (small edge x many bets). At current capital the
+discretionary big-mispricing fades (aliens/Greenland: ~13-15pp meme premia) are far better $/bet than the
+mechanical thin-favorite fade. Keep both; lead with the big idiosyncratic mispricings while small.
