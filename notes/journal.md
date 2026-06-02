@@ -4095,3 +4095,28 @@ diversify. Deployment stays judgment-gated (catalyst_check for R-U + tail-correl
 Meta: the favorite-fade is fundamentally a SCALE strategy (small edge x many bets). At current capital the
 discretionary big-mispricing fades (aliens/Greenland: ~13-15pp meme premia) are far better $/bet than the
 mechanical thin-favorite fade. Keep both; lead with the big idiosyncratic mispricings while small.
+
+---
+
+## 2026-06-02 ~15:35 UTC — Non-PM venue scoping (operator request: Ostium / dYdX / Hyperliquid APIs?)
+
+All three have APIs: Ostium (integrated, ostium_client.py); Hyperliquid (public REST, no-auth reads — pulled
+live; trading via py SDK + wallet sig); dYdX v4 (public indexer REST + v4 trading client). 
+
+BEST non-PM opportunity = DELTA-NEUTRAL PERP FUNDING HARVEST (cash-and-carry: short the perp + long the
+spot on the same venue = directionally flat, collect funding). Live Hyperliquid funding (annualized) now:
+  HYPE +36% (OI $1.5B, huge liq)   XMR +48% (OI $40M)   VVV +31%   [positive => longs pay shorts => SHORT perp + LONG spot collects]
+  negative-funding (LONG perp + SHORT spot collects): TRX -174%, DOT -54%, many small alts (illiquid/squeezy).
+HYPE is the standout: +36% market-neutral on the most-liquid HL asset, single-venue (HL has spot+perp), ~12x
+Aave's 3% on idle capital. Ostium funding imbalances also large (BTC book 98% short -> longs paid; NDX/CL/
+forex 90%+ long -> shorts paid) but directional unless cross-venue-hedged.
+
+Caveats (NOT risk-free, NOT set-and-forget): funding flips negative (then you pay) -> active monitoring +
+exit; spot-perp basis blowout -> perp-leg liquidation risk, needs margin buffer; venue/contract risk (HL is a
+newer L1); spot-leg custody + token risk (HYPE). Market-neutral in DIRECTION, not in all risks.
+
+Mandate fit: decentralized (no CEX/KYC) ✓, <1y ✓, market-neutral yield that SCALES (unlike the thin PM
+favorite-fade). At ~$22 deployable the absolute $ is small, but as a yield HOME for the idle crypto sleeve
+it crushes Aave. NEW venue + strategy -> DD-first per process (backlog 2026-05-08 venue-DD item: surface
+findings before wallet creation / capital). NEXT: run the HL funding-harvest DD (mechanics, liq depth at my
+size, historical funding stability, liquidation math, bridge path) + small pilot if it confirms.
