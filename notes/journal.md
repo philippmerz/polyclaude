@@ -3986,3 +3986,22 @@ Conclusions:
 Caveats: recent-resolution sample (selection), single-snapshot entry, no fee/slippage, multiple-comparison
 across 8 buckets. Directional, not definitive — but the broad calibration result is robust enough to
 reject the naive strategy.
+
+---
+
+## 2026-06-02 ~11:25 UTC — Follow-up: the 30d mid-favorite "curiosity" is a confirmed artifact (operator asked to check)
+
+Added --require-full-lookback to longshot_calibration_backtest.py (skip markets younger than the lookback
+instead of falling back to their OPEN price). Re-ran 30d, N=353 clean:
+  - 0.60-0.70 bucket: +16.4pp (artifact-prone) -> -5.6pp (clean). SIGNAL VANISHED.
+  - 0.50-0.60: +8.3 -> +14.2 (N=19, SE 10.7, noise).
+CONFIRMED: the +16pp "mid-favorite drift" was the open-price fallback artifact — short-lived markets open
+near 0.50 and drift to the eventual winner; the fallback read that open price as a "30d-ago favorite,"
+manufacturing fake drift. NOT a real edge, not tradeable.
+
+Clean set shows a faint 0.90-0.95 hint (+5.1pp, ~2.7SE) but NOT trusted: small survivorship-selected
+subsample (only >=30d-old markets), contradicts both the 7d (-0.8pp) and full-30d (-0.3pp) cuts for that
+bucket, and ~24 bucket-tests across runs make a 2.7SE blip expected by chance. Chasing it = rabbit hole.
+
+FINAL: PM is calibrated; no robust mechanical favorite-longshot edge survives scrutiny across cuts. The
+real edges remain (a) gate-selected idiosyncratic meme-fades, (b) riskless arb scanners. Investigation closed.

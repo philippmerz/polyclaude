@@ -93,7 +93,8 @@ def _closed_ts(ct: str) -> int | None:
 
 
 def entry_price(yes_tok: str, closed_ts: int, lookback_days: float,
-                fidelity: int, client: httpx.Client) -> float | None:
+                fidelity: int, client: httpx.Client,
+                require_full: bool = False) -> float | None:
     try:
         ph = client.get(CLOB_PH, params={"market": yes_tok, "interval": "max",
                                           "fidelity": fidelity}, timeout=25).json()
@@ -111,6 +112,8 @@ def entry_price(yes_tok: str, closed_ts: int, lookback_days: float,
         else:
             break
     if best is None:
+        if require_full:
+            return None  # market younger than lookback; no genuine entry price (skip, don't fall back)
         best = h[0]  # market younger than lookback -> earliest available
     p = float(best["p"])
     if p <= 0.0 or p >= 1.0:
@@ -124,6 +127,9 @@ def main() -> int:
     ap.add_argument("--lookback-days", type=float, default=7.0)
     ap.add_argument("--min-volume", type=float, default=20000)
     ap.add_argument("--fidelity", type=int, default=720)
+    ap.add_argument("--require-full-lookback", action="store_true",
+                    help="skip markets younger than lookback instead of falling back to open price "
+                         "(controls for the 'opens near 0.5, drifts to winner' artifact)")
     args = ap.parse_args()
 
     with httpx.Client() as client:
@@ -135,7 +141,8 @@ def main() -> int:
             cts = _closed_ts(m["closedTime"])
             if cts is None:
                 continue
-            ep = entry_price(m["yes_tok"], cts, args.lookback_days, args.fidelity, client)
+            ep = entry_price(m["yes_tok"], cts, args.lookback_days, args.fidelity, client,
+                             require_full=args.require_full_lookback)
             if ep is None:
                 continue
             fav = max(ep, 1 - ep)
