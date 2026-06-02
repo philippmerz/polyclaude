@@ -4166,3 +4166,26 @@ longer history before any capital; deploy (small) only if it holds out-of-sample
 has now corrected my too-quick 'no edge' prior TWICE (favorite-fade, momentum). Updating toward empirical
 checks over dismissive priors — but balancing against the opposite trap (funding snapshot OVERSOLD; small-N
 favorite-fade UNDERSOLD). Lesson: single-point signals mislead both ways; always pull the distribution/history.
+
+---
+
+## 2026-06-02 ~16:12 UTC — Trend walk-forward (5.5yr) REVERSES the 900d result: no directional alpha
+
+Pulled 2001d (2020-2026, CryptoCompare) and ran the FIXED SMA-50 long/flat rule by calendar year:
+  BTC full: trend ret 31% / Sharpe 0.92 / maxDD -58%  vs  buy&hold 27% / 0.70 / -77%
+  ETH full: trend ret 26% / Sharpe 0.71 / maxDD -55%  vs  buy&hold 25% / 0.68 / -79%
+By year: trend UNDERperforms strong bulls (2021 ETH +54% vs bh +399%; 2023-24 BTC gave up upside),
+loses-less but still badly in choppy bears (2022 BTC -50%, Sharpe -2.24 — WORSE risk-adj than bh -1.28),
+wins in flat/down years (2025, 2026). Regime-dependent.
+
+VERDICT (supersedes the 2026-06-02 ~15:55 '900d promising' entry): over a FULL cycle, trend ~= buy&hold on
+RETURN (ETH Sharpe 0.71 vs 0.68 = no edge). The 900d window (2023-26) FLATTERED trend. The only robust
+benefit is ~20pp drawdown REDUCTION (-58% vs -77%) — a RISK OVERLAY for holding crypto, NOT alpha. And it's
+moot for me: I have no directional forecast edge so I don't hold directional crypto -> no drawdown to reduce.
+=> NO real directional crypto alpha (views=no edge; trend=no return edge full-cycle). Original prior was right.
+
+META (important calibration): 'check don't dismiss' CONFIRMED the favorite-fade edge but the walk-forward
+KILLED the momentum edge as a favorable-window artifact. Both directions of rigor matter: (1) check empirically
+(don't dismiss on prior), AND (2) validate OUT-OF-SAMPLE / full-cycle before believing a favorable window.
+Single-window backtests mislead (like funding snapshots + small-N). Always pull the full distribution/history.
+crypto_momentum_backtest.py default window (900d) should not be trusted alone -> use multi-year + by-regime.
