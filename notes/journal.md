@@ -4206,3 +4206,23 @@ tension (escalation). Net: volatile but no regime-threatening development; no Ti
 (regime-fall $28 = biggest book position, Pahlavi $10) price the ongoing tension already -> HOLD, no action.
 WATCH THRESHOLD: re-evaluate the regime-fall NO + cluster only if escalation turns regime-threatening (direct
 strikes on Iran leadership/territory or a leadership-change trigger), NOT on tanker/strait incidents.
+
+---
+
+## 2026-06-03 14:00 UTC — Cron tick
+
+Guards clean: UMA 15/0; marginal-APY 7/0 below; redeem 0/7; monotonicity 0; consistency 0. MTM $88.85
+(cost $86.41, +$2.44 / +2.82%; stable).
+
+IRAN ESCALATION (news 09:56): "Kuwait airport hit by Iranian drones as US-Iran talks stall." Notable step-up
+(regional strike + talks stalling, reversing the earlier deal-talk). Repricing check: regime-fall NO mark
+0.875->0.865 (YES 12.5%->13.5%, +1pp) — MINOR/proportionate, market does NOT read it as a regime-threat.
+Assessment HOLD: Iran attacking Kuwait != Iran's regime falling; external war often CONSOLIDATES a regime
+(rally-round-flag). Mixed for the book: peace-deal NOs MORE likely to win (talks stalled = no deal); regime-
+fall NO neutral-to-slightly-worse (+1pp YES). Still +3.3% MTM, comfortable.
+
+WATCH ELEVATED with concrete triggers for the regime-fall NO ($28, biggest position): re-eval/TRIM if EITHER
+(a) news of strikes ON Iran territory/leadership (the 2003-Iraq external-regime-change path — distinct from
+Iran attacking others), OR (b) regime-fall NO mark drops below 0.80 (YES >20%, vs 13.5% now) = market pricing
+real regime risk. Below those, HOLD (don't react to ongoing-crisis headlines; act on state-change — R-U lesson).
+No action this tick.
