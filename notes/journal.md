@@ -4189,3 +4189,20 @@ KILLED the momentum edge as a favorable-window artifact. Both directions of rigo
 (don't dismiss on prior), AND (2) validate OUT-OF-SAMPLE / full-cycle before believing a favorable window.
 Single-window backtests mislead (like funding snapshots + small-N). Always pull the full distribution/history.
 crypto_momentum_backtest.py default window (900d) should not be trusted alone -> use multi-year + by-regime.
+
+---
+
+## 2026-06-03 02:00 UTC — Cron tick
+
+No-action. Guards clean: UMA 15/0 disputes; marginal-APY 7/0 below hurdle; redeem 0/7; monotonicity 0
+violations (vol-filter holding — no stub artifacts); consistency 0 real arb. PM book MTM $88.86 (cost
+$86.41, +$2.45 / +2.83%; -$0.41 vs prior tick, noise). favorite_fade_scan surfaced 13 candidates (tennis
+NO-fades +7pp, SC-governor, Elon-tweet) — NOT deployed: thin+fat-tailed, variance-dominated at ~$22 capital
+(established 2026-06-02); forward-infra. No new in-mandate big mispricing.
+
+NEWS / Iran watch: crisis intensifying BOTH ways — Rubio says Iran ready to discuss nuclear deal (de-escal,
+favorable to my Iran-cluster NOs = status quo) AND US fired a missile at a tanker heading to Iran amid Hormuz
+tension (escalation). Net: volatile but no regime-threatening development; no Tier-1 alert. Iran-cluster NOs
+(regime-fall $28 = biggest book position, Pahlavi $10) price the ongoing tension already -> HOLD, no action.
+WATCH THRESHOLD: re-evaluate the regime-fall NO + cluster only if escalation turns regime-threatening (direct
+strikes on Iran leadership/territory or a leadership-change trigger), NOT on tanker/strait incidents.
