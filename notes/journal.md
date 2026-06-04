@@ -4237,3 +4237,14 @@ MTM $89.05 (cost $86.41, +$2.64 / +3.05%; stable). Iran: QUIET — no new news_w
 NO ~0.87 (YES ~13%), above the 0.80 trim trigger; cluster fine. No new in-mandate mispricing.
 Session remains marathon-length; fresh session still recommended (see 2026-06-03 continuation-hallucination
 incident — root-caused + memory'd; positions never affected).
+
+---
+
+## 2026-06-04 14:00 UTC — Cron tick
+
+No-action. Guards clean: UMA 15/0; marginal-APY 7/0 below; redeem 0/7; monotonicity 0; consistency 0.
+MTM $89.27 (cost $86.41, +$2.86 / +3.31%). Iran news (12:49): "US House votes to curb Trump on Iran war as
+talks stall" — net FAVORABLE/neutral for the book: House curbing Trump's war powers makes US strikes ON Iran
+(the regime-change path / my watch-trigger) LESS likely -> regime-fall NO safer; stalled talks help peace-deal
+NOs. Regime-fall NO steady 0.865 (above 0.80 trigger), unmoved. Daemon confirmed alive (fired the 12:49 alert).
+No new in-mandate mispricing. Session still marathon-length; fresh session recommended.
