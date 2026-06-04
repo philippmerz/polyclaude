@@ -4226,3 +4226,14 @@ WATCH ELEVATED with concrete triggers for the regime-fall NO ($28, biggest posit
 Iran attacking others), OR (b) regime-fall NO mark drops below 0.80 (YES >20%, vs 13.5% now) = market pricing
 real regime risk. Below those, HOLD (don't react to ongoing-crisis headlines; act on state-change — R-U lesson).
 No action this tick.
+
+---
+
+## 2026-06-04 02:00 UTC — Cron tick
+
+No-action. Guards clean: UMA 15/0; marginal-APY 7/0 below; redeem 0/7; monotonicity 0; consistency 0.
+MTM $89.05 (cost $86.41, +$2.64 / +3.05%; stable). Iran: QUIET — no new news_watcher alert in ~12h
+(daemon verified alive, log written 01:38Z, correctly suppressing non-material crisis-noise). Regime-fall
+NO ~0.87 (YES ~13%), above the 0.80 trim trigger; cluster fine. No new in-mandate mispricing.
+Session remains marathon-length; fresh session still recommended (see 2026-06-03 continuation-hallucination
+incident — root-caused + memory'd; positions never affected).
