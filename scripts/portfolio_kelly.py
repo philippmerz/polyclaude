@@ -40,6 +40,9 @@ from pathlib import Path
 
 import httpx
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _paths as _secrets
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PRIORS_PATH = REPO_ROOT / "notes" / "portfolio_kelly_priors.json"
 
@@ -82,13 +85,13 @@ def main() -> int:
     p.add_argument("--bankroll", type=float, default=170.0)
     p.add_argument("--kelly-frac", type=float, default=0.5,
                    help="Fractional Kelly multiplier (0.5 = half-Kelly)")
-    p.add_argument("--wallet", default="/home/philipp/secrets/wallet.json")
+    p.add_argument("--wallet", default=str(_secrets.path("POLYCLAUDE_WALLET")))
     p.add_argument("--check-uma", action="store_true",
                    help="Fetch umaResolutionStatus per market (slow). Default skip.")
     p.add_argument("--constrained", action="store_true",
                    help="Apply portfolio budget constraint: scale per-position Kelly so "
                         "total deployment <= bankroll. Per-position Kelly summed across high-edge "
-                        "book typically exceeds bankroll (>200%); --constrained scales each by "
+                        "book typically exceeds bankroll (>200%%); --constrained scales each by "
                         "(bankroll / sum_kelly) so allocation respects budget while preserving "
                         "the ranking. This is the closed-form CONSTRAINED-PORTFOLIO-KELLY: "
                         "maximize E[log(B + Σ wᵢ Δᵢ)] s.t. Σ wᵢ ≤ 1.")

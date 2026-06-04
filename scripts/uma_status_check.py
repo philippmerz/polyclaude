@@ -42,6 +42,9 @@ from pathlib import Path
 
 import httpx
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _paths as _secrets
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CACHE_PATH = REPO_ROOT / "notes" / ".uma_status_cache.json"
 DECISIONS_PATH = REPO_ROOT / "notes" / "decisions.json"
@@ -97,7 +100,7 @@ def parse_outcome_prices(p) -> tuple[float, float] | None:
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
-    p.add_argument("--wallet", default="/home/philipp/secrets/wallet.json")
+    p.add_argument("--wallet", default=str(_secrets.path("POLYCLAUDE_WALLET")))
     p.add_argument("--json", action="store_true")
     p.add_argument("--alert-pp-move", type=float, default=5.0,
                    help="Alert on outcomePrice move >X pp since last check (default 5pp)")

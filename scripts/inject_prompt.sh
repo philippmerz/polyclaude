@@ -72,8 +72,7 @@ PYEOF
 esac
 # ---------------------------------------------------------------------------
 
-# Wait up to 60s for operator pane idle (no Braille spinner). Same idle-poll
-# pattern as the deprecated prompter_send.sh.
+# Wait up to 60s for operator pane idle (no Braille spinner).
 for _ in {1..60}; do
     title=$(tmux display-message -p -t "$PANE" '#{pane_title}' 2>/dev/null || echo "")
     if ! grep -qE 'Manifesting|Percolating|Pondering|Synthesizing|Thinking|Processing' <<<"$title"; then

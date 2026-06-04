@@ -46,6 +46,9 @@ from pathlib import Path
 
 import httpx
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _paths as _secrets
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PRIORS_PATH = REPO_ROOT / "notes" / "portfolio_kelly_priors.json"
 DECISIONS_PATH = REPO_ROOT / "notes" / "decisions.json"
@@ -117,7 +120,7 @@ def fair_mark_brownian_bridge(p_initial: float, t_frac: float) -> float:
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
-    p.add_argument("--wallet", default="/home/philipp/secrets/wallet.json")
+    p.add_argument("--wallet", default=str(_secrets.path("POLYCLAUDE_WALLET")))
     p.add_argument("--json", action="store_true")
     p.add_argument("--trim-threshold", type=float, default=2.0,
                    help="Flag TRIM if mark > fair_BB by this pp (default 2pp).")

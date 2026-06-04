@@ -20,7 +20,7 @@ Single canonical home for the project's operational infrastructure. Other docs r
 
 ## Telegram bridge
 
-- **Bot:** `@philipp_claudBot`.
+- **Bot:** `@<bot-handle>`.
 - **Outbound:** `scripts/telegram.py {setup,msg,file,md}`.
 - **Inbound:** `scripts/telegram_listener.py start` long-polls and pipes incoming text into the operator's interactive Claude tmux pane via `tmux send-keys -l <text>` then Enter. Detects busy pane via Braille-spinner heuristic in `pane_title`; advances the update cursor only on successful inject so a missed message is retried next poll.
 
@@ -34,8 +34,8 @@ Single canonical home for the project's operational infrastructure. Other docs r
 
 | Sleeve | Address | Funded | Strategy spec |
 |---|---|---|---|
-| Polymarket | `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` | ~$70 USDC.e on Polygon | Two-horizon split per `strategy/01_horizon_split.md`; positions in `research/_long_initial.md` + `research/_short_initial.md` |
-| Crypto | `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` | (pending operator $50 fund) | Default split per `research/_crypto_landscape_2026-04-27.md` §7 |
+| Polymarket | `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` | ~$70 USDC.e on Polygon | Two-horizon split per `strategy/01_horizon_split.md`; live positions in `notes/decisions.json` + `scripts/positions.py` |
+| Crypto | `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` | (pending operator $50 fund) | Default split: re-derive at funding via `scripts/crypto_status.py` (April landscape in git history) |
 
 Both wallets resolved via the same `_paths.py` mechanism (`POLYCLAUDE_WALLET`, `POLYCLAUDE_WALLET_CRYPTO`).
 
