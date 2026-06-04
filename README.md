@@ -66,8 +66,7 @@ Aave V3 USDC reserves: ~$1 Base + $9 Arb. Ostium 1 perp position open (SPX long 
 ### Vetting + sizing
 - `catalyst_check.py` — for event-driven binary Polymarket markets. Spawns `claude -p haiku` with WebSearch + WebFetch + auto-fetched resolution criteria. Outputs central P(YES) with multiplicative breakdown for conjunction questions.
 - `longterm_check.py` — multi-year horizon thesis-check. 4D framework (cyclical / secular / catalyst / margin). Used for IBKR-side candidates.
-- `kelly_size.py` — per-position Kelly + ρ-adjusted + sensitivity to ±5%/±10% p-misestimate.
-- `portfolio_kelly.py` — full-book Kelly audit. `--constrained` flag scales by (bankroll/sum_kelly) when total > 100% bankroll. Surfaces deficit ranking.
+- `portfolio_kelly.py` — full-book Kelly audit (per-position sizing now inline in `polyclaude_enter.py`). `--constrained` flag scales by (bankroll/sum_kelly) when total > 100% bankroll. Surfaces deficit ranking.
 - `brownian_bridge_fv.py` — first-principles hazard-rate pricing for bond-like fades. fair_mark(t) = p^(1-t/T). Surfaces TRIM (mark > fair) and SCALE_UP (mark < fair) signals.
 
 ### Monitoring + safety
@@ -95,9 +94,6 @@ Aave V3 USDC reserves: ~$1 Base + $9 Arb. Ostium 1 perp position open (SPX long 
 ### Emergency
 - `emergency_bridge_to_safety.py` / `emergency_exit_ostium.py` / `emergency_exit_polymarket.py` / `emergency_swap_usdc_to_eth.py` — circuit-breakers for catastrophic events. Per `strategy/02_operations.md` 3-layer-sanity-check protocol before invoking.
 
-### Scaffolding (deprecated)
-- `prompter_start.sh` / `prompter_send.sh` — prompter-architecture launcher; deprecated 2026-05-08, kept for recoverability.
-
 ---
 
 ## Repo map
@@ -105,16 +101,16 @@ Aave V3 USDC reserves: ~$1 Base + $9 Arb. Ostium 1 perp position open (SPX long 
 ```
 PRIMER.md          — original session-launch primer (2026-04-25)
 README.md          — this file (entry point)
-strategy/          — philosophy, sleeve allocation, operations spec, deprecated prompter role
-scripts/           — Python tooling + bash drivers (50 files)
-research/          — per-question audit memos (yield, algo trading, crypto landscape, initial portfolios, PM v2 schema)
+strategy/          — philosophy, sleeve allocation, operations spec
+scripts/           — Python tooling + bash drivers
+research/          — per-question audit memos (PM v2 write-path schema, algo-trading audit)
 notes/             — chronological journal + weekly P&L + structured news_alerts.jsonl + decisions.json + priors + watchlist
 data/              — gitignored: methodology snapshots, market discovery snapshots
 logs/              — gitignored: cron + news daemon logs
 ```
 
 ### Key notes/ files
-- `journal.md` — chronological narrative log (~2000 lines as of 2026-05-09; archive split monthly)
+- `journal.md` — chronological narrative log (recent ~2 weeks kept; older history in git)
 - `decisions.json` — append-only structured decision tracker (DEC-0001 through DEC-0022 as of session)
 - `backlog.md` — operator-maintained pending-items list, reviewed each cron tick
 - `recoup_campaign.md` — 2026-05-09 multi-stage engineering campaign log
@@ -124,8 +120,7 @@ logs/              — gitignored: cron + news daemon logs
 - `primary_sources.md` — curated factual URLs for `world_state_digest.py`
 - `pnl_weekly.md` — weekly P&L reports
 - `capital_ledger.md` — authoritative record of operator deposits in/out ($170 trading capital + gas). Log every external flow here immediately.
-- `catalyst_log.md` / `longterm_log.md` / `world_state_log.md` — append-only outputs from per-script analyses
-- `prompter_primer.md` — DEPRECATED architecture, kept for recoverability
+- `catalyst_log.md` / `longterm_log.md` / `world_state_log.md` — append-only outputs from per-script analyses (recent tail kept; history in git)
 
 ---
 
