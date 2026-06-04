@@ -26,6 +26,52 @@ if ! tmux has-session -t operator 2>/dev/null; then
     exit 3
 fi
 
+# --- skip-if-idle guard (2026-06-04, per operator request) ------------------
+# For recurring continuation/meta-reflection checks ONLY: if the operator's last
+# reply was a bare "Idle", skip this injection. The continuation loop thus
+# auto-pauses when idle and re-engages on the next real trigger (cron periodic
+# check, daily_checkin cron, news Tier-1, operator message, or any non-idle
+# reply). Cuts idle-churn + the long-session continuation-artifact surface.
+# FAIL-OPEN: any error detecting the last reply -> inject normally (never go dark).
+case "$PROMPT" in
+  "Continuation check:"*|"Meta-reflection cycle:"*)
+    last_reply="$("${POLYCLAUDE_DIR}/.venv/bin/python" - <<'PYEOF' 2>/dev/null || true
+import json, glob, os
+try:
+    d = os.path.expanduser("~/.claude/projects/-home-polyclaude")
+    files = sorted(glob.glob(d + "/*.jsonl"), key=os.path.getmtime, reverse=True)
+    txt = ""
+    if files:
+        for line in reversed(open(files[0], errors="replace").readlines()):
+            try:
+                o = json.loads(line)
+            except Exception:
+                continue
+            if o.get("type") == "assistant":
+                for b in o.get("message", {}).get("content", []):
+                    if isinstance(b, dict) and b.get("type") == "text" and b.get("text", "").strip():
+                        txt = b["text"].strip()
+                        break
+                if txt:
+                    break
+    print(txt)
+except Exception:
+    print("")
+PYEOF
+)"
+    if printf '%s' "$last_reply" | grep -qiE '^idle'; then
+        {
+            echo ""
+            echo "## $(date -u +%Y-%m-%dT%H:%M:%SZ) — inject SKIPPED (operator idle; auto-cancel)"
+            echo "$PROMPT"
+        } >> "$LOG"
+        echo "skipped (operator idle): continuation/meta check not injected"
+        exit 0
+    fi
+    ;;
+esac
+# ---------------------------------------------------------------------------
+
 # Wait up to 60s for operator pane idle (no Braille spinner). Same idle-poll
 # pattern as the deprecated prompter_send.sh.
 for _ in {1..60}; do
