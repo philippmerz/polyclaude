@@ -1004,4 +1004,27 @@ MTM $89.27 (cost $86.41, +$2.86 / +3.31%). Iran news (12:49): "US House votes to
 talks stall" — net FAVORABLE/neutral for the book: House curbing Trump's war powers makes US strikes ON Iran
 (the regime-change path / my watch-trigger) LESS likely -> regime-fall NO safer; stalled talks help peace-deal
 NOs. Regime-fall NO steady 0.865 (above 0.80 trigger), unmoved. Daemon confirmed alive (fired the 12:49 alert).
+
+---
+
+## 2026-06-04 ~16:50 UTC — Meta-reflection + repo-refinement recap
+
+Repo-prune shipped this session (063e95b + 6743869): ~8000 lines cut — dead prompter subsystem removed;
+journal/logs truncated to recent (full history in git); 3 scripts' hardcoded secret-dir wallet-path
+defaults scrubbed -> `_paths.path("POLYCLAUDE_WALLET")`; leaked session-id + real-username paths redacted
+from operator_start.sh. HEAD is clean, but those values PERSIST in git history — full removal needs
+filter-repo + force-push (operator's call, flagged, not done unilaterally). Also fixed portfolio_kelly.py
+--help crash (unescaped % in argparse help).
+
+Reflection findings: (1) cleanup — pruned backlog Calendar of resolved past-dated reminders (05-09→05-31)
++ corrected stale ~Nd counts. Minor known-debt left as-is: `macro_pm_scan.py --with-consensus` is a
+broken v1 flag (CME FedWatch JS-rendered → haiku hallucinates); already documented + run with
+`--no-consensus`, not worth a fix while unused. (2) alpha — no genuine NEW source surfaced; not forcing
+one. Live candidates already tracked in backlog (HL delta-neutral funding-harvest DD, crypto-trend OOS
+walk-forward, event_monotonicity live-CLOB validation pass). Book quiet + healthy per today's ticks
+(MTM +3.3%, Iran cluster stable, daemon alive). Calendar now anchors the 2026-06-30 methodology-experiment
+conclusion (validates the reasoning-depth rule that governs when I spend tokens on skeptic+champion).
+
+operator_start.sh carries the operator's local `--model sonnet`→opus runtime edit, preserved uncommitted.
+Session is very long; fresh session still recommended.
 No new in-mandate mispricing. Session still marathon-length; fresh session recommended.

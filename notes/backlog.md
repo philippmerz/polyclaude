@@ -50,26 +50,14 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 ## Calendar
 
-- **2026-05-09** (~tomorrow): Russia Victory Day. Catalyst for DEC-0014 re-eval window.
-- **2026-05-10** (~2d): Atletico vs Celta Vigo (home) — DEC-0008.
-- **2026-05-13** (~5d): Osasuna vs Atletico (away) — DEC-0008.
-- **2026-05-14** (~6d): Eurovision Semi-Final 2 — Latvia must qualify (DEC-0007 gating). Same day, **Trump-Xi summit** with Iran a central agenda item — major catalyst for DEC-0006 (Iran-peace May 31) and DEC-0015 (Iran-peace May 15). Post-summit market repricing likely.
-- **2026-05-15** (~7d): DEC-0015 resolves (Iran-peace May 15 NO).
-- **2026-05-16** (~8d): Eurovision Grand Final — DEC-0007 resolves.
-- **2026-05-17** (~9d): Atletico vs Girona (home) — DEC-0008.
-- **2026-05-24** (~16d): Villarreal vs Atletico (away, final La Liga matchday) — DEC-0008 effectively resolves.
-- **2026-05-25** (~17d): DEC-0008 Atletico La Liga formal resolve.
-- **2026-05-31** (~23d): DEC-0006 Iran-peace May 31 NO resolves.
-- **2026-06-24** (~47d): Trump ceasefire-extension expiration — Iran cluster reassessment trigger.
-- **2026-07-27** (~80d): EU sanctions on Iran review — Iran cluster reassessment.
-- **2026-08-18** (~102d): Trump UAP-EO 300-day declassification deadline. Reassessment trigger for DEC-0003.
-- **2026-10-31** (~176d): Annual DNI UAP report deadline. Final pre-resolution catalyst for DEC-0003.
-- **2026-11-03** (~179d): US midterm elections. Catalyst for DEC-0004 (Trump-out NO) — even if Dems take House, Senate conviction implausible.
-- **2026-05-10** (~2d): DEC-0014 Russia-Ukraine NO re-eval window opens. Plan from May 1 skip: re-evaluate at NO 0.95+ once Victory Day passes without framework announcement.
-- **2026-05-15** (~7d): DEC-0015 resolves. Iran-peace-by-May-15 NO.
-- **2026-05-16** (~8d): DEC-0007 Latvia Eurovision resolves.
-- **2026-05-25** (~17d): DEC-0008 Atletico La Liga resolves (~).
-- **2026-05-31** (~23d): DEC-0006 Iran-peace-by-May-31 NO resolves.
+> Resolved past-dated reminders pruned 2026-06-04 (decision outcomes live in decisions.json; git has full history). Future only; ~Nd as of 2026-06-04:
+
+- **2026-06-24** (~20d): Trump ceasefire-extension expiration — Iran cluster reassessment trigger.
+- **2026-06-30** (~26d): Methodology prospective experiment (N=20, opened 2026-05-02) fully resolves — owe the final per-variant analysis vs the retrospective N=30 ranking (the airtight check on whether the zero-shot-beats-multi-agent reasoning-depth rule is real or a leakage artifact). Weekly `prospective_resolve` already runs via daily_checkin step 10.
+- **2026-07-27** (~53d): EU sanctions on Iran review — Iran cluster reassessment.
+- **2026-08-18** (~75d): Trump UAP-EO 300-day declassification deadline. Reassessment trigger for DEC-0003.
+- **2026-10-31** (~149d): Annual DNI UAP report deadline. Final pre-resolution catalyst for DEC-0003.
+- **2026-11-03** (~152d): US midterm elections. Catalyst for DEC-0004 (Trump-out NO) — even if Dems take House, Senate conviction implausible.
 
 ## Recently closed (last 7d, for context — older deletes silently)
 
