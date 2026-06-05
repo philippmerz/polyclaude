@@ -157,7 +157,7 @@ def cmd_summary(_args: argparse.Namespace) -> int:
     print("\nby type:")
     by_type: dict[str, list] = {}
     for r in rows:
-        by_type.setdefault(r["type"], []).append(r)
+        by_type.setdefault(r.get("type") or "unknown", []).append(r)
     for t, lst in sorted(by_type.items(), key=lambda x: -len(x[1])):
         n_res = sum(1 for r in lst if r.get("outcome"))
         print(f"  {t:18s}  total={len(lst):3d}  resolved={n_res:3d}")
@@ -166,11 +166,12 @@ def cmd_summary(_args: argparse.Namespace) -> int:
     print("\nby confidence:")
     by_conf: dict[str, list] = {}
     for r in rows:
-        by_conf.setdefault(r["confidence"], []).append(r)
-    for c in ("high", "medium", "low"):
+        by_conf.setdefault(r.get("confidence") or "unknown", []).append(r)
+    order = ["high", "medium", "low"] + sorted(k for k in by_conf if k not in ("high", "medium", "low"))
+    for c in order:
         lst = by_conf.get(c, [])
         n_res = sum(1 for r in lst if r.get("outcome"))
-        print(f"  {c:6s}  total={len(lst):3d}  resolved={n_res:3d}")
+        print(f"  {c:8s}  total={len(lst):3d}  resolved={n_res:3d}")
 
     # capital-weighted exposure of pending decisions
     pending_capital = sum((r.get("size_usd") or 0) for r in pending)

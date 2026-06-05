@@ -1027,4 +1027,19 @@ conclusion (validates the reasoning-depth rule that governs when I spend tokens 
 
 operator_start.sh carries the operator's local `--model sonnet`→opus runtime edit, preserved uncommitted.
 Session is very long; fresh session still recommended.
+
+---
+
+## 2026-06-05 02:00 UTC — Cron tick
+
+No-action (trading). Guards all CLEAN: UMA 15/0, marginal-APY 7/0 below hurdle, redeemable 0, monotonicity
+0/202 events, consistency 0 real arb. MTM $89.30 (cost $86.41, +$2.89 / +3.35%); 7 NO positions, Ostium
+flat. Watchlist 3 hits all IBKR-route (SOL/ARB/STX, multi-year → operator sleeve, not polyclaude). The
+aliens-NO Kelly flag (-0.5pp / -$10.70) is the known static-Kelly-vs-Brownian-bridge artifact on a
+late-stage bond-like NO → HOLD, not TRIM (per 2026-05-19 framework note). Prospecting surfaced candidates
+(favorite_fade: South-Africa-win NO 7.3pp @0.90, Israel/Iran-airspace NOs; sports: Knicks NO +50% APY)
+but none auto-cleared, and PM-sleeve deployable cash is ~$0.12 → no entry (correct). Fixed `decisions.py
+summary` crash (KeyError 'confidence' on the 3 non-trade record types). Backlogged 8 overdue
+decision-outcome backfills (do with authoritative data, not memory). Data gathered via a fresh subagent
+(marathon-session anti-hallucination grounding). Fresh session still recommended.
 No new in-mandate mispricing. Session still marathon-length; fresh session recommended.
