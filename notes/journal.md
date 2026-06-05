@@ -1042,4 +1042,20 @@ but none auto-cleared, and PM-sleeve deployable cash is ~$0.12 → no entry (cor
 summary` crash (KeyError 'confidence' on the 3 non-trade record types). Backlogged 8 overdue
 decision-outcome backfills (do with authoritative data, not memory). Data gathered via a fresh subagent
 (marathon-session anti-hallucination grounding). Fresh session still recommended.
+
+---
+
+## 2026-06-05 14:00 UTC — Cron tick
+
+No-action (trading). All guards CLEAN (UMA 15/0, marginal-APY 7/0, redeemable 0, monotonicity 0/237,
+consistency 0). MTM $89.25 (cost $86.41, +3.28%) — ~flat vs 02:00 (−$0.05); 7 NO positions, Ostium flat.
+`decisions.py summary` confirmed fixed (runs clean post today's patch). aliens-NO Kelly −0.5pp = the same
+known static-Kelly/Brownian-bridge artifact → HOLD. Prospecting: none cleared for entry (thin meme/geo
+favorite-fades + Iran-correlated names; ~$0.12 PM deployable).
+
+NEW watchlist hit: EIGEN $0.163 ≤ $0.18 trigger — IBKR-route (operator sleeve, NOT polyclaude capital).
+Still mid-washout from the June-1 token unlock: −27%/7d, lower each of the last 3 days
+($0.21→$0.18→$0.163). Per the trigger's own pre-set "wait for unlock washout" plan, NOT an entry yet
+(falling knife). Surfaced to operator via Telegram (msg 427) with the grounded read + offer to set a
+stabilization alert or run a longterm re-vet. Data gathered via a fresh subagent.
 No new in-mandate mispricing. Session still marathon-length; fresh session recommended.
