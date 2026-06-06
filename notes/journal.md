@@ -1105,3 +1105,25 @@ live CLOB asks — the known stub-bid pattern). No capital action today, but the
 scanners now actually cover the universe they claim to (was 2-20%) → they'll catch a real
 multi-leg/decomposition arb if one appears, instead of being blind to most of it. All 6 gamma scanners
 checked; class fully swept. Tick grounded via fresh subagent.
+
+---
+
+## 2026-06-06 14:20 UTC — gamma-cap class sweep (completeness pass; corrects "fully swept" above)
+
+A completeness grep (`offset*500` / `limit:500` across scripts/) found 3 MORE instances beyond the 4
+scanners — including the most consequential ones:
+- **catalyst_check.py** `_fetch_resolution_description` — the PRE-TRADE R-U gate. Was silently skipping the
+  resolution-criteria lookup for any market outside the top ~600 by volume → degraded literal-criteria
+  anchoring exactly for less-traded markets (where edges hide). This is the gate whose whole value is the
+  98%→2.2% strict-criteria swing.
+- **polyclaude_enter.py** `fetch_market_by_slug_or_question` — slug lookup (primary) is fine; the
+  question-search FALLBACK had the offset*500 skip → a question-based entry could miss its target market.
+- **limitless_arb_scan.py** `fetch_polymarket_universe` — limit=500 + break-on-<500 → only 100 markets.
+All three fixed (limit=100 + contiguous stride / early-exit) and VERIFIED: limitless universe 100→3000;
+catalyst_check + polyclaude_enter now resolve a rank~700 market the old gappy reach missed.
+**methodology_stress_test.py** also has the pattern (lines ~74, ~744) but is DEFERRED — its prospective N=20
+set is already snapshotted, so the in-flight experiment (13/20, ~June 30) is unaffected, and a fresh
+universe-scrape change could confound it → backlogged for post-June-30.
+NET: 7 gamma tools fixed (4 scanners + gate + entry + limitless), 2 already-correct (discover_markets,
+favorite_fade), 1 deferred. Lesson: the completeness critic earned its keep — stopping at the 4 scanners
+would have left the pre-trade gate + entry path silently broken.

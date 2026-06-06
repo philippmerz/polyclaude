@@ -59,18 +59,29 @@ def _fetch_resolution_description(question: str) -> str | None:
         # on question. Keeps it simple — full text match is fine since
         # operator passes the exact market question.
         with httpx.Client(timeout=15.0) as c:
-            for page in range(6):
+            # gamma-api caps pages at 100 regardless of limit, so paginate by 100
+            # across the active universe with an early exit on match. The old
+            # limit=500 + offset=page*500 stride skipped 80% of markets, so this
+            # exact-question lookup silently missed anything outside the top ~600
+            # by volume — and the resolution-criteria anchoring (the whole point of
+            # this function) failed for exactly those less-traded markets.
+            offset = 0
+            while offset < 6000:
                 r = c.get(
                     "https://gamma-api.polymarket.com/markets",
                     params={"closed": "false", "archived": "false", "active": "true",
-                            "limit": 500, "offset": page * 500,
+                            "limit": 100, "offset": offset,
                             "order": "volume24hr", "ascending": "false"},
                 )
                 if r.status_code != 200:
-                    continue
-                for m in r.json() or []:
+                    break
+                batch = r.json() or []
+                if not batch:
+                    break
+                for m in batch:
                     if (m.get("question") or "").strip() == question.strip():
                         return (m.get("description") or "").strip() or None
+                offset += len(batch)
         return None
     except Exception:
         return None

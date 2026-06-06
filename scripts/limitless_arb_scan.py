@@ -217,8 +217,10 @@ def fetch_polymarket_universe(max_markets: int = 3000) -> list[dict]:
         try:
             r = httpx.get(
                 f"{POLYMARKET_GAMMA}/markets",
+                # gamma caps pages at 100 regardless of limit; request 100 so the
+                # short-batch break below trips only on the true last page.
                 params={"active": "true", "closed": "false",
-                        "limit": "500", "offset": str(offset)},
+                        "limit": "100", "offset": str(offset)},
                 timeout=20,
             )
             r.raise_for_status()
@@ -230,7 +232,7 @@ def fetch_polymarket_universe(max_markets: int = 3000) -> list[dict]:
             break
         out.extend(batch)
         offset += len(batch)
-        if len(batch) < 500:
+        if len(batch) < 100:
             break
     return out
 

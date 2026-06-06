@@ -54,19 +54,27 @@ def fetch_market_by_slug_or_question(slug_or_q: str) -> dict | None:
                 d = r.json()
                 if isinstance(d, list) and d:
                     return d[0]
-        # Question search via paginate (gamma-api ?q is broken; client-side filter)
-        for page in range(8):
+        # Question search via paginate (gamma-api ?q is broken; client-side filter).
+        # gamma caps pages at 100 regardless of limit, so paginate by 100 with an
+        # early exit — the old limit=500 + offset=page*500 stride skipped 80% of
+        # markets, so a question-based lookup could silently miss the target market.
+        offset = 0
+        while offset < 6000:
             r = c.get("https://gamma-api.polymarket.com/markets", params={
                 "closed": "false", "active": "true",
-                "limit": 500, "offset": page * 500,
+                "limit": 100, "offset": offset,
                 "order": "volume24hr", "ascending": "false",
             })
             if r.status_code != 200:
-                continue
-            for m in r.json() or []:
+                break
+            batch = r.json() or []
+            if not batch:
+                break
+            for m in batch:
                 q = m.get("question", "")
                 if slug_or_q.lower() == q.lower() or slug_or_q.lower() in q.lower():
                     return m
+            offset += len(batch)
     return None
 
 
