@@ -1058,4 +1058,27 @@ Still mid-washout from the June-1 token unlock: −27%/7d, lower each of the las
 ($0.21→$0.18→$0.163). Per the trigger's own pre-set "wait for unlock washout" plan, NOT an entry yet
 (falling knife). Surfaced to operator via Telegram (msg 427) with the grounded read + offer to set a
 stabilization alert or run a longterm re-vet. Data gathered via a fresh subagent.
+
+---
+
+## 2026-06-06 02:00 UTC — Cron tick (Saturday)
+
+No-action (trading). All guards CLEAN: UMA 15/0, marginal-APY 7/0, redeemable 0, consistency 0;
+monotonicity 1 sub-bar hit (+0.66pp net on a thin Elon-tweet-count market, below action threshold). MTM
+$89.71 (cost $86.41, +3.82%) — drifted up +$0.46 vs 14:00; 7 NO positions, Ostium flat. Watchlist: same 4
+IBKR-route hits, EIGEN $0.164 unchanged (still mid-washout; not re-surfacing). aliens-NO Kelly −0.5pp =
+standing static-Kelly/Brownian-bridge artifact → HOLD. Prospecting: none cleared (favorite-fades
+Iran-correlated or thin; ~$0 deployable).
+
+Weekly methodology (Saturday step 10): `prospective_resolve` = 13/20 resolved (7 open, ~June 30). Variant
+ranking stable and CONFIRMING the retrospective N=30 finding: zero_shot leads (+0.348/$, 3 takes 100%),
+more reasoning depth → lower per-$ (parallel_pair +0.129, unconscious_terse +0.092, adversarial_3round
++0.033). The out-of-sample (ground-truth-blind) result is validating the reasoning-depth rule that governs
+when I escalate to skeptic+champion. Final analysis still gated on all-20 (~June 30).
+
+Op note: `sports_pm_scan --with-consensus` (cron step 6) spawns claude-p-haiku per market (~30–120s each,
+with a correct 120s timeout) — too slow for the delegated subagent's 90s cap, so the mid-market
+bookie-delta signal was skipped this pass; immaterial at ~$0 deployable. NOT a bug (script handles
+timeouts). For future delegated ticks: budget more time or run --no-consensus + note the gap. Tick
+grounded via fresh subagent.
 No new in-mandate mispricing. Session still marathon-length; fresh session recommended.
