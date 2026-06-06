@@ -1082,3 +1082,26 @@ bookie-delta signal was skipped this pass; immaterial at ~$0 deployable. NOT a b
 timeouts). For future delegated ticks: budget more time or run --no-consensus + note the gap. Tick
 grounded via fresh subagent.
 No new in-mandate mispricing. Session still marathon-length; fresh session recommended.
+
+---
+
+## 2026-06-06 14:00 UTC — Cron tick + scanner coverage-bug fix
+
+No-action (trading). Guards CLEAN (UMA 15/0, marginal-APY 7/0, redeemable 0, monotonicity 0, consistency
+0 real). MTM $89.83 (+3.95%), 7 NO positions, Ostium flat, EIGEN unchanged. No prospecting entry.
+
+HIGH-LEVERAGE FINDING + FIX (verified, committed). The delegated consistency scan pulled only 100/5000
+markets. Root cause: gamma-api hard-caps every page at 100 rows regardless of the `limit` param (verified
+live: limit=500 → 100 on BOTH /markets and /events; offset pagination is clean). Scanners requesting
+limit=500 were silently crippled two ways: (a) consistency_scan broke on the short first page → only ever
+100 markets; (b) event_monotonicity / macro_pm_scan / sports_pm_scan used offset=page*500 stride, which on
+a 100-row cap SKIPS 80% of records (rows 0-99, 500-599, 1000-1099…). Same class as the discover_markets
+100→996 fix (2026-05-29); discover_markets + favorite_fade were already correct (limit=100).
+FIX: limit=100 + offset stride page*100 (match the server cap) across consistency/monotonicity/macro/
+sports; bumped monotonicity max_pages 10→15 for full event coverage. VERIFIED: consistency 100→5000
+markets (8→1415 events); monotonicity 218→851 multi-market events inspected. Full re-scan on the
+now-complete universe: 0 real arb, 0 monotonicity violation (every gamma-midpoint flag evaporates under
+live CLOB asks — the known stub-bid pattern). No capital action today, but the riskless-arb + discovery
+scanners now actually cover the universe they claim to (was 2-20%) → they'll catch a real
+multi-leg/decomposition arb if one appears, instead of being blind to most of it. All 6 gamma scanners
+checked; class fully swept. Tick grounded via fresh subagent.

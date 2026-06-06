@@ -86,10 +86,15 @@ def fetch_universe(max_markets: int = 5000) -> list[dict]:
     offset = 0
     while len(out) < max_markets:
         try:
+            # gamma-api caps page size at 100 regardless of the limit param, so
+            # request 100 — otherwise the short-batch break below trips on page 1
+            # and we only ever scan 100 markets (cf. discover_markets.fetch_active,
+            # same bug fixed there 2026-05-29). Verified 2026-06-06: limit=500
+            # returns 100; offset pagination is clean.
             r = httpx.get(
                 f"{POLYMARKET_GAMMA}/markets",
                 params={"active": "true", "closed": "false",
-                        "limit": "500", "offset": str(offset)},
+                        "limit": "100", "offset": str(offset)},
                 timeout=25,
             )
             r.raise_for_status()
@@ -101,7 +106,7 @@ def fetch_universe(max_markets: int = 5000) -> list[dict]:
             break
         out.extend(batch)
         offset += len(batch)
-        if len(batch) < 500:
+        if len(batch) < 100:
             break
     return out
 

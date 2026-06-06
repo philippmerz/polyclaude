@@ -48,7 +48,7 @@ import httpx
 POLYMARKET_FEE_RATE = 0.072  # edge-aware fee
 
 
-def fetch_events(min_vol: float = 1000, max_pages: int = 10) -> list[dict]:
+def fetch_events(min_vol: float = 1000, max_pages: int = 15) -> list[dict]:
     out: list[dict] = []
     seen = set()
     with httpx.Client(timeout=20) as c:
@@ -56,7 +56,9 @@ def fetch_events(min_vol: float = 1000, max_pages: int = 10) -> list[dict]:
             try:
                 r = c.get("https://gamma-api.polymarket.com/events", params={
                     "closed": "false", "active": "true",
-                    "limit": 500, "offset": page * 500,
+                    # gamma caps pages at 100; offset stride must match the cap,
+                    # not the requested limit, else pages skip 80% (verified 2026-06-06).
+                    "limit": 100, "offset": page * 100,
                     "order": "volume24hr", "ascending": "false",
                 })
                 r.raise_for_status()

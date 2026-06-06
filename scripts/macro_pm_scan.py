@@ -72,7 +72,8 @@ def fetch_macro_markets(days: int = 60, min_vol: float = 30000) -> list[dict]:
             try:
                 r = c.get("https://gamma-api.polymarket.com/markets", params={
                     "closed": "false", "active": "true",
-                    "limit": 500, "offset": page * 500,
+                    # gamma caps pages at 100; offset stride must match (else skips 80%).
+                    "limit": 100, "offset": page * 100,
                     "order": "volume24hr", "ascending": "false",
                 })
                 r.raise_for_status()

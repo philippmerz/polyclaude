@@ -110,8 +110,9 @@ def fetch_active_sports_markets(min_vol24: float = 30000, min_liq: float = 5000)
         for page in range(6):
             try:
                 r = c.get("https://gamma-api.polymarket.com/markets", params={
-                    "closed": "false", "active": "true", "limit": 500,
-                    "offset": page * 500,
+                    # gamma caps pages at 100; offset stride must match (else skips 80%).
+                    "closed": "false", "active": "true", "limit": 100,
+                    "offset": page * 100,
                     "order": "volume24hr", "ascending": "false",
                 })
                 r.raise_for_status()
