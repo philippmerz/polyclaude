@@ -1154,3 +1154,23 @@ real on 5000 mkts/1417 events). MTM $89.76 (+3.87%), flat vs 02:00; 7 NO positio
 Grounded via fresh subagent. CADENCE NOTE: with the operator away (7 unanswered cron/Q pings) and the book
 quiet, switching to journal-only on FLAT no-action ticks — Telegram reserved for actions / material moves /
 decisions (decision-feed, not heartbeat-spam). Sent one terse heartbeat (msg 431) flagging the change.
+
+---
+
+## 2026-06-07 16:00 UTC — Sunday weekly long-term review
+
+Rotated the 3 stalest world-state domains (critical-minerals 5-08, energy-power + geopolitics-security 5-10;
+last-runs git-reconstructed since the log was truncated in the prune). HIGH themes surfaced: copper
+structural deficit (FCX/COPX/TECK), uranium undervaluation (CCJ/URA/SPUT), oil supply shock/Hormuz
+(CVX/COP, XOM tracked), memory-chip undersupply 2+yr (MU long / consumer-electronics short); + lithium
+tightening (MED-HIGH, ALB/LIT). Vetted top 2 via longterm_check:
+- CCJ 4/4 WATCH (↑ from 3.5/4 on 5-10 — thesis strengthened: McArthur River full production Jun-26, 1.9Blb
+  deficit to 2045, 49% Westinghouse optionality; but 104x PE, current $114 = FAIR, entry $95-100, don't scale).
+- FCX 2.5/4 PASS (copper at record/peak $63.27, 44.6x PE ~81% above mean, no downside cushion; entry $40-45
+  on copper normalization or $50-55 macro pullback).
+Watchlist updated: added FCX @ $45 trigger (NEW, ibkr_surface); CCJ trigger already @ $95 (matches today's
+read). Trigger-hits this week (existing, all IBKR-route, persistent): SOL $64.85 / ARB $0.082 / STX $0.186 /
+EIGEN $0.176 — all ≤ entry-max; EIGEN still mid-washout post-Jun-1 unlock (wait). All IBKR-surface (operator
+sleeve), NO polyclaude capital. Telegram summary sent (msg 432). Discipline: 12+ candidates vetted across
+rotations, all PASS/WATCH — valuations stretched cyclewide, no bottoms; wait for dip triggers, no chasing.
+Domains/digest/longterm_check run via fresh subagent (grounded).

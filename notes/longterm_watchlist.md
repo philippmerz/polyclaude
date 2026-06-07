@@ -267,3 +267,23 @@ LRCX added to watchlist_triggers ($280). The short/tactical themes are surfaced 
 Pattern: 8 candidates vetted across the weekly rotations, 7 returned PASS/WATCH at current prices (only none ENTER). Valuations broadly stretched cyclewide; discipline holds.
 
 Next weekly: 2026-06-07 — rotate to the oldest-run slugs (critical-minerals 5-08, geopolitics/energy 5-10).
+
+### Sunday 2026-06-07 weekly digest (critical-minerals + energy-power + geopolitics-security)
+
+Rotated to the 3 stalest domains (critical-minerals 5-08, energy/geopolitics 5-10), confirmed via git history. HIGH/MED themes:
+- **Copper structural deficit (HIGH):** ICSG first refined-copper deficit since 2009 (El Teniente depression + Grasberg -35%) vs AI/EV demand, yet LME copper *falling into* the shortage. Plays: FCX, COPX, TECK.
+- **Uranium structural undervaluation (HIGH):** ~67kt demand vs ~55-65kt production deficit; AI-datacenter nuclear race + US enrichment buildout. Plays: CCJ, URA/URNM, SPUT.
+- **Oil supply shock / Hormuz (HIGH):** Strait blocked since Feb 28 (15.8 mbpd stranded), accelerating US draws, Brent ~$106 underpricing a supply response that physically can't materialize in months. Plays: CVX/COP/EOG (XOM already tracked @ $125).
+- **Memory-chip undersupply 2+yr (HIGH):** DRAM prices doubled since early-2025 as Samsung/SK Hynix/Micron reallocate to AI/HBM; smartphone/PC bottleneck persists to 2027. Plays: long MU (tracked @ $520); short consumer-electronics (AAPL/DELL/HPQ).
+- **Lithium tightening (MED-HIGH):** interim 2026-2029 tightness mispriced as onshoring capacity is 3-5y away. Plays: ALB (tracked @ $150), LIT.
+
+| Candidate | Score | Verdict | Entry trigger |
+|---|---|---|---|
+| Cameco ($CCJ) | **4/4** (↑ from 3.5/4 on 5-10) | WATCH | $95-100 (uranium → $75-80/lb) OR aggressive $75-85 if spot <$70; current **$114 = FAIR, don't scale**. Thesis strengthened: McArthur River full production Jun-26, 1.9Blb deficit to 2045, 49% Westinghouse optionality. (trigger already set @ $95) |
+| Freeport ($FCX) | 2.5/4 | PASS (NEW) | $40-45 (copper normalizes $10.5-11k/MT → 20-25x P/E) OR $50-55 macro pullback. At record/peak now ($63.27, 44.6x P/E, no cushion). **Added to watchlist_triggers @ $45.** |
+
+Trigger-hits this week (existing, all route=ibkr_surface): SOL $64.85, ARB $0.082, STX $0.186, EIGEN $0.176 — all ≤ entry-max; EIGEN still mid-washout post-Jun-1 unlock (wait). These are surfaced for the operator's IBKR sleeve, not polyclaude capital.
+
+Pattern holds: 12+ candidates vetted across rotations, all PASS/WATCH at current prices — valuations broadly stretched cyclewide. The HIGH themes (copper/uranium/oil/memory) are real multi-year stories, but the equities are mid/late-cycle, not bottoms. Discipline: wait for the dip triggers; no chasing at peak.
+
+Next weekly: 2026-06-14 — rotate to the now-stalest (macro-fiscal-labor + tech-ai-chips last ran 5-17; biotech-health + crypto-on-chain 5-24). Pick the 2-3 oldest then.

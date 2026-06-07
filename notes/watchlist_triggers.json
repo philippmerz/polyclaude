@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-05-08",
+  "updated": "2026-06-07",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -187,6 +187,16 @@
       "route": "ibkr_surface",
       "rationale": "Semi equipment / AI-capex + advanced packaging. Surfaced 2026-05-31 digest 'Semiconductor Equipment grace-period' (MED): export-control grace through Dec 31 2026 + AI capex cycle. Fresh longterm_check 2.5/4 WATCH at $318 (53.9x P/E, peak cycle, weak margin of safety). Entry $250-280 (25-30x fwd P/E) OR on first negative capex-guidance signal / China-revenue slowdown. Don't chase at peak. Gen 8% / Strong 20% / Modest 42%.",
       "added": "2026-05-31"
+    },
+    {
+      "ticker": "FCX",
+      "type": "equity",
+      "yfinance_symbol": "FCX",
+      "entry_max": 45.0,
+      "horizon": "2-5y",
+      "route": "ibkr_surface",
+      "rationale": "Copper structural deficit (ICSG first refined deficit since 2009; El Teniente depression + Grasberg -35% vs AI/EV demand). Surfaced 2026-06-07 critical-minerals digest (HIGH). Fresh longterm_check 2.5/4 PASS at $63.27 — at/near record/peak (copper hit $13.4k/MT), 44.6x P/E ~81% above 9yr mean, no downside cushion. Entry $40-45 (copper normalizes to $10.5-11k/MT, resets to 20-25x P/E); alt $50-55 only on macro pullback + positive El Abra/Safford decisions. Do NOT chase at peak. Equity -> IBKR.",
+      "added": "2026-06-07"
     }
   ]
 }
