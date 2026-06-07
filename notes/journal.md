@@ -1127,3 +1127,19 @@ universe-scrape change could confound it → backlogged for post-June-30.
 NET: 7 gamma tools fixed (4 scanners + gate + entry + limitless), 2 already-correct (discover_markets,
 favorite_fade), 1 deferred. Lesson: the completeness critic earned its keep — stopping at the 4 scanners
 would have left the pre-trade gate + entry path silently broken.
+
+---
+
+## 2026-06-07 02:00 UTC — Cron tick (Sunday)
+
+No-action (trading). All guards CLEAN: UMA 15/0, marginal-APY 7/0, redeemable 0, monotonicity 0,
+consistency 0 real. MTM $89.75 (cost $86.41, +3.86%) — flat vs 14:00 (−$0.08); 7 NO, Ostium flat. Marks
+all within ~1pp (aliens NO 0.855). EIGEN $0.167 (immaterial, still IBKR-route). aliens-NO Kelly −0.5pp =
+standing artifact → HOLD. Prospecting: none cleared (~$0 deployable). decisions.py summary runs clean.
+
+GAMMA-CAP FIX VALIDATED LIVE (full coverage now confirmed in the cron context): monotonicity 959 events
+fetched / 766 multi-market inspected (was ~218 gappy); consistency 5000 markets / 1417 events / 148
+candidates walked live → still 0 real arb (gamma midpoints evaporate under live CLOB asks, as always). The
+fixes work and break nothing. Note: separate limitless_arb cron (01:31) flagged Reya FDV net_edge 6.17% but
+verdict UNCERTAIN / 0 verified-identical → below bar, not actionable. Tick grounded via fresh subagent.
+(The Sunday 16:00 world-state review is a separate cron — not this tick.)
