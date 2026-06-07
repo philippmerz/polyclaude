@@ -1143,3 +1143,14 @@ candidates walked live → still 0 real arb (gamma midpoints evaporate under liv
 fixes work and break nothing. Note: separate limitless_arb cron (01:31) flagged Reya FDV net_edge 6.17% but
 verdict UNCERTAIN / 0 verified-identical → below bar, not actionable. Tick grounded via fresh subagent.
 (The Sunday 16:00 world-state review is a separate cron — not this tick.)
+
+---
+
+## 2026-06-07 14:00 UTC — Cron tick (Sunday)
+
+No-action; all guards CLEAN (UMA 15/0, marginal-APY 7/0, redeemable 0, monotonicity 0/829, consistency 0
+real on 5000 mkts/1417 events). MTM $89.76 (+3.87%), flat vs 02:00; 7 NO positions, Ostium flat, marks all
+<5pp wiggle (Trump-out 0.895, aliens 0.865), EIGEN $0.171 unchanged. No prospecting entry (~$0 deployable).
+Grounded via fresh subagent. CADENCE NOTE: with the operator away (7 unanswered cron/Q pings) and the book
+quiet, switching to journal-only on FLAT no-action ticks — Telegram reserved for actions / material moves /
+decisions (decision-feed, not heartbeat-spam). Sent one terse heartbeat (msg 431) flagging the change.
