@@ -1196,3 +1196,20 @@ ground invasion or visible IRGC/security-force defection (neither imminent) → 
 market resolves 2026-12-31 (end-2026, ~206d), NOT end-2027 as notes loosely said. Cluster note: Iran paths
 anti-correlated (regime-fall would hurt this NO but help the peace NOs) — not a concentrated tail. Surfaced
 to operator (msg 433). Tick + check grounded via fresh subagents.
+
+---
+
+## 2026-06-08 14:00 UTC — Cron tick (Monday)
+
+No-action; all guards CLEAN (UMA 15/0, marginal-APY 7/0, redeemable 0, monotonicity 0/926, consistency 0
+real). MTM $89.93 (+4.07%), slight positive drift vs 02:00; 7 NO, Ostium flat. IRAN WATCH (from the 02:00
+escalation): holds STABLE — regime-fall NO 0.875 (+0.5pp), Pahlavi NO 0.947 (flat), both well inside the
+5pp re-check trigger, UMA clean on both. Corroborated by the proximate "regime fall by June 30" market
+sitting at YES 0.017 (NO 0.983) — the market itself confirms escalation has NOT raised regime-fall odds,
+consistent with the 02:00 catalyst_check (6%). Thesis intact → HOLD. EIGEN $0.184 (still above $0.18, not a
+hit); FCX no hit; no new watchlist hit. No prospecting entry (~$0 deployable). No Telegram (flat / no
+material move, per the cadence; the 02:00 Iran assessment msg 433 stands — absence of a ping = nothing
+breached).
+Op note: the fixed consistency_scan now pulls 5000 mkts so it runs ~150s (was fast at 100); gave the
+delegated subagent 90s → timed out then passed on a 150s retry. Budget ~180s for consistency_scan in future
+delegated ticks. Grounded via fresh subagent.
