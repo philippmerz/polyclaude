@@ -1174,3 +1174,25 @@ EIGEN $0.176 — all ≤ entry-max; EIGEN still mid-washout post-Jun-1 unlock (w
 sleeve), NO polyclaude capital. Telegram summary sent (msg 432). Discipline: 12+ candidates vetted across
 rotations, all PASS/WATCH — valuations stretched cyclewide, no bottoms; wait for dip triggers, no chasing.
 Domains/digest/longterm_check run via fresh subagent (grounded).
+
+---
+
+## 2026-06-08 02:00 UTC — Cron tick (Monday) + proactive Iran-cluster risk-check
+
+No-action (trading). All guards CLEAN: UMA 15/0, marginal-APY 7/0, redeemable 0, monotonicity 0/795,
+consistency 0 real (5000 mkts). MTM $89.73 (+3.84%), flat vs 14:00 06-07; 7 NO, Ostium flat, all marks <5pp.
+EIGEN $0.184 — just ABOVE its $0.18 trigger (NOT a hit; correcting earlier "persistent EIGEN hit" — it's a
+WATCH, not currently triggered). No prospecting entry (~$0 deployable).
+
+PROACTIVE RISK-CHECK (substantive): active Israel/Iran escalation in short-dated June markets → ran
+catalyst_check on our DOMINANT hold, the Iran-regime-fall NO (33.75 sh, cost $28.25, mark 0.870 = ~13% YES
+implied). [Gate fix confirmed: fetched 1371 chars of literal criteria.] Central P(YES) = 6% (low 2 / high
+14); breakdown 18% trigger × 25% loses-control × 70% new-govt ≈ 3.2%, adj to 6% for current instability.
+The literal criteria require ACTUAL regime dissolution — strikes/war / Supreme-Leader succession (to son
+Mojtaba) / coups that preserve core structures are ALL EXCLUDED; external strikes can rally-around-flag and
+REDUCE collapse odds. Verdict: thesis INTACT — P(YES) 6% << 13% mark, so the stable mark is correct (not
+lagging); the NO is mildly UNDER-priced (fair ~0.94). HOLD, no trim/exit. Only breach path: regime-ending
+ground invasion or visible IRGC/security-force defection (neither imminent) → watch-item. CORRECTION: this
+market resolves 2026-12-31 (end-2026, ~206d), NOT end-2027 as notes loosely said. Cluster note: Iran paths
+anti-correlated (regime-fall would hurt this NO but help the peace NOs) — not a concentrated tail. Surfaced
+to operator (msg 433). Tick + check grounded via fresh subagents.
