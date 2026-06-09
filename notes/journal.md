@@ -1233,3 +1233,13 @@ ENTER (tool: enter-on-weakness; reserve full size for spot >$22/kg or ESS-capex/
 150→140 (re-alert add-lower tranche), revised 06-09. Downside: lithium reverts $12-15/kg → 60-70% EBITDA cut
 (~5% thesis-broken, fortress B/S). Data note: longterm_check internally used a stale $164.65; real price
 $149.84 (yfinance + the live trigger). Tick + re-vet grounded via fresh subagents.
+
+---
+
+## 2026-06-09 14:00 UTC — Cron tick (Tuesday)
+
+No-action; all guards CLEAN (UMA 15/0, marginal-APY 7/0, redeemable 0, monotonicity 0 action [1 sub-bar
+-1.82pp], consistency 0 real on 5000 mkts). MTM $89.75 (+3.86%), flat vs 02:00; 7 NO, Ostium flat. Iran legs
+flat/stable (regime-fall NO 0.875, Pahlavi 0.946). Only mark move: Satoshi NO -0.7pp (within bar). ALB did
+NOT dip to ≤$140 (the lowered trigger is working as intended — no noisy re-flag). No new watchlist hit, no
+prospecting entry. Journal-only per flat-tick cadence (no Telegram). Grounded via fresh subagent.
