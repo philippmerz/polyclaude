@@ -1213,3 +1213,23 @@ breached).
 Op note: the fixed consistency_scan now pulls 5000 mkts so it runs ~150s (was fast at 100); gave the
 delegated subagent 90s → timed out then passed on a 150s retry. Budget ~180s for consistency_scan in future
 delegated ticks. Grounded via fresh subagent.
+
+---
+
+## 2026-06-09 02:00 UTC — Cron tick (Tuesday) + ALB trigger-hit re-vet
+
+No-action on the PM book; all guards CLEAN (UMA 15/0, marginal-APY 7/0, redeemable 0, monotonicity 0 action
+[1 sub-bar -1.14pp], consistency 0 real on 5000 mkts). MTM $89.80 (+3.92%), ~flat; 7 NO, Ostium flat. Iran
+legs stable (regime-fall NO 0.875 flat, Pahlavi 0.946 -0.1pp; the proximate "regime fall by June 30" market
+at YES 0.015 keeps corroborating the hold).
+
+NEW: watchlist trigger hit — ALB (Albemarle/lithium) $149.84 ≤ $150 band, after a ~13% weekly drop. Re-vetted
+via longterm_check: UPGRADED 3/4 → 3.5/4 WATCH. Margin-of-safety WEAK→OK (net debt $3.2B→$1.9B, 1.0x lev,
+$2.7B liquidity, fwd P/E 13.6x). CRUX condition MET: lithium recovered ~$20-26/kg LCE (>$20/kg threshold);
+Q1-26 EPS $2.95 +127% beat, rev +33%, market flipping surplus→deficit. So BOTH revised-entry conditions
+(price $140-150 AND $20+/kg) satisfied; ALB at favorable low end of band. Still WATCH not high-conviction
+ENTER (tool: enter-on-weakness; reserve full size for spot >$22/kg or ESS-capex/estimate catalyst). IBKR-route
+(operator sleeve, NOT polyclaude capital) → surfaced to operator (msg 434). watchlist_triggers: ALB entry_max
+150→140 (re-alert add-lower tranche), revised 06-09. Downside: lithium reverts $12-15/kg → 60-70% EBITDA cut
+(~5% thesis-broken, fortress B/S). Data note: longterm_check internally used a stale $164.65; real price
+$149.84 (yfinance + the live trigger). Tick + re-vet grounded via fresh subagents.

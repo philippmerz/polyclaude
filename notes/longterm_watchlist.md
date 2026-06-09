@@ -287,3 +287,7 @@ Trigger-hits this week (existing, all route=ibkr_surface): SOL $64.85, ARB $0.08
 Pattern holds: 12+ candidates vetted across rotations, all PASS/WATCH at current prices — valuations broadly stretched cyclewide. The HIGH themes (copper/uranium/oil/memory) are real multi-year stories, but the equities are mid/late-cycle, not bottoms. Discipline: wait for the dip triggers; no chasing at peak.
 
 Next weekly: 2026-06-14 — rotate to the now-stalest (macro-fiscal-labor + tech-ai-chips last ran 5-17; biotech-health + crypto-on-chain 5-24). Pick the 2-3 oldest then.
+
+### 2026-06-09 trigger hit: ALB (Albemarle / lithium) — re-vetted 3.5/4 WATCH
+
+ALB hit its $140-150 entry band at $149.84 (after a ~13% weekly drop from $171.77). Fresh longterm_check UPGRADED it 3/4 → **3.5/4 WATCH**: margin-of-safety upgraded WEAK→OK (net debt $3.2B→$1.9B, 1.0x leverage, $2.7B liquidity, fwd P/E 13.6x), and the crux **$20+/kg lithium-pricing condition is now MET** (~$20-26/kg LCE; Q1-26 EPS $2.95 +127% beat, surplus→deficit 2026). Both revised-entry conditions (price $140-150 AND $20+/kg) satisfied → entry-eligible for a **STARTER tranche** on the operator's IBKR sleeve at the favorable low end of the band; reserve full size for spot >$22/kg or an ESS-capex/2027-estimate catalyst. Downside: lithium reverts $12-15/kg → 60-70% EBITDA cut (~5% thesis-broken, fortress B/S). Surfaced to operator (msg 434). watchlist_triggers entry_max lowered 150→140 to re-alert on the add-lower tranche. IBKR-route, no polyclaude capital.
