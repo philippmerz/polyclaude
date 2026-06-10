@@ -1396,3 +1396,26 @@ $117.32 (+3.03%), max payout $131.35. Aave Polygon left ~$26.05; pUSD residual ~
 **Watchlist: CEG re-entered its revised entry zone** ($244.82 in $237–251; 4/4 vet from May) →
 surfaced to operator in tick summary (route=ibkr). SOL/ARB/STX persistent hits unchanged (ARB DAO
 vote tomorrow Jun 16? — NO: Jun 16 is Tuesday next week; vote in 6d).
+
+## 2026-06-10 ~14:30 UTC — operator directs ARB entry: polyclaude executes + custodies (boundary exception)
+
+Operator (telegram msgs 439→441): asked SOL/ARB/STX status (answered msg 440: ARB sharpest setup,
+conditional on Jun 16 DAO fee-share vote; ranking ARB-post-vote > SOL > STX), then "Can you handle
+arb entry for me?" → YES (msg 442). Plan committed:
+- Jun 16 DAO revenue-share vote = trigger. Approval (verified via Tally/forum primary sources) →
+  buy; rejection → stand down + re-arm. Same-day unlock: let the flush absorb before filling.
+- Execution: USDC→ARB, Uniswap V3 Arbitrum, crypto sleeve ($17.59 in Arb Aave, same-chain).
+  Default size ~$15 unless operator overrides.
+- **Boundary exception ON OPERATOR INSTRUCTION: first multi-year-horizon hold in the book**
+  (ARB thesis 1-3y; <1y rule is operator-set and operator-waived for this position).
+
+Prep shipped + verified today so Jun 16 is pure execution:
+- `scripts/spot_swap.py` — general Uniswap V3 exactInputSingle (any pair, explicit amount,
+  on-chain decimals, fee-tier auto-probe, 1% slippage cap, --dry-run/--yes). Adapted from the
+  proven emergency-swap path. Dry-run verified: 0.40 USDC → 4.9755 ARB @ 0.05% pool, px $0.0804
+  = live market ✓.
+- ARB priced into `bankroll.py` (NONSTABLE map, CoinGecko live, decimals-aware, unpriced-holding
+  WARNING) + visible in `crypto_status.py` (TOKEN_DECIMALS map). Verified: bankroll $172.11
+  (+1.2%); a transient Base-RPC miss on the first run was loudly WARNED and dropped $4.54 rather
+  than silently miscounting — the warning design paying for itself same-day.
+- Calendar entry 2026-06-16 with full execution recipe + verification requirements.

@@ -34,6 +34,8 @@ ERC20_ABI = [
 
 # chain -> (chain_id, rpcs, native_symbol, {label: token_addr}) — $1-stables,
 # pUSD, and Aave aTokens. Addresses mirror crypto_status/wallet_status/aave_deposit.
+# NONSTABLE tokens are valued at live CoinGecko prices (decimals != 6 supported).
+NONSTABLE = {"ARB": ("arbitrum", 18)}  # symbol -> (coingecko_id, decimals)
 CHAINS = {
     "polygon": (137, [
         "https://polygon.drpc.org",
@@ -56,6 +58,7 @@ CHAINS = {
         "USDC.e": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
         "USDT":   "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
         "aUSDC":  "0x724dc807b04555b71ed48a6896b6F41593b8C637",
+        "ARB":    "0x912CE59144191C1204E64559FE8253a0e49E6548",
     }),
     "base": (8453, [
         "https://mainnet.base.org",
@@ -98,15 +101,17 @@ def pick_rpc(rpcs: list[str], chain_id: int) -> Web3 | None:
 
 def native_prices(warnings: list[str]) -> dict[str, float]:
     try:
-        r = httpx.get(COINGECKO, params={
-            "ids": "ethereum,polygon-ecosystem-token", "vs_currencies": "usd"
-        }, timeout=10)
+        ids = "ethereum,polygon-ecosystem-token," + ",".join(cg for cg, _ in NONSTABLE.values())
+        r = httpx.get(COINGECKO, params={"ids": ids, "vs_currencies": "usd"}, timeout=10)
         r.raise_for_status()
         j = r.json()
-        return {"ETH": j["ethereum"]["usd"], "POL": j["polygon-ecosystem-token"]["usd"]}
+        out = {"ETH": j["ethereum"]["usd"], "POL": j["polygon-ecosystem-token"]["usd"]}
+        for sym, (cg, _dec) in NONSTABLE.items():
+            out[sym] = j.get(cg, {}).get("usd", 0.0)
+        return out
     except Exception as e:
-        warnings.append(f"CoinGecko unavailable ({e}); native tokens valued at $0")
-        return {"ETH": 0.0, "POL": 0.0}
+        warnings.append(f"CoinGecko unavailable ({e}); native/non-stable tokens valued at $0")
+        return {"ETH": 0.0, "POL": 0.0, **{sym: 0.0 for sym in NONSTABLE}}
 
 
 def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
@@ -160,14 +165,19 @@ def main() -> int:
                 print(f"{chain} {sleeve} {native_sym} ({native:.4f}):{'':6s} ${native_usd:>9.2f}")
             for label, taddr in tokens.items():
                 c = w.eth.contract(address=Web3.to_checksum_address(taddr), abi=ERC20_ABI)
+                dec = NONSTABLE[label][1] if label in NONSTABLE else 6
                 try:
-                    bal = c.functions.balanceOf(addr).call() / 1e6
+                    bal = c.functions.balanceOf(addr).call() / 10 ** dec
                 except Exception:
                     warnings.append(f"{chain} {sleeve} {label}: balanceOf failed — not counted")
                     continue
-                if bal > 0.005:
-                    total += bal
-                    print(f"{chain} {sleeve} {label}:{'':{max(1, 24 - len(chain) - len(sleeve) - len(label))}s} ${bal:>9.2f}")
+                usd = bal * prices[label] if label in NONSTABLE else bal
+                if label in NONSTABLE and bal > 0 and prices.get(label, 0) == 0:
+                    warnings.append(f"{chain} {sleeve} {label}: {bal:.4f} held but unpriced — NOT counted")
+                if usd > 0.005:
+                    total += usd
+                    qty = f" ({bal:.2f})" if label in NONSTABLE else ""
+                    print(f"{chain} {sleeve} {label}{qty}:{'':{max(1, 24 - len(chain) - len(sleeve) - len(label) - len(qty))}s} ${usd:>9.2f}")
 
     ostium_open_trades(warnings)
 

@@ -28,6 +28,7 @@ CHAINS = [
             ("USDC.e", "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8"),  # legacy bridged
             ("USDT",   "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"),
             ("aUSDC",  "0x724dc807b04555b71ed48a6896b6F41593b8C637"),  # Aave V3 — idle sleeve must stay visible
+            ("ARB",    "0x912CE59144191C1204E64559FE8253a0e49E6548"),  # spot position (operator-directed entry)
         ],
     ),
     (
@@ -78,6 +79,9 @@ CHAINS = [
     ),
 ]
 
+# ERC20 balances are read with these decimals (default 6 = USDC-style).
+TOKEN_DECIMALS = {"ARB": 18}
+
 ERC20_ABI = [
     {
         "constant": True,
@@ -106,7 +110,7 @@ def read_chain(w: Web3, addr: str, native_symbol: str, tokens: list[tuple[str, s
     for sym, contract_addr in tokens:
         try:
             c = w.eth.contract(address=Web3.to_checksum_address(contract_addr), abi=ERC20_ABI)
-            out[sym] = c.functions.balanceOf(addr).call() / 1e6
+            out[sym] = c.functions.balanceOf(addr).call() / 10 ** TOKEN_DECIMALS.get(sym, 6)
         except Exception:
             out[sym] = float("nan")
     return out
