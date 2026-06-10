@@ -228,7 +228,7 @@ def main() -> int:
             combined = held_cost + args.usd
             print(f"!! combined ticket after this buy: ${combined:.2f} "
                   f"= {combined / args.bankroll * 100:.1f}% of bankroll "
-                  f"(15% hard cap = ${args.bankroll * 0.15:.2f}, philosophy line 43)")
+                  f"(15% hard cap = ${args.bankroll * 0.15:.2f}, 00_philosophy §5 model-error guardrails)")
         print(f"!! this is an ADD — confirm cluster caps + run the sizing as a "
               f"size_change decision, not a fresh entry.")
 

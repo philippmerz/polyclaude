@@ -1,5 +1,5 @@
 {
-  "next_id": 34,
+  "next_id": 35,
   "decisions": [
     {
       "id": 1,
@@ -640,6 +640,25 @@
         "greenland",
         "fade-basket",
         "scale-up"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 34,
+      "timestamp": "2026-06-10T12:25:50Z",
+      "type": "strategy_change",
+      "thesis": "Full doctrine rewrite on operator directive 2026-06-10 ('revise the entire direction-setting docs to purely enforce expected return maximization; there are no other hard rules except the ones downstream from that one'). New 00_philosophy.md: single objective (max expected compounded return = expected log growth for a reinvested bankroll), operator boundary conditions separated (legal/no-KYC/<1y/public-repo), every retained rule carries its ER derivation. DELETED: max-5 position count cap (no derivation; diversified gated edges raise growth; binding limits = 15%/30% $-caps + $5 venue floor; re-derive if book >~15 positions). REPLACED: 'mechanical-resolution only' ban -> priced UMA-loose haircut (0.7 strict + 0.3 loose, modulated by longest-dated sibling). FOLDED+DELETED: 01_horizon_split.md. Adversarial review pass caught + fixed an enforcement-claim overstatement (catalyst gate is NOT mechanically enforced when --my-p supplied) + 5 stale-reference fixes. Transparency: doc-body said Kelly/4, tools have run half-Kelly since May - resolved in tools' favor, flagged to operator.",
+      "confidence": "high",
+      "prediction": "Future sessions size/enter purely off the gate pipeline + $-caps with no count-cap friction; no regression to the banned-category heuristics; book can exceed 7 positions when gated edges exist; no UMA-class loss attributable to the ban removal (the haircut + small-size rule covers it).",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-10",
+      "tags": [
+        "doctrine",
+        "er-max",
+        "rewrite",
+        "operator-directive"
       ],
       "outcome": null,
       "calibration_delta": null,

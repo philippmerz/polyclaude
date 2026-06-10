@@ -1322,3 +1322,37 @@ reflection — fade+gate working (book +2.98%), arb scanners persistently 0 (lik
 scale; scans stay because they're cheap), favorite-fade needs near-resolution candidates the current
 long-dated book doesn't generate. The scanner-vs-gate disagreement on peace-deal-Jun-15 (+3.4 vs −8pp)
 is a known-class artifact, already journaled; the mandatory gate is the control, no build needed.
+
+## 2026-06-10 ~12:40 UTC — DOCTRINE REWRITE (operator directive): pure expected-return maximization
+
+Operator (local session): "revise the entire direction-setting docs to purely enforce expected return
+maximization. There are no other hard rules except for the ones downstream from that one." Executed as
+DEC-0034:
+
+- **strategy/00_philosophy.md fully rewritten** (212 → ~210 lines but restructured): §1 objective =
+  expected log growth (the Kelly derivation is what makes ER-max ≠ all-in-on-best-EV); §2 operator
+  boundary conditions (legal, no-CEX/KYC, <1y horizon, public repo) separated from strategy — they're
+  the feasible set; §3 live edge sources ranked by evidence; §4 entry pipeline with each gate as an EV
+  term + honest enforcement map; §5 sizing/exits (Kelly+ρ, $-caps as model-error guardrail PARAMETERS,
+  BB-vs-Kelly); §6 information-process rules; §7 risk pricing; §8 reporting + the 2027-04-25 eval
+  baselines.
+- **DELETED: max-5 count cap** — no ER derivation (diversification across independent gated edges raises
+  growth; monitoring automated; binding limits are 15%/30% $-caps + $5 floor). Resolves the doc-vs-book
+  drift without an arbitrary new number. Re-derive trigger: ~15+ positions.
+- **REPLACED: "mechanical-resolution only" ban → priced UMA-loose haircut** (0.7×strict + 0.3×loose,
+  modulated by the longest-dated sibling's YES; unquantifiable → small or skip). The ban forfeited +EV
+  that survives the haircut; the book already held a rational priced exception (Satoshi small).
+- **01_horizon_split.md folded in + deleted** (horizon boundary → §2; idle-home same-chain rule → §4.6;
+  eval baselines → §8; two-sleeve history → git).
+- **Adversarial review pass** (1 reviewer on the diff; decision itself was operator's, so no
+  pair needed): caught a BLOCKER — my draft claimed polyclaude_enter "enforces #2–#5 mechanically" when
+  the catalyst gate silently skips on --my-p and the UMA haircut is analyst process (exact DEC-0016
+  failure mode). Fixed with an honest enforcement map. + 5 reference fixes (debate-moderator rules
+  restored, eval baselines restored, term-structure modulation clause, recoup_campaign + backlog
+  supersession notes, polyclaude_enter's stale "line 43" pointer).
+- **Transparency flag for operator:** old doc-body said "Kelly/4 default"; the tools have run
+  half-Kelly (quarter for fuzzy) since May. Rewrite resolves in the tools' favor — practice unchanged,
+  documented default doubled.
+- daily_checkin.sh step-6 filter text updated to match. decisions.py: DEC-0034 (prediction: no
+  count-cap friction, no regression to banned-category heuristics, no UMA-class loss attributable to
+  the ban removal; eval 2026-09-10).

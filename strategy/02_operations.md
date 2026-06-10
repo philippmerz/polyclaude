@@ -8,7 +8,7 @@ Single canonical home for the project's operational infrastructure. Other docs r
 - **Driver:** `scripts/daily_checkin.sh`. Resolves repo root from `${BASH_SOURCE[0]}`, sources `~/.polyclaude/env` for secret paths, forks the operator's interactive Claude session via `claude -p --resume <id> --fork-session --model opus --effort max --permission-mode acceptEdits`.
 - **Per-tick token cap:** ~100K (the prompt itself caps).
 - **Logs:** `polyclaude/logs/cron/checkin_<UTC ts>.log` (gitignored, auto-pruned at 30d).
-- **What each tick does:** load context (memory, journal tail, strategy), mark portfolio + wallet state via `scripts/positions.py` and `scripts/wallet_status.py`, scan WebSearch for active-position catalysts, decide hold/adjust/add/close, journal it, write a weekly report if ≥7d since last, commit + push (audit diff for secrets first), Telegram-alert if anything material moved.
+- **What each tick does:** load context (memory, journal tail, strategy), mark portfolio + bankroll via `scripts/positions.py` + `scripts/bankroll.py` (authoritative total), scan WebSearch for active-position catalysts, decide hold/adjust/add/close, journal it, write a weekly report if ≥7d since last, commit + push (audit diff for secrets first), Telegram-alert if anything material moved.
 
 ## News watcher — 24/7 reactive layer
 
@@ -32,10 +32,10 @@ Single canonical home for the project's operational infrastructure. Other docs r
 
 ## Wallets
 
-| Sleeve | Address | Funded | Strategy spec |
+| Sleeve | Address | Holds | Strategy spec |
 |---|---|---|---|
-| Polymarket | `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` | ~$70 USDC.e on Polygon | Two-horizon split per `strategy/01_horizon_split.md`; live positions in `notes/decisions.json` + `scripts/positions.py` |
-| Crypto | `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` | (pending operator $50 fund) | Default split: re-derive at funding via `scripts/crypto_status.py` (April landscape in git history) |
+| Polymarket | `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` | PM positions + Aave Polygon idle + pUSD + POL gas | `strategy/00_philosophy.md`; live positions via `scripts/positions.py`, decisions in `notes/decisions.json` |
+| Crypto | `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` | Aave Arb/Base idle + dust (Ostium venue wallet) | Same doctrine; aggregate via `scripts/bankroll.py` |
 
 Both wallets resolved via the same `_paths.py` mechanism (`POLYCLAUDE_WALLET`, `POLYCLAUDE_WALLET_CRYPTO`).
 

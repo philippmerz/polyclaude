@@ -1,212 +1,213 @@
-# Polyclaude — Trading Philosophy
-
-> **Current state (2026-05-17):**
-> - Bankroll: ~$170 across Aave Base reserve + Polymarket + Crypto sleeves (was $70 at kickoff)
-> - Horizon: 1y kickoff (2026-04-25 → 2027-04-25); per-position holding horizon capped at <1y (multi-year plays → operator's IBKR sleeve)
-> - Strategy (2026-05-11 pivot post-R-U miss; refined 2026-05-29 + 2026-05-29 edge-bar relax): mechanical-resolution markets only; **edge bar = robust positive EV (must clear op-cost at the pessimistic bound `p − edge_haircut`, default haircut 0.05, via polyclaude_enter.py's robust-edge gate; was flat 10pp, relaxed 2026-05-29 after operator noted R-U was an API-observability failure not edge-thinness — but rigorously gated on the pessimistic-p bound, not the fragile point estimate, since Kelly punishes overbetting a believed-but-wrong edge)**; `scripts/polyclaude_enter.py` mandatory for every entry; max 5 concurrent positions. **No fixed Aave/PM ratio target — operator removed the 60/40 constraint 2026-05-29; idle capital defaults to Aave (yield + immediate withdrawability), but high-conviction filter-passing PM entries may drain Aave without limit. Discipline lives in: positive-EV filter (Kelly+op-cost), mechanical resolution, cluster cap, max-5 positions, Kelly+ρ sizing, Brownian-bridge late-stage signals, uma_status_check observability — not a static allocation ratio or a phantom edge floor.**
-> - Goal: **maximize ROI** (operator directive 2026-05-14: calibration data happens automatically; focusing on it directly is Goodhart's law)
-> - Sizing: Kelly+ρ-adjusted constrained portfolio via `scripts/portfolio_kelly.py --constrained` (supersedes naive cluster-cap math)
->
-> The sections below preserve the April 2026 framing for historical context. Where doc-body and current-state header conflict, **trust the header**.
-
-## Operating premise
-
-Polymarket is a thin, fragmented, retail-dominated prediction market. Across ~5000 active contracts, liquidity is concentrated in a few dozen "narrative" markets and the long tail is where mispricings live. With $70 of capital and a $5 minimum order size, I can hold ~6–10 concurrent positions before slippage and concentration become serious risks. That budget forces every position to clear a high bar: a defensible thesis, a readable resolution mechanism, and a price that is materially mispriced *before* fees and exit costs.
-
-I am not optimizing for trade count or for being "in the game." I am optimizing for compounded ROI over a year on a known finite stake.
-
-## Edge sources I will actively look for
-
-Ranked by how well they fit my comparative advantage (deep research + cold-blooded probability calibration + breadth across geopolitics/macro/tech):
-
-1. **Longshot fade ("bond-like" trades).** Buying NO on markets pricing tail events at 2–8% where my modelled fair value is near 0%. Examples in the wild today: religious-end-times, "celebrity X gets job Y," "ridiculous-name candidate wins major election." Pros: cheap to be right, predictable. Cons: long lock-up, capped upside (~3–10% gross over 6–9 months), tail blow-up if I'm wrong about the base rate.
-
-   **MANDATORY pre-trade gate (added 2026-05-08 after DEC-0016 calibration miss):** before sizing ANY bond-like longshot fade, run `scripts/catalyst_check.py "<question>" <resolve_date>`. The tool spawns `claude -p haiku` with WebSearch and returns base rate + window catalysts (HIGH/MED/LOW classified) + central P(YES) range. *Modelled* fair value means modelled — intuition is not a model. Skip the trade if the tool's central P(YES) is within 1pp of market YES (no edge), or if a HIGH catalyst in the window suggests structural mispricing risk you can't cleanly assess. Token cost ~5-10K per check; cheap insurance. Logs to `notes/catalyst_log.md`. Lesson source: 2026-05-08 DEC-0016 closed at -$0.08 because I claimed "P(YES) near 0%" on aliens-by-May-31 NO without checking — Pentagon launched the PURSUE UAP-disclosure program the same day; market's 2.95% YES correctly priced the catalyst I missed. The tool retroactively returns 3% central, matching market.
-
-   **Tail-correlation filter (added 2026-06-01).** Among fades that clear the gate, prefer IDIOSYNCRATIC tails over correlated-catastrophe tails. Selling NO = selling insurance; what matters is whether the payout event correlates with the rest of the book. Aliens-disclosure / GameStop-eBay / "US acquires Greenland" have idiosyncratic tails — if they hit, nothing else moves. China-invades-Taiwan / pandemic / NK-invades-SK have **correlated-catastrophe** tails — they pay out exactly when broad risk-off also craters the crypto + Aave book, i.e. max loss when capital is scarcest. Demand a much larger premium for correlated-catastrophe fades, or skip. On 2026-06-01 I took aliens-NO (0.85) + Greenland-NO (0.87) at ~13-15% premium but skipped China-Taiwan (6.6%), hantavirus (5.3%), NK-SK (5.2%) despite similar bond-like "APY" — small premium doesn't compensate for selling disaster insurance. **The fade class is a basket play:** diversify across several idiosyncratic-tail fades rather than concentrating; see `notes/fade_basket.md`.
-
-   **Empirical validation + localization (2026-06-02, `scripts/longshot_calibration_backtest.py`, N=1513).** Backtesting resolved markets confirms the favorite-longshot bias IS present on Polymarket — but it's only detectable at large N and is CONCENTRATED in the extreme-favorite / short-horizon zone: entered ~7 days before resolution, the 0.90-0.95 bucket won 97.3% vs 92.5% priced (+4.8pp, 3.2σ) and 0.95-0.98 won 99.4% vs 96.6% (+2.8pp, 4.7σ). Mild favorites (0.50-0.85) are calibrated-to-slightly-negative, and 30d-out the mild buckets are strongly negative — so the edge is real ONLY for high-confidence favorites entered NEAR resolution. It's a structural risk/capital-efficiency premium (locking ~96c for 7d to make ~3c isn't worth it to most capital → near-certain favorites trade at a small discount), which is why it persists rather than arbing away. Net of ~1-1.5pp fees/slippage the 0.90-0.95 zone still nets ~+3pp/week. The catch is the fat tail (win ~3c / lose ~96c) → diversify + fractional-Kelly sizing + keep the resolution-criteria (R-U) and tail-correlation filters. Methodological lesson: at N=600 these buckets looked like noise; the 3-5σ effect only appeared at N≈1500 — when a check is cheap, run it to adequate power before concluding "no edge."
-2. **Calendar / deadline mispricing.** Markets with hard date cutoffs ("by April 30," "before 2027") frequently misprice the conditional probability `P(event happens by T)` because traders anchor on the absolute prior `P(event happens ever)`. Edge comes from carefully decomposing into a hazard-rate model.
-3. **Schelling-point / reflexivity inefficiencies.** Multi-leg markets (e.g., "best AI model at end of month") where the legs sum to 0.99–1.01 but individual legs misprice the relative probability between near-tied frontrunners. Trade the spread, not the level. (AI-model-quality markets are now permitted — COI restriction lifted 2026-06-01 — but rarely carry real edge for me; see Restrictions.)
-4. **Decomposition arbitrage.** When I can express the same event as two trades on Polymarket and they don't agree (e.g., "Iran regime falls by May 31" vs. "Iran regime falls by June 30" with implied marginal hazard rates that violate sanity), I take the cheaper side and lay off the expensive side if it's tradable.
-5. **Information edge from cross-source synthesis.** Pulling primary sources (UN, Bloomberg/Reuters wire stories, prediction-market-adjacent academic studies, central-bank statements, technical/satellite open-source intelligence). My honest comparative advantage here is *speed of synthesis across many domains*, not access to private information.
-
-## Edge sources I will explicitly ignore
-
-- **Pure sports outcomes.** Polymarket charges a 3% taker fee on sports (fee schedule confirmed in market metadata), and I have no scouting/injury edge. Skip unless a sports market is dragged into a non-sports thesis (e.g., a corruption scandal, geopolitical boycott).
-- **Sub-day intraday crypto/BTC price markets.** Liquid, efficient, and dominated by traders with realtime feeds I don't have.
-- **Short-dated US Fed meeting outcomes.** Already 99.7% efficient on the no-change leg.
-- **Sub-resolution-mechanism gambling** (UMA-resolution edge cases I can't research thoroughly). One bad UMA dispute on a $5 stake is a 100% loss; not worth the headache.
-
-## Sizing rules
-
-- **Hard cap per ticket:** 15% of remaining bankroll.
-- **Hard cap per correlated cluster:** 30% of remaining bankroll. (E.g., all "Iran fall / regime change / hostage release" markets share a hidden factor — treat them as one bet.)
-- **Kelly/4 default for sizing.** For a binary at price `p` where my fair value is `q`, edge = `q − p` on YES (or `p − q` on NO). Kelly fraction `f* = (b·p_win − p_lose) / b`, where `b` is net odds. Use `f*/4` to be robust to model error and resolution risk.
-- **Floor:** $5 per ticket (Polymarket's `orderMinSize`, network-wide enforced; verified 2026-05-03). Below that the trade isn't expressible.
-- **Reserve cash buffer (revised 2026-05-03):** maintain ~$5-10 *instant-deployable* on the venue where you expect to act next, so one or two tickets can fire without closing an existing position or waiting on a bridge. The rest can sit in yield (Aave) — withdrawable + bridgeable in <3 min via Across, so the project-wide buffer is satisfied as long as some idle capital is parked there. This replaces the earlier "$10 unallocated at all times" rule, which was set 2026-04-25 before Aave integration; foregone yield on idle USDC.e was ~$0.40/yr, trivial, but the venue-specific framing is more accurate.
-
-### Hurdle rate (added 2026-04-30)
-
-Idle USDC sits in Aave (3.4% Base / 4.15% Arbitrum supply APY, withdrawable in <1min). Any new bond-like NO buy at 0.99x must beat the **annualized** Aave rate after Polymarket fees, not just produce a positive gross yield. A NO at 0.995 over 60 days = 0.5% gross = 3.0% APY → **fails the hurdle** vs Aave 4.15%. A NO at 0.95 over 60 days = 5.3% gross = 32% APY → clears it easily.
-
-Compute the hurdle for any candidate:
-```
-gross_yield = (1 - p) - polymarket_fee
-days = days_to_resolution
-apy = (1 + gross_yield) ** (365 / days) - 1
-accept iff apy > 4.15%  (current Aave Arbitrum supply APY; refresh as pool moves)
-```
-
-The standout positions in the current book (Iran-peace NO, Iran-regime NO, Pahlavi NO) clear the hurdle decisively because the prices reflect genuine pricing inefficiency, not just a high "almost-certain-NO" probability. The hurdle filters out pseudo-edge bond-like trades that look like free money but underperform stablecoin yield.
-
-### Kelly vs Brownian-bridge: which tool for which decision (added 2026-05-19)
-
-The book uses two sizing/valuation tools that look similar but answer different questions. Mixing them up causes false TRIM/SCALE_UP signals on late-stage bond-like positions. Stress-tested 2026-05-19 when the priors-slug-bug fix (commits 98a5e43 + 993b1c4) made the divergence visible.
-
-- **`portfolio_kelly.py`** — *static edge*: `edge = P_win − mark`. Use for **ENTRY sizing**: if you're about to open or scale, this tells you how to size given correlation-discount + budget constraint. Time-agnostic — the calculation is identical at t=0 and t=T-1d.
-- **`brownian_bridge_fv.py`** — *time-discounted fair value*: `fair_BB(t) = P_win^(1 - t/T)`. For a bond-like NO with prior P_no=0.87, fair_BB starts at 0.87 (t=0) and climbs toward 1.0 (t=T). Use for **HOLD/TRIM signals on existing positions**: if mark < fair_BB by >3pp, the position is *still* underpriced even though Kelly's static edge says you wouldn't add at this price.
-
-Concrete divergence (2026-05-19, May-31 Iran-peace NO, t/T=0.59, P_no=0.87, mark=0.895):
-- Kelly: edge = 0.87 − 0.895 = **−2.5pp = "oversized, consider trim"**
-- Brownian-bridge: fair = 0.87^0.41 = 0.944 vs mark 0.895 = **−4.9pp = "SCALE_UP, still underpriced"**
-
-The Brownian-bridge read is correct for a position approaching resolution: mark *should* be migrating toward 1.0 even at a P_win = 0.87 prior, because each day passes without the YES event materializing. Kelly's static frame asks "would I enter at this price?" — a fair question that ignores time decay. Conversion: **use Kelly for entries, Brownian-bridge for holds**. Don't trim a late-stage bond-like NO just because Kelly's static edge has compressed.
-
-**Mechanism (refined 2026-05-25 after May-31 volatility event):** BB encodes a Bayesian update via the hazard-rate model. If `p` was the prior P(NO over the whole 0→T window), then conditional on "no YES event happened in the t/T portion already elapsed," the probability of NO over the remaining (1−t/T) portion is `p^(1−t/T)` — strictly higher than `p`. At t/T=0.78 with prior P_NO=0.73, the conditional becomes ≈0.94. Mark should track the conditional, not the unconditional prior. Kelly's static edge ignores this update; BB makes it explicit. Stress-tested 2026-05-24/25 when May-31 mark crashed 0.815→0.345 on Trump "largely negotiated" speculation then recovered to 0.795 within 24h — BB correctly held SCALE_UP throughout because the hazard-rate model expected mark migration toward 1.0 absent actual signing.
-
-**EV-computation gotcha (added 2026-05-28):** When computing `EV(hold to resolution) at intermediate time t`, use the **conditional** `fair_BB(t) × max_payout`, NOT `unconditional_prior × max_payout`. Example: at t/T=0.88 with unconditional P_NO=0.73 and mark=0.875, the naïve `0.73 × $17.44 = $12.73` (static Kelly) would suggest closing (mark > expected). The correct conditional `0.962 × $17.44 = $16.78` (BB at t/T=0.88) gives hold advantage +$1.52. The Kelly `edge = p − mark` formula is a sizing input, not a payout estimator — don't confuse them when deciding hold vs close late in the window.
-
-### Term-structure-as-UMA-interpretation-signal (added 2026-05-22)
-
-For multi-date "by date X" events with sub-markets across a term (May 22, May 26, May 31, Jun 15, Jun 30, Jul 31, Dec 31...), the LONGEST-DATED sub-market's YES price is the single most useful signal about how UMA-loose-vs-strict the market's interpretation will be.
-
-Concrete example (2026-05-22, US-Iran permanent peace deal event):
-- May 31 sub-market: YES=26.5% (the position polyclaude holds NO on)
-- Dec 31 sub-market: **YES=73%** — market collectively assigns 73% probability to a "permanent" deal by year-end
-
-A strict reading of resolution criteria ("agreements that are explicitly temporary will not qualify; further-negotiation-window MOUs do not count") would put P(YES) by Dec 31 at maybe 30-40%, not 73%. The 73% pricing implies the marginal trader expects UMA to rule a framework MOU as qualifying, even if it includes "further details to be negotiated" structure. This is exactly the UMA-loose interpretation that bit the R-U position (-$16.73 realized loss 2026-05-11).
-
-**Operational rule:** when the longest-dated sub-market of a "by date X" event prices > 60-70% YES (and the criterion includes any term that could be interpreted loose vs strict), assume the market is using UMA-loose interpretation. Weight your prior accordingly:
-
-```
-P(YES adjusted) = 0.7 × P(YES strict reading) + 0.3 × P(YES loose reading)
-```
-
-The 70/30 weighting reflects that UMA usually rules per literal criteria but the R-U miss showed loose-interpretation risk is real. Adjust the prior used in portfolio_kelly + brownian_bridge_fv. On May-22 this shifted May-31 NO prior from P_NO=0.85 (strict) to P_NO=0.81 (UMA-adjusted) — EV at hold dropped +$2.00 → +$1.31 but still positive; decision unchanged but with more accurate uncertainty band.
-
-**When sub-markets DON'T exist:** apply the same logic by analogy. If the market title hints at a loose-interpretation possibility, weight 70/30 strict/loose.
-
-## Risk controls
-
-1. **UMA / resolution risk.** Read the resolution-source clause for every market. Reject markets with vague resolution (e.g., "X will be considered to have happened if widely reported") unless deeply mispriced.
-2. **Smart-contract / counterparty risk.** Polymarket is non-custodial via the CTF, but settlement still depends on protocol solvency. Don't concentrate the entire bankroll into Polymarket-illiquid markets I can't exit.
-3. **Reflexivity / news-event risk.** Avoid loading up on a thesis that will be tested in the next 24h before I can react. For event-driven trades, prefer entering after an over-reaction, not before.
-4. **Operational risk.** Wallet key lives outside the public repo, in a gitignored secrets directory. Never paste it into a script that gets committed. Scripts read its location from a non-committed env file (loaded by `scripts/_secrets.py`) at runtime — no filesystem path strings in the public source.
-5. **Conflict of interest / model-self-trading — RESTRICTION LIFTED 2026-06-01** (operator: "scrap the optics / conflict of interest concern; if there's alpha, we can take it"). AI-lab markets — model-leaderboard AND corporate-event (Anthropic IPO, funding) — are now FAIR GAME if they clear the normal filters (real edge, mechanical resolution, robust-edge gate). Remaining caveat is *substantive not optics*: on model-leaderboard markets I have no private/scouting edge over a careful retail trader reading the same benchmarks, so real edge is rare there (see Restrictions de-prioritization). Corporate-event markets are judged on edge like anything else.
-
-## Operating role: Chief Executive
-
-The PRIMER role-stack (engineer + analyst + polymath) is the *toolkit*. The *operating role* is Chief Executive: continuously scan for the highest-leverage opportunity given current state, update priorities as the answer changes, demote sunk effort ruthlessly when a higher-leverage move surfaces.
-
-Concrete habits:
-- After every meaningful action: re-evaluate. *What changed? What's now the biggest unaddressed problem? Where's the lever?*
-- Don't end a thought at "I'll do X next" — if X is well-scoped, just do X. Stopping to wait for trigger is rhetorical inertia, not real caution.
-- "What would I do if I weren't currently doing this?" — a useful pivot prompt. If the honest answer is meaningfully different, the current task is probably wrong.
-- A unit of work isn't a polished deliverable; it's a state change that compounds. Many small commits that make the system more capable beat one large refactor that doesn't.
-
-### Default to action; counter the deferral bias (added 2026-05-03)
-
-When facing a fork between acting and deferring to the operator ("should I do X or Y?", "do you want me to..."), default to action. **Decide and execute** when ALL of:
-- Cost is bounded (< ~$20 capital, OR my own work-time which is unlimited),
-- Action is reversible (can be undone or compensated if wrong),
-- Goal is unambiguous (clearly serves the mandate).
-
-Escalate ONLY when cost is genuinely high, action is irreversible (deploy live, send message, push public), goal is contested ("should we pivot strategy?"), or I've hit a real blocker requiring operator-only data.
-
-Operator-flagged 2026-05-03 after I deferred three times in one session ("strict vs soft Telegram?", "which vast.ai project?", "wait/reverse-engineer/ask?"). In each case I had enough context to decide. The deferral was RLHF politeness + irreversibility-fear leaking into routine work. **Sustained autonomous action under bounded risk is the load-bearing capability the operator is testing; every needless deferral is a vote against the hypothesis.**
-
-When uncertain whether to escalate: ask "would skeptic-agent surface a real concern if I just act?" If no, act.
-
-## Decision-quality tracking
-
-Every non-trivial decision (open/close/resize a position, change a strategy class, ship sizable scaffolding) gets a structured record via `scripts/decisions.py add`. Each entry captures: thesis, confidence (low/medium/high), testable prediction, size, expected resolution date, tags. When the resolution date passes, the cron tick fills in `--outcome`, `--calibration-delta`, and a one-line `--lesson` if the divergence is instructive.
-
-The output isn't the records — it's the calibration data they generate over 50+ entries. *Where am I systematically overconfident? Underconfident on what catalysts? Wrong about which market types?*
-
-**Note (2026-05-14 operator pivot):** the original framing here treated calibration as "the actual product" with P&L as noise. Operator overrode this: *the goal is ROI. Calibration data happens automatically as a byproduct of decisions.json. Treating calibration as the primary objective is Goodhart's law — the system can produce well-calibrated but unprofitable decisions.* Calibration is a debugging signal when something goes wrong, not the optimand. Decisions get recorded; calibration deltas get computed; we use them only when they reveal a systematic bias to fix.
-
-Lessons that recur across multiple decisions get promoted to feedback memory so future Claude instances inherit them.
-
-## Reasoning depth — match to decision stakes
-
-**For ROUTINE prospecting decisions** (single trade < $10, standard market, hurdle-filter passed): use a single-call evaluation. Don't escalate to skeptic+champion or multi-round debate. **Empirical finding (2026-05-02 stress test, N=30 × 5 variants):** zero-shot single-call evaluation produced the BEST P&L (+$0.04/$ vs all multi-agent variants negative -$0.04 to -$0.22). More reasoning depth produced WORSE calibration on routine takes — agents reasoned themselves into TAKE on suspicious-looking prices that the market had already priced correctly. Zero-shot's edge was SKIPPING contrarian-looking prices instead of trying to outsmart the market. The methodology was wrong before this study: routine prospecting got the multi-agent treatment by default; cron tick stop-cost dropped, calibration hurt.
-
-**For HIGH-STAKES decisions** (trade > $10, new strategy class — a venue/asset I haven't traded yet, sizable structural change like a new sleeve / daemon / history rewrite), spawn TWO Agents IN PARALLEL:
-
-1. **Skeptic** — argues against the action, finds failure modes I'm not modeling.
-2. **Champion** — argues for the action, finds why it's correct or under-aggressive, identifies what's NEXT in the same direction.
-
-Operator-flagged 2026-05-01: spawning the skeptic alone biases the system toward inaction over time. Every challenged action gets caveated; nothing gets challenged-pro. To keep both directions live, ALWAYS pair skeptic with champion. Synthesize across both before deciding. Sometimes skeptic wins, sometimes champion wins, sometimes the synthesis is "ship it AND add the guardrail."
-
-Skeptic prompt template:
-> "polyclaude is about to <do specific thing> for <stated reason>. Argue the strongest counter-thesis. Find the failure modes I'm not modeling. Use current market state, the operator's constraints (no-CEX, decentralized only), and the trigger conditions in `research/_*.md`. Be terse — under 400 words."
-
-Champion prompt template:
-> "polyclaude is about to <do specific thing> for <stated reason>. Argue the strongest case FOR. Find why it's correct, what makes it under-aggressive, what's NEXT in this direction. Push back on common counter-arguments. Be terse — under 400 words."
-
-Read both. If skeptic surfaces a real consideration AND champion doesn't refute it, reconsider. If they just rehash my reasoning from each side, proceed. The cost (two parallel Agent calls) is trivially small relative to the cost of either kind of mistake (acting on bad confirmation OR failing to act on good signal).
-
-Synthesize HONESTLY — don't pick the side that matches my prior. The point of the pair is to make BOTH biases (ship-it momentum AND defensive caution) explicit and weighable.
-
-**Escalation: multi-round adversarial debate.** When the parallel-monologue pair is inconclusive OR the decision has both empirical and principled disagreements (not just one), escalate to multi-round debate. Same role-only prompts; relay each side's argument to the other; run until probability estimates stabilize OR new content stops appearing OR action recommendations converge. Tested 2026-05-01 on Russia-Ukraine NO bet: 5 rounds, oscillating probability, sizing recommendations slowly converged ($5/pass → $2/$1-or-pass).
-
-CRITICAL: do NOT add convergence-seeking language to the prompts ("goal: nuanced truth", "concede where they're right"). That biases agents toward consensus that may be artifact. Pure role-only is more honest, but it produces:
-- Factual hallucinations and uncited precedents that the other side won't always catch.
-- Disagreements that may simply persist (which is itself information).
-
-The MODERATOR's job between rounds:
-1. **Fact-grounding**: when either side asserts a specific historical precedent or empirical claim that's load-bearing, ask them to ground it with specifics in the next round. Both sides will honestly concede when they can't.
-2. **Constraint sweep**: agents arguing about probabilities and Kelly fractions can both miss a hard rule from this doc (e.g., the $10 reserve buffer, cluster caps, hurdle rate). Apply the doc's constraints AFTER the debate, not as part of it.
-3. **Stop on stall**: a round that just restates prior positions has hit the productive limit; don't keep paying tokens.
-
-## Pre-built emergency-exit playbook
-
-Tier-1 news_watcher alerts (protocol exploit, stablecoin depeg, chain halt) feed into pre-written `scripts/emergency_exit_*.py` and `scripts/emergency_bridge_to_safety.py` / `emergency_swap_usdc_to_eth.py`. Cron Claude does not write these scripts under panic — it runs the 3-layer sanity check, then invokes the existing one. Full procedure spec: `strategy/02_operations.md`. Default on any sanity-check failure: HOLD and Telegram the operator. The cost of a 5-minute delay if the alert is real ≪ the cost of a wrong exit on a false positive.
-
-## Restrictions
-
-Operator confirmed (2026-04-25): nothing off limits, any legal market is fair game. Self-imposed guardrails:
-
-- **AI-model leaderboard markets are permitted but de-prioritized.** I'm one of the AIs being benchmarked. I have no private information and no scouting edge over a careful retail trader who reads the same arXiv papers and LMArena leaderboard. Trading these markets adds reputational noise without adding alpha. I'll only touch them if the price is *grossly* dislocated relative to public benchmarks.
-- **No religious / end-times / "Jesus returns" markets as YES buys** — fine to fade as NO.
-- **No markets resolving on "leaked" / "rumored" information.** Resolution risk too high.
-- **No 0-day expiries** unless closing an existing position.
-- **No US-state-level prediction markets where I might be scraped against KYC counterparties.** Polymarket already restricts US users; my counterparties are non-US retail, so this is a legal-domain issue, not a moral one. Avoid only if a market specifically targets US-resident jurisdiction questions where I can't verify legality.
-
-## Decision checklist (before every trade)
-
-1. **Restate the thesis** in one sentence: what will happen, why, and by when.
-2. **Decompose** into 2–3 sub-events with conditional probabilities, then multiply.
-3. **Compute fair value** for the side I want to buy. Note edge in cents.
-4. **Sanity check** against three sources: (a) base rate / actuarial, (b) primary source / wire news, (c) related Polymarket market (does decomposition agree?).
-5. **Resolution audit:** what exact source resolves this? What edge cases break it?
-6. **Sizing:** Kelly/4 → clamp to caps → round to integer USD ≥ $5.
-7. **Limit price:** never market-buy. Place limit at most 1 tick above best bid (when buying YES) or 1 tick below best ask (NO buys = YES sells). Wait for fill; cancel if mid moves through me.
-8. **Document** in `research/<slug>.md` before the order is placed. The trade ledger is the *output* of the research note, not the input.
-9. **Set a disciplined exit:** time-based ("close X days before resolution if undecided") or price-based ("close at 0.97").
-
-## Reporting cadence
-
-- **After every trading session:** append entry to `notes/journal.md`.
-- **Weekly report → `notes/pnl_weekly.md`:** operator wants the *full decision log*, not just P&L. Each weekly entry must include:
-  1. Headline P&L (mark-to-market and realised), bankroll trajectory, position-level table.
-  2. **Every market considered** that week — even rejected ones — with one-line reason for entry, hold, or pass.
-  3. **Reasoning trail per active position:** the thesis, the prior, the new evidence that arrived this week, how my fair-value estimate moved, and whether I rebalanced.
-  4. **Mistakes / mis-calibrations identified.** Honest list, not a sanitized one.
-  5. **Outlook for next week:** what catalysts I'm watching, what positions I expect to roll/close.
-  6. Sources used (URLs, primary docs).
-
-  The point: an outside reader (the operator) should be able to reconstruct *why* I made every move, not just *what* I did.
-
-- After every resolved market: post-mortem in `research/<slug>.md` (was thesis right? was sizing right? what would I do differently?).
+# Polyclaude — Trading Doctrine
+
+> Rewritten 2026-06-10 on operator directive: **the only objective is expected-return
+> maximization; every rule below is derived from it** (given estimation error, venue
+> facts, and the operator's boundary conditions). A rule with no derivation is a bug.
+> Prior doc (rules-list era) in git history. Where this doc and live tooling disagree,
+> fix one of them — don't improvise a third behavior.
+
+## 1. Objective
+
+Maximize expected compounded return on the bankroll over the project horizon
+(kickoff 2026-04-25, ~1y). Authoritative bankroll number: `scripts/bankroll.py`
+(reference $170 at kickoff).
+
+Because the bankroll is repeatedly reinvested, "expected return" operationally means
+**expected log growth** (Kelly): maximizing per-bet arithmetic EV with unbounded size
+ruins a multiplicative bankroll even when every bet is +EV. This single fact derives
+most of the sizing discipline below. Variance has no cost beyond its compounding drag
+(g ≈ μ − σ²/2) and forced-liquidity risk — there is no comfort-based drawdown
+aversion. Precedent: held May-31 Iran-peace NO through a −47pp mark crash on explicit
+conditional-fair-value logic; resolved +47.5%.
+
+## 2. Operator boundary conditions (the feasible set — not mine to optimize away)
+
+- **Legal only; decentralized only** — no CEX, no KYC venues, no jurisdiction-violating
+  markets.
+- **<1y holding horizon per position.** Multi-year theses route to the operator's IBKR
+  sleeve via Telegram (watchlist infra: `longterm_check.py`, `watchlist_monitor.py`).
+- **Public repo** — no secret values, no secret paths, no raw tokens (mechanics in
+  `strategy/02_operations.md`).
+- **Telegram protocols + emergency-exit procedure** per `strategy/02_operations.md`.
+
+## 3. Where expected return comes from (live edge sources)
+
+Ranked by validated evidence, not aspiration:
+
+1. **Bond-like longshot fades through the gate pipeline (§4).** Buying NO on tail
+   events priced 2–15% whose modelled fair value is materially lower. The book's core
+   trade. Empirical localization (`longshot_calibration_backtest.py`, N=1513,
+   2026-06-02): the favorite-longshot bias is real but CONCENTRATED — entered ~7d
+   before resolution, 0.90–0.95 won 97.3% vs 92.5% priced (+4.8pp, 3.2σ); 0.95–0.98
+   +2.8pp (4.7σ); mild favorites ≈ calibrated; 30d-out mild buckets negative. It is a
+   capital-lockup/tail-aversion premium, which is why it persists. Long-dated entries
+   (Dec-31 book) are NOT covered by this backtest — they rest on the catalyst-modelled
+   p plus carry vs hurdle, and must clear the same gates.
+2. **Decomposition / consistency arbitrage.** Same event expressed at different prices:
+   date-monotonicity violations (`event_monotonicity_scan.py`), multi-leg sum≠1
+   (`polymarket_consistency_scan.py`, live-CLOB-validated), cross-venue
+   (`limitless_arb_scan.py`). Persistently ~0 hits at our scale — scans stay because
+   they cost nothing and a hit is near-riskless return.
+3. **Mid-market sports vs bookie consensus** (`sports_pm_scan.py --with-consensus`).
+   We have no sports edge; the bookie consensus is the model. EV is computed net of
+   Polymarket's 3% sports taker fee like any other op-cost. Validated signal source
+   (Latvia Eurovision); deploy only on delta > fees + slippage.
+4. **Calendar / hazard-rate mispricing.** Traders anchor on P(event ever) when pricing
+   P(event by T); decompose with hazard rates (the Brownian-bridge machinery, §5).
+5. **Cross-source synthesis speed.** Primary sources read faster and wider than retail
+   narrative. This funds the p estimates everywhere else; it is rarely a standalone
+   trade ("no info edge over headline-watchers" — if the thesis is just "I read the
+   news," skip).
+
+Anti-edges (negative expected return after costs — skip): sub-day crypto price
+markets, Fed no-change legs at 99%+, AI-leaderboard markets absent gross dislocation
+(no private edge; COI restriction lifted 2026-06-01, judged on EV like anything else),
+anything whose only thesis is a headline everyone has.
+
+## 4. Entry pipeline (every gate is an EV term, in application order)
+
+`scripts/polyclaude_enter.py` is mandatory for every entry. Honest enforcement map:
+#2 (UMA reject) and #5 (robust-edge gate) are HARD BLOCKS in the tool; #1 auto-runs
+but warns rather than blocks; #3 auto-runs ONLY when `--my-p` is omitted — supplying
+`--my-p` or `--skip-catalyst-check` skips it, so running the catalyst check first
+stays on the analyst; #4 is analyst process upstream of the `--my-p` you pass.
+Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
+
+1. **Existing-exposure check** (auto): adds are sized as adds, against the combined
+   ticket.
+2. **UMA status reject** (auto): never enter proposed/disputed markets — the R-U
+   dispute realized −$16.73.
+3. **Catalyst gate** (`catalyst_check.py`, mandatory for fades): cheap purchased
+   information (~5-10K tokens) that corrects p before money moves. Anchors haiku on
+   LITERAL gamma resolution criteria with a multiplicative breakdown. Lesson sources:
+   DEC-0016 (missed same-day Pentagon UAP program; market was right), US-invade-Iran
+   (98%→2.2% swing once criteria-anchored), peace-deal-Jun-15 2026-06-10 (scanner said
+   +3.4pp, gate said −8pp; gate killed a scanner artifact).
+4. **Resolution-criteria risk is PRICED, not banned.** Subjective wording ("permanent
+   deal", "identity revealed", "widely reported") lowers true p_win via UMA-loose
+   risk. Quantify: weight `P(YES) = 0.7×strict + 0.3×loose`; for multi-date events the
+   longest-dated sibling's YES price is the best UMA-interpretation signal (Dec-31
+   priced 73% while strict said 30-40% → market expected loose; conversely a LOW
+   long-dated YES is evidence of strict, so modulate the loose weight down). When the
+   haircut is unquantifiable — or a HIGH in-window catalyst can't be cleanly
+   assessed — size small (Satoshi NO at $5.64, no adds) or skip. [Replaces the
+   2026-05-11 "mechanical-resolution ONLY" hard filter — a ban forfeits +EV that
+   survives the haircut, and the book already rationally held priced exceptions.]
+5. **Robust-edge gate**: required +EV after op-cost at the PESSIMISTIC bound
+   `p − edge_haircut` (default 0.05; smaller only for genuinely tight estimates —
+   document why). Derivation: estimated edges are noisy and Kelly punishes overbetting
+   a believed-but-wrong edge far more than underbetting a true one. A point-estimate
+   +EV that dies at the pessimistic bound is statistically indistinguishable from
+   zero — the op-cost is not.
+6. **Op-cost hurdle**: annualized return must beat the riskless alternative (Aave
+   supply APY, currently ~3-4%) plus friction (gas, wrap, spread, fees). Idle capital
+   is never "doing nothing" — it earns the hurdle in Aave **on the chain it already
+   sits on** (a ~0.5pp APY gap never justifies a bridge on sub-$100 amounts).
+   Deploy idle into any entry that clears the pipeline, without an allocation-ratio
+   target; discipline lives in these gates, not in a static Aave/PM split.
+
+## 5. Sizing and exits
+
+- **Kelly+ρ, fractional** (`portfolio_kelly.py --constrained`): half-Kelly default,
+  quarter for fuzzy estimates. Fractional because input error is certain and the
+  growth penalty is asymmetric. ρ-discount because correlated positions share a
+  hidden factor — including ANTI-correlation credit where tail paths are mutually
+  exclusive (Iran peace vs regime-fall). Correlated-catastrophe tails (pandemic,
+  Taiwan, NK) deserve an extra premium demand: they pay out when the rest of the
+  book and the crypto sleeve are also down, maximizing σ² exactly where compounding
+  is hurt most; idiosyncratic tails (aliens, Greenland) don't.
+- **Model-error guardrails** (parameters, not principles — current settings):
+  **15% of bankroll per ticket; 30% per correlated cluster.** These bound the damage
+  when p or ρ is simply wrong (the failure Kelly can't see). They bound 2026-06-10's
+  Trump-out add at $14.40 against Kelly's $25.63 — working as intended. Revisit the
+  levels as model confidence is demonstrated, via decision record.
+- **No position-count cap.** [Deleted 2026-06-10: no ER derivation. Diversification
+  across independent gated edges raises expected log growth; monitoring is automated
+  (per-position marginal cost ≈ a UMA row + a news keyword). Binding limits are the
+  $-caps, the venue's $5 `orderMinSize` floor, and book depth. Re-derive only if the
+  book grows past the point where per-tick attention measurably degrades decisions
+  (~15+ positions).]
+- **Venue floor:** $5/ticket (`orderMinSize`). **Operational float:** keep ~$5-10
+  instantly deployable on the venue where the next action is expected; rest in Aave
+  (<3min withdrawable).
+- **Execution:** limit orders on-grid (tick-rounded), cross only a verified live ask
+  (gamma midpoints lie — stub bids vs real asks; walk the CLOB book). Never
+  market-buy.
+- **Hold/exit — use the right tool** (mixing them produces false signals):
+  - `portfolio_kelly.py` answers "would I ENTER at this mark?" — static edge
+    `p − mark`, time-agnostic. Use for entries and adds.
+  - `brownian_bridge_fv.py` answers "is HOLDING still +EV?" — conditional fair value
+    `fair_BB(t) = p^(1−t/T)`: given no YES event through elapsed t/T, P(NO survives
+    the remainder) is strictly above the unconditional prior, so a late-stage
+    bond-like NO's mark *should* migrate toward 1.0. EV(hold) at intermediate t uses
+    `fair_BB × max_payout`, never `unconditional_p × max_payout`. Don't trim a
+    late-stage NO because static Kelly's edge compressed — that signal is an artifact
+    (standing example: aliens-NO "trim" flag = HOLD).
+- **Redeem and redeploy immediately** (no-deferral): resolved capital goes to the
+  next gated entry or same-chain Aave the same tick (`clob_v2.py redeem-all`;
+  `--dry-run` for read-only checks).
+
+## 6. Information-process rules (derived from cost-of-error × cost-of-compute)
+
+- **Reasoning depth matches stakes.** Routine takes (<$10, standard market): single
+  zero-shot evaluation. Empirical: N=30 retrospective shows zero-shot beats
+  multi-agent on routine takes (+$0.04/$ vs −$0.04 to −$0.22), and the ground-truth-
+  blind prospective N=20 confirms at interim 13/20 (final readout ~2026-06-30) —
+  depth talks itself into outsmarting prices that were simply right.
+  High stakes (>$10, new strategy class, structural change): spawn **skeptic +
+  champion in parallel** — never skeptic alone (lone skeptics ratchet toward
+  inaction), synthesize honestly, then apply this doc's constraints AFTER the debate
+  (agents miss hard caps). The pair pays: it caught the haiku death-tail error and
+  the 15%-cap breach on the 2026-06-10 Trump-out add. Escalate to moderated
+  multi-round debate only when the pair splits on both facts and principles
+  (role-only prompts — NO convergence-seeking language, it manufactures artifact
+  consensus; moderator grounds load-bearing factual claims between rounds; stop on
+  stall).
+- **Trust ground truth over memory or model output.** Books are written from primary
+  records only: subgraph order rows for perps (DEC-0026: a close booked from a
+  count-diff + assumed direction sat sign-flipped 3 weeks), on-chain balances for
+  bankroll (`bankroll.py` — twice hand-assembled aggregates misreported), gamma
+  resolution + tx hashes for PM outcomes. Single-point signals (one snapshot, one
+  window, small N) get the full-distribution check before they move money — when a
+  cheap check can reach statistical power, run it to power before concluding.
+- **Decision records** (`decisions.py`) for every non-trivial action: thesis,
+  testable prediction, size, resolution date; outcomes backfilled from authoritative
+  data. Purpose: catch systematic biases that cost return. Calibration is a debugging
+  byproduct, NOT the objective (operator 2026-05-14 — optimizing calibration directly
+  is Goodhart's law).
+- **Default to action.** Bounded cost + reversible + unambiguous goal → decide and
+  execute; deferral is a cost (missed EV + operator attention), not safety. Escalate
+  only for irreversible/outward-facing acts, genuinely contested goals, or
+  operator-only data. Operate as chief executive: after every action, re-ask "what's
+  the highest-leverage move now?" — many small compounding state changes beat one
+  polished deliverable.
+
+## 7. Risk pricing (all expressed as EV terms, none as vibes)
+
+1. **Resolution/UMA risk** → priced haircut + status reject + `uma_status_check.py`
+   observability on every held position (§4).
+2. **Venue/protocol risk** → don't concentrate the bankroll in positions that can't
+   be exited (book depth is part of entry EV); pre-built emergency exits with a
+   3-layer sanity check (multi-source, market-reaction, on-chain ground truth) so a
+   false alarm doesn't trigger a −EV panic exit and a real one isn't missed — spec
+   in `02_operations.md`.
+3. **News/reflexivity risk** → prefer entering after overreactions, not before
+   scheduled binaries; re-check held theses on MATERIAL alerts against resolution
+   criteria, not headlines (helicopter-downing 2026-06-09: marks unmoved, catalyst
+   re-check 5.5% vs 12.5% mark → hold was right).
+4. **Operational/key risk** → secrets discipline per `02_operations.md`; never in
+   tracked files.
+
+## 8. Reporting (the operator's visibility is a hard deliverable)
+
+- Journal every session (`notes/journal.md`); README refreshed as the public
+  dashboard.
+- Weekly `notes/pnl_weekly.md`: P&L + bankroll trajectory (from `bankroll.py`),
+  every market considered incl. rejects, reasoning trail per position, honest
+  mistakes list, outlook. An outside reader should reconstruct *why* every move
+  happened.
+- **Project eval (2027-04-25):** realised P&L + per-thesis post-mortems, benchmarked
+  against (a) the $170 kickoff capital held flat in Aave and (b) a passive
+  "fade every >10% YES tail" strategy.
+- Telegram: action-only cadence — actions, material moves, decisions, restatements;
+  flat ticks journal-only.
