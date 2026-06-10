@@ -7,5 +7,23 @@
       "summary": "NOT NOW. Current valuation 33x EV/EBITDA + 204% 1YR rally has priced in cycle recovery. Dip entry $140-150 with $20+/kg pricing; OR event entry post-Mt-Holland H1 2027.",
       "fresh": true
     }
+  },
+  "SOL": {
+    "ts": 1781056905.032923,
+    "result": {
+      "verdict": "WATCH",
+      "score": "3.25/4",
+      "summary": "**Current price $67 does not meet entry threshold.**",
+      "fresh": true
+    }
+  },
+  "ARB": {
+    "ts": 1781057013.8849974,
+    "result": {
+      "verdict": "ERROR",
+      "score": "?/4",
+      "summary": "**CONDITIONAL ENTRY: After June 16, 2026 DAO vote.** If DAO votes to approve a revenue-sharing mechanism allocating \u22655% of sequencer fees to ARB stakers effective by 2026-Q3, ENTER at current price ($0.0805) or dips to $0.06\u2013$0.07. If vote ",
+      "fresh": true
+    }
   }
 }

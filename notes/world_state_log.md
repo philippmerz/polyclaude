@@ -271,3 +271,225 @@ Sources:
 - [Nvidia Earnings](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026040282/nvda-20260427.htm)
 - [Oil Market Report - IEA](https://www.iea.org/reports/oil-market-report-may-2026)
 - [Polymarket](https://polymarket.com/)
+
+---
+
+## 2026-06-07T16:04:58Z — world_state_digest
+
+**Domains:** critical-minerals-commodities, energy-power-infrastructure, geopolitics-security | **Lookback:** 30d | **Model:** haiku
+
+```
+# WORLD-STATE DIGEST — 2026-06-07
+
+Domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### critical-minerals-commodities
+
+**Copper**
+- [2026-06] LME Copper: 13,519.50 USD/tonne (down 2.96% early June)
+- [2026-05] ICSG forecast: 150,000-metric-ton refined copper deficit for 2026 (first structural shortage since 2009)
+- [2026-05] ING forecast: 600-kiloton refined copper deficit in 2026
+- [2026-05] Chile El Teniente: General manager stated production depressed for next 5 years following accident
+- [2026-06] Indonesia Grasberg: 35% reduction in 2026 production forecast following September mudslide
+- [2026-04] Citigroup price target: copper potentially $15,000/tonne if supply shortages persist
+
+**Lithium**
+- [2026-04/05] US State Department: 11 new bilateral critical minerals frameworks signed (Argentina, Cook Islands, Ecuador, Guinea, Morocco, Paraguay, Peru, Philippines, UAE, Uzbekistan)
+- [2026-04/05] US Government: $30 billion+ mobilized in letters of interest, investments, loans over past 6 months
+- [2026-04] USGS/Earth MRI: Announced May 27 case studies highlighting practical applications of critical mineral mapping
+- [2026-04] USGS: Eastern U.S. lithium deposits assessment indicates potential to "Replace Imports for a Century or More"
+
+**Rare Earths**
+- [2026-05] China production (2025): 270,000 metric tons (70% of global production)
+- [2026-05] China reserves: 44 million metric tons (36-40% of global known deposits)
+- [2026-05] China processing: 91% of global separation/refining, 94% of permanent magnet production
+- [2026-05/06] China discovery: New rare earth mineral formation identified in Heilongjiang & Jilin provinces
+- [2026-06] China policy: Government enforcing stricter quota controls on miners/refiners exceeding production targets
+
+**Battery Production**
+- [2026-05] Global lithium-ion battery capacity: 2,500+ GWh; China controls 75-80% of global production capacity
+- [2026-05/06] CATL: Commissioned 70 GWh across Luoyuan and Luoyang (2025-2026)
+- [2026-05/06] BYD: Added 25 GWh LFP output
+- [2026-06] Market value: USD 136.28 billion (2026)
+
+**Cobalt & Nickel**
+- [2026-05] Indonesia: Cut nickel mining quotas >30% since September 2025; prices up 35% to $19,138/tonne
+- [2026-02] Sherritt International: Suspending nickel-cobalt operations in Cuba due to fuel supply constraints
+- [2026-05] DRC cobalt constraints: Prices up 65% to $55,858/tonne
+- [2026-05] IEA requirement: 60 new nickel mines and 17 new cobalt mines needed by 2030
+
+**LME Metals (Early June)**
+- [2026-06] LME Aluminum: 3,592.00 USD/tonne (down 2.02%)
+- [2026-06] LME Lead: 2,005.00 USD/tonne (down 0.59%)
+- [2026-06] LME Tin: 57,408.00 USD/tonne (down 0.95%)
+
+### energy-power-infrastructure
+
+**Oil Supply Crisis**
+- [2026-02-28] Strait of Hormuz: Iran declared waterway closed; 15.8 million barrels per day stranded
+- [2026-02-28] Iran War: US and Israel launched air war; Iran launched retaliatory missile/drone attacks on Gulf states and US bases
+- [2026-04-13] US Response: Naval blockade imposed on Iran following failed Islamabad Talks
+- [2026-03] OPEC Production Collapse: March production fell to 20.79 million barrels per day (27% monthly decline from Iran war); April averaged 33.19 mbpd vs. 42.77 mbpd in February
+- [2026-05-03] OPEC+ Output Adjustment: 188,000 barrels-per-day increase announced effective June 2026 (first meeting after UAE departure)
+- [2026-06-03] EIA Weekly Petroleum Report: US crude inventories fell 7.974 million barrels week ending May 29 (largest drawdown since February)
+- [2026-06-03] US Refinery Operations: 16.9 million barrels per day at 94.7% capacity utilization
+- [2026-06-03] US Crude Imports: 6.4 million barrels per day (up 1.2 mbpd from prior week)
+- [2026-05/06] Global Inventory Forecast: Q2 2026 forecast shows 8.5 million b/d inventory draw
+- [2026-05/06] Brent Price: $106/b expected May-June 2026
+- [2026-05/06] IEA Assessment: Strait closure represents "largest supply disruption in the history of the global oil market"
+
+**Natural Gas Production & Exports**
+- [2026-Q1] US Natural Gas Production: 117.2 Bcf/d (4% increase vs. Q1 2025)
+- [2026-Forecast] US Production 2026: 118.9 Bcf/d average; 2027: 124.0 Bcf/d
+- [2026-Forecast] Permian Output: 29.2 Bcf/d in 2026 (6% increase vs. 2025)
+- [2026-04-22] Golden Pass LNG Train 1: First cargo exported; adds ~0.7 Bcf/d capacity
+- [2026-Forecast] LNG Exports: 17.0 Bcf/d in 2026; 18.2 Bcf/d in 2027 (9% increase)
+- [2026-Forecast] Pipeline Exports: 9.8 Bcf/d in 2026; 10.0 Bcf/d in 2027
+- [2026-Forecast] Net Gas Exports Growth: +18% to 18.7 Bcf/d in 2026; +10% to 20.5 Bcf/d in 2027
+
+**Nuclear Energy**
+- [2026-01] US DOE Award: $2.7 billion allocated for domestic uranium enrichment capabilities
+- [2026-07-04] US DOE Target: 3 advanced reactor designs to reach criticality by July 4, 2026
+- [2026-05] US Program Status: 11 projects selected for pilot designs; 3 have Final Documented Safety Analysis
+- [2026-05/06] Uranium Supply: Global production 55,000-65,000 tons annually vs. demand ~67,000 tons (supply deficit)
+- [2026-YTD] China Nuclear: +2.2 GW capacity additions (2026 year-to-date)
+- [2016-2024] China Nuclear Growth: Capacity increased 76% (24 GW added); 36 reactors under construction (49% of global pipeline)
+
+**Coal Energy Policy**
+- [2026-06-04] US DOE Announcement: $350 million allocated to build, modernize, and restart coal plants
+- [2026-06-04] Defense Production Act: Funding approved for coal capacity expansion at 13 plants and export infrastructure
+- [2026-04] Advanced Reactor: First Advanced Reactor Criticality achieved (Antares pilot program)
+
+**China Coal Paradox**
+- [2025] China Coal Power Generation: Fell 1.6% year-over-year (90 TWh decline); first drop since 2015
+- [2025] China Power Demand: Grew 5% but coal generation did not increase to meet demand
+- [2026-Outlook] China Coal Capacity: New project proposals surged to record high; clean energy drove demand down
+- [2026-Outlook] Commissioning: Historically high annual level of coal capacity additions expected in 2026-2027
+
+### geopolitics-security
+
+**Strait of Hormuz & Iran War**
+- [2026-02-28] Hostilities Begin: US and Israel launched air campaign; Iran's supreme leader Ali Khamenei assassinated; Iran retaliated with missiles and drones
+- [2026-03-04] Strait Closure: Iran declared Strait of Hormuz closed; threatened and carried out attacks on transiting vessels
+- [2026-04-13] US Naval Blockade: Implemented following failure of Islamabad Talks to resolve 2026 Iran war
+- [2026-05/06] Shipping Impact: Closure has blocked nearly all traffic through the Strait; described as "largest supply disruption in global oil market history"
+
+**NATO-Russia Tensions**
+- [2026-06-04] Drone Attack: Russian drone struck apartment building in Romania; 2 injured; NATO chief Mark Rutte called incident "reckless"
+- [2026-06] Russian Strategy: Gray-zone tactics (UAV incursions, sabotage) used to probe NATO defenses and assess political tolerance
+- [2026-06] NATO Eastern Flank Response: Frontline states fortifying with layered defenses (surveillance, short-range air defense)
+- [2026] US Commitment Uncertainty: Shifts in Trump administration foreign policy prioritization create questions about scale/credibility of US support
+- [2026] European Political Risk: Populist right-wing parties with pro-Russian sympathies topping polls in major European elections
+
+**Semiconductors & AI Supply Chain**
+- [2026-05] Memory Chip Shortage: Expected to persist through 2026-2027; shortage driven by reallocation of Samsung, SK Hynix, Micron capacity from consumer to AI/HBM
+- [2026-05] Data Center Demand: DRAM consumption ~50% of global supply (2025); projected to exceed 60% by 2030
+- [2026-05] Consumer Impact: DRAM prices doubled since early 2025; smartphone shipments declining 12.9% in 2026; PC market contracting 11.3%
+- [2026-05] Lead Times: AI chip and packaging lead times stretching into 2027; relief not expected before 2027 at earliest
+
+---
+
+## CANDIDATE THEMES
+
+### Oil Supply Shock (Hormuz Closure)
+- **Underlying facts:** Strait of Hormuz blocked since Feb 28 (15.8 mbpd stranded); largest supply disruption in global oil market history; OPEC production still 30% below Feb baseline; US inventory draws accelerating (7.974 mbpd week of May 29, largest since Feb)
+- **Implication:** Energy shock is ACUTE and ONGOING, not priced-in adequately. Brent at $106/b appears to discount rapid supply response or demand destruction that hasn't materialized. Retail narrative: "War is priced in, OPEC will fill gap." Reality: Supply cannot physically adjust; demand takes months to destroy.
+- **Possible plays:** CL, XLE, CVX, COP, EOG
+- **Direction:** LONG
+- **Horizon:** weeks to months (supply shock acute; normalization 6-12 months out)
+- **Retail blindspot:** Assumes OPEC ramp or rapid demand destruction; misses that largest disruption in history requires months to balance; still in inventory drawdown phase
+- **Confidence:** HIGH (multiple independent sources: IEA, OPEC data, EIA inventory draws, Brent pricing disconnection)
+
+### Copper Structural Deficit
+- **Underlying facts:** ICSG forecasts 150-600k-ton deficit 2026 (first since 2009); ING forecasts 600k-ton deficit; major supply disruptions (El Teniente 5-year depression, Grasberg 35% reduction); cumulative deficit 3M tonnes by 2036; long-term deficit 10M tonnes by 2040 vs. demand 42M tonnes (+50%); yet LME copper down 2.96% to $13,519/tonne
+- **Implication:** Prices falling INTO a structural supply shortage. Retail extrapolates recent weakness (demand destruction from geopolitical shock) onto long-term fundamentals. Missing: AI/EV buildout is structural multi-year demand; mine disruptions are multi-year supply losses; neither adjusts quickly.
+- **Possible plays:** COPX (iShares Global), FCX (Freeport), TECK, JJC (copper ETF), specific mining equities
+- **Direction:** LONG
+- **Horizon:** months to years (supply tightness structural; peak capex cycles are 3-5 years)
+- **Retail blindspot:** 2022-23 saw copper boom then crash; now investors assume peak demand is behind (recession fears, China slowdown); missing that AI/EV demand profile is orthogonal to prior cycle
+- **Confidence:** HIGH (ICSG first shortage since 2009 + mine disruptions + demand tailwinds + price weakness = clear disconnection)
+
+### Uranium Structural Undervaluation
+- **Underlying facts:** Global uranium production 55-65k tons annually vs. demand ~67k tons (supply deficit); US invested $2.7B in enrichment (Jan 2026); US targeting 3 reactors criticality by July 4 (11 projects piloted, 3 with final safety analysis); China adding 2.2 GW nuclear YTD; SMR applications for AI datacenters emerging; nuclear capacity growth structural
+- **Implication:** Nuclear renaissance is real capex mobilization (not sentiment). Supply-demand crossover is STRUCTURAL and TIGHT. Yet uranium equities largely ignored retail; narrative remains "old energy, no future." Missing: Sudden legitimate demand backstop (grid stability, AI power), massive government capex, supply constraints take years to resolve.
+- **Possible plays:** URA, URNM, CCJ (Cameco), Kazatomprom, Sprott Physical Uranium
+- **Direction:** LONG
+- **Horizon:** months to years (capex mobilization ongoing, supply tightness will persist 3+ years)
+- **Retail blindspot:** Nuclear still carries ESG/political risk overhang; uranium supply story (enrichment bottleneck) not widely understood; sudden AI/grid-stabilization demand not factored into consensus
+- **Confidence:** HIGH (supply-demand tightness, documented capex mobilization, multiple demand drivers converging)
+
+### Consumer Electronics / Memory Chip Undersupply Persisting 2+ Years
+- **Underlying facts:** DRAM prices doubled since early 2025; reallocation from consumer to AI by three producers (Samsung, SK Hynix, Micron) controlling 95% of DRAM; smartphone shipments declining 12.9% in 2026; PC market contracting 11.3%; relief not expected before 2027 at earliest; lead times stretching into 2027
+- **Implication:** Structural reallocation of supply means consumer electronics face 2+ year undersupply. Retail assumes: Supply will adjust or demand will crater. Reality: Supply is PHYSICALLY constrained (capex lead times); AI capex so massive that pricing power justifies non-replacement of consumer capacity.
+- **Possible plays:** SHORT consumer equities (AAPL, Samsung, DELL, HP, ASUS, Lenovo, Acer); or LONG memory producers (MU, QCOM) IF they maintain pricing power in AI while consumer revenue drops
+- **Direction:** SHORT (consumer electro); LONG (if isolating memory producers' AI segment)
+- **Horizon:** months to 2+ years (supply constraint is multi-year; pricing power debate will play out)
+- **Retail blindspot:** Assumes price elasticity limits (too expensive, buyers switch); misses that physical supply is bottleneck, not price; AI demand is inelastic (datacenters have no choice); consumer demand falls but supply doesn't return to consumer segment
+- **Confidence:** HIGH (documented capacity reallocation, multiple producer confirmation, demand destruction visible in shipment data, timeline clear)
+
+### Lithium Supply Tightening (Long-Term Positioning)
+- **Underlying facts:** US domestic deposits "century+ supply"; FORGE bilateral framework signed with 11 countries; $30B+ mobilized in financing over 6 months; China rare earth + processing dominance (270k tons, 91% separation) is model for lithium onshoring; EU 60 strategic projects targeting lithium (47 internal, 13 external)
+- **Implication:** Capital is flowing into onshoring narrative, but supply remains tight in near-to-medium term (3-5 years for new capacity). Retail narrative: "EV boom broke supply chains, too much oversupply now." Reality: Previous cycle (2022-23) overbuilt; sentiment swung to complacency; actual buildout of onshore capacity takes time; interim period (2026-2029) will see tightness.
+- **Possible plays:** LIT, LTHM, ALB (Albemarle), domestic/allied-country lithium miners, battery recyclers
+- **Direction:** LONG
+- **Horizon:** 1-3 years (immediate; onshoring ramp still years away)
+- **Retail blindspot:** 2022-23 cycle burned investors; now assume oversupply persists; missing that sentiment swing is lagging fundamentals by 18-24 months
+- **Confidence:** MEDIUM-HIGH (capital flows evident, supply timing clear, but execution risk on onshoring initiatives exists)
+
+### Rare Earths: China Structural Dominance (Non-China Short)
+- **Underlying facts:** China 70% of production, 91% of separation/refining, 94% of magnet production; new discovery in NE China extends dominance; China enforcing stricter quotas; international onshoring projects exist but are multi-year (FORGE, EU projects)
+- **Implication:** Retail is pursuing "onshoring" narrative; reality is China's hold is STRUCTURAL. New discovery in China extends already-dominant position. Short-term (2026-2028), China's quota enforcement will tighten supply. Non-China rare earth equities are bets on geopolitical diversification that take 3+ years to materialize.
+- **Possible plays:** Non-China rare earth miners (if available), or LONG rare earth prices while SHORT non-China mining equity (bet on continued China dominance)
+- **Direction:** Nuanced (LONG rare earth commodity prices due to China supply tightening; NEUTRAL/SHORT non-China miners betting on onshoring)
+- **Horizon:** months to years
+- **Retail blindspot:** ESG + geopolitical narrative around China risk overstates near-term diversification reality; supply will tighten due to China's dominance, not resolve
+- **Confidence:** MEDIUM (structural dominance clear, but near-term vs. medium-term hedging debate is active in market)
+
+### Natural Gas: Supply Ramp into Energy-Shock Demand
+- **Underlying facts:** US production up 4% YoY (Q1 2026: 117.2 Bcf/d); 2027 forecast 124 Bcf/d; Golden Pass online April 2026; LNG exports ramping 30% by 2027; but Hormuz closure creates global LNG supply shock (15.8 mbpd oil disruption → energy switching to LNG)
+- **Implication:** US gas is EXPORTING supply into a suddenly-tight global LNG market. Europe's alternative LNG sources (Qatar, Australia) unchanged; Middle East disruption likely to push switching from oil to LNG. Retail narrative: "Gas supply abundant, US exporting." Reality: Export growth is offsetting sudden global demand spike (energy substitution post-Hormuz).
+- **Possible plays:** UNG, natural gas futures, LNG-linked equities (Cheniere, NextDecade)
+- **Direction:** LONG or SHORT depending on framing: LONG gas futures if viewing as hedge against energy shock; NEUTRAL/SHORT if viewing as simple supply growth (execution risk on new LNG capacity)
+- **Horizon:** months to 1-2 years
+- **Retail blindspot:** Sees US production growth as directional; misses that growth is being absorbed by geopolitical demand shift, not adding to spare capacity
+- **Confidence:** MEDIUM (growth evident, demand shock timing uncertain; could be priced differently if energy substitution framing gains traction)
+
+### Coal: Paradoxical Short-Term Spike (Geopolitical Hedge)
+- **Underlying facts:** China coal generation fell 1.6% despite 5% demand growth (overcapacity structural); yet US DOE allocated $350M + Defense Production Act funding for coal plant buildout on June 4, 2026; energy shock (Hormuz) likely triggered coal-as-grid-backstop repricing
+- **Implication:** Coal is STRUCTURALLY OVERSUPPLIED in China but STRATEGICALLY REPRICED in US/West as energy security buffer. DOE allocation suggests sudden recognition that coal is insurance against LNG supply shock. Retail: "Coal is dead." Reality: Geopolitical shock created hedge demand.
+- **Possible plays:** KOL (Invesco Coal ETF), thermal coal miners, coal-to-liquids plays
+- **Direction:** LONG (tactical; short-term positioning)
+- **Horizon:** weeks to months (geopolitical shock acute; coal repricing temporary as energy mix adjusts)
+- **Retail blindspot:** ESG narrative killed coal thesis; geopolitical repricing not yet in consensus; supply is abundant but demand suddenly strategic
+- **Confidence:** MEDIUM (timing and magnitude of DOE action suggestive, but repricing could fade if energy shock resolves quickly)
+
+---
+
+## NEXT-STEPS
+
+- **Run longterm_check.py on:** CL, XLE, CVX, FCX, COPX, URA, URNM, CCJ, MU, LTHM, ALB, KOL
+- **Run catalyst_check.py on:** (No discrete Polymarket questions identified; events are ongoing/structural)
+- **Skip / pass:** 
+  - Nickel/cobalt (already priced up 35-65%; near-term momentum play, not structural misprice)
+  - Semiconductor memory shorts (timing on consumer demand destruction clear but pricing power debate ongoing; medium confidence only)
+  - Lithium onshoring (capital flow visible but execution multi-year; positioning already active)
+
+```
+
+Sources:
+- [EIA Weekly Petroleum Status Report](https://www.eia.gov/petroleum/weekly/)
+- [OPEC Press Release May 3, 2026](https://www.opec.org/pr-detail/602-3-may-2026.html)
+- [S&P Global Copper Market Outlook 2026](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/04/copper-gold-market-outlook-2026-prices-supply-and-mining-costs)
+- [ICSG Copper Market Balance 2026](https://www.internationalcoppersstudygroup.org/)
+- [DOE Advanced Reactor Criticality Announcement](https://www.energy.gov/news)
+- [USGS Mineral Resources Program](https://www.usgs.gov/programs/mineral-resources-program)
+- [State Department FORGE Initiative](https://www.state.gov/key-topics-bureau-of-energy-resources/)
+- [DOE Natural Gas Exports](https://www.eia.gov/outlooks/steo/report/natgas.php)
+- [IAEA Uranium Resources](https://www.iaea.org/news)
+- [NATO Press Releases](https://www.nato.int/cps/en/natohq/news.htm)
+- [2026 Strait of Hormuz Crisis - Wikipedia](https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)
+- [Semiconductor Memory Shortage Analysis - CNBC](https://www.cnbc.com/2026/01/26/memory-chip-shortage-synopsys-lenovo-ai-data-centers.html)
+- [China Rare Earth Industry Analysis](https://www.mining.com/web/china-to-strengthen-development-of-rare-earth-industry-over-2026-2030/)
+- [LME Market Data](https://www.lme.com/market-data/reports-and-data/lme-official-prices)

@@ -1,81 +1,53 @@
 {
-  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor.",
-  "_updated": "2026-05-24",
-  "us-x-iran-permanent-peace-deal-by-may-11-2026": {
-    "p_no": 0.99,
-    "cluster": "iran-peace",
-    "rho_within": 0.7,
-    "cluster_frac": 0.3,
-    "rationale": "Strict criteria require formal SIGNED permanent deal. Iran rejected US proposal; 14pt MOU not signed. P(YES) <1% in 1.3d window. P fragile to estimation error."
-  },
-  "us-x-iran-permanent-peace-deal-by-may-15-2026-144-885-839": {
-    "p_no": 0.95,
-    "cluster": "iran-peace",
-    "rho_within": 0.7,
-    "cluster_frac": 0.3,
-    "rationale": "6-day window. Iran demands reparations + troop withdrawal infeasible to sign in 6d. P robust."
-  },
-  "us-x-iran-permanent-peace-deal-by-may-31-2026": {
-    "p_no": 0.73,
-    "cluster": "iran-peace",
-    "rho_within": 0.7,
-    "cluster_frac": 0.3,
-    "rationale": "2026-05-24 01:50 UTC \u2014 Trump 'largely negotiated' announcement triggered -47pp adverse market move (0.815\u21920.345). Fresh catalyst_check: P(YES strict) = 11% (multiplicative 0.65 \u00d7 0.17 = 11%). Term structure ALL durations shifted (May 26 = 57.5% YES). Deal structure per news: MOU ending war + 30-day nuclear negotiation window = STRUCTURALLY TEMPORARY per criteria. UMA-risk weighting 70% strict \u00d7 0.89 + 30% loose \u00d7 0.35 = P_NO 0.73. EV at hold = \\$12.73 vs close \\$6.01 = +\\$6.72 advantage. Decision: HOLD pending operator override. R-U pattern risk explicit."
-  },
-  "russia-x-ukraine-ceasefire-by-may-31-2026": {
-    "p_no": 0.005,
-    "cluster": "russia-ukraine-DISPUTED",
-    "rho_within": 0.0,
-    "cluster_frac": 0.1,
-    "rationale": "umaResolutionStatus=disputed. Market pricing YES at 99.95%. Forced hold; effectively lost capital."
-  },
+  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
+  "_updated": "2026-06-10",
   "will-the-iranian-regime-fall-by-the-end-of-2026": {
     "p_no": 0.93,
     "cluster": "iran-regime",
     "rho_within": 0.6,
-    "cluster_frac": 0.2,
-    "rationale": "Regime stable; US shelved Project Freedom (de-escalation). 235d window. ANTI-correlated with iran-peace cluster."
+    "cluster_frac": 0.235,
+    "rationale": "2026-06-10 catalyst re-check post helicopter-downing: P(YES) central 5.5% (2.5-10%). Regime survived Feb-Apr decapitation campaign; fall path = ceasefire collapse x regime-change campaign x success ~2.7% joint. Keep p_no 0.93 (slightly pessimistic vs check). cluster_frac trued to live (29.53+10.42)/170. ANTI-correlated with iran-peace."
   },
   "will-reza-pahlavi-lead-iran-in-2026": {
     "p_no": 0.97,
     "cluster": "iran-regime",
     "rho_within": 0.6,
-    "cluster_frac": 0.2,
+    "cluster_frac": 0.235,
     "rationale": "Conjunction P(regime falls AND Pahlavi installed) very low. ANTI-correlated with iran-peace."
   },
   "trump-out-as-president-before-2027": {
     "p_no": 0.96,
     "cluster": "us-politics",
     "rho_within": 0.5,
-    "cluster_frac": 0.05,
-    "rationale": "Even with Dem house gains in midterms Nov 2026, Senate conviction implausible. P robust."
+    "cluster_frac": 0.18,
+    "rationale": "2026-06-10 skeptic+champion synthesis: P(YES) ~3% central = death tail 1.5-2.2% (80yo Jun 14, SSA halved for presidential medicine) + assassination 0.3-0.7% (IRGC plots, live war) + resignation ~0.8% + removal ~0. Calendar-structural: Dem House flip seats 2027-01-03 AFTER resolution. cluster_frac raised 0.05->0.18: assassination sliver correlates with iran-regime tail (was set pre-direct-hostilities)."
+  },
+  "will-the-us-acquire-any-part-of-greenland-in-2026": {
+    "p_no": 0.95,
+    "cluster": "us-expansion",
+    "rho_within": 0.0,
+    "cluster_frac": 0.11,
+    "rationale": "Entry gate 2026-06-05 used p_no 0.915 (pessimistic); fresh catalyst 2026-06-10 central 0.975 (range 0.94-0.99): 'acquire' = completed territorial transfer, 4-step conjunction in 7mo. Prior 0.95 between them. Idiosyncratic tail (philosophy line 26)."
+  },
+  "will-the-us-confirm-that-aliens-exist-before-2027": {
+    "p_no": 0.85,
+    "cluster": "uap",
+    "rho_within": 0.5,
+    "cluster_frac": 0.06,
+    "rationale": "Pentagon files released May 8 with explicit 'no alien interaction' statement. Catalyst-check 2026-05-08 P(YES) central 15%. Watch UAP EO Aug 18 + DNI report Oct 31."
   },
   "hantavirus-pandemic-in-2026": {
     "p_no": 0.97,
     "cluster": "biothreat",
     "rho_within": 0.5,
     "cluster_frac": 0.05,
-    "rationale": "Hantavirus outbreak constrained; pandemic in 2026 very low base rate."
+    "rationale": "Hantavirus outbreak constrained; pandemic in 2026 very low base rate. Correlated-catastrophe tail class — no adds (philosophy line 26)."
   },
-  "will-the-us-confirm-that-aliens-exist-before-2027": {
-    "p_no": 0.85,
-    "cluster": "uap",
-    "rho_within": 0.5,
-    "cluster_frac": 0.05,
-    "rationale": "Pentagon files released May 8 with explicit 'no alien interaction' statement. Catalyst-check 2026-05-08 P(YES) central 15%."
-  },
-  "will-latvia-be-in-the-top-10-at-eurovision-2026": {
-    "p_no": 0.92,
-    "cluster": "eurovision",
+  "will-satoshis-identity-be-revealed-by-december-31": {
+    "p_no": 0.99,
+    "cluster": "crypto-lore",
     "rho_within": 0.0,
-    "cluster_frac": 0.03,
-    "rationale": "Latvia must qualify SF2 (May 14) AND finish top 10 in Grand Final (May 16). Bookies favor non-Baltic odds."
-  },
-  "will-atletico-madrid-finish-in-the-top-4-of-the-la-liga-2025-26-standings": {
-    "p_yes": 0.99,
-    "cluster": "la-liga",
-    "rho_within": 0.0,
-    "cluster_frac": 0.03,
-    "rationale": "Atletico mathematically locked in top 4 with 3 games left. Near-certain."
+    "cluster_frac": 0.033,
+    "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim — R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo."
   }
 }

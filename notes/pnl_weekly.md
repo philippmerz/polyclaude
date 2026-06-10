@@ -388,3 +388,71 @@ Notable lessons (selected): R-U three documented mistakes (above); TP-set-at-ent
 - Aave V3 pool data (Base + Arbitrum supply APYs)
 - Ostium subgraph + OpenSDK
 
+
+---
+
+## Weeks 5–7 (May 18 → Jun 10) — catch-up consolidated entry
+
+*Process note: the step-9 weekly cadence slipped 23 days (last report 2026-05-18). This entry consolidates three weeks; the slip itself is logged under Mistakes.*
+
+### Bankroll snapshot
+
+- **2026-05-29 corrected reference:** $162.24 (PM $83.84 + Aave $71.10 + idle $2.55 + POL $4.74)
+- **2026-06-10 02:00 UTC actual: ~$172** = PM book MTM $110.98 (cost $107.77) + Aave $52.68 ($30.55 Polygon/PM-sleeve + $17.59 Arb + $4.54 Base) + pUSD $1.81 + USDC dust ~$1.6 + ~51 POL @ ~$0.089 ≈ $4.5 + ETH dust ~$1.3
+- **vs $170 kickoff: ~+1%. The 2026-05-11 R-U loss (−$16.73) is fully recouped.**
+
+### Realized P&L (window)
+
+| Event | Date | Realized |
+|---|---|---|
+| May-31 Iran-peace NO redeemed (tx 0xef8766ab) | Jun 1 | **+$5.62** on $11.82 cost (+47.5%) |
+| Ostium SPX long TP-closed (final leg; perp sleeve flat since) | ~May 27 | small + (exact figure = DEC-0011 backfill, on-chain trace) |
+
+May-31 NO was the window's defining trade: entered as a pricing inefficiency, survived a −47pp adverse swing (0.815 → 0.345 on Trump's "largely negotiated" headline) on explicit Brownian-bridge conditional-fair-value HOLD logic, and resolved $1.00. Hold-through-catastrophe validated the framework end to end.
+
+### Held book (2026-06-10 02:30 UTC, post scale-ups)
+
+| Position | Side | Entry | Mark | Cost | MTM | %P&L | Resolves |
+|---|---|---|---|---|---|---|---|
+| Iranian regime fall before 2027 | NO | 0.837 | 0.875 | $28.25 | $29.53 | +4.5 | 2026-12-31 |
+| Trump out as president before 2027 | NO | 0.881 | 0.895 | $24.96 | $25.36 | +1.6 | 2026-12-31 |
+| US acquires part of Greenland 2026 | NO | 0.870 | 0.865 | $19.14 | $19.03 | −0.6 | 2026-12-31 |
+| US confirms aliens before 2027 | NO | 0.807 | 0.865 | $10.70 | $11.46 | +7.1 | 2026-12-31 |
+| Reza Pahlavi leads Iran 2026 | NO | 0.907 | 0.946 | $10.00 | $10.42 | +4.2 | 2026-12-31 |
+| Hantavirus pandemic 2026 | NO | 0.909 | 0.946 | $9.09 | $9.46 | +4.0 | 2026-12-31 |
+| Satoshi identity revealed by Dec 31 | NO | 0.940 | 0.955 | $5.64 | $5.73 | +1.6 | 2026-12-31 |
+| **Total** | | | | **$107.77** | **$110.98** | **+3.0** | max payout $124.35 |
+
+### Actions this window
+
+- **Jun 1:** redeemed May-31 NO; $16.50 of proceeds → Aave Polygon (no-deferral idle rule).
+- **Jun 5:** fade-basket deployment: aliens NO $10.70 @ 0.807 + Greenland NO $12.18 @ 0.870 (favorite-fade class, validated 2026-06-02, backtest N=1513).
+- **Jun 10:** scale-up batch (DEC-0032/33): Trump-out NO +$14.40 @ 0.90 (skeptic+champion gated; size cap-bound by the 15%-per-ticket rule, NOT Kelly's +$25.63) + Greenland NO +$6.96 @ 0.87 (fresh catalyst gate, +5.5pp robust). Funded by one $23 Aave-Polygon withdraw + pUSD wrap.
+- **Jun 10:** evaluated and REJECTED US-Iran-peace-by-Jun-15 NO fade: favorite_fade scanner said +3.4pp; catalyst gate said −8pp at central (P(YES) 12% vs market 4.5%). The mandatory gate killed a scanner artifact — working as designed.
+
+### Mistakes / mis-calibrations identified
+
+1. **Idle-capital blindness ($22 vs $75.68).** Journal repeated "~$22 idle in Aave" for 5 days; true idle was $75.68. Root cause: `wallet_status.py`/`crypto_status.py` never queried aTokens or pUSD, so every delegated tick was blind to the largest idle sleeve and "capital-bound" skips were decided on a wrong number. Fixed 2026-06-10 at source (both scripts now print aUSDC/pUSD lines; verified live). Lesson: status tooling must enumerate every asset *home*, not just hot-wallet balances.
+2. **Haiku catalyst death-tail error.** The Trump-out check priced P(death/incapacity) at 0.3% for a man turning 80 within the week (SSA-table, halved for presidential medicine: 1.5–2.2%). Caught by the skeptic in the >$10 skeptic+champion pass, which cut the add from $25 to $14.40. Lesson: actuarial inputs from cheap-model checks need a life-table sanity pass before they feed sizing.
+3. **Weekly cadence slip** — this report is 23 days late; operator's primary P&L visibility was journal-only for 3 weeks.
+4. **Doc drift, flagged not fixed:** `strategy/00_philosophy.md` says max-5 concurrent positions; the book has run 6–7 since the Jun-5 entries (today's adds change ticket sizes, not position count). Either the rule or the book is wrong — operator call; not silently rewriting the doc.
+
+### Decisions tracker summary
+
+31 decisions / 11 resolved / 12 lessons recorded. New this window: DEC-0028 (Satoshi NO) through DEC-0033 (today's two scale-ups). 8 outcome backfills overdue (incl. DEC-0011 Ostium SPX) — queued for a focused session against authoritative data only.
+
+### Outlook (Jun 10 → Jun 17)
+
+- **Jun 15/16:** Iran peace-deal / Kharg / airspace markets resolve (none held, but Iran-cluster marks will move); **ARB DAO revenue-share vote Jun 16** (persistent watchlist hit, route=ibkr).
+- **Jun 24:** Trump ceasefire-extension expiry → standing Iran-leg reassessment trigger (>5pp mark move or UMA change).
+- **Jun 30:** regime-fall-by-Jun-30 + nuclear-deal markets resolve; methodology N=20 prospective experiment concludes → final per-variant analysis owed, then the deferred methodology_stress_test pagination fix.
+- Dry powder: $52.68 Aave + $1.81 pUSD. Bar unchanged: robust-edge at the pessimistic bound; no forcing.
+- Operator-gated threads: ALB starter tranche (msg 434), EIGEN unlock washout (427), ETH-long question (426), git-history filter-repo decision.
+
+### Sources used this week
+
+- Polymarket gamma-api + CLOB orderbook + data-api (live walks on every flagged arb/fade)
+- News: RSS via news_watcher (full URLs in `notes/news_alerts.jsonl`); catalyst checks via haiku+WebSearch (`scripts/catalyst_check.py`)
+- UMA Optimistic Oracle status via `scripts/uma_status_check.py`
+- Aave V3 aToken balances (Polygon/Arbitrum/Base, direct on-chain reads — now wired into status scripts)
+- Brownian-bridge + constrained-Kelly internal frameworks (`brownian_bridge_fv.py`, `portfolio_kelly.py`)

@@ -22,9 +22,15 @@ POLYGON_RPCS = [
 
 # USDC.e (bridged, the legacy USDC Polymarket uses): 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174
 # USDC native (Circle): 0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359
+# pUSD (Polymarket CLOB collateral) + Aave aTokens included so idle capital is
+# never invisible to cron ticks (2026-06-10: $53.55 Aave + $1.8 pUSD sat
+# unreported for days because this script only showed raw USDC).
 TOKENS = {
-    "USDC.e": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
-    "USDC":   "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+    "USDC.e":     "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+    "USDC":       "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+    "pUSD":       "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
+    "aave USDC.e": "0x625E7708f30cA75bfd92586e17077590C60eb4cD",
+    "aave USDC":  "0xA4D94019934D8333Ef880ABFFbF2FDd611C762BD",
 }
 ERC20_ABI = [
     {"constant": True, "inputs": [{"name": "_owner", "type": "address"}],

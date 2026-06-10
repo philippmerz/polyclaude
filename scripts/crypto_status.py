@@ -27,6 +27,7 @@ CHAINS = [
             ("USDC",   "0xaf88d065e77c8cC2239327C5EDb3A432268e5831"),  # Circle native
             ("USDC.e", "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8"),  # legacy bridged
             ("USDT",   "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"),
+            ("aUSDC",  "0x724dc807b04555b71ed48a6896b6F41593b8C637"),  # Aave V3 — idle sleeve must stay visible
         ],
     ),
     (
@@ -41,6 +42,7 @@ CHAINS = [
         [
             ("USDC",  "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"),  # Circle native
             ("USDbC", "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA"),  # legacy bridged
+            ("aUSDC", "0x4e65fE4DbA92790696d040ac24Aa414708F5c0AB"),  # Aave V3 — idle sleeve must stay visible
         ],
     ),
     (
@@ -53,9 +55,11 @@ CHAINS = [
         ],
         "MATIC",
         [
-            ("USDC.e", "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"),  # Polymarket settles in this
-            ("USDC",   "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"),  # Circle native
-            ("USDT",   "0xc2132D05D31c914a87C6611C10748AEb04B58e8F"),
+            ("USDC.e",  "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"),  # Polymarket settles in this
+            ("USDC",    "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"),  # Circle native
+            ("USDT",    "0xc2132D05D31c914a87C6611C10748AEb04B58e8F"),
+            ("pUSD",    "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB"),  # CLOB collateral
+            ("aUSDC.e", "0x625E7708f30cA75bfd92586e17077590C60eb4cD"),  # Aave V3 — idle sleeve must stay visible
         ],
     ),
     (

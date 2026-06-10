@@ -1243,3 +1243,38 @@ No-action; all guards CLEAN (UMA 15/0, marginal-APY 7/0, redeemable 0, monotonic
 flat/stable (regime-fall NO 0.875, Pahlavi 0.946). Only mark move: Satoshi NO -0.7pp (within bar). ALB did
 NOT dip to ≤$140 (the lowered trigger is working as intended — no noisy re-flag). No new watchlist hit, no
 prospecting entry. Journal-only per flat-tick cadence (no Telegram). Grounded via fresh subagent.
+## 2026-06-10 ~02:00 UTC — Wednesday 02:00 cron tick: 2 scale-ups executed, bankroll blindness fixed, weekly P&L written
+
+ACTION tick (first trades since Jun 5). Delegated gathering: guards CLEAN (UMA 15/0, marginal-APY 7/0,
+redeemable 0/7, monotonicity 0/890, consistency 0 real on 5000 mkts), Ostium 0, no >5pp moves, MTM flat
+$89.74 pre-trade. 2 MATERIAL news alerts (Iran downed US Army helicopter near Hormuz Jun 9, Trump vowing
+response) on regime-fall + Pahlavi NOs → fresh catalyst_check on regime-fall: P(YES) central 5.5% (2.5–10%)
+vs mark 12.5% — INTACT/HOLD, consistent with Jun-8 read (6%); breach paths still regime-ending-invasion /
+IRGC-defection only. Marks unmoved 0.875/0.946.
+
+**Bankroll correction (mistake owned):** "~$22 idle in Aave" repeated since Jun 5 was WRONG — direct aToken
+reads: $53.55 Aave Polygon (PM sleeve) + $17.59 Arb + $4.54 Base = $75.68 idle. Root cause: wallet_status/
+crypto_status never queried aTokens/pUSD → delegated ticks blind to the idle sleeve. FIXED at source (both
+scripts now print aUSDC + pUSD lines; verified live). True bankroll ~$172 vs $170 kickoff = R-U loss fully
+recouped.
+
+**Peace-deal-Jun-15 NO fade: evaluated, REJECTED at gate.** favorite_fade said +3.4pp; catalyst_check said
+P(YES) 12% central (5–22%) vs market 4.5% → negative edge at every point of the range. Scanner-artifact
+killed by the mandatory gate.
+
+**Scale-up batch (skeptic+champion gated, both >$10-rule and pairing memory honored):**
+- Trump-out NO +$14.40 @ 0.90 (16 sh, tx 0xb388..4306, DEC-0032). Pair synthesis: corrected P(YES) ~3%
+  central (haiku's 0.3% death tail was 5–7x low — Trump turns 80 Jun 14; SSA-halved 1.5–2.2%); calendar
+  edge structural (Dem House flip seats 2027-01-03 AFTER 2026-12-31 resolution). Size CAP-BOUND at 15%/
+  ticket (ticket now $24.96 = 14.7%), not Kelly's +$25.63 — skeptic's catch. Skeptic's defer-for-dip
+  overruled (158k bid at 0.89 = dip-fill is adverse selection).
+- Greenland NO +$6.96 @ 0.87 (8 sh, tx 0x0cdc..f9e8, DEC-0033). Fresh gate: P(YES) 2.5% (1–6%), 4-step
+  conjunction; +5.5pp robust at pessimistic bound; idiosyncratic tail.
+- Funding: $23 Aave-Polygon withdraw (tx 0xf432..) → pUSD wrap (tx a5fe..). pUSD residual $1.81.
+- Book post-trade: 7 NOs, cost $107.77, MTM $110.98 (+2.98%), max payout $124.35. Aave left: $52.68.
+
+**Also:** priors file trued (trump-out cluster_frac 0.05→0.18 war-linkage per skeptic; greenland/satoshi
+entries added; resolved markets pruned). Weekly P&L written (23d overdue — cadence slip logged as mistake).
+Doc-drift flag for operator: philosophy max-5 vs 7-position book (pre-existing; adds are count-neutral).
+Watchlist: SOL/ARB/STX persistent IBKR hits only (ARB DAO vote Jun 16). Satoshi NO: no adds despite Kelly
+deficit (subjective-resolution R-U class — now codified in priors).

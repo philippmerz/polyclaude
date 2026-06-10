@@ -18,13 +18,13 @@ Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-c
 
 ---
 
-## Current state (snapshot 2026-06-05 02:00 UTC)
+## Current state (snapshot 2026-06-10 02:30 UTC)
 
 **PM sleeve** `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon) — [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [Polygonscan](https://polygonscan.com/address/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 
-7 PM positions (all NO-side bond-like fades), cost $86.41, MTM $89.30, unrealised P&L +$2.89 (+3.35%). All guards clean as of this tick (UMA / marginal-APY / redeemable / event-monotonicity / multi-leg-consistency). Run `scripts/polyclaude_status.py` for live per-position marks + edges.
+7 PM positions (all NO-side bond-like fades), cost $107.77, MTM $110.98, unrealised P&L +$3.21 (+2.98%), max payout $124.35. All guards clean as of this tick (UMA / marginal-APY / redeemable / event-monotonicity / multi-leg-consistency). Total bankroll ~$172 vs $170 kickoff — the May-11 R-U loss is fully recouped. Run `scripts/polyclaude_status.py` for live per-position marks + edges.
 
-Iran cluster (regime-fall + Reza-Pahlavi NOs) remains a meaningful book by exposure; the May-31 peace-deal NO resolved 2026-05-31.
+Iran cluster (regime-fall + Reza-Pahlavi NOs) remains a meaningful book by exposure (catalyst re-checked 2026-06-10 post-helicopter-escalation: thesis intact). Trump-out + Greenland NOs scaled up 2026-06-10 via skeptic+champion-gated adds (DEC-0032/33).
 
 Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, watchlist, UMA, Kelly portfolio constrained, news alerts).
 
@@ -32,7 +32,7 @@ Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, wat
 
 Note: Ostium has no public per-address trader profile (wallet-connect SPA). DeBank aggregates Ostium positions + Aave aUSDC + cross-chain balances; Arbiscan shows the raw on-chain trace incl. each Ostium open/close.
 
-Ostium: 0 open perps (SPX / NDX / XAU all TP-closed). PM-sleeve deployable cash ~$0.12 (most capital deployed; 50.8% constrained-Kelly utilization). Aave V3 USDC reserves across Base + Arb — run `scripts/crypto_status.py` + `scripts/aave_deposit.py rate` for live figures.
+Ostium: 0 open perps (SPX / NDX / XAU all TP-closed). Idle reserves: ~$52.7 in Aave V3 (Polygon + Arb + Base) + ~$1.8 pUSD — status scripts now read aTokens/pUSD directly, so idle capital is always visible. Run `scripts/crypto_status.py` + `scripts/aave_deposit.py rate` for live figures.
 
 **Long-term watchlist** (12 candidates, all `route=ibkr_surface` per <1y constraint): `notes/longterm_watchlist.md`. Auto-monitored via `scripts/watchlist_monitor.py` with entry-trigger price alerts.
 

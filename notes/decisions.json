@@ -1,604 +1,641 @@
 {
- "next_id": 32,
- "decisions": [
-  {
-   "id": 1,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Long-sleeve carry: Jesus returns by 2027 NO. Tail-fade \u2014 second-coming is mechanically vanishing-probability over 8mo, but Polymarket re-prices on news (Pope statements, religious holidays). 3.95% expected yield over 8mo.",
-   "confidence": "high",
-   "prediction": "Resolves NO. Hold to maturity. Mark-to-market drift < 5% absolute over hold period unless major religious event; no position adjustment expected.",
-   "size_usd": 10.0,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "long_sleeve",
-    "carry",
-    "tail_fade",
-    "jesus"
-   ],
-   "outcome": "Closed early at 0.982 (mark) for +$0.19 realized (+1.9% on $10 cost over ~13d, ~53% APY annualized \u2014 but only on the captured portion). Cost basis 0.962 entry, sold 10.39 shares at 0.982 = $10.20 net. Tx 0xb6c599e5. Closed because remaining hold APY was 2.50% (vs Aave Arb hurdle 4.15% and Base 3.41%) \u2014 capital better deployed elsewhere. Marginal carry math: (1-0.982)/0.982 * 365/237 = 2.50% APY. Even at my P(YES)~0.0001 estimate, expected hold profit was $0.39 over 237d = 1.6% gross / 2.5% APY, below redeployment alternative.",
-   "calibration_delta": "0",
-   "lesson": "Carry math on long-tail NOs as resolution approaches: at mark > 0.97 with 6+ months remaining, marginal APY drops below stablecoin yield. Close-and-redeploy beats hold even at zero P(YES) belief, because the captured portion (entry to current mark) is already realized while the remaining capture is small. Rule: any long-tail NO whose marginal APY at current mark falls below the Aave hurdle is a CLOSE candidate. Add this to the cron-tick checklist.",
-   "resolved_at": "2026-05-08T16:33:40Z"
-  },
-  {
-   "id": 2,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Long-sleeve carry: Pahlavi leads Iran 2026 NO at 0.91. Iran-cluster trade. Pahlavi has no on-ground organization or coup pathway despite Iranian regime being weak. 10.1% expected yield.",
-   "confidence": "high",
-   "prediction": "Resolves NO. Iran regime change is plausible (cluster has real probability mass) but not via Pahlavi specifically.",
-   "size_usd": 10.0,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "long_sleeve",
-    "carry",
-    "iran_cluster",
-    "pahlavi"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 3,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Long-sleeve carry: US confirms aliens 2027 NO at 0.80. Conditional on AARO/Pentagon NOT making a definitive disclosure statement before resolution. Recent UAP hearings have surfaced anecdotes but not confirmation.",
-   "confidence": "high",
-   "prediction": "Resolves NO. Some risk of partial-disclosure events that move price 10-20% but not to YES.",
-   "size_usd": 9.0,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "long_sleeve",
-    "carry",
-    "aliens",
-    "uap"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 4,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Long-sleeve carry: Trump out as President before 2027 NO at 0.84. 25A/impeachment require structural blockers (R-Senate, R-Cabinet, VP cooperation) that don't currently exist. Failed assassination attempt Apr-25 already absorbed.",
-   "confidence": "medium",
-   "prediction": "Resolves NO. Real but bounded mortality + assassination tail (~2%); 25A path is closed at current Senate composition.",
-   "size_usd": 7.0,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "long_sleeve",
-    "carry",
-    "trump_out"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 5,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Long-sleeve carry: Iranian regime falls before 2027 NO at 0.80. Cluster correlated with Pahlavi NO. Despite war + protests, regime has held; no credible succession plan visible. 25% yield.",
-   "confidence": "medium",
-   "prediction": "Resolves NO. Cluster risk: if regime DOES fall, this and Pahlavi NO both lose simultaneously \u2014 sized within 30% cluster cap.",
-   "size_usd": 7.0,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "long_sleeve",
-    "carry",
-    "iran_cluster",
-    "regime_fall"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 6,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Short-sleeve: US-Iran permanent peace deal by May 31 NO at 0.67. Best EV on the board \u2014 market pricing 33% conditional probability of a permanent treaty in 5 weeks during an active blockade is structurally implausible. Decomposition arbitrage on resolution-language strictness.",
-   "confidence": "high",
-   "prediction": "Resolves NO. Even if a ceasefire/framework deal happens, the resolution criterion 'permanent' is rarely met in 5w during active conflict. Hold to May 31.",
-   "size_usd": 7.0,
-   "resolution_at": "2026-05-31",
-   "tags": [
-    "short_sleeve",
-    "iran_cluster",
-    "peace_deal",
-    "best_ev"
-   ],
-   "outcome": "RESOLVED NO (won). No permanent US-Iran peace deal by May 31 2026 \u2014 a 60-day ceasefire framework was the most that materialized (explicitly temporary, did not qualify). Redeemed 2026-06-01 tx 0xef8766ab for $17.44. Combined position (entry DEC-0006 + scale-in DEC-0024, total cost $11.82, 17.44 shares) realized +$5.62 (+47.5%). Held through the full volatility cycle: 0.678 entry \u2192 0.815 \u2192 0.345 catastrophe (Trump 'largely negotiated' shock 2026-05-24) \u2192 recovery \u2192 1.00 settle.",
-   "calibration_delta": "Well-calibrated. P(NO) thesis (strict 'permanent deal' criterion vs 60-day-ceasefire reality) held; the mid-cycle catastrophe was speculation/UMA-loose-pricing that reverted exactly as the strict-reading analysis predicted.",
-   "lesson": "HOLD through a -49% mark drawdown was correct when (a) catalyst_check + fresh research repeatedly reaffirmed fundamentals, (b) UMA-resolution-criteria risk was assessed as low (strict permanent-deal language), (c) Brownian-bridge conditional EV stayed positive. The term-structure-as-UMA-signal + Kelly-vs-BB frameworks (shipped this cycle) were built from and validated by this position.",
-   "resolved_at": "2026-06-01T14:01:23Z"
-  },
-  {
-   "id": 7,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Short-sleeve: Latvia top 10 Eurovision NO at 0.83. Latvia hasn't been in top 10 since 2005; structural floor in Eurovision political-bloc voting. Eurovision-tail mispricing pattern.",
-   "confidence": "high",
-   "prediction": "Resolves NO with ~92% confidence. Eurovision-tail markets historically over-price small-country top-10 outcomes.",
-   "size_usd": 5.0,
-   "resolution_at": "2026-05-16",
-   "tags": [
-    "short_sleeve",
-    "eurovision",
-    "tail_fade"
-   ],
-   "outcome": "Closed 6 of 6.02 Latvia NO @ $0.951 (tx 0x319ec594), $5.706 USDC.e received. Realized +$0.706 vs $5.00 cost = +14.1% in ~19 days. Trigger: bookie consensus P(top 10) = 9% vs market P(YES) = 3.75% (mark 0.9625 NO) = 5pp market over-confidence. Operator flagged 'sounds pretty good on first listen' aligning with bookie/rehearsal-reception data. SF2 hasn't fired yet but EV of close > hold-to-resolve under bookie probability.",
-   "calibration_delta": "Mark range over period: 0.83 entry \u2192 0.98 peak \u2192 0.95 close. Position rode bookie-vs-market discrepancy. Operator + bookie consensus triggered close at moment market over-confident.",
-   "lesson": "Always cross-check market implied probability against BOOKIE consensus for entertainment/sports markets. Polymarket can over-trend when bookies are more nuanced (especially as event approaches). Sports_pm_scan + bookie integration validated. Dust 0.0199 shares remain \u2014 will resolve naturally either way (~$0.02 max diff).",
-   "resolved_at": "2026-05-14T08:37:20Z"
-  },
-  {
-   "id": 8,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Short-sleeve: Atletico Madrid top-4 La Liga 2026 YES at 0.99. Bond-like carry trade \u2014 Atletico is +14 points clear of 5th with 4 matches left. 1% gross yield over 30d at near-zero risk.",
-   "confidence": "high",
-   "prediction": "Resolves YES with > 99% probability. Outcome ladder requires Atletico to lose 4 in a row + competing teams to win out \u2014 P < 0.01.",
-   "size_usd": 5.0,
-   "resolution_at": "2026-05-30",
-   "tags": [
-    "short_sleeve",
-    "sports",
-    "carry"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 9,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Short-sleeve: Amy Acton wins Ohio Dem Gov primary YES at 0.99. She's the consensus Dem candidate with no serious challenger filed. 1% gross yield over 10d.",
-   "confidence": "high",
-   "prediction": "Resolves YES with > 99%. Resolution date is May 5 primary.",
-   "size_usd": 5.0,
-   "resolution_at": "2026-05-05",
-   "tags": [
-    "short_sleeve",
-    "politics",
-    "carry",
-    "primary"
-   ],
-   "outcome": "Resolved YES \u2014 Amy Acton clinched Ohio Democratic primary May 5; CBS confirmed she faces Vivek Ramaswamy in November.",
-   "calibration_delta": "0.0",
-   "lesson": "High-confidence consensus-candidate primary went exactly as priced (0.987 entry, resolved 1.00). Calibration delta ~0 \u2014 predicted YES at >99%, resolved YES. The trade was minimal-edge ($0.04 gross over 10d) but execution-rule-confirming. Pattern: short-tenor consensus-candidate primaries with no filed challenger are reliable but tiny-edge.",
-   "resolved_at": "2026-05-06T02:02:17Z"
-  },
-  {
-   "id": 10,
-   "timestamp": "2026-04-30T13:26:21Z",
-   "type": "open_position",
-   "thesis": "Ostium gold long, 5x leverage,  collateral. Pivoted from stuck ETH-long after Stork crypto feed was congested. Volume rotation for points-farming, not directional alpha.",
-   "confidence": "medium",
-   "prediction": "Held to \u00b18% TP/SL or 30 days, whichever first. Realized P&L expected near 0; primary value is points-farming volume.",
-   "size_usd": 5.0,
-   "resolution_at": "2026-05-29",
-   "tags": [
-    "ostium",
-    "points_farming",
-    "xau"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 11,
-   "timestamp": "2026-04-30T13:26:22Z",
-   "type": "open_position",
-   "thesis": "Ostium SPX long 5x  collateral. Pair-trade with NDX short to be roughly delta-neutral on US-equity-vs-tech dispersion. Volume rotation for points.",
-   "confidence": "medium",
-   "prediction": "Held to \u00b18% TP/SL or 30 days. Realized P&L on the pair near 0 if SPX/NDX correlation holds; positive if SPX outperforms tech (RWA narrative).",
-   "size_usd": 5.0,
-   "resolution_at": "2026-05-29",
-   "tags": [
-    "ostium",
-    "points_farming",
-    "spx",
-    "pair_trade"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 12,
-   "timestamp": "2026-04-30T13:26:22Z",
-   "type": "open_position",
-   "thesis": "Ostium NDX short 5x  collateral. Pair-trade short leg vs SPX long. Volume for points; small directional bet against US-tech dominance continuing in May.",
-   "confidence": "medium",
-   "prediction": "Held to \u00b18% TP/SL or 30 days. Same horizon as paired SPX long.",
-   "size_usd": 5.0,
-   "resolution_at": "2026-05-29",
-   "tags": [
-    "ostium",
-    "points_farming",
-    "ndx",
-    "pair_trade"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 13,
-   "timestamp": "2026-04-30T13:59:12Z",
-   "type": "scaffolding",
-   "thesis": "Idle $55 on Arbitrum earning $0/yr. Aave V3 USDC pool at 4.152% supply APY = ~$2.28/yr passive yield. Reversal cost ~$0.05 gas if capital needed for arb opportunity. Aave V3 is one of the most battle-tested DeFi yield primitives (already running $29.50 deposit on Base Aave with no issues since 2026-04-29). Strict improvement over idle holding.",
-   "confidence": "high",
-   "prediction": "55 USDC continues earning 3-5% APY without protocol issues; withdrawable in <1 min for any opportunity that needs the capital",
-   "size_usd": 55.0,
-   "resolution_at": "2026-07-30",
-   "tags": [
-    "aave",
-    "yield",
-    "scaffolding",
-    "crypto-sleeve"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 14,
-   "timestamp": "2026-05-01T02:07:48Z",
-   "type": "skip",
-   "thesis": "Russia-Ukraine ceasefire by May 31 NO at 0.917, 162% APY, non-correlated with Iran cluster. Skeptic agent surfaced Apr 29 Putin-Trump Victory Day (May 9) ceasefire proposal with Zelensky engaging scope-upward. Entry 9 days before known bilateral catalyst with momentum = bad timing. Resolution criteria looser than initially modeled (Trump-brokered framework with future start could resolve YES). Thematic correlation with iran-peace NO (combined exposure would have been 56% of PM sleeve on Trump-deals-fail factor).",
-   "confidence": "high",
-   "prediction": "Russia-Ukraine ceasefire by May 31 resolves NO. Re-evaluate trade post-May 10 if Victory Day passes without framework announcement; expected re-entry price 0.95+ (similar edge, catalyst eliminated).",
-   "size_usd": 0.0,
-   "resolution_at": "2026-05-31",
-   "tags": [
-    "polymarket",
-    "russia-ukraine",
-    "skeptic-saved",
-    "skip"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 15,
-   "timestamp": "2026-05-08T11:55:57Z",
-   "type": "open_position",
-   "thesis": "Calendar-spread short-tail on Iran-peace: NO at 0.81 on US x Iran permanent peace deal by May 15. 6.5d catalyst window crossing Victory Day May 9. Strict resolution criteria require formal signed permanent deal \u2014 Iran's foreign ministry process historically takes weeks for formal commitments; 6.5d window is too tight even amid 'Iran reviewing US proposal' news flow. Market 18.9% YES, my fair-value estimate ~10-12% YES = significant edge. Companion to existing DEC-0006 (May-31 NO at 0.67) \u2014 calendar spread on the same factor, May-15 line is shorter-dated higher-conviction version.",
-   "confidence": "high",
-   "prediction": "Resolves NO by May 15, 2026. NO mark drifts toward 1.0 as window closes without formal deal.",
-   "size_usd": 9.72,
-   "resolution_at": "2026-05-15",
-   "tags": [
-    "polymarket",
-    "iran-peace",
-    "calendar-spread",
-    "short-tail",
-    "v2"
-   ],
-   "outcome": "NO won. UMA resolved May-15 question to NO ('US x Iran permanent peace deal by May 15' did not happen). Redeemed 22 shares \u00d7 $1.00 = $22 USDC.e (combined $16.30 USDC.e + $5.69 pUSD post-tx). Realized +$3.54 on $18.46 cost = +19.2% in 7 days = ~1100% APY net.",
-   "calibration_delta": "Thesis (Iran demands of reparations + troop withdrawal + asset release infeasible in 7-day window) correct. Market priced 18.9% YES at entry (mark NO 0.81), final NO win = real P(YES) was 0-1%. Edge ~18pp converted to realized.",
-   "lesson": "Calendar-spread shorts on Iran-peace formal-resolution markets validated. Strict criteria reading + multi-day Iran-rejection-pattern + Trump-rejection-of-proposal aligned with final outcome. Generalize: when both market AND bookies AND fundamental criteria all point one direction, the trade is high-conviction.",
-   "resolved_at": "2026-05-16T14:02:07Z"
-  },
-  {
-   "id": 16,
-   "timestamp": "2026-05-08T14:51:58Z",
-   "type": "open_position",
-   "thesis": "Aliens-cluster short-tail companion: NO at 0.966 on US x confirm aliens by May 31. 22d horizon, ~50% APY annualized. Strict resolution criteria (per existing aliens-2027 NO at DEC-0003 setting precedent \u2014 Pentagon UAP statements + AARO reports + congressional hearings have not triggered YES resolution despite multiple opportunities through 2026). Bond-like longshot fade \u2014 philosophy edge source #1. Took as part of validating Aave-Arb -> Polygon-pUSD pipeline (full path: Aave withdraw + Across bridge + cross-wallet transfer + USDC->USDC.e Uniswap V3 swap + onramp wrap + clob_v2 buy). Original skip on this trade was driven by overestimated gas friction ($1.15) which after walking the path resolved to ~$0.30 total. User challenged the framing; recompute showed positive net EV.",
-   "confidence": "high",
-   "prediction": "Resolves NO by May 31, 2026. Pentagon makes no formal alien confirmation in 22d (base rate <0.5% historically; market 2.9% YES is overpriced longshot).",
-   "size_usd": 9.66,
-   "resolution_at": "2026-05-31",
-   "tags": [
-    "polymarket",
-    "aliens",
-    "bond-like-fade",
-    "short-tail",
-    "v2",
-    "path-validation"
-   ],
-   "outcome": "Closed at 0.961 (mark) for ~-$0.08 net loss (cost $9.66, sold $9.61, fee $0.03). Held ~30 minutes. Closed after web search revealed Trump's PURSUE program launched MAY 8 (today) with 162 UAP file release \u2014 Apollo 12/17 photos, FBI/DoD/NASA/State docs, ongoing tranches every few weeks. P(YES) revised from 1% (intuition) to 4-7% (active disclosure window). Market 3.5% YES may even be slightly underpriced. Trade EV flipped from +$0.24 to -$0.16 to -$0.36. Closed to avoid further negative drift; bid had moved 0.964 -> 0.961 in ~10 minutes.",
-   "calibration_delta": "-0.06",
-   "lesson": "Catalyst calendar must be checked BEFORE opening bond-like longshot fades. I didn't search news/AARO/PURSUE before claiming 'P(YES) near 0%'. The market's 3% likely reflected disclosure-program risk that I missed. Philosophy edge source #1 is 'markets pricing tail events at 2-8% where my MODELLED fair value is near 0%' \u2014 emphasis on modelled. Intuition is not a model. New rule: bond-like fade -> 5-min web search for window-specific catalysts before sizing.",
-   "resolved_at": "2026-05-08T15:07:11Z"
-  },
-  {
-   "id": 17,
-   "timestamp": "2026-05-08T17:18:05Z",
-   "type": "open_position",
-   "thesis": "Bond-like longshot fade on hantavirus pandemic. Resolution criteria STRICT: requires WHO to explicitly characterize hantavirus as 'pandemic' in official communication. WHO has already said 'low risk' / 'not pandemic' as of May 7-8, 2026 in response to MV Hondius cruise ship outbreak (multi-country contact tracing, no community spread chains established). Catalyst_check.py central P(YES) = 1.5% (multiplicative breakdown shown: P(community spread 5%) x P(WHO pandemic call | spread 25%) = 1.25%) vs market 9.1% YES. Active-news premium inflating market. Long horizon (236d) but capital constraint not binding given $30+ pUSD buffer. Pipeline-validated: this trade is exactly the kind the new catalyst-check pipeline was built to catch \u2014 significant edge after rigorous catalyst-aware analysis, NOT operator intuition.",
-   "confidence": "high",
-   "prediction": "Resolves NO by Dec 31, 2026. WHO does not declare hantavirus a pandemic. Outbreak contains, no sustained community transmission, WHO maintains current 'low risk' / PHEIC-at-most posture.",
-   "size_usd": 9.09,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "polymarket",
-    "hantavirus",
-    "bond-like-fade",
-    "non-correlated",
-    "v2",
-    "catalyst-check-validated"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 18,
-   "timestamp": "2026-05-08T18:18:52Z",
-   "type": "open_position",
-   "thesis": "Russia-Ukraine ceasefire NO @ 0.768 (15 shares, $11.52 cost). Re-eval of DEC-0014 skip. Original May 1 plan: re-evaluate post-May 10 if Victory Day passed without framework. Today May 8, Victory Day tomorrow but the catalyst has effectively fizzled \u2014 Russia and Ukraine declared COMPETING UNILATERAL ceasefires May 4-5, both violated within hours, Zelensky confirms received no official notice from Russia, UN noted neither party confirmed mutual agreement. Resolution criteria (fetched from gamma-api) explicitly require 'mutually agreed halt' + 'general pause' \u2014 partial/unilateral excluded. Catalyst_check.py central P(YES) = 5% (multiplicative breakdown: P(formal negotiations restart May 8-31) \u00d7 P(mutual agreement | restart) = 0.20 \u00d7 0.25 = 0.05) vs market 23.2% YES. Strong fade with edge ~18pp. Bear case (Trump pressure / Turkey mediation surprise / oracle-loose interpretation) raises P(YES) to maybe 10-15% \u2014 still well under market. Non-correlated with Iran/aliens/sports/hantavirus clusters. New cluster of 1.",
-   "confidence": "high",
-   "prediction": "Resolves NO by May 31, 2026. Russia and Ukraine do not reach a publicly-announced mutually-agreed general ceasefire (per resolution criteria). Negotiations remain stalled; Victory Day theater confirms parties not aligned.",
-   "size_usd": 11.52,
-   "resolution_at": "2026-05-31",
-   "tags": [
-    "polymarket",
-    "russia-ukraine",
-    "bond-like-fade",
-    "non-correlated",
-    "v2",
-    "catalyst-check-validated",
-    "re-eval-from-DEC-0014"
-   ],
-   "outcome": "RESOLVED YES by UMA dispute (proposed YES by Trump 3-day-ceasefire-announcement May 8-11; disputed; UMA DVM ruled YES via loose criteria interpretation 'regardless of whether ceasefire officially starts afterward'). 25 NO shares redeemed for $0 (tx 0x1eb4791e). REALIZED LOSS: -$16.73 = -10% of bankroll.",
-   "calibration_delta": "Catalyst_check.py central P(YES)=5%; UMA actual ruling: YES. Predictor was WRONG by ~95pp due to (1) loose-criteria interpretation not modeled, (2) Trump 3-day ceasefire announcement materializing post-entry, (3) scale-in error at 0.5208 when mark crashed \u2014 read overreaction, was new info.",
-   "lesson": "Three documented mistakes: (1) Scale-in error when mark crashed 30% on fundamental news \u2014 should read new info, not noise; (2) Investigation gap when position de-indexed from data-api \u2014 should FIRST check umaResolutionStatus on gamma-api/markets/{id}, not just on-chain balance; (3) Resolution-criteria language miss \u2014 operating under strict 'permanent deal' framing while actual criteria explicitly say 'regardless of whether ceasefire officially starts afterward'. ALL three fixes shipped 2026-05-09 via 11 systematic tools + uma_status_check + polyclaude_enter umaResolutionStatus reject + kelly_size sensitivity warnings + catalyst_check resolution-criteria injection.",
-   "resolved_at": "2026-05-11T14:02:51Z"
-  },
-  {
-   "id": 19,
-   "timestamp": "2026-05-09T17:28:24Z",
-   "type": "open_position",
-   "thesis": "US x Iran permanent peace deal by May 11 NO @ 0.965 (15 shares, $14.475 cost). Resolution requires formal SIGNED permanent peace agreement explicitly indicating military hostilities have ended or will permanently cease. Iran rejected US proposal as 'American wish-list', demanding war reparations + US troop withdrawal + frozen-asset release as preconditions. 14-point MOU under negotiation, NOT signed. Formal signing within 1.3d implausible. Strict-criteria reading P(YES) <1%; market 3.75% YES = NO underpriced. Bond-like fade with bounded $14.475 risk.",
-   "confidence": "high",
-   "prediction": "Resolves NO by May 11 23:59 ET. NO mark drifts to 1.0 as window closes without formal deal.",
-   "size_usd": 14.475,
-   "resolution_at": "2026-05-11",
-   "tags": [
-    "polymarket",
-    "iran-peace",
-    "short-tail",
-    "bond-like-fade",
-    "v2",
-    "recoup-campaign"
-   ],
-   "outcome": "NO won; market resolved YES=0/NO=1.00. 15 shares \u00d7 $1.00 = $15.00 redemption pending UMA payouts post-to-CTF. Cost $14.475; profit $0.525 = +3.6% in 3 days = ~440% APY net.",
-   "calibration_delta": "p_estimate 0.99 vs market priced 0.965; my edge ~+2.5pp realized correctly. Trade thesis (Iran wish-list rejection + 14pt MOU not signed within 1.3d) held.",
-   "lesson": "Short-tail bond-like fade on conjunction-style resolution criteria works when strict criteria align with our prior. P-fragility caveat (kelly_size sensitivity \u00b15%) was appropriate ex-ante.",
-   "resolved_at": "2026-05-11T00:55:40Z"
-  },
-  {
-   "id": 20,
-   "timestamp": "2026-05-09T17:35:31Z",
-   "type": "size_change",
-   "thesis": "DEC-0015 May-15 Iran-peace NO scale-in: 10 shares @ $0.874 added. Position now 22 shares / $18.46. Kelly+\u03c1-adjusted half-Kelly says optimal $54; was at 18% of optimal, now 34%. Cluster-cap heuristic superseded by Kelly+\u03c1 math.",
-   "confidence": "high",
-   "prediction": "Resolves NO May 15. Iran wish-list rejection makes signing in 6d implausible.",
-   "size_usd": 8.74,
-   "resolution_at": "2026-05-15",
-   "tags": [
-    "polymarket",
-    "iran-peace",
-    "bond-like-fade",
-    "scale-in",
-    "v2",
-    "recoup-campaign",
-    "kelly-sized"
-   ],
-   "outcome": "Scale-in portion redeemed alongside DEC-0015. 10 of 22 total shares \u00d7 $1.00 = $10 attributable to scale-in. Realized +$1.26 on $8.74 cost = +14.4% in 7d.",
-   "calibration_delta": "Kelly+\u03c1 scaling rationale validated: high-conviction NO with robust sensitivity. Scaling to ~34% of half-Kelly+\u03c1 optimal at the time captured incremental $1.26 vs hold-base alone.",
-   "lesson": "Mid-conviction scaling on bond-like fades with robust sensitivity windows works when underlying thesis intact + market drift favorable.",
-   "resolved_at": "2026-05-16T14:02:07Z"
-  },
-  {
-   "id": 21,
-   "timestamp": "2026-05-09T17:46:45Z",
-   "type": "size_change",
-   "thesis": "Regime-fall NO scale-in: +25 shares @ $0.85 = $21.25. Position now 33.75 shares / $28.25 cost / $33.75 max payout. Kelly: mark 0.85, P(NO)=0.93, full Kelly 53% bankroll = $90. Half-Kelly+\u03c1-discount = $35. At $28.25 now (81% of half-Kelly+\u03c1 optimal). Robust sensitivity: even at conservative P=0.85, full Kelly stays positive. Operator directive: rigorous Kelly+correlation-adjusted sizing supersedes cluster-cap heuristic. Insight banked: Iran cluster has ANTI-correlated tail paths (peace-deal scenario LOSES may-X NOs but WINS regime+pahlavi NOs; regime-fall scenario does opposite) \u2014 naive 'positively correlated cluster' assumption was wrong; max realized worst-case loss is ~$40 not $77.",
-   "confidence": "high",
-   "prediction": "Resolves NO by Dec 31 2026. Regime stable; even US de-escalation (shelved Project Freedom) reduces regime-change pressure. Strict criteria require formal recognized regime fall.",
-   "size_usd": 21.25,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "polymarket",
-    "iran-regime",
-    "bond-like-fade",
-    "scale-in",
-    "v2",
-    "recoup-campaign",
-    "kelly-sized"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 22,
-   "timestamp": "2026-05-09T18:26:15Z",
-   "type": "size_change",
-   "thesis": "Trump-out NO scale-in: +4 shares @ $0.89 = $3.56. Position now 12.33 shares / $10.56 cost / $12.33 max payout. Per constrained-Kelly: optimal $26, currently 40% of optimal. Remaining ~$15 deficit. Trump-out thesis: even with Dem house gains in Nov 2026 midterms, Senate conviction implausible. P=0.96 robust to misestimation. Operator authorized aggressive sizing per Kelly.",
-   "confidence": "high",
-   "prediction": "Resolves NO before 2027. No realistic path to removal.",
-   "size_usd": 3.56,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "polymarket",
-    "us-politics",
-    "bond-like-fade",
-    "scale-in",
-    "v2",
-    "recoup-campaign",
-    "kelly-sized"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 23,
-   "timestamp": "2026-05-10T14:03:14Z",
-   "type": "close_position",
-   "thesis": "Atletico YES partial close: sold 5 of 5.02 shares @ $0.981 = $4.905 received. Near-zero remaining edge (15d to resolve, mark 0.989, hold-to-resolve gain ~$0.05 vs spread cost ~$0.05). Swap to May-31 NO captures higher EV. Dust 0.0199 shares left, will resolve naturally.",
-   "confidence": "high",
-   "prediction": "5 shares already settled to USDC.e via CLOB; dust resolves YES May 25 for ~$0.02 redeem.",
-   "size_usd": -4.905,
-   "resolution_at": "2026-05-10",
-   "tags": [
-    "polymarket",
-    "atletico",
-    "close-rebalance",
-    "v2",
-    "recoup-campaign"
-   ],
-   "outcome": "5 of 5.02 Atletico YES sold at $0.981 on 2026-05-10 = $4.905 USDC.e received. Dust 0.0199 shares will resolve YES on La Liga top-4 confirmation ~$0.02. Realized loss vs hold-to-resolve: -$0.07 (sold at 0.981 vs final 1.0). Trade rationale (free Atletico \u2192 scale May-31 NO) realized: May-31 mark rallied 0.69 \u2192 0.84 = +$1.05 on the 7-share scale-in. Net swap captured ~+$0.98 EV.",
-   "calibration_delta": "Predicted near-zero remaining edge on Atletico; capital reallocation captured +$0.98 vs hold. Validated.",
-   "lesson": "Capital reallocation between high-conviction near-resolution positions (one with no remaining edge, one with high mid-cycle edge) captures alpha. Brownian-bridge fair-value pricing identifies the marginal-edge ranking.",
-   "resolved_at": "2026-05-13T14:01:46Z"
-  },
-  {
-   "id": 24,
-   "timestamp": "2026-05-10T14:03:15Z",
-   "type": "size_change",
-   "thesis": "May-31 Iran-peace NO scale-in: +7 shares @ $0.69 = $4.83. Position now 17.44 shares / $11.82 cost / $17.44 max payout. Funded by Atletico close (above). Brownian-bridge fair-value: mark 0.675 vs fair_BB 0.836 (t/T=0.30, p=0.78). 16pp underpriced. Constrained-Kelly recommended; capital freed via Atletico swap. Today's escalation news (Gulf drone attacks, Iran slow on US proposal) reinforces NO thesis.",
-   "confidence": "high",
-   "prediction": "Resolves NO May 31. 21d window with active escalation reduces deal probability.",
-   "size_usd": 4.83,
-   "resolution_at": "2026-05-31",
-   "tags": [
-    "polymarket",
-    "iran-peace",
-    "bond-like-fade",
-    "scale-in",
-    "v2",
-    "recoup-campaign",
-    "kelly-sized",
-    "brownian-bridge"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 25,
-   "timestamp": "2026-05-12T10:40:45Z",
-   "type": "close_position",
-   "thesis": "Ostium XAU/USD LONG 5x auto-closed at Take-Profit $4769 (entry $4543.48, collateral $4.89, notional $24.46). TP hit during Iran-war / Strait-of-Hormuz blockade dynamic that drove gold up. Payout ~$6.06 USDC on Arbitrum. Realized gain: ~+$1.17 on $4.89 collateral = +24% in ~13 days. Auto-triggered, not manually closed.",
-   "confidence": "high",
-   "prediction": "Already closed via TP-trigger; outcome locked.",
-   "size_usd": 1.17,
-   "resolution_at": "2026-05-12",
-   "tags": [
-    "ostium",
-    "gold",
-    "xau",
-    "auto-close",
-    "take-profit"
-   ],
-   "outcome": "XAU/USD LONG 5x auto-closed at Take-Profit $4769 on ~2026-05-12. Payout $6.06 USDC on Arb. Realized: +$1.17 / +24% in ~13 days.",
-   "calibration_delta": "Gold thesis (geopolitical-risk-premium expansion from Iran war) printed as expected. TP $4769 was set conservatively at entry; could have ridden longer with trailing-stop discipline.",
-   "lesson": "TP-set-at-entry leaves some upside on the table during major shocks. For high-conviction macro plays during ongoing crisis, consider trailing stop or no TP. But: TP execution is automatic and discipline-enforced; manual close decisions can miss.",
-   "resolved_at": "2026-05-13T14:01:46Z"
-  },
-  {
-   "id": 26,
-   "timestamp": "2026-05-18T02:01:42Z",
-   "type": "close_position",
-   "thesis": "Ostium NDX short 5x (DEC-0012) closed since prior tick. Trade ID 1848512: entry 27368.69, TP set at 25182.57 (-7.99%), SL at 29562.15 (+8.00%), collat $4.8925, notional $24.46. Closed when NDX dropped through TP threshold during AI-capex-plateau period (consistent with 2026-05-17 digest theme). Estimated realized: +~$1.96 collat gain (5x\u00d78% TP) \u2192 payout ~$6.85 USDC on Arbitrum. Closes the NDX leg of the SPX/NDX pair-trade; SPX long (DEC-0011, trade 1848511) still open.",
-   "confidence": "high",
-   "prediction": "TP-triggered close already locked.",
-   "size_usd": 4.89,
-   "resolution_at": "2026-05-18",
-   "tags": [
-    "ostium",
-    "ndx",
-    "pair-trade",
-    "close"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 27,
-   "timestamp": "2026-05-28T10:42:53Z",
-   "type": "close_position",
-   "thesis": "Ostium SPX LONG 5x (DEC-0011) closed manually on operator direction (msg 348 acknowledgement of executive-continuation deferral). Trade ID 1848511: entry $7167.41, closed at $7510.66 (+4.79% on price = +24% on 5x = +$1.17 collat gain). Payout ~$6.06 USDC on Arb. Position was naked after NDX SHORT TP'd 2026-05-18 \u2014 no clear thesis, points-farming purpose marginal. Closing locks gain + ends 10d drift.",
-   "confidence": "high",
-   "prediction": "Manual close at +24% on collateral; outcome locked.",
-   "size_usd": 4.89,
-   "resolution_at": "2026-05-28",
-   "tags": [
-    "ostium",
-    "spx",
-    "close",
-    "pair-trade"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 28,
-   "timestamp": "2026-05-31T08:34:06Z",
-   "type": "open_position",
-   "thesis": "Satoshi's identity revealed by Dec 31 2026 NO @ 0.94, 6 shares, $5.64. First entry from the fixed discovery funnel (10x fetch-cap fix 2026-05-29) + relaxed edge bar. P(NO not revealed) base rate ~0.99; honest P(NO) ~0.98 after small UMA-loose-resolution discount on the 'credible consensus of reporting' clause. Edge ~4pp at 0.94 ask, ~9% annualized expected. Operator challenged my initial over-cautious skip; conceded the UMA tail is small (strict 'definitively proven / wallet transfer' primary criterion + 15yr of failed Satoshi claims \u2014 Newsweek/Wright-ruled-not-Satoshi/HBO doc all failed the consensus bar). Sized small ($5.64, capped well below $58 Kelly) for the residual ~1-2% tail. Mechanical-ish resolution; primary risk is genuine reveal (~1%/214d) or UMA false-positive (~0.5-1%).",
-   "confidence": "high",
-   "prediction": "Resolves NO (Satoshi not definitively revealed by Dec 31 2026). Expected +$0.36 at lock-in (6 sh x $1 - $5.64), ~9% annualized.",
-   "size_usd": 5.64,
-   "resolution_at": "2026-12-31",
-   "tags": [
-    "satoshi",
-    "crypto",
-    "bond-like-fade",
-    "funnel-fix-first-entry"
-   ],
-   "outcome": null,
-   "calibration_delta": null,
-   "lesson": null
-  },
-  {
-   "id": 29,
-   "timestamp": "2026-06-01T21:40:00Z",
-   "type": "open_position",
-   "thesis": "US confirms aliens exist before 2027 NO @ 0.85, 2 shares, $1.70 (tx 0x92d3e637). Resolution bar = POTUS/Cabinet/Joint Chiefs/federal agency 'definitively states extraterrestrial life or technology exists' by Dec 31 2026 -- highest-bar event imaginable; UAP hearings/reports have never met it. True P(YES) ~0.3-0.5% vs market 15.5% -> classic overpriced meme/lottery longshot. NO @ 0.85 -> 17.6% to Dec-31 resolution ~= 30% APY, clears robust-edge gate w/ haircut (p_robust 0.945 >> mark). Book deep ($240k <=0.86). SMALL pipeline-proving size only -- scale to ~$20-25 next via bridging Arb Aave (crypto sleeve ...3eE6) -> Polygon -> PM wallet (...267B) -> wrap. Found via comprehensive 990-mkt scan after operator pushed 'have you scanned everything?' -- I had tunnel-visioned on 3 Anthropic mkts.",
-   "token_id": "7305630249804085635496399869905769372294302716159034447326228509068694952392",
-   "side": "NO",
-   "price": 0.85,
-   "shares": 2,
-   "usd": 1.7,
-   "tx": "0x92d3e6371610407f6e143416efe0c04d06c81b9c7a4ef522f16f72d1a94a01fc",
-   "gate_post_hoc": "catalyst_check 2026-06-01: P(YES) central 1.0% (range 0.2-2.5%). PURSUE disclosure tranches (May8/May22/~Jun5) explicitly NON-confirming; no escalation. Edge REAL: NO@0.85 ~20-28% APY at P(YES) 1-5%. Loose-UMA tail small here (no ambiguous confirmation event for DVM to construe YES, unlike DEC-0018 R-U which had a real ceasefire announcement).",
-   "exposure_note": "Total aliens-2027 NO = DEC-0003 ($9 @0.80) + this ($1.70 @0.85) = $10.70. Against ~$160 total bankroll that's ~6-7% (NOT 29% -- earlier I wrongly used the $37 idle-sleeve denominator). 30%-cluster-cap is on bankroll, so concentration does NOT bind; room to scale. Real reason not to scale now: deployable capital sits in Arb Aave behind a ~$0.10 ETH gas wall; bridging $20 nets only ~$1-1.5 after gas-topup + bridge friction + stranding risk -- marginal, not worth forcing at high context. Legitimate deliberate-deployment candidate next cycle (top up Arb ETH first).",
-   "lesson": "TWO process slips (EV conclusion survived, process didn't): (1) added to a market I already held (DEC-0003) without checking existing exposure -> duplicate/over-concentration risk. (2) bought BEFORE running the mandatory catalyst_check gate (philosophy commit 6c9d171); got lucky it confirmed ~1%. FIX: add an existing-position + auto catalyst-gate check to polyclaude_enter.py before any buy."
-  },
-  {
-   "id": 30,
-   "timestamp": "2026-06-01T21:40:00Z",
-   "type": "infra",
-   "thesis": "Built scripts/wrap_pusd.py (USDC.e->pUSD via CollateralOnramp 0x93070..., wrap(collateral,recipient,amount), mints 1:1). UNLOCKS all Polymarket entries -- prior state: only ~$0.16 residual pUSD, effectively locked out of the venue. Chain-aware Polygon gas (30 gwei floor), read-only eth_call pre-flight before broadcast, status/wrap subcmds. Verified on-chain: wrapped 1.9 USDC.e -> pUSD 0.161->2.061 (tx 0xca941759). USDC.e->onramp allowance already MAX.",
-   "tx": "0xca941759f271f6c538a7c80e168496bfde954ce60f9ce0d12537540aeacc472a"
-  },
-  {
-   "id": 31,
-   "timestamp": "2026-06-01T22:55:00Z",
-   "type": "open_position",
-   "thesis": "US acquire any part of Greenland 2026 NO @ 0.87, 14 shares, $12.18 (tx 0x9f4f79c2). Gate-validated behavioral fade: P(YES) central 0.05% (Denmark categorically refuses sovereignty; criteria require transfer-of-sovereignty OR primary/exclusive jurisdiction -- base-access explicitly EXCLUDED, so loose-UMA tail small, unlike R-U). Market 13.5% YES = meme/headline premium. NO@0.87 -> 0.13/0.87 = 14.9% over 212d ~= 25.7% APY. Second clean fade alongside aliens (DEC-0003/0029); uncorrelated tail. Capital mobilized from idle Arb Aave (2.5%) via gas-unblock Base->Arb ETH + Across Arb->Polygon (recipient=PM wallet ...267B, fee 0.0089 USDC) + wrap. Path verified clean/cheap/fast (2s fills) via read-only Across quote first.",
-   "token_id": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
-   "side": "NO",
-   "price": 0.87,
-   "shares": 14,
-   "usd": 12.18,
-   "tx": "0x9f4f79c25c4890caf0b1a9f87c1607d9043d330530800e66c8080544ddd07722",
-   "gate": "catalyst_check 2026-06-01: P(YES) 0.01-0.2%, central 0.05%"
-  }
- ]
+  "next_id": 34,
+  "decisions": [
+    {
+      "id": 1,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: Jesus returns by 2027 NO. Tail-fade \u2014 second-coming is mechanically vanishing-probability over 8mo, but Polymarket re-prices on news (Pope statements, religious holidays). 3.95% expected yield over 8mo.",
+      "confidence": "high",
+      "prediction": "Resolves NO. Hold to maturity. Mark-to-market drift < 5% absolute over hold period unless major religious event; no position adjustment expected.",
+      "size_usd": 10.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "tail_fade",
+        "jesus"
+      ],
+      "outcome": "Closed early at 0.982 (mark) for +$0.19 realized (+1.9% on $10 cost over ~13d, ~53% APY annualized \u2014 but only on the captured portion). Cost basis 0.962 entry, sold 10.39 shares at 0.982 = $10.20 net. Tx 0xb6c599e5. Closed because remaining hold APY was 2.50% (vs Aave Arb hurdle 4.15% and Base 3.41%) \u2014 capital better deployed elsewhere. Marginal carry math: (1-0.982)/0.982 * 365/237 = 2.50% APY. Even at my P(YES)~0.0001 estimate, expected hold profit was $0.39 over 237d = 1.6% gross / 2.5% APY, below redeployment alternative.",
+      "calibration_delta": "0",
+      "lesson": "Carry math on long-tail NOs as resolution approaches: at mark > 0.97 with 6+ months remaining, marginal APY drops below stablecoin yield. Close-and-redeploy beats hold even at zero P(YES) belief, because the captured portion (entry to current mark) is already realized while the remaining capture is small. Rule: any long-tail NO whose marginal APY at current mark falls below the Aave hurdle is a CLOSE candidate. Add this to the cron-tick checklist.",
+      "resolved_at": "2026-05-08T16:33:40Z"
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: Pahlavi leads Iran 2026 NO at 0.91. Iran-cluster trade. Pahlavi has no on-ground organization or coup pathway despite Iranian regime being weak. 10.1% expected yield.",
+      "confidence": "high",
+      "prediction": "Resolves NO. Iran regime change is plausible (cluster has real probability mass) but not via Pahlavi specifically.",
+      "size_usd": 10.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "iran_cluster",
+        "pahlavi"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: US confirms aliens 2027 NO at 0.80. Conditional on AARO/Pentagon NOT making a definitive disclosure statement before resolution. Recent UAP hearings have surfaced anecdotes but not confirmation.",
+      "confidence": "high",
+      "prediction": "Resolves NO. Some risk of partial-disclosure events that move price 10-20% but not to YES.",
+      "size_usd": 9.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "aliens",
+        "uap"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: Trump out as President before 2027 NO at 0.84. 25A/impeachment require structural blockers (R-Senate, R-Cabinet, VP cooperation) that don't currently exist. Failed assassination attempt Apr-25 already absorbed.",
+      "confidence": "medium",
+      "prediction": "Resolves NO. Real but bounded mortality + assassination tail (~2%); 25A path is closed at current Senate composition.",
+      "size_usd": 7.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "trump_out"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Long-sleeve carry: Iranian regime falls before 2027 NO at 0.80. Cluster correlated with Pahlavi NO. Despite war + protests, regime has held; no credible succession plan visible. 25% yield.",
+      "confidence": "medium",
+      "prediction": "Resolves NO. Cluster risk: if regime DOES fall, this and Pahlavi NO both lose simultaneously \u2014 sized within 30% cluster cap.",
+      "size_usd": 7.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "long_sleeve",
+        "carry",
+        "iran_cluster",
+        "regime_fall"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Short-sleeve: US-Iran permanent peace deal by May 31 NO at 0.67. Best EV on the board \u2014 market pricing 33% conditional probability of a permanent treaty in 5 weeks during an active blockade is structurally implausible. Decomposition arbitrage on resolution-language strictness.",
+      "confidence": "high",
+      "prediction": "Resolves NO. Even if a ceasefire/framework deal happens, the resolution criterion 'permanent' is rarely met in 5w during active conflict. Hold to May 31.",
+      "size_usd": 7.0,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "short_sleeve",
+        "iran_cluster",
+        "peace_deal",
+        "best_ev"
+      ],
+      "outcome": "RESOLVED NO (won). No permanent US-Iran peace deal by May 31 2026 \u2014 a 60-day ceasefire framework was the most that materialized (explicitly temporary, did not qualify). Redeemed 2026-06-01 tx 0xef8766ab for $17.44. Combined position (entry DEC-0006 + scale-in DEC-0024, total cost $11.82, 17.44 shares) realized +$5.62 (+47.5%). Held through the full volatility cycle: 0.678 entry \u2192 0.815 \u2192 0.345 catastrophe (Trump 'largely negotiated' shock 2026-05-24) \u2192 recovery \u2192 1.00 settle.",
+      "calibration_delta": "Well-calibrated. P(NO) thesis (strict 'permanent deal' criterion vs 60-day-ceasefire reality) held; the mid-cycle catastrophe was speculation/UMA-loose-pricing that reverted exactly as the strict-reading analysis predicted.",
+      "lesson": "HOLD through a -49% mark drawdown was correct when (a) catalyst_check + fresh research repeatedly reaffirmed fundamentals, (b) UMA-resolution-criteria risk was assessed as low (strict permanent-deal language), (c) Brownian-bridge conditional EV stayed positive. The term-structure-as-UMA-signal + Kelly-vs-BB frameworks (shipped this cycle) were built from and validated by this position.",
+      "resolved_at": "2026-06-01T14:01:23Z"
+    },
+    {
+      "id": 7,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Short-sleeve: Latvia top 10 Eurovision NO at 0.83. Latvia hasn't been in top 10 since 2005; structural floor in Eurovision political-bloc voting. Eurovision-tail mispricing pattern.",
+      "confidence": "high",
+      "prediction": "Resolves NO with ~92% confidence. Eurovision-tail markets historically over-price small-country top-10 outcomes.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-16",
+      "tags": [
+        "short_sleeve",
+        "eurovision",
+        "tail_fade"
+      ],
+      "outcome": "Closed 6 of 6.02 Latvia NO @ $0.951 (tx 0x319ec594), $5.706 USDC.e received. Realized +$0.706 vs $5.00 cost = +14.1% in ~19 days. Trigger: bookie consensus P(top 10) = 9% vs market P(YES) = 3.75% (mark 0.9625 NO) = 5pp market over-confidence. Operator flagged 'sounds pretty good on first listen' aligning with bookie/rehearsal-reception data. SF2 hasn't fired yet but EV of close > hold-to-resolve under bookie probability.",
+      "calibration_delta": "Mark range over period: 0.83 entry \u2192 0.98 peak \u2192 0.95 close. Position rode bookie-vs-market discrepancy. Operator + bookie consensus triggered close at moment market over-confident.",
+      "lesson": "Always cross-check market implied probability against BOOKIE consensus for entertainment/sports markets. Polymarket can over-trend when bookies are more nuanced (especially as event approaches). Sports_pm_scan + bookie integration validated. Dust 0.0199 shares remain \u2014 will resolve naturally either way (~$0.02 max diff).",
+      "resolved_at": "2026-05-14T08:37:20Z"
+    },
+    {
+      "id": 8,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Short-sleeve: Atletico Madrid top-4 La Liga 2026 YES at 0.99. Bond-like carry trade \u2014 Atletico is +14 points clear of 5th with 4 matches left. 1% gross yield over 30d at near-zero risk.",
+      "confidence": "high",
+      "prediction": "Resolves YES with > 99% probability. Outcome ladder requires Atletico to lose 4 in a row + competing teams to win out \u2014 P < 0.01.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-30",
+      "tags": [
+        "short_sleeve",
+        "sports",
+        "carry"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 9,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Short-sleeve: Amy Acton wins Ohio Dem Gov primary YES at 0.99. She's the consensus Dem candidate with no serious challenger filed. 1% gross yield over 10d.",
+      "confidence": "high",
+      "prediction": "Resolves YES with > 99%. Resolution date is May 5 primary.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-05",
+      "tags": [
+        "short_sleeve",
+        "politics",
+        "carry",
+        "primary"
+      ],
+      "outcome": "Resolved YES \u2014 Amy Acton clinched Ohio Democratic primary May 5; CBS confirmed she faces Vivek Ramaswamy in November.",
+      "calibration_delta": "0.0",
+      "lesson": "High-confidence consensus-candidate primary went exactly as priced (0.987 entry, resolved 1.00). Calibration delta ~0 \u2014 predicted YES at >99%, resolved YES. The trade was minimal-edge ($0.04 gross over 10d) but execution-rule-confirming. Pattern: short-tenor consensus-candidate primaries with no filed challenger are reliable but tiny-edge.",
+      "resolved_at": "2026-05-06T02:02:17Z"
+    },
+    {
+      "id": 10,
+      "timestamp": "2026-04-30T13:26:21Z",
+      "type": "open_position",
+      "thesis": "Ostium gold long, 5x leverage,  collateral. Pivoted from stuck ETH-long after Stork crypto feed was congested. Volume rotation for points-farming, not directional alpha.",
+      "confidence": "medium",
+      "prediction": "Held to \u00b18% TP/SL or 30 days, whichever first. Realized P&L expected near 0; primary value is points-farming volume.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-29",
+      "tags": [
+        "ostium",
+        "points_farming",
+        "xau"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2026-04-30T13:26:22Z",
+      "type": "open_position",
+      "thesis": "Ostium SPX long 5x  collateral. Pair-trade with NDX short to be roughly delta-neutral on US-equity-vs-tech dispersion. Volume rotation for points.",
+      "confidence": "medium",
+      "prediction": "Held to \u00b18% TP/SL or 30 days. Realized P&L on the pair near 0 if SPX/NDX correlation holds; positive if SPX outperforms tech (RWA narrative).",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-29",
+      "tags": [
+        "ostium",
+        "points_farming",
+        "spx",
+        "pair_trade"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2026-04-30T13:26:22Z",
+      "type": "open_position",
+      "thesis": "Ostium NDX short 5x  collateral. Pair-trade short leg vs SPX long. Volume for points; small directional bet against US-tech dominance continuing in May.",
+      "confidence": "medium",
+      "prediction": "Held to \u00b18% TP/SL or 30 days. Same horizon as paired SPX long.",
+      "size_usd": 5.0,
+      "resolution_at": "2026-05-29",
+      "tags": [
+        "ostium",
+        "points_farming",
+        "ndx",
+        "pair_trade"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2026-04-30T13:59:12Z",
+      "type": "scaffolding",
+      "thesis": "Idle $55 on Arbitrum earning $0/yr. Aave V3 USDC pool at 4.152% supply APY = ~$2.28/yr passive yield. Reversal cost ~$0.05 gas if capital needed for arb opportunity. Aave V3 is one of the most battle-tested DeFi yield primitives (already running $29.50 deposit on Base Aave with no issues since 2026-04-29). Strict improvement over idle holding.",
+      "confidence": "high",
+      "prediction": "55 USDC continues earning 3-5% APY without protocol issues; withdrawable in <1 min for any opportunity that needs the capital",
+      "size_usd": 55.0,
+      "resolution_at": "2026-07-30",
+      "tags": [
+        "aave",
+        "yield",
+        "scaffolding",
+        "crypto-sleeve"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2026-05-01T02:07:48Z",
+      "type": "skip",
+      "thesis": "Russia-Ukraine ceasefire by May 31 NO at 0.917, 162% APY, non-correlated with Iran cluster. Skeptic agent surfaced Apr 29 Putin-Trump Victory Day (May 9) ceasefire proposal with Zelensky engaging scope-upward. Entry 9 days before known bilateral catalyst with momentum = bad timing. Resolution criteria looser than initially modeled (Trump-brokered framework with future start could resolve YES). Thematic correlation with iran-peace NO (combined exposure would have been 56% of PM sleeve on Trump-deals-fail factor).",
+      "confidence": "high",
+      "prediction": "Russia-Ukraine ceasefire by May 31 resolves NO. Re-evaluate trade post-May 10 if Victory Day passes without framework announcement; expected re-entry price 0.95+ (similar edge, catalyst eliminated).",
+      "size_usd": 0.0,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "polymarket",
+        "russia-ukraine",
+        "skeptic-saved",
+        "skip"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2026-05-08T11:55:57Z",
+      "type": "open_position",
+      "thesis": "Calendar-spread short-tail on Iran-peace: NO at 0.81 on US x Iran permanent peace deal by May 15. 6.5d catalyst window crossing Victory Day May 9. Strict resolution criteria require formal signed permanent deal \u2014 Iran's foreign ministry process historically takes weeks for formal commitments; 6.5d window is too tight even amid 'Iran reviewing US proposal' news flow. Market 18.9% YES, my fair-value estimate ~10-12% YES = significant edge. Companion to existing DEC-0006 (May-31 NO at 0.67) \u2014 calendar spread on the same factor, May-15 line is shorter-dated higher-conviction version.",
+      "confidence": "high",
+      "prediction": "Resolves NO by May 15, 2026. NO mark drifts toward 1.0 as window closes without formal deal.",
+      "size_usd": 9.72,
+      "resolution_at": "2026-05-15",
+      "tags": [
+        "polymarket",
+        "iran-peace",
+        "calendar-spread",
+        "short-tail",
+        "v2"
+      ],
+      "outcome": "NO won. UMA resolved May-15 question to NO ('US x Iran permanent peace deal by May 15' did not happen). Redeemed 22 shares \u00d7 $1.00 = $22 USDC.e (combined $16.30 USDC.e + $5.69 pUSD post-tx). Realized +$3.54 on $18.46 cost = +19.2% in 7 days = ~1100% APY net.",
+      "calibration_delta": "Thesis (Iran demands of reparations + troop withdrawal + asset release infeasible in 7-day window) correct. Market priced 18.9% YES at entry (mark NO 0.81), final NO win = real P(YES) was 0-1%. Edge ~18pp converted to realized.",
+      "lesson": "Calendar-spread shorts on Iran-peace formal-resolution markets validated. Strict criteria reading + multi-day Iran-rejection-pattern + Trump-rejection-of-proposal aligned with final outcome. Generalize: when both market AND bookies AND fundamental criteria all point one direction, the trade is high-conviction.",
+      "resolved_at": "2026-05-16T14:02:07Z"
+    },
+    {
+      "id": 16,
+      "timestamp": "2026-05-08T14:51:58Z",
+      "type": "open_position",
+      "thesis": "Aliens-cluster short-tail companion: NO at 0.966 on US x confirm aliens by May 31. 22d horizon, ~50% APY annualized. Strict resolution criteria (per existing aliens-2027 NO at DEC-0003 setting precedent \u2014 Pentagon UAP statements + AARO reports + congressional hearings have not triggered YES resolution despite multiple opportunities through 2026). Bond-like longshot fade \u2014 philosophy edge source #1. Took as part of validating Aave-Arb -> Polygon-pUSD pipeline (full path: Aave withdraw + Across bridge + cross-wallet transfer + USDC->USDC.e Uniswap V3 swap + onramp wrap + clob_v2 buy). Original skip on this trade was driven by overestimated gas friction ($1.15) which after walking the path resolved to ~$0.30 total. User challenged the framing; recompute showed positive net EV.",
+      "confidence": "high",
+      "prediction": "Resolves NO by May 31, 2026. Pentagon makes no formal alien confirmation in 22d (base rate <0.5% historically; market 2.9% YES is overpriced longshot).",
+      "size_usd": 9.66,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "polymarket",
+        "aliens",
+        "bond-like-fade",
+        "short-tail",
+        "v2",
+        "path-validation"
+      ],
+      "outcome": "Closed at 0.961 (mark) for ~-$0.08 net loss (cost $9.66, sold $9.61, fee $0.03). Held ~30 minutes. Closed after web search revealed Trump's PURSUE program launched MAY 8 (today) with 162 UAP file release \u2014 Apollo 12/17 photos, FBI/DoD/NASA/State docs, ongoing tranches every few weeks. P(YES) revised from 1% (intuition) to 4-7% (active disclosure window). Market 3.5% YES may even be slightly underpriced. Trade EV flipped from +$0.24 to -$0.16 to -$0.36. Closed to avoid further negative drift; bid had moved 0.964 -> 0.961 in ~10 minutes.",
+      "calibration_delta": "-0.06",
+      "lesson": "Catalyst calendar must be checked BEFORE opening bond-like longshot fades. I didn't search news/AARO/PURSUE before claiming 'P(YES) near 0%'. The market's 3% likely reflected disclosure-program risk that I missed. Philosophy edge source #1 is 'markets pricing tail events at 2-8% where my MODELLED fair value is near 0%' \u2014 emphasis on modelled. Intuition is not a model. New rule: bond-like fade -> 5-min web search for window-specific catalysts before sizing.",
+      "resolved_at": "2026-05-08T15:07:11Z"
+    },
+    {
+      "id": 17,
+      "timestamp": "2026-05-08T17:18:05Z",
+      "type": "open_position",
+      "thesis": "Bond-like longshot fade on hantavirus pandemic. Resolution criteria STRICT: requires WHO to explicitly characterize hantavirus as 'pandemic' in official communication. WHO has already said 'low risk' / 'not pandemic' as of May 7-8, 2026 in response to MV Hondius cruise ship outbreak (multi-country contact tracing, no community spread chains established). Catalyst_check.py central P(YES) = 1.5% (multiplicative breakdown shown: P(community spread 5%) x P(WHO pandemic call | spread 25%) = 1.25%) vs market 9.1% YES. Active-news premium inflating market. Long horizon (236d) but capital constraint not binding given $30+ pUSD buffer. Pipeline-validated: this trade is exactly the kind the new catalyst-check pipeline was built to catch \u2014 significant edge after rigorous catalyst-aware analysis, NOT operator intuition.",
+      "confidence": "high",
+      "prediction": "Resolves NO by Dec 31, 2026. WHO does not declare hantavirus a pandemic. Outbreak contains, no sustained community transmission, WHO maintains current 'low risk' / PHEIC-at-most posture.",
+      "size_usd": 9.09,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "hantavirus",
+        "bond-like-fade",
+        "non-correlated",
+        "v2",
+        "catalyst-check-validated"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2026-05-08T18:18:52Z",
+      "type": "open_position",
+      "thesis": "Russia-Ukraine ceasefire NO @ 0.768 (15 shares, $11.52 cost). Re-eval of DEC-0014 skip. Original May 1 plan: re-evaluate post-May 10 if Victory Day passed without framework. Today May 8, Victory Day tomorrow but the catalyst has effectively fizzled \u2014 Russia and Ukraine declared COMPETING UNILATERAL ceasefires May 4-5, both violated within hours, Zelensky confirms received no official notice from Russia, UN noted neither party confirmed mutual agreement. Resolution criteria (fetched from gamma-api) explicitly require 'mutually agreed halt' + 'general pause' \u2014 partial/unilateral excluded. Catalyst_check.py central P(YES) = 5% (multiplicative breakdown: P(formal negotiations restart May 8-31) \u00d7 P(mutual agreement | restart) = 0.20 \u00d7 0.25 = 0.05) vs market 23.2% YES. Strong fade with edge ~18pp. Bear case (Trump pressure / Turkey mediation surprise / oracle-loose interpretation) raises P(YES) to maybe 10-15% \u2014 still well under market. Non-correlated with Iran/aliens/sports/hantavirus clusters. New cluster of 1.",
+      "confidence": "high",
+      "prediction": "Resolves NO by May 31, 2026. Russia and Ukraine do not reach a publicly-announced mutually-agreed general ceasefire (per resolution criteria). Negotiations remain stalled; Victory Day theater confirms parties not aligned.",
+      "size_usd": 11.52,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "polymarket",
+        "russia-ukraine",
+        "bond-like-fade",
+        "non-correlated",
+        "v2",
+        "catalyst-check-validated",
+        "re-eval-from-DEC-0014"
+      ],
+      "outcome": "RESOLVED YES by UMA dispute (proposed YES by Trump 3-day-ceasefire-announcement May 8-11; disputed; UMA DVM ruled YES via loose criteria interpretation 'regardless of whether ceasefire officially starts afterward'). 25 NO shares redeemed for $0 (tx 0x1eb4791e). REALIZED LOSS: -$16.73 = -10% of bankroll.",
+      "calibration_delta": "Catalyst_check.py central P(YES)=5%; UMA actual ruling: YES. Predictor was WRONG by ~95pp due to (1) loose-criteria interpretation not modeled, (2) Trump 3-day ceasefire announcement materializing post-entry, (3) scale-in error at 0.5208 when mark crashed \u2014 read overreaction, was new info.",
+      "lesson": "Three documented mistakes: (1) Scale-in error when mark crashed 30% on fundamental news \u2014 should read new info, not noise; (2) Investigation gap when position de-indexed from data-api \u2014 should FIRST check umaResolutionStatus on gamma-api/markets/{id}, not just on-chain balance; (3) Resolution-criteria language miss \u2014 operating under strict 'permanent deal' framing while actual criteria explicitly say 'regardless of whether ceasefire officially starts afterward'. ALL three fixes shipped 2026-05-09 via 11 systematic tools + uma_status_check + polyclaude_enter umaResolutionStatus reject + kelly_size sensitivity warnings + catalyst_check resolution-criteria injection.",
+      "resolved_at": "2026-05-11T14:02:51Z"
+    },
+    {
+      "id": 19,
+      "timestamp": "2026-05-09T17:28:24Z",
+      "type": "open_position",
+      "thesis": "US x Iran permanent peace deal by May 11 NO @ 0.965 (15 shares, $14.475 cost). Resolution requires formal SIGNED permanent peace agreement explicitly indicating military hostilities have ended or will permanently cease. Iran rejected US proposal as 'American wish-list', demanding war reparations + US troop withdrawal + frozen-asset release as preconditions. 14-point MOU under negotiation, NOT signed. Formal signing within 1.3d implausible. Strict-criteria reading P(YES) <1%; market 3.75% YES = NO underpriced. Bond-like fade with bounded $14.475 risk.",
+      "confidence": "high",
+      "prediction": "Resolves NO by May 11 23:59 ET. NO mark drifts to 1.0 as window closes without formal deal.",
+      "size_usd": 14.475,
+      "resolution_at": "2026-05-11",
+      "tags": [
+        "polymarket",
+        "iran-peace",
+        "short-tail",
+        "bond-like-fade",
+        "v2",
+        "recoup-campaign"
+      ],
+      "outcome": "NO won; market resolved YES=0/NO=1.00. 15 shares \u00d7 $1.00 = $15.00 redemption pending UMA payouts post-to-CTF. Cost $14.475; profit $0.525 = +3.6% in 3 days = ~440% APY net.",
+      "calibration_delta": "p_estimate 0.99 vs market priced 0.965; my edge ~+2.5pp realized correctly. Trade thesis (Iran wish-list rejection + 14pt MOU not signed within 1.3d) held.",
+      "lesson": "Short-tail bond-like fade on conjunction-style resolution criteria works when strict criteria align with our prior. P-fragility caveat (kelly_size sensitivity \u00b15%) was appropriate ex-ante.",
+      "resolved_at": "2026-05-11T00:55:40Z"
+    },
+    {
+      "id": 20,
+      "timestamp": "2026-05-09T17:35:31Z",
+      "type": "size_change",
+      "thesis": "DEC-0015 May-15 Iran-peace NO scale-in: 10 shares @ $0.874 added. Position now 22 shares / $18.46. Kelly+\u03c1-adjusted half-Kelly says optimal $54; was at 18% of optimal, now 34%. Cluster-cap heuristic superseded by Kelly+\u03c1 math.",
+      "confidence": "high",
+      "prediction": "Resolves NO May 15. Iran wish-list rejection makes signing in 6d implausible.",
+      "size_usd": 8.74,
+      "resolution_at": "2026-05-15",
+      "tags": [
+        "polymarket",
+        "iran-peace",
+        "bond-like-fade",
+        "scale-in",
+        "v2",
+        "recoup-campaign",
+        "kelly-sized"
+      ],
+      "outcome": "Scale-in portion redeemed alongside DEC-0015. 10 of 22 total shares \u00d7 $1.00 = $10 attributable to scale-in. Realized +$1.26 on $8.74 cost = +14.4% in 7d.",
+      "calibration_delta": "Kelly+\u03c1 scaling rationale validated: high-conviction NO with robust sensitivity. Scaling to ~34% of half-Kelly+\u03c1 optimal at the time captured incremental $1.26 vs hold-base alone.",
+      "lesson": "Mid-conviction scaling on bond-like fades with robust sensitivity windows works when underlying thesis intact + market drift favorable.",
+      "resolved_at": "2026-05-16T14:02:07Z"
+    },
+    {
+      "id": 21,
+      "timestamp": "2026-05-09T17:46:45Z",
+      "type": "size_change",
+      "thesis": "Regime-fall NO scale-in: +25 shares @ $0.85 = $21.25. Position now 33.75 shares / $28.25 cost / $33.75 max payout. Kelly: mark 0.85, P(NO)=0.93, full Kelly 53% bankroll = $90. Half-Kelly+\u03c1-discount = $35. At $28.25 now (81% of half-Kelly+\u03c1 optimal). Robust sensitivity: even at conservative P=0.85, full Kelly stays positive. Operator directive: rigorous Kelly+correlation-adjusted sizing supersedes cluster-cap heuristic. Insight banked: Iran cluster has ANTI-correlated tail paths (peace-deal scenario LOSES may-X NOs but WINS regime+pahlavi NOs; regime-fall scenario does opposite) \u2014 naive 'positively correlated cluster' assumption was wrong; max realized worst-case loss is ~$40 not $77.",
+      "confidence": "high",
+      "prediction": "Resolves NO by Dec 31 2026. Regime stable; even US de-escalation (shelved Project Freedom) reduces regime-change pressure. Strict criteria require formal recognized regime fall.",
+      "size_usd": 21.25,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "iran-regime",
+        "bond-like-fade",
+        "scale-in",
+        "v2",
+        "recoup-campaign",
+        "kelly-sized"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2026-05-09T18:26:15Z",
+      "type": "size_change",
+      "thesis": "Trump-out NO scale-in: +4 shares @ $0.89 = $3.56. Position now 12.33 shares / $10.56 cost / $12.33 max payout. Per constrained-Kelly: optimal $26, currently 40% of optimal. Remaining ~$15 deficit. Trump-out thesis: even with Dem house gains in Nov 2026 midterms, Senate conviction implausible. P=0.96 robust to misestimation. Operator authorized aggressive sizing per Kelly.",
+      "confidence": "high",
+      "prediction": "Resolves NO before 2027. No realistic path to removal.",
+      "size_usd": 3.56,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "us-politics",
+        "bond-like-fade",
+        "scale-in",
+        "v2",
+        "recoup-campaign",
+        "kelly-sized"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2026-05-10T14:03:14Z",
+      "type": "close_position",
+      "thesis": "Atletico YES partial close: sold 5 of 5.02 shares @ $0.981 = $4.905 received. Near-zero remaining edge (15d to resolve, mark 0.989, hold-to-resolve gain ~$0.05 vs spread cost ~$0.05). Swap to May-31 NO captures higher EV. Dust 0.0199 shares left, will resolve naturally.",
+      "confidence": "high",
+      "prediction": "5 shares already settled to USDC.e via CLOB; dust resolves YES May 25 for ~$0.02 redeem.",
+      "size_usd": -4.905,
+      "resolution_at": "2026-05-10",
+      "tags": [
+        "polymarket",
+        "atletico",
+        "close-rebalance",
+        "v2",
+        "recoup-campaign"
+      ],
+      "outcome": "5 of 5.02 Atletico YES sold at $0.981 on 2026-05-10 = $4.905 USDC.e received. Dust 0.0199 shares will resolve YES on La Liga top-4 confirmation ~$0.02. Realized loss vs hold-to-resolve: -$0.07 (sold at 0.981 vs final 1.0). Trade rationale (free Atletico \u2192 scale May-31 NO) realized: May-31 mark rallied 0.69 \u2192 0.84 = +$1.05 on the 7-share scale-in. Net swap captured ~+$0.98 EV.",
+      "calibration_delta": "Predicted near-zero remaining edge on Atletico; capital reallocation captured +$0.98 vs hold. Validated.",
+      "lesson": "Capital reallocation between high-conviction near-resolution positions (one with no remaining edge, one with high mid-cycle edge) captures alpha. Brownian-bridge fair-value pricing identifies the marginal-edge ranking.",
+      "resolved_at": "2026-05-13T14:01:46Z"
+    },
+    {
+      "id": 24,
+      "timestamp": "2026-05-10T14:03:15Z",
+      "type": "size_change",
+      "thesis": "May-31 Iran-peace NO scale-in: +7 shares @ $0.69 = $4.83. Position now 17.44 shares / $11.82 cost / $17.44 max payout. Funded by Atletico close (above). Brownian-bridge fair-value: mark 0.675 vs fair_BB 0.836 (t/T=0.30, p=0.78). 16pp underpriced. Constrained-Kelly recommended; capital freed via Atletico swap. Today's escalation news (Gulf drone attacks, Iran slow on US proposal) reinforces NO thesis.",
+      "confidence": "high",
+      "prediction": "Resolves NO May 31. 21d window with active escalation reduces deal probability.",
+      "size_usd": 4.83,
+      "resolution_at": "2026-05-31",
+      "tags": [
+        "polymarket",
+        "iran-peace",
+        "bond-like-fade",
+        "scale-in",
+        "v2",
+        "recoup-campaign",
+        "kelly-sized",
+        "brownian-bridge"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2026-05-12T10:40:45Z",
+      "type": "close_position",
+      "thesis": "Ostium XAU/USD LONG 5x auto-closed at Take-Profit $4769 (entry $4543.48, collateral $4.89, notional $24.46). TP hit during Iran-war / Strait-of-Hormuz blockade dynamic that drove gold up. Payout ~$6.06 USDC on Arbitrum. Realized gain: ~+$1.17 on $4.89 collateral = +24% in ~13 days. Auto-triggered, not manually closed.",
+      "confidence": "high",
+      "prediction": "Already closed via TP-trigger; outcome locked.",
+      "size_usd": 1.17,
+      "resolution_at": "2026-05-12",
+      "tags": [
+        "ostium",
+        "gold",
+        "xau",
+        "auto-close",
+        "take-profit"
+      ],
+      "outcome": "XAU/USD LONG 5x auto-closed at Take-Profit $4769 on ~2026-05-12. Payout $6.06 USDC on Arb. Realized: +$1.17 / +24% in ~13 days.",
+      "calibration_delta": "Gold thesis (geopolitical-risk-premium expansion from Iran war) printed as expected. TP $4769 was set conservatively at entry; could have ridden longer with trailing-stop discipline.",
+      "lesson": "TP-set-at-entry leaves some upside on the table during major shocks. For high-conviction macro plays during ongoing crisis, consider trailing stop or no TP. But: TP execution is automatic and discipline-enforced; manual close decisions can miss.",
+      "resolved_at": "2026-05-13T14:01:46Z"
+    },
+    {
+      "id": 26,
+      "timestamp": "2026-05-18T02:01:42Z",
+      "type": "close_position",
+      "thesis": "Ostium NDX short 5x (DEC-0012) closed since prior tick. Trade ID 1848512: entry 27368.69, TP set at 25182.57 (-7.99%), SL at 29562.15 (+8.00%), collat $4.8925, notional $24.46. Closed when NDX dropped through TP threshold during AI-capex-plateau period (consistent with 2026-05-17 digest theme). Estimated realized: +~$1.96 collat gain (5x\u00d78% TP) \u2192 payout ~$6.85 USDC on Arbitrum. Closes the NDX leg of the SPX/NDX pair-trade; SPX long (DEC-0011, trade 1848511) still open.",
+      "confidence": "high",
+      "prediction": "TP-triggered close already locked.",
+      "size_usd": 4.89,
+      "resolution_at": "2026-05-18",
+      "tags": [
+        "ostium",
+        "ndx",
+        "pair-trade",
+        "close"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2026-05-28T10:42:53Z",
+      "type": "close_position",
+      "thesis": "Ostium SPX LONG 5x (DEC-0011) closed manually on operator direction (msg 348 acknowledgement of executive-continuation deferral). Trade ID 1848511: entry $7167.41, closed at $7510.66 (+4.79% on price = +24% on 5x = +$1.17 collat gain). Payout ~$6.06 USDC on Arb. Position was naked after NDX SHORT TP'd 2026-05-18 \u2014 no clear thesis, points-farming purpose marginal. Closing locks gain + ends 10d drift.",
+      "confidence": "high",
+      "prediction": "Manual close at +24% on collateral; outcome locked.",
+      "size_usd": 4.89,
+      "resolution_at": "2026-05-28",
+      "tags": [
+        "ostium",
+        "spx",
+        "close",
+        "pair-trade"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2026-05-31T08:34:06Z",
+      "type": "open_position",
+      "thesis": "Satoshi's identity revealed by Dec 31 2026 NO @ 0.94, 6 shares, $5.64. First entry from the fixed discovery funnel (10x fetch-cap fix 2026-05-29) + relaxed edge bar. P(NO not revealed) base rate ~0.99; honest P(NO) ~0.98 after small UMA-loose-resolution discount on the 'credible consensus of reporting' clause. Edge ~4pp at 0.94 ask, ~9% annualized expected. Operator challenged my initial over-cautious skip; conceded the UMA tail is small (strict 'definitively proven / wallet transfer' primary criterion + 15yr of failed Satoshi claims \u2014 Newsweek/Wright-ruled-not-Satoshi/HBO doc all failed the consensus bar). Sized small ($5.64, capped well below $58 Kelly) for the residual ~1-2% tail. Mechanical-ish resolution; primary risk is genuine reveal (~1%/214d) or UMA false-positive (~0.5-1%).",
+      "confidence": "high",
+      "prediction": "Resolves NO (Satoshi not definitively revealed by Dec 31 2026). Expected +$0.36 at lock-in (6 sh x $1 - $5.64), ~9% annualized.",
+      "size_usd": 5.64,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "satoshi",
+        "crypto",
+        "bond-like-fade",
+        "funnel-fix-first-entry"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 29,
+      "timestamp": "2026-06-01T21:40:00Z",
+      "type": "open_position",
+      "thesis": "US confirms aliens exist before 2027 NO @ 0.85, 2 shares, $1.70 (tx 0x92d3e637). Resolution bar = POTUS/Cabinet/Joint Chiefs/federal agency 'definitively states extraterrestrial life or technology exists' by Dec 31 2026 -- highest-bar event imaginable; UAP hearings/reports have never met it. True P(YES) ~0.3-0.5% vs market 15.5% -> classic overpriced meme/lottery longshot. NO @ 0.85 -> 17.6% to Dec-31 resolution ~= 30% APY, clears robust-edge gate w/ haircut (p_robust 0.945 >> mark). Book deep ($240k <=0.86). SMALL pipeline-proving size only -- scale to ~$20-25 next via bridging Arb Aave (crypto sleeve ...3eE6) -> Polygon -> PM wallet (...267B) -> wrap. Found via comprehensive 990-mkt scan after operator pushed 'have you scanned everything?' -- I had tunnel-visioned on 3 Anthropic mkts.",
+      "token_id": "7305630249804085635496399869905769372294302716159034447326228509068694952392",
+      "side": "NO",
+      "price": 0.85,
+      "shares": 2,
+      "usd": 1.7,
+      "tx": "0x92d3e6371610407f6e143416efe0c04d06c81b9c7a4ef522f16f72d1a94a01fc",
+      "gate_post_hoc": "catalyst_check 2026-06-01: P(YES) central 1.0% (range 0.2-2.5%). PURSUE disclosure tranches (May8/May22/~Jun5) explicitly NON-confirming; no escalation. Edge REAL: NO@0.85 ~20-28% APY at P(YES) 1-5%. Loose-UMA tail small here (no ambiguous confirmation event for DVM to construe YES, unlike DEC-0018 R-U which had a real ceasefire announcement).",
+      "exposure_note": "Total aliens-2027 NO = DEC-0003 ($9 @0.80) + this ($1.70 @0.85) = $10.70. Against ~$160 total bankroll that's ~6-7% (NOT 29% -- earlier I wrongly used the $37 idle-sleeve denominator). 30%-cluster-cap is on bankroll, so concentration does NOT bind; room to scale. Real reason not to scale now: deployable capital sits in Arb Aave behind a ~$0.10 ETH gas wall; bridging $20 nets only ~$1-1.5 after gas-topup + bridge friction + stranding risk -- marginal, not worth forcing at high context. Legitimate deliberate-deployment candidate next cycle (top up Arb ETH first).",
+      "lesson": "TWO process slips (EV conclusion survived, process didn't): (1) added to a market I already held (DEC-0003) without checking existing exposure -> duplicate/over-concentration risk. (2) bought BEFORE running the mandatory catalyst_check gate (philosophy commit 6c9d171); got lucky it confirmed ~1%. FIX: add an existing-position + auto catalyst-gate check to polyclaude_enter.py before any buy."
+    },
+    {
+      "id": 30,
+      "timestamp": "2026-06-01T21:40:00Z",
+      "type": "infra",
+      "thesis": "Built scripts/wrap_pusd.py (USDC.e->pUSD via CollateralOnramp 0x93070..., wrap(collateral,recipient,amount), mints 1:1). UNLOCKS all Polymarket entries -- prior state: only ~$0.16 residual pUSD, effectively locked out of the venue. Chain-aware Polygon gas (30 gwei floor), read-only eth_call pre-flight before broadcast, status/wrap subcmds. Verified on-chain: wrapped 1.9 USDC.e -> pUSD 0.161->2.061 (tx 0xca941759). USDC.e->onramp allowance already MAX.",
+      "tx": "0xca941759f271f6c538a7c80e168496bfde954ce60f9ce0d12537540aeacc472a"
+    },
+    {
+      "id": 31,
+      "timestamp": "2026-06-01T22:55:00Z",
+      "type": "open_position",
+      "thesis": "US acquire any part of Greenland 2026 NO @ 0.87, 14 shares, $12.18 (tx 0x9f4f79c2). Gate-validated behavioral fade: P(YES) central 0.05% (Denmark categorically refuses sovereignty; criteria require transfer-of-sovereignty OR primary/exclusive jurisdiction -- base-access explicitly EXCLUDED, so loose-UMA tail small, unlike R-U). Market 13.5% YES = meme/headline premium. NO@0.87 -> 0.13/0.87 = 14.9% over 212d ~= 25.7% APY. Second clean fade alongside aliens (DEC-0003/0029); uncorrelated tail. Capital mobilized from idle Arb Aave (2.5%) via gas-unblock Base->Arb ETH + Across Arb->Polygon (recipient=PM wallet ...267B, fee 0.0089 USDC) + wrap. Path verified clean/cheap/fast (2s fills) via read-only Across quote first.",
+      "token_id": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
+      "side": "NO",
+      "price": 0.87,
+      "shares": 14,
+      "usd": 12.18,
+      "tx": "0x9f4f79c25c4890caf0b1a9f87c1607d9043d330530800e66c8080544ddd07722",
+      "gate": "catalyst_check 2026-06-01: P(YES) 0.01-0.2%, central 0.05%"
+    },
+    {
+      "id": 32,
+      "timestamp": "2026-06-10T02:36:52Z",
+      "type": "size_change",
+      "thesis": "Trump-out NO add $14.40 @ 0.90 (16 sh, tx 0xb388..4306): Kelly deficit +$25.63 AND bridge -7.15pp agreed underweight; skeptic+champion pair ran (>10$ rule). Synthesis: corrected P(YES) ~3% central (haiku check's 0.3% death tail was 5-7x low \u2014 Trump turns 80 Jun 14; SSA-halved = 1.5-2.2%) but calendar edge structural: Dem House flip seats 2027-01-03 AFTER 2026-12-31 resolution, impeachment narrative can't mechanically resolve YES. Robust at pair floor p_no=0.955 (haircut 0.03): +3pp net. Size cap-bound $14.40 by 15%-ticket rule (NOT Kelly's $25) per skeptic \u2014 ticket now $24.96 = 14.7%. Skeptic wanted defer-2wk through helicopter-response window; overruled: 158k bid at 0.89 makes dip-fill adverse-selection, carry positive.",
+      "confidence": "medium",
+      "prediction": "Trump completes 2026 in office; NO resolves $1.00 on 2026-12-31; mark >=0.95 by post-midterm narrative collapse (Nov).",
+      "size_usd": 14.4,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "trump-out",
+        "fade-basket",
+        "scale-up",
+        "skeptic-champion"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 33,
+      "timestamp": "2026-06-10T02:36:56Z",
+      "type": "size_change",
+      "thesis": "Greenland NO add $6.96 @ 0.87 (8 sh, tx 0x0cdc..f9e8): the other both-frameworks-agreed scale-up (Kelly +$7.36, bridge -5.0pp). Fresh catalyst gate: P(YES) central 2.5% (1-6%) \u2014 'acquire' needs completed territorial transfer (agreement x congressional approval x Denmark/Greenland consent x physical transfer) in 7mo, structurally improbable. Robust edge +5.5pp at pessimistic 0.925 vs 0.87 ask. Idiosyncratic tail (rho=0, philosophy line 26). Batched with Trump-out add in one withdraw+wrap ($23 from Aave Polygon).",
+      "confidence": "high",
+      "prediction": "No US acquisition of Greenland territory in 2026; NO resolves $1.00 on 2026-12-31.",
+      "size_usd": 6.96,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "greenland",
+        "fade-basket",
+        "scale-up"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    }
+  ]
 }
