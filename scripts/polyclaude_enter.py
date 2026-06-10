@@ -116,6 +116,24 @@ def _best_ask(token_id: str, timeout: float = 12.0) -> float | None:
         return None
 
 
+
+def _bankroll_default() -> float:
+    """Live bankroll from bankroll.py's cache when fresh (<24h); else 170 + warn."""
+    import datetime as _dt
+    try:
+        cache = Path(__file__).resolve().parent.parent / "notes" / ".bankroll_cache.json"
+        d = json.loads(cache.read_text())
+        age_h = (_dt.datetime.now(_dt.timezone.utc)
+                 - _dt.datetime.fromisoformat(d["at"])).total_seconds() / 3600
+        if age_h < 24:
+            print(f"# bankroll ${d['total']:.2f} from cache (age {age_h:.1f}h)", file=sys.stderr)
+            return float(d["total"])
+        print(f"# WARNING: bankroll cache stale ({age_h:.0f}h) — run scripts/bankroll.py; using $170 fallback", file=sys.stderr)
+    except Exception:
+        print("# WARNING: no bankroll cache — run scripts/bankroll.py; using $170 fallback", file=sys.stderr)
+    return 170.0
+
+
 def kelly_size(mark: float, p_win: float, bankroll: float, frac: float,
                rho: float, cluster_frac: float) -> tuple[float, dict]:
     """Compute Kelly-optimal $ size with details."""
@@ -145,7 +163,8 @@ def main() -> int:
                    help="Which side to buy (default NO for bond-like fades)")
     p.add_argument("--resolve-date", default=None,
                    help="Resolution date (YYYY-MM-DD). Required for catalyst_check.")
-    p.add_argument("--bankroll", type=float, default=170.0)
+    p.add_argument("--bankroll", type=float, default=None,
+                   help="default: live total from bankroll.py cache (<24h), else 170")
     p.add_argument("--kelly-frac", type=float, default=0.5)
     p.add_argument("--rho", type=float, default=0.0,
                    help="Correlation to existing cluster (0=independent, 0.7=high)")
@@ -161,6 +180,8 @@ def main() -> int:
                         "(default 0.05). Larger = demand fatter edge for fuzzier estimates; "
                         "smaller only for genuinely high-confidence mechanical-market estimates.")
     args = p.parse_args()
+    if args.bankroll is None:
+        args.bankroll = _bankroll_default()
 
     # Resolve market
     lookup = args.slug or args.question

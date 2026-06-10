@@ -47,6 +47,24 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 PRIORS_PATH = REPO_ROOT / "notes" / "portfolio_kelly_priors.json"
 
 
+
+def _bankroll_default() -> float:
+    """Live bankroll from bankroll.py's cache when fresh (<24h); else 170 + warn."""
+    import datetime as _dt
+    try:
+        cache = Path(__file__).resolve().parent.parent / "notes" / ".bankroll_cache.json"
+        d = json.loads(cache.read_text())
+        age_h = (_dt.datetime.now(_dt.timezone.utc)
+                 - _dt.datetime.fromisoformat(d["at"])).total_seconds() / 3600
+        if age_h < 24:
+            print(f"# bankroll ${d['total']:.2f} from cache (age {age_h:.1f}h)", file=sys.stderr)
+            return float(d["total"])
+        print(f"# WARNING: bankroll cache stale ({age_h:.0f}h) — run scripts/bankroll.py; using $170 fallback", file=sys.stderr)
+    except Exception:
+        print("# WARNING: no bankroll cache — run scripts/bankroll.py; using $170 fallback", file=sys.stderr)
+    return 170.0
+
+
 def load_priors() -> dict:
     if not PRIORS_PATH.exists():
         return {}
@@ -82,7 +100,8 @@ def kelly_fraction(mark: float, p: float) -> float:
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
-    p.add_argument("--bankroll", type=float, default=170.0)
+    p.add_argument("--bankroll", type=float, default=None,
+                   help="default: live total from bankroll.py cache (<24h), else 170")
     p.add_argument("--kelly-frac", type=float, default=0.5,
                    help="Fractional Kelly multiplier (0.5 = half-Kelly)")
     p.add_argument("--wallet", default=str(_secrets.path("POLYCLAUDE_WALLET")))
@@ -96,6 +115,8 @@ def main() -> int:
                         "the ranking. This is the closed-form CONSTRAINED-PORTFOLIO-KELLY: "
                         "maximize E[log(B + Σ wᵢ Δᵢ)] s.t. Σ wᵢ ≤ 1.")
     args = p.parse_args()
+    if args.bankroll is None:
+        args.bankroll = _bankroll_default()
 
     wallet_addr = json.load(open(args.wallet))["address"]
     priors = load_priors()

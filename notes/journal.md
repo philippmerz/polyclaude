@@ -1356,3 +1356,16 @@ DEC-0034:
 - daily_checkin.sh step-6 filter text updated to match. decisions.py: DEC-0034 (prediction: no
   count-cap friction, no regression to banned-category heuristics, no UMA-class loss attributable to
   the ban removal; eval 2026-09-10).
+
+## 2026-06-10 ~13:55 UTC — meta-reflection: bankroll-figure plumbing (one genuine finding)
+
+Post-doctrine residue, the one real broken assumption left: doctrine names bankroll.py the
+authoritative number, but polyclaude_enter.py + portfolio_kelly.py both carried static
+--bankroll defaults of 170 → silent Kelly mis-sizing the moment the bankroll drifts. Fixed:
+bankroll.py now writes notes/.bankroll_cache.json (total + timestamp); both sizing tools default
+to the cached total when fresh (<24h, with an age-stamped stderr line), warn + fall back to 170
+otherwise. Verified end-to-end: cache $172.22 → kelly scales by 172.22/269.07, enter's 15% cap
+= $25.83 live. Explicit --bankroll still overrides everywhere.
+
+No alpha-source findings forced: the doctrine change IS the new surface (subjective-resolution
+markets priced not banned; no count cap) and the 14:00 tick exercises it through the normal funnel.

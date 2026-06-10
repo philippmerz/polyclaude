@@ -171,6 +171,19 @@ def main() -> int:
 
     ostium_open_trades(warnings)
 
+    # Cache the total so sizing tools (polyclaude_enter, portfolio_kelly) can
+    # default to the live figure instead of a static constant (doctrine: this
+    # script IS the authoritative bankroll number).
+    try:
+        cache = Path(__file__).resolve().parent.parent / "notes" / ".bankroll_cache.json"
+        import datetime as _dt
+        cache.write_text(json.dumps({
+            "total": round(total, 2),
+            "at": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds"),
+        }))
+    except Exception as e:
+        warnings.append(f"bankroll cache write failed ({e})")
+
     print("-" * 50)
     delta = total - args.ref
     print(f"{'TOTAL BANKROLL':38s} ${total:>9.2f}")
