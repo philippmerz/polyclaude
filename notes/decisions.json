@@ -1,5 +1,5 @@
 {
-  "next_id": 35,
+  "next_id": 36,
   "decisions": [
     {
       "id": 1,
@@ -659,6 +659,24 @@
         "er-max",
         "rewrite",
         "operator-directive"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 35,
+      "timestamp": "2026-06-10T14:10:57Z",
+      "type": "size_change",
+      "thesis": "Greenland NO cap-fill add $6.09 @ 0.87 (7 sh, tx 0xc9cb..cd12): both frameworks agreed underweight (Kelly deficit +$15.56 after the evidence-based priors revision 0.915->0.95 anchored on 2026-06-10 catalyst check central 2.5% [1-6%]; bridge -5pp). Robust gate +3pp at pessimistic 0.90 vs 0.87 ask; gate 11.5h fresh, no new Greenland info. Sized to the 15% ticket cap: ticket now $25.23 = 14.7% of $172.19 \u2014 capped, no further adds unless bankroll/mark moves. Only gate-clearing use of idle capital this tick (sports consensus deltas all negative; Pahlavi fails pessimistic bound; Satoshi/hantavirus banned classes).",
+      "confidence": "high",
+      "prediction": "No US Greenland acquisition in 2026; NO resolves $1.00 2026-12-31; no further adds fire (cap binding).",
+      "size_usd": 6.09,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "greenland",
+        "fade-basket",
+        "cap-fill"
       ],
       "outcome": null,
       "calibration_delta": null,

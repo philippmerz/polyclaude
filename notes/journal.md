@@ -1369,3 +1369,30 @@ otherwise. Verified end-to-end: cache $172.22 → kelly scales by 172.22/269.07,
 
 No alpha-source findings forced: the doctrine change IS the new surface (subjective-resolution
 markets priced not banned; no count cap) and the 14:00 tick exercises it through the normal funnel.
+
+## 2026-06-10 ~14:00 UTC — Wednesday 14:00 cron tick: Greenland cap-fill +$6.09; first tick under ER-max doctrine
+
+Delegated gathering: book flat (+$0.28 MTM since 02:00 post-trade), all guards CLEAN (UMA 15/0,
+marginal-APY 7/0, redeemable 0/7 via new --dry-run, monotonicity 0/966, consistency 0 real,
+Ostium 0/0), bankroll $172.19 (+1.3% vs kickoff; cache feeding sizing tools confirmed live).
+Marks: Trump-out +1.0pp favorable (0.905) day after the add; Satoshi +0.9; Pahlavi −0.5; rest flat.
+
+**News-feed silence resolved benign:** 19h without entries during the helicopter-response window
+was genuine quiet, not a dead daemon (watcher pid alive, heartbeat clean) — no US response has
+materialized yet. Iran legs HOLD, >5pp/UMA triggers armed.
+
+**Sports/esports: zero entries.** Consensus pass came back NEGATIVE on all three (Mexico −1.9pp,
+Korea −0.5, Czechia −2.5 — PM richer than bookie fair); the IEM esports fade candidates remain
+unverified-model-only → fail the verified-edge bar. First-tick-under-doctrine note: Fed-June YES
+0.993 (49% APY, 6.4d) evaluated and skipped — no p-estimate of ours beats that market; doctrine's
+anti-edge list holds.
+
+**Action: Greenland NO +$6.09 @ 0.87 (7 sh, DEC-0035, tx 0xc9cb..cd12).** Driven by the
+evidence-based priors revision (0.915→0.95, anchored on yesterday's catalyst check 2.5% central):
+Kelly +$15.56 / bridge −5pp agreed; robust +3pp at pessimistic bound; sized to the 15% cap —
+ticket $25.23 = 14.7%, now CAPPED quiet. Book: 8 entries' worth of cost $113.86 (7 markets), MTM
+$117.32 (+3.03%), max payout $131.35. Aave Polygon left ~$26.05; pUSD residual ~$0.22.
+
+**Watchlist: CEG re-entered its revised entry zone** ($244.82 in $237–251; 4/4 vet from May) →
+surfaced to operator in tick summary (route=ibkr). SOL/ARB/STX persistent hits unchanged (ARB DAO
+vote tomorrow Jun 16? — NO: Jun 16 is Tuesday next week; vote in 6d).
