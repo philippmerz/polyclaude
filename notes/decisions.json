@@ -149,9 +149,10 @@
         "sports",
         "carry"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Market resolved YES (gamma 582155, closedTime 2026-05-12 23:39Z \u2014 clinched ~2wk early). Position exited early 2026-05-10: sold 5/5.02 sh @0.981 = $4.905 (tx 0xafe5ef31) to fund DEC-0024 scale-in. Net on position: -$0.05 vs $4.975 cost (entry 0.995); ~0.02 dust shares resolved YES.",
+      "calibration_delta": "~0: predicted P(YES)>0.99, resolved YES. The -$0.05 is exit friction, not mis-calibration.",
+      "lesson": "Carry entries at 0.995 have zero exit cushion \u2014 any pre-resolution rebalance mechanically realizes a loss; price the exit option at entry.",
+      "resolved_at": "2026-06-10T03:08:52Z"
     },
     {
       "id": 9,
@@ -187,9 +188,10 @@
         "points_farming",
         "xau"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "TakeProfit executed 2026-05-12T00:17:59Z @ $4771.29 (subgraph primary, verified 2026-06-10; tx 0xfafa6192). +23.96% net of $0.054 rollover; amountSentToTrader $6.064706 = +$1.17 realized in 12.2d. Exact on-chain balance match on Arb wallet.",
+      "calibration_delta": "Predicted ~$0 realized; actual +24% on collateral. Configured TP was +5% price, not the \u00b18% stated in this record.",
+      "lesson": "Record the actually-configured TP/SL in the decision record at entry \u2014 the \u00b18% spec here never matched the +5% TP on the books.",
+      "resolved_at": "2026-06-10T03:08:52Z"
     },
     {
       "id": 11,
@@ -206,9 +208,10 @@
         "spx",
         "pair_trade"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Manual Market close 2026-05-28T10:42:36Z @ $7511.14 (subgraph primary, verified 2026-06-10 \u2014 NOT 'TP-closed ~May 27' as journal/weekly said; tx 0x4df7fd25). +21.79% net of $0.107 rollover; amountSentToTrader $5.958516 = +$1.07 realized, 28.5d held, TP/SL never hit.",
+      "calibration_delta": "Leg +21.8% but the dispersion view inverted: NDX short leg SL'd at +8% adverse while SPX made +4.8% \u2014 pair net -$0.88 vs 'near 0 / positive if SPX outperforms tech'.",
+      "lesson": "",
+      "resolved_at": "2026-06-10T03:08:52Z"
     },
     {
       "id": 12,
@@ -225,9 +228,10 @@
         "ndx",
         "pair_trade"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "STOP-LOSS executed 2026-05-14T00:30:12Z @ $29564.41 (+8.02% adverse; subgraph primary, verified 2026-06-10; tx 0xfe29a50d). -39.80% net; amountSentToTrader $2.945284 = -$1.95 realized in 14.1d. Mechanics honored (\u00b18% SL fired); the anti-tech directional view was wrong. SAME EVENT as DEC-0026 \u2014 do not double-count.",
+      "calibration_delta": "NDX rose +8% in 14d against the fade; full SL realized.",
+      "lesson": "",
+      "resolved_at": "2026-06-10T03:08:52Z"
     },
     {
       "id": 13,
@@ -263,9 +267,10 @@
         "skeptic-saved",
         "skip"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Market resolved YES (gamma 1795527, closedTime 2026-05-09 19:52Z; UMA DVM final ~2026-05-11 post-dispute). Prediction WRONG on direction. The skip avoided ~$11.5 at 0.917 NO that would have gone to $0 \u2014 skip saved the tranche for the reason stated in the skeptic's tail scenario (loose resolution criteria), which is exactly what resolved it YES. Re-eval plan not followed: re-entry DEC-0018 happened 05-08 @0.768, before the post-May-10 gate, and realized -$16.73 (booked there).",
+      "calibration_delta": "Full directional miss: high-confidence 'resolves NO' vs resolved YES.",
+      "lesson": "When a skip is motivated by the skeptic's tail scenario, record THAT scenario as the prediction \u2014 not a consensus 'resolves NO' that contradicts the reason for skipping.",
+      "resolved_at": "2026-06-10T03:09:11Z"
     },
     {
       "id": 15,
@@ -483,9 +488,10 @@
         "kelly-sized",
         "brownian-bridge"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Market resolved NO (gamma 1919425, closedTime 2026-06-01 12:17Z). Combined 17.44 sh redeemed 2026-06-01 for $17.44 USDC.e (tx 0xef8766ab). This scale-in tranche: 7 sh @0.69 = $4.83 \u2192 $7.00 = +$2.17 (+44.9%). Rode the full 0.69 \u2192 0.345 catastrophe \u2192 1.00 cycle.",
+      "calibration_delta": "Correct: entered 16pp under BB fair (0.69 vs 0.836 claimed), realized in full.",
+      "lesson": "",
+      "resolved_at": "2026-06-10T03:09:11Z"
     },
     {
       "id": 25,
@@ -523,9 +529,10 @@
         "pair-trade",
         "close"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "RECORD WAS FALSE \u2014 restated 2026-06-10 from subgraph (verified directly): close was a STOP-LOSS, not TakeProfit; executed 2026-05-14T00:30:12Z @ $29564.41 (the SL level), 4 days before this record claimed 'closed since prior tick'; payout $2.945284 not ~$6.85; realized -$1.95 not +$1.96. Error mechanism: booked from open-trades-count diff + ASSUMED direction/level. Sign error sat 3+ weeks and propagated into journal 2026-05-18 + pnl_weekly (corrected 2026-06-10). Same event as DEC-0012.",
+      "calibration_delta": "-$3.91 vs the record's claim (sign error).",
+      "lesson": "Never book a perp close from a trade-count diff plus an assumed direction \u2014 fetch the subgraph order record (orderAction, profitPercent, amountSentToTrader) before writing any P&L.",
+      "resolved_at": "2026-06-10T03:09:11Z"
     },
     {
       "id": 27,
@@ -542,9 +549,10 @@
         "close",
         "pair-trade"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Confirmed manual Market close 2026-05-28T10:42:36Z @ $7511.14 (subgraph; record's $7510.66 was quote-vs-fill noise). +23.98% gross matches the +24% claim, but NET of $0.107 rollover = +21.79%, payout $5.958516 \u2192 realized +$1.07, not '~$6.06 / +$1.17'. Same event as DEC-0011 \u2014 do not double-count.",
+      "calibration_delta": "-2.2pp gross-vs-net fee gap; payout -$0.10 vs estimate.",
+      "lesson": "Book net-of-fee amountSentToTrader, not gross-percent estimates \u2014 rollover fees on month-held Ostium positions are material at this size.",
+      "resolved_at": "2026-06-10T03:09:11Z"
     },
     {
       "id": 28,

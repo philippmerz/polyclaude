@@ -279,8 +279,8 @@ First resolutions land Tue May 5 (Amy Acton). Calibration product begins next we
 | 2026-05-12 | 0025 | Ostium gold (XAU) LONG 5x TP-triggered | +$1.17 |
 | 2026-05-13 | 0007 | Latvia Eurovision NO partial close | +$0.706 |
 | 2026-05-15 | 0015+0020 | May-15 Iran-peace NO redeemed (incl. scale-in) | +$3.54 |
-| 2026-05-18 | 0026 | Ostium NDX SHORT 5x TP-triggered | +$1.96 (est) |
-| | | **NET REALIZED** | **−$8.90** |
+| 2026-05-18 | 0026 | ~~Ostium NDX SHORT 5x TP-triggered | +$1.96 (est)~~ **[CORRECTED 2026-06-10: was a STOP-LOSS on 2026-05-14, realized −$1.95 — subgraph-verified; see Weeks 5–7 corrections block]** |
+| | | **NET REALIZED** | **−$8.90** ~~~~ **[CORRECTED 2026-06-10: −$12.81 with the NDX sign error fixed]** |
 
 ### Held book MTM (2026-05-18 02:00 UTC)
 
@@ -368,7 +368,7 @@ Notable lessons (selected): R-U three documented mistakes (above); TP-set-at-ent
 - **Sunday May 24:** next weekly long-term review (rotation to trade-regulation, biotech-health, crypto-on-chain, markets-corporate).
 
 **Soft catalysts:**
-- Ostium SPX LONG 5x still open (DEC-0011, trade 1848511). NDX SHORT just TP'd; pair-trade now naked SPX-long. Could TP at +8% (~7742) or SL at −8% (~6595). Monitor.
+- Ostium SPX LONG 5x still open (DEC-0011, trade 1848511). NDX SHORT just TP'd **[CORRECTED 2026-06-10: it had STOP-LOSSED on 05-14, not TP'd]**; pair-trade now naked SPX-long. Could TP at +8% (~7742) or SL at −8% (~6595). Monitor.
 - Iran-cluster news flow (Hormuz, regime stability) shapes Pahlavi + regime-fall NO marks.
 
 **Positions to roll/close:**
@@ -406,9 +406,16 @@ Notable lessons (selected): R-U three documented mistakes (above); TP-set-at-ent
 | Event | Date | Realized |
 |---|---|---|
 | May-31 Iran-peace NO redeemed (tx 0xef8766ab) | Jun 1 | **+$5.62** on $11.82 cost (+47.5%) |
-| Ostium SPX long TP-closed (final leg; perp sleeve flat since) | ~May 27 | small + (exact figure = DEC-0011 backfill, on-chain trace) |
+| Ostium SPX long manual-closed @ $7,511.14 (final leg; perp sleeve flat since) | May 28 10:42Z | **+$1.07** net of rollover (subgraph-verified) |
+| Ostium NDX short — restatement of the May-18 week's books | May 14 00:30Z | **−$1.95** (was wrongly booked +$1.96 "TP"; it STOP-LOSSED) |
 
 May-31 NO was the window's defining trade: entered as a pricing inefficiency, survived a −47pp adverse swing (0.815 → 0.345 on Trump's "largely negotiated" headline) on explicit Brownian-bridge conditional-fair-value HOLD logic, and resolved $1.00. Hold-through-catastrophe validated the framework end to end.
+
+**Corrections to prior entries (2026-06-10 backfill pass, all 8 overdue decision records resolved against primary sources — subgraph/gamma/on-chain):**
+- **DEC-0026 sign error:** the NDX short close booked 2026-05-18 as "TP +$1.96" was actually a **STOP-LOSS on 2026-05-14 at $29,564 (+8.02% adverse), realized −$1.95** (payout $2.945284, subgraph-verified directly). The Week 3+4 NET REALIZED restates −$8.90 → **−$12.81**.
+- **SPX close:** manual Market close 2026-05-28 10:42Z (not "TP-closed ~May 27"); net of rollover +$1.07 (not +$1.17). Pair total (SPX+NDX): **−$0.88** — the dispersion view inverted.
+- **Cumulative realized restated:** the 2026-06-01 journal's "May-31 win flips cumulative to roughly break-even" was wrong on the old books; corrected cumulative realized since kickoff ≈ **−$0.4** post-May-31 (R-U −$16.73 the dominant loss, May-31 +$5.62 the dominant win). Total bankroll is unaffected (it reads live balances — $171.87, +1.1% vs kickoff); this is attribution, not balance.
+- Calibration ledger now current: 19/31 decisions resolved, 0 overdue. The error mechanism (booking a perp close from a trade-count diff + assumed direction) is captured as the DEC-0026 lesson; `ostium_state_diff.py` already closes the detection gap and the new rule is: no perp P&L gets written without the subgraph order record.
 
 ### Held book (2026-06-10 02:30 UTC, post scale-ups)
 

@@ -242,7 +242,7 @@ def main() -> int:
     s.add_argument("id", type=int)
     s.add_argument("--outcome", default=None)
     s.add_argument("--calibration-delta", default=None,
-                   help="how prediction vs outcome diverged (e.g., 'overconfident; price moved 4% not 1%')")
+                   help="how prediction vs outcome diverged (e.g., 'overconfident; price moved 4%% not 1%%')")
     s.add_argument("--lesson", default=None)
     s.set_defaults(fn=cmd_update)
 

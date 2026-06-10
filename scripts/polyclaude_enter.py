@@ -78,6 +78,27 @@ def fetch_market_by_slug_or_question(slug_or_q: str) -> dict | None:
     return None
 
 
+def _existing_exposure(condition_id: str | None, question: str) -> dict | None:
+    """Live data-api check: do we already hold this market? (DEC-0029 lesson:
+    2026-06-01 bought a market already held, found out after.) Returns the
+    matching position dict or None; never raises (warn-path only)."""
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from polyclaude_client import Wallet
+        addr = Wallet.load().address
+        r = httpx.get("https://data-api.polymarket.com/positions",
+                      params={"user": addr.lower(), "limit": "100"}, timeout=15)
+        r.raise_for_status()
+        for pos in r.json():
+            if condition_id and pos.get("conditionId") == condition_id:
+                return pos
+            if pos.get("title") and pos["title"].strip().lower() == question.strip().lower():
+                return pos
+    except Exception as e:
+        print(f"# existing-exposure check unavailable ({e}) — verify manually", file=sys.stderr)
+    return None
+
+
 def _best_ask(token_id: str, timeout: float = 12.0) -> float | None:
     """Lowest ask for a CLOB token = the price we'd actually PAY to buy it.
     Hits the CLOB book API directly (gamma midpoints are unreliable — they sit
@@ -193,6 +214,23 @@ def main() -> int:
         print(f"\nDECISION: SKIP — umaResolutionStatus={uma_status}")
         print(f"  Market is in active UMA dispute. Cannot reliably enter.")
         return 0
+
+    # Existing-exposure guard (warn, not block — deliberate adds are fine, the
+    # failure mode is UNKNOWING adds). Sums what a fill would take the ticket to.
+    held = _existing_exposure(m.get("conditionId"), question)
+    if held:
+        held_cost = held.get("initialValue", 0.0)
+        held_side = held.get("outcome", "?")
+        print(f"\n!! EXISTING POSITION in this market: {held_side} "
+              f"cost ${held_cost:.2f} (mark {held.get('curPrice', '?')}, "
+              f"mtm ${held.get('currentValue', 0.0):.2f})")
+        if args.usd:
+            combined = held_cost + args.usd
+            print(f"!! combined ticket after this buy: ${combined:.2f} "
+                  f"= {combined / args.bankroll * 100:.1f}% of bankroll "
+                  f"(15% hard cap = ${args.bankroll * 0.15:.2f}, philosophy line 43)")
+        print(f"!! this is an ADD — confirm cluster caps + run the sizing as a "
+              f"size_change decision, not a fresh entry.")
 
     if yes_p is None:
         print(f"\nDECISION: NEED_REVIEW — could not parse outcomePrices")

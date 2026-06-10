@@ -1278,3 +1278,29 @@ entries added; resolved markets pruned). Weekly P&L written (23d overdue — cad
 Doc-drift flag for operator: philosophy max-5 vs 7-position book (pre-existing; adds are count-neutral).
 Watchlist: SOL/ARB/STX persistent IBKR hits only (ARB DAO vote Jun 16). Satoshi NO: no adds despite Kelly
 deficit (subjective-resolution R-U class — now codified in priors).
+
+## 2026-06-10 ~03:10 UTC — continuation: 3 backlog items shipped + 8 decision backfills applied (one books RESTATEMENT)
+
+Infra (all backlog-sanctioned, bounded): (1) `scripts/bankroll.py` — single authoritative bankroll
+total with WARNINGs for unvalued components; verified $171.87 (+1.1% vs $170 kickoff); wired into
+daily_checkin step 1 (second instance of the hand-assembled-aggregate failure class was this morning's
+$22-vs-$75.68). (2) polyclaude_enter.py existing-exposure guard — live data-api check by conditionId,
+warns with combined-ticket-vs-15%-cap math (DEC-0029 lesson codified); verified live on held trump-out.
+(3) Backlog groomed: bankroll + exposure-guard + stale wrap_pusd entries closed. Also fixed decisions.py
+update --help crash (unescaped % — same class as portfolio_kelly's).
+
+**Decision backfills: all 8 applied (DEC-0008/10/11/12/14/24/26/27), 0 overdue remain.** Delegated
+read-only gathering against primary sources (gamma resolutions, journal git-history, Ostium subgraph);
+parent re-verified the load-bearing row directly before writing.
+
+**BOOKS RESTATEMENT (material to records, not balance):** DEC-0026 had booked the NDX short close as
+"TP +$1.96"; the subgraph shows a STOP-LOSS on 2026-05-14 00:30Z at $29,564 (+8.02% adverse), payout
+$2.945284 = realized −$1.95. Sign error (~$3.91) sat 3+ weeks, propagated into the 05-18 journal +
+pnl_weekly (now visibly corrected, not silently rewritten). Error mechanism: booked from a trade-count
+diff + ASSUMED direction/level. Rule going forward (DEC-0026 lesson): no perp P&L written without the
+subgraph order record (orderAction/profitPercent/amountSentToTrader). Corrected cumulative realized
+since kickoff ≈ −$0.4 post-May-31 (not "break-even"); live bankroll unaffected ($171.87 reads balances).
+Also restated: SPX was a MANUAL close May 28 (+$1.07 net, not "TP ~May 27 +$1.17"); the SPX/NDX pair
+netted −$0.88 (dispersion view inverted). DEC-0014 lesson worth keeping: when a skip is motivated by the
+skeptic's tail scenario, record THAT as the prediction — the R-U skip's stated "resolves NO" was wrong
+while the skip itself was right for the stated reason.
