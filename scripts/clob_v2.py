@@ -345,10 +345,11 @@ def _data_api_positions(address: str) -> list[dict]:
     return r.json() or []
 
 
-def redeem_all() -> dict:
+def redeem_all(dry_run: bool = False) -> dict:
     """Iterate user's positions; redeem any with redeemable=true. Routes negRisk
     markets through NegRiskAdapter and binary non-negRisk through standard CTF.
-    Returns a summary of attempts."""
+    Returns a summary of attempts. dry_run lists redeemables and exits before
+    any tx — safe to hand to read-only delegated ticks."""
     from web3 import Web3
     from eth_account import Account
     address, pk = _load_wallet()
@@ -363,6 +364,13 @@ def redeem_all() -> dict:
     positions = _data_api_positions(address)
     redeemables = [p for p in positions if p.get("redeemable")]
     print(f"found {len(redeemables)}/{len(positions)} redeemable positions")
+    if dry_run:
+        return {"dry_run": True,
+                "redeemable": [{"title": (p.get("title") or "")[:60],
+                                "conditionId": p["conditionId"],
+                                "size": p.get("size"),
+                                "negativeRisk": bool(p.get("negativeRisk"))}
+                               for p in redeemables]}
 
     summary = []
     for p in redeemables:
@@ -509,7 +517,9 @@ def main():
     p.set_defaults(fn=cmd_orderbook)
 
     p = sub.add_parser("redeem-all", help="redeem every redeemable position via the right adapter")
-    p.set_defaults(fn=lambda _a: (print(json.dumps(redeem_all(), indent=2)), 0)[1])
+    p.add_argument("--dry-run", action="store_true",
+                   help="list redeemables and exit before any tx (read-only safe)")
+    p.set_defaults(fn=lambda a: (print(json.dumps(redeem_all(dry_run=a.dry_run), indent=2)), 0)[1])
 
     args = ap.parse_args()
     sys.exit(args.fn(args))

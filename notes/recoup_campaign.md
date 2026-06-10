@@ -1,3 +1,7 @@
+> **STATUS: CLOSED.** Campaign concluded 2026-05-31 (May-31 NO redeemed +$5.62); the R-U loss is fully
+> recouped as of 2026-06-10 — live bankroll $171.87 vs $170 kickoff (`scripts/bankroll.py`). No active
+> tasks remain in this file; it is historical record. Continuation checks can skip it.
+
 # Recoup Campaign — 2026-05-09
 
 ## Trigger

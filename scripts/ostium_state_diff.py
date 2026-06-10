@@ -92,6 +92,52 @@ def fetch_ostium_open_trades() -> list[dict]:
     return trades
 
 
+def fetch_close_records_since(prior_checked_at: str | None) -> list[dict]:
+    """Authoritative close rows from the Ostium subgraph (orderAction, price,
+    profit%, amountSentToTrader) executed since the prior tick.
+
+    Lesson source DEC-0026 (2026-06-10 restatement): a close booked from this
+    script's count-diff plus an ASSUMED direction was a StopLoss recorded as a
+    TakeProfit — sign error −$1.95 vs +$1.96 sat in the books 3+ weeks. No perp
+    P&L gets written without these rows."""
+    try:
+        import asyncio
+        from ostium_python_sdk import NetworkConfig, SubgraphClient
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import _paths as _secrets
+        addr = json.loads(_secrets.path("POLYCLAUDE_WALLET_CRYPTO").read_text())["address"]
+        sg = SubgraphClient(url=NetworkConfig.mainnet().graph_url)
+        hist = asyncio.run(sg.get_recent_history(addr, last_n_orders=10))
+    except Exception as e:
+        return [{"error": f"subgraph unavailable ({e}) — DO NOT book P&L until the "
+                          f"order row (orderAction/profitPercent/amountSentToTrader) is fetched"}]
+
+    cutoff = 0
+    if prior_checked_at:
+        try:
+            cutoff = int(datetime.datetime.fromisoformat(
+                prior_checked_at.replace("Z", "+00:00")).timestamp())
+        except Exception:
+            cutoff = 0
+    rows = []
+    for h in hist:
+        if h.get("orderAction") in ("Open",):
+            continue
+        ts = int(h.get("executedAt") or 0)
+        if ts <= cutoff:
+            continue
+        pair = h.get("pair") or {}
+        rows.append({
+            "pair": f"{pair.get('from','?')}/{pair.get('to','?')}",
+            "orderAction": h.get("orderAction"),
+            "executedAt": datetime.datetime.utcfromtimestamp(ts).isoformat() + "Z",
+            "executionPrice": int(h.get("executionPrice") or h.get("price") or 0) / 1e18,
+            "profitPercent": int(h.get("profitPercent") or 0) / 1e6,
+            "amountSentToTrader": int(h.get("amountSentToTrader") or 0) / 1e6,
+        })
+    return rows
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("--json", action="store_true")
@@ -108,13 +154,16 @@ def main() -> int:
     opened_ids = set(current_ids.keys()) - set(prior_trades.keys())
 
     alerts = []
+    close_records = fetch_close_records_since(cache.get("checked_at")) if closed_ids else []
     for tid in closed_ids:
         t = prior_trades[tid]
         alerts.append({
             "type": "OSTIUM_CLOSED",
             "tradeID": tid,
-            "msg": f"trade {tid} no longer open (likely TP/SL triggered or manual close)",
+            "msg": f"trade {tid} no longer open — authoritative order rows below; "
+                   f"book P&L from amountSentToTrader, never from an assumed direction",
             "prior": t,
+            "close_records": close_records,
         })
     for tid in opened_ids:
         t = current_ids[tid]
@@ -147,6 +196,13 @@ def main() -> int:
             t = a["prior"]
             side = "LONG" if t.get("isBuy") else "SHORT"
             print(f"    was: {side} entry={t.get('openPrice')} collat={t.get('collateral')} tp={t.get('takeProfitPrice')} sl={t.get('stopLossPrice')}")
+        for r in a.get("close_records", []):
+            if "error" in r:
+                print(f"    !! {r['error']}")
+            else:
+                print(f"    subgraph: {r['pair']} {r['orderAction']} @ {r['executionPrice']:.2f} "
+                      f"on {r['executedAt']}  profit {r['profitPercent']:+.2f}%  "
+                      f"sent ${r['amountSentToTrader']:.4f}")
     return 0
 
 

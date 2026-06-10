@@ -1304,3 +1304,21 @@ Also restated: SPX was a MANUAL close May 28 (+$1.07 net, not "TP ~May 27 +$1.17
 netted −$0.88 (dispersion view inverted). DEC-0014 lesson worth keeping: when a skip is motivated by the
 skeptic's tail scenario, record THAT as the prediction — the R-U skip's stated "resolves NO" was wrong
 while the skip itself was right for the stated reason.
+
+## 2026-06-10 ~03:55 UTC — meta-reflection: 3 bounded fixes from tonight's frictions (none forced)
+
+All three findings came from real friction in tonight's session, not hunting: (1) `clob_v2.py
+redeem-all --dry-run` added + verified (0/7) — the gathering subagent had to hand-roll a data-api
+fallback because the real command is state-changing; delegated ticks can now check redeemables safely.
+(2) `ostium_state_diff.py` now auto-prints the authoritative subgraph order rows (orderAction/profit%/
+amountSentToTrader, executed since prior tick) on any detected close — kills the DEC-0026 error
+mechanism (count-diff + assumed direction = the −$1.95-booked-as-+$1.96 sign error) at the source;
+forced-close test correctly surfaced all 3 historical rows incl. the NDX StopLoss. (3) CLOSED header on
+notes/recoup_campaign.md — every continuation check was re-deriving "it's closed"; now it says so.
+
+Backlogged (not unilateral): philosophy-doc refresh pass pending the operator's max-5 ruling (also
+covers the stale "$70 of capital" on line 14). Alpha-source review: nothing new since the last
+reflection — fade+gate working (book +2.98%), arb scanners persistently 0 (likely arbed out at our
+scale; scans stay because they're cheap), favorite-fade needs near-resolution candidates the current
+long-dated book doesn't generate. The scanner-vs-gate disagreement on peace-deal-Jun-15 (+3.4 vs −8pp)
+is a known-class artifact, already journaled; the mandatory gate is the control, no build needed.
