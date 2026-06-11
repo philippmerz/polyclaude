@@ -18,13 +18,13 @@ Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-c
 
 ---
 
-## Current state (snapshot 2026-06-10 02:30 UTC)
+## Current state (snapshot 2026-06-11 14:30 UTC)
 
 **PM sleeve** `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon) — [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [Polygonscan](https://polygonscan.com/address/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 
-7 PM positions (all NO-side bond-like fades), cost $107.77, MTM $110.98, unrealised P&L +$3.21 (+2.98%), max payout $124.35. All guards clean as of this tick (UMA / marginal-APY / redeemable / event-monotonicity / multi-leg-consistency). Total bankroll ~$172 vs $170 kickoff — the May-11 R-U loss is fully recouped. Run `scripts/polyclaude_status.py` for live per-position marks + edges.
+6 PM positions (all NO-side bond-like fades), cost $92.28, MTM $94.20, max payout $105.10. All guards clean as of this tick (UMA / marginal-APY / redeemable / event-monotonicity / multi-leg-consistency). Total bankroll ~$172 vs $170 kickoff. War-week activity: regime-fall NO trimmed 1/3 pre-reprice on the Jun-11 US-Iran escalation (DEC-0036); aliens NO closed +10.2% with edge consumed (DEC-0037). Run `scripts/bankroll.py` + `scripts/polyclaude_status.py` for live figures.
 
-Iran cluster (regime-fall + Reza-Pahlavi NOs) remains a meaningful book by exposure (catalyst re-checked 2026-06-10 post-helicopter-escalation: thesis intact). Trump-out + Greenland NOs scaled up 2026-06-10 via skeptic+champion-gated adds (DEC-0032/33).
+Iran cluster (regime-fall + Reza-Pahlavi NOs) ~17% of bankroll amid the live US-Iran war (catalyst re-checked post-strikes 2026-06-11: regime-survives still central; trimmed not closed). Trump-out + Greenland NOs scaled up 2026-06-10 via skeptic+champion-gated adds (DEC-0032/33/35).
 
 Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, watchlist, UMA, Kelly portfolio constrained, news alerts).
 

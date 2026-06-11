@@ -1,5 +1,5 @@
 {
-  "next_id": 37,
+  "next_id": 38,
   "decisions": [
     {
       "id": 1,
@@ -696,6 +696,25 @@
         "trim",
         "escalation",
         "risk-mgmt"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 37,
+      "timestamp": "2026-06-11T14:13:02Z",
+      "type": "close_position",
+      "thesis": "CLOSED aliens NO 13.25 sh @ 0.89 ($11.79, +$1.09 = +10.2% in 6d, tx 0x9efe..c85c). Mark drifted +3pp to 0.895 on no news -> ABOVE bridge fair (0.875, +2.1pp = TRIM threshold) AND static edge -4.5pp vs p_no 0.85 prior (market now MORE confident in NO than my model). Hold-to-resolution EV at my prior = 0.85 x 13.25 = $11.26 < $11.79 exit. The risky catalysts (Aug-18 UAP EO declassification deadline, Oct-31 DNI report) are AHEAD \u2014 selling locks the gain before them. Framework-unanimous close; bid depth 841k @ 0.89.",
+      "confidence": "high",
+      "prediction": "Aliens YES reprices upward (NO mark falls below 0.89 exit) around the Aug-18 EO window, OR market resolves NO at maturity confirming p~0.85 \u2014 either validates exiting at 0.895 with edge consumed.",
+      "size_usd": 11.79,
+      "resolution_at": "2026-08-19",
+      "tags": [
+        "aliens",
+        "close",
+        "fade-basket",
+        "edge-consumed"
       ],
       "outcome": null,
       "calibration_delta": null,

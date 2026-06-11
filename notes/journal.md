@@ -1506,3 +1506,28 @@ Fired on "US and Iran trade strikes again, after Trump warns Tehran" — continu
 regime-relevant development. Books: regime-fall NO bid 0.85→0.86 (FIRMER — market pricing survival up
 through continued strikes, consistent with Feb–Apr resilience), Pahlavi 0.939/0.941 flat. Early read
 AGAINST DEC-0036's <0.85-within-72h prediction; window open till Jun 14. No action.
+
+## 2026-06-11 ~14:00 UTC — Thursday 14:00 cron tick: aliens NO closed +10.2%; peace-deal leg now efficient (3rd correct gate-reject)
+
+Delegated gathering: war continues without structural change (day-2 strikes, Iran calls ceasefire
+"practically meaningless", US DISPUTES Hormuz closure, 3 crew killed; no occupation/uprising/defections).
+Guards all CLEAN (UMA 15/0, marginal 7/7, redeem 0/7, monotonicity 0/959, consistency 0 real, Ostium 0).
+News persistence verified working (5 tier-2 entries overnight). Bankroll $171.75 pre-trade.
+
+**CLOSED aliens NO (DEC-0037): 13.25 sh @ 0.89 = $11.79, +$1.09 realized (+10.2% in 6d).** Mark drifted
++3pp to 0.895 on no news → above bridge fair (+2.1pp = TRIM threshold) AND -4.5pp static vs p 0.85; market
+now more confident than my model; Aug-18/Oct-31 UAP catalysts are the risk AHEAD. Framework-unanimous,
+841k bid depth. Fade-basket logic: harvest when the market converges to your prior BEFORE the catalysts.
+
+**Peace-deal-Jun-15 NO: 3rd gate evaluation, 3rd correct reject — now on EFFICIENCY.** Fresh check 3%
+central (1-6%) vs market YES 0.035: the strikes are fully priced into this leg; +0.5pp central edge fails
+the pessimistic bound. (Jun-10 reject: market too cheap at 4.5% vs 12% central. Today: market converged.)
+Kharg-lost-by-Jun-30 NO (+343% APY) skipped on correlated-invasion-tail (US-invades market at 26.5%!).
+Hormuz legs: closure now US-disputed; 0.995 NO = no edge after op-cost.
+
+Priors trued: regime-fall p_no 0.93→0.89 (post-strike synthesis; kills false +$6.99 scale-in flag),
+aliens entry removed. Regime-fall books: bid softened 0.86→0.85, mark flat 0.855 — DEC-0036 window open
+to Jun 14. pUSD now ~$23.06 — held ON-VENUE deliberately through the Jun-15/16 listing cycle (known
+listing event 1-4d out beats a wrap round-trip to Aave), sweep after Jun 16. Book: 6 positions, cost
+$92.28, MTM $94.13 (+2.0%); realized to date this week: +$0.17 (trim) +$1.09 (aliens) = +$1.26.
+Watchlist: SOL 4/4 / CEG / ARB(2.5/4 pre-vote) / STX / EIGEN — all IBKR, all known. ARB vote in 5d.
