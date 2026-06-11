@@ -1499,3 +1499,10 @@ convention was lost in a context compaction, my prose-style idle replies ("Nothi
 it. Fix: re-adopted the contract + wrote it to persistent memory (survives future compactions). No code
 change — the strict regex is correct by design (prevents false-positive skips). Class note: compaction
 loses behavioral contracts that live only in conversation; load-bearing conventions belong in memory files.
+
+## 2026-06-11 ~04:30 UTC — tier-1 delta tick #2 (no state change; books firming, not falling)
+
+Fired on "US and Iran trade strikes again, after Trump warns Tehran" — continuing exchange, no
+regime-relevant development. Books: regime-fall NO bid 0.85→0.86 (FIRMER — market pricing survival up
+through continued strikes, consistent with Feb–Apr resilience), Pahlavi 0.939/0.941 flat. Early read
+AGAINST DEC-0036's <0.85-within-72h prediction; window open till Jun 14. No action.
