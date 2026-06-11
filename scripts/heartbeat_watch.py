@@ -132,6 +132,33 @@ def check_news_watcher(state: dict) -> None:
               f"news_watcher state file unchanged for {age // 60} min "
               f"(threshold {NEWS_STATE_STALE_SECONDS // 60}); poll loop may be stuck")
 
+    # Output-integrity invariant (2026-06-11 lesson: liveness != output integrity —
+    # 30h of alerts were LOGGED but never PERSISTED to news_alerts.jsonl and every
+    # PID/state check above passed). If the watcher log shows alert lines but the
+    # jsonl hasn't grown in far longer, the persistence layer is broken.
+    try:
+        from pathlib import Path
+        repo = Path(__file__).resolve().parent.parent
+        log_p = repo / "logs" / "news_watcher.log"
+        jsonl_p = repo / "notes" / "news_alerts.jsonl"
+        if log_p.exists() and jsonl_p.exists():
+            log_alert_mtime = None
+            # cheap: if the log's last 50 lines contain an alert line, use log mtime
+            with open(log_p, "rb") as f:
+                f.seek(max(0, log_p.stat().st_size - 8192))
+                tail = f.read().decode(errors="replace")
+            if "[watcher] alert tier" in tail:
+                log_alert_mtime = int(log_p.stat().st_mtime)
+            if log_alert_mtime:
+                jsonl_age_vs_log = log_alert_mtime - int(jsonl_p.stat().st_mtime)
+                if jsonl_age_vs_log > 6 * 3600:
+                    _emit(state, "news_alerts_persistence_diverged",
+                          f"watcher log shows recent alerts but news_alerts.jsonl is "
+                          f"{jsonl_age_vs_log // 3600}h older — persistence layer broken "
+                          f"(2026-06-11 class); cron ticks are blind to news")
+    except Exception:
+        pass
+
 
 def check_telegram_listener(state: dict) -> None:
     pid = _read_pid_file("POLYCLAUDE_LISTENER_PID")

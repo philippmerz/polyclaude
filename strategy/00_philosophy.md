@@ -82,7 +82,12 @@ Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
    LITERAL gamma resolution criteria with a multiplicative breakdown. Lesson sources:
    DEC-0016 (missed same-day Pentagon UAP program; market was right), US-invade-Iran
    (98%→2.2% swing once criteria-anchored), peace-deal-Jun-15 2026-06-10 (scanner said
-   +3.4pp, gate said −8pp; gate killed a scanner artifact).
+   +3.4pp, gate said −8pp; gate killed a scanner artifact). **Breaking-news caveat
+   (2026-06-11):** during fast-moving windows the haiku's websearch lags by
+   minutes-to-hours (one check said "neither is scheduled" mid-strikes) — treat its
+   catalysts-in-window as a stale floor, re-derive the live branch yourself, and
+   distrust single-run swings in its central (5.5%→18% overnight was part real,
+   part run-to-run variance; the corrected synthesis sat between).
 4. **Resolution-criteria risk is PRICED, not banned.** Subjective wording ("permanent
    deal", "identity revealed", "widely reported") lowers true p_win via UMA-loose
    risk. Quantify: weight `P(YES) = 0.7×strict + 0.3×loose`; for multi-date events the

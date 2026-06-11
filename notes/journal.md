@@ -1478,3 +1478,15 @@ prediction not yet started; US-overnight books are calm/asleep). No action.
 Damping for the war week: auto-fire cooldown 30→90 min (every fresh headline phrasing re-fires tier-1;
 first fire engages the session, repeats within the hour are delta-noise — marks/UMA can't move faster
 than that matters). Daemon restarted pid 1462180.
+
+## 2026-06-11 ~02:50 UTC — meta-reflection: codified tonight's lessons (2 bounded items)
+
+(1) heartbeat_watch now checks OUTPUT INTEGRITY, not just liveness: compares watcher-log alert
+recency vs news_alerts.jsonl mtime, alerts on >6h divergence ("persistence layer broken — cron
+ticks blind to news"). The 30h blindness would have been caught at hour 6 instead of hour 30.
+Ran clean once. Also tidied the `if True:` from the persistence hotfix; watcher restarted
+(pid 1462528). (2) Doctrine §4.3 breaking-news caveat: haiku checks lag fast windows — treat
+catalysts-in-window as stale floor, re-derive the live branch, distrust single-run central swings
+(tonight: 5.5%→18% was part real, part variance; synthesis sat between). Codifies the correction
+behavior used twice tonight so future sessions inherit it. No alpha findings forced — the Jun-15/16
+listing cycle remains the live opportunity watch.

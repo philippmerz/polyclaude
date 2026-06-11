@@ -527,17 +527,16 @@ def poll_once(config: dict, state: dict) -> int:
             # UNCONDITIONAL for any send (2026-06-11: 30h of Iran-war alerts were
             # logged but dropped here because impacts parsed empty — a send-worthy
             # alert with unknown impacts is still an alert; the cron tick decides).
-            if True:
-                _append_news_alert({
-                    "ts": dt.datetime.utcnow().isoformat(timespec="seconds") + "Z",
-                    "tier": tier,
-                    "feed": feed["name"],
-                    "matched": kw,
-                    "title": title,
-                    "link": link,
-                    "agent_reason": agent_reason,
-                    "impacts": impacts,
-                })
+            _append_news_alert({
+                "ts": dt.datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                "tier": tier,
+                "feed": feed["name"],
+                "matched": kw,
+                "title": title,
+                "link": link,
+                "agent_reason": agent_reason,
+                "impacts": impacts,
+            })
             print(f"[watcher] alert tier{tier} kw={kw!r} feed={feed['name']} title={title[:80]!r}", flush=True)
             new_alerts += 1
             if tier == 1:
