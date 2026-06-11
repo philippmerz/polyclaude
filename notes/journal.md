@@ -1490,3 +1490,12 @@ catalysts-in-window as stale floor, re-derive the live branch, distrust single-r
 (tonight: 5.5%→18% was part real, part variance; synthesis sat between). Codifies the correction
 behavior used twice tonight so future sessions inherit it. No alpha findings forced — the Jun-15/16
 listing cycle remains the live opportunity watch.
+
+## 2026-06-11 ~04:10 UTC — reflection: idle-churn root cause = lost reply convention (memory fix, no code)
+
+Six empty continuation/reflection cycles fired through the idle war night. Root cause: inject_prompt.sh's
+skip-if-idle guard (operator-designed 2026-06-04) requires the last reply to START with "Idle" — that
+convention was lost in a context compaction, my prose-style idle replies ("Nothing new—") never tripped
+it. Fix: re-adopted the contract + wrote it to persistent memory (survives future compactions). No code
+change — the strict regex is correct by design (prevents false-positive skips). Class note: compaction
+loses behavioral contracts that live only in conversation; load-bearing conventions belong in memory files.
