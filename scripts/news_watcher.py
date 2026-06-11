@@ -547,7 +547,11 @@ def poll_once(config: dict, state: dict) -> int:
         # Rate-limit auto-cron firing so a multi-headline event doesn't spawn
         # several simultaneous check-ins.
         last_trigger = state.get("last_cron_trigger", 0)
-        if now - last_trigger >= 1800:  # 30-min minimum between auto-fires
+        # 90-min minimum between auto-fires (raised from 30 2026-06-11: during an
+        # active war week every fresh headline phrasing re-fires tier-1; the first
+        # fire engages the session, repeat fires within the hour are delta-noise.
+        # Marks/UMA can't move faster than this matters.)
+        if now - last_trigger >= 5400:
             fire_cron_tick()
             state["last_cron_trigger"] = now
 

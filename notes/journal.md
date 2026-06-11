@@ -1466,3 +1466,15 @@ Book post-trim: 7 markets, cost $102.98, MTM $105.78 (+2.72%), max payout $118.3
 fallback). Guards otherwise clean: UMA 15/0, marginal-APY 7/7, redeemable 0/7, monotonicity 0,
 consistency 0, Ostium 0/0. Watchlist: SOL revet upgraded to 4/4 "tranche 1 now" (surfaced), CEG in
 zone, ARB 2.5/4 "premature" (vote in 5d), EIGEN $0.176 above washout band.
+
+## 2026-06-11 ~02:30 UTC — tier-1 auto-fire delta tick (new keywords working; rate limit raised 30→90min)
+
+The 02:27 tick was MY OWN new tier-1 keyword firing on a fresh Guardian headline ("US strikes Iran for
+second day, ceasefire appears close to collapse") — pipeline fix verified end-to-end (tier-1 fired,
+persisted to jsonl, auto-spawned the checkin). Delta: SAME event continuing, no new state change; Iran
+leg books UNMOVED in 27 min (regime-fall NO 0.85/0.87, Pahlavi NO 0.94/0.942 — DEC-0036's repricing
+prediction not yet started; US-overnight books are calm/asleep). No action.
+
+Damping for the war week: auto-fire cooldown 30→90 min (every fresh headline phrasing re-fires tier-1;
+first fire engages the session, repeats within the hour are delta-noise — marks/UMA can't move faster
+than that matters). Daemon restarted pid 1462180.
