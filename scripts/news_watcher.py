@@ -223,6 +223,8 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
     — fail-OPEN so the operator sees raw alerts rather than silent drops.
     """
     pos = _positions_summary_blocking()
+    if "positions read failed" in pos:
+        print(f"[watcher] WARN positions block unavailable for agent filter", flush=True)
     body = (summary or "")[:600].replace("\n", " ").strip()
     prompt = (
         "You filter news for polyclaude (autonomous trading project) AND assess "
@@ -521,8 +523,11 @@ def poll_once(config: dict, state: dict) -> int:
                     f"\nauto-spawning cron tick for sanity-check + decision."
                 )
                 telegram_send(msg)
-            # Persist to structured alerts log for next cron tick to consume
-            if tier == 1 or impacts:
+            # Persist to structured alerts log for next cron tick to consume.
+            # UNCONDITIONAL for any send (2026-06-11: 30h of Iran-war alerts were
+            # logged but dropped here because impacts parsed empty — a send-worthy
+            # alert with unknown impacts is still an alert; the cron tick decides).
+            if True:
                 _append_news_alert({
                     "ts": dt.datetime.utcnow().isoformat(timespec="seconds") + "Z",
                     "tier": tier,

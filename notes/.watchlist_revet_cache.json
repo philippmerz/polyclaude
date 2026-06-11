@@ -9,20 +9,20 @@
     }
   },
   "SOL": {
-    "ts": 1781056905.032923,
+    "ts": 1781143408.838119,
     "result": {
       "verdict": "WATCH",
-      "score": "3.25/4",
-      "summary": "**Current price $67 does not meet entry threshold.**",
+      "score": "4/4",
+      "summary": "**Now for tranche 1 ($50K example: $15K at $64); Add aggressively if it falls to $50\u2013$55 (panic flush); Reload on strength to $100\u2013$150 post-Alpenglow if it holds.** Current price of $64/SOL is already at 52-week low with all four thesis di",
       "fresh": true
     }
   },
   "ARB": {
-    "ts": 1781057013.8849974,
+    "ts": 1781143543.9365199,
     "result": {
-      "verdict": "ERROR",
-      "score": "?/4",
-      "summary": "**CONDITIONAL ENTRY: After June 16, 2026 DAO vote.** If DAO votes to approve a revenue-sharing mechanism allocating \u22655% of sequencer fees to ARB stakers effective by 2026-Q3, ENTER at current price ($0.0805) or dips to $0.06\u2013$0.07. If vote ",
+      "verdict": "WATCH",
+      "score": "2.5/4",
+      "summary": "**Not now.** Current entry is premature. Optimal entries are:",
       "fresh": true
     }
   }

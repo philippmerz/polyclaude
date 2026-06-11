@@ -1,5 +1,5 @@
 {
-  "next_id": 36,
+  "next_id": 37,
   "decisions": [
     {
       "id": 1,
@@ -677,6 +677,25 @@
         "greenland",
         "fade-basket",
         "cap-fill"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 36,
+      "timestamp": "2026-06-11T02:23:49Z",
+      "type": "size_change",
+      "thesis": "TRIM regime-fall NO: sold 13/33.75 sh @ 0.85 bid ($11.05, tx 0xc6dc..cf42) ~1-2h after US struck multiple Iran targets + Iran closed Hormuz + hit Bahrain/Kuwait bases. Fresh catalyst check jumped P(YES) 5.5%->18% central; corrected for its aggressive conditional chains (60% topple-given-uprising vs Feb-Apr survival precedent): my P(YES) ~10-12% vs market 13.5% -> edge compressed +7pp -> ~0-3pp on REAL state change (not rhetoric \u2014 the distinction vs the May-31 hold-through-panic). Kelly flagged oversized pre-strike (-$5.49); corrected-prior Kelly optimal ~$18 vs $28.86 held. Sold into a NOT-yet-repriced book (bid 0.85x999) rather than after. Kept 20.75 sh ($17.6) \u2014 thesis (regime survives) still central; breach paths (occupation/uprising-success) not present tonight. Pahlavi NO untouched (+3pp even at elevated fall prob). Proceeds stay as pUSD dry powder through the Jun-15/16 listing cycle.",
+      "confidence": "medium",
+      "prediction": "Regime-fall NO mark drops below 0.85 within 72h as books absorb the strikes (validating pre-reprice trim), then position resolves $1.00 on Dec 31 (regime survives). If mark instead recovers >0.88 within a week, the trim was overcautious.",
+      "size_usd": 11.05,
+      "resolution_at": "2026-06-18",
+      "tags": [
+        "iran",
+        "trim",
+        "escalation",
+        "risk-mgmt"
       ],
       "outcome": null,
       "calibration_delta": null,

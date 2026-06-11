@@ -1426,3 +1426,43 @@ Third reflection cycle today; the prior two + doctrine rewrite already consumed 
 Since 13:49: Greenland cap-fill + ARB delegation prep, all verified at ship time. Alpha check: the
 "watch for newly-listed Iran by-date legs Jun 15/16" idea is already covered by discover_markets'
 since-last-scan design — no build needed, ticks will catch it. Idle.
+
+## 2026-06-11 ~02:00 UTC — ESCALATION TICK: US strikes Iran, Hormuz closed → regime-fall NO trimmed 1/3; 30h news-pipeline blindness found + fixed
+
+**Overnight (01:04–01:54Z, ~1h pre-tick):** US struck "multiple targets" across Iran (follow-through on
+the helicopter-downing threats); Iran announced CLOSURE OF THE STRAIT OF HORMUZ, struck ships in the
+strait, and hit US bases in Bahrain + Kuwait. Largest escalation of the war for the book (Iran cluster
+was $39.25 = 23% of bankroll).
+
+**TRIM (DEC-0036): sold 13/33.75 regime-fall NO @ 0.85 bid ($11.05, +$0.17 realized, tx 0xc6dc..cf42).**
+Fresh catalyst check jumped P(YES) 5.5% → 18% central; corrected for its aggressive chains (60%
+topple-given-uprising vs the Feb–Apr survival precedent) → my P(YES) ~10-12% vs market 13.5%. Edge
+compressed +7pp → ~0-3pp on REAL state change — the distinction vs May-31's rhetoric-driven panic
+(where HOLD was right). Kelly was flagging oversized even pre-strike; corrected-prior optimal ~$18 vs
+$28.86 held. Sold into the pre-reprice book (bid 0.85×999 depth). Kept 20.75 sh ($17.6) — regime-survives
+still central; breach paths (occupation / successful uprising) not present. Pahlavi NO untouched
+(conditional structure keeps +3pp). Cluster now ~17% of bankroll. Proceeds stay pUSD through the
+Jun-15/16 listing cycle.
+
+**Ceasefire-over-Jun-12 YES @ 0.073 evaluated → gate REJECTED** (central 5%, range 2-15%; criteria
+require formal termination announcement, violations excluded; Trump's pattern is enforcement-framing).
+Second chaos-trade the gate killed this week.
+
+**NEWS-PIPELINE FAILURE (30h blind) FOUND + FIXED:** news_alerts.jsonl got ZERO entries Jun 9 19:00Z →
+Jun 11 despite the watcher logging ~16 Iran alerts. Mechanism: tier-2 SENDs with empty-parsed impacts
+were silently dropped by `if tier == 1 or impacts:` — fail-open upstream turned fail-closed at the
+persistence gate. Live-test today parses impacts perfectly → intermittent inner cause (not the timeout
+path; 0 "agent unavailable" in log), root cause not fully determinable from outside. Defense shipped:
+(1) UNCONDITIONAL persistence of every tier-2 send; (2) visible WARN when the positions block is
+unavailable to the filter; (3) 6 narrow tier-1 war-state-change keywords (hormuz closure, us strikes
+iran, attacks on us bases) so book-relevant escalations auto-fire the checkin; daemon restarted
+(pid 1462002). **Honest correction: yesterday's "19h silence = genuine quiet (daemon alive, heartbeat
+clean)" was WRONG — I verified process liveness, not output-path integrity. Lesson: a pipeline is alive
+when its OUTPUT is fresh, not when its PID exists.** (Also: heartbeat_watch checks the wrong layer for
+this failure class — it watches state-file freshness, not alert-persistence.)
+
+Book post-trim: 7 markets, cost $102.98, MTM $105.78 (+2.72%), max payout $118.35. Bankroll ~$171.5
+(Base RPC transiently unpriced $4.54 twice in 2 days — WARNED loudly both times; consider a 4th RPC
+fallback). Guards otherwise clean: UMA 15/0, marginal-APY 7/7, redeemable 0/7, monotonicity 0,
+consistency 0, Ostium 0/0. Watchlist: SOL revet upgraded to 4/4 "tranche 1 now" (surfaced), CEG in
+zone, ARB 2.5/4 "premature" (vote in 5d), EIGEN $0.176 above washout band.

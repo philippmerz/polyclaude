@@ -166,10 +166,16 @@ def main() -> int:
             for label, taddr in tokens.items():
                 c = w.eth.contract(address=Web3.to_checksum_address(taddr), abi=ERC20_ABI)
                 dec = NONSTABLE[label][1] if label in NONSTABLE else 6
-                try:
-                    bal = c.functions.balanceOf(addr).call() / 10 ** dec
-                except Exception:
-                    warnings.append(f"{chain} {sleeve} {label}: balanceOf failed — not counted")
+                bal = None
+                for _attempt in range(3):  # flaky public RPCs: per-call retry (Base aUSDC failed 2x 2026-06-11)
+                    try:
+                        bal = c.functions.balanceOf(addr).call() / 10 ** dec
+                        break
+                    except Exception:
+                        import time as _t
+                        _t.sleep(1.5)
+                if bal is None:
+                    warnings.append(f"{chain} {sleeve} {label}: balanceOf failed 3x — not counted")
                     continue
                 usd = bal * prices[label] if label in NONSTABLE else bal
                 if label in NONSTABLE and bal > 0 and prices.get(label, 0) == 0:
