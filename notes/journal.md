@@ -1531,3 +1531,31 @@ to Jun 14. pUSD now ~$23.06 — held ON-VENUE deliberately through the Jun-15/16
 listing event 1-4d out beats a wrap round-trip to Aave), sweep after Jun 16. Book: 6 positions, cost
 $92.28, MTM $94.13 (+2.0%); realized to date this week: +$0.17 (trim) +$1.09 (aliens) = +$1.26.
 Watchlist: SOL 4/4 / CEG / ARB(2.5/4 pre-vote) / STX / EIGEN — all IBKR, all known. ARB vote in 5d.
+
+## 2026-06-12 ~02:00 UTC — Friday 02:00 cron tick: ENTERED peace-deal-Jun-15 NO $11.31 (the listing-cycle trade)
+
+**Overnight trajectory flip:** Trump deal-pivot (23:23Z — "agreement would include opening Hormuz; deal
+documents in final shape"). De-escalation WITH the sitting regime = tailwind for held NOs (regime-fall
+mark 0.855→0.875 favorable; DEC-0036's <0.85-by-Jun-14 prediction now likely MISSES — will score honestly).
+War structurally unchanged otherwise (no occupation/uprising; ceasefire-over-by-Jun-12 resolving NO at
+0.012 — the market we gate-rejected twice as YES-bait).
+
+**ENTRY (DEC-0038): peace-deal-Jun-15 NO 13.1 sh @ ~0.863 ($11.31).** Market repriced YES 0.035→0.145
+overnight on the pivot — 4th gate evaluation of this series, first time it offered edge on the NO side at
+a sane price. Strict case: "documents in final shape" = the explicitly-temporary 60-day MOU, which does
+NOT satisfy "permanent" (May-31 resolved NO with a reached deal floating); signed permanent deal in 3d
+≈ 3-5%. Loose-weighted (Dec-31 sibling 0.75 = loose signal, tempered 85/15 by this series' own strict
+precedent): P(YES) 6-9% vs market 14.5% → +5.5-8pp central. Haiku gate (1.5%) was STALE on the pivot
+(cited suspended talks + future-dated events) — breaking-news caveat applied in the opposite direction
+this time; re-derived per doctrine. Sized $11 for the known −47pp-rhetoric-whiplash class; anti-correlated
+with iran-regime NOs. Plan: HOLD through weekend headline excursions unless an actual signing-with-
+permanence occurs. Profit if NO: +$1.80 (+15.9%) on Sunday.
+
+**Execution notes:** polyclaude_enter rejected by CLOB maker-2dec rule on this 0.001-tick market
+($11.219 maker) — backlogged a precision fix; executed via clob_v2 with clean maker/taker ($11.31/0.87
+→ exactly 13.1 sh, filled at book's better 0.863). pUSD $11.70 still staged for the rest of the cycle.
+
+Book: 7 positions, cost $103.59, MTM ~$106. Guards all clean (UMA 15/0, marginal 6/6→7/7, redeem 0,
+monotonicity 0/957, consistency 0, Ostium 0). Kelly trim flag on regime-fall (−$10.46 at trued prior)
+acknowledged — already trimmed Jun-11; bridge holds the remainder. Watchlist: SOL/ARB/STX/CEG persistent
+IBKR hits. ARB vote in 4d (entry armed). FOMC Jun 16-17.

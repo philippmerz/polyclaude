@@ -1,5 +1,5 @@
 {
-  "next_id": 38,
+  "next_id": 39,
   "decisions": [
     {
       "id": 1,
@@ -715,6 +715,25 @@
         "close",
         "fade-basket",
         "edge-consumed"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 38,
+      "timestamp": "2026-06-12T02:13:18Z",
+      "type": "open_position",
+      "thesis": "Peace-deal-Jun-15 NO 13.1 sh @ ~0.863 ($11.31, tx 0x85f9..3bdb) \u2014 4th gate evaluation of this series, 1st entry. Market repriced YES 0.035\u21920.145 overnight on Trump's deal-pivot ('documents in final shape, would reopen Hormuz'). Strict-criteria case: the documents are most plausibly the explicitly-temporary 60-day MOU (does NOT satisfy 'permanent' \u2014 the bar May-31 itself enforced when it resolved NO with a reached-but-unsigned deal floating); signed PERMANENT deal in 3d from active-hostility whiplash \u2248 3-5%. Loose-risk weighted (Dec-31 sibling at 0.75 = loose signal; tempered by this series' OWN strict precedent, 85/15): P(YES) ~6-9% vs market 14.5% \u2192 +5.5-8pp central, ~+2pp at honest pessimistic. Haiku gate said 1.5% but was stale on the pivot (cited suspended talks + future-dated events) \u2014 applied the breaking-news caveat, re-derived. Known class behavior: May-31 sibling drew down \u221247pp on rhetoric before resolving NO at $1.00 \u2014 sized $11 for that variance, anti-correlated with iran-regime NOs (deal signs \u2192 regime entrenched \u2192 those win).",
+      "confidence": "medium",
+      "prediction": "No SIGNED PERMANENT US-Iran peace deal by 2026-06-15 EOD; market resolves NO at $1.00 (+$1.80). Expect mark whiplash on weekend Trump headlines (possible \u221220-40pp excursions) \u2014 HOLD through rhetoric per Brownian-bridge conditional logic unless an actual signing ceremony with permanence language occurs.",
+      "size_usd": 11.31,
+      "resolution_at": "2026-06-15",
+      "tags": [
+        "iran-peace",
+        "fade",
+        "listing-cycle",
+        "strict-criteria"
       ],
       "outcome": null,
       "calibration_delta": null,
