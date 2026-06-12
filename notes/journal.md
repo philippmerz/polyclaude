@@ -1569,3 +1569,21 @@ news_alerts.jsonl headlines into the haiku prompt as "treat as ground truth for 
 gate was stale-on-breaking-news twice in 24h (missed the strikes being priced, then missed the
 deal-pivot); the live feed (persistence fixed yesterday) is now its anchor. Dry-test surfaced exactly
 the 6 headlines tonight's gate lacked, incl. the 23:23Z pivot. Both verified; weekend cycle is covered.
+
+## 2026-06-12 ~14:00 UTC — Friday 14:00 cron tick (flat-favorable, no action)
+
+Guards all CLEAN (UMA 16/0, marginal 7/7, redeem 0/7, monotonicity 1 tiny sub-op-cost violation,
+consistency 0 real, Ostium 0/0). Bankroll $173.03 — NEW HIGH (+1.8% vs kickoff). Book 7 positions,
+cost $103.59, MTM $106.81 (+3.11%).
+
+Peace-deal-Jun-15 NO +4.1pp favorable in 12h (0.863→0.901; bid 0.894 liquid): Iran DENIED final
+agreement ("no final peace agreement reached" 07:08Z), US shot down Iranian drones near Hormuz hours
+after Trump's peace claim, oil fell on deal hopes — DEC-0038 confirming without the expected whiplash
+yet. 2.4d to resolution, +$1.30 remaining. HOLD. Regime-fall 0.875 flat (DEC-0036 prediction <0.85
+by Jun-14: currently MISSING — scores Sunday, likely "overcautious", will record honestly).
+
+Kelly scale-in flags all correctly gate-blocked (Satoshi banned class; Pahlavi fails pessimistic
+bound 0.92<0.945; Greenland + Trump-out at 15% ticket caps). ARB auto-revet upgraded ENTER 3.5/4 —
+aligns with the armed Jun-16 vote-conditional plan (unlock $7-10M sell pressure noted; post-flush
+fill preferred). No Telegram per flat-tick cadence (msg 451 set the whiplash expectation; resolution
+Sunday is the next ping).

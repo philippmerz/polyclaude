@@ -9,20 +9,20 @@
     }
   },
   "SOL": {
-    "ts": 1781143408.838119,
+    "ts": 1781272955.7070737,
     "result": {
       "verdict": "WATCH",
-      "score": "4/4",
-      "summary": "**Now for tranche 1 ($50K example: $15K at $64); Add aggressively if it falls to $50\u2013$55 (panic flush); Reload on strength to $100\u2013$150 post-Alpenglow if it holds.** Current price of $64/SOL is already at 52-week low with all four thesis di",
+      "score": "1.5/4",
+      "summary": "1. **Fiserv adoption data confirmation** (Q4 2026): >100 active institutions executing settlement via FIUSD monthly \u2192 WATCH and size at Kelly/4.",
       "fresh": true
     }
   },
   "ARB": {
-    "ts": 1781143543.9365199,
+    "ts": 1781273130.3315585,
     "result": {
-      "verdict": "WATCH",
-      "score": "2.5/4",
-      "summary": "**Not now.** Current entry is premature. Optimal entries are:",
+      "verdict": "ENTER",
+      "score": "3.5/4",
+      "summary": "Entry justified NOW at current $0.08 level OR on post-unlock dip to $0.07-$0.075 (June 16 unlock may trigger $7M-$10M selling). Valuation is at extreme compression: 3% of TVL value, sub-$1 per transaction cost. Position size: Kelly/4 = 25% ",
       "fresh": true
     }
   }
