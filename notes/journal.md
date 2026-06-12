@@ -1559,3 +1559,13 @@ Book: 7 positions, cost $103.59, MTM ~$106. Guards all clean (UMA 15/0, marginal
 monotonicity 0/957, consistency 0, Ostium 0). Kelly trim flag on regime-fall (−$10.46 at trued prior)
 acknowledged — already trimmed Jun-11; bridge holds the remainder. Watchlist: SOL/ARB/STX/CEG persistent
 IBKR hits. ARB vote in 4d (entry armed). FOMC Jun 16-17.
+
+## 2026-06-12 ~02:45 UTC — reflection: 2 fixes shipped same-session as their lessons
+
+(1) polyclaude_enter fine-tick precision (bit DEC-0038's entry 40 min earlier): limit price now rounds
+up to the next 0.01 on sub-0.01-tick markets — on-grid, FAK fills at book prices, integer×2-dec keeps
+maker/taker clean. Unit-tested both tick paths. (2) catalyst_check now injects the latest matching
+news_alerts.jsonl headlines into the haiku prompt as "treat as ground truth for current state" — the
+gate was stale-on-breaking-news twice in 24h (missed the strikes being priced, then missed the
+deal-pivot); the live feed (persistence fixed yesterday) is now its anchor. Dry-test surfaced exactly
+the 6 headlines tonight's gate lacked, incl. the 23:23Z pivot. Both verified; weekend cycle is covered.

@@ -385,11 +385,17 @@ def main() -> int:
     import math
     tick_dec = max(0, -int(round(math.log10(tick))))  # 0.01 → 2 decimals
     buy_price = round(math.ceil(round(mark / tick, 6)) * tick, tick_dec)
+    # CLOB amount-precision rule: maker (USD) max 2 decimals. On fine-tick markets
+    # (0.001), a 3-dec limit price × integer shares gives a 3-dec maker → 400
+    # "invalid amounts" (bit the DEC-0038 entry 2026-06-12). Round the LIMIT up to
+    # the next 0.01 regardless of tick — still on-grid, FAK fills at the book's
+    # better resting prices, and integer shares × 2-dec price keeps maker/taker clean.
+    if tick_dec > 2:
+        buy_price = round(math.ceil(round(buy_price * 100, 6)) / 100, 2)
     buy_price = min(buy_price, 0.99)  # never post above 0.99
-    # Integer shares × on-grid price → clean maker (2-dec) / taker (int) amounts,
-    # satisfying the CLOB's amount-precision rule.
+    # Integer shares × on-grid 2-dec price → clean maker (2-dec) / taker (int).
     target_shares = max(1, round(deploy_dollar / buy_price))
-    clean_usd = round(target_shares * buy_price, tick_dec)
+    clean_usd = round(target_shares * buy_price, 2)
     print(f"\n# Executing BUY {target_shares} shares ({side}) @ {buy_price} (tick {tick}) for ${clean_usd}")
 
     cmd = [".venv/bin/python", "scripts/clob_v2.py",

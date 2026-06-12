@@ -151,6 +151,43 @@ End with the report only. Do NOT add commentary outside the report. Be terse —
 """
 
 
+
+def _recent_alert_headlines(question: str, max_lines: int = 6) -> str | None:
+    """Latest news_alerts.jsonl titles sharing keywords with the question.
+
+    2026-06-12 lesson: the haiku's websearch lags breaking news by hours — twice
+    in 24h it reasoned from a stale world-state (missed live strikes, then missed
+    the deal-pivot). The alerts file has the freshest verified headlines; inject
+    them so the model anchors on live state."""
+    import json as _json
+    import re as _re
+    try:
+        path = Path(__file__).resolve().parent.parent / "notes" / "news_alerts.jsonl"
+        if not path.exists():
+            return None
+        stop = {"will", "the", "a", "an", "by", "in", "on", "of", "to", "and", "or",
+                "before", "after", "2026", "2027", "x", "us", "any", "part"}
+        qwords = {w for w in _re.findall(r"[a-z]+", question.lower()) if w not in stop and len(w) > 2}
+        if not qwords:
+            return None
+        lines = path.read_text(errors="replace").splitlines()[-150:]
+        hits = []
+        for ln in lines:
+            try:
+                d = _json.loads(ln)
+            except Exception:
+                continue
+            title = d.get("title") or ""
+            twords = set(_re.findall(r"[a-z]+", title.lower()))
+            if len(qwords & twords) >= 1:
+                hits.append(f"- [{d.get('ts','?')}] {title[:140]}")
+        if not hits:
+            return None
+        return "\n".join(hits[-max_lines:])
+    except Exception:
+        return None
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("question", help="The Polymarket market question, in quotes.")
@@ -184,6 +221,14 @@ def main() -> int:
     else:
         resolution_block = "\n(No literal resolution criteria fetched — analyze under reasonable strict interpretation of the question.)\n"
         print("# resolution criteria unavailable; haiku will use strict interpretation of question text", file=sys.stderr)
+
+    headlines = _recent_alert_headlines(args.question)
+    if headlines:
+        resolution_block += (
+            "\nLATEST VERIFIED HEADLINES (from the project's live news feed — your "
+            "websearch may lag these; treat them as ground truth for current state):\n"
+            + headlines + "\n")
+        print(f"# injected {headlines.count(chr(10)) + 1} live headlines into prompt", file=sys.stderr)
 
     prompt = PROMPT_TEMPLATE.format(
         question=args.question,

@@ -53,7 +53,7 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 - ~~**2026-06-10** — strategy/00_philosophy.md refresh pass~~ **DONE 2026-06-10 ~12:30 UTC on operator directive** ("revise the entire direction-setting docs to purely enforce expected return maximization; no other hard rules except downstream ones"). Full doctrine rewrite: count cap DELETED (no ER derivation), mechanical-resolution ban → priced UMA-loose haircut, 01_horizon_split.md folded in + deleted, adversarial review pass applied (fixed an enforcement-claim overstatement + 5 reference fixes). DEC-0034.
 
-- **2026-06-12** — polyclaude_enter.py: CLOB precision rule on fine-tick markets — maker amount (USD) max 2 decimals, taker (shares) max 5; on a 0.001-tick market the tool produced \$11.219 maker → 400 rejected. Fix: after tick-rounding the price, round the USD size so maker ≤2dec AND shares = usd/price lands ≤5dec (pick nearest clean share count, recompute usd). Worked around manually 2026-06-12 (DEC-0038 fill via clob_v2 direct). ~15 LOC in the execute path.
+- ~~**2026-06-12** — polyclaude_enter.py fine-tick precision~~ **DONE 2026-06-12 ~02:40** (same session it bit): limit price rounds UP to next 0.01 on fine-tick markets (still on-grid, FAK fills at book's better prices) → integer shares × 2-dec price = clean maker/taker. Unit-tested both paths (0.001-tick → 0.86, 0.01-tick unchanged → 0.90).
 
 ## Calendar
 
