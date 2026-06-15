@@ -1648,3 +1648,11 @@ Outage itself: no infra fix warranted — graceful degradation worked (daemons c
 misfired, fully reconstructable). A "recovery digest" tool isn't worth building for a rare event; the
 subagent reconstruction did the job. No stale flags / broken paths surfaced (all scripts ran clean in
 recovery except the already-backlogged clob_v2 orderbook stdout truncation).
+
+## 2026-06-15 ~09:29 UTC — off-cycle tier-1 delta (no change; hold validated marginally)
+
+Fired on retrospective deal coverage ("seafarers welcome US-Iran deal"), keyword-matched not a new
+event. No state change. Peace-deal-Jun-15 NO still disputed, ticked 0.10→0.1285 (dispute leaning
+slightly LESS against us — the "what's left to negotiate" framing in the 09:14 alert supports the
+strict NO reading). regime-fall NO stable 0.895 favorable. HOLD unchanged. No Telegram (msg 455 covered
+this position ~1h ago; nothing material moved).
