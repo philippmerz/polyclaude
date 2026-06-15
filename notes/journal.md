@@ -1587,3 +1587,48 @@ bound 0.92<0.945; Greenland + Trump-out at 15% ticket caps). ARB auto-revet upgr
 aligns with the armed Jun-16 vote-conditional plan (unlock $7-10M sell pressure noted; post-flush
 fill preferred). No Telegram per flat-tick cadence (msg 451 set the whiplash expectation; resolution
 Sunday is the next ping).
+
+## 2026-06-15 ~08:25 UTC — OUTAGE RECOVERY (session down ~2.5d, Jun-12 14:00 → Jun-15 08:25)
+
+Operator flagged a multi-day outage + "check what you missed." The Claude session was down; the HOST
+was NOT — news_watcher/telegram_listener/heartbeat all stayed ALIVE and logging (32 alerts captured in
+the gap; persistence fix from Jun-11 held). Cron prompts fired into a dead session (the wall of queued
+ticks). Recovery findings:
+
+**THE ONE MATERIAL ITEM — peace-deal-Jun-15 NO (DEC-0038) in active UMA DISPUTE, marked YES 0.90/NO 0.10.**
+This is the R-U pattern recurring. In the gap a US-Iran MOU was announced (Jun 14) declaring "immediate
+and permanent termination of military operations," Hormuz reopening — BUT: signing ceremony is Jun 19
+(AFTER the deadline), it's framed as preliminary/interim with a 60-day "final agreement" process, and a
+US official said on-record Jun-15 "no formal deal exists, formalization required." Market disputed
+(proposal history proposed/disputed×2), $64.8M vol, closed=False, neither token winner=True — genuinely
+contested, leaning YES.
+
+**DECISION: HOLD the residual (no sell, no add).** From the impaired mark, selling at the 0.095 bid
+salvages only ~$1.25; holding pays $13.10 if the disputer (NO) wins, $0 if YES. Break-even P(NO)=9.5% =
+the mark exactly. Decision reduces to: is P(NO-wins-UMA) > ~10%? The market's 0.90 YES (set by
+resolution-arb specialists) rests on criteria path (b) — "clear public confirmation a qualifying
+agreement is definitively established." The disputer's case: unsigned + explicitly-interim + 60-day-talks
++ US-official-denial ≠ "definitively established," and the criteria EXPLICITLY exclude temporary deals.
+Honest P(NO) ~15-30% > 9.5% break-even → HOLD is +EV on the residual. Doctrine-consistent (max EV, no
+comfort-based variance aversion); selling would be disposition-effect loss-locking. Risking $1.25 for
+$13.10 upside on a defensible strict reading. NOT adding (the entry thesis is broken — a "permanent"-
+labeled deal WAS announced pre-deadline — so no averaging down).
+
+**Entry-quality lesson (DEC-0038, the -$10 hit):** "permanent peace deal by [near date]" DURING active
+deal-making is a textbook R-U-class subjective-resolution trap. Doctrine's "subjective-resolution priced
+not banned" (Jun-10 rewrite) correctly let it in with a haircut, but I underweighted how fast a
+"permanent"-LABELED framework can be announced and flip the UMA-loose reading against a NO. The haircut
+(p_no 0.92) priced ~15-25% loose-risk; reality delivered it. Calibration data point for the doctrine, not
+a refutation — single +EV-at-entry trades lose; the question is the portfolio over many. Cost $11.31;
+worst case -$11.31, current MTM $1.31.
+
+**Everything else clean:** 6/7 positions flat (±2pp); regime-fall NO 0.875→0.895 FAVORABLE (deal
+de-escalates → regime entrenched, helps our NO + Pahlavi NO); 0 redeemables missed; 0 other UMA changes;
+Ostium 0; guards clean; 0 real arbs. Bankroll $163.09 (-4.1%) — the entire drop IS the peace-deal markdown
+(-$10); the other 6 positions + Aave are intact. DEC-0036 (regime-fall trim) scored: prediction missed
+(overcautious — mark rose not fell), lesson recorded.
+
+**Upcoming, NOT overdue:** ARB DAO vote Jun-16 (operator-directed entry, plan armed; ARB $0.0867, still
+<$0.10 trigger; will verify vote outcome from Tally/forum tomorrow + execute conditionally). FOMC Jun-16/17
+(no position; market prices hold 0.996). Sunday weekly review (Jun-14) was missed in the outage — deferring
+to a lightweight catch-up next idle window, not urgent (no entries pending on it).

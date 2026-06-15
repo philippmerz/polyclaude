@@ -9,20 +9,20 @@
     }
   },
   "SOL": {
-    "ts": 1781272955.7070737,
+    "ts": 1781512070.6294024,
     "result": {
       "verdict": "WATCH",
-      "score": "1.5/4",
-      "summary": "1. **Fiserv adoption data confirmation** (Q4 2026): >100 active institutions executing settlement via FIUSD monthly \u2192 WATCH and size at Kelly/4.",
+      "score": "3.5/4",
+      "summary": "**No entry now.** Wait for Alpenglow mainnet launch (Q3 2026 target) + 2 weeks stable operation at target finality levels. Once confirmed, entry at $75\u201385 is reasonable with size per Kelly/4 (position risk = -$20 downside to $51\u201355 zone, ~2",
       "fresh": true
     }
   },
   "ARB": {
-    "ts": 1781273130.3315585,
+    "ts": 1781512148.5887904,
     "result": {
-      "verdict": "ENTER",
-      "score": "3.5/4",
-      "summary": "Entry justified NOW at current $0.08 level OR on post-unlock dip to $0.07-$0.075 (June 16 unlock may trigger $7M-$10M selling). Valuation is at extreme compression: 3% of TVL value, sub-$1 per transaction cost. Position size: Kelly/4 = 25% ",
+      "verdict": "WATCH",
+      "score": "2.75/4",
+      "summary": "**Do not enter now.** Current price $0.087 lacks near-term catalyst clarity; macro crypto uncertainty (Bitcoin direction unconfirmed) argues for patience. Concrete triggers:",
       "fresh": true
     }
   }

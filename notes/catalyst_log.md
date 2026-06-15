@@ -422,3 +422,202 @@ None material. Trilateral working group proceeds without scheduled announcements
 - [Greenland Independence Commission (pending late 2026 report)](https://commonslibrary.parliament.uk/research-briefings/cbp-10234/)
 - [Greenland home rule and independence status](https://commonslibrary.parliament.uk/research-briefings/cbp-10472/)
 ```
+
+---
+
+## 2026-06-11T02:15:42Z — catalyst_check
+
+**Query:** `Will the Iranian regime fall by the end of 2026?` resolves 2026-12-31 (203d)
+
+```
+## CATALYST CHECK: Will the Iranian regime fall by the end of 2026?
+
+Resolution: 2026-12-31 | Days: 203 | Today: 2026-06-11
+
+### Base rate
+Regimes rarely collapse within 6-7 months post-major shock. The Iranian regime has survived Khamenei's assassination (Feb 28), large-scale nationwide protests (1.5M in Tehran, Dec 2025-Jan 2026), and coordinated US-Israeli strikes. Constitutional succession executed successfully (Mojtaba Khamenei elected March 9). Opposition leader Reza Pahlavi remains in "await final call" posture with explicit instructions to followers to refrain from action. Historical parallel: 1979 Iranian revolution took ~12 months from peak protests to collapse; most regime collapses occur over 12-24 month windows, not within 6 months following consolidation of succession.
+
+### Catalysts in window
+- [MED] 2026-07-28 to 2026-08-31 - 60-day ceasefire deadline (expires late July/early August if 60-day extension from May 28 MOU takes effect). Nuclear deal negotiations must conclude or ceasefire collapses and war resumes. Renewed military escalation could destabilize regime further, though Feb strikes on Supreme Leader failed to topple it. - [PBS](https://www.pbs.org/newshour/world/u-s-and-iranian-negotiators-reach-tentative-deal-to-extend-ceasefire-and-start-new-nuclear-talks) / [Axios](https://www.axios.com/2026/05/24/iran-deal-strait-hormuz-sanctions-nuclear)
+- [MED] 2026-06-11 onward - Ongoing US military strikes (resumed June 10; Trump stated more "hard" strikes to follow). Escalation trajectory unpredictable; military pressure alone has not toppled regime but could interact with internal fracturing. - [NCRI June 10](https://www.ncr-iran.org/en/news/iran-news-in-brief-news/iran-news-in-brief-june-10-2026/)
+- [MED] No scheduled date - Reza Pahlavi "final call" for uprising not yet issued. Opposition leader has explicitly instructed followers to refrain from action pending his signal. If issued, could trigger mass coordination, but January protests (1.5M in Tehran) already failed despite Khamenei's assassination weeks prior. - [Iran Intl March 2026](https://www.iranintl.com/en/202603110255)
+- [LOW] No scheduled date - Economic collapse worsening (bread now rationed as of June 9, 2026; rial collapsed to 1.5M/USD, 42% inflation). Economic pressure alone unlikely to topple regime within 203 days given current survival through worse baseline conditions. - [NCRI June 9](https://www.ncr-iran.org/en/news/iran-news-in-brief-news/iran-news-in-brief-june-9-2026/)
+- [LOW] No scheduled date - Internal institutional fracturing (state media openly feuding with government). Shows structural stress but regime maintains security/military apparatus; could result in internal coup rather than external overthrow. - [Critical Threats Iran Update June 8](https://www.criticalthreats.org/analysis/iran-update-evening-special-report-june-8-2026)
+
+### Recent news (last 14d)
+- June 10 - US strikes again; Trump threatens additional "hard" strikes while claiming deal is "days away" (has repeated this 38+ times since March 23). Tensions escalate despite ongoing negotiations. - High escalation risk; credibility of deal timeline in doubt.
+- June 9 - Iran rejects US nuclear proposal, pledges counteroffer through Omani mediators. Major sticking point remains uranium enrichment rights (Iran refuses limits; Trump demands dismantlement). - Nuclear deal deadline approaching with fundamental disagreement unresolved.
+- June 9 - Bakery rationing begins in multiple Iranian provinces. Bread (staple) now sold in limited quantities per customer. - Economic breakdown visible at street level; second wave of unrest possible but hasn't yet metastasized.
+
+### P(YES) estimate
+- Low: 10%
+- Central: 18%
+- High: 25%
+
+Reasoning: Regime has demonstrated institutional resilience by surviving Khamenei assassination and executing constitutional succession (March 9). The opposition, despite mobilizing 1.5M protesters in January, did not topple the regime and is now explicitly restrained by its leader. The 203-day window is short relative to typical regime-collapse timelines. Escalation risk (military or economic) is real but has not proven decisive in prior shocks. Tail risk: coordinated opposition uprising if Pahlavi finally issues "final call," or unexpected military spiral, or economic crisis metastasizing.
+
+Multiplicative breakdown (simplified):
+- P(Reza Pahlavi issues final call AND issues trigger mass uprising AND uprising topples regime): 0.40 × 0.50 × 0.60 = 12%
+- P(Military escalation alone destabilizes regime sufficiently): 0.70 × 0.20 = 14%
+- P(Economic collapse deepens and tips into revolution): 0.15
+- P(Other unknown catalyst): 0.05
+- Overlaps discounted; joint: ~18%
+
+### Sources
+- [2025–2026 Iranian protests - Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests)
+- [Regime change efforts in the 2026 Iran war - Wikipedia](https://en.wikipedia.org/wiki/Regime_change_efforts_in_the_2026_Iran_war)
+- [Iran: What challenges face the country in 2026? - House of Commons Library](https://commonslibrary.parliament.uk/research-briefings/cbp-10456/)
+- [2025–2026 Iran–United States negotiations - Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+- [Trump ends Iran meeting without announcing 'final determination' on deal - CNBC](https://www.cnbc.com/2026/05/29/trump-iran-deal-hormuz-nuclear-war.html)
+- [Exclusive: What's inside the Iran deal Trump is close to signing - Axios](https://www.axios.com/2026/05/24/iran-deal-strait-hormuz-sanctions-nuclear)
+- [U.S. and Iranian negotiators reach tentative deal to extend ceasefire and start new nuclear talks - PBS News](https://www.pbs.org/newshour/world/u-s-and-iranian-negotiators-reach-tentative-deal-to-extend-ceasefire-and-start-new-nuclear-talks)
+- [Pahlavi tells Iranians to await final call, says time running out for security forces - Iran International](https://www.iranintl.com/en/202603110255)
+- [Iran News in Brief – June 10, 2026 - NCRI](https://www.ncr-iran.org/en/news/iran-news-in-brief-news/iran-news-in-brief-june-10-2026/)
+- [Iran News in Brief – June 9, 2026 - NCRI](https://www.ncr-iran.org/en/news/iran-news-in-brief-news/iran-news-in-brief-june-9-2026/)
+- [Iran Update Evening Special Report: June 8, 2026 - Critical Threats](https://www.criticalthreats.org/analysis/iran-update-evening-special-report-june-8-2026)
+```
+
+---
+
+## 2026-06-11T02:18:40Z — catalyst_check
+
+**Query:** `Trump announces US x Iran ceasefire over by June 12?` resolves 2026-06-12 (1d)
+
+```
+## CATALYST CHECK: Trump announces US x Iran ceasefire over by June 12?
+
+Resolution: 2026-06-12 | Days: 1 | Today: 2026-06-11
+
+### Base rate
+Formal ceasefire termination announcements in 1-day windows are rare absent major military escalation. Historical base: <5% for random 1-day catalysts of this type.
+
+### Catalysts in window
+- [LOW] 2026-06-11/12 - Trump-Xi Summit (CSIS events June 11 2pm EDT, June 12 noon EDT): Medium East/Iran discussions possible but not focused on ceasefire termination announcement; Trump currently engaged in negotiation/extension messaging, not termination.
+
+None scheduled specifically for ceasefire termination.
+
+### Recent news (last 14d)
+- 2026-06-07/08 - Worst escalation since April ceasefire: Israel-Iran traded worst strikes in months; ceasefire remains officially in effect despite violations.
+- 2026-06-01 - Iran suspended negotiations; Trump called for immediate halt to attacks.
+- Late May - Reports of near-final peace MOU; negotiations stalled over nuclear program, Hormuz, Lebanon scope.
+
+### P(YES) estimate
+- Low: 2%
+- Central: 5%
+- High: 15%
+- Reasoning: Resolution requires FORMAL public announcement that no ceasefire is in effect. The ceasefire is technically still active (extended indefinitely April 21) despite violations. Trump messaging has focused on negotiation continuation and calls for peace, not termination. The resolution criteria explicitly exclude violation/breach announcements alone—a formal "ceasefire is over" statement is required. Trump-Xi summit unlikely to include Iran ceasefire termination as main announcement. Only a dramatic military escalation or Trump's explicit strategic pivot to public termination would trigger in this 1-day window; neither is scheduled.
+- Multiplicative breakdown: P(escalation reaches announcement threshold | 1-day window) × P(Trump chooses public termination | escalation) × P(announcement meets "no ceasefire in effect" bar) ≈ 0.20 × 0.25 × 1.0 = 5%
+
+### Sources
+- [2026 Iran war ceasefire - Wikipedia](https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire)
+- [June 7-8, 2026 — Ceasefire falters as Israel and Iran trade worst strikes in months - CNN](https://www.cnn.com/2026/06/07/world/live-news/iran-war-trump-israel-lebanon)
+- [June 1, 2026 - Trump insists talks continue after Iran suspended negotiations - CNN](https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news)
+- [US-Iran ceasefire and nuclear talks in 2026 - House of Commons Library](https://commonslibrary.parliament.uk/research-briefings/cbp-10637/)
+```
+
+---
+
+## 2026-06-11T14:11:51Z — catalyst_check
+
+**Query:** `Will the US and Iran reach a permanent peace deal by June 15?` resolves 2026-06-15 (4d)
+
+```
+## CATALYST CHECK: Will the US and Iran reach a permanent peace deal by June 15?
+
+Resolution: 2026-06-15 | Days: 4 | Today: 2026-06-11
+
+### Base rate
+Permanent peace deals between major powers during active military hostilities are extremely rare within 4-day windows; base rate for reaching a definitive, non-temporary agreement under ongoing strikes is <5% (analogously, JCPOA negotiations took 2+ years).
+
+### Catalysts in window
+- [HIGH] 2026-06-15 - Sixth round of formal talks scheduled in Oman (indefinitely suspended following June 10 military escalation; no revival announced)
+- [MED] 2026-06-11 to 2026-06-15 - Trump's final approval of 60-day MOU, pending (does NOT count as permanent deal — explicitly temporary, for further negotiations; exclusion per resolution criteria)
+- [LOW] Ongoing mediated contacts via Qatar/Pakistan (no formal event scheduled; Iran has conditioned broader agreements on Israeli ops cease in Lebanon)
+
+### Recent news (last 14d)
+- 2026-06-10 - US strikes Iranian radar/drone sites; Iran responds with missile fire. Military escalation undermines diplomatic momentum.
+- 2026-06-09 - Trump claims Iran deal "days away" (38th such claim since March 23, per CNN).
+- 2026-06-01 - Iran suspends formal talks over Israeli operations in Lebanon; Foreign Minister Abbas Araghchi states "no tangible progress" in negotiations.
+- 2026-05-28 - US-Iran negotiators reach 60-day MOU (ceasefire extension + nuclear negotiation framework), pending Trump approval. MOU is explicitly temporary, excludes from resolution criteria.
+- 2026-05-24 - Reported broad peace framework nearing finalization covering uranium, sanctions, Strait of Hormuz.
+
+### P(YES) estimate
+- Low: 1%
+- Central: 3%
+- High: 6%
+- Reasoning: Resolution requires either signed written agreement or mutual public confirmation that military hostilities have permanently ended. The scheduled Oman talks (June 15) are indefinitely suspended. The tentatively agreed 60-day MOU is explicitly temporary and does not satisfy the resolution criteria ("not explicitly temporary"). Trump approval of the MOU by June 15 is plausible but does not trigger resolution. Active military exchanges on June 10 and Iran's conditionality on Lebanon operations create near-zero probability of a definitive permanent peace agreement within 4 days.
+- Multiplicative breakdown: P(talks resume by June 15 | suspended) × P(permanent deal negotiated | talks resume) × P(Trump approves | deal negotiated) ≈ 0.05 × 0.15 × 0.80 ≈ 1%
+
+### Sources
+- [2025–2026 Iran–United States negotiations - Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+- [Scoop: U.S. and Iran reach deal but need Trump's final approval, officials say - Axios](https://www.axios.com/2026/05/28/iran-peace-deal-trump-approval)
+- [US-Iran 60-day proposal: What we know - Al Jazeera](https://www.aljazeera.com/news/2026/5/29/us-iran-60-day-proposal-what-we-know)
+- [What's in the proposed deal that could end the US-Iran conflict? - CNN](https://www.cnn.com/2026/05/24/middleeast/iran-us-proposed-deal-wwk-intl)
+- [How many times were the US and Iran on the verge of a deal? - Al Jazeera](https://www.aljazeera.com/news/2026/6/7/how-many-times-were-the-us-and-iran-on-the-verge-of-a-deal)
+- [Are the US and Iran closer to war or to a deal? - Al Jazeera](https://www.aljazeera.com/news/2026/6/5/are-us-and-iran-closer-to-war-or-to-a-deal)
+- [US x Iran permanent peace deal by...? - Polymarket](https://polymarket.com/event/us-x-iran-permanent-peace-deal-by)
+- [2026 Iran war ceasefire - Wikipedia](https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire)
+- [Iran says talks with US in Oman 'a good start', more discussions expected - Al Jazeera](https://www.aljazeera.com/news/2026/2/6/iran-us-hold-talks-in-oman-as-fears-of-war-hang-over-region)
+```
+
+---
+
+## 2026-06-12T02:11:04Z — catalyst_check
+
+**Query:** `Will the US and Iran reach a permanent peace deal by June 15?` resolves 2026-06-15 (3d)
+
+Looking at the search results, I can see that:
+
+1. **June 11-12**: Trump claimed a "permanent peace deal" would be signed "this weekend" (June 13-15)
+2. **June 12**: IAEA declared Iran in breach of non-proliferation obligations
+3. **June 13**: Israel launches large-scale attacks targeting Iran's military leadership and nuclear scientists
+4. **June 13+**: Iran suspends nuclear talks indefinitely as a result
+5. **June 15**: Sixth round of US-Iran talks in Oman scheduled but **indefinitely suspended** after the June 13 Israeli strikes
+
+This is a **heavily negative scenario** within the 3-day window. Let me compile the structured report:
+
+---
+
+```
+## CATALYST CHECK: Will the US and Iran reach a permanent peace deal by June 15?
+
+Resolution: 2026-06-15 | Days: 3 | Today: 2026-06-12
+
+### Base rate
+Permanent peace deals in active military conflicts close in 3-day windows at rates <1% historically. This case shows higher pre-deal momentum (late-May framework reached, Trump claims signing imminent), but major negative catalysts in the resolution window override base momentum.
+
+### Catalysts in window
+- [LOW] 2026-06-11 - Trump claims deal will be signed "this weekend" (June 13-15); cancels strikes - credibility undermined by 38 prior false claims about imminent deals; Iran's Foreign Ministry calls reported agreement "speculation"
+- [HIGH-NEGATIVE] 2026-06-12 - IAEA declares Iran in breach of non-proliferation obligations for first time in 20 years
+- [HIGH-NEGATIVE] 2026-06-13 - Israel launches large-scale strikes on Iran's military leadership, nuclear scientists, and facilities; Iran's Supreme Leader promises "harsh punishment"
+- [HIGH-NEGATIVE] 2026-06-13 - Iran suspends nuclear talks indefinitely following Israeli strikes; announces withdrawal from negotiations
+- [HIGH-NEGATIVE] 2026-06-15 - Sixth round of US-Iran talks scheduled in Oman indefinitely suspended due to June 13 Israeli attacks
+
+### Recent news (last 14d)
+- 2026-06-10 - Qatar delegation arrives in Tehran carrying mandate to "narrow gaps" in US-Iran talks
+- 2026-06-08 - Qatar PM and Iranian FM discuss mediation; talks described as addressing nuclear program, Strait of Hormuz freedom, sanctions, reconstruction
+- 2026-06-01 - Iran suspends talks citing Israeli operations in Lebanon
+- 2026-05-28 - Axios: U.S. and Iran reached tentative deal on 60-day truce extension; requires Trump final approval
+- 2026-05-06 - US and Iran closing in on one-page memo to end war
+
+### P(YES) estimate
+- Low: 0.5%
+- Central: 1.5%
+- High: 5%
+- Reasoning: Trump's claim of imminent signing faces catastrophic headwinds from IAEA breach (June 12) and Israeli military escalation (June 13), which trigger Iran's indefinite suspension of talks. Recovery from this tipping point to a signed "permanent peace deal" in 2-3 days is extremely unlikely. The Oman talks (June 15) are now suspended indefinitely. Multiplicative breakdown explains the narrow band.
+- Multiplicative breakdown (if conjunction):
+  - P(both sides formally agree to "permanent" deal) = ~10% (Trump claims but Iran denies finality; escalation collapses momentum)
+  - P(agreement signed and exchanged by June 15 | agreement exists) = ~15% (talks suspended; timeline extremely compressed)
+  - P(oracle confirms meets "permanent" criteria | signed) = ~100% (definition is clear)
+  - Joint: 0.10 × 0.15 × 1.0 ≈ 1.5%
+
+### Sources
+- [2025–2026 Iran–United States negotiations - Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+- [Trump now says a peace deal will be announced 'soon,' cancels further strikes - NPR](https://www.npr.org/2026/06/11/nx-s1-5854970/trump-iran-peace-deal-cancel-strikes)
+- [Live updates: Trump says US 'ended the war with Iran,' though Tehran has yet to confirm a deal - CNN](https://www.cnn.com/2026/06/11/world/live-news/iran-war-trump-israel-hnk)
+- [U.S.-Iran memorandum of understanding likely to be signed next week - CBS News](https://www.cbsnews.com/news/u-s-iran-memorandum-of-understanding-signing-likely-next-week/)
+- [Qatar, Egypt discuss US-Iran mediation efforts - Iran International](https://www.iranintl.com/en/202606070300)
+- [Iran–Israel conflict - Wikipedia](https://en.wikipedia.org/wiki/Iran%E2%80%93Israel_conflict)
+- [Trump claims Iran war settled 'subject to finalization,' expects signing in 'next few days' - CNBC](https://www.cnbc.com/2026/06/11/trump-iran-strikes-deal.html)
+- [Iran halts talks with U.S. over Israeli actions in Lebanon - NPR](https://www.npr.org/2026/06/01/g-s1-125285/iran-israel-us-lebanon-gaza)
+```

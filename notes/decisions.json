@@ -697,9 +697,10 @@
         "escalation",
         "risk-mgmt"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Prediction MISSED (honestly). Predicted regime-fall NO mark <0.85 within 72h of the Jun-11 strikes; instead it ROSE to 0.875\u21920.895 as the US-Iran escalation resolved into a peace MOU (Jun 14) \u2014 de-escalation strengthened the regime-survives thesis, lifting the NO. The trim @0.85 (13 sh, +$0.17) was overcautious: I trimmed on a 2-day escalation spike against the base-rate of de-escalation. Kept core 20.75 sh which rode the recovery. Realized +$0.17; opportunity cost ~$0.45 (the 13 sh would be worth ~$11.6 at 0.895 vs $11.05 sold).",
+      "calibration_delta": "Predicted -2.5pp+ adverse move; got +4pp favorable. Directional miss on the near-term mark, but the risk-management logic (cap correlated-cluster exposure during live war) was sound ex-ante.",
+      "lesson": "Trimming a bond-like NO on a fresh escalation spike fights the de-escalation base rate; for a survivable-tail fade during a crisis, the catalyst_check P(YES) (was ~10-12%, not panic-level) should weight the hold more than the mark's short-term vol. Small trims for cluster-cap discipline are fine; don't over-read a 48h spike.",
+      "resolved_at": "2026-06-15T08:36:31Z"
     },
     {
       "id": 37,
