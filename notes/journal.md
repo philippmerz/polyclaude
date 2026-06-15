@@ -1632,3 +1632,19 @@ Ostium 0; guards clean; 0 real arbs. Bankroll $163.09 (-4.1%) — the entire dro
 <$0.10 trigger; will verify vote outcome from Tally/forum tomorrow + execute conditionally). FOMC Jun-16/17
 (no position; market prices hold 0.996). Sunday weekly review (Jun-14) was missed in the outage — deferring
 to a lightweight catch-up next idle window, not urgent (no entries pending on it).
+
+## 2026-06-15 ~08:50 UTC — reflection: codified the permanence-near-date UMA trap (2 losses, 1 signature)
+
+Genuine finding from the recovery, not forced: R-U (-$16.73) and DEC-0038 (-$10) are the same trap —
+NO fade on (permanence qualifier) × (near-date deadline) × (active dealmaking toward the event). The
+strict reading looks cheap, but an ANNOUNCEMENT triggers loose-YES faster than a strict failure
+confirms. Doctrine §4.4 already had the loose-haircut mechanism; the miss was weighting (DEC-0038 priced
+p_no 0.92 ≈ 8% loose, strict-end). Codified: when all three conditions hold, weight loose ≥0.5 or skip,
+and the favorite-longshot edge does NOT apply (these are contested adjudications priced by resolution-arb
+specialists, not neglected mispricings). Bounded doctrine edit; compounds on the next near-date deal fade
+(the Iran cluster will keep generating them).
+
+Outage itself: no infra fix warranted — graceful degradation worked (daemons captured news, no capital
+misfired, fully reconstructable). A "recovery digest" tool isn't worth building for a rare event; the
+subagent reconstruction did the job. No stale flags / broken paths surfaced (all scripts ran clean in
+recovery except the already-backlogged clob_v2 orderbook stdout truncation).

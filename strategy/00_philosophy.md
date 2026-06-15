@@ -98,6 +98,18 @@ Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
    assessed — size small (Satoshi NO at $5.64, no adds) or skip. [Replaces the
    2026-05-11 "mechanical-resolution ONLY" hard filter — a ban forfeits +EV that
    survives the haircut, and the book already rationally held priced exceptions.]
+   **The permanence-near-date trap (two losses, one signature — codified 2026-06-15):**
+   a NO fade on `(permanence/finality qualifier: "permanent", "officially", "definitive")
+   × (near-date deadline) × (active real-world progress toward the event: live
+   negotiations, an announced framework)` is a UMA-LOOSE TRAP — an *announcement* can
+   trigger loose-YES in days, faster than a strict failure can be confirmed, so the
+   strict reading that looks cheap is the wrong base. Burned twice: R-U "permanent
+   ceasefire by May 31" (−$16.73, UMA ruled loose) and DEC-0038 "permanent peace deal
+   by June 15" (−$10, disputed→leaning YES — a "permanent"-labeled but unsigned/interim
+   MOU). When all three conditions hold, weight loose ≥0.5 (not 0.3) OR skip; a thin
+   strict-edge does not survive that haircut. The favorite-longshot edge does NOT apply
+   to these — they are not neglected mispricings, they are contested adjudications where
+   resolution-arb specialists set the price.
 5. **Robust-edge gate**: required +EV after op-cost at the PESSIMISTIC bound
    `p − edge_haircut` (default 0.05; smaller only for genuinely tight estimates —
    document why). Derivation: estimated edges are noisy and Kelly punishes overbetting
