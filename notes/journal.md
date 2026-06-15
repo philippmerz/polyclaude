@@ -1656,3 +1656,20 @@ event. No state change. Peace-deal-Jun-15 NO still disputed, ticked 0.10→0.128
 slightly LESS against us — the "what's left to negotiate" framing in the 09:14 alert supports the
 strict NO reading). regime-fall NO stable 0.895 favorable. HOLD unchanged. No Telegram (msg 455 covered
 this position ~1h ago; nothing material moved).
+
+## 2026-06-15 ~14:00 UTC — Monday 14:00 cron (peace-deal NO drifts to 0.064, HOLD unchanged; else flat)
+
+Peace-deal-Jun-15 NO marked 0.10→0.064 (YES firmed 0.90→0.935 on framework-MOU news), still
+UMA-disputed, NOT resolved, 0/7 redeemable. Decision structure unchanged: sell salvages ~$0.85 at the
+0.065 bid; hold pays $13.10 if disputer wins; break-even = the mark (6.5%). New facts STRENGTHEN the
+strict-NO case (signing explicitly deferred to "later this week" = past today's deadline; market itself
+calls it a "framework" — discover shows "US & Iran SIGN an agreement by Jun-15" at only YES 0.856, i.e.
+~15% chance no signing today). An unsigned framework with post-deadline signing has a real claim to
+resolve NO under criteria excluding interim deals. P(NO) still > 6.5% → HOLD stays marginally +EV on a
+trivial residual; selling = disposition-effect realization. Not adding.
+
+Everything else FLAT/CLEAN: MTM $96.40 / bankroll $162.98 (both -$0.1 vs morning), 6 healthy positions
+within noise (regime-fall 0.905 favorable), UMA 16/0 new, redeem 0/7, Ostium 0, monotonicity/consistency
+0 real. ARB $0.0893 (vote tomorrow; auto-revet WATCH 2.75/4 "not now" — but the operator-directed entry
+is vote-conditional, separate from the revet's spot view). No Telegram (msg 455 set the hold thesis this
+AM; resolution is the next ping). ~$60 Aave + $11.70 pUSD idle — no gate-clearing entry, held.
