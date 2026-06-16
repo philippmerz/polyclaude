@@ -17,11 +17,12 @@
       "ticker": "ARB",
       "type": "crypto",
       "coingecko_id": "arbitrum",
-      "entry_max": 0.1,
+      "entry_max": 0.075,
       "horizon": "1-3y",
       "route": "ibkr_surface",
-      "rationale": "L2 cycle bottom dip; ideal trigger is post-March-2027 unlock (22mo). Multi-year -> IBKR.",
-      "added": "2026-05-08"
+      "rationale": "Post-unlock capitulation entry on the 1-3y L2-value thesis. CORRECTION 2026-06-16: the 'Jun-16 DAO revenue-share vote' that the prior auto-revet + operator plan (msg 442) was conditioned on DOES NOT EXIST \u2014 Jun-16 is the ~$50M token UNLOCK, not a governance vote; no fee-switch proposal is filed. Phantom catalyst, retracted. Operator delegated ARB entry to polyclaude (boundary exception, EVM-executed). Stand-down on any vote trigger; re-armed for a genuine post-unlock capitulation dip to <=0.075 (was 0.10) OR a REAL filed fee-switch/revenue proposal. Fundamental revet WATCH 2.75/4. Execute via spot_swap.py from Arb Aave ($17.59) if hit + thesis still intact.",
+      "added": "2026-05-08",
+      "updated": "2026-06-16"
     },
     {
       "ticker": "ONDO",
@@ -123,7 +124,7 @@
       "entry_max": 140.0,
       "horizon": "2-5y",
       "route": "ibkr_surface",
-      "rationale": "Lithium cycle bottom + storage; H2 2026 BESS data. Original $180 trigger fired 2026-05-18 @ $178.68; longterm_check then 3/4 WATCH, margin-of-safety WEAK. 2026-06-09 RE-VET (entry trigger fired @ $149.84): UPGRADED to 3.5/4 WATCH — margin-of-safety now OK (net debt $3.2B->$1.9B, 1.0x leverage, $2.7B liquidity, fwd P/E 13.6x); lithium recovered to ~$20-26/kg LCE so the >$20/kg entry condition is MET (Q1-2026 EPS $2.95 +127% beat, rev +33%). Both revised-entry conditions (price $140-150 AND $20+/kg) now satisfied; ALB at favorable low end of band after ~13% weekly drop. Still WATCH not high-conviction ENTER (tool prefers enter-on-weakness; reserve full size for spot >$22/kg or ESS-capex/2027-estimate-upgrade catalyst). First-tranche zone reached + SURFACED to operator 2026-06-09; entry_max lowered 150->140 to re-alert on the add-lower tranche. Downside: lithium reverts to $12-15/kg -> 60-70% EBITDA cut (only ~5% thesis-broken given fortress B/S). Equity -> IBKR.",
+      "rationale": "Lithium cycle bottom + storage; H2 2026 BESS data. Original $180 trigger fired 2026-05-18 @ $178.68; longterm_check then 3/4 WATCH, margin-of-safety WEAK. 2026-06-09 RE-VET (entry trigger fired @ $149.84): UPGRADED to 3.5/4 WATCH \u2014 margin-of-safety now OK (net debt $3.2B->$1.9B, 1.0x leverage, $2.7B liquidity, fwd P/E 13.6x); lithium recovered to ~$20-26/kg LCE so the >$20/kg entry condition is MET (Q1-2026 EPS $2.95 +127% beat, rev +33%). Both revised-entry conditions (price $140-150 AND $20+/kg) now satisfied; ALB at favorable low end of band after ~13% weekly drop. Still WATCH not high-conviction ENTER (tool prefers enter-on-weakness; reserve full size for spot >$22/kg or ESS-capex/2027-estimate-upgrade catalyst). First-tranche zone reached + SURFACED to operator 2026-06-09; entry_max lowered 150->140 to re-alert on the add-lower tranche. Downside: lithium reverts to $12-15/kg -> 60-70% EBITDA cut (only ~5% thesis-broken given fortress B/S). Equity -> IBKR.",
       "added": "2026-05-08",
       "revised": "2026-06-09"
     },
@@ -195,7 +196,7 @@
       "entry_max": 45.0,
       "horizon": "2-5y",
       "route": "ibkr_surface",
-      "rationale": "Copper structural deficit (ICSG first refined deficit since 2009; El Teniente depression + Grasberg -35% vs AI/EV demand). Surfaced 2026-06-07 critical-minerals digest (HIGH). Fresh longterm_check 2.5/4 PASS at $63.27 — at/near record/peak (copper hit $13.4k/MT), 44.6x P/E ~81% above 9yr mean, no downside cushion. Entry $40-45 (copper normalizes to $10.5-11k/MT, resets to 20-25x P/E); alt $50-55 only on macro pullback + positive El Abra/Safford decisions. Do NOT chase at peak. Equity -> IBKR.",
+      "rationale": "Copper structural deficit (ICSG first refined deficit since 2009; El Teniente depression + Grasberg -35% vs AI/EV demand). Surfaced 2026-06-07 critical-minerals digest (HIGH). Fresh longterm_check 2.5/4 PASS at $63.27 \u2014 at/near record/peak (copper hit $13.4k/MT), 44.6x P/E ~81% above 9yr mean, no downside cushion. Entry $40-45 (copper normalizes to $10.5-11k/MT, resets to 20-25x P/E); alt $50-55 only on macro pullback + positive El Abra/Safford decisions. Do NOT chase at peak. Equity -> IBKR.",
       "added": "2026-06-07"
     }
   ]

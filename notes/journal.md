@@ -1673,3 +1673,33 @@ within noise (regime-fall 0.905 favorable), UMA 16/0 new, redeem 0/7, Ostium 0, 
 0 real. ARB $0.0893 (vote tomorrow; auto-revet WATCH 2.75/4 "not now" — but the operator-directed entry
 is vote-conditional, separate from the revet's spot view). No Telegram (msg 455 set the hold thesis this
 AM; resolution is the next ping). ~$60 Aave + $11.70 pUSD idle — no gate-clearing entry, held.
+
+## 2026-06-16 ~02:00 UTC — ARB phantom-catalyst correction (error owned); peace-deal effectively lost
+
+**ARB entry premise was FALSE — owned + corrected.** The operator-delegated ARB entry (msg 442) was
+conditioned on a "Jun-16 DAO revenue-share vote." Verified today via WebSearch + Tally + Arbitrum forum:
+NO such vote exists. Jun-16 is the ~$50M ARB token UNLOCK. The fee-switch was left as a future step after
+the Aug-2024 staking proposal; no fee-switch/revenue proposal is filed or scheduled. The phantom came from
+a flawed auto-revet (haiku longterm_check output) that asserted a specific dated catalyst; I propagated it
+into msg 442 + the calendar without verifying against governance primary sources. DECISION: stand down
+today (no entry — buying into a $50M unlock on a non-existent catalyst with a WATCH 2.75/4 fundamental is
+undisciplined; the plan always said wait for post-unlock). Re-armed the watchlist properly: entry_max
+0.10→0.075 (post-unlock capitulation) OR a REAL filed fee-switch proposal; execute from Arb Aave $17.59
+via spot_swap.py if hit + thesis intact. Told operator (msg 457), invited override/drop.
+LESSON (new): auto-revet can FABRICATE a specific dated catalyst; verify any governance/vote claim against
+Tally/forum before arming a dated operator-facing plan. Backlog calendar corrected.
+
+**Peace-deal-Jun-15 NO — effectively lost.** Deal virtually signed Jun-15 (Trump/Vance, "permanent
+termination of military operations," Hormuz reopening; companion 'sign by Jun-15' market YES 0.999). NO
+marked 0.024 (−$11.00, −97%). STILL UMA-disputed (formal signing Jun-19 > Jun-15 deadline + "critical
+issues set aside" = the thin technicality keeping it unresolved). Not finalized, not redeemable. HOLD to
+finalization — selling 13 sh @0.024 salvages $0.31, not worth gas; residual is a free lottery on the
+deadline technicality (market 2.4%). The permanence-near-date trap (now codified §4.4) played out exactly
+as the lesson predicts — an announcement triggered loose-YES faster than the strict failure could confirm.
+
+Other items, all no-action: 6 healthy NOs green (+1.7% to +24% APY); Satoshi NO marginal-APY +3.38% just
+under 3.40% hurdle = within friction noise, HOLD (closing to redeploy nets ~0); Iran Jun-30 sub-question
+NO-fades skipped (cluster exposure + post-deal thin + permanence-trap caution); MagicBlock monotonicity
+flag (net +10.2pp) skipped (illiquid 2027 token-launch, near-certain midpoint mirage per consistency
+scan's 100% evaporation, >1y horizon); FOMC Jun-16/17 priced 99.5% hold, no edge. Bankroll $162.85 (-4.2%),
+the drawdown entirely the peace-deal position; other 6 legs + Aave intact. UMA 16/0, Ostium 0, redeem 0/7.
