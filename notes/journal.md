@@ -1703,3 +1703,14 @@ NO-fades skipped (cluster exposure + post-deal thin + permanence-trap caution); 
 flag (net +10.2pp) skipped (illiquid 2027 token-launch, near-certain midpoint mirage per consistency
 scan's 100% evaporation, >1y horizon); FOMC Jun-16/17 priced 99.5% hold, no edge. Bankroll $162.85 (-4.2%),
 the drawdown entirely the peace-deal position; other 6 legs + Aave intact. UMA 16/0, Ostium 0, redeem 0/7.
+
+## 2026-06-16 ~14:00 UTC — Tuesday 14:00 cron (flat, no action)
+
+All clean: UMA 16/0, marginal-APY 6/6 clear, redeem 0/7, monotonicity 0/1005, consistency 0 real,
+Ostium 0/0. Bankroll $162.62 (-4.3%, entirely the peace-deal leg); 6 healthy NOs flat-to-green
+(Greenland +1pp, Satoshi +0.7pp, rest flat). Peace-deal NO still UMA-disputed/unfinalized, marked
+deeper 0.024→0.009, not redeemable — HOLD for finalization. Mild NO-supportive color (Vance: deal "very
+general, many details to negotiate"; Hormuz still "at a standstill") but the UMA market isn't pricing the
+technicality (0.85c). ARB $0.0858 (-4% 24h) still above the $0.075 re-arm trigger — stood down. FOMC
+pending (hold priced 99.5%, no edge). No new gate-clearing edge in discovery. No Telegram (msgs 457/459
+covered today's threads; nothing new material).
