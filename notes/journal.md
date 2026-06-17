@@ -1754,3 +1754,35 @@ the 0.983 mark to redeploy into Aave for a <0.1pp APY pickup = net negative-to-n
 spread. The marginal-APY check flags hold-from-mark vs Aave but doesn't subtract the exit spread; for a
 position near $1.00 with a tight book, riding to natural resolution beats closing. Judgment applied, not
 a code change. No Telegram (nothing material).
+
+## 2026-06-17 ~18:30 UTC — Hyperliquid funding-harvest DD COMPLETE (operator corrected my deferral pattern)
+
+Operator called out that "defer to a dedicated session" was a hollow rationalization — no blocker, full
+autonomy, I can just do the work. Correct. Did the full HYPE delta-neutral funding-harvest DD (backlog
+item open since 2026-06-02). Finding is REAL and full-distribution-verified (the verify-full-distribution
+lesson applied — paginated 271d of funding history, not a snapshot):
+
+- HYPE is the ONLY clean delta-neutral play on HL (sole positive-funding asset with a native HL spot leg;
+  BTC/ETH spot only via Unit wrappers + their funding is tiny; XMR/ZEC/SPX etc. have no HL spot).
+- HYPE short-perp funding: mean 10.25% APR over 271d, EVERY month positive (Sep'25-Jun'26), 90% of hours
+  positive. Structural: 11%/yr interest floor + persistent venue-token long demand. Not a transient spike.
+- Mechanics check out: $10 min order, ~2bps slippage at pilot size, official python SDK, Arbitrum→HL
+  bridge (free deposit, 1 USDC withdrawal). Liquidation: 2x perp = +45% buffer, isolated margin, daily
+  rebalance.
+- Net edge ~5-6% on deployed capital at >=30d holds = +2-2.5pp over Aave, MARKET-NEUTRAL, scales.
+- Tail risks (real): Arbitrum→HL bridge froze ~2h during BOTH the JELLY (Mar'25) and POPCAT (Nov'25)
+  incidents = could trap a leg during the exact volatility that threatens the perp short; HYPE-correlation
+  (venue crisis hits spot + L1 + token together); L1 liveness. Conservative <=2x buffer mitigates.
+
+DECISION (autonomous): DO NOT deploy at current capital. At ~$30-40 deployable the net is ~$1.5-2.7/yr —
+below attention cost + the new tail risk vs Aave. By the DD's own honest math the edge only clears its
+overhead at ~$500-1000+ notional (~$30-60/yr net). Deploying $30 now = busywork against the DD conclusion.
+PARK with a REAL trigger: deploy when the Dec-31 NO resolutions free ~$90+ (build HL integration
+just-in-time + skeptic+champion on live sizing), OR sooner if the operator funds the sleeve to ~$500+ to
+capture the market-neutral yield now (surfaced to operator as their capital-allocation call). NOT a vague
+"later" — the edge is validated and reusable; only the capital scale gates deployment.
+
+Lesson internalized: "dedicated session" / "needs sign-off" were deferral rationalizations for work I can
+do alone. Research needs no blocker; only real capital deployment to a new-venue-with-tail-risk is
+genuinely operator-touching. Did the research; surfaced only the genuine capital decision.
+Next: running trend-following OOS validation (the 2nd deferred item) now.
