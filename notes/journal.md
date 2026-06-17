@@ -1786,3 +1786,37 @@ Lesson internalized: "dedicated session" / "needs sign-off" were deferral ration
 do alone. Research needs no blocker; only real capital deployment to a new-venue-with-tail-risk is
 genuinely operator-touching. Did the research; surfaced only the genuine capital decision.
 Next: running trend-following OOS validation (the 2nd deferred item) now.
+
+## 2026-06-17 ~18:45 UTC — evaluated PINN-crypto (operator's repo) + trend-following OOS came back
+
+**PINN-crypto (philippmerz/pinn-crypto) — VERDICT: numerics-only, no trading alpha.** Reviewed the repo +
+ran a skeptical literature survey. Both converge: PINNs solve/calibrate KNOWN PDEs (option-pricing, HJB,
+Fokker-Planck) — they do NOT predict prices or generate alpha. Zero credible OOS trading alpha from any
+price-prediction PINN in the literature (claims report normalized-RMSE / "96% dir accuracy" = leakage
+tells, not P&L). Legit niches (vol-surface RV, HJB execution, LP-range) all need KYC venue / options book
+/ latency / size = opposite of our profile. The repo itself is well-engineered + epistemically honest —
+it does NOT make the naive price-prediction mistake; it uses PINNs as solvers for Almgren-Chriss execution
++ Avellaneda-Stoikov market-making HJB. Its own findings: at realistic Polymarket κ=50-150 the parametric
+PINN collapses to ~0% holdout while the FD solver solves the same HJB correctly in <1s. So even in the
+legit numerics use, the PINN adds nothing over FD.
+THE ONE LIVE THREAD (and it's NOT the PINN): market-making on Polymarket via FD-solved A-S quotes — fits
+our mandate (our venue, decentralized, no-KYC; scanner found 6 thin 2-4c-spread markets). But UNVALIDATED
+for profitability net of adverse-selection/inventory/resolution risk, and we have no latency edge at small
+scale → cautious prior, plausibly not +EV. Recommendation to operator: drop PINN-for-edge (confirmed
+numerics); if MM interests them, validate the FD-solved strategy net of adverse selection as its own DD
+(no PINN needed). Opportunity cost vs the proven Polymarket-MISPRICING (taking) lane is real.
+
+**Trend-following OOS validation — VERDICT: REAL-EDGE as a risk-reducer (not return-enhancer).** SMA-50
+long/flat, Binance full history, walk-forward (2yr train→1yr test, window re-picked per fold). BTC/ETH/
+SOL/BNB: walk-forward Sharpe >= buy-hold on all four (BTC 1.04/0.91, ETH 0.92/0.82, SOL 0.77/0.24, BNB
+1.26/1.14) with ~30pp shallower max-DD. Bear-avoidance (the actual claim) confirmed: +33pp mean DD saved
+across 14 asset×bear cells, never negative, beat buy-hold on return in 13/14 bears. Robust plateau
+(SMA-40/50/60), survives 1d execution lag + 10bps costs, random-signal control z=3.1 (not leakage). The
+in-sample SOL "failure" was the artifact — biggest walk-forward win in proper OOS. CAVEATS: return-
+neutral-to-slightly-NEGATIVE vs buy-hold over a full cycle (value = path/drawdown/sequence risk, not
+CAGR); directional crypto-BETA (does NOT diversify the market-neutral funding-harvest sleeve); only ~3
+distinct bear regimes in all crypto history (small-N on the thing that matters). XRP fails, exclude.
+DEPLOY-WORTHINESS: it's a beta allocation with a bear shock-absorber — only makes sense if we WANT crypto
+directional exposure (we currently don't hold spot crypto as a thesis). Parked alongside HYPE funding
+harvest as a validated-but-not-yet-deployed sleeve; the funding harvest (market-neutral) is the better
+fit for idle stable capital. Both gated on capital scale / operator direction.
