@@ -59,7 +59,7 @@ Ranked by validated evidence, not aspiration:
    trade ("no info edge over headline-watchers" — if the thesis is just "I read the
    news," skip).
 
-Anti-edges (negative expected return after costs — skip): sub-day crypto price
+Anti-edges (negative expected return after costs — skip): **passive market-making on thin Polymarket binaries** (NO-GO, DD 2026-06-17: at our scale + no latency edge, captured spread < adverse-selection + binary-resolution cost; the liquidity-rewards subsidy rounds to $0 below the $1 payout floor in crowded markets and only pays on stale wide-spread markets where you'd be the sole picked-off quote — three converging evidence streams, thread closed); sub-day crypto price
 markets, Fed no-change legs at 99%+, AI-leaderboard markets absent gross dislocation
 (no private edge; COI restriction lifted 2026-06-01, judged on EV like anything else),
 anything whose only thesis is a headline everyone has.

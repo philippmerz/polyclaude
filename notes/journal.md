@@ -1820,3 +1820,30 @@ DEPLOY-WORTHINESS: it's a beta allocation with a bear shock-absorber — only ma
 directional exposure (we currently don't hold spot crypto as a thesis). Parked alongside HYPE funding
 harvest as a validated-but-not-yet-deployed sleeve; the funding harvest (market-neutral) is the better
 fit for idle stable capital. Both gated on capital scale / operator direction.
+
+## 2026-06-17 ~19:08 UTC — Polymarket market-making first-pass DD: NO-GO (thread closed)
+
+Ran the cheap plausibility check on passive MM of thin Polymarket binaries (the one live thread from the
+PINN repo review). VERDICT: NO-GO, three independent streams converging:
+- pinn-crypto's OWN saved backtest (even with an optimistically-rigged fill model): 0 completed
+  round-trips; every nonzero case ended one-sided (+1 inv); PINN MM sold 5-in-a-row into a rising market
+  for -$1.79. Thin flow (~1 trade/4min, directional) leaves you holding one-sided inventory, not capturing
+  spread.
+- Live CLOB (pulled today): bimodal reward trap. Crowded markets (Ivanka 5,331 / Waymo 8,026 / CO-Senate
+  15,144 shares already in-band) → my min-size share rounds to ~$0.001-0.04/day → BELOW the $1 payout
+  floor → $0; and 1c spreads = no capture. The markets that actually pay $1/day (McConnell-resign,
+  Montana-Senate) have 0 in-band + 8-29c real spreads — they pay ONLY because you'd be the sole tight
+  quote on a stale wide market everyone avoids for adverse-selection/resolution risk.
+- Structural: binary resolution makes adverse selection WORSE (violent 0/1 terminal moves, absorbing); one
+  adverse fill held to resolution loses $0.15-0.83/share vs $0.01-0.02 captured = breakeven needs 8-80
+  clean round-trips per adverse fill, which §1 shows barely happen. A-S skew can't bound inventory at ~1
+  trade/4min flow. At $50-150, min_size 20-100 sh = $3-83/side; one two-sided position can exceed the
+  whole budget.
+Killing reason: captured spread < adverse-selection + resolution cost at our scale/no-latency, and the
+rewards subsidy (the one thing that could flip it) is structurally unavailable to a small maker. Closed —
+NOT building the full fill-aware harness (structural economics already fail; answer wouldn't change).
+
+SESSION META-CONCLUSION (4 opportunities explored 2026-06-17): polyclaude's edge is TAKING (Polymarket
+mispricing) + MARKET-NEUTRAL YIELD (HYPE funding harvest, deploy at scale) — NOT making/liquidity-provision
+(MM NO-GO) and NOT model-based prediction (PINN numerics-only-no-alpha). Trend-following = real but a
+directional-beta risk-reducer, deploy only if we want crypto exposure. Clean strategic clarification.
