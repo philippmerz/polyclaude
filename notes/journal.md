@@ -1726,3 +1726,18 @@ prices YES 0.9975. Did NOT add NO at 0.003 — adding on a contrarian UMA-disput
 the permanence-trap mistake just codified; the resolution-arb market prices NO at 0.25% and my track
 record reading these is poor. Hold what I have, no new gamble. ARB $0.0883 (+2.6%, further from $0.075
 trigger) — stood down. FOMC decision today, zero Fed exposure. No new edge. No Telegram (nothing material).
+
+## 2026-06-17 ~02:20 UTC — reflection: watchlist revet summary was truncating the triggers (fixed)
+
+Surfaced from the ARB post-mortem. watchlist_monitor auto_revet_ticker captured the entry-trigger summary
+with a SINGLE-LINE regex (`[^\n]{20,400}`), so when longterm_check formats triggers as lead-in +
+multi-line bullets, only the lead-in survived ("...Concrete triggers:") and the actual triggers — the
+actionable part that flips WATCH->ENTER — were dropped from the cache + every surfaced revet. Fixed to
+capture the whole block to the next heading, whitespace-collapsed, 240->400 char cap. Unit-tested old vs
+new on a representative output: old lost all 3 bullets, new keeps them. Compounds on every future revet;
+also would have made the ARB phantom-vote claim visible in trigger context for verification. Existing
+truncated cache entries self-heal on 24h TTL refresh — no manual purge needed.
+
+ARB revet cache already self-corrected (the phantom "June 16 vote" aged out; current verdict clean WATCH
+2.75/4). No other stale flags / broken paths found. Alpha (Q2): nothing to force — the Iran/peace-deal
+cycle is traded and lessons codified; idle capital remains capital-bound by no-edge.

@@ -95,10 +95,14 @@ def auto_revet_ticker(ticker: str, asset_type: str) -> dict:
         verdict = verdict_raw if verdict_raw in ("ENTER", "WATCH", "PASS") else "WATCH"
 
     # Pull entry trigger one-liner if present
+    # Pull the entry-trigger BLOCK (not just the first line). longterm_check often
+    # formats triggers as a lead-in + multi-line bullet list; the old single-line
+    # regex captured only the lead-in ("...Concrete triggers:") and dropped the
+    # actual triggers — the actionable part that flips WATCH->ENTER (2026-06-17 fix).
     summary = ""
-    em = re.search(r"#{1,4}\s*Entry trigger\s*\n+([^\n]{20,400})", out)
+    em = re.search(r"#{1,4}\s*Entry trigger\s*\n+(.+?)(?=\n#{1,4}\s|\Z)", out, re.DOTALL)
     if em:
-        summary = em.group(1).strip()[:240]
+        summary = " ".join(em.group(1).split())[:400]
     elif verdict == "ERROR":
         # Surface first 200 chars of stdout/stderr for debugging
         summary = out.strip()[:200].replace("\n", " ")
