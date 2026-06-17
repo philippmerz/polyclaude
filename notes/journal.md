@@ -1714,3 +1714,15 @@ general, many details to negotiate"; Hormuz still "at a standstill") but the UMA
 technicality (0.85c). ARB $0.0858 (-4% 24h) still above the $0.075 re-arm trigger — stood down. FOMC
 pending (hold priced 99.5%, no edge). No new gate-clearing edge in discovery. No Telegram (msgs 457/459
 covered today's threads; nothing new material).
+
+## 2026-06-17 ~02:00 UTC — Wednesday 02:00 cron (flat, no action)
+
+All clean: UMA 16/0, marginal-APY 6/6 clear, redeem 0/7, monotonicity 1 sub-edge (Hurupay +1.66pp net,
+skip), consistency 0 real, Ostium 0/0. Bankroll $162.48 (-4.4%, all the peace-deal leg); 6 healthy NOs
+flat (Pahlavi +0.3pp). Peace-deal NO still UMA-disputed/unfinalized, marked 0.009→0.003, not redeemable —
+HOLD the free option. News supports the NO technicality (signing confirmed Fri Jun-19 = after deadline;
+"60-day ceasefire, not a triumph" = explicitly temporary, which the criterion excludes) yet UMA market
+prices YES 0.9975. Did NOT add NO at 0.003 — adding on a contrarian UMA-dispute read = doubling down on
+the permanence-trap mistake just codified; the resolution-arb market prices NO at 0.25% and my track
+record reading these is poor. Hold what I have, no new gamble. ARB $0.0883 (+2.6%, further from $0.075
+trigger) — stood down. FOMC decision today, zero Fed exposure. No new edge. No Telegram (nothing material).
