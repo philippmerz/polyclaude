@@ -1741,3 +1741,16 @@ truncated cache entries self-heal on 24h TTL refresh — no manual purge needed.
 ARB revet cache already self-corrected (the phantom "June 16 vote" aged out; current verdict clean WATCH
 2.75/4). No other stale flags / broken paths found. Alpha (Q2): nothing to force — the Iran/peace-deal
 cycle is traded and lessons codified; idle capital remains capital-bound by no-edge.
+
+## 2026-06-17 ~14:00 UTC — Wednesday 14:00 cron (flat, no action)
+
+All clean: UMA 16/0, redeem 0/7, monotonicity 0/984, consistency 0 real, Ostium 0/0. Bankroll $162.55
+(-4.4%, all peace-deal leg); 6 healthy NOs flat (Satoshi +1.2pp to 0.983). Peace-deal NO still
+disputed/unfinalized (0.002), held. ARB $0.0861 above $0.075 trigger, stood down. FOMC expected hold
+(lands 2pm ET post-check), zero Fed exposure.
+
+Satoshi NO flagged sub-hurdle (marginal-APY 3.31% < 3.40%) but HELD: closing means selling ~2-3pp below
+the 0.983 mark to redeploy into Aave for a <0.1pp APY pickup = net negative-to-neutral after the exit
+spread. The marginal-APY check flags hold-from-mark vs Aave but doesn't subtract the exit spread; for a
+position near $1.00 with a tight book, riding to natural resolution beats closing. Judgment applied, not
+a code change. No Telegram (nothing material).
