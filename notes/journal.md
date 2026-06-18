@@ -1865,3 +1865,18 @@ reinforcing both. Greenland +2pp to 0.905. All guards CLEAN otherwise (UMA 16/0 
 6/6, monotonicity 1 novelty sub-edge, consistency 0 real, Ostium 0/0). ARB $0.0872 (still >$0.075 trigger)
 stood down. No new edge in discovery. Iran-deal Jun-19 formal-signing-ceremony market deadline tomorrow
 (not held).
+
+## 2026-06-18 ~02:24 UTC — reflection: permanence-near-date trap now a TOOL-LEVEL guard (not just prose)
+
+Converted the §4.4 doctrine note into a mechanical warning in polyclaude_enter.py (warn, not block, like
+the existing-exposure guard). Fires when side=NO AND resolves <=45d AND question contains a permanence/
+finality keyword (permanent/officially/definitive/sign/ratif/treaty/ceasefire) — the two mechanically-
+detectable trap conditions; prompts the human to check the 3rd (active dealmaking) and weight loose >=0.5
+or skip. Rationale: this session's idle-reply-convention loss proved prose-only behavioral contracts get
+lost at compaction; a tool warning at the decision point survives. Grounded in 2 real losses (R-U
+-$16.73, DEC-0038 -$11.31 = ~$28). Unit-tested 6 cases (fires on both real traps, silent on normal
+long-dated NOs / far-dated permanence / YES-side); dry-run on held Greenland confirms no false-positive
+or breakage. Would have fired on the DEC-0038 entry.
+
+No new alpha to force: this session already explored 4 opportunities exhaustively (HYPE harvest + trend-
+following REAL, PINN + Polymarket-MM dead). PM book healthy holding pattern. Nothing else material.

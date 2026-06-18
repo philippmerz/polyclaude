@@ -230,6 +230,33 @@ def main() -> int:
     print(f"  endDate: {end_iso}")
     print(f"  negRisk: {neg_risk}")
 
+    # Permanence-near-date trap warning (00_philosophy §4.4; warn, not block).
+    # A NO fade on (permanence/finality qualifier) × (near-date deadline) × (active
+    # dealmaking) is a UMA-LOOSE trap: an announcement triggers loose-YES faster than
+    # a strict failure confirms. Lost twice — R-U (-$16.73), DEC-0038 (-$11.31). The
+    # first two conditions are mechanically detectable; the 3rd (active dealmaking) is
+    # the human's to check. Fires only on NO-side near-dated permanence markets.
+    _days = None
+    try:
+        if end_iso:
+            _end = datetime.datetime.fromisoformat(end_iso.replace("Z", "+00:00"))
+            _days = (_end - datetime.datetime.now(datetime.timezone.utc)).days
+        elif args.resolve_date:
+            _days = (datetime.date.fromisoformat(args.resolve_date) - datetime.date.today()).days
+    except Exception:
+        _days = None
+    _perm_kw = ("permanent", "officially", "definitive", "definitively",
+                "sign", "signed", "ratif", "treaty", "ceasefire")
+    _ql = question.lower()
+    if (args.side == "NO" and _days is not None and _days <= 45
+            and any(k in _ql for k in _perm_kw)):
+        print(f"\n!! PERMANENCE-NEAR-DATE TRAP PATTERN (00_philosophy §4.4): NO fade on a "
+              f"permanence/finality market resolving in {_days}d.")
+        print(f"!! An ANNOUNCEMENT can trigger loose-YES before a strict failure confirms. "
+              f"Lost here twice (R-U -$16.73, DEC-0038 -$11.31).")
+        print(f"!! If real-world dealmaking toward the event is ACTIVE → weight loose >=0.5 "
+              f"(p_no <= ~0.85, edge-haircut >= 0.10) or SKIP. A thin strict-edge will not survive it.")
+
     # Reject if disputed
     if uma_status in ("proposed", "disputed"):
         print(f"\nDECISION: SKIP — umaResolutionStatus={uma_status}")
