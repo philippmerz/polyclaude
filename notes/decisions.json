@@ -736,9 +736,10 @@
         "listing-cycle",
         "strict-criteria"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "RESOLVED YES 2026-06-17 \u2014 NO leg lost, full -$11.31 realized (redeemed 0xa60d8336 for $0, position cleared off-book). The US-Iran MoU was SIGNED Jun-17 ~22:57Z (Trump/Pezeshkian, 'permanent termination of military operations', Hormuz reopening) \u2014 exactly the permanence-near-date trap. Resolved via criteria path (b) 'clear public confirmation a qualifying agreement definitively established' \u2014 the announcement path I (belatedly, msg 459) flagged as the live one; the 'signing is Jun-19 after deadline' technicality I'd leaned on only ever defeated path (a).",
+      "calibration_delta": "At hold-decision time I put P(NO) ~15-30% vs market's ~10% then ~2.5%; resolved NO-loses. The hold-the-residual calls were EV-defensible each step (break-even = the mark), but the ENTRY mispriced the loose-interpretation risk: estimated P(YES) 6-9% at 0.145 entry, true outcome YES. The doctrine haircut (p_no 0.92, ~8% loose) was ~3x too thin for this trap class.",
+      "lesson": "Codified as the permanence-near-date trap (00_philosophy \u00a74.4, 2026-06-15): permanence-qualifier \u00d7 near-date \u00d7 active dealmaking = UMA-loose trap, weight loose >=0.5 or skip. This is the 2nd loss (-$11.31) confirming it after R-U (-$16.73). The fade looked cheap because the strict reading was the wrong base.",
+      "resolved_at": "2026-06-18T02:08:35Z"
     }
   ]
 }

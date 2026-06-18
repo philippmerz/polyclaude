@@ -1847,3 +1847,21 @@ SESSION META-CONCLUSION (4 opportunities explored 2026-06-17): polyclaude's edge
 mispricing) + MARKET-NEUTRAL YIELD (HYPE funding harvest, deploy at scale) — NOT making/liquidity-provision
 (MM NO-GO) and NOT model-based prediction (PINN numerics-only-no-alpha). Trend-following = real but a
 directional-beta risk-reducer, deploy only if we want crypto exposure. Clean strategic clarification.
+
+## 2026-06-18 ~02:00 UTC — Thursday 02:00 cron: peace-deal RESOLVED YES, -$11.31 realized + cleared; book clean
+
+DEC-0038 closed. US-Iran MoU SIGNED Jun-17 ~22:57Z (Trump/Pezeshkian, "permanent termination," Hormuz
+reopening) → peace-deal-Jun-15 resolved YES via criteria path (b) (definitive public confirmation), the
+announcement path that never needed the Jun-19 signing. Our NO lost: full -$11.31 realized; redeemed
+0xa60d8336 for $0, position cleared off-book (gamma de-indexed → the lone uma_status_check "alert" was
+the benign GAMMA_LOOKUP_FAILED, confirmed resolved via CLOB winner flags). DEC-0038 updated with outcome
++ calibration (entry haircut p_no 0.92 ~8% loose was ~3x too thin for this trap class) + lesson (the
+permanence-near-date trap, 2nd confirming loss after R-U, codified §4.4).
+
+Book now CLEAN: 6 NO legs, all green (+1.6% to +8.1%), cost $92.28 / MTM $96.32 (+4.38%) / max payout
+$105.10. Bankroll $162.84 (-4.2% vs kickoff; the drawdown is essentially this one loss). De-escalation
+tailwind: regime-fall NO +8.1% (0.905), Pahlavi NO 0.950 — a signed ceasefire lowers regime-change odds,
+reinforcing both. Greenland +2pp to 0.905. All guards CLEAN otherwise (UMA 16/0 genuine, marginal-APY
+6/6, monotonicity 1 novelty sub-edge, consistency 0 real, Ostium 0/0). ARB $0.0872 (still >$0.075 trigger)
+stood down. No new edge in discovery. Iran-deal Jun-19 formal-signing-ceremony market deadline tomorrow
+(not held).

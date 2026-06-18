@@ -9,11 +9,11 @@
     }
   },
   "SOL": {
-    "ts": 1781618555.7844636,
+    "ts": 1781748138.1850812,
     "result": {
       "verdict": "WATCH",
-      "score": "3.75/4",
-      "summary": "Current price $73.78 is attractive entry on thesis strength (4/4 catalyst window, 3.5/4 secular tailwind) but execution risk is material. Entry window:",
+      "score": "3/4",
+      "summary": "**Current $65\u201375 is reasonable entry given cycle position + catalyst runway.** Kelly-fraction sizing: 2% of portfolio if entering now (downside risk 40\u201350% real if regulatory thesis breaks). Confirmation buy: Alpenglow mainnet activation (Q3 2026) + 10M SOL validator participation, adds 3% to position. Alternative: Wait for $50\u201360 dip on any positive memecoin/regulatory headlines before 2H 2026; g",
       "fresh": true
     }
   },
@@ -27,11 +27,11 @@
     }
   },
   "STX": {
-    "ts": 1781618684.741986,
+    "ts": 1781748262.7348416,
     "result": {
       "verdict": "WATCH",
-      "score": "3.1/4",
-      "summary": "**CONDITIONAL ENTER on Q2 milestone confirmation.** Current price $0.19 is attractive *if* Bitcoin DeFi thesis is sound, but entry should be staged:",
+      "score": "3.5/4",
+      "summary": "**Current price ($0.19) is near cycle bottom and defensible as an entry.** However, the 74% BTCFi TVL contraction creates ambiguity: is this cycle bottom or structural rejection? Recommended entry strategy: - **Immediate entry at $0.15\u2013$0.20** (dollar-cost, 1\u20132% of portfolio max) on assumption cycle-bottom thesis + catalysts. Use volatility to add on weakness to $0.15. - **Confirmation entry at sB",
       "fresh": true
     }
   }
