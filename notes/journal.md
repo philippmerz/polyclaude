@@ -1880,3 +1880,11 @@ or breakage. Would have fired on the DEC-0038 entry.
 
 No new alpha to force: this session already explored 4 opportunities exhaustively (HYPE harvest + trend-
 following REAL, PINN + Polymarket-MM dead). PM book healthy holding pattern. Nothing else material.
+
+## 2026-06-18 ~04:16 UTC — reflection: pruned resolved peace-deal from Kelly priors (stale-entry cleanup)
+
+The resolved/dead peace-deal market lingered in portfolio_kelly_priors.json (the file's own convention is
+to prune resolved entries). portfolio_kelly runs clean regardless (it pulls live positions from data-api),
+but a dead prior is stale weight + a re-add hazard. Pruned → priors now exactly the 6 held positions. No
+other stale entries. Alpha: nothing new to force (4 opportunities exhaustively explored this session;
+book in healthy holding pattern).

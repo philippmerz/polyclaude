@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-06-11",
+  "_updated": "2026-06-18",
   "will-the-iranian-regime-fall-by-the-end-of-2026": {
     "p_no": 0.89,
     "cluster": "iran-regime",
@@ -42,12 +42,5 @@
     "rho_within": 0.0,
     "cluster_frac": 0.033,
     "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim \u2014 R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo."
-  },
-  "us-x-iran-permanent-peace-deal-by-june-15-2026-734-856-129": {
-    "p_no": 0.92,
-    "cluster": "iran-peace",
-    "rho_within": 0.7,
-    "cluster_frac": 0.066,
-    "rationale": "2026-06-12 entry (DEC-0038): strict P(YES) 3-5% weighted 85/15 with loose risk -> p_no 0.92. Explicitly-temporary 60-day MOU does not satisfy 'permanent' (May-31 precedent). ANTI-correlated with iran-regime cluster. Expect rhetoric whiplash; bridge-hold through drawdowns."
   }
 }
