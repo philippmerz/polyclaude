@@ -1888,3 +1888,19 @@ to prune resolved entries). portfolio_kelly runs clean regardless (it pulls live
 but a dead prior is stale weight + a re-add hazard. Pruned → priors now exactly the 6 held positions. No
 other stale entries. Alpha: nothing new to force (4 opportunities exhaustively explored this session;
 book in healthy holding pattern).
+
+## 2026-06-18 ~14:00 UTC — Thursday 14:00 cron (flat, no action; first full tick on the clean 6-NO book)
+
+All clean: UMA 16/0, marginal-APY 6/6 clear, redeem 0/6, monotonicity 0/931, consistency 0 real,
+Ostium 0/0. Book: 6 NO legs all green, cost $92.28 / MTM $96.31 (+4.36%) / max payout $105.10. Bankroll
+$162.80 (-4.2%). No >5pp moves (Pahlavi +0.1, hantavirus -0.3, rest flat).
+
+US-Iran MOU now SIGNED (Jun 17-18, 14-point agreement) — net REINFORCES the two biggest legs: regime-fall
+NO +8.1% (0.905) and Pahlavi NO 0.951, since Trump explicitly abandoned regime-change + the regime is
+recognized as sole legitimate partner = lower regime-change odds. Counter-signal (Iran's aggressive Hormuz
+60-day-toll posturing) is minor; dominant read is regime stability. No thesis-break on any leg.
+
+ARB $0.0844 (-2% 24h) still above the $0.075 dip trigger — stood down (no filed fee-switch proposal
+either). Discovery: no durable-NO edge; all hits short-fuse sports/Iran-event NOs (R-U class, not in
+mandate). Transient data-api timeouts on first attempts cleared on retry (not actionable). No Telegram
+(nothing material; operator fully looped yesterday). Idle capital ~$60 Aave + $11.70 pUSD, edge-bound.
