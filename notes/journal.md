@@ -1914,3 +1914,20 @@ criticism) keeps reinforcing regime-fall + Pahlavi NOs (regime negotiating/legis
 ARB $0.0861 above $0.075 trigger, no fee-switch filing (the "ARB" news matches were all "strait of
 hormuz" substring false-positives) — stood down. No durable-NO edge in discovery. SOL auto-revet timed
 out (transient, IBKR-surface item, not actionable). No Telegram (nothing material).
+
+## 2026-06-19 ~14:00 UTC — Friday 14:00 cron (flat; Iran news whipsaw monitored, no-action — reasoned)
+
+All guards clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 0/922, consistency 0 real, Ostium
+0/0. Book 6 NO legs green, cost $92.28 / MTM $96.35 (+4.41%); bankroll $162.90 (-4.2%). No >5pp moves
+(Trump-out -1pp to 0.895, rest flat; MTM -$0.30 noise).
+
+NOTABLE (no-action): Iran news whipsawed — signed-MOU narrative (yesterday) → "US-Iran Switzerland talks
+called off + renewed Israeli strikes in Lebanon" (today), flagged MATERIAL on regime-fall + Pahlavi NOs.
+HELD without a catalyst re-check, deliberately: (1) standing trigger (>5pp / UMA) did NOT fire — both
+marks unmoved (0.905 / 0.953); (2) the thesis is regime SURVIVAL to Dec-31, which needs invasion/internal-
+collapse — diplomatic on-off + an Israel-Lebanon front aren't regime-survival events, and the 05:55 alert
+explicitly notes "no evidence of Iranian regime instability"; (3) the market's unmoved 9.5%-YES is a
+real-time estimate BELOW my 11% prior, so regime-fall risk isn't understated and I have no Iran-diplomacy
+info edge to override it. Checking every unmoved-mark headline = the over-reaction the trigger discipline
+guards against. Re-check armed: >5pp move OR genuine regime-instability Tier-1. ARB $0.0848 stood down. No
+new edge. No Telegram (no material change).

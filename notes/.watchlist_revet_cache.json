@@ -9,11 +9,11 @@
     }
   },
   "SOL": {
-    "ts": 1781748138.1850812,
+    "ts": 1781877794.4166186,
     "result": {
-      "verdict": "WATCH",
-      "score": "3/4",
-      "summary": "**Current $65\u201375 is reasonable entry given cycle position + catalyst runway.** Kelly-fraction sizing: 2% of portfolio if entering now (downside risk 40\u201350% real if regulatory thesis breaks). Confirmation buy: Alpenglow mainnet activation (Q3 2026) + 10M SOL validator participation, adds 3% to position. Alternative: Wait for $50\u201360 dip on any positive memecoin/regulatory headlines before 2H 2026; g",
+      "verdict": "ERROR",
+      "score": "?/4",
+      "summary": "**Current entry:** Price ($65\u2013$68) offers reasonable entry if thesis-confident in secular tailwind (dev momentum, RWA growth, institutional adoption). Alpenglow mainnet delivery (Q3 2026) is confirmation event; delayed launch would warrant reassessment. **Better entry:** Wait for Alpenglow mainnet success (prove delivery) + initial on-chain performance data (target: finality <200ms, stability >99.",
       "fresh": true
     }
   },
