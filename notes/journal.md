@@ -1904,3 +1904,13 @@ ARB $0.0844 (-2% 24h) still above the $0.075 dip trigger — stood down (no file
 either). Discovery: no durable-NO edge; all hits short-fuse sports/Iran-event NOs (R-U class, not in
 mandate). Transient data-api timeouts on first attempts cleared on retry (not actionable). No Telegram
 (nothing material; operator fully looped yesterday). Idle capital ~$60 Aave + $11.70 pUSD, edge-bound.
+
+## 2026-06-19 ~02:00 UTC — Friday 02:00 cron (flat-up, no action)
+
+All clean: UMA 16/0, marginal-APY 6/6 clear, redeem 0/6, monotonicity 0/848, consistency 0 real, Ostium
+0/0. Book: 6 NO legs all green, cost $92.28 / MTM $96.65 (+4.74%) / max payout $105.10. Bankroll $163.20
+(-4.0%). No >5pp moves (Trump-out +1pp to 0.905 favorable, rest flat). Iran news (Hormuz tolls, deal
+criticism) keeps reinforcing regime-fall + Pahlavi NOs (regime negotiating/legislating = entrenched).
+ARB $0.0861 above $0.075 trigger, no fee-switch filing (the "ARB" news matches were all "strait of
+hormuz" substring false-positives) — stood down. No durable-NO edge in discovery. SOL auto-revet timed
+out (transient, IBKR-surface item, not actionable). No Telegram (nothing material).
