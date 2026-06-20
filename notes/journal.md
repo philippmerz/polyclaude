@@ -1931,3 +1931,18 @@ real-time estimate BELOW my 11% prior, so regime-fall risk isn't understated and
 info edge to override it. Checking every unmoved-mark headline = the over-reaction the trigger discipline
 guards against. Re-check armed: >5pp move OR genuine regime-instability Tier-1. ARB $0.0848 stood down. No
 new edge. No Telegram (no material change).
+
+## 2026-06-20 ~02:00 UTC — Saturday 02:00 cron (flat-up; weekly methodology 14/20)
+
+All clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 2 (only illiquid Propr token clears BE,
+speculative skip), consistency 0 real, Ostium 0/0. Book 6 NO legs green, cost $92.28 / MTM $96.63
+(+4.71%); bankroll $163.32 (-3.9%, best since the peace-deal loss). No >5pp moves (Trump-out +1pp to
+0.905). Iran feed quiet — talks-cancelled was noise, NO regime-instability event; regime-fall thesis
+corroborated ("regime fall by Jun-30" market YES 0.003). ARB $0.0834 (-3.2% 24h, drifting toward but
+still above $0.075) stood down, no fee-switch filing.
+
+WEEKLY METHODOLOGY (step 10): prospective_resolve now 14/20 (was 13). Pattern HOLDS, OOS-confirming the
+codified reasoning-depth rule: zero_shot +0.3483/$ (3 takes, 100% win) >> all multi-agent (parallel_pair
+-0.022, unconscious_terse -0.010, unconscious_demo -0.152, adversarial_3round -0.296). 6 markets left,
+concludes ~Jun-30 → owe the final per-variant analysis then + the deferred methodology_stress_test
+gamma-cap fix. No action (finding stable + already in doctrine). No Telegram (nothing material).
