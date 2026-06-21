@@ -493,3 +493,116 @@ Sources:
 - [Semiconductor Memory Shortage Analysis - CNBC](https://www.cnbc.com/2026/01/26/memory-chip-shortage-synopsys-lenovo-ai-data-centers.html)
 - [China Rare Earth Industry Analysis](https://www.mining.com/web/china-to-strengthen-development-of-rare-earth-industry-over-2026-2030/)
 - [LME Market Data](https://www.lme.com/market-data/reports-and-data/lme-official-prices)
+
+---
+
+## 2026-06-21T21:20:40Z — world_state_digest
+
+**Domains:** macro-fiscal-labor, tech-ai-chips, crypto-on-chain | **Lookback:** 30d | **Model:** haiku
+
+Now let me compile the bare facts and synthesize candidate themes.
+
+```
+# WORLD-STATE DIGEST — 2026-06-21
+
+Domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### macro-fiscal-labor
+
+- [2026-06-10] BLS: May nonfarm payroll employment +172k; unemployment rate 4.3% (unchanged)
+- [2026-06-10] BLS: Labor force participation 61.8%; employment-population ratio 59.2%
+- [2026-06-10] BLS: CPI +0.5% (SA), +4.2% YoY (first time >4% in 3 years); energy +3.9%, shelter +3.4%, transportation +4.1%
+- [2026-06-10] BLS: Core CPI +0.2% (SA), +2.9% YoY (highest since September 2025)
+- [2026-04-30] BEA: Q1 2026 real GDP +1.6% (second estimate, down from +2.0% advance)
+- [2026-06-17] Federal Reserve: FOMC holds federal funds rate at 3.50%-3.75% (12-0 vote); median projection for end-2026 rate = 3.8%; nine participants expect ≥1 hike in 2026; statement language shifted hawkish, removed references to future easing
+- [2026-06-11] ECB: Raises all three key rates by 25bp (deposit facility 2.25%, main refinancing 2.40%, marginal lending 2.65%); first increase since September 2023; baseline inflation projection 3.0% 2026, 2.3% 2027, 2.0% 2028; growth projection 0.8% 2026
+- [2026-06-16] Bank of Japan: Raises policy rate by 25bp to 1.0% (7-1 vote); highest level since September 1995
+- [2026-06-17] PBOC: Announces shift toward overnight reverse repo policy framework; launches facility for foreign central banks to obtain yuan liquidity; maintains 7-day reverse repo at 1.40%; continues "moderately loose" monetary stance
+
+### tech-ai-chips
+
+- [2026-05-20] NVIDIA Q1 FY2027: Total revenue $81.6B (+85% YoY, +20% QoQ); Data Center revenue $75.2B (+92% YoY, +21% QoQ); Data Center compute $60.4B (+77% YoY, +18% QoQ)
+- [2026-05-20] NVIDIA: Hyperscaler revenue ~50% of Data Center; remaining 50% from AI Clouds, industrial, enterprise, sovereign customers
+- [2026-05-20] NVIDIA: Zero shipments of Data Center Hopper to China in Q1 FY2027 (vs $4.6B in Q1 FY2026); dividend increased from $0.01 to $0.25 per share; $80B share buyback authorized
+- [2026-06-10] TSMC: May 2026 consolidated net revenue NT$416.98B (+1.5% MoM, +30.1% YoY); Jan-May 2026 revenue NT$1.96T (+30.0% YoY)
+- [2026-06-04] TSMC: 2026 capex guidance $52-56B (70-80% to advanced process N3/N2, 10-20% to packaging/mask, ~10% to specialty); capex in next 3 years expected "significantly higher than past 3 years"
+- [2026-06-04] SEMI: Q1 2026 global semiconductor equipment billings $36.55B (+14% YoY, +1% QoQ); driven by AI-related capacity expansion and technology upgrades
+
+### crypto-on-chain
+
+- [2026-06-21] DefiLlama: Total DeFi TVL ~$160B; stablecoin supply ~$310B (USDT ~$185B, USDC ~$75B, DAI/USDS ~$8B)
+- [2026-06-21] Tokenomist: 633 tokens tracked, total market cap $1.83T; June week 2 unlocks $634.89M; June week 3 unlocks $670.7M
+- [2026-06-21] L2Beat: Total L2 TVL ~$45-48B; Base ~$13.5B, Arbitrum One ~$18B, ZKSync Era ~$4.5B; top 3 networks = ~70% of L2 TVL
+- [2026-06-16] Bitcoin/Ethereum: BTC $66,433, ETH $1,791.95; BTC down 14% weekly, 21% over prior 4 weeks; volatility linked to Middle East developments
+- [2026-05] Spot Bitcoin ETF net outflows $401.62M (third-largest monthly redemption since late 2025)
+- [2026-06] BTC/ETH stabilized briefly on news of US-Iran peace deal progress; lack of persistent upside suggests risk-off bias
+
+## CANDIDATE THEMES
+
+### Inflation Stickiness + Fed Policy Error Risk
+- Underlying facts: CPI 4.2% YoY (3-year high), core 2.9% (highest since Sept 2025); shelter, energy, transportation all elevated. Fed median projection: ~1 hike rest of 2026. ECB and BoJ both hiking 25bp while Fed holds. Fed statement language hawkish but forward guidance minimal.
+- Implication: Fed may have underestimated inflation persistence. If CPI stays >3.5% through summer, either (a) Fed forced to hike more aggressively (recession risk), or (b) real yields go negative and long-duration assets reprice sharply downward. Current market pricing assumes Fed data-dependent and pausing; if inflation doesn't fade, repricing is violent.
+- Possible plays: SHORT long-duration Treasuries (TLT), long 2y relative to 10y (bull steepener), reduce duration exposure in equity portfolios
+- Direction: SHORT duration
+- Horizon: 3-6 months (July/August data releases will show trend)
+- Retail blindspot: Narrative is "Fed done hiking, rates are terminal." Money flows into bonds. But if inflation proves stickier than Fed models, bonds take worst hit.
+- Confidence: HIGH
+
+### NVIDIA Demand Diversification Masks Upstream Overcapacity Risk
+- Underlying facts: NVIDIA reports zero Hopper shipments to China (vs $4.6B YoY prior); revenue growth offset by "diversification" to non-hyperscaler, industrial, enterprise, sovereign customers. TSMC capex $52-56B (largest ever, 40% increase) predicated on sustained demand. SEMI billings +14% YoY but only +1% QoQ (deceleration signal).
+- Implication: NVIDIA's China export ban creates huge gap; non-hyperscaler demand is being called out as offset, but this segment is less visible and harder to forecast. TSMC is betting $56B annual capex on sustained ramp. If non-hyperscaler demand is weaker than guided or becomes cyclical, TSMC capex becomes stranded and equipment makers (ASML, LRCX) pull back, creating multi-quarter hangover.
+- Possible plays: SHORT TSMC (TSM) relative to NVIDIA (NVDA) ; SHORT semiconductor equipment stocks (ASML, LRCX)
+- Direction: SHORT semi-equipment
+- Horizon: 2-3 quarters (next earnings will reveal whether non-hyperscaler bookings sustain)
+- Retail blindspot: AI boom narrative masks demand composition shift. NVIDIA's "diversification" language sounds like broadening TAM, but may be hiding demand cliff in non-hyperscaler segment.
+- Confidence: MEDIUM
+
+### Fed Policy Divergence + Dollar Strength = EM Currency Collapse
+- Underlying facts: Fed holds at 3.50%-3.75%, ECB hikes 25bp, BoJ hikes 25bp (to 1.0%, highest since 1995). PBOC signals "moderately loose" and launches new yuan-liquidity facility for foreign CBs (defensive move). US real yields now elevated relative to rest of developed world.
+- Implication: As Fed stays put while others tighten, dollar strengthens. EM currencies under pressure. Countries with dollar-denominated debt face refinancing stress. Carry trades (especially yen carry) unwind as BoJ hikes, feeding volatility into EM. PBOC's new facility suggests internal anxiety about capital outflows and yuan weakness.
+- Possible plays: LONG USD (UUP), SHORT EM currencies (short FXI China, EEM broad), SHORT emerging-market bonds
+- Direction: LONG USD / SHORT EM
+- Horizon: 2-4 months
+- Retail blindspot: EM remains "cheap" narrative; retail expects mean reversion. But Fed divergence + tightening by ECB/BoJ creates structural bid for dollar and structural headwind for EM.
+- Confidence: MEDIUM-HIGH
+
+### Crypto Risk-Off Cycle; Not Inflation Hedge
+- Underlying facts: Bitcoin down 21% over prior 4 weeks. Spot Bitcoin ETF net outflows $401.62M in May (third-largest monthly outflow since late 2025). BTC/ETH stabilized only briefly on Iran peace deal news, then resumed weakness. Correlation with geopolitical risk (Middle East) rather than inflation or monetary easing.
+- Implication: Crypto market treating BTC/ETH as risk-on assets, not inflation hedges. Retail narrative of "Bitcoin as inflation hedge" contradicted by actual market behavior—during inflation spike (CPI 4.2%), Bitcoin falls. Spot ETF outflows signal institutional/retail capitulation. If geopolitical risk remains elevated or US-Iran deal stalls, more downside likely.
+- Possible plays: SHORT BTC via futures or inverse ETFs; AVOID crypto-exposed equities (MARA, COIN) until capitulation reverses
+- Direction: SHORT crypto
+- Horizon: 4-8 weeks (geopolitical timeline uncertain; capitulation could reverse fast)
+- Retail blindspot: "Hodl" narrative persists; retail views current prices as buying opportunity. But actual ETF flows show institutions exiting. Risk-off bias will persist until geopolitical fear subsides.
+- Confidence: MEDIUM
+
+### PBOC Easing + Yuan Weakness Signal China Growth Slowdown
+- Underlying facts: PBOC maintains "moderately loose" monetary stance; announces new facility for foreign central banks to access yuan liquidity. This is a defensive move (attracting offshore yuan demand suggests existing demand is weak). PBOC does not cut headline rates but shifts framework to overnight reverse repo.
+- Implication: PBOC signaling concern about growth without fully easing. New facility for foreign CBs to get yuan suggests capital outflows and yuan pressure. If H1 2026 GDP data (due mid-July) shows slower growth, PBOC may be forced to tighten supply/demand for yuan by allowing depreciation, which feeds inflation and attracts BoJ/ECB hawkish response. China property sector still in distress; external demand hit by US tariff regime.
+- Possible plays: SHORT CNY (via CNH forwards/futures), SHORT China equities (FXI)
+- Direction: SHORT CNY
+- Horizon: 4-6 weeks (H1 GDP data release will trigger repricing; July/August data more conclusive)
+- Retail blindspot: China "reopening" narrative obscures structural slowdown. PBOC's moves read as defensive, not confident.
+- Confidence: MEDIUM
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: TLT, TSM, FXI, EEM, UUP, BTC
+- Run catalyst_check.py on: Polymarket "Fed raises rates by July 2026" (now medium conviction bet vs. high conviction pause narrative), "China H1 GDP <5%"
+- Skip / pass: L2 consolidation play (too early; need more data on TVL/user growth divergence), stablecoin regulatory arb (USDC MiCA impact unclear, Tether reserve risk not quantifiable from public data)
+```
+
+Sources:
+- [BLS Employment Report](https://www.bls.gov/news.release/empsit.htm)
+- [BLS CPI Report](https://www.bls.gov/news.release/cpi.htm)
+- [BEA GDP](https://www.bea.gov/news)
+- [Federal Reserve FOMC Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm)
+- [ECB Monetary Policy Decision](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260611~4d41bd5e83.en.html)
+- [Bank of Japan Policy Rate](https://www.boj.or.jp/en/announcements/index.htm)
+- [NVIDIA Q1 FY2027 Earnings](https://investor.nvidia.com/financial-info/financial-reports/default.aspx)
+- [TSMC Announcements](https://investor.tsmc.com/english/announcement)
+- [SEMI Billing Report](https://www.semi.org/en/news/billing-report)
+- [DefiLlama TVL Data](https://defillama.com/)
+- [Tokenomist Token Metrics](https://tokenomist.ai/)
+- [L2Beat TVL Data](https://l2beat.com/)

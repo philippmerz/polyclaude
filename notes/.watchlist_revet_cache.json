@@ -9,11 +9,11 @@
     }
   },
   "SOL": {
-    "ts": 1781877794.4166186,
+    "ts": 1782076253.823194,
     "result": {
       "verdict": "ERROR",
       "score": "?/4",
-      "summary": "**Current entry:** Price ($65\u2013$68) offers reasonable entry if thesis-confident in secular tailwind (dev momentum, RWA growth, institutional adoption). Alpenglow mainnet delivery (Q3 2026) is confirmation event; delayed launch would warrant reassessment. **Better entry:** Wait for Alpenglow mainnet success (prove delivery) + initial on-chain performance data (target: finality <200ms, stability >99.",
+      "summary": "**Current entry reasonable.** SOL at $73\u201381 is 5\u20138% above April lows post-Drift washout; Drift liquidated weak hands and created capital-efficient entry. Marginal catalysts within 3\u20136 months (Alpenglow Q3 testnet results, Morgan Stanley ETF update) can re-rate 20\u201340% upside (to $90\u2013110) before major announcement. **Prefer entry confirmation at one of:** - **Alpenglow testnet success (Q3 2026):** V",
       "fresh": true
     }
   },

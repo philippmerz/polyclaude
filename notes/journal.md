@@ -1946,3 +1946,37 @@ codified reasoning-depth rule: zero_shot +0.3483/$ (3 takes, 100% win) >> all mu
 -0.022, unconscious_terse -0.010, unconscious_demo -0.152, adversarial_3round -0.296). 6 markets left,
 concludes ~Jun-30 → owe the final per-variant analysis then + the deferred methodology_stress_test
 gamma-cap fix. No action (finding stable + already in doctrine). No Telegram (nothing material).
+
+## 2026-06-21 ~21:10 UTC — OUTAGE RECOVERY (API creds expired ~43h; 06-20 02:00 → 06-21 21:10) + weekly review due
+
+API creds expired; session down ~43h, cron ticks fired into a dead session (06-20 14:00, 06-21 02:00/
+14:00 unlogged). Host stayed UP — news_watcher/telegram_listener/heartbeat all alive; 28 gap alerts
+captured (but un-triaged: classifier returned 401 the whole window). Recovery findings: BOOK INTACT, nothing
+time-sensitive.
+- UMA 16/0 (no dispute — the real risk per R-U/peace-deal, did NOT fire). Redeem 0/6. Ostium 0/0.
+- 6 NO legs all green, cost $92.28 / MTM $96.48 (+4.56%); bankroll $163.15 (-4.0%) — flat vs the $163.32
+  left 43h ago. ZERO legs moved >5pp (Trump-out -0.5pp, Pahlavi -0.1pp, rest flat). Live CLOB confirms
+  Iran cluster stable (regime-fall NO bid/ask 0.90/0.91 deep; Pahlavi 0.951/0.952).
+- Gap news = monolithic Hormuz/ceasefire diplomacy: Iran claimed Hormuz closure (US disputed, ships still
+  passing) → US-Iran Switzerland talks began → Trump threatened fresh attacks → Iran SUSPENDED talks
+  (06-21 19:09). NO regime-instability event (no coup/uprising/leadership-change/invasion). Mildly
+  NO-supportive (regime wielding Hormuz from intact governance); "regime fall by Jun-30" sibling YES 0.004.
+- ARB $0.0822, never touched $0.075 in-window; no fee-switch filing — stood down. Guards/scans clean
+  (marginal-APY 6/6, monotonicity 0 actionable, consistency 0 real). No peer session.
+Backlog from outage (low urgency): gap alerts un-triaged (all noise, no missed signal — optional
+re-classify of the ~3 substantive turns). Operator detached, wants Telegram only if important → sending a
+brief all-clear since the cred-expiry was their flagged concern.
+
+## 2026-06-21 ~21:30 UTC — Sunday weekly long-term review (done during outage-recovery)
+
+Ran world_state_digest on 3 stalest domains (macro-fiscal-labor, tech-ai-chips, crypto-on-chain; last
+digests were 06-07 + earlier). Surfaced 5 themes, ALL IBKR-surface macro/directional (short-duration on
+CPI 4.2% = HIGH-conf standout; semi-equipment overcapacity; USD/EM; China slowdown; crypto risk-off).
+NONE polyclaude-PM-actionable or <1y-crypto-EVM. Did NOT run longterm_check on TLT/TSM/etc — they're
+rates/macro directional expressions, category-mismatched to longterm_check's cycle-bottom-LONG design;
+running them would be theater. Surfaced to operator via watchlist digest instead.
+The one PM-lane thread (digest's "Fed July hike underpriced") DISSOLVED on live-price check: Polymarket
+already prices July-hike 17.5% / 2026-hike 61.5% — no pause-narrative mispricing, and Fed legs are
+anti-edge anyway. Clean no-trade. Watchlist updated; no new triggers armed (existing SOL/ARB/STX/CEG/ALB
+all WATCH). Semi-equipment-short theme noted as a CONTRA signal to watch against our memory-shortage long
+thesis. No book action.

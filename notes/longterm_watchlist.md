@@ -291,3 +291,25 @@ Next weekly: 2026-06-14 — rotate to the now-stalest (macro-fiscal-labor + tech
 ### 2026-06-09 trigger hit: ALB (Albemarle / lithium) — re-vetted 3.5/4 WATCH
 
 ALB hit its $140-150 entry band at $149.84 (after a ~13% weekly drop from $171.77). Fresh longterm_check UPGRADED it 3/4 → **3.5/4 WATCH**: margin-of-safety upgraded WEAK→OK (net debt $3.2B→$1.9B, 1.0x leverage, $2.7B liquidity, fwd P/E 13.6x), and the crux **$20+/kg lithium-pricing condition is now MET** (~$20-26/kg LCE; Q1-26 EPS $2.95 +127% beat, surplus→deficit 2026). Both revised-entry conditions (price $140-150 AND $20+/kg) satisfied → entry-eligible for a **STARTER tranche** on the operator's IBKR sleeve at the favorable low end of the band; reserve full size for spot >$22/kg or an ESS-capex/2027-estimate catalyst. Downside: lithium reverts $12-15/kg → 60-70% EBITDA cut (~5% thesis-broken, fortress B/S). Surfaced to operator (msg 434). watchlist_triggers entry_max lowered 150→140 to re-alert on the add-lower tranche. IBKR-route, no polyclaude capital.
+
+## 2026-06-21 weekly digest (domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain)
+
+Run during outage-recovery (creds had expired ~43h). Themes surfaced, all IBKR-SURFACE (operator's
+equity/macro sleeve — none are polyclaude-PM-actionable or <1y-crypto-EVM):
+- **Inflation stickiness / Fed policy-error (HIGH conf):** CPI 4.2% YoY (3yr high), core 2.9%; Fed held
+  Jun-17 at 3.50-3.75%, ECB+BoJ hiking. Play = SHORT long-duration (TLT), bull steepener. Horizon 3-6mo.
+  Standout theme. → operator IBKR.
+- **Semi-equipment overcapacity (MED):** NVIDIA zero China Hopper, "diversification" masking demand
+  composition; TSMC $56B capex bet; SEMI billings +14%YoY but +1%QoQ (decel). Play = SHORT semi-equip
+  (ASML/LRCX) vs NVDA. → operator IBKR (note: contradicts our memory-shortage CCJ-adjacent long thesis;
+  watch for confirmation either way).
+- **Dollar strength / EM stress (MED-HIGH):** Fed-divergence → LONG USD, SHORT EM/CNY. China H1 GDP
+  mid-July is the catalyst. → operator IBKR.
+- **Crypto risk-off (MED):** BTC -21%/4wk, spot-ETF outflows $402M May; trading as risk-on not inflation
+  hedge. CONTEXT for our book (no action — no decentralized short venue, don't hold spot as thesis). Note:
+  mildly supports keeping idle capital in Aave/stables vs deploying into crypto-beta now.
+
+PM-actionable check (our lane): digest flagged "Fed July hike underpriced vs pause narrative" — FALSE on
+live Polymarket prices: market already prices July-hike 17.5% / 2026-hike 61.5% (NOT a pause narrative).
+No mispricing to fade; Fed legs are anti-edge regardless. No polyclaude entry. Discipline win: checked the
+digest's market-state assumption against live prices rather than trusting it.
