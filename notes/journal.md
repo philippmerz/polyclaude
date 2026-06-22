@@ -1995,3 +1995,13 @@ spawn timeout (≠401, likely contention w/ an orphaned web-only haiku subproces
 harmless, self-exits). No fix needed. Iran: talks-walkout = diplomatic noise, no regime event, legs
 unmoved. ARB $0.0845 (>$0.075) stood down. No new edge. No Telegram (operator detached + all-clear'd at
 21:00; nothing material).
+
+## 2026-06-22 ~14:00 UTC — Monday 14:00 cron (flat, no action)
+
+All clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 0/933, consistency 0 real, Ostium 0/0.
+Book 6 NO legs green, cost $92.28 / MTM $96.34 (+4.40%); bankroll $163.01 (-4.1%). All marks flat/sub-1pp
+(Trump-out -0.5pp). Iran news flipped back to DE-ESCALATION (Switzerland roadmap-to-final-deal, IAEA
+inspector access, Hormuz reopening per Vance) — thesis-CONFIRMING for regime-fall + Pahlavi NOs (regime
+negotiating + accepting oversight = persists). ARB $0.0865 (+2.9% 24h, above $0.075) stood down, no
+fee-switch filing. No new edge (discover = long-dated favorites + Hormuz coin-flips, not our profile).
+Transient data-api 408/str glitches self-healed on retry. No Telegram (operator detached, nothing material).

@@ -27,11 +27,11 @@
     }
   },
   "STX": {
-    "ts": 1781834755.85276,
+    "ts": 1782137066.292213,
     "result": {
       "verdict": "WATCH",
-      "score": "3/4",
-      "summary": "Enter on confirmation of user adoption reversal: (1) Daily active addresses trending positive for 2+ consecutive months post-staking launch OR (2) sBTC TVL sustainably above $500M with growing transaction count OR (3) price dips below $0.15 (provides margin of safety for thesis failure scenario). Monitor Q2-Q3 2026 for staking launch execution and active address trend inversion before committing c",
+      "score": "3.5/4",
+      "summary": "**CURRENT ENTRY**: Cycle lows ($0.17\u2013$0.20) offer entry if you have a 3-year conviction in Bitcoin staking as an institutional megatrend and believe Stacks' self-custodial mechanism is defensible. Position sizing: Kelly/4 (Kelly = 25% \u00d7 expected return / probability of loss; with 30% strong scenario + 25% generational = 55% upside cases, Kelly \u2248 1\u20132% of portfolio). **CONFIRMATION ENTRY**: Wait for",
       "fresh": true
     }
   }
