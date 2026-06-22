@@ -1980,3 +1980,18 @@ already prices July-hike 17.5% / 2026-hike 61.5% — no pause-narrative misprici
 anti-edge anyway. Clean no-trade. Watchlist updated; no new triggers armed (existing SOL/ARB/STX/CEG/ALB
 all WATCH). Semi-equipment-short theme noted as a CONTRA signal to watch against our memory-shortage long
 thesis. No book action.
+
+## 2026-06-22 ~02:00 UTC — Monday 02:00 cron (flat; post-outage cred residue self-healed, verified)
+
+All clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 0/825, consistency 0 real, Ostium 0/0.
+Book 6 NO legs green, cost $92.28 / MTM $96.48 (+4.55%); bankroll $163.17 (-4.0%). All marks flat vs
+21:10 baseline (no >5pp).
+
+Verified the post-outage cred residue self-healed: gathering flagged 401s in the news filter, but direct
+test of `claude -p --model haiku` returns OK (exit 0); the 401 alert was 20:30Z (BEFORE the ~21:09 cred
+restore), and the filter has parsed cleanly since 22:41Z (full impact scoring on the Iran-walkout entry,
+which it scored "thesis pressure, not invalidation"). The lone 01:24Z "agent unavailable" is a transient
+spawn timeout (≠401, likely contention w/ an orphaned web-only haiku subprocess reparented to systemd —
+harmless, self-exits). No fix needed. Iran: talks-walkout = diplomatic noise, no regime event, legs
+unmoved. ARB $0.0845 (>$0.075) stood down. No new edge. No Telegram (operator detached + all-clear'd at
+21:00; nothing material).
