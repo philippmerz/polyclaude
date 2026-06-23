@@ -113,9 +113,17 @@ def cmd_list(args: argparse.Namespace) -> int:
         return 0
     for r in rows[-args.limit:]:
         status = "PENDING" if r.get("outcome") is None else "RESOLVED"
-        print(f"DEC-{r['id']:04d}  {r['timestamp'][:10]}  {r['type']:18s}  {r['confidence']:6s}  ${r.get('size_usd') or 0:>6.2f}  [{status}]")
-        print(f"  thesis:     {r['thesis']}")
-        print(f"  prediction: {r['prediction']}")
+        # confidence/prediction are absent on auto-logged records (polyclaude_enter /
+        # infra path) and size lives under 'usd' there, not 'size_usd'. Guard all of
+        # them so `list` never dies mid-review (summary was fixed 2026-06-05; list
+        # had the same KeyError until 2026-06-23).
+        conf = r.get("confidence") or "unknown"
+        size = r.get("size_usd") or r.get("usd") or 0
+        print(f"DEC-{r['id']:04d}  {r['timestamp'][:10]}  {r['type']:18s}  {conf:6s}  ${size:>6.2f}  [{status}]")
+        if r.get("thesis"):
+            print(f"  thesis:     {r['thesis']}")
+        if r.get("prediction"):
+            print(f"  prediction: {r['prediction']}")
         if r.get("outcome"):
             print(f"  outcome:    {r['outcome']}")
         if r.get("calibration_delta"):
@@ -210,7 +218,7 @@ def cmd_pending(_args: argparse.Namespace) -> int:
     overdue.sort(key=lambda x: -x[1])
     for r, days in overdue:
         print(f"DEC-{r['id']:04d}  resolution_at={r.get('resolution_at')}  ({days} days overdue)")
-        print(f"  {r['thesis']}")
+        print(f"  {r.get('thesis') or '(no thesis recorded)'}")
     return 0
 
 
