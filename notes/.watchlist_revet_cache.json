@@ -34,5 +34,14 @@
       "summary": "**CURRENT ENTRY**: Cycle lows ($0.17\u2013$0.20) offer entry if you have a 3-year conviction in Bitcoin staking as an institutional megatrend and believe Stacks' self-custodial mechanism is defensible. Position sizing: Kelly/4 (Kelly = 25% \u00d7 expected return / probability of loss; with 30% strong scenario + 25% generational = 55% upside cases, Kelly \u2248 1\u20132% of portfolio). **CONFIRMATION ENTRY**: Wait for",
       "fresh": true
     }
+  },
+  "PLTR": {
+    "ts": 1782180115.6234226,
+    "result": {
+      "verdict": "WATCH",
+      "score": "3.1/4",
+      "summary": "NOT now at $119. Current risk/reward is asymmetric to downside given 150 P/E and competitive risks. - **Preferred entry**: $90-100 (further 15-25% dip). Would validate correction is sentiment/macro, not fundamentals. De-risks multiple compression scenario. - **Alternative entry**: Confirm Q2 2026 results (expected late July) show backlog-to-revenue conversion on track AND 2026 guidance reaffirmed.",
+      "fresh": true
+    }
   }
 }

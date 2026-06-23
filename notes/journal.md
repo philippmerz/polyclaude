@@ -2005,3 +2005,14 @@ inspector access, Hormuz reopening per Vance) — thesis-CONFIRMING for regime-f
 negotiating + accepting oversight = persists). ARB $0.0865 (+2.9% 24h, above $0.075) stood down, no
 fee-switch filing. No new edge (discover = long-dated favorites + Hormuz coin-flips, not our profile).
 Transient data-api 408/str glitches self-healed on retry. No Telegram (operator detached, nothing material).
+
+## 2026-06-23 ~02:00 UTC — Tuesday 02:00 cron (flat-up, no action)
+
+All clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 0/910, consistency 0 real, Ostium 0/0.
+Book 6 NO legs green, cost $92.28 / MTM $96.82 (+4.92%); bankroll $163.39 (-3.9%, new post-peace-deal-loss
+high). All deltas <5pp (Satoshi -1.4 noise, Greenland +1pp to 0.915, Trump-out +1pp to 0.905). Iran still
+DE-ESCALATING (US suspends sanctions, UN nuclear inspectors returning) — thesis-confirming for regime-fall
++ Pahlavi NOs. ARB $0.0828 (-2% 24h, above $0.075) stood down. No new edge (Hormuz/Iran event cluster only,
+already held via NO legs). PLTR equity watch hit $119.5 but auto-revet WATCH/'not now' (IBKR, not PM).
+TOMORROW Jun-24 = Trump ceasefire-extension expiry = Iran-cluster calendar reassessment trigger; handle on
+that tick. No Telegram (operator detached, nothing material).
