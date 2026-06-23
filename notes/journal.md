@@ -2016,3 +2016,18 @@ DE-ESCALATING (US suspends sanctions, UN nuclear inspectors returning) — thesi
 already held via NO legs). PLTR equity watch hit $119.5 but auto-revet WATCH/'not now' (IBKR, not PM).
 TOMORROW Jun-24 = Trump ceasefire-extension expiry = Iran-cluster calendar reassessment trigger; handle on
 that tick. No Telegram (operator detached, nothing material).
+
+## 2026-06-23 ~14:00 UTC — Tuesday 14:00 cron (flat; ARB approaching dip trigger)
+
+All clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 1 sub-edge, consistency 0 real, Ostium
+0/0. Book 6 NO legs green, cost $92.28 / MTM $96.86 (+4.97%); bankroll $163.37 (-3.9%). All deltas <1pp
+(Pahlavi +0.5). Iran de-escalation continues (US eases sanctions, Lebanon ceasefire holds, inspectors
+returning) — thesis-confirming; no Jun-24-expiry escalation signal (Rubio/Gulf-allies "division" = exec
+risk not collapse).
+
+WATCH: ARB -7.9% to $0.0797 — closest yet to the $0.075 re-arm dip trigger (~6% away). If a tick sees
+ARB <=$0.075, the operator-delegated entry fires (standing authority msg 442/457: verify thesis intact →
+execute starter tranche ~$15 from Arb Aave $17.60 via spot_swap.py, isolated, post-unlock-flush). Not
+there yet — no action this tick. No fee-switch filing.
+No new PM edge (Hormuz event cluster + FIFA longshots only). No Telegram (operator detached, nothing
+material; an ARB FILL would warrant one).
