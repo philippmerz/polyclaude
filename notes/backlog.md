@@ -61,7 +61,8 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 - **2026-06-16 [CORRECTED]** — There is NO ARB DAO revenue-share vote on Jun-16; it's the ~$50M token UNLOCK. The 'vote' premise (auto-revet → msg 442 → this calendar) was a phantom catalyst, retracted 2026-06-16. ARB entry stood down; watchlist re-armed for a post-unlock dip <=$0.075 OR a real filed fee-switch proposal. Lesson: auto-revet (haiku longterm_check) can fabricate a specific dated catalyst — verify governance claims against Tally/forum before arming a dated operator plan.
 
-- **2026-06-24** (~20d): Trump ceasefire-extension expiration — Iran cluster reassessment trigger.
+- ~~**2026-06-24**: Trump ceasefire-extension expiration — Iran cluster reassessment.~~ **DONE 2026-06-24 02:00 tick**: NOT a hard cliff — the Jun-17 US-Iran MOU set a 60-day ceasefire extension (~to Aug-16), holding as of Jun-24 with active talks toward a comprehensive deal (sole sticking point = uranium enrichment). De-escalation continues; Iran NO legs (regime-fall, Pahlavi) confirmed intact. Next Iran hard checkpoint → ~Aug-16 (MOU expiry).
+- **2026-08-16** (~53d): US-Iran MOU 60-day ceasefire window expires — Iran cluster reassessment trigger (regime-fall + Pahlavi NO legs).
 - **2026-06-30** (~26d): Methodology prospective experiment (N=20, opened 2026-05-02) fully resolves — owe the final per-variant analysis vs the retrospective N=30 ranking (the airtight check on whether the zero-shot-beats-multi-agent reasoning-depth rule is real or a leakage artifact). Weekly `prospective_resolve` already runs via daily_checkin step 10.
 - **2026-07-27** (~53d): EU sanctions on Iran review — Iran cluster reassessment.
 - **2026-08-18** (~75d): Trump UAP-EO 300-day declassification deadline. Reassessment trigger for DEC-0003.

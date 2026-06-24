@@ -9,11 +9,11 @@
     }
   },
   "SOL": {
-    "ts": 1782076253.823194,
+    "ts": 1782266570.2956557,
     "result": {
-      "verdict": "ERROR",
-      "score": "?/4",
-      "summary": "**Current entry reasonable.** SOL at $73\u201381 is 5\u20138% above April lows post-Drift washout; Drift liquidated weak hands and created capital-efficient entry. Marginal catalysts within 3\u20136 months (Alpenglow Q3 testnet results, Morgan Stanley ETF update) can re-rate 20\u201340% upside (to $90\u2013110) before major announcement. **Prefer entry confirmation at one of:** - **Alpenglow testnet success (Q3 2026):** V",
+      "verdict": "WATCH",
+      "score": "3/4",
+      "summary": "**Current $73 is HOLD/WATCH, not ENTRY.** Market still in extreme fear (Fear & Greed 20) but technicals unconfirmed. Triggers for staged entry: - **Tier 1 (Small): Alpenglow testnet \u2192 mainnet launch announcement + positive performance data (Q3 2026, likely).** De-risks network upgrade and creates re-rating event. Size: 0.5\u20131% Kelly position. - **Tier 2 (Medium): Sustained break above $90\u2013$100 with",
       "fresh": true
     }
   },

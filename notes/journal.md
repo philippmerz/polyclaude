@@ -2031,3 +2031,30 @@ execute starter tranche ~$15 from Arb Aave $17.60 via spot_swap.py, isolated, po
 there yet — no action this tick. No fee-switch filing.
 No new PM edge (Hormuz event cluster + FIFA longshots only). No Telegram (operator detached, nothing
 material; an ARB FILL would warrant one).
+
+## 2026-06-24 ~02:00 UTC — Wednesday 02:00 cron (flat; Iran ceasefire-extension reassessment DONE — thesis intact)
+
+All clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 0/942 events, consistency 0 real (139
+midpoint flags evaporated under live CLOB), Ostium 0/0, decisions-pending 0. Book 6 NO legs green, cost
+$92.28 / MTM $96.62 (+4.70%); bankroll $163.13 (-4.0%). Marks: regime-fall/Trump-out/Greenland 0.905,
+Pahlavi 0.958, hantavirus 0.960, Satoshi 0.968 — all deltas <1pp vs prior tick.
+
+DATED REASSESSMENT (Jun-24 Iran ceasefire-extension trigger): web-confirmed it is NOT a hard cliff — the
+Jun-17 US-Iran MOU set a 60-day ceasefire extension (runs ~to Aug-16); as of today it holds with active
+negotiations toward a comprehensive deal (sole sticking point = uranium enrichment). De-escalation
+continues. Iran NO legs CONFIRMED (regime negotiating + operationally intact → regime-fall NO safe; no
+regime change → Pahlavi NO safe). No adjustment. Next Iran hard checkpoint → ~Aug-16 (MOU expiry); Jul-27
+EU sanctions review stands.
+
+Discovery clean / no action: high-APY-NO hits are 6-day cluster-dupes (regime-fall-Jun30, Trump-out-Jun30,
+aliens-Jun30) or UMA-loose geo ("clash"/"normal"/"permanent peace deal"). Favorite-fade 13 candidates all
+population-avg 3-7pp (un-diversifiable at $163); biggest are noise (Elon tweet buckets); Israel×Hezbollah
+"permanent peace deal by Jun30" NO = textbook permanence-near-date trap (§4.4), skipped. Macro = efficient
+Fed only. Watchlist SOL/STX below long-term triggers (ibkr_surface, already surfaced); auto-revet timed
+out (non-critical). ARB $0.0790 (5.3% above $0.075) — delegated entry not fired.
+
+Calibration re-verify: confirmed DEC-0038 -$11.31 (peace-deal-Jun-15 NO, RESOLVED YES Jun-17 on the
+signed MOU) is authentic — doctrine §4.4 2nd-loss citation correct. The May peace-deal NOs all WON; -0038
+was a distinct later line. Weekly P&L written (14d overdue, fortnight realized -$10.05). No Telegram
+(operator detached, "update me if anything important" — Iran reassessment was thesis-confirming, no
+trades, nothing material; an ARB fill or a real thesis-break would warrant one).

@@ -463,3 +463,31 @@ May-31 NO was the window's defining trade: entered as a pricing inefficiency, su
 - UMA Optimistic Oracle status via `scripts/uma_status_check.py`
 - Aave V3 aToken balances (Polygon/Arbitrum/Base, direct on-chain reads — now wired into status scripts)
 - Brownian-bridge + constrained-Kelly internal frameworks (`brownian_bridge_fv.py`, `portfolio_kelly.py`)
+
+---
+
+## Week of 2026-06-10 → 2026-06-24 (14d; cadence slipped across two outages + a marathon session)
+
+**Bankroll:** $163.13 (`bankroll.py`) vs $172.19 Jun-10 close = **−$9.06 (−5.3%)**; vs $170 kickoff −4.0%. PM MTM $96.62; Aave $48.22 (Poly $26.08 + Arb $17.60 + Base $4.54); pUSD $11.70; natives/dust ~$6.6.
+
+**Realized this fortnight: −$10.05.**
+- **DEC-0038 peace-deal-Jun-15 NO: −$11.31.** Entered Jun-12 @0.863 after the YES 0.035→0.145 deal-pivot repricing; RESOLVED YES Jun-17 when the US-Iran MoU was *signed* ("permanent termination of military operations" + Hormuz reopening). The **permanence-near-date trap**, 2nd instance after R-U; now codified in doctrine §4.4 + a `polyclaude_enter.py` tool-warning.
+- DEC-0037 aliens-2027 NO closed **+$1.09** (mark drifted above bridge-fair pre the Aug/Oct UAP catalysts; locked the gain).
+- DEC-0036 regime-fall trim **+$0.17** (honest near-term-direction miss — trimmed on the Jun-11 escalation spike; mark then *rose* on de-escalation; ~$0.45 opportunity-cost was the overcaution tax, but capping correlated-cluster exposure during a live war was sound ex-ante).
+
+**Unrealized:** 6 NO bond-like fades, cost $92.28 / MTM $96.62 = **+$4.34** open, all resolving Dec-31 2026 (~190d): regime-fall/Trump-out/Greenland 0.905, Pahlavi 0.958, hantavirus 0.960, Satoshi 0.968. All guards clean every tick (UMA / marginal-APY / redeemable / monotonicity / consistency).
+
+**Decisions tracker (`decisions.py summary`):** 38 total / 21 resolved / 19 lessons. Fixed a `decisions.py list`/`pending` KeyError:'confidence' crash (60aca63, Jun-23) — the primary review path had been dying mid-list on auto-logged records (DEC-0029+); verified the 9-record outcome-backfill complete.
+
+**Dominant-loss pattern (reinforced):** every realized loss to date is the **permanence-near-date trap** — R-U −$16.73 + DEC-0038 −$11.31 = **−$28.04**, both NO-fades on (permanence-qualifier × near-date × active-dealmaking) that flipped YES via an announcement/signing, *not* a strict-criteria failure. Crucially, the May peace-deal NOs that WON (+$9.69 combined: DEC-0006/0024 +$5.62, -0007 +$3.54, -0016 +$0.525) were the *same structural fade* but with NO high-probability signing event inside their window. The trap is specifically the dealmaking-momentum overlap; §4.4 now gates it (weight loose ≥0.5 or skip).
+
+**Outlook (Jun-24 → ~Jul-01):**
+- **Jun-30:** regime-fall-by-Jun30 + nuclear-deal + Hormuz-normal-by-Jun30 markets resolve (none held); methodology N=20 prospective experiment concludes → owed final per-variant analysis, then the deferred `methodology_stress_test` pagination fix.
+- **~Aug-16:** US-Iran MOU 60-day window expires → new Iran hard-reassessment checkpoint. **Jul-27:** EU sanctions review.
+- ARB delegated entry armed at ≤$0.075 (currently $0.079); HYPE funding-harvest + trend-following parked (deploy at ~$500 scale / Dec-31 capital-free).
+- Dry powder: ~$11.70 pUSD + $48.22 Aave. Bar unchanged: robust-edge at the pessimistic bound, no forcing.
+
+### Sources used this week
+- Polymarket gamma-api + CLOB orderbook + data-api (live walks on every flagged arb/fade); discover/favorite-fade/consistency/monotonicity scanners
+- News: `news_watcher` RSS (`notes/news_alerts.jsonl`); WebSearch for the Jun-24 Iran ceasefire-extension status (Jun-17 MOU = 60d extension confirmed)
+- UMA Optimistic Oracle via `uma_status_check.py`; Aave aToken on-chain reads; `bankroll.py` authoritative total
