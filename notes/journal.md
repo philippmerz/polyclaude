@@ -2058,3 +2058,22 @@ signed MOU) is authentic — doctrine §4.4 2nd-loss citation correct. The May p
 was a distinct later line. Weekly P&L written (14d overdue, fortnight realized -$10.05). No Telegram
 (operator detached, "update me if anything important" — Iran reassessment was thesis-confirming, no
 trades, nothing material; an ARB fill or a real thesis-break would warrant one).
+
+## 2026-06-24 ~14:00 UTC — Wednesday 14:00 cron (flat; ARB closest approach yet to $0.075)
+
+All clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 0/1022, consistency 0 real, Ostium 0/0,
+pending 0. Bankroll $162.97 (-4.1%), 6 NO legs unchanged (Satoshi 0.969, hantavirus 0.960, Pahlavi 0.957,
+Greenland/Trump-out/regime-fall 0.905) — all deltas <1pp vs 02:00. News: 1 alert ("Japan weighs demining
+Hormuz", MATERIAL but de-escalation → supports regime-fall NO). Iran thesis intact.
+
+ARB $0.0768 (-3.6% 24h) — 2.4% above the $0.075 delegated trigger, CLOSEST approach yet (was 5.3% above
+at 02:00, trending down ~3.6%/d). Not fired — discipline holds at <=$0.075. Likely to cross within a tick
+or two; armed (standing authority msg 442/457: verify thesis intact → ~$15 from Arb Aave $17.60 via
+spot_swap.py, isolated, post-unlock-flush; a FILL warrants Telegram). Raising vigilance: re-check ARB on
+continuation prompts now (no longer over-polling territory at 2.4% + downtrend), don't assume.
+
+Discovery no-action: "US-Iran final nuclear deal by Aug-31" NO @0.775 (yes 0.225) is the permanence-near-
+date trap structure (finality × dealmaking momentum) — an announced deal resolves YES loose, exactly the
+DEC-0038/R-U pattern; SKIP per §4.4 (no clean edge either way, Iran-correlated). Rest are 6-day cluster-
+dupes (regime-fall/aliens-by-Jun30), efficient Fed/World-Cup-outrights, or un-diversifiable favorite-
+fades (5 sports @4-5.6pp, fat-tailed, can't spread at $163). No Telegram (nothing material).
