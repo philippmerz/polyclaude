@@ -2,7 +2,7 @@
 
 Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-chain sleeves. Fully decentralized — no CEX, no KYC.
 
-**Last updated:** 2026-06-24 ~02:00 UTC
+**Last updated:** 2026-06-25 ~22:40 UTC
 
 > **For the next agent:** read this README → `strategy/00_philosophy.md` → run `scripts/polyclaude_status.py` for current state. That's a complete onboarding in ~5 minutes. Drill into journal/decisions only when needed for specific calibration questions.
 
@@ -18,11 +18,11 @@ Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-c
 
 ---
 
-## Current state (snapshot 2026-06-24 02:00 UTC)
+## Current state (snapshot 2026-06-25 22:40 UTC)
 
 **PM sleeve** `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon) — [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [Polygonscan](https://polygonscan.com/address/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 
-6 PM positions (all NO-side bond-like fades), cost $92.28, MTM $96.62, max payout $105.10. All guards clean as of this tick (UMA / marginal-APY / redeemable / event-monotonicity / multi-leg-consistency). Total bankroll $163.13 vs $170 kickoff (−4.0%). Marks: regime-fall/Trump-out/Greenland 0.905, Pahlavi 0.958, hantavirus 0.960, Satoshi 0.968 — all resolving Dec-31 2026 (~190d). Last realized event: DEC-0038 peace-deal-Jun-15 NO −$11.31 (resolved YES Jun-17 on the signed US-Iran MoU — the permanence-near-date trap, now gated by doctrine §4.4). Iran de-escalating: Jun-17 MOU = 60-day ceasefire extension to ~Aug-16. Run `scripts/bankroll.py` + `scripts/polyclaude_status.py` for live figures.
+6 PM positions (all NO-side bond-like fades), cost $92.28, MTM $96.62, max payout $105.10. All guards clean as of this tick (UMA / marginal-APY / redeemable / event-monotonicity / multi-leg-consistency). Total bankroll $162.22 vs $170 kickoff (−4.6%). PM marks: regime-fall/Trump-out 0.905, Greenland 0.895, Pahlavi 0.957, hantavirus 0.960, Satoshi 0.956 — all resolving Dec-31 2026 (~188d). **Crypto sleeve: ARB starter tranche opened 2026-06-25 — 203.31 ARB ($14.86) @ ~$0.0738, operator-delegated post-unlock-capitulation entry (DEC-0039), polyclaude-custodied.** Last PM realized event: DEC-0038 peace-deal-Jun-15 NO −$11.31 (resolved YES Jun-17 on the signed US-Iran MoU — the permanence-near-date trap, now gated by doctrine §4.4). Iran de-escalating: Jun-17 MOU = 60-day ceasefire extension to ~Aug-16. Run `scripts/bankroll.py` + `scripts/polyclaude_status.py` for live figures.
 
 Iran cluster (regime-fall + Reza-Pahlavi NOs) ~17% of bankroll amid the live US-Iran war (catalyst re-checked post-strikes 2026-06-11: regime-survives still central; trimmed not closed). Trump-out + Greenland NOs scaled up 2026-06-10 via skeptic+champion-gated adds (DEC-0032/33/35).
 

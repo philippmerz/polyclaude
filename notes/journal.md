@@ -2095,3 +2095,28 @@ isolated → Telegram the fill.
 Discovery no-action (same candidates): US-Iran-final-deal-Aug31 NO (perm-near-date trap, yes drifted
 0.225→0.235 = announcement risk if anything rising), China-invade-Taiwan NO (+11.4% thin + correlated-
 catastrophe tail-class → no adds per philosophy), Hormuz/Fed/cluster-dupes. No Telegram (flat, confirming).
+
+## 2026-06-25 ~22:40 UTC — Thursday 14:00 cron (processed late) — ARB ENTRY FIRED (DEC-0039)
+
+CADENCE: the 14:00 tick dispatched late, processed 22:40 (~8.5h gap; continuation loop also quiet
+02:20→22:40). Operator pinged "why have telegram updates stalled?" → answered on TG (msg 468): stalled
+because the book was flat ~3d AND I had TG on action-only per the detach note, and I wrongly treated
+ARB-merely-approaching as non-material. Lesson: total silence ≈ dead-pipeline ambiguity — the operator
+cannot distinguish "nothing happened" from "the system died." FIX: resuming a brief heartbeat EVERY tick
+(2x/day) even when flat (reverts the step-8 default I had overridden). Watching the dispatch gap; if it
+recurs, investigate the cron→pane delivery path. [feedback memory written.]
+
+THE MATERIAL EVENT — ARB delegated entry FIRED. During the gap ARB crossed $0.075 (24h low $0.07122);
+caught at $0.07311 this tick. Verified thesis intact (standing authority msg 442/457): dip = broad-market
+beta (same-day BTC -1.7 / ETH -2.7 / ARB -4.0%) + post-Jun-16-unlock supply, NOT an ARB break —
+fundamentals intact/improving (2000+ RWAs on-chain, LG pilot); KelpDAO is an old Apr issue (Security
+Council functioning); only live governance vote = routine FY27 budget, no fee-switch break. EXECUTED:
+withdrew $15 from Arb Aave (aUSDC→USDC, tx 0x291606d6) → spot_swap USDC→ARB (approve 0xa9939eb1, swap
+0x6624146081) = 203.31 ARB @ ~$0.0738. Isolated, polyclaude-custodied. DEC-0039 recorded. Watchlist ARB
+updated → add-on level (entry_max 0.075→0.065; a real filed fee-switch proposal is the other add trigger).
+Arb Aave reserve now $2.60. Telegram fill sent (msg 468).
+
+Rest of tick flat/green: UMA 16/0, redeem 0/6, marginal-APY 6/6, monotonicity/consistency 0 real, Ostium
+0/0, pending 0. Bankroll $162.22 (-4.6%), now 6 NO legs (hantavirus 0.960, Pahlavi 0.957, Satoshi 0.956,
+Trump-out/regime-fall 0.905, Greenland 0.895) + ARB starter $14.86. Iran de-escalating (4 alerts: ships
+transiting, Rubio tolls, sailor evac), NO legs intact.

@@ -1,5 +1,5 @@
 {
-  "next_id": 39,
+  "next_id": 40,
   "decisions": [
     {
       "id": 1,
@@ -740,6 +740,24 @@
       "calibration_delta": "At hold-decision time I put P(NO) ~15-30% vs market's ~10% then ~2.5%; resolved NO-loses. The hold-the-residual calls were EV-defensible each step (break-even = the mark), but the ENTRY mispriced the loose-interpretation risk: estimated P(YES) 6-9% at 0.145 entry, true outcome YES. The doctrine haircut (p_no 0.92, ~8% loose) was ~3x too thin for this trap class.",
       "lesson": "Codified as the permanence-near-date trap (00_philosophy \u00a74.4, 2026-06-15): permanence-qualifier \u00d7 near-date \u00d7 active dealmaking = UMA-loose trap, weight loose >=0.5 or skip. This is the 2nd loss (-$11.31) confirming it after R-U (-$16.73). The fade looked cheap because the strict reading was the wrong base.",
       "resolved_at": "2026-06-18T02:08:35Z"
+    },
+    {
+      "id": 39,
+      "timestamp": "2026-06-25T22:48:43Z",
+      "type": "open_position",
+      "thesis": "ARB starter tranche \u2014 operator-delegated (boundary exception to the <1y rule, polyclaude-custodied). Standing $0.075 post-unlock-capitulation trigger fired at the Jun-25 22:40 tick: bought 203.31 ARB @ ~0.0738 ($15) from Arb Aave (withdraw 0x291606d6, approve 0xa9939eb1, swap 0x6624146081). Thesis verified intact at fire: the dip is broad-market beta (same-day BTC -1.7 / ETH -2.7 / ARB -4.0pct) + post-Jun-16-unlock supply pressure, NOT an ARB break \u2014 fundamentals intact/improving (2000+ RWAs, LG pilot); KelpDAO is an old Apr issue (Security Council functioning); only live governance vote is a routine FY27 budget, no fee-switch break. 1-3y L2-value thesis, starter size with room to add on further weakness or a real filed fee-switch/revenue-share proposal.",
+      "confidence": "medium",
+      "prediction": "ARB L2-value thesis plays out on a 1-3y horizon; ARB recovers above the ~0.0738 entry as post-unlock supply is absorbed. Reassess only on a genuine thesis-break (protocol failure, sustained fundamental deterioration, or a rejected fee-switch).",
+      "size_usd": 15.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "arb",
+        "crypto",
+        "delegated"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

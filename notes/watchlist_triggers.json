@@ -17,12 +17,12 @@
       "ticker": "ARB",
       "type": "crypto",
       "coingecko_id": "arbitrum",
-      "entry_max": 0.075,
+      "entry_max": 0.065,
       "horizon": "1-3y",
       "route": "ibkr_surface",
-      "rationale": "Post-unlock capitulation entry on the 1-3y L2-value thesis. CORRECTION 2026-06-16: the 'Jun-16 DAO revenue-share vote' that the prior auto-revet + operator plan (msg 442) was conditioned on DOES NOT EXIST \u2014 Jun-16 is the ~$50M token UNLOCK, not a governance vote; no fee-switch proposal is filed. Phantom catalyst, retracted. Operator delegated ARB entry to polyclaude (boundary exception, EVM-executed). Stand-down on any vote trigger; re-armed for a genuine post-unlock capitulation dip to <=0.075 (was 0.10) OR a REAL filed fee-switch/revenue proposal. Fundamental revet WATCH 2.75/4. Execute via spot_swap.py from Arb Aave ($17.59) if hit + thesis still intact.",
+      "rationale": "STARTER FILLED 2026-06-25 ~22:40 UTC: bought 203.31 ARB @ ~0.0738 ($15) from Arb Aave when the $0.075 post-unlock-capitulation trigger fired (DEC-0039; thesis verified intact at fire \u2014 broad-market beta + post-Jun-16-unlock supply, not an ARB break). 1-3y L2-value thesis, polyclaude-custodied (operator-delegated boundary exception, EVM-executed). This trigger is now an ADD-ON level: price entry_max lowered 0.075->0.065 (deeper capitulation only); a REAL filed fee-switch/revenue-share proposal is also an add trigger (monitored via news, not this price scan). Arb Aave reserve now $2.60.",
       "added": "2026-05-08",
-      "updated": "2026-06-16"
+      "updated": "2026-06-25"
     },
     {
       "ticker": "ONDO",
