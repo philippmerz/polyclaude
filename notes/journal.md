@@ -2077,3 +2077,21 @@ date trap structure (finality × dealmaking momentum) — an announced deal reso
 DEC-0038/R-U pattern; SKIP per §4.4 (no clean edge either way, Iran-correlated). Rest are 6-day cluster-
 dupes (regime-fall/aliens-by-Jun30), efficient Fed/World-Cup-outrights, or un-diversifiable favorite-
 fades (5 sports @4-5.6pp, fat-tailed, can't spread at $163). No Telegram (nothing material).
+
+## 2026-06-25 ~02:00 UTC — Thursday 02:00 cron (flat; ARB 1.3% above trigger, near-certain to fire soon)
+
+All clean: UMA 16/0, marginal-APY 6/6, redeem 0/6, monotonicity 0, consistency 0 real, Ostium 0/0,
+pending 0. Bankroll $162.51 (-4.4%). Marks: Satoshi 0.964 (-0.5pp), hantavirus 0.960, Pahlavi 0.956,
+Trump-out/regime-fall 0.905, Greenland 0.895 (-1pp) — all <1.5pp vs 14:00, none near break. News: 4
+Iran/Hormuz alerts, all de-escalation (ships transiting post-deal, Rubio toll-free, sailor evac; the
+nuclear-inspection dispute is only MINOR). Iran thesis intact.
+
+ARB $0.07598 (-3.54% 24h) — 1.3% above $0.075, ~$0.001 away, CLOSEST yet (2.4% at 14:00), trending
+~-3.5%/d. NOT fired; holding the exact level, no creep. Near-certain to cross within a tick or two. Armed:
+on <=$0.075 → verify ARB thesis intact (no fee-switch break, genuine post-unlock dip not project-specific
+catastrophe) → withdraw ~$15 from Arb Aave $17.60 (aUSDC→USDC) → spot_swap.py USDC→ARB on Arbitrum →
+isolated → Telegram the fill.
+
+Discovery no-action (same candidates): US-Iran-final-deal-Aug31 NO (perm-near-date trap, yes drifted
+0.225→0.235 = announcement risk if anything rising), China-invade-Taiwan NO (+11.4% thin + correlated-
+catastrophe tail-class → no adds per philosophy), Hormuz/Fed/cluster-dupes. No Telegram (flat, confirming).
