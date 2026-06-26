@@ -1,5 +1,5 @@
 {
-  "next_id": 41,
+  "next_id": 42,
   "decisions": [
     {
       "id": 1,
@@ -773,6 +773,26 @@
         "olp",
         "crypto",
         "skeptic-champion"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 41,
+      "timestamp": "2026-06-26T21:42:21Z",
+      "type": "skip",
+      "thesis": "HELD both Iran NO legs (regime-fall 0.905, Pahlavi 0.957) through the Jun-26 US-strikes-Iran escalation; did NOT trim. Sequence: Iran drone-struck a cargo ship in Hormuz -> Trump called it a ceasefire violation -> US struck Iranian missile/drone storage + coastal radar (Tier-1 alert 21:35, off-cycle tick). Rationale for HOLD: strikes are LIMITED/calibrated retaliation explicitly to ENFORCE the ceasefire (web-confirmed), NOT a regime-change campaign (contrast the Feb joint strikes that started the war). Fresh catalyst_check P(YES) narrative central 14% BUT its own structured multiplicative breakdown = ~3.6% (narrative over-weights topple-conditionals = the exact DEC-0036 error); strict resolution criteria require DISSOLUTION of core structures (Supreme Leader/Guardian Council/IRGC), not power shifts; regime survived the Feb-28 Khamenei assassination + instituted succession (institutional resilience). Reconciled P(YES) ~10-12% -> NO at 0.905 ~fairly priced. Market had NOT repriced (marks unmoved). DEC-0036 precedent: trimming on the Jun-11 US-strikes escalation was net-overcautious (de-escalation followed, mark recovered +4pp).",
+      "confidence": "medium",
+      "prediction": "Regime survives; the limited strike stays contained / de-escalates (no regime-change campaign). Regime-fall NO + Pahlavi NO resolve $1 by 2026-12-31. TRIGGER to reassess/trim: strikes escalate to regime/leadership targets, OR ceasefire fully collapses into broad sustained war, OR regime-fall mark drops >5pp (<=0.85). If the mark instead holds/recovers, HOLD was correct (mirrors DEC-0036).",
+      "size_usd": 0.0,
+      "resolution_at": "2026-06-28",
+      "tags": [
+        "iran",
+        "regime-fall",
+        "pahlavi",
+        "escalation",
+        "hold"
       ],
       "outcome": null,
       "calibration_delta": null,

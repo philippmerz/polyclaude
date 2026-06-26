@@ -2193,3 +2193,30 @@ gated. Discovery no-action: Putin-out-2026 NO (yes 0.125, +27% APY, politics/geo
 favorite-fade discipline (only BIG-edge idiosyncratic at small capital; this is ~5pp moderate + thematically
 correlated with my leadership-survival-heavy book + UMA-loose "out" tail). US-Iran-final-deal-Aug31 NO yes
 drifted 0.235→0.255 (perm-near-date trap, skip). Rest cluster-dupe/efficient/novelty. Heartbeat sent.
+
+## 2026-06-26 ~21:35 UTC — OFF-CYCLE (Tier-1 news-triggered) — Iran ceasefire BREAKS, US strikes Iran → HOLD (DEC-0041)
+
+Tier-1 news_watcher auto-fire triggered this off-schedule tick. ESCALATION SEQUENCE today: Iran drone-struck
+a cargo ship in the Strait of Hormuz → Trump declared it a "foolish violation" of the ceasefire (18:06-19:38)
+→ UN paused the Hormuz evac (20:23) → US struck Iranian targets (20:59/21:30) → Tier-1 "US strikes Iran after
+Trump says ceasefire violated" (21:35). The ceasefire I'd tracked as de-escalating has BROKEN.
+
+DECISION: HOLD both Iran NO legs (regime-fall 0.905, Pahlavi 0.957), NO TRIM. DEC-0041. Analysis:
+- STRIKE NATURE (web-confirmed, decisive): LIMITED/calibrated — US hit missile/drone storage + coastal radar,
+  explicitly "to enforce the ceasefire without escalating into renewed major combat" (vs the massive Feb joint
+  US-Israel strikes that started the war). NOT a regime-change campaign.
+- catalyst_check (resolve 2026-12-31): P(YES) narrative central 14% BUT its own structured multiplicative
+  breakdown = 0.40×0.30×0.05 + 0.03 ≈ 3.6% (narrative over-weights topple-conditionals = the exact DEC-0036
+  error). Strict criteria = DISSOLUTION of core structures (Supreme Leader/Guardian Council/IRGC), "mere power
+  shifts or economic hardship do not qualify." Regime survived the Feb-28 Khamenei assassination + succession.
+  Reconciled P(YES) ~10-12% → NO at 0.905 ~fairly priced.
+- MARKET HAD NOT REPRICED (marks unmoved at the tick) — collective wisdom not pricing collapse. UMA clean.
+- PRECEDENT (decisive): DEC-0036 — I trimmed regime-fall NO on the near-identical Jun-11 US-strikes escalation
+  and it was NET-OVERCAUTIOUS (de-escalation followed, mark recovered +4pp). Not repeating that error.
+- Steelmanned the TRIM case (correlated cluster, developing situation, "cheap insurance") — real, but
+  outweighed by the limited-strike nature + strict criteria + DEC-0036 + market-not-repriced.
+
+Prior updated: regime-fall p_no 0.89→0.88 (P(YES) ~12%, small escalation nudge). TIGHT 48h TRIGGER to
+reassess/trim: strikes hit regime/leadership targets, OR ceasefire fully collapses into sustained war, OR
+regime-fall mark drops >5pp (≤0.85). Pahlavi NO even safer (conjunctive — regime falls AND Pahlavi installed
+in 6mo = very high bar). Material-alert Telegram sent (msg 476). HOLD.

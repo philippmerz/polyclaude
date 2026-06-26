@@ -621,3 +621,57 @@ Permanent peace deals in active military conflicts close in 3-day windows at rat
 - [Trump claims Iran war settled 'subject to finalization,' expects signing in 'next few days' - CNBC](https://www.cnbc.com/2026/06/11/trump-iran-strikes-deal.html)
 - [Iran halts talks with U.S. over Israeli actions in Lebanon - NPR](https://www.npr.org/2026/06/01/g-s1-125285/iran-israel-us-lebanon-gaza)
 ```
+
+---
+
+## 2026-06-26T21:40:11Z — catalyst_check
+
+**Query:** `Will the Iranian regime fall before 2027?` resolves 2026-12-31 (188d)
+
+```
+## CATALYST CHECK: Will the Iranian regime fall before 2027?
+
+Resolution: 2026-12-31 | Days: 188 | Today: 2026-06-26
+
+### Base rate
+Regime-fall events in 6-month windows are rare; Iranian Revolution took ~2-3 months once underway (late 1978–Feb 1979). Modern security apparatus and external support make sudden collapse in half a year historically uncommon (<5% absent active mass revolution). However, current regime faces structural weakness (Mojtaba's incapacity + IRGC de facto control + economic freefall + ongoing protests since Dec 2025).
+
+### Catalysts in window
+- [HIGH] 2026-08-21 - Sanctions waiver (GL X) expires; end of 60-day negotiation window. Snap-back would trigger secondary economic shock (currency panic, oil-trade disruption). If talks fail, provides cover for conflict renewal. - [OFAC GL X](https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions), [Baker McKenzie](https://sanctionsnews.bakermckenzie.com/ofac-begins-to-relax-us-sanctions-to-implement-us-iran-memorandum-of-understanding/)
+- [MED] ~2026-08-16 - US-Iran final agreement deadline (60 days from June 17 MOU signing). Collapse of negotiations could reignite proxy conflict, destabilize ceasefire, and weaken regime's hold on internal factions. - [2025–2026 Iran–US negotiations](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+- [LOW] 2026-09-12 (est.) - Constitutional reform debate among moderates may surface if economic crisis deepens, but faces veto from Supreme Leader and IRGC. No clear scheduled session identified. - [Iran International](https://www.iranintl.com/en/202512197438)
+- [LOW-MED] Unknown date - Public revelation of Mojtaba Khamenei's reported incapacity (from airstrike that killed Ali Khamenei on Feb 28). If confirmed, could trigger succession challenge or IRGC power consolidation. Currently reported but not officially acknowledged. - [Iran International](https://www.iranintl.com/en/202603048311), [MEF Observer](https://www.meforum.org/mef-observer/a-quiet-coup-in-iran)
+
+### Recent news (last 14d)
+- 2026-06-23 - US, Iran agree on Lebanon ceasefire, lifting sanctions on oil: Negotiations appear to be proceeding, reducing imminent collapse risk within near term.
+- 2026-06-21 - Iranian negotiators suspend talks after Trump threats: Stalled momentum raises risk of Aug 21 deadline miss.
+- 2026-06-26 - Trump claims Iran violated ceasefire (drone attack at Strait of Hormuz): Escalation risk rising as Aug deadline approaches; possible pretext for renewed conflict.
+
+### P(YES) estimate
+- **Low: 8%**
+- **Central: 14%**
+- **High: 22%**
+
+**Reasoning:** 
+Regime survived Feb 28 assassination and immediately instituted succession (March 9), demonstrating institutional resilience. IRGC now wields de facto control; security forces contain ongoing protests (since Dec 2025). Resolution criteria require dissolution/incapacity of core structures (Supreme Leader office, Guardian Council, IRGC under clerical authority) — mere power shifts or economic hardship do not qualify. Central estimate reflects base rate (~2–3%) plus crisis multiplier (economic freefall, Mojtaba's legitimacy deficit, protests) plus tail risk of negotiation failure triggering cascade. High scenario assumes failed Aug 21 talks, sanctions snap-back, rapid currency collapse, and regime fragmentation losing de facto control of major cities by year-end — possible but historically low probability in 6-month window.
+
+**Multiplicative breakdown (central scenario):**
+- P(negotiations fail by Aug 21) = 40%
+- P(failed negotiations → internal IRGC-civilian conflict escalation | failed talks) = 30%
+- P(conflict escalation → regime loss of de facto control over majority | escalation) = 5%
+- P(given above factors, central estimate) = 0.40 × 0.30 × 0.05 + 0.03 base ≈ **14%**
+
+### Sources
+- [IAEA Monitoring & Verification in Iran](https://www.iaea.org/topics/monitoring-and-verification-in-iran)
+- [OFAC Iran Sanctions](https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions)
+- [OFAC GL X Implementation](https://sanctionsnews.bakermckenzie.com/ofac-begins-to-relax-us-sanctions-to-implement-us-iran-memorandum-of-understanding/)
+- [2025–2026 Iran–US Negotiations](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+- [Iran's Economic Crisis 2026](https://www.cnbc.com/2026/04/23/iran-economy-war-charts-rial-oil-strait-of-hormuz-blockade.html)
+- [Iran Economic Forecasts 2026](https://www.fdd.org/analysis/2026/06/26/irans-economic-catastrophe/)
+- [2026 Supreme Leader Election](https://en.wikipedia.org/wiki/2026_Iranian_supreme_leader_election)
+- [Mojtaba Khamenei Succession](https://www.iranintl.com/en/202603048311)
+- [IRGC De Facto Control](https://www.meforum.org/mef-observer/a-quiet-coup-in-iran)
+- [Constitutional Reform Constraints](https://www.iranintl.com/en/202512197438)
+- [2025–2026 Iranian Protests](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests)
+- [Mojtaba's Legitimacy Deficit](https://www.irannewsupdate.com/news/infightings/mojtaba-khameneis-succession-did-not-solve-the-crisis-it-exposed-it/)
+```
