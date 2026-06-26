@@ -1,5 +1,5 @@
 {
-  "next_id": 40,
+  "next_id": 41,
   "decisions": [
     {
       "id": 1,
@@ -754,6 +754,25 @@
         "arb",
         "crypto",
         "delegated"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 40,
+      "timestamp": "2026-06-26T02:37:25Z",
+      "type": "skip",
+      "thesis": "Ostium OLP vault deploy \u2014 PARKED after a skeptic+champion pass (new strategy class). The small-crypto screens \"best airdrop\" candidate does NOT survive deeper vetting: the champions independent on-chain check (TradingStrategy.ai OLP share price 1.00->1.147 over ~2y) shows REALIZED ~7-9% APY, NOT the advertised ~53% (a forward gross-fee headline whose non-negative-floor formula structurally hides the -7.4% lifetime max drawdown; OLP HAS lost principal in stress). At ~7-9% vs Aave ~5%, edge is ~0.30-0.50/yr on a 12-17 probe \u2014 fails the $-bar AND my own ~500 scale-gate set for the structurally-identical parked HYPE funding-harvest. Also: OLP deposit is UI-only (ostium-python-sdk has no deposit method, not autonomously executable) + no scripted OLP emergency exit + 24-48h withdrawal cooldown + principal-at-risk correlated with crypto stress (and with the fresh ARB beta). Skeptic=PARK $0; champion=deploy $12 but on a premise its own verification collapsed. Textbook verify-full-distribution save (53pct headline was the mirage).",
+      "confidence": "high",
+      "prediction": "Ostium OLP stays parked on the same scale-gated queue as the HYPE harvest; revisit only at >=150-200 bridged Arb stable capital AND a confirmed TGE to price the airdrop option. Realized OLP yield stays ~7-12%, not 53%.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "ostium",
+        "olp",
+        "crypto",
+        "skeptic-champion"
       ],
       "outcome": null,
       "calibration_delta": null,

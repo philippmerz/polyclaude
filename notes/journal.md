@@ -2155,3 +2155,20 @@ Reported synthesis (msg 471) + VELO-vet closure (msg 472) to operator. No capita
 hold; nothing cleared the verified-and-ready bar. Excluded as noise at our scale: crypto-treasury "below
 cash" (NASDAQ equities, un-buyable on-chain), 100x-gem lists, restaking/Base points for one small wallet,
 ACX (premium to floor), PENDLE/Fluid (shrinking-fundamentals/dilution → watch-list only).
+
+## 2026-06-26 ~02:35 UTC — Ostium OLP deep-vet → PARKED (skeptic+champion, DEC-0040)
+
+Advanced the most-actionable small-crypto candidate (Ostium OLP, no external gate, existing acct). Ran a
+skeptic+champion pair (new strategy class per the reasoning-depth rule). KEY OUTCOME: the champion's OWN
+independent verification collapsed the bull case — checked the on-chain OLP share price (TradingStrategy.ai:
+$1.00→$1.147 over ~2y) = REALIZED **~7-9% APY, not the advertised ~53%** (a forward gross-fee headline whose
+non-negative-floor formula structurally hides the **−7.4% lifetime max drawdown**; OLP HAS taken principal
+losses in stress). Textbook [[verify-full-distribution]] save — my initial vet + the research agent both
+swallowed the 53% headline. At ~7-9% realized vs Aave ~5%, edge ≈ $0.30-0.50/yr on a $12-17 probe → fails
+the $-bar AND my own ~$500 scale-gate (the structurally-identical HYPE harvest is parked at that floor).
+Execution blockers compound it: OLP deposit is UI-only (ostium-python-sdk has no deposit method → NOT
+autonomously executable), no scripted OLP emergency exit, 24-48h cooldown, principal correlated with crypto
+stress (+ the fresh ARB beta). Skeptic=PARK $0; champion=deploy $12 but on a premise its own check destroyed.
+VERDICT: PARK (DEC-0040). Reported to operator (msg 473). The skeptic+champion process EARNED its keep here —
+prevented a pointless trade + corrected a factual error. Of the 3 screen candidates: Ostium parked, DRIP
+dormant, VELO (gated on the unpublished conversion ratio) is the one live lead. No capital deployed.
