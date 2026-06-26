@@ -2140,3 +2140,18 @@ risk / capital-to-qualify) + screen small-caps for deep-value-with-catalyst → 
 shortlist w/ risk flags to the operator when it returns.
 
 Heartbeat resumed this tick (msg 470 carries the tick status) per the 2026-06-25 cadence fix.
+
+RESEARCH RESULT (agent a8d60afb returned ~02:09): screened airdrop-pipeline + deep-value small-caps.
+Meta-finding (aligns with my own lean): at $162 single-wallet scale, merger-arb/buyback catalysts on
+LIQUID tokens beat points-farming (points charge real gas now for an uncertain/dilutable/rug-risk future
+claim). 3 tracked candidates, NONE actionable today — each gated on one trigger, logged to backlog:
+(1) VELO merger-arb (Velodrome→AERO, Q2-2026): GATE = conversion ratio still UNPUBLISHED (verified via
+web — only the 94.5/5.5 supply split is known; per-token ratio "soon"). Correctly NOT acting before the
+key number is out. Merged AERO is on Base (home chain) → can compare VELO-on-OP arb vs AERO-on-Base direct
+once ratio drops. (2) Ostium OLP vault (Arb, we already have an acct): deeper-vet APY/worst-case-drawdown
+(it backstops perp traders)/TGE before any deposit; Arb dry powder thin ($2.6) → bridge needed. (3) Arb
+DRIP: dormant S2, watch the forum, deploy liquid-ARB farming when epochs reopen, zero capital till then.
+Reported synthesis (msg 471) + VELO-vet closure (msg 472) to operator. No capital deployed — disciplined
+hold; nothing cleared the verified-and-ready bar. Excluded as noise at our scale: crypto-treasury "below
+cash" (NASDAQ equities, un-buyable on-chain), 100x-gem lists, restaking/Base points for one small wallet,
+ACX (premium to floor), PENDLE/Fluid (shrinking-fundamentals/dilution → watch-list only).
