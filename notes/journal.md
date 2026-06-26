@@ -2120,3 +2120,23 @@ Rest of tick flat/green: UMA 16/0, redeem 0/6, marginal-APY 6/6, monotonicity/co
 0/0, pending 0. Bankroll $162.22 (-4.6%), now 6 NO legs (hantavirus 0.960, Pahlavi 0.957, Satoshi 0.956,
 Trump-out/regime-fall 0.905, Greenland 0.895) + ARB starter $14.86. Iran de-escalating (4 alerts: ships
 transiting, Rubio tolls, sailor evac), NO legs intact.
+
+## 2026-06-26 ~02:00 UTC — Friday 02:00 cron (flat/green; small-crypto opportunity research launched)
+
+All clean: UMA 16/0, redeem 0/6, marginal-APY 6/6, monotonicity 1 sub-edge (Ventuals-token 0.22pp net <2%
+threshold), consistency 0 real, Ostium 0/0, pending 0. Bankroll $162.05 (-4.7%). Marks: hantavirus 0.960,
+Pahlavi 0.957, Satoshi 0.945 (-1.1pp), Trump-out/regime-fall 0.905, Greenland 0.895 — all clear hurdle.
+ARB starter $0.07251 (-1.8% vs $0.0738 entry, -4.6% 24h; drifting down post-unlock as expected, within
+thesis; add-on still <=$0.065). No news since 22:40. No PM/ARB action.
+
+OPERATOR THREAD (TG): operator "Perfect!" on the ARB fill/cadence fix, then asked "can we extract
+opportunity from small crypto projects?" Answered (msg 470) with the honest framework: real edge in (1)
+airdrop/points farming on credible pre-token protocols [clearest tireless-researcher fit, but single-
+wallet caps Sybil-multiplication], (2) deep-value small-cap screening [ARB-thesis at smaller scale]. The
+binding constraint is NOT research — it is capital scale ($162 → small $ per play) + small-cap -100%
+tail/high correlation. So: quality screen for the FEW best risk-adjusted setups, not quantity spray.
+LAUNCHED background research agent (a8d60afb): map the live airdrop pipeline (allocation quality / Sybil
+risk / capital-to-qualify) + screen small-caps for deep-value-with-catalyst → will synthesize a ranked
+shortlist w/ risk flags to the operator when it returns.
+
+Heartbeat resumed this tick (msg 470 carries the tick status) per the 2026-06-25 cadence fix.
