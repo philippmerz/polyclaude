@@ -2172,3 +2172,24 @@ stress (+ the fresh ARB beta). Skeptic=PARK $0; champion=deploy $12 but on a pre
 VERDICT: PARK (DEC-0040). Reported to operator (msg 473). The skeptic+champion process EARNED its keep here —
 prevented a pointless trade + corrected a factual error. Of the 3 screen candidates: Ostium parked, DRIP
 dormant, VELO (gated on the unpublished conversion ratio) is the one live lead. No capital deployed.
+
+## 2026-06-26 ~14:00 UTC — Friday 14:00 cron (flat/green; Iran ship-attack flare-up = thesis-confirming blip)
+
+All clean: UMA 16/0, redeem 0/6, marginal-APY 6/6, monotonicity 0, consistency 0 real, Ostium 0/0, pending
+0. Bankroll $162.19. Marks unchanged (regime-fall/Trump-out 0.905, Greenland 0.895, Pahlavi 0.957, hantavirus
+0.960, Satoshi 0.949) — all <1pp vs 02:00. ARB $0.07277 (+2.18% 24h, -1.4% vs entry; recovering, within
+thesis; add-on <=$0.065).
+
+IRAN FLARE-UP (8 alerts, several MATERIAL): Iran struck/attacked a container ship in the Strait of Hormuz
+(~03:04), halting the evacuation + spiking oil. BUT a blip within de-escalation: oil already fell back to
+pre-war levels (07:52/10:44), peace talks "slow progress" but ongoing (off-ramp). KEY: the news_watcher's
+own impact scoring + my read = a regime STRIKING ships demonstrates operational CONTROL, not collapse →
+CONFIRMS regime-fall NO + Pahlavi NO. Marks did not move; UMA clean. No peace-deal market in book (exited
+DEC-0038) so the peace-progress angle does not hit me. No action. WATCH: if ship-strikes escalate into
+ceasefire collapse / broad conflict, reassess (standing Iran watch; next hard checkpoint ~Aug-16 MOU).
+
+VELO ratio re-checked: STILL unpublished (only the 94.5/5.5 allocation; per-token ratio not out) → stays
+gated. Discovery no-action: Putin-out-2026 NO (yes 0.125, +27% APY, politics/geo) CONSIDERED but PASSED —
+favorite-fade discipline (only BIG-edge idiosyncratic at small capital; this is ~5pp moderate + thematically
+correlated with my leadership-survival-heavy book + UMA-loose "out" tail). US-Iran-final-deal-Aug31 NO yes
+drifted 0.235→0.255 (perm-near-date trap, skip). Rest cluster-dupe/efficient/novelty. Heartbeat sent.
