@@ -2220,3 +2220,16 @@ Prior updated: regime-fall p_no 0.89→0.88 (P(YES) ~12%, small escalation nudge
 reassess/trim: strikes hit regime/leadership targets, OR ceasefire fully collapses into sustained war, OR
 regime-fall mark drops >5pp (≤0.85). Pahlavi NO even safer (conjunctive — regime falls AND Pahlavi installed
 in 6mo = very high bar). Material-alert Telegram sent (msg 476). HOLD.
+
+## 2026-06-27 ~00:23 UTC — OFF-CYCLE (Tier-1) — Iran escalation status: CONTAINED, HOLD stands (no trigger hit)
+
+~3h into the US-strikes-Iran escalation. New alerts since 21:35: CENTCOM CONFIRMS limited targets ("U.S.
+targets missile, drone storage locations in Iran" 22:31) — reinforces the limited/calibrated read, NOT
+regime decapitation. Vance "violence will be met with violence" (deterrent rhetoric). Trump "justifies
+strikes amid ceasefire" (framing as enforcement, not war-initiation). NONE of the DEC-0041 trim triggers
+hit: (1) no regime/leadership targeting (CENTCOM = storage/radar; one haiku "command infrastructure" note
+is embellishment vs the authoritative CENTCOM wording), (2) no full ceasefire-collapse-into-sustained-war
+(limited tit-for-tat), (3) regime-fall mark UNMOVED at 0.905 / Pahlavi 0.957, well above the ≤0.85 trigger.
+UMA clean. Market still not repricing across 3h + 5 alerts → collective wisdom agrees it is contained. HOLD
+stands, validated so far. No new Telegram (same event as msg 476, no material change; the 02:00 heartbeat —
+~1.5h out — will carry the Iran status update).
