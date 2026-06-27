@@ -2264,3 +2264,26 @@ is already in the ~10-12% P(YES). HOLD stands. Watch + Tier-1 auto-fire armed.
 
 ARB $0.0754 (+2.2% vs entry — recovering well past the dip; add-on ≤$0.065). VELO ratio still unpublished
 (gated). Heartbeat sent (msg 479). No action.
+
+## 2026-06-27 ~14:20 UTC — Meta-reflection cycle
+
+(1) CLEANUP — latent-KeyError scan of decisions.json/news_alerts consumers (the class of the 60aca63
+decisions.py bug): essentially CLEAN. The only direct r['...'] accesses (news_watcher.py:175/330) are on the
+script's OWN constructed position/impact dicts, not heterogeneous external records → low risk, no fix. Not
+forcing a finding.
+
+(2) GENUINE FINDING (shipped) — catalyst_check.py narrative-vs-structured P(YES) divergence. Confirmed TWICE
+this month: DEC-0036 (Jun-11, narrative 18%) and DEC-0041 (Jun-26, narrative 14%) both reported a Central
+materially ABOVE their OWN multiplicative breakdown (~3.6%), over-weighting topple-conditional chains during
+war-escalation coverage. I caught it manually both times; the inflated central nearly drove — and on
+DEC-0036 DID drive — an overcautious trim (~$0.45 cost). Root cause: the prompt asked for the breakdown but
+never required the Central to EQUAL it. FIX: added rule 4c (Central MUST equal the multiplicative-breakdown
+joint for conjunctive/strict-criteria questions; structured breakdown WINS over narrative gut; narrative
+pull is UP during crisis coverage) + a Reconciliation line in the output format (flag divergence >5pp and
+default the Central to the structured breakdown). Syntax-verified, --help OK. Compounds across every future
+crisis/conjunctive catalyst_check — directly hardens the exact decision I made well manually this week.
+
+Other observations (already captured, no new action): Ostium 53%-mirage → [[verify-full-distribution]] +
+DEC-0040; latent "incumbent-survives" thematic factor across Trump-out/regime-fall/Pahlavi → handled in the
+Putin-out pass + cluster framework; news_alerts JSON field is 'title' not 'headline' (noted for my own
+parsing helpers). Not forcing further findings — the book + infra are in good shape.

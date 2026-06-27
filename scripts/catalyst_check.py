@@ -116,6 +116,8 @@ Steps:
 
 4b. **If the resolution criteria implies a CONJUNCTION (e.g., "Will X lead Iran" requires regime fall AND X installed; "Will X be confirmed" requires a specific event AND oracle interpretation), break the joint probability into components and SHOW THE MULTIPLICATIVE BREAKDOWN explicitly.** Don't just give a single number — give P(component A) × P(component B | A) × ... = joint. This prevents the operator from double-discounting (a real error encountered 2026-05-08 on the Pahlavi market: haiku gave joint 14% but didn't show the breakdown, operator re-applied a conditional adjustment thinking it was unconditional).
 
+4c. **The Central P(YES) MUST EQUAL the structured multiplicative-breakdown joint — not a separate "base-rate + crisis-multiplier" gut number.** If your narrative intuition differs from the structured product, the STRUCTURED BREAKDOWN WINS for any conjunctive or strict-criteria question; do NOT inflate the Central above it. Lesson source: the 2026-06-11 (DEC-0036) and 2026-06-26 (DEC-0041) Iran regime-fall checks BOTH returned a narrative central (18%, then 14%) materially ABOVE their own multiplicative breakdown (~3.6%), over-weighting topple-conditional chains during a war-escalation news cycle; the inflated central nearly drove an overcautious trim (DEC-0036 did, and lost ~$0.45). During crisis/escalation coverage the narrative pull is UP; the conjunctive product of components is the discipline that corrects it.
+
 5. Output a STRUCTURED REPORT in the following format. Be concise.
 
 ```
@@ -137,10 +139,11 @@ Resolution: <resolve_date> | Days: <N> | Today: <today_iso>
 
 ### P(YES) estimate
 - Low: X%
-- Central: Y%
+- Central: Y%   (for a conjunction/strict-criteria question this MUST equal the multiplicative-breakdown joint below)
 - High: Z%
 - Reasoning: <1-3 sentences explaining the range>
 - Multiplicative breakdown (if conjunction): P(A) × P(B|A) × ... = joint Y%
+- Reconciliation: if a narrative/gut central differs from the breakdown joint by >5pp, STATE the divergence explicitly and set the Central to the structured breakdown (the conjunctive product is the anchor; the narrative pull inflates during crisis coverage — see 4c).
 
 ### Sources
 - [Title](URL)
