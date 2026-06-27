@@ -2233,3 +2233,19 @@ is embellishment vs the authoritative CENTCOM wording), (2) no full ceasefire-co
 UMA clean. Market still not repricing across 3h + 5 alerts → collective wisdom agrees it is contained. HOLD
 stands, validated so far. No new Telegram (same event as msg 476, no material change; the 02:00 heartbeat —
 ~1.5h out — will carry the Iran status update).
+
+## 2026-06-27 ~02:00 UTC — Saturday 02:00 cron (Iran escalation CONTAINED, HOLD validated; flat/green)
+
+All clean: UMA 16/0, redeem 0/6, marginal-APY 6/6, monotonicity 1 sub-edge (Prime-Intellect-token -0.29pp
+net), consistency 0 real, Ostium 0/0. Bankroll $162.45. Marks: regime-fall/Trump-out 0.905, Greenland 0.895,
+Pahlavi 0.957, hantavirus 0.960, Satoshi 0.954 — regime-fall UNMOVED through the entire escalation.
+
+IRAN: no new alerts since 00:23 (~1.6h quiet). The US-strikes episode appears contained — CENTCOM-confirmed
+limited targets, no follow-on escalation overnight, marks unmoved, market never repriced. HOLD (DEC-0041)
+validated so far; trigger (≤0.85 / leadership-targeting / full collapse) far from hit. Standing watch +
+Tier-1 auto-fire remain armed.
+
+ARB $0.0744 (+0.8% vs entry — recovered above the dip; add-on ≤$0.065). VELO ratio still unpublished (gated).
+Methodology (Sat step 10): 14/20 resolved (was 13), zero_shot still dominating (+0.348/$ vs negative for all
+4 multi-agent variants — parallel_pair -0.02, unconscious_terse -0.01, unconscious_demo -0.15, adversarial
+-0.30); final per-variant analysis owed at 20/20 (~Jun-30). Heartbeat sent (msg 478). No action.
