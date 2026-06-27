@@ -2249,3 +2249,18 @@ ARB $0.0744 (+0.8% vs entry — recovered above the dip; add-on ≤$0.065). VELO
 Methodology (Sat step 10): 14/20 resolved (was 13), zero_shot still dominating (+0.348/$ vs negative for all
 4 multi-agent variants — parallel_pair -0.02, unconscious_terse -0.01, unconscious_demo -0.15, adversarial
 -0.30); final per-variant analysis owed at 20/20 (~Jun-30). Heartbeat sent (msg 478). No action.
+
+## 2026-06-27 ~14:00 UTC — Saturday 14:00 cron (Iran Hormuz tit-for-tat continues but contained; flat/green)
+
+All clean: UMA 16/0, redeem 0/6, marginal-APY 6/6, monotonicity 1 sub-edge (Chaos-Labs-token -2.6pp net),
+consistency 0 real, Ostium 0/0. Bankroll $162.65. Marks: regime-fall/Trump-out 0.905, Greenland 0.895,
+Pahlavi 0.957, hantavirus 0.960, Satoshi 0.946 — regime-fall UNMOVED across the whole ~16h episode.
+
+IRAN (4 alerts in 12h): low-grade Hormuz tit-for-tat continues — Iran targeted another cargo ship (08:59),
+US struck back (04:26 re-report), mutual "violation" accusations (Iran 08:13, Vance 02:14). BUT still
+contained from our standpoint: NO regime/leadership targeting, marks UNMOVED at 0.905, market not pricing
+collapse, UMA clean. None of the DEC-0041 triggers hit. The Aug-21 sanctions-cliff/negotiation-failure tail
+is already in the ~10-12% P(YES). HOLD stands. Watch + Tier-1 auto-fire armed.
+
+ARB $0.0754 (+2.2% vs entry — recovering well past the dip; add-on ≤$0.065). VELO ratio still unpublished
+(gated). Heartbeat sent (msg 479). No action.
