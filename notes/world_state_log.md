@@ -606,3 +606,118 @@ Sources:
 - [DefiLlama TVL Data](https://defillama.com/)
 - [Tokenomist Token Metrics](https://tokenomist.ai/)
 - [L2Beat TVL Data](https://l2beat.com/)
+
+---
+
+## 2026-06-28T16:04:29Z — world_state_digest
+
+**Domains:** biotech-health, trade-regulation, markets-corporate | **Lookback:** 30d | **Model:** haiku
+
+Now I'll synthesize the facts into candidates and structure the output.
+
+---
+
+# WORLD-STATE DIGEST — 2026-06-28
+
+Domains: biotech-health, trade-regulation, markets-corporate  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### biotech-health
+- [2026-06-24] FDA: Sacituzumab govitecan-hziy approved for first-line triple-negative breast cancer (monotherapy and combination with pembrolizumab)
+- [2026-06-01] FDA: Ensitrelvir (Xocova) approved for COVID-19 post-exposure prevention; 67% efficacy vs placebo in preventing symptomatic infection; ages 12+
+- [2026-06-17] FDA: Utebzi (tebipenem pivoxil) approved, first oral carbapenem for complicated urinary tract infections
+- [2026-06-19] FDA: Capvaxive (pneumococcal 21-valent conjugate vaccine) expanded indication for ages 2-17 at increased risk
+- [2026-06-26] Ebola (Bundibugyo): 1,155+ confirmed cases in DRC, 304 deaths; Uganda 19 confirmed + 1 probable death; France 1 case (2026-06-24); US 1 case (evacuated). Second-largest DRC outbreak on record, third-largest globally. WHO declared PHEIC 2026-05-17.
+- [2026-06-30] GLP-1 supply: Semaglutide (brand-name) intermittent shortages persist; tirzepatide availability improved. Novo Nordisk FDA-approved Wegovy oral (GLP-1 pill), expected widely available June 2026.
+- [2026-06-30] Pharma patent cliff: Zelboraf (vemurafenib, oncology) expires June 2026. Broader cliff 2026-2029: Merck Januvia/Janumet, Pfizer Xeljanz, Novo Nordisk Ozempic, GSK Voltaren. Generic entry typically drops prices 80-95% within 2 years.
+
+### trade-regulation
+- [2026-06-02] USTR: Proposes 10-12.5% ad valorem tariffs on 60 economies following forced labor investigations. 10% on 15 countries/EU with inadequate enforcement (Canada, Ecuador, Indonesia, Mexico, Pakistan, Argentina, Bangladesh, Cambodia, El Salvador, Guatemala, Malaysia, Taiwan, UK, EU). 12.5% on 44 countries with no forced labor import prohibition. Public comment deadline 2026-07-06; hearing 2026-07-07.
+- [2026-06-02] USTR: Brazil Section 301 case result proposes 25% tariff on most products from Brazil.
+- [2026-06-08 through 2026-12-31] Commerce/USTR: Section 232 25% tariff on HTS codes in Annex C (agricultural and industrial equipment, machinery).
+- [2026-06-11] China: Enacted comprehensive technology transfer controls (broadest in a decade). Extends overseas restrictions on Chinese-developed technology (software, algorithms, manufacturing processes, hardware design). Explicitly authorizes government retaliation against nations restricting Chinese tech investments.
+- [2026-06-01] China: State Council publishes new outbound investment control rules on AI, national security sectors. Violations subject to fines, visa restrictions, industry blacklisting.
+- [2026-06-22] China: Ministry of Commerce places 10 US suppliers on export control list (MP Materials Corp, USA Rare Earth, Teal Drones, Jaia Robotics), retaliating for Pentagon blacklist additions. Bars exports of dual-use items from China to these companies.
+- [2026-06-22] OFAC: Designates 3 individuals, 6 entities for ISIS financial facilitation via crypto (targets Europe, Middle East, Africa).
+- [2026-06-23] OFAC: Widens Prince Group (Cambodian scam conglomerate) sanctions: adds 9 individuals, 26 entities. Names Hu Xiaowei (group second-in-command). FinCEN severs H-Pay affiliate from US financial system.
+- [2026-06-26] OFAC: Sudan-related designations issued.
+
+### markets-corporate
+- [2026-06-17] Federal Reserve: FOMC maintains federal funds rate 3.5-3.75% (unanimous 12-0, Warsh first meeting as chairman). Removes prior guidance for 2026 rate cut; indicates hike possible. Dot plot median funds rate 3.8% by year-end (0.16pp above current), implying hike very much on table. Traders price October hike probability elevated.
+- [2026-05] BLS Employment: +172,000 nonfarm payroll jobs (beat consensus 85k). Unemployment 4.3% (unchanged). Long-term unemployed 2.0M, up 524k YoY, 27.5% of total unemployed.
+- [2026-05] BLS CPI: +0.5% SA, +4.2% NSA YoY. Core +0.2% SA, +2.9% NSA YoY. Energy +3.9%, driving 60% of monthly gain. June 2026 CPI not yet released (due 2026-07-14).
+- [2026-06-26] Bitcoin: $58,980 (down $48k YoY, lowest since 2024). June range $61k-$65k. Crypto market sell-off ongoing.
+- [2026-06-26] Crude Oil (WTI): $69.23/bbl (down 21.93% in June, down 3.74% from prior day; still +5.66% YoY). Brent: $71.99/bbl. Driver: Strait of Hormuz transits accelerated following US-Iran peace deal progress; Persian Gulf exports ~75% of prewar levels.
+- [2026-06-21] Japan: Tokyo Electron China sales fell 279.4B yen → 175.5B yen (one FY quarter) due to export restrictions. Semiconductor equipment export controls on 23 categories (EUV, plasma etch, ALD <10nm). Expansion planned July 2026 (testing, CAD, materials, semiconductors).
+- [2026-01-15] US Semiconductor Tariff: Section 232 25% on narrow subset of advanced semiconductors (re-exports). Exemptions: data center, R&D, repairs, startups, non-DC consumer, civil industrial, public sector, other Secretary-determined uses. Update due to President 2026-07-01.
+- [2026-06] Biotech IPO Market: 14 IPOs priced in 2026, ~$5.0B total proceeds. Largest: Parabilis $670M, Kailera $625M, Kardigan $400M. 11 of 13 IPOs raised $250M+. Late-stage, well-backed stories favored. Expected acceleration H2 2026.
+- [2026-Q1] Commercial Real Estate: Bank loan delinquency 1.56%. CMBS delinquency 7.30% (end 2025); office peak 11.76% (all-time high). Stress expected range-bound in 2026, concentrated in office sector.
+- [2026-06-01 onwards] EU AI Act: Article 50 transparency deadline 2026-08-02 (disclose AI system interaction, label deepfakes/AI-generated text). Annex III (recruitment, credit scoring, law enforcement) deadline 2026-12-02. Annex I (regulated products) deadline 2026-08-02. June 1 appointed 60-member Scientific Panel. June 10 published Code of Practice. June 16 approved amendments with delays for high-risk systems.
+- [2026-02-06] CFIUS Known Investor Program: In development per America First policy. Comment period closed 2026-03-18. Pilot continues through 2026; final notice expected later in 2026. Aims to streamline allied/partner investor review while maintaining national security scrutiny.
+
+---
+
+## CANDIDATE THEMES
+
+### Tariff Escalation & Rare Earth Supply Squeeze
+- **Underlying facts:** USTR forced labor tariffs (10-12.5%, decision 2026-07-07); Brazil 25%; Section 232 25% on ag/equipment through Dec 2027. China explicit retaliation authority (June 11), adds MP Materials & USA Rare Earth to export controls (June 22). Japan expands semiconductor equipment export controls (July 2026).
+- **Implication:** Structural tariff regime locking in through 2027. Rare earth supply constrained by China export controls + demand accelerated by US tariff-driven nearshoring. Rare earth prices face upside; equipment makers/exporters face margin compression.
+- **Possible plays:** LONG rare earth (MP Materials-style if accessible; USA Rare Earth); SHORT exporters heavy on Annex C (HTS codes for ag/industrial equipment—AGCO, CNH, DE candidates for deeper digging); NEUTRAL/WATCH Tokyo Electron, ASML (semiconductor equipment headwinds from Japan/US controls vs US tariff protection).
+- **Direction:** Long rare earth / Short export-heavy equipment / Mixed on semiconductors
+- **Horizon:** 6-12 months (tariff regime locks by Oct, supply cascades 12-month lag)
+- **Retail blindspot:** Tariff mispricing is high-level ("tariffs bad for exports"), not sector-granular. Rare earth supply chain complexity and China retaliation timing are underpriced. Retail assumes "rare earth shortage = lithium-like bull," but near-term is supply shock volatility, not sustained upside.
+- **Confidence:** MEDIUM-HIGH
+
+### Fed Rate Hike Shock & Long-Duration Repricing
+- **Underlying facts:** June 17 FOMC hawkish flip (removes 2026 cut guidance, flips to hike possible). Dot plot median 3.8% by year-end. Traders price Oct hike. Warsh era begins with tighter bias. CMBS office delinquency 11.76% all-time high; bank loan stress manageable (1.56%) but refinancing risk rising.
+- **Implication:** Long-duration equities reprice lower if hike materializes. Biotech IPOs (14 priced in 2026, late-stage bias, $5B+ raised) are high-duration, high-multiple. CMBS office acceleration if rates stay elevated.
+- **Possible plays:** SHORT long-duration biotech (recent IPOs 2026, especially smaller-cap); LONG short-duration, high-dividend (utilities, staples); WATCH office CMBS spreads for widening.
+- **Direction:** Short long-duration / Long short-duration
+- **Horizon:** 3-6 months (Oct hike catalyst; repricing compressed after that)
+- **Retail blindspot:** Retail owns biotech IPOs for "secular growth," not duration risk. Market partially priced June hold, but Oct surprise (or confirmation) will reprice hard. CMBS office stress is known, but leverage + rate shock magnitude is underappreciated.
+- **Confidence:** MEDIUM-HIGH
+
+### Oil Downside Completion (Iran Peace Progress Validated by Action)
+- **Underlying facts:** Persian Gulf exports ~75% of prewar restored (Strait of Hormuz transits accelerated). WTI down 21.93% in June alone. Crude now $69.23 (from ~$88 early June). Driver explicitly linked to US-Iran peace deal progress, not supply disruption.
+- **Implication:** If peace deal finalizes, full Persian Gulf supply restoration → further WTI downside (test $60-65/bbl). Energy stocks and commodity-heavy portfolios further compressed. Inverse: if deal collapses, rapid reversal.
+- **Possible plays:** SHORT energy equities (short-term); LONG oil puts / SHORT oil futures (if conviction on deal closure); HEDGE energy exposures.
+- **Direction:** Short
+- **Horizon:** 4-8 weeks (deal closure timing is near-term; if deal fails, reversal rapid)
+- **Retail blindspot:** Retail assumes peace deal is done. In reality, deal is still under negotiation; downside is conditioned on closure. If talks collapse (e.g., geopolitical complication), WTI spikes back to $85+. This binary optionality is underpriced because retail narrative has moved to "peace is priced in."
+- **Confidence:** MEDIUM (clear direction conditional on deal closure, but closure timing uncertain)
+
+### GLP-1 Margin Compression & Generic Cascade (Patent Cliff Intensity)
+- **Underlying facts:** Novo Nordisk Wegovy oral (GLP-1 pill) just approved, June 2026 availability. Ozempic/Saxenda patent cliff Q1 2027 onward. Tirzepatide supply improved; semaglutide intermittent shortages persist. $200B pharma patent cliff 2026-2029 (Januvia, Xeljanz, Ozempic, Voltaren). Generic entry typically 80-95% price drop within 2 years.
+- **Implication:** Novo Nordisk and Eli Lilly face rapid margin compression post-patent expiry. Oral formulation is disruptive (better adherence) but also signals transition away from high-margin injectables. Generics + biosimilars ramping accelerate timeline. Current valuations may be pricing only near-term GLP-1 bull case, not long-term cliff impact.
+- **Possible plays:** SHORT Novo Nordisk, Eli Lilly (long-term; near-term still growth-driven); LONG generic/biosimilar manufacturers (Teva, Sandoz, Mylan/Viatris) if publicly accessible; WATCH biotech with competing GLP-1 candidates (early-stage oral formulations).
+- **Direction:** Short (mature pharma) / Long (generics)
+- **Horizon:** 6-18 months (cliff accelerates Q1 2027, full impact 12-24 months)
+- **Retail blindspot:** Retail narrative is "GLP-1 gold rush," "obesity epidemic," "secular demand." Missing: patent cliff is real and near. Management guidance will highlight near-term volume growth, but margin compression is structural and underpriced in long-term models.
+- **Confidence:** MEDIUM
+
+---
+
+## NEXT-STEPS
+
+**Run longterm_check.py on:**
+- MP Materials (rare earth, China export controls + US tariff protection)
+- USA Rare Earth (if public)
+- AGCO, CNH, Deere (ag equipment exposed to Section 232 25% Annex C tariffs)
+- Tokyo Electron, ASML, KLA, Lam, AMAT (semiconductor equipment, mixed tariff/export control exposure)
+- Recent 2026 biotech IPOs (Parabilis, Kailera, Kardigan) for duration sensitivity to Oct hike
+- Novo Nordisk, Eli Lilly (GLP-1 patent cliff 2027 onward)
+- Utilities, consumer staples (short-duration alternatives if biotech repricing)
+
+**Run catalyst_check.py on:**
+- USTR forced labor tariff decision (2026-07-07 hearing; finalization expected mid-July)
+- Fed rate hike probability (October FOMC meeting, December decision)
+- US-Iran peace deal closure date (ongoing negotiations; completion window summer-fall 2026)
+- Novo Nordisk Wegovy oral launch/adoption ramp (June 2026 availability milestone)
+- CMBS office refinancing schedule (Q3-Q4 2026 maturities)
+
+**Skip / pass:**
+- Bitcoin (LOW-MEDIUM confidence; regulatory actions incremental, macro headwinds clear, but valuation belief-driven; wait for clearer catalyst)
+- AI regulation compliance (LOW-MEDIUM; cost of compliance is real but marginal to AI company P&Ls near-term; monitor August 2 deadline for pricing impact)
+- Pharmaceutical M&A waves (MEDIUM confidence on patent cliff driver, but biotech success rates execution-dependent; wait for post-IPO performance data before betting on consolidation)
+- Ebola escalation (MEDIUM confidence factually, but containment response is improving; not a mispricing until case trajectory inflects sharply)

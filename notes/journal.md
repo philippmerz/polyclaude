@@ -2386,3 +2386,26 @@ Hormuz/Gulf skirmish (no regime/leadership targeting, no ground ops, ceasefire n
 UNMOVED throughout (the market never priced collapse — the decisive signal). HOLD (DEC-0041) validated; no
 trigger hit. The emerging US war-powers question is mildly de-escalatory. Staying on watch + Tier-1 auto-fire
 armed. ARB ~at entry. VELO ratio still unpublished (gated). Heartbeat sent (msg 485). No action.
+
+## 2026-06-28 ~16:00 UTC — Sunday weekly long-term review (world-state digest)
+
+Ran world_state_digest on the 3 stalest domains (biotech-health 5wk, trade-regulation + markets-corporate
+4wk; macro/tech/crypto were 06-21, minerals/energy/geo 06-07). Logged to world_state_log (2026-06-28T16:04Z).
+4 themes surfaced; most plays are SHORTs (NOT polyclaude-actionable — no decentralized short venue), the LONG
+plays are equities → operator IBKR. Themes: rare-earth/export-control reshoring (MED-HIGH), long→short-
+duration rotation (MED-HIGH), GLP-1/mature-pharma (MED), energy-short-on-Iran-deal (MED).
+
+VETTED (longterm_check) the top-2 LONG candidates:
+- **MP Materials ($MP): 3.5/4 ENTER NOW** — the FIRST ENTER-NOW verdict since the watchlist began (all prior
+  = WATCH/FOLLOW-UP). Pentagon-backed ($400M equity + $150M loans + 10X off-take = downside protection)
+  rare-earth pure-play; structural REE supply constraint; sequenced catalysts (Dy/Tb H2-2026 → Apple 2027 →
+  10X 2028); 3-5x base / 5-20% max DD over 3yr; rec size 3-4%. Alt entry dip <$45. → SURFACED to operator
+  (msg 486; 3yr equity = IBKR sleeve, NOT a polyclaude <1y buy).
+- Teva ($TEVA): 2.75/4 FOLLOW-UP — rallied 94% YoY ($31.48), Olanzapine-LAI catalyst priced in, 265% D/E weak
+  margin-of-safety; entry $25-27 dip. WATCH → IBKR.
+
+Existing trigger-hits (watchlist_monitor, all IBKR-surface, previously surfaced, no new action): SOL $70.85,
+STX $0.169, PLTR $112.93, ALB $133.70, NVDA $192.53. longterm_watchlist.md updated with the 2026-06-28
+section. Telegram summary sent (msg 486). NO polyclaude capital — all candidates multi-year equities; MP is
+the actionable surface for the operator's IBKR sleeve. (Discipline note: the digest's SHORT-heavy plays are
+structurally outside our long-or-fade-NO + decentralized toolkit — correctly filtered to the LONG subset.)

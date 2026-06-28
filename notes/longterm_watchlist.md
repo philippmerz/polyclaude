@@ -313,3 +313,22 @@ PM-actionable check (our lane): digest flagged "Fed July hike underpriced vs pau
 live Polymarket prices: market already prices July-hike 17.5% / 2026-hike 61.5% (NOT a pause narrative).
 No mispricing to fade; Fed legs are anti-edge regardless. No polyclaude entry. Discipline win: checked the
 digest's market-state assumption against live prices rather than trusting it.
+
+## 2026-06-28 weekly digest (domains: biotech-health, trade-regulation, markets-corporate)
+
+Themes (most plays are SHORTs → NOT polyclaude-actionable, no decentralized short venue; the LONG plays are equities → operator IBKR):
+- **Rare-earth / export-control reshoring (MED-HIGH):** Annex-C export controls + structural REE supply constraint. Play = LONG rare earth. → **MP Materials = the standout (below).**
+- **Long-duration → short-duration rotation (MED-HIGH):** SHORT long-duration biotech (2026 IPOs) / LONG short-duration + high-dividend (utilities, staples). SHORT side not actionable; LONG defensive side diffuse (no single high-conviction ticker).
+- **GLP-1 / mature-pharma maturation (MED):** SHORT Novo/Lilly (long-term) / LONG generics (Teva, Sandoz, Viatris). → Teva vetted (below).
+- **Energy short on Iran-deal closure (MED):** SHORT energy equities / oil puts, conditional on deal closure. Not actionable (short + uncertain timing; our own Iran NO legs are the live exposure to this theme).
+
+longterm_check verdicts:
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **MP Materials ($MP)** | **3.5/4** | **ENTER NOW** | Rare-earth reshoring | Pentagon-backed ($400M equity + $150M loans + 10X off-take); structural REE constraint; sequenced catalysts (Dy/Tb H2-2026 → Apple 2027 → 10X 2028); 3-5x base / 5-20% max DD over 3yr; size 3-4%. Alt entry: dip <$45 OR H2-26 Dy/Tb commissioning proof. **→ SURFACED to operator (IBKR); the first ENTER-NOW verdict since the watchlist began (all prior = WATCH/FOLLOW-UP).** |
+| Teva ($TEVA) | 2.75/4 | FOLLOW-UP | GLP-1/generics maturation | Rallied 94% YoY ($31.48), catalysts (Olanzapine LAI FDA late-2026) priced in, 265% D/E = weak margin of safety. Entry $25-27 dip. WATCH → IBKR. |
+
+Existing trigger-hits this week (watchlist_monitor, all IBKR-surface, previously surfaced — no new action): SOL $70.85 (≤$80), STX $0.169 (≤$0.22), PLTR $112.93 (≤$120), ALB $133.70 (≤$140), NVDA $192.53 (≤$200).
+
+**Net:** MP Materials is the actionable output — a 3.5/4 ENTER-NOW Pentagon-backed rare-earth play surfaced to the operator's IBKR sleeve. No polyclaude (<1y, decentralized) entry warranted — all candidates are multi-year equities. Digest's own next-steps (Bitcoin, pharma-M&A, Ebola) all self-flagged "wait/not-yet."
