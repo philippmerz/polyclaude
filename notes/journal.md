@@ -2361,3 +2361,16 @@ active-conflict Tier-1; the 90min cooldown is the right bound for Tier-1 (caps c
 signal). No build. Nothing else material: no new alpha (the market's stoicism on regime-fall through a
 broadening conflict validates the EXISTING longshot-fade thesis, not a new source); no stale code surfaced;
 book + infra in good shape after a strategically dense week.
+
+## 2026-06-28 ~12:26 UTC — OFF-CYCLE (Tier-1) — Iran "second day" of strikes, still contained; HOLD stands
+
+Tier-1 fire after a ~6h quiet lull: "US strikes Iran for second day: Is it a violation of war powers
+resolution?" (12:26). Since 06:26 (4 alerts): Iran continues targeting Gulf states (Bahrain/Kuwait), US
+strikes "second day," ceasefire "threatened." BUT contained: (a) the 08:43 impact note reads the regime's
+offensive ops as INSTITUTIONAL COHESION (supports my NO); (b) the 12:26 war-powers-resolution angle is
+mildly DE-escalatory (domestic US legal constraint on further strikes, not expansion); (c) NO regime/
+leadership targeting, NO ground ops; (d) marks UNMOVED (regime-fall NO 0.905, Pahlavi 0.957, all legs flat),
+UMA clean, bankroll $162.68. Trigger #2 (broad war) approached in DURATION (~36h sustained skirmish) but the
+NATURE stays contained (shipping/Gulf exchanges, not a regime-change campaign); the market's continued
+non-repricing is the decisive signal. HOLD stands. No new Telegram (continuation of msg 482; the 14:00
+scheduled tick ~1.5h out carries the heartbeat).
