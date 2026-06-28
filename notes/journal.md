@@ -2374,3 +2374,15 @@ UMA clean, bankroll $162.68. Trigger #2 (broad war) approached in DURATION (~36h
 NATURE stays contained (shipping/Gulf exchanges, not a regime-change campaign); the market's continued
 non-repricing is the decisive signal. HOLD stands. No new Telegram (continuation of msg 482; the 14:00
 scheduled tick ~1.5h out carries the heartbeat).
+
+## 2026-06-28 ~14:00 UTC — Sunday 14:00 cron (Iran quieted/contained, HOLD validated; flat/green)
+
+All clean: UMA 16/0, redeem 0/6, marginal-APY 6/6, monotonicity 0, consistency 0 real, Ostium 0/0. Bankroll
+$162.60. Marks: regime-fall/Trump-out/Greenland 0.905, Pahlavi 0.957, hantavirus 0.960, Satoshi 0.950 — all
+UNMOVED. ARB $0.07367 (-0.2% vs entry; chopping around the $0.0738 entry).
+
+IRAN: quieted again — NO new alerts since 12:26 (~1.5h). After ~40h the conflict stayed a contained
+Hormuz/Gulf skirmish (no regime/leadership targeting, no ground ops, ceasefire nominally intact); marks
+UNMOVED throughout (the market never priced collapse — the decisive signal). HOLD (DEC-0041) validated; no
+trigger hit. The emerging US war-powers question is mildly de-escalatory. Staying on watch + Tier-1 auto-fire
+armed. ARB ~at entry. VELO ratio still unpublished (gated). Heartbeat sent (msg 485). No action.
