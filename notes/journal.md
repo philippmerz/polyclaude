@@ -2336,3 +2336,13 @@ pull; the structured view says HOLD:
 UMA clean, bankroll $162.5. No fresh catalyst_check needed (the 02:00 one's regime-resilience anchor covers
 a broad-war scenario). Material update sent (msg 482). Watching: regime/leadership targeting, US ground ops /
 coalition broad war, or mark move → trim on any.
+
+## 2026-06-28 ~06:26 UTC — OFF-CYCLE (Tier-1) — no new Iran development (day-121 roundup re-report); HOLD stands
+
+Tier-1 fire was "Iran war day 121: Iran attacks Bahrain, Kuwait as US strikes near Hormuz" (06:26) — a
+daily-roundup RE-REPORT of the same Bahrain/Kuwait broadening I assessed + held on at 04:20 (msg 482). NO new
+trigger-level development (no regime/leadership targeting, no ground ops, no broad-war declaration). Marks
+UNMOVED (regime-fall NO 0.905, Pahlavi 0.957), UMA clean. HOLD stands. Note: "day 121" reinforces the
+regime-resilience thesis — the regime is intact after 121 days of the Feb-start war it already survived. No
+new Telegram (same event as msg 482). Redundant off-cycle fire (90min cooldown bounded it; low cost). Next
+scheduled tick 14:00 carries the heartbeat.
