@@ -2315,3 +2315,24 @@ Small-crypto pipeline (this week's discovery): VELO (gated on the unpublished ra
 catalyst_check hardened + validated live; heartbeat restored. Strategic posture unchanged (edge = take
 mispricing + market-neutral yield); the week validated the discipline (Ostium-mirage catch, bias-corrected
 Iran HOLD). pnl_weekly not due (last Jun-24; 7d cadence → ~Jul-01). Heartbeat sent (msg 480). No action.
+
+## 2026-06-28 ~04:20 UTC — OFF-CYCLE (Tier-1) — Iran conflict BROADENS to Gulf states; HOLD on HIGH watch
+
+Tier-1 auto-fire (cooldown since 02:00 elapsed). NEW development: "US strikes Iran again as Tehran hits
+Bahrain and Kuwait" (04:20) + "US strikes more targets as fragile ceasefire under renewed strain" (03:00).
+The conflict has BROADENED beyond Hormuz shipping — Iran now hitting US-allied Gulf states (Bahrain = 5th
+Fleet, Kuwait = US bases). Most serious turn yet; approaches trigger #2 (collapse into broad war).
+
+DECISION: HOLD, no trim — but trigger #2 now on HIGH watch. Consciously applying the anti-narrative-inflation
+discipline (the SAME bias I fixed in catalyst_check Jun-27): "this feels like spiraling" is the narrative
+pull; the structured view says HOLD:
+- Marks STILL UNMOVED (regime-fall NO 0.905, Pahlavi 0.957) — the market is NOT pricing regime collapse even
+  with Iran hitting Gulf states. The decisive signal (informed traders, same news).
+- Strikes still NOT targeting the IRANIAN regime/leadership (the path to regime FALL); a regional military
+  exchange, not regime-decapitation.
+- Regime-resilience anchor (this morning's catalyst_check, 3-7%): the Feb-Apr FULL 40d regime-change campaign
+  failed to topple them; a broader war does not change the P(campaign achieves collapse)≈4% conditional.
+- My ≤0.85 mark-trigger is the OBJECTIVE stop, immune to my narrative bias — trim if the market reprices.
+UMA clean, bankroll $162.5. No fresh catalyst_check needed (the 02:00 one's regime-resilience anchor covers
+a broad-war scenario). Material update sent (msg 482). Watching: regime/leadership targeting, US ground ops /
+coalition broad war, or mark move → trim on any.
