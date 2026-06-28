@@ -675,3 +675,67 @@ Regime survived Feb 28 assassination and immediately instituted succession (Marc
 - [2025–2026 Iranian Protests](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests)
 - [Mojtaba's Legitimacy Deficit](https://www.irannewsupdate.com/news/infightings/mojtaba-khameneis-succession-did-not-solve-the-crisis-it-exposed-it/)
 ```
+
+---
+
+## 2026-06-28T02:05:25Z — catalyst_check
+
+**Query:** `Will the Iranian regime fall before 2027?` resolves 2026-12-31 (186d)
+
+```
+## CATALYST CHECK: Will the Iranian regime fall before 2027?
+
+Resolution: 2026-12-31 | Days: 186 | Today: 2026-06-28
+
+### Base rate
+Regime collapse within a 6-month window is historically rare. The 2026 Iran war (Feb–Apr) involved 40 days of sustained joint US-Israel strikes directly aimed at degrading regime military capacity and galvanizing opposition, yet core Islamic Republic structures (Supreme Leader, Guardian Council, IRGC control) remained intact and consolidated further. Analogous historical regime falls (Egypt 2011, Tunisia 2011) required mass defection of security forces and took 2–4 weeks of peak intensity; Iran's IRGC has shown no signs of fracture and explicitly warned against defections. Market has consistently priced P(YES) at 3–5% in the weeks post-ceasefire.
+
+### Catalysts in window
+- [MED] 2026-08-17 - US-Iran nuclear deal final negotiation deadline (60 days from June 17 MOU). Trump stated this is "not a hard deadline," but failure could trigger escalation rhetoric. Triggering factor: breach of agreement → potential for renewed US/Israel strikes with regime-change objective. Direct regime fall requires subsequent military victory + opposition takeover, which Feb–Apr precedent suggests is improbable within remaining timeframe.
+- [LOW] Ongoing - Pezeshkian government instability (president submitted resignation letter late June citing IRGC takeover). Significant political crisis but does NOT meet strict criteria: Guardian Council, Supreme Leader authority, and IRGC command structure remain intact. Internal power shift ≠ regime collapse.
+- [LOW] Ongoing - Iranian opposition exile coordination (Pahlavi transitional government, Rajavi six-month plan, Free Iran Congress). Opposition groups have formalized planning but remain fragmented, lack military capacity, and are not yet in control of any Iranian territory. Poses pressure only if combined with successful military intervention or internal security-force defection.
+- [LOW] Ongoing - Large-scale defection risk from IRGC/military units. Intelligence sources assess defection risk as "almost non-existent" per IRGC internal assessments. No confirmed significant defections reported post-April ceasefire.
+
+(No other major scheduled catalysts identified for Jul–Dec 2026.)
+
+### Recent news (last 14d)
+- 2026-06-18: Gas prices fall below $4 on average after Trump's signing of Iran deal to end war — partial sanctions relief signals near-term stabilization, reduces escalation pressure.
+- 2026-06-21–06-22: US-Iran talks strained as Trump threats spark Iranian walkout — demonstrates fragility but talks resumed.
+- 2026-06-23: US, Iran agree on Lebanon ceasefire and lifting sanctions on Iranian oil — de-escalation signal; regime consolidating regional power.
+- 2026-06-27: Bahrain condemns Iranian drone attack after overnight US strikes — shows continued low-level tit-for-tat but within ceasefire bounds, not escalating to regime-change operations.
+
+Material interpretation: Recent news shows diplomatic momentum despite rhetoric, reduced likelihood of near-term military escalation for regime-change purposes.
+
+### P(YES) estimate
+
+**Multiplicative breakdown:**
+- P(Negotiation fails by Aug 17 leading to breach of MOU) ≈ 55%
+- P(US/Trump chooses regime-change escalation given breach | breach occurs) ≈ 30% (Trump has stated support for regime change, but deal momentum and economic incentives pull toward settlement)
+- P(Sustained military campaign achieves regime collapse | escalation initiated) ≈ 4% (precedent: Feb–Apr 2026 war with explicit regime-change objective, full US-Israel coordination, and Syrian/Kurdish proxy support failed to topple regime; IRGC and core structures held; regime in fact consolidated)
+- P(Opposition integrates into governing structure and replaces Islamic Republic by Dec 31 | regime militarily destabilized) ≈ 50% (if regime collapsed, opposition could move; but consolidation into actual parallel government takes weeks–months)
+
+**Joint:** 0.55 × 0.30 × 0.04 × 0.50 = **0.33%** ≈ **0.5%**
+
+Ambient tail-risk paths (internal coup, unforeseen acceleration of defections, unexpected third-party intervention): +2.5–3.0pp
+
+**Central: 3%** (structured breakdown dominates over narrative / crisis-mode inflation)
+**Low: 1%**
+**High: 7%**
+
+**Reasoning:** The Feb–Apr 2026 war is the highest-fidelity precedent: explicit US-Israel regime-change campaign, sustained for 40 days, with forward-positioned air power and Kurdish proxies, failed to achieve regime collapse. Core structures persisted; IRGC consolidated power post-war. A similar escalation path in a 5-month window (Aug 17–Dec 31) faces similar structural obstacles. Recent diplomatic momentum and sanctions relief (June 23) reduce near-term escalation probability. Pezeshkian's government crisis is acute but does not dismantle regime institutions; opposition groups lack unified command or security-force backing. Historical base rate for regime collapse in 6 months is extremely low; multiplicative model discipline prevents inflation of central estimate during moments of rhetorical crisis.
+
+**Reconciliation:** A pure narrative reading of Trump's "regime change is best thing" rhetoric, combined with June 27 drone attack and talk of further strikes, could intuitively inflate P(YES) toward 10–15%. However, the multiplicative breakdown (55% × 30% × 4% × 50%) enforces that each conditional link is tight. Trump's stated preference for regime change is priced into the 30% escalation conditional; the 4% regime-collapse rate is anchored to Feb–Apr evidence, not to strike frequency alone. Breakdown joint (0.5%) is steeply below narrative pull; Central is set to breakdown, as the structured-product discipline applies during crisis cycles (see 2026-06-26 check: narrative 14%, breakdown 3.6%).
+
+### Sources
+- [2026 Iranian supreme leader election - Wikipedia](https://en.wikipedia.org/wiki/2026_Iranian_supreme_leader_election)
+- [2026 Iran war - Wikipedia](https://en.wikipedia.org/wiki/2026_Iran_war)
+- [2025–2026 Iran–United States negotiations - Wikipedia](https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations)
+- [Regime change efforts in the 2026 Iran war - Wikipedia](https://en.wikipedia.org/wiki/Regime_change_efforts_in_the_2026_Iran_war)
+- [Trump: 60 days not a hard deadline on Iran negotiations - The Hill](https://thehill.com/homenews/administration/5929012-trump-iran-negotiation-timeline/)
+- [U.S. Sanctions on Iran: Settlement Negotiations - Buchanan Ingersoll & Rooney PC](https://www.bipc.com/u.s.-sanctions-on-iran-settlement-negotiations-and-status)
+- [Tehran regime fears defections as Iran's nationwide movement defies containment - FDD](https://www.fdd.org/analysis/2026/01/12/tehran-regime-fears-defections-as-irans-nationwide-movement-defies-containment/)
+- [Indicators Of Iranian Regime Collapse: Special Report - Critical Threats](https://www.criticalthreats.org/analysis/indicators-of-iranian-regime-collapse)
+- [Iran's president offers resignation, citing total takeover by IRGC commanders - Iran International](https://www.iranintl.com/en/202605312204)
+- [Pezeshkian's Cabinet Reflects Iran's Institutional Stagnation - Washington Institute](https://www.washingtoninstitute.org/policy-analysis/pezeshkians-cabinet-reflects-irans-institutional-stagnation)
+- [Inside the Struggle to Build an Iranian Opposition - Foreign Policy](https://foreignpolicy.com/2026/05/27/iran-opposition-protest-regime-change-reza-pahlavi-freedom-congress/)
+```

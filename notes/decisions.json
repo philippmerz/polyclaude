@@ -794,9 +794,10 @@
         "escalation",
         "hold"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "INTERIM 48h reassessment (2026-06-28 02:00): HOLD VALIDATED. Escalation persisted (2 nights of US strikes over Hormuz shipping) but stayed contained \u2014 targets remained shipping/military NOT regime/leadership, ceasefire nominally intact, regime-fall mark UNMOVED at 0.905 throughout. Fresh catalyst_check (bias-corrected by the 2026-06-27 reconciliation fix): regime-fall P(YES) central 3% (1-7%) \u2014 haiku set Central to the structured breakdown instead of the 10-15% narrative pull, citing the fix. Anchor: the Feb-Apr 2026 FULL 40d regime-change campaign failed to topple the regime. At 3-7% P(YES), NO at 0.905 is UNDERVALUED (market implies 9.5%) -> HOLD clearly +EV, no trim. Prior nudged p_no 0.88->0.92. Position continues to Dec-31; DEC-0041 triggers remain armed.",
+      "calibration_delta": "HOLD correct so far (mirrors DEC-0036: escalation-trimming was overcautious). The fresh check shows my carried 10-12% P(YES) was itself slightly inflated; bias-corrected estimate 3-7%. The catalyst_check reconciliation fix (2026-06-27) worked in its FIRST live test \u2014 auto-corrected the narrative inflation.",
+      "lesson": null,
+      "resolved_at": "2026-06-28T02:06:35Z"
     }
   ]
 }

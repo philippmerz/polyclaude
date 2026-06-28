@@ -2287,3 +2287,31 @@ Other observations (already captured, no new action): Ostium 53%-mirage → [[ve
 DEC-0040; latent "incumbent-survives" thematic factor across Trump-out/regime-fall/Pahlavi → handled in the
 Putin-out pass + cluster framework; news_alerts JSON field is 'title' not 'headline' (noted for my own
 parsing helpers). Not forcing further findings — the book + infra are in good shape.
+
+## 2026-06-28 ~02:00 UTC — Sunday 02:00 cron + 48h Iran reassessment + weekly review
+
+GUARDS all green: UMA 16/0, redeem 0/6, marginal-APY 6/6, monotonicity 0, consistency 0 real, Ostium 0/0.
+Bankroll $162.53. Marks: regime-fall/Trump-out/Greenland 0.905, Pahlavi 0.957, hantavirus 0.960, Satoshi
+0.950 — regime-fall UNMOVED. ARB $0.07349 (-0.4% vs entry; gave back the small gain, within thesis).
+
+IRAN 48h REASSESSMENT (DEC-0041 trigger date): escalation PERSISTED — 10 alerts in 12h, a SECOND night of
+US strikes, "new volley of strikes," ceasefire called "shaky/tested." BUT contained: targets remained
+shipping/military (NOT regime/leadership), ceasefire nominally intact, marks UNMOVED at 0.905 throughout,
+UMA clean. Fresh catalyst_check — and the 2026-06-27 reconciliation fix WORKED IN ITS FIRST LIVE TEST: the
+haiku computed the structured breakdown (0.55×0.30×0.04×0.50 ≈ 0.5% + ~2.5pp ambient = 3% central, 1-7%),
+explicitly set Central to the breakdown over the "10-15% narrative pull," and CITED the Jun-26 lesson in its
+Reconciliation section. KEY anchor: the Feb-Apr 2026 FULL 40d US-Israel regime-change campaign (+ proxies)
+FAILED to topple the regime → a shipping skirmish won't. At 3-7% P(YES), NO at 0.905 is UNDERVALUED (market
+9.5%) → HOLD clearly +EV, NO TRIM. DEC-0041 closed (48h: HOLD validated); prior nudged p_no 0.88→0.92.
+Triggers remain armed (regime/leadership targeting / full war / mark ≤0.85). My carried 10-12% was itself
+slightly inflated — the bias-corrected estimate is 3-7%. (Notable: the catalyst_check fix paid off on the
+very next crisis decision it was built for.)
+
+WEEKLY LONG-TERM REVIEW (Sunday): portfolio healthy (6 NO legs clearing hurdle + ARB starter; -4.4% vs ref).
+Watchlist: 5 names below long-term triggers (SOL $70.85, STX $0.169, PLTR $112.93, ALB $133.70, NVDA
+$192.53) — all IBKR-surface (operator's multi-year sleeve), previously surfaced, stable → no new action/ping.
+Small-crypto pipeline (this week's discovery): VELO (gated on the unpublished ratio = live lead), Ostium
+(parked, 53% mirage), DRIP (dormant). Parked sleeves (HYPE harvest, trend-following) unchanged. Infra:
+catalyst_check hardened + validated live; heartbeat restored. Strategic posture unchanged (edge = take
+mispricing + market-neutral yield); the week validated the discipline (Ostium-mirage catch, bias-corrected
+Iran HOLD). pnl_weekly not due (last Jun-24; 7d cadence → ~Jul-01). Heartbeat sent (msg 480). No action.
