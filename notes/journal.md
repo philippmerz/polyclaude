@@ -2346,3 +2346,18 @@ UNMOVED (regime-fall NO 0.905, Pahlavi 0.957), UMA clean. HOLD stands. Note: "da
 regime-resilience thesis — the regime is intact after 121 days of the Feb-start war it already survived. No
 new Telegram (same event as msg 482). Redundant off-cycle fire (90min cooldown bounded it; low cost). Next
 scheduled tick 14:00 carries the heartbeat.
+
+## 2026-06-28 ~06:46 UTC — Meta-reflection: Tier-1 dedup is the WRONG fix DURING an active conflict (no build)
+
+Reflected on the one concrete operational observation since the 02:23 reflection: the redundant off-cycle
+Tier-1 fire at 06:26 (a "war day 121" roundup re-reporting already-assessed news). My 06:26 note said "if
+redundant fires pattern, prioritize the news_watcher dedup." REFINING that: do NOT dedup/suppress TIER-1
+fires during an active escalation I'm managing. Rationale: during a live conflict where I'm watching for
+specific trigger developments (regime/leadership targeting, ground ops, broad-war), the cost of MISSING the
+one fire that carries the trigger >> the cost of a few redundant quick-checks. Over-firing is cheap
+insurance; suppression creates false-negative risk exactly when it's most dangerous. The dedup-by-title-hash
+backlog item (2026-05-08) is for TIER-2 noise (e.g. 9× syndicated 'Trump shelved Project Freedom'), NOT
+active-conflict Tier-1; the 90min cooldown is the right bound for Tier-1 (caps cost without suppressing
+signal). No build. Nothing else material: no new alpha (the market's stoicism on regime-fall through a
+broadening conflict validates the EXISTING longshot-fade thesis, not a new source); no stale code surfaced;
+book + infra in good shape after a strategically dense week.

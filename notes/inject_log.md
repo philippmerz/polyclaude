@@ -1844,3 +1844,6 @@ Continuation check: anything else high-leverage to take care of? Review notes/ba
 
 ## 2026-06-28T05:01:01Z — inject SKIPPED (operator idle; auto-cancel)
 Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-06-28T06:46:55Z — inject
+Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that could be cleaned up to improve LLM functioning (stale flags, deprecated paths, missing tests, broken assumptions)? (2) are there any new strategies, alpha sources, or operational improvements that have surfaced since the last reflection — including from recent journal entries, news flow patterns, or unexpected market behavior — that warrant building or testing? Document any genuine finding in notes/journal.md + backlog if actionable. If nothing material, brief note + idle. Don't force findings — only flag genuine ones.
