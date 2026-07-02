@@ -43,6 +43,18 @@ Ranked by validated evidence, not aspiration:
    capital-lockup/tail-aversion premium, which is why it persists. Long-dated entries
    (Dec-31 book) are NOT covered by this backtest — they rest on the catalyst-modelled
    p plus carry vs hurdle, and must clear the same gates.
+   **Deployment priority (2026-07-02 audit repointing — skeptic+champion consensus):**
+   the SHORT-DATED validated bucket (≤~7–14d to resolution, 0.90–0.98, live-CLOB
+   walked) is the PRIORITY target for new capital and freed resolutions, cycling in
+   days with a prospective ledger (`notes/shortdated_ledger.json` — records entries
+   AND gated skips; the edge's forward falsification test at N≈30–50). The long-dated
+   book is HOLD-ONLY: existing legs held where exit-spread > negative carry, NO new
+   long-dated entries and no adds — under expectation math at own priors the Dec-31
+   book yields ~Aave-grade carry while wearing tail risk (the 2026-07-02 audit found
+   100% of PM capital there while the validated bucket went unharvested; that
+   allocation error stands corrected). Position health is judged by EXPECTED-edge APY
+   ((p/M−1)×365/d vs priors — `check_marginal_apy.py`, fixed 2026-07-02 from a
+   win-assumed formula whose "N/N clear" was vacuous), never by gross carry.
 2. **Decomposition / consistency arbitrage.** Same event expressed at different prices:
    date-monotonicity violations (`event_monotonicity_scan.py`), multi-leg sum≠1
    (`polymarket_consistency_scan.py`, live-CLOB-validated), cross-venue

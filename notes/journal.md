@@ -2484,3 +2484,15 @@ live: every tick's scan feeds it; entries come when a candidate clears the robus
 calibration: catalyst_check's reconciliation fix visibly active in both runs (Świątek central set to the
 structured breakdown, explicitly). No capital deployed this pass — freed hantavirus $9.74 + $11.70 pUSD
 remain the bucket's dry powder.
+
+## 2026-07-02 ~19:40 UTC — Meta-reflection: doctrine drift from today's repointing FIXED (genuine finding)
+
+Finding (the exact doc-drift class this cycle exists for): strategy/00_philosophy.md §3.1 and the README
+still presented the pre-audit allocation — a fresh session reading the direction-setting docs would have
+REBUILT yesterday's allocation error (long-dated deployment, gross-carry health checks). Fixed: §3.1 now
+carries the deployment-priority directive (short-dated validated bucket = priority; long-dated = HOLD-ONLY,
+no new entries/adds; health = expected-edge APY vs priors, never gross carry; ledger = the forward
+falsification test). README snapshot refreshed to post-audit state (5 legs hold-only, honest -3.0%/-3.8pp
+benchmark line, repointing + guard fix + dead-man switch noted). Nothing else material — today's audit WAS
+the deep reflection; its remaining items are queued with owners (creds pre-flight next infra slice;
+methodology final analysis at 20/20; January scale decision persisted to memory). Not forcing more.
