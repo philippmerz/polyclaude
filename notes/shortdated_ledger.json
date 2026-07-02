@@ -1,0 +1,47 @@
+{
+  "_comment": "Prospective ledger for the short-dated fade cycle (2026-07-02 audit repointing). Records EVERY gated evaluation in the validated <=14d 0.90-0.98 bucket: entries AND skips. Purpose = the edge's falsification test (N~30-50): (a) if entered fades' realized excess <=0, the bucket edge is gone; (b) if SKIPS systematically resolve NO (fade would have won), the robust-edge haircut is over-broad and forfeiting +EV. Update outcomes at resolution. Fields: date, question, side, ask, days, pop_edge_pp (scanner population avg), catalyst_p_central (instance P(side) from gate), decision, reason, size_usd, outcome (null until resolved), fade_would_have_won (for skips).",
+  "records": [
+    {
+      "date": "2026-07-02",
+      "question": "Will Iga Świątek be the 2026 Women's Wimbledon Winner?",
+      "side": "NO",
+      "ask": 0.902,
+      "days": 9.2,
+      "pop_edge_pp": 7.1,
+      "catalyst_p_yes_central": 0.147,
+      "decision": "SKIP",
+      "reason": "Edge INVERTED on instance analysis: structured breakdown P(win)=14.7% (defending champion, dominant R3 form) vs market 9.8% — the market may UNDERPRICE her. Central p_NO 0.86 < ask 0.902 = negative edge before haircut.",
+      "size_usd": 0,
+      "outcome": null,
+      "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-02",
+      "question": "Will Alexander Zverev be the 2026 Men's Wimbledon winner?",
+      "side": "NO",
+      "ask": 0.905,
+      "days": 9.2,
+      "pop_edge_pp": 6.8,
+      "catalyst_p_yes_central": 0.05,
+      "decision": "SKIP",
+      "reason": "Positive at central (p_NO 0.95 vs 0.905 = +$0.30 on $6) but fails the pessimistic bound (0.90 -> -$0.03 vs +$0.05 required). Did NOT override the default haircut on ledger candidate #1 — unforced data first; if skips like this systematically resolve NO, the ledger recalibrates the haircut at N~30-50, not N=1.",
+      "size_usd": 0,
+      "outcome": null,
+      "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-02",
+      "question": "(basket screened out pre-gate)",
+      "side": "-",
+      "ask": null,
+      "days": null,
+      "pop_edge_pp": null,
+      "catalyst_p_yes_central": null,
+      "decision": "PRE-SKIP",
+      "reason": "Scan had 16 candidates >=3pp. Screened out on doctrine before gating: Iran-adjacent (Mojtaba-seen/airspace/Hormuz-fees/Hormuz-normal — correlation with existing book + in-window momentum = trap-analog), GPT-5.6-by-Jul-6 (announcement-trap shape, thin book), exact-score fades (population edge overstated for plausible scorelines), remaining Wimbledon/WC names (lower edge than the two gated).",
+      "size_usd": 0,
+      "outcome": null,
+      "fade_would_have_won": null
+    }
+  ]
+}

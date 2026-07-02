@@ -2466,3 +2466,21 @@ Trump-out/Greenland genuinely clear); route freed capital + future resolutions a
 Also queued: operator capital-case (marginal-return-per-$100 across the gated sleeves — the gates assert
 capacity>capital; never asking was the real circularity), surfaced-calls track-record file for IBKR ideas
 (MP Materials = first entry), pnl_weekly + backlog updates this commit.
+
+## 2026-07-02 ~18:50 UTC — Short-dated fade cycle: FIRST PASS RUN (ledger live; 0 entries, 2 gated skips — the system working)
+
+Executed the audit's top-priority repointing same-day. Scan (favorite_fade_scan, live-CLOB walked): 16
+candidates ≥3pp. Doctrine pre-screen removed Iran-adjacent (book correlation + momentum trap-analogs),
+GPT-5.6 (announcement-trap), exact-scores (population edge overstated for plausible scorelines). Gated the
+2 best (both ~7pp population edge, mechanical resolutions, independent draws):
+- Świątek NO 0.902 → SKIP, edge INVERTED on instance analysis (structured P(win) 14.7% vs market 9.8% —
+  defending champ, dominant form; the market may UNDERPRICE her). Population avg ≠ instance edge.
+- Zverev NO 0.905 → SKIP, +EV at central (p_NO 0.95, +$0.30) but fails the pessimistic bound (-$0.03 at
+  0.90 vs +$0.05 required). Considered the tool's own smaller-haircut override (mechanical + tight band)
+  and REFUSED it: no gate-overrides to force ledger entry #1; if such skips systematically resolve NO,
+  the ledger recalibrates the haircut at N≈30-50 — that is its exact purpose (audit falsifier).
+notes/shortdated_ledger.json CREATED with all 3 records (2 gated skips + the pre-screen). The loop is now
+live: every tick's scan feeds it; entries come when a candidate clears the robust bound unforced. Note for
+calibration: catalyst_check's reconciliation fix visibly active in both runs (Świątek central set to the
+structured breakdown, explicitly). No capital deployed this pass — freed hantavirus $9.74 + $11.70 pUSD
+remain the bucket's dry powder.
