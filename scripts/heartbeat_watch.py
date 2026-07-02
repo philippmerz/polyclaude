@@ -97,11 +97,11 @@ def _read_pid_file(env_var: str) -> int | None:
         return None
 
 
-def _emit(state: dict, key: str, msg: str) -> bool:
+def _emit(state: dict, key: str, msg: str, cooldown: int = ALERT_COOLDOWN_SECONDS) -> bool:
     """Emit an alert with cooldown. Returns True if actually emitted."""
     last = state["last_alerts"].get(key, 0)
     now = _now()
-    if now - last < ALERT_COOLDOWN_SECONDS:
+    if now - last < cooldown:
         print(f"[heartbeat] suppressed (cooldown): {key} -- {msg}", flush=True)
         return False
     state["last_alerts"][key] = now
@@ -203,11 +203,46 @@ def check_stuck_cron_forks(state: dict) -> None:
               f"likely deadlocked. Inspect: ps -p {pid} -o pid,etime,stat,cmd")
 
 
+SESSION_STALE_SECONDS = 16 * 3600      # journal older than this = session not processing
+INJECT_FRESH_SECONDS = 2 * 3600        # ...while injects newer than this = prompts still flowing
+SESSION_DEAD_COOLDOWN = 12 * 3600      # re-alert at most 2x/day for a persistent outage
+
+
+def check_session_liveness(state: dict) -> None:
+    """Dead-man switch on tick OUTPUT, not daemon PIDs.
+
+    2026-07-02 audit fix (skeptic+champion consensus #1 operational gap):
+    4 outages in ~3 weeks (~7.5 of 21 days dark) where the interactive
+    session died (expired creds) while every daemon stayed green — injects
+    kept firing into the void and this watchdog saw nothing, because it
+    watched PIDs and stuck forks, not whether ticks PRODUCE anything.
+    Signature of that failure class: notes/journal.md goes stale while
+    notes/inject_log.md stays fresh. Alert the operator directly via
+    Telegram (LLM-independent path) so an outage is a ping within hours,
+    not a silence discovered days later.
+    """
+    repo = Path(__file__).resolve().parent.parent
+    journal = repo / "notes" / "journal.md"
+    inject_log = repo / "notes" / "inject_log.md"
+    try:
+        journal_age = _now() - int(journal.stat().st_mtime)
+        inject_age = _now() - int(inject_log.stat().st_mtime)
+    except OSError:
+        return
+    if journal_age > SESSION_STALE_SECONDS and inject_age < INJECT_FRESH_SECONDS:
+        _emit(state, "session_dead",
+              f"SESSION LIKELY DEAD: journal.md stale {journal_age // 3600}h while injects "
+              f"still flowing ({inject_age // 60}min ago) — ticks firing into the void "
+              f"(expired creds?). Operator: restart/re-login the polyclaude session.",
+              cooldown=SESSION_DEAD_COOLDOWN)
+
+
 def poll_once() -> None:
     state = _load_state()
     check_news_watcher(state)
     check_telegram_listener(state)
     check_stuck_cron_forks(state)
+    check_session_liveness(state)
     _save_state(state)
 
 

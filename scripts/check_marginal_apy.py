@@ -32,9 +32,12 @@ from pathlib import Path
 
 import httpx
 
-# Default hurdle = current Aave Base USDC supply APY. Lowest of the
-# stablecoin alternatives so any position above this clears.
-HURDLE_APY_DEFAULT = 0.034
+# Default hurdle ≈ current Aave USDC supply APY. Was 0.034 (May-08 snapshot);
+# bumped to 0.05 in the 2026-07-02 audit — the stale hurdle plus win-assumed
+# math (below) had made the daily "6/6 clear" green light vacuous.
+HURDLE_APY_DEFAULT = 0.05
+
+PRIORS_PATH = Path(__file__).resolve().parent.parent / "notes" / "portfolio_kelly_priors.json"
 
 
 def _resolve_wallet_address() -> str:
@@ -78,6 +81,40 @@ def _days_to_resolution(end_iso: str | None) -> float | None:
         return None
 
 
+def _load_priors() -> dict[str, float]:
+    """Load per-position P(win) priors from portfolio_kelly_priors.json.
+
+    Returns {slug_key: p_no}. Keys in the priors file are market slugs.
+    2026-07-02 audit fix: the old formula (1-M)/M x 365/days was WIN-ASSUMED
+    (no P(loss) term) — any NO below ~0.983 cleared a 3.4% hurdle at 180d,
+    so the daily "N/N clear" line carried no information. Expected-edge math
+    (p/M - 1) is what the close-candidate decision actually needs.
+    """
+    try:
+        raw = json.loads(PRIORS_PATH.read_text())
+    except Exception:
+        return {}
+    out = {}
+    for k, v in raw.items():
+        if k.startswith("_"):
+            continue
+        if isinstance(v, dict) and "p_no" in v:
+            out[k] = float(v["p_no"])
+    return out
+
+
+def _match_prior(slug: str, priors: dict[str, float]) -> float | None:
+    """Exact slug match first, then containment either way (slug variants)."""
+    if not slug:
+        return None
+    if slug in priors:
+        return priors[slug]
+    for k, p in priors.items():
+        if k in slug or slug in k:
+            return p
+    return None
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description="Flag held positions whose marginal-APY-to-resolution falls below a hurdle.")
     p.add_argument("--hurdle-apy", type=float, default=HURDLE_APY_DEFAULT,
@@ -102,6 +139,7 @@ def main() -> int:
         print(f"ERROR: data-api fetch failed: {e}", file=sys.stderr)
         return 0
 
+    priors = _load_priors()
     flagged: list[dict] = []
     holds: list[dict] = []
     drawdowns: list[dict] = []
@@ -157,38 +195,57 @@ def main() -> int:
                 "verdict": "DRAWDOWN_ALERT" if drawdown_pct <= -args.drawdown_alert_pct else "DRAWDOWN_WATCH",
             })
 
-        # Marginal APY: capture-side is whatever is "remaining" toward 1.0
-        # at current mark. For NO at mark M, hold-to-resolution profit per
-        # share = (1 - M) if NO wins. APY = (1-M)/M × 365/days.
-        # For YES at mark M (typically near 1.0 when bond-like): same math
-        # because the "remaining capture" is also (1 - M) if YES wins.
+        # 2026-07-02 audit fix — EXPECTATION math, not win-assumed carry.
+        # Gross carry (1-M)/M assumes the position always wins; the decision
+        # number is expected edge: E[value per $ held] = p/M, so
+        # expected_edge_apy = (p/M - 1) x 365/days, with p from the priors
+        # file. p < M means holding is NEGATIVE-EV at your own belief —
+        # flag regardless of hurdle. Gross carry is kept as a column only.
         if mark >= 0.5:
-            remaining = 1.0 - mark
-            marginal_apy = remaining / mark * 365 / days
+            gross_carry_apy = (1.0 - mark) / mark * 365 / days
         else:
             # Sub-0.5 marks (e.g. iran-peace at 0.65) are NOT bond-like;
             # the marginal-APY-hurdle frame doesn't apply. Skip from the
             # advisory — these are speculative directional bets, not carries.
             continue
 
+        prior_p = _match_prior(slug, priors) if outcome == "No" else None
+        expected_edge_apy = None
+        if prior_p is not None:
+            expected_edge_apy = (prior_p / mark - 1.0) * 365 / days
+
         record = {
             "question": question,
             "slug": slug,
             "outcome": outcome,
             "mark": round(mark, 4),
+            "prior_p": round(prior_p, 4) if prior_p is not None else None,
             "size": round(size, 4),
             "cost": round(cost, 4),
             "mtm": round(mtm, 4),
             "days_to_resolve": round(days, 2),
-            "marginal_apy_pct": round(marginal_apy * 100, 2),
-            "drawdown_pct": round(drawdown_pct, 2),
+            "gross_carry_apy_pct": round(gross_carry_apy * 100, 2),
+            "expected_edge_apy_pct": round(expected_edge_apy * 100, 2) if expected_edge_apy is not None else None,
+            "drawdown_pct": round(drawdown_pct, 2) if drawdown_pct is not None else None,
         }
-        if marginal_apy < args.hurdle_apy:
-            record["verdict"] = "CLOSE_CANDIDATE"
-            flagged.append(record)
+        if expected_edge_apy is not None:
+            if prior_p < mark:
+                record["verdict"] = "NEGATIVE_EDGE"
+                flagged.append(record)
+            elif expected_edge_apy < args.hurdle_apy:
+                record["verdict"] = "CLOSE_CANDIDATE"
+                flagged.append(record)
+            else:
+                record["verdict"] = "HOLD"
+                holds.append(record)
         else:
-            record["verdict"] = "HOLD"
-            holds.append(record)
+            # No prior available: gross carry is the only number we have.
+            # Mark it clearly so a win-assumed figure can't masquerade as EV.
+            record["verdict"] = "NO_PRIOR (gross-carry only)"
+            if gross_carry_apy < args.hurdle_apy:
+                flagged.append(record)
+            else:
+                holds.append(record)
 
     if args.json:
         print(json.dumps({"hurdle_apy_pct": round(args.hurdle_apy * 100, 2),
@@ -206,20 +263,25 @@ def main() -> int:
                   f"{r['question'][:60]}")
         print()
 
-    print(f"# marginal-APY hurdle scan @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")
-    print(f"# hurdle: {args.hurdle_apy*100:.2f}% APY (Aave Base USDC supply); drawdown alert: {args.drawdown_alert_pct:.0f}%")
-    print(f"# {len(holds)} positions clear hurdle; {len(flagged)} below hurdle (close candidates)")
+    def _apy_col(r: dict) -> str:
+        if r.get("expected_edge_apy_pct") is not None:
+            return f"E{r['expected_edge_apy_pct']:>+7.2f}% (p={r['prior_p']:.3f}, gross {r['gross_carry_apy_pct']:+.1f}%)"
+        return f"gross {r['gross_carry_apy_pct']:>+7.2f}% (NO PRIOR)"
+
+    print(f"# marginal-APY scan (EXPECTED-edge vs prior) @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")
+    print(f"# hurdle: {args.hurdle_apy*100:.2f}% APY; drawdown alert: {args.drawdown_alert_pct:.0f}%; priors: {PRIORS_PATH.name}")
+    print(f"# {len(holds)} clear; {len(flagged)} flagged (NEGATIVE_EDGE / below-hurdle)")
     print()
     if flagged:
-        print("=== CLOSE CANDIDATES (marginal APY < hurdle) ===")
+        print("=== FLAGGED (negative edge at own prior, or expected edge < hurdle) ===")
         for r in flagged:
-            print(f"  {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
-                  f"{r['marginal_apy_pct']:>+6.2f}%  {r['question'][:70]}")
+            print(f"  [{r['verdict']}] {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
+                  f"{_apy_col(r)}  {r['question'][:60]}")
         print()
-    print("=== HOLDS (marginal APY clears hurdle) ===")
-    for r in sorted(holds, key=lambda x: x["marginal_apy_pct"]):
+    print("=== HOLDS (expected edge clears hurdle) ===")
+    for r in sorted(holds, key=lambda x: (x.get("expected_edge_apy_pct") if x.get("expected_edge_apy_pct") is not None else x["gross_carry_apy_pct"])):
         print(f"  {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
-              f"{r['marginal_apy_pct']:>+8.2f}%  {r['question'][:70]}")
+              f"{_apy_col(r)}  {r['question'][:60]}")
     return 0
 
 

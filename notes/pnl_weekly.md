@@ -491,3 +491,26 @@ May-31 NO was the window's defining trade: entered as a pricing inefficiency, su
 - Polymarket gamma-api + CLOB orderbook + data-api (live walks on every flagged arb/fade); discover/favorite-fade/consistency/monotonicity scanners
 - News: `news_watcher` RSS (`notes/news_alerts.jsonl`); WebSearch for the Jun-24 Iran ceasefire-extension status (Jun-17 MOU = 60d extension confirmed)
 - UMA Optimistic Oracle via `uma_status_check.py`; Aave aToken on-chain reads; `bankroll.py` authoritative total
+
+---
+
+## Week of 2026-06-24 → 2026-07-02 (8d; due Jul-01, 1d late — outage #4 ate Jun-29→Jul-02)
+
+**Bankroll:** $164.95 vs $162.38 Jun-24 = **+$2.57 (+1.6%)**; vs $170 reference **−3.0%** over the full ~9 weeks (capital ledger correction from the audit: both deposits were week-one, so the honest counterfactual is Aave-flat ≈ +0.8% → true underperformance ≈ **−3.8pp**). Benchmark currently LOST; Dec-31 is the accountability date.
+
+**Realized this week: +$0.65** — closed hantavirus NO @ 0.974 (DEC-0042, +7.2% on $9.09 cost), triggered by the audit's guard fix (leg was NEGATIVE_EDGE at own prior: mark 0.9745 > p_no 0.97, catastrophe-tail class at a discount). ARB starter +5.1% vs entry (unrealized). The rest of the book gained through both a live war escalation AND a 4-day outage: 5 remaining NO legs, cost $83.19, all above entry, marks migrating toward NO (the predicted pull-to-par signature).
+
+**The week's real event — operator-requested approach audit (skeptic+champion, full writeups in journal 2026-07-02):**
+- Verdicts: champion SOUND-with-evolution / skeptic NEEDS-CORRECTION; consensus on the fixes.
+- Hard bug found + fixed: `check_marginal_apy.py` was win-assumed (no P(loss)) with a stale 3.4% hurdle — the daily "6/6 clear" green light was mathematically vacuous. Now expectation math vs priors; first honest run: only Trump-out + Greenland clear the 5% hurdle.
+- Core allocation error (verified): the validated edge (N=1513) is at ≤7d-to-resolution (+2.8-4.8pp, 3-5σ), NEGATIVE at 30d-out; the Dec-31 book is outside backtest coverage and yields ~4.3%/yr at own priors < Aave. **Repointing: stop growing the long-dated book; harvest the validated short-dated bucket with a prospective ledger.**
+- Ops: 4th outage (~7.5/21 days dark). Dead-man switch shipped: heartbeat_watch now alerts the operator directly (Telegram, LLM-independent) when the journal goes stale while injects still flow.
+- Iran arc closed well: HOLD through the entire escalation validated — regime-fall NO 0.905→0.915 through 2 nights of US strikes + Iran hitting Bahrain/Kuwait; the bias-corrected catalyst_check (fixed Jun-27) worked in its first live test.
+
+### Decisions tracker
+42 decisions / 23 resolved / 19+ lessons. New: DEC-0042 (hantavirus close). Methodology experiment 19/20 resolved — zero_shot +0.29/$ (100% win on takes) vs all four multi-agent variants ≤~0; final per-variant analysis at 20/20, then the deferred pagination fix.
+
+### Outlook (→ ~Jul-09)
+- Build the ≤7d fade-cycle loop (scan → gate → size → ledger) and route the freed $9.74 + $12 pUSD through it.
+- Present the operator the capital case (marginal expected return per +$100: short-dated bucket capacity, HYPE harvest at ~$500, parked sleeves) — or formally kill the parked sleeves.
+- Daemon restart + creds pre-flight; methodology final analysis at 20/20; VELO ratio still gated; Iran next hard checkpoint ~Aug-16 (MOU expiry), Jul-27 EU sanctions review.

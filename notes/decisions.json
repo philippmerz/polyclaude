@@ -1,5 +1,5 @@
 {
-  "next_id": 42,
+  "next_id": 43,
   "decisions": [
     {
       "id": 1,
@@ -798,6 +798,25 @@
       "calibration_delta": "HOLD correct so far (mirrors DEC-0036: escalation-trimming was overcautious). The fresh check shows my carried 10-12% P(YES) was itself slightly inflated; bias-corrected estimate 3-7%. The catalyst_check reconciliation fix (2026-06-27) worked in its FIRST live test \u2014 auto-corrected the narrative inflation.",
       "lesson": null,
       "resolved_at": "2026-06-28T02:06:35Z"
+    },
+    {
+      "id": 42,
+      "timestamp": "2026-07-02T17:57:08Z",
+      "type": "close_position",
+      "thesis": "CLOSED hantavirus-pandemic-2026 NO: sold 10 sh @ 0.974 bid ($9.74, tx 0x90f11cf0), cost $9.09 -> realized +$0.65 (+7.2% in ~5wk). Trigger: the 2026-07-02 approach audit (skeptic+champion, operator-requested) exposed check_marginal_apy.py as WIN-ASSUMED (no P(loss) term) \u2014 fixed to expectation math (p/M-1)x365/d, and the first honest run flagged this leg NEGATIVE_EDGE: mark 0.9745 > own prior p_no 0.97, E[hold]=$9.70 < sell-now $9.74. Also doctrine-inconsistent: correlated-catastrophe tail class (no-adds tag) held at a price DISCOUNT when the class demands a premium. Book was tight/deep (bid 0.974 x 1055) so exit cost ~0. Selling strictly dominated holding at my own belief.",
+      "confidence": "high",
+      "prediction": "Market resolves NO by Dec-31 (p~0.97) \u2014 i.e. the sold leg likely pays $10 to its buyer; the +EV of the close comes from the price exceeding fair, not from predicting YES. If it resolves YES, the close looks brilliant ex-post but that is not the claim. Freed $9.74 redeploys per the audit repointing (short-dated validated bucket).",
+      "size_usd": 9.74,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hantavirus",
+        "audit",
+        "close",
+        "negative-edge"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

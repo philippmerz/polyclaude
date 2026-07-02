@@ -2409,3 +2409,60 @@ STX $0.169, PLTR $112.93, ALB $133.70, NVDA $192.53. longterm_watchlist.md updat
 section. Telegram summary sent (msg 486). NO polyclaude capital — all candidates multi-year equities; MP is
 the actionable surface for the operator's IBKR sleeve. (Discipline note: the digest's SHORT-heavy plays are
 structurally outside our long-or-fade-NO + decentralized toolkit — correctly filtered to the LONG subset.)
+
+## 2026-07-02 ~18:00 UTC — OUTAGE #4 RECOVERY (~4d dark) + operator-requested APPROACH AUDIT → 3 corrections shipped
+
+OUTAGE: session died ~Jun-28 evening (creds expired again — 4th outage, ~7.5 of the last 21 days dark);
+~100 queued ticks/continuations fired into the void through Jul-02. Recovery sweep CLEAN: UMA 16/0, redeem
+0/6, Ostium flat, no trigger hit; the book GAINED through the dark period — bankroll $164.95 (-3.0%, best
+in weeks), all 6 NO legs improved (regime-fall 0.905→0.915, Trump-out →0.925, the Iran legs rallied through
+continued Hormuz skirmishing = HOLD further validated), ARB +5.1% vs entry. Outage news: 47 alerts, 1 Tier-1
+(same contained tit-for-tat; shippers call it the "new normal"; Doha talks ended no-breakthrough but interim
+agreement holds). Methodology hit 19/20 (zero_shot +0.29/$ dominant, all multi-agent variants ≤~0).
+
+AUDIT (operator: "can you do another pass to check if we're approaching things correctly?"): ran a full
+skeptic+champion pair against the repo with unvarnished numbers. VERDICTS: champion=SOUND-with-evolution,
+skeptic=NEEDS-CORRECTION. CONSENSUS on the two big fixes (both shipped tonight); the skeptic additionally
+found a hard guard bug (verified + fixed) and a negative-edge leg (verified + closed).
+
+WHAT THE AUDIT ESTABLISHED (the honest picture):
+- Returns: -3.0% over ~9wk vs ~+0.8% Aave counterfactual = ~-3.8pp underperformance. Realized net ≈ -$10,
+  dominated by the two pre-gate permanence-trap losses (-$28.04). Benchmark currently LOST; Dec-31 is the
+  accountability date.
+- THE CORE ALLOCATION ERROR (skeptic, verified): the validated edge (N=1513 backtest) lives at ≤7d-to-
+  resolution 0.90-0.98 (+2.8-4.8pp, 3-5σ) and is NEGATIVE at 30d-out; philosophy §3.1 admits the Dec-31
+  book is OUTSIDE backtest coverage. 100% of PM capital sat in the unvalidated long-dated variant while the
+  validated short-dated bucket went unharvested. Under expectation math at own priors, the Dec-31 book
+  yields ~4.3%/yr < Aave — Aave-grade carry wearing tail risk.
+- Both auditors: losses are CLASS-SEPARABLE tuition (same trap signature, gateable) not a fake edge; the
+  same-structure May fades that lacked in-window dealmaking all won. Falsifiers committed: any §4.4-passed
+  fade lost to loose-YES = taxonomy wrong; 2+ YES across the book by Dec-31 = priors wrong; skip-ledger to
+  detect over-broad gating; short-dated ledger N≈30-50 to confirm the bucket edge forward.
+- Champion: the process layer is genuinely working and self-pruning (UMA guard 16/0 since built; catalyst
+  narrative-bias found→fixed→validated live in 15 days; Ostium mirage caught pre-deploy; N=20 experiment
+  cut its own multi-agent habit). Fail-SAFE proven 4x; fail-ROBUST not — the watchdog watched PIDs while
+  the pipeline was dead.
+- Grade-inflation called out (fair): "flat/green"/"portfolio healthy" language while below kickoff. Stop.
+
+CORRECTIONS SHIPPED TONIGHT:
+1. check_marginal_apy.py FIXED (hard bug, verified at L165-167): was win-assumed (1-M)/M — any NO <0.983
+   cleared 3.4% at 180d; the daily "6/6 clear" was vacuous. Now expectation math: E-edge = (p/M-1)×365/d
+   with p from portfolio_kelly_priors.json, NEGATIVE_EDGE verdict when p<M, hurdle 3.4%→5%, NO_PRIOR
+   clearly labeled. First honest run: only Trump-out + Greenland clear (E+7.6-7.7%/yr); hantavirus
+   NEGATIVE_EDGE; regime-fall/Pahlavi/Satoshi positive-but-sub-hurdle (regime-fall flag is prior-
+   sensitivity: clears at the catalyst-check's own 3-7% P(YES)).
+2. CLOSED hantavirus NO (DEC-0042): sold 10 sh @ 0.974 bid ($9.74, tx 0x90f11cf0), +$0.65 (+7.2%) realized.
+   Mark 0.9745 > own prior 0.97 → E[hold] $9.70 < sell $9.74; catastrophe-tail class held at a DISCOUNT
+   when the doctrine demands a premium. First action produced by the fixed guard.
+3. Dead-man switch SHIPPED (both auditors' consensus #1 operational fix): heartbeat_watch.py now has
+   check_session_liveness — journal.md stale >16h while inject_log.md fresh <2h → direct Telegram alert
+   (LLM-independent), 12h cooldown. Converts the next outage from days of silence into a ping within hours.
+   (Daemon restart + creds pre-flight in daily_checkin.sh queued next.)
+
+REPOINTING DECISION (audit consensus #2, now doctrine-intent): STOP growing the Dec-31 book; hold existing
+legs where exit-spread > negative carry (regime-fall/Pahlavi/Satoshi held on prior-sensitivity + spread;
+Trump-out/Greenland genuinely clear); route freed capital + future resolutions at the VALIDATED ≤7d
+0.90-0.98 fade bucket with a prospective win-rate ledger (doubles as the edge's falsification test).
+Also queued: operator capital-case (marginal-return-per-$100 across the gated sleeves — the gates assert
+capacity>capital; never asking was the real circularity), surfaced-calls track-record file for IBKR ideas
+(MP Materials = first entry), pnl_weekly + backlog updates this commit.
