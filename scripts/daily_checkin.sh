@@ -145,5 +145,17 @@ cd "${HOME}"
   echo "=== exit $? at $(date -u) ==="
 } >> "${LOG_FILE}" 2>&1
 
+# Creds/auth post-flight (2026-07-02 audit, outage-hardening part 2 of 2).
+# 4 outages in ~3 weeks were expired-creds: the headless fallback fails fast
+# with an auth error in the log, no tick output is produced, and nobody is
+# told. The heartbeat dead-man switch catches the *pattern* within ~16h;
+# this catches the *cause* on the very first failed tick and pings the
+# operator directly (LLM-independent path). Fires at most 2x/day (per tick).
+if tail -n 40 "${LOG_FILE}" | grep -qiE "authentication|unauthorized|401|invalid.*(api key|token|credential)|OAuth.*(expired|error)|please.*log ?in|/login"; then
+    cd "${POLYCLAUDE_DIR}" && .venv/bin/python scripts/telegram.py msg \
+      "[CHECKIN] tick ${TS} FAILED with an auth error — session creds likely expired. Ticks will fire into the void until re-login. Operator: run claude /login in the polyclaude session." \
+      >> "${LOG_FILE}" 2>&1 || true
+fi
+
 # Keep last 30 days of logs only
 find "${LOG_DIR}" -name "checkin_*.log" -mtime +30 -delete 2>/dev/null || true
