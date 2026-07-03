@@ -2558,3 +2558,27 @@ Definitive grid v3 launched: {0, +0.010, +0.015} × (no flag, min-volume 20k, li
 original methodology so the baseline leg is a true replication; review when complete (~minutes) or at the
 14:00 tick. Interim discipline note: two consecutive "results" tonight would have been wrong to act on
 (underpowered N, then a filter artifact) — the verify-full-distribution lesson keeps earning its keep.
+
+## 2026-07-03 ~02:40 UTC — THE BUCKET EDGE FAILED REPLICATION (definitive v3 grid, N=836): population fade-harvesting DEAD
+
+The unlock path's first measurement answered a bigger question than it was asked. Definitive grid (original
+methodology: no lifetime filter, min-vol 20k, limit 2500 → 836 usable fresh resolved markets):
+- BASELINE (adjust=0, independent of tonight's patch): 0.90-0.95 **-0.5pp ±2.9** (original +4.8pp/3.2σ);
+  0.95-0.98 **-0.5pp ±1.9** (original +2.8pp/4.7σ). The buckets are CALIBRATED on fresh data.
+- Executable (+1c): -1.4/-1.7pp; (+1.5c): -4.4/-1.2pp. Category fav>=0.90: other/meme -0.0..-0.9, politics
+  -1.4..-1.9, sports +2.7..2.9 (N=18-21, rule-of-three — not actionable).
+READING: either the edge was arbed away since early June or the original N=1513 was window-specific
+(composition shift: the current closed-market flood is WC/Wimbledon dailies priced by sharp books). Both
+readings forbid population harvesting NOW. Cannot fully distinguish tonight (script has no date-window
+filter; the original sample isn't reconstructable) — and the practical conclusion is identical either way.
+
+CONSEQUENCES ENCODED: doctrine §3.1 REWRITTEN (edge #1 = case-by-case catalyst-gated instance mispricing —
+the realized-win class; population-bucket harvesting dead; flat 0.05 haircut vindicated + kept; ledger
+continues as the gated-evaluation record). Backlog: repointing item CLOSED (falsified at $0 deployed),
+haircut-unlock path MOOT (RMSE study + micro-sleeve cancelled as edge tools). README updated. Operator
+told (msg 497). The Wednesday audit's consensus #2 is thus overturned by its own falsification instrument
+2 days later — at zero capital cost, which is the system working exactly as designed: the gates blocked
+deployment while the ledger/measurement machinery falsified the premise. Both entry-gate skips (Świątek/
+Zverev) now read as correct calls, not over-strictness. PM deployment bar reverts to instance-thesis-only;
+idle capital stays in Aave. Dec-31 hold-only book unaffected (never rested on this backtest). 3d-lookback
+robustness check still running (refines the picture; cannot change the no-deploy stance).

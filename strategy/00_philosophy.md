@@ -34,27 +34,26 @@ conditional-fair-value logic; resolved +47.5%.
 
 Ranked by validated evidence, not aspiration:
 
-1. **Bond-like longshot fades through the gate pipeline (§4).** Buying NO on tail
-   events priced 2–15% whose modelled fair value is materially lower. The book's core
-   trade. Empirical localization (`longshot_calibration_backtest.py`, N=1513,
-   2026-06-02): the favorite-longshot bias is real but CONCENTRATED — entered ~7d
-   before resolution, 0.90–0.95 won 97.3% vs 92.5% priced (+4.8pp, 3.2σ); 0.95–0.98
-   +2.8pp (4.7σ); mild favorites ≈ calibrated; 30d-out mild buckets negative. It is a
-   capital-lockup/tail-aversion premium, which is why it persists. Long-dated entries
-   (Dec-31 book) are NOT covered by this backtest — they rest on the catalyst-modelled
-   p plus carry vs hurdle, and must clear the same gates.
-   **Deployment priority (2026-07-02 audit repointing — skeptic+champion consensus):**
-   the SHORT-DATED validated bucket (≤~7–14d to resolution, 0.90–0.98, live-CLOB
-   walked) is the PRIORITY target for new capital and freed resolutions, cycling in
-   days with a prospective ledger (`notes/shortdated_ledger.json` — records entries
-   AND gated skips; the edge's forward falsification test at N≈30–50). The long-dated
-   book is HOLD-ONLY: existing legs held where exit-spread > negative carry, NO new
-   long-dated entries and no adds — under expectation math at own priors the Dec-31
-   book yields ~Aave-grade carry while wearing tail risk (the 2026-07-02 audit found
-   100% of PM capital there while the validated bucket went unharvested; that
-   allocation error stands corrected). Position health is judged by EXPECTED-edge APY
-   ((p/M−1)×365/d vs priors — `check_marginal_apy.py`, fixed 2026-07-02 from a
-   win-assumed formula whose "N/N clear" was vacuous), never by gross carry.
+1. **Case-by-case catalyst-gated mispricing (the surviving core trade).** Buying NO
+   (or YES) where an INSTANCE-level analysis — strict resolution-criteria reading +
+   catalyst_check + the §4 gates — shows the market materially mispricing a specific
+   event (the realized-win class: the Iran calendar fades, Latvia, aliens-close).
+   **Population-bucket fade harvesting is DEAD as an edge source (2026-07-03).** The
+   original localization (`longshot_calibration_backtest.py`, N=1513, 2026-06-02:
+   0.90–0.95 +4.8pp/3.2σ, 0.95–0.98 +2.8pp/4.7σ at ~7d) FAILED REPLICATION on 836
+   fresh resolved markets with the same methodology: 0.90–0.95 −0.5pp ±2.9, 0.95–0.98
+   −0.5pp ±1.9 — calibrated at mid, NEGATIVE at executable asks (+1c: −1.4/−1.7pp;
+   study: logs/backtest_askadjust_v3_20260703.log). Either arbed away since June or
+   the original was window-specific; both readings forbid population harvesting NOW.
+   Practical rules: no entry justified by bucket statistics alone; every entry needs
+   its own instance thesis clearing the robust-edge gate at the FLAT 0.05 haircut
+   (the 2026-07-03 design review kept it; the gate's skips were vindicated the same
+   night); `notes/shortdated_ledger.json` continues recording gated evaluations as
+   the ongoing falsification record. Long-dated entries (Dec-31 book) remain
+   HOLD-ONLY: held where exit-spread > negative carry, no new entries, no adds —
+   expectation math at own priors puts the book at ~Aave-grade carry wearing tail
+   risk. Position health = EXPECTED-edge APY ((p/M−1)×365/d vs priors,
+   `check_marginal_apy.py`, fixed 2026-07-02), never gross carry.
 2. **Decomposition / consistency arbitrage.** Same event expressed at different prices:
    date-monotonicity violations (`event_monotonicity_scan.py`), multi-leg sum≠1
    (`polymarket_consistency_scan.py`, live-CLOB-validated), cross-venue

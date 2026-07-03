@@ -56,6 +56,20 @@
       "size_usd": 0,
       "outcome": null,
       "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-03",
+      "question": "(BUCKET FALSIFIED \u2014 study, not a market)",
+      "side": "-",
+      "ask": null,
+      "days": null,
+      "pop_edge_pp": null,
+      "catalyst_p_yes_central": null,
+      "decision": "BUCKET_DEAD",
+      "reason": "Fresh replication (N=836, original methodology): 0.90-0.95 -0.5pp\u00b12.9 (was +4.8pp), 0.95-0.98 -0.5pp\u00b11.9 (was +2.8pp); negative at executable asks. Population harvesting terminated at N=0 deployed dollars \u2014 the ledger's falsification purpose fulfilled the cheap way. Ledger continues as the record of instance-thesis gated evaluations.",
+      "size_usd": 0,
+      "outcome": "FALSIFIED",
+      "fade_would_have_won": null
     }
   ]
 }
