@@ -2617,3 +2617,16 @@ conservative central given the Aug-17/21 cliff = the structured HIGH). At 0.93 t
 CLOSE_CANDIDATE; hold-only/no-churn applies (sell-vs-hold delta ~±$0.3 on $19, inside noise, thesis
 confirmed daily). Greenland same class (E+1.07% pessimistic / +3.2%-to-term at catalyst central) — held.
 Trump-out E+5.40% clears. Heartbeat sent (msg 499) incl. the falsification recap. No trades.
+
+## 2026-07-03 ~14:20 UTC — Prior-hygiene pass completed across ALL legs (guard now fully honest)
+
+Applied the 14:00 rule consistently: every monitoring prior = its DOCUMENTED catalyst-check central
+(weighted toward the high only for identified dated tails), source-traced in the rationale: Greenland
+0.95→0.975 (Jun-10 central 2.5%, no dated tail), Trump-out 0.96→0.97 (Jun-10 s+c central ~3%, tails inside),
+Pahlavi 0.97→0.98 (conjunction ≤2%), Satoshi 0.99 unchanged (already honest), regime-fall 0.93 (done 14:00,
+cliff-weighted). Guard re-run: Trump-out E+7.57% + Greenland E+6.42% clear; regime-fall +1.09% / Pahlavi
++4.54% / Satoshi +4.28% stay FLAGGED sub-hurdle — the honest state (carry slightly under Aave; held because
+exit-spread + daily thesis-confirmation > churn). Anti-abuse note: the pass did NOT erase flags (3 remain),
+each value cites its source check, and the one genuine negative (hantavirus) was already closed at the OLD
+priors — direction of the correction is honesty, not flag-clearing. Future catalyst re-checks update these
+priors mechanically.
