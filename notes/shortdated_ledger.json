@@ -3,14 +3,14 @@
   "records": [
     {
       "date": "2026-07-02",
-      "question": "Will Iga Świątek be the 2026 Women's Wimbledon Winner?",
+      "question": "Will Iga \u015awi\u0105tek be the 2026 Women's Wimbledon Winner?",
       "side": "NO",
       "ask": 0.902,
       "days": 9.2,
       "pop_edge_pp": 7.1,
       "catalyst_p_yes_central": 0.147,
       "decision": "SKIP",
-      "reason": "Edge INVERTED on instance analysis: structured breakdown P(win)=14.7% (defending champion, dominant R3 form) vs market 9.8% — the market may UNDERPRICE her. Central p_NO 0.86 < ask 0.902 = negative edge before haircut.",
+      "reason": "Edge INVERTED on instance analysis: structured breakdown P(win)=14.7% (defending champion, dominant R3 form) vs market 9.8% \u2014 the market may UNDERPRICE her. Central p_NO 0.86 < ask 0.902 = negative edge before haircut.",
       "size_usd": 0,
       "outcome": null,
       "fade_would_have_won": null
@@ -24,7 +24,7 @@
       "pop_edge_pp": 6.8,
       "catalyst_p_yes_central": 0.05,
       "decision": "SKIP",
-      "reason": "Positive at central (p_NO 0.95 vs 0.905 = +$0.30 on $6) but fails the pessimistic bound (0.90 -> -$0.03 vs +$0.05 required). Did NOT override the default haircut on ledger candidate #1 — unforced data first; if skips like this systematically resolve NO, the ledger recalibrates the haircut at N~30-50, not N=1.",
+      "reason": "Positive at central (p_NO 0.95 vs 0.905 = +$0.30 on $6) but fails the pessimistic bound (0.90 -> -$0.03 vs +$0.05 required). Did NOT override the default haircut on ledger candidate #1 \u2014 unforced data first; if skips like this systematically resolve NO, the ledger recalibrates the haircut at N~30-50, not N=1.",
       "size_usd": 0,
       "outcome": null,
       "fade_would_have_won": null
@@ -38,7 +38,21 @@
       "pop_edge_pp": null,
       "catalyst_p_yes_central": null,
       "decision": "PRE-SKIP",
-      "reason": "Scan had 16 candidates >=3pp. Screened out on doctrine before gating: Iran-adjacent (Mojtaba-seen/airspace/Hormuz-fees/Hormuz-normal — correlation with existing book + in-window momentum = trap-analog), GPT-5.6-by-Jul-6 (announcement-trap shape, thin book), exact-score fades (population edge overstated for plausible scorelines), remaining Wimbledon/WC names (lower edge than the two gated).",
+      "reason": "Scan had 16 candidates >=3pp. Screened out on doctrine before gating: Iran-adjacent (Mojtaba-seen/airspace/Hormuz-fees/Hormuz-normal \u2014 correlation with existing book + in-window momentum = trap-analog), GPT-5.6-by-Jul-6 (announcement-trap shape, thin book), exact-score fades (population edge overstated for plausible scorelines), remaining Wimbledon/WC names (lower edge than the two gated).",
+      "size_usd": 0,
+      "outcome": null,
+      "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-03",
+      "question": "(daily pass \u2014 no gated evaluations)",
+      "side": "-",
+      "ask": null,
+      "days": null,
+      "pop_edge_pp": null,
+      "catalyst_p_yes_central": null,
+      "decision": "PRE-SKIP",
+      "reason": "Same candidate set as 2026-07-02 (Wimbledon fades re-priced slightly: Swiatek 6.9pp@0.904, Zverev 6.1pp@0.912 \u2014 both skip-logic unchanged overnight, no matches resolved the conjunctions; rest are screened classes: Iran-correlated, exact-scores, Musk-tweets thin, Egypt-semis 4.2pp@0.952). ARITHMETIC FINDING: at ask>=0.95 the flat 0.05 haircut makes the pessimistic bound unpassable (needs p_central>1.0) -> the validated 0.95-0.98 bucket (+2.8pp) is unreachable BY CONSTRUCTION. Flagged for design resolution (backlog); not changed unilaterally.",
       "size_usd": 0,
       "outcome": null,
       "fade_would_have_won": null

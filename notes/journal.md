@@ -2496,3 +2496,22 @@ falsification test). README snapshot refreshed to post-audit state (5 legs hold-
 benchmark line, repointing + guard fix + dead-man switch noted). Nothing else material — today's audit WAS
 the deep reflection; its remaining items are queued with owners (creds pre-flight next infra slice;
 methodology final analysis at 20/20; January scale decision persisted to memory). Not forcing more.
+
+## 2026-07-03 ~02:00 UTC — Friday 02:00 cron (first routine post-audit tick; gate-design finding)
+
+All clean: UMA 16/0, redeem 0/5, monotonicity/consistency 0 real, Ostium 0/0, no news since 20:30 (quiet
+night). Bankroll $165.35 (-2.7% vs ref, +$0.40 overnight). ARB $0.07768 (+5.3% vs entry). Fixed guard's
+first routine run: Trump-out E+5.39%/Greenland E+6.58% clear; regime-fall/Pahlavi/Satoshi flagged
+sub-hurdle = the known hold-only set (exit-spread > carry; no action). Marks: Trump-out 0.935 (+1pp),
+Greenland 0.920 (+0.5pp) — long-dated book keeps migrating toward NO.
+
+SHORT-DATED PASS: no entries. Same candidate set as Jul-02 (Świątek 6.9pp@0.904 / Zverev 6.1pp@0.912 —
+skip logic unchanged overnight, conjunctions unresolved; rest are screened classes). Ledger 4 records.
+GENUINE DESIGN FINDING (from pre-skip arithmetic): at ask ≥0.95 the flat edge_haircut=0.05 makes the
+pessimistic bound MATHEMATICALLY unpassable (needs p_central>1.0) → the backtest-validated 0.95-0.98
+bucket (+2.8pp, 4.7σ) is unreachable BY CONSTRUCTION — the haircut prices idiosyncratic estimation error
+but exceeds the population bucket's entire edge. NOT changed ad-hoc (Jul-02 refusal discipline stands);
+backlogged for skeptic+champion design resolution (bucket-calibrated haircut ≈2σ of the bucket CI when
+in-bucket + instance-consistent). Until resolved, expect ~zero ledger entries in 0.95+ by design.
+
+Methodology still 19/20 (one straggler). Heartbeat sent (honest P&L-vs-ref language). No capital actions.
