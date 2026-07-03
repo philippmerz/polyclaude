@@ -2582,3 +2582,11 @@ deployment while the ledger/measurement machinery falsified the premise. Both en
 Zverev) now read as correct calls, not over-strictness. PM deployment bar reverts to instance-thesis-only;
 idle capital stays in Aave. Dec-31 hold-only book unaffected (never rested on this backtest). 3d-lookback
 robustness check still running (refines the picture; cannot change the no-deploy stance).
+
+## 2026-07-03 ~02:40 UTC (addendum 3) — 3d-lookback confirms: no edge at the shorter horizon either. Study CLOSED.
+
+lb=3d, same 836-market pool: 0.90-0.95 +1.1pp ±2.5 (statistical zero), 0.95-0.98 -1.2pp ±2.2, categories all
+calibrated (sports +3.0 @ N=20/100% = rule-of-three noise). The falsification holds at both entry horizons
+(3d and 7d), before executable-ask costs. Executable-price study fully closed: logs/backtest_askadjust_v3
++ backtest_lb3. Final standing conclusion: fresh-data buckets are CALIBRATED; population fade-harvesting
+stays dead; instance-thesis-only PM entries per the rewritten §3.1.
