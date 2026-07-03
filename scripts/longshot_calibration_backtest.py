@@ -176,6 +176,12 @@ def main() -> int:
     ap.add_argument("--by-category", action="store_true",
                     help="also break down the favorite edge by market category for fav>=0.90 "
                          "(finds WHERE the favorite-longshot bias concentrates)")
+    ap.add_argument("--ask-adjust", type=float, default=0.0,
+                    help="EXECUTABLE-PRICE sensitivity (2026-07-03 haircut-design review): add this "
+                         "many price units to the favorite entry price to model the mid-to-ask gap "
+                         "(prices-history is trade/mid-ish, not a lifted ask — the midpoints-"
+                         "unreliable house lesson). E.g. 0.01. A bucket whose edge survives "
+                         "--ask-adjust 0.01-0.015 is executable, not just observable.")
     args = ap.parse_args()
 
     with httpx.Client() as client:
@@ -194,6 +200,8 @@ def main() -> int:
             fav = max(ep, 1 - ep)
             fav_is_yes = ep >= 0.5
             fav_won = (fav_is_yes == m["yes_won"])
+            if args.ask_adjust:
+                fav = min(fav + args.ask_adjust, 0.999)  # model paying the ask, not the mid
             rows.append((fav, fav_won, m.get("cat", "")))
             if (i + 1) % 50 == 0:
                 print(f"#  processed {i+1}/{len(mkts)}", file=sys.stderr)

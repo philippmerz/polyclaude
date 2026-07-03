@@ -2515,3 +2515,24 @@ backlogged for skeptic+champion design resolution (bucket-calibrated haircut ≈
 in-bucket + instance-consistent). Until resolved, expect ~zero ledger entries in 0.95+ by design.
 
 Methodology still 19/20 (one straggler). Heartbeat sent (honest P&L-vs-ref language). No capital actions.
+
+## 2026-07-03 ~02:30 UTC — Haircut design RESOLVED (skeptic+champion): KEEP 0.05 + measurement-based unlock path
+
+Ran the deferred design pass immediately (it gated the repointed engine's entry flow). CHAMPION argued
+ADOPT-MODIFIED (0.02 on a min-clamped p_eff, probation caps, auto-revert; sharpest point = the flat gate is
+UNFALSIFIABLE — it blocks the forward evidence that could ever recalibrate it). SKEPTIC won the parameter
+argument: (1) 0.02 was 2σ of the WRONG error — population-MEAN SE (~0.6pp) vs the haircut's actual job,
+PER-INSTANCE p_central error (unmeasured, ~3-5pp plausible in the tail) on a 24:1 payoff with 25x Kelly
+sensitivity; (2) the backtest's entry prices were mid-ish snapshots → executable edge at 0.95-0.98 may be
+~half the headline (our own midpoints-unreliable lesson, applied to our own backtest); (3) the consistency
+veto is circular (agree = adds nothing; disagree = revert anyway); (4) both real losses passed all
+then-existing gates — the flat haircut is the only buffer against the NEXT undiscovered trap class.
+
+SYNTHESIS: keep 0.05; adopt the skeptic's constructive unlock path (converts the dispute into measurements):
+(1) executable-price sensitivity — --ask-adjust flag shipped + smoke-tested, full 500-market runs at
++0.010/+0.015 backgrounded (review 14:00 tick; if the 0.95-0.98 edge dies at executable asks the whole
+bucket question is moot); (2) catalyst_check per-instance RMSE study on resolved 0.90-0.98 markets → haircut
+= max(2×RMSE, 0.02); (3) micro-calibration sleeve ($12 total, $2-3 tickets, EV-floor-exempt BY DESIGN —
+information is the product) via a --micro flag in polyclaude_enter (next bounded slice). Champion's
+min-clamp (p_eff = min(p_central, ask+bucket_edge)) adopted unconditionally. The catch-22 is broken without
+guessing the parameter: 0.95+ stays blocked as a DOCUMENTED decision pending measurements.
