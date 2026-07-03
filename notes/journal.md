@@ -2536,3 +2536,14 @@ bucket question is moot); (2) catalyst_check per-instance RMSE study on resolved
 information is the product) via a --micro flag in polyclaude_enter (next bounded slice). Champion's
 min-clamp (p_eff = min(p_central, ask+bucket_edge)) adopted unconditionally. The catch-22 is broken without
 guessing the parameter: 0.95+ stays blocked as a DOCUMENTED decision pending measurements.
+
+## 2026-07-03 ~02:30 UTC (addendum) — First sensitivity pass UNDERPOWERED; full-power study launched
+
+The quick --limit 500 sensitivity runs yielded only 150 usable markets (filters drop most) → bucket N=10-17,
+SE ~9pp: cannot detect or exclude a 2-5pp edge; the 100%-win buckets' "SE 0.0" is degenerate (rule-of-three
+true bound ~25% at N=12). NO conclusions drawn — explicitly avoiding the small-N trap ([[verify-full-
+distribution]]). Only weak signal: fav≥0.90 category aggregate (N=110) at +1c → other/meme ~0.0pp, politics
+−3.0pp, sports +2.1pp (suggestive the executable ≥0.90 edge is thin; not decisive). LAUNCHED the full-power
+3-way study (baseline / +0.010 / +0.015 at matched params, --limit 2500 --min-volume 5000) in background →
+logs/backtest_askadjust_full_20260703.log; review at the 14:00 tick. The baseline run doubles as a
+replication check of the original N=1513 result on fresh data — worth having regardless.
