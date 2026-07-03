@@ -2590,3 +2590,13 @@ calibrated (sports +3.0 @ N=20/100% = rule-of-three noise). The falsification ho
 (3d and 7d), before executable-ask costs. Executable-price study fully closed: logs/backtest_askadjust_v3
 + backtest_lb3. Final standing conclusion: fresh-data buckets are CALIBRATED; population fade-harvesting
 stays dead; instance-thesis-only PM entries per the rewritten §3.1.
+
+## 2026-07-03 ~09:33 UTC — OFF-CYCLE (Tier-1, benign) — fertilizer explainer; Greenland rallies +2.5pp; HOLD
+
+Tier-1 was "How a fertilizer shortage caused by the Iran war could affect U.S. food prices" (09:33) — a
+keyword-matched explainer, not an escalation. The 03:15 alert (Iran warns ships on Hormuz routes) is
+thesis-CONFIRMING (regime asserting control). UMA 16/0, no trigger near. Notable: Greenland NO 0.920→0.945
+(+2.5pp overnight, market converging to us; +$0.25 MTM). Fixed guard now flags it sub-hurdle at the
+PESSIMISTIC prior (E+1.07% at p=0.95) but the fresh-catalyst central (0.975, Jun-10 check) gives ~+3.2%
+over the term — prior-sensitivity, same class as regime-fall; hold-only doctrine = no churn on
+prior-sensitive positive-carry legs. Trump-out E+5.40% still clears. No action; 14:00 heartbeat carries it.
