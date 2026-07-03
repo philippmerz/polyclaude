@@ -2600,3 +2600,20 @@ thesis-CONFIRMING (regime asserting control). UMA 16/0, no trigger near. Notable
 PESSIMISTIC prior (E+1.07% at p=0.95) but the fresh-catalyst central (0.975, Jun-10 check) gives ~+3.2%
 over the term — prior-sensitivity, same class as regime-fall; hold-only doctrine = no churn on
 prior-sensitive positive-carry legs. Trump-out E+5.40% still clears. No action; 14:00 heartbeat carries it.
+
+## 2026-07-03 ~14:00 UTC — Friday 14:00 cron (bankroll high-water; prior-hygiene rule; hold-only steady)
+
+All clean: UMA 16/0, redeem 0/5, scanners 0 real, Ostium 0/0. Bankroll $166.78 — best since mid-June
+(-1.9% vs ref). ARB $0.07986 (+8.2% vs entry). Book rallying toward NO: regime-fall 0.925 (+1pp), Greenland
+0.945, Trump-out 0.935; the one MATERIAL headline ("escalating strikes threaten interim peace agreement")
+coexists with RISING survival odds — thesis-confirming, not contradicting. No news-driven action.
+
+PRIOR-HYGIENE RULE (small but load-bearing): regime-fall flagged NEGATIVE_EDGE at its recorded prior (0.92 <
+mark 0.925) — but that prior was entry-PESSIMISTIC, below the bias-corrected structured central (3% YES,
+1-7%). Rule adopted: monitoring priors in portfolio_kelly_priors.json must be HONEST CENTRALS — pessimism
+belongs in the entry-gate haircut, NOT the guard — otherwise every flag gets explained away and the guard
+degrades to decoration (the grade-inflation failure mode in a new coat). regime-fall p_no 0.92→0.93 (honest
+conservative central given the Aug-17/21 cliff = the structured HIGH). At 0.93 the flag reads sub-hurdle
+CLOSE_CANDIDATE; hold-only/no-churn applies (sell-vs-hold delta ~±$0.3 on $19, inside noise, thesis
+confirmed daily). Greenland same class (E+1.07% pessimistic / +3.2%-to-term at catalyst central) — held.
+Trump-out E+5.40% clears. Heartbeat sent (msg 499) incl. the falsification recap. No trades.
