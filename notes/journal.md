@@ -2547,3 +2547,14 @@ distribution]]). Only weak signal: fav≥0.90 category aggregate (N=110) at +1c 
 3-way study (baseline / +0.010 / +0.015 at matched params, --limit 2500 --min-volume 5000) in background →
 logs/backtest_askadjust_full_20260703.log; review at the 14:00 tick. The baseline run doubles as a
 replication check of the original N=1513 result on fresh data — worth having regardless.
+
+## 2026-07-03 ~02:35 UTC (addendum 2) — Sample-size mystery solved: my own flag, not the API
+
+The 119-150-usable puzzle wasn't the gamma pagination bug (fetch_resolved paginates correctly at
+limit=100/offset+=100): it was --require-full-lookback, which drops every market whose LIFETIME < the 7d
+lookback — and recently-closed markets are dominated by short-lived dailies (WC match markets, Wimbledon
+rounds, crypto dailies). The original N=1513 run (2026-06-02) almost certainly ran WITHOUT the flag.
+Definitive grid v3 launched: {0, +0.010, +0.015} × (no flag, min-volume 20k, limit 2500) → matches the
+original methodology so the baseline leg is a true replication; review when complete (~minutes) or at the
+14:00 tick. Interim discipline note: two consecutive "results" tonight would have been wrong to act on
+(underpowered N, then a filter artifact) — the verify-full-distribution lesson keeps earning its keep.
