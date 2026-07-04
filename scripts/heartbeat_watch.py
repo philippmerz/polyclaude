@@ -142,20 +142,23 @@ def check_news_watcher(state: dict) -> None:
         log_p = repo / "logs" / "news_watcher.log"
         jsonl_p = repo / "notes" / "news_alerts.jsonl"
         if log_p.exists() and jsonl_p.exists():
-            log_alert_mtime = None
-            # cheap: if the log's last 50 lines contain an alert line, use log mtime
-            with open(log_p, "rb") as f:
-                f.seek(max(0, log_p.stat().st_size - 8192))
-                tail = f.read().decode(errors="replace")
-            if "[watcher] alert tier" in tail:
-                log_alert_mtime = int(log_p.stat().st_mtime)
-            if log_alert_mtime:
-                jsonl_age_vs_log = log_alert_mtime - int(jsonl_p.stat().st_mtime)
-                if jsonl_age_vs_log > 6 * 3600:
-                    _emit(state, "news_alerts_persistence_diverged",
-                          f"watcher log shows recent alerts but news_alerts.jsonl is "
-                          f"{jsonl_age_vs_log // 3600}h older — persistence layer broken "
-                          f"(2026-06-11 class); cron ticks are blind to news")
+            # STATEFUL divergence probe (2026-07-04 fix). The old heuristic —
+            # "alert line within the last 8KB of the log + fresh log mtime" —
+            # false-fired when a stale alert line sat near EOF because only
+            # chatty 'suppressed' lines followed it (log mtime updates every
+            # cycle regardless). Instead: compare deltas — a NEW alert line
+            # logged while news_alerts.jsonl did not grow is a true
+            # persistence failure (2026-06-11 class); anything else is not.
+            alert_count = open(log_p, "rb").read().count(b"[watcher] alert tier")
+            jsonl_size = jsonl_p.stat().st_size
+            prev = state.get("news_persist_probe") or {}
+            if (prev and alert_count > prev.get("alerts", alert_count)
+                    and jsonl_size <= prev.get("jsonl", 0)):
+                _emit(state, "news_alerts_persistence_diverged",
+                      f"{alert_count - prev['alerts']} new watcher alert(s) logged but "
+                      f"news_alerts.jsonl did not grow — persistence layer broken "
+                      f"(2026-06-11 class); cron ticks are blind to news")
+            state["news_persist_probe"] = {"alerts": alert_count, "jsonl": jsonl_size}
     except Exception:
         pass
 

@@ -2654,3 +2654,19 @@ ref; -$0.55 vs 02:00 = noise). ARB $0.07953 (+7.8%). Marks: Trump-out 0.935→0.
 now the book's strongest edge E+12.23%/yr — hold-only doctrine: no adds to long-dated, correctly). Greenland
 0.955 / Pahlavi 0.959 / Satoshi 0.969 = positive sub-hurdle holds. pUSD float $40.73 (unwrap slice queued).
 Heartbeat msg 501. No action.
+
+## 2026-07-04 ~14:35 UTC — [HEARTBEAT] persistence alert = FALSE POSITIVE; invariant fixed properly
+
+The heartbeat fired "watcher log shows recent alerts but news_alerts.jsonl 15h older — persistence broken
+(2026-06-11 class)". Investigated end-to-end: daemon healthy (PID 1462528), persist function has NO failure
+lines, disk/permissions fine — and the jsonl not growing was CORRECT: zero send-worthy alerts since 19:00
+Jul-3 (every candidate since = recycled Hormuz coverage, correctly agent-suppressed; the last genuine alert
+line sits 4 lines from log EOF). ROOT CAUSE of the false fire: the invariant used "alert line within the
+8KB log tail + log-file mtime fresh" — but chatty 'suppressed' lines keep the log mtime fresh forever, and
+a stale alert line lingers in the tail whenever suppressions are the only traffic. FIX (proper, stateful):
+the probe now stores (alert-line count, jsonl size) in heartbeat state and fires ONLY if NEW alert lines
+appear while the jsonl does NOT grow — the actual 2026-06-11 failure signature, timestamp-free, no false
+positive from stale tails. Daemon restarted (PID 1990113), clean poll verified. Nothing was missed — the
+tick-quiet reads today were accurate. Operator answered (msg 511). Meta: the invariant that false-fired was
+itself built from the 2026-06-11 lesson — monitoring code needs the same signature-precision as trading
+gates; "something recent-ish looks wrong" heuristics degrade under benign-chatty conditions.
