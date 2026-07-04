@@ -1,5 +1,5 @@
 {
-  "next_id": 43,
+  "next_id": 44,
   "decisions": [
     {
       "id": 1,
@@ -813,6 +813,25 @@
         "audit",
         "close",
         "negative-edge"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 43,
+      "timestamp": "2026-07-04T02:03:44Z",
+      "type": "close_position",
+      "thesis": "CLOSED regime-fall-2027 NO: sold 20.75 sh @ 0.93 bid ($19.30, tx 0xd0849cd6), blended cost ~$17.37 -> realized +$1.93 (+11.1%). Trigger: the honest-priors guard flagged NEGATIVE_EDGE \u2014 mark 0.935 > honest prior p_no 0.93 (the documented cliff-weighted central: structured 3% YES central, high 7% weighted for the Aug-17/21 negotiation-cliff dated tail). Market now prices the cliff TIGHTER than my belief (6.5% vs 7%). Selling at bid 0.93 realized E[hold] exactly ($19.30) with zero remaining variance, sheds the cliff-tail exposure, frees $19.30 to Aave, and cuts the incumbent-survives factor from ~$47 to ~$28 (~17% bankroll, addressing the Jul-02 audit concentration flag). Same discipline class as the hantavirus close (DEC-0042): when mark >= honest prior, the edge is consumed \u2014 exit when the bid realizes >= E[hold]. Position history: entered 0.80 Apr-30, scaled 0.85, trimmed 0.85 (DEC-0036, overcautious), held through two war escalations (DEC-0041, vindicated), exited 0.93 into strength.",
+      "confidence": "high",
+      "prediction": "Market resolves NO by Dec-31 (p~0.93 honest / 0.97 ex-cliff) \u2014 the sold shares likely pay $1 to their buyer; the +EV of the close is price>=belief, not a YES prediction. If the Aug-17/21 cliff produces a collapse-spike, the exit looks great; if the deal closes and NO grinds to 0.97+, the forgone ~$0.75 was the price of shedding tail risk at fair value.",
+      "size_usd": 19.3,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "regime-fall",
+        "close",
+        "negative-edge",
+        "prior-hygiene"
       ],
       "outcome": null,
       "calibration_delta": null,

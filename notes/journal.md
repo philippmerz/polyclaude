@@ -2630,3 +2630,19 @@ exit-spread + daily thesis-confirmation > churn). Anti-abuse note: the pass did 
 each value cites its source check, and the one genuine negative (hantavirus) was already closed at the OLD
 priors — direction of the correction is honesty, not flag-clearing. Future catalyst re-checks update these
 priors mechanically.
+
+## 2026-07-04 ~02:00 UTC — Saturday 02:00 cron — CLOSED regime-fall NO +$1.93 (guard-driven); bankroll high-water
+
+All clean: UMA 16/0, redeem 0/5, scanners 0, Ostium 0/0. Bankroll $167.07 (new post-drawdown high, -1.7% vs
+ref). ARB $0.08036 (+8.9%). News: 2 re-reports of the contained Gulf tit-for-tat.
+
+GUARD-DRIVEN EXIT (DEC-0043): regime-fall NO rallied 0.925→0.935, overtaking the honest cliff-weighted prior
+(0.93) → NEGATIVE_EDGE at a properly-hygienic prior (the first real test since yesterday's hygiene pass).
+Sold 20.75 sh @ 0.93 bid ($19.30, tx 0xd0849cd6), blended cost $17.37 → +$1.93 (+11.1%). Selling at bid =
+E[hold] exactly, zero remaining variance, sheds the Aug-17/21 cliff tail, frees $19.30, and cuts the
+incumbent-survives factor ~$47→~$28 (~17% bankroll — the audit's concentration flag addressed by exit-into-
+strength rather than panic-trim). Same discipline class as hantavirus (DEC-0042). Steelman recorded: at the
+ex-cliff central (0.97) holding earns +3.7% to term — the forgone ~$0.75 is the price of shedding tail at
+fair value; consistency with my documented cliff-weighted belief demanded the exit. Book now 4 NO legs
+(Trump-out E+7.6% + Greenland E+4.3%... Greenland slipped sub-hurdle at 0.955 — hold-only) + ARB starter.
+Methodology still 19/20 (straggler in UMA lag; ID it at the weekly slot if it persists). Heartbeat msg 500.
