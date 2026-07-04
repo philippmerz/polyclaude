@@ -133,6 +133,7 @@ Approvals SET 2026-05-04 (in case useful for someone with pUSD):
 
 ### Next steps to actually trade on v2 — RESOLVED 2026-05-04 / -05
 - Wrap path: approve USDC.e → CollateralOnramp `0x93070a847efEf7F70739046A929D47a521F5B8ee`, then `wrap(USDC.e, eoa, amount_6dec)` mints pUSD 1:1.
+- **UNWRAP: DOES NOT EXIST (verified 2026-07-04, full ABI read):** the onramp exposes wrap() + admin/pause/roles only — no unwrap/withdraw/redeem/burn. pUSD→USDC.e is NOT autonomously executable; the only exit is Polymarket's UI withdraw flow. Treat pUSD as terminal trading collateral; size the float accordingly.
 - pUSD approvals to both v2 exchanges set on-chain.
 - `clob_v2.py buy/sell/cancel` working end-to-end (10/10 reliability test).
 
