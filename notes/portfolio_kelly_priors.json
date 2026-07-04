@@ -1,19 +1,12 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-07-03",
-  "will-the-iranian-regime-fall-by-the-end-of-2026": {
-    "p_no": 0.93,
-    "cluster": "iran-regime",
-    "rho_within": 0.6,
-    "cluster_frac": 0.235,
-    "rationale": "2026-07-03 prior-hygiene correction: monitoring priors must be HONEST CENTRALS (pessimism belongs in entry-gate haircuts, not the guard \u2014 else every flag gets explained away and the guard is decoration). The Jun-28 bias-corrected catalyst_check gave P(YES) central 3% (1-7%); p_no 0.92 was set entry-pessimistic (\"~8% between structured-high and market\"). Honest conservative central given the Aug-17/21 negotiation-cliff tail = p_no 0.93 (P(YES) 7% = the structured HIGH). At mark 0.925 that reads CLOSE_CANDIDATE sub-hurdle (+1.1%/yr) not NEGATIVE_EDGE; hold-only/no-churn applies (sell-vs-hold delta ~\u00b1$0.3 on the $19 position, inside noise, thesis confirmed daily). ANTI-correlated with iran-peace."
-  },
+  "_updated": "2026-07-04",
   "will-reza-pahlavi-lead-iran-in-2026": {
     "p_no": 0.98,
     "cluster": "iran-regime",
     "rho_within": 0.6,
-    "cluster_frac": 0.235,
-    "rationale": "2026-07-03 prior-hygiene pass: conjunction P(regime falls by Dec-31 ~7% high-case) x P(Pahlavi installed & leading | fall, in-window ~15-25%) <= ~2% -> p_no 0.98. Previous 0.97 carried entry-pessimism. ANTI-correlated with iran-peace; regime-fall Aug-cliff tail flows through the first factor (already at its high)."
+    "cluster_frac": 0.055,
+    "rationale": "2026-07-03 prior-hygiene pass: conjunction P(regime falls by Dec-31 ~7% high-case) x P(Pahlavi installed & leading | fall, in-window ~15-25%) <= ~2% -> p_no 0.98. Previous 0.97 carried entry-pessimism. ANTI-correlated with iran-peace; regime-fall Aug-cliff tail flows through the first factor (already at its high). [2026-07-04: cluster_frac 0.235->0.055 \u2014 regime-fall leg CLOSED (DEC-0043); Pahlavi is now the only iran-regime cluster position (~$9.2/$167).]"
   },
   "trump-out-as-president-before-2027": {
     "p_no": 0.97,
