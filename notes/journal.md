@@ -2646,3 +2646,11 @@ ex-cliff central (0.97) holding earns +3.7% to term — the forgone ~$0.75 is th
 fair value; consistency with my documented cliff-weighted belief demanded the exit. Book now 4 NO legs
 (Trump-out E+7.6% + Greenland E+4.3%... Greenland slipped sub-hurdle at 0.955 — hold-only) + ARB starter.
 Methodology still 19/20 (straggler in UMA lag; ID it at the weekly slot if it persists). Heartbeat msg 500.
+
+## 2026-07-04 ~14:00 UTC — Saturday 14:00 cron (quiet; Trump-out -2pp on no news, hold)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0, ZERO news since 02:00. Bankroll $166.52 (-2.0% vs
+ref; -$0.55 vs 02:00 = noise). ARB $0.07953 (+7.8%). Marks: Trump-out 0.935→0.915 (-2pp, no news = flow;
+now the book's strongest edge E+12.23%/yr — hold-only doctrine: no adds to long-dated, correctly). Greenland
+0.955 / Pahlavi 0.959 / Satoshi 0.969 = positive sub-hurdle holds. pUSD float $40.73 (unwrap slice queued).
+Heartbeat msg 501. No action.
