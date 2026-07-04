@@ -22,13 +22,6 @@
     "cluster_frac": 0.11,
     "rationale": "2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class."
   },
-  "hantavirus-pandemic-in-2026": {
-    "p_no": 0.97,
-    "cluster": "biothreat",
-    "rho_within": 0.5,
-    "cluster_frac": 0.05,
-    "rationale": "Hantavirus outbreak constrained; pandemic in 2026 very low base rate. Correlated-catastrophe tail class \u2014 no adds (philosophy line 26)."
-  },
   "will-satoshis-identity-be-revealed-by-december-31": {
     "p_no": 0.99,
     "cluster": "crypto-lore",
