@@ -332,3 +332,14 @@ longterm_check verdicts:
 Existing trigger-hits this week (watchlist_monitor, all IBKR-surface, previously surfaced — no new action): SOL $70.85 (≤$80), STX $0.169 (≤$0.22), PLTR $112.93 (≤$120), ALB $133.70 (≤$140), NVDA $192.53 (≤$200).
 
 **Net:** MP Materials is the actionable output — a 3.5/4 ENTER-NOW Pentagon-backed rare-earth play surfaced to the operator's IBKR sleeve. No polyclaude (<1y, decentralized) entry warranted — all candidates are multi-year equities. Digest's own next-steps (Bitcoin, pharma-M&A, Ebola) all self-flagged "wait/not-yet."
+
+## 2026-07-05 weekly digest (domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security)
+
+Themes: **grid-stress/coal-capacity (MED)** — PJM drawing emergency reserves in summer heat + DOE $350M coal restart program → capacity pricing upside for grid-heavy names; retail blindspot = ESG bearishness vs real near-term stress. Cobalt (LOW, pass — deficit priced). Digest also suggests a lithium SHORT on supply additions — **tension note for the ALB long thesis** (ALB's entry condition is lithium >$20/kg holding; a supply-driven fade below that breaks it — watch spot at the ALB re-checks).
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **CEG (re-vet — TRIGGER FIRED @ $239.25)** | **3.5/4** | WATCH | AI-power/nuclear + grid-stress | Down 42% to fair (13.3x EV/EBITDA); secular STRONG, catalysts HIGH (TMI/FERC Q4-26). Wait: **$220-230 dip OR Q4 TMI-waiver clarity**. entry_max 250→230. Surfaced. |
+| AEP (new) | 2.5/4 | WATCH | Grid capex / capacity pricing | $138.45 = 52wk high, mid-cycle. Entry $120-125 pullback OR >60GW load-pipeline + rate-case wins. |
+
+Trigger-state changes: **SOL recovered ABOVE its $80 trigger ($81.32, +15% off the Jun-28 low — un-hit naturally)**; PLTR exited the hit list (>$120). Persistent hits (previously surfaced, unchanged): STX $0.17, ALB $135.56, NVDA $194.83. Coal producers (ARCH/BTU) skipped: structurally-declining upside cap per the digest's own confidence note; AEP is the cleaner expression. Crude/nickel futures plays inaccessible (no decentralized venue).

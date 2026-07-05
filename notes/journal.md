@@ -2684,3 +2684,19 @@ action. Heartbeat msg 513. Weekly long-term review at the Sunday 16:00 slot; pnl
 All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0, ZERO news since 02:00. Bankroll $166.64 (-2.0% vs
 ref). ARB $0.07882 (+6.8%). Marks steady: Trump-out 0.935 (E+7.66%), Greenland 0.945 (E+6.49%) clear;
 Pahlavi 0.959 / Satoshi 0.969 sub-hurdle holds. Heartbeat msg 514. No action.
+
+## 2026-07-05 ~16:00 UTC — Sunday weekly long-term review (minerals + energy + geopolitics)
+
+Ran the 3 stalest domains (all last-run Jun-07). Themes: grid-stress/coal-capacity (MED — PJM emergency
+reserves + DOE $350M coal restarts → capacity pricing; retail blindspot = ESG bearishness vs real near-term
+stress); cobalt (LOW, pass). Digest's lithium-supply-additions SHORT note logged as a TENSION flag on the
+ALB long thesis (entry condition = lithium >$20/kg holding).
+
+VETS: **CEG trigger FIRED @ $239.25** (≤$250) → fresh check 3.5/4 WATCH (the week's strongest: down 42% to
+fair 13.3x EV/EBITDA, secular STRONG, catalysts HIGH Q4-26 TMI/FERC; wait $220-230 dip OR TMI clarity —
+"do not FOMO"). entry_max 250→230; SURFACED to operator (msg 515). AEP (digest's cleanest capacity-pricing
+expression) 2.5/4 WATCH — $138 = 52wk high mid-cycle, entry $120-125; added to watchlist. Coal producers
+skipped (structurally-capped per the digest's own confidence note); crude/nickel futures inaccessible.
+Trigger states: SOL recovered ABOVE $80 (un-hit naturally, +15% off the Jun-28 low); PLTR exited; STX/ALB/
+NVDA persist. longterm_watchlist.md + watchlist_triggers.json updated; world_state_log current. No
+polyclaude capital (all multi-year IBKR names). Telegram summary sent.

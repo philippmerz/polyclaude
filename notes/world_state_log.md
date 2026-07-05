@@ -721,3 +721,201 @@ Domains: biotech-health, trade-regulation, markets-corporate  |  Lookback: 30d
 - AI regulation compliance (LOW-MEDIUM; cost of compliance is real but marginal to AI company P&Ls near-term; monitor August 2 deadline for pricing impact)
 - Pharmaceutical M&A waves (MEDIUM confidence on patent cliff driver, but biotech success rates execution-dependent; wait for post-IPO performance data before betting on consolidation)
 - Ebola escalation (MEDIUM confidence factually, but containment response is improving; not a mispricing until case trajectory inflects sharply)
+
+---
+
+## 2026-07-05T16:04:49Z — world_state_digest
+
+**Domains:** critical-minerals-commodities, energy-power-infrastructure, geopolitics-security | **Lookback:** 30d | **Model:** haiku
+
+```
+# WORLD-STATE DIGEST — 2026-07-05
+
+Domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### CRITICAL MINERALS / COMMODITIES
+
+- [2026-07-03] LME: Lithium Carbonate (battery-grade) $21,500/tonne (avg); up 165% YoY
+- [2026-07-03] LME: Lithium Hydroxide $19,834/tonne
+- [2026-07-03] LME: Nickel $16,360/T (up 0.40%); Northeast Asia May: $21.45/kg (+13.3% vs prior); Europe May: $19.58/kg (+19.5%)
+- [2026-07-02] LME: Cobalt $56,290/T; DRC export quota 96,000 MT hydroxide (70-80% of global supply)
+- [2026-07-01] LME: Copper ~$13,170/T (July early: $6.1/lb futures)
+- [2026-06-18] USGS: Carolinas lithium deposits "could replace imports for a century or more"
+- [2026-06-24] USGS: Eagle Ford Formation estimated 184 Bcf gas, 12M barrels oil in Texas
+- [Undated, June-July] Market forecast: Cobalt supply deficit 5,000–6,000 MT in 2026; Nickel oversupply expected H2 2026 due to Indonesian output; Copper deficit forecast over coming decade
+- [2026-H2-2026] CITIC (forecast): Contemporary Amperex's Jianxiawo lithium mine restart H2 2026 (supply addition)
+
+### ENERGY / POWER INFRASTRUCTURE
+
+**Oil & Natural Gas:**
+- [2026-06-03] WTI/Brent: $101.36/bbl (June 3), $79.25/bbl (June 22), $73.74/bbl (June 26); June monthly avg $105/bbl
+- [2026-06-30] EIA STEO: 2026 Brent forecast $105/bbl; US production forecast 13.7 Mbbl/d; OPEC+ forecast 34.0 Mbbl/d
+- [2026-03-XX] OPEC+: Production 35.06 Mbbl/d (down 7.7 Mbbl/d from Feb due to geopolitical disruption)
+- [2026-05-XX] OPEC+ decision: +188,000 bbl/d increase announced; UAE departed OPEC
+- [2026-02-28 to 2026-06] Strait of Hormuz effective closure; Middle East producers (SA, Iraq, Kuwait) lost >11 Mbbl/d
+- [2026-07-03] Henry Hub Natural Gas: $3.24/MMBtu (up 1.50%); 2H 2026 forecast $3.34/MMBtu avg
+- [2026-06-30] EIA: US natural gas production (Lower 48) ~110 Bcf/d (approaching record); June storage injection 87 Bcf (6.2% above historical avg); LNG export 17.3 Bcf/d
+
+**Nuclear & Grid:**
+- [2026-03-XX] NRC: 93 operating commercial reactors; 98.4 GW combined capacity; several at reduced power (Vogtle 1: 68%, Fermi 2: 83%, Perry 1: 82%)
+- [2026-04-XX] DOE/NRC: TerraPower Natrium (Wyoming) permit issued (March), groundbreaking (April); Kairos Hermes 2 groundbreaking (April); Holtec Palisades restart funded ($1.52B DOE loan)
+- [2026-06-30 to 2026-07-03] DOE: Mid-Atlantic grid emergency; heat wave (102–104°F forecast); PJM issued EEA-3 threat; 14 states + DC affected; DOE ordered dispatch of backup generation
+- [Undated, June-July] DOE: $350M investment in coal plant "construction, modernization, restart"
+
+### GEOPOLITICS / SUPPLY CHAIN
+
+- [2026-02-28 to 2026-06] Strait of Hormuz: 4-month closure; 20% of world daily oil + 20% of global LNG transited pre-closure; minimal vessel traffic during closure; ceasefire signed early June, but shipping disruption persisted
+- [2026-06-04] CENTCOM: Redirected 127 commercial vessels; disabled 6; allowed 36 humanitarian aid vessels
+- [2026-06-XX] Oman: Proposed service fees for strait transit
+- [2026-06-XX] Forecast: Q3 2026 recovery expected; months needed for full normalization
+- [2026-07-24] Section 122 global tariff: 10% effective through July 24, 2026 (May 7 court challenge ruled against; under appeal)
+- [2026-07] USTR: Final determinations on Section 301 remedies (forced labor, excess capacity) expected July 2026
+- [2026-XX] Trade Professional Survey: 72% cite US tariff volatility as most impactful regulatory change; 39% of firms absorbing tariff costs; 25% projected FDI fall in tariff-exposed sectors
+- [2026-XX] China: New supply chain security and counter-extraterritoriality regulations enacted
+
+---
+
+## CANDIDATE THEMES
+
+### OIL PRICE RECOVERY UNDERPRICED (Post-Hormuz Normalization)
+
+**Underlying facts:**
+- Brent crude fell to $73.74/bbl on June 26 (ceasefire relief), down from $105 June average
+- Strait of Hormuz closure persisted ~4 months; Middle East producers lost >11 Mbbl/d
+- EIA STEO still forecasts $105/bbl for 2026 (long-term assumption)
+- Recovery is expected Q3 2026 but "months needed for full normalization"
+
+**Implication:**
+Market appear to have priced in rapid Hormuz reopening and demand weakness (reflected in Brent collapse June 22–26). However, the 11 Mbbl/d production loss was sustained for months and recovery timeline is uncertain. If supply disruption persists longer than consensus, or if demand rebounds faster than expected, oil is underpriced.
+
+**Possible plays:**
+- Long crude oil (CL, BZ futures) or energy ETFs (XLE, IYE)
+- Regional plays: Middle East producers (Saudi Aramco ADR, Kuwait Petroleum, Iraq state)
+
+**Direction:** Long
+
+**Horizon:** 3–6 months (recovery phase Q3–Q4 2026)
+
+**Retail blindspot:**
+Narrative focus shifted to "ceasefire = supply recovery = lower oil prices" without accounting for: (a) restart logistics, (b) vessel insurance/financing still strained, (c) alternative routes (longer, more expensive), (d) upstream maintenance backlog from disruption.
+
+**Confidence:** MEDIUM (EIA's own forecast of $105 conflicts with current $73–74 pricing; multiple independent sources confirm supply loss and recovery timeline uncertainty)
+
+---
+
+### LITHIUM SUPPLY SHOCK RISK (Capacity Additions H2 2026)
+
+**Underlying facts:**
+- Lithium currently $21,500/tonne (up 165% YoY as of July 3)
+- Contemporary Amperex Jianxiawo mine restart scheduled H2 2026 (major supply addition)
+- USGS noted Carolinas deposits could "replace imports for a century" (long-term supply risk)
+- No offsetting demand collapse signal in June–July data
+
+**Implication:**
+Lithium has rallied on supply deficit and EV demand. However, capacity additions H2 2026 will compress the deficit narrative. Market may currently price in continued scarcity; supply additions could trigger a 10–20% correction if consensus shifts from deficit to oversupply.
+
+**Possible plays:**
+- Short lithium ETFs (CHXY, ICSH) or futures (LITH)
+- Short EV battery makers if lithium input costs were a key upside driver (TSLA, NIO, LI)
+
+**Direction:** Short
+
+**Horizon:** 6–9 months (additions ramp H2 2026 → price discovery Q4 2026–Q1 2027)
+
+**Retail blindspot:**
+Lithium has been a "structural deficit" narrative since 2022. Market participants are anchored to scarcity framing; supply additions are known but underestimated in price models. When new capacity comes online, consensus lags reality by 1–2 quarters.
+
+**Confidence:** MEDIUM (supply addition is factual and dated; current price ($21.5k) is elevated and vulnerable to rerationing, but demand durability is uncertain)
+
+---
+
+### NICKEL OVERSUPPLY SHORT (Indonesian Ramp)
+
+**Underlying facts:**
+- Nickel $16,360/T on July 3; May 2026 regional prices up 13–19% despite supply glut forecast
+- Market consensus: Oversupply expected H2 2026 due to "high Indonesian output"
+- No recent supply shock or demand spike to justify rally
+
+**Implication:**
+Nickel is caught between backward-looking strength (recent EV demand surge) and forward-looking oversupply. Indonesian producers have massive capacity; supply additions will come online H2 2026. Current price rally (up 13–19% in May) likely does not reflect terminal price pressure from oversupply.
+
+**Possible plays:**
+- Short nickel (NI futures on LME) or commodity ETFs (DBC, GSG)
+- Pairs trade: long copper (structural deficit), short nickel (structural oversupply)
+
+**Direction:** Short
+
+**Horizon:** 6–12 months (oversupply should emerge H2 2026)
+
+**Retail blindspot:**
+Nickel is a "dirty" metal with lower retail visibility than lithium or cobalt. Consensus fixates on battery demand; misses capacity headroom in Indonesia and China. Price strength in May is momentum, not fundamentals.
+
+**Confidence:** MEDIUM (oversupply forecast is from primary commodity sources; May price rally contradicts it, creating asymmetry)
+
+---
+
+### GRID CAPACITY STRESS + COAL REHABILITATION PLAY
+
+**Underlying facts:**
+- Mid-Atlantic grid emergency June 30–July 3; PJM ordered backup generation; temp forecast 102–104°F
+- EEA-3 (emergency alert level 3) threatened; DOE intervened
+- DOE announced $350M investment in coal plant "construction, modernization, restart"
+- Grid stress suggests capacity headroom is tighter than pre-disruption
+
+**Implication:**
+Grid operators are explicitly drawing down emergency reserves and ordering backup during peak summer heat. This indicates reserve margin is below optimal levels. Administration's $350M coal subsidy signals both political will to support coal and recognition of capacity gaps. Coal plants restarted or rehabilitated under this program could see revenue uplift from emergency/capacity pricing.
+
+**Possible plays:**
+- Long regional coal producers (ARCH, BTU) or coal-heavy utilities (AEP, DUK, American Electric)
+- Long coal plant operators with restart potential (Dynegy, Energy Resources)
+- Thermal coal futures (MT on ICE)
+
+**Direction:** Long
+
+**Horizon:** 6–24 months (construction/restart timelines, but interim emergency pricing can appear faster)
+
+**Retail blindspot:**
+Retail is bearish coal due to ESG/decarbonization narrative. Misses that grid stress is real and near-term, while solar/wind additions are capital-intensive and long-lead. Emergency capacity is commercially valuable even if it declines long-term.
+
+**Confidence:** MEDIUM (facts confirm grid stress and subsidy, but unclear how much subsidy will actually reach deployable capacity vs. political signaling; coal is structurally declining, so upside is capped)
+
+---
+
+### COBALT SUPPLY DEFICIT ALREADY PRICED (LOW CONVICTION)
+
+**Underlying facts:**
+- Cobalt $56,290/T; forecast 5,000–6,000 MT deficit in 2026
+- DRC supplies 70–80% of global output (96,000 MT export quota); tightly controlled
+- No recent price shock or supply disruption beyond known quota
+
+**Implication:**
+The 5,000–6,000 MT deficit is relatively small (6% of quota) and is visible to all market participants. It is likely already priced into current levels. Without a major supply disruption (e.g., DRC export ban, mine closure), the deficit is not a surprise catalyst.
+
+**Direction:** Neutral / Pass
+
+**Confidence:** LOW
+
+---
+
+## NEXT-STEPS
+
+**Run longterm_check.py on:**
+- CL, BZ (crude futures) — oil recovery upside
+- CHXY, ICSH, or LITH — lithium short
+- NI (nickel futures on LME) — oversupply short
+- ARCH, BTU, AEP, DUK — coal/grid capex long
+
+**Run catalyst_check.py on:**
+- "Strait of Hormuz shipping normalization timeline Q3 2026" (Polymarket equivalent)
+- "Lithium spot price Q4 2026 < $20k/tonne" (supply additions pricing)
+- "Mid-Atlantic grid blackout summer 2026" (capacity stress catalyst)
+- "DoE coal restart program funding deployed by end 2026" (subsidy efficacy)
+
+**Skip / pass:**
+- Nickel (oversupply thesis is solid but medium-term; entry point needs tighter signals)
+- Cobalt (deficit already known; no asymmetry in pricing)
+- Copper (structural deficit but 5–10 year timeline; no near-term catalyst)
+- Natural gas (well-supplied, fairly priced; storage buildup reduces upside surprise)
+```
