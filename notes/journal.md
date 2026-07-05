@@ -2678,3 +2678,9 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $166.50 (-2.1%
 de-escalatory, supports Pahlavi NO (regime negotiating ≠ regime falling). Marks in noise: Trump-out 0.925
 (E+9.92% clears), Greenland 0.945 (E+6.48% clears), Pahlavi 0.959 / Satoshi 0.969 sub-hurdle holds. No
 action. Heartbeat msg 513. Weekly long-term review at the Sunday 16:00 slot; pnl_weekly due ~Jul-09.
+
+## 2026-07-05 ~14:00 UTC — Sunday 14:00 cron (quiet; zero news; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0, ZERO news since 02:00. Bankroll $166.64 (-2.0% vs
+ref). ARB $0.07882 (+6.8%). Marks steady: Trump-out 0.935 (E+7.66%), Greenland 0.945 (E+6.49%) clear;
+Pahlavi 0.959 / Satoshi 0.969 sub-hurdle holds. Heartbeat msg 514. No action.
