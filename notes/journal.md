@@ -2670,3 +2670,11 @@ positive from stale tails. Daemon restarted (PID 1990113), clean poll verified. 
 tick-quiet reads today were accurate. Operator answered (msg 511). Meta: the invariant that false-fired was
 itself built from the 2026-06-11 lesson — monitoring code needs the same signature-precision as trading
 gates; "something recent-ish looks wrong" heuristics degrade under benign-chatty conditions.
+
+## 2026-07-05 ~02:00 UTC — Sunday 02:00 cron (quiet; Doha talks = de-escalatory; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $166.50 (-2.1% vs ref). ARB $0.0795
+(+7.7%). One alert since Jul-4 14:00: "Trump claims Iran has agreed to hold peace talks in Doha" —
+de-escalatory, supports Pahlavi NO (regime negotiating ≠ regime falling). Marks in noise: Trump-out 0.925
+(E+9.92% clears), Greenland 0.945 (E+6.48% clears), Pahlavi 0.959 / Satoshi 0.969 sub-hurdle holds. No
+action. Heartbeat msg 513. Weekly long-term review at the Sunday 16:00 slot; pnl_weekly due ~Jul-09.
