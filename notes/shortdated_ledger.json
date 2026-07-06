@@ -70,6 +70,20 @@
       "size_usd": 0,
       "outcome": "FALSIFIED",
       "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-06",
+      "question": "Mojtaba Khamenei seen in public by July 15?",
+      "side": "NO",
+      "ask": 0.9,
+      "days": 9,
+      "pop_edge_pp": null,
+      "catalyst_p_yes_central": null,
+      "decision": "PRE-SKIP",
+      "reason": "Instance evaluation off fresh info (Mojtaba ABSENT from his father's Jul 3-9 state funeral, consistent with incapacity reports): supports NO, but the funeral runs to Jul-9 and the regime has MAXIMAL incentive to stage an appearance now if he can appear at all \u2014 honest P(not-seen) ~0.75-0.85 << the ~0.955 the robust gate needs at NO 0.90. YES at ~0.10 has central edge (P(seen) ~0.15-0.25) but subjective 'seen in public' resolution = UMA-photo-dispute risk both ways + speculative YES not a fade. Neither side clears the instance-thesis bar with conviction. No catalyst_check spawned (ambiguity is structural, not informational).",
+      "size_usd": 0,
+      "outcome": null,
+      "fade_would_have_won": null
     }
   ]
 }
