@@ -2723,3 +2723,17 @@ NO-ADDS: the 8% YES partly prices the UMA-loose 'credible consensus of reporting
 leg was sized small at entry) — respect it, don't fade harder. Greenland eased to 0.935 (E+8.8% clears).
 One news alert (satellite images of Iran nuclear damage — retrospective, no impact). Heartbeat msg 517.
 No action.
+
+## 2026-07-06 ~14:20 UTC — Meta-reflection: two doc-coherence fixes (no new strategy work forced)
+
+(1) README tool inventory was stale post-audit-week: check_marginal_apy still described as "hurdle scan"
+(now the expected-edge scan) and heartbeat_watch as "process-health monitor" (now + dead-man switch +
+stateful persistence probe). Fixed — the README is the next-agent onboarding path; stale tool semantics
+there reproduce exactly the class of misread the audit caught.
+(2) Codified the CONSUMED-EDGE EXIT rule in doctrine §5 (it existed only as practice across DEC-0042/0043
+journal entries): mark ≥ honest prior → NEGATIVE_EDGE → sell into bid when bid ≥ E[hold]/share (realizes
+expectation, zero variance, sheds tail); positive-sub-hurdle legs stay held (spread + churn > carry gap).
+This is the pull-to-par harvest policy that produced both week-one realized gains — a fresh session now
+inherits it as one sentence instead of re-deriving it from decision records.
+Nothing else material: no new alpha (quiet validated steady-state), no stale flags beyond the above, the
+falsification/hardening arc is complete and coherent. Not forcing findings.

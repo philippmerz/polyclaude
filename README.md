@@ -71,11 +71,11 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed). Idle reserves: ~$52.7 in A
 
 ### Monitoring + safety
 - `polyclaude_status.py` — single-command aggregator: positions + hurdle + watchlist + UMA + Kelly + Brownian-bridge + news. Operator's go-to state-check.
-- `check_marginal_apy.py` — hurdle scan + drawdown alert (with de-indexed-market guard at mark ≤ 0.005).
+- `check_marginal_apy.py` — EXPECTED-edge scan: (p/M−1)×365/d vs honest priors from portfolio_kelly_priors.json (fixed 2026-07-02 from win-assumed carry math), NEGATIVE_EDGE/close-candidate verdicts + drawdown alert (de-indexed-market guard at mark ≤ 0.005). Two realized exits off its flags in week one (+$0.65, +$1.93).
 - `watchlist_monitor.py` — long-term watchlist entry-trigger alerter. CoinGecko + yfinance.
 - `uma_status_check.py` — alerts on umaResolutionStatus changes for held positions. Caches state in `notes/.uma_status_cache.json`. Built after R-U miss.
 - `news_watcher.py` — daemon: 11 RSS feeds, tier-1/2 keyword match, agent-filter precision pass on tier-2, deduped via title-hash 24h window.
-- `heartbeat_watch.py` — process-health monitor.
+- `heartbeat_watch.py` — process-health + session-liveness dead-man switch (journal stale while injects flow → direct Telegram; added after 4 dead-session outages) + stateful news-persistence probe (alert-count vs jsonl-size deltas, 2026-07-04 false-positive fix).
 
 ### Execution
 - `polyclaude_enter.py` — unified entry helper: gamma lookup → UMA reject → catalyst_check (or --my-p) → Kelly+ρ sizing → `--execute` → clob_v2.py buy with clean integer-share math.

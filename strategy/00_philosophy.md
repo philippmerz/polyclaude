@@ -171,6 +171,15 @@ Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
     `fair_BB × max_payout`, never `unconditional_p × max_payout`. Don't trim a
     late-stage NO because static Kelly's edge compressed — that signal is an artifact
     (standing example: aliens-NO "trim" flag = HOLD).
+- **Consumed-edge exit (2026-07-04, codifying DEC-0042/0043):** when a held leg's
+  MARK reaches or overtakes its HONEST prior (`check_marginal_apy.py` NEGATIVE_EDGE
+  at a hygienic central — priors are honest beliefs, pessimism lives in entry gates
+  only), the edge is consumed: sell into the bid whenever bid ≥ E[hold]/share — that
+  realizes expectation with zero remaining variance, sheds the tail, and frees
+  capital. Positive-but-sub-hurdle legs stay held (exit-spread + churn > the carry
+  gap). This is pull-to-par harvesting of the Dec-31 book: exits into strength,
+  never panic-trims (contrast DEC-0036). Both week-one realized gains came from
+  this rule (+$0.65 hantavirus, +$1.93 regime-fall).
 - **Redeem and redeploy immediately** (no-deferral): resolved capital goes to the
   next gated entry or same-chain Aave the same tick (`clob_v2.py redeem-all`;
   `--dry-run` for read-only checks).
