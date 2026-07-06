@@ -2700,3 +2700,15 @@ skipped (structurally-capped per the digest's own confidence note); crude/nickel
 Trigger states: SOL recovered ABOVE $80 (un-hit naturally, +15% off the Jun-28 low); PLTR exited; STX/ALB/
 NVDA persist. longterm_watchlist.md + watchlist_triggers.json updated; world_state_log current. No
 polyclaude capital (all multi-year IBKR names). Telegram summary sent.
+
+## 2026-07-06 ~02:00 UTC — Monday 02:00 cron (Khamenei funeral verified = delayed state ceremony; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $166.96 (-1.8% vs ref). ARB $0.08011
+(+8.6%). News: 3 alerts — the MATERIAL one ("Iran tightens Hormuz control alongside Khamenei funeral")
+VERIFIED via web: Ali Khamenei's delayed state funeral (postponed from March by the war; Jul 3-9, Mashhad
+burial, 40-day mourning, 100+ country delegations) — NOT a new death / succession crisis. Thesis-confirming:
+massive orderly state ceremony = institutional control. Notable: Mojtaba ABSENT from his father's funeral
+(consistent with the incapacity reports from prior catalyst checks) — succession-opacity watch item, but
+Pahlavi NO is insulated either way (a Mojtaba crisis ≠ Pahlavi installation; conjunction stands). Market
+unmoved (Pahlavi 0.959). Marks steady: Trump-out 0.935 / Greenland 0.945 clear; Pahlavi/Satoshi holds.
+Heartbeat msg 516. No action.
