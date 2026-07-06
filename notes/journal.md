@@ -2712,3 +2712,14 @@ massive orderly state ceremony = institutional control. Notable: Mojtaba ABSENT 
 Pahlavi NO is insulated either way (a Mojtaba crisis ≠ Pahlavi installation; conjunction stands). Market
 unmoved (Pahlavi 0.959). Marks steady: Trump-out 0.935 / Greenland 0.945 clear; Pahlavi/Satoshi holds.
 Heartbeat msg 516. No action.
+
+## 2026-07-06 ~14:00 UTC — Monday 14:00 cron (Satoshi -5pp cause-checked = speculation flow, hold; all clean)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $165.79 (-2.5% vs ref). ARB $0.07745
+(+4.9%). MARK MOVE CAUSE-CHECKED: Satoshi NO 0.969→0.920 (-4.9pp) — web-verified NO hard event (anniversary
+retrospectives + "Satoshi-era miner moved $180M" old-wallet story + stale NYT Adam-Back linguistics; nothing
+near the strict bar). p=0.99 stands → leg becomes the book's strongest E-edge (+15.65%/yr) BUT stays
+NO-ADDS: the 8% YES partly prices the UMA-loose 'credible consensus of reporting' tail (the exact reason the
+leg was sized small at entry) — respect it, don't fade harder. Greenland eased to 0.935 (E+8.8% clears).
+One news alert (satellite images of Iran nuclear damage — retrospective, no impact). Heartbeat msg 517.
+No action.
