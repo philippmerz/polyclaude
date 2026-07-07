@@ -2743,3 +2743,24 @@ falsification/hardening arc is complete and coherent. Not forcing findings.
 All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0, zero news since 14:00. Bankroll $166.07 (-2.3% vs
 ref). ARB $0.07969 (+8.0%). Marks in noise: Satoshi stabilized 0.924 (E+14.74% — no-adds stands), Trump-out
 0.925 (E+10.04%), Greenland 0.935 (E+8.83%), Pahlavi 0.959 hold. Heartbeat msg 518. No action.
+
+## 2026-07-07 ~22:11 UTC — Tuesday 14:00 cron (PROCESSED LATE ~8h) — Iran escalation contained; HOLD; dispatch-gap note
+
+DISPATCH DELAY: tick fired 14:00Z, processed 22:11Z (~8h). NOT a full outage — news_watcher persisted
+throughout (24h recovery below is complete), no capital could misfire, dead-man switch correctly silent
+(journal was only ~12h stale at 14:00, under the 16h threshold). One instance; watch for recurrence before
+treating as a pattern (the pane-dispatch path occasionally lags; the auth post-flight + dead-man switch
+cover the dangerous modes).
+
+IRAN ESCALATION (7 MATERIAL alerts across the gap): 3 tankers struck in Hormuz → US revoked the Iran oil
+license → US launched "powerful strikes" (CENTCOM). Web-verified: SAME contained pattern — punitive
+retaliation for shipping attacks, NOT regime/leadership targeting (identical framing to Jun-26, Jul-2/3).
+Only remaining Iran leg = Pahlavi NO (regime-fall exited DEC-0043 @0.93 last week — the leg most exposed to
+this, already de-risked into strength). Pahlavi is conjunction-insulated (regime-destabilization ≠ Pahlavi
+installed by Dec-31) and its mark is UNMOVED at 0.959 (p_no 0.98 stands). New thread: Iran threatening to
+abandon the Doha talks = the Aug-17/21 negotiation-cliff tail materializing as a THREAT in a spike, not a
+collapse — monitored, but no held leg is directly exposed now. HOLD, no action.
+
+All else clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $166.12 (-2.3%). ARB $0.07692 (+4.2%,
+-5% on the day = crypto beta). Marks: Trump-out 0.930 / Greenland 0.945 / Satoshi 0.942 clear; Pahlavi hold.
+Heartbeat msg 519.
