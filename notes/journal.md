@@ -2780,3 +2780,13 @@ Lightweight delta (full guards ran 01:20 + re-entry probe): no news since 01:45,
 bankroll $166.02 (-2.3%), ARB $0.07625 (+3.3%). Iran unchanged from the 01:20 assessment (contained strikes,
 Pahlavi 0.959 unmoved/insulated; regime-fall re-entry probed = no dip, no trade — ledger). Heartbeat msg 521.
 No action.
+
+## 2026-07-08 ~04:17 UTC — OFF-CYCLE (Tier-1) — oil surge on Iran strikes (commodity story); HOLD, no action
+
+Tier-1 "Oil prices surge as US strikes Iran, reversing fall to pre-war levels" = commodity-desk framing of
+the SAME continuing US-strikes escalation (Jul-7/8), not a new regime development. Both MATERIAL alerts'
+own impact scoring: escalation STRENGTHENS the regime (nationalist consolidation) → SUPPORTS Pahlavi NO
+(the watcher agrees "reduces near-term regime-change probability"). Pahlavi unmoved 0.959, insulated, UMA
+16/0. Oil surge irrelevant to our book (0 Ostium/oil positions; the parked XAU-long thesis would benefit
+but nothing held). No trigger, no action, no new Telegram (same event thread as msg 519-521, nothing
+material changed). Redundant off-cycle fire, cooldown-bounded.
