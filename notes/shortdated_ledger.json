@@ -98,6 +98,20 @@
       "size_usd": 0,
       "outcome": null,
       "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-08",
+      "question": "Iranian regime fall before 2027 (re-probe on ceasefire-over)",
+      "side": "NO",
+      "ask": 0.92,
+      "days": 175,
+      "pop_edge_pp": null,
+      "catalyst_p_yes_central": 0.085,
+      "decision": "NO-ENTRY",
+      "reason": "Trump declared the ceasefire 'over' -> regime-fall repriced modestly (YES 6.5->8.5%, NO ask 0.93->0.92). At ask 0.92 vs honest prior 0.93 = +1pp central, FAILS robust gate at pessimistic bound (0.93-0.05=0.88 < 0.92). Strict-criteria logic unchanged: 'ceasefire over' = return to the active-strikes phase the regime ALREADY survived (Feb-Apr full war), not dissolution; p_no 0.93 was already cliff-weighted to the structured high. Added ceasefire-collapse uncertainty argues MORE caution, not haircut-loosening. NO trade (2nd disciplined no-entry in 12h; the dip isn't enough).",
+      "size_usd": 0,
+      "outcome": null,
+      "fade_would_have_won": null
     }
   ]
 }

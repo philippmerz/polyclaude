@@ -2801,3 +2801,15 @@ multi-day war generates frequent Tier-1 fires, incl. 2 near-identical oil re-rep
 one), backlogged a POST-CONFLICT refinement (demote commodity-price-framed headlines Tier-1→Tier-2, or fuzzy
 Tier-1 dedup) rather than touching it now. Low per-fire cost accepted for the escalation-detection guarantee.
 No Telegram (redundant). Weekly P&L + VELO re-check due today (Jul-9-ish) — will run on the next scheduled tick.
+
+## 2026-07-08 ~14:00 UTC — Wednesday 14:00 cron (Iran ceasefire "over"; regime-fall re-probe no-entry; weekly P&L)
+
+Guards clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $165.61 (-2.6% vs ref). ARB $0.0764
+(+3.5%). IRAN STATE-CHANGE: Trump declared the ceasefire "over" (12 MATERIAL alerts since 06:44; stocks
+slide/oil surge) — the de-escalation narrative reverses to active-war resumption. BUT positioning holds:
+only leg = Pahlavi NO (unmoved 0.958, conjunction-insulated); regime-fall (exposed leg) already exited @0.93.
+Regime-fall repriced modestly (YES 6.5→8.5%, NO ask 0.93→0.92) → 2ND re-entry probe = NO-ENTRY (ask 0.92 vs
+honest 0.93 = +1pp central, fails robust gate at pessimistic 0.88; strict criteria: ceasefire-over = active-
+strikes phase already survived, not dissolution; added uncertainty argues MORE caution). Ledger 8 records.
+WEEKLY P&L written (Jul-2→8): +$0.66 wk / realized +$1.93 regime-fall close (2nd guard-driven exit). VELO
+ratio STILL unpublished (launch imminent, gated) — re-check next week. Heartbeat msg 523. No trade.

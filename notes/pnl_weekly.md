@@ -514,3 +514,21 @@ May-31 NO was the window's defining trade: entered as a pricing inefficiency, su
 - Build the ≤7d fade-cycle loop (scan → gate → size → ledger) and route the freed $9.74 + $12 pUSD through it.
 - Present the operator the capital case (marginal expected return per +$100: short-dated bucket capacity, HYPE harvest at ~$500, parked sleeves) — or formally kill the parked sleeves.
 - Daemon restart + creds pre-flight; methodology final analysis at 20/20; VELO ratio still gated; Iran next hard checkpoint ~Aug-16 (MOU expiry), Jul-27 EU sanctions review.
+
+---
+
+## Week of 2026-07-02 → 2026-07-08 (audit-implementation week)
+
+**Bankroll:** $165.61 vs $164.95 Jul-02 = **+$0.66 (+0.4%)**; vs $170 ref **−2.6%** (~−3.4pp vs Aave-flat over ~10wk). Recovering steadily off the late-June low; benchmark still lost, Dec-31 = accountability date.
+
+**Realized this week: +$1.93** — closed regime-fall NO @0.93 (DEC-0043, +11.1% on blended $17.37), the second guard-driven exit off the fixed expected-edge scan (+$0.65 hantavirus Jul-2, +$1.93 regime-fall Jul-4). Both came from mark ≥ honest prior → NEGATIVE_EDGE → sell into bid at E[hold] (the consumed-edge rule codified in doctrine §5). ARB starter +3.5% vs entry (gave back some on crypto beta). Book now 4 NO legs + ARB.
+
+**The week's real work was the audit + its implementation (full record journal 2026-07-02/03):**
+- Skeptic+champion approach audit → SOUND-with-corrections. Shipped: check_marginal_apy fixed win-assumed→expectation math (produced BOTH realized exits); heartbeat session-liveness dead-man switch + daily_checkin auth post-flight (outage hardening, both modes); prior-hygiene pass (monitoring priors = honest centrals).
+- **The short-dated fade bucket FAILED REPLICATION** (N=836 fresh: 0.90-0.95 −0.5pp vs the claimed +4.8pp; negative at asks) → population fade-harvesting DEAD, falsified at $0 deployed (gates blocked while measurement ran). Surviving PM edge = case-by-case catalyst-gated instance mispricing (doctrine §3.1 rewritten). Haircut design pass → keep flat 0.05.
+- Iran de-risking validated: regime-fall (the exposed leg) exited into strength BEFORE this week's ceasefire-collapse; remaining Pahlavi NO is conjunction-insulated. Two regime-fall re-entry probes (Jul-8) = NO-ENTRY (no gate-clearing dip). incumbent-survives cluster cut from ~40%→~17% of bankroll.
+- Ops: 1 dead-session outage (~4d, recovered clean, book gained) + 1 dispatch delay (~8h, noted); operator engaged (VRAM/memory question answered — VIRT-not-RES misread; flagged a stray 251M claude session on pts/5).
+
+**Decisions:** 43 total / 22 resolved. **Ledger:** 8 records (0 entries — every gated candidate correctly skipped; the falsification + 2 regime-fall probes are the discipline working). **Methodology:** 19/20 (straggler in UMA lag).
+
+**Outlook (→ ~Jul-15):** Iran ceasefire "over" per Trump — watch whether active-war resumption is contained (Pahlavi insulated regardless; regime-fall re-entry only if NO dips below the robust bound ~0.88). VELO ratio STILL unpublished (launch imminent, gated). Mojtaba-seen market resolves Jul-15 (ledger). Post-conflict: Tier-1 commodity-headline precision fix.
