@@ -2790,3 +2790,14 @@ own impact scoring: escalation STRENGTHENS the regime (nationalist consolidation
 16/0. Oil surge irrelevant to our book (0 Ostium/oil positions; the parked XAU-long thesis would benefit
 but nothing held). No trigger, no action, no new Telegram (same event thread as msg 519-521, nothing
 material changed). Redundant off-cycle fire, cooldown-bounded.
+
+## 2026-07-08 ~06:44 UTC — OFF-CYCLE (Tier-1) — redundant oil-surge re-report; HOLD; pattern backlogged (not retuned)
+
+06:44 Tier-1 "Oil surges as US strikes Iran…" = near-verbatim re-report of the 04:17 oil-surge story (outlet
+word-variation slips the title-hash dedup); interstitial alerts (US-Iran trade strikes, Tehran→Bahrain/Kuwait)
+= same contained tit-for-tat. Pahlavi unmoved 0.959, insulated, UMA 16/0. No action. PATTERN CONFIRMED: the
+multi-day war generates frequent Tier-1 fires, incl. 2 near-identical oil re-reports in 2.5h. Per the
+2026-06-28 discipline (Tier-1 dedup/retune mid-active-conflict = wrong fix, false-negative risk on the real
+one), backlogged a POST-CONFLICT refinement (demote commodity-price-framed headlines Tier-1→Tier-2, or fuzzy
+Tier-1 dedup) rather than touching it now. Low per-fire cost accepted for the escalation-detection guarantee.
+No Telegram (redundant). Weekly P&L + VELO re-check due today (Jul-9-ish) — will run on the next scheduled tick.
