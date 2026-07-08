@@ -84,6 +84,20 @@
       "size_usd": 0,
       "outcome": null,
       "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-08",
+      "question": "Will the Iranian regime fall before 2027? (RE-ENTRY probe post-escalation)",
+      "side": "NO",
+      "ask": 0.93,
+      "days": 176,
+      "pop_edge_pp": null,
+      "catalyst_p_yes_central": 0.07,
+      "decision": "NO-ENTRY",
+      "reason": "Probed for an escalation-driven mispriced dip after 3 days of US strikes + tanker attacks + talks-abandonment threat. Live NO ask 0.93 = EXACTLY my honest prior (0.93) = zero edge at central, negative after haircut. Market YES only 6.5% = it agrees regime survives, NOT repricing collapse despite the escalation. This is the instance-thesis edge source working in reverse: no overreaction to exploit. Also confirms the DEC-0043 exit @0.93 was fair-value (mark unmoved 4 days later). Note: long-dated (not the <=14d bucket) but logged here as the instance-evaluation record.",
+      "size_usd": 0,
+      "outcome": null,
+      "fade_would_have_won": null
     }
   ]
 }
