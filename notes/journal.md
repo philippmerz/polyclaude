@@ -2773,3 +2773,10 @@ funeral-pause-violation framing is more provocative optics but still punitive-re
 targeting. Only Iran leg = Pahlavi NO, UNMOVED at 0.959, conjunction-insulated, UMA 16/0 clean. No trigger,
 no new decision. No new Telegram (same event, nothing material beyond the 22:11 heartbeat; avoids noise per
 the action-only + 2x-daily convention). Redundant off-cycle fire, 90min cooldown bounded it.
+
+## 2026-07-08 ~02:00 UTC — Wednesday 02:00 cron (scheduled; delta vs the 01:20 off-cycle — nothing new)
+
+Lightweight delta (full guards ran 01:20 + re-entry probe): no news since 01:45, UMA 16/0, redeem 0/4,
+bankroll $166.02 (-2.3%), ARB $0.07625 (+3.3%). Iran unchanged from the 01:20 assessment (contained strikes,
+Pahlavi 0.959 unmoved/insulated; regime-fall re-entry probed = no dip, no trade — ledger). Heartbeat msg 521.
+No action.
