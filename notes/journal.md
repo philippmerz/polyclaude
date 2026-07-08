@@ -2764,3 +2764,12 @@ collapse — monitored, but no held leg is directly exposed now. HOLD, no action
 All else clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $166.12 (-2.3%). ARB $0.07692 (+4.2%,
 -5% on the day = crypto beta). Marks: Trump-out 0.930 / Greenland 0.945 / Satoshi 0.942 clear; Pahlavi hold.
 Heartbeat msg 519.
+
+## 2026-07-08 ~01:20 UTC — OFF-CYCLE (Tier-1) — Iran escalation continuation (same event); HOLD, no action
+
+Tier-1 "US strikes Iran despite promised pause for Khamenei funeral" = continuation/re-report of the Jul-7
+retaliatory strikes for the tanker attacks (already processed at the 22:11 tick, msg 519/520). The
+funeral-pause-violation framing is more provocative optics but still punitive-retaliation, NOT regime
+targeting. Only Iran leg = Pahlavi NO, UNMOVED at 0.959, conjunction-insulated, UMA 16/0 clean. No trigger,
+no new decision. No new Telegram (same event, nothing material beyond the 22:11 heartbeat; avoids noise per
+the action-only + 2x-daily convention). Redundant off-cycle fire, 90min cooldown bounded it.
