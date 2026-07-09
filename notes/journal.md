@@ -2822,3 +2822,14 @@ settled back to the contained pattern despite Trump's rhetoric. Regime-fall NO h
 NOT reach the ~0.88 re-entry bound (market agrees resumed strikes ≠ dissolution, confirming the strict-
 criteria read). Pahlavi unmoved 0.959, insulated. Marks: Satoshi 0.951, Greenland 0.935, Trump-out 0.925
 all clear. Heartbeat msg 526. No action.
+
+## 2026-07-09 ~11:16 UTC — OFF-CYCLE — ceasefire-over continuation (2nd night of strikes); all insulated/unmoved; HOLD
+
+Escalation continues: 2nd night of US-Iran strikes, Revolutionary Guards hitting Kuwait/Bahrain after the
+broken ceasefire. UNCHANGED for the book: regime-fall NO held 0.92 (no dip to the ~0.88 re-entry bound —
+market still not pricing dissolution), Pahlavi unmoved 0.958 (insulated), UMA 16/0. Watcher impact scoring
+net-supportive (Guards' operational control = regime stability). NEW angle: 2 alerts frame Trump's Iran
+handling as political liability (tag trump-out) — but media narrative, NOT a resolution-criteria event (no
+death/resignation/removal mechanism from a foreign-policy setback; Trump-out NO unmoved 0.925, my strongest
+E-edge leg +10.15%). No trigger, no action. No new Telegram (continuation of the msg 525/526 ceasefire-over
+thread; marks confirm no repricing; action-only convention — 14:00 scheduled heartbeat carries status).
