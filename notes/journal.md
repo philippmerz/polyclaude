@@ -2813,3 +2813,12 @@ honest 0.93 = +1pp central, fails robust gate at pessimistic 0.88; strict criter
 strikes phase already survived, not dissolution; added uncertainty argues MORE caution). Ledger 8 records.
 WEEKLY P&L written (Jul-2→8): +$0.66 wk / realized +$1.93 regime-fall close (2nd guard-driven exit). VELO
 ratio STILL unpublished (launch imminent, gated) — re-check next week. Heartbeat msg 523. No trade.
+
+## 2026-07-09 ~02:00 UTC — Thursday 02:00 cron (ceasefire-over escalation settled; regime-fall held above re-entry bound; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $165.88 (-2.4% vs ref). ARB $0.07766
+(+5.2%, recovered). CEASEFIRE-OVER FOLLOW-THROUGH: no Tier-1 in 12h (9 tier-2, none critical) → escalation
+settled back to the contained pattern despite Trump's rhetoric. Regime-fall NO held 0.915/ask 0.92 — did
+NOT reach the ~0.88 re-entry bound (market agrees resumed strikes ≠ dissolution, confirming the strict-
+criteria read). Pahlavi unmoved 0.959, insulated. Marks: Satoshi 0.951, Greenland 0.935, Trump-out 0.925
+all clear. Heartbeat msg 526. No action.
