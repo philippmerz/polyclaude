@@ -2833,3 +2833,12 @@ handling as political liability (tag trump-out) — but media narrative, NOT a r
 death/resignation/removal mechanism from a foreign-policy setback; Trump-out NO unmoved 0.925, my strongest
 E-edge leg +10.15%). No trigger, no action. No new Telegram (continuation of the msg 525/526 ceasefire-over
 thread; marks confirm no repricing; action-only convention — 14:00 scheduled heartbeat carries status).
+
+## 2026-07-09 ~14:00 UTC — Thursday 14:00 cron (bankroll high-water on ARB rally; Iran unchanged; no action)
+
+Delta vs the 11:16 off-cycle: only 1 minor alert since (Iran continuation, no new development). UMA 16/0,
+redeem 0/4, Pahlavi unmoved 0.959. BANKROLL $167.50 = NEW PROJECT HIGH-WATER (-1.5% vs $170 ref). Driver:
+ARB $0.08547 = +15.8% vs the $0.0738 entry (was +5.2% at 02:00 — ~+10pp intraday). Post-unlock L2-value
+thesis playing out; HOLD the delegated 1-3y starter through strength (no exit trigger but thesis-break;
+rallying away from the ≤$0.065 add level, so no add either). Iran: 2nd-night strikes continue, all legs
+insulated/unmoved, regime-fall held above the ~0.88 re-entry bound. Heartbeat msg 527. No action.
