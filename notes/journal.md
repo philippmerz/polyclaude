@@ -2842,3 +2842,15 @@ ARB $0.08547 = +15.8% vs the $0.0738 entry (was +5.2% at 02:00 — ~+10pp intrad
 thesis playing out; HOLD the delegated 1-3y starter through strength (no exit trigger but thesis-break;
 rallying away from the ≤$0.065 add level, so no add either). Iran: 2nd-night strikes continue, all legs
 insulated/unmoved, regime-fall held above the ~0.88 re-entry bound. Heartbeat msg 527. No action.
+
+## 2026-07-10 ~02:00 UTC — Friday 02:00 cron (ARB +21.7% high-water; CRITICAL flag verified benign; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. BANKROLL $168.46 = new high (-0.9% vs $170 ref;
+near-full recovery from the -4.6% late-June low). ARB $0.08982 = +21.7% vs entry (+15.6% on the day),
+position now $18.24 — delegated post-unlock L2-value thesis paying off; HOLD (no exit but thesis-break).
+CRITICAL FLAG VERIFIED BENIGN: "What's next in US-Iran war; Khamenei to be buried" tripped the agent-filter
+on death-language, but it is the Feb-28 assassination re-referenced for the BURIAL (concluding the delayed
+funeral), NOT a new death. The watcher's OWN body-revalidation (2nd alert, Guardian) downgraded it to MINOR:
+"orderly succession (Mojtaba positioned heir) + regime organizational capacity" → SUPPORTS Pahlavi NO. Marks
+confirm: Pahlavi unmoved 0.959, regime-fall no dip. (Even tagged trump-out supportively: Trump executing
+decision authority = in office.) Iran otherwise unchanged, all legs insulated. Heartbeat msg 529. No action.
