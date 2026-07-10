@@ -2883,3 +2883,11 @@ rest of scripts/ for other live-edge assertions of the falsified numbers → non
 cycle (the ARB add-decision is already well-covered by the existing "catalyst already priced ≠ entry" =
 instance-mispricing discipline; the Khamenei false-CRITICAL self-corrected via the watcher's body-revalidation;
 no new alpha). Not forcing findings.
+
+## 2026-07-10 ~14:00 UTC — Friday 14:00 cron (ARB +25.6%, no retrace = no add; Iran quiet; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $168.76 (-0.7% vs ref). ARB $0.09267 =
++25.6% vs entry (rallying AWAY from the ~$0.075-0.08 retrace-add zone → no add fires; not chasing per msg 530;
+retrace-add stays armed under standing delegated authority). Operator not yet responded on the add call (fine
+— optional, position wins regardless). Iran quiet (3 tier-2, no critical), Pahlavi unmoved 0.959, all legs
+insulated. Marks: Trump-out 0.925/Greenland 0.925/Satoshi 0.954 clear. Heartbeat msg 531. No action.
