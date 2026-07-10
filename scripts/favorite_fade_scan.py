@@ -1,16 +1,23 @@
 #!/usr/bin/env python3
-"""Favorite-fade scanner — harvest the empirically-validated favorite-longshot edge.
+"""Favorite-fade scanner — CANDIDATE SURFACER for instance-thesis evaluation.
 
-Backtest (scripts/longshot_calibration_backtest.py, N=1513, 7d-pre-resolution, clean)
-showed Polymarket favorites in the 0.90-0.98 zone win MORE than priced:
-  0.90-0.95: won 97.3% vs 92.5% priced (+4.8pp, 3.2sigma)
-  0.95-0.98: won 99.4% vs 96.6% priced (+2.8pp, 4.7sigma)
-Mild favorites (<0.90) are calibrated; >0.98 edge is tiny + small-N-lucky. The edge is
-strongest NEAR resolution (the 30d cut was weak), so we target a short horizon.
+*** POPULATION EDGE FALSIFIED 2026-07-03 — do NOT trade on the scan's edge_pp alone. ***
+The original localization (longshot_calibration_backtest.py, N=1513, 2026-06-02:
+  0.90-0.95 +4.8pp/3.2sigma, 0.95-0.98 +2.8pp/4.7sigma at ~7d) FAILED REPLICATION on 836
+fresh resolved markets (same methodology): 0.90-0.95 -0.5pp+-2.9, 0.95-0.98 -0.5pp+-1.9 —
+calibrated at mid, NEGATIVE at executable asks, at both 3d and 7d horizons
+(logs/backtest_askadjust_v3_20260703.log; doctrine strategy/00_philosophy.md §3.1). Either
+arbed away since June or the original was window-specific; both forbid POPULATION harvesting.
+The `edge_pp` column below is the STALE population-calibration average — it is a MARKET
+DISCOVERY hint, not a tradeable edge. The surviving edge source is case-by-case
+catalyst-gated INSTANCE mispricing; this scanner's job is to SURFACE liquid short-horizon
+0.90-0.98 candidates so a per-market instance thesis (catalyst_check + §4 gates at the flat
+0.05 haircut) can decide. A candidate is a trade ONLY if its own instance analysis clears
+the robust gate — never because the population number looks good.
 
 This finds CURRENT liquid binary markets whose favorite side trades (live CLOB ask, NOT
-gamma midpoint) in the validated zone with a short horizon, computes the expected edge
-from the calibration curve net of the slippage we'd pay (we use the real ask), and ranks.
+gamma midpoint) in the 0.90-0.98 zone with a short horizon, and ranks by the (stale)
+calibration-curve number purely as a browse-order for instance vetting.
 
 Compute-bounded: gamma candidate pre-filter, then live-book walks capped at --max-walks.
 Execution still routes through polyclaude_enter.py (umaResolutionStatus + robust-edge gate

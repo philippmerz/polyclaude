@@ -2870,3 +2870,16 @@ does NOT mean "buy at any price on the trigger" — the aligned read is add chea
 operator-capital + context-differs-from-delegation → SURFACED to operator (msg 530) with my recommendation
 (HOLD the winner; re-arm add for a retrace to ~$0.075-0.080 OR proven Robinhood-Chain fee VOLUME; the raw
 ≤$0.065 dip-add stands) rather than unilaterally execute. watchlist_triggers ARB updated. No trade.
+
+## 2026-07-10 ~02:40 UTC — Meta-reflection: favorite_fade_scan docstring still claimed the FALSIFIED population edge (fixed)
+
+Genuine coherence finding: favorite_fade_scan.py's docstring still opened "harvest the empirically-validated
+favorite-longshot edge" with the +4.8pp/3.2σ / +2.8pp/4.7σ figures as live truth — the exact numbers the
+2026-07-03 replication (N=836) FALSIFIED. A future session reading it would rebuild the dead population-
+harvest premise (same drift class as the Jul-06 README fix). Rewrote the header: population edge FALSIFIED
+up top, the tool reframed as a CANDIDATE SURFACER for instance-thesis evaluation (its surviving role), edge_pp
+relabeled a stale browse-order hint not a tradeable edge, pointer to the falsification log + §3.1. Grepped the
+rest of scripts/ for other live-edge assertions of the falsified numbers → none. Nothing else material this
+cycle (the ARB add-decision is already well-covered by the existing "catalyst already priced ≠ entry" =
+instance-mispricing discipline; the Khamenei false-CRITICAL self-corrected via the watcher's body-revalidation;
+no new alpha). Not forcing findings.
