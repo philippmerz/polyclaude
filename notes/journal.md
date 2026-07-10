@@ -2854,3 +2854,19 @@ funeral), NOT a new death. The watcher's OWN body-revalidation (2nd alert, Guard
 "orderly succession (Mojtaba positioned heir) + regime organizational capacity" → SUPPORTS Pahlavi NO. Marks
 confirm: Pahlavi unmoved 0.959, regime-fall no dip. (Even tagged trump-out supportively: Trump executing
 decision authority = in office.) Iran otherwise unchanged, all legs insulated. Heartbeat msg 529. No action.
+
+## 2026-07-10 ~02:20 UTC — ARB delegated ADD-TRIGGER fired (real fee-switch) → DECLINED to chase; surfaced to operator
+
+Verified the ARB +22% rally is IDIOSYNCRATIC (ARB +15% 24h vs OP +3.8/BTC +3/ETH +1.9) → ARB-specific catalyst,
+not beta. Cause (web-confirmed): Offchain Labs announced 10% of fees from Robinhood Chain + every Arbitrum L2
+flow to the Arbitrum ecosystem (8% tokenholder treasury, 2% dev) — a REAL revenue-accrual mechanism, ARB
+governance-token → cash-flow token. This IS the "real fee-switch/revenue proposal" the operator named (msg
+442/457) as a delegated ADD trigger, and it fundamentally VALIDATES the whole post-unlock thesis (major
+de-risk).
+DECISION: did NOT add. The add-trigger's twin was a dip ≤$0.065 → the delegation intent was "add CHEAP or on
+an UNPRICED catalyst." ARB already ripped +22% ON this news; adding at $0.090 = chasing a parabolic
+post-catalyst pump (+ a $7.6M unlock flagged as a stall risk) = poor entry discipline. Standing add-authority
+does NOT mean "buy at any price on the trigger" — the aligned read is add cheap, not chase. Consequential +
+operator-capital + context-differs-from-delegation → SURFACED to operator (msg 530) with my recommendation
+(HOLD the winner; re-arm add for a retrace to ~$0.075-0.080 OR proven Robinhood-Chain fee VOLUME; the raw
+≤$0.065 dip-add stands) rather than unilaterally execute. watchlist_triggers ARB updated. No trade.

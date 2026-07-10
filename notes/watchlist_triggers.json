@@ -20,9 +20,9 @@
       "entry_max": 0.065,
       "horizon": "1-3y",
       "route": "ibkr_surface",
-      "rationale": "STARTER FILLED 2026-06-25 ~22:40 UTC: bought 203.31 ARB @ ~0.0738 ($15) from Arb Aave when the $0.075 post-unlock-capitulation trigger fired (DEC-0039; thesis verified intact at fire \u2014 broad-market beta + post-Jun-16-unlock supply, not an ARB break). 1-3y L2-value thesis, polyclaude-custodied (operator-delegated boundary exception, EVM-executed). This trigger is now an ADD-ON level: price entry_max lowered 0.075->0.065 (deeper capitulation only); a REAL filed fee-switch/revenue-share proposal is also an add trigger (monitored via news, not this price scan). Arb Aave reserve now $2.60.",
+      "rationale": "HELD: 203.31 ARB @ ~$0.0738 (DEC-0039, +22% @ $0.090 on 2026-07-10). ADD-TRIGGER FIRED 2026-07-09 (REAL revenue mechanism: Offchain Labs \u2014 10% of Robinhood Chain + all Arbitrum L2 fees to the ecosystem, 8% to tokenholder treasury, 2% dev; ARB governance-token -> cash-flow token; thesis fundamentally validated). BUT declined to add: ARB already +22% ON the news (idiosyncratic, OP +4/BTC +3) = chasing a post-catalyst pump vs the delegation intent (add cheap, dip <=$0.065). SURFACED to operator (msg 530) for the add call. RE-ARMED add: retrace to ~$0.075-0.080 OR proven Robinhood-Chain fee VOLUME (not just the announcement); raw dip-add <=$0.065 stands. entry_max stays 0.065 for the price-scan; the volume/retrace adds are news-monitored.",
       "added": "2026-05-08",
-      "updated": "2026-06-25"
+      "updated": "2026-07-10"
     },
     {
       "ticker": "ONDO",
