@@ -2891,3 +2891,28 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $168.76 (-0.7%
 retrace-add stays armed under standing delegated authority). Operator not yet responded on the add call (fine
 — optional, position wins regardless). Iran quiet (3 tier-2, no critical), Pahlavi unmoved 0.959, all legs
 insulated. Marks: Trump-out 0.925/Greenland 0.925/Satoshi 0.954 clear. Heartbeat msg 531. No action.
+
+## 2026-07-11 ~02:00 UTC — Saturday 02:00 cron — METHODOLOGY EXPERIMENT CONCLUDES (20/20): final per-variant analysis
+
+The prospective, ground-truth-blind reasoning-depth experiment (opened 2026-05-02, snapshot-then-resolve,
+N=20 markets) is FULLY RESOLVED. Final per-variant (avg PnL per $ staked, takes out of 20):
+  zero_shot          4 takes  100.0% win  +0.2900/$   <-- dominant
+  parallel_pair      8 takes   75.0% win  +0.0117/$
+  unconscious_terse  7 takes   71.4% win  -0.0104/$
+  unconscious_demo   4 takes   75.0% win  -0.0975/$
+  adversarial_3round 5 takes   80.0% win  -0.0815/$
+
+CONCLUSION (the airtight check): the prospective ranking REPLICATES the retrospective N=30 ranking
+(zero_shot +0.04/$ vs the four multi-agent variants -0.04 to -0.22). Because this run was ground-truth-BLIND
+(markets snapshotted BEFORE resolution, scored after), the retrospective finding is NOT a leakage artifact —
+more reasoning depth does NOT improve routine market takes, confirmed OUT OF SAMPLE. MECHANISM (from the take
+counts, the informative part): zero_shot's edge is SELECTIVITY — it took only 4/20, all winners; the
+multi-agent variants took MORE (5-8), manufacturing false-positive "edge" through over-analysis that their
+marginally-higher deliberation didn't convert to win-rate. Depth adds action, not accuracy, on routine takes.
+HONEST CAVEAT: takes-N per variant is small (4-8), so the MAGNITUDE (+0.29/$) is noisy; the robust,
+twice-replicated claim is the DIRECTION (deliberation depth ≤ zero-shot on routine takes). This VALIDATES
+doctrine §6 as-written (routine <$10 = single zero-shot; escalate to skeptic+champion only for >$10 / new
+strategy class / structural change — which is exactly where the pairing has paid: OLP mirage, death-tail
+actuarial catch, the approach audit, the haircut design). No doctrine change needed; the rule is confirmed,
+not revised. DEFERRED-NOW-UNBLOCKED: the methodology_stress_test.py gamma 100-cap pagination bug (safe to fix
+now the experiment is done) → next continuation-check slice.
