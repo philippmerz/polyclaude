@@ -2927,3 +2927,11 @@ page*500→page*100 (strided past 80% of rows). Verified: `scrape` now paginates
 100→200→…→800+, was stuck at 100). Bounded, no-capital, closes the last deferred item from the audit +
 methodology arc. Note: this doesn't change the concluded 20/20 result (that used snapshotted data); it just
 means any FUTURE methodology scrape sees the full universe.
+
+## 2026-07-11 ~14:00 UTC — Saturday 14:00 cron (bankroll near-full-recovery $169.43; ARB +27%; all clean, no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.43 = new high, -0.3% vs $170 ref
+(full recovery from the -4.6% late-June low). ARB $0.09372 = +27.0% vs entry (climbing, away from the
+~0.075-0.08 retrace-add zone → no add; retrace-add armed). All 4 NO legs clear the hurdle (Pahlavi 0.957 /
+Satoshi 0.958 / Greenland 0.935 / Trump-out 0.925, E +5.2 to +10.3%). Iran quiet (2 tier-2, no critical).
+Heartbeat msg 533. No action.
