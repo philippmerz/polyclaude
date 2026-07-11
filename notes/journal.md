@@ -2935,3 +2935,15 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.43 = new 
 ~0.075-0.08 retrace-add zone → no add; retrace-add armed). All 4 NO legs clear the hurdle (Pahlavi 0.957 /
 Satoshi 0.958 / Greenland 0.935 / Trump-out 0.925, E +5.2 to +10.3%). Iran quiet (2 tier-2, no critical).
 Heartbeat msg 533. No action.
+
+## 2026-07-11 ~14:20 UTC — Meta-reflection: daily_checkin step 10 stale post-experiment-conclusion (fixed)
+
+Genuine coherence finding (same class as the recent README / favorite_fade docstring fixes): daily_checkin.sh
+step 10 still instructed the WEEKLY prospective_resolve run + "once all 20 resolved, journal final analysis"
+— but the experiment CONCLUDED 20/20 yesterday and the final analysis is done. A future Saturday session would
+re-run a finished experiment and be confused by the already-satisfied "journal final analysis" instruction.
+Rewrote step 10: marks CONCLUDED with the result (zero-shot dominant, doctrine §6 confirmed, not leakage),
+points to the analysis, states no weekly re-run is needed, and notes a fresh prospective_setup batch is
+OPTIONAL (finding twice-validated → low marginal value; don't auto-run). Nothing else material: the ARB
+add-decision + methodology conclusion + pagination fix are all closed/encoded; book at high-water, all legs
+clearing, guards clean. Not forcing findings.
