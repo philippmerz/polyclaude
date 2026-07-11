@@ -2916,3 +2916,14 @@ strategy class / structural change — which is exactly where the pairing has pa
 actuarial catch, the approach audit, the haircut design). No doctrine change needed; the rule is confirmed,
 not revised. DEFERRED-NOW-UNBLOCKED: the methodology_stress_test.py gamma 100-cap pagination bug (safe to fix
 now the experiment is done) → next continuation-check slice.
+
+## 2026-07-11 ~02:20 UTC — methodology_stress_test gamma-cap pagination bug FIXED (last deferred item)
+
+Now the N=20 experiment concluded (20/20), the deferred gamma pagination fix is safe (no risk of confounding
+an in-flight scrape). Fixed both sites: (1) closedTime fetch — limit 500→100 AND terminator len(batch)<500→
+<100 (the <500 condition fired after page 1 under gamma's 100-row cap, so the retrospective scrape only ever
+saw 100 markets, not the intended universe); (2) active-markets fetch — limit 500→100 + offset stride
+page*500→page*100 (strided past 80% of rows). Verified: `scrape` now paginates contiguously (cumulative raw
+100→200→…→800+, was stuck at 100). Bounded, no-capital, closes the last deferred item from the audit +
+methodology arc. Note: this doesn't change the concluded 20/20 result (that used snapshotted data); it just
+means any FUTURE methodology scrape sees the full universe.

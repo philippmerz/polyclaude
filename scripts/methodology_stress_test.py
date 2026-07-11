@@ -71,7 +71,7 @@ def fetch_resolved_markets(target: int = 300, max_pages: int = 20,
                 f"{GAMMA}/markets",
                 params={
                     "closed": "true",
-                    "limit": "500",
+                    "limit": "100",  # gamma caps limit at 100 server-side; asking 500 returned 100 AND tripped the <500 terminator below after page 1 (2026-07-11 fix)
                     "offset": str(offset),
                     "order": "closedTime",
                     "ascending": "false",
@@ -112,7 +112,7 @@ def fetch_resolved_markets(target: int = 300, max_pages: int = 20,
             break
         if len(out) >= target:
             break
-        if len(batch) < 500:
+        if len(batch) < 100:  # true last page (was <500 — never true under the 100-cap, so it broke after page 1)
             break
     return out
 
@@ -741,8 +741,8 @@ def fetch_active_markets(target: int = 60, max_pages: int = 20,
         try:
             r = httpx.get(
                 f"{GAMMA}/markets",
-                params={"closed": "false", "active": "true", "limit": "500",
-                        "offset": str(page * 500), "order": "volume24hr",
+                params={"closed": "false", "active": "true", "limit": "100",  # gamma caps at 100; offset must stride by 100 not 500 or 80% of the universe is skipped (2026-07-11 fix)
+                        "offset": str(page * 100), "order": "volume24hr",
                         "ascending": "false"},
                 timeout=25,
             )
