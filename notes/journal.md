@@ -2956,3 +2956,11 @@ fee-switch thesis compounding; still climbing, above the ~0.075-0.08 retrace-add
 All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. NO legs: Satoshi 0.958 (E+7.09) / Greenland 0.930
 (E+10.27) / Trump-out 0.935 (E+7.95) clear; Pahlavi 0.958 flagged just-sub-hurdle (E+4.99, noise, hold-only).
 Iran quiet (5 tier-2, no critical). Heartbeat msg 534. No action. Weekly long-term review at the 16:00 slot.
+
+## 2026-07-12 ~03:45 UTC — OFF-CYCLE (Tier-1) — same contained Hormuz tit-for-tat; HOLD, no action
+
+Tier-1 "US attacks Iran over ship hit in Hormuz; Tehran lashes out at Gulf" = the recurring contained pattern
+(retaliatory strikes for ship attacks + Iran→Gulf), no new development. Pahlavi unmoved 0.957, insulated,
+UMA 16/0. No trigger, no action, no new Telegram (same thread as msg 519-534, marks unmoved). Redundant
+off-cycle fire (the exact class backlogged 2026-07-08 for post-conflict Tier-1 precision — not touched
+mid-war per discipline). Book at high-water ($170.07), all clean.
