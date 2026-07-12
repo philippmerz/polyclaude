@@ -343,3 +343,13 @@ Themes: **grid-stress/coal-capacity (MED)** — PJM drawing emergency reserves i
 | AEP (new) | 2.5/4 | WATCH | Grid capex / capacity pricing | $138.45 = 52wk high, mid-cycle. Entry $120-125 pullback OR >60GW load-pipeline + rate-case wins. |
 
 Trigger-state changes: **SOL recovered ABOVE its $80 trigger ($81.32, +15% off the Jun-28 low — un-hit naturally)**; PLTR exited the hit list (>$120). Persistent hits (previously surfaced, unchanged): STX $0.17, ALB $135.56, NVDA $194.83. Coal producers (ARCH/BTU) skipped: structurally-declining upside cap per the digest's own confidence note; AEP is the cleaner expression. Crude/nickel futures plays inaccessible (no decentralized venue).
+
+## 2026-07-12 weekly digest (domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain)
+
+Themes — all already-tracked, directional-beta, or not-at-trigger; NO new polyclaude-actionable candidate:
+- **Crypto capitulation-bottom → LONG BTC/ETH (MED-HIGH):** strongest theme, but directional crypto BETA, not our instance-mispricing edge; we don't hold spot as a thesis (no decentralized short venue to pair). Our ARB (+30%) is already the crypto-L2 expression. Operator's IBKR/personal call if they want BTC/ETH beta.
+- **RWA institutional yield (MED) → LONG RWA protocols / stablecoin yield:** ONDO is the flagship + on-EVM, but $0.328 vs its $0.28 trigger (NOT hit) and 2-5y IBKR-route. The "stablecoin yield" sub-angle is what our Aave reserve already captures. No entry.
+- **EUR carry unwind (MED) → SHORT EUR / LONG USD:** not actionable (forex, no venue, directional).
+- Digest's own note: themes A/B/D/E/F already in this watchlist (NVDA/semis/crypto-L1L2/RWA). Confirmed.
+
+Trigger-state changes (all IBKR-surface, previously surfaced): **SOL re-dipped below $80 ($77.41)** (was above last wk); STX $0.173 persistent; **ALB $126.05 (−7% from last wk's $135.56), nearing the deep-conviction $120 zone** — BUT flag: last week's digest saw lithium supply-additions pressure, and ALB's entry thesis needs lithium >$20/kg; a supply-driven fade below that would make "cheaper" = "thesis-ERODING," not a better entry. Operator: weigh the lithium spot before treating the ALB dip as an add. CEG/NVDA/PLTR off the hit-list.

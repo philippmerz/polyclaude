@@ -2996,3 +2996,17 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $170.12 (holds
 $0.09587 (+29.9%). All 4 NO legs clear hurdle (Pahlavi 0.957 E+5.12 / Satoshi 0.957 / Trump-out 0.935 /
 Greenland 0.935). Iran fires slowing (1 tier1 since 09:24 vs 3 overnight), same contained pattern, Pahlavi
 insulated/unmoved. Heartbeat msg 535. No action. Weekly long-term review at 16:00.
+
+## 2026-07-12 ~16:00 UTC — Sunday weekly long-term review (macro + tech-AI + crypto-on-chain)
+
+Ran the 3 stalest domains (all last-run 2026-06-21). Themes: crypto-capitulation-bottom LONG BTC/ETH
+(MED-HIGH — but directional BETA, not our instance-mispricing edge; ARB is already our L2 expression),
+RWA-institutional-yield (MED — ONDO flagship but $0.328 vs $0.28 trigger, not hit; yield angle = our Aave),
+EUR-carry-unwind (MED — forex, not actionable). Digest's own note: A/B/D/E/F already watchlist-tracked.
+VET: ONDO not at trigger + IBKR-route → no full longterm_check warranted; BTC/ETH = directional beta, not our
+edge (declined to go-through-motions vet). NO new polyclaude-actionable candidate — honest SanDisk-pattern
+result (visible candidates beta/tracked/mid-cycle). Trigger changes (all IBKR-surface): SOL re-dipped <$80
+($77.41), STX $0.173 persistent, ALB $126.05 (−7% wk) nearing the $120 deep zone BUT flagged the lithium-
+oversupply tension (entry needs lithium >$20/kg; a supply fade = "cheaper=thesis-eroding" not better entry —
+operator to weigh spot). CEG/NVDA/PLTR off. longterm_watchlist + world_state_log updated. Telegram msg 539.
+No polyclaude capital (all IBKR/beta).

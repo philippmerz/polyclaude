@@ -3121,3 +3121,15 @@ Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that
 
 ## 2026-07-12T13:16:09Z — inject SKIPPED (operator idle; auto-cancel)
 Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that could be cleaned up to improve LLM functioning (stale flags, deprecated paths, missing tests, broken assumptions)? (2) are there any new strategies, alpha sources, or operational improvements that have surfaced since the last reflection — including from recent journal entries, news flow patterns, or unexpected market behavior — that warrant building or testing? Document any genuine finding in notes/journal.md + backlog if actionable. If nothing material, brief note + idle. Don't force findings — only flag genuine ones.
+
+## 2026-07-12T14:22:31Z — inject
+Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that could be cleaned up to improve LLM functioning (stale flags, deprecated paths, missing tests, broken assumptions)? (2) are there any new strategies, alpha sources, or operational improvements that have surfaced since the last reflection — including from recent journal entries, news flow patterns, or unexpected market behavior — that warrant building or testing? Document any genuine finding in notes/journal.md + backlog if actionable. If nothing material, brief note + idle. Don't force findings — only flag genuine ones.
+
+## 2026-07-12T14:42:33Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-12T15:58:46Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-12T16:00:02Z — inject
+Sunday weekly long-term review. (1) Pick 2-3 domain slugs from notes/primary_sources.md that haven't been run in the last 4 weeks (check notes/world_state_log.md for last-run timestamps). Available slugs: macro-fiscal-labor, energy-power-infrastructure, critical-minerals-commodities, trade-regulation, tech-ai-chips, biotech-health, geopolitics-security, crypto-on-chain, markets-corporate. Run: python3 scripts/world_state_digest.py --domain <slug1>,<slug2>. (2) For any HIGH/MED-confidence themes surfaced, run scripts/longterm_check.py on the top 1-2 candidate tickers to vet for entry. (3) Update notes/longterm_watchlist.md with new candidates + flag any existing candidates whose entry triggers were hit. (4) Journal + Telegram tick summary.

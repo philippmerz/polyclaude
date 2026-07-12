@@ -919,3 +919,142 @@ The 5,000–6,000 MT deficit is relatively small (6% of quota) and is visible to
 - Copper (structural deficit but 5–10 year timeline; no near-term catalyst)
 - Natural gas (well-supplied, fairly priced; storage buildup reduces upside surprise)
 ```
+
+---
+
+## 2026-07-12T16:05:20Z — world_state_digest
+
+**Domains:** macro-fiscal-labor, tech-ai-chips, crypto-on-chain | **Lookback:** 30d | **Model:** haiku
+
+```
+# WORLD-STATE DIGEST — 2026-07-12
+
+Domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### macro-fiscal-labor
+
+- [2026-06-16] Fed FOMC: Policy rate held 3.50%-3.75% (unchanged). Chair Warsh's first meeting. Dot plot median year-end 2026: 3.8% (up from 3.4% in March). Participants split: 9 expect ≥1 hike, 8 expect no change, 1 expects cut. Statement language removed easing bias (hawkish shift).
+- [2026-07-02] BLS Jobs Report (June 2026): Nonfarm payrolls +57,000 (vs consensus 115,000). Prior months revised down: May -43,000, April -31,000. Unemployment rate 4.2% (unchanged). Labor force participation fell 0.3pp to 61.5% (lowest since March 2021). Avg hourly earnings +0.3% monthly, +3.5% YoY. Industries: Professional/business +36k, healthcare +22k, government +8k, leisure/hospitality -61k.
+- [2026-06-10] BLS CPI (May 2026): Headline CPI +0.5% MoM, +4.2% YoY (3rd consecutive monthly acceleration). Energy +23.5% MoM (Iran shock). Core CPI +0.2% MoM, +2.9% YoY (highest since Sept 2025).
+- [2026-06-11] ECB Governing Council: Raised main refinancing rate 25bp to 2.40%; deposit facility to 2.25%; marginal lending to 2.65% (first hike since 2023). Headline inflation 3.2% (highest since 2023), core 2.5% (vs 2.2% April). Staff projections: headline 3.0% (2026), 2.3% (2027), 2.0% (2028); core 2.5% (2026-27), 2.2% (2028).
+- [2026-06-16] Bank of Japan: Policy rate raised 25bp to 1.0% (highest since 1995). Japan wholesale inflation 6.3% (May, highest since March 2023). Deputy Governor Himino: will continue hiking toward 2% neutral rate; if inflation risks intensify, will accelerate pace.
+- [2026-06-29] PBOC: Launched overnight reverse repo at 1.25%, injecting ¥300B. Signals de facto rate cut and potential framework shift to overnight repo as policy-rate proxy (vs headline rate cuts). Policy stance remains "moderately loose."
+- [2026-07-02] US Treasury Yield Curve: 10Y at 4.49%, 2Y at 4.14% (10-2 spread ~46bp). Curve normal and upward-sloping (exited inversion late 2024 after 27-month span). NY Fed recession model ~25% recession probability by Nov 2026.
+- [2026-Q1] BEA GDP: Q1 2026 real GDP +2.1% annualized (third estimate). Q2 2026 data not yet released (scheduled Aug 26).
+
+### tech-ai-chips
+
+- [2026-05-20] NVIDIA Q1 FY2027 Earnings: Revenue $81.6B (up 85% YoY, up 20% QoQ). Data Center revenue $75.2B (up 92% YoY). Announced $80B additional share buyback authorization. Quarterly dividend increased from $0.01 to $0.25/share.
+- [2026-05] TSMC Monthly Revenue: NT$416.98B (May), up 1.5% MoM, up 30.1% YoY.
+- [2026] TSMC 2026 Capex Guidance: $52B-$56B (up 32% vs 2025), expecting to hit high end. Allocation: 70-80% advanced process (N3, N2, future nodes), 10-20% advanced packaging/mask, ~10% specialty technologies.
+- [2026-Q1] ASML Q1 2026: Record EUV system backlog 45 units (orders from TSMC, Samsung Foundry, Intel Foundry for 2nm+). Raised 2026 revenue guidance to €36B-40B (vs €34B-39B prior). Can ship 60 low-NA EUV tools in 2026 (25% increase vs 2025); capacity for 80 in 2027.
+- [2026-mid-year] Memory Chip Market: Continued shortage, price spikes up to 50% for essential components (Deloitte projection).
+- [2026-06-early-June] Semiconductor Equipment: ASML and peers down 5-6% (investor concerns about order slowdown).
+
+### crypto-on-chain
+
+- [2026-06-01 to 2026-06-30] Ethereum TVL: Declined from $41.86B to $37.21B (temporary dip below $36.2B during selloff). Stablecoin liquidity held >$155B.
+- [2026-06-01 to 2026-06-30] Bitcoin TVL: Declined from $4.83B to $3.94B. Market cap fell from $1.48T to $1.21T.
+- [2026-05] Bitcoin Miner Revenue: ~$1.12B, down ~26% YoY.
+- [2026-06] Bitcoin On-Chain Metrics: NUPL (net unrealized profit/loss) 0.20 (30-day avg, 18th percentile of 4-year distribution). Share of supply in profit fell from 64% to 54% (far below 81% 4-year average).
+- [2026-07-07] Bitcoin Price Recovery: BTC $64,033.85 (up 6.27% weekly). Signals potential shift in institutional sentiment after June outflows.
+- [2026-07] Ethereum Price & Technical: ETH trading near $1,570 (multi-month lows). First occurrence of three consecutive red quarterly candles in ETH history. 14-day MA ~420k (down ~46%).
+- [2026-mid-June] DeFi TVL Aggregate: $71.77B across all chains (down 37.3% YTD). Ethereum $38.24B (53.1% of total DeFi TVL).
+- [2026-06] Stablecoin Supply: $314B circulating (4.4x total DeFi TVL).
+- [2026-06] Real-World Assets (RWA) TVL: $26.01B aggregate (only major DeFi category with institutional inflow momentum).
+- [2026-07-03] DeFi TVL Recovery: $73.9B across 455 listed chains (slight recovery from mid-June).
+
+## CANDIDATE THEMES
+
+### A. Fed Hawkish Pivot / Rates Repricing (SHORT bonds, SHORT duration)
+
+- Underlying facts: Fed dot plot median year-end 2026 rate 3.8% (up from 3.4% March). 9/18 participants expect ≥1 hike; Warsh regime removed easing bias language. Fed funds held 3.50%-3.75%.
+- Implication: Market had priced in rate cuts or extended holds. Fed's June pivot signals tightening cycle continuation into H2 2026. Bond complex had rallied on cut expectations; now repricing higher rates. Short-duration bonds (2-5Y) particularly vulnerable. Equities (esp rate-sensitive tech) face headwinds.
+- Possible plays: TBT (short bonds), short 7-10Y Treasuries, inverse Nasdaq (QQQ put spreads), 2Y/10Y flattening trade, financial sector short (NIM compression).
+- Direction: SHORT bonds / SHORT rates-sensitive equities
+- Horizon: weeks to months (next FOMC late July; CPI print July 14 will update inflation narrative)
+- Retail blindspot: Retail anchors on "Fed held rates" headline and misses the dot plot shift (9 vs 1 vs 8 split showing hawkish tilt). Bond professionals catch this immediately; equity retail lags.
+- Confidence: HIGH (dot plot explicit, statement language shift, cross-central bank hawkish alignment)
+
+### B. Global Monetary Tightening Wave (BoJ, ECB, Fed, PBOC all tightening simultaneously)
+
+- Underlying facts: BoJ +25bp to 1.0% (highest '95), ECB +25bp to 2.40% (first hike '23), Fed holding but projecting hikes, PBOC de facto tightening via overnight repo. Inflation: Japan 6.3%, eurozone 3.2%, US 4.2%, all accelerating.
+- Implication: Synchronized global tightening (rare). Discount rates rising across all regions = asset prices compress (esp growth-sensitive). High-multiple equities, cryptocurrencies, emerging-market junk bonds all vulnerable. No safe haven in terms of valuation—all repricing.
+- Possible plays: Short ARKK (high-beta growth), short crypto (BTC/ETH leverage shorts), short EM junk bonds (EMHY), long US defensives (XLU, XLP), long gold/commodities (inflation hedge + carry unwind).
+- Direction: SHORT high-beta / growth, LONG defensives + commodities
+- Horizon: months to quarters (this is the structural 2026 repricing)
+- Retail blindspot: Retail trades single-country narratives ("Fed easing" OR "ECB tightening"). They miss that ALL major central banks are hiking = synchronized global repricing. This is not priced into retail sentiment yet.
+- Confidence: HIGH (independent signals from Fed, ECB, BoJ, PBOC; cross-asset momentum in rate curve shifts)
+
+### C. Labor Market Softening / Participation Cliff (Recession Risk)
+
+- Underlying facts: June jobs +57k vs 115k forecast; May revised down -43k, April -31k (3 misses in a row). Unemployment held 4.2% only via participation fall to 61.5% (lowest since March 2021). Participation falling 0.3pp monthly at accelerating rate.
+- Implication: Retail narrative "unemployment 4.2%, labor tight" is masking participation collapse. Job growth stalling. Participation decline is structural (demographics, early retirements post-COVID). Eventually forces recession and Fed cuts, but first bonds/equities reprice on growth fears. Yield curve already flattened (10-2 spread 46bp), recession probability models show 25% by Nov 2026.
+- Possible plays: Long 10Y Treasuries (TLT), long AGG, volatility (VXX), short cyclical equities (XLY, industrials), short financial stocks (rates flattening = NIM compression).
+- Direction: LONG bonds / LONG defensives, SHORT cyclicals
+- Horizon: months (plays out Q3-Q4 as data rolls in and market reprices recession risk)
+- Retail blindspot: Retail sees 4.2% unemployment and calls it "strong." Professionals track participation (fell 0.3pp, lowest since March '21) and know this is the leading indicator of demand collapse. Participation is non-consensus data point.
+- Confidence: MEDIUM-HIGH (factual basis strong: 3 payroll misses, participation cliff), but timing/recession trigger uncertain
+
+### D. Semiconductor Capex Front-Loading / Demand Cycle Peak (LONG semis near-term, FADE H2)
+
+- Underlying facts: TSMC capex targeting $56B high-end (up 32%), 70-80% to advanced nodes. ASML EUV backlog record 45 units, 2026 revenue raised €36-40B. NVIDIA $81.6B revenue (+85% YoY), $80B buyback announced. Memory chip shortage with 50% price spike. Capex cycle driven by AI H1 front-loading.
+- Implication: AI capex is being pulled forward into H1/early H2 2026. Supply ramps. Historical fab capex cycles (TSMC/Samsung/Intel) lead to overcapacity 12-18 months post-announcement. Margins compress; CapEx reductions follow. Semis are in demand-pull-forward phase NOW; supply-glut risk escalates late H2.
+- Possible plays: LONG ASML, LRCX, SMH (semis ETF), NVDA through Q2-Q3. SHORT memory chip makers (Samsung, SK Hynix, Micron) on margin compression risk late 2026. FADE into late H2.
+- Direction: LONG semis (near-term), SHORT memory (structural margin squeeze), FADE semis into H2
+- Horizon: weeks to months (capex announcement window is June-Sept; fade risk accelerates late H2 2026)
+- Retail blindspot: Retail sees "AI boom" and buys semis for eternity. Professionals track capex cycles and know demand pull-forward → supply glut → margin compression. Cycle timing is the alpha; retail misses the fade.
+- Confidence: MEDIUM (facts support near-term strength; late-2026 fade is speculative but historically repeatable pattern)
+
+### E. Crypto Capitulation → Whale Accumulation Signal (LONG BTC/ETH recovery play)
+
+- Underlying facts: Bitcoin NUPL 0.20 (18th percentile of 4-year), miner revenue down 26% YoY, share of supply in profit fell 64%→54%. Ethereum TVL down hard, first 3-red-quarter candles in history. BUT BTC recovered to $64k (+6.27% weekly) signaling institutional re-entry. Stablecoin supply $314B (dry powder available).
+- Implication: On-chain metrics show retail capitulated (NUPL extreme low, miner selling capitulation, profit ratio compressed). Hard recovery in BTC (week of July 7) signals whale/institutional accumulation. Classic capitulation → recovery pattern. Stablecoin liquidity ($155B+ on Ethereum, $314B total) provides fuel for next leg up. Macro headwinds (rate hikes) are overhang, but on-chain positioning suggests institutional demand is real.
+- Possible plays: LONG BTC (spot or GBTC, MicroStrategy, MSTR), LONG ETH (more damaged, higher upside on institutional return), LONG stablecoin yields (RWA protocols benefiting from institutional deposit flow).
+- Direction: LONG crypto (BTC → ETH)
+- Horizon: weeks to months (capitulation recoveries can be fast; 3-6 month visibility; macro rate headwinds are ceiling)
+- Retail blindspot: Retail capitulated and sold BTC at $1.21T market cap lows. They see three red quarterly candles and panic. Whales with dry powder buy dip. On-chain data (NUPL, miner behavior, capital flows) is non-consensus and tracked only by professionals.
+- Confidence: MEDIUM-HIGH (on-chain metrics align: NUPL, miner capitulation, institutional inflows), but global rate hikes and potential recession could overwhelm near-term recovery upside
+
+### F. Real-World Assets (RWA) Institutional Yield Capture (LONG RWA protocols / stablecoin yield)
+
+- Underlying facts: RWA TVL $26B aggregate, "only major DeFi category with institutional inflow momentum." Stablecoin supply $314B (4.4x DeFi TVL). Fed funds 3.75%, money market yields 5%+; base rates high.
+- Implication: Institutions seeking yield on stablecoins (USDC, USDT, UST) via RWA protocols (Goldfinch, Maple, Aave RWA vaults). Crypto is the only venue offering institutional-grade collateral + tokenized yield that bypasses traditional finance plumbing and payment rails. Stablecoin supply growth + rate persistence = structural tailwind for RWA. This is institutional, not retail; positioning is early.
+- Possible plays: LONG RWA-heavy protocols (Goldfinch, Aave governance on RWA growth), LONG stablecoin supply growth via derivatives (Perps), collateral tokens (wBTC, stETH if used in RWA collateral baskets).
+- Direction: LONG RWA / stablecoin yield
+- Horizon: months to quarters (institutional adoption cycles are slow, but once rolling self-reinforce; this is a multi-year trend)
+- Retail blindspot: Retail is trading spot BTC/ETH fear; institutions are quietly moving stablecoins into RWA vaults for 5-10% yield. RWA is not a meme-coin; it's boring institutional infrastructure. Retail doesn't see it.
+- Confidence: MEDIUM (trend supports hypothesis—RWA TVL growing, stablecoin supply high, rate environment supports yield demand), but exposure is niche and hard to scale retail
+
+### G. EUR Weakness / Carry Trade Unwind Risk (SHORT EUR, LONG USD / high-yield carry)
+
+- Underlying facts: ECB hikes (2.40% main refinancing) but from lower base than Fed (3.75%) and BoJ (1.00% but catching up). Eurozone inflation 3.2% vs US 4.2% (but ECB started tightening cycle later). Energy shock (Iran war) hits Europe harder than US (geography). Yield curve: US 10-2 spread 46bp (positive but flat); eurozone curves steeper but on rising base.
+- Implication: EUR benefited from ECB rate support in June, but real rates (nominal - inflation) are still lower than Fed's. If eurozone growth disappoints (war shock, energy costs) OR if Fed + BoJ outpace ECB in tightening (likely), EUR re-weakens. Carry trades funded in EUR (borrow EUR, invest in higher-yield assets like EM, duration) could unwind sharply. Geopolitical risk (Iran war) adds volatility.
+- Possible plays: SHORT EUR/USD pair, LONG USD (via DXY), SHORT EUR-funded EM carry (short EM equities, short long-duration emerging bonds), SHORT JPY carry if BoJ stops hiking (OR LONG JPY if BoJ keeps going—BoJ most aggressive central bank right now).
+- Direction: SHORT EUR, LONG USD, volatile on BoJ / war geo developments
+- Horizon: weeks to months (FX momentum can be fast once it starts; geopolitical risk adds volatility)
+- Retail blindspot: Retail thinks "ECB hikes = EUR strong." Professionals track real rates, growth differentials, and geopolitical risk. EUR's real rates still lag Fed after inflation adjustment; growth risk in eurozone is real (energy shock + weak labor market).
+- Confidence: MEDIUM (structurally correct but timing uncertain; macro can whipsaw short-term)
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: NVDA, TSMC, ASML, TBT, ARKK, BTC, ETH, GBTC, MSTR
+- Run catalyst_check.py on: July 14 CPI release (inflation narrative), July FOMC minutes (July 31 release), Aug 2 PCE data, Aug 26 Q2 GDP release
+- Skip / pass: Semiconductor overcapacity thesis (Theme D) — factual basis strong for H1 strength, but H2 2026 fade is timing-dependent, recommend watch-and-hold; EUR carry unwind (Theme G) — structurally sound but geopolitical volatility makes near-term direction noisy, recommend trailing stop if short.
+- Cross-reference: Themes A (Fed tightening), B (global central bank tightening), D (semis capex cycle), E (crypto capitulation), F (RWA institutional flows) likely already tracked in longterm_watchlist.md; confirm exposure and rebalance if positions outdated. Themes C (labor participation cliff) and G (EUR carry) are lower-consensus; higher alpha if correctly sized.
+```
+
+Sources:
+- [BLS Jobs Report June 2026](https://www.bls.gov/news.release/empsit.htm)
+- [Federal Reserve FOMC Statement June 2026](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm)
+- [ECB Monetary Policy Decision June 2026](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260611~4d41bd5e83.en.html)
+- [Bank of Japan Policy Rate Decision](https://www.boj.or.jp/en/announcements/index.htm)
+- [NVIDIA Q1 FY2027 Earnings](https://investor.nvidia.com/financial-info/financial-reports/default.aspx)
+- [TSMC 2026 Capex Guidance](https://www.sec.gov/Archives/edgar/data/1046179/000104617926000199/a1q26e_withguidancexfinal.htm)
+- [ASML Q1 2026 Earnings](https://www.sec.gov/Archives/edgar/data/0000937966/000162828026025147/pressreleasefinancialresul.htm)
+- [BLS CPI May 2026](https://www.bls.gov/news.release/cpi.nr0.htm)
+- [Bitcoin On-Chain Metrics June 2026](https://cryip.co/blockchain-on-chain-metrics-ethereum-bitcoin-solana-bsc-tron-base-monthly-analysis-june-2026/)
+- [DefiLlama TVL Data](https://defillama.com/)
+- [US Treasury Yield Curve Analysis](https://www.advisorperspectives.com/dshort/updates/2026/07/02/treasury-yields-snapshot-july-2-2026)
