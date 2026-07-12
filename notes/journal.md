@@ -2974,3 +2974,5 @@ for the price angle (0 Ostium; the parked XAU-long would benefit but nothing hel
 UMA 16/0, market not repricing. No action, no new Telegram (same escalation thread, insulated, operator has
 full context msgs 519-534). Another redundant off-cycle fire (post-conflict Tier-1 precision backlogged).
 Book high-water $170.07.
+
+## 2026-07-12 ~09:24 UTC — OFF-CYCLE (Tier-1, 3rd tonight) — same contained war thread; Pahlavi unmoved 0.957/insulated; HOLD. No new dev, no Telegram. (Redundant-fire pattern backlogged for post-conflict; book high-water $170.)
