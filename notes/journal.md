@@ -3010,3 +3010,5 @@ result (visible candidates beta/tracked/mid-cycle). Trigger changes (all IBKR-su
 oversupply tension (entry needs lithium >$20/kg; a supply fade = "cheaper=thesis-eroding" not better entry —
 operator to weigh spot). CEG/NVDA/PLTR off. longterm_watchlist + world_state_log updated. Telegram msg 539.
 No polyclaude capital (all IBKR/beta).
+
+## 2026-07-12 ~22:55 UTC — OFF-CYCLE (Tier-1) — same contained Iran/Hormuz thread (US strikes/boats/Gulf/closure-dispute); Pahlavi unmoved 0.957/insulated; HOLD, no action, no Telegram. Book high-water $170.
