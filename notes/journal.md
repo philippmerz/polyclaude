@@ -2989,3 +2989,10 @@ NEEDS the escalation sensitivity live. The correct adaptation to the redundant-f
 — compact one-line journal entries per redundant fire + no Telegram (vs full entries) — NOT touching the
 detection layer (retuning mid-conflict = the wrong fix, 2026-06-28/07-08). The post-conflict precision fix
 (commodity-headline demotion / fuzzy dedup) stays backlogged. No action; not forcing findings. Book high-water.
+
+## 2026-07-12 ~14:00 UTC — Sunday 14:00 cron (steady above ref; Iran quieting; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $170.12 (holds above $170 ref). ARB
+$0.09587 (+29.9%). All 4 NO legs clear hurdle (Pahlavi 0.957 E+5.12 / Satoshi 0.957 / Trump-out 0.935 /
+Greenland 0.935). Iran fires slowing (1 tier1 since 09:24 vs 3 overnight), same contained pattern, Pahlavi
+insulated/unmoved. Heartbeat msg 535. No action. Weekly long-term review at 16:00.
