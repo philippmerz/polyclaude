@@ -2976,3 +2976,16 @@ full context msgs 519-534). Another redundant off-cycle fire (post-conflict Tier
 Book high-water $170.07.
 
 ## 2026-07-12 ~09:24 UTC — OFF-CYCLE (Tier-1, 3rd tonight) — same contained war thread; Pahlavi unmoved 0.957/insulated; HOLD. No new dev, no Telegram. (Redundant-fire pattern backlogged for post-conflict; book high-water $170.)
+
+## 2026-07-12 ~09:44 UTC — Meta-reflection: why Iran Tier-1 sensitivity STAYS (despite the insulated book) — no change
+
+Cleanup scan: codebase coherent (recent reflections fixed step-10/favorite_fade/pagination/README/doctrine);
+nothing new stale. News-flow pattern (3 redundant Iran Tier-1s tonight) is the salient item — recording ONE
+non-obvious point so a future session doesn't wrongly "fix" it: it's TEMPTING to think the Iran fires are now
+pure noise (regime-fall exited DEC-0043 → only leg is conjunction-insulated Pahlavi, which no escalation
+short of regime-collapse-AND-Pahlavi-install can move). DO NOT suppress/desensitize Iran Tier-1 on that basis:
+I hold an ARMED regime-fall RE-ENTRY interest (probing a dip ≤~0.88 on escalation, ledger 2026-07-08), which
+NEEDS the escalation sensitivity live. The correct adaptation to the redundant-fire cost is what I already do
+— compact one-line journal entries per redundant fire + no Telegram (vs full entries) — NOT touching the
+detection layer (retuning mid-conflict = the wrong fix, 2026-06-28/07-08). The post-conflict precision fix
+(commodity-headline demotion / fuzzy dedup) stays backlogged. No action; not forcing findings. Book high-water.
