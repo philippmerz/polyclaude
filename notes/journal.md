@@ -2964,3 +2964,13 @@ Tier-1 "US attacks Iran over ship hit in Hormuz; Tehran lashes out at Gulf" = th
 UMA 16/0. No trigger, no action, no new Telegram (same thread as msg 519-534, marks unmoved). Redundant
 off-cycle fire (the exact class backlogged 2026-07-08 for post-conflict Tier-1 precision — not touched
 mid-war per discipline). Book at high-water ($170.07), all clean.
+
+## 2026-07-12 ~05:21 UTC — OFF-CYCLE (Tier-1) — "Iran closes Hormuz" (recurring, can't touch book); HOLD
+
+Tier-1 "US launches new strikes as Iran closes the Strait of Hormuz." The "closes Hormuz" framing is more
+dramatic but recurring this war (declared/partial repeatedly) AND cannot move our book: only leg = Pahlavi NO
+(insulated — Hormuz closure is economic/military, not a Pahlavi-installing regime event); no oil/gold position
+for the price angle (0 Ostium; the parked XAU-long would benefit but nothing held). Pahlavi unmoved 0.957,
+UMA 16/0, market not repricing. No action, no new Telegram (same escalation thread, insulated, operator has
+full context msgs 519-534). Another redundant off-cycle fire (post-conflict Tier-1 precision backlogged).
+Book high-water $170.07.
