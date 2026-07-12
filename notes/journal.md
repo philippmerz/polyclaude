@@ -2947,3 +2947,12 @@ points to the analysis, states no weekly re-run is needed, and notes a fresh pro
 OPTIONAL (finding twice-validated → low marginal value; don't auto-run). Nothing else material: the ARB
 add-decision + methodology conclusion + pagination fix are all closed/encoded; book at high-water, all legs
 clearing, guards clean. Not forcing findings.
+
+## 2026-07-12 ~02:00 UTC — Sunday 02:00 cron — MILESTONE: bankroll $170.07 (back above ref); all clean, no action
+
+BANKROLL $170.07 = first time ABOVE the $170 reference since the drawdown (late-June low was -4.6%). Full
+recovery + green vs kickoff-reference. Driver: ARB $0.09639 = +30.6% vs entry (delegated post-unlock +
+fee-switch thesis compounding; still climbing, above the ~0.075-0.08 retrace-add zone → no add, armed).
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. NO legs: Satoshi 0.958 (E+7.09) / Greenland 0.930
+(E+10.27) / Trump-out 0.935 (E+7.95) clear; Pahlavi 0.958 flagged just-sub-hurdle (E+4.99, noise, hold-only).
+Iran quiet (5 tier-2, no critical). Heartbeat msg 534. No action. Weekly long-term review at the 16:00 slot.
