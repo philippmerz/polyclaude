@@ -3040,3 +3040,13 @@ menu). Can't self-verify (client-side change) → asked operator to confirm the 
 2-sec manual /model fallback. No trading impact (book unchanged, all clean).
 
 ## 2026-07-13 ~23:29 UTC — OFF-CYCLE (Tier-1) — 3rd night of strikes + renewed US blockade/tolls; Trump "deal still possible" (mildly de-escalatory note); Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no action, no Telegram.
+
+## 2026-07-13 ~23:50 UTC — Meta-reflection: memory hygiene for the Fable re-extension (no repo change)
+
+Genuine finding (small): the operator's model switch to Fable (trial re-extended, ops commit b51665a) made
+two MEMORY entries half-stale — cron-autonomy said "invokes --model opus" (now: pane=Fable, headless fallback
+DELIBERATELY stays opus-4-8 so a lapsed trial can't silently burn API), and the January-scale memory treated
+"Fable inaccessible after days" as fixed (now: extensions may keep coming → model-economics assumption
+softened, noted). Both memories updated (outside repo, no commit needed for them). Repo itself coherent —
+daily_checkin's opus fallback is CORRECT as-is, not drift. Nothing else material: no new alpha (redundant
+Iran fires documented; weekly review concluded no-candidate honestly); no stale code. Not forcing findings.
