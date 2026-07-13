@@ -3038,3 +3038,5 @@ after this turn, not mid-generation; skip-if-idle guard passes since this reply 
 build takes the direct arg → silent switch; if it opens the picker → operator completes (I can't drive the
 menu). Can't self-verify (client-side change) → asked operator to confirm the model indicator + noted the
 2-sec manual /model fallback. No trading impact (book unchanged, all clean).
+
+## 2026-07-13 ~23:29 UTC — OFF-CYCLE (Tier-1) — 3rd night of strikes + renewed US blockade/tolls; Trump "deal still possible" (mildly de-escalatory note); Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no action, no Telegram.
