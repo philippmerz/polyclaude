@@ -3012,3 +3012,10 @@ operator to weigh spot). CEG/NVDA/PLTR off. longterm_watchlist + world_state_log
 No polyclaude capital (all IBKR/beta).
 
 ## 2026-07-12 ~22:55 UTC — OFF-CYCLE (Tier-1) — same contained Iran/Hormuz thread (US strikes/boats/Gulf/closure-dispute); Pahlavi unmoved 0.957/insulated; HOLD, no action, no Telegram. Book high-water $170.
+
+## 2026-07-13 ~02:00 UTC — Monday 02:00 cron (steady; ARB pullback to +25%; all clean, no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.21 (-0.5% vs ref). ARB $0.09245 =
++25.3% (pulled back -4% on the day, still far above the ~0.075-0.08 retrace-add zone → no add). All 4 NO legs
+clear hurdle (Pahlavi 0.958 E+5.02 / Satoshi 0.957 / Greenland 0.935 / Trump-out 0.925). Iran quiet (3 tier-2
+since 22:55, no critical). Heartbeat msg 540. No action.
