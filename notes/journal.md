@@ -3028,3 +3028,13 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.50 (-0.3%
 (+27.1%, no add — far above retrace zone). All 4 NO legs clear hurdle (Pahlavi 0.958 / Satoshi 0.958 /
 Greenland 0.935 / Trump-out 0.925). Iran contained (3 tier-2 since 05:39, no non-Iran critical). Heartbeat
 msg 542. No action. Mojtaba-seen (ledger) resolves ~Jul-15.
+
+## 2026-07-13 ~15:53 UTC — Operator-requested model switch to Fable (trial re-extended to Jul-19)
+
+Operator (TG msg 545): Fable trial extended to Jul-19, switch back to fable. Diagnosis: my pane LAUNCHED with
+--model fable (ps confirms) but fell back to Opus when the trial lapsed (stays on fallback until re-selected).
+Method: queued `/model fable` via scripts/inject_prompt.sh (backgrounded — waits for pane-idle so it fires
+after this turn, not mid-generation; skip-if-idle guard passes since this reply isn't an idle reply). If the
+build takes the direct arg → silent switch; if it opens the picker → operator completes (I can't drive the
+menu). Can't self-verify (client-side change) → asked operator to confirm the model indicator + noted the
+2-sec manual /model fallback. No trading impact (book unchanged, all clean).
