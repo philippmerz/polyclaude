@@ -3019,3 +3019,5 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.21 (-0.5%
 +25.3% (pulled back -4% on the day, still far above the ~0.075-0.08 retrace-add zone → no add). All 4 NO legs
 clear hurdle (Pahlavi 0.958 E+5.02 / Satoshi 0.957 / Greenland 0.935 / Trump-out 0.925). Iran quiet (3 tier-2
 since 22:55, no critical). Heartbeat msg 540. No action.
+
+## 2026-07-13 ~05:39 UTC — OFF-CYCLE (Tier-1) — same contained Iran/Hormuz thread (near-verbatim re-report of 22:55); Pahlavi unmoved 0.958/insulated; HOLD, no action, no Telegram. Book $169.
