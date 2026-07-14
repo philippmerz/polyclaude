@@ -3061,3 +3061,5 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $168.70 (-0.8%
 ## 2026-07-14 ~03:42 UTC — OFF-CYCLE (Tier-1) — 3rd-night-strikes wrap re-reports + Trump Gulf-payment rhetoric; Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no action, no Telegram.
 
 ## 2026-07-14 ~06:55 UTC — OFF-CYCLE (Tier-1) — same 3rd-night thread re-report (+Trump Hormuz-fee plan = rhetoric); Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no action, no Telegram.
+
+## 2026-07-14 ~09:12 UTC — OFF-CYCLE (Tier-1) — Iranian cruise missiles on UAE tankers (recurring Gulf-shipping pattern) + 3rd-night strikes; Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no Telegram. Note: risk-asset rout pressuring crypto (BTC ~$62K) — if ARB retraces toward ~$0.075-0.08 the armed add wakes up; ticks monitor.
