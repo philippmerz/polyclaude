@@ -3057,3 +3057,5 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $168.70 (-0.8%
 (+21.6%, easing — far above retrace zone). All 4 NO legs clear (Pahlavi 0.958 / Greenland 0.935 / Satoshi
 0.947 / Trump-out 0.925). Quiet night (1 alert since 23:29). Heartbeat msg 544. No action. Mojtaba-seen
 (ledger record) resolves ~Jul-15.
+
+## 2026-07-14 ~03:42 UTC — OFF-CYCLE (Tier-1) — 3rd-night-strikes wrap re-reports + Trump Gulf-payment rhetoric; Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no action, no Telegram.
