@@ -3063,3 +3063,10 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $168.70 (-0.8%
 ## 2026-07-14 ~06:55 UTC — OFF-CYCLE (Tier-1) — same 3rd-night thread re-report (+Trump Hormuz-fee plan = rhetoric); Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no action, no Telegram.
 
 ## 2026-07-14 ~09:12 UTC — OFF-CYCLE (Tier-1) — Iranian cruise missiles on UAE tankers (recurring Gulf-shipping pattern) + 3rd-night strikes; Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no Telegram. Note: risk-asset rout pressuring crypto (BTC ~$62K) — if ARB retraces toward ~$0.075-0.08 the armed add wakes up; ticks monitor.
+
+## 2026-07-14 ~14:00 UTC — Tuesday 14:00 cron (steady; Mojtaba unresolved until after Jul-15; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.19 (-0.5% vs ref). ARB $0.09148
+(+24.0%, rout eased, above add zone). All 4 NO legs clear (Pahlavi 0.958 / Satoshi 0.956 / Greenland 0.935 /
+Trump-out 0.925). Iran contained (7 alerts since 09:12, no non-Iran critical). Mojtaba-seen market still open
+(resolves after the Jul-15 deadline → ledger outcome then). Heartbeat msg 548. No action.
