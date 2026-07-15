@@ -308,6 +308,23 @@ def main() -> int:
         mark = gamma_mark
         print(f"  [mark] live ask unavailable; falling back to gamma mid {gamma_mark:.4f}")
 
+    # Taker-fee awareness (2026-07-15 new-listing study): 2026-vintage listings
+    # carry taker fees — per-share fee = (takerBaseFee bps) × min(p, 1−p), the
+    # documented CLOB proceeds formula. The legacy book is fee-free (field None),
+    # but new listings we instance-gate are not (observed 1000bps on sports/crypto
+    # series). All economic math (Kelly, robust gate, profit) runs on the
+    # EFFECTIVE per-share cost; only the CLOB limit price stays at the real ask
+    # (the exchange charges the fee on top).
+    try:
+        taker_bps = int(float(m.get("takerBaseFee") or 0))
+    except Exception:
+        taker_bps = 0
+    fee_per_share = (taker_bps / 10000.0) * min(mark, 1.0 - mark) if taker_bps > 0 else 0.0
+    cost_eff = mark + fee_per_share
+    if fee_per_share:
+        print(f"  [fee] takerBaseFee={taker_bps}bps → {fee_per_share*100:.2f}c/share taker fee; "
+              f"effective cost {cost_eff:.4f} (ask {mark:.4f}) — gate + sizing run on effective cost")
+
     # Resolve P(side wins)
     my_p = args.my_p
     if my_p is None and not args.skip_catalyst_check:
@@ -340,8 +357,8 @@ def main() -> int:
         print(f"DECISION: NEED_REVIEW — no P estimate provided")
         return 2
 
-    # Kelly sizing
-    kelly_dollar, details = kelly_size(mark, my_p, args.bankroll, args.kelly_frac,
+    # Kelly sizing (on effective cost — fee-adjusted when the market charges one)
+    kelly_dollar, details = kelly_size(cost_eff, my_p, args.bankroll, args.kelly_frac,
                                         args.rho, args.cluster_frac)
 
     deploy_dollar = args.usd if args.usd is not None else kelly_dollar
@@ -349,8 +366,8 @@ def main() -> int:
         print(f"\nDECISION: SKIP — Kelly size ${deploy_dollar:.2f} < $1 (no edge or marginal)")
         return 0
 
-    shares = deploy_dollar / mark
-    profit_if_win = shares * (1.0 - mark)
+    shares = deploy_dollar / cost_eff
+    profit_if_win = shares * (1.0 - cost_eff)
 
     # Robust-edge gate (2026-05-29: replaces the retired flat 10pp edge bar).
     # The edge bar was relaxed to "positive EV after op-cost" — but EV computed
@@ -363,9 +380,9 @@ def main() -> int:
     # phantom floor. op_cost ≈ haiku catalyst_check (~$0.02) + gas + slippage.
     OP_COST = 0.05
     p_robust = my_p - args.edge_haircut
-    ev_robust = shares * (p_robust - mark)  # EV of position at pessimistic p
-    ev_central = shares * (my_p - mark)
-    if p_robust <= mark or ev_robust <= OP_COST:
+    ev_robust = shares * (p_robust - cost_eff)  # EV at pessimistic p, fee-adjusted cost
+    ev_central = shares * (my_p - cost_eff)
+    if p_robust <= cost_eff or ev_robust <= OP_COST:
         print(f"\nDECISION: SKIP — edge not robust to estimation error.")
         print(f"  central p={my_p:.4f} → EV ${ev_central:+.2f}; "
               f"pessimistic p={p_robust:.4f} (haircut {args.edge_haircut:.2f}) → EV ${ev_robust:+.2f}")
@@ -376,7 +393,9 @@ def main() -> int:
         return 0
 
     print(f"\n=== KELLY ANALYSIS ===")
-    print(f"  Buying {side} @ ${mark:.4f}, P({side} wins) = {my_p:.4f}")
+    print(f"  Buying {side} @ ${mark:.4f}"
+          + (f" (effective {cost_eff:.4f} incl. taker fee)" if fee_per_share else "")
+          + f", P({side} wins) = {my_p:.4f}")
     print(f"  Edge: {details['edge_pp']:+.2f}pp")
     print(f"  Full Kelly: {details['full_kelly']*100:.1f}% of bankroll")
     print(f"  ρ-discount: {details['rho_disc']:.4f} (ρ={args.rho}, cluster_frac={args.cluster_frac})")
@@ -391,8 +410,8 @@ def main() -> int:
     print(f"\n  Sensitivity (full-Kelly under p ±0.05):")
     for delta_p in (-0.10, -0.05, +0.05):
         p_alt = max(0.001, min(0.999, my_p + delta_p))
-        if p_alt > mark:
-            full_alt = (p_alt - mark) / (1.0 - mark)
+        if p_alt > cost_eff:
+            full_alt = (p_alt - cost_eff) / (1.0 - cost_eff)
             size_alt = full_alt * details['rho_disc'] * args.kelly_frac * args.bankroll
             print(f"    p={p_alt:.4f} ({delta_p:+.2f}): full_K={full_alt*100:.1f}% → ${size_alt:.2f}")
         else:
@@ -421,7 +440,9 @@ def main() -> int:
         buy_price = round(math.ceil(round(buy_price * 100, 6)) / 100, 2)
     buy_price = min(buy_price, 0.99)  # never post above 0.99
     # Integer shares × on-grid 2-dec price → clean maker (2-dec) / taker (int).
-    target_shares = max(1, round(deploy_dollar / buy_price))
+    # Fee-bearing markets: size shares off (price + fee) so the CASH outlay
+    # (notional + exchange fee) stays within the deploy budget.
+    target_shares = max(1, round(deploy_dollar / (buy_price + fee_per_share)))
     clean_usd = round(target_shares * buy_price, 2)
     print(f"\n# Executing BUY {target_shares} shares ({side}) @ {buy_price} (tick {tick}) for ${clean_usd}")
 

@@ -1,0 +1,149 @@
+# loaded 1100 rows
+# no_hist (never traded on CLOB despite vol>=floor): 9
+# after series=exclude, life>=120.0h, family=None: N=833
+
+== availability: markets with a (fresh) price at each age ==
+  T+0.25h: fresh=   6 any=   6 / 833
+  T+ 0.5h: fresh= 787 any= 787 / 833
+  T+   1h: fresh= 829 any= 829 / 833
+  T+   2h: fresh= 832 any= 832 / 833
+  T+   3h: fresh= 832 any= 832 / 833
+  T+   6h: fresh= 832 any= 832 / 833
+  T+  12h: fresh= 832 any= 832 / 833
+  T+  24h: fresh= 832 any= 832 / 833
+  T+  48h: fresh= 832 any= 832 / 833
+  T+  72h: fresh= 832 any= 832 / 833
+  T+  96h: fresh= 832 any= 832 / 833
+  first-print lag min (N=832): p10=16 p25=18 p50=21 p75=24 p90=26
+  first prints in [0.45,0.55]: 79.6%
+
+== calibration by age (outcome0 price vs outcome0 won) ==
+  T+1h: N=829 ECE=22.40pp Brier=0.2149
+    [0.0,0.1) N=  22 impl=  5.2% emp=  0.0% gap= -5.2pp (SE  0.0)
+    [0.1,0.3) N=  79 impl= 23.0% emp=  5.1% gap=-17.9pp (SE  2.5)
+    [0.3,0.5) N= 411 impl= 46.4% emp= 17.3% gap=-29.1pp (SE  1.9)
+    [0.5,0.7) N= 301 impl= 51.0% emp= 34.6% gap=-16.4pp (SE  2.7)
+    [0.7,0.9) N=  13 impl= 77.3% emp= 84.6% gap= +7.3pp (SE 10.0)
+    [0.9,1.0) N=   3 impl= 91.8% emp=100.0% gap= +8.2pp (SE  0.0)
+  T+6h: N=832 ECE=13.54pp Brier=0.1638
+    [0.0,0.1) N= 135 impl=  4.5% emp=  1.5% gap= -3.0pp (SE  1.0)
+    [0.1,0.3) N= 156 impl= 20.2% emp=  9.6% gap=-10.6pp (SE  2.4)
+    [0.3,0.5) N= 349 impl= 43.9% emp= 19.5% gap=-24.4pp (SE  2.1)
+    [0.5,0.7) N= 144 impl= 53.3% emp= 50.7% gap= -2.6pp (SE  4.2)
+    [0.7,0.9) N=  40 impl= 77.2% emp= 70.0% gap= -7.2pp (SE  7.2)
+    [0.9,1.0) N=   8 impl= 94.8% emp=100.0% gap= +5.2pp (SE  0.0)
+  T+24h: N=832 ECE=10.45pp Brier=0.1453
+    [0.0,0.1) N= 201 impl=  3.7% emp=  3.0% gap= -0.7pp (SE  1.2)
+    [0.1,0.3) N= 169 impl= 19.5% emp=  8.3% gap=-11.2pp (SE  2.1)
+    [0.3,0.5) N= 269 impl= 42.5% emp= 22.7% gap=-19.8pp (SE  2.6)
+    [0.5,0.7) N= 124 impl= 54.7% emp= 47.6% gap= -7.1pp (SE  4.5)
+    [0.7,0.9) N=  53 impl= 78.8% emp= 71.7% gap= -7.1pp (SE  6.2)
+    [0.9,1.0) N=  16 impl= 94.7% emp=100.0% gap= +5.3pp (SE  0.0)
+  T+72h: N=832 ECE=8.96pp Brier=0.1308
+    [0.0,0.1) N= 234 impl=  3.3% emp=  1.7% gap= -1.6pp (SE  0.8)
+    [0.1,0.3) N= 179 impl= 18.7% emp= 10.1% gap= -8.6pp (SE  2.2)
+    [0.3,0.5) N= 230 impl= 42.1% emp= 25.7% gap=-16.4pp (SE  2.9)
+    [0.5,0.7) N= 106 impl= 55.9% emp= 40.6% gap=-15.3pp (SE  4.8)
+    [0.7,0.9) N=  66 impl= 79.6% emp= 80.3% gap= +0.7pp (SE  4.9)
+    [0.9,1.0) N=  17 impl= 94.5% emp=100.0% gap= +5.5pp (SE  0.0)
+  T+96h: N=832 ECE=8.92pp Brier=0.1316
+    [0.0,0.1) N= 264 impl=  3.1% emp=  3.8% gap= +0.7pp (SE  1.2)
+    [0.1,0.3) N= 160 impl= 18.7% emp= 10.0% gap= -8.7pp (SE  2.4)
+    [0.3,0.5) N= 195 impl= 42.2% emp= 24.6% gap=-17.6pp (SE  3.1)
+    [0.5,0.7) N= 120 impl= 54.8% emp= 35.0% gap=-19.8pp (SE  4.4)
+    [0.7,0.9) N=  71 impl= 80.0% emp= 80.3% gap= +0.3pp (SE  4.7)
+    [0.9,1.0) N=  22 impl= 94.6% emp= 95.5% gap= +0.9pp (SE  4.4)
+  25%-of-life: N=832 ECE=6.89pp Brier=0.1272
+    [0.0,0.1) N= 286 impl=  3.3% emp=  2.8% gap= -0.5pp (SE  1.0)
+    [0.1,0.3) N= 157 impl= 18.6% emp= 12.1% gap= -6.5pp (SE  2.6)
+    [0.3,0.5) N= 198 impl= 42.0% emp= 26.8% gap=-15.2pp (SE  3.1)
+    [0.5,0.7) N= 110 impl= 55.5% emp= 43.6% gap=-11.9pp (SE  4.7)
+    [0.7,0.9) N=  64 impl= 79.4% emp= 76.6% gap= -2.8pp (SE  5.3)
+    [0.9,1.0) N=  17 impl= 95.5% emp=100.0% gap= +4.5pp (SE  0.0)
+  50%-of-life: N=832 ECE=8.75pp Brier=0.1277
+    [0.0,0.1) N= 270 impl=  3.0% emp=  2.2% gap= -0.8pp (SE  0.9)
+    [0.1,0.3) N= 157 impl= 18.7% emp= 12.7% gap= -6.0pp (SE  2.7)
+    [0.3,0.5) N= 205 impl= 42.2% emp= 23.4% gap=-18.8pp (SE  3.0)
+    [0.5,0.7) N= 111 impl= 54.8% emp= 37.8% gap=-17.0pp (SE  4.6)
+    [0.7,0.9) N=  67 impl= 79.8% emp= 83.6% gap= +3.8pp (SE  4.5)
+    [0.9,1.0) N=  22 impl= 94.5% emp=100.0% gap= +5.5pp (SE  0.0)
+  close-24h: N=116 ECE=3.43pp Brier=0.0235
+    [0.0,0.1) N=  87 impl=  0.9% emp=  1.1% gap= +0.3pp (SE  1.1)
+    [0.1,0.3) N=   5 impl= 15.6% emp=  0.0% gap=-15.6pp (SE  0.0)
+    [0.3,0.5) N=   2 impl= 39.8% emp=  0.0% gap=-39.8pp (SE  0.0)
+    [0.5,0.7) N=   6 impl= 57.3% emp= 83.3% gap=+26.0pp (SE 15.2)
+    [0.7,0.9) N=   2 impl= 87.2% emp=100.0% gap=+12.7pp (SE  0.0)
+    [0.9,1.0) N=  14 impl= 97.5% emp=100.0% gap= +2.5pp (SE  0.0)
+
+  matched N=829: ECE(1h)-ECE(72h) = +13.27pp  95%CI [+9.41,+16.90]
+
+== drift: E[p72 - p_early | p_early bin] (matched markets) ==
+  from T+1h (N=829):
+    [0.0,0.1) N=  22 mean drift= -2.0pp (SE  0.8) |drift|= 3.4pp
+    [0.1,0.3) N=  79 mean drift=-10.2pp (SE  1.6) |drift|=14.5pp
+    [0.3,0.5) N= 411 mean drift=-19.7pp (SE  1.1) |drift|=25.0pp
+    [0.5,0.7) N= 301 mean drift= -7.4pp (SE  1.4) |drift|=19.2pp
+    [0.7,0.9) N=  13 mean drift= +1.4pp (SE  3.0) |drift|= 8.4pp
+    extremization E[|p72-.5|-|p_e-.5|] = +19.6pp
+  from T+6h (N=832):
+    [0.0,0.1) N= 135 mean drift= +3.4pp (SE  1.2) |drift|= 7.1pp
+    [0.1,0.3) N= 156 mean drift= -4.4pp (SE  1.2) |drift|=11.6pp
+    [0.3,0.5) N= 349 mean drift=-10.2pp (SE  1.0) |drift|=15.7pp
+    [0.5,0.7) N= 144 mean drift= -1.6pp (SE  1.7) |drift|=14.4pp
+    [0.7,0.9) N=  40 mean drift= +0.4pp (SE  2.5) |drift|=11.2pp
+    extremization E[|p72-.5|-|p_e-.5|] = +8.2pp
+  from T+24h (N=832):
+    [0.0,0.1) N= 201 mean drift= +3.7pp (SE  0.8) |drift|= 5.6pp
+    [0.1,0.3) N= 169 mean drift= -0.5pp (SE  1.0) |drift|= 9.0pp
+    [0.3,0.5) N= 269 mean drift= -6.5pp (SE  1.0) |drift|=11.3pp
+    [0.5,0.7) N= 124 mean drift= +0.5pp (SE  1.4) |drift|=10.5pp
+    [0.7,0.9) N=  53 mean drift= -5.2pp (SE  2.4) |drift|=11.7pp
+    [0.9,1.0) N=  16 mean drift= -4.2pp (SE  1.9) |drift|= 5.3pp
+    extremization E[|p72-.5|-|p_e-.5|] = +2.9pp
+
+== divergence |p_early - p72| (opportunity frequency proxy) ==
+  T+ 1h vs 72h: N=829 mean=21.0pp >=5pp: 73%  >=10pp: 63%  >=20pp: 50%
+  T+ 6h vs 72h: N=832 mean=13.0pp >=5pp: 58%  >=10pp: 44%  >=20pp: 27%
+  T+24h vs 72h: N=832 mean=9.2pp >=5pp: 45%  >=10pp: 32%  >=20pp: 16%
+  72h vs 50%life: N=832 mean=5.5pp >=10pp: 18%  >=20pp: 9%
+
+== hindsight: mean price of EVENTUAL WINNER at each age (buy-winner cost) ==
+  T+0.25h: N=   6 mean winner price= 80.6c (hindsight multiple 1.24x)
+  T+ 0.5h: N= 787 mean winner price= 52.9c (hindsight multiple 1.89x)
+  T+   1h: N= 829 mean winner price= 55.1c (hindsight multiple 1.81x)
+  T+   2h: N= 832 mean winner price= 59.3c (hindsight multiple 1.69x)
+  T+   3h: N= 832 mean winner price= 60.6c (hindsight multiple 1.65x)
+  T+   6h: N= 832 mean winner price= 64.7c (hindsight multiple 1.55x)
+  T+  12h: N= 832 mean winner price= 67.0c (hindsight multiple 1.49x)
+  T+  24h: N= 832 mean winner price= 69.0c (hindsight multiple 1.45x)
+  T+  48h: N= 832 mean winner price= 72.1c (hindsight multiple 1.39x)
+  T+  72h: N= 832 mean winner price= 71.8c (hindsight multiple 1.39x)
+  T+  96h: N= 832 mean winner price= 72.4c (hindsight multiple 1.38x)
+
+== by family: ECE at 1h / 72h ==
+  other                      N= 355 ECE1h= 19.3pp (n=355)  ECE72h= 11.0pp (n=355)
+  sports/esports-futures     N= 277 ECE1h= 28.7pp (n=274)  ECE72h=  9.0pp (n=276)
+  politics/geo               N= 138 ECE1h= 22.0pp (n=137)  ECE72h=  5.7pp (n=138)
+  entertainment/mentions     N=  45 ECE1h= 14.6pp (n= 45)  ECE72h= 16.6pp (n= 45)
+  crypto                     N=  18 ECE1h=-- (n= 18)  ECE72h=-- (n= 18)
+
+== calibration at T+1h by final-volume tercile ==
+  vol-low (cut 2515/11726): N=276 ECE=31.23pp Brier=0.2211
+    [0.0,0.1) N=   2 impl=  3.8% emp=  0.0% gap= -3.8pp (SE  0.0)
+    [0.1,0.3) N=  22 impl= 23.6% emp=  0.0% gap=-23.6pp (SE  0.0)
+    [0.3,0.5) N= 128 impl= 46.8% emp= 10.2% gap=-36.6pp (SE  2.7)
+    [0.5,0.7) N= 122 impl= 50.4% emp= 23.0% gap=-27.4pp (SE  3.8)
+    [0.7,0.9) N=   2 impl= 78.2% emp= 50.0% gap=-28.2pp (SE 35.4)
+  vol-mid (cut 2515/11726): N=276 ECE=19.23pp Brier=0.2191
+    [0.0,0.1) N=   7 impl=  5.8% emp=  0.0% gap= -5.8pp (SE  0.0)
+    [0.1,0.3) N=  22 impl= 23.0% emp=  0.0% gap=-23.0pp (SE  0.0)
+    [0.3,0.5) N= 145 impl= 46.1% emp= 19.3% gap=-26.8pp (SE  3.3)
+    [0.5,0.7) N=  99 impl= 50.9% emp= 42.4% gap= -8.5pp (SE  5.0)
+    [0.7,0.9) N=   3 impl= 78.2% emp= 66.7% gap=-11.5pp (SE 27.2)
+  vol-high (cut 2515/11726): N=277 ECE=17.41pp Brier=0.2045
+    [0.0,0.1) N=  13 impl=  5.1% emp=  0.0% gap= -5.1pp (SE  0.0)
+    [0.1,0.3) N=  35 impl= 22.5% emp= 11.4% gap=-11.1pp (SE  5.4)
+    [0.3,0.5) N= 138 impl= 46.3% emp= 21.7% gap=-24.6pp (SE  3.5)
+    [0.5,0.7) N=  80 impl= 52.0% emp= 42.5% gap= -9.5pp (SE  5.5)
+    [0.7,0.9) N=   8 impl= 76.8% emp=100.0% gap=+23.2pp (SE  0.0)
+    [0.9,1.0) N=   3 impl= 91.8% emp=100.0% gap= +8.2pp (SE  0.0)

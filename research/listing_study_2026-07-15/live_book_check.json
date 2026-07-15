@@ -1,0 +1,542 @@
+[
+ {
+  "age_h": 43.6,
+  "q": "Will Trump accuse China of election interference by July 16?",
+  "bb": 0.28,
+  "ba": 0.38,
+  "spread": 0.09999999999999998,
+  "askdepth3c_usd": 44.0,
+  "liq": 2450
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Dylan Weisman win the 2026 WSOP Player of the Year?",
+  "bb": null,
+  "ba": 0.99,
+  "spread": null,
+  "askdepth3c_usd": 198.0,
+  "liq": 2
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will William Foxen win the 2026 WSOP Player of the Year?",
+  "bb": 0.01,
+  "ba": null,
+  "spread": null,
+  "askdepth3c_usd": 0,
+  "liq": 12
+ },
+ {
+  "age_h": 46.6,
+  "q": "Will Trump\u2019s remarks not air?",
+  "bb": null,
+  "ba": 0.001,
+  "spread": null,
+  "askdepth3c_usd": 4.4,
+  "liq": 952
+ },
+ {
+  "age_h": 22.6,
+  "q": "Todd Blanche disbarred or suspended in NY in 2026?",
+  "bb": 0.2,
+  "ba": 0.42,
+  "spread": 0.21999999999999997,
+  "askdepth3c_usd": 46.5,
+  "liq": 134
+ },
+ {
+  "age_h": 18.8,
+  "q": "Will VARREL Win VCT Pacific Stage 2 2026?",
+  "bb": null,
+  "ba": 0.99,
+  "spread": null,
+  "askdepth3c_usd": 198.0,
+  "liq": 2
+ },
+ {
+  "age_h": 20.3,
+  "q": "Will Disguised Win More than 1.5 Matches in LCS 2026 Summer ",
+  "bb": 0.65,
+  "ba": 0.73,
+  "spread": 0.07999999999999996,
+  "askdepth3c_usd": 73.7,
+  "liq": 162
+ },
+ {
+  "age_h": 3.1,
+  "q": "Will Jason Koon be 1st on the 2026 Money List at the end of ",
+  "bb": 0.01,
+  "ba": 0.99,
+  "spread": 0.98,
+  "askdepth3c_usd": 511.8,
+  "liq": 10
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Yuri Dzivielevski win the 2026 WSOP Player of the Year?",
+  "bb": null,
+  "ba": null,
+  "spread": null,
+  "askdepth3c_usd": 0,
+  "liq": 0
+ },
+ {
+  "age_h": 47.8,
+  "q": "Will Cesc Fabregas be the next head coach of the Italian Nat",
+  "bb": 0.02,
+  "ba": 0.51,
+  "spread": 0.49,
+  "askdepth3c_usd": 48.0,
+  "liq": 72
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Bilibili Gaming go Over 11.5 Regular Season Series Wins",
+  "bb": 0.1,
+  "ba": 0.9,
+  "spread": 0.8,
+  "askdepth3c_usd": 90.0,
+  "liq": 20
+ },
+ {
+  "age_h": 52.2,
+  "q": "US announces end of Iranian blockade by July 24, 2026?",
+  "bb": 0.09,
+  "ba": 0.1,
+  "spread": 0.010000000000000009,
+  "askdepth3c_usd": 177.2,
+  "liq": 33286
+ },
+ {
+  "age_h": 20.3,
+  "q": "Will Cloud9 Win More than 5.5 Matches in LCS 2026 Summer Spl",
+  "bb": 0.35,
+  "ba": 0.42,
+  "spread": 0.07,
+  "askdepth3c_usd": 42.4,
+  "liq": 177
+ },
+ {
+  "age_h": 43.5,
+  "q": "Will Atlante win the 2026 Liga MX Apertura?",
+  "bb": 0.01,
+  "ba": 0.069,
+  "spread": 0.059000000000000004,
+  "askdepth3c_usd": 7.8,
+  "liq": 183
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Benny Glaser win the 2026 WSOP Player of the Year?",
+  "bb": null,
+  "ba": null,
+  "spread": null,
+  "askdepth3c_usd": 0,
+  "liq": 0
+ },
+ {
+  "age_h": 44.1,
+  "q": "Moscow air traffic suspended by July 24?",
+  "bb": 0.67,
+  "ba": 0.71,
+  "spread": 0.039999999999999925,
+  "askdepth3c_usd": 94.1,
+  "liq": 1391
+ },
+ {
+  "age_h": 45.3,
+  "q": "Will Tesla say \"Subscription\" during earnings call?",
+  "bb": 0.6,
+  "ba": 0.84,
+  "spread": 0.24,
+  "askdepth3c_usd": 131.7,
+  "liq": 152
+ },
+ {
+  "age_h": 20.3,
+  "q": "Will Team Liquid Win More than 4.5 Matches in LCS 2026 Summe",
+  "bb": 0.49,
+  "ba": 0.54,
+  "spread": 0.050000000000000044,
+  "askdepth3c_usd": 54.0,
+  "liq": 286
+ },
+ {
+  "age_h": 20.2,
+  "q": "Will Xi Lai Gaming Qualify to VCT Champs 2026?",
+  "bb": 0.02,
+  "ba": 0.98,
+  "spread": 0.96,
+  "askdepth3c_usd": 303.8,
+  "liq": 12
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Daniel Negreanu win the 2026 WSOP Player of the Year?",
+  "bb": null,
+  "ba": 0.98,
+  "spread": null,
+  "askdepth3c_usd": 98.0,
+  "liq": 2
+ },
+ {
+  "age_h": 20.3,
+  "q": "Will Trump meet with Netanyahu by July 19, 2026?",
+  "bb": 0.15,
+  "ba": 0.17,
+  "spread": 0.020000000000000018,
+  "askdepth3c_usd": 409.6,
+  "liq": 14772
+ },
+ {
+  "age_h": 21.8,
+  "q": "Will QHP win the most seats in the 2026 Kazakh Kurultai elec",
+  "bb": 0.001,
+  "ba": 0.004,
+  "spread": 0.003,
+  "askdepth3c_usd": 12.3,
+  "liq": 10303
+ },
+ {
+  "age_h": 3.1,
+  "q": "Will Anatoliy Zlotnikov be 1st on the 2026 Money List at the",
+  "bb": 0.01,
+  "ba": 0.99,
+  "spread": 0.98,
+  "askdepth3c_usd": 511.8,
+  "liq": 10
+ },
+ {
+  "age_h": 46.4,
+  "q": "Will FaZe Vegas Win the Call of Duty Championship?",
+  "bb": 0.03,
+  "ba": 0.2,
+  "spread": 0.17,
+  "askdepth3c_usd": 26.0,
+  "liq": 157
+ },
+ {
+  "age_h": 45.2,
+  "q": "Will Verizon say \"China\" during earnings call?",
+  "bb": 0.06,
+  "ba": 0.07,
+  "spread": 0.010000000000000009,
+  "askdepth3c_usd": 2.8,
+  "liq": 191
+ },
+ {
+  "age_h": 3.1,
+  "q": "Will Benjamin Tollerene be 1st on the 2026 Money List at the",
+  "bb": 0.01,
+  "ba": 0.99,
+  "spread": 0.98,
+  "askdepth3c_usd": 511.8,
+  "liq": 10
+ },
+ {
+  "age_h": 46.4,
+  "q": "Will G2 Minnesota Win the Call of Duty Championship?",
+  "bb": 0.01,
+  "ba": 0.91,
+  "spread": 0.9,
+  "askdepth3c_usd": 153.1,
+  "liq": 14
+ },
+ {
+  "age_h": 20.2,
+  "q": "Will LEVIAT\u00c1N Qualify to VCT Champs 2026?",
+  "bb": 0.65,
+  "ba": 0.67,
+  "spread": 0.020000000000000018,
+  "askdepth3c_usd": 137.1,
+  "liq": 112
+ },
+ {
+  "age_h": 22.1,
+  "q": "Will DeepSeek IPO by December 31, 2027?",
+  "bb": 0.28,
+  "ba": 0.97,
+  "spread": 0.69,
+  "askdepth3c_usd": 436.6,
+  "liq": 699
+ },
+ {
+  "age_h": 52.2,
+  "q": "US announces end of Iranian blockade by August 15, 2026?",
+  "bb": 0.34,
+  "ba": 0.35,
+  "spread": 0.009999999999999953,
+  "askdepth3c_usd": 76.9,
+  "liq": 49925
+ },
+ {
+  "age_h": 3.0,
+  "q": "Will AG.AL Win the Shortest Game at EWC 2026?",
+  "bb": 0.01,
+  "ba": 0.99,
+  "spread": 0.98,
+  "askdepth3c_usd": 5.0,
+  "liq": 0
+ },
+ {
+  "age_h": 47.9,
+  "q": "Will Gianluigi Buffon be the next head coach of the Italian ",
+  "bb": 0.04,
+  "ba": 0.83,
+  "spread": 0.7899999999999999,
+  "askdepth3c_usd": 128.4,
+  "liq": 47
+ },
+ {
+  "age_h": 46.2,
+  "q": "Will Auyl win the second most seats in the 2026 Kazakh Kurul",
+  "bb": 0.69,
+  "ba": 0.7,
+  "spread": 0.010000000000000009,
+  "askdepth3c_usd": 1069.1,
+  "liq": 37218
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Justin Fawcett win the 2026 WSOP Player of the Year?",
+  "bb": null,
+  "ba": 0.99,
+  "spread": null,
+  "askdepth3c_usd": 198.0,
+  "liq": 2
+ },
+ {
+  "age_h": 49.8,
+  "q": "Will Trump say \"Middle East\" during Speech to the Nation?",
+  "bb": 0.61,
+  "ba": 0.67,
+  "spread": 0.06000000000000005,
+  "askdepth3c_usd": 52.0,
+  "liq": 629
+ },
+ {
+  "age_h": 29.4,
+  "q": "Will Clavicular visit China in 2026?",
+  "bb": 0.14,
+  "ba": 0.16,
+  "spread": 0.01999999999999999,
+  "askdepth3c_usd": 16.0,
+  "liq": 121
+ },
+ {
+  "age_h": 50.5,
+  "q": "Will Argentina finish 2nd place in the 2026 FIFA World Cup?",
+  "bb": 0.57,
+  "ba": 0.58,
+  "spread": 0.010000000000000009,
+  "askdepth3c_usd": 3211.0,
+  "liq": 4664
+ },
+ {
+  "age_h": 31.9,
+  "q": "Will Turkey rejoin the F-35 program by December 31, 2026?",
+  "bb": 0.16,
+  "ba": 0.18,
+  "spread": 0.01999999999999999,
+  "askdepth3c_usd": 203.2,
+  "liq": 14075
+ },
+ {
+  "age_h": 20.3,
+  "q": "Will Shopify Rebellion Win More than 2.5 Matches in LCS 2026",
+  "bb": null,
+  "ba": 0.97,
+  "spread": null,
+  "askdepth3c_usd": 181.6,
+  "liq": 60
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Global Esports Win VCT Pacific Stage 2 2026?",
+  "bb": 0.02,
+  "ba": 0.98,
+  "spread": 0.96,
+  "askdepth3c_usd": 9.9,
+  "liq": 0
+ },
+ {
+  "age_h": 22.2,
+  "q": "Will DeepSeek IPO by March 31, 2027?",
+  "bb": 0.16,
+  "ba": 0.47,
+  "spread": 0.30999999999999994,
+  "askdepth3c_usd": 4.8,
+  "liq": 967
+ },
+ {
+  "age_h": 21.4,
+  "q": "Will Swim \u2013 BTS be the top song in the US for 2026?",
+  "bb": 0.021,
+  "ba": 0.757,
+  "spread": 0.736,
+  "askdepth3c_usd": 54.9,
+  "liq": 93
+ },
+ {
+  "age_h": 21.8,
+  "q": "Will Respublica win the most seats in the 2026 Kazakh Kurult",
+  "bb": 0.002,
+  "ba": 0.005,
+  "spread": 0.003,
+  "askdepth3c_usd": 33.8,
+  "liq": 11219
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Dennis Weiss win the 2026 WSOP Player of the Year?",
+  "bb": null,
+  "ba": 0.99,
+  "spread": null,
+  "askdepth3c_usd": 198.0,
+  "liq": 2
+ },
+ {
+  "age_h": 20.6,
+  "q": "Will SOOPers win more than 1.5 series during LCK 2026 Rounds",
+  "bb": 0.02,
+  "ba": 0.98,
+  "spread": 0.96,
+  "askdepth3c_usd": 303.8,
+  "liq": 12
+ },
+ {
+  "age_h": 46.5,
+  "q": "Will Dplus Kia Win KeSPA Cup 2026?",
+  "bb": 0.1,
+  "ba": 0.13,
+  "spread": 0.03,
+  "askdepth3c_usd": 205.1,
+  "liq": 1911
+ },
+ {
+  "age_h": 22.6,
+  "q": "Will US crude oil reserves fall to 270M by August 31?",
+  "bb": 0.1,
+  "ba": 0.75,
+  "spread": 0.65,
+  "askdepth3c_usd": 220.7,
+  "liq": 143
+ },
+ {
+  "age_h": 46.6,
+  "q": "Will AG.AL Qualify to EWC 2026 Playoffs?",
+  "bb": 0.7,
+  "ba": 0.99,
+  "spread": 0.29000000000000004,
+  "askdepth3c_usd": 5.0,
+  "liq": 385
+ },
+ {
+  "age_h": 50.5,
+  "q": "Will France finish 3rd place in the 2026 FIFA World Cup?",
+  "bb": 0.64,
+  "ba": 0.66,
+  "spread": 0.020000000000000018,
+  "askdepth3c_usd": 6334.2,
+  "liq": 6267
+ },
+ {
+  "age_h": 46.5,
+  "q": "Will HANJIN BRION Win KeSPA Cup 2026?",
+  "bb": 0.03,
+  "ba": 0.06,
+  "spread": 0.03,
+  "askdepth3c_usd": 36.9,
+  "liq": 1284
+ },
+ {
+  "age_h": 20.2,
+  "q": "Will G2 Esports Win VCT AMER Stage 2 2026?",
+  "bb": 0.1,
+  "ba": 0.79,
+  "spread": 0.6900000000000001,
+  "askdepth3c_usd": 102.9,
+  "liq": 53
+ },
+ {
+  "age_h": 45.2,
+  "q": "Will Verizon say \"Income\" 10+ times during earnings call?",
+  "bb": 0.03,
+  "ba": 0.42,
+  "spread": 0.39,
+  "askdepth3c_usd": 50.8,
+  "liq": 354
+ },
+ {
+  "age_h": 43.5,
+  "q": "Will Atl\u00e9tico de San Luis win the 2026 Liga MX Apertura?",
+  "bb": 0.01,
+  "ba": 0.069,
+  "spread": 0.059000000000000004,
+  "askdepth3c_usd": 7.3,
+  "liq": 254
+ },
+ {
+  "age_h": 3.0,
+  "q": "Will JD Gaming Win the Shortest Game at EWC 2026?",
+  "bb": 0.01,
+  "ba": 0.99,
+  "spread": 0.98,
+  "askdepth3c_usd": 5.0,
+  "liq": 0
+ },
+ {
+  "age_h": 20.9,
+  "q": "Will the next Claude Opus debut at a score of at least 1510 ",
+  "bb": 0.12,
+  "ba": 0.13,
+  "spread": 0.010000000000000009,
+  "askdepth3c_usd": 40.5,
+  "liq": 1492
+ },
+ {
+  "age_h": 3.1,
+  "q": "Will Matthias Eibinger be 1st on the 2026 Money List at the ",
+  "bb": 0.01,
+  "ba": 0.99,
+  "spread": 0.98,
+  "askdepth3c_usd": 511.8,
+  "liq": 10
+ },
+ {
+  "age_h": 21.5,
+  "q": "Will Die With A Smile \u2013 Lady Gaga & Bruno Mars be the top so",
+  "bb": 0.02,
+  "ba": 0.09,
+  "spread": 0.06999999999999999,
+  "askdepth3c_usd": 13.5,
+  "liq": 227
+ },
+ {
+  "age_h": 20.2,
+  "q": "Will Team Secret Qualify to VCT Champs 2026?",
+  "bb": 0.02,
+  "ba": 0.98,
+  "spread": 0.96,
+  "askdepth3c_usd": 303.8,
+  "liq": 12
+ },
+ {
+  "age_h": 22.1,
+  "q": "Will DeepSeek IPO by December 31, 2026?",
+  "bb": 0.07,
+  "ba": 0.09,
+  "spread": 0.01999999999999999,
+  "askdepth3c_usd": 162.6,
+  "liq": 7526
+ },
+ {
+  "age_h": 18.9,
+  "q": "Will Thomas Hall win the 2026 WSOP Player of the Year?",
+  "bb": null,
+  "ba": null,
+  "spread": null,
+  "askdepth3c_usd": 0,
+  "liq": 0
+ }
+]
