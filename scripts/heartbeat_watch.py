@@ -240,12 +240,34 @@ def check_session_liveness(state: dict) -> None:
               cooldown=SESSION_DEAD_COOLDOWN)
 
 
+def check_opportunity_watch(state: dict) -> None:
+    """PID-alive check for the 24/7 opportunity daemon (added 2026-07-15).
+
+    Its RSS self-cap makes it exit deliberately at >150MB; the */10 crontab
+    keepalive restarts it, so only alert if it stays dead >25 min (i.e. the
+    keepalive itself is failing)."""
+    pid_p = Path(__file__).resolve().parent.parent / "logs" / "opportunity_watch.pid"
+    try:
+        pid = int(pid_p.read_text().strip())
+    except Exception:
+        return  # never started on this host — not an anomaly
+    if _pid_alive(pid):
+        state.pop("oppwatch_dead_since", None)
+        return
+    dead_since = state.setdefault("oppwatch_dead_since", _now())
+    if _now() - dead_since > 25 * 60:
+        _emit(state, "opportunity_watch_dead",
+              f"opportunity_watch PID {pid} dead >25min and the */10 keepalive "
+              f"hasn't revived it — 24/7 scanning is DOWN. Check logs/opportunity_watch.log")
+
+
 def poll_once() -> None:
     state = _load_state()
     check_news_watcher(state)
     check_telegram_listener(state)
     check_stuck_cron_forks(state)
     check_session_liveness(state)
+    check_opportunity_watch(state)
     _save_state(state)
 
 

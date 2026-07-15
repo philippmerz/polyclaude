@@ -3099,3 +3099,21 @@ DAY-1 SWEEP (discover + fade-surfacer + sports-consensus + macro + limitless, ~3
   attends-final YES + blockade-end NO + MOU-withdrawal NO (no edge over ask), Musk buckets (noise),
   Hormuz-normal-Aug NO (in-window deal risk), Maine primary (no info). Ledger 10 records. Telegram msgs
   557/558. Memory updated with the standing directive.
+
+## 2026-07-15 ~10:35 UTC — SHIPPED: opportunity_watch.py — 24/7 continuous scanning (operator-authorized)
+
+Operator (msg 559): "you have the VM 24/7... run some script constantly. Just cap the memory use." BUILT +
+LIVE: scripts/opportunity_watch.py — a tiny scheduler daemon (parent RSS 23-32MB, self-caps at 150MB and
+exits for the keepalive to restart) that runs the EXISTING scanners as subprocesses (memory-safe: children
+die per run):
+- every 5min: armed price triggers from notes/opportunity_triggers.json (v1: ARB retrace-add <=0.080,
+  regime-fall NO re-entry <=0.88) — single cheap API calls; a cross telegrams + FIRES a tick (90min cooldown,
+  news_watcher pattern) since both are armed capital actions.
+- every 15min (staggered): consistency + monotonicity arb scans — THE case for 24/7 (real arbs live
+  minutes-hours; 2x-daily missed nearly all); a REAL hit (>2% net) telegrams + fires a tick.
+- hits also append notes/opportunity_alerts.jsonl for tick consumption.
+Ops wiring: */10 crontab keepalive (flock-guarded, absolute paths; restarts after RSS-cap exits or crashes);
+heartbeat_watch gained check_opportunity_watch (alerts only if dead >25min = keepalive itself failing;
+daemon restarted to load it). Verified: once-mode clean (no false alerts), daemon up pid 2234146, all 4
+daemons ~90MB total, VM 889MB available. This closes the tick-latency gap on ephemeral opportunities —
+the wide-net directive now runs at 5-15min resolution instead of 12h.
