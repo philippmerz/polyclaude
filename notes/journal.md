@@ -3117,3 +3117,21 @@ heartbeat_watch gained check_opportunity_watch (alerts only if dead >25min = kee
 daemon restarted to load it). Verified: once-mode clean (no false alerts), daemon up pid 2234146, all 4
 daemons ~90MB total, VM 889MB available. This closes the tick-latency gap on ephemeral opportunities —
 the wide-net directive now runs at 5-15min resolution instead of 12h.
+
+## 2026-07-15 ~10:36 UTC — OPERATOR OPERATING MODEL (final form): continuous research loop
+
+Operator (msg 559→561): "do research until you discover a profitable opportunity. Then, report back, invest
+an adequate amount, and then go back to researching. The only limit is token limits and vm compute."
+Supersedes idle-by-default between ticks — continuation checks are research slots. Combined with today's
+other shipments (wide-net every tick + 24/7 opportunity_watch daemon), the full stack now: daemon scans at
+5-15min resolution → ticks run the discovery funnel + gates → dedicated research threads run continuously in
+between → findings reported + gate-clearing edges sized and entered. Memory updated (wide-net-daily file →
+research-loop model).
+
+FIRST DEDICATED THREAD LAUNCHED (background agent): **UMA dispute-window mispricing study** — hypothesis:
+disputed-status markets trade at panic prices divergent from rules-predictable DVM outcomes (we know the
+mechanics: R-U cost us -$16.73 on a dispute that UPHELD the proposal; that anecdote says proposals stand —
+need the population). Agent spec: pull resolved+disputed market history via gamma/CLOB, N>=20, measure
+proposal-stands rate + dispute-window entry returns + live catch-rate feasibility; brutal-honesty verdict
+(real / unknowable / false). QUEUED NEXT: new-listing mispricing study; conditional-probability consistency
+scanner (ratio constraints across related markets — a new scanner class).
