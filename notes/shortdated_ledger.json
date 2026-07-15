@@ -80,10 +80,10 @@
       "pop_edge_pp": null,
       "catalyst_p_yes_central": null,
       "decision": "PRE-SKIP",
-      "reason": "Instance evaluation off fresh info (Mojtaba ABSENT from his father's Jul 3-9 state funeral, consistent with incapacity reports): supports NO, but the funeral runs to Jul-9 and the regime has MAXIMAL incentive to stage an appearance now if he can appear at all \u2014 honest P(not-seen) ~0.75-0.85 << the ~0.955 the robust gate needs at NO 0.90. YES at ~0.10 has central edge (P(seen) ~0.15-0.25) but subjective 'seen in public' resolution = UMA-photo-dispute risk both ways + speculative YES not a fade. Neither side clears the instance-thesis bar with conviction. No catalyst_check spawned (ambiguity is structural, not informational).",
+      "reason": "Instance evaluation off fresh info (Mojtaba ABSENT from his father's Jul 3-9 state funeral, consistent with incapacity reports): supports NO, but the funeral runs to Jul-9 and the regime has MAXIMAL incentive to stage an appearance now if he can appear at all \u2014 honest P(not-seen) ~0.75-0.85 << the ~0.955 the robust gate needs at NO 0.90. YES at ~0.10 has central edge (P(seen) ~0.15-0.25) but subjective 'seen in public' resolution = UMA-photo-dispute risk both ways + speculative YES not a fade. Neither side clears the instance-thesis bar with conviction. No catalyst_check spawned (ambiguity is structural, not informational). [2026-07-15 deadline update: Mojtaba NOT seen; NO at 0.997 -> the skipped fade@0.90 would have won ~+10%/13d. Calibration: my P(not-seen) 0.75-0.85 was too conservative \u2014 the staging-incentive hypothesis never materialized. Market also DE-INDEXED from UI/gamma (still on CLOB) \u2014 note the de-indexing phenomenon for thin/sensitive markets.]",
       "size_usd": 0,
-      "outcome": null,
-      "fade_would_have_won": null
+      "outcome": "PENDING-NO (CLOB NO 0.997/0.998 at deadline; de-indexed from UI but trading; resolves NO shortly)",
+      "fade_would_have_won": true
     },
     {
       "date": "2026-07-08",
