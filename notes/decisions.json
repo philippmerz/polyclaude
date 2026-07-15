@@ -1,5 +1,5 @@
 {
-  "next_id": 44,
+  "next_id": 45,
   "decisions": [
     {
       "id": 1,
@@ -832,6 +832,25 @@
         "close",
         "negative-edge",
         "prior-hygiene"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 44,
+      "timestamp": "2026-07-15T10:29:21Z",
+      "type": "open_position",
+      "thesis": "US-invade-Iran-before-2027 NO: bought 12 sh @ 0.82 ($9.84, tx 0x41e15a27) via the full gate. INSTANCE THESIS (the surviving edge source): war heat bid YES to 18.5%, but the resolution criteria are STRICT \u2014 \"invade\" requires intent to establish territorial control (the 2026-05-08 analysis: punitive strikes / freedom-of-navigation / naval blockade do NOT qualify; media framing 98% vs strict 2.2% then). Current war = naval/air punitive + blockade, explicitly NOT ground/control ops; the Feb-Apr full campaign never invaded. Fresh gate catalyst check cleared the pessimistic bound (p_no >= ~0.874 required at ask 0.82). Iran-cluster exposure after entry ~$19 (~11%, well under cap; correlated with Pahlavi NO via the no-invasion path). First entry of the operator-directed wide-net regime (2026-07-15) \u2014 found by discover, gated on instance criteria.",
+      "confidence": "high",
+      "prediction": "No US invasion (territorial-control intent) of Iran by Dec-31 2026; NO resolves $1. War may continue as strikes/blockade without qualifying. Reassess on: actual ground operations, amphibious/land force buildup reporting, or mark move >5pp against.",
+      "size_usd": 9.84,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "iran",
+        "invade",
+        "instance-thesis",
+        "wide-net"
       ],
       "outcome": null,
       "calibration_delta": null,

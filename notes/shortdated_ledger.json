@@ -112,6 +112,34 @@
       "size_usd": 0,
       "outcome": null,
       "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-15",
+      "question": "Will the U.S. invade Iran before 2027?",
+      "side": "NO",
+      "ask": 0.82,
+      "days": 168,
+      "pop_edge_pp": null,
+      "catalyst_p_yes_central": 0.05,
+      "decision": "ENTER $9.84",
+      "reason": "Instance thesis: strict criteria (territorial-control intent) vs war-heat pricing (YES 18.5%). Gate cleared at pessimistic bound. 12 sh @ 0.82. DEC-0044. Wide-net day-1 catch.",
+      "size_usd": 9.84,
+      "outcome": null,
+      "fade_would_have_won": null
+    },
+    {
+      "date": "2026-07-15",
+      "question": "US charges Hormuz fees by July 31, 2026?",
+      "side": "YES",
+      "ask": 0.0135,
+      "days": 16,
+      "pop_edge_pp": null,
+      "catalyst_p_yes_central": 0.012,
+      "decision": "SKIP",
+      "reason": "Gate caught my stale read: Trump BACKTRACKED on the toll Jul-14/15 (24h reversal). Market 1.3% = check's structured 1.2% \u2014 efficient, not mispriced. The instance gate beat headline recall.",
+      "size_usd": 0,
+      "outcome": null,
+      "fade_would_have_won": null
     }
   ]
 }

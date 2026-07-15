@@ -3078,3 +3078,24 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.25 (-0.4%
 deadline TODAY (ledger outcome on resolution). Heartbeat msg 552. No action.
 
 ## 2026-07-15 ~08:02 UTC — OFF-CYCLE (Tier-1) — same thread + NEW RUNG THREATENED (Trump: expand strikes to civilian infrastructure); Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no Telegram. Watch-note: a threatened target-CLASS expansion (military→civilian infra) is the escalation ladder's next rung — still a threat not an act, and ≠ regime/leadership targeting (the trim-trigger class); if strikes ACTUALLY hit civilian infra, reassess regime-stability dynamics (population pressure) at that tick.
+
+## 2026-07-15 ~10:20-11:00 UTC — OPERATOR DIRECTIVE: wide net daily → day-1 sweep = 1 ENTRY + 1 informed skip
+
+Operator (msg 556): "cast a wide net daily, look for opportunities whenever possible." Adjusts SEARCH
+intensity, not entry discipline (gates stay strict — they just saved us twice today). New cadence: full
+discovery suite EVERY scheduled tick, aggressive instance-gating of top candidates, funnel reported in
+heartbeats (entries AND skips).
+
+DAY-1 SWEEP (discover + fade-surfacer + sports-consensus + macro + limitless, ~30 raw candidates):
+- **ENTERED: US-invade-Iran-before-2027 NO, 12 sh @ 0.82 ($9.84, tx 0x41e15a27, DEC-0044).** Instance
+  thesis: war heat bid YES to 18.5% but strict criteria ("invade" = territorial-control intent; the
+  2026-05-08 analysis: strikes/blockade don't qualify, media 98% vs strict 2.2%). Gate cleared at the
+  pessimistic bound. Iran cluster → ~$19/~11% (under cap; correlated w/ Pahlavi via no-invasion path).
+- **SKIPPED: US-charges-Hormuz-fees-by-Jul-31 YES @ 0.0135** — MY read ("Trump announced tolls this week,
+  1.3% is cheap") was 24h STALE: the gate's fresh check found Trump BACKTRACKED Jul-14/15 (industry/UN
+  pressure, "24-hour sprint" reversal); structured P(YES) 1.2% ≈ market 1.3% = efficient. The instance
+  gate beat headline recall — exactly why entries route through it.
+- Screened: Fed legs (anti-edge), McIlroy/Kane (bookie-priced), WC-final markets (specialist), Trump-
+  attends-final YES + blockade-end NO + MOU-withdrawal NO (no edge over ask), Musk buckets (noise),
+  Hormuz-normal-Aug NO (in-window deal risk), Maine primary (no info). Ledger 10 records. Telegram msgs
+  557/558. Memory updated with the standing directive.
