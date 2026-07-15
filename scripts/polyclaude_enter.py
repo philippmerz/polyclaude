@@ -117,6 +117,85 @@ def _best_ask(token_id: str, timeout: float = 12.0) -> float | None:
 
 
 
+_SIB_STOP = {"will", "the", "a", "an", "in", "by", "of", "to", "be", "before",
+             "on", "at", "for", "and", "or", "is", "does", "do", "any", "part",
+             # date tokens: dates are exactly what differs between TRUE duplicates
+             # ("by end of 2026" ≡ "before 2027"), so they must not depress similarity
+             "end", "january", "february", "march", "april", "may", "june", "july",
+             "august", "september", "october", "november", "december"}
+
+
+def _sib_tokens(text: str) -> set:
+    return {w for w in re.findall(r"[a-z]+", text.lower()) if w not in _SIB_STOP}
+
+
+_SIB_MONTHS = ("january", "february", "march", "april", "may", "june", "july",
+               "august", "september", "october", "november", "december")
+
+
+def _sib_datesig(text: str) -> tuple:
+    """Date signature of a question: years, month names, day numbers. Equal
+    signatures → candidate TRUE duplicate; different → term-structure sibling
+    (different deadline = different bet, but the term structure is informative).
+    Normalization: "before YYYY" ≡ deadline Dec-31 of YYYY-1 (so "before 2027"
+    matches "by end of 2026" / "in 2026" — the canonical true-dup phrasing pair)."""
+    t = text.lower()
+    t = re.sub(r"before (20\d\d)", lambda m2: str(int(m2.group(1)) - 1), t)
+    return tuple(sorted(re.findall(r"20\d\d|\b\d{1,2}\b|" + "|".join(_SIB_MONTHS), t)))
+
+
+def _sibling_markets(question: str, market_id, side: str) -> None:
+    """Same-proposition sibling advisory (2026-07-15 implication study salvage).
+    True duplicate markets across events ("by end of 2026" ≡ "before 2027") run
+    1-2pp apart on liquid legs — routing to the cheaper book is worth more per
+    trade than the whole cross-event arb class (which is dead: 0 executable
+    violations in 4,575 pairs). CAUTION printed with every hit: same question
+    text ≠ same proposition (event editions carry different leader lists / IPO
+    definitions) — read BOTH descriptions before treating books as fungible.
+    Warn-path only; never raises, never blocks. NOTE: search with content
+    tokens, not the raw question — gamma search is too literal, the sibling's
+    different date phrasing would exclude it."""
+    try:
+        toks_q = _sib_tokens(question)
+        if not toks_q:
+            return
+        # deterministic query in question order (set order varies per process)
+        seen = set()
+        ordered = [w for w in re.findall(r"[a-z]+", question.lower())
+                   if w in toks_q and not (w in seen or seen.add(w))]
+        query = " ".join(ordered[:8])
+        r = httpx.get("https://gamma-api.polymarket.com/public-search",
+                      params={"q": query}, timeout=15)
+        r.raise_for_status()
+        hits = []
+        for ev in (r.json().get("events") or [])[:10]:
+            for m in ev.get("markets") or []:
+                if str(m.get("id")) == str(market_id) or m.get("closed"):
+                    continue
+                toks2 = _sib_tokens(m.get("question") or "")
+                if not toks2:
+                    continue
+                jac = len(toks_q & toks2) / len(toks_q | toks2)
+                if jac >= 0.7:
+                    try:
+                        yes_p, no_p = [float(x) for x in json.loads(m.get("outcomePrices") or "[]")][:2]
+                    except Exception:
+                        yes_p = no_p = None
+                    px = no_p if side == "NO" else yes_p
+                    same_date = _sib_datesig(m.get("question") or "") == _sib_datesig(question)
+                    hits.append((same_date, jac, m.get("id"), m.get("slug"), px, m.get("takerBaseFee")))
+        if hits:
+            print(f"\n!! SIBLING MARKET(S) FOUND (content-similarity >=0.7):")
+            for same_date, jac, mid, mslug, px, fee in sorted(hits, reverse=True)[:4]:
+                kind = ("CANDIDATE TRUE DUP (same deadline)" if same_date
+                        else "different deadline — term-structure sibling, NOT fungible")
+                print(f"!!   id={mid} {mslug} — {side} mid={px} taker_fee={fee or 0}bps | {kind}")
+            print(f"!!   TRUE-DUP + cheaper book on {side} → verify criteria truly identical "
+                  f"(descriptions/editions/definitions — implication-study trap), then route there.")
+    except Exception:
+        pass
+
+
 def _bankroll_default() -> float:
     """Live bankroll from bankroll.py's cache when fresh (<24h); else 170 + warn."""
     import datetime as _dt
@@ -279,6 +358,9 @@ def main() -> int:
                   f"(15% hard cap = ${args.bankroll * 0.15:.2f}, 00_philosophy §5 model-error guardrails)")
         print(f"!! this is an ADD — confirm cluster caps + run the sizing as a "
               f"size_change decision, not a fresh entry.")
+
+    # Same-proposition sibling routing advisory (implication study 2026-07-15)
+    _sibling_markets(question, market_id, args.side)
 
     if yes_p is None:
         print(f"\nDECISION: NEED_REVIEW — could not parse outcomePrices")

@@ -1,0 +1,58 @@
+[
+ {
+  "label": "massie_pres_vs_nom",
+  "relation": "P(pres) <= P(R nom)",
+  "n_q": "Will Thomas Massie win the 2028 US Presidential Election?",
+  "b_q": "Will Thomas Massie win the 2028 Republican presidential nomination?",
+  "hours_overlap": 718,
+  "days": 29.9,
+  "pct_hours_viol_gt1pp": 0.0,
+  "n_episodes": 0,
+  "median_episode_h": 0,
+  "max_episode_h": 0,
+  "max_viol_pp": 0.5,
+  "now_viol_pp": 0.4
+ },
+ {
+  "label": "newsom_pres_vs_nom",
+  "relation": "P(pres) <= P(D nom)",
+  "n_q": "Will Gavin Newsom win the 2028 US Presidential Election?",
+  "b_q": "Will Gavin Newsom win the 2028 Democratic presidential nomination?",
+  "hours_overlap": 718,
+  "days": 29.9,
+  "pct_hours_viol_gt1pp": 0.0,
+  "n_episodes": 0,
+  "median_episode_h": 0,
+  "max_episode_h": 0,
+  "max_viol_pp": -5.3,
+  "now_viol_pp": -8.2
+ },
+ {
+  "label": "maxwell_dup",
+  "relation": "dup: by-end-2026 == before-2027",
+  "n_q": "Will Trump pardon Ghislaine Maxwell by end of 2026?",
+  "b_q": "Will Trump pardon Ghislaine Maxwell before 2027?",
+  "hours_overlap": 718,
+  "days": 29.9,
+  "pct_hours_viol_gt1pp": 73.54,
+  "n_episodes": 9,
+  "median_episode_h": 16,
+  "max_episode_h": 298,
+  "max_viol_pp": 8.05,
+  "now_viol_pp": 0.55
+ },
+ {
+  "label": "anthropic_ipo_dup",
+  "relation": "near-dup (criteria differ)",
+  "n_q": "Anthropic IPO before 2027?",
+  "b_q": "Will Anthropic IPO by December 31, 2026?",
+  "hours_overlap": 718,
+  "days": 29.9,
+  "pct_hours_viol_gt1pp": 55.15,
+  "n_episodes": 16,
+  "median_episode_h": 4,
+  "max_episode_h": 157,
+  "max_viol_pp": 12.5,
+  "now_viol_pp": 2.0
+ }
+]
