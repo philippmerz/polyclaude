@@ -3076,3 +3076,5 @@ Trump-out 0.925). Iran contained (7 alerts since 09:12, no non-Iran critical). M
 All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.25 (-0.4% vs ref). ARB $0.09148
 (+24.0%). All 4 NO legs clear. 14 alerts since 14:00 — all Iran-thread, no non-Iran critical. Mojtaba-seen
 deadline TODAY (ledger outcome on resolution). Heartbeat msg 552. No action.
+
+## 2026-07-15 ~08:02 UTC — OFF-CYCLE (Tier-1) — same thread + NEW RUNG THREATENED (Trump: expand strikes to civilian infrastructure); Pahlavi unmoved 0.958/insulated, UMA clean; HOLD, no Telegram. Watch-note: a threatened target-CLASS expansion (military→civilian infra) is the escalation ladder's next rung — still a threat not an act, and ≠ regime/leadership targeting (the trim-trigger class); if strikes ACTUALLY hit civilian infra, reassess regime-stability dynamics (population pressure) at that tick.
