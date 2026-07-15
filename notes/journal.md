@@ -3135,3 +3135,20 @@ need the population). Agent spec: pull resolved+disputed market history via gamm
 proposal-stands rate + dispute-window entry returns + live catch-rate feasibility; brutal-honesty verdict
 (real / unknowable / false). QUEUED NEXT: new-listing mispricing study; conditional-probability consistency
 scanner (ratio constraints across related markets — a new scanner class).
+
+## 2026-07-15 ~21:52 UTC — Session-restart recovery + OSTIUM EXPLOITED ($18M) — zero exposure, DEC-0040 fully vindicated
+
+RECOVERY: session restarted (~11:00→21:50 gap; the 14:00 tick + both research agents died with it). Guards
+on catch-up: UMA 17/0 (now incl. the invade leg), redeem 0/5, all 5 NO legs clear the hurdle, bankroll
+$168.22, ARB +21%, daemons all alive (opportunity_watch survived the session death — it's host-level, as
+designed; no queued alerts = no missed triggers/arbs).
+
+THE MATERIAL EVENT: **Ostium exploited — $18M oracle attack** (2 alerts 21:28, part of a DeFi-wide oracle
+wave). OUR EXPOSURE: ZERO — verified on-chain (0 open perps since May, NO vault deposit, no residual
+margin). THE NEAR-MISS: DEC-0040 (2026-06-26 skeptic+champion) parked a planned $12-17 OLP deposit — OLP
+depositors are the counterparty backstop, i.e., exactly who eats an oracle-attack loss, behind a 24-48h
+cooldown. The verify-full-distribution catch (53% APY = mirage) didn't just save the yield math — it kept
+us out of the blast radius three weeks before the blast. Process save of the month. OLP candidate now
+TERMINAL (backlog updated; no revisit). Operator told (msg 566).
+
+Research loop: both agents (UMA-dispute study, new-listing study) killed by the restart — RELAUNCHING both.
