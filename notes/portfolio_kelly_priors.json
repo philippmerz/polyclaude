@@ -1,32 +1,60 @@
 {
-  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-07-04",
-  "will-reza-pahlavi-lead-iran-in-2026": {
-    "p_no": 0.98,
-    "cluster": "iran-regime",
-    "rho_within": 0.6,
-    "cluster_frac": 0.055,
-    "rationale": "2026-07-03 prior-hygiene pass: conjunction P(regime falls by Dec-31 ~7% high-case) x P(Pahlavi installed & leading | fall, in-window ~15-25%) <= ~2% -> p_no 0.98. Previous 0.97 carried entry-pessimism. ANTI-correlated with iran-peace; regime-fall Aug-cliff tail flows through the first factor (already at its high). [2026-07-04: cluster_frac 0.235->0.055 \u2014 regime-fall leg CLOSED (DEC-0043); Pahlavi is now the only iran-regime cluster position (~$9.2/$167).]"
-  },
-  "trump-out-as-president-before-2027": {
-    "p_no": 0.97,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "rationale": "2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime)."
-  },
-  "will-the-us-acquire-any-part-of-greenland-in-2026": {
-    "p_no": 0.975,
-    "cluster": "us-expansion",
-    "rho_within": 0.0,
-    "cluster_frac": 0.11,
-    "rationale": "2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class."
-  },
-  "will-satoshis-identity-be-revealed-by-december-31": {
-    "p_no": 0.99,
-    "cluster": "crypto-lore",
-    "rho_within": 0.0,
-    "cluster_frac": 0.033,
-    "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim \u2014 R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo."
-  }
+ "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
+ "_updated": "2026-07-15",
+ "will-reza-pahlavi-lead-iran-in-2026": {
+  "p_no": 0.98,
+  "cluster": "iran-regime",
+  "rho_within": 0.6,
+  "cluster_frac": 0.055,
+  "rationale": "2026-07-03 prior-hygiene pass: conjunction P(regime falls by Dec-31 ~7% high-case) x P(Pahlavi installed & leading | fall, in-window ~15-25%) <= ~2% -> p_no 0.98. Previous 0.97 carried entry-pessimism. ANTI-correlated with iran-peace; regime-fall Aug-cliff tail flows through the first factor (already at its high). [2026-07-04: cluster_frac 0.235->0.055 — regime-fall leg CLOSED (DEC-0043); Pahlavi is now the only iran-regime cluster position (~$9.2/$167).]"
+ },
+ "trump-out-as-president-before-2027": {
+  "p_no": 0.97,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "rationale": "2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime)."
+ },
+ "will-the-us-acquire-any-part-of-greenland-in-2026": {
+  "p_no": 0.975,
+  "cluster": "us-expansion",
+  "rho_within": 0.0,
+  "cluster_frac": 0.11,
+  "rationale": "2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class."
+ },
+ "will-satoshis-identity-be-revealed-by-december-31": {
+  "p_no": 0.99,
+  "cluster": "crypto-lore",
+  "rho_within": 0.0,
+  "cluster_frac": 0.033,
+  "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim — R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo."
+ },
+ "will-spacex-have-the-highest-ipo-market-cap-2026-516": {
+  "p_yes": 0.97,
+  "cluster": "one-off",
+  "rho_within": 0.0,
+  "cluster_frac": 0.0,
+  "rationale": "2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES)."
+ },
+ "will-apple-release-a-touchscreen-macbook-in-2026": {
+  "p_no": 0.85,
+  "cluster": "one-off",
+  "rho_within": 0.0,
+  "cluster_frac": 0.0,
+  "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out."
+ },
+ "will-gpt-6-be-released-by-august-31-2026-778": {
+  "p_no": 0.96,
+  "cluster": "one-off",
+  "rho_within": 0.0,
+  "cluster_frac": 0.0,
+  "rationale": "2026-07-15 entry prior (DEC-0047): GPT-5.6 GA Jul-9; no GPT-6 announced/dated; strict accessibility bar (no beta, no relabels); 47d window. 4% = OpenAI surprise-drop tail."
+ },
+ "will-the-us-invade-iran-before-2027": {
+  "p_no": 0.94,
+  "cluster": "iran-regime",
+  "rho_within": 0.6,
+  "cluster_frac": 0.11,
+  "rationale": "2026-07-15 monitoring prior for DEC-0044 (12sh NO @0.82): strict 'invade' bar = intent to establish territorial control; punitive strikes/blockade/tolls do NOT count (2026-05-08 analysis + market description). Active air war but zero ground-invasion posture (no buildup, no mobilization); 6% = escalation-to-invasion tail through Dec-31. Cluster shares iran-regime with Pahlavi (both lose only in extreme-escalation branches)."
+ }
 }

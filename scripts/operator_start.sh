@@ -37,7 +37,7 @@ echo "  log:     ${LOG_FILE}"
 # (its own memory namespace).
 tmux new-session -d -s "${SESSION_NAME}" -c "${HOME}"
 tmux send-keys -t "${SESSION_NAME}" "cd '${HOME}'" Enter
-tmux send-keys -t "${SESSION_NAME}" "script -q -c 'claude --model sonnet --effort max --dangerously-skip-permissions' '${LOG_FILE}'" Enter
+tmux send-keys -t "${SESSION_NAME}" "script -q -c 'claude --effort max --dangerously-skip-permissions' '${LOG_FILE}'" Enter
 
 # No bootstrap message — the operator is meant to be a fresh claude that the
 # user (or this script) will /resume into the polyclaude operator session

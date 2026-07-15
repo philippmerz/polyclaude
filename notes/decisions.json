@@ -1,5 +1,5 @@
 {
-  "next_id": 45,
+  "next_id": 50,
   "decisions": [
     {
       "id": 1,
@@ -851,6 +851,98 @@
         "invade",
         "instance-thesis",
         "wide-net"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 45,
+      "timestamp": "2026-07-15T23:41:53Z",
+      "type": "open_position",
+      "thesis": "SpaceX highest-IPO-market-cap-2026 YES: 23sh blended 0.868 (5@0.86+18@0.87, +~1.4c/sh taker fee, neg-risk; first neg-risk trade \u2014 required pUSD approvals to adapter/exchanges, txs f93da756/97cac896/cda489c2). SETTLED-FACT instance thesis from the strict-criteria sweep: SpaceX IPO'd Jun-12 as largest ever, first-day close $160.95 = ~$2.1T cap (CNBC/NPR verified fresh); criteria = highest first-day-close cap among 2026 IPOs; only theoretical rival OpenAI has advisers pushing 2027 + Altman refusing sub-$1T, and even a Dec IPO at $1T needs +110% day-one pop to top $2.1T. p_yes 0.97, cost_eff 0.874 -> +9.6pp, E-APY ~24%. Residual: shock foreign mega-IPO, UMA share-count quibble.",
+      "confidence": "high",
+      "prediction": "Market resolves YES Dec-31; no 2026 IPO first-day close exceeds ~$2.1T",
+      "size_usd": 19.96,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "spacex",
+        "ipo",
+        "instance-sweep"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 46,
+      "timestamp": "2026-07-15T23:41:53Z",
+      "type": "open_position",
+      "thesis": "Touchscreen-MacBook-2026 NO: 35sh @0.39 (+3.9c/sh fee -> eff 0.429). Strict-criteria instance thesis: criteria require GENERAL-PUBLIC PURCHASABILITY by Dec-31 (announcement/unveiling insufficient); Gurman (Apr-2026, verified fresh) says supply-chain push to EARLY 2027, DRAM/NAND shortages through 2027, chip roadmap shifted to M5 Pro/Max to hold that schedule; leak cycle has YES bid to 0.61 on 'confirmed' unveil hype. p_no 0.85 (late-2026 ship 'not ruled out' = the 15%). +42pp edge at eff cost, E-APY ~180%.",
+      "confidence": "high",
+      "prediction": "No touch-screen MacBook purchasable by general public before Jan-1-2027; market resolves NO",
+      "size_usd": 13.65,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "apple",
+        "macbook",
+        "instance-sweep"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 47,
+      "timestamp": "2026-07-15T23:41:53Z",
+      "type": "open_position",
+      "thesis": "GPT-6-by-Aug-31 NO: 14sh @0.68 (+3.2c/sh fee -> eff 0.712, 47d). Strict-criteria: 'launched AND publicly accessible; closed beta/private access will NOT suffice; GPT-5.5-or-similar labels do not count.' GPT-5.6 (Sol/Terra/Luna) GA'd Jul-9 (verified fresh); no GPT-6 announcement/date exists; trackers put GPT-6 late-2026-to-2027; OpenAI has never shipped two flagship generations 7wk apart. Even a Sept ANNOUNCEMENT cannot flip an Aug-31 accessibility bar. p_no 0.96 -> +25pp, E-APY ~270%.",
+      "confidence": "high",
+      "prediction": "No publicly-accessible GPT-6 by Aug-31; resolves NO ~Sep-1",
+      "size_usd": 9.52,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "openai",
+        "gpt6",
+        "instance-sweep",
+        "short-dated"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 48,
+      "timestamp": "2026-07-15T23:42:11Z",
+      "type": "skip",
+      "thesis": "Iran-charges-Hormuz-fees-by-Aug-31: SKIP BOTH SIDES. Sweep agent said fair YES 0.22 (buy NO 0.57); catalyst gate with fresh news said central YES 0.74 \u2014 MOU toll-suspension expires Aug-15-17 INSIDE the window, Iran publicly committed to resumption, plus an unresolved interpretation fork (May-June PGSA collection may already satisfy 'has begun'). Market 0.44 sits between my two tools 50pp apart -> instance UNKNOWABLE; YES-side also blocked by the sweep's own kill-rule (needs consensus-reporting confirmation mid-war = contested UMA fight) and would concentrate the Iran muddle-through direction. Gate's 3rd save this week (US-Hormuz-toll, sweep-NO, now this).",
+      "confidence": "high",
+      "prediction": "Resolution either way without us; if YES resolves cleanly by Aug-31 the catalyst central was right and the sweep agent's stale-news miss cost a real +29pp YES edge \u2014 score it honestly then",
+      "size_usd": 0.0,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "hormuz",
+        "iran",
+        "instance-sweep",
+        "gate-catch"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 49,
+      "timestamp": "2026-07-15T23:42:11Z",
+      "type": "skip",
+      "thesis": "Bears-leave-Illinois-by-Dec-31 NO 0.65: KILLED pre-entry by fact verification. Sweep agent's thesis ('committed Arlington Heights ILLINOIS project underway, out-of-state ~0.03') is STALE: Jun-5 the Bears board voted to ADVANCE THE HAMMOND, INDIANA project after the Illinois stadium bill died in Springfield May-31; Arlington Heights village 'accepted that direction.' Market YES 0.33 = live Indiana-move risk, correctly priced or cheap; NO edge zero-to-negative. 2nd stale-fact candidate in the sweep top-10 (with Hormuz) \u2014 every agent-sourced candidate MUST have load-bearing facts re-verified fresh before entry; the 3 entries taken tonight were each verified via live WebSearch first.",
+      "confidence": "high",
+      "prediction": "Bears formally announce/site-select Indiana move (YES risk stays live); NO at 0.65 underperforms the 0.95 fair the sweep claimed",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "bears",
+        "instance-sweep",
+        "verification-catch"
       ],
       "outcome": null,
       "calibration_delta": null,
