@@ -3070,3 +3070,9 @@ All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.19 (-0.5%
 (+24.0%, rout eased, above add zone). All 4 NO legs clear (Pahlavi 0.958 / Satoshi 0.956 / Greenland 0.935 /
 Trump-out 0.925). Iran contained (7 alerts since 09:12, no non-Iran critical). Mojtaba-seen market still open
 (resolves after the Jul-15 deadline → ledger outcome then). Heartbeat msg 548. No action.
+
+## 2026-07-15 ~02:00 UTC — Wednesday 02:00 cron (steady; Mojtaba deadline today; no action)
+
+All clean: UMA 16/0, redeem 0/4, scanners 0, Ostium 0/0. Bankroll $169.25 (-0.4% vs ref). ARB $0.09148
+(+24.0%). All 4 NO legs clear. 14 alerts since 14:00 — all Iran-thread, no non-Iran critical. Mojtaba-seen
+deadline TODAY (ledger outcome on resolution). Heartbeat msg 552. No action.
