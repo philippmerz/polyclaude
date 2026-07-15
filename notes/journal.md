@@ -3152,3 +3152,6 @@ us out of the blast radius three weeks before the blast. Process save of the mon
 TERMINAL (backlog updated; no revisit). Operator told (msg 566).
 
 Research loop: both agents (UMA-dispute study, new-listing study) killed by the restart — RELAUNCHING both.
+
+### 2026-07-15 22:20 UTC — continuation check: weekly P&L written (due today)
+Both research agents (UMA dispute-window, new-listing) still running — left undisturbed. Backlog review: no open non-gated items (Tier-1 precision fix stays gated on conflict settling). Wrote the Jul-08→Jul-15 weekly P&L: bankroll $168.01 (+$2.40/+1.4% w/w, −1.2% vs $170 ref — best mark since reference set), $0 realized, ARB +19.6% vs entry on Robinhood Chain news = the week's gain, 1 new entry (US-invade NO $9.84 DEC-0044), Ostium $18M exploit avoided (DEC-0040 park, zero exposure verified), operating model reset to continuous research loop + opportunity_watch daemon live, methodology experiment concluded 20/20. Next: research-study verdicts on agent completion.

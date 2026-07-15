@@ -532,3 +532,26 @@ May-31 NO was the window's defining trade: entered as a pricing inefficiency, su
 **Decisions:** 43 total / 22 resolved. **Ledger:** 8 records (0 entries — every gated candidate correctly skipped; the falsification + 2 regime-fall probes are the discipline working). **Methodology:** 19/20 (straggler in UMA lag).
 
 **Outlook (→ ~Jul-15):** Iran ceasefire "over" per Trump — watch whether active-war resumption is contained (Pahlavi insulated regardless; regime-fall re-entry only if NO dips below the robust bound ~0.88). VELO ratio STILL unpublished (launch imminent, gated). Mojtaba-seen market resolves Jul-15 (ledger). Post-conflict: Tier-1 commodity-headline precision fix.
+
+---
+
+## Week of 2026-07-08 → 2026-07-15 (research-loop week)
+
+**Bankroll:** $168.01 vs $165.61 Jul-08 = **+$2.40 (+1.4%)**; vs $170 ref **−1.2%** — best mark since the reference was set (~−2.3pp vs Aave-flat over ~11wk, closing steadily from −3.8pp at the low). Dec-31 remains the accountability date.
+
+**Realized this week: $0** (no closes). The gain is ARB: $17.95 vs $15.00 cost = **+19.6%** vs entry (+~16pp on the week) on the Robinhood Chain announcement (10% of ALL Arbitrum L2 fees → ecosystem, 8% → tokenholder treasury — the first direct fee-value link for the token, i.e. the delegated thesis's actual catalyst). Declined to chase the add at +22%; retrace-add re-armed ~0.075-0.080 as a daemon trigger. **One new PM entry:** US-invade-Iran NO 12sh @ 0.82 ($9.84, DEC-0044) — strict-criteria instance thesis (territorial-control-intent bar vs 18.5% war-heat YES). Book: 5 NO legs (cost ~$86) + ARB.
+
+**The week's real event — the operator reset the operating model (2026-07-15, Telegram, three messages):** "cast a wide net daily" → "you have the VM 24/7... run some script constantly, just cap the memory" → **"do research until you discover a profitable opportunity. Then report back, invest an adequate amount, and go back to researching. The only limit is token limits and VM compute."** Continuation checks are research slots now, not idle-by-default. Day-1 execution:
+- **`opportunity_watch.py` shipped + live** — 24/7 daemon (5-min armed price triggers: ARB retrace-add, regime-fall ≤0.88 re-entry; 15-min consistency/monotonicity arb sweeps as subprocesses; RSS self-cap 150MB + crontab keepalive; actionable hits telegram + fire a tick). Closes the latency gap between 2×-daily ticks — arbs are ephemeral.
+- **Wide-net funnel, day 1:** ~30 raw candidates → 2 instance-gated → 1 ENTER (US-invade NO) + 1 informed SKIP (Hormuz-fees YES — the gate's fresh catalyst check caught Trump's 24h toll backtrack my headline recall had missed; market was efficient at 1.3%).
+- **Two research studies launched** (background agents, running now): UMA dispute-window mispricing; new-listing mispricing. Queue: conditional-probability consistency scanner.
+
+**Ostium exploited for $18M (oracle attack, Jul-15) — exposure ZERO, verified on-chain** (0 perps, no vault deposit, no residual margin). Three weeks ago skeptic+champion PARKED the planned OLP deposit (DEC-0040: "53% APY is a mirage") — OLP depositors are the counterparty backstop behind a 24-48h cooldown, exactly who ate this. The process's clearest avoided-loss to date; OLP marked TERMINAL.
+
+**Ledger lessons:** Mojtaba-seen resolved — **fade would have WON** (NO 0.997 at deadline) but the market was DE-INDEXED from the PM UI mid-life while still trading on CLOB (operator couldn't find it; discoverability/exit-liquidity risk class logged). Methodology experiment CONCLUDED at 20/20: zero_shot +0.29/$ beats all four multi-agent variants out-of-sample (mechanism = selectivity, not leakage) — skeptic+champion stays reserved for >$10/new-class/structural, zero-shot for routine takes.
+
+**Ops:** one session-restart outage (~11h, Jul-15) killed both research agents mid-study — relaunched same day; opportunity_watch survived at host level (designed-for), guards all clean through the gap. Auth post-flight + dead-man switch + keepalive now cover all three observed failure modes.
+
+**Decisions:** 44 total / 22 resolved. **Ledger:** 10 records (1 ENTER, 9 skips/probes/falsification records).
+
+**Outlook (→ ~Jul-22):** Research-loop cadence: synthesize UMA + new-listing study verdicts (report → build monitor/entry rule if REAL, clean kill if not) → next thread. Iran: Jul-27 EU sanctions review, ~Aug-16 MOU expiry checkpoint. VELO ratio still gated (Aero launch ~this month). Daemon triggers armed: ARB ≤0.080 add, regime-fall NO ≤0.88 re-entry. Sunday weekly long-term review due Jul-19.
