@@ -183,12 +183,23 @@ def main() -> int:
 
         # Alert on UMA status changes
         if uma_status in ("proposed", "disputed") and prev_status != uma_status:
-            alerts.append({
+            alert = {
                 "slug": slug, "type": "UMA_STATUS_CHANGE",
                 "market_id": market_id,
                 "msg": f"umaResolutionStatus: {prev_status} → {uma_status}",
                 "outcomePrices": prices,
-            })
+            }
+            if uma_status == "disputed":
+                # Priors from the 2026-07-15 UMA study (N=2,246 on-chain disputes,
+                # research/uma_study_2026-07-15/MEMO.md) — for HELD-position risk
+                # sizing during a dispute, NOT an entry signal (edge = FALSE):
+                alert["dispute_priors"] = (
+                    "1st-dispute proposal stands 72.7% (NO-side 77.9%, YES-side 67.6%); "
+                    "2-dispute DVM path ~80%; median finality 4.2h reset-path / ~91h DVM. "
+                    "IF PRICE CRASHED >=10pp ON THE DISPUTE: proposal stands only 22% — "
+                    "the crash is INFORMATION, reassess the thesis, do NOT dip-buy."
+                )
+            alerts.append(alert)
 
         # Alert on large outcomePrice moves
         if prices and prev_prices and len(prev_prices) >= 2:
