@@ -1,5 +1,5 @@
 {
-  "next_id": 50,
+  "next_id": 51,
   "decisions": [
     {
       "id": 1,
@@ -943,6 +943,24 @@
         "bears",
         "instance-sweep",
         "verification-catch"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 50,
+      "timestamp": "2026-07-16T00:10:32Z",
+      "type": "open_position",
+      "thesis": "Prime-Video-announces-new-project-at-SDCC-2026 YES: 18sh @0.47 (+4.7c/sh fee -> eff 0.517, 11d). LOOSE-criteria instance thesis (study-5 #2): 'new seasons, DLCs, expansions, remasters' qualify AND any 'official channels during the event window' counts (not just panels); parent/subsidiary/authorized-party announcements qualify. Verified fresh: Amazon press release confirms official 2026 SDCC programming (Carrie, BR2099, RoP + Hall H Fri Jul-24 promising 'thrilling surprises'). Stricter nuance priced in: already-announced projects' trailers do NOT count \u2014 thesis needs one previously-unannounced project/renewal in 5 days, which is Prime's standard SDCC playbook + near-weekly press cadence. p_yes 0.78 -> +26pp net, resolves in 11d (~870% APY at central).",
+      "confidence": "medium",
+      "prediction": "Prime announces >=1 previously-unannounced project/season via official channels Jul 22-26; resolves YES by Jul-27",
+      "size_usd": 8.46,
+      "resolution_at": "2026-07-26",
+      "tags": [
+        "sdcc",
+        "prime-video",
+        "shortdated-sweep"
       ],
       "outcome": null,
       "calibration_delta": null,

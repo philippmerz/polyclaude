@@ -182,6 +182,20 @@
    "size_usd": 0,
    "outcome": null,
    "fade_would_have_won": null
+  },
+  {
+   "date": "2026-07-16",
+   "question": "Will Prime Video announce a new project at SDCC 2026?",
+   "side": "YES",
+   "ask": 0.47,
+   "days": 11,
+   "pop_edge_pp": null,
+   "catalyst_p_yes_central": 0.78,
+   "decision": "ENTER $8.46",
+   "reason": "Study-5 shortdated sweep #2. Loose criteria (renewals+any official channel) vs colloquial stage-reveal pricing; Amazon SDCC programming verified via own press release. Stricter nuance (already-announced content excluded) priced into 0.78 central. DEC-0050.",
+   "size_usd": 8.46,
+   "outcome": null,
+   "fade_would_have_won": null
   }
  ]
 }

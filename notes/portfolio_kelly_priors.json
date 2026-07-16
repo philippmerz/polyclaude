@@ -56,5 +56,12 @@
   "rho_within": 0.6,
   "cluster_frac": 0.11,
   "rationale": "2026-07-15 monitoring prior for DEC-0044 (12sh NO @0.82): strict 'invade' bar = intent to establish territorial control; punitive strikes/blockade/tolls do NOT count (2026-05-08 analysis + market description). Active air war but zero ground-invasion posture (no buildup, no mobilization); 6% = escalation-to-invasion tail through Dec-31. Cluster shares iran-regime with Pahlavi (both lose only in extreme-escalation branches)."
+ },
+ "will-prime-video-announce-a-new-project-at-sdcc-2026-20260713165131276": {
+  "p_yes": 0.78,
+  "cluster": "sdcc-window",
+  "rho_within": 0.5,
+  "cluster_frac": 0.05,
+  "rationale": "2026-07-16 entry prior (DEC-0050): loose bar (unannounced project OR new-season renewal via ANY official channel Jul 22-26); Prime SDCC programming confirmed + weekly press cadence; 22% = quiet-week tail (all in-window announcements happen to concern already-announced projects). If more SDCC-family legs are added they share this cluster."
  }
 }

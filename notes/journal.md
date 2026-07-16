@@ -3171,3 +3171,14 @@ Study 4 (strict-criteria sweep) returned 11 candidates from a 7,761-market funne
 - **KILLED by verification:** Hormuz-fees NO (sweep fair-YES 0.22 vs catalyst 0.74 — MOU expiry Aug-15-17 sits INSIDE the window + interpretation fork; both sides skipped, DEC-0048) and Bears-leave-Illinois NO (sweep fact INVERTED: board voted Jun-5 for Hammond INDIANA, IL bill dead — DEC-0049). Lesson reinforced: 2 of the sweep's top-10 had stale load-bearing facts; agent-sourced candidates get fresh fact-verification BEFORE the gate, every time.
 - **QUEUED (no same-chain funds left, ~$11 pUSD buffer kept):** Cuba pair (#6 regime NO 0.87 / #7 deal NO 0.58 — joint ticket, needs catalyst gates), McConnell NO (us-politics cluster-capped, small only), Zelenskyy-Putin-talk YES 0.22 (loose-criteria, needs catalyst gate). Consider at 02:00 tick or next capital-free.
 Book now 8 PM legs, cost ~$118.8; priors file 8 legs (added invade + 3 new); ledger 13 records. Bankroll $166.66 (entry-night MTM drag ~$2.2 = fees+spread, standard).
+
+### 2026-07-16 00:25 UTC — study 5 (short-dated sweep) returned: 10 candidates; 1 entry (Prime SDCC YES $8.46); queue set for tick
+Short-dated (5-20d) strict-criteria sweep: 10,794 crawled → 376 band-filtered → 198 triaged → 10 reportable (memo + shortlist.jsonl in research/shortdated_sweep_2026-07-15/). The band is RICHER than 20-300d: 4 candidates >15pp net at <17d. With ~$11 pUSD left, took the best verify-cost/certainty play: **Prime-Video-SDCC YES 18sh @0.47 (DEC-0050)** — loose criteria verified verbatim (renewals + any-official-channel + authorized-party count; already-announced content excluded — priced into 0.78 vs agent 0.80); Amazon's own press release confirms SDCC programming + Hall H Jul-24. Resolves Jul-26.
+**GATING QUEUE for next capital/tick** (study-5 + study-4 leftovers, in priority order):
+1. cyclo-≥5000-by-Jul-31 NO 0.49 (+26pp IF CDC confirmation cadence is slow — VERIFY update history first; bulk-dump of ~5.1k pending cases is the kill; depth $347)
+2. Sulyok-out-by-Jul-31 YES 0.76 (parliament removed him 139-6 Jul-13, signing ~Jul-18; loose announcement-bar; refusal/Const-Court delay = the 24%; depth $829 cleanest book)
+3. Stripe-3rd-highest-valuation NO 0.838 LIMIT-ONLY (NPM marks say near-lock; stub-mid book, re-verify NPM prints)
+4. Beirut-military-action YES 0.24 (active Lebanon war, fee 0; MidEast cluster call — partially hedges Iran NOs)
+5. Cuba pair (regime NO 0.87 / deal NO 0.58, joint ticket, catalyst gates) + Zelenskyy-talk YES 0.22 (catalyst gate)
+6. Moscow-air-suspended maker bid 0.80-0.81 (taker +6pp < bar; maker-only)
+SDCC family (#6/#7/#8/#10) = correlated with Prime leg — skip satellites unless Prime fills cheap later. Capital: ~$2.5 pUSD buffer left; next capital = GPT-6 resolution Aug-31 or consumed-edge exits. NOTE for 02:00 tick: run guards over 9 PM legs (all priors in place); Prime/GPT-6/invade now in uma_status_check universe.
