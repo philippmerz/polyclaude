@@ -97,6 +97,25 @@ def _read_pid_file(env_var: str) -> int | None:
         return None
 
 
+def _pgrep(pattern: str) -> list[int]:
+    """PIDs matching an -f pattern. PID files go stale across reboots/restarts
+    (2026-07-16: listener PID file said 416, live daemon was 398 → false
+    'channel down' alert); a pgrep fallback beats alerting on a stale file."""
+    try:
+        out = subprocess.run(["pgrep", "-f", pattern],
+                             capture_output=True, text=True, timeout=10).stdout
+        return [int(x) for x in out.split()]
+    except Exception:
+        return []
+
+
+# Persistent-condition alerts (daemon down, scanning down): the condition
+# doesn't change hour to hour, so a 1h cooldown just spams the operator
+# (2026-07-16: 11 identical oppwatch-dead alerts overnight). One ping + one
+# reminder every 6h is enough — the alert's job is done after the first send.
+DAEMON_DOWN_COOLDOWN = 6 * 3600
+
+
 def _emit(state: dict, key: str, msg: str, cooldown: int = ALERT_COOLDOWN_SECONDS) -> bool:
     """Emit an alert with cooldown. Returns True if actually emitted."""
     last = state["last_alerts"].get(key, 0)
@@ -114,9 +133,15 @@ def _emit(state: dict, key: str, msg: str, cooldown: int = ALERT_COOLDOWN_SECOND
 def check_news_watcher(state: dict) -> None:
     pid = _read_pid_file("POLYCLAUDE_NEWS_PID")
     if pid is None or not _pid_alive(pid):
-        _emit(state, "news_watcher_dead",
-              f"news_watcher PID {pid} not alive — daemon down")
-        return
+        live = _pgrep("[n]ews_watcher.py start")
+        if live:
+            print(f"[heartbeat] news_watcher PID file stale ({pid}) but daemon "
+                  f"alive at {live[0]} — no alert", flush=True)
+        else:
+            _emit(state, "news_watcher_dead",
+                  f"news_watcher PID {pid} not alive — daemon down",
+                  cooldown=DAEMON_DOWN_COOLDOWN)
+            return
 
     try:
         state_path = _secrets.path("POLYCLAUDE_NEWS_STATE")
@@ -166,8 +191,14 @@ def check_news_watcher(state: dict) -> None:
 def check_telegram_listener(state: dict) -> None:
     pid = _read_pid_file("POLYCLAUDE_LISTENER_PID")
     if pid is None or not _pid_alive(pid):
+        live = _pgrep("[t]elegram_listener.py start")
+        if live:
+            print(f"[heartbeat] telegram_listener PID file stale ({pid}) but daemon "
+                  f"alive at {live[0]} — no alert", flush=True)
+            return
         _emit(state, "telegram_listener_dead",
-              f"telegram_listener PID {pid} not alive — operator inbound channel down")
+              f"telegram_listener PID {pid} not alive — operator inbound channel down",
+              cooldown=DAEMON_DOWN_COOLDOWN)
 
 
 def check_stuck_cron_forks(state: dict) -> None:
@@ -175,9 +206,11 @@ def check_stuck_cron_forks(state: dict) -> None:
     try:
         out = subprocess.run(
             ["ps", "-eo", "pid,etimes,cmd"],
-            capture_output=True, text=True, check=True, timeout=10,
+            capture_output=True, text=True, check=True, timeout=30,
         ).stdout
-    except subprocess.CalledProcessError:
+    except Exception:
+        # TimeoutExpired here used to propagate and abort the WHOLE poll cycle
+        # (observed under memory pressure 2026-07-16) — skip just this check.
         return
 
     stuck = []
@@ -254,11 +287,91 @@ def check_opportunity_watch(state: dict) -> None:
     if _pid_alive(pid):
         state.pop("oppwatch_dead_since", None)
         return
+    live = _pgrep("[o]pportunity_watch.py start")
+    if live:
+        print(f"[heartbeat] opportunity_watch PID file stale ({pid}) but daemon "
+              f"alive at {live[0]} — no alert", flush=True)
+        state.pop("oppwatch_dead_since", None)
+        return
     dead_since = state.setdefault("oppwatch_dead_since", _now())
     if _now() - dead_since > 25 * 60:
         _emit(state, "opportunity_watch_dead",
               f"opportunity_watch PID {pid} dead >25min and the */10 keepalive "
-              f"hasn't revived it — 24/7 scanning is DOWN. Check logs/opportunity_watch.log")
+              f"hasn't revived it — 24/7 scanning is DOWN. Check logs/opportunity_watch.log",
+              cooldown=DAEMON_DOWN_COOLDOWN)
+
+
+MEM_AVAILABLE_FLOOR_KB = 250 * 1024   # alert when the whole box has <250MB headroom
+MEM_ALERT_COOLDOWN = 2 * 3600
+
+
+def check_memory_pressure(state: dict) -> None:
+    """OOM early-warning (2026-07-16, after the 3rd OOM crash took the VM +
+    network down). The box has ~1.9GB RAM; each claude agent subprocess runs
+    200-400MB RSS, so two concurrent agents + the main session exhausts it.
+    The behavioral fix is sequential-agents-only; this check is the tripwire
+    for whatever slips through — alert BEFORE the kernel starts killing."""
+    try:
+        meminfo = {}
+        for line in open("/proc/meminfo"):
+            k, v = line.split(":", 1)
+            meminfo[k] = int(v.strip().split()[0])  # kB
+        avail = meminfo.get("MemAvailable", 1 << 30)
+    except Exception:
+        return
+    if avail < MEM_AVAILABLE_FLOOR_KB:
+        top = ""
+        try:
+            out = subprocess.run(
+                ["ps", "-eo", "rss,comm", "--sort=-rss"],
+                capture_output=True, text=True, timeout=15).stdout.splitlines()[1:4]
+            top = "; top RSS: " + ", ".join(
+                f"{l.split()[1]} {int(l.split()[0]) // 1024}MB" for l in out if l.split())
+        except Exception:
+            pass
+        _emit(state, "memory_pressure",
+              f"MEMORY PRESSURE: only {avail // 1024}MB available (floor "
+              f"{MEM_AVAILABLE_FLOOR_KB // 1024}MB) — OOM risk (3 VM crashes already). "
+              f"Kill/serialize claude agent subprocesses{top}",
+              cooldown=MEM_ALERT_COOLDOWN)
+
+
+TICK_EXEC_GRACE_SECONDS = 45 * 60
+TICK_EXEC_COOLDOWN = 3 * 3600
+
+
+def check_tick_execution(state: dict) -> None:
+    """End-to-end tick sentinel (2026-07-16). The 02:00 tick was DISPATCHED
+    (send-keys typed into pane operator:0.0, logged in peer_skips.log) but the
+    pane's inner claude was gone, so the keystrokes fell into a dead shell and
+    the tick silently never ran. Pane-liveness heuristics can't fully close
+    that hole; this check closes it at the OUTPUT end: a dispatch record with
+    no journal write within the grace window means the tick was eaten."""
+    repo = Path(__file__).resolve().parent.parent
+    skips = repo / "logs" / "cron" / "peer_skips.log"
+    journal = repo / "notes" / "journal.md"
+    try:
+        last_dispatch = None
+        for line in skips.read_text().splitlines()[::-1]:
+            if "dispatched to operator pane" in line:
+                ts = line.split()[0]  # 20260716T020001Z
+                last_dispatch = int(time.mktime(time.strptime(ts, "%Y%m%dT%H%M%SZ")))
+                break
+        if last_dispatch is None:
+            return
+        journal_m = int(journal.stat().st_mtime)
+    except Exception:
+        return
+    now = _now()
+    if (now - last_dispatch > TICK_EXEC_GRACE_SECONDS
+            and journal_m < last_dispatch
+            and now - last_dispatch < 24 * 3600):
+        _emit(state, "tick_dispatched_not_executed",
+              f"TICK EATEN: cron tick dispatched to the pane "
+              f"{(now - last_dispatch) // 60}min ago but journal.md hasn't been "
+              f"touched since — the send-keys likely landed in a dead/absent claude. "
+              f"Operator: check/restart the polyclaude session.",
+              cooldown=TICK_EXEC_COOLDOWN)
 
 
 def poll_once() -> None:
@@ -268,6 +381,8 @@ def poll_once() -> None:
     check_stuck_cron_forks(state)
     check_session_liveness(state)
     check_opportunity_watch(state)
+    check_memory_pressure(state)
+    check_tick_execution(state)
     _save_state(state)
 
 

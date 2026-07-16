@@ -48,6 +48,21 @@ export HOME="${HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 # `bash` means claude exited and we should fall through to fallback.
 if command -v tmux >/dev/null 2>&1 && tmux has-session -t operator 2>/dev/null; then
     PANE_CMD=$(tmux display-message -p -t operator:0.0 '#{pane_current_command}' 2>/dev/null || echo "")
+    # pane_current_command lies about liveness: script(1) stays the foreground
+    # command even after the claude inside it exits, so `cmd=script` can be a
+    # dead shell. 2026-07-16 02:00: the tick was send-keys'd into exactly that
+    # and silently eaten. Require a live claude/node DESCENDANT of the pane
+    # before dispatching; otherwise fall through to the headless fallback.
+    PANE_PID=$(tmux display-message -p -t operator:0.0 '#{pane_pid}' 2>/dev/null || echo "")
+    PANE_HAS_CLAUDE=""
+    if [[ -n "${PANE_PID}" ]] && pstree -p "${PANE_PID}" 2>/dev/null | grep -qE 'claude|node'; then
+        PANE_HAS_CLAUDE=1
+    fi
+    if [[ -z "${PANE_HAS_CLAUDE}" ]]; then
+        echo "$(date -u +%Y%m%dT%H%M%SZ) cron: pane cmd=${PANE_CMD} but no live claude descendant of pane_pid=${PANE_PID} — falling through to headless" \
+            >> "${LOG_DIR}/peer_skips.log"
+        PANE_CMD="__dead_pane__"
+    fi
     case "${PANE_CMD}" in
         claude|node|script)
             # Wait up to 60s for operator pane to be idle (no Braille spinner).

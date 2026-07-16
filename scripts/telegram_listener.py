@@ -77,6 +77,12 @@ def _pane_is_busy(pane: str) -> bool:
     return any(0x2800 <= ord(c) <= 0x28FF for c in out)
 
 
+def _notify_sender(token: str, chat_id: int, text: str) -> None:
+    """One-shot outbound note to the operator (no retry — best effort)."""
+    httpx.post(f"{API}/bot{token}/sendMessage",
+               json={"chat_id": chat_id, "text": text}, timeout=15)
+
+
 def _send_keys(pane: str, text: str) -> None:
     """Inject a message into a tmux pane as if typed there.
 
@@ -113,6 +119,8 @@ def cmd_start(_args: argparse.Namespace) -> int:
     print(f"listener up: chat_id={chat_id}, pane={pane}, last_update_id={state.get('last_update_id', 0)}", flush=True)
     token = _token()
 
+    stuck: dict[int, float] = {}       # update_id -> first failed-delivery ts
+    stuck_notified: set[int] = set()   # update_ids whose sender was warned
     backoff = 1.0
     while True:
         try:
@@ -159,12 +167,31 @@ def cmd_start(_args: argparse.Namespace) -> int:
                 _send_keys(pane, tagged)
                 state["last_update_id"] = uid  # only advance on success
                 _save_state(state)
+                # Success line (2026-07-16): without it, "was update N ever
+                # delivered?" is undecidable from this log — the OOM-night
+                # forensics needed exactly that.
+                print(f"delivered update {uid} to {pane}", flush=True)
+                stuck.pop(uid, None)
             except (subprocess.CalledProcessError, RuntimeError) as e:
                 # Don't advance the cursor; this update will be re-fetched on
                 # the next poll, and we'll retry the inject when the pane is
                 # idle. Break so we don't process later updates ahead of this
                 # one.
                 print(f"send-keys failed for update {uid}: {e}; will retry", file=sys.stderr, flush=True)
+                # Sender-side visibility (2026-07-16): the operator's OOM
+                # directive retried silently for hours while they assumed it
+                # was read. After 10 min of failed delivery, tell them once.
+                first = stuck.setdefault(uid, time.time())
+                if time.time() - first > 600 and uid not in stuck_notified:
+                    stuck_notified.add(uid)
+                    try:
+                        _notify_sender(token, chat_id,
+                                       "⚠ Your message is received but the polyclaude "
+                                       "session isn't accepting input (busy or down) — it will "
+                                       "be retried until delivered. heartbeat_watch alerts "
+                                       "separately if the session is dead.")
+                    except Exception:
+                        pass
                 break
 
 
