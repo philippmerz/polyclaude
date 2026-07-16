@@ -98,13 +98,19 @@ def _load_priors() -> dict[str, float]:
     for k, v in raw.items():
         if k.startswith("_"):
             continue
+        # Side-aware (2026-07-16): the book now holds YES legs too (SpaceX,
+        # Prime). A p_no prior must never be applied to a Yes holding and
+        # vice versa — carry the side with the probability.
         if isinstance(v, dict) and "p_no" in v:
-            out[k] = float(v["p_no"])
+            out[k] = ("No", float(v["p_no"]))
+        elif isinstance(v, dict) and "p_yes" in v:
+            out[k] = ("Yes", float(v["p_yes"]))
     return out
 
 
-def _match_prior(slug: str, priors: dict[str, float]) -> float | None:
-    """Exact slug match first, then containment either way (slug variants)."""
+def _match_prior(slug: str, priors: dict) -> tuple[str, float] | None:
+    """Exact slug match first, then containment either way (slug variants).
+    Returns (side, p_win) or None."""
     if not slug:
         return None
     if slug in priors:
@@ -201,18 +207,26 @@ def main() -> int:
         # expected_edge_apy = (p/M - 1) x 365/days, with p from the priors
         # file. p < M means holding is NEGATIVE-EV at your own belief —
         # flag regardless of hurdle. Gross carry is kept as a column only.
-        if mark >= 0.5:
-            gross_carry_apy = (1.0 - mark) / mark * 365 / days
-        else:
-            # Sub-0.5 marks (e.g. iran-peace at 0.65) are NOT bond-like;
-            # the marginal-APY-hurdle frame doesn't apply. Skip from the
-            # advisory — these are speculative directional bets, not carries.
-            continue
+        # Gross carry (win-assumed) only means anything for bond-like marks;
+        # EXPECTED edge (p/M - 1) is valid at ANY mark. 2026-07-16 fix: the
+        # old `continue` on mark<0.5 silently dropped sub-0.5 legs (MacBook
+        # NO 0.38, Prime YES 0.47) from the guard entirely — the guard walked
+        # 7 of 9 held legs and reported "all clear".
+        gross_carry_apy = (1.0 - mark) / mark * 365 / days if mark >= 0.5 else None
 
-        prior_p = _match_prior(slug, priors) if outcome == "No" else None
+        matched = _match_prior(slug, priors)
+        prior_p = matched[1] if matched and matched[0] == outcome else None
         expected_edge_apy = None
         if prior_p is not None:
             expected_edge_apy = (prior_p / mark - 1.0) * 365 / days
+
+        if prior_p is None and gross_carry_apy is None:
+            # No prior AND not bond-like: the advisory has no number to offer.
+            # (Add a prior to portfolio_kelly_priors.json to cover such a leg.)
+            print(f"  [UNCOVERED] {outcome} {mark:.3f} | {question[:60]} — "
+                  f"sub-0.5 mark with no prior; add one to {PRIORS_PATH.name}",
+                  file=sys.stderr)
+            continue
 
         record = {
             "question": question,
@@ -224,7 +238,7 @@ def main() -> int:
             "cost": round(cost, 4),
             "mtm": round(mtm, 4),
             "days_to_resolve": round(days, 2),
-            "gross_carry_apy_pct": round(gross_carry_apy * 100, 2),
+            "gross_carry_apy_pct": round(gross_carry_apy * 100, 2) if gross_carry_apy is not None else None,
             "expected_edge_apy_pct": round(expected_edge_apy * 100, 2) if expected_edge_apy is not None else None,
             "drawdown_pct": round(drawdown_pct, 2) if drawdown_pct is not None else None,
         }
@@ -264,9 +278,11 @@ def main() -> int:
         print()
 
     def _apy_col(r: dict) -> str:
+        gross = r.get("gross_carry_apy_pct")
+        gross_s = f"gross {gross:+.1f}%" if gross is not None else "non-bond mark"
         if r.get("expected_edge_apy_pct") is not None:
-            return f"E{r['expected_edge_apy_pct']:>+7.2f}% (p={r['prior_p']:.3f}, gross {r['gross_carry_apy_pct']:+.1f}%)"
-        return f"gross {r['gross_carry_apy_pct']:>+7.2f}% (NO PRIOR)"
+            return f"E{r['expected_edge_apy_pct']:>+7.2f}% (p={r['prior_p']:.3f}, {gross_s})"
+        return f"gross {gross:>+7.2f}% (NO PRIOR)"
 
     print(f"# marginal-APY scan (EXPECTED-edge vs prior) @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")
     print(f"# hurdle: {args.hurdle_apy*100:.2f}% APY; drawdown alert: {args.drawdown_alert_pct:.0f}%; priors: {PRIORS_PATH.name}")
