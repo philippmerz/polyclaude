@@ -122,10 +122,17 @@ def _fire_tick(state: dict, why: str) -> None:
 def _alert(state: dict, key: str, text: str, actionable: bool) -> None:
     _append_alert({"key": key, "text": text, "actionable": actionable})
     last = state.get("alerts", {}).get(key, 0)
-    if _now() - last < ALERT_COOLDOWN:
+    # Unchanged-payload dedupe (2026-07-16 audit): a persistently-true
+    # condition (trigger stays crossed, arb stays open-but-unactable) used to
+    # re-telegram every hour indefinitely. Same key AND same text → 6h
+    # between sends; a CHANGED payload (new price/count) keeps the 1h cadence.
+    prev_text = state.get("alert_texts", {}).get(key)
+    cooldown = ALERT_COOLDOWN * 6 if prev_text == text else ALERT_COOLDOWN
+    if _now() - last < cooldown:
         _log(f"telegram suppressed (cooldown): {key}")
     else:
         state.setdefault("alerts", {})[key] = _now()
+        state.setdefault("alert_texts", {})[key] = text
         _telegram(f"[OPPWATCH] {text}")
     if actionable:
         _fire_tick(state, key)
@@ -142,7 +149,8 @@ def check_price_triggers(state: dict) -> None:
     """
     try:
         trigs = json.loads(TRIGGERS_PATH.read_text())
-    except Exception:
+    except Exception as e:
+        _log(f"triggers file unreadable: {e}")
         return
     for t in trigs:
         try:
@@ -159,7 +167,20 @@ def check_price_triggers(state: dict) -> None:
                 px = float(asks[0]["price"])
             else:
                 continue
-        except Exception:
+            state.setdefault("trig_fails", {}).pop(t["key"], None)
+        except Exception as e:
+            # Visible failure accounting (2026-07-16 audit: bare continue made
+            # a blind armed trigger indistinguishable from a quiet one). After
+            # ~1h of consecutive failures (12 rounds @ 5min), alert once/6h.
+            fails = state.setdefault("trig_fails", {})
+            fails[t["key"]] = fails.get(t["key"], 0) + 1
+            if fails[t["key"]] % 6 == 0:
+                _log(f"trigger {t['key']} fetch failing x{fails[t['key']]}: {e}")
+            if fails[t["key"]] == 12:
+                _alert(state, f"trig-blind-{t['key']}",
+                       f"armed trigger '{t['key']}' has been BLIND for ~1h "
+                       f"(fetch failures) — not watching that price.",
+                       actionable=False)
             continue
         hit = (px <= t["level"]) if t["op"] == "<=" else (px >= t["level"])
         if hit:

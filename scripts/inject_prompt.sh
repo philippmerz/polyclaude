@@ -72,6 +72,22 @@ PYEOF
 esac
 # ---------------------------------------------------------------------------
 
+# Dead-pane guard (2026-07-16 audit): the session existing is NOT proof the
+# inner claude is alive — script(1) keeps the pane up after claude exits, and
+# a prompt typed into the leftover bash EXECUTES as a shell command while
+# inject_log.md records a successful inject. Require a live claude/node
+# descendant of the pane; otherwise log the failure truthfully and exit 4.
+PANE_PID=$(tmux display-message -p -t "$PANE" '#{pane_pid}' 2>/dev/null || echo "")
+if [[ -z "$PANE_PID" ]] || ! pstree -p "$PANE_PID" 2>/dev/null | grep -qE 'claude|node'; then
+    {
+        echo ""
+        echo "## $(date -u +%Y-%m-%dT%H:%M:%SZ) — inject FAILED (dead pane, no live claude)"
+        echo "$PROMPT"
+    } >> "$LOG"
+    echo "ERROR: pane $PANE has no live claude descendant (pane_pid=$PANE_PID) — inject aborted" >&2
+    exit 4
+fi
+
 # Wait up to 60s for operator pane idle (no Braille spinner).
 for _ in {1..60}; do
     title=$(tmux display-message -p -t "$PANE" '#{pane_title}' 2>/dev/null || echo "")

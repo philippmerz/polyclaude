@@ -125,7 +125,7 @@ Single Telegram message, body ≤ 700 chars. Always send (even on a no-action ti
 10. WEEKLY (Saturday) — methodology: **CONCLUDED 2026-07-11 (20/20 resolved).** The 2026-05-02 prospective, ground-truth-blind reasoning-depth test finished: zero_shot +0.29/$ beat all 4 multi-agent variants (−0.01 to −0.10), REPLICATING the retrospective N=30 ranking out-of-sample → NOT a leakage artifact; depth adds action-not-accuracy on routine takes (mechanism = selectivity). Encoded in doctrine §6 (confirmed as-written). Full analysis: journal 2026-07-11 ~02:00. NO weekly re-run needed (the experiment is complete; `prospective_resolve` now just reports 20/20). OPTIONAL only: to re-validate on fresh markets later, start a NEW batch with `methodology_stress_test.py prospective_setup` — but the finding is twice-validated (retro N=30 + prospective N=20), so a third round is low marginal value; don't auto-run.
 11. Commit + push (audit diff for secrets first).
 
-PEER DETECTION (2026-05-07+): you (a forked headless `claude -p`) are running ONLY because the bash-level pre-check in daily_checkin.sh did not find a live operator pane to dispatch to. You are the FALLBACK path. Long-lived operator/prompter `claude` processes (no `-p` flag) are NOT peers — do not defer to them. The .checkin.lock flock prevents another daily_checkin.sh-spawned tick from running concurrently with you, including news_watcher-triggered ones. Real race target: another `claude -p` (note the -p) with the same session id and a different PID from your own. Detect with `pgrep -af 'claude -p' | grep -v "^$$"`. If found, defer with a one-line journal note. If not — proceed even if `pgrep claude` shows other processes; those are panes, not peers. Mutual-defer deadlock previously observed 2026-05-07 02:00 UTC (commit ff13200) is fixed by the bash guard upstream and this clarification.
+PEER DETECTION (2026-05-07+): you (a forked headless `claude -p`) are running ONLY because the bash-level pre-check in daily_checkin.sh did not find a live operator pane to dispatch to. You are the FALLBACK path. Long-lived operator/prompter `claude` processes (no `-p` flag) are NOT peers — do not defer to them. The .checkin.lock flock prevents another daily_checkin.sh-spawned tick from running concurrently with you, including news_watcher-triggered ones. Real race target: another `claude -p` (note the -p) with the same session id and a different PID from your own. Detect with `pgrep -cf 'claude -p'` — YOU are one of the matches, so a count of 1 means no peer (proceed); a count of 2+ means a genuine peer is running (defer with a one-line journal note). Do NOT try to exclude "your own PID" via $$ — in your Bash tool $$ is the tool subshell, never your claude process, and that filter made the fallback see itself as a peer and always defer (2026-07-16 audit). If not — proceed even if `pgrep claude` shows other processes; those are panes, not peers. Mutual-defer deadlock previously observed 2026-05-07 02:00 UTC (commit ff13200) is fixed by the bash guard upstream and this clarification.
 
 EMERGENCY-EXIT PROTOCOL: if a Tier-1 news_watcher alert in the recent journal indicates a real exploit / depeg / chain halt affecting our positions, run the 3-layer sanity check (multi-source corroboration, market-reaction consistency, on-chain ground truth — full spec in strategy/02_operations.md). Only after all three layers PASS, invoke the relevant scripts/emergency_exit_*.py with --reason "<short>". On any layer FAIL, Telegram the operator with the discrepancy and HOLD; default to inaction.
 
@@ -148,6 +148,11 @@ cd "${HOME}"
     echo "ERROR: no session id resolvable from POLYCLAUDE_SESSION; cannot fork-resume"
     exit 2
   fi
+  # `|| RC=$?` guard (2026-07-16 audit): under set -e/pipefail a non-zero
+  # claude exit aborted this brace group — the exit trailer AND the auth
+  # post-flight below (which exists precisely to catch failed claude runs)
+  # never executed on the failures they were built for.
+  RC=0
   echo "${PROMPT}" | claude -p \
     --resume "${SESSION_ID}" \
     --fork-session \
@@ -155,9 +160,9 @@ cd "${HOME}"
     --effort max \
     --permission-mode acceptEdits \
     --allowed-tools "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,TaskCreate,TaskUpdate,TaskList" \
-    2>&1
+    2>&1 || RC=$?
   echo
-  echo "=== exit $? at $(date -u) ==="
+  echo "=== exit ${RC} at $(date -u) ==="
 } >> "${LOG_FILE}" 2>&1
 
 # Creds/auth post-flight (2026-07-02 audit, outage-hardening part 2 of 2).

@@ -83,18 +83,41 @@ def _notify_sender(token: str, chat_id: int, text: str) -> None:
                json={"chat_id": chat_id, "text": text}, timeout=15)
 
 
+def _pane_has_live_claude(pane: str) -> bool:
+    """A live claude/node must be a DESCENDANT of the pane before we type into
+    it. pane_current_command / spinner checks lie: script(1) keeps the pane
+    'alive' after the inner claude exits, and text sent to the leftover bash
+    prompt EXECUTES AS A SHELL COMMAND (2026-07-16 audit, the exact mechanism
+    that ate the operator's OOM directive)."""
+    try:
+        pane_pid = subprocess.run(
+            ["tmux", "display-message", "-p", "-t", pane, "#{pane_pid}"],
+            capture_output=True, text=True, check=True, timeout=10,
+        ).stdout.strip()
+        if not pane_pid:
+            return False
+        tree = subprocess.run(["pstree", "-p", pane_pid],
+                              capture_output=True, text=True, timeout=10).stdout
+        return ("claude" in tree) or ("node" in tree)
+    except Exception:
+        return False
+
+
 def _send_keys(pane: str, text: str) -> None:
     """Inject a message into a tmux pane as if typed there.
 
-    Waits for the pane to look idle (no Braille spinner in the title), then
-    sends the text via -l (literal mode) followed by Enter. Raises
+    Requires a live claude/node descendant of the pane, then waits for the
+    pane to look idle (no Braille spinner in the title), then sends the text
+    via -l (literal mode) followed by Enter. Raises
     subprocess.CalledProcessError on tmux failure; raises RuntimeError if the
-    pane never goes idle within the wait budget so the caller can retry the
-    whole update on the next poll cycle.
+    pane is dead or never goes idle, so the caller retries the whole update
+    on the next poll cycle.
     """
     flat = text.replace("\r\n", " ").replace("\n", " ").strip()
     if not flat:
         return
+    if not _pane_has_live_claude(pane):
+        raise RuntimeError(f"pane {pane} has no live claude descendant (dead shell); will retry next poll")
     # Wait up to ~5 minutes for the pane to look idle. If the human is typing
     # or Claude is generating, retry every few seconds.
     for _ in range(60):
@@ -103,6 +126,8 @@ def _send_keys(pane: str, text: str) -> None:
         time.sleep(5)
     else:
         raise RuntimeError(f"pane {pane} stayed busy too long; will retry next poll")
+    if not _pane_has_live_claude(pane):
+        raise RuntimeError(f"pane {pane} claude died during idle-wait; will retry next poll")
     subprocess.run(["tmux", "send-keys", "-t", pane, "-l", flat], check=True)
     time.sleep(0.2)
     subprocess.run(["tmux", "send-keys", "-t", pane, "Enter"], check=True)

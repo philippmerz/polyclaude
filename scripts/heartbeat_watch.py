@@ -64,14 +64,18 @@ def _save_state(s: dict) -> None:
     os.chmod(STATE_PATH, 0o600)
 
 
-def _telegram(text: str) -> None:
+def _telegram(text: str) -> bool:
+    """Returns True only on confirmed send (2026-07-16 audit: failures were
+    swallowed AND the cooldown was burned, so the watchdog's one job — the
+    ping — could silently not happen for 6h exactly when the network was bad)."""
     try:
-        subprocess.run(
+        r = subprocess.run(
             [".venv/bin/python", "scripts/telegram.py", "msg", text],
-            cwd=_REPO_ROOT, check=False, timeout=15, capture_output=True,
+            cwd=_REPO_ROOT, check=False, timeout=30, capture_output=True,
         )
+        return r.returncode == 0
     except Exception:
-        pass
+        return False
 
 
 def _pid_alive(pid: int) -> bool:
@@ -117,17 +121,23 @@ DAEMON_DOWN_COOLDOWN = 6 * 3600
 
 
 def _emit(state: dict, key: str, msg: str, cooldown: int = ALERT_COOLDOWN_SECONDS) -> bool:
-    """Emit an alert with cooldown. Returns True if actually emitted."""
+    """Emit an alert with cooldown. Returns True if actually emitted.
+
+    The cooldown timestamp is recorded ONLY on a confirmed send — a failed
+    send leaves the key hot so the next hourly poll retries instead of
+    silently waiting out a 6h cooldown on an alert nobody received."""
     last = state["last_alerts"].get(key, 0)
     now = _now()
     if now - last < cooldown:
         print(f"[heartbeat] suppressed (cooldown): {key} -- {msg}", flush=True)
         return False
-    state["last_alerts"][key] = now
     line = f"[heartbeat] {msg}"
     print(line, flush=True)
-    _telegram(f"[HEARTBEAT] {msg}")
-    return True
+    if _telegram(f"[HEARTBEAT] {msg}"):
+        state["last_alerts"][key] = now
+        return True
+    print(f"[heartbeat] telegram send FAILED for {key} — cooldown not burned, will retry next poll", flush=True)
+    return False
 
 
 def check_news_watcher(state: dict) -> None:
@@ -174,16 +184,34 @@ def check_news_watcher(state: dict) -> None:
             # cycle regardless). Instead: compare deltas — a NEW alert line
             # logged while news_alerts.jsonl did not grow is a true
             # persistence failure (2026-06-11 class); anything else is not.
-            alert_count = open(log_p, "rb").read().count(b"[watcher] alert tier")
+            # Incremental count (2026-07-16 audit: full-file read of a
+            # never-rotated log, hourly, in a 1.9GB-RAM box — bound it).
+            # Count alert lines only in bytes appended since the last poll
+            # and accumulate; reset if the file shrank (rotation/truncate).
+            probe_prev = state.get("news_persist_probe") or {}
+            if probe_prev and "log_off" not in probe_prev:
+                # state written by the pre-2026-07-16 full-count format —
+                # counts aren't comparable; re-baseline without alerting
+                probe_prev = {}
+            log_size = log_p.stat().st_size
+            prev_off = probe_prev.get("log_off", 0)
+            prev_cum = probe_prev.get("alerts", 0)
+            if log_size < prev_off:
+                prev_off, prev_cum = 0, 0
+            with open(log_p, "rb") as fh:
+                fh.seek(prev_off)
+                new_alerts = fh.read().count(b"[watcher] alert tier")
+            alert_count = prev_cum + new_alerts
             jsonl_size = jsonl_p.stat().st_size
-            prev = state.get("news_persist_probe") or {}
+            prev = probe_prev
             if (prev and alert_count > prev.get("alerts", alert_count)
                     and jsonl_size <= prev.get("jsonl", 0)):
                 _emit(state, "news_alerts_persistence_diverged",
                       f"{alert_count - prev['alerts']} new watcher alert(s) logged but "
                       f"news_alerts.jsonl did not grow — persistence layer broken "
                       f"(2026-06-11 class); cron ticks are blind to news")
-            state["news_persist_probe"] = {"alerts": alert_count, "jsonl": jsonl_size}
+            state["news_persist_probe"] = {"alerts": alert_count, "jsonl": jsonl_size,
+                                            "log_off": log_size}
     except Exception:
         pass
 
@@ -352,7 +380,11 @@ def check_tick_execution(state: dict) -> None:
     journal = repo / "notes" / "journal.md"
     try:
         last_dispatch = None
-        for line in skips.read_text().splitlines()[::-1]:
+        # bounded read: only the last 16KB matter for the newest dispatch line
+        with open(skips, "rb") as fh:
+            fh.seek(max(0, skips.stat().st_size - 16384))
+            tail = fh.read().decode(errors="replace")
+        for line in tail.splitlines()[::-1]:
             if "dispatched to operator pane" in line:
                 ts = line.split()[0]  # 20260716T020001Z
                 last_dispatch = int(time.mktime(time.strptime(ts, "%Y%m%dT%H%M%SZ")))
@@ -374,6 +406,24 @@ def check_tick_execution(state: dict) -> None:
               cooldown=TICK_EXEC_COOLDOWN)
 
 
+def check_operator_session(state: dict) -> None:
+    """Alert when the operator tmux session itself is absent (2026-07-16
+    audit: after the reboot, every daemon auto-recovered except the session —
+    a human closed that gap 21 minutes later by luck. The session can't be
+    auto-started (interactive login), so the fix is a prompt ping)."""
+    try:
+        r = subprocess.run(["tmux", "has-session", "-t", "operator"],
+                           capture_output=True, timeout=10)
+        if r.returncode != 0:
+            _emit(state, "operator_session_missing",
+                  "operator tmux session is ABSENT (reboot?) — ticks/injects/"
+                  "messages have no destination and only headless fallbacks run. "
+                  "Operator: start the session.",
+                  cooldown=DAEMON_DOWN_COOLDOWN)
+    except Exception:
+        pass
+
+
 def poll_once() -> None:
     state = _load_state()
     check_news_watcher(state)
@@ -383,6 +433,7 @@ def poll_once() -> None:
     check_opportunity_watch(state)
     check_memory_pressure(state)
     check_tick_execution(state)
+    check_operator_session(state)
     _save_state(state)
 
 

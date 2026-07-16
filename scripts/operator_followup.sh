@@ -22,11 +22,18 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 PID_FILE="${POLYCLAUDE_DIR}/notes/.followup_pid"
 
-# Cancel any prior pending followup so only one is queued at a time
+# Cancel any prior pending followup so only one is queued at a time.
+# Identity check before kill (2026-07-16 audit): the PID file persists across
+# reboots and boot PIDs are low/collision-prone — kill -0 alone could green-
+# light killing an unrelated daemon (e.g. telegram_listener at a reused PID).
 if [[ -f "$PID_FILE" ]]; then
     old_pid=$(cat "$PID_FILE" 2>/dev/null || echo "")
     if [[ -n "$old_pid" ]] && kill -0 "$old_pid" 2>/dev/null; then
-        kill "$old_pid" 2>/dev/null && echo "cancelled prior followup pid=$old_pid"
+        if ps -o args= -p "$old_pid" 2>/dev/null | grep -qE 'inject_prompt\.sh|sleep'; then
+            kill "$old_pid" 2>/dev/null && echo "cancelled prior followup pid=$old_pid"
+        else
+            echo "pid $old_pid is NOT a followup process (PID reuse) — not killing"
+        fi
     fi
     rm -f "$PID_FILE"
 fi

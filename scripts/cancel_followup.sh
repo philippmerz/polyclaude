@@ -19,7 +19,13 @@ fi
 
 pid=$(cat "$PID_FILE" 2>/dev/null || echo "")
 if [[ -n "$pid" ]] && kill -0 "$pid" 2>/dev/null; then
-    kill "$pid" 2>/dev/null && echo "cancelled followup pid=$pid"
+    # Identity check before kill (2026-07-16 audit): PID reuse after reboot
+    # can point this file at an unrelated daemon.
+    if ps -o args= -p "$pid" 2>/dev/null | grep -qE 'inject_prompt\.sh|sleep'; then
+        kill "$pid" 2>/dev/null && echo "cancelled followup pid=$pid"
+    else
+        echo "pid $pid is NOT a followup process (PID reuse) — not killing"
+    fi
 else
     echo "stale pid file (process $pid no longer running)"
 fi

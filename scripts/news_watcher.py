@@ -572,6 +572,15 @@ def cmd_start(_args: argparse.Namespace) -> int:
         try:
             existing = int(PID_PATH.read_text().strip())
             os.kill(existing, 0)  # raises if not alive
+            # Identity check (2026-07-16 audit): PID reuse after a reboot can
+            # point the persistent PID file at an unrelated live process,
+            # which would block the @reboot start — news watching's single
+            # scheduled restart opportunity — indefinitely.
+            cmdline = open(f"/proc/{existing}/cmdline", "rb").read()
+            if b"news_watcher" not in cmdline:
+                print(f"[watcher] PID file pid={existing} is NOT a news_watcher "
+                      f"(PID reuse) — claiming.", flush=True)
+                raise OSError("pid reuse")
             print(f"[watcher] refusing to start: pid={existing} is already running. "
                   f"Stop with `news_watcher.py stop` first.", flush=True)
             return 2
