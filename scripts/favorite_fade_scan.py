@@ -186,6 +186,15 @@ def main() -> int:
             cat = categorize(m.get("question", ""))
             if cat in exclude_cats:
                 continue  # efficient category (no favorite-longshot edge) — skip
+            # Doctrine-skip pattern classes (2026-07-17 noise cut): these
+            # surface every tick and are NEVER instance candidates — exact
+            # scorelines (population edge overstated for plausible scores,
+            # Jul-02 pre-skip), tweet-count buckets, player props.
+            _ql = m.get("question", "").lower()
+            if any(p in _ql for p in ("exact score", "tweets from", "tweet count",
+                                       "o/u", "over/under", ": assists", ": points",
+                                       ": rebounds", "handicap")):
+                continue
             fav_is_yes = yes >= 0.5
             cands.append({
                 "q": m.get("question", ""), "fav_is_yes": fav_is_yes,
