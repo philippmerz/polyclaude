@@ -9,11 +9,11 @@
     }
   },
   "SOL": {
-    "ts": 1782266570.2956557,
+    "ts": 1784210491.9280112,
     "result": {
-      "verdict": "WATCH",
-      "score": "3/4",
-      "summary": "**Current $73 is HOLD/WATCH, not ENTRY.** Market still in extreme fear (Fear & Greed 20) but technicals unconfirmed. Triggers for staged entry: - **Tier 1 (Small): Alpenglow testnet \u2192 mainnet launch announcement + positive performance data (Q3 2026, likely).** De-risks network upgrade and creates re-rating event. Size: 0.5\u20131% Kelly position. - **Tier 2 (Medium): Sustained break above $90\u2013$100 with",
+      "verdict": "ERROR",
+      "score": "?/4",
+      "summary": "**Current conditions warrant WATCHING, not immediate entry.** Solana is at cycle-bottom valuation (74% below ATH) with authentic secular tailwinds (dev growth, on-chain revenue, Western Union live). However, key execution tests remain: Alpenglow/Firedancer must ship successfully on mainnet without major delays or outages. TVL must show recovery trajectory above $8B within next 6 months to confirm ",
       "fresh": true
     }
   },
@@ -27,11 +27,11 @@
     }
   },
   "STX": {
-    "ts": 1782137066.292213,
+    "ts": 1784210616.525355,
     "result": {
       "verdict": "WATCH",
       "score": "3.5/4",
-      "summary": "**CURRENT ENTRY**: Cycle lows ($0.17\u2013$0.20) offer entry if you have a 3-year conviction in Bitcoin staking as an institutional megatrend and believe Stacks' self-custodial mechanism is defensible. Position sizing: Kelly/4 (Kelly = 25% \u00d7 expected return / probability of loss; with 30% strong scenario + 25% generational = 55% upside cases, Kelly \u2248 1\u20132% of portfolio). **CONFIRMATION ENTRY**: Wait for",
+      "summary": "- **Current price ($0.1663) is already opportunistic** (79% drawdown = 3-4 standard deviations), suitable for dollar-cost-average initiation if conviction is >60%. - **Hard entry on catalyst:** Wasm mainnet with validated 30x+ improvement + Bitcoin >$90k \u2192 commit 50% of allocation. - **Opportunistic dip entry:** STX $0.08\u2013$0.12 + sBTC TVL stabilizing $400M+ + positive Q2 developer metrics \u2192 full a",
       "fresh": true
     }
   },

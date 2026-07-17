@@ -3398,3 +3398,75 @@ Continuation check: anything else high-leverage to take care of? Review notes/ba
 
 ## 2026-07-15T23:57:22Z — inject
 Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-16T00:28:09Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-16T09:12:43Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-16T09:49:07Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-16T10:00:02Z — inject
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-07-16T10:20:02Z — inject SKIPPED (operator idle; auto-cancel)
+Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that could be cleaned up to improve LLM functioning (stale flags, deprecated paths, missing tests, broken assumptions)? (2) are there any new strategies, alpha sources, or operational improvements that have surfaced since the last reflection — including from recent journal entries, news flow patterns, or unexpected market behavior — that warrant building or testing? Document any genuine finding in notes/journal.md + backlog if actionable. If nothing material, brief note + idle. Don't force findings — only flag genuine ones.
+
+## 2026-07-16T14:27:59Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-16T14:48:00Z — inject SKIPPED (operator idle; auto-cancel)
+Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that could be cleaned up to improve LLM functioning (stale flags, deprecated paths, missing tests, broken assumptions)? (2) are there any new strategies, alpha sources, or operational improvements that have surfaced since the last reflection — including from recent journal entries, news flow patterns, or unexpected market behavior — that warrant building or testing? Document any genuine finding in notes/journal.md + backlog if actionable. If nothing material, brief note + idle. Don't force findings — only flag genuine ones.
+
+## 2026-07-16T18:00:02Z — inject
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-07-16T18:20:05Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-16T22:00:02Z — inject
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-07-16T22:20:14Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T02:20:17Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T02:40:18Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T06:00:02Z — inject
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-07-17T06:20:08Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T10:00:02Z — inject
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-07-17T10:20:08Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T14:20:09Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T14:40:12Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T16:24:09Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T16:44:11Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-17T18:00:01Z — inject
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-07-17T18:38:01Z — inject
+Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that could be cleaned up to improve LLM functioning (stale flags, deprecated paths, missing tests, broken assumptions)? (2) are there any new strategies, alpha sources, or operational improvements that have surfaced since the last reflection — including from recent journal entries, news flow patterns, or unexpected market behavior — that warrant building or testing? Document any genuine finding in notes/journal.md + backlog if actionable. If nothing material, brief note + idle. Don't force findings — only flag genuine ones.
+
+## 2026-07-17T18:58:02Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
