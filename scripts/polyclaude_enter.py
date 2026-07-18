@@ -415,9 +415,14 @@ def main() -> int:
             return 2
         print(f"\n# Running catalyst_check.py for P estimate...", file=sys.stderr)
         try:
+            cc_cmd = [".venv/bin/python", "scripts/catalyst_check.py", question, args.resolve_date,
+                      "--no-log"]
+            # Window-start guard (2026-07-18 Beirut miss): for "by DATE" markets
+            # created mid-stream, pre-creation events must not count toward YES.
+            if m.get("createdAt"):
+                cc_cmd += ["--window-start", str(m["createdAt"])[:19]]
             r = subprocess.run(
-                [".venv/bin/python", "scripts/catalyst_check.py", question, args.resolve_date,
-                 "--no-log"],
+                cc_cmd,
                 cwd=REPO_ROOT, capture_output=True, text=True, timeout=600,
             )
             cc_out = r.stdout

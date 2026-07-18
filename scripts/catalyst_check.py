@@ -195,6 +195,10 @@ def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("question", help="The Polymarket market question, in quotes.")
     p.add_argument("resolve_date", help="Resolution date, ISO format YYYY-MM-DD.")
+    p.add_argument("--window-start", default=None,
+                   help="Market creation date (ISO). For 'by DATE' markets created mid-stream, "
+                        "only events AFTER this date can resolve YES — without it the check "
+                        "counts pre-creation events (2026-07-18 Beirut miss: 85%% vs market 27%%).")
     p.add_argument("--model", default="haiku",
                    help="Claude model for the lookup (default: haiku — cheap/fast).")
     p.add_argument("--effort", default="medium",
@@ -232,6 +236,14 @@ def main() -> int:
             "websearch may lag these; treat them as ground truth for current state):\n"
             + headlines + "\n")
         print(f"# injected {headlines.count(chr(10)) + 1} live headlines into prompt", file=sys.stderr)
+
+    if args.window_start:
+        resolution_block += (
+            f"\n**WINDOW START: this market was created {args.window_start}. Only events "
+            f"occurring AFTER that datetime can satisfy the resolution criteria — events "
+            f"before it, however similar, DO NOT count toward YES. If your qualifying "
+            f"catalyst predates the window start, P(YES) must be based solely on the "
+            f"probability of a NEW qualifying event inside the window.**\n")
 
     prompt = PROMPT_TEMPLATE.format(
         question=args.question,

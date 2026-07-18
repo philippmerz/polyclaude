@@ -3245,3 +3245,6 @@ Funnel otherwise: 0 arbs, fade surfacer clean post-noise-cut (France-warships fa
 
 ### 2026-07-18 02:45 UTC — gating queue emptied honestly: Beirut + Stripe SKIP (ledger 16)
 Beirut YES: catalyst said 85% but misread the window (counted pre-creation strikes; market created Jul-8) — corrected read ≈ market 0.27 with a Lebanon-front framework holding; SKIP + tool-fix backlogged (pass createdAt to catalyst_check). Stripe NO: book repriced 40pp toward YES since the sweep (informed flow on the xAI ladder; sweep's ladder also had post-IPO SpaceX as private #2 = stale) — SKIP, never fade a move you can't explain. **Queue fully resolved: 6 items → 1 entry (Prime) + 5 verified skips.** Dry powder ~$13 held; gates don't force. The night's tally: 1 exit (+$0.51), 2 prior updates, 2 triggers armed, 3 candidates honestly killed, 1 tool blindspot found.
+
+### 2026-07-18 02:50 UTC — window-start blindspot fixed same-night
+catalyst_check gained --window-start (prompt guard: only post-creation events count toward YES) and polyclaude_enter passes the market's createdAt automatically. The blindspot that produced tonight's 85%-vs-27% Beirut miss is closed for every future mid-stream "by DATE" gate run. Backlog item marked done.
