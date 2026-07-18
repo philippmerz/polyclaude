@@ -317,7 +317,13 @@ def main() -> None:
             apy = f"{r['apy_dominant']*100:>+5.1f}%" if r.get('apy_dominant') is not None else "   -  "
             hurdle = "✓" if r.get("clears_hurdle") else " "
             side = r.get('dominant_side') or "-"
-            print(f"  yes={yp}  apy_{side}={apy}{hurdle}  spd={r['spread']:.3f}  liq={r['liquidity']:>9.0f}  v24={r['vol24h']:>9.0f}  d={r['days_to_resolve']:>6.1f}  {r['question'][:80]}")
+            # gross_apy label (2026-07-18): this column is WIN-ASSUMED carry —
+            # (1-M)/M annualized — NOT expected edge. Twice this week (Hormuz-
+            # traffic 35% "APY", Hormuz-transit) it seduced until honest priors
+            # showed negative expected edge. The ✓ means "gross carry clears
+            # hurdle IF the fade always wins" — never an entry signal by itself.
+            print(f"  yes={yp}  gross_apy_{side}={apy}{hurdle}  spd={r['spread']:.3f}  liq={r['liquidity']:>9.0f}  v24={r['vol24h']:>9.0f}  d={r['days_to_resolve']:>6.1f}  {r['question'][:80]}")
+    print("\n# gross_apy = WIN-ASSUMED carry, not expected edge — price P(loss) with an honest prior before any entry (2026-07-02 guard lesson, applied to discovery 2026-07-18)")
 
     # Optional: run catalyst_check.py on top N candidates (post-philosophy update
     # 2026-05-08, mandatory for any bond-like fade actually being entered).
