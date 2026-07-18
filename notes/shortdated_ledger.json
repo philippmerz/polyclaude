@@ -196,6 +196,34 @@
    "size_usd": 8.46,
    "outcome": null,
    "fade_would_have_won": null
+  },
+  {
+   "date": "2026-07-18",
+   "question": "Israel military action against Greater Beirut by July 31?",
+   "side": "YES",
+   "ask": 0.27,
+   "days": 13,
+   "pop_edge_pp": null,
+   "catalyst_p_yes_central": null,
+   "decision": "SKIP",
+   "reason": "catalyst_check said 85% but MISREAD the window (counted Jun-14/Jul-5 strikes predating Jul-8 market creation). Corrected read: P(new qualifying strike on mapped zone in 13d) with a Lebanon-front framework apparently holding ~= market 0.27. No edge. TOOL LESSON: pass market-creation date to catalyst_check for mid-stream 'by DATE' markets.",
+   "size_usd": 0,
+   "outcome": null,
+   "fade_would_have_won": null
+  },
+  {
+   "date": "2026-07-18",
+   "question": "Will Stripe have the third highest private market valuation on July 31?",
+   "side": "NO",
+   "ask": 0.44,
+   "days": 13,
+   "pop_edge_pp": null,
+   "catalyst_p_yes_central": null,
+   "decision": "SKIP",
+   "reason": "Book repriced 40pp+ toward YES since sweep (NO 0.86->0.44) — market learned something about the xAI/ladder we don't know (sweep's ladder also stale: listed post-IPO SpaceX as private #2). Entering after an informed move = fading informed flow.",
+   "size_usd": 0,
+   "outcome": null,
+   "fade_would_have_won": null
   }
  ]
 }
