@@ -1,5 +1,5 @@
 {
-  "next_id": 52,
+  "next_id": 53,
   "decisions": [
     {
       "id": 1,
@@ -979,6 +979,24 @@
         "iran",
         "pahlavi",
         "guard-driven"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 52,
+      "timestamp": "2026-07-18T22:02:37Z",
+      "type": "size_change",
+      "thesis": "ADD GPT-6-by-Aug-31 NO: 15sh @0.61 ($9.15, tx 0x736b55f5) on the 0.68->0.59 dip. Fresh verification found NO fundamental (no announcement, no model card, no date \u2014 'late 2026 at earliest, possibly 2027'); the strict bar (publicly accessible, no beta, no relabels, 44d) has no hidden-information channel \u2014 for YES a PUBLIC release must occur, so the move is rumor flow on a thin book, categorically unlike the Stripe informed-flow skip. Blended position now 29sh, cost $18.67, avg 0.644, 11.5% of bankroll (cap 15%). p_no 0.96 -> +31pp at eff cost 0.649. This deployed the dry powder the operator asked about \u2014 first gate-clearing use since the Pahlavi exit.",
+      "confidence": "high",
+      "prediction": "No publicly-accessible GPT-6 by Aug-31; both tranches resolve NO ~Sep-1",
+      "size_usd": 9.15,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "gpt6",
+        "add",
+        "dip-buy"
       ],
       "outcome": null,
       "calibration_delta": null,

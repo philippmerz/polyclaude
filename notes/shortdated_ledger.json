@@ -224,6 +224,20 @@
    "size_usd": 0,
    "outcome": null,
    "fade_would_have_won": null
+  },
+  {
+   "date": "2026-07-18",
+   "question": "Will GPT-6 be released by August 31, 2026?",
+   "side": "NO",
+   "ask": 0.61,
+   "days": 44,
+   "pop_edge_pp": null,
+   "catalyst_p_yes_central": 0.04,
+   "decision": "ADD $9.15",
+   "reason": "Dip-buy on rumor flow (0.68->0.59, no fundamental found on fresh check). DEC-0052. Combined 29sh/$18.67.",
+   "size_usd": 9.15,
+   "outcome": null,
+   "fade_would_have_won": null
   }
  ]
 }
