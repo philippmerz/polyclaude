@@ -3248,3 +3248,6 @@ Beirut YES: catalyst said 85% but misread the window (counted pre-creation strik
 
 ### 2026-07-18 02:50 UTC — window-start blindspot fixed same-night
 catalyst_check gained --window-start (prompt guard: only post-creation events count toward YES) and polyclaude_enter passes the market's createdAt automatically. The blindspot that produced tonight's 85%-vs-27% Beirut miss is closed for every future mid-stream "by DATE" gate run. Backlog item marked done.
+
+### 2026-07-18 14:10 UTC — 14:00 cron tick: quiet
+Guards: bankroll $163.30 (war-heat MTM on invade leg, inside trigger band 0.72-0.73); UMA 21/0; expected-edge 8/8 HOLD; Ostium/redeem/pending empty. News: 2 Tier-2 continuation. Funnel (full suite): 0 arbs, 0 fundable — new surfacing "40 ships transit Hormuz" NO 0.94 skipped on the same honest-prior math that killed Hormuz-traffic (p_no ~0.90-0.95 vs 0.94 cost = no edge, war-correlated). Watchlist: same 4 IBKR hits persist (SOL/STX/ALB/CCJ — surfaced yesterday, operator's call). Kimi eval still unrun — final pointer in heartbeat. Weekly P&L due ~Jul-22; Sunday long-term review tomorrow 16:00.
