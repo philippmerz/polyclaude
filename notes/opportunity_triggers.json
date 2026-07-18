@@ -1,20 +1,38 @@
 [
-  {
-    "key": "arb-retrace-add",
-    "kind": "coingecko",
-    "id": "arbitrum",
-    "op": "<=",
-    "level": 0.080,
-    "note": "ARB retrace-add zone top (0.075-0.08, msg 530): fee-switch fundamentals + froth given back. Standing delegated authority; verify thesis intact then add tranche. Raw dip-add <=0.065 also stands.",
-    "actionable": true
-  },
-  {
-    "key": "regime-fall-reentry",
-    "kind": "clob_no_ask",
-    "id": "106181075047366745139197108801635573283215248045056329679360376976893016488727",
-    "op": "<=",
-    "level": 0.88,
-    "note": "Regime-fall NO re-entry bound (ledger 2026-07-08): escalation dip below the robust bound = instance-thesis re-entry candidate; run the full gate before entering.",
-    "actionable": true
-  }
+ {
+  "key": "arb-retrace-add",
+  "kind": "coingecko",
+  "id": "arbitrum",
+  "op": "<=",
+  "level": 0.08,
+  "note": "ARB retrace-add zone top (0.075-0.08, msg 530): fee-switch fundamentals + froth given back. Standing delegated authority; verify thesis intact then add tranche. Raw dip-add <=0.065 also stands.",
+  "actionable": true
+ },
+ {
+  "key": "regime-fall-reentry",
+  "kind": "clob_no_ask",
+  "id": "106181075047366745139197108801635573283215248045056329679360376976893016488727",
+  "op": "<=",
+  "level": 0.88,
+  "note": "Regime-fall NO re-entry bound (ledger 2026-07-08): escalation dip below the robust bound = instance-thesis re-entry candidate; run the full gate before entering.",
+  "actionable": true
+ },
+ {
+  "key": "invade-no-strength-exit-review",
+  "kind": "clob_no_ask",
+  "id": "1910830010387565971650098373488592514702818137344973088263643820608151819241",
+  "op": ">=",
+  "level": 0.79,
+  "note": "invade NO recovered to ~0.79+ ask: re-run Section-5 exit math (strength-sell decision at updated prior 0.75)",
+  "actionable": true
+ },
+ {
+  "key": "invade-no-thesis-break",
+  "kind": "clob_no_ask",
+  "id": "1910830010387565971650098373488592514702818137344973088263643820608151819241",
+  "op": "<=",
+  "level": 0.62,
+  "note": "invade NO ask <=0.62: market pricing ~40% YES — at/beyond prior band edge; full thesis-break review + Pahlavi cluster check",
+  "actionable": true
+ }
 ]

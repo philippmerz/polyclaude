@@ -1,13 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-07-15",
- "will-reza-pahlavi-lead-iran-in-2026": {
-  "p_no": 0.98,
-  "cluster": "iran-regime",
-  "rho_within": 0.6,
-  "cluster_frac": 0.055,
-  "rationale": "2026-07-03 prior-hygiene pass: conjunction P(regime falls by Dec-31 ~7% high-case) x P(Pahlavi installed & leading | fall, in-window ~15-25%) <= ~2% -> p_no 0.98. Previous 0.97 carried entry-pessimism. ANTI-correlated with iran-peace; regime-fall Aug-cliff tail flows through the first factor (already at its high). [2026-07-04: cluster_frac 0.235->0.055 — regime-fall leg CLOSED (DEC-0043); Pahlavi is now the only iran-regime cluster position (~$9.2/$167).]"
- },
+ "_updated": "2026-07-18",
  "trump-out-as-president-before-2027": {
   "p_no": 0.97,
   "cluster": "us-politics",
@@ -51,11 +44,11 @@
   "rationale": "2026-07-15 entry prior (DEC-0047): GPT-5.6 GA Jul-9; no GPT-6 announced/dated; strict accessibility bar (no beta, no relabels); 47d window. 4% = OpenAI surprise-drop tail."
  },
  "will-the-us-invade-iran-before-2027": {
-  "p_no": 0.94,
+  "p_no": 0.75,
   "cluster": "iran-regime",
   "rho_within": 0.6,
   "cluster_frac": 0.11,
-  "rationale": "2026-07-15 monitoring prior for DEC-0044 (12sh NO @0.82): strict 'invade' bar = intent to establish territorial control; punitive strikes/blockade/tolls do NOT count (2026-05-08 analysis + market description). Active air war but zero ground-invasion posture (no buildup, no mobilization); 6% = escalation-to-invasion tail through Dec-31. Cluster shares iran-regime with Pahlavi (both lose only in extreme-escalation branches)."
+  "rationale": "2026-07-18 STALE-PRIOR UPDATE (was 0.94): White House meetings on ground troops verified (WaPo/AlJazeera Jul 16-17); Trump 'leaning toward' seizing Iranian islands (Kharg) — an island seizure MEETS the territorial-control bar unlike strikes/blockade. Structured: P(authorize ground seizure) ~35-38% x P(commence by Dec-31) ~0.85 x P(resolves as US-invade | seizure; allied-led carve-out) ~0.7 -> P(YES) ~25% central (band 15-42). Vance denial + 'other people could lead' = the NO-side protection. Guard verdict at mark 0.725: HOLD (E-edge ~7.6%/yr > hurdle; Section-5 exit not met). Triggers armed both directions."
  },
  "will-prime-video-announce-a-new-project-at-sdcc-2026-20260713165131276": {
   "p_yes": 0.78,

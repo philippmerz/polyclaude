@@ -1,5 +1,5 @@
 {
-  "next_id": 51,
+  "next_id": 52,
   "decisions": [
     {
       "id": 1,
@@ -961,6 +961,24 @@
         "sdcc",
         "prime-video",
         "shortdated-sweep"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 51,
+      "timestamp": "2026-07-18T02:07:29Z",
+      "type": "close_position",
+      "thesis": "CLOSED Pahlavi NO: sold 11sh @ 0.954 bid ($10.49, tx 0x52145ff3), cost $9.98 -> realized +$0.51 (+5.1%). Trigger chain: fresh invade-catalyst check (ground-ops consideration verified via WaPo/AlJazeera \u2014 Trump 'leaning toward' seizing Iranian islands) -> honest prior updates (invade 0.94->0.75, Pahlavi 0.98->0.97) -> Pahlavi flipped CLOSE_CANDIDATE (E +3.6% < 5% hurdle at mark 0.9555). Exit sacrifices ~$0.18 EV vs hold but removes the weakest Iran-cluster leg while invasion-consideration widens the correlated tail, and restores dry powder at 0 free capital. Redeployment targets checked and REJECTED same pass: Sulyok YES edge compressed away (0.79 ask + deadline-day defiance rhetoric = fair ~0.82, +1pp), Hormuz-traffic NO is NEGATIVE at honest prior (gross-carry seduction: p_no ~0.96 < 0.989 cost). Proceeds stay as pUSD dry powder. Invade leg HELD at updated prior (E +7.6% > hurdle) with triggers armed 0.79/0.62.",
+      "confidence": "medium",
+      "prediction": "Iran resolved without invasion AND without Pahlavi: both NOs would have paid, but the risk-adjusted exit at hurdle-breach is correct process; score against whether invade triggers fire",
+      "size_usd": 10.49,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "iran",
+        "pahlavi",
+        "guard-driven"
       ],
       "outcome": null,
       "calibration_delta": null,
