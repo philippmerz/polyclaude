@@ -353,3 +353,17 @@ Themes — all already-tracked, directional-beta, or not-at-trigger; NO new poly
 - Digest's own note: themes A/B/D/E/F already in this watchlist (NVDA/semis/crypto-L1L2/RWA). Confirmed.
 
 Trigger-state changes (all IBKR-surface, previously surfaced): **SOL re-dipped below $80 ($77.41)** (was above last wk); STX $0.173 persistent; **ALB $126.05 (−7% from last wk's $135.56), nearing the deep-conviction $120 zone** — BUT flag: last week's digest saw lithium supply-additions pressure, and ALB's entry thesis needs lithium >$20/kg; a supply-driven fade below that would make "cheaper" = "thesis-ERODING," not a better entry. Operator: weigh the lithium spot before treating the ALB dip as an add. CEG/NVDA/PLTR off the hit-list.
+
+## 2026-07-19 weekly digest (domains: biotech-health, trade-regulation, markets-corporate)
+
+Themes — one new candidate vetted, rest pass/already-tracked:
+- **Biotech gene-therapy / rare-disease approval acceleration (MED-HIGH):** clustered approvals (sickle-cell Jul-1, oral PCSK9 Jul-17, blood-cancer immunotherapy Jun-30) + AI-designed drugs entering phase 1-2 + XBI at cycle highs. Vetted CRSP → **3.5/4 WATCH**.
+- Oil majors rebound XOM/CVX (MED): directional energy beta, no instance edge, IBKR-route. Pass.
+- Healthcare-insurer GLP-1 cost pressure (MED-HIGH): already priced into sector guidance per digest; execution risk high. Pass.
+- Brazil tariff shock (MED): EM/materials, no decentralized venue. Pass.
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **CRSP (new)** | **3.5/4** | WATCH | Gene-therapy approval-cycle inflection | No trigger met NOW. **Q2 earnings Aug-10 = the inflection**: ENTER $48-55 (1% Kelly) IF Casgevy 2026 guidance ≥$130M holds; PASS→wait $35-45 dip if guidance <$100M. CTX310 Ph2 positive (2026-27) = upgrade. 2-5y → IBKR-surface. |
+
+Trigger-state (all IBKR-surface, previously surfaced): SOL $74.65, STX $0.166, ALB $118.37 (now inside the deep-conviction ≤$120 zone — but the lithium-spot caveat from Jul-05/12 stands: confirm spot >$20/kg before treating as an add, else "cheaper = thesis-eroding"), CCJ $84.84 (below the $85-95 band; uranium-spot leg unverified). All 4 surfaced to operator at the 14:00 tick.

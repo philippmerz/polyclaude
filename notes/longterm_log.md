@@ -389,3 +389,72 @@ Without catalyst re-acceleration, watch this position and enter on weakness rath
 - [Albemarle Stock Price History](https://www.macrotrends.net/stocks/charts/ALB/albemarle/stock-price-history)
 - [Yahoo Finance: Albemarle (ALB)](https://finance.yahoo.com/quote/ALB/)
 ```
+
+---
+
+## 2026-07-19T16:06:22Z — longterm_check
+
+**Query:** `CRSP` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: CRSP
+
+Date: 2026-07-19 | Type: equity | Horizon: 3y
+
+### Current state
+CRSP $48.57 (down 38% from 52-week high $78.48); 1Y return +47.45%; P/S 1,105 (pre-revenue scale typical); Casgevy (approved product) $116M 2025 revenue, projected ~$130-344M 2026 (analyst range).
+
+### Cyclical position
+CRSP is mid-cycle post-approval: Casgevy launched Dec 2023, now in ramp phase with 500+ patients globally treated and 111 new patients in 2025 vs. fewer in 2024. Revenue acceleration evident but commercial execution risk remains (cell collection bottleneck cited). Stock corrected 38% from June spike—valuation reset suggests market doubts sustainability of Casgevy growth curve. At this stage, not at multi-year bottom; more accurately priced as mid-cycle upside/downside binary on commercial execution. Sentiment: Morgan Stanley doubled price target $33→$60 early July, but stock pulled back, suggesting initial enthusiasm faded.
+
+### Secular tailwind
+Gene therapy adoption post-Casgevy approval intact and accelerating. Large TAM: sickle cell disease (~20k eligible in US); familial hypercholesterolemia (HeFH ~700k US; severe HTG additional subset). CRISPR platform de-risked: Casgevy Phase 3 success + Vertex co-commercialization validates ex vivo approach; CTX310 (in vivo ANGPTL3) reported June 2025 Phase 1 data with up to 86% LDL reduction, well-tolerated, published NEJM Nov 2025. Regulatory pathway proven. Tailwind is intact; whether CRSP captures it remains dependent on execution and competitive pressure (oral sickle cell therapies Agios/Novo Nordisk gaining traction, rival curative therapies from bluebird/Vertex partnership).
+
+### Catalyst window
+- [HIGH] 2026-Q3 (Aug 10) — Q2 2026 earnings release: critical test of Casgevy ramp trajectory and 2026 full-year guidance; confirm or refute bull case — [CRSP IR, Seeking Alpha]
+- [HIGH] 2026-H1 — CTX320 Phase 1 update (LPA targeting): second in vivo program readout, platform validation — [CRSP earnings transcript Q1 2026]
+- [MED] 2026 — PNPLA3 and LDLR trial initiations: expansion of in vivo liver-directed platform — [CRSP business update Q1 2026]
+- [MED] 2026-2027 — CTX310 Phase 2 initiation (ANGPTL3 HoFH/sHTG indications): pivotal trial data ~2027-2028 — [NEJM CTX310 publication Nov 2025]
+- [MED] 2026-2027 — Casgevy international approvals (Europe, Japan) + pediatric uptake expansion: expand addressable population — [Vertex 2026 guidance]
+- [LOW] 2027-2028 — In vivo platform Phase 2 efficacy + durability readouts: de-risk long-term safety/durability assumptions
+
+### Margin of safety
+CRSP holds $2.44B in liquid assets (cash + marketable securities) vs. $585M long-term debt (convertible notes) = ~$1.85B net cash. Quarterly burn: $126M (Q1 2026), implying ~15 quarters of runway. Casgevy already generating $116M annualized revenue (growing), providing revenue foundation. Vertex partnership eligible for >$1.3B in milestone payments + ongoing royalties; no all-or-nothing binary. Manufacturing + IP moat established post-Casgevy approval. Stock down 38% from highs = valuation reset reduces downside. However, no path to GAAP profitability visible before 2027-2028; depends on Casgevy acceleration + in vivo program partnerships/value.
+
+### Top 3 risks
+1. **Casgevy commercial plateau** — Patient access bottleneck (cell collection capacity insufficient for full ramp), competitive pressure from oral therapies (Agios Arzayaflowed, Novo Nordisk entry expected 2026-2027), and peak penetration lower than bull case. If ramp slows to <$150M 2026 or guidance reset, revenue base collapses and stock re-rates sharply lower. Breaks thesis without in vivo offset.
+2. **In vivo platform execution failure** — CTX310/320 succeed Phase 1 safety but fail Phase 2 efficacy (off-target editing in larger populations, durability insufficient, manufacturing scale issues). Large TAM but high development risk; failure of 2+ programs kills upside and extends burn. Cash runway sufficient but value destruction significant.
+3. **Sustained negative cash flow + no clear profitability path** — $126M/quarter burn rate requires Casgevy to scale to $300M+ ARR OR in vivo programs to reach value-inflecting partnerships (upfronts/milestones). If both stall, CRSP burns through $1.85B net cash over 4-5 years without meaningful inflection, forcing equity raise at depressed valuation or strategic sale at unfavorable terms.
+
+### 5-year scenario probabilities
+- Generational (10x+): 12% — Casgevy becomes $800M+ franchise + 2 in vivo programs (CTX310, CTX320 or PNPLA3) approved by 2028-2029, CRSP receives royalties + milestones totaling $300-500M+ revenue run-rate → earnings re-rating to $400-600+ per share.
+- Strong (3-5x): 25% — Casgevy sustains $400-600M peak revenue + 1 in vivo program approved in one indication (ANGPTL3 HoFH or similar) by 2028 → CRSP $150-250M revenue → stock $140-240.
+- Modest (1.5-3x): 35% — Casgevy ramps to $250-350M, CTX310/320 Phase 2 data mixed or delayed, one program advances but no approval by 2029 → CRSP sustains $70-120M revenue → stock $60-100.
+- Flat/mild loss (-30% to +50%): 20% — Casgevy plateaus $200-250M due to competitive/access headwinds, in vivo programs delayed or show marginal efficacy, CRSP remains cash-constrained → stock stalls $35-55.
+- Thesis broken (-50%+): 8% — Casgevy commercial flops (safety signal, reimbursement denial, competitive loss to oral therapies), in vivo programs fail pivotal trials, CRSP forced to curtail pipeline and sell non-core assets → stock $15-30.
+
+### Entry trigger
+**NOW (July 2026):** No immediate entry trigger met; Q2 earnings (Aug 10) is critical inflection. **Watch for:**
+- If Q2 earnings confirm Casgevy 2026 guidance ≥$130M and full-year trajectory intact → ENTER at $48-55 with 1% Kelly position; stock offers margin of safety vs. bull case.
+- If Q2 earnings disappoint (2026 guidance <$100M, deceleration signals) → PASS now, wait for $35-45 dip or CTX310 Phase 2 positive data (2027) before re-entering.
+- If CTX310 Phase 2 interim data positive (2026-2027) → upgrade thesis and enter at $50-70.
+- Drop to PASS if Casgevy 2026 revenue misses >20% vs. July consensus or competitive loss of market share detected.
+
+### Verdict: 3/4 — WATCH
+CRSP scores 3 of 4 dimensions: secular tailwind (gene therapy adoption + large TAM) STRONG, catalyst window (Casgevy ramp + in vivo readouts 2026-2028) STRONG, margin of safety (net $1.85B cash, Casgevy revenue foundation) STRONG. Cyclical position WEAK/MODERATE (mid-cycle post-approval, not at generational bottom). Thesis substantiated by facts (Casgevy $116M→$130-300M ramp, CTX310 Phase 1 positive, net cash backing) but depends critically on Casgevy commercial execution and in vivo platform Phase 2 success—both execution risks remain material. Unlike SanDisk 2023 (4/4 framework hit + single-digit entry multiple), CRSP requires sustained operational delivery over 2-3 years. Monitor Q2 earnings (Aug 10, 2026) and CTX320 H1 2026 update as inflection points; enter with reduced Kelly on Casgevy confirmation + in vivo catalyst visibility.
+
+### Sources
+- [CRSP Stock Quote, Yahoo Finance](https://finance.yahoo.com/quote/CRSP/)
+- [Morgan Stanley CRSP Upgrade, Timothy Sykes](https://www.timothysykes.com/news/crispr-therapeutics-ag-crsp-news-2026_07_04/)
+- [CRSP 52-Week Range, YCharts](https://ycharts.com/companies/CRSP/year_high)
+- [CRSP 1-Year Performance, Public.com](https://public.com/stocks/crsp)
+- [CRSP Q1 2026 Earnings, Seeking Alpha](https://seekingalpha.com/symbol/CRSP/earnings)
+- [CRISPR Therapeutics Q1 2026 Business Update, CRSP IR](https://ir.crisprtx.com/news-releases/news-release-details/crispr-therapeutics-provides-business-update-and-reports-first-7/)
+- [CRISPR Therapeutics Balance Sheet, SEC Edgar 10-Q](https://www.sec.gov/Archives/edgar/data/0001674416/000119312526204188/crsp-20260331.htm)
+- [Casgevy Revenue Guidance 2026, PackGene Biotech](https://www.packgene.com/frontier/021326-vertex-crispr/)
+- [Casgevy 2025-2026 Commercial Uptake, BioSpace](https://www.biospace.com/business/vertex-crispr-set-lofty-goal-for-casgevy-gene-therapy-as-patient-starts-ramp)
+- [CTX310 ANGPTL3 Phase 1 Results, NEJM](https://www.nejm.org/doi/full/10.1056/NEJMoa2511778)
+- [CTX310 Phase 1 Update June 2025, CRSP Press Release](https://ir.crisprtx.com/news-releases/news-release-details/crispr-therapeutics-reports-positive-additional-phase-1-data)
+- [Gene Therapy Sector Overview 2026, Inside Precision Medicine](https://www.insideprecisionmedicine.com/topics/translational-research/riding-the-gene-therapy-rollercoaster-into-2026/)
+- [CRISPR vs. Vertex Competitive Positioning, Yahoo Finance](https://finance.yahoo.com/healthcare/articles/crispr-therapeutics-ag-vs-vertex-102003009.html)
+```

@@ -1058,3 +1058,172 @@ Sources:
 - [Bitcoin On-Chain Metrics June 2026](https://cryip.co/blockchain-on-chain-metrics-ethereum-bitcoin-solana-bsc-tron-base-monthly-analysis-june-2026/)
 - [DefiLlama TVL Data](https://defillama.com/)
 - [US Treasury Yield Curve Analysis](https://www.advisorperspectives.com/dshort/updates/2026/07/02/treasury-yields-snapshot-july-2-2026)
+
+---
+
+## 2026-07-19T16:04:00Z — world_state_digest
+
+**Domains:** biotech-health, trade-regulation, markets-corporate | **Lookback:** 30d | **Model:** haiku
+
+# WORLD-STATE DIGEST — 2026-07-19
+
+Domains: biotech-health, trade-regulation, markets-corporate  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### biotech-health
+
+- [2026-07-17] FDA: Oral PCSK9 inhibitor approved (first oral formulation for LDL cholesterol)
+- [2026-07-15] FDA: Screwworm prevention drug (equine), emergency use authorization
+- [2026-07-01] FDA: Gene therapy approved for sickle cell disease in young children (first in class)
+- [2026-06-30] FDA: Immunotherapy using donor immune cells approved for blood cancer complications prevention
+- [2026-06-29] FDA: Seven participants selected for PreCheck manufacturing pilot program
+- [2026-06-26] FDA: Tobacco regulation proposal (foreign manufacturers accountability)
+- [2026-06-17] FDA: First single-dose generic influenza treatment approved
+- [2026-06-16] FDA: Naloxone nasal spray availability broadened (OTC access expanded)
+- [2026-06-15] FDA: Tzield (teplizumab) new indication approved for pediatric type 1 diabetes stage 3
+- [2026-06] EMA: Six new medicines recommended for approval; 12 additional therapeutic indications extended
+- [2026-07-01] EMA: Tavneos marketing authorization revoked (benefits no longer outweigh risks)
+- [2026-06] EMA: Synthetic peptide guideline released
+- [2026-07-16] CDC MMWR: Measles genotype detection via wastewater (Wisconsin)
+- [2026-06-05] CDC: Ebola (Bundibugyo) outbreak DRC and Uganda; modeling/risk assessment released
+- [2026-07-16] CDC: Disseminated gonococcal infections rising in Alaska (2023-2024 trend)
+- [2026] GLP-1 obesity drug adoption: 11% of US adults (2026) vs 3% (2024); market projected $200B (2027)
+- [2026] Healthcare sector earnings outlook: -9.5% YoY decline expected Q2 (GLP-1 pharma costs, payer utilization shock)
+- [2026-01-01] Medicare drug price negotiation: 40+ drugs in negotiation pool; 10 drugs took effect with ~$6B savings vs 2023
+
+### trade-regulation
+
+- [2026-06-01] USTR: 25% Section 301 tariff on Brazil proposed (effective 2026-07-22)
+- [2026-06-02] USTR: 10-12.5% tariffs proposed on 60 countries (forced labor investigation); comment period through 2026-07-06; hearing 2026-07-07
+- [2026-07-22] USTR: Brazil tariff exemptions finalized; high-purity dissolving pulp removed from exemption list; pharmaceutical chemicals exemption narrowed; new exemptions added (aluminum hydroxide, antiques, art, organic honey, pig iron, coffee, used clothing, precious metal ash, wood/seafood/leather products)
+- [2026-06-18] Iran-US MOU: Conflict resolution agreement signed; Strait of Hormuz re-opened
+- [2026-06-17] Fed FOMC: Federal funds rate held at 3.50%-3.75% (Kevin Warsh first decision as chair)
+- [2026-07-10] Fed monetary policy: PCE inflation projection raised to 3.6%; Fed Governor Waller signals focus "completely flipped" from labor to inflation; hawkish tone
+- [2026-07-29] Fed: Next FOMC decision (46.5% odds of 25bp hike per CME FedWatch)
+- [2026-07-17] OFAC: Venezuela FAQ issued
+- [2026-07-17] OFAC: Hong Kong designations updates and removals
+- [2026-07-15] OFAC: Non-proliferation and counter-terrorism designations
+- [2026-07-14] OFAC: Iran designations; Iran general license issued
+- [2026-07-13] OFAC: Cyber designations; Cuba designations; Cuba FAQ issued
+- [2026-07-10] OFAC: Iran and counter-terrorism designations; Iran general license
+- [2026-07-10] OFAC: DRC general license issued
+- [2026-07-08] OFAC: Amended Russia general license
+- [2026-07-07] OFAC: Amended Iran general license
+
+### markets-corporate
+
+- [2026-06-30] BLS Jobs Report: Nonfarm payrolls +57K (vs 110K expected); revised May downward to +129K (vs +144K initially)
+- [2026-06-30] BLS: Unemployment rate 4.2%; labor force participation 61.5% (lowest since 2021-03)
+- [2026-06-30] BLS: Wage growth +0.3% monthly; +3.5% YoY (in line with forecast)
+- [2026-06-30] BLS: Professional/business services +36K; social assistance +25K; health care +22K; leisure/hospitality -61K
+- [2026-06-30] BLS: Manufacturing +3K (essentially flat); average workweek 40.3 hours; overtime 3.2 hours
+- [2026-07-14] BLS CPI: Headline 3.5% YoY (vs 3.8% expected); monthly -0.4% (biggest drop >6 years)
+- [2026-07-14] BLS CPI: Energy -5.7% monthly; +15.7% YoY; gasoline +26.7% YoY
+- [2026-07-14] BLS CPI: Core inflation 2.6% YoY; services flat monthly; shelter +0.1%; transportation -0.3%
+- [2026-06] BEA GDP: Q1 2026 final +2.1% annualized (vs 1.6% expected; Q4 2025 was +0.5%)
+- [2026-07-02] IEA Oil Market Report: Global supply +4.1 mb/d to 98.8 mb/d (June); Strait of Hormuz resumption lifted Gulf production
+- [2026-07] Oil prices: Brent ~$84/b (mid-July), WTI ~$69 (down from early-July lows); Brent 3Q26 forecast $74/b (down $27/b from prior month)
+- [2026-07-17] FactSet S&P 500 Earnings Update: Q2 blended earnings +24.7% YoY; 88% beat EPS; 77.8% beat revenue; 16.4% above estimate aggregate
+- [2026-07-17] FactSet: Forward 12-month P/E 20.3 (vs 5-yr avg 19.9; 10-yr avg 19.0)
+- [2026-07-17] FactSet: Q3 2026 earnings growth forecast 27.0% YoY; Q4 2026 24.6% YoY; FY 2026 24.5% YoY
+- [2026-07] Tech sector Q2: 42% earnings growth; Info Tech +63% YoY (largest contributor if stripped, S&P 500 grows 12% vs 23.6%)
+- [2026] Big Tech capex 2026: $725B aggregate (77% YoY increase) — Amazon ~$200B; Google ~$185B; Meta ~$125B-145B; Microsoft ~$120B-190B
+- [2026-06] Meta capex guidance: $125B-145B (2026 full year)
+- [2026-06] Google cloud revenue: +63% YoY to $20B
+- [2026] Energy sector earnings: +123% YoY in Q2 (vs +48% YoY on 2026-03-31); WTI average Q2 $92.55 (vs $63.68 Q2 2025; +45% YoY)
+- [2026-07-31] Exxon Mobil: Q2 earnings report date
+- [2026-Q1] Exxon Q1 net income $4.2B (down 46% YoY); Chevron $2.2B (down 37% YoY)
+- [2026-07-07] SEC: Three new crypto rulemaking agenda items published — crypto asset offerings (RIN 3235-AN38); broker-dealer capital/custody (RIN 3235-AN48); market structure amendments (RIN 3235-AN49)
+- [2026-03] SEC-CFTC: Joint interpretive release on token taxonomy (5 categories: commodities, collectibles, tools, stablecoins, securities)
+- [2026] Congressional CLARITY Act: Market structure crypto bill awaiting full Senate vote; deadline 2026-08-07
+
+## CANDIDATE THEMES
+
+### Oil Majors Rebound (XOM, CVX)
+- **Underlying facts:** Oil $84/b mid-July stable despite June dip to $69; supply +4.1mb/d with Strait of Hormuz re-opened (Iran deal); energy sector earnings +123% YoY; conservative upstream capex; Q2 earnings expected strong
+- **Implication:** Market priced June panic ($69) heavily; structural rebalancing (Iran supply, capex discipline) not fully valued. Geopolitical tail risk reduced (Iran deal), but Brent/WTI volatility remains; supply still modestly tight relative to pre-conflict baseline
+- **Possible plays:** XOM, CVX, OIL-related ETFs
+- **Direction:** LONG
+- **Horizon:** weeks–months
+- **Retail blindspot:** "Oil falling" narrative from July 2 dips overshadowed June-July stabilization and upstream margins; geopolitical risk discount over-applied
+- **Confidence:** MEDIUM
+
+### Biotech Gene Therapy & Rare Disease Pipeline Acceleration
+- **Underlying facts:** Sickle cell gene therapy (July 1), oral PCSK9 (July 17), immunotherapy blood cancer (June 30), pediatric diabetes indication (June 15) all approved; EMA 6 new medicines recommended June; XBI biotech fund at pandemic peak levels; AI-designed drugs entering phase 1–2 trials
+- **Implication:** Approval momentum (especially rare disease/high-unmet-need segments) accelerating; AI-enabled drug development now delivering first-in-human candidates (Iambic, Insilico, Recursion). Approval clustering suggests pipeline maturity inflection
+- **Possible plays:** CRSP, BEAM, biotech ETFs (XBI, IBB); watch Iambic, Insilico, Recursion (private/pre-IPO)
+- **Direction:** LONG
+- **Horizon:** months–years
+- **Retail blindspot:** Individual PDUFA binary events tracked; underlying trend of accelerated approvals (sickle cell, rare disease focus) and AI pipeline momentum less visible
+- **Confidence:** MEDIUM–HIGH
+
+### Healthcare Insurers: GLP-1 Cost Pressure Persistence (UNH, HUM, CI)
+- **Underlying facts:** GLP-1 adoption 11% of adults (2026) vs 3% (2024); pharma costs surging, healthcare sector -9.5% Q2 earnings decline expected; managed care utilization unexpectedly high; payer margins eroding; $200B obesity market by 2027
+- **Implication:** GLP-1 adoption acceleration (8pp in 2 years) suggests momentum still accelerating; payers caught off-guard in 2Q earnings, likely conservative guidance into 2H 2026. Margin pressure structural, not cyclical.
+- **Possible plays:** UNH, HUM, CI short or puts
+- **Direction:** SHORT
+- **Horizon:** months–years
+- **Retail blindspot:** "GLP-1 = weight loss miracle" retail narrative focuses on end-user benefit; payer cost shock (which must be absorbed) less visible. Insurer earnings already flagged, but persistence of cost acceleration under-estimated.
+- **Confidence:** MEDIUM–HIGH
+
+### Brazil Tariff Shock (Emerging Markets / Materials)
+- **Underlying facts:** 25% tariff on Brazil effective 2026-07-22 (announced 2026-06-01); exemption list finalized with strategic removals (e.g., dissolving pulp); first major unilateral action (forced-labor tariffs still in comment phase)
+- **Implication:** Brazil-exposed equities (materials, agriculture, energy) face immediate price shock; exemption narrow, limiting scope for relief. Near-term export competitiveness impaired; EM currency likely to weaken further.
+- **Possible plays:** Materials/commodity stocks exposed to Brazil; EM currency pairs (USD/BRL long)
+- **Direction:** SHORT (Brazil-exposed) / LONG (EM shorts)
+- **Horizon:** weeks–months
+- **Retail blindspot:** Tariff actions treated as "trade war theater" or reversible; specific country/sector impacts slower to price in
+- **Confidence:** MEDIUM
+
+### Crypto Asset Class Bifurcation (Compliant Infrastructure LONG; Speculation SHORT)
+- **Underlying facts:** SEC issued 3 new rulemaking agenda items (2026-07-07) on crypto offerings, broker-dealer capital, market structure; builds on March 2026 SEC-CFTC 5-category taxonomy (commodities, collectibles, tools, stablecoins, securities); Congress CLARITY Act pending (deadline 2026-08-07)
+- **Implication:** Regulatory clarity tilts toward compliant infrastructure (exchanges, custody, stablecoin rails, wrapped securities). Speculative tokens face headwinds; compliant asset classes (stablecoins, tokenized securities) likely to see institutional adoption. Near-term uncertainty from rule-pending state, but directional clarity bullish for regulated players.
+- **Possible plays:** Coinbase (COIN), Kraken (private), stablecoin operators (Circle, Paxos); LONG compliant infrastructure, SHORT low-liquidity/speculation-heavy tokens
+- **Direction:** MIXED — LONG compliant infra; SHORT speculation
+- **Horizon:** weeks–months (rules pending, not finalized)
+- **Retail blindspot:** "SEC crypto = bearish all crypto" simplistic framing; distinction between asset classes and regulatory outcomes missed. Retail polarized (all-in or all-out).
+- **Confidence:** LOW–MEDIUM
+
+### Fed Stagflation Divergence Risk (Labor Weak; Inflation Sticky)
+- **Underlying facts:** NFP +57K (vs 110K expected), labor force participation 61.5% (lowest since 2021-03), unemployment 4.2% (held); wage growth 3.5% YoY; headline CPI 3.5% (vs 3.8% expected), core 2.6%; Fed chair Warsh hawkish (PCE 3.6% projection); 46.5% odds of 25bp hike (2026-07-29)
+- **Implication:** Labor market weakening (especially participation) combined with sticky inflation creates stagflation risk. Market currently pricing hold at July 29, but if labor weakens further and Fed hikes (or hawkish hold), that's deflationary impulse on equities + expectations reset. Conversely, if Fed cuts into weak labor, real rates compress and inflation expectations rise.
+- **Possible plays:** Long duration (TLT, BND); short high-beta; variance plays (VIX)
+- **Direction:** MIXED — Depends on Fed decision, but asymmetric risk to surprise
+- **Horizon:** weeks (July 29 FOMC + August NFP)
+- **Retail blindspot:** Bifurcated narrative ("strong earnings" vs "weak labor") creates confusion. Fed policy surprise risk under-priced; participation cliff overlooked.
+- **Confidence:** LOW–MEDIUM
+
+### Tech Capex Burden on Cash Flow (MEGA-CAP TECH SHORT)
+- **Underlying facts:** Big Tech capex $725B (2026), up 77% YoY; Meta $125B–145B, Microsoft $120B–190B, Google $185B, Amazon $200B; Q2 earnings beat 88% (EPS), but capex guidance highly elevated
+- **Implication:** Capex commitments are cash outflows this year; impact on FCF severe. Market priced earnings beats without fully modeling capex drag. Near-term valuation compression likely as realized capex outflows become visible; longer-term ROI on AI capex unclear.
+- **Possible plays:** GOOG, META, AMZN, MSFT short; or select FCF yield proxy
+- **Direction:** SHORT
+- **Horizon:** months–quarters
+- **Retail blindspot:** "Tech beats = tech strong" narrative wins; cash flow yield degradation overlooked. Capex disclosed but not embedded in consensus price targets.
+- **Confidence:** MEDIUM
+
+## NEXT-STEPS
+
+- **Run longterm_check.py on:** XOM, CVX, UNH, HUM, CI, COIN, GOOG, META, AMZN, MSFT
+- **Run catalyst_check.py on:** July 29 FOMC decision (stagflation scenario); August NFP; Brazil tariff exemption litigation; SEC crypto rules (formal proposal date TBD); Exxon Q2 earnings (July 31)
+- **Skip / pass:** Fed labor-inflation divergence (confidence LOW-MEDIUM, needs August data); tech capex (already visible in guidance, pricing uncertain); GLP-1 payer pressure (already priced into healthcare sector guide, execution risk high)
+
+---
+
+Sources:
+- [FDA Press Announcements](https://www.fda.gov/news-events/fda-newsroom/press-announcements)
+- [CDC MMWR](https://www.cdc.gov/mmwr/index.html)
+- [USTR Tariff Updates](https://www.dorsey.com/newsresources/publications/client-alerts/2026/6/new-section-301-tariffs)
+- [KPMG Brazil Tariff](https://kpmg.com/us/en/taxnewsflash/news/2026/07/ustr-25-percent-tariffs-imports-brazil.html)
+- [Federal Reserve FOMC Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm)
+- [CNBC Jobs Report Analysis](https://www.cnbc.com/2026/07/02/jobs-report-june-2026-.html)
+- [BLS Employment Situation](https://www.bls.gov/news.release/empsit.htm)
+- [CNBC CPI Report](https://www.cnbc.com/2026/07/14/consumer-price-index-inflation-report-june-2026.html)
+- [IEA Oil Market Report](https://www.iea.org/reports/oil-market-report-july-2026)
+- [FactSet S&P 500 Earnings Update](https://insight.factset.com/sp-500-earnings-season-update-july-17-2026)
+- [FactSet Tech Earnings](https://insight.factset.com/sp-500-earnings-season-preview-q2-2026)
+- [Yahoo Finance Big Tech Capex](https://finance.yahoo.com/sectors/technology/articles/google-microsoft-meta-amazon-capex-131823436.html)
+- [OFAC Recent Actions](https://ofac.treasury.gov/recent-actions)
+- [BioPharma Healthcare Trends](https://www.biospace.com/business/q2-earnings-arrive-as-pharma-picks-up-steam-buoyed-by-dealmaking-policy-tailwinds)
+- [SEC Crypto Regulation](https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets)
