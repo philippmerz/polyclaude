@@ -348,19 +348,44 @@ def check_memory_pressure(state: dict) -> None:
     except Exception:
         return
     if avail < MEM_AVAILABLE_FLOOR_KB:
-        top = ""
+        # Attribute RSS by owner (2026-07-19): the first real firing showed the
+        # top consumers were the OPERATOR's own concurrent claude sessions, not
+        # polyclaude subprocesses — so "kill your agents" was the wrong advice.
+        # Split the picture so the alert says WHO is using memory and points at
+        # an accurate remediation.
+        me = ""
         try:
+            import getpass
+            myuser = getpass.getuser()  # "polyclaude"
             out = subprocess.run(
-                ["ps", "-eo", "rss,comm", "--sort=-rss"],
-                capture_output=True, text=True, timeout=15).stdout.splitlines()[1:4]
-            top = "; top RSS: " + ", ".join(
-                f"{l.split()[1]} {int(l.split()[0]) // 1024}MB" for l in out if l.split())
+                ["ps", "-eo", "rss,user,comm", "--sort=-rss"],
+                capture_output=True, text=True, timeout=15).stdout.splitlines()[1:]
+            my_mb, other_mb, top = 0, 0, []
+            for l in out:
+                parts = l.split(None, 2)
+                if len(parts) < 3:
+                    continue
+                rss = int(parts[0]) // 1024
+                # ps truncates long usernames ("polyclaude" -> "polycla+"),
+                # so prefix-match against the truncation marker.
+                uname = parts[1].rstrip("+")
+                is_mine = myuser.startswith(uname)
+                if "claude" in parts[2] or "python" in parts[2]:
+                    if is_mine:
+                        my_mb += rss
+                    else:
+                        other_mb += rss
+                if len(top) < 3:
+                    top.append(f"{parts[2]}({parts[1][:8]}) {rss}MB")
+            me = (f"; polyclaude claude/py RSS {my_mb}MB vs other-user {other_mb}MB"
+                  f"; top: {', '.join(top)}")
         except Exception:
             pass
         _emit(state, "memory_pressure",
               f"MEMORY PRESSURE: only {avail // 1024}MB available (floor "
-              f"{MEM_AVAILABLE_FLOOR_KB // 1024}MB) — OOM risk (3 VM crashes already). "
-              f"Kill/serialize claude agent subprocesses{top}",
+              f"{MEM_AVAILABLE_FLOOR_KB // 1024}MB) — OOM risk (3 VM crashes already)."
+              f"{me}. If polyclaude RSS dominates: serialize/kill agent subprocesses. "
+              f"If other-user dominates: shared-host contention — reduce concurrent sessions.",
               cooldown=MEM_ALERT_COOLDOWN)
 
 
