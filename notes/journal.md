@@ -3263,3 +3263,6 @@ Guards: bankroll $162.40 (flat); UMA 21/0; expected-edge 8/8 HOLD; DRAWDOWN ALER
 
 ### 2026-07-19 02:30 UTC — meta-reflection: doctrine encoding (the only genuine item)
 The two decision rules that carried this week's live calls existed only in journal entries — now encoded in strategy/00_philosophy.md §3.1: FLIP-THE-KILL (verification inversions get gated on the opposite side; Bears evidence, N=1 + boundary) and UNEXPLAINED-MOVE CLASSIFICATION (hidden-information channel possible → informed flow, never fade [Stripe]; mechanically-checkable bar + verified-unchanged fundamental → rumor flow, fade it [GPT-6 dip-add]). The classifier question: "could someone know something that resolves this market that I cannot verify right now?" Backlog item closed. Nothing else forced — cleanup is current, no new alpha since yesterday's cycles.
+
+### 2026-07-19 14:10 UTC — 14:00 cron tick: quiet
+Guards: bankroll $162.51 (+$0.45); UMA 21/0; 8/8 HOLD; invade drawdown back under the −15% tripwire (mark ~0.70); redeem/pending empty. News: 1 Tier-2 re-run. Funnel: 0 arbs, 0 fundable; fade surfacer clean (World Cup final props = sports odds, skip). Kimi unrun. Next: Sunday long-term review 16:00 (world_state_digest rotation + watchlist vetting); weekly P&L due ~Jul-22; SDCC family re-check Tue.
