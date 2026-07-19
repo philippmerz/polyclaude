@@ -1,0 +1,514 @@
+[
+ {
+  "part": "A",
+  "slug": "will-the-chicago-bears-leave-illinois-by-dec-31",
+  "calls": [
+   {
+    "round": 0,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 1384
+   },
+   {
+    "search_query": "Chicago Bears Arlington Heights stadium Indiana move latest news",
+    "result_chars": 1618
+   },
+   {
+    "search_query": "Chicago Bears announce move Indiana Hammond stadium bill 2026",
+    "result_chars": 1302
+   },
+   {
+    "round": 1,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 1655
+   },
+   {
+    "search_query": "Bears Hammond Indiana stadium deal announced date Wolf Lake official announcement",
+    "result_chars": 1480
+   },
+   {
+    "search_query": "\"Bears\" stadium news this week Indiana Illinois legislature incentives",
+    "result_chars": 1664
+   },
+   {
+    "round": 2,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 2908
+   },
+   {
+    "search_query": "Bears officially announce Hammond stadium move deal \"Soldier Field\" leave date announced",
+    "result_chars": 955
+   },
+   {
+    "search_query": "Bears Indiana stadium latest update Illinois counteroffer Pritzker this month",
+    "result_chars": 1546
+   },
+   {
+    "round": 3,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 4274
+   },
+   {
+    "search_query": "Bears full statement board vote \"advance\" stadium Hammond June 5 Kevin Warren exact wording",
+    "result_chars": 1717
+   },
+   {
+    "search_query": "Bears stadium Hammond Illinois latest news July 2026 final decision",
+    "result_chars": 1657
+   },
+   {
+    "round": 4,
+    "finish": "stop",
+    "tool_calls": [],
+    "tokens": 4610
+   }
+  ]
+ },
+ {
+  "part": "A",
+  "slug": "iran-charges-hormuz-fees-by-august-31-20260625175039062-177",
+  "calls": [
+   {
+    "round": 0,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 2044
+   },
+   {
+    "search_query": "Iran Strait of Hormuz toll fees commercial vessels parliament bill",
+    "result_chars": 2121
+   },
+   {
+    "search_query": "Iran charges ships passage Strait of Hormuz fee announcement",
+    "result_chars": 1704
+   },
+   {
+    "search_query": "\"Iran\" \"Hormuz\" fees tolls news 2026",
+    "result_chars": 12
+   },
+   {
+    "round": 1,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search",
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 2571
+   },
+   {
+    "search_query": "Iran Hormuz transit fee $2 million ships ad hoc lawmakers July 2026",
+    "result_chars": 2001
+   },
+   {
+    "search_query": "Iran Majlis Guardian Council Hormuz toll bill passed law signed",
+    "result_chars": 1845
+   },
+   {
+    "search_query": "Iran \"fee\" scheme commercial vessels Hormuz implemented stranded ships reopen",
+    "result_chars": 1831
+   },
+   {
+    "search_query": "Strait of Hormuz closure war 2026 Iran US ceasefire shipping status",
+    "result_chars": 1406
+   },
+   {
+    "round": 2,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search",
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 4944
+   },
+   {
+    "search_query": "Iran US MoU 60-day Hormuz fee-free period expires August 21 insurance fee",
+    "result_chars": 1814
+   },
+   {
+    "search_query": "\"Iran\" Hormuz toll law Guardian Council signed Pezeshkian enacted",
+    "result_chars": 2052
+   },
+   {
+    "search_query": "Hormuz toll collection ships paying Iran August 2026",
+    "result_chars": 1745
+   },
+   {
+    "search_query": "Doha talks Iran US Hormuz latest news ceasefire extension",
+    "result_chars": 1808
+   },
+   {
+    "round": 3,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search",
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 6008
+   },
+   {
+    "search_query": "Persian Gulf Strait Authority insurance fee mandatory Hormuz vessels collection begun",
+    "result_chars": 2052
+   },
+   {
+    "search_query": "Iran Hormuz news latest update mid August 2026",
+    "result_chars": 1849
+   },
+   {
+    "search_query": "\"Iran\" Hormuz MOU extension Doha talks deadline passed August 21",
+    "result_chars": 12
+   },
+   {
+    "search_query": "Iran Hormuz \"August 2026\" ships transit toll insurance fee status today",
+    "result_chars": 12
+   },
+   {
+    "round": 4,
+    "finish": "length",
+    "tool_calls": [],
+    "tokens": 9972
+   }
+  ]
+ },
+ {
+  "part": "A",
+  "slug": "will-there-be-at-least-5000-cyclosporiasis-cases-in-the-uptspt-by-july-31-2026-20260715005153975",
+  "calls": [
+   {
+    "round": 0,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 2511
+   },
+   {
+    "search_query": "CDC cyclosporiasis surveillance \"U.S. cases reported to CDC\" 2026",
+    "result_chars": 12
+   },
+   {
+    "search_query": "cyclosporiasis outbreak United States 2026 cases",
+    "result_chars": 2012
+   },
+   {
+    "search_query": "CDC cyclosporiasis surveillance page confirmed domestically acquired cases count",
+    "result_chars": 2252
+   },
+   {
+    "round": 1,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 3544
+   },
+   {
+    "search_query": "CDC HAN \"cyclosporiasis\" 2026 health alert July date issued 1,645 confirmed",
+    "result_chars": 2227
+   },
+   {
+    "search_query": "cyclosporiasis 2026 outbreak Taylor Farms lettuce Taco Bell CDC investigation July",
+    "result_chars": 1713
+   },
+   {
+    "search_query": "CDC cyclosporiasis surveillance 2024 2023 total domestically acquired cases season count historical",
+    "result_chars": 1755
+   },
+   {
+    "round": 2,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 5240
+   },
+   {
+    "search_query": "\"Cyclospora Cases Climb\" 843 domestically acquired 1,500 pending analysis date Michigan",
+    "result_chars": 316
+   },
+   {
+    "search_query": "cyclosporiasis 2023 season total 2,272 domestically acquired cases CDC May August",
+    "result_chars": 1859
+   },
+   {
+    "search_query": "CDC cyclosporiasis surveillance update July 2026 \"cases reported\" latest count week",
+    "result_chars": 12
+   },
+   {
+    "round": 3,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 4379
+   },
+   {
+    "search_query": "\"Cyclospora Cases Climb\" \"843\" cyclosporiasis news article 2026 reporting lags",
+    "result_chars": 12
+   },
+   {
+    "search_query": "cyclosporiasis 2026 \"confirmed\" cases July 2026 latest total states CDC update",
+    "result_chars": 12
+   },
+   {
+    "round": 4,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 4577
+   },
+   {
+    "search_query": "Food Safety News cyclospora 2026 CDC count hospitalizations states outbreak update",
+    "result_chars": 1857
+   },
+   {
+    "search_query": "cyclospora outbreak 2026 timeline \"May 2026\" first cases June surge CDC count",
+    "result_chars": 12
+   },
+   {
+    "round": 5,
+    "finish": "stop",
+    "tool_calls": [],
+    "tokens": 7785
+   }
+  ]
+ },
+ {
+  "part": "A",
+  "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+  "calls": [
+   {
+    "round": 0,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 1075
+   },
+   {
+    "search_query": "Apple touchscreen MacBook Pro 2026 release date latest news",
+    "result_chars": 1345
+   },
+   {
+    "search_query": "OLED touchscreen MacBook Pro 2026 or 2027 delay report",
+    "result_chars": 1641
+   },
+   {
+    "round": 1,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 1716
+   },
+   {
+    "search_query": "Mark Gurman Bloomberg touchscreen MacBook Pro M6 launch timing 2026 2027",
+    "result_chars": 1606
+   },
+   {
+    "search_query": "Ming-Chi Kuo touchscreen MacBook Pro mass production schedule",
+    "result_chars": 1674
+   },
+   {
+    "round": 2,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 2746
+   },
+   {
+    "search_query": "\"touchscreen MacBook Pro\" delay news this week",
+    "result_chars": 1500
+   },
+   {
+    "search_query": "Apple MacBook Pro October 2025 M5 announcement MacBook lineup",
+    "result_chars": 1645
+   },
+   {
+    "round": 3,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 3860
+   },
+   {
+    "search_query": "Gurman Power On touchscreen MacBook Pro early 2027 memory shortage report date",
+    "result_chars": 1686
+   },
+   {
+    "search_query": "Apple Mac Studio October 2026 delay news Gurman",
+    "result_chars": 1469
+   },
+   {
+    "round": 4,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 5344
+   },
+   {
+    "search_query": "iPhone 18 Apple September 2026 event announcement",
+    "result_chars": 1577
+   },
+   {
+    "search_query": "touchscreen MacBook Pro OLED panel Samsung production back on track late 2026 launch",
+    "result_chars": 1560
+   },
+   {
+    "round": 5,
+    "finish": "stop",
+    "tool_calls": [],
+    "tokens": 7996
+   }
+  ]
+ },
+ {
+  "part": "A",
+  "slug": "will-spacex-have-the-highest-ipo-market-cap-2026-516",
+  "calls": [
+   {
+    "round": 0,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 1508
+   },
+   {
+    "search_query": "SpaceX IPO 2026 valuation $1.5 trillion",
+    "result_chars": 1594
+   },
+   {
+    "search_query": "SpaceX IPO plans 2026 latest news Musk",
+    "result_chars": 2029
+   },
+   {
+    "round": 1,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 2128
+   },
+   {
+    "search_query": "SpaceX xAI merger IPO 2026 combined entity listing",
+    "result_chars": 2037
+   },
+   {
+    "search_query": "OpenAI Anthropic IPO 2026 plans valuation",
+    "result_chars": 1956
+   },
+   {
+    "round": 2,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 3120
+   },
+   {
+    "search_query": "SpaceX IPO June 2026 first day trading closing price SPCX",
+    "result_chars": 1726
+   },
+   {
+    "search_query": "\"SPCX\" IPO debut Nasdaq June 2026",
+    "result_chars": 1863
+   },
+   {
+    "round": 3,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 5335
+   },
+   {
+    "search_query": "SpaceX first day close market cap $2 trillion June 12 2026",
+    "result_chars": 1718
+   },
+   {
+    "search_query": "OpenAI IPO September 2026 latest news valuation confidential filing",
+    "result_chars": 1822
+   },
+   {
+    "round": 4,
+    "finish": "tool_calls",
+    "tool_calls": [
+     "web_search",
+     "web_search"
+    ],
+    "tokens": 5316
+   },
+   {
+    "search_query": "Anthropic IPO filing valuation target listing date 2026",
+    "result_chars": 2098
+   },
+   {
+    "search_query": "biggest IPO rest of 2026 pipeline trillion dollar",
+    "result_chars": 1875
+   },
+   {
+    "round": 5,
+    "finish": "stop",
+    "tool_calls": [],
+    "tokens": 7254
+   }
+  ]
+ },
+ {
+  "part": "B",
+  "calls": [
+   {
+    "round": 0,
+    "finish": "length",
+    "tool_calls": [],
+    "tokens": 5525
+   }
+  ]
+ }
+]
