@@ -1,0 +1,89 @@
+[
+ {
+  "round": 0,
+  "finish": "tool_calls",
+  "tool_calls": [
+   "web_search",
+   "web_search",
+   "web_search",
+   "web_search",
+   "web_search"
+  ],
+  "tokens": 3292
+ },
+ {
+  "search_query": "best stablecoin yield Base Arbitrum Aave Morpho USDC APY 2025",
+  "result_chars": 1886
+ },
+ {
+  "search_query": "Lighter perp DEX points farming airdrop expected value OTC price",
+  "result_chars": 2010
+ },
+ {
+  "search_query": "Plasma XPL airdrop how much did small depositors receive per wallet",
+  "result_chars": 2142
+ },
+ {
+  "search_query": "Aerodrome Base stablecoin pool APR AERO emissions 2025",
+  "result_chars": 1819
+ },
+ {
+  "search_query": "new L2 pre-deposit campaign airdrop 2026 MegaETH Stable Tempo perp DEX points",
+  "result_chars": 1515
+ },
+ {
+  "round": 1,
+  "finish": "tool_calls",
+  "tool_calls": [
+   "web_search",
+   "web_search",
+   "web_search",
+   "web_search"
+  ],
+  "tokens": 3741
+ },
+ {
+  "search_query": "Lighter TGE happened airdrop allocation results December 2025",
+  "result_chars": 1656
+ },
+ {
+  "search_query": "best perp DEX points programs to farm 2026 Variational Extended Pacifica edgeX zero fee",
+  "result_chars": 1677
+ },
+ {
+  "search_query": "live pre-deposit campaign new chain stablecoin equal allocation airdrop January 2026",
+  "result_chars": 1647
+ },
+ {
+  "search_query": "funding rate arbitrage delta neutral perp DEX spot hedge current rates 2026",
+  "result_chars": 1873
+ },
+ {
+  "round": 2,
+  "finish": "tool_calls",
+  "tool_calls": [
+   "web_search",
+   "web_search",
+   "web_search"
+  ],
+  "tokens": 5309
+ },
+ {
+  "search_query": "MegaETH mainnet season 1 points rewards how to earn USDM apps 2026",
+  "result_chars": 1754
+ },
+ {
+  "search_query": "Pacifica Solana perp DEX points zero fees self-trade farming cost per point",
+  "result_chars": 1817
+ },
+ {
+  "search_query": "Morpho USDC vault Base APY February 2026 current rate",
+  "result_chars": 1798
+ },
+ {
+  "round": 3,
+  "finish": "stop",
+  "tool_calls": [],
+  "tokens": 8154
+ }
+]
