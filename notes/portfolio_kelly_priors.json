@@ -37,11 +37,11 @@
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out."
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
-  "p_no": 0.96,
+  "p_no": 0.9,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
-  "rationale": "2026-07-15 entry prior (DEC-0047): GPT-5.6 GA Jul-9; no GPT-6 announced/dated; strict accessibility bar (no beta, no relabels); 47d window. 4% = OpenAI surprise-drop tail."
+  "rationale": "2026-07-19 HONEST UPDATE 0.96->0.90 after kimi_advisor second opinion pushed back (first live use of the tool): my 4% YES leaned wholly on a PRE-2026 'generations aren't surprise-dropped' base rate and underweighted 2026 cadence compression (5.5 Apr -> 5.6 Jul-9) + 'code red' competitive pressure + a reportedly-trained next model. Corrected fair YES ~10%. Kimi's own ~40% was market-anchored (circular for a mispricing book) and elided generation-vs-point-release (6 != 5.7), so NOT adopted — but its directional critique was valid. Position HOLDS: NO avg 0.644 vs fair 0.90 = still +25pp. Residual risk the market may see a scheduled event I can't (the honest reason it's not lower)."
  },
  "will-the-us-invade-iran-before-2027": {
   "p_no": 0.75,
