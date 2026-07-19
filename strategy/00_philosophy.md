@@ -54,6 +54,27 @@ Ranked by validated evidence, not aspiration:
    expectation math at own priors puts the book at ~Aave-grade carry wearing tail
    risk. Position health = EXPECTED-edge APY ((p/M−1)×365/d vs priors,
    `check_marginal_apy.py`, fixed 2026-07-02), never gross carry.
+
+   Two instance-pipeline rules added 2026-07-17/19 (both validated live the same week):
+
+   **FLIP-THE-KILL.** When candidate verification INVERTS a thesis on a clean
+   load-bearing fact (no interpretation fork, no UMA-fight dependency), run the
+   full gate on the OPPOSITE side instead of skip-only — the kill pipeline finds
+   these for free. Evidence: Bears-leave-Illinois (agent said NO; the Jun-5
+   Indiana board vote implied YES cheap at 0.33; +12pp in 48h, untraded because
+   the rule didn't exist yet). N=1 clean + 1 boundary exclusion (Hormuz
+   interpretation fork) — treat first applications as small-sized tests.
+
+   **UNEXPLAINED-MOVE CLASSIFICATION.** When a market moves hard without visible
+   news, classify before acting: (a) if the resolution depends on a data source
+   or state you have NOT checked and CANNOT quickly check (a hidden-information
+   channel — e.g. Stripe-3rd's NPM valuation ladder), presume INFORMED FLOW and
+   never fade it; (b) if the resolution bar is mechanically checkable and a
+   fresh verification finds the fundamental unchanged (e.g. GPT-6-by-Aug-31:
+   YES requires a PUBLIC release — no hidden channel exists), the move is RUMOR
+   FLOW and fading it is the week's best entry class (bought the 0.68→0.61 dip).
+   The classification question is always: "could someone know something that
+   resolves this market, that I cannot verify right now?"
 2. **Decomposition / consistency arbitrage.** Same event expressed at different prices:
    date-monotonicity violations (`event_monotonicity_scan.py`), multi-leg sum≠1
    (`polymarket_consistency_scan.py`, live-CLOB-validated), cross-venue
