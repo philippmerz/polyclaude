@@ -35,7 +35,10 @@ import kimi_eval_runner as _K  # _chat, _ddg_search, CUSTOM_SEARCH_TOOL, _fetch_
 
 # k3 reasons a lot; give the answer room + a longer HTTP timeout than the eval default
 _K.MAX_TOKENS = 20000
-_K.MAX_ROUNDS = 18
+# 10 rounds = ~6-8 searches, plenty for a second opinion and a tighter time
+# bound than the eval's 18 (2026-07-20: paired with the wall-clock deadline so
+# a hung advisor never blocks an entry).
+_K.MAX_ROUNDS = 10
 _orig_post = httpx.post
 httpx.post = lambda *a, **kw: _orig_post(*a, **{**kw, "timeout": kw.get("timeout") or 600})
 
@@ -69,6 +72,9 @@ def main() -> int:
                     help="your P(the SIDE you are buying wins), 0-1")
     ap.add_argument("--thesis", required=True)
     ap.add_argument("--model", default="kimi-k3")
+    ap.add_argument("--timeout", type=float, default=300.0,
+                    help="wall-clock cap in seconds (default 300); on breach the "
+                         "model gives its best answer from gathered context, never hangs")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
 
@@ -93,7 +99,14 @@ def main() -> int:
     t0 = time.time()
     print(f"# kimi_advisor: asking {args.model} for a second opinion on BUY {args.side} "
           f"@ P(YES)={my_p_yes}...", file=sys.stderr)
-    ans = _K._chat([{"role": "user", "content": prompt}], args.model, True, transcript)
+    # Hard wall-clock cap (2026-07-20): a hung advisor must NEVER block a
+    # verified entry — the gate decides, this is only a second opinion.
+    deadline = t0 + args.timeout
+    try:
+        ans = _K._chat([{"role": "user", "content": prompt}], args.model, True,
+                       transcript, deadline=deadline)
+    except Exception as e:
+        ans = f"[ADVISOR UNAVAILABLE: {e} — proceed on your own gated analysis; do NOT treat absence of a second opinion as confirmation]"
     searches = [c.get("search_query") for c in transcript if c.get("search_query")]
     mins = (time.time() - t0) / 60
 

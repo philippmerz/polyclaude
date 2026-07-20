@@ -153,11 +153,28 @@ CUSTOM_SEARCH_TOOL = {
 }
 
 
-def _chat(messages: list, model: str, use_search: bool, transcript: list) -> str:
-    """Chat with tool-call loop; custom web_search fulfilled locally via DDG."""
+def _chat(messages: list, model: str, use_search: bool, transcript: list,
+          deadline: float | None = None) -> str:
+    """Chat with tool-call loop; custom web_search fulfilled locally via DDG.
+
+    deadline: optional wall-clock epoch-seconds cap. When set, the loop stops
+    starting new rounds past it (2026-07-20: the Marvel advisor run hung ~10min
+    in the search loop; a hang must never block a verified entry). On breach it
+    forces one final no-tools completion so the caller still gets an answer.
+    """
     headers = {"Authorization": f"Bearer {_key()}"}
     tools = [CUSTOM_SEARCH_TOOL] if use_search else None
+    forced_final = False
     for round_i in range(MAX_ROUNDS):
+        if not forced_final and deadline is not None and time.time() > deadline:
+            # out of time: force ONE final no-tools completion so the caller
+            # still gets an answer from whatever search context was gathered.
+            tools = None
+            forced_final = True
+            messages.append({"role": "user", "content":
+                             "TIME LIMIT REACHED — give your best answer NOW from "
+                             "what you have; do not search further."})
+            transcript.append({"deadline_hit": round_i})
         body = {"model": model, "messages": messages, "temperature": 1,
                 "max_tokens": MAX_TOKENS}
         if tools:
