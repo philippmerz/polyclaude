@@ -550,9 +550,27 @@ def poll_once(config: dict, state: dict) -> int:
         # active war week every fresh headline phrasing re-fires tier-1; the first
         # fire engages the session, repeat fires within the hour are delta-noise.
         # Marks/UMA can't move faster than this matters.)
-        if now - last_trigger >= 5400:
+        self_cooldown_ok = now - last_trigger >= 5400
+        # Cross-source recency (2026-07-20): the self-cooldown is blind to a
+        # SCHEDULED cron tick or an actively-working session. Journal mtime is
+        # the shared "a tick just produced output" signal — if any tick ran in
+        # the last 35 min, this auto-fire is redundant churn (the 02:00 cron
+        # tick → 02:23 duplicate-fire case). Alert detection/logging/telegram
+        # above are untouched; only the redundant full-tick SPAWN is skipped,
+        # so Tier-1 sensitivity is fully preserved during active conflict.
+        tick_recent = False
+        try:
+            jmtime = (_SCRIPT_DIR.parent / "notes" / "journal.md").stat().st_mtime
+            tick_recent = (now - jmtime) < 2100
+        except Exception:
+            pass
+        if self_cooldown_ok and not tick_recent:
             fire_cron_tick()
             state["last_cron_trigger"] = now
+        elif tier1_fired and tick_recent:
+            print("[watcher] tier-1 fire SUPPRESSED — a tick produced output "
+                  f"{int((now - jmtime) // 60)}min ago (cross-source recency); "
+                  "alert logged, no redundant spawn", flush=True)
 
     state["seen_ids"] = list(seen)
     state["last_alerts"] = last_alerts
