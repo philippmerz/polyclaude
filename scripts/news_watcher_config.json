@@ -176,13 +176,7 @@
   "tether depegs",
   "tether depegged",
   "tether breaks peg",
-  "tether collapse",
-  "closure of the strait of hormuz",
-  "closes the strait of hormuz",
-  "us strikes iran",
-  "us attacks iran",
-  "strikes on us base",
-  "attacks us base"
+  "tether collapse"
  ],
  "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through an agent filter (claude -p, haiku) before reaching Telegram — the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them.",
  "tier2_keywords": [
@@ -262,6 +256,12 @@
   "pre-deposit vault",
   "equal split airdrop",
   "stablecoin pre-deposit",
-  "deposit cap airdrop"
+  "deposit cap airdrop",
+  "closure of the strait of hormuz",
+  "closes the strait of hormuz",
+  "us strikes iran",
+  "us attacks iran",
+  "strikes on us base",
+  "attacks us base"
  ]
 }
