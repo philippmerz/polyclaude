@@ -31,8 +31,8 @@
   "kind": "clob_no_ask",
   "id": "1910830010387565971650098373488592514702818137344973088263643820608151819241",
   "op": "<=",
-  "level": 0.62,
-  "note": "invade NO ask <=0.62: market pricing ~40% YES — at/beyond prior band edge; full thesis-break review + Pahlavi cluster check",
+  "level": 0.66,
+  "note": "invade NO ask <=0.66: material adverse move (market ~34% YES vs 25% central), ABOVE the 0.69-0.77 war-noise band -> fires a JUDGMENT tick (read Kharg/criteria, not auto-sell). Raised 0.62->0.66 2026-07-20 per operator 'up to you' on latency: react sooner on real moves, triggers engage judgment not auto-execute.",
   "actionable": true
  }
 ]
