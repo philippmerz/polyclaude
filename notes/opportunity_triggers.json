@@ -22,8 +22,8 @@
   "kind": "clob_no_ask",
   "id": "1910830010387565971650098373488592514702818137344973088263643820608151819241",
   "op": ">=",
-  "level": 0.79,
-  "note": "invade NO recovered to ~0.79+ ask: re-run Section-5 exit math (strength-sell decision at updated prior 0.75)",
+  "level": 0.78,
+  "note": "invade NO ask >=0.78: a REAL premium over the 0.75 consumed-fair — auto-exit into strength (edge is consumed at fair; only sell at a premium). Tightened 0.79->0.78 2026-07-20.",
   "actionable": true
  },
  {
