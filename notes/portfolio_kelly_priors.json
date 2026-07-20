@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-07-18",
+ "_updated": "2026-07-20",
  "trump-out-as-president-before-2027": {
   "p_no": 0.97,
   "cluster": "us-politics",
@@ -42,13 +42,6 @@
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "2026-07-19 HONEST UPDATE 0.96->0.90 after kimi_advisor second opinion pushed back (first live use of the tool): my 4% YES leaned wholly on a PRE-2026 'generations aren't surprise-dropped' base rate and underweighted 2026 cadence compression (5.5 Apr -> 5.6 Jul-9) + 'code red' competitive pressure + a reportedly-trained next model. Corrected fair YES ~10%. Kimi's own ~40% was market-anchored (circular for a mispricing book) and elided generation-vs-point-release (6 != 5.7), so NOT adopted — but its directional critique was valid. Position HOLDS: NO avg 0.644 vs fair 0.90 = still +25pp. Residual risk the market may see a scheduled event I can't (the honest reason it's not lower)."
- },
- "will-the-us-invade-iran-before-2027": {
-  "p_no": 0.75,
-  "cluster": "iran-regime",
-  "rho_within": 0.6,
-  "cluster_frac": 0.11,
-  "rationale": "2026-07-18 STALE-PRIOR UPDATE (was 0.94): White House meetings on ground troops verified (WaPo/AlJazeera Jul 16-17); Trump 'leaning toward' seizing Iranian islands (Kharg) — an island seizure MEETS the territorial-control bar unlike strikes/blockade. Structured: P(authorize ground seizure) ~35-38% x P(commence by Dec-31) ~0.85 x P(resolves as US-invade | seizure; allied-led carve-out) ~0.7 -> P(YES) ~25% central (band 15-42). Vance denial + 'other people could lead' = the NO-side protection. Guard verdict at mark 0.725: HOLD (E-edge ~7.6%/yr > hurdle; Section-5 exit not met). Triggers armed both directions."
  },
  "will-prime-video-announce-a-new-project-at-sdcc-2026-20260713165131276": {
   "p_yes": 0.78,

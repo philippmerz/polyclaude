@@ -16,23 +16,5 @@
   "level": 0.88,
   "note": "Regime-fall NO re-entry bound (ledger 2026-07-08): escalation dip below the robust bound = instance-thesis re-entry candidate; run the full gate before entering.",
   "actionable": true
- },
- {
-  "key": "invade-no-strength-exit-review",
-  "kind": "clob_no_ask",
-  "id": "1910830010387565971650098373488592514702818137344973088263643820608151819241",
-  "op": ">=",
-  "level": 0.78,
-  "note": "invade NO ask >=0.78: a REAL premium over the 0.75 consumed-fair — auto-exit into strength (edge is consumed at fair; only sell at a premium). Tightened 0.79->0.78 2026-07-20.",
-  "actionable": true
- },
- {
-  "key": "invade-no-thesis-break",
-  "kind": "clob_no_ask",
-  "id": "1910830010387565971650098373488592514702818137344973088263643820608151819241",
-  "op": "<=",
-  "level": 0.66,
-  "note": "invade NO ask <=0.66: material adverse move (market ~34% YES vs 25% central), ABOVE the 0.69-0.77 war-noise band -> fires a JUDGMENT tick (read Kharg/criteria, not auto-sell). Raised 0.62->0.66 2026-07-20 per operator 'up to you' on latency: react sooner on real moves, triggers engage judgment not auto-execute.",
-  "actionable": true
  }
 ]

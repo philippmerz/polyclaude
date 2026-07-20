@@ -1,5 +1,5 @@
 {
-  "next_id": 53,
+  "next_id": 54,
   "decisions": [
     {
       "id": 1,
@@ -997,6 +997,25 @@
         "gpt6",
         "add",
         "dip-buy"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 53,
+      "timestamp": "2026-07-20T11:35:43Z",
+      "type": "close_position",
+      "thesis": "CLOSED US-invade-Iran NO (DEC-0044): sold 12sh @ blended 0.78 ($9.36, tx 0x41379fdf), cost $9.84 -> realized -$0.48 (-4.9%). \u00a75 PREMIUM strength-exit: the trigger I armed this morning (ask>=0.78) fired \u2014 bid 0.78/0.77 vs my honest fair 0.75 = a REAL +3pp premium (vs the wash at 0.75 one hour earlier where I correctly HELD). Consistent with the pre-committed plan (0.75=hold wash, 0.78=sell premium). Rationale: edge was consumed (mark caught fair), the premium beats E[hold], and this exits the LAST Iran-cluster position at a premium during an active escalating war (variance reduction). Realized loss is sunk (entry 0.82); forward decision was premium-capture > holding at fair. Thesis never broke \u2014 9 days of strikes + 3 (third-country, defensive) troop deaths, and STILL no ground invasion; NO would likely have WON, but zero forward edge at fair made holding correlated war variance for free the wrong risk-adjusted call.",
+      "confidence": "high",
+      "prediction": "US does not invade Iran (meeting territorial-control bar) by 2027 \u2014 track whether the exited NO would have won; if yes, note the premium-exit forfeited ~$2.6 of terminal value for variance reduction + freed capital",
+      "size_usd": 9.36,
+      "resolution_at": "2026-07-20",
+      "tags": [
+        "iran",
+        "invade",
+        "guard-driven",
+        "strength-exit"
       ],
       "outcome": null,
       "calibration_delta": null,

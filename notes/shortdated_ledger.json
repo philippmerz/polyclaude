@@ -238,6 +238,20 @@
    "size_usd": 9.15,
    "outcome": null,
    "fade_would_have_won": null
+  },
+  {
+   "date": "2026-07-20",
+   "question": "Will the U.S. invade Iran before 2027?",
+   "side": "NO",
+   "ask": 0.78,
+   "days": 0,
+   "pop_edge_pp": null,
+   "catalyst_p_yes_central": 0.25,
+   "decision": "EXIT $9.36",
+   "reason": "§5 premium strength-exit at armed 0.78 trigger (bid 0.78 vs fair 0.75 = +3pp premium). Realized -$0.48; edge consumed, exited last Iran-cluster leg at premium during active war. DEC-0053.",
+   "size_usd": 9.36,
+   "outcome": null,
+   "fade_would_have_won": null
   }
  ]
 }
