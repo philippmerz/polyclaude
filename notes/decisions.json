@@ -1,5 +1,5 @@
 {
-  "next_id": 54,
+  "next_id": 55,
   "decisions": [
     {
       "id": 1,
@@ -1016,6 +1016,25 @@
         "invade",
         "guard-driven",
         "strength-exit"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 54,
+      "timestamp": "2026-07-20T12:17:18Z",
+      "type": "open_position",
+      "thesis": "Marvel-Studios-announce-at-SDCC YES: ~7sh @0.67 (eff 0.703 after 1000bps fee, $5, 6.5d). LOOSE-criteria instance: ANY new project detail (title/casting/season/format) from ANY Marvel entity (Studios/Animation/Games/Comics) via ANY official channel Jul 22-26 qualifies; already-announced Doomsday does NOT. VERIFIED: Marvel Hall H panel CONFIRMED Sat Jul-25 5:30pm PT ('what's next for the MCU', Feige expected, guests under wraps). KIMI_ADVISOR (first in-flow use, DEC-wired) materially tempered my read 0.83->0.78: flagged D23 (Disney expo Aug-14-16, 3wk later, Marvel confirmed) = incentive to HOLD new reveals for the owned venue -> SDCC could be Doomsday-heavy; + pre-emption risk (new detail before Jul-22 = ineligible) + Hall H skipped entirely 2025. My synthesis 0.78 (kimi 0.70 under-weights the 5-day/all-entity/any-channel breadth; my pre-kimi 0.83 over-weighted 'panel always reveals'). Edge +7.7pp at honest fair. Sized DOWN to $5 (vs Kelly $21) for marginal edge + Prime-SDCC correlation (rho 0.4). Crowd 0.67 over-prices the NO paths given criteria breadth = the edge.",
+      "confidence": "medium",
+      "prediction": "At least one qualifying NEW Marvel project detail is officially revealed Jul 22-26; resolves YES ~Jul-27. Tracks BOTH the trade AND kimi_advisor's calibration (its 0.70 vs my 0.78 vs outcome)",
+      "size_usd": 5.0,
+      "resolution_at": "2026-07-27",
+      "tags": [
+        "sdcc",
+        "marvel",
+        "redeploy-sweep",
+        "kimi-advised"
       ],
       "outcome": null,
       "calibration_delta": null,
