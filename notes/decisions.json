@@ -1017,9 +1017,10 @@
         "guard-driven",
         "strength-exit"
       ],
-      "outcome": null,
+      "outcome": "Exit EXECUTED cleanly: sold 12sh @ blended 0.78 for $9.36 (armed strength-trigger fired as designed), realized -$0.48, freed capital, exited last Iran-cluster leg at premium. Forward prediction (does exited NO win by 2027) tracks the underlying Dec-2026 resolution \u2014 deferred.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "Armed-trigger discipline works end-to-end: bracketed a zero-conviction position 0.66-0.78 at 10:35, upside bracket paid within the hour. \u00a75 premium-exit (sell ABOVE fair) is distinct from wash-exit (sell AT fair, correctly held earlier). Consumed edge + correlated-war-variance = right to exit even with thesis intact.",
+      "resolved_at": "2026-07-21T14:01:46Z"
     },
     {
       "id": 54,
