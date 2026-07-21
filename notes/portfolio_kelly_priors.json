@@ -37,11 +37,11 @@
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out."
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
-  "p_no": 0.9,
+  "p_no": 0.82,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
-  "rationale": "2026-07-19 HONEST UPDATE 0.96->0.90 after kimi_advisor second opinion pushed back (first live use of the tool): my 4% YES leaned wholly on a PRE-2026 'generations aren't surprise-dropped' base rate and underweighted 2026 cadence compression (5.5 Apr -> 5.6 Jul-9) + 'code red' competitive pressure + a reportedly-trained next model. Corrected fair YES ~10%. Kimi's own ~40% was market-anchored (circular for a mispricing book) and elided generation-vs-point-release (6 != 5.7), so NOT adopted — but its directional critique was valid. Position HOLDS: NO avg 0.644 vs fair 0.90 = still +25pp. Residual risk the market may see a scheduled event I can't (the honest reason it's not lower)."
+  "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% — a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair."
  },
  "will-prime-video-announce-a-new-project-at-sdcc-2026-20260713165131276": {
   "p_yes": 0.78,

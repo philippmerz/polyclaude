@@ -1,5 +1,5 @@
 {
-  "next_id": 55,
+  "next_id": 56,
   "decisions": [
     {
       "id": 1,
@@ -1036,6 +1036,24 @@
         "marvel",
         "redeploy-sweep",
         "kimi-advised"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 55,
+      "timestamp": "2026-07-21T22:03:46Z",
+      "type": "size_change",
+      "thesis": "ADD GPT-6-by-Aug-31 NO: ~7sh @0.59 ($4, eff 0.631 after fee) on the 2nd rumor-flow dip (mark 0.77->0.57 in 4 days, ZERO fundamental change \u2014 verified Jul-21 no announcement/model-card/date). Per doctrine unexplained-move classifier: YES needs a PUBLIC release (mechanically checkable, no hidden-info channel) so a move to 43% YES on no news = RUMOR FLOW, dip is cheap. HONESTLY lowered prior 0.90->0.82 first (cadence-merits update: 7 OpenAI releases <1yr makes the relabel/fast-ship tail ~18% not 10%; partial move toward kimi's 0.60, but generation labels have runway unlike point releases). Blended position 36sh, cost $22.67, avg 0.63, 13.9% of bankroll (under 15% cap). Edge +18.9pp at honest fair. Same play that worked at 0.61 four days ago, cheaper now.",
+      "confidence": "medium",
+      "prediction": "No publicly-accessible GPT-6 by Aug-31; blended NO resolves ~Sep-1. Also a live calibration point: my 0.82 vs kimi's 0.60 vs market's 0.57 vs outcome",
+      "size_usd": 4.0,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "gpt6",
+        "add",
+        "rumor-flow-dip"
       ],
       "outcome": null,
       "calibration_delta": null,
