@@ -108,6 +108,35 @@ def _load_priors() -> dict[str, float]:
     return out
 
 
+def _load_acked_holds() -> dict:
+    """Deliberate 'hold despite the flag' acknowledgments (2026-07-22). Without
+    this, a position I consciously chose to hold (mark ≈ fair, imminent
+    catalyst — e.g. Marvel-SDCC through the Jul-25 panel) re-flags NEGATIVE_EDGE
+    every tick, and a low-context/headless tick could re-litigate or panic-sell
+    a documented hold. The acknowledgment now travels WITH the flag.
+    Format: notes/acknowledged_holds.json = [{"slug": <fragment>, "reason":
+    <str>, "until": "YYYY-MM-DD"}]. Expired entries are ignored."""
+    import datetime as _dt
+    path = PRIORS_PATH.parent / "acknowledged_holds.json"
+    out = []
+    try:
+        today = _dt.date.today().isoformat()
+        for a in json.loads(path.read_text()):
+            if a.get("until", "9999") >= today:
+                out.append(a)
+    except Exception:
+        pass
+    return out
+
+
+def _acked(slug: str, acks: list) -> dict | None:
+    for a in acks:
+        frag = a.get("slug", "")
+        if frag and (frag in slug or slug in frag):
+            return a
+    return None
+
+
 def _match_prior(slug: str, priors: dict) -> tuple[str, float] | None:
     """Exact slug match first, then containment either way (slug variants).
     Returns (side, p_win) or None."""
@@ -146,6 +175,7 @@ def main() -> int:
         return 0
 
     priors = _load_priors()
+    acked_holds = _load_acked_holds()
     flagged: list[dict] = []
     holds: list[dict] = []
     drawdowns: list[dict] = []
@@ -243,12 +273,19 @@ def main() -> int:
             "drawdown_pct": round(drawdown_pct, 2) if drawdown_pct is not None else None,
         }
         if expected_edge_apy is not None:
-            if prior_p < mark:
-                record["verdict"] = "NEGATIVE_EDGE"
-                flagged.append(record)
-            elif expected_edge_apy < args.hurdle_apy:
-                record["verdict"] = "CLOSE_CANDIDATE"
-                flagged.append(record)
+            ack = _acked(slug, acked_holds)
+            if prior_p < mark or expected_edge_apy < args.hurdle_apy:
+                # would-flag: NEGATIVE_EDGE (mark>prior) or below-hurdle
+                base = "NEGATIVE_EDGE" if prior_p < mark else "CLOSE_CANDIDATE"
+                if ack:
+                    # deliberate documented hold — route to holds, not flagged,
+                    # so a low-context tick sees the acknowledgment inline
+                    record["verdict"] = (f"ACKED_HOLD until {ack.get('until','?')} "
+                                         f"({base}): {ack.get('reason','')[:80]}")
+                    holds.append(record)
+                else:
+                    record["verdict"] = base
+                    flagged.append(record)
             else:
                 record["verdict"] = "HOLD"
                 holds.append(record)
@@ -286,7 +323,8 @@ def main() -> int:
 
     print(f"# marginal-APY scan (EXPECTED-edge vs prior) @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")
     print(f"# hurdle: {args.hurdle_apy*100:.2f}% APY; drawdown alert: {args.drawdown_alert_pct:.0f}%; priors: {PRIORS_PATH.name}")
-    print(f"# {len(holds)} clear; {len(flagged)} flagged (NEGATIVE_EDGE / below-hurdle)")
+    n_acked = sum(1 for r in holds if str(r.get("verdict","")).startswith("ACKED_HOLD"))
+    print(f"# {len(holds)} clear ({n_acked} acked-hold); {len(flagged)} flagged (NEGATIVE_EDGE / below-hurdle)")
     print()
     if flagged:
         print("=== FLAGGED (negative edge at own prior, or expected edge < hurdle) ===")
@@ -294,10 +332,12 @@ def main() -> int:
             print(f"  [{r['verdict']}] {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
                   f"{_apy_col(r)}  {r['question'][:60]}")
         print()
-    print("=== HOLDS (expected edge clears hurdle) ===")
-    for r in sorted(holds, key=lambda x: (x.get("expected_edge_apy_pct") if x.get("expected_edge_apy_pct") is not None else x["gross_carry_apy_pct"])):
+    print("=== HOLDS (expected edge clears hurdle, or acknowledged deliberate holds) ===")
+    for r in sorted(holds, key=lambda x: (x.get("expected_edge_apy_pct") if x.get("expected_edge_apy_pct") is not None else (x.get("gross_carry_apy_pct") or 0))):
+        v = str(r.get("verdict",""))
+        tag = f"  [{v}]" if v.startswith("ACKED_HOLD") else ""
         print(f"  {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
-              f"{_apy_col(r)}  {r['question'][:60]}")
+              f"{_apy_col(r)}  {r['question'][:52]}{tag}")
     return 0
 
 
