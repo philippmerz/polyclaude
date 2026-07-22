@@ -51,10 +51,10 @@
   "rationale": "2026-07-16 entry prior (DEC-0050): loose bar (unannounced project OR new-season renewal via ANY official channel Jul 22-26); Prime SDCC programming confirmed + weekly press cadence; 22% = quiet-week tail (all in-window announcements happen to concern already-announced projects). If more SDCC-family legs are added they share this cluster."
  },
  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
-  "p_yes": 0.78,
+  "p_yes": 0.83,
   "cluster": "sdcc-window",
   "rho_within": 0.4,
   "cluster_frac": 0.08,
-  "rationale": "2026-07-20 (DEC-0054): loose 'any new Marvel-entity project detail via any official channel Jul 22-26'; Hall H confirmed Jul-25. kimi-advised down from 0.83 (D23 Aug-14 = hold-reveals risk). Shares sdcc-window cluster w/ Prime-SDCC (rho 0.4)."
+  "rationale": "2026-07-22 HONEST repricing 0.78->0.83: con OPENS today, Hall H panel confirmed Sat Jul-25, no D23-hold signal emerged -> the kimi-flagged D23 discount shrinks as the catalyst nears without a hold. Market ripped 0.665->0.865 (deep 0.86 bid) corroborating. HOLD not sell: mark 0.865 vs fair 0.83 = only +3pp premium, and the 1000bps taker fee (~$0.10) eats it -> after-fee ~wash on a $5 position 3.9d from the catalyst the thesis was built on. (Contrast invade exit: fee-free + 163d variance + consumed conviction = sell; here fee + 3.9d + thesis-validating = hold.)"
  }
 }
