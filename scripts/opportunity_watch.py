@@ -216,12 +216,22 @@ def run_monotonicity(state: dict) -> None:
     except Exception as e:
         _log(f"monotonicity run failed: {e}")
         return
-    if "0 monotonicity violations" in out or "(no violations)" in out:
+    # 2026-07-23: only fire on REAL (live-CLOB-validated) arbs, never on
+    # midpoint mirages. The scanner now prints "... ; M REAL after live-CLOB
+    # walk"; parse M. A 3-hour false-positive storm (Elon-tweet mid-flag,
+    # -10.95pp executable) is exactly what this prevents.
+    import re as _re
+    m = _re.search(r";\s*(\d+)\s+REAL after live-CLOB walk", out)
+    if m is None:
+        _log("monotonicity: no REAL-count line parsed (scanner output format?)")
         return
+    n_real = int(m.group(1))
+    if n_real <= 0:
+        return  # midpoint flags only — not actionable
     for line in out.splitlines():
-        if "monotonicity violations" in line and not line.strip().startswith("# 0"):
+        if "REAL ARB" in line:
             _alert(state, "monotonicity-arb",
-                   f"monotonicity scan: {line.strip()[:160]} — decomposition arb window, act now.",
+                   f"monotonicity: {n_real} EXECUTABLE arb(s) after live-CLOB walk — {line.strip()[:140]}",
                    actionable=True)
             return
 

@@ -94,6 +94,56 @@ def parse_outcome_prices(p) -> tuple[float, float] | None:
     return None
 
 
+POLYMARKET_CLOB = "https://clob.polymarket.com"
+
+
+def _best_ask(token_id: str) -> float | None:
+    """Lowest executable ask for a CLOB token (what you'd PAY to buy). Returns
+    None if the book is empty/unreachable."""
+    try:
+        r = httpx.get(f"{POLYMARKET_CLOB}/book", params={"token_id": str(token_id)}, timeout=10)
+        r.raise_for_status()
+        asks = [float(a["price"]) for a in (r.json().get("asks") or []) if a.get("price")]
+        return min(asks) if asks else None
+    except Exception:
+        return None
+
+
+def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
+    """LIVE-CLOB validation (2026-07-23): the monotonicity flag uses gamma
+    MIDPOINTS, which sit between stub bids and real asks — the 2026-07-23
+    outage surfaced a 3-hour 'actionable' false alarm (Elon-tweet-Hyperliquid:
+    flagged +11.25pp on mids, but the earlier YES was 0.024 bid / 0.377 ask =
+    no real price). The riskless capture of an (earlier_YES > later_YES)
+    violation is BUY later_YES + BUY earlier_NO (min payoff 1.0 in every
+    world). It's a real arb only if the EXECUTABLE cost of that pair, incl.
+    taker fees, is < 1.0. This walks both books and returns the true edge or
+    None if unexecutable."""
+    try:
+        late_tokens = json.loads(row_late.get("clob_tokens") or "[]")
+        early_tokens = json.loads(row_early.get("clob_tokens") or "[]")
+    except Exception:
+        return None
+    if len(late_tokens) != 2 or len(early_tokens) != 2:
+        return None
+    late_yes_ask = _best_ask(late_tokens[0])     # buy later YES
+    early_no_ask = _best_ask(early_tokens[1])    # buy earlier NO
+    if late_yes_ask is None or early_no_ask is None:
+        return None
+    # taker fee per share = bps/10000 * min(p, 1-p), per leg
+    def _fee(p, bps):
+        try:
+            return (float(bps or 0) / 10000.0) * min(p, 1.0 - p)
+        except Exception:
+            return 0.0
+    fee = (_fee(late_yes_ask, row_late.get("taker_fee_bps"))
+           + _fee(early_no_ask, row_early.get("taker_fee_bps")))
+    cost = late_yes_ask + early_no_ask + fee
+    return {"late_yes_ask": late_yes_ask, "early_no_ask": early_no_ask,
+            "fee": round(fee, 4), "exec_cost": round(cost, 4),
+            "exec_edge_pp": round((1.0 - cost) * 100, 2)}
+
+
 def fee_aware_breakeven(yes_t1: float, yes_t2: float) -> float:
     """Fee-aware breakeven spread needed to profit on the arb.
 
@@ -155,6 +205,8 @@ def main() -> int:
                 "market_id": m.get("id"),
                 "question": m.get("question"),
                 "vol24hr": float(m.get("volume24hr", 0) or 0),
+                "clob_tokens": m.get("clobTokenIds"),
+                "taker_fee_bps": m.get("takerBaseFee"),
             })
         if len(market_rows) < 2:
             continue
@@ -209,23 +261,49 @@ def main() -> int:
                     "net_spread_pp": round(spread * 100, 2),
                     "t1_vol24hr": round(market_rows[i]["vol24hr"], 0),
                     "t2_vol24hr": round(market_rows[j]["vol24hr"], 0),
+                    # row refs for the live-CLOB validation pass (i=earlier, j=later)
+                    "_row_early": market_rows[i],
+                    "_row_late": market_rows[j],
                 })
 
     # Sort by net_spread_pp desc (largest profit first)
     violations.sort(key=lambda v: -v["net_spread_pp"])
 
+    # LIVE-CLOB VALIDATION (2026-07-23): walk real books on each mid-flagged
+    # violation — the midpoint spread is NOT executable. Keep the mid-flag as
+    # a candidate list but split REAL (executable arb after fees) from ARTIFACT.
+    n_mid = len(violations)
+    real = []
+    for v in violations:
+        ex = _executable_monotonic_arb(v["_row_early"], v["_row_late"])
+        if ex is not None:
+            v["executable"] = ex
+            if ex["exec_edge_pp"] > 0:
+                real.append(v)
+    for v in violations:
+        v.pop("_row_early", None); v.pop("_row_late", None)
+
     if args.json:
-        print(json.dumps({"violations": violations, "events_inspected": multi_market_events}, indent=2))
+        print(json.dumps({"violations": violations, "real_executable": real,
+                          "events_inspected": multi_market_events}, indent=2))
         return 0
 
-    print(f"\n# {multi_market_events} multi-market events inspected, {len(violations)} monotonicity violations >= {args.min_violation_pp}pp\n")
+    print(f"\n# {multi_market_events} multi-market events inspected; {n_mid} midpoint violation(s) >= {args.min_violation_pp}pp; "
+          f"{len(real)} REAL after live-CLOB walk\n")
     if not violations:
         print("(no violations)")
         return 0
-    print(f"{'event_title':<50} {'t1':<12} {'t2':<12} {'YES_t1':<7} {'YES_t2':<7} {'gross':<7} {'BE':<6} {'net':<7}")
-    print("-" * 120)
+    print(f"{'event_title':<44} {'t1':<11} {'t2':<11} {'mid_gross':<9} {'EXEC_edge':<9} {'verdict'}")
+    print("-" * 110)
     for v in violations[:30]:
-        print(f"{v['event_title'][:50]:<50} {v['t1_end']:<12} {v['t2_end']:<12} {v['t1_yes']:<7.4f} {v['t2_yes']:<7.4f} {v['violation_pp']:>+5.2f}pp {v['breakeven_pp']:>4.2f}pp {v['net_spread_pp']:>+5.2f}pp")
+        ex = v.get("executable")
+        exec_s = f"{ex['exec_edge_pp']:>+6.2f}pp" if ex else "  n/a  "
+        verdict = ("REAL ARB" if ex and ex["exec_edge_pp"] > 0
+                   else "ARTIFACT (mid-only)" if ex else "no book")
+        print(f"{v['event_title'][:44]:<44} {v['t1_end']:<11} {v['t2_end']:<11} "
+              f"{v['violation_pp']:>+6.2f}pp {exec_s:<9} {verdict}")
+    if not real:
+        print("\n# 0 REAL executable arbs — all midpoint flags evaporated on live books (the usual outcome).")
     return 0
 
 

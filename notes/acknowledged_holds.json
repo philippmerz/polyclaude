@@ -1,7 +1,12 @@
 [
  {
   "slug": "will-marvel-studios-announce-a-new-project-at-sdcc-2026",
-  "reason": "mark 0.865 ~= fair 0.83; +3pp premium eaten by taker fee -> after-fee wash on a $5 position 3.9d from the Jul-25 panel catalyst. Hold to resolution, do NOT sell into a wash 3d before the event (DEC-0054). Framework: fee'd + short-horizon + thesis-validating = hold (unlike fee-free/long/consumed invade exit).",
+  "reason": "ripped 0.865->0.965 as con plays out (near-locked YES, panel Sat Jul-25); fair now 0.93; hold to resolution ~Jul-27, selling captures nothing over E[hold] after fee. DEC-0054.",
+  "until": "2026-07-28"
+ },
+ {
+  "slug": "will-prime-video-announce-a-new-project-at-sdcc-2026",
+  "reason": "mark 0.785 ~= fair 0.78 (marginal NEGATIVE_EDGE); resolves ~Jul-27 (2.6d); near-fair so selling into 0.78 bid minus fee < E[hold]. Hold to resolution. DEC-0050.",
   "until": "2026-07-28"
  }
 ]
