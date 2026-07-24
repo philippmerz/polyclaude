@@ -35,10 +35,11 @@ import kimi_eval_runner as _K  # _chat, _ddg_search, CUSTOM_SEARCH_TOOL, _fetch_
 
 # k3 reasons a lot; give the answer room + a longer HTTP timeout than the eval default
 _K.MAX_TOKENS = 20000
-# 10 rounds = ~6-8 searches, plenty for a second opinion and a tighter time
-# bound than the eval's 18 (2026-07-20: paired with the wall-clock deadline so
-# a hung advisor never blocks an entry).
-_K.MAX_ROUNDS = 10
+# 2026-07-24: 10 rounds proved too tight — the Apple-SDCC run burned all 10 on
+# legitimate base-rate verification (20 searches) and exited "[MAX ROUNDS
+# exceeded]" with no answer. The 300s wall-clock deadline is the real guard
+# against hangs; give rounds room under it.
+_K.MAX_ROUNDS = 14
 _orig_post = httpx.post
 httpx.post = lambda *a, **kw: _orig_post(*a, **{**kw, "timeout": kw.get("timeout") or 600})
 

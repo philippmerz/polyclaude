@@ -3505,3 +3505,15 @@ maker YES bids 13@0.80 / 11@0.78 (fee-free, above the fisher bids; benign advers
 announce-flow lifts asks, doesn't hit bids). Funded by $12 Arb-Aave→Polygon bridge (fee <$0.01) +
 wrap; pUSD 32.55, also pre-positions D23 ammo. All 4 reads ledger-recorded WITH priors → Brier
 datapoints when ledger_calibration resolves them Sunday. 7 live orders total.
+
+## 2026-07-25 ~00:00 UTC — continuation: retroactive kimi check on Apple bid (process-miss caught)
+
+Process miss, self-caught: the Apple bid ($10.40) crossed the >$10 second-opinion bar but was placed
+via raw clob_v2 (bypassing the enter-flow where the rule lives). Ran kimi_advisor retroactively while
+cancellation was still free: it round-capped (10 rounds, 20 searches) WITHOUT a verdict — but its
+search trail was doing exactly the right thing (verifying Apple's con-announcement base rate; found
+the For-All-Mankind "Star City" spinoff announced at a prior SDCC Hall H = supportive). Per rule,
+advisor absence ≠ confirmation and ≠ block; my own gate ran on verified facts → bid stands.
+Fixes: MAX_ROUNDS 10→14 (deadline is the hang-guard; rounds were binding on honest verification).
+Noted: direct clob_v2 buys bypass ALL enter-flow gates — acceptable for maker take-profits on held
+positions; for NEW-position bids >$10, run the advisor manually same-turn (as done here).
