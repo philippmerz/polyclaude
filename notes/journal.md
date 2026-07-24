@@ -3480,3 +3480,16 @@ publication" gate can often be closed NOW by deriving the number from committed 
 
 Ultracode note: workflow fan-out declined this session — VM memory budget (1.9GB, 3 OOMs, one-agent
 max) is a hard physical constraint that token budget doesn't override; all work ran inline.
+
+## 2026-07-24 ~23:20 UTC — continuation: ledger_calibration.py shipped (the January calibration measure)
+
+Built scripts/ledger_calibration.py — `resolve` (gamma public-search outcome backfill; 0.88-similarity
++ exact date-token guard so "by Aug 31" can't match the "by Aug 21" sibling at ratio 0.98) + `score`
+(Brier/log-loss of my catalyst_p_yes_central vs the (side,ask)-implied market baseline, skill = the
+delta). This operationalizes the operator's N=1-isn't-calibration correction: the ledger IS the test.
+Current state honestly: 2 outcomes backfilled (Wimbledon skips, both NO), 0 records scorable yet (no
+resolved record carries a prior) — first datapoints SDCC ~Jul-27, Beirut/Hormuz Jul-31, GPT-6 Aug-31.
+Sunday reviews + post-resolution ticks run resolve+score.
+
+Also: backlog #126 noise-cut found ALREADY IMPLEMENTED (shipped 2026-07-17, never crossed off) —
+marked stale instead of re-building it. Backlog review before building: it works.
