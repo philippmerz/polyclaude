@@ -250,6 +250,11 @@ def main() -> int:
     p.add_argument("--cluster-frac", type=float, default=0.0,
                    help="Existing cluster fraction of bankroll (for ρ-discount)")
     p.add_argument("--execute", action="store_true", help="Actually post buy order")
+    p.add_argument("--maker", action="store_true",
+                   help="Rest a GTC post-only bid at best_bid+tick instead of crossing: "
+                        "no taker fee, bid-side price, fill NOT guaranteed. Record in "
+                        "notes/resting_orders.md and re-verify each tick. NOT for "
+                        "catalyst-imminent entries — cross the spread for those.")
     p.add_argument("--usd", type=float, default=None,
                    help="Override Kelly recommendation with manual $ size")
     p.add_argument("--skip-catalyst-check", action="store_true",
@@ -526,16 +531,42 @@ def main() -> int:
     if tick_dec > 2:
         buy_price = round(math.ceil(round(buy_price * 100, 6)) / 100, 2)
     buy_price = min(buy_price, 0.99)  # never post above 0.99
+    order_flags = ["--order-type", "FAK"]
+    if args.maker:
+        # Maker-first entry (operator 2026-07-24: limit orders are everyday
+        # repertoire). Rest at best_bid+tick, capped 1 tick under the ask, so
+        # the order is passive: zero taker fee (1000bps markets charge takers
+        # 10%*min(p,1-p)/share) and the bid-side price. A resting bid fills
+        # under FUTURE information — allowed only with per-tick re-verification
+        # and news_watcher coverage of the market's info channel (rules in
+        # notes/resting_orders.md).
+        try:
+            bk = httpx.get("https://clob.polymarket.com/book",
+                           params={"token_id": token}, timeout=15).json()
+            bb = max((float(x["price"]) for x in bk.get("bids", [])), default=None)
+            ba = min((float(x["price"]) for x in bk.get("asks", [])), default=None)
+        except Exception as e:
+            print(f"  book fetch failed ({e}) — maker entry aborted")
+            return 1
+        if bb is None:
+            print("  empty bid side — maker entry aborted (use the taker path)")
+            return 1
+        px = bb + tick if (ba is None or bb + tick < ba) else bb
+        # Amount-precision rule: floor to the 2-dec grid (bids stay passive).
+        buy_price = round(math.floor(round(px * 100, 6)) / 100, 2)
+        fee_per_share = 0.0  # fees are taker-side; makers pay 0 and may earn rewards
+        order_flags = ["--post-only"]  # GTC default; post-only rejects if it would cross
     # Integer shares × on-grid 2-dec price → clean maker (2-dec) / taker (int).
     # Fee-bearing markets: size shares off (price + fee) so the CASH outlay
     # (notional + exchange fee) stays within the deploy budget.
     target_shares = max(1, round(deploy_dollar / (buy_price + fee_per_share)))
     clean_usd = round(target_shares * buy_price, 2)
-    print(f"\n# Executing BUY {target_shares} shares ({side}) @ {buy_price} (tick {tick}) for ${clean_usd}")
+    mode = "RESTING post-only BID (record in notes/resting_orders.md)" if args.maker else "taker FAK"
+    print(f"\n# Executing BUY {target_shares} shares ({side}) @ {buy_price} (tick {tick}) for ${clean_usd} [{mode}]")
 
     cmd = [".venv/bin/python", "scripts/clob_v2.py",
            "buy" if side in ("YES", "NO") else "sell",
-           token, str(buy_price), str(clean_usd), "--order-type", "FAK"]
+           token, str(buy_price), str(clean_usd), *order_flags]
     if neg_risk:
         cmd.extend(["--neg-risk", "true"])
     print(f"  cmd: {' '.join(cmd)}", file=sys.stderr)

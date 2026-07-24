@@ -3392,3 +3392,48 @@ Operator: "this book depth still yielded us 59%. Change over absolute size also 
 1. **Capacity is NOT a current filter.** A thin market yielding +59% on $8 counts FULLY at our size. "Absolute size doesn't matter" cuts BOTH ways: no "it's small" risk-crutch AND no dismissing thin high-%-return opportunities. Capacity only binds at the future scale where fills are limited (a January-decision concern for THAT capital). REMOVED the "capacity a first-class filter" takeaway (memory + index fixed).
 2. **The objective is maximize expected COMPOUNDED return (% terms).** Variance reduction is only justified when it improves GEOMETRIC/Kelly return — not blanket risk-aversion.
 3. **HONEST re-grade of the Prime sell:** under pure EV (E_hold $15.48 > sell $13.45) AND log/Kelly certainty-equivalent (CE_hold ~$172.4 > CE_sell ~$171.4), HOLDING was marginally BETTER. I let variance-aversion (partly cued by the operator's own risk question) over-tip me to sell below fair into a thin bid. The sell was defensible but ~$1-2 EV-suboptimal, and the "doesn't scale" justification was wrong. Not reversing (done, resolves soon, buyback = fee churn) — banking the calibration lesson: run the Kelly/log-utility check before de-risking a positive-EV position; a tail existing is not sufficient reason to sell. The resting maker take-profits (fee-free fair-value capture on up-moves) STAND — those are pure EV improvement.
+
+## 2026-07-24 ~22:35 UTC — EXECUTION-REPERTOIRE AUDIT (operator: "limit orders are standard... use everything to MAXIMIZE ROI")
+
+Operator (local session) called out that I only adopted limit orders when prompted → full pass over
+every execution mechanism available, gap-closing inline. Findings + actions:
+
+**Gaps found and closed:**
+1. **Entries always crossed the spread** — polyclaude_enter.py hardcoded FAK while clob_v2 supported
+   post-only GTC bids all along. On 1000bps fee markets the taker pays 10%×min(p,1−p)/share (GPT-6 at
+   0.61: 3.9c/sh = effective 0.649, ~8% worse cost basis than the 0.60 bid). Maker pays $0.
+   → Added `--maker` flag to polyclaude_enter.py (rest at best_bid+tick, capped under the ask,
+   post-only; floor-to-2-dec grid). Doctrine: maker-first by default, cross only when
+   catalyst-imminent/ephemeral edge.
+2. **Liquidity rewards never checked** — Polymarket pays daily USDC to makers within max_spread of
+   mid (config per market). MY OWN GPT-6 market pays $50/day (min 20sh, 4.5c band). Trump-out $10/d
+   min50, SpaceX $30/d min200, Satoshi $2/d min50 — min_sizes above our positions; do NOT deepen to
+   farm (Trump-out add rejected: 0.925 vs 0.97 fair too thin + politics-ρ).
+3. **Take-profit coverage was 3/7** — Marvel note in resting_orders.md claimed "deep book, no spread
+   to avoid" but live book was 0.887/0.99. → Rested SELL 7 @ 0.98 (fair 0.93; 0.98 certain > 0.93 EV,
+   exits pre-resolution risk; panel tomorrow Jul-25). SpaceX/MacBook/GPT-6 correctly un-rested
+   (fair >> mark — nothing to take).
+
+**New orders (5 total live, reconciled in notes/resting_orders.md):**
+- SELL Marvel-SDCC 7 @ 0.98 (post-only GTC).
+- BID GPT-6 NO 20 @ 0.60 ($12.00) — triple-purpose: patient add 22pp below 0.82 fair (Kelly log-check:
+  cluster E[ln] +0.039→+0.054, total exposure ~$33 vs half-K cap ~$47), zero taker fee (vs 0.649
+  effective), sits in the rewards band (one-sided, reduced weight — verify accrual empirically ~1d).
+  First attempt at 0.61 bounced "crosses book" (ask had ticked down) — post-only failed SAFE, repriced.
+- Resting-BID safety rules codified: per-tick thesis re-verify (fills happen under FUTURE info),
+  news_watcher channel coverage required (GPT-6 ✓; MacBook add REJECTED — Gurman/supply-chain channel
+  unwatched), pull bids pre-catalyst.
+
+**Checked and left alone (with reasons):** ARB 203 = operator-directed custody hold (Jun-10, not idle);
+pUSD $8.56 remains taker ammo; Aave yield-shopping at ~$30 idle rejected (2pp diff ≈ $0.60/yr < op-cost);
+POL gas float oversized but conversion friction > carry; GTD order type noted (expiration wiring
+unverified — per-tick reconcile covers it); perp-DEX funding harvest stays gated ~$500; two-sided
+rewards quoting off-limits where it fights alpha (selling GPT-6 at 0.65 vs 0.82 fair = never).
+
+Sibling readout worth keeping: GPT-6 term structure Aug-14 5.9% / Aug-21 29.5% / Aug-31 39% / Dec-31
+88.5% YES — market prices a late-August release window (GPT-5 anniversary echo). My NO is a TIMING bet;
+Dec-31 sibling confirms the market expects GPT-6 in 2026. Thesis unchanged (strict public-access bar,
+no announcement); the resting bid re-verifies this every tick.
+
+Memory: feedback_execution_repertoire.md (execution mechanics ARE an edge surface — enumerate the full
+order-type/fee/incentive surface when ADOPTING a venue, not when prompted). Bankroll $171.34 (+0.8%).
