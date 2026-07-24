@@ -3437,3 +3437,31 @@ no announcement); the resting bid re-verifies this every tick.
 
 Memory: feedback_execution_repertoire.md (execution mechanics ARE an edge surface — enumerate the full
 order-type/fee/incentive surface when ADOPTING a venue, not when prompted). Bankroll $171.34 (+0.8%).
+
+## 2026-07-24 ~22:50 UTC — FULL JURISDICTION GRANT → ARB closed +11.8% (29d)
+
+Operator (local): "ARB is also your jurisdiction, the entire portfolio is. You can do with it however
+you see fit." Boundary exception dissolved → ARB re-underwritten under MY framework same-turn.
+
+**Verification before selling (phantom-catalyst discipline):** aggregator claims of a Jul-9 "100% of
+fees to ARB tokenholders" model were RELABELED TREASURY FLOW. Real story (CoinDesk/dlnews): Robinhood
+Chain (Orbit L2) sends 10% of net revenue to the Arbitrum ECOSYSTEM/treasury; Goldfeder himself: DAO
+is DEADLOCKED on what to do with revenue; holder distribution = forum talk, nothing filed. Volume
+frenzy was memecoin-driven, already fading. Price history confirmed the event was real (+24%
+Jul-9→12, 0.0766→0.0951, faded to 0.083) — event real, MECHANISM absent. My own Jul-10 watchlist note
+had over-credited it ("thesis fundamentally validated") — lesson recorded on DEC-0039: read the
+mechanism, not the headline.
+
+**Decision:** entry thesis's own condition (committed fee-share) still unmet + undated; no polyclaude
+edge in liquid top-100 beta; unlock supply pressure ongoing; pipeline compounds better. SOLD 203.31
+ARB @ 0.0825 → $16.78 USDC (0xd29fa691) → Arb Aave 2.66% (0x574b471c), total supplied there now
+~$19.85. Realized +$1.78 (+11.8%, 29d hold, DEC-0039→DEC-0057). Honest note: mark was +22% on Jul-10
+under operator custody — jurisdiction boundaries had P&L cost; now gone.
+
+**Re-entry re-armed (watchlist):** (1) polyclaude-actionable: distribution/buyback proposal FILED at
+Tally voting stage = dateable <1y catalyst with weeks of vote-runway to enter; (2) deep dip ≤0.065 =
+multi-year zone, surface to operator (IBKR). No re-entry on ecosystem/volume headlines.
+
+Memory: feedback_allocation_freedom.md extended (full jurisdiction; re-underwrite transferred holds,
+don't grandfather). Bankroll composition post-move: PM $120 + resting orders, Arb aUSDC ~$19.85, Base
+aUSDC $4.55, pUSD $8.56 taker ammo, gas floats.

@@ -20,9 +20,9 @@
       "entry_max": 0.065,
       "horizon": "1-3y",
       "route": "ibkr_surface",
-      "rationale": "HELD: 203.31 ARB @ ~$0.0738 (DEC-0039, +22% @ $0.090 on 2026-07-10). ADD-TRIGGER FIRED 2026-07-09 (REAL revenue mechanism: Offchain Labs \u2014 10% of Robinhood Chain + all Arbitrum L2 fees to the ecosystem, 8% to tokenholder treasury, 2% dev; ARB governance-token -> cash-flow token; thesis fundamentally validated). BUT declined to add: ARB already +22% ON the news (idiosyncratic, OP +4/BTC +3) = chasing a post-catalyst pump vs the delegation intent (add cheap, dip <=$0.065). SURFACED to operator (msg 530) for the add call. RE-ARMED add: retrace to ~$0.075-0.080 OR proven Robinhood-Chain fee VOLUME (not just the announcement); raw dip-add <=$0.065 stands. entry_max stays 0.065 for the price-scan; the volume/retrace adds are news-monitored.",
+      "rationale": "POSITION CLOSED 2026-07-24 (DEC-0057: +11.8%/29d; sold 203.31 @ 0.0825 on full-jurisdiction grant \u2014 no holder-accrual mechanism, DAO deadlocked on distribution per Goldfeder/dlnews, fails <1y bar). TWO re-entry paths: (1) POLYCLAUDE-ACTIONABLE: a distribution/buyback/fee-share proposal FILED at Tally voting stage = dateable <1y catalyst, enter DURING the vote runway (news_watcher: arbitrum keywords); (2) price-only deep dip <=0.065 = multi-year value zone, SURFACE to operator (ibkr route), not mine. Do NOT re-enter on ecosystem/volume headlines alone \u2014 Jul-10 lesson: fees->treasury != fees->holders; read the mechanism.",
       "added": "2026-05-08",
-      "updated": "2026-07-10"
+      "updated": "2026-07-24"
     },
     {
       "ticker": "ONDO",

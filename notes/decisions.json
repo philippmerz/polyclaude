@@ -1,5 +1,5 @@
 {
-  "next_id": 57,
+  "next_id": 58,
   "decisions": [
     {
       "id": 1,
@@ -755,9 +755,10 @@
         "crypto",
         "delegated"
       ],
-      "outcome": null,
+      "outcome": "CLOSED 2026-07-24 (DEC-0057): +$1.78 / +11.8% in 29d. Sold on jurisdiction transfer \u2014 no holder-accrual mechanism (DAO deadlocked per Goldfeder), fails <1y catalyst bar.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "Jul-10 note over-credited the announcement ('thesis fundamentally validated') \u2014 the fee flow goes to TREASURY (already true for Arb One), not holders; read the MECHANISM, not the headline. Also: +22pct mark on Jul-10 was not sellable then (operator custody) \u2014 jurisdiction boundaries have P&L cost; now dissolved.",
+      "resolved_at": "2026-07-24T22:33:13Z"
     },
     {
       "id": 40,
@@ -1074,6 +1075,25 @@
         "scale-invariant",
         "consumed-edge",
         "operator-reframe"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 57,
+      "timestamp": "2026-07-24T22:33:07Z",
+      "type": "close_position",
+      "thesis": "CLOSE DEC-0039: sold 203.31 ARB @ 0.0825 -> 16.776 USDC (swap 0xd29fa691) -> Arb Aave (supply 0x574b471c). +1.78 (+11.8%) in 29d. Trigger: operator granted full portfolio jurisdiction 2026-07-24 (ARB boundary-exception dissolved) -> position must pass the <1y catalyst-backed framework. Verified before selling: Jul-9 Robinhood-Chain event REAL (+24% pop 0.0766->0.0951, faded to 0.083) but mechanism = 10pct of Robinhood net revenue to ECOSYSTEM/TREASURY; Goldfeder (dlnews): DAO deadlocked on distribution; holder accrual still nonexistent = the entry thesis's own condition (committed fee-share) still unmet, undated. No polyclaude edge in liquid top-100 beta; redeploy to Aave floor + PM pipeline. Re-entry re-armed: FILED distribution/buyback proposal at voting stage = dateable <1y catalyst (weeks of vote runway to enter).",
+      "confidence": "high",
+      "prediction": "If a distribution/buyback proposal reaches Tally voting within 6mo, ARB re-rates 30-50pct+ and the filed-proposal trigger gets us in early; absent that, ARB underperforms my pipeline and the sell compounds better.",
+      "size_usd": 16.78,
+      "resolution_at": null,
+      "tags": [
+        "arb",
+        "crypto_sleeve",
+        "jurisdiction",
+        "close"
       ],
       "outcome": null,
       "calibration_delta": null,
