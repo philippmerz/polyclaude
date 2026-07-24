@@ -44,11 +44,11 @@
   "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% — a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair."
  },
  "will-prime-video-announce-a-new-project-at-sdcc-2026-20260713165131276": {
-  "p_yes": 0.78,
+  "p_yes": 0.86,
   "cluster": "sdcc-window",
   "rho_within": 0.5,
   "cluster_frac": 0.05,
-  "rationale": "2026-07-16 entry prior (DEC-0050): loose bar (unannounced project OR new-season renewal via ANY official channel Jul 22-26); Prime SDCC programming confirmed + weekly press cadence; 22% = quiet-week tail (all in-window announcements happen to concern already-announced projects). If more SDCC-family legs are added they share this cluster."
+  "rationale": "2026-07-24 0.78->0.86 (con-schedule confirmed): Prime has 2 confirmed panels Fri Jul-24 PT (Blade Runner 2099 + RoP-S3 10am; Carrie 4:45pm with an EXPLICIT 'special announcement') + Reacher/Neagley SDCC debut. Pre-con 0.78 raised as the qualifying-reveal probability rose with the confirmed slate + flagged special announcement. Mark 0.875 ~= fair 0.86 = HOLD (fair rose to meet mark, NOT a premium to capture — verified, not mechanically sold). Tail ~14%: everything shown is already-announced content (trailers of known series) + the 'special announcement' is a mere date. Entry 0.47 -> +86% MTM."
  },
  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
   "p_yes": 0.93,
