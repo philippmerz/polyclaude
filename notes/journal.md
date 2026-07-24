@@ -3377,3 +3377,6 @@ Bankroll $175.17 (+3.0%). Prime-SDCC moved 0.785->0.875 → acked-hold reason we
 
 ### 2026-07-24 14:05 UTC — 14:00 tick: quiet, riding SDCC into resolution
 Bankroll $175.13 (+3.0%). Guards clean: UMA 22/0, 8 clear (2 acked-hold Prime/Marvel at ~fair, quiet as designed), redeem/pending empty. Zero news. Funnel: 0 REAL monotonicity, 0 consistency, 0 fundable. Both SDCC catalysts imminent: Prime panel ~3h out (10am PT), Marvel Sat. Both resolve ~Jul-27. No action — riding winners into the con's information event. D23 markets watch ~early Aug. Dry powder ~$6.5.
+
+### 2026-07-24 18:00 UTC — SDCC note: Prime morning panel didn't clearly resolve; Carrie "special announcement" (23:45 UTC) is the hinge
+Prime's 10am-PT panel (Blade Runner 2099 + RoP-S3 — both already-announced) just happened; mark held 0.88->0.855 (would jump to ~0.97 on a clear qualifying NEW reveal), consistent with trailers-of-known-shows NOT qualifying. Remaining Prime catalyst = the Carrie panel's flagged "special announcement" at 4:45pm PT (23:45 UTC, ~6h out) — if a NEW project/casting reveal, qualifies YES; if just a Carrie release date, may not. Both at ~fair (Prime 0.855/0.86, Marvel 0.9375/0.93), no edge to act on — pure hold, exogenous-catalyst wait. WATCH the 02:00 tick for the post-Carrie-panel resolution state. Book +2.9%, 1 Iran Tier-2 (non-firing).
