@@ -4002,3 +4002,6 @@ Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that
 
 ## 2026-07-24T22:00:02Z — inject
 Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-07-24T22:48:16Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).

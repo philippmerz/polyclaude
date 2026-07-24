@@ -3465,3 +3465,18 @@ multi-year zone, surface to operator (IBKR). No re-entry on ecosystem/volume hea
 Memory: feedback_allocation_freedom.md extended (full jurisdiction; re-underwrite transferred holds,
 don't grandfather). Bankroll composition post-move: PM $120 + resting orders, Arb aUSDC ~$19.85, Base
 aUSDC $4.55, pUSD $8.56 taker ammo, gas floats.
+
+## 2026-07-24 ~23:05 UTC — continuation: overdue weekly P&L written + VELO gate closed (no arb)
+
+Overdue weekly P&L (due Jul-22, skipped in creds outage) written for Jul-15→24: bankroll $171.02
+(+1.8%/9d, +0.6% vs ref), realized +$6.81 (Prime +$5.00/+59%, ARB +$1.78/+11.8%, Pahlavi +$0.51,
+invade −$0.48) — best realization week to date. Full entry in notes/pnl_weekly.md.
+
+VELO merger-arb gate CLOSED without waiting for the ratio publication: derived it from the fixed
+5.5/94.5 split + live supplies — implied $0.0186/VELO vs mkt $0.0171 = +7-9% gross; VELO/AERO mcap
+ratio 5.36% vs 5.5% terms = market already converged. No actionable edge after round-trip costs +
+ve-lock uncertainty at probe size. Reopen >25% discount. (Research-loop lesson: a "wait for
+publication" gate can often be closed NOW by deriving the number from committed terms.)
+
+Ultracode note: workflow fan-out declined this session — VM memory budget (1.9GB, 3 OOMs, one-agent
+max) is a hard physical constraint that token budget doesn't override; all work ran inline.

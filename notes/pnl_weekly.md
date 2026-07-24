@@ -555,3 +555,57 @@ May-31 NO was the window's defining trade: entered as a pricing inefficiency, su
 **Decisions:** 44 total / 22 resolved. **Ledger:** 10 records (1 ENTER, 9 skips/probes/falsification records).
 
 **Outlook (→ ~Jul-22):** Research-loop cadence: synthesize UMA + new-listing study verdicts (report → build monitor/entry rule if REAL, clean kill if not) → next thread. Iran: Jul-27 EU sanctions review, ~Aug-16 MOU expiry checkpoint. VELO ratio still gated (Aero launch ~this month). Daemon triggers armed: ARB ≤0.080 add, regime-fall NO ≤0.88 re-entry. Sunday weekly long-term review due Jul-19.
+
+---
+
+## Week of 2026-07-15 → 2026-07-24 (catch-up: Jul-22 entry skipped in creds outage)
+
+**Bankroll:** $171.02 vs $168.01 Jul-15 = **+$3.01 (+1.8%) over 9d**; vs $170 ref **+0.6%** — first
+sustained hold above the reference since it was set. (Today's close is off the week's highs: crypto
+red day + GPT-6 mark dip.)
+
+**Realized: +$6.81** — the best realization week to date:
+- **Prime-SDCC YES exit +$5.00 (+59%, DEC-0056)** — announce-at-event template's first full cycle.
+- **ARB +$1.78 (+11.8%, 29d, DEC-0039→0057)** — closed same-day on the full-jurisdiction grant
+  (verified first: Jul-9 Robinhood event real, but fees→TREASURY and DAO deadlocked on distribution —
+  mechanism absent, undated; re-entry armed on a FILED distribution proposal).
+- Pahlavi NO +$0.51; US-invade NO −$0.48 (armed-trigger premium exit above fair).
+
+**Open book:** 7 PM positions ($120 MTM: 3 Dec-31 fades + GPT-6 NO 55sh-equiv fair 0.82 + SpaceX +
+MacBook + Marvel-SDCC marked 0.94 into tomorrow's panel) + 5 resting maker orders + ~$24 aUSDC +
+$8.56 pUSD ammo. Ledger 21 records; decisions 57.
+
+**The governance week — operator recalibrated the operating model in four steps:**
+1. **N=1 isn't calibration** (Aug-31 settles 1-or-0; probabilities stay hidden) → calibration =
+   Brier/log-loss over the ledger, never single outcomes.
+2. **Scale-invariance, both directions** ($8 might as well be $8M; AND thin books that yield 59%
+   count fully — capacity is NOT a filter at this size). Honest re-grade recorded: the Prime sell
+   was EV-suboptimal (~$2) even under Kelly CE; variance-aversion over-tipped me.
+3. **Execution repertoire** ("limit orders are standard") → full audit same-session: maker-first
+   entries shipped (--maker; taker fee on 1000bps markets = 10%×min(p,1−p) ≈ 8% of cost basis at
+   0.61 vs maker $0), liquidity-rewards program discovered ($50/day pool on GPT-6, our bid
+   qualifies), Marvel take-profit rested, GPT-6 add-bid 20@0.60 resting.
+4. **Full portfolio jurisdiction** (ARB exception dissolved) → re-underwrite transferred holds,
+   don't grandfather.
+
+**kimi K3 adopted:** eval 3/3 traps + clean adversarial withdrawal → scripts/kimi_advisor.py wired
+as standing second opinion (~$0.02-0.30/call); validated live (GPT-6 fair 0.96→0.90→0.82 cadence;
+Marvel 0.83→0.78 caught the D23-venue blind spot). Known bias: anchors to market price — weight its
+facts, discount its bare probability.
+
+**Research-loop kills/gates this week:** VELO merger-arb CLOSED-NO-ARB (derived conversion value
++7-9% vs market = already converged; VELO/AERO mcap ratio 5.36% vs 5.5% terms; reopen only >25%
+discount). Variational pre-deposit REJECTED (pro-rata points pay dust; equal-split monitor stays).
+Sulyok skip scored: forfeited +26% — legal-mechanics path outweighs defiance rhetoric (ledger lesson).
+
+**Ops (the bad week that ended clean):** creds expiry outage ~18.5h Jul-22/23 (the "missed arb"
+during it was a FALSE POSITIVE — midpoint mirage, executable −10.95pp; scanner now requires
+live-CLOB walk); OOM crash #3 → hard memory rules (ONE agent max, MemAvailable>500MB gate,
+per-owner RSS attribution); 14-finding ops audit all fixed (daemon keepalive cron, pgrep
+self-match classes, dead-pane guard, cron %-escaping bug that had silently killed periodic
+checks for 6 weeks).
+
+**Outlook (→ ~Jul-31):** Marvel panel Jul-25 / resolution ~Jul-27 (rest-sell 0.98 live; redeem
+otherwise; score ledger + kimi datapoints). GPT-6 rewards accrual check ~Jul-25. Sunday long-term
+review Jul-26. Iran checkpoints: EU sanctions review Jul-27, MOU expiry ~Aug-16. D23
+announce-markets listing watch (~early Aug). GPT-6 NO resolves Aug-31.
