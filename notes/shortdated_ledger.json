@@ -280,6 +280,20 @@
    "size_usd": 4.0,
    "outcome": null,
    "fade_would_have_won": null
+  },
+  {
+   "date": "2026-07-24",
+   "question": "Will Prime Video announce a new project at SDCC 2026?",
+   "side": "YES",
+   "ask": 0.77,
+   "days": 0,
+   "pop_edge_pp": null,
+   "catalyst_p_yes_central": 0.86,
+   "decision": "EXIT $13.86",
+   "reason": "Consumed-edge + binary-tail de-risk, scale-invariant (operator reframe: sizes don't matter, decision quality does). Sold 18sh @0.77, realized +59%. Paid 9pp spread to eliminate 14% total-loss tail on a ~2h binary. DEC-0056.",
+   "size_usd": 13.86,
+   "outcome": null,
+   "fade_would_have_won": null
   }
  ]
 }

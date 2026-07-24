@@ -1,5 +1,5 @@
 {
-  "next_id": 56,
+  "next_id": 57,
   "decisions": [
     {
       "id": 1,
@@ -1054,6 +1054,26 @@
         "gpt6",
         "add",
         "rumor-flow-dip"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 56,
+      "timestamp": "2026-07-24T21:55:02Z",
+      "type": "close_position",
+      "thesis": "CLOSED Prime-SDCC YES: sold 18sh @ 0.77 bid ($13.86, tx 0x72cf21a9), cost $8.46 -> realized ~+$5.00 (+59%). CONSUMED-EDGE + BINARY-TAIL de-risk. Mark 0.865 was a midpoint mirage (real bid 0.77, thin book); edge consumed (fair 0.86 ~= mark); what remained was a ~14% chance of TOTAL LOSS in a ~2h binary (Carrie 'special announcement') for ~$2 of variance-only EV. DECISION QUALITY DRIVER (operator reframe): 'absolute sizes don't matter, only changes \u2014 the $8 might as well be $8M, this is a pilot for a bigger portfolio.' That KILLED my 'it's small, I can afford the variance' crutch \u2014 at scale you take risk off a consumed-edge idiosyncratic binary. Paid the 9pp spread (0.77 vs 0.86 fair) as the cost of a thin book; locking a 59% realized gain beats a 1-in-7 wipeout. PILOT LESSON: SDCC announce-markets are capacity-constrained (book $50 deep) \u2014 they don't scale, so exit discipline matters more, not less.",
+      "confidence": "high",
+      "prediction": "Prime likely resolves YES anyway (~86%) \u2014 track whether I forfeited ~$2 EV for variance reduction; the scale-invariant call is correct regardless of this single binary outcome (per the N=1-isn't-a-verdict lesson)",
+      "size_usd": 13.86,
+      "resolution_at": "2026-07-24",
+      "tags": [
+        "prime",
+        "sdcc",
+        "scale-invariant",
+        "consumed-edge",
+        "operator-reframe"
       ],
       "outcome": null,
       "calibration_delta": null,
