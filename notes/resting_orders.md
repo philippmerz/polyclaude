@@ -38,3 +38,16 @@ Polymarket pays daily USDC to makers resting within `max_spread` of mid, size �
   outrank reward income; Trump-out add rejected on thin edge + politics-ρ).
 - Two-sided quoting scores higher but is off-limits where it conflicts with alpha
   (selling GPT-6 at 0.65 against a 0.82 fair = donating 17pp — never).
+
+**2026-07-24 late adds (SDCC family, resolve Jul-26 EOD):**
+
+| Placed | Position | Side | Shares | Price | Fair | Note |
+|---|---|---|---|---|---|---|
+| 2026-07-24 | Apple-TV-SDCC YES | BID | 13 | 0.80 | 0.95 | YES asks empty; above 0.75 fisher. Panel Sat 2-4pm PT |
+| 2026-07-24 | Prime-SDCC YES | BID | 11 | 0.78 | 0.95 | Re-entry bid below fair; Carrie panel Sat |
+
+**Announce-market bid asymmetry (doctrine note):** on "<entity> announce at <event>?" markets,
+informed flow (embargoed reveals) BUYS YES / SELLS NO — so resting YES bids have benign adverse
+selection (fills = impatient exits), while resting NO bids are the embargo's victim. YES bids OK
+without news-channel coverage; NO bids need it (DC/Lucasfilm skipped on exactly this).
+Cluster: Marvel 7sh + these two if filled ≈ $25 ≈ 15% bankroll for the 2-day window — cap, no adds.

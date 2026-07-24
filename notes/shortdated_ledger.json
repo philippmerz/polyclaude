@@ -292,5 +292,61 @@
   "size_usd": 13.86,
   "outcome": null,
   "fade_would_have_won": null
+ },
+ {
+  "date": "2026-07-24",
+  "days": 2,
+  "pop_edge_pp": null,
+  "outcome": null,
+  "fade_would_have_won": null,
+  "question": "Will Apple TV announce a new project at SDCC 2026?",
+  "side": "YES",
+  "ask": 0.8,
+  "catalyst_p_yes_central": 0.95,
+  "decision": "REST-BID 13sh@0.80 post-only",
+  "reason": "Announce-template: first-ever Hall H showcase Sat 2-4pm PT + official-channels backdoor (Apple TV+ near-daily PRs) + renewals qualify. YES asks EMPTY (holders won't sell) — maker bid above the 0.75 fisher. Benign adverse selection: informed flow lifts YES asks, doesn't hit YES bids. Fee-free. Fill odds ~20-40%; unfilled = free option.",
+  "size_usd": 10.4
+ },
+ {
+  "date": "2026-07-24",
+  "days": 2,
+  "pop_edge_pp": null,
+  "outcome": null,
+  "fade_would_have_won": null,
+  "question": "Will Prime Video announce a new project at SDCC 2026?",
+  "side": "YES",
+  "ask": 0.78,
+  "catalyst_p_yes_central": 0.95,
+  "decision": "REST-BID 11sh@0.78 post-only",
+  "reason": "Same structure (Carrie Hall H panel Sat; ask side just a 0.99 stub; 0.77 fisher bid below me). Re-entry into the leg exited @0.77 — coherent: fair 0.95, EV-max framework says buy back cheap if offered.",
+  "size_usd": 8.58
+ },
+ {
+  "date": "2026-07-24",
+  "days": 2,
+  "pop_edge_pp": null,
+  "outcome": null,
+  "fade_would_have_won": null,
+  "question": "Will DC Studios announce a new project at SDCC 2026?",
+  "side": "NO",
+  "ask": 0.8,
+  "catalyst_p_yes_central": 0.22,
+  "decision": "SKIP",
+  "reason": "Displayed 0.395 mid was a mirage (book 0.20/0.59). NO eff 0.82 (fee) vs my p_no 0.78 = negative. YES ask 0.59 above fair (no slate panel this year; Lanterns=already-announced). Resting NO bid FAILS coverage rule: embargo asymmetry — informed flow on a coming reveal hits NO bids.",
+  "size_usd": 0
+ },
+ {
+  "date": "2026-07-24",
+  "days": 2,
+  "pop_edge_pp": null,
+  "outcome": null,
+  "fade_would_have_won": null,
+  "question": "Will Lucasfilm announce a new project at SDCC 2026?",
+  "side": "NO",
+  "ask": 0.8,
+  "catalyst_p_yes_central": 0.15,
+  "decision": "SKIP",
+  "reason": "D23-hold thesis (owned venue 3wk away) caps P(YES) ~0.15 but NO eff 0.82 leaves 0-3pp after fee — inside estimation error, haircut kills it. Same coverage-rule bar on resting NO bids.",
+  "size_usd": 0
  }
 ]

@@ -3493,3 +3493,15 @@ Sunday reviews + post-resolution ticks run resolve+score.
 
 Also: backlog #126 noise-cut found ALREADY IMPLEMENTED (shipped 2026-07-17, never crossed off) —
 marked stale instead of re-building it. Backlog review before building: it works.
+
+## 2026-07-24 ~23:55 UTC — continuation: SDCC family re-scan → 2 maker YES bids + 2 scored skips
+
+D23 listing check (not yet listed) surfaced the SDCC family legs I'd skipped Jul-21 on a PRESUMPTION
+("likely efficient"). Verified instead: displayed mids were MIRAGES on near-empty books (DC "0.395" =
+0.20/0.59 book). Executable reads: DC/Lucasfilm SKIP both sides (NO eff 0.82 vs p_no 0.78/0.85 —
+negative/inside-error; resting NO bids fail the new embargo-asymmetry rule). Apple/Prime: YES asks
+EMPTY with fair ~0.95 (Sat Hall H panels + official-channels backdoor + renewals qualify) → rested
+maker YES bids 13@0.80 / 11@0.78 (fee-free, above the fisher bids; benign adverse selection — informed
+announce-flow lifts asks, doesn't hit bids). Funded by $12 Arb-Aave→Polygon bridge (fee <$0.01) +
+wrap; pUSD 32.55, also pre-positions D23 ammo. All 4 reads ledger-recorded WITH priors → Brier
+datapoints when ledger_calibration resolves them Sunday. 7 live orders total.
