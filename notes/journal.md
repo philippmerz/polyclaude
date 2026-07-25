@@ -3617,3 +3617,20 @@ Jul-28) but eff +1.2pp fails the robust-edge haircut → SCORED SKIP (ledger #27
 datapoint either way). CCJ hit IBKR trigger $87.86 ≤ $95 → surfaced in heartbeat.
 
 Tonight: Hall H panels 20:00-23:00 UTC (Marvel sell 0.98, Apple bid 0.80, Prime bid 0.78 positioned).
+
+## 2026-07-25 ~14:35 UTC — meta-reflection: 2 genuine findings, 1 negative result, 1 dead end
+
+(1) CLEANUP DONE: resting_orders.md consolidated to a single 7-order table (was 2 tables + scattered
+prose — the every-tick reconcile read a fragmented source; also corrected the stale GPT-6 rewards
+claim: 10sh bid is below the 20sh min AND out of band → rewards currently dead, revive condition
+noted). --maker flag annotated as shipped-but-not-yet-exercised.
+(2) PROCESS FINDING (actionable, backlogged): prior-staleness flagging — kimi went 3-for-3 catching
+stale evidence under my priors this week; mechanical fix = verified-date in priors + >14d warnings in
+the two Kelly consumers when a flag fires. Design in backlog.
+(3) NEGATIVE RESULT (documented): FedWatch scraping infeasible — all 3 aggregator sites JS-hydrated.
+Daily WebSearch stays the method. Saved a doomed build.
+(4) DEAD END (correctly not forced): the continuation-check prompt's recoup_campaign.md reference is
+operator-side (not in repo scripts/crontab) — file keeps its skip-header, nothing more to do.
+No other findings forced. Incidental: growbeansprout's raw payload hinted hold ~61.3% (unlabeled ⇒
+unverified) — if right, hike odds rose to ~38.7%; the queued Fed add's deploy-time check will verify
+properly.
