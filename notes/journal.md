@@ -3562,3 +3562,19 @@ The 02:00 tick's sports_pm_scan hit my 100s cap; re-ran full. Result: only conse
 (Inter Miami NO) at −2.5pp = below the 3pp bar; "Israel-Iran ceasefire through Jul-25" is a war-tail
 daily binary in the sports scanner (R-U loss class, deliberately exited — skip); rest are prop/esports
 doctrine-skips. Funnel record corrected: suite fully run, 0 sports entries.
+
+## 2026-07-25 ~11:05 UTC — operator sizing question answered + Kelly-flag gating (MacBook prior revised)
+
+Operator (TG): are Greenland/Trump-out still accurately sized? Answered (msg 670) with fresh
+constrained-Kelly: Greenland $25.2 vs $29.4 optimal (slightly under), Trump-out $25.0 vs $24.1 (at
+optimum) — both justified at TODAY'S prices; pair partially anti-correlated (Trump-exit tail cuts
+opposite ways); harvest mode via resting sells.
+
+Gated the run's three scale-in flags NOW instead of deferring: Satoshi +$27 → SKIP (pessimistic prior
+0.94 < 0.9605 cost, fails robust-edge gate — bond-Kelly over-eagerness at high p). MacBook +$19 →
+kimi verification CAUGHT MY THESIS STALE (2 reporting cycles): panels shipping, macOS 27 touch,
+"MacBook Ultra" branding qualifies; but freshest Gurman (Jul-24) leans early-2027 on DRAM. Prior
+0.85→0.73 (kimi said 0.65-0.70, discounted its market-anchor bias). Add still +EV → QUEUED for
+Jul-27 capital release, condition NO ≤0.45 + fresh re-check. SpaceX +$15 → own verification at 14:00.
+Calibration pattern note: this is the 2nd kimi catch of a stale evidence base (GPT-6 0.96→0.90 was
+the 1st). The advisor's value is fact-freshness, exactly as designed.
