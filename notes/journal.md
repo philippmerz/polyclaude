@@ -3599,3 +3599,21 @@ fee, ~24% APY to Dec-31. Capital reserved → Jul-27 queue re-ordered by edge: M
 kimi pattern: 3 runs, 3 stale-evidence catches (GPT-6 down, MacBook down, SpaceX up) — the tool's
 value is fact-freshness in BOTH directions; my priors were right-ish each time but for outdated
 reasons. Discipline: re-verify evidence age before any add, not just before entries.
+
+## 2026-07-25 14:00 UTC tick — $176.16 (+3.6%, new high); Fed divergence widened; Netanyahu verified-then-skipped
+
+State: $176.16 (+$1.47 since 02:00). UMA clean, 7 orders live/unfilled, mem 1.1GB, no news. Marvel
+ripped to ~0.95 pre-panel (0.98 sell may fill tonight; acked-hold covers). GPT-6 NO 0.765 (+3pp more;
+edge to 0.82 fair now 5.5pp but +72% APY carry; hidden-info class = NO resting sell, active hold).
+
+Fed: PM drifted DOWN 0.263→0.2475 while FedWatch held 36.5% (Jul-23 CME data) — divergence widened
+11.75pp, MTM −$0.37, thesis stronger. Queued +$4-5 add as priority #0 (conditions: PM ≤0.27, fresh
+FedWatch ≥33%) from tonight's expected bid releases.
+
+Funnel: monotonicity/consistency 0 real; NVDA converged to my 0.72-0.75 (now 0.775, no edge — the
+verify-first discipline validated); BTC markets fair; UFC −2.3pp below bar; Israel-Yemen + US-Iran-
+meeting fades = war-window doctrine skips; Trump-Netanyahu-by-Jul-31 VERIFIED (meeting confirmed Tue
+Jul-28) but eff +1.2pp fails the robust-edge haircut → SCORED SKIP (ledger #27, p 0.975 — Brier
+datapoint either way). CCJ hit IBKR trigger $87.86 ≤ $95 → surfaced in heartbeat.
+
+Tonight: Hall H panels 20:00-23:00 UTC (Marvel sell 0.98, Apple bid 0.80, Prime bid 0.78 positioned).
