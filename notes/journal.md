@@ -3653,3 +3653,12 @@ catalyst in window). p_no 0.975 CONFIRMED, verified-date refreshed. The +$7 scal
 driven by fresh evidence but stays queue-bottom (5pp/158d ≈ 12% APY — outranked by Fed/MacBook/
 SpaceX/Kuwait). Satoshi (55d) remains the one stale prior; its flag already fails the robust gate
 regardless, so re-verify is low-priority (next Sunday review).
+
+## 2026-07-25 ~18:10 UTC — periodic check: Fed add executed at 0.241 (divergence widened to 12-14pp)
+
+PM drifted further (0.2475→0.2405) while fresh verification (Motley Fool Jul-24: odds TRIPLED
+10.7→34.7% Jul-15→22; hngn 38%; oil/Iran-war-driven) confirmed consensus 36.5-38%. Both deploy
+conditions met → didn't wait for tonight's SDCC release: bridged $4.49 from Base aUSDC (fee ~$0.06)
+and added 17.6sh @0.241 (DEC-0059). Position: 41.2sh, $10.46 cost, avg 0.254, eff ~0.28 all-in vs
+0.36 consensus. Resolves Wed. Also: GPT-6 NO eased 0.765→0.725 (toward the 0.67 dip-catcher);
+Marvel 0.951 drifting toward the 0.98 sell; panels tonight.

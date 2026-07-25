@@ -376,5 +376,19 @@
   "size_usd": 0,
   "outcome": null,
   "fade_would_have_won": null
+ },
+ {
+  "date": "2026-07-25",
+  "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+  "side": "YES",
+  "ask": 0.241,
+  "days": 3.7,
+  "pop_edge_pp": null,
+  "catalyst_p_yes_central": 0.36,
+  "decision": "ADD $4.25 (17.6sh @0.241; position 41.2sh avg 0.254)",
+  "reason": "Divergence widened to 12-14pp on fresh 3-source verification (odds tripled in a week, oil-driven). DEC-0059.",
+  "size_usd": 4.25,
+  "outcome": null,
+  "fade_would_have_won": null
  }
 ]

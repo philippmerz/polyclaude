@@ -1,5 +1,5 @@
 {
-  "next_id": 59,
+  "next_id": 60,
   "decisions": [
     {
       "id": 1,
@@ -1127,6 +1127,25 @@
         "fed",
         "macro",
         "consensus-anchor"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 59,
+      "timestamp": "2026-07-25T18:02:18Z",
+      "type": "size_change",
+      "thesis": "ADD Fed-hike-25 YES 17.6sh @0.241 (eff ~0.265 w/ fee, DEC-0058 add): divergence WIDENED to 12-14pp \u2014 fresh verification (Motley Fool Jul-24: hike odds TRIPLED 10.7%\u219234.7% Jul-15\u219222; hngn 38%; oil-driven) while PM drifted 0.263\u21920.2405. Both deploy conditions met (PM \u22640.27, FedWatch \u226533%). Funded by Base aUSDC bridge ($4.49, fee ~$0.06). Position: 41.2sh, $10.46, avg 0.254.",
+      "confidence": "medium",
+      "prediction": "FOMC Wed Jul-29: at consensus 0.36, position EV \u2248 +$3.5. Hike \u2192 +$30.7 payout (+190% on cost); hold \u2192 \u2212$11.3.",
+      "size_usd": 4.25,
+      "resolution_at": "2026-07-29",
+      "tags": [
+        "fed",
+        "macro",
+        "consensus-anchor",
+        "add"
       ],
       "outcome": null,
       "calibration_delta": null,
