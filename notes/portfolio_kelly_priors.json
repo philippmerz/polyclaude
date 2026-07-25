@@ -6,7 +6,8 @@
   "cluster": "us-politics",
   "rho_within": 0.5,
   "cluster_frac": 0.18,
-  "rationale": "2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime)."
+  "rationale": "2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
+  "note": "Decomposed 2026-07-25 (operator mortality probe): death ~1.5-2% (age-80 male 5.5-6%/yr x 5.2mo x 0.6-0.8 presidential-care discount) + 25A/incapacity ~0.3% + resignation ~0.2% + assassination ~0.1% + conviction ~0 = 2-3% total out-prob. Market 0.925 implies 7.5% = overpricing drama paths 3x. Death tail partially hedged by Greenland NO (anti-correlated)."
  },
  "will-the-us-acquire-any-part-of-greenland-in-2026": {
   "p_no": 0.975,

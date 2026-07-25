@@ -3578,3 +3578,11 @@ kimi verification CAUGHT MY THESIS STALE (2 reporting cycles): panels shipping, 
 Jul-27 capital release, condition NO ≤0.45 + fresh re-check. SpaceX +$15 → own verification at 14:00.
 Calibration pattern note: this is the 2nd kimi catch of a stale evidence base (GPT-6 0.96→0.90 was
 the 1st). The advisor's value is fact-freshness, exactly as designed.
+
+## 2026-07-25 ~10:55 UTC — operator mortality probe on Trump-out NO (answered, decomposition banked)
+
+Operator (TG): "What about a sudden death?" Answered msg 672: death IS the dominant component of the
+3% prior — actuarial ~1.5-2% (age-80 male 5.5-6%/yr, 5.2mo window, presidential-care discount) +
+~0.6% other paths ≈ 2-3% total vs market-implied 7.5% = the edge is the crowd overpricing political
+drama, not under-priced mortality. Net book impact if it fires ≈ −14% (Greenland NO partial hedge).
+Decomposition written into portfolio_kelly_priors.json so future re-checks inherit it.
