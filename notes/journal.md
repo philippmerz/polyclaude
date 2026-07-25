@@ -3644,3 +3644,12 @@ are positions the raw Kelly ranking recommended scaling YESTERDAY; the tool now 
 old prior drive an action silently. Fresh priors (SpaceX/MacBook/Fed/Trump-out, all verified today)
 show clean. Follow-on queued: Greenland catalyst re-verify at next tick (its +$7 scale-in flag is
 stale-tagged). This closes the kimi-3-for-3 loop mechanically, not just as journaled discipline.
+
+## 2026-07-25 ~15:15 UTC — continuation: Greenland re-verified (staleness tool's first follow-on closed)
+
+The staleness guard's first flagged item processed: Greenland catalyst_check re-run (was 43d old) →
+central P(YES) ~2% (0.18% structured + tail floor; Trump NATO rhetoric = narrative, no mechanism-level
+catalyst in window). p_no 0.975 CONFIRMED, verified-date refreshed. The +$7 scale-in flag is now
+driven by fresh evidence but stays queue-bottom (5pp/158d ≈ 12% APY — outranked by Fed/MacBook/
+SpaceX/Kuwait). Satoshi (55d) remains the one stale prior; its flag already fails the robust gate
+regardless, so re-verify is low-priority (next Sunday review).

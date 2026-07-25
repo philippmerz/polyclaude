@@ -16,7 +16,8 @@
   "rho_within": 0.0,
   "cluster_frac": 0.11,
   "rationale": "2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
-  "verified": "2026-06-12"
+  "verified": "2026-07-25",
+  "note": "Re-verified 2026-07-25 (was 43d stale): catalyst_check central P(YES)~2pct (breakdown 0.18pct + tail floor; NATO-summit rhetoric is narrative not mechanism; no framework/referendum/vote inside window). p_no 0.975 confirmed."
  },
  "will-satoshis-identity-be-revealed-by-december-31": {
   "p_no": 0.99,

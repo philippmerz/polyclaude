@@ -739,3 +739,50 @@ Ambient tail-risk paths (internal coup, unforeseen acceleration of defections, u
 - [Pezeshkian's Cabinet Reflects Iran's Institutional Stagnation - Washington Institute](https://www.washingtoninstitute.org/policy-analysis/pezeshkians-cabinet-reflects-irans-institutional-stagnation)
 - [Inside the Struggle to Build an Iranian Opposition - Foreign Policy](https://foreignpolicy.com/2026/05/27/iran-opposition-protest-regime-change-reza-pahlavi-freedom-congress/)
 ```
+
+---
+
+## 2026-07-25T15:11:32Z — catalyst_check
+
+**Query:** `Will the US acquire any part of Greenland in 2026?` resolves 2026-12-31 (159d)
+
+```
+## CATALYST CHECK: Will the US acquire any part of Greenland in 2026?
+
+Resolution: 2026-12-31 | Days: 159 | Today: 2026-07-25
+
+### Base rate
+Post-WWII territorial acquisitions by developed democracies of NATO allies' territory: effectively zero. Last US territorial acquisition of a populated region was 1927 (Virgin Islands). Greenland's ownership by Denmark (since 1721) is regarded as settled sovereignty, not subject to commercial negotiation.
+
+### Catalysts in window
+None identified. No scheduled congressional votes, formal diplomatic summits with acquisition on agenda, Greenlandic referenda, or Danish parliamentary votes on sale/acquisition found. Greenland independence commission conclusions expected "late 2026" (date unscheduled; unlikely to accelerate US acquisition). Working group of US-Denmark-Greenland representatives exists but no scheduled meetings or publication of framework agreement details found.
+
+### Recent news (last 14d)
+- 2026-07-07: Trump renewed Greenland acquisition demands at NATO summit in Ankara; threatened possible US troop withdrawal from Europe.
+- 2026-07-07: Danish PM Mette Frederiksen responded "this is not going to happen"; reaffirmed Greenland is not for sale.
+- 2026-07-08: Prime Minister Jens-Frederik Nielsen (Greenland) reaffirmed explicit rejection: "Greenland does not want to be governed by the United States."
+
+### P(YES) estimate
+- Low: 0.5%
+- Central: 2%
+- High: 5%
+- Reasoning: No scheduled catalysts in remaining 159 days. January's "framework agreement" (Trump promised details in "two weeks") never materialized into formal agreement. All three parties (US, Denmark, Greenland) renewed explicit rejections in July. March 2026 Danish election and July NATO summit passed without shifts; center-right Greenlandic opposition favors independence from Denmark, not US incorporation. Public opinion: Greenlanders overwhelmingly oppose US control. For acquisition by Dec 31 requires improbable conjunction of Danish policy reversal, Greenlandic reversal, congressional approval, and institutional/legal execution in 5 months. Central reflects small tail risk of late diplomatic breakthrough or autonomous territory status rebranding (unlikely to meet strict "acquire" language).
+
+- Multiplicative breakdown: 
+  - P(formal acquisition framework + Denmark signals genuine openness) = ~3%
+  - P(Greenlandic leadership reverses or accepts neutral stance | framework emerges) = ~15%
+  - P(legal mechanism + referenda + parliamentary votes + execution in ~150d | both above) = ~40%
+  - Joint: 0.03 × 0.15 × 0.4 = 0.0018 ≈ 0.18%
+  
+- **Reconciliation**: Structured breakdown yields ~0.18%, but pure surprise/tail-risk scenarios (geopolitical crisis forcing Denmark's hand, private negotiation breakthrough not yet public) suggest small non-zero floor. Central of 2% reflects this low-probability-but-non-zero tail. Narrative pull during Trump-escalation cycle runs high; structured breakdown anchors downward.
+
+### Sources
+- [Trump's Greenland framework deal: What we know, what we don't (Al Jazeera, Jan 22)](https://www.aljazeera.com/news/2026/1/22/trumps-greenland-framework-deal-what-we-know-about-it-what-we-dont)
+- [Trump renews Greenland threats at NATO summit (CNBC, Jul 7)](https://www.cnbc.com/2026/07/07/trump-nato-summit-greenland-us-troops-europe.html)
+- [Trump doubles down on push for control over Greenland (CNBC, Jul 8)](https://www.cnbc.com/2026/07/08/greenland-trump-nato-denmark.html)
+- [Denmark votes in close election overshadowed by Trump's Greenland threats (France 24, Mar 24)](https://www.france24.com/en/europe/20260324-denmark-votes-in-close-election-overshadowed-by-trump-s-greenland-bid)
+- [H.R.361 - Make Greenland Great Again Act (Congress.gov)](https://www.congress.gov/bill/119th-congress/house-bill/361)
+- [H.R.7012 - Greenland Annexation and Statehood Act (Congress.gov)](https://www.congress.gov/bill/119th-congress/house-bill/7012)
+- [Greenland: Home rule, new international relations and US interest (House of Commons Library, Feb 3)](https://commonslibrary.parliament.uk/research-briefings/cbp-10234/)
+- [Why most Greenlanders favor a future without Trump — or Denmark (CNBC, Jan 12)](https://www.cnbc.com/2026/01/12/greenland-independence-denmark-trump-military-operation.html)
+```
