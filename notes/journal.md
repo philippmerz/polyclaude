@@ -3517,3 +3517,13 @@ advisor absence ≠ confirmation and ≠ block; my own gate ran on verified fact
 Fixes: MAX_ROUNDS 10→14 (deadline is the hang-guard; rounds were binding on honest verification).
 Noted: direct clob_v2 buys bypass ALL enter-flow gates — acceptable for maker take-profits on held
 positions; for NEW-position bids >$10, run the advisor manually same-turn (as done here).
+
+## 2026-07-25 ~00:15 UTC — continuation: decisions-ledger hygiene (pending capital $316→real)
+
+The tick-review's "pending capital" number was 2× bankroll — 14 stale records (entries closed by
+later close-records, completed closes never self-marked, one fulfilled scaffolding decision) had
+empty outcomes. Backfilled all 14 with realized results (+cross-references to their closing DECs);
+resolved 24→38 of 57. Pending now = the honest live book (Dec-31 fades + GPT-6/SpaceX/MacBook/Marvel
++ DEC-0056's Jul-27 counterfactual). Every future tick's step-4 review reads true numbers; January
+file gets clean accounting. Rule going forward: a close_position record marks BOTH itself AND its
+entry/size_change records same-turn.

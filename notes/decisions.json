@@ -36,9 +36,10 @@
         "iran_cluster",
         "pahlavi"
       ],
-      "outcome": null,
+      "outcome": "CLOSED via DEC-0051 2026-07-21: sold 11sh @0.954, realized +$0.51. Iran de-escalation consumed the edge.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 3,
@@ -55,9 +56,10 @@
         "aliens",
         "uap"
       ],
-      "outcome": null,
+      "outcome": "CLOSED via DEC-0037: aliens NO sold 13.25sh @0.89, +$1.09 (+10.2%) blended with DEC-0029 add.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 4,
@@ -92,9 +94,10 @@
         "iran_cluster",
         "regime_fall"
       ],
-      "outcome": null,
+      "outcome": "CLOSED via DEC-0043: regime-fall NO sold @0.93 into strength pre-ceasefire-collapse; blended exit across entry+DEC-0021 add.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 6,
@@ -248,9 +251,10 @@
         "scaffolding",
         "crypto-sleeve"
       ],
-      "outcome": null,
+      "outcome": "COMPLETED: deposit executed, earned carry for weeks; capital since redeployed via bridges/entries (scaffolding decision fulfilled).",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 14,
@@ -332,9 +336,10 @@
         "v2",
         "catalyst-check-validated"
       ],
-      "outcome": null,
+      "outcome": "CLOSED via DEC-0042: hantavirus NO sold 10sh @0.974, +$0.65; consumed-edge exit.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 18,
@@ -422,9 +427,10 @@
         "recoup-campaign",
         "kelly-sized"
       ],
-      "outcome": null,
+      "outcome": "CLOSED via DEC-0043 (blended regime-fall exit @0.93).",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 22,
@@ -586,7 +592,9 @@
       "tx": "0x92d3e6371610407f6e143416efe0c04d06c81b9c7a4ef522f16f72d1a94a01fc",
       "gate_post_hoc": "catalyst_check 2026-06-01: P(YES) central 1.0% (range 0.2-2.5%). PURSUE disclosure tranches (May8/May22/~Jun5) explicitly NON-confirming; no escalation. Edge REAL: NO@0.85 ~20-28% APY at P(YES) 1-5%. Loose-UMA tail small here (no ambiguous confirmation event for DVM to construe YES, unlike DEC-0018 R-U which had a real ceasefire announcement).",
       "exposure_note": "Total aliens-2027 NO = DEC-0003 ($9 @0.80) + this ($1.70 @0.85) = $10.70. Against ~$160 total bankroll that's ~6-7% (NOT 29% -- earlier I wrongly used the $37 idle-sleeve denominator). 30%-cluster-cap is on bankroll, so concentration does NOT bind; room to scale. Real reason not to scale now: deployable capital sits in Arb Aave behind a ~$0.10 ETH gas wall; bridging $20 nets only ~$1-1.5 after gas-topup + bridge friction + stranding risk -- marginal, not worth forcing at high context. Legitimate deliberate-deployment candidate next cycle (top up Arb ETH first).",
-      "lesson": "TWO process slips (EV conclusion survived, process didn't): (1) added to a market I already held (DEC-0003) without checking existing exposure -> duplicate/over-concentration risk. (2) bought BEFORE running the mandatory catalyst_check gate (philosophy commit 6c9d171); got lucky it confirmed ~1%. FIX: add an existing-position + auto catalyst-gate check to polyclaude_enter.py before any buy."
+      "lesson": "TWO process slips (EV conclusion survived, process didn't): (1) added to a market I already held (DEC-0003) without checking existing exposure -> duplicate/over-concentration risk. (2) bought BEFORE running the mandatory catalyst_check gate (philosophy commit 6c9d171); got lucky it confirmed ~1%. FIX: add an existing-position + auto catalyst-gate check to polyclaude_enter.py before any buy.",
+      "outcome": "CLOSED via DEC-0037 (blended aliens exit @0.89, +$1.09 total).",
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 30,
@@ -717,9 +725,10 @@
         "fade-basket",
         "edge-consumed"
       ],
-      "outcome": null,
+      "outcome": "EXECUTED close: +$1.09 (+10.2%) realized. Record complete.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 38,
@@ -815,9 +824,10 @@
         "close",
         "negative-edge"
       ],
-      "outcome": null,
+      "outcome": "EXECUTED close: +$0.65 realized. Record complete.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 43,
@@ -834,9 +844,10 @@
         "negative-edge",
         "prior-hygiene"
       ],
-      "outcome": null,
+      "outcome": "EXECUTED close: regime-fall exit into strength \u2014 vindicated by later ceasefire collapse (avoided drawdown). Record complete.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 44,
@@ -853,9 +864,10 @@
         "instance-thesis",
         "wide-net"
       ],
-      "outcome": null,
+      "outcome": "CLOSED via DEC-0053 2026-07-23: sold @armed 0.78 strength-trigger, realized -$0.48 (premium paid over 0.75 fair for war-variance exit).",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 45,
@@ -963,9 +975,10 @@
         "prime-video",
         "shortdated-sweep"
       ],
-      "outcome": null,
+      "outcome": "CLOSED via DEC-0056 2026-07-24: sold 18sh @0.77, realized +$5.00 (+59%). Template validated.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 51,
@@ -981,9 +994,10 @@
         "pahlavi",
         "guard-driven"
       ],
-      "outcome": null,
+      "outcome": "EXECUTED close: +$0.51 realized. Record complete.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     },
     {
       "id": 52,
@@ -1095,9 +1109,10 @@
         "jurisdiction",
         "close"
       ],
-      "outcome": null,
+      "outcome": "EXECUTED close: ARB +$1.78 (+11.8%/29d) realized, proceeds in Arb Aave. Record complete.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "resolved_at": "2026-07-25T00:09:34Z"
     }
   ]
 }
