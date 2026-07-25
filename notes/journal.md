@@ -3555,3 +3555,10 @@ surfaced before cap); macro → the Fed entry above.
 
 Lesson reinforced twice this tick: VERIFY the live number before trading a headline (NVDA stale-news
 trap avoided; BTC-price prior corrected). ledger 26 records.
+
+## 2026-07-25 ~02:35 UTC — continuation: sports scan re-run (tick gap closed) — no candidates
+
+The 02:00 tick's sports_pm_scan hit my 100s cap; re-ran full. Result: only consensus-backed candidate
+(Inter Miami NO) at −2.5pp = below the 3pp bar; "Israel-Iran ceasefire through Jul-25" is a war-tail
+daily binary in the sports scanner (R-U loss class, deliberately exited — skip); rest are prop/esports
+doctrine-skips. Funnel record corrected: suite fully run, 0 sports entries.
