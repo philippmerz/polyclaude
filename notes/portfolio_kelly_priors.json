@@ -1,5 +1,5 @@
 {
- "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
+ "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
  "_updated": "2026-07-20",
  "trump-out-as-president-before-2027": {
   "p_no": 0.97,
@@ -20,7 +20,7 @@
   "cluster": "crypto-lore",
   "rho_within": 0.0,
   "cluster_frac": 0.033,
-  "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim — R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo."
+  "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim \u2014 R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo."
  },
  "will-spacex-have-the-highest-ipo-market-cap-2026-516": {
   "p_yes": 0.97,
@@ -41,13 +41,17 @@
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
-  "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% — a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair."
+  "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair."
  },
  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
   "p_yes": 0.93,
   "cluster": "sdcc-window",
   "rho_within": 0.4,
   "cluster_frac": 0.08,
-  "rationale": "2026-07-23 0.83->0.93: Comic-Con underway, Marvel Hall H panel Sat Jul-25 confirmed; market ripped 0.865->0.965 as the catalyst nears with no D23-hold sign. Near-locked YES. HOLD to resolution ~Jul-27 (2.6d) — selling at ~0.95 bid minus fee captures nothing over E[hold]. Entry 0.67 -> +44% MTM."
+  "rationale": "2026-07-23 0.83->0.93: Comic-Con underway, Marvel Hall H panel Sat Jul-25 confirmed; market ripped 0.865->0.965 as the catalyst nears with no D23-hold sign. Near-locked YES. HOLD to resolution ~Jul-27 (2.6d) \u2014 selling at ~0.95 bid minus fee captures nothing over E[hold]. Entry 0.67 -> +44% MTM."
+ },
+ "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting": {
+  "p_yes": 0.36,
+  "note": "FedWatch consensus anchor 2026-07-25; re-check daily pre-FOMC Jul-29"
  }
 }

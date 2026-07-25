@@ -3527,3 +3527,31 @@ resolved 24→38 of 57. Pending now = the honest live book (Dec-31 fades + GPT-6
 + DEC-0056's Jul-27 counterfactual). Every future tick's step-4 review reads true numbers; January
 file gets clean accounting. Rule going forward: a close_position record marks BOTH itself AND its
 entry/size_change records same-turn.
+
+## 2026-07-25 02:00 UTC tick — bankroll $174.69 (+2.8% NEW HIGH); Fed-hike YES entered (consensus-anchor); GPT-6 re-priced
+
+**State:** $174.69 (+$3.67 since 23:00, +2.8% vs ref — new high). Driver: GPT-6 NO 0.61→0.71 on pure
+flow (0 news alerts overnight; fundamental re-verified — no announcement; classifier: move TOWARD my
+fair = rumor-flow exhausting, no action on the position). All 7 resting orders were LIVE/unfilled;
+UMA clean; mem 990MB; no redeemables (SDCC Jul-27).
+
+**NEW ENTRY (DEC-0058): Fed-hike-25bps-July YES 23.6sh @0.263** (eff 0.289, $6.21, resolves Jul-29 =
+3.9d turnover). Macro scan surfaced hike-25 at 26% with FOMC 4d out; CME FedWatch consensus = 35-38%
+(3 corroborating sources; 12%→38% in a week — PM retail lagging a fast rates repricing). Consensus-
+anchored instance edge, same logic as bookie-consensus sports class; uncorrelated with book. Funded by
+halving the GPT-6 bid.
+
+**GPT-6 resting bid re-priced 20@0.60 → 10@0.67:** the 0.71 flow-move left 0.60 out of the rewards
+band + unfillable-except-adverse; 0.67 restores band + realistic dip-catch at 15pp edge; halved for
+the Fed entry (marginal EV $1.34/4d vs $0.50/5wk fill-contingent).
+
+**Funnel this tick:** discover_markets → 4 candidates: NVDA-largest Jul-31 (VERIFIED FAIR — live caps
+NVDA $5.01T > AAPL $4.89T, P≈0.72-0.75 vs mkt 0.69-0.70; the Jul-17 "Apple overtakes" headline was
+STALE, market knew better — no trade); BTC>$62k (VERIFIED FAIR — BTC really is $64k! my cutoff-prior
+was wrong; 0.986 ≈ right); Iran-invades-Kuwait NO 0.966 (STRONG fade, strict criteria, fee-free —
+DEFERRED to Jul-27 SDCC-redemption capital, all pUSD currently reserved; backlog note); WTI-$130 NO
+(sub-cent edge, skip). Monotonicity 0 real; consistency 0 real; sports scan timeout (no candidates
+surfaced before cap); macro → the Fed entry above.
+
+Lesson reinforced twice this tick: VERIFY the live number before trading a headline (NVDA stale-news
+trap avoided; BTC-price prior corrected). ledger 26 records.

@@ -348,5 +348,19 @@
   "decision": "SKIP",
   "reason": "D23-hold thesis (owned venue 3wk away) caps P(YES) ~0.15 but NO eff 0.82 leaves 0-3pp after fee — inside estimation error, haircut kills it. Same coverage-rule bar on resting NO bids.",
   "size_usd": 0
+ },
+ {
+  "date": "2026-07-25",
+  "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+  "side": "YES",
+  "ask": 0.263,
+  "days": 4,
+  "pop_edge_pp": null,
+  "catalyst_p_yes_central": 0.36,
+  "decision": "ENTER $6.21 (23.6sh @0.263, eff 0.289)",
+  "reason": "FedWatch 35-38pct vs PM 26pct — consensus-anchored divergence; PM lags rates desks. DEC-0058.",
+  "size_usd": 6.21,
+  "outcome": null,
+  "fade_would_have_won": null
  }
 ]

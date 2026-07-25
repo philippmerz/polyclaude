@@ -9,11 +9,11 @@
     }
   },
   "SOL": {
-    "ts": 1784210491.9280112,
+    "ts": 1784944916.4152331,
     "result": {
-      "verdict": "ERROR",
-      "score": "?/4",
-      "summary": "**Current conditions warrant WATCHING, not immediate entry.** Solana is at cycle-bottom valuation (74% below ATH) with authentic secular tailwinds (dev growth, on-chain revenue, Western Union live). However, key execution tests remain: Alpenglow/Firedancer must ship successfully on mainnet without major delays or outages. TVL must show recovery trajectory above $8B within next 6 months to confirm ",
+      "verdict": "WATCH",
+      "score": "2.75/4",
+      "summary": "**Current**: Not yet at entry trigger. Solana at $76 offers reasonable risk/reward (likely 1.5\u20133x over 3 years) but is a mid-cycle recovery, not a generational mispricing. **Entry price targets**: - $45\u201350 (another 35\u201341% decline) \u2014 true bear-market valuation, risk/reward shifts to 3\u20135x base case - **OR** on actual spot Solana ETF approval + Firedancer demonstrating sustained 10k+ TPS on mainnet (",
       "fresh": true
     }
   },

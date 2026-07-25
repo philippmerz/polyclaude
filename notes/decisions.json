@@ -1,5 +1,5 @@
 {
-  "next_id": 58,
+  "next_id": 59,
   "decisions": [
     {
       "id": 1,
@@ -1113,6 +1113,24 @@
       "calibration_delta": null,
       "lesson": null,
       "resolved_at": "2026-07-25T00:09:34Z"
+    },
+    {
+      "id": 58,
+      "timestamp": "2026-07-25T02:10:21Z",
+      "type": "open_position",
+      "thesis": "Fed-hike-25bps-July YES 23.6sh @0.263 (eff 0.289 w/ fee): consensus-anchored instance edge \u2014 CME FedWatch 35-38% (3 sources, up from 12% a week ago) vs PM 26%; PM retail lagging a fast rates repricing. Same class as sports bookie-consensus edge: rates futures are the deepest market on this exact question. Uncorrelated with book; 3.9d turnover.",
+      "confidence": "medium",
+      "prediction": "FOMC Jul-29: if consensus is right, ~36% win prob at 0.289 eff cost = +EV; win pays +246% ROC. Even a FedWatch retrace below 30% before FOMC = exit-at-profit option.",
+      "size_usd": 6.21,
+      "resolution_at": "2026-07-29",
+      "tags": [
+        "fed",
+        "macro",
+        "consensus-anchor"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

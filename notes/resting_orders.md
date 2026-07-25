@@ -24,7 +24,7 @@ are standard... part of your everyday repertoire"). Two uses:
 | 2026-07-24 | Trump-out NO | SELL | 28 | 0.97 | 0.97 | Dec-31 fade; us-politics |
 | 2026-07-24 | Satoshi NO | SELL | 6 | 0.99 | 0.99 | Dec-31 fade |
 | 2026-07-24 | Marvel-SDCC YES | SELL | 7 | 0.98 | 0.93 | Book 0.887/0.99 pre-panel; 0.98 certain > 0.93 EV, exits before resolution risk. If unfilled → redeem ~Jul-27 |
-| 2026-07-24 | GPT-6 NO | BID | 20 | 0.60 | 0.82 | Add at bid (taker would cost 0.649 eff). Joins 60sh queue. Rewards-band order (see below). Cap: cluster ≤ half-K $47; this takes it to ~$33 |
+| 2026-07-25 | GPT-6 NO | BID | 10 | 0.67 | 0.82 | Re-priced from 20@0.60 (NO ran to 0.71 on flow, 0 news — old bid out of rewards band); halved to fund Fed-hike YES (DEC-0058). Dip-catcher, 15pp edge on fill |
 
 ## Liquidity rewards (first checked 2026-07-24 — previously unused income stream)
 

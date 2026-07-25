@@ -18,11 +18,11 @@ Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-c
 
 ---
 
-## Current state (snapshot 2026-07-16 14:00 UTC)
+## Current state (snapshot 2026-07-25 02:00 UTC)
 
 **PM sleeve** `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon) — [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [Polygonscan](https://polygonscan.com/address/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 
-**9 PM positions, cost ~$119** — the Dec-31 bond-like book (Trump-out 0.925, Greenland 0.930, Pahlavi 0.958, Satoshi 0.960 NOs) plus five strict/loose-criteria **instance entries** from the 2026-07-15 research-loop sweeps: US-invade-Iran NO 0.82, SpaceX-highest-IPO YES 0.87, touchscreen-MacBook NO 0.39, GPT-6-by-Aug-31 NO 0.68, Prime-Video-SDCC YES 0.47 (resolves Jul-26). Total bankroll $164.72 vs $170 kickoff (−3.1%; Dec-31 = accountability date). **Crypto sleeve: ARB 203.31 @ ~$0.0738 entry, ~+20% on the Robinhood-Chain fee-share news, operator-delegated (DEC-0039).**
+**Total bankroll $174.69, +2.8% vs $170 reference (new high).** 8 PM positions: the Dec-31 fade book (Trump-out/Greenland/Satoshi NOs) + instance entries (SpaceX-IPO YES, touchscreen-MacBook NO, GPT-6-by-Aug-31 NO 35sh fair 0.82, Marvel-SDCC YES resolving ~Jul-27, Fed-hike-25bps-July YES @0.263 vs FedWatch 36% — resolves Jul-29). **Maker-first execution (2026-07-24):** 7 resting post-only orders (4 take-profit sells at/above fair; 3 patient bids incl. Apple-TV/Prime SDCC YES). Realized this week: Prime-SDCC +59%, ARB +11.8% (sold on full-jurisdiction grant — no holder-accrual mechanism), Pahlavi +$0.51, invade −$0.48.
 
 **Operating model (operator directive 2026-07-15): continuous research loop** — research until a profitable opportunity is found, report, invest, repeat; 24/7 `opportunity_watch.py` daemon between ticks. Five population edges falsified this month at $0 deployed (short-dated fade buckets N=836, new-listing mispricing N=833, UMA dispute-window N=2,246, cross-event implication arbs 4,575 pairs) — every falsification shipped a permanent gate upgrade (fee-aware EV, dispute priors, sibling-market routing). Surviving edge = case-by-case catalyst-gated instance mispricing (doctrine §3.1). Ostium's 2026-07-15 $18M oracle exploit: zero exposure (skeptic+champion had parked the planned OLP deposit — DEC-0040). Iran: active US-Iran strike exchanges; invade-NO's strict territorial-control bar intact; next checkpoint ~Aug-16 (MOU expiry). Run `scripts/bankroll.py` + `scripts/polyclaude_status.py` for live figures.
 
