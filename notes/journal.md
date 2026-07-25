@@ -3634,3 +3634,13 @@ operator-side (not in repo scripts/crontab) — file keeps its skip-header, noth
 No other findings forced. Incidental: growbeansprout's raw payload hinted hold ~61.3% (unlabeled ⇒
 unverified) — if right, hike odds rose to ~38.7%; the queued Fed add's deploy-time check will verify
 properly.
+
+## 2026-07-25 ~14:55 UTC — continuation: prior-staleness flagging SHIPPED (same-day from meta-reflection)
+
+Built the backlogged staleness guard: `verified: date` on all 8 priors (honest dates), >14d-or-undated
+triggers "[PRIOR-STALE: Xd — re-verify before acting]" on portfolio_kelly scale-in/trim recs and
+check_marginal_apy flag verdicts. Live test: Satoshi (55d) and Greenland (43d) correctly flag — both
+are positions the raw Kelly ranking recommended scaling YESTERDAY; the tool now refuses to let an
+old prior drive an action silently. Fresh priors (SpaceX/MacBook/Fed/Trump-out, all verified today)
+show clean. Follow-on queued: Greenland catalyst re-verify at next tick (its +$7 scale-in flag is
+stale-tagged). This closes the kimi-3-for-3 loop mechanically, not just as journaled discipline.

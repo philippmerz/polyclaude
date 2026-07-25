@@ -34,6 +34,7 @@ get ρ_between (negative or zero) which doesn't reduce optimal size.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import sys
 from pathlib import Path
@@ -159,6 +160,18 @@ def main() -> int:
         cluster = prior.get("cluster", "uncategorized")
         rho_within = prior.get("rho_within", 0.6)
         cluster_frac = prior.get("cluster_frac", 0.20)
+        # Prior-staleness tag (2026-07-25): kimi verification went 3-for-3
+        # catching priors resting on stale evidence this week (GPT-6, MacBook,
+        # SpaceX). Any recommendation driven by a prior not re-verified within
+        # 14d carries a visible warning — re-verify before acting on the flag.
+        stale_tag = ""
+        ver = prior.get("verified")
+        try:
+            age_d = (dt.date.today() - dt.date.fromisoformat(str(ver))).days if ver else None
+        except Exception:
+            age_d = None
+        if prior and (age_d is None or age_d > 14):
+            stale_tag = f"  [PRIOR-STALE: verified {'never-dated' if age_d is None else f'{age_d}d ago'} — re-verify before acting]"
 
         # Skip de-indexed (mark <= 0.005)
         if mark <= 0.005:
@@ -196,6 +209,7 @@ def main() -> int:
             "cluster": cluster,
             "title": title[:50],
             "edge_pp": round((p_win - mark) * 100, 2),
+            "stale": stale_tag,
         })
 
     # If --constrained, rescale per-position Kelly$ so total <= bankroll.
@@ -238,7 +252,7 @@ def main() -> int:
     candidates = [r for r in actives if r["delta"] is not None and r["delta"] > 5]
     candidates.sort(key=lambda r: -r["delta"])
     for r in candidates[:5]:
-        print(f"  +${r['delta']:>6.2f}  {r['side']} @ ${r['mark']}  edge={r['edge_pp']:>5.2f}pp  {r['title']}")
+        print(f"  +${r['delta']:>6.2f}  {r['side']} @ ${r['mark']}  edge={r['edge_pp']:>5.2f}pp  {r['title']}{r.get('stale','')}")
 
     print(f"\nOver-sized (delta < -$5 = consider trim):")
     over = [r for r in actives if r["delta"] is not None and r["delta"] < -5]
@@ -246,7 +260,7 @@ def main() -> int:
     if not over:
         print("  (none)")
     for r in over[:5]:
-        print(f"  ${r['delta']:>+7.2f}  {r['side']} @ ${r['mark']}  edge={r['edge_pp']:>5.2f}pp  {r['title']}")
+        print(f"  ${r['delta']:>+7.2f}  {r['side']} @ ${r['mark']}  edge={r['edge_pp']:>5.2f}pp  {r['title']}{r.get('stale','')}")
 
     return 0
 

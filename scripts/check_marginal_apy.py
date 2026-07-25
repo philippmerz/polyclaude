@@ -102,10 +102,23 @@ def _load_priors() -> dict[str, float]:
         # Prime). A p_no prior must never be applied to a Yes holding and
         # vice versa — carry the side with the probability.
         if isinstance(v, dict) and "p_no" in v:
-            out[k] = ("No", float(v["p_no"]))
+            out[k] = ("No", float(v["p_no"]), v.get("verified"))
         elif isinstance(v, dict) and "p_yes" in v:
-            out[k] = ("Yes", float(v["p_yes"]))
+            out[k] = ("Yes", float(v["p_yes"]), v.get("verified"))
     return out
+
+
+def _stale_suffix(verified) -> str:
+    """Warning suffix when a prior wasn't re-verified within 14d (2026-07-25:
+    kimi went 3-for-3 catching stale-evidence priors — flags driven by old
+    priors must say so)."""
+    try:
+        age = (dt.date.today() - dt.date.fromisoformat(str(verified))).days if verified else None
+    except Exception:
+        age = None
+    if age is not None and age <= 14:
+        return ""
+    return f" [PRIOR-STALE: {'never-dated' if age is None else f'{age}d'} — re-verify before acting]"
 
 
 def _load_acked_holds() -> dict:
@@ -246,6 +259,7 @@ def main() -> int:
 
         matched = _match_prior(slug, priors)
         prior_p = matched[1] if matched and matched[0] == outcome else None
+        prior_stale = _stale_suffix(matched[2]) if matched and matched[0] == outcome else ""
         expected_edge_apy = None
         if prior_p is not None:
             expected_edge_apy = (prior_p / mark - 1.0) * 365 / days
@@ -284,7 +298,7 @@ def main() -> int:
                                          f"({base}): {ack.get('reason','')[:80]}")
                     holds.append(record)
                 else:
-                    record["verdict"] = base
+                    record["verdict"] = base + prior_stale
                     flagged.append(record)
             else:
                 record["verdict"] = "HOLD"

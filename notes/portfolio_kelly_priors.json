@@ -7,21 +7,24 @@
   "rho_within": 0.5,
   "cluster_frac": 0.18,
   "rationale": "2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
-  "note": "Decomposed 2026-07-25 (operator mortality probe): death ~1.5-2% (age-80 male 5.5-6%/yr x 5.2mo x 0.6-0.8 presidential-care discount) + 25A/incapacity ~0.3% + resignation ~0.2% + assassination ~0.1% + conviction ~0 = 2-3% total out-prob. Market 0.925 implies 7.5% = overpricing drama paths 3x. Death tail partially hedged by Greenland NO (anti-correlated)."
+  "note": "Decomposed 2026-07-25 (operator mortality probe): death ~1.5-2% (age-80 male 5.5-6%/yr x 5.2mo x 0.6-0.8 presidential-care discount) + 25A/incapacity ~0.3% + resignation ~0.2% + assassination ~0.1% + conviction ~0 = 2-3% total out-prob. Market 0.925 implies 7.5% = overpricing drama paths 3x. Death tail partially hedged by Greenland NO (anti-correlated).",
+  "verified": "2026-07-25"
  },
  "will-the-us-acquire-any-part-of-greenland-in-2026": {
   "p_no": 0.975,
   "cluster": "us-expansion",
   "rho_within": 0.0,
   "cluster_frac": 0.11,
-  "rationale": "2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class."
+  "rationale": "2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
+  "verified": "2026-06-12"
  },
  "will-satoshis-identity-be-revealed-by-december-31": {
   "p_no": 0.99,
   "cluster": "crypto-lore",
   "rho_within": 0.0,
   "cluster_frac": 0.033,
-  "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim \u2014 R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo."
+  "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim \u2014 R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo.",
+  "verified": "2026-05-31"
  },
  "will-spacex-have-the-highest-ipo-market-cap-2026-516": {
   "p_yes": 0.96,
@@ -29,7 +32,8 @@
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES).",
-  "note": "2026-07-25 kimi-verified: IPO COMPLETED Jun-12 (SPCX, first-day close 160.95 = ~2.1T bar). Loss scenarios only: Anthropic Oct-2026 IPO needing >2x day-one pop from 965B, or OpenAI reversing reported 2027 delay AND doubling \u2014 sum 3-5pct. Mark 0.855 overprices challengers. Watch: Anthropic IPO pricing news Oct, OpenAI delay reversal."
+  "note": "2026-07-25 kimi-verified: IPO COMPLETED Jun-12 (SPCX, first-day close 160.95 = ~2.1T bar). Loss scenarios only: Anthropic Oct-2026 IPO needing >2x day-one pop from 965B, or OpenAI reversing reported 2027 delay AND doubling \u2014 sum 3-5pct. Mark 0.855 overprices challengers. Watch: Anthropic IPO pricing news Oct, OpenAI delay reversal.",
+  "verified": "2026-07-25"
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
   "p_no": 0.73,
@@ -37,24 +41,28 @@
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
-  "note": "2026-07-25 kimi revision from 0.85: OLED panels shipping since Jun, macOS 27 touch, MacBook-Ultra branding qualifies; freshest Gurman Jul-24 leans early-2027 on DRAM. Two-sided, not near-lock. Watch Sept/Oct Apple event."
+  "note": "2026-07-25 kimi revision from 0.85: OLED panels shipping since Jun, macOS 27 touch, MacBook-Ultra branding qualifies; freshest Gurman Jul-24 leans early-2027 on DRAM. Two-sided, not near-lock. Watch Sept/Oct Apple event.",
+  "verified": "2026-07-25"
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
   "p_no": 0.82,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
-  "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair."
+  "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair.",
+  "verified": "2026-07-21"
  },
  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
   "p_yes": 0.93,
   "cluster": "sdcc-window",
   "rho_within": 0.4,
   "cluster_frac": 0.08,
-  "rationale": "2026-07-23 0.83->0.93: Comic-Con underway, Marvel Hall H panel Sat Jul-25 confirmed; market ripped 0.865->0.965 as the catalyst nears with no D23-hold sign. Near-locked YES. HOLD to resolution ~Jul-27 (2.6d) \u2014 selling at ~0.95 bid minus fee captures nothing over E[hold]. Entry 0.67 -> +44% MTM."
+  "rationale": "2026-07-23 0.83->0.93: Comic-Con underway, Marvel Hall H panel Sat Jul-25 confirmed; market ripped 0.865->0.965 as the catalyst nears with no D23-hold sign. Near-locked YES. HOLD to resolution ~Jul-27 (2.6d) \u2014 selling at ~0.95 bid minus fee captures nothing over E[hold]. Entry 0.67 -> +44% MTM.",
+  "verified": "2026-07-20"
  },
  "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting": {
   "p_yes": 0.36,
-  "note": "FedWatch consensus anchor 2026-07-25; re-check daily pre-FOMC Jul-29"
+  "note": "FedWatch consensus anchor 2026-07-25; re-check daily pre-FOMC Jul-29",
+  "verified": "2026-07-25"
  }
 }
