@@ -24,11 +24,12 @@
   "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim \u2014 R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo."
  },
  "will-spacex-have-the-highest-ipo-market-cap-2026-516": {
-  "p_yes": 0.97,
+  "p_yes": 0.96,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
-  "rationale": "2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES)."
+  "rationale": "2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES).",
+  "note": "2026-07-25 kimi-verified: IPO COMPLETED Jun-12 (SPCX, first-day close 160.95 = ~2.1T bar). Loss scenarios only: Anthropic Oct-2026 IPO needing >2x day-one pop from 965B, or OpenAI reversing reported 2027 delay AND doubling \u2014 sum 3-5pct. Mark 0.855 overprices challengers. Watch: Anthropic IPO pricing news Oct, OpenAI delay reversal."
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
   "p_no": 0.73,

@@ -3586,3 +3586,16 @@ Operator (TG): "What about a sudden death?" Answered msg 672: death IS the domin
 ~0.6% other paths ≈ 2-3% total vs market-implied 7.5% = the edge is the crowd overpricing political
 drama, not under-priced mortality. Net book impact if it fires ≈ −14% (Greenland NO partial hedge).
 Decomposition written into portfolio_kelly_priors.json so future re-checks inherit it.
+
+## 2026-07-25 ~11:25 UTC — continuation: SpaceX verified (kimi catch #3 — stale premises, MY FAVOR this time)
+
+Gated the SpaceX +$15 Kelly flag with kimi: my framing ("IPO scheduled at $350-400B") was STALE — the
+IPO COMPLETED Jun-12 (SPCX, first-day close $160.95 ≈ $2.1T = the bar every 2026 challenger must beat
+at their own day-one close). Risk leg "does it IPO in 2026" is RESOLVED. Remaining loss paths:
+Anthropic Oct-IPO needing >2x day-one pop from $965B, or OpenAI reversing its reported 2027 delay and
+doubling — cross-checked sum 3-5% (no precedent for +117% pops at fraction of that scale) → fair 0.96
+(prior 0.97→0.96, now with the right reasons). Mark 0.855 overprices challengers = add is ~9pp after
+fee, ~24% APY to Dec-31. Capital reserved → Jul-27 queue re-ordered by edge: MacBook, SpaceX, Kuwait.
+kimi pattern: 3 runs, 3 stale-evidence catches (GPT-6 down, MacBook down, SpaceX up) — the tool's
+value is fact-freshness in BOTH directions; my priors were right-ish each time but for outdated
+reasons. Discipline: re-verify evidence age before any add, not just before entries.
