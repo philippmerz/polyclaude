@@ -30,11 +30,12 @@
   "rationale": "2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES)."
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
-  "p_no": 0.85,
+  "p_no": 0.73,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
-  "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out."
+  "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
+  "note": "2026-07-25 kimi revision from 0.85: OLED panels shipping since Jun, macOS 27 touch, MacBook-Ultra branding qualifies; freshest Gurman Jul-24 leans early-2027 on DRAM. Two-sided, not near-lock. Watch Sept/Oct Apple event."
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
   "p_no": 0.82,
