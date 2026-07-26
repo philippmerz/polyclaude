@@ -3721,3 +3721,9 @@ Iran-keyword demotion (correct for an Iran-free book) let my WORLD-MODEL go stal
 war-adjacent markets must re-pull the conflict state at decision time, not from memory. The
 deploy-time re-verify condition I wrote on Jul-25 fired exactly as designed and saved a bad entry.
 Freed Marvel cash (~$6.86) stays as pUSD ammo (D23 listings ~2wk).
+
+## 2026-07-26 14:00 UTC tick — quiet Sunday; Fed drifting lower (hold), all clean
+
+$172.68 (+1.6%; −$1.06 since 06:00 on Fed 0.172 + GPT-6 0.725 drift). UMA clean, 5 orders live no
+fills, 0 arbs, all positions clear hurdle. Fed at 0.172 vs revised 0.25 fair: hold (EV of hold $10.3
+> liquidation $7.0; no add — sized, resolves Wed). Sunday long-term review at 16:00 next.
