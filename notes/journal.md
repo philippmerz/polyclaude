@@ -3749,3 +3749,12 @@ world moved. Freed $5.74.
 overnight. Book: 7 PM positions + 4 resting orders (Trump-out/Greenland sells, GPT-6/MacBook bids);
 ~$11 pUSD free (D23 ammo). Next: FOMC Wed (Fed YES held at 0.25 fair); D23 listings ~2wk; Aug-16
 MOU checkpoint LIKELY MOOT (active Gulf war — world-state rule in effect).
+
+## 2026-07-26 ~22:10 UTC — periodic: GPT-6 3rd rumor-dip; dip-catcher filled 4.6sh @0.67; cancel-verify-replace cycle
+
+YES jumped 0.255→0.32 Sunday-eve (no tier-1 alert) and the 0.67 bid partial-filled 4.6sh. Per
+doctrine: CANCELLED remainder first, verified second — no GPT-6 announcement/model-card/date exists
+(Jul releases were GPT-5.6 family; felloai/lifearchitect confirm). Fundamental intact → fills were
+benign rumor-flow dip-catching (+15pp to 0.82 fair); re-placed remainder 5.4sh@0.67 on
+freshly-verified terms, prior stamped. Position now 39.6sh GPT-6 NO (~$25.3 cost, 15.6% of book at
+mark). 3rd verified rumor-dip in 10d — the churn pattern IS the edge on this market.
