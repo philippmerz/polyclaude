@@ -31,9 +31,14 @@ are standard... part of your everyday repertoire"). Two uses:
 | 2026-07-24 | Trump-out NO | SELL | 28 | 0.97 | 0.97 | Dec-31 fade; us-politics |
 | 2026-07-24 | Satoshi NO | SELL | 6 | 0.99 | 0.99 | Dec-31 fade |
 | 2026-07-24 | Marvel-SDCC YES | SELL | 7 | 0.98 | 0.93→locked | Panel Sat Jul-25; ~0.95 pre-panel. Unfilled → redeem ~Jul-27 |
-| 2026-07-24 | Apple-TV-SDCC YES | BID | 13 | 0.80 | 0.95 | Panel Sat 2-4pm PT; mid 0.905 — fills only on panic dump |
-| 2026-07-24 | Prime-SDCC YES | BID | 11 | 0.78 | 0.95 | Carrie panel Sat; re-entry below fair |
-| 2026-07-25 | GPT-6 NO | BID | 10 | 0.67 | 0.82 | Re-priced from 20@0.60 (flow ran to 0.765, 0 news); dip-catcher |
+| 2026-07-25 | GPT-6 NO | BID | 10 | 0.67 | 0.82 | Dip-catcher (mark eased to 0.725) |
+| 2026-07-26 | MacBook NO | BID | 25 | 0.40 | 0.73 | Front-of-queue in 0.39/0.43 spread; coverage unlocked (macbook/gurman tier-2 keywords added). Fill = 33pp under fair |
+
+**CANCELLED 2026-07-26 02:20 (post-panel rule):** Apple 13@0.80 + Prime 11@0.78 — panels passed
+without confirmed qualifying announcements; benign-adverse-selection logic is DEAD once the
+catalyst window closes (a post-panel fill = "nothing announced" = adverse). Released $18.98.
+DOCTRINE ADDITION: announce-market YES bids must be pulled AT panel/window END, not just before
+known catalysts — the asymmetry inverts the moment the catalyst passes.
 
 SDCC cluster cap: Marvel 7sh + both bids if filled ≈ $25 ≈ 15% bankroll — no adds.
 Expected releases: SDCC resolves ~Jul-26/27 → unfilled Apple/Prime bids free ~$19; Marvel

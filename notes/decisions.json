@@ -1,5 +1,5 @@
 {
-  "next_id": 60,
+  "next_id": 61,
   "decisions": [
     {
       "id": 1,
@@ -1146,6 +1146,24 @@
         "macro",
         "consensus-anchor",
         "add"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 60,
+      "timestamp": "2026-07-26T02:04:26Z",
+      "type": "size_change",
+      "thesis": "ADD SpaceX-highest-IPO YES 11sh @0.86 (eff 0.874 w/ fee): kimi-verified fair 0.96 (IPO completed Jun-12, $2.1T first-day bar; challengers sum 3-5%). Maker bid at 0.85 was behind a 32,590-share queue = never fills; took the 0.86 ask for certain 8.6pp. Funded by cancelled SDCC bids (post-panel adverse-fill rule). Position 34sh.",
+      "confidence": "high",
+      "prediction": "Resolves ~Dec-31 (year-end IPO ranking). At 0.96 fair: EV +$2.9 on this add. Watch: Anthropic Oct IPO pricing, OpenAI delay reversal.",
+      "size_usd": 9.46,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "spacex",
+        "add",
+        "consensus"
       ],
       "outcome": null,
       "calibration_delta": null,

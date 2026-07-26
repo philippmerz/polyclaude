@@ -3662,3 +3662,29 @@ conditions met → didn't wait for tonight's SDCC release: bridged $4.49 from Ba
 and added 17.6sh @0.241 (DEC-0059). Position: 41.2sh, $10.46 cost, avg 0.254, eff ~0.28 all-in vs
 0.36 consensus. Resolves Wed. Also: GPT-6 NO eased 0.765→0.725 (toward the 0.67 dip-catcher);
 Marvel 0.951 drifting toward the 0.98 sell; panels tonight.
+
+## 2026-07-26 02:00 UTC tick — post-panels: SDCC bids pulled (doctrine add), SpaceX add filled, Fed prior cut on risk-premium insight
+
+**$173.61 (+2.1%; −$2.55 from peak on the Fed mark).** No fills overnight; UMA clean; scans 0 arbs;
+all positions clear marginal-APY.
+
+**Panels:** Marvel CONFIRMED qualifying (Gosling cast as Ghost Rider = new-project reveal; mark
+0.972; redeem ~Mon-Tue; Feige explicitly deferred TV reveals to D23 — template fuel). Apple: NO
+confirmed new-project reveal (all 5 titles known; mark static 0.905 through the panel) — official-
+channels backdoor has ~22h left but MY BIDS' logic died with the panels: post-catalyst, a fill means
+"nothing announced" = adverse. CANCELLED Apple 13@0.80 + Prime 11@0.78 (released $18.98). DOCTRINE
+ADDED to resting_orders.md: announce-market YES bids get pulled AT window end — the benign asymmetry
+inverts the moment the catalyst passes.
+
+**Queue deployed early from the release:** MacBook NO maker bid 25sh@0.40 (front-of-queue in the
+0.39/0.43 spread; coverage unlocked by adding macbook/gurman/ipo tier-2 keywords — the rule's proper
+unlock, not an exception); SpaceX YES add 11sh@0.86 TAKER (DEC-0060 — the 0.85 maker level had a
+32,590-share queue ahead: post-only there never fills; 8.6pp certain beat 10pp never). Kuwait dropped
+(capital short, as planned). Position: SpaceX 34sh.
+
+**Fed prior CUT 0.36→0.25 (the tick's biggest lesson):** fresh sources — FactSet economists
+UNANIMOUS hold; Citigroup: futures-implied 30-38% contains an inflation-tail RISK PREMIUM, not pure
+probability; PM led the repricing both directions (3→28→20). My consensus-anchor entries took the
+FedWatch number uncritically — verify-full-distribution applies to CONSENSUS NUMBERS too: ask what
+the number MEASURES. Position 41.2sh avg 0.254 ≈ breakeven at revised fair; holding to FOMC Wed
+(selling at 0.19 bid < 0.25 fair). Consensus-anchor class rule updated.

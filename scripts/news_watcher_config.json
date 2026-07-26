@@ -178,7 +178,7 @@
   "tether breaks peg",
   "tether collapse"
  ],
- "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through an agent filter (claude -p, haiku) before reaching Telegram — the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them.",
+ "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through an agent filter (claude -p, haiku) before reaching Telegram \u2014 the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them.",
  "tier2_keywords": [
   "trump health",
   "trump hospital",
@@ -262,6 +262,12 @@
   "us strikes iran",
   "us attacks iran",
   "strikes on us base",
-  "attacks us base"
+  "attacks us base",
+  "touchscreen macbook",
+  "macbook ultra",
+  "macbook oled",
+  "gurman macbook",
+  "anthropic ipo",
+  "openai ipo"
  ]
 }

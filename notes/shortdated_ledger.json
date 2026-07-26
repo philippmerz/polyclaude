@@ -390,5 +390,33 @@
   "size_usd": 4.25,
   "outcome": null,
   "fade_would_have_won": null
+ },
+ {
+  "date": "2026-07-26",
+  "question": "SDCC bids post-panel exit (Apple 13@0.80, Prime 11@0.78)",
+  "side": "YES",
+  "ask": null,
+  "days": 0,
+  "pop_edge_pp": null,
+  "catalyst_p_yes_central": null,
+  "decision": "CANCELLED both unfilled",
+  "reason": "Post-catalyst rule: panels passed without confirmed qualifying announcements (Apple static 0.905; all 5 titles known); benign-adverse-selection logic dead once the embargo window closes — a fill would mean 'nothing announced' = adverse. Released $18.98 to the deploy queue.",
+  "size_usd": 0,
+  "outcome": null,
+  "fade_would_have_won": null
+ },
+ {
+  "date": "2026-07-26",
+  "question": "Will SpaceX have the highest IPO Market Cap 2026?",
+  "side": "YES",
+  "ask": 0.86,
+  "days": 158,
+  "pop_edge_pp": null,
+  "catalyst_p_yes_central": 0.96,
+  "decision": "ADD $9.46 (11sh @0.86; position 34sh)",
+  "reason": "Kimi-verified $2.1T day-one bar; 32k-share maker queue made taker correct. DEC-0060.",
+  "size_usd": 9.46,
+  "outcome": null,
+  "fade_would_have_won": null
  }
 ]
