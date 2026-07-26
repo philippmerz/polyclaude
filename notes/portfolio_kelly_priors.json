@@ -20,12 +20,9 @@
   "note": "Re-verified 2026-07-25 (was 43d stale): catalyst_check central P(YES)~2pct (breakdown 0.18pct + tail floor; NATO-summit rhetoric is narrative not mechanism; no framework/referendum/vote inside window). p_no 0.975 confirmed."
  },
  "will-satoshis-identity-be-revealed-by-december-31": {
-  "p_no": 0.99,
-  "cluster": "crypto-lore",
-  "rho_within": 0.0,
-  "cluster_frac": 0.033,
-  "rationale": "Subjective-resolution caveat ('revealed' could UMA-resolve loose on a splashy unproven claim \u2014 R-U risk category). Entered small (\\$5.64) for that reason; NO ADDS despite Kelly deficit. p_no 0.99 = base rate of a 16-year mystery resolving in 6mo.",
-  "verified": "2026-05-31"
+  "p_no": 0.955,
+  "verified": "2026-07-26",
+  "note": "POSITION CLOSED DEC-0061 (wash at fair). Murphy FOIA v DHS (real, filed Apr-2025) puts ruling window edge inside 2026; P(YES) 4-5%. Re-entry only at NO >=0.92."
  },
  "will-spacex-have-the-highest-ipo-market-cap-2026-516": {
   "p_yes": 0.96,

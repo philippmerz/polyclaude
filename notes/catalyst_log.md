@@ -786,3 +786,42 @@ None identified. No scheduled congressional votes, formal diplomatic summits wit
 - [Greenland: Home rule, new international relations and US interest (House of Commons Library, Feb 3)](https://commonslibrary.parliament.uk/research-briefings/cbp-10234/)
 - [Why most Greenlanders favor a future without Trump — or Denmark (CNBC, Jan 12)](https://www.cnbc.com/2026/01/12/greenland-independence-denmark-trump-military-operation.html)
 ```
+
+---
+
+## 2026-07-26T16:07:24Z — catalyst_check
+
+**Query:** `Will Satoshi's identity be revealed by December 31?` resolves 2026-12-31 (158d)
+
+```
+## CATALYST CHECK: Will Satoshi's identity be revealed by December 31?
+
+Resolution: 2026-12-31 | Days: 158 | Today: 2026-07-26
+
+### Base rate
+Satoshi's identity has remained undisclosed for 15+ years despite extensive journalistic, technical, and legal investigation. No mechanism has previously forced official disclosure; the only compulsory disclosure vector (federal FOIA litigation) typically requires 18–30 months. Media speculation, documentary claims, and cryptographic analysis have not met the bar for "revealed" in this market's likely strict interpretation.
+
+### Catalysts in window
+- [MED] 2025-04-07 - Murphy FOIA lawsuit against DHS (filed; expects 18–30m resolution; could force disclosure if DHS holds 2019 interview records) - https://dig.watch/updates/lawsuit-filed-to-uncover-satoshi-nakamotos-identity-through-dhs-records
+- [LOW] 2026-07-14 - NY court hearing on dormant Bitcoin wallet ownership (Satoshi-linked addresses; about asset ownership under lost-and-found law, not identity revelation) - https://www.thecoinrepublic.com/2026/06/24/mystery-plaintiff-targets-satoshi-nakamoto-bitcoin-holdings-in-new-york-court/
+- [LOW] 2026-04-22 - "Finding Satoshi" documentary (four-year investigation naming Hal Finney + Len Sassaman co-authorship theory; no cryptographic proof or official verification) - https://www.tbsnews.net/world/documentary-claims-identify-bitcoin-creator-after-four-year-investigation-1428956
+- [LOW] 2026-04-08 - NYT investigation by John Carreyrou naming Adam Back (stylometric analysis; Back denies; no cryptographic proof or official confirmation) - https://www.cnbc.com/2026/04/08/latest-investigation-of-bitcoin-founder-ties-identity-to-blockstream-ceo-adam-back.html
+
+### Recent news (last 14d)
+None material to identity revelation. July 14 NY court hearing is procedural (asset ownership under dormant-property law), not identity disclosure.
+
+### P(YES) estimate
+- Low: 2%
+- Central: 7%
+- High: 15%
+- Reasoning: Murphy FOIA is the only vector for compulsory disclosure; filed April 2025, it reaches Dec 31 at ~16 months (faster than typical 18–30m federal timeline, but not implausible). Probability of: (a) favorable court order by Dec 31, (b) DHS having 2019 interview records, (c) actual identity revealed in ruling = ~7% joint. Media and documentary investigations do not meet strict "revealed" bar. No cryptographic proof or Satoshi voluntary disclosure in sight.
+- Multiplicative breakdown: P(Murphy FOIA reaches favorable order by Dec 31) = 0.20 × P(DHS records exist | favorable order) = 0.40 × P(disclosure forced | records exist) = 0.85 = **6.8%**; other vectors (cryptographic proof, legal force from non-Murphy proceedings, voluntary disclosure) add ~0.2% → Central **~7%**
+- Reconciliation: No divergence between breakdown (6.8%) and central (7%); narrative pull during crypto news cycle does not materially inflate this estimate, as the base mechanics are simple (one lawsuit, one possible outcome).
+
+### Sources
+- [Murphy FOIA lawsuit against DHS](https://dig.watch/updates/lawsuit-filed-to-uncover-satoshi-nakamotos-identity-through-dhs-records)
+- [NY court hearing on dormant Bitcoin wallets](https://www.thecoinrepublic.com/2026/06/24/mystery-plaintiff-targets-satoshi-nakamoto-bitcoin-holdings-in-new-york-court/)
+- ["Finding Satoshi" documentary](https://www.tbsnews.net/world/documentary-claims-identify-bitcoin-creator-after-four-year-investigation-1428956)
+- [NYT Adam Back investigation](https://www.cnbc.com/2026/04/08/latest-investigation-of-bitcoin-founder-ties-identity-to-blockstream-ceo-adam-back.html)
+- [Craig Wright case closed (2024–2025)](https://coingeek.com/craig-wright-barred-from-further-satoshi-lawsuits/)
+```

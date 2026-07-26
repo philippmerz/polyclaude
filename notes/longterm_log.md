@@ -458,3 +458,74 @@ CRSP scores 3 of 4 dimensions: secular tailwind (gene therapy adoption + large T
 - [Gene Therapy Sector Overview 2026, Inside Precision Medicine](https://www.insideprecisionmedicine.com/topics/translational-research/riding-the-gene-therapy-rollercoaster-into-2026/)
 - [CRISPR vs. Vertex Competitive Positioning, Yahoo Finance](https://finance.yahoo.com/healthcare/articles/crispr-therapeutics-ag-vs-vertex-102003009.html)
 ```
+
+---
+
+## 2026-07-26T16:05:56Z — longterm_check
+
+**Query:** `MP` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: MP
+
+Date: 2026-07-26 | Type: equity | Horizon: 3y
+
+### Current state
+MP Materials $41.37 (down 59% from $100.25 Oct-2025 peak); -31% YTD post-peak but +65% from 52-week low. Q1 2026 revenue $90.65M (+23% YoY), EPS $0.03 (beat), NdPr production 917 MT (+63% YoY). Full-year 2026 EPS forecast $0.33; 2026E valuation ~125x forward P/E. Market cap $7.35B. Net cash $740M (~$1.7B liquid assets, $1.0B debt).
+
+### Cyclical position
+Rare earth market is mid-to-late cycle. NdPr oxide prices at $133.02/kg (July 2026), up 138% YoY from ~$56/kg, but volatility is accelerating—market expects stabilization in $85–$100/kg range Q3 2026. Stock peaked Oct-2025 at $100.25; current 59% drawdown suggests market pricing execution risk and commodity normalization. Not a cycle bottom setup; more of a "sell the news" pullback after a sustained rally. DoD price floor of $110/kg provides support but signals prices are already near ceiling.
+
+### Secular tailwind
+Three-pronged demand driver: (1) AI infrastructure—NdFeB magnets for data center cooling, storage actuators, servo motors in automation; (2) EV production—rare earth demand expected +7.7% CAGR in 2026 driven by vehicle electrification and wind energy; (3) Defense/geopolitical—US supply-chain independence mandate, with DoD making unprecedented $550M+ backing and 15% equity stake in MP. Tailwind is intact and structural, but not accelerating beyond consensus—already priced into the $80–$100 stock zone that the market abandoned in Q2/Q3 2026.
+
+### Catalyst window
+- [HIGH] 2026-Q4 — Full-year 2026 earnings showing clear path to GAAP profitability on adjusted EBITDA of $140M+ (DoD guarantee floor). Scale magnet revenue beyond Q1's $21M base.
+- [HIGH] 2027-Q4 — 10X magnet facility reaches 50% of 7,000 MT nameplate capacity; combined with Independence facility (3,000 MT live), US magnet output becomes competitive with low-cost importers.
+- [HIGH] 2028-Q2 — 10X facility full commissioning; 10,000 MT total annual magnet capacity online. DoD offtake commitments (100% for 10 years, $140M floor with 2% escalator) begin flowing.
+- [MED] 2027-2028 — Rare earth commodity price normalization or rebound (current $133/kg consensus fade to $85–$100/kg) could paradoxically support stock if company has locked in volume growth at cost-control phase; or break thesis if prices crater to $60–$70/kg.
+- [MED] 2027 — Magnet technology IP dispute resolution (lawsuit filed May 2026 alleges rival theft of proprietary manufacturing techniques); favorable outcome strengthens moat, loss delays scaling.
+
+### Margin of safety
+DoD price floor of $110/kg for NdPr oxide + $140M annual EBITDA guarantee (2% escalator) provides downside cushion; at current stock price, this floor implies intrinsic value ~$30–$35/share on normalized cap rate. Net cash position of $740M ($1.7B liquid, $1.0B debt) is solid but insufficient if capex for 10X ($1.25B, partially financed) runs over or commodity prices crater. Company is unprofitable on TTM basis (negative EV/EBITDA) but Q1 2026 EBITDA of $36.6M and path to $0.33 EPS (2026 forecast) suggest inflection is real. Single hard asset (Mountain Pass mining complex) is geopolitically anchored as the only US rare earth facility at scale. Moat is durable but not absolute—depends on US gov staying committed to price floor.
+
+### Top 3 risks
+1. **Rare earth commodity collapse** — If NdPr prices fall from $133/kg to $60–$70/kg (possible if Chinese export restrictions ease, global EV growth slows, or demand shock hits), MP's EBITDA target and DoD pricing floor could trigger renegotiation; stock would fall to $15–$25. Thesis assumes commodity environment supports $85+/kg; a sustained $60/kg would break profitability.
+2. **Execution failure on magnet scaling** — Manufacturing NdFeB magnets at scale is a China-dominated moat; MP's Independence facility (3,000 MT nameplate) and planned 10X facility (7,000 MT) face technical hurdles (quality control, yield), cost competitiveness vs. established Chinese producers, and potential IP litigation (lawsuit filed May 2026). Delays or cost overruns to 10X could push profitability out beyond 2030 and erode DoD partnership confidence.
+3. **Customer concentration + geopolitical backlash** — In Materials segment, top two customers represent 64% of Q1 2026 revenue; in Magnetics, GM represents 23% (ramping under existing agreement). Chinese geopolitical retaliation (targeted import bans, export curbs on precursors) or US domestic supplier shifts could fragment revenue. DoD offtake commits to 10X but not to existing Independence facility.
+
+### 5-year scenario probabilities
+- **Generational (10x+):** 8% — Requires rare earth prices to remain >$110/kg, 10X to exceed capacity targets, AI magnet demand surge, and DoD backing to expand beyond current commit. Low probability given late-cycle macro setup.
+- **Strong (3–5x, $123–$207):** 22% — 10X facility comes online 2028 on schedule, company reaches $0.80+ EPS by 2029, rare earth prices stabilize $95–$110/kg, DoD orders stable. Base case if execution clears.
+- **Modest (1.5–3x, $62–$124):** 38% — Commodity prices normalize to $80–$95/kg, 10X delayed by 6–12 months, profitability achieved but at lower margins ($0.40–$0.50 EPS), stock drifts to $60–$100. Most likely given cycle timing.
+- **Flat/mild loss (-30% to +50%, $29–$62):** 24% — Rare earth prices settle at $75–$85/kg (outside DoD floor in some scenarios), execution headwinds push 10X completion to 2029, company stays marginally profitable; DoD support prevents collapse.
+- **Thesis broken (-50%+, <$21):** 8% — Geopolitical shock (China sanctions, US policy reversal), magnet execution failure cascades, commodity prices fall <$65/kg, DoD pulls funding or renegotiates price floor downward; company cash burns accelerate.
+
+### Entry trigger
+**Current ($41.37):** Do not enter immediately. Rare earth cycle is late, and prices have lost momentum (July +21% but from a $133/kg peak that may not hold). Stock has fallen 59% from peak but 0% from 52-week low—no margin of safety vs. downside scenarios.
+
+**Preferred entry:** $30–$35 (further 15–25% dip from here). This level:
+- Reflects DoD price-floor protection adequately
+- Aligns with normalized rare earth prices ($85–$95/kg) expected by consensus
+- Gives 3-5x upside to $90–$150 on execution success
+- Maintains >50% upside even in "modest" scenario
+
+**Catalyst entry:** If rare earth prices break above $130/kg sustained and 10X construction milestones accelerate (2027-Q2 onwards), re-enter at $50–$60 with conviction on strong scenario.
+
+**Stop loss:** $20. Below this, DoD price floor is likely renegotiated or supply shock is broken.
+
+### Verdict: 3/4 — WATCH
+Scores clearly on secular tailwind (AI, defense demand) and catalyst window (10X 2028, profitability path), moderately on cyclical position (mid-to-late cycle, prices peaked, but DoD floor provides safety), weakly on margin of safety (profitable at current commodity prices but vulnerable to >$30/kg correction). Late-cycle setup with execution risk argues against immediate entry; watch for $30–$35 dip or commodity bottom before adding.
+
+### Sources
+- [MP Materials Q1 2026 Earnings](https://www.sec.gov/Archives/edgar/data/0001801368/000180136826000029/mp-20260331.htm)
+- [MP Materials 2026 Record Production](https://qz.com/mp-kicks-off-2026-with-record-production-numbers-can-it-scale-further)
+- [Rare Earth Market Outlook July 2026](https://rare-earth-mining.com/rare-earth-market-outlook-july-2026/)
+- [DoD Partnership Details](https://mpmaterials.com/news/mp-materials-announces-transformational-public-private-partnership-with-the-department-of-defense-to-accelerate-u-s-rare-earth-magnet-independence/)
+- [MP Materials Expansion & 10X Facility](https://nai500.com/blog/2026/06/u-s-rare-earth-miner-mp-materials-holds-two-advantages-but-billion-dollar-expansion-plan-still-faces-concerns/)
+- [MP Materials Risks & Execution Challenges](https://intellectia.ai/blog/mp-materials-stock-analysis-2026-rare-earth)
+- [AI Demand for MP Magnets](https://nai500.com/blog/2026/06/ai-and-automation-hardware-boom-drives-demand-for-mp-materials-rare-earth-magnets/)
+- [Rare Earth NdPr Price Forecast 2026](https://goldinvest.de/en/rare-earths-ndpr-oxide-in-rally-mode-price-target-for-2026-rises-to-90000-per-tonne)
+- [MP Materials Valuation](https://stockanalysis.com/stocks/mp/statistics/)
+- [MP Materials Balance Sheet](https://stockanalysis.com/stocks/mp/financials/balance-sheet/)
+```

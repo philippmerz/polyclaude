@@ -3727,3 +3727,25 @@ Freed Marvel cash (~$6.86) stays as pUSD ammo (D23 listings ~2wk).
 $172.68 (+1.6%; −$1.06 since 06:00 on Fed 0.172 + GPT-6 0.725 drift). UMA clean, 5 orders live no
 fills, 0 arbs, all positions clear hurdle. Fed at 0.172 vs revised 0.25 fair: hold (EV of hold $10.3
 > liquidation $7.0; no add — sized, resolves Wed). Sunday long-term review at 16:00 next.
+
+## 2026-07-26 16:00 UTC — SUNDAY LONG-TERM REVIEW
+
+**Domains run** (oldest set, 3wk): critical-minerals, energy-power, geopolitics. Two themes:
+- **HIGH: China export-control reprieve expires Nov-10** — hard dated catalyst; gallium/germanium/
+  rare-earth pinch; Western alternatives 2-3y out. PM has NO market on it (listing-watch noted).
+  Equity: MP longterm_check → 3/4 WATCH (late-cycle, DoD price floor; enter $30-35 dip; stop $20)
+  → watchlist trigger added, IBKR route.
+- **MED: enrichment-services bottleneck** (not uranium ore) — strengthens existing LEU watchlist
+  thesis; CCJ trigger already hit + surfaced yesterday.
+
+**Satoshi NO CLOSED (DEC-0061) — the staleness guard's first position-level catch, 1 day after
+shipping:** the Sunday re-verify of the 55d-old prior found the Murphy-FOIA-v-DHS suit (VERIFIED
+real — filed Apr-2025; 18-30mo FOIA timelines put a ruling window edge inside 2026). Re-derived
+P(YES) 4-5% (discounting haiku's 7% on the docs→consensus-reveal chain) → p_no 0.955 vs mark 0.961
+= edge gone, below hurdle → §5 wash-exit 6sh @0.957 (+$0.10). The prior wasn't wrong when set — the
+world moved. Freed $5.74.
+
+**Ledger:** 32 records; Brier N=4 beating market (0.0188 vs 0.0419); DC/Lucasfilm datapoints land
+overnight. Book: 7 PM positions + 4 resting orders (Trump-out/Greenland sells, GPT-6/MacBook bids);
+~$11 pUSD free (D23 ammo). Next: FOMC Wed (Fed YES held at 0.25 fair); D23 listings ~2wk; Aug-16
+MOU checkpoint LIKELY MOOT (active Gulf war — world-state rule in effect).

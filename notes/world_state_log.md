@@ -1227,3 +1227,148 @@ Sources:
 - [OFAC Recent Actions](https://ofac.treasury.gov/recent-actions)
 - [BioPharma Healthcare Trends](https://www.biospace.com/business/q2-earnings-arrive-as-pharma-picks-up-steam-buoyed-by-dealmaking-policy-tailwinds)
 - [SEC Crypto Regulation](https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets)
+
+---
+
+## 2026-07-26T16:03:41Z — world_state_digest
+
+**Domains:** critical-minerals-commodities, energy-power-infrastructure, geopolitics-security | **Lookback:** 30d | **Model:** haiku
+
+# WORLD-STATE DIGEST — 2026-07-26
+
+Domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### critical-minerals-commodities
+
+- [2026-01-01] USGS: US mineral production value rose 5.6% to $112B in 2025, driven by precious metals; mineral-reliant industries = $4.09T (12.5% of GDP)
+- [2026-01-15] Energy Dept: $2.7B investment in domestic uranium enrichment announced
+- [2026-02-01] EXIM: $14.8B letters of interest for critical minerals ($455M rare earths, $400M lithium, $350M cobalt/nickel)
+- [2026-04-01] China MOFCOM: Export controls on 7 medium/heavy rare earth categories; strict licensing regime enforced
+- [2026-06-18] Trump proclamation: 180-day deadline for binding agreements on processed critical minerals (expires 2026-07-13)
+- [2026-07-01] China Rare Earth Price Index: NdPr alloy at USD 133.02/kg (highest 2026; previous March peak $126/kg)
+- [2026-07-16] China Rare Earth Price Index: climbed to 273.5 (continuing recovery)
+- [2026-07-16] USGS: Arizona surpassed Texas as #2 mineral producer; Nevada retained #1 position (second year)
+- USGS: World lithium production rose 31% YoY; consumption +20% (supply-demand divergence)
+- USGS: US remains import-reliant on China for 14 of 33 critical minerals
+- USGS: Lithium in Carolinas could replace imports for century-plus; estimates exceed 200+ years of US demand
+- S&P Global: Rare earth supply bottlenecks persist; European prices 6× China prices (scarcity premium)
+- State Dept: US faces significant cobalt/nickel deficits; stated domestic programs will "fall far short of demand"
+- China: Export-control reprieve expires 2026-11-10; tightening expected if geopolitical tensions rise
+
+### energy-power-infrastructure
+
+- [2026-03-04 to 2026-06-18] Strait of Hormuz: Closed by Iran; Brent crude peaked $94/bbl (March 9); down $46/bbl; 50% surge from year-start
+- [2026-06-18] US-Iran: MOU signed; Strait of Hormuz reopened
+- [2026-06-29] Oil prices: Fell to $70/bbl (near pre-conflict levels) post-ceasefire announcement
+- [2026-07-07] EIA STEO (July): Brent forecast $81.91/bbl average 2026; $64.76/bbl 2027
+- [2026-07-07] EIA STEO: US retail gasoline $3.60/gal 2H2026 (down from $4.48/gal in May)
+- [2026-07-07] EIA STEO: Henry Hub natural gas $3.70/MMBtu average 2026; below $3.50 in 2027
+- [2026-07-07] EIA STEO: US crude production raised to 13.78 mmbpd; natural gas production 122.40 Bcf/d
+- [2026-07-07] EIA: Wholesale electricity ~$45/MWh average (lower than summer 2025)
+- [2026-07-05] OPEC+: Approved incremental output increase +188k bpd from August (on top of prior recovery increases)
+- Strait shipping: Elevated insurance costs, mine risks; shipping unlikely to fully recover pre-conflict levels quickly
+- IEA: Global oil production rebound to pre-conflict levels expected by year-end 2026
+
+### geopolitics-security
+
+- [2026-07-07-08] NATO Ankara Summit: All 32 members pledge 5% GDP defense spending by 2035 (3.5% core + 1.5% related defense-adjacent)
+- [2026-07-07] NATO: All members hit 2% GDP defense threshold in 2025 (vs. 3 countries in 2014)
+- [2016-2026] NATO: European + Canadian incremental defense spending $1.2T over decade
+- [2024-2025] NATO: Defense spending increase $139B YoY (+20%)
+- [2026-06-23] DOD: Trump admin announced $17.5B loans for 10 large nuclear reactors (operational by mid-2030s)
+- [2026-07-16] State Dept: Counterterrorism ministerial: 17 ministers, 66 partner nations
+- [2026-07-23] State Dept: Secretary Rubio indicates US negotiating durable Ukraine peace with security guarantees; Rubio-Lavrov talks ongoing
+- Ukraine conflict: Russia's summer 2026 offensive stalled; Ukraine striking deep targets (Omsk oil refinery, ~2,700 km from Ukrainian-held territory, on July 6)
+- EU intelligence: Obtained proof of China training Russian soldiers for Ukraine conflict
+- Global nuclear: 420 GW operational capacity; 78 GW under construction (15 countries)
+- [2025] Nuclear: 10 construction starts (9 China, 1 Russia); +12.2 GW; net zero growth (3 GW added, 3 GW retired)
+- China rare earths: Export licensing expires 2026-11-10; further tightening likely
+- US semiconductor tariffs: China rare earths (H200): 25% tariff; licensing framework (50% max to Chinese customers)
+- Copper prices: Record highs; aluminum up 1/3 (Jan 2025 – April 2026)
+
+---
+
+## CANDIDATE THEMES
+
+### Rare Earth Supply Shock & Scarcity Premium Persistence
+
+- **Underlying facts**: China's licensing regime tightens (expires Nov 10); NdPr prices at $133/kg (2026 high); European prices 6× China; allied governments racing to build 2-3 year supply chains; US domestic capacity constrained despite $455M EXIM funding
+- **Implication**: Magnet scarcity (neodymium, praseodymium, heavy rare earths) will persist 2H2026 and intensify post-Nov 10. Current pricing reflects scarcity premium but NOT the supply AVAILABILITY crunch. Retail watching price spikes; missing that licensing constraints + supply timelines create structural unavailability. Industries dependent on permanent magnets (aero, defense, EVs, wind) face 2-year procurement crises.
+- **Possible plays**: REX (rare earth etf), MP (MP Materials), USA rare earth miners, recycling/urban mining, materials-science substitution (alternatives to NdPr), vertically-integrated defense/aero with internal magnet supply
+- **Direction**: LONG rare earth constrained supplies (especially heavy rare earths); SHORT industrial end-users without pricing power or substitution plans
+- **Horizon**: Months (Nov 10 deadline likely catalyst)
+- **Retail blindspot**: Commodity traders track nominal prices; miss licensing regime, supply timeline constraints, and geographic bottlenecks. Assume "higher prices = more supply"; in fact, export licensing decouples price from availability.
+- **Confidence**: **HIGH** — Multiple independent sources confirm licensing tightness, price move, supply timeline, and 6× price differential. Nov 10 is hard deadline.
+
+### Cobalt/Nickel Structural Deficit → EV Battery Cost Plateau
+
+- **Underlying facts**: USGS: US lacks sufficient cobalt reserves for planned clean energy manufacturing base; nickel demand "will skyrocket" but domestic pipeline output will "fall far short"; $14.8B EXIM backing insufficient per stated needs; copper/aluminum prices hit record highs
+- **Implication**: Battery cost declines (assumed EV adoption curve) will stall 2027-2029. Mining supply cannot close the gap even with government backing. Battery cathode chemistries require cobalt/nickel or expensive substitutes (NCA, LFP). Battery makers will face procurement crises; some shift to LFP (lower energy density, China-centric supply). EV cost trajectory flattens faster than consensus models. Battery margins compress; mining input costs spike.
+- **Possible plays**: LONG battery metal miners (cobalt, nickel); LONG battery recycling; LONG LFP supply (Chinese dominance); SHORT bulk EV upside plays (RIVN, LCID), SHORT legacy auto with high-cost battery exposure
+- **Direction**: LONG metals/mining, SHORT EV adoption optimism
+- **Horizon**: Years (but supply contracts/capex being negotiated now; visible by 2027)
+- **Retail blindspot**: Retail has priced infinite EV cost decline based on scale. Missing hard mining constraints that kill the cost curve. Supply announcements/delays will surface first; price impact later.
+- **Confidence**: **MEDIUM-HIGH** — USGS explicitly states gap cannot close; but EV adoption is resilient; some substitution/recycling possible.
+
+### Defense Capex Cycle + Industrial Base Bottleneck (Rare Earths & Rare Metals)
+
+- **Underlying facts**: NATO 5% GDP defense pledge ($1.2T incremental decade); $139B YoY 2024-2025; Trump nuclear program $17.5B + $2.7B enrichment; rare earths, copper, aluminum, tungsten all input-constrained; European ammunition production at capacity
+- **Implication**: Defense capex is structural for 10 years. But supply-side constraints (rare earths, cobalt, nickel, copper, tungsten, electronics) are real. Integrators (LMT, RTX, GD, NOC) face input bottlenecks. Margins accrue to specialized suppliers (rare earth alloys, magnet makers, electronics assemblers, ammunition/explosives). Industrial base retooling will take 3-4 years; delivery delays and pricing power for constrained inputs.
+- **Possible plays**: LONG specialized defense-industrial suppliers (magnets, rare earth alloys, specialized electronics, munitions production, metal suppliers), LONG bottleneck-facing integrators with pricing power
+- **Direction**: LONG (constraint-benefiting suppliers & integrators)
+- **Horizon**: Years (multi-year ramp)
+- **Retail blindspot**: Retail sees "NATO 5% commit" and buys mega-integrator equities. Missing that supply-side constraint means margin accretion goes to suppliers, not integrators. Small-cap specialized suppliers see actual upside.
+- **Confidence**: **MEDIUM** — Capex confirmed, constraints confirmed; but pricing dynamics and execution risk complex.
+
+### Oil Volatility Tail Risk Underpriced (Fragile Ceasefire)
+
+- **Underlying facts**: Strait of Hormuz ceasefire fragile (unclear terms, geopolitical tensions); shipping insurance elevated; mine risks persist; EIA already pricing recovery to $82/bbl (assumes durable peace); OPEC+ incrementally raising output betting on steady flows
+- **Implication**: Market pricing is "crisis over, recovery underway, $75-85 equilibrium." But ceasefire is binary: either holds or breaks. Any escalation (naval incident, new Iranian sanctions, Israeli strike) re-spikes Brent to $120+. Long-duration oil volatility is underpriced. Equity markets complacent on energy tail risk; insurance/hedging undersubscribed.
+- **Possible plays**: LONG crude volatility (VIX-analog for crude), LONG energy hedging instruments, SHORT complacency-priced energy stocks (XLE at $95+ assumes steady $75-85 crude)
+- **Direction**: LONG volatility, SHORT energy equities
+- **Horizon**: Weeks to months (binary events can trigger on any news)
+- **Retail blindspot**: Retail thinks "Strait reopened = oil prices stable, invest in energy stocks." Missing binary tail risk. Current pricing assumes 95% ceasefire holds; actual probability may be 60-70%.
+- **Confidence**: **MEDIUM-HIGH** — Ceasefire terms confirmed fragile; shipping/insurance data confirm elevated costs; but outcome probabilities uncertain.
+
+### Nuclear Enrichment Capacity Bottleneck (Long-Dated)
+
+- **Underlying facts**: Trump admin $17.5B for 10 reactors; $2.7B uranium enrichment boost; US depends on foreign enrichment (Russia, Kazakhstan) for 80%+ of low-enriched uranium; 2-3 year lag to new capacity; global 78 GW under construction
+- **Implication**: Reactor construction will accelerate (government backing + long-term contracts). But enriched uranium supply is the real bottleneck, not reactor supply. US geopolitically dependent on Russia/Kazakhstan; any friction (new sanctions, security concerns) creates fuel supply crisis. Enrichment services (not uranium ore) are rate-limiting. Uranium spot prices ~$78/lb today; but enrichment services are where margins and scarcity premiums will spike.
+- **Possible plays**: LONG uranium miners (CCJ, URA), LONG enrichment service providers, LONG new reactor builders (WEC, NuScale) with long-term enrichment contracts
+- **Direction**: LONG uranium + enrichment services
+- **Horizon**: Years (2028-2032 capex ramp becomes visible; geopolitical risk escalates earlier)
+- **Retail blindspot**: Retail sees "nuclear renaissance" and buys uranium ETFs. Missing that enrichment is the constraint. Miners can produce; fuel cycle is rate-limited. Geopolitical risk (Russia/Kazakhstan friction) not fully priced.
+- **Confidence**: **MEDIUM** — Enrichment gap is real; timeline 2-3 years; but geopolitical pricing complex.
+
+### China Export Controls Ecosystem Shock (Nov 10 Deadline)
+
+- **Underlying facts**: China rare earth licensing; banned gallium, germanium, antimony to US; tightening on dual-use items to Japan; export reprieve expires Nov 10; US hosts critical minerals ministerial (Pax Silica, FORGE, Project Vault)
+- **Implication**: Between now and 2028, Western industries face dual-market pricing: Chinese supply at risk (restricted), alternatives unavailable (2-3 years out). Gallium (semiconductors), germanium (infrared, power electronics), rare earths (magnets, phosphors) all face procurement pinches. Companies with 2-year supply contracts or in-house recycling/substitution capex outperform; importers face margin compression. Nov 10 deadline will trigger further tightening announcements or negotiation drama.
+- **Possible plays**: LONG alternative suppliers (Western rare earth miners, recycling), LONG materials-science substitution (alternatives to banned items), SHORT heavy rare earth importers without hedging/substitution
+- **Direction**: LONG alternative sources, SHORT importers
+- **Horizon**: Months (Nov 10 catalyst)
+- **Retail blindspot**: Retail sees "China tariffs/restrictions" as trade noise. Missing that Nov 10 is a hard deadline that will likely trigger policy shifts (either further tightening or major geopolitical escalation). Currently priced as ongoing friction; Nov 10 could be inflection.
+- **Confidence**: **HIGH** — China's controls confirmed; deadline confirmed; scarcity confirmed.
+
+---
+
+## NEXT-STEPS
+
+- **Run longterm_check.py on**: REX, MP, CCJ, URA, LMT, RTX, GD, NOC, XLE, XLV (energy equity tail risk)
+- **Run catalyst_check.py on**: Polymarket questions tracking China export restrictions (Nov 10 deadline), nuclear reactor construction timelines, defense spending execution, Strait of Hormuz stability, Ukraine peace negotiations
+- **Skip/Pass**: Ukraine peace deal (too uncertain), Tesla EV cost dynamics (complex substitution effects), small-cap rare earth miners (execution risk)
+
+---
+
+Sources:
+- [USGS Mineral Commodity Summaries 2026](https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf)
+- [EIA Short-Term Energy Outlook July 2026](https://www.eia.gov/outlooks/steo/)
+- [NATO Ankara Summit 2026 Defense Spending Commitments](https://www.nato.int/cps/en/natohq/news.htm)
+- [State Dept Critical Minerals Ministerial 2026](https://www.state.gov/releases/office-of-the-spokesperson/)
+- [CSIS Rare Earths Export Restrictions Analysis](https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions)
+- [S&P Global Rare Earth Supply Outlook 2026](https://www.spglobal.com/energy/en/news-research/latest-news/metals/)
+- [CNBC OPEC+ July 2026 Production Decision](https://www.cnbc.com/2026/07/05/opec-set-to-approve-another-oil-output-increase.html)
+- [IEA Nuclear Power Outlook 2026](https://www.iea.org/reports/global-energy-review-2026/)
+- [IAEA Power Reactor Information System (PRIS)](https://pris.iaea.org/pris/home.aspx)

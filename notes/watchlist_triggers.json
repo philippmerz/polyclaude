@@ -199,6 +199,16 @@
       "route": "ibkr_surface",
       "rationale": "Copper structural deficit (ICSG first refined deficit since 2009; El Teniente depression + Grasberg -35% vs AI/EV demand). Surfaced 2026-06-07 critical-minerals digest (HIGH). Fresh longterm_check 2.5/4 PASS at $63.27 \u2014 at/near record/peak (copper hit $13.4k/MT), 44.6x P/E ~81% above 9yr mean, no downside cushion. Entry $40-45 (copper normalizes to $10.5-11k/MT, resets to 20-25x P/E); alt $50-55 only on macro pullback + positive El Abra/Safford decisions. Do NOT chase at peak. Equity -> IBKR.",
       "added": "2026-06-07"
+    },
+    {
+      "ticker": "MP",
+      "type": "equity",
+      "entry_max": 35.0,
+      "horizon": "2-4y",
+      "route": "ibkr_surface",
+      "rationale": "Rare-earth magnets; DoD price floor + 10X facility 2028; Nov-10 China export-control deadline is the dated catalyst (HIGH-conf digest 2026-07-26). longterm_check 3/4 WATCH \u2014 late-cycle, prices peaked; enter on $30-35 dip or commodity bottom. Stop-loss zone $20 (DoD floor renegotiation).",
+      "added": "2026-07-26",
+      "updated": "2026-07-26"
     }
   ]
 }

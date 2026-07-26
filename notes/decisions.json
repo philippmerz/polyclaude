@@ -1,5 +1,5 @@
 {
-  "next_id": 61,
+  "next_id": 62,
   "decisions": [
     {
       "id": 1,
@@ -575,9 +575,10 @@
         "bond-like-fade",
         "funnel-fix-first-entry"
       ],
-      "outcome": null,
+      "outcome": "CLOSED 2026-07-26 via DEC-0061: sold @0.957, +$0.10 (+1.8%/8wk). Held 0.94->0.96 fine, but the staleness re-verify found a live FOIA vector the entry analysis never saw.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "The 55d-stale prior wasn't wrong when set \u2014 the WORLD moved (lawsuit timeline matured into the window). Staleness guard's first position-level catch, 1 day after shipping.",
+      "resolved_at": "2026-07-26T16:09:02Z"
     },
     {
       "id": 29,
@@ -1165,6 +1166,24 @@
         "spacex",
         "add",
         "consensus"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 61,
+      "timestamp": "2026-07-26T16:09:02Z",
+      "type": "close_position",
+      "thesis": "CLOSED Satoshi NO 6sh @0.957 ($5.74, +$0.10 wash at fair). Trigger: Sunday-review staleness re-verify (prior was 55d old) found the Murphy-FOIA-v-DHS vector (filed Apr-2025, 18-30mo FOIA timeline puts ruling window's edge inside 2026; VERIFIED real, not haiku hallucination). Re-derived P(YES) 4-5% (haiku said 7; discounted the docs->consensus-reveal chain) -> p_no 0.955 vs mark 0.961 = zero-to-negative edge, below Aave hurdle. \u00a75 wash-exit frees $5.74.",
+      "confidence": "high",
+      "prediction": "If the market never resolves YES, this exit forfeits ~4.5pp carry; correct trade regardless \u2014 edge after re-verification was gone. Re-entry if NO ever offers >=0.92 (edge restored) or the FOIA suit dies.",
+      "size_usd": 5.74,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "satoshi",
+        "close",
+        "staleness-guard"
       ],
       "outcome": null,
       "calibration_delta": null,
