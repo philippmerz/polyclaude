@@ -1052,9 +1052,10 @@
         "redeploy-sweep",
         "kimi-advised"
       ],
-      "outcome": null,
+      "outcome": "RESOLVED YES 2026-07-26 (Gosling/Ghost-Rider reveal qualified). 7sh pay $7.00; redemption pending (market de-indexed mid-close like Mojtaba \u2014 CTF claim safe, re-run redeem-all at 14:00, manual by conditionId if absent Mon). Realized \u2248 +$2.1 (+42%) on ~$4.92 cost when claimed.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "Announce-at-event template 2-for-2 at SDCC (Prime +59% early exit, Marvel +42% to resolution). Resting 0.98 take-profit did NOT fill before resolution \u2014 auto-cancel on close; harvest-by-sell needs the surge to come BEFORE close, else redemption does the job anyway.",
+      "resolved_at": "2026-07-26T06:02:25Z"
     },
     {
       "id": 55,

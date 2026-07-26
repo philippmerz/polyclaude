@@ -3688,3 +3688,14 @@ probability; PM led the repricing both directions (3→28→20). My consensus-an
 FedWatch number uncritically — verify-full-distribution applies to CONSENSUS NUMBERS too: ask what
 the number MEASURES. Position 41.2sh avg 0.254 ≈ breakeven at revised fair; holding to FOMC Wed
 (selling at 0.19 bid < 0.25 fair). Consensus-anchor class rule updated.
+
+## 2026-07-26 ~06:15 UTC — periodic: Marvel + Apple RESOLVED YES; first real Brier scoreboard (beating market, N=4)
+
+Marvel resolved YES (de-indexed mid-close à la Mojtaba — 7sh/$7.00 CTF claim safe, redeem-all blind to
+it until data-api restores the row; retry 14:00, manual path Monday if needed). Apple ALSO resolved
+YES — a qualifying announcement existed after all; my 0.95 prior right, the cancelled bid lost
+nothing (never filled), and the post-catalyst pull rule stands for the UNCONFIRMED case. ledger_
+calibration first real run: **N=4, Brier mine 0.0188 vs market 0.0419, log-loss 0.128 vs 0.207 —
+beating the market on both** (N tiny, no verdict claimed; the measure now accumulates automatically).
+Houthi-Saudi oil-facility strikes (tier-2 05:01) = oil-inflation support for the Fed YES leg; no
+book exposure otherwise. DEC-0054 outcome recorded (+42% pending redemption; template 2-for-2).

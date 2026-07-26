@@ -262,7 +262,7 @@
   "decision": "ENTER $5.00",
   "reason": "Redeploy-sweep #1. Loose criteria (any Marvel entity/channel, 5d) vs crowd 0.67. kimi_advisor tempered fair 0.83->0.78 (D23-hold risk). Sized down for correlation w/ Prime-SDCC. DEC-0054.",
   "size_usd": 5.0,
-  "outcome": null,
+  "outcome": "YES",
   "fade_would_have_won": null
  },
  {
@@ -297,7 +297,7 @@
   "date": "2026-07-24",
   "days": 2,
   "pop_edge_pp": null,
-  "outcome": null,
+  "outcome": "YES",
   "fade_would_have_won": null,
   "question": "Will Apple TV announce a new project at SDCC 2026?",
   "side": "YES",
