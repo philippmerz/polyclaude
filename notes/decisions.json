@@ -1052,10 +1052,10 @@
         "redeploy-sweep",
         "kimi-advised"
       ],
-      "outcome": "RESOLVED YES 2026-07-26 (Gosling/Ghost-Rider reveal qualified). 7sh pay $7.00; redemption pending (market de-indexed mid-close like Mojtaba \u2014 CTF claim safe, re-run redeem-all at 14:00, manual by conditionId if absent Mon). Realized \u2248 +$2.1 (+42%) on ~$4.92 cost when claimed.",
+      "outcome": "CORRECTED: the 0.98 resting SELL FILLED 02:11 (7sh = $6.86, activity-feed ground truth; /trades endpoint missed it). Realized +$2.09 (+43.9%) on $4.77 cost. Market then resolved YES \u2014 redemption would have paid $7.00, so the fill cost $0.14 for ~1-day-earlier fee-free cash. My earlier redeem-one attempts were harmless zero-balance no-ops.",
       "calibration_delta": null,
-      "lesson": "Announce-at-event template 2-for-2 at SDCC (Prime +59% early exit, Marvel +42% to resolution). Resting 0.98 take-profit did NOT fill before resolution \u2014 auto-cancel on close; harvest-by-sell needs the surge to come BEFORE close, else redemption does the job anyway.",
-      "resolved_at": "2026-07-26T06:02:25Z"
+      "lesson": "SDCC template 2-for-2 (+59% Prime, +43.9% Marvel). GROUND-TRUTH SOURCE ORDER for position forensics: data-api /activity > /trades (which lagged/missed the fill) > wallet balance arithmetic (reserve accounting defeated me twice tonight).",
+      "resolved_at": "2026-07-26T06:24:53Z"
     },
     {
       "id": 55,

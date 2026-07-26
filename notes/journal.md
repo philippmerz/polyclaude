@@ -3699,3 +3699,25 @@ calibration first real run: **N=4, Brier mine 0.0188 vs market 0.0419, log-loss 
 beating the market on both** (N tiny, no verdict claimed; the measure now accumulates automatically).
 Houthi-Saudi oil-facility strikes (tier-2 05:01) = oil-inflation support for the Fed YES leg; no
 book exposure otherwise. DEC-0054 outcome recorded (+42% pending redemption; template 2-for-2).
+
+## 2026-07-26 ~06:45 UTC — meta-reflection: forensics, tooling, prunes — and the Kuwait kill
+
+MARVEL TRUTH (activity-feed forensics): the 0.98 SELL FILLED 02:11 ($6.86, +43.9%, DEC-0054
+corrected) — /trades endpoint MISSED the fill; data-api /activity is the ground-truth source for
+position forensics. My redeem-one attempts were harmless zero-balance no-ops; the pUSD-collateral
+question is UNVERIFIED (comment corrected in clob_v2 — test at next real redemption). Template
+closes SDCC 2-for-2: Prime +59%, Marvel +43.9%.
+
+SHIPPED: clob_v2 `redeem-one <conditionId>` (fallback for de-indexed markets, N=2 pattern) +
+notes/position_condition_ids.json snapshot (claims never depend on indexing again).
+
+PRUNED: backlog 149→45 lines per its own delete-policy (struck items, moot calendar, shipped tools,
+Ostium remnants); resting_orders tidied (Marvel row out, fill recorded).
+
+KUWAIT KILLED at deploy gate (ledger #31): re-verification found Iran ACTIVELY striking Kuwait
+(days of barrages, ground-incursion threats, peace deal suspended) — my Jul-25 P(YES)≤0.01 was
+peacetime logic; revised 0.02-0.05; edge at 0.968 ≈ 0; the market is right. LESSON: the tier-2
+Iran-keyword demotion (correct for an Iran-free book) let my WORLD-MODEL go stale — gates on
+war-adjacent markets must re-pull the conflict state at decision time, not from memory. The
+deploy-time re-verify condition I wrote on Jul-25 fired exactly as designed and saved a bad entry.
+Freed Marvel cash (~$6.86) stays as pUSD ammo (D23 listings ~2wk).

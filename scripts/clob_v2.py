@@ -312,6 +312,14 @@ def get_orderbook(token_id: str) -> dict:
 CTF_ADDR = "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045"
 NEG_RISK_ADAPTER = "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296"
 USDC_E_ADDR = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+# v2 CLOB collateral (CollateralOnramp-wrapped pUSD). NOTE 2026-07-26: CTF
+# redemption with the WRONG collateral for a position's parent collection
+# silently no-ops (status=1, pays 0) — but whether v2 positions redeem
+# against pUSD or USDC.e is UNVERIFIED (both Marvel attempts no-opped on a
+# ZERO balance — the shares had sold at 0.98 minutes earlier, so neither
+# call tested the collateral). Test at the next real redemption; if pUSD
+# fails, flip redeem_one/redeem_all back to USDC_E_ADDR.
+PUSD_ADDR = "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB"
 POLYGON_RPC = "https://polygon.drpc.org"
 
 _NEG_RISK_REDEEM_ABI = [{
@@ -420,6 +428,40 @@ def redeem_all(dry_run: bool = False) -> dict:
     return {"redemptions": summary}
 
 
+def redeem_one(cond_id_hex: str, neg_risk: bool = False) -> dict:
+    """Redeem a single resolved market by conditionId — the fallback for
+    DE-INDEXED markets (N=2: Mojtaba 2026-07, Marvel-SDCC 2026-07-26) where
+    data-api drops the position row so redeem-all's redeemable-flag scan is
+    blind. Standard-CTF path needs no token ids (contract pays whatever the
+    caller holds for both index sets); negRisk path is NOT supported here
+    (adapter needs exact balances — extend if a negRisk market ever de-indexes).
+    Verify the market is actually resolved (gamma umaResolutionStatus) first —
+    redeeming an unresolved condition reverts."""
+    if neg_risk:
+        raise SystemExit("redeem-one: negRisk path not implemented (needs balances)")
+    from web3 import Web3
+    from eth_account import Account
+    address, pk = _load_wallet()
+    w = Web3(Web3.HTTPProvider(POLYGON_RPC))
+    addr_cs = Web3.to_checksum_address(address)
+    ctf_redeem = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
+                                 abi=_CTF_REDEEM_ABI)
+    cond_id = bytes.fromhex(cond_id_hex.replace("0x", ""))
+    nonce = w.eth.get_transaction_count(addr_cs)
+    gp = w.eth.gas_price
+    tx = ctf_redeem.functions.redeemPositions(
+        Web3.to_checksum_address(PUSD_ADDR), b"\x00" * 32, cond_id, [1, 2],
+    ).build_transaction({
+        "from": addr_cs, "nonce": nonce, "chainId": 137, "gas": 250_000,
+        "maxFeePerGas": max(int(gp * 3), int(gp + 1_000_000_000)),
+        "maxPriorityFeePerGas": 30_000_000_000,
+    })
+    h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
+    r = w.eth.wait_for_transaction_receipt(h, timeout=120)
+    print(f"  {'OK' if r.status == 1 else 'FAIL'} redeem {cond_id_hex[:18]}...  tx 0x{r.transactionHash.hex()}")
+    return {"ok": r.status == 1, "tx": "0x" + r.transactionHash.hex()}
+
+
 def _safe_json(r: httpx.Response) -> Any:
     try:
         return r.json()
@@ -520,6 +562,11 @@ def main():
     p.add_argument("--dry-run", action="store_true",
                    help="list redeemables and exit before any tx (read-only safe)")
     p.set_defaults(fn=lambda a: (print(json.dumps(redeem_all(dry_run=a.dry_run), indent=2)), 0)[1])
+
+    p = sub.add_parser("redeem-one", help="redeem a single resolved market by conditionId "
+                                          "(fallback for de-indexed markets redeem-all can't see)")
+    p.add_argument("condition_id", help="0x-prefixed conditionId (verify resolved on gamma first)")
+    p.set_defaults(fn=lambda a: (print(json.dumps(redeem_one(a.condition_id), indent=2)), 0)[1])
 
     args = ap.parse_args()
     sys.exit(args.fn(args))

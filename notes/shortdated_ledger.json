@@ -418,5 +418,19 @@
   "size_usd": 9.46,
   "outcome": null,
   "fade_would_have_won": null
+ },
+ {
+  "date": "2026-07-26",
+  "question": "Iran invades Kuwait by August 31?",
+  "side": "NO",
+  "ask": 0.968,
+  "days": 36,
+  "pop_edge_pp": null,
+  "catalyst_p_yes_central": 0.035,
+  "decision": "KILLED at deploy gate",
+  "reason": "Deploy-time re-verify FAILED: Iran actively striking Kuwait for days (Ali Al Salem, airport, oil facility; heaviest barrage; Wikipedia page exists), regime figures weighing ground incursion for bases/hostages, peace commitments suspended. My Jul-25 p_yes 0.01 was PEACETIME LOGIC on a stale world-model (tier-2 Iran demotion under-integrated the Gulf-war escalation). Revised p_yes 0.02-0.05 -> edge at 0.968 zero-to-negative. Market is right.",
+  "size_usd": 0,
+  "outcome": null,
+  "fade_would_have_won": null
  }
 ]

@@ -30,7 +30,6 @@ are standard... part of your everyday repertoire"). Two uses:
 | 2026-07-24 | Greenland NO | SELL | 29 | 0.98 | 0.975 | Dec-31 fade; consumed-edge auto-exit |
 | 2026-07-24 | Trump-out NO | SELL | 28 | 0.97 | 0.97 | Dec-31 fade; us-politics |
 | 2026-07-24 | Satoshi NO | SELL | 6 | 0.99 | 0.99 | Dec-31 fade |
-| 2026-07-24 | Marvel-SDCC YES | SELL | 7 | 0.98 | 0.93→locked | Panel Sat Jul-25; ~0.95 pre-panel. Unfilled → redeem ~Jul-27 |
 | 2026-07-25 | GPT-6 NO | BID | 10 | 0.67 | 0.82 | Dip-catcher (mark eased to 0.725) |
 | 2026-07-26 | MacBook NO | BID | 25 | 0.40 | 0.73 | Front-of-queue in 0.39/0.43 spread; coverage unlocked (macbook/gurman tier-2 keywords added). Fill = 33pp under fair |
 
@@ -40,9 +39,9 @@ catalyst window closes (a post-panel fill = "nothing announced" = adverse). Rele
 DOCTRINE ADDITION: announce-market YES bids must be pulled AT panel/window END, not just before
 known catalysts — the asymmetry inverts the moment the catalyst passes.
 
-SDCC cluster cap: Marvel 7sh + both bids if filled ≈ $25 ≈ 15% bankroll — no adds.
-Expected releases: SDCC resolves ~Jul-26/27 → unfilled Apple/Prime bids free ~$19; Marvel
-redeems ~$7 if YES. Deploy queue in notes/backlog.md (Fed add #0, then MacBook/SpaceX/Kuwait).
+FILLED 2026-07-26 02:11: Marvel-SDCC SELL 7@0.98 = $6.86 (+43.9% realized; market resolved
+YES 1h later — the fill cost $0.14 vs redemption for a day-earlier fee-free exit). SDCC over.
+Remaining queue item: Kuwait NO (~$10 from the freed cash, conditions in backlog).
 
 ## Liquidity rewards (first checked 2026-07-24)
 
