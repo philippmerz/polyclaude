@@ -3758,3 +3758,13 @@ doctrine: CANCELLED remainder first, verified second — no GPT-6 announcement/m
 benign rumor-flow dip-catching (+15pp to 0.82 fair); re-placed remainder 5.4sh@0.67 on
 freshly-verified terms, prior stamped. Position now 39.6sh GPT-6 NO (~$25.3 cost, 15.6% of book at
 mark). 3rd verified rumor-dip in 10d — the churn pattern IS the edge on this market.
+
+## 2026-07-27 02:00 UTC tick — GPT-6 bid filled into a MONOTONIC climb; fair shaded 0.79; dip-catcher retired
+
+$170.94 (+0.6%; −$1.74 since 14:00, all GPT-6 mark). The re-placed 5sh@0.67 bid FILLED overnight as
+YES climbed 0.255→0.345 monotonic over 28h with NO news (4th hard re-verify: no announcement/model-
+card/date; Aug calendar = bootcamps, no launch event; 5.6 shipped 18d ago — no generational-release
+precedent at that cadence). Structure differs from the 3 spike-fade dips → flow gets weak-evidence
+respect: fair 0.82→0.79. Position 44.6sh ($28.6, ~17% of book) = CAP; dip-catcher RETIRED. Hold: EV
+$35.2 vs liquidation $29.2. Judgment trigger armed: NO <0.60 → kimi + full re-eval. Scans: 0 arbs.
+DC/Lucasfilm resolve after 04:00 → Brier datapoints at next check. Fed 0.2005 (held, FOMC Wed).

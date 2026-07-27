@@ -43,13 +43,13 @@
   "verified": "2026-07-25"
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
-  "p_no": 0.82,
+  "p_no": 0.79,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair.",
-  "verified": "2026-07-26",
-  "note": "Re-verified 2026-07-26 22:10 during the 3rd rumor-dip (YES 0.255->0.32, Sunday-eve, no tier-1 alert): NO GPT-6 announcement/model-card/date exists (Jul releases = GPT-5.6 Sol/Terra/Luna). Fair 0.82 stands. Dip-catcher filled 4.6sh @0.67 benignly; remainder re-placed after cancel-first-verify-second."
+  "verified": "2026-07-27",
+  "note": "4th re-verify 2026-07-27 02:10: STILL no announcement/model-card/date; Aug OpenAI calendar = bootcamps only, no launch event. But YES flow is now MONOTONIC 28h+ (0.255->0.345, no news) \u2014 structurally unlike the 3 spike-fade dips. Fair shaded 0.82->0.79 (flow = weak evidence). Position 44.6sh CAP \u2014 dip-catcher RETIRED, no adds. Judgment trigger: NO <0.60 -> kimi + full re-eval."
  },
  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
   "p_yes": 0.93,
