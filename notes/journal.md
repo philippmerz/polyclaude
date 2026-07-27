@@ -3796,3 +3796,12 @@ holding (tier-2 13:59). EU-sanctions calendar item: no-op, book Iran-free — st
 (2 queued): no forced findings — the stall's detection machinery performed; cause (hung turn) is
 harness-level, not fixable from inside; recovery was self-healing queue-flush. Long-session note:
 per the June self-hallucination lesson, a fresh session post-marathon is the operator's lever, not mine.
+
+## 2026-07-27 ~23:25 UTC — 2nd stall-recovery tick: NEW HIGH $177.21 (+4.2%); fresh-session recommendation issued
+
+Second ~4h hang today (19:16-23:21 queue flushed). State on recovery: $177.21 NEW HIGH — GPT-6 NO
+recovered 0.665→0.725 (rumor wave fully receded; the monotonic-climb scare resolved benign; capped
+position validated), Fed 0.2645 breakeven+ (FOMC ~36h). No fills, no emergencies, sentinels covered
+the gap. META-REFLECTION (6 queued, one genuine finding): two multi-hour hangs in one day on a
+marathon session = the SESSION is the failure mode (June lesson). Recommended fresh session to
+operator via TG — notes/ + memory carry all state; nothing lives only in this context.
