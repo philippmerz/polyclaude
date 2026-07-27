@@ -192,7 +192,7 @@
   "decision": "ENTER $8.46",
   "reason": "Study-5 shortdated sweep #2. Loose criteria (renewals+any official channel) vs colloquial stage-reveal pricing; Amazon SDCC programming verified via own press release. Stricter nuance (already-announced content excluded) priced into 0.78 central. DEC-0050.",
   "size_usd": 8.46,
-  "outcome": null,
+  "outcome": "YES",
   "fade_would_have_won": null
  },
  {
@@ -290,7 +290,7 @@
   "decision": "EXIT $13.86",
   "reason": "Consumed-edge + binary-tail de-risk, scale-invariant (operator reframe: sizes don't matter, decision quality does). Sold 18sh @0.77, realized +59%. Paid 9pp spread to eliminate 14% total-loss tail on a ~2h binary. DEC-0056.",
   "size_usd": 13.86,
-  "outcome": null,
+  "outcome": "YES",
   "fade_would_have_won": null
  },
  {
@@ -311,7 +311,7 @@
   "date": "2026-07-24",
   "days": 2,
   "pop_edge_pp": null,
-  "outcome": null,
+  "outcome": "YES",
   "fade_would_have_won": null,
   "question": "Will Prime Video announce a new project at SDCC 2026?",
   "side": "YES",
@@ -325,7 +325,7 @@
   "date": "2026-07-24",
   "days": 2,
   "pop_edge_pp": null,
-  "outcome": null,
+  "outcome": "YES",
   "fade_would_have_won": null,
   "question": "Will DC Studios announce a new project at SDCC 2026?",
   "side": "NO",
@@ -339,7 +339,7 @@
   "date": "2026-07-24",
   "days": 2,
   "pop_edge_pp": null,
-  "outcome": null,
+  "outcome": "YES",
   "fade_would_have_won": null,
   "question": "Will Lucasfilm announce a new project at SDCC 2026?",
   "side": "NO",

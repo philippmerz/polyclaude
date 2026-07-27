@@ -3768,3 +3768,16 @@ precedent at that cadence). Structure differs from the 3 spike-fade dips → flo
 respect: fair 0.82→0.79. Position 44.6sh ($28.6, ~17% of book) = CAP; dip-catcher RETIRED. Hold: EV
 $35.2 vs liquidation $29.2. Judgment trigger armed: NO <0.60 → kimi + full re-eval. Scans: 0 arbs.
 DC/Lucasfilm resolve after 04:00 → Brier datapoints at next check. Fed 0.2005 (held, FOMC Wed).
+
+## 2026-07-27 ~06:10 UTC — SDCC 4-for-4 YES: template base-rate corrected (my DC/Lucasfilm skips were wrong)
+
+DC AND Lucasfilm resolved YES — my scored skips (p_yes 0.22/0.15, panel-presence logic) were
+directionally wrong and Brier-worse than the market on those legs (Lucasfilm mine 0.722 vs mkt
+0.640). Aggregate ledger still beats (N=9: 0.164 vs 0.203; log-loss skill +0.104) on the YES-side
+calls. ROOT CAUSE: the official-channels backdoor over a 5-day window ≈ guarantees a qualifying
+announcement from ANY active studio; panel logic picks WHERE reveals land, not WHETHER. Counter-
+factual: both YES at 0.59 = +69% each (~$14 missed on $20). TEMPLATE UPGRADED for D23 (~2wk):
+active-entity YES legs ≤0.80 are buys after criteria check — the CHEAP legs are the biggest edge,
+not the most suspect. This is the falsifier discipline working: scored skips turned a miss into
+doctrine within 48h.
+GPT-6 overnight: stable 0.335/0.665 (no further climb — monotonic phase paused). Fed 0.20, FOMC Wed.
