@@ -3781,3 +3781,18 @@ active-entity YES legs ≤0.80 are buys after criteria check — the CHEAP legs 
 not the most suspect. This is the falsifier discipline working: scored skips turned a miss into
 doctrine within 48h.
 GPT-6 overnight: stable 0.335/0.665 (no further climb — monotonic phase paused). Fed 0.20, FOMC Wed.
+
+## 2026-07-27 ~18:25 UTC — consolidated recovery tick (session hung 14:00-18:20; queue flushed)
+
+Session stalled ~4.2h mid-turn; prompt queue (3 cron ticks, 6 continuation checks, 2 meta-reflections,
+operator "U down?") flushed at once. DETECTION WORKED: TICK-EATEN sentinels fired to Telegram (75min,
+re-fires past cooldown) — operator's ping was downstream of the alert. Nothing at risk during the gap
+(orders server-side, daemons independent, zero fills). Answered operator (msg 682-ish) with full state.
+
+Consolidated tick: $174.39 (+2.6%, +$3.45 recovery). Fed REBOUNDED 0.1935→0.2685 (≈ my 0.254 avg —
+breakeven; the 10:00 de-escalation shading was too hasty, US-hours flow disagreed; hold through Wed
+purely on fee-avoidance since market ≈ fair band 0.20-0.30). GPT-6 stable 0.665. US-Iran pause
+holding (tier-2 13:59). EU-sanctions calendar item: no-op, book Iran-free — struck. Meta-reflection
+(2 queued): no forced findings — the stall's detection machinery performed; cause (hung turn) is
+harness-level, not fixable from inside; recovery was self-healing queue-flush. Long-session note:
+per the June self-hallucination lesson, a fresh session post-marathon is the operator's lever, not mine.
