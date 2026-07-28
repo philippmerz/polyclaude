@@ -57,4 +57,10 @@ vs 0.73 fair). **CANCEL-RACE LESSON (02:56 audit):** the GPT-6 10sh order's 5.4s
 Jul-27 01:05 DESPITE the Jul-26 22:10 cancel command returning "canceled" — the grep of response
 text never verified removal. True GPT-6 position: 50sh @0.645 (cap overshoot +5.4sh, profitable but
 unintended). RULE: after every cancel, VERIFY via `clob_v2.py orders` that the id is gone.
-Remaining live: Trump-out SELL 28@0.97, Greenland SELL 29@0.98 only.
+Live: Trump-out SELL 28@0.97, Greenland SELL 29@0.98, Fed-hike YES SELL 41@0.26.
+
+**Fed maker-sell (2026-07-28, operator Q "lowest sell price that beats holding?"):** taker breakeven
+0.2778 (fee eats 10% of min(p,1-p)); MAKER breakeven = fair 0.25 exactly (fee-free). Rested 41@0.26
+— above both, ask was 0.218, so it fills only if the market pays above my fair. Free option; resolves
+Wed 18:00 UTC otherwise. GENERAL RULE: when hold-vs-sell is close, don't choose — rest a post-only
+sell at the price that makes selling strictly better and let the market decide.

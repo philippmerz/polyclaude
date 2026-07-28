@@ -3916,3 +3916,12 @@ economists' unanimous-hold view) still favours holding by $0.64. Two structural 
 is fee-free while exiting pays the 1000bps taker fee, and the bid sits 4.5pp under fair. Answer to
 operator: hold — not from conviction (it's fair-valued at best, wouldn't enter today) but because
 selling here is strictly worse than resolution.
+
+## 2026-07-28 ~18:30 UTC — operator: lowest sell price beating hold? → rested a free-option maker sell
+
+Taker breakeven 0.2778 (fee = 10%×min(p,1-p) kills 2.8pp); MAKER breakeven = 0.25 = fair exactly,
+because post-only pays no fee. Bid 0.211 / ask 0.218 → taker sale is clearly wrong. ACTED on the
+insight rather than just answering: rested post-only SELL 41sh @0.26, above BOTH breakevens. Fills
+only if the market pays above my own fair (free option); otherwise resolves Wed. Generalized rule
+added to resting_orders.md: when hold-vs-sell is close, rest a maker sell at the strictly-better
+price instead of choosing. Direct descendant of the operator's Jul-24 limit-order push.
