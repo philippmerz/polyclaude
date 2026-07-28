@@ -3925,3 +3925,23 @@ insight rather than just answering: rested post-only SELL 41sh @0.26, above BOTH
 only if the market pays above my own fair (free option); otherwise resolves Wed. Generalized rule
 added to resting_orders.md: when hold-vs-sell is close, rest a maker sell at the strictly-better
 price instead of choosing. Direct descendant of the operator's Jul-24 limit-order push.
+
+## 2026-07-28 ~18:50 UTC — meta-reflection: shipped exit_analysis.py (mechanizes tonight's exit math)
+
+The operator's hold-vs-sell questions forced by hand what no tool did: exits are THREE options and the
+fee picks the winner. Shipped `scripts/exit_analysis.py` — per position: HOLD EV (fee-free resolution)
+vs TAKER net (walks the REAL bid book, minus fee×min(p,1-p)) vs MAKER breakeven (= fair). Wired as
+daily_checkin step 3c.
+
+First run: HOLD on all 6, and one striking result — **SpaceX taker breakeven is 1.067, i.e. ABOVE
+$1**: on a fee-bearing market with fair 0.96, a taker exit can NEVER beat holding, at any price. That
+is a structural fact I'd never have computed by intuition.
+
+ACTED: rested a post-only SELL 34sh @0.96 on SpaceX (fee-free free option — fills only if someone
+pays my full fair, freeing capital early at zero EV cost). DELIBERATELY EXCLUDED GPT-6 and MacBook per
+the hidden-info rule: an informed up-move there means fair JUMPED, so a resting sell at the old fair
+would donate the news. Consistency check on the doctrine I wrote Friday — it held.
+
+Book now: 4 resting orders (Greenland 0.98, Trump-out 0.97, SpaceX 0.96, Fed 0.26), all fee-free
+maker sells at-or-above fair. Prime's ~$2 EV loss (taker into a thin book) is now structurally
+prevented.

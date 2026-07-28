@@ -57,7 +57,14 @@ vs 0.73 fair). **CANCEL-RACE LESSON (02:56 audit):** the GPT-6 10sh order's 5.4s
 Jul-27 01:05 DESPITE the Jul-26 22:10 cancel command returning "canceled" — the grep of response
 text never verified removal. True GPT-6 position: 50sh @0.645 (cap overshoot +5.4sh, profitable but
 unintended). RULE: after every cancel, VERIFY via `clob_v2.py orders` that the id is gone.
-Live: Trump-out SELL 28@0.97, Greenland SELL 29@0.98, Fed-hike YES SELL 41@0.26.
+Live: Trump-out SELL 28@0.97, Greenland SELL 29@0.98, Fed-hike YES SELL 41@0.26,
+SpaceX YES SELL 34@0.96.
+
+**Maker-sell-at-fair policy (2026-07-28, from exit_analysis.py):** every position gets a resting
+post-only sell AT FAIR — fee-free, fills only if someone pays >= my own fair value, EV-positive by
+construction (frees capital early at no EV cost). EXCEPTIONS: hidden-info-class positions (GPT-6,
+MacBook) get NONE — an informed up-move means fair JUMPED, so auto-selling at the old fair donates
+the news. SpaceX qualifies (mechanical, public-fact resolution) -> 34@0.96 rested.
 
 **Fed maker-sell (2026-07-28, operator Q "lowest sell price that beats holding?"):** taker breakeven
 0.2778 (fee eats 10% of min(p,1-p)); MAKER breakeven = fair 0.25 exactly (fee-free). Rested 41@0.26
