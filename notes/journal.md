@@ -3865,3 +3865,19 @@ sweep). Duplicates = double alerts + double tick-fires, i.e. exactly the noise c
 just flagged. Killed the manual one; canonical keepalive-managed daemon (528876) retained.
 LESSON: restart daemons via keepalive or daemonctl, never a bare nohup — the keepalive will
 otherwise start a second copy.
+
+## 2026-07-28 ~12:00 UTC — meta-reflection: shipped position_state_audit.py (the ARB bug's whole CLASS)
+
+The stale-ARB-trigger incident wasn't a one-off — audited every position-referencing file against the
+live book and found SIX drifts: conditionId claim-insurance snapshot missing the closed Satoshi leg
+AND understating MacBook (35 vs 60) + GPT-6 (35 vs 50) — i.e. my redemption insurance was wrong for
+2 of 6 positions; an expired Marvel acked-hold; an orphan Marvel prior; and the regime-fall-reentry
+trigger still armed+actionable since the Jul-08 exit.
+
+SHIPPED `scripts/position_state_audit.py [--fix]`: auto-fixes snapshot + expired holds, REPORTS
+judgment items (never auto-removes an armed trigger or prior — an orphan may be a deliberate re-entry
+candidate). Wired into daily_checkin as step 3b so drift can't accumulate silently again.
+Judgment items resolved this pass: Marvel prior annotated closed (kept as template reference — its
+0.93 pre-panel fair proved LOW, SDCC went 4-for-4); regime-fall-reentry DEMOTED to non-actionable
+(book deliberately Iran-free + world-state rule says war-adjacent re-entry needs a fresh full gate,
+not an auto-fired tick). Audit now reports CLEAN (6 positions).

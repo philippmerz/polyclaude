@@ -57,7 +57,8 @@
   "rho_within": 0.4,
   "cluster_frac": 0.08,
   "rationale": "2026-07-23 0.83->0.93: Comic-Con underway, Marvel Hall H panel Sat Jul-25 confirmed; market ripped 0.865->0.965 as the catalyst nears with no D23-hold sign. Near-locked YES. HOLD to resolution ~Jul-27 (2.6d) \u2014 selling at ~0.95 bid minus fee captures nothing over E[hold]. Entry 0.67 -> +44% MTM.",
-  "verified": "2026-07-20"
+  "verified": "2026-07-20",
+  "note": "POSITION CLOSED 2026-07-26 (sold 7sh @0.98, +43.9%; market resolved YES). Kept as template reference: announce-at-event fair ~0.93 pre-panel proved LOW \u2014 SDCC went 4-for-4 YES, official-channels backdoor dominates. See D23 playbook in backlog."
  },
  "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting": {
   "p_yes": 0.25,
