@@ -3821,3 +3821,10 @@ Jul-26 22:10 cancel returned "canceled" text but the 5.4sh remainder FILLED at 0
 never verified removal from the book. Outcome lucky (+9.5pp on the extras); process gap real → RULE:
 verify every cancel against the orders list. GPT-6 hard-closed to adds (21% of book). Book now:
 2 resting orders (fade sells only), 8 positions, ~$7 pUSD free.
+
+## 2026-07-28 ~03:20 UTC — meta-reflection: cancel-verification mechanized (only finding, not forced)
+
+Shipped the cancel-race guard into clob_v2 cmd_cancel: after any "canceled" response, wait 2s, re-pull
+the live book, and FAIL LOUDLY (exit 3) if the id survives. Converts last night's lesson (5.4sh filled
+post-"canceled") into tooling before FOMC-day order management needs it. No other findings — session-
+hang mitigation remains operator-side (restart recommended); doctrine/notes are current.

@@ -509,7 +509,25 @@ def cmd_sell(args):
 def cmd_cancel(args):
     result = cancel_order(args.order_id)
     print(json.dumps(result, indent=2))
-    return 0 if result["status_code"] < 400 else 2
+    if result["status_code"] >= 400:
+        return 2
+    # Cancel-race guard (2026-07-28): a cancel response saying "canceled" is NOT
+    # proof of removal — the GPT-6 10sh order's 5.4sh remainder filled 3h after
+    # a "canceled" response (the fill raced the cancel). Verify against the live
+    # book and FAIL LOUDLY if the id is still there so the caller re-checks.
+    import time as _t
+    _t.sleep(2)
+    try:
+        live = list_open_orders()
+        ids = [o.get("id") for o in (live.get("body", {}) or {}).get("data", [])]
+        if args.order_id in ids:
+            print(f"CANCEL-VERIFY FAILED: {args.order_id[:18]}... STILL IN BOOK — "
+                  f"re-cancel or expect fills", file=sys.stderr)
+            return 3
+        print(f"cancel VERIFIED: order gone from book", file=sys.stderr)
+    except Exception as e:
+        print(f"cancel-verify inconclusive ({e}) — check `orders` manually", file=sys.stderr)
+    return 0
 
 
 def cmd_orders(_args):
