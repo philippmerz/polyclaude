@@ -1,14 +1,5 @@
 [
  {
-  "key": "arb-retrace-add",
-  "kind": "coingecko",
-  "id": "arbitrum",
-  "op": "<=",
-  "level": 0.08,
-  "note": "ARB retrace-add zone top (0.075-0.08, msg 530): fee-switch fundamentals + froth given back. Standing delegated authority; verify thesis intact then add tranche. Raw dip-add <=0.065 also stands.",
-  "actionable": true
- },
- {
   "key": "regime-fall-reentry",
   "kind": "clob_no_ask",
   "id": "106181075047366745139197108801635573283215248045056329679360376976893016488727",
@@ -16,5 +7,14 @@
   "level": 0.88,
   "note": "Regime-fall NO re-entry bound (ledger 2026-07-08): escalation dip below the robust bound = instance-thesis re-entry candidate; run the full gate before entering.",
   "actionable": true
+ },
+ {
+  "key": "arb-deep-value-surface",
+  "kind": "coingecko",
+  "id": "arbitrum",
+  "op": "<=",
+  "level": 0.065,
+  "note": "ARB DEEP-VALUE only (position CLOSED Jul-24 DEC-0057). Polyclaude does NOT auto-add: multi-year price-only thesis routes to operator IBKR. Price re-entry for polyclaude requires a FILED Tally distribution/buyback proposal (dated <1y catalyst), NOT a price level. This trigger = surface-to-operator at a genuine capitulation only.",
+  "actionable": false
  }
 ]

@@ -28,6 +28,12 @@ if ! flock -n 9; then
 fi
 
 TS=$(date -u +%Y%m%dT%H%M%SZ)
+# Optional $1 = why this tick fired (opportunity_watch/news_watcher pass a reason;
+# plain cron passes nothing). Surfaced in the prompt so a daemon-fired tick is
+# distinguishable from a scheduled one (2026-07-28: stale-ARB-trigger fires read
+# as generic ticks and got answered "nothing happened").
+REASON_SUFFIX=""
+if [[ -n "${1:-}" ]]; then REASON_SUFFIX=" [$1]"; fi
 LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 
 # Ensure we have a working PATH for cron (cron runs with minimal env)
@@ -73,7 +79,7 @@ if command -v tmux >/dev/null 2>&1 && tmux has-session -t operator 2>/dev/null; 
                 fi
                 sleep 1
             done
-            CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened."
+            CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.${REASON_SUFFIX}"
             tmux send-keys -t operator:0.0 -l "${CRON_MSG}"
             sleep 0.2
             tmux send-keys -t operator:0.0 Enter

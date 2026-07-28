@@ -3828,3 +3828,27 @@ Shipped the cancel-race guard into clob_v2 cmd_cancel: after any "canceled" resp
 the live book, and FAIL LOUDLY (exit 3) if the id survives. Converts last night's lesson (5.4sh filled
 post-"canceled") into tooling before FOMC-day order management needs it. No other findings — session-
 hang mitigation remains operator-side (restart recommended); doctrine/notes are current.
+
+## 2026-07-28 ~11:20 UTC — OPERATOR CATCH: stale ARB trigger + daemon ticks arriving contextless
+
+Operator: "I keep getting arb trigger crossed notifications on TG but they don't seem injected here."
+Investigated — TWO real bugs, both mine, and my "stall-era retry" diagnosis this morning was WRONG:
+
+1. **STALE TRIGGER (root cause):** opportunity_triggers.json still held `arb-retrace-add` (ARB ≤$0.08)
+   from the pre-sale era. ARB was CLOSED Jul-24 (DEC-0057) and re-entry re-armed on a FILED Tally
+   proposal — NOT a price level. ARB drifted to $0.0775 → the trigger fired every 5min for hours,
+   telegramming the operator and firing 90-min-cooldown ticks. Removed; replaced with a
+   NON-ACTIONABLE `arb-deep-value-surface` at ≤$0.065 (surface-to-operator only, IBKR route).
+   LESSON: closing a position must also DISARM its triggers — added to the close checklist.
+
+2. **CONTEXT LOSS (why I misread them):** daemon-fired ticks arrived as the generic "Cron tick <TS>.
+   Run your scheduled check-in" prompt — indistinguishable from cron. I answered them "brief, nothing
+   happened" and labeled them stall-era retries, never seeing that an armed trigger had crossed. FIXED:
+   _fire_tick now passes a reason; daily_checkin.sh appends it as "[TRIGGERED BY OPPORTUNITY WATCH:
+   <why> — see notes/opportunity_alerts.jsonl, act on it FIRST]". Same channel available to
+   news_watcher fires.
+
+Daemon restarted with new config+code (pid 528756; note: pkill self-match bit me AGAIN mid-fix —
+exit 144 — use PID-file/ps targeting, never pkill with the pattern repeated in the command line).
+No capital impact: the trigger was for an add I'd correctly have declined anyway (thesis requires a
+filed proposal), but the operator's attention was being spent on noise for hours. Good catch.

@@ -113,7 +113,13 @@ def _fire_tick(state: dict, why: str) -> None:
     state["last_cron"] = _now()
     _log(f"FIRING tick: {why}")
     try:
-        subprocess.Popen(["bash", str(SCRIPTS / "daily_checkin.sh")],
+        # Pass the REASON through (2026-07-28): daemon-fired ticks used to
+        # arrive as the generic scheduled-tick prompt, indistinguishable from
+        # cron — so an off-schedule fire read as noise instead of "an armed
+        # trigger crossed, act on it". daily_checkin.sh appends $1 to the prompt.
+        subprocess.Popen(["bash", str(SCRIPTS / "daily_checkin.sh"),
+                          f"TRIGGERED BY OPPORTUNITY WATCH: {why} — see notes/opportunity_alerts.jsonl "
+                          f"(tail) for the alert payload; act on it FIRST, then the standard checks."],
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except Exception as e:
         _log(f"tick fire failed: {e}")
