@@ -3906,3 +3906,13 @@ hike ~35-36% — UNCHANGED from my entry-week reads, so the PM-vs-futures diverg
 believes the hike is coming, just not this meeting; that is precisely the risk-premium-vs-timing
 distinction that made me shade my July fair 0.36→0.25. Position unchanged: 41.2sh @0.254, hold to
 resolution (exit at 0.20 bid would realize −$2.2 to avoid a binary I sized for).
+
+## 2026-07-28 ~18:25 UTC — operator: EV of holding Fed vs selling? (computed, live book)
+
+Walked the real bid book rather than trusting the mark: sell-now nets $7.61 (41.2sh fill at avg 0.205
+= $8.46 gross − $0.85 taker fee) vs hold EV $10.31 at fair 0.25 → holding wins by $2.70. BREAKEVEN
+p = 0.1845: selling is right only if true P(hike) < 18.5%; even the most bearish honest read (~0.20,
+economists' unanimous-hold view) still favours holding by $0.64. Two structural drivers: resolution
+is fee-free while exiting pays the 1000bps taker fee, and the bid sits 4.5pp under fair. Answer to
+operator: hold — not from conviction (it's fair-valued at best, wouldn't enter today) but because
+selling here is strictly worse than resolution.
