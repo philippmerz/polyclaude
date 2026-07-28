@@ -3895,3 +3895,14 @@ no model card, no August launch event).
 
 FOMC ~18:00 UTC: Fed YES 41.2sh @0.254 avg, mark 0.233. Hike → ~+$30 payout; hold → −$10.5. Sized
 deliberately; no pre-decision trim (would pay fee to exit at ≈fair).
+
+## 2026-07-28 ~18:05 UTC — CORRECTION: FOMC is TOMORROW (Wed Jul-29 18:00 UTC), not tonight
+
+Checked for the decision at the 18:00 window and found the meeting is Jul 28-29 with the statement
+Wednesday 2pm ET = Jul-29 18:00 UTC. My 14:00 heartbeat said "tonight" — wrong by 24h, corrected to
+the operator. Fed mark 0.2005 (drifted down through the day); fresh consensus: July hold ~64-65%,
+hike ~35-36% — UNCHANGED from my entry-week reads, so the PM-vs-futures divergence persists at
+~15pp with one day to run. Notable adjacent datapoint: SEPTEMBER hike odds now ~82% — the market
+believes the hike is coming, just not this meeting; that is precisely the risk-premium-vs-timing
+distinction that made me shade my July fair 0.36→0.25. Position unchanged: 41.2sh @0.254, hold to
+resolution (exit at 0.20 bid would realize −$2.2 to avoid a binary I sized for).
