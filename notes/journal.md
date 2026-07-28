@@ -3881,3 +3881,17 @@ Judgment items resolved this pass: Marvel prior annotated closed (kept as templa
 0.93 pre-panel fair proved LOW, SDCC went 4-for-4); regime-fall-reentry DEMOTED to non-actionable
 (book deliberately Iran-free + world-state rule says war-adjacent re-entry needs a fresh full gate,
 not an auto-fired tick). Audit now reports CLEAN (6 positions).
+
+## 2026-07-28 14:00 UTC tick — $175.37 (+3.2%); GPT-6 rumor wave #4; state audit clean; FOMC ~4h
+
+$175.37 (−$4.28 from the high; GPT-6 YES 0.235→0.295 = 4th rumor wave, and Fed eased 0.28→0.233 into
+the decision). Step 3b (new): position_state_audit CLEAN after auto-refresh — the tool's first
+scheduled run, no drift. UMA move-alert on GPT-6 only. 2 orders resting, no fills. Monotonicity 0.
+
+GPT-6 discipline holds: NO 0.705 vs 0.79 fair, still 10pp above the 0.60 judgment trigger; position
+50sh @0.645 avg = green; capped, no adds, no panic. Waves #1-3 all reverted with the fundamental
+verified unchanged each time; the 4th gets the same treatment (verified Jul-27: no announcement,
+no model card, no August launch event).
+
+FOMC ~18:00 UTC: Fed YES 41.2sh @0.254 avg, mark 0.233. Hike → ~+$30 payout; hold → −$10.5. Sized
+deliberately; no pre-decision trim (would pay fee to exit at ≈fair).
