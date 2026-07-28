@@ -3852,3 +3852,16 @@ Daemon restarted with new config+code (pid 528756; note: pkill self-match bit me
 exit 144 — use PID-file/ps targeting, never pkill with the pattern repeated in the command line).
 No capital impact: the trigger was for an add I'd correctly have declined anyway (thesis requires a
 filed proposal), but the operator's attention was being spent on noise for hours. Good catch.
+
+## 2026-07-28 ~11:40 UTC — shipped scripts/daemonctl.sh (kills the pkill-self-match class for good)
+
+Third shell-suicide by pkill self-match today → mechanized the safe path instead of re-journaling the
+rule. `daemonctl.sh {status|stop|restart} <script.py>` walks /proc/<pid>/cmdline, skips its own pid,
+and requires a python invocation — structurally unable to match the caller (whose cmdline is
+"bash daemonctl.sh ..."). Verified live on both daemons; shell survived.
+FIRST USE CAUGHT A REAL BUG: `status opportunity_watch.py` showed TWO daemons (528756 from my manual
+nohup at 11:14, 528876 from daemon_keepalive at 11:20 — my restart raced the keepalive's 10-min
+sweep). Duplicates = double alerts + double tick-fires, i.e. exactly the noise class the operator
+just flagged. Killed the manual one; canonical keepalive-managed daemon (528876) retained.
+LESSON: restart daemons via keepalive or daemonctl, never a bare nohup — the keepalive will
+otherwise start a second copy.
