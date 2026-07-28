@@ -31,7 +31,6 @@ are standard... part of your everyday repertoire"). Two uses:
 | 2026-07-24 | Trump-out NO | SELL | 28 | 0.97 | 0.97 | Dec-31 fade; us-politics |
 | 2026-07-24 | Satoshi NO | SELL | 6 | 0.99 | 0.99 | Dec-31 fade |
 | 2026-07-25 | GPT-6 NO | BID | 10 | 0.67 | 0.82 | Dip-catcher (mark eased to 0.725) |
-| 2026-07-26 | MacBook NO | BID | 25 | 0.40 | 0.73 | Front-of-queue in 0.39/0.43 spread; coverage unlocked (macbook/gurman tier-2 keywords added). Fill = 33pp under fair |
 
 **CANCELLED 2026-07-26 02:20 (post-panel rule):** Apple 13@0.80 + Prime 11@0.78 — panels passed
 without confirmed qualifying announcements; benign-adverse-selection logic is DEAD once the
@@ -52,3 +51,10 @@ band of my 0.67 bid → rewards qualification currently DEAD; revives only if mi
 and size ≥20. Verify any past accrual as pUSD credits in the daily balance sweep.
 Do NOT deepen positions to farm rewards; two-sided quoting banned where it fights alpha
 (Trump-out $10/d min50, Satoshi $2/d min50, SpaceX $30/d min200 all below-min anyway).
+
+**FILLED 2026-07-28 02:54:** MacBook NO bid 25@0.40 (benign dip, no news; position 60sh @0.394 avg
+vs 0.73 fair). **CANCEL-RACE LESSON (02:56 audit):** the GPT-6 10sh order's 5.4sh remainder FILLED
+Jul-27 01:05 DESPITE the Jul-26 22:10 cancel command returning "canceled" — the grep of response
+text never verified removal. True GPT-6 position: 50sh @0.645 (cap overshoot +5.4sh, profitable but
+unintended). RULE: after every cancel, VERIFY via `clob_v2.py orders` that the id is gone.
+Remaining live: Trump-out SELL 28@0.97, Greenland SELL 29@0.98 only.

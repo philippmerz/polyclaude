@@ -3812,3 +3812,12 @@ Fed YES 0.2775 (UMA move-alert +7.7pp overnight, now ABOVE 0.254 avg = +$1.1 MTM
 debate resolves tomorrow ~18:00 UTC). GPT-6 NO 0.765 firm — dip-buys +9.5pp. Scans 0 arbs, UMA clean
 otherwise, 3 orders no fills, mem 1.1GB. (Ostium status timeout = dead-venue cosmetic.) Session
 restart still recommended; state fully durable in notes/.
+
+## 2026-07-28 ~03:00 UTC — MacBook bid FILLED 25@0.40; GPT-6 cancel-race discovered (true size 50sh)
+
+MacBook NO maker bid filled 02:54 on a benign dip (no news; position 60sh @0.394 vs 0.73 fair —
++33pp on the new shares, fee-free). AUDIT FINDING: GPT-6 true size is 50sh @0.645 NOT 44.6 — the
+Jul-26 22:10 cancel returned "canceled" text but the 5.4sh remainder FILLED at 01:05 Jul-27; my grep
+never verified removal from the book. Outcome lucky (+9.5pp on the extras); process gap real → RULE:
+verify every cancel against the orders list. GPT-6 hard-closed to adds (21% of book). Book now:
+2 resting orders (fade sells only), 8 positions, ~$7 pUSD free.

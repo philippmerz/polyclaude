@@ -446,5 +446,19 @@
   "size_usd": 5.74,
   "outcome": null,
   "fade_would_have_won": null
+ },
+ {
+  "date": "2026-07-28",
+  "question": "Will Apple release a touchscreen MacBook in 2026?",
+  "side": "NO",
+  "ask": 0.4,
+  "days": 156,
+  "pop_edge_pp": null,
+  "catalyst_p_yes_central": 0.27,
+  "decision": "MAKER FILL 25sh@0.40 (position 60sh @0.394)",
+  "reason": "Resting bid filled on benign dip (no macbook news; keywords watching). 33pp under kimi-verified 0.73 fair.",
+  "size_usd": 10.0,
+  "outcome": null,
+  "fade_would_have_won": null
  }
 ]
