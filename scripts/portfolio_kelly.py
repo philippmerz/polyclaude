@@ -254,13 +254,22 @@ def main() -> int:
     for r in candidates[:5]:
         print(f"  +${r['delta']:>6.2f}  {r['side']} @ ${r['mark']}  edge={r['edge_pp']:>5.2f}pp  {r['title']}{r.get('stale','')}")
 
-    print(f"\nOver-sized (delta < -$5 = consider trim):")
+    # 2026-07-29: this section flagged the Fed position as over-sized for THREE
+    # DAYS after I cut its prior 0.36->0.25, and I read it as informational —
+    # because "consider trim" doesn't say HOW, and a taker trim usually loses to
+    # holding once the fee is counted. Every over-sized line now prints the
+    # fee-free route: rest a post-only sell AT FAIR (breakeven for a maker sale
+    # IS fair; a taker sale needs fair/(1-fee), usually unreachable).
+    print(f"\nOver-sized (delta < -$5) — trim via a FEE-FREE maker sell at fair, not by crossing:")
     over = [r for r in actives if r["delta"] is not None and r["delta"] < -5]
     over.sort(key=lambda r: r["delta"])
     if not over:
         print("  (none)")
     for r in over[:5]:
         print(f"  ${r['delta']:>+7.2f}  {r['side']} @ ${r['mark']}  edge={r['edge_pp']:>5.2f}pp  {r['title']}{r.get('stale','')}")
+        print(f"           -> rest post-only SELL at {r['p_win']:.3f} (= fair; fee-free). "
+              f"HIDDEN-INFO class (GPT-6/MacBook): NO resting sell — an informed up-move means "
+              f"fair jumped; reduce by active judgment only. See notes/resting_orders.md")
 
     return 0
 

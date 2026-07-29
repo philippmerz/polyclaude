@@ -3984,3 +3984,20 @@ cost more than the variance removed.
 **RULE ADDED: a prior CUT must trigger an immediate re-size check, not just a file note.** Had I run
 it Sunday at 0.36→0.25, the full position would have been offered at 0.26 with THREE days of demand
 to fill against, instead of one night (only 8.22sh filled).
+
+## 2026-07-29 ~13:15 UTC — meta-reflection: the oversized flag WAS firing; I read it as informational
+
+Chased the "prior cut → re-size" rule and found something more useful: portfolio_kelly ALREADY
+flagged the Fed position as over-sized (−$7.85) and had been doing so since the Sunday prior cut.
+The failure wasn't detection, it was that "consider trim" doesn't say HOW — and a taker trim
+usually loses to holding once the 10%×min(p,1−p) fee is counted, so the flag read as unactionable
+noise. Classic reporting-vs-action gap.
+
+FIXED: every over-sized line now prints the fee-free route — "rest post-only SELL at <fair>
+(= maker breakeven)" — plus the hidden-info exception inline (GPT-6/MacBook get NO resting sell;
+an informed up-move means fair jumped). Verified live: both flagged positions now carry an
+executable instruction instead of a shrug.
+
+Note the loop this closes: operator's limit-order push (Jul-24) → exit-math questions (Jul-28) →
+exit_analysis.py → operator's sizing challenge (Jul-29) → the flag that was already firing gets an
+action attached. Each step made the previous one operational rather than merely known.
