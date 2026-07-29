@@ -115,7 +115,10 @@
 - **State files drift when positions change.** Closing a position must disarm its
   triggers (stale ARB trigger fired every 5min for hours, telegramming the operator);
   `position_state_audit.py --fix` reconciles triggers/priors/claim-snapshot/acked-holds
-  against the live book each tick (step 3b).
+  against the live book each tick (step 3b). The drift runs BOTH directions: a judgment
+  trigger written into a priors note is NOT armed until it exists in
+  opportunity_triggers.json (GPT-6 NO<0.60 sat note-only while the bid touched 0.60,
+  2026-07-29 — armed via new `clob_bid` kind).
 - **Markets DE-INDEX mid-resolution** (Mojtaba, Marvel): data-api drops the row, slug
   404s, redeem-all goes blind. conditionIds are snapshotted per position
   (notes/position_condition_ids.json) and `clob_v2 redeem-one <conditionId>` claims
