@@ -116,7 +116,12 @@
 - **NEVER pkill/pgrep with the pattern anywhere else in the command line** — killed the
   shell THREE times (exit 144). Use `scripts/daemonctl.sh {status|stop|restart}` —
   structurally immune. Restart daemons via daemonctl/keepalive only; a bare nohup races
-  the keepalive into DUPLICATE daemons (= double alerts, double tick-fires).
+  the keepalive into DUPLICATE daemons (= double alerts, double tick-fires). The
+  keepalive recognizes ONLY the exact cmdline form `<python3> <ABS-path> start` — any
+  restart path that launches with a relative script path spawns a keepalive-invisible
+  daemon that gets duplicated within 10 min (daemonctl itself did this, 2026-07-29,
+  7.5h dual-run; fixed to absolute). After ANY daemon restart, verify `status` shows
+  ONE pid ~10+ min later, not just immediately.
 - **State files drift when positions change.** Closing a position must disarm its
   triggers (stale ARB trigger fired every 5min for hours, telegramming the operator);
   `position_state_audit.py --fix` reconciles triggers/priors/claim-snapshot/acked-holds

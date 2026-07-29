@@ -4081,3 +4081,14 @@ prior on a 52/45 coin-flip 48d + 2 CPI prints out → skip WITHOUT ledger score 
 made, prior ≈ market). Book otherwise quiet: 5 positions, MTM $142.82 (+5.39% unrealized),
 MacBook NO eased 0.44→0.43, GPT-6 trigger armed and quiet. This closes FOMC day: net effect
 of the whole Fed episode on the book ≈ +$0.20 realized + the exit/pull doctrine it produced.
+
+## 2026-07-29 ~22:20 UTC — continuation: duplicate opportunity_watch found + root-caused (daemonctl bug)
+
+Health check found TWO opportunity_watch pids. Root cause: daemonctl restart launches with a
+RELATIVE script path; daemon_keepalive's alive() regex requires the ABSOLUTE-path cmdline form,
+so my 14:31 restart (563573) was keepalive-invisible → keepalive spawned 564208 at 14:40 →
+7.5h dual-run. No trigger fired in the window, so no double alerts — cheap escape. Fixed
+daemonctl to absolute path; killed the relative-path instance; kept 564208 (correct form, has
+the clob_bid code — spawned from disk post-edit). Lesson refined in 01_lessons.md: verify
+status shows ONE pid ~10min AFTER any restart, not just immediately. Second daemonctl-family
+bug found by checking; the tool that fixed pkill self-match had its own keepalive blind spot.

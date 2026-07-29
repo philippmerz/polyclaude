@@ -57,7 +57,12 @@ case "${ACTION}" in
     fi
     if [[ "${ACTION}" == "restart" ]]; then
         cd "${REPO}" || exit 1
-        nohup "${PY}" "scripts/${SCRIPT}" start >> "logs/${SCRIPT%.py}.log" 2>&1 &
+        # ABSOLUTE script path required: daemon_keepalive.sh's alive() regex
+        # matches the exact cmdline form "<python3> <abs-path> start" — a
+        # relative-path daemon is invisible to it and gets DUPLICATED on the
+        # next 10-min keepalive pass (observed 2026-07-29: 7.5h of two
+        # opportunity_watch instances after a relative-path restart).
+        nohup "${PY}" "${REPO}/scripts/${SCRIPT}" start >> "logs/${SCRIPT%.py}.log" 2>&1 &
         sleep 3
         pids=$(find_pids | tr '\n' ' ')
         echo "restarted: ${pids:-<FAILED TO START>}"
