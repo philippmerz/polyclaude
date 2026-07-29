@@ -1,14 +1,14 @@
 [
  {
   "date": "2026-07-02",
-  "question": "Will Iga Świątek be the 2026 Women's Wimbledon Winner?",
+  "question": "Will Iga \u015awi\u0105tek be the 2026 Women's Wimbledon Winner?",
   "side": "NO",
   "ask": 0.902,
   "days": 9.2,
   "pop_edge_pp": 7.1,
   "catalyst_p_yes_central": 0.147,
   "decision": "SKIP",
-  "reason": "Edge INVERTED on instance analysis: structured breakdown P(win)=14.7% (defending champion, dominant R3 form) vs market 9.8% — the market may UNDERPRICE her. Central p_NO 0.86 < ask 0.902 = negative edge before haircut.",
+  "reason": "Edge INVERTED on instance analysis: structured breakdown P(win)=14.7% (defending champion, dominant R3 form) vs market 9.8% \u2014 the market may UNDERPRICE her. Central p_NO 0.86 < ask 0.902 = negative edge before haircut.",
   "size_usd": 0,
   "outcome": "NO",
   "fade_would_have_won": null
@@ -22,7 +22,7 @@
   "pop_edge_pp": 6.8,
   "catalyst_p_yes_central": 0.05,
   "decision": "SKIP",
-  "reason": "Positive at central (p_NO 0.95 vs 0.905 = +$0.30 on $6) but fails the pessimistic bound (0.90 -> -$0.03 vs +$0.05 required). Did NOT override the default haircut on ledger candidate #1 — unforced data first; if skips like this systematically resolve NO, the ledger recalibrates the haircut at N~30-50, not N=1.",
+  "reason": "Positive at central (p_NO 0.95 vs 0.905 = +$0.30 on $6) but fails the pessimistic bound (0.90 -> -$0.03 vs +$0.05 required). Did NOT override the default haircut on ledger candidate #1 \u2014 unforced data first; if skips like this systematically resolve NO, the ledger recalibrates the haircut at N~30-50, not N=1.",
   "size_usd": 0,
   "outcome": "NO",
   "fade_would_have_won": null
@@ -36,35 +36,35 @@
   "pop_edge_pp": null,
   "catalyst_p_yes_central": null,
   "decision": "PRE-SKIP",
-  "reason": "Scan had 16 candidates >=3pp. Screened out on doctrine before gating: Iran-adjacent (Mojtaba-seen/airspace/Hormuz-fees/Hormuz-normal — correlation with existing book + in-window momentum = trap-analog), GPT-5.6-by-Jul-6 (announcement-trap shape, thin book), exact-score fades (population edge overstated for plausible scorelines), remaining Wimbledon/WC names (lower edge than the two gated).",
+  "reason": "Scan had 16 candidates >=3pp. Screened out on doctrine before gating: Iran-adjacent (Mojtaba-seen/airspace/Hormuz-fees/Hormuz-normal \u2014 correlation with existing book + in-window momentum = trap-analog), GPT-5.6-by-Jul-6 (announcement-trap shape, thin book), exact-score fades (population edge overstated for plausible scorelines), remaining Wimbledon/WC names (lower edge than the two gated).",
   "size_usd": 0,
   "outcome": null,
   "fade_would_have_won": null
  },
  {
   "date": "2026-07-03",
-  "question": "(daily pass — no gated evaluations)",
+  "question": "(daily pass \u2014 no gated evaluations)",
   "side": "-",
   "ask": null,
   "days": null,
   "pop_edge_pp": null,
   "catalyst_p_yes_central": null,
   "decision": "PRE-SKIP",
-  "reason": "Same candidate set as 2026-07-02 (Wimbledon fades re-priced slightly: Swiatek 6.9pp@0.904, Zverev 6.1pp@0.912 — both skip-logic unchanged overnight, no matches resolved the conjunctions; rest are screened classes: Iran-correlated, exact-scores, Musk-tweets thin, Egypt-semis 4.2pp@0.952). ARITHMETIC FINDING: at ask>=0.95 the flat 0.05 haircut makes the pessimistic bound unpassable (needs p_central>1.0) -> the validated 0.95-0.98 bucket (+2.8pp) is unreachable BY CONSTRUCTION. Flagged for design resolution (backlog); not changed unilaterally.",
+  "reason": "Same candidate set as 2026-07-02 (Wimbledon fades re-priced slightly: Swiatek 6.9pp@0.904, Zverev 6.1pp@0.912 \u2014 both skip-logic unchanged overnight, no matches resolved the conjunctions; rest are screened classes: Iran-correlated, exact-scores, Musk-tweets thin, Egypt-semis 4.2pp@0.952). ARITHMETIC FINDING: at ask>=0.95 the flat 0.05 haircut makes the pessimistic bound unpassable (needs p_central>1.0) -> the validated 0.95-0.98 bucket (+2.8pp) is unreachable BY CONSTRUCTION. Flagged for design resolution (backlog); not changed unilaterally.",
   "size_usd": 0,
   "outcome": null,
   "fade_would_have_won": null
  },
  {
   "date": "2026-07-03",
-  "question": "(BUCKET FALSIFIED — study, not a market)",
+  "question": "(BUCKET FALSIFIED \u2014 study, not a market)",
   "side": "-",
   "ask": null,
   "days": null,
   "pop_edge_pp": null,
   "catalyst_p_yes_central": null,
   "decision": "BUCKET_DEAD",
-  "reason": "Fresh replication (N=836, original methodology): 0.90-0.95 -0.5pp±2.9 (was +4.8pp), 0.95-0.98 -0.5pp±1.9 (was +2.8pp); negative at executable asks. Population harvesting terminated at N=0 deployed dollars — the ledger's falsification purpose fulfilled the cheap way. Ledger continues as the record of instance-thesis gated evaluations.",
+  "reason": "Fresh replication (N=836, original methodology): 0.90-0.95 -0.5pp\u00b12.9 (was +4.8pp), 0.95-0.98 -0.5pp\u00b11.9 (was +2.8pp); negative at executable asks. Population harvesting terminated at N=0 deployed dollars \u2014 the ledger's falsification purpose fulfilled the cheap way. Ledger continues as the record of instance-thesis gated evaluations.",
   "size_usd": 0,
   "outcome": "FALSIFIED",
   "fade_would_have_won": null
@@ -78,7 +78,7 @@
   "pop_edge_pp": null,
   "catalyst_p_yes_central": null,
   "decision": "PRE-SKIP",
-  "reason": "Instance evaluation off fresh info (Mojtaba ABSENT from his father's Jul 3-9 state funeral, consistent with incapacity reports): supports NO, but the funeral runs to Jul-9 and the regime has MAXIMAL incentive to stage an appearance now if he can appear at all — honest P(not-seen) ~0.75-0.85 << the ~0.955 the robust gate needs at NO 0.90. YES at ~0.10 has central edge (P(seen) ~0.15-0.25) but subjective 'seen in public' resolution = UMA-photo-dispute risk both ways + speculative YES not a fade. Neither side clears the instance-thesis bar with conviction. No catalyst_check spawned (ambiguity is structural, not informational). [2026-07-15 deadline update: Mojtaba NOT seen; NO at 0.997 -> the skipped fade@0.90 would have won ~+10%/13d. Calibration: my P(not-seen) 0.75-0.85 was too conservative — the staging-incentive hypothesis never materialized. Market also DE-INDEXED from UI/gamma (still on CLOB) — note the de-indexing phenomenon for thin/sensitive markets.]",
+  "reason": "Instance evaluation off fresh info (Mojtaba ABSENT from his father's Jul 3-9 state funeral, consistent with incapacity reports): supports NO, but the funeral runs to Jul-9 and the regime has MAXIMAL incentive to stage an appearance now if he can appear at all \u2014 honest P(not-seen) ~0.75-0.85 << the ~0.955 the robust gate needs at NO 0.90. YES at ~0.10 has central edge (P(seen) ~0.15-0.25) but subjective 'seen in public' resolution = UMA-photo-dispute risk both ways + speculative YES not a fade. Neither side clears the instance-thesis bar with conviction. No catalyst_check spawned (ambiguity is structural, not informational). [2026-07-15 deadline update: Mojtaba NOT seen; NO at 0.997 -> the skipped fade@0.90 would have won ~+10%/13d. Calibration: my P(not-seen) 0.75-0.85 was too conservative \u2014 the staging-incentive hypothesis never materialized. Market also DE-INDEXED from UI/gamma (still on CLOB) \u2014 note the de-indexing phenomenon for thin/sensitive markets.]",
   "size_usd": 0,
   "outcome": "PENDING-NO (CLOB NO 0.997/0.998 at deadline; de-indexed from UI but trading; resolves NO shortly)",
   "fade_would_have_won": true
@@ -134,7 +134,7 @@
   "pop_edge_pp": null,
   "catalyst_p_yes_central": 0.012,
   "decision": "SKIP",
-  "reason": "Gate caught my stale read: Trump BACKTRACKED on the toll Jul-14/15 (24h reversal). Market 1.3% = check's structured 1.2% — efficient, not mispriced. The instance gate beat headline recall.",
+  "reason": "Gate caught my stale read: Trump BACKTRACKED on the toll Jul-14/15 (24h reversal). Market 1.3% = check's structured 1.2% \u2014 efficient, not mispriced. The instance gate beat headline recall.",
   "size_usd": 0,
   "outcome": null,
   "fade_would_have_won": null
@@ -218,7 +218,7 @@
   "pop_edge_pp": null,
   "catalyst_p_yes_central": null,
   "decision": "SKIP",
-  "reason": "Book repriced 40pp+ toward YES since sweep (NO 0.86->0.44) — market learned something about the xAI/ladder we don't know (sweep's ladder also stale: listed post-IPO SpaceX as private #2). Entering after an informed move = fading informed flow.",
+  "reason": "Book repriced 40pp+ toward YES since sweep (NO 0.86->0.44) \u2014 market learned something about the xAI/ladder we don't know (sweep's ladder also stale: listed post-IPO SpaceX as private #2). Entering after an informed move = fading informed flow.",
   "size_usd": 0,
   "outcome": null,
   "fade_would_have_won": null
@@ -246,7 +246,7 @@
   "pop_edge_pp": null,
   "catalyst_p_yes_central": 0.25,
   "decision": "EXIT $9.36",
-  "reason": "§5 premium strength-exit at armed 0.78 trigger (bid 0.78 vs fair 0.75 = +3pp premium). Realized -$0.48; edge consumed, exited last Iran-cluster leg at premium during active war. DEC-0053.",
+  "reason": "\u00a75 premium strength-exit at armed 0.78 trigger (bid 0.78 vs fair 0.75 = +3pp premium). Realized -$0.48; edge consumed, exited last Iran-cluster leg at premium during active war. DEC-0053.",
   "size_usd": 9.36,
   "outcome": null,
   "fade_would_have_won": null
@@ -304,7 +304,7 @@
   "ask": 0.8,
   "catalyst_p_yes_central": 0.95,
   "decision": "REST-BID 13sh@0.80 post-only",
-  "reason": "Announce-template: first-ever Hall H showcase Sat 2-4pm PT + official-channels backdoor (Apple TV+ near-daily PRs) + renewals qualify. YES asks EMPTY (holders won't sell) — maker bid above the 0.75 fisher. Benign adverse selection: informed flow lifts YES asks, doesn't hit YES bids. Fee-free. Fill odds ~20-40%; unfilled = free option.",
+  "reason": "Announce-template: first-ever Hall H showcase Sat 2-4pm PT + official-channels backdoor (Apple TV+ near-daily PRs) + renewals qualify. YES asks EMPTY (holders won't sell) \u2014 maker bid above the 0.75 fisher. Benign adverse selection: informed flow lifts YES asks, doesn't hit YES bids. Fee-free. Fill odds ~20-40%; unfilled = free option.",
   "size_usd": 10.4
  },
  {
@@ -318,7 +318,7 @@
   "ask": 0.78,
   "catalyst_p_yes_central": 0.95,
   "decision": "REST-BID 11sh@0.78 post-only",
-  "reason": "Same structure (Carrie Hall H panel Sat; ask side just a 0.99 stub; 0.77 fisher bid below me). Re-entry into the leg exited @0.77 — coherent: fair 0.95, EV-max framework says buy back cheap if offered.",
+  "reason": "Same structure (Carrie Hall H panel Sat; ask side just a 0.99 stub; 0.77 fisher bid below me). Re-entry into the leg exited @0.77 \u2014 coherent: fair 0.95, EV-max framework says buy back cheap if offered.",
   "size_usd": 8.58
  },
  {
@@ -332,7 +332,7 @@
   "ask": 0.8,
   "catalyst_p_yes_central": 0.22,
   "decision": "SKIP",
-  "reason": "Displayed 0.395 mid was a mirage (book 0.20/0.59). NO eff 0.82 (fee) vs my p_no 0.78 = negative. YES ask 0.59 above fair (no slate panel this year; Lanterns=already-announced). Resting NO bid FAILS coverage rule: embargo asymmetry — informed flow on a coming reveal hits NO bids.",
+  "reason": "Displayed 0.395 mid was a mirage (book 0.20/0.59). NO eff 0.82 (fee) vs my p_no 0.78 = negative. YES ask 0.59 above fair (no slate panel this year; Lanterns=already-announced). Resting NO bid FAILS coverage rule: embargo asymmetry \u2014 informed flow on a coming reveal hits NO bids.",
   "size_usd": 0
  },
  {
@@ -346,7 +346,7 @@
   "ask": 0.8,
   "catalyst_p_yes_central": 0.15,
   "decision": "SKIP",
-  "reason": "D23-hold thesis (owned venue 3wk away) caps P(YES) ~0.15 but NO eff 0.82 leaves 0-3pp after fee — inside estimation error, haircut kills it. Same coverage-rule bar on resting NO bids.",
+  "reason": "D23-hold thesis (owned venue 3wk away) caps P(YES) ~0.15 but NO eff 0.82 leaves 0-3pp after fee \u2014 inside estimation error, haircut kills it. Same coverage-rule bar on resting NO bids.",
   "size_usd": 0
  },
  {
@@ -358,7 +358,7 @@
   "pop_edge_pp": null,
   "catalyst_p_yes_central": 0.36,
   "decision": "ENTER $6.21 (23.6sh @0.263, eff 0.289)",
-  "reason": "FedWatch 35-38pct vs PM 26pct — consensus-anchored divergence; PM lags rates desks. DEC-0058.",
+  "reason": "FedWatch 35-38pct vs PM 26pct \u2014 consensus-anchored divergence; PM lags rates desks. DEC-0058.",
   "size_usd": 6.21,
   "outcome": null,
   "fade_would_have_won": null
@@ -372,7 +372,7 @@
   "pop_edge_pp": 3.3,
   "catalyst_p_yes_central": 0.975,
   "decision": "SKIP",
-  "reason": "Meeting VERIFIED scheduled Tue Jul-28 (PM office + Trump, Jul-24/25). Eff 0.963 after fee vs fair 0.975 = +1.2pp — fails the 0.05-haircut robust gate (pessimistic 0.925 < cost). Fine micro-carry, below bar.",
+  "reason": "Meeting VERIFIED scheduled Tue Jul-28 (PM office + Trump, Jul-24/25). Eff 0.963 after fee vs fair 0.975 = +1.2pp \u2014 fails the 0.05-haircut robust gate (pessimistic 0.925 < cost). Fine micro-carry, below bar.",
   "size_usd": 0,
   "outcome": null,
   "fade_would_have_won": null
@@ -400,7 +400,7 @@
   "pop_edge_pp": null,
   "catalyst_p_yes_central": null,
   "decision": "CANCELLED both unfilled",
-  "reason": "Post-catalyst rule: panels passed without confirmed qualifying announcements (Apple static 0.905; all 5 titles known); benign-adverse-selection logic dead once the embargo window closes — a fill would mean 'nothing announced' = adverse. Released $18.98 to the deploy queue.",
+  "reason": "Post-catalyst rule: panels passed without confirmed qualifying announcements (Apple static 0.905; all 5 titles known); benign-adverse-selection logic dead once the embargo window closes \u2014 a fill would mean 'nothing announced' = adverse. Released $18.98 to the deploy queue.",
   "size_usd": 0,
   "outcome": null,
   "fade_would_have_won": null
@@ -474,5 +474,35 @@
   "size_usd": 2.14,
   "outcome": null,
   "fade_would_have_won": null
+ },
+ {
+  "date": "2026-07-29",
+  "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31",
+  "action": "scored_skip",
+  "side": "No",
+  "my_prior": 0.87,
+  "market_price": 0.905,
+  "resolves": "2026-08-31",
+  "note": "SKIP: active Gulf escalation but 2025 abrupt-ceasefire precedent puts P(YES) 0.10-0.20; no robust edge at 0.905"
+ },
+ {
+  "date": "2026-07-29",
+  "slug": "will-john-james-win-the-2026-michigan-governor-republican-primary",
+  "action": "scored_skip",
+  "side": "Yes",
+  "my_prior": 0.955,
+  "market_price": 0.95,
+  "resolves": "2026-08-04",
+  "note": "SKIP: Trump-endorsed 2-man race but robust bound ~0.94 < ask 0.95; $875 vol24 thin book"
+ },
+ {
+  "date": "2026-07-29",
+  "slug": "will-francesca-hong-win-the-2026-wisconsin-governor-democratic-primary",
+  "action": "scored_skip",
+  "side": "Yes",
+  "my_prior": 0.91,
+  "market_price": 0.94,
+  "resolves": "2026-08-11",
+  "note": "SKIP: 29pt lead but big undecided share; market above my fair"
  }
 ]

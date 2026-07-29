@@ -4011,3 +4011,35 @@ and inline code comments). Wrote strategy/01_lessons.md — six sections (execut
 covenant), every lesson with its one-line origin + date so it can be traced and trusted. Maintenance
 rule in the header: update IN THE SAME TURN a lesson lands. Wired into both onboarding paths
 (README next-agent line + 00_philosophy header: "read 01_lessons.md FIRST").
+
+## 2026-07-29 14:00 UTC tick (FOMC DAY, T-4h) — full pass, no entries; GPT-6 rumor wave #5 held
+
+Bankroll $174.95 (+2.9% vs $170 ref), 6 positions, MTM $149.84, unrealized +$5.95.
+
+**GPT-6 YES spiked 0.275→0.35** on a recycled "GPT-5.7/GPT-6 August launch" leak (1.5M ctx,
+new pretrain base). Re-verified: NO official release/date; 5.6 shipped Jul-9; the leak itself
+hedges the NAME (5.7 vs 6); April's dated-leak precedent failed. Wave #5 of the same class →
+p_no HELD 0.79 (verified today). NO bid sits at exactly 0.60 — judgment trigger (NO<0.60) one
+tick away; hard-closed to adds either way. Hidden-info class: no resting sell.
+
+**Fed pre-FOMC:** book 0.236/0.237, deep. 33sh riding; 32.78 resting at 0.26 (above fair,
+unfilled). Decision 18:00 UTC; will report either way per commitment.
+
+**Funnel (wide-net):** monotonicity 0/994 real · consistency 0/166 real · discover 1 candidate
+(Hormuz-normal-by-Aug-31 → scored skip: active escalation TODAY [Iran hit US bases; US+Saudi
+struck Iraq] but the 2025 abrupt-ceasefire precedent makes P(YES) 0.10-0.20 vs NO@0.905 — no
+robust edge) · favorite-fade 6 surfaced → 4 KILLED by world-state rule (WTI-$95, Iran-airspace,
+US-Iran-meeting, blockade-end — all war-adjacent fades during live escalation; the Trump-abrupt-
+ceasefire tail is what NO@0.92-0.96 can't afford) → 2 instance-gated: John James MI (2-man race
+post-Trump-endorsement, honest 0.955, robust bound < 0.95 ask, $875 book) + Hong WI (29pt lead
+but big undecideds, honest 0.91 < mkt 0.94) — both scored skips, ledger now 37 records · sports
+0 consensus deltas · macro: Sept-Fed markets untouchable pre-FOMC (presser reprices them).
+
+**Watchlist: 3 IBKR hits** — NVDA $193.44 (≤$200 band, −14% from check) and LRCX $263.95
+(≤$280, −17%) both FRESH; CCJ $85.79 repeat (surfaced yesterday). Common factor looks like one
+tech/capex risk-off leg — surfaced to operator in heartbeat, their IBKR call.
+
+**Hygiene:** DEC-0056 outcome recorded (Prime resolved YES; sell at 0.77 gave up $4.14 ex-post
+— the trade that seeded exit_analysis.py). State audit CLEAN (snapshot refreshed). exit_analysis:
+all 6 HOLD. Kelly scale-ins declined again — $11.37 pUSD stays reserved as D23 ammo (days away,
++43-69% realized template profile beats 26% APY bond-like adds). Redeem: 0. Aave idle $7.85.

@@ -9,11 +9,11 @@
     }
   },
   "SOL": {
-    "ts": 1784944916.4152331,
+    "ts": 1785333731.3163996,
     "result": {
-      "verdict": "WATCH",
-      "score": "2.75/4",
-      "summary": "**Current**: Not yet at entry trigger. Solana at $76 offers reasonable risk/reward (likely 1.5\u20133x over 3 years) but is a mid-cycle recovery, not a generational mispricing. **Entry price targets**: - $45\u201350 (another 35\u201341% decline) \u2014 true bear-market valuation, risk/reward shifts to 3\u20135x base case - **OR** on actual spot Solana ETF approval + Firedancer demonstrating sustained 10k+ TPS on mainnet (",
+      "verdict": "ENTER",
+      "score": "3.75/4",
+      "summary": "ENTER NOW at $73-75 for starter position, size per Kelly/4 (typical ~2-3% portfolio). Thesis is substantiated on 3+ dimensions: cyclical inflection from -74% drawdown with on-chain fundamentals at ATH, secular tailwind of enterprise financial infrastructure adoption is live and accelerating, specific catalysts (Firedancer, Alpenglow, RWA products) in next 12 months are concrete. Margin of safety p",
       "fresh": true
     }
   },
@@ -27,11 +27,11 @@
     }
   },
   "STX": {
-    "ts": 1784210616.525355,
+    "ts": 1785333828.7459736,
     "result": {
       "verdict": "WATCH",
-      "score": "3.5/4",
-      "summary": "- **Current price ($0.1663) is already opportunistic** (79% drawdown = 3-4 standard deviations), suitable for dollar-cost-average initiation if conviction is >60%. - **Hard entry on catalyst:** Wasm mainnet with validated 30x+ improvement + Bitcoin >$90k \u2192 commit 50% of allocation. - **Opportunistic dip entry:** STX $0.08\u2013$0.12 + sBTC TVL stabilizing $400M+ + positive Q2 developer metrics \u2192 full a",
+      "score": "3/4",
+      "summary": "**ENTER NOW at current $0.14\u20130.15, sized for 1\u20132% of capital.** Catalyst is live today (PoX-5 mainnet). Specific re-sizing thresholds: - **Add 1\u20132% more** if PoX-5 runs cleanly for 2 weeks and Genesis Bond (late August) attracts >$200M institutional capital. - **Add another 1%** if STX-denominated sBTC TVL re-reaches $500M+ by end of Q3 2026. - **Exit/trim if** PoX-5 launch encounters critical exp",
       "fresh": true
     }
   },
