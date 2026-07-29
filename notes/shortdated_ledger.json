@@ -460,5 +460,19 @@
   "size_usd": 10.0,
   "outcome": null,
   "fade_would_have_won": null
+ },
+ {
+  "date": "2026-07-29",
+  "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+  "side": "YES",
+  "ask": 0.26,
+  "days": 0.7,
+  "pop_edge_pp": null,
+  "catalyst_p_yes_central": 0.25,
+  "decision": "MAKER SELL FILL 8.22sh @0.26 (fee-free, ABOVE 0.25 fair)",
+  "reason": "The free-option maker sell rested after the operator's hold-vs-sell question filled on a slice: someone paid 1pp above my fair, fee-free. +$0.08 vs holding those shares, variance removed on 20% of the position. Remaining 33sh rides to FOMC.",
+  "size_usd": 2.14,
+  "outcome": null,
+  "fade_would_have_won": null
  }
 ]

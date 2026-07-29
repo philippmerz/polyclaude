@@ -3945,3 +3945,17 @@ would donate the news. Consistency check on the doctrine I wrote Friday — it h
 Book now: 4 resting orders (Greenland 0.98, Trump-out 0.97, SpaceX 0.96, Fed 0.26), all fee-free
 maker sells at-or-above fair. Prime's ~$2 EV loss (taker into a thin book) is now structurally
 prevented.
+
+## 2026-07-29 02:00 UTC tick (FOMC DAY) — the maker-sell free option FILLED above fair
+
+$176.99 (+4.1%). **The Fed maker sell rested last night at 0.26 FILLED 8.22sh at 22:43** — someone
+paid 1pp ABOVE my 0.25 fair, fee-free. Proceeds $2.14 vs $2.06 hold-EV on those shares = +$0.08 and
+20% of the position's variance retired at a price better than holding. Small in dollars, but it is
+the exact mechanism validated end-to-end: I could not decide between hold and sell, so I let the
+market decide at a price where selling was strictly better — and it paid. (Operator's Jul-24
+limit-order push → Jul-28 exit-math question → this fill.)
+
+Remaining Fed 33sh @0.254 avg rides into the 18:00 UTC decision with 32.8sh still resting at 0.26.
+Other 3 maker sells unfilled (Greenland 0.98, Trump-out 0.97, SpaceX 0.96). Scans 0 real arbs (the
+monotonicity scanner's new line confirms all midpoint flags evaporated on live books). State audit
+CLEAN, UMA clean, mem 945MB.
