@@ -62,7 +62,8 @@
  },
  "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting": {
   "p_yes": 0.25,
-  "note": "REVISED 0.36->0.25 (2026-07-26): futures-implied 30-38pct contains RISK PREMIUM (Citigroup; inflation-tail hedging), not pure probability; FactSet economists UNANIMOUS hold; PM led repricing both ways (3->28->20). Position 41.2sh avg 0.254 ~breakeven at revised fair; hold to FOMC Wed (selling at 0.19 bid < fair). LESSON: ask what the consensus number MEASURES before anchoring.",
-  "verified": "2026-07-26"
+  "note": "CLOSED 2026-07-29: all 41sh maker-sold 0.26 pre-FOMC; Fed held; net +$0.20 wash. REVISED 0.36->0.25 (2026-07-26): futures-implied 30-38pct contains RISK PREMIUM (Citigroup; inflation-tail hedging), not pure probability; FactSet economists UNANIMOUS hold; PM led repricing both ways",
+  "verified": "2026-07-26",
+  "closed": true
  }
 }

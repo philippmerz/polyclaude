@@ -504,5 +504,15 @@
   "market_price": 0.94,
   "resolves": "2026-08-11",
   "note": "SKIP: 29pt lead but big undecided share; market above my fair"
+ },
+ {
+  "date": "2026-07-29",
+  "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
+  "action": "resolved_flat",
+  "side": "Yes",
+  "my_prior": 0.25,
+  "market_price": 0.236,
+  "outcome": "NO (held, 5th consecutive)",
+  "note": "Entered on flawed FedWatch anchor (risk premium != probability). All 41sh maker-sold at 0.26 pre-decision (fee-free, above 0.25 fair); net +$0.20 wash. Market's 0.236 a hair better calibrated than my 0.25 on N=1. Execution doctrine saved -$8.4."
  }
 ]

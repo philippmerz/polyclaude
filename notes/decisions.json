@@ -1131,9 +1131,10 @@
         "macro",
         "consensus-anchor"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Fed HELD (5th consecutive). YES would have expired worthless (-$6.21 on this entry). SAVED by maker-at-fair exits: all 41sh sold at 0.26 (8.22 on Jul-28, 32.78 at 15:10 UTC Jul-29, 3h pre-decision). Whole-trade net \u2248 +$0.20 (wash).",
+      "calibration_delta": "market slightly better: final my p_yes 0.25 vs mkt ~0.236, outcome NO \u2014 Brier 0.0625 vs 0.0557",
+      "lesson": "Entry anchored on FedWatch risk-premium (measures hedging price, not probability) was the error; the exit doctrine (rest maker at/above fair when hold-vs-sell is close) turned a -$8.4 thesis-wrong position into a wash, fee-free.",
+      "resolved_at": "2026-07-29T18:02:25Z"
     },
     {
       "id": 59,
@@ -1150,9 +1151,10 @@
         "consensus-anchor",
         "add"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Fed HELD. Add at 0.241 also fully exited at 0.26 pre-decision (+7.9% realized on this lot). See DEC-0058.",
+      "calibration_delta": "same as DEC-0058",
+      "lesson": "Adding on a flawed anchor compounds the anchor error \u2014 the Sunday re-verify (ask what the number MEASURES) should have preceded the ADD, not followed it.",
+      "resolved_at": "2026-07-29T18:02:25Z"
     },
     {
       "id": 60,

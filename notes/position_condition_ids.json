@@ -27,14 +27,6 @@
    "negativeRisk": true
   },
   {
-   "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
-   "outcome": "Yes",
-   "size": 33.027,
-   "conditionId": "0xb5c0abeecb5502e6e8d83155c27819174d8317af3c425c3afc5a8c45257a3793",
-   "asset": "10547381015916960267379463101229159185405356924982461726471550099674011526491",
-   "negativeRisk": true
-  },
-  {
    "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
    "outcome": "No",
    "size": 29,

@@ -71,3 +71,15 @@ the news. SpaceX qualifies (mechanical, public-fact resolution) -> 34@0.96 reste
 — above both, ask was 0.218, so it fills only if the market pays above my fair. Free option; resolves
 Wed 18:00 UTC otherwise. GENERAL RULE: when hold-vs-sell is close, don't choose — rest a post-only
 sell at the price that makes selling strictly better and let the market decide.
+
+## Scheduled-catalyst pull rule (2026-07-29, generalized from the announce-window rule)
+
+ALL resting orders on a market with a SCHEDULED binary catalyst (FOMC, earnings, court ruling,
+launch date) must be PULLED before the release moment — not at the next tick after it. A resting
+sell left through the release is a free option against us: if the catalyst lands our way, bots
+lift the stale offer at pre-catalyst prices and capture the entire tail (Fed 0.26 sell vs ~1.00
+post-hike would have donated ~$24). Pre-catalyst fills remain benign (that IS the free option
+working — Fed 32.78sh filled at 0.26 three hours before a decision that zeroed YES).
+Mechanically: when a position has a known catalyst datetime, note the pull deadline in the
+position entry AND arm a pre-catalyst reminder; do not rely on a periodic check coinciding
+with the release (today it did, 18:00:05, and the order had already filled — luck, not process).

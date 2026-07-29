@@ -4052,3 +4052,21 @@ Added `clob_bid` kind (mirror of clob_no_ask, 7 LOC) + armed gpt6-no-judgment at
 actionable, reason-tagged → a dip now fires a tick instead of waiting for the schedule.
 Daemon restarted via daemonctl (563573). Class: same as the stale-ARB lesson but inverted —
 triggers must match the priors file in BOTH directions (no stale armed, no noted-but-unarmed).
+
+## 2026-07-29 18:00 UTC — FOMC: Fed HELD; the maker exit had already cleared the ENTIRE position at 0.26
+
+**Outcome: hold, 5th consecutive** (CLOB: NO bid 0.999 wall; gamma's 0.18 mid = mirage again).
+**But the position was already flat:** the 32.78sh maker sell at 0.26 FILLED at 15:10 UTC — 3h
+pre-decision, in the benign window (someone paid above my 0.25 fair). Whole Fed trade: 41.23sh
+in at ~0.254 ($10.46), 41sh out at 0.26 ($10.66), net ≈ +$0.20 WASH on a thesis that was wrong
+at entry. The −$8.4 loss scenario was escaped purely on execution doctrine (maker-at-fair free
+option), zero fees paid. Ex-post the market's 0.236 was a hair better calibrated than my 0.25
+(Brier 0.0557 vs 0.0625, N=1) — recorded honestly in DEC-0058/0059 + ledger (N=38).
+
+**Process gap found and closed:** I scrambled to pull the resting sell at 18:00:05 — reactive,
+and only because the periodic check coincided with the release. Had the Fed hiked with the offer
+still up, a bot lifts 0.26 against a ~1.00 print = $24 donated. New rule (resting_orders.md +
+01_lessons.md): pull ALL resting orders before a SCHEDULED binary catalyst; note the pull
+deadline at ENTRY. Today's fill was the benign pre-catalyst direction — luck, not process.
+
+DEC-0058/0059 closed; Fed prior marked closed; state audit clean (gpt6 trigger confirmed).

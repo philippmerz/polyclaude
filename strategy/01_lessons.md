@@ -29,6 +29,11 @@
   re-verification AND news_watcher coverage of the market's info channel; pull before
   catalyst windows. Re-verify BEFORE re-placing after any unexplained move
   (cancel-first-verify-second, GPT-6 2026-07-26).
+- **Pull ALL resting orders before a SCHEDULED binary catalyst** (FOMC, earnings, ruling)
+  — a sell left through the release donates the tail to whoever lifts it first
+  post-print (Fed 0.26 offer vs ~1.00 post-hike ≈ $24 at risk); note the pull deadline
+  at entry, don't rely on a check coinciding with the release (2026-07-29: it did,
+  by luck — the offer had already filled pre-catalyst, which is the benign direction).
 - **Midpoints are mirages.** Gamma mids sit between stub bids and real asks (DC "0.395"
   = 0.20/0.59 book; Prime "0.865 mark" = 0.77 real bid). Walk the live CLOB before
   believing ANY price, especially "arb" signals. Applies to our own backtests too.
