@@ -5,6 +5,10 @@
 > facts, and the operator's boundary conditions). A rule with no derivation is a bug.
 > Prior doc (rules-list era) in git history. Where this doc and live tooling disagree,
 > fix one of them — don't improvise a third behavior.
+>
+> **Fresh session / post-compaction: read `strategy/01_lessons.md` FIRST** — the
+> consolidated hard-won idiosyncrasies (execution mechanics, prior hygiene, failure
+> classes) that context compaction otherwise loses.
 
 ## 1. Objective
 

@@ -4,7 +4,7 @@ Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-c
 
 **Last updated:** 2026-07-02 ~19:40 UTC
 
-> **For the next agent:** read this README → `strategy/00_philosophy.md` → run `scripts/polyclaude_status.py` for current state. That's a complete onboarding in ~5 minutes. Drill into journal/decisions only when needed for specific calibration questions.
+> **For the next agent:** read this README → `strategy/00_philosophy.md` → **`strategy/01_lessons.md` (the consolidated hard-won lessons — everything compaction loses)** → run `scripts/polyclaude_status.py` for current state. That's a complete onboarding in ~5 minutes. Drill into journal/decisions only when needed for specific calibration questions.
 
 ---
 

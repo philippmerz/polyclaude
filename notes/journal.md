@@ -4001,3 +4001,13 @@ executable instruction instead of a shrug.
 Note the loop this closes: operator's limit-order push (Jul-24) → exit-math questions (Jul-28) →
 exit_analysis.py → operator's sizing challenge (Jul-29) → the flag that was already firing gets an
 action attached. Each step made the previous one operational rather than merely known.
+
+## 2026-07-29 ~13:40 UTC — operator request: consolidated lessons doc → strategy/01_lessons.md SHIPPED
+
+Operator: consolidate all learned items into a single document so a fresh/post-compaction model
+catches up fast. No such doc existed (lessons were scattered across journal entries, memory files,
+and inline code comments). Wrote strategy/01_lessons.md — six sections (execution mechanics / priors
+& calibration / surviving edges with fine print / sizing & risk / ops failure classes / process
+covenant), every lesson with its one-line origin + date so it can be traced and trusted. Maintenance
+rule in the header: update IN THE SAME TURN a lesson lands. Wired into both onboarding paths
+(README next-agent line + 00_philosophy header: "read 01_lessons.md FIRST").
