@@ -3970,3 +3970,17 @@ is fee-free, taker exit pays ~2.4c/share. Named the likely intuition honestly (p
 vs cost → 'take the loss before the binary') and why it's sunk-cost reasoning: the only question is
 $8.26 expected vs $7.10 certain. Crux stated plainly: if my 0.25 is wrong and truth <0.215, selling
 wins — resolves in 5h. Maker sell at 0.26 stays rested.
+
+## 2026-07-29 ~12:50 UTC — operator: "5% of portfolio, pretty significant" → log-utility check + a real sizing lesson
+
+Ran the check instead of reassuring. (a) Corrected my own sloppy number: at risk is the \$7.10
+LIQUIDATION value = 4.0% of book (I'd said $8.4, which is hold-EV). Upside +$25.93 (+14.7%).
+(b) Verdict survives variance-adjustment: EV hold +$1.16; LOG-UTILITY CE hold +$0.61 (breakeven p
+rises 0.215 → 0.2305, still below my 0.25 fair). This is the check I failed to run before the Prime
+sell. (c) OPERATOR IS RIGHT ON SIZING: Kelly at fair 0.25 vs cost 0.254 = −0.4pp edge → optimal size
+≈ ZERO. The position is a LEGACY of the 0.36 prior; current beliefs justify none of it. Error was at
+ENTRY (sized before interrogating what the FedWatch number measures), and the fee now makes unwinding
+cost more than the variance removed.
+**RULE ADDED: a prior CUT must trigger an immediate re-size check, not just a file note.** Had I run
+it Sunday at 0.36→0.25, the full position would have been offered at 0.26 with THREE days of demand
+to fill against, instead of one night (only 8.22sh filled).
