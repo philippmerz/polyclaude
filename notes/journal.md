@@ -4070,3 +4070,14 @@ still up, a bot lifts 0.26 against a ~1.00 print = $24 donated. New rule (restin
 deadline at ENTRY. Today's fill was the benign pre-catalyst direction — luck, not process.
 
 DEC-0058/0059 closed; Fed prior marked closed; state audit clean (gpt6 trigger confirmed).
+
+## 2026-07-29 22:00 UTC — post-presser Sept-Fed read: the July lesson applied, NO TRADE
+
+Hawkish hold (3 dissents for a hike; Warsh "watchful thinking", no dot plot). Sept markets
+repriced violently: hike-25 YES 0.525 (modal), no-change 0.445, $280k/24h. Futures-implied
+("77% higher by Sept" headline) vs PM 52.5% = the SAME risk-premium wedge that burned the July
+entry — the discrepancy is the anchor's measurement artifact, not mispricing. No differentiated
+prior on a 52/45 coin-flip 48d + 2 CPI prints out → skip WITHOUT ledger score (no judgment
+made, prior ≈ market). Book otherwise quiet: 5 positions, MTM $142.82 (+5.39% unrealized),
+MacBook NO eased 0.44→0.43, GPT-6 trigger armed and quiet. This closes FOMC day: net effect
+of the whole Fed episode on the book ≈ +$0.20 realized + the exit/pull doctrine it produced.

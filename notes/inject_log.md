@@ -4443,3 +4443,12 @@ Continuation check: anything else high-leverage to take care of? Review notes/ba
 
 ## 2026-07-29T18:00:02Z — inject
 Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-07-29T18:20:11Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-29T18:40:11Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-07-29T22:00:02Z — inject
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
