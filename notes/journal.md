@@ -3959,3 +3959,14 @@ Remaining Fed 33sh @0.254 avg rides into the 18:00 UTC decision with 32.8sh stil
 Other 3 maker sells unfilled (Greenland 0.98, Trump-out 0.97, SpaceX 0.96). Scans 0 real arbs (the
 monotonicity scanner's new line confirms all midpoint flags evaporated on live books). State audit
 CLEAN, UMA clean, mem 945MB.
+
+## 2026-07-29 ~12:45 UTC — operator: "sell at a profit? holding has lower EV right?" — two corrections
+
+(1) Selling now = LOSS not profit: avg 0.254 vs real-bid ~0.239. The only profitable slice was the
+8.22sh the MAKER order filled at 0.26 (market came up to me). (2) Holding has HIGHER EV: live
+exit_analysis on the remaining 33sh → HOLD $8.26 vs TAKER $7.10 net (gross $7.89 at avg 0.239 minus
+$0.79 fee) = hold wins by $1.16; breakeven p = 0.215 vs my 0.25 fair. Structural driver: resolution
+is fee-free, taker exit pays ~2.4c/share. Named the likely intuition honestly (position underwater
+vs cost → 'take the loss before the binary') and why it's sunk-cost reasoning: the only question is
+$8.26 expected vs $7.10 certain. Crux stated plainly: if my 0.25 is wrong and truth <0.215, selling
+wins — resolves in 5h. Maker sell at 0.26 stays rested.
