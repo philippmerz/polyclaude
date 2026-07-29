@@ -4043,3 +4043,12 @@ tech/capex risk-off leg — surfaced to operator in heartbeat, their IBKR call.
 — the trade that seeded exit_analysis.py). State audit CLEAN (snapshot refreshed). exit_analysis:
 all 6 HOLD. Kelly scale-ins declined again — $11.37 pUSD stays reserved as D23 ammo (days away,
 +43-69% realized template profile beats 26% APY bond-like adds). Redeem: 0. Aave idle $7.85.
+
+## 2026-07-29 ~14:30 UTC — continuation: GPT-6 judgment trigger was a NOTE, not a wire — armed it
+
+The NO<0.60 judgment trigger lived only in the priors-file note; opportunity_watch had no
+trigger armed (and no bid-side kind at all). With the bid at exactly 0.60 that gap was live.
+Added `clob_bid` kind (mirror of clob_no_ask, 7 LOC) + armed gpt6-no-judgment at bid ≤0.595,
+actionable, reason-tagged → a dip now fires a tick instead of waiting for the schedule.
+Daemon restarted via daemonctl (563573). Class: same as the stale-ARB lesson but inverted —
+triggers must match the priors file in BOTH directions (no stale armed, no noted-but-unarmed).

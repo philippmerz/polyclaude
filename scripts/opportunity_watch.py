@@ -171,6 +171,13 @@ def check_price_triggers(state: dict) -> None:
                 if not asks:
                     continue
                 px = float(asks[0]["price"])
+            elif t["kind"] == "clob_bid":
+                b = httpx.get("https://clob.polymarket.com/book",
+                              params={"token_id": t["id"]}, timeout=15).json()
+                bids = sorted(b.get("bids", []), key=lambda x: -float(x["price"]))
+                if not bids:
+                    continue
+                px = float(bids[0]["price"])
             else:
                 continue
             state.setdefault("trig_fails", {}).pop(t["key"], None)

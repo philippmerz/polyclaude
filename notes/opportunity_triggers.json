@@ -16,5 +16,14 @@
   "level": 0.065,
   "note": "ARB DEEP-VALUE only (position CLOSED Jul-24 DEC-0057). Polyclaude does NOT auto-add: multi-year price-only thesis routes to operator IBKR. Price re-entry for polyclaude requires a FILED Tally distribution/buyback proposal (dated <1y catalyst), NOT a price level. This trigger = surface-to-operator at a genuine capitulation only.",
   "actionable": false
+ },
+ {
+  "key": "gpt6-no-judgment",
+  "kind": "clob_bid",
+  "id": "110227805407315115408276908830556497292857234032945501079570053955010575568037",
+  "op": "<=",
+  "level": 0.595,
+  "actionable": true,
+  "note": "GPT-6 NO judgment trigger (priors file, 2026-07-27): NO best bid < 0.60 -> kimi + FULL re-eval of the 50sh NO position. Hard-closed to adds regardless; hidden-info class (no resting sell). Wave-5 rumor context in priors note. Disarm when position closes or market resolves (Aug-31)."
  }
 ]
