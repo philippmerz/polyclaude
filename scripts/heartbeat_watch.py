@@ -223,10 +223,35 @@ def check_telegram_listener(state: dict) -> None:
         if live:
             print(f"[heartbeat] telegram_listener PID file stale ({pid}) but daemon "
                   f"alive at {live[0]} — no alert", flush=True)
+            pid = live[0]
+        else:
+            _emit(state, "telegram_listener_dead",
+                  f"telegram_listener PID {pid} not alive — operator inbound channel down",
+                  cooldown=DAEMON_DOWN_COOLDOWN)
             return
-        _emit(state, "telegram_listener_dead",
-              f"telegram_listener PID {pid} not alive — operator inbound channel down",
-              cooldown=DAEMON_DOWN_COOLDOWN)
+
+    # Wedged-delivery check (2026-07-30): liveness != progress. A tmux
+    # send-keys child of the listener wedged for 27 HOURS (listener blocked in
+    # do_wait, PID happily alive) and every operator message queued undelivered
+    # until the operator noticed. Normal send-keys children complete in
+    # milliseconds; any child older than 10 minutes means the delivery path is
+    # stuck. (The listener now passes timeout=30 to send-keys, so this is the
+    # backstop for OTHER unbounded block points, and for the alert the operator
+    # never got.)
+    try:
+        out = subprocess.run(["ps", "--ppid", str(pid), "-o", "pid=,etimes=,comm="],
+                             capture_output=True, text=True, timeout=10).stdout
+        for line in out.strip().splitlines():
+            parts = line.split(None, 2)
+            if len(parts) >= 2 and int(parts[1]) > 600:
+                _emit(state, "telegram_listener_wedged",
+                      f"telegram_listener child {parts[0]} ({parts[2] if len(parts) > 2 else '?'}) "
+                      f"alive {int(parts[1]) // 60} min — delivery path stuck, operator "
+                      f"messages queuing undelivered. Kill the child pid to unwedge.",
+                      cooldown=DAEMON_DOWN_COOLDOWN)
+                break
+    except Exception:
+        pass
 
 
 def check_stuck_cron_forks(state: dict) -> None:

@@ -4160,3 +4160,27 @@ qualified (soil vs maritime) — which is itself the criteria's 3-day-dispute ta
 Process note: my world model was 3 days stale DESPITE daily news ticks — headlines emphasized
 Iraq strikes + interceptions, never the pause. The deploy-time re-verify is load-bearing; it is
 now 2-for-2 on killing war-adjacent entries (Kuwait, this).
+
+## 2026-07-30 ~21:50-22:10 UTC — INCIDENT: telegram injection dead 27h (wedged tmux client); found by OPERATOR
+
+Operator (console): "somehow the tg msgs arent injected anymore." Root cause chain: (1) listener's
+send-keys subprocess for 'Status report?' WEDGED Jul-29 18:50 (tmux client never returned —
+heavy pane output during FOMC processing window); (2) subprocess.run had NO timeout → listener
+blocked in do_wait 27h, long-poll stopped, ALL operator messages queued server-side; (3)
+heartbeat_watch only checked PID LIVENESS — a blocked process is alive → no alert. Operator was
+the detection layer. THIRD instance of the liveness≠progress class (news_watcher persistence
+2026-06-11, pane-dead send-keys 2026-07-16, this).
+
+Recovery: killed wedged child → listener resumed + drained queue (operator's GPT-6 sizing
+question landed 27h late; answered w/ full exit math, TG 745). Note: 'Status report?' was marked
+delivered but never landed (tmux exits 0 on SIGTERM — logged in code comment).
+
+Fixes shipped: (a) telegram_listener send-keys timeout=30s (c6e47d1) — wedge now self-heals;
+(b) heartbeat_watch wedged-delivery check — any listener child >10min old alerts
+"telegram_listener_wedged" w/ kill instruction (backstop for other unbounded block points +
+the alert the operator never got). Both daemons restarted onto patched code (608818/609514,
+absolute-path form). Verify single instances next check (keepalive lesson).
+
+Operator follow-ups answered: GPT-6 target probability (0.21 YES / 0.79 NO fair, at cluster cap,
+hard-closed, log-utility hold CE +$4) + full adverse-selection explanation of the no-resting-sell
+policy on hidden-info markets (local).
