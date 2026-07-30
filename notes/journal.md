@@ -4144,3 +4144,19 @@ after a ~13% weekly drop. Pulled the deciding number before surfacing: lithium s
 (>$22 or ESS catalyst) NOT met. Framed honestly to operator: first tranche defensible, full
 size unconfirmed, drop part-prices the reversion downside. CCJ/NVDA repeats noted. TG 741.
 Kelly post-Fed-close: no over-sized positions; deficit +$43.90 stays declined (D23 reservation).
+
+## 2026-07-30 ~14:45 UTC — ceasefire-NO trade built and KILLED at the deploy gate (world-state rule, 2nd save)
+
+Sports scan miscategorized "US x Iran Effective Ceasefire by July 31?" into its funnel — criteria
+read revealed a precise mechanical bar (YES = no US air/missile strike impacting Iranian SOIL
+after Jul-31, 14-day verification; maritime/proxy/interception all excluded; Jul-18 + Jul-24
+siblings died NO). First search: CENTCOM strikes on Iranian coastal radar Jul-28/29, casualties
+on land → built NO@0.78 case, ~13pp central edge, sized ~$14 (Kelly/4 capped, D23 float kept),
+book deep ($8.9k at 0.79). MANDATORY fact-freshness check before entry found the killer:
+**Trump PAUSED US strikes ~Jul-27** (CNN), explicitly threatening resumption to force a deal —
+pause-resume oscillation, Iran denying talks. Sources now CONFLICT on whether the Jul-28/29 wave
+qualified (soil vs maritime) — which is itself the criteria's 3-day-dispute tail. Honest P(YES)
+0.15-0.25 SPANS market 0.225 → no robust edge → NO TRADE. Ledger N=40 (prior 0.80 ≈ null).
+Process note: my world model was 3 days stale DESPITE daily news ticks — headlines emphasized
+Iraq strikes + interceptions, never the pause. The deploy-time re-verify is load-bearing; it is
+now 2-for-2 on killing war-adjacent entries (Kuwait, this).
