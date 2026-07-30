@@ -138,7 +138,10 @@
   a fill outright (Marvel 0.98, 2026-07-26). Wallet-balance arithmetic with resting
   orders is unreliable — don't reconcile by inference, pull the activity feed.
 - **VM = 1.9GB. ONE background agent max, ever** (3 OOM crashes). Check MemAvailable
-  >500MB before any spawn.
+  >500MB before any spawn — AND check no other claude-spawning script is still running
+  (watchlist --auto-revet, sports --with-consensus, catalyst_check all spawn `claude -p`
+  AFTER launch, so MemAvailable at launch time under-counts; 2026-07-30: 3 concurrent
+  haikus at 548MB from exactly this stack-up — killed one, no OOM).
 - **Daemon-fired ticks must carry their reason** (else they read as scheduled noise and
   the alert gets answered "nothing happened" — 2026-07-28). daily_checkin passes $1
   through to the prompt.

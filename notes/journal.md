@@ -4117,3 +4117,21 @@ The spread market at 0.365 is internally consistent (P(cover|win)≈0.58, favori
 for derivative lines and the delta computation compares across market types. Fix shipped in
 fetch_bookie_consensus: derivative-market guard (spread/handicap/total regex) forces haiku to
 error out rather than substitute the winner line. No trade — correctly, nothing was mispriced.
+
+## 2026-07-30 14:00 UTC tick — new high $179.43 (+5.5%); GPT-6 wave fully round-tripped; hygiene fixes
+
+Bankroll $179.43 (+5.5% ref, NEW HIGH), MTM $145.83 (+7.61% unrl). GPT-6 NO 0.715 (+10.8%
+on position) — wave-5 fully faded, the verified-fade classifier's 5th consecutive correct call.
+SpaceX 0.885, Trump-out 0.935 firming. All 5 verdicts HOLD; 3 maker sells standing; redeem 0;
+decisions current.
+
+**Funnel:** monotonicity 0/1042 · consistency 0/174 · discover = same 3 as yesterday
+(Sept-Fed 0.455, Fed-hike-2026 0.655 hawk-drift, invade-Iran 0.255) — all previously
+adjudicated, no new info, no re-litigation. Sports scan killed mid-run (see below); watchlist
+revets in flight at close.
+
+**Hygiene shipped:** (1) uma_status_check dust guard <0.5sh — the de-indexed Fed remnant was
+firing GAMMA_LOOKUP_FAILED every tick forever; real-size de-indexed positions still alert.
+(2) VM lesson refined: MemAvailable at launch under-counts scripts that spawn claude LATER —
+watchlist revet + sports consensus stacked to 3 concurrent haikus at 548MB; killed sports
+(0 deltas yesterday, cheap loss), no OOM. Rule: one claude-spawning script at a time, serialize.

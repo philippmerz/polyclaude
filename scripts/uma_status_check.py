@@ -138,6 +138,12 @@ def main() -> int:
         slug = p.get("slug", "")
         if not slug:
             continue
+        # Dust guard (2026-07-30): sub-0.5sh remnants (e.g. Fed 0.25sh after the
+        # maker exit) survive in data-api after the market de-indexes and fire
+        # GAMMA_LOOKUP_FAILED forever; nothing actionable exists at dust size.
+        # Real-size de-indexed positions (Marvel/Mojtaba class) still alert.
+        if float(p.get("size", 0) or 0) < 0.5:
+            continue
         # Resolve slug → market_id via gamma-api search
         market_id = None
         try:
