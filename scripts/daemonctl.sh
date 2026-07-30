@@ -62,7 +62,14 @@ case "${ACTION}" in
         # relative-path daemon is invisible to it and gets DUPLICATED on the
         # next 10-min keepalive pass (observed 2026-07-29: 7.5h of two
         # opportunity_watch instances after a relative-path restart).
-        nohup "${PY}" "${REPO}/scripts/${SCRIPT}" start >> "logs/${SCRIPT%.py}.log" 2>&1 &
+        # Log name must match daemon_keepalive.sh's convention (incl. the
+        # heartbeat_watch special case) or the daemon's output ALTERNATES
+        # between two files depending on which mechanism last started it
+        # (observed 2026-07-30: heartbeat alerts split across heartbeat.log
+        # and heartbeat_watch.log).
+        LOGNAME="${SCRIPT%.py}.log"
+        [[ "${SCRIPT}" == "heartbeat_watch.py" ]] && LOGNAME="heartbeat.log"
+        nohup "${PY}" "${REPO}/scripts/${SCRIPT}" start >> "logs/${LOGNAME}" 2>&1 &
         sleep 3
         pids=$(find_pids | tr '\n' ' ')
         echo "restarted: ${pids:-<FAILED TO START>}"
