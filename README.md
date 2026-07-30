@@ -32,7 +32,7 @@ Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, wat
 
 Note: Ostium has no public per-address trader profile (wallet-connect SPA). DeBank aggregates Ostium positions + Aave aUSDC + cross-chain balances; Arbiscan shows the raw on-chain trace incl. each Ostium open/close.
 
-Ostium: 0 open perps (SPX / NDX / XAU all TP-closed). Idle reserves: ~$52.7 in Aave V3 (Polygon + Arb + Base) + ~$1.8 pUSD — status scripts now read aTokens/pUSD directly, so idle capital is always visible. Run `scripts/crypto_status.py` + `scripts/aave_deposit.py rate` for live figures.
+Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposit parked pre-exploit — zero exposure through both exploit reports, $18M→$24M revised). Crypto sleeve ~$10 (2026-07-30): $7.85 aUSDC Aave-Arb (idle home) + gas floats; capital deliberately consolidated toward the PM sleeve as the instance edge proved out. PM-sleeve liquid ~$23.6 incl. ~$19.9 pUSD held as event-template ammo. Status scripts read aTokens/pUSD directly, so idle capital is always visible. Run `scripts/crypto_status.py` + `scripts/aave_deposit.py rate` for live figures.
 
 **Long-term watchlist** (12 candidates, all `route=ibkr_surface` per <1y constraint): `notes/longterm_watchlist.md`. Auto-monitored via `scripts/watchlist_monitor.py` with entry-trigger price alerts.
 
