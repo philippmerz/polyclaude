@@ -63,10 +63,26 @@ def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] 
         target_desc = "the YES side implied probability"
         json_key_desc = "YES side wins"
 
+    # Derivative-market guard (2026-07-30): a "Spread: Raków (-1.5)" question
+    # answered with MONEYLINE odds produced a phantom -27.1pp delta (bookie
+    # 0.636 was the match-winner prob, ~= PM's own moneyline 0.625; the spread
+    # market at 0.365 was internally consistent). Comparing across market
+    # types is the false-positive class; force haiku to error out rather than
+    # substitute the winner line.
+    derivative = re.search(r"spread|handicap|\(\s*[+-]\d|o/u|over/under|total",
+                           question, re.I)
+    deriv_clause = ""
+    if derivative:
+        deriv_clause = ("\n\nIMPORTANT: this is a DERIVATIVE market (point spread / "
+                        "handicap / total), NOT a match-winner market. The probability "
+                        "MUST be for the exact stated line. Match-winner/moneyline odds "
+                        "are NOT acceptable as a substitute — if you can only find "
+                        "match-winner odds, output the error case instead.")
+
     prompt = f"""Find the bookie-consensus implied probability for the following sports event/market.
 
 Market question: {question}
-Resolves within: {lim_hours:.1f} hours
+Resolves within: {lim_hours:.1f} hours{deriv_clause}
 
 Search public sportsbook aggregators (Pinnacle, DraftKings, FanDuel, Bet365, etc.) or odds-comparison sites (oddsportal.com, oddschecker, ESPN BetTrend) for {target_desc}.
 

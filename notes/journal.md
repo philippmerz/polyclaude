@@ -4107,3 +4107,13 @@ recent close, and a 5-mo lock would eat the D23 ammo whose profile (+43-69% in d
 dominates; (2) Fed-hike-2026 cumulative YES 0.615: internally consistent with Sept-hike 0.525
 (implied P(first hike Oct/Dec|no Sept) ≈19%, no decomposition arb), and I have no differentiated
 Fed prior — July's N=1 said market ≥ me. Ledger N=39. Sports overnight: deltas pending.
+
+## 2026-07-30 ~02:05 UTC — sports-scan 27pp "delta" was a market-TYPE mismatch; guard shipped
+
+The flagged Raków (-1.5) spread delta (bookie 0.636 vs PM 0.365) dissolved on verification:
+0.636 was the MONEYLINE (Raków to win) — PM's own moneyline sits at 0.625, within 1.1pp.
+The spread market at 0.365 is internally consistent (P(cover|win)≈0.58, favorite coasting on a
+3-1 aggregate vs Valletta tonight). False-positive class: haiku substitutes match-winner odds
+for derivative lines and the delta computation compares across market types. Fix shipped in
+fetch_bookie_consensus: derivative-market guard (spread/handicap/total regex) forces haiku to
+error out rather than substitute the winner line. No trade — correctly, nothing was mispriced.
