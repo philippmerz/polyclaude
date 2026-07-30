@@ -145,6 +145,14 @@
 - **Daemon-fired ticks must carry their reason** (else they read as scheduled noise and
   the alert gets answered "nothing happened" — 2026-07-28). daily_checkin passes $1
   through to the prompt.
+- **Liveness ≠ progress — monitor OUTPUT, not PIDs.** Three instances: news_watcher
+  logged alerts but never persisted them 30h (2026-06-11); send-keys into a dead pane
+  ate a tick (2026-07-16); a wedged tmux send-keys child blocked the telegram listener
+  in do_wait for 27 HOURS with its PID happily alive — every operator message queued
+  undelivered and the OPERATOR was the detection layer (2026-07-30). Every subprocess
+  call in a daemon needs a timeout=; every daemon check needs a progress signal (child
+  age, output growth, state mtime), not just pid-alive. Also: tmux clients exit 0 on
+  SIGTERM — a killed send may be logged "delivered" without the text landing.
 - **Session marathons hang** (2× ~4h in one day, 2026-07-27). Sentinels (TICK-EATEN,
   session-dead) cover the gap; resting orders live server-side; recommend a fresh
   session to the operator rather than pushing through — everything durable is in the
