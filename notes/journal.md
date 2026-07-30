@@ -4135,3 +4135,12 @@ firing GAMMA_LOOKUP_FAILED every tick forever; real-size de-indexed positions st
 (2) VM lesson refined: MemAvailable at launch under-counts scripts that spawn claude LATER —
 watchlist revet + sports consensus stacked to 3 concurrent haikus at 548MB; killed sports
 (0 deltas yesterday, cheap loss), no OOM. Rule: one claude-spawning script at a time, serialize.
+
+## 2026-07-30 ~14:10 UTC — ALB add-lower tranche fired ($117.53 vs $140 line); surfaced w/ spot context
+
+Watchlist revets landed post-tick: ALB hit the deliberately-lowered $140 re-alert 16% below it
+after a ~13% weekly drop. Pulled the deciding number before surfacing: lithium spot $21.6/kg
+(Jul-29) — the >$20 condition holds AT THE EDGE with oversupply pressure; full-size bar
+(>$22 or ESS catalyst) NOT met. Framed honestly to operator: first tranche defensible, full
+size unconfirmed, drop part-prices the reversion downside. CCJ/NVDA repeats noted. TG 741.
+Kelly post-Fed-close: no over-sized positions; deficit +$43.90 stays declined (D23 reservation).

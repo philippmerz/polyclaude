@@ -27,11 +27,11 @@
     }
   },
   "STX": {
-    "ts": 1785333828.7459736,
+    "ts": 1785420393.888859,
     "result": {
       "verdict": "WATCH",
-      "score": "3/4",
-      "summary": "**ENTER NOW at current $0.14\u20130.15, sized for 1\u20132% of capital.** Catalyst is live today (PoX-5 mainnet). Specific re-sizing thresholds: - **Add 1\u20132% more** if PoX-5 runs cleanly for 2 weeks and Genesis Bond (late August) attracts >$200M institutional capital. - **Add another 1%** if STX-denominated sBTC TVL re-reaches $500M+ by end of Q3 2026. - **Exit/trim if** PoX-5 launch encounters critical exp",
+      "score": "3.5/4",
+      "summary": "**Entry now at $0.167** if thesis-weighting is aggressive (3-5x scenario is primary case). Downside cushion is thin but non-zero (floor $0.10 liquidation support, PoX protocol survives). **Better entry: wait 6-8 weeks (mid-Sept 2026)** post-PoX-5 activation to see Genesis Bond adoption metrics, early staking APY realization, and sBTC TVL trend. If metrics confirm (Genesis fills >50%, APY \u22652.8%, sB",
       "fresh": true
     }
   },
