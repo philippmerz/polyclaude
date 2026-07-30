@@ -4184,3 +4184,19 @@ absolute-path form). Verify single instances next check (keepalive lesson).
 Operator follow-ups answered: GPT-6 target probability (0.21 YES / 0.79 NO fair, at cluster cap,
 hard-closed, log-utility hold CE +$4) + full adverse-selection explanation of the no-resting-sell
 policy on hidden-info markets (local).
+
+## 2026-07-30 ~22:30 UTC — meta-reflection: hazard ratchet for GPT-6 fair; small cleanups; no forced findings
+
+(1) CLEANUP: daily_checkin.sh steps were listed 3c-before-3b (misleading execution order for a
+fresh LLM) — swapped. Daemon restart verification closed: all three singles, keepalive quiet
+through two passes post-restart. (2) GENUINE ANALYTICAL GAP FOUND: GPT-6 p_no held static 0.79
+since Jul-27 while the clock runs — but the correct dynamics are a BACK-LOADED hazard ratchet:
+leaks cluster on "August launch", so early-Aug silence is expected under both outcomes (no
+ratchet before ~Aug-10), then silence bites hard: 0.86 by Aug-15, 0.92 by Aug-22, 0.95+ final
+week. Schedule + decomposition anchor (P(ships)~0.45 x P(named 6|ships)~0.45 ~= 0.20 YES)
+written into the priors file as hazard_schedule; the active-judgment exit bar tracks
+fair-of-the-day from it. This kills the "static prior on a dated market" staleness class for
+this position without building a new script. (3) Noted, no action: scanner-lane crossover
+(sports scan surfacing the ceasefire market) is the funnel's diversity working, not a bug;
+term-structure-family banking (ceasefire backlog entry) is a candidate doctrine pattern but
+N=1 — revisit if a second instance appears.
