@@ -514,5 +514,15 @@
   "market_price": 0.236,
   "outcome": "NO (held, 5th consecutive)",
   "note": "Entered on flawed FedWatch anchor (risk premium != probability). All 41sh maker-sold at 0.26 pre-decision (fee-free, above 0.25 fair); net +$0.20 wash. Market's 0.236 a hair better calibrated than my 0.25 on N=1. Execution doctrine saved -$8.4."
+ },
+ {
+  "date": "2026-07-30",
+  "slug": "will-the-us-invade-iran-before-2027",
+  "action": "scored_skip",
+  "side": "No",
+  "my_prior": 0.85,
+  "market_price": 0.735,
+  "resolves": "2026-12-31",
+  "note": "SKIP: physical p_no 0.85 but UMA intent-clause looseness (robust ~0.80, edge ~6.5pp); mid-war re-entry vs own recent close; 5-mo lock would consume D23 ammo (better profile in days). Fed-hike-2026 cumulative 0.615 also skipped: internally consistent w/ Sept 0.525, no differentiated prior."
  }
 ]

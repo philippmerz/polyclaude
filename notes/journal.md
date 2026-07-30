@@ -4092,3 +4092,18 @@ daemonctl to absolute path; killed the relative-path instance; kept 564208 (corr
 the clob_bid code — spawned from disk post-edit). Lesson refined in 01_lessons.md: verify
 status shows ONE pid ~10min AFTER any restart, not just immediately. Second daemonctl-family
 bug found by checking; the tool that fixed pkill self-match had its own keepalive blind spot.
+
+## 2026-07-30 02:00 UTC tick — quiet book, two adjudicated skips, GPT-6 wave fading
+
+Bankroll $176.45 (+3.8% ref), 5 positions, MTM $142.82 (+5.39% unrl). GPT-6 NO recovered
+0.65→0.68 — wave-5 spike fading per classifier; p_no 0.79 aging well. Fed market de-indexed
+post-resolution (known class; 0.25sh worthless dust, no claim). All exits verdict HOLD;
+3 maker sells standing; state audit clean (gpt6 trigger confirmed wanted).
+
+**Funnel:** monotonicity 0/924 · consistency 0/170 · discover 2 candidates, both adjudicated
+SKIPS → (1) invade-Iran NO@0.735: physical p_no 0.85 but the "intended to establish control"
+intent clause is UMA-loose (robust ~0.80 → ~6.5pp), it's a mid-war re-entry against my own
+recent close, and a 5-mo lock would eat the D23 ammo whose profile (+43-69% in days, realized)
+dominates; (2) Fed-hike-2026 cumulative YES 0.615: internally consistent with Sept-hike 0.525
+(implied P(first hike Oct/Dec|no Sept) ≈19%, no decomposition arb), and I have no differentiated
+Fed prior — July's N=1 said market ≥ me. Ledger N=39. Sports overnight: deltas pending.
