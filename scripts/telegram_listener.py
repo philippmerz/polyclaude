@@ -128,9 +128,17 @@ def _send_keys(pane: str, text: str) -> None:
         raise RuntimeError(f"pane {pane} stayed busy too long; will retry next poll")
     if not _pane_has_live_claude(pane):
         raise RuntimeError(f"pane {pane} claude died during idle-wait; will retry next poll")
-    subprocess.run(["tmux", "send-keys", "-t", pane, "-l", flat], check=True)
+    # timeout= (2026-07-30): a wedged tmux client blocked this run() for 27
+    # HOURS (do_wait, child never returned) and silently killed all injection
+    # — the operator noticed before any alert did. A hung send-keys now fails
+    # in 30s and the update retries next poll. NOTE: tmux clients exit 0 on
+    # SIGTERM, so a killed/timed-out send may be logged delivered without the
+    # text landing — timeout raises BEFORE that misreport can happen.
+    subprocess.run(["tmux", "send-keys", "-t", pane, "-l", flat],
+                   check=True, timeout=30)
     time.sleep(0.2)
-    subprocess.run(["tmux", "send-keys", "-t", pane, "Enter"], check=True)
+    subprocess.run(["tmux", "send-keys", "-t", pane, "Enter"],
+                   check=True, timeout=30)
 
 
 def cmd_start(_args: argparse.Namespace) -> int:
