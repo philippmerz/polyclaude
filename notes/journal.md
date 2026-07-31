@@ -4259,5 +4259,5 @@ MacBook 0.505 (+28.1%). All exit verdicts HOLD; state audit clean; redeem 0; arb
 no D23 markets yet. Iran news = Iranian strikes (Kuwait base, Hormuz ships) — does NOT touch
 the ceasefire family's US-action clock; watch-only. Sports scan surfaced its first real delta
 in days (San Luis NO 3.5pp vs DraftKings) — killed on fee (4.35pp taker > edge) + venue floor
-(Kelly/4 = $3.7 < $5); scored skip, ledger N=42. Sept-Fed-cut fade (NO 0.976) skipped:
+(Kelly/4 = $3.7 < $5); scored skip, ledger N=41. Sept-Fed-cut fade (NO 0.976) skipped:
 ~1.4pp thin, near-consensus. No TG per material-only cadence (mark move, zero actions).
