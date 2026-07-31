@@ -4229,3 +4229,14 @@ fires on schedule rather than on memory. Alpha observation (not new, confirmed):
 this month all came from event-templates, verified rumor-fades, and execution mechanics — the
 population scanners are cheap insurance, but the pipeline is event-calendar-driven; the calendar
 IS the proactive funnel.
+
+## 2026-07-31 06:00 UTC — MacBook NO 0.435→0.50 overnight; prior nudged 0.73→0.76 on hardened evidence
+
+Mover verified before believing: fresh Gurman-cycle recycle (touchscreen MBP now "early 2027",
+RAM crisis structural) + Apple's Jul-30 earnings call passed with zero touchscreen tease. Both
+firm the NO case past my 0.73 → p_no 0.76 (verified today, basis in priors note). NO ADD despite
+~19pp robust edge at 0.50: ticket cap binds (cost 13% of book) and chasing an up-move on a
+hidden-info market is not the verified-fade entry pattern. Position rides: 60sh, +26.9%.
+Also overnight: SpaceX 0.925 (+6.9%), GPT-6 eased to 0.735; Gaza disarmament breakthrough
+headline (Hamas confirms) — regional de-escalation context for the ceasefire family, watch-only.
+MTM $152.09 (+12.2% unrl). No D23 markets yet (daily check).

@@ -34,13 +34,13 @@
   "verified": "2026-07-25"
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
-  "p_no": 0.73,
+  "p_no": 0.76,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
-  "note": "2026-07-25 kimi revision from 0.85: OLED panels shipping since Jun, macOS 27 touch, MacBook-Ultra branding qualifies; freshest Gurman Jul-24 leans early-2027 on DRAM. Two-sided, not near-lock. Watch Sept/Oct Apple event.",
-  "verified": "2026-07-25"
+  "note": "0.73->0.76 2026-07-31: Gurman timeline hardened to 'early 2027' (was late-26/early-27), RAM-crisis driver structural, Jul-30 earnings call zero tease. Market NO 0.50. No add: 15% ticket cap binds (cost 13%), and up-move chase != verified-fade pattern. 2026-07-25 kimi revision from 0.85: OLED panels shipping since Jun, macOS 27 touch, MacBook-Ultra branding qualifies; freshest Gurman Jul-24 leans ear",
+  "verified": "2026-07-31"
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
   "p_no": 0.79,
