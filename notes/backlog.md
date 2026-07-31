@@ -33,9 +33,9 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 > Resolved past-dated reminders pruned 2026-06-04 (decision outcomes live in decisions.json; git has full history). Future only; ~Nd as of 2026-06-04:
 
+- **~2026-08-04..08**: D23 panel listings expected — run the playbook (buy active-entity YES ≤0.80 after criteria-text check; cheap legs = biggest edge; pull bids at window end). Event Aug 14-16. $19.9 pUSD reserved.
 - **2026-08-16**: US-Iran MOU expiry — LIKELY MOOT (Iran suspended commitments ~mid-Jul; ACTIVE Iran-Gulf missile war since: Kuwait/Bahrain/Qatar/Saudi under fire, ground-incursion threats vs Kuwait bases). WORLD-STATE RULE (2026-07-26, from the Kuwait deploy-gate kill): any Gulf/war-adjacent market gate must RE-PULL live conflict state at decision time — the tier-2 Iran demotion means my ambient world-model runs stale. Book is Iran-free; re-promotion of tier-1 keywords only on Iran re-entry.
 
-- **2026-07-27** (~53d): EU sanctions on Iran review — Iran cluster reassessment.
 - **2026-08-18** (~75d): Trump UAP-EO 300-day declassification deadline. Reassessment trigger for DEC-0003.
 - **2026-10-31** (~149d): Annual DNI UAP report deadline. Final pre-resolution catalyst for DEC-0003.
 - **2026-11-03** (~152d): US midterm elections. Catalyst for DEC-0004 (Trump-out NO) — even if Dems take House, Senate conviction implausible.

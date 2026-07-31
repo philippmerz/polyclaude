@@ -4219,3 +4219,13 @@ fact. Backlog entry annotated.
 **Weekly P&L written (Jul-24→31):** +$10.53 (+6.2%) — best week; realized Marvel +43.9%, Fed
 wash; the product was doctrine stress-tested live (exit mechanics, pull-before-catalyst,
 world-state 2-for-2, hazard schedule, liveness≠progress). Ledger N=40.
+
+## 2026-07-31 ~02:20 UTC — meta-reflection: no new findings 4h after the last one; 3 micro-cleanups
+
+Honest null — the 22:25 reflection covered this surface. Cleanups: README top-header date was
+frozen at Jul-02 (misleading freshness signal), fixed to auto-note; pruned past-dated EU-sanctions
+calendar line; added D23-listings check (~Aug-4..8) as a proper calendar item so the playbook
+fires on schedule rather than on memory. Alpha observation (not new, confirmed): realized wins
+this month all came from event-templates, verified rumor-fades, and execution mechanics — the
+population scanners are cheap insurance, but the pipeline is event-calendar-driven; the calendar
+IS the proactive funnel.
