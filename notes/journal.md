@@ -4240,3 +4240,13 @@ hidden-info market is not the verified-fade entry pattern. Position rides: 60sh,
 Also overnight: SpaceX 0.925 (+6.9%), GPT-6 eased to 0.735; Gaza disarmament breakthrough
 headline (Hamas confirms) — regional de-escalation context for the ceasefire family, watch-only.
 MTM $152.09 (+12.2% unrl). No D23 markets yet (daily check).
+
+## 2026-07-31 ~10:20 UTC — operator: "no need to send a message if there's nothing to update with"
+
+Telegram cadence directive: material updates ONLY — supersedes the 2026-06-25 every-tick
+heartbeat rule (which existed because silence used to be indistinguishable from a dead pipeline;
+heartbeat_watch now covers aliveness mechanically, incl. the wedged-delivery class). Applied in
+the same turn: memory file + index rewritten with the history, daily_checkin.sh step 8 changed
+to material-only (flat tick sends NOTHING), confirmed to operator (TG 751). Unchanged: prefixed
+questions always answered via telegram.py; material events still reported immediately — the bar
+that moved is flat-tick noise, not the reporting duty.
