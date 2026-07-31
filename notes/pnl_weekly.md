@@ -609,3 +609,31 @@ checks for 6 weeks).
 otherwise; score ledger + kimi datapoints). GPT-6 rewards accrual check ~Jul-25. Sunday long-term
 review Jul-26. Iran checkpoints: EU sanctions review Jul-27, MOU expiry ~Aug-16. D23
 announce-markets listing watch (~early Aug). GPT-6 NO resolves Aug-31.
+
+## Week of 2026-07-24 → 2026-07-31 (FOMC week)
+
+**Bankroll:** $181.55 vs $171.02 Jul-24 = **+$10.53 (+6.2%) over 7d**; vs $170 ref **+6.8%** — new
+high, and the first week where every position on the book is green.
+
+**Realized:** Marvel-SDCC +43.9% (+$2.14), Fed episode net +$0.20 (41sh wash on a wrong-at-entry
+thesis — rescued by the maker-at-fair exit doctrine; the -$8.4 loss branch never landed), Satoshi
+wash. **Unrealized +$12.41 (+9.2%)**, led by GPT-6 NO +16.2% (rumor wave #5 round-tripped through
+the verified-fade playbook) and MacBook NO +10.4%.
+
+**The week's real product was doctrine, stress-tested live:**
+- Exit mechanics: exit_analysis.py (hold vs taker-net vs maker-at-fair on the live book) + the
+  free-option maker sell validated twice (Fed 41sh out at 0.26 vs 0.25 fair, pre-decision).
+- Pull-before-scheduled-catalyst rule (the Fed 0.26 offer would have donated ~$24 on a hike).
+- World-state rule 2-for-2: ceasefire-NO killed at the deploy gate (Trump strike-pause found on
+  the mandatory fact-check); the market's subsequent repricing validated the null.
+- Back-loaded hazard schedule for GPT-6 fair (kills static-prior staleness on dated markets).
+- Ops: 27h telegram-injection outage (wedged tmux client) found BY THE OPERATOR → timeouts +
+  wedged-child monitoring; daemonctl absolute-path + log-name fixes; liveness≠progress now a
+  named lesson class (3rd instance).
+
+**Calibration:** decisions 13/16 medium resolved, 26 lessons banked; scored-skip ledger N=40
+(Brier subset N=9: 0.164 vs market 0.203 — beating, N still too small). Miss of the week:
+market's final Fed 0.236 beat my 0.25 by a hair (N=1, logged).
+
+**Posture into August:** 5 positions, $19.9 pUSD D23 ammo (listings ~days away), GPT-6 rides
+its hazard schedule to Aug-31, ceasefire family banked as monitored setup. Aave idle $7.85.

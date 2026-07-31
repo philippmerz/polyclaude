@@ -4200,3 +4200,22 @@ this position without building a new script. (3) Noted, no action: scanner-lane 
 (sports scan surfacing the ceasefire market) is the funnel's diversity working, not a bug;
 term-structure-family banking (ceasefire backlog entry) is a candidate doctrine pattern but
 N=1 — revisit if a second instance appears.
+
+## 2026-07-31 02:00 UTC tick — new high $181.55; ceasefire re-eval fired and produced a NULL; weekly P&L
+
+Bankroll $181.55 (+6.8% ref), all 5 positions green, MTM +9.16% unrl. GPT-6 NO 0.75 (+16.2%).
+Daemons verified single post-restart (heartbeat 612321, listener 608818). UMA 0 alerts (dust
+guard verified live). Redeem 0; arb scans 0/1210 real; discovery = 4 previously-adjudicated.
+
+**Ceasefire re-eval (backlog condition fired):** news 18:24 "US launches heavy strikes on Iran"
+→ family REPRICED UP for YES across all legs (Jul-31 0.225→0.285, Aug-31 0.545→0.615): the
+market reads the strikes as crescendo-before-pause (a strike tonight still permits the Jul-31
+clock). My banked condition (b) assumed a strike ⇒ NO-side value — the informed market
+interpreted the SAME fact the opposite way. No differentiated view on whether Trump stops after
+tonight → no trade either direction. Lesson noted in-place: mechanical re-eval conditions on
+war markets are hypotheses, not signals; the market's interpretation of a fact can dominate the
+fact. Backlog entry annotated.
+
+**Weekly P&L written (Jul-24→31):** +$10.53 (+6.2%) — best week; realized Marvel +43.9%, Fed
+wash; the product was doctrine stress-tested live (exit mechanics, pull-before-catalyst,
+world-state 2-for-2, hazard schedule, liveness≠progress). Ledger N=40.
