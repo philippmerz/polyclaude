@@ -4250,3 +4250,14 @@ the same turn: memory file + index rewritten with the history, daily_checkin.sh 
 to material-only (flat tick sends NOTHING), confirmed to operator (TG 751). Unchanged: prefixed
 questions always answered via telegram.py; material events still reported immediately — the bar
 that moved is flat-tick noise, not the reporting duty.
+
+## 2026-07-31 14:00 UTC tick — new high $188.00 (+10.6%); quiet pass, one sub-floor sports skip
+
+Bankroll $188.00 (+10.6% ref), MTM $154.39 (+13.9% unrl), all 5 green. GPT-6 NO 0.775
+(approaching 0.79 fair; hazard schedule holds it — bar tracks fair-of-the-day, no action).
+MacBook 0.505 (+28.1%). All exit verdicts HOLD; state audit clean; redeem 0; arb 0/1174 real;
+no D23 markets yet. Iran news = Iranian strikes (Kuwait base, Hormuz ships) — does NOT touch
+the ceasefire family's US-action clock; watch-only. Sports scan surfaced its first real delta
+in days (San Luis NO 3.5pp vs DraftKings) — killed on fee (4.35pp taker > edge) + venue floor
+(Kelly/4 = $3.7 < $5); scored skip, ledger N=42. Sept-Fed-cut fade (NO 0.976) skipped:
+~1.4pp thin, near-consensus. No TG per material-only cadence (mark move, zero actions).

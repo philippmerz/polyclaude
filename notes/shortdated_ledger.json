@@ -534,5 +534,15 @@
   "market_price": 0.78,
   "resolves": "~2026-08-14",
   "note": "KILLED AT DEPLOY-GATE (world-state rule, Kuwait-class #2): looked 13pp NO edge on 'continuous escalation' model; fact-freshness search found Trump PAUSED US strikes on Iran ~Jul-27 to force a deal (pause-resume oscillation). Sources CONFLICT on whether Jul-28/29 wave hit Iranian soil (CENTCOM radar/boats vs 'pause holds') = UMA 3-day-dispute tail. Honest P(YES) 0.15-0.25 spans market 0.225. p_no prior recorded 0.80 ~= market (null)."
+ },
+ {
+  "date": "2026-07-31",
+  "slug": "will-atletico-san-luis-win-on-2026-07-31",
+  "action": "scored_skip",
+  "side": "No",
+  "my_prior": 0.6,
+  "market_price": 0.565,
+  "resolves": "2026-08-01",
+  "note": "SKIP: 3.5pp bookie delta (DraftKings via haiku, single book) but taker fee 4.35pp > edge; maker-entry Kelly/4 = $3.7 < $5 venue floor, EV ~$0.13 < op-cost."
  }
 ]
