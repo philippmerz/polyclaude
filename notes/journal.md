@@ -4287,3 +4287,10 @@ missing-mass, correctly labeled arb_free:false by the scan — P(winner among li
 central vs 0.439 implied = thin/low-confidence, 20-leg costs, October lock → skip (not
 score-worthy: the tool itself doesn't claim it's an arb). Phantom class: THE arb pipeline's
 first daemon-fired false positive — dedup was the missing invariant, now enforced.
+
+## 2026-08-01 14:00 UTC tick — fully quiet; new high $192.74 (+13.4%)
+
+All 5 HOLD (exit_analysis on updated 0.88 GPT-6 fair — bar now 0.978 taker, far OTM). MacBook
+0.525 (+33.2%), GPT-6 0.845. Funnel completely empty: arb 0/1213 real (dedup fix holding),
+discovery 0 candidates clearing hurdle (first fully-empty shortlist in weeks), redeem 0, no D23
+markets, UMA clean, no news. Bankroll $192.74 (+13.4% ref, new high). No TG (mark drift only).
