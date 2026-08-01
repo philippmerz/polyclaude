@@ -4331,3 +4331,20 @@ finalized (--top 3000, tail -60; sort is vol-desc so the cut must be deep for th
 survive). Validated: HLE legs now surface and clear the hurdle. BONUS FIND: HLE is a 7-event
 FAMILY (per-lab siblings, same lagging resolution source) — queued in backlog w/ cluster cap;
 capital-bound until ammo frees. The funnel now sees the whole tail for the first time.
+
+## 2026-08-01 ~16:20 UTC — HLE family pass: Gemini-50+ NO 36sh@0.08 (DEC-0063); Claude leg KILLED by verification
+
+Priced all 7 family events (identical criteria — same frozen agi.safe.ai source). The
+verification sequence mattered enormously: (1) Claude-55+ NO looked like the monster (mid NO
+0.1055 vs apparent fair 0.5+) — KILLED when Opus 5's launch numbers surfaced: 56.3% HLE
+NO-TOOLS = capability >=55 already demonstrated; the leg collapses to a single unverifiable
+pillar (does the board update?) where the 0.89 crowd may simply be right. (2) The Claude 70/75
+mid-inversion evaporated at live quotes (75+ "0.11" was a 0.04/0.18 mirage). (3) Overall-60+
+skipped — Mythos-64.5-on-some-configs kills the capability pillar there too. (4) GEMINI-50+
+NO survived everything: Gemini 4 began PRE-TRAINING Jul-21 (no date, possibly 2027), Google's
+frontier ~38-45 across all trackers, so 50+ needs an unannounced intermediate model +5-10pp
+over their best AND a listing — TWO live pillars, robust in both board-state worlds (fair NO
+~0.7 even if my agi.safe.ai fetch is prerender-blind). Bought 36sh@0.08 ($2.88, all liquid
+pUSD). Kelly wants ~$28 (capped 15%); tranche-2 via Aave bridge ($7.85) GATED on a fresh 02:00
+verification + kimi round — at 9x market disagreement, epistemic humility rations the size.
+Family exposure $19.1/57.8 cluster cap. 8 positions.

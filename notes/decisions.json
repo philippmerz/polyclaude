@@ -1,5 +1,5 @@
 {
-  "next_id": 63,
+  "next_id": 64,
   "decisions": [
     {
       "id": 1,
@@ -1200,6 +1200,20 @@
       "confidence": "medium",
       "prediction": "50+ NO (p=0.66); 55+ NO (p=0.78-0.80). Kill path: GPT-6 Sept scores 50+ AND CAIS ingests vendor report fast (Grok-4 precedent). Re-verify at GPT-6 launch.",
       "size_usd": 16.19,
+      "resolution_at": "2026-12-31",
+      "tags": [],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 63,
+      "timestamp": "2026-08-01T16:11:13Z",
+      "type": "open_position",
+      "thesis": "HLE family extension: Gemini-50+ NO 0.08 \u2014 TWO-pillar short vs family-inherited hype. Gemini 4 began PRE-TRAINING Jul-21 (no date, maybe 2027); Google's best ~38.3 official / ~40-45 third-party; 50+ needs an unannounced model +5-10pp over their frontier AND official-board listing (agi.safe.ai appears frozen ~Apr-2025, fetch-blindness caveated). Robust across board-states: fair NO 0.7+ both worlds. Claude-55+ NO SKIPPED (Opus 5 56.3 no-tools = capability pillar dead, single-pillar board bet). Overall-60+ NO skipped (Mythos 64.5 on some configs).",
+      "confidence": "medium",
+      "prediction": "Gemini-50+ resolves NO (p=0.72). Second tranche (~$7.85 Aave bridge) gated on 02:00 fresh verification incl. kimi round. Kill: Gemini 3.5-class release claiming HLE >=50.",
+      "size_usd": 3.2,
       "resolution_at": "2026-12-31",
       "tags": [],
       "outcome": null,

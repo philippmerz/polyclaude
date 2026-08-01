@@ -84,5 +84,10 @@
   "p_no": 0.79,
   "verified": "2026-08-01",
   "note": "Needs OpenAI to EXCEED current global SOTA 53.3 by 2pp+ AND timely listing. Capability ~0.3 x listing ~0.68. Same GPT-6-launch re-verify trigger."
+ },
+ "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
+  "p_no": 0.72,
+  "verified": "2026-08-01",
+  "note": "Two-pillar NO: (1) capability \u2014 Gemini 4 pre-training began Jul-21 (no date); Google best 38.3 official/~40-45 3rd-party; 50+ needs unannounced +5-10pp model; (2) listing \u2014 agi.safe.ai appears frozen (Apr-2025 stamp; fetch-blindness caveat). Robust both board-worlds. KILL: any Gemini release claiming HLE>=50 -> immediate re-eval. Tranche-2 gated on 02:00 kimi verification."
  }
 }
