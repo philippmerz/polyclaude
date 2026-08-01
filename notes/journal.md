@@ -4307,3 +4307,13 @@ listing. ENTERED (taker; thin books don't fill makers, edge dwarfs fee): NO 15sh
 ingestion, Grok-4 precedent) still leaves 12-18pp. Re-verify trigger: GPT-6 launch (Sept).
 Skipped 60/65/70 legs (thin edge vs fee). DEC-0062; priors filed w/ two-layer decomposition.
 pUSD now ~$3.4 — D23 fallback = Aave $7.85 bridge if listings land. 7 positions.
+
+## 2026-08-01 ~15:25 UTC — operator: "why wasn't this caught?" → the $20k liquidity floor was the answer
+
+Post-mortem, honest: discover_markets --min-liquidity defaults to $20,000; HLE legs are $775-2k
+— invisible 10x below the floor, every tick. The floor guards against mirage/unfillable books,
+but it structurally excludes the segment where mispricings persist longest (sharps can't size
+into thin books). Deeper: the Jul-24 scale-invariance directive was applied to EVALUATION but
+never audited into the DISCOVERY config — doctrine-vs-plumbing gap. Fixed same turn: step 6 now
+runs a thin-tail pass (--min-liquidity 500 --min-vol24 20, top 15) whose hits get criteria
+reads, not auto-entries. Lesson added to 01_lessons.md (funnel decides what you never see).

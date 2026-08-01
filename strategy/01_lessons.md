@@ -79,6 +79,13 @@
 
 - **Case-by-case instance mispricing is the surviving PM edge** (§3.1). Five population
   patterns falsified at $0 deployed. High-APY candidates are questions, not answers.
+- **Thin markets are where mispricings persist longest** — sharps can't size, so nobody
+  corrects the price. The discovery scanner's $20k liquidity floor hid the HLE
+  resolution-source-lag trade ($775-2k/leg) until the OPERATOR browsed into it
+  (2026-08-01). Doctrine changes (scale-invariance: capacity is not a filter) must be
+  AUDITED INTO scanner configs, not just applied at evaluation — the funnel decides
+  what you never see. Thin-tail pass now in step 6; hits get criteria READS, not
+  auto-entries.
 - **Announce-at-event template:** criteria are LOOSE (any new project/season/casting via
   ANY official channel over a multi-day window; already-announced content excluded).
   SDCC went 4-FOR-4 YES including no-panel studios — the official-channels backdoor
