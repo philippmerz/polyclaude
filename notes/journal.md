@@ -4261,3 +4261,16 @@ the ceasefire family's US-action clock; watch-only. Sports scan surfaced its fir
 in days (San Luis NO 3.5pp vs DraftKings) — killed on fee (4.35pp taker > edge) + venue floor
 (Kelly/4 = $3.7 < $5); scored skip, ledger N=41. Sept-Fed-cut fade (NO 0.976) skipped:
 ~1.4pp thin, near-consensus. No TG per material-only cadence (mark move, zero actions).
+
+## 2026-08-01 02:00 UTC tick — GPT-6 naming crux resolves toward NO; prior 0.79→0.88; new high $191.23
+
+GPT-6 NO 0.775→0.840 overnight (+30.2% on position). VERIFIED before acting: public leak wave
+now says "GPT-5.7 in August, GPT-6 slips to September" (WinCentral; Decrypt covering the market
+repricing itself) — the naming crux from the decomposition resolving toward NO. Fair moved WITH
+price → p_no 0.79→0.88 (verified 08-01), hazard checkpoints lifted (0.92 Aug-15 / 0.95 Aug-22 /
+0.97 final wk). DOCTRINE VALIDATION: the static-fair exit signal said "taker-sell at 0.84 beats
+0.79 fair" — acting on it without the verify step would have sold a 0.88-fair position at 0.84.
+Hidden-info rule (verify the move, no mechanical exits) earned its keep on the UP side.
+
+Bankroll $191.23 (+12.5% ref, new high), MTM +16.3% unrl, all green. Funnel: arb 0/1119 real;
+discovery = invade-Iran only (adjudicated); no D23 markets yet; redeem 0; state audit clean.
