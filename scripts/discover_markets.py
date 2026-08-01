@@ -50,6 +50,50 @@ def annualized_yield_after_fee(p_buy: float, days: float) -> float | None:
         return float("inf")  # effectively infinite APY for ultra-short tail trades
 
 
+def fetch_active_via_events(limit_per_page: int = 100, max_pages: int = 20) -> list[dict[str, Any]]:
+    """Fetch active markets by paginating EVENTS (vol24 desc) and flattening members.
+
+    Why (2026-08-01): the /markets endpoint's offset ceiling (~2000, 422 above)
+    cuts off at ~$1.9k/day vol24, and ascending only reaches ~$10/day — markets
+    between are UNREACHABLE by either direction (the HLE legs at ~$150/day sat
+    in that dead zone, invisible to every scan until the operator browsed into
+    them). The EVENTS universe is much smaller: 20 pages reach down to
+    ~$240/day event-vol, spanning the thin tail where mispricings persist.
+    Event-embedded market dicts carry the same fields the pipeline needs;
+    the parent event is attached under 'events' for group-aware consumers.
+    """
+    out: list[dict[str, Any]] = []
+    seen_ids: set[str] = set()
+    with httpx.Client(timeout=20.0) as c:
+        for page in range(max_pages):
+            r = c.get(
+                f"{GAMMA}/events",
+                params={
+                    "closed": "false", "archived": "false", "active": "true",
+                    "limit": str(limit_per_page),
+                    "offset": str(page * limit_per_page),
+                    "order": "volume24hr", "ascending": "false",
+                },
+            )
+            if r.status_code == 422:
+                break
+            r.raise_for_status()
+            batch = r.json()
+            if not batch:
+                break
+            for ev in batch:
+                for m in ev.get("markets") or []:
+                    mid = str(m.get("id"))
+                    if mid in seen_ids:
+                        continue
+                    seen_ids.add(mid)
+                    m.setdefault("events", [{"id": ev.get("id"), "title": ev.get("title")}])
+                    out.append(m)
+            if len(batch) < limit_per_page:
+                break
+    return out
+
+
 def fetch_active(limit_per_page: int = 100, max_pages: int = 8) -> list[dict[str, Any]]:
     """Fetch active+open markets sorted by 24h volume desc, paginated.
 
@@ -78,8 +122,25 @@ def fetch_active(limit_per_page: int = 100, max_pages: int = 8) -> list[dict[str
                     "ascending": "false",
                 },
             )
+            if r.status_code == 422:
+                # gamma rejects offset >~2000 — the API's own pagination
+                # ceiling. Stop cleanly with what we have (2026-08-01).
+                break
             r.raise_for_status()
             batch = r.json()
+            # Early-stop (2026-08-01): pages are volume24hr-DESC, so once a
+            # page's minimum vol24 drops below ~$10 the remaining tail is dead
+            # junk — stop paginating instead of walking 40 pages of zeros.
+            # (Context: the volume-ordered fetch is itself a filter — HLE legs
+            # at ~$150/day vol ranked below the top-1000 and were never even
+            # FETCHED, making every downstream liquidity-floor debate moot.)
+            if batch:
+                try:
+                    if max(float(m.get("volume24hr") or 0) for m in batch) < 10:
+                        out.extend(m for m in batch if str(m.get("id")) not in seen_ids)
+                        break
+                except Exception:
+                    pass
             if not batch:
                 break
             for m in batch:
@@ -262,6 +323,9 @@ def main() -> None:
     ap.add_argument("--top", type=int, default=80)
     ap.add_argument("--max-pages", type=int, default=10)
     ap.add_argument("--no-snapshot", action="store_true")
+    ap.add_argument("--via-events", action="store_true",
+                    help="fetch via /events pagination (reaches the thin tail the "
+                         "/markets offset ceiling hides — see fetch_active_via_events)")
     ap.add_argument("--clears-hurdle-only", action="store_true",
                     help="filter to candidates whose dominant-side APY beats the Aave hurdle")
     ap.add_argument("--hurdle-apy", type=float, default=HURDLE_APY_DEFAULT,
@@ -275,7 +339,10 @@ def main() -> None:
     args = ap.parse_args()
 
     SNAP_DIR.mkdir(parents=True, exist_ok=True)
-    markets = fetch_active(max_pages=args.max_pages)
+    if args.via_events:
+        markets = fetch_active_via_events(max_pages=args.max_pages)
+    else:
+        markets = fetch_active(max_pages=args.max_pages)
     print(f"fetched {len(markets)} active markets")
 
     short = shortlist(

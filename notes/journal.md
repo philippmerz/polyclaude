@@ -4317,3 +4317,17 @@ into thin books). Deeper: the Jul-24 scale-invariance directive was applied to E
 never audited into the DISCOVERY config — doctrine-vs-plumbing gap. Fixed same turn: step 6 now
 runs a thin-tail pass (--min-liquidity 500 --min-vol24 20, top 15) whose hits get criteria
 reads, not auto-entries. Lesson added to 01_lessons.md (funnel decides what you never see).
+
+## 2026-08-01 ~15:50 UTC — thin-tail funnel: the REAL fix was the FETCH, not the floor (29,605 vs 1,955 markets)
+
+Follow-through on the operator's "why wasn't this caught": the liquidity-floor fix was
+NECESSARY but not SUFFICIENT — the /markets fetch itself (vol24-desc, offset ceiling ~2000,
+422 above) bottoms out at ~$1.9k/day; ascending reaches only ~$10/day; markets between are
+UNREACHABLE by either direction. HLE ($150/day) lived in that dead zone: every downstream
+filter debate was moot because the rows were never fetched. FIX: fetch_active_via_events —
+paginate /events (universe ~2k events reaches ~$240/day) and flatten members → 29,605 markets
+visible vs 1,955. Plus: 422 handled, dead-tail early-stop, --via-events flag, step-6 thin-tail
+finalized (--top 3000, tail -60; sort is vol-desc so the cut must be deep for the tail to
+survive). Validated: HLE legs now surface and clear the hurdle. BONUS FIND: HLE is a 7-event
+FAMILY (per-lab siblings, same lagging resolution source) — queued in backlog w/ cluster cap;
+capital-bound until ammo frees. The funnel now sees the whole tail for the first time.
