@@ -209,14 +209,27 @@ def live_quote_group(members: list[tuple[dict, float]], action: str, target_shar
 
 
 def group_by_event(markets: list[dict]) -> dict[str, list[dict]]:
+    # Dedup members by conditionId (2026-08-01): the paginated market fetch can
+    # return the SAME market twice (overlapping pages / re-fetch drift — the
+    # duplicates carried slightly different liquidity snapshots). A duplicated
+    # member double-counts its YES in the sum AND breaks the buy-all-NO payout
+    # assumption (duplicates resolve YES together), which manufactured a phantom
+    # "28.7% live-validated free arb" on Montana-Senate (2×R + 2×I + 1×D,
+    # yes_sum 2.006) and daemon-fired a tick for it.
     groups: dict[str, list[dict]] = defaultdict(list)
+    seen: set[tuple[str, str]] = set()
     for m in markets:
         events = m.get("events") or []
         if not events:
             continue
         eid = events[0].get("id")
-        if eid:
-            groups[eid].append(m)
+        if not eid:
+            continue
+        key = (eid, str(m.get("conditionId") or m.get("id")))
+        if key in seen:
+            continue
+        seen.add(key)
+        groups[eid].append(m)
     return groups
 
 

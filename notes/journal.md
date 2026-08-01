@@ -4274,3 +4274,16 @@ Hidden-info rule (verify the move, no mechanical exits) earned its keep on the U
 
 Bankroll $191.23 (+12.5% ref, new high), MTM +16.3% unrl, all green. Funnel: arb 0/1119 real;
 discovery = invade-Iran only (adjudicated); no D23 markets yet; redeem 0; state audit clean.
+
+## 2026-08-01 06:08 UTC — daemon-fired tick: "28.7% free arb" was a MEMBER-DEDUP PHANTOM; fixed at source
+
+opportunity_watch fired on "1 REAL free-arb >2% net" (Montana Senate, live-validated 28.67%).
+Forensics: the basket held 5 members = Republican×2 + Independent×2 + Democrat×1 (same markets
+fetched twice with drifted liquidity snapshots — paginated-fetch overlap). Duplicates resolve
+YES together → buy-all-NO pays 3 not 4 vs cost 3.09 = the "arb" LOSES. True deduped basket sums
+1.009 (no arb). Fix: group_by_event now dedups on (event_id, conditionId); re-run = 0 REAL.
+Also adjudicated the JSON's top row (Nobel Peace sum 0.439, 20 members): directional
+missing-mass, correctly labeled arb_free:false by the scan — P(winner among listed 20) ~0.5
+central vs 0.439 implied = thin/low-confidence, 20-leg costs, October lock → skip (not
+score-worthy: the tool itself doesn't claim it's an arb). Phantom class: THE arb pipeline's
+first daemon-fired false positive — dedup was the missing invariant, now enforced.
