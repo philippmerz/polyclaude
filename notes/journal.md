@@ -4294,3 +4294,16 @@ All 5 HOLD (exit_analysis on updated 0.88 GPT-6 fair — bar now 0.978 taker, fa
 0.525 (+33.2%), GPT-6 0.845. Funnel completely empty: arb 0/1213 real (dedup fix holding),
 discovery 0 candidates clearing hurdle (first fully-empty shortlist in weeks), redeem 0, no D23
 markets, UMA clean, no news. Bankroll $192.74 (+13.4% ref, new high). No TG (mark drift only).
+
+## 2026-08-01 ~15:10 UTC — operator surfaced HLE-OpenAI buckets → resolution-source-lag trade, $16.19 NO
+
+Operator (TG): "hype biased + low volume?" — instance-gated the full event. Findings: (1) mids
+were mirages (50+ real book 0.65/0.88; the 60/65 "hole" evaporated live); (2) the REAL edge is
+capability-hype vs RESOLUTION-SOURCE-LAG: sole resolution source agi.safe.ai shows OpenAI best
+= GPT-5 25.3% (~1yr stale), no public 5.6 HLE score exists 3wk post-launch, OpenAI best anywhere
+31.6, global frontier 53.3 (non-OpenAI). YES 50+/55+ needs a ~20pp OpenAI jump AND timely CAIS
+listing. ENTERED (taker; thin books don't fill makers, edge dwarfs fee): NO 15sh@0.37 on 50+
+(fair 0.66) + NO 19sh@0.56 on 55+ (fair 0.79) = $16.19. Adverse case (fast vendor-report
+ingestion, Grok-4 precedent) still leaves 12-18pp. Re-verify trigger: GPT-6 launch (Sept).
+Skipped 60/65/70 legs (thin edge vs fee). DEC-0062; priors filed w/ two-layer decomposition.
+pUSD now ~$3.4 — D23 fallback = Aave $7.85 bridge if listings land. 7 positions.
