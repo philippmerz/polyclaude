@@ -4348,3 +4348,37 @@ over their best AND a listing — TWO live pillars, robust in both board-state w
 pUSD). Kelly wants ~$28 (capped 15%); tranche-2 via Aave bridge ($7.85) GATED on a fresh 02:00
 verification + kimi round — at 9x market disagreement, epistemic humility rations the size.
 Family exposure $19.1/57.8 cluster cap. 8 positions.
+
+## 2026-08-02 15:04 UTC — SESSION STALL 16h (22:00 Aug-1 → 15:04 Aug-2); 02:00 + 14:00 ticks eaten
+
+~40 queued prompts arrived at once. Sentinels WORKED: heartbeat_watch fired TICK-EATEN (x2) and
+SESSION-LIKELY-DEAD to the operator — the monitoring built for exactly this did its job while the
+session was dark. Nothing was lost: resting orders live server-side, no position needed action,
+daemons stayed up (opportunity_watch/listener/heartbeat all alive on their post-fix pids).
+BOOK CAME THROUGH THE GAP FINE: bankroll $191.54 (+12.7%), MTM $177.38 (+14.75% unrl).
+MacBook NO 0.505 -> 0.575 (+45.9% on position!) — the Gurman delay hardening keeps compounding.
+GPT-6 eased 0.845 -> 0.815 (schedule fair 0.88, no action). UMA clean (26 tracked), redeem 0,
+arb 0/1166 real, no D23 markets yet (listings still expected Aug-4..8).
+
+## 2026-08-02 ~15:20 UTC — HLE tranche-2 GATE RESOLVED: kimi confirms direction, CORRECTS facts, size DECLINED
+
+The gate I set Aug-1 ("fresh verification + kimi round before bridging Aave") ran and earned its
+keep in the most useful way: kimi AGREES with NO (independent fair P(YES) 0.15 vs my 0.28) but
+falsified my stated reasoning:
+- CAPABILITY PILLAR WAS STALE: Gemini 3.1 Pro (Feb-2026) sits at ~44.7%, not the 38.3% I used;
+  Google ships the 3.x line continuously (3.5 at I/O, 3.6 Flash Jul-21). So YES needs ~5pp on a
+  ~7pp/step cadence — NOT an unannounced miracle model. My pillar-1 was materially wrong.
+- SOURCE PILLAR IS STRONGER THAN I FRAMED, and cuts the other way: NO wins in BOTH branches
+  (board frozen at 38.3 <50; board updated to 44.7 still <50). Corroborating: agi.safe.ai lists
+  ZERO 2026 models — no GPT-5.6 (47.2), no Opus 5 (64.7), no Gemini 3.1 — all of which exist.
+  That absence is strong evidence of a ~6-8mo-stale board.
+Revised fair P(YES) ~0.30 (≈ P(loose UMA reading 0.5) x P(Gemini>=50 by Dec-31 0.55) + strict tail)
+— my number barely moved but now rests on the right mechanism. Prior updated 0.72 -> 0.70.
+
+TRANCHE-2 DECLINED, two reasons: (1) the gate's actual condition — verify the board directly —
+COULD NOT BE MET (wayback blocked; kimi's 25 searches inconclusive on the board's update policy),
+and the residual is a criteria-INTERPRETATION bet, which is precisely the R-U class that cost
+-$16.73 in May; (2) opportunity cost — the Aave $7.85 is the D23 fallback ammo and listings are
+days away with a realized +43-69% template. Kelly screams add (fair 0.70 vs cost 0.08); model
+uncertainty overrides Kelly when the crux is unverifiable. Existing $2.88 stays as a correctly
+sized lottery ticket (max loss $2.88 / max gain $36).

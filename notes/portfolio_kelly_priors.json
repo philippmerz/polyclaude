@@ -86,8 +86,8 @@
   "note": "Needs OpenAI to EXCEED current global SOTA 53.3 by 2pp+ AND timely listing. Capability ~0.3 x listing ~0.68. Same GPT-6-launch re-verify trigger."
  },
  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
-  "p_no": 0.72,
-  "verified": "2026-08-01",
-  "note": "Two-pillar NO: (1) capability \u2014 Gemini 4 pre-training began Jul-21 (no date); Google best 38.3 official/~40-45 3rd-party; 50+ needs unannounced +5-10pp model; (2) listing \u2014 agi.safe.ai appears frozen (Apr-2025 stamp; fetch-blindness caveat). Robust both board-worlds. KILL: any Gemini release claiming HLE>=50 -> immediate re-eval. Tranche-2 gated on 02:00 kimi verification."
+  "p_no": 0.7,
+  "verified": "2026-08-02",
+  "note": "REVISED 2026-08-02 after kimi round (kimi indep. fair P(YES) 0.15 vs my 0.28 \u2014 AGREES on NO, CORRECTS my facts): capability pillar was STALE \u2014 Gemini 3.1 Pro (Feb-2026) is ~44.7% not 38.3%, and Google ships the 3.x line continuously, so the gap to 50 is ~5pp on a ~7pp/step cadence = the REAL risk. Source pillar is STRONGER than I framed: agi.safe.ai lists ZERO 2026 models (no GPT-5.6/Opus-5/Gemini-3.1 despite all existing) -> board ~6-8mo stale, and NO wins in BOTH branches (frozen 38.3 <50; updated-to-44.7 still <50). Net fair P(YES) ~0.30 = P(loose UMA reading ~0.5) x P(Gemini >=50 by Dec-31 ~0.55) + strict-branch tail. TRANCHE-2 DECLINED 2026-08-02: gate required crux verification; wayback blocked + kimi's 25 searches inconclusive on whether the board updates, and the residual is a criteria-INTERPRETATION bet (the R-U loss class). Aave $7.85 stays dry for D23 (proven template, days away). KILL: any Gemini release claiming HLE>=50 listed on agi.safe.ai."
  }
 }
