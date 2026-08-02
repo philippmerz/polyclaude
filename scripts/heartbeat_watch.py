@@ -322,7 +322,8 @@ def check_session_liveness(state: dict) -> None:
         _emit(state, "session_dead",
               f"SESSION LIKELY DEAD: journal.md stale {journal_age // 3600}h while injects "
               f"still flowing ({inject_age // 60}min ago) — ticks firing into the void "
-              f"(expired creds?). Operator: restart/re-login the polyclaude session.",
+              f"(MODEL QUOTA exhausted? expired creds?). Operator: check quota first "
+              f"(cheapest fix — switch model), then re-login/restart.",
               cooldown=SESSION_DEAD_COOLDOWN)
 
 
@@ -452,7 +453,8 @@ def check_tick_execution(state: dict) -> None:
               f"TICK EATEN: cron tick dispatched to the pane "
               f"{(now - last_dispatch) // 60}min ago but journal.md hasn't been "
               f"touched since — the send-keys likely landed in a dead/absent claude. "
-              f"Operator: check/restart the polyclaude session.",
+              f"Operator: check MODEL QUOTA first (a quota-exhausted pane looks "
+              f"identical to a dead one — 2026-08-02, 16h), then restart the session.",
               cooldown=TICK_EXEC_COOLDOWN)
 
 

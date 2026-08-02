@@ -160,10 +160,14 @@
   call in a daemon needs a timeout=; every daemon check needs a progress signal (child
   age, output growth, state mtime), not just pid-alive. Also: tmux clients exit 0 on
   SIGTERM — a killed send may be logged "delivered" without the text landing.
-- **Session marathons hang** (2× ~4h in one day, 2026-07-27). Sentinels (TICK-EATEN,
-  session-dead) cover the gap; resting orders live server-side; recommend a fresh
-  session to the operator rather than pushing through — everything durable is in the
-  repo precisely so context is disposable.
+- **A dark pane has TWO causes that look identical: session hang and MODEL QUOTA
+  exhaustion.** Same symptoms from inside (ticks eaten, journal stale, sentinels fire),
+  opposite fixes. 2026-08-02: I diagnosed a 16h gap as the marathon-hang pattern and
+  recommended a restart; the operator's actual cause was Fable quota — they fixed it by
+  switching model. Check quota FIRST (cheapest, and only the operator can see it), then
+  session age. Sentinel text now names quota first. Marathon hangs ARE real too (2× ~4h,
+  2026-07-27), and the response is the same either way: nothing is lost — resting orders
+  live server-side, everything durable is in the repo precisely so context is disposable.
 
 ## Process & operator covenant
 

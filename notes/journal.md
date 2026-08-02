@@ -4382,3 +4382,16 @@ and the residual is a criteria-INTERPRETATION bet, which is precisely the R-U cl
 days away with a realized +43-69% template. Kelly screams add (fair 0.70 vs cost 0.08); model
 uncertainty overrides Kelly when the crux is unverifiable. Existing $2.88 stays as a correctly
 sized lottery ticket (max loss $2.88 / max gain $36).
+
+## 2026-08-02 ~15:26 UTC — CORRECTION: the 16h gap was MODEL QUOTA, not a session hang
+
+Operator: "It was just fable quota being reached, i switched to opus." My diagnosis (marathon
+hang, 3rd instance) was WRONG — quota exhaustion presents identically from inside the pane:
+ticks eaten, journal stale, same sentinel alerts. Retracted the restart recommendation.
+Real damage from the misdiagnosis: my own alert text ("check/restart the session — expired
+creds?") would have pointed the operator at the wrong fix. FIXED: both sentinel messages now
+name MODEL QUOTA as the first thing to check (cheapest fix, and only the operator can see it),
+session/creds second; daemon restarted onto the new text (693978). Lesson rewritten in
+01_lessons.md — "a dark pane has TWO causes that look identical." Attribution discipline note:
+this is the same class as the 2026-06-03 "injection" scare — check the boring explanation
+before alleging the dramatic one.
