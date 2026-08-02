@@ -4411,3 +4411,19 @@ operator if the fallback also fails). Converts a dark window from "until the ope
 HONEST CAVEAT: syntax-validated and wired, but NOT exercised end-to-end — testing it for real
 means spawning a duplicate tick and burning quota the day the operator just ran out. First real
 firing is the test; if it misbehaves the failure mode is a redundant check-in, not a bad trade.
+
+## 2026-08-02 16:00 UTC — Sunday long-term review (macro-fiscal-labor, tech-ai-chips, crypto-on-chain)
+
+Picked the 3 stalest domains (all last run Jul-12). Digest logged to world_state_log.
+GOOG vetted 3.75/4 WATCH — AI-capex has rotated from "is it coming" to "does it CONVERT";
+Q3 earnings (late Oct) is the proof-point, dip trigger $280-285 (P/E ~14). Added to watchlist,
+IBKR-route. Four themes explicitly PASSED with reasons (consumer-short = directional beta;
+Fed real-rates = my proven non-edge, Sept market already at 0.525; BoJ carry = no venue;
+stablecoin deleveraging = assessed against OUR Aave exposure and dismissed — $7.85 sits in the
+most senior overcollateralized layer, and a leverage unwind RAISES supply APY).
+HONEST CROSS-READ: the GOOG vet cuts mildly AGAINST my live Gemini-HLE NO — $185-205B capex and
+a continuously shipping 3.x line make a >=50 HLE Gemini more plausible than my original framing.
+Same correction kimi made. The position's edge now rests on the source pillar alone; prior stays
+0.70 and this independently reinforces yesterday's tranche-2 decline. Two separate analyses
+converging on "your capability pillar was wrong" is the calibration signal, not noise.
+No new trigger hits (ALB/CCJ/NVDA surfaced Jul-30 stand).
