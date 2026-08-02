@@ -529,3 +529,67 @@ Scores clearly on secular tailwind (AI, defense demand) and catalyst window (10X
 - [MP Materials Valuation](https://stockanalysis.com/stocks/mp/statistics/)
 - [MP Materials Balance Sheet](https://stockanalysis.com/stocks/mp/financials/balance-sheet/)
 ```
+
+---
+
+## 2026-08-02T16:04:41Z — longterm_check
+
+**Query:** `GOOG` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: GOOG
+
+Date: 2026-08-02 | Type: equity | Horizon: 3y
+
+### Current state
+$354.25 (down 12.4% from 52-week high of $404.47; P/E 16.87, down 39% from 12-month avg of 27.7; up ~88% 1-year). Market repriced downward in July 2026 amid semiconductor sell-off despite strong Cloud fundamentals.
+
+### Cyclical position
+Alphabet is mid-cycle but valuationally compressed after July 2026 repricing. The stock has fallen 37% from highs ($404→$354) but remains profitable with $53.27B free cash flow LTM and 82% Cloud revenue growth. P/E at 16.87 is well below its 3-year median of 25.16, indicating valuation reset rather than fundamental breakdown. The sell-off was driven by sector-wide AI capex concerns, not Alphabet-specific deterioration. Debt-to-equity remains 0.11 (very low), and the company generates more FCF than capex ($132.4B capex vs $185.68B operating cash flow). Cyclical positioning favors entry: profitable growth at depressed multiple.
+
+### Secular tailwind
+AI infrastructure and enterprise cloud adoption are durable multi-year drivers. Google Cloud hit $24.8B revenue (82% YoY growth) with operating income tripling to $8.8B; backlog reached $514B (+$50B sequential), with >$250B expected to convert in next 24 months. Gemini adoption accelerating: 900M monthly active users in standalone app, 2B+ users via AI Overviews in Search, 8M+ paid enterprise seats across 2,800+ companies. Apple partnership (reported ~$1B/year) places Gemini in 2B active Apple devices. Android AI rollout (summer 2026 onward) reaches another 2B devices. The tailwind is intact and accelerating, though competitive intensity is rising: ChatGPT holds 17% of global digital queries vs Gemini's lower share, and capex intensity is climbing (2026 capex $185-205B, up from $91B in 2025, forecast to rise again in 2027).
+
+### Catalyst window
+- [HIGH] Q3 2026 — Cloud backlog conversion rate + 2027 capex guidance — Earnings call (late Oct 2026)
+- [HIGH] Q4 2026 / Q1 2027 — Android AI feature rollout to broader device base — On-device adoption metrics
+- [HIGH] Late 2026 / Early 2027 — Antitrust appeals court hearing (search monopoly case) — D.C. Circuit docket
+- [MED] 2026-2027 — Gemini Enterprise Agent Platform adoption (enterprise TAM expansion) — Google Cloud Next reports
+- [MED] 2027 — Cloud customer retention + pricing power during capex normalization phase — Full-year results
+
+### Margin of safety
+P/E of 16.87 (39% discount to recent average) provides cushion; stock trades at only 10x book value despite $121.68B net cash position ($9.95/share net cash alone). Free cash flow of $53.27B LTM remains positive despite capex surge, funding both growth and potential buybacks. Debt-to-equity 0.11 and current ratio 2.01 indicate strong liquidity; Google Search retains 89.87% of traditional query share (durable moat). Core search profitability funds Cloud build-out. Downside bound: stock would need 50%+ collapse in Cloud growth assumptions or major antitrust breakup to erase current margin of safety; base case assumes Cloud backlog converts and capex generates positive incremental returns.
+
+### Top 3 risks
+1. Capex intensity trap — $185-205B capex in 2026 (rising 2027) represents capex/revenue of ~15-17%. If Cloud conversion rates disappoint or AI ROI lags, unrecovered capex could impair returns 2-3 years out. Market repricing July 2026 was driven by this uncertainty.
+2. AI competition threshold — ChatGPT captures 17% of global queries; Gemini 2nd in AI search market (13.4% vs Copilot 14.1%). If Gemini fails to gain share or OpenAI/Microsoft integration accelerates mobile adoption, Cloud TAM growth could slow by 20-30%.
+3. Antitrust remedy implementation — Appeals court hearing expected late 2026 or early 2027 on search monopoly case. DOJ is pushing for Chrome divestiture; even if Google prevails on breakup, mandatory data-sharing and distribution restrictions could erode margins or slow product integration (Android+Search+Gemini).
+
+### 5-year scenario probabilities
+- Generational (10x+): Cloud backlog converts at >80% rate, Android AI drives mobile search share shift to Gemini, antitrust resolved without breakup, enterprise AI adoption compounds — 12%
+- Strong (3-5x): Cloud sustains 40%+ growth, Gemini gains share to 20%+ of AI search, capex ROI turns positive by 2027-28 — 38%
+- Modest (1.5-3x): Cloud grows 20-30%, capex normalized by 2027, margins compress from capex drag, competitive intensity steady — 32%
+- Flat (-30% to +50%): Capex fails to generate outsized Cloud returns, Gemini stalls at current share, macro slowdown delays Cloud backlog conversion — 15%
+- Thesis broken (-50%+): Major antitrust breakup forces search/Chrome separation, Cloud backlog stalls, or AI capex write-downs — 3%
+
+### Entry trigger
+Current entry at P/E 16.87 is defensible given cyclical valuation reset + durable Cloud tailwind, but execution risk is high (capex ROI). Optimal entry:
+- Immediate (now): Only if comfortable with 2-3 year capex intensity and willing to wait for Cloud backlog conversion proof in Q3-Q4 2026 earnings
+- Better entry: Wait for Q3 2026 earnings (late Oct) to confirm Cloud growth trajectory + 2027 capex guidance. If Cloud growth remains 50%+, entry justified even at current price.
+- Dip entry: Any 20% decline to $280-285 (P/E ~14) = strong buy, assuming thesis still intact
+
+### Verdict: 3.75/4 — WATCH (monitor Q3 2026 earnings for Cloud confirmation + 2027 capex guidance)
+Scores 4/4 on secular tailwind (Cloud 82% growth, $514B backlog, enterprise adoption), 3/4 on catalyst (Android rollout, backlog conversion, antitrust hearing), 3/4 on margin of safety (low debt, $121B cash, profitable), 3/4 on cyclical (valuationally reset but capex intensity is real risk). Thesis is sound but hinges on Cloud capex ROI materialization. Current valuation attractive but not yet a forced entry; wait for Q3 earnings confirmation that backlog is converting and 2027 capex forecast is disciplined.
+
+### Sources
+- [GOOG Stock Price History](https://stockscan.io/stocks/GOOG/price-history)
+- [Google Q2 2026 Earnings Report](https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html)
+- [GOOG P/E Ratio Analysis](https://public.com/stocks/goog/pe-ratio)
+- [Google Gemini Statistics 2026](https://www.omnibound.ai/blog/google-gemini-statistics)
+- [Google Raises 2026 CapEx to $205B](https://convergedigest.com/google-raises-2026-capex-to-205b-as-ai-infrastructure-demand-outpaces-capacity/)
+- [Alphabet Balance Sheet & Cash Position](https://www.financecharts.com/stocks/GOOGL/balance-sheet/cash-and-short-term-investments)
+- [Android AI Integration Timeline](https://9to5google.com/2026/05/19/google-io-2026-news/)
+- [Google Antitrust Case Status](https://tech-insider.org/google-antitrust-appeal-doj-search-monopoly-2026/)
+- [AI Bubble and Valuation Concerns 2026](https://intellectia.ai/blog/ai-investment-boom-bubble-risk-2026)
+- [ChatGPT vs Google Market Share 2026](https://firstpagesage.com/seo-blog/google-vs-chatgpt-market-share-report/)
+```

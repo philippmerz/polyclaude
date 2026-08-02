@@ -1372,3 +1372,114 @@ Sources:
 - [CNBC OPEC+ July 2026 Production Decision](https://www.cnbc.com/2026/07/05/opec-set-to-approve-another-oil-output-increase.html)
 - [IEA Nuclear Power Outlook 2026](https://www.iea.org/reports/global-energy-review-2026/)
 - [IAEA Power Reactor Information System (PRIS)](https://pris.iaea.org/pris/home.aspx)
+
+---
+
+## 2026-08-02T16:02:44Z — world_state_digest
+
+**Domains:** macro-fiscal-labor, tech-ai-chips, crypto-on-chain | **Lookback:** 30d | **Model:** haiku
+
+```
+# WORLD-STATE DIGEST — 2026-08-02
+
+Domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### macro-fiscal-labor
+- [2026-07-02] BLS: June nonfarm payroll +57,000 (seasonally adjusted); unemployment rate 4.19% (down from 4.30% in May)
+- [2026-07-14] BLS: June average hourly earnings $32.38 (+0.2% monthly, +3.5% YoY); real average hourly earnings +0.1% YoY
+- [2026-07-14] BLS: June CPI headline -0.4% monthly, +3.5% YoY; core CPI +2.6% YoY
+- [2026-07-29] Fed: FOMC held federal funds rate at 3.50%–3.75%; 9-3 vote (three dissents for hikes: Hammack, Kashkari, Logan)
+- [2026-07-23] ECB: Held key rates unchanged (deposit 2.25%, main refinancing 2.40%, marginal lending 2.65%); cited high geopolitical uncertainty and energy price volatility
+- [2026-07-31] BoJ: Held benchmark rate at 1.0% (8-1 vote; Takata proposed 1.25%); signaled possible rate hike in September; core inflation forecast to exceed 2% in H2 2026
+- [2026-07-20] PBOC: Held Loan Prime Rates unchanged for 14th consecutive month (1-year 3.00%, 5-year 3.50%); Q2 2026 GDP +4.3% (weakest pace in 3.5 years)
+- [2026-02] CBO: 2026 real GDP growth 2.2%; federal deficit $1.9 trillion (5.8% of GDP); federal debt to rise to 120% of GDP by 2036
+
+### tech-ai-chips
+- [2026-05-20] NVIDIA Q1 FY2027: Revenue $81.6B (+85% YoY, +20% QoQ); Data Center revenue $75.2B (+92% YoY)
+- [2026-05-20] NVIDIA Q2 FY2027 guidance: Revenue $91.0B ±2% (~12% sequential growth); mid-70% gross margins; zero China data center compute assumed in outlook
+- [2026-06-30] TSMC Q2 2026: Consolidated revenue NT$1,270.38B (+36% YoY); net income NT$706.56B (+77.4% YoY); diluted EPS NT$27.25
+- [2026-07-16] TSMC: 2026 capital expenditure raised to $60–64B (from prior ~$50B); 70–80% allocated to advanced process technologies; full-year revenue guidance raised to >40% growth
+- [2026-Q1 released June] SEMI: Global semiconductor equipment billings +14% YoY to $36.55B; driven by AI-related capacity expansion and leading-edge logic/DRAM upgrades
+- [July 2026] Semiconductor industry: AI data centers consuming 70% of high-end DRAM; DRAM+SSD price surge forecast 130% by end-2026; memory chip relief not expected until 2028; automotive production forecast down 600k units for 2026
+
+### crypto-on-chain
+- [2026-08-02] DefiLlama: Total DeFi TVL $73.97B (-0.02% 24h); Lido $17.48B (+12.59% monthly), Aave $14.39B (+10.86% monthly)
+- [2026-08-02] Stablecoin market cap $307.56B (-0.89% 7d); USDT market share 59.57%
+- [2026-05 to 07] Tether (USDT): Circulating supply declined from ~$190B in May to $184.14B by late July (~$6B total decline); June monthly contraction ~$7.7B (largest single-month decline since May 2022)
+- [2026-08-02] L2Beat: Base chain TVL $11.52B; Arbitrum One $10.15B; OP Mainnet $1.43B
+- [July 2026] Bitcoin: Ranged $62,259–$65,214 through month; trading ahead of Fed decision, then off post-announcement
+- [July 2026] Ethereum: Ranged $1,774–$1,903; +6.6% surge on softer inflation report (July 15); volatility driven by Fed and geopolitical uncertainty
+
+## CANDIDATE THEMES
+
+### Memory Chip Shortage → OEM Margin Compression
+- Underlying facts: SEMI billings +14% YoY (foundry capex boom), TSMC 70–80% capex to advanced nodes, AI consuming 70% of high-end DRAM, DRAM+SSD prices up 130% forecast by end-2026, automotive production down 600k units, no relief until 2028
+- Implication: Foundries (TSMC, Samsung) and fabless (NVIDIA, Broadcom) with locked-in supply contracts absorb capex and gain pricing power. OEMs (consumer electronics, automotive, non-hyperscale) lacking long-term contracts face acute input cost inflation and margin squeeze
+- Possible plays: SHORT auto suppliers (supplier indices: AZO, AFSI, TIL), SHORT consumer electronics OEMs (non-hyperscaler), LONG pure-play hyperscalers (GOOG, META, MSFT, AMZN) with long-term supply contracts
+- Direction: short (OEMs)
+- Horizon: 12–18 months (supply relief pushed to 2028)
+- Retail blindspot: Retail focuses on headline capex numbers and TSMC growth; misses that gains flow to foundries and hyperscalers locked in at premium contract prices, while non-contracted OEMs face cost shock
+- Confidence: HIGH
+
+### Real Wage Stagnation + Consumption Peak Risk
+- Underlying facts: June real average hourly earnings +0.1% YoY (nominal +3.5% YoY offset by 3.5% headline CPI); nonfarm payroll +57k only; CBO 2.2% growth; unemployment ticking up (4.30% May → 4.19% June but structural pressure rising)
+- Implication: Nominal wage gains barely keeping pace with headline inflation = real purchasing power flat. Weak payroll growth + unchanged unemployment rate masks possible underlying demand softening. If this persists into Q3, consumption begins de-risking
+- Possible plays: SHORT consumer discretionary (XLY), SHORT automotive retail/services, LONG defensive staples (XLP), LONG low-yield bonds as growth trades unwind
+- Direction: short (cyclicals)
+- Horizon: 6–12 weeks (watch Aug/Sept jobs report)
+- Retail blindspot: Headlines highlight "3.5% wage growth" without contextualizing real wage stagnation. Media focuses on unemployment rate level (4.19%) rather than payroll flow
+- Confidence: MEDIUM (need July jobs data to confirm)
+
+### Fed Behind Inflation Curve → Real Rates Remain Stimulative
+- Underlying facts: Fed held at 3.5–3.75% on 7/29 with 3 dissents for hikes, CPI 3.5% (vs Fed 2% target), real rates ≈0%, Fed has held for 5 consecutive meetings while inflation sticky
+- Implication: Nominal rates (3.5–3.75%) minus headline inflation (3.5%) = real rates near zero or slightly negative; this is stimulative even as central bank appears "on hold." Dissent signals hawkish minority pressure building. If inflation stays sticky, dissents likely grow and timing of first hike accelerates
+- Possible plays: SHORT long-duration bonds (TLT), LONG equities and real asset inflation hedges (commodities, TIPS), LONG cyclical value over growth
+- Direction: long (real assets), short (bonds)
+- Horizon: 3–6 months (next dissent/pivot window Sept–Dec)
+- Retail blindspot: Rate hold at 3.5% is read as "pause" when real rates at zero are still wildly stimulative. Dissents are dismissed as minority noise; cumulative signal (inflation sticky, dissents rising) is underweighted
+- Confidence: MEDIUM (real rates are stimulative, but timing of Fed tightening cycle unclear)
+
+### Stablecoin Deleveraging into Structured Lending Platforms
+- Underlying facts: USDT circulation declined $6B in 60 days (May $190B → July $184B); June monthly decline $7.7B (largest since May 2022); peg held throughout (orderly exit); DeFi TVL unchanged (-0.02% 24h)
+- Implication: Stablecoin supply contraction during geopolitical/rate uncertainty suggests retail de-risking leverage positions. Redemptions are orderly (peg stable) but accelerating. If trend continues, liquidity in lending platforms (Aave $14.4B, Compound) tightens and collateral haircuts widen. Credit events in crypto lending are tail-risk
+- Possible plays: SHORT crypto lending tokens (Aave governance, Compound governance), SHORT leveraged yield-farming strategies; LONG stablecoin yields (cash-like trade on reduced leverage demand)
+- Direction: short (leverage)
+- Horizon: 4–8 weeks (watch monthly USDT supply next report)
+- Retail blindspot: Stablecoin decline is treated as "outflow noise" rather than a signal of leverage unwind. Lending platform TVL appears flat because exits are offset by remaining leverage rolling over; underlying composition degrades
+- Confidence: MEDIUM (orderly redemptions, but trajectory is novel)
+
+### Geopolitical Carry Unwind + Central Bank Divergence
+- Underlying facts: BoJ held at 1.0% with 8-1 vote (Takata dissent for 1.25%), signaled Sept hike, core inflation forecast "clearly above" 2%; Fed held at 3.5–3.75% with 3 dissents, no hike signal; Japan government intervened to buy yen (currency hit 40yr low); ECB on hold
+- Implication: BoJ tightening + possible Sept hike = JPY upside, carry trades (short JPY, long AUD/NZD/carry) face headwinds. Japan's intervention underscores de-risking of yen shorts. Divergence: tightening BoJ vs patient Fed = USD strength vs JPY, but acute de-risking tail risk
+- Possible plays: SHORT JPY carry trades (cover/reduce shorts), LONG JPY (defensive), SHORT AUD/NZD vs JPY, LONG USD/JPY hedges
+- Direction: short (carry), long (JPY)
+- Horizon: 2–4 weeks (BoJ Sept decision window)
+- Retail blindspot: Carry trades are complex; most retail absent. Attention focused on Fed; BoJ signals and currency intervention miss the lens. Yen at 40yr lows reads as "strong dollar" (Fed story) rather than "JPY carry unwind" (BoJ story)
+- Confidence: LOW-MEDIUM (BoJ divergence is real, but JPY intervention and follow-through unclear; binary on geopolitical risk premium)
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: XLY, AZO, GOOG, META, TLT
+- Run catalyst_check.py on: Fed dissent escalation (track Aug Powell remarks, Sept FOMC); BoJ Sept rate decision; July 2026 jobs report (due Aug 7, 2026)
+- Skip / pass: JPY carry as too event-driven and complex for current data; Taiwan geopolitics as pure tail risk with low mispricing signal; semiconductor equipment makers (ASML, LRCX, KLAC) already priced into capex boom narrative
+```
+
+---
+
+Sources:
+- [BLS Employment Situation June 2026](https://www.bls.gov/news.release/archives/empsit_07022026.htm)
+- [BLS Real Earnings June 2026](https://www.bls.gov/news.release/archives/realer_07142026.htm)
+- [BLS CPI June 2026](https://www.bls.gov/news.release/archives/cpi_07142026.htm)
+- [Fed FOMC Decision July 29, 2026](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a1.htm)
+- [NVIDIA Q1 FY2027 Earnings](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx)
+- [TSMC Q2 2026 Earnings](https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000447/tsm-revenue20260713.htm)
+- [TSMC 2026 Capex & Guidance Raise](https://finance.yahoo.com/technology/articles/tsmc-targets-40-sales-growth-194152888.html)
+- [SEMI Q1 2026 Equipment Billings](https://www.semi.org/en/semi-press-release/semi-reports-global-semiconductor-equipment-billings-increased-14-percent-year-over-year-in-q1-2026)
+- [Semiconductor Shortage 2026 AI Impact](https://www.indexbox.io/blog/semiconductor-industry-realigns-amid-ai-demand-and-supply-crisis-in-2026/)
+- [USDT Circulation Decline July 2026](https://blockchainmagazine.net/ethereum-stablecoin-supply-declines-usdt-down-1-93-usdc-down-3-32-over-30-days/)
+- [BoJ July 2026 Policy Decision](https://www.cnbc.com/2026/07/31/boj-rates-yen-intervention-inflation-japan.html)
+- [ECB July 2026 Monetary Policy](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260723~29f24d99bc.en.html)
+- [PBOC Loan Prime Rate Hold](https://www.fxstreet.com/news/pboc-holds-loan-prime-rates-steady-in-july-202607200115)
+- [CBO Economic Outlook 2026](https://www.cbo.gov/publication/61882)

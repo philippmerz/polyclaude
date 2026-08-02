@@ -367,3 +367,20 @@ Themes — one new candidate vetted, rest pass/already-tracked:
 | **CRSP (new)** | **3.5/4** | WATCH | Gene-therapy approval-cycle inflection | No trigger met NOW. **Q2 earnings Aug-10 = the inflection**: ENTER $48-55 (1% Kelly) IF Casgevy 2026 guidance ≥$130M holds; PASS→wait $35-45 dip if guidance <$100M. CTX310 Ph2 positive (2026-27) = upgrade. 2-5y → IBKR-surface. |
 
 Trigger-state (all IBKR-surface, previously surfaced): SOL $74.65, STX $0.166, ALB $118.37 (now inside the deep-conviction ≤$120 zone — but the lithium-spot caveat from Jul-05/12 stands: confirm spot >$20/kg before treating as an add, else "cheaper = thesis-eroding"), CCJ $84.84 (below the $85-95 band; uranium-spot leg unverified). All 4 surfaced to operator at the 14:00 tick.
+
+## 2026-08-02 weekly digest (domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain — stalest, 3wk)
+
+Themes — one new candidate vetted, rest pass/already-tracked:
+- **AI-capex ROI proof-point cycle (MED-HIGH):** TSMC raised 2026 capex guidance (+40% sales growth target), SEMI equipment billings +14% YoY, Google lifted 2026 capex to $185-205B. The theme has rotated from "is capex coming?" (2025) to "does capex CONVERT?" (Q3-Q4 2026 earnings). Vetted GOOG → **3.75/4 WATCH**.
+- **Real wages flat / consumer de-risking (MED):** 3.5% wage growth ≈ 3.5% CPI = zero real gain; weak payroll flow. Play is SHORT cyclicals (XLY/AZO) — directional macro beta, no instance edge, and shorting isn't the IBKR sleeve's shape. Pass.
+- **Fed real rates ≈0 = still stimulative (MED):** 3 dissents for a hike on Jul-29. Directly relevant to PM Fed markets — but my July N=1 says the market prices Fed better than I do; the September market already sits at 0.525 hike. Explicit pass, not an oversight.
+- **Stablecoin deleveraging (MED):** USDT −$6B over 60d, orderly (peg held), DeFi TVL flat. TOUCHES US: idle capital lives in Aave aUSDC. Assessed — $7.85 in the single most senior, overcollateralized layer of the largest lending market; a leverage unwind stresses borrowers and RAISES supply APY. No action, no exposure change.
+- **BoJ carry unwind (LOW-MED):** forex, no venue. Pass.
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **GOOG (new)** | **3.75/4** | WATCH | AI-capex ROI conversion; Cloud backlog $514B, +82% growth | No forced entry at P/E 16.9. **Q3 earnings (late Oct) = the proof-point**: entry justified if Cloud growth holds ≥50% AND 2027 capex guidance is disciplined. **Dip trigger $280-285 (P/E ~14) = strong buy.** Risks: capex/revenue 15-17% unrecovered, antitrust appeal late-26/early-27 (Chrome divestiture push), Gemini 2nd in AI-search share. 2-5y → IBKR-surface. |
+
+Trigger-state: ALB $117.53, CCJ $87.79, NVDA $195.74 all surfaced to operator Jul-30 with the lithium-spot caveat ($21.6/kg — holds, but at the edge). No new hits this week.
+
+**Cross-read against a LIVE position (honest):** the GOOG vet cuts mildly AGAINST my Gemini-HLE NO. $185-205B of capex and a shipping 3.x cadence make an intermediate Gemini clearing 50% on HLE more plausible than my original "unannounced miracle model" framing — the same correction kimi made yesterday. The position's edge now rests on the resolution-source pillar (agi.safe.ai listing zero 2026 models), not on capability. Prior already revised to 0.70; this reinforces WHY tranche-2 was declined.

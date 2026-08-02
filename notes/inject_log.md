@@ -4786,3 +4786,6 @@ Continuation check: anything else high-leverage to take care of? Review notes/ba
 
 ## 2026-08-02T15:45:38Z — inject
 Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-08-02T16:00:01Z — inject
+Sunday weekly long-term review. (1) Pick 2-3 domain slugs from notes/primary_sources.md that haven't been run in the last 4 weeks (check notes/world_state_log.md for last-run timestamps). Available slugs: macro-fiscal-labor, energy-power-infrastructure, critical-minerals-commodities, trade-regulation, tech-ai-chips, biotech-health, geopolitics-security, crypto-on-chain, markets-corporate. Run: python3 scripts/world_state_digest.py --domain <slug1>,<slug2>. (2) For any HIGH/MED-confidence themes surfaced, run scripts/longterm_check.py on the top 1-2 candidate tickers to vet for entry. (3) Update notes/longterm_watchlist.md with new candidates + flag any existing candidates whose entry triggers were hit. (4) Journal + Telegram tick summary.
