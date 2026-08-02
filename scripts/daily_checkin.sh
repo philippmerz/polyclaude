@@ -52,7 +52,17 @@ export HOME="${HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 # is one of {script, claude, node} (the operator pane wraps claude with
 # script(1) for log capture, so `script` is the typical foreground proc).
 # `bash` means claude exited and we should fall through to fallback.
-if command -v tmux >/dev/null 2>&1 && tmux has-session -t operator 2>/dev/null; then
+# POLYCLAUDE_FORCE_HEADLESS=1 skips the pane dispatch entirely and goes
+# straight to the headless fallback below. Set by heartbeat_watch's tick-eaten
+# RECOVERY path: a pane blocked on model quota still passes every liveness
+# check (process alive, title idle), so send-keys lands in a pane that cannot
+# answer and the tick is silently eaten (2026-08-02: 16h, two ticks lost).
+# The headless fallback runs a DIFFERENT model than the interactive pane, so
+# it can complete when the pane's quota bucket is exhausted.
+if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
+    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: FORCE_HEADLESS set — skipping pane dispatch" \
+        >> "${LOG_DIR}/peer_skips.log"
+elif command -v tmux >/dev/null 2>&1 && tmux has-session -t operator 2>/dev/null; then
     PANE_CMD=$(tmux display-message -p -t operator:0.0 '#{pane_current_command}' 2>/dev/null || echo "")
     # pane_current_command lies about liveness: script(1) stays the foreground
     # command even after the claude inside it exits, so `cmd=script` can be a

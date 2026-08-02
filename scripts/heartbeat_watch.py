@@ -456,6 +456,27 @@ def check_tick_execution(state: dict) -> None:
               f"Operator: check MODEL QUOTA first (a quota-exhausted pane looks "
               f"identical to a dead one — 2026-08-02, 16h), then restart the session.",
               cooldown=TICK_EXEC_COOLDOWN)
+        # RECOVERY (2026-08-02): alerting alone left 16h of ticks unrun. Spawn
+        # the headless fallback for THIS eaten tick — it runs a different model
+        # than the interactive pane, so it completes when the pane's quota
+        # bucket is exhausted. Guarded three ways: once per dispatch timestamp,
+        # daily_checkin's own flock prevents concurrent runs, and the auth
+        # post-flight telegrams the operator if the fallback also fails.
+        if state.get("last_tick_recovery_for") != last_dispatch:
+            state["last_tick_recovery_for"] = last_dispatch
+            try:
+                env = dict(os.environ, POLYCLAUDE_FORCE_HEADLESS="1")
+                subprocess.Popen(
+                    ["/bin/bash", str(repo / "scripts" / "daily_checkin.sh"),
+                     "RECOVERY: prior tick was EATEN (pane unresponsive — quota or "
+                     "hang). You are the headless fallback; run the standard check-in."],
+                    cwd=str(repo), env=env,
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                    start_new_session=True,
+                )
+                print("[heartbeat] tick-eaten RECOVERY: spawned headless daily_checkin", flush=True)
+            except Exception as e:
+                print(f"[heartbeat] recovery spawn failed: {e}", flush=True)
 
 
 def check_operator_session(state: dict) -> None:

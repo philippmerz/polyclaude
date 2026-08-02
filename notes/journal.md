@@ -4395,3 +4395,19 @@ session/creds second; daemon restarted onto the new text (693978). Lesson rewrit
 01_lessons.md — "a dark pane has TWO causes that look identical." Attribution discipline note:
 this is the same class as the 2026-06-03 "injection" scare — check the boring explanation
 before alleging the dramatic one.
+
+## 2026-08-02 ~15:50 UTC — closed the real gap the quota incident exposed: tick-eaten RECOVERY
+
+The sentinel that caught the 16h outage could only ALERT — and the operator was asleep, so two
+ticks simply never ran. Root gap: a pane blocked on model quota passes every liveness check
+(process alive, title idle), so daily_checkin send-keys into a pane that cannot answer.
+SHIPPED: (1) daily_checkin.sh honors POLYCLAUDE_FORCE_HEADLESS=1 — skips pane dispatch, goes
+straight to the headless fallback, which runs a DIFFERENT model (opus-4-8) than the interactive
+pane and therefore completes when the pane's quota bucket is dry; (2) heartbeat_watch's
+tick-eaten branch now SPAWNS that recovery once per eaten dispatch (guards: one attempt per
+dispatch timestamp, daily_checkin's flock blocks concurrency, auth post-flight telegrams the
+operator if the fallback also fails). Converts a dark window from "until the operator notices"
+(16h) to ~1 heartbeat poll (1h).
+HONEST CAVEAT: syntax-validated and wired, but NOT exercised end-to-end — testing it for real
+means spawning a duplicate tick and burning quota the day the operator just ran out. First real
+firing is the test; if it misbehaves the failure mode is a redundant check-in, not a bad trade.
