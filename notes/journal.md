@@ -4427,3 +4427,13 @@ Same correction kimi made. The position's edge now rests on the source pillar al
 0.70 and this independently reinforces yesterday's tranche-2 decline. Two separate analyses
 converging on "your capability pillar was wrong" is the calibration signal, not noise.
 No new trigger hits (ALB/CCJ/NVDA surfaced Jul-30 stand).
+
+## 2026-08-02 ~16:25 UTC — validated the new recovery guard does NOT misfire (quota-burn risk)
+
+Ran `heartbeat_watch.py once` specifically to check the risk I'd introduced: a buggy tick-eaten
+guard would spawn headless ticks every poll and burn the very quota that caused yesterday's
+outage. Result: clean — no spawn, `last_tick_recovery_for: None` (journal is fresh, so the
+eaten-tick condition is correctly false). Footnote: my `pgrep -cf daily_checkin.sh` check
+returned 1 and briefly looked like a spurious spawn — it was the pgrep's OWN shell matching its
+own pattern. Fourth encounter with the self-match trap; the daemonctl fix covers kill paths, not
+ad-hoc greps. Rule of thumb for future me: pgrep -a (not -c) and read the actual cmdline.
