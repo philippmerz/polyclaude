@@ -544,5 +544,25 @@
   "market_price": 0.565,
   "resolves": "2026-08-01",
   "note": "SKIP: 3.5pp bookie delta (DraftKings via haiku, single book) but taker fee 4.35pp > edge; maker-entry Kelly/4 = $3.7 < $5 venue floor, EV ~$0.13 < op-cost."
+ },
+ {
+  "date": "2026-08-03",
+  "slug": "will-anthropic-have-the-best-code-arena-webdev-ai-at-the-end-of-august-2026",
+  "action": "scored_skip",
+  "side": "Yes",
+  "my_prior": 0.85,
+  "market_price": 0.79,
+  "resolves": "2026-08-31",
+  "note": "SELF-REFERENTIAL MARKET \u2014 declined on structural bias, not on price. Facts: Anthropic #1 on arena.ai WebDev (opus-5-max 1705) vs Moonshot kimi-k3-max 1676, 29pt gap, 6 of top 10. Same structure as Text Arena which pays 0.945; this pays 0.79 (thin book, $1.7k). Raw edge ~6pp - 2.2pp fee = ~4pp. HAIRCUT TO ~0 because I am a Claude model judging 'does Anthropic stay #1' \u2014 I cannot audit my own optimism here, and the market's 0.79 may be correctly pricing volatility I discount. Also capital-bound: D23 ammo has a better realized profile."
+ },
+ {
+  "date": "2026-08-03",
+  "slug": "which-company-has-best-ai-model-end-of-august-2026-anthropic",
+  "action": "scored_skip",
+  "side": "Yes",
+  "my_prior": 0.945,
+  "market_price": 0.945,
+  "resolves": "2026-08-31",
+  "note": "NO EDGE \u2014 market exactly at fair. Anthropic holds ranks 1-7 on arena.ai Text Arena (opus-5-max 1507 vs Google 1480). Efficiently priced; recorded as a calibration datapoint for the family."
  }
 ]

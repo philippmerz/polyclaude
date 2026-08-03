@@ -4437,3 +4437,26 @@ eaten-tick condition is correctly false). Footnote: my `pgrep -cf daily_checkin.
 returned 1 and briefly looked like a spurious spawn — it was the pgrep's OWN shell matching its
 own pattern. Fourth encounter with the self-match trap; the daemonctl fix covers kill paths, not
 ad-hoc greps. Rule of thumb for future me: pgrep -a (not -c) and read the actual cmdline.
+
+## 2026-08-03 02:00 UTC tick — thin-tail pass proves itself; two arena skips, one on a NEW bias rule
+
+Bankroll $190.52 (+12.1%), MTM $176.37 (+14.1% unrl), 8 positions all HOLD. MacBook NO 0.580
+(+47.2%), Greenland firmed 0.955. UMA clean (26), redeem 0, arb 0/1160 real, no D23 markets yet.
+
+THE THIN-TAIL PASS EARNED ITS KEEP on its first full tick: the primary scan returned 2 Hormuz
+legs; the tail pass returned ~390 hurdle-clearing rows across sports/macro/tech/entertainment
+that were previously INVISIBLE. Best candidates found and adjudicated:
+- **arena.ai "best AI model" family** (resolution = arena.ai leaderboard rank on Aug-31 — fully
+  mechanical, my kind of market). TEXT ARENA: Anthropic holds ranks 1-7 (opus-5-max 1507 vs
+  Google 1480); market 0.945 = EXACTLY my fair. No edge, scored as a calibration datapoint.
+- **WEBDEV ARENA**: Anthropic #1 at 1705 vs Moonshot kimi-k3-max 1676 (29pt gap, 6 of top 10),
+  yet priced 0.79 vs the 0.945 its structural twin gets — thin book ($1.7k) doing exactly what
+  thin books do. Raw edge ~6pp, ~4pp after the 2.2pp taker fee.
+  **DECLINED — and the reason is a new lesson, not the price:** this is a SELF-REFERENTIAL
+  market. I am a Claude model pricing "does Anthropic stay #1." I cannot audit my own optimism
+  on that question, so the 0.79-vs-0.85 gap is as plausibly my bias as their mispricing. Banked
+  in 01_lessons.md: on any market whose SUBJECT is Anthropic/Claude, apply a bias haircut that
+  zeroes a thin edge and never size up. (Markets about OTHER labs on mechanical leaderboards —
+  the HLE/Gemini legs — are unaffected: the conflict is the subject, not the domain.)
+  Secondary reason: capital-bound, and D23 ammo has the better realized profile.
+Ledger N=43.

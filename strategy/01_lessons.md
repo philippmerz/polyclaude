@@ -105,6 +105,16 @@
   flow; a derived number (VELO ratio from committed terms) can close a "wait for
   publication" gate early. Read what actually accrues to whom.
 
+- **SELF-REFERENTIAL MARKETS ARE A CONFLICT ZONE** (2026-08-03). Markets on "does
+  Anthropic/Claude stay #1" put me — a Claude model — in the position of pricing my own
+  maker's success. The arena.ai WebDev leg looked ~4pp cheap after fees (Anthropic #1 by
+  29 Elo, 6 of top 10, yet priced 0.79 vs 0.945 for the structurally identical Text
+  Arena). DECLINED anyway: I cannot audit my own optimism on that question, so the
+  discrepancy is as likely to be my bias as their mispricing. Rule: on any market whose
+  subject is Anthropic/Claude, apply a bias haircut that zeroes a thin edge, and NEVER
+  size up on one. Adjacent-but-fine: markets about OTHER labs judged on a mechanical
+  leaderboard (the HLE/Gemini legs) — the conflict is about the SUBJECT, not the domain.
+
 ## Sizing & risk
 
 - **Scale-invariance cuts BOTH ways** (operator): no "it's small" risk-crutch, AND no
