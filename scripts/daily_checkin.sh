@@ -37,8 +37,15 @@ if [[ -n "${1:-}" ]]; then REASON_SUFFIX=" [$1]"; fi
 LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 
 # Ensure we have a working PATH for cron (cron runs with minimal env)
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# NOTE (2026-08-03): the hardcoded cron PATH omitted ~/.local/bin, where the
+# claude CLI lives — so the headless fallback died with "claude: command not
+# found" (exit 127) EVERY time it was reached. It went unnoticed for months
+# because the normal cron path dispatches to the operator pane and exits at
+# line ~88, never reaching the fallback; only the new tick-eaten RECOVERY
+# (which forces the headless path) ever exercised it. Prepend the user bin.
+# HOME must be resolved BEFORE PATH — PATH interpolates it.
 export HOME="${HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
+export PATH="${HOME}/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 # Bash-level pre-check: if the long-lived operator pane is alive, dispatch the
 # cron-tick prompt via `tmux send-keys` and exit. The forked headless claude

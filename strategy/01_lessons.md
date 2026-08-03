@@ -162,6 +162,12 @@
 - **Daemon-fired ticks must carry their reason** (else they read as scheduled noise and
   the alert gets answered "nothing happened" — 2026-07-28). daily_checkin passes $1
   through to the prompt.
+- **A fallback that never runs is indistinguishable from one that works.** daily_checkin's
+  headless fallback died on `claude: command not found` (hardcoded cron PATH omitted
+  ~/.local/bin) — for MONTHS, invisibly, because the normal path dispatches to the pane
+  and exits before reaching it. Only building the tick-eaten RECOVERY (which forces the
+  headless path) exercised it (2026-08-03). Force every emergency path at least once,
+  or assume it is broken.
 - **Liveness ≠ progress — monitor OUTPUT, not PIDs.** Three instances: news_watcher
   logged alerts but never persisted them 30h (2026-06-11); send-keys into a dead pane
   ate a tick (2026-07-16); a wedged tmux send-keys child blocked the telegram listener

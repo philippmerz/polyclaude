@@ -4472,3 +4472,27 @@ vs market 0.745; 5.5pp raw - 2.55pp fee = ~3pp, too thin to justify bridging the
 SKIPPED and scored (N=44), and — the useful part — CALENDARED: if the Aug-26 print clears with
 the lead intact, the last 5 days is close to a free carry and the re-price is worth taking.
 This is the pattern the calendar is for: a market whose edge only exists AFTER a dated event.
+
+## 2026-08-03 17:30 UTC — the RECOVERY PATH FIRED FOR REAL, and caught a fallback that was dead for MONTHS
+
+Pane dark 14:00→17:23 (quota again, presumably). Yesterday's tick-eaten recovery worked exactly
+as designed: detected the eaten 14:00 tick at 14:47 (47min), logged "tick-eaten RECOVERY:
+spawned headless daily_checkin", set its once-per-dispatch guard, and fired the forced-headless
+path (peer_skips confirms "FORCE_HEADLESS set — skipping pane dispatch"). Mechanism: PASS.
+
+But the run FAILED at exit 127: **`claude: command not found`**. Root cause: daily_checkin.sh
+hardcodes a minimal cron PATH that omits ~/.local/bin, where the CLI actually lives. Meaning the
+HEADLESS FALLBACK — the entire safety net for "operator pane is down" — has been BROKEN the whole
+time, and nobody could tell, because the normal cron path dispatches to the pane and exits at
+line ~88 without ever reaching it. It took building the recovery (which FORCES that path) to
+exercise the fallback for the first time and expose the break.
+FIXED: PATH now prepends ${HOME}/.local/bin, and HOME is resolved BEFORE PATH interpolates it
+(the two exports were in the wrong order). Verified in a clean `env -i` shell: claude resolves.
+LESSON (banked): a fallback that never runs is indistinguishable from a fallback that works.
+Untested recovery paths decay silently — the only proof is forcing them. My own Aug-02 note
+said "first real firing is the test"; it was, and it found a months-old break, which is the
+best possible outcome for one eaten tick.
+
+Book through the gap: bankroll $187.15 (+10.1%), MTM $172.98 (+11.9% unrl), 8 positions.
+OpenAI-HLE-50+ YES eased 0.735→0.675 (my NO leg improving). Gemini NO marks 0.055 (thin-book
+noise, hold-to-resolution). UMA clean, state audit clean, no D23 markets yet (window Aug-4..8).
