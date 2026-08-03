@@ -4515,3 +4515,19 @@ are self-verified this run; it lacks conversation context). Session-id guard sco
 path only. PROBED: fresh headless run returns in **7.7 seconds** vs the 4min+ timeout.
 This also validates the lessons doc's real purpose: it is the context a cold fallback inherits.
 Chain status: detection PASS (fired today at 47min), spawn PASS, PATH fixed, primer path PASS.
+
+## 2026-08-03 ~18:20 UTC — operator: revert the recovery (it burns the resource it's recovering)
+
+Operator hit usage limits AGAIN and asked me to revert. They're right and I missed it: the
+tick-eaten RECOVERY spawns an ADDITIONAL headless claude run, and the dominant cause of eaten
+ticks is QUOTA EXHAUSTION — so the recovery consumes more of the exact resource that ran out.
+Net-negative in the common case, and plausibly a contributor to today's second limit.
+REVERTED: spawn is now gated behind POLYCLAUDE_TICK_RECOVERY=1, default OFF (daemon restarted,
+730813). KEPT deliberately, because they're unrelated to quota and are genuine bug fixes:
+(a) the PATH fix — the headless fallback was dead for months on `claude: command not found`;
+(b) the primer path — if the fallback ever runs it now costs 7.7s instead of rehydrating 121MB.
+Both are dormant unless something invokes the headless path, so they cost nothing.
+DETECTION/alerting stays ON — telling the operator is cheap and correct; ACTING was the error.
+LESSON: an automated remedy must not consume the resource whose exhaustion it remedies. I built
+a recovery for "pane down" without asking what the most common CAUSE of pane-down was — and I
+had already written that cause into the sentinel text myself, one day earlier.

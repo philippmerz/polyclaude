@@ -462,7 +462,14 @@ def check_tick_execution(state: dict) -> None:
         # bucket is exhausted. Guarded three ways: once per dispatch timestamp,
         # daily_checkin's own flock prevents concurrent runs, and the auth
         # post-flight telegrams the operator if the fallback also fails.
-        if state.get("last_tick_recovery_for") != last_dispatch:
+        # DISABLED BY DEFAULT 2026-08-03 (operator): the recovery spawns an
+        # ADDITIONAL headless claude run — and the dominant cause of eaten
+        # ticks is MODEL QUOTA EXHAUSTION, so recovering burns more of the
+        # exact resource that ran out. Net-negative in the common case.
+        # Opt back in with POLYCLAUDE_TICK_RECOVERY=1 only if the outage cause
+        # is known NOT to be quota (e.g. a hung pane on a healthy account).
+        if (os.environ.get("POLYCLAUDE_TICK_RECOVERY") == "1"
+                and state.get("last_tick_recovery_for") != last_dispatch):
             state["last_tick_recovery_for"] = last_dispatch
             try:
                 env = dict(os.environ, POLYCLAUDE_FORCE_HEADLESS="1")
