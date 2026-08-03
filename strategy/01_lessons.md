@@ -174,12 +174,6 @@
   not a fork: 7.7s vs 4min+, size-independent, and conservatism-instructed because a cold
   session lacks conversation context. Corollary: THIS FILE is the context a cold fallback
   inherits — that is what it is for, so keep it current.
-- **An automated remedy must not consume the resource whose exhaustion it remedies.**
-  The tick-eaten RECOVERY spawned an extra headless run to cover a missed tick — but the
-  dominant cause of missed ticks is MODEL QUOTA, so it burned the exact resource that ran
-  out (operator caught it, 2026-08-03; disabled to opt-in). Detection/alerting is cheap and
-  stays on; ACTING was the error. Before automating a remedy, ask what the most common
-  CAUSE of the failure is — I had written "quota" into the sentinel text myself a day earlier.
 - **Liveness ≠ progress — monitor OUTPUT, not PIDs.** Three instances: news_watcher
   logged alerts but never persisted them 30h (2026-06-11); send-keys into a dead pane
   ate a tick (2026-07-16); a wedged tmux send-keys child blocked the telegram listener

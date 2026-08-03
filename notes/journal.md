@@ -4531,3 +4531,21 @@ DETECTION/alerting stays ON — telling the operator is cheap and correct; ACTIN
 LESSON: an automated remedy must not consume the resource whose exhaustion it remedies. I built
 a recovery for "pane down" without asking what the most common CAUSE of pane-down was — and I
 had already written that cause into the sentinel text myself, one day earlier.
+
+## 2026-08-03 ~18:25 UTC — revert WITHDRAWN by operator; my "it burns quota" reasoning was wrong
+
+Operator: "nevermind, your changes are fine, scrap those lessons" + the sharper question — what
+IS the point of a recovery if quota is the thing that's exhausted? Working it through, my revert
+was an over-correction and the lesson I banked was wrong on the mechanics:
+- A quota-blocked request FAILS FAST on a limit error. It is a REJECTED request, not a token
+  burn. So the bad case costs ~nothing (plus the auth post-flight already telegrams the
+  operator), rather than "consuming the resource that ran out" as I claimed.
+- The good cases are real: (a) pane dark for a NON-quota reason (hang, dead shell, crashed
+  node) — recovery runs the tick normally; (b) quota is at least partly PER-MODEL — the
+  operator's own fix on Aug-02 was switching Fable→Opus, which only works if buckets are
+  model-scoped, and the headless path runs opus-4-8, a different model from the pane.
+- What we DON'T know: whether an account-level cap sits above both. Today's recovery never
+  answered it — it died at the PATH bug before making a single API call. The next firing is
+  the actual experiment, and it's free to run.
+Recovery re-enabled (daemon 731638), the incorrect lesson scrapped from 01_lessons.md.
+Kept: PATH fix + primer path. Net position: cheap in the bad case, useful in the good case.
