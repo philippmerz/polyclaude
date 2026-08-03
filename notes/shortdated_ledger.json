@@ -564,5 +564,15 @@
   "market_price": 0.945,
   "resolves": "2026-08-31",
   "note": "NO EDGE \u2014 market exactly at fair. Anthropic holds ranks 1-7 on arena.ai Text Arena (opus-5-max 1507 vs Google 1480). Efficiently priced; recorded as a calibration datapoint for the family."
+ },
+ {
+  "date": "2026-08-03",
+  "slug": "will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-august-31",
+  "action": "scored_skip",
+  "side": "Yes",
+  "my_prior": 0.8,
+  "market_price": 0.745,
+  "resolves": "2026-08-31",
+  "note": "SKIP on thin post-fee edge + a dominating binary. Live caps VERIFIED: NVDA $4.74T vs GOOGL $4.34T vs AAPL $4.30T = 9.2% cushion over #2 (WIDER than the 2.5% I verified Jul-18, though #2 rotated AAPL->GOOGL). 28d relative-vol on a mega-cap pair ~9% = the gap is ~1 sigma -> ~0.84 naive. BUT NVDA Q2 FY27 earnings lands Aug-26, FIVE DAYS before the check \u2014 a bad print reprices 10%+ and eats the cushion outright. Haircut to 0.80. Edge 5.5pp - 2.55pp fee = ~3pp: too thin to justify bridging the D23 ammo. CANDIDATE IF: capital frees AND price drops <0.70, or after Aug-26 earnings clears with the lead intact (then it is nearly a free carry for 5 days)."
  }
 ]

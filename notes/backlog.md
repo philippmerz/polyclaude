@@ -31,6 +31,8 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 - **2026-08-01 [HLE family — criteria-mechanics candidates, capital-bound]** — 7 sibling events (overall + Claude/Kimi/Meta/OpenAI/Grok/Gemini "highest HLE score in 2026"), ALL resolving on agi.safe.ai (official board: global top 38.3 Gemini-3-Pro, OpenAI row 25.3 ~1yr stale; real frontier 53.3 per third-party trackers). OpenAI legs TRADED (DEC-0062, $16.19 NO 50+/55+). Remaining family = same resolution-source-lag read per lab + cross-event consistency (overall ≈ max over labs). NEXT TICK: price the family, check relative consistency, size within 30% cluster cap — but capital-bound until Fed/D23 ammo frees (pUSD ~$3.4; Aave $7.85 bridgeable). Thin books move slowly; no rush premium.
 
+- **2026-08-26 [NVDA-largest post-earnings re-check]** — "Will NVIDIA be the largest company by market cap on Aug-31" (YES 0.745 today; my fair 0.80 after haircutting for the earnings binary). Live caps Aug-03: NVDA $4.74T / GOOGL $4.34T / AAPL $4.30T = 9.2% cushion. The whole trade is the Aug-26 earnings print. IF earnings clears with the lead intact, the remaining 5 days is close to a free carry — re-price then; a YES entry above ~0.85 post-print is still worth checking against the 5-day tail. Mechanical resolution (market cap), no self-reference issue. Capital-bound until D23 resolves.
+
 ## Calendar
 
 > Resolved past-dated reminders pruned 2026-06-04 (decision outcomes live in decisions.json; git has full history). Future only; ~Nd as of 2026-06-04:

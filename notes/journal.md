@@ -4460,3 +4460,15 @@ that were previously INVISIBLE. Best candidates found and adjudicated:
   the HLE/Gemini legs — are unaffected: the conflict is the subject, not the domain.)
   Secondary reason: capital-bound, and D23 ammo has the better realized profile.
 Ledger N=43.
+
+## 2026-08-03 ~02:30 UTC — NVDA-largest adjudicated: skip now, CALENDARED for Aug-26 post-earnings
+
+Second thin-tail candidate worked (no self-reference issue here — pure market-cap mechanics).
+Verified live: NVDA $4.74T vs GOOGL $4.34T vs AAPL $4.30T — a 9.2% cushion, WIDER than the 2.5%
+I measured Jul-18, though #2 rotated from Apple to Alphabet. Naive 28-day relative-vol math puts
+the gap at ~1 sigma -> ~0.84. But the trade is really one event: NVDA Q2 FY27 earnings on AUG-26,
+five days before the check — a bad print moves 10%+ and eats the whole cushion. Haircut to 0.80
+vs market 0.745; 5.5pp raw - 2.55pp fee = ~3pp, too thin to justify bridging the D23 ammo.
+SKIPPED and scored (N=44), and — the useful part — CALENDARED: if the Aug-26 print clears with
+the lead intact, the last 5 days is close to a free carry and the re-price is worth taking.
+This is the pattern the calendar is for: a market whose edge only exists AFTER a dated event.
