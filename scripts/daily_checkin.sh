@@ -168,24 +168,52 @@ cd "${HOME}"
   echo "=== polyclaude daily check-in ${TS} ==="
   echo "$ pwd"; pwd
   echo "$ session=${SESSION_ID}"
-  echo "$ claude -p --resume \${SESSION_ID} --fork-session (headless)"
-  if [ -z "${SESSION_ID}" ]; then
-    echo "ERROR: no session id resolvable from POLYCLAUDE_SESSION; cannot fork-resume"
-    exit 2
+  if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
+    echo "$ claude -p (RECOVERY: fresh session + primer, no fork)"
+  else
+    echo "$ claude -p --resume \${SESSION_ID} --fork-session (headless)"
+    # Only the fork path needs a session id; RECOVERY runs primer-only.
+    if [ -z "${SESSION_ID}" ]; then
+      echo "ERROR: no session id resolvable from POLYCLAUDE_SESSION; cannot fork-resume"
+      exit 2
+    fi
   fi
   # `|| RC=$?` guard (2026-07-16 audit): under set -e/pipefail a non-zero
   # claude exit aborted this brace group — the exit trailer AND the auth
   # post-flight below (which exists precisely to catch failed claude runs)
   # never executed on the failures they were built for.
   RC=0
-  echo "${PROMPT}" | claude -p \
-    --resume "${SESSION_ID}" \
-    --fork-session \
-    --model "claude-opus-4-8[1m]" \
-    --effort max \
-    --permission-mode acceptEdits \
-    --allowed-tools "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,TaskCreate,TaskUpdate,TaskList" \
-    2>&1 || RC=$?
+  # RECOVERY mode uses a PRIMER, not a session fork (2026-08-03). The operator
+  # transcript is ~121MB; --resume --fork-session must rehydrate all of it,
+  # which timed out past 4 min on probe — unusable for a path whose whole job
+  # is to run promptly when the pane is down. A fresh session + the repo's own
+  # onboarding chain (README -> strategy/01_lessons.md -> status scripts) is
+  # fast, cheap, and size-independent. This is exactly what that chain is for.
+  if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
+    PRIMER="You are polyclaude's autonomous FALLBACK session: the operator's interactive pane was unreachable (model quota exhausted or dead), so a scheduled tick was missed and you are running it headless with NO inherited context.
+
+Onboard first, in this order (~5 min): read /home/polyclaude/polyclaude/README.md, then strategy/01_lessons.md (the consolidated hard-won lessons — read this carefully, it encodes rules that cost real money to learn), then run .venv/bin/python scripts/polyclaude_status.py for live state.
+
+Then do the check-in below. Be CONSERVATIVE: you lack the conversation context the interactive session has. Prefer reporting and journaling over trading; do NOT open a new position unless it clears every gate in the doctrine AND you have verified the facts yourself this run. Journal what you did and send ONE Telegram summary noting you are the fallback.
+
+--- SCHEDULED CHECK-IN ---
+"
+    echo "${PRIMER}${PROMPT}" | claude -p \
+      --model "claude-opus-4-8[1m]" \
+      --effort max \
+      --permission-mode acceptEdits \
+      --allowed-tools "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,TaskCreate,TaskUpdate,TaskList" \
+      2>&1 || RC=$?
+  else
+    echo "${PROMPT}" | claude -p \
+      --resume "${SESSION_ID}" \
+      --fork-session \
+      --model "claude-opus-4-8[1m]" \
+      --effort max \
+      --permission-mode acceptEdits \
+      --allowed-tools "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,TaskCreate,TaskUpdate,TaskList" \
+      2>&1 || RC=$?
+  fi
   echo
   echo "=== exit ${RC} at $(date -u) ==="
 } >> "${LOG_FILE}" 2>&1

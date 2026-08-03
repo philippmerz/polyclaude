@@ -4496,3 +4496,22 @@ best possible outcome for one eaten tick.
 Book through the gap: bankroll $187.15 (+10.1%), MTM $172.98 (+11.9% unrl), 8 positions.
 OpenAI-HLE-50+ YES eased 0.735→0.675 (my NO leg improving). Gemini NO marks 0.055 (thin-book
 noise, hold-to-resolution). UMA clean, state audit clean, no D23 markets yet (window Aug-4..8).
+
+## 2026-08-03 ~17:55 UTC — forced the emergency path again and found TWO more breaks; fallback now actually works
+
+Applied the lesson I'd just banked ("force every emergency path or assume it's broken") to the
+fallback I'd just fixed. Two further breaks, both invisible until forced:
+1. My first probe failed "No conversation found" — MY error, not the script's: I ran from the
+   repo dir, so claude looked in the wrong project scope. The script cds to $HOME first.
+   (Worth recording: session-scope is cwd-derived; probes must replicate the cd.)
+2. Re-probed correctly from $HOME → TIMED OUT past 4 minutes. Root cause: the operator
+   transcript is **121 MB**, and --resume --fork-session must rehydrate all of it. Even if it
+   eventually completes, a 4min+ startup is disqualifying for a path whose entire job is to run
+   PROMPTLY when the pane is down — and it would burn an enormous token bill per recovery.
+REDESIGNED: recovery mode no longer forks the session. It runs a FRESH claude with a PRIMER that
+points at the repo's own onboarding chain (README -> strategy/01_lessons.md -> polyclaude_status)
+plus an explicit conservatism instruction (no new positions unless every gate clears and facts
+are self-verified this run; it lacks conversation context). Session-id guard scoped to the fork
+path only. PROBED: fresh headless run returns in **7.7 seconds** vs the 4min+ timeout.
+This also validates the lessons doc's real purpose: it is the context a cold fallback inherits.
+Chain status: detection PASS (fired today at 47min), spawn PASS, PATH fixed, primer path PASS.

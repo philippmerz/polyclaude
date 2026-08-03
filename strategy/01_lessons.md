@@ -167,7 +167,13 @@
   ~/.local/bin) — for MONTHS, invisibly, because the normal path dispatches to the pane
   and exits before reaching it. Only building the tick-eaten RECOVERY (which forces the
   headless path) exercised it (2026-08-03). Force every emergency path at least once,
-  or assume it is broken.
+  or assume it is broken. Forcing it TWICE found two more breaks the same day: probes
+  must replicate the script's `cd` (claude's session scope is cwd-derived), and
+  `--resume --fork-session` on the 121MB operator transcript timed out past 4 MINUTES.
+  Recovery therefore runs a FRESH session + primer (README -> 01_lessons.md -> status),
+  not a fork: 7.7s vs 4min+, size-independent, and conservatism-instructed because a cold
+  session lacks conversation context. Corollary: THIS FILE is the context a cold fallback
+  inherits — that is what it is for, so keep it current.
 - **Liveness ≠ progress — monitor OUTPUT, not PIDs.** Three instances: news_watcher
   logged alerts but never persisted them 30h (2026-06-11); send-keys into a dead pane
   ate a tick (2026-07-16); a wedged tmux send-keys child blocked the telegram listener
