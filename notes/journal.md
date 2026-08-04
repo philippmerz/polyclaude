@@ -4589,3 +4589,12 @@ the AUG-09 02:00 tick, the reservation releases automatically. An open-ended ear
 deferral — the template only pays if the markets exist, and holding ammo for a no-show costs
 every other opportunity. Deadline written into the calendar entry, checked at each tick.
 No other findings — not forcing any.
+
+## 2026-08-04 14:00 UTC tick — quiet; D23 day-1 still unlisted, reservation clock running
+
+Bankroll $182.89 (+7.6%), MTM $168.65 (+9.1% unrl), 8 positions. Drift is the HLE legs marking
+down (Gemini 0.06, OpenAI legs at yesterday's repriced levels); the five core positions unchanged.
+UMA clean, Ostium flat, state audit clean, redeem 0, arb 0/1173 real, discovery 1 near-consensus
+Fed leg (skip, no differentiated view — the standing pass). No D23 markets on day 1 of the
+window; the Aug-09 reservation expiry pre-committed this morning is now the live clock.
+No TG (nothing material — mark drift only, per the material-only cadence).
