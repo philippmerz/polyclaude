@@ -4549,3 +4549,27 @@ was an over-correction and the lesson I banked was wrong on the mechanics:
   the actual experiment, and it's free to run.
 Recovery re-enabled (daemon 731638), the incorrect lesson scrapped from 01_lessons.md.
 Kept: PATH fix + primer path. Net position: cheap in the bad case, useful in the good case.
+
+## 2026-08-04 02:00 UTC tick — OpenAI-HLE moved 20pp AGAINST me; facts unchanged, prior CUT anyway
+
+Bankroll $184.64 (+8.6%), MTM $170.49 (+10.3% unrl). The tick's real content is one adverse move.
+
+**OpenAI-HLE-50+ YES 0.675 -> 0.875 (+20pp); my NO leg -66%.** Ran the verify-the-move discipline:
+- RESOLUTION SOURCE RE-CHECKED TODAY: agi.safe.ai UNCHANGED — Apr-2025 stamp, zero 2026 models,
+  OpenAI best still GPT-5 25.3%. Nothing moved on the thing that actually resolves this market.
+- BOOK IS REAL, not a mirage: NO asks 0.13 with size, $913/24h volume. A genuine repricing.
+- So the market is pricing CAPABILITY (GPT-5.6 Sol 47.2% third-party, GPT-6 expected Sept) or
+  expecting LOOSE resolution via the "results published elsewhere" fallback clause.
+
+**CUT THE PRIOR ANYWAY: 50+ 0.66->0.50, 55+ 0.79->0.65.** Reasoning, stated plainly because it
+cuts against my instinct to defend the thesis: this position was never a FACT bet, it is an
+INTERPRETATION bet — how will a resolver read a named-but-frozen source? On fact questions my
+verification beats the crowd (that is the whole edge, proven repeatedly). On resolver-behavior
+questions the crowd aggregates better than I do, and a 5x disagreement with a market that just
+moved 20pp on real volume is not something to wave away. Weighting them properly means cutting.
+HOLDING both legs: exit math dominates decisively (50+ hold EV $7.50 at the NEW 0.50 fair vs
+$1.80 taker sell; max further loss only $1.88 — the position is already 2/3 written down).
+QUEUED the decisive research: find a RESOLVED precedent where a named leaderboard went stale and
+see how UMA called it. One datapoint reprices ~$19 of book across three legs.
+Rest of tick quiet: no D23 markets yet (window Aug-4..8, today is day 1), arb 0/1157, redeem 0,
+UMA otherwise clean, state audit clean.

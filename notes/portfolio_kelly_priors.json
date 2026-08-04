@@ -76,14 +76,14 @@
   "closed": true
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
-  "p_no": 0.66,
-  "verified": "2026-08-01",
-  "note": "Two-layer: P(capable >=50 official-config) ~0.5 x P(CAIS lists by Dec-31) ~0.68. Official board OpenAI row 1yr stale (GPT-5 25.3); frontier 53.3 non-OpenAI. RE-VERIFY AT GPT-6 LAUNCH (Sept) \u2014 vendor-reported ingestion (Grok-4 precedent) is the kill path."
+  "p_no": 0.5,
+  "verified": "2026-08-04",
+  "note": "CUT 0.66->0.50 on 2026-08-04. FACTS UNCHANGED \u2014 re-verified the resolution source today: agi.safe.ai still stamped Apr-2025, still zero 2026 models, OpenAI best still GPT-5 25.3%. What changed is the MARKET: YES 0.675->0.875 on real volume ($913/24h, deep book) with NO board change, i.e. it is pricing CAPABILITY (GPT-5.6 Sol 47.2% on third-party trackers, GPT-6 expected Sept) or expecting loose resolution via the 'results published elsewhere' fallback clause. I weight that heavily: this is an INTERPRETATION question (how will a resolver read a frozen source?), and crowd expectations about resolver behavior aggregate better than my solo read \u2014 unlike a FACT question, where my verification wins. Holding: exit math dominates (hold EV $7.50 at 0.50 vs $1.80 taker sell), and max further loss is $1.88."
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
-  "p_no": 0.79,
-  "verified": "2026-08-01",
-  "note": "Needs OpenAI to EXCEED current global SOTA 53.3 by 2pp+ AND timely listing. Capability ~0.3 x listing ~0.68. Same GPT-6-launch re-verify trigger."
+  "p_no": 0.65,
+  "verified": "2026-08-04",
+  "note": "CUT 0.79->0.65 on 2026-08-04, same reasoning as the 50+ leg (see it). 55+ needs OpenAI above the current GLOBAL frontier AND a listing, so it retains more NO margin than 50+ even under loose reading."
  },
  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
   "p_no": 0.7,

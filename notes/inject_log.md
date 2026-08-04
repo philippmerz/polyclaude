@@ -4882,3 +4882,9 @@ Periodic check: anything else to take care of? Review notes/backlog.md and the r
 
 ## 2026-08-03T22:00:02Z — inject
 Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-03T22:28:23Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-08-03T23:24:02Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
