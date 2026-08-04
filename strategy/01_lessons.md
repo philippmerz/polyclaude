@@ -81,8 +81,10 @@
   patterns falsified at $0 deployed. High-APY candidates are questions, not answers.
 - **Thin markets are where mispricings persist longest** — sharps can't size, so nobody
   corrects the price. The discovery scanner's $20k liquidity floor hid the HLE
-  resolution-source-lag trade ($775-2k/leg) until the OPERATOR browsed into it
-  (2026-08-01). Doctrine changes (scale-invariance: capacity is not a filter) must be
+  legs ($775-2k/leg) until the OPERATOR browsed into them (2026-08-01).
+  [STATUS NOTE so this doesn't read as a win: the HLE trade itself is DOWN — see the
+  fact-vs-interpretation lesson above. What this lesson validates is the FUNNEL fix
+  (thin markets are worth SEEING), not that particular thesis.] Doctrine changes (scale-invariance: capacity is not a filter) must be
   AUDITED INTO scanner configs, not just applied at evaluation — the funnel decides
   what you never see. Thin-tail pass now in step 6; hits get criteria READS, not
   auto-entries.

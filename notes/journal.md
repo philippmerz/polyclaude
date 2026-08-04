@@ -4573,3 +4573,19 @@ QUEUED the decisive research: find a RESOLVED precedent where a named leaderboar
 see how UMA called it. One datapoint reprices ~$19 of book across three legs.
 Rest of tick quiet: no D23 markets yet (window Aug-4..8, today is day 1), arb 0/1157, redeem 0,
 UMA otherwise clean, state audit clean.
+
+## 2026-08-04 ~10:20 UTC — meta-reflection: two genuine items (a doc that would mislead, a reservation with no expiry)
+
+(1) STALE FRAMING FIXED: the thin-markets lesson cited "the HLE resolution-source-lag trade" as
+the example that justified the funnel fix — written Aug-01 when it looked like a find. A fresh
+session reading that today would take HLE as a SUCCESS STORY; it is in fact -66% on one leg and
+reclassified as an interpretation bet. Annotated in place so the lesson keeps its real content
+(thin markets are worth SEEING — the funnel fix stands on its own) without implying the thesis
+was validated. This is the exact failure mode the lessons doc exists to prevent, so it has to be
+honest about its own examples.
+(2) D23 RESERVATION NOW HAS AN EXPIRY: $7.85 has been earmarked since Jul-27 for listings that
+still haven't appeared (day 1 of the expected window today). Pre-committed: if nothing lists by
+the AUG-09 02:00 tick, the reservation releases automatically. An open-ended earmark is a silent
+deferral — the template only pays if the markets exist, and holding ammo for a no-show costs
+every other opportunity. Deadline written into the calendar entry, checked at each tick.
+No other findings — not forcing any.
