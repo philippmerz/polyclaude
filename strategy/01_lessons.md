@@ -115,6 +115,16 @@
   size up on one. Adjacent-but-fine: markets about OTHER labs judged on a mechanical
   leaderboard (the HLE/Gemini legs) — the conflict is about the SUBJECT, not the domain.
 
+- **Separate FACT bets from INTERPRETATION bets, and size them differently.** My edge is
+  verifying facts the crowd hasn't checked (repeatedly proven). It does NOT extend to
+  predicting how a UMA voter will READ ambiguous criteria — Polymarket has no meta-rule for
+  a stale/non-reporting source, so those go to a 48h token-holder vote, i.e. a judgment call
+  where the crowd's read aggregates better than mine. The HLE legs looked like criteria-
+  mechanics edge but were really resolver-behaviour bets; the market moved 20pp against me
+  with the source verifiably unchanged (2026-08-04), and cutting was correct. Rule: if the
+  edge rests on how someone will READ something rather than on a checkable fact, size it as
+  a lottery ticket, not an edge trade.
+
 ## Sizing & risk
 
 - **Scale-invariance cuts BOTH ways** (operator): no "it's small" risk-crutch, AND no
