@@ -4716,3 +4716,12 @@ Portfolio lifecycle observation (no action, just named): GPT-6, SpaceX, and the 
 legs have all converged to ~1-3pp edges — the book is increasingly resolved-alpha riding to
 expiry, with fresh capital gated on Aug-31 resolutions, the Aug-9 D23 release, and the funnel.
 The unwinding mechanisms are all set; the next structural change is capital freeing, not trading.
+
+## 2026-08-05 14:00 UTC tick — quiet; book steady, D23 day-3 unlisted
+
+Bankroll $185.40 (+9.1%), MTM $171.14 (+10.7% unrl), 8 positions. UMA clean, Ostium flat, state
+audit clean (snapshot refreshed), redeem 0, arb 0/1160 real. Thin-tail tech slice: the Anthropic
+text-arena leg at 0.935 (self-referential — standing skip) and an OpenAI-LiveBench-coding leg
+(NO 0.645 — arena family, but LiveBench resolution + my Sept horizon didn't clear a criteria
+read this tick; low priority, capital-bound anyway). No D23 markets, day 3 of window; expiry
+clock runs to Aug-9 02:00. No TG (nothing material).
