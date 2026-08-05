@@ -4632,3 +4632,32 @@ doctrine forbids a resting sell. But stating it plainly: at 2.5pp I would NOT op
 today at $32. It is legacy-sized, the edge has been consumed by the run from 0.645 to 0.765, and
 it now rides on the availability question alone.
 Rest of tick quiet: UMA clean, redeem 0, arb 0/1160, no D23 (day 2 of window).
+
+## 2026-08-05 ~02:35 UTC — criteria re-read AUDIT on the 3 oldest positions; SpaceX facts were wrong
+
+Acted on the lesson I'd just banked by auditing the positions I had NOT re-read since entry.
+Findings, in order of importance:
+
+**SpaceX (my #2 position, $29): MY RECORDED FACTS WERE WRONG.** The prior note carried a "$2.1T
+day-one bar". Verified: SpaceX ALREADY IPO'd — Jun-12-2026, NASDAQ:SPCX, ~$1.75T implied ($75B at
+$135/sh). Two consequences pulling opposite ways: the IPO-happens risk I'd been carrying is GONE,
+but the bar a rival must clear is LOWER than recorded ($1.75T, not $2.1T). Criteria confirmed:
+resolves to whichever 2026 IPO posts the highest FIRST-DAY CLOSING market cap.
+Residual risk priced by the sibling legs: Anthropic 0.068, OpenAI 0.006, everything else ~0 →
+SpaceX complement-implied ~0.92 vs my recorded 0.96. CUT to 0.94. Edge ~2.5pp vs mark 0.915 —
+converged and legacy-sized, same shape as GPT-6 tonight. Resting sell at 0.96 stays (above fair).
+METHOD NOTE worth keeping: my fair here is 1 minus the competitor legs, and one of those legs is
+ANTHROPIC — so the self-referential conflict bleeds into a position that isn't itself about
+Anthropic. Resolved by using the MARKET's price for that leg instead of my own view.
+**xAI's 0.255 is a MIRAGE** — no book on either side, pure stub. It made the event's midpoints
+sum to 1.24 and look like a fat consistency arb; walking live books gives buy-all-NO at 2.026
+for a 2.00 payout = NEGATIVE. Independent confirmation that the scanner's "0 real" verdict is
+right and that gamma midpoints stay untrustworthy even in aggregate.
+**Greenland / Trump-out: criteria confirmed as remembered**, both strict and NO-favourable
+(Greenland needs sovereignty transfer or primary/exclusive jurisdiction; Trump-out needs
+PERMANENT removal — temporary 25th Amendment explicitly excluded). One clause I had not noted:
+an ANNOUNCEMENT of resignation/removal resolves YES immediately regardless of effective date.
+Small loosening; keeps p_no 0.97 but it is now recorded rather than a blind spot.
+
+The audit's value: two of eight positions were running on stale or wrong recorded facts, and
+neither was flagged by any automated check — staleness guards watch DATES, not correctness.

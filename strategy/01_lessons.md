@@ -75,6 +75,15 @@
   missile war on Kuwait (killed at deploy-time re-verify, 2026-07-26 — the re-verify
   condition attached at queue time is what saved it).
 
+- **RE-READ the criteria when the world moves — reading them once at entry is not enough.**
+  Twice in one week a re-read of criteria I had already "read" changed a position: the HLE
+  legs (the named source is frozen, and the fallback clause triggers on "unavailable", not
+  "stale") and GPT-6 (YES does NOT require the name — "recognized as a successor to GPT-5"
+  also counts, which killed ~45% of my thesis's edge). Entry-time reading answers "is there
+  an edge?"; the world then moves and the SAME text can answer differently. Trigger a
+  re-read on: any adverse move >5pp, any real-world event in the market's domain, and at
+  any prior revision. (2026-08-04/05)
+
 ## Edges that survived (and their fine print)
 
 - **Case-by-case instance mispricing is the surviving PM edge** (§3.1). Five population

@@ -25,13 +25,13 @@
   "note": "POSITION CLOSED DEC-0061 (wash at fair). Murphy FOIA v DHS (real, filed Apr-2025) puts ruling window edge inside 2026; P(YES) 4-5%. Re-entry only at NO >=0.92."
  },
  "will-spacex-have-the-highest-ipo-market-cap-2026-516": {
-  "p_yes": 0.96,
+  "p_yes": 0.94,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES).",
-  "note": "2026-07-25 kimi-verified: IPO COMPLETED Jun-12 (SPCX, first-day close 160.95 = ~2.1T bar). Loss scenarios only: Anthropic Oct-2026 IPO needing >2x day-one pop from 965B, or OpenAI reversing reported 2027 delay AND doubling \u2014 sum 3-5pct. Mark 0.855 overprices challengers. Watch: Anthropic IPO pricing news Oct, OpenAI delay reversal.",
-  "verified": "2026-07-25"
+  "note": "REVISED 0.96->0.94 on 2026-08-05 (criteria re-read audit). MY OLD NOTE WAS WRONG on the key number: I carried a '$2.1T day-one bar'. VERIFIED: SpaceX ALREADY IPO'd \u2014 Jun-12-2026, NASDAQ:SPCX, ~$1.75T implied ($75B raised at $135/sh). So the IPO-happens risk I was carrying is GONE (good), but the bar a competitor must clear is LOWER than I recorded (1.75 not 2.1). Criteria: resolves to whichever 2026 IPO has the highest FIRST-TRADING-DAY closing market cap. Residual risk = another 2026 IPO topping $1.75T. Sibling legs price that at: Anthropic 0.068, OpenAI 0.006, rest ~0 => SpaceX complement-implied ~0.92. NOTE ON METHOD: I deliberately use the MARKET's price for the Anthropic leg rather than my own view \u2014 self-referential-market rule (I cannot audit my optimism about Anthropic), and that conflict bleeds into this position because my fair is 1 minus the competitor legs. Set 0.94, slightly above complement-implied because the untraded stub legs are ~worthless. xAI's 0.255 'price' is a MIRAGE \u2014 no book on either side. Edge now ~2.5pp vs mark 0.915: converged, legacy-sized. Resting maker sell at 0.96 stays (above fair = free option).",
+  "verified": "2026-08-05"
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
   "p_no": 0.76,
