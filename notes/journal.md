@@ -4677,3 +4677,23 @@ Criteria CONFIRMED and STRICTER than I'd been treating them — must be AVAILABL
 shipping to buyers by Dec-31. Combined with Gurman's hardened 'early 2027' timeline and a silent
 Jul-30 earnings call, p_no 0.76 HELD — the re-read confirms rather than moves it, which is the
 outcome you want most of the time. The point of the rotation is the 25% of cases where it doesn't.
+
+## 2026-08-05 ~08:50 UTC — operator: "are you rebalancing? $30 on GPT-6 NO is substantial" → worked the math, armed a trim-at-fair trigger
+
+Operator challenge on concentration. Ran the actual numbers instead of defending:
+- Position: 50sh @0.645, mark 0.765, fair 0.79. MTM $38.25 = 20.6% of bankroll. Kelly at the NEW
+  fair: ~$19.7 full-Kelly → position is ~1.6-1.9x over. It IS legacy-sized; said so Aug-05 02:00.
+- Remedy math: taker-trimming 16sh at bid 0.76 donates 5.4c/sh (fee+spread below fair) = $0.86 EV
+  to remove variance worth ~$0.71 in log-utility CE terms (hold-all CE $185.28 vs trim CE
+  $185.13). Trimming BELOW fair is slightly EV-negative even accounting for risk aversion. The
+  usual fix (maker sell at fair, fee-free) is BARRED by hidden-info doctrine on this market.
+- So the honest plan is a PRE-COMMITTED ACTIVE TRIM AT FAIR: armed gpt6-trim-at-fair trigger
+  (NO bid >= 0.79 → daemon fires a tick → verify no news → trim ~16sh to current-Kelly). At fair
+  the trim cost ~vanishes; this is the fee-aware equivalent of maker-trim for a market where
+  resting orders are forbidden. Plus the existing protections: 0.70 price trigger, non-price
+  Astra-availability trigger (exit immediately), and a hard 26-day horizon (Aug-31).
+- Portfolio-wide honesty: SpaceX/Greenland/Trump-out already have their rebalancing mechanism
+  (resting maker sells at/above fair — fee-free trims that fill on strength); HLE legs are
+  written-down lottery tickets; D23 ammo releases Aug-9. The book IS more legacy-heavy than
+  fresh-Kelly would build — the triggers + resting sells + short horizons are the unwinding
+  mechanism, chosen because every taker alternative pays the fee for nothing.

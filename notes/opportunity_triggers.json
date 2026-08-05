@@ -25,5 +25,14 @@
   "level": 0.7,
   "actionable": true,
   "note": "RAISED 0.595 -> 0.70 on 2026-08-05 post-Astra: fair cut 0.88->0.79, so the old trigger sat 25pp below fair (too far to be useful). At 0.70 it fires while there is still time to act. ALSO a NON-PRICE trigger now applies: if OpenAI announces PUBLIC availability of Astra (open beta / rolling waitlist), the thesis is breaking -> exit on judgment, do not wait for price. Hidden-info market: NO resting sell."
+ },
+ {
+  "key": "gpt6-trim-at-fair",
+  "kind": "clob_bid",
+  "id": "110227805407315115408276908830556497292857234032945501079570053955010575568037",
+  "op": ">=",
+  "level": 0.79,
+  "actionable": true,
+  "note": "REBALANCING trigger (operator concern 2026-08-05): position is legacy-sized (~$32 cost vs ~$20 full-Kelly at the new 0.79 fair). Taker-trimming BELOW fair costs more than the variance it removes (log-utility CE: hold beats trim by ~$0.15). But AT fair the trim cost ~vanishes: if NO bid >= 0.79, VERIFY no news first (hidden-info!), then actively trim ~16sh to bring the position to current-Kelly. This is the fee-aware version of trim-via-maker for a market where resting sells are barred."
  }
 ]
