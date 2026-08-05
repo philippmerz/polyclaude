@@ -8,7 +8,8 @@
   "cluster_frac": 0.18,
   "rationale": "2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "Decomposed 2026-07-25 (operator mortality probe): death ~1.5-2% (age-80 male 5.5-6%/yr x 5.2mo x 0.6-0.8 presidential-care discount) + 25A/incapacity ~0.3% + resignation ~0.2% + assassination ~0.1% + conviction ~0 = 2-3% total out-prob. Market 0.925 implies 7.5% = overpricing drama paths 3x. Death tail partially hedged by Greenland NO (anti-correlated).",
-  "verified": "2026-07-25"
+  "verified": "2026-07-25",
+  "criteria_read": "2026-08-05"
  },
  "will-the-us-acquire-any-part-of-greenland-in-2026": {
   "p_no": 0.975,
@@ -17,7 +18,8 @@
   "cluster_frac": 0.11,
   "rationale": "2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
   "verified": "2026-07-25",
-  "note": "Re-verified 2026-07-25 (was 43d stale): catalyst_check central P(YES)~2pct (breakdown 0.18pct + tail floor; NATO-summit rhetoric is narrative not mechanism; no framework/referendum/vote inside window). p_no 0.975 confirmed."
+  "note": "Re-verified 2026-07-25 (was 43d stale): catalyst_check central P(YES)~2pct (breakdown 0.18pct + tail floor; NATO-summit rhetoric is narrative not mechanism; no framework/referendum/vote inside window). p_no 0.975 confirmed.",
+  "criteria_read": "2026-08-05"
  },
  "will-satoshis-identity-be-revealed-by-december-31": {
   "p_no": 0.955,
@@ -31,7 +33,8 @@
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES).",
   "note": "REVISED 0.96->0.94 on 2026-08-05 (criteria re-read audit). MY OLD NOTE WAS WRONG on the key number: I carried a '$2.1T day-one bar'. VERIFIED: SpaceX ALREADY IPO'd \u2014 Jun-12-2026, NASDAQ:SPCX, ~$1.75T implied ($75B raised at $135/sh). So the IPO-happens risk I was carrying is GONE (good), but the bar a competitor must clear is LOWER than I recorded (1.75 not 2.1). Criteria: resolves to whichever 2026 IPO has the highest FIRST-TRADING-DAY closing market cap. Residual risk = another 2026 IPO topping $1.75T. Sibling legs price that at: Anthropic 0.068, OpenAI 0.006, rest ~0 => SpaceX complement-implied ~0.92. NOTE ON METHOD: I deliberately use the MARKET's price for the Anthropic leg rather than my own view \u2014 self-referential-market rule (I cannot audit my optimism about Anthropic), and that conflict bleeds into this position because my fair is 1 minus the competitor legs. Set 0.94, slightly above complement-implied because the untraded stub legs are ~worthless. xAI's 0.255 'price' is a MIRAGE \u2014 no book on either side. Edge now ~2.5pp vs mark 0.915: converged, legacy-sized. Resting maker sell at 0.96 stays (above fair = free option).",
-  "verified": "2026-08-05"
+  "verified": "2026-08-05",
+  "criteria_read": "2026-08-05"
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
   "p_no": 0.76,
@@ -39,8 +42,9 @@
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
-  "note": "0.73->0.76 2026-07-31: Gurman timeline hardened to 'early 2027' (was late-26/early-27), RAM-crisis driver structural, Jul-30 earnings call zero tease. Market NO 0.50. No add: 15% ticket cap binds (cost 13%), and up-move chase != verified-fade pattern. 2026-07-25 kimi revision from 0.85: OLED panels shipping since Jun, macOS 27 touch, MacBook-Ultra branding qualifies; freshest Gurman Jul-24 leans ear",
-  "verified": "2026-07-31"
+  "note": "CRITERIA RE-READ 2026-08-05 (rotation's first catch) \u2014 thesis CONFIRMED and if anything the bar is STRICTER than I'd been treating it: (1) must be AVAILABLE FOR PURCHASE by the general public \u2014 an announcement or unveiling explicitly does NOT count; (2) must be explicitly branded a MacBook (an iMac/other line does not qualify); (3) must be a TRUE touchscreen \u2014 a touch bar does not qualify. Against that: Gurman's timeline has hardened to 'early 2027' on the RAM-crisis driver, and Apple's Jul-30 earnings call passed with zero tease. Even a surprise Q4 UNVEILING would not resolve YES without shipping to buyers by Dec-31. p_no 0.76 HELD (unchanged \u2014 the re-read confirms rather than moves it). 0.73->0.76 2026-07-31: Gurman timeline hardened to 'early 2027' (was late-26/early-27), RAM-crisis driver structural, Jul-30 earnings call zero tease. Market NO 0.50. No add: 15% ticket cap binds (cos",
+  "verified": "2026-07-31",
+  "criteria_read": "2026-08-05"
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
   "p_no": 0.79,
@@ -58,7 +62,8 @@
     "2026-08-26": 0.94,
     "2026-08-30": 0.97
    }
-  }
+  },
+  "criteria_read": "2026-08-05"
  },
  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
   "p_yes": 0.93,
@@ -78,16 +83,19 @@
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
   "p_no": 0.5,
   "verified": "2026-08-04",
-  "note": "CUT 0.66->0.50 on 2026-08-04. FACTS UNCHANGED \u2014 re-verified the resolution source today: agi.safe.ai still stamped Apr-2025, still zero 2026 models, OpenAI best still GPT-5 25.3%. What changed is the MARKET: YES 0.675->0.875 on real volume ($913/24h, deep book) with NO board change, i.e. it is pricing CAPABILITY (GPT-5.6 Sol 47.2% on third-party trackers, GPT-6 expected Sept) or expecting loose resolution via the 'results published elsewhere' fallback clause. I weight that heavily: this is an INTERPRETATION question (how will a resolver read a frozen source?), and crowd expectations about resolver behavior aggregate better than my solo read \u2014 unlike a FACT question, where my verification wins. Holding: exit math dominates (hold EV $7.50 at 0.50 vs $1.80 taker sell), and max further loss is $1.88."
+  "note": "CUT 0.66->0.50 on 2026-08-04. FACTS UNCHANGED \u2014 re-verified the resolution source today: agi.safe.ai still stamped Apr-2025, still zero 2026 models, OpenAI best still GPT-5 25.3%. What changed is the MARKET: YES 0.675->0.875 on real volume ($913/24h, deep book) with NO board change, i.e. it is pricing CAPABILITY (GPT-5.6 Sol 47.2% on third-party trackers, GPT-6 expected Sept) or expecting loose resolution via the 'results published elsewhere' fallback clause. I weight that heavily: this is an INTERPRETATION question (how will a resolver read a frozen source?), and crowd expectations about resolver behavior aggregate better than my solo read \u2014 unlike a FACT question, where my verification wins. Holding: exit math dominates (hold EV $7.50 at 0.50 vs $1.80 taker sell), and max further loss is $1.88.",
+  "criteria_read": "2026-08-04"
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
   "p_no": 0.65,
   "verified": "2026-08-04",
-  "note": "CUT 0.79->0.65 on 2026-08-04, same reasoning as the 50+ leg (see it). 55+ needs OpenAI above the current GLOBAL frontier AND a listing, so it retains more NO margin than 50+ even under loose reading."
+  "note": "CUT 0.79->0.65 on 2026-08-04, same reasoning as the 50+ leg (see it). 55+ needs OpenAI above the current GLOBAL frontier AND a listing, so it retains more NO margin than 50+ even under loose reading.",
+  "criteria_read": "2026-08-04"
  },
  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
   "p_no": 0.7,
   "verified": "2026-08-02",
-  "note": "REVISED 2026-08-02 after kimi round (kimi indep. fair P(YES) 0.15 vs my 0.28 \u2014 AGREES on NO, CORRECTS my facts): capability pillar was STALE \u2014 Gemini 3.1 Pro (Feb-2026) is ~44.7% not 38.3%, and Google ships the 3.x line continuously, so the gap to 50 is ~5pp on a ~7pp/step cadence = the REAL risk. Source pillar is STRONGER than I framed: agi.safe.ai lists ZERO 2026 models (no GPT-5.6/Opus-5/Gemini-3.1 despite all existing) -> board ~6-8mo stale, and NO wins in BOTH branches (frozen 38.3 <50; updated-to-44.7 still <50). Net fair P(YES) ~0.30 = P(loose UMA reading ~0.5) x P(Gemini >=50 by Dec-31 ~0.55) + strict-branch tail. TRANCHE-2 DECLINED 2026-08-02: gate required crux verification; wayback blocked + kimi's 25 searches inconclusive on whether the board updates, and the residual is a criteria-INTERPRETATION bet (the R-U loss class). Aave $7.85 stays dry for D23 (proven template, days away). KILL: any Gemini release claiming HLE>=50 listed on agi.safe.ai."
+  "note": "REVISED 2026-08-02 after kimi round (kimi indep. fair P(YES) 0.15 vs my 0.28 \u2014 AGREES on NO, CORRECTS my facts): capability pillar was STALE \u2014 Gemini 3.1 Pro (Feb-2026) is ~44.7% not 38.3%, and Google ships the 3.x line continuously, so the gap to 50 is ~5pp on a ~7pp/step cadence = the REAL risk. Source pillar is STRONGER than I framed: agi.safe.ai lists ZERO 2026 models (no GPT-5.6/Opus-5/Gemini-3.1 despite all existing) -> board ~6-8mo stale, and NO wins in BOTH branches (frozen 38.3 <50; updated-to-44.7 still <50). Net fair P(YES) ~0.30 = P(loose UMA reading ~0.5) x P(Gemini >=50 by Dec-31 ~0.55) + strict-branch tail. TRANCHE-2 DECLINED 2026-08-02: gate required crux verification; wayback blocked + kimi's 25 searches inconclusive on whether the board updates, and the residual is a criteria-INTERPRETATION bet (the R-U loss class). Aave $7.85 stays dry for D23 (proven template, days away). KILL: any Gemini release claiming HLE>=50 listed on agi.safe.ai.",
+  "criteria_read": "2026-08-04"
  }
 }

@@ -90,6 +90,31 @@ def main() -> int:
             if "closed" not in note.lower() and "re-entry" not in note.lower():
                 issues.append(f"PRIOR orphan (no live position, no closure note): {k[:52]}")
 
+    # 3b. CRITERIA RE-READ rotation (2026-08-05). Staleness guards watch the
+    # `verified` DATE, not whether the recorded thesis is still CORRECT — and
+    # an audit that day found 2 of 8 positions running on wrong/stale facts
+    # (SpaceX's prior carried a "$2.1T day-one bar" when the IPO had already
+    # happened at ~$1.75T; GPT-6's thesis assumed a naming crux the criteria
+    # do not require). Neither was flagged by anything automated. So: surface
+    # the LIVE position whose criteria were read longest ago, one per tick —
+    # round-robin means every position gets re-read within ~a week.
+    priors_raw = _load("portfolio_kelly_priors.json", {})
+    oldest_key, oldest_date = None, None
+    for k, v in priors_raw.items():
+        if k.startswith("_") or not isinstance(v, dict):
+            continue
+        if not any(k in s or s in k for s in live):
+            continue
+        cr = v.get("criteria_read") or "1970-01-01"
+        if oldest_date is None or cr < oldest_date:
+            oldest_key, oldest_date = k, cr
+    if oldest_key:
+        age = "never" if oldest_date == "1970-01-01" else f"{oldest_date}"
+        issues.append(
+            f"CRITERIA RE-READ due (oldest, read {age}): {oldest_key[:52]} — "
+            f"pull the market description, confirm the recorded thesis still matches "
+            f"the actual bar, then set criteria_read to today")
+
     # 4. expired acked-holds
     today = dt.date.today().isoformat()
     acks = _load("acknowledged_holds.json", [])

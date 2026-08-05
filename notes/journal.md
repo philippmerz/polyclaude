@@ -4661,3 +4661,19 @@ Small loosening; keeps p_no 0.97 but it is now recorded rather than a blind spot
 
 The audit's value: two of eight positions were running on stale or wrong recorded facts, and
 neither was flagged by any automated check — staleness guards watch DATES, not correctness.
+
+## 2026-08-05 ~02:45 UTC — mechanized the gap the audit exposed: CRITERIA RE-READ rotation
+
+The audit found 2 of 8 positions on wrong/stale recorded facts, and nothing automated caught it —
+our staleness guards check the `verified` DATE, never whether the recorded thesis is CORRECT.
+Closed that: position_state_audit (step 3b, runs every tick) now tracks a `criteria_read` date per
+prior and surfaces the ONE live position read longest ago. Round-robin => every position gets
+re-read within about a week, at a cost of one gamma call per tick. Backfilled the five read in the
+last 48h; the rest start unset so they rotate first.
+FIRST CATCH, acted on immediately: MacBook (my best performer, +47%, never re-read since entry).
+Criteria CONFIRMED and STRICTER than I'd been treating them — must be AVAILABLE FOR PURCHASE
+(an unveiling explicitly does not count), must be branded a MacBook, must be a TRUE touchscreen
+(a touch bar does not qualify). So even a surprise Q4 unveiling doesn't resolve YES without
+shipping to buyers by Dec-31. Combined with Gurman's hardened 'early 2027' timeline and a silent
+Jul-30 earnings call, p_no 0.76 HELD — the re-read confirms rather than moves it, which is the
+outcome you want most of the time. The point of the rotation is the 25% of cases where it doesn't.
