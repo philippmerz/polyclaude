@@ -43,20 +43,20 @@
   "verified": "2026-07-31"
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
-  "p_no": 0.88,
+  "p_no": 0.79,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair.",
-  "verified": "2026-08-01",
-  "note": "0.79->0.88 2026-08-01: leak wave resolves the NAMING crux toward NO ('GPT-5.7 in August, GPT-6 slips to September' \u2014 WinCentral/Decrypt, public; market NO 0.775->0.84 on it). Static-fair exit signal at 0.84 would have been WRONG \u2014 fair moved with price (hidden-info doctrine validated). Hard-closed to adds unchanged.",
+  "verified": "2026-08-05",
+  "note": "CUT 0.88->0.79 on 2026-08-05 \u2014 ASTRA changes the decomposition. OpenAI announced Astra Aug-1 (10 solved open math problems, demoed to DC policymakers) with NO date, NO pricing, NO model card, NO ChatGPT availability. Re-read the criteria and my old thesis was WRONG on a key point: YES does NOT require the name 'GPT-6' \u2014 a product 'recognized as a successor to GPT-5' also counts (only 'GPT-5.5 or similar' labels are excluded). So the NAMING CRUX I priced at ~0.45 is largely dead; Astra would likely qualify on successor-recognition if shipped. What remains is a pure AVAILABILITY bet: P(Astra or equivalent PUBLICLY accessible \u2014 open beta/rolling waitlist counts, closed beta does NOT \u2014 within 26 days of a dateless announcement) ~0.30, x P(qualifies as successor | shipped) ~0.7 => P(YES) ~0.21, p_no 0.79. Market 0.765: we have essentially CONVERGED; the 0.88 was stale.",
   "hazard_schedule": {
-   "note": "UPDATED 2026-08-01 post naming-leak: fair 0.88 now; silence ratchet: 0.92 by Aug-15, 0.95 by Aug-22, 0.97 final week. Override on any dated GPT-6 launch event or naming reversal. Back-loaded hazard (2026-07-30 meta-reflection): leaks cluster on 'August launch', so early-Aug silence is EXPECTED under both outcomes and fair should NOT ratchet much before mid-Aug. Ratchet applies",
+   "note": "REVISED 2026-08-05 post-Astra. The old ratchet assumed silence = no successor exists; that is no longer true \u2014 a successor is announced and undated, so silence now means only 'not yet shipped'. Ratchet is therefore GENTLER and conditioned on Astra remaining unavailable to the general public. Override immediately on any public-availability announcement (see trigger).",
    "checkpoints": {
-    "2026-08-10": 0.88,
-    "2026-08-15": 0.92,
-    "2026-08-22": 0.95,
-    "2026-08-28": 0.97
+    "2026-08-12": 0.83,
+    "2026-08-19": 0.88,
+    "2026-08-26": 0.94,
+    "2026-08-30": 0.97
    }
   }
  },

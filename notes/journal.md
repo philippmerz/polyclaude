@@ -4598,3 +4598,37 @@ UMA clean, Ostium flat, state audit clean, redeem 0, arb 0/1173 real, discovery 
 Fed leg (skip, no differentiated view — the standing pass). No D23 markets on day 1 of the
 window; the Aug-09 reservation expiry pre-committed this morning is now the live clock.
 No TG (nothing material — mark drift only, per the material-only cadence).
+
+## 2026-08-05 02:00 UTC tick — ASTRA: the GPT-6 thesis loses half its edge; prior 0.88 -> 0.79
+
+Bankroll $185.33 (+9.0%), MTM $171.06 (+10.7% unrl). The tick's content is one thesis update on
+my LARGEST position, triggered by the market easing NO 0.845 -> 0.765 (market raised P(release)
+8pp against my schedule). Verified the move instead of trusting the schedule — correctly:
+
+**OpenAI announced ASTRA on Aug-1**: ten solved open problems in mathematics/theoretical CS,
+demoed to policymakers in DC. NOT released — no date, no pricing, no model card, no ChatGPT
+availability, and OpenAI has not said whether it ships as GPT-6 or as a GPT-5 point release.
+
+Re-read the criteria and found my own thesis was WRONG on a load-bearing point. YES does NOT
+require the name "GPT-6": the criteria also accept "a product recognized as a SUCCESSOR to
+GPT-5" (only "GPT-5.5 or similar" labels are excluded). My decomposition priced a naming crux at
+~0.45 — that crux is now largely DEAD, because Astra would plausibly qualify on
+successor-recognition regardless of label. This is the second time in a week that re-reading
+criteria I had already "read" changed a position (HLE was the first). Reading criteria ONCE at
+entry is not enough; re-read them when the world moves.
+
+What remains is a pure AVAILABILITY bet: P(publicly accessible — open beta or rolling waitlist
+counts, closed beta explicitly does NOT — within 26 days of a dateless announcement) ~0.30
+x P(qualifies | shipped) ~0.7 = P(YES) ~0.21 -> p_no 0.79 vs market 0.765. Essentially CONVERGED;
+my 0.88 was stale and the edge is now ~2.5pp.
+
+ACTIONS: (1) prior cut 0.88->0.79; (2) hazard schedule rebuilt — the old ratchet assumed silence
+meant "no successor exists", which is false now, so it is gentler and conditioned on Astra
+staying unavailable; (3) judgment trigger RAISED 0.595->0.70 (the old one sat 25pp below fair,
+useless) and a NON-PRICE trigger added: any announcement of PUBLIC Astra availability = thesis
+breaking, exit on judgment without waiting for price. Daemon restarted.
+HOLDING: hold EV $39.50 vs taker-exit $36.32 — hold still dominates by $3.18, and hidden-info
+doctrine forbids a resting sell. But stating it plainly: at 2.5pp I would NOT open this position
+today at $32. It is legacy-sized, the edge has been consumed by the run from 0.645 to 0.765, and
+it now rides on the availability question alone.
+Rest of tick quiet: UMA clean, redeem 0, arb 0/1160, no D23 (day 2 of window).

@@ -22,8 +22,8 @@
   "kind": "clob_bid",
   "id": "110227805407315115408276908830556497292857234032945501079570053955010575568037",
   "op": "<=",
-  "level": 0.595,
+  "level": 0.7,
   "actionable": true,
-  "note": "GPT-6 NO judgment trigger (priors file, 2026-07-27): NO best bid < 0.60 -> kimi + FULL re-eval of the 50sh NO position. Hard-closed to adds regardless; hidden-info class (no resting sell). Wave-5 rumor context in priors note. Disarm when position closes or market resolves (Aug-31)."
+  "note": "RAISED 0.595 -> 0.70 on 2026-08-05 post-Astra: fair cut 0.88->0.79, so the old trigger sat 25pp below fair (too far to be useful). At 0.70 it fires while there is still time to act. ALSO a NON-PRICE trigger now applies: if OpenAI announces PUBLIC availability of Astra (open beta / rolling waitlist), the thesis is breaking -> exit on judgment, do not wait for price. Hidden-info market: NO resting sell."
  }
 ]
