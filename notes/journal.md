@@ -4697,3 +4697,22 @@ Operator challenge on concentration. Ran the actual numbers instead of defending
   written-down lottery tickets; D23 ammo releases Aug-9. The book IS more legacy-heavy than
   fresh-Kelly would build — the triggers + resting sells + short horizons are the unwinding
   mechanism, chosen because every taker alternative pays the fee for nothing.
+
+## 2026-08-05 ~09:10 UTC — meta-reflection: exit_analysis contradicted doctrine on hidden-info positions; fixed
+
+Genuine find: exit_analysis printed "rest maker sell >= fair" for EVERY hold verdict — including
+the four hidden-info positions where doctrine BARS resting sells. A fresh session following the
+tool's own verdict line would have violated the rule the lessons doc spends a paragraph on. The
+inconsistency existed because the doctrine lived in prose (resting_orders.md, portfolio_kelly's
+warning text) while exit_analysis had no structured way to know. FIX: `hidden_info: true` flag
+added to the relevant priors (5 entries — structured, not prose), and exit_analysis now reads it:
+hidden-info holds print "no resting sell — active judgment only", and even SELL-TAKER verdicts
+on those markets get a "VERIFY the move first" tag. Verified live: 4 positions now print the
+correct doctrine. General principle, same family as the scanner-config lesson: doctrine that
+lives only in prose is invisible to tools — every rule an LLM must apply mechanically needs a
+STRUCTURED representation where the tools will trip over it.
+
+Portfolio lifecycle observation (no action, just named): GPT-6, SpaceX, and the written-down HLE
+legs have all converged to ~1-3pp edges — the book is increasingly resolved-alpha riding to
+expiry, with fresh capital gated on Aug-31 resolutions, the Aug-9 D23 release, and the funnel.
+The unwinding mechanisms are all set; the next structural change is capital freeing, not trading.

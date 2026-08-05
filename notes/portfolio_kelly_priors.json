@@ -44,7 +44,8 @@
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
   "note": "CRITERIA RE-READ 2026-08-05 (rotation's first catch) \u2014 thesis CONFIRMED and if anything the bar is STRICTER than I'd been treating it: (1) must be AVAILABLE FOR PURCHASE by the general public \u2014 an announcement or unveiling explicitly does NOT count; (2) must be explicitly branded a MacBook (an iMac/other line does not qualify); (3) must be a TRUE touchscreen \u2014 a touch bar does not qualify. Against that: Gurman's timeline has hardened to 'early 2027' on the RAM-crisis driver, and Apple's Jul-30 earnings call passed with zero tease. Even a surprise Q4 UNVEILING would not resolve YES without shipping to buyers by Dec-31. p_no 0.76 HELD (unchanged \u2014 the re-read confirms rather than moves it). 0.73->0.76 2026-07-31: Gurman timeline hardened to 'early 2027' (was late-26/early-27), RAM-crisis driver structural, Jul-30 earnings call zero tease. Market NO 0.50. No add: 15% ticket cap binds (cos",
   "verified": "2026-07-31",
-  "criteria_read": "2026-08-05"
+  "criteria_read": "2026-08-05",
+  "hidden_info": true
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
   "p_no": 0.79,
@@ -63,7 +64,8 @@
     "2026-08-30": 0.97
    }
   },
-  "criteria_read": "2026-08-05"
+  "criteria_read": "2026-08-05",
+  "hidden_info": true
  },
  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
   "p_yes": 0.93,
@@ -84,18 +86,21 @@
   "p_no": 0.5,
   "verified": "2026-08-04",
   "note": "CUT 0.66->0.50 on 2026-08-04. FACTS UNCHANGED \u2014 re-verified the resolution source today: agi.safe.ai still stamped Apr-2025, still zero 2026 models, OpenAI best still GPT-5 25.3%. What changed is the MARKET: YES 0.675->0.875 on real volume ($913/24h, deep book) with NO board change, i.e. it is pricing CAPABILITY (GPT-5.6 Sol 47.2% on third-party trackers, GPT-6 expected Sept) or expecting loose resolution via the 'results published elsewhere' fallback clause. I weight that heavily: this is an INTERPRETATION question (how will a resolver read a frozen source?), and crowd expectations about resolver behavior aggregate better than my solo read \u2014 unlike a FACT question, where my verification wins. Holding: exit math dominates (hold EV $7.50 at 0.50 vs $1.80 taker sell), and max further loss is $1.88.",
-  "criteria_read": "2026-08-04"
+  "criteria_read": "2026-08-04",
+  "hidden_info": true
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
   "p_no": 0.65,
   "verified": "2026-08-04",
   "note": "CUT 0.79->0.65 on 2026-08-04, same reasoning as the 50+ leg (see it). 55+ needs OpenAI above the current GLOBAL frontier AND a listing, so it retains more NO margin than 50+ even under loose reading.",
-  "criteria_read": "2026-08-04"
+  "criteria_read": "2026-08-04",
+  "hidden_info": true
  },
  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
   "p_no": 0.7,
   "verified": "2026-08-02",
   "note": "REVISED 2026-08-02 after kimi round (kimi indep. fair P(YES) 0.15 vs my 0.28 \u2014 AGREES on NO, CORRECTS my facts): capability pillar was STALE \u2014 Gemini 3.1 Pro (Feb-2026) is ~44.7% not 38.3%, and Google ships the 3.x line continuously, so the gap to 50 is ~5pp on a ~7pp/step cadence = the REAL risk. Source pillar is STRONGER than I framed: agi.safe.ai lists ZERO 2026 models (no GPT-5.6/Opus-5/Gemini-3.1 despite all existing) -> board ~6-8mo stale, and NO wins in BOTH branches (frozen 38.3 <50; updated-to-44.7 still <50). Net fair P(YES) ~0.30 = P(loose UMA reading ~0.5) x P(Gemini >=50 by Dec-31 ~0.55) + strict-branch tail. TRANCHE-2 DECLINED 2026-08-02: gate required crux verification; wayback blocked + kimi's 25 searches inconclusive on whether the board updates, and the residual is a criteria-INTERPRETATION bet (the R-U loss class). Aave $7.85 stays dry for D23 (proven template, days away). KILL: any Gemini release claiming HLE>=50 listed on agi.safe.ai.",
-  "criteria_read": "2026-08-04"
+  "criteria_read": "2026-08-04",
+  "hidden_info": true
  }
 }
