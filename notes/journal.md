@@ -4725,3 +4725,20 @@ text-arena leg at 0.935 (self-referential — standing skip) and an OpenAI-LiveB
 (NO 0.645 — arena family, but LiveBench resolution + my Sept horizon didn't clear a criteria
 read this tick; low priority, capital-bound anyway). No D23 markets, day 3 of window; expiry
 clock runs to Aug-9 02:00. No TG (nothing material).
+
+## 2026-08-05 22:19 UTC — gpt6-no-judgment trigger FIRED at 0.70; adjudicated within minutes: HOLD
+
+The raised trigger did exactly what it was rebuilt to do: fired the moment NO bid touched 0.70,
+while there was still time to act. Verification sequence:
+(1) NON-PRICE CHECK: no Astra availability, no waitlist, no beta — the thesis-break condition has
+NOT fired. New load-bearing fact found: Astra is expected to pass a ~30-DAY FEDERAL REVIEW before
+public release — from an Aug-1 announcement that lands past Aug-31. Supports NO.
+(2) CROSS-MARKET CHECK: Polymarket's own "Astra released by?" event prices Aug-31 at 0.235
+(Aug-15 at 0.0865, Sep-30 at 0.75). GPT-6 YES fair = P(Astra public by Aug-31) x P(qualifies as
+successor) ~ 0.235 x 0.8 ~ 0.19 — so the GPT-6 leg's move toward YES (mid ~0.74) is INCONSISTENT
+with its own sibling market, not information. The 0.70 bid is a single 153sh order on a wide
+0.70/0.78 book.
+VERDICT: HOLD. No trim at 0.70 (9pp below fair — worse than yesterday's rejected math), no add
+(hard-closed, over-Kelly). Trigger LOWERED to 0.65 so it re-fires only on genuine deterioration;
+trim-at-fair at 0.79 stays armed on the other side; non-price exit condition unchanged.
+My fair stays 0.79-0.81, now corroborated by the sibling market AND the review-timeline fact.
