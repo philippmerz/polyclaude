@@ -108,12 +108,23 @@ def main() -> int:
         cr = v.get("criteria_read") or "1970-01-01"
         if oldest_date is None or cr < oldest_date:
             oldest_key, oldest_date = k, cr
+    # Threshold, not just "oldest" (2026-08-05): flagging the oldest EVERY tick
+    # makes the flag wallpaper once all positions are current — the same
+    # reporting-vs-action gap that made the Kelly over-sized flag ignorable.
+    # Only surface a genuinely stale one (>7d), so the flag always means act.
+    CRITERIA_STALE_DAYS = 7
     if oldest_key:
-        age = "never" if oldest_date == "1970-01-01" else f"{oldest_date}"
-        issues.append(
-            f"CRITERIA RE-READ due (oldest, read {age}): {oldest_key[:52]} — "
-            f"pull the market description, confirm the recorded thesis still matches "
-            f"the actual bar, then set criteria_read to today")
+        never = oldest_date == "1970-01-01"
+        try:
+            age_days = (dt.date.today() - dt.date.fromisoformat(oldest_date)).days
+        except Exception:
+            age_days = 9999
+        if never or age_days > CRITERIA_STALE_DAYS:
+            age = "NEVER" if never else f"{age_days}d ago"
+            issues.append(
+                f"CRITERIA RE-READ due (read {age}): {oldest_key[:52]} — "
+                f"pull the market description, confirm the recorded thesis still matches "
+                f"the actual bar, then set criteria_read to today")
 
     # 4. expired acked-holds
     today = dt.date.today().isoformat()
