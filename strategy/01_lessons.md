@@ -69,6 +69,14 @@
   ledger over many scored calls is (`ledger_calibration.py`; score EVERY judged skip
   with a prior so misses become datapoints — the DC/Lucasfilm wrong-skips were captured
   only because skips were scored).
+- **Check a market's IMPLICATION SIBLINGS before believing its move.** When GPT-6 NO
+  dipped to 0.70 and fired the judgment trigger, the sibling Astra-timing market still
+  priced the underlying event at 0.235 — implying the GPT-6 move was inconsistent with
+  its own family, i.e. noise, not information. Held; the move fully mean-reverted
+  overnight (2026-08-05→06). A price move that its logical siblings don't echo is a thin
+  order, not news — and conversely, sibling-confirmed moves deserve the full re-eval.
+  Cheap check (one API call), applicable to any market with date-series or
+  implication-linked siblings.
 - **War-adjacent gates re-pull live conflict state at decision time** — never from
   memory. Tier-2 keyword demotion (right for an Iran-free book) let the ambient
   world-model go stale; the Kuwait fade was gated on peacetime logic during an active

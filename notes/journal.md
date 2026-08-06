@@ -4750,3 +4750,10 @@ last night's trigger-firing move fully mean-reverted, and the GPT-6/Astra implic
 CLOSED (now -1.5pp, correct ordering). The hold verdict was right; the thin 0.70 bid was noise,
 as the sibling-market check said. MacBook NO 0.600 (+52.2% — new position high). UMA clean,
 state audit clean, redeem 0, arb 0/1161, no D23 (day 4 of window; expiry Sat 02:00). No TG.
+
+## 2026-08-06 ~02:20 UTC — meta-reflection: banked the sibling-check technique; else null
+
+One genuine item: the verification move that adjudicated last night's trigger — checking the
+market's implication siblings before believing its price — is now validated (the move it called
+noise mean-reverted fully within hours) and generalizes cheaply. Banked in 01_lessons.md as a
+named technique. No cleanup findings; recent passes covered the surface. Not forcing more.
