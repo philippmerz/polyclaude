@@ -4780,3 +4780,11 @@ Tuesday at 0.76). Position now 34sh ($21.9 cost) ≈ full-Kelly at the 0.79 fair
 "is $30 substantial" concern is resolved by mechanism, not by promise. Trim trigger disarmed
 (job done); 0.65 judgment trigger + Astra-availability exit stay armed. pUSD liquidity restored
 to ~$15.7 ahead of D23/other deployment.
+
+## 2026-08-06 14:00 UTC tick — quiet; post-trim book settled
+
+Bankroll $187.25 (+10.1%), MTM $160.40 (+11.2% unrl) on the reduced cost base ($144.26 after
+the trim). All checks clean: UMA 0, state audit clean, redeem 0, arb 0/1157 real. No D23
+markets (day 5); expiry fires tomorrow night's 02:00 tick... correction: Sat Aug-9 02:00 per
+the pre-commitment — two more daily checks first. pUSD float $15.7 ready. No TG (quiet tick;
+the trim was reported at 12:06).
