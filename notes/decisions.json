@@ -1,5 +1,5 @@
 {
-  "next_id": 64,
+  "next_id": 65,
   "decisions": [
     {
       "id": 1,
@@ -1215,6 +1215,20 @@
       "prediction": "Gemini-50+ resolves NO (p=0.72). Second tranche (~$7.85 Aave bridge) gated on 02:00 fresh verification incl. kimi round. Kill: Gemini 3.5-class release claiming HLE >=50.",
       "size_usd": 3.2,
       "resolution_at": "2026-12-31",
+      "tags": [],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 64,
+      "timestamp": "2026-08-06T12:07:57Z",
+      "type": "size_change",
+      "thesis": "GPT-6 NO trim 16sh @ 0.79 \u2014 the pre-committed rebalancing from the operator's Aug-05 concern, executed when the trim-at-fair trigger fired. At fair the trim costs only the fee ($0.34) vs variance CE gain ~$0.5-0.7 \u2014 net positive, unlike below-fair trims (rejected twice). Verify step: sibling market unchanged (move = convergence, not information).",
+      "confidence": "high",
+      "prediction": "Remaining 34sh rides to Aug-31 at ~full-Kelly; NO resolves (p=0.79).",
+      "size_usd": 12.64,
+      "resolution_at": "2026-08-31",
       "tags": [],
       "outcome": null,
       "calibration_delta": null,

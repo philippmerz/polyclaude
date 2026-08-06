@@ -25,14 +25,5 @@
   "level": 0.65,
   "actionable": true,
   "note": "LOWERED 0.70 -> 0.65 after the 0.70 fire was adjudicated 2026-08-05 22:19 (verdict: HOLD \u2014 no availability announcement, no waitlist; Astra faces a ~30d federal review pre-release which lands past Aug-31 from an Aug-1 announcement; sibling market prices Astra-by-Aug-31 at 0.235, implying GPT-6 YES fair ~0.19 \u2014 the GPT-6 leg's move was inconsistent with its own sibling, not news). 0.65 = genuine further deterioration. Non-price trigger unchanged: public Astra availability = exit on judgment immediately."
- },
- {
-  "key": "gpt6-trim-at-fair",
-  "kind": "clob_bid",
-  "id": "110227805407315115408276908830556497292857234032945501079570053955010575568037",
-  "op": ">=",
-  "level": 0.79,
-  "actionable": true,
-  "note": "REBALANCING trigger (operator concern 2026-08-05): position is legacy-sized (~$32 cost vs ~$20 full-Kelly at the new 0.79 fair). Taker-trimming BELOW fair costs more than the variance it removes (log-utility CE: hold beats trim by ~$0.15). But AT fair the trim cost ~vanishes: if NO bid >= 0.79, VERIFY no news first (hidden-info!), then actively trim ~16sh to bring the position to current-Kelly. This is the fee-aware version of trim-via-maker for a market where resting sells are barred."
  }
 ]

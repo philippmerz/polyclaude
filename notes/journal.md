@@ -4767,3 +4767,16 @@ just hasn't listed an announce-market family this time (SDCC's appeared ~a week 
 remains possible). Slug-based search would catch studio-named variants ("...at-d23"). No change
 to the expiry: releasing the earmark Saturday doesn't spend the capital — if markets list after,
 the released funds are still available. The expiry only ends the WAITING, not the ability to act.
+
+## 2026-08-06 12:06 UTC — trim-at-fair trigger fired and EXECUTED: GPT-6 NO trimmed 16sh @ 0.79 (DEC-0064)
+
+The full mechanism chain worked end-to-end, 26 hours after being armed on the operator's
+rebalancing concern: (1) trigger fired the moment NO bid touched 0.79; (2) VERIFY step ran —
+sibling check clean (Astra-Aug-31 unchanged at 0.235 → the move was convergence to fair, not an
+informed jump through it; a 2000sh bid, not a stub); (3) trimmed 16sh at 0.79 FAK, filled
+instantly, $12.64 gross / ~$12.30 net (fee $0.34 vs variance-CE gain ~$0.5-0.7 → net-positive,
+which below-fair trims were not — the discipline of waiting for fair paid ~$0.50 vs trimming
+Tuesday at 0.76). Position now 34sh ($21.9 cost) ≈ full-Kelly at the 0.79 fair — the operator's
+"is $30 substantial" concern is resolved by mechanism, not by promise. Trim trigger disarmed
+(job done); 0.65 judgment trigger + Astra-availability exit stay armed. pUSD liquidity restored
+to ~$15.7 ahead of D23/other deployment.
