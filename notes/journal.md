@@ -4742,3 +4742,11 @@ VERDICT: HOLD. No trim at 0.70 (9pp below fair — worse than yesterday's reject
 (hard-closed, over-Kelly). Trigger LOWERED to 0.65 so it re-fires only on genuine deterioration;
 trim-at-fair at 0.79 stays armed on the other side; non-price exit condition unchanged.
 My fair stays 0.79-0.81, now corroborated by the sibling market AND the review-timeline fact.
+
+## 2026-08-06 02:00 UTC tick — quiet; GPT-6 mean-reverted, implication violation closed
+
+Bankroll $186.79 (+9.9%), MTM $172.49 (+11.6% unrl). GPT-6 NO recovered 0.74->0.78 overnight —
+last night's trigger-firing move fully mean-reverted, and the GPT-6/Astra implication violation
+CLOSED (now -1.5pp, correct ordering). The hold verdict was right; the thin 0.70 bid was noise,
+as the sibling-market check said. MacBook NO 0.600 (+52.2% — new position high). UMA clean,
+state audit clean, redeem 0, arb 0/1161, no D23 (day 4 of window; expiry Sat 02:00). No TG.
