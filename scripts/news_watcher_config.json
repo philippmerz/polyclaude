@@ -195,7 +195,9 @@
   "gpt-6 launch",
   "openai launches astra",
   "openai launch event",
-  "astra api"
+  "astra api",
+  "mewfour",
+  "synthwavedd astra"
  ],
  "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through an agent filter (claude -p, haiku) before reaching Telegram \u2014 the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them.",
  "tier2_keywords": [

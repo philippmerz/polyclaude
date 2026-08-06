@@ -4822,3 +4822,18 @@ my next scheduled search. Self-expiring relevance (~25 days); prune keywords pos
 (2) The sibling-check lesson got its second-branch validation (Tuesday: noise, correctly held;
 today: information, correctly capitulated) — updated in place. A test that can say BOTH yes and
 no is a test; one that only ever confirms is a rationalization.
+
+## 2026-08-06 ~16:53 UTC — operator identifies the cause: @synthwavedd leak "Astra imminent, next week"
+
+Operator relayed the X post that moved the market (~14:50 UTC, right before the 15:53 sibling
+event): "OpenAI preparing to launch Astra imminently, targeting NEXT WEEK... largest pretrain
+since GPT-4.5, RC checkpoint internally 'mewfour'." Also his Jul-8 record (operator-provided):
+GPT-5.6-is-final-5.x ✓, GPT-6-in-a-month ≈✓ (Astra announced Aug-1), new-larger-pretrain ✓ —
+a credible leaker on one visible cycle. ASSESSMENT: this confirms the market's move was
+informed, validates the capitulate-to-market call at 15:53 (2h before I could see why), and
+means resolution comes FAST (release targeted ~Aug 10-14). Stance unchanged: p_no tracks market
+(the tweet is 2h stale — the market priced it before I saw it; no edge either way), hold on
+exit math, availability announcement = exit. Added "mewfour" as a tier-1 keyword — if the RC
+codename hits press, that IS release news. The speed gap is now precisely characterized:
+X-native flow beats my feeds by ~1-3h; the operator relaying one watched account closes it
+better than a $200/mo API at current scale.
