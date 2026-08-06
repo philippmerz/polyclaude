@@ -4788,3 +4788,26 @@ the trim). All checks clean: UMA 0, state audit clean, redeem 0, arb 0/1157 real
 markets (day 5); expiry fires tomorrow night's 02:00 tick... correction: Sat Aug-9 02:00 per
 the pre-commitment — two more daily checks first. pUSD float $15.7 ready. No TG (quiet tick;
 the trim was reported at 12:06).
+
+## 2026-08-06 15:53 UTC — judgment trigger at 0.65: THIS one was REAL (sibling-confirmed); prior cut to market
+
+3.5h after the 0.79 trim, NO collapsed through 0.65. Sibling check — the technique's first
+live catch of true information: the ENTIRE Astra family exploded on heavy volume (Aug-31 YES
+0.235->0.54, Aug-15 YES 0.074->0.275, 3.3k vol). The market now prices ~28% release within 9
+days = teaser-week behavior. Search hasn't indexed the cause (no confirmable availability
+announcement — the pre-committed exit condition has NOT verifiably fired), so the crowd is
+trading something (tweet/event invite) faster than my tools can see it.
+
+ADJUDICATION: (1) prior cut 0.79 -> 0.48 ~= market. Stated honestly: on announcement-flow, I
+have NO edge — the sibling event is exactly the "informed flow" the hidden-info doctrine warns
+about, and pretending my 0.79 survives it would be thesis-defense. (2) HOLD — but as exit math,
+not conviction: the book is 0.46/0.72 (26pp panic spread); dumping 34sh nets ~$14.08 vs $15.64
+hold-EV at the market's own fair. Selling pays $1.56 for zero informational edge. (3) hazard
+schedule SUSPENDED (its assumptions died with the sibling event); prior tracks market until the
+cause is identified. (4) trigger reset to 0.35 (essentially-resolving alert); the REAL exit
+condition stays the availability announcement, re-checked every tick as search freshens.
+
+P&L honesty: remaining 34sh cost $21.9, MTM ~$18.7 (-$3.2 unrealized); the morning's 16sh trim
+at 0.79 ($12.64) now looks prescient but was MECHANISM (over-Kelly trim at fair), not foresight
+— worth keeping that distinction. Whole-position outcome now rides a coin flip I decline to pay
+10% to exit.
