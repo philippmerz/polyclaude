@@ -63,6 +63,10 @@
   {
    "name": "CoinTelegraph",
    "url": "https://cointelegraph.com/rss"
+  },
+  {
+   "url": "https://openai.com/news/rss.xml",
+   "name": "openai-news"
   }
  ],
  "tier1_keywords": [
@@ -176,7 +180,22 @@
   "tether depegs",
   "tether depegged",
   "tether breaks peg",
-  "tether collapse"
+  "tether collapse",
+  "astra release",
+  "astra released",
+  "astra available",
+  "astra waitlist",
+  "astra beta",
+  "astra launch",
+  "astra ships",
+  "openai releases astra",
+  "openai launches",
+  "gpt-6 release",
+  "gpt-6 released",
+  "gpt-6 available",
+  "gpt-6 launch",
+  "openai livestream",
+  "openai event august"
  ],
  "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through an agent filter (claude -p, haiku) before reaching Telegram \u2014 the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them.",
  "tier2_keywords": [

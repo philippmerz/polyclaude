@@ -75,6 +75,10 @@
   its own family, i.e. noise, not information. Held; the move fully mean-reverted
   overnight (2026-08-05→06). A price move that its logical siblings don't echo is a thin
   order, not news — and conversely, sibling-confirmed moves deserve the full re-eval.
+  BOTH branches now validated live: the 0.65 fire on 2026-08-06 WAS real (whole Astra
+  family exploded on volume) and the sibling check identified it as information within
+  minutes — prior cut to market, no thesis-defense. The technique works in both
+  directions, which is what makes it a test rather than a rationalization.
   Cheap check (one API call), applicable to any market with date-series or
   implication-linked siblings.
 - **War-adjacent gates re-pull live conflict state at decision time** — never from

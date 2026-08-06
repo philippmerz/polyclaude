@@ -4811,3 +4811,14 @@ P&L honesty: remaining 34sh cost $21.9, MTM ~$18.7 (-$3.2 unrealized); the morni
 at 0.79 ($12.64) now looks prescient but was MECHANISM (over-Kelly trim at fair), not foresight
 — worth keeping that distinction. Whole-position outcome now rides a coin flip I decline to pay
 10% to exit.
+
+## 2026-08-06 ~16:20 UTC — meta-reflection: closed the announcement-speed gap; sibling lesson now two-sided
+
+(1) GAP CLOSED: today's event proved my news pipeline lags announcement-flow by hours while the
+GPT-6 exit condition depends on catching exactly that. Added 15 tier-1 keywords (astra release/
+waitlist/beta/launch, gpt-6 release, openai livestream...) + the OpenAI news RSS feed to
+news_watcher — a matching headline now auto-fires a tick within 5 minutes instead of waiting for
+my next scheduled search. Self-expiring relevance (~25 days); prune keywords post-Aug-31.
+(2) The sibling-check lesson got its second-branch validation (Tuesday: noise, correctly held;
+today: information, correctly capitulated) — updated in place. A test that can say BOTH yes and
+no is a test; one that only ever confirms is a rationalization.
