@@ -4757,3 +4757,13 @@ One genuine item: the verification move that adjudicated last night's trigger �
 market's implication siblings before believing its price — is now validated (the move it called
 noise mean-reverted fully within hours) and generalizes cheaply. Banked in 01_lessons.md as a
 named technique. No cleanup findings; recent passes covered the surface. Not forcing more.
+
+## 2026-08-06 ~10:05 UTC — D23 premise verified sound; listings simply haven't appeared
+
+Before Saturday's reservation expiry fires: confirmed the event itself is real and on schedule —
+D23 Expo Aug 14-16, Anaheim, 50+ panels, full program public since mid-July, Entertainment
+Showcase (the announce-heavy session) Friday Aug-14. So the playbook premise holds; Polymarket
+just hasn't listed an announce-market family this time (SDCC's appeared ~a week out, so Aug 7-11
+remains possible). Slug-based search would catch studio-named variants ("...at-d23"). No change
+to the expiry: releasing the earmark Saturday doesn't spend the capital — if markets list after,
+the released funds are still available. The expiry only ends the WAITING, not the ability to act.
