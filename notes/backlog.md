@@ -39,6 +39,8 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 - **2026-08-05 [GPT-6/Astra implication pair — manual watch]** — GPT-6-by-Aug-31 YES implies Astra-by-Aug-31 YES (Astra IS the announced successor), so GPT-6 YES > Astra YES is a violation. Currently ~2.5pp at mids — inside ~7pp spread+fees, NOT executable (June finding: cross-event implication pairs falsified as a population edge for exactly this reason). BECOMES A TRADE if the gap exceeds ~8pp on REAL books: buy GPT-6 NO + Astra-Aug-31 YES, $1 floor, $2 in the ships-but-not-successor branch. Check the pair when either market moves >5pp. Both resolve by Aug-31/Sep — self-expiring watch item.
 
+- **~2026-09-08..10 [Apple September event — MacBook-NO clarifier]** — the MacBook Ultra (touchscreen) either appears with a ship date or doesn't. Criteria need PURCHASABLE by Dec-31 (unveiling explicitly insufficient), so even an unveiling needs a Nov/Dec ship to flip the market. Re-verify p_no (0.70 as of Aug-07) the moment the event concludes; the market will move faster than my schedule.
+
 ## Calendar
 
 > Resolved past-dated reminders pruned 2026-06-04 (decision outcomes live in decisions.json; git has full history). Future only; ~Nd as of 2026-06-04:

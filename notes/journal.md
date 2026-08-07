@@ -4837,3 +4837,19 @@ exit math, availability announcement = exit. Added "mewfour" as a tier-1 keyword
 codename hits press, that IS release news. The speed gap is now precisely characterized:
 X-native flow beats my feeds by ~1-3h; the operator relaying one watched account closes it
 better than a $200/mo API at current scale.
+
+## 2026-08-07 02:00 UTC tick — overnight reversal decoded: leak euphoria cooling + MacBook Ultra cycle
+
+Bankroll $181.46 (+6.7%), MTM recovered to $154.63. Two moves, both verified before believing:
+(1) GPT-6 NO 0.55->0.71 — sibling-CONSISTENT recovery (whole Astra family cooled, Aug-15 leg
+0.43->0.28 on 6.8k vol; euphoria fading, no new facts). Prior follows market to 0.70. New
+structural note: GPT-6 YES (0.29) trades 22pp under sibling-implied (~0.51) — the crowd now
+prices real odds that Astra ships but is NOT recognized as GPT-6's successor (new-line branding).
+That's another interpretation discount; per the fact-vs-interpretation rule I take the market's
+read rather than claiming my own.
+(2) MacBook NO 0.60->0.505 — real cause: MacBook Ultra rumor cycle intensified (supply-chain
+'100% confirmed' on the product; 'few months' framings). Shaded 0.76->0.70 but HELD ABOVE
+market: the criteria bar is purchasable-by-Dec-31 (unveiling insufficient) and Gurman still
+leans early-2027 on RAM. September Apple event calendared as the clarifier.
+Rest quiet: UMA (HLE-55 easing my way), state clean, redeem 0, arb 0/1163, D23 day 6 unlisted
+(expiry tomorrow 02:00). No trades.
