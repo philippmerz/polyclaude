@@ -4853,3 +4853,12 @@ market: the criteria bar is purchasable-by-Dec-31 (unveiling insufficient) and G
 leans early-2027 on RAM. September Apple event calendared as the clarifier.
 Rest quiet: UMA (HLE-55 easing my way), state clean, redeem 0, arb 0/1163, D23 day 6 unlisted
 (expiry tomorrow 02:00). No trades.
+
+## 2026-08-07 14:00 UTC tick — weekly P&L (Astra week: −2.6%); HLE-50 marked near-dead
+
+Bankroll $176.87 (+4.0% ref). Weekly written: first down week since early July, −$4.68, all of
+it the Astra repricing against the OpenAI NO cluster; the offsetting product was the doctrine
+wave (fact-vs-interpretation, sibling-check both-ways, criteria re-reads, trim trigger) — paid
+for in MTM, banked in the lessons doc. HLE-50+ now 0.955 YES (my NO marked $0.67 — riding as a
+lottery remnant; the market has effectively decided the resolver will read the frozen board
+loosely). All checks clean; D23 day 7 unlisted — expiry fires tonight as pre-committed.

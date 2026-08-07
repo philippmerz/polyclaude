@@ -637,3 +637,35 @@ market's final Fed 0.236 beat my 0.25 by a hair (N=1, logged).
 
 **Posture into August:** 5 positions, $19.9 pUSD D23 ammo (listings ~days away), GPT-6 rides
 its hazard schedule to Aug-31, ceasefire family banked as monitored setup. Aave idle $7.85.
+
+## Week of 2026-07-31 → 2026-08-07 (the Astra week)
+
+**Bankroll:** $176.87 vs $181.55 Jul-31 = **−$4.68 (−2.6%)**; vs $170 ref **+4.0%**. First down
+week since early July, and the cause is one event: OpenAI's Astra announcement (Aug-1) and the
+Aug-6 "imminent launch" leak repriced the entire OpenAI cluster against our NO positions.
+
+**Realized:** GPT-6 trim +$12.64 at 0.79 (DEC-0064 — the trigger fired at fair hours before the
+20pp collapse; mechanism, not foresight, saved ~$5). No other closes.
+**Unrealized:** GPT-6 NO rode 0.765→0.44→0.69 (now coin-flip-priced with an interpretation
+discount); HLE-50+ NO written down to $0.67 (market 0.955 YES — likely loser, tuition on the
+fact-vs-interpretation lesson); MacBook NO eased on the MacBook-Ultra rumor cycle (0.60→0.49);
+Gemini/55+ legs stable; core Dec-31 fades (Greenland/Trump-out/SpaceX) untouched all week.
+
+**The week's product — a wave of doctrine, mostly paid for in MTM:**
+- FACT vs INTERPRETATION bets: my edge is verifying facts; resolver-behaviour and
+  successor-recognition questions belong to the crowd. Sized accordingly now.
+- SIBLING-CHECK validated BOTH directions (Tue dip = noise, held, mean-reverted; Wed spike =
+  information, capitulated to market within the hour).
+- RE-READ criteria when the world moves (Astra killed the GPT-6 naming crux I'd priced at 45%
+  of edge; the criteria audit caught SpaceX's IPO already done — prior facts were wrong).
+- CRITERIA RE-READ rotation now mechanized (position_state_audit, >7d threshold).
+- Trim-at-fair trigger pattern: pre-committed rebalancing for markets where resting is barred.
+- News latency characterized and closed to ~5min for the Astra/GPT-6 exit condition (tier-1
+  keywords + OpenAI RSS); X-native flow remains ~1-3h ahead — operator relay covers the gap.
+
+**Calibration:** ledger N=44 scored skips; decisions through DEC-0064. The Astra cluster will
+resolve mostly within 2-3 weeks and grade the week's cuts properly.
+
+**Posture into next week:** D23 reservation expires tonight (no listings, 6 days waited —
+released to general deployment); Astra resolution imminent (leak says ~Aug 10-14); Apple Sept
+event calendared; NVDA-largest re-check Aug-26; pUSD float ~$15.7 deployable.
