@@ -4862,3 +4862,19 @@ wave (fact-vs-interpretation, sibling-check both-ways, criteria re-reads, trim t
 for in MTM, banked in the lessons doc. HLE-50+ now 0.955 YES (my NO marked $0.67 — riding as a
 lottery remnant; the market has effectively decided the resolver will read the frozen board
 loosely). All checks clean; D23 day 7 unlisted — expiry fires tonight as pre-committed.
+
+## 2026-08-07 ~14:25 UTC — meta-reflection: the cluster caps failed SILENTLY on the Astra event; factor tagging fixed it
+
+Genuine find from the weekly postmortem: four positions (GPT-6, both OpenAI-HLE legs, Gemini-HLE)
+were all short the same "AI ships fast" FACTOR — ~27% of bankroll at entry, co-moving on one
+event — and the cluster machinery never saw them as one cluster because grouping was by
+event-family, not risk factor. The mechanism (cluster + rho_within in portfolio_kelly) existed
+all along; the positions just weren't TAGGED. Fixed as data: 5 priors now carry
+cluster=ai-ships-fast-short (rho 0.7; MacBook 0.4 — partial, Apple-specific factors dominate but
+the ships-fast tail correlates). Verified: kelly now prints the cluster column and applies the
+within-cluster discount. LESSON (same family as prose-vs-structured): a risk limit that depends
+on untagged data is a limit that doesn't exist. When ADDING any position, the entry checklist
+must ask "which FACTOR cluster is this?" — event-family is not the unit of correlation.
+Note the irony the numbers now show: at TODAY's written-down marks, kelly wants MORE of the
+HLE legs (deficit +$30/+$18) — those are interpretation bets where I decline my own model; the
+tags exist for RISK grouping, not scale-in appetite.

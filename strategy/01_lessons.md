@@ -157,6 +157,12 @@
 - **Anti-correlation is real sizing relief:** Trump-out NO and Greenland NO share the
   Trump-continuity factor with OPPOSITE signs — the pair is safer than either alone.
   Conversely cluster caps bind on genuinely shared tails (SDCC family window).
+- **A risk limit that depends on untagged data does not exist.** The 30% cluster cap
+  never fired on the OpenAI cluster (~27% at entry, four positions short the same
+  "AI-ships-fast" factor) because grouping was by EVENT-FAMILY and the priors carried no
+  cluster tags — one Astra event hit all four at once (2026-08-06). The kelly machinery
+  had cluster+rho support all along; the data wasn't there. Entry checklist now includes
+  "which FACTOR cluster?" — event-family is not the unit of correlation.
 - **Trump-out is ~2/3 actuarial:** age-80 mortality (~5.5-6%/yr, presidential-care
   discounted) dominates the 3% out-probability; the market's 7.5% overprices the drama
   paths. Priors file carries the decomposition.

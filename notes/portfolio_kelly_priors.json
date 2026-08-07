@@ -38,8 +38,8 @@
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
   "p_no": 0.7,
-  "cluster": "one-off",
-  "rho_within": 0.0,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.4,
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
   "note": "SHADED 0.76->0.70 on 2026-08-07: 'MacBook Ultra' rumor cycle intensified (supply-chain '100% confirmed' for the PRODUCT, TechRadar 'few months' framing) \u2014 renewed 2026-launch chatter explains NO 0.60->0.505. Held ABOVE market: my edge is the criteria bar (PURCHASABLE by Dec-31; unveiling explicitly insufficient) + Gurman still leaning early-2027 on the RAM shortage. September Apple event = the clarifier (calendared). CRITERIA RE-READ 2026-08-05 (rotation's first catch) \u2014 thesis CONFIRMED and if anything the bar is STRICTER than I'd been treating it: (1) must be AVA",
@@ -49,8 +49,8 @@
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
   "p_no": 0.7,
-  "cluster": "one-off",
-  "rho_within": 0.0,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.7,
   "cluster_frac": 0.0,
   "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair.",
   "verified": "2026-08-07",
@@ -82,20 +82,26 @@
   "verified": "2026-08-04",
   "note": "CUT 0.66->0.50 on 2026-08-04. FACTS UNCHANGED \u2014 re-verified the resolution source today: agi.safe.ai still stamped Apr-2025, still zero 2026 models, OpenAI best still GPT-5 25.3%. What changed is the MARKET: YES 0.675->0.875 on real volume ($913/24h, deep book) with NO board change, i.e. it is pricing CAPABILITY (GPT-5.6 Sol 47.2% on third-party trackers, GPT-6 expected Sept) or expecting loose resolution via the 'results published elsewhere' fallback clause. I weight that heavily: this is an INTERPRETATION question (how will a resolver read a frozen source?), and crowd expectations about resolver behavior aggregate better than my solo read \u2014 unlike a FACT question, where my verification wins. Holding: exit math dominates (hold EV $7.50 at 0.50 vs $1.80 taker sell), and max further loss is $1.88.",
   "criteria_read": "2026-08-04",
-  "hidden_info": true
+  "hidden_info": true,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.7
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
   "p_no": 0.65,
   "verified": "2026-08-04",
   "note": "CUT 0.79->0.65 on 2026-08-04, same reasoning as the 50+ leg (see it). 55+ needs OpenAI above the current GLOBAL frontier AND a listing, so it retains more NO margin than 50+ even under loose reading.",
   "criteria_read": "2026-08-04",
-  "hidden_info": true
+  "hidden_info": true,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.7
  },
  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
   "p_no": 0.7,
   "verified": "2026-08-02",
   "note": "REVISED 2026-08-02 after kimi round (kimi indep. fair P(YES) 0.15 vs my 0.28 \u2014 AGREES on NO, CORRECTS my facts): capability pillar was STALE \u2014 Gemini 3.1 Pro (Feb-2026) is ~44.7% not 38.3%, and Google ships the 3.x line continuously, so the gap to 50 is ~5pp on a ~7pp/step cadence = the REAL risk. Source pillar is STRONGER than I framed: agi.safe.ai lists ZERO 2026 models (no GPT-5.6/Opus-5/Gemini-3.1 despite all existing) -> board ~6-8mo stale, and NO wins in BOTH branches (frozen 38.3 <50; updated-to-44.7 still <50). Net fair P(YES) ~0.30 = P(loose UMA reading ~0.5) x P(Gemini >=50 by Dec-31 ~0.55) + strict-branch tail. TRANCHE-2 DECLINED 2026-08-02: gate required crux verification; wayback blocked + kimi's 25 searches inconclusive on whether the board updates, and the residual is a criteria-INTERPRETATION bet (the R-U loss class). Aave $7.85 stays dry for D23 (proven template, days away). KILL: any Gemini release claiming HLE>=50 listed on agi.safe.ai.",
   "criteria_read": "2026-08-04",
-  "hidden_info": true
+  "hidden_info": true,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.7
  }
 }
