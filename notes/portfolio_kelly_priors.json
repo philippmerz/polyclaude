@@ -37,14 +37,14 @@
   "criteria_read": "2026-08-05"
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
-  "p_no": 0.7,
+  "p_no": 0.58,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.4,
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
-  "note": "SHADED 0.76->0.70 on 2026-08-07: 'MacBook Ultra' rumor cycle intensified (supply-chain '100% confirmed' for the PRODUCT, TechRadar 'few months' framing) \u2014 renewed 2026-launch chatter explains NO 0.60->0.505. Held ABOVE market: my edge is the criteria bar (PURCHASABLE by Dec-31; unveiling explicitly insufficient) + Gurman still leaning early-2027 on the RAM shortage. September Apple event = the clarifier (calendared). CRITERIA RE-READ 2026-08-05 (rotation's first catch) \u2014 thesis CONFIRMED and if anything the bar is STRICTER than I'd been treating it: (1) must be AVA",
-  "verified": "2026-08-07",
-  "criteria_read": "2026-08-05",
+  "note": "CUT 0.70->0.58 on 2026-08-08: GURMAN MOVED \u2014 now 'late this year and early next year' (was early-2027-more-likely); Oct-Dec 2026 window live again, NOT the Sept event. My early-2027 anchor is gone; what remains above market (NO 0.45) is the strict criteria bar: PURCHASABLE by Dec-31 \u2014 an Oct unveiling ships in time, a Dec one may not, and RAM-shortage slippage hits purchase dates first. Edge ~13pp, position already sized (60sh), hidden-info: no resting sell, active judgment. Next checkpoint: Apple Oct event (calendared family with Sept). SHADED 0.76->0.70 on 2026-08-07: 'MacBook Ultra' rumor cycle intensified (supply-chain '100% confirmed' for the PRODUCT, TechRadar 'few months' framin",
+  "verified": "2026-08-08",
+  "criteria_read": "2026-08-08",
   "hidden_info": true
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {

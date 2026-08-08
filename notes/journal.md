@@ -4918,3 +4918,15 @@ longer" from Aug-7 with Aug-31 23 days out = genuine uncertainty, market NO 0.83
 Prior stays 0.82 (market-tracking; the tweet is 7h old and already in the price). GA-for-everyone
 also mildly derisks the criteria's public-accessibility bar WHEN it ships — no closed-few
 scenario. Operator-as-X-bridge delivered again (second time in 48h).
+
+## 2026-08-08 14:00 UTC tick — GPT-6 NO 0.865 (+34%); MacBook prior cut on a moved Gurman anchor
+
+Bankroll $179.05 (+5.3%). GPT-6 timing-collapse continues our way (NO 0.865, +34% on the
+34sh). The adverse mover was MacBook (YES 0.495->0.55) — the >5pp rule fired a re-verify and
+found the anchor itself moved: Gurman now says "late this year and early next year" (was
+early-2027-more-likely), Oct-Dec 2026 live again though NOT the Sept event. Cut p_no 0.70->0.58.
+Remaining above-market edge (~13pp) rests solely on the purchasable-by-Dec-31 bar — an October
+unveiling ships in time, a December one may not, and RAM-shortage slippage hits purchase dates
+first. Position already sized; no action. The rest: state clean, arb 0/1162, redeem 0. This is
+the anchor-hygiene lesson working as designed — the prior moved because its SOURCE moved, within
+hours of the market telling me to look.
