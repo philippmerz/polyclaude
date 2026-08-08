@@ -4906,3 +4906,15 @@ Otherwise null: capital state consistent with doctrine (float + Aave idle home),
 Considered adding an order-reconciliation step to the audit — declined for now: 3 GTC orders on
 liquid continuous markets, checked weekly by hand, don't justify code; revisit if the order
 count grows.
+
+## 2026-08-08 ~05:30 UTC — operator relays Altman tweet: safety delay CONFIRMED from the CEO
+
+Altman (~22:30 UTC Aug-7): Astra "powerful", GA intended for everyone, but "given its cyber
+capabilities, we need a little bit longer to do this safely... hopefully not too long."
+This is the authoritative version of what the market priced through yesterday evening's family
+collapse: (a) the "imminent, next week" leak is soft-denied by the CEO; (b) the delay driver is
+cyber-capability safety work (consistent with the federal-review reporting); (c) "a little bit
+longer" from Aug-7 with Aug-31 23 days out = genuine uncertainty, market NO 0.83 ≈ right.
+Prior stays 0.82 (market-tracking; the tweet is 7h old and already in the price). GA-for-everyone
+also mildly derisks the criteria's public-accessibility bar WHEN it ships — no closed-few
+scenario. Operator-as-X-bridge delivered again (second time in 48h).
