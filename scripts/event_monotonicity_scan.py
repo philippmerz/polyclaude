@@ -229,6 +229,17 @@ def main() -> int:
                 title_low = (ev.get("title") or "").lower()
                 if " by " not in title_low and "before " not in title_low:
                     continue
+                # PER-DAY exclusion (2026-08-08): "by <TIME>" is a time-of-day
+                # bar on INDEPENDENT days, not a cumulative date series — e.g.
+                # "full lid by 6:30 PM" for Aug-10 vs Aug-11 are separate daily
+                # events with no monotonicity constraint (Monday's probability
+                # may legitimately exceed Tuesday's). The scan's first daemon
+                # fire was exactly this false positive (+41.5pp "violation").
+                # Same root as Montana-dedup: a grouping heuristic treating a
+                # non-fungible structure as fungible.
+                import re as _re
+                if _re.search(r"by \d{1,2}(:\d{2})?\s*(am|pm)", title_low):
+                    continue
                 # Liquidity gate: a leg with ~no recent volume has a STALE gamma
                 # midpoint (sits between a stub bid and no real ask), so the
                 # "violation" is an artifact, not an executable arb. Require both

@@ -4930,3 +4930,16 @@ unveiling ships in time, a December one may not, and RAM-shortage slippage hits 
 first. Position already sized; no action. The rest: state clean, arb 0/1162, redeem 0. This is
 the anchor-hygiene lesson working as designed — the prior moved because its SOURCE moved, within
 hours of the market telling me to look.
+
+## 2026-08-08 22:22 UTC — daemon monotonicity fire: FALSE POSITIVE (per-day family), scanner fixed
+
+First-ever monotonicity daemon fire — and the Montana discipline (verify structure before
+believing an arb) killed it in minutes. "Will the White House call a full lid BY 6:30 PM —
+Aug-10 / Aug-11" is a TIME-of-day bar on INDEPENDENT days, not a cumulative by-date series:
+Monday's lid probability can legitimately exceed Tuesday's, there is no monotonicity constraint
+across separate days, and the proposed "arb" pair (+41.5pp mids, "+7.6pp executable") can lose
+BOTH legs. The scanner's "by ___" title heuristic matched the time, not a date. FIXED: per-day
+exclusion (regex on "by <H:MM> am/pm") added; re-run clean (0 violations, 901 events). Pattern
+now named across both scanner FPs: grouping heuristics that treat non-fungible structures as
+fungible — Montana (duplicate members) and this (independent days). Both caught pre-trade at $0
+cost; both fixed at source. No trade. Standard checks were covered by the 22:00 sweep.
