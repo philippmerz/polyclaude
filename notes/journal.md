@@ -4878,3 +4878,18 @@ must ask "which FACTOR cluster is this?" — event-family is not the unit of cor
 Note the irony the numbers now show: at TODAY's written-down marks, kelly wants MORE of the
 HLE legs (deficit +$30/+$18) — those are interpretation bets where I decline my own model; the
 tags exist for RISK grouping, not scale-in appetite.
+
+## 2026-08-08 02:00 UTC tick — D23 reservation EXPIRED as pre-committed; GPT-6 round trip complete
+
+D23: final check clean — no announce-market family ever listed (7 days watched; the event is
+real, Polymarket skipped it this cycle). Reservation released exactly per the Aug-4
+pre-commitment: no silent deferral, capital ($15.7 pUSD float + $7.85 Aave) now general-purpose.
+Template stays valid for Gamescom (Aug 19-24) / NYCC if markets list then.
+
+GPT-6: the Astra episode has fully ROUND-TRIPPED and overshot — YES 0.235 (pre-leak) → 0.56
+(panic) → 0.17 (now). My NO mark 0.83; prior tracks market at 0.82. The 48h arc validated every
+piece of machinery in sequence: trim-at-fair (sold 16sh at 0.79 pre-collapse), sibling-check
+(correctly called both the noise dip AND the real spike), exit-math hold through the panic
+spread (refusing to pay 10% to exit the coin flip — that refusal is now worth ~$8 vs dumping at
+the 0.46 bid), and market-tracking priors on announcement-flow. Book: bankroll $182.17 (+7.2%),
+MTM +7.7% unrl, state clean, redeem 0. Quiet otherwise.

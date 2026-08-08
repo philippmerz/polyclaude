@@ -48,13 +48,13 @@
   "hidden_info": true
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
-  "p_no": 0.7,
+  "p_no": 0.82,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.7,
   "cluster_frac": 0.0,
   "rationale": "2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair.",
-  "verified": "2026-08-07",
-  "note": "Tracking market at 0.70-0.71 (2026-08-07). Astra family cooled overnight (Aug-15 leg 0.43->0.28) \u2014 leak euphoria fading, recovery sibling-consistent. NOTE the 22pp gap vs sibling-implied (0.64x0.8~0.51 YES vs 0.29 actual): the crowd now prices real probability that Astra ships but is NOT recognized as GPT-6's successor (new-line branding) \u2014 ANOTHER interpretation discount, and I take the market's read per the fact-vs-interpretation rule. CUT 0.79->0.48 on 2026-08-06 15:53 (SIBLING-CONFIRMED information event). Astra family exploded on volume: Aug-31 YES 0.235->0.54, Aug-15 YES 0.074->0.275 \u2014 the market now prices ~28% release within 9",
+  "verified": "2026-08-08",
+  "note": "Tracking market: NO ~0.83 (YES 0.17) on 2026-08-08 \u2014 the Astra-leak episode has fully round-tripped and overshot (YES was 0.235 pre-leak). Market now prices the federal-review timeline + naming ambiguity. Position 34sh riding to Aug-31. Tracking market at 0.70-0.71 (2026-08-07). Astra family cooled overnight (Aug-15 leg 0.43->0.28) \u2014 leak euphoria fading, recovery sibling-consistent. NOTE the 22pp gap vs sibling-implied (0.64x0.8~0.51 YES vs 0.29 actual): the crowd now prices real p",
   "hazard_schedule": {
    "note": "SUSPENDED 2026-08-06 \u2014 schedule assumptions dead post-sibling-event; prior tracks market until the cause is identified.",
    "checkpoints": {}
