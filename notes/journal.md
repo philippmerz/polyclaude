@@ -4943,3 +4943,9 @@ exclusion (regex on "by <H:MM> am/pm") added; re-run clean (0 violations, 901 ev
 now named across both scanner FPs: grouping heuristics that treat non-fungible structures as
 fungible — Montana (duplicate members) and this (independent days). Both caught pre-trade at $0
 cost; both fixed at source. No trade. Standard checks were covered by the 22:00 sweep.
+
+## 2026-08-09 02:00 UTC tick — quiet
+
+Bankroll $177.31 (+4.3%), MTM $150.40 (+4.25% unrl). Marks churning within ranges (GPT-6 NO
+0.835, MacBook NO 0.435 — both tracking their decided fairs). All checks clean: UMA 0, state
+audit clean, scanners 0 real (monotonicity fix holding), redeem 0. No news, no triggers. No TG.
