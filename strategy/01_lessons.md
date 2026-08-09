@@ -213,6 +213,15 @@
   not a fork: 7.7s vs 4min+, size-independent, and conservatism-instructed because a cold
   session lacks conversation context. Corollary: THIS FILE is the context a cold fallback
   inherits — that is what it is for, so keep it current.
+- **The fallback's OWN peer check self-matches.** `pgrep -cf 'claude -p'` counts the bash
+  SUBSHELL running it (its argv carries the literal pattern), so the count is +1: a LONE
+  fallback sees count=2 and, under the prompt's "2+ = defer" rule, false-defers and eats the
+  tick — same outage class as 2026-07-16, opposite cause from the documented `$$` trap.
+  ENUMERATE with `pgrep -af 'claude -p'`, drop the `bash -c … pgrep …` line, and count the
+  genuine `claude -p` PIDs (cross-check `ps … | grep -v grep`). Count OUT the pattern-bearing
+  subshell, never your own claude PID. (2026-08-09: caught by verifying instead of trusting the
+  raw count — cost nothing, but the "count==1 → proceed" rule as written is wrong for the
+  fallback path; harden daily_checkin's prompt to say "enumerate, don't count".)
 - **Liveness ≠ progress — monitor OUTPUT, not PIDs.** Three instances: news_watcher
   logged alerts but never persisted them 30h (2026-06-11); send-keys into a dead pane
   ate a tick (2026-07-16); a wedged tmux send-keys child blocked the telegram listener
