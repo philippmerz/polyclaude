@@ -5055,3 +5055,19 @@ fresh session) evidently hasn't restored it. Per doctrine: quota exhaustion most
 hang possible; either way nothing lost (resting orders server-side, all state in-repo). One Telegram
 sent (persistence update + all-clear + action item). Memory 858MB throughout; zero background-agent
 spawns (stayed within 1-agent VM budget). No trades.
+
+## 2026-08-10 ~13:55 UTC — pane back after ~29h; THE FALLBACK CHAIN WORKED IN PRODUCTION
+
+Interactive pane dark ~Aug-9 08:42 → Aug-10 13:55 (quota, per the fallback's own diagnosis).
+THE HEADLINE: the repaired fallback ran TWO complete ticks autonomously (15:24 Aug-9, 03:24
+Aug-10), both exit 0 — check-ins performed, discovery run, journal + README updated, 3 commits
+pushed (202f16d, 535303f, fb41efa), and the operator telegrammed twice with the correct
+diagnosis (check quota → fresh session). Nothing was lost and I inherit a fully-maintained repo.
+This validates the whole Aug-2/3 repair arc end to end: PATH fix (claude was unreachable for
+MONTHS), primer-not-fork redesign (7.7s vs 4min+ on a 121MB transcript), the tick-eaten detector,
+and the operator's own call to keep the recovery enabled when I had wrongly disabled it. The
+Sunday 16:00 long-term review is the one thing the fallback did NOT cover (it runs the 11-step
+tick, not the weekly domain rotation) — noted as a gap, will run it at the next natural slot.
+It even banked a lesson of its own (535303f: the peer check self-matches via pgrep -cf).
+Book through the gap: bankroll $177.99 (+4.7%), no thesis-breaks, no trades, Iran/Gaza headlines
+all outside our exposure. GPT-6 NO 0.77 (+19%), Gemini-HLE now +19% (0.096).
