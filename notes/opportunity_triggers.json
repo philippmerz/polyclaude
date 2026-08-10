@@ -25,5 +25,23 @@
   "level": 0.35,
   "actionable": true,
   "note": "RESET 0.65->0.35 post-adjudication 2026-08-06 15:53: 0.65 fired on the sibling-confirmed Astra repricing (held on exit math, prior tracks market). 0.35 = essentially-resolving-YES alert. Availability-announcement = the real exit condition, checked every tick."
+ },
+ {
+  "key": "gamescom-announce",
+  "kind": "new_listing",
+  "query": "gamescom",
+  "match": "gamescom",
+  "expires": "2026-08-26",
+  "actionable": true,
+  "note": "Gamescom Aug 19-24. If an announce family lists, the CORRECTED SDCC template applies: buy YES on any active-entity leg <=0.80 after verifying the loose official-channels criteria text; cheap legs are the biggest edge, not the most suspect. Cluster-cap the family; pull unfilled bids at window end (post-catalyst rule). D23 expired unlisted 2026-08-08 — listing is NOT guaranteed, which is exactly why this is a daemon watch and not a standing tick chore."
+ },
+ {
+  "key": "nycc-announce",
+  "kind": "new_listing",
+  "query": "comic con",
+  "match": "comic-con",
+  "expires": "2026-10-31",
+  "actionable": true,
+  "note": "NYCC (early Oct). Same corrected announce-template as Gamescom/SDCC. Baseline seeded silently, so only NEWLY listed comic-con events fire."
  }
 ]

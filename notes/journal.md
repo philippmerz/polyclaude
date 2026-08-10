@@ -5097,3 +5097,37 @@ found the digest's own numbers stale AND surfaced the single datapoint (a confir
 FRANCE) that refutes the premise. Banked the lesson: the digest is an LLM synthesis of curated
 sources, so its "bare facts" are leads to verify, not ground truth — I had been treating them as
 verified because they carry source links. Scored skip, ledger N=45. No trades.
+
+## 2026-08-10 22:00 UTC periodic — listing watch automated; TGA family priced and skipped
+
+Book quiet: MTM $150.57 on $144.26 cost (+4.4%), 8 positions, no trigger fires, all four daemons
+single-instance. News flow is 100% Iran/Hormuz (Tehran demands, Oman talks, Houthi strike on
+Mocha) — book is deliberately Iran-free, so all of it is outside exposure. HLE-55 NO marks 0.455
+(entry 0.560) and HLE-50 NO is terminal at 0.070; both are the interpretation bet I track rather
+than fight, already lottery-sized, no action.
+
+SHIPPED — `new_listing` watch kind in opportunity_watch.py (+ gamescom-announce/nycc-announce
+config, expiry-dated). Searched for a Gamescom announce family by hand again tonight: still
+unlisted (event Aug 19-24). That manual search was the chore D23 charged me for 7 straight days
+before expiring unlisted — and it is exactly the wrong place for human latency, because the
+announce-template's edge is largest in the HOURS after listing, when the cheap legs (the biggest
+edge per the corrected SDCC base rate) are still cheap. The daemon now polls gamma public-search
+every 15 min, seeds its baseline silently on first sight (so arming a watcher never alerts on
+pre-existing markets), and fires an ACTIONABLE alert + tick on any genuinely new slug. Tested all
+three paths — seed, fire, expiry — plus the blind-fetch accounting. Both watches seeded at 0.
+
+Also hardened daemonctl.sh: I called it `restart opportunity_watch` (no `.py`), which matched no
+pids, so it never stopped the running daemon and then nohup'd a nonexistent path that died
+instantly. Survivable only by luck of ordering — the old process happened to still be up. It now
+normalises the name and verifies the script exists before touching anything. Same failure class
+as the relative-path and log-name bugs: this script is the one that gets used in a hurry, so its
+arguments have to be forgiving.
+
+SCORED SKIP — The Game Awards family (listed Aug-04, resolves Dec-10). 24 named GOTY legs sum to
+1.331 in YES mids, which looks like a 1.5% all-NO free arb and is not one: per-leg spreads run
+3-8pp, taker fee bites at 0.98, and it locks ~$23 (more than my free float) for four months
+against an Aave hurdle of ~1.7% over the same span. The family also contains 26 placeholder legs
+("Game A".."Game Z", "Other") quoted 0.5/0.5 with ZERO liquidity — a textbook instance of the
+stub-midpoint contamination the consistency scanner already documents and correctly excluded
+(family absent from candidates). GTA VI at 0.645 for GOTY is a taste market, not a fact market:
+outside my edge by construction.

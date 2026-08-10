@@ -21,6 +21,13 @@ PY="${REPO}/.venv/bin/python3"
 ACTION="${1:-status}"
 SCRIPT="${2:-}"
 [[ -z "${SCRIPT}" ]] && { echo "usage: daemonctl.sh {stop|restart|status} <script.py>" >&2; exit 2; }
+# Name normalisation (2026-08-10): calling this with a bare name ("restart
+# opportunity_watch") matched NO pids — so the running daemon was never
+# stopped — and then nohup'd a nonexistent path that died instantly. The
+# failure was survivable only because the old process kept running; with the
+# arguments in the other order it would have left NO daemon at all.
+[[ "${SCRIPT}" != *.py ]] && SCRIPT="${SCRIPT}.py"
+[[ -f "${REPO}/scripts/${SCRIPT}" ]] || { echo "no such daemon script: scripts/${SCRIPT}" >&2; exit 2; }
 
 SELF=$$
 find_pids() {

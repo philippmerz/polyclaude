@@ -20,6 +20,7 @@ Schedules:
   - every 300s: armed price triggers (notes/opportunity_triggers.json)
   - every 900s: polymarket_consistency_scan (parse REAL-arb count)
   - every 900s (staggered +450s): event_monotonicity_scan (parse violations)
+  - every 900s: new-listing watch (catalyst families: Gamescom, NYCC, ...)
 
 Alerting: hits append notes/opportunity_alerts.jsonl. ACTIONABLE hits (real
 arb >2% net, or an armed capital trigger crossing) telegram the operator AND
@@ -53,6 +54,7 @@ RSS_CAP_MB = 150
 LOOP_SECONDS = 60
 PRICE_EVERY = 300
 SCAN_EVERY = 900
+LISTING_EVERY = 900        # new-market listing watch (catalyst families)
 CRON_FIRE_COOLDOWN = 5400   # 90 min, matches news_watcher
 ALERT_COOLDOWN = 3600       # per-key telegram cooldown
 
@@ -202,6 +204,78 @@ def check_price_triggers(state: dict) -> None:
                    bool(t.get("actionable")))
 
 
+def check_new_listings(state: dict) -> None:
+    """Fire when a NEW event matching a watched query appears on Polymarket.
+
+    Motivation (2026-08-10): the announce-template edge (SDCC 4-for-4, Prime
+    +59%, Marvel +43.9%) is biggest in the hours AFTER a catalyst family lists,
+    because the cheap legs get bid up fast. Until now that watch was manual —
+    I searched "gamescom" once per tick and D23 burned 7 days of tick attention
+    before expiring unlisted. This converts it to a 15-min daemon check.
+
+    Config entries in the same triggers file:
+      {"key": "...", "kind": "new_listing", "query": "gamescom",
+       "match": "gamescom", "expires": "2026-08-26", "note": "...",
+       "actionable": true}
+
+    First sight of a key SEEDS the baseline silently — otherwise arming a
+    watcher would immediately alert on every pre-existing market.
+    """
+    try:
+        trigs = json.loads(TRIGGERS_PATH.read_text())
+    except Exception as e:
+        _log(f"triggers file unreadable (listings): {e}")
+        return
+    today = dt.datetime.utcnow().date().isoformat()
+    seen_all = state.setdefault("seen_listings", {})
+    for t in trigs:
+        if t.get("kind") != "new_listing":
+            continue
+        key = t["key"]
+        exp = t.get("expires")
+        if exp and exp < today:
+            if state.setdefault("listing_expired", {}).get(key) != exp:
+                state["listing_expired"][key] = exp
+                _log(f"listing watch '{key}' expired {exp} — no longer checked")
+            continue
+        try:
+            r = httpx.get("https://gamma-api.polymarket.com/public-search",
+                          params={"q": t["query"], "limit_per_type": 20}, timeout=20)
+            events = r.json().get("events", []) or []
+        except Exception as e:
+            fails = state.setdefault("trig_fails", {})
+            fails[key] = fails.get(key, 0) + 1
+            if fails[key] % 6 == 0:
+                _log(f"listing watch {key} fetch failing x{fails[key]}: {e}")
+            if fails[key] == 12:
+                _alert(state, f"trig-blind-{key}",
+                       f"listing watch '{key}' has been BLIND for ~3h (fetch failures).",
+                       actionable=False)
+            continue
+        state.setdefault("trig_fails", {}).pop(key, None)
+        needle = (t.get("match") or t["query"]).lower()
+        live = []
+        for e in events:
+            if e.get("closed") or not e.get("active"):
+                continue
+            slug = (e.get("slug") or "")
+            if needle in slug.lower() or needle in (e.get("title") or "").lower():
+                live.append(slug)
+        prior = seen_all.get(key)
+        if prior is None:
+            seen_all[key] = sorted(live)
+            _log(f"listing watch '{key}' seeded with {len(live)} existing event(s)")
+            continue
+        fresh = [s for s in live if s not in prior]
+        if not fresh:
+            continue
+        seen_all[key] = sorted(set(prior) | set(live))
+        _alert(state, f"listing-{key}",
+               f"NEW MARKET LISTED for watch '{key}': {', '.join(fresh[:5])}"
+               f"{' (+%d more)' % (len(fresh) - 5) if len(fresh) > 5 else ''}. {t.get('note','')}",
+               bool(t.get("actionable", True)))
+
+
 def run_consistency(state: dict) -> None:
     try:
         r = subprocess.run([PY, str(SCRIPTS / "polymarket_consistency_scan.py")],
@@ -264,6 +338,9 @@ def poll_loop() -> int:
             if now - last.get("price", 0) >= PRICE_EVERY:
                 last["price"] = now
                 check_price_triggers(state)
+            if now - last.get("listings", 0) >= LISTING_EVERY:
+                last["listings"] = now
+                check_new_listings(state)
             if now - last.get("consistency", 0) >= SCAN_EVERY:
                 last["consistency"] = now
                 run_consistency(state)
@@ -288,6 +365,7 @@ def main() -> int:
     if mode == "once":
         state = _load_state()
         check_price_triggers(state)
+        check_new_listings(state)
         run_consistency(state)
         run_monotonicity(state)
         _save_state(state)
