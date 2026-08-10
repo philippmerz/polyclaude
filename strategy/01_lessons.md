@@ -61,6 +61,12 @@
   30-38% embedded an inflation-tail RISK PREMIUM (hedging price ≠ probability);
   economists were unanimously opposite. Cost: entered a ~zero-edge position believing
   10-12pp of edge (2026-07-25→26). Same family: verify-full-distribution.
+- **The weekly digest's own "bare facts" need verification too.** world_state_digest is an
+  LLM synthesis of curated sources, not ground truth: on 2026-08-10 it framed a biotech
+  theme around a Uganda outbreak at "378 cases and growing" when Uganda's outbreak had
+  ENDED on Jul-28 at 20 cases, while missing that the real epidemic (DRC, 4,053 cases) had
+  already exported a case to France — the single fact that killed the trade I was building.
+  Treat digest numbers as leads to check, exactly like headlines.
 - **Check the live number before trading any headline.** Three saves in one week:
   NVDA-largest ("Apple overtakes" headline was 7 days stale, live caps said otherwise),
   BTC threshold (my own price prior was wrong — this timeline's BTC ≈ $64k), WTI $100

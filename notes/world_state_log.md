@@ -1483,3 +1483,150 @@ Sources:
 - [ECB July 2026 Monetary Policy](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260723~29f24d99bc.en.html)
 - [PBOC Loan Prime Rate Hold](https://www.fxstreet.com/news/pboc-holds-loan-prime-rates-steady-in-july-202607200115)
 - [CBO Economic Outlook 2026](https://www.cbo.gov/publication/61882)
+
+---
+
+## 2026-08-10T14:23:51Z — world_state_digest
+
+**Domains:** biotech-health, trade-regulation, markets-corporate | **Lookback:** 30d | **Model:** haiku
+
+Now I'll compile the bare-fact digest based on the data collected.
+
+```
+# WORLD-STATE DIGEST — 2026-08-10
+
+Domains: biotech-health, trade-regulation, markets-corporate  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### biotech-health
+
+- [2026-07-17] FDA: First oral PCSK9 inhibitor (cholesterol drug class) approved
+- [2026-08-05] FDA: Orzeyful (orexin agonist) approved for narcolepsy type 1 symptoms
+- [2026-08-05] FDA: mFLUSIVA (mRNA influenza vaccine) approved for adults
+- [2026-08-06] FDA: Tudriqev (oncolytic viral therapy) approved for advanced cutaneous melanoma with nivolumab
+- [2026-08-04] CDC MMWR: Salmonella (Javiana) outbreak: 345 cases, 27 states, 36 hospitalizations, 0 deaths; source: jalapeño peppers from Sinaloa Mexico / Coast Citrus Distributors; illness onset June 19 – July 20, 2026
+- [2026-08-04] CDC: Cyclosporiasis outbreak expanded to 15 states; source: Mexican iceberg lettuce
+- [2026-08-06] CDC: Measles case count 2,465 in US (2026 year-to-date)
+- [2026-06-02] CDC MMWR: Ebola/Bundibugyo outbreak (DRC/Uganda): 378 confirmed cases (363 DRC, 15 Uganda), 63 confirmed deaths; R₀ calibrated median = 2.51; projection modeling: 50% isolation → 17% probability ≥20,000 cases by Aug 22; ≤50% isolation → 65% probability ≥20,000 cases by Aug 22
+- [2026-08-03] WHO: Dengue locally acquired case confirmed in Florida (Miami-Dade County)
+- [2026-08-04] WHO: Virginia dengue confirmed locally acquired (close contact exposure, no travel)
+- [2026-08-04] WHO: Philippines (Zamboanga) announces dengue epidemic status
+- [2026-05] WHO: Mpox case count declining to <200 per week; DRC, Guinea, Liberia show reduced transmission
+
+### trade-regulation
+
+- [2026-07-14] OFAC: Designations targeting Iran illicit shipping network (Mohammad Hossein Shamkhani); >200 entities/vessels total designated for facilitating Iranian oil exports
+- [2026-07-20] USTR Section 338 proclamation: 50% tariff on Canadian goods (cement, furniture, paper, textiles, cosmetics, sporting goods); effective date August 19, 2026; exceptions: energy, potash, Section 232 tariffs, certain critical minerals, fish
+- [2026-07-22] USTR Section 301 investigation Brazil: 25% tariff on most Brazilian imports; effective July 22, 2026; exceptions: beef, coffee, crude oil, orange juice, civil aircraft parts; pharma-applications subclass ~$0.3B faces 12.5% effective rate
+- [2026-07-23] OFAC: 50+ Mexican persons designated for CJNG (Cartel de Jalisco Nueva Generación) links
+- [2026-07-23] OFAC: Egyptian Muslim Brotherhood official + 3 individuals + 3 entities designated for Hamas support
+- [2026-07-30] OFAC: 6 entities/individuals (China, India, Russia, Iran) designated for supporting Iranian Mahan Air; 8 vessels designated for Iranian crude transport
+- [2026-07-31] Section 232 pharma tariff proclamation: 100% tariff on patented pharmaceuticals (FDA Orange Book / Purple Book listed; APls and key starting materials); effective date July 31, 2026 for Annex III-listed companies; September 29, 2026 for others; exemptions: generic drugs, biosimilars, companies with approved onshore production plans (20% tariff through April 30, 2030)
+- [2026-08-05] OFAC: Property removals and SDN list removals
+- General: Forced labor tariffs 10–12.5% ad valorem imposed on 60 countries
+
+### markets-corporate
+
+- [2026-08-07] FactSet/SEC: S&P 500 Q2 2026 blended earnings growth rate: 50.4% (highest since Q2 2021 = 91.6%); 88% of index companies reported by Aug 7
+- [2026-08-07] FactSet: 86% of S&P 500 companies beat EPS estimates (5-year average: 78%); aggregate surprise +31.4% (5-year average: +7.0%)
+- [2026-08-07] FactSet: Excluding AMZN and GOOG, S&P 500 earnings growth rate drops to 32.0%; AMZN non-operating income +$53.4B, GOOG unrealized gain +$98B
+- [2026-08-07] FactSet: Revenue growth Q2 2026 = 14.1% (2.9% aggregate surprise, highest since Q2 2022)
+- [2026-08-07] FactSet: 10 of 11 sectors report YoY earnings gains; Health Care sector only declining sector
+- [2026-08-06] Fed H.15: Effective federal funds rate 3.63% (steady); treasury yields: 2yr 4.25%, 10yr 4.69%, 30yr 5.22%; bank prime rate 6.75%
+- [2026-08-02] BLS July 2026 jobs report: Total nonfarm payroll change: -23,000 (seasonally adjusted; vs. median forecast +80,000)
+- [2026-08-02] BLS: Unemployment rate July 2026 = 4.09% (down from 4.19% June); labor force participation rate = 61.4% (5-year low)
+- [2026-08-02] BLS: Largest employment declines: Government -53,000; Leisure & Hospitality -40,000; Retail -19,400
+- [2026-08-02] BLS: Largest employment gains: Health & Social Assistance +22,600; Construction +22,000; Professional & Business Services +14,600
+- [2026-06] BLS CPI June 2026: headline -0.4% monthly, +3.5% YoY; core CPI 0% monthly, +2.6% YoY
+- [2026-06] BLS: Energy index -5.7% monthly (largest 1-month decline since April 2020); gasoline -9.7%, electricity -1.0%
+- [2026-06] Census: US goods trade deficit June 2026 = $102.1B; total deficit $101.5B (down $4.4B from May)
+- [2026-06] Census: June merchandise imports $388.0B (down 1.8%); declines in capital goods, consumer goods, pharmaceuticals
+- [2026-08-10] Commodity: WTI crude $78.31–79.30/bbl (Aug 7–10); Brent $83.49–83.52
+- [2026-08-10] Commodity: Gold approaching $4,300/oz
+- [2026-08-01] Market: S&P 500 record close 7,757.64; Dow Jones +1.32% (Aug 1 first trading day); Nasdaq +2.1%
+
+## CANDIDATE THEMES
+
+### Pharma Import-Shock + Sector Earnings Decline
+
+- Underlying facts: Health Care sector only declining YoY (Q2 2026 earnings); 100% tariff on patented pharma effective July 31, 2026 (Annex III companies) / Sept 29, 2026 (others); generics/biosimilars exempt; onshore-production hedge at 20% rate
+- Implication: Patented pharma importers absorb immediate 100% duty or pass to consumers (price shock); margin compression across branded pharma (price controls limit pass-through); generics/biosimilars gain relative cost advantage; companies with onshore plans face 20% ceiling vs. competitors at 100%
+- Possible plays: SHORT pure-import pharma majors; LONG generic pharma (AMGX-type). Sector ETF SHORT: XLV, IBB (pharma-heavy).
+- Direction: short
+- Horizon: months
+- Retail blindspot: Market narrative remains "record earnings season" (driven by AMZN/GOOG one-time accounting gains); misses sector-specific tightening and tariff pass-through lag
+- Confidence: HIGH
+
+### Large-Cap Tech Earnings Illusion (One-Time Gains)
+
+- Underlying facts: S&P 500 50.4% earnings growth entirely dependent on AMZN ($53.4B non-op) + GOOG ($98B gain); excluding these two, growth drops to 32%; aggregate surprise +31.4% vs. 5-yr avg +7% (driven by same two companies)
+- Implication: Headline earnings beat masks operating-earnings stagnation outside tech; AMZN/GOOG gains non-recurring; valuation risk if market is pricing normalized operating earnings growth
+- Possible plays: SHORT AMZN, GOOG on technical breakdown if broader market reprices growth assumptions; LONG mid-cap / non-tech (XLV, XLY operationally)
+- Direction: short
+- Horizon: weeks to months
+- Retail blindspot: "Earnings surprise" reported as broad market beat; not decomposed for composition risk
+- Confidence: HIGH
+
+### Energy Commodity Deflation Reversal + Tariff Inflation Collision
+
+- Underlying facts: June CPI energy -5.7% (largest monthly drop since April 2020); gasoline -9.7%, electricity -1.0%; oil prices Aug 7–10 at $78–83/bbl (lower than peak geopolitical spikes); BUT 50% tariff on Canadian goods (effective Aug 19) + 25% Brazil tariff (July 22) + 100% pharma tariff will reignite import-driven inflation in Q3/Q4
+- Implication: Energy deflation signal is temporary (commodity/seasonal); tariff inflation will offset gains in September–December; CPI will reaccelerate; bond yields may face vol
+- Possible plays: LONG commodities hedges (XLE, CLE), LONG inflation-protected securities (TIP), SHORT nominal-bond duration
+- Direction: long (commodities), long (inflation hedges)
+- Horizon: months
+- Retail blindspot: "Inflation cooling" narrative from June CPI decline; missing structural tariff shock hitting consumer goods (textiles, furniture, cosmetics) in Aug–Sept
+- Confidence: HIGH
+
+### Labor Market Weakness Masked by Participation Cliff
+
+- Underlying facts: Nonfarm payroll -23,000 (vs +80k expected); unemployment rate fell only to 4.09% due to labor force participation dropping to 61.4% (5-year low); Government -53k, Leisure -40k, Retail -19.4k (cyclical sectors); Health/Assistance +22.6k (defensive)
+- Implication: Headline unemployment improvement is statistical artifact; actual economic weakness in cyclical employment; labor force exit suggests discouraged-worker effect or retirement cliff; recession signal not yet priced
+- Possible plays: SHORT cyclical sectors (XLY, travel, retail); LONG defensives (XLP, utilities, healthcare operationally)
+- Direction: short (cyclical)
+- Horizon: months
+- Retail blindspot: "Unemployment down" read as positive; composition ignored (people leaving workforce, not finding jobs)
+- Confidence: HIGH
+
+### Disease Outbreak Tail Risk: Bundibugyo Escalation + Dengue US Spread
+
+- Underlying facts: Bundibugyo R₀ = 2.51; if isolation <50%, 65% probability of ≥20,000 cases by Aug 22; current count 378 (June 2); dengue now locally acquired in Florida (Aug 3), Virginia (Aug 4), Philippines epidemic (Aug 4); FDA approved mRNA flu vaccine (Aug 5) suggesting institutional biotech confidence
+- Implication: Low-probability, high-impact event; if Bundibugyo escapes containment or dengue spreads, healthcare emergency spending + biotech/vaccine rally; earlier FDA approvals (oral PCSK9, narcolepsy, oncolytic, mRNA flu) show robust biotech pipeline
+- Possible plays: LONG biotech vaccines (MRNA, BNTX), LONG healthcare equipment suppliers (ESAB-type), LONG CDC/NIH funding beneficiaries
+- Direction: long
+- Horizon: weeks (trigger-dependent)
+- Retail blindspot: Tail risk not yet in pricing; endemic outbreak narrative (Salmonella, Measles) conflated with pandemic-potential (Bundibugyo R₀ > containment threshold)
+- Confidence: MEDIUM
+
+### Tariff Pass-Through Bifurcation: Domestic Winners vs. Import-Dependent Losers
+
+- Underlying facts: 50% Canadian goods tariff (Aug 19); 25% Brazil tariff (July 22); June imports already down 1.8% in capital goods/consumer goods/pharma; 36% spike in late July imports suggests front-loading before tariffs
+- Implication: Domestic manufacturers with US production gain relative cost advantage vs. importers; consumer goods prices rise (textiles, furniture, cosmetics hit hardest); retail margins compress; import surge now (late July) will reverse to supply deficit by Sept–Oct
+- Possible plays: LONG domestic manufacturing (SMG-type, US steel), LONG consumer staples with pricing power; SHORT mass-market retail (WMT, TGT operationally exposed)
+- Direction: long (domestic), short (importers)
+- Horizon: months
+- Retail blindspot: Tariff treated as abstract policy; actual supply-chain adjustments happening in real-time (front-loading visible in July import spike)
+- Confidence: HIGH
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: XLV, IBB (pharma SHORT), XLE, CLE (commodity/inflation hedge LONG), XLY (cyclical SHORT), MRNA, BNTX (biotech vaccine LONG), TIP (inflation-protected LONG)
+- Run catalyst_check.py on: Bundibugyo case escalation (Polymarket question: Aug 22 case threshold?), dengue US local spread (Polymarket: US dengue cases by end-Q3?), Q3 CPI print (Aug 12 July CPI release expected; watch for tariff-driven reacceleration), August tariff effective dates (Aug 19 Canada 50%)
+- Skip / pass: WHO mpox (declining trend, low-conviction signal), OFAC/USTR general trade escalation (already heavily priced into tariff expectations), NIH funding restructuring (low-impact operationally)
+```
+
+Sources:
+- [FDA Press Announcements](https://www.fda.gov/news-events/fda-newsroom/press-announcements)
+- [CDC MMWR Bundibugyo](https://www.cdc.gov/mmwr/volumes/75/wr/mm7522e1.htm)
+- [CDC Salmonella Outbreak](https://www.cdc.gov/salmonella/outbreaks/javiana-08-26/investigation.html)
+- [USTR August 2026 Press Releases](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/august)
+- [OFAC Recent Actions](https://ofac.treasury.gov/recent-actions)
+- [Federal Reserve H.15 Interest Rates](https://www.federalreserve.gov/releases/h15/)
+- [FactSet Q2 2026 Earnings Update August 7](https://insight.factset.com/sp-500-earnings-season-update-august-7-2026)
+- [FactSet Q2 2026 Earnings Update July 31](https://insight.factset.com/sp-500-earnings-season-update-july-31-2026)
+- [BLS Employment July 2026](https://www.bls.gov/news.release/empsit.nr0.htm)
+- [BLS CPI June 2026](https://www.bls.gov/news.release/cpi.nr0.htm)
+- [Section 232 Pharmaceutical Tariffs](https://www.jdsupra.com/legalnews/section-232-tariffs-on-pharmaceuticals-9663434/)
+- [USTR Brazil Section 301 Tariffs](https://natlawreview.com/article/ustr-announces-section-301-tariffs-brazil-new-25-duties-take-effect-july-22)
+- [WHO Dengue Surveillance](https://www.who.int/westernpacific/wpro-emergencies/surveillance/dengue)
+- [Census Trade Data June 2026](https://www.census.gov/foreign-trade/Press-Release/current_press_release/ft900.pdf)

@@ -384,3 +384,14 @@ Themes — one new candidate vetted, rest pass/already-tracked:
 Trigger-state: ALB $117.53, CCJ $87.79, NVDA $195.74 all surfaced to operator Jul-30 with the lithium-spot caveat ($21.6/kg — holds, but at the edge). No new hits this week.
 
 **Cross-read against a LIVE position (honest):** the GOOG vet cuts mildly AGAINST my Gemini-HLE NO. $185-205B of capex and a shipping 3.x cadence make an intermediate Gemini clearing 50% on HLE more plausible than my original "unannounced miracle model" framing — the same correction kimi made yesterday. The position's edge now rests on the resolution-source pillar (agi.safe.ai listing zero 2026 models), not on capability. Prior already revised to 0.70; this reinforces WHY tranche-2 was declined.
+
+## 2026-08-10 weekly digest (domains: biotech-health, trade-regulation, markets-corporate — stalest, 3wk; OWED from the Aug-9 outage)
+
+Themes:
+- **Tariff pass-through bifurcation (HIGH):** 50% Canada tariff effective Aug-19, 25% Brazil since Jul-22; June capital/consumer/pharma imports −1.8% with a 36% late-July front-loading spike that reverses into a Sept-Oct supply deficit. Domestic producers gain relative cost advantage; import-dependent retail margins compress. Directional equity macro — no decentralized venue, no instance edge → IBKR-surface note only, no vet (the play is a whole-sector tilt, not a ticker with a trigger).
+- **Outbreak tail risk (MED):** see below — the one PM-ACTIONABLE theme, and it failed its fresh-fact gate.
+- Skipped: WHO mpox (declining), general trade escalation (priced), NIH restructuring (low impact).
+
+**PM-actionable candidate found and KILLED (the review's real work):** "Which countries will have an Ebola case in 2026" (13 legs, $32k vol, $9.5k liq — mechanical resolution: any officially confirmed case in-territory by Dec-31). Was building a NO basket on the far-from-Africa legs (US 0.805 NO, China 0.81, India 0.86) against a hard historical base rate — ebola has never been confirmed in China or India across ~30 outbreaks in 50 years; the US only during the 28,000-case 2014-16 epidemic. **Fresh check killed it:** the digest's facts were stale (Uganda's outbreak ENDED Jul-28 at 20 cases, not "378 and growing"), the actual epidemic is DRC at 4,053 cases/1,850 deaths and fastest-growing on record, and **France already has a confirmed exported case** — which directly refutes the never-happens prior the whole basket rested on. With exportation demonstrated and the epidemic still growing, ~20% on US/Canada/China is defensible; I hold no differentiated epidemiological edge. Scored skip, ledger N=45.
+
+Trigger-state: SOL/STX/ALB flagged during the outage window by the fallback — all route=ibkr_surface multi-year repeats at ~unchanged prices, no re-ping warranted.

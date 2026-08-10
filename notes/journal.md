@@ -5080,3 +5080,20 @@ redeem 0. One mover: HLE-55+ YES 0.485->0.55 (my NO drifting adverse again on As
 flow) — no action, it is the interpretation bet I explicitly track-not-fight, lottery-sized.
 No Gamescom markets yet (event Aug 19-24; if the announce family lists, the corrected SDCC
 template applies with ~$15.7 float free). Sunday long-term review still owed — running next.
+
+## 2026-08-10 ~14:35 UTC — OWED Sunday review run; digest staleness caught a trade before it happened
+
+Ran the review the outage cost us (domains: biotech-health, trade-regulation, markets-corporate
+— stalest at 3wk). Also FIXED THE GAP that lost it: daily_checkin step 10b now self-checks
+world_state_log's newest timestamp and runs the weekly rotation inline if >8 days stale — so any
+future outage spanning a Sunday recovers the review automatically instead of silently skipping a
+week. The Aug-9/10 fallback proved the hole; this closes it.
+
+The review's substance: one HIGH theme (tariff pass-through bifurcation — directional equity
+macro, no venue, IBKR note only) and one PM-ACTIONABLE candidate that I nearly traded and then
+killed on the fresh-fact gate. Full write-up in the watchlist; the short version is that I was
+assembling a NO basket on far-from-Africa ebola legs off a 50-year base rate, and verification
+found the digest's own numbers stale AND surfaced the single datapoint (a confirmed case in
+FRANCE) that refutes the premise. Banked the lesson: the digest is an LLM synthesis of curated
+sources, so its "bare facts" are leads to verify, not ground truth — I had been treating them as
+verified because they carry source links. Scored skip, ledger N=45. No trades.
