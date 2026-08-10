@@ -59,8 +59,9 @@
    "note": "SUSPENDED 2026-08-06 — schedule assumptions dead post-sibling-event; prior tracks market until the cause is identified.",
    "checkpoints": {}
   },
-  "criteria_read": "2026-08-05",
-  "hidden_info": true
+  "criteria_read": "2026-08-10",
+  "hidden_info": true,
+  "thesis_break_rule": "CRITERIA RE-READ 2026-08-10 (21d to resolution, active Astra rumour flow). YES needs GPT-6 'made available to the GENERAL PUBLIC' by Aug-31 23:59 ET. The text is explicit that OPEN beta and OPEN ROLLING WAITLIST signups DO count, while a CLOSED beta or ANY form of private access does NOT, and the access must be 'clearly defined and publicly announced by OpenAI'. Naming: explicitly 'GPT-6' OR anything 'recognized as a successor to GPT-5' (so Astra can qualify on positioning alone); 'GPT-5.5 or similar' explicitly does NOT. => TIER-1 ALERT TRIAGE, decide BEFORE reacting: 'Astra waitlist opens' / 'generally available' / 'rolling access' = REAL thesis break, exit. 'Astra closed beta' / 'early access for select customers' / 'safety testing with partners' = NOT a break, hold — the criteria exclude private access by name. Current world state supports NO: Altman ~Aug-6 stated publicly that Astra is NOT yet generally available and that OpenAI needs 'a little longer' pending cyber-capability safety work — a dated first-party statement that the qualifying event has not occurred and is gated on a review. Prior 0.82 vs market 0.78 = 4pp, inside divergence threshold, no trade."
  },
  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
   "p_yes": 0.93,

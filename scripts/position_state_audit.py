@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -77,7 +78,12 @@ def main() -> int:
         key = t.get("key", "")
         # heuristic: an ACTIONABLE trigger whose note names no live slug and
         # says "add"/"re-entry" deserves a human look each audit
-        if any(w in (key + note) for w in ("add", "re-entry", "reentry")):
+        # Word-boundary match (2026-08-10): the bare substring "add" also fires
+        # on "added"/"address", so a trigger whose note merely NARRATES fee math
+        # ("taker fees added 8.4pp") got flagged every tick. A recurring false
+        # flag is worse than no flag — it trains me to skim the audit, which is
+        # the wallpaper failure the criteria rotation was designed to avoid.
+        if re.search(r"\b(add|adds|re-?entry|re-?enter)\b", key + " " + note):
             issues.append(f"TRIGGER armed+actionable — confirm still wanted: {key} "
                           f"({t.get('kind')} {t.get('op')} {t.get('level')})")
 
