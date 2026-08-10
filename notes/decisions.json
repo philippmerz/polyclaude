@@ -1,5 +1,5 @@
 {
-  "next_id": 65,
+  "next_id": 66,
   "decisions": [
     {
       "id": 1,
@@ -1230,6 +1230,26 @@
       "size_usd": 12.64,
       "resolution_at": "2026-08-31",
       "tags": [],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 65,
+      "timestamp": "2026-08-10T22:27:42Z",
+      "type": "size_change",
+      "thesis": "ADD 60sh NO @0.100 (post-only maker, fee-free) to Gemini-HLE-50+, on a FRESH verification of the crux rather than a re-derivation from memory. Three facts checked tonight: (1) the criteria name https://agi.safe.ai/ as THE resolution source, and the 'published elsewhere' escape hatch is conditioned on that source becoming UNAVAILABLE \u2014 a reachable-but-lagging board does not trigger it, and the explicit default is 'resolve No'; (2) the live board tops out at Gemini 3 Pro 38.3 / GPT-5 25.3 and has added no row since ~Nov-2025 \u2014 it is missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol and Gemini 3.1 Pro, all of which the sister Scale board did evaluate; (3) OpenAI's best HLE score on ANY surface today is 49.5 (GPT-5.6 Sol) \u2014 still under the 50 bar. Market prices the Gemini ladder as a pure capability distribution (>=50 90pct, >=55 41pct, >=60 20pct) with zero weight on whether the named board ever posts a 2026 row. My p_no 0.56 = 0.85*P(no qualifying board row) discounted by w=0.45 that a UMA vote overrides clean text under 90pct-of-OI YES pressure. Gemini chosen over the OpenAI-50 leg because it carries TWO cushions (needs a ~6-12pp capability jump AND a board update) and has a real two-sided book (1615sh bid at 0.099) instead of the OpenAI leg's 47sh.",
+      "confidence": "medium",
+      "prediction": "By Dec-31 2026 agi.safe.ai still shows no Google Gemini row at >=50 HLE Accuracy. Falsified if the board publishes a Gemini >=50 row (thesis dead, leg goes to ~0) or if the family resolves YES on capability despite no board row (interpretation branch wins \u2014 then the board-literal read is worth ~0 weight in all future criteria work and the whole HLE family should be exited on the next such structure).",
+      "size_usd": 6.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "interpretation-bet",
+        "lottery",
+        "resolution-source-lag",
+        "maker"
+      ],
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

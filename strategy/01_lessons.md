@@ -245,6 +245,32 @@
   2026-07-27), and the response is the same either way: nothing is lost — resting orders
   live server-side, everything durable is in the repo precisely so context is disposable.
 
+- **"Unexitable" and "worthless" are different questions — do not merge them.** 2026-08-10:
+  I called the OpenAI-HLE-50 leg "moot" to the operator because it marked 0.07 with 47 shares
+  of bid. But the plan for it was hold-to-resolution, which needs no bid at all, and the honest
+  p_no was 0.50 — the largest edge in the book. What actually drove the word "moot" was the
+  -81% P&L column. Exit liquidity governs whether I can CHANGE my mind cheaply; it says nothing
+  about the value of the claim. Ask them separately, in that order.
+
+- **A prior you would never trade on is not a prior — it is an unbooked disagreement with
+  yourself.** Same day: the Gemini-HLE prior said p_no 0.70 while the market offered NO at 0.10,
+  a 60pp edge I had been carrying for 8 days without buying a share. Either the number was
+  fantasy or I was ignoring the best trade available; both cannot hold. The fix is not to mark
+  to market — it is to decompose (P(board posts a qualifying row) + P(no row) × w_spirit ×
+  P(capability)), because a decomposed prior can be checked against the world, and a vibes prior
+  cannot. Audit trigger: any live position whose prior differs from mark by >25pp.
+
+- **Re-verify the crux from SOURCE, not from your own notes.** The HLE family was filed as
+  "board frozen since Apr-2025". Fetching it showed the Apr-2025 stamp is the DATASET date and
+  the board had in fact added GPT-5, Grok 4, Claude 4.5 Sonnet and Gemini 3 Pro after it — slow,
+  not dead. My recorded FACTS were right and my recorded INFERENCE was wrong, which is the
+  harder failure to catch because re-reading my own note reproduces the error perfectly.
+
+- **A signal that fires on 100% of the book is not a signal.** The Brownian-bridge pass listed
+  all 8 positions as SCALE_UP candidates. That is a tell about the tool's calibration, not an
+  instruction — but the biggest outlier in it (69pp) was still worth chasing, and was where the
+  stale prior was hiding. Read blanket-fire output for OUTLIERS, never for its verdict.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

@@ -5131,3 +5131,49 @@ against an Aave hurdle of ~1.7% over the same span. The family also contains 26 
 stub-midpoint contamination the consistency scanner already documents and correctly excluded
 (family absent from candidates). GTA VI at 0.645 for GOTY is a taste market, not a fact market:
 outside my edge by construction.
+
+## 2026-08-10 22:30 UTC continuation — re-verified the HLE crux; priors were incoherent; added at 0.100
+
+The status output flagged the whole book as "SCALE_UP", which is a signal firing on 8 of 8 positions
+and therefore not a signal — but the Gemini-HLE line was absurd enough to chase: mark 0.101 against
+a prior fair of 0.7884, a 69pp gap I was not acting on. Either the prior was fantasy or I was sitting
+on the largest edge in the book and ignoring it. Both cannot be true, and "carry a prior you would
+never trade on" is the exact failure the SpaceX $2.1T staleness taught me to hunt.
+
+So I re-verified the crux from source instead of re-deriving it from memory, and three things landed:
+
+1. CRITERIA (re-read tonight, both legs): the text names https://agi.safe.ai/ as THE resolution
+   source. The "results published elsewhere may be used" escape hatch is gated on that source
+   becoming UNAVAILABLE — a board that is reachable but lagging does not trigger it — and the
+   stated default is "resolve to No". This is tighter than I had it recorded.
+2. THE BOARD (live fetch): tops out at Gemini 3 Pro 38.3, OpenAI's row is GPT-5 25.3, and it has
+   added nothing since ~Nov-2025. It is missing GPT-5 Pro, Claude Opus 4.6, Claude Opus 5, Fable 5,
+   GPT-5.6 Sol and Gemini 3.1 Pro — models the sister Scale board did evaluate. I had this filed as
+   "frozen since Apr-2025", which was wrong in a way that mattered: the Apr-2025 stamp is the
+   DATASET date, and the board demonstrably accepts post-stamp models. It is slow, not dead.
+3. CAPABILITY: OpenAI's best HLE score on ANY surface today is 49.5 (GPT-5.6 Sol) — still under the
+   50 bar. Global frontier is Fable 5 at 55.5.
+
+Against that, the market prices the Gemini ladder as a pure capability distribution (>=50 at 90%,
+>=55 41%, >=60 20%, >=65 10%) with apparently zero weight on whether the named board ever posts a
+2026 row — and it repriced on Astra news, which under the literal criteria is close to irrelevant.
+That is the operator's original "hype biased" read, and it survives contact with the books.
+
+ACTIONS. Priors corrected and re-stamped: Gemini-50 p_no 0.70 -> 0.56 (decomposed explicitly:
+0.15 board + 0.85 * w_spirit 0.45 * P(capability) 0.75, where w_spirit is the chance a UMA vote
+overrides clean text under 90%-of-OI YES pressure); OpenAI-55 0.65 -> 0.64; OpenAI-50 HELD at 0.50,
+reproduced from scratch. Added 60sh Gemini-50 NO at 0.100 as a resting post-only maker bid, $6 of
+the $12.92 free pUSD (DEC-0065) — lottery sizing at ~1/8 of the ρ-discounted Kelly $40.91, because
+the crux is still an interpretation I cannot verify. Gemini over the OpenAI-50 leg deliberately: it
+needs BOTH a 6-12pp capability jump AND a board update (two cushions vs one), and it has a real
+two-sided book (1615sh at 0.099) rather than 47sh.
+
+CORRECTION I OWE MYSELF. I told the operator the OpenAI-50 leg was "moot" because it marks 0.07 on
+47 shares of bid. That conflated UNEXITABLE with WORTHLESS. The plan for it was always
+hold-to-resolution, which needs no bid at all; at an honest p_no of 0.50 against a 0.09 ask it is
+the largest edge in the book. A position's exit liquidity and its value are different questions and
+I merged them because the P&L column reads -81%. Banked as a lesson.
+
+Also noted, not fixed: polyclaude_enter's sibling scanner labels threshold siblings (50/55/60/65/70)
+as "different deadline — term-structure sibling". Same deadline, different THRESHOLD. Cosmetic now,
+but it is exactly the kind of mislabel that makes a future fungibility call wrong. Backlogged.

@@ -83,3 +83,18 @@ working — Fed 32.78sh filled at 0.26 three hours before a decision that zeroed
 Mechanically: when a position has a known catalyst datetime, note the pull deadline in the
 position entry AND arm a pre-catalyst reminder; do not rely on a periodic check coinciding
 with the release (today it did, 18:00:05, and the order had already filled — luck, not process).
+
+## LIVE: Gemini-HLE-50+ NO maker BUY (2026-08-10 22:30 UTC, DEC-0065)
+
+60 shares NO @ **0.100**, post-only GTC, $6.00, order `0x257e1b10…31e7`. Fee-free by construction;
+the taker path was 0.103 ask + 1.03c/share (1000bps on min(p,1-p)) = 0.1133 effective, so resting
+saves ~12% of the premium on a leg with 4.7 months to run and no scheduled catalyst — exactly the
+case the maker-first default was written for. Sits one tick above the 1615-share 0.099 wall.
+
+NOT subject to the scheduled-catalyst pull rule: there is no dated release that flips this market.
+The thing that would kill the thesis (agi.safe.ai publishing a 2026 Gemini row >=50) is unscheduled
+and would move the price against me instantly — so if the board updates, PULL this bid before
+re-underwriting, don't let it fill into news.
+
+Re-verify at each tick: if unfilled after ~7 days, either re-price to the then-best bid or drop it —
+a stale resting bid at a price the market has left behind is a free option written to the market.
