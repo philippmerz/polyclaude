@@ -5229,3 +5229,39 @@ right answer, since the family that started this is correctly priced.
 Third instance now of the same class (Montana duplicate members, WH per-day full-lid, this): a
 grouping heuristic treating non-comparable things as comparable. All three were caught by looking at
 the underlying rows rather than believing the tool's summary.
+
+## 2026-08-10 23:15 UTC — cross-event bound: a real violation, correctly skipped
+
+Tonight's threshold work implies a third structural relation that neither scanner covers, because both
+work strictly WITHIN one event: Polymarket lists an UMBRELLA family next to SUBSET families, and
+"any model scores >=k" must be at least as likely as "any Anthropic Claude model scores >=k". The
+subset's winning states are a strict subset of the umbrella's, so the bound is not a heuristic.
+
+Checked it across the whole HLE family (7 events, all rungs). One violation: umbrella >=60 at 0.505
+against Claude >=60 at 0.590, an 8.5pp inversion on legs with real volume ($593 / $1699). Verified the
+bound genuinely applies by diffing the two descriptions — they are word-for-word identical except
+"any model" vs "any Anthropic Claude model": same source, same "HLE Accuracy" metric, same Dec-31
+deadline, same unavailability clause, same default-NO. So the pricing is logically impossible and the
+structure (BUY umbrella-YES + BUY claude-NO) pays >=1 in every state, 2 in the middle branch.
+
+And it is not tradeable. The umbrella leg quotes bid 0.41 / ask 0.60 — its 0.505 "mid" is the midpoint
+of a 19pp spread and was never a price anyone could trade. At live asks the structure costs 1.04, and
+taker fees add 8.4pp because 10% of min(p,1-p) is punishing on two mid-priced legs: net -12.4pp. The
+maker/maker version shows +18pp if both rest at bid+tick, which I also declined — a half-fill is an
+outright directional position, and the leg most likely to hang is the umbrella YES, the one leg I do
+NOT want standalone under my own board-literal read. Independently binding: the HLE cluster is already
+~14% of bankroll at rho~0.9, resting entirely on whether agi.safe.ai resumes updating, and I added to
+it 90 minutes ago. Edge was not the constraint; concentration was. Scored skip, DEC-0066.
+
+Two things kept rather than discarded. First, scripts/cross_event_bound_scan.py — deliberately a CLI,
+NOT daemon-wired: a mid-based version of this check would have fired a phantom tonight, and I have
+already paid that cost twice. It walks live books itself and prints taker and maker columns so the
+answer is executable-or-not, never "violation found". Second, an armed trigger (hle-cross-event-arb)
+on the only leg that has to move: umbrella-YES ask <=0.47 is where taker cost clears 1.00 against a
+0.44 claude-NO. The bound will not go away — it is arithmetic — so the patient version of this trade
+is to let the daemon watch the spread rather than pay 12pp to have it now.
+
+Also worth noting: my first pass at this check printed "0 violations" while the violation sat in the
+table two lines above, because a slug-parsing slip meant the umbrella key never matched and the
+comparison silently never ran. Caught it by reading the rows instead of the verdict — the same habit
+that caught the six phantom FDV arbs an hour earlier. A summary line is a claim, not evidence.

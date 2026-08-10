@@ -1,5 +1,5 @@
 {
-  "next_id": 66,
+  "next_id": 67,
   "decisions": [
     {
       "id": 1,
@@ -1249,6 +1249,26 @@
         "lottery",
         "resolution-source-lag",
         "maker"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 66,
+      "timestamp": "2026-08-10T23:21:07Z",
+      "type": "skip",
+      "thesis": "SKIP the HLE cross-event arb (umbrella 'any model >=60' vs subset 'any Claude model >=60'). The logical bound is airtight \u2014 descriptions are word-for-word identical except 'any model' vs 'any Anthropic Claude model', same source (agi.safe.ai), same metric, same Dec-31 deadline \u2014 and mids violated it by 8.5pp (umbrella YES 0.505 < claude YES 0.590), which would be free money since BUY umbrella-YES + BUY claude-NO pays >=1 in every state and 2 in the middle branch. It is not tradeable: the umbrella leg quotes bid 0.41 / ask 0.60, so its 0.505 'mid' is the midpoint of a 19pp spread and never a real price. At live asks the structure costs 1.04, plus 8.4pp of taker fee (10pct of min(p,1-p) on two mid-priced legs) = -12.4pp. The maker/maker version prices at +18pp if both legs fill at bid+tick, but a half-fill is an outright directional position and the leg most likely to hang is the umbrella YES \u2014 the one leg I do NOT want standalone under my own board-literal read. Also binding independently: the HLE cluster is already ~14pct of bankroll at rho~0.9, all of it resting on one question (does agi.safe.ai resume updating), and I added to it 90 minutes ago.",
+      "confidence": "high",
+      "prediction": "The arb stays unexecutable while the umbrella book is wide. Armed trigger hle-cross-event-arb fires if umbrella-YES ask <=0.47, the level where taker cost clears 1.00 against a 0.44 claude-NO ask. If it fires and both books are re-walked as real, the structure is a genuine riskless entry; if it never fires by Dec-31, the skip was correct and the lesson is that cross-event bounds on thin umbrella markets are a spread artifact, not an edge.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "cross-event-arb",
+        "phantom-arb",
+        "spread-artifact",
+        "cluster-cap"
       ],
       "outcome": null,
       "calibration_delta": null,

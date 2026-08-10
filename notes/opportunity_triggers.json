@@ -43,5 +43,14 @@
   "expires": "2026-10-31",
   "actionable": true,
   "note": "NYCC (early Oct). Same corrected announce-template as Gamescom/SDCC. Baseline seeded silently, so only NEWLY listed comic-con events fire."
+ },
+ {
+  "key": "hle-cross-event-arb",
+  "kind": "clob_no_ask",
+  "id": "65408299162797648865714204468778860769395780527801891596863462779946738141463",
+  "op": "<=",
+  "level": 0.47,
+  "actionable": true,
+  "note": "HLE cross-event logical bound. 'Any model >=60' (umbrella) must be >= 'any Anthropic Claude model >=60' (subset) — criteria are word-for-word identical except the model restriction, same source/metric/deadline, so the bound is airtight. On 2026-08-10 mids violated it by 8.5pp (umbrella 0.505 < claude 0.590) but the violation was PURELY a 19pp-wide umbrella book (bid 0.41 / ask 0.60): at real asks the structure cost 1.04 and taker fees added 8.4pp, so -12.4pp. This trigger watches the umbrella YES ASK, which is the only leg that has to move: with claude-NO around 0.44 and ~0.084 of taker fee, the arb turns positive at ask <=0.476. If it fires: BUY umbrella-YES + BUY claude-NO, payout >=1 in every state (2 in the middle branch). RE-WALK both books first — claude-NO's ask moves too. Re-check with scripts/cross_event_bound_scan.py."
  }
 ]
