@@ -5071,3 +5071,12 @@ tick, not the weekly domain rotation) — noted as a gap, will run it at the nex
 It even banked a lesson of its own (535303f: the peer check self-matches via pgrep -cf).
 Book through the gap: bankroll $177.99 (+4.7%), no thesis-breaks, no trades, Iran/Gaza headlines
 all outside our exposure. GPT-6 NO 0.77 (+19%), Gemini-HLE now +19% (0.096).
+
+## 2026-08-10 14:00 UTC tick — brief (fallback covered 03:24); HLE-55 drifting, no action
+
+Post-restoration tick, deliberately light since the fallback ran a full pass 10.5h ago. All
+checks clean: state audit clean, monotonicity 0 (per-day fix holding), consistency 0 real,
+redeem 0. One mover: HLE-55+ YES 0.485->0.55 (my NO drifting adverse again on Astra-capability
+flow) — no action, it is the interpretation bet I explicitly track-not-fight, lottery-sized.
+No Gamescom markets yet (event Aug 19-24; if the announce family lists, the corrected SDCC
+template applies with ~$15.7 float free). Sunday long-term review still owed — running next.
