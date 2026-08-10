@@ -84,7 +84,9 @@
   "criteria_read": "2026-08-10",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
-  "rho_within": 0.7
+  "rho_within": 0.7,
+  "divergence_ack": "2026-08-10",
+  "divergence_note": "INTENTIONAL 43pp gap, re-derived from source 2026-08-10 (not marked to market). Chose NOT to size up HERE despite this being the cheapest expression: the leg has one cushion (board only — OpenAI capability is already 49.5, a hair under the bar) and 47sh of bid. Routed the marginal $6 to the Gemini leg instead, which needs BOTH a capability jump and a board update and has a real two-sided book. Re-look when the ack expires 2026-08-24, or immediately if agi.safe.ai posts any 2026 row."
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
   "p_no": 0.64,
@@ -102,6 +104,8 @@
   "criteria_read": "2026-08-10",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
-  "rho_within": 0.7
+  "rho_within": 0.7,
+  "divergence_ack": "2026-08-10",
+  "divergence_note": "INTENTIONAL 46pp gap, decomposed 2026-08-10 and ACTED ON: 60sh NO added at 0.100 maker (DEC-0065). Sized as a lottery at ~1/8 of rho-discounted Kelly because the residual crux (would a UMA vote override clean text under 90%-of-OI YES pressure?) is an interpretation I cannot verify — not because the number is soft. Further adds need the cluster check: HLE family is ~14% of bankroll at rho~0.9."
  }
 }

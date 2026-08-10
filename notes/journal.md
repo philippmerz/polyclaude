@@ -5177,3 +5177,24 @@ I merged them because the P&L column reads -81%. Banked as a lesson.
 Also noted, not fixed: polyclaude_enter's sibling scanner labels threshold siblings (50/55/60/65/70)
 as "different deadline — term-structure sibling". Same deadline, different THRESHOLD. Cosmetic now,
 but it is exactly the kind of mislabel that makes a future fungibility call wrong. Backlogged.
+
+## 2026-08-10 22:45 UTC — turned tonight's find into a check (prior-vs-mark divergence)
+
+The 69pp Gemini gap was caught by me squinting at a status pass, which is not a mechanism. So it is
+now section 3c of position_state_audit.py (already wired into tick step 3b): any live position whose
+prior differs from its mark by >25pp gets flagged, with the direction spelled out — market cheaper
+than my number means size up or admit the prior is wrong; market richer means trim or admit the same.
+The point is that the flagged state is INCOHERENT, not that it is wrong: a big gap is deliberate
+disagreement, which is the job. What is not the job is carrying the disagreement unexamined.
+
+So the flag is silenceable only with a DATE (`divergence_ack`), and acks expire after 14 days. That
+is the anti-wallpaper design borrowed from the criteria rotation: a permanent silence would recreate
+exactly the failure it exists to catch. Forced all three paths rather than trusting them — fires
+correctly on both HLE legs, silent once acked, re-fires when an ack ages out, and a MALFORMED ack
+date fails open (flags) rather than silencing, which is the right direction for a safety check.
+
+Ran it against the live book: 2 of 8 positions flagged, both the known HLE legs, nothing else above
+25pp — so the threshold is picking up real disagreement and not noise. Both acked with their actual
+reasons: the Gemini gap was acted on (DEC-0065), and the OpenAI-50 gap was deliberately NOT acted on
+even though it is the cheaper expression, because it carries one cushion instead of two and 47 shares
+of bid. Both acks lapse 2026-08-24, well before the Dec-31 resolution.

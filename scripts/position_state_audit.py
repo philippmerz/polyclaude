@@ -126,6 +126,61 @@ def main() -> int:
                 f"pull the market description, confirm the recorded thesis still matches "
                 f"the actual bar, then set criteria_read to today")
 
+    # 3c. PRIOR-vs-MARK divergence (2026-08-10). The criteria rotation above
+    # checks whether a thesis still matches the market's TEXT; nothing checked
+    # whether the NUMBER still matches the market's PRICE. On 2026-08-10 the
+    # Gemini-HLE prior read p_no 0.70 against a 0.10 mark — a 60pp claimed edge
+    # I had carried for 8 days without buying a share. That state is incoherent
+    # by construction: either the prior is fantasy, or it is the best trade in
+    # the book and I am ignoring it. Both cannot be true, and neither resolves
+    # itself by sitting there.
+    #
+    # A large gap is NOT automatically wrong — deliberate disagreement with a
+    # market is the entire job. So the flag is silenceable, but only with a
+    # DATE: set "divergence_ack" on the prior when the gap is intentional and
+    # reviewed. Acks expire, which forces the disagreement back up for air
+    # instead of letting it calcify into a number nobody re-derives.
+    DIVERGENCE_PP = 0.25
+    DIVERGENCE_ACK_DAYS = 14
+    posmap = {p["slug"]: p for p in pos}
+    for k, v in priors_raw.items():
+        if k.startswith("_") or not isinstance(v, dict):
+            continue
+        slug = next((s for s in live if k in s or s in k), None)
+        if not slug:
+            continue
+        rec = posmap.get(slug) or {}
+        held = (rec.get("outcome") or "").lower()
+        mark = rec.get("curPrice")
+        if mark is None or held not in ("yes", "no"):
+            continue
+        if f"p_{held}" in v:
+            mine = float(v[f"p_{held}"])
+        elif "p_no" in v:
+            mine = 1.0 - float(v["p_no"])
+        elif "p_yes" in v:
+            mine = 1.0 - float(v["p_yes"])
+        else:
+            continue
+        gap = mine - float(mark)
+        if abs(gap) < DIVERGENCE_PP:
+            continue
+        ack = v.get("divergence_ack")
+        if ack:
+            try:
+                if (dt.date.today() - dt.date.fromisoformat(ack)).days <= DIVERGENCE_ACK_DAYS:
+                    continue
+            except Exception:
+                pass
+        stale = f" (ack {ack} EXPIRED)" if ack else ""
+        verb = ("market is CHEAPER than my number — size up or admit the prior is wrong"
+                if gap > 0 else
+                "market pays MORE than my number — trim or admit the prior is wrong")
+        issues.append(
+            f"PRIOR-vs-MARK {abs(gap)*100:.0f}pp on {slug[:44]}{stale}: "
+            f"I hold {held.upper()} at mark {float(mark):.3f}, my prior says {mine:.2f} — {verb}. "
+            f"Resolve by trading, re-deriving the prior, or setting divergence_ack to today.")
+
     # 4. expired acked-holds
     today = dt.date.today().isoformat()
     acks = _load("acknowledged_holds.json", [])
