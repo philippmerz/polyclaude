@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
 """Polymarket event-monotonicity arbitrage scanner.
 
-Polymarket has multi-market EVENTS (e.g. "Will X happen by Y?" with child
-markets for different dates like by-May-15 / by-May-31 / by-June-30). For
-event A occurring at time t (or before) on monotonic dates t1 < t2:
+TWO ladder shapes are checked (2026-08-10: the threshold pass was added after
+finding the scanner could only ever see the date one):
+
+  DATE ladder — "Will X happen by Y?" across by-May-15 / by-May-31 / by-Jun-30.
+  THRESHOLD ladder — one deadline, a rising bar: HLE >=50/55/60/65/70,
+    "FDV above $50M/$500M/$1B", vote share, temperature. For thresholds
+    k1 < k2, P(X >= k2) <= P(X >= k1) — as monotone as the date case, and the
+    arb construction is identical with "harder bar" in the role of "earlier
+    date". These are common on Polymarket, and the scanner had the machinery
+    to check them while explicitly skipping them as "categorical".
+
+For event A occurring at time t (or before) on monotonic dates t1 < t2:
 
     P(A by t2) >= P(A by t1)
 
@@ -41,6 +50,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import re
 import sys
 
 import httpx
@@ -95,6 +105,64 @@ def parse_outcome_prices(p) -> tuple[float, float] | None:
 
 
 POLYMARKET_CLOB = "https://clob.polymarket.com"
+
+
+# A magnitude suffix MUST be captured and applied, never merely skipped.
+# 2026-08-10, first live run of the threshold pass: an earlier version only
+# refused to CONSUME "million"/"billion", which for the leading-comparator
+# patterns ("above $1B") still returned the bare number. So "$1B" parsed as
+# 1.0 and "$50M" as 50.0, inverting a perfectly-priced FDV ladder and
+# manufacturing SIX "REAL ARB" fires that survived the live-CLOB walk — the
+# books were real, the ORDERING was fabricated. Third instance of the same
+# class (Montana duplicate members, WH per-day full-lid): a parse that groups
+# non-comparable things as comparable. The CLOB walk cannot rescue a bad
+# parse, so the parse carries the safety burden alone.
+_SCALES = {"k": 1e3, "thousand": 1e3,
+           "m": 1e6, "mm": 1e6, "mln": 1e6, "million": 1e6,
+           "b": 1e9, "bn": 1e9, "billion": 1e9,
+           "t": 1e12, "trillion": 1e12}
+_SCALE_RE = r"(?P<scale>mln|mm|million|billion|trillion|thousand|bn|[kmbt])"
+# Try the magnitude suffix first, then fall back to a plain unit (%/°F/bps/
+# seats). Alternation order is what makes "$1B" scale and "95F" not.
+_NUM = rf"\$?(?P<val>[0-9][0-9,]*(?:\.[0-9]+)?)(?:\s*{_SCALE_RE}\b|\s*(?:%|°?[a-z]{{1,10}}))?"
+_UP_WORDS = r"(?:or higher|or more|or greater|or above|or over)"
+_DN_WORDS = r"(?:or lower|or less|or fewer|or below|or under)"
+_UP_LEAD = r"(?:at least|above|over|greater than|more than|exceeds?)"
+_DN_LEAD = r"(?:at most|below|under|less than|fewer than)"
+
+
+def parse_threshold(question: str) -> tuple[float, int] | None:
+    """Extract (value, direction) from a THRESHOLD-ladder question.
+
+    direction +1 = "value or higher" (a HARDER bar as value rises, so YES must
+    be non-increasing in value); -1 = "value or lower" (YES non-decreasing).
+
+    The number MUST be anchored to an explicit comparator. That is the whole
+    safety property: it rejects exact-value buckets ("will X win 3 seats"),
+    which are a PARTITION and carry no monotone constraint, and it stops the
+    scan from grabbing an unrelated number like the year in "...on HLE in 2026
+    be 50% or higher?" — where an any-number parse would read 2026 as the bar.
+    Same failure family as the Montana dedup and the WH per-day exclusion: a
+    grouping heuristic treating a non-fungible structure as fungible.
+    """
+    q = " ".join((question or "").lower().split())
+    if not q:
+        return None
+    for pat, direction in ((rf"{_NUM}\s*{_UP_WORDS}", +1),
+                           (rf"{_NUM}\s*{_DN_WORDS}", -1),
+                           (rf"{_UP_LEAD}\s*{_NUM}", +1),
+                           (rf"{_DN_LEAD}\s*{_NUM}", -1)):
+        m = re.search(pat, q)
+        if m:
+            try:
+                val = float(m.group("val").replace(",", ""))
+            except Exception:
+                return None
+            scale = (m.groupdict().get("scale") or "").strip()
+            if scale:
+                val *= _SCALES[scale]
+            return val, direction
+    return None
 
 
 def _best_ask(token_id: str) -> float | None:
@@ -276,6 +344,67 @@ def main() -> int:
                     "_row_early": market_rows[i],
                     "_row_late": market_rows[j],
                 })
+
+        # THRESHOLD-LADDER pass (2026-08-10). The date pass above deliberately
+        # skips same-date families, and its comment called them "categorical/
+        # threshold ... NOT monotonic arbs". That is half wrong, and the wrong
+        # half is large: a THRESHOLD ladder is exactly as monotone as a date
+        # ladder. For thresholds k1 < k2, P(X >= k2) <= P(X >= k1), and the arb
+        # construction is identical with "harder bar" playing the role of
+        # "earlier date". Polymarket runs these constantly — score ladders
+        # (HLE 50/55/60/65/70), BTC price ladders, vote-share, temperature —
+        # so the scanner was structurally blind to a whole population it had
+        # the machinery to check. Found while pricing the HLE family, whose own
+        # ladder showed a (sub-spread) inversion at the 65/70 rungs.
+        same_day = len({r["end_dt"].date() for r in market_rows}) == 1
+        parsed = [(r, parse_threshold(r["question"])) for r in market_rows]
+        rungs = [(r, t[0], t[1]) for r, t in parsed if t]
+        dirs = {d for _, _, d in rungs}
+        # Require: one consistent comparator direction, every leg parsed (a
+        # partially-parsed event is a mixed structure, not a ladder), distinct
+        # values, and a shared deadline so this never double-reports the date
+        # pass's pairs.
+        if (same_day and len(rungs) >= 2 and len(rungs) == len(market_rows)
+                and len(dirs) == 1 and len({v for _, v, _ in rungs}) == len(rungs)):
+            direction = dirs.pop()
+            # Order by DIFFICULTY: hardest bar first. For a ">=" ladder the
+            # hardest is the largest value; for "<=" it is the smallest.
+            rungs.sort(key=lambda x: x[1], reverse=(direction > 0))
+            for i in range(len(rungs)):
+                for j in range(i + 1, len(rungs)):
+                    hard_row, hard_v, _ = rungs[i]
+                    easy_row, easy_v, _ = rungs[j]
+                    if (hard_row["vol24hr"] < args.min_leg_vol24 or
+                            easy_row["vol24hr"] < args.min_leg_vol24):
+                        continue
+                    # The HARDER bar must not price above the EASIER one.
+                    vt1, vt2 = hard_row["yes"], easy_row["yes"]
+                    violation_pp = (vt1 - vt2) * 100
+                    if violation_pp < args.min_violation_pp:
+                        continue
+                    breakeven = fee_aware_breakeven(vt1, vt2)
+                    violations.append({
+                        "event_title": ev.get("title", "?"),
+                        "event_slug": ev.get("slug", "?"),
+                        "kind": "threshold",
+                        "t1_question": hard_row["question"],
+                        "t1_slug": hard_row["slug"],
+                        "t1_end": f"bar>={hard_v}" if direction > 0 else f"bar<={hard_v}",
+                        "t1_yes": vt1,
+                        "t2_question": easy_row["question"],
+                        "t2_slug": easy_row["slug"],
+                        "t2_end": f"bar>={easy_v}" if direction > 0 else f"bar<={easy_v}",
+                        "t2_yes": vt2,
+                        "violation_pp": round(violation_pp, 2),
+                        "breakeven_pp": round(breakeven * 100, 2),
+                        "net_spread_pp": round(((vt1 - vt2) - breakeven) * 100, 2),
+                        "t1_vol24hr": round(hard_row["vol24hr"], 0),
+                        "t2_vol24hr": round(easy_row["vol24hr"], 0),
+                        # same role mapping as the date pass: _row_early is the
+                        # leg that SHOULD carry the lower YES.
+                        "_row_early": hard_row,
+                        "_row_late": easy_row,
+                    })
 
     # Sort by net_spread_pp desc (largest profit first)
     violations.sort(key=lambda v: -v["net_spread_pp"])

@@ -271,6 +271,23 @@
   instruction — but the biggest outlier in it (69pp) was still worth chasing, and was where the
   stale prior was hiding. Read blanket-fire output for OUTLIERS, never for its verdict.
 
+- **A validation layer only protects against the failure it was built for — a NEW
+  detector class walks straight past it.** 2026-08-10: the monotonicity scanner's
+  phantom-arb defence is a live-CLOB walk, built after mid-price artifacts (stub bids)
+  produced fake edges. The first run of the new THRESHOLD pass produced six "REAL ARB"
+  fires that sailed through that walk, because the books were genuinely real — what was
+  fabricated was the ORDERING ("$1B" parsed as 1.0, "$50M" as 50.0, inverting a
+  correctly-priced FDV ladder). Prices were validated; the STRUCTURAL claim was not.
+  When adding a detector, ask which layer validates its specific claim, and if the
+  answer is "none", that claim carries the whole safety burden and must be unit-tested
+  against adversarial inputs BEFORE the daemon can fire on it.
+
+- **Threshold ladders are as monotone as date ladders** (and the scanner was blind to
+  them for months, having dismissed same-date families as "categorical"). Any family of
+  the form ">= k" over rising k obeys P(X>=k2) <= P(X>=k1) for k1<k2. Watch for the two
+  traps: an EXACT-value bucket ("wins exactly 3 seats") is a partition with NO monotone
+  constraint, and a magnitude suffix must be APPLIED, not skipped.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

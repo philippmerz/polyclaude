@@ -5198,3 +5198,34 @@ Ran it against the live book: 2 of 8 positions flagged, both the known HLE legs,
 reasons: the Gemini gap was acted on (DEC-0065), and the OpenAI-50 gap was deliberately NOT acted on
 even though it is the cheaper expression, because it carries one cushion instead of two and 47 shares
 of bid. Both acks lapse 2026-08-24, well before the Dec-31 resolution.
+
+## 2026-08-10 22:55 UTC — monotonicity scanner was blind to threshold ladders; fixed, and it bit back
+
+Pricing the HLE family surfaced its own ladder (50/55/60/65/70 with a sub-spread inversion at the
+65/70 rungs) and the obvious question: why did the monotonicity daemon, which runs every 15 minutes,
+never mention it? Because it is DATE-monotonic only — it requires different end dates and its own
+comment dismissed same-date families as "categorical/threshold ... NOT monotonic arbs". That is half
+wrong, and the wrong half is large: P(X>=k2) <= P(X>=k1) for k1<k2 is exactly as enforceable as the
+date version, the arb construction is identical with "harder bar" playing "earlier date", and
+Polymarket runs these constantly (score ladders, FDV ladders, BTC price, vote share, temperature).
+The scanner had the whole machinery and was structurally unable to look.
+
+Added the threshold pass — and it immediately produced SIX "REAL ARB" fires on a Predict.fun FDV
+family. They were phantoms: the family is perfectly monotone ($50M at 0.8645 down to $2B at 0.1305),
+but my parser read "$1B" as 1.0 and "$50M" as 50.0 and inverted the ladder. My first version only
+refused to CONSUME a magnitude word, which for the leading-comparator form ("above $1B") still
+returned the bare number — a rejection that wasn't one.
+
+The part worth keeping: those six fires PASSED the live-CLOB walk. That walk is the phantom-arb
+defence I built after stub-bid mid artifacts, and it validated these happily because the books were
+real — what was fabricated was the ordering. A validation layer only covers the failure it was built
+for, and this was a new failure class entering underneath it. So the parse carried the entire safety
+burden and had to earn it: 21 adversarial cases (year-in-question, exact-value buckets, %/°F/bps/
+seats units that must NOT scale, magnitude suffixes that must, and the five real FDV rungs), all
+passing, plus a synthetic inverted ladder to prove the detector fires at all and a correctly-ordered
+twin to prove it stays quiet. Live run after the fix: 946 multi-market events, zero violations — the
+right answer, since the family that started this is correctly priced.
+
+Third instance now of the same class (Montana duplicate members, WH per-day full-lid, this): a
+grouping heuristic treating non-comparable things as comparable. All three were caught by looking at
+the underlying rows rather than believing the tool's summary.
