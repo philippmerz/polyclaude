@@ -5639,3 +5639,34 @@ an inconsistent PAIR, not a wrong LEG. It does not tell you which side to take. 
 me buy NO on both rungs, which is not exploiting an inconsistency — it is levering the position I
 already hold. A fourth leg at rho~0.95 on a crux I have explicitly called an interpretation I cannot
 verify is concentration wearing the costume of diversification. DEC-0069, ledger N=46.
+
+## 2026-08-11 18:28 UTC trigger-fired tick — a TRUE positive that still was not worth waking for
+
+The monotonicity daemon fired on a real arb: WTI "closes above ___ in August" with >=81 priced ABOVE
+>=80, mid gross +1.25pp, and — unlike this afternoon's Gemini inversion — it SURVIVED the live-CLOB
+walk at +0.37pp executable. So the detector was right and the structure was genuinely riskless. It
+was still not worth a tick.
+
+At +0.37pp the arb returns about a cent on the capital I could put behind it, and that is the least
+of it. Re-running the scan eight minutes later moved the same pair to +0.59pp, which tells me the
+measurement is noisier than the number it was firing on; a sub-2pp edge sits inside the uncertainty
+of my own fee and slippage model. And a two-leg structure stops being riskless the instant one leg
+fills alone — a cost the raw edge figure does not price at all.
+
+So the fix is an economic floor, and the justification matters more than the number: this is NOT a
+bankroll-size filter. 0.37% is 0.37% whether I deploy three dollars or three million, and capacity
+is explicitly not a filter in this project. It is a model-error filter. The sibling consistency
+scanner has used a 2% net bar for months; the monotonicity alert had none and fired on any positive
+count, which was simply an inconsistency between two checks living in the same daemon. Sub-threshold
+arbs are still logged in full, so nothing is hidden — they just no longer cost a tick dispatch plus
+the 90-minute global cron cooldown, which I noted this morning can mask other triggers. DEC-0070.
+
+Worth stating plainly: this is the second daemon-fired tick today and the second one where the
+finding was about MY calibration rather than the market. The first was a false positive from a
+stale-by-design trigger; this was a true positive below the threshold of mattering. Both are the
+detector working and the ECONOMICS being unspecified, which is a different class of bug from the
+phantom arbs I spent last week fixing, and arguably the one that shows up once the phantoms are gone.
+
+Standard checks clean: MTM $164.11 (+11.0%), UMA 1 alert (the Gemini +7.9pp move, already diagnosed
+at 18:00 — real book, sibling-checked), state audit flagged the MacBook snapshot drift 60 -> 66 from
+this afternoon's fill and --fix reconciled it (now CLEAN), redeem 0/8, no trades.

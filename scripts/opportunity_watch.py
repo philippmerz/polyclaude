@@ -370,12 +370,35 @@ def run_monotonicity(state: dict) -> None:
     n_real = int(m.group(1))
     if n_real <= 0:
         return  # midpoint flags only — not actionable
+    # ECONOMIC FLOOR (2026-08-11). This fired a tick on a genuinely executable
+    # WTI >=81/>=80 pair worth +0.37pp — a TRUE positive that was still not worth
+    # waking for. The floor is NOT about bankroll size (0.37% is 0.37% at any
+    # scale, and capacity is explicitly not a filter here); it is about MODEL
+    # ERROR: a sub-2pp edge sits inside the uncertainty of my own fee and
+    # slippage estimate, and a two-leg structure converts to a directional
+    # position the moment one leg fills alone. The consistency scanner already
+    # uses a 2% net bar; this brings the two into line. Sub-threshold arbs are
+    # still LOGGED, so the information is kept without paying a tick dispatch
+    # and the 90-minute global cron cooldown it consumes.
+    MIN_ARB_EDGE_PP = 2.0
+    best = None
     for line in out.splitlines():
-        if "REAL ARB" in line:
-            _alert(state, "monotonicity-arb",
-                   f"monotonicity: {n_real} EXECUTABLE arb(s) after live-CLOB walk — {line.strip()[:140]}",
-                   actionable=True)
-            return
+        if "REAL ARB" not in line:
+            continue
+        edges = _re.findall(r"([+-]?\d+\.\d+)pp", line)
+        edge = float(edges[-1]) if edges else 0.0
+        if best is None or edge > best[0]:
+            best = (edge, line.strip())
+    if best is None:
+        return
+    edge, line = best
+    if edge < MIN_ARB_EDGE_PP:
+        _log(f"monotonicity: {n_real} real arb(s) but best edge {edge:+.2f}pp < "
+             f"{MIN_ARB_EDGE_PP}pp floor — logged, not firing: {line[:120]}")
+        return
+    _alert(state, "monotonicity-arb",
+           f"monotonicity: {n_real} EXECUTABLE arb(s) after live-CLOB walk, best {edge:+.2f}pp — {line[:140]}",
+           actionable=True)
 
 
 # ---------- main ----------
