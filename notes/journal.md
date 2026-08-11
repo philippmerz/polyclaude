@@ -5694,3 +5694,25 @@ fix: every alerting path needs a floor, justified by model error rather than ban
 inside my own measurement noise.
 
 Daemon restarted with both fixes live. No trades, no position changes.
+
+## 2026-08-11 22:00 UTC periodic — GPT-6 drift checked against its sibling, no action
+
+Book $164.45 (+11.3%), all five resting orders intact, daemons cycling cleanly (pair_arb every ~15
+min since the 18:49 restart), news still 100% tier-2 Iran/Hormuz. MacBook NO 0.595 (+44% on the
+post-add basis), Gemini-50 NO 0.172.
+
+The only thing worth checking was GPT-6 NO drifting 0.780 -> 0.740 over 24h — 15% of the book with 19
+days to resolution. Ran the sibling test rather than either panicking or ignoring it. The Astra
+"released by" ladder is essentially where it was at 06:00: Aug-15 0.021 (-0.3pp), Aug-31 0.245
+(+2.0pp), Sep-15 0.540 (+0.5pp), Sep-30 0.737 (-1.6pp), Oct-31 0.900 (-0.5pp) — every rung inside
+2pp, monotone, September still modal. So GPT-6 YES rising ~3pp against its own precondition rising
+2pp is COHERENT CO-MOVEMENT, not an idiosyncratic signal: the market nudged its Astra-timing view and
+GPT-6 followed. Zero tier-1 keyword fires all day. Nothing in this morning's sourced thesis changed
+(no waitlist exists, the CRITICAL classification triggers mandated pre-release controls, ~30d federal
+review lands past Aug-31).
+
+Prior held at 0.85 against a 0.26 market — the 11pp disagreement I documented and sourced this
+morning, unchanged. Also noted: the GPT-6/Astra logical inversion narrowed from 3.5pp to 1.5pp on
+mids, consistent with the finding that its executable gross was only ~1pp to begin with. No trade.
+Recording this so a future tick reading the same drift knows it was measured, explained, and held
+rather than missed.
