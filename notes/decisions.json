@@ -1,5 +1,5 @@
 {
-  "next_id": 67,
+  "next_id": 68,
   "decisions": [
     {
       "id": 1,
@@ -1269,6 +1269,26 @@
         "phantom-arb",
         "spread-artifact",
         "cluster-cap"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 67,
+      "timestamp": "2026-08-11T10:05:38Z",
+      "type": "size_change",
+      "thesis": "ADD 6sh NO @0.59 (post-only maker, fee-free) to touchscreen-MacBook-2026, sized to the 15pct single-ticket cap (position cost 23.65 of a 27.03 ceiling on a 180.17 bankroll \u2014 the cap, not conviction, set the size). Trigger: NO marked 0.485->0.590 in 4h with no findable news, which under the OLD prior of 0.58 read as 'position has reached fair' and would have invited a trim. Pulling the primary source instead showed the prior itself was wrong: MacRumors 2026-04-19 quotes Gurman that 'late 2026 to early 2027' was the ORIGINAL expectation and the REVISION is 'early 2027 is now more likely than late 2026', with the article stating the machines will not be purchasable in 2026. My own 08-08 revision had cited the anchor 'moving to late-2026/early-2027' and cut p_no 0.70->0.58 \u2014 i.e. it read the PRE-revision window as the POST-revision one and moved the number 12pp the wrong way. Corrected to 0.80 (P(YES) ~0.20 for an Apple surprise or a late-2026 unveil that still ships purchasable despite the memory shortage; short of the 0.85 entry because this is one reporter and a hidden-info market).",
+      "confidence": "medium",
+      "prediction": "No touchscreen MacBook is purchasable by the general public before 2026-12-31, so the NO legs resolve at 1.00. Falsified if Apple ships a purchasable touchscreen MacBook by Dec-31 \u2014 in which case the lesson is that a single supply-chain reporter is too thin a basis for a 0.80 prior on Apple timing. Intermediate check at the September event: an unveiling with a 2026 ship date would force an immediate re-underwrite.",
+      "size_usd": 3.38,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "macbook",
+        "prior-correction",
+        "anchor-direction",
+        "maker",
+        "cap-bound"
       ],
       "outcome": null,
       "calibration_delta": null,

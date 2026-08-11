@@ -5335,3 +5335,40 @@ GPT-6 by Aug-31 requires Astra-or-successor public by Aug-31. Still under the 8p
 backlog set for that pair, so it stays a watch item. Everything else quiet: 8 positions, MTM $152.10,
 resting Gemini bid live and trickling (0.01sh matched), four daemons single-instance, news 100%
 tier-2 Iran.
+
+## 2026-08-11 10:00 UTC periodic — found a 22pp prior error in my own favour; corrected and added
+
+MacBook NO ran 0.485 -> 0.590 in four hours (+49.7% on the leg, +$6.30, book to $158.31 / +9.7%).
+That is well past the 5pp re-read trigger, and under the prior I was carrying (0.58) it meant the
+mark had REACHED my fair — which under the trim-at-fair pattern is an invitation to sell. I went
+looking for the news that would justify the move, found none fresher than what I already held, and
+at 06:00 that same absence had made me decline to raise the number. So the second time around I
+questioned the number instead of the move.
+
+The prior was wrong, and wrong in a way that flattered a trim. Trail: entry 0.85 (DEC-0046, Jul-15)
+-> 0.76 -> 0.70 -> 0.58 on 08-08, whose commit reason reads "Gurman anchor moved to
+late-2026/early-2027". Fetching the primary source (MacRumors 2026-04-19, no later update) shows
+that phrase is the ORIGINAL expectation and the actual revision is "early 2027 is now more likely
+than late 2026" — with the article stating plainly the machines will not be available for purchase
+in 2026. My 08-08 pass read the pre-revision window as the post-revision one and cut 12pp in the
+wrong direction. Corrected to 0.80: P(YES) ~0.20 covers an Apple surprise or a late-2026 unveil that
+still ships purchasable before Dec-31 despite the memory shortage, held under the 0.85 entry because
+this is one reporter and a hidden-info market where supply-chain flow front-runs public reporting.
+
+Two things that made this findable, both worth keeping. First, the internal contradiction was
+visible in the file the whole time: the `rationale` field reasons explicitly to "15% = late-2026
+ship not-ruled-out" (p_no 0.85) while `p_no` said 0.58. I had read that field as stale prose and
+moved on at 06:00; it was actually the entry-time record disagreeing with a later bad edit. It is
+now labelled ENTRY-TIME RECORD so the two clocks cannot be confused again. Second, I checked whether
+the mismatch was systemic before touching anything — every other prior's prose matches its number,
+so this was one bad edit, not a class.
+
+Acted: 6sh NO @0.59 post-only maker (DEC-0067, $3.54). Size set entirely by the 15% single-ticket
+cap ($23.65 held against a $27.03 ceiling) — rho-discounted Kelly wanted $36. Maker not taker
+because the book was 0.59/0.60 and the taker fee at 0.60 is 4c, four times the spread, on a position
+with 4.7 months to run. Pull the bid before Apple's September event.
+
+The generalisable bit is not "check your priors" but something narrower: my revision NOTE recorded
+only where the anchor had moved TO, not where it moved FROM, and a single quoted window carries no
+direction. Re-reading my own note therefore reproduced the error perfectly, twice. Revisions now
+have to name the before and the after.

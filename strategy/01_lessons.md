@@ -288,6 +288,28 @@
   traps: an EXACT-value bucket ("wins exactly 3 seats") is a partition with NO monotone
   constraint, and a magnitude suffix must be APPLIED, not skipped.
 
+- **When a revision cites a moved anchor, record the BEFORE and the AFTER — a single quoted
+  window does not encode direction.** 2026-08-11: my 08-08 revision cut the MacBook prior
+  0.70 -> 0.58 citing "Gurman anchor moved to late-2026/early-2027". Fetching the primary
+  source showed that phrase was the ORIGINAL expectation; the actual revision was "early 2027
+  is now more likely than late 2026", i.e. the anchor moved the OTHER way and the piece said
+  outright the machines would not be purchasable in 2026. I moved my number 12pp in the wrong
+  direction on my second-largest position and then defended it twice ("no new information")
+  because re-reading my own note reproduced the error perfectly. Rule: a prior revision must
+  name what the source said BEFORE and what it says NOW; "the anchor moved to X" is not a
+  revision record, it is an ambiguous fragment.
+
+- **A prior that is wrong in the direction of your own book is the expensive kind.** The bad
+  0.58 did not just misprice — it made the mark reaching 0.59 read as "position is at fair",
+  which under the trim-at-fair pattern actively invites selling a 21pp edge. Errors that flatter
+  a trim, an exit, or a size-down get executed; errors in the other direction just sit there.
+  Audit priors hardest when the mark is converging on them.
+
+- **`rationale` is the entry-time record; `note` is current.** Reading the former as the latter
+  cost a forensic detour. Entry-time fields are now labelled as such in the priors file — any
+  field that will be read months later by someone with no memory of writing it needs to say
+  which clock it is on.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

@@ -37,12 +37,12 @@
   "criteria_read": "2026-08-05"
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
-  "p_no": 0.58,
+  "p_no": 0.8,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.4,
   "cluster_frac": 0.0,
-  "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
-  "note": "RE-VERIFIED 2026-08-11 (tick) after NO marked 0.435->0.485 in ~3.5h. Searched for fresher reporting and found NONE past what was already priced on 08-08: Gurman's Apr/Jul line is unchanged — touchscreen MBP targeting late-2026-to-EARLY-2027, DRAM/NAND shortages, explicit 'be prepared for the later end of the timeline', M5 Pro/Max not M7. So the move is the MARKET catching up to reporting I already held, not new facts — deliberately did NOT update p_no on a price move with no new information. p_no 0.58 held; criteria still require general-public PURCHASABILITY by Dec-31, so an unveiling alone does not flip it.",
+  "rationale": "[ENTRY-TIME RECORD 2026-07-15, superseded by `note` — do NOT read as current] DEC-0046: Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out. Entry p_no 0.85.",
+  "note": "CORRECTED 0.58 -> 0.80 on 2026-08-11 after fetching the PRIMARY source and finding my own 08-08 revision had INVERTED the direction of the anchor move. Trail: entry 0.85 (Jul-15) -> 0.76 -> 0.70 -> 0.58 (Aug-08, commit reason 'Gurman anchor moved to late-2026/early-2027'). But MacRumors 2026-04-19 (fetched today, no later update) quotes Gurman that 'late 2026 to early 2027' was the ORIGINAL expectation and the REVISION is 'early 2027 is now more likely than late 2026', with the piece stating outright the machines will not be available for purchase in 2026. So the Aug-08 cut treated the pre-revision window as if it were the post-revision one and moved my number 12pp the wrong way. New p_no 0.80: P(YES) ~0.20 covers an Apple surprise or a late-2026 unveil that still ships purchasable before Dec-31 despite the memory shortage; short of the 0.85 entry because this is a single (if authoritative) reporter and a hidden-info market where supply-chain flow can front-run public reporting. CONSEQUENCE OF THE ERROR, worth remembering: at 0.58 the mark reaching 0.59 today read as 'position is at fair', which under the trim-at-fair pattern invites selling a 21pp edge. A prior that is wrong in the direction of your own book is the expensive kind.",
   "verified": "2026-08-11",
   "criteria_read": "2026-08-08",
   "hidden_info": true

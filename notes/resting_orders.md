@@ -98,3 +98,18 @@ re-underwriting, don't let it fill into news.
 
 Re-verify at each tick: if unfilled after ~7 days, either re-price to the then-best bid or drop it —
 a stale resting bid at a price the market has left behind is a free option written to the market.
+
+## LIVE: touchscreen-MacBook-2026 NO maker BUY (2026-08-11 10:15 UTC, DEC-0067)
+
+6 shares NO @ **0.59**, post-only GTC, $3.54, order `0x5d4f7e42…2b86`. Rests at the bid because the
+book was 0.59/0.60 and the helper caps a maker bid one tick under the ask — the 1pp spread is a
+quarter of the 4c taker fee (10% x min(p,1-p) at 0.60), so crossing here would be paying 4x the
+spread to skip a queue on a position with 4.7 months to run.
+
+Size is set by the 15% single-ticket cap, not by conviction: position cost $23.65 against a $27.03
+ceiling. Kelly at p_no 0.80 wanted $36. If the cap ceiling rises with bankroll, this is the first
+position to top up.
+
+NOT catalyst-gated in the near term (Apple's September event is the next scheduled mover, ~Sep 8-10).
+PULL this bid before that event per the scheduled-catalyst rule — a resting bid through an unveiling
+is a free option written to whoever sees the ship date first.
