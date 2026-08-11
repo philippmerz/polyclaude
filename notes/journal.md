@@ -5415,3 +5415,31 @@ the family grades, or if a second instance shows up organically.
 Nothing else surfaced worth acting on. Scripts, notes and strategy files are otherwise consistent:
 priors prose now matches priors numbers across the book (checked), no stale flags, no deprecated
 paths, and every scanner built this week has adversarial tests plus a forced-failure run.
+
+## 2026-08-11 10:40 UTC — the source-diff rotation caught a live error 20 minutes after being built
+
+Applied the new discipline to the position it most applies to: SpaceX, the largest holding ($29.42
+cost) and the oldest `key_facts` entry (checked Aug-05, vaguely sourced). It found that my Aug-05
+CORRECTION was itself the error. That pass had replaced a recorded "$2.1T day-one bar" with "~$1.75T"
+and called the $2.1T figure wrong. The sources say otherwise: SPCX priced at $135, opened ~$150 on
+Jun-12 and closed its first day at $160.95 (+19%), putting first-day market cap above $2.1T, with a
+CNBC headline saying exactly that. My $1.75T most likely came from an outstanding-vs-fully-diluted
+share-count basis — a real ambiguity, but not what the note claimed.
+
+That is two inverted revisions inside twelve hours, and the shape is identical: a revision FEELS like
+verification, so it never gets re-verified, and re-reading it afterwards reproduces the error. The
+useful generalisation is that a correction carries no special authority — "I corrected this on
+<date>" is a claim to check, not a reason to skip checking.
+
+The second thing worth recording is the DIRECTION. The SpaceX error understated the bar a rival must
+clear, so it made me underrate my own YES — harmless, and exactly why it sat for six days without
+anything surfacing it. The MacBook error made a trim look correct, and trims get executed. Same root
+cause, wildly different expected cost. From now on a found error gets its direction logged, because a
+book full of self-flattering errors is a different problem from one full of self-deprecating ones.
+
+Actions: p_yes 0.94 -> 0.96 (a rival now needs a >$2.1T first-day close inside 4.7 months and no such
+S-1 exists), criteria re-read and key_facts rewritten with real sources. No trade — the position is
+already 16.3% of bankroll against a 15% single-ticket cap, an artifact of bankroll drift since entry
+rather than a fresh breach; not force-selling to comply, but no adds either. The resting maker sell
+at 0.96 is now exactly AT fair, which is the correct place for it under the sell-at-fair doctrine: it
+fills only if someone pays fair or better.

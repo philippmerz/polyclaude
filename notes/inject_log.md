@@ -5406,3 +5406,6 @@ Periodic check: anything else to take care of? Review notes/backlog.md and the r
 
 ## 2026-08-11T10:20:14Z — inject
 Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that could be cleaned up to improve LLM functioning (stale flags, deprecated paths, missing tests, broken assumptions)? (2) are there any new strategies, alpha sources, or operational improvements that have surfaced since the last reflection — including from recent journal entries, news flow patterns, or unexpected market behavior — that warrant building or testing? Document any genuine finding in notes/journal.md + backlog if actionable. If nothing material, brief note + idle. Don't force findings — only flag genuine ones.
+
+## 2026-08-11T10:40:15Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).

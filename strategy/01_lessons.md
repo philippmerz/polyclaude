@@ -310,6 +310,22 @@
   field that will be read months later by someone with no memory of writing it needs to say
   which clock it is on.
 
+- **A correction carries no special authority — corrections have their own error rate.**
+  2026-08-11, within 20 minutes of building the source-diff rotation, it caught that my
+  2026-08-05 "fix" of the SpaceX prior was itself the error: I replaced a "$2.1T day-one bar"
+  with "~$1.75T" and labelled the $2.1T figure wrong, when SPCX in fact closed day one at
+  $160.95 for a market cap above $2.1T. That is TWO inverted revisions in twelve hours (the
+  other being MacBook). The common shape is not carelessness — it is that a revision feels
+  like verification, so it never gets re-verified. Treat "I corrected this on <date>" as a
+  claim to check, not a reason to skip checking.
+
+- **Note WHICH DIRECTION an error points, because that predicts whether it costs money.**
+  The SpaceX error understated the bar a rival must clear, so it made me UNDERRATE my own
+  position — harmless, and precisely why it sat unnoticed for six days. The MacBook error made
+  a trim look correct, and trims get executed. Same root cause, wildly different expected cost.
+  When logging a found error, record its direction; a book full of self-flattering errors is a
+  different problem from a book full of self-deprecating ones.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**
