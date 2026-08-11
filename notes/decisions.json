@@ -1,5 +1,5 @@
 {
-  "next_id": 68,
+  "next_id": 69,
   "decisions": [
     {
       "id": 1,
@@ -1289,6 +1289,25 @@
         "anchor-direction",
         "maker",
         "cap-bound"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 68,
+      "timestamp": "2026-08-11T14:57:40Z",
+      "type": "scaffolding",
+      "thesis": "Replaced the hle-cross-event-arb single-leg price trigger with a two-leg pair_arb check after it fired a FALSE POSITIVE at 14:54 UTC and burned a tick dispatch. Root cause: I armed a clob_no_ask trigger at 0.47 on the umbrella-YES leg, deriving that level from the OTHER leg's ask (claude-NO at 0.44) AT ARMING TIME. That leg subsequently moved 0.44 -> 0.56, which drops the true breakeven to ~0.35 \u2014 so when the umbrella ask briefly touched 0.45 the structure actually cost 1.01 before ~8pp of fees, about -9pp, and the trigger fired anyway. A one-leg trigger cannot price a two-leg structure: its level goes stale the moment the unwatched leg moves, and it goes stale SILENTLY. Worse, my own note ON that trigger said 'RE-WALK both books first \u2014 claude-NO ask moves too', so I had anticipated the exact failure and discharged it with a comment instead of a mechanism. New design: opportunity_watch runs cross_event_bound_scan every 900s, walks BOTH books, and alerts only when the taker structure is positive after fees; the scanner gained a machine-parseable summary line for both its modes.",
+      "confidence": "high",
+      "prediction": "No further false fires from this trigger: it can now only alert when both legs are walked live and the after-fee number is positive. Falsified if it fires again on a structure that is not executable when I re-walk it, which would mean the parse or the fee model is wrong rather than the level.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "trigger-design",
+        "false-positive",
+        "pair-arb",
+        "opportunity-watch"
       ],
       "outcome": null,
       "calibration_delta": null,

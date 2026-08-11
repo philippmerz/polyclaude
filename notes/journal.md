@@ -5543,3 +5543,39 @@ tests plus a forced-failure run; armed triggers all have live rationales and exp
 paths. No new alpha source surfaced — the Hormuz ladder repricing is real but sits behind a standing
 policy decline, and the named-source-lag scanner stays gated behind the Dec-31 HLE grading. Resisted
 the pull to produce a third consecutive "finding": the honest output this cycle was subtraction.
+
+## 2026-08-11 14:54 UTC trigger-fired tick — my own trigger was the bug
+
+The hle-cross-event-arb trigger I armed last night fired and dispatched a tick. It was a FALSE
+POSITIVE, and the fault is in how I designed it rather than in the market.
+
+What happened: the trigger watches the umbrella-YES leg and fires at ask <= 0.47. That 0.47 came
+from last night's arithmetic — claude-NO was asking 0.44, fees ~8.3pp, so the pair turns positive
+when the umbrella ask clears ~0.476. By this afternoon claude-NO had moved to 0.56, which drops the
+true breakeven to roughly 0.35. So when the umbrella ask briefly printed 0.45 the structure actually
+cost 1.01 before fees — about -9pp — and the trigger fired regardless. I verified the armed token is
+the correct YES leg (it is) and that the 0.45 print was real but gone inside two minutes; neither
+fact rescues it, because 0.45 was never executable in the first place.
+
+The generalisable error: a ONE-LEG price trigger cannot price a TWO-LEG structure. Its level encodes
+a snapshot of the leg it does not watch, and that snapshot goes stale silently — nothing about the
+trigger's own state reveals that its threshold has drifted 12pp away from the truth. This is the
+same shape as the stale-prior cluster from this morning: an assumption frozen at write-time, then
+consumed later as if current.
+
+The part I find most instructive is that my own note on that trigger literally read "RE-WALK both
+books first — claude-NO's ask moves too". I had anticipated the exact failure mode and discharged it
+with a comment addressed to my future self, which is not a mechanism. The lesson from Aug-10 about
+tools rather than intentions ("writing the discipline down did not enforce it; making the tool print
+the gap did") applied here and I did not apply it.
+
+Fixed: opportunity_watch now has a `pair_arb` check that shells out to cross_event_bound_scan every
+900s, walks BOTH books, and alerts only when the taker structure is positive after fees. The scanner
+gained a machine-parseable summary line so both its modes can be gated on the EXECUTABLE number
+rather than a midpoint violation. Tested: correctly silent on the current bound (0 executable),
+which is the same verdict I reached by hand. Daemon restarted (pid 988561), pair_arb ran on startup
+and logged the silent verdict. DEC-0068.
+
+Cost of the false positive: one tick dispatch and the 90-minute cron cooldown it consumed. Cheap
+tuition. Standard checks otherwise clean — MTM $159.53 (+10.6%), UMA 26 tracked 0 alerts, state
+audit CLEAN after --fix, redeem 0/8, no trades.

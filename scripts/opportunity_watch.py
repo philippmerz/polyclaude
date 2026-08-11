@@ -21,6 +21,7 @@ Schedules:
   - every 900s: polymarket_consistency_scan (parse REAL-arb count)
   - every 900s (staggered +450s): event_monotonicity_scan (parse violations)
   - every 900s: new-listing watch (catalyst families: Gamescom, NYCC, ...)
+  - every 900s: pair-arb bounds (two-leg, gated on the EXECUTABLE number)
 
 Alerting: hits append notes/opportunity_alerts.jsonl. ACTIONABLE hits (real
 arb >2% net, or an armed capital trigger crossing) telegram the operator AND
@@ -276,6 +277,60 @@ def check_new_listings(state: dict) -> None:
                bool(t.get("actionable", True)))
 
 
+def run_pair_arb(state: dict) -> None:
+    """Two-leg bound checks, gated on the EXECUTABLE number.
+
+    Why this replaced a price trigger (2026-08-11): I armed `hle-cross-event-arb`
+    as a single-leg clob_no_ask trigger at 0.47, a level derived from the OTHER
+    leg's ask (0.44) at arming time. That leg then moved to 0.56, so the real
+    breakeven fell to ~0.35 — and when the umbrella ask touched 0.45 the trigger
+    fired a tick dispatch on a structure that cost 1.01 before ~8pp of fees.
+    A one-leg trigger cannot price a two-leg structure: the level goes stale the
+    moment the unwatched leg moves, and it goes stale SILENTLY. My own note on
+    that trigger said "re-walk both books first" — anticipating the failure in a
+    comment is not handling it. This walks both books every cycle and alerts only
+    when the taker structure is actually positive after fees.
+
+    Config: {"key": ..., "kind": "pair_arb", "mode": "umbrella"|"implies",
+             "a": <slug>, "b": <slug>, "note": ...}
+      umbrella: a = umbrella EVENT slug, b = subset EVENT slug
+      implies:  a implies b, both MARKET slugs (so P(a) <= P(b))
+    """
+    try:
+        trigs = json.loads(TRIGGERS_PATH.read_text())
+    except Exception as e:
+        _log(f"triggers file unreadable (pair_arb): {e}")
+        return
+    for t in trigs:
+        if t.get("kind") != "pair_arb":
+            continue
+        args = (["--umbrella", t["a"], "--subset", t["b"]] if t.get("mode") == "umbrella"
+                else ["--implies", t["a"], t["b"]])
+        try:
+            r = subprocess.run([PY, str(SCRIPTS / "cross_event_bound_scan.py")] + args,
+                               capture_output=True, text=True, timeout=300, cwd=str(REPO))
+            out = (r.stdout or "") + (r.stderr or "")
+        except Exception as e:
+            _log(f"pair_arb {t['key']} run failed: {e}")
+            continue
+        n_exec = None
+        for line in out.splitlines():
+            if "executable after live-CLOB walk" in line:
+                parts = line.replace("#", " ").split(";")
+                if len(parts) > 1:
+                    tok = parts[1].strip().split()[0]
+                    n_exec = int(tok) if tok.isdigit() else None
+        if n_exec is None:
+            _log(f"pair_arb {t['key']}: no summary line parsed")
+            continue
+        if n_exec > 0:
+            _alert(state, t["key"],
+                   f"pair-arb EXECUTABLE after live books + fees: {t['key']}. {t.get('note','')}",
+                   actionable=True)
+        else:
+            _log(f"pair_arb {t['key']}: 0 executable (bound may be violated on mids; books say no)")
+
+
 def run_consistency(state: dict) -> None:
     try:
         r = subprocess.run([PY, str(SCRIPTS / "polymarket_consistency_scan.py")],
@@ -341,6 +396,9 @@ def poll_loop() -> int:
             if now - last.get("listings", 0) >= LISTING_EVERY:
                 last["listings"] = now
                 check_new_listings(state)
+            if now - last.get("pair_arb", 0) >= SCAN_EVERY:
+                last["pair_arb"] = now
+                run_pair_arb(state)
             if now - last.get("consistency", 0) >= SCAN_EVERY:
                 last["consistency"] = now
                 run_consistency(state)
@@ -366,6 +424,7 @@ def main() -> int:
         state = _load_state()
         check_price_triggers(state)
         check_new_listings(state)
+        run_pair_arb(state)
         run_consistency(state)
         run_monotonicity(state)
         _save_state(state)

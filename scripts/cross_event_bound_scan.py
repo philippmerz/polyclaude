@@ -143,6 +143,10 @@ def implication_pair(a_slug: str, b_slug: str, fee_rate: float) -> int:
           f"   ({'REAL ARB' if net > 0 else 'dead — spread/fees eat it'})")
     print(f"MAKER: both rested at bid+tick ~{maker_cost:.4f} -> net {(1 - maker_cost) * 100:+.2f}pp"
           f"   (fill NOT guaranteed; a half-fill is an outright directional position)")
+    # Machine-parseable summary, same shape as the umbrella mode's, so the
+    # daemon can gate on the EXECUTABLE number rather than a mid violation.
+    print(f"\n# {1 if net > 0 else 0} mid violation(s); {1 if net > 0 else 0} "
+          f"executable after live-CLOB walk + fees")
     return 0
 
 
