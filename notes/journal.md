@@ -5484,3 +5484,33 @@ warning.
 Nothing else genuine surfaced. News flow is unchanged (constant tier-2 Iran/Hormuz, outside the
 book), no new market behaviour, and the deferred named-source-lag scanner stays gated behind the
 Dec-31 grading of the HLE family.
+
+## 2026-08-11 14:00 UTC tick — quiet; the morning's prior correction is showing up in the numbers
+
+Bankroll $185.55 (+9.1% vs the $170 reference, up from $180.17 at the 02:00 tick), PM MTM $158.68 on
+$144.26 cost (+10.0%). The move is almost entirely MacBook NO, now 0.595 and +51% on the leg — i.e.
+the position I nearly read as "at fair and ready to trim" this morning before pulling the primary
+source. Nothing else changed: UMA 26 tracked with 1 alert (the MacBook 11pp move, already diagnosed
+and acted on at 10:00 — the alert confirming a move I had already handled is the system working, not
+new information), Ostium unchanged, redeem 0/8, marginal-APY all clear, no overdue decisions, state
+audit CLEAN after --fix, exit_analysis all HOLD with no SELL-TAKER. News is still 100% tier-2
+Iran/Hormuz, outside the book. No trades.
+
+Two things worth recording. First, exit_analysis now prices MacBook against the CORRECTED fair: hold
+$48.00 vs taker-sell $29.03, a +$18.97 gap, where this morning's stale 0.58 fair showed $34.80 vs
+$20.41. Same position, same book — the correction roughly doubled the measured cost of exiting. That
+is the concrete value of the fix, and a reminder that a wrong prior does not just mis-size, it
+mis-prices every exit decision downstream of it. Second, the [PRIOR-STALE] tags on Greenland and
+Trump-out are gone now that their `verified` dates were refreshed, and the criteria rotation did NOT
+fire for them — their criteria_read is 6 days old against a 7-day threshold, so the live test of
+whether the rotation surfaces their UNVERIFIED key_facts resolves tomorrow. Correct behaviour, not a
+miss; noting it so tomorrow's tick knows the test is pending rather than passed.
+
+Discovery ran both passes. Nothing entered. The Hormuz family has repriced up across the whole
+ladder since 02:00 (Aug-31 0.035->0.054, Sep-30 0.145->0.190, Dec-31 0.465->0.525) and remains
+monotone — the market is pricing a somewhat higher chance of normalisation while the headlines say
+"stalemate deepens". Still declined: war-adjacent, ambiguous "normal" bar, and the world-state rule
+has already killed two gates in this exact domain. A new neighbour, "US announces end of Iranian
+blockade by Aug-31" at 0.435, is NOT a clean implication sibling of the Hormuz legs (different actor
+and different act), so it does not give the family a cross-event bound to exploit. Thin-tail pass
+surfaced only Billboard near-certainties and self-referential AI-model legs.
