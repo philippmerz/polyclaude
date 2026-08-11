@@ -5514,3 +5514,32 @@ has already killed two gates in this exact domain. A new neighbour, "US announce
 blockade by Aug-31" at 0.435, is NOT a clean implication sibling of the Hormuz legs (different actor
 and different act), so it does not give the family a cross-event bound to exploit. Thin-tail pass
 surfaced only Billboard near-certainties and self-referential AI-model legs.
+
+## 2026-08-11 14:20 UTC meta-reflection — cleaned up my own output rather than adding to it
+
+One genuine finding, and it is about the lessons file itself. I appended THIRTEEN lessons to
+strategy/01_lessons.md in roughly sixteen hours, and six of them were facets of a single failure
+family — "direction of error" had become its own bullet twice, and revision-anchor /
+correction-authority / tick-provisional were three angles on one mechanism. That file's stated job
+(per the memory index) is to be the first thing a fresh session reads, so redundancy is not
+cosmetic: thirteen near-duplicate bullets carry less signal than four well-formed ones, and the
+whole point of the file is signal density under a context budget.
+
+So this cycle was consolidation instead of construction. The six verification-family lessons are now
+one labelled sub-section — "Prior & fact hygiene — the 2026-08-11 cluster" — organised by mechanism
+(a revision feels like verification so it never gets re-verified), remedy (source-diff against a
+FETCHABLE artifact; record what the source said BEFORE and NOW), cost model (self-flattering errors
+get executed, self-deprecating ones just sit), and timing (mid-tick edits are drafts). Every dated
+specific was preserved, because the specifics are the part that transfers: the MacBook 12pp
+inversion defended twice, the SpaceX correction that was itself the error, 3-of-8 key_facts written
+with unfetchable sources, 2-for-2 on bad edits being made mid-tick. I also folded the HLE case in as
+a third example, since it is the same family but a distinct sub-type worth naming — the facts were
+RIGHT and the INFERENCE was wrong, which is harder to catch precisely because every fact-check
+passes. Net: 353 -> 337 lines, 56 -> 52 bullets, and the six scattered bullets became four coherent
+ones in the place someone would actually look.
+
+Nothing else genuine. Scripts are consistent and every scanner shipped this week has adversarial
+tests plus a forced-failure run; armed triggers all have live rationales and expiry dates; no stale
+paths. No new alpha source surfaced — the Hormuz ladder repricing is real but sits behind a standing
+policy decline, and the named-source-lag scanner stays gated behind the Dec-31 HLE grading. Resisted
+the pull to produce a third consecutive "finding": the honest output this cycle was subtraction.

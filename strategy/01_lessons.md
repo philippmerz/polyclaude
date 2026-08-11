@@ -260,12 +260,6 @@
   P(capability)), because a decomposed prior can be checked against the world, and a vibes prior
   cannot. Audit trigger: any live position whose prior differs from mark by >25pp.
 
-- **Re-verify the crux from SOURCE, not from your own notes.** The HLE family was filed as
-  "board frozen since Apr-2025". Fetching it showed the Apr-2025 stamp is the DATASET date and
-  the board had in fact added GPT-5, Grok 4, Claude 4.5 Sonnet and Gemini 3 Pro after it — slow,
-  not dead. My recorded FACTS were right and my recorded INFERENCE was wrong, which is the
-  harder failure to catch because re-reading my own note reproduces the error perfectly.
-
 - **A signal that fires on 100% of the book is not a signal.** The Brownian-bridge pass listed
   all 8 positions as SCALE_UP candidates. That is a tell about the tool's calibration, not an
   instruction — but the biggest outlier in it (69pp) was still worth chasing, and was where the
@@ -288,57 +282,47 @@
   traps: an EXACT-value bucket ("wins exactly 3 seats") is a partition with NO monotone
   constraint, and a magnitude suffix must be APPLIED, not skipped.
 
-- **When a revision cites a moved anchor, record the BEFORE and the AFTER — a single quoted
-  window does not encode direction.** 2026-08-11: my 08-08 revision cut the MacBook prior
-  0.70 -> 0.58 citing "Gurman anchor moved to late-2026/early-2027". Fetching the primary
-  source showed that phrase was the ORIGINAL expectation; the actual revision was "early 2027
-  is now more likely than late 2026", i.e. the anchor moved the OTHER way and the piece said
-  outright the machines would not be purchasable in 2026. I moved my number 12pp in the wrong
-  direction on my second-largest position and then defended it twice ("no new information")
-  because re-reading my own note reproduced the error perfectly. Rule: a prior revision must
-  name what the source said BEFORE and what it says NOW; "the anchor moved to X" is not a
-  revision record, it is an ambiguous fragment.
+### Prior & fact hygiene — the 2026-08-11 cluster (three inverted revisions inside twelve hours)
 
-- **A prior that is wrong in the direction of your own book is the expensive kind.** The bad
-  0.58 did not just misprice — it made the mark reaching 0.59 read as "position is at fair",
-  which under the trim-at-fair pattern actively invites selling a 21pp edge. Errors that flatter
-  a trim, an exit, or a size-down get executed; errors in the other direction just sit there.
-  Audit priors hardest when the mark is converging on them.
+- **The mechanism: a revision FEELS like verification, so it never gets re-verified — and
+  re-reading it reproduces the error perfectly.** Evidence, all found on 2026-08-11:
+  (a) MacBook — my 08-08 edit cut the prior 0.70 -> 0.58 citing "Gurman anchor moved to
+  late-2026/early-2027", but that phrase was the ORIGINAL window; the actual revision said
+  "early 2027 is now more likely than late 2026" and that the machines would not be
+  purchasable in 2026. 12pp the wrong way on the second-largest position, then defended
+  TWICE with "no new information" because each re-check re-read my own note.
+  (b) SpaceX — my 08-05 "correction" replaced a "$2.1T day-one bar" with "~$1.75T" and called
+  the $2.1T figure wrong; SPCX in fact closed day one at $160.95, a cap above $2.1T. The fix
+  was the error. So: "I corrected this on <date>" is a claim to check, not a reason to skip
+  checking.
+  (c) HLE — a DIFFERENT sub-type worth naming: the recorded FACTS were right (board top 38.3,
+  OpenAI 25.3) but the recorded INFERENCE was wrong ("frozen since Apr-2025" — that stamp is the
+  DATASET date, and the board had added GPT-5, Grok 4, Claude 4.5 and Gemini 3 Pro after it; slow,
+  not dead). Wrong inferences off right facts are harder to catch, because every fact-check passes.
 
-- **`rationale` is the entry-time record; `note` is current.** Reading the former as the latter
-  cost a forensic detour. Entry-time fields are now labelled as such in the priors file — any
-  field that will be read months later by someone with no memory of writing it needs to say
-  which clock it is on.
+- **Only a source-diff against a FETCHABLE artifact counts as verification.** Fetching the
+  primary source and comparing its ACTUAL words to what the note CLAIMS it says is what caught
+  both errors; every position "verified" by search-sweep found nothing, which is what a
+  confirmation process produces. When I first populated `key_facts` I wrote 3 of 8 with sources
+  like "coverage sweep" — unfetchable, so a verification against them is my memory agreeing with
+  itself. The audit now tags non-URL sources UNVERIFIED. Writing the discipline down did not
+  enforce it; making the tool print the gap did. Corollary: a revision must record what the
+  source said BEFORE and what it says NOW — "the anchor moved to X" is an ambiguous fragment
+  that encodes no direction.
 
-- **A correction carries no special authority — corrections have their own error rate.**
-  2026-08-11, within 20 minutes of building the source-diff rotation, it caught that my
-  2026-08-05 "fix" of the SpaceX prior was itself the error: I replaced a "$2.1T day-one bar"
-  with "~$1.75T" and labelled the $2.1T figure wrong, when SPCX in fact closed day one at
-  $160.95 for a market cap above $2.1T. That is TWO inverted revisions in twelve hours (the
-  other being MacBook). The common shape is not carelessness — it is that a revision feels
-  like verification, so it never gets re-verified. Treat "I corrected this on <date>" as a
-  claim to check, not a reason to skip checking.
+- **An error's DIRECTION predicts whether it costs money.** Self-flattering errors get executed:
+  the bad MacBook 0.58 made the mark reaching 0.59 read as "at fair", which under trim-at-fair
+  actively invites selling a 21pp edge. Self-deprecating ones just sit: the SpaceX error
+  understated the bar a rival must clear, so it made me UNDERRATE my own position and went
+  unnoticed for six days. Same root cause, wildly different expected cost — so log the direction
+  of every error found, and audit priors hardest when the mark is CONVERGING on them.
 
-- **Note WHICH DIRECTION an error points, because that predicts whether it costs money.**
-  The SpaceX error understated the bar a rival must clear, so it made me UNDERRATE my own
-  position — harmless, and precisely why it sat unnoticed for six days. The MacBook error made
-  a trim look correct, and trims get executed. Same root cause, wildly different expected cost.
-  When logging a found error, record its direction; a book full of self-flattering errors is a
-  different problem from a book full of self-deprecating ones.
-
-- **Prior edits made DURING a tick are provisional until source-diffed.** Both inverted
-  revisions found on 2026-08-11 (MacBook 08-08, SpaceX 08-05) were written during routine
-  ticks — passes where many things get updated quickly — and both were caught later during
-  deep single-topic dives. That is a 2-for-2 pattern about WHEN bad prior edits get made, not
-  just that they happen. A number changed mid-tick should be treated as a draft carrying a
-  citation obligation, not as a completed revision.
-
-- **A claim is only verifiable against a FETCHABLE artifact.** When I first populated
-  `key_facts` I wrote 3 of 8 with sources like "coverage sweep" — unfetchable, so a future
-  "verification" against them is just my memory agreeing with itself, which is the exact
-  failure the field exists to prevent. The schema now tags non-URL sources UNVERIFIED so the
-  weakest claims are visibly the ones to fix. Writing the discipline down did not enforce it;
-  making the tool print the gap did.
+- **Mid-tick prior edits are drafts, not revisions; and label which clock a field is on.** Both
+  inverted edits were written during routine ticks (many things updated fast) and both were
+  caught during deep single-topic dives — 2-for-2 on WHEN bad edits happen. A number changed
+  mid-tick carries a citation obligation until source-diffed. Relatedly, `rationale` is the
+  ENTRY-TIME record and `note` is current state; reading the former as the latter is what hid a
+  27pp internal contradiction for three days, so entry-time fields now say so explicitly.
 
 ## Process & operator covenant
 
