@@ -1,5 +1,5 @@
 {
-  "next_id": 69,
+  "next_id": 70,
   "decisions": [
     {
       "id": 1,
@@ -1308,6 +1308,26 @@
         "false-positive",
         "pair-arb",
         "opportunity-watch"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 69,
+      "timestamp": "2026-08-11T18:27:22Z",
+      "type": "skip",
+      "thesis": "SKIP adding a Gemini-HLE >=60 NO leg despite an apparent 31pp edge, on two independent grounds. FIRST, the edge was a midpoint illusion: I reasoned from a mid-implied NO price of 0.445, but the live ask is 0.57 (bid 0.32, a 25pp spread), and the >=55 leg asks 0.75 against a 0.35 bid (40pp). At the real ask the post-fee edge is ~15pp, not 31pp, and the >=55 leg is NEGATIVE edge at its ask. The apparent ladder inversion (>=60 YES 0.555 above >=55 YES 0.460) does not exist in executable prices at all \u2014 it was mid-of-wide-spread on BOTH legs, which is precisely why the scanner's live-book walk returned -33.40pp. That is the third time today mids have misled me, in a session where I have twice caught the same error in other tools. SECOND and independent of price: an inversion identifies an inconsistent PAIR, not a wrong LEG, so it does not by itself tell you which side to take; and my thesis would have me buy NO on both rungs, which is not exploiting an inconsistency, it is levering the bet I already hold. A fourth leg at rho~0.95 on a crux I have explicitly labelled an interpretation I cannot verify is concentration wearing the costume of diversification.",
+      "confidence": "high",
+      "prediction": "The >=60/>=55 apparent inversion never becomes executable: any future live-book walk of that pair returns a negative net after fees. Falsified if the pair ever prices positive on real asks, which would mean wide-spread mid artifacts can persist into executable territory and my mid-based screening deserves more weight, not less.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "gemini-ladder",
+        "mid-artifact",
+        "correlated-leg",
+        "cluster"
       ],
       "outcome": null,
       "calibration_delta": null,

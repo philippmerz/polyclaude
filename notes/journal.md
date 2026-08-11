@@ -5613,3 +5613,29 @@ Decisions, both declines. Did NOT chase the resting 0.10 Gemini bid up to the 0.
 same claim 9pp higher doubles the basis on a leg I deliberately lottery-sized, and the bid costs
 nothing but collateral I have no better use for today. Did NOT take profit: fair is 0.56 against a
 0.167 best bid, so selling would donate 39pp. Left both alone.
+
+## 2026-08-11 18:25 UTC — nearly traded off midpoints for the third time today
+
+Followed up the Gemini ladder inversion to see whether the >=60 leg was a directional opportunity
+rather than an arb. It is not, and the way it failed is the point.
+
+I started reasoning from mids: >=60 YES 0.555 implies NO at 0.445, my decomposed fair for that rung
+is ~0.76 (it needs both a board update AND a capability jump far past today's 44.7), so ~31pp of
+edge with cluster room to spare ($19.07 of HLE cost is 10.3% of bankroll against a 30% cap). Then I
+walked the books, which is the step I have been forcing on every tool this week and nearly skipped
+for myself. The >=60 NO ask is 0.57, not 0.445 — bid 0.32, a 25pp spread. The >=55 NO ask is 0.75
+against a 0.35 bid, a 40pp spread. At real prices the >=60 edge is ~15pp after fees rather than 31pp,
+and >=55 NO is NEGATIVE edge at its ask.
+
+Which means the inversion I found an hour ago does not exist in executable prices. It was mid-of-
+wide-spread on BOTH legs simultaneously — exactly why the scanner's live-book walk said -33.40pp
+while the midpoint screen said +9.50pp. Third time today the mids have lied to me, in the same
+session where I caught them lying inside two different tools. The lesson I keep re-learning is not
+"mids are unreliable" — I have that written down twice — it is that I apply the rule to TOOL output
+and forget it for my OWN arithmetic.
+
+Skipped, and on a second ground that stands even if the price had been real: an inversion identifies
+an inconsistent PAIR, not a wrong LEG. It does not tell you which side to take. My thesis would have
+me buy NO on both rungs, which is not exploiting an inconsistency — it is levering the position I
+already hold. A fourth leg at rho~0.95 on a crux I have explicitly called an interpretation I cannot
+verify is concentration wearing the costume of diversification. DEC-0069, ledger N=46.
