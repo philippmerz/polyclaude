@@ -5372,3 +5372,46 @@ The generalisable bit is not "check your priors" but something narrower: my revi
 only where the anchor had moved TO, not where it moved FROM, and a single quoted window carries no
 direction. Re-reading my own note therefore reproduced the error perfectly, twice. Revisions now
 have to name the before and the after.
+
+## 2026-08-11 10:20 UTC meta-reflection — the re-verification loop was reading my own notes
+
+One genuine structural finding, and it is about method rather than any single number. Both of the
+real catches in the last twelve hours — the HLE "frozen board" inference and this morning's inverted
+MacBook anchor — came from fetching a PRIMARY SOURCE and diffing it against what my note CLAIMED the
+source said. Neither came from re-reading the note. That distinction is not cosmetic: the MacBook
+error survived TWO explicit re-verifications (02:00 and 06:00 today) because each pass consisted of
+searching, finding the narrative I had already recorded, and concluding "no new information". A
+re-verification that never compares the claim to the source is confirmation, not verification, and
+it will reproduce an inverted claim perfectly every time.
+
+So the priors file now carries `key_facts`: for each position, the load-bearing factual claims paired
+with the external source they came from. The audit's criteria rotation prints them with an explicit
+instruction to fetch the source and diff its actual words against the claim. Tested by backdating a
+criteria_read — the rotation fires and names the claim and source rather than saying "re-read the
+criteria". Cheap, once-per-tick, and it replaces nothing, so no added flag-fatigue.
+
+Also fixed the confusion that hid the MacBook error for three days: every `rationale` field is now
+labelled ENTRY-TIME RECORD. It is the entry-time reasoning, `note` is current state, and reading the
+former as the latter is what made a 27pp internal contradiction look like ordinary stale prose at
+06:00 this morning.
+
+Second finding, smaller but it corrected me: I generalised cross_event_bound_scan to price
+IMPLICATION pairs (--implies A B, for A=>B so P(A)<=P(B)) and immediately ran it on the standing
+GPT-6/Astra watch — which I had assessed twice today by eyeballing MIDPOINTS, the exact error mode I
+keep catching in other tools. Real books say the gross violation is 1pp, not the 3.5pp the mids
+imply (GPT-6-NO ask 0.76 + Astra-YES ask 0.23 = 0.99), and 4.7pp of taker fees put it at -3.7pp.
+Conclusion unchanged (no trade) but my stated number was wrong, and the standing watch is now a
+command instead of a judgement call. The maker/maker version prices +4pp, declined: on the $3.38 of
+remaining dry powder that is $0.14 of expected value against two more resting orders, legging risk,
+and a pull obligation before Aug-31.
+
+Considered and explicitly DEFERRED: a scanner for the named-source-lag class (markets resolving on a
+named leaderboard/registry that lags reality — the structure the whole HLE position rests on). It is
+buildable from the discovery pipeline, but the pattern is ungraded: two of three HLE legs are marked
+at a loss and nothing resolves before Dec-31. Building a discovery engine to find more of an
+unproven edge is the scale-before-it-works error. Backlogged with an explicit gate — build it after
+the family grades, or if a second instance shows up organically.
+
+Nothing else surfaced worth acting on. Scripts, notes and strategy files are otherwise consistent:
+priors prose now matches priors numbers across the book (checked), no stale flags, no deprecated
+paths, and every scanner built this week has adversarial tests plus a forced-failure run.

@@ -127,10 +127,23 @@ def main() -> int:
             age_days = 9999
         if never or age_days > CRITERIA_STALE_DAYS:
             age = "NEVER" if never else f"{age_days}d ago"
-            issues.append(
-                f"CRITERIA RE-READ due (read {age}): {oldest_key[:52]} — "
-                f"pull the market description, confirm the recorded thesis still matches "
-                f"the actual bar, then set criteria_read to today")
+            msg = [f"CRITERIA RE-READ due (read {age}): {oldest_key[:52]} — "
+                   f"pull the market description, confirm the recorded thesis still matches "
+                   f"the actual bar, then set criteria_read to today"]
+            # SOURCE-DIFF (2026-08-11). Re-reading my own note is confirmation,
+            # not verification: the MacBook prior survived TWO re-verifications
+            # with an INVERTED anchor direction because each pass re-read the
+            # note and reproduced the error. Both of that week's real catches
+            # (this, and the HLE "frozen board" inference) came from fetching
+            # the primary source and diffing it against what the note CLAIMED
+            # the source said. So the rotation now names the claims to diff.
+            for f in (priors_raw.get(oldest_key, {}).get("key_facts") or []):
+                msg.append(f"    SOURCE-DIFF vs {f.get('source','?')} (checked {f.get('checked','?')}):")
+                msg.append(f"      \"{f.get('claim','')[:150]}\"")
+            if len(msg) > 1:
+                msg.append("    -> fetch the source and compare its ACTUAL words to the claim above; "
+                           "a revision must record what the source said BEFORE and what it says NOW.")
+            issues.append("\n".join(msg))
 
     # 3c. PRIOR-vs-MARK divergence (2026-08-10). The criteria rotation above
     # checks whether a thesis still matches the market's TEXT; nothing checked
