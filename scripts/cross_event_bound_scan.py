@@ -112,7 +112,7 @@ def _market(slug: str) -> dict | None:
             "question": m.get("question"), "vol24": float(m.get("volume24hr") or 0)}
 
 
-def implication_pair(a_slug: str, b_slug: str, fee_rate: float) -> int:
+def implication_pair(a_slug: str, b_slug: str, fee_rate: float, min_edge_pp: float = 2.0) -> int:
     """A implies B  =>  P(A) <= P(B). Violation is riskless: BUY A-NO + BUY B-YES.
 
     Same payout table as the umbrella/subset case (A is the subset of states).
@@ -140,13 +140,14 @@ def implication_pair(a_slug: str, b_slug: str, fee_rate: float) -> int:
     maker_cost = (ab or 0) + 0.01 + (bb or 0) + 0.01
     print(f"A-NO ask {a_ask:.3f} x{a_dep:g}   B-YES ask {b_ask:.3f} x{b_dep:g}")
     print(f"TAKER: cost {a_ask + b_ask:.4f} + fees {fees:.4f} -> net {net:+.2f}pp"
-          f"   ({'REAL ARB' if net > 0 else 'dead — spread/fees eat it'})")
+          f"   ({'REAL ARB' if net >= min_edge_pp else 'dead — spread/fees eat it'})")
     print(f"MAKER: both rested at bid+tick ~{maker_cost:.4f} -> net {(1 - maker_cost) * 100:+.2f}pp"
           f"   (fill NOT guaranteed; a half-fill is an outright directional position)")
     # Machine-parseable summary, same shape as the umbrella mode's, so the
     # daemon can gate on the EXECUTABLE number rather than a mid violation.
-    print(f"\n# {1 if net > 0 else 0} mid violation(s); {1 if net > 0 else 0} "
-          f"executable after live-CLOB walk + fees")
+    hit = 1 if net >= min_edge_pp else 0
+    print(f"\n# {1 if net > 0 else 0} mid violation(s); {hit} "
+          f"executable after live-CLOB walk + fees (floor {min_edge_pp:.1f}pp)")
     return 0
 
 
@@ -158,12 +159,17 @@ def main() -> int:
     ap.add_argument("--subset", action="append",
                     help="event slug of a subset family (repeatable)")
     ap.add_argument("--min-violation-pp", type=float, default=1.0)
+    ap.add_argument("--min-edge-pp", type=float, default=2.0,
+                    help="minimum NET executable edge to count as a real arb. Model-error floor, "
+                         "not a scale filter: sub-2pp sits inside fee/slippage uncertainty and a "
+                         "two-leg structure goes directional if one leg fills alone (2026-08-11).")
     ap.add_argument("--fee-bps", type=float, default=1000.0,
                     help="taker base fee in bps applied to min(p,1-p)")
     args = ap.parse_args()
 
     if args.implies:
-        return implication_pair(args.implies[0], args.implies[1], args.fee_bps / 10000.0)
+        return implication_pair(args.implies[0], args.implies[1],
+                                args.fee_bps / 10000.0, args.min_edge_pp)
     if not (args.umbrella and args.subset):
         ap.error("need either --implies A B, or --umbrella with at least one --subset")
 
@@ -197,13 +203,14 @@ def main() -> int:
             maker_net = (1.0 - maker_cost) * 100
             print(f"   umbrella-YES ask {ua:.3f} x{ud:g}   subset-NO ask {sa:.3f} x{sd:g}")
             print(f"   TAKER: cost {ua + sa:.4f} + fees {fees:.4f} -> net {taker_net:+.2f}pp"
-                  f"   ({'REAL ARB' if taker_net > 0 else 'dead — spread/fees eat it'})")
+                  f"   ({'REAL ARB' if taker_net >= args.min_edge_pp else 'dead — spread/fees eat it'})")
             print(f"   MAKER: resting both at bid+tick costs ~{maker_cost:.4f} -> net {maker_net:+.2f}pp"
                   f"   (fill NOT guaranteed; a half-fill is an outright directional position)")
-            if taker_net > 0:
+            if taker_net >= args.min_edge_pp:
                 n_real += 1
 
-    print(f"\n# {n_mid} mid violation(s); {n_real} executable after live-CLOB walk + fees")
+    print(f"\n# {n_mid} mid violation(s); {n_real} executable after live-CLOB walk + fees "
+          f"(floor {args.min_edge_pp:.1f}pp)")
     return 0
 
 

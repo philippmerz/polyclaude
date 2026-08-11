@@ -324,6 +324,23 @@
   ENTRY-TIME record and `note` is current state; reading the former as the latter is what hid a
   27pp internal contradiction for three days, so entry-time fields now say so explicitly.
 
+- **A detector needs an ECONOMICS spec, not just a correctness spec — and the gap only
+  shows up once the phantoms are gone.** 2026-08-11 produced two daemon-fired ticks, neither
+  about the market: a false positive from a two-leg trigger whose level encoded the unwatched
+  leg's price at arming time, and a TRUE positive worth +0.37pp that was still not worth
+  waking for. Last week's bugs were phantom arbs (detector wrong); this week's are real arbs
+  below the threshold of mattering (detector right, economics unspecified). Every alerting
+  check now needs a floor, and the floor's justification must be MODEL ERROR, not bankroll
+  size: 0.37% is 0.37% at any scale, but a sub-2pp edge sits inside my own fee/slippage
+  uncertainty (the same pair measured +0.37pp and +0.59pp eight minutes apart) and a two-leg
+  structure goes directional the instant one leg fills alone.
+
+- **When you fix an instance, grep for the class in your own recent code.** The monotonicity
+  floor was added at 18:28; `run_pair_arb`, which I had written four hours earlier, had the
+  identical `> 0` gate and would have repeated the failure. Both scanners now take the floor
+  as a parameter. The habit that catches this is asking "which OTHER call sites did I write
+  with the same assumption?" immediately after any fix — not at the next reflection.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

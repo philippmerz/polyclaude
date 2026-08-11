@@ -5670,3 +5670,27 @@ phantom arbs I spent last week fixing, and arguably the one that shows up once t
 Standard checks clean: MTM $164.11 (+11.0%), UMA 1 alert (the Gemini +7.9pp move, already diagnosed
 at 18:00 — real book, sibling-checked), state audit flagged the MacBook snapshot drift 60 -> 66 from
 this afternoon's fill and --fix reconciled it (now CLEAN), redeem 0/8, no trades.
+
+## 2026-08-11 18:48 UTC — fixed the class, not just the instance
+
+Twenty minutes after adding the 2pp economic floor to the monotonicity alert, I asked the question
+that should follow every fix: which OTHER code did I write with the same assumption? The answer was
+`run_pair_arb` — written four hours earlier today — gating on `n_exec > 0` with no floor at all.
+Identical bug, same daemon, same afternoon. It had simply not fired yet.
+
+So the floor is now a parameter of cross_event_bound_scan (`--min-edge-pp`, default 2.0) applied in
+BOTH its modes, which means the daemon inherits it rather than reimplementing it. Verified the
+GPT-6/Astra pair reports "0 executable ... (floor 2.0pp)" and — the part that actually needed
+checking — that changing the summary line's format did not break the daemon's parser, since
+run_pair_arb reads that exact line to decide whether to wake a tick. It parses.
+
+The broader pattern from today is worth naming precisely. Last week's daemon bugs were PHANTOM arbs:
+the detector was wrong (Montana duplicates, WH per-day full-lid, my own inverted FDV ladder). Today's
+two fires were the opposite: the detector was right both times and the ECONOMICS were unspecified —
+once a level that went stale by design, once a genuine +0.37pp arb below the threshold of mattering.
+That is the bug class that surfaces after you finish killing the phantoms, and it needs a different
+fix: every alerting path needs a floor, justified by model error rather than bankroll size. 0.37% is
+0.37% at any scale, but the same pair measured +0.37pp and +0.59pp eight minutes apart, so sub-2pp is
+inside my own measurement noise.
+
+Daemon restarted with both fixes live. No trades, no position changes.
