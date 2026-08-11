@@ -5579,3 +5579,37 @@ and logged the silent verdict. DEC-0068.
 Cost of the false positive: one tick dispatch and the 90-minute cron cooldown it consumed. Cheap
 tuition. Standard checks otherwise clean — MTM $159.53 (+10.6%), UMA 26 tracked 0 alerts, state
 audit CLEAN after --fix, redeem 0/8, no trades.
+
+## 2026-08-11 18:00 UTC periodic — MacBook add filled; Gemini +123%; ladder inversion caught and correctly rejected
+
+Two real developments. The MacBook maker bid FILLED — 6sh at 0.59, fee-free, position now 66sh at
+0.412 average and $27.19 cost, which is 14.6% of a $186 bankroll and therefore still inside the 15%
+single-ticket cap that set the size in the first place. That is the whole maker-first thesis working
+end to end: rested at the bid rather than crossing a 1pp spread, never paid the 4c taker fee, and
+the correction that justified the add this morning is now carried at a better basis than a taker
+entry would have given. Book MTM $163.91 (+10.9%).
+
+The louder move was Gemini-HLE >=50 NO going 0.102 -> 0.179, +123% on that leg. Before treating that
+as validation I checked whether the mark was real, because a 77% move on a thin book is exactly the
+midpoint-artifact setup my own rules warn about. It holds up: the book is genuinely two-sided with
+84 shares of bid depth at >=0.15 against the 36.01 I hold, so I could realise roughly 0.157 versus an
+0.080 entry. Not a phantom.
+
+Then the sibling check turned up something better than the move itself: the Gemini ladder is
+INVERTED at the 55/60 rungs — >=60 YES at 0.555 sits above >=55 at 0.460, a 9.5pp violation of
+P(>=60) <= P(>=55). That is precisely what last night's threshold pass was built for, and it worked:
+the scanner flagged it, walked the live books, and returned -33.40pp executable — ARTIFACT, not an
+arb. So the tool caught a real structural violation in a family I am actually invested in and then
+correctly talked me out of it, which is the more valuable half. Default leg-volume gate is 500 and
+every Gemini leg clears it ($502-$1827), so the daemon sees this on its own 15-min cycle and stays
+silent because it only alerts on REAL arbs. Working as designed.
+
+Also worth naming: the >=50 leg moved DOWN in YES while >=60 moved UP 35pp. A genuine capability
+repricing moves a ladder in one direction; this did not, which is itself the tell that the >=60 quote
+is thin-book flow rather than information. That is the same sibling-coherence logic that called the
+GPT-6 drift as noise this morning, applied within a single event instead of across two.
+
+Decisions, both declines. Did NOT chase the resting 0.10 Gemini bid up to the 0.191 ask — buying the
+same claim 9pp higher doubles the basis on a leg I deliberately lottery-sized, and the bid costs
+nothing but collateral I have no better use for today. Did NOT take profit: fair is 0.56 against a
+0.167 best bid, so selling would donate 39pp. Left both alone.

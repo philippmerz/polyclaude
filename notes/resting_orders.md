@@ -99,9 +99,13 @@ re-underwriting, don't let it fill into news.
 Re-verify at each tick: if unfilled after ~7 days, either re-price to the then-best bid or drop it —
 a stale resting bid at a price the market has left behind is a free option written to the market.
 
-## LIVE: touchscreen-MacBook-2026 NO maker BUY (2026-08-11 10:15 UTC, DEC-0067)
+## FILLED: touchscreen-MacBook-2026 NO maker BUY (placed 2026-08-11 10:15, filled by 18:00 UTC, DEC-0067)
 
-6 shares NO @ **0.59**, post-only GTC, $3.54, order `0x5d4f7e42…2b86`. Rests at the bid because the
+6 shares NO @ **0.59** — FILLED, fee-free. Position now 66sh at 0.412 avg, cost $27.19 (14.6% of a
+$186 bankroll, inside the 15% single-ticket cap the size was set by). The maker route worked exactly
+as intended: rested at the bid rather than crossing, and the 4c taker fee was never paid.
+
+Original placement rationale: post-only GTC, $3.54, order `0x5d4f7e42…2b86`. Rested at the bid because the
 book was 0.59/0.60 and the helper caps a maker bid one tick under the ask — the 1pp spread is a
 quarter of the 4c taker fee (10% x min(p,1-p) at 0.60), so crossing here would be paying 4x the
 spread to skip a queue on a position with 4.7 months to run.
