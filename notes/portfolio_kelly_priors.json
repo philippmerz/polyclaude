@@ -86,13 +86,13 @@
   ]
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
-  "p_no": 0.82,
+  "p_no": 0.85,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.7,
   "cluster_frac": 0.0,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` — do NOT read as current] 2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% — a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair.",
   "verified": "2026-08-11",
-  "note": "RE-VERIFIED 2026-08-11 06:00 after NO drifted 0.780->0.745 overnight (3.5pp, under the 5pp re-read trigger but this is 17% of the book with 20d left). PUBLIC EVIDENCE MOVED **TOWARD** NO while the tape moved away: no waitlist, beta or early-access signup exists for Astra (the criteria require OPEN beta / OPEN rolling waitlist for YES); Altman is on record needing more time for safety work; and on 2026-08-07 OpenAI disclosed Astra 'cannot rule out' reaching the CRITICAL cybersecurity threshold under its Preparedness Framework — a first, which triggers deployment safeguards. Reporting (medium confidence, treat as a lead not a verified fact) adds a ~30-day federal pre-release review putting the earliest plausible public window in SEPTEMBER, i.e. past Aug-31. SIBLING CHECK (the discipline that called both the Aug-5 noise dip and the Aug-6 real spike): the 'Astra released by' ladder prices Aug-15 0.024 / Aug-31 0.225 / Sep-15 0.535 / Sep-30 0.753 / Oct-31 0.905 — monotone, and modal outcome September. That AGREES with my read, so the GPT-6 drift is uncorroborated by the more liquid sibling (Astra Aug-31 v24 $1485) => NOISE, hold, no informed-flow reason to cut. p_no HELD at 0.82: decomposed as P(Astra public by Aug-31) ~0.20 x P(recognised as GPT-5 successor) ~0.85 + ~0.02 for a differently-named GPT-6 => P(YES) ~0.19. Note the market has ALREADY priced the September story, so my evidence does not beat it by much — edge ~6pp over the 0.745 mark, inside noise, NO ADD. Implication pair now GPT-6 YES 0.255 vs Astra-Aug-31 YES 0.225 = 3pp inverted (GPT-6 YES logically cannot exceed Astra YES); still under the 8pp real-book bar in backlog, no trade.",
+  "note": "0.82 -> 0.85 on 2026-08-11 after a REAL source-diff replaced two sweep-based claims with a dated primary-ish article (pub. 2026-08-10). The upgrade that moved the number is mechanistic rather than rhetorical: the CRITICAL Preparedness-Framework classification did not merely prompt caution, it TRIGGERED mandated development slowdowns, enhanced security controls, expanded monitoring and additional testing BEFORE broader release. So YES by Aug-31 now requires OpenAI to complete framework-mandated safeguards AND stand up OPEN access (open beta or open rolling waitlist — closed/private does not count) inside 20 days, having not yet opened even a waitlist. P(YES) ~0.15. Market disagreement is modest: the on-point Astra-by-Aug-31 sibling trades 0.225, so I am ~7pp more confident than the market, not wildly so. NO ADD: edge ~9pp before fees is real but thin for committing the last $3.38 of dry powder while two maker bids ($6.00 Gemini, $3.54 MacBook) are still outstanding and could consume collateral. THESIS-BREAK TRIAGE unchanged and now better grounded — 'waitlist opens' / 'generally available' / 'rolling access' = exit; 'closed beta' / 'select customers' / 'safety testing with partners' = hold.",
   "hazard_schedule": {
    "note": "SUSPENDED 2026-08-06 — schedule assumptions dead post-sibling-event; prior tracks market until the cause is identified.",
    "checkpoints": {}
@@ -102,18 +102,18 @@
   "thesis_break_rule": "CRITERIA RE-READ 2026-08-10 (21d to resolution, active Astra rumour flow). YES needs GPT-6 'made available to the GENERAL PUBLIC' by Aug-31 23:59 ET. The text is explicit that OPEN beta and OPEN ROLLING WAITLIST signups DO count, while a CLOSED beta or ANY form of private access does NOT, and the access must be 'clearly defined and publicly announced by OpenAI'. Naming: explicitly 'GPT-6' OR anything 'recognized as a successor to GPT-5' (so Astra can qualify on positioning alone); 'GPT-5.5 or similar' explicitly does NOT. => TIER-1 ALERT TRIAGE, decide BEFORE reacting: 'Astra waitlist opens' / 'generally available' / 'rolling access' = REAL thesis break, exit. 'Astra closed beta' / 'early access for select customers' / 'safety testing with partners' = NOT a break, hold — the criteria exclude private access by name. Current world state supports NO: Altman ~Aug-6 stated publicly that Astra is NOT yet generally available and that OpenAI needs 'a little longer' pending cyber-capability safety work — a dated first-party statement that the qualifying event has not occurred and is gated on a review. Prior 0.82 vs market 0.78 = 4pp, inside divergence threshold, no trade.",
   "key_facts": [
    {
-    "claim": "No open waitlist / open beta / early-access signup exists for Astra (criteria require OPEN access; closed or private does NOT count).",
-    "source": "search sweep + OpenAI channels",
+    "claim": "Altman, verbatim: 'Given its cyber capabilities, we need a little bit longer to do this safely' (+ 'not too long!') and 'We do not think it is a good strategy to keep powerful models to a chosen few'. Article states NO waitlist, beta or early-access program exists for Astra.",
+    "source": "https://bravenewcoin.com/insights/openai-ceo-sam-altman-says-astra-ai-will-be-generally-available-but-cyber-capabilities-require-more-safety-work",
     "checked": "2026-08-11"
    },
    {
-    "claim": "2026-08-07 OpenAI disclosed Astra 'cannot rule out' reaching the CRITICAL cybersecurity threshold under its Preparedness Framework — first model ever; Altman publicly says more time needed.",
-    "source": "Altman statement / OpenAI disclosure, corroborated by operator relay",
+    "claim": "OpenAI's own evaluations could not rule out Astra reaching the CRITICAL cyber threshold under its Preparedness Framework — the highest classification, which TRIGGERED development slowdowns, enhanced security controls, expanded monitoring and additional testing requirements BEFORE broader release.",
+    "source": "https://bravenewcoin.com/insights/openai-ceo-sam-altman-says-astra-ai-will-be-generally-available-but-cyber-capabilities-require-more-safety-work",
     "checked": "2026-08-11"
    },
    {
-    "claim": "Sibling market 'Astra released by' prices Aug-31 at 0.225 and Sep-15 at 0.535 — modal release September.",
-    "source": "polymarket openais-astra-released-by-20260801214557729",
+    "claim": "Sibling market 'Astra released by' prices Aug-31 at 0.225, Sep-15 0.535, Sep-30 0.753 — monotone, modal release September.",
+    "source": "gamma-api event openais-astra-released-by-20260801214557729",
     "checked": "2026-08-11"
    }
   ]

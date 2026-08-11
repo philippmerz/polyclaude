@@ -326,6 +326,20 @@
   When logging a found error, record its direction; a book full of self-flattering errors is a
   different problem from a book full of self-deprecating ones.
 
+- **Prior edits made DURING a tick are provisional until source-diffed.** Both inverted
+  revisions found on 2026-08-11 (MacBook 08-08, SpaceX 08-05) were written during routine
+  ticks — passes where many things get updated quickly — and both were caught later during
+  deep single-topic dives. That is a 2-for-2 pattern about WHEN bad prior edits get made, not
+  just that they happen. A number changed mid-tick should be treated as a draft carrying a
+  citation obligation, not as a completed revision.
+
+- **A claim is only verifiable against a FETCHABLE artifact.** When I first populated
+  `key_facts` I wrote 3 of 8 with sources like "coverage sweep" — unfetchable, so a future
+  "verification" against them is just my memory agreeing with itself, which is the exact
+  failure the field exists to prevent. The schema now tags non-URL sources UNVERIFIED so the
+  weakest claims are visibly the ones to fix. Writing the discipline down did not enforce it;
+  making the tool print the gap did.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

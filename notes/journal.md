@@ -5443,3 +5443,44 @@ already 16.3% of bankroll against a 15% single-ticket cap, an artifact of bankro
 rather than a fresh breach; not force-selling to comply, but no adds either. The resting maker sell
 at 0.96 is now exactly AT fair, which is the correct place for it under the sell-at-fair doctrine: it
 fills only if someone pays fair or better.
+
+## 2026-08-11 11:00 UTC meta-reflection — measuring the new check instead of adding another
+
+Rather than hunt for a new finding, I looked at the hit rate of the thing built an hour ago. Three
+true source-diffs run so far: MacBook (found an inverted revision), SpaceX (found a CORRECTION that
+was itself inverted), GPT-6 (confirmed, and upgraded). Meanwhile every position "verified" by search
+sweep has found nothing — which is exactly what a confirmation process produces. The diffs are doing
+work the sweeps cannot.
+
+That exposed a real schema gap I had built myself an hour earlier: 3 of the first 8 `key_facts` were
+written with sources like "coverage sweep" or "congressional record", which are not fetchable, so a
+future verification against them is my memory agreeing with itself. The rotation now tags any
+non-URL source `NO FETCHABLE SOURCE — treat as UNVERIFIED`, so the weakest claims are visibly the
+ones to fix first. Writing the discipline into a lesson did not enforce it; making the tool print
+the gap does. Left Greenland and Trump-out deliberately untagged-and-unfixed (142d deep-NO
+monitoring positions with resting sells at fair) as a live test that the rotation drives the
+behaviour next tick rather than only passing a forced test.
+
+The GPT-6 diff was the substantive one, and it CONFIRMED rather than broke the claim — worth noting
+because a process that only ever finds errors is probably manufacturing them. Fetching the dated
+article (pub. 2026-08-10) gave Altman verbatim — "Given its cyber capabilities, we need a little bit
+longer to do this safely" — no waitlist/beta/early-access in existence, and the detail that actually
+moved the number: the CRITICAL Preparedness-Framework classification did not merely prompt caution,
+it TRIGGERED mandated development slowdowns, enhanced security controls, expanded monitoring and
+additional testing BEFORE broader release. That converts a vague "they need more time" into a
+mechanism with required steps. p_no 0.82 -> 0.85: YES by Aug-31 now needs framework-mandated
+safeguards completed AND open access stood up within 20 days, from a standing start of no waitlist.
+Honest caveat recorded with it — the on-point Astra-by-Aug-31 sibling trades 0.225, so I am ~7pp
+more confident than the market, not wildly so. No add: ~9pp before fees is thin for committing the
+last $3.38 while two maker bids are still outstanding.
+
+The other pattern worth banking is about TIMING rather than content. Both inverted revisions were
+written during routine ticks; both were caught during deep single-topic dives. That is 2-for-2 on
+WHEN bad prior edits get made. A number changed mid-tick is a draft with a citation obligation, not
+a finished revision. Banked as doctrine rather than built as machinery — the UNVERIFIED tag already
+catches most of it, and I have added enough audit rules this week to respect my own flag-fatigue
+warning.
+
+Nothing else genuine surfaced. News flow is unchanged (constant tier-2 Iran/Hormuz, outside the
+book), no new market behaviour, and the deferred named-source-lag scanner stays gated behind the
+Dec-31 grading of the HLE family.

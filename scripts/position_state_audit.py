@@ -137,8 +137,16 @@ def main() -> int:
             # (this, and the HLE "frozen board" inference) came from fetching
             # the primary source and diffing it against what the note CLAIMED
             # the source said. So the rotation now names the claims to diff.
+            # A claim is only diffable against a FETCHABLE artifact. Sources
+            # like "coverage sweep" cannot be re-read, so a "verification"
+            # against one is just my own memory agreeing with itself — the
+            # failure this rotation exists to stop. Mark them so the weakest
+            # claims are visibly the ones to fix first (2026-08-11: 3 of the
+            # first 8 key_facts were written with unfetchable sources).
             for f in (priors_raw.get(oldest_key, {}).get("key_facts") or []):
-                msg.append(f"    SOURCE-DIFF vs {f.get('source','?')} (checked {f.get('checked','?')}):")
+                src = f.get("source", "?")
+                tag = "URL" if src.startswith("http") else "NO FETCHABLE SOURCE — treat as UNVERIFIED"
+                msg.append(f"    SOURCE-DIFF [{tag}] vs {src} (checked {f.get('checked','?')}):")
                 msg.append(f"      \"{f.get('claim','')[:150]}\"")
             if len(msg) > 1:
                 msg.append("    -> fetch the source and compare its ACTUAL words to the claim above; "
