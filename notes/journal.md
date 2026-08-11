@@ -5302,3 +5302,36 @@ on their merits. Hormuz "traffic returns to normal" is a clean date ladder (0.00
 correctly monotone) and a textbook trap: 3.6% of carry on the Aug-31 leg against live Oman
 negotiations and an ambiguous "normal" bar, in the exact war-adjacent domain that has already killed
 two of my gates. Skipped.
+
+## 2026-08-11 06:00 UTC periodic — GPT-6 drift checked and dismissed as noise; no trade
+
+GPT-6 NO drifted 0.780 -> 0.745 overnight. Under my 5pp re-read trigger, but it is 17% of the book
+with 20 days to resolution and a live rumour mill, so I checked it properly rather than waiting for
+a threshold. The result is a clean inversion of the tape: PUBLIC EVIDENCE MOVED TOWARD NO. There is
+still no waitlist, beta or early-access signup for Astra — and the criteria require an OPEN beta or
+OPEN rolling waitlist, with closed/private access explicitly insufficient. Altman remains on record
+needing more time. And on Aug-7 OpenAI disclosed that Astra "cannot rule out" reaching the CRITICAL
+cybersecurity threshold under its Preparedness Framework, the first model ever to hit that
+classification, which triggers deployment safeguards rather than shortening them. Reporting adds a
+~30-day federal pre-release review putting the earliest plausible public window in September —
+logged as a LEAD, medium confidence, not a verified fact (the digest-staleness lesson applies to
+search summaries too).
+
+Then the sibling check, which has now earned its keep three times. The "Astra released by" ladder
+prices Aug-15 0.024 / Aug-31 0.225 / Sep-15 0.535 / Sep-30 0.753 / Oct-31 0.905 — monotone, no arb,
+and modal outcome September. That family AGREES with my read and is the more liquid of the two on
+the Aug-31 leg ($1485 v24). So the GPT-6 drift is uncorroborated by informed flow: NOISE, hold, no
+reason to cut a hidden-info position on an unconfirmed move.
+
+Prior HELD at 0.82, decomposed rather than asserted: P(Astra public by Aug-31) ~0.20 x P(recognised
+as a GPT-5 successor) ~0.85, plus ~0.02 for a differently-named GPT-6 => P(YES) ~0.19. And the
+honest part: the market has ALREADY priced the September story, so my evidence does not beat it by
+much — roughly 6pp over the 0.745 mark, inside noise. NO ADD. A 6pp edge on a hidden-info binary 20
+days out is not a reason to breach the 15% single-ticket cap, which a full deployment of the free
+$6.92 would do ($27.94 = 15.5%).
+
+Also noted: GPT-6 YES 0.255 now sits ABOVE Astra-Aug-31 YES 0.225 — a 3pp logical inversion, since
+GPT-6 by Aug-31 requires Astra-or-successor public by Aug-31. Still under the 8pp real-book bar the
+backlog set for that pair, so it stays a watch item. Everything else quiet: 8 positions, MTM $152.10,
+resting Gemini bid live and trickling (0.01sh matched), four daemons single-instance, news 100%
+tier-2 Iran.
