@@ -1,14 +1,14 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-08-10",
+ "_updated": "2026-08-11",
  "trump-out-as-president-before-2027": {
   "p_no": 0.97,
   "cluster": "us-politics",
   "rho_within": 0.5,
   "cluster_frac": 0.18,
   "rationale": "2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
-  "note": "Decomposed 2026-07-25 (operator mortality probe): death ~1.5-2% (age-80 male 5.5-6%/yr x 5.2mo x 0.6-0.8 presidential-care discount) + 25A/incapacity ~0.3% + resignation ~0.2% + assassination ~0.1% + conviction ~0 = 2-3% total out-prob. Market 0.925 implies 7.5% = overpricing drama paths 3x. Death tail partially hedged by Greenland NO (anti-correlated).",
-  "verified": "2026-07-25",
+  "note": "RE-VERIFIED 2026-08-11 (tick): multiple impeachment resolutions filed in the 119th (H.Res.353/537/939) and rhetorical 25th-Amendment calls after the Iran post and the Greenland letter — but removal needs majorities nobody has assembled, and the cabinet is loyalist. The 25th has never been invoked against a president's will. p_no 0.97 held.",
+  "verified": "2026-08-11",
   "criteria_read": "2026-08-05"
  },
  "will-the-us-acquire-any-part-of-greenland-in-2026": {
@@ -17,8 +17,8 @@
   "rho_within": 0.0,
   "cluster_frac": 0.11,
   "rationale": "2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
-  "verified": "2026-07-25",
-  "note": "Re-verified 2026-07-25 (was 43d stale): catalyst_check central P(YES)~2pct (breakdown 0.18pct + tail floor; NATO-summit rhetoric is narrative not mechanism; no framework/referendum/vote inside window). p_no 0.975 confirmed.",
+  "verified": "2026-08-11",
+  "note": "RE-VERIFIED 2026-08-11 (tick): talks ongoing but state unchanged — Greenland's leader on record 'we will not sell Greenland, we will own Greenland for all time', Denmark opposed, Trump ruled out force (Jan-2026). No acquisition path visible in the remaining 142d. p_no 0.975 held.",
   "criteria_read": "2026-08-05"
  },
  "will-satoshis-identity-be-revealed-by-december-31": {
@@ -42,8 +42,8 @@
   "rho_within": 0.4,
   "cluster_frac": 0.0,
   "rationale": "2026-07-15 entry prior (DEC-0046): Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out.",
-  "note": "CUT 0.70->0.58 on 2026-08-08: GURMAN MOVED — now 'late this year and early next year' (was early-2027-more-likely); Oct-Dec 2026 window live again, NOT the Sept event. My early-2027 anchor is gone; what remains above market (NO 0.45) is the strict criteria bar: PURCHASABLE by Dec-31 — an Oct unveiling ships in time, a Dec one may not, and RAM-shortage slippage hits purchase dates first. Edge ~13pp, position already sized (60sh), hidden-info: no resting sell, active judgment. Next checkpoint: Apple Oct event (calendared family with Sept). SHADED 0.76->0.70 on 2026-08-07: 'MacBook Ultra' rumor cycle intensified (supply-chain '100% confirmed' for the PRODUCT, TechRadar 'few months' framin",
-  "verified": "2026-08-08",
+  "note": "RE-VERIFIED 2026-08-11 (tick) after NO marked 0.435->0.485 in ~3.5h. Searched for fresher reporting and found NONE past what was already priced on 08-08: Gurman's Apr/Jul line is unchanged — touchscreen MBP targeting late-2026-to-EARLY-2027, DRAM/NAND shortages, explicit 'be prepared for the later end of the timeline', M5 Pro/Max not M7. So the move is the MARKET catching up to reporting I already held, not new facts — deliberately did NOT update p_no on a price move with no new information. p_no 0.58 held; criteria still require general-public PURCHASABILITY by Dec-31, so an unveiling alone does not flip it.",
+  "verified": "2026-08-11",
   "criteria_read": "2026-08-08",
   "hidden_info": true
  },

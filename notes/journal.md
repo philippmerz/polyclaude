@@ -5265,3 +5265,40 @@ Also worth noting: my first pass at this check printed "0 violations" while the 
 table two lines above, because a slug-parsing slip meant the umbrella key never matched and the
 comparison silently never ran. Caught it by reading the rows instead of the verdict — the same habit
 that caught the six phantom FDV arbs an hour earlier. A summary line is a claim, not evidence.
+
+## 2026-08-11 02:00 UTC tick — all scans clean, no trades; three priors re-verified properly
+
+Bankroll $180.17 (+6.0% vs the $170 reference), PM MTM $153.29 on $144.26 cost (+6.3%), 8 positions
+plus the resting Gemini-HLE maker bid from last night (60sh @0.100, still unfilled). Clean across the
+board: UMA 0 alerts on 26 tracked, Ostium 0 trades (unchanged), redeem 0/8, marginal-APY 8 clear /
+0 flagged, state audit CLEAN after --fix, exit_analysis all HOLD with no SELL-TAKER verdict, and both
+arb scanners empty (consistency: 57 mid sum>1 and 96 sum<1, ZERO real after the live-quote walk —
+which is the usual and correct outcome). News flow remains 100% Iran/Hormuz, all tier-2, outside the
+book. No trades.
+
+The one thing worth the tick: exit_analysis flagged Greenland and Trump-out [PRIOR-STALE] while the
+state audit reported CLEAN. Not a bug — they run different clocks (criteria_read, 6d, under the 7d
+threshold vs `verified`, 17d), and both are legitimate: one asks whether I have re-read the market's
+TEXT, the other whether I have re-checked the FACTS. Rather than stamp them, I actually checked.
+Greenland: talks live but Greenland's leader is on record refusing sale outright, Denmark opposed,
+force ruled out — no path in 142 days, p_no 0.975 held. Trump-out: impeachment resolutions filed
+(H.Res.353/537/939) and 25th-Amendment calls after the Iran post and the Greenland letter, but the
+majorities do not exist and the cabinet is loyalist; the 25th has never been invoked against a
+president's will — p_no 0.97 held.
+
+MacBook deserves its own line because it moved: NO 0.435 -> 0.485 in ~3.5 hours with no visible
+catalyst, which is the kind of move that invites a prior bump. I went looking for fresher reporting
+and found NONE beyond what was already priced on 08-08 — Gurman's line is unchanged (late-2026 to
+EARLY-2027, DRAM/NAND shortages, "prepared for the later end of the timeline", M5 Pro/Max not M7).
+So the market was catching up to reporting I already held, and I deliberately did not update p_no on
+a price move backed by no new information. That is the same discipline as last night's Gemini fix
+pointed the other way: the prior tracks facts, not the tape.
+
+Discovery: primary + thin-tail passes both run. Nothing entered. NVDA-largest has repriced 0.745 ->
+0.935 since Aug-03, well through my 0.80 fair — the whole trade was always the Aug-26 earnings
+binary, so the calendared post-print re-check stands and a pre-print entry at 0.935 is not it. The
+Anthropic legs (best-model 0.935, IPO-before-2027 0.755) are skipped by the self-reference rule, not
+on their merits. Hormuz "traffic returns to normal" is a clean date ladder (0.004/0.035/0.145/0.465,
+correctly monotone) and a textbook trap: 3.6% of carry on the Aug-31 leg against live Oman
+negotiations and an ambiguous "normal" bar, in the exact war-adjacent domain that has already killed
+two of my gates. Skipped.
