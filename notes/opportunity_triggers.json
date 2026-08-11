@@ -50,6 +50,7 @@
   "mode": "umbrella",
   "a": "highest-score-on-humanitys-last-exam-in-2026-20260723190142922",
   "b": "highest-claude-score-on-humanitys-last-exam-in-2026-20260723190836285",
-  "note": "'Any model >=k' (umbrella) must be >= 'any Anthropic Claude model >=k' (subset) — criteria word-for-word identical except the model restriction, so the bound is airtight. REPLACED a single-leg 0.47 ask trigger on 2026-08-11 after it fired a false positive: its level was derived from the OTHER leg's ask at arming time, that leg moved 0.44->0.56, and the real breakeven fell to ~0.35. Now walks BOTH books every cycle and only fires when the taker structure is positive after fees. If it fires: BUY umbrella-YES + BUY subset-NO, payout >=1 in every state, 2 in the middle branch."
+  "note": "'Any model >=k' (umbrella) must be >= 'any Anthropic Claude model >=k' (subset) — criteria word-for-word identical except the model restriction, so the bound is airtight. REPLACED a single-leg 0.47 ask trigger on 2026-08-11 after it fired a false positive: its level was derived from the OTHER leg's ask at arming time, that leg moved 0.44->0.56, and the real breakeven fell to ~0.35. Now walks BOTH books every cycle and only fires when the taker structure is positive after fees. If it fires: BUY umbrella-YES + BUY subset-NO, payout >=1 in every state, 2 in the middle branch.",
+  "actionable": true
  }
 ]
