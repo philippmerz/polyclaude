@@ -228,6 +228,16 @@
   seconds. (positions.py and polyclaude_enter.py import the v1 client too, but make no write
   calls — checked, not assumed.)
 
+- **A drill must not be indistinguishable from the real event ON THE OPERATOR'S SCREEN.**
+  2026-08-12: five --dry-run drills of the emergency exit each Telegrammed a summary reading
+  "submitted: 7/8", because the send was never gated on dry_run. Nothing was sold, but the
+  operator saw five messages that looked like the book had just been liquidated and asked
+  "Whats that". Dry-run correctly suppressed the ORDERS and completely failed to suppress the
+  ALARM. When adding a test mode, enumerate every outward-facing side effect — telegrams,
+  webhooks, logs the operator reads — not just the money-moving one; and make the wording
+  differ ("WOULD SUBMIT" vs "submitted") so a message cannot be misread even if it does escape.
+  The cost of getting this wrong is not money, it is the operator's trust in every future alert.
+
 - **A function whose only mode is SEND will eventually be called by someone who thinks they
   are testing.** 2026-08-12: probing the redemption wiring, I called `redeem_one()` believing
   it had a dry path. It did not — it broadcast a real transaction, which reverted (correctly,

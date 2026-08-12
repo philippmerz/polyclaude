@@ -194,7 +194,8 @@ def run(reason: str, dry_run: bool) -> int:
     if not positions:
         msg = f"emergency_exit_polymarket: no open positions (reason: {reason})"
         print(msg)
-        _telegram(msg)
+        if not dry_run:
+            _telegram(msg)
         return 0
 
     print(f"found {len(positions)} position(s) to close")
@@ -212,14 +213,22 @@ def run(reason: str, dry_run: bool) -> int:
 
     summary_lines = [
         f"emergency_exit_polymarket done (reason: {reason}).",
-        f"submitted: {len(ok)}/{len(positions)}",
+        f"{'WOULD SUBMIT' if dry_run else 'submitted'}: {len(ok)}/{len(positions)}",
         f"skipped:   {len(skip)} ({', '.join(r['status'] for r in skip)})" if skip else "",
         f"errored:   {len(err)}" if err else "",
     ]
     summary_lines.extend(f"  {r['label']}: {r['status']}" for r in skip + err)
     summary = "\n".join(s for s in summary_lines if s)
     print(summary)
-    _telegram(summary)
+    # DRY RUNS MUST NOT TELEGRAM (2026-08-12). Drilling this script five times
+    # sent the operator five summaries reading "submitted: 7/8" — which reads
+    # exactly like the book was just liquidated. A dry run is an internal test;
+    # the operator should hear from this file ONLY when positions actually move.
+    # Wording also fixed: in dry mode the count line now says WOULD SUBMIT.
+    if not dry_run:
+        _telegram(summary)
+    else:
+        print("(dry run — operator NOT telegrammed)")
 
     if err:
         return 2

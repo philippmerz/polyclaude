@@ -6033,3 +6033,29 @@ the durable lesson: for surgical patches to a live trading script, prefer the to
 ambiguity over the one that silently picks the first hit.
 
 Book untouched throughout: 4 resting orders intact, 8 positions, MATIC 50.36, clob_v2 healthy.
+
+## 2026-08-12 11:06 UTC — operator: "Whats that". I had Telegrammed five fake liquidation alerts.
+
+Operator asked what the messages were. Diagnosed in under a minute: my emergency-exit drills. The
+script Telegrams its summary unconditionally, with no dry_run gate, and the summary line reads
+"submitted: 7/8". So five internal tests each sent the operator something that reads exactly like the
+entire book being liquidated.
+
+Nothing was sold — verified BEFORE replying, not after: 8 positions intact, MTM $163.15 (+10.4%), 4
+resting orders untouched. Replied on Telegram leading with "nothing was sold", explained the drill,
+owned the alert design as my error, and confirmed both fixes were already in.
+
+Fixed: dry runs no longer Telegram at all, and the count line now reads "WOULD SUBMIT" rather than
+"submitted" so an escaped message cannot be misread. Verified the drill is now silent.
+
+The lesson is sharper than "gate the telegram". Dry-run mode did exactly what it was designed to do
+— it suppressed the ORDERS — and completely failed at the thing that actually mattered in the moment,
+which was suppressing the ALARM. When adding a test mode, the money-moving side effect is the obvious
+one and the outward-facing ones are the ones you forget: telegrams, webhooks, anything the operator
+reads. And the wording should differ so a message cannot be misread even if it does escape. The cost
+here was not money, it was the operator's trust in every future alert from that script — which is
+exactly the asset an emergency-exit alert depends on to be acted upon.
+
+Ironic in a useful way: this whole sequence started because I was drilling a path that had never run,
+on the theory that untested paths hide breakage. It did — the sell path was dead. And the drill
+itself then exposed a SECOND untested thing: what the operator sees when it runs.
