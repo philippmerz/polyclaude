@@ -457,6 +457,17 @@ quoted but four months stale. Read this before touching any prior.)*
   expression is simply owning that leg and waiting — no legging risk, no fees, no execution.
   Check inconsistencies for which leg you already have a thesis on BEFORE pricing the arb.
 
+- **On a BY-DATE market, a prior that does not decay is a prior going stale on a clock.**
+  2026-08-12: exit_analysis printed my first-ever "SELL TAKER NOW" on GPT-6-by-Aug-31. Verified
+  instead of executing (hidden-info rule) and the verdict was an artifact of MY number, not a
+  real signal — the market at 0.88 was ahead of my 0.85, which I had set the previous day with
+  20 days on the clock. With 19 days left and still no waitlist, beta or early-access programme
+  of any kind open, P(YES) falls mechanically every day that passes without the qualifying event,
+  because the remaining window to stand up open access keeps shrinking. Raised to 0.90 and the
+  sell verdict correctly vanished. Generalisation: for "will X happen by DATE" positions, the
+  passage of time is itself evidence, and a prior held flat across days is drifting relative to
+  reality even when no news arrives. Re-derive by-date priors on elapsed time, not just on news.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

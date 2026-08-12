@@ -6086,3 +6086,35 @@ one day, so it is banked as its own lesson.
 
 Verified end to end: both exits run and print "(dry run — operator NOT telegrammed)", all five files
 parse, the two --help paths work, and the book is untouched — 8 positions, 4 resting orders.
+
+## 2026-08-12 14:00 UTC tick — first SELL-TAKER verdict of the session, and it was my prior that was wrong
+
+Bankroll $185.41 (+9.1%), PM MTM $162.15 on $147.80 cost (+9.7%). No trades. Everything clean: UMA 26
+tracked with 1 alert (GPT-6 YES 0.175 -> 0.120, diagnosed below), Ostium unchanged, redeem 0/8, state
+audit CLEAN after --fix, marginal-APY 8 clear / 0 flagged, no overdue decisions.
+
+The tick's one real event: exit_analysis printed "SELL TAKER NOW (+$0.24 vs hold)" on GPT-6 — the first
+sell verdict this whole session — carrying its own "[hidden-info: VERIFY the move first]" warning. I
+verified rather than executed, and the verdict dissolved: it was an artifact of a STALE PRIOR, not a
+signal. The market at 0.88 was AHEAD of my 0.85, not wrong about it.
+
+What I had failed to apply is time decay on a by-date market. I set 0.85 yesterday with 20 days on the
+clock; there are now 19, and for YES to happen OpenAI must stand up OPEN access inside those 19 days
+from a standing start of no waitlist, no beta and no early-access programme, while a CRITICAL
+Preparedness-Framework classification mandates pre-release slowdowns, security controls and extra
+testing. That is 8-10%, so p_no 0.90 — and at 0.90 against a 0.870 bid the sell verdict correctly
+disappears, because holding beats a fee-bearing exit 19 days early. Banked the generalisation: on a
+"will X happen by DATE" position the passage of time IS evidence, so a prior held flat across days is
+going stale on a clock even when no news arrives. That is a different staleness from this morning's
+(a source superseded by newer reporting) and it needs a different trigger: elapsed days, not new facts.
+
+Also checked SpaceX, which fell 0.895 -> 0.865 — exactly back to my entry, on my largest position, the
+day after I learned its rival path is concrete rather than absent. No news behind it: OpenAI is still
+$852B private with a ~$1T target, filed June 8, Reuters still reporting a possible 2027 slip, and one
+fresh August analysis puts the median debut at JULY 2027 with a $1.0T first-day cap — half of SpaceX's
+~$2.1T bar. So the drop is flow, and the position is now MORE attractive at 8.5pp of edge versus 5.5pp
+this morning. Cannot add: 16% of bankroll already, over the 15% single-ticket ceiling.
+
+Discovery ran; nothing entered. Hormuz keeps oscillating (Aug-31 leg 0.037 today against 0.054
+yesterday and 0.035 the day before) — a family repricing several points daily on headline tone, which
+is exactly the profile the world-state rule tells me to leave alone.

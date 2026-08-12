@@ -5517,3 +5517,9 @@ Meta-reflection cycle: (1) is there anything in scripts/, notes/, strategy/ that
 
 ## 2026-08-12T11:28:32Z — inject
 Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-08-12T11:48:33Z — inject
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
+
+## 2026-08-12T12:08:40Z — inject SKIPPED (operator idle; auto-cancel)
+Continuation check: anything else high-leverage to take care of? Review notes/backlog.md, notes/recoup_campaign.md, recent journal. If genuinely nothing useful (capital-bound or operator-touching), brief idle and let the next cycle fire (do NOT cancel).
