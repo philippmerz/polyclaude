@@ -6244,3 +6244,21 @@ Small mechanical note: the maker helper floored 0.228 to 0.22 under its 2-decima
 so the order rests just behind the 0.227 touch rather than at it. Better price, worse queue position;
 with a Dec-31 resolution and no catalyst, that is the right side of the trade-off, but it is worth
 knowing the helper does this on fine-tick markets rather than discovering it during something urgent.
+
+## 2026-08-12 22:40 UTC — resolved the maker-flooring question: not a bug, and the doctrine already covers it
+
+Followed up the note about the maker helper flooring 0.228 to 0.22 on fine-tick markets, because a
+vague "should fix" left in a journal is how unnecessary changes to working entry paths get made later.
+
+Conclusion: leave it. The flooring exists for a real constraint (the CLOB caps maker amounts at two
+decimals, and integer shares x a 2-dec price keeps that clean — the alternative is hunting share
+counts that make a 3-dec price land on a 2-dec USD amount, which is fiddly and risks 400s on a path
+that currently works). More to the point, the behaviour is not actually a cost here: resting at 0.22
+instead of 0.228 is a 3% BETTER price at a worse queue position, and with a Dec-31 resolution and no
+catalyst, price beats queue slot. If it fills I am better off; if it does not, I have lost nothing.
+
+And the case where queue position genuinely matters is already handled by existing doctrine, which
+says maker entries are "NOT for catalyst-imminent entries — cross the spread for those". So the
+helper's flooring only ever applies to non-urgent entries, exactly where the trade-off favours price.
+Recording this so a future pass does not "fix" a non-problem and destabilise a production-verified
+entry path in the process — which, after today's count of self-inflicted breakages, is a live risk.
