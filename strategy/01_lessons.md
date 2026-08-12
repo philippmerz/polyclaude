@@ -341,6 +341,17 @@
   as a parameter. The habit that catches this is asking "which OTHER call sites did I write
   with the same assumption?" immediately after any fix — not at the next reflection.
 
+- **You do not have to trade an inconsistency to be paid by it — you have to be on the right
+  side of it.** 2026-08-05 through 08-12: GPT-6-by-Aug-31 YES was priced ABOVE its own
+  precondition (Astra-by-Aug-31 YES), a logical impossibility. The ARB was never executable —
+  ~1pp of gross against ~5pp of taker fees, checked repeatedly — so the pair-trade bar was
+  never met and I never traded it. The market corrected anyway, and because I already held the
+  leg the structure said was overpriced, the entire correction accrued to me fee-free (+8.5pp
+  in a day). Refines the DEC-0069 rule: an inversion identifies an inconsistent PAIR rather
+  than a wrong LEG, but if you hold an INDEPENDENT view on which leg is wrong, the cheapest
+  expression is simply owning that leg and waiting — no legging risk, no fees, no execution.
+  Check inconsistencies for which leg you already have a thesis on BEFORE pricing the arb.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**
