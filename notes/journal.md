@@ -5819,3 +5819,35 @@ Position note recorded while I was in there: SpaceX at a 0.895 mark against 0.95
 on 16% of bankroll, the thinnest edge per dollar in the book. If capital is ever needed for something
 better, that is the first place to look. Its resting maker sell at 0.96 sits above fair, so it is a
 clean premium-exit option rather than a wash. No trades.
+
+## 2026-08-12 06:40 UTC — completed the recency sweep; all 8 positions now source-backed
+
+Finished what the morning started. Greenland and Trump-out were the last two positions still carrying
+unfetchable "coverage sweep" sources, and together they are $50.19 of cost — 27% of bankroll. I had
+been holding them back as a live test of the criteria rotation, but after manually sweeping the rest
+of the book for recency, preserving a process test at the cost of leaving a quarter of the book on
+unverifiable claims was the wrong trade. Both now carry real sources and re-verified claims.
+
+Greenland is clean and if anything firmer than recorded: no formal acquisition negotiations have been
+announced, Frederiksen is on record that "we cannot negotiate our sovereignty", both governments hold
+firm, and while Trump claimed a "framework of a future deal" with Rutte in January and dropped his
+tariff threat, no transfer mechanism exists and he ruled out force at Davos. p_no 0.975 stands.
+
+Trump-out produced the more interesting episode. The search summary asserted that "Senate removal
+proceedings appear to have already concluded earlier in 2026" — which, if true, would be a resolved
+market and a dead position. It was the aggregator conflating the 2020 and 2021 impeachments with the
+119th Congress. What refuted it was not more searching: it was the POSITION PRICE. Trump-out NO
+trades at 0.935, and a completed removal would price near zero. uma_status_check shows it unresolved
+and there have been zero tier-1 fires. Three independent signals, one of them free and always
+available. Banked: market prices are a live consistency check on any claim about whether an event has
+already resolved.
+
+Second finding, and it is a hole in machinery I built two days ago: congress.gov returns HTTP 403 to
+WebFetch, so a congress.gov URL PASSES my UNVERIFIED tag while being exactly as unverifiable as the
+prose sweep it replaced. The tag tests the SHAPE of a source, not access to it. Rather than pretend,
+the claim now says so inline and names the falsifier used instead, and the priors file carries a
+standing caveat about it. An unfetchable URL laundering a claim into looking checked is precisely the
+kind of false comfort this week's work has been about removing.
+
+Sweep complete: 8 of 8 positions now have dated, sourced key_facts, with the one access limitation
+documented rather than hidden. Audit CLEAN. No trades.

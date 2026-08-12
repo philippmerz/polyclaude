@@ -300,6 +300,16 @@
   DATASET date, and the board had added GPT-5, Grok 4, Claude 4.5 and Gemini 3 Pro after it; slow,
   not dead). Wrong inferences off right facts are harder to catch, because every fact-check passes.
 
+- **An UNFETCHABLE url launders a claim into looking checked.** 2026-08-12: the audit tags a
+  key_fact UNVERIFIED when its source is not a URL — but congress.gov returns 403 to WebFetch, so
+  a congress.gov link passes the tag while being exactly as unverifiable as the prose "coverage
+  sweep" it replaced. The tag tests SHAPE, not access. Where a source cannot actually be fetched,
+  say so inline in the claim and name the independent falsifier used instead. In that instance the
+  falsifier was the market itself: an aggregated summary asserted Senate removal proceedings had
+  "already concluded earlier in 2026" (it was conflating the 2020 and 2021 impeachments), and what
+  refuted it was Trump-out NO trading at 0.935 — a resolved removal would price near zero.
+  Position prices are a live, free consistency check on any claim about a resolved-or-not event.
+
 - **A dated primary source is not a CURRENT one — source-diffing checks FIDELITY, not
   RECENCY.** 2026-08-12: the MacBook prior was rebuilt the day before from a fetched, dated,
   correctly-quoted MacRumors/Gurman piece — and I treated "I verified against a primary source"

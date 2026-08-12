@@ -8,13 +8,13 @@
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` — do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-11 (tick): multiple impeachment resolutions filed in the 119th (H.Res.353/537/939) and rhetorical 25th-Amendment calls after the Iran post and the Greenland letter — but removal needs majorities nobody has assembled, and the cabinet is loyalist. The 25th has never been invoked against a president's will. p_no 0.97 held.",
-  "verified": "2026-08-11",
+  "verified": "2026-08-12",
   "criteria_read": "2026-08-05",
   "key_facts": [
    {
-    "claim": "Impeachment resolutions filed (H.Res.353/537/939) and 25th-Amendment calls made, but the required majorities do not exist and the cabinet is loyalist. The 25th has never been invoked against a president's will.",
-    "source": "congressional record / coverage sweep",
-    "checked": "2026-08-11"
+    "claim": "Impeachment resolutions H.Res.353 / 537 / 939 were INTRODUCED in the 119th Congress (H.Res.939 sets out seven articles). None has produced a Senate removal. NOT AGENT-VERIFIED: congress.gov returns HTTP 403 to WebFetch, so this is human-checkable but not fetchable by me — see the caveat below. LIVE FALSIFIER used instead: the market itself prices Trump-out NO at 0.935 (P(removal) ~6.5%), uma_status_check shows the position unresolved, and there have been zero tier-1 news fires. An actual removal is unmissable global news; three independent signals agree it has not happened. CAUTION LOGGED 2026-08-12: an aggregated search summary asserted 'Senate removal proceedings appear to have already concluded earlier in 2026' — it was conflating the 2020 and 2021 impeachments with the current Congress. The market price is what falsified it.",
+    "source": "https://www.congress.gov/bill/119th-congress/house-resolution/939 [403 to WebFetch — human-verifiable only]",
+    "checked": "2026-08-12"
    }
   ]
  },
@@ -24,14 +24,14 @@
   "rho_within": 0.0,
   "cluster_frac": 0.11,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` — do NOT read as current] 2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
-  "verified": "2026-08-11",
+  "verified": "2026-08-12",
   "note": "RE-VERIFIED 2026-08-11 (tick): talks ongoing but state unchanged — Greenland's leader on record 'we will not sell Greenland, we will own Greenland for all time', Denmark opposed, Trump ruled out force (Jan-2026). No acquisition path visible in the remaining 142d. p_no 0.975 held.",
   "criteria_read": "2026-08-05",
   "key_facts": [
    {
-    "claim": "Greenland's leader on record refusing sale ('we will not sell Greenland, we will own Greenland for all time'); Denmark opposed; Trump ruled out force (Jan-2026). Talks ongoing, no transfer mechanism in motion.",
-    "source": "PBS / wire coverage sweep",
-    "checked": "2026-08-11"
+    "claim": "No formal acquisition negotiations have been announced. Danish PM Frederiksen: 'We can negotiate about everything politically — security, investments, the economy. But we cannot negotiate our sovereignty.' Both Denmark and Greenland maintain firm positions against any sovereignty transfer. Trump claimed a 'framework of a future deal' with NATO SecGen Rutte (Jan-2026) and withdrew his 10% tariff threat against eight European states, but no transfer mechanism exists and he ruled out force at Davos 2026-01-21.",
+    "source": "https://www.congress.gov/crs-product/IN12643 (CRS, Greenland/Denmark/US relations) + https://www.aljazeera.com/news/2026/1/22/trumps-greenland-framework-deal-what-we-know-about-it-what-we-dont",
+    "checked": "2026-08-12"
    }
   ]
  },
@@ -202,5 +202,5 @@
    }
   ]
  },
- "_comment_key_facts": "key_facts = the load-bearing factual claims a position rests on, each paired with the EXTERNAL source it came from. Added 2026-08-11 after a prior revision inverted the direction of a source's anchor move and then survived TWO re-verifications, because each re-verification re-read my own note and reproduced the error. A re-verification that does not diff the recorded claim against the source's actual words is confirmation, not verification. The audit rotation surfaces these for source-diffing."
+ "_comment_key_facts": "key_facts = the load-bearing factual claims a position rests on, each paired with the EXTERNAL source it came from. Added 2026-08-11 after a prior revision inverted the direction of a source's anchor move and then survived TWO re-verifications, because each re-verification re-read my own note and reproduced the error. A re-verification that does not diff the recorded claim against the source's actual words is confirmation, not verification. The audit rotation surfaces these for source-diffing. TAGGING CAVEAT (2026-08-12): the audit tags a source UNVERIFIED when it does not start with http, but a URL that 403s (congress.gov) is no more agent-verifiable than a prose 'sweep'. Where that happens, say so INLINE in the claim and name the independent falsifier used instead — do not let an unfetchable URL launder a claim into looking checked."
 }
