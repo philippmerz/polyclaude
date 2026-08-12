@@ -5999,3 +5999,37 @@ would have produced. Nothing filled, nothing cancelled, four real orders still i
 The generalisable pair banked: after fixing a broken path grep for its class, because the same break
 usually has a second half; and a loop over an empty collection is indistinguishable from success, so
 any test of iterating code has to check the COUNT against something independently known.
+
+## 2026-08-12 11:00 UTC meta-reflection — verified the redemption path; two self-inflicted errors on the way
+
+Continued hunting never-run paths, and picked the one every position eventually depends on: redemption.
+All 8 positions must redeem at resolution (GPT-6 in 19 days), it cannot be tested end-to-end without a
+resolved market, and it has a known failure mode I have hit twice — markets DE-INDEX at resolution
+(Mojtaba, Marvel-SDCC), which is exactly why the conditionId "claim insurance" snapshot exists and why
+redeem_one() is the manual fallback that reads from it.
+
+The path is verified and healthy. It reverts with "execution reverted: result for condition not
+received yet" — a SEMANTIC revert from the CTF contract, meaning it recognises the condition and is
+waiting on the oracle. That proves ABI encoding, contract address, wallet signing and the call path
+are all correct; the only thing missing is a resolved market. Snapshot holds all 8 conditionIds.
+
+Two self-inflicted errors, both worth more than the verification.
+
+FIRST: I called redeem_one() as a "probe" believing it had a dry path. It did not. It broadcast a real
+transaction, which reverted correctly and cost 0.00808 MATIC (~$0.0006). The money is nothing; the
+shape is the point, and it mirrors this morning's emergency-exit bug exactly. There, DRY-RUN HID the
+write path. Here, the ABSENCE of a dry-run turned a test into a write. Same root: the boundary between
+"inspect" and "execute" was not explicit in the interface. Fixed by adding a simulate-first mode using
+eth_call, which executes against current state and reverts without broadcasting — free, and it means
+resolution day can be rehearsed before anything is sent. Verified it sends nothing: MATIC unchanged at
+50.360793 across three simulated redemptions.
+
+SECOND, and more embarrassing: adding that dry path with a Python `t.replace(old, new, 1)` anchored on
+a `send_raw_transaction` line that appears in BOTH redeem_all and redeem_one. redeem_all comes first,
+so the patch landed in the wrong function and corrupted it. An IndentationError on import caught it
+immediately and `git checkout` restored it in seconds — the working tree being committed is what made
+that cheap. Redone with the Edit tool, which FAILS on a non-unique match rather than guessing. That is
+the durable lesson: for surgical patches to a live trading script, prefer the tool that refuses
+ambiguity over the one that silently picks the first hit.
+
+Book untouched throughout: 4 resting orders intact, 8 positions, MATIC 50.36, clob_v2 healthy.

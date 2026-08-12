@@ -228,6 +228,24 @@
   seconds. (positions.py and polyclaude_enter.py import the v1 client too, but make no write
   calls — checked, not assumed.)
 
+- **A function whose only mode is SEND will eventually be called by someone who thinks they
+  are testing.** 2026-08-12: probing the redemption wiring, I called `redeem_one()` believing
+  it had a dry path. It did not — it broadcast a real transaction, which reverted (correctly,
+  the condition was unresolved) for 0.00808 MATIC / $0.0006. The money is nothing; the shape
+  is the lesson, and it is the mirror of the emergency-exit bug found the same morning. There
+  the dry-run hid the write path; here the absence of a dry-run turned a test into a write.
+  Every write function needs a simulate mode, and on-chain that is free: `eth_call` executes
+  against current state and reverts WITHOUT broadcasting. Added to redeem_one, it now returns
+  "would REVERT: result for condition not received yet" — a semantic revert proving ABI,
+  contract and signing are all correct, at zero cost, and letting resolution day be rehearsed.
+
+- **A bulk string-replace with count=1 silently patches the WRONG call site.** Adding that dry
+  path, my `t.replace(old, new, 1)` anchored on a `send_raw_transaction` line that appears in
+  BOTH redeem_all and redeem_one — and redeem_all comes first, so the patch landed in the wrong
+  function and corrupted it. An IndentationError on import caught it; `git checkout` restored it
+  in seconds. Prefer the Edit tool for surgical patches precisely because it FAILS on a
+  non-unique match instead of guessing, and keep the working tree committed so revert is cheap.
+
 - **A loop over an empty list looks exactly like success.** My first cancel-path parse guessed the
   response shape and produced [] against 4 live orders; it printed nothing and the run looked
   clean. Only the DRILL caught it, because the drill asserts against a known truth (I knew there

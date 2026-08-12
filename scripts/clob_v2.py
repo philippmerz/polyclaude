@@ -428,7 +428,7 @@ def redeem_all(dry_run: bool = False) -> dict:
     return {"redemptions": summary}
 
 
-def redeem_one(cond_id_hex: str, neg_risk: bool = False) -> dict:
+def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False) -> dict:
     """Redeem a single resolved market by conditionId — the fallback for
     DE-INDEXED markets (N=2: Mojtaba 2026-07, Marvel-SDCC 2026-07-26) where
     data-api drops the position row so redeem-all's redeemable-flag scan is
@@ -456,6 +456,20 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False) -> dict:
         "maxFeePerGas": max(int(gp * 3), int(gp + 1_000_000_000)),
         "maxPriorityFeePerGas": 30_000_000_000,
     })
+    # SIMULATE-FIRST (2026-08-12). This function had no dry path, and on that
+    # date I called it as a "probe" of the redemption wiring: it sent a real
+    # transaction, which reverted (correctly — the condition was unresolved)
+    # and cost 0.00808 MATIC. Trivial in money; the shape is the lesson. A
+    # function whose ONLY mode is send will eventually be called by someone who
+    # believes they are testing. eth_call executes against current state and
+    # reverts WITHOUT broadcasting, so the wiring verifies for free and a real
+    # redemption can be rehearsed before it is sent.
+    if dry_run:
+        try:
+            w.eth.call({"from": tx["from"], "to": tx["to"], "data": tx["data"]})
+            return {"ok": True, "tx": None, "simulated": "would SUCCEED"}
+        except Exception as e:
+            return {"ok": False, "tx": None, "simulated": f"would REVERT: {str(e)[:180]}"}
     h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
     r = w.eth.wait_for_transaction_receipt(h, timeout=120)
     print(f"  {'OK' if r.status == 1 else 'FAIL'} redeem {cond_id_hex[:18]}...  tx 0x{r.transactionHash.hex()}")
