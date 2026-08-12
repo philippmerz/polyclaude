@@ -468,6 +468,17 @@ quoted but four months stale. Read this before touching any prior.)*
   passage of time is itself evidence, and a prior held flat across days is drifting relative to
   reality even when no news arrives. Re-derive by-date priors on elapsed time, not just on news.
 
+- **Check that your alerting actually covers the CRUX of each position, not just its topic.**
+  2026-08-12: three HLE positions (~10% of bankroll) plus a resting bid rest entirely on whether
+  agi.safe.ai posts a 2026 model row — and ZERO of the 217 news_watcher keywords across both
+  tiers touched that. The thesis-break event for the whole cluster would have arrived with no
+  alerting at all. It surfaced sideways, from checking whether a stale resting bid still met its
+  own precondition ("resting bids allowed only with news coverage of the market's info channel"),
+  which is a rule I wrote and had never actually audited against the config. The general form: a
+  position's alerting requirement is not "do I watch this topic" but "would I be told if the
+  specific thing that RESOLVES it happened". Audit the two against each other whenever a cluster
+  grows past a few percent of bankroll.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

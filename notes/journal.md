@@ -6118,3 +6118,37 @@ this morning. Cannot add: 16% of bankroll already, over the 15% single-ticket ce
 Discovery ran; nothing entered. Hormuz keeps oscillating (Aug-31 leg 0.037 today against 0.054
 yesterday and 0.035 the day before) — a family repricing several points daily on headline tone, which
 is exactly the profile the world-state rule tells me to leave alone.
+
+## 2026-08-12 18:00 UTC periodic — found the HLE cluster had zero news coverage of its own crux
+
+Book flat and healthy: MTM $162.31 (+9.8%), four resting orders intact, daemons cycling, news still
+100% tier-2 Iran/Hormuz. Gemini-HLE NO kept climbing (0.188 -> 0.202, now +152% on the leg); GPT-6
+eased 0.880 -> 0.870; SpaceX flat at 0.865.
+
+The find came sideways. My resting Gemini bid at 0.10 now sits ~10pp under a market that has doubled
+away from it, so I re-examined whether to keep it — and rather than re-litigating the same
+cost-of-capital argument for a third time, I checked it against its own PRECONDITION. My
+resting_orders.md rule says a resting bid is allowed "only with per-tick re-verification AND
+news_watcher coverage of the market's info channel". So: is the HLE info channel actually covered?
+
+It was not. ZERO of 217 keywords across both tiers touched humanity's last exam, agi.safe.ai,
+leaderboards or benchmarks. Three positions worth ~10% of bankroll, plus a $6 resting bid, rest
+ENTIRELY on whether that board posts a 2026 model row — and the event that breaks all three at once
+would have arrived with no alerting whatsoever. I would have learned about it at whatever tick I next
+happened to fetch the board.
+
+Added six tier-2 keywords covering the crux. Deliberately tier-2 rather than tier-1: a board update
+is consequential but not an emergency, since these resolve Dec-31 and surfacing at the next tick is
+ample, whereas "humanity's last exam" appears in routine AI commentary often enough that tier-1 would
+manufacture false alarms — and I have spent today learning what false alarms cost. Config parses,
+watcher restarted clean on pid 1024382.
+
+The lesson generalises past this instance: a position's alerting requirement is not "do I watch this
+topic" but "would I be told if the specific thing that RESOLVES it happened". I had a rule that
+implied that check and had never once audited it against the actual config. Worth doing whenever a
+cluster grows past a few percent of bankroll.
+
+On the resting bid itself: keeping it, now that its precondition is genuinely met. The adverse-
+selection worry is real — a retrace from 0.202 to 0.10 would be a >50% move and therefore probably
+informed rather than noise — but with the crux now covered I would SEE the cause, and the bid remains
+$6 of collateral I have no better use for at $3.38 of free capital.

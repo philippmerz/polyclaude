@@ -199,7 +199,7 @@
   "mewfour",
   "synthwavedd astra"
  ],
- "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through an agent filter (claude -p, haiku) before reaching Telegram \u2014 the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them.",
+ "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through an agent filter (claude -p, haiku) before reaching Telegram — the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them. | HLE COVERAGE ADDED 2026-08-12: three positions (~10% of bankroll) plus a resting bid rest entirely on whether agi.safe.ai posts a 2026 model row, and ZERO of the 217 existing keywords covered that crux — the thesis-break event would have arrived with no alerting at all. Deliberately TIER-2 rather than tier-1: a board update is consequential but not an emergency (these resolve Dec-31, so surfacing at the next tick is ample), and 'humanity's last exam' appears in routine AI commentary often enough that tier-1 would manufacture false alarms. Prune after the family resolves.",
  "tier2_keywords": [
   "trump health",
   "trump hospital",
@@ -289,6 +289,12 @@
   "macbook oled",
   "gurman macbook",
   "anthropic ipo",
-  "openai ipo"
+  "openai ipo",
+  "humanity's last exam",
+  "humanitys last exam",
+  "agi.safe.ai",
+  "hle leaderboard",
+  "hle benchmark",
+  "hle score"
  ]
 }
