@@ -5906,3 +5906,32 @@ single-ticket cap did unglamorous but genuine work. My MacBook add yesterday was
 that did not exist — the true edge at that entry was ~3pp — and the only reason the mistake cost $3.54
 rather than $36 is that the cap, not my conviction, set the size. Conviction was wrong; the constraint
 was right.
+
+## 2026-08-12 10:00 UTC periodic — GPT-6 converged past fair; book is now largely fairly-valued
+
+GPT-6 NO ran 0.825 -> 0.870 (+34.8% on the leg), book to $162.48 (+9.9%). Sibling-checked and this
+one is CORROBORATED rather than noise: the Astra ladder shifted probability mass out of August into
+autumn — Aug-31 -3.0pp to 0.205, Sep-30 +3.4pp, Oct-31 +3.5pp — while GPT-6 YES fell 4.5pp to 0.130
+on the family's heaviest volume ($8.6k v24). Both legs moved the same way, roughly proportionally.
+The market is collectively pushing Astra later and GPT-6 follows, which is exactly the thesis.
+
+The consequence is that the position has now converged PAST my fair: mark 0.870 against p_no 0.850,
+so the market is ~2pp rich to me. Worth decomposing what the market now implies, because it is
+internally consistent: P(Astra by Aug-31) = 0.205, almost exactly the 0.20 input I used, and
+P(GPT-6) = 0.130 — so the market prices P(recognised as a GPT-5 successor | Astra ships) at ~0.63
+against my 0.85. That is a real disagreement on a sub-question the criteria actually turn on
+("recognised as a successor to GPT-5", with "GPT-5.5 or similar" explicitly excluded, and Astra not
+carrying the GPT-6 name at all). The market may well be better calibrated there than I am; at
+P(recognised)=0.70 my p_no becomes 0.836, which is immaterial, so I am leaving the prior at 0.85 and
+noting the sub-question rather than fine-tuning it.
+
+No action: hidden-info class bars a resting sell, and a taker exit nets ~0.847 after the 1.3c fee
+against a 0.850 hold value — a wash, not worth transacting for. Hold the remaining 19 days.
+
+Portfolio-level note, which is the useful part. Three of the four largest positions have now
+converged to or past fair: SpaceX 5.5pp edge, MacBook 13pp, GPT-6 -2pp. The two bond-like legs carry
+3-3.5pp over 141 days, roughly 8% APY against a 5% Aave hurdle — thin but still clearing. That is
+what a book looks like when theses play out: the edge migrates from the position into realised P&L,
+and what remains is carry. Nothing to do with $3.38 free, but the capital-recycling queue is now
+SpaceX, then GPT-6, then MacBook — updated from this morning's ordering because GPT-6 has since
+converged past both.
