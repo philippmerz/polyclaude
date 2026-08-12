@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-08-11",
+ "_updated": "2026-08-12",
  "trump-out-as-president-before-2027": {
   "p_no": 0.97,
   "cluster": "us-politics",
@@ -83,7 +83,9 @@
     "source": "https://www.macrumors.com/2026/04/19/when-to-expect-next-macbook-pro-and-mac-studio/",
     "checked": "2026-08-11"
    }
-  ]
+  ],
+  "divergence_ack": "2026-08-12",
+  "divergence_note": "INTENTIONAL 26pp gap (prior 0.80 vs mark 0.540), acked 2026-08-12 on the divergence check's first fire outside the HLE family. Resolution is ACK, not trade, for a mechanical reason: the position is cap-bound at $27.19 cost against a 15% single-ticket ceiling of $28.06 on a $187.07 bankroll — $0.87 of room, i.e. none. The prior is NOT soft: it was rebuilt yesterday from the primary source (MacRumors 2026-04-19 quoting Gurman that 'early 2027 is now more likely than late 2026' and that the machines will not be purchasable in 2026), and today's 5.5pp drop carries no news — zero tier-1 keyword fires, nothing in the feed. So this is flow against a freshly-sourced thesis, which is the case the ack exists for. Re-derive when the ack lapses 2026-08-26, or immediately at Apple's September event, whichever comes first."
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
   "p_no": 0.85,

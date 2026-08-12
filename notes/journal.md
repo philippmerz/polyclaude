@@ -5716,3 +5716,38 @@ morning, unchanged. Also noted: the GPT-6/Astra logical inversion narrowed from 
 mids, consistent with the finding that its executable gross was only ~1pp to begin with. No trade.
 Recording this so a future tick reading the same drift knows it was measured, explained, and held
 rather than missed.
+
+## 2026-08-12 02:00 UTC tick — the GPT-6/Astra inversion resolved itself; no trades
+
+Bankroll $187.07, crossing +10.0% vs the $170 reference. PM MTM $163.78 on $147.80 cost (+10.8%).
+Two movers, and the interesting one is structural rather than informational.
+
+GPT-6 NO ran 0.740 -> 0.825 (+8.5pp, position now +27.9%), which UMA flagged as a 5.5pp YES move.
+Ran the sibling test and it says this was NOT news: the Astra "released by" ladder is flat — Aug-31
+actually fell 1pp to 0.235, every rung inside 1pp — with zero tier-1 keyword fires and nothing in the
+feed. What actually happened is that the LOGICAL INVERSION I have tracked in the backlog since Aug-05
+closed. GPT-6-by-Aug-31 YES had been priced ABOVE Astra-by-Aug-31 YES (0.260 vs 0.245), which is
+impossible, since GPT-6 requires Astra to ship AND be recognised as the GPT-5 successor. It now sits
+0.175 vs 0.235 — correctly BELOW, with a 6pp gap that plausibly prices the ships-but-not-recognised
+branch. The market fixed its own inconsistency, in the direction the structure demanded, and I was
+already positioned for it. Note what this was NOT worth doing: the backlog set an 8pp real-book bar
+for trading that pair and it never came close (executable gross peaked around 1pp), so the correct
+play was to hold the cheaper leg and let the correction come — which is what happened.
+
+Second mover: MacBook NO fell 0.595 -> 0.540, which tripped the PRIOR-vs-MARK divergence check for
+the first time OUTSIDE the HLE family — a 26pp gap against my 0.80 prior. The check did exactly its
+job of forcing the question, and the honest answer is ACK rather than trade, for a mechanical reason:
+the position is cap-bound at $27.19 against a 15% single-ticket ceiling of $28.06, i.e. $0.87 of room.
+The prior is not soft — it was rebuilt yesterday from the primary source — and today's drop carries no
+news (zero keyword fires). Flow against a freshly-sourced thesis is precisely the case the ack exists
+for. Dated and expiring 2026-08-26, or superseded at Apple's September event, whichever lands first.
+
+Everything else clean: UMA 26 tracked / 1 alert (the GPT-6 move, diagnosed above), Ostium unchanged,
+state audit CLEAN after the ack, redeem 0/8, marginal-APY 8 clear / 0 flagged, exit_analysis all HOLD
+with no SELL-TAKER, no overdue decisions. Discovery found nothing: the Hormuz ladder swung back DOWN
+(Aug-31 0.054 -> 0.037, Dec-31 0.525 -> 0.485) after yesterday's rise, which is a fair illustration of
+why I keep declining it — the family is repricing several points a day on headline tone with an
+ambiguous "normal" bar, in the domain where the world-state rule has already killed two gates.
+
+No trades. No Telegram: no fills, no incidents, no prior changes — mark-to-market appreciation on
+already-reported positions does not clear the material bar.
