@@ -1,5 +1,5 @@
 {
-  "next_id": 72,
+  "next_id": 73,
   "decisions": [
     {
       "id": 1,
@@ -1366,6 +1366,25 @@
         "resting-order",
         "adverse-selection",
         "stale-bid"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 72,
+      "timestamp": "2026-08-12T22:22:20Z",
+      "type": "size_change",
+      "thesis": "ADD 23sh NO @0.22 (post-only maker, fee-free, $5.06) to Gemini-HLE-50+, twenty minutes after CANCELLING a resting bid on the same market \u2014 which is coherent, not contradictory, and the distinction is the point. The cancelled bid sat at 0.10, fifteen points under market, so it could only fill on a ~60% collapse, i.e. on INFORMATION that breaks the thesis. This one rests at the touch, where it fills on ordinary two-sided flow. A resting bid's worth is P(fill | noise) vs P(fill | information), not its distance from fair. WHY BUY AT ALL after a 144% move: my own rule says a prior I would never trade on is not a prior but an unbooked disagreement with myself. Fair is 0.56, decomposed and fact-grounded (board verified unchanged TODAY \u2014 still no 2026 row, still topping at Gemini-3-Pro 38.3), against a 0.271 ask; either I act on that or I lower the number, and sitting between the two is the exact incoherence the divergence check exists to catch. Gemini specifically rather than the family because it is the best-structured leg: it needs BOTH a ~6-12pp capability jump AND a board update, whereas the OpenAI legs (49.5, a hair under the bar) have only the board cushion. Sized at $5 to keep the HLE cluster at ~13% of bankroll on a crux I still cannot verify \u2014 cluster cap (30%) and ticket cap were nowhere near binding, so this is self-imposed lottery discipline, not a constraint.",
+      "confidence": "medium",
+      "prediction": "agi.safe.ai shows no Google Gemini row at >=50 HLE Accuracy on 2026-12-31, so both Gemini NO lots resolve at 1.00. Falsified by a board update carrying a qualifying Gemini score, or by UMA resolving on capability despite the criteria naming the board \u2014 in which case the interpretation branch wins and the entire named-source-lag thesis should be written off rather than retried.",
+      "size_usd": 5.06,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "gemini-hle",
+        "lottery-add",
+        "maker",
+        "prior-coherence"
       ],
       "outcome": null,
       "calibration_delta": null,

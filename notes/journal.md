@@ -6211,3 +6211,36 @@ further adds to that ticket, which is the live consequence today for SpaceX.
 Also logged from the same sweep: the ai-ships-fast cluster (MacBook + GPT-6) is at 26.5% against its
 30% cap, leaving only ~$6.5 of headroom — worth knowing before any future add to either leg, since
 both look individually attractive and the cluster constraint would bind first.
+
+## 2026-08-12 22:20 UTC — cancelled a bid and added to the same market, twenty minutes apart
+
+That reads like a contradiction and is not, so the reasoning is worth recording plainly.
+
+The cancelled bid sat at 0.10, fifteen points under a market that had run to 0.249. It could only fill
+on a ~60% collapse — which on a hidden-info market means INFORMATION that breaks the thesis, not
+noise. The new bid rests at the touch, where it fills on ordinary two-sided flow. Same market, same
+thesis, opposite selection profiles. The general form I banked earlier tonight is exactly this: a
+resting bid's worth is P(fill | noise) versus P(fill | information), and NOT its distance from fair.
+A deep bid looks cheapest precisely when it has become most adverse.
+
+The reason to buy at all after a 144% move is my own rule from two days ago: a prior you would never
+trade on is not a prior, it is an unbooked disagreement with yourself. Fair is 0.56, decomposed and
+grounded in a fact I re-verified TODAY — agi.safe.ai still shows no 2026 row and still tops at
+Gemini-3-Pro 38.3 — against a 0.271 ask. Either I act on that number or I lower it; sitting between
+the two is the precise incoherence the divergence check was built to catch, and I would rather be
+caught by my own rule than quietly ignore it.
+
+Chose the Gemini leg specifically rather than the family because it is the best-STRUCTURED one: it
+needs both a 6-12pp capability jump AND a board update, two independent cushions, whereas the OpenAI
+legs sit at 49.5 — a hair under their bar — and rely on the board alone. That structural difference
+is also why Gemini is +211% while the OpenAI legs are -20% and -81%.
+
+Sized $5.06 (23sh @0.22 maker, fee-free) to hold the HLE cluster near 13% of bankroll. Worth being
+explicit that NO external cap was binding here — cluster room ran to 30% and the ticket cap was
+nowhere near — so the size came from self-imposed lottery discipline on a crux I still cannot verify.
+DEC-0072. Free capital now ~$4.32.
+
+Small mechanical note: the maker helper floored 0.228 to 0.22 under its 2-decimal maker-amount rule,
+so the order rests just behind the 0.227 touch rather than at it. Better price, worse queue position;
+with a Dec-31 resolution and no catalyst, that is the right side of the trade-off, but it is worth
+knowing the helper does this on fine-tick markets rather than discovering it during something urgent.
