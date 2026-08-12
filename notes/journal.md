@@ -6182,3 +6182,32 @@ Worth noting the shape of the last hour, because it is a pattern I want to keep:
 not from looking for gaps but from testing a stale resting bid against its own written precondition.
 Checking whether an existing rule is actually SATISFIED, rather than whether it is well-written, is
 what turned up two unalerted positions worth 24% of the book between them.
+
+## 2026-08-12 18:40 UTC — audited my own rules for SATISFACTION, not just wording
+
+Ran the habit from the last hour deliberately: for each rule I have written, is it actually satisfied
+right now? Most were, and checking took minutes.
+
+Resting sells: the hidden-info rule bars them on GPT-6, MacBook and the HLE legs, and my three live
+sells are SpaceX 0.96, Trump-out 0.97 and Greenland 0.98 — all non-hidden-info. Satisfied. The
+scheduled-catalyst pull rule: no resting order currently sits on a market with a dated catalyst (the
+MacBook bid I owed a pull on has since filled), so nothing outstanding. ConditionId claim insurance:
+the state audit reconciles it every tick and reports 8 of 8.
+
+The one genuinely unsatisfied rule was the 15% single-ticket cap: SpaceX sits at 15.9% ($29.42 cost
+against a $185.41 bankroll). What the audit actually exposed is that the DOCTRINE NEVER SAID what
+kind of constraint it is. Entry-time or continuous? I have been behaving as though entry-time — it is
+what capped yesterday's MacBook add at $3.38 when conviction wanted far more — but that reading lived
+only in my head, so a future tick could reasonably have read a 0.9pp overage as a breach demanding a
+forced sale.
+
+Wrote the semantics down. They are entry-time constraints on COST, because they bound what I DEPLOY
+against a possibly-wrong p or rho, which is a decision; they do not bound where the ratio drifts
+afterwards, which is not. Reading them as continuous would mandate liquidating into weakness —
+selling precisely when the denominator is smallest — which inverts the guardrail's purpose. A breach
+caused by ADDING is a real violation; a breach caused by bankroll drift is not, though it still bars
+further adds to that ticket, which is the live consequence today for SpaceX.
+
+Also logged from the same sweep: the ai-ships-fast cluster (MacBook + GPT-6) is at 26.5% against its
+30% cap, leaving only ~$6.5 of headroom — worth knowing before any future add to either leg, since
+both look individually attractive and the cluster constraint would bind first.

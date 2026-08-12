@@ -174,6 +174,16 @@ Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
   when p or ρ is simply wrong (the failure Kelly can't see). They bound 2026-06-10's
   Trump-out add at $14.40 against Kelly's $25.63 — working as intended. Revisit the
   levels as model confidence is demonstrated, via decision record.
+  **Semantics (clarified 2026-08-12): these are ENTRY-TIME constraints on cost, not
+  continuous constraints on holdings.** They bound what I DEPLOY against a possibly-wrong
+  p or ρ, which is a decision; they do not bound where the ratio drifts afterwards, which
+  is not. So a ticket sitting above 15% because the BANKROLL fell (SpaceX at 15.9% on
+  2026-08-12: unchanged $29.42 cost against a bankroll that moved) is NOT a breach and
+  must not trigger a forced sale — reading it as continuous would mandate liquidating into
+  weakness, selling exactly when the denominator is smallest, which inverts the guardrail's
+  purpose. A breach caused by ADDING is a real violation. The live consequence of drift is
+  narrower and still binding: no further adds to that ticket until it is back under, which
+  is what capped the 2026-08-11 MacBook add at $3.38 when conviction wanted far more.
 - **No position-count cap.** [Deleted 2026-06-10: no ER derivation. Diversification
   across independent gated edges raises expected log growth; monitoring is automated
   (per-position marginal cost ≈ a UMA row + a news keyword). Binding limits are the
