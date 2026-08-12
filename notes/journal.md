@@ -5935,3 +5935,39 @@ what a book looks like when theses play out: the edge migrates from the position
 and what remains is carry. Nothing to do with $3.38 free, but the capital-recycling queue is now
 SpaceX, then GPT-6, then MacBook — updated from this morning's ordering because GPT-6 has since
 converged past both.
+
+## 2026-08-12 10:20 UTC meta-reflection — drilled the emergency exit and found it broken for 3 months
+
+Went looking for code that my own lesson flags as untrustworthy — paths that never run — and the
+emergency exit was the obvious candidate. It was broken, and had been since May.
+
+`emergency_exit_polymarket.py` was written 2026-04-29 and calls `pc.place_limit_sell()`, which routes
+through py_clob_client — the v1 SDK that has failed against v2 with order_version_mismatch since the
+2026-05-05 migration. My own README says in plain text to use clob_v2 for ALL entries, closes and
+cancels. The emergency path never got the memo, and nothing revealed it because the path had never
+executed once in three and a half months. In an actual exploit, depeg or chain halt it would have
+enumerated all 8 positions correctly, computed slippage correctly, aborted the illiquid leg
+correctly — and then failed every single sell.
+
+What makes this worth banking beyond the fix: DRY-RUN MODE HID IT. The dry run returns before the
+write, so it exercised only the healthy half and printed a confident "submitted: 7/8". I had run
+exactly that check earlier and it told me nothing. So the drill has to hit the write path, and the
+free way to do that turns out to be an order that CANNOT fill: I posted 1 share of Greenland NO at
+0.999 FOK, and the API returned an orderID plus "order couldn't be fully filled. FOK orders are fully
+filled or killed." A semantic rejection with an order id means signing and posting both work — the
+opposite of an order_version_mismatch protocol rejection. Zero cost, nothing filled, nothing left
+resting (verified: still exactly 4 open orders).
+
+The live fire then exposed a SECOND flaw, in my own patch rather than the original. I had preserved
+the original's FOK. But FOK is all-or-nothing at a single price, so in the fast-moving book of the
+only scenario this file ever runs in, any thinning between the bid I read and the order I post kills
+the sell and exits nothing. Switched to a GTC limit at the same bid: it takes whatever depth is
+there and rests the remainder, with price still protected by the slippage cap, because a partial exit
+in an emergency strictly beats a clean refusal.
+
+Also drilled emergency_exit_ostium: it uses ostium_python_sdk directly rather than the Polymarket
+client, so it does not share the flaw, and it correctly reports no open positions.
+
+Nothing else surfaced. recoup_campaign.md was checked and already carries a CLOSED banner at the top
+telling continuation checks to skip it — I verified rather than assumed. No new alpha source; news
+flow unchanged.

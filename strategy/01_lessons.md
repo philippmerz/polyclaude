@@ -207,6 +207,26 @@
 - **Daemon-fired ticks must carry their reason** (else they read as scheduled noise and
   the alert gets answered "nothing happened" — 2026-07-28). daily_checkin passes $1
   through to the prompt.
+- **A fallback that never runs is indistinguishable from one that works — and DRY-RUN mode
+  can hide the exact half that is broken.** 2026-08-12, drilling the emergency exit: it read
+  all 8 positions, walked real bids and correctly slippage-aborted the illiquid leg, so the
+  dry-run looked healthy. But dry-run returns before the write, and the write called
+  `pc.place_limit_sell()` — the py_clob_client v1 path that has been BROKEN against v2 since
+  the 2026-05-05 migration (order_version_mismatch). Written 2026-04-29, never once executed,
+  so it sat broken for three months: it would have enumerated correctly, guarded correctly,
+  and then failed every sell in precisely the exploit/depeg scenario it exists for. Rewired to
+  clob_v2 and LIVE-FIRED with an unfillable FOK, which returned an orderID plus "FOK orders are
+  fully filled or killed" — a semantic rejection, proving signing and posting work, at zero cost
+  and with nothing left resting. Drill the write path, not the dry-run; an unfillable order at an
+  impossible price is the free way to do it.
+
+- **An emergency exit should take partial fills, not refuse them.** The live-fire also exposed
+  that FOK was wrong for this job: all-or-nothing at one price means any thinning between the
+  bid you read and the order you post kills the sell and exits NOTHING — in the one situation
+  where the book is guaranteed to be moving. Switched to a GTC limit at the same bid: it takes
+  whatever depth exists and rests the remainder, price still protected by the slippage cap. A
+  partial exit in an emergency strictly beats a clean refusal.
+
 - **A fallback that never runs is indistinguishable from one that works.** daily_checkin's
   headless fallback died on `claude: command not found` (hardcoded cron PATH omitted
   ~/.local/bin) — for MONTHS, invisibly, because the normal path dispatches to the pane

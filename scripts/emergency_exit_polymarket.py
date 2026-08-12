@@ -110,12 +110,41 @@ def _close_one(pc: Polyclaude, position: dict, dry_run: bool) -> dict:
     if dry_run:
         return {"label": label, "status": "DRY", "tx": None, "error": None}
 
+    # v2 WRITE PATH (2026-08-12). This previously called
+    # pc.place_limit_sell(), which routes through py_clob_client — the v1 SDK
+    # that has been BROKEN against v2 since the 2026-05-05 migration
+    # (order_version_mismatch). This file was written 2026-04-29 and the write
+    # path has never once executed, so the breakage sat here for over three
+    # months: the script would enumerate positions correctly, compute slippage
+    # correctly, and then fail every actual sell — in the exact scenario
+    # (exploit / depeg / chain halt) where it is the only thing standing
+    # between me and the loss. Found by DRILLING a path my own lesson says is
+    # indistinguishable from a working one until forced. clob_v2 is the
+    # production-verified route (it placed every live order in the book).
     try:
-        result = pc.place_limit_sell(asset, price=bid, shares=size,
-                                     gtc=False, post_only=False)
+        import clob_v2 as _v2
+        _addr, _pk = _v2._load_wallet()
+        _neg = _v2._check_neg_risk(asset)
+        _signed = _v2.build_order(maker=_addr, token_id=asset, side="SELL",
+                                  price=bid, size=size, signer_pk=_pk, neg_risk=_neg)
+        # GTC-at-bid, NOT FOK (revised during the 2026-08-12 drill). The original
+        # used FOK, and live-firing an unfillable test order showed why that is
+        # wrong here: FOK is all-or-nothing at one price, so in the fast-moving
+        # book of an actual exploit or depeg — the only situation this file ever
+        # runs in — any thinning between the bid I read and the order I post
+        # kills the whole sell and exits NOTHING. A GTC limit at the same bid
+        # takes whatever depth is there and rests the remainder, and a partial
+        # exit in an emergency strictly beats a clean refusal. Price is still
+        # protected by SLIPPAGE_CAP_PCT above, and this script cancels resting
+        # orders on entry, so a leftover from a prior run is cleared next run.
+        result = _v2.post_order(_signed, order_type="GTC", post_only=False)
+        if isinstance(result, dict) and result.get("status_code", 200) >= 400:
+            return {"label": label, "status": "ERR", "tx": None,
+                    "error": f"v2 post_order {result.get('status_code')}: {str(result.get('body'))[:200]}"}
+        result = result.get("body", result) if isinstance(result, dict) else result
     except Exception as e:
         return {"label": label, "status": "ERR", "tx": None,
-                "error": f"place_limit_sell: {str(e)[:300]}"}
+                "error": f"clob_v2 sell: {str(e)[:300]}"}
 
     order_id = None
     if isinstance(result, dict):
