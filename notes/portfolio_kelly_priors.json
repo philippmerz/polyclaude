@@ -41,13 +41,13 @@
   "note": "POSITION CLOSED DEC-0061 (wash at fair). Murphy FOIA v DHS (real, filed Apr-2025) puts ruling window edge inside 2026; P(YES) 4-5%. Re-entry only at NO >=0.92."
  },
  "will-spacex-have-the-highest-ipo-market-cap-2026-516": {
-  "p_yes": 0.96,
+  "p_yes": 0.95,
   "cluster": "one-off",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` — do NOT read as current] 2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES).",
-  "note": "CORRECTED 0.94 -> 0.96 on 2026-08-11 by the NEW source-diff rotation, which caught a CORRECTION THAT WAS ITSELF WRONG. On 2026-08-05 I 'fixed' this prior by replacing a '$2.1T day-one bar' with '~$1.75T', calling the $2.1T figure an error. The sources say the opposite: SPCX closed its first day at $160.95, market cap over $2.1T (CNBC headline 'Market cap tops $2 trillion'). The likely origin of my $1.75T is an outstanding-vs-fully-diluted share-count basis, which is a real ambiguity but does not change the conclusion. DIRECTION MATTERS: recording the bar as $1.75T understates how high a rival must clear, so the error made me UNDERRATE my own YES — the harmless direction, which is exactly why it sat unnoticed while the MacBook error (which flattered a trim) nearly cost money. p_yes 0.96: a rival needs a >$2.1T first-day close in the remaining ~4.7 months and no such S-1 exists. NOTE: position cost $29.42 = 16.3% of a $180.17 bankroll, over the 15% single-ticket cap ($27.03) — an artifact of bankroll drift since entry, not a fresh breach. No add; not force-selling to comply.",
-  "verified": "2026-08-11",
+  "note": "0.96 -> 0.95 on 2026-08-12 via the recency sweep prompted by the MacBook staleness finding. The sweep found a genuinely STALE FACT here — I had recorded 'OpenAI pushed to 2027' when OpenAI had in fact filed confidentially on June 8 with a Sept-Q4 window — but the prior barely moves, because the fact was not load-bearing in the way I had written it: what protects this position is the ARITHMETIC GAP ($1T target vs a $2.0-2.1T bar), not the absence of a rival. Worth remembering that a stale fact and a wrong conclusion are different things; correcting the first does not always move the number, and a sweep that discriminates is more trustworthy than one that always fires. POSITION NOTE: at a 0.895 mark against 0.95 fair this is a ~5pp edge on 16% of bankroll — the thinnest edge per dollar in the book, so if capital is ever needed for a better opportunity, this is the first place to look. The resting maker sell at 0.96 sits ABOVE fair, which makes it a clean premium-exit option rather than a wash.",
+  "verified": "2026-08-12",
   "criteria_read": "2026-08-11",
   "key_facts": [
    {
@@ -61,9 +61,9 @@
     "checked": "2026-08-11"
    },
    {
-    "claim": "No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T first-day close would need an S-1 already public given IPO lead times.",
-    "source": "reasoning over public IPO pipeline",
-    "checked": "2026-08-11"
+    "claim": "RIVAL PATH IS CONCRETE, NOT ABSENT (corrected 2026-08-12): OpenAI filed a CONFIDENTIAL S-1 on 2026-06-08/09 (Goldman + Morgan Stanley), targeting ~$1T, listing window Sept-2026 into Q4 — though Reuters in late June reported it may wait until 2027. Anthropic filed 2026-06-01 off a $65B round (far too small to matter). My earlier phrasing 'OpenAI pushed to 2027' was WRONG on the fact. The CONCLUSION survives on arithmetic: to beat SpaceX's ~$2.0-2.1T first-day close, OpenAI would have to roughly DOUBLE on debut from a ~$1T pricing, where SpaceX itself popped 19%. P(OpenAI lists in 2026) ~0.45 x P(>100% day-one pop) ~0.08 = ~3.6%, plus ~0.5% other-rival tail.",
+    "source": "https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/ + CNBC 2026-06-08",
+    "checked": "2026-08-12"
    }
   ]
  },
@@ -157,14 +157,14 @@
   "divergence_note": "INTENTIONAL 43pp gap, re-derived from source 2026-08-10 (not marked to market). Chose NOT to size up HERE despite this being the cheapest expression: the leg has one cushion (board only — OpenAI capability is already 49.5, a hair under the bar) and 47sh of bid. Routed the marginal $6 to the Gemini leg instead, which needs BOTH a capability jump and a board update and has a real two-sided book. Re-look when the ack expires 2026-08-24, or immediately if agi.safe.ai posts any 2026 row.",
   "key_facts": [
    {
-    "claim": "agi.safe.ai tops at Gemini-3-Pro 38.3, OpenAI row GPT-5 25.3; NO row added since ~Nov-2025 (missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1). The Apr-2025 stamp is the DATASET date, not a frozen board.",
+    "claim": "agi.safe.ai tops at Gemini-3-Pro 38.3, OpenAI row GPT-5 25.3; NO row added since ~Nov-2025 (missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1). The Apr-2025 stamp is the DATASET date, not a frozen board. [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.]",
     "source": "https://agi.safe.ai/",
-    "checked": "2026-08-10"
+    "checked": "2026-08-12"
    },
    {
-    "claim": "OpenAI's best HLE score on ANY surface is 49.5 (GPT-5.6 Sol) — under the 50 bar. Frontier is Fable 5 55.5.",
+    "claim": "OpenAI's best HLE score on ANY surface is 49.5 (GPT-5.6 Sol) — under the 50 bar. Frontier is Fable 5 55.5. [RECENCY RE-CHECKED 2026-08-12: unchanged — Fable 5 55.5 / Opus 5 54.9 / GPT-5.6 Sol 49.5, OpenAI still under 50.]",
     "source": "third-party trackers (artificialanalysis / pricepertoken)",
-    "checked": "2026-08-10"
+    "checked": "2026-08-12"
    }
   ]
  },
@@ -178,9 +178,9 @@
   "rho_within": 0.7,
   "key_facts": [
    {
-    "claim": "Same board state as the 50+ leg; 55+ additionally requires OpenAI to exceed today's GLOBAL frontier (Fable 5 55.5).",
+    "claim": "Same board state as the 50+ leg; 55+ additionally requires OpenAI to exceed today's GLOBAL frontier (Fable 5 55.5). [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.]",
     "source": "https://agi.safe.ai/",
-    "checked": "2026-08-10"
+    "checked": "2026-08-12"
    }
   ]
  },
@@ -196,9 +196,9 @@
   "divergence_note": "INTENTIONAL 46pp gap, decomposed 2026-08-10 and ACTED ON: 60sh NO added at 0.100 maker (DEC-0065). Sized as a lottery at ~1/8 of rho-discounted Kelly because the residual crux (would a UMA vote override clean text under 90%-of-OI YES pressure?) is an interpretation I cannot verify — not because the number is soft. Further adds need the cluster check: HLE family is ~14% of bankroll at rho~0.9.",
   "key_facts": [
    {
-    "claim": "Board's best Gemini row is 3 Pro at 38.3; Gemini 3.1 Pro (~44.7 third-party) is NOT listed. Needs both a capability jump AND a board update.",
+    "claim": "Board's best Gemini row is 3 Pro at 38.3; Gemini 3.1 Pro (~44.7 third-party) is NOT listed. Needs both a capability jump AND a board update. [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.]",
     "source": "https://agi.safe.ai/",
-    "checked": "2026-08-10"
+    "checked": "2026-08-12"
    }
   ]
  },

@@ -5786,3 +5786,36 @@ No trade. At a 0.495 mark against 0.62 fair the edge is 12pp rather than the 30p
 the position is cap-bound regardless ($27.19 against a $28.06 ceiling), a taker exit pays 4.5c/share
 which swamps the gap, and hidden-info class still bars a resting sell. Book $160.76 (+8.8%), audit
 CLEAN, daemons cycling, no tier-1 fires.
+
+## 2026-08-12 06:20 UTC — ran the recency sweep across the book; it discriminated
+
+Applied this morning's lesson immediately rather than at the next reflection: which OTHER positions
+rest on a source stale relative to its story's clock speed? Ranked by clock-speed x size and checked
+the top three.
+
+HLE (three positions, highest clock speed in the book): CLEAN. agi.safe.ai still shows the same rows
+with no 2026 model listed, and third-party capability is unchanged — Fable 5 55.5, Opus 5 54.9,
+GPT-5.6 Sol 49.5, OpenAI still under the 50 bar. One detail actually strengthens the thesis: the
+Scale text-only board reportedly carries Gemini 3.1 Pro around 47%, while agi.safe.ai — the source
+the criteria NAME — still does not list it. That is the resolution-source lag, visible directly.
+key_facts re-stamped, no prior change.
+
+SpaceX (largest position, $29.42): found a genuinely stale FACT. I had recorded "OpenAI pushed to
+2027" when OpenAI filed a confidential S-1 on 2026-06-08/09 with Goldman and Morgan Stanley, targeting
+~$1T, listing window September into Q4 — with Reuters in late June reporting it may wait for 2027.
+So the rival path is concrete rather than absent. But the prior moves only 0.96 -> 0.95, because the
+fact was not load-bearing the way I had written it: what protects the position is the ARITHMETIC GAP,
+not the absence of a rival. OpenAI would have to roughly DOUBLE on debut from a ~$1T pricing to clear
+SpaceX's ~$2.0-2.1T first-day close, and SpaceX itself popped 19%. P(lists 2026) ~0.45 x P(>100% pop)
+~0.08 = ~3.6%.
+
+The sweep's value is that it DISCRIMINATED: MacBook stale and material (prior moved 18pp), HLE
+current (no change), SpaceX stale but not load-bearing (1pp). A check that fired on everything would
+be noise; one that separates these three is worth keeping. Also banked the distinction it exposed —
+a stale FACT and a wrong CONCLUSION are different things, and correcting the former does not
+automatically move the number.
+
+Position note recorded while I was in there: SpaceX at a 0.895 mark against 0.95 fair is a ~5pp edge
+on 16% of bankroll, the thinnest edge per dollar in the book. If capital is ever needed for something
+better, that is the first place to look. Its resting maker sell at 0.96 sits above fair, so it is a
+clean premium-exit option rather than a wash. No trades.
