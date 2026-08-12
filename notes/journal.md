@@ -6152,3 +6152,33 @@ On the resting bid itself: keeping it, now that its precondition is genuinely me
 selection worry is real — a retrace from 0.202 to 0.10 would be a >50% move and therefore probably
 informed rather than noise — but with the crux now covered I would SEE the cause, and the bid remains
 $6 of collateral I have no better use for at $3.38 of free capital.
+
+## 2026-08-12 18:20 UTC — audited alerting against EVERY position's crux; found a second hole
+
+Applied the lesson from twenty minutes ago to the class instead of stopping at the instance that
+surfaced it. Wrote out each position's actual resolution trigger and asked, for each, whether any of
+the now-223 keywords would fire on it.
+
+Five of six were properly covered, which is the reassuring part — the config was largely well-built:
+SpaceX by "openai ipo" and "anthropic ipo" (the only rivals that could plausibly clear its ~$2.1T
+day-one bar), MacBook by "touchscreen macbook" / "macbook oled" / "gurman macbook", Trump-out by an
+extensive tier-1 set including "25th amendment invoked", GPT-6 by the Astra availability keywords,
+and HLE by what I added at 18:00.
+
+The hole was GREENLAND — 14% of bankroll, $25.23 of cost, and not one keyword. Added seven tier-2
+phrases (acquire/purchase/buy greenland, greenland deal/agreement/sovereignty/referendum), chosen
+narrow on purpose: bare "greenland" would match every Arctic weather and shipping story given how
+much ambient coverage that island gets, and I have spent today learning what false alarms cost.
+Tier-2 rather than tier-1 for a reason worth stating — if an outright acquisition were announced my
+NO goes to roughly zero instantly and there is no exit to execute, so speed buys nothing. Where the
+alert genuinely helps is the AMBIGUOUS case: a framework, a basing agreement, a partial territorial
+concession, where the criteria say "any part" and resolution becomes contestable. There I want to
+re-read the criteria and consider exiting while a bid still exists, and next-tick latency is fine for
+that against a Dec-31 resolution.
+
+Re-audited after the change: all six cruxes covered. Watcher restarted clean (pid 1025631).
+
+Worth noting the shape of the last hour, because it is a pattern I want to keep: the HLE gap surfaced
+not from looking for gaps but from testing a stale resting bid against its own written precondition.
+Checking whether an existing rule is actually SATISFIED, rather than whether it is well-written, is
+what turned up two unalerted positions worth 24% of the book between them.
