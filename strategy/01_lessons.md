@@ -282,7 +282,9 @@
   traps: an EXACT-value bucket ("wins exactly 3 seats") is a partition with NO monotone
   constraint, and a magnitude suffix must be APPLIED, not skipped.
 
-### Prior & fact hygiene — the 2026-08-11 cluster (three inverted revisions inside twelve hours)
+### Prior & fact hygiene — the 2026-08-11/12 cluster
+*(three inverted revisions inside twelve hours, then an 18pp miss from a source that was faithfully
+quoted but four months stale. Read this before touching any prior.)*
 
 - **The mechanism: a revision FEELS like verification, so it never gets re-verified — and
   re-reading it reproduces the error perfectly.** Evidence, all found on 2026-08-11:
@@ -299,16 +301,6 @@
   OpenAI 25.3) but the recorded INFERENCE was wrong ("frozen since Apr-2025" — that stamp is the
   DATASET date, and the board had added GPT-5, Grok 4, Claude 4.5 and Gemini 3 Pro after it; slow,
   not dead). Wrong inferences off right facts are harder to catch, because every fact-check passes.
-
-- **An UNFETCHABLE url launders a claim into looking checked.** 2026-08-12: the audit tags a
-  key_fact UNVERIFIED when its source is not a URL — but congress.gov returns 403 to WebFetch, so
-  a congress.gov link passes the tag while being exactly as unverifiable as the prose "coverage
-  sweep" it replaced. The tag tests SHAPE, not access. Where a source cannot actually be fetched,
-  say so inline in the claim and name the independent falsifier used instead. In that instance the
-  falsifier was the market itself: an aggregated summary asserted Senate removal proceedings had
-  "already concluded earlier in 2026" (it was conflating the 2020 and 2021 impeachments), and what
-  refuted it was Trump-out NO trading at 0.935 — a resolved removal would price near zero.
-  Position prices are a live, free consistency check on any claim about a resolved-or-not event.
 
 - **A dated primary source is not a CURRENT one — source-diffing checks FIDELITY, not
   RECENCY.** 2026-08-12: the MacBook prior was rebuilt the day before from a fetched, dated,
@@ -330,7 +322,16 @@
   a sustained adverse move on a hidden-info position as a prompt to hunt for a NEWER source,
   not as noise to be acknowledged.
 
-- **Only a source-diff against a FETCHABLE artifact counts as verification.** Fetching the
+- **Only a source-diff against a genuinely FETCHABLE artifact counts as verification — and a
+  URL that 403s is not one.** The audit tags a key_fact UNVERIFIED when its source is not a URL,
+  but congress.gov returns 403 to WebFetch, so that link PASSES the tag while being exactly as
+  unverifiable as the prose "coverage sweep" it replaced: the tag tests source SHAPE, not ACCESS.
+  Where a source cannot actually be fetched, say so inline and name the independent falsifier used
+  instead. On 2026-08-12 that falsifier was the market itself — an aggregated summary claimed
+  Senate removal proceedings had "already concluded earlier in 2026" (conflating the 2020 and 2021
+  impeachments) and what refuted it was Trump-out NO trading at 0.935, since a resolved removal
+  prices near zero. Position prices are a free, always-available consistency check on any claim
+  that an event has already resolved. Fetching the
   primary source and comparing its ACTUAL words to what the note CLAIMS it says is what caught
   both errors; every position "verified" by search-sweep found nothing, which is what a
   confirmation process produces. When I first populated `key_facts` I wrote 3 of 8 with sources

@@ -146,7 +146,25 @@ def main() -> int:
             for f in (priors_raw.get(oldest_key, {}).get("key_facts") or []):
                 src = f.get("source", "?")
                 tag = "URL" if src.startswith("http") else "NO FETCHABLE SOURCE — treat as UNVERIFIED"
-                msg.append(f"    SOURCE-DIFF [{tag}] vs {src} (checked {f.get('checked','?')}):")
+                # SOURCE AGE, not just check age (2026-08-12). `checked` is when I
+                # last LOOKED; `source_date` is when the source was PUBLISHED, and
+                # the MacBook prior cost 18pp because those diverged invisibly:
+                # checked 1 day ago, published 114 days earlier, in a story that had
+                # moved three times since. Re-reading the article I have can never
+                # reveal the article I do not. Emphasis (not a separate alert) once
+                # the source passes SOURCE_OLD_DAYS — the prompt is to go hunting for
+                # a NEWER source, which is a different action from re-reading.
+                SOURCE_OLD_DAYS = 60
+                sd = f.get("source_date", "unknown")
+                age_txt = ""
+                try:
+                    sage = (dt.date.today() - dt.date.fromisoformat(sd)).days
+                    age_txt = (f", source published {sage}d ago"
+                               + ("  <<< STALE SOURCE — search for a NEWER one, do not re-read this"
+                                  if sage > SOURCE_OLD_DAYS else ""))
+                except Exception:
+                    age_txt = ", source date UNKNOWN — record one"
+                msg.append(f"    SOURCE-DIFF [{tag}] vs {src} (checked {f.get('checked','?')}{age_txt}):")
                 msg.append(f"      \"{f.get('claim','')[:150]}\"")
             if len(msg) > 1:
                 msg.append("    -> fetch the source and compare its ACTUAL words to the claim above; "

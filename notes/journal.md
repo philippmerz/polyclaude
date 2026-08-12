@@ -5851,3 +5851,35 @@ kind of false comfort this week's work has been about removing.
 
 Sweep complete: 8 of 8 positions now have dated, sourced key_facts, with the one access limitation
 documented rather than hidden. Audit CLEAN. No trades.
+
+## 2026-08-12 07:00 UTC meta-reflection — mechanised the thing the market had to tell me
+
+One genuine finding, and it is precise about WHY this morning's 18pp miss escaped my machinery. The
+key_facts schema records `checked` — when I last LOOKED at a source — and nothing about when the
+source was PUBLISHED. Those diverged invisibly on MacBook: checked one day ago, published 114 days
+ago, in a story that had moved three times since. The rotation dutifully printed "checked 2026-08-11"
+and looked healthy. Re-reading the article I have can never reveal the article I do not, so no amount
+of diligence against the recorded source would have caught it — the market had to tell me, by moving
+10pp.
+
+Fixed by adding `source_date` to all 15 key_facts and having the rotation display SOURCE AGE beside
+check age, with emphasis past 60 days: "checked 2026-08-11, source published 115d ago <<< STALE
+SOURCE — search for a NEWER one, do not re-read this". Deliberately emphasis inside an existing flag
+rather than a new alert — the prompt I needed was not another fire, it was the right NUMBER visible at
+the moment I was already looking. For live-state sources (a leaderboard, an order book, a market
+description) publication and observation dates are equal by construction, so those show 0 and stay
+quiet. Forced the path: the MacBook April source now renders exactly the warning that would have
+stopped this morning's mistaken divergence ack.
+
+Cleanup: the "Prior & fact hygiene" cluster I created yesterday absorbed today's three additions
+without fragmenting, which is the structure working — but its header still described "three inverted
+revisions inside twelve hours" and no longer matched contents that now include an entirely different
+failure (faithful quotation of a stale source). Retitled to cover both, and merged the two
+overlapping fetchability bullets into one, since "only a fetchable artifact counts" and "a URL that
+403s is not fetchable" are the same rule stated twice. 57 bullets, and the cluster now reads as one
+discipline answering distinct questions — why it fails, what counts as verification, is my source
+current, does the error's direction matter, when do bad edits happen.
+
+No new alpha source surfaced, and I am not going to invent one: news flow is unchanged (tier-2
+Iran/Hormuz), no unexplained market behaviour beyond the MacBook move already diagnosed, and the
+named-source-lag scanner stays gated behind Dec-31 HLE grading. No trades.
