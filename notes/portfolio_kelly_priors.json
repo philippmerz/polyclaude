@@ -68,24 +68,34 @@
   ]
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
-  "p_no": 0.8,
+  "p_no": 0.62,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.4,
   "cluster_frac": 0.0,
   "rationale": "[ENTRY-TIME RECORD 2026-07-15, superseded by `note` — do NOT read as current] DEC-0046: Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out. Entry p_no 0.85.",
-  "note": "CORRECTED 0.58 -> 0.80 on 2026-08-11 after fetching the PRIMARY source and finding my own 08-08 revision had INVERTED the direction of the anchor move. Trail: entry 0.85 (Jul-15) -> 0.76 -> 0.70 -> 0.58 (Aug-08, commit reason 'Gurman anchor moved to late-2026/early-2027'). But MacRumors 2026-04-19 (fetched today, no later update) quotes Gurman that 'late 2026 to early 2027' was the ORIGINAL expectation and the REVISION is 'early 2027 is now more likely than late 2026', with the piece stating outright the machines will not be available for purchase in 2026. So the Aug-08 cut treated the pre-revision window as if it were the post-revision one and moved my number 12pp the wrong way. New p_no 0.80: P(YES) ~0.20 covers an Apple surprise or a late-2026 unveil that still ships purchasable before Dec-31 despite the memory shortage; short of the 0.85 entry because this is a single (if authoritative) reporter and a hidden-info market where supply-chain flow can front-run public reporting. CONSEQUENCE OF THE ERROR, worth remembering: at 0.58 the mark reaching 0.59 today read as 'position is at fair', which under the trim-at-fair pattern invites selling a 21pp edge. A prior that is wrong in the direction of your own book is the expensive kind.",
-  "verified": "2026-08-11",
+  "note": "CORRECTED 0.80 -> 0.62 on 2026-08-12 after MacBook NO fell 0.595 -> 0.495 over twelve hours, sustained and one-directional, on a hidden-info-class position where the doctrine says informed flow may lead public reporting. It did. My 0.80 rested entirely on Gurman's APRIL read ('early 2027 more likely'); the July supply-chain reporting I had never looked for says ~2.5M Samsung panels with shipments spanning late-2026 AND early-2027 and a launch 'late 2026 or early 2027' — three months newer and materially less committed to 2027. New p_no 0.62 = P(launch slips past 2026) ~0.55 plus the branch where a very late 2026 unveiling still is not PURCHASABLE by Dec-31. Caution that cut the other way and is worth recording: an aggregated search summary claimed 'mass production since May, 2M panels by year-end', which would have justified cutting to ~0.45 — fetching the dated article showed the primary source says no such thing. Summary overstated; artifact corrected it. HOLD, no trade: at a 0.495 mark against 0.62 fair the edge is 12pp, the position is cap-bound anyway, and a taker exit pays 4.5c/share (10% of min(p,1-p)) which swamps the gap. Hidden-info class so still NO resting sell.",
+  "verified": "2026-08-12",
   "criteria_read": "2026-08-08",
   "hidden_info": true,
   "key_facts": [
    {
-    "claim": "Gurman: 'late 2026 to early 2027' was the ORIGINAL window; the REVISION is 'early 2027 now more likely than late 2026'. Article states the machines will not be purchasable in 2026.",
+    "claim": "Gurman: 'late 2026 to early 2027' was the ORIGINAL window; the REVISION is 'early 2027 now more likely than late 2026'; piece states the machines will not be purchasable in 2026. NOTE: this is an APRIL read and has been partially superseded — see the July supply-chain source below.",
     "source": "https://www.macrumors.com/2026/04/19/when-to-expect-next-macbook-pro-and-mac-studio/",
     "checked": "2026-08-11"
+   },
+   {
+    "claim": "Samsung Display supplies ~2.5M OLED panels exclusively; 'shipment timings of late in 2026 AND early 2027'; launch 'currently expected to arrive either in late 2026 or early 2027'. Less committal to 2027 than Gurman's April read, and 3 months newer.",
+    "source": "https://appleinsider.com/articles/26/07/28/oled-macbook-pro-will-get-displays-exclusively-from-samsung",
+    "checked": "2026-08-12"
+   },
+   {
+    "claim": "Criteria require GENERAL-PUBLIC PURCHASABILITY by Dec-31; an unveiling alone does not resolve YES.",
+    "source": "market description, re-read 2026-08-08",
+    "checked": "2026-08-08"
    }
   ],
   "divergence_ack": "2026-08-12",
-  "divergence_note": "INTENTIONAL 26pp gap (prior 0.80 vs mark 0.540), acked 2026-08-12 on the divergence check's first fire outside the HLE family. Resolution is ACK, not trade, for a mechanical reason: the position is cap-bound at $27.19 cost against a 15% single-ticket ceiling of $28.06 on a $187.07 bankroll — $0.87 of room, i.e. none. The prior is NOT soft: it was rebuilt yesterday from the primary source (MacRumors 2026-04-19 quoting Gurman that 'early 2027 is now more likely than late 2026' and that the machines will not be purchasable in 2026), and today's 5.5pp drop carries no news — zero tier-1 keyword fires, nothing in the feed. So this is flow against a freshly-sourced thesis, which is the case the ack exists for. Re-derive when the ack lapses 2026-08-26, or immediately at Apple's September event, whichever comes first."
+  "divergence_note": "REVISED same day. The 02:00 ack claimed 'prior freshly sourced, today's drop carries no news' — that was WRONG in its basis: the source was fetched-and-dated but FOUR MONTHS OLD in a fast-moving supply-chain story, and I had never asked whether a NEWER source existed. Gap is now 12pp (0.62 vs 0.495), not 30pp."
  },
  "will-gpt-6-be-released-by-august-31-2026-778": {
   "p_no": 0.85,

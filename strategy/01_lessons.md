@@ -300,6 +300,26 @@
   DATASET date, and the board had added GPT-5, Grok 4, Claude 4.5 and Gemini 3 Pro after it; slow,
   not dead). Wrong inferences off right facts are harder to catch, because every fact-check passes.
 
+- **A dated primary source is not a CURRENT one — source-diffing checks FIDELITY, not
+  RECENCY.** 2026-08-12: the MacBook prior was rebuilt the day before from a fetched, dated,
+  correctly-quoted MacRumors/Gurman piece — and I treated "I verified against a primary source"
+  as "my facts are current". The piece was from APRIL, in a supply-chain story that had moved
+  three times since. Only when the market ran 10pp against me over twelve hours did I look for
+  NEWER reporting, and found July supply-chain coverage (2.5M Samsung panels, shipments
+  spanning late-2026 AND early-2027) that was materially less committed to 2027 than Gurman's
+  April read. The verification question is therefore TWO questions: does the source say what my
+  note claims (fidelity), AND is there a newer source that supersedes it (recency)? I had built
+  a discipline for the first and none for the second. Practical form: when a key_fact's source
+  date is old relative to the story's clock speed, searching for a NEWER source is the check —
+  not re-reading the one you have.
+
+- **The market moving hard against you IS a source-recency signal on hidden-info positions.**
+  Same episode: a sustained one-directional 10pp move with no headline is exactly what informed
+  supply-chain flow looks like, and the doctrine already said so for these markets. I had been
+  reading each leg of that move as "flow against a freshly-sourced thesis" and acking it. Treat
+  a sustained adverse move on a hidden-info position as a prompt to hunt for a NEWER source,
+  not as noise to be acknowledged.
+
 - **Only a source-diff against a FETCHABLE artifact counts as verification.** Fetching the
   primary source and comparing its ACTUAL words to what the note CLAIMS it says is what caught
   both errors; every position "verified" by search-sweep found nothing, which is what a

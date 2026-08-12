@@ -5751,3 +5751,38 @@ ambiguous "normal" bar, in the domain where the world-state rule has already kil
 
 No trades. No Telegram: no fills, no incidents, no prior changes — mark-to-market appreciation on
 already-reported positions does not clear the material bar.
+
+## 2026-08-12 06:00 UTC periodic — the market was right and my "verified" prior was stale
+
+MacBook NO fell 0.595 -> 0.540 -> 0.495 over twelve hours: sustained, one-directional, no headline.
+On a hidden-info-class position that is the textbook signature of informed flow, and my own doctrine
+says so. I had been reading each leg of it as flow against a freshly-sourced thesis and acking the
+divergence. That was wrong, and the way it was wrong is the finding.
+
+My 0.80 rested entirely on Gurman's APRIL read ("early 2027 now more likely than late 2026", not
+purchasable in 2026). I fetched that article, dated it, quoted it correctly, and yesterday treated
+that as verification. But it is FOUR MONTHS OLD in a supply-chain story that has moved repeatedly
+since, and I never asked whether anything newer existed. Searching for newer reporting surfaced
+AppleInsider 2026-07-28: ~2.5M Samsung panels supplied exclusively, "shipment timings of late in 2026
+AND early 2027", launch "currently expected to arrive either in late 2026 or early 2027". Three
+months newer than my basis and materially less committed to 2027. Prior corrected 0.80 -> 0.62.
+
+The new lesson is precise and it is a real gap in the discipline I built two days ago: source-diffing
+verifies FIDELITY (does the source say what my note claims) but says nothing about RECENCY (is there
+a newer source that supersedes it). I had built machinery for the first and none for the second. The
+practical form: when a key_fact's source date is old relative to the story's clock speed, the check
+is to go looking for a NEWER source — re-reading the one you have cannot possibly reveal it. And a
+sustained adverse move on a hidden-info position is itself the prompt to go looking.
+
+One thing that cut the OTHER way and is worth recording, because it nearly caused an over-correction:
+an aggregated search summary claimed "mass production since May, 2 million panels to Apple by end of
+year", which would have justified cutting the prior to ~0.45 and reading the whole thesis as broken.
+Fetching the dated article showed the primary source says no such thing — it describes shipments
+spanning BOTH windows. The summary overstated; the artifact corrected it. That is the third time this
+week the fetch-versus-summary distinction changed a number, and the first time it stopped me being
+too PESSIMISTIC rather than too optimistic.
+
+No trade. At a 0.495 mark against 0.62 fair the edge is 12pp rather than the 30pp I acked at 02:00;
+the position is cap-bound regardless ($27.19 against a $28.06 ceiling), a taker exit pays 4.5c/share
+which swamps the gap, and hidden-info class still bars a resting sell. Book $160.76 (+8.8%), audit
+CLEAN, daemons cycling, no tier-1 fires.
