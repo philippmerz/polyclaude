@@ -5883,3 +5883,26 @@ current, does the error's direction matter, when do bad edits happen.
 No new alpha source surfaced, and I am not going to invent one: news flow is unchanged (tier-2
 Iran/Hormuz), no unexplained market behaviour beyond the MacBook move already diagnosed, and the
 named-source-lag scanner stays gated behind Dec-31 HLE grading. No trades.
+
+## 2026-08-12 07:20 UTC — downstream check on the corrections, and a capital-productivity ranking
+
+Verified that today's two prior corrections propagate into exit routing rather than assuming it: an
+18pp move in MacBook's fair is exactly the size that can flip a verdict. It did not. MacBook prices
+at fair 0.620 with hold $40.92 against taker-sell $25.12 — still HOLD, but the margin compressed from
++$24.78 to +$15.80. SpaceX now recommends resting a maker sell at >=0.950 and mine sits at 0.96, so
+it remains a premium exit rather than a wash. No SELL-TAKER verdict anywhere.
+
+The consequence worth recording is a ranking rather than an action. After today, roughly a third of
+the bankroll sits in the two positions with the THINNEST edges in the book: SpaceX at ~5pp on 16%
+(0.895 mark vs 0.95 fair) and MacBook at ~12pp on 17% (0.495 vs 0.62). Both were materially more
+attractive yesterday on numbers that turned out to be stale. Meanwhile the HLE legs carry far larger
+nominal edges, though on an interpretive crux I cannot verify — which is exactly why they are
+lottery-sized rather than large. Nothing to do today with $3.38 of free capital, but if capital ever
+frees up or a genuinely better opportunity appears, SpaceX is the first place to look and MacBook the
+second; that ordering is now recorded so the decision is not re-derived under time pressure.
+
+Also worth stating plainly, because it is the day's real lesson in portfolio terms: the 15%
+single-ticket cap did unglamorous but genuine work. My MacBook add yesterday was sized on a 21pp edge
+that did not exist — the true edge at that entry was ~3pp — and the only reason the mistake cost $3.54
+rather than $36 is that the cap, not my conviction, set the size. Conviction was wrong; the constraint
+was right.
