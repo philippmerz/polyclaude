@@ -6059,3 +6059,30 @@ exactly the asset an emergency-exit alert depends on to be acted upon.
 Ironic in a useful way: this whole sequence started because I was drilling a path that had never run,
 on the theory that untested paths hide breakage. It did — the sell path was dead. And the drill
 itself then exposed a SECOND untested thing: what the operator sees when it runs.
+
+## 2026-08-12 11:28 UTC — swept the drill-alert leak across the class; it was in five scripts
+
+The operator's "Whats that" was one file. The class was five. Grepping for scripts that pair a
+--dry-run with a Telegram found both emergency exits, emergency_bridge_to_safety,
+emergency_swap_usdc_to_eth and limitless_arb_executor — roughly eleven ungated call sites in total.
+emergency_exit_ostium had the identical bug and had in fact already fired at the operator during
+today's drill ("no open positions"). This mattered more than a one-off apology because I had just
+scheduled a MONTHLY drill: an ungated alert would have become a recurring false emergency, every
+month, across five scripts.
+
+Fixed at the FUNCTION rather than per call site. Each file's `_telegram()` now returns early under a
+module `_DRY_RUN` flag and prints what it suppressed. That covers every existing site and every
+future one, because a new caller cannot forget a check it never has to write. Patching eleven sites
+individually would have invited precisely the omission that created the bug.
+
+Two things went wrong on the way, both instructive. The bulk patcher refused three of four files
+because their `_telegram` signatures differed slightly — and REFUSING is the correct behaviour; that
+is the safety property I wanted after corrupting clob_v2 with a blind replace an hour earlier. I
+handled those three explicitly. Then I shipped the guard into all three WITHOUT wiring `_DRY_RUN`
+from argparse, so the gate was inert — a guard that never becomes true reads exactly like a guard.
+Caught it by checking the wiring rather than the syntax, which is the same half-fix shape as leaving
+`pc.cancel()` on the dead v1 client after fixing the sell three lines above it. That is now twice in
+one day, so it is banked as its own lesson.
+
+Verified end to end: both exits run and print "(dry run — operator NOT telegrammed)", all five files
+parse, the two --help paths work, and the book is untouched — 8 positions, 4 resting orders.

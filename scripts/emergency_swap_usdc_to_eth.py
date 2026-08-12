@@ -140,7 +140,22 @@ POOL_FEE = 500   # 0.05% — most liquid USDC/ETH tier on most chains
 MAX_UINT = (1 << 256) - 1
 
 
+_DRY_RUN = False   # set from --dry-run in main(); gates all operator alerts
+
+
 def _telegram(text: str) -> None:
+    """Best-effort Telegram; never raise.
+
+    DRY-RUN GATE (2026-08-12): gated at the FUNCTION, not per call site, so a
+    new call site cannot forget it. Origin: five --dry-run drills of the
+    Polymarket exit each Telegrammed "submitted: 7/8" — indistinguishable from
+    a real liquidation on the operator's screen. Dry-run suppressed the ORDERS
+    and did nothing about the ALARM; with a monthly drill scheduled that would
+    have become a recurring false emergency.
+    """
+    if _DRY_RUN:
+        print(f"  (dry run — operator NOT telegrammed: {text.splitlines()[0][:70]})")
+        return
     try:
         subprocess.run(
             [".venv/bin/python", "scripts/telegram.py", "msg", text],
@@ -181,6 +196,12 @@ def main() -> int:
     p.add_argument("--sleeve", choices=["polymarket", "crypto"], default="crypto")
     p.add_argument("--dry-run", action="store_true")
     args = p.parse_args()
+    # Gate operator alerts on dry-run (2026-08-12). Setting the module flag
+    # here covers EVERY _telegram call site in the file at once — the gate
+    # without this wiring is inert, which is exactly the half-fix that let the
+    # same bug survive one round of repair earlier today.
+    global _DRY_RUN
+    _DRY_RUN = bool(getattr(args, "dry_run", False))
 
     cfg = CHAIN[args.chain]
     if args.token not in cfg["tokens"]:

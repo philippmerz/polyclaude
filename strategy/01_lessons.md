@@ -228,6 +228,15 @@
   seconds. (positions.py and polyclaude_enter.py import the v1 client too, but make no write
   calls — checked, not assumed.)
 
+- **Gate a side effect at the FUNCTION, not at each call site.** 2026-08-12, sweeping the
+  drill-alert leak: FIVE scripts paired a --dry-run with Telegram (both emergency exits, the
+  bridge, the swap, the Limitless executor) across ~11 call sites. Patching each site invites
+  exactly the miss that caused the bug. Gating inside `_telegram()` itself covers every existing
+  site AND every future one, since a new caller cannot forget a check it never writes. Then wire
+  the flag from argparse — I gated three files and left the flag unset in all three, so the guard
+  was inert: the same half-fix shape as leaving `pc.cancel()` on the dead client after fixing the
+  sell beside it. A guard plus no wiring reads exactly like a guard.
+
 - **A drill must not be indistinguishable from the real event ON THE OPERATOR'S SCREEN.**
   2026-08-12: five --dry-run drills of the emergency exit each Telegrammed a summary reading
   "submitted: 7/8", because the send was never gated on dry_run. Nothing was sold, but the

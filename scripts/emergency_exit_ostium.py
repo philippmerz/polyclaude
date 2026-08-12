@@ -47,8 +47,23 @@ def _sdk() -> OstiumSDK:
     return OstiumSDK(cfg, private_key=pk, rpc_url=ARBITRUM_RPC)
 
 
+_DRY_RUN = False   # set from --dry-run in main(); gates all operator alerts
+
+
 def _telegram(text: str) -> None:
-    """Best-effort Telegram via the existing CLI; never raise."""
+    """Best-effort Telegram via the existing CLI; never raise.
+
+    DRY-RUN GATE (2026-08-12). Gated at the FUNCTION rather than at each call
+    site, so a new call site cannot forget it. Origin: five --dry-run drills of
+    the Polymarket exit each sent the operator a summary reading "submitted:
+    7/8", which reads exactly like the book being liquidated; they asked what it
+    was. Dry-run correctly suppressed the ORDERS and did nothing about the
+    ALARM. With a monthly drill now scheduled, an ungated alert would have
+    become a recurring false emergency across every one of these scripts.
+    """
+    if _DRY_RUN:
+        print(f"  (dry run — operator NOT telegrammed: {text.splitlines()[0][:70]})")
+        return
     try:
         subprocess.run(
             [".venv/bin/python", "scripts/telegram.py", "msg", text],
@@ -157,6 +172,8 @@ def main() -> int:
     p.add_argument("--dry-run", action="store_true",
                    help="enumerate positions but don't actually close")
     args = p.parse_args()
+    global _DRY_RUN
+    _DRY_RUN = bool(args.dry_run)
     return asyncio.run(run(args.reason, args.dry_run))
 
 
