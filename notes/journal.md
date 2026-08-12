@@ -5971,3 +5971,31 @@ client, so it does not share the flaw, and it correctly reports no open position
 Nothing else surfaced. recoup_campaign.md was checked and already carries a CLOSED banner at the top
 telling continuation checks to skip it — I verified rather than assumed. No new alpha source; news
 flow unchanged.
+
+## 2026-08-12 10:40 UTC — the broken emergency exit had a second half, and my fix had a bug
+
+Applied "fix the class, not the instance" to this morning's find and grepped every v1 write call in
+scripts/. It paid immediately: rewiring the SELL to clob_v2 had left `pc.cancel()` three lines away
+on the same dead v1 client. That half is load-bearing rather than cosmetic — resting sells LOCK the
+shares an emergency sell needs, so a silently-failing cancel does not merely leave clutter, it can
+BLOCK the exit. (positions.py and polyclaude_enter.py import the v1 client as well but make no write
+calls; checked rather than assumed.)
+
+Then my own fix had a bug, and the drill caught it rather than review. I guessed the shape of
+list_open_orders() and parsed for a top-level "data" key when the real shape nests it under "body".
+The result was a cancel loop over an EMPTY LIST against four live orders — which prints nothing,
+raises nothing, and looks exactly like a clean run. The only reason it surfaced is that the drill
+asserts against a known truth: I knew there were four orders, and the dry run said nothing about
+cancelling any. Corrected to read body.data, and the drill now reports "DRY: would cancel 4 resting
+order(s) via v2", matching reality.
+
+Both write paths are now live-fire verified by the same free trick — make the operation impossible
+and read the error's KIND. A sell of 1 share at 0.999 FOK returned an orderID plus "FOK orders are
+fully filled or killed"; a cancel of an all-zeroes order id returned HTTP 200 with "order can't be
+found - already canceled or matched". Both are SEMANTIC responses, which proves signing, auth and
+endpoint are all working — as opposed to the order_version_mismatch protocol rejection the v1 path
+would have produced. Nothing filled, nothing cancelled, four real orders still intact after both.
+
+The generalisable pair banked: after fixing a broken path grep for its class, because the same break
+usually has a second half; and a loop over an empty collection is indistinguishable from success, so
+any test of iterating code has to check the COUNT against something independently known.

@@ -159,16 +159,34 @@ def run(reason: str, dry_run: bool) -> int:
     print(f"emergency_exit_polymarket  reason={reason!r}  dry_run={dry_run}")
     print(f"address: {addr}")
 
-    # Cancel any resting orders first (clears the way for sell submissions)
+    # Cancel any resting orders first (clears the way for sell submissions).
+    # ALSO REWIRED TO v2 (2026-08-12): this was the SECOND half of the same
+    # break — the sell path was fixed first and `pc.cancel()` was left behind
+    # on the dead v1 client. It is load-bearing, not incidental: resting sells
+    # lock the very shares an emergency sell needs, so a silently-failing
+    # cancel does not merely leave clutter, it can BLOCK the exit. Found by
+    # grepping for the CLASS after fixing the instance.
     try:
-        open_orders = pc.open_orders()
+        import clob_v2 as _v2c
+        # Shape is {"status_code":..., "body":{"data":[...], "count":N}} — my
+        # first attempt at this parse guessed and silently produced an empty
+        # list against 4 live orders. The DRILL caught it, not review: a
+        # cancel loop over [] prints nothing and looks exactly like success.
+        listing = _v2c.list_open_orders()
+        body = listing.get("body", {}) if isinstance(listing, dict) else {}
+        open_orders = body.get("data", []) if isinstance(body, dict) else []
         if open_orders and not dry_run:
-            print(f"cancelling {len(open_orders)} resting order(s)...")
+            print(f"cancelling {len(open_orders)} resting order(s) via v2...")
             for o in open_orders:
+                oid = o.get("id") or o.get("orderID")
                 try:
-                    pc.cancel(o.get("id") or o.get("orderID"))
+                    res = _v2c.cancel_order(oid)
+                    if res.get("status_code", 200) >= 400:
+                        print(f"  cancel {str(oid)[:12]} HTTP {res['status_code']}: {str(res.get('body'))[:120]}")
                 except Exception as e:
                     print(f"  cancel failed: {str(e)[:200]}")
+        elif open_orders:
+            print(f"DRY: would cancel {len(open_orders)} resting order(s) via v2")
     except Exception as e:
         print(f"open_orders fetch failed (non-fatal): {str(e)[:200]}")
 

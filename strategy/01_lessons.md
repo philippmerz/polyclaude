@@ -220,6 +220,23 @@
   and with nothing left resting. Drill the write path, not the dry-run; an unfillable order at an
   impossible price is the free way to do it.
 
+- **After fixing a broken path, grep for the CLASS — the same break usually has a second half.**
+  2026-08-12: rewiring the emergency exit's SELL to clob_v2 left `pc.cancel()` sitting on the dead
+  v1 client three lines away. That half was load-bearing, not incidental: resting sells lock the
+  very shares an emergency sell needs, so a silently-failing cancel does not just leave clutter,
+  it can BLOCK the exit entirely. One grep for every v1 write call across scripts/ found it in
+  seconds. (positions.py and polyclaude_enter.py import the v1 client too, but make no write
+  calls — checked, not assumed.)
+
+- **A loop over an empty list looks exactly like success.** My first cancel-path parse guessed the
+  response shape and produced [] against 4 live orders; it printed nothing and the run looked
+  clean. Only the DRILL caught it, because the drill asserts against a known truth (I knew there
+  were 4). Whenever code iterates a fetched collection, the test must check the COUNT against
+  something independently known — "no errors" is not evidence the collection was non-empty.
+  Verify write paths the free way: an order that cannot fill (FOK at an impossible price) and a
+  cancel of an id that cannot exist both return SEMANTIC errors, which proves signing, auth and
+  endpoint while touching nothing.
+
 - **An emergency exit should take partial fills, not refuse them.** The live-fire also exposed
   that FOK was wrong for this job: all-or-nothing at one price means any thinning between the
   bid you read and the order you post kills the sell and exits NOTHING — in the one situation
