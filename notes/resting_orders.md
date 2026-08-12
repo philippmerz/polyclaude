@@ -117,3 +117,19 @@ position to top up.
 NOT catalyst-gated in the near term (Apple's September event is the next scheduled mover, ~Sep 8-10).
 PULL this bid before that event per the scheduled-catalyst rule — a resting bid through an unveiling
 is a free option written to whoever sees the ship date first.
+
+
+## CANCELLED: Gemini-HLE-50 NO maker BUY (placed 2026-08-10 22:30, cancelled 2026-08-12 22:05, DEC-0071)
+
+60sh @ 0.100 never filled beyond a 0.01sh dust match. Cancelled because the market moved 2.5x away
+(NO 0.102 -> 0.249 in ~30h), which converts a cheap option into ADVERSE SELECTION: filling now needs
+a ~60% collapse, and a move that size on a hidden-info market is information — the board posting a
+2026 Gemini row, or Google announcing a >=50 score — not noise. A bid that can only fill once its own
+thesis has broken is a negative-EV standing order however cheap the price looks.
+
+Held the position itself (36.01sh, +211%, prior 0.56 vs 0.249 mark). The claim is still cheap; what
+expired was the case for paying collateral to sit 15pp under the market.
+
+GENERAL RULE this instance sharpens: a resting bid's worth is not its price versus your fair, it is
+P(fill | noise) versus P(fill | information). As the market walks away from a bid, that ratio decays
+even though the nominal edge at the bid price looks better than ever.

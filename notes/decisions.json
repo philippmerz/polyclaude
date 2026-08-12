@@ -1,5 +1,5 @@
 {
-  "next_id": 71,
+  "next_id": 72,
   "decisions": [
     {
       "id": 1,
@@ -1347,6 +1347,25 @@
         "alert-calibration",
         "economic-floor",
         "tick-cost"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 71,
+      "timestamp": "2026-08-12T22:01:37Z",
+      "type": "close_position",
+      "thesis": "CANCELLED the resting Gemini-HLE-50 NO buy (60sh @0.100, $6.00, unfilled since 2026-08-10 22:30 apart from a 0.01sh dust fill). The market has moved 2.5x away from it \u2014 NO now 0.249 against my 0.10 bid \u2014 which changes the order from a cheap option into a negative-selection standing bid. Filling now requires a ~60% collapse in the NO price, and a move that large on a hidden-info-class market is almost certainly INFORMATION (the agi.safe.ai board posting a qualifying 2026 Gemini row, or Google announcing a >=50 HLE score) rather than noise. That is precisely the case where I would NOT want the fill: the bid executes exactly when its own thesis has broken. Also frees $6.00, which was 64% of liquid capital ($3.38 free). Note the position itself is UNCHANGED and still held (36.01sh, +211%): the prior stays 0.56 against a 0.249 mark, so the claim is still cheap \u2014 what changed is only that a bid 15pp below market is no longer an option worth paying collateral for.",
+      "confidence": "high",
+      "prediction": "No regret from the cancellation: the Gemini-50 NO does not trade back to 0.10 on noise before Dec-31. Falsified if it retraces to 0.10 WITHOUT a board update or a Google HLE announcement, which would mean the move was flow after all and I gave up a genuinely cheap fill.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "gemini-hle",
+        "resting-order",
+        "adverse-selection",
+        "stale-bid"
       ],
       "outcome": null,
       "calibration_delta": null,
