@@ -6981,3 +6981,35 @@ Left as a deliberate non-action: splitting Ops into sub-sections. It is the righ
 is a 380-line reorganisation, which is not something to start fifteen minutes before a tick with a
 long session behind me. The map makes the file navigable in the meantime, which was the actual
 complaint.
+
+## 2026-08-13 14:00 UTC tick — the morning's phantom gain round-tripped, and the crux fact finally surfaced
+
+Bankroll $175.97 (+3.5%), PM MTM $157.59 marked / $154.81 realizable (+6.6% / +4.7%). The headline
+move is MacBook NO collapsing 0.685 -> 0.420, UMA flagging YES +23pp to 0.58. That is the full
+round trip of this morning's spike plus a further leg down, and it vindicates the instrumentation
+built at 10:00: the +66% I nearly reported was a midpoint inside a 0.57/0.76 spread on ZERO volume,
+and the REALIZABLE line correctly refused to count it. Both bankroll and positions now print the gap
+without being asked, which is exactly what they were built for.
+
+The move itself sent me looking for news and the search turned up something better — the crux fact
+this position has been missing all along. MacRumors 2026-07-01, fetched and dated: the late-2026 M6
+MacBook Pro has NO touchscreen and NO OLED. The touchscreen machine is a SEPARATE high-end line,
+whose design the M7 (1H-2027) will share, and whose timing Bloomberg puts at "end of 2026 or early
+2027". So the wave of "MacBook Pro coming late 2026" reporting is about a DIFFERENT MACHINE than this
+market resolves on — and today's YES run from 0.35 to 0.58 came with no touchscreen-specific news,
+which makes conflation a live possibility rather than a rationalisation.
+
+Corrected in the other direction too, because honesty cuts both ways: I had recorded the M5 Pro/Max
+chip reshuffle as an attempt to HOLD an early-2027 schedule, and the reporting says it was to
+ACCELERATE the touchscreen line. That favours YES. Netting both, p_no 0.62 -> 0.58 — P(YES) ~0.42 on
+a coin-flip calendar boundary made stricter by the criteria's PURCHASABLE bar, against a market at
+0.58. Applying my own measured instance-overconfidence would put me nearer 0.45, still below market.
+
+Held: cannot add (cost $27.19 now exceeds 15% of the reduced bankroll — drift rather than a breach,
+so no forced sale either), and would not sell NO at 0.42 believing 0.58. Everything else clean: UMA 2
+alerts both diagnosed (MacBook, SpaceX -5.5pp), Ostium unchanged, audit CLEAN after --fix, redeem
+0/8, marginal-APY 8 clear, zero SELL-TAKER verdicts, no overdue decisions, discovery entered nothing.
+
+One operational note: bankroll printed a CoinGecko-timeout warning and valued natives at $0, so
+$175.97 understates by roughly $4. The warning did its job — the number is wrong in a KNOWN direction
+by a KNOWN cause, which is the whole point of warning rather than silently omitting.
