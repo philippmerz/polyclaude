@@ -6753,3 +6753,33 @@ I identified the right principle at 10:00 (walk real bids), applied it to one sc
 reasoned defence of not touching the second — and the second was the one I quote. The reasoning was
 sound and the SCOPE was wrong. "Fix it at the display layer" is only complete if you enumerate every
 display layer, and there were two.
+
+## 2026-08-13 10:55 UTC meta-reflection — same scope error three times in one morning
+
+The reflection question found a genuine instance, and it is my own error repeating. Having caught
+midpoints inflating the book at 10:00, I fixed positions.py; at 10:20 I wrote a reasoned defence of
+NOT touching bankroll.py and was wrong, because bankroll is the number I quote; at 10:55 I found
+polyclaude_status's Telegram path still grepping `mtm` alone — which is the number the OPERATOR
+actually reads, and therefore the one that mattered most. Right principle three times, wrong scope
+three times.
+
+Fixed: the status telegram now carries the realizable figure whenever positions.py reports one,
+verified by extracting it from live output ($169.67). That closes the enumeration — positions.py,
+bankroll.py, the aggregator's display (inherits by shelling out), and the aggregator's telegram.
+
+Also checked for a regression I had introduced rather than assuming: positions.py now walks eight
+order books, and polyclaude_status calls it with timeout=30 in one place and timeout=15 in another.
+It runs in 6s, so both are safe — but I would not have known without timing it, and a slow check
+silently timing out inside a caller is exactly the kind of failure that reads as "no data" rather
+than as an error.
+
+Banked the general form, because this is the third distinct shape of the same underlying mistake this
+week (fix the instance not the class; fix the sell path and leave the cancel path; fix the display
+and leave the two other displays): when a fix is "report X alongside Y", the next step is enumerating
+every place X is emitted — script output, aggregator, alert, weekly report, README — BEFORE patching,
+rather than discovering them one miss at a time.
+
+Nothing else surfaced. No new alpha source: news flow unchanged, the only market move of note this
+morning was the MacBook midpoint artifact which is not a market move at all, and the deferred build
+items (verified-staleness rotation, per-key cooldowns, time-decay re-derivation, named-source-lag
+scanner) all still sit behind live gates.

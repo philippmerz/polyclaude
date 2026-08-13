@@ -161,9 +161,19 @@ def main() -> int:
             cost_match = re.search(r"cost\s+\$([\d.-]+)", pos_out)
             mtm = mtm_match.group(1) if mtm_match else "?"
             cost = cost_match.group(1) if cost_match else "?"
+            # Carry the REALIZABLE figure into the operator-facing line when
+            # positions.py reports one (2026-08-13). This was the last display
+            # layer still quoting the midpoint alone: the fix went into
+            # positions.py, then bankroll.py, and this telegram — the number the
+            # operator actually READS — was still grepping `mtm` only. Same
+            # scope error twice in one morning, which is why the rule is now
+            # "enumerate every display layer", not "fix the display layer".
+            real_match = re.search(r"REALIZABLE \(best bids\): \$([\d.-]+)", pos_out)
+            real_line = f"realizable ${real_match.group(1)} (best bids)\n" if real_match else ""
 
             tg_msg = (f"polyclaude status {ts}\n"
                       f"PM cost ${cost} mtm ${mtm}\n"
+                      f"{real_line}"
                       f"(full report via scripts/polyclaude_status.py)")
             subprocess.run([".venv/bin/python", "scripts/telegram.py", "msg", tg_msg],
                            cwd=REPO_ROOT, timeout=15)

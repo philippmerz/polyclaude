@@ -524,6 +524,15 @@ quoted but four months stale. Read this before touching any prior.)*
   this is worth" is the actual question being asked. The general trap: when several defensible
   bases exist, the one that flatters you will always have a plausible-sounding argument.
 
+- **"Fix it at the display layer" is incomplete until you ENUMERATE the display layers.**
+  2026-08-13, in one morning, the same scope error three times: found midpoints inflating the
+  book, fixed positions.py, then wrote a reasoned defence of NOT touching bankroll.py — which
+  is the number I quote — then fixed that, and still left polyclaude_status's Telegram line
+  grepping `mtm` alone, which is the number the operator actually READS. The principle was
+  right each time and the scope was wrong each time. When a fix is "report X alongside Y",
+  the very next step is to list every place X is emitted: script output, aggregator, alert,
+  weekly report, README. Enumerate before patching, not after each miss.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**
