@@ -7217,3 +7217,30 @@ Recorded an atomicity requirement in the priors schema: one independently checka
 entry, own source, own date, and split anything joining two verifiable claims with " and ". That is
 what makes the source-diff rotation able to catch this class at all — it can only diff a claim it can
 see, and a bundle shows it the confident half.
+
+## 2026-08-13 19:40 UTC — applied the atomicity rule instead of just recording it
+
+Twenty minutes ago I recorded an atomicity requirement for key_facts and did not apply it, which is
+exactly the "a rule written down is not a rule enforced" pattern I have banked three separate times
+today. So I measured the live book: 9 bundled facts across my four largest positions — MacBook,
+Greenland, Trump-out, GPT-6 — collectively ~84% of book cost. Precisely where the next 15x error
+would hide.
+
+Split all four. 12 bundled entries became 25 atomic ones, each carrying its own source and date. The
+live book now holds 29 key_facts with ZERO bundles, and the audit stays clean.
+
+The split was worth doing for its own sake, not just for tidiness, because decomposing forced claims
+into the open that had been riding along inside other sentences. MacBook's eight now separate "the
+late-2026 M6 has no touchscreen" from "the touchscreen line is a different machine at end-2026 or
+early-2027" from "Gurman's REVISION was toward 2027" from "the M5 reshuffle was an ACCELERATION" —
+four facts that pull in different directions and were previously smeared across two paragraphs where
+I could read whichever half I already believed. Greenland's seven now list each EXCLUSION separately
+from the one QUALIFYING example, which is the distinction that moved that prior today. And Trump-out
+now states the narrowing clause and the widening clause as separate lines rather than one sentence
+where the second was easy to skim past.
+
+One entry I deliberately left honest rather than tidy: the M5-reshuffle-as-acceleration claim is
+sourced to "search sweep 2026-08-13, not yet pinned to a single dated artifact". It is load-bearing —
+it is half of why p_no came down today — and I have not fetched a dated source for it. Writing that
+plainly is better than attaching a plausible URL I did not verify, and the source-diff rotation will
+now surface it as the weakest claim on that position, which is correct.

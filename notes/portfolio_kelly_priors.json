@@ -12,14 +12,32 @@
   "criteria_read": "2026-08-13",
   "key_facts": [
    {
-    "claim": "CRITERIA (re-read 2026-08-13, prompted by the rotation): YES if Trump resigns, is removed, or otherwise ceases to be President by Dec-31. TWO SUBTLETIES that matter and cut opposite ways. (a) NARROWING: the headline 'for any period of time' is overridden by explicit carve-outs — 'Only permanent removal will qualify'; a temporary 25th-Amendment Section 3 invocation (which presidents do routinely for medical procedures) does NOT count, nor does a Section 4 invocation not sustained by both Houses, nor impeachment without removal. A naive reading of 'any period of time' would price routine anesthesia transfers as YES; it does not. (b) WIDENING: an ANNOUNCEMENT of resignation/removal before Dec-31 resolves YES IMMEDIATELY, regardless of when it takes effect. Net: the carve-out is worth more than the announcement clause, so p_no 0.97 stands. Resolution source is 'a consensus of credible reporting' — NOT a named source, so there is no resolution-source-lag angle here, unlike the HLE family.",
-    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027 (market description, fetchable)",
+    "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
     "source_date": "2026-08-13",
     "checked": "2026-08-13"
    },
    {
-    "claim": "STATE: impeachment resolutions H.Res.353/537/939 introduced in the 119th Congress; none has produced a Senate removal, and the majorities do not exist. NOT AGENT-FETCHABLE (congress.gov 403s WebFetch). Independent falsifier: the market prices NO at 0.935 — a completed removal would price near zero — plus uma_status_check shows it unresolved and there have been zero tier-1 fires on the extensive removal keyword set.",
-    "source": "https://www.congress.gov/bill/119th-congress/house-resolution/939 [403 to WebFetch — human-verifiable only]",
+    "claim": "A Section 4 invocation NOT sustained by both Houses does not count; impeachment without removal does not count.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "An ANNOUNCEMENT of resignation/removal before Dec-31 resolves YES IMMEDIATELY, regardless of effective date — the one clause that WIDENS YES.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Resolution source is 'a consensus of credible reporting', NOT a named source — so no resolution-source-lag angle exists here, unlike the HLE family.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Impeachment resolutions H.Res.353/537/939 are INTRODUCED in the 119th Congress; none has produced a Senate removal and the majorities do not exist.",
+    "source": "https://www.congress.gov/bill/119th-congress/house-resolution/939 [403 to WebFetch — human-verifiable only; falsifier is the market itself pricing NO at ~0.93]",
     "source_date": "2026-08-12",
     "checked": "2026-08-13"
    }
@@ -36,22 +54,46 @@
   "criteria_read": "2026-08-13",
   "key_facts": [
    {
-    "claim": "NEWER STATE (2026-08-13, surfaced by the stale-source check on a 203d-old source). Negotiations are LIVE and their shape matters: reporting describes US 'total access' to parts of Greenland for an UNLIMITED period via a reopened 1951 defence agreement, with access 'not curbed in the future under any circumstances', plus additional forces and rare-earth access. Denmark's red line is explicit — 'we will not cede sovereignty over parts of the kingdom' — and the proposal is framed as RESPECTING Danish sovereignty, so the sovereignty-transfer branch stays firmly shut. THE RISK I HAD NOT PRICED: basing/access/SOFA arrangements are excluded BY NAME, but the criteria's own qualifying example is 'a Guantanamo-style arrangement establishing a defined zone under exclusive or primary US jurisdiction where Denmark and Greenland's ordinary legal authority does not apply except by US permission'. A maximalist uncurbable-unlimited-access deal approaches that bar from below. It is a narrow path — it needs a BINDING instrument creating exclusive JURISDICTION, not just guaranteed access — but it is no longer negligible.",
-    "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty + Yahoo/Reuters 'US and Denmark to reopen 1951 defence agreement on Greenland'",
-    "source_date": "2026-01-25",
-    "checked": "2026-08-13"
-   },
-   {
-    "claim": "CRITERIA (re-read 2026-08-13 via the rotation — MUCH tighter than I had recorded, and it resolves a standing worry). YES requires a BINDING agreement or legal instrument producing either (1) transfer of sovereignty or (2) primary/exclusive US jurisdiction such that Danish/Greenlandic law does not apply except by US permission, or (3) acquisition of such control by force. EXPLICITLY EXCLUDED, verbatim: 'Non-binding statements, negotiations, proposals, frameworks, or MOUs will not alone qualify' and 'Basing rights, access agreements, SOFA-type arrangements, COFA-type arrangements, commercial concessions, or other permissions to use land (including leases) will not alone qualify.' Pre-existing US control does not count. An announcement qualifies ONLY if accompanied by the binding instrument. => Trump's January 'framework of a future deal' with Rutte, which I had flagged as a concern, CANNOT resolve YES. Nor can the most realistic negotiated outcome, a basing or access deal.",
+    "claim": "YES requires a BINDING agreement or legal instrument producing sovereignty transfer, primary/exclusive US jurisdiction, or acquisition by force.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
     "source_date": "2026-08-13",
     "checked": "2026-08-13"
    },
    {
-    "claim": "STATE: no formal acquisition negotiations announced; Danish PM Frederiksen on record that sovereignty is not negotiable; Greenland's leader refusing sale outright; Trump ruled out force at Davos 2026-01-21.",
-    "source": "https://www.congress.gov/crs-product/IN12643 + https://www.aljazeera.com/news/2026/1/22/trumps-greenland-framework-deal-what-we-know-about-it-what-we-dont",
+    "claim": "EXCLUDED by name: non-binding statements, negotiations, proposals, FRAMEWORKS and MOUs.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "EXCLUDED by name: basing rights, access agreements, SOFA/COFA arrangements, commercial concessions, leases.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "A QUALIFYING example named in the criteria is a Guantanamo-style zone under exclusive/primary US jurisdiction where Danish law does not apply except by US permission.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Live negotiations concern US 'total access' to parts of Greenland for an UNLIMITED period, 'not curbed under any circumstances', via a reopened 1951 defence agreement.",
+    "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
+    "source_date": "2026-01-25",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Denmark's stated red line: 'We will not cede sovereignty over parts of the kingdom'; the proposal is framed as RESPECTING Danish sovereignty.",
+    "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
+    "source_date": "2026-01-25",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Trump ruled out using force to acquire Greenland (Davos, 2026-01-21).",
+    "source": "https://www.congress.gov/crs-product/IN12643",
     "source_date": "2026-01-22",
-    "checked": "2026-08-12"
+    "checked": "2026-08-13"
    }
   ],
   "source_ack": "2026-08-13",
@@ -110,26 +152,50 @@
   "hidden_info": true,
   "key_facts": [
    {
-    "claim": "CRUX FACT (fetched 2026-08-13, MacRumors 2026-07-01): the late-2026 M6 MacBook Pro has NO touchscreen and NO OLED. The touchscreen/OLED machine is a SEPARATE high-end line whose design the M7 (1H-2027) will share, and whose timing the article puts at 'end of 2026 or early 2027' per Bloomberg. So reporting that 'a MacBook Pro is coming late 2026' concerns a DIFFERENT MACHINE than this market resolves on — a conflation the market may be making, since YES ran 0.35 -> 0.58 today with no touchscreen-specific news. Also corrected: the M5 Pro/Max chip reshuffle is reported as an attempt to ACCELERATE the touchscreen line, not (as I had recorded) to hold a 2027 schedule. That cuts toward YES and is why p_no comes down rather than up.",
+    "claim": "The late-2026 M6 MacBook Pro has NO touchscreen and NO OLED.",
     "source": "https://www.macrumors.com/2026/07/01/redesigned-m7-macbook-pro-2027/",
     "source_date": "2026-07-01",
     "checked": "2026-08-13"
    },
    {
-    "claim": "Gurman: 'late 2026 to early 2027' was the ORIGINAL window; the REVISION is 'early 2027 now more likely than late 2026'; piece states the machines will not be purchasable in 2026. NOTE: this is an APRIL read and has been partially superseded — see the July supply-chain source below.",
+    "claim": "The touchscreen/OLED machine is a SEPARATE line; Bloomberg puts its launch at 'end of 2026 or early 2027'.",
+    "source": "https://www.macrumors.com/2026/07/01/redesigned-m7-macbook-pro-2027/",
+    "source_date": "2026-07-01",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Gurman's REVISION is 'early 2027 is now more likely than late 2026' (the 'late 2026 to early 2027' phrasing was the ORIGINAL window).",
     "source": "https://www.macrumors.com/2026/04/19/when-to-expect-next-macbook-pro-and-mac-studio/",
-    "checked": "2026-08-11",
-    "source_date": "2026-04-19"
+    "source_date": "2026-04-19",
+    "checked": "2026-08-11"
    },
    {
-    "claim": "Samsung Display supplies ~2.5M OLED panels exclusively; 'shipment timings of late in 2026 AND early 2027'; launch 'currently expected to arrive either in late 2026 or early 2027'. Less committal to 2027 than Gurman's April read, and 3 months newer.",
+    "claim": "The M5 Pro/Max chip reshuffle is reported as an attempt to ACCELERATE the touchscreen line.",
+    "source": "search sweep 2026-08-13 (multiple outlets; not yet pinned to a single dated artifact)",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Samsung supplies ~2.5M OLED panels exclusively, shipping across late-2026 AND early-2027.",
     "source": "https://appleinsider.com/articles/26/07/28/oled-macbook-pro-will-get-displays-exclusively-from-samsung",
-    "checked": "2026-08-12",
-    "source_date": "2026-07-28"
+    "source_date": "2026-07-28",
+    "checked": "2026-08-12"
    },
    {
-    "claim": "CRITERIA (close re-read 2026-08-13, applying the care that found Greenland's carve-outs). Requires the product 'available for purchase by the general public' — an announcement or unveiling alone is explicitly insufficient. Two clarifications I had not recorded, neither binding: it must be explicitly branded a MacBook (an iMac would not count) and it must be a TRUE touchscreen (a touch bar would not count) — the rumoured product is an OLED-touch MacBook Pro, so both are satisfied by construction. NO hidden carve-outs, unlike Greenland. THE REAL FINDING IS AN OMISSION: the text never addresses PRE-ORDERS. Apple's pattern is announce -> pre-order within days -> ship 1-2 weeks later, so if a pre-order counts as 'available for purchase', an announcement as late as mid-December resolves YES, whereas a shipping-only reading needs an earlier announcement. That is worth roughly 3-5pp on P(YES) and it is a UMA JUDGEMENT, not a fact — the same interpretation-branch structure as the HLE family. CONTINGENCY: the September event settles whether Apple announces at all; if it announces with a Nov/Dec ship, the pre-order question becomes the entire trade and this position converts from a fact bet into an interpretation bet, which means it should be re-sized as one rather than held on a fact-bet prior.",
+    "claim": "Criteria require GENERAL-PUBLIC PURCHASABILITY by Dec-31; an unveiling alone is explicitly insufficient.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Criteria are SILENT on whether a PRE-ORDER counts as 'available for purchase' — an unresolved interpretation branch worth ~3-5pp of P(YES).",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "EXIT LIQUIDITY: 20pp spread, ZERO shares bid within 5% of mark — a thesis-break rule here is unactionable; entry size was the only loss control.",
+    "source": "live CLOB book walk",
     "source_date": "2026-08-13",
     "checked": "2026-08-13"
    }
@@ -154,22 +220,34 @@
   "thesis_break_rule": "CRITERIA RE-READ 2026-08-10 (21d to resolution, active Astra rumour flow). YES needs GPT-6 'made available to the GENERAL PUBLIC' by Aug-31 23:59 ET. The text is explicit that OPEN beta and OPEN ROLLING WAITLIST signups DO count, while a CLOSED beta or ANY form of private access does NOT, and the access must be 'clearly defined and publicly announced by OpenAI'. Naming: explicitly 'GPT-6' OR anything 'recognized as a successor to GPT-5' (so Astra can qualify on positioning alone); 'GPT-5.5 or similar' explicitly does NOT. => TIER-1 ALERT TRIAGE, decide BEFORE reacting: 'Astra waitlist opens' / 'generally available' / 'rolling access' = REAL thesis break, exit. 'Astra closed beta' / 'early access for select customers' / 'safety testing with partners' = NOT a break, hold — the criteria exclude private access by name. Current world state supports NO: Altman ~Aug-6 stated publicly that Astra is NOT yet generally available and that OpenAI needs 'a little longer' pending cyber-capability safety work — a dated first-party statement that the qualifying event has not occurred and is gated on a review. Prior 0.82 vs market 0.78 = 4pp, inside divergence threshold, no trade.",
   "key_facts": [
    {
-    "claim": "Altman, verbatim: 'Given its cyber capabilities, we need a little bit longer to do this safely' (+ 'not too long!') and 'We do not think it is a good strategy to keep powerful models to a chosen few'. Article states NO waitlist, beta or early-access program exists for Astra.",
+    "claim": "No open waitlist, open beta or early-access signup exists for Astra (criteria require OPEN access; closed/private explicitly does NOT count).",
     "source": "https://bravenewcoin.com/insights/openai-ceo-sam-altman-says-astra-ai-will-be-generally-available-but-cyber-capabilities-require-more-safety-work",
-    "checked": "2026-08-11",
-    "source_date": "2026-08-10"
+    "source_date": "2026-08-10",
+    "checked": "2026-08-13"
    },
    {
-    "claim": "OpenAI's own evaluations could not rule out Astra reaching the CRITICAL cyber threshold under its Preparedness Framework — the highest classification, which TRIGGERED development slowdowns, enhanced security controls, expanded monitoring and additional testing requirements BEFORE broader release.",
+    "claim": "Altman, verbatim: 'Given its cyber capabilities, we need a little bit longer to do this safely.'",
     "source": "https://bravenewcoin.com/insights/openai-ceo-sam-altman-says-astra-ai-will-be-generally-available-but-cyber-capabilities-require-more-safety-work",
-    "checked": "2026-08-11",
-    "source_date": "2026-08-10"
+    "source_date": "2026-08-10",
+    "checked": "2026-08-13"
    },
    {
-    "claim": "Sibling market 'Astra released by' prices Aug-31 at 0.225, Sep-15 0.535, Sep-30 0.753 — monotone, modal release September.",
+    "claim": "OpenAI could not rule out Astra reaching the CRITICAL cyber threshold — the first model ever — which TRIGGERED mandated slowdowns, security controls and extra testing BEFORE broader release.",
+    "source": "https://bravenewcoin.com/insights/openai-ceo-sam-altman-says-astra-ai-will-be-generally-available-but-cyber-capabilities-require-more-safety-work",
+    "source_date": "2026-08-10",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Sibling market 'Astra released by' prices Aug-31 at ~0.22 and Sep-15 at ~0.54 — modal release September.",
     "source": "gamma-api event openais-astra-released-by-20260801214557729",
-    "checked": "2026-08-11",
-    "source_date": "2026-08-11"
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Criteria count anything 'recognized as a successor to GPT-5' — Astra can qualify without the GPT-6 name; 'GPT-5.5 or similar' explicitly does not.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-gpt-6-be-released-by-august-31-2026-778",
+    "source_date": "2026-08-10",
+    "checked": "2026-08-10"
    }
   ]
  },
