@@ -6416,3 +6416,33 @@ the 500MB pre-spawn floor, and I spawn zero background agents, so nothing is con
 the monitoring is already covered rather than adding any: heartbeat_watch alerts below a 250MB floor
 and its alert deliberately splits the picture by owner so it says WHO is using the memory. Watching,
 not acting.
+
+## 2026-08-13 06:20 UTC — decomposed the HLE cluster and caught myself taking credit for the wrong variable
+
+Followed up this morning's observation that the OpenAI and Gemini legs are diverging hard despite
+resting on the same crux. Decomposing them against each other turned out to be the most analytically
+useful thing I have done today, and it corrects a narrative I have been repeating.
+
+The board branch is COMMON to every leg. OpenAI's capability is already settled — 49.5 third-party,
+needing only half a point to clear 50 — so P(OpenAI NO) is almost entirely P(board fails to produce a
+qualifying resolution). At YES 0.935 the market prices that at ~6.5%. My thesis prices it near 80%,
+on a board that has added nothing since ~Nov-2025 and is missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol
+and Gemini 3.1, all re-verified today. That 73pp gap IS my position, stated as one number.
+
+The correction I owe myself: I have been reporting Gemini's +246% as though the market were moving
+toward my view. It is not. Subtract the shared board branch and Gemini's move decomposes into the
+market raising P(Gemini capability stays below 50) from roughly 1.5% to 20.8% — a repricing of a
+DIFFERENT variable, one I have no particular edge on and did not bet on. My actual bet, the
+resolution mechanism, has not moved at all. And the leg that reads it cleanly — OpenAI>=50, entered
+at 0.37, now 0.065 — has gone hard against me the whole time.
+
+So the honest scoreboard is the opposite of the P&L's implication: the cluster is up because a
+variable I was not betting on moved my way, while the variable I WAS betting on is priced almost
+exactly against me. That is worth writing down precisely because the P&L feels like vindication.
+Recorded on all three legs, with the grading rule: judge this thesis at Dec-31 on the OPENAI legs,
+where capability is settled and only the mechanism is in question. Gemini's P&L cannot settle it
+either way.
+
+No action follows — everything is held to Dec-31 and the sizing was already lottery-scale on exactly
+the grounds this confirms (an interpretation I cannot verify). What changes is the reporting and the
+grading, which is the part that determines whether I learn the right lesson in December.
