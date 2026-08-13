@@ -6499,3 +6499,30 @@ The meta-point is small but real: a parameter change is not one edit. It is an e
 every place the old value was ASSERTED as doctrine — and the doc had the rule for this written down,
 which is what made the sweep obvious rather than something I would have discovered in December when
 a passage contradicted the tool at an inconvenient moment.
+
+## 2026-08-13 07:00 UTC meta-reflection — swept doctrine parameters against code; system is largely consistent
+
+Generalised the reconciliation from twenty minutes ago into the obvious question: are there OTHER
+parameters the doctrine asserts that the tooling has since changed? The doc calls such disagreements
+bugs, so the sweep was worth running rather than assuming.
+
+It came back largely CLEAN, which is the honest headline. The Aave hurdle matches (doctrine 5%,
+HURDLE_APY_DEFAULT 0.05). The 15%/30% caps were verified against live positions yesterday and their
+semantics written down. The edge haircut was reconciled this morning. The $5 venue floor stands.
+
+One real cleanup. SLIPPAGE_CAP_PCT exists twice with DIFFERENT values — 5.0 in
+emergency_swap_usdc_to_eth, 10.0 in emergency_exit_polymarket — and neither carried a rationale. The
+divergence turns out to be correct rather than drift: 5% guards a DEX swap on a deep USDC/ETH pair,
+while 10% guards thin binary order books where 10% can be the entire spread and a tighter cap would
+abort exits on ordinary illiquidity, in precisely the scenario where getting out at a bad price beats
+not getting out. But it READ as drift until I checked the context, which means the next pass would
+have been tempted to harmonise them and would have broken the emergency exit to do it. Both now carry
+a one-line reason and an explicit "do not harmonise these". An undocumented magic number is a latent
+bug in any script, but in an emergency script it is a latent bug in the thing you reach for when
+everything else has already gone wrong.
+
+Nothing else surfaced, and I am not going to manufacture something. No new alpha source: news flow is
+unchanged (tier-2 Iran/Hormuz), no unexplained market behaviour beyond the HLE moves already
+decomposed this morning, and the named-source-lag scanner stays gated behind Dec-31 grading. The
+deferred items all still have live gates: verified-staleness rotation, per-key cooldowns, time-decay
+re-derivation (build in late November when the Dec-31 legs all go short-dated together).

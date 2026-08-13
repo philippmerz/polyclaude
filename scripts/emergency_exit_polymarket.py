@@ -37,6 +37,11 @@ from polyclaude_client import Polyclaude
 _secrets.install_scrubbing_excepthook()
 
 DATA_API = "https://data-api.polymarket.com"
+# 10% — deliberately LOOSER than emergency_swap_usdc_to_eth's 5%, because this
+# guards thin binary books where 10% can be the entire spread; a 5% cap here
+# would abort exits on ordinary illiquidity, in the one scenario where getting
+# out at a bad price beats not getting out. It already aborts the HLE-50 leg
+# (28.6%) in drills, which is the intended behaviour: that leg has no exit.
 SLIPPAGE_CAP_PCT = 10.0
 
 

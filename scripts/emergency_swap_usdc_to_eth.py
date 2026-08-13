@@ -41,6 +41,11 @@ import _paths as _secrets
 
 _secrets.install_scrubbing_excepthook()
 
+# 5% — this guards a DEX swap on a DEEP pair (USDC/ETH). Deliberately TIGHTER
+# than emergency_exit_polymarket's 10%, which guards thin binary order books
+# where 10% is often the whole spread. Different liquidity, different cap: do
+# not 'harmonise' these two constants (noted 2026-08-13 during a doc/code
+# parameter sweep, when the divergence read as drift until I checked context).
 SLIPPAGE_CAP_PCT = 5.0
 
 # Uniswap V3 contracts (same address across most EVM chains except Base)
