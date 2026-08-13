@@ -610,6 +610,17 @@ the one that arrives with a plausible justification attached. Audit those hardes
   per entry, each with its own source and date, so an unchecked fact cannot hide inside a checked
   one's sentence.
 
+- **Never move a prior on a claim you have not pinned to a dated artifact — and the tell is
+  that you cannot name the source.** 2026-08-13: an aggregated search summary said Apple's M5
+  chip reshuffle was "in an effort to ACCELERATE" the touchscreen line. I moved MacBook's prior
+  0.62 -> 0.58 partly on that. Hours later, writing key_facts atomically forced me to admit the
+  claim had no dated source — I labelled it "search sweep, not yet pinned" rather than faking a
+  URL — and pinning it REFUTED it: dated coverage says Apple is "sticking with" M5 Pro/Max
+  (neutral), and Gurman's own trajectory runs February "back half of 2026" -> "early 2027 now
+  more likely", which is a SLIP. Reverted to 0.65. Two habits saved this: writing the weak
+  source honestly instead of tidily, and treating a load-bearing unsourced claim as a task
+  rather than a footnote. A summary is a lead; only a dated artifact moves a number.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

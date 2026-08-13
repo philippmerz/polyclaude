@@ -7244,3 +7244,32 @@ sourced to "search sweep 2026-08-13, not yet pinned to a single dated artifact".
 it is half of why p_no came down today — and I have not fetched a dated source for it. Writing that
 plainly is better than attaching a plausible URL I did not verify, and the source-diff rotation will
 now surface it as the weakest claim on that position, which is correct.
+
+## 2026-08-13 20:00 UTC — pinned the unsourced claim, and it refuted itself
+
+Twenty minutes ago I split MacBook's key_facts and flagged one entry as sourced only to a "search
+sweep, not yet pinned to a dated artifact", noting it was load-bearing. Chasing it down was the
+obvious next move, and the answer reversed this morning's decision.
+
+The claim was that Apple's M5 Pro/Max chip reshuffle was "in an effort to ACCELERATE" the touchscreen
+line, which I took from an aggregated summary and used as half the reason to cut p_no 0.62 -> 0.58.
+Dated coverage says something else entirely: Apple is "sticking with" M5 Pro/Max rather than
+switching to M6, which is neutral framing, and the trajectory runs the WRONG way for acceleration —
+Gurman said "back half of 2026" in February, and now "early 2027 appears more likely". That is a slip.
+
+Reverted to p_no 0.65, slightly above where I started the day, because removing that leg lets the
+remaining evidence converge instead of pulling against itself: the late-2026 M6 has no touchscreen,
+the touchscreen line is separately timed at end-2026-or-early-2027 with early-2027 favoured, and the
+criteria demand PURCHASABLE rather than merely launched. Kept the offsets honestly — the pre-order
+ambiguity is real and Apple can surprise.
+
+Two habits did the work here and both are worth keeping. First, when I split the bundles I wrote the
+weak source AS weak ("not yet pinned") instead of attaching a plausible URL I had not verified; a
+tidy entry would have buried this permanently. Second, I treated a load-bearing unsourced claim as a
+TASK rather than a footnote. The general rule is narrow enough to state: a summary is a lead, only a
+dated artifact moves a number — and I violated it this morning in the same session where I have been
+banking lessons about exactly this.
+
+No trade follows. MacBook is cap-bound and illiquid (20pp spread, zero bid depth within 5% of mark),
+so the correction changes the RECORD rather than the position — which is precisely why it would have
+been easy to skip.
