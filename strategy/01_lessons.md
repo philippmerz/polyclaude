@@ -513,6 +513,17 @@ quoted but four months stale. Read this before touching any prior.)*
   cross-event arb, now my own P&L) — the pattern is that midpoints flatter whatever you are
   looking at, including your own performance.
 
+- **Valuing the book at YOUR OWN PRIORS is not a performance number — it converts a bet into
+  a claimed gain.** 2026-08-13, deciding whether to change the bankroll basis after finding a
+  midpoint distortion, I computed three valuations of the same book: mid +18.2%, best-bid
+  +14.1%, my-priors +30.6%. The prior-based figure is the HIGHEST precisely BECAUSE it encodes
+  my belief that several positions are underpriced — so reporting it would be marking my own
+  book to my own opinion, and the more wrong I am the better it looks. Kept mid (conventional,
+  market-based, right for a hold-to-resolution book where bid understates because I am not
+  liquidating). Prior-based valuation belongs only in hold-vs-sell math, where "what do I think
+  this is worth" is the actual question being asked. The general trap: when several defensible
+  bases exist, the one that flatters you will always have a plausible-sounding argument.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

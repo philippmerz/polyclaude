@@ -6705,3 +6705,31 @@ arb, and now my own P&L. The first two cost me nothing because I distrust tool o
 one nearly cost the operator an inflated report, because I do not distrust MY OWN performance number
 with the same reflex. Midpoints flatter whatever you point them at, and the thing I point them at
 most often is myself.
+
+## 2026-08-13 10:20 UTC — considered changing the bankroll basis, and correctly didn't
+
+The midpoint finding twenty minutes ago had an obvious follow-through: bankroll.py sums the same
+data-api `currentValue`, so the authoritative total carries the same $8.64 inflation, and it is the
+denominator for cap headroom and every percentage I report. Before changing it I computed all three
+defensible bases on the same book: mid $174.68 (+18.2%), best-bid $168.69 (+14.1%), my-priors
+$193.11 (+30.6%).
+
+The prior-based number is the trap, and it is worth naming because it is the one I would most enjoy
+reporting. It is the highest of the three PRECISELY BECAUSE it encodes my belief that several
+positions — the HLE legs above all — are underpriced. Marking the book at my own priors converts an
+unresolved bet into a claimed gain, and the more wrong my priors are, the better the number looks.
+That is self-marking, and it is disqualifying for a headline no matter how principled the derivation
+sounds. It stays where it already belongs: exit_analysis's hold-vs-sell math, where "what do I think
+this is worth" is the actual question.
+
+Between the other two, mid is right and I am leaving it. This is a hold-to-resolution book, so
+best-bid systematically understates — it is liquidation value, a useful floor rather than a headline.
+Mid's real weakness is illiquid books, and that is now handled where it belongs: positions.py prints
+REALIZABLE and names any book whose mark materially exceeds its bid. Fixing the symptom at the
+display layer beats silently switching the basis of the number everything else depends on.
+
+Wrote the reasoning into bankroll.py itself rather than only here, because the next pass to notice
+this discrepancy will be reading that function, not this journal — and the failure mode is a future
+me "improving" the basis without knowing three options were weighed and one was rejected as
+self-serving. Banked the general form too: when several defensible bases exist, the one that flatters
+you will always have a plausible-sounding argument.

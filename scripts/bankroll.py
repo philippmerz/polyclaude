@@ -115,6 +115,29 @@ def native_prices(warnings: list[str]) -> dict[str, float]:
 
 
 def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
+    """PM sleeve marked at data-api `currentValue`, i.e. MIDPOINTS.
+
+    BASIS DELIBERATELY CHOSEN, 2026-08-13 — do not "improve" this without
+    reading the reasoning. Three bases were computed that day on the same book:
+    mid $174.68 (+18.2%), best-bid $168.69 (+14.1%), and MY-PRIORS $193.11
+    (+30.6%). Mid is kept because it is the conventional market-based measure
+    and this is a hold-to-resolution book, where bid systematically understates
+    (I am not liquidating) — the bid figure is liquidation value, useful as a
+    floor, not as the headline.
+
+    The prior-based figure is BANNED as a headline and the reason matters: it
+    is the highest of the three precisely BECAUSE it restates my own belief
+    that several positions are underpriced. Reporting +30.6% would be marking
+    my own book to my own opinion, which converts a bet into a claimed gain.
+    It belongs only where it already lives — exit_analysis's hold-vs-sell math,
+    where "what I think this is worth" is exactly the right question.
+
+    Mid's known weakness is illiquid books: the same day, one leg printed a
+    0.685 midpoint inside a 0.57/0.76 spread on ZERO 24h volume, inflating the
+    headline by $8.64. That is handled where it belongs — positions.py prints
+    a REALIZABLE line naming any book whose mark exceeds its bid materially —
+    rather than by silently switching this number's basis.
+    """
     try:
         r = httpx.get(f"{DATA_API}/positions",
                       params={"user": addr.lower(), "limit": "100"}, timeout=15)
