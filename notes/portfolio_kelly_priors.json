@@ -92,7 +92,7 @@
   "rationale": "[ENTRY-TIME RECORD 2026-07-15, superseded by `note` — do NOT read as current] DEC-0046: Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out. Entry p_no 0.85.",
   "note": "CORRECTED 0.80 -> 0.62 on 2026-08-12 after MacBook NO fell 0.595 -> 0.495 over twelve hours, sustained and one-directional, on a hidden-info-class position where the doctrine says informed flow may lead public reporting. It did. My 0.80 rested entirely on Gurman's APRIL read ('early 2027 more likely'); the July supply-chain reporting I had never looked for says ~2.5M Samsung panels with shipments spanning late-2026 AND early-2027 and a launch 'late 2026 or early 2027' — three months newer and materially less committed to 2027. New p_no 0.62 = P(launch slips past 2026) ~0.55 plus the branch where a very late 2026 unveiling still is not PURCHASABLE by Dec-31. Caution that cut the other way and is worth recording: an aggregated search summary claimed 'mass production since May, 2M panels by year-end', which would have justified cutting to ~0.45 — fetching the dated article showed the primary source says no such thing. Summary overstated; artifact corrected it. HOLD, no trade: at a 0.495 mark against 0.62 fair the edge is 12pp, the position is cap-bound anyway, and a taker exit pays 4.5c/share (10% of min(p,1-p)) which swamps the gap. Hidden-info class so still NO resting sell.",
   "verified": "2026-08-12",
-  "criteria_read": "2026-08-08",
+  "criteria_read": "2026-08-13",
   "hidden_info": true,
   "key_facts": [
    {
@@ -108,10 +108,10 @@
     "source_date": "2026-07-28"
    },
    {
-    "claim": "Criteria require GENERAL-PUBLIC PURCHASABILITY by Dec-31; an unveiling alone does not resolve YES.",
-    "source": "market description, re-read 2026-08-08",
-    "checked": "2026-08-08",
-    "source_date": "2026-08-08"
+    "claim": "CRITERIA (close re-read 2026-08-13, applying the care that found Greenland's carve-outs). Requires the product 'available for purchase by the general public' — an announcement or unveiling alone is explicitly insufficient. Two clarifications I had not recorded, neither binding: it must be explicitly branded a MacBook (an iMac would not count) and it must be a TRUE touchscreen (a touch bar would not count) — the rumoured product is an OLED-touch MacBook Pro, so both are satisfied by construction. NO hidden carve-outs, unlike Greenland. THE REAL FINDING IS AN OMISSION: the text never addresses PRE-ORDERS. Apple's pattern is announce -> pre-order within days -> ship 1-2 weeks later, so if a pre-order counts as 'available for purchase', an announcement as late as mid-December resolves YES, whereas a shipping-only reading needs an earlier announcement. That is worth roughly 3-5pp on P(YES) and it is a UMA JUDGEMENT, not a fact — the same interpretation-branch structure as the HLE family. CONTINGENCY: the September event settles whether Apple announces at all; if it announces with a Nov/Dec ship, the pre-order question becomes the entire trade and this position converts from a fact bet into an interpretation bet, which means it should be re-sized as one rather than held on a fact-bet prior.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
    }
   ],
   "divergence_ack": "2026-08-12",

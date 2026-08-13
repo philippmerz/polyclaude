@@ -6300,3 +6300,30 @@ anything but a forced test. Left un-pre-empted, it found two positions worth 27%
 on criteria I had not read closely enough, and one of those readings retired a live worry. Mechanisms
 that surface work you would not have chosen to do are worth more than mechanisms that confirm work
 you already did.
+
+## 2026-08-13 02:20 UTC — pushed the close-read to MacBook; found an ambiguity by its ABSENCE
+
+The rotation went 2-for-2 tonight on finding material subtleties in criteria I had already "read", so
+I applied the same care to the position where it matters most rather than waiting five more ticks for
+round-robin to reach it. Greenland had been read on 08-05 and I still missed its carve-outs, which is
+the point: reading recently is not the same as reading closely.
+
+MacBook came back mostly clean — no hidden exclusions. Two clarifications I had not recorded (must be
+explicitly branded a MacBook; a touch bar does not count as a touchscreen), neither binding, since the
+rumoured product is an OLED-touch MacBook Pro and satisfies both by construction.
+
+The finding is an OMISSION rather than an exclusion. The criteria require the product be "available
+for purchase by the general public" and never address PRE-ORDERS. Apple's pattern is announce ->
+pre-order within days -> ship one or two weeks later, so under a pre-order reading an announcement as
+late as mid-December resolves YES, while a shipping-only reading needs a materially earlier one.
+Worth perhaps 3-5pp on P(YES) — small enough that I am NOT fine-tuning the prior on it, since the
+dominant uncertainty remains whether Apple announces in 2026 at all.
+
+What I recorded instead is the contingency, which is the useful part. The September event settles the
+announcement question. If Apple announces with a Nov/Dec ship, the pre-order ambiguity becomes the
+ENTIRE trade — and at that point this stops being a fact bet (does hardware ship) and becomes an
+interpretation bet (does UMA read pre-order as purchase), which is the same structure as the HLE
+family. That matters for sizing, not just for probability: interpretation bets get lottery sizing in
+this book, and a 15%-of-bankroll position sitting on a fact-bet prior would need re-sizing the moment
+its character changed. Better to have written that down now than to discover it in September with the
+position already large.
