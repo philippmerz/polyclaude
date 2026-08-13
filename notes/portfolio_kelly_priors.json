@@ -194,8 +194,8 @@
     "checked": "2026-08-13"
    },
    {
-    "claim": "EXIT LIQUIDITY, re-measured 2026-08-13 22:00 and MATERIALLY CHANGED since the morning reading. Then: 20pp spread, ZERO 24h volume, no bid within 5% of mark — a full exit was effectively impossible. Now: 1.0pp spread (0.63/0.64) with $2,543 of 24h volume, so the MARK is trustworthy — but depth did not follow. 5 shares bid at 0.63, then a gap to 0.57, against 66 held, so walking the whole position out averages ~0.570 versus a 0.635 mark: roughly 6.5pp to exit in full. So a thesis-break exit is no longer FICTION here, it is merely EXPENSIVE — which is a different instruction: act on a genuine break and pay the 6.5pp, rather than treating the position as unmanageable. Re-measure before relying on either reading; this one moved inside twelve hours.",
-    "source": "live CLOB book walk [FIRST-HAND MEASUREMENT, reproducible on demand]",
+    "claim": "EXIT LIQUIDITY is a RANGE on this leg, not a number, and it moves fast enough that any point estimate here is stale on arrival. Three readings on 2026-08-13 alone: 10:00 — 20pp spread, ZERO 24h volume, no bid within 5% of mark (exit effectively impossible); 22:00 — 1.0pp spread, $2,543 traded, full-position walk ~6.5% below mark; 22:40 — ~9.6% below mark. So budget 5-10% to exit the full 66 and re-measure at decision time; the spread has become reliably tight while DEPTH stays thin (a handful of shares at the touch, then a gap). PRACTICAL INSTRUCTION: a genuine thesis break IS actionable here — pay the ~10% and go — which is the opposite of the 'unactionable, entry size is your only control' reading this fact carried twelve hours ago. For context the rest of the book exits at 0.5-1.1%, except OpenAI-HLE-50 at 27% which remains effectively stranded.",
+    "source": "live CLOB book walk x3 [FIRST-HAND MEASUREMENT, reproducible on demand]",
     "source_date": "2026-08-13",
     "checked": "2026-08-13"
    }

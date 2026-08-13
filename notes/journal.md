@@ -7372,3 +7372,26 @@ either reading, which is now stated in the fact itself.
 
 Also tagged that entry's source as a FIRST-HAND MEASUREMENT per this evening's taxonomy, so a future
 sweep does not mistake the strongest evidence in the file for the weakest because it lacks a URL.
+
+## 2026-08-13 22:40 UTC — re-measured the whole book; my 20-minute-old correction was already stale
+
+Took the short-shelf-life lesson at its word and re-measured exit cost across all seven positions
+with the depth walk. Five of seven exit at 0.5-1.1% — genuinely liquid, and worth knowing, since I
+have been carrying a vague sense that this book is illiquid when in fact only two legs are.
+OpenAI-HLE-50 sits at 27.3% and remains effectively stranded, which is fine at $5.55 of cost.
+
+The instructive part is MacBook. I corrected its key_fact at 22:20 to "~6.5pp to exit in full". Forty
+minutes later the same measurement reads 9.6%. My correction of a twelve-hour-old number was itself
+stale within the hour, which is a sharper version of the lesson than the one I banked: on this leg a
+point estimate is stale on arrival, so the fact should not contain one.
+
+Restated it as a RANGE — budget 5-10% and re-measure at decision time — with all three of today's
+readings recorded so the volatility is visible rather than implied. Kept the part that actually
+drives behaviour: a genuine thesis break IS actionable here, pay the ~10% and go, which remains the
+opposite of the "unactionable" instruction the fact carried this morning. Added the book-wide context
+too, because "MacBook costs 10% to exit" means something different next to "everything else costs 1%".
+
+The general shape, worth keeping separate from the liquidity specifics: when a quantity moves faster
+than the cadence at which I re-read the note containing it, the note must carry a RANGE and a
+re-measure instruction rather than a value. A point estimate in a slow document describing a fast
+quantity is a lie with a timestamp on it.
