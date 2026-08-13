@@ -6391,3 +6391,28 @@ number you already know. Recall is where this bug lives, so the fix has to live 
 worth noting that the earlier failure in the same edit (a missing Path import) surfaced instantly
 because I had written a visible fallback message rather than a bare except — the two failure modes in
 one small function, one loud and one silent, and only the loud one was harmless.
+
+## 2026-08-13 06:00 UTC periodic — bid-selection rule discriminated; memory checked and covered
+
+Book strong: MTM $164.47 (+11.3%), the best mark yet. Gemini-HLE NO kept running (0.249 -> 0.277,
++246% on the leg) while BOTH OpenAI legs fell (-25% and -82%). That split is the structural read
+playing out rather than noise: Gemini needs a 6-12pp capability jump AND a board update, whereas
+OpenAI sits at 49.5, a hair under its bar, with only the board cushion. The family is separating along
+exactly the axis I sized it on.
+
+Re-applied the fill-selection test to the resting bid, and it discriminated — which is the useful
+part. The 0.22 bid now sits 4pp behind a 0.260 touch, so a fill needs a 15% pullback. On a market
+that has swung 0.102 -> 0.277 in three days, 15% is ordinary volatility, not a thesis break. So this
+one STAYS, where the old 0.10 bid was cancelled last night because it needed a ~60% collapse and
+could therefore only fill on information. Same rule, opposite conclusions, on the same market inside
+eight hours. A criterion that only ever says "cancel" would be a bias wearing a rule's clothing;
+this one has now cut both ways, which is evidence it is measuring something real.
+
+Checked memory since available had drifted 801MB -> 626MB and I have three OOM crashes in the
+history. My four daemons are lean and stable (38/34/6/38MB, no growth across ages up to 13 days), so
+no leak of mine. The pressure is ~950MB of long-lived claude processes, two of them 19 days old —
+which includes this session and, I assume, the operator's; not mine to touch either way. Still above
+the 500MB pre-spawn floor, and I spawn zero background agents, so nothing is constrained. Confirmed
+the monitoring is already covered rather than adding any: heartbeat_watch alerts below a 250MB floor
+and its alert deliberately splits the picture by owner so it says WHO is using the memory. Watching,
+not acting.
