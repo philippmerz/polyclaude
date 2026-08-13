@@ -6650,3 +6650,29 @@ then removed all three selftest rows and verified the store is back to 72 decisi
 Historical rows stay identifiable in practice because decision theses are descriptive ("Touchscreen-
 MacBook-2026 NO: 35sh @0.39..."), unlike the ledger's terse question field. So this needed the fix
 going forward, not a backfill.
+
+## 2026-08-13 08:40 UTC — integration check after a heavy edit day; going quiet
+
+Closed out with the check that actually matters after touching six scripts: does the TICK still run?
+All six edited files parse, and all eight tick-critical paths execute cleanly — positions, bankroll,
+position_state_audit, check_marginal_apy, exit_analysis, redeem-all, uma_status_check, decisions
+pending. Working tree clean apart from two tool-written caches. Four daemons single-instance. The
+14:00 tick will run.
+
+Worth naming the shape of the last ~34 hours, since almost none of it was trading. The premise —
+untested paths hide breakage, and mechanisms should be checked for whether they COVER what they claim
+— returned: a dead emergency-exit sell path and its dead cancel twin, a missing negRisk redemption
+fallback on the largest position, a five-script alert leak that would have fired false emergencies
+monthly, two positions with no news coverage of their own resolution triggers, Greenland criteria
+whose carve-outs retired a standing worry, a measured 6-23pp overconfidence in my instance priors
+(applied to the entry gate AND, belatedly, to my own strongest conviction), and an identifier gap
+that had left the skip ledger two-thirds ungraded and would have hit the decision record all at once
+in January. Two trades in that window, both small.
+
+One standing observation rather than an action: this session has run a very long time with many
+near-identical continuation checks, and my own banked lesson from 2026-06-03 flags exactly that
+profile as the risk factor for the self-hallucination failure (fabricated turns inside a marathon
+session). I see no evidence of it — today I caught my own fuzzy-match false positives, my own
+empty-list parse bug, and cleaned up three selftest rows correctly — but the lesson says to surface
+it proactively rather than wait for symptoms, so it is surfaced. A fresh session costs nothing given
+everything durable is in the repo precisely so context is disposable.
