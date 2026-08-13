@@ -6807,3 +6807,29 @@ the OpenAI legs at Dec-31, not on Gemini's P&L, which moved on a variable I did 
 Verified the enumeration is now complete: positions.py, bankroll.py, polyclaude_status (display and
 telegram), daily_checkin's template and README all reference realizable; the weekly report is
 backlogged. bash -n clean on the shell script.
+
+## 2026-08-13 11:35 UTC — measured book liquidity for the first time; two exit plans are fiction
+
+Looked at a category I had never quantified. The MacBook episode showed a position where my own fair
+(0.62) sits INSIDE the spread (0.57/0.76) — no trade available in either direction — so I measured
+exitable depth across the whole book: for each leg, what fraction could I sell within 5% of mark?
+
+Six of eight are genuinely liquid: 1pp spreads, 100% of the holding sellable inside 5%. Two are not.
+MacBook has a 20pp spread and ZERO shares bid within 5% of mark; OpenAI-HLE-50 was already flagged
+unexitable and this quantifies it. Together $32.74, 22% of book by cost.
+
+For a hold-to-resolution strategy that is acceptable in itself — I intend to collect $1 or $0 at
+Dec-31, not to trade out. What is NOT acceptable is the thing it exposed: I have written careful
+thesis-break rules for MacBook ("Apple announces with a 2026 ship date → re-underwrite immediately")
+that quietly assume I can ACT on them. If that break arrives the market gaps and there is no bid to
+hit. The plan reads like risk management and functions as comfort.
+
+So the honest formulation for illiquid legs is "hold and accept the outcome; re-underwrite for
+INFORMATION value rather than for exit" — and the decision that actually controls the loss is the
+entry size, which was already set by the 15% ticket cap before any of this. Recorded on both
+positions and banked the general form: measure exitable depth BEFORE writing an exit plan, or the
+plan is a comfort rather than a control.
+
+Worth noting this is the same shape as the emergency-exit drill two days ago. There the exit
+MECHANISM was broken; here the exit MARKET is absent. Both produce a plan that looks complete on
+paper and does nothing when invoked, and neither is visible without going and checking.

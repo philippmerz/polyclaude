@@ -533,6 +533,17 @@ quoted but four months stale. Read this before touching any prior.)*
   the very next step is to list every place X is emitted: script output, aggregator, alert,
   weekly report, README. Enumerate before patching, not after each miss.
 
+- **A thesis-break EXIT plan on an illiquid leg is fiction — the only real lever was entry
+  sizing.** 2026-08-13, first measurement of exitable depth across the book: 6 of 8 positions
+  are tight (1pp spreads, 100% of the holding sellable within 5% of mark), but two are not —
+  MacBook (20pp spread, ZERO shares bid within 5% of mark) and OpenAI-HLE-50 — together 22% of
+  book by cost. I had written careful thesis-break rules for MacBook ("Apple announces with a
+  2026 ship → re-underwrite") that quietly assume I can act on them. If that break arrives the
+  market gaps and there is no bid to hit. For illiquid legs the honest rule is "hold and accept
+  the outcome; re-underwrite for INFORMATION value, not for exit" — and the decision that
+  actually controls the loss is the entry size, made before any of it. Measure exitable depth
+  BEFORE writing an exit plan, or the plan is a comfort rather than a control.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**
