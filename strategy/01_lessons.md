@@ -489,6 +489,18 @@ quoted but four months stale. Read this before touching any prior.)*
   specific thing that RESOLVES it happened". Audit the two against each other whenever a cluster
   grows past a few percent of bankroll.
 
+- **A calibration correction you apply only to FUTURE entries and never to your live
+  convictions is a ritual, not a correction.** 2026-08-13: I measured that my instance-thesis
+  priors run 6-23pp overconfident (N=5, all one direction), raised the entry haircut 0.05 ->
+  0.10 on that evidence, reconciled the doctrine — and then moved on without applying the
+  finding to the thesis I am MOST confident about, which is exactly where a systematic
+  overconfidence correction has the most work to do. Applied it: the HLE board-failure input
+  0.85 -> 0.72 (the observed mean drift), taking OpenAI>=50 p_no 0.50 -> 0.41 and Gemini>=50
+  0.56 -> 0.54. No action followed — everything is held, lottery-sized, and both marks sit far
+  below even the haircut numbers — which is precisely why it was easy to skip. The test of a
+  calibration finding is whether you turn it on your own strongest belief, not whether you
+  turn it on the next trade.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

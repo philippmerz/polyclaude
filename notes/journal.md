@@ -6526,3 +6526,30 @@ unchanged (tier-2 Iran/Hormuz), no unexplained market behaviour beyond the HLE m
 decomposed this morning, and the named-source-lag scanner stays gated behind Dec-31 grading. The
 deferred items all still have live gates: verified-staleness rotation, per-key cooldowns, time-decay
 re-derivation (build in late November when the Dec-31 legs all go short-dated together).
+
+## 2026-08-13 07:20 UTC — turned this morning's calibration finding on my own strongest conviction
+
+The last few finds had been shrinking (the previous one was two comment lines), so instead of
+continuing down that gradient I went back for a synthesis I had skipped. This morning produced two
+results and I never connected them: my HLE cluster rests on P(board fails) ~0.85, and separately I
+measured that my instance-thesis priors run 6-23pp overconfident, five for five. The second finding
+applies directly to the first — and I had raised the entry haircut, reconciled the doctrine, and
+moved on without touching the live number.
+
+That gap is the finding. A correction applied only to FUTURE entries and never to current
+convictions is a ritual rather than a correction, and it is exactly the shape of self-serving
+process: I get the credit for measuring my overconfidence while none of my actual beliefs pay for it.
+
+So I applied it. Board-failure input 0.85 -> 0.72, the observed mean drift. OpenAI>=50 p_no 0.50 ->
+0.41; Gemini>=50 0.56 -> 0.54. Verified nothing broke: no SELL-TAKER verdicts appeared, audit CLEAN.
+
+No action follows, and that is precisely why it was easy to skip. Everything is held to Dec-31,
+lottery-sized, and both marks (0.065 and ~0.27) remain far below even the haircut numbers, so the
+trades are unchanged. What changes is the honesty of the headline: I reported this morning that the
+market prices my crux at ~6.5% against my ~80%, a 73pp disagreement. After applying my own measured
+bias to my own number it is ~28% against ~6.5% — about 65pp. Still enormous, still the entire
+position, but smaller than the version I told the operator, and the difference is my own documented
+overconfidence rather than any new evidence.
+
+The banked form: the test of a calibration finding is whether you turn it on your strongest belief,
+not whether you turn it on the next trade.
