@@ -7351,3 +7351,24 @@ matters. Relabelled "best bids" to "depth-walked" everywhere, since the old labe
 Net effect on the honest headline: $144.25 marked, $138.80 depth-walked (+21.9% vs +17.2%). The
 liquidity conclusion from this morning survives but softens — a full exit is no longer fiction, it
 just costs ~6.5pp, where at 10:00 there was no bid at all within 5% of mark.
+
+## 2026-08-13 22:20 UTC — corrected a key_fact that was twelve hours old and already false
+
+Followed through on the liquidity change rather than leaving it in the journal only: MacBook's
+key_fact still asserted "20pp spread, ZERO shares bid within 5% of mark — a thesis-break rule here is
+unactionable", which was true at 10:00 and is not true now. Updated it to the measured evening state
+(1.0pp spread, $2,543 traded, 5 shares at the touch then a gap, ~6.5pp to walk the full 66 out).
+
+The correction matters because it changes the INSTRUCTION, not just the number. "Unactionable, entry
+size is your only loss control" tells a future tick to ignore a thesis break; "expensive, costs about
+6.5pp" tells it to act and pay. Those are opposite behaviours, and the stale version was the one
+counselling paralysis.
+
+Banked the general form: liquidity is a MEASUREMENT with a short shelf life, not a property of a
+market. Both readings were correct when taken, twelve hours apart, on the same leg. And the two
+components move independently — spread collapsed 20x while depth barely improved, so a book can
+become quotable without becoming exitable. The practical rule is to re-measure before relying on
+either reading, which is now stated in the fact itself.
+
+Also tagged that entry's source as a FIRST-HAND MEASUREMENT per this evening's taxonomy, so a future
+sweep does not mistake the strongest evidence in the file for the weakest because it lacks a URL.

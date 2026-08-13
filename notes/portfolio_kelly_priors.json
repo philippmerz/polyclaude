@@ -194,8 +194,8 @@
     "checked": "2026-08-13"
    },
    {
-    "claim": "EXIT LIQUIDITY: 20pp spread, ZERO shares bid within 5% of mark — a thesis-break rule here is unactionable; entry size was the only loss control.",
-    "source": "live CLOB book walk",
+    "claim": "EXIT LIQUIDITY, re-measured 2026-08-13 22:00 and MATERIALLY CHANGED since the morning reading. Then: 20pp spread, ZERO 24h volume, no bid within 5% of mark — a full exit was effectively impossible. Now: 1.0pp spread (0.63/0.64) with $2,543 of 24h volume, so the MARK is trustworthy — but depth did not follow. 5 shares bid at 0.63, then a gap to 0.57, against 66 held, so walking the whole position out averages ~0.570 versus a 0.635 mark: roughly 6.5pp to exit in full. So a thesis-break exit is no longer FICTION here, it is merely EXPENSIVE — which is a different instruction: act on a genuine break and pay the 6.5pp, rather than treating the position as unmanageable. Re-measure before relying on either reading; this one moved inside twelve hours.",
+    "source": "live CLOB book walk [FIRST-HAND MEASUREMENT, reproducible on demand]",
     "source_date": "2026-08-13",
     "checked": "2026-08-13"
    }

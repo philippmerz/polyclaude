@@ -549,6 +549,15 @@ the one that arrives with a plausible justification attached. Audit those hardes
   the very next step is to list every place X is emitted: script output, aggregator, alert,
   weekly report, README. Enumerate before patching, not after each miss.
 
+- **Liquidity is a MEASUREMENT with a short shelf life, not a property of the market.** Same
+  leg, same day: at 10:00 MacBook showed a 20pp spread, ZERO 24h volume and no bid within 5% of
+  mark (exit effectively impossible); by 22:00 it showed a 1.0pp spread with $2,543 traded, but
+  only 5 shares at the touch before a gap — so a full exit costs ~6.5pp rather than being
+  unavailable. The correct instruction changed from "treat as unmanageable, entry size is your
+  only control" to "act on a genuine break and pay 6.5pp". Both readings were right when taken.
+  Re-measure before relying on either, and note that SPREAD and DEPTH move independently: a book
+  can become quotable without becoming exitable.
+
 - **A thesis-break EXIT plan on an illiquid leg is fiction — the only real lever was entry
   sizing.** 2026-08-13, first measurement of exitable depth across the book: 6 of 8 positions
   are tight (1pp spreads, 100% of the holding sellable within 5% of mark), but two are not —
