@@ -137,6 +137,10 @@ Cron tick. Do your scheduled polyclaude check-in:
 ```
 polyclaude tick HH:MM UTC
 MTM $X.XX (Δ$Y.YY since prior tick), N positions
+[if positions.py prints a REALIZABLE line, quote it too: "realizable $Z.ZZ (best bids)".
+ MTM is a MIDPOINT and an illiquid book can inflate it — on 2026-08-13 one leg's 0.685 mark
+ sat inside a 0.57/0.76 spread on ZERO 24h volume, overstating the headline by $8.64. Never
+ send the marked figure alone when the realizable line is present.]
 
 material alerts processed: <count>  (omit line if 0)
   · <position-key> [LEVEL]: <action taken | "hold: <one-line reason>">

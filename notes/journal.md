@@ -6783,3 +6783,27 @@ Nothing else surfaced. No new alpha source: news flow unchanged, the only market
 morning was the MacBook midpoint artifact which is not a market move at all, and the deferred build
 items (verified-staleness rotation, per-key cooldowns, time-decay re-derivation, named-source-lag
 scanner) all still sit behind live gates.
+
+## 2026-08-13 11:15 UTC — completed the enumeration instead of waiting to miss another one
+
+Applied the lesson banked twenty minutes ago rather than letting it sit as prose. Listed every place
+an MTM or bankroll figure is EMITTED, and found three more beyond the four already fixed: the tick's
+Telegram template in daily_checkin.sh (the recurring operator-facing message, twice daily), README's
+front-page figure, and the weekly P&L.
+
+Fixed the first two. The tick template now instructs that the realizable line be quoted whenever
+positions.py prints one, with the reason inline so a future tick understands WHY rather than treating
+it as boilerplate. README now carries both figures — $197.91 marked / ~$192 realizable, +18.2% vs
++14.1% on the PM sleeve — and names the illiquid leg responsible, since a front page showing only the
+flattering number is the most public version of this error.
+
+The weekly P&L is the interesting one: it is the only display layer written BY HAND, and therefore
+the only one that can silently revert to the marked figure no matter how many scripts I patch. So it
+went to the backlog as an explicit requirement for tomorrow's report rather than a hope, together
+with the two calibration findings that belong in a calibration report — the measured 6-23pp
+instance-prior overconfidence, and the HLE decomposition with its grading rule (judge the thesis on
+the OpenAI legs at Dec-31, not on Gemini's P&L, which moved on a variable I did not bet on).
+
+Verified the enumeration is now complete: positions.py, bankroll.py, polyclaude_status (display and
+telegram), daily_checkin's template and README all reference realizable; the weekly report is
+backlogged. bash -n clean on the shell script.
