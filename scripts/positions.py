@@ -48,6 +48,45 @@ def main() -> None:
     print(f"TOTAL  cost ${total_init:.2f}  mtm ${total_cur:.2f}  max-payout ${total_max:.2f}  unrealised P&L ${total_cur-total_init:+.2f}  ({(total_cur/total_init-1)*100:+.2f}%)")
     print(f"Max upside if all NO win: ${total_max:.2f}  ({(total_max/total_init-1)*100:+.2f}%)")
 
+    # REALIZABLE vs MARKED (2026-08-13). `curPrice` is a MIDPOINT, and on an
+    # illiquid book the midpoint is not a price anyone will pay. That day the
+    # MacBook leg printed mark 0.685 — the middle of a 0.57/0.76 spread with
+    # ZERO 24h volume and zero bid depth above 0.60 — inflating that leg by
+    # $7.59 and the headline by $8.64 (+19.5% marked vs +13.7% realizable). I
+    # was one step from reporting the marked figure to the operator, for the
+    # second time in two days that a midpoint flattered a number. exit_analysis
+    # already walks real bids, but THIS is the headline, so it needs to say so
+    # itself. Only prints when the gap is material, so it stays quiet on a
+    # tight book rather than becoming wallpaper.
+    try:
+        import json as _json
+        realizable = 0.0
+        worst = []
+        with httpx.Client(timeout=20.0) as c:
+            for p in positions:
+                if float(p.get("size", 0)) <= 0.5:
+                    continue
+                m = c.get("https://gamma-api.polymarket.com/markets",
+                          params={"slug": p["slug"]}).json()[0]
+                toks = _json.loads(m["clobTokenIds"]); outs = _json.loads(m["outcomes"])
+                bk = c.get("https://clob.polymarket.com/book",
+                           params={"token_id": toks[outs.index(p["outcome"])]}).json()
+                bids = sorted(bk.get("bids", []), key=lambda x: -float(x["price"]))
+                bid = float(bids[0]["price"]) if bids else 0.0
+                realizable += float(p["size"]) * bid
+                gap = float(p["curPrice"]) - bid
+                if gap > 0.03:
+                    worst.append((gap, p["slug"][:44], float(p["curPrice"]), bid))
+        gap_total = total_cur - realizable
+        if gap_total > 1.0:
+            print(f"REALIZABLE (best bids): ${realizable:.2f}  "
+                  f"({(realizable/total_init-1)*100:+.2f}%)  "
+                  f"— midpoints overstate by ${gap_total:.2f}")
+            for g, slug, mk, bd in sorted(worst, reverse=True):
+                print(f"   wide book: {slug} mark {mk:.3f} vs bid {bd:.3f} ({g*100:.1f}pp)")
+    except Exception as e:
+        print(f"(realizable check unavailable: {str(e)[:60]})")
+
 
 if __name__ == "__main__":
     main()

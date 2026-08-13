@@ -501,6 +501,18 @@ quoted but four months stale. Read this before touching any prior.)*
   calibration finding is whether you turn it on your own strongest belief, not whether you
   turn it on the next trade.
 
+- **The HEADLINE number must walk real bids, not midpoints — I was one step from reporting
+  +19.5% when +13.7% was realizable.** 2026-08-13: the MacBook leg printed mark 0.685 and
+  +66%, which was the MIDDLE of a 0.57/0.76 spread on a book with ZERO 24h volume and zero bid
+  depth above 0.60. It inflated that leg by $7.59 and the book headline by $8.64. Every other
+  position's bid sat within 0.5-1.5pp of its mark, so the distortion was one illiquid leg
+  dragging the total. exit_analysis had always walked real bids — but exit_analysis is not what
+  I quote, positions.py is, and a correct number in the tool you don't cite is not a correct
+  report. positions.py now prints REALIZABLE alongside marked whenever the gap exceeds $1, and
+  names the offending book. Third midpoint artifact in three days (phantom FDV ladder, phantom
+  cross-event arb, now my own P&L) — the pattern is that midpoints flatter whatever you are
+  looking at, including your own performance.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

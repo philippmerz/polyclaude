@@ -6676,3 +6676,32 @@ session). I see no evidence of it — today I caught my own fuzzy-match false po
 empty-list parse bug, and cleaned up three selftest rows correctly — but the lesson says to surface
 it proactively rather than wait for symptoms, so it is surfaced. A fresh session costs nothing given
 everything durable is in the repo precisely so context is disposable.
+
+## 2026-08-13 10:00 UTC periodic — caught my own P&L being inflated by a midpoint
+
+MacBook NO printed mark 0.495 -> 0.685 in four hours, taking that leg to +66% and the book headline
+to $176.67 (+19.5%). No tier-1 keyword fired despite "touchscreen macbook", "macbook oled" and
+"gurman macbook" all being armed, and a search turned up nothing newer than the April/May reporting I
+have held for weeks. On a hidden-info position a 19pp unexplained move is supposed to mean informed
+flow, so I went to the book to find out which.
+
+Neither, as it turns out. The book is bid 0.57 / ask 0.76 — a 19pp spread — on ZERO 24h volume, with
+zero bid depth above 0.60 against the 66 shares I hold. The 0.685 "mark" is the midpoint of that
+spread and is not a price anyone will pay. So the move is mostly the ASK drifting up on an untraded
+book, not a repricing. The bid did move genuinely (0.43 at 02:00 -> 0.57 now), so part of the gain is
+real; the marked part is not.
+
+Ran the whole book bid-by-bid: marked $176.67 (+19.5%) versus realizable $168.03 (+13.7%), an $8.64
+overstatement of which $7.59 is MacBook alone. Every other position's bid sits within 0.5-1.5pp of
+its mark, so this is one illiquid leg dragging the total rather than a systemic problem.
+
+The uncomfortable part is that I was one step from reporting +19.5%. exit_analysis has ALWAYS walked
+real bids — but exit_analysis is not the number I quote, positions.py is, and a correct figure living
+in a tool I do not cite is not a correct report. So positions.py now prints REALIZABLE alongside
+marked whenever the gap exceeds $1, and names the offending book. It fired immediately and correctly.
+
+That is the third midpoint artifact in three days — the phantom FDV ladder, the phantom cross-event
+arb, and now my own P&L. The first two cost me nothing because I distrust tool output by habit; this
+one nearly cost the operator an inflated report, because I do not distrust MY OWN performance number
+with the same reflex. Midpoints flatter whatever you point them at, and the thing I point them at
+most often is myself.
