@@ -1,5 +1,8 @@
 [
  {
+  "_schema": "REQUIRED ON EVERY ROW FROM 2026-08-13: `slug` (the Polymarket market slug). Discovered that day that ZERO skip-class rows carried a market identifier while ENTER rows did — so entries were auditable and skips were not, which is backwards: 00_philosophy cites the SKIP record as the ongoing falsification evidence, and project memory earmarks it for the operator's January scale decision. That omission is why the ledger sat two-thirds ungraded: grading requires identifying the market, and fuzzy question-text matching does NOT work — attempting it returned resolutions for non-market rows ('basket screened out pre-gate') and claimed an Aug-31 market had already resolved on Aug-13. False evidence is worse than none, so grade ONLY from a slug. Convention: fade_would_have_won = (side == outcome), both clean YES/NO, verified against the Mojtaba exemplar."
+ },
+ {
   "date": "2026-07-02",
   "question": "Will Iga Świątek be the 2026 Women's Wimbledon Winner?",
   "side": "NO",

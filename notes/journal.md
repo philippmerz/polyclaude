@@ -6588,3 +6588,36 @@ about where my losses come from than the raw skip tally is.
 
 Backlogged the remaining ten with the procedure and the convention, to be done before the weekly P&L
 that reports calibration and well before January.
+
+## 2026-08-13 08:00 UTC — found why the skip ledger went ungraded, and nearly poisoned it in the process
+
+Went to clear the backlog item I had just written rather than let it sit, since the weekly P&L that
+reports calibration is due tomorrow. Looking up the ten ungraded outcomes by question text seemed
+straightforward and was not.
+
+The lookups came back confidently wrong. Two rows that are not markets at all — "(basket screened out
+pre-gate)" and "(daily pass — no gated evaluations)" — returned RESOLVED verdicts, and "Iran charges
+Hormuz fees by August 31" came back RESOLVED NO on August 13. Had I written those into the ledger I
+would have manufactured exactly the false evidence I warned about twenty minutes earlier, in the file
+that feeds the operator's January decision. The tell was cheap and obvious in hindsight: a market
+that cannot have resolved yet reporting a resolution.
+
+Chasing that produced the actual root cause. The ledger's schema HAS a `slug` field — and zero
+skip-class rows use it, while ENTER rows do. So my entries are auditable and my skips are not, which
+is precisely backwards: 00_philosophy cites the SKIP record as the ongoing falsification evidence.
+That is why the file sat two-thirds ungraded for months. It was never laziness about grading; it was
+that grading requires identifying the market and skip rows were written without anything to identify
+it with. The one exemplar that IS graded (Mojtaba) was graded contemporaneously, while I still knew
+which market it was.
+
+Fixed the cause rather than the instance: the ledger now carries a `_schema` header requiring `slug`
+on every row, with the convention and the explicit warning that fuzzy matching produced false
+positives and is off the table. That makes every FUTURE skip gradeable, which is the part that
+compounds — the backlog of ten historical rows is small and static, while the flow of new skips is
+not. Left the ten for manual identification and updated the backlog entry with the root cause so the
+next attempt does not repeat my dead end.
+
+The pattern worth keeping: I set out to do a chore, the chore failed loudly, and the failure was more
+valuable than the chore would have been. Also worth noting that the safeguard that caught it was one I
+had articulated in writing minutes before — grade only unambiguous rows because false evidence beats
+no evidence — which is the first time today a stated rule caught me in the act rather than in review.
