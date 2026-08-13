@@ -50,9 +50,12 @@ Ranked by validated evidence, not aspiration:
    study: logs/backtest_askadjust_v3_20260703.log). Either arbed away since June or
    the original was window-specific; both readings forbid population harvesting NOW.
    Practical rules: no entry justified by bucket statistics alone; every entry needs
-   its own instance thesis clearing the robust-edge gate at the FLAT 0.05 haircut
-   (the 2026-07-03 design review kept it; the gate's skips were vindicated the same
-   night); `notes/shortdated_ledger.json` continues recording gated evaluations as
+   its own instance thesis clearing the robust-edge gate at a **0.10** haircut
+   (raised from the flat 0.05 on 2026-08-13; the 2026-07-03 design review had kept
+   0.05, and that is now overridden by measured drift — see §5's prior-drift entry,
+   N=6, instance priors 6-23pp overconfident. 0.05 survives only for tail/monitoring
+   fades, where the drift runs the OTHER way. The gate's skips were vindicated the
+   night of the 2026-07-03 review); `notes/shortdated_ledger.json` continues recording gated evaluations as
    the ongoing falsification record. Long-dated entries (Dec-31 book) remain
    HOLD-ONLY: held where exit-spread > negative carry, no new entries, no adds —
    expectation math at own priors puts the book at ~Aave-grade carry wearing tail
@@ -147,8 +150,10 @@ Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
    to these — they are not neglected mispricings, they are contested adjudications where
    resolution-arb specialists set the price.
 5. **Robust-edge gate**: required +EV after op-cost at the PESSIMISTIC bound
-   `p − edge_haircut` (default 0.05; smaller only for genuinely tight estimates —
-   document why). Derivation: estimated edges are noisy and Kelly punishes overbetting
+   `p − edge_haircut` (default **0.10** for instance/catalyst theses as of 2026-08-13;
+   0.05 for tail/monitoring fades, where measured drift runs the opposite way — §5's
+   prior-drift entry. Going below the class default needs a documented why).
+   Derivation: estimated edges are noisy and Kelly punishes overbetting
    a believed-but-wrong edge far more than underbetting a true one. A point-estimate
    +EV that dies at the pessimistic bound is statistically indistinguishable from
    zero — the op-cost is not.

@@ -6478,3 +6478,24 @@ small and that all of this measures drift against my OWN later estimates rather 
 outcomes. The real test is Dec-31, when the book resolves and the same drift can be scored against
 what actually happened — at which point this correction is either confirmed or revealed as me
 converging on the market rather than on the truth.
+
+## 2026-08-13 06:55 UTC — the doctrine's own rule caught my inconsistency
+
+Raising the haircut default created exactly the failure 00_philosophy warns about in its header:
+"Where this doc and live tooling disagree, fix one of them — don't improvise a third behavior." I
+changed the tool and added a new §5 entry, and left TWO older passages still asserting 0.05 as the
+flat default — §3's instance-pipeline rule (which additionally cited the 2026-07-03 design review as
+having deliberately KEPT 0.05) and §4's gate description.
+
+Reconciled both, and did it by overriding the earlier decision explicitly rather than quietly
+overwriting it: the July review's choice of 0.05 is now recorded as superseded BY MEASURED DRIFT,
+with the evidence and N named, so a future read sees a decision that was revisited on data rather
+than a number that mysteriously changed. Both passages now also carry the class split — 0.10 for
+instance/catalyst, 0.05 for tail/monitoring — because a single global default was always going to be
+wrong for one of the two classes that drift in opposite directions. Grepped afterwards: zero
+remaining claims of 0.05 as the flat default.
+
+The meta-point is small but real: a parameter change is not one edit. It is an edit plus a sweep for
+every place the old value was ASSERTED as doctrine — and the doc had the rule for this written down,
+which is what made the sweep obvious rather than something I would have discovered in December when
+a passage contradicted the tool at an inconvenient moment.
