@@ -1,5 +1,5 @@
 {
-  "next_id": 74,
+  "next_id": 75,
   "decisions": [
     {
       "id": 1,
@@ -1405,6 +1405,27 @@
         "stale-fact",
         "anthropic",
         "repriced-exit"
+      ],
+      "slug": "will-spacex-have-the-highest-ipo-market-cap-2026-516",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 74,
+      "timestamp": "2026-08-13T18:22:04Z",
+      "type": "close_position",
+      "thesis": "CLOSED SpaceX-highest-IPO YES: 34sh filled at 0.70 post-only (fee-free) against a fair corrected hours earlier from 0.95 to 0.68. Realised -$5.62 (-19.1%) on a $29.42 basis \u2014 the first meaningful realised loss of the project. The trade was right even though the outcome is red: the prior collapsed because a fact in my own key_facts was wrong by ~15x (Anthropic recorded as a '$65B round, far too small to matter'; actually ~$965B and reported as eyeing a $2trn October IPO against SpaceX's ~$2.1T first-day bar), which removed the arithmetic gap the entire thesis rested on. That left a ZERO-edge position consuming 16% of bankroll. Selling 2pp above the corrected fair beats holding, and the fill releases $23.80 \u2014 taking deployable capital from $4.32 to $28.12 after a week of being capital-bound.",
+      "confidence": "high",
+      "prediction": "This is graded on PROCESS, not on where SpaceX settles: the loss was caused by a stale fact I never verified, not by the exit. If Anthropic lists in 2026 above $2.1T first-day, the exit was correct AND the original sizing was the error. If Anthropic slips to 2027 and SpaceX resolves YES, the exit cost ~$10 and the lesson is that I corrected too hard on one headline \u2014 in which case check whether 0.68 over-weighted a single 'investors eye' report.",
+      "size_usd": 23.8,
+      "resolution_at": "2026-08-13",
+      "tags": [
+        "spacex",
+        "realised-loss",
+        "maker-fill",
+        "zero-edge",
+        "capital-release"
       ],
       "slug": "will-spacex-have-the-highest-ipo-market-cap-2026-516",
       "outcome": null,

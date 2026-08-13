@@ -7095,3 +7095,34 @@ class four days ago and it had not yet reached this key_fact. The rotation surfa
 tick, which is the right cadence for staleness but too slow when a single fact is doing all the work.
 Noting rather than immediately building: the candidate fix is to prioritise the rotation by
 POSITION SIZE rather than by check-age, so the biggest bets get re-verified first.
+
+## 2026-08-13 18:20 UTC — the repriced sell FILLED; first meaningful realised loss, and the right trade
+
+Twenty minutes after repricing the fossil 0.96 sell down to 0.70, it filled. 34 shares, post-only so
+fee-free, at 2pp above the fair I had corrected hours earlier. Realised -$5.62 (-19.1%) on a $29.42
+basis — the project's first meaningful realised loss.
+
+Confirmed it properly rather than assuming, because "position vanished from data-api" has TWO causes
+and I have been bitten by the other one twice: the audit flagged SNAPSHOT stale / PRIOR orphan, which
+is exactly the de-index signature. On-chain CTF balance is 0 and the order is gone from the book, so
+this is a genuine fill and not a market that de-indexed while I still held it. That check took one
+command because the claim-insurance snapshot carries the token id; without it I would have been
+guessing about my own largest position.
+
+The trade was right even though the number is red. The prior fell 0.95 -> 0.68 because a fact in my
+own key_facts was wrong by roughly fifteen times, which removed the arithmetic gap the whole thesis
+rested on and left ZERO edge on 16% of bankroll. Selling 2pp above the corrected fair beats holding a
+zero-edge position, and I would make the same trade again on the same information. Logged DEC-0074
+with the grading set on PROCESS: the loss came from a stale fact I never verified, not from the exit.
+
+Capital position transformed: deployable goes from $4.32 to $28.12 after a week of being capital-
+bound, and the book drops to 7 positions, $118.38 cost, $139.01 marked / $132.23 realizable. That
+matters more than the loss — I have spent days finding candidates I could not size.
+
+Also shipped the fix this episode argued for, and NOT the one I first proposed. My instinct was to
+prioritise the criteria rotation by position SIZE; working it through, that would not have caught
+this, because SpaceX's criteria_read was two days old and no age-or-size ordering surfaces a fresh
+row. The real gap is that the rotation gates on CRITERIA age while the risk lived in SOURCE age.
+Measured it: 3 of 8 positions had a fresh check sitting on a source older than 60 days (Greenland
+203d, MacBook 116d, SpaceX 66d). The audit now fires on either condition, and it immediately surfaced
+Greenland's 203-day-old source — a position I "re-verified" this morning.

@@ -119,6 +119,36 @@ def main() -> int:
     # reporting-vs-action gap that made the Kelly over-sized flag ignorable.
     # Only surface a genuinely stale one (>7d), so the flag always means act.
     CRITERIA_STALE_DAYS = 7
+    # SECOND TRIGGER: STALE SOURCE behind a FRESH check (2026-08-13). The
+    # rotation gated only on criteria_read age, and that is not where the risk
+    # lives. SpaceX cost the project its largest prior correction today (p_yes
+    # 0.95 -> 0.68) on an Anthropic valuation wrong by ~15x — while its
+    # criteria_read was TWO DAYS old, so no age-based rotation would ever have
+    # surfaced it. Measuring the book that day: 3 of 8 positions had a fresh
+    # check sitting on a source older than 60 days (Greenland 203d, MacBook
+    # 116d, SpaceX 66d). A position can be diligently re-read and still rest on
+    # facts nobody has rechecked, because re-reading the CRITERIA is a different
+    # act from re-verifying the FACTS. Fire on either.
+    SOURCE_STALE_DAYS = 60
+    stale_src_key, stale_src_age = None, 0
+    for k, v in priors_raw.items():
+        if k.startswith("_") or not isinstance(v, dict):
+            continue
+        if not any(k in s or s in k for s in live):
+            continue
+        for f in (v.get("key_facts") or []):
+            try:
+                age = (dt.date.today() - dt.date.fromisoformat(f.get("source_date", ""))).days
+            except Exception:
+                continue
+            if age > SOURCE_STALE_DAYS and age > stale_src_age:
+                stale_src_key, stale_src_age = k, age
+    if stale_src_key and stale_src_key != oldest_key:
+        issues.append(
+            f"STALE SOURCE behind a fresh check: {stale_src_key[:52]} rests on a fact whose "
+            f"source is {stale_src_age}d old — criteria were re-read recently, but re-reading "
+            f"CRITERIA is not re-verifying FACTS. Search for NEWER reporting; do not re-read "
+            f"the source you already have (it cannot reveal the one you don't).")
     if oldest_key:
         never = oldest_date == "1970-01-01"
         try:
