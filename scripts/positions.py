@@ -72,18 +72,38 @@ def main() -> None:
                 bk = c.get("https://clob.polymarket.com/book",
                            params={"token_id": toks[outs.index(p["outcome"])]}).json()
                 bids = sorted(bk.get("bids", []), key=lambda x: -float(x["price"]))
-                bid = float(bids[0]["price"]) if bids else 0.0
-                realizable += float(p["size"]) * bid
-                gap = float(p["curPrice"]) - bid
+                # WALK the book for the ACTUAL size rather than best_bid x size
+                # (2026-08-13 evening). Best-bid pricing assumes infinite depth
+                # at the touch, which is exactly wrong on the books where this
+                # check matters: MacBook that evening showed a 1pp spread — so
+                # the MARK was trustworthy — but only 5 shares bid at 0.63
+                # before a gap to 0.57, against 66 held. Best-bid claimed $41.58;
+                # walking the book gives ~$37.62. Same error class as using a
+                # midpoint: a single price point standing in for an executable path.
+                size_left = float(p["size"])
+                proceeds = 0.0
+                for lvl in bids:
+                    if size_left <= 0:
+                        break
+                    take = min(size_left, float(lvl["size"]))
+                    proceeds += take * float(lvl["price"])
+                    size_left -= take
+                realizable += proceeds          # unfilled remainder counts as $0
+                avg_fill = proceeds / float(p["size"]) if float(p["size"]) else 0.0
+                gap = float(p["curPrice"]) - avg_fill
                 if gap > 0.03:
-                    worst.append((gap, p["slug"][:44], float(p["curPrice"]), bid))
+                    # report AVG FILL, not best bid — the displayed number must be
+                    # the one the gap was computed from, or the line contradicts
+                    # itself (a 1pp spread showing a 6.5pp gap reads as a bug).
+                    worst.append((gap, p["slug"][:44], float(p["curPrice"]), avg_fill))
         gap_total = total_cur - realizable
         if gap_total > 1.0:
-            print(f"REALIZABLE (best bids): ${realizable:.2f}  "
+            print(f"REALIZABLE (depth-walked): ${realizable:.2f}  "
                   f"({(realizable/total_init-1)*100:+.2f}%)  "
                   f"— midpoints overstate by ${gap_total:.2f}")
             for g, slug, mk, bd in sorted(worst, reverse=True):
-                print(f"   wide book: {slug} mark {mk:.3f} vs bid {bd:.3f} ({g*100:.1f}pp)")
+                print(f"   thin book: {slug} mark {mk:.3f} vs avg-fill {bd:.3f} "
+                      f"({g*100:.1f}pp to exit the full position)")
     except Exception as e:
         print(f"(realizable check unavailable: {str(e)[:60]})")
 

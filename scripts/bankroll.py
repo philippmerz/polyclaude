@@ -161,11 +161,21 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
                     bk = c.get("https://clob.polymarket.com/book",
                                params={"token_id": toks[outs.index(p["outcome"])]}).json()
                     bids = sorted(bk.get("bids", []), key=lambda x: -float(x["price"]))
-                    realizable += float(p["size"]) * (float(bids[0]["price"]) if bids else 0.0)
+                    # Depth-walk, matching positions.py (2026-08-13): best_bid x
+                    # size assumes infinite depth at the touch, which is wrong on
+                    # precisely the books this check exists for.
+                    left, proceeds = float(p["size"]), 0.0
+                    for lvl in bids:
+                        if left <= 0:
+                            break
+                        take = min(left, float(lvl["size"]))
+                        proceeds += take * float(lvl["price"])
+                        left -= take
+                    realizable += proceeds
             gap = mid - realizable
             if gap > 1.0:
                 warnings.append(
-                    f"PM sleeve marked at MIDPOINTS overstates best-bid realizable by ${gap:.2f} "
+                    f"PM sleeve marked at MIDPOINTS overstates depth-walked realizable by ${gap:.2f} "
                     f"(mid ${mid:.2f} vs ${realizable:.2f}) — illiquid book(s); see positions.py "
                     f"for which. Quote the realizable figure alongside any headline return.")
         except Exception as e:

@@ -7325,3 +7325,29 @@ Idle otherwise. Book 7 positions, audit CLEAN, deployable $28.12 with nothing cl
 tier-1 fires, four daemons cycling. The honest state is that today's work was almost entirely
 verification and repair, the one trade was an exit, and the remaining queue is either externally
 gated or deliberately deferred to a fresh session.
+
+## 2026-08-13 22:00 UTC — MacBook's book tightened, which exposed a flaw in this morning's instrumentation
+
+The realizable gap collapsed from $6.95 to $1.50 overnight, which looked like good news and was
+partly a measurement error of my own making.
+
+Re-measuring MacBook: the SPREAD genuinely tightened, 20pp this morning to 1.0pp now (bid 0.63 / ask
+0.64), with real volume appearing ($2,543 against ZERO this morning). So the mark is trustworthy now
+in a way it was not at 10:00 — that part is a real improvement in the market, not an artifact.
+
+But DEPTH did not follow. There are 5 shares bid at 0.63 and then a gap to 0.57, against the 66 I
+hold. And my realizable calc multiplied BEST BID by size, which silently assumes infinite depth at
+the touch — so it claimed $41.58 for a position that walks out at roughly $37.62. That is the same
+error class as the midpoint it was built to catch: a single price point standing in for an executable
+path. Fixed both positions.py and bankroll.py to WALK the book for the actual size, and the
+book-level number moved $142.75 -> $138.80.
+
+Then I introduced a display bug fixing it, and caught it by reading my own output: the line reported
+"mark 0.635 vs bid 0.630 (6.5pp)" — printing best bid while computing average fill, so a 0.5pp
+visible difference claimed a 6.5pp gap and read as broken arithmetic. Now reports avg-fill 0.570 with
+"(6.5pp to exit the full position)", which is both internally consistent and the number that actually
+matters. Relabelled "best bids" to "depth-walked" everywhere, since the old label had become a lie.
+
+Net effect on the honest headline: $144.25 marked, $138.80 depth-walked (+21.9% vs +17.2%). The
+liquidity conclusion from this morning survives but softens — a full exit is no longer fiction, it
+just costs ~6.5pp, where at 10:00 there was no bid at all within 5% of mark.
