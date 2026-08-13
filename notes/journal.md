@@ -6262,3 +6262,41 @@ says maker entries are "NOT for catalyst-imminent entries — cross the spread f
 helper's flooring only ever applies to non-urgent entries, exactly where the trade-off favours price.
 Recording this so a future pass does not "fix" a non-problem and destabilise a production-verified
 entry path in the process — which, after today's count of self-inflicted breakages, is a live risk.
+
+## 2026-08-13 02:00 UTC tick — the criteria rotation fired and earned itself back twice over
+
+Bankroll $187.16 (+10.1%), PM MTM $163.92 (+10.9%). No trades. Clean throughout: UMA 26 tracked with
+1 alert (Gemini YES 0.8125 -> 0.7550, the ladder self-correction diagnosed at 22:00), Ostium
+unchanged, redeem 0/8, marginal-APY 8 clear, exit_analysis zero SELL-TAKER verdicts, no overdue
+decisions, discovery entered nothing.
+
+THE ROTATION FIRED — the live test I deliberately left running two days ago, and it passed end to
+end. It surfaced Trump-out at exactly 8 days against its 7-day threshold, printed the recorded claim
+for diffing, tagged the congress.gov source as 403-unfetchable, and caught that no source_date had
+been recorded. It drove me to the right position without my remembering to look, which is the entire
+point. When I cleared that one it advanced round-robin to Greenland, also 8 days stale.
+
+Both re-reads paid, and Greenland paid a lot. Its criteria are MUCH tighter than I had recorded:
+every realistic path short of a signed sovereignty treaty is carved out by name — "Non-binding
+statements, negotiations, proposals, frameworks, or MOUs will not alone qualify" and "Basing rights,
+access agreements, SOFA-type arrangements, COFA-type arrangements, commercial concessions, or other
+permissions to use land (including leases) will not alone qualify." That resolves a standing worry:
+Trump's January "framework of a future deal" with Rutte, which I had flagged as a thing to watch,
+CANNOT resolve YES. Neither can the most plausible negotiated outcome, a basing deal. p_no 0.975 ->
+0.98, and more usefully the alert triage for the Greenland keywords I added yesterday is now precise:
+a "deal" or "framework" headline is noise unless the reporting names a BINDING instrument.
+
+Trump-out's re-read turned up a subtler pair pulling opposite ways. The headline "ceases to be the
+President for any period of time" is NARROWED by explicit carve-outs — only permanent removal
+qualifies, so a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does
+not count, nor does an unsustained Section 4, nor impeachment without removal. A naive reading of
+"any period of time" would price routine anesthesia transfers as YES. Cutting the other way, an
+ANNOUNCEMENT of resignation resolves YES immediately regardless of effective date. The carve-out is
+worth more than the announcement clause, so 0.97 stands. Also noted: resolution is "a consensus of
+credible reporting", not a named source — so no resolution-source-lag angle here, unlike HLE.
+
+Worth stating what this validates. I built the rotation on 2026-08-05 and had never seen it fire on
+anything but a forced test. Left un-pre-empted, it found two positions worth 27% of bankroll running
+on criteria I had not read closely enough, and one of those readings retired a live worry. Mechanisms
+that surface work you would not have chosen to do are worth more than mechanisms that confirm work
+you already did.

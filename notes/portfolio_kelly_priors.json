@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster — used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-08-12",
+ "_updated": "2026-08-13",
  "trump-out-as-president-before-2027": {
   "p_no": 0.97,
   "cluster": "us-politics",
@@ -8,32 +8,44 @@
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` — do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-11 (tick): multiple impeachment resolutions filed in the 119th (H.Res.353/537/939) and rhetorical 25th-Amendment calls after the Iran post and the Greenland letter — but removal needs majorities nobody has assembled, and the cabinet is loyalist. The 25th has never been invoked against a president's will. p_no 0.97 held.",
-  "verified": "2026-08-12",
-  "criteria_read": "2026-08-05",
+  "verified": "2026-08-13",
+  "criteria_read": "2026-08-13",
   "key_facts": [
    {
-    "claim": "Impeachment resolutions H.Res.353 / 537 / 939 were INTRODUCED in the 119th Congress (H.Res.939 sets out seven articles). None has produced a Senate removal. NOT AGENT-VERIFIED: congress.gov returns HTTP 403 to WebFetch, so this is human-checkable but not fetchable by me — see the caveat below. LIVE FALSIFIER used instead: the market itself prices Trump-out NO at 0.935 (P(removal) ~6.5%), uma_status_check shows the position unresolved, and there have been zero tier-1 news fires. An actual removal is unmissable global news; three independent signals agree it has not happened. CAUTION LOGGED 2026-08-12: an aggregated search summary asserted 'Senate removal proceedings appear to have already concluded earlier in 2026' — it was conflating the 2020 and 2021 impeachments with the current Congress. The market price is what falsified it.",
+    "claim": "CRITERIA (re-read 2026-08-13, prompted by the rotation): YES if Trump resigns, is removed, or otherwise ceases to be President by Dec-31. TWO SUBTLETIES that matter and cut opposite ways. (a) NARROWING: the headline 'for any period of time' is overridden by explicit carve-outs — 'Only permanent removal will qualify'; a temporary 25th-Amendment Section 3 invocation (which presidents do routinely for medical procedures) does NOT count, nor does a Section 4 invocation not sustained by both Houses, nor impeachment without removal. A naive reading of 'any period of time' would price routine anesthesia transfers as YES; it does not. (b) WIDENING: an ANNOUNCEMENT of resignation/removal before Dec-31 resolves YES IMMEDIATELY, regardless of when it takes effect. Net: the carve-out is worth more than the announcement clause, so p_no 0.97 stands. Resolution source is 'a consensus of credible reporting' — NOT a named source, so there is no resolution-source-lag angle here, unlike the HLE family.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027 (market description, fetchable)",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "STATE: impeachment resolutions H.Res.353/537/939 introduced in the 119th Congress; none has produced a Senate removal, and the majorities do not exist. NOT AGENT-FETCHABLE (congress.gov 403s WebFetch). Independent falsifier: the market prices NO at 0.935 — a completed removal would price near zero — plus uma_status_check shows it unresolved and there have been zero tier-1 fires on the extensive removal keyword set.",
     "source": "https://www.congress.gov/bill/119th-congress/house-resolution/939 [403 to WebFetch — human-verifiable only]",
-    "checked": "2026-08-12",
-    "source_date": "unknown"
+    "source_date": "2026-08-12",
+    "checked": "2026-08-13"
    }
   ]
  },
  "will-the-us-acquire-any-part-of-greenland-in-2026": {
-  "p_no": 0.975,
+  "p_no": 0.98,
   "cluster": "us-expansion",
   "rho_within": 0.0,
   "cluster_frac": 0.11,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` — do NOT read as current] 2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
-  "verified": "2026-08-12",
-  "note": "RE-VERIFIED 2026-08-11 (tick): talks ongoing but state unchanged — Greenland's leader on record 'we will not sell Greenland, we will own Greenland for all time', Denmark opposed, Trump ruled out force (Jan-2026). No acquisition path visible in the remaining 142d. p_no 0.975 held.",
-  "criteria_read": "2026-08-05",
+  "verified": "2026-08-13",
+  "note": "0.975 -> 0.98 on 2026-08-13. The rotation surfaced this at 8 days stale and the re-read raised the bar considerably: every realistic path short of a signed sovereignty treaty is carved out by name — frameworks, MOUs, negotiations, basing rights, SOFA/COFA arrangements, leases, commercial concessions. What remains is a binding legal instrument transferring sovereignty or creating exclusive US jurisdiction, inside 4.5 months, against two governments publicly refusing to discuss sovereignty. P(YES) ~1.5%. ALERT TRIAGE for the Greenland keywords added 2026-08-12: a headline about a 'deal', 'agreement' or 'framework' is NOT a thesis break unless the reporting names a BINDING instrument (enacted legislation, signed treaty, signed agreement text, or an executive action implementing one). Basing-rights headlines are noise by construction.",
+  "criteria_read": "2026-08-13",
   "key_facts": [
    {
-    "claim": "No formal acquisition negotiations have been announced. Danish PM Frederiksen: 'We can negotiate about everything politically — security, investments, the economy. But we cannot negotiate our sovereignty.' Both Denmark and Greenland maintain firm positions against any sovereignty transfer. Trump claimed a 'framework of a future deal' with NATO SecGen Rutte (Jan-2026) and withdrew his 10% tariff threat against eight European states, but no transfer mechanism exists and he ruled out force at Davos 2026-01-21.",
-    "source": "https://www.congress.gov/crs-product/IN12643 (CRS, Greenland/Denmark/US relations) + https://www.aljazeera.com/news/2026/1/22/trumps-greenland-framework-deal-what-we-know-about-it-what-we-dont",
-    "checked": "2026-08-12",
-    "source_date": "unknown"
+    "claim": "CRITERIA (re-read 2026-08-13 via the rotation — MUCH tighter than I had recorded, and it resolves a standing worry). YES requires a BINDING agreement or legal instrument producing either (1) transfer of sovereignty or (2) primary/exclusive US jurisdiction such that Danish/Greenlandic law does not apply except by US permission, or (3) acquisition of such control by force. EXPLICITLY EXCLUDED, verbatim: 'Non-binding statements, negotiations, proposals, frameworks, or MOUs will not alone qualify' and 'Basing rights, access agreements, SOFA-type arrangements, COFA-type arrangements, commercial concessions, or other permissions to use land (including leases) will not alone qualify.' Pre-existing US control does not count. An announcement qualifies ONLY if accompanied by the binding instrument. => Trump's January 'framework of a future deal' with Rutte, which I had flagged as a concern, CANNOT resolve YES. Nor can the most realistic negotiated outcome, a basing or access deal.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "STATE: no formal acquisition negotiations announced; Danish PM Frederiksen on record that sovereignty is not negotiable; Greenland's leader refusing sale outright; Trump ruled out force at Davos 2026-01-21.",
+    "source": "https://www.congress.gov/crs-product/IN12643 + https://www.aljazeera.com/news/2026/1/22/trumps-greenland-framework-deal-what-we-know-about-it-what-we-dont",
+    "source_date": "2026-01-22",
+    "checked": "2026-08-12"
    }
   ]
  },
