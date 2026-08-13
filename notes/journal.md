@@ -6621,3 +6621,32 @@ The pattern worth keeping: I set out to do a chore, the chore failed loudly, and
 valuable than the chore would have been. Also worth noting that the safeguard that caught it was one I
 had articulated in writing minutes before — grade only unambiguous rows because false evidence beats
 no evidence — which is the first time today a stated rule caught me in the act rather than in review.
+
+## 2026-08-13 08:20 UTC — same identifier defect in decisions.json, caught BEFORE it bit
+
+Applied the ledger finding to the class: does decisions.json, the primary record, have the same
+missing-identifier problem? It does, and the timing is the interesting part.
+
+Only 2 of 60 trade decisions carry a token_id and none carry a slug — structurally identical to the
+skip ledger. But unlike the ledger it has NOT bitten yet, and the reason is simply that nothing is
+due: zero ungraded decisions have a passed resolution date, so `decisions.py pending` has been
+honestly reporting an empty queue rather than hiding a backlog. 43 of 72 decisions do carry an
+outcome, so the grading DISCIPLINE is fine at ~60%; what is missing is the ability to identify the
+market when the time comes.
+
+And the time comes all at once. The 29 ungraded decisions cluster around Dec-31, and they ARE the
+evidence for the operator's January review. So in January I would have faced exactly the dead end I
+hit at 08:00 today — needing to identify dozens of markets from prose, with fuzzy matching already
+demonstrated to produce false resolutions. The difference is that today it cost me twenty minutes and
+in January it would have cost the evidence base.
+
+Added --slug to decisions.py, recorded on every row, with a WARNING printed when a trade-type
+decision is filed without one. Deliberately a warning rather than a hard block: a rule that can stop
+me logging a decision at the moment I have just traded is a rule I will route around, and an
+unlogged decision is worse than an unidentified one. Forced both branches to prove it works rather
+than reading the code — warns on size_change without slug, silent with slug, silent on skip types —
+then removed all three selftest rows and verified the store is back to 72 decisions with next_id 73.
+
+Historical rows stay identifiable in practice because decision theses are descriptive ("Touchscreen-
+MacBook-2026 NO: 35sh @0.39..."), unlike the ledger's terse question field. So this needed the fix
+going forward, not a backfill.

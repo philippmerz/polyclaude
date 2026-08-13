@@ -87,10 +87,15 @@ def cmd_add(args: argparse.Namespace) -> int:
         "size_usd": args.size,
         "resolution_at": args.resolution_at,
         "tags": args.tags or [],
+        "slug": getattr(args, "slug", None),
         "outcome": None,
         "calibration_delta": None,
         "lesson": None,
     }
+    TRADE_TYPES = {"open_position", "size_change", "close_position"}
+    if args.type in TRADE_TYPES and not decision["slug"]:
+        print("WARNING: no --slug on a trade decision. It will need manual identification "
+              "to grade; see notes/shortdated_ledger.json's _schema for why that fails.")
     store["decisions"].append(decision)
     store["next_id"] += 1
     _save(store)
@@ -237,6 +242,18 @@ def main() -> int:
     s.add_argument("--resolution-at", default=None,
                    help="ISO date when outcome should be evaluable (YYYY-MM-DD)")
     s.add_argument("--tags", nargs="*", default=None)
+    # MARKET IDENTIFIER (2026-08-13). Trade decisions carried no reliable way to
+    # name the market: only 2 of 60 had a token_id and none had a slug. That is
+    # the same defect that left shortdated_ledger two-thirds ungraded for months
+    # — grading requires identifying the market, and attempting it from prose
+    # produced FALSE resolutions (a market that had not reached its date came
+    # back "resolved"). It has not bitten here yet only because nothing is
+    # overdue; 29 ungraded decisions resolve around Dec-31 and ARE the evidence
+    # for the operator's January review. Cheap now, painful in January.
+    s.add_argument("--slug", default=None,
+                   help="Polymarket market slug — REQUIRED for trade types "
+                        "(open_position/size_change/close_position) so the outcome can be "
+                        "graded later without guessing which market it was.")
     s.set_defaults(fn=cmd_add)
 
     s = sub.add_parser("list", help="show decisions")
