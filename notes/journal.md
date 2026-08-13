@@ -6948,3 +6948,36 @@ instrumentation should be guarded by handlers that are LOUDER than the code they
 
 Nothing else surfaced. No new alpha source; news flow unchanged; the book is where it was at 10:00
 (one illiquid leg, everything else tight) and the deferred build items all still sit behind gates.
+
+## 2026-08-13 13:37 UTC meta-reflection — the lessons file grew 70% in a day; fixed structure, not length
+
+Checked two specific things rather than reflexively producing a finding, and both were real.
+
+First, a stale backlog entry: I had marked the old skip-ledger task SUPERSEDED an hour earlier and
+left its full 1,490-character body sitting there, against my own convention that closed items are
+DELETED because git preserves them. Removed.
+
+Second and more substantive: strategy/01_lessons.md is 572 lines and 75 bullets, up from 337/52 after
+Tuesday's consolidation — I added 23 bullets today alone. That matters because the file's entire
+stated purpose is to be the FIRST thing a fresh session reads, and a 572-line briefing is a burden
+rather than an inheritance.
+
+The instinct is to trim, and it is wrong: the dates, numbers and named instances are exactly what
+make a lesson transferable rather than generic advice. So the fix is structure. Consolidated three of
+today's bullets — realizable-vs-marked, prior-based self-marking, and the un-applied calibration
+correction — into a labelled "Self-flattering numbers" cluster, since they are one idea with three
+instances: the number that favours you is the one that arrives with a plausible justification
+attached.
+
+Then the real structural problem became visible: "Ops" runs from line 176 to 562, roughly 68% of the
+file in a single flat section, because everything I add lands there by default. Rather than
+reorganising 380 lines mid-session, I added a MAP at the top — a six-row table of what lives in each
+section, naming both clusters, plus four recurring meta-shapes for a reader who takes nothing else:
+fix the class not the instance; a rule written down is not a rule enforced; verify against a known
+truth; and the flattering number comes with a justification. A fresh session can now orient in twenty
+lines and dive selectively instead of reading 588 to learn the shape.
+
+Left as a deliberate non-action: splitting Ops into sub-sections. It is the right eventual fix and it
+is a 380-line reorganisation, which is not something to start fifteen minutes before a tick with a
+long session behind me. The map makes the file navigable in the meantime, which was the actual
+complaint.

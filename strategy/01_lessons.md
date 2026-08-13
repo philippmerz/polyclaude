@@ -7,6 +7,22 @@
 > Doctrine lives in 00_philosophy.md; ops mechanics in 02_operations.md; this file is
 > the connective "why we do it that way" layer.
 
+## Map (read this first; dive selectively)
+
+| Section | What lives there |
+|---|---|
+| Execution mechanics | fees, maker-vs-taker, resting-order selection, slippage |
+| Priors & calibration | how p estimates are built, revised, and mis-set |
+| Edges that survived | the live edge sources and their fine print |
+| Sizing & risk | caps, Kelly, cluster correlation, liquidity |
+| **Ops** (largest) | the failure classes that actually happened — daemons, fallbacks, parsing, verification. Contains two named clusters: **Prior & fact hygiene (2026-08-11/12)** on stale/inverted priors and source-diffing, and **Self-flattering numbers (2026-08-13)** on midpoints, self-marking and un-applied corrections |
+| Process & operator covenant | Telegram protocol, weekly P&L, reporting discipline |
+
+Recurring meta-shapes, if you read nothing else: *fix the CLASS not the instance* (a break
+usually has a second half); *a rule written down is not a rule enforced* (make the tool print
+the gap); *verify against a known truth* (absent output and failed output look identical); and
+*the number that flatters you arrives with a plausible justification attached*.
+
 ## Execution mechanics (the fee decides almost everything)
 
 - **Maker-first, always consider three exits.** Taker fee on fee-bearing markets =
@@ -489,40 +505,40 @@ quoted but four months stale. Read this before touching any prior.)*
   specific thing that RESOLVES it happened". Audit the two against each other whenever a cluster
   grows past a few percent of bankroll.
 
-- **A calibration correction you apply only to FUTURE entries and never to your live
-  convictions is a ritual, not a correction.** 2026-08-13: I measured that my instance-thesis
-  priors run 6-23pp overconfident (N=5, all one direction), raised the entry haircut 0.05 ->
-  0.10 on that evidence, reconciled the doctrine — and then moved on without applying the
-  finding to the thesis I am MOST confident about, which is exactly where a systematic
-  overconfidence correction has the most work to do. Applied it: the HLE board-failure input
-  0.85 -> 0.72 (the observed mean drift), taking OpenAI>=50 p_no 0.50 -> 0.41 and Gemini>=50
-  0.56 -> 0.54. No action followed — everything is held, lottery-sized, and both marks sit far
-  below even the haircut numbers — which is precisely why it was easy to skip. The test of a
-  calibration finding is whether you turn it on your own strongest belief, not whether you
-  turn it on the next trade.
+### Self-flattering numbers — the 2026-08-13 cluster
+*(three instances in one day, all pointing the same way: the number that favours you is
+the one that arrives with a plausible justification attached. Audit those hardest.)*
 
-- **The HEADLINE number must walk real bids, not midpoints — I was one step from reporting
-  +19.5% when +13.7% was realizable.** 2026-08-13: the MacBook leg printed mark 0.685 and
-  +66%, which was the MIDDLE of a 0.57/0.76 spread on a book with ZERO 24h volume and zero bid
-  depth above 0.60. It inflated that leg by $7.59 and the book headline by $8.64. Every other
-  position's bid sat within 0.5-1.5pp of its mark, so the distortion was one illiquid leg
-  dragging the total. exit_analysis had always walked real bids — but exit_analysis is not what
-  I quote, positions.py is, and a correct number in the tool you don't cite is not a correct
-  report. positions.py now prints REALIZABLE alongside marked whenever the gap exceeds $1, and
-  names the offending book. Third midpoint artifact in three days (phantom FDV ladder, phantom
-  cross-event arb, now my own P&L) — the pattern is that midpoints flatter whatever you are
-  looking at, including your own performance.
+- **The HEADLINE number must walk real bids, not midpoints.** I was one step from reporting
+  +19.5% when +13.7% was realizable. One leg printed mark 0.685 and +66% — the MIDDLE of a
+  0.57/0.76 spread on a book with ZERO 24h volume and no bid depth above 0.60 — inflating it
+  by $7.59 and the book by $8.64. Every other position's bid sat within 0.5-1.5pp of its mark,
+  so it was one illiquid leg dragging the total. exit_analysis had always walked real bids, but
+  that is not what I quote: a correct number in a tool you don't cite is not a correct report.
+  positions.py, bankroll.py, the status telegram, the tick template and README now all carry
+  REALIZABLE alongside marked. Third midpoint artifact in three days (phantom FDV ladder,
+  phantom cross-event arb, then my own P&L) — the first two cost nothing because I distrust
+  TOOL output by reflex; this one nearly cost an inflated report because I don't distrust MY
+  OWN performance number with the same reflex.
 
-- **Valuing the book at YOUR OWN PRIORS is not a performance number — it converts a bet into
-  a claimed gain.** 2026-08-13, deciding whether to change the bankroll basis after finding a
-  midpoint distortion, I computed three valuations of the same book: mid +18.2%, best-bid
-  +14.1%, my-priors +30.6%. The prior-based figure is the HIGHEST precisely BECAUSE it encodes
-  my belief that several positions are underpriced — so reporting it would be marking my own
-  book to my own opinion, and the more wrong I am the better it looks. Kept mid (conventional,
-  market-based, right for a hold-to-resolution book where bid understates because I am not
-  liquidating). Prior-based valuation belongs only in hold-vs-sell math, where "what do I think
-  this is worth" is the actual question being asked. The general trap: when several defensible
-  bases exist, the one that flatters you will always have a plausible-sounding argument.
+- **Valuing the book at YOUR OWN PRIORS is not a performance number — it converts a bet into a
+  claimed gain.** Deciding whether to re-base the bankroll after that finding, I computed three
+  valuations of the same book: mid +18.2%, best-bid +14.1%, my-priors +30.6%. The prior-based
+  figure is HIGHEST precisely BECAUSE it encodes my belief that positions are underpriced, so
+  the more wrong I am the better it looks. Kept mid (conventional, market-based, right for a
+  hold-to-resolution book where bid understates because I am not liquidating). Prior-based
+  valuation belongs only in hold-vs-sell math, where "what do I think this is worth" is the
+  question actually being asked.
+
+- **A calibration correction you apply only to FUTURE entries and never to your live convictions
+  is a ritual, not a correction.** Measured that my instance-thesis priors run 6-23pp
+  overconfident (N=5, all one direction), raised the entry haircut 0.05 -> 0.10 on that
+  evidence, reconciled three doctrine passages — and moved on without applying it to the thesis
+  I am MOST confident about, which is exactly where a systematic overconfidence correction has
+  the most work to do. Applied it: HLE board-failure input 0.85 -> 0.72, taking OpenAI>=50 p_no
+  0.50 -> 0.41 and Gemini>=50 0.56 -> 0.54. No action followed — all held, lottery-sized, marks
+  far below even the haircut numbers — which is precisely why it was easy to skip. The test of a
+  calibration finding is whether you turn it on your strongest belief, not on the next trade.
 
 - **"Fix it at the display layer" is incomplete until you ENUMERATE the display layers.**
   2026-08-13, in one morning, the same scope error three times: found midpoints inflating the
