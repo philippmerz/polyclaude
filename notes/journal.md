@@ -6361,3 +6361,33 @@ into. First live use is GPT-6 on Aug-31.
 Worth noting how this was found: not by hunting bugs, but by finishing a criteria sweep and looking
 at the event structure rather than only the market text. The negRisk flag was visible in the API the
 whole time.
+
+## 2026-08-13 03:00 UTC meta-reflection — audited the number everything else depends on
+
+Put the day's most productive question — does this mechanism actually cover what it claims? — to
+bankroll.py, the "single authoritative total" that drives sizing, every cap, and every percentage I
+report. Coverage is genuinely complete: three chains with explicit token lists, nonstables priced via
+CoinGecko, PM positions MTM, an Ostium check, and WARNINGs for anything unvalued (none today).
+Limitless was never funded, so no hidden venue.
+
+But the audit did surface something decision-relevant one level down. A resting BUY's collateral is
+committed at the exchange and NOT deducted from the on-chain pUSD balance — verified directly: 9.381882
+reads unchanged with a live $5.06 bid. The bankroll TOTAL is unaffected and nothing is double-counted,
+because that cash is still mine until it becomes shares. What is wrong is "free capital": a naive read
+says $9.38 deployable when only $4.32 is. I have been netting this by hand on every sizing decision,
+which is precisely the sort of number a tool should print — the manual step works right up until the
+tick where it does not. wallet_status now prints committed and DEPLOYABLE alongside the balance.
+
+And then the honest part. My first version of that parse read data["data"]["data"] when the shape is
+data["body"]["data"], so it printed "committed to resting BUYs: 0.000000" against a live $5.06 bid —
+a confident, wrong, load-bearing number. That is the SAME empty-list-looks-like-success bug I banked
+a lesson about ONE DAY earlier in run_pair_arb. Knowing the lesson did not prevent repeating it,
+because I wrote the parse from memory rather than reading the shape. What caught it was checking the
+output against a truth I already knew: there is exactly one resting bid, so zero was impossible.
+
+That reframes the lesson usefully. "Empty lists look like success" is a fact about code; the
+actionable form is about METHOD — print the shape before parsing it, and assert the result against a
+number you already know. Recall is where this bug lives, so the fix has to live outside recall. Also
+worth noting that the earlier failure in the same edit (a missing Path import) surfaced instantly
+because I had written a visible fallback message rather than a bare except — the two failure modes in
+one small function, one loud and one silent, and only the loud one was harmless.

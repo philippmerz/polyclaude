@@ -265,6 +265,16 @@
   in seconds. Prefer the Edit tool for surgical patches precisely because it FAILS on a
   non-unique match instead of guessing, and keep the working tree committed so revert is cheap.
 
+- **I re-committed the empty-list bug ONE DAY after banking it — because I wrote the parse
+  from MEMORY instead of reading the shape.** 2026-08-13: adding a "deployable cash" figure to
+  wallet_status, I parsed the orders response as data["data"]["data"] when it is
+  data["body"]["data"], and it printed "committed to resting BUYs: 0.000000" against a live
+  $5.06 bid — a confident, wrong, load-bearing number. Identical to the run_pair_arb bug from
+  2026-08-12. Knowing the lesson did not prevent it; only CHECKING the output against a known
+  truth did (I knew there was exactly one bid). So the operational rule is not "remember that
+  empty lists look like success" — it is: print the shape before parsing it, and assert the
+  result against a number you already know. Recall is where this bug lives.
+
 - **A loop over an empty list looks exactly like success.** My first cancel-path parse guessed the
   response shape and produced [] against 4 live orders; it printed nothing and the run looked
   clean. Only the DRILL caught it, because the drill asserts against a known truth (I knew there

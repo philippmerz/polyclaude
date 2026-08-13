@@ -7,6 +7,7 @@ Safe to run any time.
 
 import json
 import sys
+from pathlib import Path
 from web3 import Web3
 import _paths as _secrets
 
@@ -66,14 +67,46 @@ def main() -> int:
     matic = matic_wei / 1e18
     print(f"MATIC: {matic:.6f}")
 
+    pusd_bal = None
     for label, token_addr in TOKENS.items():
         c = w3.eth.contract(address=Web3.to_checksum_address(token_addr), abi=ERC20_ABI)
         try:
             decimals = c.functions.decimals().call()
             bal = c.functions.balanceOf(address).call()
             print(f"{label}: {bal / 10**decimals:.6f}")
+            if label == "pUSD":
+                pusd_bal = bal / 10**decimals
         except Exception as e:
             print(f"{label}: ERROR {e}")
+
+    # DEPLOYABLE vs HELD (2026-08-13). A resting BUY's collateral is committed at
+    # the exchange but is NOT deducted from the on-chain pUSD balance — verified
+    # with a live $5.06 bid against an unchanged 9.381882 reading. The bankroll
+    # TOTAL is unaffected (that cash is still mine until it becomes shares, so
+    # nothing is double-counted), but "what can I deploy right now" is not the
+    # balance, and reading it as such invites committing capital twice. I had
+    # been netting this by hand every time; a number I recompute manually on
+    # every sizing decision is a number the tool should print.
+    try:
+        import json as _json
+        import subprocess as _sp
+        out = _sp.run([sys.executable, str(Path(__file__).parent / "clob_v2.py"), "orders"],
+                      capture_output=True, text=True, timeout=60).stdout
+        # Shape is {"status_code":..., "body":{"data":[...]}} — I wrote this parse
+        # from memory as data["data"]["data"] and it silently yielded [] against a
+        # live $5.06 bid, printing a confident wrong "deployable". That is the same
+        # empty-list-looks-like-success bug I banked a lesson about ONE DAY earlier
+        # in run_pair_arb. Caught only because I checked the output against a known
+        # truth. Lesson reinforced: read the shape, never recall it.
+        data = _json.loads(out[out.index("{"):])
+        rows = (data.get("body", {}) or {}).get("data", []) or []
+        committed = sum((float(o["price"]) * (float(o["original_size"]) - float(o.get("size_matched", 0) or 0)))
+                        for o in rows if o.get("side") == "BUY")
+        if pusd_bal is not None:
+            print(f"pUSD committed to resting BUYs: {committed:.6f}")
+            print(f"pUSD DEPLOYABLE (net of bids):  {pusd_bal - committed:.6f}")
+    except Exception as e:
+        print(f"deployable calc unavailable ({str(e)[:60]}) — net resting BUYs by hand")
 
     return 0
 
