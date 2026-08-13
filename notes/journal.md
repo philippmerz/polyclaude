@@ -7157,3 +7157,32 @@ nothing newer exists" WITH a date, so the claim expires in 21 days and gets re-t
 paths: CLEAN with the ack, and "(ack EXPIRED)" when backdated.
 
 Book now 7 positions after the SpaceX exit, audit CLEAN, deployable $28.12.
+
+## 2026-08-13 19:00 UTC — first day with real capital in a week, and nothing clears
+
+The SpaceX exit took deployable capital from $4.32 to $28.12, so I ran both discovery passes properly
+rather than with the half-attention of someone who cannot act anyway. Nothing cleared, and the
+reasons are worth recording because "no trade" is a different statement when you CAN trade.
+
+The Iran/blockade family is the only richly-priced thing on the board — "US announces end of Iranian
+blockade by" runs 0.004/0.013/0.028/0.165/0.285 across Aug-13 through Aug-31, correctly monotone, on
+six-figure volume. It stays declined: war-adjacent, the domain where my world-state rule has already
+killed two gates, and where my only thesis would be the headlines everyone else has, which my own
+anti-edge list names explicitly.
+
+The calendared NVDA item has repriced away from me. It was 0.745 when I wrote the note on Aug-03 and
+is 0.955 now, so the market has taken 21pp of the move before the Aug-26 print I was waiting for. At
+0.955 plus fee you need p > 0.96 to clear, across an unresolved earnings binary, and my own note says
+re-check POST-print. Updated the backlog entry with today's pricing and the complements (Apple-largest
+Aug-31 0.030, Dec-31 0.143) so the Aug-26 check starts from real numbers rather than a fortnight-old
+snapshot.
+
+The mirror trade is the more interesting decline: Apple-largest-Aug-31 NO at 0.970 is the classic
+bond-like fade, +76% gross APY, and the haircut I raised THIS MORNING on measured evidence kills it —
+p_robust 0.88 against an effective cost of 0.973. That is the first time the new 0.10 haircut has
+bound on a live candidate, and it bound in exactly the class it was calibrated for. A gate that only
+ever passes is not a gate.
+
+So: capital available, gates intact, nothing bought. Recording it plainly because the honest failure
+mode here is manufacturing a trade to justify having cash — and I have $28 and a week of frustration
+at being unable to size candidates, which is precisely the pressure that produces one.
