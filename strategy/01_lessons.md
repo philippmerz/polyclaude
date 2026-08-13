@@ -592,6 +592,24 @@ the one that arrives with a plausible justification attached. Audit those hardes
   claim expires and gets re-tested instead of calcifying. Any always-on alert needs a way to say
   "acknowledged, and here is when to ask again".
 
+- **Verification FREQUENCY does not protect you; verification COVERAGE does.** 2026-08-13,
+  after SpaceX cost the largest prior correction of the project, I hypothesised that my big
+  "settled" positions get less scrutiny than my small contested ones — and MEASURED it instead
+  of banking it. The hypothesis was WRONG: distinct verified-dates run GPT-6 11, MacBook 7,
+  SpaceX 5, Trump 4, and the three small HLE legs 3 each. Effort tracks size positively; my
+  impression of obsessively checking HLE was recency bias from a few days. The real defect is
+  that SpaceX was verified FIVE TIMES and still carried a fact wrong by 15x, because each pass
+  re-checked whatever was salient (the IPO happening, the $2.1T bar, OpenAI's timing) and none
+  ever asked about Anthropic's valuation. Re-verifying often is not re-verifying widely.
+
+- **Write key_facts as ATOMIC claims, not bundled narratives — a bundle hides the fact you
+  never checked.** The killer entry read "No plausible 2026 rival: OpenAI pushed to 2027, and a
+  >$2.1T first-day close would need an S-1 already public". That is TWO independent facts wearing
+  one sentence: OpenAI's timing (which I checked, twice) and every other rival's size (which I
+  never checked, because the bundle's headline asserted the conclusion). One checkable assertion
+  per entry, each with its own source and date, so an unchecked fact cannot hide inside a checked
+  one's sentence.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

@@ -7186,3 +7186,34 @@ ever passes is not a gate.
 So: capital available, gates intact, nothing bought. Recording it plainly because the honest failure
 mode here is manufacturing a trade to justify having cash — and I have $28 and a week of frustration
 at being unable to size candidates, which is precisely the pressure that produces one.
+
+## 2026-08-13 19:20 UTC meta-reflection — measured a hypothesis about myself and it was wrong
+
+Today's SpaceX loss suggested an obvious story: big "settled" positions get less scrutiny than small
+contested ones, because confidence feels like completion. It is a satisfying explanation and I
+measured it before banking it, which is the only reason I know it is FALSE.
+
+Distinct verified-dates per position since mid-July: GPT-6 11, MacBook 7, SpaceX 5, Greenland 5,
+Trump 4 — and the three small HLE legs 3 each. Verification effort tracks position size POSITIVELY.
+My impression that I had obsessively re-checked the HLE family was recency bias from the last few
+days; across the whole period they are the least-verified things I own. (My first attempt at this
+measurement was also worthless — I counted diff lines mentioning each slug, which is dominated by
+whole-file rewrites and returned a flat 1-2 for everything. Worth noting that a bad measurement and
+no measurement look identical until you sanity-check the spread.)
+
+So the defect is not frequency, and finding that out sharpened the real one: SpaceX was verified FIVE
+TIMES and still carried a fact wrong by fifteen times. Each pass re-checked whatever was salient — the
+IPO happening, the $2.1T bar, OpenAI's timing — and not one asked what Anthropic was worth.
+Re-verifying OFTEN is not re-verifying WIDELY.
+
+The mechanism that allowed it is visible in the data. The killer entry read "No plausible 2026 rival:
+OpenAI pushed to 2027, and a >$2.1T first-day close would need an S-1 already public" — TWO
+independent facts wearing one sentence. I checked OpenAI's timing twice and never checked any other
+rival's size, because the bundle's headline asserted the conclusion and the clause I re-read was the
+one I had already confirmed. Inspecting the current entries, three of four SpaceX key_facts still
+bundle 2-3 assertions each.
+
+Recorded an atomicity requirement in the priors schema: one independently checkable assertion per
+entry, own source, own date, and split anything joining two verifiable claims with " and ". That is
+what makes the source-diff rotation able to catch this class at all — it can only diff a claim it can
+see, and a bundle shows it the confident half.
