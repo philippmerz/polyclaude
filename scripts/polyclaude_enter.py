@@ -259,10 +259,18 @@ def main() -> int:
                    help="Override Kelly recommendation with manual $ size")
     p.add_argument("--skip-catalyst-check", action="store_true",
                    help="Skip catalyst_check (use only --my-p)")
-    p.add_argument("--edge-haircut", type=float, default=0.05,
-                   help="Pessimistic shift applied to p for the robust-edge gate "
-                        "(default 0.05). Larger = demand fatter edge for fuzzier estimates; "
-                        "smaller only for genuinely high-confidence mechanical-market estimates.")
+    p.add_argument("--edge-haircut", type=float, default=0.10,
+                   help="Pessimistic shift applied to p for the robust-edge gate. "
+                        "DEFAULT RAISED 0.05 -> 0.10 on 2026-08-13 on measured evidence: every "
+                        "INSTANCE/catalyst prior I have set drifted DOWN on later re-derivation "
+                        "(MacBook 0.85->0.62, GPT-6 0.96->0.90, MacBook-add 0.70->0.62, "
+                        "OpenAI-HLE 0.66->0.50 and 0.79->0.64), i.e. 6-23pp of overconfidence, "
+                        "N=5 and all one direction — so a 5pp haircut was systematically "
+                        "under-correcting. Meanwhile TAIL/MONITORING priors drifted the other way "
+                        "(Greenland 0.95->0.98, Trump-out 0.96->0.97), so the old advice to shrink "
+                        "the haircut for 'mechanical' markets was backwards: those are where I am "
+                        "too PESSIMISTIC. Use 0.05 for tail/monitoring fades; keep 0.10+ for any "
+                        "instance or catalyst thesis, where my first number is reliably too brave.")
     args = p.parse_args()
     if args.bankroll is None:
         args.bankroll = _bankroll_default()

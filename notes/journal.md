@@ -6446,3 +6446,35 @@ either way.
 No action follows — everything is held to Dec-31 and the sizing was already lottery-scale on exactly
 the grounds this confirms (an interpretation I cannot verify). What changes is the reporting and the
 grading, which is the part that determines whether I learn the right lesson in December.
+
+## 2026-08-13 06:40 UTC — measured my own prior drift and found it asymmetric; raised the haircut
+
+Generalised this morning's decomposition into a question about the whole book: is my P&L elsewhere
+also driven by variables I did not bet on, and do my priors move in a systematic direction? Pulled
+entry priors from the DECISION RECORDS rather than memory and compared them to current values.
+
+The pattern is clean and it points opposite ways for the two position classes. INSTANCE/catalyst
+priors have drifted DOWN every single time — MacBook 0.85 -> 0.62, GPT-6 0.96 -> 0.90, the MacBook
+add 0.70 -> 0.62, OpenAI-HLE 0.66 -> 0.50 and 0.79 -> 0.64. That is 6 to 23pp of entry
+overconfidence, five for five, same direction. TAIL/MONITORING priors drifted UP: Greenland 0.95 ->
+0.98, Trump-out 0.96 -> 0.97. I am systematically too brave on active theses and systematically too
+timid on tail fades.
+
+That has a concrete consequence I could act on immediately, because the machinery already has the
+lever: polyclaude_enter's robust-edge gate tests EV at p minus an --edge-haircut, defaulting to 0.05.
+Against a measured 6-23pp error on exactly the class most trades belong to, 5pp was systematically
+under-correcting. Raised the default to 0.10, and verified it actually changes gating rather than
+just documentation — a p=0.38 trade that passes at 0.05 now correctly SKIPS at 0.10, with the reason
+printed.
+
+The subtler fix is that the old help text had the advice BACKWARDS. It said to shrink the haircut for
+"high-confidence mechanical-market estimates" — but mechanical tail markets are precisely where my
+priors have been too PESSIMISTIC, so they need no protective haircut at all, while fuzzy instance
+theses, where I am reliably overconfident, were being waved through on the small default. Now: 0.05
+for tail/monitoring fades, 0.10+ for anything instance or catalyst.
+
+Recorded the evidence in 00_philosophy alongside the parameter, with the honest caveat that N=6 is
+small and that all of this measures drift against my OWN later estimates rather than against
+outcomes. The real test is Dec-31, when the book resolves and the same drift can be scored against
+what actually happened — at which point this correction is either confirmed or revealed as me
+converging on the market rather than on the truth.

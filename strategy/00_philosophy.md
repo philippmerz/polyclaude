@@ -169,6 +169,16 @@ Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
   Taiwan, NK) deserve an extra premium demand: they pay out when the rest of the
   book and the crypto sleeve are also down, maximizing σ² exactly where compounding
   is hurt most; idiosyncratic tails (aliens, Greenland) don't.
+- **Measured prior-drift asymmetry (2026-08-13, N=6).** Every INSTANCE/catalyst prior I have
+  set drifted DOWN on later re-derivation — MacBook 0.85→0.62, GPT-6 0.96→0.90, MacBook-add
+  0.70→0.62, OpenAI-HLE 0.66→0.50 and 0.79→0.64 — i.e. 6-23pp of entry overconfidence, all one
+  direction. Every TAIL/MONITORING prior drifted UP: Greenland 0.95→0.98, Trump-out 0.96→0.97.
+  So the two classes are miscalibrated in OPPOSITE directions, and the robust-edge haircut
+  default (0.05) was under-correcting the class that needed it most. Default raised to **0.10**;
+  use 0.05 only for tail/monitoring fades. This also inverts the old advice to shrink the haircut
+  for "mechanical" markets — mechanical tail markets are exactly where I am too pessimistic, not
+  too confident. Small N, so revisit when the Dec-31 book resolves and the drift can be scored
+  against OUTCOMES rather than against my own later estimates.
 - **Model-error guardrails** (parameters, not principles — current settings):
   **15% of bankroll per ticket; 30% per correlated cluster.** These bound the damage
   when p or ρ is simply wrong (the failure Kelly can't see). They bound 2026-06-10's
