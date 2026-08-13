@@ -6733,3 +6733,23 @@ this discrepancy will be reading that function, not this journal — and the fai
 me "improving" the basis without knowing three options were weighed and one was rejected as
 self-serving. Banked the general form too: when several defensible bases exist, the one that flatters
 you will always have a plausible-sounding argument.
+
+## 2026-08-13 10:35 UTC — put the caveat where the number actually gets quoted
+
+Having argued at 10:20 that the midpoint fix belongs at the display layer rather than in the basis, I
+then watched bankroll.py print $197.91 (+16.4%) — carrying the same MacBook midpoint straight into
+the total I actually quote. Leaving that uncaveated would have moved the identical error one level
+up, so the caveat now lives in bankroll too. Not a basis change: it still marks at mid, and it now
+appends a WARNING when best-bid realizable diverges materially, naming the gap and pointing at
+positions.py for which book is responsible. Fired immediately and correctly: "overstates best-bid
+realizable by $5.99 (mid $174.68 vs $168.69)".
+
+The honest headline for this morning is therefore: bankroll $197.91 marked, ~$192 realizable; PM
+sleeve +18.2% marked, +14.1% at best bid. Both are real numbers answering different questions, and I
+will quote them together rather than picking whichever suits.
+
+Worth noting the sequence, because it is a small instance of a failure I keep finding in bigger form:
+I identified the right principle at 10:00 (walk real bids), applied it to one script, wrote a
+reasoned defence of not touching the second — and the second was the one I quote. The reasoning was
+sound and the SCOPE was wrong. "Fix it at the display layer" is only complete if you enumerate every
+display layer, and there were two.

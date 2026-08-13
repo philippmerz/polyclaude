@@ -142,7 +142,35 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
         r = httpx.get(f"{DATA_API}/positions",
                       params={"user": addr.lower(), "limit": "100"}, timeout=15)
         r.raise_for_status()
-        return sum(p["currentValue"] for p in r.json())
+        rows = r.json()
+        mid = sum(p["currentValue"] for p in rows)
+        # Flag (do NOT silently re-base) when midpoints materially overstate the
+        # sleeve. This is the number I quote, so the caveat has to live here and
+        # not only in positions.py — otherwise the same error just moves one
+        # level up. Walks real bids; costs ~30s on a script that already takes
+        # minutes.
+        try:
+            realizable = 0.0
+            with httpx.Client(timeout=20.0) as c:
+                for p in rows:
+                    if float(p.get("size", 0)) <= 0.5:
+                        continue
+                    m = c.get("https://gamma-api.polymarket.com/markets",
+                              params={"slug": p["slug"]}).json()[0]
+                    toks = json.loads(m["clobTokenIds"]); outs = json.loads(m["outcomes"])
+                    bk = c.get("https://clob.polymarket.com/book",
+                               params={"token_id": toks[outs.index(p["outcome"])]}).json()
+                    bids = sorted(bk.get("bids", []), key=lambda x: -float(x["price"]))
+                    realizable += float(p["size"]) * (float(bids[0]["price"]) if bids else 0.0)
+            gap = mid - realizable
+            if gap > 1.0:
+                warnings.append(
+                    f"PM sleeve marked at MIDPOINTS overstates best-bid realizable by ${gap:.2f} "
+                    f"(mid ${mid:.2f} vs ${realizable:.2f}) — illiquid book(s); see positions.py "
+                    f"for which. Quote the realizable figure alongside any headline return.")
+        except Exception as e:
+            warnings.append(f"realizable cross-check unavailable ({str(e)[:40]})")
+        return mid
     except Exception as e:
         warnings.append(f"data-api positions failed ({e}); PM MTM counted as $0")
         return 0.0
