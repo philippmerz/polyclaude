@@ -80,7 +80,15 @@ Ranked by validated evidence, not aspiration:
    haircut. A skip rejects THIS SIDE, never this market.
 
    **UNEXPLAINED-MOVE CLASSIFICATION.** When a market moves hard without visible
-   news, classify before acting: (a) if the resolution depends on a data source
+   news, classify before acting — and **(0) FIRST ask whether the market moved at
+   all** (added 2026-08-13). A "move" read off `curPrice` is a MIDPOINT, so on a
+   wide thin book it can swing with one side's quotes while nothing trades. That
+   day the touchscreen-MacBook leg printed four marks spanning 26pp — 0.495 →
+   0.685 → 0.420 → 0.545 — with ZERO 24h volume at the peak and an 8.5-20pp
+   spread throughout, and the 0.685 print alone inflated the book headline by
+   $8.64. Check volume and spread BEFORE invoking (a) or (b): presuming informed
+   flow on what is actually quote noise turns a non-event into a thesis revision.
+   Then: (a) if the resolution depends on a data source
    or state you have NOT checked and CANNOT quickly check (a hidden-information
    channel — e.g. Stripe-3rd's NPM valuation ladder), presume INFORMED FLOW and
    never fade it; (b) if the resolution bar is mechanically checkable and a

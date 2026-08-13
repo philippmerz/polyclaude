@@ -7013,3 +7013,29 @@ alerts both diagnosed (MacBook, SpaceX -5.5pp), Ostium unchanged, audit CLEAN af
 One operational note: bankroll printed a CoinGecko-timeout warning and valued natives at $0, so
 $175.97 understates by roughly $4. The warning did its job — the number is wrong in a KNOWN direction
 by a KNOWN cause, which is the whole point of warning rather than silently omitting.
+
+## 2026-08-13 15:54 UTC — a day of watching one thin book produced a doctrine gap
+
+MacBook has now printed FOUR marks spanning 26pp in a single day — 0.495 at 06:00, 0.685 at 10:00,
+0.420 at 14:00, 0.545 now — with no touchscreen-specific news at any point, zero 24h volume at the
+peak, and a spread running 8.5 to 20pp throughout. Watching one book oscillate like that all day is
+better evidence about its behaviour than any single reading of it.
+
+It also exposed a gap in a rule I already have. UNEXPLAINED-MOVE CLASSIFICATION tells me to sort a
+newsless move into (a) hidden-information channel, presume informed flow, never fade; or (b)
+mechanically checkable and unchanged, so rumour flow worth fading. Both branches assume THE MARKET
+MOVED. On a wide thin book it may not have: `curPrice` is a midpoint, so it swings with one side's
+quotes while nothing trades, and I spent part of this morning treating exactly that as a signal — the
+0.685 print sent me looking for informed flow when what had happened was an ask drifting up on an
+untraded book.
+
+Added step (0) to the rule: first ask whether the market moved at all, by checking volume and spread
+before invoking either branch. Presuming informed flow on quote noise turns a non-event into a thesis
+revision, which is the more expensive error of the two, because it launders noise into a prior.
+
+Nothing else outstanding. Book $165.38 marked / $158.43 realizable, the gap correctly attributed to
+the same illiquid leg. No tier-1 fires, news still tier-2 Iran, four daemons single-instance,
+pair_arb cycling on schedule. Noting for the record that this continuation check arrived roughly two
+hours after the previous one rather than the usual twenty minutes, and doubled in the same message;
+nothing downstream looks affected — daemons kept their cadence and the 14:00 tick ran clean — so I am
+recording it rather than acting on it.
