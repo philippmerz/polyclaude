@@ -141,8 +141,10 @@
   "decision": "SKIP",
   "reason": "Gate caught my stale read: Trump BACKTRACKED on the toll Jul-14/15 (24h reversal). Market 1.3% = check's structured 1.2% — efficient, not mispriced. The instance gate beat headline recall.",
   "size_usd": 0,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "NO",
+  "fade_would_have_won": false,
+  "graded_at": "2026-08-13",
+  "slug": "us-charges-hormuz-fees-by-july-31-2026-20260713151243233"
  },
  {
   "date": "2026-07-15",
@@ -211,8 +213,10 @@
   "decision": "SKIP",
   "reason": "catalyst_check said 85% but MISREAD the window (counted Jun-14/Jul-5 strikes predating Jul-8 market creation). Corrected read: P(new qualifying strike on mapped zone in 13d) with a Lebanon-front framework apparently holding ~= market 0.27. No edge. TOOL LESSON: pass market-creation date to catalyst_check for mid-stream 'by DATE' markets.",
   "size_usd": 0,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "NO",
+  "fade_would_have_won": false,
+  "graded_at": "2026-08-13",
+  "slug": "israel-military-action-against-greater-beirut-by-july-31-20260708204650550"
  },
  {
   "date": "2026-07-18",
@@ -225,8 +229,10 @@
   "decision": "SKIP",
   "reason": "Book repriced 40pp+ toward YES since sweep (NO 0.86->0.44) — market learned something about the xAI/ladder we don't know (sweep's ladder also stale: listed post-IPO SpaceX as private #2). Entering after an informed move = fading informed flow.",
   "size_usd": 0,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "NO",
+  "fade_would_have_won": true,
+  "graded_at": "2026-08-13",
+  "slug": "will-stripe-have-the-third-highest-private-market-valuation-on-july-31-20260630020413764"
  },
  {
   "date": "2026-07-18",
@@ -381,8 +387,10 @@
   "decision": "SKIP",
   "reason": "Meeting VERIFIED scheduled Tue Jul-28 (PM office + Trump, Jul-24/25). Eff 0.963 after fee vs fair 0.975 = +1.2pp — fails the 0.05-haircut robust gate (pessimistic 0.925 < cost). Fine micro-carry, below bar.",
   "size_usd": 0,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "YES",
+  "fade_would_have_won": true,
+  "graded_at": "2026-08-13",
+  "slug": "will-trump-meet-with-netanyahu-by-july-31-2026"
  },
  {
   "date": "2026-07-25",

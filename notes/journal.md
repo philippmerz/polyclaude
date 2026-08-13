@@ -6862,3 +6862,34 @@ Also confirmed a placement detail rather than assuming it: the readout sits afte
 gate, so a SKIP decision never prints it. MacBook at my real 0.62 prior correctly SKIPs (negative
 edge against a 0.76 ask) and shows nothing; forcing p=0.95 passes the gate and produces the warning.
 Acceptable — the information matters when sizing a trade that is actually happening.
+
+## 2026-08-13 12:31 UTC — skip ledger graded 1/15 -> 9/15, and the tally must not be quoted raw
+
+Cleared the grading item a day before its deadline. Method that finally worked: search wide, then
+require EXACT question equality. The earlier fuzzy attempt was not merely sloppy — these are DATE
+LADDER families ("US charges Hormuz fees by July 17 / by July 31", "Trump meet Netanyahu by July 19 /
+July 20 / July 31", "Israel action by July 14 / July 21 / July 31"), so a near-match is a DIFFERENT
+market and grading against it would have silently corrupted the evidence base with plausible-looking
+rows. Exact-match graded 4 more; combined with this morning's 4, the record went from 1/15 to 9/15.
+
+The remaining 6 are blocked rather than pending: two Iranian-regime-fall probes and Bears-leave-
+Illinois resolve Dec-31, Iran-Hormuz-fees resolves Aug-31, and two rows are not markets at all.
+
+Raw tally: 5 of 9 would have won had I taken my evaluated side. That number MUST NOT be reported as a
+skip hit rate, for three separate reasons, and writing them down now matters because tomorrow's
+weekly P&L is where the temptation to quote it lives.
+
+First, two of the five (Świątek and Zverev, NO at ~0.90) are population favourite-fades — a policy
+RETIRED on N=836 after failed replication. Two instances going the other way is not evidence against
+a falsification that size; counting them as errors would relitigate a settled question with a sample
+of two. Second, two of the four "correct" skips (DC Studios, Lucasfilm) are correct on the side I
+EVALUATED and simultaneously my most expensive misses of that week on the side I did not — the
+FLIP-THE-KILL failure. The ledger scores the leg I looked at, so it flatters me exactly where I was
+most wrong. Third, the outcomes are wildly unequal in stake: the correct skips avoided TOTAL losses
+(YES at 0.0135, YES at 0.27, NO at 0.80), while the misses were mostly modest (+11%, +4%) with one
+large exception — Stripe-third-highest NO at 0.44, a missed +127%. A count treats those identically.
+
+So the honest summary for the weekly report is: the record is now gradeable and 60% graded, the
+correct skips avoided total losses while the incorrect ones mostly missed modest gains, and the
+single largest lesson is not the tally at all but that two of nine rows are FLIP-THE-KILL misses —
+which is a statement about a rule I already have and did not follow, not about skip selectivity.
