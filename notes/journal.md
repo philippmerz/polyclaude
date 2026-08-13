@@ -7273,3 +7273,30 @@ banking lessons about exactly this.
 No trade follows. MacBook is cap-bound and illiquid (20pp spread, zero bid depth within 5% of mark),
 so the correction changes the RECORD rather than the position — which is precisely why it would have
 been easy to skip.
+
+## 2026-08-13 20:20 UTC meta-reflection — swept for summary-sourced claims; the sweep itself was miscategorising
+
+Today's concrete failure was moving a prior on an aggregated summary rather than a dated artifact.
+Atomic key_facts made that property mechanically checkable for the first time, so I swept the live
+book for it — and the sweep taught me more about my own taxonomy than about the book.
+
+Four live facts rest on non-URL sources, and my "is it a URL" test flagged all four as weak. Three of
+those are not weak at all. A "live CLOB book walk" and a "gamma-api event read" are FIRST-HAND
+MEASUREMENTS I performed — reproducible on demand and stronger evidence than any article — and the
+congress.gov entry is already documented as 403-blocked with an independent falsifier (the market
+pricing NO at ~0.93). Only the HLE third-party-tracker citation is genuinely medium: named but
+unlinked, though I have verified it twice.
+
+So the useful output is a taxonomy rather than a fix list, and I recorded it in the schema: (1)
+first-hand measurement, strongest despite carrying no URL; (2) dated primary artifact, the standard
+for a claim about the world; (3) named but unlinked, acceptable if periodically re-checked; (4)
+aggregated search summary, a LEAD ONLY that must never move a prior. Category (4) is the one that
+cost me today, and after the retraction the live book contains ZERO facts resting on it — which is
+the state I actually wanted to confirm.
+
+The meta-point worth keeping: a check that sorts on a PROXY (has a URL) rather than on the property
+that matters (is the evidence reproducible) will mislabel its best inputs as its worst. I nearly
+"fixed" three entries that were already the strongest things in the file.
+
+Nothing else material. Book unchanged at 7 positions, audit CLEAN, deployable $28.12, no tier-1
+fires, daemons cycling.
