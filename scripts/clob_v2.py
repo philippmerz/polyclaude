@@ -428,17 +428,25 @@ def redeem_all(dry_run: bool = False) -> dict:
     return {"redemptions": summary}
 
 
-def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False) -> dict:
+def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
+               token_id: str | None = None, outcome: str | None = None) -> dict:
     """Redeem a single resolved market by conditionId — the fallback for
     DE-INDEXED markets (N=2: Mojtaba 2026-07, Marvel-SDCC 2026-07-26) where
     data-api drops the position row so redeem-all's redeemable-flag scan is
-    blind. Standard-CTF path needs no token ids (contract pays whatever the
-    caller holds for both index sets); negRisk path is NOT supported here
-    (adapter needs exact balances — extend if a negRisk market ever de-indexes).
-    Verify the market is actually resolved (gamma umaResolutionStatus) first —
-    redeeming an unresolved condition reverts."""
-    if neg_risk:
-        raise SystemExit("redeem-one: negRisk path not implemented (needs balances)")
+    blind. Verify the market is actually resolved (gamma umaResolutionStatus)
+    first — redeeming an unresolved condition reverts.
+
+    Standard-CTF path needs no token ids (the contract pays whatever the caller
+    holds across both index sets). NEGRISK PATH ADDED 2026-08-13: the adapter
+    needs exact balances, which is why this used to refuse outright — but that
+    refusal left my LARGEST position with no claim-insurance fallback at all.
+    SpaceX ($29.42, 16% of bankroll) is the book's only negRisk market, so a
+    de-index at its Dec-31 resolution would have hit exactly the case this
+    function exists for and raised SystemExit. The balances come from the
+    conditionId snapshot's `asset` + `outcome` fields read ON-CHAIN via
+    balanceOf, never from data-api — which is the whole point, since data-api is
+    the thing that has disappeared in the scenario being handled.
+    """
     from web3 import Web3
     from eth_account import Account
     address, pk = _load_wallet()
@@ -449,13 +457,29 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False) 
     cond_id = bytes.fromhex(cond_id_hex.replace("0x", ""))
     nonce = w.eth.get_transaction_count(addr_cs)
     gp = w.eth.gas_price
-    tx = ctf_redeem.functions.redeemPositions(
-        Web3.to_checksum_address(PUSD_ADDR), b"\x00" * 32, cond_id, [1, 2],
-    ).build_transaction({
+    common_tx = {
         "from": addr_cs, "nonce": nonce, "chainId": 137, "gas": 250_000,
         "maxFeePerGas": max(int(gp * 3), int(gp + 1_000_000_000)),
         "maxPriorityFeePerGas": 30_000_000_000,
-    })
+    }
+    if neg_risk:
+        if not token_id or outcome not in ("Yes", "No"):
+            raise SystemExit("redeem-one negRisk: need --token-id and --outcome Yes|No "
+                             "(both are in notes/position_condition_ids.json)")
+        ctf_bal = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR), abi=_CTF_BAL_ABI)
+        bal = ctf_bal.functions.balanceOf(addr_cs, int(token_id)).call()
+        # Adapter takes [yes_amount, no_amount]; I hold exactly one side, so the
+        # other is zero. Reading the held side on-chain keeps this independent of
+        # data-api, which is precisely what has vanished in a de-index.
+        amounts = [bal, 0] if outcome == "Yes" else [0, bal]
+        print(f"  negRisk redeem: on-chain balance {bal} on the {outcome} leg -> amounts {amounts}")
+        adapter = w.eth.contract(address=Web3.to_checksum_address(NEG_RISK_ADAPTER),
+                                 abi=_NEG_RISK_REDEEM_ABI)
+        tx = adapter.functions.redeemPositions(cond_id, amounts).build_transaction(common_tx)
+    else:
+        tx = ctf_redeem.functions.redeemPositions(
+            Web3.to_checksum_address(PUSD_ADDR), b"\x00" * 32, cond_id, [1, 2],
+        ).build_transaction(common_tx)
     # SIMULATE-FIRST (2026-08-12). This function had no dry path, and on that
     # date I called it as a "probe" of the redemption wiring: it sent a real
     # transaction, which reverted (correctly — the condition was unresolved)
@@ -598,7 +622,18 @@ def main():
     p = sub.add_parser("redeem-one", help="redeem a single resolved market by conditionId "
                                           "(fallback for de-indexed markets redeem-all can't see)")
     p.add_argument("condition_id", help="0x-prefixed conditionId (verify resolved on gamma first)")
-    p.set_defaults(fn=lambda a: (print(json.dumps(redeem_one(a.condition_id), indent=2)), 0)[1])
+    p.add_argument("--neg-risk", action="store_true",
+                   help="negRisk market — also pass --token-id and --outcome (all three fields "
+                        "are in notes/position_condition_ids.json; SpaceX is currently the book's "
+                        "only negRisk position)")
+    p.add_argument("--token-id", help="the held outcome's token id (snapshot field `asset`)")
+    p.add_argument("--outcome", choices=["Yes", "No"], help="which side is held (snapshot field `outcome`)")
+    p.add_argument("--dry-run", action="store_true",
+                   help="simulate via eth_call — reverts without broadcasting, so the whole path "
+                        "can be rehearsed before resolution day")
+    p.set_defaults(fn=lambda a: (print(json.dumps(
+        redeem_one(a.condition_id, neg_risk=a.neg_risk, dry_run=a.dry_run,
+                   token_id=a.token_id, outcome=a.outcome), indent=2)), 0)[1])
 
     args = ap.parse_args()
     sys.exit(args.fn(args))

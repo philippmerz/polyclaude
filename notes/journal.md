@@ -6327,3 +6327,37 @@ family. That matters for sizing, not just for probability: interpretation bets g
 this book, and a 15%-of-bankroll position sitting on a fact-bet prior would need re-sizing the moment
 its character changed. Better to have written that down now than to discover it in September with the
 position already large.
+
+## 2026-08-13 02:40 UTC — closed a claim-insurance hole on the largest position
+
+Finished the close-read sweep by taking SpaceX, the last position I had not examined structurally.
+The criteria themselves were as recorded, but inspecting the EVENT rather than the market turned up
+something better: it is a negRisk event, and it is the ONLY negRisk position in the book.
+
+That mattered because redeem_one() — the de-index fallback I verified yesterday — began with
+`if neg_risk: raise SystemExit("negRisk path not implemented")`. So the fallback that exists
+specifically for markets that vanish from data-api did not cover my LARGEST position ($29.42, 16% of
+bankroll). De-indexing is not hypothetical here: it has happened twice, both in July. Had SpaceX
+de-indexed at its Dec-31 resolution, redeem-all would have been blind and the manual path would have
+refused outright.
+
+Implemented the negRisk branch, and the design point is that it reads balances ON-CHAIN via
+balanceOf using the snapshot's `asset` and `outcome` fields — never from data-api, which is the thing
+that has disappeared in the scenario being handled. Since I hold exactly one side, the adapter's
+[yes_amount, no_amount] array is just the held balance and a zero. Verified against the live position:
+it read 34000000 (34 shares at 6 decimals), built [34000000, 0], and returned "would REVERT: result
+for condition not received yet" — the correct semantic revert for an unresolved condition, proving
+adapter address, ABI, balance read and amount construction all work. Also exposed --neg-risk,
+--token-id, --outcome and --dry-run on the CLI, since the previous parser accepted only a bare
+conditionId and would have silently used the standard-CTF path on a negRisk market.
+
+Then wrote the RESOLUTION-DAY RUNBOOK into the backlog, because knowing the fallback works is
+useless if the procedure has to be reconstructed under time pressure. It names the order — confirm
+resolution on gamma first, try redeem-all, fall back to redeem-one with the snapshot fields, always
+dry-run first — and flags that "result for condition not received yet" is BOTH the expected dry-run
+output and the symptom of redeeming too early, which is exactly the confusion I would otherwise walk
+into. First live use is GPT-6 on Aug-31.
+
+Worth noting how this was found: not by hunting bugs, but by finishing a criteria sweep and looking
+at the event structure rather than only the market text. The negRisk flag was visible in the API the
+whole time.
