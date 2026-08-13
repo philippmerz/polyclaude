@@ -7126,3 +7126,34 @@ row. The real gap is that the rotation gates on CRITERIA age while the risk live
 Measured it: 3 of 8 positions had a fresh check sitting on a source older than 60 days (Greenland
 203d, MacBook 116d, SpaceX 66d). The audit now fires on either condition, and it immediately surfaced
 Greenland's 203-day-old source — a position I "re-verified" this morning.
+
+## 2026-08-13 18:40 UTC — acted on my own new alert; it earned itself on first fire
+
+The stale-source check I shipped twenty minutes ago fired on Greenland — 203-day-old source behind a
+criteria_read of zero days — and the worst possible response would have been to note it and move on,
+so I worked it.
+
+Refreshing the sources changed the position. The newer material describes LIVE negotiations whose
+SHAPE matters: US "total access" to parts of Greenland for an unlimited period via a reopened 1951
+defence agreement, access explicitly "not curbed in the future under any circumstances", plus forces
+and rare-earth access. Denmark's red line holds — "we will not cede sovereignty over parts of the
+kingdom" — and the proposal is framed as respecting it, so the sovereignty-transfer branch stays
+shut.
+
+But this morning I read "basing rights are excluded by name" and stopped there, and that was the
+wrong stopping point. The criteria's OWN qualifying example is a Guantanamo-style zone under
+exclusive or primary US jurisdiction where Danish law does not apply except by US permission — and a
+maximalist uncurbable-unlimited-access arrangement approaches that bar from below. It still needs a
+BINDING instrument creating exclusive JURISDICTION rather than guaranteed ACCESS, which is a real
+distinction and a narrow path, but it is no longer negligible. p_no 0.98 -> 0.95, with the watch
+stated precisely: signed text that DISPLACES Danish legal authority in a defined zone, not text that
+guarantees US use of it.
+
+Then the check kept firing after I refreshed, and that was correct rather than a bug: Greenland's
+freshest AVAILABLE source is still ~200 days old, because the story genuinely has not moved. An alert
+that cannot be cleared becomes wallpaper within a week and takes the useful fires down with it, so I
+gave it a dated expiring `source_ack` — the same shape as `divergence_ack` — recording "I looked and
+nothing newer exists" WITH a date, so the claim expires in 21 days and gets re-tested. Verified both
+paths: CLEAN with the ack, and "(ack EXPIRED)" when backdated.
+
+Book now 7 positions after the SpaceX exit, audit CLEAN, deployable $28.12.

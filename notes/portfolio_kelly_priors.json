@@ -26,15 +26,21 @@
   ]
  },
  "will-the-us-acquire-any-part-of-greenland-in-2026": {
-  "p_no": 0.98,
+  "p_no": 0.95,
   "cluster": "us-expansion",
   "rho_within": 0.0,
   "cluster_frac": 0.11,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` — do NOT read as current] 2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
   "verified": "2026-08-13",
-  "note": "0.975 -> 0.98 on 2026-08-13. The rotation surfaced this at 8 days stale and the re-read raised the bar considerably: every realistic path short of a signed sovereignty treaty is carved out by name — frameworks, MOUs, negotiations, basing rights, SOFA/COFA arrangements, leases, commercial concessions. What remains is a binding legal instrument transferring sovereignty or creating exclusive US jurisdiction, inside 4.5 months, against two governments publicly refusing to discuss sovereignty. P(YES) ~1.5%. ALERT TRIAGE for the Greenland keywords added 2026-08-12: a headline about a 'deal', 'agreement' or 'framework' is NOT a thesis break unless the reporting names a BINDING instrument (enacted legislation, signed treaty, signed agreement text, or an executive action implementing one). Basing-rights headlines are noise by construction.",
+  "note": "0.975 -> 0.98 on 2026-08-13. The rotation surfaced this at 8 days stale and the re-read raised the bar considerably: every realistic path short of a signed sovereignty treaty is carved out by name — frameworks, MOUs, negotiations, basing rights, SOFA/COFA arrangements, leases, commercial concessions. What remains is a binding legal instrument transferring sovereignty or creating exclusive US jurisdiction, inside 4.5 months, against two governments publicly refusing to discuss sovereignty. P(YES) ~1.5%. ALERT TRIAGE for the Greenland keywords added 2026-08-12: a headline about a 'deal', 'agreement' or 'framework' is NOT a thesis break unless the reporting names a BINDING instrument (enacted legislation, signed treaty, signed agreement text, or an executive action implementing one). Basing-rights headlines are noise by construction. 0.98 -> 0.95 on 2026-08-13. The STALE-SOURCE check fired on its first day for this position (203d-old source behind a criteria_read of 0 days) and immediately earned itself: refreshing found live negotiations whose SHAPE — unlimited, uncurbable exclusive access to defined areas — creeps toward the Guantanamo-style qualifying example in the criteria, a path I had dismissed when I read 'basing rights are excluded' this morning and stopped there. Still a strong NO: Denmark's sovereignty red line holds, the deal is framed as respecting it, and YES needs a BINDING instrument granting exclusive JURISDICTION rather than guaranteed access. WATCH: any reporting of signed text that displaces Danish legal authority in a defined zone, as opposed to guaranteeing US use of it.",
   "criteria_read": "2026-08-13",
   "key_facts": [
+   {
+    "claim": "NEWER STATE (2026-08-13, surfaced by the stale-source check on a 203d-old source). Negotiations are LIVE and their shape matters: reporting describes US 'total access' to parts of Greenland for an UNLIMITED period via a reopened 1951 defence agreement, with access 'not curbed in the future under any circumstances', plus additional forces and rare-earth access. Denmark's red line is explicit — 'we will not cede sovereignty over parts of the kingdom' — and the proposal is framed as RESPECTING Danish sovereignty, so the sovereignty-transfer branch stays firmly shut. THE RISK I HAD NOT PRICED: basing/access/SOFA arrangements are excluded BY NAME, but the criteria's own qualifying example is 'a Guantanamo-style arrangement establishing a defined zone under exclusive or primary US jurisdiction where Denmark and Greenland's ordinary legal authority does not apply except by US permission'. A maximalist uncurbable-unlimited-access deal approaches that bar from below. It is a narrow path — it needs a BINDING instrument creating exclusive JURISDICTION, not just guaranteed access — but it is no longer negligible.",
+    "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty + Yahoo/Reuters 'US and Denmark to reopen 1951 defence agreement on Greenland'",
+    "source_date": "2026-01-25",
+    "checked": "2026-08-13"
+   },
    {
     "claim": "CRITERIA (re-read 2026-08-13 via the rotation — MUCH tighter than I had recorded, and it resolves a standing worry). YES requires a BINDING agreement or legal instrument producing either (1) transfer of sovereignty or (2) primary/exclusive US jurisdiction such that Danish/Greenlandic law does not apply except by US permission, or (3) acquisition of such control by force. EXPLICITLY EXCLUDED, verbatim: 'Non-binding statements, negotiations, proposals, frameworks, or MOUs will not alone qualify' and 'Basing rights, access agreements, SOFA-type arrangements, COFA-type arrangements, commercial concessions, or other permissions to use land (including leases) will not alone qualify.' Pre-existing US control does not count. An announcement qualifies ONLY if accompanied by the binding instrument. => Trump's January 'framework of a future deal' with Rutte, which I had flagged as a concern, CANNOT resolve YES. Nor can the most realistic negotiated outcome, a basing or access deal.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
@@ -47,7 +53,9 @@
     "source_date": "2026-01-22",
     "checked": "2026-08-12"
    }
-  ]
+  ],
+  "source_ack": "2026-08-13",
+  "source_ack_note": "Searched 2026-08-13 for newer Greenland reporting and there is none — the freshest available material is the January framework/1951-agreement coverage. The position rests on ~200d-old sources because the STORY has not moved, not because I stopped looking. Ack expires in 21 days, which re-tests that claim rather than letting it calcify; re-check sooner if any Greenland keyword fires."
  },
  "will-satoshis-identity-be-revealed-by-december-31": {
   "p_no": 0.955,

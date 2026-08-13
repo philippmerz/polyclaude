@@ -575,6 +575,23 @@ the one that arrives with a plausible justification attached. Audit those hardes
   slip. The handler printing something saved it. Guard new instrumentation with handlers that
   are LOUDER than the thing they guard, never quieter.
 
+- **Re-reading the CRITERIA is not re-verifying the FACTS, and only one of them was gated.**
+  2026-08-13: SpaceX cost the project its largest prior correction (0.95 -> 0.68) on an Anthropic
+  valuation wrong by ~15x, while its criteria_read was TWO DAYS old — so no age-based rotation
+  could ever have surfaced it. Measuring the book found 3 of 8 positions with a fresh check
+  sitting on a source older than 60 days (Greenland 203d, MacBook 116d, SpaceX 66d). The audit
+  now fires on EITHER stale criteria or a stale source. Note the fix I first proposed
+  (size-weight the rotation) would NOT have caught it — worth working a fix through against the
+  actual failure before building it, because the plausible one and the correct one differed.
+
+- **An alert that CANNOT be cleared becomes wallpaper and takes the useful fires with it.**
+  Greenland's freshest available source is ~200 days old because the story has not moved, not
+  because I stopped looking — so the new stale-source check would have screamed forever on a
+  position doing nothing wrong. Gave it a dated, expiring `source_ack` (21 days), the same shape
+  as `divergence_ack`: the ack records "I looked and nothing newer exists" WITH a date, so the
+  claim expires and gets re-tested instead of calcifying. Any always-on alert needs a way to say
+  "acknowledged, and here is when to ask again".
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**

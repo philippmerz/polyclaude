@@ -144,11 +144,28 @@ def main() -> int:
             if age > SOURCE_STALE_DAYS and age > stale_src_age:
                 stale_src_key, stale_src_age = k, age
     if stale_src_key and stale_src_key != oldest_key:
-        issues.append(
-            f"STALE SOURCE behind a fresh check: {stale_src_key[:52]} rests on a fact whose "
-            f"source is {stale_src_age}d old — criteria were re-read recently, but re-reading "
-            f"CRITERIA is not re-verifying FACTS. Search for NEWER reporting; do not re-read "
-            f"the source you already have (it cannot reveal the one you don't).")
+        # Silenceable ONLY with a dated, expiring ack — same shape as
+        # divergence_ack, and for the same reason. Some positions rest on old
+        # sources because no newer reporting EXISTS (Greenland's freshest is
+        # ~200d old however hard I search), so an unclearable alert would become
+        # wallpaper within a week and take the useful fires down with it. The
+        # ack records "I looked and there is nothing newer" WITH a date, so the
+        # claim expires and gets re-tested rather than calcifying.
+        SOURCE_ACK_DAYS = 21
+        ack = (priors_raw.get(stale_src_key, {}) or {}).get("source_ack")
+        acked = False
+        if ack:
+            try:
+                acked = (dt.date.today() - dt.date.fromisoformat(ack)).days <= SOURCE_ACK_DAYS
+            except Exception:
+                acked = False
+        if not acked:
+            issues.append(
+                f"STALE SOURCE behind a fresh check: {stale_src_key[:52]} rests on a fact whose "
+                f"source is {stale_src_age}d old{' (ack EXPIRED)' if ack else ''} — criteria were "
+                f"re-read recently, but re-reading CRITERIA is not re-verifying FACTS. Search for "
+                f"NEWER reporting; do not re-read the source you already have (it cannot reveal "
+                f"the one you don't). If nothing newer exists, set source_ack to today.")
     if oldest_key:
         never = oldest_date == "1970-01-01"
         try:
