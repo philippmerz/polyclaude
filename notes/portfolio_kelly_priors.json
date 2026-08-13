@@ -238,8 +238,8 @@
     "checked": "2026-08-13"
    },
    {
-    "claim": "Sibling market 'Astra released by' prices Aug-31 at ~0.22 and Sep-15 at ~0.54 — modal release September.",
-    "source": "gamma-api event openais-astra-released-by-20260801214557729",
+    "claim": "SIBLING CORROBORATION — LOOK IT UP, do not trust a pinned number here. The 'Astra released by' ladder is a live market and drifts daily: recorded 'Aug-31 ~0.22, Sep-15 ~0.54' on 2026-08-12 and one day later it reads 0.165 / 0.40, a 5.5pp and 14pp move. What is STABLE and is the actual corroboration: the ladder stays monotone and keeps September as the modal release month, and the Aug-31 leg has been DRIFTING DOWN, which supports the GPT-6 NO thesis rather than threatening it. Re-read the live event at decision time; treat any number written here as illustrative of shape, never as current.",
+    "source": "gamma-api event openais-astra-released-by-20260801214557729 [FIRST-HAND MEASUREMENT — re-read live]",
     "source_date": "2026-08-13",
     "checked": "2026-08-13"
    },

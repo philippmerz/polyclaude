@@ -7395,3 +7395,29 @@ The general shape, worth keeping separate from the liquidity specifics: when a q
 than the cadence at which I re-read the note containing it, the note must carry a RANGE and a
 re-measure instruction rather than a value. A point estimate in a slow document describing a fast
 quantity is a lie with a timestamp on it.
+
+## 2026-08-13 23:19 UTC — swept for pinned fast-moving numbers; found the one that corroborates a live thesis
+
+Applied the range-not-value lesson as a class check. The obvious suspect was the GPT-6 key_fact
+recording the Astra sibling ladder at "Aug-31 ~0.22, Sep-15 ~0.54" — market prices, written into a
+document I re-read every few days. Checked it: one day later those legs read 0.165 and 0.40, drifts
+of 5.5pp and 14pp.
+
+That fact is not decoration; it is the CORROBORATION for the GPT-6 position, the thing I cite when
+deciding whether an unexplained move is noise. A stale corroborating number quietly misinforms the
+position it supports. The drift happens to be favourable — Astra-by-Aug-31 falling means the sibling
+now supports the NO thesis more strongly than recorded — but I would not have known the direction
+without looking, which is the whole point.
+
+Converted it from pinned values to a live-lookup instruction, and recorded what is actually STABLE
+about the ladder instead: it stays monotone, September remains the modal month, and the Aug-31 leg
+has been drifting down. That is the durable claim. The numbers are illustrative of shape and are
+explicitly marked as never-current.
+
+Swept the rest of the priors for the same pattern and found none remaining — the other facts pin
+slow-moving things (board composition, criteria text, IPO valuations) where a value is appropriate.
+
+Left p_no at 0.90 rather than fine-tuning on the drift. The market-derived path now implies ~0.86
+while my 0.90 rests on the framework-mandated pre-release controls plus eighteen days of remaining
+time decay; that gap is my documented disagreement, not a rounding error, and chasing a sibling
+market's daily move would be exactly the mistake this lesson warns about.

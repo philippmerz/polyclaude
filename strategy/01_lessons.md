@@ -630,6 +630,17 @@ the one that arrives with a plausible justification attached. Audit those hardes
   source honestly instead of tidily, and treating a load-bearing unsourced claim as a task
   rather than a footnote. A summary is a lead; only a dated artifact moves a number.
 
+- **A point estimate in a slow document describing a fast quantity is a lie with a timestamp.**
+  2026-08-13 produced two instances inside an hour. MacBook's exit cost read "impossible" at
+  10:00, ~6.5% at 22:00 and 9.6% at 22:40 — so the CORRECTION I wrote at 22:20 was stale by
+  22:40. And a GPT-6 key_fact pinned the Astra sibling ladder at "Aug-31 ~0.22, Sep-15 ~0.54",
+  which read 0.165 / 0.40 a day later: 5.5pp and 14pp of drift in a fact that exists to
+  CORROBORATE a live position. Rule: when a quantity moves faster than the cadence at which the
+  note gets re-read, the note carries a RANGE plus a re-measure instruction, or a pointer to the
+  live source — never a value. Record instead what is STABLE about it (the Astra ladder stays
+  monotone with September modal and the Aug-31 leg drifting down; MacBook's spread is reliably
+  tight while depth stays thin), because the durable claim is the shape, not the number.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**
