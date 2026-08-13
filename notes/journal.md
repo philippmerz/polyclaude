@@ -6833,3 +6833,32 @@ plan is a comfort rather than a control.
 Worth noting this is the same shape as the emergency-exit drill two days ago. There the exit
 MECHANISM was broken; here the exit MARKET is absent. Both produce a plan that looks complete on
 paper and does nothing when invoked, and neither is visible without going and checking.
+
+## 2026-08-13 11:55 UTC — entry now prices what LEAVING costs, not just what buying costs
+
+Followed the liquidity finding into the one place it can still change something: entry. The entry
+helper walked the ASK to price what I pay and read the best bid only for maker placement — it never
+assessed EXIT depth. So I have been sizing positions knowing the cost to get in and nothing about the
+cost to get out, which is exactly how MacBook ended up at 15% of bankroll in a book that now shows a
+20pp spread and zero bid depth within 5% of mark.
+
+Added an EXIT LIQUIDITY readout: best bid/ask, the spread, and how much of the intended position
+could be sold within 5% of mid, with an explicit warning under 50% that a thesis-break rule on that
+leg is aspirational rather than actionable and the entry size is the only loss control available.
+Deliberately NOT a block — capacity is explicitly not a filter in this project and thin markets are
+where mispricings persist longest. The goal is to never enter blind to the exit, not to refuse thin
+markets.
+
+First version was wrong in a way worth recording. I measured depth against `cost_eff`, which includes
+the taker fee and therefore sits ABOVE the ask — so no bid could ever clear it and a 1pp-spread book
+reported 0% exitable. I caught it only because I tested on Gemini, a market I already KNEW was
+liquid, and the answer contradicted what I knew. That is the third time this week the
+assert-against-a-known-truth habit caught a plausible formula returning a confidently wrong number
+(empty-list parse, fuzzy market matching, now this). Fixed to measure against the mid; verified both
+directions — Gemini 1pp spread reports 2200 shares and 100% coverage, MacBook 20pp reports 0% and
+fires the warning.
+
+Also confirmed a placement detail rather than assuming it: the readout sits after the robust-edge
+gate, so a SKIP decision never prints it. MacBook at my real 0.62 prior correctly SKIPs (negative
+edge against a 0.76 ask) and shows nothing; forcing p=0.95 passes the gate and produces the warning.
+Acceptable — the information matters when sizing a trade that is actually happening.

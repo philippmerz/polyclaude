@@ -492,6 +492,41 @@ def main() -> int:
               f"genuinely high-confidence (mechanical resolution, tight catalyst_check band).")
         return 0
 
+    # EXIT LIQUIDITY (2026-08-13). Entry has always priced what I PAY and never
+    # what it would cost to LEAVE. Measuring the book that day found 22% of
+    # holdings sit where <50% could be sold within 5% of mark — MacBook at a
+    # 20pp spread with ZERO bid depth inside 5% — which quietly makes its
+    # written thesis-break rule unactionable. Entry is the only moment that
+    # information can change anything, so surface it here. NOT a block:
+    # capacity is explicitly not a filter in this project, and thin markets are
+    # where mispricings persist longest. Just never enter blind to the exit.
+    try:
+        _bk = httpx.get("https://clob.polymarket.com/book",
+                        params={"token_id": token}, timeout=15).json()
+        _bids = sorted(_bk.get("bids", []), key=lambda x: -float(x["price"]))
+        _asks = sorted(_bk.get("asks", []), key=lambda x: float(x["price"]))
+        if _bids and _asks:
+            _bb, _ba = float(_bids[0]["price"]), float(_asks[0]["price"])
+            # Measure depth against the MID, not against cost_eff. First version
+            # used cost_eff — which includes the taker fee and therefore sits
+            # ABOVE the ask, so no bid could ever clear it and a 1pp-spread book
+            # reported 0% exitable. Caught only by testing on a market I already
+            # knew was liquid; the same assert-against-a-known-truth habit that
+            # caught the empty-list parse. A plausible formula returning a
+            # confident wrong number is the recurring shape here.
+            _mid = (_bb + _ba) / 2
+            _floor = _mid * 0.95
+            _depth = sum(float(x["size"]) for x in _bids if float(x["price"]) >= _floor)
+            _cover = min(100.0, _depth / shares * 100) if shares else 0.0
+            print(f"\n=== EXIT LIQUIDITY (what leaving would cost) ===")
+            print(f"  best bid {_bb:.3f} / ask {_ba:.3f} — spread {(_ba-_bb)*100:.1f}pp")
+            print(f"  {_depth:.0f} shares bid within 5% of your entry = {_cover:.0f}% of this position")
+            if _cover < 50:
+                print(f"  !! THIN EXIT: a thesis-break rule on this leg is aspirational, not actionable.")
+                print(f"     Size it as hold-to-resolution — entry size is the only loss control you get.")
+    except Exception as _e:
+        print(f"\n(exit-liquidity check unavailable: {str(_e)[:50]})")
+
     print(f"\n=== KELLY ANALYSIS ===")
     print(f"  Buying {side} @ ${mark:.4f}"
           + (f" (effective {cost_eff:.4f} incl. taker fee)" if fee_per_share else "")
