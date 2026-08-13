@@ -7064,3 +7064,34 @@ resolution triggers, criteria carve-outs that retired a standing worry, measured
 applied to the entry gate and then to my own strongest conviction, an identifier gap that would have
 hit the January evidence base all at once, my own P&L inflated by a midpoint, and a doctrine rule
 that assumed markets move when sometimes only the midpoint does.
+
+## 2026-08-13 18:00 UTC — largest prior correction of the project, and the market found it first
+
+SpaceX YES fell 0.865 -> ~0.685 on $83k of 24h volume with a 3pp spread and 348-share depth. The
+step-(0) check I added THREE HOURS AGO earned itself immediately: it classified this as a REAL move
+rather than the midpoint artifact that fooled me on MacBook this morning, which is exactly the
+distinction the rule was written for, and it meant I went looking for a cause instead of dismissing
+it as quote noise.
+
+The cause is a fact in my own key_facts that was wrong by roughly fifteen times. I had recorded
+"Anthropic filed 2026-06-01 off a $65B round (far too small to matter)". Anthropic is valued near
+$965B after its June round, and reporting referenced on 2026-08-11 carries the headline "Anthropic
+investors eye $2trn valuation in record October IPO". Against SpaceX's ~$2.1T first-day close, a $2T
+October pricing clears the bar on a modest pop — SpaceX itself popped 19%. The protective ARITHMETIC
+GAP I had leaned on all week was real for OpenAI ($1T target vs a $2.1T bar) and simply absent for
+Anthropic, and I never checked the second one because my note said it did not matter.
+
+p_yes 0.95 -> 0.68, the largest correction of the project, landing almost exactly on the market's
+0.67/0.70. Repriced the consequences too: the resting sell at 0.96 was a fossil of the old prior that
+could never fill, so I cancelled it and rested 34sh at 0.70 post-only — inside the 0.68/0.72 spread,
+2pp above the new fair, fee-free. Selling above fair beats holding on a position that now carries
+ZERO edge at 16% of bankroll, and a fill frees the largest single block of capital in the book.
+
+The pattern is what stings. This is the THIRD position this week to turn on a stale or mis-recorded
+FACT rather than on judgement — MacBook's inverted Gurman anchor, SpaceX's "OpenAI pushed to 2027",
+now Anthropic's valuation. Both SpaceX errors FLATTERED the position, which is precisely the
+direction that gets held rather than questioned; I built a source-diff rotation for exactly this
+class four days ago and it had not yet reached this key_fact. The rotation surfaces one position per
+tick, which is the right cadence for staleness but too slow when a single fact is doing all the work.
+Noting rather than immediately building: the candidate fix is to prioritise the rotation by
+POSITION SIZE rather than by check-age, so the biggest bets get re-verified first.
