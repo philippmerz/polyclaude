@@ -64,22 +64,20 @@ Ranked by validated evidence, not aspiration:
 
    Two instance-pipeline rules added 2026-07-17/19 (both validated live the same week):
 
-   **FLIP-THE-KILL — now MECHANISED (2026-08-13).** Was doctrine-only from
-   2026-07-17, and grading the skip ledger measured the cost of that: 2 of 9
-   graded rows are flip misses (DC Studios and Lucasfilm — evaluated NO at 0.80,
-   correctly skipped, never ran the gate on YES at 0.59, which won +69% each).
-   The ledger scores those skips as CORRECT because it grades the side I looked
-   at, so the failure was invisible in my own records. polyclaude_enter now
-   prints a FLIP-THE-KILL CHECK on every SKIP: the opposite side's real ask, the
-   implied edge at 1−p, and whether it clears the same haircut. A skip rejects
-   THIS SIDE, never this market.
-   When candidate verification INVERTS a thesis on a clean
+   **FLIP-THE-KILL.** When candidate verification INVERTS a thesis on a clean
    load-bearing fact (no interpretation fork, no UMA-fight dependency), run the
    full gate on the OPPOSITE side instead of skip-only — the kill pipeline finds
    these for free. Evidence: Bears-leave-Illinois (agent said NO; the Jun-5
    Indiana board vote implied YES cheap at 0.33; +12pp in 48h, untraded because
-   the rule didn't exist yet). N=1 clean + 1 boundary exclusion (Hormuz
-   interpretation fork) — treat first applications as small-sized tests.
+   the rule didn't exist yet).
+   **MECHANISED 2026-08-13**, after grading the skip ledger measured what
+   doctrine-only cost: 2 of 9 graded rows are flip misses (DC Studios and
+   Lucasfilm — evaluated NO at 0.80, correctly skipped, never gated YES at 0.59,
+   which won +69% each). The ledger scores those skips as CORRECT because it
+   grades the side I looked at, so the failure was invisible in my own records.
+   polyclaude_enter now prints a FLIP-THE-KILL CHECK on every SKIP: the opposite
+   side's real ask, the implied edge at 1−p, and whether it clears the same
+   haircut. A skip rejects THIS SIDE, never this market.
 
    **UNEXPLAINED-MOVE CLASSIFICATION.** When a market moves hard without visible
    news, classify before acting: (a) if the resolution depends on a data source

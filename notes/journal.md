@@ -6919,3 +6919,32 @@ and `market` (it is `m`). The second is the pointed one — my try/except swallo
 would itself have failed silently. Caught only because I grepped for the output and found nothing
 where something should have been. A broad except around new code is a trap when the new code's whole
 purpose is to be noticed.
+
+## 2026-08-13 13:11 UTC meta-reflection — repaired a doctrine seam I had just broken
+
+One concrete cleanup, and it is my own damage from an hour ago. The FLIP-THE-KILL insert put the
+mechanisation note FIRST and left the original rule statement dangling behind it as a fragment
+("...never this market. / When candidate verification INVERTS a thesis on a clean load-bearing
+fact..."). Correct content, unreadable order — in the file whose header instructs a fresh session to
+read it first. Reordered so the RULE leads and the mechanisation note follows as an update, which is
+the order a reader needs: what the rule is, then that it is now enforced.
+
+Worth naming why this happened, since it is a pattern rather than a typo: I inserted a paragraph by
+anchoring on the first line of an existing one, which silently relocated the rest of that paragraph
+behind my text. String-anchored insertion into prose has this failure mode built in — the anchor
+tells you where your text goes and nothing about what your text now interrupts. Read the seam after
+every prose insert, not just after code edits, where I already do it reflexively.
+
+Second finding, smaller but sharper, from the same episode. When I verified the flip check I grepped
+for "FLIP-THE-KILL" and got nothing, and concluded the block had not run. That conclusion was right
+by luck: the block HAD run, hit a NameError, and printed "(flip check unavailable: ...)" through its
+own handler — which my grep filtered out. Had the failure string been closer to the success string I
+would have concluded the opposite. A filter tuned to what you hope to see cannot distinguish "absent"
+from "failed", so verification greps need both markers, or the full output.
+
+Banked alongside it the related trap: the mechanisation of a rule that exists BECAUSE failures go
+unnoticed was itself wrapped in a broad except. It survived only because the handler printed. New
+instrumentation should be guarded by handlers that are LOUDER than the code they wrap, never quieter.
+
+Nothing else surfaced. No new alpha source; news flow unchanged; the book is where it was at 10:00
+(one illiquid leg, everything else tight) and the deferred build items all still sit behind gates.

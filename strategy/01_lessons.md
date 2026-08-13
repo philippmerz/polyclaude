@@ -544,6 +544,21 @@ quoted but four months stale. Read this before touching any prior.)*
   actually controls the loss is the entry size, made before any of it. Measure exitable depth
   BEFORE writing an exit plan, or the plan is a comfort rather than a control.
 
+- **Grepping for the SUCCESS string hides the failure string.** 2026-08-13: verifying the new
+  flip check, I ran the entry helper and grepped for "FLIP-THE-KILL". Nothing came back, which I
+  read as "the block did not run" — correct by luck. It HAD run, hit a NameError, and printed
+  "(flip check unavailable: ...)" through its own except handler, which my grep filtered out.
+  The diagnosis was right for the wrong reason, and had the failure string been closer to the
+  success string I would have concluded the opposite. When verifying new output, grep for BOTH
+  the success and failure markers, or read the full output — a filter tuned to what you hope to
+  see cannot distinguish "absent" from "failed".
+
+- **A broad `except` around code whose purpose is to BE NOTICED is self-defeating.** Same
+  episode: the mechanisation of FLIP-THE-KILL — a rule that exists precisely because failures
+  go unnoticed — was wrapped in try/except and would have failed silently on a variable-name
+  slip. The handler printing something saved it. Guard new instrumentation with handlers that
+  are LOUDER than the thing they guard, never quieter.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**
