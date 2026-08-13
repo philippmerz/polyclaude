@@ -490,6 +490,40 @@ def main() -> int:
               f"Thin point-estimate edge dominated by estimation noise.")
         print(f"  Override with a smaller --edge-haircut only if the p estimate is "
               f"genuinely high-confidence (mechanical resolution, tight catalyst_check band).")
+
+        # FLIP-THE-KILL CHECK (2026-08-13). The rule has been doctrine since
+        # 2026-07-17 (00_philosophy §3) and was NEVER mechanised — and grading
+        # the skip ledger today measured what that costs: 2 of 9 graded rows are
+        # flip misses. On DC Studios and Lucasfilm I evaluated NO at 0.80,
+        # correctly skipped it, and never ran the gate on YES at 0.59, which won
+        # (+69% each). The ledger even scores those skips as CORRECT, because it
+        # grades the side I looked at — so the failure is invisible in my own
+        # records. A skip means "not this side", never "not this market".
+        try:
+            # market dict is `m` in this scope, not `market` — first version used
+            # the latter and the try/except swallowed the NameError as "flip
+            # check unavailable", i.e. the mechanisation for a rule I built
+            # BECAUSE it silently fails would itself have silently failed.
+            _toks = json.loads(m.get("clobTokenIds") or "[]")
+            _outs = json.loads(m.get("outcomes") or "[]")
+            _other = "No" if side == "Yes" else "Yes"
+            if _other in _outs and len(_toks) == len(_outs):
+                _oask = _best_ask(_toks[_outs.index(_other)])
+                if _oask:
+                    _op = 1.0 - my_p
+                    _ofee = (taker_bps / 10000.0) * min(_oask, 1 - _oask) if taker_bps else 0.0
+                    _ocost = _oask + _ofee
+                    _oedge = (_op - _ocost) * 100
+                    print(f"\n  FLIP-THE-KILL CHECK — a skip rejects THIS SIDE, not this market:")
+                    print(f"    opposite side {_other} asks {_oask:.4f} (eff {_ocost:.4f}); "
+                          f"your p implies P({_other})={_op:.3f} → edge {_oedge:+.1f}pp")
+                    if _op - args.edge_haircut > _ocost:
+                        print(f"    >> THE FLIP CLEARS THE GATE at haircut {args.edge_haircut:.2f}. "
+                              f"Re-run with --side {_other} before walking away.")
+                    else:
+                        print(f"    (flip does not clear either — this market is genuinely skippable)")
+        except Exception as _e:
+            print(f"  (flip check unavailable: {str(_e)[:50]})")
         return 0
 
     # EXIT LIQUIDITY (2026-08-13). Entry has always priced what I PAY and never

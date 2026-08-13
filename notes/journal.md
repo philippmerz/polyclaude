@@ -6893,3 +6893,29 @@ So the honest summary for the weekly report is: the record is now gradeable and 
 correct skips avoided total losses while the incorrect ones mostly missed modest gains, and the
 single largest lesson is not the tally at all but that two of nine rows are FLIP-THE-KILL misses —
 which is a statement about a rule I already have and did not follow, not about skip selectivity.
+
+## 2026-08-13 12:51 UTC — mechanised FLIP-THE-KILL, the rule the ledger proved I don't follow
+
+The skip grading's real lesson was not the tally but that 2 of 9 graded rows are FLIP-THE-KILL
+misses. So I checked whether that rule is enforced anywhere: it exists in exactly one place,
+00_philosophy §3, as prose. Zero mechanisation since 2026-07-17.
+
+That combination — a rule with a MEASURED failure rate and no enforcement — is the same shape as
+every other finding this week, and the fix is the one that has worked each time: make the tool print
+the gap. polyclaude_enter now runs a FLIP-THE-KILL CHECK on every SKIP, fetching the opposite side's
+real ask, computing the implied edge at 1−p, and saying explicitly whether the flip clears the same
+haircut. The framing in the output is deliberate: "a skip rejects THIS SIDE, not this market."
+
+Verified both branches on the live MacBook book. At my real prior (NO 0.62) it correctly reports the
+flip does NOT clear — YES asks 0.41, effective 0.451 against an implied P(Yes) of 0.38, edge −7.1pp
+— so the market is genuinely skippable. Forcing p=0.20 produces the positive branch: "THE FLIP CLEARS
+THE GATE at haircut 0.10. Re-run with --side Yes before walking away." That is exactly the prompt
+that was missing in July when DC and Lucasfilm were skipped.
+
+Two self-inflicted bugs on the way, both caught by testing rather than reading, and both from writing
+code against remembered names instead of the actual scope: `fee_bps` (the variable is `taker_bps`)
+and `market` (it is `m`). The second is the pointed one — my try/except swallowed the NameError as
+"flip check unavailable", so the mechanisation for a rule I was building BECAUSE it fails silently
+would itself have failed silently. Caught only because I grepped for the output and found nothing
+where something should have been. A broad except around new code is a trap when the new code's whole
+purpose is to be noticed.
