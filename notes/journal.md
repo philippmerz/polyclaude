@@ -6553,3 +6553,38 @@ overconfidence rather than any new evidence.
 
 The banked form: the test of a calibration finding is whether you turn it on your strongest belief,
 not whether you turn it on the next trade.
+
+## 2026-08-13 07:40 UTC — the skip ledger is cited as evidence and is two-thirds ungraded
+
+Turned the measure-my-own-behaviour discipline on the half of the decision record I had never
+examined: the skips. The prior-drift work graded my priors against my own later estimates, which is a
+weak standard; the skip ledger has an `outcome` field and can be graded against WHAT ACTUALLY
+HAPPENED, which is the strong one.
+
+The finding is that it mostly has not been. Of 15 skip-class rows in shortdated_ledger.json, exactly
+ONE carried a graded `fade_would_have_won` before today. That matters more than a bookkeeping lapse:
+00_philosophy cites this file as "the ongoing falsification record" for the skip discipline, and
+project memory earmarks it at N≈30-50 as evidence for the operator's January scale decision. An
+ungraded ledger is a diary — it records that I made decisions, not whether they were any good.
+
+Graded the four rows where both side and outcome were unambiguous YES/NO, deliberately leaving the
+rest rather than guessing, since a sign error here manufactures false evidence and false evidence is
+worse than none. Running tally: 5 graded, 3 where taking my evaluated side would have won.
+
+Two things fell out that are worth more than the tally. First, two of the three "would have won" are
+Wimbledon favourites (Świątek and Zverev, NO at ~0.90, both resolved NO). Those skips were
+POLICY-CORRECT — population favourite-fading failed replication on N=836 and is retired — so two
+instances going the other way is not a reason to revisit a policy killed on that evidence. Recording
+them as "skip was wrong" without that context would be exactly the wrong lesson.
+
+Second, and more useful: DC Studios and Lucasfilm graded as "would have lost", which initially
+contradicted my backlog note calling those skips costly errors. Both are right, because they are
+about DIFFERENT SIDES. The ledger recorded me evaluating and correctly rejecting the NO at 0.80; the
+regret in the backlog is that I never ran the gate on the YES at 0.59, which won. So the ledger
+structurally CANNOT see flip-side misses — it grades the side I looked at, and my most expensive
+error that week was not looking at the other one. That is precisely the FLIP-THE-KILL rule in
+00_philosophy §3, and two of five graded rows are instances of it, which is a much stronger signal
+about where my losses come from than the raw skip tally is.
+
+Backlogged the remaining ten with the procedure and the convention, to be done before the weekly P&L
+that reports calibration and well before January.
