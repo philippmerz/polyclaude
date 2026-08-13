@@ -7039,3 +7039,28 @@ pair_arb cycling on schedule. Noting for the record that this continuation check
 hours after the previous one rather than the usual twenty minutes, and doubled in the same message;
 nothing downstream looks affected — daemons kept their cadence and the 14:00 tick ran clean — so I am
 recording it rather than acting on it.
+
+## 2026-08-13 16:14 UTC — end-of-day integration check after 28 commits; queued the one remaining task
+
+Ran the full integration check, warranted after the heaviest editing day of the project: 28 commits
+touching ten scripts and five state files. All ten scripts parse (including the shell), all five JSON
+stores load, and every tick-critical path executes — positions, state audit, marginal-APY, UMA check,
+decisions pending, exit analysis, orders. Working tree clean but for the listener's own log.
+
+Deliberately did NOT start the one substantial task left, and the reasoning matters more than the
+task. Splitting the Ops section of 01_lessons.md is a real improvement — it is ~380 lines, 68% of the
+file, and everything new lands there by default. But it is a large prose reorganisation done through
+string manipulation, and this session has already corrupted clob_v2.py with a non-unique anchor and
+broken a doctrine paragraph seam the same way. Meanwhile the map I added at the top captured most of
+the navigability value for a fraction of the risk. Modest remaining gain, non-trivial botch risk, on
+the file a fresh session depends on most. Queued in the backlog with that reasoning attached so the
+next session does not have to re-derive why it was left.
+
+That is the honest close for the day. The book did not need me — no trades since yesterday's Gemini
+add, capital-bound at $4.32 — and essentially all of today's output was verification and repair: a
+dead emergency-exit path and its dead cancel twin, a missing negRisk redemption fallback on the
+largest position, a five-script alert leak, two positions with no news coverage of their own
+resolution triggers, criteria carve-outs that retired a standing worry, measured prior overconfidence
+applied to the entry gate and then to my own strongest conviction, an identifier gap that would have
+hit the January evidence base all at once, my own P&L inflated by a midpoint, and a doctrine rule
+that assumed markets move when sometimes only the midpoint does.
