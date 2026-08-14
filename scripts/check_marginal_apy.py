@@ -106,10 +106,13 @@ def _live_hurdle() -> tuple[float, str]:
 
 PRIORS_PATH = Path(__file__).resolve().parent.parent / "notes" / "portfolio_kelly_priors.json"
 
-# Polymarket taker fee: 10% of min(p, 1-p) per share. Maker is $0, but an exit
-# that needs to happen is a taker exit; pricing it as free understates the cost
-# of acting on a flag.
-TAKER_FEE_RATE = 0.10
+# Fee comes from pm_fees, which reads each market's OWN takerBaseFee. This was
+# a flat 0.10 for about an hour on 2026-08-14 and was already wrong: Greenland
+# carries takerBaseFee=None (no fee), so the gate invented $0.17 of exit cost
+# and reported it as the reason to hold. 84% of live markets charge 10%, 16%
+# charge nothing — no single constant is right, which is the whole point of
+# the helper.
+from pm_fees import fee_per_share  # noqa: E402
 
 
 def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> float | None:
@@ -143,8 +146,7 @@ def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> flo
         if proceeds <= 0:
             return None
         avg_fill = proceeds / float(size)
-        fee = TAKER_FEE_RATE * min(avg_fill, 1.0 - avg_fill) * float(size)
-        return proceeds - fee
+        return proceeds - fee_per_share(m, avg_fill) * float(size)
     except Exception:
         return None
 

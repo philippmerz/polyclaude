@@ -55,7 +55,7 @@ import sys
 
 import httpx
 
-POLYMARKET_FEE_RATE = 0.072  # edge-aware fee
+import pm_fees  # per-market takerBaseFee; see pm_fees.py for why no constant works
 
 
 def fetch_events(min_vol: float = 1000, max_pages: int = 15) -> list[dict]:
@@ -212,16 +212,26 @@ def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
             "exec_edge_pp": round((1.0 - cost) * 100, 2)}
 
 
-def fee_aware_breakeven(yes_t1: float, yes_t2: float) -> float:
+def fee_aware_breakeven(yes_t1: float, yes_t2: float,
+                        bps_t1=None, bps_t2=None) -> float:
     """Fee-aware breakeven spread needed to profit on the arb.
 
     We BUY yes_t2 (paying yes_t2 + fee) and SELL yes_t1 (receiving yes_t1 - fee).
-    Polymarket edge-aware fee = 0.072 × min(p, 1-p).
-    Need: (yes_t1 - sell_fee) - (yes_t2 + buy_fee) > 0
-    => yes_t1 - yes_t2 > sell_fee + buy_fee
+    Fee is edge-aware — rate x min(p, 1-p) — and the RATE is per-market, read
+    from each leg's own takerBaseFee.
+
+    2026-08-14: this used a hard-coded 0.072 while the live modal rate is 0.10
+    (84/100 active markets; the other 16 charge nothing). Understating the fee
+    by 28% in an ARB breakeven is the worst possible place for that error — it
+    lowers the bar a violation must clear, which manufactures arbs that lose
+    money on execution. The two legs can also carry DIFFERENT rates, which a
+    single constant cannot express at all. market_rows already carried
+    taker_fee_bps; it simply was not being read.
     """
-    sell_fee = POLYMARKET_FEE_RATE * min(yes_t1, 1 - yes_t1)
-    buy_fee = POLYMARKET_FEE_RATE * min(yes_t2, 1 - yes_t2)
+    r1 = pm_fees.fee_rate({"takerBaseFee": bps_t1}) if bps_t1 is not None else pm_fees.FEE_RATE_FALLBACK
+    r2 = pm_fees.fee_rate({"takerBaseFee": bps_t2}) if bps_t2 is not None else pm_fees.FEE_RATE_FALLBACK
+    sell_fee = r1 * min(yes_t1, 1 - yes_t1)
+    buy_fee = r2 * min(yes_t2, 1 - yes_t2)
     return sell_fee + buy_fee
 
 
@@ -322,7 +332,9 @@ def main() -> int:
                 if violation_pp < args.min_violation_pp:
                     continue
                 # arb math: spread yes_t1 - yes_t2, vs fee breakeven
-                breakeven = fee_aware_breakeven(vt1, vt2)
+                breakeven = fee_aware_breakeven(vt1, vt2,
+                                               market_rows[i].get("taker_fee_bps"),
+                                               market_rows[j].get("taker_fee_bps"))
                 spread = (vt1 - vt2) - breakeven
                 violations.append({
                     "event_title": ev.get("title", "?"),
@@ -382,7 +394,9 @@ def main() -> int:
                     violation_pp = (vt1 - vt2) * 100
                     if violation_pp < args.min_violation_pp:
                         continue
-                    breakeven = fee_aware_breakeven(vt1, vt2)
+                    breakeven = fee_aware_breakeven(vt1, vt2,
+                                               market_rows[i].get("taker_fee_bps"),
+                                               market_rows[j].get("taker_fee_bps"))
                     violations.append({
                         "event_title": ev.get("title", "?"),
                         "event_slug": ev.get("slug", "?"),

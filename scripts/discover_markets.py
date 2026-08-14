@@ -19,12 +19,19 @@ GAMMA = "https://gamma-api.polymarket.com"
 DATA = Path(__file__).resolve().parent.parent / "data"
 SNAP_DIR = DATA / "snapshots"
 
-POLYMARKET_FEE_RATE = 0.072  # edge-aware: fee = rate * min(p, 1-p) of notional
+import pm_fees  # per-market takerBaseFee; no single fee constant is correct
+
 # Hurdle APY: any new bond-like NO/YES buy must beat this (idle USDC in Aave).
-# Refresh periodically when Aave pool moves materially. Last update 2026-04-30.
-HURDLE_APY_DEFAULT = 0.034  # Aave V3 USDC Base supply APY (lower of the two; 2026-05-08 actual)
-# 2026-05-08: dropped from hardcoded 0.0415 (was Arb rate at project start) to current
-# Base rate 0.034. Override via --hurdle-apy CLI flag if rates have moved further.
+# 2026-08-14: this sat at 0.034 — an Aave-Base snapshot taken 2026-05-08 and
+# never refreshed, despite a comment instructing exactly that. It is now read
+# live (24h cache) from check_marginal_apy._live_hurdle so the ENTRY filter and
+# the HOLD/close scan cannot silently disagree about the cost of capital, which
+# is how you end up buying something you would immediately flag for closing.
+try:
+    from check_marginal_apy import _live_hurdle as _lh
+    HURDLE_APY_DEFAULT = _lh()[0]
+except Exception:
+    HURDLE_APY_DEFAULT = 0.05
 # 2026-05-08: 7-day-to-resolution floor relaxed to 3 days — sub-week catalyst trades
 # (e.g. DEC-0015 at 6.5d) have positive expected value despite annualization noise.
 # The hurdle filter compares APY-equivalent yield, so sub-week trades that pass the
@@ -32,13 +39,28 @@ HURDLE_APY_DEFAULT = 0.034  # Aave V3 USDC Base supply APY (lower of the two; 20
 HURDLE_DAYS_FLOOR_DEFAULT = 3
 
 
-def annualized_yield_after_fee(p_buy: float, days: float) -> float | None:
+def annualized_yield_after_fee(p_buy: float, days: float,
+                               market: dict | None = None) -> float | None:
     """For a buy at price p_buy resolving in `days` days, return APY assuming
-    the buy side wins. None if degenerate (p_buy >= 1, days <= 1)."""
+    the buy side wins. None if degenerate (p_buy >= 1, days <= 1).
+
+    2026-08-14 — TWO independent fee errors fixed here, both understating cost
+    in the ENTRY filter, i.e. both making candidates look better than they are:
+
+      1. The rate was hard-coded 0.072; the live modal rate is 0.10 and 16% of
+         markets charge nothing. It is a per-market field (takerBaseFee).
+      2. The fee was applied MULTIPLICATIVELY: `p_buy * (1 + fee_fraction)`.
+         Polymarket charges rate x min(p, 1-p) in dollars PER SHARE, so it is
+         additive. Multiplying scaled the fee by p_buy and understated it
+         everywhere, worst at mid prices: at p=0.50 with the true 10% rate the
+         real cost is 0.550 while this returned 0.518.
+
+    Together they understated cost by ~3.2pp at p=0.50, which inflates the APY
+    that the hurdle filter then compares against.
+    """
     if p_buy >= 0.999 or days < 1.0:
         return None
-    fee_fraction = POLYMARKET_FEE_RATE * min(p_buy, 1 - p_buy)
-    cost = p_buy * (1 + fee_fraction)
+    cost = p_buy + pm_fees.fee_per_share(market, p_buy)
     if cost >= 1.0:
         return None
     gross = (1.0 - cost) / cost
@@ -271,10 +293,10 @@ def shortlist(
             # outcome wins, after Polymarket fees.
             if yes >= 0.5:
                 dominant_side = "YES"
-                apy_dominant = annualized_yield_after_fee(yes, ttr)
+                apy_dominant = annualized_yield_after_fee(yes, ttr, m)
             else:
                 dominant_side = "NO"
-                apy_dominant = annualized_yield_after_fee(no, ttr)
+                apy_dominant = annualized_yield_after_fee(no, ttr, m)
         rows.append({
             "id": m.get("id"),
             "slug": m.get("slug"),
@@ -329,7 +351,7 @@ def main() -> None:
     ap.add_argument("--clears-hurdle-only", action="store_true",
                     help="filter to candidates whose dominant-side APY beats the Aave hurdle")
     ap.add_argument("--hurdle-apy", type=float, default=HURDLE_APY_DEFAULT,
-                    help=f"hurdle APY for clears-hurdle filter (default: {HURDLE_APY_DEFAULT*100:.1f}%% — Aave Base 2026-05-08)")
+                    help=f"hurdle APY for clears-hurdle filter (default: {HURDLE_APY_DEFAULT*100:.2f}%% — LIVE Aave-Polygon, 24h cache)")
     ap.add_argument("--hurdle-days-floor", type=float, default=HURDLE_DAYS_FLOOR_DEFAULT,
                     help=f"minimum days-to-resolution for hurdle filter (default: {HURDLE_DAYS_FLOOR_DEFAULT})")
     ap.add_argument("--check-catalysts", type=int, default=0, metavar="N",

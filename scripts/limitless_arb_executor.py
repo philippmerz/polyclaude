@@ -56,7 +56,8 @@ TOTAL_OPEN_ARB_CAP_USDC = 20.00
 MIN_NET_EDGE = 0.015
 LIMITLESS_API_BASE = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
-POLYMARKET_FEE_RATE = 0.072
+import pm_fees  # per-market takerBaseFee; see pm_fees.py (0.072 was never a live rate)
+POLYMARKET_FEE_RATE = pm_fees.FEE_RATE_FALLBACK
 
 
 # ---- helpers ---------------------------------------------------------------

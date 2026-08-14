@@ -3,7 +3,8 @@
 Limitless tags its markets that mirror a Polymarket counterpart with
 `metadata.isPolyArbitrage: true`. This script paginates the active-markets
 endpoint, filters to those flagged, computes a fee-aware breakeven against
-Polymarket's edge-aware fee structure (`fee = 0.072 * min(p, 1-p) * notional`),
+Polymarket's edge-aware fee structure (`fee = rate * min(p, 1-p) * notional`,
+rate read per-market from takerBaseFee — modal 0.10, 16% of markets charge 0),
 and dumps a sorted table to:
 
   - stdout
@@ -49,7 +50,8 @@ OUT_DIR = _REPO_ROOT / "logs"  # gitignored; routine scans don't need to be comm
 
 LIMITLESS_API = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
-POLYMARKET_FEE_RATE = 0.072  # edge-aware: fee = rate * min(p, 1-p) * notional
+import pm_fees  # per-market takerBaseFee; see pm_fees.py (0.072 was never a live rate)
+POLYMARKET_FEE_RATE = pm_fees.FEE_RATE_FALLBACK
 
 
 def _telegram(text: str) -> None:
@@ -94,7 +96,7 @@ def polymarket_buy_fee(p: float) -> float:
     """Polymarket edge-aware fee on buying a token at price p.
 
     Source: gamma-api fee schedule on short-tenor markets.
-    fee = 0.072 × min(p, 1-p) × notional
+    fee = rate × min(p, 1-p) × notional   (rate per-market; see pm_fees.py)
     """
     return POLYMARKET_FEE_RATE * min(p, 1 - p)
 

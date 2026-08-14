@@ -56,7 +56,7 @@ OUT_DIR = _REPO_ROOT / "logs"
 
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
 POLYMARKET_CLOB = "https://clob.polymarket.com"
-POLYMARKET_FEE_RATE = 0.072  # edge-aware: fee = rate * min(p, 1-p) * notional
+import pm_fees  # per-market takerBaseFee; see pm_fees.py (0.072 was never a live rate)
 
 # How big the consistency violation must be (after-fee, after-slippage net)
 # to surface in Telegram. Below this, the violation is logged but not alerted.
@@ -124,7 +124,7 @@ def _yes_price(m: dict) -> float | None:
 
 def _market_fee_buy(p: float) -> float:
     """Polymarket fee fraction on buying a token at price p."""
-    return POLYMARKET_FEE_RATE * min(p, 1 - p)
+    return pm_fees.FEE_RATE_FALLBACK * min(p, 1 - p)
 
 
 def _orderbook(token_id: str) -> dict | None:

@@ -7479,3 +7479,43 @@ pays more but ~$0.50 of bridge against ~$0.34/yr of pickup means it is not actua
 cwd, cache hit, pin override, and all four failure modes (fallback / recovery / TTL expiry /
 corrupt cache). Docstring updated to describe both gates.
 No trades. Book unchanged at 7 positions, 0 flagged.
+
+## 2026-08-14 02:4x — meta-reflection: the fee rate was wrong in 7 scripts, in the dangerous direction
+
+Took tonight's hurdle finding as a CLASS claim rather than a nice sentence ("any constant whose
+comment contains the word 'current' is a bug with a timer on it") and swept every numeric module
+constant in scripts/. It found more than the hurdle.
+
+**Polymarket fee — three different answers in one codebase.** `POLYMARKET_FEE_RATE = 0.072`
+hard-coded in SEVEN scripts; `TAKER_FEE_RATE = 0.10` in check_marginal_apy; and a LIVE read of
+`takerBaseFee` in polyclaude_enter — the only one that was right. Measured 100 active markets by
+24h volume: **84 charge 1000bps (10%), 16 charge nothing**. The fee is a per-market field, so no
+constant can be correct, and 0.072 was wrong in the dangerous direction for the dominant case —
+understating a real 10% fee by 28%, sitting inside the arb scanners and the discovery filter,
+i.e. precisely where understating cost manufactures opportunities that are not there.
+MITIGATING, and worth stating accurately: event_monotonicity's executable CLOB-walk path already
+computed per-leg fees from bps correctly. Only the SCREEN was lenient, so the error cost extra
+candidates and false alerts that the real gate then killed — not bad fills.
+
+**My own code, one hour old, had the same bug.** The exit-cost gate charged Greenland (takerBaseFee
+=None, no fee) $0.17 of fee that does not exist and reported it as the reason to hold. Verdict
+survives on the corrected math (clears by $0.01, still inside the $0.29 tick-noise floor) — right
+by luck. Writing the lesson about stale constants did not stop me shipping one in the same hour.
+
+**A second, independent error in the entry filter.** discover_markets applied the fee
+MULTIPLICATIVELY: `cost = p_buy * (1 + fee_fraction)`. Polymarket charges rate x min(p,1-p) in
+dollars PER SHARE — additive. At p=0.50 with the true rate, real cost is 0.550; it returned 0.518.
+Stacked with the 0.072 that is ~3.2pp of understated cost at mid prices, inflating the APY that
+the hurdle filter then compares against. Its hurdle was ALSO still 0.034 from a 2026-05-08
+Aave-Base snapshot, under a comment instructing periodic refresh that had not happened in 3 months.
+
+FIXED: new `scripts/pm_fees.py` as single source of truth (per-market read, conservative 0.10
+fallback deliberately on the HIGH side, self-check that re-measures the live distribution and
+exits nonzero if the modal rate has moved). Wired into check_marginal_apy, discover_markets
+(+ additive fix + live hurdle imported from check_marginal_apy so entry and exit cannot disagree
+about the cost of capital), event_monotonicity_scan (both call sites; market_rows already carried
+taker_fee_bps and simply was not reading it). cross_event_bound_scan was already correct at
+1000bps default. The four cross-venue/sports scanners now use the conservative fallback rather
+than per-market — a correction from 0.072 to 0.10 in the safe direction (overstating PM fees
+kills marginal arbs rather than manufacturing them), but an honest partial; backlogged.
+All 9 modules import-checked; monotonicity and discovery run end-to-end.

@@ -33,6 +33,8 @@ import subprocess
 
 import httpx
 
+import pm_fees  # per-market takerBaseFee; see pm_fees.py
+
 
 def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] | None = None,
                             timeout: int = 120) -> dict:
@@ -201,11 +203,11 @@ def categorize(m: dict) -> tuple[str, float, float, float]:
     return lens, yes, no, days
 
 
-def annualized_apy(p: float, days: float, fee_rate: float = 0.072) -> float:
+def annualized_apy(p: float, days: float, fee_rate: float | None = None) -> float:
     """APY for hold-to-resolution at price p, days. Capped at 10000x for display."""
     if p >= 0.999 or days < 0.5:
         return 0.0
-    fee = fee_rate * min(p, 1 - p)
+    fee = (pm_fees.FEE_RATE_FALLBACK if fee_rate is None else fee_rate) * min(p, 1 - p)
     cost = p * (1 + fee)
     if cost >= 1.0:
         return 0.0
