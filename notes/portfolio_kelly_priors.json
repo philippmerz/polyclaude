@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-08-13",
+  "_updated": "2026-08-14",
   "trump-out-as-president-before-2027": {
     "p_no": 0.97,
     "cluster": "us-politics",
@@ -98,47 +98,6 @@
     ],
     "source_ack": "2026-08-13",
     "source_ack_note": "Searched 2026-08-13 for newer Greenland reporting and there is none \u2014 the freshest available material is the January framework/1951-agreement coverage. The position rests on ~200d-old sources because the STORY has not moved, not because I stopped looking. Ack expires in 21 days, which re-tests that claim rather than letting it calcify; re-check sooner if any Greenland keyword fires."
-  },
-  "will-satoshis-identity-be-revealed-by-december-31": {
-    "p_no": 0.955,
-    "verified": "2026-07-26",
-    "note": "POSITION CLOSED DEC-0061 (wash at fair). Murphy FOIA v DHS (real, filed Apr-2025) puts ruling window edge inside 2026; P(YES) 4-5%. Re-entry only at NO >=0.92."
-  },
-  "will-spacex-have-the-highest-ipo-market-cap-2026-516": {
-    "p_yes": 0.68,
-    "cluster": "one-off",
-    "rho_within": 0.0,
-    "cluster_frac": 0.0,
-    "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-15 entry prior (DEC-0045): SpaceX Jun-12 IPO first-day close ~$2.1T = largest ever; no plausible 2026 rival (OpenAI pushed to 2027, needs +110% pop even if Dec). Residual 3%: shock mega-IPO + UMA share-count quibble. NOTE p_YES leg (we hold YES).",
-    "note": "POSITION CLOSED 2026-08-13 18:20 (DEC-0074): 34sh sold at 0.70 via a post-only maker fill, fee-free, against a corrected fair of 0.68. Realised -$5.62 (-19.1%) on a $29.42 basis \u2014 the project's first meaningful realised loss, and the right trade: the prior had just fallen 0.95 -> 0.68 on a fact I had recorded wrong by ~15x (Anthropic at ~$965B and eyeing a $2trn October IPO, not the '$65B, far too small to matter' in my notes), leaving ZERO edge on 16% of bankroll. Selling 2pp above fair beat holding, and the fill freed the largest single block of capital in the book. RE-ENTRY: only if Anthropic's 2026 listing is called off or prices far below $2.1T, which would restore the arithmetic gap the original thesis rested on. Do not re-enter on price alone.",
-    "verified": "2026-08-13",
-    "criteria_read": "2026-08-11",
-    "key_facts": [
-      {
-        "claim": "RIVAL IS REAL AND I HAD THE NUMBER WRONG BY ~15x (2026-08-13). I had recorded 'Anthropic filed 2026-06-01 off a $65B round (far too small to matter)'. Anthropic is in fact valued around $965B after its June-2026 round, and reporting referenced on 2026-08-11 is headlined 'Anthropic investors eye $2trn valuation in record October IPO'. Against SpaceX's ~$2.1T first-day close, a $2T October pricing clears the bar on a modest pop \u2014 SpaceX itself popped 19%. So the protective ARITHMETIC GAP I relied on (rival ~$1T vs a $2.1T bar) does not exist for Anthropic; it existed only for OpenAI. P(SpaceX YES) ~= 1 - P(Anthropic lists in 2026) x P(first-day > $2.1T) - P(OpenAI path) ~= 1 - 0.5*0.55 - 0.04 = 0.68, which is where the market is (bid 0.67 / ask 0.70).",
-        "source": "https://dealroom.co/news/144253-openai-closes-7b-share-sale-at-852b-valuation-ahead-of-ipo/ (refs 'Anthropic investors eye $2trn valuation in record October IPO')",
-        "source_date": "2026-08-11",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "SpaceX priced at $135 (555.6M shares, ~$75B raised \u2014 biggest IPO ever), opened ~$150 on 2026-06-12 and CLOSED day one at $160.95 (+19%), putting first-day market cap OVER $2.1T (intraday ~$2.3T at $176).",
-        "source": "CNBC 2026-06-12 'SpaceX stock jumps $2 trillion' + NPR/TechCrunch same-day",
-        "checked": "2026-08-11",
-        "source_date": "unknown"
-      },
-      {
-        "claim": "Criteria: highest market cap = outstanding shares x CLOSING price on the company's FIRST TRADING DAY, among IPOs completed Jan1-Dec31 2026; resolution via the primary exchange's official listing page.",
-        "source": "market description, re-read 2026-08-11",
-        "checked": "2026-08-11",
-        "source_date": "2026-08-11"
-      },
-      {
-        "claim": "RIVAL PATH IS CONCRETE, NOT ABSENT (corrected 2026-08-12): OpenAI filed a CONFIDENTIAL S-1 on 2026-06-08/09 (Goldman + Morgan Stanley), targeting ~$1T, listing window Sept-2026 into Q4 \u2014 though Reuters in late June reported it may wait until 2027. Anthropic filed 2026-06-01 off a $65B round (far too small to matter). My earlier phrasing 'OpenAI pushed to 2027' was WRONG on the fact. The CONCLUSION survives on arithmetic: to beat SpaceX's ~$2.0-2.1T first-day close, OpenAI would have to roughly DOUBLE on debut from a ~$1T pricing, where SpaceX itself popped 19%. P(OpenAI lists in 2026) ~0.45 x P(>100% day-one pop) ~0.08 = ~3.6%, plus ~0.5% other-rival tail.",
-        "source": "https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/ + CNBC 2026-06-08",
-        "checked": "2026-08-12",
-        "source_date": "2026-06-08"
-      }
-    ]
   },
   "will-apple-release-a-touchscreen-macbook-in-2026": {
     "p_no": 0.65,
@@ -250,21 +209,6 @@
         "checked": "2026-08-10"
       }
     ]
-  },
-  "will-marvel-studios-announce-a-new-project-at-sdcc-2026-20260713165131272": {
-    "p_yes": 0.93,
-    "cluster": "sdcc-window",
-    "rho_within": 0.4,
-    "cluster_frac": 0.08,
-    "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-23 0.83->0.93: Comic-Con underway, Marvel Hall H panel Sat Jul-25 confirmed; market ripped 0.865->0.965 as the catalyst nears with no D23-hold sign. Near-locked YES. HOLD to resolution ~Jul-27 (2.6d) \u2014 selling at ~0.95 bid minus fee captures nothing over E[hold]. Entry 0.67 -> +44% MTM.",
-    "verified": "2026-07-20",
-    "note": "POSITION CLOSED 2026-07-26 (sold 7sh @0.98, +43.9%; market resolved YES). Kept as template reference: announce-at-event fair ~0.93 pre-panel proved LOW \u2014 SDCC went 4-for-4 YES, official-channels backdoor dominates. See D23 playbook in backlog."
-  },
-  "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting": {
-    "p_yes": 0.25,
-    "note": "CLOSED 2026-07-29: all 41sh maker-sold 0.26 pre-FOMC; Fed held; net +$0.20 wash. REVISED 0.36->0.25 (2026-07-26): futures-implied 30-38pct contains RISK PREMIUM (Citigroup; inflation-tail hedging), not pure probability; FactSet economists UNANIMOUS hold; PM led repricing both ways",
-    "verified": "2026-07-26",
-    "closed": true
   },
   "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
     "p_no": 0.41,

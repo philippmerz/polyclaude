@@ -7775,3 +7775,38 @@ verification after every insert, which is exactly what it has never had.
 
 Book unchanged: 7 positions, MTM $148.41 / realizable NET $136.49, no trades, nothing through the
 gates.
+
+## 2026-08-14 10:5x — honored the commitment: closed items, opened none
+
+Acting on the 10:31 commitment in THIS cycle rather than deferring it to a "next session" that may
+never be distinct. No new modules, no new backlog entries.
+
+**A WATCH trigger that looked fired, wasn't — and the false reading was itself the finding.**
+Checked the 2026-08-11 item "prior `verified` staleness has no rotation", whose build trigger is a
+verified date >21d stale ON A LIVE POSITION. The scan showed a 25d entry (Marvel-SDCC) which reads
+as a fired trigger — but Marvel RESOLVED 2026-07-26. The trigger has NOT fired; a dead entry
+impersonated one.
+
+**Root cause: the priors file was violating its own stated policy.** Its `_comment` says
+"Resolved-market entries are pruned (git history preserves them)" — and it held 11 entries against
+7 live positions. Another rule written down but not enforced, and this one had concrete harm: it
+manufactured a false trigger reading three minutes earlier, and a stale key could match the wrong
+entry in any future prefix lookup.
+
+Pruned 4 (Satoshi, SpaceX, Marvel-SDCC, Fed-increase-July) — but NOT on data-api absence, which is
+exactly the trap the runbook warns about: data-api has silently DE-INDEXED live positions twice
+(Mojtaba, Marvel-SDCC). Satoshi resolves Dec-31 so it could not have resolved naturally, making
+absence alone insufficient. Verified ON-CHAIN instead: CTF balanceOf returns [0,0] for both
+outcomes, so it is genuinely not held. SpaceX has no gamma row at all (de-indexed post-exit,
+balance verified 0 yesterday). Live entries now 7, matching the book exactly; oldest verified age
+across live positions is 2 days, so the rotation still correctly does NOT need building.
+
+**Corrected a backlog entry describing work already done.** The money-math test item still listed
+"extract the depth-walk into a pure function, then it tests trivially" as pending — that shipped
+last night as book_walk.py with 20 cases. An entry describing completed work is worse than no
+entry: it sends a future session to redo it. Rewritten to name what IS now covered and what
+genuinely remains (the gate's redeploy-vs-hold comparison and tick-noise floor, which still need
+the gate logic split from its httpx fetch, and Kelly/rho sizing).
+
+Net for the cycle: 4 stale priors pruned, 1 backlog entry corrected, 0 opened, 0 modules built.
+Audit CLEAN at 7 positions, money-math suite passes. No trades.
