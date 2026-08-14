@@ -27,11 +27,19 @@ import pm_fees  # per-market takerBaseFee; no single fee constant is correct
 # live (24h cache) from check_marginal_apy._live_hurdle so the ENTRY filter and
 # the HOLD/close scan cannot silently disagree about the cost of capital, which
 # is how you end up buying something you would immediately flag for closing.
-try:
-    from check_marginal_apy import _live_hurdle as _lh
-    HURDLE_APY_DEFAULT = _lh()[0]
-except Exception:
-    HURDLE_APY_DEFAULT = 0.05
+HURDLE_APY_FALLBACK = 0.05
+
+
+def live_hurdle_apy() -> float:
+    """Resolved LAZILY, not at import. Module-level network I/O made this file
+    unimportable offline and therefore untestable — which is how the fee bugs
+    below survived: nothing could assert on them without a working RPC. Called
+    once from main(); the 24h cache in check_marginal_apy absorbs the cost."""
+    try:
+        from check_marginal_apy import _live_hurdle
+        return _live_hurdle()[0]
+    except Exception:
+        return HURDLE_APY_FALLBACK
 # 2026-05-08: 7-day-to-resolution floor relaxed to 3 days — sub-week catalyst trades
 # (e.g. DEC-0015 at 6.5d) have positive expected value despite annualization noise.
 # The hurdle filter compares APY-equivalent yield, so sub-week trades that pass the
@@ -268,9 +276,14 @@ def shortlist(
     max_spread: float,
     horizon_days: float,
     top_n: int,
-    hurdle_apy: float = HURDLE_APY_DEFAULT,
+    hurdle_apy: float | None = None,
     hurdle_days_floor: float = HURDLE_DAYS_FLOOR_DEFAULT,
 ) -> list[dict[str, Any]]:
+    # None means "resolve it yourself" — main() normally passes a value, but a
+    # library caller taking the default must not reach the `> hurdle_apy`
+    # comparison with None and hit a TypeError.
+    if hurdle_apy is None:
+        hurdle_apy = live_hurdle_apy()
     now = dt.datetime.now(dt.timezone.utc)
     rows: list[dict[str, Any]] = []
     for m in markets:
@@ -350,8 +363,8 @@ def main() -> None:
                          "/markets offset ceiling hides — see fetch_active_via_events)")
     ap.add_argument("--clears-hurdle-only", action="store_true",
                     help="filter to candidates whose dominant-side APY beats the Aave hurdle")
-    ap.add_argument("--hurdle-apy", type=float, default=HURDLE_APY_DEFAULT,
-                    help=f"hurdle APY for clears-hurdle filter (default: {HURDLE_APY_DEFAULT*100:.2f}%% — LIVE Aave-Polygon, 24h cache)")
+    ap.add_argument("--hurdle-apy", type=float, default=None,
+                    help="hurdle APY for clears-hurdle filter (default: LIVE Aave-Polygon, 24h cache)")
     ap.add_argument("--hurdle-days-floor", type=float, default=HURDLE_DAYS_FLOOR_DEFAULT,
                     help=f"minimum days-to-resolution for hurdle filter (default: {HURDLE_DAYS_FLOOR_DEFAULT})")
     ap.add_argument("--check-catalysts", type=int, default=0, metavar="N",
@@ -367,6 +380,8 @@ def main() -> None:
         markets = fetch_active(max_pages=args.max_pages)
     print(f"fetched {len(markets)} active markets")
 
+    if args.hurdle_apy is None:
+        args.hurdle_apy = live_hurdle_apy()
     short = shortlist(
         markets,
         min_liq=args.min_liquidity,

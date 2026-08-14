@@ -212,8 +212,16 @@ def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
             "exec_edge_pp": round((1.0 - cost) * 100, 2)}
 
 
+_UNSET = object()   # "caller supplied nothing" — distinct from takerBaseFee=None,
+                    # which is a real value meaning THIS MARKET CHARGES NO FEE.
+                    # Collapsing the two charged zero-fee legs a 10% phantom fee
+                    # and suppressed genuine arbs (caught by tests/test_money_math.py
+                    # minutes after the suite first existed, in code written the
+                    # same hour as the lesson warning against this exact mixup).
+
+
 def fee_aware_breakeven(yes_t1: float, yes_t2: float,
-                        bps_t1=None, bps_t2=None) -> float:
+                        bps_t1=_UNSET, bps_t2=_UNSET) -> float:
     """Fee-aware breakeven spread needed to profit on the arb.
 
     We BUY yes_t2 (paying yes_t2 + fee) and SELL yes_t1 (receiving yes_t1 - fee).
@@ -228,8 +236,8 @@ def fee_aware_breakeven(yes_t1: float, yes_t2: float,
     single constant cannot express at all. market_rows already carried
     taker_fee_bps; it simply was not being read.
     """
-    r1 = pm_fees.fee_rate({"takerBaseFee": bps_t1}) if bps_t1 is not None else pm_fees.FEE_RATE_FALLBACK
-    r2 = pm_fees.fee_rate({"takerBaseFee": bps_t2}) if bps_t2 is not None else pm_fees.FEE_RATE_FALLBACK
+    r1 = pm_fees.FEE_RATE_FALLBACK if bps_t1 is _UNSET else pm_fees.fee_rate({"takerBaseFee": bps_t1})
+    r2 = pm_fees.FEE_RATE_FALLBACK if bps_t2 is _UNSET else pm_fees.fee_rate({"takerBaseFee": bps_t2})
     sell_fee = r1 * min(yes_t1, 1 - yes_t1)
     buy_fee = r2 * min(yes_t2, 1 - yes_t2)
     return sell_fee + buy_fee

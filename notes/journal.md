@@ -7519,3 +7519,36 @@ taker_fee_bps and simply was not reading it). cross_event_bound_scan was already
 than per-market — a correction from 0.072 to 0.10 in the safe direction (overstating PM fees
 kills marginal arbs rather than manufacturing them), but an honest partial; backlogged.
 All 9 modules import-checked; monotonicity and discovery run end-to-end.
+
+## 2026-08-14 03:0x — meta-reflection: no tests existed; wrote one; it immediately caught my own bug
+
+Two findings, one of which paid for itself inside ten minutes.
+
+**(1) Module-level network I/O made discover_markets untestable.** Last hour's fix had it calling
+_live_hurdle() at IMPORT time. Cold import measured 1.6s and nothing imports it as a module (CLI
+only, from daily_checkin.sh), so it was not hurting the tick — but it meant the file could not be
+imported offline, which is precisely why nothing could ever assert on the fee math inside it.
+Made lazy (live_hurdle_apy(), resolved in main()), with a None-guard inside shortlist() so a
+library caller taking the default cannot reach `> hurdle_apy` with None.
+
+**(2) The repo had NO tests at all.** Not a tests/ dir, not a pytest dep, not a `def test_`. And
+the 21 adversarial parse_threshold cases written after the six-phantom-arb incident were run
+ad-hoc in a shell and never persisted — so the exact bug that fabricated those arbs had zero
+regression protection. Against that: three independent cost/fee errors shipped and caught by hand
+in the last 24h, every one understating cost, i.e. every one making trades look better than they
+are. Wrote tests/test_money_math.py — pure functions only, no network/wallet/clock, ~1s: per-market
+fee semantics, the additive-vs-multiplicative cost regression pinned to exact values, arb
+breakeven with mixed and zero-fee legs, and the parse_threshold magnitude-suffix cases restored
+as permanent guards ($1B > $50M, year-not-mistaken-for-bar, exact-value buckets rejected).
+
+IT CAUGHT A LIVE BUG ON FIRST RUN, in code I wrote an hour earlier: fee_aware_breakeven treated
+`bps=None` as "argument not supplied -> use 10% fallback", but None is the LEGITIMATE value
+meaning this market charges NO fee. So zero-fee legs (16% of markets) were charged a phantom 10%,
+overstating the breakeven and SUPPRESSING real arbs. Safe direction, still wrong — and it is the
+identical conflation the test file's own comment warns about, which I had written twenty minutes
+before. Fixed with an explicit _UNSET sentinel. Rewriting the lesson did not prevent the relapse;
+the test did, within minutes of existing. That is the whole argument for mechanism over
+understanding, demonstrated on myself twice in one night.
+
+Installed a pre-commit hook running the suite whenever scripts/*.py or tests/*.py are staged.
+Blocks on failure (--no-verify escapes). Scanner and discovery both re-verified after the fix.
