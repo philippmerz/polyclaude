@@ -572,6 +572,30 @@ the one that arrives with a plausible justification attached. Audit those hardes
   bound, and all four failure modes tested — fallback, recovery, TTL expiry, corrupt cache.
   The class: any constant whose comment contains the word "current" is a bug with a timer on it.
 
+- **When one stale constant turns up, the finding is the CLASS — go sweep, the same night.** The
+  hurdle fix on 2026-08-14 came with a tidy sentence ("any constant whose comment contains the
+  word 'current' is a bug with a timer on it"). Treating that as a claim to TEST rather than a
+  line to admire found, within the hour: `POLYMARKET_FEE_RATE = 0.072` hard-coded in SEVEN
+  scripts, `TAKER_FEE_RATE = 0.10` in an eighth, and a correct live read in a ninth — three
+  answers to "what does a trade cost". Measured against 100 live markets the fee is not a
+  constant at all: 84 charge 1000bps, 16 charge zero. It is a per-market FIELD, and both
+  constants were wrong in both directions at once. The dominant error ran the dangerous way —
+  0.072 understates a real 10% fee by 28%, and it sat inside the arb scanners and the entry
+  filter, exactly where understating cost manufactures an opportunity that is not there. Two
+  further errors fell out of the same sweep: the entry filter applied the fee MULTIPLICATIVELY
+  (`p*(1+f)` for a charge that is dollars per share, understating cost 3.2pp at p=0.50) and its
+  own hurdle was a 3-month-old snapshot sitting under a comment instructing periodic refresh.
+  A constant nobody re-measures is not a value, it is a decaying assumption; the durable fix is
+  a fetch plus a self-check that FAILS when reality moves, not a fresher number.
+
+- **Writing the lesson does not inoculate you against the lesson.** Within the same hour as
+  authoring the stale-constant rule, I shipped an exit-cost gate with a flat 0.10 fee — which
+  charged Greenland (takerBaseFee=None) $0.17 of fee that does not exist and printed it as the
+  REASON TO HOLD. The verdict survived on corrected math by $0.01 against a $0.29 noise floor,
+  i.e. right by luck. The gap between "I know this failure mode" and "my next commit is free of
+  it" is not closed by understanding; it is closed by a mechanism that re-measures. Hence the
+  self-check in pm_fees rather than a comment saying to keep the number current.
+
 - **Idle capital is not automatically mis-parked — price the move before making it.** The $28.12
   PM float sits in pUSD at 0%, which repeatedly LOOKS like a standing violation of "deploy idle
   same-chain capital immediately". Priced honestly it is not: Aave-Polygon pays 2.88%, so a
