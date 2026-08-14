@@ -595,6 +595,16 @@ the one that arrives with a plausible justification attached. Audit those hardes
   i.e. right by luck. The gap between "I know this failure mode" and "my next commit is free of
   it" is not closed by understanding; it is closed by a mechanism that re-measures. Hence the
   self-check in pm_fees rather than a comment saying to keep the number current.
+  TWICE IN ONE NIGHT, which is what makes this a rule and not an anecdote. Writing
+  tests/test_money_math.py I put a comment in it warning that `takerBaseFee=None` means THIS
+  MARKET CHARGES NO FEE and must never be conflated with "value missing, use the fallback" —
+  and the suite's first run caught me doing exactly that in fee_aware_breakeven, in code I had
+  written twenty minutes earlier. Zero-fee legs (16% of markets) were charged a phantom 10%,
+  overstating the arb breakeven and suppressing real opportunities. The lesson was in my head,
+  then on the page, and still in the code; what removed it was an assertion that RAN. Corollary
+  for this repo, which had no tests at all until 2026-08-14: the suite is not overhead, it is
+  the only thing that has ever caught one of these before the money moved. Any change to code
+  deciding what a trade COSTS ships with a test in the same commit.
 
 - **Idle capital is not automatically mis-parked — price the move before making it.** The $28.12
   PM float sits in pUSD at 0%, which repeatedly LOOKS like a standing violation of "deploy idle
