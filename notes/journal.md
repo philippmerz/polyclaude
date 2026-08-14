@@ -7643,3 +7643,37 @@ individual fix.
 Open work is genuinely blocked: 6 skip-ledger rows need Aug-31/Dec-31 resolutions, the drill is
 due 2026-09-12, the time-decay rule wants 2+ short-dated legs (December), the haircut-on-holds
 doctrine question wants N>10 resolved theses. Nothing capital-deployable cleared the gates.
+
+## 2026-08-14 06:0x — MacBook moved on REAL volume; news keywords couldn't have caught the crux
+
+Checked the one thing actually moving overnight. MacBook NO walked 0.650 -> ~0.69 with **$4,515 of
+24h volume on a market that showed ZERO volume two days ago** — so step (0) answers "yes, it
+genuinely traded", not quote drift. Direction is TOWARD my position (NO richer). No news in my
+feeds; consistent with the known X-native blind spot, or plain repositioning into the Sep 8-10
+Apple event.
+
+NO PRIOR UPDATE and no trade, on the numbers rather than inertia: executable book is bid 0.64 /
+ask 0.70, so the 0.67 "mark" is a midpoint inside a 6pp spread and my 0.65 prior sits INSIDE that
+spread. I cannot sell at 0.67 (only 0.64, below my fair) nor buy at 0.65 (only 0.70, above it).
+Market and I substantively agree; a 2pp gap to a midpoint is not a signal.
+
+NOTED, NOT FIXED (deliberately — the 04:00 decision to stop editing this file stands): the
+NEGATIVE_EDGE trigger compares prior against the MIDPOINT, so it fired on 0.65 < 0.67 when the
+executable bid 0.64 shows no negative edge at all. Sixth appearance of the midpoint problem, but
+the harm is bounded because the exit-cost gate downstream walks the real book and correctly held.
+It is flag NOISE, not a wrong verdict. Backlogged rather than patched at 06:00 in the same file
+that produced three self-inflicted bugs last night.
+
+**Real gap found and fixed (config, not logic — additive and reversible).** This market's bar is
+PURCHASABLE by Dec-31; unveiling is explicitly insufficient. So the resolution-critical headline
+is a ship/pre-order story — and the four existing keywords were all announcement PHRASINGS
+('touchscreen macbook', 'macbook ultra', 'macbook oled', 'gurman macbook'). Tested against
+"Apple MacBook Pro with touch display starts shipping this month": MISS on all four, because
+phrase keys break the moment the words separate. My largest position ($43 marked), catalyst 3.5
+weeks out, and its most important possible headline was uncatchable. Since tier2 is LLM-triaged
+before alerting, the right shape is BROAD capture + smart filter, not cleverer phrases: replaced
+13 phrase variants with bare 'macbook' + 'touch display' + 'touchscreen laptop'. Now hits all
+three realistic MacBook headlines and correctly ignores "Apple unveils new iPhone colors"; list
+got SMALLER (102 -> 103 net) while getting more sensitive. Daemon reloads config per poll, no
+restart needed. Same class as the HLE/Greenland keyword gap found 08-11 — I had checked coverage
+for those cruxes and never for this one.
