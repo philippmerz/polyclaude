@@ -7552,3 +7552,32 @@ understanding, demonstrated on myself twice in one night.
 
 Installed a pre-commit hook running the suite whenever scripts/*.py or tests/*.py are staged.
 Blocks on failure (--no-verify escapes). Scanner and discovery both re-verified after the fix.
+
+## 2026-08-14 03:2x — the depth-walk was itself overstating; operator correction sent
+
+Continuation found the unfinished thread from the test-suite work, and it turned out to touch a
+number already sent to the operator.
+
+"Realizable value" was computed in FOUR places with THREE answers. positions.py and bankroll.py
+walked the bid book and never subtracted the taker fee; check_marginal_apy._exit_net and
+exit_analysis did. The fee-free pair are the ones that produce the HEADLINE. Measured live:
+gross $145.12 vs net $140.55 — a $4.57 gap, 3.9pp of reported return.
+
+That is the third layer of a single failure, and the shape is what matters: the MIDPOINT stood in
+for a tradeable price (fixed 08-13 by walking bids); BEST-BID stood in for depth (fixed 08-13
+evening by walking the full size); and the depth-walk stood in for PROCEEDS by ignoring the fee
+deducted on the way out (fixed now). Each fix was real, each left the next intact, and every
+single one erred toward the flattering number. I built the walk expressly to stop midpoints
+flattering the book and shipped it flattering the book by a different mechanism.
+
+FIXED: scripts/book_walk.py — one primitive (walk_bids + realizable), pure functions with no
+network so the suite can assert on them, now called by positions.py, bankroll.py and
+check_marginal_apy._exit_net. Deliberate semantics documented: unfilled remainder stays UNPRICED
+(pricing it at the last touched level re-assumes the depth that walking exists to disprove), and
+avg_fill is over the FULL requested size so a half-filled walk shows a poor average rather than a
+flattering one. Bids are sorted inside rather than assumed sorted. 20 new test cases.
+
+OPERATOR CORRECTION SENT (msg 824): tonight's weekly quoted "$142.83 depth-walked / +20.6%
+realizable" — gross. True net was ~$138.3 / ~+16.8%, a 3.8pp overstatement on the metric feeding
+the January decision. notes/pnl_weekly.md corrected in place with the reason. Current honest
+figures: $140.55 realizable on $118.38 cost (+18.7%), bankroll $196.20, 7 positions, no trades.
