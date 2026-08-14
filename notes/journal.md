@@ -7843,3 +7843,28 @@ baselines and 7 tracked alerts preserved), process start postdates the final edi
 is the fixed code, and `status` reports exactly 1 running.
 
 Net: 2 silent defects closed on a 5-day-fuse catalyst, 0 new backlog items. Suite passes.
+
+## 2026-08-14 11:3x — generalized the stale-daemon check across all four daemons
+
+The 11:1x finding was an instance; checked whether it was a class. Diffed process start time
+against file mtime for all four long-lived daemons: news_watcher (started 08-12), heartbeat_watch
+(08-03), telegram_listener (07-30), opportunity_watch (08-14 11:17). ALL CURRENT — every one is
+running code newer than its last edit, so opportunity_watch was the only stale case and it is now
+fixed. Worth noting the near-miss did not extend backwards: my 08-10 edits to opportunity_watch
+(check_new_listings, MIN_ARB_EDGE_PP, LISTING_EVERY) WERE live, because that daemon restarted
+08-11 18:49 after them. Only today's edit was inert.
+
+MECHANIZED IT ANYWAY, and deliberately as a one-liner inside daily_checkin step 1 rather than a
+fifth new module — the commitment to stop adding surface area still holds, and this needs no new
+file, no import, and no restart of anything. The reason it is worth automating despite firing only
+once: I caught today's case ONLY because I happened to diff proc-start against mtime. Without that
+the Gamescom fix would have sat inert while I believed it applied — the dangerous version is not
+the failure, it is the false belief that the fix is live. A daemon does not pick up code edits,
+only config reloads (news_watcher re-reads its JSON per poll; opportunity_watch's constants are
+Python and do not).
+
+The tick line also carries the restart recipe and, importantly, the instruction to VERIFY the new
+pid postdates the edit — because the first restart attempt today silently did not take, and
+"I ran restart" is not evidence that a restart happened.
+
+No trades. Book unchanged at 7 positions. 0 new backlog items.
