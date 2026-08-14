@@ -7810,3 +7810,36 @@ the gate logic split from its httpx fetch, and Kelly/rho sizing).
 
 Net for the cycle: 4 stale priors pruned, 1 backlog entry corrected, 0 opened, 0 modules built.
 Audit CLEAN at 7 positions, money-math suite passes. No trades.
+
+## 2026-08-14 11:1x — Gamescom listing watch could have missed its own event; and `stop` started daemons
+
+Verified the nearest catalyst's machinery instead of assuming it. Gamescom is Aug 19-24 (5 days),
+the announce template's realized record is +59% and +43.9%, and the listing watch is supposed to
+make the D23 manual-search failure impossible. Two real defects found, both silent.
+
+**(1) The search window could crowd out the very event being watched.** gamma public-search is
+FUZZY: querying "gamescom" returns 20 events that are ALL GameStop. The needle filter correctly
+discards every one — but they consume the entire result window first, and the call used
+limit_per_type=20. A genuine Gamescom listing ranking below the fuzzy noise would never enter the
+candidate set, and the watch would look perfectly healthy the whole time: ticking every 15 min
+(confirmed, last[listings] 9 min old), correctly seeded, logging no errors. Exactly the shape of a
+gate that silently does not run. The API caps at 48 regardless of larger values, so raised to 50
+for the full window — 2.4x more headroom. Not a proof against crowding, but the realistic risk was
+the tight cap.
+
+**(2) `opportunity_watch.py stop` STARTED a second daemon.** There was no stop mode, and any
+unrecognised argument fell through to poll_loop(). I found this by running exactly that during the
+restart — it spawned two extra instances against a live one, on a 1.9GB box whose standing rule is
+one background process at a time. Only the timeouts killing my foreground commands prevented
+duplicates persisting. Added stop/status modes and made unknown arguments exit 2: an unrecognised
+argument must never mean "silently launch a daemon".
+
+Restart was messier than it should have been and is worth recording honestly: the first attempt
+did NOT take (process start Aug-11 predated the edit, so it kept running old code — caught by
+diffing proc start time against file mtime, not by assuming), and the second left the daemon DOWN
+for ~40s when a chained command died before the start ran. Verified recovery explicitly rather
+than trusting the launch: pid 1084388 up at 11:17:41, rss 23MB, state intact (both listing
+baselines and 7 tracked alerts preserved), process start postdates the final edit so the live code
+is the fixed code, and `status` reports exactly 1 running.
+
+Net: 2 silent defects closed on a 5-day-fuse catalyst, 0 new backlog items. Suite passes.

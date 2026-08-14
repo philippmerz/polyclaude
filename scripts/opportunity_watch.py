@@ -240,8 +240,17 @@ def check_new_listings(state: dict) -> None:
                 _log(f"listing watch '{key}' expired {exp} — no longer checked")
             continue
         try:
+            # limit_per_type 20 -> 50 (2026-08-14). public-search is FUZZY: the
+            # query "gamescom" returns 20 events that are all GameStop, and the
+            # needle filter below correctly discards every one — but they consume
+            # the entire result window first. So a genuine Gamescom listing that
+            # ranked below the fuzzy noise would never enter the candidate set,
+            # and the watch would look perfectly healthy while missing the exact
+            # event it exists to catch (it ticks, it is seeded, it logs no error).
+            # Same shape as a gate that silently does not run. The API caps at 48
+            # regardless of larger values, so 50 buys the full window.
             r = httpx.get("https://gamma-api.polymarket.com/public-search",
-                          params={"q": t["query"], "limit_per_type": 20}, timeout=20)
+                          params={"q": t["query"], "limit_per_type": 50}, timeout=20)
             events = r.json().get("events", []) or []
         except Exception as e:
             fails = state.setdefault("trig_fails", {})
@@ -443,6 +452,39 @@ def poll_loop() -> int:
 
 def main() -> int:
     mode = sys.argv[1] if len(sys.argv) > 1 else "start"
+    # 2026-08-14: there was no "stop" mode, and ANY unrecognised argument fell
+    # through to poll_loop() — so `opportunity_watch.py stop` did not stop the
+    # daemon, it STARTED A SECOND ONE. Discovered by running exactly that during
+    # a restart: two extra instances were spawned against a live one, on a 1.9GB
+    # box whose standing rule is one background process at a time. An unknown
+    # argument must never mean "silently launch a daemon".
+    if mode in ("stop", "status"):
+        import signal
+        pidfile = REPO / "logs" / "opportunity_watch.pid"
+        pids = []
+        try:
+            out = subprocess.run(["pgrep", "-f", "opportunity_watch.py start"],
+                                 capture_output=True, text=True, timeout=10).stdout
+            pids = [int(x) for x in out.split() if x.strip().isdigit() and int(x) != os.getpid()]
+        except Exception:
+            pass
+        if mode == "status":
+            print(f"opportunity_watch: {len(pids)} running {pids or ''}")
+            return 0 if pids else 1
+        for pid in pids:
+            try:
+                os.kill(pid, signal.SIGTERM)
+                print(f"sent SIGTERM to {pid}")
+            except Exception as e:
+                print(f"could not signal {pid}: {e}")
+        try:
+            pidfile.unlink(missing_ok=True)      # it went stale on every crash
+        except Exception:
+            pass
+        return 0
+    if mode not in ("start", "once"):
+        print(f"unknown mode {mode!r}; use start|stop|status|once", file=sys.stderr)
+        return 2
     if mode == "once":
         state = _load_state()
         check_price_triggers(state)
