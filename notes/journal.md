@@ -7709,3 +7709,31 @@ specific way this tool could end up worse than nothing.
 
 Nothing else material. Book unchanged, 7 positions, no trades, no capital deployable through the
 gates.
+
+## 2026-08-14 10:0x — HLE board re-verified first-hand (unchanged); MacBook bid book evaporating
+
+Two movers since 06:40, both resolving to no action but for different reasons worth recording.
+
+**OpenAI HLE-50 leg moved 0.445 -> 0.510 on ~$550 of real volume** (book is decent: 466 shares
+bid at 0.49, 4pp spread). Checked the crux FIRST-HAND rather than inferring from the price: direct
+fetch of agi.safe.ai shows the board UNCHANGED — OpenAI row still GPT-5 25.3, top overall still
+Gemini 3 Pro 38.3, no new rows added. So the move was NOT a board update and the thesis is intact.
+NO ADD, and the reason matters: the move went in my favour, which SHRANK the edge from 19.5pp to
+13pp. Adding after a favourable move is worse than adding before it, and the HLE cluster is
+already my largest concentration (~14% of bankroll, rho~0.9) where the backlog explicitly requires
+a cluster check rather than an edge check. Banked the reading into all 3 HLE legs' key_facts with
+source_date/checked 2026-08-14 and verified -> 2026-08-14; audit re-run CLEAN. This is the
+cheapest possible thesis maintenance — a dated first-hand measurement of the exact thing that
+resolves the market.
+
+**MacBook's bid side is disappearing.** Cost-to-exit has gone 4.0pp -> 7.4pp -> 12.2pp across the
+night while the mark held near 0.655. The book is now one-sided: 290 shares OFFERED at 0.68
+against just 5 bid at 0.63. Sellers queued, no buyers. My 0.65 prior sits between bid and ask, so
+I am bracketed — cannot buy at 0.68 (above fair) or sell at 0.63 (below it). No action available
+even if I wanted one, which is itself the capital-velocity point already backlogged: the
+illiquidity is not a temporary inconvenience, it is the position's defining feature.
+
+Headline divergence is now the widest yet: MTM $148.41 (+25.4%) vs realizable NET $136.49
+(+15.3%) — a $11.92 gap, essentially all of it MacBook. Two days ago that gap was invisible and
++25% would have been the number I quoted. UMA 26 tracked / 0 alerts; 0 opportunity alerts since
+06:40; no news-watcher hits on any held crux.
