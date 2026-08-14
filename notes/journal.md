@@ -7581,3 +7581,37 @@ OPERATOR CORRECTION SENT (msg 824): tonight's weekly quoted "$142.83 depth-walke
 realizable" — gross. True net was ~$138.3 / ~+16.8%, a 3.8pp overstatement on the metric feeding
 the January decision. notes/pnl_weekly.md corrected in place with the reason. Current honest
 figures: $140.55 realizable on $118.38 cost (+18.7%), bankroll $196.20, 7 positions, no trades.
+
+## 2026-08-14 03:4x — calibration sensitivity surfaced; a self-inflicted gate outage caught by it
+
+**The fourth layer of the flattering-number chain.** The exit-cost gate compares net exit proceeds
+against `size x prior_p` — my RAW prior. But instance-thesis priors measured 6-23pp overconfident
+(N=5, all one direction), which is the evidence that raised the ENTRY haircut to 0.10. Entry
+corrects for it; holding did not. So an inflated prior inflates hold-value and the gate says HOLD
+too readily — positions get grandfathered past a standard they could never re-clear, which is
+precisely what the operator's 2026-07-24 no-grandfathering directive is about.
+
+Checked the magnitude: at a 0.10 haircut MacBook flips to EXIT; Greenland flips at only 0.05.
+DID NOT apply it mechanically, for two reasons worth recording rather than the comfortable one:
+(a) at 0.10 it flips ~4 of 7 legs simultaneously — liquidating most of the book off an N=5 finding
+is a large action on weak evidence; (b) part of the entry haircut corrects SELECTION bias (you
+choose the candidates that look best, so the best-looking are most likely mis-estimated), and a
+position already held is not being drawn from that pool. Those are different corrections and
+collapsing them is not obviously right. So: SURFACED, not enforced. The verdict line now says
+which haircut would flip it. The defect was never the verdict — it was that the verdict was
+silently conditional on my priors being exact.
+
+**Then the diagnostic immediately caught a bug I had just written.** Greenland showed FLAGGED with
+no gate detail, while a direct measurement said the gate should hold it. Rather than guess, I made
+the gate say WHY it could not run — and it reported `AttributeError: 'float' object has no
+attribute 'get'`. Cause: in the sensitivity loop I wrote `for hc in (0.05, 0.10)`, shadowing the
+module's `hc` httpx client. MacBook is processed first, sets hc=0.10, and every later _exit_net
+call passed a FLOAT as the client — so the gate was dead for every position after the first
+flagged one. Same class as the clob_v2 corruption (a careless name/anchor collision), and it would
+have been invisible: an absent gate looks exactly like a gate that ran and passed. Now a
+non-running gate prints "!! EXIT-COST GATE DID NOT RUN (<reason>); flag is UNPRICED, verify by
+hand". The instinct to make failure visible paid inside five minutes.
+
+Book: 7 clear / 0 flagged. MacBook's exit cost moved $2.81 -> $8.59 as its thin book pulled back
+(hold strengthens, calibration flag drops off); Greenland unchanged, flips only at 0.05.
+No trades.

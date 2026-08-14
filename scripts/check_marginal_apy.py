@@ -113,6 +113,8 @@ PRIORS_PATH = Path(__file__).resolve().parent.parent / "notes" / "portfolio_kell
 # live markets charge 10%, 16% charge nothing — no single constant is right.
 import book_walk  # shared depth-walk primitive; see book_walk.py  # noqa: E402
 
+_EXIT_NET_ERR: dict[str, str] = {}   # slug -> why the exit-cost gate could not run
+
 
 def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> float | None:
     """Depth-walk the bid book and return net proceeds of exiting the FULL size.
@@ -135,8 +137,16 @@ def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> flo
         bk = client.get("https://clob.polymarket.com/book",
                         params={"token_id": toks[outs.index(outcome)]}).json()
         r = book_walk.realizable(bk.get("bids", []), float(size), m)
-        return r["net"] if r["gross"] > 0 else None
-    except Exception:
+        if r["gross"] <= 0:
+            _EXIT_NET_ERR[slug] = "empty bid book"
+            return None
+        return r["net"]
+    except Exception as e:
+        # Record WHY. A gate that silently fails to run is worse than no gate:
+        # its absence looks exactly like a gate that ran and passed. Same class
+        # as grepping for a success string and reading "no match" as "did not
+        # run" when it had run and printed via its own error handler.
+        _EXIT_NET_ERR[slug] = f"{type(e).__name__}: {str(e)[:60]}"
         return None
 
 
@@ -428,21 +438,48 @@ def main() -> int:
                         # clears by $0.05" on a 29-share leg, i.e. a sixth of
                         # a tick. Acting on that is acting on noise.
                         tick_noise = size * 0.01
+                        # CALIBRATION SENSITIVITY (2026-08-14). hold_value uses
+                        # my RAW prior, and instance-thesis priors measured
+                        # 6-23pp overconfident (N=5, all one direction) — the
+                        # evidence that raised the ENTRY haircut to 0.10. Entry
+                        # corrects for it; holding did not, so a position can be
+                        # grandfathered past a standard it could never re-clear.
+                        # NOT applied automatically: at 0.10 it flips ~4 of 7
+                        # legs at once, which is a drastic action off N=5, and
+                        # part of the entry haircut corrects SELECTION bias that
+                        # does not apply to something already held. So it is
+                        # surfaced, not enforced — the point is that the verdict
+                        # stops being silently conditional on priors being exact.
+                        flips_at = None
+                        # NB: not `hc` — that is the module's httpx client, and
+                        # shadowing it here silently passed a float as the client
+                        # to every later _exit_net call, killing the gate for
+                        # every position processed after the first flagged one.
+                        for _haircut in (0.05, 0.10):
+                            if redeployed > size * (prior_p - _haircut) + tick_noise:
+                                flips_at = _haircut
+                                break
                         if redeployed <= hold_value + tick_noise:
                             margin = redeployed - hold_value
                             detail = (f"closing costs ${-margin:.2f}" if margin < 0
                                       else f"clears by only ${margin:.2f}, under ${tick_noise:.2f} tick-noise")
+                            sens = (f" | CALIBRATION-SENSITIVE: flips to EXIT at a "
+                                    f"{flips_at:.2f} prior haircut (measured overconfidence "
+                                    f"is 6-23pp)") if flips_at else ""
+                            record["flips_to_exit_at_haircut"] = flips_at
                             record["verdict"] = (
                                 f"HOLD (exit-cost gate): {base} on edge, but exiting nets "
                                 f"${net:.2f} -> ${redeployed:.2f} at hurdle vs ${hold_value:.2f} "
-                                f"held to prior — {detail}")
+                                f"held to prior — {detail}{sens}")
                             holds.append(record)
                             continue
                         record["verdict"] = (f"{base}{prior_stale} — EXIT CLEARS COST: "
                                              f"${redeployed:.2f} vs ${hold_value:.2f} held")
                         flagged.append(record)
                         continue
-                    record["verdict"] = base + prior_stale
+                    why = _EXIT_NET_ERR.get(slug, "reason unrecorded")
+                    record["verdict"] = (f"{base}{prior_stale} — !! EXIT-COST GATE DID NOT RUN "
+                                         f"({why}); flag is UNPRICED, verify by hand")
                     flagged.append(record)
             else:
                 record["verdict"] = "HOLD"
