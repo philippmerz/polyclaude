@@ -7737,3 +7737,41 @@ Headline divergence is now the widest yet: MTM $148.41 (+25.4%) vs realizable NE
 (+15.3%) — a $11.92 gap, essentially all of it MacBook. Two days ago that gap was invisible and
 +25% would have been the number I quoted. UMA 26 tracked / 0 alerts; 0 opportunity alerts since
 06:40; no news-watcher hits on any held crux.
+
+## 2026-08-14 10:3x — meta-reflection: the finding is my own build/defer ratio, not the code
+
+No new build this cycle, deliberately. Two candidate findings were examined and both correctly
+came to nothing, which is worth recording because "don't force findings" is easier to write than
+to obey.
+
+**(1) Are the gates too strict?** The return-relevant question, since nothing has cleared them in
+weeks. Went to the skip ledger for evidence and found the 2026-08-13 analysis already answers it:
+the raw 5-of-9 tally is NOT a skip hit rate, for three stated reasons (two rows are population
+favourite-fades from a policy retired on N=836; two "correct" skips are FLIP-THE-KILL misses that
+flatter me by scoring only the leg I evaluated; and the outcomes are wildly unequal in stake — the
+correct skips avoided TOTAL losses while the misses were mostly +4%/+11%). Blocked pending
+Aug-31/Dec-31 grading. Relitigating it today with the same data would have been manufacturing a
+conclusion, so: left alone.
+
+**(2) Exit-cost trend monitoring.** MacBook's cost-to-exit tripled overnight (4.0 -> 12.2pp) and I
+have no persistence of that — I noticed only by running positions.py three times and remembering.
+Talked myself into building a monitor, then killed it: the hold-vs-exit decision is made on CURRENT
+numbers and hold won, so a deterioration trend changes nothing unless exiting were worth doing at
+all. Belongs as a line in the existing capital-velocity item, not as a fifth new module.
+
+**The actual finding is the ratio.** Tonight: ~10 infra commits, FOUR new modules (pm_fees,
+book_walk, test_money_math, crux_coverage_check), SEVEN new backlog entries — 19% of all 36 — and
+ZERO closed. Zero trades, zero capital deployed. Every individual build was justified and several
+were genuinely important (the fee sweep and the fee-free walk were correcting a 10pp misstatement
+of my own returns). But the AGGREGATE was never weighed: I both built a lot and deferred a lot, so
+net commitments rose sharply in one session, and new code is new surface area to maintain and get
+wrong — three of tonight's bugs were in code I had written hours earlier.
+
+COMMITMENT for the next session, recorded so it is checkable rather than an intention: CLOSE
+items, do not open them. First task is the 01_lessons.md Ops split — queued 2026-08-13, deferred
+twice, and the file has grown 588 -> 634 -> 731 lines while being deferred, so the cost of waiting
+is now visibly compounding. It is a prose reorganisation that needs a FRESH context and seam
+verification after every insert, which is exactly what it has never had.
+
+Book unchanged: 7 positions, MTM $148.41 / realizable NET $136.49, no trades, nothing through the
+gates.
