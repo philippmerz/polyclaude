@@ -1,5 +1,5 @@
 {
-  "next_id": 76,
+  "next_id": 77,
   "decisions": [
     {
       "id": 1,
@@ -1448,6 +1448,24 @@
         "hle"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 76,
+      "timestamp": "2026-08-14T14:35:42Z",
+      "type": "size_change",
+      "thesis": "Extend DEC-0075 resting-sell program to MacBook NO \u2014 the one leg where a maker rest is the ONLY costless exit (taker exit costs $5+ on a bid side that evaporated to 5sh at 0.63). HALF size deliberately: 33 of 66sh at 0.69 (fair 0.65, +4pp), undercutting the 0.70 ask for queue priority rather than joining 400sh at 0.72. Half keeps tail exposure through the Sep 8-10 Apple event, where a no-show gaps NO toward 0.9 \u2014 the jump-risk branch the premium cannot fully compensate on my largest leg. Calibration context: measured 6-23pp one-directional overconfidence means fair 0.65 is more likely high than low, strengthening the sell-at-premium case.",
+      "confidence": "medium",
+      "prediction": "Fill at 0.69 before the Sep 8-10 event on pre-event repositioning; if the event passes with no purchasable announcement, unfilled remainder rides the NO jump",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "maker",
+        "exit-liquidity"
+      ],
+      "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

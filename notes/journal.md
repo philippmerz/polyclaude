@@ -7998,3 +7998,16 @@ existing playbook to the cluster the operator named, not a new invention). Share
 cancel; the cancel path was live-fire drilled 2026-08-12. GPT-6 skipped (16d, converged, liquid);
 MacBook is the natural next candidate at ~0.72 vs 0.65 fair but was not operator-named — deferred
 one cycle deliberately rather than scope-creeping a live-trading action.
+
+## 2026-08-14 14:3x — DEC-0076: MacBook rest placed (half size), completing the program
+
+Extended the resting-sell program to MacBook as flagged last cycle: 33 of 66sh at 0.69, post-only.
+Two deliberate choices vs the HLE rests: (1) 0.69 UNDERCUTS the 0.70 ask for best-ask queue
+position instead of joining 400sh at 0.72 — on a thin book, queue priority is worth more than 3pp
+of extra premium; (2) HALF size, because the Sep 8-10 event is a jump catalyst on my LARGEST leg —
+a no-show gaps NO toward 0.9 and a full rest at 0.69 would cap the entire tail. The half split is
+the honest answer to two models pulling opposite directions: martingale says premium-above-fair is
++EV per fill, jump-risk says don't cap the whole tail on a binary catalyst 3.5 weeks out.
+Program now complete: 6 resting sells across the book (Gemini 0.60, OpenAI-55 0.70, OpenAI-50
+0.45, MacBook 0.69, plus the pre-existing Trump-out 0.97 / Greenland 0.98). Every one post-only
+maker $0, every share cancelable via the drilled path. No taker trades. Book otherwise unchanged.
