@@ -7926,3 +7926,45 @@ both; this is the strongest evidence yet for why.
 Book: 7 positions, cost $118.38, no trades. Everything remaining is blocked on external dates
 (Aug-31/Dec-31 resolutions, Sep-12 drill, December short-dated cluster) or on data not yet in hand
 (N>10 for the haircut-on-holds question). $28.12 deployable, nothing clearing the gates.
+
+## 2026-08-14 14:00 UTC cron tick — first flag to clear the exit gate; killed by a time-decay re-derivation
+
+Bankroll **$209.19** (from $194.05 at 11:30). PM sleeve marked $162.16 but realizable NET $143.34
+(+21.1% on $118.38 cost) — the marked-vs-realizable gap is now **$18.82**, the widest ever, and it
+grew $4.51 in two hours purely from spreads WIDENING. Most of today's apparent gain is midpoint
+fiction and the tick says so up front.
+
+**The HLE cluster "moved" ~29pp and did not move at all.** Gemini NO printed 0.272 -> 0.5625.
+Checked the crux first-hand before believing it: agi.safe.ai UNCHANGED (GPT-5 25.3, Gemini 3 Pro
+38.3, no new rows), and the only OpenAI news is a small-business ChatGPT program. Then step (0):
+the Gemini "mark" of 0.5625 sits inside a **40pp spread** (bid 0.361 / ask 0.764). That is not a
+price, it is the midpoint of two numbers nobody will transact at. Exiting the leg would fill at
+0.325 — 23.8pp below its own mark. The 29pp move is an ask quote drifting. No action, no prior
+change: nothing about the world changed.
+
+**GPT-6 became the FIRST flag ever to clear the exit-cost gate** — NEGATIVE_EDGE at mark 0.930 vs
+prior 0.900, exit $31.01 vs $30.60 held, clearing the $0.34 tick-noise floor by $0.45. A real sell
+signal by the arithmetic. But GPT-6 is the one leg inside 30 days (16.4 left), where my own
+backlog rule says a by-date prior must be RE-DERIVED every tick because the passage of time is
+itself evidence — and the 0.90 was set 2026-08-12 with 19 days left.
+
+Re-derived from the live sibling ladder the prior's own key_fact instructs me to look up rather
+than trust pinned: Astra-released-by **Aug-15 0.011 / Aug-31 0.135** / Sep-15 0.395 / Sep-30 0.777.
+GPT-6 requires a model RELEASED *and* RECOGNISED as the GPT-5 successor, so 0.135 is a hard
+ceiling; after the recognition discount p_yes ~0.07, which is exactly where the market prices it.
+And "recognised as a successor" is an INTERPRETATION question, where standing doctrine says my
+edge (verifying facts) does not apply and I defer to the market rather than override it.
+p_no 0.90 -> 0.93. Verdict flips at 0.92: the flag was an artifact of a stale prior, not a signal.
+
+NAMING THE HAZARD, because the update conveniently justifies holding: all four supporting factors
+are externally verifiable and predate the decision — time decay (19d -> 16.4d), the Astra near-
+ladder at 1.1% for tomorrow, Altman's recorded "we need a little bit longer to do this safely"
+plus the CRITICAL cyber threshold that triggered mandated slowdowns, and criteria requiring OPEN
+access (closed/private explicitly does not count). Post-update the gate independently agrees:
+closing costs $0.57. Flagged as CALIBRATION-SENSITIVE (flips to EXIT at a 0.05 haircut), which is
+the honest residual risk and now visible rather than buried.
+
+Rest of tick: UMA 26 tracked, 1 PRICE_MOVE (the same OpenAI-50 leg, spread-driven). Ostium 0/0
+unchanged. Audit CLEAN. crux_coverage silent. All 4 daemons single-instance and code-current.
+Redeem 0 redeemable. Discovery: 978 markets fetched, **0 clearing the 2.88% hurdle**. exit_analysis
+0 SELL-TAKER verdicts. No trades.

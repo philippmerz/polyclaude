@@ -163,12 +163,12 @@
     "divergence_note": "REVISED same day. The 02:00 ack claimed 'prior freshly sourced, today's drop carries no news' \u2014 that was WRONG in its basis: the source was fetched-and-dated but FOUR MONTHS OLD in a fast-moving supply-chain story, and I had never asked whether a NEWER source existed. Gap is now 12pp (0.62 vs 0.495), not 30pp."
   },
   "will-gpt-6-be-released-by-august-31-2026-778": {
-    "p_no": 0.9,
+    "p_no": 0.93,
     "cluster": "ai-ships-fast-short",
     "rho_within": 0.7,
     "cluster_frac": 0.0,
     "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair.",
-    "verified": "2026-08-12",
+    "verified": "2026-08-14",
     "note": "0.85 -> 0.90 on 2026-08-12 14:00, triggered by exit_analysis printing the session's FIRST 'SELL TAKER NOW' (+$0.24 vs hold) on this leg. Verified the move rather than executing it, per the hidden-info rule, and the verdict turned out to be an artifact of a STALE PRIOR rather than a real exit signal: the market at 0.88 was ahead of my 0.85, not wrong. What I had failed to apply is TIME DECAY on a by-date market \u2014 the 0.85 was set on 08-11 with 20 days left; there are now 19, and every day that passes with no waitlist open mechanically lowers P(YES). For YES, OpenAI must stand up OPEN access within 19 days from a standing start of no waitlist, beta or early-access programme of any kind, while a CRITICAL Preparedness-Framework classification mandates pre-release slowdowns, security controls and testing. That is ~8-10%, so p_no 0.90. Sibling corroboration holds: the Astra ladder has been shifting mass out of August into autumn all day. At 0.90 fair against a 0.870 bid the SELL-TAKER verdict correctly disappears \u2014 holding is worth more than a fee-bearing exit 19 days early.",
     "hazard_schedule": {
       "note": "SUSPENDED 2026-08-06 \u2014 schedule assumptions dead post-sibling-event; prior tracks market until the cause is identified.",
@@ -207,6 +207,12 @@
         "source": "https://gamma-api.polymarket.com/markets?slug=will-gpt-6-be-released-by-august-31-2026-778",
         "source_date": "2026-08-10",
         "checked": "2026-08-10"
+      },
+      {
+        "claim": "TIME-DECAY RE-DERIVATION 2026-08-14 (16.4d to resolution, inside the 30d window where a by-date prior must be re-derived each tick). Sibling Astra ladder LIVE: Aug-15 0.011 / Aug-31 0.135 / Sep-15 0.395 / Sep-30 0.777. GPT-6 requires a model RELEASED and RECOGNISED as the GPT-5 successor, so 0.135 is a hard ceiling; after the recognition discount p_yes ~0.07. Market prices YES 0.070 and the successor-recognition clause is an INTERPRETATION question where doctrine says defer to the market, not override it. p_no 0.90 -> 0.93.",
+        "source": "gamma public-search Astra ladder + GPT-6 market, first-hand",
+        "source_date": "2026-08-14",
+        "checked": "2026-08-14"
       }
     ]
   },
