@@ -118,6 +118,46 @@ check("direction up", ems.parse_threshold("Will it be 50 or higher?")[1], 1)
 check("direction down", ems.parse_threshold("Will it be 50 or lower?")[1], -1)
 
 
+
+# ------------------------------------------------------------- book_walk
+# The depth-walk was duplicated four ways and two copies omitted the fee,
+# overstating "realizable" by $4.57 (3.9pp of reported return) on the live book.
+import book_walk  # noqa: E402
+
+BIDS = [{"price": "0.60", "size": "10"}, {"price": "0.50", "size": "10"}]
+
+g, avg, un = book_walk.walk_bids(BIDS, 10)
+check("walk single level", g, 6.0)
+check("walk single level avg", avg, 0.60)
+check("walk no remainder", un, 0.0)
+
+g, avg, un = book_walk.walk_bids(BIDS, 20)
+check("walk two levels", g, 11.0)
+check("walk blended avg", avg, 0.55)
+
+# Partial fill: the unfilled remainder must NOT be priced at the last level,
+# and avg_fill is over the FULL size so a thin book looks thin.
+g, avg, un = book_walk.walk_bids(BIDS, 30)
+check("walk partial gross", g, 11.0)
+check("walk reports unfilled", un, 10.0)
+check("walk avg over full size", avg, 11.0 / 30)
+
+# Unsorted input must not be trusted as sorted.
+g2, _, _ = book_walk.walk_bids(list(reversed(BIDS)), 20)
+check("walk sorts input", g2, 11.0)
+check("walk empty book", book_walk.walk_bids([], 10)[0], 0.0)
+check("walk zero size", book_walk.walk_bids(BIDS, 0)[0], 0.0)
+
+r = book_walk.realizable(BIDS, 20, {"takerBaseFee": 1000})
+check("realizable gross", r["gross"], 11.0)
+check("realizable fee edge-aware", r["fee"], 0.10 * min(0.55, 0.45) * 20)
+check("realizable net", r["net"], 11.0 - 0.10 * 0.45 * 20)
+check("realizable zero-fee market", book_walk.realizable(BIDS, 20, {"takerBaseFee": None})["net"], 11.0)
+check("realizable unknown market uses fallback",
+      book_walk.realizable(BIDS, 20, None)["fee"], pm_fees.FEE_RATE_FALLBACK * 0.45 * 20)
+check("realizable empty book charges no fee", book_walk.realizable([], 20, {"takerBaseFee": 1000})["fee"], 0.0)
+
+
 if FAILS:
     print(f"FAIL ({len(FAILS)}):")
     for f in FAILS:

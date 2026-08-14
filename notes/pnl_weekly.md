@@ -675,8 +675,15 @@ event calendared; NVDA-largest re-check Aug-26; pUSD float ~$15.7 deployable.
 # Week 2026-08-07 → 2026-08-14
 
 **Bankroll $192.28, +13.1% vs the $170 reference** (bankroll.py). Prior week closed ~$180.
-PM sleeve: **$145.26 marked / $142.83 depth-walked** on $118.38 cost — **+22.7% marked, +20.6%
-realizable**. Both figures are quoted deliberately: `curPrice` is a MIDPOINT, and this week one
+PM sleeve: **$145.26 marked / $142.83 depth-walked GROSS / ~$138.3 NET of taker fees** on $118.38
+cost — **+22.7% marked, +20.6% gross-walk, ~+16.8% actually realizable**.
+
+> CORRECTION, same night (2026-08-14 03:2x): the "$142.83 depth-walked" figure above was GROSS of
+> taker fees and was the number sent to the operator. The depth-walk built to stop midpoints
+> flattering the book was itself flattering it — positions.py and bankroll.py walked the bids and
+> never subtracted the fee that comes out on the way through (~$4.5 across the book, 3.9pp of
+> reported return). Fixed via the shared book_walk primitive; the corrected figure stands above.
+> Third layer of one error: midpoint -> best-bid -> fee-free walk. Every one flattered. Both figures are quoted deliberately: `curPrice` is a MIDPOINT, and this week one
 leg proved how far that can drift from executable (below).
 
 **Book: 7 positions** (was 8). One exit, one add, one leg closed.

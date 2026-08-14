@@ -106,13 +106,12 @@ def _live_hurdle() -> tuple[float, str]:
 
 PRIORS_PATH = Path(__file__).resolve().parent.parent / "notes" / "portfolio_kelly_priors.json"
 
-# Fee comes from pm_fees, which reads each market's OWN takerBaseFee. This was
-# a flat 0.10 for about an hour on 2026-08-14 and was already wrong: Greenland
-# carries takerBaseFee=None (no fee), so the gate invented $0.17 of exit cost
-# and reported it as the reason to hold. 84% of live markets charge 10%, 16%
-# charge nothing — no single constant is right, which is the whole point of
-# the helper.
-from pm_fees import fee_per_share  # noqa: E402
+# Exit proceeds come from book_walk, which walks the bid book and subtracts the
+# market's OWN takerBaseFee (via pm_fees). This gate briefly used a flat 0.10
+# and was already wrong: Greenland carries takerBaseFee=None (no fee), so it
+# invented $0.17 of exit cost and reported it as the reason to hold. 84% of
+# live markets charge 10%, 16% charge nothing — no single constant is right.
+import book_walk  # shared depth-walk primitive; see book_walk.py  # noqa: E402
 
 
 def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> float | None:
@@ -135,18 +134,8 @@ def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> flo
         outs = json.loads(m["outcomes"])
         bk = client.get("https://clob.polymarket.com/book",
                         params={"token_id": toks[outs.index(outcome)]}).json()
-        bids = sorted(bk.get("bids", []), key=lambda x: -float(x["price"]))
-        left, proceeds = float(size), 0.0
-        for lvl in bids:
-            if left <= 0:
-                break
-            take = min(left, float(lvl["size"]))
-            proceeds += take * float(lvl["price"])
-            left -= take
-        if proceeds <= 0:
-            return None
-        avg_fill = proceeds / float(size)
-        return proceeds - fee_per_share(m, avg_fill) * float(size)
+        r = book_walk.realizable(bk.get("bids", []), float(size), m)
+        return r["net"] if r["gross"] > 0 else None
     except Exception:
         return None
 

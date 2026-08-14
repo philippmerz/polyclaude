@@ -12,6 +12,7 @@ from pathlib import Path
 
 import httpx
 
+import book_walk
 from polyclaude_client import Wallet  # noqa: E402
 
 DATA_API = "https://data-api.polymarket.com"
@@ -71,7 +72,7 @@ def main() -> None:
                 toks = _json.loads(m["clobTokenIds"]); outs = _json.loads(m["outcomes"])
                 bk = c.get("https://clob.polymarket.com/book",
                            params={"token_id": toks[outs.index(p["outcome"])]}).json()
-                bids = sorted(bk.get("bids", []), key=lambda x: -float(x["price"]))
+
                 # WALK the book for the ACTUAL size rather than best_bid x size
                 # (2026-08-13 evening). Best-bid pricing assumes infinite depth
                 # at the touch, which is exactly wrong on the books where this
@@ -80,25 +81,26 @@ def main() -> None:
                 # before a gap to 0.57, against 66 held. Best-bid claimed $41.58;
                 # walking the book gives ~$37.62. Same error class as using a
                 # midpoint: a single price point standing in for an executable path.
-                size_left = float(p["size"])
-                proceeds = 0.0
-                for lvl in bids:
-                    if size_left <= 0:
-                        break
-                    take = min(size_left, float(lvl["size"]))
-                    proceeds += take * float(lvl["price"])
-                    size_left -= take
-                realizable += proceeds          # unfilled remainder counts as $0
-                avg_fill = proceeds / float(p["size"]) if float(p["size"]) else 0.0
-                gap = float(p["curPrice"]) - avg_fill
+                # NET of the market's own taker fee (2026-08-14). This walked
+                # the book correctly and then reported GROSS proceeds — an exit
+                # you cannot actually achieve, because the fee comes out on the
+                # way through. $4.57 across the book, 3.9pp of reported return,
+                # and it is the figure that reaches the weekly P&L.
+                r = book_walk.realizable(bk.get("bids", []), float(p["size"]), m)
+                realizable += r["net"]          # unfilled remainder counts as $0
+                avg_fill = r["avg_fill"]
+                # Compare the mark against the NET-of-fee average, since that is
+                # the number actually being summed above.
+                net_avg = r["net"] / float(p["size"]) if float(p["size"]) else 0.0
+                gap = float(p["curPrice"]) - net_avg
                 if gap > 0.03:
                     # report AVG FILL, not best bid — the displayed number must be
                     # the one the gap was computed from, or the line contradicts
                     # itself (a 1pp spread showing a 6.5pp gap reads as a bug).
-                    worst.append((gap, p["slug"][:44], float(p["curPrice"]), avg_fill))
+                    worst.append((gap, p["slug"][:44], float(p["curPrice"]), net_avg))
         gap_total = total_cur - realizable
         if gap_total > 1.0:
-            print(f"REALIZABLE (depth-walked): ${realizable:.2f}  "
+            print(f"REALIZABLE (depth-walked, NET of taker fees): ${realizable:.2f}  "
                   f"({(realizable/total_init-1)*100:+.2f}%)  "
                   f"— midpoints overstate by ${gap_total:.2f}")
             for g, slug, mk, bd in sorted(worst, reverse=True):
