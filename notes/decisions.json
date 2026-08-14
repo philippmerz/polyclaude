@@ -1,5 +1,5 @@
 {
-  "next_id": 75,
+  "next_id": 76,
   "decisions": [
     {
       "id": 1,
@@ -1432,6 +1432,25 @@
       "calibration_delta": "-0.27",
       "lesson": "Prior 0.95 vs a corrected 0.68 = 27pp of overconfidence traceable to ONE unchecked fact (Anthropic's valuation, recorded 15x too low and dismissed as 'far too small to matter'). The bundling was the mechanism: 'No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T close would need an S-1 already public' hid two separate claims, and I re-verified the one I had already confirmed. Fixes shipped same day: atomic key_facts (one checkable assertion per entry), and an audit trigger for a STALE SOURCE sitting behind a FRESH criteria check, which is the exact signature this position had (source 66d, criteria_read 2d).",
       "resolved_at": "2026-08-14T02:01:56Z"
+    },
+    {
+      "id": 75,
+      "timestamp": "2026-08-14T14:18:44Z",
+      "type": "size_change",
+      "thesis": "RESTING-SELL PROGRAM on the 3 illiquid HLE NO legs (operator-suggested, extends the 0.97/0.98 rests on Trump-out/Greenland). Post-only GTC maker $0: Gemini-50 NO 36sh @0.60 (fair 0.54), OpenAI-55 NO 19sh @0.70 (fair 0.64), OpenAI-50 NO 15sh @0.45 (fair 0.41). Bounded-martingale model: rest at T fills w.p. <= p/T (90/91/91% upper bounds); rest-at-fair is EV-neutral vs hold at own prior, so premium above fair is +EV per fill, plus maker-vs-taker fee asymmetry and early capital release. Accepted cost: HLE resolves by news jump \u2014 a gap through T to 1 fills at T and forgoes 1-T; the +6/+6/+4pp premiums are the compensation.",
+      "confidence": "medium",
+      "prediction": "At least one of the three rests fills at/above target before 2026-12-31; none fills within 5 days (thin books)",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "maker",
+        "exit-liquidity",
+        "hle"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

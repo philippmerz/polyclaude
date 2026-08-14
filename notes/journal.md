@@ -7968,3 +7968,33 @@ Rest of tick: UMA 26 tracked, 1 PRICE_MOVE (the same OpenAI-50 leg, spread-drive
 unchanged. Audit CLEAN. crux_coverage silent. All 4 daemons single-instance and code-current.
 Redeem 0 redeemable. Discovery: 978 markets fetched, **0 clearing the 2.88% hurdle**. exit_analysis
 0 SELL-TAKER verdicts. No trades.
+
+## 2026-08-14 14:1x — operator question on hold-to-maturity models; resting-sell program placed (DEC-0075)
+
+Operator asked (local, mid-session): are there models for binary resolution under hold-to-maturity,
+given HLE spreads make early selling impossible — and noted a resting sell at target would work.
+
+THE MODELS, as answered:
+1. **Actuarial/hold value** = size x own-prior, discounted at the hurdle (~1.1% over 138d at
+   2.88%). Already the exit-cost gate's hold side; the discount term is the one refinement missing.
+2. **Bounded martingale absorbed at {0,1}** — the price of a binary is a martingale that must
+   terminate at 0 or 1. Optional-stopping corollary: a resting sell at T >= fair fills before
+   resolution w.p. <= p/T (equality for continuous paths, since ending at 1 requires crossing T),
+   and rest-at-fair is exactly EV-NEUTRAL vs holding at own prior. Therefore every pp of premium
+   above fair is pure +EV per fill — plus the maker/taker fee asymmetry ($0 vs 10% x min(p,1-p))
+   and early capital release. The correction that matters for HLE: it resolves by NEWS JUMP (a
+   board update), continuity fails, and a gap through T straight to 1 fills at T forgoing 1-T on
+   filled shares. Premium size is the compensation for that jump risk.
+3. **Hazard-rate decay** for by-date legs — formalizes what was applied to GPT-6 at 14:00.
+4. Already in repo: exit_analysis's REST-MAKER breakeven (= fair, fee-free), brownian_bridge_fv,
+   and the self-marking ban keeping all of this in the DECISION layer, never the reporting layer.
+
+ACTION (DEC-0075): post-only GTC resting sells on the three illiquid HLE NO legs —
+  Gemini-50 36sh @0.60 (fair 0.54, +6pp), OpenAI-55 19sh @0.70 (fair 0.64, +6pp),
+  OpenAI-50 15sh @0.45 (fair 0.41, +4pp). Fill-prob upper bounds p/T: 90/91/91%.
+All three verified resting on the book (6 open orders total — the listing showed the SAME pattern
+already in place for the bond-like legs: 0.97x28 Trump-out, 0.98x29 Greenland, so this extends an
+existing playbook to the cluster the operator named, not a new invention). Shares lock until
+cancel; the cancel path was live-fire drilled 2026-08-12. GPT-6 skipped (16d, converged, liquid);
+MacBook is the natural next candidate at ~0.72 vs 0.65 fair but was not operator-named — deferred
+one cycle deliberately rather than scope-creeping a live-trading action.
