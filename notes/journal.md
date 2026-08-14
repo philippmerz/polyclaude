@@ -7868,3 +7868,39 @@ pid postdates the edit — because the first restart attempt today silently did 
 "I ran restart" is not evidence that a restart happened.
 
 No trades. Book unchanged at 7 positions. 0 new backlog items.
+
+## 2026-08-14 11:5x — my own restart spawned a duplicate daemon; recipe corrected
+
+Continued verifying machinery rather than assuming it, and the thread led straight back to my own
+work an hour earlier.
+
+**news_watcher is healthy.** Two days with no entries in news_alerts.jsonl looked like it might be
+broken, but the log only prints on alerts and suppressions, so silence is expected when nothing
+matches. Confirmed properly: state file written 4.7 min ago (checked via _paths without printing
+the secret path). Polling fine, genuine quiet.
+
+**heartbeat_watch covers opportunity_watch after all** — its docstring lists only 3 checks but
+check_opportunity_watch exists at line 330 (stale docstring, harmless). It also checks news_watcher
+for PID *and* state-mtime, i.e. progress not just liveness, which is the right shape.
+
+**Then: TWO opportunity_watch daemons were running.** Mine (1084388, 11:17:41) and a second
+(1084461, 11:20:00) spawned by the */10 daemon_keepalive cron. Root cause is my own error:
+keepalive's alive() matches the exact cmdline `^<python> <ABSOLUTE script path> start$`, and I
+started the daemon with a RELATIVE path, so it was invisible to keepalive, which dutifully revived
+what it believed was a dead daemon. The function's own comment documents a previous duplicate-spawn
+incident and handles python-vs-python3 — but nothing could handle a relative path.
+
+This mattered beyond tidiness: two daemons write the SAME state file, and that file holds
+seen_listings and the alert cooldowns. A Gamescom listing could be seen by one instance, recorded,
+then clobbered by the other's stale copy. Killed mine and kept the keepalive's — it uses the
+canonical form, started 11:20 so it postdates the 11:17 edit and carries the new code, and its pid
+matches the pidfile. Verified keepalive's matcher now recognises it (so no further duplicates),
+state intact: both listing baselines present, 7 alerts tracked, all 5 `last` timers.
+
+**Corrected the restart recipe I had written into daily_checkin 20 minutes earlier** — it used the
+relative form and would have reproduced this duplicate every single time it was followed. Now
+specifies the absolute-path start, explains WHY it is required rather than cosmetic, and adds
+`pgrep -cf` to the verification so "exactly one running" is checked rather than assumed. A recipe
+that reliably creates a second daemon is worse than no recipe.
+
+Net: 1 duplicate daemon removed, 1 self-authored footgun fixed before it fired again, 0 new items.
