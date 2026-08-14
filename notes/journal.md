@@ -8011,3 +8011,12 @@ the honest answer to two models pulling opposite directions: martingale says pre
 Program now complete: 6 resting sells across the book (Gemini 0.60, OpenAI-55 0.70, OpenAI-50
 0.45, MacBook 0.69, plus the pre-existing Trump-out 0.97 / Greenland 0.98). Every one post-only
 maker $0, every share cancelable via the drilled path. No taker trades. Book otherwise unchanged.
+
+## 2026-08-14 14:5x — first fill on the resting-sell program within 20 minutes
+
+MacBook rest (DEC-0076) partially filled: 8.3 of 33sh SOLD at 0.69 — 4pp above fair, $0 fee,
+~$5.73 pUSD freed. The queue-priority call paid immediately: the fill went to my best-ask at 0.69
+while 400sh sit untouched at 0.72. Buyer crossed a 6pp spread on a book that had 5sh bid — this is
+exactly the noise-buyer capture the maker rest exists for. Remaining 24.7sh still resting; the
+three HLE rests show no fills (consistent with DEC-0075's 5-day prediction). No action needed;
+letting the rests work. 0 alerts since 14:14, 842MB free.
