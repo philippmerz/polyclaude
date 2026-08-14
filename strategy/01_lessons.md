@@ -558,6 +558,31 @@ the one that arrives with a plausible justification attached. Audit those hardes
   error to entry time, where exit liquidity must be priced BEFORE committing, because afterwards
   the arithmetic will always tell you that you are stuck.
 
+- **A hand-maintained constant that tracks the outside world will be stale every time you look
+  at it; the fix is a fetch, not a better number.** 2026-08-14 the hold/close hurdle read 5.00%,
+  documented as "≈ current Aave USDC supply APY". Live rates that morning: Polygon 2.88, Base
+  3.59, Arbitrum 2.38 — the threshold governing the whole book sat 1.4pp above the best rate
+  available ANYWHERE. This was the constant's SECOND staleness: 3.4% was already wrong when the
+  2026-07-02 audit replaced it. Editing it a third time would have been choosing to be wrong
+  again by October. Note the direction of the damage — an inflated hurdle overstates what freed
+  capital earns, so exiting looks better than it is: Greenland read "exit clears by $0.05" at
+  5% and "closing costs $0.17" at the true 2.88%. The stale number was arguing to liquidate.
+  Retired to a fallback (kept HIGH deliberately: if the fetch dies, over-flagging costs one
+  gate check while under-flagging costs real carry), with a live read, a 24h cache, a sanity
+  bound, and all four failure modes tested — fallback, recovery, TTL expiry, corrupt cache.
+  The class: any constant whose comment contains the word "current" is a bug with a timer on it.
+
+- **Idle capital is not automatically mis-parked — price the move before making it.** The $28.12
+  PM float sits in pUSD at 0%, which repeatedly LOOKS like a standing violation of "deploy idle
+  same-chain capital immediately". Priced honestly it is not: Aave-Polygon pays 2.88%, so a
+  realistic 2-3 week idle window is worth ~$0.05, and even 139 days of never trading is $0.31.
+  Against that, `wrap_pusd.py` is one-way BY DESIGN (no pUSD->USDC.e unwrap exists), so
+  capturing it means building a fresh on-chain write path against the collateral that funds all
+  trading — and parking the float adds withdraw+wrap latency to entries whose edge is largest in
+  the HOURS after listing (the announce template's realized record is +59% and +43.9%). Paying
+  execution speed and new-write-path risk for five cents is a bad trade. Recorded because the
+  question re-arises every tick and the arithmetic, not the instinct, is the answer.
+
 - **"Fix it at the display layer" is incomplete until you ENUMERATE the display layers.**
   2026-08-13, in one morning, the same scope error three times: found midpoints inflating the
   book, fixed positions.py, then wrote a reasoned defence of NOT touching bankroll.py — which

@@ -7445,3 +7445,37 @@ manufactured hold, so §3c divergence + source-staleness checks are load-bearing
 dead book fails the gate permanently — which relocates the real error to entry-time exit-liquidity
 pricing (already in polyclaude_enter.py's EXIT LIQUIDITY readout; seam connects).
 No trades. No capital freed.
+
+## 2026-08-14 02:2x — continuation: hurdle constant was stale by 2.1pp, now live
+
+Reviewed backlog: the gated items (named-source-lag scanner, per-key cooldowns, `verified`
+rotation, time-decay rule) all still have unmet triggers, correctly. Two things worth checking
+rather than assuming, both downstream of the exit-cost gate shipped an hour ago.
+
+(1) I closed that gate's note claiming "the seam connects to polyclaude_enter.py's EXIT LIQUIDITY
+readout". Checked instead of trusting it: the readout is deliberately NON-blocking, with a good
+stated reason (thin markets are where mispricings persist longest; capacity is explicitly not a
+filter here). That design is right and I am not changing it. But the warning says "size it as
+hold-to-resolution" and the Kelly number printed below it is identical either way — written, not
+enforced. Rather than invent a coefficient off one instance, measured the book: exactly ONE leg
+is converged-and-illiquid (MacBook). Greenland is converged but liquid; the rest have real edge
+left. One instance is not a class -> backlog WATCH with an explicit trigger.
+
+(2) Idle capital. $28.12 pUSD at 0%. Checked the actual alternative instead of assuming 5%:
+Aave USDC supply is 2.883% Polygon / 3.591% Base / 2.383% Arbitrum (where my $7.86 sits).
+Decision: leave it. ~$0.05 over a realistic idle window, wrap_pusd is one-way by design so
+capturing it means a new on-chain write path against trading collateral, and parking adds
+withdraw+wrap latency to entries whose edge is largest in the hours after listing.
+
+That check surfaced the real find: check_marginal_apy's hurdle was hard-coded at 5.00% and
+documented as "≈ current Aave USDC supply APY" — 1.4pp above the best rate available on ANY
+chain, and its SECOND staleness (3.4% was already wrong at the 2026-07-02 audit). Damage is
+directional: an inflated hurdle overstates what freed capital earns, so exit looks better than
+it is. Greenland read "exit clears by $0.05" at 5% and "closing costs $0.17" at the true 2.88%
+— the stale constant was arguing to liquidate a position it should have been defending.
+Fixed properly: live Aave-Polygon read (the rate PM capital can reach without a bridge; Base
+pays more but ~$0.50 of bridge against ~$0.34/yr of pickup means it is not actually available),
+24h cache, sanity bound, HIGH fallback, --hurdle-apy still pins. Verified cold fetch from cron's
+cwd, cache hit, pin override, and all four failure modes (fallback / recovery / TTL expiry /
+corrupt cache). Docstring updated to describe both gates.
+No trades. Book unchanged at 7 positions, 0 flagged.

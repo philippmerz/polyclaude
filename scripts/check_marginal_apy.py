@@ -11,13 +11,24 @@ This script reads current PM positions via positions.py-style data-api
 fetch and flags any whose marginal-yield-to-resolution APY falls below
 the hurdle. Prints a structured advisory; does NOT close anything.
 
+Two gates decide a flag, and BOTH matter (2026-08-14):
+  1. EXPECTED edge vs the hurdle — p/M, not the win-assumed carry (1-M)/M.
+  2. EXIT-COST GATE — a flag is only actionable if acting beats not acting,
+     so the depth-walked exit (net of taker fee, redeployed at the hurdle) is
+     compared against holding to resolution at my own prior, with a materiality
+     floor of one $0.01 tick x size. Without this the scan called CLOSE_CANDIDATE
+     on a leg whose mark had converged exactly onto my prior, where leaving cost
+     $2.92 to escape $0.00 of negative edge.
+The hurdle itself is now fetched live rather than hard-coded — see
+HURDLE_APY_FALLBACK for why the constant was retired.
+
 Used by:
 - The 02:00/14:00 UTC daily_checkin.sh cron prompt (step 3 catalyst scan).
 - Manual ad-hoc invocation when reviewing the book.
 
 Usage:
-    python scripts/check_marginal_apy.py
-    python scripts/check_marginal_apy.py --hurdle-apy 0.034
+    python scripts/check_marginal_apy.py              # live hurdle
+    python scripts/check_marginal_apy.py --hurdle-apy 0.034   # pin it
 
 Exit code: 0 (always — this is informational, never errors out trades).
 """
@@ -32,10 +43,66 @@ from pathlib import Path
 
 import httpx
 
-# Default hurdle ≈ current Aave USDC supply APY. Was 0.034 (May-08 snapshot);
-# bumped to 0.05 in the 2026-07-02 audit — the stale hurdle plus win-assumed
-# math (below) had made the daily "6/6 clear" green light vacuous.
-HURDLE_APY_DEFAULT = 0.05
+# Fallback hurdle only. This constant has now gone stale TWICE — 0.034 was a
+# May-08 snapshot already wrong by the 2026-07-02 audit, and the 0.05 that
+# replaced it read 1.4pp above the best rate available anywhere by 2026-08-14
+# (Polygon 2.88 / Base 3.59 / Arbitrum 2.38). Hand-editing it a third time is
+# choosing to be wrong again by October, so the live value is fetched below and
+# this is just the floor when the chain is unreachable. Deliberately kept HIGH:
+# if the fetch fails, over-stating the hurdle makes the scan flag MORE, and a
+# spurious flag now costs one exit-cost-gate check while a missed one costs
+# real carry.
+HURDLE_APY_FALLBACK = 0.05
+
+# Benchmark chain: freed Polymarket capital is pUSD on Polygon, so the yield it
+# can reach WITHOUT a bridge is Aave-Polygon USDC. Base pays more (3.59% vs
+# 2.88% on 2026-08-14) but getting there costs ~$0.50 of bridge against ~$0.34
+# of annual pickup on a $28 float — so the higher number is not actually
+# available to this capital and using it would overstate the hurdle.
+#
+# HONEST CAVEAT: no pUSD->USDC.e unwrap path exists today (wrap_pusd.py is
+# one-way by design), so freed PM capital cannot literally reach Aave right
+# now — it waits at 0% for the next bet. That makes this a FLOOR PROXY for
+# "capital has somewhere better to be", not a literal opportunity cost. The
+# real alternative to a held position is almost always ANOTHER position; Aave
+# is the number that answers "is this leg worth the slot at all".
+HURDLE_CHAIN = "polygon"
+HURDLE_CACHE = Path(__file__).resolve().parent.parent / "notes" / "aave_hurdle.json"
+HURDLE_TTL_HOURS = 24
+
+
+def _live_hurdle() -> tuple[float, str]:
+    """(hurdle_as_fraction, provenance). Cached 24h; falls back on any failure.
+
+    web3 is imported lazily and only on a cache miss — this runs every tick on a
+    memory-constrained box, and paying ~40MB of import to re-read a number that
+    moves by basis points per day would be a poor trade.
+    """
+    now = dt.datetime.now(dt.timezone.utc)
+    try:
+        cached = json.loads(HURDLE_CACHE.read_text())
+        age_h = (now - dt.datetime.fromisoformat(cached["fetched"])).total_seconds() / 3600
+        if age_h < HURDLE_TTL_HOURS:
+            return float(cached["apy"]), f"live {cached['apy']*100:.2f}% ({cached['chain']}, {age_h:.0f}h old)"
+    except Exception:
+        pass
+    try:
+        from web3 import Web3
+
+        from aave_deposit import CHAIN, POOL_ABI, RAY, _w3
+        cfg = CHAIN[HURDLE_CHAIN]
+        w = _w3(HURDLE_CHAIN)
+        pool = w.eth.contract(address=Web3.to_checksum_address(cfg["pool"]), abi=POOL_ABI)
+        rd = pool.functions.getReserveData(
+            Web3.to_checksum_address(cfg["tokens"]["USDC"])).call()
+        apy = rd[2] / RAY          # index 2 = currentLiquidityRate, RAY-scaled
+        if not (0.0 <= apy < 0.50):   # sanity-bound: a RAY misread shows up as absurd
+            raise ValueError(f"implausible APY {apy}")
+        HURDLE_CACHE.write_text(json.dumps(
+            {"apy": round(apy, 6), "chain": HURDLE_CHAIN, "fetched": now.isoformat()}, indent=2))
+        return apy, f"live {apy*100:.2f}% ({HURDLE_CHAIN}, fresh)"
+    except Exception as e:
+        return HURDLE_APY_FALLBACK, f"FALLBACK {HURDLE_APY_FALLBACK*100:.2f}% (live fetch failed: {str(e)[:40]})"
 
 PRIORS_PATH = Path(__file__).resolve().parent.parent / "notes" / "portfolio_kelly_priors.json"
 
@@ -207,8 +274,10 @@ def _match_prior(slug: str, priors: dict) -> tuple[str, float] | None:
 
 def main() -> int:
     p = argparse.ArgumentParser(description="Flag held positions whose marginal-APY-to-resolution falls below a hurdle.")
-    p.add_argument("--hurdle-apy", type=float, default=HURDLE_APY_DEFAULT,
-                   help=f"hurdle APY (default {HURDLE_APY_DEFAULT*100:.2f}%% — Aave Base USDC supply, 2026-05-08).")
+    p.add_argument("--hurdle-apy", type=float, default=None,
+                   help="hurdle APY. Default: LIVE Aave-Polygon USDC supply rate "
+                        f"(24h cache, falls back to {HURDLE_APY_FALLBACK*100:.2f}%%). "
+                        "Pass a value to pin it.")
     p.add_argument("--drawdown-alert-pct", type=float, default=15.0,
                    help="flag positions with mtm_loss_pct >= this value as DRAWDOWN_ALERT (default 15%%). "
                         "Lesson source: 2026-05-08 DEC-0018 -40%% in 30 min would have surfaced "
@@ -216,6 +285,10 @@ def main() -> int:
     p.add_argument("--json", action="store_true",
                    help="emit machine-readable JSON instead of the human table.")
     args = p.parse_args()
+    if args.hurdle_apy is None:
+        args.hurdle_apy, hurdle_src = _live_hurdle()
+    else:
+        hurdle_src = f"pinned {args.hurdle_apy*100:.2f}% (--hurdle-apy)"
 
     try:
         addr = _resolve_wallet_address()
@@ -416,7 +489,7 @@ def main() -> int:
         return f"gross {gross:>+7.2f}% (NO PRIOR)"
 
     print(f"# marginal-APY scan (EXPECTED-edge vs prior) @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")
-    print(f"# hurdle: {args.hurdle_apy*100:.2f}% APY; drawdown alert: {args.drawdown_alert_pct:.0f}%; priors: {PRIORS_PATH.name}")
+    print(f"# hurdle: {hurdle_src}; drawdown alert: {args.drawdown_alert_pct:.0f}%; priors: {PRIORS_PATH.name}")
     n_acked = sum(1 for r in holds if str(r.get("verdict","")).startswith("ACKED_HOLD"))
     print(f"# {len(holds)} clear ({n_acked} acked-hold); {len(flagged)} flagged (NEGATIVE_EDGE / below-hurdle)")
     print()
