@@ -1428,9 +1428,10 @@
         "capital-release"
       ],
       "slug": "will-spacex-have-the-highest-ipo-market-cap-2026-516",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "EXECUTED as designed: 34sh filled at 0.70 post-only, fee-free, releasing $23.80 and taking deployable capital $4.32 -> $28.12. The EXIT is settled; the THESIS grade is not and cannot be until Dec-31 \u2014 it turns on whether Anthropic lists in 2026 above SpaceX's ~$2.1T first-day cap. Recording the execution now so this stops showing as overdue, with the substantive grade deferred to resolution. PARTIAL EVIDENCE ALREADY IN: the market has not retraced (YES ~0.68 area at exit, book still there), so the 0.95 prior I held for a month was not merely unlucky \u2014 it was wrong on a checkable fact I never checked.",
+      "calibration_delta": "-0.27",
+      "lesson": "Prior 0.95 vs a corrected 0.68 = 27pp of overconfidence traceable to ONE unchecked fact (Anthropic's valuation, recorded 15x too low and dismissed as 'far too small to matter'). The bundling was the mechanism: 'No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T close would need an S-1 already public' hid two separate claims, and I re-verified the one I had already confirmed. Fixes shipped same day: atomic key_facts (one checkable assertion per entry), and an audit trigger for a STALE SOURCE sitting behind a FRESH criteria check, which is the exact signature this position had (source 66d, criteria_read 2d).",
+      "resolved_at": "2026-08-14T02:01:56Z"
     }
   ]
 }

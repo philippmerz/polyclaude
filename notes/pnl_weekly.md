@@ -669,3 +669,89 @@ resolve mostly within 2-3 weeks and grade the week's cuts properly.
 **Posture into next week:** D23 reservation expires tonight (no listings, 6 days waited —
 released to general deployment); Astra resolution imminent (leak says ~Aug 10-14); Apple Sept
 event calendared; NVDA-largest re-check Aug-26; pUSD float ~$15.7 deployable.
+
+---
+
+# Week 2026-08-07 → 2026-08-14
+
+**Bankroll $192.28, +13.1% vs the $170 reference** (bankroll.py). Prior week closed ~$180.
+PM sleeve: **$145.26 marked / $142.83 depth-walked** on $118.38 cost — **+22.7% marked, +20.6%
+realizable**. Both figures are quoted deliberately: `curPrice` is a MIDPOINT, and this week one
+leg proved how far that can drift from executable (below).
+
+**Book: 7 positions** (was 8). One exit, one add, one leg closed.
+
+| position | cost | mark | realizable exit cost |
+|---|---|---|---|
+| touchscreen-MacBook NO | $27.19 | 0.650 | ~5-10%, re-measure |
+| Greenland NO | $25.23 | 0.945 | 0.5% |
+| Trump-out NO | $24.96 | 0.935 | 0.5% |
+| GPT-6-by-Aug-31 NO | $21.94 | 0.865 | 0.6% |
+| OpenAI-HLE ≥55 NO | $10.64 | 0.445 | 1.1% |
+| OpenAI-HLE ≥50 NO | $5.55 | 0.055 | 27% (stranded) |
+| Gemini-HLE ≥50 NO | $2.88 | 0.272 | 3.8% |
+
+## Trades
+
+- **SpaceX-highest-IPO YES CLOSED** (DEC-0074): 34sh at 0.70 post-only, fee-free. Realised
+  **−$5.62 (−19.1%)** on a $29.42 basis — the project's first meaningful realised loss. Right
+  trade, red number: see the calibration section.
+- **Gemini-HLE ≥50 NO ADD** (DEC-0072): 23sh at 0.22 maker, $5.06, sized by self-imposed lottery
+  discipline rather than any binding cap.
+- **Cancelled** a 0.10 Gemini bid (adverse selection: a fill required a ~60% collapse, i.e.
+  information) and a fossil 0.96 SpaceX sell left over from a superseded prior.
+
+## Calibration — the week's real product
+
+**1. Measured instance-prior overconfidence, and acted on it.** Every instance/catalyst prior I
+have set drifted DOWN on re-derivation: MacBook 0.85→0.62, GPT-6 0.96→0.90, MacBook-add
+0.70→0.62, OpenAI-HLE 0.66→0.50 and 0.79→0.64 — 6-23pp, N=5, all one direction. Tail/monitoring
+priors drifted the other way (Greenland 0.95→0.98, Trump 0.96→0.97). Raised the robust-edge
+haircut 0.05 → **0.10** for instance theses (0.05 retained for tail fades) and reconciled three
+doctrine passages that still asserted the old value. It bound on a live candidate the same week:
+Apple-largest-Aug-31 NO at 0.970 failed at p_robust 0.88 vs an effective 0.973.
+
+**2. SpaceX: 27pp of overconfidence traceable to one unchecked fact.** I held p_yes 0.95 for a
+month on a key_fact reading "No plausible 2026 rival: OpenAI pushed to 2027, **and** a >$2.1T
+first-day close would need an S-1 already public". Anthropic was recorded as a "$65B round, far
+too small to matter"; it is ~$965B and reported as eyeing a **$2trn October IPO** against
+SpaceX's ~$2.1T bar. The market found it before I did (0.865 → 0.685 on $83k volume). Fixes
+shipped: **atomic key_facts** (one checkable assertion per entry — the bundle was the mechanism,
+I kept re-verifying the half already confirmed) and an audit trigger for a **stale source behind
+a fresh criteria check**, which was this position's exact signature (source 66d, criteria_read 2d).
+
+**3. HLE cluster decomposition — grade it on the OpenAI legs, not Gemini's P&L.** The board
+branch is common to all legs and OpenAI's capability is settled at 49.5, so the OpenAI ≥50 leg
+prices my crux almost purely: the market implies ~6.5% that the board fails to produce a
+qualifying resolution; I imply ~28% after applying my own measured overconfidence to my own
+number. Gemini's +239% is NOT vindication — net of the shared board branch it decomposes as the
+market raising P(Gemini capability <50) from ~1.5% to ~20.8%, a variable I did not bet on. **At
+Dec-31, judge this thesis on the OpenAI legs.**
+
+**Skip ledger: 9 of 15 graded** (was 1 of 15). Root cause of the gap found and fixed: skip rows
+carried no market identifier while ENTER rows did, so grading was impossible and fuzzy matching
+produced false resolutions. Slug now required on every row and on trade decisions. Raw tally is
+5-of-9 would-have-won and **must not be quoted as a hit rate**: two are population favourite-fades
+from a policy retired on N=836, two "correct" skips are FLIP-THE-KILL misses on the side I never
+evaluated, and stakes are wildly unequal (correct skips avoided TOTAL losses; misses were mostly
++4-11% with one +127%).
+
+**Decisions: 74 total, 44 resolved, 30 pending, $155.96 of pending capital.**
+
+## Infrastructure — the week's larger output
+
+Verification and repair dominated. Found and fixed: a **dead emergency-exit sell path** (v1 CLOB
+client, broken since the May migration, never executed since April) **and its dead cancel twin**
+(load-bearing — resting sells lock the shares an emergency sell needs); a **missing negRisk
+redemption fallback** on what was then the largest position; a **five-script alert leak** that
+would have fired false emergencies monthly given the drill I had just scheduled; **two positions
+with no news coverage of their own resolution triggers**; and **my own P&L inflated by a midpoint**
+(marked +19.5% vs +13.7% realizable), now surfaced automatically by a depth-walk in positions.py,
+bankroll.py, the status telegram, the tick template and README.
+
+**Posture into next week:** $28.12 deployable and nothing clearing the gates — recorded plainly
+because the failure mode is manufacturing a trade to justify holding cash. GPT-6 resolves Aug-31
+(first live use of the resolution-day runbook); NVDA-largest re-check Aug-26 though it has already
+repriced 0.745 → 0.955; Gamescom listings under daemon watch, event Aug 19-24; Apple event
+~Sep 8-10, where MacBook's pre-order ambiguity becomes the whole trade and the position must be
+re-sized as an interpretation bet if so.
