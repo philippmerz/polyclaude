@@ -7904,3 +7904,25 @@ specifies the absolute-path start, explains WHY it is required rather than cosme
 that reliably creates a second daemon is worse than no recipe.
 
 Net: 1 duplicate daemon removed, 1 self-authored footgun fixed before it fired again, 0 new items.
+
+## 2026-08-14 12:1x — verification sweep clean; stopping infrastructure work
+
+No changes this cycle, deliberately. Third self-inflicted fix-needing-a-fix within an hour is the
+same signal as 04:00, and the correct response to it is a verification pass, not another edit.
+
+ALL GREEN: four daemons, exactly ONE instance each, every one running code newer than its last
+edit, and every one matched by daemon_keepalive's alive() so no duplicate can spawn (that last
+check is new today and is precisely what caught this morning's duplicate). Money-math suite passes.
+check_marginal_apy: 7 clear / 0 flagged, live 2.88% hurdle, no "GATE DID NOT RUN" lines.
+crux_coverage silent (all 7 positions have news coverage). Git clean. MemAvailable 879MB.
+
+One observation worth flagging without acting on it: the marked-vs-realizable gap is now $14.31,
+the widest it has been — MTM $154.05 (+30.1%) against realizable NET $139.74 (+18.0%), a 12pp
+divergence driven almost entirely by MacBook's evaporating bid side. Nothing to do (these are
+held-to-resolution positions and exiting is value-destructive), but it is the number that would
+have been reported as "+30%" two days ago. The weekly-P&L backlog item already requires quoting
+both; this is the strongest evidence yet for why.
+
+Book: 7 positions, cost $118.38, no trades. Everything remaining is blocked on external dates
+(Aug-31/Dec-31 resolutions, Sep-12 drill, December short-dated cluster) or on data not yet in hand
+(N>10 for the haircut-on-holds question). $28.12 deployable, nothing clearing the gates.
