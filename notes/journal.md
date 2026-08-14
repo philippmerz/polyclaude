@@ -7677,3 +7677,35 @@ three realistic MacBook headlines and correctly ignores "Apple unveils new iPhon
 got SMALLER (102 -> 103 net) while getting more sensitive. Daemon reloads config per poll, no
 restart needed. Same class as the HLE/Greenland keyword gap found 08-11 — I had checked coverage
 for those cruxes and never for this one.
+
+## 2026-08-14 06:2x — meta-reflection: mechanized the news-coverage check (3rd instance = a class)
+
+Only finding this cycle, and it generalizes the 06:00 one rather than being new work for its own
+sake. THREE news-coverage gaps have now been found on live positions, every one discovered only
+because I happened to think of that market: HLE and Greenland had ZERO of 217 keywords (08-11),
+and the MacBook leg — my LARGEST position, catalyst three weeks out — had four keywords that were
+all announcement phrasings and would not fire on the ship/pre-order headline that actually decides
+it (08-14, an hour ago). Three found by hand is a class, not a coincidence, and the failure mode
+is that a blind spot gets discovered on the morning the catalyst lands rather than on a quiet tick.
+
+BUILT scripts/crux_coverage_check.py — walks the live book, matches each position's question
+against tier1+tier2 keywords, reports any with NONE. Read-only, additive, no wallet writes, and
+deliberately NOT in the pricing/gate code I stopped editing at 04:00. Wired into daily_checkin
+step 1 with --quiet, which prints ONLY failures, so a healthy book produces no output and this
+cannot become flag-fatigue. Failure path tested by stubbing the keyword list: correctly names all
+7 positions, totals the exposure at risk ($148.11), and exits 1.
+
+Ran on the live book: all 7 covered. The honest caveat is written into the tool's own output
+rather than left implicit — it proves nothing is UNWATCHED, it does NOT prove a keyword covers the
+resolution CRUX. The MacBook leg would have PASSED this check while still missing its ship-date
+headline, because 'touchscreen macbook' does appear in its title. Judging crux coverage needs a
+human read of the criteria, which is the criteria-read rotation's job. Saying that in the tool
+matters: a green light that is quietly narrower than it looks is worse than no light, because it
+converts an unknown risk into a believed-safe one.
+
+Also stated a STOP-word list in the checker for the same reason — a position "covered" only
+because some keyword shares the word "the" or "2026" is not covered, and that false pass is the
+specific way this tool could end up worse than nothing.
+
+Nothing else material. Book unchanged, 7 positions, no trades, no capital deployable through the
+gates.
