@@ -540,6 +540,24 @@ the one that arrives with a plausible justification attached. Audit those hardes
   far below even the haircut numbers — which is precisely why it was easy to skip. The test of a
   calibration finding is whether you turn it on your strongest belief, not on the next trade.
 
+- **A close signal is not a close DECISION until it is priced against the cost of closing.**
+  2026-08-14 the hurdle scan flagged 2 CLOSE_CANDIDATEs after I cut priors — the first non-empty
+  flag list all week, so it read as newly actionable. It was not. MacBook's mark had converged
+  exactly onto my own fair (expected edge +0.00%), but exiting meant walking 66 shares down a
+  book with 5 at the touch: $39.23 net versus $42.90 held to prior. Paying $2.92 to escape $0.00
+  of negative edge is value destruction wearing the costume of discipline. Greenland "cleared"
+  by $0.05 — a sixth of one $0.01 tick across 29 shares, i.e. inside the measurement error of
+  the very snapshot that produced it. Same error class as marking at mid or at best-bid: a
+  single number standing in for an executable path. Gate now compares exit-now-then-redeploy-at-
+  hurdle against hold-to-resolution-at-own-prior, with a materiality floor of one tick x size.
+  Two dependencies this creates, named now rather than rediscovered: (1) the gate is only as
+  honest as the PRIOR, since an inflated prior inflates hold-value and manufactures a "hold" —
+  which makes the divergence and source-staleness checks load-bearing for it, not merely
+  hygienic; (2) a truly dead book fails the gate FOREVER, so the gate will correctly counsel
+  holding a rotting position indefinitely. That is not a flaw in the gate — it relocates the
+  error to entry time, where exit liquidity must be priced BEFORE committing, because afterwards
+  the arithmetic will always tell you that you are stuck.
+
 - **"Fix it at the display layer" is incomplete until you ENUMERATE the display layers.**
   2026-08-13, in one morning, the same scope error three times: found midpoints inflating the
   book, fixed positions.py, then wrote a reasoned defence of NOT touching bankroll.py — which

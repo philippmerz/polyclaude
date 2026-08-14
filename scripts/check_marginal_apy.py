@@ -39,6 +39,48 @@ HURDLE_APY_DEFAULT = 0.05
 
 PRIORS_PATH = Path(__file__).resolve().parent.parent / "notes" / "portfolio_kelly_priors.json"
 
+# Polymarket taker fee: 10% of min(p, 1-p) per share. Maker is $0, but an exit
+# that needs to happen is a taker exit; pricing it as free understates the cost
+# of acting on a flag.
+TAKER_FEE_RATE = 0.10
+
+
+def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> float | None:
+    """Depth-walk the bid book and return net proceeds of exiting the FULL size.
+
+    2026-08-14. The flag branch below used to shout CLOSE_CANDIDATE on edge
+    alone, with no notion of what closing costs — the same error class as
+    pricing a position at best-bid or at the midpoint: a single number standing
+    in for an executable path. It flagged the MacBook NO leg the day its mark
+    converged onto my own prior (expected edge exactly +0.00%), where exiting
+    meant walking 66 shares down a book that had only 5 bid at the touch —
+    $39.23 net against $42.90 of hold-to-fair value. Paying $3.67 to escape
+    $0.00 of negative edge is value destruction dressed as discipline.
+    Unfilled remainder counts as $0, matching positions.py.
+    """
+    try:
+        m = client.get("https://gamma-api.polymarket.com/markets",
+                       params={"slug": slug}).json()[0]
+        toks = json.loads(m["clobTokenIds"])
+        outs = json.loads(m["outcomes"])
+        bk = client.get("https://clob.polymarket.com/book",
+                        params={"token_id": toks[outs.index(outcome)]}).json()
+        bids = sorted(bk.get("bids", []), key=lambda x: -float(x["price"]))
+        left, proceeds = float(size), 0.0
+        for lvl in bids:
+            if left <= 0:
+                break
+            take = min(left, float(lvl["size"]))
+            proceeds += take * float(lvl["price"])
+            left -= take
+        if proceeds <= 0:
+            return None
+        avg_fill = proceeds / float(size)
+        fee = TAKER_FEE_RATE * min(avg_fill, 1.0 - avg_fill) * float(size)
+        return proceeds - fee
+    except Exception:
+        return None
+
 
 def _resolve_wallet_address() -> str:
     """Read the polymarket wallet address from the secret-paths config.
@@ -192,6 +234,9 @@ def main() -> int:
     flagged: list[dict] = []
     holds: list[dict] = []
     drawdowns: list[dict] = []
+    # Opened once for the exit-cost gate; only touched on the flag path, so a
+    # tick where everything clears makes zero book calls.
+    hc = httpx.Client(timeout=20.0)
     for pos in positions:
         size = float(pos.get("size", 0) or 0)
         if size <= 0:
@@ -298,6 +343,41 @@ def main() -> int:
                                          f"({base}): {ack.get('reason','')[:80]}")
                     holds.append(record)
                 else:
+                    # EXIT-COST GATE (2026-08-14). A flag is only actionable if
+                    # acting beats not acting. Honest comparison: exit now and
+                    # redeploy the proceeds at the hurdle until this market would
+                    # have resolved, versus hold to resolution at my own prior.
+                    # Anything less (comparing edge to zero, or exiting at the
+                    # mark) treats an illiquid book as a free door.
+                    net = _exit_net(hc, slug, outcome, size)
+                    record["exit_net"] = round(net, 2) if net is not None else None
+                    if net is not None:
+                        redeployed = net * (1.0 + args.hurdle_apy * days / 365.0)
+                        hold_value = size * prior_p
+                        record["exit_then_hurdle"] = round(redeployed, 2)
+                        record["hold_to_prior"] = round(hold_value, 2)
+                        # Materiality floor = one price tick across the size
+                        # being exited. Polymarket quotes in $0.01 increments,
+                        # so a book snapshot pins exit proceeds to no better
+                        # than size x $0.01 — and the fill happens later than
+                        # the snapshot. Greenland first tripped this: "exit
+                        # clears by $0.05" on a 29-share leg, i.e. a sixth of
+                        # a tick. Acting on that is acting on noise.
+                        tick_noise = size * 0.01
+                        if redeployed <= hold_value + tick_noise:
+                            margin = redeployed - hold_value
+                            detail = (f"closing costs ${-margin:.2f}" if margin < 0
+                                      else f"clears by only ${margin:.2f}, under ${tick_noise:.2f} tick-noise")
+                            record["verdict"] = (
+                                f"HOLD (exit-cost gate): {base} on edge, but exiting nets "
+                                f"${net:.2f} -> ${redeployed:.2f} at hurdle vs ${hold_value:.2f} "
+                                f"held to prior — {detail}")
+                            holds.append(record)
+                            continue
+                        record["verdict"] = (f"{base}{prior_stale} — EXIT CLEARS COST: "
+                                             f"${redeployed:.2f} vs ${hold_value:.2f} held")
+                        flagged.append(record)
+                        continue
                     record["verdict"] = base + prior_stale
                     flagged.append(record)
             else:
@@ -349,7 +429,11 @@ def main() -> int:
     print("=== HOLDS (expected edge clears hurdle, or acknowledged deliberate holds) ===")
     for r in sorted(holds, key=lambda x: (x.get("expected_edge_apy_pct") if x.get("expected_edge_apy_pct") is not None else (x.get("gross_carry_apy_pct") or 0))):
         v = str(r.get("verdict",""))
-        tag = f"  [{v}]" if v.startswith("ACKED_HOLD") else ""
+        # A gated hold is NOT a clean hold — it is a position with no edge left
+        # that is retained only because the door is expensive. Printing it bare
+        # among the clearing holds is how a low-context tick concludes "all
+        # fine" about a leg that is dead money. Show the reason inline.
+        tag = f"  [{v}]" if v.startswith(("ACKED_HOLD", "HOLD (exit-cost gate)")) else ""
         print(f"  {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
               f"{_apy_col(r)}  {r['question'][:52]}{tag}")
     return 0

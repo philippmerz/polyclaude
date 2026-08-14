@@ -7421,3 +7421,27 @@ Left p_no at 0.90 rather than fine-tuning on the drift. The market-derived path 
 while my 0.90 rests on the framework-mandated pre-release controls plus eighteen days of remaining
 time decay; that gap is my documented disagreement, not a rounding error, and chasing a sibling
 market's daily move would be exactly the mistake this lesson warns about.
+
+## 2026-08-14 02:0x — hurdle scan: 2 flags, both gated to HOLD; exit-cost gate shipped
+
+First non-empty flag list this week (was 8 clear/0 flagged all week), triggered by yesterday's
+prior cuts. Both resolved to HOLD on arithmetic, not on reluctance:
+- MacBook NO 0.650 vs prior 0.650 -> E +0.00%. Depth-walk 66 shares = $39.23 net (avg fill 0.631,
+  3.7c/sh taker fee) -> $39.98 redeployed at 5% for 138.9d, vs $42.90 held to prior. Closing
+  costs $2.92 to escape $0.00 of negative edge.
+- Greenland NO 0.945 vs prior 0.950, E +1.39% (below 5% hurdle). Exit $27.09 -> $27.60 vs $27.55
+  held. Clears by $0.05 = 1/6 of one tick on 29 shares. Noise, not signal.
+
+check_marginal_apy.py: added _exit_net() depth-walk + taker fee, and an EXIT-COST GATE on the
+flag path only (zero book calls on a clean tick). Compares exit-then-hurdle vs hold-to-prior with
+a materiality floor of size x $0.01 (one price tick = the floor of the snapshot's own accuracy).
+Gated holds now print their reason inline in the HOLDS block — a dead-money leg must not read
+identically to a clearing one. Verified the gate still fires: mark >> prior exits at a large
+premium to hold-value and clears easily; suppression only where the toll exceeds the edge given up.
+Result: 7 clear / 0 flagged, with two of the seven carrying visible gate reasons.
+
+Two dependencies recorded in 01_lessons.md: the gate inherits the prior's honesty (bad prior ->
+manufactured hold, so §3c divergence + source-staleness checks are load-bearing for it), and a
+dead book fails the gate permanently — which relocates the real error to entry-time exit-liquidity
+pricing (already in polyclaude_enter.py's EXIT LIQUIDITY readout; seam connects).
+No trades. No capital freed.
