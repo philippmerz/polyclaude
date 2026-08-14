@@ -7615,3 +7615,31 @@ hand". The instinct to make failure visible paid inside five minutes.
 Book: 7 clear / 0 flagged. MacBook's exit cost moved $2.81 -> $8.59 as its thin book pulled back
 (hold strengthens, calibration flag drops off); Greenland unchanged, flips only at 0.05.
 No trades.
+
+## 2026-08-14 04:0x — stopping the edit chain deliberately; verification pass clean
+
+Calling the end of tonight's editing rather than continuing, on a signal rather than a feeling:
+the last THREE cycles each caught a bug I introduced in the previous cycle (flat 0.10 fee ->
+zero-fee/unset conflation -> `hc` client shadowed by a haircut loop variable). Every one was found
+and fixed, and every one was in decision-critical code touched while already deep in a long
+session. The catches are not the reassuring part; the rising rate of self-inflicted defects in the
+same file is the signal, and it matches the note about long repetitive sessions. The marginal edit
+to this code tonight now has negative expected value even though the marginal FINDING is still
+real — those are different things, and continuing because findings keep appearing is how the
+defect rate got here.
+
+VERIFICATION PASS (read-only, all green): money-math suite passes; all 12 touched modules import;
+check_marginal_apy reports 7 clear / 0 flagged with a live 2.88% hurdle and NO "GATE DID NOT RUN"
+lines; positions.py and bankroll.py agree. Book state: cost $118.38, marked $147.05 (+24.2%),
+realizable NET $136.86 (+15.6%), bankroll $194.05. The marked-vs-realizable gap is now $10.19 —
+MacBook's book keeps thinning — which is exactly the spread that was invisible before tonight and
+would have gone into the weekly as a +24% headline.
+
+Tonight's five errors shared one direction: midpoint, best-bid, fee-free walk, raw-prior hold
+value, and a dead gate ALL failed toward "the book looks better" or "the decision is settled".
+None failed toward alarm. That asymmetry is the finding worth carrying forward, more than any
+individual fix.
+
+Open work is genuinely blocked: 6 skip-ledger rows need Aug-31/Dec-31 resolutions, the drill is
+due 2026-09-12, the time-decay rule wants 2+ short-dated legs (December), the haircut-on-holds
+doctrine question wants N>10 resolved theses. Nothing capital-deployable cleared the gates.
