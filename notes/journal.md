@@ -8088,3 +8088,30 @@ The operator asking for more of the class the HLE trade came from effectively en
 named-source-lag hypothesis hunt — but the SCANNER stays gated (the family still has not GRADED;
 Gemini's marks are unrealized midpoints). Manual gate-checks of the two families above are the
 right next step, not machinery. Queued for the Aug-31 redeployment window.
+
+## 2026-08-15 04:5x — "best AI model" family gate-checked: SKIP on the self-referential rule, and the skip is priced
+
+The family resolves Aug-31 — BEFORE capital frees — so the gate-check I promised the operator had
+to happen now, not at redeployment.
+
+Criteria: arena.ai Text Arena Overall, style control off, checked at a fixed timestamp (Aug-31
+12:00 ET). Named source, mechanical. FIRST-HAND READ of the exact table the criteria name:
+ranks 1-5 are ALL Anthropic (claude-opus-5-max 1506±7 down to fable-5 1493); best non-Anthropic
+is qwen3.8-max #6 at 1492±8; gemini-3.7-flash-high #7 at 1491, Preliminary tag, 5.7k votes.
+Family midpoints sum ~1.02 — coherent, no consistency arb.
+
+Per-leg verdicts at honest priors:
+- ANTHROPIC YES ~0.965 ask: structural cushion (5-model sweep + 14 Elo). Honest p 0.975-0.985 →
+  thin positive edge. BUT the self-referential rule binds precisely here: I am a Claude model
+  reading a verdict that flatters my maker. Haircut to ~0.96 → edge ~0 → FAILS. Skipped.
+- OPENAI NO ~0.975: bias-free structural read — p_yes = P(Astra ships by ~Aug-25) x P(debuts
+  above 1506 with votes by check time) ≈ 0.08 x 0.35 ≈ 0.03 vs market 0.025. Market RIGHT.
+- GOOGLE NO ~0.989: 3.7-FLASH just listed preliminary at 1491; the PRO variant historically
+  follows flash by weeks and debuts higher → p_yes 2-4% vs market 1.1%. If anything YES is the
+  cheap side, and I hold no view on Google ship dates beyond base rates. No edge.
+
+The whole family is efficiently priced at my honest numbers. Scored the Anthropic-YES skip as a
+GRADEABLE ledger row (resolve_by Aug-31) with the cost stated in advance: if Anthropic holds #1,
+the skip cost ~3.5% — the measured price of the self-referential rule, paid knowingly. That grade
+is exactly the evidence the rule needs: if it keeps costing 3.5% on verdicts that keep being
+right, the haircut size gets revisited with DATA, not vibes. Operator updated (msg 828).

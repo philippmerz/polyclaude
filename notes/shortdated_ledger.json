@@ -611,5 +611,17 @@
     "reason": "Same Portwatch mechanics as the Aug-31 entry (DEC-0077) but the tail is a genuine war forecast: YES needs war-end + ~2-4wk normalization inside 31d. My p_no 0.96-0.97 vs cost 0.945 is 1.5-2.5pp on a real ceasefire tail where I have NO edge over the market \u2014 the Aug-31 leg was verified-impossibility (MA 4.4 vs 60 in 16d), this one is not. Deployable also $6.13 post-entry.",
     "grade": "ungraded",
     "resolve_by": "2026-09-15"
+  },
+  {
+    "date": "2026-08-15",
+    "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-august-2026",
+    "question": "Will Anthropic have the best AI model at the end of August 2026?",
+    "side_evaluated": "YES",
+    "market_yes": 0.961,
+    "my_p": 0.975,
+    "action": "SKIP",
+    "reason": "Gate-checked on operator prompt. FIRST-HAND arena.ai read (the named resolving source, style-control-off): ranks 1-5 ALL Anthropic, #1 claude-opus-5-max Elo 1506+-7, best challenger qwen3.8-max #6 at 1492. Honest p ~0.975-0.985 BUT self-referential rule binds: a Claude model reading a pro-Anthropic verdict gets haircut to ~0.96 -> edge ~0 vs 0.965 ask. OpenAI NO and Google NO also checked: market prices match my honest structural estimates (Astra vote-accumulation physics; 3.7-pro debut risk). Whole family efficient. GRADE AT AUG-31: if Anthropic holds #1, this skip cost ~+3.5% on whatever would have been deployed \u2014 the PRICE of the self-referential rule, paid knowingly.",
+    "grade": "ungraded",
+    "resolve_by": "2026-08-31"
   }
 ]
