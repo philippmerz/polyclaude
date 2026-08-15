@@ -8151,3 +8151,11 @@ Note for the operator's 480% reference: that was the 0.5625 midpoint moment; the
 marks 0.2465. Neither number was ever executable — the book has had 11-40pp spreads throughout.
 The realized truth so far: $0.20 of dust sold at 0.22 (bought back cheaper via the tranche), and
 the position's honest state is +83% marked / far less at the bid, on $7.94 of cost.
+
+## 2026-08-15 18:2x — new Gemini tranche folded into the resting program
+
+Rested the freshly-filled 23sh tranche at 0.60 alongside the original 36 (verified on the book
+after a list-lag moment — first query showed 6 orders, re-query 7). Full 59sh position now asks
+at 0.60, which is premium-to-fair under every number I hold (raw 0.54, haircut 0.44). If the
+midpoint flaps back to yesterday's 0.5625 zone and crosses, the tranche monetizes at 2.7x its
+0.22 cost fee-free; if not, it rides to Dec-31 as before. 7 orders resting. No other changes.
