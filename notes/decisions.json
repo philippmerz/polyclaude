@@ -1,5 +1,5 @@
 {
-  "next_id": 77,
+  "next_id": 78,
   "decisions": [
     {
       "id": 1,
@@ -1466,6 +1466,26 @@
         "exit-liquidity"
       ],
       "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 77,
+      "timestamp": "2026-08-15T02:06:17Z",
+      "type": "open_position",
+      "thesis": "NO @ 0.986 (taker, zero-fee market, matched). Criteria are MECHANICAL: IMF Portwatch 7-day MA of Hormuz transit calls >=60 any date by Aug-31, named source, no interpretation. FIRST-HAND MEASUREMENT (ArcGIS Daily_Chokepoints_Data, fetched 02:0x): latest 7-day MA = 4.4, prior week 3.9, daily calls 1-8. YES needs a >13x sustained jump inside 16 days DURING an active missile war (UAE accused Iran of Hormuz attacks YESTERDAY per tier-2 feed; transit dropping per Aug-12). Insurance/rerouting cannot reverse in days even on an immediate ceasefire. Honest p_yes ~0.002; entry haircut set MULTIPLICATIVELY on the tail (5x -> p_no_robust 0.99 > 0.986) because a flat 10pp haircut structurally kills every bond fade regardless of fact quality \u2014 flagged for doctrine formalization. World-state rule satisfied first-hand. Sibling ladder monotone; Aug-31 leg has max verified-impossibility per pp. Exit liquidity 100% within 5%. +$0.40 on $28 in 16d ~ +1.4% ~ 30% APY.",
+      "confidence": "high",
+      "prediction": "Portwatch MA never prints >=60 before Aug-31; resolves NO; redeem early Sep",
+      "size_usd": 28.0,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "bond-fade",
+        "mechanical",
+        "hormuz",
+        "shortdated"
+      ],
+      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

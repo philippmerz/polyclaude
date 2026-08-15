@@ -1,11 +1,11 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-08-14",
+ "_refreshed": "2026-08-15",
  "positions": [
   {
    "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
    "outcome": "No",
-   "size": 66,
+   "size": 57.7007,
    "conditionId": "0x3b8ffe267a348097806237bd9af95050896ee12e4d461b421ca703c8bdf31022",
    "asset": "23514447719471100390569154455440417533353453232779340703972009767897223549881",
    "negativeRisk": false

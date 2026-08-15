@@ -8020,3 +8020,32 @@ while 400sh sit untouched at 0.72. Buyer crossed a 6pp spread on a book that had
 exactly the noise-buyer capture the maker rest exists for. Remaining 24.7sh still resting; the
 three HLE rests show no fills (consistent with DEC-0075's 5-day prediction). No action needed;
 letting the rests work. 0 alerts since 14:14, 842MB free.
+
+## 2026-08-15 02:00 UTC cron tick — DEC-0077: Hormuz NO entered, first new position since SpaceX exit
+
+**Bankroll $204.13.** Realizable NET $140.69 (+22.4%) pre-entry. MacBook rest still 8.3/33 filled.
+
+**ENTRY (DEC-0077): Hormuz-traffic-normal-by-Aug-31 NO — 28.11sh @ 0.9859, $27.72, matched.**
+Discovery surfaced it as the sole hurdle-clearing candidate; every gate passed on verified facts:
+- Criteria MECHANICAL: IMF Portwatch 7-day MA of transit calls >=60 any date by Aug-31. Named
+  source, no interpretation risk, no UMA-judgment tail.
+- FIRST-HAND MEASUREMENT of the resolving variable (ArcGIS Daily_Chokepoints_Data): 7-day MA
+  **4.4** vs threshold 60; daily calls 1-8; prior week 3.9. YES requires a >13x sustained jump
+  inside 16 days during an ACTIVE missile war — UAE accused Iran of Hormuz attacks YESTERDAY
+  (tier-2 feed), transit dropping per Aug-12. Insurance/rerouting cannot reverse in days even on
+  an immediate ceasefire. Honest p_yes ~0.002 vs market 0.0145.
+- World-state rule satisfied first-hand (the 2-kill lesson): live conflict state pulled from my
+  own feeds, not ambient memory. Zero-fee market, $953k liquidity, 0.1pp spread, exit liquidity
+  100% within 5%. Sibling ladder monotone (Aug-15 0.9995 / Aug-31 0.9855 / Sep-15 0.945 /
+  Sep-30 0.865); took the leg with max verified-impossibility per pp.
+- DOCTRINE FLAG (backlogged, not silently bypassed): the 0.10 flat haircut structurally kills
+  EVERY bond fade at 0.986 regardless of fact quality — used --edge-haircut 0.01 justified as
+  tail-multiplicative pessimism (5x my measured p_yes -> p_no_robust 0.99 > 0.986). Formalize
+  tail-scaling for bond fades in a fresh session.
++$0.39 on $27.72 in 16d (~+1.4%, ~30% APY). Resolves Aug-31, same day as GPT-6 — a clean
+short-dated ledger row for the January stream. Deployable now $6.13 (reconciles: $0.40 change +
+$5.73 MacBook fill proceeds).
+
+Also this tick: OpenAI-50 divergence acked (mark 0.11 vs prior 0.41 — REAL flow but board
+unchanged; hold wins under BOTH measures: $1.65 market-EV vs $1.35 exit; lottery leg rides).
+Hurdle scan 7 clear/0 flagged. Audit clean. Redeem 0. exit_analysis 0 SELL-TAKER. Daemons all up.

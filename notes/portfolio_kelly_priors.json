@@ -224,7 +224,11 @@
     "hidden_info": true,
     "cluster": "ai-ships-fast-short",
     "rho_within": 0.7,
-    "divergence_ack": "2026-08-10",
+    "divergence_ack": {
+      "date": "2026-08-15",
+      "expires": "2026-08-29",
+      "reason": "Mark NO 0.11 vs prior 0.41 (30pp). REAL flow ($1.6k/24h, 2pp spread), board UNCHANGED (GPT-5 25.3) \u2014 market pricing anticipatory Astra>=50 + spirit resolution. Interpretation-question doctrine: defer to market for ACTION, and hold wins under BOTH measures (hold $1.65 at market vs exit $1.35 net). Lottery-sized tuition leg; rest at 0.45 stays. Re-derive only on a crux change (board row or Astra ship)."
+    },
     "divergence_note": "INTENTIONAL 43pp gap, re-derived from source 2026-08-10 (not marked to market). Chose NOT to size up HERE despite this being the cheapest expression: the leg has one cushion (board only \u2014 OpenAI capability is already 49.5, a hair under the bar) and 47sh of bid. Routed the marginal $6 to the Gemini leg instead, which needs BOTH a capability jump and a board update and has a real two-sided book. Re-look when the ack expires 2026-08-24, or immediately if agi.safe.ai posts any 2026 row.",
     "key_facts": [
       {
