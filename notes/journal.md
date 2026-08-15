@@ -8115,3 +8115,19 @@ GRADEABLE ledger row (resolve_by Aug-31) with the cost stated in advance: if Ant
 the skip cost ~3.5% — the measured price of the self-referential rule, paid knowingly. That grade
 is exactly the evidence the rule needs: if it keeps costing 3.5% on verdicts that keep being
 right, the haircut size gets revisited with DATA, not vibes. Operator updated (msg 828).
+
+## 2026-08-15 14:00 UTC cron tick — quiet; rests grinding, Gemini flap again
+
+Bankroll **$201.68**; realizable NET $159.10 (+14.2% on the post-Hormuz cost base) vs $170.78
+marked — the $11.68 gap is the usual three thin books. All scans clean: hurdle 8 clear/0 flagged
+(Hormuz now in the scan; live hurdle ticked to 2.84%), redeem 0, discovery 0 clearing, exit 0
+SELL-TAKER, daemons current, coverage silent, audit fixed-clean.
+
+Rests: MacBook now **17.0/33 filled at 0.69** (~$11.7 monetized at 4pp over fair, zero fee). Plus
+a 0.9sh dust fill on the old 0.22 Gemini bid — someone swept that book briefly to 0.22, real but
+$0.20 of flow. Gemini NO printed another midpoint flap (0.4655 -> 0.379 on $751 of volume,
+11pp spread, bids 0.334/asks 0.446) — same class as yesterday's 40pp version, no crux change
+(board verified 3x yesterday), no action. My 0.60 rest and 0.22 bid bracket the flapping.
+
+Portwatch unchanged as of 10:00 re-measure (MA 4.4, no print since Aug-09). Nothing material for
+Telegram. No trades beyond the passive fills.

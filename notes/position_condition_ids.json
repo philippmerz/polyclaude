@@ -5,7 +5,7 @@
   {
    "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
    "outcome": "No",
-   "size": 57.7007,
+   "size": 49.005,
    "conditionId": "0x3b8ffe267a348097806237bd9af95050896ee12e4d461b421ca703c8bdf31022",
    "asset": "23514447719471100390569154455440417533353453232779340703972009767897223549881",
    "negativeRisk": false
@@ -13,7 +13,7 @@
   {
    "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
    "outcome": "No",
-   "size": 36.01,
+   "size": 36.96,
    "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
    "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
    "negativeRisk": false
@@ -40,6 +40,14 @@
    "size": 28.33,
    "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
    "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+   "negativeRisk": false
+  },
+  {
+   "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+   "outcome": "No",
+   "size": 28.1135,
+   "conditionId": "0x60c2c085ee8c16bc8f2419739a94971d4c9d00f637ead10fc0f540afa1be64e8",
+   "asset": "90869494087977018607792751230236923002303032923064138180950209430688758061828",
    "negativeRisk": false
   },
   {
