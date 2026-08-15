@@ -270,7 +270,11 @@
     "hidden_info": true,
     "cluster": "ai-ships-fast-short",
     "rho_within": 0.7,
-    "divergence_ack": "2026-08-10",
+    "divergence_ack": {
+      "date": "2026-08-15",
+      "expires": "2026-08-29",
+      "reason": "Mark NO 0.2465 vs prior 0.54 (29pp). Two-day directional slide on real-but-small volume ($0.7-1.5k/day), board UNCHANGED (verified again 18:00 Aug-15: Gemini 3 Pro 38.3, no new rows), no news hits. Crowd pricing anticipatory capability+spirit \u2014 the INTERPRETATION crux where doctrine defers to market for action. BOTH-MEASURES TEST: exit at bid walks to ~$9.5 vs hold-at-market-EV $14.5 vs hold-at-prior $31.9 \u2014 HOLD under both (17pp spread makes taker exit value-destructive). Position lottery-sized ($7.94 cost, 59sh after the pre-committed DEC-0065 0.22 tranche filled during the slide). Rest at 0.60 stays. Re-derive on a crux change only."
+    },
     "divergence_note": "INTENTIONAL 46pp gap, decomposed 2026-08-10 and ACTED ON: 60sh NO added at 0.100 maker (DEC-0065). Sized as a lottery at ~1/8 of rho-discounted Kelly because the residual crux (would a UMA vote override clean text under 90%-of-OI YES pressure?) is an interpretation I cannot verify \u2014 not because the number is soft. Further adds need the cluster check: HLE family is ~14% of bankroll at rho~0.9.",
     "key_facts": [
       {

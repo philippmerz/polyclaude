@@ -8131,3 +8131,23 @@ $0.20 of flow. Gemini NO printed another midpoint flap (0.4655 -> 0.379 on $751 
 
 Portwatch unchanged as of 10:00 re-measure (MA 4.4, no print since Aug-09). Nothing material for
 Telegram. No trades beyond the passive fills.
+
+## 2026-08-15 18:0x — Gemini: 0.22 tranche filled into the slide; divergence acked on both-measures math
+
+The DEC-0065 second-tranche resting bid (23sh @ 0.22) FULLY FILLED during a two-day directional
+slide in Gemini NO (0.56 peak -> 0.2465 mid). Position now 59.01sh @ 0.1345 avg, $7.94 cost,
+marked +83%. The slide is real-but-small flow ($0.7-1.5k/day) with the board UNCHANGED (verified
+AGAIN at 18:00 — GPT-5 25.3 / Gemini 3 Pro 38.3, no new rows) and zero news-watcher hits on the
+crux keywords: the crowd is pricing anticipatory capability + spirit-resolution, the
+interpretation crux where my edge explicitly does not apply.
+
+Divergence (29pp vs my 0.54) acked with the both-measures test on the record: exit walks the
+0.162 bid to ~$9.5; hold at MARKET EV is $14.5 (the 17pp spread makes taker exit value-
+destructive even if I fully adopt the crowd's probability); hold at my prior $31.9. HOLD wins
+under both measures — the ack is arithmetic, not stubbornness. The 0.60 rest covers the original
+tranche if the flapping spikes back. Audit clean after ack.
+
+Note for the operator's 480% reference: that was the 0.5625 midpoint moment; the same leg now
+marks 0.2465. Neither number was ever executable — the book has had 11-40pp spreads throughout.
+The realized truth so far: $0.20 of dust sold at 0.22 (bought back cheaper via the tranche), and
+the position's honest state is +83% marked / far less at the bid, on $7.94 of cost.
