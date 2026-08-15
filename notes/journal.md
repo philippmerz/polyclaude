@@ -8049,3 +8049,18 @@ $5.73 MacBook fill proceeds).
 Also this tick: OpenAI-50 divergence acked (mark 0.11 vs prior 0.41 — REAL flow but board
 unchanged; hold wins under BOTH measures: $1.65 market-EV vs $1.35 exit; lottery leg rides).
 Hurdle scan 7 clear/0 flagged. Audit clean. Redeem 0. exit_analysis 0 SELL-TAKER. Daemons all up.
+
+## 2026-08-15 02:2x — DEC-0077 guard armed; Sep-15 sibling scored as a skip
+
+Armed `hormuz-no-erosion` (clob_bid on the NO token, <=0.95, actionable, expires at resolution):
+the position rests on a variable measured ONCE, and the failure mode is a ceasefire+normalization
+sprint noticed only at the next manual check. The market itself is now the monitor — NO bid
+through 0.95 means the crowd prices YES at triple my read, which warrants a fresh Portwatch pull
+and a hold-vs-exit re-run, not a reflexive hold. Trigger file is re-read every poll; live without
+a restart (verified in code — unlike code edits, which the stale-daemon lesson covers).
+
+Scored the Sep-15 sibling as a SKIP in the shortdated ledger with the reason written at decision
+time: same mechanics, but its tail is a genuine war forecast (war-end + normalization inside 31d)
+where I have no edge over the market — 1.5-2.5pp at my honest p on a real ceasefire tail. The
+Aug-31 leg was verified-impossibility; the Sep-15 leg is a forecast. Different animals, and the
+ledger should grade whether I can tell them apart.

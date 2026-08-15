@@ -1,56 +1,66 @@
 [
- {
-  "key": "regime-fall-reentry",
-  "kind": "clob_no_ask",
-  "id": "106181075047366745139197108801635573283215248045056329679360376976893016488727",
-  "op": "<=",
-  "level": 0.88,
-  "note": "DEMOTED to surface-only 2026-07-28: armed since Jul-08 exit, never crossed. Book is deliberately Iran-free and the world-state rule (active Gulf missile war, my Kuwait gate-kill Jul-26) says war-adjacent re-entry needs a FRESH full gate, not an auto-fired tick. Crossing now logs + telegrams; it will NOT fire a tick.",
-  "actionable": false
- },
- {
-  "key": "arb-deep-value-surface",
-  "kind": "coingecko",
-  "id": "arbitrum",
-  "op": "<=",
-  "level": 0.065,
-  "note": "ARB DEEP-VALUE only (position CLOSED Jul-24 DEC-0057). Polyclaude does NOT auto-add: multi-year price-only thesis routes to operator IBKR. Price re-entry for polyclaude requires a FILED Tally distribution/buyback proposal (dated <1y catalyst), NOT a price level. This trigger = surface-to-operator at a genuine capitulation only.",
-  "actionable": false
- },
- {
-  "key": "gpt6-no-judgment",
-  "kind": "clob_bid",
-  "id": "110227805407315115408276908830556497292857234032945501079570053955010575568037",
-  "op": "<=",
-  "level": 0.35,
-  "actionable": true,
-  "note": "RESET 0.65->0.35 post-adjudication 2026-08-06 15:53: 0.65 fired on the sibling-confirmed Astra repricing (held on exit math, prior tracks market). 0.35 = essentially-resolving-YES alert. Availability-announcement = the real exit condition, checked every tick."
- },
- {
-  "key": "gamescom-announce",
-  "kind": "new_listing",
-  "query": "gamescom",
-  "match": "gamescom",
-  "expires": "2026-08-26",
-  "actionable": true,
-  "note": "Gamescom Aug 19-24. If an announce family lists, the CORRECTED SDCC template applies: buy YES on any active-entity leg <=0.80 after verifying the loose official-channels criteria text; cheap legs are the biggest edge, not the most suspect. Cluster-cap the family; pull unfilled bids at window end (post-catalyst rule). D23 expired unlisted 2026-08-08 — listing is NOT guaranteed, which is exactly why this is a daemon watch and not a standing tick chore."
- },
- {
-  "key": "nycc-announce",
-  "kind": "new_listing",
-  "query": "comic con",
-  "match": "comic-con",
-  "expires": "2026-10-31",
-  "actionable": true,
-  "note": "NYCC (early Oct). Same corrected announce-template as Gamescom/SDCC. Baseline seeded silently, so only NEWLY listed comic-con events fire."
- },
- {
-  "key": "hle-cross-event-arb",
-  "kind": "pair_arb",
-  "mode": "umbrella",
-  "a": "highest-score-on-humanitys-last-exam-in-2026-20260723190142922",
-  "b": "highest-claude-score-on-humanitys-last-exam-in-2026-20260723190836285",
-  "note": "'Any model >=k' (umbrella) must be >= 'any Anthropic Claude model >=k' (subset) — criteria word-for-word identical except the model restriction, so the bound is airtight. REPLACED a single-leg 0.47 ask trigger on 2026-08-11 after it fired a false positive: its level was derived from the OTHER leg's ask at arming time, that leg moved 0.44->0.56, and the real breakeven fell to ~0.35. Now walks BOTH books every cycle and only fires when the taker structure is positive after fees. If it fires: BUY umbrella-YES + BUY subset-NO, payout >=1 in every state, 2 in the middle branch.",
-  "actionable": true
- }
+  {
+    "key": "regime-fall-reentry",
+    "kind": "clob_no_ask",
+    "id": "106181075047366745139197108801635573283215248045056329679360376976893016488727",
+    "op": "<=",
+    "level": 0.88,
+    "note": "DEMOTED to surface-only 2026-07-28: armed since Jul-08 exit, never crossed. Book is deliberately Iran-free and the world-state rule (active Gulf missile war, my Kuwait gate-kill Jul-26) says war-adjacent re-entry needs a FRESH full gate, not an auto-fired tick. Crossing now logs + telegrams; it will NOT fire a tick.",
+    "actionable": false
+  },
+  {
+    "key": "arb-deep-value-surface",
+    "kind": "coingecko",
+    "id": "arbitrum",
+    "op": "<=",
+    "level": 0.065,
+    "note": "ARB DEEP-VALUE only (position CLOSED Jul-24 DEC-0057). Polyclaude does NOT auto-add: multi-year price-only thesis routes to operator IBKR. Price re-entry for polyclaude requires a FILED Tally distribution/buyback proposal (dated <1y catalyst), NOT a price level. This trigger = surface-to-operator at a genuine capitulation only.",
+    "actionable": false
+  },
+  {
+    "key": "gpt6-no-judgment",
+    "kind": "clob_bid",
+    "id": "110227805407315115408276908830556497292857234032945501079570053955010575568037",
+    "op": "<=",
+    "level": 0.35,
+    "actionable": true,
+    "note": "RESET 0.65->0.35 post-adjudication 2026-08-06 15:53: 0.65 fired on the sibling-confirmed Astra repricing (held on exit math, prior tracks market). 0.35 = essentially-resolving-YES alert. Availability-announcement = the real exit condition, checked every tick."
+  },
+  {
+    "key": "gamescom-announce",
+    "kind": "new_listing",
+    "query": "gamescom",
+    "match": "gamescom",
+    "expires": "2026-08-26",
+    "actionable": true,
+    "note": "Gamescom Aug 19-24. If an announce family lists, the CORRECTED SDCC template applies: buy YES on any active-entity leg <=0.80 after verifying the loose official-channels criteria text; cheap legs are the biggest edge, not the most suspect. Cluster-cap the family; pull unfilled bids at window end (post-catalyst rule). D23 expired unlisted 2026-08-08 \u2014 listing is NOT guaranteed, which is exactly why this is a daemon watch and not a standing tick chore."
+  },
+  {
+    "key": "nycc-announce",
+    "kind": "new_listing",
+    "query": "comic con",
+    "match": "comic-con",
+    "expires": "2026-10-31",
+    "actionable": true,
+    "note": "NYCC (early Oct). Same corrected announce-template as Gamescom/SDCC. Baseline seeded silently, so only NEWLY listed comic-con events fire."
+  },
+  {
+    "key": "hle-cross-event-arb",
+    "kind": "pair_arb",
+    "mode": "umbrella",
+    "a": "highest-score-on-humanitys-last-exam-in-2026-20260723190142922",
+    "b": "highest-claude-score-on-humanitys-last-exam-in-2026-20260723190836285",
+    "note": "'Any model >=k' (umbrella) must be >= 'any Anthropic Claude model >=k' (subset) \u2014 criteria word-for-word identical except the model restriction, so the bound is airtight. REPLACED a single-leg 0.47 ask trigger on 2026-08-11 after it fired a false positive: its level was derived from the OTHER leg's ask at arming time, that leg moved 0.44->0.56, and the real breakeven fell to ~0.35. Now walks BOTH books every cycle and only fires when the taker structure is positive after fees. If it fires: BUY umbrella-YES + BUY subset-NO, payout >=1 in every state, 2 in the middle branch.",
+    "actionable": true
+  },
+  {
+    "key": "hormuz-no-erosion",
+    "kind": "clob_bid",
+    "id": "90869494087977018607792751230236923002303032923064138180950209430688758061828",
+    "op": "<=",
+    "level": 0.95,
+    "actionable": true,
+    "expires": "2026-09-01",
+    "note": "DEC-0077 guard (armed 2026-08-15). NO bid <=0.95 means the market prices YES >5% \u2014 triple my entry read (p_yes ~0.2% off Portwatch MA 4.4 vs 60). That only happens on a ceasefire+normalization sprint or a data surprise; RE-MEASURE Portwatch first (ArcGIS Daily_Chokepoints_Data, where=portname=Strait of Hormuz, n_total 7d MA) and re-run hold-vs-exit. Exit liquidity was 100% within 5% at entry \u2014 leaving is cheap if the thesis breaks. Expires at resolution."
+  }
 ]
