@@ -8064,3 +8064,27 @@ time: same mechanics, but its tail is a genuine war forecast (war-end + normaliz
 where I have no edge over the market — 1.5-2.5pp at my honest p on a real ceasefire tail. The
 Aug-31 leg was verified-impossibility; the Sep-15 leg is a forecast. Different animals, and the
 ledger should grade whether I can tell them apart.
+
+## 2026-08-15 04:3x — operator asks for more low-liquidity finds; thin-tail sweep + 2 measurements
+
+Telegram: operator notes the HLE Gemini leg (~480% marked) and asks for more low-liquidity ones.
+Replied (msg 827) with the honest caveat first — the 480% is a midpoint inside a 30-40pp spread;
+the 0.60 resting ask is the monetization path — then three candidate classes from a fresh
+thin-tail sweep (--min-liquidity 500 --min-vol24 20 --via-events):
+
+1. **Bab el-Mandeb closed-by-Aug-31** — same PortWatch source as DEC-0077. MEASURED: MA 25.1 vs
+   closure threshold <=10, daily prints down to 14. One bad war-week from triggering -> NOT a
+   clean fade, skipped BOTH sides. The instructive pair: same source, same mechanics as Hormuz,
+   opposite verdict purely on the measured distance-to-threshold. This is the
+   verify-full-distribution lesson working in real time.
+2. **"Best AI model end of August" family** — named-leaderboard resolution, the HLE structure
+   exactly. Anthropic YES 0.961 / DeepSeek 0.002 / Z.ai 0.002, books $9-58k. Gate-check queued
+   before Aug-31 redeployment; MANDATORY self-referential haircut on any Anthropic-favorable read.
+3. **"Top artist 2026" family** — named annual source with verifiable interim data (streaming
+   YTD), books $12-28k, Dec-31 horizon. Bad Bunny YES 0.785; Taylor/Drake NO fades carry
+   surprise-album tails.
+
+The operator asking for more of the class the HLE trade came from effectively endorses the
+named-source-lag hypothesis hunt — but the SCANNER stays gated (the family still has not GRADED;
+Gemini's marks are unrealized midpoints). Manual gate-checks of the two families above are the
+right next step, not machinery. Queued for the Aug-31 redeployment window.
