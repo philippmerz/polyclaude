@@ -8173,3 +8173,22 @@ All scans clean: UMA just the 5pp flap-back, Ostium unchanged, audit clean, hurd
 orders 7 open (MacBook still 17/33), Portwatch STILL no print since Aug-09 (MA 4.4) — 15 days to
 Hormuz resolution with a 6-day publication lag means very few remaining chances for the variable
 to move at all. No trades. Nothing material for Telegram.
+
+## 2026-08-16 14:00 UTC cron tick — clean except my own ack schema; fixed by conforming data to consumer
+
+Bankroll **$199.21**; realizable NET $159.73 (+10.8% on $144.16) vs $173.18 marked — HLE midpoints
+flapped back UP today (the $13.45 gap is the same three thin books; the oscillation continues with
+no crux change). All scans clean: hurdle 8/0, redeem 0, discovery 0, exit 0 SELL-TAKER, daemons
+current, coverage silent, orders 7 open (MacBook 17/33 unchanged).
+
+ONE finding, mine: the audit flagged the Gemini divergence as "(ack EXPIRED)" when the ack said
+expires 08-29. Schema mismatch — §3c parses divergence_ack as a PLAIN ISO DATE STRING and I had
+written a rich dict ({date, expires, reason}) on both HLE acks. fromisoformat(dict) raises, the
+exception path treats it as expired. I invented a richer schema at write time instead of checking
+what the CONSUMER parses — same family as "a rule written down is not a rule enforced", instance:
+"an ack written in a format the enforcer cannot read is not an ack". The enforcement layer CAUGHT
+it, which is the system working as designed. Fixed by conforming the data: divergence_ack back to
+the bare date, reason preserved in divergence_ack_reason (ignored by the audit, read by humans).
+Audit CLEAN at 8 positions. Note the OpenAI-50 ack had the same defect but never flagged because
+its gap dipped under 25pp as the mark flapped — a silent near-miss that would have fired later.
+No trades. Nothing material for Telegram. Sunday review at 16:00.
