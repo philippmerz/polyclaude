@@ -8159,3 +8159,17 @@ after a list-lag moment — first query showed 6 orders, re-query 7). Full 59sh 
 at 0.60, which is premium-to-fair under every number I hold (raw 0.54, haircut 0.44). If the
 midpoint flaps back to yesterday's 0.5625 zone and crosses, the tranche monetizes at 2.7x its
 0.22 cost fee-free; if not, it rides to Dec-31 as before. 7 orders resting. No other changes.
+
+## 2026-08-16 02:00 UTC cron tick — quiet; HLE marks slid, everything else stable
+
+Bankroll **$191.63** (from $201.68), the ~$10 decline being HLE midpoint slide: Gemini NO
+0.2465 -> 0.160, OpenAI-50 NO ticked 0.11 -> 0.135 up, OpenAI-55 flapping. Realizable NET
+$153.11 (+6.2% on $144.16 cost) vs $165.61 marked. The Gemini divergence ack (dated 08-15,
+expires 08-29) covers the wider gap; the both-measures test still says HOLD at the new numbers
+(exit walks to ~$6.9 vs $9.4 hold even at the market's own probability — the spread still eats
+more than the disagreement).
+
+All scans clean: UMA just the 5pp flap-back, Ostium unchanged, audit clean, hurdle 8/0, redeem 0,
+orders 7 open (MacBook still 17/33), Portwatch STILL no print since Aug-09 (MA 4.4) — 15 days to
+Hormuz resolution with a 6-day publication lag means very few remaining chances for the variable
+to move at all. No trades. Nothing material for Telegram.

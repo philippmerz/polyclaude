@@ -1,21 +1,21 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-08-15",
+ "_refreshed": "2026-08-16",
  "positions": [
+  {
+   "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+   "outcome": "No",
+   "size": 59.01,
+   "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
+   "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
+   "negativeRisk": false
+  },
   {
    "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
    "outcome": "No",
    "size": 49.005,
    "conditionId": "0x3b8ffe267a348097806237bd9af95050896ee12e4d461b421ca703c8bdf31022",
    "asset": "23514447719471100390569154455440417533353453232779340703972009767897223549881",
-   "negativeRisk": false
-  },
-  {
-   "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
-   "outcome": "No",
-   "size": 36.96,
-   "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
-   "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
    "negativeRisk": false
   },
   {
