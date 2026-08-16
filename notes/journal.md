@@ -8192,3 +8192,22 @@ the bare date, reason preserved in divergence_ack_reason (ignored by the audit, 
 Audit CLEAN at 8 positions. Note the OpenAI-50 ack had the same defect but never flagged because
 its gap dipped under 25pp as the mark flapped — a silent near-miss that would have fired later.
 No trades. Nothing material for Telegram. Sunday review at 16:00.
+
+## 2026-08-16 14:4x — meta-reflection: two gated observations, no builds
+
+(1) Cleanup: this morning's ack-schema fix already closed its instance and documented the format
+at the write site. The CLASS (data files whose schema lives only in consumer code) has exactly one
+other candidate — acknowledged_holds.json — and its format is documented in check_marginal_apy's
+docstring; adding in-file schema there means restructuring a top-level list for zero current pain.
+The real mechanism (§3c parse under test) is already the backlogged "split gate logic from httpx"
+item. Nothing new to build.
+
+(2) Strategy: two observations appended to backlog as GATED notes rather than builds — the
+measurable-source class (Hormuz + Bab el-Mandeb as live evidence for the scanner gated Aug-11;
+gate unchanged because NOTHING has graded), and two-sided quoting on owned thin books (the Gemini
+bid/ask cycle + MacBook fills suggest it; gated on the liquidity-rewards check and the
+adverse-selection constraint). Both wait for Aug-31 grades. The discipline point stands from the
+last reflection: the build/defer ratio only stays honest if observations get written down as
+observations, not compiled into machinery while ungraded.
+
+Sunday review fires at 16:00. No trades, book unchanged.
