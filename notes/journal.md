@@ -8211,3 +8211,21 @@ last reflection: the build/defer ratio only stays honest if observations get wri
 observations, not compiled into machinery while ungraded.
 
 Sunday review fires at 16:00. No trades, book unchanged.
+
+## 2026-08-16 16:00 UTC — Sunday long-term review
+
+Domains (due in rotation): critical-minerals, energy-power, geopolitics. Digest ran clean (haiku,
+~35 min). Five themes — cobalt HIGH, uranium HIGH, rare-earth MED-HIGH, oil floor MED, natgas MED
+— all multi-year/equity -> IBKR-surface only per the venue constraint. The genuinely useful
+by-product: the IEA facts independently corroborate DEC-0077 (Hormuz closure persistent, Gulf
+production 8.3 mb/d below baseline, "no resolution path visible by EOY 2026").
+
+CRSP trigger RESOLVED after 6 days owed: Casgevy Q2 $76.4M +151% YoY (pace clears the $130M bar)
+AND price in the $48-55 band — original trigger met — but the fresh longterm_check DOWNGRADED
+3.5 -> 3/4 (not cycle-bottom, dilution ahead, R/R 1:1.5). Both facts surfaced to operator; the
+call is theirs (multi-year, IBKR). Deliberately did NOT vet uranium laggards after CCJ ran +15%
+through its band — chasing the cheaper name after the leader ran is the favorite-fade error in
+sector clothing; recorded the run-away as the cost of the unverified-spot gate instead.
+
+Trigger sweep: GOOG far from its dip, ALB and CCJ both LEFT their buy zones. No PM-actionable
+candidates from these domains.

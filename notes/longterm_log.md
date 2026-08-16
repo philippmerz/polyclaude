@@ -593,3 +593,65 @@ Scores 4/4 on secular tailwind (Cloud 82% growth, $514B backlog, enterprise adop
 - [AI Bubble and Valuation Concerns 2026](https://intellectia.ai/blog/ai-investment-boom-bubble-risk-2026)
 - [ChatGPT vs Google Market Share 2026](https://firstpagesage.com/seo-blog/google-vs-chatgpt-market-share-report/)
 ```
+
+---
+
+## 2026-08-16T16:06:36Z — longterm_check
+
+**Query:** `CRSP` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: CRSP
+
+Date: 2026-08-16 | Type: equity | Horizon: 3y
+
+### Current state
+$53.55 (down 31.8% from $78.48 52-week high; up 21.4% from $44.12 low). YTD: -14.5%. Q2 2026 revenue $10.18M (151% YoY growth), loss $91.15M (narrowing). Analyst consensus 4.07/5.00 (Hold-Buy), avg target $80.91 (+51% upside). P/B 2.7x (vs biotech avg 2.5x). DCF fair value ~$219 (75% discount to current price).
+
+### Cyclical position
+CRSP is in early-stage revenue inflection, not cyclical bottom. Casgevy launched Dec 2023; commercial ramp began 2024-2025 with 111 new patient starts in 2025 (3x 2024 levels). Q2 2026 showed 78% QoQ and 151% YoY revenue growth, suggesting acceleration, but base remains tiny ($10M quarterly run rate). Stock down 32% from 52-week highs suggests risk re-pricing, but inflection thesis intact: pediatric approval (July 2026, ages 2+) just expanded addressable patient pool. This is pre-commercial inflection, not cycle bottom—valuation reflects early adoption risk, not fundamental cheap-to-cycle reading.
+
+### Secular tailwind
+Powerful and intact. CRISPR-Cas9 market grows 14.6% CAGR (2026-2034: $3.8B → $11.3B). Gene therapy market 18.9% CAGR (2026-2030: $8.8B → $18.2B). Casgevy is first-in-class validated **cure** for sickle cell / beta thalassemia—not symptom management, paradigm shift. Regulatory de-risking accelerating (FDA pediatric expansion July 2026). Reimbursement strong: 90% of U.S. patients have insurance access. Unmet need durable: 100K+ sickle cell patients in U.S., no prior curative standard. Tailwind is not momentum; it's structural shift from lifelong rx to one-time therapy. Priced in partially, not fully.
+
+### Catalyst window
+- [HIGH] 2026 H2/Q4 — Casgevy patient uptake readout, pediatric ramp validation — Vertex/CRSP Q3/Q4 earnings
+- [HIGH] 2026-2027 — CTX310 Phase 1b data (ANGPTL3, severe hypertriglyceridemia; largest addressable pool after hemoglobinopathies) — CRSP 2026 guidance; "crowded data calendar"
+- [MED] 2026 H2 — CTX611 Phase 2 data (siRNA VTE) — Company guidance
+- [MED] 2027 — CTX340 Phase 1 (hypertension), CTX460 Phase 1 (AAT deficiency) dose escalation — Clinical readouts
+- [MED] 2026-2027 — Zugo-cel (autoimmune/oncology) data updates — Company timeline
+
+### Margin of safety
+Moderate. Net cash position ~$1.78B ($2.36B cash + securities, $586M debt) provides ~2.3-year runway at current burn rate. Company guidance: cash sufficient into 2028. **Unprofitable**: Q2 net loss $91M on $10M revenue. Burn rate narrowing (Q1 loss $123M, Q2 loss $91M), not at risk of insolvency, but will require capital raises (dilution announced 2026). Current P/B 2.7x is reasonable for approved drug + pipeline, but not a deep-value entry. DCF $219 assumes pipeline hits; at current price, equity market caps **upside to cash + pipeline optionality**, not margin of safety on cash alone. Downside cushion: $44 (52-week low), -$10B enterprise value swing if Casgevy disappoints.
+
+### Top 3 risks
+1. **Casgevy ramp underwhelms** — Complex treatment (year-long, chemotherapy conditioning required). Patient hesitation higher than modeled, adoption curve flattens below $300M peak revenue. Market is pricing accelerating 2026-2027 ramp; miss here re-prices stock -30 to -50%.
+2. **Pipeline execution failure** — CTX310, CTX611 fail in Phase 1b/2 or don't show superiority over small-molecule alternatives (e.g., PCSK9 inhibitors for lipids). Casgevy is only approved asset; pipeline is binary speculation. One failed data readout could trigger -20% drawdown.
+3. **Competition + partnership risk** — Editas/NTLA/Intellia advance alternative CRISPR approaches; large pharma (Eli Lilly) enter space with manufacturing/distribution advantage. Vertex partnership de-risks commercialization but limits CRSP control over revenue timing and pricing. Competitive pressure could cap Casgevy market share or delay next-gen products.
+
+### 5-year scenario probabilities
+- Generational (10x+ from $53.55 = $535+): 12% — Casgevy scales to $400M+ annual, CTX310 approved + $300M+ peak, platform becomes multi-billion franchise
+- Strong (3-5x = $160-270): 28% — Casgevy reaches $250-350M peak, 1-2 pipeline programs advance to Phase 2+, stock re-rates on validation
+- Modest (1.5-3x = $80-160): 35% — Casgevy plateaus $200-250M, pipeline shows promise but advances slowly, stock trades sideways to modest gains
+- Flat (-30% to +50% = $37-80): 20% — Casgevy uptake slower than modeled ($150-200M peak), pipeline disappoints, stock consolidates in $40-60 range
+- Thesis broken (-50%+ = <$27): 5% — Major clinical setback in Casgevy (safety signal, reimbursement denial) or pipeline failure cascade, stock reprices to near-cash value
+
+### Entry trigger
+Current price $53.55 with 51% analyst upside to $80.91 offers reasonable entry IF confidence in pipeline and Casgevy ramp is high. **Better entry: $40-45** on any Casgevy Q3/Q4 adoption miss or negative CTX310 Phase 1b readout. **Hold trigger: Q4 2026 Casgevy guidance** — if analyst consensus moves to $300M+ 2026 exit run rate, validates inflection and justifies $60-70 entry. Avoid entry until 2026 H2 data flow reduces binary risk on Casgevy ramp.
+
+### Verdict: 3/4 — WATCH
+Secular tailwind (strong) + catalyst window (strong) score the thesis, but cyclical position is early inflection (not cycle bottom) and margin of safety is moderate (cash runway sufficient, but unprofitable and will dilute). Scores ≥3/4, but only 2 dimensions score "strongly"; lacks the cyclical bottom + deep margin-of-safety combo that defines generational-mispricing setups. **Hold on watchlist through 2026 H2 data calendar.** Enter if Casgevy adoption data validates ramp, or if stock dips to $40-45 on pipeline disappointment (improving risk/reward to 4/4). Risk/reward currently 1:1.5; target 1:2+ before full entry.
+
+### Sources
+- [CRSP Stock Price Quote | CNBC](https://www.cnbc.com/quotes/CRSP)
+- [CRISPR Therapeutics 52-Week High/Low | Yahoo Finance](https://finance.yahoo.com/quote/CRSP/)
+- [CRSP Valuation After Q1 2026 Loss | Yahoo Finance](https://finance.yahoo.com/sectors/healthcare/articles/assessing-crispr-therapeutics-crsp-valuation-151008500.html)
+- [CRISPR Therapeutics 10-Q SEC Filing Q2 2026](https://www.sec.gov/Archives/edgar/data/0001674416/000119312526330672/crsp-20260630.htm)
+- [CRISPR Market Growth 14.6% CAGR 2026-2034 | BioSpace](https://www.biospace.com/press-releases/crispr-based-gene-editing-market-size-to-hit-usd-28-77-billion-by-2035)
+- [Gene Therapy Market 18.9% CAGR 2026-2030 | Grand View Research](https://www.grandviewresearch.com/industry-analysis/gene-therapy-market)
+- [CASGEVY Q2 2026 Revenue $76.4M, 151% YoY Growth | BioSpace](https://www.biospace.com/business/vertex-crispr-set-lofty-goal-for-casgevy-gene-therapy-as-patient-starts-ramp)
+- [FDA Expands CASGEVY Approval to Ages 2+ | Vertex Newsroom](https://news.vrtx.com/news-releases/news-release-details/vertex-announces-us-fda-approval-expanded-use-casgevyr-treatment)
+- [CRSP Pipeline Catalysts 2026-2028 | Seeking Alpha](https://seekingalpha.com/article/4907713-these-are-the-upcoming-catalysts-for-crispr-therapeutics-stock)
+- [CRSP Competition: EDITAS vs CRSP vs NTLA | The Motley Fool](https://www.fool.com/coverage/better-buy/2026/05/31/crispr-therapeutics-vs-editas-medicine-which-gene-editing-stock-is-a-better-buy-in-2026/)
+- [CRSP Downside Risks: Casgevy Uptake, Execution | Yahoo Finance](https://www.sahmcapital.com/content/why-crispr-therapeutics-crsp-down-77-after-major-shelf-filing-and-governance-changes-and-whats-next-2026-06-07)
+```

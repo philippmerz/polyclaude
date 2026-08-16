@@ -1630,3 +1630,169 @@ Sources:
 - [USTR Brazil Section 301 Tariffs](https://natlawreview.com/article/ustr-announces-section-301-tariffs-brazil-new-25-duties-take-effect-july-22)
 - [WHO Dengue Surveillance](https://www.who.int/westernpacific/wpro-emergencies/surveillance/dengue)
 - [Census Trade Data June 2026](https://www.census.gov/foreign-trade/Press-Release/current_press_release/ft900.pdf)
+
+---
+
+## 2026-08-16T16:04:01Z — world_state_digest
+
+**Domains:** critical-minerals-commodities, energy-power-infrastructure, geopolitics-security | **Lookback:** 30d | **Model:** haiku
+
+Now I have comprehensive factual data. Compiling the digest:
+
+---
+
+# WORLD-STATE DIGEST — 2026-08-16
+
+Domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### critical-minerals-commodities
+
+- [2026-08-13] LME/CME: Cobalt 56,290 USD/T; up 68.86% YoY; 8.86% stable past month
+- [2026-08-14] LME/CME: Nickel 16,810 USD/T; down to 9-month low as Indonesian supply expectations improve
+- [2026-06-30] IEA/CME: Lithium spot >$20/kg; doubled from 2025 lows; JPMorgan forecasts 16% YoY demand growth 2026
+- [2026-08-13] Fastmarkets: DRC cobalt export quota fixed 87,000 tonnes annually; projected global demand 292,300 tonnes → 10,700 tonne annual deficit; cobalt supply gap expected to widen from 15% to 25%
+- [2026-08-06] DRC Ministry (via Fastmarkets): Jinchuan (China) and MMG (China) seeking increased cobalt quota allotments
+- [2026-08-XX] IEA Global Critical Minerals Outlook 2026: Copper supply gap narrowed 30%→25%; lithium demand +353% by 2040; nickel demand growth 50%→90%
+- [2026-08-XX] IEA/CME: Investment in critical minerals fell 9% in 2025 (first decline since 2020)
+- [2026-01-XX] IEA: China 90%+ of global rare-earth processing capacity; cumulative planned diversified production = ~33% of mining capacity
+- [2026-06-22] China Ministry of Commerce: 10 US companies placed under rare-earth export restrictions
+- [2026-07-24] China Ministry of Commerce: Blocked dual-use material shipments to 14 EU firms; escalation to 24 total firms (US+EU) by late July
+- [2026-06-30] Cameco: Uranium spot price $85.00/lb (June 30); futures $86.05/lb (July 1); up 10.60% YoY
+- [2026-Q1] Cameco: Long-term uranium contract $90/lb (highest since 2008)
+- [2026-Q1] USGS/EIA: US domestic uranium production 1,039,075 lbs (Q1 2026); highest first-quarter output since 2015
+- [2026-06-18] USGS: "Lithium in Carolinas could replace imports for a century or more" (domestic resource assessment)
+
+### energy-power-infrastructure
+
+- [2026-08-12] EIA Short-Term Energy Outlook: US marketed natural gas production 122.5 Bcf/d forecast for 2026 (record); surpasses 2025 record of 118.5 Bcf/d
+- [2026-08-11] EIA Press Release: Natural gas inventories expected 3,985 Bcf in October 2026 (highest since 2016; prior decade high)
+- [2026-Q3] EIA: Henry Hub natural gas spot price forecast $2.87/MMBtu; 50 cents lower than prior month forecast
+- [2026-08-14] DOE Newsroom: Energy Security initiative to maintain coal-fired generation in Midwest
+- [2026-08-12] DOE Newsroom: Cancellation of three proposed National Interest Electric Transmission Corridors
+- [2026-08-13] DOE/HGEO: $10.75M grant announcement for university training in subsurface energy development
+- [2026-07-25] DOE Fact Sheet: "Golden Era of American Nuclear Energy Has Arrived" (policy statement)
+- [2026-08-XX] BloombergNEF/IEA: 15 reactors expected online 2026 adding ~12 GW capacity (vs 7 shut down in 2025)
+- [2026-02-XX] World Nuclear Association: 74 reactors under construction globally; China 37 units; India 6 units; 78 GW total under construction
+- [2026-XX-XX] World Nuclear Association: China target 100 GW installed capacity by ~2030
+- [2026-H1] IAEA: China's Linglong One SMR scheduled operations start H1 2026 (first commercial onshore SMR)
+- [2026-02-XX] NRC/Holtec: Palisades nuclear plant (Michigan, 800 MW) restart timeline pushed to early 2026; $1.52B federal loan guarantees + $150M state funding
+- [2026-08-14] WTI Crude: $81.12/bbl (Aug 14 open)
+- [2026-08-14] Brent Crude: $86.91/bbl (Aug 14 open); +0.62% past 24h
+- [2026-08-XX] IEA Oil Market Report August 2026: Global oil supply surplus 4 mb/d expected 2026 record
+- [2026-08-XX] IEA: Strait of Hormuz effective closure ~0.6 mb/d persistent supply disruption; 20% of global oil trade normally transits
+- [2026-07-XX] IEA: Gulf oil production 23.9 mb/d (July); 8.3 mb/d below pre-conflict baseline; expected return near pre-conflict by early 2027 with 0.6 mb/d residual disruption
+- [2026-08-XX] OPEC+: August production increase 188,000 bbl/d; prices pushed to near 5-month lows
+- [2026-08-XX] IEA: Lowered global oil demand outlook; conflict/elevated prices weighing on consumption; renewed Middle East hostilities threaten deficit outcome
+- [2026-05-XX] California Energy Commission: 17,000 MW cumulative battery storage installed; grid reliability progress reported
+- [2026-08-XX] Bloomberg/Energy Storage Association: US battery storage capacity projected ~40 GW by end 2026
+- [2026-9M-2025] BloombergNEF: 49.4 GW/136.5 GWh grid-scale battery energy storage systems online (9M 2025); +36% YoY vs same period 2024
+
+### geopolitics-security
+
+- [2026-08-XX] US-Israeli military operations against Iran; Strait of Hormuz effective closure ongoing
+- [2026-08-XX] DOD/State Dept (via security analysis): NATO-Russia medium likelihood armed clashes 2026; increased Russian gray-zone tactics and provocation in Eastern Europe
+- [2026-08-XX] EUISS: China-Taiwan cross-strait conflict risk increased vs 2025; moved to high-risk tier; blockade scenario significant European impact
+- [2026-08-XX] NATO/EUISS: "Pacificization" of NATO into Asia-Pacific; Arctic tensions rising; strategic encirclement perception by Russia/China
+- [2026-08-XX] US State/Commerce: TSMC ordered halt on advanced chip shipments (7nm+) to China after Huawei Ascend 910B discovery (containing TSMC silicon)
+- [2026-08-XX] US State/Commerce: H200 policy volatility 2025-2026: banned → unbanned → 25% tariff → licensing framework within 12 months
+- [2026-01-XX] China Ministry of Commerce: Export restrictions on dual-use goods to Japan
+- [2026-06-22] China Ministry of Commerce: Placed 10 US firms under rare-earth export restrictions
+- [2026-07-24] China Ministry of Commerce: Blocked dual-use shipments to 14 EU firms (total 24 firms US+EU by late July)
+
+---
+
+## CANDIDATE THEMES
+
+### COBALT DEFICIT STRUCTURAL (DRC Quota Binding)
+
+- **Underlying facts:** DRC quota 87,000 tonnes annually vs. projected demand 292,300 tonnes = **10,700 tonne annual deficit**; cobalt supply gap widening 15%→25%; China's Jinchuan and MMG seeking quota increases (Aug 6); spot price $56,290/T (+69% YoY)
+- **Implication:** Supply-constrained mineral; EV battery demand rising; quota acts as hard cap on incremental supply; refiners (Glencore, Sherritt) cannot overcome policy constraint; price has moved significantly but quotas preclude supply response → structural upside on retest of prior highs or new supply shortfall catalyst
+- **Possible plays:** COB futures, mining equities (Glencore, Sherritt International, ERG)
+- **Direction:** Long
+- **Horizon:** 6-12 months (quota resets annually; 2027 allocation uncertain)
+- **Retail blindspot:** Broad commodity oversupply narrative masks sector-specific deficits; "battery metals weak" frames entire complex; individual mineral supply architecture unknown to retail
+- **Confidence:** HIGH — multiple independent sources confirm quota constraint, demand growth trajectory, and production response lag
+
+---
+
+### URANIUM: POLICY-DRIVEN DEMAND INELASTICITY AT SUPPLY LAG
+
+- **Underlying facts:** Uranium $85-86/lb (up 10.6% YoY); long-term contracts $90/lb (highest since 2008); US domestic production 1.04M lbs Q1 2026 (first uptick from 2015 lows); DOE mandate 35 GW nuclear by 2035 (+15 GW/year by 2040); 15 reactors + 12 GW online 2026; Palisades 800 MW first reactor restart (policy precedent)
+- **Implication:** Nuclear capacity mandates create irreversible multi-year demand floor; supply response lag 3-5 years (mine development + enrichment infrastructure); existing spot price ($85-86) and term ($90) underprices structural supply inelasticity; domestic production uptick signals sentiment shift, but capacity constraints remain; Palisades precedent may unlock fleet of older-reactor restarts
+- **Possible plays:** URA (uranium ETF), Ur-Energy (URG), Denison Mines (DNN), Energy Fuels (UUUU), nuclear utilities (NEE, DUK)
+- **Direction:** Long (uranium supply-side; nuclear capacity plays)
+- **Horizon:** 18-36 months (mine development cycles)
+- **Retail blindspot:** "Nuclear dying" narrative entrenched pre-policy shift; DOE "Golden Era" statement (Jul 25) and coal-maintenance initiative (Aug 14) recent and not yet mainstream; uranium spot up only 10.6% YoY despite multi-year capacity mandate suggests pricing lag
+- **Confidence:** HIGH — policy mandates firm, production data shows uptick, term pricing structure (90 long-term vs 86 spot) reflects tightness, Palisades restart sets precedent
+
+---
+
+### RARE EARTH PROCESSING BOTTLENECK + EXPORT CONTROL PREMIUM
+
+- **Underlying facts:** China 90%+ global rare-earth processing capacity; planned non-Chinese capacity = ~33% of mining capacity → structural 2/3 supply gap for processed REEs; export controls to 24 firms (US+EU) by Jul 2026; pricing premiums expected through 2026; full enforcement risk = $6.5T downstream production at risk
+- **Implication:** Processing constraint (not mining) is binding; China can throttle refined supply without throttling ore exports; geopolitical controls layer additional premium; Taiwan chip makers, defense electronics, aerospace all squeezed on magnet/alloy costs; non-China miners (MP Materials) see cost advantage despite lower ore prices due to refined-REE margin expansion
+- **Possible plays:** MP Materials (MP), rare-earth alloying/magnet producers, defense contractors (RTX), semiconductor equipment (ASML-like exposure), Taiwan semiconductor plays (TSM if accessible)
+- **Direction:** Long (rare-earth alloys/magnets; upstream miners with processing); Short (downstream tech dependent on imported processed REEs if no hedging)
+- **Horizon:** 6-18 months (controls enforceability + supply-chain adaptation)
+- **Retail blindspot:** Export controls treated as temporary shock; processing bottleneck not widely understood (retail sees "rare-earth mining" as the constraint, not refining); supply chain substitution lags in pricing
+- **Confidence:** MEDIUM-HIGH — controls confirmed, processing gap real; but enforcement severity and duration uncertain; timing of supply-chain workarounds unpredictable
+
+---
+
+### OIL PRICE FLOOR RESET: GEOPOLITICAL SUPPLY + DEMAND DESTRUCTION EQUILIBRIUM
+
+- **Underlying facts:** Strait of Hormuz closure ~0.6 mb/d persistent; gulf production 23.9 mb/d (23% below pre-conflict); IEA lowered demand forecast citing conflict/elevated prices; OPEC+ Aug production +188k bbl/d (maintaining floor); WTI $81–87/bbl range; Brent $86–91/bbl range; retail focus on 4 mb/d global surplus misses dynamic equilibrium
+- **Implication:** Retail narrative frames market as oversupplied (4 mb/d surplus) → bearish. Reality: geopolitical supply shock (0.6 mb/d persistent + 8.3 mb/d gulf production below baseline) + demand destruction (IEA revised lower) = structural floor higher than $60-70 pre-conflict baseline. OPEC+ production decisions signal active floor maintenance. Price range $75-90 WTI likely more stable than $50-60 or $100+ extremes given conflict persistence through EOY 2026.
+- **Possible plays:** USO (oil ETF), upstream E&P (XLE sector, OXY, CVX, COP), collateral plays (shipping, refining optionality)
+- **Direction:** Long (tactical range $75-90 WTI); watch for Strait reopening as downside risk
+- **Horizon:** 6-12 months (Iran conflict no resolution path visible by EOY 2026)
+- **Retail blindspot:** Oversupply narrative dominates; geopolitical supply destruction + demand destruction feedback loop not priced; market treats conflict as binary (on/off) rather than persistent baseline
+- **Confidence:** MEDIUM — data on supply disruption + demand revision solid; but market already reflects $80+ range, so upside limited vs. downside risk if conflict escalates or resolves suddenly
+
+---
+
+### US NATURAL GAS: PRODUCTION RECORD AT INVENTORY CEILING (POLICY RISK DOWNSIDE)
+
+- **Underlying facts:** Production 122.5 Bcf/d (record); inventories 3,985 Bcf Oct (highest since 2016); Henry Hub $2.87/MMBtu (50¢ lower month-over-month); DOE cancels three National Interest Electric Transmission Corridors (Aug 12); coal-maintenance policy (Aug 14) signals gas export constraint
+- **Implication:** Record production + record inventories = mid-cycle trough in gas prices likely in here ($2.50-3.00 range). Upside catalyst: LNG demand rebound or winter supply tightness (Dec 2026). Downside risk: policy constraints on export infrastructure (transmission corridor cancellations) limit export-driven price upside; coal maintenance signals energy security priorities favor domestic dispatchable power (gas + nuclear) over exports. Floor pricing robust; ceiling capped by policy.
+- **Possible plays:** UNG (nat gas ETF), Henry Hub futures, Canadian producers with US export exposure (CNQ, BIR)
+- **Direction:** Long (trough trade on LNG demand rebound); Short (policy constraint scenario if export infrastructure blocked)
+- **Horizon:** 3-6 months (LNG cycle dependent)
+- **Retail blindspot:** Oversupply framing; missing policy-driven constraint on export capacity expansion; LNG demand cyclicality (Asia winter demand Dec 2026, spring trough) not front-of-mind
+- **Confidence:** MEDIUM — production/inventory data solid; policy constraint scope uncertain; LNG demand cycle timing unknown
+
+---
+
+### DOMESTIC NUCLEAR CAPACITY EXPANSION: FIRST FLEET GROWTH IN 30+ YEARS
+
+- **Underlying facts:** 15 reactors + 12 GW coming online 2026; DOE mandate 35 GW by 2035, 15 GW/year by 2040; China 37 reactors under construction (target 100 GW by ~2030); Palisades 800 MW restart (first-ever US reactor restart, policy precedent despite delays); grid-scale battery storage reaching 40 GW by EOY 2026 (dispatchable backup for renewables variability)
+- **Implication:** Policy pivot from "nuclear phase-out" (legacy narrative) to "nuclear expansion" (post-2025 DOE mandate) is structural, irreversible, and capital-intensive. Utilities + grid operators now require dispatchable power (nuclear + battery) to balance renewable surges + lulls. Palisades restart = proof-of-concept for fleet extension (many US reactors licensed until 2050+, currently uneconomic without policy support). First-mover advantage for firms positioned in uranium (upstream), enrichment, grid battery infrastructure.
+- **Possible plays:** Energy Fuels (UUUU, uranium upstream + rare-earth); uranium ETFs (URA); utility equities with nuclear exposure (NEE, DUK, AEP); battery/grid operators (Tesla, Eos)
+- **Direction:** Long (nuclear-linked supply chains, uranium, grid infrastructure)
+- **Horizon:** 18-36 months (reactor build cycles; mine development)
+- **Retail blindspot:** "Nuclear is dying" narrative pre-DOE shift (DOE statement Jul 25, coal maintenance Aug 14 both recent); mainstream media lag on policy reversal; nuclear sector sentiment still depressed despite mandates
+- **Confidence:** HIGH — policy mandates explicit (DOE), timelines firm, first restart underway, precedent-setting, grid reliability pressure evident
+
+---
+
+## NEXT-STEPS
+
+- **Run longterm_check.py on:** URA, URG, DNN, UUUU (uranium complex); MP (rare-earth processing); COB, GLCNF (cobalt); OXY, CVX, COP (oil floor); NEE, DUK (nuclear utilities); UNG (nat gas)
+- **Run catalyst_check.py on:** DRC cobalt quota review (annual, Sep 2026?); China export control escalation triggers; Palisades restart completion date; Iran-Strait resolution timing; LNG spot demand cycle (Dec 2026 winter ramp)
+- **Skip / pass:** Grid-scale battery surge (40 GW EOY 2026 data already priced into battery ETF plays; timing/margin compression uncertainty high); OPEC+ production dynamics (too much policy discretion, insufficient edge); US coal maintenance policy (limited retail liquidity, policy reversal risk if admin changes)
+
+---
+
+Sources:
+- [IEA Global Critical Minerals Outlook 2026](https://www.iea.org/reports/global-critical-minerals-outlook-2026/outlook)
+- [UNCTAD Global Trade Update June 2026](https://unctad.org/publication/global-trade-update-june-2026-shifting-dynamics-critical-minerals-trade)
+- [JPMorgan Critical Minerals Research](https://www.jpmorgan.com/insights/global-research/commodities/critical-minerals)
+- [EIA Press Release 08/11/2026](https://www.eia.gov/pressroom/releases/press591.php)
+- [IEA Oil Market Report August 2026](https://www.iea.org/reports/oil-market-report-august-2026)
+- [BloombergNEF Nuclear Reactor Outlook 2026](https://carboncredits.com/2026-the-year-nuclear-power-reclaims-relevance-with-15-reactors-ai-demand-and-chinas-expansion/)
+- [World Nuclear Association Construction Pipeline](https://world-nuclear.org/information-library/current-and-future-generation/plans-for-new-reactors-worldwide)
+- [Cameco Uranium Price Tracker](https://www.cameco.com/)
+- [Fastmarkets DRC Cobalt Quota Analysis](https://www.fastmarkets.com/insights/drc-may-reduce-cobalt-quota-if-market-needs-rebalancing-arecoms-says-exclusive/)
+- [S&P Global Rare Earth Supply Bottlenecks 2026](https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026)

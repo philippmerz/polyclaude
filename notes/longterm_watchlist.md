@@ -395,3 +395,18 @@ Themes:
 **PM-actionable candidate found and KILLED (the review's real work):** "Which countries will have an Ebola case in 2026" (13 legs, $32k vol, $9.5k liq — mechanical resolution: any officially confirmed case in-territory by Dec-31). Was building a NO basket on the far-from-Africa legs (US 0.805 NO, China 0.81, India 0.86) against a hard historical base rate — ebola has never been confirmed in China or India across ~30 outbreaks in 50 years; the US only during the 28,000-case 2014-16 epidemic. **Fresh check killed it:** the digest's facts were stale (Uganda's outbreak ENDED Jul-28 at 20 cases, not "378 and growing"), the actual epidemic is DRC at 4,053 cases/1,850 deaths and fastest-growing on record, and **France already has a confirmed exported case** — which directly refutes the never-happens prior the whole basket rested on. With exportation demonstrated and the epidemic still growing, ~20% on US/Canada/China is defensible; I hold no differentiated epidemiological edge. Scored skip, ledger N=45.
 
 Trigger-state: SOL/STX/ALB flagged during the outage window by the fallback — all route=ibkr_surface multi-year repeats at ~unchanged prices, no re-ping warranted.
+
+## 2026-08-16 weekly digest (domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security — due in rotation, 3wk)
+
+Themes (all multi-year -> IBKR-surface per venue constraint):
+- **Cobalt deficit structural (HIGH):** DRC quota 87k T/yr vs 292k T demand = hard-cap deficit widening 15%->25%; spot +69% YoY; China miners petitioning for quota. Plays (Glencore/Sherritt) have no decentralized venue. Surface-only.
+- **Uranium policy-demand inelasticity (HIGH):** term $90/lb highest since 2008, 15 reactors online 2026, Palisades restart precedent. CCJ (the vetted class pick) ran +15% THROUGH its band to $97.74 while the entry stayed gated on the unverified spot leg — recorded as the cost of that caveat. NOT vetting laggards (DNN/UUUU): chasing the cheaper name after the leader ran is the favorite-fade error in sector form. Surface-only.
+- **Rare-earth processing bottleneck (MED-HIGH):** the binding constraint is refining (China 90%+), not mining; export-control list at 24 firms. MP/RTX plays — surface-only.
+- **Oil floor reset (MED):** WTI $81 with the "4 mb/d surplus" narrative masking 8.3 mb/d of Gulf production below baseline. CORROBORATES DEC-0077 (Hormuz closure persistent, no resolution path visible EOY-2026 per IEA).
+- **Natgas trough (MED):** record production + record inventories; policy-capped ceiling. No venue, no edge on LNG cycle timing. Pass.
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **CRSP (re-vet)** | **3/4 (was 3.5)** | WATCH | Gene-therapy inflection | **Original trigger TECHNICALLY MET** — Casgevy Q2 $76.4M +151% YoY (≥$130M pace) with price $53.55 in the $48-55 band — but the fresh vet DOWNGRADED: not cycle-bottom, dilution ahead, R/R 1:1.5 vs 1:2 target. Better entry $40-45; hold-trigger = Q4 guidance ≥$300M run rate. Multi-year -> operator's IBKR call, surfaced with both facts. |
+
+Trigger-state: GOOG $343.54 (dip trigger $280-285 — far), ALB $136.15 (LEFT the ≤$120 zone), CCJ $97.74 (left $85-95 band). No actionable PM candidates from these domains this week.
