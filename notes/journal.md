@@ -8262,3 +8262,19 @@ Explicitly NOT done: no new modules, no new backlog entries. The fresh-session q
 split, bond-fade doctrine) stays queued — 10 days now, but the map mitigates the navigation pain
 and a marathon-session prose reorganization remains the wrong risk. Session hygiene note: this
 session is ~3 days old and stable; the split waits for an actual restart, not a synthetic one.
+
+## 2026-08-17 10:0x — GPT-6 repriced on corroborated Astra flow; prior 0.93 -> 0.90, hold
+
+The enriched PRICE_MOVE alert fired its first live round and pre-classified correctly: GPT-6 YES
+0.065 -> 0.135 tagged [vol24 $12,397; spread 3.0pp] — real flow, no wide-book warning, no manual
+book-walk needed. Sibling check corroborates: the whole Astra front-ladder moved together
+(Aug-31 0.135->0.205, Sep-15 0.395->0.595 on $4.2k) with GPT-6 staying correctly below its Astra
+ceiling — informed repositioning toward an earlier Astra ship, not quote drift. Nothing in my
+feeds; X-native lag assumed, keywords armed if it breaks into RSS.
+
+Mechanical re-derivation, same formula as 08-14: p_yes = Astra-by-Aug-31 (0.205) x 0.5
+recognition discount = 0.10 -> p_no 0.90 (was 0.93). Market NO 0.865: my edge +3.5pp on the
+interpretation-discounted side. Both-measures: hold $30.60 (mine) / $29.41 (market) vs exit
+~$29.24 — HOLD at my number, within tick-noise at the market's. The position rides to Aug-31
+with 14 days left; the gpt6-no-judgment trigger (NO bid <=0.35) sits far below at 0.86.
+No trade. Not Telegram-material (no action; thesis intact at reduced edge).
