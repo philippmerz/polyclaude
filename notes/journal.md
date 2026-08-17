@@ -8315,3 +8315,25 @@ this are why the hurdle filter surfacing something is not itself a signal.
 
 No trades. Nothing material for Telegram. Gamescom window opens tomorrow (listing watch armed at
 full search width); weekly P&L due ~Aug-21; Aug-31 cluster is the next real event.
+
+## 2026-08-17 14:3x — Gamescom prep: found the clause the whole playbook depends on
+
+Gamescom's window opens tomorrow and the template's edge is largest in the HOURS after listing, so
+the useful prep was reading criteria NOW to leave only a diff for later. It found something that
+would have cost real money.
+
+My playbook says "BUY YES on any active-entity leg <=0.80", justified by SDCC going 4-for-4. Read
+two live announce-market variants and they are materially different:
+- SDCC trailer markets (the 4-for-4 variant): qualifies if footage is "officially released ONLINE
+  during the event OR screened at the venue", across every calendar day. That ONLINE backdoor over
+  a multi-day window is the actual engine of the base rate — studios post regardless of panels.
+- WWDC 2026 markets: "Any announcements made outside the WWDC 2026 keynote will not qualify. Only
+  announcements made at the specified event will qualify." Single session, no backdoor.
+
+So the template is CONDITIONAL on a clause I had never isolated — I had internalised "announce
+markets resolve YES" when the truth is "announce markets WITH AN ONLINE BACKDOOR AND A MULTI-DAY
+WINDOW resolve YES". Applying the loose-variant base rate to a strict-variant Gamescom market
+would be the favourite-fade error inverted: buying at 0.80 on a base rate that does not apply.
+Both variants and the exact grep targets are now in backlog, so the listing alert triggers a
+one-minute diff instead of a cold read under time pressure. This is the criteria-read-when-the-
+world-moves lesson applied BEFORE the world moves rather than after.
