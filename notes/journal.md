@@ -8229,3 +8229,17 @@ sector clothing; recorded the run-away as the cost of the unverified-spot gate i
 
 Trigger sweep: GOOG far from its dip, ALB and CCJ both LEFT their buy zones. No PM-actionable
 candidates from these domains.
+
+## 2026-08-17 02:00 UTC cron tick — quiet; one discovery candidate skipped in one line
+
+Bankroll **$198.62**; realizable NET $161.09 (+11.7% on $144.16) vs $172.59 marked. All scans
+clean: UMA just HLE flap (6.5pp toward NO), audit CLEAN, hurdle 8/0, redeem 0, exit 0, daemons
+current+single, coverage silent, MacBook rest 17/33, Portwatch STILL no print past Aug-09 (MA
+4.4) — 14 days to Hormuz resolution.
+
+Discovery's one candidate: Marçal-wins-Brazil NO @ 0.99 (48d, 7.1% APY win-assumed). SKIP: a
+foreign-election candidate fade where my honest p equals the market's (no differentiated polling
+knowledge, no verifiable mechanical criteria), win-assumed carry at the hurdle's edge, and $11
+deployable. Zero-edge carry on borrowed conviction — the exact profile the 2026-07-02 guard
+exists for. No ledger row: this is a no-edge pass, not an evaluated disagreement.
+No trades. Nothing material for Telegram.
