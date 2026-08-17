@@ -207,14 +207,33 @@ def main() -> int:
                 )
             alerts.append(alert)
 
-        # Alert on large outcomePrice moves
+        # Alert on large outcomePrice moves.
+        # 2026-08-17: carry vol24 + spread INLINE so step (0) of unexplained-move
+        # classification ("did it actually trade, or is a midpoint flapping in a
+        # wide book?") is pre-answered. The HLE legs generated a PRICE_MOVE line
+        # on ~6 consecutive ticks, each manually classified to the same verdict
+        # (spread noise, 11-40pp books, board unchanged). outcomePrices IS a
+        # midpoint, so without these two numbers the alert cannot distinguish
+        # information from quote drift — and a low-context tick reading a bare
+        # "+13pp" line is one bad inference from panic-selling a flap.
         if prices and prev_prices and len(prev_prices) >= 2:
             yes_move = abs(prices[0] - prev_prices[0]) * 100
             if yes_move >= args.alert_pp_move:
+                vol24 = float(m.get("volume24hr") or 0)
+                try:
+                    bb, ba = float(m.get("bestBid") or 0), float(m.get("bestAsk") or 0)
+                    spread_pp = (ba - bb) * 100 if (bb and ba) else None
+                except (TypeError, ValueError):
+                    spread_pp = None
+                ctx = (f" [vol24 ${vol24:,.0f}; spread "
+                       + (f"{spread_pp:.1f}pp" if spread_pp is not None else "n/a")
+                       + ("; WIDE BOOK — likely midpoint flap, walk the book before believing"
+                          if (spread_pp or 0) >= 5 or vol24 < 500 else "")
+                       + "]")
                 alerts.append({
                     "slug": slug, "type": "PRICE_MOVE",
                     "market_id": market_id,
-                    "msg": f"YES moved {prev_prices[0]:.4f} → {prices[0]:.4f} ({yes_move:+.1f}pp)",
+                    "msg": f"YES moved {prev_prices[0]:.4f} → {prices[0]:.4f} ({yes_move:+.1f}pp){ctx}",
                 })
 
         # Cross-check: if data-api positions doesn't show this slug but on-chain has it,

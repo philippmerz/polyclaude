@@ -8243,3 +8243,22 @@ knowledge, no verifiable mechanical criteria), win-assumed carry at the hurdle's
 deployable. Zero-edge carry on borrowed conviction — the exact profile the 2026-07-02 guard
 exists for. No ledger row: this is a no-edge pass, not an evaluated disagreement.
 No trades. Nothing material for Telegram.
+
+## 2026-08-17 02:2x — meta-reflection: PRICE_MOVE alerts now carry their own step-(0) answer
+
+One finding, driven by a measured recurring cost: the HLE legs produced a UMA PRICE_MOVE line on
+~6 consecutive ticks, each manually classified (fetch book, check volume+spread) to the same
+verdict — midpoint flap on a wide book. The alert now carries vol24 + best-bid/ask spread INLINE
+(both already in the gamma row uma_status_check fetches — zero extra API calls) and appends
+"WIDE BOOK — likely midpoint flap, walk the book before believing" when spread >=5pp or vol24
+<$500. The deeper reason it matters: outcomePrices IS a midpoint, so a bare "+13pp" line cannot
+distinguish information from quote drift, and a low-context tick is one bad inference from
+panic-selling a flap. Verified three ways: live run clean, threshold-lowered run (no deltas to
+fire — cache freshly written), and a synthetic unit check of the three formatting cases
+(wide-book warn / liquid clean / malformed-fields degrade to n/a + conservative warn). Suite
+passes.
+
+Explicitly NOT done: no new modules, no new backlog entries. The fresh-session queue (lessons
+split, bond-fade doctrine) stays queued — 10 days now, but the map mitigates the navigation pain
+and a marathon-session prose reorganization remains the wrong risk. Session hygiene note: this
+session is ~3 days old and stable; the split waits for an actual restart, not a synthetic one.
