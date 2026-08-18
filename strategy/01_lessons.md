@@ -35,8 +35,21 @@ the gap); *verify against a known truth* (absent output and failed output look i
   breakeven IS fair) and let the market decide. Validated live: Fed 8.22sh filled at
   0.26 vs 0.25 fair, 2026-07-29 — someone paid above fair, variance retired for free.
 - **Hidden-info exception (both directions).** Positions whose market has an insider
-  channel (GPT-6, MacBook) get NO resting take-profit sells — an informed up-move means
-  fair JUMPED and the old-fair sell donates the news. Same logic blocks resting NO bids
+  channel (GPT-6, MacBook) get NO resting take-profit sells AT FAIR — an informed up-move means
+  fair JUMPED and the old-fair sell donates the news.
+  **REFINED 2026-08-18 after four days of running the opposite in practice.** The rule as written
+  reads as a blanket ban and named the two markets I then rested sells on (GPT-6 0.94, MacBook
+  0.69) — doctrine and practice had diverged unreconciled, which a future session would have read
+  as contradiction. The ban is correct for resting AT fair and wrong for resting ABOVE it, because
+  the premium IS the compensation for jump risk. GPT-6 made the arithmetic explicit: hold-to-
+  resolution at my own 0.912 is $31.01, a 0.94 fill is $31.96 certain, so resting beats holding by
+  +$0.48 to +$0.90 across any plausible fill probability. The donate-the-news case is real but is
+  measured against a fair I do not hold more confidently than the market does. So: **premium-to-
+  fair resting sells are permitted on hidden-info markets; at-or-below-fair ones remain banned**,
+  and the premium must be sized to the jump — which is exactly why MacBook (largest leg, hard
+  Sep 8-10 catalyst) was rested at HALF size while GPT-6 (no edge left, 12d, liquid) went full.
+  The generic form: when practice has quietly diverged from a written rule, one of them is wrong
+  and finding out which is cheap — the expensive outcome is leaving both on the page. Same logic blocks resting NO bids
   on announce-markets (embargoed reveals hit NO bids). Resting YES bids on
   announce-markets are benign PRE-catalyst (informed flow lifts asks, doesn't hit bids)
   and become ADVERSE the moment the window closes — pull them at window end

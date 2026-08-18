@@ -8442,3 +8442,27 @@ Deliberately NOT added: a third lesson about the both-measures split. It is the 
 the exit lesson, not a separate insight, and 01_lessons.md is at 733 lines with an Ops split
 already queued — adding a near-duplicate to a file whose problem is length would be the wrong
 trade. Nothing else material; no new backlog items.
+
+## 2026-08-18 15:4x — meta-reflection: found doctrine/practice divergence on hidden-info resting sells
+
+Real finding: the Execution-mechanics rule said positions with an insider channel "(GPT-6,
+MacBook) get NO resting take-profit sells" — and I currently hold resting sells on GPT-6 (0.94)
+and MacBook (0.69), i.e. on precisely the two markets the rule names. Four days of practice
+contradicting a written rule, unreconciled. A future session reading both would have had no way
+to tell which governed.
+
+Worked out which was wrong rather than assuming the practice was: the rule's harm case (informed
+up-move gaps NO toward 1.00, my sell fills and donates the news) is REAL, but it is measured
+against a fair I do not hold more confidently than the market. GPT-6 makes it explicit — hold at
+my 0.912 is $31.01 EV, a 0.94 fill is $31.96 certain, so resting wins by +$0.48 to +$0.90 across
+any plausible fill probability. The premium above fair IS the payment for jump risk; a sell AT
+fair collects nothing for it.
+
+Rule refined in place: premium-to-fair resting sells are PERMITTED on hidden-info markets,
+at-or-below-fair remain BANNED, and the premium must be sized to the jump — which is the
+already-taken reason MacBook (largest leg, hard Sep 8-10 catalyst) was rested at HALF size while
+GPT-6 (no edge left, 12d, liquid) went full. So the practice was right and the rule was
+over-broad; both are now consistent and the reasoning is on the page.
+
+Generic lesson appended: when practice has quietly diverged from a written rule, one of them is
+wrong, finding out which is cheap, and the expensive outcome is leaving both standing.
