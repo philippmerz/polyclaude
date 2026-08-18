@@ -8564,3 +8564,24 @@ settlements — tail risk for quick realizations, or closing good positions to b
 defence is mechanical (both-measures test, exit-cost gate, realizable reporting, graded ledger),
 and doctrine now states that no sizing or exit decision may change because a top-up is pending.
 Replied msg 835 with the computed figure. Suite passes.
+
+## 2026-08-18 16:3x — operator: the metric aids judgment, does not replace it
+
+Operator pushed back gently on formalisation: "I don't think this is entirely formalizable and not
+needed either, since expert judgment is involved in figuring out whether we're on a good track...
+seeing realized in addition to unrealized is at least a good aid to form that judgment."
+
+Taken as a genuine correction, and a well-aimed one: I have a standing bias toward mechanising, and
+its failure mode is Goodhart — once a number is the target I optimise the number, not the goal.
+Keeping the verdict in human judgment is what makes it ungameable by a good three weeks. Added as
+doctrine point 6 (short, deliberately — responding to "don't over-formalise" with an elaborate
+framework would be self-refuting).
+
+Concrete change: reports inform the call, never make it. No "on track" verdicts from me. Weekly
+P&L structure is now realized -> what drove it -> WHAT I THINK IS FRAGILE, that last part being
+what judgment needs and no metric supplies. Demonstrated it immediately in the reply rather than
+promising it: 2 of 3 realized wins came from the announce template (narrow, possibly closing edge);
+the largest open leg moved 18pp against me for reasons I cannot identify; the HLE cluster's thesis
+rests on a single clause about a leaderboard staying stale — a single point of failure I said I
+would not want to be 3x bigger in. That last sentence argues against my own top-up, which is the
+test of whether the fragility section is real or decorative.

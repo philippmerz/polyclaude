@@ -22,6 +22,16 @@ never a result. Concretely, and each of these changes a decision:
 4. **Time-to-settlement is now a real cost term.** Two positions with equal edge are not equal if
    one settles in 2 weeks and the other in 5 months; the near one compounds sooner and carries less
    thesis-drift risk. This does NOT license chasing short-dated tail bets — see 5.
+6. **The metric AIDS judgment; it does not replace it** (operator, 2026-08-18: "I don't think this
+   is entirely formalizable and not needed either, since expert judgment is involved"). Deliberate
+   limit on the instinct to mechanise: once a number becomes the target, the number gets optimised
+   rather than the goal, and a human verdict is the one thing a good three weeks cannot game. So
+   reports INFORM the call and never make it — no "on track" verdicts. Weekly P&L leads with
+   realized, then what drove it, then **what I think is fragile**, which is the part judgment needs
+   and no metric supplies. (Live example of that third part: 2 of 3 realized wins came from the
+   announce template — narrow, possibly closing; the largest open leg moved 18pp against me for
+   unidentified reasons; the HLE cluster rests on ONE clause about a leaderboard staying stale.)
+
 5. **THE STANDING TRAP, named 2026-08-18.** The operator signalled a ~3x top-up conditioned on
    performance, then correctly re-anchored it on realized results and Jan-2027. A metric that
    rewards settled cash creates pressure to manufacture settlements: taking tail risk for quick
