@@ -584,6 +584,22 @@ the one that arrives with a plausible justification attached. Audit those hardes
   error to entry time, where exit liquidity must be priced BEFORE committing, because afterwards
   the arithmetic will always tell you that you are stuck.
 
+- **Split "named resolution source" into MEASURABLE-INTERIM vs TERMINAL-ONLY — my edge only exists
+  in the first.** 2026-08-18, gate-checking the Spotify "top artist 2026" family (named source,
+  mechanical resolution, Dec-31 measurement, $10-25k books — superficially the exact shape that has
+  worked). It fails on one structural property: Spotify publishes the resolving variable ONCE, at
+  Wrapped, and no public source tracks calendar-year global streams mid-year (Kworb carries
+  all-time totals and chart appearances, neither of which is the resolving quantity). Contrast the
+  markets where this class HAS paid: PortWatch publishes the Hormuz 7-day MA continuously, so I
+  measured 4.4-vs-60 before committing and the same measurement killed the Bab el-Mandeb sibling at
+  25.1-vs-10; agi.safe.ai publishes the HLE board continuously, so "has a qualifying row appeared"
+  is checkable any day. **The test is not "is the source named and mechanical" — it is "can I read
+  the variable TODAY."** If the answer is no, there is no fact to verify until resolution, my stated
+  edge (verifying facts the crowd has not checked) is structurally unavailable, and what remains is
+  a popularity forecast against fans who follow it more closely than I do. Cheap filter, applies
+  before any pricing work: find the source, try to read the CURRENT value, and skip the family if
+  you cannot.
+
 - **A rule inferred from a neighbouring case is not a verified rule — and the neighbour can point
   the wrong way.** 2026-08-12's drill established that a resting sell BLOCKS an emergency taker
   exit: it locks the very shares that path needs. On 2026-08-18, with a full-size exit resting on

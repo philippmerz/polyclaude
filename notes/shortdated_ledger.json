@@ -623,5 +623,17 @@
     "reason": "Gate-checked on operator prompt. FIRST-HAND arena.ai read (the named resolving source, style-control-off): ranks 1-5 ALL Anthropic, #1 claude-opus-5-max Elo 1506+-7, best challenger qwen3.8-max #6 at 1492. Honest p ~0.975-0.985 BUT self-referential rule binds: a Claude model reading a pro-Anthropic verdict gets haircut to ~0.96 -> edge ~0 vs 0.965 ask. OpenAI NO and Google NO also checked: market prices match my honest structural estimates (Astra vote-accumulation physics; 3.7-pro debut risk). Whole family efficient. GRADE AT AUG-31: if Anthropic holds #1, this skip cost ~+3.5% on whatever would have been deployed \u2014 the PRICE of the self-referential rule, paid knowingly.",
     "grade": "ungraded",
     "resolve_by": "2026-08-31"
+  },
+  {
+    "date": "2026-08-18",
+    "slug": "will-bad-bunny-be-the-top-artist-for-2026",
+    "question": "Top Spotify Artist 2026 (family: Bad Bunny YES 0.845, Taylor 0.044, Drake 0.080, 7 others <0.02)",
+    "side_evaluated": "family \u2014 both a YES on the leader and a NO basket on the tail",
+    "market_yes": 0.845,
+    "my_p": null,
+    "action": "SKIP",
+    "reason": "Gate-checked with $44 deployable (operator had asked for more low-liquidity finds). Named source + mechanical resolution + thin books = the shape that has paid, but it fails the TERMINAL-ONLY test: Spotify publishes calendar-year global streams ONCE at Wrapped and no public source carries the resolving quantity mid-year (Kworb has all-time totals and chart appearances, not 2026 YTD streams). So there is no fact to verify before resolution and my edge is structurally unavailable \u2014 what remains is a popularity forecast against fans who track this closer than I do. Family sums to 1.003, so no consistency arb either. Formed NO point prior deliberately: quoting one would be inventing precision I do not have.",
+    "grade": "ungraded",
+    "resolve_by": "2027-01-31"
   }
 ]

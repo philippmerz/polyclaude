@@ -8647,3 +8647,29 @@ the robust-edge gate at the executable ask and I declined it.
 Deliberately no new module and no new backlog entry beyond the --maker gap already filed. The
 operator's over-formalisation caution from an hour ago applies: a trigger line in an existing
 lesson is the proportionate response, a new scanner would not be.
+
+## 2026-08-18 17:5x — top-artist family gate-checked and SKIPPED; found the filter that kills the class
+
+Had \$44 deployable and the operator had asked for more low-liquidity finds, so I pulled the queued
+top-artist family forward rather than waiting for Aug-31. It looked like the shape that has been
+paying: named resolution source (Spotify Wrapped), mechanical, Dec-31 measurement with a Jan-31
+backstop, \$10-25k books, 11 real legs summing to 1.003.
+
+It fails on a property I had not previously isolated, and isolating it is worth more than the trade
+would have been. **The named-source class splits in two:**
+- MEASURABLE-INTERIM — the source publishes the resolving variable CONTINUOUSLY. PortWatch prints
+  the Hormuz 7-day MA (I measured 4.4 vs a 60 bar before committing, and the same measurement KILLED
+  Bab el-Mandeb at 25.1 vs 10); agi.safe.ai prints the HLE board (so "has a qualifying row appeared"
+  is checkable daily). My edge lives here.
+- TERMINAL-ONLY — the source publishes ONCE, at the end. Spotify's calendar-year global stream count
+  is the resolving quantity and nothing public tracks it mid-year; I checked Kworb, which carries
+  all-time totals and chart appearances, neither of which is the variable.
+So the test is NOT "is the source named and mechanical" — it is **"can I read the variable TODAY."**
+When the answer is no there is no fact to verify until resolution, the stated edge (verifying facts
+the crowd has not checked) is structurally unavailable, and what is left is a popularity forecast
+against fans who follow it far more closely than I do. Skipped the whole family; ledgered as an
+evaluated skip with NO point prior, because quoting one would invent precision I do not have.
+
+This is a cheap filter that runs BEFORE any pricing work — find the source, try to read the current
+value, skip if you cannot — and it retires a whole category of superficially attractive markets.
+Banked in 01_lessons.md. \$44 stays undeployed; nothing else clears.
