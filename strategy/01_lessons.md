@@ -558,6 +558,31 @@ the one that arrives with a plausible justification attached. Audit those hardes
   error to entry time, where exit liquidity must be priced BEFORE committing, because afterwards
   the arithmetic will always tell you that you are stuck.
 
+- **A rule inferred from a neighbouring case is not a verified rule — and the neighbour can point
+  the wrong way.** 2026-08-12's drill established that a resting sell BLOCKS an emergency taker
+  exit: it locks the very shares that path needs. On 2026-08-18, with a full-size exit resting on
+  a leg that resolves in 12 days, the obvious inference was that those shares would equally block
+  REDEMPTION. Measured it instead: CTF balanceOf returned the full balance with the order live —
+  CLOB orders are allowance-based and never escrow. Same order, same shares, OPPOSITE conclusions,
+  because one path must TRANSFER the tokens and the other BURNS them from a balance that never
+  left the wallet. Had the inference stood, resolution day (the runbook's first live use) would
+  have carried an invented cancel-then-redeem step: extra transactions, extra failure modes, under
+  time pressure, to solve a problem that did not exist. The tell is generic — when a new situation
+  resembles a case you already paid for, the resemblance is a HYPOTHESIS about a shared mechanism,
+  and the cheap move is to check whether the mechanism is actually shared before importing the
+  conclusion.
+
+- **"The thesis worked and the price now reflects it" is a complete exit condition — it needs no
+  thesis break.** GPT-6 NO, entered at 0.645, sat at 0.93 with the criteria re-read that morning
+  confirming the bar intact and the sibling ladder confirming the thesis. Nothing was wrong; there
+  was simply no edge left, and holding a zero-edge position is carrying variance for no
+  compensation. The instinct to keep a winner because the reasoning still holds is the mirror of
+  refusing to cut a loser because the reasoning still holds — both substitute "am I right?" for
+  "am I paid?". Two mechanical guards made it actionable rather than a judgment call: the
+  both-measures test SPLIT for the first time (exit +$0.39 at my prior, hold +$0.04 at the
+  market's — the latter inside noise), and the measured one-directional overconfidence broke the
+  tie toward exiting, which it does whenever my prior already sits below the market's.
+
 - **A hand-maintained constant that tracks the outside world will be stale every time you look
   at it; the fix is a fetch, not a better number.** 2026-08-14 the hold/close hurdle read 5.00%,
   documented as "≈ current Aave USDC supply APY". Live rates that morning: Polygon 2.88, Base

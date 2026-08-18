@@ -8421,3 +8421,24 @@ writing down: resting sells block the EMERGENCY path but not the REDEMPTION path
 same shares, opposite conclusions, because one needs to transfer the tokens and the other burns
 them from a balance that never left. A rule inferred from a neighbouring case is not a verified
 rule.
+
+## 2026-08-18 14:5x — meta-reflection: two genuine lessons banked from today's exit
+
+(1) Cleanup: nothing stale. Priors current (GPT-6 criteria_read + 3 HLE legs advanced this
+morning), triggers armed with sane expiries, tests green, daemons current+single, conditionId
+snapshot covers both Aug-31 resolvers.
+
+(2) Two lessons banked in 01_lessons.md — both from today, both generalizable beyond their
+instance, and both checked against existing text first to avoid duplication (grep found no
+coverage of either):
+  - "A rule inferred from a neighbouring case is not a verified rule" — the resting-sell case,
+    where the neighbouring drill pointed the WRONG way and measuring took 30 seconds.
+  - "'The thesis worked and the price now reflects it' is a complete exit condition" — the
+    GPT-6 exit, with the note that keeping a winner because the reasoning holds is the mirror
+    image of refusing to cut a loser for the same reason. Both substitute "am I right?" for
+    "am I paid?".
+
+Deliberately NOT added: a third lesson about the both-measures split. It is the MECHANISM inside
+the exit lesson, not a separate insight, and 01_lessons.md is at 733 lines with an Ops split
+already queued — adding a near-duplicate to a file whose problem is length would be the wrong
+trade. Nothing else material; no new backlog items.
