@@ -82,6 +82,19 @@ the gap); *verify against a known truth* (absent output and failed output look i
   unpredictable). Priors carry `verified:` dates; >14d flags in both Kelly consumers.
   The world can move while the prior stands still (Satoshi: the Murphy-FOIA suit
   matured into the window; exit at fair, 2026-07-26).
+  **Now 4-for-4, and the missing piece was WHEN to call it (added 2026-08-18).** The fourth was a
+  CONFIRMATION rather than a catch: MacBook fell 18pp on ~$162 of volume, kimi's 25-round search
+  found no development justifying it, and it independently derived p_no ~0.68 against my 0.65 — so
+  the move was a liquidity sweep and the right action was to hold 49 shares with confidence, not to
+  trade. Note that a confirmation is as valuable as a catch: without it I was holding my largest
+  position through an unexplained 18pp move, which is the state I had just described to the operator
+  as my biggest fragility. THE TRIGGER, which is what was actually absent: an UNEXPLAINED move ≥15pp
+  on a held position — meaning it survived step (0) as real book movement, has no news-watcher hit,
+  and has no sibling to cross-check — earns one kimi call. I only ran it today because I happened to
+  think of it, which is the same failure shape as the news-coverage gaps found one at a time. Cheap
+  (one agent slot, ~4 min), and its output feeds the prior either way. Cross-check the reverse
+  direction too: it does NOT license buying every noise dip — the same day, the resulting add still
+  failed the robust-edge gate at the executable ask, and I declined it.
 - **A prior CUT triggers an immediate re-size check.** portfolio_kelly's over-sized
   flag fired for 3 days after the Fed prior cut and I read it as informational because
   it lacked a HOW (fixed: it now prints the fee-free maker route). Kelly at the NEW

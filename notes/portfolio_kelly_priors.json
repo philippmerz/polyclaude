@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-08-14",
+  "_updated": "2026-08-18",
   "trump-out-as-president-before-2027": {
     "p_no": 0.97,
     "cluster": "us-politics",
@@ -173,72 +173,6 @@
     ],
     "divergence_ack": "2026-08-12",
     "divergence_note": "REVISED same day. The 02:00 ack claimed 'prior freshly sourced, today's drop carries no news' \u2014 that was WRONG in its basis: the source was fetched-and-dated but FOUR MONTHS OLD in a fast-moving supply-chain story, and I had never asked whether a NEWER source existed. Gap is now 12pp (0.62 vs 0.495), not 30pp."
-  },
-  "will-gpt-6-be-released-by-august-31-2026-778": {
-    "p_no": 0.9,
-    "cluster": "ai-ships-fast-short",
-    "rho_within": 0.7,
-    "cluster_frac": 0.0,
-    "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-21 HONEST UPDATE 0.90->0.82: the market has now oscillated 0.77<->0.57 in 4 days on ZERO fundamental change (still no GPT-6 announcement/model-card/date, verified Jul-21; govt-review process still applies). The persistent ~40% YES pricing + unprecedented 2026 cadence (7 releases <1yr) means the relabel/fast-ship tail is honestly ~18%, not my earlier 10% \u2014 a merits update (cadence data), NOT crowd-anchoring (I stay well above the market's 43% YES). Kimi_advisor's 0.60 was the conservative anchor; my 0.82 is the partial move I judge correct (generation labels DO have runway, unlike point releases). At mark 0.57 this is a verified RUMOR-FLOW dip (no hidden-info channel: YES needs a public release) -> cheap vs 0.82 fair.",
-    "verified": "2026-08-17",
-    "note": "0.85 -> 0.90 on 2026-08-12 14:00, triggered by exit_analysis printing the session's FIRST 'SELL TAKER NOW' (+$0.24 vs hold) on this leg. Verified the move rather than executing it, per the hidden-info rule, and the verdict turned out to be an artifact of a STALE PRIOR rather than a real exit signal: the market at 0.88 was ahead of my 0.85, not wrong. What I had failed to apply is TIME DECAY on a by-date market \u2014 the 0.85 was set on 08-11 with 20 days left; there are now 19, and every day that passes with no waitlist open mechanically lowers P(YES). For YES, OpenAI must stand up OPEN access within 19 days from a standing start of no waitlist, beta or early-access programme of any kind, while a CRITICAL Preparedness-Framework classification mandates pre-release slowdowns, security controls and testing. That is ~8-10%, so p_no 0.90. Sibling corroboration holds: the Astra ladder has been shifting mass out of August into autumn all day. At 0.90 fair against a 0.870 bid the SELL-TAKER verdict correctly disappears \u2014 holding is worth more than a fee-bearing exit 19 days early.",
-    "hazard_schedule": {
-      "note": "SUSPENDED 2026-08-06 \u2014 schedule assumptions dead post-sibling-event; prior tracks market until the cause is identified.",
-      "checkpoints": {}
-    },
-    "criteria_read": "2026-08-18",
-    "hidden_info": true,
-    "thesis_break_rule": "CRITERIA RE-READ 2026-08-10 (21d to resolution, active Astra rumour flow). YES needs GPT-6 'made available to the GENERAL PUBLIC' by Aug-31 23:59 ET. The text is explicit that OPEN beta and OPEN ROLLING WAITLIST signups DO count, while a CLOSED beta or ANY form of private access does NOT, and the access must be 'clearly defined and publicly announced by OpenAI'. Naming: explicitly 'GPT-6' OR anything 'recognized as a successor to GPT-5' (so Astra can qualify on positioning alone); 'GPT-5.5 or similar' explicitly does NOT. => TIER-1 ALERT TRIAGE, decide BEFORE reacting: 'Astra waitlist opens' / 'generally available' / 'rolling access' = REAL thesis break, exit. 'Astra closed beta' / 'early access for select customers' / 'safety testing with partners' = NOT a break, hold \u2014 the criteria exclude private access by name. Current world state supports NO: Altman ~Aug-6 stated publicly that Astra is NOT yet generally available and that OpenAI needs 'a little longer' pending cyber-capability safety work \u2014 a dated first-party statement that the qualifying event has not occurred and is gated on a review. Prior 0.82 vs market 0.78 = 4pp, inside divergence threshold, no trade.",
-    "key_facts": [
-      {
-        "claim": "No open waitlist, open beta or early-access signup exists for Astra (criteria require OPEN access; closed/private explicitly does NOT count).",
-        "source": "https://bravenewcoin.com/insights/openai-ceo-sam-altman-says-astra-ai-will-be-generally-available-but-cyber-capabilities-require-more-safety-work",
-        "source_date": "2026-08-10",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Altman, verbatim: 'Given its cyber capabilities, we need a little bit longer to do this safely.'",
-        "source": "https://bravenewcoin.com/insights/openai-ceo-sam-altman-says-astra-ai-will-be-generally-available-but-cyber-capabilities-require-more-safety-work",
-        "source_date": "2026-08-10",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "OpenAI could not rule out Astra reaching the CRITICAL cyber threshold \u2014 the first model ever \u2014 which TRIGGERED mandated slowdowns, security controls and extra testing BEFORE broader release.",
-        "source": "https://bravenewcoin.com/insights/openai-ceo-sam-altman-says-astra-ai-will-be-generally-available-but-cyber-capabilities-require-more-safety-work",
-        "source_date": "2026-08-10",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "SIBLING CORROBORATION \u2014 LOOK IT UP, do not trust a pinned number here. The 'Astra released by' ladder is a live market and drifts daily: recorded 'Aug-31 ~0.22, Sep-15 ~0.54' on 2026-08-12 and one day later it reads 0.165 / 0.40, a 5.5pp and 14pp move. What is STABLE and is the actual corroboration: the ladder stays monotone and keeps September as the modal release month, and the Aug-31 leg has been DRIFTING DOWN, which supports the GPT-6 NO thesis rather than threatening it. Re-read the live event at decision time; treat any number written here as illustrative of shape, never as current.",
-        "source": "gamma-api event openais-astra-released-by-20260801214557729 [FIRST-HAND MEASUREMENT \u2014 re-read live]",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Criteria count anything 'recognized as a successor to GPT-5' \u2014 Astra can qualify without the GPT-6 name; 'GPT-5.5 or similar' explicitly does not.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=will-gpt-6-be-released-by-august-31-2026-778",
-        "source_date": "2026-08-10",
-        "checked": "2026-08-10"
-      },
-      {
-        "claim": "TIME-DECAY RE-DERIVATION 2026-08-14 (16.4d to resolution, inside the 30d window where a by-date prior must be re-derived each tick). Sibling Astra ladder LIVE: Aug-15 0.011 / Aug-31 0.135 / Sep-15 0.395 / Sep-30 0.777. GPT-6 requires a model RELEASED and RECOGNISED as the GPT-5 successor, so 0.135 is a hard ceiling; after the recognition discount p_yes ~0.07. Market prices YES 0.070 and the successor-recognition clause is an INTERPRETATION question where doctrine says defer to the market, not override it. p_no 0.90 -> 0.93.",
-        "source": "gamma public-search Astra ladder + GPT-6 market, first-hand",
-        "source_date": "2026-08-14",
-        "checked": "2026-08-14"
-      },
-      {
-        "claim": "SIBLING-LADDER RE-DERIVATION 2026-08-17 10:00: Astra front-ladder repriced UP on corroborated flow (Aug-31 0.135->0.205 $2.5k vol; Sep-15 0.395->0.595 $4.2k) with GPT-6 0.135 correctly below its Astra ceiling. Same formula as 08-14: p_yes = 0.205 x 0.5 recognition = 0.10 -> p_no 0.90. No news in feeds (X-native lag assumed). Market NO 0.865; my edge +3.5pp, interpretation-discounted.",
-        "source": "gamma Astra ladder, first-hand",
-        "source_date": "2026-08-17",
-        "checked": "2026-08-17"
-      },
-      {
-        "claim": "CRITERIA RE-READ 2026-08-18 (13d to resolution), live description verbatim-checked against recorded thesis: all three load-bearing clauses UNCHANGED \u2014 (1) OPEN access required, \"closed beta or any form of private access will not suffice\", (2) name OR successor-recognition qualifies (\"GPT-5.5 or similar will not count\"), (3) resolution source = official OpenAI info + credible-reporting consensus. No drift; the two re-derivations this week (0.93 on 08-14, 0.90 on 08-17) rest on an intact bar.",
-        "source": "gamma market description, first-hand",
-        "source_date": "2026-08-18",
-        "checked": "2026-08-18"
-      }
-    ]
   },
   "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
     "p_no": 0.41,

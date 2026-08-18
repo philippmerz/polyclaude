@@ -8623,3 +8623,27 @@ expected gain does not buy that. The investigation's job was to resolve the unce
 TOOL GAP FOUND: --maker sets the execution price but the gate still runs on taker cost, so maker
 entries are judged on economics they never pay. Backlogged with the direction noted — it rejects
 trades that would clear and never admits ones that should not, so it errs safe for a gate.
+
+## 2026-08-18 17:3x — meta-reflection: kimi trigger added; audit caught my own exit hygiene
+
+(1) CLEANUP — the audit earned its keep on a gap I created hours earlier. After the GPT-6 exit it
+flagged 2 issues I had not noticed: a stale conditionId snapshot and an ORPHANED PRIOR (no live
+position, no closure note) — exactly the drift that produced the false WATCH-trigger reading on
+08-15, when a resolved Marvel entry impersonated a live stale one. Prune verified on-chain FIRST
+(CTF balanceOf = 0 confirms SOLD rather than de-indexed, the distinction data-api cannot make and
+the runbook warns about), then pruned per the file's own stated policy. Priors now 6 entries
+against 7 live positions — the gap is Hormuz, which has no prior recorded because it is a
+mechanical fade priced off a measured variable, not a judgment prior. Audit CLEAN.
+
+(2) ONE GENUINE FINDING, same class as the news-coverage gaps: kimi_advisor is now 4-for-4 (three
+stale-fact catches plus today's confirmation) and had NO TRIGGER for when to invoke it. I ran it
+today only because I happened to think of it. Trigger now written into the lesson: an UNEXPLAINED
+move >=15pp on a held position — survived step (0) as real book movement, no news-watcher hit, no
+sibling to cross-check — earns one call. Also recorded that a CONFIRMATION is as valuable as a
+catch (without it I was holding my largest leg through an unexplained 18pp move), and the explicit
+counter-brake: it does NOT license buying every noise dip, since the same day's add still failed
+the robust-edge gate at the executable ask and I declined it.
+
+Deliberately no new module and no new backlog entry beyond the --maker gap already filed. The
+operator's over-formalisation caution from an hour ago applies: a trigger line in an existing
+lesson is the proportionate response, a new scanner would not be.
