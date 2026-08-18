@@ -1,5 +1,35 @@
 # Polyclaude — Trading Doctrine
 
+## OBJECTIVE, restated by the operator 2026-08-18 (supersedes any marked-value framing)
+
+> "I will look at the realised performance, not the volatile bets. As the goal states, return on
+> investment, and it's only truly return when the cash settles on the wallet."
+
+The objective is maximum expected COMPOUNDED REALIZED return. Mark-to-market is a planning input,
+never a result. Concretely, and each of these changes a decision:
+
+1. **RESOLUTION IS THE BEST CASH CONVERSION.** It pays $1.00 per share with zero fee and no spread.
+   A correct thesis carried to settlement therefore beats trimming into a thin bid — which reverses
+   the instinct to "lock in" a marked gain, because locking in through a 10-40pp spread converts a
+   paper gain into a smaller real one.
+2. **A marked gain is not progress and is not reportable as such.** bankroll.py prints REALIZED
+   (settled cash) as the headline with BOTH unrealized bases beneath it; the weekly P&L leads with
+   realized. Identity: realized = (bankroll − deposits) − unrealized, so fees and gas correctly
+   count against it.
+3. **Premium-to-fair resting sells are the reconciliation**, not a contradiction: they convert
+   marks to settled cash at ABOVE fair, fee-free, with a no-fill costing nothing. That is why the
+   program exists on every thin leg (see the hidden-info refinement in 01_lessons.md).
+4. **Time-to-settlement is now a real cost term.** Two positions with equal edge are not equal if
+   one settles in 2 weeks and the other in 5 months; the near one compounds sooner and carries less
+   thesis-drift risk. This does NOT license chasing short-dated tail bets — see 5.
+5. **THE STANDING TRAP, named 2026-08-18.** The operator signalled a ~3x top-up conditioned on
+   performance, then correctly re-anchored it on realized results and Jan-2027. A metric that
+   rewards settled cash creates pressure to manufacture settlements: taking tail risk for quick
+   realizations, or closing good positions early to book something. The defence is mechanical, not
+   intentional — the both-measures exit test, the exit-cost gate, realizable-not-marked reporting,
+   and the graded ledger. NO sizing or exit decision may change because a top-up is pending.
+
+
 > Rewritten 2026-06-10 on operator directive: **the only objective is expected-return
 > maximization; every rule below is derived from it** (given estimation error, venue
 > facts, and the operator's boundary conditions). A rule with no derivation is a bug.

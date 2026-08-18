@@ -23,6 +23,9 @@ from web3 import Web3
 
 import book_walk
 
+# Filled by the PM valuation pass; consumed by the REALIZED split in main().
+PM_STATE: dict[str, float] = {}
+
 import _paths as _secrets
 
 DATA_API = "https://data-api.polymarket.com"
@@ -146,6 +149,12 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
         r.raise_for_status()
         rows = r.json()
         mid = sum(p["currentValue"] for p in rows)
+        # Cost basis and both unrealized figures, stashed for the REALIZED split
+        # below. Operator directive 2026-08-18: "it's only truly return when the
+        # cash settles on the wallet" — so marked gains are explicitly NOT return,
+        # and the number they will judge on is cumulative REALIZED P&L.
+        PM_STATE["cost"] = sum(float(p.get("initialValue") or 0) for p in rows)
+        PM_STATE["mid"] = mid
         # Flag (do NOT silently re-base) when midpoints materially overstate the
         # sleeve. This is the number I quote, so the caveat has to live here and
         # not only in positions.py — otherwise the same error just moves one
@@ -170,6 +179,7 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
                     # leaving the next intact, every one flattering the number.
                     realizable += book_walk.realizable(
                         bk.get("bids", []), float(p["size"]), m)["net"]
+            PM_STATE["realizable"] = realizable
             gap = mid - realizable
             if gap > 1.0:
                 warnings.append(
@@ -263,6 +273,30 @@ def main() -> int:
     delta = total - args.ref
     print(f"{'TOTAL BANKROLL':38s} ${total:>9.2f}")
     print(f"{'vs reference $' + f'{args.ref:.0f}':38s} {delta:>+9.2f}  ({delta / args.ref * 100:+.1f}%)")
+
+    # REALIZED vs UNREALIZED split (2026-08-18, operator directive: "it's only
+    # truly return when the cash settles on the wallet"). Identity: every dollar
+    # of total gain that is NOT open-position appreciation must already have
+    # settled — through a close, a resolution, or a fee/gas cost. So
+    #   realized = (bankroll - deposits) - unrealized
+    # Both unrealized bases are shown because the honest realized figure depends
+    # on which you believe: marked unrealized is the conventional one, realizable
+    # unrealized is what the book would actually fetch. The RANGE is the point —
+    # quoting a single realized number would hide the same midpoint problem this
+    # script already warns about one line above.
+    cost = PM_STATE.get("cost")
+    if cost is not None:
+        unreal_mid = PM_STATE.get("mid", 0.0) - cost
+        real_mid = delta - unreal_mid
+        print(f"{'  REALIZED (settled cash)':38s} {real_mid:>+9.2f}  "
+              f"({real_mid / args.ref * 100:+.1f}% of ref) <- the metric that counts")
+        print(f"{'  unrealized (marked)':38s} {unreal_mid:>+9.2f}  "
+              f"— NOT return until closed or resolved")
+        rz = PM_STATE.get("realizable")
+        if rz is not None:
+            unreal_rz = rz - cost
+            print(f"{'  unrealized (realizable)':38s} {unreal_rz:>+9.2f}  "
+                  f"— what the open book would actually fetch today")
     for msg in warnings:
         print(f"WARNING: {msg}")
     return 0

@@ -8530,3 +8530,37 @@ Two things I asked them to weigh, both of which cut against my own short-term in
 Standing note to self: the incentive to juice returns is now live and named. The defence is
 mechanical, not intentional — realizable-not-marked reporting, the both-measures exit test, and
 the ledger. Do not let a pending top-up change a single sizing decision.
+
+## 2026-08-18 16:2x — operator restates the objective: realized cash only. Made it computed doctrine.
+
+Operator: "I will still wait for '27, and i will look at the realised performance, not the volatile
+bets... it's only truly return when the cash settles on the wallet." That is an objective-function
+clarification, not a comment, so it went into 00_philosophy.md as a top section rather than a
+journal note.
+
+BUILT (not hand-derived): bankroll.py now prints the REALIZED/unrealized split from an auditable
+identity — realized = (bankroll − deposits) − unrealized, since any gain NOT attributable to open-
+position appreciation must already have settled through a close, resolution, or fee. Live:
+  TOTAL \$191.67 (+12.7% vs \$170) | REALIZED **+\$10.57 (+6.2%)** | unreal marked +\$11.10 |
+  unreal realizable +\$1.38
+So by the operator's definition the honest number is +6.2% since late April (~19% annualised), not
+the +12.7% I would otherwise headline — slightly over HALF the bankroll gain has not settled.
+Both unrealized bases print deliberately: quoting a single realized figure without the range would
+smuggle the midpoint error back in one level up, which is the exact mistake this script already
+warns about one line above.
+
+FOUR DECISION CHANGES recorded in doctrine, each of which flips an instinct:
+1. Resolution is the BEST cash conversion (\$1.00, zero fee, no spread) — so a correct thesis
+   carried to settlement beats trimming into a thin bid. "Locking in" through a 10-40pp spread
+   converts a paper gain into a smaller real one.
+2. Marked gains are not reportable progress; weekly P&L leads with realized.
+3. Premium-to-fair resting sells are the reconciliation — they convert marks to settled cash ABOVE
+   fair, fee-free, no-fill free.
+4. Time-to-settlement becomes a real cost term (equal edge is not equal if one settles in 2 weeks
+   and the other in 5 months).
+
+AND the trap, named explicitly: a metric rewarding settled cash creates pressure to MANUFACTURE
+settlements — tail risk for quick realizations, or closing good positions to book something. The
+defence is mechanical (both-measures test, exit-cost gate, realizable reporting, graded ledger),
+and doctrine now states that no sizing or exit decision may change because a top-up is pending.
+Replied msg 835 with the computed figure. Suite passes.
