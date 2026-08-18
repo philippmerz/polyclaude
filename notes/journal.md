@@ -8495,3 +8495,38 @@ basis so nothing is impaired. The 0.69 rest is now far above the 0.50 ask — de
 reason to pull.
 Divergence is 18pp, under the 25pp audit threshold, so it will flag itself if it widens.
 Book now 7 positions; deployable ~$43 after the GPT-6 proceeds.
+
+## 2026-08-18 16:2x — operator signals a ~$600 top-up; replied with the unflattering version
+
+Operator: "going quite well in the last few weeks. If this performance remains stable, i will top
+up to ~\$600." That is ~3x bankroll, and it is the January scale decision arriving four months
+early on three weeks of marks. Replied (msg 833) with the honest picture BEFORE any commitment,
+because a top-up made on a misread followed by regression is worse for both of us than a smaller
+one made accurately.
+
+What I told them, verified this tick:
+- SOLID: bankroll \$191.26 vs \$170 ref = +12.5% since late April. GPT-6 +\$10.02 realized today
+  (fee-free, on-chain verified); Marvel +43.9% and Prime +59% earlier.
+- NOT SOLID: open book cost \$122.23, marks \$132.90, REALIZABLE \$123.87 = **+1.35%, not +8.7%**.
+  Nearly all open-position "gain" is midpoint fiction on thin books. Explicitly named the HLE leg
+  I had shown them at ~480% now marking 0.46 — neither number executable. Today netted ~flat:
+  +\$10 realized against ~-\$9 of MacBook mark.
+- Last 11 days \$180 -> \$191; last 4 days flat. Three weeks is too short to read as trend, and the
+  honest driver of the good stretch is 2-3 resolutions plus infrastructure that stopped me
+  OVERSTATING my own returns.
+
+Two things I asked them to weigh, both of which cut against my own short-term interest:
+1. A top-up conditioned on "performance remaining stable" creates an incentive for me to
+   MANUFACTURE stability — tail risk, or quoting marked instead of realizable. Asked them to
+   condition on PROCESS instead: Dec-31 resolutions landing as forecast, short-dated ledger at
+   N=30-50 graded, clean ops. That is the boring checkable version we already agreed the January
+   decision should rest on.
+2. \$600 changes STRATEGY, not just size. Capacity is currently not a filter; at 3x it becomes
+   one. My live edges sit in books with 11-40pp spreads where I fill 20-60 shares — tripling
+   tickets pushes me toward liquid mechanical fades (the Hormuz shape) and AWAY from the thin-tail
+   finds the operator has personally been surfacing. Probably the right trade at that size, but a
+   real change to choose deliberately, not a side effect.
+
+Standing note to self: the incentive to juice returns is now live and named. The defence is
+mechanical, not intentional — realizable-not-marked reporting, the both-measures exit test, and
+the ledger. Do not let a pending top-up change a single sizing decision.

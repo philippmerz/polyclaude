@@ -1505,9 +1505,10 @@
         "thesis-worked"
       ],
       "slug": "will-gpt-6-be-released-by-august-31-2026-778",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "FILLED IN FULL within ~2h: 34sh @0.94, $0 maker fee, position closed (on-chain CTF balance verified 0). Realized $31.96 on $21.94 cost = +$10.02, +45.7%.",
+      "calibration_delta": "prediction said 'fills before Aug-31' expecting days; filled same-day despite 4285sh queued ahead \u2014 under-estimated turnover in a deep book, benign direction",
+      "lesson": "Maker-over-taker captured +$0.58 (taking the 0.93 bid nets $31.38 after the 1000bps fee) at zero added risk, because a no-fill simply leaves the hold branch. Queue depth is a weak predictor of fill time in a book doing $3.4k/day.",
+      "resolved_at": "2026-08-18T16:09:07Z"
     }
   ]
 }
