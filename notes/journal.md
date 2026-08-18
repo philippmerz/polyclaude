@@ -8466,3 +8466,32 @@ over-broad; both are now consistent and the reasoning is on the page.
 
 Generic lesson appended: when practice has quietly diverged from a written rule, one of them is
 wrong, finding out which is cheap, and the expensive outcome is leaving both standing.
+
+## 2026-08-18 16:0x — GPT-6 exit FILLED at 0.94 (+45.7% realized); MacBook repriced 18pp against me
+
+**GPT-6 CLOSED.** The DEC-0078 rest filled in full within ~2 hours — 34sh at 0.94, $0 maker fee,
+on-chain CTF balance verified 0. Realized **$31.96 on $21.94 cost = +$10.02, +45.7%**. Graded
+correct. Two things validated: (a) maker-over-taker was worth +$0.58 (taking the 0.93 bid nets
+$31.38 after the 1000bps fee) for zero added risk, since a no-fill just left the hold branch;
+(b) it filled same-day despite 4285sh queued ahead at 0.94 — deep books turn over faster than
+queue depth suggests, so "plausible over 12d" was too pessimistic.
+This also retires the Aug-31 double-resolution: only Hormuz now resolves that day, and the
+resting-sell/redemption question settled two hours ago is moot for GPT-6 (position gone).
+
+**MacBook repriced 18.5pp AGAINST me** — NO 0.65 -> 0.465 (YES 0.35 -> 0.53), i.e. the market now
+makes a touchscreen MacBook a coin flip. Classified honestly rather than dismissed:
+- Step (0): vol24 only $162 with a 6pp spread — but BOTH sides moved ~19pp (bids 0.63->0.44, asks
+  0.68->0.50). A one-sided quote flap does not do that; the whole book repriced.
+- No news: zero Apple/MacBook alerts have EVER fired, and the keywords were deliberately widened
+  to bare 'macbook' on 08-14, so RSS coverage is as good as it gets. X-native lag assumed.
+- No sibling: the only liquid Apple market is foldable-iPhone (0.85), a different variable. The
+  sibling check is UNAVAILABLE here, which is itself worth stating — this market has no logical
+  family to cross-check against, unlike GPT-6/Astra.
+NO ACTION, and specifically not the two tempting ones. Not adding despite the ask (0.50) sitting
+15pp under my 0.65 prior: that is catching a falling knife on an unexplained move, and my prior's
+basis is 3 weeks stale against a market that just moved 18pp. Not exiting: no verifiable fact
+changed, the Sep 8-10 event is the actual crux, and the 0.44 bid is still above my 0.4119 cost
+basis so nothing is impaired. The 0.69 rest is now far above the 0.50 ask — dead but free, no
+reason to pull.
+Divergence is 18pp, under the 25pp audit threshold, so it will flag itself if it widens.
+Book now 7 positions; deployable ~$43 after the GPT-6 proceeds.
