@@ -8337,3 +8337,23 @@ would be the favourite-fade error inverted: buying at 0.80 on a base rate that d
 Both variants and the exact grep targets are now in backlog, so the listing alert triggers a
 one-minute diff instead of a cold read under time pressure. This is the criteria-read-when-the-
 world-moves lesson applied BEFORE the world moves rather than after.
+
+## 2026-08-18 02:00 UTC cron tick — GPT-6 criteria re-read (no drift); two no-edge candidates re-skipped
+
+Bankroll **$198.97**; realizable NET $161.64 (+12.1%) vs $172.69 marked. Scans clean apart from the
+rotation item: UMA 27/0 alerts, Ostium unchanged, hurdle 8/0, redeem 0, exit 0, daemons current,
+coverage silent, orders 7 open (MacBook 17/33), no Gamescom listings yet.
+
+CRITERIA RE-READ fired on GPT-6 — the right position at the right time (13d out, thesis re-derived
+twice this week). Pulled the live description and checked all three load-bearing clauses verbatim:
+(1) OPEN access required, "closed beta or any form of private access will not suffice"; (2) name
+OR successor-recognition qualifies, "GPT-5.5 or similar will not count"; (3) source = official
+OpenAI + credible-reporting consensus. ALL UNCHANGED — no drift, so the 0.93 (08-14) and 0.90
+(08-17) re-derivations rest on an intact bar. Recorded as a dated first-hand key_fact;
+criteria_read advanced; audit CLEAN.
+
+Discovery: 2 candidates, both re-skipped without fresh analysis. Marçal NO 0.993 (third
+appearance, same no-edge verdict) and Fed-hike-25bps NO at 0.715 — the Fed family is a standing
+explicit pass (2026-08-02: "my July N=1 says the market prices Fed better than I do"), and a
+4115% win-assumed carry number is exactly the artifact the discovery guard warns about, not an
+edge. No trades. Nothing material for Telegram.
