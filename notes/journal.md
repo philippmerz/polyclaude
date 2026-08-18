@@ -8357,3 +8357,21 @@ appearance, same no-edge verdict) and Fed-hike-25bps NO at 0.715 — the Fed fam
 explicit pass (2026-08-02: "my July N=1 says the market prices Fed better than I do"), and a
 4115% win-assumed carry number is exactly the artifact the discovery guard warns about, not an
 edge. No trades. Nothing material for Telegram.
+
+## 2026-08-18 02:1x — HLE criteria re-read too: the resolution-source pillar verified verbatim
+
+The rotation advanced to the OpenAI-50 leg after GPT-6 cleared, so I read it too rather than
+leaving it for tomorrow. This is the position whose entire remaining edge rests on the
+resolution-SOURCE clause (capability is conceded — OpenAI's best is 49.5 on third-party surfaces),
+so the verbatim wording is the thesis.
+
+Live description confirms the narrow reading: "published elsewhere" is gated on the source
+becoming UNAVAILABLE, the market stays OPEN while it is unavailable, and the explicit default is
+resolve-NO if no official alternative exists. A board that is reachable but LAGGING is not
+unavailable. Also confirmed "any model published by OpenAI" and "HLE Accuracy or a clear
+equivalent metric if the presentation is restructured" — the METRIC can be restructured, the
+SOURCE cannot be substituted while reachable. That asymmetry is precisely what the position is
+long, and it held on a verbatim check.
+
+criteria_read advanced on all 3 HLE legs; audit CLEAN at 8 positions. Two positions re-read in
+one tick with zero drift found — the rotation is doing its job cheaply. No trades.
