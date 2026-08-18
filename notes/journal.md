@@ -8585,3 +8585,41 @@ the largest open leg moved 18pp against me for reasons I cannot identify; the HL
 rests on a single clause about a leaderboard staying stale — a single point of failure I said I
 would not want to be 3x bigger in. That last sentence argues against my own top-up, which is the
 test of whether the fragility section is real or decorative.
+
+## 2026-08-18 17:0x — MacBook move investigated: NOISE, prior confirmed by independent search. No add.
+
+Closed the fragility I had flagged to the operator 20 minutes earlier rather than leaving it open
+while holding deployable capital. Spent one agent call (slot free, 796MB) on kimi_advisor, 25-round
+web search, on the unexplained 18pp move.
+
+FINDING — the move was NOISE and my prior is not stale. No development in the last 24-48h justifies
+a 19pp swing. The circulating items are (a) an Instant Digital Weibo "100% confirmed" post, which
+confirms EXISTENCE not a 2026 ship date and is days-to-weeks old, and (b) Samsung OLED mass
+production, weeks-old The Elec reporting. Kimi independently derived p_no ~0.68 from the same
+literal criteria against my 0.65 — so if anything my prior is slightly LOW. Also verified: no Apple
+October 2026 event date exists yet. The 0.465 print is a low-volume liquidity sweep; on $162 of
+volume a single motivated buyer reprices both sides. Recorded as a dated key_fact.
+
+NEW CONCRETE FALSIFIER, worth more than the confirmation: The Elec/MacRumors report Samsung's
+8th-gen OLED A6 line mass-producing panels destined for a Q4-2026 launch. The failure mode for this
+position is therefore NOT a hidden leak — it is a supply chain already on schedule for Q4 resolving
+"late 2026 to early 2027" at the EARLY end. Counterweighted by Gurman's more cautious "early 2027
+more likely" and memory-shortage delay reporting. Genuine tension; both estimates price it at
+0.65-0.68 rather than higher. This replaces a vague bull case with a checkable one.
+
+NO ADD, and the gate is why. Ran it through polyclaude_enter (not raw clob, per doctrine):
+- TAKER at the 0.50 ask: effective 0.5500 vs p_robust 0.55 = EXACTLY +0.00pp. SKIP.
+- The tool also flagged the add would take the combined ticket to $28.69 = 15.0% of bankroll,
+  against a $28.75 hard cap — i.e. maxing out my most concentrated leg.
+- FLIP-THE-KILL confirmed the opposite side is worse (-25.4pp), so the market is genuinely skippable.
+A maker bid at 0.45 WOULD clear by +10pp, and I chose not to hand-place it around the gate. Three
+independent reasons, not one: (i) a resting bid fills under future information — it fills precisely
+when touchscreen-2026 becomes MORE likely, into a catalyst 3 weeks out and a known X-native news
+lag; (ii) it would peg my most fragile position at exactly the ticket cap, 20 minutes after I told
+the operator I would not want to be 3x bigger in single-point-of-failure legs; (iii) ~$3.80 of
+expected gain does not buy that. The investigation's job was to resolve the uncertainty, and it did
+— the payoff is holding 49 shares with confidence, not a trade.
+
+TOOL GAP FOUND: --maker sets the execution price but the gate still runs on taker cost, so maker
+entries are judged on economics they never pay. Backlogged with the direction noted — it rejects
+trades that would clear and never admits ones that should not, so it errs safe for a gate.
