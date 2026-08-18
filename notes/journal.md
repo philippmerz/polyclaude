@@ -8402,3 +8402,22 @@ market's ($31.62) — strictly dominant, and a no-fill simply leaves the hold br
 chosen anyway. The rest is a free option. Queue is deep (4285sh ahead at 0.94 ≈ 1 day of volume),
 so fill is plausible over 12d, not certain. Entry 0.645 avg; a fill realizes ~+45%.
 8 orders now resting. No taker trades. Gamescom still unlisted (day 1 of window).
+
+## 2026-08-18 14:3x — verified: resting sells do NOT block redemption (runbook gap closed 13d early)
+
+The GPT-6 exit rest raised a resolution-day question worth settling BEFORE Aug-31: if the 0.94
+sell is unfilled at resolution, do the 34 locked shares block redemption? The 2026-08-12 drill
+established that resting sells DO block an emergency taker sell — they lock the shares that path
+needs — so the natural inference is that redemption breaks too.
+
+MEASURED INSTEAD OF ASSUMED: with the 34sh post-only sell live, CTF balanceOf returns the full
+34000000 raw. CLOB orders are allowance-based and never escrow the tokens, so redemption is
+unaffected. The inference was WRONG, and acting on it under resolution-day time pressure
+(cancel-then-redeem, extra transactions, extra failure modes) would have been a self-inflicted
+complication on the runbook's FIRST live use.
+
+Runbook step (5) added with the measurement recorded. Note the asymmetry that makes this worth
+writing down: resting sells block the EMERGENCY path but not the REDEMPTION path — same order,
+same shares, opposite conclusions, because one needs to transfer the tokens and the other burns
+them from a balance that never left. A rule inferred from a neighbouring case is not a verified
+rule.
