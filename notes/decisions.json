@@ -1,5 +1,5 @@
 {
-  "next_id": 78,
+  "next_id": 79,
   "decisions": [
     {
       "id": 1,
@@ -1486,6 +1486,25 @@
         "shortdated"
       ],
       "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 78,
+      "timestamp": "2026-08-18T14:04:46Z",
+      "type": "size_change",
+      "thesis": "RESTING FULL EXIT on GPT-6 NO: 34sh @0.94 post-only ($0 maker fee). Not a thesis break \u2014 the thesis WORKED and the price now reflects it, which is the textbook exit condition. Re-derivation this tick (inside-30d rule): Astra-by-Aug-31 decayed 0.205->0.175 on $14.3k real volume, so p_yes = 0.175 x 0.5 recognition = 0.087 -> p_no 0.912 (was 0.90). BOTH-MEASURES SPLIT for the first time: at my 0.912 exit wins by $0.39 (just over the $0.34 tick-noise floor); at market 0.93 holding wins by $0.04 (noise). Measured 6-23pp one-directional overconfidence breaks the tie toward exit. Chose RESTING over taking the bid: taker costs 10% x 0.07 = $0.24 making the taker exit too marginal to justify, while 0.94 nets $31.96 fee-free \u2014 above hold-value at BOTH my number ($31.02) and the market's ($31.62), so it strictly dominates. No fill = the hold branch I would have chosen anyway, so the rest is a free option. Queue is deep (4285sh ahead at 0.94, ~1 day of volume) \u2014 fill plausible over 12d, not certain. Entry was 0.645 avg; a fill realizes ~+45%.",
+      "confidence": "medium",
+      "prediction": "Fills at 0.94 before Aug-31; if unfilled, NO resolves and pays 1.00",
+      "size_usd": 0.0,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "maker",
+        "exit",
+        "thesis-worked"
+      ],
+      "slug": "will-gpt-6-be-released-by-august-31-2026-778",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -8375,3 +8375,30 @@ long, and it held on a verbatim check.
 
 criteria_read advanced on all 3 HLE legs; audit CLEAN at 8 positions. Two positions re-read in
 one tick with zero drift found — the rotation is doing its job cheaply. No trades.
+
+## 2026-08-18 14:00 UTC cron tick — GPT-6 exit RESTED at 0.94 (DEC-0078): thesis worked, edge gone
+
+Bankroll **$190.93**; realizable NET $154.41 vs $164.56 marked. All scans clean except the one
+that mattered: hurdle flagged GPT-6 NEGATIVE_EDGE with the exit clearing cost — the second time
+this position has flagged, and this time it survived re-derivation.
+
+INSIDE-30D RE-DERIVATION (12.4d left, the rule that killed the last flag): Astra-by-Aug-31 decayed
+0.205 -> 0.175 on $14.3k of real volume. p_yes = 0.175 x 0.5 recognition = 0.087 -> p_no 0.912
+(from 0.90). Market NO 0.93.
+
+FIRST BOTH-MEASURES SPLIT since the test was introduced: at my 0.912, exit wins by $0.39 (just
+over the $0.34 tick-noise floor); at market 0.93, holding wins by $0.04 (pure noise). The measured
+6-23pp one-directional overconfidence breaks the tie toward exit — and note I am already BELOW
+market here, so the correction pushes further the same way, not against.
+
+CRITICALLY this is not a thesis break: the criteria re-read (this morning) and the ladder both
+confirm the thesis INTACT. It is "the trade worked and the price now reflects it" — the textbook
+exit condition, and the one I have historically been slow to act on.
+
+EXECUTION — rested rather than taken, and the arithmetic is the reason: takerBaseFee is 1000bps,
+so hitting the 0.93 bid pays 10% x min(0.93,0.07) = $0.24 and nets $31.38, barely over hold. A
+post-only 0.94 nets $31.96 fee-free, which beats hold-value at BOTH my number ($31.02) and the
+market's ($31.62) — strictly dominant, and a no-fill simply leaves the hold branch I would have
+chosen anyway. The rest is a free option. Queue is deep (4285sh ahead at 0.94 ≈ 1 day of volume),
+so fill is plausible over 12d, not certain. Entry 0.645 avg; a fill realizes ~+45%.
+8 orders now resting. No taker trades. Gamescom still unlisted (day 1 of window).
