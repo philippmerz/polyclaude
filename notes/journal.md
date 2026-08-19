@@ -8746,3 +8746,19 @@ the fallbacks are the public book for state and on-chain CTF balances for truth.
 Also this tick: Portwatch finally printed past Aug-09 — latest Aug-16, 7-day MA **3.6, down from
 4.4**, moving further from the 60 bar with 12 days left on DEC-0077. The UMA line was a \$5,738
 move on a 19pp spread, enrichment-tagged wide-book. No Gamescom listings (day 2).
+
+## 2026-08-19 10:2x — CLOB endpoint recovered; my own diagnostic nearly caused a false alarm
+
+/data/orders recovered on its own — 200 in 0.1s after hanging at 15/30/60s twenty minutes earlier.
+Transient venue issue, no action needed, and the public-book verification during the outage was
+correct: nothing had changed. 7 orders open, 7 positions intact at unchanged sizes.
+
+WORTH RECORDING BECAUSE IT ALMOST BIT: my quick diagnostic printed "4 orders" and I briefly read
+that as three orders having vanished during the outage. The cause was my own parse — the ad-hoc
+test did len(r.json()) on the RAW response, counting its 4 top-level keys, while the real code path
+reads body.data. Same family as the data["data"]["data"] bug I shipped twice: an ad-hoc parse that
+differs from the production one produces a confident wrong number, and here it would have been a
+scary one. The save was checking positions alongside orders — sizes unchanged is inconsistent with
+three fills, so the two readings contradicted each other and forced the re-check.
+Generic form: when a throwaway diagnostic disagrees with the script it is imitating, suspect the
+diagnostic first — it is the code that has never been tested.
