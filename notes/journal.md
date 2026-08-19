@@ -8780,3 +8780,26 @@ All scans clean: UMA 0 alerts, Ostium unchanged, audit CLEAN at 7, hurdle 7/0, r
 SELL-TAKER, discovery 0 clearing, daemons current+single, coverage silent, 7 orders resting
 (MacBook 17/33 unchanged). /data/orders behaving normally after this morning's transient hang. No
 Gamescom listings — day 3 of the window, watch armed through Aug-26. No trades.
+
+## 2026-08-19 18:0x — MacBook volume spiked 35x with no news and no net price move; held
+
+The enriched alert tagged an 8.5pp move WIDE BOOK (7pp spread), but the volume line said $5,768 —
+35x yesterday's $162 and far above the $15-460 noise levels the tag usually accompanies. The tag is
+a hint, not a verdict, so I walked it rather than dismissing it.
+
+What the walk shows: the mark ROUND-TRIPPED (YES 0.53 -> 0.62 -> 0.535, net ~unchanged from
+yesterday) on 35x volume, through a book displaying only 6sh bid / 5sh offered. So real two-way
+trading is passing through a thin resting book — attention, not a one-way informed move. Still zero
+Apple/MacBook hits in news_watcher since the keywords were widened to bare 'macbook' on 08-14, and
+kimi's 25-round search yesterday found no development. Two independent channels, nothing.
+
+HELD, no re-derivation. A volume spike with no net price change and no news is the market arguing
+with itself, which is not information I can trade on — and the position is already at the ticket
+cap so adding was never available regardless. The honest read is that yesterday's 18pp drop drew
+attention rather than reflecting it.
+
+Also visible in the same sweep, both favourable and both unremarked until now: Hormuz has drifted
+0.9859 -> 0.9935 since entry (+0.8pp, 12 days to settle) on $360k of daily volume, and Trump-out
+sits at 0.945 with a genuinely deep book (65k shares bid). The two liquid positions are quiet and
+working; all the noise is in the thin ones, which is exactly the shape the realizable-vs-marked gap
+has been reporting.
