@@ -8700,3 +8700,23 @@ war forecast I have no edge on. Ledgered (N=50).
 Note the Dec-31 leg sits at 0.445 YES — the market implying a 44.5% chance of reaching a
 never-observed level by year-end. That is a pure geopolitical forecast, correctly not my game.
 No trades. Nothing material for Telegram.
+
+## 2026-08-19 02:2x — tested my own no-edge call on the Dec-31 Hormuz leg; it holds, for a better reason
+
+I dismissed the Dec-31 leg (0.445 YES) as "pure geopolitical forecast" quickly at 02:00, and the
+150-print distribution I had just pulled could be read as contradicting that — if 60 has NEVER been
+observed, 44.5% looks absurd. Tested it rather than leaving the tension.
+
+The dismissal holds, but the correct reason is different and more useful: **every observation in the
+series is from DURING the conflict.** June's best episode (mean 10.7, peak 44) was partial
+de-escalation, not post-ceasefire recovery, so the data bounds conflict-period traffic and says
+nothing about how quickly ships return once insurance re-rates. Decomposed honestly, Dec-31 is
+P(ceasefire) x P(recovery | ceasefire), which spans 0.32-0.52 across reasonable inputs and brackets
+the market's 0.445. No differentiated edge; the market's number is defensible.
+
+So the SAME dataset makes a 12-day fade verified-impossibility and a 134-day one a war forecast.
+Banked as a lesson because the error it prevents is seductive and I was one step from it: treating
+a historical range as a bound on the future when every sample came from one regime and the whole
+question is whether that regime ends. It also explains why the tail-multiplicative gate correctly
+accepted Aug-31 (+0.4pp) and rejected Sep-30 (-5.0pp) — the gate was encoding this without my
+having articulated it.

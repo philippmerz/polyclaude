@@ -584,6 +584,21 @@ the one that arrives with a plausible justification attached. Audit those hardes
   error to entry time, where exit liquidity must be priced BEFORE committing, because afterwards
   the arithmetic will always tell you that you are stuck.
 
+- **A "never observed in the data" fact has TIME-DEPENDENT strength — check what regime produced
+  the observations before exporting it down the ladder.** 2026-08-19, holding the Hormuz Aug-31 NO,
+  I pulled 150 prints and found the peak SINGLE DAY was 44 against a bar needing a 7-day AVERAGE of
+  60 — i.e. YES requires a level never once observed. That is near-dispositive at 12 days and it is
+  tempting to carry straight to the Sep-30 and Dec-31 legs of the same monotone ladder. It does not
+  carry, and the reason is the regime: EVERY observation is from during the conflict. June's best
+  episode (mean 10.7, peak 44) was a partial de-escalation, not a post-ceasefire recovery, so the
+  series bounds conflict-period traffic and says nothing about how fast ships return once insurance
+  re-rates. Decomposing Dec-31 honestly — P(ceasefire) x P(recovery | ceasefire) — spans 0.32-0.52
+  around the market's 0.445, i.e. no differentiated edge, and the 44.5% that looked absurd against
+  "never observed 60" is defensible. The generic error to avoid: treating a historical range as a
+  bound on the FUTURE when every sample was drawn from one regime and the question is whether the
+  regime ends. The same dataset that makes a 12-day fade verified-impossibility makes a 134-day one
+  a geopolitical forecast.
+
 - **Split "named resolution source" into MEASURABLE-INTERIM vs TERMINAL-ONLY — my edge only exists
   in the first.** 2026-08-18, gate-checking the Spotify "top artist 2026" family (named source,
   mechanical resolution, Dec-31 measurement, $10-25k books — superficially the exact shape that has
