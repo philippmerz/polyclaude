@@ -635,5 +635,17 @@
     "reason": "Gate-checked with $44 deployable (operator had asked for more low-liquidity finds). Named source + mechanical resolution + thin books = the shape that has paid, but it fails the TERMINAL-ONLY test: Spotify publishes calendar-year global streams ONCE at Wrapped and no public source carries the resolving quantity mid-year (Kworb has all-time totals and chart appearances, not 2026 YTD streams). So there is no fact to verify before resolution and my edge is structurally unavailable \u2014 what remains is a popularity forecast against fans who track this closer than I do. Family sums to 1.003, so no consistency arb either. Formed NO point prior deliberately: quoting one would be inventing precision I do not have.",
     "grade": "ungraded",
     "resolve_by": "2027-01-31"
+  },
+  {
+    "date": "2026-08-19",
+    "slug": "strait-of-hormuz-traffic-returns-to-normal-by-september-30-20260702154339440",
+    "question": "Strait of Hormuz traffic returns to normal by September 30?",
+    "side_evaluated": "NO",
+    "market_no": 0.925,
+    "my_p_no": 0.975,
+    "action": "SKIP",
+    "reason": "Second leg of the family I hold Aug-31 in. Point edge is real (my p_no ~0.975 vs cost 0.925) but it FAILS the same tail-multiplicative gate that PASSED the Aug-31 entry: at 5x pessimism on the tail, p_no 0.875 < 0.925 cost (-5.0pp), versus Aug-31 which cleared at +0.4pp. The asymmetry is time \u2014 42 days gives materially more room for war-end plus shipping/insurance normalization than 12 days, and the market 7.5% is not obviously wrong on that. Consistent with the Sep-15 skip (2026-08-15). Recording that the SAME gate accepted one leg of a family and rejected another is the point: the ladder is monotone, so the discipline is in where on it the tail stops being verified-impossibility and starts being a war forecast.",
+    "grade": "ungraded",
+    "resolve_by": "2026-09-30"
   }
 ]

@@ -8673,3 +8673,30 @@ evaluated skip with NO point prior, because quoting one would invent precision I
 This is a cheap filter that runs BEFORE any pricing work — find the source, try to read the current
 value, skip if you cannot — and it retires a whole category of superficially attractive markets.
 Banked in 01_lessons.md. \$44 stays undeployed; nothing else clears.
+
+## 2026-08-19 02:00 UTC cron tick — Hormuz full distribution pulled; Sep-30 leg skipped on the same gate that passed Aug-31
+
+Bankroll **$193.03**. Realized **+$10.61 (+6.2%)** — the metric that counts; unrealized marked
++$12.42 vs realizable +$3.53, gap $8.90. All scans clean: UMA 0 alerts, Ostium unchanged, audit
+CLEAN at 7, hurdle 7/0, redeem 0, exit 0 SELL-TAKER, daemons current, coverage silent, no Gamescom
+listings (day 2 of window).
+
+Discovery surfaced two Hormuz legs, so I pulled the FULL 150-print history rather than re-reading
+my own 7-day number (verify-full-distribution). Much stronger than the point estimate I had been
+carrying: monthly means 3.2 / 5.0 / 3.2 / 10.7 / 8.4 / 3.8 (Mar-Aug), and **the peak SINGLE DAY in
+150 prints is 44 against a threshold that requires a 7-day AVERAGE of 60**. So YES on any leg needs
+a level never once observed in the entire dataset, sustained a week. The whole 2026 series is
+conflict-suppressed; 60 is a pre-conflict normal the data does not contain. That materially
+strengthens the held Aug-31 leg — the fact is not "4.4 vs 60", it is "never observed".
+
+SEP-30 LEG SKIPPED, and the reason is worth keeping because the same gate accepted its sibling:
+point edge is real (p_no ~0.975 vs 0.925 cost) but at 5x tail pessimism it gives p_no 0.875 < 0.925
+= -5.0pp, where Aug-31 cleared at +0.4pp. The asymmetry is purely time — 42 days leaves materially
+more room for war-end plus shipping/insurance normalization than 12 days, and the market's 7.5% is
+not obviously wrong about that. Consistent with the Sep-15 skip on 08-15. The ladder is monotone,
+so the discipline is knowing WHERE on it the tail stops being verified-impossibility and becomes a
+war forecast I have no edge on. Ledgered (N=50).
+
+Note the Dec-31 leg sits at 0.445 YES — the market implying a 44.5% chance of reaching a
+never-observed level by year-end. That is a pure geopolitical forecast, correctly not my game.
+No trades. Nothing material for Telegram.
