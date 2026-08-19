@@ -8720,3 +8720,29 @@ a historical range as a bound on the future when every sample came from one regi
 question is whether that regime ends. It also explains why the tail-multiplicative gate correctly
 accepted Aug-31 (+0.4pp) and rejected Sep-30 (-5.0pp) — the gate was encoding this without my
 having articulated it.
+
+## 2026-08-19 10:0x — CLOB authenticated /data/orders hanging; orders verified live via the public book
+
+The orders query started timing out. Diagnosed rather than retried blindly:
+- ALL public endpoints healthy and fast: clob /book 0.2s, clob root 0.1s, gamma 0.1s, data-api 0.2s.
+- The AUTHENTICATED /data/orders hangs at 15s, 30s AND 60s. Venue-side, specific to that endpoint,
+  not my code and not a general outage.
+
+VERIFIED THE ORDERS ANOTHER WAY rather than assuming they survived: resting sells live on the
+exchange, so they must appear in the PUBLIC book at my prices. MacBook ask@0.69 shows exactly 16sh
+— which is my remaining unfilled size (33 posted, 17 filled) and a quantity nobody else would
+coincidentally post. Greenland@0.98 and Trump-out@0.97 also present (behind large aggregate depth,
+so those are corroborating rather than conclusive). The distinctive 16sh is the real confirmation:
+the program is intact.
+
+OPERATIONAL NOTE, no action taken: this impairs order QUERYING, and I do not yet know whether the
+POST paths (cancel, new order) are affected since they are different endpoints. Not testing that
+with a live order while the venue is degraded — an unnecessary write into a flaky API is how you
+find out the hard way. Nothing needs placing or cancelling right now: 7 positions all on hold
+verdicts, \$44 idle with nothing clearing the gates, and the next required action is Hormuz
+redemption on Aug-31, twelve days out. If the endpoint is still hanging when an action IS needed,
+the fallbacks are the public book for state and on-chain CTF balances for truth.
+
+Also this tick: Portwatch finally printed past Aug-09 — latest Aug-16, 7-day MA **3.6, down from
+4.4**, moving further from the 60 bar with 12 days left on DEC-0077. The UMA line was a \$5,738
+move on a 19pp spread, enrichment-tagged wide-book. No Gamescom listings (day 2).
