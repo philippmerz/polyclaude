@@ -8762,3 +8762,21 @@ scary one. The save was checking positions alongside orders — sizes unchanged 
 three fills, so the two readings contradicted each other and forced the re-check.
 Generic form: when a throwaway diagnostic disagrees with the script it is imitating, suspect the
 diagnostic first — it is the code that has never been tested.
+
+## 2026-08-19 14:00 UTC cron tick — quiet; realizable unrealized turns NEGATIVE for the first time
+
+Bankroll **$187.60**. REALIZED **+$10.57 (+6.2%)** — unchanged, since nothing settled. The notable
+line is unrealized: marked +$7.03 but **realizable −$2.36**, the first time the open book has been
+worth LESS than its cost at executable prices. Driver is MacBook's continued slide (the 18pp move
+of 08-18 has not recovered) plus HLE spreads.
+
+This is exactly why the split now prints. Under the old marked-only reporting today reads "+$7 of
+unrealized gain"; the honest statement is that the open book would fetch $2.36 less than it cost.
+Neither number changes an action — every position is on a hold verdict, exits are value-destructive
+through 6-19pp spreads, and the realized figure that the operator will judge on is untouched at
++$10.57 — but the reporting now cannot flatter by accident.
+
+All scans clean: UMA 0 alerts, Ostium unchanged, audit CLEAN at 7, hurdle 7/0, redeem 0, exit 0
+SELL-TAKER, discovery 0 clearing, daemons current+single, coverage silent, 7 orders resting
+(MacBook 17/33 unchanged). /data/orders behaving normally after this morning's transient hang. No
+Gamescom listings — day 3 of the window, watch armed through Aug-26. No trades.
