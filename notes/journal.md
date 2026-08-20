@@ -8910,3 +8910,19 @@ drift). Both would have been useless if ever relied on.
 Harness kept at tests/mutate.py with the history in its docstring and restore-in-finally so a crash
 cannot leave a mutated script on disk. The rule: a passing suite proves nothing about bugs it cannot
 see, and the only way to know which those are is to put them back.
+
+## 2026-08-20 14:00 UTC cron tick — nothing happened; the realized fix verified itself
+
+Bankroll **$195.73**, up $2.68 on the tick — and REALIZED held **exactly +$5.32** while the gas line
+moved ($5.42 -> $5.44 across recent ticks as POL drifts). That is the invariance doing its job: two
+days ago this same POL drift would have shown up as changing "realized". The metric now moves only
+on settlements, which is what the label claims. Unrealized marked +$14.98 vs realizable +$3.54 —
+the $11.43 gap is the usual three thin books.
+
+All scans clean: UMA 0 alerts, Ostium unchanged, audit CLEAN at 7, hurdle 7/0, redeem 0, discovery
+0 clearing, exit 0 SELL-TAKER, daemons current+single, coverage silent, suite green at 60 checks,
+7 orders resting (MacBook 17/33), no Gamescom listings (day 4, watch armed to Aug-26), Portwatch
+MA 3.6 vs bar 60 with 11 days to Hormuz settlement.
+
+No trades. Nothing material for Telegram. Weekly P&L due tomorrow — first one under the new
+structure (realized -> drivers -> what is fragile) and the first carrying the corrected +3.1%.
