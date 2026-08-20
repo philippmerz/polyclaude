@@ -164,3 +164,37 @@ if FAILS:
         print("  -", f)
     sys.exit(1)
 print("OK — money-math regression suite passed")
+
+# ------------------------------------------------- realized/unrealized split
+# 2026-08-20: the inline version booked the operator's GAS DEPOSIT as trading
+# profit for two days — +$10.77 reported vs +$5.32 true, 2x, on the one number
+# the operator said they would judge on. The arithmetic was never wrong; an
+# INPUT was. These pin the gas case so it cannot silently return on a refactor.
+import bankroll  # noqa: E402
+
+# The live numbers from the day the bug was found.
+s = bankroll.realized_split(total=193.06, ref=170.0, gas_usd=5.44,
+                            pm_mid=134.52, pm_cost=122.23, pm_realizable=124.46)
+check("realized excludes gas", s["realized"], 5.39, tol=0.02)
+check("unrealized marked", s["unrealized_marked"], 12.29, tol=0.01)
+check("unrealized realizable", s["unrealized_realizable"], 2.23, tol=0.01)
+check("gas reported separately", s["gas_excluded"], 5.44)
+# THE REGRESSION GUARD — a SENSITIVITY test, not a value test. The first draft
+# of this called realized_split with gas_usd=0.0 and compared to the true figure,
+# which can never fire: a function that IGNORES gas returns the same thing whether
+# you pass 0 or 5.44, so the check passes under both the correct and the broken
+# implementation. Caught by simulating the bug and watching the guard stay silent.
+# The real test is that varying gas MOVES the answer by exactly that amount.
+_g0 = bankroll.realized_split(193.06, 170.0, 0.0, 134.52, 122.23)["realized"]
+_g5 = bankroll.realized_split(193.06, 170.0, 5.44, 134.52, 122.23)["realized"]
+check("realized is sensitive to gas (2026-08-20 regression)", _g0 - _g5, 5.44, tol=1e-9)
+
+# Invariance: realized must NOT move when only marks move (nothing settled).
+a = bankroll.realized_split(190.0, 170.0, 5.0, 130.0, 122.0)["realized"]
+b = bankroll.realized_split(195.0, 170.0, 5.0, 135.0, 122.0)["realized"]
+check("realized invariant to pure mark moves", a, b, tol=1e-9)
+# ...but DOES move when settled cash moves with marks held constant.
+cash_up = bankroll.realized_split(195.0, 170.0, 5.0, 130.0, 122.0)["realized"]
+check("realized moves on settlement", cash_up - a, 5.0, tol=1e-9)
+check("gas drift does not move realized",
+      bankroll.realized_split(196.0, 170.0, 6.0, 130.0, 122.0)["realized"], a, tol=1e-9)

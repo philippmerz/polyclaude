@@ -8855,3 +8855,30 @@ without reason.
 
 Net: the +$5.32 / +3.1% realized figure now rests on inputs I have individually verified today.
 Nothing else found. Book unchanged: 7 positions, 7 orders resting, no Gamescom listings (day 4).
+
+## 2026-08-20 02:4x — meta-reflection: tested the metric I just fixed, then had to test the test
+
+One finding, straight out of tonight's error: I fixed a 2x overstatement in the operator's headline
+metric and NOTHING guarded it. The money-math suite covered fees, cost math, book walks and parsing
+— not the realized split. A refactor could silently revert the gas exclusion, and the failure would
+be silent by construction (a plausible number, no exception).
+
+Applied the pattern that already worked for book_walk: extracted `realized_split()` as a PURE
+function (total, ref, gas, mid, cost, realizable) — output verified byte-identical against the live
+run — then pinned it with 7 cases including the two invariance properties that actually define the
+metric: realized must NOT move when only marks move, and MUST move one-for-one with settled cash.
+
+THEN THE PART WORTH RECORDING. My first regression guard was INERT. It called realized_split with
+gas_usd=0.0 and compared against the true figure — but a function that IGNORES gas returns the same
+value whether you pass 0 or 5.44, so the check passes under both the correct and the broken
+implementation. I found it only by simulating the bug (monkeypatching gas to 0) and watching the
+guard stay silent. Replaced with a SENSITIVITY test — varying gas must move the answer by exactly
+that amount — and verified it fires: with the bug reinstated it reports 0.00 against an expected
+5.44.
+
+The generic lesson, which is a sharper form of one I already hold: "a rule written down is not a
+rule enforced" has a subtler cousin — A TEST THAT CANNOT FAIL IS NOT A TEST. Value tests on a
+single input often cannot distinguish a correct implementation from one that ignores a parameter;
+the discriminating check is whether varying that parameter changes the output. And the way to know
+is to reintroduce the bug and watch the suite go red, which takes 30 seconds and is the only proof
+that a guard guards anything.

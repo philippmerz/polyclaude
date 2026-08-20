@@ -26,6 +26,32 @@ import book_walk
 # Filled by the PM valuation pass; consumed by the REALIZED split in main().
 PM_STATE: dict[str, float] = {}
 
+
+def realized_split(total: float, ref: float, gas_usd: float,
+                   pm_mid: float, pm_cost: float,
+                   pm_realizable: float | None = None) -> dict[str, float]:
+    """Split total bankroll into REALIZED (settled) vs UNREALIZED. Pure — testable.
+
+    realized = (total - gas - deposits) - unrealized_marked
+
+    Extracted 2026-08-20 after the inline version booked the operator's GAS DEPOSIT
+    as trading profit for two days (+$10.77 reported vs +$5.32 true, 2x, on the one
+    number the operator said they would judge on). The arithmetic was never wrong;
+    an INPUT was — native gas tokens sat in `total` while the deposit baseline
+    counted only the $170 of trading capital, so their whole value read as return.
+    Pure so tests/test_money_math.py can pin the gas case permanently; the failure
+    was silent and would silently return on any refactor.
+    """
+    unreal_mid = pm_mid - pm_cost
+    out = {
+        "realized": (total - gas_usd - ref) - unreal_mid,
+        "unrealized_marked": unreal_mid,
+        "gas_excluded": gas_usd,
+    }
+    if pm_realizable is not None:
+        out["unrealized_realizable"] = pm_realizable - pm_cost
+    return out
+
 import _paths as _secrets
 
 DATA_API = "https://data-api.polymarket.com"
@@ -299,8 +325,10 @@ def main() -> int:
     gas_usd = PM_STATE.get("gas_usd", 0.0)
     cost = PM_STATE.get("cost")
     if cost is not None:
-        unreal_mid = PM_STATE.get("mid", 0.0) - cost
-        real_mid = (delta - gas_usd) - unreal_mid
+        _s = realized_split(total, args.ref, gas_usd,
+                            PM_STATE.get("mid", 0.0), cost, PM_STATE.get("realizable"))
+        unreal_mid = _s["unrealized_marked"]
+        real_mid = _s["realized"]
         print(f"{'  REALIZED (settled cash)':38s} {real_mid:>+9.2f}  "
               f"({real_mid / args.ref * 100:+.1f}% of ref) <- the metric that counts")
         if gas_usd:
