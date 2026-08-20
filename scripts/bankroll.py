@@ -231,6 +231,8 @@ def main() -> int:
             native_usd = native * prices[native_sym]
             if native_usd > 0.005:
                 total += native_usd
+                # Accumulate separately: native gas is deposited capital, not P&L.
+                PM_STATE["gas_usd"] = PM_STATE.get("gas_usd", 0.0) + native_usd
                 print(f"{chain} {sleeve} {native_sym} ({native:.4f}):{'':6s} ${native_usd:>9.2f}")
             for label, taddr in tokens.items():
                 c = w.eth.contract(address=Web3.to_checksum_address(taddr), abi=ERC20_ABI)
@@ -284,12 +286,26 @@ def main() -> int:
     # unrealized is what the book would actually fetch. The RANGE is the point —
     # quoting a single realized number would hide the same midpoint problem this
     # script already warns about one line above.
+    # GAS IS DEPOSITED CAPITAL, NOT TRADING GAIN (2026-08-20). The $170 reference
+    # is TRADING capital only — capital_ledger.md records gas (~53.8 POL + ~0.001
+    # ETH) as a SEPARATE operator deposit. But this script counts those tokens'
+    # live USD value in `total`, so comparing total against 170 books the
+    # operator's gas deposit as return, and the realized line inherited it: +$10.77
+    # reported vs +$5.33 honest, a 2x overstatement of the exact number the
+    # operator said they would judge on. Native gas tokens are therefore excluded
+    # from the realized split. They stay in TOTAL BANKROLL (they are real assets)
+    # but they are not trading P&L, and their price drift must never move a line
+    # labelled "settled cash".
+    gas_usd = PM_STATE.get("gas_usd", 0.0)
     cost = PM_STATE.get("cost")
     if cost is not None:
         unreal_mid = PM_STATE.get("mid", 0.0) - cost
-        real_mid = delta - unreal_mid
+        real_mid = (delta - gas_usd) - unreal_mid
         print(f"{'  REALIZED (settled cash)':38s} {real_mid:>+9.2f}  "
               f"({real_mid / args.ref * 100:+.1f}% of ref) <- the metric that counts")
+        if gas_usd:
+            print(f"{'  (gas tokens excluded)':38s} {gas_usd:>9.2f}  "
+                  f"— separately deposited, not trading P&L")
         print(f"{'  unrealized (marked)':38s} {unreal_mid:>+9.2f}  "
               f"— NOT return until closed or resolved")
         rz = PM_STATE.get("realizable")

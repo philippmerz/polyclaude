@@ -8803,3 +8803,31 @@ Also visible in the same sweep, both favourable and both unremarked until now: H
 sits at 0.945 with a genuinely deep book (65k shares bid). The two liquid positions are quiet and
 working; all the noise is in the thin ones, which is exactly the shape the realizable-vs-marked gap
 has been reporting.
+
+## 2026-08-20 02:00 UTC cron tick — found gas deposit booked as trading profit; realized halved
+
+Tick otherwise clean (UMA 0, Ostium unchanged, audit CLEAN at 7, hurdle 7/0, redeem 0, exit 0,
+daemons current, coverage silent, 7 orders resting, Portwatch MA 3.6 vs bar 60, no Gamescom
+listings on day 4, discovery's 2 candidates both Fed legs = standing pass).
+
+THE FINDING, and it is on the metric that counts. Realized ticked +$10.57 -> +$10.76 overnight with
+NOTHING SETTLED. That is impossible if the label is accurate, so I chased it instead of shrugging.
+Cause: capital_ledger records $170 TRADING capital and ~53.8 POL + ETH gas as SEPARATE deposits,
+but bankroll.py counts native-token market value inside `total` while comparing total against 170.
+So ~$5.45 of gas the operator deposited was being booked as trading return, and the realized line
+inherited it. Realized was 2x overstated: **+$10.77 -> +$5.32, +6.3% -> +3.1%**.
+
+I reported the inflated +6.2% to the operator on Aug-18, in the metric they had just told me they
+would judge on. Corrected immediately (msg 838) rather than waiting for the weekly — with the
+mechanism, the honest restatement, and the note that having spent the week hunting self-flattering
+numbers (midpoints, fee-free walks), this one was hiding inside the tool I built to be the honest
+one. Told them to assume there are more.
+
+FIXED: native gas excluded from the realized split and printed separately; it stays in TOTAL
+BANKROLL because it is a real asset, but its price drift can no longer move a line labelled
+"settled cash". Suite passes.
+
+Lesson banked with the two transferable parts: (1) an asset in the numerator must appear in the
+baseline or its entire value reads as profit — check deposit COMPOSITION, not just the total;
+(2) the diagnostic that works is INVARIANCE — name what cannot move without an event, then watch
+whether it moves. Arithmetic alone will not catch a category error.

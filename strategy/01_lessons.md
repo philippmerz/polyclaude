@@ -584,6 +584,21 @@ the one that arrives with a plausible justification attached. Audit those hardes
   error to entry time, where exit liquidity must be priced BEFORE committing, because afterwards
   the arithmetic will always tell you that you are stuck.
 
+- **The metric you build to be honest is where the next flattering error hides — and the tell is a
+  number moving when nothing happened.** 2026-08-20: two days after building the REALIZED line
+  precisely because marked gains were overstating performance, the realized figure ticked +$10.57 ->
+  +$10.76 overnight with ZERO settlements. That is impossible if the label is accurate, and chasing
+  it found the operator's GAS DEPOSIT booked as trading profit: capital_ledger records $170 trading
+  capital and ~53.8 POL gas as SEPARATE deposits, but bankroll.py counts POL/ETH market value inside
+  `total` while comparing against 170. So ~$5.45 of gas the operator sent was being reported as
+  return — realized was 2x too high (+$10.77 vs +$5.32, +6.3% vs +3.1%), in the one number the
+  operator had just said they would judge on, inside the metric I had built to be the honest one.
+  Two transferable pieces: (1) an asset that appears in the numerator must appear in the baseline,
+  or its whole value reads as profit — check deposit COMPOSITION against what the total counts, not
+  just the deposit total; (2) the diagnostic that works is INVARIANCE — ask what should be constant
+  (realized cannot move without a settlement), then watch whether it is. Price-drift noise in a line
+  labelled "settled" is a category error the arithmetic will not catch on its own.
+
 - **A "never observed in the data" fact has TIME-DEPENDENT strength — check what regime produced
   the observations before exporting it down the ladder.** 2026-08-19, holding the Hormuz Aug-31 NO,
   I pulled 150 prints and found the peak SINGLE DAY was 44 against a bar needing a 7-day AVERAGE of
