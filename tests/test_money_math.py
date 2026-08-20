@@ -25,6 +25,8 @@ Run:  .venv/bin/python tests/test_money_math.py
 
 from __future__ import annotations
 
+import atexit
+import os
 import sys
 from pathlib import Path
 
@@ -37,7 +39,31 @@ import pm_fees  # noqa: E402
 FAILS: list[str] = []
 
 
+def _report() -> None:
+    """Registered with atexit so it ALWAYS runs after every check, wherever the
+    check was appended. 2026-08-20: the pass/fail block used to sit inline, and
+    twice I appended a new section BELOW it with `cat >>` — the checks executed,
+    appended to FAILS, and nothing ever looked at FAILS again. Both times the
+    suite printed OK while containing dead assertions, including the regression
+    guard for a 2x error in the operator's headline metric. A test file whose
+    verdict is positional is one append away from lying."""
+    if FAILS:
+        print(f"FAIL ({len(FAILS)}):", flush=True)
+        for f in FAILS:
+            print("  -", f, flush=True)
+        sys.stdout.flush()
+        os._exit(1)      # _exit skips flushing, hence the explicit flushes above
+    print(f"OK — money-math regression suite passed ({CHECKS[0]} checks)", flush=True)
+
+
+atexit.register(_report)
+
+
+CHECKS = [0]
+
+
 def check(label: str, got, want, tol: float = 1e-9) -> None:
+    CHECKS[0] += 1
     ok = (abs(got - want) <= tol) if isinstance(want, (int, float)) and isinstance(got, (int, float)) else (got == want)
     if not ok:
         FAILS.append(f"{label}: got {got!r}, want {want!r}")
@@ -158,12 +184,6 @@ check("realizable unknown market uses fallback",
 check("realizable empty book charges no fee", book_walk.realizable([], 20, {"takerBaseFee": 1000})["fee"], 0.0)
 
 
-if FAILS:
-    print(f"FAIL ({len(FAILS)}):")
-    for f in FAILS:
-        print("  -", f)
-    sys.exit(1)
-print("OK — money-math regression suite passed")
 
 # ------------------------------------------------- realized/unrealized split
 # 2026-08-20: the inline version booked the operator's GAS DEPOSIT as trading
@@ -175,7 +195,7 @@ import bankroll  # noqa: E402
 # The live numbers from the day the bug was found.
 s = bankroll.realized_split(total=193.06, ref=170.0, gas_usd=5.44,
                             pm_mid=134.52, pm_cost=122.23, pm_realizable=124.46)
-check("realized excludes gas", s["realized"], 5.39, tol=0.02)
+check("realized excludes gas", s["realized"], 5.33, tol=0.02)
 check("unrealized marked", s["unrealized_marked"], 12.29, tol=0.01)
 check("unrealized realizable", s["unrealized_realizable"], 2.23, tol=0.01)
 check("gas reported separately", s["gas_excluded"], 5.44)
@@ -196,5 +216,25 @@ check("realized invariant to pure mark moves", a, b, tol=1e-9)
 # ...but DOES move when settled cash moves with marks held constant.
 cash_up = bankroll.realized_split(195.0, 170.0, 5.0, 130.0, 122.0)["realized"]
 check("realized moves on settlement", cash_up - a, 5.0, tol=1e-9)
+# Gas APPRECIATION lifts total and gas by the SAME amount, so realized is
+# unchanged. (First draft bumped total by 6 while gas rose 1 — not gas drift at
+# all, but a $5 settlement with extra gas. It was stranded below the verdict and
+# so never ran; the atexit restructure surfaced it immediately.)
 check("gas drift does not move realized",
-      bankroll.realized_split(196.0, 170.0, 6.0, 130.0, 122.0)["realized"], a, tol=1e-9)
+      bankroll.realized_split(191.0, 170.0, 6.0, 130.0, 122.0)["realized"], a, tol=1e-9)
+
+# --------------------------------------------- discriminating cases (mutation-driven)
+# Added 2026-08-20 after mutation testing showed the suite could NOT detect two
+# real bugs. Each of these exists to kill a specific surviving mutant.
+# MUTANT 1: `return float(bps)/10000.0` -> `return 0.10`. Every prior numeric case
+# used bps=1000, which IS 0.10, so hardcoding the modal rate passed. A second,
+# different rate is what discriminates.
+check("rate 500bps (kills hardcoded-0.10 mutant)", pm_fees.fee_rate({"takerBaseFee": 500}), 0.05)
+check("rate 250bps", pm_fees.fee_rate({"takerBaseFee": 250}), 0.025)
+# MUTANT 2: `sorted(bids, ...)` -> `bids`. The prior unsorted test consumed BOTH
+# levels, and a full sweep totals the same in any order. Order only matters on a
+# PARTIAL fill, where the walk must take the best price first.
+_unsorted = [{"price": "0.50", "size": "10"}, {"price": "0.60", "size": "10"}]
+check("partial fill takes BEST price first (kills unsorted mutant)",
+      book_walk.walk_bids(_unsorted, 10)[0], 6.0)
+check("partial fill avg is the best level", book_walk.walk_bids(_unsorted, 10)[1], 0.60)

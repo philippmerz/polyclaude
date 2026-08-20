@@ -8882,3 +8882,31 @@ single input often cannot distinguish a correct implementation from one that ign
 the discriminating check is whether varying that parameter changes the output. And the way to know
 is to reintroduce the bug and watch the suite go red, which takes 30 seconds and is the only proof
 that a guard guards anything.
+
+## 2026-08-20 03:0x — mutation-tested the suite: 3 of 6 bugs were UNDETECTABLE, including one fixed an hour earlier
+
+Generalised the inert-guard finding into the obvious question — are there OTHER tests that cannot
+fail? — and answered it by reintroducing six real historical bugs and checking the suite went red.
+**Three SURVIVED.** A green suite was proving nothing about them.
+
+1. **The whole realized-split block sat BELOW the sys.exit verdict.** `cat >>` appended past the
+   tail block, so its checks ran, appended to FAILS, and nothing ever inspected FAILS again. This
+   included the gas-as-profit regression guard I wrote AN HOUR EARLIER for a 2x error in the
+   operator's headline metric. Second time I made this exact append-past-the-verdict mistake today.
+2. **pm_fees: every numeric case used bps=1000**, which is 0.10 — so `return 0.10` hardcoded passed
+   every test. Needed a second, different rate (500 -> 0.05).
+3. **book_walk's unsorted test consumed BOTH levels**, and a full sweep totals the same in any
+   order, so dropping the sort was invisible. Order only matters on a PARTIAL fill.
+
+Fixes: verdict moved to an **atexit hook** so it cannot be stranded by any future append (the
+positional design was the root cause, and I proved I repeat that mistake); a CHECKS counter now
+prints the number evaluated (60), so a silently-skipped block is visible; plus discriminating cases
+for the two weak spots. Re-ran: **all six mutants CAUGHT**.
+
+Surfacing the stranded block also revealed TWO WRONG EXPECTATIONS hiding in it — realized 5.39 vs
+the true 5.33, and a "gas drift" case that bumped total by 6 while gas rose 1 (a $5 settlement, not
+drift). Both would have been useless if ever relied on.
+
+Harness kept at tests/mutate.py with the history in its docstring and restore-in-finally so a crash
+cannot leave a mutated script on disk. The rule: a passing suite proves nothing about bugs it cannot
+see, and the only way to know which those are is to put them back.
