@@ -8831,3 +8831,27 @@ Lesson banked with the two transferable parts: (1) an asset in the numerator mus
 baseline or its entire value reads as profit — check deposit COMPOSITION, not just the total;
 (2) the diagnostic that works is INVARIANCE — name what cannot move without an event, then watch
 whether it moves. Arithmetic alone will not catch a category error.
+
+## 2026-08-20 02:2x — followed through on "assume there are more": audited the realized identity's inputs
+
+Having told the operator to assume more flattering errors exist, I audited rather than left it as a
+rhetorical flourish. The realized identity reduces to `stables + cost_basis − deposits`, so it is
+exactly as good as three inputs. Checked all three:
+
+1. **Bankroll internals reconcile** — the printed asset lines sum to $192.71 vs TOTAL $192.70
+   (rounding). No silently uncounted line inside the script.
+2. **Deposit baseline complete** — capital_ledger shows exactly four entries, all April 2026, and
+   NO deposit since: $70 PM + $100 crypto trading (the $170), plus POL and ETH gas now correctly
+   excluded. This was the input that just failed, so it was the one worth re-reading rather than
+   assuming; a later untracked top-up would reproduce the identical error class.
+3. **Uncounted venues** — Ostium shows 0 open trades so no unvalued collateral; the script's own
+   warning path covers the open-trade case. Nothing sitting outside the scan.
+
+What I did NOT do, and why: a full trade-by-trade reconciliation of four months of closes against
+the identity would raise confidence somewhat but costs hours, and the identity is EXACT given
+correct inputs — the failure mode is always an input, never the arithmetic. Auditing the three
+inputs is the same coverage far cheaper. Recording the choice so a future session does not redo it
+without reason.
+
+Net: the +$5.32 / +3.1% realized figure now rests on inputs I have individually verified today.
+Nothing else found. Book unchanged: 7 positions, 7 orders resting, no Gamescom listings (day 4).
