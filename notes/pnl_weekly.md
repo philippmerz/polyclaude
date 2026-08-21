@@ -762,3 +762,82 @@ because the failure mode is manufacturing a trade to justify holding cash. GPT-6
 repriced 0.745 → 0.955; Gamescom listings under daemon watch, event Aug 19-24; Apple event
 ~Sep 8-10, where MacBook's pre-order ambiguity becomes the whole trade and the position must be
 re-sized as an interpretation bet if so.
+
+---
+
+# Week 2026-08-14 → 2026-08-21
+
+> **First report under the corrected structure**: realized → what drove it → what is fragile.
+> The operator restated the objective on 2026-08-18 ("it's only truly return when the cash settles
+> on the wallet") and separately cautioned against over-formalising — so this report INFORMS the
+> judgment and does not render a verdict. No "on track" call here; that is theirs.
+
+## 1. Realized — the metric that counts
+
+| | |
+|---|---|
+| **Cumulative REALIZED (settled cash)** | **+$5.32 (+3.1% of the $170 reference)** |
+| Realized THIS WEEK | +$14.75 (GPT-6 +$10.02, MacBook partial +$4.73) |
+| Bankroll (all-in, incl. unsettled marks) | $194.52 |
+| Unrealized — marked | +$13.75 |
+| Unrealized — realizable (executable today) | +$4.95 |
+
+**A correction is embedded in that number and it cuts against me.** Last week I reported
++13.1% and on Aug-18 I told the operator realized was +6.2%. Both overstated: bankroll.py was
+counting the operator's separately-deposited GAS (~$5.45 of POL/ETH) as trading profit, because the
+$170 reference is trading capital only. Realized was ~2x too high. Corrected same day (msg 838),
+tooling fixed, and the figure above is the honest one. Since late April: **+3.1% realized**, roughly
+9-10% annualised.
+
+The tell was an invariance, not arithmetic: realized moved +$0.19 overnight with nothing settled,
+which is impossible if the label is accurate.
+
+## 2. What drove it
+
+- **GPT-6 NO closed +45.7%** (+$10.02, 34sh @0.94, fee-free maker fill in ~2h). Sold with the
+  thesis INTACT — criteria re-read that morning, Astra still unshipped — because the price had
+  converged on fair and there was no edge left. Resting at 0.94 beat crossing the 0.93 bid by
+  +$0.58 on a 1000bps-fee market, and a no-fill would simply have left the hold branch.
+- **Resting-sell program** (operator's suggestion, Aug-14) monetised MacBook 17/33sh at 0.69 —
+  4pp above fair, zero fee, into a book bidding 5 shares. First fill landed within 20 minutes.
+- **Hormuz NO entered** (DEC-0077, $27.72 at 0.986): mechanical criteria, resolving variable
+  measured first-hand at 4.4 against a 60 bar. Settles Aug-31 for ~+$0.39. Now +0.96% marked.
+- **Gemini pre-committed tranche filled** at 0.22 during a slide; that leg is +113.6% marked —
+  and almost entirely unrealizable, see below.
+
+## 3. What I think is fragile — the part no metric supplies
+
+- **Marked vs realizable is $8.80 apart.** The Gemini leg shows +113.6% marked; its book is
+  11-40pp wide and it would fetch far less. Treat every marked HLE number as provisional.
+- **MacBook fell 18pp on no news** and is my largest leg. An independent 25-round search found no
+  development; two channels say noise. But "I cannot explain it" is not "it is fine", and the
+  Sep 8-10 Apple event is the real crux. Samsung OLED panels are reportedly mass-producing for a
+  Q4-2026 launch — the concrete way this loses.
+- **The HLE cluster rests on ONE clause** — a leaderboard staying stale — across three legs. Two
+  are marked at a loss (-20.5%, -60.8%). This is the single-point-of-failure I told the operator I
+  would not want to be 3x larger in.
+- **Two of three realized wins came from the announce template**, a narrow and possibly closing
+  edge. Gamescom has not listed a single market in 5 days of its window.
+- **My measurement kept flattering me.** Three separate self-flattering errors surfaced this week
+  (midpoint marks, fee-free depth walks, gas-as-profit) — all in the direction of looking better.
+  Mutation testing then found the suite could not detect 3 of 6 historical bugs. Both are fixed;
+  the base rate suggests more exist.
+
+## 4. Positions (7)
+
+| leg | cost | marked | realizable gap |
+|---|---|---|---|
+| Hormuz NO (Aug-31) | $27.72 | $27.99 | tight, liquid |
+| Greenland NO | $25.23 | $27.41 | ~0.6c |
+| Trump-out NO | $24.96 | $26.77 | deep book |
+| MacBook NO | $20.19 | $26.22 | 12.8pp to exit |
+| OpenAI-50 HLE NO | $10.64 | $8.46 | 6.2pp |
+| Gemini-50 HLE NO | $7.94 | $16.97 | 4.1pp |
+| OpenAI-55 HLE NO | $5.55 | $2.17 | thin |
+
+## 5. Next week
+
+Hormuz settles Aug-31 (first live use of the resolution runbook; conditionIds pre-verified).
+Gamescom window runs to Aug-24 with the listing watch armed to Aug-26 — criteria variants
+pre-read so the check is a diff. $44 deployable; three families explicitly filtered out this week
+(Fed standing pass, top-artist terminal-only, Hormuz Sep-30 gate-failed at -5.0pp).
