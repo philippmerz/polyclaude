@@ -9120,3 +9120,14 @@ findings: the Netflix family (18:2x) is the day's find and is fully gated + back
 has surfaced in the 20 minutes since. Notably NOT banking a new lesson for the FlixPatrol 403 —
 the measurable-interim rule as written ("try to read the CURRENT value, skip if you cannot")
 handled it correctly, and a lesson that restates a working rule is clutter. No findings forced.
+
+## 2026-08-21 22:0x periodic — clean; morning's Gemini flap partly reverted, HLE marks drifting favorably
+
+UMA scan caught two wide-book moves, both favorable and both inside the alert's own midpoint-flap
+caveat: OpenAI-HLE-50 NO mid up ~10pp (0.155→0.255), and a 0.545→0.480 YES drop in MacBook's
+range. Positions ground truth (data-api): Gemini NO mark 0.245 (+82% on cost, morning's 0.19
+walk partly reverted — confirming the 18:00 anticipatory-flap read); OpenAI-50 −7%, OpenAI-55
+−31%, both lottery-held; MacBook 49sh @0.46 mark with the 16sh rest still working. No fills
+today. Realizable $120.27 vs mtm $132.90 — the $12.63 gap is the usual four thin books.
+Daemons 4/4 single-PID, mem 786MB, Gamescom still 0 listings (day 5), pair-arb watch printing
+"0 executable" every 15min as designed. No trades, nothing for Telegram.
