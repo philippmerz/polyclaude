@@ -233,6 +233,28 @@ def kelly_size(mark: float, p_win: float, bankroll: float, frac: float,
     }
 
 
+def robust_p(my_p: float, edge_haircut: float, tail_mult: float | None = None) -> float:
+    """Pessimistic bound of my p for the robust-edge gate.
+
+    FLAT (default): my_p - edge_haircut. Correct for instance/catalyst theses,
+    where measured overconfidence is an absolute 6-23pp (see --edge-haircut).
+
+    TAIL-MULTIPLICATIVE (bond fades, --tail-mult): 1 - K*(1 - my_p) — "the true
+    tail could be K times my measured tail". A flat haircut structurally kills
+    EVERY bond fade regardless of fact quality (0.10 turns p_no 0.99 into 0.89
+    against a 0.95-0.99 cost), because estimation error on a 1-2pp tail is
+    proportional to the tail, not an absolute 10pp. DEC-0077 (Hormuz) entered on
+    exactly this: measured p_yes 0.002, K=5 -> p_no_robust 0.99 > cost 0.986,
+    while the same gate rejected the Sep-30 sibling at -5pp — encoding, before
+    it was articulated, that longer horizons load on regime-change probability
+    (2026-08-19 lesson). Flat-equivalent haircut = (K-1)*(1-my_p), which is why
+    DEC-0077's hand-computed --edge-haircut 0.01 was the same number.
+    """
+    if tail_mult is not None:
+        return 1.0 - tail_mult * (1.0 - my_p)
+    return my_p - edge_haircut
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("question", nargs="?", default=None,
@@ -272,7 +294,18 @@ def main() -> int:
                         "(Greenland 0.95->0.98, Trump-out 0.96->0.97), so the old advice to shrink "
                         "the haircut for 'mechanical' markets was backwards: those are where I am "
                         "too PESSIMISTIC. Use 0.05 for tail/monitoring fades; keep 0.10+ for any "
-                        "instance or catalyst thesis, where my first number is reliably too brave.")
+                        "instance or catalyst thesis, where my first number is reliably too brave. "
+                        "For BOND FADES (my_p >= 0.90) use --tail-mult instead — a flat haircut "
+                        "kills every bond fade regardless of fact quality.")
+    p.add_argument("--tail-mult", type=float, default=None, nargs="?", const=5.0,
+                   help="Bond-fade pessimism: p_robust = 1 - K*(1-my_p), i.e. 'the true tail "
+                        "could be K times my measured tail'. Bare flag = K=5 (the DEC-0077 "
+                        "doctrine value; formalized 2026-08-21 from the fresh-session queue). "
+                        "Replaces --edge-haircut for the gate; only accepted when my_p >= 0.90 "
+                        "— below that, tail-scaling is the wrong error model (use the flat "
+                        "haircut) and K=5 would be absurdly harsh anyway. Requires the tail to "
+                        "be MEASURED (PortWatch-style first-hand read), not vibes: K multiplies "
+                        "whatever error your measurement already carries.")
     args = p.parse_args()
     if args.bankroll is None:
         args.bankroll = _bankroll_default()
@@ -504,13 +537,23 @@ def main() -> int:
     # margin-of-safety proportional to estimation uncertainty rather than a flat
     # phantom floor. op_cost ≈ haiku catalyst_check (~$0.02) + gas + slippage.
     OP_COST = 0.05
-    p_robust = my_p - args.edge_haircut
+    if args.tail_mult is not None and my_p < 0.90:
+        print(f"\nDECISION: NEED_REVIEW — --tail-mult is for bond fades (my_p >= 0.90); "
+              f"my_p={my_p:.4f}. Use --edge-haircut for instance/catalyst theses.")
+        return 2
+    p_robust = robust_p(my_p, args.edge_haircut, args.tail_mult)
+    if args.tail_mult is not None:
+        print(f"  [tail-mult] pessimistic bound = 1 - {args.tail_mult:g}x tail: "
+              f"p_robust {p_robust:.4f} (flat-equivalent haircut "
+              f"{(args.tail_mult - 1) * (1 - my_p):.4f})")
     ev_robust = shares * (p_robust - cost_eff)  # EV at pessimistic p, fee-adjusted cost
     ev_central = shares * (my_p - cost_eff)
     if p_robust <= cost_eff or ev_robust <= OP_COST:
         print(f"\nDECISION: SKIP — edge not robust to estimation error.")
+        _hc_desc = (f"tail-mult {args.tail_mult:g}x" if args.tail_mult is not None
+                    else f"haircut {args.edge_haircut:.2f}")
         print(f"  central p={my_p:.4f} → EV ${ev_central:+.2f}; "
-              f"pessimistic p={p_robust:.4f} (haircut {args.edge_haircut:.2f}) → EV ${ev_robust:+.2f}")
+              f"pessimistic p={p_robust:.4f} ({_hc_desc}) → EV ${ev_robust:+.2f}")
         print(f"  Need EV > ${OP_COST:.2f} at the pessimistic bound. "
               f"Thin point-estimate edge dominated by estimation noise.")
         print(f"  Override with a smaller --edge-haircut only if the p estimate is "

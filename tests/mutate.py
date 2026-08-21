@@ -31,6 +31,8 @@ MUTS = [
                     '"realized": (total - ref) - unreal_mid'),                                # gas booked as profit
     ("book_walk.py",'if maker_px is not None:\n        return maker_px, 0.0',
                     'if False:\n        return maker_px, 0.0'),                               # maker judged on taker cost (2026-08-18 gap)
+    ("polyclaude_enter.py",'if tail_mult is not None:\n        return 1.0 - tail_mult * (1.0 - my_p)',
+                    'if False:\n        return 1.0 - tail_mult * (1.0 - my_p)'),              # tail-mult silently falls back to flat (kills every bond fade)
 ]
 results = []
 for fname, old, new in MUTS:

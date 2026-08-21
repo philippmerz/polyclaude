@@ -9032,3 +9032,28 @@ The gate bug made the skip WRONGLY REASONED, not wrongly decided. Re-visit after
 
 Remaining in the fresh-session queue: bond-fade tail-multiplicative haircut formalization
 (doctrine prose, no code) — deliberately not folded into this turn; it deserves its own pass.
+
+## 2026-08-21 ~16:55 — continuation: tail-multiplicative bond-fade gate formalized (fresh-session queue now EMPTY)
+
+The last queued fresh-session item is done. DEC-0077 (Hormuz) entered on 2026-08-14 with the
+doctrine flag explicitly backlogged: the 0.10 flat haircut structurally kills every bond fade at
+0.98+ regardless of fact quality, so the entry used --edge-haircut 0.01 hand-justified as "5x my
+measured p_yes". That workaround is now the formal mechanism:
+
+- `robust_p(my_p, edge_haircut, tail_mult)` pure in polyclaude_enter; `--tail-mult` flag
+  (bare = K=5) computes p_robust = 1 - K*(1-my_p); REFUSED below my_p 0.90 (NEED_REVIEW,
+  verified live on the MacBook case) — tail-scaling is the wrong error model off the tails.
+- 7 new checks pin the wild numbers: Hormuz acceptance (0.99 > 0.9859 by +0.4pp), Sep-30
+  rejection (0.815 vs 0.865 = -5pp), the flat-equivalent identity (K-1)*(1-p) that explains the
+  hand-computed 0.01, and the flat-kills/tail-clears pair on one coherent market. Suite 71→78.
+  The suite caught MY OWN first version of the last pair (assumed "alive" independent of cost —
+  at p_yes 0.01 and K=5 the bound is exactly 0.95, zero edge at a 0.95 cost). Kept the corrected
+  check with a comment; that catch is the suite doing its job on the author.
+- 8th mutant (tail-mult silently falls back to flat): CAUGHT. All 8 now caught.
+- Doctrine: §4.5 of 00_philosophy carries the variant with its two licence conditions — the tail
+  must be MEASURED first-hand (K multiplies the measurement's error; 5x vibes is still vibes),
+  and the horizon must be short enough that the measurement's regime binds (the K=5 gate
+  accepted Aug-31 and rejected Sep-30 for exactly the regime reason, per the 08-19 lesson).
+
+recoup_campaign.md checked per the prompt: closed tracker since 2026-06-01, nothing live.
+Fresh-session queue is now empty — Ops split (15:55), --maker gate (16:40), tail-mult (16:55).

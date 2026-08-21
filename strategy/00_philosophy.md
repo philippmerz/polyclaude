@@ -212,6 +212,18 @@ Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
    a believed-but-wrong edge far more than underbetting a true one. A point-estimate
    +EV that dies at the pessimistic bound is statistically indistinguishable from
    zero — the op-cost is not.
+   **Bond-fade variant (formalized 2026-08-21 from the DEC-0077 flag): for my_p ≥ 0.90
+   the pessimistic bound is TAIL-MULTIPLICATIVE, `1 − K·(1−p)` with K=5
+   (`polyclaude_enter --tail-mult`), not the flat haircut.** A flat 0.10 kills every
+   bond fade regardless of fact quality (p_no 0.99 → 0.89 against 0.95+ costs), because
+   estimation error on a 1-2pp tail is proportional to the tail — "the true tail could
+   be 5× my measured tail" — not an absolute 10pp. Two conditions carry the whole
+   licence: the tail must be MEASURED first-hand (PortWatch-style read of the resolving
+   variable; K multiplies whatever error the measurement carries, and 5× a vibes number
+   is still vibes), and the horizon must be short enough that the measurement's regime
+   still binds — the same K=5 gate accepted Hormuz Aug-31 (+0.4pp) and rejected the
+   Sep-30 sibling (−5pp) precisely because longer horizons load on regime-change
+   probability the measurement cannot bound (2026-08-19 regime lesson).
 6. **Op-cost hurdle**: annualized return must beat the riskless alternative (Aave
    supply APY, currently ~3-4%) plus friction (gas, wrap, spread, fees). Idle capital
    is never "doing nothing" — it earns the hurdle in Aave **on the chain it already

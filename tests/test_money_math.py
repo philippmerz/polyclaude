@@ -268,3 +268,33 @@ check("taker economics showed no edge", 0.55 - _tc, 0.0)
 check("maker economics cleared by 10pp", 0.55 - _mc, 0.10)
 # zero-fee market: taker cost is just the ask (no phantom fallback fee)
 check("zero-fee taker cost = ask", book_walk.effective_entry_cost(0.50, 0)[0], 0.50)
+
+# --------------------------------------------- tail-multiplicative bond-fade gate (2026-08-21)
+# Formalization of the DEC-0077 doctrine flag: on a bond fade the pessimistic
+# bound is "the true tail could be K times my measured tail", not a flat
+# absolute haircut. These pin the exact numbers the gate produced in the wild.
+import polyclaude_enter  # noqa: E402
+
+# flat path unchanged
+check("flat haircut path", polyclaude_enter.robust_p(0.68, 0.10), 0.58)
+# Hormuz Aug-31 (DEC-0077): measured p_yes 0.002, K=5 -> p_no_robust 0.99,
+# clears cost 0.9859 by +0.4pp — the entry that flagged the doctrine gap
+check("Hormuz acceptance (K=5 on p_yes 0.002)",
+      polyclaude_enter.robust_p(0.998, 0.10, tail_mult=5.0), 0.99)
+check("Hormuz cleared by +0.4pp",
+      polyclaude_enter.robust_p(0.998, 0.10, tail_mult=5.0) - 0.9859, 0.0041, tol=1e-6)
+# Sep-30 sibling rejection: p_yes 0.037 -> p_robust 0.815 vs cost 0.865 = -5pp
+check("Sep-30 rejection (-5pp)",
+      polyclaude_enter.robust_p(0.963, 0.10, tail_mult=5.0) - 0.865, -0.05, tol=1e-6)
+# flat-equivalent identity: haircut = (K-1)*(1-my_p) — why DEC-0077's
+# hand-computed --edge-haircut 0.01 was the same number (4 x 0.002 = 0.008)
+check("flat-equivalent identity",
+      polyclaude_enter.robust_p(0.998, 0.10, tail_mult=5.0), 0.998 - 4 * 0.002, tol=1e-9)
+# the structural kill the doctrine names, on ONE coherent market: p_no 0.99
+# offered at 0.945. Flat 0.10 -> 0.89, killed; K=5 -> 0.95, clears by 0.5pp.
+# (At cost 0.95 exactly, K=5 gives zero edge — the gate stays honest at the
+# boundary; the first version of this check assumed "alive" independent of
+# cost and the suite caught it.)
+check("flat 0.10 kills the 0.945 fade", polyclaude_enter.robust_p(0.99, 0.10) < 0.945, True)
+check("tail-mult clears the same fade",
+      polyclaude_enter.robust_p(0.99, 0.10, tail_mult=5.0) > 0.945, True)
