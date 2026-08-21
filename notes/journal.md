@@ -9080,3 +9080,33 @@ UMA scan flagged the only alert of the sweep: Gemini-HLE-50 YES 0.7125→0.8055 
 
 Rest of sweep clean: daemons 4/4 up single-PID, mem 838MB, no Gamescom listings (day 5), no other
 UMA alerts. No trades.
+
+## 2026-08-21 18:2x-18:5x continuation — made up the eaten 14:00 tick's discovery pass; new Netflix weekly family found and gated
+
+The 14:00 cron tick died with the expired login, so its wide-net discovery half never ran (the
+02:00 tick was the last full pass). Ran the full suite now: primary + thin-tail discover_markets,
+event_monotonicity (2 midpoint flags, 0 real after live walk), consistency scan (52/94 midpoint
+flags, 0 real), macro/sports deferred to the 02:00 tick (LLM-spawning, low marginal value today).
+
+FUNNEL: ~1124 events + 3000-deep thin tail → 1 genuinely new family + 3 repricings noted → 1
+criteria read → 0 entries, 1 ledgered skip.
+
+- **Netflix weekly Top-10 family (NEW, thin-tail find)**: recurring weekly event, official
+  mechanical source, 4-7d resolutions — the exact short-dated-ledger shape the January decision
+  wants. Criteria read done live (Tue publish, Mon-Sun week, alphabetical tie-break, "Other"
+  backstop, 1000bps fee). Measured what could be measured first-hand: official list (LAST week:
+  The Last House #1, DSGL #4) fetches clean; FlixPatrol daily proxy 403s from this VM. This
+  week's instance (DSGL YES 0.9315, 5/7 days elapsed) SKIPPED on tail-mult arithmetic
+  (maker at 0.932 needs p>0.986) + unmeasurable dailies; grades Tue Aug-25 at publish, ledger
+  row 51. Backlogged with the early-week trade shape and the daily-source hunt as next step.
+- **Hormuz Sep-30 repriced** yes 0.135→0.055 since my Aug-19 skip: at NO cost ~0.945 the
+  tail-mult gate now needs p_yes<0.011 — a 39-day window spanning ceasefire scenarios cannot
+  honestly claim that. Skip STANDS (and the skip is aging well: the market moved my way 8pp).
+- **Bab el-Mandeb "effectively closed by Sep-30"** yes 0.085 (new sibling, opposite direction
+  to the "normal" family): closure requires escalation = war forecast on the tail side; a
+  strike wave can drop 25/day to closure inside 40 days, so p_yes is not tail-small with
+  confidence. Pass without criteria read; the ladder (Sep-30 0.085 / Dec-31 0.200) is monotone.
+- NATO×Russia Aug-31 0.050, Bitcoin/XRP price binaries, Clarity Act, Ballon d'Or, Babydoll
+  #2-song (terminal-only Wrapped class): all standing passes, none re-analyzed.
+
+Zero real arbs across both riskless scanners, as every day since the parse fixes. No trades.
