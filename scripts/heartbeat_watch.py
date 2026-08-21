@@ -453,8 +453,11 @@ def check_tick_execution(state: dict) -> None:
               f"TICK EATEN: cron tick dispatched to the pane "
               f"{(now - last_dispatch) // 60}min ago but journal.md hasn't been "
               f"touched since — the send-keys likely landed in a dead/absent claude. "
-              f"Operator: check MODEL QUOTA first (a quota-exhausted pane looks "
-              f"identical to a dead one — 2026-08-02, 16h), then restart the session.",
+              f"Operator: check AUTH/LOGIN and MODEL QUOTA first — an EXPIRED LOGIN "
+              f"(confirmed cause 2026-08-21, ~9.5h) and a quota-exhausted pane both look "
+              f"identical to a dead one (2026-08-02, 16h). The headless recovery below is a "
+              f"NO-OP for both — it hits the same auth wall — so only a human re-login fixes "
+              f"it; the ALERT is the working half. Then restart the session.",
               cooldown=TICK_EXEC_COOLDOWN)
         # RECOVERY (2026-08-02): alerting alone left 16h of ticks unrun. Spawn
         # the headless fallback for THIS eaten tick — it runs a different model

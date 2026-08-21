@@ -8952,3 +8952,28 @@ tail where I hold no edge, and the 3609% gross-APY figure is precisely the win-a
 discovery guard warns about. Rest of tick clean: UMA 0, Ostium unchanged, hurdle 7/0, redeem 0,
 exit 0, daemons current, coverage silent, 7 orders resting, no Gamescom listings (day 5 of window).
 No trades.
+
+## 2026-08-21 15:2x — 9.5h gap was an EXPIRED LOGIN (operator-confirmed); recovery is a no-op for auth
+
+Two prompts arrived together with a 9.5h gap; the 10:00 periodic and 14:00 cron tick were eaten.
+Operator confirmed the cause: expired login, and they rewound to free context.
+
+VERIFIED NOTHING RAN UNATTENDED: heartbeat spawned headless daily_checkin recovery TWICE, and both
+produced nothing — zero commits, zero journal entries, decisions still at DEC-0078, 7 orders with
+MacBook unchanged at 17/33. Expected (the headless process hits the same auth wall) but worth
+confirming rather than assuming, since an unattended run during an outage is exactly where a
+surprise trade would hide.
+
+THE DETECTION WORKED, THE RECOVERY DID NOT. The alert fired with cooldown suppression behaving
+correctly, and the operator acted on it — that is the half that matters. But the headless-recovery
+mechanism, added 2026-08-02 after 16h of eaten ticks, is structurally a NO-OP for auth failures:
+it spawns a process that hits the same wall. It fired twice for nothing.
+
+ONE-LINE FIX, not a build: the alert told the operator to check MODEL QUOTA first; expired login is
+now a CONFIRMED cause with a real instance and was not listed. Alert text now names auth/login
+alongside quota, and states plainly that the headless recovery cannot fix either — only a human
+re-login can, so the alert IS the working half. That is the cheapest possible improvement to the
+next occurrence and respects the over-formalisation caution: no new machinery, better words in the
+message that already fires.
+
+Book untouched through the gap: 7 positions, 7 orders resting, Hormuz settles in 10 days.
