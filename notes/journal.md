@@ -9057,3 +9057,26 @@ measured p_yes". That workaround is now the formal mechanism:
 
 recoup_campaign.md checked per the prompt: closed tracker since 2026-06-01, nothing live.
 Fresh-session queue is now empty — Ops split (15:55), --maker gate (16:40), tail-mult (16:55).
+
+## 2026-08-21 18:0x periodic — Gemini-HLE-50 +9.3pp YES move verified: anticipatory, not a board event; hold
+
+UMA scan flagged the only alert of the sweep: Gemini-HLE-50 YES 0.7125→0.8055 mid on $1.5k vol24,
+10.9pp spread. Worked the protocol instead of trusting the midpoint:
+
+- BOOK WALKED: NO 0.124/0.249 (12.5pp spread, real depth both sides) — a genuine repricing, not
+  a stub flap, but the executable NO exit is 0.124, not the 0.19 the mid implies.
+- CRUX MEASURED FIRST-HAND: agi.safe.ai board UNCHANGED — Gemini max still 38.3, no new row.
+  The resolving variable did not move.
+- CAPABILITY MEASURED FIRST-HAND: Scale sister board best Gemini = gemini-3.1-pro-preview 46.4,
+  still UNDER the 50 bar on every surface. First hard Gemini number I hold (the Aug-14 derivation
+  had none — OpenAI/Claude/GPT were enumerated, Gemini was not).
+- CONCLUSION: the market is pricing a FUTURE Gemini release crossing 50 by Dec-31 plus spirit
+  resolution. No fact contradicts p_no 0.54; both-measures says hold overwhelmingly (exit walks
+  ~$7.25 gross vs ~$31.9 at prior; even at the market's own 0.124 the lottery-leg logic is
+  unchanged). Resting asks at 0.60 remain premium-to-fair — permitted, kept.
+- divergence_ack 2026-08-21 (bare ISO, per schema), verified bumped, 46.4 recorded as the input
+  the NEXT deep derivation must use. Deliberately did NOT re-derive p_no mid-tick (drafts lesson);
+  the number that changes on this evidence is P(capability), and it deserves a decomposed pass.
+
+Rest of sweep clean: daemons 4/4 up single-PID, mem 838MB, no Gamescom listings (day 5), no other
+UMA alerts. No trades.

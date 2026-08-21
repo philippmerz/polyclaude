@@ -1,254 +1,254 @@
 {
-  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-08-18",
-  "trump-out-as-president-before-2027": {
-    "p_no": 0.97,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
-    "note": "RE-VERIFIED 2026-08-11 (tick): multiple impeachment resolutions filed in the 119th (H.Res.353/537/939) and rhetorical 25th-Amendment calls after the Iran post and the Greenland letter \u2014 but removal needs majorities nobody has assembled, and the cabinet is loyalist. The 25th has never been invoked against a president's will. p_no 0.97 held.",
-    "verified": "2026-08-13",
-    "criteria_read": "2026-08-21",
-    "key_facts": [
-      {
-        "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "A Section 4 invocation NOT sustained by both Houses does not count; impeachment without removal does not count.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "An ANNOUNCEMENT of resignation/removal before Dec-31 resolves YES IMMEDIATELY, regardless of effective date \u2014 the one clause that WIDENS YES.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Resolution source is 'a consensus of credible reporting', NOT a named source \u2014 so no resolution-source-lag angle exists here, unlike the HLE family.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Impeachment resolutions H.Res.353/537/939 are INTRODUCED in the 119th Congress; none has produced a Senate removal and the majorities do not exist.",
-        "source": "https://www.congress.gov/bill/119th-congress/house-resolution/939 [403 to WebFetch \u2014 human-verifiable only; falsifier is the market itself pricing NO at ~0.93]",
-        "source_date": "2026-08-12",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "CRITERIA RE-READ 2026-08-21, verbatim vs recorded thesis: NO DRIFT. All five recorded clauses confirmed word-for-word, including the announcement clause that widens YES and the consensus-of-credible-reporting source. Noted an internal tension in the text worth carrying: the opening sentence says \"ceases to be President for any period of time\" while paragraph 3 says \"Only permanent removal from office will qualify\" \u2014 the narrowing paragraph is operative and my prior is built on it, but if a temporary-removal scenario ever occurs this is exactly the ambiguity a UMA vote would turn on, and it is an interpretation risk I do not price edge against.",
-        "source": "gamma market description, first-hand",
-        "source_date": "2026-08-21",
-        "checked": "2026-08-21"
-      }
-    ]
-  },
-  "will-the-us-acquire-any-part-of-greenland-in-2026": {
-    "p_no": 0.95,
-    "cluster": "us-expansion",
-    "rho_within": 0.0,
-    "cluster_frac": 0.11,
-    "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
-    "verified": "2026-08-13",
-    "note": "0.975 -> 0.98 on 2026-08-13. The rotation surfaced this at 8 days stale and the re-read raised the bar considerably: every realistic path short of a signed sovereignty treaty is carved out by name \u2014 frameworks, MOUs, negotiations, basing rights, SOFA/COFA arrangements, leases, commercial concessions. What remains is a binding legal instrument transferring sovereignty or creating exclusive US jurisdiction, inside 4.5 months, against two governments publicly refusing to discuss sovereignty. P(YES) ~1.5%. ALERT TRIAGE for the Greenland keywords added 2026-08-12: a headline about a 'deal', 'agreement' or 'framework' is NOT a thesis break unless the reporting names a BINDING instrument (enacted legislation, signed treaty, signed agreement text, or an executive action implementing one). Basing-rights headlines are noise by construction. 0.98 -> 0.95 on 2026-08-13. The STALE-SOURCE check fired on its first day for this position (203d-old source behind a criteria_read of 0 days) and immediately earned itself: refreshing found live negotiations whose SHAPE \u2014 unlimited, uncurbable exclusive access to defined areas \u2014 creeps toward the Guantanamo-style qualifying example in the criteria, a path I had dismissed when I read 'basing rights are excluded' this morning and stopped there. Still a strong NO: Denmark's sovereignty red line holds, the deal is framed as respecting it, and YES needs a BINDING instrument granting exclusive JURISDICTION rather than guaranteed access. WATCH: any reporting of signed text that displaces Danish legal authority in a defined zone, as opposed to guaranteeing US use of it.",
-    "criteria_read": "2026-08-13",
-    "key_facts": [
-      {
-        "claim": "YES requires a BINDING agreement or legal instrument producing sovereignty transfer, primary/exclusive US jurisdiction, or acquisition by force.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "EXCLUDED by name: non-binding statements, negotiations, proposals, FRAMEWORKS and MOUs.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "EXCLUDED by name: basing rights, access agreements, SOFA/COFA arrangements, commercial concessions, leases.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "A QUALIFYING example named in the criteria is a Guantanamo-style zone under exclusive/primary US jurisdiction where Danish law does not apply except by US permission.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Live negotiations concern US 'total access' to parts of Greenland for an UNLIMITED period, 'not curbed under any circumstances', via a reopened 1951 defence agreement.",
-        "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
-        "source_date": "2026-01-25",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Denmark's stated red line: 'We will not cede sovereignty over parts of the kingdom'; the proposal is framed as RESPECTING Danish sovereignty.",
-        "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
-        "source_date": "2026-01-25",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Trump ruled out using force to acquire Greenland (Davos, 2026-01-21).",
-        "source": "https://www.congress.gov/crs-product/IN12643",
-        "source_date": "2026-01-22",
-        "checked": "2026-08-13"
-      }
-    ],
-    "source_ack": "2026-08-13",
-    "source_ack_note": "Searched 2026-08-13 for newer Greenland reporting and there is none \u2014 the freshest available material is the January framework/1951-agreement coverage. The position rests on ~200d-old sources because the STORY has not moved, not because I stopped looking. Ack expires in 21 days, which re-tests that claim rather than letting it calcify; re-check sooner if any Greenland keyword fires."
-  },
-  "will-apple-release-a-touchscreen-macbook-in-2026": {
-    "p_no": 0.65,
-    "cluster": "ai-ships-fast-short",
-    "rho_within": 0.4,
-    "cluster_frac": 0.0,
-    "rationale": "[ENTRY-TIME RECORD 2026-07-15, superseded by `note` \u2014 do NOT read as current] DEC-0046: Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out. Entry p_no 0.85.",
-    "note": "CORRECTED 0.80 -> 0.62 on 2026-08-12 after MacBook NO fell 0.595 -> 0.495 over twelve hours, sustained and one-directional, on a hidden-info-class position where the doctrine says informed flow may lead public reporting. It did. My 0.80 rested entirely on Gurman's APRIL read ('early 2027 more likely'); the July supply-chain reporting I had never looked for says ~2.5M Samsung panels with shipments spanning late-2026 AND early-2027 and a launch 'late 2026 or early 2027' \u2014 three months newer and materially less committed to 2027. New p_no 0.62 = P(launch slips past 2026) ~0.55 plus the branch where a very late 2026 unveiling still is not PURCHASABLE by Dec-31. Caution that cut the other way and is worth recording: an aggregated search summary claimed 'mass production since May, 2M panels by year-end', which would have justified cutting to ~0.45 \u2014 fetching the dated article showed the primary source says no such thing. Summary overstated; artifact corrected it. HOLD, no trade: at a 0.495 mark against 0.62 fair the edge is 12pp, the position is cap-bound anyway, and a taker exit pays 4.5c/share (10% of min(p,1-p)) which swamps the gap. Hidden-info class so still NO resting sell. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (MacBook: 20pp spread, ZERO shares bid within 5% of mark.) 0.62 -> 0.58 on 2026-08-13 after the day's round trip (mark 0.495 -> 0.685 midpoint spike -> 0.420) and a fetched clarification. Two corrections in opposite directions netting slightly toward YES: the M5-chip reshuffle is an ACCELERATION not a schedule-hold, but the late-2026 machine everyone is reporting on is the NON-touchscreen M6. Bloomberg's 'end of 2026 or early 2027' on the actual touchscreen line is roughly a coin flip on the calendar boundary, and my criteria need PURCHASABLE by Dec-31, which is stricter than 'launched end of 2026' \u2014 so P(YES) ~0.42 against a market at 0.58. Applying my own measured instance-overconfidence (6-23pp) would put me nearer 0.45, still below the market. HOLD: cannot add (cost $27.19 exceeds 15% of the reduced $175.97 bankroll \u2014 drift, not a breach, so no forced sale either) and would not sell NO at 0.42 believing 0.58. 0.58 -> 0.65 on 2026-08-13 evening: REVERTING a move I made this morning on an unsourced claim. I had cut 0.62 -> 0.58 partly because a search summary said the M5 chip reshuffle was an ACCELERATION; pinning it to dated sources shows the opposite \u2014 'stick with M5 Pro/Max' is neutral framing, and Gurman's own trajectory is Feb 'back half of 2026' -> now 'early 2027 more likely', i.e. a SLIP. With that leg removed, the evidence converges: the late-2026 M6 has no touchscreen, the touchscreen line is separately timed at 'end 2026 or early 2027' with early-2027 favoured, and the criteria need PURCHASABLE not merely launched. P(YES) ~0.35. Offsets kept: the pre-order ambiguity and Apple's capacity to surprise. Market 0.555 NO, so ~9.5pp edge \u2014 but the position is cap-bound and illiquid (20pp spread, zero bid depth within 5%), so this changes the RECORD, not the trade.",
-    "verified": "2026-08-18",
-    "criteria_read": "2026-08-13",
-    "hidden_info": true,
-    "key_facts": [
-      {
-        "claim": "The late-2026 M6 MacBook Pro has NO touchscreen and NO OLED.",
-        "source": "https://www.macrumors.com/2026/07/01/redesigned-m7-macbook-pro-2027/",
-        "source_date": "2026-07-01",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "The touchscreen/OLED machine is a SEPARATE line; Bloomberg puts its launch at 'end of 2026 or early 2027'.",
-        "source": "https://www.macrumors.com/2026/07/01/redesigned-m7-macbook-pro-2027/",
-        "source_date": "2026-07-01",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Gurman's REVISION is 'early 2027 is now more likely than late 2026' (the 'late 2026 to early 2027' phrasing was the ORIGINAL window).",
-        "source": "https://www.macrumors.com/2026/04/19/when-to-expect-next-macbook-pro-and-mac-studio/",
-        "source_date": "2026-04-19",
-        "checked": "2026-08-11"
-      },
-      {
-        "claim": "RETRACTED 2026-08-13: I recorded 'the M5 reshuffle is an attempt to ACCELERATE the touchscreen line' off a search SUMMARY and moved the prior on it. Dated sources do not support it \u2014 they describe Apple 'sticking with' M5 Pro/Max rather than switching to M6 (neutral framing), and the TRAJECTORY runs the other way: Gurman said 'back half of 2026' in February, and 'early 2027 now appears more likely'. That is a SLIP, not an acceleration.",
-        "source": "https://www.macrumors.com/2026/06/26/oled-macbook-stick-with-m5-pro-and-m5-max/ + 9to5Mac 2026-06-26",
-        "source_date": "2026-06-26",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Samsung supplies ~2.5M OLED panels exclusively, shipping across late-2026 AND early-2027.",
-        "source": "https://appleinsider.com/articles/26/07/28/oled-macbook-pro-will-get-displays-exclusively-from-samsung",
-        "source_date": "2026-07-28",
-        "checked": "2026-08-12"
-      },
-      {
-        "claim": "Criteria require GENERAL-PUBLIC PURCHASABILITY by Dec-31; an unveiling alone is explicitly insufficient.",
-        "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "Criteria are SILENT on whether a PRE-ORDER counts as 'available for purchase' \u2014 an unresolved interpretation branch worth ~3-5pp of P(YES).",
-        "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "EXIT LIQUIDITY is a RANGE on this leg, not a number, and it moves fast enough that any point estimate here is stale on arrival. Three readings on 2026-08-13 alone: 10:00 \u2014 20pp spread, ZERO 24h volume, no bid within 5% of mark (exit effectively impossible); 22:00 \u2014 1.0pp spread, $2,543 traded, full-position walk ~6.5% below mark; 22:40 \u2014 ~9.6% below mark. So budget 5-10% to exit the full 66 and re-measure at decision time; the spread has become reliably tight while DEPTH stays thin (a handful of shares at the touch, then a gap). PRACTICAL INSTRUCTION: a genuine thesis break IS actionable here \u2014 pay the ~10% and go \u2014 which is the opposite of the 'unactionable, entry size is your only control' reading this fact carried twelve hours ago. For context the rest of the book exits at 0.5-1.1%, except OpenAI-HLE-50 at 27% which remains effectively stranded.",
-        "source": "live CLOB book walk x3 [FIRST-HAND MEASUREMENT, reproducible on demand]",
-        "source_date": "2026-08-13",
-        "checked": "2026-08-13"
-      },
-      {
-        "claim": "INDEPENDENT SECOND OPINION 2026-08-18 (kimi, 25-round web search) on the unexplained 18pp move: NO development in the last 24-48h justifies it. The circulating items are an Instant Digital Weibo \"100% confirmed\" post (confirms EXISTENCE, not a 2026 ship date, and days-to-weeks old) and Samsung OLED mass production (weeks-old The Elec reporting). Verdict: 0.65 is NOT stale \u2014 kimi independently derives p_no ~0.68 on the same literal criteria. The 0.465 print is a low-volume liquidity sweep. Also verified: NO Apple October 2026 event date exists as of Aug 12-14.",
-        "source": "kimi_advisor web search (Moonshot), transcript in journal",
-        "source_date": "2026-08-18",
-        "checked": "2026-08-18"
-      },
-      {
-        "claim": "LIVE FALSIFIER, newly concrete: The Elec/MacRumors report Samsung 8th-gen OLED (A6 line) mass-producing panels destined for a FOURTH-QUARTER 2026 launch. If Apple runs its normal October Mac event and puts the touchscreen OLED MacBook Pro ON SALE (not pre-order) in late Oct/Nov, this resolves YES. This is the failure mode \u2014 not a hidden leak, but a supply chain already on schedule for Q4 resolving \"late 2026 to early 2027\" at the EARLY end. Counterweight: Gurman's more recent and more cautious \"early 2027 more likely\" plus memory-shortage delay reporting. Genuine tension, priced at 0.65-0.68 not higher.",
-        "source": "The Elec via MacRumors, surfaced by kimi",
-        "source_date": "2026-08-18",
-        "checked": "2026-08-18"
-      }
-    ],
-    "divergence_ack": "2026-08-12",
-    "divergence_note": "REVISED same day. The 02:00 ack claimed 'prior freshly sourced, today's drop carries no news' \u2014 that was WRONG in its basis: the source was fetched-and-dated but FOUR MONTHS OLD in a fast-moving supply-chain story, and I had never asked whether a NEWER source existed. Gap is now 12pp (0.62 vs 0.495), not 30pp."
-  },
-  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
-    "p_no": 0.41,
-    "verified": "2026-08-14",
-    "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. p_no HELD at 0.50 \u2014 tonight's re-verification reproduced the 08-04 number from scratch (p_yes = 0.20 board + 0.80*0.45*0.95 capability = 0.54). CORRECTION TO MY OWN FRAMING: I described this leg to the operator as 'moot' because it marks 0.07 with only 47sh of bid. That conflated UNEXITABLE with WORTHLESS. The plan was always hold-to-resolution, which needs no bid; at p_no 0.50 vs a 0.09 ask this is the largest edge in the book, not a dead position. Do not re-describe it as moot. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. SELF-APPLIED DRIFT CORRECTION 2026-08-13: this morning I measured that my INSTANCE-thesis priors run 6-23pp overconfident on re-derivation (N=5, all one direction) and raised the entry haircut accordingly \u2014 then did not apply the finding to the thesis I am most confident about, which is where it bites hardest. The board-failure input was 0.85; haircut by the observed ~13pp mean to 0.72. OpenAI>=50 p_no 0.50 -> 0.41, Gemini>=50 0.56 -> 0.54. NO ACTION FOLLOWS \u2014 everything is held to Dec-31, sized as lottery tickets, and both marks (0.065, ~0.27) remain far below even the haircut numbers. The point is calibration honesty rather than trading: a correction I apply only to future entries and never to my live convictions is not a correction, it is a ritual. Note this ALSO shrinks the headline disagreement I reported this morning \u2014 market prices the crux at ~6.5%, I now price it at ~28% rather than ~20% failure-to-resolve... i.e. the gap narrows from 73pp to ~65pp, still enormous and still the whole position. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (OpenAI-HLE-50: already flagged unexitable; this quantifies it.)",
-    "criteria_read": "2026-08-18",
-    "hidden_info": true,
-    "cluster": "ai-ships-fast-short",
-    "rho_within": 0.7,
-    "divergence_ack": "2026-08-15",
-    "divergence_note": "INTENTIONAL 43pp gap, re-derived from source 2026-08-10 (not marked to market). Chose NOT to size up HERE despite this being the cheapest expression: the leg has one cushion (board only \u2014 OpenAI capability is already 49.5, a hair under the bar) and 47sh of bid. Routed the marginal $6 to the Gemini leg instead, which needs BOTH a capability jump and a board update and has a real two-sided book. Re-look when the ack expires 2026-08-24, or immediately if agi.safe.ai posts any 2026 row.",
-    "key_facts": [
-      {
-        "claim": "agi.safe.ai tops at Gemini-3-Pro 38.3, OpenAI row GPT-5 25.3; NO row added since ~Nov-2025 (missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1). The Apr-2025 stamp is the DATASET date, not a frozen board. [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.] [RECENCY RE-CHECKED 2026-08-14 by direct fetch of agi.safe.ai: board UNCHANGED \u2014 OpenAI row still GPT-5 25.3, top overall Gemini 3 Pro 38.3, no new rows. First-hand measurement, not a search summary.]",
-        "source": "https://agi.safe.ai/",
-        "checked": "2026-08-14",
-        "source_date": "2026-08-14"
-      },
-      {
-        "claim": "OpenAI's best HLE score on ANY surface is 49.5 (GPT-5.6 Sol) \u2014 under the 50 bar. Frontier is Fable 5 55.5. [RECENCY RE-CHECKED 2026-08-12: unchanged \u2014 Fable 5 55.5 / Opus 5 54.9 / GPT-5.6 Sol 49.5, OpenAI still under 50.]",
-        "source": "third-party trackers (artificialanalysis / pricepertoken)",
-        "checked": "2026-08-12",
-        "source_date": "2026-08-12"
-      },
-      {
-        "claim": "CRITERIA RE-READ 2026-08-18, live description verbatim: the unavailability clause is NARROWER than a spirit reading allows \u2014 \"published elsewhere\" is gated on the source being UNAVAILABLE (and the market stays OPEN while it is), with an explicit default of resolve-NO if no official alternative exists. A board that is reachable but LAGGING is not unavailable. Also \"any model published by OpenAI\" + \"HLE Accuracy or a clear equivalent metric\" \u2014 the metric can be restructured, the SOURCE cannot be substituted while reachable. No drift from the recorded thesis; this is the pillar the position rests on and it held on a verbatim check.",
-        "source": "gamma market description, first-hand",
-        "source_date": "2026-08-18",
-        "checked": "2026-08-18"
-      }
-    ],
-    "divergence_ack_reason": "Mark NO 0.11 vs prior 0.41 (30pp). REAL flow ($1.6k/24h, 2pp spread), board UNCHANGED (GPT-5 25.3) \u2014 market pricing anticipatory Astra>=50 + spirit resolution. Interpretation-question doctrine: defer to market for ACTION, and hold wins under BOTH measures (hold $1.65 at market vs exit $1.35 net). Lottery-sized tuition leg; rest at 0.45 stays. Re-derive only on a crux change (board row or Astra ship)."
-  },
-  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
-    "p_no": 0.64,
-    "verified": "2026-08-14",
-    "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. 0.65->0.64 (immaterial, re-derived not marked): p_yes = 0.10 board + 0.90*0.45*0.65 capability = 0.36. 55+ keeps the most NO margin of the OpenAI pair because it needs a score above TODAY'S GLOBAL FRONTIER (55.5 Fable 5) from OpenAI specifically, AND a board row. This leg has a real two-sided book (0.45/0.46) \u2014 unlike the 50+ leg it IS exitable. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L.",
-    "criteria_read": "2026-08-18",
-    "hidden_info": true,
-    "cluster": "ai-ships-fast-short",
-    "rho_within": 0.7,
-    "key_facts": [
-      {
-        "claim": "Same board state as the 50+ leg; 55+ additionally requires OpenAI to exceed today's GLOBAL frontier (Fable 5 55.5). [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.] [RECENCY RE-CHECKED 2026-08-14 by direct fetch of agi.safe.ai: board UNCHANGED \u2014 OpenAI row still GPT-5 25.3, top overall Gemini 3 Pro 38.3, no new rows. First-hand measurement, not a search summary.]",
-        "source": "https://agi.safe.ai/",
-        "checked": "2026-08-14",
-        "source_date": "2026-08-14"
-      }
-    ]
-  },
-  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
-    "p_no": 0.54,
-    "verified": "2026-08-14",
-    "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. CUT 0.70->0.56: my 0.70 was 2 revisions behind the doctrine I applied to the OpenAI siblings on 08-04 and implied a 60pp edge I was not acting on \u2014 incoherent. New number decomposes explicitly: p_yes = P(board posts Gemini >=50) 0.15 + 0.85 * w_spirit 0.45 * P(capability>=50 by Dec-31) 0.75. w_spirit is the chance a UMA vote overrides clean text under 90%-of-OI YES pressure. ADDED 60sh NO @0.100 maker 2026-08-10 (DEC-0065). CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. SELF-APPLIED DRIFT CORRECTION 2026-08-13: this morning I measured that my INSTANCE-thesis priors run 6-23pp overconfident on re-derivation (N=5, all one direction) and raised the entry haircut accordingly \u2014 then did not apply the finding to the thesis I am most confident about, which is where it bites hardest. The board-failure input was 0.85; haircut by the observed ~13pp mean to 0.72. OpenAI>=50 p_no 0.50 -> 0.41, Gemini>=50 0.56 -> 0.54. NO ACTION FOLLOWS \u2014 everything is held to Dec-31, sized as lottery tickets, and both marks (0.065, ~0.27) remain far below even the haircut numbers. The point is calibration honesty rather than trading: a correction I apply only to future entries and never to my live convictions is not a correction, it is a ritual. Note this ALSO shrinks the headline disagreement I reported this morning \u2014 market prices the crux at ~6.5%, I now price it at ~28% rather than ~20% failure-to-resolve... i.e. the gap narrows from 73pp to ~65pp, still enormous and still the whole position.",
-    "criteria_read": "2026-08-18",
-    "hidden_info": true,
-    "cluster": "ai-ships-fast-short",
-    "rho_within": 0.7,
-    "divergence_ack": "2026-08-15",
-    "divergence_note": "INTENTIONAL 46pp gap, decomposed 2026-08-10 and ACTED ON: 60sh NO added at 0.100 maker (DEC-0065). Sized as a lottery at ~1/8 of rho-discounted Kelly because the residual crux (would a UMA vote override clean text under 90%-of-OI YES pressure?) is an interpretation I cannot verify \u2014 not because the number is soft. Further adds need the cluster check: HLE family is ~14% of bankroll at rho~0.9.",
-    "key_facts": [
-      {
-        "claim": "Board's best Gemini row is 3 Pro at 38.3; Gemini 3.1 Pro (~44.7 third-party) is NOT listed. Needs both a capability jump AND a board update. [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.] [RECENCY RE-CHECKED 2026-08-14 by direct fetch of agi.safe.ai: board UNCHANGED \u2014 OpenAI row still GPT-5 25.3, top overall Gemini 3 Pro 38.3, no new rows. First-hand measurement, not a search summary.]",
-        "source": "https://agi.safe.ai/",
-        "checked": "2026-08-14",
-        "source_date": "2026-08-14"
-      }
-    ],
-    "divergence_ack_reason": "Mark NO 0.2465 vs prior 0.54 (29pp). Two-day directional slide on real-but-small volume ($0.7-1.5k/day), board UNCHANGED (verified again 18:00 Aug-15: Gemini 3 Pro 38.3, no new rows), no news hits. Crowd pricing anticipatory capability+spirit \u2014 the INTERPRETATION crux where doctrine defers to market for action. BOTH-MEASURES TEST: exit at bid walks to ~$9.5 vs hold-at-market-EV $14.5 vs hold-at-prior $31.9 \u2014 HOLD under both (17pp spread makes taker exit value-destructive). Position lottery-sized ($7.94 cost, 59sh after the pre-committed DEC-0065 0.22 tranche filled during the slide). Rest at 0.60 stays. Re-derive on a crux change only."
-  },
-  "_comment_key_facts": "key_facts = the load-bearing factual claims a position rests on, each paired with the EXTERNAL source it came from. Added 2026-08-11 after a prior revision inverted the direction of a source's anchor move and then survived TWO re-verifications, because each re-verification re-read my own note and reproduced the error. A re-verification that does not diff the recorded claim against the source's actual words is confirmation, not verification. The audit rotation surfaces these for source-diffing. TAGGING CAVEAT (2026-08-12): the audit tags a source UNVERIFIED when it does not start with http, but a URL that 403s (congress.gov) is no more agent-verifiable than a prose 'sweep'. Where that happens, say so INLINE in the claim and name the independent falsifier used instead \u2014 do not let an unfetchable URL launder a claim into looking checked. SOURCE_DATE (2026-08-12): distinct from `checked`. `checked` is when I last LOOKED; `source_date` is when the source was PUBLISHED. The MacBook staleness cost 18pp precisely because those diverged invisibly \u2014 checked=1d ago on a source published 114d earlier, in a story that had moved three times since. For live-state sources (a leaderboard, an order book, a market description) the two are equal by construction. ATOMICITY REQUIRED (2026-08-13): one independently checkable assertion per entry, each with its own source and source_date. Bundled entries are how an unchecked fact hides inside a checked one \u2014 SpaceX's 'No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T close would need an S-1 already public' bundled OpenAI's TIMING (checked twice) with every other rival's SIZE (never checked), and the second cost the project its largest prior correction. If an entry contains ' and ' joining two verifiable claims, split it. SOURCE TAXONOMY (2026-08-13) \u2014 'is it a URL' is the WRONG test and my first sweep miscategorised because of it. Ranked by what may move a number: (1) FIRST-HAND MEASUREMENT \u2014 a CLOB book walk, a gamma/API read, an on-chain balance. Reproducible on demand and STRONGER than any article, even though it carries no URL. (2) DATED PRIMARY ARTIFACT \u2014 a fetched, dated piece; the standard for a factual claim about the world. (3) NAMED BUT UNLINKED \u2014 e.g. 'third-party trackers'; verifiable with effort, acceptable if the claim is checked periodically. (4) AGGREGATED SEARCH SUMMARY \u2014 a LEAD ONLY. It must never move a prior: on 2026-08-13 one such summary said the M5 reshuffle was an 'acceleration', moved MacBook 0.62->0.58, and pinning it to dated sources REFUTED it outright. Label the kind when the source is not a URL, so a future sweep does not mistake a measurement for a guess.",
-  "_comment_divergence_ack": "divergence_ack MUST be a bare ISO date string (e.g. \"2026-08-15\") \u2014 position_state_audit \u00a73c parses it with date.fromisoformat() directly and treats anything else as EXPIRED via the exception path. 14-day window from that date. Put prose in divergence_ack_reason (audit ignores it). Same for source_ack. Learned 2026-08-16: two acks written as rich dicts were silently invalid; one flagged, one was a near-miss."
+ "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
+ "_updated": "2026-08-18",
+ "trump-out-as-president-before-2027": {
+  "p_no": 0.97,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
+  "note": "RE-VERIFIED 2026-08-11 (tick): multiple impeachment resolutions filed in the 119th (H.Res.353/537/939) and rhetorical 25th-Amendment calls after the Iran post and the Greenland letter \u2014 but removal needs majorities nobody has assembled, and the cabinet is loyalist. The 25th has never been invoked against a president's will. p_no 0.97 held.",
+  "verified": "2026-08-13",
+  "criteria_read": "2026-08-21",
+  "key_facts": [
+   {
+    "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "A Section 4 invocation NOT sustained by both Houses does not count; impeachment without removal does not count.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "An ANNOUNCEMENT of resignation/removal before Dec-31 resolves YES IMMEDIATELY, regardless of effective date \u2014 the one clause that WIDENS YES.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Resolution source is 'a consensus of credible reporting', NOT a named source \u2014 so no resolution-source-lag angle exists here, unlike the HLE family.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Impeachment resolutions H.Res.353/537/939 are INTRODUCED in the 119th Congress; none has produced a Senate removal and the majorities do not exist.",
+    "source": "https://www.congress.gov/bill/119th-congress/house-resolution/939 [403 to WebFetch \u2014 human-verifiable only; falsifier is the market itself pricing NO at ~0.93]",
+    "source_date": "2026-08-12",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "CRITERIA RE-READ 2026-08-21, verbatim vs recorded thesis: NO DRIFT. All five recorded clauses confirmed word-for-word, including the announcement clause that widens YES and the consensus-of-credible-reporting source. Noted an internal tension in the text worth carrying: the opening sentence says \"ceases to be President for any period of time\" while paragraph 3 says \"Only permanent removal from office will qualify\" \u2014 the narrowing paragraph is operative and my prior is built on it, but if a temporary-removal scenario ever occurs this is exactly the ambiguity a UMA vote would turn on, and it is an interpretation risk I do not price edge against.",
+    "source": "gamma market description, first-hand",
+    "source_date": "2026-08-21",
+    "checked": "2026-08-21"
+   }
+  ]
+ },
+ "will-the-us-acquire-any-part-of-greenland-in-2026": {
+  "p_no": 0.95,
+  "cluster": "us-expansion",
+  "rho_within": 0.0,
+  "cluster_frac": 0.11,
+  "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
+  "verified": "2026-08-13",
+  "note": "0.975 -> 0.98 on 2026-08-13. The rotation surfaced this at 8 days stale and the re-read raised the bar considerably: every realistic path short of a signed sovereignty treaty is carved out by name \u2014 frameworks, MOUs, negotiations, basing rights, SOFA/COFA arrangements, leases, commercial concessions. What remains is a binding legal instrument transferring sovereignty or creating exclusive US jurisdiction, inside 4.5 months, against two governments publicly refusing to discuss sovereignty. P(YES) ~1.5%. ALERT TRIAGE for the Greenland keywords added 2026-08-12: a headline about a 'deal', 'agreement' or 'framework' is NOT a thesis break unless the reporting names a BINDING instrument (enacted legislation, signed treaty, signed agreement text, or an executive action implementing one). Basing-rights headlines are noise by construction. 0.98 -> 0.95 on 2026-08-13. The STALE-SOURCE check fired on its first day for this position (203d-old source behind a criteria_read of 0 days) and immediately earned itself: refreshing found live negotiations whose SHAPE \u2014 unlimited, uncurbable exclusive access to defined areas \u2014 creeps toward the Guantanamo-style qualifying example in the criteria, a path I had dismissed when I read 'basing rights are excluded' this morning and stopped there. Still a strong NO: Denmark's sovereignty red line holds, the deal is framed as respecting it, and YES needs a BINDING instrument granting exclusive JURISDICTION rather than guaranteed access. WATCH: any reporting of signed text that displaces Danish legal authority in a defined zone, as opposed to guaranteeing US use of it.",
+  "criteria_read": "2026-08-13",
+  "key_facts": [
+   {
+    "claim": "YES requires a BINDING agreement or legal instrument producing sovereignty transfer, primary/exclusive US jurisdiction, or acquisition by force.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "EXCLUDED by name: non-binding statements, negotiations, proposals, FRAMEWORKS and MOUs.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "EXCLUDED by name: basing rights, access agreements, SOFA/COFA arrangements, commercial concessions, leases.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "A QUALIFYING example named in the criteria is a Guantanamo-style zone under exclusive/primary US jurisdiction where Danish law does not apply except by US permission.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-us-acquire-any-part-of-greenland-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Live negotiations concern US 'total access' to parts of Greenland for an UNLIMITED period, 'not curbed under any circumstances', via a reopened 1951 defence agreement.",
+    "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
+    "source_date": "2026-01-25",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Denmark's stated red line: 'We will not cede sovereignty over parts of the kingdom'; the proposal is framed as RESPECTING Danish sovereignty.",
+    "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
+    "source_date": "2026-01-25",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Trump ruled out using force to acquire Greenland (Davos, 2026-01-21).",
+    "source": "https://www.congress.gov/crs-product/IN12643",
+    "source_date": "2026-01-22",
+    "checked": "2026-08-13"
+   }
+  ],
+  "source_ack": "2026-08-13",
+  "source_ack_note": "Searched 2026-08-13 for newer Greenland reporting and there is none \u2014 the freshest available material is the January framework/1951-agreement coverage. The position rests on ~200d-old sources because the STORY has not moved, not because I stopped looking. Ack expires in 21 days, which re-tests that claim rather than letting it calcify; re-check sooner if any Greenland keyword fires."
+ },
+ "will-apple-release-a-touchscreen-macbook-in-2026": {
+  "p_no": 0.65,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.4,
+  "cluster_frac": 0.0,
+  "rationale": "[ENTRY-TIME RECORD 2026-07-15, superseded by `note` \u2014 do NOT read as current] DEC-0046: Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out. Entry p_no 0.85.",
+  "note": "CORRECTED 0.80 -> 0.62 on 2026-08-12 after MacBook NO fell 0.595 -> 0.495 over twelve hours, sustained and one-directional, on a hidden-info-class position where the doctrine says informed flow may lead public reporting. It did. My 0.80 rested entirely on Gurman's APRIL read ('early 2027 more likely'); the July supply-chain reporting I had never looked for says ~2.5M Samsung panels with shipments spanning late-2026 AND early-2027 and a launch 'late 2026 or early 2027' \u2014 three months newer and materially less committed to 2027. New p_no 0.62 = P(launch slips past 2026) ~0.55 plus the branch where a very late 2026 unveiling still is not PURCHASABLE by Dec-31. Caution that cut the other way and is worth recording: an aggregated search summary claimed 'mass production since May, 2M panels by year-end', which would have justified cutting to ~0.45 \u2014 fetching the dated article showed the primary source says no such thing. Summary overstated; artifact corrected it. HOLD, no trade: at a 0.495 mark against 0.62 fair the edge is 12pp, the position is cap-bound anyway, and a taker exit pays 4.5c/share (10% of min(p,1-p)) which swamps the gap. Hidden-info class so still NO resting sell. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (MacBook: 20pp spread, ZERO shares bid within 5% of mark.) 0.62 -> 0.58 on 2026-08-13 after the day's round trip (mark 0.495 -> 0.685 midpoint spike -> 0.420) and a fetched clarification. Two corrections in opposite directions netting slightly toward YES: the M5-chip reshuffle is an ACCELERATION not a schedule-hold, but the late-2026 machine everyone is reporting on is the NON-touchscreen M6. Bloomberg's 'end of 2026 or early 2027' on the actual touchscreen line is roughly a coin flip on the calendar boundary, and my criteria need PURCHASABLE by Dec-31, which is stricter than 'launched end of 2026' \u2014 so P(YES) ~0.42 against a market at 0.58. Applying my own measured instance-overconfidence (6-23pp) would put me nearer 0.45, still below the market. HOLD: cannot add (cost $27.19 exceeds 15% of the reduced $175.97 bankroll \u2014 drift, not a breach, so no forced sale either) and would not sell NO at 0.42 believing 0.58. 0.58 -> 0.65 on 2026-08-13 evening: REVERTING a move I made this morning on an unsourced claim. I had cut 0.62 -> 0.58 partly because a search summary said the M5 chip reshuffle was an ACCELERATION; pinning it to dated sources shows the opposite \u2014 'stick with M5 Pro/Max' is neutral framing, and Gurman's own trajectory is Feb 'back half of 2026' -> now 'early 2027 more likely', i.e. a SLIP. With that leg removed, the evidence converges: the late-2026 M6 has no touchscreen, the touchscreen line is separately timed at 'end 2026 or early 2027' with early-2027 favoured, and the criteria need PURCHASABLE not merely launched. P(YES) ~0.35. Offsets kept: the pre-order ambiguity and Apple's capacity to surprise. Market 0.555 NO, so ~9.5pp edge \u2014 but the position is cap-bound and illiquid (20pp spread, zero bid depth within 5%), so this changes the RECORD, not the trade.",
+  "verified": "2026-08-18",
+  "criteria_read": "2026-08-13",
+  "hidden_info": true,
+  "key_facts": [
+   {
+    "claim": "The late-2026 M6 MacBook Pro has NO touchscreen and NO OLED.",
+    "source": "https://www.macrumors.com/2026/07/01/redesigned-m7-macbook-pro-2027/",
+    "source_date": "2026-07-01",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "The touchscreen/OLED machine is a SEPARATE line; Bloomberg puts its launch at 'end of 2026 or early 2027'.",
+    "source": "https://www.macrumors.com/2026/07/01/redesigned-m7-macbook-pro-2027/",
+    "source_date": "2026-07-01",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Gurman's REVISION is 'early 2027 is now more likely than late 2026' (the 'late 2026 to early 2027' phrasing was the ORIGINAL window).",
+    "source": "https://www.macrumors.com/2026/04/19/when-to-expect-next-macbook-pro-and-mac-studio/",
+    "source_date": "2026-04-19",
+    "checked": "2026-08-11"
+   },
+   {
+    "claim": "RETRACTED 2026-08-13: I recorded 'the M5 reshuffle is an attempt to ACCELERATE the touchscreen line' off a search SUMMARY and moved the prior on it. Dated sources do not support it \u2014 they describe Apple 'sticking with' M5 Pro/Max rather than switching to M6 (neutral framing), and the TRAJECTORY runs the other way: Gurman said 'back half of 2026' in February, and 'early 2027 now appears more likely'. That is a SLIP, not an acceleration.",
+    "source": "https://www.macrumors.com/2026/06/26/oled-macbook-stick-with-m5-pro-and-m5-max/ + 9to5Mac 2026-06-26",
+    "source_date": "2026-06-26",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Samsung supplies ~2.5M OLED panels exclusively, shipping across late-2026 AND early-2027.",
+    "source": "https://appleinsider.com/articles/26/07/28/oled-macbook-pro-will-get-displays-exclusively-from-samsung",
+    "source_date": "2026-07-28",
+    "checked": "2026-08-12"
+   },
+   {
+    "claim": "Criteria require GENERAL-PUBLIC PURCHASABILITY by Dec-31; an unveiling alone is explicitly insufficient.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "Criteria are SILENT on whether a PRE-ORDER counts as 'available for purchase' \u2014 an unresolved interpretation branch worth ~3-5pp of P(YES).",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "EXIT LIQUIDITY is a RANGE on this leg, not a number, and it moves fast enough that any point estimate here is stale on arrival. Three readings on 2026-08-13 alone: 10:00 \u2014 20pp spread, ZERO 24h volume, no bid within 5% of mark (exit effectively impossible); 22:00 \u2014 1.0pp spread, $2,543 traded, full-position walk ~6.5% below mark; 22:40 \u2014 ~9.6% below mark. So budget 5-10% to exit the full 66 and re-measure at decision time; the spread has become reliably tight while DEPTH stays thin (a handful of shares at the touch, then a gap). PRACTICAL INSTRUCTION: a genuine thesis break IS actionable here \u2014 pay the ~10% and go \u2014 which is the opposite of the 'unactionable, entry size is your only control' reading this fact carried twelve hours ago. For context the rest of the book exits at 0.5-1.1%, except OpenAI-HLE-50 at 27% which remains effectively stranded.",
+    "source": "live CLOB book walk x3 [FIRST-HAND MEASUREMENT, reproducible on demand]",
+    "source_date": "2026-08-13",
+    "checked": "2026-08-13"
+   },
+   {
+    "claim": "INDEPENDENT SECOND OPINION 2026-08-18 (kimi, 25-round web search) on the unexplained 18pp move: NO development in the last 24-48h justifies it. The circulating items are an Instant Digital Weibo \"100% confirmed\" post (confirms EXISTENCE, not a 2026 ship date, and days-to-weeks old) and Samsung OLED mass production (weeks-old The Elec reporting). Verdict: 0.65 is NOT stale \u2014 kimi independently derives p_no ~0.68 on the same literal criteria. The 0.465 print is a low-volume liquidity sweep. Also verified: NO Apple October 2026 event date exists as of Aug 12-14.",
+    "source": "kimi_advisor web search (Moonshot), transcript in journal",
+    "source_date": "2026-08-18",
+    "checked": "2026-08-18"
+   },
+   {
+    "claim": "LIVE FALSIFIER, newly concrete: The Elec/MacRumors report Samsung 8th-gen OLED (A6 line) mass-producing panels destined for a FOURTH-QUARTER 2026 launch. If Apple runs its normal October Mac event and puts the touchscreen OLED MacBook Pro ON SALE (not pre-order) in late Oct/Nov, this resolves YES. This is the failure mode \u2014 not a hidden leak, but a supply chain already on schedule for Q4 resolving \"late 2026 to early 2027\" at the EARLY end. Counterweight: Gurman's more recent and more cautious \"early 2027 more likely\" plus memory-shortage delay reporting. Genuine tension, priced at 0.65-0.68 not higher.",
+    "source": "The Elec via MacRumors, surfaced by kimi",
+    "source_date": "2026-08-18",
+    "checked": "2026-08-18"
+   }
+  ],
+  "divergence_ack": "2026-08-12",
+  "divergence_note": "REVISED same day. The 02:00 ack claimed 'prior freshly sourced, today's drop carries no news' \u2014 that was WRONG in its basis: the source was fetched-and-dated but FOUR MONTHS OLD in a fast-moving supply-chain story, and I had never asked whether a NEWER source existed. Gap is now 12pp (0.62 vs 0.495), not 30pp."
+ },
+ "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
+  "p_no": 0.41,
+  "verified": "2026-08-14",
+  "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. p_no HELD at 0.50 \u2014 tonight's re-verification reproduced the 08-04 number from scratch (p_yes = 0.20 board + 0.80*0.45*0.95 capability = 0.54). CORRECTION TO MY OWN FRAMING: I described this leg to the operator as 'moot' because it marks 0.07 with only 47sh of bid. That conflated UNEXITABLE with WORTHLESS. The plan was always hold-to-resolution, which needs no bid; at p_no 0.50 vs a 0.09 ask this is the largest edge in the book, not a dead position. Do not re-describe it as moot. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. SELF-APPLIED DRIFT CORRECTION 2026-08-13: this morning I measured that my INSTANCE-thesis priors run 6-23pp overconfident on re-derivation (N=5, all one direction) and raised the entry haircut accordingly \u2014 then did not apply the finding to the thesis I am most confident about, which is where it bites hardest. The board-failure input was 0.85; haircut by the observed ~13pp mean to 0.72. OpenAI>=50 p_no 0.50 -> 0.41, Gemini>=50 0.56 -> 0.54. NO ACTION FOLLOWS \u2014 everything is held to Dec-31, sized as lottery tickets, and both marks (0.065, ~0.27) remain far below even the haircut numbers. The point is calibration honesty rather than trading: a correction I apply only to future entries and never to my live convictions is not a correction, it is a ritual. Note this ALSO shrinks the headline disagreement I reported this morning \u2014 market prices the crux at ~6.5%, I now price it at ~28% rather than ~20% failure-to-resolve... i.e. the gap narrows from 73pp to ~65pp, still enormous and still the whole position. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (OpenAI-HLE-50: already flagged unexitable; this quantifies it.)",
+  "criteria_read": "2026-08-18",
+  "hidden_info": true,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.7,
+  "divergence_ack": "2026-08-15",
+  "divergence_note": "INTENTIONAL 43pp gap, re-derived from source 2026-08-10 (not marked to market). Chose NOT to size up HERE despite this being the cheapest expression: the leg has one cushion (board only \u2014 OpenAI capability is already 49.5, a hair under the bar) and 47sh of bid. Routed the marginal $6 to the Gemini leg instead, which needs BOTH a capability jump and a board update and has a real two-sided book. Re-look when the ack expires 2026-08-24, or immediately if agi.safe.ai posts any 2026 row.",
+  "key_facts": [
+   {
+    "claim": "agi.safe.ai tops at Gemini-3-Pro 38.3, OpenAI row GPT-5 25.3; NO row added since ~Nov-2025 (missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1). The Apr-2025 stamp is the DATASET date, not a frozen board. [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.] [RECENCY RE-CHECKED 2026-08-14 by direct fetch of agi.safe.ai: board UNCHANGED \u2014 OpenAI row still GPT-5 25.3, top overall Gemini 3 Pro 38.3, no new rows. First-hand measurement, not a search summary.]",
+    "source": "https://agi.safe.ai/",
+    "checked": "2026-08-14",
+    "source_date": "2026-08-14"
+   },
+   {
+    "claim": "OpenAI's best HLE score on ANY surface is 49.5 (GPT-5.6 Sol) \u2014 under the 50 bar. Frontier is Fable 5 55.5. [RECENCY RE-CHECKED 2026-08-12: unchanged \u2014 Fable 5 55.5 / Opus 5 54.9 / GPT-5.6 Sol 49.5, OpenAI still under 50.]",
+    "source": "third-party trackers (artificialanalysis / pricepertoken)",
+    "checked": "2026-08-12",
+    "source_date": "2026-08-12"
+   },
+   {
+    "claim": "CRITERIA RE-READ 2026-08-18, live description verbatim: the unavailability clause is NARROWER than a spirit reading allows \u2014 \"published elsewhere\" is gated on the source being UNAVAILABLE (and the market stays OPEN while it is), with an explicit default of resolve-NO if no official alternative exists. A board that is reachable but LAGGING is not unavailable. Also \"any model published by OpenAI\" + \"HLE Accuracy or a clear equivalent metric\" \u2014 the metric can be restructured, the SOURCE cannot be substituted while reachable. No drift from the recorded thesis; this is the pillar the position rests on and it held on a verbatim check.",
+    "source": "gamma market description, first-hand",
+    "source_date": "2026-08-18",
+    "checked": "2026-08-18"
+   }
+  ],
+  "divergence_ack_reason": "Mark NO 0.11 vs prior 0.41 (30pp). REAL flow ($1.6k/24h, 2pp spread), board UNCHANGED (GPT-5 25.3) \u2014 market pricing anticipatory Astra>=50 + spirit resolution. Interpretation-question doctrine: defer to market for ACTION, and hold wins under BOTH measures (hold $1.65 at market vs exit $1.35 net). Lottery-sized tuition leg; rest at 0.45 stays. Re-derive only on a crux change (board row or Astra ship)."
+ },
+ "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
+  "p_no": 0.64,
+  "verified": "2026-08-14",
+  "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. 0.65->0.64 (immaterial, re-derived not marked): p_yes = 0.10 board + 0.90*0.45*0.65 capability = 0.36. 55+ keeps the most NO margin of the OpenAI pair because it needs a score above TODAY'S GLOBAL FRONTIER (55.5 Fable 5) from OpenAI specifically, AND a board row. This leg has a real two-sided book (0.45/0.46) \u2014 unlike the 50+ leg it IS exitable. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L.",
+  "criteria_read": "2026-08-18",
+  "hidden_info": true,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.7,
+  "key_facts": [
+   {
+    "claim": "Same board state as the 50+ leg; 55+ additionally requires OpenAI to exceed today's GLOBAL frontier (Fable 5 55.5). [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.] [RECENCY RE-CHECKED 2026-08-14 by direct fetch of agi.safe.ai: board UNCHANGED \u2014 OpenAI row still GPT-5 25.3, top overall Gemini 3 Pro 38.3, no new rows. First-hand measurement, not a search summary.]",
+    "source": "https://agi.safe.ai/",
+    "checked": "2026-08-14",
+    "source_date": "2026-08-14"
+   }
+  ]
+ },
+ "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
+  "p_no": 0.54,
+  "verified": "2026-08-21",
+  "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. CUT 0.70->0.56: my 0.70 was 2 revisions behind the doctrine I applied to the OpenAI siblings on 08-04 and implied a 60pp edge I was not acting on \u2014 incoherent. New number decomposes explicitly: p_yes = P(board posts Gemini >=50) 0.15 + 0.85 * w_spirit 0.45 * P(capability>=50 by Dec-31) 0.75. w_spirit is the chance a UMA vote overrides clean text under 90%-of-OI YES pressure. ADDED 60sh NO @0.100 maker 2026-08-10 (DEC-0065). CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. SELF-APPLIED DRIFT CORRECTION 2026-08-13: this morning I measured that my INSTANCE-thesis priors run 6-23pp overconfident on re-derivation (N=5, all one direction) and raised the entry haircut accordingly \u2014 then did not apply the finding to the thesis I am most confident about, which is where it bites hardest. The board-failure input was 0.85; haircut by the observed ~13pp mean to 0.72. OpenAI>=50 p_no 0.50 -> 0.41, Gemini>=50 0.56 -> 0.54. NO ACTION FOLLOWS \u2014 everything is held to Dec-31, sized as lottery tickets, and both marks (0.065, ~0.27) remain far below even the haircut numbers. The point is calibration honesty rather than trading: a correction I apply only to future entries and never to my live convictions is not a correction, it is a ritual. Note this ALSO shrinks the headline disagreement I reported this morning \u2014 market prices the crux at ~6.5%, I now price it at ~28% rather than ~20% failure-to-resolve... i.e. the gap narrows from 73pp to ~65pp, still enormous and still the whole position. || 2026-08-21 MOVE VERIFIED FIRST-HAND (UMA flagged YES 0.71->0.81 mid, +9.3pp): board UNCHANGED (live fetch, Gemini max still 38.3, no new row); Scale sister board best Gemini = gemini-3.1-pro-preview 46.4 < 50. So the repricing is ANTICIPATORY (future release crossing 50), not a board event or a current >=50 score anywhere. Live book walked: NO 0.124/0.249, spread 12.5pp, our 59sh walk ~$7.25 gross vs hold-at-prior ~$31.9 -> hold wins under both measures; lottery leg rides. Resting asks 0.60 stay premium-to-fair (permitted). NEW MEASURED INPUT for next deep derivation: 46.4 is the first hard Gemini number I hold (prior derivation had none) - re-derive P(capability by Dec-31) from it properly OFF-tick, not here (mid-tick edits are drafts).",
+  "criteria_read": "2026-08-18",
+  "hidden_info": true,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.7,
+  "divergence_ack": "2026-08-21",
+  "divergence_note": "INTENTIONAL 46pp gap, decomposed 2026-08-10 and ACTED ON: 60sh NO added at 0.100 maker (DEC-0065). Sized as a lottery at ~1/8 of rho-discounted Kelly because the residual crux (would a UMA vote override clean text under 90%-of-OI YES pressure?) is an interpretation I cannot verify \u2014 not because the number is soft. Further adds need the cluster check: HLE family is ~14% of bankroll at rho~0.9.",
+  "key_facts": [
+   {
+    "claim": "Board's best Gemini row is 3 Pro at 38.3; Gemini 3.1 Pro (~44.7 third-party) is NOT listed. Needs both a capability jump AND a board update. [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.] [RECENCY RE-CHECKED 2026-08-14 by direct fetch of agi.safe.ai: board UNCHANGED \u2014 OpenAI row still GPT-5 25.3, top overall Gemini 3 Pro 38.3, no new rows. First-hand measurement, not a search summary.]",
+    "source": "https://agi.safe.ai/",
+    "checked": "2026-08-14",
+    "source_date": "2026-08-14"
+   }
+  ],
+  "divergence_ack_reason": "Mark NO 0.2465 vs prior 0.54 (29pp). Two-day directional slide on real-but-small volume ($0.7-1.5k/day), board UNCHANGED (verified again 18:00 Aug-15: Gemini 3 Pro 38.3, no new rows), no news hits. Crowd pricing anticipatory capability+spirit \u2014 the INTERPRETATION crux where doctrine defers to market for action. BOTH-MEASURES TEST: exit at bid walks to ~$9.5 vs hold-at-market-EV $14.5 vs hold-at-prior $31.9 \u2014 HOLD under both (17pp spread makes taker exit value-destructive). Position lottery-sized ($7.94 cost, 59sh after the pre-committed DEC-0065 0.22 tranche filled during the slide). Rest at 0.60 stays. Re-derive on a crux change only."
+ },
+ "_comment_key_facts": "key_facts = the load-bearing factual claims a position rests on, each paired with the EXTERNAL source it came from. Added 2026-08-11 after a prior revision inverted the direction of a source's anchor move and then survived TWO re-verifications, because each re-verification re-read my own note and reproduced the error. A re-verification that does not diff the recorded claim against the source's actual words is confirmation, not verification. The audit rotation surfaces these for source-diffing. TAGGING CAVEAT (2026-08-12): the audit tags a source UNVERIFIED when it does not start with http, but a URL that 403s (congress.gov) is no more agent-verifiable than a prose 'sweep'. Where that happens, say so INLINE in the claim and name the independent falsifier used instead \u2014 do not let an unfetchable URL launder a claim into looking checked. SOURCE_DATE (2026-08-12): distinct from `checked`. `checked` is when I last LOOKED; `source_date` is when the source was PUBLISHED. The MacBook staleness cost 18pp precisely because those diverged invisibly \u2014 checked=1d ago on a source published 114d earlier, in a story that had moved three times since. For live-state sources (a leaderboard, an order book, a market description) the two are equal by construction. ATOMICITY REQUIRED (2026-08-13): one independently checkable assertion per entry, each with its own source and source_date. Bundled entries are how an unchecked fact hides inside a checked one \u2014 SpaceX's 'No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T close would need an S-1 already public' bundled OpenAI's TIMING (checked twice) with every other rival's SIZE (never checked), and the second cost the project its largest prior correction. If an entry contains ' and ' joining two verifiable claims, split it. SOURCE TAXONOMY (2026-08-13) \u2014 'is it a URL' is the WRONG test and my first sweep miscategorised because of it. Ranked by what may move a number: (1) FIRST-HAND MEASUREMENT \u2014 a CLOB book walk, a gamma/API read, an on-chain balance. Reproducible on demand and STRONGER than any article, even though it carries no URL. (2) DATED PRIMARY ARTIFACT \u2014 a fetched, dated piece; the standard for a factual claim about the world. (3) NAMED BUT UNLINKED \u2014 e.g. 'third-party trackers'; verifiable with effort, acceptable if the claim is checked periodically. (4) AGGREGATED SEARCH SUMMARY \u2014 a LEAD ONLY. It must never move a prior: on 2026-08-13 one such summary said the M5 reshuffle was an 'acceleration', moved MacBook 0.62->0.58, and pinning it to dated sources REFUTED it outright. Label the kind when the source is not a URL, so a future sweep does not mistake a measurement for a guess.",
+ "_comment_divergence_ack": "divergence_ack MUST be a bare ISO date string (e.g. \"2026-08-15\") \u2014 position_state_audit \u00a73c parses it with date.fromisoformat() directly and treats anything else as EXPIRED via the exception path. 14-day window from that date. Put prose in divergence_ack_reason (audit ignores it). Same for source_ack. Learned 2026-08-16: two acks written as rich dicts were silently invalid; one flagged, one was a near-miss."
 }
