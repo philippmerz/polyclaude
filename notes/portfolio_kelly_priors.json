@@ -9,7 +9,7 @@
     "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
     "note": "RE-VERIFIED 2026-08-11 (tick): multiple impeachment resolutions filed in the 119th (H.Res.353/537/939) and rhetorical 25th-Amendment calls after the Iran post and the Greenland letter \u2014 but removal needs majorities nobody has assembled, and the cabinet is loyalist. The 25th has never been invoked against a president's will. p_no 0.97 held.",
     "verified": "2026-08-13",
-    "criteria_read": "2026-08-13",
+    "criteria_read": "2026-08-21",
     "key_facts": [
       {
         "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
@@ -40,6 +40,12 @@
         "source": "https://www.congress.gov/bill/119th-congress/house-resolution/939 [403 to WebFetch \u2014 human-verifiable only; falsifier is the market itself pricing NO at ~0.93]",
         "source_date": "2026-08-12",
         "checked": "2026-08-13"
+      },
+      {
+        "claim": "CRITERIA RE-READ 2026-08-21, verbatim vs recorded thesis: NO DRIFT. All five recorded clauses confirmed word-for-word, including the announcement clause that widens YES and the consensus-of-credible-reporting source. Noted an internal tension in the text worth carrying: the opening sentence says \"ceases to be President for any period of time\" while paragraph 3 says \"Only permanent removal from office will qualify\" \u2014 the narrowing paragraph is operative and my prior is built on it, but if a temporary-removal scenario ever occurs this is exactly the ambiguity a UMA vote would turn on, and it is an interpretation risk I do not price edge against.",
+        "source": "gamma market description, first-hand",
+        "source_date": "2026-08-21",
+        "checked": "2026-08-21"
       }
     ]
   },

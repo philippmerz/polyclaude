@@ -8926,3 +8926,29 @@ MA 3.6 vs bar 60 with 11 days to Hormuz settlement.
 
 No trades. Nothing material for Telegram. Weekly P&L due tomorrow — first one under the new
 structure (realized -> drivers -> what is fragile) and the first carrying the corrected +3.1%.
+
+## 2026-08-21 02:00 UTC cron tick — Trump-out criteria re-read (no drift); two candidates skipped
+
+Bankroll **$194.40**; REALIZED **+$5.32 (+3.1%)** unchanged again while gas drifted to $5.46 — the
+invariance continues to hold. Unrealized marked +$13.63 vs realizable +$3.15.
+
+CRITERIA RE-READ fired on Trump-out, my largest bond-like leg. Pulled the live description and
+checked all five recorded clauses verbatim: **no drift.** Permanent-removal-only, Section 3 excluded,
+unsustained Section 4 excluded, impeachment-without-removal excluded, sustained Section 4 qualifies,
+and — importantly — the ANNOUNCEMENT clause that widens YES was already recorded, as was the
+consensus-of-credible-reporting source (which is why no resolution-source-lag angle exists here,
+unlike HLE). Nothing to revise.
+
+Recorded one thing I had NOT noted before: the text contains an internal tension. The opening says
+Trump ceasing to be President "for any period of time" resolves YES, while paragraph 3 says "only
+permanent removal will qualify". The narrowing paragraph is operative and my 0.97 rests on it — but
+if a temporary-removal scenario ever occurred, that ambiguity is exactly what a UMA vote would turn
+on. Logged as an interpretation risk I do not price edge against, per the fact-vs-interpretation
+rule. Audit CLEAN after the read.
+
+Discovery's two candidates both skipped without fresh analysis: Fed-decrease-25bps (standing family
+pass since 2026-08-02) and NATO-Russia-clash-by-Aug-31 at 0.093 YES — a war forecast on a 9.9-day
+tail where I hold no edge, and the 3609% gross-APY figure is precisely the win-assumed artifact the
+discovery guard warns about. Rest of tick clean: UMA 0, Ostium unchanged, hurdle 7/0, redeem 0,
+exit 0, daemons current, coverage silent, 7 orders resting, no Gamescom listings (day 5 of window).
+No trades.
