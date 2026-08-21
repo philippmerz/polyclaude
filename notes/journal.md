@@ -8977,3 +8977,28 @@ next occurrence and respects the over-formalisation caution: no new machinery, b
 message that already fires.
 
 Book untouched through the gap: 7 positions, 7 orders resting, Hormuz settles in 10 days.
+
+## 2026-08-21 ~15:55 — meta-reflection: 01_lessons.md Ops split DONE (the queued fresh-session item)
+
+The operator's rewind freed exactly the context the 2026-08-13 backlog item was waiting for, so
+this cycle's cleanup finding was pre-identified: the Ops section had grown to 600 lines (72% of
+the file whose whole purpose is to be read FIRST by a fresh session), with every new lesson
+landing by default at the tail of the "self-flattering 2026-08-13 cluster" regardless of theme.
+
+EXECUTED as whole-block moves via a throwaway script that ABORTED unless every one of the 59
+bullets classified exactly once and the multiset of non-blank lines was preserved modulo the
+known header/intro edits — the deterministic version of "verify the seams after every insert",
+chosen because the queue note records that a string-anchored attempt at this exact edit had
+already corrupted clob_v2.py once. Zero content changed; only structure.
+
+New shape, seven sub-sections: Daemons/resources/liveness (8) · Write paths & drills (6) ·
+Parsing & verifying my own output (8) · Prior & fact hygiene 08-10→12 (13, absorbing the two
+08-10 valuation lessons) · Self-flattering numbers & display honesty 08-13→20 (16) · Stale
+constants & the test suite 08-14 (3) · Verified mechanics & regime judgment 08-16→20 (5).
+Map table updated to enumerate them. Backlog item deleted.
+
+Part (2) of the reflection — new strategies/alpha: NOTHING NEW to flag. Last substantive
+reflection was ~13h ago; everything surfaced since (maker two-sided quoting, measurable-source
+scanner, capital-velocity term) is already backlogged with explicit build gates, and forcing a
+finding past those gates is the error the gates exist to stop. Book untouched: 7 positions,
+7 resting orders, Hormuz settles in 10 days, Gamescom watch day 5 of window.

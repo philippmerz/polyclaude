@@ -15,7 +15,7 @@
 | Priors & calibration | how p estimates are built, revised, and mis-set |
 | Edges that survived | the live edge sources and their fine print |
 | Sizing & risk | caps, Kelly, cluster correlation, liquidity |
-| **Ops** (largest) | the failure classes that actually happened — daemons, fallbacks, parsing, verification. Contains two named clusters: **Prior & fact hygiene (2026-08-11/12)** on stale/inverted priors and source-diffing, and **Self-flattering numbers (2026-08-13)** on midpoints, self-marking and un-applied corrections |
+| **Ops** (largest) | the failure classes that actually happened, in seven sub-sections: **Daemons, resources & liveness** (pkill, VM=1.9GB, fallbacks, dark panes) · **Write paths, drills & outward side effects** (dry-run traps, operator-facing alarms) · **Parsing, venue data & verifying my own output** (empty-list bugs, de-indexing, detector validation) · **Prior & fact hygiene (2026-08-10→12)** on stale/inverted priors and source-diffing · **Self-flattering numbers & display honesty (2026-08-13→20)** on midpoints, self-marking and un-applied corrections · **Stale constants & the test suite (2026-08-14)** · **Verified mechanics & regime judgment (2026-08-16→20)** (regime-bounded data, measurable-interim sources, thesis-worked exits) |
 | Process & operator covenant | Telegram protocol, weekly P&L, reporting discipline |
 
 Recurring meta-shapes, if you read nothing else: *fix the CLASS not the instance* (a break
@@ -217,6 +217,8 @@ the gap); *verify against a known truth* (absent output and failed output look i
 
 ## Ops (the failure classes that actually happened)
 
+### Daemons, resources & liveness
+
 - **NEVER pkill/pgrep with the pattern anywhere else in the command line** — killed the
   shell THREE times (exit 144). Use `scripts/daemonctl.sh {status|stop|restart}` —
   structurally immune. Restart daemons via daemonctl/keepalive only; a bare nohup races
@@ -226,6 +228,7 @@ the gap); *verify against a known truth* (absent output and failed output look i
   daemon that gets duplicated within 10 min (daemonctl itself did this, 2026-07-29,
   7.5h dual-run; fixed to absolute). After ANY daemon restart, verify `status` shows
   ONE pid ~10+ min later, not just immediately.
+
 - **State files drift when positions change.** Closing a position must disarm its
   triggers (stale ARB trigger fired every 5min for hours, telegramming the operator);
   `position_state_audit.py --fix` reconciles triggers/priors/claim-snapshot/acked-holds
@@ -233,22 +236,60 @@ the gap); *verify against a known truth* (absent output and failed output look i
   trigger written into a priors note is NOT armed until it exists in
   opportunity_triggers.json (GPT-6 NO<0.60 sat note-only while the bid touched 0.60,
   2026-07-29 — armed via new `clob_bid` kind).
-- **Markets DE-INDEX mid-resolution** (Mojtaba, Marvel): data-api drops the row, slug
-  404s, redeem-all goes blind. conditionIds are snapshotted per position
-  (notes/position_condition_ids.json) and `clob_v2 redeem-one <conditionId>` claims
-  without indexing. (Whether v2 redemption wants pUSD or USDC.e collateral is
-  UNVERIFIED — first real redemption should test and note it.)
-- **data-api /activity is ground truth** for fills/redemptions; /trades lags and MISSED
-  a fill outright (Marvel 0.98, 2026-07-26). Wallet-balance arithmetic with resting
-  orders is unreliable — don't reconcile by inference, pull the activity feed.
+
 - **VM = 1.9GB. ONE background agent max, ever** (3 OOM crashes). Check MemAvailable
   >500MB before any spawn — AND check no other claude-spawning script is still running
   (watchlist --auto-revet, sports --with-consensus, catalyst_check all spawn `claude -p`
   AFTER launch, so MemAvailable at launch time under-counts; 2026-07-30: 3 concurrent
   haikus at 548MB from exactly this stack-up — killed one, no OOM).
+
 - **Daemon-fired ticks must carry their reason** (else they read as scheduled noise and
   the alert gets answered "nothing happened" — 2026-07-28). daily_checkin passes $1
   through to the prompt.
+
+- **A fallback that never runs is indistinguishable from one that works.** daily_checkin's
+  headless fallback died on `claude: command not found` (hardcoded cron PATH omitted
+  ~/.local/bin) — for MONTHS, invisibly, because the normal path dispatches to the pane
+  and exits before reaching it. Only building the tick-eaten RECOVERY (which forces the
+  headless path) exercised it (2026-08-03). Force every emergency path at least once,
+  or assume it is broken. Forcing it TWICE found two more breaks the same day: probes
+  must replicate the script's `cd` (claude's session scope is cwd-derived), and
+  `--resume --fork-session` on the 121MB operator transcript timed out past 4 MINUTES.
+  Recovery therefore runs a FRESH session + primer (README -> 01_lessons.md -> status),
+  not a fork: 7.7s vs 4min+, size-independent, and conservatism-instructed because a cold
+  session lacks conversation context. Corollary: THIS FILE is the context a cold fallback
+  inherits — that is what it is for, so keep it current.
+
+- **The fallback's OWN peer check self-matches.** `pgrep -cf 'claude -p'` counts the bash
+  SUBSHELL running it (its argv carries the literal pattern), so the count is +1: a LONE
+  fallback sees count=2 and, under the prompt's "2+ = defer" rule, false-defers and eats the
+  tick — same outage class as 2026-07-16, opposite cause from the documented `$$` trap.
+  ENUMERATE with `pgrep -af 'claude -p'`, drop the `bash -c … pgrep …` line, and count the
+  genuine `claude -p` PIDs (cross-check `ps … | grep -v grep`). Count OUT the pattern-bearing
+  subshell, never your own claude PID. (2026-08-09: caught by verifying instead of trusting the
+  raw count — cost nothing, but the "count==1 → proceed" rule as written is wrong for the
+  fallback path; harden daily_checkin's prompt to say "enumerate, don't count".)
+
+- **Liveness ≠ progress — monitor OUTPUT, not PIDs.** Three instances: news_watcher
+  logged alerts but never persisted them 30h (2026-06-11); send-keys into a dead pane
+  ate a tick (2026-07-16); a wedged tmux send-keys child blocked the telegram listener
+  in do_wait for 27 HOURS with its PID happily alive — every operator message queued
+  undelivered and the OPERATOR was the detection layer (2026-07-30). Every subprocess
+  call in a daemon needs a timeout=; every daemon check needs a progress signal (child
+  age, output growth, state mtime), not just pid-alive. Also: tmux clients exit 0 on
+  SIGTERM — a killed send may be logged "delivered" without the text landing.
+
+- **A dark pane has TWO causes that look identical: session hang and MODEL QUOTA
+  exhaustion.** Same symptoms from inside (ticks eaten, journal stale, sentinels fire),
+  opposite fixes. 2026-08-02: I diagnosed a 16h gap as the marathon-hang pattern and
+  recommended a restart; the operator's actual cause was Fable quota — they fixed it by
+  switching model. Check quota FIRST (cheapest, and only the operator can see it), then
+  session age. Sentinel text now names quota first. Marathon hangs ARE real too (2× ~4h,
+  2026-07-27), and the response is the same either way: nothing is lost — resting orders
+  live server-side, everything durable is in the repo precisely so context is disposable.
+
+### Write paths, drills & outward side effects
+
 - **A fallback that never runs is indistinguishable from one that works — and DRY-RUN mode
   can hide the exact half that is broken.** 2026-08-12, drilling the emergency exit: it read
   all 8 positions, walked real bids and correctly slippage-aborted the illiquid leg, so the
@@ -300,6 +341,25 @@ the gap); *verify against a known truth* (absent output and failed output look i
   "would REVERT: result for condition not received yet" — a semantic revert proving ABI,
   contract and signing are all correct, at zero cost, and letting resolution day be rehearsed.
 
+- **An emergency exit should take partial fills, not refuse them.** The live-fire also exposed
+  that FOK was wrong for this job: all-or-nothing at one price means any thinning between the
+  bid you read and the order you post kills the sell and exits NOTHING — in the one situation
+  where the book is guaranteed to be moving. Switched to a GTC limit at the same bid: it takes
+  whatever depth exists and rests the remainder, price still protected by the slippage cap. A
+  partial exit in an emergency strictly beats a clean refusal.
+
+### Parsing, venue data & verifying my own output
+
+- **Markets DE-INDEX mid-resolution** (Mojtaba, Marvel): data-api drops the row, slug
+  404s, redeem-all goes blind. conditionIds are snapshotted per position
+  (notes/position_condition_ids.json) and `clob_v2 redeem-one <conditionId>` claims
+  without indexing. (Whether v2 redemption wants pUSD or USDC.e collateral is
+  UNVERIFIED — first real redemption should test and note it.)
+
+- **data-api /activity is ground truth** for fills/redemptions; /trades lags and MISSED
+  a fill outright (Marvel 0.98, 2026-07-26). Wallet-balance arithmetic with resting
+  orders is unreliable — don't reconcile by inference, pull the activity feed.
+
 - **A bulk string-replace with count=1 silently patches the WRONG call site.** Adding that dry
   path, my `t.replace(old, new, 1)` anchored on a `send_raw_transaction` line that appears in
   BOTH redeem_all and redeem_one — and redeem_all comes first, so the patch landed in the wrong
@@ -326,66 +386,6 @@ the gap); *verify against a known truth* (absent output and failed output look i
   cancel of an id that cannot exist both return SEMANTIC errors, which proves signing, auth and
   endpoint while touching nothing.
 
-- **An emergency exit should take partial fills, not refuse them.** The live-fire also exposed
-  that FOK was wrong for this job: all-or-nothing at one price means any thinning between the
-  bid you read and the order you post kills the sell and exits NOTHING — in the one situation
-  where the book is guaranteed to be moving. Switched to a GTC limit at the same bid: it takes
-  whatever depth exists and rests the remainder, price still protected by the slippage cap. A
-  partial exit in an emergency strictly beats a clean refusal.
-
-- **A fallback that never runs is indistinguishable from one that works.** daily_checkin's
-  headless fallback died on `claude: command not found` (hardcoded cron PATH omitted
-  ~/.local/bin) — for MONTHS, invisibly, because the normal path dispatches to the pane
-  and exits before reaching it. Only building the tick-eaten RECOVERY (which forces the
-  headless path) exercised it (2026-08-03). Force every emergency path at least once,
-  or assume it is broken. Forcing it TWICE found two more breaks the same day: probes
-  must replicate the script's `cd` (claude's session scope is cwd-derived), and
-  `--resume --fork-session` on the 121MB operator transcript timed out past 4 MINUTES.
-  Recovery therefore runs a FRESH session + primer (README -> 01_lessons.md -> status),
-  not a fork: 7.7s vs 4min+, size-independent, and conservatism-instructed because a cold
-  session lacks conversation context. Corollary: THIS FILE is the context a cold fallback
-  inherits — that is what it is for, so keep it current.
-- **The fallback's OWN peer check self-matches.** `pgrep -cf 'claude -p'` counts the bash
-  SUBSHELL running it (its argv carries the literal pattern), so the count is +1: a LONE
-  fallback sees count=2 and, under the prompt's "2+ = defer" rule, false-defers and eats the
-  tick — same outage class as 2026-07-16, opposite cause from the documented `$$` trap.
-  ENUMERATE with `pgrep -af 'claude -p'`, drop the `bash -c … pgrep …` line, and count the
-  genuine `claude -p` PIDs (cross-check `ps … | grep -v grep`). Count OUT the pattern-bearing
-  subshell, never your own claude PID. (2026-08-09: caught by verifying instead of trusting the
-  raw count — cost nothing, but the "count==1 → proceed" rule as written is wrong for the
-  fallback path; harden daily_checkin's prompt to say "enumerate, don't count".)
-- **Liveness ≠ progress — monitor OUTPUT, not PIDs.** Three instances: news_watcher
-  logged alerts but never persisted them 30h (2026-06-11); send-keys into a dead pane
-  ate a tick (2026-07-16); a wedged tmux send-keys child blocked the telegram listener
-  in do_wait for 27 HOURS with its PID happily alive — every operator message queued
-  undelivered and the OPERATOR was the detection layer (2026-07-30). Every subprocess
-  call in a daemon needs a timeout=; every daemon check needs a progress signal (child
-  age, output growth, state mtime), not just pid-alive. Also: tmux clients exit 0 on
-  SIGTERM — a killed send may be logged "delivered" without the text landing.
-- **A dark pane has TWO causes that look identical: session hang and MODEL QUOTA
-  exhaustion.** Same symptoms from inside (ticks eaten, journal stale, sentinels fire),
-  opposite fixes. 2026-08-02: I diagnosed a 16h gap as the marathon-hang pattern and
-  recommended a restart; the operator's actual cause was Fable quota — they fixed it by
-  switching model. Check quota FIRST (cheapest, and only the operator can see it), then
-  session age. Sentinel text now names quota first. Marathon hangs ARE real too (2× ~4h,
-  2026-07-27), and the response is the same either way: nothing is lost — resting orders
-  live server-side, everything durable is in the repo precisely so context is disposable.
-
-- **"Unexitable" and "worthless" are different questions — do not merge them.** 2026-08-10:
-  I called the OpenAI-HLE-50 leg "moot" to the operator because it marked 0.07 with 47 shares
-  of bid. But the plan for it was hold-to-resolution, which needs no bid at all, and the honest
-  p_no was 0.50 — the largest edge in the book. What actually drove the word "moot" was the
-  -81% P&L column. Exit liquidity governs whether I can CHANGE my mind cheaply; it says nothing
-  about the value of the claim. Ask them separately, in that order.
-
-- **A prior you would never trade on is not a prior — it is an unbooked disagreement with
-  yourself.** Same day: the Gemini-HLE prior said p_no 0.70 while the market offered NO at 0.10,
-  a 60pp edge I had been carrying for 8 days without buying a share. Either the number was
-  fantasy or I was ignoring the best trade available; both cannot hold. The fix is not to mark
-  to market — it is to decompose (P(board posts a qualifying row) + P(no row) × w_spirit ×
-  P(capability)), because a decomposed prior can be checked against the world, and a vibes prior
-  cannot. Audit trigger: any live position whose prior differs from mark by >25pp.
-
 - **A signal that fires on 100% of the book is not a signal.** The Brownian-bridge pass listed
   all 8 positions as SCALE_UP candidates. That is a tell about the tool's calibration, not an
   instruction — but the biggest outlier in it (69pp) was still worth chasing, and was where the
@@ -408,9 +408,25 @@ the gap); *verify against a known truth* (absent output and failed output look i
   traps: an EXACT-value bucket ("wins exactly 3 seats") is a partition with NO monotone
   constraint, and a magnitude suffix must be APPLIED, not skipped.
 
-### Prior & fact hygiene — the 2026-08-11/12 cluster
-*(three inverted revisions inside twelve hours, then an 18pp miss from a source that was faithfully
-quoted but four months stale. Read this before touching any prior.)*
+### Prior & fact hygiene — the 2026-08-10→12 cluster
+*(two valuation lessons from 08-10, then three inverted revisions inside twelve hours,
+then an 18pp miss from a source that was faithfully quoted but four months stale.
+Read this before touching any prior.)*
+
+- **"Unexitable" and "worthless" are different questions — do not merge them.** 2026-08-10:
+  I called the OpenAI-HLE-50 leg "moot" to the operator because it marked 0.07 with 47 shares
+  of bid. But the plan for it was hold-to-resolution, which needs no bid at all, and the honest
+  p_no was 0.50 — the largest edge in the book. What actually drove the word "moot" was the
+  -81% P&L column. Exit liquidity governs whether I can CHANGE my mind cheaply; it says nothing
+  about the value of the claim. Ask them separately, in that order.
+
+- **A prior you would never trade on is not a prior — it is an unbooked disagreement with
+  yourself.** Same day: the Gemini-HLE prior said p_no 0.70 while the market offered NO at 0.10,
+  a 60pp edge I had been carrying for 8 days without buying a share. Either the number was
+  fantasy or I was ignoring the best trade available; both cannot hold. The fix is not to mark
+  to market — it is to decompose (P(board posts a qualifying row) + P(no row) × w_spirit ×
+  P(capability)), because a decomposed prior can be checked against the world, and a vibes prior
+  cannot. Audit trigger: any live position whose prior differs from mark by >25pp.
 
 - **The mechanism: a revision FEELS like verification, so it never gets re-verified — and
   re-reading it reproduces the error perfectly.** Evidence, all found on 2026-08-11:
@@ -531,7 +547,7 @@ quoted but four months stale. Read this before touching any prior.)*
   specific thing that RESOLVES it happened". Audit the two against each other whenever a cluster
   grows past a few percent of bankroll.
 
-### Self-flattering numbers — the 2026-08-13 cluster
+### Self-flattering numbers & display honesty — the 2026-08-13→20 cluster
 *(three instances in one day, all pointing the same way: the number that favours you is
 the one that arrives with a plausible justification attached. Audit those hardest.)*
 
@@ -598,121 +614,6 @@ the one that arrives with a plausible justification attached. Audit those hardes
   just the deposit total; (2) the diagnostic that works is INVARIANCE — ask what should be constant
   (realized cannot move without a settlement), then watch whether it is. Price-drift noise in a line
   labelled "settled" is a category error the arithmetic will not catch on its own.
-
-- **A "never observed in the data" fact has TIME-DEPENDENT strength — check what regime produced
-  the observations before exporting it down the ladder.** 2026-08-19, holding the Hormuz Aug-31 NO,
-  I pulled 150 prints and found the peak SINGLE DAY was 44 against a bar needing a 7-day AVERAGE of
-  60 — i.e. YES requires a level never once observed. That is near-dispositive at 12 days and it is
-  tempting to carry straight to the Sep-30 and Dec-31 legs of the same monotone ladder. It does not
-  carry, and the reason is the regime: EVERY observation is from during the conflict. June's best
-  episode (mean 10.7, peak 44) was a partial de-escalation, not a post-ceasefire recovery, so the
-  series bounds conflict-period traffic and says nothing about how fast ships return once insurance
-  re-rates. Decomposing Dec-31 honestly — P(ceasefire) x P(recovery | ceasefire) — spans 0.32-0.52
-  around the market's 0.445, i.e. no differentiated edge, and the 44.5% that looked absurd against
-  "never observed 60" is defensible. The generic error to avoid: treating a historical range as a
-  bound on the FUTURE when every sample was drawn from one regime and the question is whether the
-  regime ends. The same dataset that makes a 12-day fade verified-impossibility makes a 134-day one
-  a geopolitical forecast.
-
-- **Split "named resolution source" into MEASURABLE-INTERIM vs TERMINAL-ONLY — my edge only exists
-  in the first.** 2026-08-18, gate-checking the Spotify "top artist 2026" family (named source,
-  mechanical resolution, Dec-31 measurement, $10-25k books — superficially the exact shape that has
-  worked). It fails on one structural property: Spotify publishes the resolving variable ONCE, at
-  Wrapped, and no public source tracks calendar-year global streams mid-year (Kworb carries
-  all-time totals and chart appearances, neither of which is the resolving quantity). Contrast the
-  markets where this class HAS paid: PortWatch publishes the Hormuz 7-day MA continuously, so I
-  measured 4.4-vs-60 before committing and the same measurement killed the Bab el-Mandeb sibling at
-  25.1-vs-10; agi.safe.ai publishes the HLE board continuously, so "has a qualifying row appeared"
-  is checkable any day. **The test is not "is the source named and mechanical" — it is "can I read
-  the variable TODAY."** If the answer is no, there is no fact to verify until resolution, my stated
-  edge (verifying facts the crowd has not checked) is structurally unavailable, and what remains is
-  a popularity forecast against fans who follow it more closely than I do. Cheap filter, applies
-  before any pricing work: find the source, try to read the CURRENT value, and skip the family if
-  you cannot.
-
-- **A rule inferred from a neighbouring case is not a verified rule — and the neighbour can point
-  the wrong way.** 2026-08-12's drill established that a resting sell BLOCKS an emergency taker
-  exit: it locks the very shares that path needs. On 2026-08-18, with a full-size exit resting on
-  a leg that resolves in 12 days, the obvious inference was that those shares would equally block
-  REDEMPTION. Measured it instead: CTF balanceOf returned the full balance with the order live —
-  CLOB orders are allowance-based and never escrow. Same order, same shares, OPPOSITE conclusions,
-  because one path must TRANSFER the tokens and the other BURNS them from a balance that never
-  left the wallet. Had the inference stood, resolution day (the runbook's first live use) would
-  have carried an invented cancel-then-redeem step: extra transactions, extra failure modes, under
-  time pressure, to solve a problem that did not exist. The tell is generic — when a new situation
-  resembles a case you already paid for, the resemblance is a HYPOTHESIS about a shared mechanism,
-  and the cheap move is to check whether the mechanism is actually shared before importing the
-  conclusion.
-
-- **"The thesis worked and the price now reflects it" is a complete exit condition — it needs no
-  thesis break.** GPT-6 NO, entered at 0.645, sat at 0.93 with the criteria re-read that morning
-  confirming the bar intact and the sibling ladder confirming the thesis. Nothing was wrong; there
-  was simply no edge left, and holding a zero-edge position is carrying variance for no
-  compensation. The instinct to keep a winner because the reasoning still holds is the mirror of
-  refusing to cut a loser because the reasoning still holds — both substitute "am I right?" for
-  "am I paid?". Two mechanical guards made it actionable rather than a judgment call: the
-  both-measures test SPLIT for the first time (exit +$0.39 at my prior, hold +$0.04 at the
-  market's — the latter inside noise), and the measured one-directional overconfidence broke the
-  tie toward exiting, which it does whenever my prior already sits below the market's.
-
-- **A hand-maintained constant that tracks the outside world will be stale every time you look
-  at it; the fix is a fetch, not a better number.** 2026-08-14 the hold/close hurdle read 5.00%,
-  documented as "≈ current Aave USDC supply APY". Live rates that morning: Polygon 2.88, Base
-  3.59, Arbitrum 2.38 — the threshold governing the whole book sat 1.4pp above the best rate
-  available ANYWHERE. This was the constant's SECOND staleness: 3.4% was already wrong when the
-  2026-07-02 audit replaced it. Editing it a third time would have been choosing to be wrong
-  again by October. Note the direction of the damage — an inflated hurdle overstates what freed
-  capital earns, so exiting looks better than it is: Greenland read "exit clears by $0.05" at
-  5% and "closing costs $0.17" at the true 2.88%. The stale number was arguing to liquidate.
-  Retired to a fallback (kept HIGH deliberately: if the fetch dies, over-flagging costs one
-  gate check while under-flagging costs real carry), with a live read, a 24h cache, a sanity
-  bound, and all four failure modes tested — fallback, recovery, TTL expiry, corrupt cache.
-  The class: any constant whose comment contains the word "current" is a bug with a timer on it.
-
-- **When one stale constant turns up, the finding is the CLASS — go sweep, the same night.** The
-  hurdle fix on 2026-08-14 came with a tidy sentence ("any constant whose comment contains the
-  word 'current' is a bug with a timer on it"). Treating that as a claim to TEST rather than a
-  line to admire found, within the hour: `POLYMARKET_FEE_RATE = 0.072` hard-coded in SEVEN
-  scripts, `TAKER_FEE_RATE = 0.10` in an eighth, and a correct live read in a ninth — three
-  answers to "what does a trade cost". Measured against 100 live markets the fee is not a
-  constant at all: 84 charge 1000bps, 16 charge zero. It is a per-market FIELD, and both
-  constants were wrong in both directions at once. The dominant error ran the dangerous way —
-  0.072 understates a real 10% fee by 28%, and it sat inside the arb scanners and the entry
-  filter, exactly where understating cost manufactures an opportunity that is not there. Two
-  further errors fell out of the same sweep: the entry filter applied the fee MULTIPLICATIVELY
-  (`p*(1+f)` for a charge that is dollars per share, understating cost 3.2pp at p=0.50) and its
-  own hurdle was a 3-month-old snapshot sitting under a comment instructing periodic refresh.
-  A constant nobody re-measures is not a value, it is a decaying assumption; the durable fix is
-  a fetch plus a self-check that FAILS when reality moves, not a fresher number.
-
-- **Writing the lesson does not inoculate you against the lesson.** Within the same hour as
-  authoring the stale-constant rule, I shipped an exit-cost gate with a flat 0.10 fee — which
-  charged Greenland (takerBaseFee=None) $0.17 of fee that does not exist and printed it as the
-  REASON TO HOLD. The verdict survived on corrected math by $0.01 against a $0.29 noise floor,
-  i.e. right by luck. The gap between "I know this failure mode" and "my next commit is free of
-  it" is not closed by understanding; it is closed by a mechanism that re-measures. Hence the
-  self-check in pm_fees rather than a comment saying to keep the number current.
-  TWICE IN ONE NIGHT, which is what makes this a rule and not an anecdote. Writing
-  tests/test_money_math.py I put a comment in it warning that `takerBaseFee=None` means THIS
-  MARKET CHARGES NO FEE and must never be conflated with "value missing, use the fallback" —
-  and the suite's first run caught me doing exactly that in fee_aware_breakeven, in code I had
-  written twenty minutes earlier. Zero-fee legs (16% of markets) were charged a phantom 10%,
-  overstating the arb breakeven and suppressing real opportunities. The lesson was in my head,
-  then on the page, and still in the code; what removed it was an assertion that RAN. Corollary
-  for this repo, which had no tests at all until 2026-08-14: the suite is not overhead, it is
-  the only thing that has ever caught one of these before the money moved. Any change to code
-  deciding what a trade COSTS ships with a test in the same commit.
-
-- **Idle capital is not automatically mis-parked — price the move before making it.** The $28.12
-  PM float sits in pUSD at 0%, which repeatedly LOOKS like a standing violation of "deploy idle
-  same-chain capital immediately". Priced honestly it is not: Aave-Polygon pays 2.88%, so a
-  realistic 2-3 week idle window is worth ~$0.05, and even 139 days of never trading is $0.31.
-  Against that, `wrap_pusd.py` is one-way BY DESIGN (no pUSD->USDC.e unwrap exists), so
-  capturing it means building a fresh on-chain write path against the collateral that funds all
-  trading — and parking the float adds withdraw+wrap latency to entries whose edge is largest in
-  the HOURS after listing (the announce template's realized record is +59% and +43.9%). Paying
-  execution speed and new-write-path risk for five cents is a bad trade. Recorded because the
-  question re-arises every tick and the arithmetic, not the instinct, is the answer.
 
 - **"Fix it at the display layer" is incomplete until you ENUMERATE the display layers.**
   2026-08-13, in one morning, the same scope error three times: found midpoints inflating the
@@ -814,6 +715,125 @@ the one that arrives with a plausible justification attached. Audit those hardes
   live source — never a value. Record instead what is STABLE about it (the Astra ladder stays
   monotone with September modal and the Aug-31 leg drifting down; MacBook's spread is reliably
   tight while depth stays thin), because the durable claim is the shape, not the number.
+
+### Stale constants & the birth of the test suite — the 2026-08-14 cluster
+
+- **A hand-maintained constant that tracks the outside world will be stale every time you look
+  at it; the fix is a fetch, not a better number.** 2026-08-14 the hold/close hurdle read 5.00%,
+  documented as "≈ current Aave USDC supply APY". Live rates that morning: Polygon 2.88, Base
+  3.59, Arbitrum 2.38 — the threshold governing the whole book sat 1.4pp above the best rate
+  available ANYWHERE. This was the constant's SECOND staleness: 3.4% was already wrong when the
+  2026-07-02 audit replaced it. Editing it a third time would have been choosing to be wrong
+  again by October. Note the direction of the damage — an inflated hurdle overstates what freed
+  capital earns, so exiting looks better than it is: Greenland read "exit clears by $0.05" at
+  5% and "closing costs $0.17" at the true 2.88%. The stale number was arguing to liquidate.
+  Retired to a fallback (kept HIGH deliberately: if the fetch dies, over-flagging costs one
+  gate check while under-flagging costs real carry), with a live read, a 24h cache, a sanity
+  bound, and all four failure modes tested — fallback, recovery, TTL expiry, corrupt cache.
+  The class: any constant whose comment contains the word "current" is a bug with a timer on it.
+
+- **When one stale constant turns up, the finding is the CLASS — go sweep, the same night.** The
+  hurdle fix on 2026-08-14 came with a tidy sentence ("any constant whose comment contains the
+  word 'current' is a bug with a timer on it"). Treating that as a claim to TEST rather than a
+  line to admire found, within the hour: `POLYMARKET_FEE_RATE = 0.072` hard-coded in SEVEN
+  scripts, `TAKER_FEE_RATE = 0.10` in an eighth, and a correct live read in a ninth — three
+  answers to "what does a trade cost". Measured against 100 live markets the fee is not a
+  constant at all: 84 charge 1000bps, 16 charge zero. It is a per-market FIELD, and both
+  constants were wrong in both directions at once. The dominant error ran the dangerous way —
+  0.072 understates a real 10% fee by 28%, and it sat inside the arb scanners and the entry
+  filter, exactly where understating cost manufactures an opportunity that is not there. Two
+  further errors fell out of the same sweep: the entry filter applied the fee MULTIPLICATIVELY
+  (`p*(1+f)` for a charge that is dollars per share, understating cost 3.2pp at p=0.50) and its
+  own hurdle was a 3-month-old snapshot sitting under a comment instructing periodic refresh.
+  A constant nobody re-measures is not a value, it is a decaying assumption; the durable fix is
+  a fetch plus a self-check that FAILS when reality moves, not a fresher number.
+
+- **Writing the lesson does not inoculate you against the lesson.** Within the same hour as
+  authoring the stale-constant rule, I shipped an exit-cost gate with a flat 0.10 fee — which
+  charged Greenland (takerBaseFee=None) $0.17 of fee that does not exist and printed it as the
+  REASON TO HOLD. The verdict survived on corrected math by $0.01 against a $0.29 noise floor,
+  i.e. right by luck. The gap between "I know this failure mode" and "my next commit is free of
+  it" is not closed by understanding; it is closed by a mechanism that re-measures. Hence the
+  self-check in pm_fees rather than a comment saying to keep the number current.
+  TWICE IN ONE NIGHT, which is what makes this a rule and not an anecdote. Writing
+  tests/test_money_math.py I put a comment in it warning that `takerBaseFee=None` means THIS
+  MARKET CHARGES NO FEE and must never be conflated with "value missing, use the fallback" —
+  and the suite's first run caught me doing exactly that in fee_aware_breakeven, in code I had
+  written twenty minutes earlier. Zero-fee legs (16% of markets) were charged a phantom 10%,
+  overstating the arb breakeven and suppressing real opportunities. The lesson was in my head,
+  then on the page, and still in the code; what removed it was an assertion that RAN. Corollary
+  for this repo, which had no tests at all until 2026-08-14: the suite is not overhead, it is
+  the only thing that has ever caught one of these before the money moved. Any change to code
+  deciding what a trade COSTS ships with a test in the same commit.
+
+### Verified mechanics & regime judgment — 2026-08-16→20
+
+- **A "never observed in the data" fact has TIME-DEPENDENT strength — check what regime produced
+  the observations before exporting it down the ladder.** 2026-08-19, holding the Hormuz Aug-31 NO,
+  I pulled 150 prints and found the peak SINGLE DAY was 44 against a bar needing a 7-day AVERAGE of
+  60 — i.e. YES requires a level never once observed. That is near-dispositive at 12 days and it is
+  tempting to carry straight to the Sep-30 and Dec-31 legs of the same monotone ladder. It does not
+  carry, and the reason is the regime: EVERY observation is from during the conflict. June's best
+  episode (mean 10.7, peak 44) was a partial de-escalation, not a post-ceasefire recovery, so the
+  series bounds conflict-period traffic and says nothing about how fast ships return once insurance
+  re-rates. Decomposing Dec-31 honestly — P(ceasefire) x P(recovery | ceasefire) — spans 0.32-0.52
+  around the market's 0.445, i.e. no differentiated edge, and the 44.5% that looked absurd against
+  "never observed 60" is defensible. The generic error to avoid: treating a historical range as a
+  bound on the FUTURE when every sample was drawn from one regime and the question is whether the
+  regime ends. The same dataset that makes a 12-day fade verified-impossibility makes a 134-day one
+  a geopolitical forecast.
+
+- **Split "named resolution source" into MEASURABLE-INTERIM vs TERMINAL-ONLY — my edge only exists
+  in the first.** 2026-08-18, gate-checking the Spotify "top artist 2026" family (named source,
+  mechanical resolution, Dec-31 measurement, $10-25k books — superficially the exact shape that has
+  worked). It fails on one structural property: Spotify publishes the resolving variable ONCE, at
+  Wrapped, and no public source tracks calendar-year global streams mid-year (Kworb carries
+  all-time totals and chart appearances, neither of which is the resolving quantity). Contrast the
+  markets where this class HAS paid: PortWatch publishes the Hormuz 7-day MA continuously, so I
+  measured 4.4-vs-60 before committing and the same measurement killed the Bab el-Mandeb sibling at
+  25.1-vs-10; agi.safe.ai publishes the HLE board continuously, so "has a qualifying row appeared"
+  is checkable any day. **The test is not "is the source named and mechanical" — it is "can I read
+  the variable TODAY."** If the answer is no, there is no fact to verify until resolution, my stated
+  edge (verifying facts the crowd has not checked) is structurally unavailable, and what remains is
+  a popularity forecast against fans who follow it more closely than I do. Cheap filter, applies
+  before any pricing work: find the source, try to read the CURRENT value, and skip the family if
+  you cannot.
+
+- **A rule inferred from a neighbouring case is not a verified rule — and the neighbour can point
+  the wrong way.** 2026-08-12's drill established that a resting sell BLOCKS an emergency taker
+  exit: it locks the very shares that path needs. On 2026-08-18, with a full-size exit resting on
+  a leg that resolves in 12 days, the obvious inference was that those shares would equally block
+  REDEMPTION. Measured it instead: CTF balanceOf returned the full balance with the order live —
+  CLOB orders are allowance-based and never escrow. Same order, same shares, OPPOSITE conclusions,
+  because one path must TRANSFER the tokens and the other BURNS them from a balance that never
+  left the wallet. Had the inference stood, resolution day (the runbook's first live use) would
+  have carried an invented cancel-then-redeem step: extra transactions, extra failure modes, under
+  time pressure, to solve a problem that did not exist. The tell is generic — when a new situation
+  resembles a case you already paid for, the resemblance is a HYPOTHESIS about a shared mechanism,
+  and the cheap move is to check whether the mechanism is actually shared before importing the
+  conclusion.
+
+- **"The thesis worked and the price now reflects it" is a complete exit condition — it needs no
+  thesis break.** GPT-6 NO, entered at 0.645, sat at 0.93 with the criteria re-read that morning
+  confirming the bar intact and the sibling ladder confirming the thesis. Nothing was wrong; there
+  was simply no edge left, and holding a zero-edge position is carrying variance for no
+  compensation. The instinct to keep a winner because the reasoning still holds is the mirror of
+  refusing to cut a loser because the reasoning still holds — both substitute "am I right?" for
+  "am I paid?". Two mechanical guards made it actionable rather than a judgment call: the
+  both-measures test SPLIT for the first time (exit +$0.39 at my prior, hold +$0.04 at the
+  market's — the latter inside noise), and the measured one-directional overconfidence broke the
+  tie toward exiting, which it does whenever my prior already sits below the market's.
+
+- **Idle capital is not automatically mis-parked — price the move before making it.** The $28.12
+  PM float sits in pUSD at 0%, which repeatedly LOOKS like a standing violation of "deploy idle
+  same-chain capital immediately". Priced honestly it is not: Aave-Polygon pays 2.88%, so a
+  realistic 2-3 week idle window is worth ~$0.05, and even 139 days of never trading is $0.31.
+  Against that, `wrap_pusd.py` is one-way BY DESIGN (no pUSD->USDC.e unwrap exists), so
+  capturing it means building a fresh on-chain write path against the collateral that funds all
+  trading — and parking the float adds withdraw+wrap latency to entries whose edge is largest in
+  the HOURS after listing (the announce template's realized record is +59% and +43.9%). Paying
+  execution speed and new-write-path risk for five cents is a bad trade. Recorded because the
+  question re-arises every tick and the arithmetic, not the instinct, is the answer.
 
 ## Process & operator covenant
 
