@@ -238,3 +238,33 @@ _unsorted = [{"price": "0.50", "size": "10"}, {"price": "0.60", "size": "10"}]
 check("partial fill takes BEST price first (kills unsorted mutant)",
       book_walk.walk_bids(_unsorted, 10)[0], 6.0)
 check("partial fill avg is the best level", book_walk.walk_bids(_unsorted, 10)[1], 0.60)
+
+# --------------------------------------------- maker gate economics (2026-08-21)
+# The --maker gap: the robust gate judged maker entries on ask + taker fee,
+# economics a post-only order never pays. These pin the fix: the gate must see
+# the POSTED rest price with zero fee, and the rest price must stay passive.
+
+# maker_rest_price: bb+tick when room exists under the ask
+check("rest = bb+tick under the ask", book_walk.maker_rest_price(0.44, 0.50, 0.01), 0.45)
+# bb+tick would EQUAL the ask -> not strictly under -> stay at bb
+check("bb+tick == ask stays at bb", book_walk.maker_rest_price(0.44, 0.45, 0.01), 0.44)
+# empty ask side -> bb+tick unconstrained
+check("no ask -> bb+tick", book_walk.maker_rest_price(0.44, None, 0.01), 0.45)
+# fine-tick market: 0.441+0.001=0.442 must FLOOR to the 2-dec grid (0.44), never
+# ceil (0.45 could cross a 0.445 ask and turn the order taker)
+check("fine tick floors to 2-dec grid", book_walk.maker_rest_price(0.441, 0.445, 0.001), 0.44)
+
+# effective_entry_cost: the MacBook 2026-08-18 numbers. Ask 0.50 on a 1000bps
+# market = 0.55 effective taker; the intended rest at 0.45 pays no fee.
+_tc, _tf = book_walk.effective_entry_cost(0.50, 1000)
+check("taker cost = ask + fee", _tc, 0.55)
+check("taker fee at p=0.50", _tf, 0.05)
+_mc, _mf = book_walk.effective_entry_cost(0.50, 1000, maker_px=0.45)
+check("maker cost = posted price", _mc, 0.45)
+check("maker fee is zero even on 1000bps market", _mf, 0.0)
+# The regression itself: at p_robust=0.55 the taker cost shows ZERO edge (the
+# spurious SKIP) while the maker cost clears by 10pp — the trade that was lost.
+check("taker economics showed no edge", 0.55 - _tc, 0.0)
+check("maker economics cleared by 10pp", 0.55 - _mc, 0.10)
+# zero-fee market: taker cost is just the ask (no phantom fallback fee)
+check("zero-fee taker cost = ask", book_walk.effective_entry_cost(0.50, 0)[0], 0.50)

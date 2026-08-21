@@ -28,6 +28,8 @@ which is how two of them silently drifted from the two that were right.
 
 from __future__ import annotations
 
+import math
+
 from pm_fees import fee_per_share
 
 
@@ -57,6 +59,35 @@ def walk_bids(bids: list[dict], size: float) -> tuple[float, float, float]:
         proceeds += take * float(lvl["price"])
         left -= take
     return proceeds, proceeds / float(size), max(0.0, left)
+
+
+def maker_rest_price(best_bid: float, best_ask: float | None, tick: float) -> float:
+    """Where a passive maker BUY actually rests: best_bid+tick, capped one tick
+    under the ask, floored to the 2-dec amount grid (CLOB maker-USD precision —
+    flooring keeps the bid passive; ceiling could cross and turn it taker).
+    """
+    px = best_bid + tick if (best_ask is None or best_bid + tick < best_ask) else best_bid
+    return round(math.floor(round(px * 100, 6)) / 100, 2)
+
+
+def effective_entry_cost(mark: float, taker_bps: int, maker_px: float | None = None
+                         ) -> tuple[float, float]:
+    """Per-share (cost, fee) the entry gate and Kelly must judge.
+
+    WHY (2026-08-18 gap, fixed 2026-08-21): --maker changed only the EXECUTION
+    price, so the robust gate judged maker entries on ask + taker fee —
+    economics a post-only order never pays — and spuriously SKIPped MacBook at
+    an effective 0.55 when the intended rest at 0.45 cleared by +10pp. The gate
+    question for a maker entry is "IF this bid fills at the posted price, is it
+    +EV"; whether it fills is governed by the resting-order rules, not here.
+
+    Taker: mark (the live ask) + takerBaseFee x min(p, 1-p). Maker: the posted
+    rest price, fee $0.
+    """
+    if maker_px is not None:
+        return maker_px, 0.0
+    fee = (taker_bps / 10000.0) * min(mark, 1.0 - mark) if taker_bps > 0 else 0.0
+    return mark + fee, fee
 
 
 def realizable(bids: list[dict], size: float, market: dict | None) -> dict:

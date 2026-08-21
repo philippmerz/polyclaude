@@ -29,6 +29,8 @@ MUTS = [
                     'cost = p_buy * (1 + pm_fees.fee_per_share(market, p_buy))'),             # multiplicative fee
     ("bankroll.py", '"realized": (total - gas_usd - ref) - unreal_mid',
                     '"realized": (total - ref) - unreal_mid'),                                # gas booked as profit
+    ("book_walk.py",'if maker_px is not None:\n        return maker_px, 0.0',
+                    'if False:\n        return maker_px, 0.0'),                               # maker judged on taker cost (2026-08-18 gap)
 ]
 results = []
 for fname, old, new in MUTS:

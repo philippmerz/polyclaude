@@ -40,6 +40,8 @@ from pathlib import Path
 
 import httpx
 
+from book_walk import effective_entry_cost, maker_rest_price
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "notes" / "entries_log.md"
 
@@ -414,9 +416,32 @@ def main() -> int:
         taker_bps = int(float(m.get("takerBaseFee") or 0))
     except Exception:
         taker_bps = 0
-    fee_per_share = (taker_bps / 10000.0) * min(mark, 1.0 - mark) if taker_bps > 0 else 0.0
-    cost_eff = mark + fee_per_share
-    if fee_per_share:
+    maker_px = None
+    if args.maker:
+        # Gate on the price actually being POSTED (2026-08-18 gap): --maker used
+        # to change only the execution price, so the robust gate judged maker
+        # entries on ask + taker fee — economics a post-only order never pays —
+        # and spuriously SKIPped MacBook at effective 0.55 when the rest at 0.45
+        # cleared by +10pp. Fetch the book ONCE here so the gated price and the
+        # posted price cannot diverge within the run.
+        try:
+            bk = httpx.get("https://clob.polymarket.com/book",
+                           params={"token_id": token}, timeout=15).json()
+            maker_bb = max((float(x["price"]) for x in bk.get("bids", [])), default=None)
+            maker_ba = min((float(x["price"]) for x in bk.get("asks", [])), default=None)
+        except Exception as e:
+            print(f"  book fetch failed ({e}) — maker entry aborted")
+            return 1
+        if maker_bb is None:
+            print("  empty bid side — maker entry aborted (use the taker path)")
+            return 1
+        maker_px = maker_rest_price(maker_bb, maker_ba, tick)
+    cost_eff, fee_per_share = effective_entry_cost(mark, taker_bps, maker_px)
+    if maker_px is not None:
+        print(f"  [maker] gate + sizing run on the POSTED rest price {maker_px:.2f} "
+              f"(bid {maker_bb:.3f} / ask {maker_ba if maker_ba is not None else '—'}), maker fee $0 "
+              f"— not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.")
+    elif fee_per_share:
         print(f"  [fee] takerBaseFee={taker_bps}bps → {fee_per_share*100:.2f}c/share taker fee; "
               f"effective cost {cost_eff:.4f} (ask {mark:.4f}) — gate + sizing run on effective cost")
 
@@ -587,7 +612,11 @@ def main() -> int:
             print(f"    p={p_alt:.4f} ({delta_p:+.2f}): NO EDGE → $0")
 
     if not args.execute:
-        print(f"\nDECISION: WOULD_BUY ${deploy_dollar:.2f} of {side} @ {mark:.4f}")
+        if maker_px is not None:
+            print(f"\nDECISION: WOULD_REST ${deploy_dollar:.2f} of {side} @ {maker_px:.2f} "
+                  f"post-only (ask {mark:.4f}; fill not guaranteed)")
+        else:
+            print(f"\nDECISION: WOULD_BUY ${deploy_dollar:.2f} of {side} @ {mark:.4f}")
         print(f"  Re-run with --execute to actually post the order.")
         return 0
 
@@ -616,22 +645,10 @@ def main() -> int:
         # 10%*min(p,1-p)/share) and the bid-side price. A resting bid fills
         # under FUTURE information — allowed only with per-tick re-verification
         # and news_watcher coverage of the market's info channel (rules in
-        # notes/resting_orders.md).
-        try:
-            bk = httpx.get("https://clob.polymarket.com/book",
-                           params={"token_id": token}, timeout=15).json()
-            bb = max((float(x["price"]) for x in bk.get("bids", [])), default=None)
-            ba = min((float(x["price"]) for x in bk.get("asks", [])), default=None)
-        except Exception as e:
-            print(f"  book fetch failed ({e}) — maker entry aborted")
-            return 1
-        if bb is None:
-            print("  empty bid side — maker entry aborted (use the taker path)")
-            return 1
-        px = bb + tick if (ba is None or bb + tick < ba) else bb
-        # Amount-precision rule: floor to the 2-dec grid (bids stay passive).
-        buy_price = round(math.floor(round(px * 100, 6)) / 100, 2)
-        fee_per_share = 0.0  # fees are taker-side; makers pay 0 and may earn rewards
+        # notes/resting_orders.md). The price was computed BEFORE the robust
+        # gate (single book fetch) so the gated and posted prices are the same
+        # number; fee_per_share is already 0 from effective_entry_cost.
+        buy_price = maker_px
         order_flags = ["--post-only"]  # GTC default; post-only rejects if it would cross
     # Integer shares × on-grid 2-dec price → clean maker (2-dec) / taker (int).
     # Fee-bearing markets: size shares off (price + fee) so the CASH outlay

@@ -9002,3 +9002,33 @@ reflection was ~13h ago; everything surfaced since (maker two-sided quoting, mea
 scanner, capital-velocity term) is already backlogged with explicit build gates, and forcing a
 finding past those gates is the error the gates exist to stop. Book untouched: 7 positions,
 7 resting orders, Hormuz settles in 10 days, Gamescom watch day 5 of window.
+
+## 2026-08-21 ~16:40 — meta-reflection: --maker gate fix shipped (the second queued fresh-session item)
+
+Thirty minutes after the Ops split, this cycle took the other bounded item the fresh-session
+queue was holding: the robust-edge gate judged --maker entries on ask + taker fee — economics a
+post-only order never pays — and spuriously SKIPped the MacBook add on 2026-08-18 at effective
+0.55 when the intended rest at 0.45 cleared by +10pp.
+
+FIX SHAPE, following the book_walk pattern (pure logic split from the fetch so it can be tested):
+`maker_rest_price(bb, ba, tick)` and `effective_entry_cost(mark, taker_bps, maker_px)` in
+book_walk.py; polyclaude_enter fetches the book ONCE before the gate when --maker is set, so the
+gated price and the posted price are the same number by construction. 11 new checks (suite 60→71,
+counter verified), including the exact Aug-18 regression pair: taker economics show zero edge at
+p_robust 0.55 while maker economics clear by 10pp. Seventh mutant added to mutate.py (ignore
+maker_px → judge on taker cost) — CAUGHT, as are all six prior ones.
+
+LIVE VERIFICATION without trading (no --execute): re-ran the MacBook case — "[maker] gate +
+sizing run on the POSTED rest price 0.51 (bid 0.500 / ask 0.61), maker fee $0", then
+WOULD_REST $33.74 NO @ 0.51. That surfaced a display bug the run itself caught: the decision
+line printed "@ 0.6100" (the ask) for a maker entry — display-layer lesson applies, fixed to
+WOULD_REST @ the posted price.
+
+PAST-SKIP RE-LOOK (the backlog's corollary): MacBook is the only --maker SKIP on record, and it
+now clears the corrected gate — but the decline STANDS, because the Aug-18 reasons were
+independent of the bug: a resting bid into the Sep 8-10 Apple event is adverse selection at its
+purest (fills fastest exactly when the event goes against NO), plus the cluster ticket cap.
+The gate bug made the skip WRONGLY REASONED, not wrongly decided. Re-visit after the event.
+
+Remaining in the fresh-session queue: bond-fade tail-multiplicative haircut formalization
+(doctrine prose, no code) — deliberately not folded into this turn; it deserves its own pass.
