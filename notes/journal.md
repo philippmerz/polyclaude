@@ -9192,3 +9192,5 @@ TWO HONEST DEGRADATIONS, both booked:
 Value beyond the $0.21: the monotonicity pipeline is now validated END-TO-END (detect -> floor
 -> live-walk -> fire -> verify -> execute -> ground-truth fills) after six phantom generations
 died pre-trade. Book: 9 positions, bankroll $192.25, REALIZED +$5.14 (+3.0%).
+
+## 2026-08-22 09:1x continuation — arb aftermath check: 4B pair now -1.58pp (edge consumed, pipeline validated), 3B pair +1.75pp < 2pp floor, skipped under the fresh slippage rule. Thread closed.
