@@ -9211,3 +9211,10 @@ middle branch pays up to $92.47 — a riskless ~+3.3% floor with a large free op
 launching into the plausible 700M-3B FDV range. pUSD ~$1.2, fully deployed; Hormuz frees ~$28 in
 9 days. UMA scan post-trade: clean. Standard checks: news tail unchanged (01:33 Hormuz rhetoric),
 daemons 4/4, no other alerts.
+
+## 2026-08-22 11:4x continuation — "did the scanner miss the 1B/3B pair?" tested and REFUTED
+
+The ladder screen suggested a third pair (1B-YES 0.07-ish vs 3B rich). Walked it: the 1B ask was
+0.16 SHARES of dust; real cost 0.9917 = +0.83pp on no depth. Read the pairing loop: all-pairs
+(i, j>i), no adjacency blind spot — the scanner had it right and the live-walk guard ignored a
+depthless mid-violation, which is its job. No fix needed; capital fully deployed anyway. Idle.
