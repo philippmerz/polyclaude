@@ -55,7 +55,7 @@
   "rho_within": 0.0,
   "cluster_frac": 0.11,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
-  "verified": "2026-08-13",
+  "verified": "2026-08-22",
   "note": "0.975 -> 0.98 on 2026-08-13. The rotation surfaced this at 8 days stale and the re-read raised the bar considerably: every realistic path short of a signed sovereignty treaty is carved out by name \u2014 frameworks, MOUs, negotiations, basing rights, SOFA/COFA arrangements, leases, commercial concessions. What remains is a binding legal instrument transferring sovereignty or creating exclusive US jurisdiction, inside 4.5 months, against two governments publicly refusing to discuss sovereignty. P(YES) ~1.5%. ALERT TRIAGE for the Greenland keywords added 2026-08-12: a headline about a 'deal', 'agreement' or 'framework' is NOT a thesis break unless the reporting names a BINDING instrument (enacted legislation, signed treaty, signed agreement text, or an executive action implementing one). Basing-rights headlines are noise by construction. 0.98 -> 0.95 on 2026-08-13. The STALE-SOURCE check fired on its first day for this position (203d-old source behind a criteria_read of 0 days) and immediately earned itself: refreshing found live negotiations whose SHAPE \u2014 unlimited, uncurbable exclusive access to defined areas \u2014 creeps toward the Guantanamo-style qualifying example in the criteria, a path I had dismissed when I read 'basing rights are excluded' this morning and stopped there. Still a strong NO: Denmark's sovereignty red line holds, the deal is framed as respecting it, and YES needs a BINDING instrument granting exclusive JURISDICTION rather than guaranteed access. WATCH: any reporting of signed text that displaces Danish legal authority in a defined zone, as opposed to guaranteeing US use of it.",
   "criteria_read": "2026-08-13",
   "key_facts": [
@@ -87,22 +87,31 @@
     "claim": "Live negotiations concern US 'total access' to parts of Greenland for an UNLIMITED period, 'not curbed under any circumstances', via a reopened 1951 defence agreement.",
     "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
     "source_date": "2026-01-25",
-    "checked": "2026-08-13"
+    "checked": "2026-08-13",
+    "superseded_note": "superseded by May/Jun-2026 reporting, see fact added 2026-08-22"
    },
    {
     "claim": "Denmark's stated red line: 'We will not cede sovereignty over parts of the kingdom'; the proposal is framed as RESPECTING Danish sovereignty.",
     "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
     "source_date": "2026-01-25",
-    "checked": "2026-08-13"
+    "checked": "2026-08-13",
+    "superseded_note": "superseded by May/Jun-2026 reporting, see fact added 2026-08-22"
    },
    {
     "claim": "Trump ruled out using force to acquire Greenland (Davos, 2026-01-21).",
     "source": "https://www.congress.gov/crs-product/IN12643",
     "source_date": "2026-01-22",
-    "checked": "2026-08-13"
+    "checked": "2026-08-13",
+    "superseded_note": "superseded by May/Jun-2026 reporting, see fact added 2026-08-22"
+   },
+   {
+    "claim": "As of May-Jun 2026: talks ongoing, NO deal yet (Greenland PM May-12); Pentagon negotiating ACCESS to 3 new military sites; Denmark expects a deal BY YEAR-END; Danish sovereignty red line explicitly intact. An ACCESS deal is not acquisition under the criteria \u2014 but a year-end \"deal\" headline is an interpretation-flap risk for Q4; re-verify criteria wording vs any signed text before reacting to such a headline.",
+    "source": "https://www.cp24.com/news/world/2026/05/12/progress-in-talks-with-us-but-no-deal-yet-greenland-pm/ + https://thehill.com/policy/international/5716467-us-denmark-greenland-talks/",
+    "source_date": "2026-05-12/2026-06",
+    "checked": "2026-08-22"
    }
   ],
-  "source_ack": "2026-08-13",
+  "source_ack": "2026-08-22",
   "source_ack_note": "Searched 2026-08-13 for newer Greenland reporting and there is none \u2014 the freshest available material is the January framework/1951-agreement coverage. The position rests on ~200d-old sources because the STORY has not moved, not because I stopped looking. Ack expires in 21 days, which re-tests that claim rather than letting it calcify; re-check sooner if any Greenland keyword fires."
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {

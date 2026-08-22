@@ -9131,3 +9131,32 @@ walk partly reverted — confirming the 18:00 anticipatory-flap read); OpenAI-50
 today. Realizable $120.27 vs mtm $132.90 — the $12.63 gap is the usual four thin books.
 Daemons 4/4 single-PID, mem 786MB, Gamescom still 0 listings (day 5), pair-arb watch printing
 "0 executable" every 15min as designed. No trades, nothing for Telegram.
+
+## 2026-08-22 02:00 cron tick — clean 11-step; Greenland sources refreshed (access-not-sovereignty); no trades
+
+Bankroll **$192.09**; REALIZED **+$5.32 (+3.1%)** unchanged with nothing settled — invariance
+holds. Marked +$10.48 / realizable −$1.59; the $12.07 gap is the usual four thin books.
+
+STEP HIGHLIGHTS:
+- News consumption: tier-2 alert 28min before tick — Trump "Hormuz is American territory"
+  (Guardian). MINOR/NO-supportive per the watcher's own scoring; escalation rhetoric suppresses
+  normalization. Consumed, no action; mark 0.997, 9.9d to settlement.
+- AUDIT ROTATION did real work: Greenland key_facts sat on Jan-2026 sources (209-212d). Searched
+  NEWER instead of re-reading (the recency-not-fidelity lesson): May-12 Greenland PM "progress,
+  no deal yet"; June reporting — Pentagon negotiating ACCESS to 3 new military sites, Denmark
+  expects a deal BY YEAR-END, sovereignty red line explicitly intact. On our criteria
+  (acquisition) that is NO-supportive; the new risk it surfaces is a Q4 "GREENLAND DEAL SIGNED"
+  headline on an ACCESS agreement — an interpretation flap, not a criteria hit. key_facts
+  updated (old facts marked superseded, new atomic fact with dated sources), source_ack reset.
+  p_no 0.95 stands.
+- check_marginal_apy: 7 clear / 0 flagged; Greenland exit-cost gate holds at $0.02 closing cost.
+  exit_analysis: all HOLD; bond rests (Trump-out 0.97 / Greenland 0.98) sit at/above recommended.
+- Redeem: 0. Discovery both passes: 22 hurdle-clearers, all standing families; DSGL 0.9315→0.943
+  as its week closes (skip stands, grades Tue); Fed SEPTEMBER family surfaced (hike-25 YES 0.305,
+  no-change 0.685) — standing family pass, no consensus edge. Sports: no bookie delta above bar.
+- README portfolio paragraph rewritten (was pre-GPT-6-exit stale): realized-first framing,
+  current 7 positions, maker-first results, gate inventory, N=51.
+- Telegram tick summary sent (msg 843): funnel + Netflix family + Gemini reversion + Hormuz.
+
+No trades. Next: Netflix skip grades Tue Aug-25; Gamescom watch day 6/window closes Aug-24;
+NVDA earnings re-check Aug-26; Hormuz + best-AI-model + GPT-6 skips all grade Aug-31.
