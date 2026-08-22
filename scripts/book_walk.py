@@ -30,7 +30,7 @@ from __future__ import annotations
 
 import math
 
-from pm_fees import fee_per_share
+from pm_fees import fee_per_share, fee_per_share_at
 
 
 def walk_bids(bids: list[dict], size: float) -> tuple[float, float, float]:
@@ -81,12 +81,12 @@ def effective_entry_cost(mark: float, taker_bps: int, maker_px: float | None = N
     question for a maker entry is "IF this bid fills at the posted price, is it
     +EV"; whether it fills is governed by the resting-order rules, not here.
 
-    Taker: mark (the live ask) + takerBaseFee x min(p, 1-p). Maker: the posted
-    rest price, fee $0.
+    Taker: mark (the live ask) + the TRUE quadratic fee (pm_fees, wallet-
+    verified 2026-08-22). Maker: the posted rest price, fee $0.
     """
     if maker_px is not None:
         return maker_px, 0.0
-    fee = (taker_bps / 10000.0) * min(mark, 1.0 - mark) if taker_bps > 0 else 0.0
+    fee = fee_per_share_at(taker_bps / 10000.0, mark) if taker_bps > 0 else 0.0
     return mark + fee, fee
 
 

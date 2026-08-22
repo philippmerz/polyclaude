@@ -81,12 +81,12 @@ check("rate absent field", pm_fees.fee_rate({}), 0.0)
 check("rate unfetchable market", pm_fees.fee_rate(None), pm_fees.FEE_RATE_FALLBACK)
 check("rate garbage falls back", pm_fees.fee_rate({"takerBaseFee": "abc"}), pm_fees.FEE_RATE_FALLBACK)
 
-# Edge-aware: rate x min(p, 1-p). Peaks at 0.50, vanishes at the extremes —
-# this book is mostly long-tail NOs, where a rate-x-notional estimate is wildly
-# wrong (0.945 pays on 0.055, not on 0.945).
+# TRUE curve (2026-08-22 wallet-verified): rate_capped x p x (1-p), QUADRATIC.
+# takerBaseFee=1000 is NOT a 10% charge — the effective rate caps at the 0.07
+# documented category max. Peaks at 0.50 ($0.0175/sh), vanishes at BOTH tails.
 m10 = {"takerBaseFee": 1000}
-check("fee at 0.50", pm_fees.fee_per_share(m10, 0.50), 0.05)
-check("fee at 0.945 pays on the short side", pm_fees.fee_per_share(m10, 0.945), 0.10 * 0.055)
+check("fee at 0.50", pm_fees.fee_per_share(m10, 0.50), 0.07 * 0.25)
+check("fee at 0.945 quadratic tail", pm_fees.fee_per_share(m10, 0.945), 0.07 * 0.945 * 0.055)
 check("fee symmetric", pm_fees.fee_per_share(m10, 0.30), pm_fees.fee_per_share(m10, 0.70))
 check("zero-fee market costs nothing", pm_fees.fee_per_share({"takerBaseFee": None}, 0.50), 0.0)
 
@@ -99,8 +99,8 @@ def cost_of(p, market):
     return 1.0 / (1.0 + apy)          # 365d => gross = (1-c)/c, so c = 1/(1+gross)
 
 
-check("cost additive at p=0.50", cost_of(0.50, m10), 0.550, tol=1e-6)
-check("cost additive at p=0.90", cost_of(0.90, m10), 0.910, tol=1e-6)
+check("cost additive at p=0.50", cost_of(0.50, m10), 0.5175, tol=1e-6)
+check("cost additive at p=0.90", cost_of(0.90, m10), 0.9063, tol=1e-6)
 check("cost zero-fee market", cost_of(0.50, {"takerBaseFee": None}), 0.500, tol=1e-6)
 # The old bug in explicit form: multiplicative would have given 0.5*1.05=0.525.
 if abs(cost_of(0.50, m10) - 0.525) < 1e-6:
@@ -111,14 +111,15 @@ check("degenerate days<1 rejected", dm.annualized_yield_after_fee(0.5, 0.5, m10)
 # ------------------------------------------- monotonicity arb breakeven
 # Understating this LOWERS the bar a violation must clear, which manufactures
 # arbs that lose money on execution. Legs can carry different rates.
-check("breakeven both legs 10%", ems.fee_aware_breakeven(0.50, 0.50, 1000, 1000), 0.10)
+check("breakeven both legs 1000bps true curve", ems.fee_aware_breakeven(0.50, 0.50, 1000, 1000),
+      2 * 0.07 * 0.25)
 check("breakeven both legs free", ems.fee_aware_breakeven(0.50, 0.50, None, None), 0.0)
-check("breakeven mixed rates", ems.fee_aware_breakeven(0.50, 0.50, 1000, None), 0.05)
-check("breakeven edge-aware at tails", ems.fee_aware_breakeven(0.95, 0.90, 1000, 1000),
-      0.10 * 0.05 + 0.10 * 0.10)
+check("breakeven mixed rates", ems.fee_aware_breakeven(0.50, 0.50, 1000, None), 0.07 * 0.25)
+check("breakeven quadratic at tails", ems.fee_aware_breakeven(0.95, 0.90, 1000, 1000),
+      0.07 * 0.95 * 0.05 + 0.07 * 0.90 * 0.10)
 # Unknown bps must NOT silently become free — that is the dangerous direction.
-check("breakeven unknown bps uses fallback",
-      ems.fee_aware_breakeven(0.50, 0.50), 2 * pm_fees.FEE_RATE_FALLBACK * 0.5)
+check("breakeven unknown bps uses capped fallback",
+      ems.fee_aware_breakeven(0.50, 0.50), 2 * pm_fees.fee_per_share_at(pm_fees.FEE_RATE_FALLBACK, 0.5))
 
 # ------------------------------------------------- parse_threshold regression
 # The six phantom "REAL ARB" fires: "$1B" parsed as 1.0 and "$50M" as 50.0,
@@ -176,11 +177,11 @@ check("walk zero size", book_walk.walk_bids(BIDS, 0)[0], 0.0)
 
 r = book_walk.realizable(BIDS, 20, {"takerBaseFee": 1000})
 check("realizable gross", r["gross"], 11.0)
-check("realizable fee edge-aware", r["fee"], 0.10 * min(0.55, 0.45) * 20)
-check("realizable net", r["net"], 11.0 - 0.10 * 0.45 * 20)
+check("realizable fee quadratic", r["fee"], 0.07 * 0.55 * 0.45 * 20)
+check("realizable net", r["net"], 11.0 - 0.07 * 0.55 * 0.45 * 20)
 check("realizable zero-fee market", book_walk.realizable(BIDS, 20, {"takerBaseFee": None})["net"], 11.0)
-check("realizable unknown market uses fallback",
-      book_walk.realizable(BIDS, 20, None)["fee"], pm_fees.FEE_RATE_FALLBACK * 0.45 * 20)
+check("realizable unknown market uses capped fallback",
+      book_walk.realizable(BIDS, 20, None)["fee"], pm_fees.fee_per_share_at(pm_fees.FEE_RATE_FALLBACK, 0.55) * 20)
 check("realizable empty book charges no fee", book_walk.realizable([], 20, {"takerBaseFee": 1000})["fee"], 0.0)
 
 
@@ -254,17 +255,19 @@ check("no ask -> bb+tick", book_walk.maker_rest_price(0.44, None, 0.01), 0.45)
 # ceil (0.45 could cross a 0.445 ask and turn the order taker)
 check("fine tick floors to 2-dec grid", book_walk.maker_rest_price(0.441, 0.445, 0.001), 0.44)
 
-# effective_entry_cost: the MacBook 2026-08-18 numbers. Ask 0.50 on a 1000bps
-# market = 0.55 effective taker; the intended rest at 0.45 pays no fee.
+# effective_entry_cost: MacBook 2026-08-18 re-pinned on the TRUE curve. Ask
+# 0.50 on a 1000bps market = 0.5175 effective taker (0.07 x 0.25 fee). NOTE the
+# history honestly: the Aug-18 "pessimistic EV $0.00" SKIP was produced by the
+# OLD fee model (0.55 cost); under the true curve even taker economics cleared
+# by 3.25pp — the spurious SKIP was maker-gate bug AND fee-model error stacked.
+# Maker remains strictly better (0.45 posted, $0 fee).
 _tc, _tf = book_walk.effective_entry_cost(0.50, 1000)
-check("taker cost = ask + fee", _tc, 0.55)
-check("taker fee at p=0.50", _tf, 0.05)
+check("taker cost = ask + true fee", _tc, 0.5175)
+check("taker fee at p=0.50", _tf, 0.0175)
 _mc, _mf = book_walk.effective_entry_cost(0.50, 1000, maker_px=0.45)
 check("maker cost = posted price", _mc, 0.45)
 check("maker fee is zero even on 1000bps market", _mf, 0.0)
-# The regression itself: at p_robust=0.55 the taker cost shows ZERO edge (the
-# spurious SKIP) while the maker cost clears by 10pp — the trade that was lost.
-check("taker economics showed no edge", 0.55 - _tc, 0.0)
+check("true-curve taker edge at p_robust 0.55", 0.55 - _tc, 0.0325, tol=1e-9)
 check("maker economics cleared by 10pp", 0.55 - _mc, 0.10)
 # zero-fee market: taker cost is just the ask (no phantom fallback fee)
 check("zero-fee taker cost = ask", book_walk.effective_entry_cost(0.50, 0)[0], 0.50)
@@ -298,3 +301,17 @@ check("flat-equivalent identity",
 check("flat 0.10 kills the 0.945 fade", polyclaude_enter.robust_p(0.99, 0.10) < 0.945, True)
 check("tail-mult clears the same fade",
       polyclaude_enter.robust_p(0.99, 0.10, tail_mult=5.0) > 0.945, True)
+
+# --------------------------------------------- GROUND TRUTH: wallet-verified fills (2026-08-22)
+# These two pins are the reason the curve is what it is. Both arb entries'
+# realized dips were chased under the invariance rule and reconciled against
+# wallet pUSD deltas to the cent. Any future fee-model change must still
+# reproduce these observed cash fees. (takerBaseFee=1000 markets; true rate
+# 0.07, quadratic curve.)
+_m = {"takerBaseFee": 1000}
+_fee1 = (pm_fees.fee_per_share(_m, 0.0786741) * 15.252783
+         + pm_fees.fee_per_share(_m, 0.888) * 15.033782)
+check("wallet-verified fee, arb-1 fills", _fee1, 0.182, tol=0.004)
+_fee2 = (pm_fees.fee_per_share(_m, 0.0803897) * 32.466828
+         + pm_fees.fee_per_share(_m, 0.849) * 29.717311)
+check("wallet-verified fee, arb-2 fills", _fee2, 0.4347, tol=0.004)

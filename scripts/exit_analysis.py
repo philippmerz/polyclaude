@@ -3,7 +3,7 @@
 
 Every exit is three options, not two, and the fee makes the route decisive:
   HOLD            -> EV = shares x fair            (resolution is FEE-FREE)
-  SELL TAKER now  -> walk the real BID book, minus taker fee (10% x min(p,1-p)
+  SELL TAKER now  -> walk the real BID book, minus taker fee (true quadratic curve, pm_fees
                      per share on fee-bearing markets)
   REST MAKER sell -> post-only, fee-free, so the breakeven price IS `fair`;
                      the order only fills if someone pays >= fair.
@@ -30,6 +30,8 @@ import sys
 from pathlib import Path
 
 import httpx
+
+from pm_fees import effective_rate, fee_per_share_at
 
 REPO = Path(__file__).resolve().parent.parent
 PRIORS = REPO / "notes" / "portfolio_kelly_priors.json"
@@ -86,12 +88,18 @@ def main() -> int:
         # fee schedule from the market (0 on fee-free markets)
         mk = httpx.get("https://clob.polymarket.com/markets/" + str(p.get("conditionId")),
                        timeout=15).json()
-        fee = float(mk.get("taker_base_fee") or 0) / 10000.0
+        fee = effective_rate(float(mk.get("taker_base_fee") or 0) / 10000.0)
         gross, filled = _walk_bids(p["asset"], shares)
         avg_fill = (gross / filled) if filled else 0.0
-        taker_net = gross - fee * min(avg_fill, 1 - avg_fill) * filled
+        taker_net = gross - fee_per_share_at(fee, avg_fill) * filled
         hold_ev = shares * fair
-        taker_be = fair / (1 - fee) if fee < 1 else None   # price at which taker == hold
+        # Taker breakeven under the TRUE quadratic curve: solve p - r*p*(1-p) = fair
+        # i.e. r*p^2 + (1-r)*p - fair = 0 (positive root). r=0 -> p = fair.
+        if fee > 0:
+            import math as _m
+            taker_be = (-(1 - fee) + _m.sqrt((1 - fee) ** 2 + 4 * fee * fair)) / (2 * fee)
+        else:
+            taker_be = fair
         stale = ""
         try:
             if verified and (today - dt.date.fromisoformat(str(verified))).days > 14:
@@ -127,7 +135,7 @@ def main() -> int:
         print(f"{slug[:44]:<44}{side:>5}{sh:>7.1f}{fair:>7.3f}{bid:>7.3f}"
               f"{hold_ev:>8.2f}{taker_net:>8.2f}  {verdict}{stale}")
     print("\nresolution is fee-free; maker sells are fee-free; taker sells pay "
-          "fee x min(p,1-p)/share — that gap is usually the whole decision.")
+          "rate x p x (1-p)/share (true curve) — that gap is usually the whole decision.")
     return 0
 
 

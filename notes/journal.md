@@ -9239,3 +9239,27 @@ template as Metamask) at mid-only −1.96pp, correctly not fired: the CLASS (thi
 ladders breed stub-quote inversions) is now on the daemon's watch by construction. Consistency 0
 real. Metamask legs marked UP (3B-NO 0.895 vs 0.849 paid) — mtm +13.41 flatters; realizable −1.05
 is the honest line. No trades this tick; nothing material for Telegram beyond the two arb reports.
+
+## 2026-08-22 14:2x-15:0x continuation — FEE MODEL CORRECTED: true curve is 0.07 x p x (1-p), wallet-verified exactly
+
+Pulled the backlogged fee reconciliation forward because it is not bookkeeping: the arb daemon's
+floor uses the fee model, so an overstated fee UNDER-DETECTS real arbs (this morning's "+1.75pp
+below floor" was likely a true +2.5pp+ that went untaken).
+
+METHOD: the two same-day arbs gave two clean wallet-reconciled fee datapoints ($0.182, $0.435).
+docs.polymarket.com gives fee = C x rate x p x (1-p), category rates 0.04-0.07. rate=0.07
+quadratic reproduces BOTH datapoints to the cent. The old model (takerBaseFee/10000 x min(p,1-p))
+had the wrong CURVE and the wrong RATE: ~40% high at the tails, ~3x high at p=0.50.
+
+FIXED, tests in the same commits' spirit: pm_fees (effective_rate cap + fee_per_share_at, header
+documents the two fills), book_walk.effective_entry_cost, exit_analysis (quadratic-solve taker
+breakeven replacing fair/(1-fee)), event_monotonicity fee_aware_breakeven. Suite repinned — 80
+checks including TWO WALLET GROUND-TRUTH PINS that any future fee change must reproduce; 9
+mutants (2 new: regress-to-min-curve, drop-the-cap) all CAUGHT. Lessons "Maker-first" line and
+tool footers corrected — the "10% x min(p,1-p)" prose was quoted everywhere and was wrong.
+
+HONEST HISTORY NOTE repinned in the tests: the Aug-18 MacBook "pessimistic EV $0.00" SKIP was the
+maker-gate bug AND the fee-model error stacked — under the true curve even taker economics
+cleared by 3.25pp. Effects now live: taker breakevens tightened (OpenAI-50 0.711->0.656,
+OpenAI-55 0.456->0.427), arb floor honest, mid-price entries ~3x cheaper than modeled. The two
+arbs' true locked profit: ~$0.32 + ~$1.71 (not $0.21 + $1.41 as first journaled).

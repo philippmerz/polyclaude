@@ -26,10 +26,11 @@ the gap); *verify against a known truth* (absent output and failed output look i
 ## Execution mechanics (the fee decides almost everything)
 
 - **Maker-first, always consider three exits.** Taker fee on fee-bearing markets =
-  10% × min(p, 1−p) per share; maker pays $0; RESOLUTION pays $0. So every exit is
-  hold vs taker-net vs maker-at-fair, and `exit_analysis.py` computes all three on the
-  LIVE book. Taker breakeven = fair/(1−fee) — on SpaceX that's 1.067, i.e. taker exit
-  can NEVER win there. (Prime exit gave up ~$2 crossing a thin book, 2026-07-24; Fed
+  0.07 × p × (1−p) per share — QUADRATIC, wallet-verified 2026-08-22 (the long-quoted
+  "10% × min(p,1−p)" was the FIELD rate on the WRONG curve: ~40% high at the tails, ~3×
+  high at 0.50 — see pm_fees.py header for the two reconciled fills). Maker pays $0;
+  RESOLUTION pays $0. So every exit is hold vs taker-net vs maker-at-fair, and
+  `exit_analysis.py` computes all three on the LIVE book with the true curve. (Prime exit gave up ~$2 crossing a thin book, 2026-07-24; Fed
   taker-vs-maker gap 2.8pp, 2026-07-28.)
 - **When hold-vs-sell is close, don't choose.** Rest a post-only sell AT fair (fee-free
   breakeven IS fair) and let the market decide. Validated live: Fed 8.22sh filled at

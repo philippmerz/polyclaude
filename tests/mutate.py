@@ -19,8 +19,10 @@ import subprocess, pathlib, shutil, sys
 REPO = pathlib.Path("/home/polyclaude/polyclaude")
 MUTS = [
     ("pm_fees.py",  'return float(bps) / 10000.0',        'return 0.10'),                    # ignore per-market fee
-    ("pm_fees.py",  'return fee_rate(market) * min(price, 1.0 - price)',
-                    'return fee_rate(market) * price'),                                       # drop edge-awareness
+    ("pm_fees.py",  'return effective_rate(raw_rate) * price * (1.0 - price)',
+                    'return effective_rate(raw_rate) * min(price, 1.0 - price)'),             # regress to the old min() curve
+    ("pm_fees.py",  'return min(raw_rate, CATEGORY_RATE_CAP)',
+                    'return raw_rate'),                                                       # drop the 0.07 category cap
     ("book_walk.py",'levels = sorted(bids or [], key=lambda x: -float(x["price"]))',
                     'levels = bids or []'),                                                   # trust input order
     ("book_walk.py",'fee = fee_per_share(market, avg_fill) * float(size) if gross > 0 else 0.0',

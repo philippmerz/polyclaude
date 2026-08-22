@@ -51,6 +51,20 @@ import httpx
 # is the high end rather than a blend.
 FEE_RATE_FALLBACK = 0.10
 
+# TRUE FEE CURVE (corrected 2026-08-22). The charge is QUADRATIC, not min():
+#     fee = shares x rate x p x (1-p)        [docs.polymarket.com fees page]
+# and the EFFECTIVE rate is category-capped at 0.07 (docs: category rates run
+# 0.04-0.07), NOT takerBaseFee/10000. Established by invariance-chasing two
+# same-day arb entries and reconciling against wallet pUSD deltas:
+#   fill set 1: 15.25sh@0.0787 + 15.03sh@0.888 -> TRUE fee $0.182
+#   fill set 2: 32.47sh@0.0804 + 29.72sh@0.849 -> TRUE fee $0.435
+# rate=0.07 quadratic predicts $0.182 / $0.435 — both EXACT. The old
+# rate=0.10 x min(p,1-p) predicted $0.29 / $0.71 — ~40% high at the tails and
+# ~3x high at p=0.50 (0.050 vs 0.0175/share). Direction of the old error was
+# safe (killed marginal trades) but it distorted arb floors and breakevens.
+# Markets whose field is a lower rate (e.g. 500bps) keep their own lower rate.
+CATEGORY_RATE_CAP = 0.07
+
 GAMMA = "https://gamma-api.polymarket.com/markets"
 
 _SLUG_CACHE: dict[str, float] = {}
@@ -75,15 +89,30 @@ def fee_rate(market: dict | None) -> float:
         return FEE_RATE_FALLBACK
 
 
-def fee_per_share(market: dict | None, price: float) -> float:
-    """Dollars of fee per share at `price`.
+def effective_rate(raw_rate: float) -> float:
+    """Cap a field-derived rate at the documented category maximum (0.07).
 
-    Polymarket's fee is edge-aware: rate x min(p, 1-p), so it is largest at
-    0.50 and vanishes at the extremes. A 0.945 mark pays on 0.055, not 0.945 —
-    which is why a naive rate-x-notional estimate is wildly wrong on the
-    long-tail NOs this book is mostly made of.
+    takerBaseFee=1000 does NOT mean a 10% charge — the wallet-verified fills
+    above pin the effective rate at 0.07 for these markets, and the docs cap
+    category rates there. A field rate BELOW the cap (e.g. 250bps) is kept.
     """
-    return fee_rate(market) * min(price, 1.0 - price)
+    return min(raw_rate, CATEGORY_RATE_CAP)
+
+
+def fee_per_share_at(raw_rate: float, price: float) -> float:
+    """Dollars of fee per share at `price` for a given field rate.
+
+    TRUE curve (see header): rate x p x (1-p), quadratic — largest at 0.50
+    ($0.0175/share at the 0.07 cap) and vanishing at BOTH extremes faster than
+    the old min() model assumed. Verified exact against two wallet-reconciled
+    fill sets on 2026-08-22.
+    """
+    return effective_rate(raw_rate) * price * (1.0 - price)
+
+
+def fee_per_share(market: dict | None, price: float) -> float:
+    """Dollars of fee per share at `price` for this market."""
+    return fee_per_share_at(fee_rate(market), price)
 
 
 def fee_rate_for_slug(slug: str, client: httpx.Client | None = None) -> float:

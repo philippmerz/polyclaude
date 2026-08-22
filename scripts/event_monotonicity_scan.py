@@ -238,8 +238,12 @@ def fee_aware_breakeven(yes_t1: float, yes_t2: float,
     """
     r1 = pm_fees.FEE_RATE_FALLBACK if bps_t1 is _UNSET else pm_fees.fee_rate({"takerBaseFee": bps_t1})
     r2 = pm_fees.FEE_RATE_FALLBACK if bps_t2 is _UNSET else pm_fees.fee_rate({"takerBaseFee": bps_t2})
-    sell_fee = r1 * min(yes_t1, 1 - yes_t1)
-    buy_fee = r2 * min(yes_t2, 1 - yes_t2)
+    # TRUE quadratic curve (2026-08-22, wallet-verified — see pm_fees header).
+    # The old min() model overstated fees ~40% at the tails and ~3x at 0.50,
+    # RAISING this breakeven and under-detecting real arbs: the exact opposite
+    # failure of the 0.072 era, on the same line of code.
+    sell_fee = pm_fees.fee_per_share_at(r1, yes_t1)
+    buy_fee = pm_fees.fee_per_share_at(r2, yes_t2)
     return sell_fee + buy_fee
 
 

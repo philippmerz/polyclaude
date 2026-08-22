@@ -685,7 +685,7 @@ def main() -> int:
         # Maker-first entry (operator 2026-07-24: limit orders are everyday
         # repertoire). Rest at best_bid+tick, capped 1 tick under the ask, so
         # the order is passive: zero taker fee (1000bps markets charge takers
-        # 10%*min(p,1-p)/share) and the bid-side price. A resting bid fills
+        # rate x p x (1-p)/share, true curve) and the bid-side price. A resting bid fills
         # under FUTURE information — allowed only with per-tick re-verification
         # and news_watcher coverage of the market's info channel (rules in
         # notes/resting_orders.md). The price was computed BEFORE the robust
