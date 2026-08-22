@@ -123,8 +123,11 @@ def _yes_price(m: dict) -> float | None:
 
 
 def _market_fee_buy(p: float) -> float:
-    """Polymarket fee fraction on buying a token at price p."""
-    return pm_fees.FEE_RATE_FALLBACK * min(p, 1 - p)
+    """Polymarket fee dollars/share buying at p — TRUE quadratic curve
+    (2026-08-22, wallet-verified; the old min() model overstated multi-leg
+    basket fees ~2.5x at mid prices and under-detected sum<1 arbs). Uses the
+    capped fallback rate since legs here are screened before per-market fetch."""
+    return pm_fees.fee_per_share_at(pm_fees.FEE_RATE_FALLBACK, p)
 
 
 def _orderbook(token_id: str) -> dict | None:
