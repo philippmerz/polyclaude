@@ -1,5 +1,5 @@
 {
-  "next_id": 79,
+  "next_id": 80,
   "decisions": [
     {
       "id": 1,
@@ -1509,6 +1509,25 @@
       "calibration_delta": "prediction said 'fills before Aug-31' expecting days; filled same-day despite 4285sh queued ahead \u2014 under-estimated turnover in a deep book, benign direction",
       "lesson": "Maker-over-taker captured +$0.58 (taking the 0.93 bid nets $31.38 after the 1000bps fee) at zero added risk, because a no-fill simply leaves the hold branch. Queue depth is a weak predictor of fill time in a book doing $3.4k/day.",
       "resolved_at": "2026-08-18T16:09:07Z"
+    },
+    {
+      "id": 79,
+      "timestamp": "2026-08-22T08:48:19Z",
+      "type": "open_position",
+      "thesis": "MONOTONICITY ARB (first REAL one the pipeline has executed; 6 phantom generations were killed pre-trade by the parse/walk guards): P(FDV>=700M) >= P(FDV>=4B) was violated at executable prices on the stub-quote pre-launch Metamask ladder. Bought 700M-YES 15.25sh @avg 0.0787 + 4B-NO 15.03sh @0.888 (both FAK, scarce leg first). Same-template legs resolve on ONE FDV number and the no-launch-by-Dec-31 backstop resolves the whole family NO, so the 15.03 matched pairs pay >=$1 in EVERY state; locked all-in cost 0.9858 incl. 1000bps taker fees = riskless +1.42pp (~$0.21) + 0.22sh unpaired YES remainder. SLIPPAGE LESSON booked: walked +2.71pp at top-of-book but the 5+7.6sh stub levels evaporated in the ~8min between walk and fire \u2014 fill was level-3-heavy; the $1 CLOB minimum forced blending the marginal level. Next stub-book arb: size so the MARGINAL level clears the 2pp floor standalone and re-walk inside the execution minute.",
+      "confidence": "high",
+      "prediction": "Both legs resolve consistently (launch FDV or Dec-31 backstop) and the pair redeems $15.03 against $14.82 paired cost \u2014 profit ~$0.21 realized REGARDLESS of outcome; any other result means the same-event-consistency assumption was wrong and the class gets a doctrine review.",
+      "size_usd": 14.55,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "arb",
+        "monotonicity",
+        "metamask"
+      ],
+      "slug": "metamask-fdv-above-one-day-after-launch",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

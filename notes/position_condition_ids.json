@@ -51,6 +51,22 @@
    "negativeRisk": false
   },
   {
+   "slug": "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
+   "outcome": "Yes",
+   "size": 15.2527,
+   "conditionId": "0x1c842b91d226266fbe0e55d9bce9c52ce48b825d069e039c24d7fe57a5be6eaa",
+   "asset": "27944626213701198119611689981836884300701096451168812471764168520890801988056",
+   "negativeRisk": false
+  },
+  {
+   "slug": "metamask-fdv-above-4b-one-day-after-launch-851-782-477-258",
+   "outcome": "No",
+   "size": 15.0337,
+   "conditionId": "0xd450db2ea773df8f91797d594b15333d8e9ed2d74930ac0ffb54c123f78e3d0f",
+   "asset": "70962867555721536468794820816920873482905460253708950137269131341948100258712",
+   "negativeRisk": false
+  },
+  {
    "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063",
    "outcome": "No",
    "size": 15,

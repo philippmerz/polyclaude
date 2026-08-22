@@ -9160,3 +9160,35 @@ STEP HIGHLIGHTS:
 
 No trades. Next: Netflix skip grades Tue Aug-25; Gamescom watch day 6/window closes Aug-24;
 NVDA earnings re-check Aug-26; Hormuz + best-AI-model + GPT-6 skips all grade Aug-31.
+
+## 2026-08-22 08:43 daemon-fired tick — FIRST REAL ARB EXECUTED (DEC-0079): Metamask-FDV monotonicity pair, +1.42pp locked riskless
+
+The monotonicity daemon fired on the Metamask pre-launch FDV ladder — the exact family whose
+magnitude-parsing bug once manufactured six phantom arbs — and this time it was REAL. Full
+verification before any order: own scan re-run (2 REAL after live walk), own book walk
+reproducing +2.71pp at top-of-book, criteria read (FDV 1-day-post-launch, most-liquid source,
+no-launch-by-Dec-31 resolves the whole family NO -> the pair pays >=\$1 in EVERY state; same
+template = one FDV number across legs).
+
+EXECUTED (FAK, scarce leg first): 700M-YES 15.25sh @avg 0.0787 ($1.20) + 4B-NO 15.03sh @0.888
+($13.35). Fills verified on data-api /activity. Locked: 15.03 matched pairs, all-in 0.9858 incl.
+fees = +1.42pp riskless ~ \$0.21, + 0.22sh unpaired YES remainder as a lottery crumb.
+
+TWO HONEST DEGRADATIONS, both booked:
+1. SLIPPAGE: the 5+7.6sh stub levels at 0.067/0.068 evaporated in the ~8min between walk and
+   fire — fill was level-3-heavy (avg 0.0787 vs 0.0692 planned), taking the edge from +2.46pp
+   planned to +1.42pp locked, UNDER the 2pp floor I sized against. The \$1 CLOB minimum forced
+   blending the marginal level in. RULE for the next stub-book arb: the MARGINAL level must
+   clear the floor standalone, and re-walk inside the execution minute (in DEC-0079).
+2. REALIZED dipped $5.32 -> $5.14 with no settlement — invariance chased immediately: entry
+   TAKER FEES are cash irrevocably out, booked as realized cost now; the redemption spread
+   (+$0.50 on paired basis) arrives at resolution. Correct-direction accounting, not a bug;
+   exact fee reconciliation ($0.29 computed vs $0.18 observed net of drift) tagged for the
+   weekly.
+3. First clob_v2 attempt bounced on amount precision ($1.04/0.078 -> non-2/5-dec amounts);
+   the DEC-0038 rule (2-dec price x clean USD) fixed it. The rule was in the lessons file and
+   I still hit it once — the error message named the fix.
+
+Value beyond the $0.21: the monotonicity pipeline is now validated END-TO-END (detect -> floor
+-> live-walk -> fire -> verify -> execute -> ground-truth fills) after six phantom generations
+died pre-trade. Book: 9 positions, bankroll $192.25, REALIZED +$5.14 (+3.0%).
