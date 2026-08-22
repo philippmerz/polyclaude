@@ -30,8 +30,10 @@ twice (Montana duplicate members, WH per-day full-lid). So this walks live
 books itself and prints the executable number, and it stays a CLI you point at
 a family you already care about.
 
-Fees are the other half of the story: the taker fee is 10% * min(p, 1-p), so a
-pair of mid-priced legs pays ~9pp in fees and needs a >9pp gross violation
+Fees are the other half of the story: the TRUE taker fee is rate x p x (1-p)
+(quadratic, rate capped 0.07 — wallet-verified 2026-08-22; the old 10% x min
+model overstated a mid-priced pair's fees ~2.5x), so a pair of mid-priced legs
+pays ~3.5pp in fees and needs a >3.5pp gross violation
 before it is worth crossing at all. The maker column shows what the same
 structure is worth if both legs are rested instead (fee-free, fill not
 guaranteed — and a half-filled arb is an outright directional position, which
@@ -48,6 +50,8 @@ import json
 import sys
 
 import httpx
+
+from pm_fees import fee_per_share_at
 
 from event_monotonicity_scan import parse_threshold
 
@@ -134,7 +138,7 @@ def implication_pair(a_slug: str, b_slug: str, fee_rate: float, min_edge_pp: flo
     if a_ask is None or b_ask is None:
         print("-> NO BOOK on one leg — mid-only, not executable")
         return 0
-    fees = fee_rate * (min(a_ask, 1 - a_ask) + min(b_ask, 1 - b_ask))
+    fees = fee_per_share_at(fee_rate, a_ask) + fee_per_share_at(fee_rate, b_ask)
     net = (1.0 - (a_ask + b_ask) - fees) * 100
     ab, bb = _bid(A, "No"), _bid(B, "Yes")
     maker_cost = (ab or 0) + 0.01 + (bb or 0) + 0.01
@@ -197,7 +201,7 @@ def main() -> int:
             if ua is None or sa is None:
                 print("   -> NO BOOK on one leg — mid-only artifact, not executable")
                 continue
-            fees = fee_rate * (min(ua, 1 - ua) + min(sa, 1 - sa))
+            fees = fee_per_share_at(fee_rate, ua) + fee_per_share_at(fee_rate, sa)
             taker_net = (1.0 - (ua + sa) - fees) * 100
             maker_cost = (ub or 0) + 0.01 + (sb or 0) + 0.01
             maker_net = (1.0 - maker_cost) * 100
