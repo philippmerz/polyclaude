@@ -9218,3 +9218,24 @@ The ladder screen suggested a third pair (1B-YES 0.07-ish vs 3B rich). Walked it
 0.16 SHARES of dust; real cost 0.9917 = +0.83pp on no depth. Read the pairing loop: all-pairs
 (i, j>i), no adjacency blind spot — the scanner had it right and the live-walk guard ignored a
 depthless mid-violation, which is its job. No fix needed; capital fully deployed anyway. Idle.
+
+## 2026-08-22 14:00 cron tick — Hormuz tanker alert measured-through (MA 3.57, no action); fee-model finding backlogged
+
+Bankroll **$195.01**; REALIZED **+$4.70 (+2.8%)** — the two dips since yesterday are EXACTLY the
+true entry fees of the two arbs (invariance verified against wallet pUSD deltas: arb-1 true fee
+$0.182 vs my $0.29 model). Finding: pm_fees' rate x min(p,1-p) OVERSTATES real taker fees ~35-40%
+on these fills — errs safe, locked arb profits are ~50% better than journaled — backlogged for
+weekly reconciliation with a third datapoint.
+
+MATERIAL news alert consumed: Iran allowed several Iraqi tankers through Hormuz (10:16). Measured
+the resolving variable first-hand per protocol: PortWatch 7dMA 3.57 vs bar 60, latest print
+Aug-16 — the source LAGS ~6 days, which cuts against a late-sprint YES even under full reopening
+(the resolver cannot see Aug-25+ data by Aug-31). Isolated tanker passage != insurance re-rating.
+No action; NO 0.997; erosion trigger armed at 0.95.
+
+Rest of tick: 9 positions clear / 0 flagged; audit clean; 0 SELL verdicts; redeem 0; discovery 18
+hurdle-clearers all standing; monotonicity surfaced a NEW pre-launch FDV ladder (Printr — same
+template as Metamask) at mid-only −1.96pp, correctly not fired: the CLASS (thin pre-launch FDV
+ladders breed stub-quote inversions) is now on the daemon's watch by construction. Consistency 0
+real. Metamask legs marked UP (3B-NO 0.895 vs 0.849 paid) — mtm +13.41 flatters; realizable −1.05
+is the honest line. No trades this tick; nothing material for Telegram beyond the two arb reports.
