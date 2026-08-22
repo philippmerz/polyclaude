@@ -9194,3 +9194,20 @@ Value beyond the $0.21: the monotonicity pipeline is now validated END-TO-END (d
 died pre-trade. Book: 9 positions, bankroll $192.25, REALIZED +$5.14 (+3.0%).
 
 ## 2026-08-22 09:1x continuation — arb aftermath check: 4B pair now -1.58pp (edge consumed, pipeline validated), 3B pair +1.75pp < 2pp floor, skipped under the fresh slippage rule. Thread closed.
+
+## 2026-08-22 11:19 daemon-fired tick — SECOND Metamask arb (DEC-0080): 3B pair re-crossed, +4.75pp locked on 29.72 pairs
+
+The 3B pair that sat at +1.75pp (below floor) at 09:12 re-crossed when fresh 3B-NO asks landed at
+0.863 with 850sh depth. The morning's new rule was applied literally: per-level walk FIRST (every
+700M-YES level cleared the 2pp floor STANDALONE, worst +3.09pp), execute inside the minute. This
+time slippage ran POSITIVE — 3B-NO filled avg 0.849 vs 0.863 walked — locking +4.75pp on 29.72
+pairs (~$1.41 riskless), vs the morning's +1.42pp after negative slippage. Both directions of the
+walk-to-fire gap now observed within 3 hours; the rule (marginal level clears floor standalone)
+is what made this one safe to size into.
+
+COMBINED METAMASK STRUCTURE: 700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh, total cost ~$43.3
+incl. fees. Every resolution branch pays >= $44.75 (no-launch and <700M included), the 700M-3B
+middle branch pays up to $92.47 — a riskless ~+3.3% floor with a large free option on Metamask
+launching into the plausible 700M-3B FDV range. pUSD ~$1.2, fully deployed; Hormuz frees ~$28 in
+9 days. UMA scan post-trade: clean. Standard checks: news tail unchanged (01:33 Hormuz rhetoric),
+daemons 4/4, no other alerts.

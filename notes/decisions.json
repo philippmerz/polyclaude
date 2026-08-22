@@ -1,5 +1,5 @@
 {
-  "next_id": 80,
+  "next_id": 81,
   "decisions": [
     {
       "id": 1,
@@ -1518,6 +1518,25 @@
       "confidence": "high",
       "prediction": "Both legs resolve consistently (launch FDV or Dec-31 backstop) and the pair redeems $15.03 against $14.82 paired cost \u2014 profit ~$0.21 realized REGARDLESS of outcome; any other result means the same-event-consistency assumption was wrong and the class gets a doctrine review.",
       "size_usd": 14.55,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "arb",
+        "monotonicity",
+        "metamask"
+      ],
+      "slug": "metamask-fdv-above-one-day-after-launch",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 80,
+      "timestamp": "2026-08-22T11:21:27Z",
+      "type": "size_change",
+      "thesis": "SECOND monotonicity pair on the Metamask ladder, 2.5h after DEC-0079: the 3B pair re-crossed the floor when fresh 3B-NO asks appeared at 0.863 (daemon fired 11:19). Per the fresh slippage rule, walked per-level FIRST \u2014 every 700M-YES level cleared the 2pp floor STANDALONE (worst +3.09pp) \u2014 and executed inside the minute. Fills BEAT the walk (3B-NO avg 0.849 vs 0.863 walked): 700M-YES 32.47sh @0.0804 + 3B-NO 29.72sh @0.849 = 29.72 pairs locked at all-in 0.9525 = +4.75pp riskless (~$1.41). Combined Metamask book: 47.72 YES / 29.72 3B-NO / 15.03 4B-NO \u2014 every resolution branch pays >= $44.75 vs ~$43.3 total cost, with the 700M-3B middle branch paying up to $92. pUSD now ~$1.2 (fully deployed into riskless carry; Hormuz frees $28 on Aug-31).",
+      "confidence": "high",
+      "prediction": "All legs resolve on one FDV number; combined structure redeems >= $44.75 in every state (~+3.3% floor), more if FDV lands between 700M and 3B. Realized profit locked regardless of Metamask launch outcome.",
+      "size_usd": 27.84,
       "resolution_at": "2027-01-01",
       "tags": [
         "arb",
