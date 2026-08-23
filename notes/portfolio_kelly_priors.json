@@ -84,27 +84,6 @@
     "checked": "2026-08-13"
    },
    {
-    "claim": "Live negotiations concern US 'total access' to parts of Greenland for an UNLIMITED period, 'not curbed under any circumstances', via a reopened 1951 defence agreement.",
-    "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
-    "source_date": "2026-01-25",
-    "checked": "2026-08-13",
-    "superseded_note": "superseded by May/Jun-2026 reporting, see fact added 2026-08-22"
-   },
-   {
-    "claim": "Denmark's stated red line: 'We will not cede sovereignty over parts of the kingdom'; the proposal is framed as RESPECTING Danish sovereignty.",
-    "source": "https://www.axios.com/2026/01/21/greenland-deal-trump-denmark-sovereignty",
-    "source_date": "2026-01-25",
-    "checked": "2026-08-13",
-    "superseded_note": "superseded by May/Jun-2026 reporting, see fact added 2026-08-22"
-   },
-   {
-    "claim": "Trump ruled out using force to acquire Greenland (Davos, 2026-01-21).",
-    "source": "https://www.congress.gov/crs-product/IN12643",
-    "source_date": "2026-01-22",
-    "checked": "2026-08-13",
-    "superseded_note": "superseded by May/Jun-2026 reporting, see fact added 2026-08-22"
-   },
-   {
     "claim": "As of May-Jun 2026: talks ongoing, NO deal yet (Greenland PM May-12); Pentagon negotiating ACCESS to 3 new military sites; Denmark expects a deal BY YEAR-END; Danish sovereignty red line explicitly intact. An ACCESS deal is not acquisition under the criteria \u2014 but a year-end \"deal\" headline is an interpretation-flap risk for Q4; re-verify criteria wording vs any signed text before reacting to such a headline.",
     "source": "https://www.cp24.com/news/world/2026/05/12/progress-in-talks-with-us-but-no-deal-yet-greenland-pm/ + https://thehill.com/policy/international/5716467-us-denmark-greenland-talks/",
     "source_date": "2026-05-12/2026-06",
@@ -184,10 +163,17 @@
     "source": "The Elec via MacRumors, surfaced by kimi",
     "source_date": "2026-08-18",
     "checked": "2026-08-18"
+   },
+   {
+    "claim": "As of Jul-27/Aug-07 2026 reporting: MacBook Ultra (K114 14in / K116 16in, OLED touchscreen) launch window still \"late 2026 OR early 2027\" with early-2027 favored; Samsung OLED mass production ramping mid-late 2026; NEW detail \u2014 units tested on macOS 27.1, consumer release end-Oct 2026, aligning with a possible late-Oct Mac launch (OS-alignment inference, not a ship-date report). Criteria still need PURCHASABLE by Dec-31; Sep 8-10 Apple event remains the crux.",
+    "source": "https://www.macrumors.com/2026/07/27/mac-roadmap-2026/ + https://macdailynews.com/2026/08/07/macbook-ultra-rumors-apples-thinner-oled-touchscreen-flagship-expected-late-2026-or-early-2027/",
+    "source_date": "2026-07-27/2026-08-07",
+    "checked": "2026-08-23"
    }
   ],
   "divergence_ack": "2026-08-12",
-  "divergence_note": "REVISED same day. The 02:00 ack claimed 'prior freshly sourced, today's drop carries no news' \u2014 that was WRONG in its basis: the source was fetched-and-dated but FOUR MONTHS OLD in a fast-moving supply-chain story, and I had never asked whether a NEWER source existed. Gap is now 12pp (0.62 vs 0.495), not 30pp."
+  "divergence_note": "REVISED same day. The 02:00 ack claimed 'prior freshly sourced, today's drop carries no news' \u2014 that was WRONG in its basis: the source was fetched-and-dated but FOUR MONTHS OLD in a fast-moving supply-chain story, and I had never asked whether a NEWER source existed. Gap is now 12pp (0.62 vs 0.495), not 30pp.",
+  "source_ack": "2026-08-23"
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
   "p_no": 0.41,

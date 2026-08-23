@@ -9263,3 +9263,27 @@ maker-gate bug AND the fee-model error stacked — under the true curve even tak
 cleared by 3.25pp. Effects now live: taker breakevens tightened (OpenAI-50 0.711->0.656,
 OpenAI-55 0.456->0.427), arb floor honest, mid-price entries ~3x cheaper than modeled. The two
 arbs' true locked profit: ~$0.32 + ~$1.71 (not $0.21 + $1.41 as first journaled).
+
+## 2026-08-23 02:00 cron tick — quiet; Greenland audit-flap fixed properly, MacBook sources refreshed
+
+Bankroll **$191.53**; REALIZED **+$4.70 (+2.8%)** unchanged, invariance holds. Realizable
+improved to +$3.97 (Metamask legs re-marked toward cost, MacBook spread narrowed to 4.1pp).
+Gemini NO +112% marked on continued drift; OpenAI-55 −46% on the same thin churn — both
+lottery-held to Dec-31.
+
+Two audit-rotation items, both closed properly rather than acked away:
+- The 3 Greenland stale-source flags REAPPEARED despite yesterday's refresh — my
+  `superseded_note` annotation is not a mechanism the audit knows. Fixed the right way:
+  PRUNED the three superseded facts (the fresh dated fact carries the content; git keeps
+  history). Audit quiet on Greenland legitimately.
+- MacBook rotated in next (fact source 126d old). Searched NEWER per the rotation rule:
+  Jul-27 MacRumors roadmap + Aug-07 coverage keep "late 2026 or early 2027, early-2027
+  favored" — consistent with p_no 0.65, no move. ONE new detail recorded: test units run
+  macOS 27.1 (consumer release end-Oct 2026), mildly strengthening the late-2026 branch as
+  an OS-alignment inference. Sep 8-10 event remains the crux; source_ack set.
+
+Rest: no news since the tanker item; 9 clear / 0 flagged; 0 SELL verdicts; redeem 0; discovery
+19 hurdle-clearers all standing; monotonicity NO violations (the corrected floor found nothing
+new — the Metamask well is dry for now); Gamescom announce-family never listed with the event
+window closing today (second D23-style null for the template's listing leg). No trades. Sunday
+long-term review fires 16:00.
