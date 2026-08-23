@@ -9299,3 +9299,12 @@ and the marginal-level-standalone rule with both observed slippage directions. M
 (2) One idea surfaced and GATED rather than built: maker-side harvesting of re-arming stub
 ladders (fee-free, no walk-slippage) — gated on capital return + a written half-fill rule,
 and noted that the corrected fee model weakens the maker case at the tails. Nothing else forced.
+
+## 2026-08-23 14:00 cron tick — quiet; all clean, no trades
+
+Bankroll **$196.66**; REALIZED **+$4.70 (+2.8%)** unchanged. Marked +$15.07 / realizable +$2.45%
+— the gap re-widened as MacBook's spread blew back out (16.7pp to exit, from 4.1pp yesterday:
+the spread/depth-independence pattern again). 9 clear / 0 flagged; audit clean; 0 SELL; redeem
+0; discovery 20 hurdle-clearers all standing; monotonicity 0 real. News tail unchanged since the
+03:46 Iran-rhetoric item (NO-supportive, consumed at 06:00). No trades. Sunday long-term review
+fires 16:00; Netflix skip grades Tue; Hormuz 8 days out.
