@@ -15,7 +15,7 @@
 | Priors & calibration | how p estimates are built, revised, and mis-set |
 | Edges that survived | the live edge sources and their fine print |
 | Sizing & risk | caps, Kelly, cluster correlation, liquidity |
-| **Ops** (largest) | the failure classes that actually happened, in seven sub-sections: **Daemons, resources & liveness** (pkill, VM=1.9GB, fallbacks, dark panes) · **Write paths, drills & outward side effects** (dry-run traps, operator-facing alarms) · **Parsing, venue data & verifying my own output** (empty-list bugs, de-indexing, detector validation) · **Prior & fact hygiene (2026-08-10→12)** on stale/inverted priors and source-diffing · **Self-flattering numbers & display honesty (2026-08-13→20)** on midpoints, self-marking and un-applied corrections · **Stale constants & the test suite (2026-08-14)** · **Verified mechanics & regime judgment (2026-08-16→20)** (regime-bounded data, measurable-interim sources, thesis-worked exits) |
+| **Ops** (largest) | the failure classes that actually happened, in seven sub-sections: **Daemons, resources & liveness** (pkill, VM=1.9GB, fallbacks, dark panes) · **Write paths, drills & outward side effects** (dry-run traps, operator-facing alarms) · **Parsing, venue data & verifying my own output** (empty-list bugs, de-indexing, detector validation) · **Prior & fact hygiene (2026-08-10→12)** on stale/inverted priors and source-diffing · **Self-flattering numbers & display honesty (2026-08-13→20)** on midpoints, self-marking and un-applied corrections · **Stale constants & the test suite (2026-08-14→22, incl. the fee-formula ground-truth correction)** · **Verified mechanics & regime judgment (2026-08-16→20)** (regime-bounded data, measurable-interim sources, thesis-worked exits) |
 | Process & operator covenant | Telegram protocol, weekly P&L, reporting discipline |
 
 Recurring meta-shapes, if you read nothing else: *fix the CLASS not the instance* (a break
@@ -717,7 +717,37 @@ the one that arrives with a plausible justification attached. Audit those hardes
   monotone with September modal and the Aug-31 leg drifting down; MacBook's spread is reliably
   tight while depth stays thin), because the durable claim is the shape, not the number.
 
-### Stale constants & the birth of the test suite — the 2026-08-14 cluster
+### Stale constants & the birth of the test suite — the 2026-08-14→22 cluster
+
+- **The FORMULA can be wrong, not just the constant — and only a cash reconciliation
+  can tell you.** 2026-08-22: the fee model (takerBaseFee/10000 x min(p,1-p)) had survived
+  the stale-constant sweep, the test suite, and the mutation harness, because every guard
+  validated the code against the MODEL, not the model against the WORLD. What broke it was
+  the invariance rule doing its job twice in one day: realized dipped by odd amounts after
+  each arb entry, and chasing those dips against wallet pUSD deltas produced two exact
+  cash fees ($0.182, $0.435) that the model missed by ~40%. The true formula (docs +
+  reconciliation): fee = shares x rate x p x (1-p), QUADRATIC, rate category-capped at
+  0.07 — wrong CURVE and wrong RATE, ~3x overstated at p=0.50. The error direction was
+  "safe" (killed marginal trades) which is exactly why nothing ever surfaced it: an
+  overstatement in a gate never books a loss, it silently forgoes wins — the arb daemon's
+  floor was rejecting REAL arbs. Two durable rules: (a) any formula that prices a real
+  venue charge gets a GROUND-TRUTH pin in the suite (a wallet-reconciled observed value a
+  future change must reproduce), not just internal-consistency cases; (b) when a metric
+  built to be honest moves oddly, the reconciliation that explains it is worth more than
+  the explanation — chase it to the cent, because the residual is where the next model
+  error lives.
+
+- **On a stub book, the displayed top-of-book is the STALE part — size an arb so the
+  MARGINAL level clears the floor standalone.** 2026-08-22, first real monotonicity arb:
+  walked +2.71pp at top-of-book, fired ~8min later, and the pretty 5+7.6sh levels were
+  gone — fill came level-3-heavy at +1.42pp, under the 2pp floor I sized against. The $1
+  CLOB minimum forced blending the marginal level in, and the blend assumption ("the
+  cheap levels exist") is precisely what stub quotes break. Hours later the same ladder
+  re-crossed with real depth and the rule made it safe to size: every level cleared
+  standalone, executed inside the minute, and slippage ran POSITIVE (+3.53 walked,
+  +4.75 filled). Both directions of walk-to-fire drift observed in one day; the rule,
+  not the average, is what makes stub-book arbs takeable.
+
 
 - **A hand-maintained constant that tracks the outside world will be stale every time you look
   at it; the fix is a fetch, not a better number.** 2026-08-14 the hold/close hurdle read 5.00%,

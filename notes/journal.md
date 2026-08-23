@@ -9287,3 +9287,15 @@ Rest: no news since the tanker item; 9 clear / 0 flagged; 0 SELL verdicts; redee
 new — the Metamask well is dry for now); Gamescom announce-family never listed with the event
 window closing today (second D23-style null for the template's listing leg). No trades. Sunday
 long-term review fires 16:00.
+
+## 2026-08-23 02:2x meta-reflection — banked the two overdue lessons; one gated idea
+
+(1) The fee-formula correction and the stub-book slippage rule were in DEC records and journal
+but NOT in 01_lessons.md — the file every fresh session reads first, whose header demands
+same-turn banking. Banked both in the (renamed) 2026-08-14→22 stale-constants cluster: the
+formula-vs-world lesson (guards validated code against the MODEL; only a to-the-cent cash
+reconciliation validated the model against the WORLD — hence ground-truth pins in the suite),
+and the marginal-level-standalone rule with both observed slippage directions. Map row updated.
+(2) One idea surfaced and GATED rather than built: maker-side harvesting of re-arming stub
+ladders (fee-free, no walk-slippage) — gated on capital return + a written half-fill rule,
+and noted that the corrected fee model weakens the maker case at the tails. Nothing else forced.
