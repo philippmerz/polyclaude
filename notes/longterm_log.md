@@ -655,3 +655,132 @@ Secular tailwind (strong) + catalyst window (strong) score the thesis, but cycli
 - [CRSP Competition: EDITAS vs CRSP vs NTLA | The Motley Fool](https://www.fool.com/coverage/better-buy/2026/05/31/crispr-therapeutics-vs-editas-medicine-which-gene-editing-stock-is-a-better-buy-in-2026/)
 - [CRSP Downside Risks: Casgevy Uptake, Execution | Yahoo Finance](https://www.sahmcapital.com/content/why-crispr-therapeutics-crsp-down-77-after-major-shelf-filing-and-governance-changes-and-whats-next-2026-06-07)
 ```
+
+---
+
+## 2026-08-23T16:04:27Z — longterm_check
+
+**Query:** `TSM` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: TSM
+
+Date: 2026-08-23 | Type: equity | Horizon: 3y
+
+### Current state
+$418.95 (up ~86% from 52-week low of $225.63). Trailing P/E 27.86, forward P/E 26.18 (30% above 10-year avg of 22.43 but below industry median). Q2 2026 revenue +36% YoY, net income +77.4%, gross margin 67.7%, net margin 55.6%.
+
+### Cyclical position
+Mid-to-late cycle expansion, but STRUCTURAL not cyclical. Industry capex up 20% YoY in 2026 ($200B total), with TSMC capex at $60-64B—but capex growth does not exceed semiconductor market growth. Margins at 67.7% gross and 60.3% operating are historically elevated yet backed by sustained AI demand with multi-year visibility, not euphoria-driven. Valuation multiple at 30.8x is 37% above 10-year avg but justified by 40%+ revenue CAGR. Unlike prior cycles, there is no evidence of capacity overshoot or inventory correction risk. This resembles an AWS-circa-2012 structural super-cycle more than a semiconductor peak.
+
+### Secular tailwind
+AI data center infrastructure is intact and accelerating. Global data center capex forecast to exceed $1T in 2026; top 9 cloud service providers increasing capex 90% YoY to $886.7B. AI server shipments forecast 31% YoY growth in 2026. Global semiconductor market forecast $1.29T (52.8% surge), with data center semiconductors at $477.1B. AI workload growth forecast to triple-to-quadruple annually through 2030. TSMC's CoWoS advanced packaging fully booked through 2026 with 113% YoY demand growth. No sign of capex retrenchment; growth is structural (not cyclical) infrastructure buildout driven by generational shift to AI-first compute.
+
+### Catalyst window
+- [HIGH] 2026 Q3–Q4 — N2 (2nm) high-volume production ramping to 100K wafers/month; capacity expanded to 200K by 2027 end. First mass N2 chips (Apple A17 Pro, AMD EPYC) shipments validate node maturity. — Search results, TSMC earnings.
+- [HIGH] 2027 H1 — N2P and A16 (1.6nm) variants reach mass production. N2X (highest-clocking N2 variant) enters production. First data-center accelerators built on N2 (vs. N3) go to production. — Tom's Hardware, TSMC Tech Symposium 2026.
+- [MED] 2026–2027 — US/German fab expansions (Arizona, Dresden) come online, hedging geopolitical concentration risk and locking in US customer commitments. Reduces Taiwan-centric single-point-of-failure narrative. — Industry reports.
+- [MED] 2027 — Intel 20A, Samsung SF3 reach production; still 1.5+ years behind TSMC N2 roadmap. Competitive gap widens, reinforcing TSMC pricing power if sustained. — Semiwiki, EE Times.
+
+### Margin of safety
+Strong. Net cash position $76.99B (cash $110.58B, debt $33.59B). Debt-to-Equity 0.19, well below industry median of 0.25. Current ratio 2.46. ROE 39.97%, ROIC 54.61% — already highly profitable with fortress balance sheet. 73% pure-foundry market share with only 2nm node deployed at scale. However, entry valuation at 30.8x P/E is elevated; a 20-25% multiple compression to historical mean (22-24x) with flat earnings = 25–30% downside. Margin of safety is moderate, not ample.
+
+### Top 3 risks
+1. **Geopolitical / Taiwan quarantine** — ~22% conflict probability by 2027 (per prediction markets) is material tail risk. TSMC produces 92% of world's <5nm chips. Quarantine (not invasion) would disrupt just-in-time supply to global hyperscalers within weeks. Supply chain has only 4–8 weeks of inventory. This is the single largest tail risk; single-event loss could be -70%+ if supply chain breaks. 
+2. **Multiple compression on macro slowdown** — Current P/E of 30.8x is 37% above 10-year avg; if consumer/enterprise capex cycles slow in 2027–2028, multiples could compress to 22–25x while earnings hold, causing -25% to -35% loss with thesis intact. Risk of confusing valuation reversion with thesis failure.
+3. **Competitive node catch-up** — Samsung SF2/SF2P yields improving; Intel 18A (1.8nm-class) could reach production 2026–2027. If competitive gap closes, TSMC's pricing power erodes. Gross margins compression from 67.7% to 60% = 10% EPS impact. Market already assumes TSMC stays 1.5–2 years ahead; failure to sustain gap re-rates stock down 20–30%.
+
+### 5-year scenario probabilities
+- Generational (10x+, to ~$4,190): AI capex sustains 15+ years, TSMC margins expand to 70%+, P/E stays 30–35x. Requires no geopolitical shock, competitive moat holds. **12%**
+- Strong (3–5x, $1,257–$2,095): AI infrastructure becomes permanent base load (like cloud before it), margins normalize to 55–60%, P/E to 28–30x, mid-decade slowdown. **28%**
+- Modest (1.5–3x, $628–$1,257): Growth slows to 12–15% by 2028–2029, margins to 55%, P/E to 25x, macro headwind. **35%**
+- Flat / mild loss (−30% to +50%, $293–$628): Macro recession 2027–2028, multiple compression to 20x, but capex survives and TSMC stays market leader. Recovery to $550–600 by 2029. **20%**
+- Thesis broken (−50%+, <$210): Geopolitical event (Taiwan quarantine/conflict), or Samsung/Intel leap-frog TSMC and win major customers, or global AI capex cliff. **5%**
+
+### Entry trigger
+**Current price not attractive for immediate entry.** P/E at 30.8x requires confirmation of sustained margin expansion or next-leg capex growth. 
+- **DIPS:** Enter on pullback to $350–380 (16–20% correction) if AI capex narrative intact.
+- **CATALYST:** Enter on announcement/confirmation of N2P or N2X mass production reaching 50K+ wafers/month in 2027 H1, signaling node portfolio breadth and extended lead.
+- **GEOPOLITICAL:** Any official US-Taiwan defense pact or TSMC IPO of Gumi/Dresden fabs would reduce tail risk and justify entry at current levels.
+- **HOLD:** Absent dip or catalyst confirmation, monitor quarterly capex growth, gross margin trend, and N2 ramp metrics. Reassess Q1 2027 earnings.
+
+### Verdict: 3.5/4 — WATCH
+**Cyclical**: 3.5/4 (structural super-cycle, not euphoric peak; capex growth disciplined). **Secular**: 4/4 (AI infrastructure is multi-decade tailwind, fully intact). **Catalyst**: 3/4 (N2 ramp, node launches priced in; next catalyst is N2P mass production 2027). **Margin of Safety**: 3/4 (fortress balance sheet, but elevated entry valuation limits downside protection).
+
+**Recommendation: WATCH and monitor for entry on dip or catalyst. Current valuation justified but not attractive. Geopolitical tail risk (22% conflict probability by 2027) material; hedge or size sub-Kelly if entering.**
+
+### Sources
+- [Taiwan Semiconductor Stock Performance](https://www.investing.com/equities/taiwan-semicond.manufacturing-co)
+- [TSMC Q2 2026 Earnings](https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000451/a2q26e_withguidancexfinal.htm)
+- [Semiconductor Capex 2026 Growth](https://www.electronicsweekly.com/news/business/semiconductor-capex-2026-04/)
+- [TrendForce AI CapEx & CSP Spending 2026](https://www.trendforce.com/presscenter/news/20260506-13033.html)
+- [Global Data Center AI Infrastructure Buildout 2026](https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/)
+- [TSMC Balance Sheet & Financial Metrics (GuruFocus)](https://www.gurufocus.com/term/debt-to-equity/TSM)
+- [TSM P/E Ratio Historical Analysis](https://www.macrotrends.net/stocks/charts/TSM/taiwan-semiconductor-manufacturing/pe-ratio)
+- [Taiwan Geopolitical Risk Assessment 2026](https://www.hungyichen.com/en/insights/semiconductor-geopolitics)
+- [Pure Foundry Market Share Q1 2026](https://counterpointresearch.com/en/insights/global-semiconductor-foundry-market-share)
+- [TSMC N2 Process Node Roadmap 2026–2027](https://www.tomshardware.com/tech-industry/tsmcs-2nm-n2-process-node-enters-production-this-year-a16-and-n2p-arriving-next-year)
+```
+
+---
+
+## 2026-08-23T16:06:02Z — longterm_check
+
+**Query:** `TLT` (equity, 3y horizon)
+
+```
+## LONGTERM CHECK: TLT
+
+Date: 2026-08-23 | Type: equity | Horizon: 3y
+
+### Current state
+$82.34 (Aug 20-21, 2026) | -3.07% YTD | YTM 5.28%, duration 16yr, div yield 4.36%
+
+### Cyclical position
+TLT is trading near the October 2023 cyclical bottom ($83/share after historic bear market). 10-year yields have surged 11.8% YTD (to 4.74%), reflecting renewed inflation and Fed shift from expected cuts (early 2026) to expected rate hikes (65% odds for September 2026 hike). The asset is mid-to-late cycle: yields elevated, long duration exposed, valuations normalized after the 2022-2024 bear market destroyed 48% of duration risk. No longer in a bottoming phase; rather, testing whether this is the new floor or yields have further to rise.
+
+### Secular tailwind
+None currently; structural headwinds. Inflation remains sticky (3.4% headline, 2.5% core as of July 2026), energy shocks (Iran) sustain near-term pressure, and Fed has pivoted from easing bias to potential tightening. IMF raised concerns about US debt eroding the Treasury safe-haven premium (54% of bond strategists surveyed in May expressed concern). Long Treasuries face headwinds in a higher-inflation, higher-rates regime. **However**, there exists a conditional secular tailwind: if recession hits (yield curve inverted, recession probability ~25-30% per Fed nowcasts), long bonds would be the primary safe-haven beneficiary and driver of a multi-year rally as Fed cuts aggressively—this is asymmetric upside if recession occurs.
+
+### Catalyst window
+- [MED] 2026-Q3 (Sep 15-16 FOMC) — 25bp rate hike expected at 65% probability; likely already priced but confirms hawkish pivot; would extend current headwinds for TLT if executed
+- [HIGH] 2026-Q4 to 2027-Q2 — Recession signals (unemployment spike, ISM manufacturing falls, inverted yield curve lags into realized recession at 12-24mo lag); if triggered, drives Fed pivot to rate cuts and sustained TLT rally. Current macro odds ~25-30% for 12-month recession.
+- [MED] 2027-Q1 to Q2 — Inflation normalization; if PCE/CPI falls below 2.5%, removes pressure from long yields, allows Fed to cut sooner and more aggressively
+- [LOW] 2026-2027 — Geopolitical de-escalation (Iran resolution); energy prices fall, inflation expectations ease, reduces near-term yield pressure
+
+### Margin of safety
+Strong. YTM at 5.28% provides meaningful income cushion vs equity risk-free rate. TLT trades at $82.34, only ~0.6% above Oct 2023 cycle low of $83; downside limited to ~5-7% even if yields spike to 5.5% (duration math: 16yr duration × 75bp rise ≈ 12% price loss, partially offset by income). If yields fall to 4% (recession/Fed cuts scenario), TLT rallies to ~$95+, providing 15%+ upside with lower tail risk. Current entry represents attractive risk/reward asymmetry IF recession thesis holds; if rates stay 4.5-5.5%, income yield covers price stagnation.
+
+### Top 3 risks
+1. **Persistent inflation + higher-for-longer rates** — Energy shocks (Iran) or wage-growth surprises sustain 3%+ inflation longer than expected. Fed stays cautious on cuts through late 2027. TLT yields rise to 5.5%+ (price to $78-80), thesis of cyclical bottom breaks. Probability ~25%.
+
+2. **Fiscal-crisis loss of Treasury safe-haven status** — US debt levels (>130% GDP) erode foreign demand for Treasuries. If geopolitical shifts (China, Russia allies diversify FX reserves), Treasury demand falls sharply, yields spike 50-100bp in months, TLT collapses to $72-75. Low probability (~5-10%) but high severity.
+
+3. **Stagflation scenario** — Slow growth + persistent inflation requires rates stay high to attract investment. Fed cannot cut aggressively. TLT sideways-to-down, dividend yield doesn't offset opportunity cost vs equities or commodities. Probability ~15-20%.
+
+### 5-year scenario probabilities
+- Generational (10x+): 2% — requires yields to fall to ~0.5% (only in depression scenario)
+- Strong (3-5x): 18% — recession hits hard, Fed cuts to 2%, yields to 2-3%, TLT rallies to $200+
+- Modest (1.5-3x): 32% — moderate recession, yields to 3-4%, TLT rallies to ~$120-150, modest mean reversion
+- Flat (-30% to +50%): 40% — sideways economy, rates stay 4-5%, price stagnation offset by 4%+ annual dividend
+- Thesis broken (-50%+): 8% — stagflation, yields spike to 6%, TLT falls to $50-60
+
+### Entry trigger
+**Current entry marginally acceptable but not compelling.** TLT at $82-83 is fair IF you believe recession probability > 30% (current Fed nowcasts: ~25-30%, so you're pricing fair odds). Better entries:
+- **Immediate**: If you want to hedge portfolio and can hold through sideways rates environment; 5% annual income covers opportunity cost.
+- **On dip**: Yields spike to 5.5% (TLT to $78-79), improving margin of safety and signaling peak Fed tightening.
+- **On recession signal**: ISM manufacturing < 48, unemployment rises 50+bp in a month—confirms Fed pivot coming, TLT entry becomes compelling multi-year trade.
+
+### Verdict: 2.5/4 — WATCH
+**Weakly cyclical (just above the cycle floor, not a clear bottom repricing) + absent secular tailwind (currently headwinds, conditional upside only on recession) + moderate catalyst window (FOMC hike expected but limited price catalyst) + strong margin of safety (attractive yield, income cushion).** Not a generational mispricing like SanDisk 2023 (memory-cycle bottom + AI secular demand + spinoff catalyst + balance sheet). TLT is a **tactical recession hedge** at current prices: reasonable entry for portfolio insurance if you believe recession odds > 30%, but not attractive as standalone long-term thesis unless recession signals sharpen meaningfully in Q4 2026. Keep on watchlist; trigger entry on visible recession data (unemployment spike, ISM collapse, earnings downward revisions) or on yield spike to 5.5%+. Do not enter on Fed hike expectations alone—already priced.
+
+### Sources
+- [iShares TLT Price & Performance History](https://www.investing.com/etfs/ishares-lehman-20-year-treas)
+- [Treasury Yields Snapshot August 14, 2026](https://www.advisorperspectives.com/dshort/updates/2026/08/14/treasury-yields-snapshot-august-14-2026)
+- [Fed Rate Expectations September 2026](https://www.chase.com/personal/investments/learning-and-insights/article/september-2026-rate-hike-now-expected-amid-energy-shocks)
+- [US Inflation Data July 2026](https://www.bls.gov/news.release/archives/cpi_08122026.htm)
+- [Recession Probability & Yield Curve](https://centralbank.watch/tools/yield-curve/us-yield-curve/)
+- [TLT 2023 Cycle Low](https://beyondpassive.substack.com/p/sixty-four-years-of-tlt-reconstructing)
+- [Fed Rate Projections 2026](https://www.federalreserve.gov/monetarypolicy/fomcminutes20260617.htm)
+- [Bond Market Valuation June 2026](https://www.advisorperspectives.com/dshort/updates/2026/07/07/market-valuation-inflation-treasury-yields-april-2026)
+```

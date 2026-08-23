@@ -9308,3 +9308,15 @@ the spread/depth-independence pattern again). 9 clear / 0 flagged; audit clean; 
 0; discovery 20 hurdle-clearers all standing; monotonicity 0 real. News tail unchanged since the
 03:46 Iran-rhetoric item (NO-supportive, consumed at 06:00). No trades. Sunday long-term review
 fires 16:00; Netflix skip grades Tue; Hormuz 8 days out.
+
+## 2026-08-23 16:00 Sunday long-term review — macro/tech/crypto rotation; TSM + TLT vetted WATCH; no PM candidates
+
+Digest on the 3-week-stale bucket (macro-fiscal-labor, tech-ai-chips, crypto-on-chain). Two
+MEDIUM themes vetted: TSM (WATCH — valuation fair not attractive, 22% Taiwan tail, dip/catalyst
+entry) and TLT (WATCH 2.5/4 — conditional on the Sep-4 employment print confirming the late-cycle
+read). Both multi-year IBKR-side per the venue constraint. Dated catalysts banked: Warsh Jackson
+Hole Aug-28, Aug employment report Sep-4 — the latter also arms the recession-repricing risk that
+would hit every risk asset including the crypto sleeve. No PM-actionable candidate this week
+(Fed family standing pass; nothing resolves on the labor print directly). Watchlist updated;
+trigger-state honestly marked not-re-priced (stooq 404s from the VM — if this persists next
+Sunday, find an alternative free quote source THEN, not speculatively).

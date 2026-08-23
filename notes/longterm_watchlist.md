@@ -410,3 +410,25 @@ Themes (all multi-year -> IBKR-surface per venue constraint):
 | **CRSP (re-vet)** | **3/4 (was 3.5)** | WATCH | Gene-therapy inflection | **Original trigger TECHNICALLY MET** — Casgevy Q2 $76.4M +151% YoY (≥$130M pace) with price $53.55 in the $48-55 band — but the fresh vet DOWNGRADED: not cycle-bottom, dilution ahead, R/R 1:1.5 vs 1:2 target. Better entry $40-45; hold-trigger = Q4 guidance ≥$300M run rate. Multi-year -> operator's IBKR call, surfaced with both facts. |
 
 Trigger-state: GOOG $343.54 (dip trigger $280-285 — far), ALB $136.15 (LEFT the ≤$120 zone), CCJ $97.74 (left $85-95 band). No actionable PM candidates from these domains this week.
+
+## 2026-08-23 weekly digest (domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain — stalest, 3wk)
+
+Themes (per venue constraint, multi-year -> IBKR-surface only):
+- **Late-cycle labor warning (MED):** payrolls declining while unemployment holds — the classic
+  pre-recession sequence; NVDA-led valuations assume no recession, labor data disagrees. The
+  DATED CATALYSTS are the tradeable part: Warsh Jackson Hole speech Aug-28, Aug employment
+  report Sep-4. Plays (long vol / TLT) are IBKR-side. PM angle: none found — Fed family is a
+  standing pass and no listed market resolves on the Sep-4 print directly.
+- **TSMC structural-vs-cyclical (MED):** capex to $60-64B (+22%) with discipline vs hyperscaler
+  77% — read as structural AI demand floor; TSM undervalued vs NVDA capex-adjusted. Needs
+  earnings confirmation.
+- Passed: DeFi TVL floor (fact basis thin, digest's own NEXT-STEPS agrees).
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **TSM** | vet | WATCH | TSMC structural AI floor | Valuation justified but not attractive; 22% Taiwan-conflict tail by 2027 demands sub-Kelly + hedge. Entry on dip or earnings-confirmation catalyst. IBKR-side. |
+| **TLT** | 2.5/4 | WATCH | Late-cycle duration hedge | Entry conditional on labor deterioration confirming (Sep-4 print); Warsh-Fed reaction function is the wildcard. IBKR-side. |
+
+Trigger-state: NOT re-priced this week (stooq blocked from VM; domains rotated away from the
+commodity names). Last states stand: GOOG far from $280-285 dip, ALB left ≤$120, CCJ left
+$85-95, CRSP awaiting $40-45 with Q4-guidance hold-trigger. No trigger-hit flags.

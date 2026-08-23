@@ -1796,3 +1796,132 @@ Sources:
 - [Cameco Uranium Price Tracker](https://www.cameco.com/)
 - [Fastmarkets DRC Cobalt Quota Analysis](https://www.fastmarkets.com/insights/drc-may-reduce-cobalt-quota-if-market-needs-rebalancing-arecoms-says-exclusive/)
 - [S&P Global Rare Earth Supply Bottlenecks 2026](https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026)
+
+---
+
+## 2026-08-23T16:02:48Z — world_state_digest
+
+**Domains:** macro-fiscal-labor, tech-ai-chips, crypto-on-chain | **Lookback:** 30d | **Model:** haiku
+
+# WORLD-STATE DIGEST — 2026-08-23
+
+Domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### macro-fiscal-labor
+
+- [2026-07-30] BEA: Real GDP growth Q2 at 1.5% annualized (advance estimate); Q1 was 2.1%
+- [2026-08-12] BLS: July unemployment rate 4.1%; nonfarm payroll declined 23,000
+- [2026-08-12] BLS: July CPI 3.4% YoY (down from 3.5% June); core CPI 2.5% YoY (down from 2.6%)
+- [2026-08-12] BLS: Gasoline prices +24.6% YoY; shelter inflation 3.2%; food inflation 3%
+- [2026-08] BLS: July real wage growth +0.09% YoY; nominal wages +3.5% vs inflation +3.4%
+- [2026-07-28/29] Fed: Federal funds rate held at 3.50–3.75%; unchanged at July FOMC
+- [2026-08-14] Treasury: 10Y yield 4.68%, 2Y yield 4.17%; 10Y-2Y spread +46 bps (normal upward-slope)
+- [2026-08-21] Treasury: 10Y yield rose to 4.74%
+- [2026-05] Fed Chair Kevin Warsh took office (replacing Powell); Jackson Hole speech scheduled 2026-08-28; Warsh signaled willingness to surprise markets ("not constrained by market prices")
+
+### tech-ai-chips
+
+- [2026-05-20] NVIDIA Q1 FY2027: Revenue $81.6B (+85% YoY); Data Center $75.2B (+92% YoY)
+- [2026-Q2 FY2026] NVIDIA: Revenue $46.7B (+56% YoY, +6% QoQ); Data Center $41.1B (+56% YoY); non-GAAP gross margin 75.5%
+- [2026-08] TSMC: Raised 2026 revenue growth guidance to >40% (from >30%), now above 35% consensus
+- [2026-08] TSMC: Raised 2026 capex guidance to $60–64B (from $52–56B); +$4B increase; CFO Huang: next 3-year capex cycle "significantly higher" than prior 3-year period
+- [2026-08] TSMC: Announced additional $100B Arizona investment
+- [2026-Q1] SEMI: Global semiconductor equipment billings $36.55B (+14% YoY); +1% QoQ (driven by AI-related capacity expansion and technology upgrades)
+- [2026] Hyperscalers (Amazon, Google, Microsoft, Meta): Combined capex guidance $725B (+77% from $410B in 2025); ~60% (~$435B) targeted at semiconductors (GPUs, custom silicon, HBM)
+- [2026] IDC: Data center semiconductor revenue forecast $477.1B; Gartner forecasts global semiconductor revenue $1.32T (+64%); Deloitte: AI chip market ~$500B (revised up from $300B)
+
+### crypto-on-chain
+
+- [2026-06/07] DefiLlama: Total DeFi TVL $71.77B (-37% from 2025 peak); Ethereum at 53.1% = $38.52B
+- [2026-06/07] DefiLlama: Ethereum staking 33% of supply at 3–4% APR (institutional-grade); Lido TVL $10.2B+
+- [2026-08] L2Beat/DefiLlama: Layer 2 consolidation — Base 46.58% L2 TVL, Arbitrum 30.86%, Optimism ~6%; top 3 control 83% of L2 value
+- [2026-07-01] Polygon zkEVM sequencer sunset
+- [2026-08-21] Bitcoin $77,307.95 (up from ~$64k on 2026-08-12); Ethereum $2,390.81 (up from ~$1.9k on 2026-08-12); rally driven by Treasury debt buyback announcement + Trump Clarity Act push
+- [2026-08-19] SEC: Announced proposed crypto regulation
+
+## CANDIDATE THEMES
+
+### Warsh Hawkish Surprise / Terminal Rate Repricing
+
+**Underlying facts:** Fed funds rate unchanged 3.50–3.75% since July. Treasury 10Y yields rose from 4.68% (Aug 14) to 4.74% (Aug 21) amid "soaring debt issuance." Jackson Hole speech Aug 28 (5 days out). Warsh signaled he is "not constrained by market prices" and wants to examine "foundations of monetary policy in age of AI." Core CPI sticky at 2.5% YoY, not moving. Real wage growth negligible (+0.09% YoY).
+
+**Implication:** Market consensus is pricing modest-to-no-change Fed path or eventual cuts (reflecting equity rally into Q3). But Warsh is structurally hawkish vs Powell. He has signaled Jackson Hole will present "big picture vision," and he emphasized fighting inflation first. If he signals higher-for-longer terminal rates or signals no-cut bias, 10Y yields spike +50–100 bps in days. Current 4.74% is not equilibrium under true Warsh regime.
+
+**Possible plays:** TLT (inverse 20Y bonds), TMF (3x inverse bond ETF), short IEF (7–10Y), long 2Y/short 10Y curve flattener trades; USD long
+**Direction:** Short duration / short bonds / long term rates
+**Horizon:** Weeks (Jackson Hole catalyst 2026-08-28)
+**Retail blindspot:** Consensus still assumes Powell-like Fed; Warsh's actual policy stance not yet tested; market has yet to price Jackson Hole speech risk
+**Confidence:** HIGH (multiple independent signals: Warsh hawkish stance confirmed, sticky core inflation, rising yields, explicit Jackson Hole catalyst)
+
+### Semiconductor Equipment Supply Constraint Underappreciated
+
+**Underlying facts:** SEMI billings +14% YoY Q1 2026. Hyperscalers committing $435B to chip spend in 2026 (up 77% YoY). TSMC capex up only 22% ($52–56B → $60–64B) despite customer demand up 77%. NVIDIA Data Center margin *stays* 75.5% despite massive volume and pricing power — foundry is the bottleneck, not edge logistics.
+
+**Implication:** Equipment makers (ASML, LRCX, AMAT, SEMI members) are capacity-constrained vs. end-demand growth. Billings lag demand growth mathematically. Equipment makers have pricing power and will raise guidance in H2 2026. This is the real capex beneficiary, not just chip designers/foundries.
+
+**Possible plays:** ASML (EUV lithography bottleneck), LRCX (advanced deposition), AMAT (etch/deposit), SMI (SEMI exposure)
+**Direction:** Long semiconductor equipment makers
+**Horizon:** Months (2H 2026 guidance raises)
+**Retail blindspot:** Retail watches NVDA/AMD but ignores equipment makers; equipment demand derived from hyperscaler capex but not yet consensus; equipment billings lag orders by 2–3 quarters
+**Confidence:** HIGH (capex growth rate 77% >> equipment billings growth 14%; derived demand gap is mathematical)
+
+### Crypto Positioning Too Aggressive on Regulatory Catalysts
+
+**Underlying facts:** Bitcoin +20% (from $64k → $77k), Ethereum +27% (from $1.9k → $2.4k) in Aug 2026 on Trump Clarity Act and Treasury buyback. SEC proposed regulation Aug 19 (priced as neutral/positive). Political risk: Clarity Act still in proposal stage, not passed.
+
+**Implication:** Retail has front-run regulatory clarity narrative but actual outcomes remain 6–12 months out. Institutional capital positioning is still defensive (DeFi TVL down 37%). A regulatory setback (SEC enforcement, Congressional delay on Clarity Act) would trigger rapid liquidation of leveraged retail longs. Positioning is extended.
+
+**Possible plays:** GBTC, ETHE calls (momentum fade); crypto risk reversal plays (sell vol)
+**Direction:** Short BTC/ETH or short volatility
+**Horizon:** Weeks to months (regulatory uncertainty remains)
+**Retail blindspot:** Trump tailwind narrative extended; Clarity Act odds discounted as certainty; lack of fundamental adoption demand to support rally
+**Confidence:** MEDIUM (price moves confirm FOMO narrative but fact basis for 20%+ rally is thin; regulatory timeline is years, not weeks)
+
+### Labor Market Deterioration Warning Signal Not Priced
+
+**Underlying facts:** July nonfarm payroll -23,000 (decline). Unemployment stable 4.1% (lag indicator). Real wage growth +0.09% YoY (stalled). Wage growth for building workers down 2.4% YoY (sector weakness). Fed held rates; no pivot signaled.
+
+**Implication:** Late-cycle labor market warning: payroll declining but unemployment hasn't reacted yet. This is the typical sequence before recession. If Aug payroll (released Sept 4) shows further deterioration, equity market will re-price recession probability quickly. Current valuations (implied by NVDA strength) assume no recession; labor data contradicts this.
+
+**Possible plays:** Long VIX, put spreads on SPY/QQQ, TLT long (flight-to-safety after initial rate shock passes)
+**Direction:** Long volatility / short equities
+**Horizon:** Months (labor data is monthly, Aug release Sept 4)
+**Retail blindspot:** Retail focused on NVDA/AI strength, not labor macro; payroll decline hidden in "steady" unemployment narrative; labor recession signals typically ignored until too late
+**Confidence:** MEDIUM (payroll decline is factual but one month; correlation to recession is historical, not inevitable)
+
+### TSMC Capex Growth Outpacing NVIDIA Cyclical Hype
+
+**Underlying facts:** TSMC capex raised to $60–64B (+22% YoY). NVIDIA guidance implies $200B+ annual revenue run-rate sustainable. TSMC securing >40% revenue growth 2026 but capex discipline remains. TSMC CFO emphasizes 3-year capex cycle will be structurally higher, not cyclical pop.
+
+**Implication:** TSMC is signaling structural AI demand, not cyclical spike. It is raising capex but not aggressively (vs. the 77% hyperscaler capex growth). This suggests TSMC sees AI demand as durable but not requiring runaway capex. Market is pricing NVDA as cyclical windfall; TSMC pricing is structural floor. TSMC is undervalued vs. NVDA on a capex-adjusted basis.
+
+**Possible plays:** TSM (TSMC ADR) vs NVDA outperformance
+**Direction:** Long TSM relative to NVDA
+**Horizon:** Months to years
+**Retail blindspot:** NVDA is "AI pure-play" consensus; TSMC seen as "foundry, not growth." Capex discipline by TSMC is read as weakness, not strength.
+**Confidence:** MEDIUM (structural vs cyclical distinction is real but TSMC guidance could also just reflect near-term supply constraints; needs earnings confirmation)
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: TLT, TMF, ASML, LRCX, AMAT, TSM, BTC/USD
+- Watch for: Warsh Jackson Hole speech (2026-08-28); Aug employment report (release 2026-09-04); TSMC earnings/guidance refresh
+- Pass: DeFi TVL structural floor (fact basis too thin; needs app-level product execution, not L2 infrastructure)
+
+Sources:
+- [Q2 GDP Advance Estimate: Real GDP at 1.5%, Lower Than Expected](https://www.advisorperspectives.com/dshort/updates/2026/07/30/gdp-gross-domestic-product-q2-2026-advance-estimate)
+- [Employment Situation Summary - 2026 M07 Results](https://www.bls.gov/news.release/empsit.nr0.htm)
+- [Consumer Price Index News Release - 2026 M07 Results](https://www.bls.gov/news.release/archives/cpi_08122026.htm)
+- [Real Earnings Summary - 2026 M07 Results](https://www.bls.gov/news.release/realer.nr0.htm)
+- [The Fed - Monetary Policy](https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm)
+- [Treasury Yields Snapshot: August 14, 2026](https://www.advisorperspectives.com/dshort/updates/2026/08/14/treasury-yields-snapshot-august-14-2026)
+- [NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026)
+- [NVIDIA Earnings Q2 FY27: Revenue, Data Center, AI Capex](https://www.rexshares.com/nvidia-earnings/)
+- [TSMC Targets 40%+ Sales Growth, Lifts 2026 Capex to $64 Billion](https://finance.yahoo.com/technology/articles/tsmc-targets-40-sales-growth-194152888.html)
+- [SEMI Reports Global Semiconductor Equipment Billings Increased 14% Year-Over-Year in Q1 2026](https://www.semi.org/en/semi-press-release/semi-reports-global-semiconductor-equipment-billings-increased-14-percent-year-over-year-in-q1-2026)
+- [AI Chip Market Statistics 2026 | AI Cloudbase](https://aicloudbase.com/statistics/ai-chip-market-statistics)
+- [DeFi TVL drops to $71.77 billion in 2026, Ethereum holds 53.1% share](https://coinlaw.io/decentralized-finance-market-statistics/)
+- [Best Ethereum L2s in 2026: Fees, TVL, TPS Compared](https://eco.com/support/en/articles/14798699-best-ethereum-l2s-in-2026-fees-tvl-tps-compared)
+- [Bitcoin and ethereum prices today, Friday, August 21, 2026: Cryptos continue rally sparked by Treasury repurchase announcement](https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-august-21-2026-cryptos-continue-rally-sparked-by-treasury-repurchase-announcement-161633891.html)
+- [Kevin Warsh Is the New Chair of the Federal Reserve: Here's What That Could Mean for Markets and Investors in 2026](https://www.chase.com/personal/investments/learning-and-insights/article/kevin-warsh-is-the-new-chair-of-the-federal-reserve)
