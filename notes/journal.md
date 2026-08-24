@@ -9320,3 +9320,21 @@ would hit every risk asset including the crypto sleeve. No PM-actionable candida
 (Fed family standing pass; nothing resolves on the labor print directly). Watchlist updated;
 trigger-state honestly marked not-re-priced (stooq 404s from the VM — if this persists next
 Sunday, find an alternative free quote source THEN, not speculatively).
+
+## 2026-08-24 02:00 cron tick — Hormuz fee-legislation alert measured through; hold; otherwise quiet
+
+Bankroll **$191.83**; REALIZED **+$4.70 (+2.8%)** unchanged. 9 clear / 0 flagged; audit clean;
+0 SELL; redeem 0; discovery all standing.
+
+MATERIAL alert consumed (00:28): Iranian parliament ADVANCING "Hormuz service fee" legislation —
+the watcher correctly reads normalization-positioning. Measured through it: PortWatch unchanged
+(7dMA 3.57 vs 60, latest print Aug-16, ~6-day lag). Advancing legislation is not enacted fees,
+enacted fees are not physical transits, and the lag means the resolver's observable window
+through Aug-31 is already mostly printed — a fee regime cannot move the MEASURED MA to 60 in
+time. NO 0.997 unmoved; erosion trigger armed. NOTE for the ladder: this IS the normalization
+path the Sep-30/Dec-31 skips priced (P(ceasefire/opening) x P(recovery)) — the skips continue
+aging correctly (Sep-30 yes 0.055). Echoes the graded July fee-family skips: fee legislation
+has oscillated for months without opening the strait.
+
+Netflix skip grades TOMORROW (Tue publish 3PM ET). Hormuz redemption prep: runbook staged,
+conditionIds snapshotted, rests don't block redemption (verified on-chain Aug-18).
