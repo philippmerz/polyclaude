@@ -9338,3 +9338,12 @@ has oscillated for months without opening the strait.
 
 Netflix skip grades TOMORROW (Tue publish 3PM ET). Hormuz redemption prep: runbook staged,
 conditionIds snapshotted, rests don't block redemption (verified on-chain Aug-18).
+
+## 2026-08-24 14:00 cron tick — quiet; MacBook flap partially reverted, all clean
+
+Bankroll **$195.84**; REALIZED **+$4.70 (+2.8%)** unchanged. Realizable +3.91% — the morning's
+MacBook adverse drift partially reverted (NO mid back to ~0.445 from 0.35; the 06:00 walk+ack
+was the right non-reaction, third round-trip on that book in a week). 9 clear / 0 flagged;
+audit clean; 0 SELL; redeem 0; discovery 16 standing; monotonicity 0 real. 13:01 news alert:
+Iran warns of harsh response to US sanctions — MATERIAL/NO-supportive on Hormuz (stalemate
+reinforces non-normalization; 7 days out). No trades. Netflix skip grades TOMORROW 3PM ET.
