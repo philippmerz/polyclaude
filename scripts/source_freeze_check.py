@@ -36,8 +36,15 @@ import httpx
 WAYBACK = "http://web.archive.org/web/{stamp}/{url}"
 # Default: model-name shapes on AI leaderboards. Override with --pattern for
 # other sources (registries, official lists, index pages).
-DEFAULT_PATTERN = (r"gpt-[\w.\-]+|gemini[\w.\- ]{0,12}pro|claude-[\w.\-]+"
-                   r"|grok-[\w.\-]+|o[34]-?\w*|deepseek[\w.\-]*|kimi-[\w.\-]+")
+# 2026-08-25: the first version required a HYPHEN (`claude-`, `grok-`) and was
+# therefore BLIND to space-separated names — the live board lists "claude 4.5
+# sonnet" and "grok 4". A blind pattern manufactures a false FROZEN verdict,
+# which is the failure this tool exists to prevent, so the default now matches
+# both spellings across every lab that appears on these boards.
+DEFAULT_PATTERN = (r"gpt[\w.\-]{0,10}|gemini[\w.\- ]{0,10}pro"
+                   r"|claude[\w.\- ]{0,16}(?:sonnet|opus|haiku)|grok[\w.\- ]{0,6}"
+                   r"|deepseek[\w.\-]{0,10}|kimi[\w.\- ]{0,8}|llama[\w.\- ]{0,12}"
+                   r"|qwen[\w.\-]{0,12}|o[34]-?\w*")
 
 
 def tokens(html: str, pattern: str) -> set[str]:

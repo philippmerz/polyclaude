@@ -9730,3 +9730,35 @@ resolution of an item that had been sitting untouched for two weeks because it w
 all-or-nothing.
 
 Nothing forced beyond that. Netflix grades in ~4h; Hormuz in 6d; NVDA tomorrow.
+
+## 2026-08-25 15:3x continuation — found a BLIND SPOT in my own instrument; thesis survived the better test
+
+Surveying all four "next-model HLE debut" families for the best expression of the board-frozen bet,
+I noticed the board showed NO Claude and NO Grok models under my parse — yet my own 2026-08-10 note
+recorded that it had added Grok 4 and Claude 4.5. Two claims, one wrong. The cause was my pattern:
+it required a hyphen (`claude-`), so SPACE-SEPARATED names were invisible. A blind spot like that
+can manufacture a false "frozen" — if a Claude row had been added in 2026, my parser could not have
+seen it, and the instrument would have confirmed exactly what I wanted to believe.
+
+Re-ran the check with an all-labs pattern (gpt/gemini/claude/grok/deepseek/kimi/llama/qwen).
+--validate 2025-06 -> 2025-12 now shows a much richer picture: ADDED claude 4.5 sonnet, grok 4,
+gpt-5, gpt-5-mini, gemini 3 pro; REMOVED claude 3.5/3.7 sonnet, claude 4 opus/sonnet, llama 4
+maverick, qwen3-235b, gpt-4.1, gpt-4.5, o3, o4-mini. Heavy curation, all labs.
+Then --since 20260115 with that same instrument: **added NONE, removed NONE.**
+
+So the thesis survived the better test and is now materially stronger: measured with a parser that
+demonstrably sees every lab and detects both additions and removals, the board has not changed in
+any respect between 2026-01-15 and today. The blind spot was found the same way the fee bug and the
+slug mislabel were — cross-checking the tool's output against a fact I already knew from elsewhere.
+
+**THE SIZING INSIGHT THAT MATTERS MORE THAN THE EDGE.** Four families (Astra, Gemini, Grok, Claude
+Opus) all resolve on the SAME board, so buying NO across them is not diversification — it is 4x one
+bet, and together with my 3 existing HLE legs that is a SEVEN-market cluster on a single crux.
+Cheapest pure expressions of "board stays frozen" are the lowest bar of each family: Grok >=35 NO
+0.035, Astra >=40 NO 0.060, Claude >=45 NO 0.115, Gemini >=40 NO 0.155. Note the tell — the CHEAP
+ones carry $0 24h volume while the only liquid one ($755) is the most expensive. That asymmetry is
+either a free lunch nobody has taken or, far more likely, an absence of executable book; walking
+them is an Aug-31 step, not a today claim. Three of the four ladders also carry internal
+monotonicity inversions (Gemini >=45 > >=40; Grok >=55 > >=50; Claude >=55 > >=50) on thin books.
+Net effect on the Aug-31 plan: the apparent edge got bigger AND the correct deployment got smaller,
+because concentration, not price, is the binding constraint.
