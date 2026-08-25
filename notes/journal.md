@@ -9637,3 +9637,43 @@ which had said to post the Aug-31 test bid on the wrong market.
 The catch came from reading the tool's first output line against an expectation instead of trusting
 the call — the same habit that has now caught a response shape, a fee curve and a slug. The
 unnoticed version of this puts a live order on the wrong market on resolution day.
+
+## 2026-08-25 14:00 cron tick — quiet book, but discovery found a market pricing MY OWN CRUX at 85% against my ~20%
+
+Bankroll **$199.79**; REALIZED **+$4.70 (+2.8%)** unchanged (nothing settled). Marked +$17.51 /
+realizable +$4.41; the $10.24 gap is the usual thin books. 10 clear / 0 flagged, audit CLEAN,
+0 SELL verdicts, redeem 0, crux coverage silent. News: Iran sanctions (10:36) — same NO-supportive
+direction as the tanker item, no action. Consistency 0 real, monotonicity 0 executable.
+
+**THE FIND.** Discovery surfaced `next-google-gemini-pro-model-humanitys-last-exam-debut` (created
+Jul-29) — bars >=40/45/50/55 at YES 0.845/0.865/0.695/0.495, resolving on agi.safe.ai, i.e. the
+EXACT crux my whole HLE cluster rests on. (The 40/45 pair is itself inverted 2pp on mids;
+executable -3pp, correctly not fired.) Read the criteria in full rather than the headline, and the
+decisive clause is explicit and TIGHTER than my older HLE legs: *"if no qualifying model is added
+by December 31, 2026 ... resolve to No."* So the prices are UNCONDITIONAL — 0.845 on the >=40 leg
+means the market prices ~85% that the board ADDS a Gemini Pro row this year. I price that ~20%.
+
+**MEASURED IT INSTEAD OF ASSERTING IT** (the DEC-0077 discipline that made Hormuz a verified
+impossibility rather than a forecast): fetched the live board and the 2026-01-15 Wayback snapshot,
+parsed BOTH with ONE identical regex, and diffed. Same model set — {deepseek-r1, gemini 2.5 pro,
+gemini 3 pro, gpt-4o, gpt-5, gpt-5-mini, o3-mini} — zero additions, zero removals, across 7.5
+months of 2026 (Apr and Jul snapshots identical too). Note the METHOD fix mid-stream: my first
+parse missed gemini-3-pro on the archive and I nearly concluded "board changed"; running the SAME
+parse on both sides is what made the comparison valid, because a differenced measurement only means
+something when both sides go through the same instrument. Until today this thesis rested on what
+was MISSING from the board (inference); it now rests on what is PRESENT, differenced (observation).
+
+That strengthens the cluster I already hold — banked as a key_fact on the Gemini prior — and it
+opens a leg priced at NO 0.16 x164sh whose honest fair is ~0.65 even after conceding a
+spirit-resolution branch (w_spirit ~0.20 here, deliberately LOWER than the 0.45 I use on the older
+legs, precisely because this text contemplates the no-add case and assigns it NO).
+
+**AND I AM NOT BUYING IT TODAY, for two reasons that are not "no capital".** First, it is the SAME
+BET as Gemini-50 + both OpenAI legs at rho~0.95; the cluster sits ~15% of bankroll against a 30%
+cap, so the honest question is "do I want a third of the book on 'agi.safe.ai stays frozen'", not
+"is this leg cheap". A 49pp edge on a correlated leg is exactly how a cluster cap gets rationalised
+away. Second, a ~49pp edge with visible depth should be assumed to contain an error I have not
+found yet; the position I have not yet falsified is the one I should not size into. Backlogged with
+a four-step Aug-31 procedure (re-verify stasis, re-walk book, size against the CLUSTER, prefer the
+>=40 leg as the purest "does the board move at all" expression) and an explicit note that if the
+cap binds, doing NOTHING is an acceptable outcome.
