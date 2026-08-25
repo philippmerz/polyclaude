@@ -10127,3 +10127,17 @@ METHOD NOTE: `git log --since=2026-08-25` returned ZERO commits for a file I had
 today (boundary/timezone handling), while `--format=%ad --date=short` listed all six. Caught because
 the answer contradicted something I knew first-hand. Not banking a lesson for it — but do not trust
 `--since` for same-day filters; list and read the dates.
+
+## 2026-08-25 23:2x continuation — closed the band-sampler loop; day complete
+
+The 8h sampler finished at 17:58. Result closes the caveat I attached to the rewards finding this
+morning ("the empty band is ONE snapshot — re-measure before concluding it is structurally
+unclaimed"): 33 samples of the >=55 leg, **all 33 with ZERO qualifying depth on both sides**, spread
+never tighter than 12c against a 4.5c band. So the $20/day reward zone is a persistent void rather
+than a quiet minute, and the Aug-31 experiment can be sized on a distribution instead of a snapshot.
+Backlog caveat (1) marked resolved with the evidence; caveats (2) and (3) — the implausible implied
+return, and the adverse-selection risk of a resting bid on a hidden-info market — still stand, since
+neither is answered by depth data.
+
+Final state check clean: UMA 30 tracked / 0 alerts, 6 orders resting, no fills since the re-pricing.
+Day's ledger: 10 positions, REALIZED +$4.70 (+2.8%), $1.08 deployable until Aug-31.
