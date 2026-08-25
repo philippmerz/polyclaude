@@ -9347,3 +9347,65 @@ was the right non-reaction, third round-trip on that book in a week). 9 clear / 
 audit clean; 0 SELL; redeem 0; discovery 16 standing; monotonicity 0 real. 13:01 news alert:
 Iran warns of harsh response to US sanctions — MATERIAL/NO-supportive on Hormuz (stalemate
 reinforces non-normalization; 7 days out). No trades. Netflix skip grades TOMORROW 3PM ET.
+
+## 2026-08-25 04:25 cron tick (FALLBACK/RECOVERY — operator pane dark) — daemon fix + Hormuz alert + two crux re-reads; no trades
+
+Headless fallback (parent = `daily_checkin.sh RECOVERY`), no inherited context. Peer check: raw
+`pgrep -cf 'claude -p'` = 2, but ENUMERATION showed one genuine `claude -p` (me, 1675361) + my own
+pgrep subshell — the documented self-match, not a peer. Proceeded. Ran the cold-session primer
+(README → 01_lessons.md full → status).
+
+**Bankroll $196.53** total (+15.6% marked); **REALIZED +$4.70 (+2.8%)** unchanged; realizable
+$170.99 (+3.87%), midpoints overstate by $8.06 (OpenAI-HLE + MacBook thin books). Δ vs prior tick
+(Aug-24 14:00 $195.84) = +$0.69. 10 PM positions; crypto sleeve $7.86 aUSDC idle + gas; Ostium 0.
+
+**DAEMON FIX (material):** stale-code check caught heartbeat_watch running since Aug-3 while the
+file was edited Aug-21 (commit 8f96e4b — auth/expired-login naming in the tick-eaten alert) → 4
+days INERT. Restarted via daemonctl (absolute-path, keepalive-safe); verified single genuine pid
+1675952 postdating the edit (the "count 2" was again my own pgrep subshell). Other 3 daemons OK.
+
+**NEWS (1 MATERIAL consumed):** 03:36 France24 — oil tanker struck by projectile in Strait of
+Hormuz off Oman. Watcher scored MATERIAL/NO-supportive on hormuz-traffic-normal, correct: renewed
+attack reinforces non-normalization. Its "consider profit-taking" note does NOT survive exit math
+— at mark 0.998 resolving in 6d, a taker sell gives up ~0 premium AND pays fee vs fee-free
+resolution. HELD. (Aug-24 16:13 Bessent/Iran-sanctions item = same NO-supportive direction, no
+action.) PortWatch logic unchanged: 7dMA ~3.5 vs 60 bar, physically unreachable by Aug-31.
+
+**UMA (1 alert):** OpenAI-HLE-≥50 YES +6pp (0.73→0.79), my smallest leg (15sh/$3.15). Below the
+15pp unexplained-move trigger, thin book ($1,132 vol24), no news catalyst. Verified the crux
+first-hand: fetched agi.safe.ai — board UNCHANGED (Gemini-3-Pro 38.3 top, GPT-5 25.3 best OpenAI;
+"Updated Apr-3-2025" is the dataset stamp per the known lesson, not a freeze). So the move is
+noise, not information; the whole HLE cluster's crux is intact. Held all 3 legs (lottery-sized
+resolver-behaviour bets by doctrine). Confirmation, not a catch.
+
+**HYGIENE:** position_state_audit flagged 2 stale criteria_reads (12d). Did BOTH re-reads
+first-hand and PASSED fidelity: Greenland gamma bar unchanged (YES needs BINDING sovereignty
+transfer / exclusive jurisdiction / force; access agreements + MOUs excluded — news confirms no
+completed acquisition, Trump ruled out force at Davos, Denmark rejects); MacBook gamma bar
+unchanged ("available for purchase by the general public… announcement/unveiling alone is not
+sufficient" — Dec-31 purchasability, Sep 8-10 event is the crux). Refreshed both criteria_read +
+gamma key_fact dates; audit now CLEAN (10 positions). Did NOT re-price either prior (fallback
+posture; Greenland facts fresh, MacBook facts re-verified Aug-18/23).
+
+**Positions:** exit_analysis all 10 HOLD; marginal-APY 9 clear / 0 below-hurdle (live 2.93%). The
+−43% drawdown flag is the OpenAI-≥50 leg (board verified unchanged → thin-book mark noise, big
+expected edge remains). portfolio_kelly scale-in deficits declined: Metamask legs off PLACEHOLDER
+priors (see gap below), HLE legs doctrine-capped lottery tickets, Trump-out marginal 3.5pp — and
+~$1.18 deployable PM cash makes any scale-in moot anyway.
+
+**Discovery (full funnel, nothing actionable):** primary + thin-tail + monotonicity + consistency
++ favorite-fade + sports(base) + macro. Monotonicity: 1 "REAL" (measles-cases ladder) at +1.10pp
+exec, BELOW the 2pp model-error floor → skip. Consistency: 148 midpoint flags → 0 real under live
+asks. Everything else gated (Iran/ceasefire/Beirut war-adjacent), standing-pass (Fed family), or
+skip-class (top-artist = terminal-only measurement). Redeem 0/10; decisions 0 pending; watchlist 0.
+
+**Deviation (noted):** skipped sports `--with-consensus` — 3 concurrent haiku spawns violate the
+HARD VM memory constraint (1.9GB, 3 OOM crashes; MemAvailable was 617MB) and there's no cash to
+act on a delta anyway. Ran base sports scan instead.
+
+**Hygiene follow-up for interactive session:** the 3 Metamask FDV legs + Hormuz carry NO priors in
+portfolio_kelly_priors.json (exit_analysis/kelly print placeholders for them). Adding honest priors
+needs FDV-distribution + launch-timing research I won't rush as fallback — flagging, not faking.
+
+Next catalysts: Netflix skip grades today 3PM ET (19:00 UTC, after this tick); Hormuz resolves
+Aug-31 (redemption runbook staged, rests don't block redemption); MacBook Apple event Sep 8-10.
