@@ -78,6 +78,22 @@ the gap); *verify against a known truth* (absent output and failed output look i
 
 ## Priors & calibration
 
+- **"Is this source stale?" is MEASURABLE by archive-diff — and the measurement is worthless until
+  you validate the instrument.** 2026-08-25: three HLE legs rested on "agi.safe.ai is frozen", a
+  claim carried for weeks as an INFERENCE from what was missing from the page, while a newly-listed
+  market priced the same variable ~65pp against me. Measuring it is cheap: fetch the live page and
+  a Wayback snapshot, parse BOTH with ONE instrument, diff. The subtle half is that "no change"
+  has TWO causes — the source really is frozen, or the parser is blind (static list, JS bundle,
+  cached shell) — and they are indistinguishable from the output, with the blind case conveniently
+  confirming whatever you already believe. My first attempt WAS partly blind (it missed
+  gemini-3-pro on one side) and I nearly read that as "the board changed". The fix is a control:
+  run the same parser across a window where change is KNOWN to have happened. Doing so upgraded a
+  vibe into a located change-point — additions in 2025-09 and 2025-12 plus five removals, then
+  nothing across 2026 — which is a far stronger claim than "it looks stale". Shipped as
+  `scripts/source_freeze_check.py --validate` so the control cannot be skipped by a future session
+  in a hurry. Same family as the empty-list bug: absent output and broken output look identical
+  until you check against a known truth.
+
 - **When a market is CONDITIONAL, look for the sibling that prices the condition — do not invent
   the term someone else quotes.** 2026-08-25, pricing three Metamask FDV legs: each resolves YES
   only if MetaMask launches a token by Dec-31 AND the FDV clears a bar, so

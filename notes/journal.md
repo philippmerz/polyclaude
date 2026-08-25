@@ -9708,3 +9708,25 @@ THE RESIDUAL RISK I still cannot measure is w_spirit — whether a UMA resolver 
 board or the model's capability when the board fails. That term, not the board, is now the whole
 uncertainty, and it is judgment rather than observation. Recorded so the Aug-31 sizing is honest
 about which half of the thesis is measured and which is a guess.
+
+## 2026-08-25 14:5x meta-reflection — banked the archive-diff TECHNIQUE (script + lesson); scanner stays gated
+
+(2) The hour's real output was not the trade candidate, it was a reusable METHOD, and it was
+sitting in shell history rather than in the repo. Shipped `scripts/source_freeze_check.py`: diff a
+named resolution source live-vs-archive through ONE parser, with a `--validate` control that runs
+the same parser across a window where change is KNOWN to have occurred. The control is the point —
+"no change" has two causes (source frozen / parser blind) which are indistinguishable from the
+output, and the blind case flatters whatever you already believe. My first hand-rolled attempt was
+partly blind and I nearly read it backwards. Verified end-to-end: --validate reports the 2025
+additions AND five removals; --since 20260115 reports FROZEN. I need this exact check again on
+Aug-31 before the cluster decision, so it is now one command instead of a re-derived regex.
+
+(1) Cleanup: banked the same finding as a lesson in "Priors & calibration" (the technique plus the
+instrument-validation trap), and UPDATED the long-gated named-source-lag backlog item to separate
+its two halves — the SCANNER stays gated (nothing has graded; building discovery for an ungraded
+edge is the scale-before-it-works error), while the MEASUREMENT is now built, validated and
+promoted to standard practice before pricing any source-named market. That split is the honest
+resolution of an item that had been sitting untouched for two weeks because it was framed as
+all-or-nothing.
+
+Nothing forced beyond that. Netflix grades in ~4h; Hormuz in 6d; NVDA tomorrow.
