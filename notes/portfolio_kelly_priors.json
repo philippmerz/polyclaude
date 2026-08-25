@@ -242,7 +242,7 @@
     "source_date": "2026-08-14"
    },
    {
-    "claim": "BOARD STASIS MEASURED, not assumed (2026-08-25): under ONE identical parse, the live agi.safe.ai board and the 2026-01-15 Wayback snapshot contain the SAME model set {deepseek-r1, gemini 2.5 pro, gemini 3 pro, gpt-4o, gpt-5, gpt-5-mini, o3-mini} \u2014 zero additions AND zero removals across 7.5 months of 2026 (Apr-15 and Jul-15 snapshots identical too). Previously this thesis rested on 'no row since ~Nov-2025' inferred from what was MISSING; it now rests on a differenced observation of what is PRESENT. Strengthens the whole HLE cluster's crux.",
+    "claim": "BOARD STASIS MEASURED, not assumed (2026-08-25): under ONE identical parse, the live agi.safe.ai board and the 2026-01-15 Wayback snapshot contain the SAME model set {deepseek-r1, gemini 2.5 pro, gemini 3 pro, gpt-4o, gpt-5, gpt-5-mini, o3-mini} \u2014 zero additions AND zero removals across 7.5 months of 2026 (Apr-15 and Jul-15 snapshots identical too). Previously this thesis rested on 'no row since ~Nov-2025' inferred from what was MISSING; it now rests on a differenced observation of what is PRESENT. Strengthens the whole HLE cluster's crux. INSTRUMENT VALIDATED same day: the identical parse across 2025-06/09/12 snapshots DOES detect real change \u2014 gpt-5 appears Sep-2025, gemini-3-pro + gpt-5-mini appear Dec-2025, and five older models were REMOVED then (active curation). So the 2026 stasis is a located CHANGE-POINT (~Dec-2025, ~8.5 months and counting), not a limitation of the measurement. Remaining uncertainty is w_spirit (resolver behaviour), not the board.",
     "source": "https://agi.safe.ai/ vs http://web.archive.org/web/20260115/https://agi.safe.ai/",
     "source_date": "2026-08-25",
     "checked": "2026-08-25"

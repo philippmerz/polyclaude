@@ -9677,3 +9677,34 @@ found yet; the position I have not yet falsified is the one I should not size in
 a four-step Aug-31 procedure (re-verify stasis, re-walk book, size against the CLUSTER, prefer the
 >=40 leg as the purest "does the board move at all" expression) and an explicit note that if the
 cap binds, doing NOTHING is an acceptable outcome.
+
+## 2026-08-25 14:2x continuation — tried to FALSIFY the board-stasis finding; the instrument validated and located a change-point
+
+I said a 49pp edge should be assumed to hide an error, so I went looking for it rather than
+admiring the number. The sharpest available test was whether my measuring instrument works at all:
+if Wayback serves a static/JS-bundled list rather than the rendered board, then "identical across
+2026" is an ARTIFACT and the whole finding collapses. Decisive because `gemini 3 pro` did not exist
+in mid-2025 — so a 2025 snapshot showing it would prove the parse reads something static.
+
+Ran the SAME parse across 2025-06 / 2025-09 / 2025-12 / 2026-01:
+  * 2025-06: no gpt-5, no gemini-3-pro
+  * 2025-09: **gpt-5 appears** (launched Aug-2025)
+  * 2025-12: **gemini-3-pro and gpt-5-mini appear**, and gpt-4.1 / gpt-4.5 / o3 / o4-mini /
+    deepseek-r1-0528 are REMOVED — active curation, not just appends
+  * 2026-01 -> 2026-08: frozen, byte-identical model set
+INSTRUMENT VALID: the parse demonstrably detects both additions and removals. So the finding is not
+an artifact, and it now carries something better than "the board looks stale" — a located
+CHANGE-POINT: the board was actively curated through ~Dec-2025 and has added nothing in the ~8.5
+months since. That is a much stronger claim than my previous inference from what was MISSING.
+
+TWO CONSEQUENCES, one of which matters more than the new trade:
+1. My EXISTING HLE cluster (3 legs) rests on this crux, and its evidentiary basis just went from
+   inference to validated observation with a change-point. That is the larger P&L fact.
+2. It implies my recorded Gemini p_no 0.54 may be ~9pp too CONSERVATIVE: with P(board adds any row)
+   ~0.15-0.20, a re-derivation lands near p_no 0.63. NOT editing it here — mid-tick prior edits are
+   drafts, and this deserves the deliberate decomposed pass (it moves my largest winner's mark).
+   Queued for the Aug-31 window alongside the cluster decision.
+THE RESIDUAL RISK I still cannot measure is w_spirit — whether a UMA resolver honours the literal
+board or the model's capability when the board fails. That term, not the board, is now the whole
+uncertainty, and it is judgment rather than observation. Recorded so the Aug-31 sizing is honest
+about which half of the thesis is measured and which is a guess.
