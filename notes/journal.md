@@ -10015,3 +10015,30 @@ the honest reason to hold, and it is a stronger reason than "my number is measur
 STILL NOT ADDING (capital is $1.08 and cluster concentration binds first), but the Aug-31 decision
 now has a genuinely better instrument: price the debut ladder to read the market's BOARD term, and
 compare it to the measured freeze — rather than arguing about the blended number.
+
+## 2026-08-25 22:0x periodic — Netflix skip GRADED: market right, skip forwent ~7.3%/4d; family verdict unchanged
+
+Graded from the pre-verified instrument (official TSV, week 2026-08-23 landed on schedule):
+**"Don't Say Good Luck" finished #1 US Films**, so the Aug-21 skip at market 0.9315 gave up roughly
+7.3% in four days. Ledger row 51 marked WRONG ON OUTCOME / DEFENSIBLE ON PROCESS.
+
+The instinct to record is "should have bought"; the honest reading is close to the opposite. My skip
+rested on a specific claim — that other traders could read the in-week viewing variable (public
+daily trackers) while I could not (Cloudflare-403 from this VM) — and the market pricing the winner
+correctly at 0.93 is EVIDENCE FOR that claim, not against it. A crowd that is right because it holds
+data I lack is exactly the crowd I should not trade against. At 0.9315 the position needed true
+p>~0.95 to clear the gate, and the whole problem is that I had no instrument to form that number.
+One correct favourite establishes neither edge nor its absence.
+
+The more valuable output is the base-rate datum: the NEW RELEASE dethroned a two-week incumbent
+(The Last House fell #1 -> #5), so the 49.8% new-entrant path measured over 268 weeks fired exactly
+as the history says it should. That is one clean observation consistent with the base rate, and it
+reinforces the structural read that incumbency is weak in this family.
+
+FAMILY VERDICT UNCHANGED — standing pass with the one named exception (thin release slate + an
+underpriced incumbent), because this grade handed me no instrument I did not already have. Re-test
+only if a daily source becomes fetchable. Recording a loss-of-opportunity without letting it move a
+process I still believe is correct is the point of keeping the ledger at all.
+
+Sweep otherwise clean: daemons 4/4 single-PID, mem 824MB, UMA 30 tracked / 0 alerts, 6 orders
+resting. Ledger N=51.
