@@ -9783,3 +9783,27 @@ to fail is not known to work — the mutation-testing habit applied to a CLI fla
 
 (2) No new market findings; the last hour was spent hardening the measurement behind an existing
 position rather than hunting. Nothing forced. Netflix grades in ~3h.
+
+## 2026-08-25 16:1x continuation — checked the Hormuz FEED (not just its value) 6 days out; found a wrong guard and a transient-400 trap
+
+Hormuz settles in 6 days on a named data feed, and I had measured the feed's VALUE repeatedly while
+never checking its PUBLICATION behaviour. Did that, and two things came back.
+
+1. **A guard I had written down was simply wrong.** My prior note claimed "the PortWatch feed LAGS
+   ~6 days, so data after ~Aug-25 cannot even publish before resolution — a physically impossible
+   sprint would also be an unpublishable one". The actual lag today is ~2 DAYS (newest print Aug-23,
+   pulled Aug-25). So that second, independent guard is much weaker than recorded: data through
+   ~Aug-29 WILL publish before resolution. It changes nothing about the position — the bar needs 420
+   transit calls in a 7-day window and the last week delivered 35 (7dMA 5.00 vs bar 60) — but a
+   load-bearing-sounding claim in a prior note was false, and I would have quoted it. Corrected in
+   place, with the reason stated: the fade rests on the MEASUREMENT, not on the lag.
+
+2. **A resolution-day trap.** The ArcGIS endpoint 400s TRANSIENTLY ("Invalid query parameters") on
+   parameter sets that succeed seconds later, and it REQUIRES orderByFields. My first pull today
+   returned an empty feature list and the script died on a ZeroDivisionError — which is the LUCKY
+   outcome. The unlucky version is code that reads the empty list as "no data published" and
+   concludes something about the world from a failed query. That is the empty-list lesson wearing a
+   third costume (after run_pair_arb and wallet_status). Recorded in the prior: any resolution-day
+   check retries 4x and must distinguish empty-result from error-result.
+
+Position unchanged: NO 0.998, p_no 0.998, hold to fee-free resolution.
