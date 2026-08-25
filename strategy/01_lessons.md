@@ -92,6 +92,20 @@ the gap); *verify against a known truth* (absent output and failed output look i
   fact; and prefer notes that state the MECHANISM ("the fade rests on the measurement") over ones
   that state a snapshot, because mechanisms do not go stale on a clock.
 
+- **Test a guard with a case you KNOW it should fail — its reassuring output is a claim, not
+  evidence.** 2026-08-25: `crux_coverage_check` printed "All 10 positions have at least one matching
+  keyword" every tick, and I had been reading that silence as "nothing is unwatched". I tested it
+  against a known negative instead — three Metamask positions added on Aug-22, against a
+  news_watcher config containing ZERO metamask keywords (grep count: 0). The guard called all three
+  COVERED, by the keywords `astra launch` / `gpt-6 launch` matching the word LAUNCH inside the title
+  "...one day after launch". ~$45 of book carried false assurance, and the bug had been there since
+  the check was written. The technique that found it generalises: pick something you can prove the
+  guard SHOULD flag, and see whether it does — a guard verified only by its own green output is
+  untested. Note also the first fix OVERSHOT (scoring words "generic" by frequency across keywords
+  false-flagged Trump-out, because 'trump' is frequent precisely BECAUSE Trump matters — frequency
+  conflates common with uninformative), so the correction needs its own known-good cases: after
+  fixing, every position that SHOULD be covered must still be.
+
 - **A control proving your instrument sees SOMETHING does not prove it sees EVERYTHING — and a
   partially blind instrument still returns the answer you wanted.** 2026-08-25, one hour after
   banking the lesson directly below this one: my `--validate` control PASSED (it detected gpt-5 and

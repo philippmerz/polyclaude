@@ -56,6 +56,18 @@ STOP = {
     "yes", "score", "highest", "achieved", "released", "release", "2026",
     "2027", "january", "december", "president", "us", "new", "first", "more",
     "most", "least", "least", "up", "out", "with", "from", "as",
+    # 2026-08-25: INCIDENTAL words — they appear in a market TITLE as structure
+    # or timing, never as its subject, so a shared one is not evidence of
+    # coverage. 'launch' is why three Metamask positions ("...one day after
+    # LAUNCH") were reported COVERED by 'astra launch' / 'gpt-6 launch' while
+    # the config held zero metamask keywords — ~$45 of false assurance.
+    # NOTE what was tried and REJECTED first: scoring a word "generic" by how
+    # many keywords contain it. That false-flagged Trump-out, because 'trump' is
+    # frequent across my keywords precisely BECAUSE Trump matters to the book —
+    # frequency conflates "common" with "uninformative". Entity words must stay
+    # salient; only structural ones belong here.
+    "launch", "launches", "launched", "debut", "debuts", "day", "days",
+    "event", "above", "below", "higher", "lower", "one",
 }
 
 
@@ -99,8 +111,10 @@ def main() -> int:
         # A keyword covers this market if it appears in the question, or if any
         # of its own salient words does. Substring both ways: 'macbook' covers
         # "...touchscreen MacBook..." and 'touchscreen macbook' covers it too.
-        hits = [k for k in kws
-                if k in q or (_salient(k) & sal)]
+        # COVERAGE MATCH. A keyword covers this market if its full phrase is in
+        # the question, or if they share a salient word. The salience STOP list
+        # is what makes that sound — see below for why it grew on 2026-08-25.
+        hits = [k for k in kws if k in q or (_salient(k) & sal)]
         val = float(p.get("currentValue", 0) or 0)
         if not hits:
             uncovered.append((val, p.get("title"), p.get("slug")))

@@ -9925,3 +9925,35 @@ and skips the check rather than emitting confident nonsense — silence from a b
 read as clean.
 
 Disarmed gpt6-no-judgment (8 -> 7 triggers). Audit now CLEAN for the right reason.
+
+## 2026-08-25 17:5x meta-reflection — the guard whose silence I trust most was broken; ~$45 of false assurance
+
+(1) Today produced six instances of "something that looks alive but tests a different predicate than
+it claims", so I picked the guard whose SILENCE is most load-bearing — crux_coverage_check, whose
+"All positions have a matching keyword" line I read every tick as "nothing is unwatched" — and
+tested it against a KNOWN NEGATIVE: the three Metamask positions opened Aug-22, against a config
+with zero metamask keywords (grep: 0). It called all three COVERED. The match was the word LAUNCH,
+shared between the keywords 'astra launch' / 'gpt-6 launch' and the title "...one day after launch".
+~$45.82 of book reported as monitored while nothing would have alerted on a MetaMask token launch.
+The bug dated from the check's creation.
+
+FIRST FIX OVERSHOT, which is its own lesson. I scored a word "generic" by how many keywords contain
+it — and that false-flagged Trump-out ($26.49), because 'trump' is frequent across my keywords
+precisely BECAUSE Trump matters to the book. Frequency conflates COMMON with UNINFORMATIVE. Reverted
+it and used the mechanism already present: extended the salience STOP list with INCIDENTAL words
+(launch/debut/day/event/above/below/one) — words that appear in a title as structure or timing,
+never as its subject. Entity words stay salient. Verified BOTH directions after the change: the
+three Metamask legs flag UNWATCHED, and every position that should be covered still is
+(Hormuz, Greenland, Trump-out, MacBook, all three HLE legs).
+
+THEN CLOSED THE ACTUAL GAP rather than just the reporting of it: added five tier2 keywords
+(metamask token / metamask airdrop / mask token / consensys token / metamask tge), re-ran to a clean
+10/10, and — because "the guard is now fixed" is itself a claim — verified the daemon re-reads its
+config inside the poll loop (news_watcher.py:623-625), so the coverage is LIVE without a restart
+rather than pending a daemon I would have forgotten to bounce.
+
+Banked the technique: a guard verified only by its own green output is untested; feed it a case you
+can prove it should flag. And after correcting a guard, re-verify the known-GOOD cases too, because
+the natural failure of a fix is over-correction.
+
+(2) No new market findings; capital unchanged at $1.08 with Netflix grading in ~1h.
