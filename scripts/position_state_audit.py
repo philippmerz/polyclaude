@@ -70,6 +70,21 @@ def main() -> int:
         elif abs(snapmap[s] - live[s]) > 0.5:
             issues.append(f"SNAPSHOT size drift: {s[:44]} {snapmap[s]:g} vs live {live[s]:g}")
 
+    # NOTE THE SHAPE: this file is a DICT {_purpose, _refreshed, positions:[...]},
+    # not a list. The first version of this line iterated it directly, walked the
+    # KEY STRINGS, filtered them all out and produced an EMPTY set — which made
+    # every price trigger look orphaned. It was caught only because one of the two
+    # flagged triggers (hormuz) was obviously live; had both been genuinely stale
+    # the broken check would have printed the right answer by luck. Empty-collection
+    # bug, fifth instance in this repo. Assert non-empty rather than trusting it.
+    _snap = _load("position_condition_ids.json", {})
+    _rows = _snap.get("positions", []) if isinstance(_snap, dict) else _snap
+    live_assets = {str(p.get("asset")) for p in _rows
+                   if isinstance(p, dict) and p.get("asset")}
+    if not live_assets:
+        issues.append("AUDIT DEGRADED — no live assets parsed from position_condition_ids.json; "
+                      "orphan-trigger check SKIPPED (do not read its silence as clean)")
+
     # 2. armed triggers referencing closed positions (the ARB failure class)
     for t in _load("opportunity_triggers.json", []):
         if not t.get("actionable"):
@@ -86,6 +101,21 @@ def main() -> int:
         if re.search(r"\b(add|adds|re-?entry|re-?enter)\b", key + " " + note):
             issues.append(f"TRIGGER armed+actionable — confirm still wanted: {key} "
                           f"({t.get('kind')} {t.get('op')} {t.get('level')})")
+            continue
+        # ORPHANED PRICE TRIGGER (2026-08-25). The check above matches triggers
+        # whose TEXT says add/re-entry — which is NOT this file's stated
+        # motivation ("a price trigger left armed after its position was sold").
+        # Found the gap the honest way: gpt6-no-judgment sat armed and actionable
+        # on a token whose position was exited 2026-08-18, and every audit since
+        # printed CLEAN. A price trigger watches ONE token, so it is orphaned the
+        # moment that token leaves the book; watch-class kinds (new_listing,
+        # pair_arb, coingecko) are deliberately position-free and exempt.
+        if live_assets and t.get("kind") in ("clob_bid", "clob_ask", "clob_no_ask"):
+            tok = str(t.get("id") or "")
+            if tok and tok not in live_assets:
+                issues.append(f"TRIGGER ORPHANED — armed on a token with no live position "
+                              f"(exited?): {key} ({t.get('kind')} {t.get('op')} "
+                              f"{t.get('level')}) — disarm or document why it stays")
 
     # 3. orphan priors (position gone — keep only if a deliberate re-entry candidate)
     for k, v in _load("portfolio_kelly_priors.json", {}).items():

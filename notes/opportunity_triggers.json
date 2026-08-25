@@ -18,15 +18,6 @@
   "actionable": false
  },
  {
-  "key": "gpt6-no-judgment",
-  "kind": "clob_bid",
-  "id": "110227805407315115408276908830556497292857234032945501079570053955010575568037",
-  "op": "<=",
-  "level": 0.35,
-  "actionable": true,
-  "note": "RESET 0.65->0.35 post-adjudication 2026-08-06 15:53: 0.65 fired on the sibling-confirmed Astra repricing (held on exit math, prior tracks market). 0.35 = essentially-resolving-YES alert. Availability-announcement = the real exit condition, checked every tick."
- },
- {
   "key": "gamescom-announce",
   "kind": "new_listing",
   "query": "gamescom",

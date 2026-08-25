@@ -9894,3 +9894,34 @@ The Hormuz feed lag, the "$20/day pool is the >=50 leg", the "instrument is vali
 rests are still premiums". Every one was caught by spending thirty seconds verifying a sentence I
 had already written. The habit that works is not being more careful when writing; it is treating my
 own recent prose as an untrusted input.
+
+## 2026-08-25 17:3x continuation — propagation check found a stale armed trigger AND a check that never implemented its own purpose
+
+Following the propagation lesson (a measurement moves every artifact derived from it), I audited the
+armed triggers. Found `gpt6-no-judgment` still armed and ACTIONABLE at clob_bid <= 0.35 on a token
+whose position I exited on 2026-08-18 for +45.7% realized. Seven days of audits printed CLEAN over
+it. That is the documented ARB-trigger failure class — a stale trigger fires alerts and burns tick
+dispatches on a position that no longer exists.
+
+WHY THE AUDIT MISSED IT, which is the more useful finding: position_state_audit's docstring states
+its motivation as "a price trigger left armed after its position was sold", but the implementation
+only flags triggers whose KEY OR NOTE TEXT matches `add|re-entry`. It was checking a different
+thing than it claimed to check, and the gap was invisible because the check does fire regularly
+(on re-entry triggers), so it LOOKS alive. A check that runs, prints, and tests the wrong predicate
+is worse than a missing one.
+
+Implemented the real reconciliation: for position-tied kinds (clob_bid/clob_ask/clob_no_ask), flag
+any armed trigger whose token is not among live position assets; watch-class kinds (new_listing,
+pair_arb, coingecko) are deliberately position-free and exempt.
+
+AND THE FIX WAS BROKEN ON FIRST RUN — caught by a known truth. It flagged BOTH gpt6 and
+hormuz-no-erosion, and Hormuz is unambiguously live. Root cause: position_condition_ids.json is a
+DICT {_purpose, _refreshed, positions:[...]}, not a list, so my comprehension walked the KEY STRINGS,
+filtered them all out, and built an EMPTY live-asset set — under which every price trigger looks
+orphaned. Fifth instance of the empty-collection bug in this repo, and the first where the broken
+version would have printed the CORRECT answer had both flagged triggers happened to be stale. Fixed
+the shape parse and added a DEGRADED-MODE guard: if no live assets parse, the audit says so loudly
+and skips the check rather than emitting confident nonsense — silence from a broken check must not
+read as clean.
+
+Disarmed gpt6-no-judgment (8 -> 7 triggers). Audit now CLEAN for the right reason.
