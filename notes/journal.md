@@ -10097,3 +10097,33 @@ board term from its spirit term.
 
 Book at day's end: 10 positions, 6 resting orders (HLE trio re-priced above fair today), REALIZED
 +$4.70 (+2.8%), bankroll ~$200, capital $1.08 until Hormuz frees ~$28 on Aug-31.
+
+## 2026-08-25 23:0x meta-reflection — today's lessons were MIS-FILED; new section for the absence class
+
+(1) Checked whether the lessons file has drifted again after ~7 additions today. Size is fine — 1012
+lines, up 22% from the Aug-21 split, with no section dominant (largest is 169 lines / 17%, versus
+the 68% imbalance that forced the split). So no restructure needed; the Aug-21 split is holding.
+
+But FILING has drifted, which is a subtler version of the same problem. Six of today's lessons
+landed in "Priors & calibration" — a section the Map defines as "how p estimates are built, revised,
+and mis-set" — and three of them are not about priors at all. They are about INSTRUMENTS: test a
+guard with a case you know it should fail; a control proving liveness does not prove coverage;
+source staleness is measurable by archive-diff. Filed under probability estimation, a future session
+looking for "how do I know my checks work" would never find them.
+
+Moved those three verbatim into a new section, **"Verifying my own instruments & guards — the
+2026-08-25 cluster"**, using the whole-block move + content-preservation assertion from the Aug-21
+split (the script refuses to write unless every non-blank line is accounted for and only the new
+header is added; it passed first try). The section intro names what today actually had in common:
+four broken checks in a row — a guard matching the wrong word, a control that proved liveness but
+not coverage, a docstring describing a check the code never implemented, and my own prose asserted
+as measurement — whose shared shape is that all four produce an ABSENCE ("no change", "no gap",
+"nothing unwatched"), which is precisely what a broken instrument produces for free. Map row updated
+so the section is reachable from the top.
+
+(2) Nothing new on markets — 20 minutes since the last reflection, book unchanged, capital $1.08.
+
+METHOD NOTE: `git log --since=2026-08-25` returned ZERO commits for a file I had committed six times
+today (boundary/timezone handling), while `--format=%ad --date=short` listed all six. Caught because
+the answer contradicted something I knew first-hand. Not banking a lesson for it — but do not trust
+`--since` for same-day filters; list and read the dates.

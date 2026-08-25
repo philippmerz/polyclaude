@@ -15,7 +15,7 @@
 | Priors & calibration | how p estimates are built, revised, and mis-set |
 | Edges that survived | the live edge sources and their fine print |
 | Sizing & risk | caps, Kelly, cluster correlation, liquidity |
-| **Ops** (largest) | the failure classes that actually happened, in seven sub-sections: **Daemons, resources & liveness** (pkill, VM=1.9GB, fallbacks, dark panes) · **Write paths, drills & outward side effects** (dry-run traps, operator-facing alarms) · **Parsing, venue data & verifying my own output** (empty-list bugs, de-indexing, detector validation) · **Prior & fact hygiene (2026-08-10→12)** on stale/inverted priors and source-diffing · **Self-flattering numbers & display honesty (2026-08-13→20)** on midpoints, self-marking and un-applied corrections · **Stale constants & the test suite (2026-08-14→22, incl. the fee-formula ground-truth correction)** · **Verified mechanics & regime judgment (2026-08-16→20)** (regime-bounded data, measurable-interim sources, thesis-worked exits) |
+| **Ops** (largest) | the failure classes that actually happened, in seven sub-sections: **Daemons, resources & liveness** (pkill, VM=1.9GB, fallbacks, dark panes) · **Write paths, drills & outward side effects** (dry-run traps, operator-facing alarms) · **Parsing, venue data & verifying my own output** (empty-list bugs, de-indexing, detector validation) · **Verifying my own instruments & guards (2026-08-25)** — the ABSENCE class: a guard matching the wrong word, a control proving liveness but not coverage, a docstring describing a check the code never implemented · **Prior & fact hygiene (2026-08-10→12)** on stale/inverted priors and source-diffing · **Self-flattering numbers & display honesty (2026-08-13→20)** on midpoints, self-marking and un-applied corrections · **Stale constants & the test suite (2026-08-14→22, incl. the fee-formula ground-truth correction)** · **Verified mechanics & regime judgment (2026-08-16→20)** (regime-bounded data, measurable-interim sources, thesis-worked exits) |
 | Process & operator covenant | Telegram protocol, weekly P&L, reporting discipline |
 
 Recurring meta-shapes, if you read nothing else: *fix the CLASS not the instance* (a break
@@ -106,52 +106,6 @@ the gap); *verify against a known truth* (absent output and failed output look i
   EVALUATED — the genuinely expensive historical leak was side-SELECTION (skipping DC/Lucasfilm NO
   correctly while never gating YES at 0.59, which won +69% each), a different failure that the
   FLIP-THE-KILL check now mechanises.
-
-- **Test a guard with a case you KNOW it should fail — its reassuring output is a claim, not
-  evidence.** 2026-08-25: `crux_coverage_check` printed "All 10 positions have at least one matching
-  keyword" every tick, and I had been reading that silence as "nothing is unwatched". I tested it
-  against a known negative instead — three Metamask positions added on Aug-22, against a
-  news_watcher config containing ZERO metamask keywords (grep count: 0). The guard called all three
-  COVERED, by the keywords `astra launch` / `gpt-6 launch` matching the word LAUNCH inside the title
-  "...one day after launch". ~$45 of book carried false assurance, and the bug had been there since
-  the check was written. The technique that found it generalises: pick something you can prove the
-  guard SHOULD flag, and see whether it does — a guard verified only by its own green output is
-  untested. Note also the first fix OVERSHOT (scoring words "generic" by frequency across keywords
-  false-flagged Trump-out, because 'trump' is frequent precisely BECAUSE Trump matters — frequency
-  conflates common with uninformative), so the correction needs its own known-good cases: after
-  fixing, every position that SHOULD be covered must still be.
-
-- **A control proving your instrument sees SOMETHING does not prove it sees EVERYTHING — and a
-  partially blind instrument still returns the answer you wanted.** 2026-08-25, one hour after
-  banking the lesson directly below this one: my `--validate` control PASSED (it detected gpt-5 and
-  gemini-3-pro appearing across 2025), and I treated that as "instrument valid". It was blind
-  anyway — the pattern required a hyphen, so `claude 4.5 sonnet` and `grok 4` were invisible, and a
-  Claude row added during 2026 could not have been seen. The FROZEN verdict my whole HLE cluster
-  rests on would have been right by luck. What caught it was not the control but an INDEPENDENT
-  INVENTORY: my own 2026-08-10 note said the board carried Grok 4 and Claude 4.5, which contradicted
-  the parse. So the control to run is not only "can it detect change" (liveness) but "does it find
-  every item I already know is there" (coverage) — two different failures, and only the second one
-  bites when the verdict is an ABSENCE. Mechanised as `--expect claude,grok`, which refuses to print
-  a verdict when a known item is missing, and verified with BOTH a negative control (deliberately
-  blind pattern -> PARSER INCOMPLETE) and a positive one. Generalises past scrapers: whenever a
-  conclusion rests on "X is not there", the instrument needs a coverage test, because absence is
-  exactly what a broken instrument produces for free.
-
-- **"Is this source stale?" is MEASURABLE by archive-diff — and the measurement is worthless until
-  you validate the instrument.** 2026-08-25: three HLE legs rested on "agi.safe.ai is frozen", a
-  claim carried for weeks as an INFERENCE from what was missing from the page, while a newly-listed
-  market priced the same variable ~65pp against me. Measuring it is cheap: fetch the live page and
-  a Wayback snapshot, parse BOTH with ONE instrument, diff. The subtle half is that "no change"
-  has TWO causes — the source really is frozen, or the parser is blind (static list, JS bundle,
-  cached shell) — and they are indistinguishable from the output, with the blind case conveniently
-  confirming whatever you already believe. My first attempt WAS partly blind (it missed
-  gemini-3-pro on one side) and I nearly read that as "the board changed". The fix is a control:
-  run the same parser across a window where change is KNOWN to have happened. Doing so upgraded a
-  vibe into a located change-point — additions in 2025-09 and 2025-12 plus five removals, then
-  nothing across 2026 — which is a far stronger claim than "it looks stale". Shipped as
-  `scripts/source_freeze_check.py --validate` so the control cannot be skipped by a future session
-  in a hurry. Same family as the empty-list bug: absent output and broken output look identical
-  until you check against a known truth.
 
 - **When a market is CONDITIONAL, look for the sibling that prices the condition — do not invent
   the term someone else quotes.** 2026-08-25, pricing three Metamask FDV legs: each resolves YES
@@ -516,6 +470,58 @@ the gap); *verify against a known truth* (absent output and failed output look i
   the form ">= k" over rising k obeys P(X>=k2) <= P(X>=k1) for k1<k2. Watch for the two
   traps: an EXACT-value bucket ("wins exactly 3 seats") is a partition with NO monotone
   constraint, and a magnitude suffix must be APPLIED, not skipped.
+
+### Verifying my own instruments & guards — the 2026-08-25 cluster
+*(a day that found four broken checks in a row: a guard matching the wrong word, a control that
+proved liveness but not coverage, a docstring describing a check the code never implemented, and
+my own prose asserted as measurement. The common shape is an ABSENCE — "no change", "no gap",
+"nothing unwatched" — which is exactly what a broken instrument produces for free.)*
+
+- **Test a guard with a case you KNOW it should fail — its reassuring output is a claim, not
+  evidence.** 2026-08-25: `crux_coverage_check` printed "All 10 positions have at least one matching
+  keyword" every tick, and I had been reading that silence as "nothing is unwatched". I tested it
+  against a known negative instead — three Metamask positions added on Aug-22, against a
+  news_watcher config containing ZERO metamask keywords (grep count: 0). The guard called all three
+  COVERED, by the keywords `astra launch` / `gpt-6 launch` matching the word LAUNCH inside the title
+  "...one day after launch". ~$45 of book carried false assurance, and the bug had been there since
+  the check was written. The technique that found it generalises: pick something you can prove the
+  guard SHOULD flag, and see whether it does — a guard verified only by its own green output is
+  untested. Note also the first fix OVERSHOT (scoring words "generic" by frequency across keywords
+  false-flagged Trump-out, because 'trump' is frequent precisely BECAUSE Trump matters — frequency
+  conflates common with uninformative), so the correction needs its own known-good cases: after
+  fixing, every position that SHOULD be covered must still be.
+
+- **A control proving your instrument sees SOMETHING does not prove it sees EVERYTHING — and a
+  partially blind instrument still returns the answer you wanted.** 2026-08-25, one hour after
+  banking the lesson directly below this one: my `--validate` control PASSED (it detected gpt-5 and
+  gemini-3-pro appearing across 2025), and I treated that as "instrument valid". It was blind
+  anyway — the pattern required a hyphen, so `claude 4.5 sonnet` and `grok 4` were invisible, and a
+  Claude row added during 2026 could not have been seen. The FROZEN verdict my whole HLE cluster
+  rests on would have been right by luck. What caught it was not the control but an INDEPENDENT
+  INVENTORY: my own 2026-08-10 note said the board carried Grok 4 and Claude 4.5, which contradicted
+  the parse. So the control to run is not only "can it detect change" (liveness) but "does it find
+  every item I already know is there" (coverage) — two different failures, and only the second one
+  bites when the verdict is an ABSENCE. Mechanised as `--expect claude,grok`, which refuses to print
+  a verdict when a known item is missing, and verified with BOTH a negative control (deliberately
+  blind pattern -> PARSER INCOMPLETE) and a positive one. Generalises past scrapers: whenever a
+  conclusion rests on "X is not there", the instrument needs a coverage test, because absence is
+  exactly what a broken instrument produces for free.
+
+- **"Is this source stale?" is MEASURABLE by archive-diff — and the measurement is worthless until
+  you validate the instrument.** 2026-08-25: three HLE legs rested on "agi.safe.ai is frozen", a
+  claim carried for weeks as an INFERENCE from what was missing from the page, while a newly-listed
+  market priced the same variable ~65pp against me. Measuring it is cheap: fetch the live page and
+  a Wayback snapshot, parse BOTH with ONE instrument, diff. The subtle half is that "no change"
+  has TWO causes — the source really is frozen, or the parser is blind (static list, JS bundle,
+  cached shell) — and they are indistinguishable from the output, with the blind case conveniently
+  confirming whatever you already believe. My first attempt WAS partly blind (it missed
+  gemini-3-pro on one side) and I nearly read that as "the board changed". The fix is a control:
+  run the same parser across a window where change is KNOWN to have happened. Doing so upgraded a
+  vibe into a located change-point — additions in 2025-09 and 2025-12 plus five removals, then
+  nothing across 2026 — which is a far stronger claim than "it looks stale". Shipped as
+  `scripts/source_freeze_check.py --validate` so the control cannot be skipped by a future session
+  in a hurry. Same family as the empty-list bug: absent output and broken output look identical
+  until you check against a known truth.
 
 ### Prior & fact hygiene — the 2026-08-10→12 cluster
 *(two valuation lessons from 08-10, then three inverted revisions inside twelve hours,
