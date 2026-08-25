@@ -9957,3 +9957,29 @@ can prove it should flag. And after correcting a guard, re-verify the known-GOOD
 the natural failure of a fix is over-correction.
 
 (2) No new market findings; capital unchanged at $1.08 with Netflix grading in ~1h.
+
+## 2026-08-25 18:0x periodic — two live alerts, both worked to the crux; no trades
+
+**Gemini-HLE +10.5pp AGAINST me** (YES 0.710 -> 0.8145) and NOT a midpoint flap this time: 2.9pp
+spread, $719 volume, i.e. real flow. Doctrine says a sustained adverse move on a hidden-info
+position is a source-recency signal, so I hunted rather than acked. Three candidate causes, all
+checked, none found: the BOARD is still frozen (source_freeze_check live-vs-Jan, coverage control
+passed); CAPABILITY tops out at Gemini 3 Deep Think 48.4 and 3.1-pro-preview 46.44, both under the
+50 bar; the news watcher is silent on the crux. So the market is repricing something I cannot
+observe — most plausibly w_spirit, the resolver-behaviour term I explicitly flagged this afternoon
+as judgment rather than measurement. Divergence is now 46pp against a 25pp audit bar; acked WITH
+the verification recorded rather than as a formality. Held, and deliberately NOT added: even at the
+most market-sympathetic end of my own range (w_spirit 0.60 -> p_no 0.55) the mark is far below fair,
+but adding on a move I cannot explain would be sizing into the exact term I cannot measure, and
+cluster concentration binds first anyway.
+
+**"Trump says Strait of Hormuz demined"** (15:15) — the first genuinely normalization-direction
+headline on the leg settling in 6 days. Watcher had already body-downgraded it CRITICAL -> MATERIAL
+because the same article reports a tanker hit by a projectile off Oman on Aug-24. Re-measured the
+resolving variable rather than trading the headline: PortWatch 7dMA still 5.00 (Aug-17..23:
+4,6,6,5,4,7,3), latest print Aug-23. Reaching the bar needs weekly transit calls to go 35 -> 420,
+a 12x jump, inside 6 days, with the feed lagging ~2 days. Demining is a precondition for
+normalisation, not normalisation; insurance and routing re-rate over weeks. HELD at 0.998.
+
+Sweep otherwise clean: daemons 4/4, mem 878MB, 6 resting orders (the re-priced HLE trio + MacBook,
+Trump-out, Greenland). Netflix skip grades in ~1h.
