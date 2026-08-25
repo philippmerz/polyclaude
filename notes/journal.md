@@ -9502,3 +9502,29 @@ already armed and machine-watched (confirmed live in the 07:56 daemon poll). Not
 
 Pending on the calendar, unchanged: Netflix skip grades today 19:00 UTC; NVDA earnings tomorrow;
 Hormuz resolves Aug-31 (runbook staged); Apple event Sep 8-10.
+
+## 2026-08-25 08:4x continuation — Hormuz redemption REHEARSED (passes); stale hidden-info advice fixed
+
+**Rehearsed the Aug-31 redemption six days early, on the actual conditionId.** The runbook's
+dry-run step had last been exercised against SpaceX — a position no longer held — so the CURRENT
+book's redemption path was unproven. `redeem-one 0x60c2c0…64e8 --dry-run` returned the exact PASS
+condition: "would REVERT: result for condition not received yet". That is a SEMANTIC revert, which
+proves conditionId, ABI, contract and signing are all correct and the only missing input is
+resolution itself. Doing this on the day would have left no time to fix a surprise; doing it now
+costs one free eth_call.
+Also mapped all 7 open orders to held positions: **no resting order sits on the Hormuz token**, so
+resolution day is a clean redeem with nothing to cancel — the runbook's "redeem first, then cancel
+the dangling rest" step is a NO-OP here. (Order book otherwise: MacBook 33@0.69 with 16.99 filled,
+Gemini 23+36@0.60, OpenAI 15@0.45 + 19@0.70, Trump-out 28@0.97, Greenland 29@0.98.)
+
+**The order mapping surfaced a tool-vs-doctrine drift.** exit_analysis printed "HIDDEN-INFO: no
+resting sell — active judgment only" for Gemini, both OpenAI legs and MacBook — while the book
+carries live resting sells on exactly those four. Checked which side was wrong rather than assuming:
+doctrine was REFINED 2026-08-18 to permit premium-to-fair rests (the premium is the pay for jump
+risk) and ban only at-or-below-fair ones, and every live rest is above its fair (0.60 vs 0.54,
+0.70/0.45 vs 0.64/0.41, 0.69 vs 0.65). So practice was right and the TOOL TEXT was stale by a week.
+Fixed to state the actual rule with the live threshold ("rest maker sell only ABOVE fair X …
+at/below fair is BANNED"). This matters because the reader is a low-context tick: the old text
+could have prompted cancelling four permitted rests, or suppressed a +EV premium rest. The lesson
+sitting directly beside that refinement in 01_lessons.md names the failure exactly — when practice
+diverges from a written rule, the expensive outcome is leaving both on the page.

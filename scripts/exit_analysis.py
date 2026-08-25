@@ -131,12 +131,19 @@ def main() -> int:
             if hidden:
                 verdict += " [hidden-info: VERIFY the move first]"
         elif hidden:
-            # Hidden-info doctrine: resting sells are BARRED on these markets —
-            # an informed lift means fair jumped and the old-fair sell donates
-            # the news (2026-08-05 fix: this tool used to print the generic
-            # rest-maker advice here, contradicting doctrine for 4/8 positions).
-            verdict = (f"HOLD (+${hold_ev - taker_net:.2f}); HIDDEN-INFO: no resting "
-                       f"sell — active judgment only (taker breakeven {taker_be:.3f})")
+            # Hidden-info doctrine, REFINED 2026-08-18 and reflected here
+            # 2026-08-25: resting AT or BELOW fair is banned (an informed lift
+            # means fair jumped, and the stale-fair sell donates the news), but
+            # resting ABOVE fair is PERMITTED — the premium is the compensation
+            # for jump risk. This text still said "no resting sell" while the
+            # book carried four permitted premium rests (Gemini 0.60 vs fair
+            # 0.54, OpenAI 0.70/0.45, MacBook 0.69), i.e. the tool contradicted
+            # both the doctrine and the live book. The lesson sitting next to
+            # the refinement says it: when practice diverges from a written
+            # rule, the expensive outcome is leaving both on the page.
+            verdict = (f"HOLD (+${hold_ev - taker_net:.2f}); HIDDEN-INFO: rest maker sell only "
+                       f"ABOVE fair {fair:.3f} (premium = jump-risk pay; at/below fair is BANNED "
+                       f"— donates the news). Taker breakeven {taker_be:.3f}")
         else:
             verdict = (f"HOLD (+${hold_ev - taker_net:.2f}); rest maker sell >= "
                        f"{fair:.3f} (taker would need {taker_be:.3f})")
