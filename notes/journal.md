@@ -9867,3 +9867,30 @@ Trump-out 0.97 vs 0.97 — at fair, permitted there since it is not a hidden-inf
 NOTE FOR AUG-31: the same board-freeze evidence should raise the two OpenAI legs' p_no as well;
 their rests are still premiums so there is no live inconsistency, but the cluster pass should
 re-derive them the same way rather than inheriting numbers set before the measurement existed.
+
+## 2026-08-25 17:1x continuation — my own "still premiums" claim was WRONG; both OpenAI rests were below fair
+
+Twenty minutes ago I wrote, about the two OpenAI legs, that "their rests are still premiums so there
+is no live inconsistency". I had not checked it — I inferred it from the OLD fairs. Checking is
+cheap and the claim was false: applying the same board-freeze decomposition gives p_no 0.59 on the
+>=50 leg (recorded 0.41, rest 0.45) and 0.78 on the >=55 leg (recorded 0.64, rest 0.70). BOTH rests
+sat below fair, and not marginally — below fair under EVERY w_spirit value across my whole
+sensitivity range (0.30-0.60). So I had two live orders on hidden-info markets offering to sell
+below my own valuation, which is the precise thing the doctrine bans because such orders fill
+exactly when information arrives.
+
+The mechanism of the error is worth more than the fix: the recorded numbers were built on P(board
+posts a qualifying row) ~0.20, set BEFORE the freeze was measured. Today's measurement drops that
+term to ~0.045 and ~0.022, and everything downstream moves — including order prices I had already
+placed and mentally filed as "done". A measurement does not stop at the prior; it propagates to
+every artifact derived from it, and resting orders are derived artifacts.
+
+ACTED: cancelled both, re-posted 15sh @ 0.65 (>=50) and 19sh @ 0.85 (>=55), each a genuine premium
+above central fair and above the whole sensitivity range. Priors updated to 0.59 / 0.78 with the
+decomposition, the sensitivity, and the order consequence recorded inline.
+
+PATTERN I KEEP HITTING TODAY (fourth instance): assumption asserted in prose -> checked -> false.
+The Hormuz feed lag, the "$20/day pool is the >=50 leg", the "instrument is valid", and now "the
+rests are still premiums". Every one was caught by spending thirty seconds verifying a sentence I
+had already written. The habit that works is not being more careful when writing; it is treating my
+own recent prose as an untrusted input.
