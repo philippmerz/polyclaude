@@ -9456,3 +9456,20 @@ non-empty verdict prints; the uninformative literal "HOLD" suppressed). Both les
 
 Book: 10 positions, bankroll ~$196, REALIZED +$4.70 (+2.8%). Netflix skip grades TODAY 19:00 UTC;
 Hormuz resolves Aug-31 (6d); NVDA earnings tomorrow; Apple event Sep 8-10.
+
+## 2026-08-25 07:5x continuation — armed the cross-event Metamask bound (the class the scanner is blind to)
+
+This morning's bound violation (FDV>700M YES 0.092 vs its own precondition launch-by-Dec-31 YES
+0.085) was found BY HAND while writing priors. That is the problem: the monotonicity scanner
+compares rungs WITHIN an event and is structurally blind to cross-EVENT bounds, and both Metamask
+arbs that actually executed came from a daemon firing rather than from me looking. A violation I
+can only see when I happen to check is not a watched edge.
+
+Armed `metamask-fdv-vs-launch-bound` (pair_arb/implies, expires 2027-01-01) — same machinery as
+the HLE umbrella trigger, which walks both books every 15 min and fires only when the structure is
+executable above the 2pp floor. Verified the scan handles the pair before arming: mid gap +0.75pp
+VIOLATION, executable -0.96pp after true fees (launch leg thin at $61 v24) = correctly dead today.
+The trigger note carries the execution recipe AND a warning future-me needs: I already hold 47.72
+700M-YES as an arb leg, so buying 700M-NO against it is a PARTIAL UNWIND of DEC-0079/0080, not a
+fresh entry — size it against the structure. Watching the 700M leg covers the whole ladder, since
+monotonicity makes it the highest-priced FDV leg and therefore the tightest bound.

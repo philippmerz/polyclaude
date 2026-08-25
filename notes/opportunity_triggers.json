@@ -62,5 +62,14 @@
   "actionable": true,
   "expires": "2026-09-01",
   "note": "DEC-0077 guard (armed 2026-08-15). NO bid <=0.95 means the market prices YES >5% \u2014 triple my entry read (p_yes ~0.2% off Portwatch MA 4.4 vs 60). That only happens on a ceasefire+normalization sprint or a data surprise; RE-MEASURE Portwatch first (ArcGIS Daily_Chokepoints_Data, where=portname=Strait of Hormuz, n_total 7d MA) and re-run hold-vs-exit. Exit liquidity was 100% within 5% at entry \u2014 leaving is cheap if the thesis breaks. Expires at resolution."
+ },
+ {
+  "key": "metamask-fdv-vs-launch-bound",
+  "kind": "pair_arb",
+  "mode": "implies",
+  "a": "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
+  "b": "will-metamask-launch-a-token-by-december-31-2026",
+  "expires": "2027-01-01",
+  "note": "CROSS-EVENT bound, armed 2026-08-25: 'FDV > $700M one day after launch' can only resolve YES if MetaMask launches by Dec-31, so P(FDV>700M) <= P(launch by Dec-31). WHY THIS NEEDED ARMING: the monotonicity scanner compares rungs WITHIN one event and is structurally blind to this bound \u2014 I found the violation by hand while writing priors, and both Metamask arbs actually executed came from a daemon firing, not from me looking. Measured at arming: FDV-YES 0.092 mid vs launch-YES 0.085 mid = +0.75pp violation, but executable is -0.96pp after true fees (launch leg is thin, $61 v24), so DEAD today; it needs the gap to widen on real depth. IF IT FIRES: BUY 700M-NO + BUY launch-YES, which pays >=1 in every state (no launch: NO pays 1; launch with FDV<=700M: both pay 1; launch above: launch-YES pays 1). NOTE I ALREADY HOLD 47.72 700M-YES as an arb leg \u2014 buying 700M-NO against it is a PARTIAL UNWIND of that position, not a new leg, so size it against the pair structure (DEC-0079/0080), never as a fresh entry. The 700M leg is the tightest bound in the ladder (monotonicity makes it the highest-priced FDV leg), so watching it covers 3B/4B too."
  }
 ]
