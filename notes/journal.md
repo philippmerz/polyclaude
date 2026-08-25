@@ -9829,3 +9829,41 @@ Swept all 10 priors for the shape and fixed two more:
 Banked the general rule: numbers you might lean on belong in `key_facts` WITH A DATE, not in prose;
 a note saying "~N days" about anything external is a claim to re-measure; and prefer notes stating
 the MECHANISM over a snapshot, because mechanisms do not go stale on a clock.
+
+## 2026-08-25 16:5x continuation — the deferred Gemini re-derivation had a LIVE ORDER consequence; done now, not Aug-31
+
+I had deferred the Gemini prior re-derivation to Aug-31 on the "mid-tick edits are drafts" rule.
+Checking the resting orders against current beliefs showed that deferral was wrong for a specific
+reason: the prior is not just a number in a file, it is the reference price for LIVE ORDERS. My two
+Gemini sells rested at 0.60 against a recorded fair of 0.54 — a legitimate premium when written.
+After today's board measurement the honest fair is materially higher, which would put those rests
+BELOW fair on a hidden-info market: exactly what doctrine bans, because the fill arrives precisely
+when information does.
+
+Re-derived deliberately, decomposition written out and sensitivity-tested rather than asserted:
+  term1 = P(board adds ANY row) 0.15 x P(row is a Gemini Pro >=50 | add) 0.35 = 0.052
+          (the next Gemini Pro is likely 3.1-pro at 46.4 — BELOW the bar — so a qualifying row
+           needs a newer model both released and added)
+  term2 = P(no qualifying row) 0.948 x w_spirit 0.45 x P(capability >=50) 0.70 = 0.298
+  p_yes 0.351 -> **p_no 0.649**, recorded as 0.65 (was 0.54).
+  Sensitivity: w_spirit 0.30/0.45/0.60 -> p_no 0.75/0.65/0.55.
+
+TWO THINGS THIS EXPOSED, both worth more than the number:
+1. The old 0.54 implied w_spirit ~0.62 while the sibling legs' notes document 0.45. The number was
+   not so much wrong as silently assuming a different resolver model than the one I had written
+   down — an internal inconsistency that only surfaced because I decomposed instead of nudging.
+2. Term2 now supplies ~85% of my p_no, and term2 rests on w_spirit, which is a JUDGMENT about
+   resolver behaviour and not a measurement. So the honest read of today's work is NOT "my edge got
+   bigger"; it is "the measurable half of my thesis got confirmed and the unmeasurable half now
+   dominates the number". Recorded that way in the prior, because this revision flatters a winning
+   position and that is exactly when to write the caveat down.
+
+ACTED: cancelled both 0.60 rests (23sh + 36sh), re-posted 59sh @ 0.75 post-only — a ~10pp premium
+chosen deliberately above the central fair to leave room for the MECHANICAL upward drift of fair as
+Dec-31 approaches with the board frozen (a static rest goes stale on a clock, per the by-date lesson).
+Order count 7 -> 5 -> 6. The other rests were checked against their fairs and remain premiums
+(MacBook 0.69 vs 0.65, OpenAI-55 0.70 vs 0.64, OpenAI-50 0.45 vs 0.41, Greenland 0.98 vs 0.95,
+Trump-out 0.97 vs 0.97 — at fair, permitted there since it is not a hidden-info market).
+NOTE FOR AUG-31: the same board-freeze evidence should raise the two OpenAI legs' p_no as well;
+their rests are still premiums so there is no live inconsistency, but the cluster pass should
+re-derive them the same way rather than inheriting numbers set before the measurement existed.
