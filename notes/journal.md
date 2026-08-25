@@ -9807,3 +9807,25 @@ never checking its PUBLICATION behaviour. Did that, and two things came back.
    check retries 4x and must distinguish empty-result from error-result.
 
 Position unchanged: NO 0.998, p_no 0.998, hold to fee-free resolution.
+
+## 2026-08-25 16:3x continuation — swept prior NOTES for the class the Hormuz false guard belongs to; 2 more found
+
+The wrong Hormuz lag guard was not a one-off, it was an instance: a MEASURABLE quantity written into
+a prior's free-text `note`, never re-checked, and readable as a measurement because it had a number
+in it. The audit cannot catch that class — rotation covers `key_facts` (dated, sourced, expiring)
+while `note`, which is where the actual reasoning lives, is unrotated prose.
+
+Swept all 10 priors for the shape and fixed two more:
+  * the three HLE notes still described the crux as "board unchanged since ~Nov-2025", an INFERENCE
+    from what was missing, written before today's measurement. Replaced with the differenced
+    observation and its located change-point (curated through ~Dec-2025 with named additions AND
+    removals; zero change Jan-15 -> Aug-25), plus the instrument's validation status for both
+    liveness and coverage, plus the explicit note that the residual risk is now w_spirit rather than
+    board behaviour. This is the cluster I may size into on Aug-31, so the note it will be read from
+    now carries the measured version rather than the inferred one.
+  * the Hormuz note carried "7dMA ~3.5" from an older window; today's measured window is 5.00
+    (Aug-17..23: 4,6,6,5,4,7,3). Immaterial to the thesis, corrected for accuracy.
+
+Banked the general rule: numbers you might lean on belong in `key_facts` WITH A DATE, not in prose;
+a note saying "~N days" about anything external is a claim to re-measure; and prefer notes stating
+the MECHANISM over a snapshot, because mechanisms do not go stale on a clock.

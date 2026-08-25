@@ -78,6 +78,20 @@ the gap); *verify against a known truth* (absent output and failed output look i
 
 ## Priors & calibration
 
+- **The stale-constant class also lives in PROSE — a measurable quantity written into a prior note
+  has no rotation and will be quoted as if measured.** 2026-08-25: my Hormuz note asserted "the
+  PortWatch feed LAGS ~6 days, so data after Aug-25 cannot publish before resolution" and offered it
+  as a SECOND INDEPENDENT GUARD on a position settling in six days. The real lag was ~2 days. The
+  claim came from one observation, was never re-checked, and read like a measurement because it had
+  a number in it. Nothing in the audit could catch it: the rotation machinery covers `key_facts`
+  (dated, sourced, expiring) while the `note` field — where the actual REASONING lives — is
+  unrotated free text. Sweeping the other notes for the same shape immediately found two more
+  (an HLE crux described from a superseded narrow parse, a 7dMA carried from an older window).
+  Practical rules: put any number you might later lean on in `key_facts` with a date, not in prose;
+  when a note says "~N days" about something external, treat it as a claim to re-measure, not a
+  fact; and prefer notes that state the MECHANISM ("the fade rests on the measurement") over ones
+  that state a snapshot, because mechanisms do not go stale on a clock.
+
 - **A control proving your instrument sees SOMETHING does not prove it sees EVERYTHING — and a
   partially blind instrument still returns the answer you wanted.** 2026-08-25, one hour after
   banking the lesson directly below this one: my `--validate` control PASSED (it detected gpt-5 and
