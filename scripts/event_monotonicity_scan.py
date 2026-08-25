@@ -198,7 +198,8 @@ def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
     early_no_ask = _best_ask(early_tokens[1])    # buy earlier NO
     if late_yes_ask is None or early_no_ask is None:
         return None
-    # taker fee per share = bps/10000 * min(p, 1-p), per leg
+    # taker fee per share = effective_rate x p x (1-p), per leg (TRUE quadratic
+    # curve, pm_fees; the min() form here overstated the floor and under-detected arbs)
     def _fee(p, bps):
         try:
             return (float(bps or 0) / 10000.0) * min(p, 1.0 - p)
@@ -225,7 +226,8 @@ def fee_aware_breakeven(yes_t1: float, yes_t2: float,
     """Fee-aware breakeven spread needed to profit on the arb.
 
     We BUY yes_t2 (paying yes_t2 + fee) and SELL yes_t1 (receiving yes_t1 - fee).
-    Fee is edge-aware — rate x min(p, 1-p) — and the RATE is per-market, read
+    Fee is quadratic — rate x p x (1-p), effective rate capped 0.07 (pm_fees,
+    wallet-verified 2026-08-22) — and the RATE is per-market, read
     from each leg's own takerBaseFee.
 
     2026-08-14: this used a hard-coded 0.072 while the live modal rate is 0.10

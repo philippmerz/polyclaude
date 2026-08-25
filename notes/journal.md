@@ -9528,3 +9528,29 @@ at/below fair is BANNED"). This matters because the reader is a low-context tick
 could have prompted cancelling four permitted rests, or suppressed a +EV premium rest. The lesson
 sitting directly beside that refinement in 01_lessons.md names the failure exactly — when practice
 diverges from a written rule, the expensive outcome is leaving both on the page.
+
+## 2026-08-25 08:5x meta-reflection — swept the CLASS behind this morning's three drifts; 5 more found
+
+(1) CLEANUP — a genuine, non-forced finding. Three times today a TOOL contradicted DOCTRINE
+(arb-leg exit advice; a display prefix-allowlist swallowing the new verdict; "no resting sell" text
+a week stale against the refined premium-to-fair rule). I found the third BY ACCIDENT while mapping
+orders for an unrelated reason — which is the tell that no systematic check exists. So I swept the
+class the standing rule demands ("when you fix an instance, grep for the class"), targeting
+USER-FACING STRINGS rather than code, because a docstring/comment/help-text is exactly what a
+low-context or fallback session reads as authority:
+  * 4 stale FEE-CURVE strings, all still teaching the retired `rate x min(p,1-p)` form:
+    cross_event_bound_scan's CLI help, discover_markets' docstring, and TWO in
+    event_monotonicity_scan (inline comment + fee_aware_breakeven docstring) — the same file whose
+    CODE I corrected on Aug-22. Fixing the arithmetic left the prose that taught the arithmetic.
+  * 1 LIVE stale constant: sports_pm_scan's `--hurdle-apy` default was hard-coded 0.034 against a
+    live 2.93% — the THIRD instance of the hand-maintained-hurdle class (3.4% -> 5.0% -> live).
+    Now lazily wired to live_hurdle_apy() like the other scanners. Direction of the old error was
+    safe (too-high hurdle under-surfaces candidates), which is precisely why it survived two
+    previous sweeps: nothing that only forgoes wins ever announces itself.
+Backlogged the METHOD (grep for the old formula/constant text after any doctrine change), because
+the lesson is not "these five strings" but "the code fix is never the whole fix".
+
+(2) NEW STRATEGIES: nothing. 40 minutes since the last reflection and the book is unchanged;
+forcing a finding here would be the failure mode these cycles exist to prevent.
+
+Suite green (86). Netflix grades 19:00 UTC; NVDA tomorrow; Hormuz Aug-31 (redemption rehearsed).

@@ -58,7 +58,8 @@ def annualized_yield_after_fee(p_buy: float, days: float,
       1. The rate was hard-coded 0.072; the live modal rate is 0.10 and 16% of
          markets charge nothing. It is a per-market field (takerBaseFee).
       2. The fee was applied MULTIPLICATIVELY: `p_buy * (1 + fee_fraction)`.
-         Polymarket charges rate x min(p, 1-p) in dollars PER SHARE, so it is
+         Polymarket charges rate x p x (1-p) in dollars PER SHARE (TRUE curve,
+         corrected 2026-08-22 from the min() form after wallet reconciliation), so it is
          additive. Multiplying scaled the fee by p_buy and understated it
          everywhere, worst at mid prices: at p=0.50 with the true 10% rate the
          real cost is 0.550 while this returned 0.518.

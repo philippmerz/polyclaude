@@ -228,8 +228,14 @@ def main() -> int:
                    help="Resolution-window cutoff hours (default 48).")
     p.add_argument("--min-vol24", type=float, default=30000)
     p.add_argument("--min-liq", type=float, default=5000)
-    p.add_argument("--hurdle-apy", type=float, default=0.034,
-                   help="Hurdle APY for bond-like-fade surfacing (default 3.4%%).")
+    p.add_argument("--hurdle-apy", type=float, default=None,
+                   help="Hurdle APY for bond-like-fade surfacing. Default: the LIVE "
+                        "Aave-Polygon USDC supply rate (24h-cached via check_marginal_apy). "
+                        "Was hard-coded 0.034 until 2026-08-25 — a third instance of the "
+                        "stale-constant class (the hand-maintained hurdle has been wrong at "
+                        "3.4%%, then 5.0%%, against a live rate near 2.9%%). Direction of the "
+                        "old error was safe here (too high = under-surfaces candidates), which "
+                        "is exactly why nothing ever surfaced it.")
     p.add_argument("--json", action="store_true")
     p.add_argument("--limit", type=int, default=20)
     p.add_argument("--with-consensus", action="store_true",
@@ -240,6 +246,9 @@ def main() -> int:
                    help="Number of top candidates to fetch consensus for "
                         "(default 5, to bound haiku token cost).")
     args = p.parse_args()
+    if args.hurdle_apy is None:
+        from discover_markets import live_hurdle_apy
+        args.hurdle_apy = live_hurdle_apy()
 
     print(f"# sports_pm_scan window=<={args.hours}h vol24h>=${args.min_vol24:.0f} liq>=${args.min_liq:.0f}", file=sys.stderr)
 

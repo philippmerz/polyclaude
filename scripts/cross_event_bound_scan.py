@@ -168,7 +168,8 @@ def main() -> int:
                          "not a scale filter: sub-2pp sits inside fee/slippage uncertainty and a "
                          "two-leg structure goes directional if one leg fills alone (2026-08-11).")
     ap.add_argument("--fee-bps", type=float, default=1000.0,
-                    help="taker base fee in bps applied to min(p,1-p)")
+                    help="taker base fee in bps; charged on the TRUE curve rate x p x (1-p) "
+                        "(quadratic, effective rate capped 0.07 — see pm_fees.py)")
     args = ap.parse_args()
 
     if args.implies:
