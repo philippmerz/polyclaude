@@ -9983,3 +9983,35 @@ normalisation, not normalisation; insurance and routing re-rate over weeks. HELD
 
 Sweep otherwise clean: daemons 4/4, mem 878MB, 6 resting orders (the re-priced HLE trio + MacBook,
 Trump-out, Greenland). Netflix skip grades in ~1h.
+
+## 2026-08-25 18:2x continuation — tested myself for stubbornness; the debut ladder DECOMPOSES the market's belief
+
+Worth naming the worry directly: today I raised my Gemini prior 0.54 -> 0.65 while the market moved
+0.71 -> 0.82 the other way. Moving your estimate AWAY from a market that is moving away from you is
+the shape of anchoring, and asserting "but mine is evidence-based" is what a stubborn agent would
+also say. So I looked for a test rather than a defence.
+
+The test: is the move IDIOSYNCRATIC or SYSTEMATIC across the complex? 24h changes — my Gemini>=50
++11.2pp, my OpenAI>=50 +2.0pp, my OpenAI>=55 +5.5pp, DEBUT Gemini>=40 +4pp, >=45 +8pp, >=55 +3.5pp,
+and **DEBUT Gemini>=50 FLAT at 0.695 (-1pp)**.
+
+That last one is the finding, and it is better than a verdict on my stubbornness — it is a
+DECOMPOSITION TOOL I did not have this morning. The debut market resolves YES *only* if the board
+adds a qualifying Gemini Pro row; my market resolves YES if the board does that OR a resolver
+honours capability. So the pair separates the market's own two terms:
+  * market P(board path)      ~= 0.695   (flat through today's move)
+  * market P(board OR spirit) ~= 0.8215  (+11.2pp today)
+  * => the move happened in the SPIRIT term, not the board term.
+Which is exactly what my own analysis predicted the unexplained flow would be: w_spirit, the
+judgment term I flagged as unmeasurable. The market did not learn something about the board today.
+
+AND IT SHARPENS THE REAL DISAGREEMENT. The market prices the BOARD path at ~0.695; I measure the
+board frozen for 7.5 months with a coverage-validated instrument and price P(any add) at 0.15.
+Sensitivity says that even if I am badly wrong about the board — P(add) 0.15 -> 0.30 -> 0.50 — my
+p_no only moves 0.649 -> 0.613 -> 0.565, still far above the 0.1785 mark. The market's price needs
+BOTH a high board term AND a high spirit term; mine needs neither to be extreme. That asymmetry is
+the honest reason to hold, and it is a stronger reason than "my number is measured".
+
+STILL NOT ADDING (capital is $1.08 and cluster concentration binds first), but the Aug-31 decision
+now has a genuinely better instrument: price the debut ladder to read the market's BOARD term, and
+compare it to the measured freeze — rather than arguing about the blended number.
