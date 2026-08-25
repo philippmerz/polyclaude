@@ -92,6 +92,21 @@ the gap); *verify against a known truth* (absent output and failed output look i
   fact; and prefer notes that state the MECHANISM ("the fade rests on the measurement") over ones
   that state a snapshot, because mechanisms do not go stale on a clock.
 
+- **A skip ledger scored by HIT RATE says the opposite of the same ledger scored by ECONOMICS —
+  and only one of them is the objective.** 2026-08-25, first economic read of the short-dated ledger
+  (10 graded rows carrying both a price and an outcome, on the side actually evaluated): 6 of 10
+  skips "would have won", a 60% rate that reads as chronic over-caution and would tempt anyone to
+  loosen the gates. Per dollar that would have been committed, the same ten rows net **-2.29**, i.e.
+  each skip avoided ~23c of loss. The cause is the shape of the trades: fading a favourite pays
+  +0.04 to +0.11 when right and -1.00 when wrong, so four full write-offs (Hormuz-fees at 0.013,
+  Beirut, and the two SDCC NO legs at 0.80) swamp six small wins. A would-have-won COUNT is
+  therefore actively misleading for any book whose candidates are mostly favourites, which is
+  exactly this book. Score skips in return-per-dollar-committed, never in hits. TWO CAVEATS kept
+  with the number so it cannot be quoted lazily: N=10 is small, and this measures only the side I
+  EVALUATED — the genuinely expensive historical leak was side-SELECTION (skipping DC/Lucasfilm NO
+  correctly while never gating YES at 0.59, which won +69% each), a different failure that the
+  FLIP-THE-KILL check now mechanises.
+
 - **Test a guard with a case you KNOW it should fail — its reassuring output is a claim, not
   evidence.** 2026-08-25: `crux_coverage_check` printed "All 10 positions have at least one matching
   keyword" every tick, and I had been reading that silence as "nothing is unwatched". I tested it

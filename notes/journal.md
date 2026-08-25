@@ -10042,3 +10042,33 @@ process I still believe is correct is the point of keeping the ledger at all.
 
 Sweep otherwise clean: daemons 4/4 single-PID, mem 824MB, UMA 30 tracked / 0 alerts, 6 orders
 resting. Ledger N=51.
+
+## 2026-08-25 22:2x meta-reflection — "am I skipping too much?" measured, and the two scorings disagree
+
+(2) The fresh Netflix grade (skip forwent ~7.3%) invited the obvious question — are my gates too
+tight? — so I measured it against the ledger instead of arguing it. 10 of 51 rows carry both a
+recorded price and an outcome on the side I actually evaluated.
+
+  HIT RATE: 6/10 skips would have won (60%) — reads as chronic over-caution.
+  ECONOMICS: per $1 that would have been committed, those same rows net **-2.29**, i.e. each skip
+             avoided ~23c of loss.
+
+The two scorings point in OPPOSITE directions, and the cause is the shape of these trades: fading a
+favourite pays +0.04..+0.11 when right and -1.00 when wrong, so four total write-offs (Hormuz-fees
+at 0.013, Beirut, both SDCC NO legs at 0.80) swamp six small wins. So the honest answer to "am I
+skipping too much" is NO on the evidence available — and the would-have-won count that suggested
+otherwise is exactly the statistic my earlier note warned must not be quoted as a hit rate. Now I
+know why, quantitatively.
+
+METHOD NOTE, because I nearly published a wrong number: my first automated read classified the two
+SDCC rows as losses and I flagged that as a likely inversion, since the backlog records those skips
+as WRONG. Both were true at once — the NO side I evaluated would indeed have lost (outcome YES),
+while the YES flip at 0.59 would have won +69%. The ledger's `side`/`fade_would_have_won` fields
+were right; my recollection of "that skip was wrong" referred to a different side of the same
+market. Checking the raw rows before believing the aggregate is what separated those.
+
+CAVEATS recorded with the finding so it cannot be quoted lazily: N=10 is small; it measures only the
+side EVALUATED; and the genuinely expensive historical leak was side-SELECTION, which FLIP-THE-KILL
+now mechanises. (1) No cleanup finding beyond banking this — the ledger's heterogeneous schema made
+the read harder than it should be, but rewriting historical rows I cannot re-verify would cost more
+truth than it buys.
