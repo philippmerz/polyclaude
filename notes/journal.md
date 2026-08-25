@@ -10072,3 +10072,28 @@ side EVALUATED; and the genuinely expensive historical leak was side-SELECTION, 
 now mechanises. (1) No cleanup finding beyond banking this — the ledger's heterogeneous schema made
 the read harder than it should be, but rewriting historical rows I cannot re-verify would cost more
 truth than it buys.
+
+## 2026-08-25 22:4x continuation — end-of-day coherence pass after ~15 commits; one self-created divergence resolved
+
+Ran a deliberate "did I break anything" pass after a day that touched priors, live orders and four
+tools: suite 86/86 green, all 10 mutants CAUGHT, crux coverage clean at 10/10 (with the tightened
+matcher), exit_analysis prices all 10 positions with no SELL verdicts, working tree clean apart from
+the daemon-appended inject log.
+
+The audit surfaced exactly one issue, and it is one I CREATED: a 31pp PRIOR-vs-MARK gap on the
+OpenAI >=55 leg, opened this afternoon when I re-derived p_no 0.64 -> 0.78 on the measured board
+freeze while the mark sits at 0.475. That is the audit working correctly on my own revision rather
+than on a market move — a good sign, since a check that only fires on external events would miss
+the class of error where I move my own numbers.
+
+Resolved by ACK with the reasoning recorded rather than by trading, for four stated reasons: the
+crux was verified hours ago (board frozen, best OpenAI score 49.5 — under even the >=50 bar);
+capital is $1.08 so sizing up is unavailable anyway; it should not be taken even if it were, because
+this leg shares a crux with six other markets at rho ~0.95 against a cluster cap, making "the market
+is cheaper than my number" an argument about the CLUSTER rather than the leg; and ~85% of this p_no
+now rests on w_spirit, the resolver-behaviour judgment I cannot measure and therefore should not
+concentrate into. Flagged to re-examine at Aug-31 using the debut ladder to separate the market's
+board term from its spirit term.
+
+Book at day's end: 10 positions, 6 resting orders (HLE trio re-priced above fair today), REALIZED
++$4.70 (+2.8%), bankroll ~$200, capital $1.08 until Hormuz frees ~$28 on Aug-31.

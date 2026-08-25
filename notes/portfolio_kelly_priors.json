@@ -222,7 +222,9 @@
     "checked": "2026-08-14",
     "source_date": "2026-08-14"
    }
-  ]
+  ],
+  "divergence_ack": "2026-08-25",
+  "divergence_ack_reason": "31pp gap (mark 0.475 NO vs prior 0.78) is one I CREATED today by re-deriving this leg on the measured board freeze \u2014 the audit is correctly flagging my own revision, not a market move. Resolved by ACK, not by trading, and the reasons are specific: (1) the crux was verified hours ago \u2014 source_freeze_check reports the board FROZEN live-vs-Jan with the coverage control passing, and the best public OpenAI HLE score on ANY surface is GPT-5.6 Sol at 49.5, under even the >=50 bar let alone >=55; (2) capital is $1.08, so sizing up is not available regardless; (3) MORE IMPORTANTLY it should not be taken if it were \u2014 this leg shares a crux with 6 other markets (3 held HLE legs + the debut ladders), rho ~0.95, and the cluster already sits ~15% of bankroll against a 30% cap, so 'market is cheaper than my number' is an argument for the CLUSTER, not for this leg; (4) the honest caveat recorded with the re-derivation stands \u2014 ~85% of this p_no now comes from w_spirit, a resolver-behaviour JUDGMENT I cannot measure, which is exactly the term I should not concentrate into. Re-examine at the Aug-31 window using the debut ladder to read the market's board term separately from its spirit term."
  },
  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
   "p_no": 0.65,
