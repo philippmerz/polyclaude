@@ -273,6 +273,30 @@ def _match_prior(slug: str, priors: dict) -> tuple[str, float] | None:
     return None
 
 
+def _arb_paired(slug: str, priors_raw: dict) -> str | None:
+    """The `arb_paired` marker for a leg, if any (same matching as _match_prior).
+
+    2026-08-25: a per-leg edge number is MEANINGLESS on a leg of a matched arb —
+    the structure pays >=$1 per pair in every state, so acting on one leg's flag
+    converts riskless carry into a naked directional position. On the day the
+    Metamask priors were added, BOTH advisory tools immediately pointed at the
+    same leg: exit_analysis printed "SELL TAKER NOW (+$0.36)" and this scan
+    printed NEGATIVE_EDGE, saved from EXIT only by the tick-noise floor and
+    explicitly marked "flips to EXIT at a 0.05 prior haircut". Two tools, one
+    latent bad trade, and a headless fallback tick (one ran 2026-08-25 04:25 with
+    no conversation context) follows tool verdicts mechanically.
+    """
+    if not slug:
+        return None
+    ent = priors_raw.get(slug)
+    if not isinstance(ent, dict):
+        for k, v in priors_raw.items():
+            if isinstance(v, dict) and (k in slug or slug in k):
+                ent = v
+                break
+    return ent.get("arb_paired") if isinstance(ent, dict) else None
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description="Flag held positions whose marginal-APY-to-resolution falls below a hurdle.")
     p.add_argument("--hurdle-apy", type=float, default=None,
@@ -304,6 +328,10 @@ def main() -> int:
         return 0
 
     priors = _load_priors()
+    try:
+        priors_raw = json.loads(PRIORS_PATH.read_text())   # _load_priors() returns tuples
+    except Exception:
+        priors_raw = {}
     acked_holds = _load_acked_holds()
     flagged: list[dict] = []
     holds: list[dict] = []
@@ -410,7 +438,13 @@ def main() -> int:
             if prior_p < mark or expected_edge_apy < args.hurdle_apy:
                 # would-flag: NEGATIVE_EDGE (mark>prior) or below-hurdle
                 base = "NEGATIVE_EDGE" if prior_p < mark else "CLOSE_CANDIDATE"
-                if ack:
+                paired = _arb_paired(slug, priors_raw)
+                if paired:
+                    record["verdict"] = (f"ARB-PAIRED HOLD ({base} on the leg): per-leg edge is "
+                                         f"not actionable alone — exit only as matched pairs, or "
+                                         f"resolve fee-free. [{paired}]")
+                    holds.append(record)
+                elif ack:
                     # deliberate documented hold — route to holds, not flagged,
                     # so a low-context tick sees the acknowledgment inline
                     record["verdict"] = (f"ACKED_HOLD until {ack.get('until','?')} "
@@ -482,7 +516,9 @@ def main() -> int:
                                          f"({why}); flag is UNPRICED, verify by hand")
                     flagged.append(record)
             else:
-                record["verdict"] = "HOLD"
+                paired_ok = _arb_paired(slug, priors_raw)
+                record["verdict"] = ("ARB-PAIRED (edge clears; exit only as matched pairs)"
+                                     if paired_ok else "HOLD")
                 holds.append(record)
         else:
             # No prior available: gross carry is the only number we have.
@@ -534,7 +570,13 @@ def main() -> int:
         # that is retained only because the door is expensive. Printing it bare
         # among the clearing holds is how a low-context tick concludes "all
         # fine" about a leg that is dead money. Show the reason inline.
-        tag = f"  [{v}]" if v.startswith(("ACKED_HOLD", "HOLD (exit-cost gate)")) else ""
+        # ANY non-empty verdict prints. This was a PREFIX ALLOWLIST until
+        # 2026-08-25, when a newly-added ARB-PAIRED verdict rendered as a bare
+        # "clean hold" — the precise failure the comment above warns about,
+        # caused by the guard meant to prevent it. A clean hold carries no
+        # verdict at all, so `if v` is both sufficient and future-proof: a new
+        # verdict type can never again be silently dropped from the display.
+        tag = f"  [{v}]" if (v and v != "HOLD") else ""
         print(f"  {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
               f"{_apy_col(r)}  {r['question'][:52]}{tag}")
     return 0

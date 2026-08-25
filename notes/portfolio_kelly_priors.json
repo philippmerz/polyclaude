@@ -245,5 +245,90 @@
   "divergence_ack_reason": "Mark NO 0.2465 vs prior 0.54 (29pp). Two-day directional slide on real-but-small volume ($0.7-1.5k/day), board UNCHANGED (verified again 18:00 Aug-15: Gemini 3 Pro 38.3, no new rows), no news hits. Crowd pricing anticipatory capability+spirit \u2014 the INTERPRETATION crux where doctrine defers to market for action. BOTH-MEASURES TEST: exit at bid walks to ~$9.5 vs hold-at-market-EV $14.5 vs hold-at-prior $31.9 \u2014 HOLD under both (17pp spread makes taker exit value-destructive). Position lottery-sized ($7.94 cost, 59sh after the pre-committed DEC-0065 0.22 tranche filled during the slide). Rest at 0.60 stays. Re-derive on a crux change only."
  },
  "_comment_key_facts": "key_facts = the load-bearing factual claims a position rests on, each paired with the EXTERNAL source it came from. Added 2026-08-11 after a prior revision inverted the direction of a source's anchor move and then survived TWO re-verifications, because each re-verification re-read my own note and reproduced the error. A re-verification that does not diff the recorded claim against the source's actual words is confirmation, not verification. The audit rotation surfaces these for source-diffing. TAGGING CAVEAT (2026-08-12): the audit tags a source UNVERIFIED when it does not start with http, but a URL that 403s (congress.gov) is no more agent-verifiable than a prose 'sweep'. Where that happens, say so INLINE in the claim and name the independent falsifier used instead \u2014 do not let an unfetchable URL launder a claim into looking checked. SOURCE_DATE (2026-08-12): distinct from `checked`. `checked` is when I last LOOKED; `source_date` is when the source was PUBLISHED. The MacBook staleness cost 18pp precisely because those diverged invisibly \u2014 checked=1d ago on a source published 114d earlier, in a story that had moved three times since. For live-state sources (a leaderboard, an order book, a market description) the two are equal by construction. ATOMICITY REQUIRED (2026-08-13): one independently checkable assertion per entry, each with its own source and source_date. Bundled entries are how an unchecked fact hides inside a checked one \u2014 SpaceX's 'No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T close would need an S-1 already public' bundled OpenAI's TIMING (checked twice) with every other rival's SIZE (never checked), and the second cost the project its largest prior correction. If an entry contains ' and ' joining two verifiable claims, split it. SOURCE TAXONOMY (2026-08-13) \u2014 'is it a URL' is the WRONG test and my first sweep miscategorised because of it. Ranked by what may move a number: (1) FIRST-HAND MEASUREMENT \u2014 a CLOB book walk, a gamma/API read, an on-chain balance. Reproducible on demand and STRONGER than any article, even though it carries no URL. (2) DATED PRIMARY ARTIFACT \u2014 a fetched, dated piece; the standard for a factual claim about the world. (3) NAMED BUT UNLINKED \u2014 e.g. 'third-party trackers'; verifiable with effort, acceptable if the claim is checked periodically. (4) AGGREGATED SEARCH SUMMARY \u2014 a LEAD ONLY. It must never move a prior: on 2026-08-13 one such summary said the M5 reshuffle was an 'acceleration', moved MacBook 0.62->0.58, and pinning it to dated sources REFUTED it outright. Label the kind when the source is not a URL, so a future sweep does not mistake a measurement for a guess.",
- "_comment_divergence_ack": "divergence_ack MUST be a bare ISO date string (e.g. \"2026-08-15\") \u2014 position_state_audit \u00a73c parses it with date.fromisoformat() directly and treats anything else as EXPIRED via the exception path. 14-day window from that date. Put prose in divergence_ack_reason (audit ignores it). Same for source_ack. Learned 2026-08-16: two acks written as rich dicts were silently invalid; one flagged, one was a near-miss."
+ "_comment_divergence_ack": "divergence_ack MUST be a bare ISO date string (e.g. \"2026-08-15\") \u2014 position_state_audit \u00a73c parses it with date.fromisoformat() directly and treats anything else as EXPIRED via the exception path. 14-day window from that date. Put prose in divergence_ack_reason (audit ignores it). Same for source_ack. Learned 2026-08-16: two acks written as rich dicts were silently invalid; one flagged, one was a near-miss.",
+ "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632": {
+  "p_yes": 0.078,
+  "verified": "2026-08-25",
+  "criteria_read": "2026-08-22",
+  "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: 0.085 x 0.92 = p_yes 0.078 vs mark 0.092 \u2014 the market is marginally rich here, which is the SAME inversion the arb was struck on; 2.97sh of this leg are unpaired (the intentional lottery crumb, ~$0.27).",
+  "cluster": "metamask-fdv-arb",
+  "rho_within": 0.95,
+  "key_facts": [
+   {
+    "claim": "Market resolves NO if MetaMask does not launch a publicly transferable/tradable token by 2026-12-31 23:59 ET; FDV measured 4:00 PM ET the calendar day after launch, 'most liquid price source'.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
+    "source_date": "2026-08-22",
+    "checked": "2026-08-22"
+   },
+   {
+    "claim": "Sibling market prices P(MetaMask launches a token by Dec-31 2026) at YES 0.085 (thin, $61 v24). This is a hard upper bound on every FDV leg.",
+    "source": "https://gamma-api.polymarket.com/events?slug=will-metamask-launch-a-token-in-2025",
+    "source_date": "2026-08-25",
+    "checked": "2026-08-25"
+   },
+   {
+    "claim": "No launch date announced as of Aug-2026; Lubin confirmed the token Sep-2025; ConsenSys is pursuing a 2026 traditional IPO (a reason for delay, not acceleration).",
+    "source": "https://coinmarketcap.com/academy/article/metamask-parent-consensys-taps-wall-street-for-2026-ipo",
+    "source_date": "2026-08",
+    "checked": "2026-08-25"
+   }
+  ],
+  "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
+ },
+ "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222": {
+  "p_no": 0.947,
+  "verified": "2026-08-25",
+  "criteria_read": "2026-08-22",
+  "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: p_yes = 0.085 x 0.62 = 0.053 -> p_no 0.947 vs mark 0.928. Bought at 0.849 in DEC-0080.",
+  "cluster": "metamask-fdv-arb",
+  "rho_within": 0.95,
+  "key_facts": [
+   {
+    "claim": "Same template/criteria as the 700M leg: one FDV number, same no-launch backstop, so all legs resolve consistently \u2014 which is what makes the pair riskless.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
+    "source_date": "2026-08-22",
+    "checked": "2026-08-22"
+   }
+  ],
+  "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
+ },
+ "metamask-fdv-above-4b-one-day-after-launch-851-782-477-258": {
+  "p_no": 0.956,
+  "verified": "2026-08-25",
+  "criteria_read": "2026-08-22",
+  "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: p_yes = 0.085 x 0.52 = 0.044 -> p_no 0.956 vs mark 0.917. Bought at 0.888 in DEC-0079.",
+  "cluster": "metamask-fdv-arb",
+  "rho_within": 0.95,
+  "key_facts": [
+   {
+    "claim": "Same template/criteria as the 700M and 3B legs (one FDV number, same backstop).",
+    "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-4b-one-day-after-launch-851-782-477-258",
+    "source_date": "2026-08-22",
+    "checked": "2026-08-22"
+   }
+  ],
+  "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
+ },
+ "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320": {
+  "p_no": 0.998,
+  "verified": "2026-08-25",
+  "criteria_read": "2026-08-25",
+  "note": "DEC-0077. MECHANICAL, first-hand measured, and now a VERIFIED IMPOSSIBILITY rather than a forecast: YES needs the IMF PortWatch 7-day MA of Hormuz transit calls to reach 60 on any date through Aug-31. Latest pull (2026-08-22/25 ticks): 7dMA ~3.5, daily prints 1-8, and the peak SINGLE DAY across 150 prints is 44 \u2014 a level never once observed, needed as a 7-day AVERAGE, inside 6 days, during an active conflict that has if anything escalated (tanker struck off Oman Aug-25; Iranian threats to neighbours Aug-23). SECOND INDEPENDENT GUARD: the PortWatch feed LAGS ~6 days, so data after ~Aug-25 cannot even be published before resolution \u2014 a physically impossible sprint would also be an unpublishable one. p_no 0.998 is the residual for source/resolver error, NOT for traffic. HOLD TO RESOLUTION: at mark 0.998 a taker sell captures ~nothing AND pays a fee, while resolution is fee-free \u2014 the 2026-08-25 alert's 'consider profit-taking' note was correctly declined on that math. Erosion trigger armed (hormuz-no-erosion, NO bid <=0.95). Regime caveat (2026-08-19 lesson): this near-certainty is specific to the 12-day horizon; it does NOT transfer to the Sep-30/Dec-31 siblings, which are war-duration forecasts.",
+  "cluster": "hormuz",
+  "rho_within": 1.0,
+  "key_facts": [
+   {
+    "claim": "Resolution bar: PortWatch 7-day moving average of transit calls >= 60 on any date by Aug-31, 2026; source named in criteria.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+    "source_date": "2026-08-25",
+    "checked": "2026-08-25"
+   },
+   {
+    "claim": "Measured first-hand: 7dMA 3.57 (latest print 2026-08-16, feed lags ~6d); 150-print history peak single day 44, never 60.",
+    "source": "IMF PortWatch ArcGIS Daily_Chokepoints_Data (portname='Strait of Hormuz'), pulled directly",
+    "source_date": "2026-08-22",
+    "checked": "2026-08-22"
+   }
+  ]
+ }
 }

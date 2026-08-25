@@ -35,6 +35,8 @@ MUTS = [
                     'if False:\n        return maker_px, 0.0'),                               # maker judged on taker cost (2026-08-18 gap)
     ("polyclaude_enter.py",'if tail_mult is not None:\n        return 1.0 - tail_mult * (1.0 - my_p)',
                     'if False:\n        return 1.0 - tail_mult * (1.0 - my_p)'),              # tail-mult silently falls back to flat (kills every bond fade)
+    ("check_marginal_apy.py",'    return ent.get("arb_paired") if isinstance(ent, dict) else None',
+                    '    return None'),                                                       # arb-pairing guard blind -> tools recommend breaking a riskless structure
 ]
 results = []
 for fname, old, new in MUTS:

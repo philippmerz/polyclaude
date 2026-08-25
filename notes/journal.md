@@ -9409,3 +9409,50 @@ needs FDV-distribution + launch-timing research I won't rush as fallback — fla
 
 Next catalysts: Netflix skip grades today 3PM ET (19:00 UTC, after this tick); Hormuz resolves
 Aug-31 (redemption runbook staged, rests don't block redemption); MacBook Apple event Sep 8-10.
+
+## 2026-08-25 07:3x-08:0x interactive session — REWIND RECOVERY + the fallback's handoff closed (4 priors + arb-exit guard)
+
+**Operator rewound the session and switched Fable->Opus (Fable limit hit). The rewind reverted
+WORKING-TREE FILES, not just conversation.** Found on orientation: git log had 6 commits through
+Aug-25 04:25 while the worktree journal ended Aug-23 02:2x. `git diff` was strictly BEHIND HEAD on
+4 files (journal -110 lines, longterm_watchlist -22, priors reverting criteria_read 08-25->08-13,
+README snapshot 08-25->08-10); only inject_log.md was legitimately AHEAD (live daemon appends).
+Backed the stale copies to scratchpad, then `git checkout --` those 4 — two days of real work
+recovered (Sunday review, 2 ticks, the fallback tick, MacBook divergence ack). Had I committed
+anything first, that work would have been wiped. GENERAL RULE: after any rewind, diff worktree vs
+HEAD BEFORE writing anything; a rewind is a file operation, not just a context operation.
+
+**Closed the 04:25 fallback tick's explicit handoff** ("3 Metamask legs + Hormuz carry NO priors;
+adding them needs research I won't rush as fallback — flagging, not faking"). That is exactly the
+right fallback posture, and the interactive session is the one that pays it off:
+- **Found the crux is DIRECTLY PRICED by a sibling market** rather than guessable: the event
+  `will-metamask-launch-a-token-in-2025` carries a "by December 31, 2026" leg at YES 0.085. Every
+  FDV leg is bounded by it (no launch by Dec-31 -> all FDV legs resolve NO), so
+  p_yes = P(launch) x P(FDV>bar | launch) with the first term taken from the market, not invented.
+  Recorded the conditional distribution honestly wide (>700M 0.92, >3B 0.62, >4B 0.52) off
+  comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) and noted it barely
+  matters because the structure is arb-paired.
+- **Noted a live bound violation**: FDV>700M YES (0.092) prices ABOVE its own precondition (0.085)
+  — logically impossible, ~0.7pp, far under the 2pp floor on these books ($61 v24 on the launch
+  leg). Watch-only, with the executable trade written down (BUY 700M-NO + BUY launch-YES).
+- **Hormuz priced as VERIFIED IMPOSSIBILITY, not forecast**: p_no 0.998 with the residual for
+  resolver error only. Two independent guards recorded: 7dMA ~3.5 vs a 60 bar never once reached
+  in 150 prints (peak single day 44), AND the feed lags ~6 days so post-Aug-25 data cannot even
+  publish before resolution. Regime caveat attached (does NOT transfer to Sep-30/Dec-31 siblings).
+
+**THE REAL FIND — both exit tools immediately recommended breaking the arb.** With priors in
+place, exit_analysis printed "SELL TAKER NOW (+$0.36)" on the 700M leg and check_marginal_apy
+flagged NEGATIVE_EDGE (saved only by the tick-noise floor, explicitly "flips to EXIT at a 0.05
+haircut"). Both right per-leg, both catastrophic: closing one leg of a matched pair converts
+riskless carry into a naked directional position. My "DO NOT EXIT INDEPENDENTLY" prose in the
+priors note did NOT stop either. Shipped an `arb_paired` marker both tools READ and act on:
+exit_analysis converts the verdict; check_marginal_apy routes to holds with the reason inline and
+marks the clearing legs too. 6 tests (86 total) + a 10th mutant (guard blinded) — all CAUGHT.
+
+**Bug found inside the fix**: the ARB-PAIRED verdict initially rendered as a BARE clean hold,
+because the holds printer used a hardcoded PREFIX ALLOWLIST — under a comment warning that bare
+printing is how a low-context tick concludes "all fine" about dead money. Fixed structurally (any
+non-empty verdict prints; the uninformative literal "HOLD" suppressed). Both lessons banked.
+
+Book: 10 positions, bankroll ~$196, REALIZED +$4.70 (+2.8%). Netflix skip grades TODAY 19:00 UTC;
+Hormuz resolves Aug-31 (6d); NVDA earnings tomorrow; Apple event Sep 8-10.

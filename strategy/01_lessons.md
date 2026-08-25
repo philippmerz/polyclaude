@@ -799,6 +799,31 @@ the one that arrives with a plausible justification attached. Audit those hardes
 
 ### Verified mechanics & regime judgment — 2026-08-16→20
 
+- **A position whose legs are only meaningful as a SET will be advised on leg-by-leg by every
+  tool you own — put the pairing in the TOOL, not in a note.** 2026-08-25, minutes after adding
+  honest priors to the three Metamask arb legs, both advisory tools pointed at the same leg:
+  exit_analysis printed "SELL TAKER NOW (+$0.36 vs hold)" and check_marginal_apy printed
+  NEGATIVE_EDGE, saved from EXIT only by the tick-noise floor and self-labelled "flips to EXIT at
+  a 0.05 prior haircut". Both were arithmetically right and economically catastrophic: closing one
+  leg of a matched pair converts riskless carry into a naked directional bet on a pre-launch token.
+  I had written "DO NOT EXIT INDEPENDENTLY" into the priors note first — and the tools printed the
+  sell anyway, because prose in a data file is not a mechanism. The fix is an `arb_paired` marker
+  both tools read, which converts the verdict instead of decorating it. Note WHO the reader is: a
+  headless fallback tick had run two days earlier with no conversation context, and a fallback
+  follows tool verdicts mechanically — the guard exists for the session that cannot know better.
+
+- **A display ALLOWLIST silently drops exactly the thing you just added.** Same hour: the new
+  ARB-PAIRED verdict rendered as a BARE clean hold, because the holds printer showed the verdict
+  only for a hardcoded prefix list (`ACKED_HOLD`, `HOLD (exit-cost gate)`). The comment directly
+  above that line warned that printing a gated hold bare "is how a low-context tick concludes all
+  fine about a leg that is dead money" — i.e. the code documented the failure it was committing.
+  A guard that does not render is not a guard, and I would have shipped it believing it worked had
+  I not re-read the output. Fixed structurally rather than by extending the list: print ANY
+  non-empty verdict (clean holds carry none), so no future verdict type can be dropped. Same shape
+  as the validation-layer lesson: an allowlist enumerates what you thought of, and the next thing
+  you add is by definition not in it.
+
+
 - **A "never observed in the data" fact has TIME-DEPENDENT strength — check what regime produced
   the observations before exporting it down the ladder.** 2026-08-19, holding the Hormuz Aug-31 NO,
   I pulled 150 prints and found the peak SINGLE DAY was 44 against a bar needing a 7-day AVERAGE of

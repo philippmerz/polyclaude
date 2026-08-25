@@ -106,12 +106,27 @@ def main() -> int:
                 stale = " [PRIOR-STALE]"
         except Exception:
             stale = " [PRIOR-UNDATED]"
-        hidden = False
+        hidden, arb_paired = False, None
         for kk, vv in priors.items():
             if isinstance(vv, dict) and (kk in slug or slug in kk):
                 hidden = bool(vv.get("hidden_info"))
+                arb_paired = vv.get("arb_paired")
                 break
-        if taker_net > hold_ev:
+        if arb_paired:
+            # ARB-PAIRED legs are priced per-leg but only MEAN anything as a set:
+            # the structure pays >=$1 per matched pair in every state, so closing
+            # one leg converts riskless carry into a naked directional position.
+            # Added 2026-08-25 the moment this tool printed "SELL TAKER NOW
+            # (+$0.36)" on the Metamask 700M leg — a verdict a headless fallback
+            # tick (one ran two days earlier, with no conversation context) could
+            # have executed mechanically. The doctrine note lived in the priors
+            # file and the tool printed the sell anyway: a rule written down is
+            # not a rule enforced.
+            gap = taker_net - hold_ev
+            verdict = (f"HOLD — ARB-PAIRED ({arb_paired}); per-leg math says "
+                       f"{'SELL +' if gap > 0 else 'hold '}${abs(gap):.2f} but that number is "
+                       f"MEANINGLESS ALONE. Exit only as matched pairs, or let it resolve (fee-free).")
+        elif taker_net > hold_ev:
             verdict = f"SELL TAKER NOW (+${taker_net - hold_ev:.2f} vs hold)"
             if hidden:
                 verdict += " [hidden-info: VERIFY the move first]"

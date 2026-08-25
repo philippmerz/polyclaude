@@ -315,3 +315,33 @@ check("wallet-verified fee, arb-1 fills", _fee1, 0.182, tol=0.004)
 _fee2 = (pm_fees.fee_per_share(_m, 0.0803897) * 32.466828
          + pm_fees.fee_per_share(_m, 0.849) * 29.717311)
 check("wallet-verified fee, arb-2 fills", _fee2, 0.4347, tol=0.004)
+
+# --------------------------------------------- arb-paired exit guard (2026-08-25)
+# Scope note: this suite is "arithmetic that decides what a trade costs", and a
+# failed arb-pairing lookup costs MORE than a fee error — it lets a tool
+# recommend closing one leg of a riskless structure, converting locked carry
+# into a naked directional position. Both advisory tools pointed at the same
+# Metamask leg the day its prior was added (exit_analysis "SELL TAKER NOW
+# +$0.36"; check_marginal_apy NEGATIVE_EDGE, saved only by the tick-noise floor).
+import check_marginal_apy as cma  # noqa: E402
+
+_RAW = {
+    "_comment_schema": "a non-dict entry must not crash the lookup",
+    "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222": {
+        "p_no": 0.947, "arb_paired": "DEC-0079/0080 structure"},
+    "will-the-us-acquire-any-part-of-greenland-in-2026": {"p_no": 0.95},
+}
+check("arb_paired exact slug match",
+      cma._arb_paired("metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222", _RAW),
+      "DEC-0079/0080 structure")
+# Slug variants: the live data-api slug can be longer or shorter than the key,
+# which is why the lookup matches containment in BOTH directions.
+check("arb_paired containment (slug extends key)",
+      cma._arb_paired("metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222-extra", _RAW),
+      "DEC-0079/0080 structure")
+check("arb_paired unpaired position returns None",
+      cma._arb_paired("will-the-us-acquire-any-part-of-greenland-in-2026", _RAW), None)
+check("arb_paired unknown slug returns None", cma._arb_paired("some-other-market", _RAW), None)
+check("arb_paired empty slug returns None", cma._arb_paired("", _RAW), None)
+# A string entry (schema comments live in this file) must not raise.
+check("arb_paired tolerates non-dict entries", cma._arb_paired("_comment_schema", _RAW), None)
