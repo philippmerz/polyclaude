@@ -9554,3 +9554,31 @@ the lesson is not "these five strings" but "the code fix is never the whole fix"
 forcing a finding here would be the failure mode these cycles exist to prevent.
 
 Suite green (86). Netflix grades 19:00 UTC; NVDA tomorrow; Hormuz Aug-31 (redemption rehearsed).
+
+## 2026-08-25 09:2x continuation — Netflix daily-source hunt closed with a REAL base rate (268 weeks)
+
+Ran the backlog's scheduled bounded pass. Answer to "is there a fetchable daily source": NO —
+FlixPatrol and whats-on-netflix are Cloudflare-403 from this VM, and Netflix's own page is
+weekly-only, showing last week until the Tuesday publish. The honest framing is sharper than
+"missing data": the in-week viewing variable is observable to OTHER traders through those same
+public daily trackers and not to me, so entering mid-week is adverse selection on the exact crux.
+
+But the hunt turned up something better than a daily feed: the OFFICIAL HISTORY is fully fetchable
+(top10.netflix.com/data/all-weeks-countries.tsv, 499k rows, 2021-07 onward). Computed the US Films
+base rate over 268 weeks / 267 consecutive pairs — memory-safe stream-filter, no 31MB parse held:
+  * incumbent #1 HOLDS the top slot next week: **30.0%** (80/267); 34.6% in the last 52 weeks
+  * next week's #1 was NOT in the prior week's top 10 at all: **49.8%**
+  * from the top-10 but not #1: 20.2%
+Half of all weekly winners are new releases landing straight at #1. That is the Netflix cadence,
+and it is why the market put this week's favourite (a new release) at 0.93 over a 2-week incumbent
+("The Last House", #1 on both Aug-09 and Aug-16).
+
+THE REFINEMENT IT BUYS — the family is not a blanket pass, it is a pass with one named exception.
+The RELEASE SLATE is public and knowable in advance; in-week viewing is not. A week with no
+significant new film drop removes the 49.8% new-entrant path and lifts the incumbent's hold
+probability far above the unconditional 30%. That is a computable input I am NOT adversely
+selected on. So: skip by default; look only when the slate is thin AND the incumbent-holds price
+sits well under the slate-adjusted base rate. Deliberately NOT building a scanner — one unproven
+edge, no free capital, and recomputing is a 10-line fetch (the "scale before it works" error).
+
+Grades tonight: the Aug-21 skip row settles on the 19:00 UTC publish (did the 0.93 favourite win?).
