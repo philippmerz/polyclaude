@@ -9582,3 +9582,35 @@ sits well under the slate-adjusted base rate. Deliberately NOT building a scanne
 edge, no free capital, and recomputing is a 10-line fetch (the "scale before it works" error).
 
 Grades tonight: the Aug-21 skip row settles on the 19:00 UTC publish (did the 0.93 favourite win?).
+
+## 2026-08-25 09:4x continuation — pulled the maker-rewards check forward; found live pools, incl. an EMPTY $20/day band
+
+Capital-bound until Aug-31, so the leverage is in preparing that window. The backlog gated a
+maker-rewards check on it; doing it now costs nothing and means the day itself is execution rather
+than research.
+
+FOUND: 6 of 10 held markets carry live clobRewards pools (Gemini-HLE $20/day, OpenAI-50 $20/day,
+OpenAI-55 $5, Metamask 700M/4B $5 each, 3B $3, Trump-out $1; MacBook/Greenland/Hormuz none), all
+maxSpread 4.5c, live since Jul-27 with no end date. Measured the denominator rather than assuming:
+Gemini's band holds ~1,780sh (a min-size add is ~2% = ~$0.44/day), OpenAI-55 ~333sh (~$0.28/day),
+and **OpenAI-50's band is EMPTY on both sides against $20/day** — its book is 0.41/0.56, a 15c
+spread around a 4.5c band, so the qualifying zone is a void.
+
+Then read the actual mechanics instead of trading on a screenshot: score is QUADRATIC in distance
+from mid (S=((v-s)/v)^2), so an order at the band edge earns literally nothing and you must sit
+near mid; single-sided scores but penalized, and only because mid sits inside [0.10,0.90];
+two-sided scores ~3x; the pool splits by normalized score every minute over a daily epoch.
+
+THE CONSTRAINT THAT ACTUALLY BINDS IS DOCTRINE, NOT CAPITAL. To score on OpenAI-50 I must quote
+within ~1.5-3c of mid 0.485. The ASK side means selling NO around 0.50 against my 0.64 fair —
+below fair, which the hidden-info rule bans outright (donates the news) and which destroys value
+regardless. Only the BID side survives: buying NO at ~0.47 when fair is 0.64 is +EV on its own
+merits, with rewards as a bonus on a trade I would take anyway. That framing is the whole finding —
+"free rewards" would have had me quoting both sides and selling my own conviction to collect $20/day.
+
+SKEPTICISM RECORDED, because the number flatters: an implied >25%/day on ~$19 of capital is absurd
+on its face, so the assumption is that I am misunderstanding something until a real payout is
+reconciled. Also the empty band is ONE snapshot. Backlogged the experiment for the Aug-31 window:
+one min-size bid near mid on the $20/day leg, one full epoch, reconcile ACTUAL USDC received
+against predicted share, and do not scale until that reconciles. Same discipline that turned the
+fee-model guess into a wallet-verified formula.
