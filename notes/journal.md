@@ -9614,3 +9614,26 @@ reconciled. Also the empty band is ONE snapshot. Backlogged the experiment for t
 one min-size bid near mid on the $20/day leg, one full epoch, reconcile ACTUAL USDC received
 against predicted share, and do not scale until that reconciles. Same discipline that turned the
 fee-model guess into a wallet-verified formula.
+
+## 2026-08-25 09:5x continuation — band sampler built + running; caught a LEG MISLABEL before it could cost an order
+
+Closed the loose end I had named in the rewards writeup ("the empty band is ONE snapshot"). Built
+`scripts/reward_band_sample.py` — one gamma + one book call per sample, appends JSONL, holds
+nothing in memory — and started it on an 8h / 15-min cadence. It records not just depth-in-band but
+SCORE-WEIGHTED depth, because the payout formula is quadratic in distance from mid: an order at the
+band edge scores zero, so raw depth systematically OVERSTATES the competition I would face. By the
+Aug-31 window the sizing decision rests on ~30 observations instead of the single 09:45 snapshot,
+and the same script does the payout reconciliation.
+
+CAUGHT A MISLABEL IN THE ACT: I launched the sampler against the `...be-50-or-higher-...063` slug
+and its first line printed mid 0.21 — not the 0.485 I expected. The two HLE ladder legs have slugs
+differing by four characters, and the $20/day empty-band pool is on the **>=55** leg (...064), NOT
+the >=50 leg I had written into the backlog an hour earlier. Verified the mapping properly rather
+than patching the label: >=55 = mark 0.485 / fair 0.64 / 19sh / $20 pool / empty band; >=50 = mark
+0.21 / fair 0.41 / 15sh / $5 pool / ~333sh in band. Sanity-checked by the monotone ordering it must
+obey (P(>=50) 0.79 > P(>=55) 0.52). Corrected the backlog including the experiment instruction,
+which had said to post the Aug-31 test bid on the wrong market.
+
+The catch came from reading the tool's first output line against an expectation instead of trusting
+the call — the same habit that has now caught a response shape, a fee curve and a slug. The
+unnoticed version of this puts a live order on the wrong market on resolution day.
