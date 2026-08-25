@@ -72,6 +72,14 @@ def main() -> int:
                     help="two stamps spanning a period where change is KNOWN to have "
                          "occurred; proves the parser can see change at all")
     ap.add_argument("--pattern", default=DEFAULT_PATTERN)
+    ap.add_argument("--expect", default=None,
+                    help="comma-separated substrings that MUST appear in the live parse "
+                         "(e.g. 'claude,grok'). --validate only proves the parser sees SOME "
+                         "change; it cannot prove the parser sees EVERYTHING, and a partially "
+                         "blind parser still returns FROZEN. On 2026-08-25 --validate passed "
+                         "while the pattern was blind to space-separated names, and the gap was "
+                         "caught only by cross-checking a known inventory. This is that check, "
+                         "mechanised.")
     a = ap.parse_args()
     global PATTERN
     PATTERN = a.pattern
@@ -95,6 +103,16 @@ def main() -> int:
             live, old = fetch(c, a.url, None), fetch(c, a.url, a.since)
             if live is None or old is None:
                 return 2
+            if a.expect:
+                blob = " ".join(sorted(live))
+                missing = [e.strip() for e in a.expect.split(",")
+                           if e.strip() and e.strip().lower() not in blob]
+                if missing:
+                    print(f"!! PARSER INCOMPLETE — expected but not found: {missing}. "
+                          f"A blind parser returns FROZEN for the wrong reason; widen --pattern "
+                          f"before believing any verdict below.")
+                    return 1
+                print(f"[coverage] all expected items present: {a.expect}")
             added, removed = sorted(live - old), sorted(old - live)
             print(f"[live vs {a.since}] added {added or 'NONE'} | removed {removed or 'NONE'}")
             print(f"  live set ({len(live)}): {sorted(live)}")

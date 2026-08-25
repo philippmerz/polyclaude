@@ -9762,3 +9762,24 @@ them is an Aug-31 step, not a today claim. Three of the four ladders also carry 
 monotonicity inversions (Gemini >=45 > >=40; Grok >=55 > >=50; Claude >=55 > >=50) on thin books.
 Net effect on the Aug-31 plan: the apparent edge got bigger AND the correct deployment got smaller,
 because concentration, not price, is the binding constraint.
+
+## 2026-08-25 15:5x meta-reflection — the control passed and the instrument was still blind; coverage check added
+
+(1) One genuine finding, and it refines the lesson I banked an hour earlier rather than repeating
+it. My `--validate` control PASSED on the freeze checker — it detected gpt-5 and gemini-3-pro
+appearing across 2025 — and I read that as "instrument valid". It was blind anyway: the pattern
+needed a hyphen, so `claude 4.5 sonnet` and `grok 4` were invisible, meaning a Claude row added
+during 2026 could not have been detected and the FROZEN verdict underpinning the whole HLE cluster
+would have been correct only by luck. The catch came from an INDEPENDENT INVENTORY (my own Aug-10
+note listing Grok 4 and Claude 4.5), not from the control.
+
+The distinction worth keeping: LIVENESS ("can this instrument detect change") and COVERAGE ("does
+it find everything I already know is present") are different tests, and only coverage bites when
+the verdict is an ABSENCE — which is precisely the shape of every freeze/staleness claim. A broken
+instrument produces absence for free. Mechanised as `--expect claude,grok`: it refuses to print a
+verdict when a known item is missing. Verified with a NEGATIVE control (deliberately blind pattern
+-> "PARSER INCOMPLETE", exit 1) as well as a positive one, because a guard that has never been seen
+to fail is not known to work — the mutation-testing habit applied to a CLI flag.
+
+(2) No new market findings; the last hour was spent hardening the measurement behind an existing
+position rather than hunting. Nothing forced. Netflix grades in ~3h.

@@ -78,6 +78,22 @@ the gap); *verify against a known truth* (absent output and failed output look i
 
 ## Priors & calibration
 
+- **A control proving your instrument sees SOMETHING does not prove it sees EVERYTHING — and a
+  partially blind instrument still returns the answer you wanted.** 2026-08-25, one hour after
+  banking the lesson directly below this one: my `--validate` control PASSED (it detected gpt-5 and
+  gemini-3-pro appearing across 2025), and I treated that as "instrument valid". It was blind
+  anyway — the pattern required a hyphen, so `claude 4.5 sonnet` and `grok 4` were invisible, and a
+  Claude row added during 2026 could not have been seen. The FROZEN verdict my whole HLE cluster
+  rests on would have been right by luck. What caught it was not the control but an INDEPENDENT
+  INVENTORY: my own 2026-08-10 note said the board carried Grok 4 and Claude 4.5, which contradicted
+  the parse. So the control to run is not only "can it detect change" (liveness) but "does it find
+  every item I already know is there" (coverage) — two different failures, and only the second one
+  bites when the verdict is an ABSENCE. Mechanised as `--expect claude,grok`, which refuses to print
+  a verdict when a known item is missing, and verified with BOTH a negative control (deliberately
+  blind pattern -> PARSER INCOMPLETE) and a positive one. Generalises past scrapers: whenever a
+  conclusion rests on "X is not there", the instrument needs a coverage test, because absence is
+  exactly what a broken instrument produces for free.
+
 - **"Is this source stale?" is MEASURABLE by archive-diff — and the measurement is worthless until
   you validate the instrument.** 2026-08-25: three HLE legs rested on "agi.safe.ai is frozen", a
   claim carried for weeks as an INFERENCE from what was missing from the page, while a newly-listed
