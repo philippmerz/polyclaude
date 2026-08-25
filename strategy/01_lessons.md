@@ -78,6 +78,21 @@ the gap); *verify against a known truth* (absent output and failed output look i
 
 ## Priors & calibration
 
+- **When a market is CONDITIONAL, look for the sibling that prices the condition — do not invent
+  the term someone else quotes.** 2026-08-25, pricing three Metamask FDV legs: each resolves YES
+  only if MetaMask launches a token by Dec-31 AND the FDV clears a bar, so
+  p_yes = P(launch) x P(FDV > bar | launch). P(launch) is a question I have no special insight
+  into — and a separate market prices exactly it ("Will MetaMask launch a token by December 31,
+  2026", YES 0.085). Taking that number instead of inventing one does three things: it removes my
+  worst-estimated term, it forces honesty about WHERE my edge actually lives (only in the
+  conditional term, if anywhere), and it hands me a free consistency check, because the conditional
+  market must price at or below the condition market. That check immediately paid: FDV>700M was
+  quoted 0.092 against a 0.085 precondition — logically impossible, and now an armed cross-event
+  trigger. CAVEATS: a thin sibling (here $61 of 24h volume) is an anchor, not gospel — quote the
+  volume next to the number; and accepting the market's term means you have explicitly declined to
+  have an edge there, which is a decision to make consciously rather than by default.
+
+
 - **Verify evidence AGE before acting on any prior.** kimi went 3-for-3 catching stale
   evidence under my priors in one week (GPT-6 down, MacBook down, SpaceX UP — direction
   unpredictable). Priors carry `verified:` dates; >14d flags in both Kelly consumers.
@@ -219,6 +234,24 @@ the gap); *verify against a known truth* (absent output and failed output look i
 ## Ops (the failure classes that actually happened)
 
 ### Daemons, resources & liveness
+
+- **A conversation rewind is a FILE operation — diff the worktree against HEAD before you write
+  anything.** 2026-08-25: the operator rewound the session (Fable quota hit, switched to Opus) and
+  said only that they had gone "a bit too far". The rewind also reverted WORKING-TREE FILES to the
+  rewind point, while git history kept the real commits — so `git log` showed six commits through
+  Aug-25 04:25 while `notes/journal.md` on disk ended Aug-23. The trap is that everything LOOKS
+  normal: no error, no conflict, just an older file. My habitual next move is `git add -A &&
+  commit`, which would have made the reverted state the new truth and silently destroyed two days
+  of work (a Sunday review, two ticks, a fallback tick, a divergence ack, and priors whose
+  criteria_read dates rolled back 12 days). PROCEDURE, in order: (1) `git status` — files you did
+  not touch showing as modified is the tell; (2) `git diff --stat` and count +/- lines to establish
+  DIRECTION per file — behind HEAD (deletions only) vs genuinely ahead; (3) copy the stale versions
+  aside before restoring, so the recovery is itself reversible; (4) `git checkout --` only the files
+  that are behind. Do NOT blanket-restore: `notes/inject_log.md` was legitimately AHEAD (a live
+  daemon appends to it between commits), and a blanket checkout would have destroyed real state to
+  fix the opposite problem. The general shape is the empty-list bug wearing new clothes — an older
+  file and a current one look identical until you check the count against a known truth.
+
 
 - **NEVER pkill/pgrep with the pattern anywhere else in the command line** — killed the
   shell THREE times (exit 144). Use `scripts/daemonctl.sh {status|stop|restart}` —

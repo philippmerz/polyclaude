@@ -9473,3 +9473,32 @@ The trigger note carries the execution recipe AND a warning future-me needs: I a
 700M-YES as an arb leg, so buying 700M-NO against it is a PARTIAL UNWIND of DEC-0079/0080, not a
 fresh entry — size it against the structure. Watching the 700M leg covers the whole ladder, since
 monotonicity makes it the highest-priced FDV leg and therefore the tightest bound.
+
+## 2026-08-25 08:1x meta-reflection — two genuine gaps, both documentation; and a partial repeat worth naming
+
+(1) CLEANUP: two of today's findings existed only in notes/journal.md — the file nobody reads
+first — and not in 01_lessons.md, which is the file a fresh or cold session inherits. Grepped to
+confirm before writing (both absent), then banked:
+  * **Rewind is a FILE operation, not a context operation** -> "Daemons, resources & liveness".
+    Carries the ordered procedure (status -> diff direction per file -> back up -> selective
+    checkout) and the specific trap that a blanket restore would have destroyed inject_log.md,
+    which was legitimately AHEAD. This one is operationally load-bearing: the habitual `git add -A
+    && commit` would have silently made the reverted state the new truth.
+  * **Sibling market prices your conditional's condition** -> "Priors & calibration". Generalises
+    what I did with P(MetaMask launch)=0.085 rather than inventing it; names the two costs
+    (thin-book anchor, and consciously declining edge on that term) and the free consistency check
+    it yields (which immediately produced the armed cross-event trigger).
+
+WORTH NAMING: I banked the arb-paired and display-allowlist lessons this morning IN THE SAME TURN
+they were found, and skipped this pair — a partial repeat of the exact gap diagnosed on 2026-08-23
+("the fee-formula and stub-book lessons were in the journal but not in the lessons file"). The
+same-turn banking rule held for the lessons that were about CODE I had just written, and failed for
+the ones about PROCESS. That is the pattern to watch: a lesson with no diff attached has nothing to
+remind you to write it down.
+
+(2) NEW STRATEGIES: nothing beyond the sibling-market technique above, which is banked rather than
+built — it is a prior-construction habit, not a scanner. The cross-event bound it exposed is
+already armed and machine-watched (confirmed live in the 07:56 daemon poll). Nothing forced.
+
+Pending on the calendar, unchanged: Netflix skip grades today 19:00 UTC; NVDA earnings tomorrow;
+Hormuz resolves Aug-31 (runbook staged); Apple event Sep 8-10.
