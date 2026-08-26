@@ -10169,3 +10169,22 @@ VOLUME the strait has never once produced. 7dMA still 5.00 (latest print Aug-23)
   in the question. For template families that is the stronger check: it PROVES sameness rather than
   assuming it, and would catch a silent per-leg edit that a fresh read might gloss over.
 Audit CLEAN after both. No trades.
+
+## 2026-08-26 02:1x — third HLE leg re-read; the diff proves the cluster shares ONE resolution mechanism
+
+Rotation also fired on the Gemini leg. Diffed its body against the OpenAI>=50 body rather than
+re-reading prose: the ONLY textual difference is the lab clause ("any Google Gemini model" vs "any
+model published by OpenAI"). Every other sentence is character-identical — the capability-framed
+"achieves", the agi.safe.ai source clause, and the "published elsewhere" escape gated on
+UNAVAILABILITY with a NO default.
+
+That is a genuinely useful structural result rather than a box ticked: all three held HLE legs share
+ONE resolution mechanism, so they share ONE w_spirit. A single judgment about resolver behaviour
+moves the entire cluster together — which is the precise reason they must be sized as a cluster and
+not as three independent theses, and why yesterday's decision to ack rather than add was right for a
+reason stronger than capital. The diff PROVED that sameness in seconds; three separate prose reads
+would have assumed it.
+
+Also corrected a stale third-party figure inside the Gemini source-diff note (Gemini 3.1 Pro
+"~44.7" -> 46.44 on Scale as of 2026-08-16) — same prose-goes-stale class swept yesterday, caught
+here because the audit surfaced the note for reading. Audit CLEAN across all 10 positions.
