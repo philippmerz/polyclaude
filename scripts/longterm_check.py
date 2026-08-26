@@ -35,6 +35,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from agent_runtime import run_agent
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "notes" / "longterm_log.md"
 
@@ -136,10 +138,10 @@ def main() -> int:
                    help="Asset class — informs the search/analysis approach.")
     p.add_argument("--horizon-years", type=int, default=3,
                    help="Investment horizon in years (default: 3).")
-    p.add_argument("--model", default="haiku",
-                   help="Claude model for the lookup (default: haiku — cheap/fast).")
+    p.add_argument("--profile", choices=["research", "fast"], default="research",
+                   help="Model workload profile (default: research).")
     p.add_argument("--effort", default="medium",
-                   help="Claude effort level (default: medium).")
+                   help="Reasoning effort level (default: medium).")
     p.add_argument("--no-log", action="store_true",
                    help="Skip writing the result to notes/longterm_log.md.")
     args = p.parse_args()
@@ -152,26 +154,18 @@ def main() -> int:
         today_iso=today.isoformat(),
     )
 
-    cmd = [
-        "claude", "-p",
-        "--model", args.model,
-        "--effort", args.effort,
-        "--allowed-tools", "WebSearch,WebFetch,Bash",
-        "--permission-mode", "acceptEdits",
-    ]
-
     print(f"# longterm_check: {args.asset}", file=sys.stderr)
-    print(f"# type={args.asset_type} horizon={args.horizon_years}y model={args.model}", file=sys.stderr)
-    print(f"# spawning claude -p ...", file=sys.stderr)
+    print(f"# type={args.asset_type} horizon={args.horizon_years}y profile={args.profile}", file=sys.stderr)
+    print("# spawning scoped research worker ...", file=sys.stderr)
 
     try:
-        r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=600)
+        r = run_agent(prompt, profile=args.profile, effort=args.effort, timeout=600)
     except subprocess.TimeoutExpired:
-        print("ERROR: claude -p timed out after 10 minutes", file=sys.stderr)
+        print("ERROR: research worker timed out after 10 minutes", file=sys.stderr)
         return 3
 
     if r.returncode != 0:
-        print(f"ERROR: claude -p exited {r.returncode}", file=sys.stderr)
+        print(f"ERROR: research worker exited {r.returncode}", file=sys.stderr)
         print(f"stderr: {r.stderr[:500]}", file=sys.stderr)
         return r.returncode
 

@@ -1,15 +1,15 @@
 """Polyclaude heartbeat watcher — meta-monitoring for the autonomy stack.
 
 Hourly probe that checks each tracked daemon is healthy and alerts the
-operator on Telegram if anything looks stuck. Catches the class of bug
-that left a `claude -p` cron tick deadlocked for 3 days.
+operator on Telegram if anything looks stuck. Catches the class of bug that
+left a headless model worker deadlocked for three days.
 
 Checks performed:
   1. news_watcher daemon: PID alive AND state file (POLYCLAUDE_NEWS_STATE)
      mtime < 30 min old (state file updates after every 5-min poll cycle).
   2. telegram_listener daemon: PID alive (no good activity signal during
      quiet operator periods, so PID-only).
-  3. Stuck `claude -p` cron forks: any such process running > 60 min is
+  3. Stuck headless model workers: any such process running > 60 min is
      anomalous (cron ticks should complete much faster).
 
 Each anomaly type has its own 1-hour Telegram-cooldown so we don't spam.
@@ -230,14 +230,9 @@ def check_telegram_listener(state: dict) -> None:
                   cooldown=DAEMON_DOWN_COOLDOWN)
             return
 
-    # Wedged-delivery check (2026-07-30): liveness != progress. A tmux
-    # send-keys child of the listener wedged for 27 HOURS (listener blocked in
-    # do_wait, PID happily alive) and every operator message queued undelivered
-    # until the operator noticed. Normal send-keys children complete in
-    # milliseconds; any child older than 10 minutes means the delivery path is
-    # stuck. (The listener now passes timeout=30 to send-keys, so this is the
-    # backstop for OTHER unbounded block points, and for the alert the operator
-    # never got.)
+    # Wedged-delivery check (2026-07-30): liveness != progress. The transport is
+    # now a bounded durable queue, but any listener child older than 10 minutes
+    # still means a helper or network handoff is stuck.
     try:
         out = subprocess.run(["ps", "--ppid", str(pid), "-o", "pid=,etimes=,comm="],
                              capture_output=True, text=True, timeout=10).stdout
@@ -255,7 +250,7 @@ def check_telegram_listener(state: dict) -> None:
 
 
 def check_stuck_cron_forks(state: dict) -> None:
-    """Find any `claude -p` process older than the age limit."""
+    """Find any private headless model runner older than the age limit."""
     try:
         out = subprocess.run(
             ["ps", "-eo", "pid,etimes,cmd"],
@@ -275,7 +270,7 @@ def check_stuck_cron_forks(state: dict) -> None:
         if len(parts) < 3:
             continue
         pid_str, etimes_str, cmd = parts
-        if "claude -p" not in cmd:
+        if "polyclaude-agent run" not in cmd:
             continue
         try:
             age = int(etimes_str)
@@ -287,7 +282,7 @@ def check_stuck_cron_forks(state: dict) -> None:
     for pid, age, cmd in stuck:
         # Don't keep alerting for the same long-stuck PID; key includes pid
         _emit(state, f"stuck_cron_pid_{pid}",
-              f"claude -p cron fork PID {pid} has been running "
+              f"headless model worker PID {pid} has been running "
               f"{age // 60} min (>{CRON_FORK_AGE_LIMIT_SECONDS // 60} min limit) — "
               f"likely deadlocked. Inspect: ps -p {pid} -o pid,etime,stat,cmd")
 
@@ -361,7 +356,7 @@ MEM_ALERT_COOLDOWN = 2 * 3600
 
 def check_memory_pressure(state: dict) -> None:
     """OOM early-warning (2026-07-16, after the 3rd OOM crash took the VM +
-    network down). The box has ~1.9GB RAM; each claude agent subprocess runs
+    network down). The box has ~1.9GB RAM; each model subprocess can use
     200-400MB RSS, so two concurrent agents + the main session exhausts it.
     The behavioral fix is sequential-agents-only; this check is the tripwire
     for whatever slips through — alert BEFORE the kernel starts killing."""
@@ -375,8 +370,8 @@ def check_memory_pressure(state: dict) -> None:
         return
     if avail < MEM_AVAILABLE_FLOOR_KB:
         # Attribute RSS by owner (2026-07-19): the first real firing showed the
-        # top consumers were the OPERATOR's own concurrent claude sessions, not
-        # polyclaude subprocesses — so "kill your agents" was the wrong advice.
+        # top consumers were the OPERATOR's own concurrent sessions, not the
+        # trading account's subprocesses — so "kill your agents" was wrong.
         # Split the picture so the alert says WHO is using memory and points at
         # an accurate remediation.
         me = ""
@@ -396,14 +391,13 @@ def check_memory_pressure(state: dict) -> None:
                 # so prefix-match against the truncation marker.
                 uname = parts[1].rstrip("+")
                 is_mine = myuser.startswith(uname)
-                if "claude" in parts[2] or "python" in parts[2]:
-                    if is_mine:
-                        my_mb += rss
-                    else:
-                        other_mb += rss
+                if is_mine:
+                    my_mb += rss
+                else:
+                    other_mb += rss
                 if len(top) < 3:
                     top.append(f"{parts[2]}({parts[1][:8]}) {rss}MB")
-            me = (f"; polyclaude claude/py RSS {my_mb}MB vs other-user {other_mb}MB"
+            me = (f"; polyclaude process RSS {my_mb}MB vs other-user {other_mb}MB"
                   f"; top: {', '.join(top)}")
         except Exception:
             pass
@@ -420,12 +414,12 @@ TICK_EXEC_COOLDOWN = 3 * 3600
 
 
 def check_tick_execution(state: dict) -> None:
-    """End-to-end tick sentinel (2026-07-16). The 02:00 tick was DISPATCHED
-    (send-keys typed into pane operator:0.0, logged in peer_skips.log) but the
-    pane's inner claude was gone, so the keystrokes fell into a dead shell and
-    the tick silently never ran. Pane-liveness heuristics can't fully close
-    that hole; this check closes it at the OUTPUT end: a dispatch record with
-    no journal write within the grace window means the tick was eaten."""
+    """Alert on an old queue acknowledgement with no journal write.
+
+    A queue acknowledgement is not proof of execution. Never start a second
+    asset-capable worker from this ambiguous state: the operator can be alive
+    on a long turn or working through a backlog.
+    """
     repo = Path(__file__).resolve().parent.parent
     skips = repo / "logs" / "cron" / "peer_skips.log"
     journal = repo / "notes" / "journal.md"
@@ -436,7 +430,7 @@ def check_tick_execution(state: dict) -> None:
             fh.seek(max(0, skips.stat().st_size - 16384))
             tail = fh.read().decode(errors="replace")
         for line in tail.splitlines()[::-1]:
-            if "dispatched to operator pane" in line:
+            if "cron: queued to operator" in line or "dispatched to operator pane" in line:
                 ts = line.split()[0]  # 20260716T020001Z
                 last_dispatch = int(time.mktime(time.strptime(ts, "%Y%m%dT%H%M%SZ")))
                 break
@@ -450,49 +444,18 @@ def check_tick_execution(state: dict) -> None:
             and journal_m < last_dispatch
             and now - last_dispatch < 24 * 3600):
         _emit(state, "tick_dispatched_not_executed",
-              f"TICK EATEN: cron tick dispatched to the pane "
+              f"TICK EATEN: cron tick queued to the operator "
               f"{(now - last_dispatch) // 60}min ago but journal.md hasn't been "
-              f"touched since — the send-keys likely landed in a dead/absent claude. "
-              f"Operator: check AUTH/LOGIN and MODEL QUOTA first — an EXPIRED LOGIN "
-              f"(confirmed cause 2026-08-21, ~9.5h) and a quota-exhausted pane both look "
-              f"identical to a dead one (2026-08-02, 16h). The headless recovery below is a "
-              f"NO-OP for both — it hits the same auth wall — so only a human re-login fixes "
-              f"it; the ALERT is the working half. Then restart the session.",
+              f"touched since. Operator: check the session, authentication, and model quota; "
+              f"then restart the session if necessary. No automatic headless recovery is "
+              f"started because queue acceptance does not prove the main operator is idle or dead.",
               cooldown=TICK_EXEC_COOLDOWN)
-        # RECOVERY (2026-08-02): alerting alone left 16h of ticks unrun. Spawn
-        # the headless fallback for THIS eaten tick — it runs a different model
-        # than the interactive pane, so it completes when the pane's quota
-        # bucket is exhausted. Guarded three ways: once per dispatch timestamp,
-        # daily_checkin's own flock prevents concurrent runs, and the auth
-        # post-flight telegrams the operator if the fallback also fails.
-        # Quota note (2026-08-03): if the outage IS quota exhaustion, this
-        # spawn fails fast on a limit error — a rejected request, not a token
-        # burn — and the auth post-flight telegrams the operator. If the pane
-        # is dark for any OTHER reason (hang, dead shell), or the headless
-        # model's quota is separate from the pane's, it recovers the tick.
-        # Cheap in the bad case, useful in the good case; keep it on.
-        if state.get("last_tick_recovery_for") != last_dispatch:
-            state["last_tick_recovery_for"] = last_dispatch
-            try:
-                env = dict(os.environ, POLYCLAUDE_FORCE_HEADLESS="1")
-                subprocess.Popen(
-                    ["/bin/bash", str(repo / "scripts" / "daily_checkin.sh"),
-                     "RECOVERY: prior tick was EATEN (pane unresponsive — quota or "
-                     "hang). You are the headless fallback; run the standard check-in."],
-                    cwd=str(repo), env=env,
-                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                    start_new_session=True,
-                )
-                print("[heartbeat] tick-eaten RECOVERY: spawned headless daily_checkin", flush=True)
-            except Exception as e:
-                print(f"[heartbeat] recovery spawn failed: {e}", flush=True)
 
 
 def check_operator_session(state: dict) -> None:
     """Alert when the operator tmux session itself is absent (2026-07-16
     audit: after the reboot, every daemon auto-recovered except the session —
-    a human closed that gap 21 minutes later by luck. The session can't be
-    auto-started (interactive login), so the fix is a prompt ping)."""
+    a human closed that gap 21 minutes later by luck)."""
     try:
         r = subprocess.run(["tmux", "has-session", "-t", "operator"],
                            capture_output=True, timeout=10)
@@ -500,7 +463,7 @@ def check_operator_session(state: dict) -> None:
             _emit(state, "operator_session_missing",
                   "operator tmux session is ABSENT (reboot?) — ticks/injects/"
                   "messages have no destination and only headless fallbacks run. "
-                  "Operator: start the session.",
+                  "Operator: run pc-attach --start from an interactive terminal.",
                   cooldown=DAEMON_DOWN_COOLDOWN)
     except Exception:
         pass

@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Catalyst-calendar check for prospective bond-like longshot trades.
 
-Spawns a `claude -p --model haiku` session with WebSearch + WebFetch enabled,
-and asks it to identify catalysts in the resolution window that could shift
-P(YES) above the base rate.
+Spawns a scoped research worker with web search enabled and asks it to identify
+catalysts in the resolution window that could shift P(YES) above the base rate.
 
 Triggered by the calibration miss on DEC-0016 (2026-05-08): I claimed
 P(YES)=1% on aliens-by-May-31 NO without checking the news. The PURSUE UAP
@@ -31,10 +30,11 @@ from __future__ import annotations
 
 import argparse
 import datetime
-import os
 import subprocess
 import sys
 from pathlib import Path
+
+from agent_runtime import run_agent
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "notes" / "catalyst_log.md"
@@ -43,10 +43,10 @@ LOG_PATH = REPO_ROOT / "notes" / "catalyst_log.md"
 def _fetch_resolution_description(question: str) -> str | None:
     """Look up the market on Polymarket gamma-api and return its description.
 
-    Why: lesson from 2026-05-08 US-invade-Iran NO check. Haiku read media
+    Why: lesson from 2026-05-08 US-invade-Iran NO check. The prior small-model check read media
     framing ("invasion happened") and gave central 98% P(YES), but the
     literal resolution criteria says "intended to establish control" —
-    a narrower bar. Without the literal text, haiku biases toward
+    a narrower bar. Without the literal text, a model can bias toward
     media-framed event descriptions. Injecting the description anchors
     the analysis on the actual oracle-resolution language.
 
@@ -114,7 +114,7 @@ Steps:
 
 4. Note historical base rate from analogous cases or markets that have resolved.
 
-4b. **If the resolution criteria implies a CONJUNCTION (e.g., "Will X lead Iran" requires regime fall AND X installed; "Will X be confirmed" requires a specific event AND oracle interpretation), break the joint probability into components and SHOW THE MULTIPLICATIVE BREAKDOWN explicitly.** Don't just give a single number — give P(component A) × P(component B | A) × ... = joint. This prevents the operator from double-discounting (a real error encountered 2026-05-08 on the Pahlavi market: haiku gave joint 14% but didn't show the breakdown, operator re-applied a conditional adjustment thinking it was unconditional).
+4b. **If the resolution criteria implies a CONJUNCTION (e.g., "Will X lead Iran" requires regime fall AND X installed; "Will X be confirmed" requires a specific event AND oracle interpretation), break the joint probability into components and SHOW THE MULTIPLICATIVE BREAKDOWN explicitly.** Don't just give a single number — give P(component A) × P(component B | A) × ... = joint. This prevents the operator from double-discounting (a real error encountered 2026-05-08 on the Pahlavi market: an earlier check gave joint 14% but didn't show the breakdown, so the operator re-applied a conditional adjustment thinking it was unconditional).
 
 4c. **The Central P(YES) MUST EQUAL the structured multiplicative-breakdown joint — not a separate "base-rate + crisis-multiplier" gut number.** If your narrative intuition differs from the structured product, the STRUCTURED BREAKDOWN WINS for any conjunctive or strict-criteria question; do NOT inflate the Central above it. Lesson source: the 2026-06-11 (DEC-0036) and 2026-06-26 (DEC-0041) Iran regime-fall checks BOTH returned a narrative central (18%, then 14%) materially ABOVE their own multiplicative breakdown (~3.6%), over-weighting topple-conditional chains during a war-escalation news cycle; the inflated central nearly drove an overcautious trim (DEC-0036 did, and lost ~$0.45). During crisis/escalation coverage the narrative pull is UP; the conjunctive product of components is the discipline that corrects it.
 
@@ -158,7 +158,7 @@ End with the report only. Do NOT add commentary outside the report. Be terse —
 def _recent_alert_headlines(question: str, max_lines: int = 6) -> str | None:
     """Latest news_alerts.jsonl titles sharing keywords with the question.
 
-    2026-06-12 lesson: the haiku's websearch lags breaking news by hours — twice
+    2026-06-12 lesson: model web search can lag breaking news by hours — twice
     in 24h it reasoned from a stale world-state (missed live strikes, then missed
     the deal-pivot). The alerts file has the freshest verified headlines; inject
     them so the model anchors on live state."""
@@ -199,10 +199,10 @@ def main() -> int:
                    help="Market creation date (ISO). For 'by DATE' markets created mid-stream, "
                         "only events AFTER this date can resolve YES — without it the check "
                         "counts pre-creation events (2026-07-18 Beirut miss: 85%% vs market 27%%).")
-    p.add_argument("--model", default="haiku",
-                   help="Claude model for the lookup (default: haiku — cheap/fast).")
+    p.add_argument("--profile", choices=["research", "fast"], default="research",
+                   help="Model workload profile (default: research).")
     p.add_argument("--effort", default="medium",
-                   help="Claude effort level (default: medium).")
+                   help="Reasoning effort level (default: medium).")
     p.add_argument("--no-log", action="store_true",
                    help="Skip writing the result to notes/catalyst_log.md.")
     args = p.parse_args()
@@ -219,7 +219,7 @@ def main() -> int:
         print(f"ERROR: resolution date {resolve} is in the past", file=sys.stderr)
         return 2
 
-    # Best-effort fetch of the literal resolution description so haiku anchors
+    # Best-effort fetch of the literal resolution description so the model anchors
     # on oracle language, not media framing.
     resolution_description = _fetch_resolution_description(args.question)
     if resolution_description:
@@ -227,7 +227,7 @@ def main() -> int:
         print(f"# resolution criteria fetched ({len(resolution_description)} chars)", file=sys.stderr)
     else:
         resolution_block = "\n(No literal resolution criteria fetched — analyze under reasonable strict interpretation of the question.)\n"
-        print("# resolution criteria unavailable; haiku will use strict interpretation of question text", file=sys.stderr)
+        print("# resolution criteria unavailable; model will use strict interpretation of question text", file=sys.stderr)
 
     headlines = _recent_alert_headlines(args.question)
     if headlines:
@@ -253,26 +253,18 @@ def main() -> int:
         resolution_block=resolution_block,
     )
 
-    cmd = [
-        "claude", "-p",
-        "--model", args.model,
-        "--effort", args.effort,
-        "--allowed-tools", "WebSearch,WebFetch,Bash",
-        "--permission-mode", "acceptEdits",
-    ]
-
     print(f"# catalyst_check: {args.question}", file=sys.stderr)
-    print(f"# resolve={args.resolve_date} ({days} days)  model={args.model}", file=sys.stderr)
-    print(f"# spawning claude -p ...", file=sys.stderr)
+    print(f"# resolve={args.resolve_date} ({days} days)  profile={args.profile}", file=sys.stderr)
+    print("# spawning scoped research worker ...", file=sys.stderr)
 
     try:
-        r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=300)
+        r = run_agent(prompt, profile=args.profile, effort=args.effort, timeout=300)
     except subprocess.TimeoutExpired:
-        print("ERROR: claude -p timed out after 5 minutes", file=sys.stderr)
+        print("ERROR: research worker timed out after 5 minutes", file=sys.stderr)
         return 3
 
     if r.returncode != 0:
-        print(f"ERROR: claude -p exited {r.returncode}", file=sys.stderr)
+        print(f"ERROR: research worker exited {r.returncode}", file=sys.stderr)
         print(f"stderr: {r.stderr[:500]}", file=sys.stderr)
         return r.returncode
 

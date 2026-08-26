@@ -31,7 +31,7 @@ CME-implied prior, especially in the days leading up to FOMC meetings.
 This script:
 1. Fetches Polymarket macro markets in next 60 days (FOMC/CPI/jobs)
 2. For each, extracts the relevant numerical hurdle (rate change, CPI %, etc.)
-3. Spawns claude -p haiku with WebSearch to fetch CME-implied probability
+3. Spawns a scoped fast research worker to fetch CME-implied probability
    (CME FedWatch tool, CME Group rate probabilities) for the same outcome
 4. Computes Polymarket-vs-CME delta in pp
 5. Surfaces candidates with delta > 3pp + adequate liquidity
@@ -55,6 +55,8 @@ import subprocess
 import sys
 
 import httpx
+
+from agent_runtime import run_agent
 
 
 def fetch_macro_markets(days: int = 60, min_vol: float = 30000) -> list[dict]:
@@ -109,7 +111,7 @@ def fetch_macro_markets(days: int = 60, min_vol: float = 30000) -> list[dict]:
 
 
 def fetch_derivatives_implied(question: str, lim_days: float, timeout: int = 120) -> dict:
-    """Spawn claude -p haiku to fetch CME-implied probability for a macro market.
+    """Spawn a fast scoped worker to fetch a macro implied probability.
 
     Returns {"implied_prob": float, "source": str, "confidence": "high|med|low",
              "note": str} or {"error": "..."}
@@ -135,21 +137,16 @@ If no derivatives/consensus signal:
 
 Be concise. ONE line only."""
     try:
-        r = subprocess.run(
-            ["claude", "-p", "--model", "haiku", "--effort", "low",
-             "--allowed-tools", "WebSearch,WebFetch",
-             "--permission-mode", "acceptEdits"],
-            input=prompt, capture_output=True, text=True, timeout=timeout,
-        )
+        r = run_agent(prompt, profile="fast", effort="low", timeout=timeout)
     except subprocess.TimeoutExpired:
-        return {"error": "haiku timeout"}
+        return {"error": "agent timeout"}
     if r.returncode != 0:
-        return {"error": f"haiku exit {r.returncode}"}
+        return {"error": f"agent exit {r.returncode}"}
 
     out = r.stdout.strip()
     m = re.search(r"\{[^{}]*\}", out)
     if not m:
-        return {"error": "no JSON in haiku output"}
+        return {"error": "no JSON in agent output"}
     try:
         return json.loads(m.group(0))
     except Exception as e:

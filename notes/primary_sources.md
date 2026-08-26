@@ -112,7 +112,7 @@ These can serve as "what is the crowd believing?" data when the question is refl
 Periodic digest:
 1. Pulls latest factual updates from N sources per domain (rotating to keep token cost bounded)
 2. Aggregates into a single document with timestamps + source attribution
-3. Spawns `claude -p` with the document + prompt: "what asset categories or specific tickers are underpriced given THESE FACTS?"
+3. Runs the research-model profile through the provider-neutral runtime adapter with the document + prompt: "what asset categories or specific tickers are underpriced given THESE FACTS?"
 4. Output: structured candidate list to feed into `longterm_check.py` for individual-ticker vetting
 
 Cadence: weekly Sunday baseline + on-demand for specific themes.

@@ -3,7 +3,7 @@
 # appears in the invoking command line.
 #
 # Why this exists: `pkill -f "[o]pportunity_watch.py start"` killed my own
-# claude shell THREE times (exit 144, 2026-06/07 x2, 2026-07-28). The bracket
+# agent shell THREE times (exit 144, 2026-06/07 x2, 2026-07-28). The bracket
 # trick only works if the pattern appears ONCE in the command line — any later
 # plain reference (a nohup restart, a pgrep verify, an echo) re-creates the
 # self-match. This script matches on /proc/<pid>/cmdline of OTHER pids only,
@@ -32,35 +32,53 @@ SCRIPT="${2:-}"
 SELF=$$
 find_pids() {
     local out=()
+    local argv=()
     for d in /proc/[0-9]*; do
         local pid="${d#/proc/}"
         [[ "${pid}" == "${SELF}" ]] && continue
-        # cmdline is NUL-separated; match the script path as its own argument
-        if tr '\0' '\n' < "${d}/cmdline" 2>/dev/null | grep -qx ".*/${SCRIPT}\|${SCRIPT}"; then
-            # exclude anything that isn't a python invocation of the script
-            if tr '\0' '\n' < "${d}/cmdline" 2>/dev/null | head -1 | grep -q 'python'; then
-                out+=("${pid}")
-            fi
+        [[ -r "${d}/cmdline" ]] || continue
+        # A process may exit between glob expansion and this read. Capture the
+        # NUL-delimited argv once and suppress that expected /proc race.
+        argv=()
+        mapfile -d '' -t argv 2>/dev/null < "${d}/cmdline" || continue
+        # Match the actual Python script operand, not arbitrary parent-command
+        # text. Accept canonical, bare, and relative paths so restart can
+        # remove the historical relative-path duplicates before starting one
+        # canonical process.
+        if ((${#argv[@]} >= 3)) && \
+           [[ "${argv[0]}" == *python* ]] && \
+           [[ "${argv[2]}" == "start" ]] && \
+           [[ "${argv[1]}" == "${SCRIPT}" || "${argv[1]}" == */"${SCRIPT}" ]]; then
+            out+=("${pid}")
         fi
     done
-    printf '%s\n' "${out[@]:-}"
+    ((${#out[@]} > 0)) && printf '%s\n' "${out[@]}"
 }
 
 case "${ACTION}" in
   status)
-    pids=$(find_pids | tr '\n' ' ')
-    echo "${SCRIPT}: ${pids:-<not running>}"
+    mapfile -t pids < <(find_pids)
+    if ((${#pids[@]} == 0)); then
+        echo "${SCRIPT}: <not running>"
+    else
+        echo "${SCRIPT}: ${pids[*]}"
+    fi
     ;;
   stop|restart)
-    for pid in $(find_pids); do
-        [[ -z "${pid}" ]] && continue
+    mapfile -t pids < <(find_pids)
+    for pid in "${pids[@]}"; do
         kill "${pid}" 2>/dev/null && echo "stopped pid ${pid}"
     done
     sleep 2
-    left=$(find_pids | tr -d '[:space:]')
-    if [[ -n "${left}" ]]; then
-        for pid in $(find_pids); do [[ -n "${pid}" ]] && kill -9 "${pid}" 2>/dev/null; done
+    mapfile -t left < <(find_pids)
+    if ((${#left[@]} > 0)); then
+        for pid in "${left[@]}"; do kill -9 "${pid}" 2>/dev/null; done
         sleep 1
+        mapfile -t left < <(find_pids)
+        if ((${#left[@]} > 0)); then
+            echo "ERROR: refusing restart; ${SCRIPT} survived stop: ${left[*]}" >&2
+            exit 1
+        fi
     fi
     if [[ "${ACTION}" == "restart" ]]; then
         cd "${REPO}" || exit 1
@@ -77,10 +95,19 @@ case "${ACTION}" in
         LOGNAME="${SCRIPT%.py}.log"
         [[ "${SCRIPT}" == "heartbeat_watch.py" ]] && LOGNAME="heartbeat.log"
         nohup "${PY}" "${REPO}/scripts/${SCRIPT}" start >> "logs/${LOGNAME}" 2>&1 &
+        spawned=$!
         sleep 3
-        pids=$(find_pids | tr '\n' ' ')
-        echo "restarted: ${pids:-<FAILED TO START>}"
-        [[ -z "${pids// /}" ]] && exit 1
+        mapfile -t pids < <(find_pids)
+        if ((${#pids[@]} != 1)); then
+            echo "ERROR: restart expected exactly one ${SCRIPT}; found ${#pids[@]} (${pids[*]:-none})" >&2
+            # Remove only the process this invocation created. If another
+            # supervisor won the race, leave its single canonical worker live.
+            kill "${spawned}" 2>/dev/null || true
+            wait "${spawned}" 2>/dev/null || true
+            exit 1
+        fi
+        echo "restarted: ${pids[0]}"
+        exit 0
     fi
     ;;
   *)

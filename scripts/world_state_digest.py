@@ -38,6 +38,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from agent_runtime import run_agent
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SOURCES_PATH = REPO_ROOT / "notes" / "primary_sources.md"
 LOG_PATH = REPO_ROOT / "notes" / "world_state_log.md"
@@ -171,10 +173,10 @@ def main() -> int:
                    help="Run against all domains. Token-heavy — prefer per-domain scoped runs.")
     p.add_argument("--lookback-days", type=int, default=30,
                    help="How far back to look for facts (default 30).")
-    p.add_argument("--model", default="haiku",
-                   help="Claude model (default haiku — cheap/fast for fact extraction).")
+    p.add_argument("--profile", choices=["research", "fast"], default="research",
+                   help="Model workload profile (default: research).")
     p.add_argument("--effort", default="medium",
-                   help="Claude effort level (default medium).")
+                   help="Reasoning effort level (default medium).")
     p.add_argument("--list-domains", action="store_true",
                    help="List available domain slugs and exit.")
     p.add_argument("--no-log", action="store_true",
@@ -224,27 +226,19 @@ def main() -> int:
         sources_block=sources_block,
     )
 
-    cmd = [
-        "claude", "-p",
-        "--model", args.model,
-        "--effort", args.effort,
-        "--allowed-tools", "WebSearch,WebFetch,Bash",
-        "--permission-mode", "acceptEdits",
-    ]
-
     print(f"# world_state_digest: {len(selected)} domain(s): {', '.join(selected)}", file=sys.stderr)
-    print(f"# lookback={args.lookback_days}d  model={args.model}  timeout={args.timeout}s", file=sys.stderr)
+    print(f"# lookback={args.lookback_days}d  profile={args.profile}  timeout={args.timeout}s", file=sys.stderr)
     print(f"# {sum(len(sources[d]) for d in selected)} sources in scope", file=sys.stderr)
-    print(f"# spawning claude -p ...", file=sys.stderr)
+    print("# spawning scoped research worker ...", file=sys.stderr)
 
     try:
-        r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=args.timeout)
+        r = run_agent(prompt, profile=args.profile, effort=args.effort, timeout=args.timeout)
     except subprocess.TimeoutExpired:
-        print(f"ERROR: claude -p timed out after {args.timeout}s", file=sys.stderr)
+        print(f"ERROR: research worker timed out after {args.timeout}s", file=sys.stderr)
         return 3
 
     if r.returncode != 0:
-        print(f"ERROR: claude -p exited {r.returncode}", file=sys.stderr)
+        print(f"ERROR: research worker exited {r.returncode}", file=sys.stderr)
         print(f"stderr: {r.stderr[:500]}", file=sys.stderr)
         return r.returncode
 
@@ -256,7 +250,7 @@ def main() -> int:
         LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
         with LOG_PATH.open("a") as f:
             f.write(f"\n---\n\n## {ts} — world_state_digest\n\n")
-            f.write(f"**Domains:** {', '.join(selected)} | **Lookback:** {args.lookback_days}d | **Model:** {args.model}\n\n")
+            f.write(f"**Domains:** {', '.join(selected)} | **Lookback:** {args.lookback_days}d | **Profile:** {args.profile}\n\n")
             f.write(output)
             f.write("\n")
         print(f"\n# logged to {LOG_PATH}", file=sys.stderr)

@@ -1,6 +1,6 @@
 # polyclaude
 
-Autonomous Claude-driven trading project. Mandate: **maximize return**. Two on-chain sleeves. Fully decentralized — no CEX, no KYC.
+Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-chain sleeves. Fully decentralized — no CEX, no KYC.
 
 **Last updated:** 2026-07-31 (state snapshot updated every cron tick; this header on structural changes)
 
@@ -42,13 +42,13 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 
 1. **Reactive** — `scripts/news_watcher.py` polls 11 RSS feeds every 5 min; tier-1 events auto-fire `daily_checkin.sh`. Tier-2 events queue to `notes/news_alerts.jsonl`. Title-hash dedup + start-guard against duplicate daemons.
 
-2. **Scheduled** — cron at `02:00 + 14:00 UTC` runs `scripts/daily_checkin.sh`. Bash-level pre-check dispatches to operator tmux pane via `tmux send-keys` if alive; falls back to forked `claude -p --resume <session> --fork-session` if pane is down.
+2. **Scheduled** — cron at `02:00 + 14:00 UTC` runs `scripts/daily_checkin.sh`. It uses the operator's durable conversation queue when available and a fresh, fully onboarded headless fallback when the operator is down.
 
    - Hourly `scripts/arb_cron.sh` runs `scripts/limitless_arb_scan.py`.
    - Light `inject_prompt.sh "Periodic check..."` at 06/10/18/22 UTC.
    - Sunday 16:00 UTC: weekly long-term review (rotating 2-3 of 9 domains via `world_state_digest.py`).
 
-3. **Interactive** — `scripts/telegram_listener.py` long-polls Telegram; operator messages land in operator tmux pane. Telegram replies are action-only by convention (cron tick sends structured summary; material moves outside ticks ping immediately).
+3. **Interactive** — `scripts/telegram_listener.py` long-polls Telegram; authorized operator messages enter the same ordered conversation queue as local follow-ups. Telegram replies are action-only by convention (cron tick sends structured summary; material moves outside ticks ping immediately).
 
    - Telegram-prefixed messages (`telegram:`, `reply on telegram:`) require Telegram reply via `scripts/telegram.py msg "..."`.
 
@@ -58,13 +58,13 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 
 ### Discovery + scanning
 - `discover_markets.py` — pulls active Polymarket markets, filters by hurdle APY (3.4% Aave Base) + 3d horizon floor + spread/liq quality. Bond-like-fade lens.
-- `sports_pm_scan.py` — sports markets in 48h window with mid-market lens (BOND_LIKE_FADE_NO/YES, MID_50_50, STRONG_FAVORITE). `--with-consensus` fetches bookie odds via haiku for delta computation.
-- `macro_pm_scan.py` — Polymarket FOMC/CPI/macro markets in 60d window. **v1 LIMITATION: --with-consensus is unreliable (CME FedWatch is JS-rendered → haiku hallucinates). Use --no-consensus.**
+- `sports_pm_scan.py` — sports markets in 48h window with mid-market lens (BOND_LIKE_FADE_NO/YES, MID_50_50, STRONG_FAVORITE). `--with-consensus` uses a scoped fast research worker for bookie-odds deltas.
+- `macro_pm_scan.py` — Polymarket FOMC/CPI/macro markets in 60d window. **v1 LIMITATION: --with-consensus is unreliable because CME FedWatch is JS-rendered. Use --no-consensus.**
 - `world_state_digest.py` — bare-fact synthesis from `notes/primary_sources.md` (~46 curated factual URLs, 9 domains). Distills "what's underpriced given THESE facts." Sunday cron.
 - `limitless_arb_scan.py` — cross-venue arb scanner Polymarket vs Limitless. Proper-noun-overlap + Jaccard 0.55 false-positive guards. Mostly surfaces subjective-resolution arbs (token launches by date).
 
 ### Vetting + sizing
-- `catalyst_check.py` — for event-driven binary Polymarket markets. Spawns `claude -p haiku` with WebSearch + WebFetch + auto-fetched resolution criteria. Outputs central P(YES) with multiplicative breakdown for conjunction questions.
+- `catalyst_check.py` — for event-driven binary Polymarket markets. Uses a scoped web-research worker plus auto-fetched resolution criteria. Outputs central P(YES) with multiplicative breakdown for conjunction questions.
 - `longterm_check.py` — multi-year horizon thesis-check. 4D framework (cyclical / secular / catalyst / margin). Used for IBKR-side candidates.
 - `portfolio_kelly.py` — full-book Kelly audit (per-position sizing now inline in `polyclaude_enter.py`). `--constrained` flag scales by (bankroll/sum_kelly) when total > 100% bankroll. Surfaces deficit ranking.
 - `brownian_bridge_fv.py` — first-principles hazard-rate pricing for bond-like fades. fair_mark(t) = p^(1-t/T). Surfaces TRIM (mark > fair) and SCALE_UP (mark < fair) signals.
@@ -86,9 +86,9 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 - `decisions.py` — append-only decision tracker with calibration-delta + outcome + lesson.
 
 ### Operator-loop infra
-- `operator_followup.sh` / `cancel_followup.sh` — self-injected continuation prompts via nohup-sleep + PID tracking.
-- `inject_prompt.sh` — unified tmux send-keys path for cron / followup / news_watcher prompts to operator pane.
-- `~/.claude/hooks/inject_context_and_schedule.sh` — UserPromptSubmit hook: injects current UTC + queues 20-min self-followup.
+- `operator_followup.sh` / `cancel_followup.sh` — delayed continuation prompts via nohup-sleep + PID tracking and the durable operator queue.
+- `inject_prompt.sh` — unified ordered-queue path for cron / followup / news_watcher prompts.
+- `operator_start.sh` — idempotent starter for the single long-lived operator session.
 - `telegram.py` / `telegram_listener.py` — operator interface.
 
 ### Emergency
@@ -154,7 +154,7 @@ logs/              — gitignored: cron + news daemon logs
 
 ## Operator interface
 
-Telegram messages → `telegram_listener.py` → operator tmux pane. Telegram replies = action-only:
+Telegram messages → private durable spool → ordered operator conversation. Telegram replies = action-only:
 - Cron tick sends structured summary (MTM Δ, alerts processed, actions taken, next catalyst)
 - Material moves outside ticks ping immediately
 - Raw RSS pings dropped 2026-05-02 — operator wants decision feed, not news feed

@@ -317,11 +317,11 @@ the gap); *verify against a known truth* (absent output and failed output look i
   opportunity_triggers.json (GPT-6 NO<0.60 sat note-only while the bid touched 0.60,
   2026-07-29 — armed via new `clob_bid` kind).
 
-- **VM = 1.9GB. ONE background agent max, ever** (3 OOM crashes). Check MemAvailable
-  >500MB before any spawn — AND check no other claude-spawning script is still running
-  (watchlist --auto-revet, sports --with-consensus, catalyst_check all spawn `claude -p`
-  AFTER launch, so MemAvailable at launch time under-counts; 2026-07-30: 3 concurrent
-  haikus at 548MB from exactly this stack-up — killed one, no OOM).
+- **VM = 1.9GB. ONE background model worker max, ever** (3 OOM crashes). Check
+  MemAvailable >500MB before any spawn — AND enumerate existing
+  `polyclaude-agent run` workers before launching another. Research and scan
+  helpers spawn model workers after launch, so MemAvailable at launch time can
+  under-count; serialize helper calls even when their parent scripts differ.
 
 - **Daemon-fired ticks must carry their reason** (else they read as scheduled noise and
   the alert gets answered "nothing happened" — 2026-07-28). daily_checkin passes $1
@@ -340,15 +340,13 @@ the gap); *verify against a known truth* (absent output and failed output look i
   session lacks conversation context. Corollary: THIS FILE is the context a cold fallback
   inherits — that is what it is for, so keep it current.
 
-- **The fallback's OWN peer check self-matches.** `pgrep -cf 'claude -p'` counts the bash
-  SUBSHELL running it (its argv carries the literal pattern), so the count is +1: a LONE
-  fallback sees count=2 and, under the prompt's "2+ = defer" rule, false-defers and eats the
-  tick — same outage class as 2026-07-16, opposite cause from the documented `$$` trap.
-  ENUMERATE with `pgrep -af 'claude -p'`, drop the `bash -c … pgrep …` line, and count the
-  genuine `claude -p` PIDs (cross-check `ps … | grep -v grep`). Count OUT the pattern-bearing
-  subshell, never your own claude PID. (2026-08-09: caught by verifying instead of trusting the
-  raw count — cost nothing, but the "count==1 → proceed" rule as written is wrong for the
-  fallback path; harden daily_checkin's prompt to say "enumerate, don't count".)
+- **Fallback concurrency must be structural, not a substring count.** The
+  `.checkin.lock` serializes scheduled/headless ticks, and model-worker checks
+  must enumerate exact `polyclaude-agent run` processes while excluding the
+  inspecting shell. A successful operator-queue acknowledgement means only
+  "persisted", not "executed"; never spawn a second asset-capable recovery
+  worker merely because the journal has not changed yet. Alert and inspect the
+  live operator first.
 
 - **Liveness ≠ progress — monitor OUTPUT, not PIDs.** Three instances: news_watcher
   logged alerts but never persisted them 30h (2026-06-11); send-keys into a dead pane

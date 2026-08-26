@@ -10,7 +10,7 @@ Subcommands:
   analyze   — aggregate results, compute calibration metrics per variant
 
 Variants tested:
-  A. ZERO-SHOT: single Haiku call with the scenario, asks for TAKE/SKIP
+  A. ZERO-SHOT: single fast-model call with the scenario, asks for TAKE/SKIP
   B. PARALLEL: skeptic + champion monologues in parallel, then synthesize
   C. ADVERSARIAL: 3-round role-only debate (no convergence priming)
 
@@ -38,6 +38,7 @@ from pathlib import Path
 import httpx
 
 import _paths as _secrets
+from agent_runtime import run_agent
 
 _secrets.install_scrubbing_excepthook()
 
@@ -266,19 +267,12 @@ def cmd_scrape(args: argparse.Namespace) -> int:
 
 # ---------- variants: each takes a scenario, returns recommendation ----
 
-def _haiku_call(prompt: str, timeout: int = 60) -> str:
-    """Single claude -p haiku call. Returns stdout (trimmed) or error string."""
+def _fast_model_call(prompt: str, timeout: int = 60) -> str:
+    """Single fast-profile call. Historical name preserves result comparability."""
     try:
-        r = subprocess.run(
-            # NOTE: tried wrapping with prlimit --as=400M / --as=800M to cap
-            # memory and prevent OOM (2026-05-03 event), but claude-p is built
-            # on Bun and needs >1.2GB virtual-address-space minimum to start.
-            # Memory containment can't be done at the prlimit layer. Concurrency
-            # control (parallel=1 default + don't run stress while interactive)
-            # is the working mitigation.
-            ["claude", "-p", "--model", "haiku", prompt],
-            capture_output=True, text=True, timeout=timeout, cwd="/tmp",
-        )
+        r = run_agent(prompt, profile="fast", effort="low", timeout=timeout)
+        if r.returncode != 0:
+            return f"<error: agent exited {r.returncode}>"
         return (r.stdout or "").strip()
     except subprocess.TimeoutExpired:
         return f"<timeout after {timeout}s>"
@@ -338,7 +332,7 @@ def _parse_recommendation(text: str) -> dict:
 
 
 def variant_zero_shot(s: dict) -> dict:
-    """Single Haiku call, no debate. Baseline."""
+    """Single fast-model call, no debate. Baseline."""
     brief = _scenario_brief(s, side="NO")
     prompt = (
         brief + "\n\n"
@@ -346,7 +340,7 @@ def variant_zero_shot(s: dict) -> dict:
         "Reason in 3-5 sentences max, then end with EXACTLY one line:\n"
         "VERDICT: TAKE  OR  VERDICT: SKIP"
     )
-    out = _haiku_call(prompt, timeout=60)
+    out = _fast_model_call(prompt, timeout=60)
     return {**_parse_recommendation(out), "transcript": out, "calls": 1}
 
 
@@ -356,11 +350,9 @@ def variant_parallel_pair(s: dict) -> dict:
     skeptic_p = brief + "\n\nYou are the SKEPTIC. Argue AGAINST taking this trade. Terse, factual, ~150 words."
     champion_p = brief + "\n\nYou are the CHAMPION. Argue FOR taking this trade. Terse, factual, ~150 words."
 
-    with ThreadPoolExecutor(max_workers=2) as ex:
-        f_s = ex.submit(_haiku_call, skeptic_p, 60)
-        f_c = ex.submit(_haiku_call, champion_p, 60)
-        sk = f_s.result()
-        ch = f_c.result()
+    # Sequential by design: this VM cannot safely hold two model workers.
+    sk = _fast_model_call(skeptic_p, 60)
+    ch = _fast_model_call(champion_p, 60)
 
     synth_p = (
         brief + "\n\n"
@@ -371,7 +363,7 @@ def variant_parallel_pair(s: dict) -> dict:
         "Reason in 3-5 sentences, then end with EXACTLY one line:\n"
         "VERDICT: TAKE  OR  VERDICT: SKIP"
     )
-    synth = _haiku_call(synth_p, timeout=60)
+    synth = _fast_model_call(synth_p, timeout=60)
     transcript = f"=== SKEPTIC ===\n{sk}\n\n=== CHAMPION ===\n{ch}\n\n=== SYNTHESIS ===\n{synth}"
     return {**_parse_recommendation(synth), "transcript": transcript, "calls": 3}
 
@@ -383,9 +375,8 @@ def variant_adversarial_3round(s: dict) -> dict:
     # Round 1
     sk_r1_p = brief + "\n\nYou argue AGAINST taking this trade. Make your strongest factual + logical case in good faith. ~150 words."
     ch_r1_p = brief + "\n\nYou argue FOR taking this trade. Make your strongest factual + logical case in good faith. ~150 words."
-    with ThreadPoolExecutor(max_workers=2) as ex:
-        sk_r1 = ex.submit(_haiku_call, sk_r1_p, 60).result()
-        ch_r1 = ex.submit(_haiku_call, ch_r1_p, 60).result()
+    sk_r1 = _fast_model_call(sk_r1_p, 60)
+    ch_r1 = _fast_model_call(ch_r1_p, 60)
 
     # Round 2 — relay opposing
     sk_r2_p = (
@@ -394,9 +385,8 @@ def variant_adversarial_3round(s: dict) -> dict:
     ch_r2_p = (
         brief + f"\n\nYou argue FOR. Your R1 was:\n{ch_r1}\n\nOpposing R1:\n{sk_r1}\n\nRespond. ~150 words."
     )
-    with ThreadPoolExecutor(max_workers=2) as ex:
-        sk_r2 = ex.submit(_haiku_call, sk_r2_p, 60).result()
-        ch_r2 = ex.submit(_haiku_call, ch_r2_p, 60).result()
+    sk_r2 = _fast_model_call(sk_r2_p, 60)
+    ch_r2 = _fast_model_call(ch_r2_p, 60)
 
     # Round 3 — final position
     sk_r3_p = (
@@ -407,9 +397,8 @@ def variant_adversarial_3round(s: dict) -> dict:
         brief + f"\n\nYou argue FOR. Prior:\nR1 you: {ch_r1}\nR1 them: {sk_r1}\n"
         f"R2 you: {ch_r2}\nR2 them: {sk_r2}\n\nFinal position. ~120 words."
     )
-    with ThreadPoolExecutor(max_workers=2) as ex:
-        sk_r3 = ex.submit(_haiku_call, sk_r3_p, 60).result()
-        ch_r3 = ex.submit(_haiku_call, ch_r3_p, 60).result()
+    sk_r3 = _fast_model_call(sk_r3_p, 60)
+    ch_r3 = _fast_model_call(ch_r3_p, 60)
 
     # Moderator synthesis
     synth_p = (
@@ -421,7 +410,7 @@ def variant_adversarial_3round(s: dict) -> dict:
         "Reason in 3-5 sentences, then end with EXACTLY one line:\n"
         "VERDICT: TAKE  OR  VERDICT: SKIP"
     )
-    synth = _haiku_call(synth_p, timeout=90)
+    synth = _fast_model_call(synth_p, timeout=90)
     transcript = (
         f"=== SKEPTIC R1 ===\n{sk_r1}\n=== CHAMPION R1 ===\n{ch_r1}\n"
         f"=== SKEPTIC R2 ===\n{sk_r2}\n=== CHAMPION R2 ===\n{ch_r2}\n"
@@ -453,7 +442,7 @@ def variant_unconscious_terse(s: dict) -> dict:
         f"Considering BUY NO at {no_price}, $5 stake.\n\n"
         f"Final line of your response must be exactly: VERDICT: TAKE  or  VERDICT: SKIP"
     )
-    out = _haiku_call(prompt, timeout=60)
+    out = _fast_model_call(prompt, timeout=60)
     return {**_parse_recommendation(out), "transcript": out, "calls": 1}
 
 
@@ -495,7 +484,7 @@ def variant_unconscious_demo(s: dict) -> dict:
     )
 
     prompt = examples + new_case
-    out = _haiku_call(prompt, timeout=60)
+    out = _fast_model_call(prompt, timeout=60)
     return {**_parse_recommendation(out), "transcript": out, "calls": 1}
 
 
@@ -927,7 +916,7 @@ def main() -> int:
     p.add_argument("--target", type=int, default=100, help="target number of clean scenarios")
     p.add_argument("--max-pages", type=int, default=40, help="max gamma-api pages to scan")
     p.add_argument("--min-close-date", default="2025-11-01",
-                   help="only include markets that resolved on/after this date (Haiku cutoff)")
+                   help="only include markets that resolved on/after this study cutoff")
     p.add_argument("--seed", type=int, default=42)
     p.set_defaults(fn=cmd_scrape)
 
@@ -935,11 +924,8 @@ def main() -> int:
     p.add_argument("--n", type=int, default=10, help="sample size (0 = all)")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--variants", nargs="+", choices=VARIANTS, default=None)
-    p.add_argument("--parallel", type=int, default=1,
-                   help="run this many (scenario, variant) work items concurrently. "
-                        "WARNING: VM has 1.9GB RAM, no swap. Each claude-p subprocess can hit "
-                        "300-400MB. parallel>1 risks OOM. Cap is enforced via prlimit per-child "
-                        "but concurrent peak still adds up. Default 1.")
+    p.add_argument("--parallel", type=int, choices=[1], default=1,
+                   help="model work is serialized on this memory-constrained VM")
     p.set_defaults(fn=cmd_run)
 
     p = sub.add_parser("analyze", help="aggregate latest results")
@@ -955,7 +941,7 @@ def main() -> int:
     p.add_argument("--max-days", type=int, default=90, help="max days to resolution (avoid long-dated)")
     p.add_argument("--min-liquidity", type=float, default=20_000)
     p.add_argument("--variants", nargs="+", choices=VARIANTS, default=None)
-    p.add_argument("--parallel", type=int, default=2)
+    p.add_argument("--parallel", type=int, choices=[1], default=1)
     p.set_defaults(fn=cmd_prospective_setup)
 
     p = sub.add_parser("prospective_resolve",

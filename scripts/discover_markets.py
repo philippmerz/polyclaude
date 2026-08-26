@@ -370,7 +370,7 @@ def main() -> None:
                     help=f"minimum days-to-resolution for hurdle filter (default: {HURDLE_DAYS_FLOOR_DEFAULT})")
     ap.add_argument("--check-catalysts", type=int, default=0, metavar="N",
                     help="run scripts/catalyst_check.py on the top N candidates (after filtering). "
-                         "Each check spawns claude -p haiku with WebSearch (~5-10K tokens, ~30-60s). "
+                         "Each check spawns a scoped research worker with web search (~5-10K tokens, ~30-60s). "
                          "0 = skip (default).")
     args = ap.parse_args()
 

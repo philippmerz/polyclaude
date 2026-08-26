@@ -40,6 +40,7 @@ from pathlib import Path
 import httpx
 
 import _paths as _secrets
+from agent_runtime import run_agent
 
 _secrets.install_scrubbing_excepthook()
 
@@ -271,7 +272,7 @@ def index_polymarket(markets: list[dict]) -> list[dict]:
 
 def verify_resolution_match(lim_desc: str, pm_desc: str,
                              lim_title: str, pm_question: str) -> tuple[str, str]:
-    """Ask claude -p haiku whether two resolution criteria will resolve identically.
+    """Ask a fast scoped worker whether two criteria resolve identically.
 
     Returns (verdict, reason) where verdict is one of IDENTICAL / SIMILAR /
     DIFFERENT / UNCERTAIN. On agent error, returns (UNCERTAIN, reason).
@@ -280,8 +281,6 @@ def verify_resolution_match(lim_desc: str, pm_desc: str,
     for cross-venue capital deployment — anything less is too risky given the
     asymmetric loss (a single resolution-language mismatch wipes both legs).
     """
-    import subprocess as _sp
-
     # Strip HTML, keep readable text
     import re as _re
     def _clean(s: str) -> str:
@@ -309,12 +308,11 @@ def verify_resolution_match(lim_desc: str, pm_desc: str,
     )
 
     try:
-        r = _sp.run(
-            ["claude", "-p", "--model", "haiku", prompt],
-            capture_output=True, text=True, timeout=45, cwd="/tmp",
-        )
+        r = run_agent(prompt, profile="fast", effort="low", timeout=45)
+        if r.returncode != 0:
+            return ("UNCERTAIN", f"agent exited {r.returncode}")
         line = (r.stdout or "").strip().splitlines()[0] if r.stdout else ""
-    except (_sp.TimeoutExpired, _sp.CalledProcessError, FileNotFoundError) as e:
+    except (subprocess.TimeoutExpired, FileNotFoundError) as e:
         return ("UNCERTAIN", f"agent error: {_secrets.scrub(str(e))[:120]}")
 
     upper = line.upper()
@@ -444,7 +442,7 @@ def main() -> int:
         key=lambda m: -(m.get("_net_edge") or 0),
     )[:10]
     print(f"\nverifying resolution-language equivalence on top {len(matched_for_verify)} "
-          f"profitable matches with claude -p haiku...")
+          f"profitable matches with a scoped worker...")
     for m in matched_for_verify:
         verdict, reason = verify_resolution_match(
             lim_desc=m.get("description", ""),
@@ -471,7 +469,7 @@ def main() -> int:
         f.write(f"Polymarket-matched (top {len(top_for_lookup)} by breakeven): {len(matched)}\n\n")
         f.write("Three-layer screening: (1) distinctive-word overlap ≥ 3 with Jaccard ≥ 0.35, ")
         f.write("(2) numeric-token parity, (3) agent-verified resolution-language equivalence ")
-        f.write("(claude -p haiku). Only `IDENTICAL` verdicts qualify for autonomous execution; ")
+        f.write("(scoped fast profile). Only `IDENTICAL` verdicts qualify for autonomous execution; ")
         f.write("`SIMILAR`/`UNCERTAIN`/`DIFFERENT` are visibility-only.\n\n")
         f.write(f"Polymarket fee = {POLYMARKET_FEE_RATE} × min(p, 1-p) per side. ")
         f.write(f"Limitless buy fee = 0.4-3.0% (rises away from parity). ")

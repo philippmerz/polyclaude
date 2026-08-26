@@ -1,16 +1,16 @@
 # scripts/
 
-Quick map for any Claude (or human) reading the repo cold. For deeper context: [`../README.md`](../README.md), [`../strategy/02_operations.md`](../strategy/02_operations.md), [`../notes/journal.md`](../notes/journal.md).
+Quick map for any agent (or human) reading the repo cold. For deeper context: [`../README.md`](../README.md), [`../strategy/02_operations.md`](../strategy/02_operations.md), [`../notes/journal.md`](../notes/journal.md).
 
 ## Daemons (long-running; restarted on reboot via `@reboot` crontab)
 
-- `news_watcher.py` — polls 11 RSS feeds, fires Tier-1 alerts (auto-spawns a `daily_checkin.sh` cron tick) and Tier-2 alerts (agent-filtered via `claude -p haiku` then Telegram). Config: `news_watcher_config.json`.
-- `telegram_listener.py` — long-polls Telegram, pipes operator messages into the live tmux pane via `tmux send-keys`.
-- `heartbeat_watch.py` — hourly probe; alerts if any daemon stalls > 30 min or any `claude -p` cron fork runs > 60 min.
+- `news_watcher.py` — polls 11 RSS feeds, fires Tier-1 alerts (auto-spawns a `daily_checkin.sh` cron tick) and Tier-2 alerts (scoped fast-agent filter, then Telegram policy). Config: `news_watcher_config.json`.
+- `telegram_listener.py` — long-polls Telegram, durably spools authorized messages, and submits them to the live operator's ordered conversation queue.
+- `heartbeat_watch.py` — hourly probe; alerts if any daemon stalls > 30 min or any headless model worker runs > 60 min.
 
 ## Scheduled (crontab)
 
-- `daily_checkin.sh` — main cron tick at `02:00` + `14:00` UTC. Forks the operator's interactive Claude session (`--resume <id> --fork-session`) and runs the standard portfolio + prospecting + journal flow.
+- `daily_checkin.sh` — main cron tick at `02:00` + `14:00` UTC. Queues to the live operator, or runs a fresh onboarded fallback, then follows the standard portfolio + prospecting + journal flow.
 - `arb_cron.sh` — hourly arb scan + executor at `30 * * * *`.
 
 ## Sleeve clients (libraries imported by other scripts)
@@ -34,7 +34,7 @@ Quick map for any Claude (or human) reading the repo cold. For deeper context: [
 
 - `across_bridge.py` — Across V3 bridge for USDC and native ETH across Arbitrum / Base / Polygon / Optimism.
 - `aave_deposit.py` — Aave V3 `supply` / `withdraw` / `rate` across the same chains.
-- `limitless_arb_scan.py` — paginates Limitless `isPolyArbitrage:true` markets, fuzzy-matches Polymarket counterparts, agent-verifies resolution-language equivalence (claude -p haiku), tags Chainlink-Data-Stream-backed markets as mechanical resolution. Output: `logs/limitless_arb_<ts>.md` + `logs/limitless_arb_latest.json`.
+- `limitless_arb_scan.py` — paginates Limitless `isPolyArbitrage:true` markets, fuzzy-matches Polymarket counterparts, uses a scoped fast worker to verify resolution-language equivalence, and tags Chainlink-Data-Stream-backed markets as mechanical resolution. Output: `logs/limitless_arb_<ts>.md` + `logs/limitless_arb_latest.json`.
 - `limitless_arb_executor.py` — live-quote inspector. Reads scan output, recomputes net edge after real orderbook slippage. **Does not submit orders** — the auto-execution path was removed after honest EV analysis showed expected value goes negative at our size given resolution-divergence risk on subjective markets.
 
 ## Emergency exits (3-layer sanity check spec in `strategy/02_operations.md`)
@@ -46,7 +46,7 @@ Quick map for any Claude (or human) reading the repo cold. For deeper context: [
 
 ## Telegram interface
 
-- `telegram.py` — outbound. Subcommands: `setup`, `msg`, `file`, `md`.
+- `telegram.py` — outbound. Subcommands: `setup --expected-chat-id`, `msg`, `file`, `md`.
 
 ## Conventions
 

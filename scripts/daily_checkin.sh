@@ -1,12 +1,10 @@
 #!/bin/bash
 # Polyclaude check-in driver.
-# Invoked by cron. Forks a headless session from the operator's interactive
-# Claude (so the tick inherits full conversation context) and asks it to do
-# its scheduled check-in. Token-heavier than a fresh primer-only session, but
-# avoids the prompt-engineering trap and keeps the cron Claude in lockstep
-# with the live thread.
+# Invoked by cron. Queues the tick to the long-lived operator when available;
+# otherwise runs a fresh, fully onboarded headless fallback.
 
 set -euo pipefail
+umask 077
 
 # Resolve repo root from this script's location (no hardcoded user path).
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -36,74 +34,41 @@ REASON_SUFFIX=""
 if [[ -n "${1:-}" ]]; then REASON_SUFFIX=" [$1]"; fi
 LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 
-# Ensure we have a working PATH for cron (cron runs with minimal env)
-# NOTE (2026-08-03): the hardcoded cron PATH omitted ~/.local/bin, where the
-# claude CLI lives — so the headless fallback died with "claude: command not
-# found" (exit 127) EVERY time it was reached. It went unnoticed for months
-# because the normal cron path dispatches to the operator pane and exits at
-# line ~88, never reaching the fallback; only the new tick-eaten RECOVERY
-# (which forces the headless path) ever exercised it. Prepend the user bin.
-# HOME must be resolved BEFORE PATH — PATH interpolates it.
+# Ensure a working PATH for cron. HOME must be resolved before PATH.
 export HOME="${HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 export PATH="${HOME}/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
-# Bash-level pre-check: if the long-lived operator pane is alive, dispatch the
-# cron-tick prompt via `tmux send-keys` and exit. The forked headless claude
-# below is a fallback for operator-pane-down scenarios. This rule fixes the
-# mutual-defer deadlock observed 2026-05-07 02:00 UTC (commit ff13200): the
-# forked tick saw the operator pane in `pgrep claude` and deferred to it,
-# while the operator pane simultaneously deferred to the forked tick — no
-# work happened.
-#
-# Detection: tmux session "operator" exists AND its pane's current command
-# is one of {script, claude, node} (the operator pane wraps claude with
-# script(1) for log capture, so `script` is the typical foreground proc).
-# `bash` means claude exited and we should fall through to fallback.
-# POLYCLAUDE_FORCE_HEADLESS=1 skips the pane dispatch entirely and goes
-# straight to the headless fallback below. Set by heartbeat_watch's tick-eaten
-# RECOVERY path: a pane blocked on model quota still passes every liveness
-# check (process alive, title idle), so send-keys lands in a pane that cannot
-# answer and the tick is silently eaten (2026-08-02: 16h, two ticks lost).
-# The headless fallback runs a DIFFERENT model than the interactive pane, so
-# it can complete when the pane's quota bucket is exhausted.
+# A queue acknowledgement is the dispatch boundary. It is safe while the
+# operator is busy and cannot turn prompt text into terminal or shell input.
+# POLYCLAUDE_FORCE_HEADLESS=1 is reserved for an explicit operator drill/recovery.
+CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.${REASON_SUFFIX}"
 if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
-    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: FORCE_HEADLESS set — skipping pane dispatch" \
+    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: FORCE_HEADLESS set — skipping operator queue" \
         >> "${LOG_DIR}/peer_skips.log"
-elif command -v tmux >/dev/null 2>&1 && tmux has-session -t operator 2>/dev/null; then
-    PANE_CMD=$(tmux display-message -p -t operator:0.0 '#{pane_current_command}' 2>/dev/null || echo "")
-    # pane_current_command lies about liveness: script(1) stays the foreground
-    # command even after the claude inside it exits, so `cmd=script` can be a
-    # dead shell. 2026-07-16 02:00: the tick was send-keys'd into exactly that
-    # and silently eaten. Require a live claude/node DESCENDANT of the pane
-    # before dispatching; otherwise fall through to the headless fallback.
-    PANE_PID=$(tmux display-message -p -t operator:0.0 '#{pane_pid}' 2>/dev/null || echo "")
-    PANE_HAS_CLAUDE=""
-    if [[ -n "${PANE_PID}" ]] && pstree -p "${PANE_PID}" 2>/dev/null | grep -qE 'claude|node'; then
-        PANE_HAS_CLAUDE=1
-    fi
-    if [[ -z "${PANE_HAS_CLAUDE}" ]]; then
-        echo "$(date -u +%Y%m%dT%H%M%SZ) cron: pane cmd=${PANE_CMD} but no live claude descendant of pane_pid=${PANE_PID} — falling through to headless" \
+else
+    INJECT_RC=0
+    "${SCRIPT_DIR}/inject_prompt.sh" "${CRON_MSG}" >/dev/null 2>&1 || INJECT_RC=$?
+    case "${INJECT_RC}" in
+      0)
+        echo "$(date -u +%Y%m%dT%H%M%SZ) cron: queued to operator; exiting" \
             >> "${LOG_DIR}/peer_skips.log"
-        PANE_CMD="__dead_pane__"
-    fi
-    case "${PANE_CMD}" in
-        claude|node|script)
-            # Wait up to 60s for operator pane to be idle (no Braille spinner).
-            for _ in {1..60}; do
-                title=$(tmux display-message -p -t operator:0.0 '#{pane_title}' 2>/dev/null || echo "")
-                if ! grep -qE 'Manifesting|Percolating|Pondering|Synthesizing|Thinking|Processing' <<<"${title}"; then
-                    break
-                fi
-                sleep 1
-            done
-            CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.${REASON_SUFFIX}"
-            tmux send-keys -t operator:0.0 -l "${CRON_MSG}"
-            sleep 0.2
-            tmux send-keys -t operator:0.0 Enter
-            echo "$(date -u +%Y%m%dT%H%M%SZ) cron: dispatched to operator pane (cmd=${PANE_CMD}) via send-keys; exiting" \
-                >> "${LOG_DIR}/peer_skips.log"
-            exit 0
-            ;;
+        exit 0
+        ;;
+      69)
+        # The private runtime owns rc=69 and emits it only before dispatch,
+        # after proving there is no live operator process. This is the sole
+        # automatic path allowed to start another asset-capable worker.
+        echo "$(date -u +%Y%m%dT%H%M%SZ) cron: no live operator — using headless fallback" \
+            >> "${LOG_DIR}/peer_skips.log"
+        ;;
+      *)
+        # A timeout can mean the queue accepted the message before the caller
+        # lost its acknowledgement. Fail closed so one tick can never run in
+        # both the interactive operator and a fresh autonomous process.
+        echo "$(date -u +%Y%m%dT%H%M%SZ) cron: queue failed rc=${INJECT_RC}; no headless fallback (exact-one safety)" \
+            >> "${LOG_DIR}/peer_skips.log"
+        exit "${INJECT_RC}"
+        ;;
     esac
 fi
 
@@ -114,12 +79,7 @@ if [[ -f "${HOME}/.polyclaude/env" ]]; then
     set -a; source "${HOME}/.polyclaude/env"; set +a
 fi
 
-# Session id to fork from. The interactive Claude session id was captured when
-# the project began and is updated only when the operator starts a new thread.
-SESSION_ID=$(cat "${POLYCLAUDE_SESSION:-/dev/null}" 2>/dev/null | tr -d '[:space:]')
-
-# Cron prompt — short, since this is a forked-resume session and inherits all
-# prior context (PRIMER, philosophy, current portfolio, ongoing decisions).
+# The fallback is fresh and therefore receives a complete onboarding primer.
 read -r -d '' PROMPT <<'EOF' || true
 Cron tick. Do your scheduled polyclaude check-in:
 
@@ -156,7 +116,7 @@ Single Telegram message, body ≤ 700 chars, only when material. Material moves 
 
 11. Commit + push (audit diff for secrets first).
 
-PEER DETECTION (2026-05-07+): you (a forked headless `claude -p`) are running ONLY because the bash-level pre-check in daily_checkin.sh did not find a live operator pane to dispatch to. You are the FALLBACK path. Long-lived operator/prompter `claude` processes (no `-p` flag) are NOT peers — do not defer to them. The .checkin.lock flock prevents another daily_checkin.sh-spawned tick from running concurrently with you, including news_watcher-triggered ones. Real race target: another `claude -p` (note the -p) with the same session id and a different PID from your own. Detect with `pgrep -cf 'claude -p'` — YOU are one of the matches, so a count of 1 means no peer (proceed); a count of 2+ means a genuine peer is running (defer with a one-line journal note). Do NOT try to exclude "your own PID" via $$ — in your Bash tool $$ is the tool subshell, never your claude process, and that filter made the fallback see itself as a peer and always defer (2026-07-16 audit). If not — proceed even if `pgrep claude` shows other processes; those are panes, not peers. Mutual-defer deadlock previously observed 2026-05-07 02:00 UTC (commit ff13200) is fixed by the bash guard upstream and this clarification.
+PEER DETECTION: you are running only because the durable operator queue was unavailable or an explicit operator drill/recovery forced a headless run. You are the FALLBACK path. The `.checkin.lock` flock already guarantees that no other `daily_checkin.sh` worker is running, including news-triggered ticks. Do not defer merely because the interactive operator process exists; it is not a peer and could be the failed/quota-blocked path that caused this fallback.
 
 EMERGENCY-EXIT PROTOCOL: if a Tier-1 news_watcher alert in the recent journal indicates a real exploit / depeg / chain halt affecting our positions, run the 3-layer sanity check (multi-source corroboration, market-reaction consistency, on-chain ground truth — full spec in strategy/02_operations.md). Only after all three layers PASS, invoke the relevant scripts/emergency_exit_*.py with --reason "<short>". On any layer FAIL, Telegram the operator with the discrepancy and HOLD; default to inaction.
 
@@ -167,59 +127,28 @@ REASONING DEPTH RULE: routine prospecting (single trade <$10, standard market, h
 Brief if nothing happened.
 EOF
 
-# Run from $HOME so claude sees the right project scope for --resume.
-cd "${HOME}"
+# Run from the repository so the fallback loads the private operator contract.
+cd "${POLYCLAUDE_DIR}"
 
 {
   echo "=== polyclaude daily check-in ${TS} ==="
   echo "$ pwd"; pwd
-  echo "$ session=${SESSION_ID}"
-  if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
-    echo "$ claude -p (RECOVERY: fresh session + primer, no fork)"
-  else
-    echo "$ claude -p --resume \${SESSION_ID} --fork-session (headless)"
-    # Only the fork path needs a session id; RECOVERY runs primer-only.
-    if [ -z "${SESSION_ID}" ]; then
-      echo "ERROR: no session id resolvable from POLYCLAUDE_SESSION; cannot fork-resume"
-      exit 2
-    fi
-  fi
-  # `|| RC=$?` guard (2026-07-16 audit): under set -e/pipefail a non-zero
-  # claude exit aborted this brace group — the exit trailer AND the auth
-  # post-flight below (which exists precisely to catch failed claude runs)
-  # never executed on the failures they were built for.
+  echo "$ headless fallback (fresh session + primer)"
+  # Preserve the exit trailer and auth post-flight even on worker failure.
   RC=0
-  # RECOVERY mode uses a PRIMER, not a session fork (2026-08-03). The operator
-  # transcript is ~121MB; --resume --fork-session must rehydrate all of it,
-  # which timed out past 4 min on probe — unusable for a path whose whole job
-  # is to run promptly when the pane is down. A fresh session + the repo's own
-  # onboarding chain (README -> strategy/01_lessons.md -> status scripts) is
-  # fast, cheap, and size-independent. This is exactly what that chain is for.
-  if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
-    PRIMER="You are polyclaude's autonomous FALLBACK session: the operator's interactive pane was unreachable (model quota exhausted or dead), so a scheduled tick was missed and you are running it headless with NO inherited context.
+  PRIMER="You are polyclaude's autonomous FALLBACK session: the interactive operator queue was unreachable or explicitly bypassed, so you are running this scheduled tick headless with NO inherited conversation context.
 
-Onboard first, in this order (~5 min): read /home/polyclaude/polyclaude/README.md, then strategy/01_lessons.md (the consolidated hard-won lessons — read this carefully, it encodes rules that cost real money to learn), then run .venv/bin/python scripts/polyclaude_status.py for live state.
+Onboard first, in this order: read AGENTS.md, README.md, PRIMER.md, strategy/00_philosophy.md, strategy/01_lessons.md, and strategy/02_operations.md; then run .venv/bin/python scripts/polyclaude_status.py for live state.
 
-Then do the check-in below. Be CONSERVATIVE: you lack the conversation context the interactive session has. Prefer reporting and journaling over trading; do NOT open a new position unless it clears every gate in the doctrine AND you have verified the facts yourself this run. Journal what you did and send ONE Telegram summary noting you are the fallback.
+Then do the check-in below. Be CONSERVATIVE: you lack the conversation context the interactive session has. Prefer reporting and journaling over trading; do NOT open a new position unless it clears every gate in the doctrine AND you have verified the facts yourself this run. Journal what you did. Send a Telegram summary only when the run produced material content; when you do, note that you are the fallback.
 
 --- SCHEDULED CHECK-IN ---
 "
-    echo "${PRIMER}${PROMPT}" | claude -p \
-      --model "claude-opus-4-8[1m]" \
-      --effort max \
-      --permission-mode acceptEdits \
-      --allowed-tools "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,TaskCreate,TaskUpdate,TaskList" \
+  printf '%s' "${PRIMER}${PROMPT}" | \
+    "${HOME}/.local/bin/polyclaude-agent" run \
+      --profile main --effort max --access autonomous \
+      --cwd "${POLYCLAUDE_DIR}" --timeout 7200 \
       2>&1 || RC=$?
-  else
-    echo "${PROMPT}" | claude -p \
-      --resume "${SESSION_ID}" \
-      --fork-session \
-      --model "claude-opus-4-8[1m]" \
-      --effort max \
-      --permission-mode acceptEdits \
-      --allowed-tools "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,TaskCreate,TaskUpdate,TaskList" \
-      2>&1 || RC=$?
-  fi
   echo
   echo "=== exit ${RC} at $(date -u) ==="
 } >> "${LOG_FILE}" 2>&1
@@ -232,7 +161,7 @@ Then do the check-in below. Be CONSERVATIVE: you lack the conversation context t
 # operator directly (LLM-independent path). Fires at most 2x/day (per tick).
 if tail -n 40 "${LOG_FILE}" | grep -qiE "authentication|unauthorized|401|invalid.*(api key|token|credential)|OAuth.*(expired|error)|please.*log ?in|/login"; then
     cd "${POLYCLAUDE_DIR}" && .venv/bin/python scripts/telegram.py msg \
-      "[CHECKIN] tick ${TS} FAILED with an auth error — session creds likely expired. Ticks will fire into the void until re-login. Operator: run claude /login in the polyclaude session." \
+      "[CHECKIN] tick ${TS} FAILED with an auth error — agent credentials likely expired. Ticks will fail until the service account is logged in again." \
       >> "${LOG_FILE}" 2>&1 || true
 fi
 

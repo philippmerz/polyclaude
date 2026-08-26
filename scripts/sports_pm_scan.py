@@ -33,12 +33,13 @@ import subprocess
 
 import httpx
 
+from agent_runtime import run_agent
 import pm_fees  # per-market takerBaseFee; see pm_fees.py
 
 
 def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] | None = None,
                             timeout: int = 120) -> dict:
-    """Spawn claude -p haiku with WebSearch to fetch bookie-consensus odds.
+    """Spawn a fast scoped worker to fetch bookie-consensus odds.
 
     Returns {"yes_prob": float, "source": str, "confidence": "high|med|low",
              "note": str} or {"error": "..."} on failure.
@@ -53,7 +54,7 @@ def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] 
 
     Lesson source: 2026-05-09 operator directive — bookie consensus is the
     single biggest mid-market alpha signal; Polymarket vs sharps-book deltas
-    > 3pp suggest mispricing. Cron-friendly via haiku (cheap/fast).
+    > 3pp suggest mispricing. The fast profile keeps the scan bounded.
     """
     if outcomes and len(outcomes) == 2 and outcomes[0].lower() not in ("yes", "no"):
         target_desc = (
@@ -98,22 +99,17 @@ If no non-Polymarket consensus is fetchable (event too obscure, props market wit
 
 Be concise. ONE line only."""
     try:
-        r = subprocess.run(
-            ["claude", "-p", "--model", "haiku", "--effort", "low",
-             "--allowed-tools", "WebSearch,WebFetch",
-             "--permission-mode", "acceptEdits"],
-            input=prompt, capture_output=True, text=True, timeout=timeout,
-        )
+        r = run_agent(prompt, profile="fast", effort="low", timeout=timeout)
     except subprocess.TimeoutExpired:
-        return {"error": f"haiku timeout after {timeout}s"}
+        return {"error": f"agent timeout after {timeout}s"}
     if r.returncode != 0:
-        return {"error": f"haiku exited {r.returncode}: {r.stderr[:100]}"}
+        return {"error": f"agent exited {r.returncode}: {r.stderr[:100]}"}
 
     out = r.stdout.strip()
-    # Extract first JSON object from the output (haiku may add commentary)
+    # Extract the first JSON object if the worker adds commentary.
     m = re.search(r"\{[^{}]*\}", out)
     if not m:
-        return {"error": "no JSON in haiku output"}
+        return {"error": "no JSON in agent output"}
     try:
         import json as _json
         return _json.loads(m.group(0))
@@ -240,11 +236,11 @@ def main() -> int:
     p.add_argument("--limit", type=int, default=20)
     p.add_argument("--with-consensus", action="store_true",
                    help="Fetch bookie-consensus odds per top-5 candidate via "
-                        "claude -p haiku WebSearch. Slower (~30s per market) "
+                        "a scoped web-research worker. Slower (~30s per market) "
                         "but surfaces Polymarket-vs-bookie pricing deltas.")
     p.add_argument("--consensus-top-n", type=int, default=5,
                    help="Number of top candidates to fetch consensus for "
-                        "(default 5, to bound haiku token cost).")
+                        "(default 5, to bound model cost).")
     args = p.parse_args()
     if args.hurdle_apy is None:
         from discover_markets import live_hurdle_apy
@@ -297,7 +293,7 @@ def main() -> int:
     # Fetch bookie consensus for top-N if requested
     if args.with_consensus:
         print(f"# fetching bookie consensus for top {args.consensus_top_n} candidates "
-              f"(~30s each via haiku)...", file=sys.stderr)
+              f"(~30s each via scoped worker)...", file=sys.stderr)
         for i, r in enumerate(rows[: args.consensus_top_n]):
             cons = fetch_bookie_consensus(r["question"], r["days_to_resolve"] * 24,
                                           outcomes=r.get("outcomes"))

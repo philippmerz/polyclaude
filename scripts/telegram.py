@@ -4,8 +4,8 @@ Reads bot token from POLYCLAUDE_TELEGRAM_TOKEN and caches the operator's chat_id
 to POLYCLAUDE_TELEGRAM_STATE (both env vars resolved via _secrets, 0600).
 Subcommands:
 
-    setup            Poll for the latest incoming message and store its chat_id.
-                     Operator must send a message to the bot first.
+    setup --expected-chat-id ID
+                     Store only an explicitly pre-authorized private chat.
     msg "<text>"     Send a text message. Long text auto-splits at ~3500 chars.
     file <path> [-c "caption"]
                      Send a file as a document. Up to 50 MB.
@@ -47,8 +47,23 @@ def _state() -> dict:
 
 
 def _save_state(state: dict) -> None:
-    STATE_PATH.write_text(json.dumps(state, indent=2))
-    os.chmod(STATE_PATH, 0o600)
+    STATE_PATH.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
+    os.chmod(STATE_PATH.parent, 0o700)
+    tmp = STATE_PATH.with_name(f".{STATE_PATH.name}.{os.getpid()}.tmp")
+    fd = os.open(tmp, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as handle:
+            json.dump(state, handle, indent=2)
+            handle.write("\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(tmp, STATE_PATH)
+        os.chmod(STATE_PATH, 0o600)
+    finally:
+        try:
+            tmp.unlink()
+        except FileNotFoundError:
+            pass
 
 
 def _chat_id() -> int:
@@ -60,7 +75,13 @@ def _chat_id() -> int:
     return int(cid)
 
 
-def cmd_setup(_args: argparse.Namespace) -> int:
+def cmd_setup(args: argparse.Namespace) -> int:
+    prior = _state()
+    expected_chat_id = args.expected_chat_id or prior.get("chat_id")
+    if not expected_chat_id:
+        print("ERROR: setup requires --expected-chat-id from a trusted out-of-band source", file=sys.stderr)
+        return 2
+    expected_chat_id = int(expected_chat_id)
     token = _token()
     with httpx.Client(timeout=15) as c:
         r = c.get(f"{API}/bot{token}/getUpdates", params={"timeout": 0})
@@ -72,16 +93,17 @@ def cmd_setup(_args: argparse.Namespace) -> int:
     if not updates:
         print("No updates yet. Have the operator send any message to the bot, then re-run setup.", file=sys.stderr)
         return 3
-    # Find the most recent private chat
+    # Find only the explicitly authorized private chat. Selecting whichever
+    # stranger happened to message the bot most recently can hijack setup.
     candidates = []
     for u in updates:
         msg = u.get("message") or u.get("edited_message")
         if not msg: continue
         chat = msg.get("chat", {})
-        if chat.get("type") == "private":
+        if chat.get("type") == "private" and int(chat.get("id") or 0) == expected_chat_id:
             candidates.append((u["update_id"], chat))
     if not candidates:
-        print("Found updates but no private-chat messages. Send the bot a direct message.", file=sys.stderr)
+        print("No update from the expected private chat. Message the bot from that chat and retry.", file=sys.stderr)
         return 3
     candidates.sort(key=lambda x: x[0])
     chat = candidates[-1][1]
@@ -163,10 +185,13 @@ def cmd_md(args: argparse.Namespace) -> int:
 
 
 def main() -> int:
+    os.umask(0o077)
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    s = sub.add_parser("setup", help="Discover and store chat_id from getUpdates")
+    s = sub.add_parser("setup", help="Verify and store an explicitly authorized private chat")
+    s.add_argument("--expected-chat-id", type=int, default=None,
+                   help="trusted Telegram numeric chat ID (existing configured ID is reused if omitted)")
     s.set_defaults(func=cmd_setup)
 
     s = sub.add_parser("msg", help="Send a text message")

@@ -1,9 +1,9 @@
 #!/bin/bash
 # Schedule a self-injected follow-up prompt after a delay.
 #
-# Used by the operator (this Claude session) at the end of any turn where
+# Used by the operator agent at the end of any turn where
 # the current thread isn't fully resolved. The follow-up fires after the
-# delay and injects the prompt into the operator pane via inject_prompt.sh.
+# delay and submits the prompt to the operator queue via inject_prompt.sh.
 # When the follow-up fires, the operator decides whether to schedule
 # another (continuing the loop) or call cancel_followup.sh (resolving).
 #

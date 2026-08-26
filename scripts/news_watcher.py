@@ -34,6 +34,7 @@ import httpx
 from bs4 import BeautifulSoup
 
 import _paths as _secrets
+from agent_runtime import run_agent
 
 _secrets.install_scrubbing_excepthook()
 
@@ -110,8 +111,8 @@ def _normalize_title(title: str) -> str:
     return " ".join(title.lower().split()).strip()
 
 
-def telegram_send(text: str) -> None:
-    """Best-effort Telegram message. Logs failure but doesn't raise."""
+def telegram_send(text: str) -> bool:
+    """Best-effort Telegram message; return True only on API confirmation."""
     try:
         token = TELEGRAM_TOKEN_PATH.read_text().strip()
         chat_id = json.loads(TELEGRAM_STATE_PATH.read_text())["chat_id"]
@@ -123,10 +124,14 @@ def telegram_send(text: str) -> None:
             json={"chat_id": chat_id, "text": text, "disable_web_page_preview": False},
             timeout=10,
         )
+        r.raise_for_status()
         if not r.json().get("ok"):
             print(f"[watcher] telegram error: {_secrets.scrub(r.text[:200])}", flush=True)
+            return False
+        return True
     except Exception as e:
         print(f"[watcher] telegram exception: {_secrets.scrub(str(e))}", flush=True)
+        return False
 
 
 def fire_cron_tick() -> None:
@@ -215,7 +220,7 @@ def _fetch_article_body(url: str, max_chars: int = 4000) -> str | None:
 
 
 def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: str = "") -> tuple[bool, str, list[dict]]:
-    """Ask claude -p whether a Tier-2 match should reach Telegram + per-position impact.
+    """Ask a fast scoped worker to filter Tier-2 news and score impact.
 
     Returns (should_send, one_line_reason, per_position_impacts).
     Each impact is {"position": str, "level": NONE|MINOR|MATERIAL|CRITICAL, "reason": str}.
@@ -253,17 +258,13 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
     )
 
     try:
-        r = subprocess.run(
-            ["claude", "-p", "--model", "haiku", prompt],
-            capture_output=True,
-            text=True,
-            timeout=60,
-            cwd="/tmp",  # avoid loading polyclaude project context (CLAUDE.md, tools)
-        )
+        r = run_agent(prompt, profile="fast", effort="low", timeout=60)
+        if r.returncode != 0:
+            return (True, f"agent unavailable: exit {r.returncode}", [])
         out = (r.stdout or "").strip()
         lines = [l.strip() for l in out.splitlines() if l.strip()]
         first_line = lines[0] if lines else ""
-    except (subprocess.TimeoutExpired, subprocess.CalledProcessError, FileNotFoundError) as e:
+    except (subprocess.TimeoutExpired, FileNotFoundError) as e:
         return (True, f"agent unavailable: {_secrets.scrub(str(e))[:120]}", [])
 
     impacts: list[dict] = []
@@ -348,10 +349,9 @@ def _revalidate_critical_impacts(impacts: list[dict], title: str,
         "Use the EXACT position-key from the claims above."
     )
     try:
-        r = subprocess.run(
-            ["claude", "-p", "--model", "haiku", prompt],
-            capture_output=True, text=True, timeout=60, cwd="/tmp",
-        )
+        r = run_agent(prompt, profile="fast", effort="low", timeout=60)
+        if r.returncode != 0:
+            return impacts
         out = (r.stdout or "").strip()
     except Exception:
         return impacts
@@ -492,8 +492,6 @@ def poll_once(config: dict, state: dict) -> int:
             last = last_alerts.get(cooldown_key, 0)
             if now - last < cooldown:
                 continue
-            last_alerts[cooldown_key] = now
-
             # Tier-2 goes through agent-filter (broad keyword recall + agent
             # precision). Tier-1 always sends — those are auto-cron-firing,
             # we never want to suppress a regime-changing event.
@@ -502,6 +500,7 @@ def poll_once(config: dict, state: dict) -> int:
             if tier == 2:
                 send, agent_reason, impacts = _agent_filter_tier2(feed["name"], kw, title, summary, link)
                 if not send:
+                    last_alerts[cooldown_key] = now
                     print(f"[watcher] suppressed tier2 kw={kw!r} feed={feed['name']} "
                           f"reason={agent_reason[:120]!r} title={title[:80]!r}", flush=True)
                     continue
@@ -522,7 +521,10 @@ def poll_once(config: dict, state: dict) -> int:
                     f"\n{link}\n"
                     f"\nauto-spawning cron tick for sanity-check + decision."
                 )
-                telegram_send(msg)
+                if telegram_send(msg):
+                    last_alerts[cooldown_key] = now
+            else:
+                last_alerts[cooldown_key] = now
             # Persist to structured alerts log for next cron tick to consume.
             # UNCONDITIONAL for any send (2026-06-11: 30h of Iran-war alerts were
             # logged but dropped here because impacts parsed empty — a send-worthy
@@ -609,7 +611,7 @@ def cmd_start(_args: argparse.Namespace) -> int:
     # invoked from ephemeral shells (background tasks, tmux session-exit, etc.).
     # Lesson source: 2026-05-21 14:00 UTC cron tick — body-fetch CRITICAL re-val
     # was correctly firing (BBC Iran-Hormuz article downgraded CRITICAL→MATERIAL)
-    # but the log lines were going to a stale /tmp/claude-*/tasks/*.output file
+    # but the log lines were going to a stale temporary agent-task output file
     # from the bash background task that invoked `news_watcher.py start` two
     # days earlier. Future audits couldn't find re-val outcomes in
     # logs/news_watcher.log because the daemon's stdout had never been pointed
