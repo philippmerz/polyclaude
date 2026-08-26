@@ -77,7 +77,7 @@ def test_inject_preserves_ambiguous_delivery_code(tmp_path):
     assert not marker.exists()
 
 
-@pytest.mark.parametrize("queue_rc", [70, 75])
+@pytest.mark.parametrize("queue_rc", [70, 75, 76])
 def test_daily_checkin_fails_closed_after_dispatch_starts(tmp_path, queue_rc):
     repo, _runner, marker, env = _dispatch_fixture(tmp_path)
     env["FAKE_QUEUE_RC"] = str(queue_rc)
