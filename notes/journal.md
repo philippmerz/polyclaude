@@ -10188,3 +10188,16 @@ would have assumed it.
 Also corrected a stale third-party figure inside the Gemini source-diff note (Gemini 3.1 Pro
 "~44.7" -> 46.44 on Scale as of 2026-08-16) — same prose-goes-stale class swept yesterday, caught
 here because the audit surfaced the note for reading. Audit CLEAN across all 10 positions.
+
+## 2026-08-26 02:2x continuation — banked the diff-the-template technique (was tonight's real output)
+
+Tonight's criteria rotation produced a method worth more than the three refreshed dates, and it was
+sitting only in the journal. Banked into "Priors & calibration" beside the existing re-read lesson:
+for a TEMPLATE FAMILY, read ONE member verbatim and DIFF the rest against it. It proves sameness
+instead of assuming it (the only way to catch a silent per-leg edit), it is cheap enough that the
+rotation gets done properly rather than skimmed, and — the part I did not anticipate — it hands over
+the CLUSTER STRUCTURE for free: identical bodies mean one resolution mechanism, hence one w_spirit,
+hence a single resolver-behaviour judgment moves all three legs together. That is a structural
+argument for cluster-level sizing, and it is stronger than the capital-constraint argument I had
+been leaning on when I declined to add yesterday. The verbatim read is still required on one member,
+since a diff tells you they match but not what they say.

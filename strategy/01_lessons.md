@@ -180,6 +180,23 @@ the gap); *verify against a known truth* (absent output and failed output look i
   missile war on Kuwait (killed at deploy-time re-verify, 2026-07-26 — the re-verify
   condition attached at queue time is what saved it).
 
+- **For a TEMPLATE FAMILY, diff the criteria bodies instead of re-reading them — it proves sameness
+  and hands you the cluster structure for free.** 2026-08-26: rotation came due on all three held HLE
+  legs at once. Instead of three prose reads I read ONE verbatim and unified-diffed the other two
+  against it. Results in seconds: the >=50 body is CHARACTER-IDENTICAL to >=55 (the bar lives only in
+  the question, not the body), and the Gemini body differs from the OpenAI body in exactly one
+  clause — the lab name. Three things that a re-read would not have delivered: (a) it PROVES sameness
+  rather than assuming it, which is the only way to catch a silent per-leg edit; (b) it establishes
+  that all three legs share ONE resolution mechanism and therefore ONE w_spirit, so a single
+  judgment about resolver behaviour moves the whole cluster together — the structural argument for
+  sizing them as a cluster, which is stronger than the capital argument I had been using; (c) it is
+  far cheaper, so the rotation actually gets done properly instead of skimmed. The verbatim read is
+  still needed on ONE member (the diff tells you they match, not what they say) — and on that member
+  the read paid separately, locating w_spirit IN THE TEXT: a capability-framed "achieves" sentence
+  against a board-framed source clause whose escape hatch opens only on UNAVAILABILITY. Generalise:
+  whenever N positions come from one listing template, the unit of criteria work is the family, not
+  the position.
+
 - **RE-READ the criteria when the world moves — reading them once at entry is not enough.**
   Twice in one week a re-read of criteria I had already "read" changed a position: the HLE
   legs (the named source is frozen, and the fallback clause triggers on "unavailable", not
