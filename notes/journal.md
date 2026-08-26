@@ -10141,3 +10141,31 @@ neither is answered by depth data.
 
 Final state check clean: UMA 30 tracked / 0 alerts, 6 orders resting, no fills since the re-pricing.
 Day's ledger: 10 positions, REALIZED +$4.70 (+2.8%), $1.08 deployable until Aug-31.
+
+## 2026-08-26 02:00 cron tick — two Hormuz normalization headlines measured through; both HLE criteria re-read
+
+Bankroll **$189.82**; REALIZED **+$4.70 (+2.8%)** unchanged. Marked +$7.42 / realizable +$0.77 —
+the HLE legs gave back yesterday's mark gains, which is noise on lottery-sized positions held to
+Dec-31. 10 clear / 0 flagged, 0 SELL verdicts, redeem 0, coverage clean, discovery 24 hurdle-clearers
+all standing, both arb scanners 0 real.
+
+**HORMUZ — second normalization headline in 30h**: "Iran, Oman discuss temporary shipping lane"
+(19:53), scored MATERIAL with explicit "thesis pressure on NO". Measured rather than reacted, and
+the arithmetic is now sharper than "needs 12x": a 7-day AVERAGE of 60 requires sustaining traffic
+ABOVE the all-time single-day peak of the entire series (44 across 150 prints) for a full week, with
+5 days left and the feed lagging 2-3 days. A negotiated corridor changes ROUTING; the bar needs
+VOLUME the strait has never once produced. 7dMA still 5.00 (latest print Aug-23). Held at 0.998.
+
+**CRITERIA ROTATION fired on BOTH OpenAI legs** (8d). Did both first-hand:
+- >=55: read verbatim, no drift — and it LOCATED w_spirit IN THE TEXT rather than in my head.
+  Sentence 1 is capability-framed ("any model published by OpenAI ACHIEVES at least the specified
+  accuracy"), while the source clause is board-framed, and the "published elsewhere" escape is gated
+  on the source being UNAVAILABLE (not stale), defaulting to NO if no official alternative exists.
+  A reachable-but-frozen board is available, so the hatch stays shut — my thesis, confirmed verbatim.
+  But the achieves-vs-source tension is exactly what a resolver could split on, which is the textual
+  justification for pricing w_spirit ~0.45 rather than ~0. Good to have that grounded in the
+  document instead of in my judgment.
+- >=50: DIFFED against the >=55 body instead of re-reading it — character-identical, bar lives only
+  in the question. For template families that is the stronger check: it PROVES sameness rather than
+  assuming it, and would catch a silent per-leg edit that a fresh read might gloss over.
+Audit CLEAN after both. No trades.
