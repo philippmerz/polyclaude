@@ -1,10 +1,10 @@
 {
   "ALB": {
-    "ts": 1779114227.9657311,
+    "ts": 1787753200.58839,
     "result": {
-      "verdict": "WATCH",
-      "score": "3/4",
-      "summary": "NOT NOW. Current valuation 33x EV/EBITDA + 204% 1YR rally has priced in cycle recovery. Dip entry $140-150 with $20+/kg pricing; OR event entry post-Mt-Holland H1 2027.",
+      "verdict": "PASS",
+      "score": "2/4",
+      "summary": "**Do not enter at $143.** Consider entry below **$100** only if liquidity remains above $2.5B and net leverage stays below 1.0x; alternatively, wait for two consecutive quarters showing lithium realized price at/above **$20/kg** plus volume growth without a stock price above $160.",
       "fresh": true
     }
   },

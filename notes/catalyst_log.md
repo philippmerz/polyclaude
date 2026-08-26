@@ -825,3 +825,39 @@ None material to identity revelation. July 14 NY court hearing is procedural (as
 - [NYT Adam Back investigation](https://www.cnbc.com/2026/04/08/latest-investigation-of-bitcoin-founder-ties-identity-to-blockstream-ceo-adam-back.html)
 - [Craig Wright case closed (2024–2025)](https://coingeek.com/craig-wright-barred-from-further-satoshi-lawsuits/)
 ```
+
+---
+
+## 2026-08-26T14:11:02Z — catalyst_check
+
+**Query:** `Iran-Oman Hormuz Agreement by August 31?` resolves 2026-08-31 (5d)
+
+## CATALYST CHECK: Iran-Oman Hormuz Agreement by August 31?
+
+Resolution: 2026-08-31 | Days: 5 | Today: 2026-08-26
+
+### Base rate
+A new, clearly accepted bilateral maritime-management agreement within five days is ordinarily very rare (~1–3%), but this window already contains a live, jointly announced interim-corridor arrangement.
+
+### Catalysts in window
+- [HIGH] 2026-08-25 - Iran and Oman issued a joint statement on a proposed temporary navigational corridor and joint mine-clearing; this directly concerns vessel traffic but its “proposed framework” wording is not an unambiguous acceptance announcement. [Source](https://m.timesofoman.com/article/176051-oman-iran-discuss-framework-for-resumption-of-safe-navigation-through-strait-of-hormuz)
+- [HIGH] 2026-08-26 - Iran’s deputy FM said the countries reached an understanding on a temporary route; credible reporting describes an official agreement, but Oman has not separately stated clear acceptance in the available text. [Source](https://apnews.com/article/cb19bc3f0b467db591edbef52d0db273)
+- [LOW] 2026-08-26 to 2026-08-31 - Technical negotiations are continuing, but the stated timetable for a permanent scheme is 30–60 days, mostly outside this market window. [Source](https://apnews.com/article/1a4fa2e3812c458a25a561b38dc89f09)
+
+### Recent news (last 14d)
+- 2026-08-25 - Iran and Oman discuss temporary shipping lane: concrete interim-route terms emerged.
+- 2026-08-26 - Iran says Hormuz remains closed despite corridor talks: reopening is not required by the market; the relevant issue is a bilateral agreement managing traffic.
+- 2026-08-26 - Iran and Oman agree on temporary Hormuz route: materially supportive, but official joint wording remains less definite than the literal acceptance test.
+
+### P(YES) estimate
+- Low: 30%
+- Central: 55%
+- High: 78%
+- Reasoning: The temporary corridor/mine-clearing arrangement appears to establish traffic-management commitments and occurred after the August 4 window start. The key strict-criteria risk is evidentiary: the joint statement calls it a “proposed framework,” while the explicit “agreement/understanding” language currently comes principally from Iran; a clarifying Omani announcement before Aug. 31 would make YES substantially stronger.
+- Multiplicative breakdown: P(qualifying Iran–Oman traffic-management agreement announced by deadline: 75%) × P(both states’ announcements/credible consensus clearly establish mutual acceptance: 73%) = 54.75% ≈ 55%
+- Reconciliation: Central equals the structured joint; crisis/deal framing is not treated as sufficient without the bilateral-acceptance evidence required by the rules.
+
+### Sources
+- [Oman-Iran discuss framework for resumption of safe navigation — Times of Oman](https://m.timesofoman.com/article/176051-oman-iran-discuss-framework-for-resumption-of-safe-navigation-through-strait-of-hormuz)
+- [Iran warns of military ship ban under potential Oman deal — AP](https://apnews.com/article/cb19bc3f0b467db591edbef52d0db273)
+- [Iran and Oman hold talks on managing the Strait — AP](https://apnews.com/article/1a4fa2e3812c458a25a561b38dc89f09)

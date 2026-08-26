@@ -337,23 +337,53 @@
  },
  "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320": {
   "p_no": 0.998,
-  "verified": "2026-08-25",
-  "criteria_read": "2026-08-25",
-  "note": "DEC-0077. MECHANICAL, first-hand measured, and now a VERIFIED IMPOSSIBILITY rather than a forecast: YES needs the IMF PortWatch 7-day MA of Hormuz transit calls to reach 60 on any date through Aug-31. Latest pull (2026-08-25): 7dMA 5.00 over Aug-17..23 (prints 4,6,6,5,4,7,3; the note previously carried ~3.5 from an older window), daily prints 1-8, and the peak SINGLE DAY across 150 prints is 44 \u2014 a level never once observed, needed as a 7-day AVERAGE, inside 6 days, during an active conflict that has if anything escalated (tanker struck off Oman Aug-25; Iranian threats to neighbours Aug-23). SECOND GUARD CORRECTED 2026-08-25: the feed lag is ~2 DAYS, not the ~6 I had recorded (newest print Aug-23 pulled on Aug-25), so the publication-lag argument is WEAKER than written \u2014 data through ~Aug-29 will publish before resolution. It does not matter: the bar needs 420 transit calls in a 7-day window and the latest week delivered 35, so the fade rests on the measurement, not on the lag. Recording the correction because a guard I would have quoted as load-bearing was simply wrong. p_no 0.998 is the residual for source/resolver error, NOT for traffic. HOLD TO RESOLUTION: at mark 0.998 a taker sell captures ~nothing AND pays a fee, while resolution is fee-free \u2014 the 2026-08-25 alert's 'consider profit-taking' note was correctly declined on that math. Erosion trigger armed (hormuz-no-erosion, NO bid <=0.95). Regime caveat (2026-08-19 lesson): this near-certainty is specific to the 12-day horizon; it does NOT transfer to the Sep-30/Dec-31 siblings, which are war-duration forecasts. || FEED OPS (2026-08-25): the ArcGIS endpoint 400s TRANSIENTLY with 'Invalid query parameters' on identical params that succeed seconds later, and it REQUIRES orderByFields \u2014 a one-shot pull returns an empty feature list that naive code reads as 'no data' rather than 'query failed'. Any resolution-day check must RETRY (4x) and must distinguish empty-result from error-result. Latest series Aug-17..23: 4,6,6,5,4,7,3 -> 7dMA 5.00.",
+  "verified": "2026-08-26",
+  "criteria_read": "2026-08-26",
+  "note": "DEC-0077/0081. MECHANICAL and first-hand measured: YES needs the IMF PortWatch 7-day MA of Hormuz transit calls to reach 60 on any date through Aug-31. Latest pull (2026-08-26) remains 7dMA 5.00 over Aug-17..23 (4,6,6,5,4,7,3); the peak single day across 150 prints is 44. The Aug-25/26 Oman-Iran proposed temporary-corridor framework is a real forward catalyst but is explicitly not a reopening: Iran says the strait remains closed pending US commitments, while technical talks continue. The bar still needs 420 calls in one seven-day window versus 35 in the latest week. p_no 0.998 is the residual for a rapid operational activation plus traffic surge, source/revision error, or resolver error. DEC-0081 sold 4 shares at 0.996 to fund a higher-edge same-horizon ticket; the remaining 24.11 shares stay HOLD TO RESOLUTION because the fee-free payout beats the live bid at this prior. Erosion trigger armed (hormuz-no-erosion, NO bid <=0.95). Regime caveat: this near-certainty is specific to Aug-31 and does not transfer to later siblings. FEED OPS: ArcGIS transiently 400s on identical parameters and requires orderByFields; resolution-day checks retry 4x and distinguish empty result from error result.",
   "cluster": "hormuz",
   "rho_within": 1.0,
   "key_facts": [
    {
     "claim": "Resolution bar: PortWatch 7-day moving average of transit calls >= 60 on any date by Aug-31, 2026; source named in criteria.",
     "source": "https://gamma-api.polymarket.com/markets?slug=strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
-    "source_date": "2026-08-25",
-    "checked": "2026-08-25"
+    "source_date": "2026-08-26",
+    "checked": "2026-08-26"
    },
    {
-    "claim": "Measured first-hand: 7dMA 3.57 (latest print 2026-08-16, feed lags ~6d); 150-print history peak single day 44, never 60.",
-    "source": "IMF PortWatch ArcGIS Daily_Chokepoints_Data (portname='Strait of Hormuz'), pulled directly",
-    "source_date": "2026-08-22",
-    "checked": "2026-08-22"
+    "claim": "Measured first-hand: latest seven prints through Aug-23 are 4,6,6,5,4,7,3 (7dMA 5.00); 150-print history peak single day 44, never 60.",
+    "source": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/ArcGIS/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query?where=portid%3D%27chokepoint6%27&outFields=date%2Cn_total&orderByFields=date%20DESC&resultRecordCount=30&returnGeometry=false&f=json",
+    "source_date": "2026-08-23",
+    "checked": "2026-08-26"
+   }
+  ]
+ },
+ "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
+  "p_yes": 0.55,
+  "verified": "2026-08-26",
+  "criteria_read": "2026-08-26",
+  "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03: the market requires Oman and Iran to announce acceptance of the same traffic-management agreement, not actual reopening. The Aug-25 joint statement describes a proposed temporary corridor and joint mine-clearing framework; Iran's deputy foreign minister says the route is agreed, while Oman's foreign minister says he hopes the countries will announce it soon. Catalyst check central p_yes 0.55 (30-78 band); the default 0.10 pessimism haircut still clears the 0.17 executable ask by 28pp. Contrary evidence is strong and explicitly priced: the joint wording remains prospective, Iran says the understanding is not yet binding, the market fell on high volume, and exit liquidity is thin. Therefore no adds absent a fresh unambiguous Omani acceptance announcement; hold to resolution or exit only if the criteria/fact branch is falsified while a real bid remains.",
+  "cluster": "hormuz-agreement",
+  "rho_within": 0.0,
+  "divergence_ack": "2026-08-26",
+  "divergence_ack_reason": "The 40pp prior-to-mark gap is the disagreement entered in DEC-0082, not an unreviewed move: the $5.03 minimum-sized position was opened today only after re-reading the criteria and the Oman-Iran statement, obtaining an independent 30-78% catalyst range, and applying the standard 10pp pessimism haircut. No further sizing follows. The contract is an interpretation-sensitive announcement market, the joint wording is still prospective, high-volume contrary flow is real, and exit liquidity is thin; re-underwrite only on an unambiguous Omani acceptance announcement or a criteria/fact-branch break.",
+  "key_facts": [
+   {
+    "claim": "YES requires a declarative Oman-and-Iran acceptance announcement for the same agreement establishing traffic-management policies, obligations, or commitments; prospective negotiations alone do not qualify.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
+    "source_date": "2026-08-26",
+    "checked": "2026-08-26"
+   },
+   {
+    "claim": "The Aug-25 joint statement calls the corridor framework proposed, includes a joint mine-clearing project, and says technical negotiations will continue.",
+    "source": "https://m.timesofoman.com/article/176051-oman-iran-discuss-framework-for-resumption-of-safe-navigation-through-strait-of-hormuz",
+    "source_date": "2026-08-25",
+    "checked": "2026-08-26"
+   },
+   {
+    "claim": "Iran says a temporary route was agreed but not yet binding; Oman says it hopes the corridor will be announced soon, leaving a live clarification catalyst before Aug-31.",
+    "source": "https://apnews.com/article/cb19bc3f0b467db591edbef52d0db273",
+    "source_date": "2026-08-26",
+    "checked": "2026-08-26"
    }
   ]
  }

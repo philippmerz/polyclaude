@@ -27,6 +27,14 @@
    "negativeRisk": false
   },
   {
+   "slug": "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
+   "outcome": "Yes",
+   "size": 31,
+   "conditionId": "0x1c38a64c494e01c9bd81362cfadeadb3b87023d1d9ffae1df5a428c03152fc74",
+   "asset": "71542982741394376771627006689338880117415417908788827680925028639627563224055",
+   "negativeRisk": false
+  },
+  {
    "slug": "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
    "outcome": "No",
    "size": 29.7173,
@@ -53,7 +61,7 @@
   {
    "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
    "outcome": "No",
-   "size": 28.1135,
+   "size": 24.1135,
    "conditionId": "0x60c2c085ee8c16bc8f2419739a94971d4c9d00f637ead10fc0f540afa1be64e8",
    "asset": "90869494087977018607792751230236923002303032923064138180950209430688758061828",
    "negativeRisk": false

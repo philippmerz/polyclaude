@@ -1,5 +1,5 @@
 {
-  "next_id": 81,
+  "next_id": 83,
   "decisions": [
     {
       "id": 1,
@@ -1544,6 +1544,45 @@
         "metamask"
       ],
       "slug": "metamask-fdv-above-one-day-after-launch",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 81,
+      "timestamp": "2026-08-26T14:16:29Z",
+      "type": "size_change",
+      "thesis": "Sold 4 Hormuz-normal-by-Aug31 NO shares at 0.996 FAK, realizing $3.984 to fund a higher-edge same-horizon opportunity. The resolving variable remains unchanged: IMF PortWatch latest 7-day average is 5.0 versus the 60 threshold, so the residual 24.11 shares remain a high-confidence hold. The rotation sacrifices roughly one cent of expected Hormuz value on the sold shares (p_no 0.998 versus 0.996 bid) to finance the minimum viable Iran-Oman agreement ticket, whose robust pessimistic probability remains far above cost.",
+      "confidence": "high",
+      "prediction": "PortWatch never publishes a 7-day average at or above 60 through Aug 31; the remaining 24.11 NO shares resolve at 1.00. The sold 4 shares forgo at most about $0.008 versus the 0.998 prior, before time value.",
+      "size_usd": 3.984,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "hormuz",
+        "rotation",
+        "funding"
+      ],
+      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 82,
+      "timestamp": "2026-08-26T14:16:40Z",
+      "type": "open_position",
+      "thesis": "Bought 31 Iran-Oman Hormuz Agreement YES shares for $5.03 total (24 shares at 0.16 and 7 at 0.17; average 0.1623), using the mandatory entry helper and FAK limits. Literal criteria require an announced Oman-Iran agreement establishing traffic-management commitments, not an actual reopening. The Aug-25 joint statement describes a proposed temporary corridor plus a joint mine-clearing project; Iran says the route is agreed while Oman says it hopes to announce it soon. Catalyst check central P(YES)=0.55; even a 10pp pessimism haircut leaves 0.45 versus 0.17 cost. Sized at the smallest practical ticket because the unresolved branch is interpretation/announcement wording, exit liquidity is thin, and high-volume price action is contrary evidence.",
+      "confidence": "medium",
+      "prediction": "By Aug 31, Oman and Iran either issue an unambiguous acceptance announcement for the same temporary Hormuz traffic-management arrangement, or the existing joint statement plus credible reporting is judged a qualifying agreement and the market resolves YES. Falsified if announcements remain prospective or non-binding through the deadline and the market resolves NO.",
+      "size_usd": 5.03,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "hormuz",
+        "catalyst",
+        "interpretation",
+        "shortdated"
+      ],
+      "slug": "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -10201,3 +10201,41 @@ hence a single resolver-behaviour judgment moves all three legs together. That i
 argument for cluster-level sizing, and it is stronger than the capital-constraint argument I had
 been leaning on when I declined to add yesterday. The verbatim read is still required on one member,
 since a diff tells you they match but not what they say.
+
+## 2026-08-26 14:00 cron tick — three Hormuz alerts processed; $5.03 rotated into the announcement dislocation
+
+Final bankroll **$190.11**; REALIZED **+$4.74 (+2.8%)**. The 11 PM positions cost $165.70 and
+mark at $173.83 (+$8.13), but depth-walked realizable value is only $167.39 (+$1.69): quote both,
+because midpoint marks overstate the sleeve by $6.44. Deployable pUSD is $0.04 after the rotation.
+
+Processed all three queued Hormuz items: Iran said the strait remained closed despite corridor
+talks; Iran/Oman moved toward a framework while the US-blockade issue remained unresolved; and the
+Aug-26 headline said the two countries had agreed a temporary route. Re-read both contracts and
+measured the resolving variable first-hand. PortWatch's latest seven prints through Aug-23 remain
+4, 6, 6, 5, 4, 7, 3 — average **5.00** versus **60** required through Aug-31 for normal traffic.
+The proposed corridor is nowhere close to the volume bar, so the remaining 24.11 Hormuz-normal NO
+shares stay held at p_no 0.998.
+
+The same news created a separate, literal-criteria opportunity: "Iran-Oman Hormuz Agreement by
+August 31?" needs the two states to announce acceptance of the same traffic-management agreement;
+actual reopening is unnecessary. The joint statement still calls the framework proposed and says
+technical talks continue, Iran describes an understanding that is not yet binding, and Oman says it
+hopes the corridor will be announced soon. A scoped catalyst check returned p_yes 0.30 / 0.55 / 0.78;
+even the standard 10pp haircut to central cleared the 0.16-0.17 ask. But the wording ambiguity,
+high-volume contrary price action, and thin exit are genuine evidence, so this was sized as a small
+announcement lottery rather than the Kelly output.
+
+Execution: sold 4 existing Hormuz-normal NO at 0.996 for $3.984 (DEC-0081), then entered only through
+`polyclaude_enter.py`: 15 YES at 0.16, 9 at 0.16, and 7 at 0.17. Final agreement position is 31 YES,
+$5.03 cost, 0.1623 average (DEC-0082). The partial normal-traffic sale lifted realized P&L by $0.04.
+No further sizing is authorized absent fresh, unambiguous Omani acceptance; the 40pp prior/mark gap
+is explicitly acknowledged as the reviewed disagreement, not an unattended drift.
+
+Other prescribed work: ALB triggered near $135, but a fresh long-term re-vet passed only 2/4 gates;
+no IBKR buy and $0 suggested now — wait below $100 with >$2.5B liquidity and <1x leverage, or two
+quarters of realized lithium pricing at least $20/kg. Sports consensus surfaced Real Madrid, but the
+NO failed the mandatory pessimistic case and was skipped. Default, thin-tail, macro, monotonicity,
+consistency, and favorite-fade scans produced no other executable edge; no redeemables; no overdue
+decisions. Post-trade state audit is clean across 11 positions, UMA 0 alerts, crux coverage clean,
+marginal-APY 11 clear / 0 flagged, exit analysis has no sell-taker verdict, and daemons were healthy.
+Weekly P&L and world-state refreshes were not due.
