@@ -268,7 +268,44 @@
     "checked": "2026-08-26"
    }
   ],
-  "divergence_ack_reason": "Mark 0.185 NO vs prior 0.65 = 46pp, far past the 25pp audit bar. VERIFIED BEFORE ACKING, all three candidate causes checked and none found: (1) BOARD \u2014 source_freeze_check live-vs-Jan diff still FROZEN, coverage control passed (claude/grok/gemini all parsed), so no qualifying row appeared; (2) CAPABILITY \u2014 best public Gemini HLE scores are Deep Think 48.4 (Feb-2026) and 3.1-pro-preview 46.44 (Scale, Aug-16), both UNDER the 50 bar, so no release justifies it; (3) NEWS \u2014 watcher silent on the HLE crux. The +10.5pp came on a TIGHT 2.9pp spread with $719 volume, so it is real flow rather than a midpoint flap \u2014 the market is repricing something I cannot observe, and the most likely candidate is w_spirit (expected resolver behaviour when the board fails), which is precisely the term I flagged as judgment-not-measurement. HELD: even at the most market-sympathetic end of my own sensitivity range (w_spirit 0.60 -> p_no 0.55) the position clears the 0.185 mark by a wide margin. NOT ADDING despite the apparent edge: cluster concentration is the binding constraint, and adding on a move I cannot explain would be sizing into the one term I have no measurement for."
+ "divergence_ack_reason": "Mark 0.185 NO vs prior 0.65 = 46pp, far past the 25pp audit bar. VERIFIED BEFORE ACKING, all three candidate causes checked and none found: (1) BOARD \u2014 source_freeze_check live-vs-Jan diff still FROZEN, coverage control passed (claude/grok/gemini all parsed), so no qualifying row appeared; (2) CAPABILITY \u2014 best public Gemini HLE scores are Deep Think 48.4 (Feb-2026) and 3.1-pro-preview 46.44 (Scale, Aug-16), both UNDER the 50 bar, so no release justifies it; (3) NEWS \u2014 watcher silent on the HLE crux. The +10.5pp came on a TIGHT 2.9pp spread with $719 volume, so it is real flow rather than a midpoint flap \u2014 the market is repricing something I cannot observe, and the most likely candidate is w_spirit (expected resolver behaviour when the board fails), which is precisely the term I flagged as judgment-not-measurement. HELD: even at the most market-sympathetic end of my own sensitivity range (w_spirit 0.60 -> p_no 0.55) the position clears the 0.185 mark by a wide margin. NOT ADDING despite the apparent edge: cluster concentration is the binding constraint, and adding on a move I cannot explain would be sizing into the one term I have no measurement for."
+ },
+ "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645": {
+  "p_no": 0.65,
+  "verified": "2026-08-28",
+  "criteria_read": "2026-08-28",
+  "hidden_info": true,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.95,
+  "note": "DEC-0089 holds 49 NO shares, bought 20 at 0.09 and 29 at 0.10 for $4.70 notional plus the market's 4% quadratic taker fees. This is the cleanest measured board-stasis expression in the HLE cluster: the contract resolves NO explicitly if no qualifying Gemini Pro row is added by Dec-31; unlike the older HLE family, it does not require a spirit-resolution estimate when the named source stays available but frozen. Central p_no=0.65 deliberately allows a 35% chance that agi.safe.ai resumes and adds a qualifying row despite zero additions or removals throughout 2026. The adverse case is concrete: already-released Gemini 3.1 Pro scores 46.44 on Scale and may qualify if the board catches up, while Google says 3.5 Pro is coming soon. Entry used a 15-point stress (p_no=0.50) and a hard raw cap of 0.10. Treat as hold-to-resolution: exit liquidity is thin, and one board update can gap the leg before an active exit. Any further add requires a fresh validated source diff and a full correlated-cluster review; the apparent per-leg edge is not independent diversification.",
+  "divergence_ack": "2026-08-28",
+  "divergence_ack_reason": "The roughly 56pp prior/mark gap was re-derived and acted on in DEC-0089, not ignored. Bought only $4.70 notional despite much larger Kelly output because all held HLE legs share the board-stasis crux and the contrary catch-up path is real. Re-open immediately if agi.safe.ai adds or removes any row, Google dates 3.5 Pro, or the debut ladder moves on evidence that can be identified.",
+  "key_facts": [
+   {
+    "claim": "The exact criteria use only a newly added Gemini Pro row on agi.safe.ai and state that no qualifying addition by 2026-12-31 23:59 ET resolves NO; an already released model may qualify when newly added.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+    "source_date": "2026-08-28",
+    "checked": "2026-08-28"
+   },
+   {
+    "claim": "The validated archive-diff instrument detected extensive 2025 additions/removals, passed claude/grok/gemini coverage, and found zero additions or removals between 2026-01-15 and the live board on 2026-08-28.",
+    "source": "https://agi.safe.ai/",
+    "source_date": "2026-08-28",
+    "checked": "2026-08-28"
+   },
+   {
+    "claim": "Scale's sister leaderboard lists Gemini 3.1 Pro at 46.44, above the 40 bar, so a catch-up board batch is the direct thesis-break path.",
+    "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+    "source_date": "2026-08-28",
+    "checked": "2026-08-28"
+   },
+   {
+    "claim": "Google's current Gemini page says 3.5 Pro is coming soon, increasing the chance of another qualifying model before year-end but not establishing that agi.safe.ai will add it.",
+    "source": "https://deepmind.google/models/gemini/",
+    "source_date": "2026-08-28",
+    "checked": "2026-08-28"
+   }
+  ]
  },
  "_comment_key_facts": "key_facts = the load-bearing factual claims a position rests on, each paired with the EXTERNAL source it came from. Added 2026-08-11 after a prior revision inverted the direction of a source's anchor move and then survived TWO re-verifications, because each re-verification re-read my own note and reproduced the error. A re-verification that does not diff the recorded claim against the source's actual words is confirmation, not verification. The audit rotation surfaces these for source-diffing. TAGGING CAVEAT (2026-08-12): the audit tags a source UNVERIFIED when it does not start with http, but a URL that 403s (congress.gov) is no more agent-verifiable than a prose 'sweep'. Where that happens, say so INLINE in the claim and name the independent falsifier used instead \u2014 do not let an unfetchable URL launder a claim into looking checked. SOURCE_DATE (2026-08-12): distinct from `checked`. `checked` is when I last LOOKED; `source_date` is when the source was PUBLISHED. The MacBook staleness cost 18pp precisely because those diverged invisibly \u2014 checked=1d ago on a source published 114d earlier, in a story that had moved three times since. For live-state sources (a leaderboard, an order book, a market description) the two are equal by construction. ATOMICITY REQUIRED (2026-08-13): one independently checkable assertion per entry, each with its own source and source_date. Bundled entries are how an unchecked fact hides inside a checked one \u2014 SpaceX's 'No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T close would need an S-1 already public' bundled OpenAI's TIMING (checked twice) with every other rival's SIZE (never checked), and the second cost the project its largest prior correction. If an entry contains ' and ' joining two verifiable claims, split it. SOURCE TAXONOMY (2026-08-13) \u2014 'is it a URL' is the WRONG test and my first sweep miscategorised because of it. Ranked by what may move a number: (1) FIRST-HAND MEASUREMENT \u2014 a CLOB book walk, a gamma/API read, an on-chain balance. Reproducible on demand and STRONGER than any article, even though it carries no URL. (2) DATED PRIMARY ARTIFACT \u2014 a fetched, dated piece; the standard for a factual claim about the world. (3) NAMED BUT UNLINKED \u2014 e.g. 'third-party trackers'; verifiable with effort, acceptable if the claim is checked periodically. (4) AGGREGATED SEARCH SUMMARY \u2014 a LEAD ONLY. It must never move a prior: on 2026-08-13 one such summary said the M5 reshuffle was an 'acceleration', moved MacBook 0.62->0.58, and pinning it to dated sources REFUTED it outright. Label the kind when the source is not a URL, so a future sweep does not mistake a measurement for a guess.",
  "_comment_divergence_ack": "divergence_ack MUST be a bare ISO date string (e.g. \"2026-08-15\") \u2014 position_state_audit \u00a73c parses it with date.fromisoformat() directly and treats anything else as EXPIRED via the exception path. 14-day window from that date. Put prose in divergence_ack_reason (audit ignores it). Same for source_ack. Learned 2026-08-16: two acks written as rich dicts were silently invalid; one flagged, one was a near-miss.",

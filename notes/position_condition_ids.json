@@ -19,6 +19,14 @@
    "negativeRisk": false
   },
   {
+   "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+   "outcome": "No",
+   "size": 49,
+   "conditionId": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
+   "asset": "67951575343428346736827544478449934796473993940055164453800722378542887483258",
+   "negativeRisk": false
+  },
+  {
    "slug": "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
    "outcome": "Yes",
    "size": 47.7196,
@@ -51,19 +59,19 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
-   "outcome": "No",
-   "size": 29,
-   "conditionId": "0x890fc3ba40458db0b67560691aa1597344c2a0560d18e80f586a4b35f510b4ce",
-   "asset": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
-   "negativeRisk": false
-  },
-  {
    "slug": "trump-out-as-president-before-2027",
    "outcome": "No",
    "size": 28.33,
    "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
    "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+   "negativeRisk": false
+  },
+  {
+   "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
+   "outcome": "No",
+   "size": 24,
+   "conditionId": "0x890fc3ba40458db0b67560691aa1597344c2a0560d18e80f586a4b35f510b4ce",
+   "asset": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
    "negativeRisk": false
   },
   {

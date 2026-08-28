@@ -107,6 +107,14 @@ re-underwriting, don't let it fill into news.
 Re-verify at each tick: if unfilled after ~7 days, either re-price to the then-best bid or drop it —
 a stale resting bid at a price the market has left behind is a free option written to the market.
 
+## REPLACED: Greenland NO maker SELL after DEC-0090 trim (2026-08-28 20:36 UTC)
+
+Cancelled the original 29sh @ 0.98 order `0x5c542a6b…352f5`, verified it was absent, sold 5sh
+actively at 0.93 to fund DEC-0089, then restored the take-profit for the exact remaining balance:
+24sh NO @ **0.98**, post-only GTC, order `0xbbf11df8…e2373`. The 0.98 rest is above the unchanged
+0.95 fair; the active trim changed quantity, not thesis. Live `clob_v2.py orders` remains the source
+of truth.
+
 ## FILLED: touchscreen-MacBook-2026 NO maker BUY (placed 2026-08-11 10:15, filled by 18:00 UTC, DEC-0067)
 
 6 shares NO @ **0.59** — FILLED, fee-free. Position now 66sh at 0.412 avg, cost $27.19 (14.6% of a

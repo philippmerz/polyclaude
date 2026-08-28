@@ -1,5 +1,5 @@
 {
-  "next_id": 89,
+  "next_id": 91,
   "decisions": [
     {
       "id": 1,
@@ -1701,6 +1701,45 @@
         "reliability"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 89,
+      "timestamp": "2026-08-28T20:35:20Z",
+      "type": "open_position",
+      "thesis": "Bought 49 NO shares in the next-Gemini-Pro HLE-debut >=40 market: 20 at 0.09 and 29 at 0.10, $4.70 notional plus $0.16992 in 4% quadratic taker fees, $4.86992 total risk. The exact contract resolves NO if no qualifying Gemini Pro row is newly added to agi.safe.ai by Dec-31. Immediately before execution, source_freeze_check passed its 2025 liveness and claude/grok/gemini coverage controls and found zero board additions or removals since 2026-01-15. Central p_no=0.65 allows a 35% catch-up probability; a deliberately hostile 15-point haircut still gives p_no=0.50 versus <=0.1036 effective entry. The concrete contrary path is a catch-up addition of already-released Gemini 3.1 Pro, which scores 46.44 on Scale, or the coming Gemini 3.5 Pro. Sized as a correlated lottery inside the existing HLE cluster, not as an independent 55-point edge; total HLE plus MacBook factor cost remains below the 30% cap.",
+      "confidence": "medium",
+      "prediction": "No qualifying Gemini Pro row is newly added to agi.safe.ai by December 31 and all 49 shares resolve NO for $49. The thesis is falsified by any qualifying board addition; because the leg is thin, a board change should be treated as an information event rather than an assumed executable exit opportunity.",
+      "size_usd": 4.86992,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "gemini",
+        "source-freeze",
+        "cluster"
+      ],
+      "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 90,
+      "timestamp": "2026-08-28T20:34:10Z",
+      "type": "size_change",
+      "thesis": "Sold 5 of 29 Greenland-acquisition NO shares at 0.93 FAK for $4.65 to fund DEC-0089, then replaced the fee-free 0.98 take-profit for the remaining 24 shares. The Greenland p_no=0.95 thesis is unchanged; the rotation gives up only $0.10 of central expected value on the sold slice while funding $4.86992 of HLE exposure with about $26.98 central / $19.63 stressed expected profit. This dominated trimming Lake, where the same five-share funding sale would have surrendered roughly $0.5 of expected value.",
+      "confidence": "high",
+      "prediction": "The United States does not acquire part of Greenland in 2026 and the remaining 24 NO shares resolve for $24 unless the 0.98 maker sell fills first. The five-share funding trim forgoes about $0.10 versus the 0.95 prior.",
+      "size_usd": 4.65,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "greenland",
+        "rebalance",
+        "funding"
+      ],
+      "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -10537,3 +10537,48 @@ or HOLD decision.
 
 Validation: 143 pytest tests passed (including 5/5 focused continuation-contract regressions), the
 standalone money suite passed all 116 checks, and bash syntax is clean. No trade and no Telegram.
+
+## 2026-08-28 20:2x–20:4x durable continuation — low-edge Greenland rotated into the measured HLE crux (DEC-0089/0090)
+
+The restored durable goal continued the scheduled work instead of ending on the quiet 20:22 repair.
+Refreshed both Aug-31 clocks first. A valid US-region Maps response still contained `Lake Ontario`
+twice and `Lake America` zero times; the monitor has no rollout hit. Lake's headline midpoint moved
+near 0.51, but that was a thin stub: only 5 shares bid 0.51 and 10 at 0.506 before the book fell to
+0.451/0.447/0.446. Full-position taker value averaged about 0.446, below both the 0.60 central and
+0.50 stressed fair, so the 40.95563 YES remain HOLD/no-add. The Iran–Oman agreement book stayed
+0.05/0.06. Oman's official statement still says proposed framework, continuing technical talks and
+hope for a later announcement; no later bilateral declarative acceptance was found. HOLD 31 YES at
+p_yes 0.09; sell threshold remains 0.05 or definitive falsification.
+
+The capital-independent HLE preflight produced the material opportunity. Re-ran
+`source_freeze_check` with both safeguards: its Jun→Dec-2025 control detected five additions and
+eleven removals, coverage found claude/grok/gemini, and live versus 2026-01-15 again showed zero
+additions or removals. The next-Gemini-Pro debut ≥40 contract is tighter than the older HLE family:
+only a newly added agi.safe.ai row qualifies and no qualifying row by Dec-31 explicitly resolves NO.
+The live NO ladder offered 20 at 0.09 and more at 0.10. The contrary path was not hand-waved:
+already-released Gemini 3.1 Pro is 46.44 on Scale and would clear 40 if the dormant board catches up;
+Google's current model page says 3.5 Pro is coming soon, and the board's submission route remains
+live. But six months of omission plus a fully static 2026 board make the market's >90% implied chance
+of a qualifying catch-up too high. Set central p_no 0.65 and used a deliberately wider 0.15 entry
+haircut, so stressed p_no 0.50 still cleared the <=0.1036 fee-inclusive price by about 40 points.
+
+Funding was ranked by expected value, not convenience. Trimming five Lake shares would surrender
+roughly $0.5 at central fair. Greenland NO had a 0.93 executable bid against 0.95 fair, so selling five
+gave up only $0.10 while releasing $4.65. Cancelled and verified removal of the old 29sh Greenland
+0.98 sell, then DEC-0090 sold 5 NO at 0.93 FAK: order
+`0x17004599…40b76`, settlement `0x223f9072…6daa7`. DEC-0089 bought 20 debut-NO at 0.09 and 29 at
+0.10: orders `0xe7ae1d6e…94058` / `0x6a6374e1…eef93`, settlements
+`0xa90f715d…4721` / `0xdb77958e…203cd`. Total is 49 shares, $4.70 notional plus $0.16992 fee =
+$4.86992 risk. Central resolution EV is +$26.98; at the 15-point stress it is +$19.63. Reposted the
+remaining 24 Greenland NO at 0.98, order `0xbbf11df8…e2373`. HLE plus the conservatively grouped
+MacBook factor remains below the 30% cluster cap; no further add was made despite another 35 shares
+at 0.10 because the ~$5 lottery-ticket discipline, common rho≈0.95 crux and thin exit all bind.
+
+Post-trade reconciliation: 15 live PM rows, $165.68 cost, $176.13 midpoint (+$10.45), but only
+$167.00 depth-walked realizable (+$1.33), a $9.13 midpoint overstatement. Total bankroll $192.09,
+REALIZED +$4.79 (+2.8% of the $170 reference), pUSD ~$0.10, exactly six maker sells. Claim-insurance
+now includes the new condition and 24-share Greenland balance; prior/criteria/cluster state and
+HLE/Gemini-Pro news coverage were added. The direct thesis-break is any agi.safe.ai row change, so
+the validated diff must run immediately on an alert and before any future add. The next scheduled
+hard clocks remain the 22:00 UTC periodic check and Aug-31 Lake/agreement resolution path; the
+durable ROI goal remains active until the operator manually cancels it.
