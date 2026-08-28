@@ -15,6 +15,13 @@ import brownian_bridge_fv as brownian  # noqa: E402
 import portfolio_kelly  # noqa: E402
 
 
+def test_portfolio_kelly_recognizes_generic_and_legacy_set_markers() -> None:
+    assert portfolio_kelly.set_only_label({"set_only": "range"}) == "range"
+    assert portfolio_kelly.set_only_label({"arb_paired": "arb"}) == "arb"
+    assert portfolio_kelly.set_only_label({"p_yes": 0.7}) is None
+    assert portfolio_kelly.set_only_label(None) is None
+
+
 def test_survival_hazard_rolls_toward_one() -> None:
     assert math.isclose(
         brownian.fair_mark_hazard(0.81, 0.5, "survival"),

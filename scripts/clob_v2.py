@@ -85,6 +85,13 @@ SIG_TYPE_EOA = 0
 # USDC (collateral) is 6 decimals
 USDC_DECIMALS = 6
 
+# Matched v2 POSTs can now return tradeIDs before settlement transaction
+# hashes. Mirror the official SDK's best-effort authenticated trade polling so
+# downstream execution can retain transaction-hash proof.
+RESOLVE_TRADES_TIMEOUT_SECONDS = 15.0
+RESOLVE_TRADES_POLL_INTERVAL_SECONDS = 0.25
+FAILED_TRADE_STATUS = "FAILED"
+
 
 # --- wallet + creds loading ----------------------------------------------
 
@@ -265,7 +272,7 @@ def _signed_order_to_api_body(signed: dict) -> dict:
 
 def post_order(signed_order: dict, *, order_type: str = "GTC", post_only: bool = False,
                defer_exec: bool = False) -> dict:
-    """POST a signed v2 order to /order. Returns parsed JSON response."""
+    """POST a signed v2 order and resolve async trade IDs when possible."""
     address, _ = _load_wallet()
     creds = _load_creds()
     body = {
@@ -279,7 +286,85 @@ def post_order(signed_order: dict, *, order_type: str = "GTC", post_only: bool =
     headers = _hmac_headers("POST", "/order", body, creds, address)
     body_str = json.dumps(body, separators=(",", ":"), ensure_ascii=False)
     r = httpx.post(f"{CLOB_HOST}/order", content=body_str.encode(), headers=headers, timeout=20)
-    return {"status_code": r.status_code, "body": _safe_json(r)}
+    response_body = _safe_json(r)
+    if r.status_code < 400 and not defer_exec:
+        response_body = _resolve_transactions_hashes(response_body, address, creds)
+    return {"status_code": r.status_code, "body": response_body}
+
+
+def _get_trades_by_id(trade_id: str, address: str, creds: dict) -> list[dict]:
+    """Fetch the first authenticated trade page for one execution ID."""
+    path = "/data/trades"
+    headers = _hmac_headers("GET", path, None, creds, address)
+    r = httpx.get(
+        f"{CLOB_HOST}{path}",
+        params={"id": trade_id, "next_cursor": "MA=="},
+        headers=headers,
+        timeout=5,
+    )
+    r.raise_for_status()
+    body = r.json()
+    rows = body.get("data") if isinstance(body, dict) else None
+    if not isinstance(rows, list):
+        raise RuntimeError("trade lookup returned an unexpected shape")
+    return [trade for trade in rows if isinstance(trade, dict)]
+
+
+def _resolve_transactions_hashes(response: Any, address: str, creds: dict,
+                                  timeout: float = RESOLVE_TRADES_TIMEOUT_SECONDS) -> Any:
+    """Best-effort conversion of async ``tradeIDs`` into settlement hashes.
+
+    Poll failures never turn a successfully posted order into a rejection. On
+    timeout the original response retains its trade IDs, which forces strict
+    downstream callers into manual reconciliation instead of guessing.
+    """
+    if not isinstance(response, dict) or response.get("transactionsHashes"):
+        return response
+    raw_ids = response.get("tradeIDs")
+    if not isinstance(raw_ids, list):
+        return response
+    normalized_ids = [str(trade_id).strip() for trade_id in raw_ids
+                      if isinstance(trade_id, (str, int)) and str(trade_id).strip()]
+    trade_ids = list(dict.fromkeys(normalized_ids))
+    if not trade_ids:
+        return response
+
+    resolved: dict[str, dict] = {}
+    try:
+        timeout_value = float(timeout)
+    except (TypeError, ValueError):
+        timeout_value = 0.0
+    if not timeout_value >= 0.0 or timeout_value == float("inf"):
+        timeout_value = 0.0
+    deadline = time.monotonic() + timeout_value
+    while True:
+        for trade_id in trade_ids:
+            if trade_id in resolved:
+                continue
+            try:
+                trades = _get_trades_by_id(trade_id, address, creds)
+            except Exception:
+                trades = []
+            for trade in trades:
+                if str(trade.get("id") or "") != trade_id:
+                    continue
+                status = str(trade.get("status") or "").upper()
+                if status == FAILED_TRADE_STATUS or trade.get("transaction_hash"):
+                    resolved[trade_id] = trade
+                    break
+        if (all(trade_id in resolved for trade_id in trade_ids)
+                or time.monotonic() >= deadline):
+            break
+        time.sleep(RESOLVE_TRADES_POLL_INTERVAL_SECONDS)
+
+    hashes = [
+        str(resolved[trade_id]["transaction_hash"])
+        for trade_id in trade_ids
+        if trade_id in resolved
+        and str(resolved[trade_id].get("status") or "").upper() != FAILED_TRADE_STATUS
+        and resolved[trade_id].get("transaction_hash")
+    ]
+    return ({**response, "transactionsHashes": hashes} if hashes else response)
 
 
 def cancel_order(order_id: str) -> dict:
@@ -440,11 +525,11 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
     holds across both index sets). NEGRISK PATH ADDED 2026-08-13: the adapter
     needs exact balances, which is why this used to refuse outright — but that
     refusal left my LARGEST position with no claim-insurance fallback at all.
-    SpaceX ($29.42, 16% of bankroll) is the book's only negRisk market, so a
-    de-index at its Dec-31 resolution would have hit exactly the case this
-    function exists for and raised SystemExit. The balances come from the
-    conditionId snapshot's `asset` + `outcome` fields read ON-CHAIN via
-    balanceOf, never from data-api — which is the whole point, since data-api is
+    SpaceX ($29.42, 16% of bankroll) was the book's only negRisk market when
+    this fallback was added, so a de-index at its Dec-31 resolution would have
+    hit exactly the case this function exists for and raised SystemExit. The
+    balances come from the conditionId snapshot's `asset` + `outcome` fields
+    read ON-CHAIN via balanceOf, never from data-api — which is the whole point, since data-api is
     the thing that has disappeared in the scenario being handled.
     """
     from web3 import Web3
@@ -624,8 +709,7 @@ def main():
     p.add_argument("condition_id", help="0x-prefixed conditionId (verify resolved on gamma first)")
     p.add_argument("--neg-risk", action="store_true",
                    help="negRisk market — also pass --token-id and --outcome (all three fields "
-                        "are in notes/position_condition_ids.json; SpaceX is currently the book's "
-                        "only negRisk position)")
+                        "are in notes/position_condition_ids.json for every live position)")
     p.add_argument("--token-id", help="the held outcome's token id (snapshot field `asset`)")
     p.add_argument("--outcome", choices=["Yes", "No"], help="which side is held (snapshot field `outcome`)")
     p.add_argument("--dry-run", action="store_true",

@@ -69,7 +69,8 @@ def test_live_fee_callers_delegate_to_canonical_helper():
     assert "fee_per_share = pm_fees.fee_per_share_at(raw_rate, p)" in sports
     assert "cost = p + fee_per_share" in sports
     assert "market_fee_rate = pm_fees.fee_rate(m)" in sports
-    assert "_ocost, _ofee = effective_entry_cost(_oask, taker_bps)" in enter
+    assert "_ofee = pm_fees.fee_per_share(m, _oask)" in enter
+    assert "fee_per_share = pm_fees.fee_per_share(m, mark)" in enter
     assert "return pm_fees.fee_per_share(market, p)" in consistency
     assert 'fees = sum(q["fee_per_share"] for q in side_quotes)' in consistency
     assert "total_fees = _basket_fee_per_unit(valid)" in consistency

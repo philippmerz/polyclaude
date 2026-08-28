@@ -18,11 +18,14 @@ import subprocess, pathlib, shutil, sys
 
 REPO = pathlib.Path("/home/polyclaude/polyclaude")
 MUTS = [
-    ("pm_fees.py",  'return float(bps) / 10000.0',        'return 0.10'),                    # ignore per-market fee
-    ("pm_fees.py",  'return effective_rate(raw_rate) * price * (1.0 - price)',
-                    'return effective_rate(raw_rate) * min(price, 1.0 - price)'),             # regress to the old min() curve
-    ("pm_fees.py",  'return min(raw_rate, CATEGORY_RATE_CAP)',
-                    'return raw_rate'),                                                       # drop the 0.07 category cap
+    ("pm_fees.py",  'return FeeCurve(parsed_bps / 10000.0, FEE_EXPONENT_FALLBACK, True, False)',
+                    'return FeeCurve(0.10, FEE_EXPONENT_FALLBACK, True, False)'),             # ignore per-market legacy fee
+    ("pm_fees.py",  'return rate * (price * (1.0 - price)) ** float(exponent)',
+                    'return rate * min(price, 1.0 - price)'),                                # regress to old curve and ignore exponent
+    ("pm_fees.py",  'rate = float(raw_rate) if authoritative else effective_rate(float(raw_rate))',
+                    'rate = float(raw_rate)'),                                                # drop the legacy 0.07 category cap
+    ("pm_fees.py",  'schedule = market.get("feeSchedule")',
+                    'schedule = None'),                                                       # ignore authoritative Gamma schedule
     ("book_walk.py",'levels = sorted(bids or [], key=lambda x: -float(x["price"]))',
                     'levels = bids or []'),                                                   # trust input order
     ("book_walk.py",'fee = fee_per_share(market, avg_fill) * float(size) if gross > 0 else 0.0',
@@ -35,8 +38,8 @@ MUTS = [
                     'if False:\n        return maker_px, 0.0'),                               # maker judged on taker cost (2026-08-18 gap)
     ("polyclaude_enter.py",'if tail_mult is not None:\n        return 1.0 - tail_mult * (1.0 - my_p)',
                     'if False:\n        return 1.0 - tail_mult * (1.0 - my_p)'),              # tail-mult silently falls back to flat (kills every bond fade)
-    ("check_marginal_apy.py",'    return ent.get("arb_paired") if isinstance(ent, dict) else None',
-                    '    return None'),                                                       # arb-pairing guard blind -> tools recommend breaking a riskless structure
+    ("check_marginal_apy.py",'    return (ent.get("set_only") or ent.get("arb_paired")) if isinstance(ent, dict) else None',
+                    '    return None'),                                                       # set-only guard blind -> tools recommend breaking a matched/range structure
     ("polymarket_consistency_scan.py",
                     'return sum(_market_fee_buy(market, price) for market, price in legs)',
                     'return sum(price * _market_fee_buy(market, price) for market, price in legs)'), # multiply fee/share by price again
@@ -57,3 +60,5 @@ for fname, old, new in MUTS:
 for fn, snip, verdict in results:
     print(f"  {verdict:18} {fn:22} {snip}")
 print("\nSURVIVED = the suite cannot detect that bug.")
+if any(verdict != "CAUGHT" for _, _, verdict in results):
+    raise SystemExit(1)

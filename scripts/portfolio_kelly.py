@@ -116,6 +116,13 @@ def kelly_fraction(mark: float, p: float) -> float:
     return (p - mark) / (1.0 - mark)
 
 
+def set_only_label(prior: dict | None) -> str | None:
+    """Return the generic set-only marker, including legacy arb pairs."""
+    if not isinstance(prior, dict):
+        return None
+    return prior.get("set_only") or prior.get("arb_paired")
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("--bankroll", type=float, default=None,
@@ -177,6 +184,7 @@ def main() -> int:
         cluster = prior.get("cluster", "uncategorized")
         rho_within = prior.get("rho_within", 0.6)
         cluster_frac = prior.get("cluster_frac", 0.20)
+        set_only = set_only_label(prior)
         # Prior-staleness tag (2026-07-25): kimi verification went 3-for-3
         # catching priors resting on stale evidence this week (GPT-6, MacBook,
         # SpaceX). Any recommendation driven by a prior not re-verified within
@@ -204,6 +212,29 @@ def main() -> int:
                 "status": "DE_INDEXED_SKIP",
                 "cluster": cluster,
                 "title": title,
+            })
+            continue
+
+        if set_only:
+            # A per-leg Kelly delta is not an actionable quantity for matched
+            # pairs or equal-share range bundles. Treat current deployment as a
+            # fixed portfolio allocation and surface the invariant explicitly;
+            # sizing changes must be re-run on the synthetic set economics.
+            rows.append({
+                "slug": slug,
+                "side": side,
+                "size": size,
+                "mark": round(mark, 4),
+                "p_win": p_win,
+                "cost": round(cost, 2),
+                "kelly_dollar": round(cost, 2),
+                "delta": 0.0,
+                "status": "SET_ONLY",
+                "cluster": cluster,
+                "title": title[:50],
+                "edge_pp": round((p_win - mark) * 100, 2),
+                "stale": stale_tag,
+                "set_only": set_only,
             })
             continue
 
@@ -236,13 +267,17 @@ def main() -> int:
     if args.constrained:
         actives_pre = [r for r in rows if r["status"] == "ACTIVE" and r["kelly_dollar"] is not None]
         total_unconstrained = sum(r["kelly_dollar"] for r in actives_pre)
-        if total_unconstrained > args.bankroll:
-            scale = args.bankroll / total_unconstrained
+        fixed_set_cost = sum(r["cost"] for r in rows if r["status"] == "SET_ONLY")
+        allocatable = max(0.0, args.bankroll - fixed_set_cost)
+        if total_unconstrained > allocatable:
+            scale = allocatable / total_unconstrained if total_unconstrained else 0.0
             for r in rows:
                 if r["status"] == "ACTIVE" and r["kelly_dollar"] is not None:
                     r["kelly_dollar"] = round(r["kelly_dollar"] * scale, 2)
                     r["delta"] = round(r["kelly_dollar"] - r["cost"], 2)
-            print(f"# constrained: scaled by {scale:.4f} (= {args.bankroll}/{total_unconstrained:.2f})", file=sys.stderr)
+            print(f"# constrained: scaled active legs by {scale:.4f} "
+                  f"((${args.bankroll:.2f} - ${fixed_set_cost:.2f} fixed set-only) / "
+                  f"${total_unconstrained:.2f})", file=sys.stderr)
 
     rows.sort(key=lambda r: r.get("delta") or -9e9, reverse=True)
 
@@ -252,13 +287,19 @@ def main() -> int:
     for r in rows:
         if r["status"] == "DE_INDEXED_SKIP":
             print(f"{r['slug'][:45]:<45} {r['side']:<3} {r['mark']:<7.4f} {'  -':<6} {'  -':<6} {r['cost']:<8.2f} {'(de-idx)':<8} {'-':<9} {r['cluster']:<15}")
+        elif r["status"] == "SET_ONLY":
+            print(f"{r['slug'][:45]:<45} {r['side']:<3} {r['mark']:<7.4f} {r['p_win']:<6.3f} "
+                  f"{r['edge_pp']:>5.2f}pp {r['cost']:<8.2f} {'(set)':<8} {'0.00':>9} {r['cluster']:<15}")
+            print(f"    SET-ONLY: {r['set_only']}")
         else:
             print(f"{r['slug'][:45]:<45} {r['side']:<3} {r['mark']:<7.4f} {r['p_win']:<6.3f} {r['edge_pp']:>5.2f}pp {r['cost']:<8.2f} {r['kelly_dollar']:<8.2f} {r['delta']:>+9.2f} {r['cluster']:<15}")
 
     # Summary
     actives = [r for r in rows if r["status"] == "ACTIVE"]
-    total_cost = sum(r["cost"] for r in actives)
-    total_kelly = sum(r["kelly_dollar"] for r in actives)
+    fixed_sets = [r for r in rows if r["status"] == "SET_ONLY"]
+    total_cost = sum(r["cost"] for r in actives + fixed_sets)
+    total_kelly = (sum(r["kelly_dollar"] for r in actives)
+                   + sum(r["cost"] for r in fixed_sets))
     print(f"\n{'='*100}")
     print(f"TOTAL: cost=${total_cost:.2f}  kelly_optimal=${total_kelly:.2f}  delta=${total_kelly - total_cost:+.2f}")
     print(f"  Bankroll utilization (cost): {total_cost/args.bankroll*100:.1f}%")

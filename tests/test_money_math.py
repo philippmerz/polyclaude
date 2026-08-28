@@ -26,6 +26,7 @@ Run:  .venv/bin/python tests/test_money_math.py
 from __future__ import annotations
 
 import atexit
+import json
 import os
 import sys
 from pathlib import Path
@@ -35,6 +36,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import discover_markets as dm  # noqa: E402
 import event_monotonicity_scan as ems  # noqa: E402
 import pm_fees  # noqa: E402
+import polyclaude_enter as pe  # noqa: E402
 
 FAILS: list[str] = []
 
@@ -70,16 +72,56 @@ def check(label: str, got, want, tol: float = 1e-9) -> None:
 
 
 # ---------------------------------------------------------------- pm_fees
-# The field is per-market and BOTH extremes are real: 84% of live markets carry
-# 1000bps, 16% carry None. A None must mean zero, NOT "missing, use fallback" —
-# conflating those is what charged Greenland a fee it does not have.
+# The legacy field is per-market and BOTH extremes are real: an explicitly
+# present None on an old payload means zero, while an absent field is ambiguous
+# and must fail closed. Conflating explicit None with a failed fetch once
+# charged Greenland a fee it did not have; treating absence as free creates the
+# more dangerous inverse error.
 check("rate 1000bps", pm_fees.fee_rate({"takerBaseFee": 1000}), 0.10)
 check("rate string bps", pm_fees.fee_rate({"takerBaseFee": "1000"}), 0.10)
 check("rate None = genuinely zero", pm_fees.fee_rate({"takerBaseFee": None}), 0.0)
 check("rate 'None' string", pm_fees.fee_rate({"takerBaseFee": "None"}), 0.0)
-check("rate absent field", pm_fees.fee_rate({}), 0.0)
+check("rate absent field fails closed", pm_fees.fee_rate({}), pm_fees.FEE_RATE_FALLBACK)
 check("rate unfetchable market", pm_fees.fee_rate(None), pm_fees.FEE_RATE_FALLBACK)
 check("rate garbage falls back", pm_fees.fee_rate({"takerBaseFee": "abc"}), pm_fees.FEE_RATE_FALLBACK)
+
+# 2026-08-28 Gamma V2 source of truth. takerBaseFee remains 1000 for every
+# fee-bearing category, while feeSchedule.rate carries the real 0.03-0.07 rate.
+# The structured schedule MUST win over the contradictory legacy flag.
+m_schedule = {
+    "takerBaseFee": 1000,
+    "feeSchedule": {"rate": 0.04, "exponent": 1, "takerOnly": True},
+}
+check("Gamma schedule rate overrides legacy 1000bps", pm_fees.fee_rate(m_schedule), 0.04)
+check("Gamma schedule exponent parsed", pm_fees.fee_exponent(m_schedule), 1.0)
+check("Gamma schedule takerOnly parsed", pm_fees.fee_schedule(m_schedule).taker_only, True)
+check("Gamma schedule fee at p=0.50", pm_fees.fee_per_share(m_schedule, 0.50), 0.04 * 0.25)
+
+# Pin the general V2 curve used by Polymarket's official client. An
+# authoritative schedule is not passed through the legacy 0.07 cap: a
+# rate=0.25, exponent=2 curve charges 0.25*(p*(1-p))^2.
+m_exp2 = {
+    "takerBaseFee": 1000,
+    "feeSchedule": {"rate": "0.25", "exponent": "2", "takerOnly": False},
+}
+check("Gamma exponent-2 rate remains authoritative", pm_fees.fee_rate(m_exp2), 0.25)
+check("Gamma exponent-2 parsed", pm_fees.fee_exponent(m_exp2), 2.0)
+check("Gamma takerOnly false retained", pm_fees.fee_schedule(m_exp2).taker_only, False)
+check("Gamma exponent-2 curve bypasses legacy cap",
+      pm_fees.fee_per_share(m_exp2, 0.50), 0.25 * (0.50 * 0.50) ** 2)
+
+# A malformed structured source must fail conservatively, not fall through to
+# a possibly contradictory/stale legacy field. With no documented exponent
+# lower bound, the safe advisory representation is the entire $1 payout/share;
+# live execution rejects the malformed descriptor outright.
+m_bad_schedule = {
+    "takerBaseFee": None,
+    "feeSchedule": {"rate": "garbage", "exponent": 1, "takerOnly": True},
+}
+check("malformed Gamma schedule rate fails maximally closed",
+      pm_fees.fee_rate(m_bad_schedule), pm_fees.MALFORMED_FEE_PER_SHARE)
+check("malformed Gamma schedule fee consumes the payout",
+      pm_fees.fee_per_share(m_bad_schedule, 0.50), pm_fees.MALFORMED_FEE_PER_SHARE)
 
 # TRUE curve (2026-08-22 wallet-verified): rate_capped x p x (1-p), QUADRATIC.
 # takerBaseFee=1000 is NOT a 10% charge — the effective rate caps at the 0.07
@@ -89,6 +131,48 @@ check("fee at 0.50", pm_fees.fee_per_share(m10, 0.50), 0.07 * 0.25)
 check("fee at 0.945 quadratic tail", pm_fees.fee_per_share(m10, 0.945), 0.07 * 0.945 * 0.055)
 check("fee symmetric", pm_fees.fee_per_share(m10, 0.30), pm_fees.fee_per_share(m10, 0.70))
 check("zero-fee market costs nothing", pm_fees.fee_per_share({"takerBaseFee": None}, 0.50), 0.0)
+
+# ------------------------------------------- equal-share negRisk range bundle
+# The entry gate must value mutually exclusive buckets JOINTLY. At equal share
+# counts, exactly one covered bucket pays $1/share; summing per-leg costs turns
+# the range into one synthetic binary. Signed limits (not optimistic touches)
+# are the risk ceiling: .05 + .20 + .33 = .58 for the three Duma buckets.
+_bundle = pe.bundle_metrics(0.58, 0.76, 0.10, 20)
+check("bundle robust p uses union haircut", _bundle["p_robust"], 0.66)
+check("bundle central EV", _bundle["central_ev"], 3.60)
+check("bundle robust EV", _bundle["robust_ev"], 1.60)
+check("bundle maximum cash risk", _bundle["risk_dollars"], 11.60)
+check("bundle covered-state payout", _bundle["payout_if_covered"], 20.0)
+check("bundle covered-state minimum profit", _bundle["profit_if_covered"], 8.40)
+check("fine-tick bundle ask rounds up for exact shares",
+      pe._two_decimal_marketable_limit(0.191, 0.001), 0.20)
+check("on-cent bundle ask is unchanged",
+      pe._two_decimal_marketable_limit(0.19, 0.001), 0.19)
+_clob_ok = json.dumps({"status_code": 200, "body": {
+    "success": True, "status": "matched", "orderID": "0xorder",
+    "transactionsHashes": ["0xtx"], "takingAmount": "20",
+    "makingAmount": "3.8",
+}})
+_clob_bad = '{"status_code": 200, "body": {"success": false, "errorMsg": "FOK not filled"}}'
+_clob_delayed = json.dumps({"status_code": 200, "body": {
+    "success": True, "status": "delayed", "orderID": "0xorder",
+    "transactionsHashes": [], "takingAmount": "20", "makingAmount": "3.8",
+}})
+_clob_wrong_amount = json.dumps({"status_code": 200, "body": {
+    "success": True, "status": "matched", "orderID": "0xorder",
+    "transactionsHashes": ["0xtx"], "takingAmount": "19.9",
+    "makingAmount": "3.8",
+}})
+check("bundle executor accepts exact immediate matched response",
+      pe._parse_clob_result(_clob_ok, "BUY", 20)[0], True)
+check("bundle executor rejects HTTP-200 exchange failure",
+      pe._parse_clob_result(_clob_bad, "BUY", 20)[0], False)
+check("bundle executor rejects delayed response as a fill",
+      pe._parse_clob_result(_clob_delayed, "BUY", 20)[0], False)
+check("bundle executor classifies delayed response as ambiguous",
+      pe._classify_clob_result(_clob_delayed, "BUY", 20)[0], "ambiguous")
+check("bundle executor rejects wrong matched amount",
+      pe._parse_clob_result(_clob_wrong_amount, "BUY", 20)[0], False)
 
 # ------------------------------------------------- discover_markets cost math
 # THE multiplicative-vs-additive regression. p*(1+f) returned 0.518 here; the
@@ -102,6 +186,8 @@ def cost_of(p, market):
 check("cost additive at p=0.50", cost_of(0.50, m10), 0.5175, tol=1e-6)
 check("cost additive at p=0.90", cost_of(0.90, m10), 0.9063, tol=1e-6)
 check("cost zero-fee market", cost_of(0.50, {"takerBaseFee": None}), 0.500, tol=1e-6)
+check("discovery uses Gamma schedule rate", cost_of(0.50, m_schedule), 0.5100, tol=1e-6)
+check("discovery uses Gamma schedule exponent", cost_of(0.50, m_exp2), 0.515625, tol=1e-6)
 # The old bug in explicit form: multiplicative would have given 0.5*1.05=0.525.
 if abs(cost_of(0.50, m10) - 0.525) < 1e-6:
     FAILS.append("cost math regressed to MULTIPLICATIVE fee (p*(1+f))")
@@ -348,6 +434,8 @@ _RAW = {
     "_comment_schema": "a non-dict entry must not crash the lookup",
     "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222": {
         "p_no": 0.947, "arb_paired": "DEC-0079/0080 structure"},
+    "will-united-russia-win-between-325-and-339-seats": {
+        "p_yes": 0.28, "set_only": "DEC-0083 equal-share range"},
     "will-the-us-acquire-any-part-of-greenland-in-2026": {"p_no": 0.95},
 }
 check("arb_paired exact slug match",
@@ -358,6 +446,9 @@ check("arb_paired exact slug match",
 check("arb_paired containment (slug extends key)",
       cma._arb_paired("metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222-extra", _RAW),
       "DEC-0079/0080 structure")
+check("generic set_only marker protects directional range legs",
+      cma._arb_paired("will-united-russia-win-between-325-and-339-seats-extra", _RAW),
+      "DEC-0083 equal-share range")
 check("arb_paired unpaired position returns None",
       cma._arb_paired("will-the-us-acquire-any-part-of-greenland-in-2026", _RAW), None)
 check("arb_paired unknown slug returns None", cma._arb_paired("some-other-market", _RAW), None)

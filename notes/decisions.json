@@ -1,5 +1,5 @@
 {
-  "next_id": 83,
+  "next_id": 85,
   "decisions": [
     {
       "id": 1,
@@ -1583,6 +1583,45 @@
         "shortdated"
       ],
       "slug": "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 83,
+      "timestamp": "2026-08-28T14:02:57Z",
+      "type": "open_position",
+      "thesis": "Bought one fee-free synthetic United Russia 295-339 seat range: 20 equal YES shares in 295-309 at 0.05, 310-324 at 0.19, and 325-339 at 0.33. Equal sizing makes the three mutually exclusive negRisk buckets one binary paying 20 dollars if the official result lands anywhere in the covered range. Honest central distribution assigns 76 percent to the union; the standard 10 point haircut leaves 66 percent versus 57 percent cost, for central EV +3.80 dollars and stressed EV +1.80 dollars. APEK projects 51-54 percent list vote plus 190-197 district wins, but its 2021 miss and the shared-source nature of current coverage retain a meaningful 340+ tail. Initial risk is deliberately 11.40 dollars, not the 15 percent cap; never trade a leg independently.",
+      "confidence": "medium",
+      "prediction": "United Russia officially wins 295-339 State Duma seats in the September 2026 election, so exactly one of the three held buckets resolves YES and the equal-share set pays 20 dollars on 11.40 dollars cost. Re-underwrite before any add; only add equal shares if an independent early-September forecast keeps union probability at least 75 percent and total ask at most 0.57.",
+      "size_usd": 11.4,
+      "resolution_at": "2026-09-20",
+      "tags": [
+        "russia",
+        "duma",
+        "bundle",
+        "negRisk"
+      ],
+      "slug": "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 84,
+      "timestamp": "2026-08-28T14:02:57Z",
+      "type": "size_change",
+      "thesis": "Sold 12 of 24.1135 Hormuz-normal-by-Aug31 NO shares at 0.996 FOK to fund DEC-0083. The measured PortWatch thesis is unchanged at p_no 0.998; the sale surrendered only about 0.024 dollars central EV while releasing 11.952 dollars for a stressed-positive election bundle. Remaining 12.1135 shares preserve the near-settled exposure and resolve within days.",
+      "confidence": "high",
+      "prediction": "PortWatch does not print a 7-day average of 60 by August 31 and the remaining 12.1135 NO shares pay 12.1135 dollars; the funding sale forgoes about 0.024 dollars versus the 0.998 prior.",
+      "size_usd": 11.952,
+      "resolution_at": "2026-08-31",
+      "tags": [
+        "hormuz",
+        "rebalance",
+        "funding"
+      ],
+      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

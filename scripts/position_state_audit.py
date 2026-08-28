@@ -33,12 +33,14 @@ import httpx
 REPO = Path(__file__).resolve().parent.parent
 NOTES = REPO / "notes"
 ADDR = "0x9032ad983ee5a22bfd078ecc4fd3d4d69e57267b"
+MIN_LIVE_SHARES = 0.5
+SET_SIZE_TOLERANCE = 0.01
 
 
 def _live_positions() -> list[dict]:
     r = httpx.get("https://data-api.polymarket.com/positions",
                   params={"user": ADDR, "limit": "100"}, timeout=25)
-    return [p for p in r.json() if float(p.get("size", 0)) > 0.5]
+    return [p for p in r.json() if float(p.get("size", 0)) > MIN_LIVE_SHARES]
 
 
 def _load(name: str, default):
@@ -46,6 +48,95 @@ def _load(name: str, default):
         return json.loads((NOTES / name).read_text())
     except Exception:
         return default
+
+
+def set_only_issues(
+    priors: dict,
+    positions: list[dict],
+    *,
+    size_tolerance: float = SET_SIZE_TOLERANCE,
+) -> list[str]:
+    """Return hard alerts for incomplete or imbalanced ``set_only`` groups.
+
+    A set-only position has economic meaning only at the group level.  The
+    shared, non-empty ``set_only`` value is its identity and every prior carrying
+    that value is an expected leg.  Exact slugs are deliberate here: fuzzy slug
+    matching is acceptable for advisory prior lookup, but it can silently map
+    the wrong contract in a safety invariant.
+
+    ``arb_paired`` is intentionally not folded into this check.  Legacy
+    monotonicity structures can contain overlapping pairs and directional
+    crumbs, so their total live sizes need not be equal.  They require an
+    explicit topology/quantity model rather than pretending they are sets.
+    """
+    issues: list[str] = []
+    groups: dict[str, list[str]] = {}
+
+    if not isinstance(priors, dict):
+        return ["SET_BROKEN configuration unreadable: portfolio priors are not an object"]
+
+    for slug, prior in priors.items():
+        if str(slug).startswith("_") or not isinstance(prior, dict):
+            continue
+        if "set_only" not in prior:
+            continue
+        label = prior.get("set_only")
+        if not isinstance(label, str) or not label.strip():
+            issues.append(
+                f"SET_BROKEN malformed set_only label on {str(slug)[:60]}"
+            )
+            continue
+        groups.setdefault(label.strip(), []).append(str(slug))
+
+    # Retain rows rather than collapsing to a dict.  Duplicate live rows for an
+    # expected slug are ambiguous (for example both outcomes held) and must not
+    # be made to look healthy by last-write-wins behaviour.
+    live_by_slug: dict[str, list[float]] = {}
+    for position in positions:
+        if not isinstance(position, dict) or not position.get("slug"):
+            continue
+        try:
+            size = float(position.get("size", 0))
+        except (TypeError, ValueError):
+            continue
+        if size > MIN_LIVE_SHARES:
+            live_by_slug.setdefault(str(position["slug"]), []).append(size)
+
+    for label, expected_slugs in groups.items():
+        label_display = label if len(label) <= 80 else label[:77] + "..."
+        if len(expected_slugs) < 2:
+            issues.append(
+                f"SET_BROKEN {label_display}: only one configured leg; "
+                "a set requires at least two"
+            )
+            continue
+
+        missing = [slug for slug in expected_slugs if slug not in live_by_slug]
+        ambiguous = [
+            slug for slug in expected_slugs if len(live_by_slug.get(slug, [])) > 1
+        ]
+        if missing or ambiguous:
+            details = []
+            if missing:
+                details.append("missing " + ", ".join(missing))
+            if ambiguous:
+                details.append("ambiguous duplicate live rows " + ", ".join(ambiguous))
+            issues.append(f"SET_BROKEN {label_display}: {'; '.join(details)}")
+            continue
+
+        sizes = {slug: live_by_slug[slug][0] for slug in expected_slugs}
+        # One nanoshare of comparison slack prevents binary representation of
+        # the decimal API values from making the exact tolerance boundary fail.
+        if max(sizes.values()) - min(sizes.values()) > size_tolerance + 1e-9:
+            size_text = ", ".join(
+                f"{slug}={size:g}" for slug, size in sizes.items()
+            )
+            issues.append(
+                f"SET_BROKEN {label_display}: unequal live shares "
+                f"(tolerance {size_tolerance:g}): {size_text}"
+            )
+
+    return issues
 
 
 def main() -> int:
@@ -117,8 +208,16 @@ def main() -> int:
                               f"(exited?): {key} ({t.get('kind')} {t.get('op')} "
                               f"{t.get('level')}) — disarm or document why it stays")
 
-    # 3. orphan priors (position gone — keep only if a deliberate re-entry candidate)
-    for k, v in _load("portfolio_kelly_priors.json", {}).items():
+    priors_loaded = _load("portfolio_kelly_priors.json", None)
+    priors_raw = priors_loaded if isinstance(priors_loaded, dict) else {}
+
+    # 3. SET-ONLY integrity.  Missing or unequal legs turn one economic position
+    # into unintended directional exposure, so this is a hard non-clean result,
+    # not an advisory judgment item and never auto-fixed.
+    issues.extend(set_only_issues(priors_loaded, pos))
+
+    # 3a. orphan priors (position gone — keep only if a deliberate re-entry candidate)
+    for k, v in priors_raw.items():
         if k.startswith("_"):
             continue
         if not any(k in s or s in k for s in live):
@@ -134,7 +233,6 @@ def main() -> int:
     # do not require). Neither was flagged by anything automated. So: surface
     # the LIVE position whose criteria were read longest ago, one per tick —
     # round-robin means every position gets re-read within ~a week.
-    priors_raw = _load("portfolio_kelly_priors.json", {})
     oldest_key, oldest_date = None, None
     for k, v in priors_raw.items():
         if k.startswith("_") or not isinstance(v, dict):

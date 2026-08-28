@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-08-18",
+ "_updated": "2026-08-28",
  "trump-out-as-president-before-2027": {
   "p_no": 0.97,
   "cluster": "us-politics",
@@ -339,7 +339,7 @@
   "p_no": 0.998,
   "verified": "2026-08-26",
   "criteria_read": "2026-08-26",
-  "note": "DEC-0077/0081. MECHANICAL and first-hand measured: YES needs the IMF PortWatch 7-day MA of Hormuz transit calls to reach 60 on any date through Aug-31. Latest pull (2026-08-26) remains 7dMA 5.00 over Aug-17..23 (4,6,6,5,4,7,3); the peak single day across 150 prints is 44. The Aug-25/26 Oman-Iran proposed temporary-corridor framework is a real forward catalyst but is explicitly not a reopening: Iran says the strait remains closed pending US commitments, while technical talks continue. The bar still needs 420 calls in one seven-day window versus 35 in the latest week. p_no 0.998 is the residual for a rapid operational activation plus traffic surge, source/revision error, or resolver error. DEC-0081 sold 4 shares at 0.996 to fund a higher-edge same-horizon ticket; the remaining 24.11 shares stay HOLD TO RESOLUTION because the fee-free payout beats the live bid at this prior. Erosion trigger armed (hormuz-no-erosion, NO bid <=0.95). Regime caveat: this near-certainty is specific to Aug-31 and does not transfer to later siblings. FEED OPS: ArcGIS transiently 400s on identical parameters and requires orderByFields; resolution-day checks retry 4x and distinguish empty result from error result.",
+  "note": "DEC-0077/0081/0084. MECHANICAL and first-hand measured: YES needs the IMF PortWatch 7-day MA of Hormuz transit calls to reach 60 on any date through Aug-31. Latest pull (2026-08-26) remains 7dMA 5.00 over Aug-17..23 (4,6,6,5,4,7,3); the peak single day across 150 prints is 44. The Aug-25/26 Oman-Iran proposed temporary-corridor framework is a real forward catalyst but is explicitly not a reopening: Iran says the strait remains closed pending US commitments, while technical talks continue. The bar still needs 420 calls in one seven-day window versus 35 in the latest week. p_no 0.998 is the residual for a rapid operational activation plus traffic surge, source/revision error, or resolver error. DEC-0081 sold 4 shares at 0.996 to fund a higher-edge same-horizon ticket; DEC-0084 sold another 12 at 0.996 to fund the Duma range bundle, surrendering about $0.024 central EV. The remaining 12.1135 shares stay HOLD TO RESOLUTION because the fee-free payout beats the live bid at this prior. Erosion trigger armed (hormuz-no-erosion, NO bid <=0.95). Regime caveat: this near-certainty is specific to Aug-31 and does not transfer to later siblings. FEED OPS: ArcGIS transiently 400s on identical parameters and requires orderByFields; resolution-day checks retry 4x and distinguish empty result from error result.",
   "cluster": "hormuz",
   "rho_within": 1.0,
   "key_facts": [
@@ -383,6 +383,72 @@
     "claim": "As of Aug-27, Iran said it had agreed with Oman on a route, but credible reporting said details of an agreement were still being worked out and Iran was preparing new reopening conditions tied to US action.",
     "source": "https://www.investing.com/news/commodities-news/iran-sets-conditions-for-reopening-strait-of-hormuz-top-security-official-rezaei-says-4880217",
     "source_date": "2026-08-27",
+    "checked": "2026-08-28"
+   }
+  ]
+ },
+ "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
+  "p_yes": 0.08,
+  "verified": "2026-08-28",
+  "criteria_read": "2026-08-28",
+  "cluster": "russia-duma-range",
+  "rho_within": 1.0,
+  "cluster_frac": 0.0616,
+  "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
+  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Honest distribution: <280 1%, 280-294 2%, 295-309 8%, 310-324 40%, 325-339 28%, 340-354 16%, 355+ 5%; union p=0.76 versus cost 0.57 and standard 10pp-stress p=0.66. APEK's Aug-10 model gives 51-54% list vote and 190-197 district wins, but apparently independent coverage repeats that one model and APEK undershot 2021's actual total, so the 340+ tail remains 21% rather than being hand-waved away. Initial size is deliberately 20, not the 15% cap. Add toward at most 34 equal shares only if an independent early-September forecast confirms union p>=0.75 at total ask<=0.57. Re-underwrite and transact all legs as one equal-share set.",
+  "key_facts": [
+   {
+    "claim": "This bucket resolves from United Russia's official seat count resulting from the September 2026 legislative election; unresolved results fall back to the lowest bracket after May 31, 2027.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
+    "source_date": "2026-08-28",
+    "checked": "2026-08-28"
+   },
+   {
+    "claim": "APEK's August 10 forecast puts United Russia's party-list vote at 51-54%.",
+    "source": "https://www.vedomosti.ru/politics/articles/2026/08/10/1219878-na-viborah-v-gosdumu-yavka",
+    "source_date": "2026-08-10",
+    "checked": "2026-08-28"
+   },
+   {
+    "claim": "APEK's August 10 forecast puts United Russia's single-member-district wins at 190-197.",
+    "source": "https://www.vedomosti.ru/politics/articles/2026/08/10/1219878-na-viborah-v-gosdumu-yavka",
+    "source_date": "2026-08-10",
+    "checked": "2026-08-28"
+   }
+  ]
+ },
+ "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
+  "p_yes": 0.40,
+  "verified": "2026-08-28",
+  "criteria_read": "2026-08-28",
+  "cluster": "russia-duma-range",
+  "rho_within": 1.0,
+  "cluster_frac": 0.0616,
+  "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
+  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Central union p=0.76; standard 10pp-stress p=0.66; cost=0.57. Individual p values exist only for monitoring the distribution. Re-underwrite and transact all legs as one equal-share set. Add toward at most 34 equal shares only if an independent early-September forecast confirms union p>=0.75 at total ask<=0.57.",
+  "key_facts": [
+   {
+    "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
+    "source_date": "2026-08-28",
+    "checked": "2026-08-28"
+   }
+  ]
+ },
+ "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
+  "p_yes": 0.28,
+  "verified": "2026-08-28",
+  "criteria_read": "2026-08-28",
+  "cluster": "russia-duma-range",
+  "rho_within": 1.0,
+  "cluster_frac": 0.0616,
+  "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
+  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Central union p=0.76; standard 10pp-stress p=0.66; cost=0.57. Individual p values exist only for monitoring the distribution. Re-underwrite and transact all legs as one equal-share set. Add toward at most 34 equal shares only if an independent early-September forecast confirms union p>=0.75 at total ask<=0.57.",
+  "key_facts": [
+   {
+    "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
+    "source_date": "2026-08-28",
     "checked": "2026-08-28"
    }
   ]

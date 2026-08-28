@@ -11,7 +11,9 @@ never a result. Concretely, and each of these changes a decision:
 1. **RESOLUTION IS THE BEST CASH CONVERSION.** It pays $1.00 per share with zero fee and no spread.
    A correct thesis carried to settlement therefore beats trimming into a thin bid — which reverses
    the instinct to "lock in" a marked gain, because locking in through a 10-40pp spread converts a
-   paper gain into a smaller real one.
+   paper gain into a smaller real one. **Evaluation timing clarified 2026-08-28:** normal Dec-31
+   resolutions/redemptions arriving in the first days of January count toward the start-of-2027
+   evaluation. Never manufacture a Dec-31 cash print by crossing a spread at midnight.
 2. **A marked gain is not progress and is not reportable as such.** bankroll.py prints REALIZED
    (settled cash) as the headline with BOTH unrealized bases beneath it; the weekly P&L leads with
    realized. Identity: realized = (bankroll − deposits) − unrealized, so fees and gas correctly
@@ -166,6 +168,20 @@ but warns rather than blocks; #3 auto-runs ONLY when `--my-p` is omitted — sup
 `--my-p` or `--skip-catalyst-check` skips it, so running the catalyst check first
 stays on the analyst; #4 is analyst process upstream of the `--my-p` you pass.
 Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
+
+**Multi-leg structures use the same mandatory path.** Repeat `--bundle-slug` for mutually
+exclusive negRisk buckets and supply `--side YES`, the union probability, exact equal shares, and a
+hard total cost ceiling. The tool verifies common event/negRisk identity, UMA state, zero execution
+delay, live depth/minimums, CLOB match-time fees, union-level robust EV, combined ticket/cluster caps,
+same-event exposure, deployable pUSD/allowances, and exact on-chain balance after every FOK. A
+deliberate matched add also requires `--bundle-add`. Before order one, every possible partial-fill
+unwind must have fee-aware bid depth inside a bounded total-loss budget; the same bound is enforced
+again against the live rollback book. A definite no-fill unwinds the observed earlier fills and then
+re-proves every selected token is at baseline. An ambiguous, delayed, malformed, asynchronous-trade
+timeout, or racy HTTP response halts without further trading until balances reconcile.
+Never gate or execute a directional range one leg at a time: equal shares are what make the covered
+outcomes one synthetic binary, and `position_state_audit` raises hard `SET_BROKEN` if that invariant
+ever fails (DEC-0083).
 
 1. **Existing-exposure check** (auto): adds are sized as adds, against the combined
    ticket.

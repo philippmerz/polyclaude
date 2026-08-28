@@ -274,11 +274,12 @@ def _match_prior(slug: str, priors: dict) -> tuple[str, float] | None:
 
 
 def _arb_paired(slug: str, priors_raw: dict) -> str | None:
-    """The `arb_paired` marker for a leg, if any (same matching as _match_prior).
+    """A set-only marker for a leg, if any (same matching as _match_prior).
 
-    2026-08-25: a per-leg edge number is MEANINGLESS on a leg of a matched arb —
-    the structure pays >=$1 per pair in every state, so acting on one leg's flag
-    converts riskless carry into a naked directional position. On the day the
+    ``arb_paired`` is retained for compatibility; ``set_only`` generalizes the
+    invariant to directional equal-share range bundles. A per-leg edge number
+    is MEANINGLESS for either: acting on one leg destroys the defined payout.
+    On the day the
     Metamask priors were added, BOTH advisory tools immediately pointed at the
     same leg: exit_analysis printed "SELL TAKER NOW (+$0.36)" and this scan
     printed NEGATIVE_EDGE, saved from EXIT only by the tick-noise floor and
@@ -294,7 +295,7 @@ def _arb_paired(slug: str, priors_raw: dict) -> str | None:
             if isinstance(v, dict) and (k in slug or slug in k):
                 ent = v
                 break
-    return ent.get("arb_paired") if isinstance(ent, dict) else None
+    return (ent.get("set_only") or ent.get("arb_paired")) if isinstance(ent, dict) else None
 
 
 def main() -> int:
@@ -440,9 +441,9 @@ def main() -> int:
                 base = "NEGATIVE_EDGE" if prior_p < mark else "CLOSE_CANDIDATE"
                 paired = _arb_paired(slug, priors_raw)
                 if paired:
-                    record["verdict"] = (f"ARB-PAIRED HOLD ({base} on the leg): per-leg edge is "
-                                         f"not actionable alone — exit only as matched pairs, or "
-                                         f"resolve fee-free. [{paired}]")
+                    record["verdict"] = (f"SET-ONLY HOLD ({base} on the leg): per-leg edge is "
+                                         f"not actionable alone — re-underwrite and transact the "
+                                         f"complete set, or resolve. [{paired}]")
                     holds.append(record)
                 elif ack:
                     # deliberate documented hold — route to holds, not flagged,
@@ -517,7 +518,7 @@ def main() -> int:
                     flagged.append(record)
             else:
                 paired_ok = _arb_paired(slug, priors_raw)
-                record["verdict"] = ("ARB-PAIRED (edge clears; exit only as matched pairs)"
+                record["verdict"] = ("SET-ONLY (edge clears; transact only as complete set)"
                                      if paired_ok else "HOLD")
                 holds.append(record)
         else:

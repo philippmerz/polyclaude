@@ -10314,3 +10314,68 @@ Regression suite expanded for every failure class.
 NEXT hard clock: Aug-31 PortWatch/agreement cutoff and redemption checks; re-diff the HLE source,
 make the debut-ladder decision at cluster level, and run the one-epoch rewards experiment only if
 its entry/adverse-selection gates still clear. Sep 8–10 remains the pre-committed MacBook recheck.
+
+## 2026-08-28 14:0x operator continuation — rotated $11.40 into the Duma 295–339 range; entry atomicity + live fees hardened
+
+The operator clarified the evaluation horizon: this is judged at the **start of 2027**, and ordinary
+Dec-31 positions whose mechanical redemption lands in the first days of January count. That removes
+the artificial Dec-31 taker-liquidation assumption. Existing year-end positions keep their normal
+hold/exit rules; no value should be surrendered merely to make cash appear by midnight. The possible
+~$500 top-up is conditional on that later evaluation and is not current bankroll or sizing capacity.
+
+Ran independent horizon, rebalance, opportunity and adversarial reviews against the live $185.5
+book. All existing positions remained HOLD on standalone exit economics. The best funding source was
+the Aug-31 Hormuz-normal NO: PortWatch p_no remains 0.998, while 12 shares could be sold at 0.996 for
+$11.952, surrendering only ~$0.024 central EV. That FOK sale matched in full (DEC-0084; order
+`0x3e759d…bc3c`, tx `0x678d98…9594`) and left 12.1135 NO shares.
+
+The only new candidate to survive current facts, real asks, fees, criteria and a 10pp probability
+stress was United Russia's State Duma seat range. APEK's Aug-10 forecast is 51–54% on the list and
+190–197 district wins. Converting the list component under plausible threshold outcomes centers the
+total in the low 320s, but Vedomosti/Kommersant are repeating one APEK model rather than independent
+forecasts, and APEK's comparable 2021 forecast undershot the 324-seat actual result. The honest
+distribution therefore keeps a 21% 340+ tail: `<280 1 / 280–294 2 / 295–309 8 / 310–324 40 /
+325–339 28 / 340–354 16 / 355+ 5`. Covered union p=0.76, not the more aggressive 0.82 case.
+
+Executed DEC-0083 as **one equal-share synthetic position**: 20 YES in 295–309 at 0.05, 20 YES in
+310–324 at 0.19, and 20 YES in 325–339 at 0.33. All are fee-free buckets in Gamma event 147974 with
+the same negRiskMarketID. Total risk $11.40; exactly one covered state pays $20, for +$8.60 profit if
+the result is 295–339. Central EV is +$3.80; after the standard 10pp haircut, p=0.66 and EV remains
++$1.80. All three FOKs matched exactly 20 (`0x73e9…e5`, `0xb35b…40`, `0x6d8a…05`; settlement txs
+`0x49ac…81b`, `0xfca7…703`, `0xe0ca…c50`). Post-trade API and claim-insurance snapshots verify equal
+balances, and a separate ERC-1155 reread verified exactly 20 shares on every leg. Do not trade a leg
+independently. Initial size stays 20 despite larger point-estimate Kelly output because the forecast
+is politicized and single-model-dependent. Add equal shares toward at most 34 only if an independent
+early-September forecast keeps union p≥0.75 at total ask≤0.57.
+
+Rejected alternatives: Tillis/CLARITY final-passage YES failed after Galaxy's Aug-14 primary estimate
+put 2026 enactment near 10%; the noticed Sep-15 vote is only cloture on proceeding and cannot resolve
+the contract. GTA's Aug-27 “Extended Look” is not explicitly marketed by Rockstar as a trailer, so
+the remaining edge is resolution-label ambiguity. August crypto barriers, geopolitics tails, sports,
+macro and cross-venue/consistency candidates all failed the 10pp stress, real depth, or fee floor.
+The 295–309 Duma leg was included only as downside-model insurance inside the union; it is not an
+independent 8% vs 5% bet.
+
+Two permanent repairs shipped with the trade. First, `polyclaude_enter.py` now has a mandatory bundle
+mode that verifies shared event/negRisk identity, active/clean UMA state, zero CLOB delay, equal
+integer shares, full depth/minimums, match-time fees, union-level robust EV, combined ticket/cluster
+caps, deployable pUSD/allowances and a hard signed-cost ceiling. Every FOK is reconciled to the exact
+on-chain balance before another leg can be sent. Execution-time CLOB trade IDs are polled through the
+authenticated trade endpoint until they yield settlement hashes; unresolved IDs stay ambiguous.
+Every possible partial-fill unwind must have fee-aware bid depth inside a total loss cap (default the
+lesser of 20% of new risk or 1% of bankroll), and a rollback refuses a worse live book. A definite
+no-fill unwinds observed earlier fills and then rechecks every selected token against baseline; an
+ambiguous/delayed/racy-HTTP/timeout state stops for reconciliation because it may still fill later.
+Adds require an already equal indexed/on-chain set plus explicit `--bundle-add`, and the live state audit
+hard-fails `SET_BROKEN` if a configured set loses a leg or becomes unequal. Second, Gamma's structured
+`feeSchedule={rate, exponent, takerOnly}` now overrides stale legacy `takerBaseFee`; the latter still
+says 1000 on fee-bearing markets whose actual category rates vary. The canonical helper and every
+entry/scanner path now use `rate × (p × (1-p))^exponent`; event monotonicity also stopped attaching
+fees from unrelated pre-sort threshold rows. Regression tests pin both repairs. Generic `set_only`
+protection prevents exit/Kelly tools from turning the range into three independent recommendations.
+
+Immediate post-trade state: 14 PM rows / 12 economic positions (the Duma trio is one position),
+$165.27 cost, $168.65 midpoint, $162.85 depth-walked realizable, $0.588 deployable pUSD, six existing
+maker sells unchanged. Bankroll $185.20; REALIZED +$4.87 (+2.9% of $170) after the funding sale.
+Next clocks: Aug-31 Hormuz checks/redemptions; early-September independent Duma forecast; Sep-20
+election; Sep 8–10 MacBook recheck. Early-January settlement is inside the operator's evaluation.

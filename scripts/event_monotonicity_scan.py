@@ -55,7 +55,7 @@ import sys
 
 import httpx
 
-import pm_fees  # per-market takerBaseFee; see pm_fees.py for why no constant works
+import pm_fees  # per-market Gamma feeSchedule; see pm_fees.py for source-of-truth rules
 
 
 def fetch_events(min_vol: float = 1000, max_pages: int = 15) -> list[dict]:
@@ -177,6 +177,29 @@ def _best_ask(token_id: str) -> float | None:
         return None
 
 
+def _fee_market_from_row(row: dict) -> dict | None:
+    """Return the best fee payload carried by a scanner row.
+
+    New rows retain Gamma's complete fee inputs so ``pm_fees`` can honor
+    ``feeSchedule.rate``, ``exponent``, and ``takerOnly``.  The legacy fallback
+    keeps hand-built rows and old cached scanner fixtures working: an explicit
+    ``taker_fee_bps=None`` is a known zero-fee market, while a row with no fee
+    information at all is unknown and therefore receives pm_fees' conservative
+    fallback.
+    """
+    if "fee_market" in row:
+        fee_market = row.get("fee_market")
+        return fee_market if isinstance(fee_market, dict) else None
+    if "fee_schedule" in row:
+        return {
+            "feeSchedule": row.get("fee_schedule"),
+            "takerBaseFee": row.get("taker_fee_bps"),
+        }
+    if "taker_fee_bps" in row:
+        return {"takerBaseFee": row.get("taker_fee_bps")}
+    return None
+
+
 def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
     """LIVE-CLOB validation (2026-07-23): the monotonicity flag uses gamma
     MIDPOINTS, which sit between stub bids and real asks — the 2026-07-23
@@ -198,15 +221,14 @@ def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
     early_no_ask = _best_ask(early_tokens[1])    # buy earlier NO
     if late_yes_ask is None or early_no_ask is None:
         return None
-    # taker fee per share = effective_rate x p x (1-p), per leg (TRUE quadratic
-    # curve, pm_fees; the min() form here overstated the floor and under-detected arbs)
-    def _fee(p, bps):
-        try:
-            return (float(bps or 0) / 10000.0) * min(p, 1.0 - p)
-        except Exception:
-            return 0.0
-    fee = (_fee(late_yes_ask, row_late.get("taker_fee_bps"))
-           + _fee(early_no_ask, row_early.get("taker_fee_bps")))
+    # Both orders cross the book, so each pays its market's taker curve.  Pass
+    # the complete Gamma fee payload through the shared source of truth: the
+    # legacy inline formula ignored feeSchedule and even used the superseded
+    # linear-at-the-tails curve.
+    fee = (
+        pm_fees.fee_per_share(_fee_market_from_row(row_late), late_yes_ask)
+        + pm_fees.fee_per_share(_fee_market_from_row(row_early), early_no_ask)
+    )
     cost = late_yes_ask + early_no_ask + fee
     return {"late_yes_ask": late_yes_ask, "early_no_ask": early_no_ask,
             "fee": round(fee, 4), "exec_cost": round(cost, 4),
@@ -226,9 +248,10 @@ def fee_aware_breakeven(yes_t1: float, yes_t2: float,
     """Fee-aware breakeven spread needed to profit on the arb.
 
     We BUY yes_t2 (paying yes_t2 + fee) and SELL yes_t1 (receiving yes_t1 - fee).
-    Fee is quadratic — rate x p x (1-p), effective rate capped 0.07 (pm_fees,
-    wallet-verified 2026-08-22) — and the RATE is per-market, read
-    from each leg's own takerBaseFee.
+    ``bps_t1`` and ``bps_t2`` retain their historical public meaning: a scalar
+    is treated as legacy ``takerBaseFee`` and explicit None means fee-free.
+    Callers may now pass a complete Gamma market dict instead, which lets
+    ``pm_fees`` consume the authoritative feeSchedule rate and exponent.
 
     2026-08-14: this used a hard-coded 0.072 while the live modal rate is 0.10
     (84/100 active markets; the other 16 charge nothing). Understating the fee
@@ -238,14 +261,15 @@ def fee_aware_breakeven(yes_t1: float, yes_t2: float,
     single constant cannot express at all. market_rows already carried
     taker_fee_bps; it simply was not being read.
     """
-    r1 = pm_fees.FEE_RATE_FALLBACK if bps_t1 is _UNSET else pm_fees.fee_rate({"takerBaseFee": bps_t1})
-    r2 = pm_fees.FEE_RATE_FALLBACK if bps_t2 is _UNSET else pm_fees.fee_rate({"takerBaseFee": bps_t2})
-    # TRUE quadratic curve (2026-08-22, wallet-verified — see pm_fees header).
-    # The old min() model overstated fees ~40% at the tails and ~3x at 0.50,
-    # RAISING this breakeven and under-detecting real arbs: the exact opposite
-    # failure of the 0.072 era, on the same line of code.
-    sell_fee = pm_fees.fee_per_share_at(r1, yes_t1)
-    buy_fee = pm_fees.fee_per_share_at(r2, yes_t2)
+    def _market(value):
+        if value is _UNSET:
+            return None  # unknown/unfetched: conservative pm_fees fallback
+        if isinstance(value, dict):
+            return value
+        return {"takerBaseFee": value}
+
+    sell_fee = pm_fees.fee_per_share(_market(bps_t1), yes_t1)
+    buy_fee = pm_fees.fee_per_share(_market(bps_t2), yes_t2)
     return sell_fee + buy_fee
 
 
@@ -299,6 +323,12 @@ def main() -> int:
                 "vol24hr": float(m.get("volume24hr", 0) or 0),
                 "clob_tokens": m.get("clobTokenIds"),
                 "taker_fee_bps": m.get("takerBaseFee"),
+                # Keep the complete structured source of truth.  The legacy
+                # scalar remains above for old consumers and cached fixtures.
+                "fee_market": {
+                    "takerBaseFee": m.get("takerBaseFee"),
+                    "feeSchedule": m.get("feeSchedule"),
+                },
             })
         if len(market_rows) < 2:
             continue
@@ -347,8 +377,8 @@ def main() -> int:
                     continue
                 # arb math: spread yes_t1 - yes_t2, vs fee breakeven
                 breakeven = fee_aware_breakeven(vt1, vt2,
-                                               market_rows[i].get("taker_fee_bps"),
-                                               market_rows[j].get("taker_fee_bps"))
+                                               market_rows[i]["fee_market"],
+                                               market_rows[j]["fee_market"])
                 spread = (vt1 - vt2) - breakeven
                 violations.append({
                     "event_title": ev.get("title", "?"),
@@ -409,8 +439,8 @@ def main() -> int:
                     if violation_pp < args.min_violation_pp:
                         continue
                     breakeven = fee_aware_breakeven(vt1, vt2,
-                                               market_rows[i].get("taker_fee_bps"),
-                                               market_rows[j].get("taker_fee_bps"))
+                                               hard_row["fee_market"],
+                                               easy_row["fee_market"])
                     violations.append({
                         "event_title": ev.get("title", "?"),
                         "event_slug": ev.get("slug", "?"),
