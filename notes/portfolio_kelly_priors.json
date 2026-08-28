@@ -452,5 +452,37 @@
     "checked": "2026-08-28"
    }
   ]
+ },
+ "google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026": {
+  "p_yes": 0.60,
+  "verified": "2026-08-28",
+  "criteria_read": "2026-08-28",
+  "cluster": "google-maps-rollout",
+  "rho_within": 0.0,
+  "source_ack": "2026-08-28",
+  "source_ack_note": "The 2025 Google post is intentionally the freshest official statement of the comparable GNIS-to-Maps rollout precedent, not a current Lake America fact. Current implementation state was separately re-verified on August 28 through the official GNIS record, the August 27 DOI order, and a direct US-region Google Maps check.",
+  "divergence_ack": "2026-08-28",
+  "divergence_ack_reason": "The 30pp prior-to-mark gap was reviewed before and after execution, including independent 0.40 skeptic and 0.88 champion cases. The position used essentially all immediately deployable pUSD after economically closing the remaining Hormuz-normal NO; reaching the 15% ticket cap would require paying taker spreads to dismantle higher-certainty or matched structures. Size is deliberately $12.339 rather than point-estimate Kelly because the decisive majority-US rollout probability is not directly measurable, the short window crosses a weekend, and Maps still showed the old label at entry. Do not infer an automatic add from the headline gap; re-underwrite on a qualifying rollout or fresh contrary implementation evidence.",
+  "note": "DEC-0085. Google Maps must show Lake America, alone or alongside Lake Ontario, for a majority of US users by August 31 at 11:59pm ET; beta-only, experimental, or subnational appearances do not qualify. The official GNIS prerequisite completed August 27, and Google rolled out the comparable Gulf of America label roughly one day after its final GNIS update. This case has materially less preparation time, crosses a weekend, concerns a binational feature, and direct US-region Maps checks still showed Lake Ontario at entry. Central p_yes 0.60; mandatory 10pp stress p=0.50. Bought 40.95563 YES for $12.339349 total risk including $0.339350 taker fee, with a hard raw limit of 0.30 and price improvement to about 0.293 average. No chase above 0.30 without fresh qualifying Maps evidence.",
+  "key_facts": [
+   {
+    "claim": "The official GNIS record for gazId 970427 listed Lake America as the official name with an August 27, 2026 BGN decision; Lake Ontario remained a variant.",
+    "source": "https://edits.nationalmap.gov/apps/gaz-domestic/public/search/names",
+    "source_date": "2026-08-27",
+    "checked": "2026-08-28"
+   },
+   {
+    "claim": "Secretary's Order 3453 directed the Lake America rename and immediate federal implementation.",
+    "source": "https://www.doi.gov/document-library/secretary-order/so-3453-lake-america",
+    "source_date": "2026-08-27",
+    "checked": "2026-08-28"
+   },
+   {
+    "claim": "Google says it updates US labels after the Geographic Names Information System is updated; its Gulf of America change began rolling out after that official update.",
+    "source": "https://blog.google/products-and-platforms/products/maps/united-states-geographic-name-change-feb-2025/",
+    "source_date": "2025-02-10",
+    "checked": "2026-08-28"
+   }
+  ]
  }
 }

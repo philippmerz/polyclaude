@@ -10379,3 +10379,72 @@ $165.27 cost, $168.65 midpoint, $162.85 depth-walked realizable, $0.588 deployab
 maker sells unchanged. Bankroll $185.20; REALIZED +$4.87 (+2.9% of $170) after the funding sale.
 Next clocks: Aug-31 Hormuz checks/redemptions; early-September independent Duma forecast; Sep-20
 election; Sep 8–10 MacBook recheck. Early-January settlement is inside the operator's evaluation.
+
+## 2026-08-28 16:0x scheduled check-in — rotated remaining Hormuz carry into Lake America rollout
+
+Completed the full scheduled pass. Live-position reconciliation found 14 PM rows / 12 economic
+positions and no new news alerts after the preceding 14:0x entry. All 14 marginal-APY checks cleared,
+every routed exit remained HOLD, the long-term watchlist had no hit, UMA had 0 alerts, Ostium had 0
+open trades, and `redeem-all` found 0 redeemables. No decision was overdue. The weekly P&L report is
+current and the world-state log is under eight days old, so neither weekly job was due.
+
+Maintenance did catch two real monitoring gaps. The three new Duma legs had no title-matching news
+keyword; added the single distinctive Tier-2 phrase `united russia`. The long-running news watcher
+also predated its current script, so stopped it and restarted it with the required absolute command;
+news watcher, heartbeat, Telegram listener and opportunity watcher now each have exactly one process
+whose start time postdates its code. After the trade below, added the similarly narrow Tier-2 phrase
+`lake america`. The coverage checker is silent and the state audit is now clean. Removed the orphaned
+`hormuz-no-erosion` trigger after economically closing that token.
+
+Prospecting found no executable event-monotonicity or cross-market-consistency arbitrage and no
+redeployable macro, favorite-fade or ordinary discovery candidate. The best secondary was Team
+Syntax Dota YES near 0.20: an honest 0.33–0.35 fair leaves only 2–4 points after the standard stress
+case, too narrow for the evidence quality. The consistency scan covered 2,100 markets / 562 events
+before Gamma returned 422 and found zero real hits; the monotonicity scan likewise found zero real
+hits. Sports and macro candidates failed fees, tail risk, or independent fair-value support.
+
+The exception was `google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026`. Read the
+literal criteria: by August 31 at 11:59pm ET, a majority of US Google Maps users must see `Lake
+America`, alone or alongside Lake Ontario; experimental, beta-only or subnational labels do not
+qualify. Direct official GNIS GraphQL showed gazId 970427 already renamed to Lake America with an
+August 27 BGN decision, and DOI Secretary's Order 3453 supplies the current federal directive.
+Google's official Gulf precedent says it follows GNIS and began its comparable rollout roughly one
+day after the final database update. A direct US-region Maps query still returned Lake Ontario twice
+and Lake America zero times immediately before execution, so this was a rollout-lag trade rather
+than a claim that the condition had already occurred.
+
+Because total risk exceeded $10, ran the required independent pair. Champion estimated 0.88 and
+recommended buying under 0.30: the government prerequisite is complete and the Gulf precedent fits
+inside the remaining window. Skeptic estimated 0.40 (0.25–0.55) and opposed >$10: Google had weeks to
+prepare the Gulf change, whereas this clock crosses a weekend, covers a binational feature, and
+requires majority-US rollout rather than one observed server. The market had also processed ~$35k
+volume and fallen from an intraday spike, so GNIS was not secret information. Synthesis: central
+p_yes **0.60**, standard 10-point stress **0.50**. That preserves large positive EV against a ~0.3013
+fee-inclusive basis while explicitly pricing the skeptic's implementation risks. Size remained
+well below point-estimate Kelly and the 15% ticket cap because the decisive rollout latency is not
+directly measurable and further funding would require crossing spreads to dismantle stronger or
+matched structures.
+
+Funding/execution:
+
+- A first 12.1135-share Hormuz sell was rejected before matching because the CLOB caps maker amount
+  precision at two decimals; no state changed.
+- DEC-0086 sold 12.11 remaining Hormuz-normal NO at 0.997 FOK for $12.073670. Order
+  `0x389fc984a25ced2a6d7570adc5d894402da204af0e1945e12bb5cb681cc23f2b`, settlement
+  `0x3fc7a1cd9edff132506b893fd41f6b5c726fb1236915f2f58170b5b98ee4605d`. Only 0.003571
+  non-economic shares remain on-chain. At p_no 0.998, expected value surrendered was ~$0.012.
+- DEC-0085 bought Lake America YES with a direct hard raw limit of 0.30: 40.955630 shares for
+  $11.999999 notional plus $0.339350 taker fee = **$12.339349 total risk**, about 0.293 average raw
+  price after improvement. Order `0x2785bcc952a5edc13793d322db8ec70d345fe3b978a2c569fdd3122e9632af7f`,
+  settlement `0xc9de6f2313314f26b02eda48aefcf4d826797a5fe44b38454679b0a85655ffe1`. Central
+  resolution EV is +$12.234; 10-point-stressed EV is +$8.138. Do not chase above 0.30 without a
+  fresh Maps check.
+
+Post-trade on-chain reconciliation reads 40.955630 Lake shares, 0.003571 Hormuz dust and 0.321985
+pUSD. The live book is $165.33 cost, $167.16 midpoint (+$1.83), but only $160.63 depth-walked net
+(-$4.69); midpoint overstatement is $6.53. Total bankroll is $183.33 and cumulative REALIZED is
++$4.66 (+2.7% of the $170 reference). The new leg is HOLD at fair 0.60 versus a ~0.293 executable
+bid; the portfolio Kelly display still shows a +$6.06 point-estimate deficit, but the reviewed
+uncertainty/funding cap above governs. Next hard clock: monitor majority-US Maps rollout through
+August 31, then agreement resolution/redemptions; early-September remains the Duma forecast recheck.
+Material tick summary sent to the operator on Telegram (message 866).

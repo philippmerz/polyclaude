@@ -1,5 +1,5 @@
 {
-  "next_id": 85,
+  "next_id": 87,
   "decisions": [
     {
       "id": 1,
@@ -1619,6 +1619,45 @@
       "tags": [
         "hormuz",
         "rebalance",
+        "funding"
+      ],
+      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 85,
+      "timestamp": "2026-08-28T16:06:44Z",
+      "type": "open_position",
+      "thesis": "Bought 40.95563 Lake-America-by-August-31 YES shares for $12.339349 total risk: $11.999999 notional plus $0.339350 taker fee. The hard raw cap was 0.30 and price improvement produced about a 0.293 average fill. The official GNIS prerequisite completed August 27, and Google rolled out the comparable Gulf of America label roughly one day after its final GNIS update. However, this case has much less preparation time, crosses a weekend, concerns a binational feature, and direct US-region Maps still showed Lake Ontario at entry. Synthesizing independent 0.40 skeptic and 0.88 champion cases gives central P(YES)=0.60 and mandatory 10-point stress P=0.50, versus about 0.3013 fee-inclusive cost per share; central EV is +$12.234 and stressed EV +$8.138.",
+      "confidence": "medium",
+      "prediction": "By August 31 at 11:59pm ET, Google Maps shows Lake America alone or alongside Lake Ontario for a majority of US users, satisfying the market. Falsified if the label remains old, beta-only, experimental, or limited to a subnational cohort through the deadline.",
+      "size_usd": 12.339349,
+      "resolution_at": "2026-09-01",
+      "tags": [
+        "google",
+        "maps",
+        "catalyst",
+        "shortdated"
+      ],
+      "slug": "google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 86,
+      "timestamp": "2026-08-28T16:06:44Z",
+      "type": "close_position",
+      "thesis": "Economically closed the remaining Hormuz-normal-by-August-31 NO position by selling 12.11 shares at 0.997 FOK for $12.07367; 0.003571 non-economic on-chain dust remains. PortWatch still supports p_no=0.998, so the sale gives up only about $0.012 central value versus resolution while funding a much larger stress-positive Lake America catalyst. This is capital rotation, not a broken Hormuz thesis.",
+      "confidence": "high",
+      "prediction": "The normal-traffic market resolves NO because PortWatch never publishes a qualifying seven-day average of 60 by August 31; selling at 0.997 therefore forgoes about $0.012 versus the 0.998 prior, while the redeployed capital has higher expected return.",
+      "size_usd": 12.07367,
+      "resolution_at": "2026-09-01",
+      "tags": [
+        "hormuz",
+        "rotation",
         "funding"
       ],
       "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",

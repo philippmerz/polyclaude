@@ -27,6 +27,14 @@
    "negativeRisk": false
   },
   {
+   "slug": "google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026",
+   "outcome": "Yes",
+   "size": 40.9556,
+   "conditionId": "0xa10fac8f93db39c9f6d62d3a6d2bcf0e4c46920b71b6ce74642354247c551def",
+   "asset": "8214126769421913853457647352894931518808168837450853440712427823991018195909",
+   "negativeRisk": false
+  },
+  {
    "slug": "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
    "outcome": "Yes",
    "size": 31,
@@ -104,14 +112,6 @@
    "size": 15,
    "conditionId": "0x432986c91a2a364d37179db26f78e8b7b69a5da3c0bc7e09a3458918dc6ad34a",
    "asset": "46758607612833917422236285013995068496804632645622273981549757589704779851841",
-   "negativeRisk": false
-  },
-  {
-   "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
-   "outcome": "No",
-   "size": 12.1135,
-   "conditionId": "0x60c2c085ee8c16bc8f2419739a94971d4c9d00f637ead10fc0f540afa1be64e8",
-   "asset": "90869494087977018607792751230236923002303032923064138180950209430688758061828",
    "negativeRisk": false
   }
  ]
