@@ -32,6 +32,8 @@ from pathlib import Path
 
 import httpx
 
+import position_groups
+
 REPO = Path(__file__).resolve().parent.parent
 NOTES = REPO / "notes"
 ADDR = "0x9032ad983ee5a22bfd078ecc4fd3d4d69e57267b"
@@ -468,10 +470,46 @@ def main() -> int:
     priors_loaded = _load("portfolio_kelly_priors.json", None)
     priors_raw = priors_loaded if isinstance(priors_loaded, dict) else {}
 
-    # 3. SET-ONLY integrity.  Missing or unequal legs turn one economic position
-    # into unintended directional exposure, so this is a hard non-clean result,
-    # not an advisory judgment item and never auto-fixed.
-    issues.extend(set_only_issues(priors_loaded, pos))
+    # 3. GROUP integrity. Missing, wrong-side, duplicate, or quantity-drifted
+    # legs turn one economic position into unintended directional exposure.
+    # `_groups` is topology-aware (including MetaMask's unequal overlapping
+    # pairs); the legacy equality check remains only for an unmigrated file and
+    # deliberately cannot bless a prose `arb_paired` marker as a structure.
+    if isinstance(priors_loaded, dict) and priors_loaded.get("_groups"):
+        group_book = position_groups.evaluate_groups(priors_raw, pos)
+        issues.extend(group_book.issues)
+    else:
+        # Legacy markers have no immutable asset topology, so containment is
+        # the only available way to recognize a live slug variant.  Use it
+        # strictly as a suppression guard: this fallback never values a group
+        # or recommends a trade, but it must not leak a naked leg-level
+        # size-up/trim instruction merely because Polymarket appended a suffix.
+        legacy_protected = position_groups.protected_slug_map(priors_raw)
+        protected_items = tuple(legacy_protected.items())
+        for live_slug in live:
+            matching_groups = {
+                group_id
+                for protected_slug, group_id in protected_items
+                if protected_slug in live_slug or live_slug in protected_slug
+            }
+            if matching_groups:
+                legacy_protected[live_slug] = (
+                    next(iter(matching_groups))
+                    if len(matching_groups) == 1
+                    else "legacy:ambiguous-protected-slug"
+                )
+        group_book = position_groups.GroupBook(
+            by_slug=legacy_protected
+        )
+        issues.extend(set_only_issues(priors_loaded, pos))
+        if any(
+            isinstance(v, dict) and (v.get("set_only") or v.get("arb_paired"))
+            for k, v in priors_raw.items()
+            if not str(k).startswith("_")
+        ):
+            issues.append(
+                "GROUP_BROKEN configuration: protected priors exist without _groups topology"
+            )
 
     # 3a. orphan priors (position gone — keep only if a deliberate re-entry candidate)
     for k, v in priors_raw.items():
@@ -631,6 +669,10 @@ def main() -> int:
             continue
         slug = next((s for s in live if k in s or s in k), None)
         if not slug:
+            continue
+        if slug in group_book.by_slug:
+            # A leg-level `size up` / `trim` instruction is exactly what group
+            # protection forbids. Group analytics owns the diagnostic/action.
             continue
         rec = posmap.get(slug) or {}
         held = (rec.get("outcome") or "").lower()

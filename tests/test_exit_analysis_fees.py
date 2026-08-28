@@ -119,6 +119,25 @@ def test_book_walk_charges_each_level_with_structured_exponent(monkeypatch) -> N
     assert fee == pytest.approx(expected_fee)
 
 
+@pytest.mark.parametrize(
+    "level",
+    [
+        {"price": "1.01", "size": "2"},
+        {"price": "0.50", "size": "-1"},
+        {"price": "nan", "size": "2"},
+    ],
+)
+def test_book_walk_rejects_malformed_binary_levels(monkeypatch, level: dict) -> None:
+    monkeypatch.setattr(
+        exits.httpx,
+        "get",
+        lambda *_args, **_kwargs: _Response({"bids": [level]}),
+    )
+
+    with pytest.raises(ValueError, match="malformed binary bid level"):
+        exits._walk_bids("token", 1.0, {"takerBaseFee": 0})
+
+
 def test_breakeven_solves_general_v2_exponent() -> None:
     market = {
         "feesEnabled": True,

@@ -40,6 +40,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -114,6 +115,8 @@ PRIORS_PATH = Path(__file__).resolve().parent.parent / "notes" / "portfolio_kell
 # invented $0.17 of exit cost and reported it as the reason to hold. 84% of
 # live markets charge 10%, 16% charge nothing — no single constant is right.
 import book_walk  # shared depth-walk primitive; see book_walk.py  # noqa: E402
+import exit_analysis as exact_exit  # per-level nonlinear fee walk for groups  # noqa: E402
+import position_groups  # topology-aware economic positions  # noqa: E402
 
 _EXIT_NET_ERR: dict[str, str] = {}   # slug -> why the sell-side/exit gate could not run
 
@@ -231,30 +234,57 @@ def _days_to_resolution(end_iso: str | None) -> float | None:
         return None
 
 
-def _load_priors() -> dict[str, float]:
+def _load_priors(raw: dict | None = None) -> dict[str, tuple[str, float, object]]:
     """Load per-position P(win) priors from portfolio_kelly_priors.json.
 
-    Returns {slug_key: p_no}. Keys in the priors file are market slugs.
+    Returns {slug_key: (held_side, probability, verified_date)}. Keys in the
+    priors file are market slugs.
     2026-07-02 audit fix: the old formula (1-M)/M x 365/days was WIN-ASSUMED
     (no P(loss) term) — any NO below ~0.983 cleared a 3.4% hurdle at 180d,
     so the daily "N/N clear" line carried no information. Expected-edge math
     (p/M - 1) is what the close-candidate decision actually needs.
     """
-    try:
-        raw = json.loads(PRIORS_PATH.read_text())
-    except Exception:
-        return {}
-    out = {}
+    if raw is None:
+        try:
+            raw = json.loads(PRIORS_PATH.read_text())
+        except Exception:
+            return {}
+    out: dict[str, tuple[str, float, object]] = {}
     for k, v in raw.items():
         if k.startswith("_"):
             continue
+        if not isinstance(v, dict):
+            continue
+        parsed: dict[str, float] = {}
+        for probability_key in ("p_no", "p_yes"):
+            if probability_key not in v:
+                continue
+            raw_probability = v[probability_key]
+            if isinstance(raw_probability, bool):
+                raise ValueError(
+                    f"{k}: {probability_key} is boolean, not a probability"
+                )
+            try:
+                probability = float(raw_probability)
+            except (TypeError, ValueError) as exc:
+                raise ValueError(
+                    f"{k}: {probability_key} is not numeric"
+                ) from exc
+            if not math.isfinite(probability) or not 0.0 <= probability <= 1.0:
+                raise ValueError(
+                    f"{k}: {probability_key} must be finite and within [0,1]"
+                )
+            parsed[probability_key] = probability
+        if "p_no" in parsed and "p_yes" in parsed:
+            if abs(parsed["p_no"] + parsed["p_yes"] - 1.0) > 1e-6:
+                raise ValueError(f"{k}: p_no and p_yes are inconsistent")
         # Side-aware (2026-07-16): the book now holds YES legs too (SpaceX,
         # Prime). A p_no prior must never be applied to a Yes holding and
         # vice versa — carry the side with the probability.
-        if isinstance(v, dict) and "p_no" in v:
-            out[k] = ("No", float(v["p_no"]), v.get("verified"))
-        elif isinstance(v, dict) and "p_yes" in v:
-            out[k] = ("Yes", float(v["p_yes"]), v.get("verified"))
+        if "p_no" in parsed:
+            out[k] = ("No", parsed["p_no"], v.get("verified"))
+        elif "p_yes" in parsed:
+            out[k] = ("Yes", parsed["p_yes"], v.get("verified"))
     return out
 
 
@@ -355,6 +385,9 @@ def main() -> int:
         args.hurdle_apy, hurdle_src = _live_hurdle()
     else:
         hurdle_src = f"pinned {args.hurdle_apy*100:.2f}% (--hurdle-apy)"
+    if not math.isfinite(args.hurdle_apy) or args.hurdle_apy < 0:
+        print("ERROR: hurdle APY must be finite and nonnegative; all actions suppressed", file=sys.stderr)
+        return 0
 
     try:
         addr = _resolve_wallet_address()
@@ -368,11 +401,28 @@ def main() -> int:
         print(f"ERROR: data-api fetch failed: {e}", file=sys.stderr)
         return 0
 
-    priors = _load_priors()
     try:
-        priors_raw = json.loads(PRIORS_PATH.read_text())   # _load_priors() returns tuples
-    except Exception:
-        priors_raw = {}
+        priors_raw = json.loads(PRIORS_PATH.read_text())
+        if not isinstance(priors_raw, dict):
+            raise ValueError("root is not an object")
+    except Exception as exc:
+        print(
+            f"ERROR: priors/topology unreadable ({type(exc).__name__}: {exc}); "
+            "scan degraded and all actions suppressed",
+            file=sys.stderr,
+        )
+        return 0
+    try:
+        priors = _load_priors(priors_raw)
+    except (TypeError, ValueError) as exc:
+        print(
+            f"ERROR: malformed prior probability ({exc}); "
+            "scan degraded and all actions suppressed",
+            file=sys.stderr,
+        )
+        return 0
+    group_book = position_groups.evaluate_groups(priors_raw, positions)
+    grouped_slugs = set(group_book.by_slug)
     acked_holds = _load_acked_holds()
     flagged: list[dict] = []
     holds: list[dict] = []
@@ -381,6 +431,11 @@ def main() -> int:
     # tick where everything clears makes zero book calls.
     hc = httpx.Client(timeout=20.0)
     for pos in positions:
+        slug = str(pos.get("slug", ""))
+        if slug in grouped_slugs:
+            # The group engine already validated—or explicitly broke—this
+            # member. Never parse it again through the naked-leg path.
+            continue
         size = float(pos.get("size", 0) or 0)
         if size <= 0:
             continue
@@ -396,7 +451,7 @@ def main() -> int:
             continue
 
         question = pos.get("title", "(unknown)")
-        slug = pos.get("slug", "")
+        grouped = False
         avg_price = float(pos.get("avgPrice", 0) or 0)
         cost = avg_price * size
         mtm = mark * size
@@ -417,7 +472,8 @@ def main() -> int:
         if mark <= 0.005 and drawdown_pct < -50:
             # Treat as de-indexed; suppress drawdown alert but flag for review
             drawdown_pct = None  # mark unreliable
-        if drawdown_pct is not None and drawdown_pct <= -args.drawdown_alert_pct:
+        if (not grouped and drawdown_pct is not None
+                and drawdown_pct <= -args.drawdown_alert_pct):
             drawdowns.append({
                 "question": question,
                 "slug": slug,
@@ -594,20 +650,107 @@ def main() -> int:
             else:
                 holds.append(record)
 
+    group_rows: list[dict] = []
+    for group_id, group in group_book.groups.items():
+        group_record: dict = {
+            "group_id": group_id,
+            "label": group.get("label", group_id),
+            "status": group.get("status"),
+            "issues": group.get("issues", []),
+        }
+        if group.get("status") == "OK":
+            quotes: dict[str, dict] = {}
+            for _leg_id, member in group["positions"].items():
+                try:
+                    member_size = float(member["size"])
+                    fee_market = exact_exit._execution_fee_market(
+                        str(member.get("conditionId"))
+                    )
+                    gross, filled, fee = exact_exit._walk_bids(
+                        str(member["asset"]), member_size, fee_market
+                    )
+                    quotes[str(member["slug"])] = {
+                        "gross": gross,
+                        "fee": fee,
+                        "net": gross - fee,
+                        "filled": filled,
+                        "unfilled": max(0.0, member_size - filled),
+                    }
+                except Exception:
+                    # Missing quote stays absent; quote_group_exit turns that
+                    # into one explicit GROUP_UNPRICED diagnostic.
+                    continue
+            exit_quote = position_groups.quote_group_exit(group, quotes)
+            member_days = [
+                _days_to_resolution(member.get("endDate"))
+                for member in group["positions"].values()
+            ]
+            days = max((value for value in member_days if value is not None), default=0.0)
+            exit_verdict = position_groups.group_exit_verdict(
+                group,
+                exit_quote,
+                hurdle_apy=args.hurdle_apy,
+                days=days,
+                as_of=dt.date.today(),
+            )
+            group_record.update(
+                {
+                    "cost": round(group["cost_basis"], 4),
+                    "mtm": (
+                        round(group["mark_value"], 4)
+                        if group["mark_value"] is not None else None
+                    ),
+                    "fair_value": round(group["fair_value"], 4),
+                    "guaranteed_floor": round(group["guaranteed_floor"], 4),
+                    "drawdown_pct": (
+                        round(group["drawdown_pct"], 2)
+                        if group["drawdown_pct"] is not None else None
+                    ),
+                    "exit": exit_quote,
+                    "exit_verdict": exit_verdict,
+                }
+            )
+            if (group["drawdown_pct"] is not None
+                    and group["drawdown_pct"] <= -args.drawdown_alert_pct):
+                drawdowns.append(
+                    {
+                        "question": group["label"],
+                        "slug": group_id,
+                        "outcome": "GROUP",
+                        "mark": None,
+                        "avg_entry": None,
+                        "size": group["total_shares"],
+                        "cost": round(group["cost_basis"], 4),
+                        "mtm": round(group["mark_value"], 4),
+                        "drawdown_pct": round(group["drawdown_pct"], 2),
+                        "days_to_resolve": round(days, 2),
+                        "verdict": "GROUP_DRAWDOWN_ALERT",
+                        "is_group": True,
+                    }
+                )
+        group_rows.append(group_record)
+
     if args.json:
         print(json.dumps({"hurdle_apy_pct": round(args.hurdle_apy * 100, 2),
                           "drawdown_alert_pct": args.drawdown_alert_pct,
                           "drawdowns": drawdowns,
-                          "flagged": flagged, "holds": holds}, indent=2))
+                          "flagged": flagged, "holds": holds,
+                          "groups": group_rows,
+                          "group_issues": group_book.issues}, indent=2))
         return 0
 
     if drawdowns:
         print(f"!!! DRAWDOWN ALERTS — positions down ≥{args.drawdown_alert_pct:.0f}% on cost !!!")
         for r in sorted(drawdowns, key=lambda x: x["drawdown_pct"]):
-            print(f"  {r['outcome']} entry={r['avg_entry']:.3f} mark={r['mark']:.3f} | "
-                  f"cost=${r['cost']:.2f} mtm=${r['mtm']:.2f} | "
-                  f"{r['drawdown_pct']:+.1f}% | {r['days_to_resolve']:>5.1f}d | "
-                  f"{r['question'][:60]}")
+            if r.get("is_group"):
+                print(f"  GROUP | cost=${r['cost']:.2f} mtm=${r['mtm']:.2f} | "
+                      f"{r['drawdown_pct']:+.1f}% | {r['days_to_resolve']:>5.1f}d | "
+                      f"{r['question'][:60]}")
+            else:
+                print(f"  {r['outcome']} entry={r['avg_entry']:.3f} mark={r['mark']:.3f} | "
+                      f"cost=${r['cost']:.2f} mtm=${r['mtm']:.2f} | "
+                      f"{r['drawdown_pct']:+.1f}% | {r['days_to_resolve']:>5.1f}d | "
+                      f"{r['question'][:60]}")
         print()
 
     def _apy_col(r: dict) -> str:
@@ -624,7 +767,8 @@ def main() -> int:
     print(f"# marginal-APY scan (EXPECTED-edge vs prior) @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")
     print(f"# hurdle: {hurdle_src}; drawdown alert: {args.drawdown_alert_pct:.0f}%; priors: {PRIORS_PATH.name}")
     n_acked = sum(1 for r in holds if str(r.get("verdict","")).startswith("ACKED_HOLD"))
-    print(f"# {len(holds)} clear ({n_acked} acked-hold); {len(flagged)} flagged (NEGATIVE_EDGE / below-hurdle)")
+    print(f"# {len(holds)} clear ({n_acked} acked-hold); {len(flagged)} flagged "
+          f"(NEGATIVE_EDGE / below-hurdle); {len(group_rows)} protected group(s)")
     print()
     if flagged:
         print("=== FLAGGED (negative edge at own prior, or expected edge < hurdle) ===")
@@ -648,6 +792,19 @@ def main() -> int:
         tag = f"  [{v}]" if (v and v != "HOLD") else ""
         print(f"  {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
               f"{_apy_col(r)}  {r['question'][:52]}{tag}")
+    print("\n=== GROUP STRUCTURES (member-leg actions and drawdowns suppressed) ===")
+    for record in group_rows:
+        group = group_book.groups.get(record["group_id"])
+        if group is None:
+            print(f"  {record['label']}: GROUP_BROKEN")
+            continue
+        quote = record.get("exit")
+        print("  " + position_groups.format_group_summary(
+            group, quote, record.get("exit_verdict")
+        ))
+    for issue in group_book.issues:
+        if not any(issue in str(record.get("issues", [])) for record in group_rows):
+            print(f"  {issue}")
     return 0
 
 

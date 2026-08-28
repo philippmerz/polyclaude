@@ -33,6 +33,7 @@ from pathlib import Path
 import httpx
 
 from pm_fees import fee_per_share, fee_schedule
+import position_groups
 
 REPO = Path(__file__).resolve().parent.parent
 PRIORS = REPO / "notes" / "portfolio_kelly_priors.json"
@@ -128,6 +129,9 @@ def _walk_bids(token: str, shares: float,
     rem, gross, fees = shares, 0.0, 0.0
     for lvl in bids:
         px, sz = float(lvl["price"]), float(lvl["size"])
+        if (not math.isfinite(px) or not 0.0 <= px <= 1.0
+                or not math.isfinite(sz) or sz < 0.0):
+            raise ValueError("malformed binary bid level")
         take = min(rem, sz)
         gross += take * px
         fees += take * fee_per_share(fee_market, px)
@@ -208,15 +212,40 @@ def main() -> int:
     priors = json.loads(PRIORS.read_text())
     pos = httpx.get("https://data-api.polymarket.com/positions",
                     params={"user": ADDR, "limit": "100"}, timeout=25).json()
+    group_book = position_groups.evaluate_groups(priors, pos)
+    selected_group_ids = {
+        group_id
+        for group_id, group in group_book.groups.items()
+        if not args.slug_filter
+        or args.slug_filter in group_id
+        or args.slug_filter.lower() in str(group.get("label", "")).lower()
+        or any(args.slug_filter in slug for slug in group.get("slugs", []))
+    }
+    selected_group_slugs = {
+        slug
+        for slug, group_id in group_book.by_slug.items()
+        if group_id in selected_group_ids
+    }
     today = dt.date.today()
     rows = []
+    quotes_by_slug: dict[str, dict] = {}
     for p in pos:
-        if float(p.get("size", 0)) < 0.5:
+        slug = str(p.get("slug", ""))
+        protected_group_id = group_book.by_slug.get(slug)
+        if (protected_group_id is not None
+                and group_book.groups.get(protected_group_id, {}).get("status") != "OK"):
             continue
-        slug = p.get("slug", "")
-        if args.slug_filter and args.slug_filter not in slug:
+        try:
+            shares = float(p.get("size", 0))
+        except (TypeError, ValueError):
+            print(f"  [UNPRICED] malformed size on {slug[:52]}", file=sys.stderr)
             continue
-        side, shares = p["outcome"], float(p["size"])
+        if not math.isfinite(shares) or shares < 0.5:
+            continue
+        if (args.slug_filter and args.slug_filter not in slug
+                and slug not in selected_group_slugs):
+            continue
+        side = p["outcome"]
         fair, verified = _fair(slug, side, priors)
         if fair is None:
             print(f"  [NO PRIOR] {slug[:52]} — add one to price the exit", file=sys.stderr)
@@ -224,10 +253,27 @@ def main() -> int:
         # Execution-time compact V2 schedule. Missing or malformed metadata is
         # deliberately represented as None so pm_fees charges its conservative
         # fallback; only an explicit legacy zero can establish fee-free status.
-        fee_market = _execution_fee_market(str(p.get("conditionId")))
-        gross, filled, taker_fee = _walk_bids(p["asset"], shares, fee_market)
+        try:
+            fee_market = _execution_fee_market(str(p.get("conditionId")))
+            gross, filled, taker_fee = _walk_bids(p["asset"], shares, fee_market)
+        except Exception as exc:
+            print(
+                f"  [UNPRICED] exit book unavailable for {slug[:52]} "
+                f"({type(exc).__name__})",
+                file=sys.stderr,
+            )
+            # For a group, the absent quote is consumed below as one explicit
+            # GROUP_UNPRICED result. Never abort or fall back to member math.
+            continue
         avg_fill = (gross / filled) if filled else 0.0
         taker_net = gross - taker_fee
+        quotes_by_slug[slug] = {
+            "gross": gross,
+            "fee": taker_fee,
+            "net": taker_net,
+            "filled": filled,
+            "unfilled": max(0.0, shares - filled),
+        }
         hold_ev = shares * fair
         taker_be = _taker_breakeven(fair, fee_market)
         taker_be_text = (
@@ -250,7 +296,8 @@ def main() -> int:
                 # per-leg exit math is still meaningless and potentially harmful.
                 set_only = vv.get("set_only") or vv.get("arb_paired")
                 break
-        if set_only:
+        grouped = slug in group_book.by_slug
+        if set_only or grouped:
             # SET-ONLY legs are priced per-leg but only mean anything as a set.
             # For riskless pairs, closing one leg creates naked exposure; for a
             # range bundle, it destroys the equal covered-state payout. Either
@@ -262,7 +309,8 @@ def main() -> int:
             # file and the tool printed the sell anyway: a rule written down is
             # not a rule enforced.
             gap = taker_net - hold_ev
-            verdict = (f"HOLD — SET-ONLY ({set_only}); per-leg math says "
+            marker = set_only or f"group {group_book.by_slug[slug]}"
+            verdict = (f"HOLD — SET-ONLY ({marker}); per-leg math says "
                        f"{'SELL +' if gap > 0 else 'hold '}${abs(gap):.2f} but that number is "
                        f"MEANINGLESS ALONE. Re-underwrite and transact the complete set, or let it resolve.")
         elif taker_net > hold_ev:
@@ -288,13 +336,35 @@ def main() -> int:
                        f"{fair:.3f} (taker would need {taker_be_text})")
         rows.append((slug, side, shares, fair, avg_fill, hold_ev, taker_net, verdict, stale))
 
-    if not rows:
+    if not rows and not selected_group_ids and not group_book.issues:
         print("no priced positions")
         return 0
     print(f"{'position':<44}{'side':>5}{'sh':>7}{'fair':>7}{'bid~':>7}{'hold$':>8}{'sell$':>8}  verdict")
     for slug, side, sh, fair, bid, hold_ev, taker_net, verdict, stale in rows:
+        if slug in group_book.by_slug:
+            continue
         print(f"{slug[:44]:<44}{side:>5}{sh:>7.1f}{fair:>7.3f}{bid:>7.3f}"
               f"{hold_ev:>8.2f}{taker_net:>8.2f}  {verdict}{stale}")
+    if selected_group_ids:
+        print("\nGROUP STRUCTURES (member-leg actions suppressed)")
+        for group_id in sorted(selected_group_ids):
+            group = group_book.groups[group_id]
+            quote = position_groups.quote_group_exit(group, quotes_by_slug)
+            verdict = position_groups.group_exit_verdict(
+                group, quote, as_of=today
+            )
+            print("  " + position_groups.format_group_summary(group, quote, verdict))
+    if group_book.issues:
+        represented = {
+            issue
+            for group in group_book.groups.values()
+            for issue in group.get("issues", [])
+        }
+        extra_issues = [issue for issue in group_book.issues if issue not in represented]
+        if extra_issues:
+            print("\nGROUP CONFIGURATION ISSUES (all member-leg actions suppressed)")
+            for issue in extra_issues:
+                print(f"  {issue}")
     print("\nresolution is fee-free; maker sells are fee-free; taker sells pay "
           "rate x [p x (1-p)]^exponent/share at each fill level (V2 curve) — "
           "that gap is usually the whole decision.")

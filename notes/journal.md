@@ -10582,3 +10582,65 @@ HLE/Gemini-Pro news coverage were added. The direct thesis-break is any agi.safe
 the validated diff must run immediately on an alert and before any future add. The next scheduled
 hard clocks remain the 22:00 UTC periodic check and Aug-31 Lake/agreement resolution path; the
 durable ROI goal remains active until the operator manually cancels it.
+
+## 2026-08-28 21:03 UTC — continuation: topology-aware group analytics shipped (DEC-0091); no trade
+
+The next capital-independent risk-control item was the set-only analytics gate. The old safeguards
+did stop obvious member-leg trades, but they still represented Duma and MetaMask through prose
+markers interpreted differently by four scripts. Duma's equal-share check did not pin side, token,
+event or negRisk identity; MetaMask's intentional unequal 47.7196/29.7173/15.0337 balances had no
+machine-readable topology at all. `position_state_audit` could still print `size up`/`trim` on a
+protected leg, `check_marginal_apy` generated member drawdowns before consulting the marker, and a
+malformed/missing prior could fall into Kelly's mark-plus-five-point default. That is exactly how a
+future resize could turn a sound structure into a naked bet.
+
+DEC-0091 makes `_groups` in `portfolio_kelly_priors.json` canonical and adds one pure fail-closed
+engine, `position_groups.py`. Duma is an equal-live exclusive YES union, so 20/20/20 and any later
+intentional equal resize are valid while 20/19.989/20 is broken. MetaMask is decomposed exactly into
+29.7173 units of 700M-YES + 3B-NO, 15.0337 units of 700M-YES + 4B-NO, and a 2.9686-unit directional
+700M-YES crumb. Every leg is pinned by exact slug, held outcome, token, event, deadline and negRisk
+status. Terminal-state pricing independently reconstructs marginal fair value; missing/duplicate/
+wrong-side/wrong-token/quantity-drifted state produces `GROUP_BROKEN`. Best-effort membership is
+extracted before strict parsing, so even malformed topology keeps every member suppressed instead
+of restoring leg-level fallthrough.
+
+The live outputs now state the economic decisions directly:
+
+- **Duma:** state probabilities 0.08/0.40/0.28/0.24, payouts $20/$20/$20/$0,
+  joint fair **$15.20**, all-in cost $11.40, mark about $10.74, and complete depth-walked exit
+  **$10.34**. HOLD beats complete exit by about $4.86. A normalized one-unit equal add currently
+  costs about **$0.557 all-in** versus $0.760 point-estimate fair and the configured $0.57 cap; the
+  live exchange minimum makes five equal shares (about $2.79) the smallest executable component.
+  It remains explicitly **POLICY-GATED** until a genuinely independent early-September forecast
+  keeps the union at least 0.75. No add was made.
+- **MetaMask:** terminal payouts are $44.7510 / $92.4706 / $62.7533 / $47.7196 with probabilities
+  0.922/0.025/0.009/0.044. Joint fair is **$46.2366291**, guaranteed floor **$44.7510**, all-in cost
+  about $43.0067, mark about $45.35, and complete exit **$44.47** after about $0.52 fee. HOLD beats
+  exit by about $1.76. Normalized one-unit alternatives: 700M+3B pair costs ~$1.026 vs $1.025 fair;
+  700M+4B costs ~$1.025 vs $1.034 fair but its ~$0.009 margin is below two-share tick noise; the
+  directional crumb costs ~$0.102 vs $0.078 fair. Kelly now quotes the live five-unit executable
+  minimum and scales fees/noise accordingly. All are SKIP/no add.
+
+Exit and add quotes require explicit filled plus unfilled evidence for every leg. Nonlinear fees are
+charged at each book level, never against a flattering VWAP, and any 0.01-share depth shortfall makes
+the complete action unpriced. `exit_analysis`, `check_marginal_apy`, `portfolio_kelly`, and
+`position_state_audit` now all consume the same topology; group drawdown replaces redistribution
+noise from mutually exclusive legs; constrained Kelly reserves each group cost exactly once. The
+completed backlog item was removed and README inventory updated.
+
+The adversarial pass closed the remaining degraded-state paths before commit. Malformed probability
+fields now suppress the whole marginal-APY scan instead of crashing before group protection; a blank
+or globally malformed group schema produces explicit `GROUP_BROKEN` placeholder rows while immutable
+assets still protect renamed live slugs. Legacy no-schema slug variants also remain suppressed from
+the state audit's naked `size up`/`trim` path. De-indexed members block group adds, every positive add
+verdict requires live minimum-order proof, final-30-day group actions require same-day priors just as
+the state audit does, and malformed bid levels/non-finite hurdle inputs fail unpriced.
+
+Validation: live state audit CLEAN across 15 rows; live exit and marginal-APY displays each show
+exactly two group rows and no member action; 210 pytest tests passed plus all 116 standalone
+money-math checks. Final 21:29 reconciliation put total bankroll at $188.20: the 15 PM rows cost
+$165.68, marked $172.22 (+$6.55), and depth-walked to $164.30 net (-$1.37), so midpoint overstatement
+is $7.92. The exact US-region Maps probe again returned target `Lake America` 0 / control `Lake
+Ontario` 2. Lake remains HOLD versus 0.60 central / 0.50 stressed fair; no marginal-APY or complete-
+group exit cleared. No capital moved and no Telegram was needed. The next scheduled hard clock is the
+22:00 UTC periodic check; the durable ROI goal remains active until the operator manually cancels it.

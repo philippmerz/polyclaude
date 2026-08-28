@@ -1,5 +1,5 @@
 {
-  "next_id": 91,
+  "next_id": 92,
   "decisions": [
     {
       "id": 1,
@@ -1740,6 +1740,26 @@
         "funding"
       ],
       "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 91,
+      "timestamp": "2026-08-28T21:02:34Z",
+      "type": "scaffolding",
+      "thesis": "Completed the set-only group-analytics gate before any structure resize. A canonical _groups topology now models Duma as one equal-live exclusive YES union and MetaMask as two explicit monotonicity pairs plus the 2.9686-share 700M directional crumb. The pure engine pins exact slug, held side, token, event, deadline, negRisk status and expected quantities; derives terminal-state payouts; aggregates all-in cost, mark, fair, guaranteed floor and drawdown; and refuses an exit/add verdict unless every required leg has explicit full-depth, per-fill-level fee evidence. All four advisory paths now suppress member legs even when topology parsing fails, so malformed state cannot restore naked-leg recommendations.",
+      "confidence": "high",
+      "prediction": "Live analytics continue to report exactly two protected economic structures: Duma fair $15.20 and MetaMask fair about $46.2366 / guaranteed floor $44.751. A missing, duplicate, wrong-side, wrong-token, wrong-event, quantity-drifted or partial-depth leg produces GROUP_BROKEN/GROUP_UNPRICED and no member-leg add, trim, drawdown or exit action. Duma equal resizes remain valid without freezing the current 20-share quantity; MetaMask's explicit 47.7196/29.7173/15.0337 topology remains hard-pinned.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-01",
+      "tags": [
+        "group-analytics",
+        "execution-safety",
+        "portfolio",
+        "scaffolding"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

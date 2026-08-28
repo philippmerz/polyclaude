@@ -1,6 +1,133 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
  "_updated": "2026-08-28",
+ "_groups": {
+  "duma-295-339": {
+   "label": "Duma 295-339 equal-share YES union",
+   "add_gate": "POLICY-GATED through 2026-09-01: require a genuinely independent forecast with union p>=0.75 and complete all-in ask<=0.57; cap at 34 equal shares.",
+   "add_policy": {
+    "manual_gate": true,
+    "max_component_all_in": {
+     "covered-range": 0.57
+    },
+    "min_component_fair": {
+     "covered-range": 0.75
+    },
+    "max_total_component_quantity": {
+     "covered-range": 34.0
+    }
+   },
+   "quantity_mode": "proportional_live",
+   "event_model": {
+    "kind": "exclusive",
+    "event_id": "147974",
+    "end_date": "2026-09-20",
+    "negative_risk": true,
+    "covered": [
+     "295-309",
+     "310-324",
+     "325-339"
+    ]
+   },
+   "legs": {
+    "295-309": {
+     "slug": "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
+     "outcome": "Yes",
+     "asset": "64185329950651325995811365760471851443559550508668407058343096277276377997961"
+    },
+    "310-324": {
+     "slug": "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
+     "outcome": "Yes",
+     "asset": "55194946908077358946678288054444144925253856497002247503827745964051403029179"
+    },
+    "325-339": {
+     "slug": "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
+     "outcome": "Yes",
+     "asset": "36654380138980286408755216940812345632701505883007076173124647888379931416486"
+    }
+   },
+   "components": [
+    {
+     "id": "covered-range",
+     "quantity": 1.0,
+     "weights": {
+      "295-309": 1.0,
+      "310-324": 1.0,
+      "325-339": 1.0
+     },
+     "directional": true
+    }
+   ]
+  },
+  "metamask-fdv-monotonicity": {
+   "label": "MetaMask FDV overlapping monotonicity pairs plus 700M directional crumb",
+   "add_gate": "POLICY-GATED: re-underwrite the selected pair/component and cluster exposure; never scale the directional crumb automatically.",
+   "add_policy": {
+    "manual_gate": true
+   },
+   "event_model": {
+    "kind": "monotone_yes",
+    "event_id": "73236",
+    "end_date": "2027-01-01",
+    "negative_risk": false,
+    "order": [
+     "700m",
+     "3b",
+     "4b"
+    ],
+    "thresholds": {
+     "700m": 700000000,
+     "3b": 3000000000,
+     "4b": 4000000000
+    }
+   },
+   "legs": {
+    "700m": {
+     "slug": "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
+     "outcome": "Yes",
+     "asset": "27944626213701198119611689981836884300701096451168812471764168520890801988056"
+    },
+    "3b": {
+     "slug": "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
+     "outcome": "No",
+     "asset": "100885541765991307903032754280870234009741669840630929196757341278043960084869"
+    },
+    "4b": {
+     "slug": "metamask-fdv-above-4b-one-day-after-launch-851-782-477-258",
+     "outcome": "No",
+     "asset": "70962867555721536468794820816920873482905460253708950137269131341948100258712"
+    }
+   },
+   "components": [
+    {
+     "id": "700m-yes-plus-3b-no",
+     "quantity": 29.7173,
+     "weights": {
+      "700m": 1.0,
+      "3b": 1.0
+     },
+     "directional": false
+    },
+    {
+     "id": "700m-yes-plus-4b-no",
+     "quantity": 15.0337,
+     "weights": {
+      "700m": 1.0,
+      "4b": 1.0
+     },
+     "directional": false
+    },
+    {
+     "id": "unpaired-700m-yes",
+     "quantity": 2.9686,
+     "weights": {
+      "700m": 1.0
+     },
+     "directional": true
+    }
+   ]
+  }
+ },
  "trump-out-as-president-before-2027": {
   "p_no": 0.97,
   "cluster": "us-politics",
