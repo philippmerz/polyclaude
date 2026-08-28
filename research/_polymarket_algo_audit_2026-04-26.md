@@ -57,7 +57,10 @@ Honest list, even given the verdict:
 
 1. **Daily BTC ladder fades on extreme strikes** (e.g., BTC > $80k YES at 0.0105 with current spot ~$77k) — basically the longshot tail-fade pattern we already use on Polymarket-non-crypto. Buy NO at 0.99 → +1% if BTC stays under $80k for a day. Edge ≈ comparable to Atletico-top-4 carry. **Already in the playbook.** Not a new strategy.
 2. **Maker-quoting in long-tenor liquid markets** when bankroll ≥ $250 (so a $50 quote is < 20% of bankroll). Polymarket's liquidity-rewards program is real for traders at that scale.
-3. **Cross-venue arbitrage**: Polymarket vs. Kalshi for same-event contracts. Killed by US-bank-account requirement on Kalshi for now.
+3. **Cross-venue arbitrage**: Polymarket vs. Kalshi for same-event contracts. **Superseded
+   2026-08-28:** Kalshi's old US-bank-only blocker is gone, but trading still requires KYC and
+   conflicts with this repo's no-KYC mandate; a live fee/rule audit found no executable exact
+   overlap. See `_venue_dd_drift_kalshi_2026-08-28.md`.
 4. **Latency-insensitive reflexivity**: pre-positioning for known catalysts (Fed announcements, earnings, sports starts) — already what we do with the discretionary book.
 
 ## Verdict

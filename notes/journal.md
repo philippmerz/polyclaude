@@ -10644,3 +10644,53 @@ is $7.92. The exact US-region Maps probe again returned target `Lake America` 0 
 Ontario` 2. Lake remains HOLD versus 0.60 central / 0.50 stressed fair; no marginal-APY or complete-
 group exit cleared. No capital moved and no Telegram was needed. The next scheduled hard clock is the
 22:00 UTC periodic check; the durable ROI goal remains active until the operator manually cancels it.
+
+## 2026-08-28 22:32 UTC — continuation: false arb rejected; venue DD closed; no trade (DEC-0092/0093)
+
+The durable loop handled the 21:56 opportunity alert first. Its claimed +13.28pp acquisition
+arbitrage was structurally false: one category event contains a different proposition for each
+company, while transient Dec-31/Jan-1 Gamma `endDate` metadata made unrelated children look like
+deadline rungs. The immediate live rerun found no acquisition pair. `event_monotonicity_scan` now
+derives deadlines from each child question and requires the same normalized child proposition,
+operator and payout-rule template before walking books; Gamma dates are only a bounded consistency
+check. Threshold ladders now use the same child-proposition/rule grouping and retain the parsed
+currency/unit dimension. The executable label no longer means “top ask existed”: it requires named
+YES/NO token mapping, known fee metadata, matching/fresh/non-crossed books, both live and Gamma
+minimum sizes, and a complete multi-level walk at one common quantity. The final live scan inspected
+983 multi-market events, walked five shares on each of two surviving midpoint anomalies (Claude
+Arena and Fed rate), measured them at -9.57pp and -0.57pp after fees, and found **zero executable
+arbitrages**.
+
+The scheduled portfolio and catalyst checks did not support a rebalance. The exact US-region Maps
+probe remained `Lake America` 0 / `Lake Ontario` 2, so 40.95563 Lake YES remain HOLD/no-add.
+Official Iranian confirmation of agreement on a route remains conditional on US commitments and is
+already inside the 0.09 Iran–Oman YES prior; 31 YES remain HOLD/no-add. The HLE source diff remained
+valid and static. Exact marginal-APY output had zero action flags, nine ordinary holds and two group
+rows. The 21:29 portfolio snapshot remained the operative reconciliation: $188.20 bankroll,
+$165.68 Polymarket cost, $172.22 midpoint mark, $164.30 depth-walked net, and +$4.79 realized.
+Broad candidate scans produced no qualifying deployment.
+
+The remaining Drift/Kalshi diligence is closed. Drift BET migrated to Velocity, whose new program
+removed prediction-market initialization and currently exposes only perpetuals, so it supplies no
+payoff-identical event surface. Kalshi's old US-bank-only note was stale, but execution still
+requires identity/residence verification and conflicts with the no-KYC mandate. A 52,000-contract
+live surface and representative sports/Greenland overlaps produced no strict rule-identical,
+fee-positive trade; no account was created, funded or authorized.
+
+The useful residue is an opt-in public-data adapter, never an execution adapter.
+`sports_pm_scan.py --with-kalshi` now compares at most five already-shortlisted candidates through
+one bounded milestone lookup each, exact league/event/child/time/predicate/rule lineage, fresh
+Polymarket and Kalshi depth, the shared live minimum size, and conservative per-venue fees. Default
+scanner output remains unchanged. Sequential snapshots are explicitly non-atomic and the field is
+named `best_fee_only_snapshot_spread_pp`, not executable edge. The final five-candidate live run
+failed closed on every row and emitted no spread; an exact PIT–STL totals smoke rejected the pair on
+unproved cancellation/postponement equivalence before reading books. The adversarial review also
+made Gamma tradeability/orderbook flags affirmative rather than assumed, rejects unparsed
+extra-innings and inning-limited predicates, and lets one fully priceable hedge direction survive
+when only the unrelated same-outcome comparison side lacks depth.
+
+Validation: 287 pytest cases, all 116 standalone money checks, and all 12 historical money mutants
+passed/caught as intended; 80 focused monotonicity/Kalshi cases, byte-compilation and diff hygiene
+also passed. No capital moved and no Telegram was sent. The next hard clocks remain Aug-31 and the
+early-September Duma independent-forecast gate. The durable ROI continuation stays active until the
+operator manually cancels it.

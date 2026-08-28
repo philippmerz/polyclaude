@@ -1,5 +1,5 @@
 {
-  "next_id": 92,
+  "next_id": 94,
   "decisions": [
     {
       "id": 1,
@@ -1758,6 +1758,48 @@
         "execution-safety",
         "portfolio",
         "scaffolding"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 92,
+      "timestamp": "2026-08-28T22:21:54Z",
+      "type": "scaffolding",
+      "thesis": "The 21:56 UTC daemon alert claiming a +13.28pp acquisition arbitrage was not a trade: one Polymarket category event contains a different acquisition proposition for every company, while transient Dec-31/Jan-1 Gamma metadata made unrelated children look like date rungs. Live books validate prices, not logical implication. Hardened date ladders to require identical normalized child propositions, payout-rule templates, explicit question-parsed semantic deadlines, and bounded Gamma-date consistency before any CLOB walk. Applied the same child-proposition grouping to threshold ladders so a future mixed-entity numeric event cannot repeat the class.",
+      "confidence": "high",
+      "prediction": "Through the next week of daemon runs, the companies-acquired-before-2027 family produces zero monotonicity pairs even if child endDate metadata diverges; unrelated threshold children likewise never reach a book walk, while true same-proposition date and threshold fixtures remain detectable. Immediate live scans show only midpoint artifacts and zero executable arbs.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-04",
+      "tags": [
+        "monotonicity",
+        "scanner",
+        "false-positive",
+        "safety"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 93,
+      "timestamp": "2026-08-28T22:22:04Z",
+      "type": "strategy_change",
+      "thesis": "Closed the remaining Drift/Kalshi venue diligence without moving capital. Drift BET migrated to Velocity, whose new Solana program removed prediction-market initialization and currently exposes only perpetuals, so it has no payoff-identical Polymarket surface. Kalshi's old US-bank-only blocker is stale and its public REST surface is useful, but execution still requires identity/residence verification and conflicts with the repo's no-KYC mandate; representative live overlaps were rule-mismatched or fee-negative. Keep Kalshi strictly opt-in, unauthenticated, read-only evidence for already-shortlisted sports candidates, with no account, funding, auth, or order path.",
+      "confidence": "high",
+      "prediction": "By the start-of-2027 evaluation, Velocity remains non-actionable unless it reintroduces audited event binaries, and the read-only Kalshi log either shows no recurrent strict-rule live-depth spread above roughly 3pp after fees/legging or supplies the measured evidence needed for an explicit operator decision to revisit KYC and funding. No Kalshi capital is moved under the current mandate.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-05",
+      "tags": [
+        "venue-diligence",
+        "drift",
+        "velocity",
+        "kalshi",
+        "no-kyc",
+        "read-only"
       ],
       "slug": null,
       "outcome": null,

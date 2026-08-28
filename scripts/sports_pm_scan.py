@@ -19,6 +19,7 @@ Usage:
     python scripts/sports_pm_scan.py
     python scripts/sports_pm_scan.py --hours 72
     python scripts/sports_pm_scan.py --json
+    python scripts/sports_pm_scan.py --with-kalshi --json
 """
 
 from __future__ import annotations
@@ -35,6 +36,9 @@ import httpx
 
 from agent_runtime import run_agent
 import pm_fees  # per-market takerBaseFee; see pm_fees.py
+
+
+KALSHI_TOP_N_HARD_CAP = 5
 
 
 def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] | None = None,
@@ -246,6 +250,14 @@ def main() -> int:
     p.add_argument("--consensus-top-n", type=int, default=5,
                    help="Number of top candidates to fetch consensus for "
                         "(default 5, to bound model cost).")
+    p.add_argument("--with-kalshi", action="store_true",
+                   help="Compare top shortlisted candidates with strictly matched "
+                        "Kalshi public REST books. Read-only; no account/auth/trading. "
+                        "Default behavior is unchanged when omitted.")
+    p.add_argument("--kalshi-top-n", type=int, default=5,
+                   help="Number of already-shortlisted candidates to compare with "
+                        "Kalshi (default 5, hard maximum 5; each lookup is bounded "
+                        "and fail-closed).")
     args = p.parse_args()
     if args.hurdle_apy is None:
         from discover_markets import live_hurdle_apy
@@ -257,6 +269,10 @@ def main() -> int:
     print(f"# fetched {len(markets)} sports markets passing thresholds", file=sys.stderr)
 
     rows = []
+    # Keep the full Gamma object out-of-band for optional enrichers.  Identity,
+    # line, scheduled time, rules, fee schedule, and token validation cannot be
+    # reconstructed safely from the compact display row.
+    markets_by_id = {str(m.get("id")): m for m in markets if m.get("id") is not None}
     for m in markets:
         lens, yes, no, days = categorize(m)
         if days <= 0 or days * 24 > args.hours:
@@ -315,6 +331,25 @@ def main() -> int:
                 r["consensus_summary"] = f"NO_CONSENSUS: {cons.get('error', '?')[:60]}"
             print(f"  [{i+1}/{args.consensus_top_n}] {r['question'][:50]}: {r.get('consensus_summary','?')}", file=sys.stderr)
 
+    # Optional public Kalshi comparison.  This receives only the final PM
+    # shortlist, uses no credentials, and never exposes an execution method.
+    if args.with_kalshi:
+        from kalshi_consensus import KalshiConsensusAdapter
+
+        top_n = max(0, min(args.kalshi_top_n, KALSHI_TOP_N_HARD_CAP, len(rows)))
+        print(f"# comparing live Kalshi books for top {top_n} shortlisted candidates "
+              f"(public REST, read-only)...", file=sys.stderr)
+        with KalshiConsensusAdapter() as adapter:
+            for i, row in enumerate(rows[:top_n]):
+                full_market = markets_by_id.get(str(row.get("id")))
+                result = adapter.compare(full_market or {})
+                row["pm_vs_kalshi"] = result
+                detail = result.get("best_fee_only_snapshot_spread_pp")
+                suffix = f" best={detail:+.2f}pp" if isinstance(detail, (int, float)) else ""
+                print(f"  [{i+1}/{top_n}] {row['question'][:50]}: "
+                      f"{result.get('status','?')}/{result.get('reason','?')}{suffix}",
+                      file=sys.stderr)
+
     if args.json:
         print(json.dumps({"results": rows}, indent=2, default=str))
         return 0
@@ -333,6 +368,15 @@ def main() -> int:
         cons_str = ""
         if "consensus_summary" in r:
             cons_str = f"  {r['consensus_summary']}"
+        if "pm_vs_kalshi" in r:
+            kalshi = r["pm_vs_kalshi"]
+            if kalshi.get("status") == "matched":
+                cons_str += (
+                    f"  kalshi_fee_only_snapshot="
+                    f"{kalshi['best_fee_only_snapshot_spread_pp']:+.2f}pp"
+                )
+            else:
+                cons_str += f"  kalshi={kalshi.get('status','?')}:{kalshi.get('reason','?')}"
         print(f"  {r['lens']:20s} {r['buy_side']}@${r['mark']:.4f}  +{profit_per_dollar*100:5.2f}%  d={r['days_to_resolve']:.1f}  v24=${r['vol24h']:>7.0f}  {r['question'][:55]}{cons_str}")
     return 0
 

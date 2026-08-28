@@ -6672,3 +6672,11 @@ Cron tick 20260828T140001Z. Run your scheduled polyclaude check-in (11-step list
 
 ## 2026-08-28T18:00:03Z — inject QUEUED
 Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-28T21:56:34Z — inject QUEUED
+Cron tick 20260828T215630Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [TRIGGERED BY OPPORTUNITY WATCH: monotonicity-arb — see notes/opportunity_alerts.jsonl (tail) for the alert payload; act on it FIRST, then the standard checks.]
+[durable ROI-goal continuation contract appended to queued prompt]
+
+## 2026-08-28T22:00:01Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[durable ROI-goal continuation contract appended to queued prompt]

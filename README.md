@@ -59,8 +59,9 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 ## Tool inventory
 
 ### Discovery + scanning
-- `discover_markets.py` — pulls active Polymarket markets, filters by hurdle APY (3.4% Aave Base) + 3d horizon floor + spread/liq quality. Bond-like-fade lens.
-- `sports_pm_scan.py` — sports markets in 48h window with mid-market lens (BOND_LIKE_FADE_NO/YES, MID_50_50, STRONG_FAVORITE). `--with-consensus` uses a scoped fast research worker for bookie-odds deltas.
+- `discover_markets.py` — pulls active Polymarket markets, filters by the live Aave-Polygon hurdle APY + 3d horizon floor + spread/liq quality. Bond-like-fade lens.
+- `sports_pm_scan.py` — sports markets in 48h window with mid-market lens (BOND_LIKE_FADE_NO/YES, MID_50_50, STRONG_FAVORITE). `--with-consensus` uses a scoped fast research worker for bookie-odds deltas; opt-in `--with-kalshi` attaches strictly matched, unauthenticated public-book evidence through `kalshi_consensus.py` with no execution path.
+- `event_monotonicity_scan.py` — date- and threshold-ladder inconsistency scanner. Date comparisons require identical child propositions, payout-rule templates, explicit semantic deadlines and consistent Gamma metadata before live-book validation; event membership alone never establishes a hedge.
 - `macro_pm_scan.py` — Polymarket FOMC/CPI/macro markets in 60d window. **v1 LIMITATION: --with-consensus is unreliable because CME FedWatch is JS-rendered. Use --no-consensus.**
 - `world_state_digest.py` — bare-fact synthesis from `notes/primary_sources.md` (~46 curated factual URLs, 9 domains). Distills "what's underpriced given THESE facts." Sunday cron.
 - `limitless_arb_scan.py` — cross-venue arb scanner Polymarket vs Limitless. Proper-noun-overlap + Jaccard 0.55 false-positive guards. Mostly surfaces subjective-resolution arbs (token launches by date).

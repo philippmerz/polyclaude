@@ -476,6 +476,12 @@ the gap); *verify against a known truth* (absent output and failed output look i
   fires that sailed through that walk, because the books were genuinely real — what was
   fabricated was the ORDERING ("$1B" parsed as 1.0, "$50M" as 50.0, inverting a
   correctly-priced FDV ladder). Prices were validated; the STRUCTURAL claim was not.
+  The same class fired again on 2026-08-28 when one category event contained a different
+  acquisition proposition for every company: transient Dec-31/Jan-1 Gamma endDate metadata
+  made unrelated children look like deadline rungs, and real books turned the false pairing
+  into a +13.28pp alert. Event membership is never proposition equivalence. A date ladder must
+  match the complete child proposition and payout-rule template, parse its deadline from the
+  child question, and use Gamma endDate only as a bounded consistency check.
   When adding a detector, ask which layer validates its specific claim, and if the
   answer is "none", that claim carries the whole safety burden and must be unit-tested
   against adversarial inputs BEFORE the daemon can fire on it.
