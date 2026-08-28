@@ -861,3 +861,45 @@ A new, clearly accepted bilateral maritime-management agreement within five days
 - [Oman-Iran discuss framework for resumption of safe navigation — Times of Oman](https://m.timesofoman.com/article/176051-oman-iran-discuss-framework-for-resumption-of-safe-navigation-through-strait-of-hormuz)
 - [Iran warns of military ship ban under potential Oman deal — AP](https://apnews.com/article/cb19bc3f0b467db591edbef52d0db273)
 - [Iran and Oman hold talks on managing the Strait — AP](https://apnews.com/article/1a4fa2e3812c458a25a561b38dc89f09)
+
+---
+
+## 2026-08-28T12:30:47Z — catalyst_check
+
+**Query:** `Iran-Oman Hormuz Agreement by August 31?` resolves 2026-08-31 (3d)
+
+## CATALYST CHECK: Iran-Oman Hormuz Agreement by August 31?
+
+Resolution: 2026-08-31 | Days: 3 | Today: 2026-08-28
+
+### Base rate
+
+Very low: this negotiation has missed earlier August deadline tranches without an unambiguous bilateral acceptance announcement; formal bilateral traffic accords rarely materialize within 72 hours absent a scheduled signing.
+
+### Catalysts in window
+
+None identified. Technical negotiations and Iran’s forthcoming conditions list are ongoing, but no Iran-Oman signing, ministerial meeting, or joint-announcement date is scheduled.
+
+### Recent news (last 14d)
+
+- 2026-08-25 - Iran-Oman joint statement: calls the framework “proposed” and says technical negotiations will continue; not bilateral acceptance of a qualifying agreement.
+- 2026-08-26 - Iran says “potential agreement” reached: temporary route discussed, but permanent plan requires 30–60 days of further talks.
+- 2026-08-27 - Iran sets reopening conditions: Reuters reports details are still being worked out and Iran conditions passage on U.S. action.
+- 2026-08-27 - Qatar-Iran talks: discussed a *proposed* Iran-Oman navigation/mine-clearance plan; no acceptance announcement.
+- 2026-08-28 - Iran to name terms for reopening: raises negotiation activity but is not an Iran-Oman agreement or mutual acceptance.
+
+### P(YES) estimate
+
+- Low: 3%
+- Central: 9%
+- High: 18%
+- Reasoning: The August 25 statement and “temporary route” headlines occurred after the market opened, but literally describe a proposed framework/understanding and future technical talks—not each government’s clear acceptance of the same agreement. A rushed joint declaration remains possible, but there is no scheduled catalyst and Iran is still adding conditions.
+- Multiplicative breakdown (if conjunction): P(Iran and Oman complete the same qualifying traffic agreement by cutoff: 15%) × P(both clearly announce acceptance by cutoff \| completion: 65%) × P(the announced instrument meets Hormuz-traffic scope \| announcement: 95%) = 9.3% ≈ 9%
+- Reconciliation: Structured joint is the Central; crisis/deal media framing is materially more bullish than the literal announcement-and-mutual-acceptance test.
+
+### Sources
+
+- [Iran-Oman joint statement, August 25](https://www.iranwatch.org/library/governments/oman/foreign-ministry/joint-statement-between-oman-iran-following-foreign-ministers-consultations)
+- [AP: potential agreement and 30–60-day further talks](https://apnews.com/article/middle-east-iran-israel-west-bank-august-26-2026-cb19bc3f0b467db591edbef52d0db273)
+- [Reuters: Iran sets conditions; details still being worked out](https://www.investing.com/news/commodities-news/iran-sets-conditions-for-reopening-strait-of-hormuz-top-security-official-rezaei-says-4880217)
+- [AP: Qatar discusses proposed Iran-Oman plan](https://apnews.com/article/middle-east-iran-israel-west-bank-august-27-2026-c457cd178b05f6c39c8c2e33f0a565ba)

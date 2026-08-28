@@ -135,7 +135,7 @@ def main() -> int:
             # 2026-08-25: resting AT or BELOW fair is banned (an informed lift
             # means fair jumped, and the stale-fair sell donates the news), but
             # resting ABOVE fair is PERMITTED — the premium is the compensation
-            # for jump risk. This text still said "no resting sell" while the
+            # for jump risk. This text still imposed the superseded blanket ban while the
             # book carried four permitted premium rests (Gemini 0.60 vs fair
             # 0.54, OpenAI 0.70/0.45, MacBook 0.69), i.e. the tool contradicted
             # both the doctrine and the live book. The lesson sitting next to

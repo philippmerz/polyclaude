@@ -200,11 +200,16 @@ def categorize(m: dict) -> tuple[str, float, float, float]:
 
 
 def annualized_apy(p: float, days: float, fee_rate: float | None = None) -> float:
-    """APY for hold-to-resolution at price p, days. Capped at 10000x for display."""
+    """Fee-aware APY at price ``p``. Capped at 10000x for display.
+
+    Polymarket's true fee per share is ``rate × p × (1−p)``; ``pm_fees.py``
+    applies the current 0.07 category cap to the market's raw rate.
+    """
     if p >= 0.999 or days < 0.5:
         return 0.0
-    fee = (pm_fees.FEE_RATE_FALLBACK if fee_rate is None else fee_rate) * min(p, 1 - p)
-    cost = p * (1 + fee)
+    raw_rate = pm_fees.FEE_RATE_FALLBACK if fee_rate is None else fee_rate
+    fee_per_share = pm_fees.fee_per_share_at(raw_rate, p)
+    cost = p + fee_per_share
     if cost >= 1.0:
         return 0.0
     gross = (1.0 - cost) / cost
@@ -256,13 +261,14 @@ def main() -> int:
         lens, yes, no, days = categorize(m)
         if days <= 0 or days * 24 > args.hours:
             continue
+        market_fee_rate = pm_fees.fee_rate(m)
         # APY for the dominant side
         if yes >= no:
-            apy = annualized_apy(yes, days)
+            apy = annualized_apy(yes, days, market_fee_rate)
             buy_side = "YES"
             mark = yes
         else:
-            apy = annualized_apy(no, days)
+            apy = annualized_apy(no, days, market_fee_rate)
             buy_side = "NO"
             mark = no
         try:

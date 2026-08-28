@@ -3,12 +3,15 @@
 Maker orders are a default tool, not an exception (operator 2026-07-24: "limit orders
 are standard... part of your everyday repertoire"). Two uses:
 - **SELLS** — consumed-edge take-profits (doctrine §5) at/above fair, fee-free, no spread.
-- **BIDS** — patient entries/adds at the bid side. Saves the taker fee (1000bps markets
-  charge takers 10%×min(p,1−p)/share — 3.9c at 0.61 = ~8% of cost basis) and the spread.
+- **BIDS** — patient entries/adds at the bid side. Saves the per-market taker fee and the
+  spread. The true fee curve is `rate × p × (1−p)` per share (current category cap 0.07;
+  ~1.67c at p=0.61 at that cap); `scripts/pm_fees.py` is authoritative for the market's
+  actual rate.
   `polyclaude_enter.py --maker` does this (NOTE: flag shipped 2026-07-24, not yet
   exercised live); raw: `clob_v2.py buy <tok> <px> <usd> --post-only`.
 
-**Management rules (checked EVERY tick — reconcile `clob_v2.py orders` vs this table):**
+**Management rules (checked EVERY tick — treat `.venv/bin/python scripts/clob_v2.py orders`
+as the authoritative live inventory and reconcile it against positions and current priors):**
 - SELLS fill only on UP-moves. They do NOT handle thesis-break exits — those need the
   active judgment path (news → catalyst_check → active sell).
 - BIDS fill under FUTURE information: every tick re-verify the thesis fundamental is
@@ -20,17 +23,16 @@ are standard... part of your everyday repertoire"). Two uses:
   informed flow (embargoed reveals) BUYS YES / SELLS NO — resting YES bids have benign
   adverse selection (fills = impatient exits); resting NO bids are the embargo's victim
   (YES bids OK without coverage; NO bids need it — DC/Lucasfilm skipped on exactly this).
-- Hidden-info-class positions (GPT-6) get NO resting take-profit sells — an informed
-  up-spike means fair jumped; sell only via active judgment.
+- Hidden-info-class positions: never rest a sell at or below fair, because an informed
+  up-spike can mean fair jumped. A premium-to-fair sell (strictly above fair) is allowed
+  when that premium explicitly compensates the jump risk; thesis-break exits still use
+  active judgment, and scheduled-catalyst pull rules still apply.
 
-## Live orders (all 7 — single source of truth; updated 2026-07-25 14:30)
+## Live-order source of truth
 
-| Placed | Position | Side | Shares | Price | Fair | Note |
-|---|---|---|---|---|---|---|
-| 2026-07-24 | Greenland NO | SELL | 29 | 0.98 | 0.975 | Dec-31 fade; consumed-edge auto-exit |
-| 2026-07-24 | Trump-out NO | SELL | 28 | 0.97 | 0.97 | Dec-31 fade; us-politics |
-| 2026-07-24 | Satoshi NO | SELL | 6 | 0.99 | 0.99 | Dec-31 fade |
-| 2026-07-25 | GPT-6 NO | BID | 10 | 0.67 | 0.82 | Dip-catcher (mark eased to 0.725) |
+Run `.venv/bin/python scripts/clob_v2.py orders` for the authoritative live order set.
+Do not use this file as a current-order inventory: the entries below are a dated policy and
+execution log only. Reconcile the command output on every tick and after every place/cancel.
 
 **CANCELLED 2026-07-26 02:20 (post-panel rule):** Apple 13@0.80 + Prime 11@0.78 — panels passed
 without confirmed qualifying announcements; benign-adverse-selection logic is DEAD once the
@@ -57,17 +59,21 @@ vs 0.73 fair). **CANCEL-RACE LESSON (02:56 audit):** the GPT-6 10sh order's 5.4s
 Jul-27 01:05 DESPITE the Jul-26 22:10 cancel command returning "canceled" — the grep of response
 text never verified removal. True GPT-6 position: 50sh @0.645 (cap overshoot +5.4sh, profitable but
 unintended). RULE: after every cancel, VERIFY via `clob_v2.py orders` that the id is gone.
-Live: Trump-out SELL 28@0.97, Greenland SELL 29@0.98, Fed-hike YES SELL 41@0.26,
+Historical snapshot at that fill: Trump-out SELL 28@0.97, Greenland SELL 29@0.98,
+Fed-hike YES SELL 41@0.26,
 SpaceX YES SELL 34@0.96.
 
-**Maker-sell-at-fair policy (2026-07-28, from exit_analysis.py):** every position gets a resting
-post-only sell AT FAIR — fee-free, fills only if someone pays >= my own fair value, EV-positive by
-construction (frees capital early at no EV cost). EXCEPTIONS: hidden-info-class positions (GPT-6,
-MacBook) get NONE — an informed up-move means fair JUMPED, so auto-selling at the old fair donates
-the news. SpaceX qualifies (mechanical, public-fact resolution) -> 34@0.96 rested.
+**Maker-sell-at-fair policy (2026-07-28, corrected for hidden information):** for an ordinary
+public-information position, a resting post-only sell AT FAIR is fee-free, fills only if someone
+pays >= my own fair value, and frees capital early at no EV cost. For hidden-info-class positions
+(GPT-6, MacBook), sells at or below fair are banned because an informed up-move can mean fair
+JUMPED. A premium-to-fair sell (strictly above fair) is allowed when its premium explicitly pays
+for that jump risk. SpaceX qualified (mechanical, public-fact resolution) -> 34@0.96 rested.
 
 **Fed maker-sell (2026-07-28, operator Q "lowest sell price that beats holding?"):** taker breakeven
-0.2778 (fee eats 10% of min(p,1-p)); MAKER breakeven = fair 0.25 exactly (fee-free). Rested 41@0.26
+is ~0.2636 at the current 0.07 cap because taker net is `p − rate × p × (1−p)`; MAKER
+breakeven = fair 0.25 exactly (fee-free). The actual per-market rate comes from
+`scripts/pm_fees.py`. Rested 41@0.26
 — above both, ask was 0.218, so it fills only if the market pays above my fair. Free option; resolves
 Wed 18:00 UTC otherwise. GENERAL RULE: when hold-vs-sell is close, don't choose — rest a post-only
 sell at the price that makes selling strictly better and let the market decide.
@@ -84,12 +90,14 @@ Mechanically: when a position has a known catalyst datetime, note the pull deadl
 position entry AND arm a pre-catalyst reminder; do not rely on a periodic check coinciding
 with the release (today it did, 18:00:05, and the order had already filled — luck, not process).
 
-## LIVE: Gemini-HLE-50+ NO maker BUY (2026-08-10 22:30 UTC, DEC-0065)
+## PLACED: Gemini-HLE-50+ NO maker BUY (2026-08-10 22:30 UTC, DEC-0065)
 
 60 shares NO @ **0.100**, post-only GTC, $6.00, order `0x257e1b10…31e7`. Fee-free by construction;
-the taker path was 0.103 ask + 1.03c/share (1000bps on min(p,1-p)) = 0.1133 effective, so resting
-saves ~12% of the premium on a leg with 4.7 months to run and no scheduled catalyst — exactly the
-case the maker-first default was written for. Sits one tick above the 1615-share 0.099 wall.
+at the current 0.07 cap, the taker path was 0.103 ask + 0.65c/share
+(`rate × p × (1−p)`) = 0.1095 effective, so resting saved ~0.95c/share versus crossing on a
+leg with 4.7 months to run and no scheduled catalyst — exactly the case the maker-first default
+was written for. The actual per-market rate comes from `scripts/pm_fees.py`. It sat one tick above
+the 1615-share 0.099 wall.
 
 NOT subject to the scheduled-catalyst pull rule: there is no dated release that flips this market.
 The thing that would kill the thesis (agi.safe.ai publishing a 2026 Gemini row >=50) is unscheduled
@@ -103,12 +111,14 @@ a stale resting bid at a price the market has left behind is a free option writt
 
 6 shares NO @ **0.59** — FILLED, fee-free. Position now 66sh at 0.412 avg, cost $27.19 (14.6% of a
 $186 bankroll, inside the 15% single-ticket cap the size was set by). The maker route worked exactly
-as intended: rested at the bid rather than crossing, and the 4c taker fee was never paid.
+as intended: rested at the bid rather than crossing, so neither the spread nor the quadratic taker
+fee was paid.
 
 Original placement rationale: post-only GTC, $3.54, order `0x5d4f7e42…2b86`. Rested at the bid because the
-book was 0.59/0.60 and the helper caps a maker bid one tick under the ask — the 1pp spread is a
-quarter of the 4c taker fee (10% x min(p,1-p) at 0.60), so crossing here would be paying 4x the
-spread to skip a queue on a position with 4.7 months to run.
+book was 0.59/0.60 and the helper caps a maker bid one tick under the ask. At p=0.60 and the current
+0.07 cap, `rate × p × (1−p)` is 1.68c/share, so the maker route avoided both that fee and the 1pp
+spread to skip a queue on a position with 4.7 months to run. Use `scripts/pm_fees.py` for the
+market's actual rate.
 
 Size is set by the 15% single-ticket cap, not by conviction: position cost $23.65 against a $27.03
 ceiling. Kelly at p_no 0.80 wanted $36. If the cap ceiling rises with bankroll, this is the first

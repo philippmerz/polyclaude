@@ -46,6 +46,7 @@ import _paths as _secrets
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PRIORS_PATH = REPO_ROOT / "notes" / "portfolio_kelly_priors.json"
+MIN_POSITION_SHARES = 0.5
 
 
 
@@ -72,12 +73,28 @@ def load_priors() -> dict:
     return json.loads(PRIORS_PATH.read_text())
 
 
+def filter_operational_positions(positions: list[dict]) -> list[dict]:
+    """Exclude sub-0.5-share remnants that have no operational value."""
+    kept = []
+    for pos in positions:
+        try:
+            size = float(pos.get("size", 0) or 0)
+        except (TypeError, ValueError):
+            continue
+        if size > MIN_POSITION_SHARES:
+            kept.append(pos)
+    return kept
+
+
 def fetch_positions(addr: str) -> list[dict]:
     with httpx.Client(timeout=15) as c:
         r = c.get("https://data-api.polymarket.com/positions",
-                  params={"user": addr.lower(), "limit": 100, "sizeThreshold": 0.0})
+                  params={"user": addr.lower(), "limit": 100,
+                          "sizeThreshold": MIN_POSITION_SHARES})
         r.raise_for_status()
-        return r.json() or []
+        # Defend locally too: the headline and allocation set must remain clean
+        # if data-api ever ignores or changes sizeThreshold semantics.
+        return filter_operational_positions(r.json() or [])
 
 
 def fetch_market_status(market_id: str) -> tuple[str | None, str | None]:
@@ -131,7 +148,7 @@ def main() -> int:
     for pos in positions:
         slug = pos.get("slug", "?")
         size = float(pos.get("size", 0) or 0)
-        if size <= 0:
+        if size <= MIN_POSITION_SHARES:
             continue
         mark = float(pos.get("curPrice", 0) or 0)
         avg = float(pos.get("avgPrice", 0) or 0)
@@ -258,18 +275,22 @@ def main() -> int:
     # DAYS after I cut its prior 0.36->0.25, and I read it as informational —
     # because "consider trim" doesn't say HOW, and a taker trim usually loses to
     # holding once the fee is counted. Every over-sized line now prints the
-    # fee-free route: rest a post-only sell AT FAIR (breakeven for a maker sale
-    # IS fair; a taker sale needs fair/(1-fee), usually unreachable).
-    print(f"\nOver-sized (delta < -$5) — trim via a FEE-FREE maker sell at fair, not by crossing:")
+    # fee-free route for public-information positions: rest a post-only sell AT
+    # FAIR. Hidden-info positions need a premium above fair that explicitly pays
+    # for jump risk; at/below-fair resting sells donate informed up-moves.
+    print(f"\nOver-sized (delta < -$5) — choose the maker route by information class:")
     over = [r for r in actives if r["delta"] is not None and r["delta"] < -5]
     over.sort(key=lambda r: r["delta"])
     if not over:
         print("  (none)")
     for r in over[:5]:
         print(f"  ${r['delta']:>+7.2f}  {r['side']} @ ${r['mark']}  edge={r['edge_pp']:>5.2f}pp  {r['title']}{r.get('stale','')}")
-        print(f"           -> rest post-only SELL at {r['p_win']:.3f} (= fair; fee-free). "
-              f"HIDDEN-INFO class (GPT-6/MacBook): NO resting sell — an informed up-move means "
-              f"fair jumped; reduce by active judgment only. See notes/resting_orders.md")
+        print(f"           -> PUBLIC-INFO: rest post-only SELL at {r['p_win']:.3f} "
+              f"(= fair; fee-free). HIDDEN-INFO: sells at or below fair are banned because an "
+              f"informed up-move can mean fair jumped; a premium-to-fair sell "
+              f"(strictly above fair) is allowed when the premium compensates jump risk. "
+              f"Thesis-break exits "
+              f"remain active judgment. See notes/resting_orders.md")
 
     return 0
 

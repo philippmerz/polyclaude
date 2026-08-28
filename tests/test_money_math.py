@@ -316,6 +316,25 @@ _fee2 = (pm_fees.fee_per_share(_m, 0.0803897) * 32.466828
          + pm_fees.fee_per_share(_m, 0.849) * 29.717311)
 check("wallet-verified fee, arb-2 fills", _fee2, 0.4347, tol=0.004)
 
+# ---------------------------- consistency basket fee plumbing (2026-08-28)
+# The scanner adopted pm_fees' correct dollars/share helper, then multiplied
+# that result by price again when summing the basket. That is the old
+# multiplicative-cost bug in a subtler form and understates fees on every leg.
+import polymarket_consistency_scan as pcs  # noqa: E402
+
+check("consistency fee-free leg", pcs._market_fee_buy({"takerBaseFee": None}, 0.50), 0.0)
+check("consistency capped quadratic leg",
+      pcs._market_fee_buy({"takerBaseFee": 1000}, 0.50), 0.0175)
+check("consistency lower-rate leg",
+      pcs._market_fee_buy({"takerBaseFee": 500}, 0.50), 0.0125)
+check("consistency basket adds fee/share exactly once",
+      pcs._basket_fee_per_unit([
+          ({"takerBaseFee": 1000}, 0.40),
+          ({"takerBaseFee": 500}, 0.60),
+          ({"takerBaseFee": None}, 0.25),
+      ]),
+      0.07 * 0.40 * 0.60 + 0.05 * 0.60 * 0.40)
+
 # --------------------------------------------- arb-paired exit guard (2026-08-25)
 # Scope note: this suite is "arithmetic that decides what a trade costs", and a
 # failed arb-pairing lookup costs MORE than a fee error — it lets a tool

@@ -3,8 +3,9 @@
 Limitless tags its markets that mirror a Polymarket counterpart with
 `metadata.isPolyArbitrage: true`. This script paginates the active-markets
 endpoint, filters to those flagged, computes a fee-aware breakeven against
-Polymarket's edge-aware fee structure (`fee = rate * min(p, 1-p) * notional`,
-rate read per-market from takerBaseFee — modal 0.10, 16% of markets charge 0),
+Polymarket's quadratic per-share fee (`fee/share = rate * p * (1-p)`, raw rate
+read per-market and capped at the current 0.07 by `pm_fees.py`; some markets
+charge 0),
 and dumps a sorted table to:
 
   - stdout
@@ -51,8 +52,7 @@ OUT_DIR = _REPO_ROOT / "logs"  # gitignored; routine scans don't need to be comm
 
 LIMITLESS_API = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
-import pm_fees  # per-market takerBaseFee; see pm_fees.py (0.072 was never a live rate)
-POLYMARKET_FEE_RATE = pm_fees.FEE_RATE_FALLBACK
+import pm_fees  # authoritative per-market quadratic fee; current effective cap 0.07
 
 
 def _telegram(text: str) -> None:
@@ -93,13 +93,15 @@ def fetch_arb_candidates() -> list[dict]:
     return out
 
 
-def polymarket_buy_fee(p: float) -> float:
-    """Polymarket edge-aware fee on buying a token at price p.
+def polymarket_buy_fee(p: float, fee_rate: float | None = None) -> float:
+    """Polymarket fee per share when buying a token at price ``p``.
 
-    Source: gamma-api fee schedule on short-tenor markets.
-    fee = rate × min(p, 1-p) × notional   (rate per-market; see pm_fees.py)
+    True curve: ``rate × p × (1−p)``. ``fee_rate`` is the market's raw
+    gamma ``takerBaseFee`` rate; ``pm_fees.py`` applies the current 0.07 cap.
+    Before a Polymarket match is known, use its conservative raw fallback.
     """
-    return POLYMARKET_FEE_RATE * min(p, 1 - p)
+    raw_rate = pm_fees.FEE_RATE_FALLBACK if fee_rate is None else fee_rate
+    return pm_fees.fee_per_share_at(raw_rate, p)
 
 
 def limitless_buy_fee(p: float) -> float:
@@ -115,7 +117,8 @@ def limitless_buy_fee(p: float) -> float:
     return 0.004 + (0.030 - 0.004) * distance_from_parity
 
 
-def arb_breakeven(p_lim: float, p_pm: float) -> float:
+def arb_breakeven(p_lim: float, p_pm: float,
+                  pm_fee_rate: float | None = None) -> float:
     """Minimum spread |p_pm - p_lim| needed to clear fees on a paired arb.
 
     The trade (when lim_yes < pm_yes): buy Lim YES at p_lim + buy PM NO at
@@ -124,10 +127,10 @@ def arb_breakeven(p_lim: float, p_pm: float) -> float:
     """
     if p_lim < p_pm:
         # Buy Lim YES at p_lim, Buy PM NO at (1 - p_pm)
-        return limitless_buy_fee(p_lim) + polymarket_buy_fee(1 - p_pm)
+        return limitless_buy_fee(p_lim) + polymarket_buy_fee(1 - p_pm, pm_fee_rate)
     else:
         # Buy PM YES at p_pm, Buy Lim NO at (1 - p_lim)
-        return polymarket_buy_fee(p_pm) + limitless_buy_fee(1 - p_lim)
+        return polymarket_buy_fee(p_pm, pm_fee_rate) + limitless_buy_fee(1 - p_lim)
 
 
 def round_trip_breakeven(p_yes: float) -> float:
@@ -243,7 +246,8 @@ def fetch_polymarket_universe(max_markets: int = 3000) -> list[dict]:
 def index_polymarket(markets: list[dict]) -> list[dict]:
     """Build index entries with all fields needed downstream.
 
-    Each entry: {words, nums, yes_price, question, slug, description}
+    Each entry includes match tokens, price/criteria text, and the market's
+    raw fee rate; the fee helper applies the effective category cap.
     """
     idx: list[dict] = []
     for m in markets:
@@ -263,6 +267,7 @@ def index_polymarket(markets: list[dict]) -> list[dict]:
             "nums": _numeric_tokens(q),
             "propers": _proper_nouns(q),
             "yes_price": yes_price,
+            "fee_rate": pm_fees.fee_rate(m),
             "question": q,
             "slug": m.get("slug") or "",
             "description": m.get("description") or "",
@@ -424,10 +429,13 @@ def main() -> int:
             m["_pm_question"] = result["question"]
             m["_pm_slug"] = result["slug"]
             m["_pm_description"] = result["description"]
+            m["_pm_fee_rate"] = result["fee_rate"]
             m["_match_confidence"] = result["_jaccard"]
             m["_spread"] = result["yes_price"] - m["_yes_price"]
             # Real fee-aware breakeven uses both sides' actual fees
-            m["_breakeven"] = arb_breakeven(m["_yes_price"], result["yes_price"])
+            m["_breakeven"] = arb_breakeven(
+                m["_yes_price"], result["yes_price"], result["fee_rate"]
+            )
             m["_net_edge"] = abs(m["_spread"]) - m["_breakeven"]
         else:
             m["_pm_yes"] = None
@@ -471,7 +479,8 @@ def main() -> int:
         f.write("(2) numeric-token parity, (3) agent-verified resolution-language equivalence ")
         f.write("(scoped fast profile). Only `IDENTICAL` verdicts qualify for autonomous execution; ")
         f.write("`SIMILAR`/`UNCERTAIN`/`DIFFERENT` are visibility-only.\n\n")
-        f.write(f"Polymarket fee = {POLYMARKET_FEE_RATE} × min(p, 1-p) per side. ")
+        f.write("Polymarket fee/share = rate × p × (1−p), using each market's raw rate ")
+        f.write("through pm_fees.py (current effective category cap 0.07). ")
         f.write(f"Limitless buy fee = 0.4-3.0% (rises away from parity). ")
         f.write(f"Net edge = |spread| − (lim_fee + pm_fee). Positive = arb-profitable.\n\n")
         f.write("## Matched (sorted by net edge)\n\n")
@@ -512,6 +521,7 @@ def main() -> int:
             "pm_question": m.get("_pm_question"),
             "pm_slug": m.get("_pm_slug"),
             "pm_yes_price": m["_pm_yes"],
+            "pm_fee_rate_raw": m.get("_pm_fee_rate"),
             "spread": m["_spread"],
             "breakeven": m["_breakeven"],
             "net_edge": m["_net_edge"],

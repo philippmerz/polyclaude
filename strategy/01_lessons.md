@@ -15,7 +15,7 @@
 | Priors & calibration | how p estimates are built, revised, and mis-set |
 | Edges that survived | the live edge sources and their fine print |
 | Sizing & risk | caps, Kelly, cluster correlation, liquidity |
-| **Ops** (largest) | the failure classes that actually happened, in seven sub-sections: **Daemons, resources & liveness** (pkill, VM=1.9GB, fallbacks, dark panes) · **Write paths, drills & outward side effects** (dry-run traps, operator-facing alarms) · **Parsing, venue data & verifying my own output** (empty-list bugs, de-indexing, detector validation) · **Verifying my own instruments & guards (2026-08-25)** — the ABSENCE class: a guard matching the wrong word, a control proving liveness but not coverage, a docstring describing a check the code never implemented · **Prior & fact hygiene (2026-08-10→12)** on stale/inverted priors and source-diffing · **Self-flattering numbers & display honesty (2026-08-13→20)** on midpoints, self-marking and un-applied corrections · **Stale constants & the test suite (2026-08-14→22, incl. the fee-formula ground-truth correction)** · **Verified mechanics & regime judgment (2026-08-16→20)** (regime-bounded data, measurable-interim sources, thesis-worked exits) |
+| **Ops** (largest) | the failure classes that actually happened, in seven sub-sections: **Daemons, resources & liveness** (pkill, VM=1.9GB, fallbacks, dark panes) · **Write paths, drills & outward side effects** (dry-run traps, operator-facing alarms) · **Parsing, venue data & verifying my own output** (empty-list bugs, de-indexing, detector validation) · **Verifying my own instruments & guards (2026-08-25→28)** — the ABSENCE/applicability class: guards matching the wrong thing, controls proving liveness but not coverage, formulas run outside their input contract, and live prompts contaminated by stale state · **Prior & fact hygiene (2026-08-10→12)** on stale/inverted priors and source-diffing · **Self-flattering numbers & display honesty (2026-08-13→20)** on midpoints, self-marking and un-applied corrections · **Stale constants & the test suite (2026-08-14→22, incl. the fee-formula ground-truth correction)** · **Verified mechanics & regime judgment (2026-08-16→20)** (regime-bounded data, measurable-interim sources, thesis-worked exits) |
 | Process & operator covenant | Telegram protocol, weekly P&L, reporting discipline |
 
 Recurring meta-shapes, if you read nothing else: *fix the CLASS not the instance* (a break
@@ -486,7 +486,7 @@ the gap); *verify against a known truth* (absent output and failed output look i
   traps: an EXACT-value bucket ("wins exactly 3 seats") is a partition with NO monotone
   constraint, and a magnitude suffix must be APPLIED, not skipped.
 
-### Verifying my own instruments & guards — the 2026-08-25 cluster
+### Verifying my own instruments & guards — the 2026-08-25→28 cluster
 *(a day that found four broken checks in a row: a guard matching the wrong word, a control that
 proved liveness but not coverage, a docstring describing a check the code never implemented, and
 my own prose asserted as measurement. The common shape is an ABSENCE — "no change", "no gap",
@@ -537,6 +537,25 @@ my own prose asserted as measurement. The common shape is an ABSENCE — "no cha
   `scripts/source_freeze_check.py --validate` so the control cannot be skipped by a future session
   in a hurry. Same family as the empty-list bug: absent output and broken output look identical
   until you check against a known truth.
+
+- **A correct formula with unchecked APPLICABILITY is a broken instrument.** 2026-08-28: the
+  Brownian/hazard display correctly implemented `p_no_entry^(remaining horizon)` for a survival
+  claim, then applied it to every held side and to a MUTABLE current posterior. The freshly
+  re-derived Iran-Oman `p_yes=0.09` became 0.213 and printed SCALE_UP: wrong direction for a YES
+  occurrence claim, plus two elapsed days counted a second time. The arithmetic passed; the input
+  contract did not exist. Actionable models now fail closed unless the slow state explicitly
+  supplies an immutable entry prior, a survival/occurrence mode, and tracked timing. Durable rule:
+  test a model at its semantic boundary, not only at numeric edge cases. Side labels do not prove
+  hazard direction, and a field named "prior" does not prove it is the entry prior the derivation
+  assumes.
+
+- **A prompt assembled from live state plus one hard-coded position is not live state.** Same pass:
+  the news watcher fetched the Polymarket book every five minutes but appended a prose claim that
+  Ostium was still long XAU. That May trade had been closed for months, so an Aug-27 article
+  generated a plausible, entirely fictitious portfolio impact. The dangerous part was the mixture:
+  most of the block was current, lending authority to the stale line. Every position-bearing prompt
+  now reads every sleeve live; if one sleeve cannot be read it says UNKNOWN / DO NOT SCORE rather
+  than filling the gap from memory. Regression pins both zero-position and unavailable-state paths.
 
 ### Prior & fact hygiene — the 2026-08-10→12 cluster
 *(two valuation lessons from 08-10, then three inverted revisions inside twelve hours,

@@ -56,8 +56,7 @@ TOTAL_OPEN_ARB_CAP_USDC = 20.00
 MIN_NET_EDGE = 0.015
 LIMITLESS_API_BASE = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
-import pm_fees  # per-market takerBaseFee; see pm_fees.py (0.072 was never a live rate)
-POLYMARKET_FEE_RATE = pm_fees.FEE_RATE_FALLBACK
+import pm_fees  # authoritative per-market quadratic fee; current effective cap 0.07
 
 
 # ---- helpers ---------------------------------------------------------------
@@ -359,10 +358,15 @@ async def _live_arb_quote(candidate: dict, usdc_per_side: float) -> dict:
     total_cost = quote["lim"]["usdc"] + quote["pm"]["usdc"]
     payout = target_pm_tokens
     gross_profit = payout - total_cost
-    # Fees
+    # Fees. Polymarket's true per-share curve is rate × p × (1−p); use the
+    # freshly fetched market so pm_fees.py preserves zero/lower-rate markets
+    # and applies the current 0.07 category cap.
     lim_fee_frac = 0.004 + (0.030 - 0.004) * abs(lim_fill_price - 0.5) * 2
-    pm_fee_frac = POLYMARKET_FEE_RATE * min(pm_fill_price, 1 - pm_fill_price)
-    fees_usdc = quote["lim"]["usdc"] * lim_fee_frac + quote["pm"]["usdc"] * pm_fee_frac
+    lim_fee_usdc = quote["lim"]["usdc"] * lim_fee_frac
+    pm_fee_usdc = pm_fees.fee_per_share(pm, pm_fill_price) * tokens_bought
+    quote["lim"]["fee_usdc"] = lim_fee_usdc
+    quote["pm"]["fee_usdc"] = pm_fee_usdc
+    fees_usdc = lim_fee_usdc + pm_fee_usdc
     net_profit = gross_profit - fees_usdc
 
     quote["total_cost"] = total_cost

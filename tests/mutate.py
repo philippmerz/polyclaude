@@ -37,6 +37,9 @@ MUTS = [
                     'if False:\n        return 1.0 - tail_mult * (1.0 - my_p)'),              # tail-mult silently falls back to flat (kills every bond fade)
     ("check_marginal_apy.py",'    return ent.get("arb_paired") if isinstance(ent, dict) else None',
                     '    return None'),                                                       # arb-pairing guard blind -> tools recommend breaking a riskless structure
+    ("polymarket_consistency_scan.py",
+                    'return sum(_market_fee_buy(market, price) for market, price in legs)',
+                    'return sum(price * _market_fee_buy(market, price) for market, price in legs)'), # multiply fee/share by price again
 ]
 results = []
 for fname, old, new in MUTS:

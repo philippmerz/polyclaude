@@ -1,10 +1,10 @@
 {
   "ALB": {
-    "ts": 1787753200.58839,
+    "ts": 1787920520.807015,
     "result": {
       "verdict": "PASS",
       "score": "2/4",
-      "summary": "**Do not enter at $143.** Consider entry below **$100** only if liquidity remains above $2.5B and net leverage stays below 1.0x; alternatively, wait for two consecutive quarters showing lithium realized price at/above **$20/kg** plus volume growth without a stock price above $160.",
+      "summary": "Do not enter at $136. Reassess on a <$100 share price with lithium pricing holding near or above ~$20/kg LCE, or after Q1 2027 CGP3 ramp confirmation and preferred-conversion dilution are quantified.",
       "fresh": true
     }
   },

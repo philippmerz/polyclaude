@@ -438,11 +438,11 @@ def main() -> int:
         mark = gamma_mark
         print(f"  [mark] live ask unavailable; falling back to gamma mid {gamma_mark:.4f}")
 
-    # Taker-fee awareness (2026-07-15 new-listing study): 2026-vintage listings
-    # carry taker fees — per-share fee = (takerBaseFee bps) × min(p, 1−p), the
-    # documented CLOB proceeds formula. The legacy book is fee-free (field None),
-    # but new listings we instance-gate are not (observed 1000bps on sports/crypto
-    # series). All economic math (Kelly, robust gate, profit) runs on the
+    # Taker-fee awareness (2026-07-15 new-listing study, curve corrected
+    # 2026-08-22): fee per share = rate × p × (1−p). book_walk delegates to
+    # pm_fees.py, which caps the raw takerBaseFee rate at the current 0.07 while
+    # preserving lower-rate and fee-free markets. All economic math (Kelly,
+    # robust gate, profit) runs on the
     # EFFECTIVE per-share cost; only the CLOB limit price stays at the real ask
     # (the exchange charges the fee on top).
     try:
@@ -579,8 +579,7 @@ def main() -> int:
                 _oask = _best_ask(_toks[_outs.index(_other)])
                 if _oask:
                     _op = 1.0 - my_p
-                    _ofee = (taker_bps / 10000.0) * min(_oask, 1 - _oask) if taker_bps else 0.0
-                    _ocost = _oask + _ofee
+                    _ocost, _ofee = effective_entry_cost(_oask, taker_bps)
                     _oedge = (_op - _ocost) * 100
                     print(f"\n  FLIP-THE-KILL CHECK — a skip rejects THIS SIDE, not this market:")
                     print(f"    opposite side {_other} asks {_oask:.4f} (eff {_ocost:.4f}); "

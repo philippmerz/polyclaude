@@ -841,3 +841,79 @@ Hormuz settles Aug-31 (first live use of the resolution runbook; conditionIds pr
 Gamescom window runs to Aug-24 with the listing watch armed to Aug-26 — criteria variants
 pre-read so the check is a diff. $44 deployable; three families explicitly filtered out this week
 (Fed standing pass, top-artist terminal-only, Hormuz Sep-30 gate-failed at -5.0pp).
+
+---
+
+# Week 2026-08-21 → 2026-08-28
+
+## 1. Realized — the metric that counts
+
+| | |
+|---|---|
+| **Cumulative REALIZED (settled cash)** | **+$4.75 (+2.8% of the $170 reference)** |
+| Realized THIS WEEK | **~−$0.58** |
+| Bankroll (all-in, incl. unsettled marks) | **$185.52** |
+| Weekly bankroll change | **−$9.00 (−4.6%)** from $194.52 |
+| Unrealized — marked | **+$3.80** |
+| Unrealized — realizable | **−$2.51** |
+
+The realized decline is fully explained by execution: **$0.6167 of Metamask taker fees**, partly
+offset by **+$0.040** realized on the four-share Hormuz-NO sale. No position settled this week.
+Comparing rounded realized endpoints gives −$0.57 rather than −$0.58.
+
+The economic payoff from the Metamask structure remains unsettled: the three legs cost about
+**$43.01 all-in** and pay at least **$44.75** if the same-template resolution assumption holds.
+The bookkeeping correctly records the fees now and the locked spread only when redeemed.
+
+## 2. What drove the book
+
+- **MacBook NO was the dominant loss:** its mark fell from about 0.535 to 0.355, cutting marked
+  value by roughly **$8.82**.
+- **Iran-Oman Agreement YES** was entered for $5.03 and now marks near $1.40, an unrealized loss
+  of about **$3.64**.
+- **Metamask monotonicity structure** offsets roughly **$2.96** at gross marks, or about **$2.34
+  after its already-realized fees**. More importantly, it has a positive minimum resolution payout
+  across the validated FDV branches.
+- The remaining legacy positions were broadly stable. The HLE cluster gained only about $0.14 in
+  aggregate; Greenland and Trump-out each eased roughly $0.30.
+- Marked unrealized fell **$9.95** this week, from +$13.75 to +$3.80. Realizable unrealized fell
+  **$7.46**, from +$4.95 to −$2.51.
+- Separately deposited gas tokens appreciated about $1.52, explaining why the all-in bankroll
+  decline is smaller than realized plus marked deterioration. That is not trading return.
+
+## 3. What is fragile
+
+- **Iran-Oman was badly over-underwritten at entry.** Fresh criteria and source work cut p(YES)
+  from 0.55 to **0.09**. The Aug-25 statement remains proposed/prospective, not an unambiguous
+  joint acceptance. The existing 31-share ticket is still worth holding because expected
+  resolution value around $2.79 exceeds an immediate bid exit around $1.24, but there is no add
+  and any fresh statement requires immediate re-underwriting.
+- **MacBook is now below cost and remains the largest directional uncertainty.** The Sep 8–10
+  Apple event is the pre-committed recheck; purchasability and announcement wording remain the crux.
+- **Midpoints still flatter liquidation value by $6.32:** $169.50 marked versus $163.19
+  depth-walked net. MacBook and one OpenAI HLE leg are the clearest thin-book contributors.
+- **All three HLE legs share one resolver-behaviour branch.** The criteria diff proved they use
+  the same resolution mechanism, so their apparent diversification is not real.
+- Deployable pUSD is only **$0.04**. The book has 11 positions and is effectively fully deployed,
+  although much of the Metamask exposure is paired rather than directional.
+
+## 4. Current book
+
+Open cost is **$165.70**, marked value **$169.50**, and realizable value **$163.19**. Six fee-free
+maker sell orders remain live. The Metamask legs must stay paired; exiting one independently would
+destroy the floor.
+
+This week also corrected the taker-fee model to the wallet-verified quadratic curve,
+`shares × rate × p × (1−p)`, and proved through template diffs that the HLE positions share one
+resolution mechanism.
+
+## 5. Next week
+
+- Aug 31: measure the final PortWatch prints against the Hormuz-normal threshold, then use the
+  resolution/redeem procedure.
+- Aug 31: monitor for a genuinely qualifying joint Oman-Iran announcement; prospective talks or
+  unilateral statements do not clear the criteria.
+- Re-verify the frozen HLE board, make the cluster-level debut-ladder decision, and run the
+  one-epoch maker-rewards experiment only if its entry and adverse-selection gates still clear.
+- Grade the Aug-31 short-dated skip-ledger rows and keep the Metamask legs paired.
+- Prepare the Sep 8–10 MacBook re-underwrite rather than reacting to interim midpoint noise.

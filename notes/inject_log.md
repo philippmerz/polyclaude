@@ -6633,3 +6633,36 @@ Continuation check: anything else high-leverage to take care of? Review notes/ba
 
 ## 2026-08-26T14:00:02Z — inject QUEUED
 Cron tick 20260826T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+
+## 2026-08-26T18:00:01Z — inject FAILED (operator queue rc=69)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-26T22:00:01Z — inject FAILED (operator queue rc=76)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-27T02:00:01Z — inject FAILED (operator queue rc=76)
+Cron tick 20260827T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+
+## 2026-08-27T06:00:01Z — inject FAILED (operator queue rc=76)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-27T10:00:01Z — inject FAILED (operator queue rc=76)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-27T14:00:01Z — inject FAILED (operator queue rc=76)
+Cron tick 20260827T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+
+## 2026-08-27T18:00:01Z — inject FAILED (operator queue rc=76)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-27T22:00:01Z — inject FAILED (operator queue rc=76)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-28T02:00:02Z — inject FAILED (operator queue rc=76)
+Cron tick 20260828T020002Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+
+## 2026-08-28T06:00:01Z — inject FAILED (operator queue rc=76)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-08-28T10:00:02Z — inject FAILED (operator queue rc=76)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.

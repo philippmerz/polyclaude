@@ -10239,3 +10239,78 @@ consistency, and favorite-fade scans produced no other executable edge; no redee
 decisions. Post-trade state audit is clean across 11 positions, UMA 0 alerts, crux coverage clean,
 marginal-APY 11 clear / 0 flagged, exit analysis has no sell-taker verdict, and daemons were healthy.
 Weekly P&L and world-state refreshes were not due.
+
+## 2026-08-28 12:5x operator continuation — outage caught up; agreement prior cut 55%→9%; no trade
+
+Reconstructed the handoff from the actual Claude project transcript before acting. Claude's last
+substantive successful work was the Aug-26 02:00 HLE/Hormuz pass; the 10:00 periodic prompt,
+10:20 meta-reflection, and 10:40/11:00 continuation prompts all died on the disabled Claude
+subscription without producing project work. The later provider-neutral runtime migration and
+Aug-26 14:00 Hormuz rotation are present in git. Scheduled attempts after the user-first operator
+reset then failed rc=76 because no human prompt existed yet. Read-only inspection of the private
+runner showed this is the intended blank-session gate: after this terminal prompt completes, the
+next queue attempt can attach the operator thread. I did NOT widen headless fallback semantics for
+ambiguous delivery codes.
+
+Consumed the five alerts after the Aug-26 14:24 journal cutoff. France24's navigation/jurisdiction
+talks and the Aug-27/28 Al Jazeera reports were genuinely relevant; the Qatar item was not Oman,
+and none contained the bilateral declarative acceptance the agreement contract requires. One
+Aug-27 alert also claimed an `ostium-xau-usd-long` that does not exist. Root cause was not the model
+alone: `news_watcher.py` appended a hard-coded May-era XAU long to every otherwise-live position
+prompt. Replaced it with a live `ostium_client.py status` read (currently 0 open trades) and an
+explicit fail-closed instruction when status is unavailable; regression tests pin both paths.
+
+**HORMUZ NORMAL TRAFFIC:** direct PortWatch remains through Aug-23 at 3, 7, 4, 5, 6, 6, 4 =
+35 calls / **5.00 daily average**, versus 60 required for any seven-day average through Aug-31.
+Axios reports claimed traffic of 20–30 tankers nightly and a mid-September goal of 50 ships/night;
+even those claims are below the contract bar and are not the named IMF source. HOLD 24.11 NO to
+fee-free resolution; no add for a tiny residual edge with four cents deployable. Refresh the named
+source daily because its publication lag is now about five days.
+
+**IRAN-OMAN AGREEMENT:** re-read the exact criteria and the Aug-25 joint statement, then ran a fresh
+scoped catalyst check over the missed news. The statement calls the corridor framework proposed,
+says technical negotiations continue, and separately mentions joint mine-clearing; the Omani
+minister said he hoped an announcement would follow. Aug-27 reporting still says details are being
+worked out while Iran adds conditions. Fresh P(YES) = **0.03 / 0.09 / 0.18**, replacing
+0.30 / 0.55 / 0.78. This is a real entry-underwriting miss, not midpoint noise. No add: the 10pp
+robust haircut fails completely. HOLD the existing 31 YES only because 9% gives $2.79 expected
+resolution value versus about $1.24 gross at the 0.04 bid; sell if a fresh re-underwrite reaches
+4% or the live announcement path is definitively falsified. Prior, criteria date, source facts and
+divergence acknowledgement updated. No transaction.
+
+Other market work: the HLE source-freeze control still passes and the live board is identical to
+the Jan-15 snapshot (zero model additions/removals), confirming one shared cluster crux rather than
+three independent theses. NVIDIA's earnings binary cleared strongly and the Aug-31 largest-company
+market converged to ~0.998 YES; no entry survives price, fee and five-day tail risk, so the completed
+NVDA reminder was deleted. Default, thin-tail, macro, real-book monotonicity, cross-market
+consistency and favorite-fade scans found no executable edge. Sports consensus found only small or
+low-confidence deltas that failed fees plus the mandatory pessimistic case. ALB re-fired at $135.77,
+but a fresh 2/4 PASS again said no IBKR entry; tightened its stale alert from $140 to $100, with the
+alternative gate at Q1-2027 CGP3/dilution confirmation. No watchlist hit remains.
+
+Live book after the pass: **11 positions**, $165.70 cost, $169.50 midpoint (+$3.80 / +2.29%), but
+only $163.19 depth-walked net (-$2.51 / -1.52%); midpoint overstatement **$6.32**. Bankroll
+~$185.52, cumulative REALIZED **+$4.75 (+2.8%)**, pUSD $0.04, six GTC maker sells, no buys.
+State audit clean, UMA 31 tracked / 0 alerts, redeem 0, Ostium 0, no overdue decisions, every
+exit-analysis route HOLD, and the Metamask legs remain inseparable. The overdue Aug-21→28 weekly
+report is now in `notes/pnl_weekly.md`: bankroll -$9.00 week/week, but realized only ~-$0.58
+($0.6167 Metamask taker fees less +$0.040 Hormuz sale); MacBook and the agreement ticket drove most
+of the mark decline. Material catch-up sent to the operator on Telegram (msg 864).
+
+The meta-reflection produced three instrument repairs rather than another trade. First, active
+guidance had drifted back to the retired linear-tail fee curve and blanket hidden-info sell ban.
+The sweep found live wrong math, not just prose, in Limitless scan/execution, sports APY, the
+consistency scanner's basket fees and `polyclaude_enter`'s opposite-side check. All now delegate
+to the per-market quadratic fee helper without re-multiplying its dollar/share result;
+hidden-info rests are banned at/below fair but allowed strictly above fair when the premium pays
+jump risk; live CLOB output replaces a stale markdown order table. Second, the Brownian display
+blindly rolled the newly revised 9% YES posterior forward with a NO-survival formula, manufacturing
+a 21.3% fair and false SCALE_UP. Hazard decay is now opt-in only with immutable `bb_entry_p`,
+explicit survival/occurrence mode, and tracked timing; mutable monitoring priors never get rolled
+again. Third, Kelly/Brownian now exclude <=0.5-share resolved dust, so the portfolio count is 11,
+not 12. Live post-fix dashboard: 0 Brownian trim / 0 scale signals, all 11 explicitly unmodeled.
+Regression suite expanded for every failure class.
+
+NEXT hard clock: Aug-31 PortWatch/agreement cutoff and redemption checks; re-diff the HLE source,
+make the debut-ladder decision at cluster level, and run the one-epoch rewards experiment only if
+its entry/adverse-selection gates still clear. Sep 8–10 remains the pre-committed MacBook recheck.

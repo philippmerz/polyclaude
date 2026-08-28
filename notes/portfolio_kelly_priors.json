@@ -358,32 +358,32 @@
   ]
  },
  "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
-  "p_yes": 0.55,
-  "verified": "2026-08-26",
-  "criteria_read": "2026-08-26",
-  "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03: the market requires Oman and Iran to announce acceptance of the same traffic-management agreement, not actual reopening. The Aug-25 joint statement describes a proposed temporary corridor and joint mine-clearing framework; Iran's deputy foreign minister says the route is agreed, while Oman's foreign minister says he hopes the countries will announce it soon. Catalyst check central p_yes 0.55 (30-78 band); the default 0.10 pessimism haircut still clears the 0.17 executable ask by 28pp. Contrary evidence is strong and explicitly priced: the joint wording remains prospective, Iran says the understanding is not yet binding, the market fell on high volume, and exit liquidity is thin. Therefore no adds absent a fresh unambiguous Omani acceptance announcement; hold to resolution or exit only if the criteria/fact branch is falsified while a real bid remains.",
+  "p_yes": 0.09,
+  "verified": "2026-08-28",
+  "criteria_read": "2026-08-28",
+  "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03. Re-underwritten after the operator outage and five new alerts: the market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Aug-25 joint statement remains ambiguous rather than qualifying on its face: it calls the corridor framework proposed, says technical talks will continue, and separately refers to an agreement to implement joint mine-clearing; Oman's minister said he hoped an announcement would follow. Aug-27 reporting says details are still being worked out while Iran is adding conditions tied to US action. A fresh independent catalyst check returned p_yes 0.09 (0.03-0.18), down from 0.55. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.04 bid: at p_yes 0.09, expected resolution value is $2.79 versus about $1.24 gross exit value, and the existing joint statement retains a small totality-of-information interpretation path. Re-underwrite immediately on any new joint/Omani declarative statement.",
   "cluster": "hormuz-agreement",
   "rho_within": 0.0,
-  "divergence_ack": "2026-08-26",
-  "divergence_ack_reason": "The 40pp prior-to-mark gap is the disagreement entered in DEC-0082, not an unreviewed move: the $5.03 minimum-sized position was opened today only after re-reading the criteria and the Oman-Iran statement, obtaining an independent 30-78% catalyst range, and applying the standard 10pp pessimism haircut. No further sizing follows. The contract is an interpretation-sensitive announcement market, the joint wording is still prospective, high-volume contrary flow is real, and exit liquidity is thin; re-underwrite only on an unambiguous Omani acceptance announcement or a criteria/fact-branch break.",
+  "divergence_ack": "2026-08-28",
+  "divergence_ack_reason": "The prior has been cut 0.55 to 0.09 after two days of contrary flow and fresh facts. The remaining 4.5pp prior-to-mark gap is reviewed: no add because the 10pp robust haircut fails, but no taker exit because the 0.04 bid values 31 shares at only $1.24 before fees versus $2.79 at the revised prior. The residual edge is an interpretation lottery around the Aug-25 joint statement plus a short live announcement window, not confidence that the countries have already made an unambiguous qualifying announcement.",
   "key_facts": [
    {
     "claim": "YES requires a declarative Oman-and-Iran acceptance announcement for the same agreement establishing traffic-management policies, obligations, or commitments; prospective negotiations alone do not qualify.",
     "source": "https://gamma-api.polymarket.com/markets?slug=us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
-    "source_date": "2026-08-26",
-    "checked": "2026-08-26"
+    "source_date": "2026-08-28",
+    "checked": "2026-08-28"
    },
    {
-    "claim": "The Aug-25 joint statement calls the corridor framework proposed, includes a joint mine-clearing project, and says technical negotiations will continue.",
-    "source": "https://m.timesofoman.com/article/176051-oman-iran-discuss-framework-for-resumption-of-safe-navigation-through-strait-of-hormuz",
+    "claim": "The Aug-25 joint statement calls the corridor framework proposed, says technical negotiations will continue, and separately describes an agreement to implement joint mine-clearing; Oman's minister said he hoped the corridor would be announced soon.",
+    "source": "https://www.iranwatch.org/library/governments/oman/foreign-ministry/joint-statement-between-oman-iran-following-foreign-ministers-consultations",
     "source_date": "2026-08-25",
-    "checked": "2026-08-26"
+    "checked": "2026-08-28"
    },
    {
-    "claim": "Iran says a temporary route was agreed but not yet binding; Oman says it hopes the corridor will be announced soon, leaving a live clarification catalyst before Aug-31.",
-    "source": "https://apnews.com/article/cb19bc3f0b467db591edbef52d0db273",
-    "source_date": "2026-08-26",
-    "checked": "2026-08-26"
+    "claim": "As of Aug-27, Iran said it had agreed with Oman on a route, but credible reporting said details of an agreement were still being worked out and Iran was preparing new reopening conditions tied to US action.",
+    "source": "https://www.investing.com/news/commodities-news/iran-sets-conditions-for-reopening-strait-of-hormuz-top-security-official-rezaei-says-4880217",
+    "source_date": "2026-08-27",
+    "checked": "2026-08-28"
    }
   ]
  }

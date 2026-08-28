@@ -181,13 +181,53 @@ def _positions_summary_blocking() -> str:
     except Exception as e:
         lines.append(f"  (positions read failed: {_secrets.scrub(str(e))[:120]})")
 
-    # Crypto sleeve — keep simple; agent gets enough context from the headline.
-    lines.append("\nCrypto sleeve: small Ostium positions (currently long XAU/USD 5x ~$5 collateral).")
+    # Crypto/Ostium must be live too. A hard-coded May-era XAU long survived
+    # here after the trade closed and caused an Aug-27 alert to fabricate a
+    # portfolio impact. Unknown state is explicitly non-actionable: absence of
+    # a successful read is not permission to resurrect a remembered position.
+    lines.append("\n" + _ostium_positions_summary_blocking())
 
     text = "\n".join(lines)
     _POSITIONS_CACHE["text"] = text
     _POSITIONS_CACHE["ts"] = now
     return text
+
+
+def _ostium_positions_summary_blocking() -> str:
+    """Return live Ostium positions, or a fail-closed instruction on read error."""
+    try:
+        result = subprocess.run(
+            [sys.executable, str(_SCRIPT_DIR / "ostium_client.py"), "status"],
+            capture_output=True,
+            text=True,
+            timeout=20,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(f"status exit {result.returncode}")
+        output = result.stdout or ""
+        count_line = next(
+            line.strip() for line in output.splitlines()
+            if line.strip().lower().startswith("open trades:")
+        )
+        count = int(count_line.split(":", 1)[1].strip())
+        if count == 0:
+            return "Crypto/Ostium sleeve: no open trades."
+        trade_lines = [
+            line.strip()[:500]
+            for line in output.splitlines()
+            if line.startswith("  ") and line.strip()
+        ]
+        if len(trade_lines) < count:
+            raise RuntimeError("status omitted one or more open-trade details")
+        return "Crypto/Ostium sleeve (live):\n" + "\n".join(
+            f"- {line}" for line in trade_lines[:count]
+        )
+    except Exception as exc:
+        detail = _secrets.scrub(str(exc))[:120]
+        return (
+            "Crypto/Ostium sleeve: live status unavailable "
+            f"({detail}); do not infer or score any crypto position."
+        )
 
 
 def _fetch_article_body(url: str, max_chars: int = 4000) -> str | None:

@@ -122,12 +122,20 @@ def _yes_price(m: dict) -> float | None:
         return None
 
 
-def _market_fee_buy(p: float) -> float:
-    """Polymarket fee dollars/share buying at p — TRUE quadratic curve
-    (2026-08-22, wallet-verified; the old min() model overstated multi-leg
-    basket fees ~2.5x at mid prices and under-detected sum<1 arbs). Uses the
-    capped fallback rate since legs here are screened before per-market fetch."""
-    return pm_fees.fee_per_share_at(pm_fees.FEE_RATE_FALLBACK, p)
+def _market_fee_buy(market: dict, p: float) -> float:
+    """Polymarket fee dollars/share for this market at ``p``.
+
+    The universe already carries each leg's fee schedule, so a flat fallback
+    here would erase zero/lower-rate categories. ``fee_per_share`` applies the
+    true quadratic curve, ``rate × p × (1-p)``, and the current 0.07 effective
+    category cap.
+    """
+    return pm_fees.fee_per_share(market, p)
+
+
+def _basket_fee_per_unit(legs: list[tuple[dict, float]]) -> float:
+    """Total taker fee for buying one share of every ``(market, price)`` leg."""
+    return sum(_market_fee_buy(market, price) for market, price in legs)
 
 
 def _orderbook(token_id: str) -> dict | None:
@@ -186,6 +194,7 @@ def live_quote_group(members: list[tuple[dict, float]], action: str, target_shar
         avg_p, filled = walk
         side_quotes.append({"member": m.get("groupItemTitle") or m["question"][:40],
                             "avg_ask": avg_p, "filled": filled,
+                            "fee_per_share": _market_fee_buy(m, avg_p),
                             "best_ask": ob["asks"][0][0], "best_ask_sz": ob["asks"][0][1]})
     if not side_quotes:
         return None
@@ -198,7 +207,7 @@ def live_quote_group(members: list[tuple[dict, float]], action: str, target_shar
         gross_payout = n - 1
     else:
         gross_payout = 1.0
-    fees = sum(q["avg_ask"] * _market_fee_buy(q["avg_ask"]) for q in side_quotes)
+    fees = sum(q["fee_per_share"] for q in side_quotes)
     net_profit_per_unit = gross_payout - sum_avg_ask - fees
     capital_per_unit = sum_avg_ask
     return {
@@ -278,14 +287,17 @@ def evaluate_group(eid: str, members: list[dict]) -> dict | None:
     # We compute both directions but only mark the first as `arb_free`.
     if deviation > 0:
         no_prices = [(1 - p) for _, p in valid]
-        total_fees = sum(np_ * _market_fee_buy(np_) for np_ in no_prices)
+        total_fees = _basket_fee_per_unit([
+            (market, no_price)
+            for (market, _yes_price_), no_price in zip(valid, no_prices)
+        ])
         capital = sum(no_prices)  # = n - yes_sum
         gross_profit = (n - 1) - capital
         net_profit = gross_profit - total_fees
         action = "buy_all_no"
         arb_free = True
     elif deviation < 0:
-        total_fees = sum(yp * _market_fee_buy(yp) for _, yp in valid)
+        total_fees = _basket_fee_per_unit(valid)
         gross_profit = 1.0 - yes_sum
         net_profit = gross_profit - total_fees
         action = "buy_all_yes (DIRECTIONAL — bets against missing-mass)"

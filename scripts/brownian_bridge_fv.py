@@ -1,32 +1,35 @@
 #!/usr/bin/env python3
-"""Brownian-bridge fair-value tool for bond-like Polymarket positions.
+"""Hazard-decay fair-value tool for explicitly modelled Polymarket positions.
 
-For "X by date Y" markets where one side wins iff no event happens by date Y,
-the mark dynamics under no-info-flow follow a hazard-rate model. Given:
-- p_initial: my static P(NO wins by full horizon T)
+For an event-by-date market under a constant hazard rate, an immutable entry
+prior can be rolled forward conditional on no event having happened. Given:
+- p_entry: P(the held outcome wins) at entry
 - t/T: fraction of horizon elapsed (0 at entry, 1 at resolution)
 
-Fair-mark at time t under constant hazard rate λ where exp(-λT) = p_initial:
-    fair_mark(t) = exp(-λ(T-t)) = p_initial^((T-t)/T) = p_initial^(1-t/T)
+The formula depends on what the held outcome means:
+- survival (the held outcome wins if no event occurs): p_entry^(1-t/T)
+- occurrence (the held outcome wins if the event occurs):
+  1 - (1-p_entry)^(1-t/T)
 
-Properties:
-- fair_mark(t=0) = p_initial (mark equals my P estimate at entry)
-- fair_mark(t=1) = 1.0 (mark drifts to certainty at resolution if no event)
-- monotonically increasing as t→1
+This model is deliberately opt-in. A prior must contain both ``bb_entry_p``
+and ``bb_mode`` (``survival`` or ``occurrence``), and the entry time must be
+tracked. The ordinary ``p_yes``/``p_no`` fields are mutable current posteriors;
+rolling them forward from the original entry time double-counts elapsed time.
+Missing model metadata therefore produces a clearly non-actionable row rather
+than a guessed signal.
 
 For each held position, this script:
 1. Pulls current mark from data-api
-2. Loads my static P from notes/portfolio_kelly_priors.json
+2. Loads immutable, explicit hazard metadata from portfolio_kelly_priors.json
 3. Computes time-elapsed fraction t/T from entry timestamp + horizon
-4. Computes fair_mark_BB = p^(1-t/T)
+4. Computes a side-aware conditional fair mark
 5. Surfaces delta = mark - fair_mark_BB:
    - delta > +2pp → TRIM signal (mark overshot fair-value)
    - delta < -3pp → SCALE_UP signal (mark below fair-value, edge to capture)
    - else → HOLD
 
-This complements Kelly's static p-vs-mark check by adding TIME-DECAY DRIFT.
-A position can be at static-Kelly-optimal but below Brownian-bridge fair-value
-if the mark hasn't caught up to its expected drift toward 1.0.
+This complements Kelly's current-posterior check only for positions whose
+constant-hazard assumption has been explicitly reviewed and recorded.
 
 Operator directive 2026-05-09: apply pricing theory rigorously. This is
 the cleanest first-principles pricing model for bond-like fade markets.
@@ -52,6 +55,8 @@ import _paths as _secrets
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PRIORS_PATH = REPO_ROOT / "notes" / "portfolio_kelly_priors.json"
 DECISIONS_PATH = REPO_ROOT / "notes" / "decisions.json"
+MIN_POSITION_SHARES = 0.5
+BB_MODES = frozenset({"survival", "occurrence"})
 
 
 def load_priors() -> dict:
@@ -67,6 +72,33 @@ def load_decisions() -> list[dict]:
         return json.load(open(DECISIONS_PATH)).get("decisions", [])
     except Exception:
         return []
+
+
+def filter_operational_positions(positions: list[dict]) -> list[dict]:
+    """Drop zero-value sub-0.5-share remnants from the operational book."""
+    kept = []
+    for pos in positions:
+        try:
+            size = float(pos.get("size", 0) or 0)
+        except (TypeError, ValueError):
+            continue
+        if size > MIN_POSITION_SHARES:
+            kept.append(pos)
+    return kept
+
+
+def fetch_positions(addr: str) -> list[dict]:
+    with httpx.Client(timeout=15) as c:
+        r = c.get(
+            "https://data-api.polymarket.com/positions",
+            params={"user": addr.lower(), "limit": 100,
+                    "sizeThreshold": MIN_POSITION_SHARES},
+        )
+        r.raise_for_status()
+        # Keep the local filter even though the API accepts sizeThreshold: an
+        # upstream default/parameter regression must not reintroduce resolved
+        # dust into the operational book or its headline count.
+        return filter_operational_positions(r.json() or [])
 
 
 def find_entry_for_slug(slug: str, decisions: list[dict]) -> tuple[float | None, float | None]:
@@ -109,13 +141,87 @@ def find_entry_for_slug(slug: str, decisions: list[dict]) -> tuple[float | None,
     return None, None
 
 
-def fair_mark_brownian_bridge(p_initial: float, t_frac: float) -> float:
-    """fair_mark = p^(1 - t/T) where t_frac = t/T in [0,1]."""
-    if t_frac <= 0:
-        return p_initial
-    if t_frac >= 1:
-        return 1.0
-    return p_initial ** (1.0 - t_frac)
+def fair_mark_hazard(p_entry: float, t_frac: float, mode: str) -> float:
+    """Roll an immutable entry prior forward under a constant hazard.
+
+    ``survival`` means the held outcome pays when the event has *not* occurred
+    by the deadline. ``occurrence`` means it pays when the event *does* occur.
+    The mode is explicit because inferring it from a Yes/No label is unsafe.
+    """
+    try:
+        p_entry = float(p_entry)
+        t_frac = float(t_frac)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("p_entry and t_frac must be numeric") from exc
+    if not 0.0 <= p_entry <= 1.0:
+        raise ValueError("p_entry must be in [0, 1]")
+    if mode not in BB_MODES:
+        raise ValueError(f"mode must be one of {sorted(BB_MODES)}")
+
+    t_frac = max(0.0, min(1.0, t_frac))
+    remaining = 1.0 - t_frac
+    if remaining == 0.0:
+        return 1.0 if mode == "survival" else 0.0
+    if mode == "survival":
+        return p_entry ** remaining
+    return 1.0 - (1.0 - p_entry) ** remaining
+
+
+def assess_brownian_signal(
+    mark: float,
+    prior: dict,
+    t_frac: float | None,
+    *,
+    trim_threshold: float = 2.0,
+    scale_threshold: float = 3.0,
+) -> dict:
+    """Return an actionable signal only for a complete, valid opt-in model."""
+    missing = [key for key in ("bb_entry_p", "bb_mode") if key not in prior]
+    if missing:
+        return {
+            "status": "NON_ACTIONABLE",
+            "actionable": False,
+            "verdict": "NO_BB_MODEL",
+            "fair_bb": None,
+            "delta_pp": None,
+            "reason": "missing immutable " + ", ".join(missing),
+        }
+    if t_frac is None:
+        return {
+            "status": "NON_ACTIONABLE",
+            "actionable": False,
+            "verdict": "NO_ENTRY_TIMING",
+            "fair_bb": None,
+            "delta_pp": None,
+            "reason": "no tracked entry time; refusing to infer elapsed fraction",
+        }
+    try:
+        fair_bb = fair_mark_hazard(prior["bb_entry_p"], t_frac, prior["bb_mode"])
+    except ValueError as exc:
+        return {
+            "status": "NON_ACTIONABLE",
+            "actionable": False,
+            "verdict": "INVALID_BB_MODEL",
+            "fair_bb": None,
+            "delta_pp": None,
+            "reason": str(exc),
+        }
+
+    delta_pp = (float(mark) - fair_bb) * 100
+    if delta_pp > trim_threshold:
+        verdict = "TRIM"
+    elif delta_pp < -scale_threshold:
+        verdict = "SCALE_UP"
+    else:
+        verdict = "HOLD"
+    return {
+        "status": "MODELED",
+        "actionable": verdict in {"TRIM", "SCALE_UP"},
+        "verdict": verdict,
+        "fair_bb": fair_bb,
+        "delta_pp": delta_pp,
+        "reason": None,
+    }
 
 
 def main() -> int:
@@ -132,17 +238,14 @@ def main() -> int:
     decisions = load_decisions()
 
     addr = json.load(open(args.wallet))["address"]
-    with httpx.Client(timeout=15) as c:
-        r = c.get("https://data-api.polymarket.com/positions",
-                  params={"user": addr.lower(), "limit": 100, "sizeThreshold": 0.0})
-        positions = r.json() or []
+    positions = fetch_positions(addr)
 
     now_ts = datetime.datetime.utcnow().timestamp()
     rows = []
     for pos in positions:
         slug = pos.get("slug", "")
         size = float(pos.get("size", 0) or 0)
-        if size <= 0:
+        if size <= MIN_POSITION_SHARES:
             continue
         mark = float(pos.get("curPrice", 0) or 0)
         side = pos.get("outcome", "?")
@@ -166,9 +269,7 @@ def main() -> int:
                     break
         p_my = prior.get("p_no" if side == "No" else "p_yes")
         if p_my is None:
-            # Fallback: use mark + 0.05 as rough P
-            p_my = min(0.99, mark + 0.05)
-            p_source = "fallback"
+            p_source = "missing"
         else:
             p_source = "priors"
 
@@ -179,32 +280,20 @@ def main() -> int:
             t_frac = max(0.0, min(1.0, elapsed_days / horizon_days))
             t_source = "tracked"
         else:
-            # Fallback: use end_date from data-api position if available
-            try:
-                end_iso = pos.get("endDate", "") or pos.get("endDateIso", "")
-                end_dt = datetime.datetime.fromisoformat(end_iso.replace("Z", "+00:00"))
-                if end_dt.tzinfo is None:
-                    end_dt = end_dt.replace(tzinfo=datetime.timezone.utc)
-                days_remaining = (end_dt.timestamp() - now_ts) / 86400
-                # Without entry-time, assume horizon == days_remaining (conservative)
-                t_frac = 0.0
-                horizon_days = days_remaining
-                t_source = "fallback-no-entry"
-            except Exception:
-                rows.append({"slug": slug, "side": side, "status": "NO_TIMING_DATA"})
-                continue
+            # An end date says when the market resolves, not when this position
+            # and its immutable prior began. Treat missing entry timing as
+            # non-actionable instead of pretending t/T=0.
+            t_frac = None
+            horizon_days = None
+            t_source = "missing-entry"
 
-        # Brownian-bridge fair value
-        fair_bb = fair_mark_brownian_bridge(p_my, t_frac)
-        delta_pp = (mark - fair_bb) * 100
-
-        # Verdict
-        if delta_pp > args.trim_threshold:
-            verdict = "TRIM"
-        elif delta_pp < -args.scale_threshold:
-            verdict = "SCALE_UP"
-        else:
-            verdict = "HOLD"
+        assessment = assess_brownian_signal(
+            mark,
+            prior,
+            t_frac,
+            trim_threshold=args.trim_threshold,
+            scale_threshold=args.scale_threshold,
+        )
 
         rows.append({
             "slug": slug[:50],
@@ -214,11 +303,18 @@ def main() -> int:
             "mark": round(mark, 4),
             "p_my": p_my,
             "p_source": p_source,
-            "t_frac": round(t_frac, 3),
-            "horizon_d": round(horizon_days, 1),
-            "fair_bb": round(fair_bb, 4),
-            "delta_pp": round(delta_pp, 2),
-            "verdict": verdict,
+            "bb_entry_p": prior.get("bb_entry_p"),
+            "bb_mode": prior.get("bb_mode"),
+            "t_frac": round(t_frac, 3) if t_frac is not None else None,
+            "horizon_d": round(horizon_days, 1) if horizon_days is not None else None,
+            "fair_bb": (round(assessment["fair_bb"], 4)
+                        if assessment["fair_bb"] is not None else None),
+            "delta_pp": (round(assessment["delta_pp"], 2)
+                         if assessment["delta_pp"] is not None else None),
+            "verdict": assessment["verdict"],
+            "actionable": assessment["actionable"],
+            "status": assessment["status"],
+            "reason": assessment["reason"],
             "t_source": t_source,
         })
 
@@ -229,25 +325,31 @@ def main() -> int:
         print(json.dumps({"results": rows}, indent=2, default=str))
         return 0
 
-    print(f"\n{'='*110}")
-    print(f"BROWNIAN-BRIDGE FAIR-VALUE — {datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M UTC')}")
-    print(f"  fair_bb(t) = p^(1 - t/T)  |  TRIM if mark > fair+{args.trim_threshold}pp  |  SCALE_UP if mark < fair-{args.scale_threshold}pp")
-    print(f"{'='*110}")
-    print(f"{'Slug':<45} {'Side':<3} {'mark':<6} {'p':<5} {'t/T':<5} {'fair_BB':<7} {'Δpp':<7} {'verdict':<10}")
-    print(f"{'-'*110}")
+    print(f"\n{'='*132}")
+    print(f"HAZARD-DECAY FAIR-VALUE (opt-in) — {datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M UTC')}")
+    print("  survival: p_entry^(1-t/T)  |  occurrence: 1-(1-p_entry)^(1-t/T)")
+    print("  Actions require immutable bb_entry_p + explicit bb_mode + tracked entry timing; current p_yes/p_no is never rolled forward.")
+    print(f"{'='*132}")
+    print(f"{'Slug':<45} {'Side':<4} {'mark':<6} {'curP':<6} {'entryP':<7} {'mode':<10} {'t/T':<5} {'fair':<7} {'Δpp':<7} {'verdict':<15}")
+    print(f"{'-'*132}")
     for r in rows:
         if r.get("status") == "DE_INDEXED":
             print(f"{r['slug'][:45]:<45} {r['side']:<3} {r['mark']:<6.4f} (de-indexed)")
             continue
-        if r.get("status") == "NO_TIMING_DATA":
-            print(f"{r['slug'][:45]:<45} {r['side']:<3} (no timing data)")
+        current_p = "-" if r["p_my"] is None else f"{r['p_my']:.3f}"
+        if r.get("status") != "MODELED":
+            print(f"{r['slug'][:45]:<45} {r['side']:<4} {r['mark']:<6.4f} {current_p:<6} "
+                  f"{'-':<7} {'-':<10} {'-':<5} {'-':<7} {'-':<7} "
+                  f"{r['verdict']:<15} ({r['reason']})")
             continue
-        print(f"{r['slug'][:45]:<45} {r['side']:<3} {r['mark']:<6.4f} {r['p_my']:<5.3f} "
-              f"{r['t_frac']:<5.2f} {r['fair_bb']:<7.4f} {r['delta_pp']:>+5.2f}pp {r['verdict']:<10}")
+        print(f"{r['slug'][:45]:<45} {r['side']:<4} {r['mark']:<6.4f} {current_p:<6} "
+              f"{r['bb_entry_p']:<7.3f} {r['bb_mode']:<10} {r['t_frac']:<5.2f} "
+              f"{r['fair_bb']:<7.4f} {r['delta_pp']:>+5.2f}pp {r['verdict']:<15}")
 
     # Summary actions
-    trim = [r for r in rows if r.get("verdict") == "TRIM"]
-    scale = [r for r in rows if r.get("verdict") == "SCALE_UP"]
+    trim = [r for r in rows if r.get("actionable") and r.get("verdict") == "TRIM"]
+    scale = [r for r in rows if r.get("actionable") and r.get("verdict") == "SCALE_UP"]
+    unmodeled = [r for r in rows if r.get("status") == "NON_ACTIONABLE"]
     print()
     if trim:
         print(f"TRIM candidates ({len(trim)}):")
@@ -262,6 +364,10 @@ def main() -> int:
             print(f"  - {r['slug'][:55]:<55} {r['side']:<3} mark={r['mark']:.4f} fair={r['fair_bb']:.4f} (Δ {r['delta_pp']:+.1f}pp)")
     else:
         print("(no SCALE_UP candidates)")
+
+    if unmodeled:
+        print(f"\nNon-actionable/unmodeled ({len(unmodeled)}): add immutable bb_entry_p and "
+              "bb_mode=survival|occurrence to a reviewed prior before this tool may signal.")
 
     return 0
 
