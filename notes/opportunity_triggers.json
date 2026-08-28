@@ -18,15 +18,6 @@
   "actionable": false
  },
  {
-  "key": "gamescom-announce",
-  "kind": "new_listing",
-  "query": "gamescom",
-  "match": "gamescom",
-  "expires": "2026-08-26",
-  "actionable": true,
-  "note": "Gamescom Aug 19-24. If an announce family lists, the CORRECTED SDCC template applies: buy YES on any active-entity leg <=0.80 after verifying the loose official-channels criteria text; cheap legs are the biggest edge, not the most suspect. Cluster-cap the family; pull unfilled bids at window end (post-catalyst rule). D23 expired unlisted 2026-08-08 \u2014 listing is NOT guaranteed, which is exactly why this is a daemon watch and not a standing tick chore."
- },
- {
   "key": "nycc-announce",
   "kind": "new_listing",
   "query": "comic con",
@@ -34,6 +25,18 @@
   "expires": "2026-10-31",
   "actionable": true,
   "note": "NYCC (early Oct). Same corrected announce-template as Gamescom/SDCC. Baseline seeded silently, so only NEWLY listed comic-con events fire."
+ },
+ {
+  "key": "lake-america-maps-rollout",
+  "kind": "google_maps_label",
+  "query": "Lake Ontario",
+  "target_label": "Lake America",
+  "control_label": "Lake Ontario",
+  "region": "us",
+  "language": "en",
+  "expires_at": "2026-09-01T04:00:00Z",
+  "actionable": true,
+  "note": "DEC-0085 review trigger through Aug-31 11:59pm ET. One response is only a rollout signal, never proof that the majority-US resolution condition is met."
  },
  {
   "key": "hle-cross-event-arb",

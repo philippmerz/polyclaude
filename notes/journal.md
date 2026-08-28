@@ -10448,3 +10448,54 @@ bid; the portfolio Kelly display still shows a +$6.06 point-estimate deficit, bu
 uncertainty/funding cap above governs. Next hard clock: monitor majority-US Maps rollout through
 August 31, then agreement resolution/redemptions; early-September remains the Duma forecast recheck.
 Material tick summary sent to the operator on Telegram (message 866).
+
+## 2026-08-28 18:18 periodic continuation — no trade; live Lake crux monitor + fired backlog guards shipped
+
+Reviewed all of `notes/backlog.md` against the latest journal rather than treating every old line as
+pending work. Live facts did not justify another trade. The new Lake America checker observed the
+exact target label zero times and control `Lake Ontario` twice in one US-region Maps response; that
+is a clean negative observation on this client, not proof of universal absence. The freshest CLOB
+check was 0.327 bid / 0.343 ask, still above the ~0.293 entry but far below 0.50 stressed and 0.60
+central fair. A full-size taker sale remains inferior to HOLD. Oman's official Aug-25 statement still
+describes a proposed Hormuz framework, continuing technical negotiations and hope for a later
+announcement; no newer bilateral acceptance statement appeared. The agreement book remains roughly
+0.04/0.05 versus p_yes 0.09, so HOLD 31 YES and do not add. PortWatch remains through Aug-23 at a
+5.00 seven-day average versus 60 required; only 0.003571 non-economic Hormuz-normal dust remains.
+There were no news alerts after the 16:0x journal entry and no overdue decision.
+
+The review did find state drift. Removed the expired Aug-26 Gamescom listing trigger and the stale
+Hormuz-normal Kelly prior whose note still claimed 12.1135 live shares plus an armed erosion guard.
+Pruned completed bridge/title-dedup work and resolved calendar reminders from the backlog, narrowed
+remaining venue DD to Drift/Kalshi, preserved the NYCC criteria-variant playbook, and made the Aug-31
+HLE research/reward work explicitly conditional on actual funding: deployable pUSD is only ~$0.322,
+so there is no assumed Hormuz redemption windfall.
+
+DEC-0087 closes four fired safety gates plus two already-scoped advisory defects:
+
+- Added `google_maps_label_check.py` and a five-minute `opportunity_watch` trigger through Sep-1
+  04:00 UTC. It requires a valid Maps schema and control label, fails closed on HTTP/consent/schema
+  errors, dedupes the first exact `Lake America` observation, and says explicitly that one response
+  is a rollout signal requiring broader verification — never proof of the majority-US criterion.
+  If the shared 90-minute cooldown suppresses the first review tick, a persistent pending flag now
+  retries that tick without repeating the observation alert. Restarted the daemon on current code as
+  exactly one absolute-path process (PID 2030314); its stop/status matcher is now exact too, after a
+  broad `pgrep -f` match was observed signaling the invoking restart shell.
+- The backlog's short-clock build gate is now genuinely active: Lake, the agreement, and the Duma
+  set are all inside 30 days. `position_state_audit` now requires same-UTC-day prior verification for
+  each short-dated economic position, collapses the three Duma legs into one diagnostic, and fails
+  safely on malformed dates. The same audit now retries 429/5xx/network failures, validates payload
+  shape plus required live-row fields/non-finite values, and exits degraded rc=2 before any write
+  instead of crashing on a rate-limit string or malformed row.
+- Added single-market `polyclaude_enter --max-price`. Taker execution refreshes the live ask at the
+  last moment and rechecks both the exact signed raw limit and robust EV before submitting. Maker
+  entries preserve the already-gated passive price rather than rounding upward into the ask. This
+  removes the reason DEC-0085 had to use direct `clob_v2.py` after unified-helper preflight.
+- Corrected same-deadline numeric ladders from `different deadline` to `threshold sibling`, and made
+  `check_marginal_apy` classify NEGATIVE_EDGE/below-hurdle exits on the executable best bid while
+  retaining midpoint only for display. The live run has 0 actionable flags.
+
+Validation: live state audit CLEAN across 14 rows; live Maps probe target=0/control=2; 138 pytest
+tests passed, the standalone money suite passed all 116 checks, and all 12 mutations were caught.
+No Telegram was sent because there was no fill, prior change, thesis change, or incident requiring
+operator action. Next hard clock remains direct Maps/agreement review through Aug-31; Duma's
+independent-forecast window opens Sep-1, and the Apple event check is Sep-8..10.

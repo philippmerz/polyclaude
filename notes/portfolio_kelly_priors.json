@@ -335,28 +335,6 @@
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
- "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320": {
-  "p_no": 0.998,
-  "verified": "2026-08-26",
-  "criteria_read": "2026-08-26",
-  "note": "DEC-0077/0081/0084. MECHANICAL and first-hand measured: YES needs the IMF PortWatch 7-day MA of Hormuz transit calls to reach 60 on any date through Aug-31. Latest pull (2026-08-26) remains 7dMA 5.00 over Aug-17..23 (4,6,6,5,4,7,3); the peak single day across 150 prints is 44. The Aug-25/26 Oman-Iran proposed temporary-corridor framework is a real forward catalyst but is explicitly not a reopening: Iran says the strait remains closed pending US commitments, while technical talks continue. The bar still needs 420 calls in one seven-day window versus 35 in the latest week. p_no 0.998 is the residual for a rapid operational activation plus traffic surge, source/revision error, or resolver error. DEC-0081 sold 4 shares at 0.996 to fund a higher-edge same-horizon ticket; DEC-0084 sold another 12 at 0.996 to fund the Duma range bundle, surrendering about $0.024 central EV. The remaining 12.1135 shares stay HOLD TO RESOLUTION because the fee-free payout beats the live bid at this prior. Erosion trigger armed (hormuz-no-erosion, NO bid <=0.95). Regime caveat: this near-certainty is specific to Aug-31 and does not transfer to later siblings. FEED OPS: ArcGIS transiently 400s on identical parameters and requires orderByFields; resolution-day checks retry 4x and distinguish empty result from error result.",
-  "cluster": "hormuz",
-  "rho_within": 1.0,
-  "key_facts": [
-   {
-    "claim": "Resolution bar: PortWatch 7-day moving average of transit calls >= 60 on any date by Aug-31, 2026; source named in criteria.",
-    "source": "https://gamma-api.polymarket.com/markets?slug=strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
-    "source_date": "2026-08-26",
-    "checked": "2026-08-26"
-   },
-   {
-    "claim": "Measured first-hand: latest seven prints through Aug-23 are 4,6,6,5,4,7,3 (7dMA 5.00); 150-print history peak single day 44, never 60.",
-    "source": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/ArcGIS/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query?where=portid%3D%27chokepoint6%27&outFields=date%2Cn_total&orderByFields=date%20DESC&resultRecordCount=30&returnGeometry=false&f=json",
-    "source_date": "2026-08-23",
-    "checked": "2026-08-26"
-   }
-  ]
- },
  "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
   "p_yes": 0.09,
   "verified": "2026-08-28",

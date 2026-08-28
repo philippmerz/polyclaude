@@ -16,7 +16,7 @@ with the book when positions open/close/resize**, and nothing checks. Files:
 judgment items (orphan priors, armed triggers) are REPORTED, never auto-removed —
 an orphan prior may be a re-entry candidate worth keeping.
 
-CLI: position_state_audit.py [--fix]   (exit 1 if any issue found)
+CLI: position_state_audit.py [--fix]   (exit 1 for state issues, 2 if live data is unavailable)
 """
 
 from __future__ import annotations
@@ -24,8 +24,10 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import math
 import re
 import sys
+import time
 from pathlib import Path
 
 import httpx
@@ -35,12 +37,118 @@ NOTES = REPO / "notes"
 ADDR = "0x9032ad983ee5a22bfd078ecc4fd3d4d69e57267b"
 MIN_LIVE_SHARES = 0.5
 SET_SIZE_TOLERANCE = 0.01
+POSITIONS_URL = "https://data-api.polymarket.com/positions"
+POSITION_FETCH_ATTEMPTS = 3
+POSITION_RETRY_BASE_SECONDS = 0.5
+POSITION_RETRY_MAX_SECONDS = 2.0
+SHORT_DATED_WINDOW_DAYS = 30
+
+
+class LivePositionsUnavailable(RuntimeError):
+    """Raised when the live book cannot be read and the audit must stop."""
+
+
+def _position_retry_delay(response: httpx.Response | None, attempt: int) -> float:
+    """Return a short bounded backoff, respecting numeric Retry-After hints."""
+    retry_after = None
+    if response is not None:
+        retry_after = response.headers.get("Retry-After")
+    if retry_after is not None:
+        try:
+            return min(POSITION_RETRY_MAX_SECONDS, max(0.0, float(retry_after)))
+        except ValueError:
+            pass
+    return min(
+        POSITION_RETRY_MAX_SECONDS,
+        POSITION_RETRY_BASE_SECONDS * (2 ** (attempt - 1)),
+    )
 
 
 def _live_positions() -> list[dict]:
-    r = httpx.get("https://data-api.polymarket.com/positions",
-                  params={"user": ADDR, "limit": "100"}, timeout=25)
-    return [p for p in r.json() if float(p.get("size", 0)) > MIN_LIVE_SHARES]
+    """Fetch and validate the live position list, retrying transient failures.
+
+    This is a safety input: an unavailable or malformed response must never be
+    interpreted as an empty book.  In particular, data-api rate-limit payloads
+    have appeared as JSON strings, which previously reached ``p.get`` and
+    crashed with an opaque ``AttributeError``.
+    """
+    last_error = "unknown error"
+    attempts_used = 0
+
+    for attempt in range(1, POSITION_FETCH_ATTEMPTS + 1):
+        attempts_used = attempt
+        response: httpx.Response | None = None
+        retryable = True
+        try:
+            response = httpx.get(
+                POSITIONS_URL,
+                params={"user": ADDR, "limit": "100"},
+                timeout=25,
+            )
+            response.raise_for_status()
+            payload = response.json()
+            if not isinstance(payload, list):
+                raise ValueError(
+                    f"unexpected JSON shape ({type(payload).__name__}, expected list)"
+                )
+
+            live: list[dict] = []
+            for index, position in enumerate(payload):
+                if not isinstance(position, dict):
+                    raise ValueError(
+                        f"position row {index} has type {type(position).__name__}, "
+                        "expected object"
+                    )
+                try:
+                    size = float(position.get("size", 0))
+                except (TypeError, ValueError) as exc:
+                    raise ValueError(f"position row {index} has invalid size") from exc
+                if not math.isfinite(size) or size < 0:
+                    raise ValueError(f"position row {index} has invalid size")
+                if size > MIN_LIVE_SHARES:
+                    slug = position.get("slug")
+                    if not isinstance(slug, str) or not slug.strip():
+                        raise ValueError(
+                            f"live position row {index} has missing/invalid slug"
+                        )
+                    outcome = position.get("outcome")
+                    if not isinstance(outcome, str) or not outcome.strip():
+                        raise ValueError(
+                            f"live position row {index} has missing/invalid outcome"
+                        )
+                    mark = position.get("curPrice")
+                    if mark is not None:
+                        try:
+                            mark_value = float(mark)
+                        except (TypeError, ValueError) as exc:
+                            raise ValueError(
+                                f"live position row {index} has invalid curPrice"
+                            ) from exc
+                        if not math.isfinite(mark_value) or not 0 <= mark_value <= 1:
+                            raise ValueError(
+                                f"live position row {index} has invalid curPrice"
+                            )
+                    live.append(position)
+            return live
+        except httpx.HTTPStatusError as exc:
+            status = exc.response.status_code
+            last_error = f"HTTP {status}"
+            retryable = status == 429 or 500 <= status < 600
+        except httpx.RequestError as exc:
+            last_error = type(exc).__name__
+        except (TypeError, ValueError) as exc:
+            # A gateway/CDN can return a successful HTTP status with an error
+            # payload. Retry briefly, but never treat that payload as no book.
+            last_error = str(exc)
+
+        if not retryable or attempt == POSITION_FETCH_ATTEMPTS:
+            break
+        time.sleep(_position_retry_delay(response, attempt))
+
+    noun = "attempt" if attempts_used == 1 else "attempts"
+    raise LivePositionsUnavailable(
+        f"data-api positions unavailable after {attempts_used} {noun} ({last_error})"
+    )
 
 
 def _load(name: str, default):
@@ -139,13 +247,162 @@ def set_only_issues(
     return issues
 
 
+def _iso_date(value: object) -> dt.date | None:
+    """Parse a date or ISO datetime without guessing malformed values."""
+    if not isinstance(value, str) or not value.strip():
+        return None
+    text = value.strip()
+    try:
+        if "T" in text:
+            return dt.datetime.fromisoformat(text.replace("Z", "+00:00")).date()
+        return dt.date.fromisoformat(text)
+    except ValueError:
+        return None
+
+
+def _matching_prior(priors: dict, slug: str) -> tuple[str, dict] | None:
+    exact = priors.get(slug)
+    if isinstance(exact, dict):
+        return slug, exact
+    for key, prior in priors.items():
+        if str(key).startswith("_") or not isinstance(prior, dict):
+            continue
+        if str(key) in slug or slug in str(key):
+            return str(key), prior
+    return None
+
+
+def short_dated_prior_issues(
+    priors: dict,
+    positions: list[dict],
+    *,
+    today: dt.date | None = None,
+) -> list[str]:
+    """Require a same-day prior re-derivation inside the final 30 days.
+
+    The backlog's build gate is specifically about by-date priors becoming
+    stale through passage of time.  ``verified`` has day precision, so the
+    lowest-noise enforceable version of "every tick" is once per UTC date:
+    later ticks on a freshly reviewed date remain silent.  Equal-share
+    ``set_only`` legs are collapsed into one economic-position diagnostic.
+    """
+    if not isinstance(priors, dict):
+        return [
+            "SHORT-DATED PRIOR CHECK DEGRADED — portfolio priors are unreadable; "
+            "cannot verify final-30-day re-derivations"
+        ]
+
+    today = today or dt.datetime.now(dt.timezone.utc).date()
+    invalid_dates: list[str] = []
+    due_groups: dict[tuple[str, str], dict] = {}
+
+    for position in positions:
+        if not isinstance(position, dict):
+            continue
+        slug = str(position.get("slug") or "")
+        if not slug:
+            continue
+
+        raw_end = position.get("endDate") or position.get("endDateIso")
+        end_date = _iso_date(raw_end)
+        if end_date is None:
+            invalid_dates.append(f"{slug[:52]}={raw_end!r}")
+            continue
+        remaining = (end_date - today).days
+        if remaining > SHORT_DATED_WINDOW_DAYS:
+            continue
+
+        match = _matching_prior(priors, slug)
+        prior_key, prior = match if match is not None else (slug, {})
+        verified_raw = prior.get("verified")
+        verified = _iso_date(verified_raw)
+        if verified == today:
+            continue
+
+        set_label = prior.get("set_only")
+        if isinstance(set_label, str) and set_label.strip():
+            group_key = ("set", set_label.strip())
+            cluster = str(prior.get("cluster") or "set-only structure")
+            label = f"set-only {cluster}"
+        else:
+            group_key = ("position", prior_key)
+            label = slug
+
+        if verified is None:
+            verified_text = f"verified={verified_raw!r} (missing/malformed)"
+        elif verified > today:
+            verified_text = f"verified={verified.isoformat()} (future date)"
+        else:
+            age = (today - verified).days
+            verified_text = f"verified {age}d ago ({verified.isoformat()})"
+
+        clock = (
+            f"{-remaining}d past endDate"
+            if remaining < 0
+            else f"{remaining}d remaining"
+        )
+        group = due_groups.setdefault(
+            group_key,
+            {
+                "label": label,
+                "slugs": [],
+                "end_dates": set(),
+                "clocks": set(),
+                "verified": set(),
+            },
+        )
+        group["slugs"].append(slug)
+        group["end_dates"].add(end_date.isoformat())
+        group["clocks"].add(clock)
+        group["verified"].add(verified_text)
+
+    issues: list[str] = []
+    if invalid_dates:
+        issues.append(
+            "SHORT-DATED PRIOR CHECK DEGRADED — malformed/missing live endDate: "
+            + "; ".join(invalid_dates)
+            + ". Verify resolution dates manually; the audit cannot prove the "
+              "final-30-day rotation is current."
+        )
+
+    if due_groups:
+        rows_due = sum(len(group["slugs"]) for group in due_groups.values())
+        msg = [
+            f"SHORT-DATED PRIOR RE-DERIVATION due ({rows_due} live row(s), "
+            f"{len(due_groups)} economic position(s)):"
+        ]
+        for group in due_groups.values():
+            slugs = group["slugs"]
+            leg_text = f" [{len(slugs)} set-only legs]" if len(slugs) > 1 else ""
+            msg.append(
+                f"    {group['label']}{leg_text} — end "
+                f"{','.join(sorted(group['end_dates']))}; "
+                f"{','.join(sorted(group['clocks']))}; "
+                f"{','.join(sorted(group['verified']))}"
+            )
+        msg.append(
+            "    -> re-check current evidence and recompute P(win), then set "
+            "`verified` to today; do not merely roll the old probability forward."
+        )
+        issues.append("\n".join(msg))
+
+    return issues
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--fix", action="store_true",
                     help="refresh conditionId snapshot + drop expired acked-holds")
     args = ap.parse_args()
 
-    pos = _live_positions()
+    try:
+        pos = _live_positions()
+    except LivePositionsUnavailable as exc:
+        print(
+            f"AUDIT DEGRADED — {exc}; no state files were changed",
+            file=sys.stderr,
+        )
+        return 2
     live = {p["slug"]: float(p["size"]) for p in pos}
     issues: list[str] = []
 
@@ -225,7 +482,13 @@ def main() -> int:
             if "closed" not in note.lower() and "re-entry" not in note.lower():
                 issues.append(f"PRIOR orphan (no live position, no closure note): {k[:52]}")
 
-    # 3b. CRITERIA RE-READ rotation (2026-08-05). Staleness guards watch the
+    # 3b. SHORT-DATED PRIOR rotation. The 2026-08-12 backlog gate fired when
+    # Lake America, the Iran-Oman agreement, and the Duma set simultaneously
+    # entered their final 30 days. A by-date probability can go stale merely
+    # because another day passed; enforce a fresh derivation once per UTC date.
+    issues.extend(short_dated_prior_issues(priors_raw, pos))
+
+    # 3c. CRITERIA RE-READ rotation (2026-08-05). Staleness guards watch the
     # `verified` DATE, not whether the recorded thesis is still CORRECT — and
     # an audit that day found 2 of 8 positions running on wrong/stale facts
     # (SpaceX's prior carried a "$2.1T day-one bar" when the IPO had already
@@ -346,7 +609,7 @@ def main() -> int:
                            "a revision must record what the source said BEFORE and what it says NOW.")
             issues.append("\n".join(msg))
 
-    # 3c. PRIOR-vs-MARK divergence (2026-08-10). The criteria rotation above
+    # 3d. PRIOR-vs-MARK divergence (2026-08-10). The criteria rotation above
     # checks whether a thesis still matches the market's TEXT; nothing checked
     # whether the NUMBER still matches the market's PRICE. On 2026-08-10 the
     # Gemini-HLE prior read p_no 0.70 against a 0.10 mark — a 60pp claimed edge

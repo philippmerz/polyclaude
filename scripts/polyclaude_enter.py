@@ -143,14 +143,56 @@ _SIB_MONTHS = ("january", "february", "march", "april", "may", "june", "july",
 
 
 def _sib_datesig(text: str) -> tuple:
-    """Date signature of a question: years, month names, day numbers. Equal
-    signatures → candidate TRUE duplicate; different → term-structure sibling
-    (different deadline = different bet, but the term structure is informative).
-    Normalization: "before YYYY" ≡ deadline Dec-31 of YYYY-1 (so "before 2027"
-    matches "by end of 2026" / "in 2026" — the canonical true-dup phrasing pair)."""
+    """Date-only signature of a question.
+
+    Threshold values must not leak into this signature.  The original broad
+    ``\\b\\d{1,2}\\b`` match treated HLE thresholds such as 50 and 55 as day
+    numbers, so two same-deadline ladder legs were mislabeled as having
+    different deadlines.  Keep years plus day numbers that are actually
+    adjacent to month names.  "before YYYY" is normalized to year ``YYYY-1``
+    so it still matches "by end of YYYY-1" / "in YYYY-1".
+    """
     t = text.lower()
     t = re.sub(r"before (20\d\d)", lambda m2: str(int(m2.group(1)) - 1), t)
-    return tuple(sorted(re.findall(r"20\d\d|\b\d{1,2}\b|" + "|".join(_SIB_MONTHS), t)))
+    month_pattern = "|".join(_SIB_MONTHS)
+    month_days: list[tuple[str, int | None]] = []
+    for match in re.finditer(
+            rf"\b(?P<month>{month_pattern})\s+(?P<day>\d{{1,2}})(?:st|nd|rd|th)?\b",
+            t):
+        month_days.append((match.group("month"), int(match.group("day"))))
+    for match in re.finditer(
+            rf"\b(?P<day>\d{{1,2}})(?:st|nd|rd|th)?\s+(?P<month>{month_pattern})\b",
+            t):
+        month_days.append((match.group("month"), int(match.group("day"))))
+    # A named month without an explicit day remains meaningful (e.g. "by
+    # August 2026"), but do not add it twice when captured above.
+    captured_months = {month for month, _ in month_days}
+    month_days.extend((month, None) for month in _SIB_MONTHS
+                      if re.search(rf"\b{month}\b", t)
+                      and month not in captured_months)
+    years = tuple(sorted(re.findall(r"\b20\d\d\b", t)))
+    return years, tuple(sorted(month_days, key=lambda item: (item[0], item[1] or 0)))
+
+
+def _sib_nondate_numbers(text: str) -> tuple[str, ...]:
+    """Numeric proposition values after removing recognizable date fields."""
+    t = text.lower()
+    month_pattern = "|".join(_SIB_MONTHS)
+    t = re.sub(r"\b20\d\d\b", " ", t)
+    t = re.sub(
+        rf"\b(?:{month_pattern})\s+\d{{1,2}}(?:st|nd|rd|th)?\b", " ", t)
+    t = re.sub(
+        rf"\b\d{{1,2}}(?:st|nd|rd|th)?\s+(?:{month_pattern})\b", " ", t)
+    return tuple(re.findall(r"\b\d+(?:\.\d+)?\b", t))
+
+
+def _sibling_kind(question: str, candidate: str) -> str:
+    """Human-facing relationship label for a high-similarity sibling."""
+    if _sib_datesig(candidate) != _sib_datesig(question):
+        return "different deadline — term-structure sibling, NOT fungible"
+    if _sib_nondate_numbers(candidate) != _sib_nondate_numbers(question):
+        return "same deadline — threshold sibling, NOT fungible"
+    return "CANDIDATE TRUE DUP (same deadline)"
 
 
 def _sibling_markets(question: str, market_id, side: str) -> None:
@@ -191,13 +233,14 @@ def _sibling_markets(question: str, market_id, side: str) -> None:
                     except Exception:
                         yes_p = no_p = None
                     px = no_p if side == "NO" else yes_p
-                    same_date = _sib_datesig(m.get("question") or "") == _sib_datesig(question)
-                    hits.append((same_date, jac, m.get("id"), m.get("slug"), px, m.get("takerBaseFee")))
+                    candidate_question = m.get("question") or ""
+                    kind = _sibling_kind(question, candidate_question)
+                    same_date = _sib_datesig(candidate_question) == _sib_datesig(question)
+                    hits.append((same_date, jac, m.get("id"), m.get("slug"), px,
+                                 m.get("takerBaseFee"), kind))
         if hits:
             print(f"\n!! SIBLING MARKET(S) FOUND (content-similarity >=0.7):")
-            for same_date, jac, mid, mslug, px, fee in sorted(hits, reverse=True)[:4]:
-                kind = ("CANDIDATE TRUE DUP (same deadline)" if same_date
-                        else "different deadline — term-structure sibling, NOT fungible")
+            for same_date, jac, mid, mslug, px, fee, kind in sorted(hits, reverse=True)[:4]:
                 print(f"!!   id={mid} {mslug} — {side} mid={px} taker_fee={fee or 0}bps | {kind}")
             print(f"!!   TRUE-DUP + cheaper book on {side} → verify criteria truly identical "
                   f"(descriptions/editions/definitions — implication-study trap), then route there.")
@@ -372,6 +415,48 @@ def _two_decimal_marketable_limit(ask: float, tick: float) -> float:
     if tick_dec > 2:
         px = round(math.ceil(round(px * 100, 8)) / 100, 2)
     return min(px, 0.99)
+
+
+def _single_buy_preflight(reference_price: float, tick: float,
+                          max_price: float | None = None, *, maker: bool = False) -> float:
+    """Return the exact raw CLOB limit a single-market BUY would sign.
+
+    Taker FAKs use a marketable ceiling. Fine-tick markets still require a
+    two-decimal maker amount, so their signed limit can be above the touch (for
+    example, a 0.293 ask becomes a 0.30 limit). Maker orders are different:
+    ``maker_rest_price`` already produced a passive, two-decimal price, and
+    rounding it upward here could cross the ask and trigger a post-only reject.
+    Preserve that gated maker price exactly and assert its amount precision.
+
+    A user-supplied cap applies to the resulting signed raw limit, not to the
+    earlier Gamma midpoint. Taker callers run this again on a fresh ask
+    immediately before invoking ``clob_v2.py``.
+    """
+    try:
+        price = float(reference_price)
+        tick_value = float(tick)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("buy price and tick must be numeric") from exc
+    if (not math.isfinite(price) or not 0.0 < price < 1.0
+            or not math.isfinite(tick_value) or tick_value <= 0.0):
+        raise ValueError("buy price must be in (0,1) and tick must be positive")
+    if maker:
+        if abs(price - round(price, 2)) > 1e-9:
+            raise ValueError("maker BUY price must already satisfy two-decimal amount precision")
+        signed_price = price
+    else:
+        signed_price = _two_decimal_marketable_limit(price, tick_value)
+    if max_price is not None:
+        try:
+            cap = float(max_price)
+        except (TypeError, ValueError) as exc:
+            raise ValueError("--max-price must be numeric") from exc
+        if not math.isfinite(cap) or not 0.0 < cap < 1.0:
+            raise ValueError("--max-price must be in (0,1)")
+        if signed_price > cap + 1e-12:
+            raise RuntimeError(
+                f"signed raw BUY limit {signed_price:.4f} exceeds --max-price {cap:.4f}")
+    return signed_price
 
 
 _BALANCE_TOL = 1e-4
@@ -1404,6 +1489,11 @@ def main() -> int:
     p.add_argument("--cluster-frac", type=float, default=0.0,
                    help="Existing cluster fraction of bankroll (for ρ-discount)")
     p.add_argument("--execute", action="store_true", help="Actually post buy order")
+    p.add_argument("--max-price", type=float, default=None,
+                   help="Hard ceiling on the raw single-market CLOB BUY limit (fees are separate). "
+                        "Checked against the signed price; taker entries re-check a fresh live ask "
+                        "immediately before execution, while maker entries preserve their already-"
+                        "gated post-only price. Use --max-bundle-cost for bundles.")
     p.add_argument("--maker", action="store_true",
                    help="Rest a GTC post-only bid at best_bid+tick instead of crossing: "
                         "no taker fee, bid-side price, fill NOT guaranteed. Record in "
@@ -1437,9 +1527,15 @@ def main() -> int:
                         "be MEASURED (PortWatch-style first-hand read), not vibes: K multiplies "
                         "whatever error your measurement already carries.")
     args = p.parse_args()
+    if args.max_price is not None and not 0.0 < args.max_price < 1.0:
+        print("ERROR: --max-price must be in (0,1)", file=sys.stderr)
+        return 2
     if args.bankroll is None:
         args.bankroll = _bankroll_default()
     if args.bundle_slug:
+        if args.max_price is not None:
+            print("ERROR: --max-price is for single-market entries; use --max-bundle-cost", file=sys.stderr)
+            return 2
         return _bundle_entry(args)
     if args.bundle_add:
         print("ERROR: --bundle-add requires --bundle-slug", file=sys.stderr)
@@ -1616,6 +1712,19 @@ def main() -> int:
         print(f"  [fee] {source}: rate={fee_curve.rate:.4f}, exponent={fee_curve.exponent:g} "
               f"→ {fee_per_share*100:.2f}c/share taker fee; effective cost {cost_eff:.4f} "
               f"(ask {mark:.4f}) — gate + sizing run on effective cost")
+    try:
+        preview_buy_price = _single_buy_preflight(
+            maker_px if maker_px is not None else mark, tick, args.max_price,
+            maker=args.maker)
+    except RuntimeError as exc:
+        print(f"\nDECISION: SKIP — hard price cap: {exc}")
+        return 0
+    except ValueError as exc:
+        print(f"\nDECISION: NEED_REVIEW — invalid execution price: {exc}")
+        return 2
+    if args.max_price is not None:
+        print(f"  [price cap] preview signed raw BUY limit {preview_buy_price:.4f} "
+              f"<= {args.max_price:.4f}; execution will refresh and re-check")
 
     # Resolve P(side wins)
     my_p = args.my_p
@@ -1802,23 +1911,33 @@ def main() -> int:
         print(f"  Re-run with --execute to actually post the order.")
         return 0
 
-    # EXECUTE path
-    # Round the limit price UP to the market's tick grid (to lift the ask). The
-    # raw gamma midpoint is often off-grid (e.g. 0.935 on a 0.01-tick market) and
-    # gets rejected with "breaks minimum tick size rule". Lesson: 2026-05-31
-    # Satoshi entry bounced on the 0.935 midpoint. Buying → round UP so the limit
-    # is marketable against the resting ask.
-    import math
-    tick_dec = max(0, -int(round(math.log10(tick))))  # 0.01 → 2 decimals
-    buy_price = round(math.ceil(round(mark / tick, 6)) * tick, tick_dec)
-    # CLOB amount-precision rule: maker (USD) max 2 decimals. On fine-tick markets
-    # (0.001), a 3-dec limit price × integer shares gives a 3-dec maker → 400
-    # "invalid amounts" (bit the DEC-0038 entry 2026-06-12). Round the LIMIT up to
-    # the next 0.01 regardless of tick — still on-grid, FAK fills at the book's
-    # better resting prices, and integer shares × 2-dec price keeps maker/taker clean.
-    if tick_dec > 2:
-        buy_price = round(math.ceil(round(buy_price * 100, 6)) / 100, 2)
-    buy_price = min(buy_price, 0.99)  # never post above 0.99
+    # EXECUTE path.  A hard cap has to constrain what is SIGNED, not the Gamma
+    # midpoint or the ask observed before catalyst analysis.  Re-read the taker
+    # ask now, derive the precision-safe raw limit, and enforce --max-price with
+    # no network or analysis work between this check and order construction.
+    execution_reference = maker_px
+    if not args.maker:
+        fresh_ask = _best_ask(token)
+        if fresh_ask is None:
+            if args.max_price is not None:
+                print("\nDECISION: NEED_REVIEW — fresh live ask unavailable; "
+                      "cannot prove --max-price before execution")
+                return 1
+            fresh_ask = mark
+            print("  [execution recheck] live ask unavailable; using the already-gated ask")
+        elif abs(fresh_ask - mark) >= 0.001:
+            print(f"  [execution recheck] ask moved {mark:.4f} → {fresh_ask:.4f}")
+        execution_reference = fresh_ask
+    try:
+        buy_price = _single_buy_preflight(
+            execution_reference, tick, args.max_price, maker=args.maker)
+    except RuntimeError as exc:
+        print(f"\nDECISION: SKIP — hard price cap at execution: {exc}")
+        return 0
+    except ValueError as exc:
+        print(f"\nDECISION: NEED_REVIEW — invalid execution price: {exc}")
+        return 2
+
     order_flags = ["--order-type", "FAK"]
     if args.maker:
         # Maker-first entry (operator 2026-07-24: limit orders are everyday
@@ -1830,12 +1949,20 @@ def main() -> int:
         # notes/resting_orders.md). The price was computed BEFORE the robust
         # gate (single book fetch) so the gated and posted prices are the same
         # number; fee_per_share is already 0 on the maker path above.
-        buy_price = maker_px
         order_flags = ["--post-only"]  # GTC default; post-only rejects if it would cross
     # Integer shares × on-grid 2-dec price → clean maker (2-dec) / taker (int).
     # Fee-bearing markets: size shares off (price + fee) so the CASH outlay
     # (notional + exchange fee) stays within the deploy budget.
-    target_shares = max(1, round(deploy_dollar / (buy_price + fee_per_share)))
+    execution_fee_per_share = 0.0 if args.maker else pm_fees.fee_per_share(m, buy_price)
+    execution_cost = buy_price + execution_fee_per_share
+    target_shares = max(1, round(deploy_dollar / execution_cost))
+    execution_robust_ev = target_shares * (p_robust - execution_cost)
+    if p_robust <= execution_cost or execution_robust_ev <= OP_COST:
+        print("\nDECISION: SKIP — fresh signed execution price no longer clears the robust gate.")
+        print(f"  signed raw limit={buy_price:.4f}, fee/share={execution_fee_per_share:.4f}, "
+              f"effective={execution_cost:.4f}, p_robust={p_robust:.4f}, "
+              f"robust EV=${execution_robust_ev:+.2f}")
+        return 0
     clean_usd = round(target_shares * buy_price, 2)
     mode = "RESTING post-only BID (record in notes/resting_orders.md)" if args.maker else "taker FAK"
     print(f"\n# Executing BUY {target_shares} shares ({side}) @ {buy_price} (tick {tick}) for ${clean_usd} [{mode}]")

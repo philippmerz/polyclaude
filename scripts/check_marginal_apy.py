@@ -12,7 +12,9 @@ fetch and flags any whose marginal-yield-to-resolution APY falls below
 the hurdle. Prints a structured advisory; does NOT close anything.
 
 Two gates decide a flag, and BOTH matter (2026-08-14):
-  1. EXPECTED edge vs the hurdle — p/M, not the win-assumed carry (1-M)/M.
+  1. EXPECTED edge vs the hurdle — p/B, where B is the executable sell bid,
+     not the midpoint and not the win-assumed carry (1-M)/M. The midpoint is
+     retained as a display/prefilter only.
   2. EXIT-COST GATE — a flag is only actionable if acting beats not acting,
      so the depth-walked exit (net of taker fee, redeployed at the hurdle) is
      compared against holding to resolution at my own prior, with a materiality
@@ -113,11 +115,12 @@ PRIORS_PATH = Path(__file__).resolve().parent.parent / "notes" / "portfolio_kell
 # live markets charge 10%, 16% charge nothing — no single constant is right.
 import book_walk  # shared depth-walk primitive; see book_walk.py  # noqa: E402
 
-_EXIT_NET_ERR: dict[str, str] = {}   # slug -> why the exit-cost gate could not run
+_EXIT_NET_ERR: dict[str, str] = {}   # slug -> why the sell-side/exit gate could not run
 
 
-def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> float | None:
-    """Depth-walk the bid book and return net proceeds of exiting the FULL size.
+def _exit_quote(client: httpx.Client, slug: str, outcome: str,
+                size: float) -> dict | None:
+    """Return the executable touch bid and full-size net exit proceeds.
 
     2026-08-14. The flag branch below used to shout CLOSE_CANDIDATE on edge
     alone, with no notion of what closing costs — the same error class as
@@ -136,11 +139,18 @@ def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> flo
         outs = json.loads(m["outcomes"])
         bk = client.get("https://clob.polymarket.com/book",
                         params={"token_id": toks[outs.index(outcome)]}).json()
-        r = book_walk.realizable(bk.get("bids", []), float(size), m)
+        bids = bk.get("bids", [])
+        best_bid = max((float(level["price"]) for level in bids
+                        if float(level.get("size", 0) or 0) > 0), default=None)
+        r = book_walk.realizable(bids, float(size), m)
+        if best_bid is None:
+            _EXIT_NET_ERR[slug] = "empty bid book"
+            return None
         if r["gross"] <= 0:
             _EXIT_NET_ERR[slug] = "empty bid book"
             return None
-        return r["net"]
+        return {"best_bid": best_bid, "net": r["net"], "avg_fill": r["avg_fill"],
+                "unfilled": r["unfilled"]}
     except Exception as e:
         # Record WHY. A gate that silently fails to run is worse than no gate:
         # its absence looks exactly like a gate that ran and passed. Same class
@@ -148,6 +158,36 @@ def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> flo
         # run" when it had run and printed via its own error handler.
         _EXIT_NET_ERR[slug] = f"{type(e).__name__}: {str(e)[:60]}"
         return None
+
+
+def _exit_net(client: httpx.Client, slug: str, outcome: str, size: float) -> float | None:
+    """Compatibility wrapper for callers that only need net proceeds."""
+    quote = _exit_quote(client, slug, outcome, size)
+    return quote["net"] if quote is not None else None
+
+
+def _sell_side_signal(prior_p: float, midpoint: float, best_bid: float,
+                      days: float, hurdle_apy: float) -> dict:
+    """Classify a possible exit using the executable bid, never the midpoint.
+
+    The midpoint remains useful as a display of where the market is centered,
+    but a holder cannot sell there.  On a wide book, ``midpoint > prior`` while
+    ``best_bid < prior`` is not negative edge.  The bid-based expected APY also
+    controls the below-hurdle test so the same midpoint cannot merely relabel
+    the false alarm from NEGATIVE_EDGE to CLOSE_CANDIDATE.
+    """
+    midpoint_edge_apy = (prior_p / midpoint - 1.0) * 365.0 / days
+    bid_edge_apy = (prior_p / best_bid - 1.0) * 365.0 / days
+    negative_edge = prior_p < best_bid
+    below_hurdle = bid_edge_apy < hurdle_apy
+    return {
+        "midpoint_above_fair": prior_p < midpoint,
+        "midpoint_edge_apy": midpoint_edge_apy,
+        "bid_edge_apy": bid_edge_apy,
+        "negative_edge": negative_edge,
+        "below_hurdle": below_hurdle,
+        "would_flag": negative_edge or below_hurdle,
+    }
 
 
 def _resolve_wallet_address() -> str:
@@ -394,10 +434,9 @@ def main() -> int:
 
         # 2026-07-02 audit fix — EXPECTATION math, not win-assumed carry.
         # Gross carry (1-M)/M assumes the position always wins; the decision
-        # number is expected edge: E[value per $ held] = p/M, so
-        # expected_edge_apy = (p/M - 1) x 365/days, with p from the priors
-        # file. p < M means holding is NEGATIVE-EV at your own belief —
-        # flag regardless of hurdle. Gross carry is kept as a column only.
+        # display number is expected edge at the midpoint: p/M. A possible
+        # flag is then re-priced at the executable bid below; p/B decides the
+        # sell-side verdict. Gross carry is kept as a column only.
         # Gross carry (win-assumed) only means anything for bond-like marks;
         # EXPECTED edge (p/M - 1) is valid at ANY mark. 2026-07-16 fix: the
         # old `continue` on mark<0.5 silently dropped sub-0.5 legs (MacBook
@@ -436,9 +475,34 @@ def main() -> int:
         }
         if expected_edge_apy is not None:
             ack = _acked(slug, acked_holds)
+            # A coherent best bid cannot exceed the midpoint, so only midpoint
+            # candidates need a CLOB read.  This preserves the zero-book-call
+            # fast path for clear positions while ensuring that every actual
+            # sell recommendation is classified on an executable price.
             if prior_p < mark or expected_edge_apy < args.hurdle_apy:
-                # would-flag: NEGATIVE_EDGE (mark>prior) or below-hurdle
-                base = "NEGATIVE_EDGE" if prior_p < mark else "CLOSE_CANDIDATE"
+                quote = _exit_quote(hc, slug, outcome, size)
+                if quote is not None:
+                    best_bid = float(quote["best_bid"])
+                    signal = _sell_side_signal(
+                        prior_p, mark, best_bid, days, args.hurdle_apy)
+                    record["sell_bid"] = round(best_bid, 4)
+                    record["sell_bid_expected_edge_apy_pct"] = round(
+                        signal["bid_edge_apy"] * 100, 2)
+                    record["midpoint_above_fair"] = signal["midpoint_above_fair"]
+                    if not signal["would_flag"]:
+                        # Wide-book midpoint noise: retain midpoint in the row,
+                        # but do not turn an unavailable midpoint price into an
+                        # exit alert.
+                        record["verdict"] = "HOLD"
+                        holds.append(record)
+                        continue
+                    base = ("NEGATIVE_EDGE" if signal["negative_edge"]
+                            else "CLOSE_CANDIDATE")
+                else:
+                    # Do not silently fall back to the midpoint.  An unavailable
+                    # sell book means the advisory is unpriced and needs review,
+                    # not that a non-executable midpoint proved negative edge.
+                    base = "BID_UNAVAILABLE"
                 paired = _arb_paired(slug, priors_raw)
                 if paired:
                     record["verdict"] = (f"SET-ONLY HOLD ({base} on the leg): per-leg edge is "
@@ -458,7 +522,7 @@ def main() -> int:
                     # have resolved, versus hold to resolution at my own prior.
                     # Anything less (comparing edge to zero, or exiting at the
                     # mark) treats an illiquid book as a free door.
-                    net = _exit_net(hc, slug, outcome, size)
+                    net = quote["net"] if quote is not None else None
                     record["exit_net"] = round(net, 2) if net is not None else None
                     if net is not None:
                         redeployed = net * (1.0 + args.hurdle_apy * days / 365.0)
@@ -488,7 +552,7 @@ def main() -> int:
                         flips_at = None
                         # NB: not `hc` — that is the module's httpx client, and
                         # shadowing it here silently passed a float as the client
-                        # to every later _exit_net call, killing the gate for
+                        # to every later _exit_quote call, killing the gate for
                         # every position processed after the first flagged one.
                         for _haircut in (0.05, 0.10):
                             if redeployed > size * (prior_p - _haircut) + tick_noise:
@@ -550,7 +614,11 @@ def main() -> int:
         gross = r.get("gross_carry_apy_pct")
         gross_s = f"gross {gross:+.1f}%" if gross is not None else "non-bond mark"
         if r.get("expected_edge_apy_pct") is not None:
-            return f"E{r['expected_edge_apy_pct']:>+7.2f}% (p={r['prior_p']:.3f}, {gross_s})"
+            bid_edge = r.get("sell_bid_expected_edge_apy_pct")
+            bid_s = (f", bid E{bid_edge:+.2f}% @ {r['sell_bid']:.3f}"
+                     if bid_edge is not None else "")
+            return (f"mid E{r['expected_edge_apy_pct']:>+7.2f}%{bid_s} "
+                    f"(p={r['prior_p']:.3f}, {gross_s})")
         return f"gross {gross:>+7.2f}% (NO PRIOR)"
 
     print(f"# marginal-APY scan (EXPECTED-edge vs prior) @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")

@@ -1,5 +1,5 @@
 {
-  "next_id": 87,
+  "next_id": 88,
   "decisions": [
     {
       "id": 1,
@@ -1661,6 +1661,26 @@
         "funding"
       ],
       "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 87,
+      "timestamp": "2026-08-28T18:18:41Z",
+      "type": "scaffolding",
+      "thesis": "Periodic backlog review found four live safety gaps whose build gates had fired: the Lake America thesis depended on a direct Maps label that news keywords cannot observe; three economic positions are now inside 30 days and need daily probability re-derivation; a data-api 429 crashed the state audit on an error payload; and the latest Lake entry had to bypass the unified helper to enforce a hard raw-price cap. Added a fail-closed five-minute exact-label rollout signal through the deadline, daily short-clock prior rotation grouped by economic set, bounded positions-API retry/shape validation, and single-market --max-price rechecked on the signed fresh ask. Also corrected two pre-existing advisory defects: threshold siblings are labeled correctly and sell-side NEGATIVE_EDGE uses the executable bid, not midpoint.",
+      "confidence": "high",
+      "prediction": "Through the Aug-31 clock, any first exact Lake America label observed by the US-region probe fires one review alert without claiming majority rollout; a stale Lake/agreement/Duma prior on a later UTC date makes the state audit non-clean; a 429 or malformed position payload returns degraded rc=2 without writes; and any single-market buy whose refreshed signed price exceeds its cap submits no order. Wide-book midpoint-only negative-edge artifacts no longer become exit flags.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-01",
+      "tags": [
+        "monitoring",
+        "execution-safety",
+        "shortdated",
+        "backlog"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -6,6 +6,9 @@ import datetime as dt
 import sys
 from pathlib import Path
 
+import httpx
+import pytest
+
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
@@ -104,6 +107,7 @@ def test_main_returns_non_clean_when_set_is_broken(monkeypatch, capsys) -> None:
             "outcome": "Yes",
             "curPrice": 0.3,
             "asset": f"asset-{slug}",
+            "endDate": "2027-12-31",
         }
         for slug, size in (("range-a", 20), ("range-b", 19), ("range-c", 20))
     ]
@@ -131,3 +135,185 @@ def test_main_returns_non_clean_when_set_is_broken(monkeypatch, capsys) -> None:
     output = capsys.readouterr().out
     assert "SET_BROKEN" in output
     assert "position state CLEAN" not in output
+
+
+def test_short_dated_rotation_is_silent_for_fresh_lake_agreement_and_duma() -> None:
+    today = dt.date(2026, 8, 28)
+    duma_slugs = ("duma-295", "duma-310", "duma-325")
+    positions = [
+        {"slug": "lake-america", "endDate": "2026-08-31"},
+        {"slug": "iran-oman-agreement", "endDate": "2026-09-01T00:00:00Z"},
+        *({"slug": slug, "endDate": "2026-09-20"} for slug in duma_slugs),
+    ]
+    priors = {
+        "lake-america": {"verified": "2026-08-28"},
+        "iran-oman-agreement": {"verified": "2026-08-28"},
+        **{
+            slug: {
+                "verified": "2026-08-28",
+                "cluster": "duma-range",
+                "set_only": SET_LABEL,
+            }
+            for slug in duma_slugs
+        },
+    }
+
+    assert audit.short_dated_prior_issues(priors, positions, today=today) == []
+
+
+def test_short_dated_rotation_groups_stale_set_only_legs_once() -> None:
+    today = dt.date(2026, 8, 28)
+    duma_slugs = ("duma-295", "duma-310", "duma-325")
+    positions = [
+        {"slug": slug, "endDate": "2026-09-20"}
+        for slug in duma_slugs
+    ]
+    priors = {
+        slug: {
+            "verified": "2026-08-27",
+            "cluster": "duma-range",
+            "set_only": SET_LABEL,
+        }
+        for slug in duma_slugs
+    }
+
+    issues = audit.short_dated_prior_issues(priors, positions, today=today)
+
+    assert len(issues) == 1
+    assert "3 live row(s), 1 economic position(s)" in issues[0]
+    assert issues[0].count("set-only duma-range") == 1
+    assert "[3 set-only legs]" in issues[0]
+    assert "23d remaining" in issues[0]
+    assert "verified 1d ago" in issues[0]
+
+
+def test_short_dated_rotation_flags_missing_prior_but_ignores_far_date() -> None:
+    today = dt.date(2026, 8, 28)
+    positions = [
+        {"slug": "near-without-prior", "endDate": "2026-09-02"},
+        {"slug": "far-stale-prior", "endDate": "2026-12-31"},
+    ]
+    priors = {"far-stale-prior": {"verified": "2026-01-01"}}
+
+    issues = audit.short_dated_prior_issues(priors, positions, today=today)
+
+    assert len(issues) == 1
+    assert "near-without-prior" in issues[0]
+    assert "verified=None (missing/malformed)" in issues[0]
+    assert "far-stale-prior" not in issues[0]
+
+
+def test_short_dated_rotation_fails_safely_on_bad_live_dates() -> None:
+    positions = [
+        {"slug": "bad-date", "endDate": "soon-ish"},
+        {"slug": "missing-date"},
+    ]
+
+    issues = audit.short_dated_prior_issues(
+        {}, positions, today=dt.date(2026, 8, 28)
+    )
+
+    assert len(issues) == 1
+    assert "SHORT-DATED PRIOR CHECK DEGRADED" in issues[0]
+    assert "bad-date='soon-ish'" in issues[0]
+    assert "missing-date=None" in issues[0]
+    assert "cannot prove" in issues[0]
+
+
+def _response(status: int, payload: object, **headers: str) -> httpx.Response:
+    request = httpx.Request("GET", audit.POSITIONS_URL)
+    return httpx.Response(
+        status,
+        json=payload,
+        headers=headers,
+        request=request,
+    )
+
+
+def test_live_positions_retries_rate_limit_then_validates_success(monkeypatch) -> None:
+    responses = [
+        _response(429, "rate limited", **{"Retry-After": "0"}),
+        _response(200, [
+            {"slug": "live", "size": "2.5", "outcome": "Yes"},
+            {"slug": "dust", "size": "0.1"},
+        ]),
+    ]
+    sleeps: list[float] = []
+
+    monkeypatch.setattr(audit.httpx, "get", lambda *_args, **_kwargs: responses.pop(0))
+    monkeypatch.setattr(audit.time, "sleep", sleeps.append)
+
+    assert audit._live_positions() == [
+        {"slug": "live", "size": "2.5", "outcome": "Yes"}
+    ]
+    assert sleeps == [0.0]
+    assert responses == []
+
+
+def test_live_positions_rejects_error_payload_shape_without_attribute_error(
+    monkeypatch,
+) -> None:
+    calls = 0
+
+    def get(*_args, **_kwargs) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        return _response(200, "rate limited")
+
+    monkeypatch.setattr(audit.httpx, "get", get)
+    monkeypatch.setattr(audit.time, "sleep", lambda _seconds: None)
+
+    with pytest.raises(audit.LivePositionsUnavailable) as excinfo:
+        audit._live_positions()
+
+    assert calls == audit.POSITION_FETCH_ATTEMPTS
+    assert "unexpected JSON shape (str, expected list)" in str(excinfo.value)
+
+
+@pytest.mark.parametrize(
+    "row,match",
+    [
+        ({"size": "2.5", "outcome": "Yes"}, "missing/invalid slug"),
+        ({"slug": "live", "size": "2.5"}, "missing/invalid outcome"),
+        ({"slug": "live", "size": "NaN", "outcome": "Yes"}, "invalid size"),
+        (
+            {"slug": "live", "size": "2.5", "outcome": "Yes", "curPrice": "NaN"},
+            "invalid curPrice",
+        ),
+    ],
+)
+def test_live_positions_rejects_malformed_live_rows(
+    monkeypatch, row: dict, match: str
+) -> None:
+    monkeypatch.setattr(
+        audit.httpx,
+        "get",
+        lambda *_args, **_kwargs: _response(200, [row]),
+    )
+    monkeypatch.setattr(audit.time, "sleep", lambda _seconds: None)
+
+    with pytest.raises(audit.LivePositionsUnavailable, match=match):
+        audit._live_positions()
+
+
+def test_main_fails_closed_before_fix_writes_when_positions_unavailable(
+    monkeypatch, capsys
+) -> None:
+    def unavailable() -> list[dict]:
+        raise audit.LivePositionsUnavailable(
+            "data-api positions unavailable after 3 attempts (HTTP 429)"
+        )
+
+    monkeypatch.setattr(audit, "_live_positions", unavailable)
+    monkeypatch.setattr(
+        audit,
+        "_load",
+        lambda *_args, **_kwargs: pytest.fail("state reads must not start"),
+    )
+    monkeypatch.setattr(sys, "argv", ["position_state_audit.py", "--fix"])
+
+    assert audit.main() == 2
+    captured = capsys.readouterr()
+    assert "AUDIT DEGRADED" in captured.err
+    assert "HTTP 429" in captured.err
+    assert "no state files were changed" in captured.err

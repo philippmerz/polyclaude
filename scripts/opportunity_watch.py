@@ -18,6 +18,7 @@ Design (memory-safe by construction):
 
 Schedules:
   - every 300s: armed price triggers (notes/opportunity_triggers.json)
+  - every 300s: exact-label rollout signals (short-dated Google Maps catalysts)
   - every 900s: polymarket_consistency_scan (parse REAL-arb count)
   - every 900s (staggered +450s): event_monotonicity_scan (parse violations)
   - every 900s: new-listing watch (catalyst families: Gamescom, NYCC, ...)
@@ -36,12 +37,15 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import re
 import subprocess
 import sys
 import time
 from pathlib import Path
 
 import httpx
+
+from google_maps_label_check import LabelCheckError, check_google_maps_label
 
 REPO = Path(__file__).resolve().parent.parent
 SCRIPTS = REPO / "scripts"
@@ -109,11 +113,10 @@ def _telegram(text: str) -> None:
         _log(f"telegram failed: {e}")
 
 
-def _fire_tick(state: dict, why: str) -> None:
+def _fire_tick(state: dict, why: str) -> bool:
     if _now() - state.get("last_cron", 0) < CRON_FIRE_COOLDOWN:
         _log(f"cron-fire suppressed (cooldown): {why}")
-        return
-    state["last_cron"] = _now()
+        return False
     _log(f"FIRING tick: {why}")
     try:
         # Pass the REASON through (2026-07-28): daemon-fired ticks used to
@@ -126,9 +129,12 @@ def _fire_tick(state: dict, why: str) -> None:
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except Exception as e:
         _log(f"tick fire failed: {e}")
+        return False
+    state["last_cron"] = _now()
+    return True
 
 
-def _alert(state: dict, key: str, text: str, actionable: bool) -> None:
+def _alert(state: dict, key: str, text: str, actionable: bool) -> bool:
     _append_alert({"key": key, "text": text, "actionable": actionable})
     last = state.get("alerts", {}).get(key, 0)
     # Unchanged-payload dedupe (2026-07-16 audit): a persistently-true
@@ -144,7 +150,8 @@ def _alert(state: dict, key: str, text: str, actionable: bool) -> None:
         state.setdefault("alert_texts", {})[key] = text
         _telegram(f"[OPPWATCH] {text}")
     if actionable:
-        _fire_tick(state, key)
+        return _fire_tick(state, key)
+    return False
 
 
 # ---------- checks ----------
@@ -203,6 +210,109 @@ def check_price_triggers(state: dict) -> None:
             _alert(state, t["key"],
                    f"armed trigger CROSSED: {t['key']} at {px} ({t['op']} {t['level']}). {t.get('note','')}",
                    bool(t.get("actionable")))
+
+
+def _expiry_epoch(value: str) -> int:
+    """Parse an explicit UTC trigger cutoff; invalid config fails closed."""
+    parsed = dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
+    if parsed.tzinfo is None:
+        raise ValueError("expires_at must include a timezone")
+    return int(parsed.timestamp())
+
+
+def _daemon_process_pattern() -> str:
+    """Match only this daemon's canonical absolute start command.
+
+    A broad ``pgrep -f 'opportunity_watch.py start'`` also matches an invoking
+    shell whose command text happens to contain that phrase. During a restart
+    that caused ``stop`` to signal its own parent shell. The keepalive already
+    requires this exact absolute command, so status/stop should use it too.
+    """
+    command = f"{PY} {Path(__file__).resolve()} start"
+    return f"^{re.escape(command)}$"
+
+
+def check_google_maps_labels(state: dict) -> None:
+    """Watch an exact Maps label as a one-response rollout signal.
+
+    This intentionally does not infer majority-US rollout or market resolution.
+    It fires one review tick, once, so that a human/agent can recheck multiple
+    clients and credible reporting against the literal market criteria.
+    """
+    try:
+        trigs = json.loads(TRIGGERS_PATH.read_text())
+    except Exception as e:
+        _log(f"triggers file unreadable (Google Maps labels): {e}")
+        return
+
+    observed = state.setdefault("google_maps_label_hits", {})
+    expired = state.setdefault("google_maps_label_expired", {})
+    for t in trigs:
+        if t.get("kind") != "google_maps_label":
+            continue
+        key = t["key"]
+        prior_hit = observed.get(key)
+        if prior_hit is not None:
+            # Alert/Telegram dedupe must not also discard the promised review
+            # tick. The global 90-minute cooldown can suppress the first
+            # dispatch when another trigger fired recently, so retain a small
+            # persistent pending flag and retry only the tick on later polls.
+            if prior_hit.get("review_tick_pending") and _fire_tick(state, key):
+                prior_hit["review_tick_pending"] = False
+                prior_hit["review_tick_dispatched"] = _now()
+            continue
+        try:
+            expires_at = t["expires_at"]
+            if _now() >= _expiry_epoch(expires_at):
+                if expired.get(key) != expires_at:
+                    expired[key] = expires_at
+                    _log(f"Google Maps label watch '{key}' expired {expires_at}")
+                continue
+            result = check_google_maps_label(
+                query=t["query"],
+                target_label=t["target_label"],
+                control_label=t["control_label"],
+                region=t.get("region", "us"),
+                language=t.get("language", "en"),
+            )
+            state.setdefault("trig_fails", {}).pop(key, None)
+        except (KeyError, ValueError, LabelCheckError) as e:
+            # Fail closed: an HTTP, consent, schema, or config error can never
+            # become a positive rollout observation. Reuse the daemon's
+            # persistent failure/alert state so prolonged blindness is visible.
+            fails = state.setdefault("trig_fails", {})
+            fails[key] = fails.get(key, 0) + 1
+            if fails[key] % 6 == 0:
+                _log(f"Google Maps label watch {key} failing x{fails[key]}: {e}")
+            if fails[key] == 12:
+                _alert(
+                    state,
+                    f"trig-blind-{key}",
+                    f"Google Maps label watch '{key}' has been BLIND for ~1h "
+                    f"(request/consent/schema failures) — no rollout inference made.",
+                    actionable=False,
+                )
+            continue
+
+        if not result.rollout_signal:
+            continue
+        text = (
+            f"Google Maps US-region rollout SIGNAL: exact label "
+            f"'{result.target_label}' appeared {result.target_count} time(s) in one "
+            f"response for '{result.query}'. This is NOT proof of majority-US rollout "
+            f"or market resolution; recheck independent US clients/reporting and the "
+            f"criteria before acting. {t.get('note', '')}"
+        )
+        actionable = bool(t.get("actionable", True))
+        tick_dispatched = _alert(state, key, text, actionable)
+        observed[key] = {
+            "first_seen": _now(),
+            "target_count": result.target_count,
+            "control_count": result.control_count,
+            "review_tick_pending": actionable and not tick_dispatched,
+        }
+        if tick_dispatched:
+            observed[key]["review_tick_dispatched"] = _now()
 
 
 def check_new_listings(state: dict) -> None:
@@ -425,6 +535,7 @@ def poll_loop() -> int:
             if now - last.get("price", 0) >= PRICE_EVERY:
                 last["price"] = now
                 check_price_triggers(state)
+                check_google_maps_labels(state)
             if now - last.get("listings", 0) >= LISTING_EVERY:
                 last["listings"] = now
                 check_new_listings(state)
@@ -463,7 +574,7 @@ def main() -> int:
         pidfile = REPO / "logs" / "opportunity_watch.pid"
         pids = []
         try:
-            out = subprocess.run(["pgrep", "-f", "opportunity_watch.py start"],
+            out = subprocess.run(["pgrep", "-f", _daemon_process_pattern()],
                                  capture_output=True, text=True, timeout=10).stdout
             pids = [int(x) for x in out.split() if x.strip().isdigit() and int(x) != os.getpid()]
         except Exception:
@@ -488,6 +599,7 @@ def main() -> int:
     if mode == "once":
         state = _load_state()
         check_price_triggers(state)
+        check_google_maps_labels(state)
         check_new_listings(state)
         run_pair_arb(state)
         run_consistency(state)
