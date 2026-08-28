@@ -89,8 +89,14 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 - `decisions.py` — append-only decision tracker with calibration-delta + outcome + lesson.
 
 ### Operator-loop infra
-- `operator_followup.sh` / `cancel_followup.sh` — delayed continuation prompts via nohup-sleep + PID tracking and the durable operator queue.
-- `inject_prompt.sh` — unified ordered-queue path for cron / followup / news_watcher prompts.
+- Scheduled cron/periodic prompts carry a durable Codex ROI-goal contract: continuation turns remain
+  active until the user manually cancels the goal. This replaces the provider-specific Claude
+  `UserPromptSubmit` hook lost in the 2026-08-26 runtime migration.
+- `operator_followup.sh` / `cancel_followup.sh` — legacy one-shot delayed continuation fallback via
+  nohup-sleep + PID tracking for runtimes without durable-goal support.
+- `inject_prompt.sh` — unified ordered-queue path for cron / followup / news_watcher prompts; appends
+  the durable-goal contract to scheduled in-chat seeds and never auto-cancels merely because the last
+  reply was idle.
 - `operator_start.sh` — idempotent starter for the single long-lived operator session.
 - `telegram.py` / `telegram_listener.py` — operator interface.
 

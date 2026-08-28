@@ -8,11 +8,15 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 ## Active
 
-> **End-of-turn discipline (2026-05-08+).** If the current thread isn't fully resolved, run:
+> **Continuation discipline (updated 2026-08-28 for Codex).** Every scheduled cron/periodic prompt
+> carries an explicit durable-goal contract. Keep that ROI goal active through automatic continuation
+> turns; a quiet tick is not a completion condition. Only the user manually cancels the goal. For a
+> runtime without durable-goal support, use the legacy one-shot fallback:
 > ```bash
 > ./scripts/operator_followup.sh "anything else on <topic>?" 20
 > ```
-> The auto-followup fires after 20 min and re-injects via `inject_prompt.sh`. When the thread is fully resolved, run `./scripts/cancel_followup.sh` to stop the loop. Periodic 6/10/18/22 UTC cron checks ("anything else to take care of?") catch anything I miss between turns.
+> It fires after 20 min via `inject_prompt.sh`; `cancel_followup.sh` cancels that legacy timer. Periodic
+> 6/10/18/22 UTC cron checks remain the host-level backstop.
 
 - **2026-09-01..10 [Duma 295–339 range — independent forecast/add gate]** — DEC-0083 holds 20 equal YES shares in 295–309 / 310–324 / 325–339, cost 0.57 per covered payout dollar. Current union p=0.76 rests materially on one APEK model repeated by multiple outlets; 2021 model error keeps the 340+ tail live. Search for a genuinely independent early-September seat forecast. Add equal shares toward at most 34 total only if independent evidence keeps P(295–339) ≥0.75, total live ask ≤0.57, all three legs remain equal/FOK-executable, and the entry helper's union gate clears. Otherwise hold the 20-share set through Sep-20. Never add, trim, or exit one leg independently.
 

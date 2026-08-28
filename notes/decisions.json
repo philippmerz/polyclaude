@@ -1,5 +1,5 @@
 {
-  "next_id": 88,
+  "next_id": 89,
   "decisions": [
     {
       "id": 1,
@@ -1679,6 +1679,26 @@
         "execution-safety",
         "shortdated",
         "backlog"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 88,
+      "timestamp": "2026-08-28T20:22:10Z",
+      "type": "scaffolding",
+      "thesis": "The 02/14 UTC check-ins and 06/10/18/22 periodic crons were intact, but the Aug-26 Claude-to-Codex migration removed the UserPromptSubmit hook that had armed one-shot continuations. No Codex goal replaced it, leaving zero active goals and no follow-up PID after successful Aug-28 prompts. Make Codex's durable in-chat ROI goal canonical, append an explicit create-or-continue/manual-cancel-only contract to every scheduled queue seed, remove the legacy idle auto-skip, and retain the one-shot script only as a fallback.",
+      "confidence": "high",
+      "prediction": "The current thread reports an active durable ROI goal immediately; future queued Cron tick/Periodic check prompts contain the continuation contract; quiet turns do not auto-cancel it; and no literal --help follow-up can be scheduled. The next successful scheduled prompt continues or recreates the goal if the user had manually canceled it.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-08-29",
+      "tags": [
+        "scheduling",
+        "continuation",
+        "codex-migration",
+        "reliability"
       ],
       "slug": null,
       "outcome": null,

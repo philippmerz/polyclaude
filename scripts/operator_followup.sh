@@ -16,8 +16,23 @@
 
 set -euo pipefail
 
+usage() {
+    echo "usage: operator_followup.sh '<prompt>' [delay_min]"
+}
+
+case "${1:-}" in
+  -h|--help)
+    usage
+    exit 0
+    ;;
+esac
+
 PROMPT="${1:?usage: operator_followup.sh '<prompt>' [delay_min]}"
 DELAY="${2:-20}"
+if [[ ! "${DELAY}" =~ ^[1-9][0-9]*$ ]]; then
+    echo "ERROR: delay_min must be a positive integer" >&2
+    exit 2
+fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 PID_FILE="${POLYCLAUDE_DIR}/notes/.followup_pid"
@@ -40,7 +55,7 @@ fi
 
 # Schedule new followup via background sleep+inject. Quoted carefully to handle
 # arbitrary text in PROMPT (the inject script takes one positional arg).
-DELAY_SEC=$((DELAY * 60))
+DELAY_SEC=$((10#${DELAY} * 60))
 nohup bash -c "sleep $DELAY_SEC && '$SCRIPT_DIR/inject_prompt.sh' \"\$1\"" \
     _ "$PROMPT" >/dev/null 2>&1 &
 new_pid=$!

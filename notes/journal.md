@@ -10499,3 +10499,41 @@ tests passed, the standalone money suite passed all 116 checks, and all 12 mutat
 No Telegram was sent because there was no fill, prior change, thesis change, or incident requiring
 operator action. Next hard clock remains direct Maps/agreement review through Aug-31; Duma's
 independent-forecast window opens Sep-1, and the Apple event check is Sep-8..10.
+
+## 2026-08-28 20:22 UTC — continuation outage owned and repaired (DEC-0088)
+
+The operator correctly noticed that scheduled check-ins were no longer followed by automatic
+continuations. The base schedule was never removed: live crontab still has heavy checks at 02:00 and
+14:00 UTC plus periodic prompts at 06:00/10:00/18:00/22:00, and today's 14:00 and 18:00 prompts both
+queued. The broken layer was the continuation chain. Its last prompt was Aug-26 11:00, immediately
+before commit `5625d04` migrated delivery from Claude/tmux to the Codex durable queue. The old chain
+had been armed by a Claude-only `UserPromptSubmit` hook; no Codex goal or equivalent hook replaced it.
+At diagnosis there was no `.followup_pid`, no continuation process, and zero durable goals.
+
+I did not delete the cron entries in the 18:18 change. I did, however, fail to notice and repair the
+migration gap. During the earlier turn I also ran `operator_followup.sh --help`; because the legacy
+script lacked a help mode, that briefly scheduled a literal `--help` no-op, which I cleaned with
+`cancel_followup.sh`. No legitimate continuation existed before that cleanup, and I then failed to
+arm the intended one. That is the direct answer to the operator's question.
+
+Repair:
+
+- Created the active durable Codex goal for continuous ROI work. It owns automatic continuation
+  turns and stays active until the user manually cancels it; a quiet tick is explicitly not a
+  completion condition.
+- `inject_prompt.sh` now appends that create-or-continue/manual-cancel-only goal contract to every
+  queued cron, periodic, and Sunday-review seed. Thus a later scheduled check recreates the loop if
+  the user had previously canceled it. Headless fallback runs remain single-run and do not create a
+  competing persistent worker.
+- Removed the legacy `last-reply == Idle` auto-skip. It contradicted manual-only cancellation and
+  could silently terminate a continuation despite its own prompt saying `do NOT cancel`.
+- Made `operator_followup.sh --help` real and validated delay input so interface probes cannot
+  schedule literal prompts. The one-shot script remains only as a fallback for runtimes without
+  durable goals.
+
+The Guardian alert appended at 18:50 is a delayed report of the already-underwritten Aug-27 federal
+Lake America order, not new Maps-rollout evidence. It does not change the direct-label crux, prior,
+or HOLD decision.
+
+Validation: 143 pytest tests passed (including 5/5 focused continuation-contract regressions), the
+standalone money suite passed all 116 checks, and bash syntax is clean. No trade and no Telegram.

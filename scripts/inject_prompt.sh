@@ -16,30 +16,30 @@ POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 RUNNER="${POLYCLAUDE_AGENT_RUNNER:-${HOME}/.local/bin/polyclaude-agent}"
 LOG="${POLYCLAUDE_DIR}/notes/inject_log.md"
 
+# Scheduled in-chat work must restore the durable ROI goal if a prior operator
+# explicitly cancelled it.  The Codex goal owns continuation turns; the host
+# queue only delivers the scheduled seed prompt.  Keeping this contract here
+# covers both daily_checkin.sh and the lighter direct-cron prompts without
+# relying on a provider-specific prompt hook (the Claude hook disappeared in
+# the 2026-08-26 runtime migration, silently orphaning continuations).
+QUEUE_PROMPT="${PROMPT}"
+GOAL_CONTRACT_APPENDED=0
+case "${PROMPT}" in
+  "Cron tick "*|"Periodic check:"*|"Sunday weekly long-term review."*)
+    QUEUE_PROMPT="${PROMPT}
+
+CONTINUATION CONTRACT: This is a scheduled in-chat run. Before substantive work, inspect this thread's durable goal. If no goal is active, create one whose objective is to keep operating polyclaude for maximum expected ROI through automatic continuation turns after this check-in. If a goal is already active, continue it. Do not mark the goal complete or cancel it merely because this tick is quiet; it stays active until the user manually cancels it."
+    GOAL_CONTRACT_APPENDED=1
+    ;;
+esac
+
 if [[ ! -x "${RUNNER}" ]]; then
     echo "ERROR: operator runtime is unavailable" >&2
     exit 127
 fi
 
-# For recurring continuation/meta-reflection checks only, preserve the
-# skip-if-idle behavior. Detection is best-effort and fail-open.
-case "${PROMPT}" in
-  "Continuation check:"*|"Meta-reflection cycle:"*)
-    last_reply="$("${RUNNER}" last-reply --workdir "${POLYCLAUDE_DIR}" 2>/dev/null || true)"
-    if printf '%s' "${last_reply}" | grep -qiE '^idle'; then
-        {
-            echo ""
-            echo "## $(date -u +%Y-%m-%dT%H:%M:%SZ) — inject SKIPPED (operator idle; auto-cancel)"
-            echo "${PROMPT}"
-        } >> "${LOG}"
-        echo "skipped (operator idle): continuation/meta check not queued"
-        exit 0
-    fi
-    ;;
-esac
-
 QUEUE_RC=0
-printf '%s' "${PROMPT}" | "${RUNNER}" queue --workdir "${POLYCLAUDE_DIR}" || QUEUE_RC=$?
+printf '%s' "${QUEUE_PROMPT}" | "${RUNNER}" queue --workdir "${POLYCLAUDE_DIR}" || QUEUE_RC=$?
 if (( QUEUE_RC != 0 )); then
     {
         echo ""
@@ -54,6 +54,9 @@ fi
     echo ""
     echo "## $(date -u +%Y-%m-%dT%H:%M:%SZ) — inject QUEUED"
     echo "${PROMPT}"
+    if (( GOAL_CONTRACT_APPENDED )); then
+        echo "[durable ROI-goal continuation contract appended to queued prompt]"
+    fi
 } >> "${LOG}"
 
 echo "queued. logged to ${LOG}"
