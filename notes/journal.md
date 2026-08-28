@@ -10694,3 +10694,44 @@ passed/caught as intended; 80 focused monotonicity/Kalshi cases, byte-compilatio
 also passed. No capital moved and no Telegram was sent. The next hard clocks remain Aug-31 and the
 early-September Duma independent-forecast gate. The durable ROI continuation stays active until the
 operator manually cancels it.
+
+## 2026-08-28 23:10 UTC — periodic continuation: three price gates banked; HIP-4 premise updated; no trade (DEC-0094)
+
+The standard checks remained quiet. The live monotonicity pass inspected 985 multi-market events;
+the Claude Arena and Fed midpoint anomalies walked to -8.58pp and -0.57pp at five shares, leaving
+zero executable arbitrages. Fifteen Polymarket positions cost $165.68, marked $170.49, and could be
+depth-walked to $163.00 net, so midpoint still overstates realizable value by $7.48. Marginal APY had
+zero action flags, both protected groups remained holds, and there were no redeemables or overdue
+decisions. The exact Maps probe again returned target `Lake America` 0 / control `Lake Ontario` 2,
+and the validated HLE source diff remained live, covered, and unchanged since Jan-15.
+
+The 22:54 CENTCOM/CBS Hormuz alert was verified but does not satisfy either exact predicate. CENTCOM
+reported mine clearance and open shipping lanes; the Iran–Oman contract requires both governments
+to declaratively accept the same traffic-management agreement. Oman's latest official text still
+calls the corridor framework proposed, says technical negotiations continue, and says an
+announcement is hoped for soon (`https://www.fm.gov.om/en/53722/`). The 31 agreement YES shares
+therefore remain HOLD/no-add at p_yes 0.09: the live 0.04 whole-position exit returns $1.24 versus
+$2.79 resolution EV. The separate traffic-normal NO is already economically closed (0.003571 dust),
+and the named PortWatch series remains nowhere near its ≥60 criterion (latest seven-day mean 5.0).
+
+HIP-4's old depth premise was stale, but the trade gate still is not met. Mainnet exposes eight
+active outcome IDs and substantial BTC activity; sampled BTC YES near-touch depth was about
+$209/$618. Yet the active Hyperliquid binaries settle against fixed daily targets and an
+interpolated HyperCore mark at 06:00, while superficially similar Polymarket contracts use a
+different Binance comparison window or 16:00 settlement. Exact rule-identical pairs: zero.
+DEC-0094 replaces “wait for TVL” with “wait for resolution identity”; a full CLOB scanner and any
+trade remain deferred, with `outcomeMeta` sufficient as the lightweight discovery surface.
+
+The only ungated discretionary backlog was the wider long-term seed batch. Fresh full checks on UNI,
+HUT and AVAV all returned 2/4 PASS, joining ALB: the secular stories are credible, but current prices
+lack bottom-of-cycle margin of safety. No entry at UNI $4.66, HUT about $85, or AVAV about $152.
+Conditional alerts are now machine-readable at UNI ≤$3.25 plus verified fee/share retention, HUT
+≤$50 plus delivery/financing proof, and AVAV ≤$110 plus maintained/raised Sept-9 guidance and ≥$1.2B
+funded backlog. The stale “rewards check first” backlog item was removed because the Aug-25 reward
+study already superseded it; the obsolete Aug-1 HLE candidate pass was also removed because the
+live cluster entry and universe monotonicity scan now cover its remaining work.
+
+No capital moved and no Telegram was sent: none of the findings crossed an action gate. The next
+hard clocks remain Aug-31 Lake/agreement resolution and redemption, the Sep-1..10 independent Duma
+forecast, and Apple/AVAV on Sep-8..10. The durable ROI continuation remains active until the operator
+manually cancels it.

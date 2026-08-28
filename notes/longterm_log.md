@@ -784,3 +784,194 @@ Strong. YTM at 5.28% provides meaningful income cushion vs equity risk-free rate
 - [Fed Rate Projections 2026](https://www.federalreserve.gov/monetarypolicy/fomcminutes20260617.htm)
 - [Bond Market Valuation June 2026](https://www.advisorperspectives.com/dshort/updates/2026/07/07/market-valuation-inflation-treasury-yields-april-2026)
 ```
+
+---
+
+## 2026-08-28T23:03:16Z — longterm_check
+
+**Query:** `Uniswap (UNI)` (crypto, 1y horizon)
+
+## LONGTERM CHECK: Uniswap (UNI)
+
+Date: 2026-08-28 | Type: crypto | Horizon: 1y
+
+### Current state
+
+UNI closed at **$4.66** today, versus about **$10.05** one year ago (**~−54%**); 52-week range was **$2.28–$10.34**, so it is 55% below the high but 104% above June’s low. Circulating market cap is roughly **$2.9B**, FDV about **$4.1B**, and Uniswap TVL about **$3.4B** (market-cap/TVL ~0.8x). There are no issuer “earnings”; protocol fees burn UNI, with June fees of $5.1M and early post-v4 revenue reported near $325k/day—an unseasoned ~$61M–$119M annualized fee/burn run-rate.
+
+### Cyclical position
+
+**Late bear / early recovery, not an unambiguous bottom.** UNI reached $2.28 in June, its deepest drawdown from the 2021 peak, then rallied above $4.60; it remains down ~54% YoY and ~90% from the $44.97 ATH. However, $4.66 is already more than 2x the June trough, while July spot-DEX volumes fell 9.8% to $176B—the lowest since September 2024. This is depressed relative to history, but not a clean capitulation entry.
+
+### Secular tailwind
+
+On-chain trading’s structural share remains intact: spot DEX share rose from 6.9% in January 2024 to 13.6% in January 2026, while Uniswap processed about **$47.3B** over the last 30 days across 47 chains. v4 Permissioned Pools target regulated tokenized funds/securities with launch partners Superstate, Securitize, and Dowgo. The trend is real, but Uniswap must retain share against Solana, PancakeSwap, Hyperliquid, and CEXs.
+
+### Catalyst window
+
+- [MED] 2026-Q4 — First full-quarter evidence that the **July 27 v4 fee activation** sustains higher burn-bound revenue without liquidity loss; this is a validation catalyst, not a new launch.
+- [MED] 2026-H2/2027 — SEC’s proposed crypto-asset framework, announced August 19, could improve US operating clarity; timing and substance remain uncertain.
+- [LOW] 2026-H2 — Permissioned Pool production volume from tokenized-asset issuers; product launched July 23, but no committed volume or adoption milestones are public.
+
+### Margin of safety
+
+**Weak.** UNI has a dominant protocol and no active inflation; ~100M UNI was burned from treasury and protocol fees now drive further burns. But UNI holders have **no pro-rata claim on revenue**, only an indirect burn mechanism; the DAO can mint up to 2% annually, and its treasury is not token-holder asset backing. At roughly 24–47x volatile annualized protocol-fee run-rate, the valuation has no hard floor if volume or fee capture falls.
+
+### Top 3 risks
+
+1. **Token-value capture fails** — burn rates can fade or be offset by treasury spending/minting; UNI is not equity or a revenue-share claim.
+2. **Liquidity and volume migrate** — protocol fees may reduce LP economics, while Uniswap competes with cheaper/faster Solana venues, PancakeSwap, aggregators, and CEXs.
+3. **Regulatory/compliance friction** — US rules remain proposed, and regulated-asset adoption may favor permissioned intermediaries rather than open AMMs.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 5%
+- Strong (3-5x): 18%
+- Modest (1.5-3x): 25%
+- Flat (-30% to +50%): 30%
+- Thesis broken (-50%+): 22%
+
+### Entry trigger
+
+**Do not enter at $4.66.** Revisit on a dip below **$3.25** only if the post-v4 90-day burn-bound revenue remains at least **$100M annualized** and Uniswap retains material DEX-volume share; alternatively enter on verified two-quarter evidence of sustained v4/Permissioned Pool fee growth at or below a ~$3B circulating market cap.
+
+### Verdict: 2/4 — PASS
+
+Cyclical discount and secular on-chain-trading adoption are strong, but the fee-switch catalyst is largely executed and UNI lacks a true margin of safety or direct cash-flow claim.
+
+### Sources
+
+- [UNI price history — OKX](https://www.okx.com/en-us/price-history/uniswap-uni)
+- [UNI 52-week performance — Barchart](https://www.barchart.com/crypto/quotes/%5EUNIUSD/performance)
+- [UNI market cap, supply and TVL — CoinMarketCap](https://coinmarketcap.com/currencies/uniswap/)
+- [Uniswap protocol fees and burn mechanics](https://developers.uniswap.org/docs/protocols/protocol-fee/overview)
+- [v4 protocol-fee activation proposal](https://gov.uniswap.org/t/temp-check-activate-v4-protocol-fees/26162)
+- [DEX/CEX trading activity report — CoinGecko](https://www.coingecko.com/research/publications/cex-dex-trading-activity-report-2026)
+- [Permissioned Pools — Uniswap](https://blog.uniswap.org/es-ES/introducing-permissioned-pools-on-uniswap-v4)
+- [SEC proposed crypto-asset regulation](https://www.sec.gov/about/sec-proposes-regulation-crypto-assets)
+
+---
+
+## 2026-08-28T23:06:59Z — longterm_check
+
+**Query:** `Hut 8 (HUT)` (equity, 2y horizon)
+
+## LONGTERM CHECK: Hut 8 (HUT)
+
+Date: 2026-08-28 | Type: equity | Horizon: 2y
+
+### Current state
+
+~$85/share; 52-week range $24.20–$140.80; ~+221% versus $26.51 on 2025-08-28. Market cap is roughly $10.5B; Q2 revenue was $74.9M and adjusted EBITDA $10.4M, so this is priced on future AI-campus cash flows, not current earnings.
+
+### Cyclical position
+
+Not a depressed-cycle entry. Bitcoin weakened materially—$87,498 at 2025 year-end to $59,847 at 2026-06-30—and Hut’s Q2 revenue per Bitcoin mined fell 27% YoY to ~$71,905. Yet HUT has already re-rated more than 3x from the 52-week low on announced AI leases. It is ~40% below its high, but still in an early, highly valued AI-infrastructure commercialization phase rather than a multi-year valuation bottom.
+
+### Secular tailwind
+
+Strong and intact: power-constrained AI data-center demand. Hut has 949 MW of contracted IT capacity under 15-year triple-net leases, with management estimating $26.6B of base-term value and >$1.75B of annual NOI once delivered. Microsoft alone expects roughly $190B of calendar-2026 capex, supporting the broader demand backdrop. This is real contracted demand, though the NOI figures are management projections rather than current operating results.
+
+### Catalyst window
+
+- [HIGH] 2027-Q2 — River Bend target initial delivery/commissioning: 245 MW, 15-year lease, Google-backed payment obligations; Hut projects $454M annual NOI. — [Hut 8 presentation](https://cdn.sanity.io/files/2iccs2ie/production/74dafa6a767521164785b89851724f92f869c293.pdf)
+- [HIGH] 2027-Q3 — Beacon Point Phase 1 target delivery: 352 MW; projected $655M annual NOI. Its $4.25B construction notes are non-recourse to Hut 8. — [Hut 8 Q2 presentation](https://cdn.sanity.io/files/2iccs2ie/production/bf8317f4f7ce531812827f719719ba6dbba456d6.pdf)
+- [MED] 2028-Q2 — Beacon Point Phase 2 initial delivery: another 352 MW and projected $655M annual NOI; financing still needs to be secured. — [Hut 8 10-Q](https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm)
+
+### Margin of safety
+
+Weak at the current price. At June 30, Hut held ~$1.04B of digital assets, including 9,376 BTC in custody worth $561M, and $234M unrestricted cash; against this, market cap is ~$10.5B and parent equity was $1.44B. $7.5B of River Bend/Beacon Point Phase 1 debt is ring-fenced and non-recourse, which materially limits parent-level liability, but it does not make the equity cheap. Current adjusted EBITDA remains only $10.4M per quarter.
+
+### Top 3 risks
+
+1. Construction or commissioning delay — the valuation assumes 2027–28 delivery; slippage postpones projected NOI while costs and interest accrue.
+2. AI-campus economics/financing risk — Beacon Point Phase 2 remains to be financed, and projected NOI is not yet operating cash flow.
+3. Bitcoin/mining drawdown — Q2 included a $138.6M digital-asset loss; mining remains a meaningful earnings driver and Bitcoin weakness can impair liquidity, sentiment, and capital access.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 2%
+- Strong (3-5x): 12%
+- Modest (1.5-3x): 20%
+- Flat (-30% to +50%): 28%
+- Thesis broken (-50%+): 38%
+
+### Entry trigger
+
+No entry now. Reconsider only at ≤$50/share (roughly a 40% discount to current price) while River Bend remains on schedule and Beacon Point Phase 2 financing is secured; alternatively, wait for on-time River Bend commissioning in 2027-Q2 and validate actual lease cash receipts.
+
+### Verdict: 2/4 — PASS
+
+AI demand and identifiable delivery catalysts are strong, but HUT is neither at a cyclical valuation bottom nor protected by a sufficient margin of safety at ~$85.
+
+### Sources
+
+- [Hut 8 stock information](https://www.hut8.com/investors/stock-info)
+- [Hut 8 Q2 2026 results](https://www.hut8.com/news-insights/press-releases/hut-8-reports-second-quarter-2026-results)
+- [Hut 8 Q2 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm)
+- [Hut 8 Q2 2026 earnings presentation](https://cdn.sanity.io/files/2iccs2ie/production/bf8317f4f7ce531812827f719719ba6dbba456d6.pdf)
+- [Microsoft FY2026 Q3 earnings call](https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3)
+
+---
+
+## 2026-08-28T23:09:03Z — longterm_check
+
+**Query:** `AeroVironment (AVAV)` (equity, 2y horizon)
+
+## LONGTERM CHECK: AeroVironment (AVAV)
+
+Date: 2026-08-28 | Type: equity | Horizon: 2y
+
+### Current state
+
+$152.28 at the latest completed close (Aug. 27); 52-week range $135.20–$417.86, 1-year return -40.65%. Implied EV is roughly $7.8B, or ~32x trailing EBITDA / ~25x FY27 guided EBITDA midpoint—not distressed valuation. [Price history](https://chartexchange.com/symbol/nasdaq-avav/historical/) · [Performance](https://www.marketbeat.com/stocks/NASDAQ/AVAV/chart/) · [Valuation](https://valueinvesting.io/AVAV/valuation/ev_ebitda-multiples)
+
+### Cyclical position
+
+Mid-cycle operationally, post-de-rating in the equity. The stock is 64% below its 52-week high and only 13% above its low, but industry demand is expanding rather than at a cyclical trough: DoD has proposed more than $74B for drones and related technology in FY2027. AV’s FY27 revenue guide is only 7%–13% growth after acquisition-driven FY26 growth, while the entry valuation remains ~25x guided EBITDA. This is an execution/multiple reset, not a proven industry-cycle bottom. [FY26 results](https://investor.avinc.com/news-releases/news-release-details/aerovironment-announces-fiscal-2026-fourth-quarter-and-fiscal) · [DoD drone-spending proposal](https://apnews.com/article/ad774d2d427b70d09752ddfba277a42a)
+
+### Secular tailwind
+
+Intact and accelerating: low-cost autonomous strike, counter-UAS, electronic warfare, and sensor/space systems are becoming core procurement priorities. AV’s $4.1B BlueHalo combination broadened it beyond tactical drones, and management targets $3.5B–$4.0B FY2030 revenue with 15%–20% organic CAGR. Evidence is strong, though management targets remain unproven. [FY2030 targets](https://investor.avinc.com/news-releases/news-release-details/aerovironment-inc-highlights-growth-strategy-and-unveils-fiscal) · [BlueHalo rationale](https://investor.avinc.com/news-releases/news-release-details/aerovironment-acquire-bluehalo-establishing-next-generation)
+
+### Catalyst window
+
+- [HIGH] 2026-Q3 — FY27 Q1 earnings, Sept. 9: first proof point for $2.125B–$2.225B revenue and $305M–$325M EBITDA guidance. [Event](https://investor.avinc.com/events/event-details/aerovironment-inc-first-quarter-fiscal-year-2027-earnings-call)
+- [MED] 2026-Q4–2027 — FY2027 U.S. appropriations: a funded version of the proposed >$74B drone/counter-drone spend would enlarge AV’s addressable procurement pool. [AP reporting](https://apnews.com/article/ad774d2d427b70d09752ddfba277a42a)
+- [MED] 2026–2028 — Production follow-ons under the Army’s five-year, $990M Lethal Unmanned Systems IDIQ; AV received a $51M Switchblade 600 order on Aug. 26. [Contract release](https://investor.avinc.com/news-releases/news-release-details/av-receives-51-million-us-army-order-switchblader-600-loitering)
+- [MED] 2027–2028 — Conversion of Switchblade 400 from LASSO prototype to scaled production; the Army selected it in May 2026, but production timing/value are not yet disclosed. [LASSO selection](https://www.avinc.com/?avinc_solution_tax=switchblade-400)
+
+### Margin of safety
+
+Not strong at current price. Liquidity is solid—$377M cash plus $255M short-term investments against $729M long-term debt, or about $97M net debt—but FY26 GAAP net loss was $265M, and the balance sheet contains $2.49B goodwill plus $930M intangibles. The downside is therefore bounded by contracted demand and liquidity, not by a low multiple or hard assets. FY26 funded backlog was $1.2B. [FY26 financial statements](https://investor.avinc.com/news-releases/news-release-details/aerovironment-announces-fiscal-2026-fourth-quarter-and-fiscal)
+
+### Top 3 risks
+
+1. BlueHalo/ESAero integration and margin failure — acquisition accounting, $729M debt, and large goodwill/intangibles could produce further impairments and prevent EBITDA conversion.
+2. Government-procurement timing or budget reversal — 72% of FY26 revenue came from U.S. Army/other U.S. government agencies and contractors; continuing resolutions or program delays can shift revenue materially. [FY26 10-K](https://www.sec.gov/Archives/edgar/data/1368622/000110465926078906/avav-20260430x10k.htm)
+3. Competitive/technical disruption — autonomous systems commoditize quickly; failure to win production awards after prototypes would break the growth narrative.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 1%
+- Strong (3-5x): 8%
+- Modest (1.5-3x): 29%
+- Flat (-30% to +50%): 42%
+- Thesis broken (-50%+): 20%
+
+### Entry trigger
+
+Do not enter at $152. Reassess at **≤$110**—roughly ≤18x FY27 guided EBITDA—only if funded backlog remains at least $1.2B and FY27 guidance is maintained or raised after Sept. 9 results.
+
+### Verdict: 2/4 — PASS
+
+Strong secular tailwind and identifiable catalysts, but AV is not demonstrably at a cycle bottom and lacks a current valuation-based margin of safety.
+
+### Sources
+
+- [AV FY2026 results and FY2027 guidance](https://investor.avinc.com/news-releases/news-release-details/aerovironment-announces-fiscal-2026-fourth-quarter-and-fiscal)
+- [AV FY2030 Investor Day targets](https://investor.avinc.com/news-releases/news-release-details/aerovironment-inc-highlights-growth-strategy-and-unveils-fiscal)
+- [AVAV price history](https://chartexchange.com/symbol/nasdaq-avav/historical/)
+- [AVAV performance and one-year return](https://www.marketbeat.com/stocks/NASDAQ/AVAV/chart/)
+- [AV Switchblade 600 Army order](https://investor.avinc.com/news-releases/news-release-details/av-receives-51-million-us-army-order-switchblader-600-loitering)
+- [AP: proposed FY2027 drone spending](https://apnews.com/article/ad774d2d427b70d09752ddfba277a42a)

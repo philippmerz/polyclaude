@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-06-07",
+  "updated": "2026-08-28",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -209,6 +209,36 @@
       "rationale": "Rare-earth magnets; DoD price floor + 10X facility 2028; Nov-10 China export-control deadline is the dated catalyst (HIGH-conf digest 2026-07-26). longterm_check 3/4 WATCH \u2014 late-cycle, prices peaked; enter on $30-35 dip or commodity bottom. Stop-loss zone $20 (DoD floor renegotiation).",
       "added": "2026-07-26",
       "updated": "2026-07-26"
+    },
+    {
+      "ticker": "UNI",
+      "type": "crypto",
+      "coingecko_id": "uniswap",
+      "entry_max": 3.25,
+      "horizon": "1y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-08-28 longterm_check: 2/4 PASS at $4.66. A price hit is re-underwriting permission, not an automatic buy: require >=$100M annualized trailing-90-day burn-bound revenue and retained material DEX share, or two full quarters of verified v4/Permissioned Pool fee growth at <=~$3B circulating market cap.",
+      "added": "2026-08-28"
+    },
+    {
+      "ticker": "HUT",
+      "type": "equity",
+      "yfinance_symbol": "HUT",
+      "entry_max": 50.0,
+      "horizon": "2y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-08-28 longterm_check: 2/4 PASS near $85 after a >3x rerating. Reassess at <=$50 only while River Bend remains on schedule and Beacon Point Phase 2 financing is secured; alternative trigger is on-time River Bend commissioning plus verified lease cash receipts in 2027-Q2.",
+      "added": "2026-08-28"
+    },
+    {
+      "ticker": "AVAV",
+      "type": "equity",
+      "yfinance_symbol": "AVAV",
+      "entry_max": 110.0,
+      "horizon": "2y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-08-28 longterm_check: 2/4 PASS near $152 despite strong defense-autonomy demand. Reassess at <=$110 only if Sept-9 FY27 Q1 results maintain or raise guidance and funded backlog remains at least $1.2B.",
+      "added": "2026-08-28"
     }
   ]
 }

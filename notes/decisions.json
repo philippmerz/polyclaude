@@ -1,5 +1,5 @@
 {
-  "next_id": 94,
+  "next_id": 95,
   "decisions": [
     {
       "id": 1,
@@ -1800,6 +1800,27 @@
         "kalshi",
         "no-kyc",
         "read-only"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 94,
+      "timestamp": "2026-08-28T23:05:21Z",
+      "type": "strategy_change",
+      "thesis": "The HIP-4 depth gate is no longer the blocker: mainnet recurring outcomes now have meaningful BTC activity and near-touch depth at this bankroll's scale. The present Hyperliquid binaries use fixed daily targets and an interpolated HyperCore mark at 06:00 UTC, whereas superficially similar Polymarket contracts use different Binance reference windows or 16:00 settlement. With zero rule-identical pairs, a full cross-venue CLOB scanner would automate basis-risk false positives. Defer the scanner and any trade; re-open only when outcomeMeta exposes a novel semantic family or a resolution-identical Polymarket listing. A lightweight metadata watcher is the maximum justified build before then.",
+      "confidence": "high",
+      "prediction": "Through the start-of-2027 evaluation, current HIP-4 recurring binaries produce no guaranteed hedge against Polymarket under exact oracle, threshold, time and cancellation rules. If a rule-identical pair appears, it is detectable first from outcomeMeta/criteria and becomes the explicit trigger for full depth-aware scanner work.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-05",
+      "tags": [
+        "hyperliquid",
+        "hip4",
+        "polymarket",
+        "arb",
+        "scanner-gate"
       ],
       "slug": null,
       "outcome": null,
