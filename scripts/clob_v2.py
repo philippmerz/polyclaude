@@ -12,7 +12,7 @@ HMAC header utility because that auth scheme didn't change between v1 and v2.
 
 Usage:
     python scripts/clob_v2.py orderbook <token_id>
-    python scripts/clob_v2.py buy <token_id> <price> <usd_size> [--neg-risk] [--post-only]
+    python scripts/clob_v2.py buy <token_id> <price> <usd_size> --reservation-id <id> [--neg-risk] [--post-only]
     python scripts/clob_v2.py sell <token_id> <price> <shares> [--neg-risk] [--post-only]
     python scripts/clob_v2.py orders   # list open orders
     python scripts/clob_v2.py cancel <order_id>
@@ -21,6 +21,9 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import datetime
+import fcntl
+import functools
 import json
 import os
 import secrets
@@ -37,6 +40,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _paths as _secrets
 
 _secrets.install_scrubbing_excepthook()
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # --- constants from the JS bundle ----------------------------------------
 
@@ -379,12 +383,271 @@ def cancel_order(order_id: str) -> dict:
     return {"status_code": r.status_code, "body": _safe_json(r)}
 
 
+def get_authenticated_order(order_id: str) -> dict:
+    address, _ = _load_wallet()
+    creds = _load_creds()
+    path = f"/data/order/{order_id}"
+    headers = _hmac_headers("GET", path, None, creds, address)
+    r = httpx.get(f"{CLOB_HOST}{path}", headers=headers, timeout=15)
+    return {"status_code": r.status_code, "body": _safe_json(r)}
+
+
+def _acquire_entry_lock():
+    handle = (REPO_ROOT / ".entry.lock").open("w")
+    try:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError as exc:
+        handle.close()
+        raise RuntimeError("another wallet entry/cancel is already in progress") from exc
+    return handle
+
+
+_RESERVATION_LOCK_DEPTH = 0
+_RESERVATION_LOCK_HANDLE = None
+
+
+class _ReservationLockLease:
+    def __init__(self):
+        self.closed = False
+
+    def close(self):
+        global _RESERVATION_LOCK_DEPTH, _RESERVATION_LOCK_HANDLE
+        if self.closed:
+            return
+        self.closed = True
+        _RESERVATION_LOCK_DEPTH -= 1
+        if _RESERVATION_LOCK_DEPTH == 0:
+            handle = _RESERVATION_LOCK_HANDLE
+            _RESERVATION_LOCK_HANDLE = None
+            if handle is not None:
+                handle.close()
+
+
+def _acquire_reservation_lock():
+    """Process-reentrant lock for every reservation/tombstone transition."""
+    global _RESERVATION_LOCK_DEPTH, _RESERVATION_LOCK_HANDLE
+    if _RESERVATION_LOCK_DEPTH == 0:
+        handle = (REPO_ROOT / ".entry_reservation.lock").open("w")
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        _RESERVATION_LOCK_HANDLE = handle
+    _RESERVATION_LOCK_DEPTH += 1
+    return _ReservationLockLease()
+
+
+def _reservation_locked(func):
+    @functools.wraps(func)
+    def wrapped(*args, **kwargs):
+        lease = _acquire_reservation_lock()
+        try:
+            return func(*args, **kwargs)
+        finally:
+            lease.close()
+    return wrapped
+
+
+@_reservation_locked
+def _mark_reservation_cancel_verified(order_id: str) -> bool:
+    """Attach affirmative cancel evidence to this CLI's local reservation."""
+    path = REPO_ROOT / ".entry_reservations.json"
+    if not path.exists():
+        return False
+    try:
+        rows = json.loads(path.read_text())
+    except Exception as exc:
+        raise RuntimeError(f"entry reservation ledger is unreadable: {exc}")
+    if not isinstance(rows, list) or not all(isinstance(row, dict) for row in rows):
+        raise RuntimeError("entry reservation ledger is malformed")
+    matches = [row for row in rows if str(row.get("orderId") or "") == order_id]
+    if len(matches) > 1:
+        raise RuntimeError("multiple reservations map to the canceled order")
+    if not matches:
+        return False
+    matches[0]["submissionState"] = "cancelled"
+    matches[0]["cancelVerifiedAt"] = datetime.datetime.now(
+        datetime.timezone.utc).isoformat()
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n")
+    tmp.replace(path)
+    return True
+
+
+def _has_entry_reservation(order_id: str) -> bool:
+    path = REPO_ROOT / ".entry_reservations.json"
+    if not path.exists():
+        return False
+    try:
+        rows = json.loads(path.read_text())
+    except Exception as exc:
+        raise RuntimeError(f"entry reservation ledger is unreadable: {exc}")
+    if not isinstance(rows, list) or not all(isinstance(row, dict) for row in rows):
+        raise RuntimeError("entry reservation ledger is malformed")
+    matches = [row for row in rows if str(row.get("orderId") or "") == order_id]
+    if len(matches) > 1:
+        raise RuntimeError("multiple reservations map to one order")
+    return bool(matches)
+
+
+@_reservation_locked
+def _record_unreserved_cancel_block(order: dict, *, reason: str =
+                                    "legacy/unreserved BUY canceled; reconcile "
+                                    "fills and indexing manually") -> None:
+    """Persist any cancel identity/fill window that cannot be proved safe."""
+    if not isinstance(order, dict):
+        raise RuntimeError("unreserved canceled order metadata is malformed")
+    order_id = str(order.get("id") or "")
+    if not order_id:
+        raise RuntimeError("unreserved canceled order omitted its ID")
+    path = REPO_ROOT / ".entry_reconciliation_required.json"
+    if path.exists():
+        try:
+            rows = json.loads(path.read_text())
+        except Exception as exc:
+            raise RuntimeError(f"entry reconciliation ledger is unreadable: {exc}")
+    else:
+        rows = []
+    if not isinstance(rows, list) or not all(isinstance(row, dict) for row in rows):
+        raise RuntimeError("entry reconciliation ledger is malformed")
+    if not any(str(row.get("orderId") or "") == order_id for row in rows):
+        rows.append({
+            "orderId": order_id,
+            "conditionId": str(order.get("market") or "").lower(),
+            "asset": str(order.get("asset_id") or ""),
+            "side": str(order.get("side") or "").upper(),
+            "originalShares": order.get("original_size"),
+            "matchedSharesAtCancel": order.get("size_matched"),
+            "price": order.get("price"),
+            "createdAt": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "reason": reason,
+        })
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n")
+    tmp.replace(path)
+
+
+def _claim_buy_reservation(token_id: str, price: float, usd_size: float,
+                           reservation_id: str | None) -> dict:
+    """Atomically consume one pending reservation before a BUY is signed.
+
+    The claimed row remains a full-risk commitment if submission crashes or
+    times out.  Only the orchestrator may later attach order evidence or remove
+    it after a definitive no-fill response.
+    """
+    claim_lock = _acquire_reservation_lock()
+    try:
+        reconciliation = REPO_ROOT / ".entry_reconciliation_required.json"
+        if reconciliation.exists():
+            raise RuntimeError(
+                "BUY blocked by unresolved entry reconciliation tombstone")
+        path = REPO_ROOT / ".entry_reservations.json"
+        if not path.exists():
+            raise RuntimeError(
+                "BUY has no exposure reservation; enter through polyclaude_enter.py")
+        try:
+            rows = json.loads(path.read_text())
+        except Exception as exc:
+            raise RuntimeError(f"entry reservation ledger is unreadable: {exc}")
+        if not isinstance(rows, list) or not all(isinstance(row, dict) for row in rows):
+            raise RuntimeError("entry reservation ledger is malformed")
+        matches = [
+            row for row in rows
+            if str(row.get("asset") or "") == str(token_id)
+            and str(row.get("reservationId") or "") == str(reservation_id or "")
+            and str(row.get("submissionState") or "pending") == "pending"
+            and not str(row.get("orderId") or "")
+        ]
+        if len(matches) != 1:
+            raise RuntimeError(
+                "BUY requires exactly one unclaimed pending reservation for this token")
+        record = matches[0]
+        try:
+            reserved_shares = float(record["shares"])
+            reserved_risk = float(record["risk"])
+            expected_shares = float(usd_size) / float(price)
+        except (KeyError, TypeError, ValueError, ZeroDivisionError):
+            raise RuntimeError("BUY reservation risk/size is malformed")
+        if (not all(value > 0 and value < float("inf") for value in (
+                reserved_shares, reserved_risk, expected_shares))
+                or abs(reserved_shares - expected_shares) > 1e-4
+                or reserved_risk + 1e-4 < float(usd_size)):
+            raise RuntimeError("BUY size/risk exceeds its exposure reservation")
+        record["submissionState"] = "claimed"
+        record["claimedAt"] = datetime.datetime.now(
+            datetime.timezone.utc).isoformat()
+        tmp = path.with_suffix(path.suffix + ".tmp")
+        tmp.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n")
+        tmp.replace(path)
+        return dict(record)
+    finally:
+        claim_lock.close()
+
+
 def list_open_orders() -> dict:
     address, _ = _load_wallet()
     creds = _load_creds()
-    headers = _hmac_headers("GET", "/data/orders", None, creds, address)
-    r = httpx.get(f"{CLOB_HOST}/data/orders", headers=headers, timeout=15)
-    return {"status_code": r.status_code, "body": _safe_json(r)}
+    path = "/data/orders"
+    cursor = "MA=="
+    rows: list[dict] = []
+    pages = 0
+    while cursor != "LTE=":
+        headers = _hmac_headers("GET", path, None, creds, address)
+        r = httpx.get(
+            f"{CLOB_HOST}{path}", params={"next_cursor": cursor},
+            headers=headers, timeout=15,
+        )
+        body = _safe_json(r)
+        if r.status_code >= 400 or not isinstance(body, dict):
+            return {"status_code": r.status_code, "body": body}
+        page = body.get("data")
+        next_cursor = body.get("next_cursor")
+        if not isinstance(page, list) or not isinstance(next_cursor, str):
+            return {"status_code": 502, "body": {
+                "error": "open-order pagination returned an unexpected shape"}}
+        rows.extend(page)
+        cursor = next_cursor
+        pages += 1
+        if pages >= 100 and cursor != "LTE=":
+            return {"status_code": 502, "body": {
+                "error": "open-order pagination exceeded safety bound"}}
+    return {"status_code": 200,
+            "body": {"data": rows, "next_cursor": "LTE="}}
+
+
+def list_authenticated_trades() -> dict:
+    """Return the wallet's complete authenticated trade history page set.
+
+    Reservation reconciliation uses order IDs embedded in taker/maker trade
+    rows to distinguish a canceled remainder from a fill that has not reached
+    data-api yet.  As with open orders, an incomplete cursor is never accepted
+    as proof that an execution did not happen.
+    """
+    address, _ = _load_wallet()
+    creds = _load_creds()
+    path = "/data/trades"
+    cursor = "MA=="
+    rows: list[dict] = []
+    pages = 0
+    while cursor != "LTE=":
+        headers = _hmac_headers("GET", path, None, creds, address)
+        r = httpx.get(
+            f"{CLOB_HOST}{path}", params={"next_cursor": cursor},
+            headers=headers, timeout=15,
+        )
+        body = _safe_json(r)
+        if r.status_code >= 400 or not isinstance(body, dict):
+            return {"status_code": r.status_code, "body": body}
+        page = body.get("data")
+        next_cursor = body.get("next_cursor")
+        if not isinstance(page, list) or not isinstance(next_cursor, str):
+            return {"status_code": 502, "body": {
+                "error": "trade pagination returned an unexpected shape"}}
+        rows.extend(page)
+        cursor = next_cursor
+        pages += 1
+        if pages >= 100 and cursor != "LTE=":
+            return {"status_code": 502, "body": {
+                "error": "trade pagination exceeded safety bound"}}
+    return {"status_code": 200,
+            "body": {"data": rows, "next_cursor": "LTE="}}
 
 
 def get_orderbook(token_id: str) -> dict:
@@ -606,15 +869,31 @@ def _check_neg_risk(token_id: str) -> bool:
 
 
 def cmd_buy(args):
-    address, pk = _load_wallet()
-    neg_risk = args.neg_risk if args.neg_risk is not None else _check_neg_risk(args.token_id)
-    print(f"signing v2 BUY order: token={args.token_id[:16]}... price={args.price} usd_size={args.usd_size} neg_risk={neg_risk}")
-    signed = build_order(maker=address, token_id=args.token_id, side="BUY",
-                          price=args.price, size=args.usd_size, signer_pk=pk, neg_risk=neg_risk)
-    print(f"posting...")
-    result = post_order(signed, order_type=args.order_type, post_only=args.post_only)
-    print(json.dumps(result, indent=2))
-    return 0 if result["status_code"] < 400 else 2
+    reservation_lock = _acquire_reservation_lock()
+    try:
+        try:
+            _claim_buy_reservation(
+                args.token_id, args.price, args.usd_size, args.reservation_id)
+        except Exception as exc:
+            print(f"BUY blocked: {exc}", file=sys.stderr)
+            return 3
+        address, pk = _load_wallet()
+        neg_risk = (args.neg_risk if args.neg_risk is not None
+                    else _check_neg_risk(args.token_id))
+        print(f"signing v2 BUY order: token={args.token_id[:16]}... "
+              f"price={args.price} usd_size={args.usd_size} neg_risk={neg_risk}")
+        signed = build_order(
+            maker=address, token_id=args.token_id, side="BUY",
+            price=args.price, size=args.usd_size, signer_pk=pk,
+            neg_risk=neg_risk,
+        )
+        print("posting...")
+        result = post_order(
+            signed, order_type=args.order_type, post_only=args.post_only)
+        print(json.dumps(result, indent=2))
+        return 0 if result["status_code"] < 400 else 2
+    finally:
+        reservation_lock.close()
 
 
 def cmd_sell(args):
@@ -630,27 +909,103 @@ def cmd_sell(args):
 
 
 def cmd_cancel(args):
-    result = cancel_order(args.order_id)
-    print(json.dumps(result, indent=2))
-    if result["status_code"] >= 400:
-        return 2
-    # Cancel-race guard (2026-07-28): a cancel response saying "canceled" is NOT
-    # proof of removal — the GPT-6 10sh order's 5.4sh remainder filled 3h after
-    # a "canceled" response (the fill raced the cancel). Verify against the live
-    # book and FAIL LOUDLY if the id is still there so the caller re-checks.
-    import time as _t
-    _t.sleep(2)
     try:
-        live = list_open_orders()
-        ids = [o.get("id") for o in (live.get("body", {}) or {}).get("data", [])]
-        if args.order_id in ids:
-            print(f"CANCEL-VERIFY FAILED: {args.order_id[:18]}... STILL IN BOOK — "
-                  f"re-cancel or expect fills", file=sys.stderr)
+        entry_lock = _acquire_entry_lock()
+    except Exception as exc:
+        print(f"cancel blocked: {exc}", file=sys.stderr)
+        return 3
+    try:
+        reservation_lock = _acquire_reservation_lock()
+    except Exception as exc:
+        entry_lock.close()
+        print(f"cancel blocked: reservation ledger lock unavailable: {exc}",
+              file=sys.stderr)
+        return 3
+    try:
+        before = list_open_orders()
+        before_body = before.get("body") if isinstance(before, dict) else None
+        try:
+            before_status = int(before.get("status_code", 999))
+        except (AttributeError, TypeError, ValueError):
+            before_status = 999
+        if (before_status >= 400
+                or not isinstance(before_body, dict)
+                or before_body.get("next_cursor") != "LTE="
+                or not isinstance(before_body.get("data"), list)):
+            print("cancel blocked: pre-cancel open-order inventory is incomplete",
+                  file=sys.stderr)
             return 3
-        print(f"cancel VERIFIED: order gone from book", file=sys.stderr)
-    except Exception as e:
-        print(f"cancel-verify inconclusive ({e}) — check `orders` manually", file=sys.stderr)
-    return 0
+        before_matches = [
+            order for order in before_body["data"]
+            if isinstance(order, dict) and str(order.get("id") or "") == args.order_id
+        ]
+        if len(before_matches) > 1:
+            print("cancel blocked: duplicate pre-cancel order identity", file=sys.stderr)
+            return 3
+        if not before_matches:
+            _record_unreserved_cancel_block(
+                {"id": args.order_id, "side": "UNKNOWN"},
+                reason="cancel target absent from exhaustive pre-cancel inventory; "
+                       "it may have filled during indexing lag",
+            )
+            print("cancel blocked: target is absent from the exhaustive pre-cancel "
+                  "inventory; persistent reconciliation block recorded",
+                  file=sys.stderr)
+            return 3
+        target_side = str(before_matches[0].get("side") or "").upper()
+        if target_side not in {"BUY", "SELL"}:
+            _record_unreserved_cancel_block(
+                before_matches[0],
+                reason="cancel target has unknown side; reconcile whether BUY "
+                       "exposure filled before allowing new entries",
+            )
+            print("cancel blocked: target side identity is unavailable; persistent "
+                  "reconciliation block recorded", file=sys.stderr)
+            return 3
+        if (target_side == "BUY"
+                and not _has_entry_reservation(args.order_id)):
+            # Persist the blocker before DELETE: a crash after cancellation must
+            # not create an unreserved fill/indexing window.
+            _record_unreserved_cancel_block(before_matches[0])
+
+        result = cancel_order(args.order_id)
+        print(json.dumps(result, indent=2))
+        if result["status_code"] >= 400:
+            return 2
+        # Cancel-race guard (2026-07-28): a cancel response saying "canceled" is
+        # NOT proof of removal. Verify the fully paginated live book, then mark
+        # the local BUY reservation so a later grace+trade+totalBought reconcile
+        # can retire only the genuinely canceled remainder.
+        time.sleep(2)
+        try:
+            live = list_open_orders()
+            body = live.get("body") if isinstance(live, dict) else None
+            try:
+                live_status = int(live.get("status_code", 999))
+            except (AttributeError, TypeError, ValueError):
+                live_status = 999
+            if (live_status >= 400
+                    or not isinstance(body, dict)
+                    or body.get("next_cursor") != "LTE="
+                    or not isinstance(body.get("data"), list)):
+                raise RuntimeError("open-order verification was incomplete")
+            ids = [order.get("id") for order in body["data"]
+                   if isinstance(order, dict)]
+            if args.order_id in ids:
+                print(f"CANCEL-VERIFY FAILED: {args.order_id[:18]}... STILL IN BOOK — "
+                      f"re-cancel or expect fills", file=sys.stderr)
+                return 3
+            marked = _mark_reservation_cancel_verified(args.order_id)
+            suffix = "; BUY reservation marked for delayed reconcile" if marked else ""
+            print(f"cancel VERIFIED: order gone from book{suffix}", file=sys.stderr)
+        except Exception as exc:
+            print(f"cancel-verify inconclusive ({exc}) — check `orders` manually",
+                  file=sys.stderr)
+            return 3
+        return 0
+    finally:
+        reservation_lock.close()
+        entry_lock.close()
 
 
 def cmd_orders(_args):
@@ -673,6 +1028,8 @@ def main():
     p.add_argument("token_id")
     p.add_argument("price", type=float)
     p.add_argument("usd_size", type=float)
+    p.add_argument("--reservation-id", required=True,
+                   help="pending exposure-ledger reservation created by polyclaude_enter")
     p.add_argument("--neg-risk", type=lambda x: x.lower() in ("true", "1", "yes"), default=None,
                    help="True/False to override neg_risk auto-detection")
     p.add_argument("--order-type", default="GTC", choices=["GTC", "FOK", "FAK", "GTD"])

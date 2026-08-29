@@ -35,7 +35,10 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import contextlib
 import datetime
+import fcntl
+import functools
 import json
 import math
 import re
@@ -460,6 +463,7 @@ def _single_buy_preflight(reference_price: float, tick: float,
 
 
 _BALANCE_TOL = 1e-4
+_RESERVATION_MISSING_GRACE_SECONDS = 300.0
 
 
 def _parse_clob_result(stdout: str, side: str,
@@ -547,11 +551,17 @@ def _classify_clob_result(stdout: str, side: str,
 
 
 def _run_clob_order(side: str, token: str, price: float, size: float,
-                    expected_shares: float) -> tuple[str, str]:
+                    expected_shares: float,
+                    reservation_id: str | None = None) -> tuple[str, str]:
     cmd = [
         ".venv/bin/python", "scripts/clob_v2.py", side.lower(), token,
         str(price), str(size), "--order-type", "FOK", "--neg-risk", "true",
     ]
+    if side.upper() == "BUY":
+        if not reservation_id:
+            print("!! BUY omitted its exposure reservation", file=sys.stderr)
+            return "ambiguous", ""
+        cmd.extend(["--reservation-id", reservation_id])
     print(f"  cmd: {' '.join(cmd)}", file=sys.stderr)
     try:
         r = subprocess.run(cmd, cwd=REPO_ROOT, capture_output=True, text=True, timeout=60)
@@ -662,16 +672,689 @@ def _clob_fee_market(info: dict) -> dict | None:
 
 
 def _fetch_live_positions() -> list[dict]:
-    """Fetch indexed positions; bundle mode fails closed if unavailable."""
+    """Fetch every indexed position, including dust, without a one-page blind spot."""
     from polyclaude_client import Wallet
     address = Wallet.load().address
-    r = httpx.get("https://data-api.polymarket.com/positions",
-                  params={"user": address.lower(), "limit": "500"}, timeout=15)
-    r.raise_for_status()
-    rows = r.json()
+    rows: list[dict] = []
+    page_size = 500
+    offset = 0
+    while True:
+        r = httpx.get(
+            "https://data-api.polymarket.com/positions",
+            params={"user": address.lower(), "limit": page_size,
+                    "offset": offset, "sizeThreshold": 0},
+            timeout=15,
+        )
+        r.raise_for_status()
+        page = r.json()
+        if not isinstance(page, list):
+            raise RuntimeError("data-api positions response is not a list")
+        rows.extend(page)
+        if len(page) < page_size:
+            break
+        offset += page_size
+        if offset >= 10_000:
+            raise RuntimeError("data-api positions pagination exceeded safety bound")
+
+    # A changing page boundary can repeat a row. Remove only byte-for-byte
+    # duplicates; inconsistent duplicates remain and conservatively add cost.
+    unique: list[dict] = []
+    seen: set[str] = set()
+    for row in rows:
+        if not isinstance(row, dict):
+            raise RuntimeError("data-api position row is not an object")
+        fingerprint = json.dumps(row, sort_keys=True, separators=(",", ":"))
+        if fingerprint not in seen:
+            seen.add(fingerprint)
+            unique.append(row)
+    return unique
+
+
+def _fetch_open_buy_commitments() -> list[dict]:
+    """Return authenticated remaining BUY risk enriched with Gamma identity.
+
+    An unfilled GTC bid is a promise of future exposure. It therefore belongs
+    in the same ticket/event/configured-cluster caps as an indexed position.
+    Unknown order or market identity fails closed instead of being treated as
+    independent.
+    """
+    from clob_v2 import list_open_orders
+
+    result = list_open_orders()
+    try:
+        status_code = int(result.get("status_code", 999))
+    except (AttributeError, TypeError, ValueError):
+        status_code = 999
+    body = result.get("body") if isinstance(result, dict) else None
+    if status_code >= 400 or not isinstance(body, dict):
+        raise RuntimeError("authenticated open-order query failed")
+    rows = body.get("data")
     if not isinstance(rows, list):
-        raise RuntimeError("data-api positions response is not a list")
-    return rows
+        raise RuntimeError("open-order query returned an unexpected shape")
+    if body.get("next_cursor") not in (None, "LTE="):
+        raise RuntimeError("open-order query was not paginated to exhaustion")
+
+    raw: list[dict] = []
+    for order in rows:
+        if not isinstance(order, dict):
+            raise RuntimeError("open-order row is not an object")
+        order_side = str(order.get("side") or "").upper()
+        if order_side == "SELL":
+            continue
+        if order_side != "BUY":
+            raise RuntimeError("open order has unknown side; exposure cannot be capped")
+        try:
+            original = float(order["original_size"])
+            matched = float(order.get("size_matched") or 0)
+            price = float(order["price"])
+        except (KeyError, TypeError, ValueError):
+            raise RuntimeError("open BUY has malformed size/price")
+        if (not all(math.isfinite(value) for value in (original, matched, price))
+                or original < 0.0 or matched < 0.0 or not 0.0 < price < 1.0):
+            raise RuntimeError("open BUY has invalid size/price")
+        remaining = original - matched
+        if remaining < -_BALANCE_TOL:
+            raise RuntimeError("open BUY has negative remaining size")
+        if remaining <= _BALANCE_TOL:
+            continue
+        condition_id = str(order.get("market") or "").lower()
+        order_id = str(order.get("id") or "")
+        asset = str(order.get("asset_id") or "")
+        if (not condition_id.startswith("0x") or not order_id or not asset):
+            raise RuntimeError("open BUY omitted order/condition/asset identity")
+        raw.append({
+            "orderId": order_id,
+            "conditionId": condition_id,
+            "asset": asset,
+            "originalShares": original,
+            "matchedShares": matched,
+            "remainingShares": remaining,
+            "price": price,
+            "risk": remaining * price,
+        })
+
+    if not raw:
+        return []
+
+    condition_ids = sorted({row["conditionId"] for row in raw})
+    markets: dict[str, dict] = {}
+    with httpx.Client(timeout=15) as client:
+        for start in range(0, len(condition_ids), 40):
+            chunk = condition_ids[start:start + 40]
+            response = client.get(
+                "https://gamma-api.polymarket.com/markets",
+                params=[("condition_ids", condition_id) for condition_id in chunk],
+            )
+            response.raise_for_status()
+            payload = response.json()
+            if not isinstance(payload, list):
+                raise RuntimeError("Gamma open-order metadata is not a list")
+            for market in payload:
+                if not isinstance(market, dict):
+                    raise RuntimeError("Gamma open-order market is not an object")
+                condition_id = str(market.get("conditionId") or "").lower()
+                if condition_id in markets:
+                    raise RuntimeError(f"duplicate Gamma market for {condition_id}")
+                markets[condition_id] = market
+    if set(markets) != set(condition_ids):
+        missing = sorted(set(condition_ids) - set(markets))
+        raise RuntimeError(f"Gamma identity unavailable for open BUY(s): {missing}")
+
+    commitments: list[dict] = []
+    for row in raw:
+        market = markets[row["conditionId"]]
+        slug = str(market.get("slug") or "")
+        event_ids = _event_ids(market)
+        if not slug or not event_ids:
+            raise RuntimeError(
+                f"open BUY market lacks slug/event identity: {row['conditionId']}")
+        commitments.append({
+            **row,
+            "slug": slug,
+            "question": str(market.get("question") or ""),
+            "eventIds": sorted(event_ids),
+        })
+    return commitments
+
+
+def _acquire_entry_lock():
+    """Serialize final exposure reconcile plus submission across entry CLIs."""
+    handle = (REPO_ROOT / ".entry.lock").open("w")
+    try:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError as exc:
+        handle.close()
+        raise RuntimeError("another wallet entry is already in progress") from exc
+    return handle
+
+
+_RESERVATION_LOCK_DEPTH = 0
+_RESERVATION_LOCK_HANDLE = None
+
+
+@contextlib.contextmanager
+def _reservation_ledger_lock():
+    """Process-reentrant cross-process lock for every lag-ledger transition."""
+    global _RESERVATION_LOCK_DEPTH, _RESERVATION_LOCK_HANDLE
+    if _RESERVATION_LOCK_DEPTH:
+        _RESERVATION_LOCK_DEPTH += 1
+        try:
+            yield
+        finally:
+            _RESERVATION_LOCK_DEPTH -= 1
+        return
+    handle = (REPO_ROOT / ".entry_reservation.lock").open("w")
+    fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+    _RESERVATION_LOCK_HANDLE = handle
+    _RESERVATION_LOCK_DEPTH = 1
+    try:
+        yield
+    finally:
+        _RESERVATION_LOCK_DEPTH = 0
+        _RESERVATION_LOCK_HANDLE = None
+        handle.close()
+
+
+def _reservation_locked(func):
+    @functools.wraps(func)
+    def wrapped(*args, **kwargs):
+        with _reservation_ledger_lock():
+            return func(*args, **kwargs)
+    return wrapped
+
+
+def _entry_reservations_path() -> Path:
+    return REPO_ROOT / ".entry_reservations.json"
+
+
+def _entry_reconciliation_path() -> Path:
+    return REPO_ROOT / ".entry_reconciliation_required.json"
+
+
+def _assert_no_entry_reconciliation_blocks() -> None:
+    path = _entry_reconciliation_path()
+    if not path.exists():
+        return
+    try:
+        rows = json.loads(path.read_text())
+    except Exception as exc:
+        raise RuntimeError(f"entry reconciliation ledger is unreadable: {exc}")
+    if not isinstance(rows, list) or not rows or not all(
+            isinstance(row, dict) for row in rows):
+        raise RuntimeError("entry reconciliation ledger is malformed")
+    order_ids = ", ".join(
+        str(row.get("orderId") or "?")[:18] for row in rows[:3])
+    raise RuntimeError(
+        f"entry order state requires manual reconciliation: {order_ids}")
+
+
+@_reservation_locked
+def _record_entry_reconciliation_block(record: dict, reason: str) -> None:
+    """Persist a fail-closed blocker without rewriting the reservation ledger."""
+    order_id = str(record.get("orderId") or "")
+    if not order_id or not reason:
+        raise RuntimeError("entry reconciliation blocker omitted order/reason")
+    path = _entry_reconciliation_path()
+    if path.exists():
+        try:
+            rows = json.loads(path.read_text())
+        except Exception as exc:
+            raise RuntimeError(f"entry reconciliation ledger is unreadable: {exc}")
+    else:
+        rows = []
+    if not isinstance(rows, list) or not all(isinstance(row, dict) for row in rows):
+        raise RuntimeError("entry reconciliation ledger is malformed")
+    if not any(str(row.get("orderId") or "") == order_id for row in rows):
+        rows.append({
+            "orderId": order_id,
+            "conditionId": str(record.get("conditionId") or "").lower(),
+            "asset": str(record.get("asset") or ""),
+            "createdAt": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "reason": reason,
+        })
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n")
+    tmp.replace(path)
+
+
+def _read_entry_reservations() -> list[dict]:
+    path = _entry_reservations_path()
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text())
+    except Exception as exc:
+        raise RuntimeError(f"entry reservation ledger is unreadable: {exc}")
+    if not isinstance(payload, list):
+        raise RuntimeError("entry reservation ledger is not a list")
+    if not all(isinstance(row, dict) for row in payload):
+        raise RuntimeError("entry reservation ledger contains a malformed row")
+    return payload
+
+
+def _write_entry_reservations(rows: list[dict]) -> None:
+    path = _entry_reservations_path()
+    if not rows:
+        path.unlink(missing_ok=True)
+        return
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n")
+    tmp.replace(path)
+
+
+def _reservation_indexed_bought(record: dict, positions: list[dict]) -> float:
+    """Return cumulative exact-asset buys, which sells cannot erase."""
+    condition_id = str(record.get("conditionId") or "").lower()
+    asset = str(record.get("asset") or "")
+    matches: list[dict] = []
+    for position in positions:
+        if not isinstance(position, dict):
+            raise RuntimeError("live position row is not an object")
+        if str(position.get("conditionId") or "").lower() != condition_id:
+            continue
+        if asset and str(position.get("asset") or "") != asset:
+            continue
+        matches.append(position)
+    if len(matches) > 1:
+        raise RuntimeError("duplicate indexed rows for one reserved condition/asset")
+    if not matches:
+        return 0.0
+    return _position_number(
+        matches[0], "totalBought", f"reserved position {record.get('slug', '?')}")
+
+
+def _fetch_order_match_totals(records: dict[str, dict]) -> dict[str, float]:
+    """Prove cumulative matched shares for disappeared authenticated orders."""
+    from clob_v2 import list_authenticated_trades
+
+    targets = {str(order_id) for order_id in records if str(order_id)}
+    if not targets:
+        return {}
+    result = list_authenticated_trades()
+    try:
+        status_code = int(result.get("status_code", 999))
+    except (AttributeError, TypeError, ValueError):
+        status_code = 999
+    body = result.get("body") if isinstance(result, dict) else None
+    if status_code >= 400 or not isinstance(body, dict):
+        raise RuntimeError("authenticated trade-history query failed")
+    rows = body.get("data")
+    if not isinstance(rows, list) or body.get("next_cursor") != "LTE=":
+        raise RuntimeError("trade history was not paginated to exhaustion")
+
+    observed: dict[tuple[str, str], float] = {}
+    for trade in rows:
+        if not isinstance(trade, dict):
+            raise RuntimeError("trade-history row is not an object")
+        status = str(trade.get("status") or "").upper()
+        trade_id = str(trade.get("id") or "")
+        if not trade_id:
+            raise RuntimeError("trade-history row omitted its execution ID")
+        matches: list[tuple[str, object]] = []
+        taker_order_id = str(trade.get("taker_order_id") or "")
+        if taker_order_id in targets:
+            expected = records[taker_order_id]
+            if (status not in {"CONFIRMED", "FAILED"}
+                    or str(trade.get("market") or "").lower()
+                    != str(expected.get("conditionId") or "").lower()
+                    or str(trade.get("asset_id") or "")
+                    != str(expected.get("asset") or "")
+                    or str(trade.get("side") or "").upper() != "BUY"):
+                raise RuntimeError("taker trade disagrees with reserved BUY identity/state")
+            if status == "FAILED":
+                continue
+            matches.append((taker_order_id, trade.get("size")))
+        maker_orders = trade.get("maker_orders") or []
+        if not isinstance(maker_orders, list):
+            raise RuntimeError("trade-history maker_orders is not a list")
+        for maker in maker_orders:
+            if not isinstance(maker, dict):
+                raise RuntimeError("trade-history maker order is not an object")
+            maker_order_id = str(maker.get("order_id") or "")
+            if maker_order_id in targets:
+                expected = records[maker_order_id]
+                if (status not in {"CONFIRMED", "FAILED"}
+                        or str(trade.get("market") or "").lower()
+                        != str(expected.get("conditionId") or "").lower()
+                        or str(trade.get("asset_id") or "")
+                        != str(expected.get("asset") or "")
+                        or str(maker.get("asset_id") or "")
+                        != str(expected.get("asset") or "")
+                        or str(maker.get("side") or "").upper() != "BUY"):
+                    raise RuntimeError("maker trade disagrees with reserved BUY identity/state")
+                if status == "FAILED":
+                    continue
+                matches.append((maker_order_id, maker.get("matched_amount")))
+        for order_id, raw_amount in matches:
+            try:
+                amount = float(raw_amount)
+            except (TypeError, ValueError):
+                raise RuntimeError("matched trade amount is unavailable")
+            if not math.isfinite(amount) or amount <= 0.0:
+                raise RuntimeError("matched trade amount is invalid")
+            key = (trade_id, order_id)
+            if key in observed and abs(observed[key] - amount) > _BALANCE_TOL:
+                raise RuntimeError("duplicate trade rows disagree on matched amount")
+            observed[key] = amount
+
+    totals = {order_id: 0.0 for order_id in targets}
+    for (_, order_id), amount in observed.items():
+        totals[order_id] += amount
+    return totals
+
+
+def _fetch_terminal_cancelled_totals(records: dict[str, dict]) -> dict[str, float]:
+    """Require affirmative terminal canceled state for every retired order."""
+    from clob_v2 import get_authenticated_order
+
+    totals: dict[str, float] = {}
+    for order_id, expected in records.items():
+        result = get_authenticated_order(order_id)
+        try:
+            status_code = int(result.get("status_code", 999))
+        except (AttributeError, TypeError, ValueError):
+            status_code = 999
+        body = result.get("body") if isinstance(result, dict) else None
+        if status_code != 200 or not isinstance(body, dict):
+            raise RuntimeError(
+                f"canceled order {order_id[:18]} lacks affirmative terminal status")
+        try:
+            original = float(body["original_size"])
+            matched = float(body.get("size_matched") or 0)
+            price = float(body["price"])
+            reserved_shares = float(expected["shares"])
+        except (KeyError, TypeError, ValueError):
+            raise RuntimeError("terminal canceled order size/price is unavailable")
+        if (str(body.get("id") or "") != order_id
+                or str(body.get("status") or "").upper() not in {"CANCELED", "CANCELLED"}
+                or str(body.get("side") or "").upper() != "BUY"
+                or str(body.get("market") or "").lower()
+                != str(expected.get("conditionId") or "").lower()
+                or str(body.get("asset_id") or "") != str(expected.get("asset") or "")
+                or not all(math.isfinite(value) for value in (
+                    original, matched, price, reserved_shares))
+                or original <= 0.0 or matched < 0.0 or matched > original + _BALANCE_TOL
+                or price <= 0.0 or price >= 1.0
+                or abs(original - reserved_shares) > _BALANCE_TOL):
+            raise RuntimeError("terminal canceled order disagrees with its reservation")
+        totals[order_id] = matched
+    return totals
+
+
+def _reservation_timestamp(value: object, label: str) -> datetime.datetime:
+    if not isinstance(value, str) or not value:
+        raise RuntimeError(f"entry reservation {label} is unavailable")
+    try:
+        parsed = datetime.datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        raise RuntimeError(f"entry reservation {label} is invalid")
+    if parsed.tzinfo is None:
+        raise RuntimeError(f"entry reservation {label} lacks timezone")
+    return parsed.astimezone(datetime.timezone.utc)
+
+
+@_reservation_locked
+def _entry_reservation_commitments(positions: list[dict],
+                                   open_buys: list[dict], *,
+                                   prune: bool = False) -> list[dict]:
+    """Keep submitted risk reserved until order or indexed shares prove it.
+
+    This bridges the data-api lag after a matched FAK and the transition where
+    a GTC order disappears from the open-order endpoint just before its fill is
+    indexed. The merge layer prefers this original full-risk reservation over
+    the authenticated order's smaller remaining notional, covering partial
+    fills that have not reached data-api yet. Only the cancel CLI's affirmative
+    verification starts retirement; after a grace period, terminal order state,
+    exhaustive trade history and cumulative buys must account for every fill.
+    """
+    _assert_no_entry_reconciliation_blocks()
+    rows = _read_entry_reservations()
+    if not isinstance(open_buys, list):
+        raise RuntimeError("open BUY commitments are not a list")
+    open_ids: set[str] = set()
+    for commitment in open_buys:
+        if not isinstance(commitment, dict):
+            raise RuntimeError("open BUY commitment is not an object")
+        order_id = str(commitment.get("orderId") or "")
+        if order_id:
+            open_ids.add(order_id)
+
+    commitments: list[dict] = []
+    retained: list[dict] = []
+    seen_assets: set[tuple[str, str]] = set()
+    now = datetime.datetime.now(datetime.timezone.utc)
+    matched_totals: dict[str, float] | None = None
+    terminal_totals: dict[str, float] | None = None
+    for raw_record in rows:
+        record = dict(raw_record)
+        try:
+            risk = float(record["risk"])
+            shares = float(record["shares"])
+            baseline_bought = float(record["baselineBought"])
+        except (KeyError, TypeError, ValueError):
+            raise RuntimeError("entry reservation has malformed risk/size")
+        condition_id = str(record.get("conditionId") or "").lower()
+        slug = str(record.get("slug") or "")
+        events = record.get("eventIds")
+        asset = str(record.get("asset") or "")
+        if (not all(math.isfinite(value) for value in (risk, shares, baseline_bought))
+                or risk <= 0.0 or shares <= 0.0 or baseline_bought < 0.0
+                or not condition_id.startswith("0x") or not slug
+                or not asset or not isinstance(events, list) or not events):
+            raise RuntimeError("entry reservation identity/risk is invalid")
+        asset_key = (condition_id, asset)
+        if asset_key in seen_assets:
+            raise RuntimeError(
+                "multiple unresolved reservations share one condition/asset; "
+                "manual order-level reconciliation required")
+        seen_assets.add(asset_key)
+        order_id = str(record.get("orderId") or "")
+        submission_state = str(record.get("submissionState") or "pending")
+        if submission_state not in {
+                "pending", "claimed", "live", "matched", "ambiguous", "cancelled"}:
+            raise RuntimeError("entry reservation submission state is invalid")
+        indexed_bought = _reservation_indexed_bought(record, positions)
+        if submission_state == "cancelled" and order_id in open_ids:
+            # Never leave the stale cancel timestamp on disk after observing a
+            # reappearance. Rewriting the reservation ledger from an unlocked
+            # preview could clobber an in-flight BUY claim, so persist a separate
+            # tombstone and require manual reconciliation instead.
+            _record_entry_reconciliation_block(
+                record,
+                "verified-canceled BUY reappeared in the open book; reset its "
+                "cancel marker and reconcile order state manually",
+            )
+            raise RuntimeError(
+                "verified-canceled BUY reappeared; persistent reconciliation "
+                "block recorded")
+        if (order_id not in open_ids
+                and indexed_bought + _BALANCE_TOL >= baseline_bought + shares):
+            # The position snapshot now carries the exposure and actual cost.
+            continue
+        if prune and submission_state == "cancelled" and order_id:
+            cancelled_at = _reservation_timestamp(
+                record.get("cancelVerifiedAt"), "cancelVerifiedAt")
+            if (now - cancelled_at).total_seconds() >= (
+                    _RESERVATION_MISSING_GRACE_SECONDS):
+                if order_id in open_ids:
+                    raise RuntimeError("verified-canceled BUY reappeared in the open book")
+                if matched_totals is None:
+                    cancelled_records = {
+                        str(row.get("orderId") or ""): row for row in rows
+                        if str(row.get("submissionState") or "pending") == "cancelled"
+                        and str(row.get("orderId") or "")
+                    }
+                    terminal_totals = _fetch_terminal_cancelled_totals(
+                        cancelled_records)
+                    matched_totals = _fetch_order_match_totals(cancelled_records)
+                matched_shares = matched_totals.get(order_id)
+                terminal_matched = (terminal_totals or {}).get(order_id)
+                if matched_shares is None or terminal_matched is None:
+                    raise RuntimeError("terminal/trade proof omitted a canceled order ID")
+                if abs(matched_shares - terminal_matched) > _BALANCE_TOL:
+                    raise RuntimeError(
+                        "terminal canceled size disagrees with confirmed trade history")
+                if matched_shares > shares + _BALANCE_TOL:
+                    raise RuntimeError("authenticated matches exceed reserved shares")
+                indexed_delta = max(0.0, indexed_bought - baseline_bought)
+                if indexed_delta + _BALANCE_TOL >= matched_shares:
+                    # Verified cancel removed the unmatched remainder and every
+                    # confirmed fill is now represented by cumulative buys.
+                    continue
+        commitments.append({
+            "orderId": order_id,
+            "conditionId": condition_id,
+            "slug": slug,
+            "question": str(record.get("question") or ""),
+            "eventIds": [str(event_id) for event_id in events],
+            "asset": asset,
+            "risk": risk,
+            "remainingShares": shares,
+            "reservationId": str(record.get("reservationId") or ""),
+            "submissionState": submission_state,
+        })
+        retained.append(record)
+    if prune and retained != rows:
+        _write_entry_reservations(retained)
+    return commitments
+
+
+def _merge_entry_commitments(positions: list[dict], open_buys: list[dict], *,
+                             prune: bool = False) -> list[dict]:
+    """Combine authenticated and local promises without under/double-counting.
+
+    A local reservation represents the order's original full-fill risk until
+    all target shares are indexed. When its order remains live, omit that
+    order's smaller remaining-notional row; the full reservation deliberately
+    covers both remaining shares and any partial fill not indexed yet.
+    """
+    _assert_no_entry_reconciliation_blocks()
+    local = _entry_reservation_commitments(
+        positions, open_buys, prune=prune)
+    local_by_id: dict[str, dict] = {}
+    for row in local:
+        order_id = str(row.get("orderId") or "")
+        if not order_id:
+            continue
+        if order_id in local_by_id:
+            raise RuntimeError("multiple reservations map to one open-order ID")
+        local_by_id[order_id] = row
+    local_keys = {
+        (str(row.get("conditionId") or "").lower(), str(row.get("asset") or ""))
+        for row in local
+    }
+    for commitment in open_buys:
+        order_id = str(commitment.get("orderId") or "")
+        key = (str(commitment.get("conditionId") or "").lower(),
+               str(commitment.get("asset") or ""))
+        if order_id in local_by_id:
+            reserved = local_by_id[order_id]
+            if (key != (str(reserved.get("conditionId") or "").lower(),
+                        str(reserved.get("asset") or ""))):
+                raise RuntimeError("open BUY identity disagrees with its reservation")
+            try:
+                original_risk = (float(commitment["originalShares"])
+                                 * float(commitment["price"]))
+                reserved_risk = float(reserved["risk"])
+            except (KeyError, TypeError, ValueError):
+                raise RuntimeError("open BUY/reservation full-fill risk is unavailable")
+            if (not math.isfinite(original_risk) or original_risk <= 0.0
+                    or not math.isfinite(reserved_risk)
+                    or reserved_risk + _BALANCE_TOL < original_risk):
+                raise RuntimeError("open BUY is not fully covered by its reservation")
+            continue
+        if key in local_keys:
+            raise RuntimeError(
+                "open BUY shares an asset with a reservation but its order ID is unmapped")
+        raise RuntimeError(
+            f"open BUY {order_id[:18] or '?'} lacks a local full-fill reservation; "
+            "manual/legacy entry is not safe during indexing lag")
+    return local
+
+
+@_reservation_locked
+def _add_entry_reservations(records: list[dict]) -> list[str]:
+    _assert_no_entry_reconciliation_blocks()
+    if not isinstance(records, list) or not records:
+        raise RuntimeError("reservation batch is empty")
+    rows = _read_entry_reservations()
+    occupied = {
+        (str(row.get("conditionId") or "").lower(), str(row.get("asset") or ""))
+        for row in rows
+    }
+    new_keys: set[tuple[str, str]] = set()
+    prepared: list[dict] = []
+    reservation_ids: list[str] = []
+    created_at = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    seed = time.time_ns()
+    for index, record in enumerate(records):
+        if not isinstance(record, dict):
+            raise RuntimeError("reservation batch contains a malformed row")
+        submission_state = str(record.get("submissionState") or "pending")
+        if submission_state not in {
+                "pending", "live", "matched", "ambiguous", "cancelled"}:
+            raise RuntimeError("invalid reservation submission state")
+        key = (str(record.get("conditionId") or "").lower(),
+               str(record.get("asset") or ""))
+        if (not key[0].startswith("0x") or not key[1]
+                or key in occupied or key in new_keys):
+            raise RuntimeError(
+                "an unresolved reservation already exists for this condition/asset")
+        new_keys.add(key)
+        reservation_id = f"{seed + index}-{key[0][-8:]}"
+        reservation_ids.append(reservation_id)
+        prepared.append({**record, "submissionState": submission_state,
+                         "reservationId": reservation_id,
+                         "createdAt": created_at})
+    rows.extend(prepared)
+    _write_entry_reservations(rows)
+    return reservation_ids
+
+
+def _add_entry_reservation(record: dict) -> str:
+    return _add_entry_reservations([record])[0]
+
+
+@_reservation_locked
+def _update_entry_reservation(reservation_id: str, order_id: str = "", *,
+                              submission_state: str | None = None) -> None:
+    if submission_state is not None and submission_state not in {
+            "pending", "live", "matched", "ambiguous", "cancelled"}:
+        raise RuntimeError("invalid reservation submission state")
+    if not order_id and submission_state is None:
+        raise RuntimeError("reservation update omitted order/state evidence")
+    rows = _read_entry_reservations()
+    found = False
+    for row in rows:
+        if row.get("reservationId") == reservation_id:
+            if order_id:
+                row["orderId"] = order_id
+            if submission_state is not None:
+                row["submissionState"] = submission_state
+                if submission_state != "claimed":
+                    row.pop("claimedAt", None)
+            found = True
+            break
+    if not found:
+        raise RuntimeError("entry reservation disappeared before order response")
+    _write_entry_reservations(rows)
+
+
+def _remove_entry_reservation(reservation_id: str) -> None:
+    _remove_entry_reservations({reservation_id})
+
+
+@_reservation_locked
+def _remove_entry_reservations(reservation_ids: set[str]) -> None:
+    if not reservation_ids:
+        return
+    rows = _read_entry_reservations()
+    retained = [row for row in rows
+                if str(row.get("reservationId") or "") not in reservation_ids]
+    removed = len(rows) - len(retained)
+    if removed != len(reservation_ids):
+        raise RuntimeError("entry reservation disappeared before cleanup")
+    _write_entry_reservations(retained)
 
 
 def _chain_reader() -> dict:
@@ -864,20 +1547,22 @@ def _validate_existing_bundle(legs: list[dict], positions: list[dict],
     return baselines, held_cost
 
 
-def _existing_cluster_cost(legs: list[dict], positions: list[dict]) -> float:
+def _existing_cluster_cost(legs: list[dict], positions: list[dict],
+                           pending_buys: list[dict] | None = None) -> float:
     """Infer live cost in the bundle's event and configured correlation cluster.
 
-    Every position in the same Gamma event is perfectly dependent even when a
-    prior is absent or mistagged. Configured cluster membership broadens that
-    set. Each position is visited once, so overlap cannot double count it.
-    Malformed matching position data fails closed.
+    Every position in the same Gamma event is perfectly dependent. Configured
+    cluster membership broadens that set, but every positive row still needs
+    affirmative condition/slug/event and correlation identity before it can be
+    proved unrelated. Each row is visited once, so overlap cannot double count.
+    Pending authenticated/local BUY promises are unioned by the same event and
+    configured cluster. Malformed matching position data fails closed.
     """
     event_sets = [set(leg.get("event_ids") or set()) for leg in legs]
     shared_event_ids = set.intersection(*event_sets) if event_sets else set()
     if not shared_event_ids:
         raise RuntimeError("bundle has no shared Gamma event ID for exposure accounting")
 
-    cluster_slugs: set[str] = set()
     try:
         priors = json.loads((REPO_ROOT / "notes" / "portfolio_kelly_priors.json").read_text())
     except Exception as exc:
@@ -894,21 +1579,260 @@ def _existing_cluster_cost(legs: list[dict], positions: list[dict]) -> float:
     if len(set(clusters)) != 1:
         raise RuntimeError(f"bundle priors disagree on cluster: {sorted(set(clusters))}")
     cluster = clusters[0]
-    cluster_slugs = {
-        slug for slug, prior in priors.items()
-        if isinstance(prior, dict) and prior.get("cluster") == cluster
-    }
+    if not isinstance(positions, list):
+        raise RuntimeError("live positions are not a list")
     total = 0.0
     for position in positions:
-        same_event = str(position.get("eventId") or "") in shared_event_ids
-        same_cluster = position.get("slug") in cluster_slugs
+        if not isinstance(position, dict):
+            raise RuntimeError("live position row is not an object")
+        context = f"cluster position {position.get('slug') or position.get('title') or '?'}"
+        size = _position_number(position, "size", context)
+        if size <= _BALANCE_TOL or position.get("redeemable") is True:
+            continue
+        condition_id = str(position.get("conditionId") or "")
+        position_slug = str(position.get("slug") or "")
+        event_id = str(position.get("eventId") or "")
+        if not condition_id.startswith("0x") or not position_slug or not event_id:
+            raise RuntimeError(f"{context} lacks condition/slug/event identity")
+        position_prior = priors.get(position_slug)
+        position_cluster = (position_prior.get("cluster")
+                            if isinstance(position_prior, dict) else None)
+        if not isinstance(position_cluster, str) or not position_cluster.strip():
+            raise RuntimeError(
+                f"{context} lacks an explicit correlation/independence cluster")
+        same_event = event_id in shared_event_ids
+        same_cluster = position_cluster.strip() == cluster
         if not same_event and not same_cluster:
             continue
-        context = f"cluster position {position.get('slug', '?')}"
-        if _position_number(position, "size", context) <= _BALANCE_TOL:
-            continue
         total += _position_gross_cost(position, context)
+    if pending_buys is None:
+        pending_buys = []
+    if not isinstance(pending_buys, list):
+        raise RuntimeError("open BUY commitments are not a list")
+    for commitment in pending_buys:
+        if not isinstance(commitment, dict):
+            raise RuntimeError("open BUY commitment is not an object")
+        try:
+            risk = float(commitment["risk"])
+        except (KeyError, TypeError, ValueError):
+            raise RuntimeError("open BUY commitment risk is unavailable")
+        pending_slug = str(commitment.get("slug") or "")
+        pending_condition = str(commitment.get("conditionId") or "").lower()
+        raw_events = commitment.get("eventIds")
+        if (not math.isfinite(risk) or risk <= 0.0
+                or not pending_slug or not pending_condition.startswith("0x")
+                or not isinstance(raw_events, list) or not raw_events):
+            raise RuntimeError("open BUY commitment identity/risk is invalid")
+        pending_events = {str(event_id) for event_id in raw_events if event_id}
+        if not pending_events:
+            raise RuntimeError("open BUY commitment has no valid event identity")
+        prior = priors.get(pending_slug)
+        pending_cluster = prior.get("cluster") if isinstance(prior, dict) else None
+        if not isinstance(pending_cluster, str) or not pending_cluster.strip():
+            raise RuntimeError(
+                f"open BUY {pending_slug} lacks an explicit correlation/independence cluster")
+        if shared_event_ids & pending_events or pending_cluster.strip() == cluster:
+            total += risk
     return total
+
+
+def _pending_bundle_ticket_cost(legs: list[dict],
+                                pending_buys: list[dict]) -> float:
+    """Return promised risk touching a leg of an equal-share bundle.
+
+    Even a small one-leg promise can fill after the FOK sequence and break the
+    equal-set invariant, so bundle execution blocks it rather than merely
+    treating the collateral as deployable cash.
+    """
+    if not isinstance(pending_buys, list):
+        raise RuntimeError("open BUY commitments are not a list")
+    condition_ids = {str(leg.get("condition_id") or "").lower() for leg in legs}
+    slugs = {str(leg.get("slug") or "") for leg in legs}
+    total = 0.0
+    for commitment in pending_buys:
+        if not isinstance(commitment, dict):
+            raise RuntimeError("open BUY commitment is not an object")
+        try:
+            risk = float(commitment["risk"])
+        except (KeyError, TypeError, ValueError):
+            raise RuntimeError("open BUY commitment risk is unavailable")
+        condition_id = str(commitment.get("conditionId") or "").lower()
+        slug = str(commitment.get("slug") or "")
+        if (not math.isfinite(risk) or risk <= 0.0
+                or not condition_id.startswith("0x") or not slug):
+            raise RuntimeError("open BUY commitment identity/risk is invalid")
+        if condition_id in condition_ids or slug in slugs:
+            total += risk
+    return total
+
+
+def _single_entry_cap_state(market: dict, positions: list[dict], bankroll: float,
+                            new_risk: float,
+                            declared_cluster_frac: float = 0.0,
+                            pending_buys: list[dict] | None = None) -> dict:
+    """Return fail-closed ticket and correlation-cap state for one BUY.
+
+    Single-market entry used to *print* the 15% ticket doctrine and ask the
+    operator to confirm cluster caps, while bundle entry actually enforced both.
+    That asymmetry is especially dangerous for maker bids: an unfilled order is
+    still a promise to take the full exposure later, potentially after the
+    review context is gone. Count the proposed order at full fill, union every
+    live position in the same Gamma event or configured cluster, and let the
+    caller block both the preview and the final signed order.
+    """
+    try:
+        bankroll = float(bankroll)
+        new_risk = float(new_risk)
+        declared_cluster_frac = float(declared_cluster_frac)
+    except (TypeError, ValueError):
+        raise RuntimeError("single-entry cap inputs are not numeric")
+    if (not math.isfinite(bankroll) or bankroll <= 0.0
+            or not math.isfinite(new_risk) or new_risk <= 0.0
+            or not math.isfinite(declared_cluster_frac)
+            or not 0.0 <= declared_cluster_frac <= 1.0):
+        raise RuntimeError("single-entry cap inputs are invalid")
+    if not isinstance(positions, list):
+        raise RuntimeError("live positions are not a list")
+    if pending_buys is None:
+        pending_buys = []
+    if not isinstance(pending_buys, list):
+        raise RuntimeError("open BUY commitments are not a list")
+
+    slug = str(market.get("slug") or "")
+    condition_id = str(market.get("conditionId") or "").lower()
+    question = str(market.get("question") or "").strip().lower()
+    event_ids = _event_ids(market)
+    if not slug or not condition_id.startswith("0x") or not event_ids:
+        raise RuntimeError("candidate lacks affirmative slug/condition/event identity")
+
+    try:
+        priors = json.loads(
+            (REPO_ROOT / "notes" / "portfolio_kelly_priors.json").read_text())
+    except Exception as exc:
+        raise RuntimeError(f"portfolio priors unavailable: {exc}")
+    if not isinstance(priors, dict):
+        raise RuntimeError("portfolio priors root is not an object")
+    candidate_prior = priors.get(slug)
+    cluster = (candidate_prior.get("cluster")
+               if isinstance(candidate_prior, dict) else None)
+    if not isinstance(cluster, str) or not cluster.strip():
+        raise RuntimeError(
+            "candidate lacks a configured correlation cluster; add an explicit "
+            "unique cluster only after confirming independence")
+    cluster = cluster.strip()
+    ticket_before = 0.0
+    inferred_cluster_before = 0.0
+    for position in positions:
+        if not isinstance(position, dict):
+            raise RuntimeError("live position row is not an object")
+        context = f"position {position.get('slug') or position.get('title') or '?'}"
+        size = _position_number(position, "size", context)
+        if size <= _BALANCE_TOL:
+            continue
+        if position.get("redeemable") is True:
+            # Resolution fixes the payoff, so this is claim/cash state rather
+            # than live model-correlated risk. Redemption is handled elsewhere.
+            continue
+        # A positive row with no stable identifiers cannot be proved unrelated.
+        # Treating it as independent is a correlation-cap fail-open.
+        if (not str(position.get("conditionId") or "").startswith("0x")
+                or not str(position.get("slug") or "")
+                or not str(position.get("eventId") or "")):
+            raise RuntimeError(f"{context} lacks condition/slug/event identity")
+        position_slug = str(position.get("slug") or "")
+        position_prior = priors.get(position_slug)
+        position_cluster = (position_prior.get("cluster")
+                            if isinstance(position_prior, dict) else None)
+        if not isinstance(position_cluster, str) or not position_cluster.strip():
+            raise RuntimeError(
+                f"{context} lacks an explicit correlation/independence cluster")
+        same_condition = bool(
+            condition_id
+            and str(position.get("conditionId") or "").lower() == condition_id)
+        same_slug = bool(slug and str(position.get("slug") or "") == slug)
+        same_question = bool(
+            question
+            and str(position.get("title") or "").strip().lower() == question)
+        same_market = same_condition or same_slug or same_question
+        same_event = bool(
+            event_ids and str(position.get("eventId") or "") in event_ids)
+        same_cluster = position_cluster.strip() == cluster
+        if not (same_market or same_event or same_cluster):
+            continue
+        cost = _position_gross_cost(position, context)
+        if same_market:
+            ticket_before += cost
+        # Union the sets: a row matching the market, event and cluster counts once.
+        inferred_cluster_before += cost
+
+    for commitment in pending_buys:
+        if not isinstance(commitment, dict):
+            raise RuntimeError("open BUY commitment is not an object")
+        try:
+            risk = float(commitment["risk"])
+        except (KeyError, TypeError, ValueError):
+            raise RuntimeError("open BUY commitment risk is unavailable")
+        if not math.isfinite(risk) or risk <= 0.0:
+            raise RuntimeError("open BUY commitment risk is invalid")
+        pending_condition = str(commitment.get("conditionId") or "").lower()
+        pending_slug = str(commitment.get("slug") or "")
+        pending_question = str(commitment.get("question") or "").strip().lower()
+        raw_pending_events = commitment.get("eventIds")
+        if (not pending_condition.startswith("0x") or not pending_slug
+                or not isinstance(raw_pending_events, list)
+                or not raw_pending_events):
+            raise RuntimeError("open BUY commitment lacks condition/slug/event identity")
+        pending_events = {str(event_id) for event_id in raw_pending_events if event_id}
+        if not pending_events:
+            raise RuntimeError("open BUY commitment has no valid event identity")
+        pending_prior = priors.get(pending_slug)
+        pending_cluster = (pending_prior.get("cluster")
+                           if isinstance(pending_prior, dict) else None)
+        if not isinstance(pending_cluster, str) or not pending_cluster.strip():
+            raise RuntimeError(
+                f"open BUY {pending_slug} lacks an explicit correlation/independence cluster")
+        same_market = (pending_condition == condition_id or pending_slug == slug
+                       or bool(question and pending_question == question))
+        same_event = bool(event_ids & pending_events)
+        same_cluster = pending_cluster.strip() == cluster
+        if not (same_market or same_event or same_cluster):
+            continue
+        if same_market:
+            ticket_before += risk
+        inferred_cluster_before += risk
+
+    cluster_before = max(
+        inferred_cluster_before, declared_cluster_frac * bankroll)
+    return {
+        "ticket_before": ticket_before,
+        "ticket_after": ticket_before + new_risk,
+        "ticket_cap": bankroll * 0.15,
+        "cluster": str(cluster) if cluster else None,
+        "cluster_before": cluster_before,
+        "cluster_after": cluster_before + new_risk,
+        "cluster_cap": bankroll * 0.30,
+        "new_risk": new_risk,
+    }
+
+
+def _single_entry_cap_error(state: dict) -> str | None:
+    """Explain every hard-cap breach so a smaller rerun cannot hit the next one."""
+    errors: list[str] = []
+    if state["ticket_after"] > state["ticket_cap"] + 1e-9:
+        headroom = max(0.0, state["ticket_cap"] - state["ticket_before"])
+        errors.append(
+            f"ticket after full fill ${state['ticket_after']:.2f} exceeds "
+            f"15% cap ${state['ticket_cap']:.2f}; remaining ticket headroom "
+            f"${headroom:.2f}")
+    if state["cluster_after"] > state["cluster_cap"] + 1e-9:
+        headroom = max(0.0, state["cluster_cap"] - state["cluster_before"])
+        label = f" `{state['cluster']}`" if state.get("cluster") else ""
+        errors.append(
+            f"correlated cluster{label} after full fill "
+            f"${state['cluster_after']:.2f} exceeds 30% cap "
+            f"${state['cluster_cap']:.2f}; remaining cluster headroom "
+            f"${headroom:.2f}")
+    return "; ".join(errors) if errors else None
 
 
 def _marketable_sell_plan(bids: list[dict], shares: float,
@@ -1173,6 +2097,12 @@ def _bundle_entry(args: argparse.Namespace) -> int:
     try:
         reader = _chain_reader()
         live_positions = _fetch_live_positions()
+        open_buys = _fetch_open_buy_commitments()
+        pending_buys = _merge_entry_commitments(live_positions, open_buys)
+        pending_leg_cost = _pending_bundle_ticket_cost(legs, pending_buys)
+        if pending_leg_cost > _BALANCE_TOL:
+            raise RuntimeError(
+                f"${pending_leg_cost:.2f} of pending BUY risk touches a bundle leg")
         chain_balances = _read_token_balances(reader, [leg["token"] for leg in legs])
         baselines, held_set_cost = _validate_existing_bundle(
             legs, live_positions, chain_balances, args.bundle_add)
@@ -1255,7 +2185,8 @@ def _bundle_entry(args: argparse.Namespace) -> int:
               f"${econ['risk_dollars']:.2f})")
         return 0
     try:
-        inferred_cluster_cost = _existing_cluster_cost(legs, live_positions)
+        inferred_cluster_cost = _existing_cluster_cost(
+            legs, live_positions, pending_buys)
     except Exception as exc:
         print(f"ERROR: cluster-cap preflight failed: {exc}", file=sys.stderr)
         return 1
@@ -1311,6 +2242,36 @@ def _bundle_entry(args: argparse.Namespace) -> int:
         print("  Re-run with --execute to place zero-delay FOK legs. Definite failures "
               "unwind; ambiguous exchange states stop for manual reconciliation.")
         return 0
+
+    try:
+        execution_lock = _acquire_entry_lock()
+    except Exception as exc:
+        print(f"ERROR: wallet entry lock unavailable: {exc}", file=sys.stderr)
+        return 1
+
+    # Reconcile positions, authenticated orders, local lag reservations and
+    # authoritative ERC-1155 balances *under the shared entry lock*. Preview
+    # exposure is never reused for signing-time capital gates.
+    try:
+        live_positions = _fetch_live_positions()
+        open_buys = _fetch_open_buy_commitments()
+        pending_buys = _merge_entry_commitments(
+            live_positions, open_buys, prune=True)
+        pending_leg_cost = _pending_bundle_ticket_cost(legs, pending_buys)
+        if pending_leg_cost > _BALANCE_TOL:
+            raise RuntimeError(
+                f"${pending_leg_cost:.2f} of pending BUY risk touches a bundle leg")
+        chain_balances = _read_token_balances(
+            reader, [leg["token"] for leg in legs])
+        baselines, held_set_cost = _validate_existing_bundle(
+            legs, live_positions, chain_balances, args.bundle_add)
+        inferred_cluster_cost = _existing_cluster_cost(
+            legs, live_positions, pending_buys)
+        cluster_before = max(
+            inferred_cluster_cost, max(0.0, args.cluster_frac) * args.bankroll)
+    except Exception as exc:
+        print(f"ERROR: final bundle exposure preflight failed: {exc}", file=sys.stderr)
+        return 1
 
     # Re-fetch every book immediately before the first order. No order is sent
     # unless every full leg remains executable inside the original ceiling.
@@ -1390,21 +2351,69 @@ def _bundle_entry(args: argparse.Namespace) -> int:
           f"${funds['committed']:.6f}, deployable ${funds['deployable']:.6f}, "
           f"need <= ${required_pusd:.6f}", file=sys.stderr)
 
+    # Reserve every possible leg before order one. This makes a completed or
+    # ambiguous bundle visible to the single-entry CLI even while data-api is
+    # still indexing ERC-1155 balances. Creating the whole set atomically also
+    # avoids discovering a ledger collision after the first FOK has filled.
+    reservation_ids: dict[str, str] = {}
+    try:
+        reservation_records: list[dict] = []
+        for leg in legs:
+            record = {
+                "conditionId": str(leg["condition_id"]).lower(),
+                "slug": leg["slug"],
+                "question": leg["question"],
+                "eventIds": sorted(leg["event_ids"]),
+                "asset": str(leg["token"]),
+                "shares": float(shares),
+                "risk": float(shares * (leg["limit"] + leg["fee_at_limit"])),
+                "submissionState": "pending",
+                "bundleId": str(next(iter(neg_ids))),
+            }
+            record["baselineBought"] = _reservation_indexed_bought(
+                record, live_positions)
+            reservation_records.append(record)
+        created_ids = _add_entry_reservations(reservation_records)
+        reservation_ids = {
+            leg["token"]: reservation_id
+            for leg, reservation_id in zip(legs, created_ids, strict=True)
+        }
+    except Exception as exc:
+        print(f"ERROR: cannot reserve bundle exposure: {exc}; no orders sent",
+              file=sys.stderr)
+        return 1
+
     # Scarce book first. A strict response is still followed by on-chain balance
     # reconciliation. Only a definite exchange failure plus an unchanged token
     # balance authorizes automatic unwind; delayed/malformed/timeout states stop
     # without creating an even worse naked leg around a possible later fill.
     filled: list[dict] = []
+    submitted_ids: set[str] = set()
     for leg in sorted(legs, key=lambda x: x["depth"]):
+        reservation_id = reservation_ids[leg["token"]]
+        submitted_ids.add(reservation_id)
         usd_limit = round(shares * leg["limit"], 2)
         print(f"\n# Executing bundle leg: BUY {shares} YES @ limit {leg['limit']:.2f} "
               f"(${usd_limit:.2f} max) — {leg['slug']}")
-        state, _ = _run_clob_order(
-            "BUY", leg["token"], leg["limit"], usd_limit, shares)
+        state, raw_result = _run_clob_order(
+            "BUY", leg["token"], leg["limit"], usd_limit, shares,
+            reservation_id)
+        _, parsed_result = _classify_clob_result(raw_result, "BUY", shares)
+        parsed_body = (parsed_result.get("body")
+                       if isinstance(parsed_result, dict) else None)
+        order_id = (str(parsed_body.get("orderID") or "")
+                    if isinstance(parsed_body, dict) else "")
         target = baselines[leg["token"]] + shares
         observed = _wait_token_balance(reader, leg["token"], target)
         if (state == "matched" and observed is not None
                 and abs(observed - target) <= _BALANCE_TOL):
+            try:
+                _update_entry_reservation(
+                    reservation_id, order_id, submission_state="matched")
+            except Exception as exc:
+                print(f"CRITICAL: filled bundle reservation update failed: {exc}",
+                      file=sys.stderr)
+                return 4
             filled.append(leg)
             continue
 
@@ -1413,6 +2422,13 @@ def _bundle_entry(args: argparse.Namespace) -> int:
         if state == "failed" and unchanged:
             rollback_ok = _rollback_bundle(filled, baselines, reader) if filled else True
             if not rollback_ok:
+                try:
+                    _remove_entry_reservations(
+                        set(reservation_ids.values()) - {
+                            reservation_ids[row["token"]] for row in filled})
+                except Exception as cleanup_exc:
+                    print(f"CRITICAL: unused reservation cleanup failed: {cleanup_exc}",
+                          file=sys.stderr)
                 print("CRITICAL: bundle unwind incomplete — inspect positions immediately",
                       file=sys.stderr)
                 return 4
@@ -1421,13 +2437,34 @@ def _bundle_entry(args: argparse.Namespace) -> int:
                         all(abs(all_observed[token] - expected) <= _BALANCE_TOL
                             for token, expected in baselines.items()))
             if not all_flat:
+                try:
+                    _remove_entry_reservations(
+                        set(reservation_ids.values()) - {
+                            reservation_ids[row["token"]] for row in filled})
+                except Exception as cleanup_exc:
+                    print(f"CRITICAL: unused reservation cleanup failed: {cleanup_exc}",
+                          file=sys.stderr)
                 print(f"CRITICAL: post-unwind bundle is not at baseline: "
                       f"live={all_observed}, wanted={baselines}. Inspect immediately.",
+                      file=sys.stderr)
+                return 4
+            try:
+                _remove_entry_reservations(set(reservation_ids.values()))
+            except Exception as cleanup_exc:
+                print(f"CRITICAL: flat bundle reservation cleanup failed: {cleanup_exc}",
                       file=sys.stderr)
                 return 4
             print("ERROR: bundle was not completed; prior fills were unwound", file=sys.stderr)
             return 3
 
+        try:
+            _update_entry_reservation(
+                reservation_id, order_id, submission_state="ambiguous")
+            _remove_entry_reservations(
+                set(reservation_ids.values()) - submitted_ids)
+        except Exception as cleanup_exc:
+            print(f"CRITICAL: ambiguous bundle reservation reconcile failed: {cleanup_exc}",
+                  file=sys.stderr)
         print(f"CRITICAL: {leg['slug']} exchange state={state}, on-chain balance="
               f"{observed!r}, baseline={baselines[leg['token']]:.6f}, "
               f"target={target:.6f}. No further orders or automatic unwind: "
@@ -1447,6 +2484,16 @@ def _bundle_entry(args: argparse.Namespace) -> int:
         print(f"CRITICAL: final equal-set invariant failed: live={final_balances}, "
               f"expected={expected_balances}", file=sys.stderr)
         return 4
+
+    # Usually data-api lags the on-chain invariant, so these reservations stay.
+    # If indexing is already complete, retire them immediately and atomically.
+    try:
+        indexed_now = _fetch_live_positions()
+        open_now = _fetch_open_buy_commitments()
+        _merge_entry_commitments(indexed_now, open_now, prune=True)
+    except Exception as exc:
+        print(f"NOTICE: bundle reservations await later reconciliation: {exc}",
+              file=sys.stderr)
 
     action = "ADDED_BUNDLE" if held_set_cost else "BOUGHT_BUNDLE"
     final_per_leg = next(iter(expected_balances.values()))
@@ -1842,6 +2889,29 @@ def main() -> int:
             print(f"  (flip check unavailable: {str(_e)[:50]})")
         return 0
 
+    # HARD PORTFOLIO CAPS.  Count a maker bid at its full-fill exposure: the
+    # absence of a fill today is not permission to promise an oversized fill
+    # tomorrow.  Data-api/prior failure is NEED_REVIEW, never an assumed zero.
+    try:
+        live_positions = _fetch_live_positions()
+        open_buys = _fetch_open_buy_commitments()
+        pending_buys = _merge_entry_commitments(live_positions, open_buys)
+        cap_state = _single_entry_cap_state(
+            m, live_positions, args.bankroll, deploy_dollar, args.cluster_frac,
+            pending_buys)
+    except Exception as exc:
+        print(f"\nDECISION: NEED_REVIEW — cannot prove ticket/cluster caps: {exc}")
+        return 1
+    cap_error = _single_entry_cap_error(cap_state)
+    if cap_error:
+        print(f"\nDECISION: SKIP — {cap_error}")
+        print("  Full-fill exposure is the relevant risk even for an unfilled maker bid.")
+        return 0
+    cluster_label = cap_state.get("cluster") or "event/declared"
+    print(f"  [capital caps] ticket ${cap_state['ticket_after']:.2f}/"
+          f"${cap_state['ticket_cap']:.2f}; cluster {cluster_label} "
+          f"${cap_state['cluster_after']:.2f}/${cap_state['cluster_cap']:.2f}")
+
     # EXIT LIQUIDITY (2026-08-13). Entry has always priced what I PAY and never
     # what it would cost to LEAVE. Measuring the book that day found 22% of
     # holdings sit where <50% could be sold within 5% of mark — MacBook at a
@@ -1911,6 +2981,12 @@ def main() -> int:
         print(f"  Re-run with --execute to actually post the order.")
         return 0
 
+    try:
+        execution_lock = _acquire_entry_lock()
+    except Exception as exc:
+        print(f"\nDECISION: NEED_REVIEW — wallet entry lock unavailable: {exc}")
+        return 1
+
     # EXECUTE path.  A hard cap has to constrain what is SIGNED, not the Gamma
     # midpoint or the ask observed before catalyst analysis.  Re-read the taker
     # ask now, derive the precision-safe raw limit, and enforce --max-price with
@@ -1963,21 +3039,98 @@ def main() -> int:
               f"effective={execution_cost:.4f}, p_robust={p_robust:.4f}, "
               f"robust EV=${execution_robust_ev:+.2f}")
         return 0
+    final_risk = target_shares * execution_cost
+    try:
+        final_positions = _fetch_live_positions()
+        final_open_buys = _fetch_open_buy_commitments()
+        final_pending_buys = _merge_entry_commitments(
+            final_positions, final_open_buys, prune=True)
+        final_cap_state = _single_entry_cap_state(
+            m, final_positions, args.bankroll, final_risk, args.cluster_frac,
+            final_pending_buys)
+    except Exception as exc:
+        print(f"\nDECISION: NEED_REVIEW — final ticket/cluster cap unavailable: {exc}")
+        return 1
+    final_cap_error = _single_entry_cap_error(final_cap_state)
+    if final_cap_error:
+        print(f"\nDECISION: SKIP — final signed order fails capital cap: "
+              f"{final_cap_error}")
+        return 0
     clean_usd = round(target_shares * buy_price, 2)
+    reservation_record = {
+        "conditionId": str(m.get("conditionId") or "").lower(),
+        "slug": slug,
+        "question": question,
+        "eventIds": sorted(_event_ids(m)),
+        "asset": str(token),
+        "shares": float(target_shares),
+        "risk": float(final_risk),
+    }
+    try:
+        reservation_record["baselineBought"] = _reservation_indexed_bought(
+            reservation_record, final_positions)
+        reservation_id = _add_entry_reservation(reservation_record)
+    except Exception as exc:
+        print(f"\nDECISION: NEED_REVIEW — cannot reserve signed exposure: {exc}")
+        return 1
     mode = "RESTING post-only BID (record in notes/resting_orders.md)" if args.maker else "taker FAK"
     print(f"\n# Executing BUY {target_shares} shares ({side}) @ {buy_price} (tick {tick}) for ${clean_usd} [{mode}]")
 
     cmd = [".venv/bin/python", "scripts/clob_v2.py",
            "buy" if side in ("YES", "NO") else "sell",
-           token, str(buy_price), str(clean_usd), *order_flags]
+           token, str(buy_price), str(clean_usd), *order_flags,
+           "--reservation-id", reservation_id]
     if neg_risk:
         cmd.extend(["--neg-risk", "true"])
     print(f"  cmd: {' '.join(cmd)}", file=sys.stderr)
-    r = subprocess.run(cmd, cwd=REPO_ROOT, capture_output=True, text=True, timeout=60)
+    try:
+        r = subprocess.run(
+            cmd, cwd=REPO_ROOT, capture_output=True, text=True, timeout=60)
+    except subprocess.TimeoutExpired:
+        print("CRITICAL: order submission timed out; exposure reservation retained for "
+              "manual reconciliation", file=sys.stderr)
+        return 4
     print(r.stdout)
-    if r.returncode != 0:
-        print(f"  stderr: {r.stderr[:500]}", file=sys.stderr)
-        return r.returncode
+    state, result = _classify_clob_result(r.stdout, "BUY", target_shares)
+    body = result.get("body") if isinstance(result, dict) else None
+    order_id = str(body.get("orderID") or "") if isinstance(body, dict) else ""
+    accepted_live = bool(
+        args.maker and isinstance(body, dict) and body.get("success") is True
+        and str(body.get("status") or "").lower() == "live" and order_id)
+    if state == "failed":
+        try:
+            _remove_entry_reservation(reservation_id)
+        except Exception as exc:
+            print(f"CRITICAL: definitive no-fill but reservation cleanup failed: {exc}",
+                  file=sys.stderr)
+            return 4
+        if r.stderr:
+            print(f"  stderr: {r.stderr[:500]}", file=sys.stderr)
+        return r.returncode or 3
+    reservation_state = ("live" if accepted_live else
+                         "matched" if state == "matched" else "ambiguous")
+    try:
+        _update_entry_reservation(
+            reservation_id, order_id, submission_state=reservation_state)
+    except Exception as exc:
+        print(f"CRITICAL: accepted/ambiguous order reservation update failed: {exc}",
+              file=sys.stderr)
+        return 4
+    if state != "matched" and not accepted_live:
+        if r.stderr:
+            print(f"  stderr: {r.stderr[:500]}", file=sys.stderr)
+        print("CRITICAL: order state is ambiguous; exposure reservation retained until "
+              "the order or indexed position proves the result", file=sys.stderr)
+        return 4
+    # Opportunistically prune an immediate fill. A live maker order retains its
+    # original full-risk ledger row, covering its remainder and indexing lag.
+    try:
+        indexed_now = _fetch_live_positions()
+        open_now = _fetch_open_buy_commitments()
+        _merge_entry_commitments(indexed_now, open_now, prune=True)
+    except Exception as exc:
+        print(f"NOTICE: post-submit reservation awaits later reconciliation: {exc}",
+              file=sys.stderr)
     return 0
 
 

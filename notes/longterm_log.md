@@ -975,3 +975,181 @@ Strong secular tailwind and identifiable catalysts, but AV is not demonstrably a
 - [AVAV performance and one-year return](https://www.marketbeat.com/stocks/NASDAQ/AVAV/chart/)
 - [AV Switchblade 600 Army order](https://investor.avinc.com/news-releases/news-release-details/av-receives-51-million-us-army-order-switchblader-600-loitering)
 - [AP: proposed FY2027 drone spending](https://apnews.com/article/ad774d2d427b70d09752ddfba277a42a)
+
+---
+
+## 2026-08-28T23:25:52Z — longterm_check
+
+**Query:** `Amkor Technology (AMKR)` (equity, 1y horizon)
+
+## LONGTERM CHECK: Amkor Technology (AMKR)
+
+Date: 2026-08-28 | Type: equity | Horizon: 1y
+
+### Current state
+$47.88 close; +94.8% over 1 year, versus $23.37–$96.68 52-week range. Market cap $11.9B; 21.5x trailing / 17.6x forward P/E and 9.1x EV/EBITDA. Q2 revenue was a record $1.90B (+26% YoY), with 16.8% gross margin.
+
+### Cyclical position
+**Late up-cycle / investment-ramp, not a cyclical bottom.** Operating indicators are strengthening: Q2 gross margin rose from 12.0% to 16.8%, and Q3 guidance calls for $1.95–$2.05B revenue and 18.5–19.5% gross margin. But the stock remains ~50% below its June 2026 high and below its 50-/200-day averages, indicating reset sentiment rather than trough fundamentals. Semiconductor demand is currently exceptionally strong, not depressed.
+
+### Secular tailwind
+AI/HPC-driven packaging complexity and regionalized U.S. chip supply chains are intact and accelerating. Advanced products were $1.56B in Q2, +27% YoY; computing represented 22% of sales. Industry-wide, SIA/WSTS projects 2026 semiconductor sales of $1.5T, while global AI-data-center infrastructure investment through 2028 is estimated above $4T. This is a genuine tailwind, though much is already reflected in current operating momentum.
+
+### Catalyst window
+- [HIGH] 2026-Q4 — Q3 results: validate guided $1.95–$2.05B revenue and 18.5–19.5% gross margin; a miss would undermine the near-term rerating.
+- [HIGH] 2027 — expected receipt of approximately $1.5B customer advance payment, supporting Arizona capacity financing.
+- [MED] 2027-H1 — Arizona facility construction completion, followed by tool installation/qualification; production is slated for early 2028, outside this one-year horizon.
+
+### Margin of safety
+Limited. Amkor is profitable ($555M TTM net income) and has $2.51B cash, but also $2.67B debt and negative $172M TTM free cash flow amid a $2.5–3.0B 2026 capex program. The valuation is reasonable rather than distressed, and the Arizona build introduces substantial execution and financing exposure.
+
+### Top 3 risks
+1. **AI/semiconductor down-cycle or utilization reversal** — high fixed costs can rapidly compress margins after capacity is built.
+2. **Arizona execution and capex risk** — the $7B campus is not expected to produce until 2028; delays, cost overruns, or demand shortfalls would impair returns.
+3. **Customer/geopolitical concentration** — the top ten customers are 66% of sales, while operations span Taiwan, China, Korea, Japan and Southeast Asia; trade restrictions or regional disruption could hit volumes.
+
+### 5-year scenario probabilities
+- Generational (10x+): 1%
+- Strong (3-5x): 10%
+- Modest (1.5-3x): 29%
+- Flat (-30% to +50%): 40%
+- Thesis broken (-50%+): 20%
+
+### Entry trigger
+Do not enter at $47.88. Reassess on a decline below **$35** (roughly 13x implied forward earnings) with Q3/Q4 utilization intact, or after the 2027 customer prepayment and Arizona milestone confirm on-schedule financing/execution.
+
+### Verdict: 2/4 — PASS
+Strong secular tailwind and identifiable catalysts, but AMKR is in an earnings up-cycle with capex-heavy, near-zero-net-cash economics—not a ≥3/4 generational-mispricing setup.
+
+### Sources
+- [AMKR price, valuation, performance and 52-week range](https://stockanalysis.com/stocks/amkr/)
+- [Amkor Q2 2026 results and Q3 outlook](https://ir.amkor.com/news-releases/news-release-details/amkor-technology-reports-financial-results-second-quarter-2026)
+- [Amkor Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1047127/000104712726000046/amkr-20260630.htm)
+- [Amkor 2026 Investor Day presentation](https://www.sec.gov/Archives/edgar/data/1047127/000104712726000036/ex-991amkorinvestorprese.htm)
+- [Arizona advanced-packaging campus announcement](https://ir.amkor.com/news-releases/news-release-details/amkor-technology-breaks-ground-new-semiconductor-advanced)
+- [SIA 2026 semiconductor-industry report](https://www.semiconductors.org/2026-state-of-the-industry-report-historic-growth-amid-intensifying-global-competition/)
+
+---
+
+## 2026-08-28T23:27:38Z — longterm_check
+
+**Query:** `Kratos Defense & Security Solutions (KTOS)` (equity, 1y horizon)
+
+## LONGTERM CHECK: Kratos Defense & Security Solutions (KTOS)
+
+Date: 2026-08-28 | Type: equity | Horizon: 1y
+
+### Current state
+
+KTOS closed at **$52.00** on Aug. 28; it is **-21.2% over one year**, **-61% from its $134.00 52-week high** (Jan. 20), and **+21% from its $43.09 52-week low** (Jul. 30). Market cap is about **$9.8B**, enterprise value about **$8.5B**: roughly **5.7x trailing EV/sales** and **4.8x FY26-guidance EV/sales**. Q2 revenue grew 30.5% YoY to $458.8M, but GAAP operating income was **-$1.6M**.
+
+### Cyclical position
+
+**Post-speculative reset / mid-cycle, not a multi-year-cycle bottom.** The share-price drawdown is severe, but follows a 2023–25 rerating: KTOS remains materially above its 2024 lows and trades at a sales multiple well above its 2024 level (FY2024 EV/sales: 3.52x). Operationally, demand is accelerating—LTM book-to-bill was 1.3x and backlog reached $2.084B—so this is not an industrial-demand trough; it is a valuation reset amid high capex, dilution, and still-thin GAAP profitability.
+
+### Secular tailwind
+
+**Intact and strong:** affordable autonomous aircraft, missile propulsion, hypersonic testing, air defense, and C5ISR are funded defense priorities. The FY2026 U.S. defense budget separately identifies **$13.4B for autonomy/autonomous systems**, including **$9.4B for unmanned/remotely operated aerial vehicles**. Kratos’s Q2 organic growth was 19.1%; its FY26 revenue guide rose to $1.75–$1.81B, implying 18–23% organic growth. This is real demand, though much is already reflected in valuation.
+
+### Catalyst window
+
+- [HIGH] **2026-Q4** — Q3 earnings / initial FY2027 guidance (estimated Nov. 3): management forecasts 19–25% Q3 organic growth, expects second-half margin expansion, and will issue 2027 guidance. — [Q2 results](https://www.kratosdefense.com/newsroom/kratos-reports-second-quarter-2026-financial-results)
+- [MED] **2026-H2** — Revenue conversion from newly funded hypersonic, propulsion, air-defense, and missile programs; Kratos disclosed about **$400M** of new DoW funding in July. — [Funding announcement](https://www.kratosdefense.com/newsroom/kratos-receives-approximately-400-million-in-new-funding-for-hypersonic-system-and-other-programs)
+- [MED] **2026-Q4 to 2027** — Bristow engine facility targeted to ramp fully by Q4 2026; its test cells are targeted for 2027. — [Facility announcement](https://www.kratosdefense.com/newsroom/kratos-expands-u-s-jet-engine-production-footprint-with-new-advanced-manufacturing-facility-test-cells-in-bristow-oklahoma)
+- [MED] **2027** — Prometheus solid-rocket-motor JV targets first production; Valkyrie production rate is targeted at ~40 annually by end-2027. Both need successful execution and customer conversion. — [Prometheus JV](https://www.kratosdefense.com/newsroom/kratos-rafael-establish-prometheus-energetics-joint-venture-a-u-s-based-merchant-supplier-of-solid-rocket-motors)
+
+### Margin of safety
+
+Balance-sheet risk is low: at June 28, Kratos had **$1.438B cash** and **zero long-term debt**, versus a $9.8B equity value. But this is not a valuation margin of safety: FY26 H1 operating cash flow was **-$38.4M**, H1 investing cash flow was **-$375.3M**, and shares outstanding rose from 168.9M at FY2025-end to 187.6M after a February equity raise and acquisition stock issuance. At ~$52, the equity still requires sustained high growth plus margin conversion.
+
+### Top 3 risks
+
+1. **Valuation/margin de-rating** — 4.8x forward EV/sales is demanding for a company with only $4.4M Q2 GAAP net income; slower growth or delayed margin expansion can compress the multiple.
+2. **Government-program timing or cancellation** — backlog includes $512.7M of unfunded work, and budget/continuing-resolution disruptions can delay awards, deliveries, and revenue.
+3. **Execution, cash burn, and dilution** — drone, engine, and rocket-motor capacity investment requires working capital and capex; failure to convert prototypes and awards into profitable volume could require further dilution.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 1%
+- Strong (3-5x): 12%
+- Modest (1.5-3x): 24%
+- Flat (-30% to +50%): 38%
+- Thesis broken (-50%+): 25%
+
+### Entry trigger
+
+**Do not enter at $52.** Reassess at **$40–42 or lower**—approximately 3.5x FY26-midpoint EV/sales after cash—and only if Q3 results reaffirm 19%+ organic growth, backlog conversion, and FY2027 margin expansion. Alternatively, a confirmed profitable-volume Valkyrie/propulsion award that materially lifts FY2027 guidance can justify paying above that range.
+
+### Verdict: 2/4 — PASS
+
+Strong secular demand and identifiable execution catalysts are present, but this is not a cycle-bottom or valuation-margin-of-safety setup; balance-sheet strength does not offset the high multiple, negative cash conversion, and dilution risk.
+
+### Sources
+
+- [KTOS Aug. 28 price history](https://stockanalysis.com/stocks/ktos/history/)
+- [KTOS 52-week performance](https://www.barchart.com/stocks/quotes/KTOS/performance)
+- [Kratos Q2 2026 results](https://www.kratosdefense.com/newsroom/kratos-reports-second-quarter-2026-financial-results)
+- [Kratos Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000077/ktos-20260628.htm)
+- [KTOS valuation statistics](https://stockanalysis.com/stocks/ktos/statistics/)
+- [FY2026 Defense Budget autonomy briefing](https://www.war.gov/News/Transcripts/Transcript/Article/4228828/background-briefing-on-fy-2026-defense-budget/)
+
+---
+
+## 2026-08-28T23:38:00Z — longterm_check (live-input correction)
+
+**Query:** `Sky Protocol (SKY)` (crypto, 1y horizon)
+
+## LONGTERM CHECK: Sky Protocol (SKY)
+
+Date: 2026-08-28 | Type: crypto | Horizon: 1y
+
+### Current state
+
+SKY traded around **$0.0666–$0.0671**, up roughly 16% over 30 days. Supply is essentially fully diluted: about 23.46B maximum SKY, 99.84% circulating, with emissions disabled. The live Sky dashboard showed about **17.40B SKY staked (74.2% of supply)** at a maximum **4.279%** rate. January–August protocol P&L was approximately $299.3M revenue, $132.6M pre-distribution net income and $79.0M retained income; 30-day buybacks were about $1.54M.
+
+### Cyclical position
+
+**Post-catalyst rerating, not a bottom.** SKY rallied from roughly $0.0508 in mid-August after governance accelerated surplus distribution. The economics are improving, but the market has already repriced the change and the start-of-2027 window captures only about 1.4% gross staking yield at the current rate. Token-price beta dominates the carry.
+
+### Secular tailwind
+
+Sky has genuine profitable stablecoin and lending economics, a nearly fully circulating token, disabled emissions and a live mechanism that routes protocol surplus toward SKY purchases and staker rewards. The August 13 spell set each 6,000-USDS settlement cycle at 3,748 seconds, with 55% allocated to SKY buybacks and 45% to USDS rewards for stakers. At the observed pace, direct purchases annualize around $26–30M, roughly 1.7–1.9% of current market capitalization.
+
+### Catalyst window
+
+- [HIGH] Monthly/30-day — verify that buybacks remain at least $1.5M and are not redirected by governance.
+- [HIGH] 2026-Q3/Q4 — verify trailing-three-month net income annualizes above $150M after distributions.
+- [MED] Entry-date execution — prove a route with no more than 1% all-in friction; the current repo cannot safely execute the required Ethereum LitePSM plus Uniswap V2 path.
+
+### Margin of safety
+
+Insufficient at $0.067. Governance can change the surplus split, and repurchased SKY may be burned or recycled to stakers rather than permanently retired. The liquid route is Ethereum **USDC → LitePSM USDS → Uniswap V2 USDS/SKY**, not the repo's current Uniswap V3-only path. A live 7.8-USDC rehearsal produced about 7.786691 USDS and 115.7525 SKY, or **$0.067385/SKY before gas**; small-ticket gas and bridge friction can erase the carry.
+
+### Top 3 risks
+
+1. **Governance-mutability / weak accrual** — surplus allocation can be redirected, and buyback destination is not equivalent to an immutable burn.
+2. **Stablecoin/protocol risk** — credit loss, collateral impairment or USDS demand reversal can compress the earnings supporting distributions.
+3. **Execution and custody friction** — the safe liquid path is Ethereum-only and absent from repo tooling; bridge, LitePSM, V2 and gas costs matter materially at this bankroll.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 4%
+- Strong (3-5x): 18%
+- Modest (1.5-3x): 33%
+- Flat (-30% to +50%): 30%
+- Thesis broken (-50%+): 15%
+
+### Entry trigger
+
+Do not enter at $0.067. Reassess at **$0.050–$0.055** only if live 30-day buybacks remain at least **$1.5M**, trailing-three-month net income annualizes at least **$150M**, and an independently checked route keeps all-in friction at or below **1%**. A price hit authorizes research and route proof, not an automatic swap.
+
+### Verdict: 2/4 — PASS / HIGH-PRIORITY WATCH
+
+SKY has the strongest holder economics in this seed pair, but it is post-rerating, governance-mutable and not safely executable from the repo today. Bank the conditional gate; do not build the Ethereum route while price remains above it.
+
+### Sources
+
+- [Official SKY token mechanics](https://sky.money/blog/understanding-the-sky-token)
+- [August 13, 2026 executive spell](https://vote.sky.money/executive/template-executive-vote-initialize-sbe-beam-monthly-settlement-cycle-for-july-2026-lssky-sky-rewards-normalization-increase-buybacks-and-reactivate-lssky-usds-farm-adjust-grove-and-osero-dc-iam-parameters-rename-osero-chainlog-keys-update-safe-harbor-agreement-prime-agent-proxy-spells-august-13-2026)
+- [Official LitePSM USDC/USDS documentation](https://developers.skyeco.com/protocol/liquidity/litepsm/)
+- [SKY market page](https://www.coingecko.com/en/coins/sky)

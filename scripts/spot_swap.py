@@ -1,7 +1,8 @@
 """General spot swap via Uniswap V3 exactInputSingle. Adapted from the proven
 emergency_swap_usdc_to_eth.py path (same router/quoter/ABIs/gas pattern), but:
 any token pair, explicit --amount, decimals queried on-chain, 1% default
-slippage cap (not the emergency 5%), and a --yes confirm.
+slippage cap (not the emergency 5%), best-output fee-tier selection, an
+independent execution floor, and a --yes confirm.
 
 Built 2026-06-10 for the operator-directed ARB entry (conditional on the
 Jun 16 DAO revenue-share vote). Usage:
@@ -11,7 +12,8 @@ Jun 16 DAO revenue-share vote). Usage:
         --token-in USDC --token-out ARB --amount 15 --dry-run
     # execute
     python scripts/spot_swap.py --chain arbitrum --sleeve crypto \
-        --token-in USDC --token-out ARB --amount 15 --yes
+        --token-in USDC --token-out ARB --amount 15 \
+        --min-out <independently-derived-token-floor> --yes
 """
 
 from __future__ import annotations
@@ -20,6 +22,7 @@ import argparse
 import json
 import sys
 import time
+from decimal import Decimal, InvalidOperation, ROUND_CEILING, ROUND_FLOOR
 
 from eth_account import Account
 from web3 import Web3
@@ -43,6 +46,7 @@ CHAIN = {
             "USDC.e": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
             "WETH": "0x82af49447D8a07e3bd95BD0d56f35241523fBab1",
             "ARB":  "0x912CE59144191C1204E64559FE8253a0e49E6548",
+            "AAVE": "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
         },
     },
     "polygon": {
@@ -120,7 +124,112 @@ ROUTER_ABI = [{
 }]
 
 MAX_UINT = (1 << 256) - 1
-FEE_TIERS = [500, 3000, 10000]  # tried in order when --fee not given
+FEE_TIERS = [100, 500, 3000, 10000]
+
+
+def _select_best_quote(candidates: list[tuple[int, int]]) -> tuple[int, int]:
+    """Select the fee tier with maximum executable output, never first-nonzero.
+
+    A nonzero Uniswap quote proves only that a path exists.  It does not prove
+    usable liquidity: the Arbitrum AAVE 0.05% pool returned ~0.000003 AAVE for
+    $7 while the 0.30% pool returned ~0.0574.  First-nonzero routing would have
+    converted essentially the whole input into price impact.
+    """
+    clean: list[tuple[int, int]] = []
+    for tier, amount_out in candidates:
+        if isinstance(tier, bool) or isinstance(amount_out, bool):
+            raise RuntimeError("malformed quote candidate")
+        try:
+            tier = int(tier)
+            amount_out = int(amount_out)
+        except (TypeError, ValueError):
+            raise RuntimeError("malformed quote candidate")
+        if tier <= 0 or amount_out <= 0:
+            raise RuntimeError("nonpositive quote candidate")
+        clean.append((tier, amount_out))
+    if not clean:
+        raise RuntimeError("no positive quote candidates")
+    return max(clean, key=lambda row: row[1])
+
+
+def _execution_floor(quote_out: int, slippage_pct: object,
+                     independent_min_out: int | None) -> int:
+    """Combine quote-relative slippage with a user-supplied independent floor."""
+    if isinstance(quote_out, bool) or isinstance(slippage_pct, bool):
+        raise RuntimeError("invalid execution-floor inputs")
+    try:
+        quote_out = int(quote_out)
+        slippage = Decimal(str(slippage_pct))
+    except (InvalidOperation, TypeError, ValueError):
+        raise RuntimeError("invalid execution-floor inputs")
+    if (quote_out <= 0 or not slippage.is_finite()
+            or not Decimal(0) <= slippage < Decimal(100)):
+        raise RuntimeError("invalid execution-floor inputs")
+    quote_floor = int((Decimal(quote_out) * (Decimal(100) - slippage)
+                       / Decimal(100)).to_integral_value(rounding=ROUND_FLOOR))
+    if independent_min_out is None:
+        return quote_floor
+    if isinstance(independent_min_out, bool):
+        raise RuntimeError("invalid independent minimum output")
+    try:
+        independent_min_out = int(independent_min_out)
+    except (TypeError, ValueError):
+        raise RuntimeError("invalid independent minimum output")
+    if independent_min_out <= 0:
+        raise RuntimeError("invalid independent minimum output")
+    if independent_min_out > quote_out:
+        raise RuntimeError("independent minimum output exceeds the live quote")
+    return max(quote_floor, independent_min_out)
+
+
+def _human_to_units(value: object, decimals: int, *, round_up: bool) -> int:
+    """Convert a human token amount exactly; minimums round toward safety."""
+    if isinstance(value, bool) or isinstance(decimals, bool):
+        raise RuntimeError("invalid token amount")
+    try:
+        amount = Decimal(str(value))
+        decimals = int(decimals)
+    except (InvalidOperation, TypeError, ValueError):
+        raise RuntimeError("invalid token amount")
+    if not amount.is_finite() or amount <= 0 or not 0 <= decimals <= 255:
+        raise RuntimeError("invalid token amount")
+    rounding = ROUND_CEILING if round_up else ROUND_FLOOR
+    units = int((amount * (Decimal(10) ** decimals)).to_integral_value(
+        rounding=rounding))
+    if units <= 0:
+        raise RuntimeError("token amount is below one base unit")
+    return units
+
+
+def _quote_fee_tiers(quoter, in_addr: str, out_addr: str, amount_units: int,
+                     tiers: list[int], attempts: int = 2
+                     ) -> tuple[list[tuple[int, int]], dict[int, int], list[int]]:
+    """Quote each tier with a bounded retry and retain QuoterV2 gas evidence."""
+    candidates: list[tuple[int, int]] = []
+    gas_estimates: dict[int, int] = {}
+    failures: list[int] = []
+    for tier in tiers:
+        quote = None
+        for _ in range(attempts):
+            try:
+                result = quoter.functions.quoteExactInputSingle(
+                    (in_addr, out_addr, amount_units, tier, 0)).call()
+                if int(result[0]) > 0:
+                    quote = result
+                    break
+            except Exception:
+                continue
+        if quote is None:
+            failures.append(tier)
+            continue
+        candidates.append((tier, int(quote[0])))
+        try:
+            gas = int(quote[3])
+        except (IndexError, TypeError, ValueError):
+            gas = 0
+        if gas >= 0:
+            gas_estimates[tier] = gas
+    return candidates, gas_estimates, failures
 
 
 def _pick_rpc(rpcs: list[str], chain_id: int) -> Web3:
@@ -147,12 +256,17 @@ def main() -> int:
     p.add_argument("--sleeve", choices=["polymarket", "crypto"], default="crypto")
     p.add_argument("--token-in", required=True, help="symbol from chain map, or address")
     p.add_argument("--token-out", required=True, help="symbol from chain map, or address")
-    p.add_argument("--amount", type=float, default=None,
+    p.add_argument("--amount", default=None,
                    help="amount of token-in (human units); omit with --all")
     p.add_argument("--all", action="store_true", help="swap full token-in balance")
     p.add_argument("--fee", type=int, default=None,
-                   help="pool fee tier (500/3000/10000); default: first tier that quotes")
-    p.add_argument("--slippage-pct", type=float, default=1.0)
+                   help="explicit pool fee tier; default: quote 100/500/3000/10000 and "
+                        "use the tier returning the most token-out")
+    p.add_argument("--slippage-pct", default="1.0")
+    p.add_argument("--min-out", default=None,
+                   help="independently derived minimum token-out in human units. Required "
+                        "for execution; combined with the quote-relative slippage floor. "
+                        "Do not copy an unverified router quote into this field.")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--yes", action="store_true", help="skip interactive confirm")
     args = p.parse_args()
@@ -168,10 +282,17 @@ def main() -> int:
     out_addr, _, out_sym, out_dec = _resolve_token(cfg, w, args.token_out)
 
     bal_units = in_c.functions.balanceOf(addr).call()
+    if args.all and args.amount is not None:
+        print("ERROR: choose either --amount or --all", file=sys.stderr)
+        return 2
     if args.all:
         amount_units = bal_units
-    elif args.amount:
-        amount_units = int(args.amount * 10**in_dec)
+    elif args.amount is not None:
+        try:
+            amount_units = _human_to_units(args.amount, in_dec, round_up=False)
+        except RuntimeError as exc:
+            print(f"ERROR: --amount {exc}", file=sys.stderr)
+            return 2
     else:
         print("ERROR: provide --amount or --all", file=sys.stderr)
         return 2
@@ -182,34 +303,72 @@ def main() -> int:
 
     quoter = w.eth.contract(address=Web3.to_checksum_address(cfg["quoter"]), abi=QUOTER_ABI)
     tiers = [args.fee] if args.fee else FEE_TIERS
-    quote_out, fee_used = None, None
-    for tier in tiers:
-        try:
-            q = quoter.functions.quoteExactInputSingle(
-                (in_addr, out_addr, amount_units, tier, 0)).call()
-            if q[0] > 0:
-                quote_out, fee_used = q[0], tier
-                break
-        except Exception:
-            continue
-    if quote_out is None:
+    quote_candidates, gas_estimates, failed_tiers = _quote_fee_tiers(
+        quoter, in_addr, out_addr, amount_units, tiers)
+    if failed_tiers:
+        print("NOTICE: fee tiers unquoted after two attempts: "
+              + ", ".join(str(tier) for tier in failed_tiers), file=sys.stderr)
+    if not quote_candidates:
         print(f"ERROR: no quotable pool for {in_sym}->{out_sym} in tiers {tiers}", file=sys.stderr)
+        return 2
+    try:
+        fee_used, quote_out = _select_best_quote(quote_candidates)
+    except RuntimeError as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
         return 2
 
     human_in = amount_units / 10**in_dec
     human_out = quote_out / 10**out_dec
+    if args.fee is None:
+        print("fee-tier quotes (maximum gross output wins; gas estimates shown):")
+        for tier, candidate_out in sorted(quote_candidates):
+            candidate_human = candidate_out / 10**out_dec
+            candidate_px = (human_in / candidate_human
+                            if candidate_human else float("inf"))
+            chosen = "  <- SELECTED" if tier == fee_used else ""
+            gas_note = (f", quoter gas {gas_estimates[tier]:,}"
+                        if gas_estimates.get(tier) else "")
+            print(f"  {tier/1e4:.2f}%: {candidate_human:.8f} {out_sym} "
+                  f"(px {candidate_px:.6f} {in_sym}/{out_sym}{gas_note}){chosen}")
+        outputs = [candidate_out for _, candidate_out in quote_candidates]
+        if len(outputs) > 1 and min(outputs) * 2 < max(outputs):
+            print("WARNING: fee-tier outputs diverge by >2x; at least one pool is "
+                  "dust, exhausted, or badly priced.", file=sys.stderr)
     px = human_in / human_out if human_out else float("inf")
     print(f"quote ({args.chain}, fee {fee_used/1e4:.2f}%): "
           f"{human_in:.6f} {in_sym} -> {human_out:.6f} {out_sym}  (px {px:.6f} {in_sym}/{out_sym})")
 
-    amount_out_min = int(quote_out * (1 - args.slippage_pct / 100))
+    independent_min_units = None
+    if args.min_out is not None:
+        try:
+            independent_min_units = _human_to_units(
+                args.min_out, out_dec, round_up=True)
+        except RuntimeError as exc:
+            print(f"ERROR: --min-out {exc}", file=sys.stderr)
+            return 2
+    if not args.dry_run and independent_min_units is None:
+        print("ERROR: execution requires --min-out from an independent fair/reference "
+              "price; a router quote alone cannot detect a poisoned pool", file=sys.stderr)
+        return 2
+    try:
+        amount_out_min = _execution_floor(
+            quote_out, args.slippage_pct, independent_min_units)
+    except RuntimeError as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        return 2
     if args.dry_run:
         print(f"DRY RUN — would swap with amountOutMinimum {amount_out_min / 10**out_dec:.6f} {out_sym}")
         return 0
+    print(f"execution protection: independent floor "
+          f"{independent_min_units / 10**out_dec:.8f} {out_sym}; current effective "
+          f"amountOutMinimum {amount_out_min / 10**out_dec:.8f} {out_sym}")
     if not args.yes:
-        if input(f"swap {human_in:.6f} {in_sym} -> ~{human_out:.6f} {out_sym}? [y/N] ").strip().lower() != "y":
+        if input(f"swap {human_in:.6f} {in_sym} -> ~{human_out:.6f} {out_sym}, "
+                 f"never below {amount_out_min / 10**out_dec:.8f} {out_sym}? "
+                 "[y/N] ").strip().lower() != "y":
             print("aborted")
             return 1
+    confirmed_min_units = amount_out_min
 
     router_addr = Web3.to_checksum_address(cfg["router"])
     if in_c.functions.allowance(addr, router_addr).call() < amount_units:
@@ -222,6 +381,39 @@ def main() -> int:
         if w.eth.wait_for_transaction_receipt(h, timeout=120).status != 1:
             print("ERROR: approve failed", file=sys.stderr)
             return 3
+
+    # The operator prompt and a token approval can make the preview quote
+    # minutes old. Re-run every tier immediately before signing; the independent
+    # floor and the exact operator-confirmed effective floor remain fixed while
+    # the quote-relative floor and selected tier move to current state.
+    fresh_candidates, fresh_gas, fresh_failures = _quote_fee_tiers(
+        quoter, in_addr, out_addr, amount_units, tiers)
+    if fresh_failures:
+        print("NOTICE: signing-time fee tiers unquoted after two attempts: "
+              + ", ".join(str(tier) for tier in fresh_failures), file=sys.stderr)
+    if not fresh_candidates:
+        print("ERROR: no pool quoted at signing time; no swap sent", file=sys.stderr)
+        return 2
+    try:
+        fresh_fee, fresh_quote = _select_best_quote(fresh_candidates)
+        fresh_min = _execution_floor(
+            fresh_quote, args.slippage_pct,
+            max(independent_min_units, confirmed_min_units))
+    except RuntimeError as exc:
+        print(f"ERROR: signing-time route failed protection: {exc}", file=sys.stderr)
+        return 2
+    old_fee, old_quote = fee_used, quote_out
+    fee_used, quote_out, amount_out_min = fresh_fee, fresh_quote, fresh_min
+    human_out = quote_out / 10**out_dec
+    px = human_in / human_out if human_out else float("inf")
+    gas_note = (f", quoter gas {fresh_gas[fee_used]:,}"
+                if fresh_gas.get(fee_used) else "")
+    movement = (f" (preview fee {old_fee}, output "
+                f"{old_quote / 10**out_dec:.8f})"
+                if old_fee != fee_used or old_quote != quote_out else "")
+    print(f"signing-time quote: fee {fee_used}, {human_out:.8f} {out_sym}, "
+          f"px {px:.6f} {in_sym}/{out_sym}{gas_note}; minimum "
+          f"{amount_out_min / 10**out_dec:.8f}{movement}")
 
     router = w.eth.contract(address=router_addr, abi=ROUTER_ABI)
     tx = router.functions.exactInputSingle((

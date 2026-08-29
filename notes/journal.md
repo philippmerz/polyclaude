@@ -10735,3 +10735,54 @@ No capital moved and no Telegram was sent: none of the findings crossed an actio
 hard clocks remain Aug-31 Lake/agreement resolution and redemption, the Sep-1..10 independent Duma
 forecast, and Apple/AVAV on Sep-8..10. The durable ROI continuation remains active until the operator
 manually cancels it.
+
+## 2026-08-29 00:52 UTC — rollover continuation: route/cap fail-opens closed; short priors refreshed; no trade (DEC-0095)
+
+The full periodic loop remained trade-quiet. No discovery, consistency, monotonicity, marginal-APY,
+watchlist or redemption check produced an executable action; `redeem-all` found nothing, and explicit
+Lake/Iran redemption rehearsals reverted with the expected unresolved-condition result. The final
+authoritative mark was **$185.36** total bankroll, with +$4.79 realized. Polymarket positions marked
+$169.38 but depth-walked to only $162.98 net, so midpoint overstatement remained $6.40. The live state
+audit was CLEAN across 15 positions and authenticated inventory contained zero open BUY commitments.
+
+The Aug-29 rollover refreshed every newly stale judgment rather than carrying yesterday's numbers.
+The continued absence of a qualifying US-region Maps label lowered Lake America p_yes 0.60->0.55;
+the 0.346 bid exits about $13.80 versus $22.53 central and $18.43 stressed resolution value, so the
+40.95563 YES remain HOLD/no-add. Oman's official record still contains no bilateral acceptance after
+Aug-25, lowering Iran-Oman p_yes 0.09->0.08. The 00:30Z Al Jazeera alert was processed as material but
+not double-counted: its IRGC-control/active-US-blockade headline repeats facts already inside the
+prior, while fresh CENTCOM enforcement counts neither accept nor reject the exact bilateral
+predicate. The 31 YES remain HOLD at $2.48 resolution EV versus a $1.24 exit; stress still blocks any
+add. At cutoff, absent a declaration, remove the 3pp announcement branch and retain only the roughly
+5pp interpretation path pending resolution. Fresh official checks left Trump-out p_no at 0.97 and
+cleared its stale flag. The latest WCIOM party rating was directionally supportive but not an
+independent seat forecast, so the protected Duma 295-339 union stays p=0.76 and HOLD/no-add.
+
+The continuation did find two real execution hazards before either touched capital. On Arbitrum,
+the AAVE 0.05% Uniswap V3 tier returned a positive but poisoned quote near $1,599/AAVE while the
+liquid 0.30% tier quoted about $121.94. `spot_swap.py` now compares every tier by output, exposes gas
+and quote divergence, requires an independent exact minimum, requotes immediately before signing,
+and can never weaken the confirmed floor. On Polymarket, the documented 15% ticket and 30%
+event/configured-cluster caps were not fully enforced against every resting/concurrent/fill-lag path.
+All BUYs now use affirmative market identity, paginated zero-threshold positions and authenticated
+orders, cumulative bought evidence, a one-shot full-fill reservation, and one unified wallet ledger
+lock through signing/posting. Bundles re-fetch the whole exposure state under lock and reserve every
+leg before order one. Unknown sides/identities, raw or replayed BUYs, ambiguous cancel outcomes,
+legacy unreserved cancels and reappearing cancel markers all fail closed with a persistent
+reconciliation blocker. An exact $19 HLE maker rehearsal now correctly blocks at ticket $29.83 >
+$27.84 and factor $68.87 > $55.69; factor headroom is only $5.82.
+
+The wider seed batch also closed without forcing deployment. AMKR, KTOS and SKY each scored 2/4;
+their machine-readable gates are respectively <$35 plus utilization/prepayment/Arizona proof,
+$40-42 plus Q3/backlog/FY27-margin proof, and $0.050-0.055 plus sustained buybacks/net income and a
+safe <=1% route. AAVE needs <=$105 plus a formal >=$20m/year buyback AIP; WOLF needs <=$18-19 plus
+margin/burn improvement. Anduril wrappers and current RKLB/ASTS/CIFR/KLIC setups did not clear the
+valuation/catalyst bar.
+
+Validation finished sequentially: **322 pytest cases passed**, all **123** standalone money checks
+passed, and all **19/19** injected financial mutations were caught. Two independent fail-open reviews
+also passed the 64 focused safety cases and found no remaining material capital-safety issue; compile,
+JSON and diff hygiene were clean. No order, swap, bridge, redemption or capital movement occurred;
+one material-only Telegram summarized the safety fixes and prior changes. The next hard clocks are
+the Aug-31 Lake/Iran resolution and cap reflow, then the Sep-1..10 Duma independent-forecast gate.
+The durable ROI continuation remains active until the operator manually cancels it.

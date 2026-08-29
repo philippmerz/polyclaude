@@ -43,6 +43,20 @@ MUTS = [
     ("polymarket_consistency_scan.py",
                     'return sum(_market_fee_buy(market, price) for market, price in legs)',
                     'return sum(price * _market_fee_buy(market, price) for market, price in legs)'), # multiply fee/share by price again
+    ("spot_swap.py", 'return max(clean, key=lambda row: row[1])',
+                    'return clean[0]'),                                                    # first-nonzero selects dust/poisoned pool
+    ("spot_swap.py", 'return max(quote_floor, independent_min_out)',
+                    'return quote_floor'),                                                # discard independently derived loss floor
+    ("polyclaude_enter.py", 'if state["ticket_after"] > state["ticket_cap"] + 1e-9:',
+                    'if False:'),                                                         # single entry can exceed 15% ticket cap
+    ("polyclaude_enter.py", 'if state["cluster_after"] > state["cluster_cap"] + 1e-9:',
+                    'if False:'),                                                         # full-fill maker promise bypasses factor cap
+    ("spot_swap.py", 'rounding = ROUND_CEILING if round_up else ROUND_FLOOR',
+                    'rounding = ROUND_FLOOR'),                                            # floor the operator's independent loss limit
+    ("polyclaude_enter.py", '        if same_market:\n            ticket_before += risk\n        inferred_cluster_before += risk',
+                    '        if same_market:\n            ticket_before += risk\n        inferred_cluster_before += 0.0'), # ignore resting BUY factor risk
+    ("polyclaude_enter.py", '    if not isinstance(cluster, str) or not cluster.strip():',
+                    '    if False:'),                                                     # unknown correlation silently becomes independent
 ]
 results = []
 for fname, old, new in MUTS:

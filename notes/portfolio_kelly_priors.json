@@ -134,45 +134,57 @@
   "rho_within": 0.5,
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
-  "note": "RE-VERIFIED 2026-08-11 (tick): multiple impeachment resolutions filed in the 119th (H.Res.353/537/939) and rhetorical 25th-Amendment calls after the Iran post and the Greenland letter \u2014 but removal needs majorities nobody has assembled, and the cabinet is loyalist. The 25th has never been invoked against a president's will. p_no 0.97 held.",
-  "verified": "2026-08-13",
-  "criteria_read": "2026-08-21",
+  "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
+  "verified": "2026-08-29",
+  "criteria_read": "2026-08-29",
   "key_facts": [
    {
     "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
     "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
     "source_date": "2026-08-13",
-    "checked": "2026-08-13"
+    "checked": "2026-08-29"
    },
    {
     "claim": "A Section 4 invocation NOT sustained by both Houses does not count; impeachment without removal does not count.",
     "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
     "source_date": "2026-08-13",
-    "checked": "2026-08-13"
+    "checked": "2026-08-29"
    },
    {
     "claim": "An ANNOUNCEMENT of resignation/removal before Dec-31 resolves YES IMMEDIATELY, regardless of effective date \u2014 the one clause that WIDENS YES.",
     "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
     "source_date": "2026-08-13",
-    "checked": "2026-08-13"
+    "checked": "2026-08-29"
    },
    {
     "claim": "Resolution source is 'a consensus of credible reporting', NOT a named source \u2014 so no resolution-source-lag angle exists here, unlike the HLE family.",
     "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
     "source_date": "2026-08-13",
-    "checked": "2026-08-13"
+    "checked": "2026-08-29"
    },
    {
     "claim": "Impeachment resolutions H.Res.353/537/939 are INTRODUCED in the 119th Congress; none has produced a Senate removal and the majorities do not exist.",
     "source": "https://www.congress.gov/bill/119th-congress/house-resolution/939 [403 to WebFetch \u2014 human-verifiable only; falsifier is the market itself pricing NO at ~0.93]",
     "source_date": "2026-08-12",
-    "checked": "2026-08-13"
+    "checked": "2026-08-29"
    },
    {
     "claim": "CRITERIA RE-READ 2026-08-21, verbatim vs recorded thesis: NO DRIFT. All five recorded clauses confirmed word-for-word, including the announcement clause that widens YES and the consensus-of-credible-reporting source. Noted an internal tension in the text worth carrying: the opening sentence says \"ceases to be President for any period of time\" while paragraph 3 says \"Only permanent removal from office will qualify\" \u2014 the narrowing paragraph is operative and my prior is built on it, but if a temporary-removal scenario ever occurs this is exactly the ambiguity a UMA vote would turn on, and it is an interpretation risk I do not price edge against.",
     "source": "gamma market description, first-hand",
     "source_date": "2026-08-21",
     "checked": "2026-08-21"
+   },
+   {
+    "claim": "CRITERIA RE-READ 2026-08-29 against the live Gamma description: NO DRIFT. Permanent removal, a sustained Section 4 invocation, the immediate-announcement clause, the temporary-removal exclusions, and consensus-of-credible-reporting resolution all remain exact. The any-period/permanent-removal textual tension also remains and is not treated as tradable edge.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-08-29",
+    "checked": "2026-08-29"
+   },
+   {
+    "claim": "Trump was visibly exercising presidential duties on Aug-28; the current White House news corpus contained no resignation/removal announcement, and its latest disclosed physician memorandum found him fit for duty.",
+    "source": "https://www.whitehouse.gov/news/",
+    "source_date": "2026-08-28",
+    "checked": "2026-08-29"
    }
   ]
  },
@@ -500,20 +512,32 @@
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
  "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
-  "p_yes": 0.09,
-  "verified": "2026-08-28",
+  "p_yes": 0.08,
+  "verified": "2026-08-29",
   "criteria_read": "2026-08-28",
-  "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03. Re-underwritten after the operator outage and five new alerts: the market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Aug-25 joint statement remains ambiguous rather than qualifying on its face: it calls the corridor framework proposed, says technical talks will continue, and separately refers to an agreement to implement joint mine-clearing; Oman's minister said he hoped an announcement would follow. Aug-27 reporting says details are still being worked out while Iran is adding conditions tied to US action. A fresh independent catalyst check returned p_yes 0.09 (0.03-0.18), down from 0.55. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.04 bid: at p_yes 0.09, expected resolution value is $2.79 versus about $1.24 gross exit value, and the existing joint statement retains a small totality-of-information interpretation path. Re-underwrite immediately on any new joint/Omani declarative statement.",
+  "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03. The market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Aug-25 joint statement remains ambiguous rather than qualifying on its face: it calls the corridor framework proposed, says technical talks will continue, and separately refers to an agreement to implement joint mine-clearing; Oman's minister said he hoped an announcement would follow. Aug-27 reporting said details were still being worked out while Iran added conditions tied to US action. The Aug-29 official Oman recheck found no later bilateral acceptance statement. The 00:30Z Al Jazeera rollover alert repeated the already-underwritten IRGC-control/active-US-blockade facts; fresh CENTCOM enforcement counts neither accept nor reject the exact bilateral predicate, so they are not double-counted. p_yes remains 0.08: about 5% interpretation/resolution ambiguity plus 3% for a clear announcement before cutoff. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.04 bid: expected resolution value is $2.48 versus about $1.24 gross exit value. Re-underwrite immediately on any new joint/Omani declarative statement.",
   "cluster": "hormuz-agreement",
   "rho_within": 0.0,
   "divergence_ack": "2026-08-28",
-  "divergence_ack_reason": "The prior has been cut 0.55 to 0.09 after two days of contrary flow and fresh facts. The remaining 4.5pp prior-to-mark gap is reviewed: no add because the 10pp robust haircut fails, but no taker exit because the 0.04 bid values 31 shares at only $1.24 before fees versus $2.79 at the revised prior. The residual edge is an interpretation lottery around the Aug-25 joint statement plus a short live announcement window, not confidence that the countries have already made an unambiguous qualifying announcement.",
+  "divergence_ack_reason": "The prior has been cut 0.55 to 0.08 after contrary flow, fresh facts, and the Aug-29 official-source recheck. The remaining prior-to-mark gap is reviewed: no add because the 10pp robust haircut fails, but no taker exit because the 0.04 bid values 31 shares at only $1.24 before fees versus $2.48 at the revised prior. The residual edge is an interpretation lottery around the Aug-25 joint statement plus a short live announcement window, not confidence that the countries have already made an unambiguous qualifying announcement.",
   "key_facts": [
    {
     "claim": "YES requires a declarative Oman-and-Iran acceptance announcement for the same agreement establishing traffic-management policies, obligations, or commitments; prospective negotiations alone do not qualify.",
     "source": "https://gamma-api.polymarket.com/markets?slug=us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
     "source_date": "2026-08-28",
-    "checked": "2026-08-28"
+    "checked": "2026-08-29"
+   },
+   {
+    "claim": "The Aug-29 official Oman Foreign Ministry page still describes the corridor as proposed, says technical negotiations would continue, and says an announcement is hoped for soon; its recent-statements list shows no later Oman-Iran acceptance statement.",
+    "source": "https://www.fm.gov.om/en/53722/",
+    "source_date": "2026-08-25",
+    "checked": "2026-08-29"
+   },
+   {
+    "claim": "The Aug-29 Al Jazeera rollover alert repeats the already-known IRGC-control and active-US-blockade claims; fresh CENTCOM vessel-enforcement counts are operational facts that neither accept nor reject the exact Oman-Iran agreement.",
+    "source": "https://www.aljazeera.com/news/liveblog/2026/8/29/iran-war-live-irgc-asserts-strait-control-us-enforces-blockade",
+    "source_date": "2026-08-29",
+    "checked": "2026-08-29"
    },
    {
     "claim": "The Aug-25 joint statement calls the corridor framework proposed, says technical negotiations will continue, and separately describes an agreement to implement joint mine-clearing; Oman's minister said he hoped the corridor would be announced soon.",
@@ -531,7 +555,7 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.08,
-  "verified": "2026-08-28",
+  "verified": "2026-08-29",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
@@ -556,12 +580,18 @@
     "source": "https://www.vedomosti.ru/politics/articles/2026/08/10/1219878-na-viborah-v-gosdumu-yavka",
     "source_date": "2026-08-10",
     "checked": "2026-08-28"
+   },
+   {
+    "claim": "Fresh independent polling does not supply the required independent seat forecast: VCIOM's weekly United Russia support rose from 32.1% on August 2 to 39.2% on August 23, directionally supporting the central range but not resolving list-vote translation or district wins. The 0.08/0.40/0.28 distribution and no-add gate therefore remain unchanged.",
+    "source": "https://wciom.ru/ratings/reiting-politicheskikh-partii/",
+    "source_date": "2026-08-23",
+    "checked": "2026-08-29"
    }
   ]
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.40,
-  "verified": "2026-08-28",
+  "verified": "2026-08-29",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
@@ -579,7 +609,7 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.28,
-  "verified": "2026-08-28",
+  "verified": "2026-08-29",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
@@ -596,16 +626,16 @@
   ]
  },
  "google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026": {
-  "p_yes": 0.60,
-  "verified": "2026-08-28",
+  "p_yes": 0.55,
+  "verified": "2026-08-29",
   "criteria_read": "2026-08-28",
   "cluster": "google-maps-rollout",
   "rho_within": 0.0,
-  "source_ack": "2026-08-28",
-  "source_ack_note": "The 2025 Google post is intentionally the freshest official statement of the comparable GNIS-to-Maps rollout precedent, not a current Lake America fact. Current implementation state was separately re-verified on August 28 through the official GNIS record, the August 27 DOI order, and a direct US-region Google Maps check.",
+  "source_ack": "2026-08-29",
+  "source_ack_note": "The 2025 Google post is intentionally the freshest official statement of the comparable GNIS-to-Maps rollout precedent, not a current Lake America fact. Current implementation state was separately re-verified on August 29 through the official GNIS record, the August 27 DOI order, and a direct US-region Google Maps check.",
   "divergence_ack": "2026-08-28",
   "divergence_ack_reason": "The 30pp prior-to-mark gap was reviewed before and after execution, including independent 0.40 skeptic and 0.88 champion cases. The position used essentially all immediately deployable pUSD after economically closing the remaining Hormuz-normal NO; reaching the 15% ticket cap would require paying taker spreads to dismantle higher-certainty or matched structures. Size is deliberately $12.339 rather than point-estimate Kelly because the decisive majority-US rollout probability is not directly measurable, the short window crosses a weekend, and Maps still showed the old label at entry. Do not infer an automatic add from the headline gap; re-underwrite on a qualifying rollout or fresh contrary implementation evidence.",
-  "note": "DEC-0085. Google Maps must show Lake America, alone or alongside Lake Ontario, for a majority of US users by August 31 at 11:59pm ET; beta-only, experimental, or subnational appearances do not qualify. The official GNIS prerequisite completed August 27, and Google rolled out the comparable Gulf of America label roughly one day after its final GNIS update. This case has materially less preparation time, crosses a weekend, concerns a binational feature, and direct US-region Maps checks still showed Lake Ontario at entry. Central p_yes 0.60; mandatory 10pp stress p=0.50. Bought 40.95563 YES for $12.339349 total risk including $0.339350 taker fee, with a hard raw limit of 0.30 and price improvement to about 0.293 average. No chase above 0.30 without fresh qualifying Maps evidence.",
+  "note": "DEC-0085. Google Maps must show Lake America, alone or alongside Lake Ontario, for a majority of US users by August 31 at 11:59pm ET; beta-only, experimental, or subnational appearances do not qualify. The official GNIS prerequisite completed August 27, and Google rolled out the comparable Gulf of America label roughly one day after its final GNIS update. This case has materially less preparation time, crosses a weekend, and concerns a binational feature. A fresh Aug-29 US-region query still returned target Lake America 0 / control Lake Ontario 2 and no official Google rollout notice appeared, so time decay lowers central p_yes from 0.60 to 0.55; mandatory 10pp stress is 0.45. The 40.95563 YES cost $12.339349 total including fee. At the live 0.345 bid, fee-aware exit is about $13.74 versus $22.53 central and $18.43 stressed resolution value, so HOLD. No chase above the original 0.30 entry cap without broad qualifying Maps evidence.",
   "key_facts": [
    {
     "claim": "The official GNIS record for gazId 970427 listed Lake America as the official name with an August 27, 2026 BGN decision; Lake Ontario remained a variant.",
@@ -624,6 +654,12 @@
     "source": "https://blog.google/products-and-platforms/products/maps/united-states-geographic-name-change-feb-2025/",
     "source_date": "2025-02-10",
     "checked": "2026-08-28"
+   },
+   {
+    "claim": "A fresh Aug-29 direct US-region Google Maps search returned zero Lake America labels and two Lake Ontario labels; one endpoint observation is not proof of majority-US state, but continued absence modestly time-decays the rollout prior.",
+    "source": "https://www.google.com/maps/search/Lake+Ontario?hl=en&gl=us",
+    "source_date": "2026-08-29",
+    "checked": "2026-08-29"
    }
   ]
  }

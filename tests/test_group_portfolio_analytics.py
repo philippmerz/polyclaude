@@ -949,7 +949,10 @@ def test_kelly_cli_reserves_group_cost_once_and_never_prints_member_kelly(
     wallet = tmp_path / "wallet.json"
     wallet.write_text(json.dumps({"address": "0xabc"}))
     positions = _duma_positions()
-    monkeypatch.setattr(kelly, "load_priors", _duma_priors)
+    fresh_priors = _duma_priors()
+    for slug in ("duma-a", "duma-b", "duma-c"):
+        fresh_priors[slug]["verified"] = dt.date.today().isoformat()
+    monkeypatch.setattr(kelly, "load_priors", lambda: fresh_priors)
     monkeypatch.setattr(kelly, "fetch_positions", lambda _addr: positions)
     monkeypatch.setattr(
         kelly.exact_exit, "_execution_fee_market", lambda _condition: {"takerBaseFee": 0}

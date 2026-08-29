@@ -25,6 +25,10 @@ logs/
 
 # Runtime lockfiles (flock-based cross-tick mutex)
 .checkin.lock
+.entry.lock
+.entry_reservation.lock
+.entry_reservations.json
+.entry_reconciliation_required.json
 
 # Operator self-followup PID file (operator_followup.sh / cancel_followup.sh)
 notes/.followup_pid

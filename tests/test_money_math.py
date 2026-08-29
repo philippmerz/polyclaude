@@ -29,6 +29,7 @@ import atexit
 import json
 import os
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -455,3 +456,68 @@ check("arb_paired unknown slug returns None", cma._arb_paired("some-other-market
 check("arb_paired empty slug returns None", cma._arb_paired("", _RAW), None)
 # A string entry (schema comments live in this file) must not raise.
 check("arb_paired tolerates non-dict entries", cma._arb_paired("_comment_schema", _RAW), None)
+
+# ---------------------------- spot-route and single-entry hard caps (2026-08-28)
+# AAVE exposed a dust 0.05% pool that returned a positive quote at ~13x the
+# liquid 0.30% pool's price. First-nonzero is therefore not routing; maximum
+# executable output is. The independent floor must also survive a tempting but
+# bad router quote, and a resting BUY counts as if it fills completely.
+import spot_swap  # noqa: E402
+
+check("spot route chooses maximum token-out",
+      spot_swap._select_best_quote([
+          (500, 3_090_000_000_000),
+          (3000, 57_406_150_000_000_000),
+      ]),
+      (3000, 57_406_150_000_000_000))
+check("independent minimum survives quote-relative slippage",
+      spot_swap._execution_floor(100_000, 1.0, 99_500), 99_500)
+check("independent token minimum rounds up",
+      spot_swap._human_to_units(
+          "0.0000000000000000011", 18, round_up=True), 2)
+
+_ticket_breach = {
+    "ticket_before": 10.0, "ticket_after": 16.0, "ticket_cap": 15.0,
+    "cluster": None, "cluster_before": 10.0, "cluster_after": 16.0,
+    "cluster_cap": 30.0,
+}
+check("single-entry ticket cap blocks full fill",
+      "15% cap" in (pe._single_entry_cap_error(_ticket_breach) or ""), True)
+_cluster_breach = {
+    "ticket_before": 0.0, "ticket_after": 6.0, "ticket_cap": 15.0,
+    "cluster": "shared", "cluster_before": 25.0, "cluster_after": 31.0,
+    "cluster_cap": 30.0,
+}
+check("single-entry cluster cap blocks full fill",
+      "30% cap" in (pe._single_entry_cap_error(_cluster_breach) or ""), True)
+
+_prior_root = pe.REPO_ROOT
+with tempfile.TemporaryDirectory() as _tmp:
+    _tmp_root = Path(_tmp)
+    (_tmp_root / "notes").mkdir()
+    (_tmp_root / "notes" / "portfolio_kelly_priors.json").write_text(json.dumps({
+        "candidate": {"cluster": "shared"},
+        "other": {"cluster": "shared"},
+    }))
+    pe.REPO_ROOT = _tmp_root
+    try:
+        _pending_state = pe._single_entry_cap_state(
+            {"slug": "candidate", "conditionId": "0xcandidate",
+             "events": [{"id": "event-1"}]},
+            [], 100, 2, pending_buys=[{
+                "conditionId": "0xother", "slug": "other",
+                "eventIds": ["event-2"], "risk": 29,
+            }])
+        check("pending BUY counts against cluster cap",
+              _pending_state["cluster_after"], 31.0)
+        _missing_cluster_failed = False
+        try:
+            pe._single_entry_cap_state(
+                {"slug": "unknown", "conditionId": "0xunknown",
+                 "events": [{"id": "event-x"}]}, [], 100, 5)
+        except RuntimeError:
+            _missing_cluster_failed = True
+        check("unknown correlation identity fails closed",
+              _missing_cluster_failed, True)
+    finally:
+        pe.REPO_ROOT = _prior_root

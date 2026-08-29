@@ -86,7 +86,13 @@ def test_cli_help_explains_signed_live_max_price() -> None:
 
 
 def test_execute_rechecks_live_ask_and_never_submits_above_cap(
-        monkeypatch, capsys) -> None:
+        monkeypatch, capsys, tmp_path: Path) -> None:
+    notes = tmp_path / "notes"
+    notes.mkdir()
+    (notes / "portfolio_kelly_priors.json").write_text(json.dumps({
+        "cap-test": {"cluster": "explicit-independent-cap-test"},
+    }))
+    monkeypatch.setattr(entry, "REPO_ROOT", tmp_path)
     market = {
         "question": "Will the cap hold?",
         "slug": "cap-test",
@@ -99,10 +105,14 @@ def test_execute_rechecks_live_ask_and_never_submits_above_cap(
         "orderPriceMinTickSize": 0.01,
         "takerBaseFee": None,
         "negRisk": False,
+        "conditionId": "0xcaptest",
+        "events": [{"id": "event-cap-test"}],
     }
     asks = iter([0.29, 0.31])  # gate-time touch, then immediate execution touch
     monkeypatch.setattr(entry, "fetch_market_by_slug_or_question", lambda _q: market)
     monkeypatch.setattr(entry, "_existing_exposure", lambda *_args: None)
+    monkeypatch.setattr(entry, "_fetch_live_positions", lambda: [])
+    monkeypatch.setattr(entry, "_fetch_open_buy_commitments", lambda: [])
     monkeypatch.setattr(entry, "_sibling_markets", lambda *_args: None)
     monkeypatch.setattr(entry, "_best_ask", lambda _token: next(asks))
     monkeypatch.setattr(

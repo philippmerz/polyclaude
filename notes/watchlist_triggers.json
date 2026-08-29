@@ -239,6 +239,56 @@
       "route": "ibkr_surface",
       "rationale": "Fresh 2026-08-28 longterm_check: 2/4 PASS near $152 despite strong defense-autonomy demand. Reassess at <=$110 only if Sept-9 FY27 Q1 results maintain or raise guidance and funded backlog remains at least $1.2B.",
       "added": "2026-08-28"
+    },
+    {
+      "ticker": "AMKR",
+      "type": "equity",
+      "yfinance_symbol": "AMKR",
+      "entry_max": 35.0,
+      "horizon": "1-2y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-08-28 longterm_check: 2/4 PASS at $47.88 during a strong packaging up-cycle and heavy capex ramp. Reassess below $35 only if Q3/Q4 utilization and margins stay intact, or after the 2027 customer prepayment and Arizona milestone prove financing/execution.",
+      "added": "2026-08-28"
+    },
+    {
+      "ticker": "KTOS",
+      "type": "equity",
+      "yfinance_symbol": "KTOS",
+      "entry_max": 42.0,
+      "horizon": "1-2y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-08-28 longterm_check: 2/4 PASS at $52. Reassess at $40-42 or lower only if Q3 reaffirms at least 19% organic growth, backlog conversion and FY2027 margin expansion; the balance sheet is strong but valuation and cash conversion are not yet a margin of safety.",
+      "added": "2026-08-28"
+    },
+    {
+      "ticker": "WOLF",
+      "type": "equity",
+      "yfinance_symbol": "WOLF",
+      "entry_max": 19.0,
+      "horizon": "1-2y",
+      "route": "ibkr_surface",
+      "rationale": "2026-08-28 triage: price alone is insufficient. Reopen at <=$18-19 only with operating stabilization, or after Q1 revenue >=$160M, non-GAAP gross margin toward -10%, quarterly operating burn below ~$40M and an explicit gross-margin/FCF breakeven timetable.",
+      "added": "2026-08-28"
+    },
+    {
+      "ticker": "AAVE",
+      "type": "crypto",
+      "coingecko_id": "aave",
+      "entry_max": 105.0,
+      "horizon": "1y",
+      "route": "polyclaude",
+      "rationale": "2026-08-28 triage: price hit is only a review trigger. Require a formal executable AIP restoring automated revenue-funded AAVE purchases at >=$20M/year before a full check or entry. Buybacks remain paused; current protocol growth does not yet accrue tightly enough to holders. Arbitrum spot route is available only through the hardened max-output/min-out swap gate.",
+      "added": "2026-08-28"
+    },
+    {
+      "ticker": "SKY",
+      "type": "crypto",
+      "coingecko_id": "sky",
+      "entry_max": 0.055,
+      "horizon": "1y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-08-28 full check: 2/4 PASS/WATCH near $0.067 after the August rerating. Reassess at $0.050-0.055 only if live 30-day buybacks remain >=$1.5M, trailing-three-month net income annualizes >=$150M and all-in execution friction is <=1%. Repo has no safe Ethereum LitePSM + Uniswap V2 SKY route, so a hit surfaces research/route work rather than an automatic buy.",
+      "added": "2026-08-28"
     }
   ]
 }

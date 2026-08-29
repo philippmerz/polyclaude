@@ -1826,6 +1826,27 @@
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
+    },
+    {
+      "id": 95,
+      "timestamp": "2026-08-28T23:51:05Z",
+      "type": "scaffolding",
+      "thesis": "Closed two execution fail-opens before they could move capital. Arbitrum AAVE exposed a positive-but-poisoned 0.05% Uniswap V3 quote near $1,599/AAVE while the liquid 0.30% pool quoted about $121.94; first-nonzero routing would have destroyed almost all input. spot_swap now retries and surfaces every tier, selects maximum token output with gas evidence, requires an independently derived minimum output rounded toward safety, requotes immediately before signing and never weakens the exact confirmed floor. Separately, ordinary polyclaude_enter BUYs had printed 15% ticket/30% factor doctrine without enforcing it. All BUYs now require affirmative market/event/cluster identity and a one-to-one full-fill reservation atomically claimed exactly once; zero-threshold paginated positions, authenticated orders, cumulative totalBought indexing evidence and affirmative-terminal verified-cancel trade reconciliation are joined under a wallet-wide execution lock. Bundle execution re-fetches that full state under the lock, counts pending cluster risk, blocks one-leg promises and atomically reserves every FOK before order one. Raw or repeated CLOB BUYs fail closed, while unreserved-cancel and cancel-reappearance ambiguity leaves a persistent new-entry blocker. The live $19 HLE reward rehearsal is correctly blocked at ticket $29.83 > $27.84 and factor $68.87 > $55.69.",
+      "confidence": "high",
+      "prediction": "Through the start-of-2027 evaluation, default AAVE quotes select the liquid 3000 tier rather than the dust 500 tier; no spot execution can sign without an independent minimum, a signing-time requote and protection at least as strong as the confirmed floor. No single or bundle Polymarket BUY, sequence of resting BUYs, concurrent entry invocation, partial-fill/index-lag window or raw CLOB call can pass while its promised exposure breaks the 15% ticket or 30% event/configured-factor caps; the Aug-31 HLE reward experiment remains blocked unless resolution-created headroom makes the exchange minimum clear both caps.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-05",
+      "tags": [
+        "execution-safety",
+        "uniswap",
+        "capital-caps",
+        "maker",
+        "routing"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

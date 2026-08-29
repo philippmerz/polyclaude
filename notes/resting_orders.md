@@ -7,8 +7,8 @@ are standard... part of your everyday repertoire"). Two uses:
   spread. The true fee curve is `rate × p × (1−p)` per share (current category cap 0.07;
   ~1.67c at p=0.61 at that cap); `scripts/pm_fees.py` is authoritative for the market's
   actual rate.
-  `polyclaude_enter.py --maker` does this (NOTE: flag shipped 2026-07-24, not yet
-  exercised live); raw: `clob_v2.py buy <tok> <px> <usd> --post-only`.
+  `polyclaude_enter.py --maker` does this. Raw CLOB BUYs are now deliberately
+  blocked because they bypass full-fill ticket/cluster and indexing-lag reservations.
 
 **Management rules (checked EVERY tick — treat `.venv/bin/python scripts/clob_v2.py orders`
 as the authoritative live inventory and reconcile it against positions and current priors):**
@@ -59,6 +59,9 @@ vs 0.73 fair). **CANCEL-RACE LESSON (02:56 audit):** the GPT-6 10sh order's 5.4s
 Jul-27 01:05 DESPITE the Jul-26 22:10 cancel command returning "canceled" — the grep of response
 text never verified removal. True GPT-6 position: 50sh @0.645 (cap overshoot +5.4sh, profitable but
 unintended). RULE: after every cancel, VERIFY via `clob_v2.py orders` that the id is gone.
+The current cancel helper now refuses to send DELETE unless the exact target and side appear in a
+fully paginated pre-cancel inventory; an unreserved BUY or a reappeared cancel marker leaves a
+persistent manual-reconciliation block rather than letting an indexing race authorize new risk.
 Historical snapshot at that fill: Trump-out SELL 28@0.97, Greenland SELL 29@0.98,
 Fed-hike YES SELL 41@0.26,
 SpaceX YES SELL 34@0.96.
