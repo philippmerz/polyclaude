@@ -118,6 +118,14 @@ actively at 0.93 to fund DEC-0089, then restored the take-profit for the exact r
 0.95 fair; the active trim changed quantity, not thesis. Live `clob_v2.py orders` remains the source
 of truth.
 
+## REPLACED AGAIN: Greenland NO maker SELL after DEC-0097 trim (2026-08-29 01:57 UTC)
+
+Cancelled the 24sh @ 0.98 order `0xbbf11df8…e2373` and verified it absent before touching the
+balance. Sold exactly 5sh at 0.93 FOK to fund DEC-0096, verified the indexed balance fell 24→19,
+then restored the take-profit for that exact remainder: 19sh NO @ **0.98**, post-only GTC, order
+`0xeeaeb082…ba690`. The 0.98 rest is above the unchanged 0.95 fair; the active trim changed
+quantity, not thesis. Live `clob_v2.py orders` remains the source of truth.
+
 ## FILLED: touchscreen-MacBook-2026 NO maker BUY (placed 2026-08-11 10:15, filled by 18:00 UTC, DEC-0067)
 
 6 shares NO @ **0.59** — FILLED, fee-free. Position now 66sh at 0.412 avg, cost $27.19 (14.6% of a

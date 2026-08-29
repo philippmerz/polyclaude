@@ -124,8 +124,11 @@ def _fire_tick(state: dict, why: str) -> bool:
         # cron — so an off-schedule fire read as noise instead of "an armed
         # trigger crossed, act on it". daily_checkin.sh appends $1 to the prompt.
         subprocess.Popen(["bash", str(SCRIPTS / "daily_checkin.sh"),
-                          f"TRIGGERED BY OPPORTUNITY WATCH: {why} — see notes/opportunity_alerts.jsonl "
-                          f"(tail) for the alert payload; act on it FIRST, then the standard checks."],
+                          f"REVALIDATION REQUEST FROM OPPORTUNITY WATCH: {why} — inspect "
+                          f"notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an "
+                          f"observation, not evidence of current executability or authorization "
+                          f"to act; independently revalidate current inputs and constraints "
+                          f"before recommending or taking action."],
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except Exception as e:
         _log(f"tick fire failed: {e}")
@@ -135,7 +138,7 @@ def _fire_tick(state: dict, why: str) -> bool:
 
 
 def _alert(state: dict, key: str, text: str, actionable: bool) -> bool:
-    _append_alert({"key": key, "text": text, "actionable": actionable})
+    _append_alert({"key": key, "text": text, "review_required": actionable})
     last = state.get("alerts", {}).get(key, 0)
     # Unchanged-payload dedupe (2026-07-16 audit): a persistently-true
     # condition (trigger stays crossed, arb stays open-but-unactable) used to
@@ -458,15 +461,31 @@ def run_consistency(state: dict) -> None:
     except Exception as e:
         _log(f"consistency run failed: {e}")
         return
+    if r.returncode != 0:
+        _log(f"consistency: scanner exited {r.returncode}; no alert")
+        return
+    pattern = re.compile(
+        r"^(?P<count>\d+) PROVISIONAL consistency candidates exceed "
+        r"(?P<threshold>\d+(?:\.\d+)?)% modeled net; REVALIDATION REQUIRED$"
+    )
     for line in out.splitlines():
-        if "REAL free-arb candidates exceed" in line:
-            n = line.strip().split()[0]
-            if n.isdigit() and int(n) > 0:
-                _alert(state, "consistency-arb",
-                       f"consistency scan: {n} REAL free-arb candidate(s) >2% net — window is ephemeral, act now. See logs/polymarket_consistency_latest.json",
-                       actionable=True)
+        match = pattern.fullmatch(line.strip())
+        if match:
+            count = int(match.group("count"))
+            if count > 0:
+                _alert(
+                    state,
+                    "consistency-arb",
+                    f"CONSISTENCY REVALIDATION REQUEST: {count} candidate(s) crossed "
+                    f"the {match.group('threshold')}% modeled-net screen in sequential, "
+                    f"non-atomic CLOB snapshots. Refresh basket membership and resolution "
+                    f"criteria; re-walk every leg at one common size; recompute fees/net "
+                    f"edge and assess legging risk. Do not execute from this alert. "
+                    f"See logs/polymarket_consistency_latest.json",
+                    actionable=True,
+                )
             return
-    _log("consistency: no REAL-arb line parsed")
+    _log("consistency: no provisional-revalidation line parsed")
 
 
 def run_monotonicity(state: dict) -> None:

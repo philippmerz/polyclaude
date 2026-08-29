@@ -1,5 +1,5 @@
 {
-  "next_id": 95,
+  "next_id": 100,
   "decisions": [
     {
       "id": 1,
@@ -1842,6 +1842,88 @@
         "capital-caps",
         "maker",
         "routing"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 96,
+      "timestamp": "2026-08-29T02:03:58Z",
+      "type": "size_change",
+      "thesis": "Added exactly 50 NO shares in the next-Gemini-Pro HLE-debut >=40 market at raw 0.09 FAK: $4.50 notional plus $0.16380 under the authoritative 4% quadratic fee schedule, $4.66380 incremental risk. Immediately before execution the source-freeze instrument again passed its 2025 change and claude/grok coverage controls and found no agi.safe.ai additions/removals since 2026-01-15; Gamma criteria, identities, 5-share minimum, 0.01 tick and fee curve were unchanged. Central p_no remains 0.65 and the original 15-point instance stress remains 0.50, so the add clears at effective 0.093276/share without narrowing uncertainty. An independent cap skeptic vetoed consuming all 60 available shares; 50 leaves the correlated ai-ships-fast-short cluster at $54.53332 gross including fees versus a fresh $55.47830 cap, $0.94498 slack. Total ticket is now 99 shares / $9.53372 gross. Any board row change remains the direct falsifier and thin exit means entry size is the actual loss control.",
+      "confidence": "medium",
+      "prediction": "No qualifying Gemini Pro row is newly added to agi.safe.ai by December 31; the incremental 50 NO and full 99-share ticket resolve NO. A qualifying board addition falsifies the thesis, while no addition grades the measured source-stasis edge positive.",
+      "size_usd": 4.6638,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "gemini",
+        "source-freeze",
+        "cluster",
+        "rebalance"
+      ],
+      "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 97,
+      "timestamp": "2026-08-29T02:05:19Z",
+      "type": "size_change",
+      "thesis": "Sold exactly 5 of 24 Greenland-acquisition NO shares at 0.93 FOK for USD 4.65 to fund DEC-0096, after cancelling and verifying removal of the old 24-share 0.98 offer. The p_no=0.95 thesis is unchanged. The trim surrenders only USD 0.10 of central expected value versus holding those five shares, while the funded Gemini add has USD 27.84 central expected profit and USD 20.34 under its mandatory 15-point stress. The exact 19-share remainder was verified on-chain/indexed and reposted at 0.98 post-only. Greenland remains the lowest-opportunity-cost funding source; the rotation changes quantity, not the acquisition thesis.",
+      "confidence": "high",
+      "prediction": "The United States does not acquire part of Greenland in 2026 and the remaining 19 NO shares resolve for USD 19 unless the 0.98 maker sell fills first. The five-share funding trim forgoes about USD 0.10 versus the 0.95 prior.",
+      "size_usd": 4.65,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "greenland",
+        "rebalance",
+        "funding"
+      ],
+      "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 98,
+      "timestamp": "2026-08-29T02:17:50Z",
+      "type": "skip",
+      "thesis": "Declined Milo Yiannopoulos deported-in-2026 YES at a 0.88 raw ask (0.884224 all-in under the 4% quadratic fee). Exact criteria require formal government deportation actually implemented by Dec-31; a removal order alone and voluntary departure do not qualify. Public reporting confirms detention/removal proceedings, but official EOIR rules say a timely in-absentia motion to reopen automatically stays removal until the immigration judge rules. The action therefore has a real timing/legal-process branch, and the market is adverse hidden-information evidence. Central p_yes around 0.80-0.83 and the mandatory 10-point instance haircut do not clear the ask; the entry helper independently returned SKIP at robust p_yes 0.84.",
+      "confidence": "medium",
+      "prediction": "Either Milo is not formally deported by the market deadline, or any YES resolution does not demonstrate enough ex-ante edge to justify paying 0.884224 today; the skip is wrong on price only if implemented government removal occurs with probability materially above 88.4% from this information set.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "skip",
+        "immigration",
+        "legal-process",
+        "hidden-info"
+      ],
+      "slug": "will-milo-yiannopoulos-be-deported-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 99,
+      "timestamp": "2026-08-29T02:59:00Z",
+      "type": "scaffolding",
+      "thesis": "Closed three silent integrity failures found while reviewing this continuation. The decision CLI had trusted a stale next_id cache and briefly reused DEC-0095; it now derives a monotone ID from the actual unique-object ledger and refuses malformed or duplicate identities. The consistency scanner's legacy /markets offsets stopped near Gamma's ceiling yet could describe the partial result as clean; it now streams official /events/keyset pages into an explicit top-volume, non-sports, evaluation-horizon slice with hard page/byte guards, whole-event boundaries, strict neg-risk adapter identities and complete coverage telemetry. Every live leg is refreshed through Gamma, cross-checked against CLOB market-info tokens/minimums/ticks/fees and a fresh neg-risk book, charged conservatively rounded all-in fees and bounded by one deadline. Because basket books are sequential and cannot prove atomic execution, positive observations are provisional revalidation requests and never executable claims. Limitless' same-class universe now uses a volume-ranked /markets/keyset 3,000-market bound, fails closed on schema/identity/order drift and labels the result partial unless the cursor exhausts.",
+      "confidence": "high",
+      "prediction": "Through 2026-09-05, every new decision append receives max(existing id)+1 without collision; default consistency and Limitless runs either publish explicit bounded coverage plus all omissions or fail nonzero, and no sequential consistency snapshot is emitted or forwarded as an actionable/REAL arbitrage. A duplicate ID, silently truncated clean result, or execution-language alert falsifies this scaffolding decision.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-05",
+      "tags": [
+        "scanner",
+        "coverage",
+        "decision-ledger",
+        "keyset",
+        "execution-safety"
       ],
       "slug": null,
       "outcome": null,

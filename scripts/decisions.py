@@ -77,8 +77,30 @@ def cmd_add(args: argparse.Namespace) -> int:
         return 2
 
     store = _load()
+    rows = store.get("decisions")
+    if not isinstance(rows, list):
+        print("invalid decision store: 'decisions' must be a list")
+        return 2
+    if any(not isinstance(row, dict) for row in rows):
+        print("invalid decision store: every decision must be an object")
+        return 2
+    ids = [row.get("id") for row in rows]
+    if any(type(decision_id) is not int for decision_id in ids):
+        print("invalid decision store: every decision must have an integer id")
+        return 2
+    if len(ids) != len(set(ids)):
+        print("invalid decision store: duplicate decision ids; refusing to append")
+        return 2
+    # `next_id` is a cache, not authority.  Auto-logged decisions can land
+    # without advancing it, so trusting the cached value reused DEC-0095 on
+    # 2026-08-29.  Derive a monotone floor from the actual ledger every time.
+    cached_next = store.get("next_id", 1)
+    if type(cached_next) is not int:
+        print("invalid decision store: next_id must be an integer")
+        return 2
+    next_id = max(cached_next, max(ids, default=0) + 1)
     decision = {
-        "id": store["next_id"],
+        "id": next_id,
         "timestamp": _now_utc(),
         "type": args.type,
         "thesis": args.thesis,
@@ -96,8 +118,8 @@ def cmd_add(args: argparse.Namespace) -> int:
     if args.type in TRADE_TYPES and not decision["slug"]:
         print("WARNING: no --slug on a trade decision. It will need manual identification "
               "to grade; see notes/shortdated_ledger.json's _schema for why that fails.")
-    store["decisions"].append(decision)
-    store["next_id"] += 1
+    rows.append(decision)
+    store["next_id"] = next_id + 1
     _save(store)
     print(f"DEC-{decision['id']:04d} added")
     return 0

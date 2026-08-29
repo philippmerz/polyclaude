@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-08-28",
+ "_updated": "2026-08-29",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
@@ -411,26 +411,26 @@
  },
  "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645": {
   "p_no": 0.65,
-  "verified": "2026-08-28",
-  "criteria_read": "2026-08-28",
+  "verified": "2026-08-29",
+  "criteria_read": "2026-08-29",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.95,
-  "note": "DEC-0089 holds 49 NO shares, bought 20 at 0.09 and 29 at 0.10 for $4.70 notional plus the market's 4% quadratic taker fees. This is the cleanest measured board-stasis expression in the HLE cluster: the contract resolves NO explicitly if no qualifying Gemini Pro row is added by Dec-31; unlike the older HLE family, it does not require a spirit-resolution estimate when the named source stays available but frozen. Central p_no=0.65 deliberately allows a 35% chance that agi.safe.ai resumes and adds a qualifying row despite zero additions or removals throughout 2026. The adverse case is concrete: already-released Gemini 3.1 Pro scores 46.44 on Scale and may qualify if the board catches up, while Google says 3.5 Pro is coming soon. Entry used a 15-point stress (p_no=0.50) and a hard raw cap of 0.10. Treat as hold-to-resolution: exit liquidity is thin, and one board update can gap the leg before an active exit. Any further add requires a fresh validated source diff and a full correlated-cluster review; the apparent per-leg edge is not independent diversification.",
-  "divergence_ack": "2026-08-28",
-  "divergence_ack_reason": "The roughly 56pp prior/mark gap was re-derived and acted on in DEC-0089, not ignored. Bought only $4.70 notional despite much larger Kelly output because all held HLE legs share the board-stasis crux and the contrary catch-up path is real. Re-open immediately if agi.safe.ai adds or removes any row, Google dates 3.5 Pro, or the debut ladder moves on evidence that can be identified.",
+  "note": "DEC-0089 opened 49 NO shares at 0.09/0.10. After another fully validated source/criteria/book pass, DEC-0096 added exactly 50 NO at 0.09 FAK. The ticket now holds 99 NO for $9.20 notional plus $0.33372 in 4% quadratic taker fees, $9.53372 gross. This is the cleanest measured board-stasis expression in the HLE cluster: the contract resolves NO explicitly if no qualifying Gemini Pro row is added by Dec-31; unlike the older HLE family, it does not require a spirit-resolution estimate when the named source stays available but frozen. Central p_no=0.65 deliberately allows a 35% chance that agi.safe.ai resumes and adds a qualifying row despite zero additions or removals throughout 2026. The adverse case is concrete: already-released Gemini 3.1 Pro scores 46.44 on Scale and may qualify if the board catches up, while Google says 3.5 Pro is coming soon. Both entries used a 15-point stress (p_no=0.50); the add hard-capped raw price at 0.09 and stopped at 50 shares after an independent cap skeptic rejected consuming all 60. Treat as hold-to-resolution: exit liquidity is thin, and one board update can gap the leg before an active exit. The full ai-ships-fast-short cluster is $54.53332 against a fresh $55.47830 cap, leaving $0.94498; any further add requires a fresh validated source diff, a full correlated-cluster review and a real safety buffer. Apparent per-leg edge is not independent diversification.",
+  "divergence_ack": "2026-08-29",
+  "divergence_ack_reason": "The roughly 56pp prior/mark gap was re-derived and acted on in DEC-0089, then revalidated before the bounded DEC-0096 add. The validated diff still detected real 2025 change and found no 2026 row change; criteria and fee schedule were unchanged. Added only 50 of 60 shares offered at 0.09 because all held HLE legs share the board-stasis crux and the contrary catch-up path is real; the factor cap now leaves less than $1 slack. Re-open immediately if agi.safe.ai adds or removes any row, Google dates 3.5 Pro, or the debut ladder moves on identifiable evidence.",
   "key_facts": [
    {
     "claim": "The exact criteria use only a newly added Gemini Pro row on agi.safe.ai and state that no qualifying addition by 2026-12-31 23:59 ET resolves NO; an already released model may qualify when newly added.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
-    "source_date": "2026-08-28",
-    "checked": "2026-08-28"
+    "source_date": "2026-08-29",
+    "checked": "2026-08-29"
    },
    {
-    "claim": "The validated archive-diff instrument detected extensive 2025 additions/removals, passed claude/grok/gemini coverage, and found zero additions or removals between 2026-01-15 and the live board on 2026-08-28.",
+    "claim": "The validated archive-diff instrument detected extensive 2025 additions/removals, passed claude/grok/gemini coverage, and found zero additions or removals between 2026-01-15 and the live board on 2026-08-29.",
     "source": "https://agi.safe.ai/",
-    "source_date": "2026-08-28",
-    "checked": "2026-08-28"
+    "source_date": "2026-08-29",
+    "checked": "2026-08-29"
    },
    {
     "claim": "Scale's sister leaderboard lists Gemini 3.1 Pro at 46.44, above the 40 bar, so a catch-up board batch is the direct thesis-break path.",

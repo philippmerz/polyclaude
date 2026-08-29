@@ -41,8 +41,8 @@ MUTS = [
     ("check_marginal_apy.py",'    return (ent.get("set_only") or ent.get("arb_paired")) if isinstance(ent, dict) else None',
                     '    return None'),                                                       # set-only guard blind -> tools recommend breaking a matched/range structure
     ("polymarket_consistency_scan.py",
-                    'return sum(_market_fee_buy(market, price) for market, price in legs)',
-                    'return sum(price * _market_fee_buy(market, price) for market, price in legs)'), # multiply fee/share by price again
+                    'return sum(\n        _conservative_fill_fee(market, price, 1.0)\n        for market, price in legs\n    )',
+                    'return sum(\n        price * _conservative_fill_fee(market, price, 1.0)\n        for market, price in legs\n    )'), # multiply fee/share by price again
     ("spot_swap.py", 'return max(clean, key=lambda row: row[1])',
                     'return clean[0]'),                                                    # first-nonzero selects dust/poisoned pool
     ("spot_swap.py", 'return max(quote_floor, independent_min_out)',

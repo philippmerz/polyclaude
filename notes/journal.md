@@ -10786,3 +10786,67 @@ JSON and diff hygiene were clean. No order, swap, bridge, redemption or capital 
 one material-only Telegram summarized the safety fixes and prior changes. The next hard clocks are
 the Aug-31 Lake/Iran resolution and cap reflow, then the Sep-1..10 Duma independent-forecast gate.
 The durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-08-29 03:01 UTC — Greenland→Gemini rotation completed; scanner coverage made honest (DEC-0096–0099)
+
+The periodic continuation produced one capital action. A fresh `source_freeze_check` again detected
+real 2025 board changes, passed the claude/grok/gemini coverage controls, and found the live
+agi.safe.ai model set unchanged from 2026-01-15. The exact next-Gemini-Pro-debut ≥40 criteria,
+condition/token identities, 5-share minimum, 0.01 tick, 4% quadratic fee schedule and 0.09 NO ask
+were re-read immediately before entry. Two independent reviews preferred this leg to the remaining
+funding choices, but the cap skeptic rejected taking all 60 offered shares. The adopted size was 50:
+central/stressed p_no remain 0.65/0.50 and the configured rho≈0.95 cluster—not the attractive
+standalone Kelly output—set the limit.
+
+Execution was fully reconciled. The old Greenland 24 NO @ 0.98 sell
+`0xbbf11df87e0c433d7bac43f7308f6a02e218dc251e72351a31c518044d0e2373` was cancelled and verified
+absent. Exactly 5 Greenland NO sold at 0.93 FOK for USD 4.65 (order
+`0xa04ff3c772cd245d69df0e92a9016cb6935bb0f9a92b0f4e0b3f5de8017dde20`, transaction
+`0xe583f3f43660146876b2bd5a5ac7cce7b52152995b88a6e3a7f599c62c4ebc63`). Exactly 50 Gemini NO then
+bought at 0.09 FAK for USD 4.50 plus USD 0.16380 fee (order
+`0xaee4725f05f29e472259f1dc637ee020a4f5121f1e06ce764f770d4c5b887f5d`, transaction
+`0x6e45cf9cf930a92eabbc41d36742fd46e0e56af1b63c367078f30763f5870293`). Holdings verified
+Greenland 24→19 and Gemini 49→99. The exact 19-share Greenland remainder was reposted at 0.98
+post-only under `0xeeaeb082185cc5e1849b7461b7589d1c5694c1b027d4a79da2931a02358ba690`.
+
+The funding trim sacrifices only USD 0.10 of central Greenland EV at p_no=0.95. The incremental
+Gemini add has USD 27.8362 central expected profit and USD 20.3362 at the mandatory 15-point stress.
+The full Gemini ticket is 99 NO, USD 9.20 notional plus USD 0.33372 fees = USD 9.53372 gross. The
+full `ai-ships-fast-short` cluster is USD 54.53332 against the execution-time USD 55.47830 cap,
+leaving USD 0.94498; there is no room for another casual add. Reservation reconciliation pruned the
+now-empty file normally, pUSD is USD 0.088265, and authenticated state shows six SELL orders with
+zero BUY commitments. The 02:44 audit was CLEAN across 15 positions: total bankroll USD 184.99,
+realized +USD 4.92, PM cost/mark USD 165.83/USD 169.05, and depth-realizable value only USD 161.20.
+A material Telegram update was delivered as message 870. This internal rotation does not change the
+capital-flow ledger.
+
+The wider opportunity pass did not justify another trade. Milo-Yiannopoulos-deported-in-2026 YES
+cost 0.884224 all-in at the 0.88 ask, but the literal contract needs implemented government removal,
+while EOIR procedure automatically stays removal during a timely in-absentia reopening motion.
+Central p_yes around 0.80–0.83 and the 10-point instance haircut both fail the price; DEC-0098 records
+the skip. A guaranteed Fed monotonic pair offered only about 0.8% over four months, below the live
+Aave hurdle. The remaining catalyst, monotonicity, discovery, DeFi and watchlist surfaces were quiet.
+
+The check also caught an opportunity-inventory integrity bug. `polymarket_consistency_scan.py` had
+used Gamma `/markets` offsets, hit the endpoint ceiling around 2,100 rows, and could make that partial
+universe look clean. DEC-0099 replaces it with streamed official `/events/keyset` pagination over an
+explicit non-sports, now-through-2027-01-05, top-volume 5,000-open-market slice that completes the
+boundary event and publishes every coverage omission. The final default live run took about 40s:
+5,006 open markets / 584 events, 3,331 validated neg-risk markets / 334 authoritative adapter groups,
+and 289 midpoint deviations (195 structural sum>1, 94 directional). The bounded live pass requested
+17/195 structural groups (200 legs): 6 received full current Gamma+CLOB identity/fee/minimum/tick/book
+validation, 11 failed closed, 178 were explicitly unquoted, and zero had positive provisional net
+economics. The result is therefore explicitly incomplete—not a comprehensive zero. Sequential basket
+books are now always non-atomic revalidation leads, never `REAL`/executable claims; opportunity-watch
+prompts say not to execute from the trigger. The same-class Limitless fetch now returns an honest
+volume-ranked 3,000-market `/markets/keyset` slice in 30 pages (3.13s live) and labels it bounded
+partial unless the cursor exhausts. The remaining question-only Gamma fallback ceiling is banked in
+the backlog; slug-based entry remains unaffected and a miss currently aborts capital.
+
+One record bug was also caught before commit: an auto-appended DEC-0095 had not advanced `next_id`,
+so the decision CLI briefly attempted to reuse that identity. DEC-0095 was preserved, new work is
+DEC-0096–0099, IDs are unique through 99 and `next_id=100`; append now derives its floor from the
+actual ledger and refuses malformed/duplicate IDs. Final validation passed **372 pytest cases**, all
+**123** standalone money checks, and all **19/19** injected financial mutations; live scanner,
+Limitless, JSON, compile/diff and position-state checks were clean. The durable ROI continuation
+remains active until the operator manually cancels it.

@@ -266,3 +266,50 @@ def test_watch_request_failure_never_becomes_positive(monkeypatch, tmp_path) -> 
 
     assert state["trig_fails"]["lake-america-maps-rollout"] == 1
     assert state["google_maps_label_hits"] == {}
+
+
+def test_consistency_hit_requests_revalidation_not_execution(monkeypatch) -> None:
+    class Result:
+        returncode = 0
+        stdout = (
+            "2 PROVISIONAL consistency candidates exceed 2.0% modeled net; "
+            "REVALIDATION REQUIRED\n"
+        )
+        stderr = ""
+
+    alerts = []
+    monkeypatch.setattr(watch.subprocess, "run", lambda *_a, **_k: Result())
+    monkeypatch.setattr(
+        watch, "_alert",
+        lambda _state, key, text, actionable: alerts.append(
+            (key, text, actionable)
+        ),
+    )
+
+    watch.run_consistency({})
+
+    assert len(alerts) == 1
+    assert alerts[0][0] == "consistency-arb"
+    assert alerts[0][2] is True  # dispatches a review tick only
+    assert "REVALIDATION REQUEST" in alerts[0][1]
+    assert "sequential, non-atomic" in alerts[0][1]
+    assert "Do not execute" in alerts[0][1]
+    assert "act now" not in alerts[0][1]
+
+
+def test_consistency_nonzero_exit_never_alerts(monkeypatch) -> None:
+    class Result:
+        returncode = 1
+        stdout = (
+            "2 PROVISIONAL consistency candidates exceed 2.0% modeled net; "
+            "REVALIDATION REQUIRED\n"
+        )
+        stderr = "failed"
+
+    alerts = []
+    monkeypatch.setattr(watch.subprocess, "run", lambda *_a, **_k: Result())
+    monkeypatch.setattr(watch, "_alert", lambda *_a, **_k: alerts.append(True))
+
+    watch.run_consistency({})
+
+    assert alerts == []

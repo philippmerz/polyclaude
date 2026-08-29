@@ -34,8 +34,11 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import math
 import subprocess
 import sys
+import time
+from dataclasses import dataclass
 from pathlib import Path
 
 import httpx
@@ -53,6 +56,10 @@ OUT_DIR = _REPO_ROOT / "logs"  # gitignored; routine scans don't need to be comm
 LIMITLESS_API = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
 import pm_fees  # authoritative per-market quadratic fee; current effective cap 0.07
+
+POLYMARKET_PAGE_LIMIT = 100
+POLYMARKET_PAGE_RETRIES = 3
+POLYMARKET_UNIVERSE_LIMIT = 3000
 
 
 def _telegram(text: str) -> None:
@@ -215,32 +222,186 @@ def _numeric_tokens(title: str) -> set[str]:
     return out
 
 
-def fetch_polymarket_universe(max_markets: int = 3000) -> list[dict]:
-    """Pull active Polymarket markets in 500-batches via gamma-api offset pagination."""
-    out: list[dict] = []
-    offset = 0
-    while len(out) < max_markets:
+@dataclass(frozen=True)
+class PolymarketUniverseFetch:
+    """A bounded keyset slice plus an honest statement of its coverage."""
+
+    markets: list[dict]
+    max_markets: int
+    pages: int
+    complete: bool
+
+    @property
+    def coverage(self) -> str:
+        return "complete" if self.complete else "bounded_partial"
+
+    @property
+    def coverage_label(self) -> str:
+        if self.complete:
+            return (
+                "COMPLETE: Gamma /markets/keyset exhausted after "
+                f"{len(self.markets)} active open markets"
+            )
+        return (
+            "BOUNDED PARTIAL: first "
+            f"{len(self.markets)} active open markets ranked by volume24hr "
+            f"order (cap {self.max_markets}; more markets exist)"
+        )
+
+    def metadata(self) -> dict:
+        return {
+            "endpoint": "/markets/keyset",
+            "coverage": self.coverage,
+            "coverage_label": self.coverage_label,
+            "markets_returned": len(self.markets),
+            "max_markets": self.max_markets,
+            "pages": self.pages,
+            "complete": self.complete,
+            "ordering": "volume24hr descending",
+        }
+
+
+def _fetch_polymarket_keyset_page(params: dict[str, str]) -> dict:
+    """Fetch one keyset page, retrying transient request/shape failures."""
+    last_error: Exception | None = None
+    for attempt in range(POLYMARKET_PAGE_RETRIES):
         try:
-            r = httpx.get(
-                f"{POLYMARKET_GAMMA}/markets",
-                # gamma caps pages at 100 regardless of limit; request 100 so the
-                # short-batch break below trips only on the true last page.
-                params={"active": "true", "closed": "false",
-                        "limit": "100", "offset": str(offset)},
+            response = httpx.get(
+                f"{POLYMARKET_GAMMA}/markets/keyset",
+                params=params,
                 timeout=20,
             )
-            r.raise_for_status()
-            batch = r.json()
-        except Exception as e:
-            print(f"polymarket fetch offset={offset} failed: {e}", file=sys.stderr)
-            break
+            response.raise_for_status()
+            payload = response.json()
+            if not isinstance(payload, dict):
+                raise RuntimeError("keyset response is not an object")
+            if not isinstance(payload.get("markets"), list):
+                raise RuntimeError("keyset response omitted its markets list")
+            cursor = payload.get("next_cursor")
+            if cursor not in (None, "") and not isinstance(cursor, str):
+                raise RuntimeError("keyset response has a malformed next_cursor")
+            return payload
+        except Exception as exc:
+            last_error = exc
+            if attempt + 1 < POLYMARKET_PAGE_RETRIES:
+                time.sleep(0.5 * (2 ** attempt))
+    raise RuntimeError(
+        "Polymarket keyset page failed after "
+        f"{POLYMARKET_PAGE_RETRIES} attempts at cursor "
+        f"{params.get('after_cursor', '<start>')!r}; refusing partial coverage"
+    ) from last_error
+
+
+def fetch_polymarket_universe(
+    max_markets: int = POLYMARKET_UNIVERSE_LIMIT,
+) -> PolymarketUniverseFetch:
+    """Fetch a bounded, stable slice from Gamma's official market keyset.
+
+    The scanner intentionally does not crawl the entire active universe: its
+    practical phase-one budget is ``max_markets`` full market records. Reaching
+    that cap while Gamma supplies another cursor is a valid but explicitly
+    labeled partial scan. Any request, payload, identity, or cursor defect
+    raises instead of returning a smaller list that could masquerade as clean.
+    """
+    if (not isinstance(max_markets, int) or isinstance(max_markets, bool)
+            or max_markets <= 0):
+        raise ValueError("max_markets must be a positive integer")
+
+    out: list[dict] = []
+    seen_ids: set[str] = set()
+    seen_cursors: set[str] = set()
+    cursor: str | None = None
+    pages = 0
+    last_volume = math.inf
+
+    while len(out) < max_markets:
+        request_limit = min(POLYMARKET_PAGE_LIMIT, max_markets - len(out))
+        params = {
+            "active": "true",
+            "closed": "false",
+            "limit": str(request_limit),
+            "order": "volume24hr",
+            "ascending": "false",
+        }
+        if cursor is not None:
+            params["after_cursor"] = cursor
+        payload = _fetch_polymarket_keyset_page(params)
+        batch = payload["markets"]
+        pages += 1
+        if len(batch) > request_limit:
+            raise RuntimeError(
+                "Polymarket keyset returned more markets than requested; "
+                "refusing ambiguous coverage"
+            )
+
+        for market in batch:
+            if not isinstance(market, dict):
+                raise RuntimeError(
+                    "Polymarket keyset contains a non-object market record"
+                )
+            market_id = str(market.get("id") or "").strip()
+            if not market_id:
+                raise RuntimeError(
+                    "Polymarket keyset market lacks a stable id"
+                )
+            if market_id in seen_ids:
+                raise RuntimeError(
+                    f"Polymarket keyset repeated market id {market_id}; "
+                    "refusing ambiguous coverage"
+                )
+            if market.get("active") is not True or market.get("closed") is not False:
+                raise RuntimeError(
+                    f"Polymarket keyset violated active/open filters for {market_id}"
+                )
+            raw_volume = market.get("volume24hr")
+            if isinstance(raw_volume, bool):
+                raise RuntimeError(
+                    f"Polymarket keyset has malformed volume24hr for {market_id}"
+                )
+            try:
+                volume = float(raw_volume)
+            except (TypeError, ValueError) as exc:
+                raise RuntimeError(
+                    f"Polymarket keyset has malformed volume24hr for {market_id}"
+                ) from exc
+            if not math.isfinite(volume) or volume < 0.0:
+                raise RuntimeError(
+                    f"Polymarket keyset has malformed volume24hr for {market_id}"
+                )
+            if volume > last_volume + 1e-6:
+                raise RuntimeError(
+                    "Polymarket keyset violated requested volume24hr ordering"
+                )
+            last_volume = volume
+            seen_ids.add(market_id)
+            out.append(market)
+
+        raw_next = payload.get("next_cursor")
+        next_cursor = raw_next if isinstance(raw_next, str) and raw_next else None
+        if next_cursor is None:
+            return PolymarketUniverseFetch(
+                markets=out,
+                max_markets=max_markets,
+                pages=pages,
+                complete=True,
+            )
         if not batch:
-            break
-        out.extend(batch)
-        offset += len(batch)
-        if len(batch) < 100:
-            break
-    return out
+            raise RuntimeError(
+                "Polymarket keyset returned an empty page with a next cursor"
+            )
+        if next_cursor == cursor or next_cursor in seen_cursors:
+            raise RuntimeError(
+                "Polymarket keyset repeated a cursor; refusing partial coverage"
+            )
+        seen_cursors.add(next_cursor)
+        cursor = next_cursor
+
+    return PolymarketUniverseFetch(
+        markets=out,
+        max_markets=max_markets,
+        pages=pages,
+        complete=False,
+    )
 
 
 def index_polymarket(markets: list[dict]) -> list[dict]:
@@ -413,10 +574,17 @@ def main() -> int:
     # Pull a wide slice of the Polymarket active-market universe and build a
     # client-side index for fuzzy matching (gamma-api ?q= search is broken;
     # it ignores the query and returns the same default page).
-    print("pulling Polymarket active-market universe (gamma-api offset pagination)...")
-    pm_universe = fetch_polymarket_universe(max_markets=3000)
-    print(f"  pulled {len(pm_universe)} markets, indexing...")
-    pm_index = index_polymarket(pm_universe)
+    print("pulling bounded Polymarket active-market universe "
+          "(official gamma-api keyset pagination)...")
+    try:
+        pm_fetch = fetch_polymarket_universe(
+            max_markets=POLYMARKET_UNIVERSE_LIMIT)
+    except (RuntimeError, ValueError) as exc:
+        print(f"ABORT: Polymarket universe unavailable: {exc}", file=sys.stderr)
+        return 2
+    print(f"  coverage: {pm_fetch.coverage_label}")
+    print(f"  pulled {len(pm_fetch.markets)} markets, indexing...")
+    pm_index = index_polymarket(pm_fetch.markets)
     print(f"  indexed {len(pm_index)} markets with valid prices")
 
     # Match each candidate
@@ -474,6 +642,7 @@ def main() -> int:
     with out_path.open("w") as f:
         f.write(f"# Limitless arb scan — {ts} UTC\n\n")
         f.write(f"Total `isPolyArbitrage:true` markets: {len(cands)}\n")
+        f.write(f"Polymarket universe coverage: **{pm_fetch.coverage_label}**\n")
         f.write(f"Polymarket-matched (top {len(top_for_lookup)} by breakeven): {len(matched)}\n\n")
         f.write("Three-layer screening: (1) distinctive-word overlap ≥ 3 with Jaccard ≥ 0.35, ")
         f.write("(2) numeric-token parity, (3) agent-verified resolution-language equivalence ")
@@ -503,6 +672,7 @@ def main() -> int:
         "generated_at": ts,
         "total_candidates": len(cands),
         "matched_count": len(matched),
+        "polymarket_universe": pm_fetch.metadata(),
         "verified_identical": [],
         "verified_other": [],
     }

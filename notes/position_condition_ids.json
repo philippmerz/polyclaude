@@ -1,7 +1,15 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-08-28",
+ "_refreshed": "2026-08-29",
  "positions": [
+  {
+   "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+   "outcome": "No",
+   "size": 99,
+   "conditionId": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
+   "asset": "67951575343428346736827544478449934796473993940055164453800722378542887483258",
+   "negativeRisk": false
+  },
   {
    "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
    "outcome": "No",
@@ -16,14 +24,6 @@
    "size": 49.005,
    "conditionId": "0x3b8ffe267a348097806237bd9af95050896ee12e4d461b421ca703c8bdf31022",
    "asset": "23514447719471100390569154455440417533353453232779340703972009767897223549881",
-   "negativeRisk": false
-  },
-  {
-   "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
-   "outcome": "No",
-   "size": 49,
-   "conditionId": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
-   "asset": "67951575343428346736827544478449934796473993940055164453800722378542887483258",
    "negativeRisk": false
   },
   {
@@ -67,14 +67,6 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
-   "outcome": "No",
-   "size": 24,
-   "conditionId": "0x890fc3ba40458db0b67560691aa1597344c2a0560d18e80f586a4b35f510b4ce",
-   "asset": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
-   "negativeRisk": false
-  },
-  {
    "slug": "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
    "outcome": "Yes",
    "size": 20,
@@ -97,6 +89,14 @@
    "conditionId": "0x0a9bb5f9c32f57b1683bec4170da0a1116876f2bf0665a1ec9bf6c6db76d2f57",
    "asset": "64185329950651325995811365760471851443559550508668407058343096277276377997961",
    "negativeRisk": true
+  },
+  {
+   "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
+   "outcome": "No",
+   "size": 19,
+   "conditionId": "0x890fc3ba40458db0b67560691aa1597344c2a0560d18e80f586a4b35f510b4ce",
+   "asset": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
+   "negativeRisk": false
   },
   {
    "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
