@@ -98,6 +98,12 @@ def parse_outcome_prices(p) -> tuple[float, float] | None:
     return None
 
 
+def _yes_price_move_message(previous: float, current: float, context: str = "") -> str:
+    """Describe a YES midpoint move without discarding its direction."""
+    move_pp = (current - previous) * 100
+    return f"YES moved {previous:.4f} → {current:.4f} ({move_pp:+.1f}pp){context}"
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("--wallet", default=str(_secrets.path("POLYCLAUDE_WALLET")))
@@ -217,8 +223,8 @@ def main() -> int:
         # information from quote drift — and a low-context tick reading a bare
         # "+13pp" line is one bad inference from panic-selling a flap.
         if prices and prev_prices and len(prev_prices) >= 2:
-            yes_move = abs(prices[0] - prev_prices[0]) * 100
-            if yes_move >= args.alert_pp_move:
+            yes_move = (prices[0] - prev_prices[0]) * 100
+            if abs(yes_move) >= args.alert_pp_move:
                 vol24 = float(m.get("volume24hr") or 0)
                 try:
                     bb, ba = float(m.get("bestBid") or 0), float(m.get("bestAsk") or 0)
@@ -233,7 +239,7 @@ def main() -> int:
                 alerts.append({
                     "slug": slug, "type": "PRICE_MOVE",
                     "market_id": market_id,
-                    "msg": f"YES moved {prev_prices[0]:.4f} → {prices[0]:.4f} ({yes_move:+.1f}pp){ctx}",
+                    "msg": _yes_price_move_message(prev_prices[0], prices[0], ctx),
                 })
 
         # Cross-check: if data-api positions doesn't show this slug but on-chain has it,

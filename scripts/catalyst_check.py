@@ -35,12 +35,13 @@ import sys
 from pathlib import Path
 
 from agent_runtime import run_agent
+from gamma_market_lookup import GammaLookupError, lookup_active_market
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "notes" / "catalyst_log.md"
 
 
-def _fetch_resolution_description(question: str) -> str | None:
+def _fetch_resolution_description(question: str, slug: str | None = None) -> str:
     """Look up the market on Polymarket gamma-api and return its description.
 
     Why: lesson from 2026-05-08 US-invade-Iran NO check. The prior small-model check read media
@@ -50,41 +51,22 @@ def _fetch_resolution_description(question: str) -> str | None:
     media-framed event descriptions. Injecting the description anchors
     the analysis on the actual oracle-resolution language.
 
-    Returns the description string, or None on any failure (network,
-    no match, etc.) — best-effort.
+    Missing, ambiguous, partial, or malformed lookup state raises. A catalyst
+    model without the literal oracle criteria is unsafe for a capital path.
     """
-    try:
-        import httpx
-        # Search by paginated active markets, pick best fuzzy match
-        # on question. Keeps it simple — full text match is fine since
-        # operator passes the exact market question.
-        with httpx.Client(timeout=15.0) as c:
-            # gamma-api caps pages at 100 regardless of limit, so paginate by 100
-            # across the active universe with an early exit on match. The old
-            # limit=500 + offset=page*500 stride skipped 80% of markets, so this
-            # exact-question lookup silently missed anything outside the top ~600
-            # by volume — and the resolution-criteria anchoring (the whole point of
-            # this function) failed for exactly those less-traded markets.
-            offset = 0
-            while offset < 6000:
-                r = c.get(
-                    "https://gamma-api.polymarket.com/markets",
-                    params={"closed": "false", "archived": "false", "active": "true",
-                            "limit": 100, "offset": offset,
-                            "order": "volume24hr", "ascending": "false"},
-                )
-                if r.status_code != 200:
-                    break
-                batch = r.json() or []
-                if not batch:
-                    break
-                for m in batch:
-                    if (m.get("question") or "").strip() == question.strip():
-                        return (m.get("description") or "").strip() or None
-                offset += len(batch)
-        return None
-    except Exception:
-        return None
+    market = (lookup_active_market(slug=slug) if slug
+              else lookup_active_market(question=question))
+    market_question = " ".join(str(market.get("question") or "").split()).casefold()
+    if market_question != " ".join(question.split()).casefold():
+        raise GammaLookupError(
+            f"slug {slug!r} resolved to a different question; refusing criteria injection"
+        )
+    description = (market.get("description") or "").strip()
+    if not description:
+        raise GammaLookupError(
+            f"matched market {market.get('id')} has no literal resolution description"
+        )
+    return description
 
 
 PROMPT_TEMPLATE = """You are doing a catalyst-calendar check for a Polymarket market.
@@ -201,6 +183,8 @@ def main() -> int:
                         "counts pre-creation events (2026-07-18 Beirut miss: 85%% vs market 27%%).")
     p.add_argument("--profile", choices=["research", "fast"], default="research",
                    help="Model workload profile (default: research).")
+    p.add_argument("--slug", default=None,
+                   help="Exact Gamma slug (preferred identity path; question is cross-checked).")
     p.add_argument("--effort", default="medium",
                    help="Reasoning effort level (default: medium).")
     p.add_argument("--no-log", action="store_true",
@@ -219,15 +203,20 @@ def main() -> int:
         print(f"ERROR: resolution date {resolve} is in the past", file=sys.stderr)
         return 2
 
-    # Best-effort fetch of the literal resolution description so the model anchors
-    # on oracle language, not media framing.
-    resolution_description = _fetch_resolution_description(args.question)
-    if resolution_description:
-        resolution_block = f"\nLITERAL RESOLUTION CRITERIA (from Polymarket gamma-api):\n```\n{resolution_description}\n```\n"
-        print(f"# resolution criteria fetched ({len(resolution_description)} chars)", file=sys.stderr)
-    else:
-        resolution_block = "\n(No literal resolution criteria fetched — analyze under reasonable strict interpretation of the question.)\n"
-        print("# resolution criteria unavailable; model will use strict interpretation of question text", file=sys.stderr)
+    # Capital path: literal criteria are mandatory. Network/miss/ambiguity is
+    # different from a complete exact miss, but both stop before model work.
+    try:
+        resolution_description = _fetch_resolution_description(args.question, args.slug)
+    except GammaLookupError as exc:
+        print(f"ERROR: literal resolution criteria lookup failed closed: {exc}",
+              file=sys.stderr)
+        return 2
+    resolution_block = (
+        "\nLITERAL RESOLUTION CRITERIA (from Polymarket gamma-api):\n```\n"
+        f"{resolution_description}\n```\n"
+    )
+    print(f"# resolution criteria fetched ({len(resolution_description)} chars)",
+          file=sys.stderr)
 
     headlines = _recent_alert_headlines(args.question)
     if headlines:

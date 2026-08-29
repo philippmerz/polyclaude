@@ -10885,3 +10885,55 @@ current through Aug-28 and the Aug-23 world-state review is under eight days old
 rerun. No trade, prior change or decision record was warranted. The operational incident was sent
 as material-only Telegram message 871. The durable ROI continuation remains active until the
 operator manually cancels it.
+
+## 2026-08-29 22:27 UTC — consolidated scheduled continuation: Lake prior cut, criteria path hardened; no trade (DEC-0100)
+
+This pass consolidated the queued 06:00, 10:00, 14:00, 18:00 and 22:00 prompts without replaying
+capital actions. The final authoritative bankroll was **$186.24**, up $1.22 from the 03:08 journal
+checkpoint, with realized P&L unchanged at +$4.92. Fifteen Polymarket rows cost $165.83 and marked
+$170.58, but full executable depth returned only $161.55 net, so midpoint overstatement widened to
+$9.03. Deployable pUSD remained $0.088265; authenticated inventory had six SELL orders and zero BUY
+commitments. Crypto inventory remained 7.8663 aUSDC plus 1.0478 base USDC and Ostium remained empty.
+The position-state audit was CLEAN, crux coverage was complete, `redeem-all` found zero redeemables,
+and there were no overdue decisions, watchlist hits, marginal-APY exits or weekly-maintenance tasks.
+
+Three post-checkpoint news alerts were processed manually because their first classifier calls exited
+unavailable: a Guardian Lake opinion column, an unrelated Guardian Bessent/economy item, and the
+Ontario premier's rejection of the federal rename. A subsequent fast-worker probe succeeded, so this
+was transient worker availability rather than lost alert persistence. None observes the literal
+Google Maps predicate. Official-source review corrected one tempting but wrong inference: the White
+House order allows up to 30 days, but DOI Secretary's Order 3453 directed immediate BGN action and the
+GNIS prerequisite was already complete on Aug 27. That keeps the short rollout clock live. However,
+repeated Aug-29 US-region Maps probes still returned target `Lake America` 0 / control `Lake Ontario`
+2, Google published no rollout statement, and Monday is the final business day before cutoff.
+Accordingly Lake central p_yes fell 0.55->0.40 and the mandatory 10-point sensitivity case to 0.30.
+The live bid exits about $9.53 total versus $16.38 central and $12.29 sensitivity-case resolution
+value, so the 40.95563 YES remain HOLD/no-add with no resting sell into the binary rollout catalyst.
+Iran-Oman remained p_yes 0.08 and HOLD: no new official bilateral acceptance was found.
+
+UMA's live pass reported two large HLE quote changes: Gemini HLE YES 0.835->0.7635 (-7.2pp) and
+OpenAI HLE YES 0.585->0.485 (-10.0pp). Both are favorable to the held NO direction, occur in wide
+books, and came without a change in the agi.safe.ai board, so neither justified an exit or add. The
+old reporter had converted movement to an absolute value before formatting and falsely printed both
+as positive; the signed-move regression is now fixed and covered.
+
+Discovery remained below the robust deployment bar. Primary discovery fetched 977 active markets;
+sports, macro, favorite-fade, event-monotonicity and the explicitly incomplete 5,001-market
+consistency slice produced no executable positive edge. The best new measurable-source lead was the
+Aug-31--Sep-6 Hormuz ship-count bucket: the official IMF PortWatch ArcGIS feed totals for the latest
+three complete weeks were 31, 39 and 35, making the 20--39 bucket plausible around p=0.65 against an
+ask near 0.63. Its mandatory 10-point stress case fails, and there is no free pUSD, so this is a
+monitored lead rather than a trade. No redemption, order, swap, bridge or other capital movement ran.
+
+DEC-0100 closes a more important opportunity-integrity gap. Gamma's old offset endpoint silently
+stopped around rank 2,100, so exact-question entry could miss thin markets and catalyst analysis could
+downgrade to question text without literal criteria. A shared lookup now uses exact public search,
+canonical ID refetch and an exhaustive official `/markets/keyset` fallback; missing, ambiguous,
+malformed or partial coverage fails closed. Catalyst analysis requires a nonblank literal description
+before the worker runs, and unified entry passes the already-resolved slug and checks the subprocess
+return code. A live rank-about-2,151 Karachi-temperature market resolved exactly with its 1,226-char
+description. Two adjacent advisory bugs were also closed: `--side YES` now truly fetches the NO token
+for flip-the-kill, and UMA preserves price-move direction. Validation finished with **380 pytest
+cases**, all **123** standalone money checks and all **19/19** injected financial mutations caught;
+JSON and diff checks were clean. Material Telegram message 876 recorded the prior change and safety
+work. The durable ROI continuation remains active until the operator manually cancels it.

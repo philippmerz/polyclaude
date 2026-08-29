@@ -50,44 +50,16 @@ from pathlib import Path
 import httpx
 
 from book_walk import maker_rest_price
+from gamma_market_lookup import GammaLookupError, lookup_active_market_identifier
 import pm_fees
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "notes" / "entries_log.md"
 
 
-def fetch_market_by_slug_or_question(slug_or_q: str) -> dict | None:
-    """Try slug lookup first; if fails, search by question."""
-    with httpx.Client(timeout=15) as c:
-        # Slug lookup
-        if "-" in slug_or_q or "_" in slug_or_q:
-            r = c.get("https://gamma-api.polymarket.com/markets", params={"slug": slug_or_q})
-            if r.status_code == 200:
-                d = r.json()
-                if isinstance(d, list) and d:
-                    return d[0]
-        # Question search via paginate (gamma-api ?q is broken; client-side filter).
-        # gamma caps pages at 100 regardless of limit, so paginate by 100 with an
-        # early exit — the old limit=500 + offset=page*500 stride skipped 80% of
-        # markets, so a question-based lookup could silently miss the target market.
-        offset = 0
-        while offset < 6000:
-            r = c.get("https://gamma-api.polymarket.com/markets", params={
-                "closed": "false", "active": "true",
-                "limit": 100, "offset": offset,
-                "order": "volume24hr", "ascending": "false",
-            })
-            if r.status_code != 200:
-                break
-            batch = r.json() or []
-            if not batch:
-                break
-            for m in batch:
-                q = m.get("question", "")
-                if slug_or_q.lower() == q.lower() or slug_or_q.lower() in q.lower():
-                    return m
-            offset += len(batch)
-    return None
+def fetch_market_by_slug_or_question(slug_or_q: str) -> dict:
+    """Resolve one live market by lexical slug or exact question, fail closed."""
+    return lookup_active_market_identifier(slug_or_q)
 
 
 def _existing_exposure(condition_id: str | None, question: str) -> dict | None:
@@ -2027,9 +1999,11 @@ def _bundle_entry(args: argparse.Namespace) -> int:
     legs: list[dict] = []
     for slug in slugs:
         print(f"# bundle: looking up '{slug}'...", file=sys.stderr)
-        market = fetch_market_by_slug_or_question(slug)
-        if not market:
-            print(f"ERROR: bundle market not found: {slug}", file=sys.stderr)
+        try:
+            market = fetch_market_by_slug_or_question(slug)
+        except GammaLookupError as exc:
+            print(f"ERROR: bundle market lookup failed closed for {slug}: {exc}",
+                  file=sys.stderr)
             return 2
         token = _yes_token(market)
         if token is None:
@@ -2597,9 +2571,10 @@ def main() -> int:
         return 2
 
     print(f"# polyclaude_enter: looking up '{lookup[:50]}'...", file=sys.stderr)
-    m = fetch_market_by_slug_or_question(lookup)
-    if not m:
-        print(f"ERROR: market not found", file=sys.stderr)
+    try:
+        m = fetch_market_by_slug_or_question(lookup)
+    except GammaLookupError as exc:
+        print(f"ERROR: market lookup failed closed: {exc}", file=sys.stderr)
         return 2
 
     question = m.get("question", "?")
@@ -2781,8 +2756,8 @@ def main() -> int:
             return 2
         print(f"\n# Running catalyst_check.py for P estimate...", file=sys.stderr)
         try:
-            cc_cmd = [".venv/bin/python", "scripts/catalyst_check.py", question, args.resolve_date,
-                      "--no-log"]
+            cc_cmd = [".venv/bin/python", "scripts/catalyst_check.py", question,
+                      args.resolve_date, "--slug", slug, "--no-log"]
             # Window-start guard (2026-07-18 Beirut miss): for "by DATE" markets
             # created mid-stream, pre-creation events must not count toward YES.
             if m.get("createdAt"):
@@ -2791,6 +2766,11 @@ def main() -> int:
                 cc_cmd,
                 cwd=REPO_ROOT, capture_output=True, text=True, timeout=600,
             )
+            if r.returncode != 0:
+                detail = (r.stderr or r.stdout or "unknown catalyst failure").strip()
+                print(f"\nDECISION: NEED_REVIEW — catalyst_check failed closed: "
+                      f"{detail[:500]}")
+                return 2
             cc_out = r.stdout
             print(cc_out)
             # Extract central P(YES) from "Central: X%" line
@@ -2869,7 +2849,11 @@ def main() -> int:
             # BECAUSE it silently fails would itself have silently failed.
             _toks = json.loads(m.get("clobTokenIds") or "[]")
             _outs = json.loads(m.get("outcomes") or "[]")
-            _other = "No" if side == "Yes" else "Yes"
+            # argparse canonicalizes --side to uppercase (YES/NO), while
+            # Gamma outcome labels are title-cased (Yes/No).  Comparing those
+            # representations directly silently selected the requested token
+            # a second time and presented it as the opposite-side check.
+            _other = "No" if side.upper() == "YES" else "Yes"
             if _other in _outs and len(_toks) == len(_outs):
                 _oask = _best_ask(_toks[_outs.index(_other)])
                 if _oask:

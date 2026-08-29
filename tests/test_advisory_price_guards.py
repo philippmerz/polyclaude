@@ -143,6 +143,58 @@ def test_execute_rechecks_live_ask_and_never_submits_above_cap(
     assert submitted == []
 
 
+def test_flip_check_prices_the_actual_opposite_token_for_uppercase_cli_side(
+        monkeypatch, capsys) -> None:
+    market = {
+        "question": "Will the Fed hike?",
+        "slug": "fed-hike-test",
+        "id": "2",
+        "umaResolutionStatus": None,
+        "endDate": "2026-09-16T00:00:00Z",
+        "outcomePrices": json.dumps([0.455, 0.545]),
+        "outcomes": json.dumps(["Yes", "No"]),
+        "clobTokenIds": json.dumps(["yes-token", "no-token"]),
+        "orderPriceMinTickSize": 0.01,
+        "takerBaseFee": None,
+        "negRisk": False,
+        "conditionId": "0xfliptest",
+        "events": [{"id": "event-flip-test"}],
+    }
+    asks = {"yes-token": 0.46, "no-token": 0.55}
+    requested_tokens: list[str] = []
+
+    monkeypatch.setattr(entry, "fetch_market_by_slug_or_question", lambda _q: market)
+    monkeypatch.setattr(entry, "_existing_exposure", lambda *_args: None)
+    monkeypatch.setattr(entry, "_sibling_markets", lambda *_args: None)
+
+    def best_ask(token: str) -> float:
+        requested_tokens.append(token)
+        return asks[token]
+
+    monkeypatch.setattr(entry, "_best_ask", best_ask)
+    monkeypatch.setattr(
+        entry.httpx,
+        "get",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(RuntimeError("no book")),
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "polyclaude_enter.py", "--slug", "fed-hike-test", "--side", "YES",
+            "--my-p", "0.56", "--edge-haircut", "0.10", "--usd", "5",
+            "--bankroll", "100", "--max-price", "0.46",
+        ],
+    )
+
+    assert entry.main() == 0
+    output = capsys.readouterr().out
+    assert requested_tokens == ["yes-token", "no-token"]
+    assert "opposite side No asks 0.5500" in output
+    assert "P(No)=0.440" in output
+    assert "opposite side Yes" not in output
+
+
 def test_sell_signal_uses_bid_for_both_negative_edge_and_hurdle() -> None:
     signal = marginal._sell_side_signal(
         prior_p=0.65,

@@ -1,5 +1,5 @@
 {
-  "next_id": 100,
+  "next_id": 101,
   "decisions": [
     {
       "id": 1,
@@ -1924,6 +1924,26 @@
         "decision-ledger",
         "keyset",
         "execution-safety"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 100,
+      "timestamp": "2026-08-29T22:23:30Z",
+      "type": "scaffolding",
+      "thesis": "Replace Gamma offset-pagination question lookup with exact public-search plus exhaustive official keyset fallback and canonical ID refetch; require literal criteria before catalyst analysis, pass the already-resolved slug from unified entry, reject ambiguity/partial coverage, and correct two advisory direction bugs (opposite-side token selection and signed UMA moves).",
+      "confidence": "high",
+      "prediction": "A live active market ranked below the old 2100-row offset ceiling resolves by exact question with its literal description; any missing, duplicate, malformed, or cursor-incomplete lookup stops before a catalyst worker or BUY, and downward UMA moves print a minus sign.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-06",
+      "tags": [
+        "gamma",
+        "criteria",
+        "entry-safety",
+        "advisory"
       ],
       "slug": null,
       "outcome": null,
