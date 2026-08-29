@@ -10850,3 +10850,38 @@ actual ledger and refuses malformed/duplicate IDs. Final validation passed **372
 **123** standalone money checks, and all **19/19** injected financial mutations; live scanner,
 Limitless, JSON, compile/diff and position-state checks were clean. The durable ROI continuation
 remains active until the operator manually cancels it.
+
+## 2026-08-29 03:08 UTC — delayed 02:00 tick replay: stale opportunity watcher restarted; no capital action
+
+The queued 02:00 cron seed arrived just after the 03:01 continuation had completed, so this pass
+reconciled live state and repeated the bounded discovery lanes without duplicating its trade or
+alerts. Authoritative bankroll is **$185.02**, only $0.03 above the prior mark: 15 Polymarket rows
+cost $165.83 and mark $169.08, while the full depth-walk returns only $161.24 net. Realized P&L
+remains +$4.92, pUSD deployable is $0.088265, and authenticated inventory has zero BUY
+commitments. Greenland remains 19 NO and the Gemini-debut >=40 leg remains 99 NO.
+
+The state and risk checks were quiet. UMA reported no held-market alert, Ostium remained at zero
+open trades, crux coverage was complete, the position-state repair finished CLEAN, and
+`redeem-all` found zero redeemables. No news or opportunity alert postdated the 03:01 journal
+checkpoint. All single positions and both protected structures remained HOLD, with zero
+marginal-APY close candidates, zero watchlist hits, zero overdue decisions and no taker-exit
+verdict. The AI cluster is about $54.533 against the current $55.506 cap, leaving only about $0.973
+of headroom; that is not usable room for another casual entry. The agi.safe.ai control again proved
+the parser can detect real 2025 changes, while the live board remained identical to 2026-01-15.
+
+Fresh discovery also remained below execution gates. Primary discovery fetched 981 markets; the
+20-page thin-tail pass produced only unvetted gross-carry hints. Three sports comparisons missed the
+3pp gate, six macro markets had no independent consensus signal, and the one Fed monotonicity
+midpoint anomaly became -0.56pp after live execution costs. The bounded consistency slice covered
+5,003 markets and found 286 midpoint deviations but zero positive provisional baskets; only 6 of
+193 structural groups were fully quoted, with the remainder explicitly unquoted or failed closed.
+Favorite-fade output supplied no fresh instance case, so no population-prior trade was inferred.
+
+One operational correction was required. `opportunity_watch.py` had been edited at 02:53 UTC but
+the resident process still predated that edit. It was stopped and restarted with the required
+absolute command path; PID 2193935 started at 03:06:16 UTC, postdates the source mtime, and is the
+only matching process. The other three daemons were already fresh and singular. Weekly P&L is
+current through Aug-28 and the Aug-23 world-state review is under eight days old, so neither was
+rerun. No trade, prior change or decision record was warranted. The operational incident was sent
+as material-only Telegram message 871. The durable ROI continuation remains active until the
+operator manually cancels it.
