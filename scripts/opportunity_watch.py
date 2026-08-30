@@ -238,9 +238,10 @@ def _daemon_process_pattern() -> str:
 def check_google_maps_labels(state: dict) -> None:
     """Watch an exact Maps label as a one-response rollout signal.
 
-    This intentionally does not infer majority-US rollout or market resolution.
-    It fires one review tick, once, so that a human/agent can recheck multiple
-    clients and credible reporting against the literal market criteria.
+    This inspects server HTML, not the client-rendered canvas, and intentionally
+    does not infer majority-US rollout or market resolution. It fires one review
+    tick, once, so that a human/agent can recheck rendered clients and credible
+    reporting against the literal market criteria.
     """
     try:
         trigs = json.loads(TRIGGERS_PATH.read_text())
@@ -302,9 +303,10 @@ def check_google_maps_labels(state: dict) -> None:
         text = (
             f"Google Maps US-region rollout SIGNAL: exact label "
             f"'{result.target_label}' appeared {result.target_count} time(s) in one "
-            f"response for '{result.query}'. This is NOT proof of majority-US rollout "
-            f"or market resolution; recheck independent US clients/reporting and the "
-            f"criteria before acting. {t.get('note', '')}"
+            f"server HTML response for '{result.query}'. This is NOT proof that the "
+            f"label rendered on the map, of majority-US rollout, or of resolution; "
+            f"recheck independent rendered US clients/reporting and the criteria "
+            f"before acting. {t.get('note', '')}"
         )
         actionable = bool(t.get("actionable", True))
         tick_dispatched = _alert(state, key, text, actionable)

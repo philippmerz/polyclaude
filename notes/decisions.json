@@ -1,5 +1,5 @@
 {
-  "next_id": 101,
+  "next_id": 102,
   "decisions": [
     {
       "id": 1,
@@ -1701,9 +1701,10 @@
         "reliability"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS: the durable ROI objective persisted through the Aug-29 queued 06/10/14/18/22 prompts and the Aug-30 02:00 cron seed; every seed carried the create-or-continue/manual-cancel-only contract, quiet ticks did not complete it, and no literal --help follow-up was armed.",
+      "calibration_delta": "No implementation divergence. The goal later reports usageLimited because of platform quota, which pauses automatic capacity but is neither completion nor manual cancellation; the objective and scheduled contract remain present.",
+      "lesson": "The durable goal plus contract-bearing cron seeds is the correct Codex continuation mechanism. Treat usageLimited as a platform state, never replace it with a competing goal, and keep the legacy one-shot helper only as an explicit fallback.",
+      "resolved_at": "2026-08-30T02:09:44Z"
     },
     {
       "id": 89,
@@ -1944,6 +1945,25 @@
         "criteria",
         "entry-safety",
         "advisory"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 101,
+      "timestamp": "2026-08-30T02:15:53Z",
+      "type": "scaffolding",
+      "thesis": "The Google Maps label watcher counts exact strings in server HTML and does not execute the client-rendered canvas; current control occurrences are query/SEO metadata. Preserve the cheap positive review trigger, but make every output and alert state that neither target nor control strings prove a rendered label or the majority-US resolution predicate.",
+      "confidence": "high",
+      "prediction": "The one-shot checker and opportunity alert explicitly identify a server-HTML string check, a positive target remains review-only, tests enforce the rendered-map caveat, and no subsequent tick treats the 0/2 response as proof that users see Lake Ontario.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-01",
+      "tags": [
+        "maps",
+        "monitoring",
+        "criteria-safety"
       ],
       "slug": null,
       "outcome": null,

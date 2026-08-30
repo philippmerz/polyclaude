@@ -316,20 +316,20 @@
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
   "p_no": 0.59,
-  "verified": "2026-08-25",
+  "verified": "2026-08-30",
   "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. p_no HELD at 0.50 \u2014 tonight's re-verification reproduced the 08-04 number from scratch (p_yes = 0.20 board + 0.80*0.45*0.95 capability = 0.54). CORRECTION TO MY OWN FRAMING: I described this leg to the operator as 'moot' because it marks 0.07 with only 47sh of bid. That conflated UNEXITABLE with WORTHLESS. The plan was always hold-to-resolution, which needs no bid; at p_no 0.50 vs a 0.09 ask this is the largest edge in the book, not a dead position. Do not re-describe it as moot. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. SELF-APPLIED DRIFT CORRECTION 2026-08-13: this morning I measured that my INSTANCE-thesis priors run 6-23pp overconfident on re-derivation (N=5, all one direction) and raised the entry haircut accordingly \u2014 then did not apply the finding to the thesis I am most confident about, which is where it bites hardest. The board-failure input was 0.85; haircut by the observed ~13pp mean to 0.72. OpenAI>=50 p_no 0.50 -> 0.41, Gemini>=50 0.56 -> 0.54. NO ACTION FOLLOWS \u2014 everything is held to Dec-31, sized as lottery tickets, and both marks (0.065, ~0.27) remain far below even the haircut numbers. The point is calibration honesty rather than trading: a correction I apply only to future entries and never to my live convictions is not a correction, it is a ritual. Note this ALSO shrinks the headline disagreement I reported this morning \u2014 market prices the crux at ~6.5%, I now price it at ~28% rather than ~20% failure-to-resolve... i.e. the gap narrows from 73pp to ~65pp, still enormous and still the whole position. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (OpenAI-HLE-50: already flagged unexitable; this quantifies it.) || CRUX MEASUREMENT UPGRADED 2026-08-25: 'board unchanged since ~Nov-2025' was an INFERENCE from what was MISSING. It is now a differenced OBSERVATION with a located change-point, via `scripts/source_freeze_check.py` (archive-diff, one instrument both sides): the board was heavily curated through ~Dec-2025 (ADDED claude 4.5 sonnet, grok 4, gpt-5, gpt-5-mini, gemini 3 pro; REMOVED claude 3.5/3.7 sonnet, claude 4 opus/sonnet, llama 4 maverick, qwen3-235b, gpt-4.1, gpt-4.5, o3, o4-mini) and has changed in NO respect between 2026-01-15 and 2026-08-25. Instrument validated for BOTH liveness (detects those 2025 changes) and coverage (--expect claude,grok; an earlier narrow pattern was blind to space-separated names and would have returned FROZEN for the wrong reason). Re-run before any cluster sizing. NOTE the residual risk is now w_spirit (resolver behaviour when the board fails), NOT the board's behaviour, which is measured. || PRIOR RE-DERIVED 2026-08-25 on the MEASURED board freeze (same decomposition as the Gemini leg): the recorded number was built on P(board posts a qualifying row) ~0.20, set BEFORE the freeze was measured. Measurement now gives P(board adds ANY row by Dec-31) ~0.15 and the qualifying-row term collapses accordingly. term1 = 0.15 x P(row is an OpenAI row clearing this bar | add); term2 = P(no row) x w_spirit 0.45 x P(capability). SELF-SKEPTICISM: this raises p_no on a position I already hold, so note that term2 \u2014 resolver behaviour, a JUDGMENT \u2014 now supplies the large majority of the number, and the honest reading is 'the measurable half is confirmed, the unmeasurable half dominates', not 'my edge grew'. term1 0.045, term2 0.365 -> p_no 0.59 (was 0.41). SENSITIVITY: w_spirit 0.30/0.45/0.60 -> 0.711/0.590/0.468. ORDER CONSEQUENCE: rest was 0.45 \u2014 BELOW fair under EVERY w_spirit in range; cancelled, re-posted 15sh @ 0.65.",
   "criteria_read": "2026-08-26",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.7,
-  "divergence_ack": "2026-08-15",
-  "divergence_note": "INTENTIONAL 43pp gap, re-derived from source 2026-08-10 (not marked to market). Chose NOT to size up HERE despite this being the cheapest expression: the leg has one cushion (board only \u2014 OpenAI capability is already 49.5, a hair under the bar) and 47sh of bid. Routed the marginal $6 to the Gemini leg instead, which needs BOTH a capability jump and a board update and has a real two-sided book. Re-look when the ack expires 2026-08-24, or immediately if agi.safe.ai posts any 2026 row.",
+  "divergence_ack": "2026-08-30",
+  "divergence_note": "INTENTIONAL 46.5pp gap re-derived 2026-08-30. The validated source-diff detects real 2025 board changes but still finds zero additions/removals from 2026-01-15 to live; p_no remains 0.59 with w_spirit 0.30/0.45/0.60 sensitivity 0.711/0.590/0.468. No add: the correlated AI cluster cap binds and only $0.088 pUSD is deployable. The existing 15 NO remain a hold-to-resolution lottery leg; re-open immediately on any agi.safe.ai row change or an identified OpenAI capability event.",
   "key_facts": [
    {
-    "claim": "agi.safe.ai tops at Gemini-3-Pro 38.3, OpenAI row GPT-5 25.3; NO row added since ~Nov-2025 (missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1). The Apr-2025 stamp is the DATASET date, not a frozen board. [RECENCY RE-CHECKED 2026-08-12: board rows unchanged, still no 2026 model listed.] [RECENCY RE-CHECKED 2026-08-14 by direct fetch of agi.safe.ai: board UNCHANGED \u2014 OpenAI row still GPT-5 25.3, top overall Gemini 3 Pro 38.3, no new rows. First-hand measurement, not a search summary.]",
+    "claim": "agi.safe.ai tops at Gemini-3-Pro 38.3, OpenAI row GPT-5 25.3; NO row added since ~Nov-2025 (missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1). The Apr-2025 stamp is the DATASET date, not a frozen board. The 2026-08-30 validated archive diff again detected real 2025 change, passed claude/grok/gemini coverage, and found zero additions or removals from 2026-01-15 to live.",
     "source": "https://agi.safe.ai/",
-    "checked": "2026-08-14",
-    "source_date": "2026-08-14"
+    "checked": "2026-08-30",
+    "source_date": "2026-08-30"
    },
    {
     "claim": "OpenAI's best HLE score on ANY surface is 49.5 (GPT-5.6 Sol) \u2014 under the 50 bar. Frontier is Fable 5 55.5. [RECENCY RE-CHECKED 2026-08-12: unchanged \u2014 Fable 5 55.5 / Opus 5 54.9 / GPT-5.6 Sol 49.5, OpenAI still under 50.]",
@@ -350,7 +350,7 @@
     "checked": "2026-08-26"
    }
   ],
-  "divergence_ack_reason": "Mark NO 0.11 vs prior 0.41 (30pp). REAL flow ($1.6k/24h, 2pp spread), board UNCHANGED (GPT-5 25.3) \u2014 market pricing anticipatory Astra>=50 + spirit resolution. Interpretation-question doctrine: defer to market for ACTION, and hold wins under BOTH measures (hold $1.65 at market vs exit $1.35 net). Lottery-sized tuition leg; rest at 0.45 stays. Re-derive only on a crux change (board row or Astra ship)."
+  "divergence_ack_reason": "At the 2026-08-30 check, NO marked 0.125 versus the re-derived p_no 0.59. The validated source-diff detects real 2025 changes, passes claude/grok/gemini coverage, and still finds the live board identical to 2026-01-15. Sensitivity across w_spirit 0.30/0.45/0.60 leaves p_no 0.711/0.590/0.468, all far above the mark. The 15 NO hold value is $8.85 versus a $1.59 full exit; no add because the correlated AI cluster cap binds and pUSD deployable is $0.088. Re-open on a board row or identified OpenAI capability event."
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
   "p_no": 0.78,
@@ -450,8 +450,8 @@
  "_comment_divergence_ack": "divergence_ack MUST be a bare ISO date string (e.g. \"2026-08-15\") \u2014 position_state_audit \u00a73c parses it with date.fromisoformat() directly and treats anything else as EXPIRED via the exception path. 14-day window from that date. Put prose in divergence_ack_reason (audit ignores it). Same for source_ack. Learned 2026-08-16: two acks written as rich dicts were silently invalid; one flagged, one was a near-miss.",
  "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632": {
   "p_yes": 0.078,
-  "verified": "2026-08-25",
-  "criteria_read": "2026-08-22",
+  "verified": "2026-08-30",
+  "criteria_read": "2026-08-30",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: 0.085 x 0.92 = p_yes 0.078 vs mark 0.092 \u2014 the market is marginally rich here, which is the SAME inversion the arb was struck on; 2.97sh of this leg are unpaired (the intentional lottery crumb, ~$0.27).",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -459,14 +459,14 @@
    {
     "claim": "Market resolves NO if MetaMask does not launch a publicly transferable/tradable token by 2026-12-31 23:59 ET; FDV measured 4:00 PM ET the calendar day after launch, 'most liquid price source'.",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
-    "source_date": "2026-08-22",
-    "checked": "2026-08-22"
+    "source_date": "2026-08-30",
+    "checked": "2026-08-30"
    },
    {
-    "claim": "Sibling market prices P(MetaMask launches a token by Dec-31 2026) at YES 0.085 (thin, $61 v24). This is a hard upper bound on every FDV leg.",
+    "claim": "Sibling market prices P(MetaMask launches a token by Dec-31 2026) at YES 0.085 (thin, $11 v24 at the Aug-30 recheck). This is a hard upper bound on every FDV leg.",
     "source": "https://gamma-api.polymarket.com/events?slug=will-metamask-launch-a-token-in-2025",
-    "source_date": "2026-08-25",
-    "checked": "2026-08-25"
+    "source_date": "2026-08-30",
+    "checked": "2026-08-30"
    },
    {
     "claim": "No launch date announced as of Aug-2026; Lubin confirmed the token Sep-2025; ConsenSys is pursuing a 2026 traditional IPO (a reason for delay, not acceleration).",
@@ -479,8 +479,8 @@
  },
  "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222": {
   "p_no": 0.947,
-  "verified": "2026-08-25",
-  "criteria_read": "2026-08-22",
+  "verified": "2026-08-30",
+  "criteria_read": "2026-08-30",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: p_yes = 0.085 x 0.62 = 0.053 -> p_no 0.947 vs mark 0.928. Bought at 0.849 in DEC-0080.",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -488,16 +488,16 @@
    {
     "claim": "Same template/criteria as the 700M leg: one FDV number, same no-launch backstop, so all legs resolve consistently \u2014 which is what makes the pair riskless.",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
-    "source_date": "2026-08-22",
-    "checked": "2026-08-22"
+    "source_date": "2026-08-30",
+    "checked": "2026-08-30"
    }
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
  "metamask-fdv-above-4b-one-day-after-launch-851-782-477-258": {
   "p_no": 0.956,
-  "verified": "2026-08-25",
-  "criteria_read": "2026-08-22",
+  "verified": "2026-08-30",
+  "criteria_read": "2026-08-30",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: p_yes = 0.085 x 0.52 = 0.044 -> p_no 0.956 vs mark 0.917. Bought at 0.888 in DEC-0079.",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -505,15 +505,15 @@
    {
     "claim": "Same template/criteria as the 700M and 3B legs (one FDV number, same backstop).",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-4b-one-day-after-launch-851-782-477-258",
-    "source_date": "2026-08-22",
-    "checked": "2026-08-22"
+    "source_date": "2026-08-30",
+    "checked": "2026-08-30"
    }
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
  "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
   "p_yes": 0.08,
-  "verified": "2026-08-29",
+  "verified": "2026-08-30",
   "criteria_read": "2026-08-28",
   "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03. The market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Aug-25 joint statement remains ambiguous rather than qualifying on its face: it calls the corridor framework proposed, says technical talks will continue, and separately refers to an agreement to implement joint mine-clearing; Oman's minister said he hoped an announcement would follow. Aug-27 reporting said details were still being worked out while Iran added conditions tied to US action. The Aug-29 official Oman recheck found no later bilateral acceptance statement. The 00:30Z Al Jazeera rollover alert repeated the already-underwritten IRGC-control/active-US-blockade facts; fresh CENTCOM enforcement counts neither accept nor reject the exact bilateral predicate, so they are not double-counted. p_yes remains 0.08: about 5% interpretation/resolution ambiguity plus 3% for a clear announcement before cutoff. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.04 bid: expected resolution value is $2.48 versus about $1.24 gross exit value. Re-underwrite immediately on any new joint/Omani declarative statement.",
   "cluster": "hormuz-agreement",
@@ -528,10 +528,10 @@
     "checked": "2026-08-29"
    },
    {
-    "claim": "The Aug-29 official Oman Foreign Ministry page still describes the corridor as proposed, says technical negotiations would continue, and says an announcement is hoped for soon; its recent-statements list shows no later Oman-Iran acceptance statement.",
+    "claim": "The Aug-30 official Oman Foreign Ministry recheck still describes the corridor as proposed, says technical negotiations would continue, and says an announcement is hoped for soon; its recent-statements list shows no later Oman-Iran acceptance statement.",
     "source": "https://www.fm.gov.om/en/53722/",
     "source_date": "2026-08-25",
-    "checked": "2026-08-29"
+    "checked": "2026-08-30"
    },
    {
     "claim": "The Aug-29 Al Jazeera rollover alert repeats the already-known IRGC-control and active-US-blockade claims; fresh CENTCOM vessel-enforcement counts are operational facts that neither accept nor reject the exact Oman-Iran agreement.",
@@ -555,7 +555,7 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.08,
-  "verified": "2026-08-29",
+  "verified": "2026-08-30",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
@@ -585,13 +585,13 @@
     "claim": "Fresh independent polling does not supply the required independent seat forecast: VCIOM's weekly United Russia support rose from 32.1% on August 2 to 39.2% on August 23, directionally supporting the central range but not resolving list-vote translation or district wins. The 0.08/0.40/0.28 distribution and no-add gate therefore remain unchanged.",
     "source": "https://wciom.ru/ratings/reiting-politicheskikh-partii/",
     "source_date": "2026-08-23",
-    "checked": "2026-08-29"
+    "checked": "2026-08-30"
    }
   ]
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.40,
-  "verified": "2026-08-29",
+  "verified": "2026-08-30",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
@@ -609,7 +609,7 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.28,
-  "verified": "2026-08-29",
+  "verified": "2026-08-30",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
@@ -627,15 +627,15 @@
  },
  "google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026": {
   "p_yes": 0.4,
-  "verified": "2026-08-29",
+  "verified": "2026-08-30",
   "criteria_read": "2026-08-28",
   "cluster": "google-maps-rollout",
   "rho_within": 0.0,
-  "source_ack": "2026-08-29",
-  "source_ack_note": "The 2025 Google post is intentionally the freshest official statement of the comparable GNIS-to-Maps rollout precedent, not a current Lake America fact. Current implementation state was separately re-verified on August 29 through the official GNIS record, the August 27 DOI order, and a direct US-region Google Maps check.",
+  "source_ack": "2026-08-30",
+  "source_ack_note": "The 2025 Google post is intentionally the freshest official statement of the comparable GNIS-to-Maps rollout precedent, not a current Lake America fact. Current implementation state was separately re-verified on August 30 through the official GNIS record, the August 27 DOI order, and a US-region Google Maps server-HTML string check that does not observe the rendered canvas.",
   "divergence_ack": "2026-08-28",
   "divergence_ack_reason": "The 30pp prior-to-mark gap was reviewed before and after execution, including independent 0.40 skeptic and 0.88 champion cases. The position used essentially all immediately deployable pUSD after economically closing the remaining Hormuz-normal NO; reaching the 15% ticket cap would require paying taker spreads to dismantle higher-certainty or matched structures. Size is deliberately $12.339 rather than point-estimate Kelly because the decisive majority-US rollout probability is not directly measurable, the short window crosses a weekend, and Maps still showed the old label at entry. Do not infer an automatic add from the headline gap; re-underwrite on a qualifying rollout or fresh contrary implementation evidence.",
-  "note": "DEC-0085. Google Maps must show Lake America, alone or alongside Lake Ontario, for a majority of US users by August 31 at 11:59pm ET; beta-only, experimental, or subnational appearances do not qualify. DOI Secretary's Order 3453 directed the BGN to act immediately and the official GNIS prerequisite completed August 27, so the White House order's outer 30-day implementation allowance does not by itself negate this short clock. Google rolled out the comparable Gulf of America label after its final GNIS update, but that change had preparation time and was not a binational feature. Repeated Aug-29 US-region queries still return target Lake America 0 / control Lake Ontario 2, Google has made no rollout statement, and Monday is the last business day before cutoff. Time decay therefore lowers central p_yes from 0.55 to 0.40; mandatory 10pp sensitivity is 0.30. The 40.95563 YES cost $12.339349 total including fee. At the live 0.239 bid, fee-aware exit is about $9.49 versus $16.38 central and $12.29 sensitivity-case resolution value, so HOLD/no-add. Do not rest a sell into the binary rollout catalyst or chase above the original 0.30 entry cap without broad qualifying Maps evidence.",
+  "note": "DEC-0085. Google Maps must show Lake America, alone or alongside Lake Ontario, for a majority of US users by August 31 at 11:59pm ET; beta-only, experimental, or subnational appearances do not qualify. DOI Secretary's Order 3453 directed the BGN to act immediately and the official GNIS prerequisite completed August 27, so the White House order's outer 30-day implementation allowance does not by itself negate this short clock. Google rolled out the comparable Gulf of America label after its final GNIS update, but that change had preparation time and was not a binational feature. The Aug-30 02:04 UTC server-HTML check found target Lake America 0 / control Lake Ontario 2 and Google has made no rollout statement; the checker does not execute the client-rendered canvas, so the result is only a weak negative signal. Monday is the last business day before cutoff. Central p_yes remains 0.40; mandatory 10pp sensitivity is 0.30. The 40.95563 YES cost $12.339349 total including fee. At the live 0.256 bid, the fee-aware exit is about $10.17 versus $16.38 central and $12.29 sensitivity-case resolution value, so HOLD/no-add. Do not rest a sell into the binary rollout catalyst or chase above the original 0.30 entry cap without broad qualifying Maps evidence.",
   "key_facts": [
    {
     "claim": "The official GNIS record for gazId 970427 listed Lake America as the official name with an August 27, 2026 BGN decision; Lake Ontario remained a variant.",
@@ -656,10 +656,10 @@
     "checked": "2026-08-28"
    },
    {
-    "claim": "A fresh Aug-29 direct US-region Google Maps search returned zero Lake America labels and two Lake Ontario labels; one endpoint observation is not proof of majority-US state, but continued absence modestly time-decays the rollout prior.",
+    "claim": "A fresh Aug-30 02:04 UTC US-region Google Maps server-HTML response contained zero Lake America strings and two Lake Ontario strings. The control strings occur in query/SEO metadata and the checker does not execute the rendered canvas, so this is only a weak negative rollout signal and never proof of the displayed or majority-US state.",
     "source": "https://www.google.com/maps/search/Lake+Ontario?hl=en&gl=us",
-    "source_date": "2026-08-29",
-    "checked": "2026-08-29"
+    "source_date": "2026-08-30",
+    "checked": "2026-08-30"
    }
   ]
  }

@@ -154,7 +154,8 @@ def test_watch_alerts_and_fires_only_on_first_observation(monkeypatch, tmp_path)
     assert len(alerts) == 1
     assert alerts[0][0] == "lake-america-maps-rollout"
     assert alerts[0][2] is True
-    assert "NOT proof of majority-US rollout" in alerts[0][1]
+    assert "majority-US rollout" in alerts[0][1]
+    assert "NOT proof that the label rendered on the map" in alerts[0][1]
     assert state["google_maps_label_hits"]["lake-america-maps-rollout"]["target_count"] == 1
     assert state["google_maps_label_hits"]["lake-america-maps-rollout"][
         "review_tick_pending"

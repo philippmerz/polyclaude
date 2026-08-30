@@ -10937,3 +10937,64 @@ for flip-the-kill, and UMA preserves price-move direction. Validation finished w
 cases**, all **123** standalone money checks and all **19/19** injected financial mutations caught;
 JSON and diff checks were clean. Material Telegram message 876 recorded the prior change and safety
 work. The durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-08-30 02:19 UTC — scheduled tick: Maps signal semantics hardened; all positions hold (DEC-0101)
+
+The authoritative bankroll was **$185.57**, down $0.67 from the 22:27 checkpoint with realized P&L
+unchanged at +$4.92. Fifteen Polymarket rows cost $165.83 and marked $169.75, while full executable
+depth returned $162.16 net; midpoint overstatement was $7.59. Authenticated inventory contained six
+SELL orders, zero BUY commitments and $0.088265 deployable pUSD. The crypto sleeve remained 7.8663
+aUSDC plus 1.0478 base USDC and small gas balances; Ostium had zero trades. UMA was clean, crux
+coverage was silent, all four daemons were fresh and singular, `redeem-all` found zero positions,
+and the final position-state audit was CLEAN across all 15 live rows.
+
+The only post-journal material alert was Al Jazeera's report of Ontario premier Doug Ford's sign and
+public rejection of “Lake America.” The classifier overreached by treating political opposition as a
+mechanism affecting the literal market. Ford's official post changes neither US users' Google Maps
+state, GNIS nor DOI implementation. GNIS still reports Lake America as official, Secretary's Order
+3453 remains in force, and Google's own Gulf precedent localizes names by user country. The fresh
+02:04 UTC check found target `Lake America` 0 / control `Lake Ontario` 2 in one US-region response;
+no Google rollout statement appeared. Central/sensitivity p_yes therefore remain 0.40/0.30, and the
+40.95563 YES remain HOLD/no-add: the fee-aware exit is about $10.17 ($0.248/share) versus $16.38
+central and $12.29 sensitivity-case resolution value.
+
+The independent review caught an important measurement caveat before that 0/2 result became
+institutional memory: `google_maps_label_check.py` counts strings in server HTML and never executes
+the client-rendered map canvas. The two control strings occur in query/SEO metadata, so they are not
+proof users see the old label; a future target string is likewise only a rollout review signal until
+verified in rendered clients. DEC-0101 updates the checker, watcher alert and regression to say this
+explicitly. This does not change the 0.40 call—the prior was set only hours earlier and already
+included the weekend, absent Google statement and one remaining business day—but it prevents a
+later low-context tick from mistaking a cheap signal for the majority-US resolution oracle.
+
+Every state-hygiene judgment item was resolved. Oman's official Aug-30 recheck still ends with the
+Aug-25 proposed framework and prospective technical talks, so Iran-Oman remains p_yes 0.08 and HOLD
+($2.48 central versus $1.24 exit). No independent Duma seat forecast appeared, so the protected
+295-339 union remains p=0.76 and HOLD/no-add pending the Sep-1 gate. All three MetaMask FDV criteria
+were re-read verbatim and remain one identical template with the no-launch backstop; the sibling
+Dec-31 launch market still prices YES 0.085. The validated HLE archive diff detected real 2025
+changes, passed claude/grok/gemini coverage and again found zero additions/removals from Jan-15 to
+live. OpenAI>=50 p_no remains 0.59 across the documented 0.468-0.711 spirit sensitivity; its 46.5pp
+prior/mark gap was re-acknowledged, but the correlated cluster cap and $0.088 cash block any add.
+DEC-0088 graded PASS: contract-bearing cron seeds and the durable objective survived every scheduled
+turn; the current `usageLimited` platform state is neither completion nor manual cancellation.
+
+Discovery was comprehensively quiet. Primary discovery covered 1,000 active markets; the thin pass
+fetched 32,504 and surfaced 1,192 win-assumed carry hints, but none gained an independent robust fair.
+The measured Hormuz 20-39 ship bucket remains the best lead and still fails its 10-point stress case.
+Sports covered 56 eligible markets and its best consensus delta was +2.5pp, below the 3pp gate. Five
+macro rows had no consensus instrument. Monotonicity inspected 935 events and found one midpoint
+violation with no book. The explicitly incomplete consistency slice covered 5,011 markets / 549
+events, live-quoted 14 of 19 requested structural groups and found zero positive provisional basket.
+Favorite-fade produced no instance-specific fair. Marginal APY, exit routing and watchlist checks
+likewise produced no action. Weekly P&L is current through Aug-28 and world state through Aug-23 is
+under eight days old, so both weekly lanes were skipped.
+
+No trade, order change, redemption, swap or bridge occurred. README/backlog and live priors were
+refreshed; material Telegram message 877 reported the alert decision and monitoring caveat. Because
+the watcher source changed, the old resident was stopped and replaced by fresh absolute-command PID
+2349187; the first detached launch did not persist, so the verified replacement used a new session,
+has PPID 1, postdates the edit, and is exactly one running process. Final
+validation passed **380 pytest cases**, all **123** standalone money checks and all **19/19**
+financial mutations; JSON, compile and diff hygiene were clean. The durable ROI continuation remains
+uncancelled and must continue until the operator manually stops it.

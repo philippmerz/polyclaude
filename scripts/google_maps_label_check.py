@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Check one US-region Google Maps response for an exact geographic label.
+"""Check one US-region Google Maps server response for an exact label string.
 
 This is deliberately a rollout *signal*, not a resolution oracle. A single
-server response cannot establish what a majority of US users see; callers must
-use the observation only to trigger a fresh, broader review.
+server HTML response does not execute the client-rendered map canvas and cannot
+establish what a majority of US users see; callers must use the observation
+only to trigger a fresh, broader review.
 """
 
 from __future__ import annotations
@@ -56,11 +57,13 @@ def check_google_maps_label(
     language: str = "en",
     timeout: float = 20.0,
 ) -> LabelObservation:
-    """Return exact-label counts from one Maps response, failing closed.
+    """Return exact-string counts from one Maps server response, failing closed.
 
-    Schema markers reject interstitials and unrelated payloads; the control
-    label confirms that the intended query survived into the Maps response.
-    A target_count of zero is only "not observed here," never proof of absence.
+    Schema markers reject interstitials and unrelated payloads. The control
+    string confirms that the intended query survived into the response, but it
+    can occur in query/SEO metadata and does not prove a rendered map label.
+    Likewise, target_count > 0 is only a review signal and target_count == 0 is
+    only "not present in this server payload," never proof about the canvas.
     """
     if not query or not target_label or not control_label:
         raise LabelCheckError("query, target_label, and control_label are required")
@@ -144,7 +147,8 @@ def main() -> int:
             "ok": True,
             "rollout_signal": observation.rollout_signal,
             "interpretation": (
-                "one US-region response only; not proof of majority-US rollout or resolution"
+                "server-HTML string check only; not a rendered-map observation or "
+                "proof of majority-US rollout/resolution"
             ),
         }
     )
