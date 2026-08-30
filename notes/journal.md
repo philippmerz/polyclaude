@@ -10998,3 +10998,58 @@ has PPID 1, postdates the edit, and is exactly one running process. Final
 validation passed **380 pytest cases**, all **123** standalone money checks and all **19/19**
 financial mutations; JSON, compile and diff hygiene were clean. The durable ROI continuation remains
 uncancelled and must continue until the operator manually stops it.
+
+## 2026-08-30 06:25 UTC — Lake +231.9% realized; bounded HLE add and idle-cash supply (DEC-0085/0102/0103)
+
+This was not a quiet periodic check. Gamma market 3943918 changed to `closed=true`,
+`umaResolutionStatus=resolved`, outcome prices `[1,0]` and `acceptingOrders=false` at
+05:54:13 UTC. The 40.95563 Lake-America-by-Aug-31 YES won. The resolution runbook
+confirmed the canonical market and condition, then `redeem-all --dry-run` found exactly
+one redeemable row. Live redemption returned 40.955630 USDC.e in transaction
+`0xdf74a4b57c5126616f5120049a4e6b6e9297e1a8dc0adb4b37a38c964c50c0a8`; a second dry
+run found zero, the CTF balance became zero and the live book fell from 15 to 14 rows.
+DEC-0085 graded PASS: $40.955630 proceeds on $12.339349 fee-inclusive risk produced
+**+$28.616281, +231.9%**. After the new-entry fee, cumulative realized P&L is about
+**+$33.58**.
+
+The direct catalyst was Google's Aug-29 product post, updated at 05:35:13 UTC, stating
+that GNIS had formally changed the name and the US Maps rollout was starting. The
+server-HTML Maps-label proxy never fired and the news watcher missed this named primary
+source, so DEC-0101 also graded PASS only for its semantic safety: proxy absence was
+correctly kept review-only, not mistaken for evidence against resolution. A related
+monitor gap was fixed in `uma_status_check.py`: resolved transitions now emit once,
+including after de-indexing, and cached market IDs cover a failed live slug lookup. A
+final adversarial audit also closed two fail-open paths before commit: a transient direct
+fetch now preserves the cached ID/state, and continuing invisible proposals/disputes keep
+alerting every tick while resolved transitions alone dedupe. DEC-0103 records the
+prospective recurrence check.
+
+The payout funded only the remaining visible HLE level that survived a fresh skeptical
+review. The agi.safe.ai Jan-15-to-live diff still found no Gemini additions or removals,
+but the official CAIS repository has active rolling-data updates; that evidence cut the
+Gemini-debut-at-least-40 NO prior from 0.65 to **0.60 central / 0.45 stress**. After
+wrapping 10 USDC.e to pUSD (`0xe8ad0bc58028b3683cc9b98e21ee192ff8c312e34bc7fd99be5d9dfc1caa7a00`),
+a fill-or-kill order bought exactly 70 NO at 0.12: $8.40 notional plus $0.295680 fee,
+order `0x247f97c759b8826a8ebdbd918e483cad7a4ea18d0a1254be8f2dac22ce475777`, transaction
+`0x4818a95b9e9b121b309cdce7ccee0cefe3dfe11224dbfcefddd2c2637d98e4fd`. The ticket is
+now 169 shares, $18.229400 fee-inclusive risk; its execution-time cluster exposure was
+$63.229 versus a $65.034 cap. The next ask jumped to 0.16, so DEC-0102 explicitly says
+no chase and no further add.
+
+Thirty otherwise idle USDC.e was initially supplied to Aave Polygon at a checked 3.144%
+APY in transaction `0xa1b37e98da97866d5e919ce75c916b6ea61b7f774c33860deb422a7d10d5fd31`.
+The final doctrine audit caught that this left only 1.392585 pUSD, below the $5–10 venue
+float rule. It withdrew 3.651785 USDC.e (`0xff941ba3206c292858d3c99bd71b07297029df9e0a4c0f5bb3559fb4e9e84a30`)
+and wrapped all 4.607415 raw USDC.e (`0x83851b924bb491e09e282e9eb620b2860adc0d5df5d9b33e3cb34c2e6d7d9f11`),
+leaving exactly 6.000000 pUSD and about 26.3482 yield-accruing aUSDC.e. There are six
+resting SELLs and zero BUY commitments. A Team Liquid Valorant candidate
+was rejected: 0.502495 fee-inclusive cost versus a 0.4346 standard-haircut fair, and no
+other discovery candidate cleared its full stress gate.
+
+Final live accounting is $226.95 marked bankroll, with the 14-position Polymarket book
+$178.94 at midpoint but only $165.22 immediately realizable. The state audit is CLEAN
+and no redemption remains. Validation passed **384 pytest cases**, all **123** standalone
+money checks and all **19/19** financial mutations. README, backlog, priors, resolution
+grades and alert triggers were refreshed; material Telegram message 878 reported the result and
+reallocation, and message 879 corrected the post-audit venue-float/Aave split. The durable ROI
+continuation remains uncancelled and must continue until the operator manually stops it.

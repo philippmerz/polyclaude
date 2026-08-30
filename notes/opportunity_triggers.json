@@ -27,18 +27,6 @@
   "note": "NYCC (early Oct). Same corrected announce-template as Gamescom/SDCC. Baseline seeded silently, so only NEWLY listed comic-con events fire."
  },
  {
-  "key": "lake-america-maps-rollout",
-  "kind": "google_maps_label",
-  "query": "Lake Ontario",
-  "target_label": "Lake America",
-  "control_label": "Lake Ontario",
-  "region": "us",
-  "language": "en",
-  "expires_at": "2026-09-01T04:00:00Z",
-  "actionable": true,
-  "note": "DEC-0085 review trigger through Aug-31 11:59pm ET. One response is only a rollout signal, never proof that the majority-US resolution condition is met."
- },
- {
   "key": "hle-cross-event-arb",
   "kind": "pair_arb",
   "mode": "umbrella",

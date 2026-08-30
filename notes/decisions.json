@@ -1,5 +1,5 @@
 {
-  "next_id": 102,
+  "next_id": 104,
   "decisions": [
     {
       "id": 1,
@@ -1642,9 +1642,10 @@
         "shortdated"
       ],
       "slug": "google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS \u2014 resolved YES early at 2026-08-30 05:54:13Z. Redeemed 40.95563 YES for 40.955630 USDC.e in tx 0xdf74a4b57c5126616f5120049a4e6b6e9297e1a8dc0adb4b37a38c964c50c0a8. Profit $28.616281 on $12.339349 fee-inclusive cost (+231.9%).",
+      "calibration_delta": "The entry central P(YES)=0.60 was directionally correct; the final pre-resolution re-underwrite had conservatively cut it to 0.40 after a weak server-HTML negative. One binary win is not a calibration rate, but it confirms that the server-HTML probe deserved little weight against the completed GNIS prerequisite and comparable rollout mechanism.",
+      "lesson": "Named-primary-source monitoring and held-market status transitions must complement cheap proxy probes. Google published/updated an official rollout post before resolution, while the server-HTML string watcher never fired because it did not observe the client-rendered map. Preserve the proxy only as review signal; monitor the literal source/publisher and de-indexing-safe Gamma identity for short-dated positions.",
+      "resolved_at": "2026-08-30T06:07:49Z"
     },
     {
       "id": 86,
@@ -1964,6 +1965,48 @@
         "maps",
         "monitoring",
         "criteria-safety"
+      ],
+      "slug": null,
+      "outcome": "PASS \u2014 the checker and watcher continued to describe server HTML as review-only, and no tick treated the 0/2 response as rendered-map or majority-US proof. The market then resolved YES at 05:54Z while the proxy still had no target hit.",
+      "calibration_delta": "The semantic hardening was correct, but the real event demonstrated the proxy is even less decision-complete than anticipated: it missed the qualifying rollout entirely while Google published an official product update and Gamma resolved.",
+      "lesson": "Keep the HTML signal only as a cheap prompt. For literal named-platform predicates, monitor the named primary publisher and held-market direct identity/status as independent channels; never promote a non-rendering proxy into the resolution oracle.",
+      "resolved_at": "2026-08-30T06:19:36Z"
+    },
+    {
+      "id": 102,
+      "timestamp": "2026-08-30T06:19:14Z",
+      "type": "size_change",
+      "thesis": "After DEC-0085 resolved YES and raised bankroll/cap headroom, added exactly 70 NO shares in the next-Gemini-Pro HLE-debut >=40 market at raw 0.12 FAK: $8.40 notional plus $0.29568 under the 4% quadratic fee curve, $8.69568 incremental risk. The validated source-freeze instrument again detected real 2025 changes, passed claude/grok/gemini coverage, and found no agi.safe.ai model-row change since 2026-01-15. Exact criteria still resolve NO if no qualifying new Gemini Pro row appears by Dec-31. A skeptic found CAIS is nevertheless active\u2014the official HLE repo recorded a July-27 dataset release on Aug-1\u2014so the monitoring prior is cut 0.65->0.60 and its 15-point stress to 0.45 rather than extrapolating scoreboard stasis into abandonment. Effective entry 0.124224 remains strongly +EV at both bounds. The full ticket is 169 NO / $17.60 notional / $18.22940 fee-inclusive; execution-time ai-ships-fast-short cost is $63.22900 versus a $65.034 cap, leaving $1.805. Do not chase the next 0.16 ask.",
+      "confidence": "medium",
+      "prediction": "No qualifying Gemini Pro row is newly added to agi.safe.ai by December 31; the incremental 70 NO and full 169-share ticket resolve NO. A qualifying row\u2014especially already-released 3.1 Pro or forthcoming 3.5 Pro\u2014falsifies the thesis, and thin exit means the entry cap is the loss control.",
+      "size_usd": 8.69568,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "gemini",
+        "source-freeze",
+        "cluster",
+        "rebalance"
+      ],
+      "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 103,
+      "timestamp": "2026-08-30T06:19:24Z",
+      "type": "scaffolding",
+      "thesis": "The Lake market exposed two contradictions in uma_status_check: its contract promised to alert on resolved positions but the implementation only emitted proposed/disputed, and a visible held row whose Gamma slug index vanished produced GAMMA_LOOKUP_FAILED despite a previously cached direct market ID. Added cached-ID recovery and explicit visible/invisible resolved transition alerts. A final adversarial audit then closed two fail-open regressions before commit: transient direct-fetch failure now preserves the cached ID and last good state, while an unresolved invisible proposal/dispute keeps warning on every tick as before; only unchanged final resolution dedupes. This turns favorable resolution into an actionable capital-release signal without weakening the standing dispute alarm.",
+      "confidence": "high",
+      "prediction": "At the next held-market resolution or slug de-indexing, uma_status_check reuses the cached direct ID, emits one resolved transition alert, and then dedupes subsequent resolved checks. A transient Gamma fetch preserves that identity for retry, while a continuing invisible proposal/dispute repeats its alert every tick.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-02",
+      "tags": [
+        "monitoring",
+        "uma",
+        "redemption",
+        "deindexing"
       ],
       "slug": null,
       "outcome": null,

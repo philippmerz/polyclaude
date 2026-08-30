@@ -104,6 +104,50 @@ def _yes_price_move_message(previous: float, current: float, context: str = "") 
     return f"YES moved {previous:.4f} → {current:.4f} ({move_pp:+.1f}pp){context}"
 
 
+def _status_change_alert_type(previous: str | None, current: str | None,
+                              *, visible: bool) -> str | None:
+    """Classify a held-market UMA transition, including final resolution.
+
+    Resolution is operationally actionable even when it is favorable: it frees
+    collateral for redemption and redeployment.  The monitor's module contract
+    has always promised to surface ``resolved``, but the old implementation
+    only emitted proposed/disputed transitions.
+    """
+    if current == previous:
+        # A de-indexed unresolved proposal/dispute remains an active exception
+        # every tick.  The old monitor deliberately repeated these warnings;
+        # only final resolution is a one-shot capital-release transition.
+        if not visible and current == "proposed":
+            return "INVISIBLE_BUT_PROPOSED"
+        if not visible and current == "disputed":
+            return "INVISIBLE_BUT_DISPUTED"
+        return None
+    if current == "proposed":
+        return "UMA_STATUS_CHANGE" if visible else "INVISIBLE_BUT_PROPOSED"
+    if current == "disputed":
+        return "UMA_STATUS_CHANGE" if visible else "INVISIBLE_BUT_DISPUTED"
+    if current == "resolved":
+        return "UMA_RESOLVED" if visible else "INVISIBLE_BUT_RESOLVED"
+    return None
+
+
+def _market_id_with_cache(market_id: str | None, cache: dict,
+                          slug: str) -> str | None:
+    """Keep direct Gamma identity across slug-index de-listing."""
+    if market_id:
+        return str(market_id)
+    cached_id = cache.get(slug, {}).get("market_id")
+    return str(cached_id) if cached_id else None
+
+
+def _cache_entry_after_fetch_failure(previous: dict | None,
+                                     market_id: str) -> dict:
+    """Retain the direct identity and last good state after transient failure."""
+    entry = dict(previous or {})
+    entry["market_id"] = str(market_id)
+    return entry
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("--wallet", default=str(_secrets.path("POLYCLAUDE_WALLET")))
@@ -164,14 +208,23 @@ def main() -> int:
                         market_id = rj.get("id")
         except Exception:
             pass
+        # A market can disappear from Gamma's slug index before the held token
+        # leaves data-api (Lake America, 2026-08-30).  Reuse the direct ID from
+        # the prior successful check so de-indexing cannot blind the transition.
+        market_id = _market_id_with_cache(market_id, cache, slug)
         if not market_id:
             alerts.append({
                 "slug": slug, "type": "GAMMA_LOOKUP_FAILED",
-                "msg": "could not resolve slug → market_id (rare; market may be very new or de-indexed)"
+                "msg": "could not resolve slug or recover a cached market_id "
+                       "(market may be very new or de-indexed)"
             })
             continue
         m = fetch_market(market_id)
         if not m:
+            # Never fail open by deleting the only direct ID.  A later tick can
+            # still fetch a de-indexed held market through this cached identity.
+            new_cache[slug] = _cache_entry_after_fetch_failure(
+                cache.get(slug), market_id)
             alerts.append({
                 "slug": slug, "type": "GAMMA_FETCH_FAILED",
                 "market_id": market_id,
@@ -193,10 +246,13 @@ def main() -> int:
             "checked_at": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z",
         }
 
-        # Alert on UMA status changes
-        if uma_status in ("proposed", "disputed") and prev_status != uma_status:
+        # Alert on every actionable UMA transition, including resolution.  A
+        # winning resolution is a capital-release event, not merely book state.
+        status_alert_type = _status_change_alert_type(
+            prev_status, uma_status, visible=True)
+        if status_alert_type:
             alert = {
-                "slug": slug, "type": "UMA_STATUS_CHANGE",
+                "slug": slug, "type": status_alert_type,
                 "market_id": market_id,
                 "msg": f"umaResolutionStatus: {prev_status} → {uma_status}",
                 "outcomePrices": prices,
@@ -264,13 +320,25 @@ def main() -> int:
                 "checked_at": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z",
                 "data_api_visible": False,
             }
-            if uma_status in ("proposed", "disputed"):
+            status_alert_type = _status_change_alert_type(
+                prev.get("umaResolutionStatus"), uma_status, visible=False)
+            if status_alert_type:
                 alerts.append({
-                    "slug": slug, "type": "INVISIBLE_BUT_DISPUTED",
+                    "slug": slug, "type": status_alert_type,
                     "market_id": market_id,
                     "msg": f"position invisible to data-api positions endpoint, gamma shows umaResolutionStatus={uma_status}",
                     "outcomePrices": prices,
                 })
+        else:
+            # A single Gamma outage must not erase the ID needed to observe a
+            # later dispute/resolution after this holding disappeared upstream.
+            new_cache[slug] = _cache_entry_after_fetch_failure(prev, market_id)
+            alerts.append({
+                "slug": slug, "type": "INVISIBLE_GAMMA_FETCH_FAILED",
+                "market_id": market_id,
+                "msg": "position remains invisible to data-api and direct "
+                       "gamma-api fetch failed; cached identity preserved",
+            })
 
     save_cache(new_cache)
 

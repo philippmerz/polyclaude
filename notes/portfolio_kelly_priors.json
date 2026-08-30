@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-08-29",
+ "_updated": "2026-08-30",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
@@ -410,27 +410,27 @@
  "divergence_ack_reason": "Mark 0.185 NO vs prior 0.65 = 46pp, far past the 25pp audit bar. VERIFIED BEFORE ACKING, all three candidate causes checked and none found: (1) BOARD \u2014 source_freeze_check live-vs-Jan diff still FROZEN, coverage control passed (claude/grok/gemini all parsed), so no qualifying row appeared; (2) CAPABILITY \u2014 best public Gemini HLE scores are Deep Think 48.4 (Feb-2026) and 3.1-pro-preview 46.44 (Scale, Aug-16), both UNDER the 50 bar, so no release justifies it; (3) NEWS \u2014 watcher silent on the HLE crux. The +10.5pp came on a TIGHT 2.9pp spread with $719 volume, so it is real flow rather than a midpoint flap \u2014 the market is repricing something I cannot observe, and the most likely candidate is w_spirit (expected resolver behaviour when the board fails), which is precisely the term I flagged as judgment-not-measurement. HELD: even at the most market-sympathetic end of my own sensitivity range (w_spirit 0.60 -> p_no 0.55) the position clears the 0.185 mark by a wide margin. NOT ADDING despite the apparent edge: cluster concentration is the binding constraint, and adding on a move I cannot explain would be sizing into the one term I have no measurement for."
  },
  "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645": {
-  "p_no": 0.65,
-  "verified": "2026-08-29",
-  "criteria_read": "2026-08-29",
+  "p_no": 0.60,
+  "verified": "2026-08-30",
+  "criteria_read": "2026-08-30",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.95,
-  "note": "DEC-0089 opened 49 NO shares at 0.09/0.10. After another fully validated source/criteria/book pass, DEC-0096 added exactly 50 NO at 0.09 FAK. The ticket now holds 99 NO for $9.20 notional plus $0.33372 in 4% quadratic taker fees, $9.53372 gross. This is the cleanest measured board-stasis expression in the HLE cluster: the contract resolves NO explicitly if no qualifying Gemini Pro row is added by Dec-31; unlike the older HLE family, it does not require a spirit-resolution estimate when the named source stays available but frozen. Central p_no=0.65 deliberately allows a 35% chance that agi.safe.ai resumes and adds a qualifying row despite zero additions or removals throughout 2026. The adverse case is concrete: already-released Gemini 3.1 Pro scores 46.44 on Scale and may qualify if the board catches up, while Google says 3.5 Pro is coming soon. Both entries used a 15-point stress (p_no=0.50); the add hard-capped raw price at 0.09 and stopped at 50 shares after an independent cap skeptic rejected consuming all 60. Treat as hold-to-resolution: exit liquidity is thin, and one board update can gap the leg before an active exit. The full ai-ships-fast-short cluster is $54.53332 against a fresh $55.47830 cap, leaving $0.94498; any further add requires a fresh validated source diff, a full correlated-cluster review and a real safety buffer. Apparent per-leg edge is not independent diversification.",
-  "divergence_ack": "2026-08-29",
-  "divergence_ack_reason": "The roughly 56pp prior/mark gap was re-derived and acted on in DEC-0089, then revalidated before the bounded DEC-0096 add. The validated diff still detected real 2025 change and found no 2026 row change; criteria and fee schedule were unchanged. Added only 50 of 60 shares offered at 0.09 because all held HLE legs share the board-stasis crux and the contrary catch-up path is real; the factor cap now leaves less than $1 slack. Re-open immediately if agi.safe.ai adds or removes any row, Google dates 3.5 Pro, or the debut ladder moves on identifiable evidence.",
+  "note": "DEC-0089 opened 49 NO shares at 0.09/0.10 and DEC-0096 added 50 at 0.09. After Lake America resolved and released fresh cap headroom, DEC-0102 added exactly 70 more NO at 0.12 FAK: $8.40 notional plus $0.29568 fee. The full ticket is 169 NO for $17.60 notional plus $0.62940 in 4% quadratic taker fees, $18.22940 gross. This remains the cleanest measured board-stasis expression in the HLE cluster: the contract resolves NO explicitly if no qualifying Gemini Pro row is added by Dec-31, without the older family's resolver-spirit branch. The Aug-30 validated diff again detected real 2025 changes, passed claude/grok/gemini coverage and found zero additions/removals since 2026-01-15. However, an independent skeptic found that CAIS is not institutionally dormant: its official HLE repository recorded a July-27 dataset release on Aug-1. That does not update the model-results board, but it invalidates an abandonment extrapolation. Central p_no is therefore cut 0.65->0.60 and the 15-point stress becomes 0.45; both remain strongly above the 0.124224 incremental all-in cost. Already-released Gemini 3.1 Pro scores 46.44 on Scale and may qualify if the board catches up, while Google says 3.5 Pro is coming soon. Treat as hold-to-resolution: exit liquidity is thin, and one board update can gap the leg before an active exit. Execution-time ai-ships-fast-short gross cost was $63.22900 against a $65.034 cap, leaving $1.805; the 0.12 level is gone and any further add is prohibited absent new bankroll headroom plus another full-cluster review. Apparent per-leg edge is not independent diversification.",
+  "divergence_ack": "2026-08-30",
+  "divergence_ack_reason": "The large prior/mark gap was revalidated and acted on through DEC-0102 only after the board diff, literal criteria, fee curve, current book, ticket cap and full configured-cluster cap all passed. The skeptical primary-source check found active CAIS dataset maintenance, so p_no was cut 0.65->0.60 immediately rather than treating scoreboard stasis as organizational abandonment; the trade still clears at the corresponding 0.45 stress bound. Exactly 70 shares consumed only the visible 0.12 level and left $1.805 execution-time cluster slack. The next ask jumped to 0.16 and must not be chased. Re-open immediately if agi.safe.ai adds/removes any row, Google dates 3.5 Pro, or the debut ladder moves on identifiable evidence.",
   "key_facts": [
    {
     "claim": "The exact criteria use only a newly added Gemini Pro row on agi.safe.ai and state that no qualifying addition by 2026-12-31 23:59 ET resolves NO; an already released model may qualify when newly added.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
-    "source_date": "2026-08-29",
-    "checked": "2026-08-29"
+    "source_date": "2026-08-30",
+    "checked": "2026-08-30"
    },
    {
-    "claim": "The validated archive-diff instrument detected extensive 2025 additions/removals, passed claude/grok/gemini coverage, and found zero additions or removals between 2026-01-15 and the live board on 2026-08-29.",
+    "claim": "The validated archive-diff instrument detected extensive 2025 additions/removals, passed claude/grok/gemini coverage, and found zero additions or removals between 2026-01-15 and the live board on 2026-08-30.",
     "source": "https://agi.safe.ai/",
-    "source_date": "2026-08-29",
-    "checked": "2026-08-29"
+    "source_date": "2026-08-30",
+    "checked": "2026-08-30"
    },
    {
     "claim": "Scale's sister leaderboard lists Gemini 3.1 Pro at 46.44, above the 40 bar, so a catch-up board batch is the direct thesis-break path.",
@@ -442,7 +442,13 @@
     "claim": "Google's current Gemini page says 3.5 Pro is coming soon, increasing the chance of another qualifying model before year-end but not establishing that agi.safe.ai will add it.",
     "source": "https://deepmind.google/models/gemini/",
     "source_date": "2026-08-28",
-    "checked": "2026-08-28"
+    "checked": "2026-08-30"
+   },
+   {
+    "claim": "CAIS remains active around HLE despite the frozen model-results board: its official repository committed a July-27 dataset release with 79 additions and 6 removals on August 1. This weakens any abandonment inference but does not itself add a qualifying model result.",
+    "source": "https://github.com/centerforaisafety/hle/commit/73ae974b1844c3ffa64c3f4343d9f1f259575700",
+    "source_date": "2026-08-01",
+    "checked": "2026-08-30"
    }
   ]
  },
@@ -622,44 +628,6 @@
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
     "source_date": "2026-08-28",
     "checked": "2026-08-28"
-   }
-  ]
- },
- "google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026": {
-  "p_yes": 0.4,
-  "verified": "2026-08-30",
-  "criteria_read": "2026-08-28",
-  "cluster": "google-maps-rollout",
-  "rho_within": 0.0,
-  "source_ack": "2026-08-30",
-  "source_ack_note": "The 2025 Google post is intentionally the freshest official statement of the comparable GNIS-to-Maps rollout precedent, not a current Lake America fact. Current implementation state was separately re-verified on August 30 through the official GNIS record, the August 27 DOI order, and a US-region Google Maps server-HTML string check that does not observe the rendered canvas.",
-  "divergence_ack": "2026-08-28",
-  "divergence_ack_reason": "The 30pp prior-to-mark gap was reviewed before and after execution, including independent 0.40 skeptic and 0.88 champion cases. The position used essentially all immediately deployable pUSD after economically closing the remaining Hormuz-normal NO; reaching the 15% ticket cap would require paying taker spreads to dismantle higher-certainty or matched structures. Size is deliberately $12.339 rather than point-estimate Kelly because the decisive majority-US rollout probability is not directly measurable, the short window crosses a weekend, and Maps still showed the old label at entry. Do not infer an automatic add from the headline gap; re-underwrite on a qualifying rollout or fresh contrary implementation evidence.",
-  "note": "DEC-0085. Google Maps must show Lake America, alone or alongside Lake Ontario, for a majority of US users by August 31 at 11:59pm ET; beta-only, experimental, or subnational appearances do not qualify. DOI Secretary's Order 3453 directed the BGN to act immediately and the official GNIS prerequisite completed August 27, so the White House order's outer 30-day implementation allowance does not by itself negate this short clock. Google rolled out the comparable Gulf of America label after its final GNIS update, but that change had preparation time and was not a binational feature. The Aug-30 02:04 UTC server-HTML check found target Lake America 0 / control Lake Ontario 2 and Google has made no rollout statement; the checker does not execute the client-rendered canvas, so the result is only a weak negative signal. Monday is the last business day before cutoff. Central p_yes remains 0.40; mandatory 10pp sensitivity is 0.30. The 40.95563 YES cost $12.339349 total including fee. At the live 0.256 bid, the fee-aware exit is about $10.17 versus $16.38 central and $12.29 sensitivity-case resolution value, so HOLD/no-add. Do not rest a sell into the binary rollout catalyst or chase above the original 0.30 entry cap without broad qualifying Maps evidence.",
-  "key_facts": [
-   {
-    "claim": "The official GNIS record for gazId 970427 listed Lake America as the official name with an August 27, 2026 BGN decision; Lake Ontario remained a variant.",
-    "source": "https://edits.nationalmap.gov/apps/gaz-domestic/public/search/names",
-    "source_date": "2026-08-27",
-    "checked": "2026-08-28"
-   },
-   {
-    "claim": "Secretary's Order 3453 directed the Lake America rename and immediate federal implementation.",
-    "source": "https://www.doi.gov/document-library/secretary-order/so-3453-lake-america",
-    "source_date": "2026-08-27",
-    "checked": "2026-08-28"
-   },
-   {
-    "claim": "Google says it updates US labels after the Geographic Names Information System is updated; its Gulf of America change began rolling out after that official update.",
-    "source": "https://blog.google/products-and-platforms/products/maps/united-states-geographic-name-change-feb-2025/",
-    "source_date": "2025-02-10",
-    "checked": "2026-08-28"
-   },
-   {
-    "claim": "A fresh Aug-30 02:04 UTC US-region Google Maps server-HTML response contained zero Lake America strings and two Lake Ontario strings. The control strings occur in query/SEO metadata and the checker does not execute the rendered canvas, so this is only a weak negative rollout signal and never proof of the displayed or majority-US state.",
-    "source": "https://www.google.com/maps/search/Lake+Ontario?hl=en&gl=us",
-    "source_date": "2026-08-30",
-    "checked": "2026-08-30"
    }
   ]
  }

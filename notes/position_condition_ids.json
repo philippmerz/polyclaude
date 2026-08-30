@@ -5,7 +5,7 @@
   {
    "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
    "outcome": "No",
-   "size": 99,
+   "size": 169,
    "conditionId": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
    "asset": "67951575343428346736827544478449934796473993940055164453800722378542887483258",
    "negativeRisk": false
@@ -32,14 +32,6 @@
    "size": 47.7196,
    "conditionId": "0x1c842b91d226266fbe0e55d9bce9c52ce48b825d069e039c24d7fe57a5be6eaa",
    "asset": "27944626213701198119611689981836884300701096451168812471764168520890801988056",
-   "negativeRisk": false
-  },
-  {
-   "slug": "google-maps-renames-lake-ontario-to-lake-america-by-august-31-2026",
-   "outcome": "Yes",
-   "size": 40.9556,
-   "conditionId": "0xa10fac8f93db39c9f6d62d3a6d2bcf0e4c46920b71b6ce74642354247c551def",
-   "asset": "8214126769421913853457647352894931518808168837450853440712427823991018195909",
    "negativeRisk": false
   },
   {
