@@ -11158,3 +11158,29 @@ or other capital action followed. `longterm_watchlist.md`, the research logs, an
 trigger config were updated; Telegram message 880 reported the material weekly finding.
 The durable ROI continuation remains uncancelled and must continue until the operator
 manually stops it.
+
+## 2026-08-30 18:03 UTC — periodic continuation: near-term clocks prepared; no action
+
+The backlog and post-review journal were reconciled. The authoritative bankroll marked
+**$218.27**, with realized P&L unchanged at **+$33.58**. Fourteen Polymarket rows cost
+$162.23 and marked $170.48, while full executable depth was $161.49 net; the $8.99 gap
+remains thin-book noise rather than settled return. The wallet retained exactly 6.000000
+pUSD and 26.349326 yield-accruing aUSDC.e. Six SELLs and zero BUY commitments rested.
+Position state was CLEAN, UMA had zero alerts, all four daemons were singular/fresh, and
+the redemption dry run found zero.
+
+Iran–Oman is the only backlog clock requiring work before tomorrow. Oman's current official
+statement index still has no bilateral acceptance announcement after Aug-25; that statement
+continues to call the corridor proposed, say technical negotiations would continue, and
+express hope for a later announcement. Gamma remains active and unresolved through Sep-1
+03:59 UTC at 0.0275 midpoint / 0.021 bid. The 31 YES shares remain HOLD/no-add: p_yes=0.08
+gives $2.48 central resolution value versus only about $0.64 net from the live exit. Marginal
+APY and exit routing confirmed the hold; no decision is overdue.
+
+Tomorrow's work is already explicit rather than forgotten: run the Aug-31 resolution
+runbook on Iran–Oman, open the Sep-1 Duma independent-forecast gate, and re-run the HLE
+source/debut-ladder cluster check at its scheduled window. The long-term backlog was also
+reconciled to today's evidence: SKY's gate is now ≤$0.050, and the new RVMD/ETN research
+gates are recorded. No trade, order change, redemption, swap, bridge, or material Telegram
+message occurred. README and the bankroll cache were refreshed. The durable ROI continuation
+remains uncancelled and must continue until the operator manually stops it.
