@@ -11184,3 +11184,30 @@ reconciled to today's evidence: SKY's gate is now ≤$0.050, and the new RVMD/ET
 gates are recorded. No trade, order change, redemption, swap, bridge, or material Telegram
 message occurred. README and the bankroll cache were refreshed. The durable ROI continuation
 remains uncancelled and must continue until the operator manually stops it.
+
+## 2026-08-30 22:04 UTC — periodic continuation: Larak strike cuts Iran–Oman prior; hold remains superior
+
+Two new MATERIAL news alerts were consumed. Independent Reuters/AP reporting and Al Jazeera
+quoted a US official confirming that US forces struck two IRGC launchers on Iran's Larak
+Island after observing preparations to fire rockets carrying sea mines into the Strait.
+Iran's Revolutionary Guard reported casualties and threatened retaliation. This was the
+first US strike inside Iran since late July and is adverse to any last-minute Oman–Iran
+acceptance announcement; there was still no later qualifying statement on Oman's official
+index.
+
+The Iran–Oman YES prior was cut **0.08→0.05**: about 4% remains for interpretation or
+eventual resolver treatment of the ambiguous Aug-25 joint statement, and only 1% for a new
+clear announcement before cutoff. Gamma remained active/unresolved through Sep-1 03:59 UTC
+at 0.0285 midpoint / 0.022 bid. The 31 YES shares remain **HOLD/no-add**. Updated exit
+analysis values resolution at $1.55 versus about $0.68 net from selling, a $0.87 forward
+advantage; the 10-point entry stress remains zero. No maker sell was posted because a fill
+on a surprise announcement would be adversely selected.
+
+The authoritative bankroll marked **$217.21**, with realized P&L approximately **+$33.59**.
+Fourteen Polymarket rows cost $162.23 and marked $169.41, while executable depth was $160.14
+net. Position state remained CLEAN, UMA had zero alerts, redemption found zero, and no
+decision was overdue. No trade, order change, redemption, swap or bridge occurred. README,
+the live prior and backlog were refreshed; material Telegram message 881 reported the
+alert decision. The Aug-31 resolution/HLE window and Sep-1 Duma gate remain the next work.
+The durable ROI continuation remains uncancelled and must continue until the operator
+manually stops it.

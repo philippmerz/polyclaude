@@ -518,14 +518,14 @@
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
  "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
-  "p_yes": 0.08,
+  "p_yes": 0.05,
   "verified": "2026-08-30",
   "criteria_read": "2026-08-28",
-  "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03. The market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Aug-25 joint statement remains ambiguous rather than qualifying on its face: it calls the corridor framework proposed, says technical talks will continue, and separately refers to an agreement to implement joint mine-clearing; Oman's minister said he hoped an announcement would follow. Aug-27 reporting said details were still being worked out while Iran added conditions tied to US action. The Aug-29 official Oman recheck found no later bilateral acceptance statement. The 00:30Z Al Jazeera rollover alert repeated the already-underwritten IRGC-control/active-US-blockade facts; fresh CENTCOM enforcement counts neither accept nor reject the exact bilateral predicate, so they are not double-counted. p_yes remains 0.08: about 5% interpretation/resolution ambiguity plus 3% for a clear announcement before cutoff. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.04 bid: expected resolution value is $2.48 versus about $1.24 gross exit value. Re-underwrite immediately on any new joint/Omani declarative statement.",
+  "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03. The market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Aug-25 joint statement remains ambiguous rather than qualifying on its face: it calls the corridor framework proposed, says technical talks will continue, and separately refers to an agreement to implement joint mine-clearing; Oman's minister said he hoped an announcement would follow. Aug-27 reporting said details were still being worked out while Iran added conditions tied to US action. The Aug-30 22:00 official Oman recheck found no later bilateral acceptance statement. Two independent wires plus Al Jazeera report that US forces struck two IRGC launchers on Iran's Larak Island on Aug-30 after launchers were observed preparing sea-mining rockets; the IRGC reported casualties and threatened response. This materially reduces the already-small last-minute announcement path. p_yes is now 0.05: about 4% interpretation/resolution ambiguity around the Aug-25 text plus 1% for a clear announcement before cutoff. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.022 bid: expected resolution value is $1.55 versus about $0.68 net exit value. Re-underwrite immediately on any new joint/Omani declarative statement.",
   "cluster": "hormuz-agreement",
   "rho_within": 0.0,
   "divergence_ack": "2026-08-28",
-  "divergence_ack_reason": "The prior has been cut 0.55 to 0.08 after contrary flow, fresh facts, and the Aug-29 official-source recheck. The remaining prior-to-mark gap is reviewed: no add because the 10pp robust haircut fails, but no taker exit because the 0.04 bid values 31 shares at only $1.24 before fees versus $2.48 at the revised prior. The residual edge is an interpretation lottery around the Aug-25 joint statement plus a short live announcement window, not confidence that the countries have already made an unambiguous qualifying announcement.",
+  "divergence_ack_reason": "The prior has been cut 0.55 to 0.05 after contrary flow, repeated official-source checks, and the Aug-30 US strike/IRGC retaliation threat. The remaining prior-to-mark gap is reviewed: no add because the 10pp robust haircut fails, but no taker exit because the 0.022 bid values 31 shares at only about $0.68 net versus $1.55 at the revised prior. The residual edge is mostly an interpretation lottery around the Aug-25 joint statement, not confidence in a new announcement.",
   "key_facts": [
    {
     "claim": "YES requires a declarative Oman-and-Iran acceptance announcement for the same agreement establishing traffic-management policies, obligations, or commitments; prospective negotiations alone do not qualify.",
@@ -537,6 +537,12 @@
     "claim": "The Aug-30 official Oman Foreign Ministry recheck still describes the corridor as proposed, says technical negotiations would continue, and says an announcement is hoped for soon; its recent-statements list shows no later Oman-Iran acceptance statement.",
     "source": "https://www.fm.gov.om/en/53722/",
     "source_date": "2026-08-25",
+    "checked": "2026-08-30"
+   },
+   {
+    "claim": "US forces struck two IRGC launchers on Iran's Larak Island after observing preparations to launch rockets carrying sea mines; the IRGC reported casualties and threatened retaliation. This is the first US strike in Iran since late July and materially lowers the last-minute agreement-announcement branch.",
+    "source": "https://www.channelnewsasia.com/world/us-forces-strike-two-iranian-launchers-irans-larak-island-us-official-says-6350801",
+    "source_date": "2026-08-30",
     "checked": "2026-08-30"
    },
    {
