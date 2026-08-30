@@ -11053,3 +11053,41 @@ money checks and all **19/19** financial mutations. README, backlog, priors, res
 grades and alert triggers were refreshed; material Telegram message 878 reported the result and
 reallocation, and message 879 corrected the post-audit venue-float/Aave split. The durable ROI
 continuation remains uncancelled and must continue until the operator manually stops it.
+
+## 2026-08-30 10:07 UTC — periodic continuation: thin midpoint retraces; all gates still hold
+
+The authoritative bankroll marked **$219.61**, with realized P&L unchanged at **+$33.58**.
+Fourteen Polymarket rows cost $162.23 and marked $171.61, while full executable depth was
+$163.53 net. The $7.34 headline decline from 06:36 was mostly the thin Gemini-debut NO
+midpoint moving to 0.135; executable value declined only $1.69 and neither the agi.safe.ai
+board nor the literal criteria changed. The wallet retained exactly 6.000000 deployable
+pUSD and about 26.3486 yield-accruing aUSDC.e. Six SELL orders and zero BUY commitments
+rested. Position state was CLEAN, UMA reported zero alerts, Ostium remained empty, all
+four daemons were singular/fresh, and `redeem-all --dry-run` found zero redeemables.
+
+The two near-term backlog clocks produced no action. Oman's current news listing and
+Iran's current statement listing still contain no bilateral announcement after the Aug-25
+proposed temporary-corridor framework; Iran-Oman YES therefore remains p=0.08, HOLD/no-add,
+with $2.48 expected resolution value versus about $0.96 taker exit. The Duma search found
+new regional APEK commentary and market summaries, but no genuinely independent whole-seat
+forecast; the Sep-1 add gate remains closed. The HLE archive-diff control again detected
+real 2025 changes, passed claude/grok/gemini coverage and found zero live changes from
+Jan-15. Its correlated cluster cap still blocks every apparent Kelly deficit.
+
+The bounded opportunity sweep also stayed below deployment quality. Event monotonicity
+inspected 990 multi-market events and its only midpoint flag disappeared on live books.
+The explicitly incomplete consistency slice scanned 5,017 markets / 552 events and found
+zero provisional positive basket. Sports covered 68 liquid markets; its best verified
+bookmaker delta was only +2.5pp, below the 3pp gate. Fresh bookmaker odds made the surfaced
+US Open favorite fades roughly fair or adverse, and Pappas's latest independent primary
+poll narrowed to 47-34, so the 0.937 YES did not survive the mandatory uncertainty haircut.
+Primary discovery covered 976 markets; the thin pass fetched 31,690 and retained 978
+win-assumed carry hints. The measured Hormuz 20-39 ship bucket improved from about 0.63 to
+0.62, but its p=0.65 central case still fails the 10-point stress bound. No robust unrelated
+candidate emerged.
+
+No trade, order change, redemption, swap or bridge occurred, and the material-only Telegram
+rule therefore suppressed a message. README and the bankroll cache were refreshed; no code
+changed, so the previously green 384/123/19 validation remains the applicable build state.
+The durable ROI continuation remains uncancelled and must continue until the operator
+manually stops it.
