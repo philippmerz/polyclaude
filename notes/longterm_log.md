@@ -1153,3 +1153,251 @@ SKY has the strongest holder economics in this seed pair, but it is post-reratin
 - [August 13, 2026 executive spell](https://vote.sky.money/executive/template-executive-vote-initialize-sbe-beam-monthly-settlement-cycle-for-july-2026-lssky-sky-rewards-normalization-increase-buybacks-and-reactivate-lssky-usds-farm-adjust-grove-and-osero-dc-iam-parameters-rename-osero-chainlog-keys-update-safe-harbor-agreement-prime-agent-proxy-spells-august-13-2026)
 - [Official LitePSM USDC/USDS documentation](https://developers.skyeco.com/protocol/liquidity/litepsm/)
 - [SKY market page](https://www.coingecko.com/en/coins/sky)
+
+---
+
+## 2026-08-30T16:03:06Z — longterm_check
+
+**Query:** `Revolution Medicines ($RVMD)` (equity, 3y horizon)
+
+## LONGTERM CHECK: Revolution Medicines ($RVMD)
+
+Date: 2026-08-30 | Type: equity | Horizon: 3y
+
+### Current state
+
+$207.88 at Aug. 28 close; ~$44.6B market cap / $41.8B EV, near its $220.34 52-week high and far above its $35.62 low (~+480% low-to-current). Q2 net loss was $644.4M; valuation is therefore based on future RASONQUE sales and pipeline optionality, not earnings. [Market-cap data](https://stockanalysis.com/stocks/rvmd/market-cap/)
+
+### Cyclical position
+
+Not a cyclical-bottom setup: RVMD has rerated sharply into its first FDA approval and is trading ~6% below its 52-week high. The April Phase 3 win and Aug. 26 approval have already removed the central binary risk; this is a post-validation, high-expectation biotech rather than a depressed-cycle candidate. [Price history](https://stockscan.io/stocks/RVMD/price-history)
+
+### Secular tailwind
+
+Strong. RAS mutations drive more than 90% of pancreatic cancers, a historically “undruggable” target with severe unmet need. Daraxonrasib’s Phase 3 result—median overall survival of 13.2 months versus 6.7 months for chemotherapy—clinically validates broad RAS inhibition and supports expansion into larger RAS-driven lung-cancer markets. [FDA approval announcement](https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer)
+
+### Catalyst window
+
+- [HIGH] 2026-Q3/Q4 — U.S. RASONQUE launch, payer coverage, and first prescription/launch metrics; FDA approved it Aug. 26 for previously treated metastatic pancreatic cancer. [FDA](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-daraxonrasib-metastatic-pancreatic-adenocarcinoma)
+- [HIGH] 2027 — Initial Phase 3 RASolve 301 readout in previously treated RAS-mutant NSCLC; positive data could open a materially larger indication. [Q2 update](https://revmed.gcs-web.com/news-releases/news-release-details/revolution-medicines-reports-second-quarter-2026-financial)
+- [MED] 2027-29 — First-line/adjuvant pancreatic Phase 3 trials RASolute 303/304 and G12D-focused RASolute 305 could expand addressable patients, but dates are not yet guided. [RASolute 303 trial](https://clinicaltrials.gov/study/NCT07491445?term=KRAS)
+
+### Margin of safety
+
+Weak at today’s price. The company held $3.94B cash and marketable securities at June 30, plus up to $1.5B of milestone-contingent Royalty Pharma funding, but 2026 operating-expense guidance is $2.1-$2.2B and Q2 loss was $644M. Cash funds execution; it does not protect a $44.6B valuation if launch uptake or expansion trials disappoint. [Q2 results](https://revmed.gcs-web.com/news-releases/news-release-details/revolution-medicines-reports-second-quarter-2026-financial)
+
+### Top 3 risks
+
+1. Commercial shortfall — RASONQUE is newly launched at a $39,800 monthly list price; slower coverage, adoption, or persistence would undermine the revenue curve embedded in the valuation.
+2. Pipeline readout risk — NSCLC and first-line pancreatic expansion remain clinical trials; a negative or merely incremental Phase 3 result would remove much of the platform upside.
+3. Resistance/competition — tumors can develop resistance, and the standard of care may shift toward combinations or competing KRAS approaches before RVMD establishes durable franchise economics. [Clinical context](https://www.lemonde.fr/en/science/article/2026/05/31/pancreatic-cancers-new-drug-doubles-survival-rate-as-france-rolls-out-prevention-program_6753999_10.html)
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 1%
+- Strong (3-5x): 10%
+- Modest (1.5-3x): 19%
+- Flat (-30% to +50%): 30%
+- Thesis broken (-50%+): 40%
+
+### Entry trigger
+
+Do not enter on approval momentum. Reassess after two quarters of launch data; an entry requires demonstrated payer-covered uptake plus a valuation reset toward ~$120/share or below (roughly $25B market cap), or a comparable pullback following a non-fundamental event.
+
+### Verdict: 2/4 — PASS
+
+Strong secular RAS tailwind and real catalysts, but neither cyclical mispricing nor a credible current margin of safety exists after the approval-driven rerating.
+
+### Sources
+
+- [FDA approves daraxonrasib for metastatic pancreatic adenocarcinoma](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-daraxonrasib-metastatic-pancreatic-adenocarcinoma)
+- [Revolution Medicines Q2 2026 results](https://revmed.gcs-web.com/news-releases/news-release-details/revolution-medicines-reports-second-quarter-2026-financial)
+- [RVMD market capitalization and enterprise value](https://stockanalysis.com/stocks/rvmd/market-cap/)
+- [RASolute 303 trial record](https://clinicaltrials.gov/study/NCT07491445?term=KRAS)
+
+---
+
+## 2026-08-30T16:03:09Z — longterm_check
+
+**Query:** `Eaton Corporation ($ETN)` (equity, 3y horizon)
+
+## LONGTERM CHECK: Eaton Corporation ($ETN)
+
+Date: 2026-08-30 | Type: equity | Horizon: 3y
+
+### Current state
+
+$402.78 close (Aug. 28); 52-week range $311.92–$478.00, 1-year return +19.2%. Market cap ~$161.6B; trailing P/E 42.4x, forward P/E 30.9x, versus FY26 adjusted-EPS guidance of $13.40–$13.60. [Price data](https://stockanalysis.com/stocks/etn/history/), [valuation data](https://finance.yahoo.com/quote/ETN/key-statistics/)
+
+### Cyclical position
+
+Mid-to-late cycle, not a bottom. ETN is only 15.7% below its August 12 all-time/52-week high and 29.1% above its 52-week low, while valuation remains rich at ~31x forward earnings. Underlying demand is still accelerating: Q2 electrical rolling orders rose 41% in Americas and 33% globally, with 1.2x book-to-bill; this is evidence against a cyclical trough, but also means much of the demand strength is already visible and priced. [Q2 release](https://www.sec.gov/Archives/edgar/data/1551182/000155118226000027/etn06302026exhibit99.htm)
+
+### Secular tailwind
+
+Intact and accelerating: AI/data-center power, electrification, grid upgrades, aerospace aftermarket/defense, and reshoring support Eaton’s electrical and aerospace franchises. Q2 organic sales grew 14%; Electrical Americas grew 18% organically, Electrical Global 18% organically, and electrical backlog rose 43% year over year. The demand is real rather than narrative-only, though it is increasingly concentrated in data-center buildout and faces eventual capex-cycle risk. [Q2 release](https://www.sec.gov/Archives/edgar/data/1551182/000155118226000027/etn06302026exhibit99.htm)
+
+### Catalyst window
+
+- [HIGH] 2027-Q1 — Mobility/Dana Reverse Morris Trust expected to close; management says it is immediately accretive to Eaton organic growth and operating margins, with ~$1.1B cash to Eaton for debt repayment/capital allocation. [Transaction announcement](https://eaton.pe/ph/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html)
+- [MED] 2026-Q3 to 2027 — Conversion of electrical/aerospace backlog: Q2 electrical backlog +43% and aerospace backlog +28%; FY26 organic-growth guide is 11–13%. Continued execution could support estimates. [Q2 release](https://www.sec.gov/Archives/edgar/data/1551182/000155118226000027/etn06302026exhibit99.htm)
+- [MED] 2027–2028 — Boyd Thermal integration can extend Eaton into data-center liquid cooling, but the $9.55B acquisition must prove returns and deleveraging. [Q2 10-Q](https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm)
+
+### Margin of safety
+
+Weak at this entry. Eaton is highly profitable—Q2 free cash flow was $874M and FY26 adjusted EPS guide is $13.40–$13.60—but the stock is valued at ~30.9x forward EPS. The Boyd acquisition increased June 2026 debt to $20.6B ($18.5B long-term plus $2.1B short-term) against $695M cash and short-term investments. The balance sheet is serviceable, not a hard downside floor; the planned $1.1B Mobility cash distribution helps but does not restore pre-acquisition leverage. [Q2 10-Q](https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm)
+
+### Top 3 risks
+
+1. Data-center capex digestion — a slowdown in AI/data-center construction would cut the currently exceptional order/backlog growth and compress the premium multiple.
+2. Acquisition leverage/integration — Boyd Thermal cost $9.55B net of cash; failure to achieve synergies or expected growth leaves elevated debt and lower returns on capital.
+3. Valuation and margin pressure — at ~31x forward EPS, even successful earnings growth may not prevent multiple compression; Q2 segment margin was down 80 bps year over year amid commodity and wage inflation.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 0%
+- Strong (3-5x): 2%
+- Modest (1.5-3x): 25%
+- Flat (-30% to +50%): 50%
+- Thesis broken (-50%+): 23%
+
+### Entry trigger
+
+Do not enter now. Reassess at **≤$300/share** (about 22x FY26 guided adjusted EPS, before allowing for any estimate cuts), provided electrical orders remain positive and post-Boyd net debt is demonstrably declining; alternatively, wait for the 2027-Q1 RMT close and its final capital structure.
+
+### Verdict: 2/4 — PASS
+
+Strong secular tailwinds and a credible 2027 catalyst are outweighed by a non-bottom cyclical position and insufficient valuation/balance-sheet margin of safety for a generational-mispricing watchlist.
+
+### Sources
+
+- [Eaton Q2 2026 earnings release](https://www.sec.gov/Archives/edgar/data/1551182/000155118226000027/etn06302026exhibit99.htm)
+- [Eaton Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm)
+- [Eaton Mobility/Dana transaction announcement](https://eaton.pe/ph/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html)
+- [ETN price history](https://stockanalysis.com/stocks/etn/history/)
+- [ETN valuation measures](https://finance.yahoo.com/quote/ETN/key-statistics/)
+
+---
+
+## 2026-08-30T16:08:14Z — longterm_check
+
+**Query:** `Uniswap ($UNI)` (crypto, 1y horizon)
+
+## LONGTERM CHECK: Uniswap ($UNI)
+
+Date: 2026-08-30 | Type: crypto | Horizon: 1y
+
+### Current state
+
+UNI: **$5.24**; market cap **$3.27B**, FDV **$4.69B** (620M circulating / 1B maximum). It is down **49%** from the 52-week high of **$10.34** and up **130%** from the 52-week low of **$2.28**; the approximate one-year return is **-49%**. UNI remains **88% below** its $44.92 all-time high.
+
+### Cyclical position
+
+**Post-capitulation recovery / early-to-mid cycle, not an outright bottom.** UNI made its 52-week low of $2.28 on 2026-06-08 and rebounded sharply to $5.24, including a move from $3.20 on 2026-08-14. Its 49% one-year decline and 88% drawdown from ATH show depressed long-term sentiment, but the token is already 2.3x off the yearly low; a fresh entry lacks the asymmetry of the June low.
+
+### Secular tailwind
+
+On-chain spot trading is growing structurally, and Uniswap remains the leading multi-chain DEX: **$2.19B daily**, **$16.0B weekly**, and **$47.3B 30-day** volume across 47 chains. Crucially, usage now has a direct token-value link: protocol fees buy and permanently burn UNI. Protocol fees funded approximately **7.5M UNI ($25.6M)** of burns from December through June, while monthly fees rose from **$3.1M in February to $5.1M in June**. The tailwind is intact, but token economics are still too young to establish a durable earnings multiple.
+
+### Catalyst window
+
+- [HIGH] 2026-Q3 — Governance decision/implementation of v4 protocol fees across selected pools; v2/v3 fees are already live on 11 chains, while v4 expansion would add the newest product surface to UNI burns. — [Uniswap governance proposal](https://gov.uniswap.org/t/temp-check-activate-v4-protocol-fees/26162)
+- [MED] 2026-Q3–Q4 — Robinhood Chain expansion: Uniswap is the chain’s primary public AMM; fee-enabled deployment could expand burn funding if volume persists. — [Uniswap Labs announcement](https://blog.uniswap.org/)
+- [MED] 2026-Q4–2027-Q2 — Adoption of v4 hooks, including permissioned pools and liquidity products, could bring tokenized/RWA trading volume on-chain. — [Permissioned Pools](https://blog.uniswap.org/es-ES/introducing-permissioned-pools-on-uniswap-v4)
+
+### Margin of safety
+
+Limited. UNI has a $3.27B market cap versus about $25.6M of cumulative fee-funded burn in its first roughly seven months—an immature, low cash-flow-equivalent yield. The protocol has a real network moat and burn mechanism, including a one-time **100M UNI** treasury burn, but UNI holders do not receive contractual cash distributions; governance can also mint up to **2% of circulating supply annually**. This is network-effect support, not balance-sheet protection.
+
+### Top 3 risks
+
+1. **Weak value capture** — Burns may remain too small relative to FDV, leaving UNI valued chiefly on governance/speculation rather than durable cash flows.
+2. **DEX competition and liquidity migration** — Lower-fee venues, CEXs, intent-based trading, or rival AMMs can reduce Uniswap volume and fee-funded burns.
+3. **Fee-switch execution risk** — Higher protocol fees can hurt LP economics; governance data show liquidity held up initially, but prolonged adverse effects could impair depth and market share.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 8%
+- Strong (3-5x): 22%
+- Modest (1.5-3x): 25%
+- Flat (-30% to +50%): 25%
+- Thesis broken (-50%+): 20%
+
+### Entry trigger
+
+**Do not enter at $5.24.** Reassess on a **$3.25–$3.75** pullback with Uniswap retaining at least roughly **$1.5B daily DEX volume**, or after v4 fee activation produces a sustained annualized burn rate above **$75M** (about 2.3% of current market cap) without material liquidity loss.
+
+### Verdict: 2/4 — PASS
+
+Strong secular DEX adoption and a real fee-to-burn catalyst are present, but UNI is no longer at the cycle low and current burn economics provide insufficient margin of safety.
+
+### Sources
+
+- [CoinGecko: UNI price, market cap, supply and historical levels](https://www.coingecko.com/en/coins/uniswap)
+- [CoinGecko: UNI historical data](https://www.coingecko.com/en/coins/uniswap/historical_data)
+- [DeFiLlama: DEX volume rankings](https://defillama.com/dexs)
+- [Uniswap governance: v4 protocol-fee proposal](https://gov.uniswap.org/t/temp-check-activate-v4-protocol-fees/26162)
+- [Uniswap protocol-fee documentation](https://developers.uniswap.org/docs/protocols/protocol-fee/overview)
+- [Uniswap governance overview](https://developers.uniswap.org/docs/ecosystem/governance/overview)
+
+---
+
+## 2026-08-30T16:08:28Z — longterm_check
+
+**Query:** `Sky ($SKY)` (crypto, 1y horizon)
+
+## LONGTERM CHECK: Sky ($SKY)
+
+Date: 2026-08-30 | Type: crypto | Horizon: 1y
+
+### Current state
+
+SKY is ~$0.068–$0.070, with ~$1.60B circulating market cap (near-full 23.46B supply). It was ~$0.0837 one year ago: roughly **-18%**. The reliable retrieved price feed did not expose a complete 52-week high/low; SKY remains ~30% below its $0.1005 Dec-2024 ATH. Implied market-cap / annualized gross protocol revenue is ~3.8x ($419M run-rate)—useful but not an equity multiple.
+
+### Cyclical position
+
+**Mid-cycle / recovering from a drawdown, not a demonstrated multi-year bottom.** Price fell to ~$0.051 in mid-August before rebounding near $0.069, but was only ~18% below its year-ago price and crypto-wide sentiment was “Fear” with Bitcoin dominance 58.6%. Fundamentals have materially outpaced token performance: Q2 gross revenue was $107.35M (+10.5% YoY), collateral $12.32B (+45.5%), and sUSDS $5.52B (+149%). That is an underperformance signal, but not sufficient evidence of capitulation or a cycle trough.
+
+### Secular tailwind
+
+The intact tailwind is institutional demand for regulated, yield-bearing stablecoin/RWA infrastructure. Sky had ~$2.58B deployed with Janus Henderson, BlackRock, Anchorage, PayPal, Securitize, and Galaxy at Q2 end; USDS/sUSDS are scaling rapidly. However, July collateral declined to $10.98B and sUSDS fell from $5.52B at Q2 end to $4.33B at July month-end, so growth is real but not monotonic.
+
+### Catalyst window
+
+- [MED] 2026-Q3/Q4 — Continued execution of Laniakea, Sky’s standardized institutional-deployment stack; material new capital deployments would validate the institutional growth case. — [source](https://insights.skyeco.com/insights/sky-ecosystem-q2-2026-quarterly-report)
+- [MED] 2026-Q4 — Progress toward the $150M Solvency Reserve target; Q2 ended at $82.4M after $29.9M quarterly retention. Reaching the target could permit governance to reconsider the allocation of surplus to SKY buybacks/stakers. — [source](https://insights.skyeco.com/insights/sky-ecosystem-july-financial-operational-update)
+- [LOW] 2026 — Completion/results of the ecosystem-wide Sherlock security review. Risk reduction is valuable, but it is not a direct cash-flow catalyst. — [source](https://insights.skyeco.com/insights/sky-ecosystem-july-financial-operational-update)
+
+### Margin of safety
+
+Limited. The protocol has a genuine operating base—$33.29M Q2 net surplus, five consecutive positive quarters, $12.32B collateral, and an $82.4M reserve—but SKY is a governance token, not a contractual claim on collateral or revenue. Buybacks/staking rewards are governance-controlled and current policy prioritizes reserve accumulation. The supply cap is 23.46B and official materials say new emissions are disabled, which reduces dilution risk but does not create a hard valuation floor.
+
+### Top 3 risks
+
+1. Stablecoin run, collateral impairment, or institutional-counterparty loss — could create bad debt, impair USDS confidence, and force adverse governance actions/dilution.
+2. Smart-contract or governance failure — Sky’s large, multi-module capital-allocation system remains exploit and parameter-risk exposed despite the security review.
+3. Weak value accrual to SKY — protocol revenue can grow while reserves, sUSDS holders, agents, or governance-selected spending capture economics instead of sustained buybacks.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 4%
+- Strong (3-5x): 18%
+- Modest (1.5-3x): 25%
+- Flat (-30% to +50%): 30%
+- Thesis broken (-50%+): 23%
+
+### Entry trigger
+
+No entry now. Reassess only if SKY trades at or below **$0.050** while protocol surplus remains positive and USDS/sUSDS supply stabilizes or grows, or after two consecutive quarters showing institutional deployment growth and an explicit governance-approved surplus/buyback policy following reserve completion.
+
+### Verdict: 2/4 — PASS
+
+Strong secular stablecoin/RWA infrastructure and improving fundamentals are present, but the token is not clearly at a cyclical bottom, has no near-dated forced re-rating event, and lacks a hard holder-level margin of safety.
+
+### Sources
+
+- [Sky price and market data](https://www.coingecko.com/en/coins/sky)
+- [SKY historical price data](https://www.bitget.com/price/SKY/historical-data)
+- [Sky Q2 2026 quarterly report](https://insights.skyeco.com/insights/sky-ecosystem-q2-2026-quarterly-report)
+- [Sky July 2026 financial and operational update](https://insights.skyeco.com/insights/sky-ecosystem-july-financial-operational-update)
+- [SKY token mechanics](https://sky.money/blog/understanding-the-sky-token)

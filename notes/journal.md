@@ -11126,3 +11126,35 @@ state through Aug-23 is under eight days old, so both weekly lanes were skipped.
 the bankroll cache were refreshed; no code changed, so the previously green 384/123/19
 validation remains applicable. The durable ROI continuation remains uncancelled and must
 continue until the operator manually stops it.
+
+## 2026-08-30 16:04 UTC — Sunday long-term review: two real themes, both equities too expensive
+
+The domain-age audit found that none of the nine slugs was literally unrun for four weeks.
+The oldest set—`biotech-health`, `trade-regulation`, and `markets-corporate`—last ran Aug-10,
+so the review used that 20-day-old trio to preserve the least-recent rotation. The scoped
+digest read 15 sources and logged two MED-confidence long themes plus one LOW hedge theme.
+
+The first MED theme was RVMD's first approved broad RAS inhibitor: FDA-approved RASONQUE
+produced 13.2-month median survival versus 6.7 months for chemotherapy in a 500-patient
+pancreatic-cancer trial. The fresh `longterm_check` nevertheless scored **RVMD 2/4 PASS** at
+$207.88: it is near its high, has a roughly $44.6B market cap and $2.1-2.2B guided 2026
+operating expense, and already prices substantial launch and pipeline success. A new
+IBKR-surface research trigger at **$120** requires two quarters of payer-covered uptake
+before re-underwriting.
+
+The second MED theme was the AI buildout's shift toward electrical and power constraints,
+supported by NVIDIA's $279B of supply/capacity commitments and explicit multi-gigawatt
+infrastructure support. Eaton was the unvetted direct expression. Its fresh check also
+scored **ETN 2/4 PASS** at $402.78: orders and backlog are strong, but roughly 31x forward
+earnings and acquisition leverage offer no margin of safety. A new IBKR-surface research
+trigger at **$300** also requires positive electrical orders plus declining net debt, or a
+clean 2027-Q1 Mobility/Dana close.
+
+The live watchlist monitor fully priced all 30 candidates and found zero hits; direct
+CoinGecko quotes reconciled the crypto subset. Precautionary fresh checks on UNI and SKY
+both remained **2/4 PASS** near $5.20 and $0.071 respectively. UNI's $3.25 trigger stays;
+SKY's was tightened from $0.055 to **$0.050** to match the new fundamental gate. No entry
+or other capital action followed. `longterm_watchlist.md`, the research logs, and the
+trigger config were updated; Telegram message 880 reported the material weekly finding.
+The durable ROI continuation remains uncancelled and must continue until the operator
+manually stops it.

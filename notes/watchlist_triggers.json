@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-08-28",
+  "updated": "2026-08-30",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -217,8 +217,9 @@
       "entry_max": 3.25,
       "horizon": "1y",
       "route": "ibkr_surface",
-      "rationale": "Fresh 2026-08-28 longterm_check: 2/4 PASS at $4.66. A price hit is re-underwriting permission, not an automatic buy: require >=$100M annualized trailing-90-day burn-bound revenue and retained material DEX share, or two full quarters of verified v4/Permissioned Pool fee growth at <=~$3B circulating market cap.",
-      "added": "2026-08-28"
+      "rationale": "Fresh 2026-08-30 longterm_check: 2/4 PASS near $5.20. A price hit is re-underwriting permission, not an automatic buy: require retained material DEX share plus >=$75M-$100M sustained annualized fee-funded burn, or two full quarters of verified v4/Permissioned Pool fee growth at <=~$3B circulating market cap.",
+      "added": "2026-08-28",
+      "updated": "2026-08-30"
     },
     {
       "ticker": "HUT",
@@ -284,11 +285,32 @@
       "ticker": "SKY",
       "type": "crypto",
       "coingecko_id": "sky",
-      "entry_max": 0.055,
+      "entry_max": 0.05,
       "horizon": "1y",
       "route": "ibkr_surface",
-      "rationale": "Fresh 2026-08-28 full check: 2/4 PASS/WATCH near $0.067 after the August rerating. Reassess at $0.050-0.055 only if live 30-day buybacks remain >=$1.5M, trailing-three-month net income annualizes >=$150M and all-in execution friction is <=1%. Repo has no safe Ethereum LitePSM + Uniswap V2 SKY route, so a hit surfaces research/route work rather than an automatic buy.",
-      "added": "2026-08-28"
+      "rationale": "Fresh 2026-08-30 longterm_check: 2/4 PASS near $0.071. Reassess at <=$0.050 only if protocol surplus remains positive and USDS/sUSDS supply stabilizes or grows, or after two quarters of institutional-deployment growth plus an explicit governance-approved surplus/buyback policy following reserve completion. Repo still has no safe execution route, so a hit surfaces research/route work rather than an automatic buy.",
+      "added": "2026-08-28",
+      "updated": "2026-08-30"
+    },
+    {
+      "ticker": "RVMD",
+      "type": "equity",
+      "yfinance_symbol": "RVMD",
+      "entry_max": 120.0,
+      "horizon": "3y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-08-30 longterm_check: 2/4 PASS at $207.88 after the RASONQUE approval rerating. Reassess at <=$120 only after two quarters show payer-covered launch uptake; the current ~$44.6B market cap already capitalizes substantial pancreatic and NSCLC expansion success.",
+      "added": "2026-08-30"
+    },
+    {
+      "ticker": "ETN",
+      "type": "equity",
+      "yfinance_symbol": "ETN",
+      "entry_max": 300.0,
+      "horizon": "3y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-08-30 longterm_check: 2/4 PASS at $402.78. AI/grid demand and backlog are strong, but ~31x forward earnings plus Boyd acquisition leverage leave no current margin of safety. Reassess at <=$300 only if electrical orders remain positive and net debt is demonstrably declining, or after the expected 2027-Q1 Mobility/Dana close clarifies the capital structure.",
+      "added": "2026-08-30"
     }
   ]
 }

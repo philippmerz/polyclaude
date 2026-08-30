@@ -432,3 +432,34 @@ Themes (per venue constraint, multi-year -> IBKR-surface only):
 Trigger-state: NOT re-priced this week (stooq blocked from VM; domains rotated away from the
 commodity names). Last states stand: GOOG far from $280-285 dip, ALB left ≤$120, CCJ left
 $85-95, CRSP awaiting $40-45 with Q4-guidance hold-trigger. No trigger-hit flags.
+
+## 2026-08-30 weekly digest (domains: biotech-health, trade-regulation, markets-corporate — oldest, 20d)
+
+No domain was literally unrun for four weeks: this oldest trio last ran Aug-10, while the
+other six ran Aug-16/Aug-23. The least-recent rotation was run so the scheduled review still
+advanced.
+
+Themes:
+
+- **Pan-RAS pancreatic-cancer commercialization (MED):** FDA approved RVMD's RASONQUE after
+  13.2-month median survival versus 6.7 months for chemotherapy in a 500-patient trial.
+  The clinical signal is real; the equity setup is not cheap after the approval rerating.
+- **AI buildout power/electrical bottleneck (MED):** NVIDIA's disclosed supply/capacity
+  commitments rose to $279B and it is supporting 4.25 GW of Ohio IT load, while explicitly
+  naming power/land/shell constraints. This corroborates the existing AI-power theme; ETN
+  was selected as the unvetted electrical-equipment expression.
+- **AI-infrastructure financing/concentration risk (LOW):** noted but not promoted or traded;
+  it is a hedge thesis without a sufficiently bounded instance edge.
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **RVMD (new)** | **2/4** | PASS | RASONQUE launch + broader RAS platform | $207.88 is near the high at ~$44.6B market cap. Reassess at **≤$120** only after two quarters of payer-covered uptake. Added an IBKR-surface research trigger. |
+| **ETN (new)** | **2/4** | PASS | AI/grid electrical bottleneck | Demand/backlog are strong, but $402.78 is ~31x forward earnings and Boyd raised leverage. Reassess at **≤$300** with positive electrical orders and declining net debt, or after the expected 2027-Q1 Mobility/Dana close. Added an IBKR-surface research trigger. |
+
+Trigger-state: the live monitor fully priced all 30 candidates and found **zero hits**.
+Direct CoinGecko reconciliation confirmed the nearest crypto names still above their gates:
+STX $0.2438 vs $0.22, EIGEN $0.1971 vs $0.18, UNI $5.20 vs $3.25, and SKY $0.0707
+vs the tightened $0.050 gate. Precautionary fresh checks on UNI and SKY both remained **2/4 PASS**; SKY's
+research gate was tightened to **$0.050**. Neither new equity trigger is an authorization
+to buy—each only reopens underwriting at a materially safer valuation. No polyclaude capital
+action. Telegram message 880 surfaced the weekly result.

@@ -1925,3 +1925,76 @@ Sources:
 - [Best Ethereum L2s in 2026: Fees, TVL, TPS Compared](https://eco.com/support/en/articles/14798699-best-ethereum-l2s-in-2026-fees-tvl-tps-compared)
 - [Bitcoin and ethereum prices today, Friday, August 21, 2026: Cryptos continue rally sparked by Treasury repurchase announcement](https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-august-21-2026-cryptos-continue-rally-sparked-by-treasury-repurchase-announcement-161633891.html)
 - [Kevin Warsh Is the New Chair of the Federal Reserve: Here's What That Could Mean for Markets and Investors in 2026](https://www.chase.com/personal/investments/learning-and-insights/article/kevin-warsh-is-the-new-chair-of-the-federal-reserve)
+
+---
+
+## 2026-08-30T16:01:52Z — world_state_digest
+
+**Domains:** biotech-health, trade-regulation, markets-corporate | **Lookback:** 30d | **Profile:** research
+
+# WORLD-STATE DIGEST — 2026-08-30
+
+Domains: biotech-health, trade-regulation, markets-corporate | Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### biotech-health
+
+- [2026-08-28] [WHO](https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON616): Bundibugyo Ebola outbreak: 5,794 confirmed DRC cases and 2,786 deaths as of Aug. 26 (48.1% crude fatality ratio); cases in 60 health zones across six provinces. Since Aug. 14, reported cases rose by 1,129 and deaths by 602. The WHO-sponsored treatment trial had enrolled more than 250 confirmed cases.
+- [2026-08-28] [FDA](https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-its-kind-polycythemia-vera-rare-blood-disorder): Approved Takeda’s Mimrylo (rusfertide) for polycythemia vera. In a 293-patient phase 3 trial, 76.9% receiving Mimrylo required no phlebotomy during the 32-week study period versus 32.9% on placebo.
+- [2026-08-27] [FDA](https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer): Approved Revolution Medicines’ Rasonque (daraxonrasib) for previously treated metastatic pancreatic adenocarcinoma, 6.5 months before its user-fee deadline. In a 500-patient trial, median overall survival was 13.2 months versus 6.7 months for standard chemotherapy.
+- [2026-08-27] [FDA](https://www.fda.gov/news-events/press-announcements/fda-issues-emergency-use-authorization-generic-drug-prevent-new-world-screwworm-cattle): Issued its 14th NWS EUA: generic ivermectin injection for cattle, with a 35-day slaughter-withdrawal period. It may be administered within 24 hours of birth, at castration, or on appearance of a wound.
+
+### trade-regulation
+
+- [2026-08-24] [BIS](https://media.bis.gov/): Guidance states a license is required to export advanced-computing items to entities headquartered in Country Group D:5 or Macau, or with an ultimate parent headquartered there, even if the purchasing entity is outside those jurisdictions.
+- [2026-08-24] [BIS](https://media.bis.gov/): Section 232 investigations remain open covering copper, lumber, semiconductors, pharmaceuticals, trucks, critical minerals, commercial aircraft, polysilicon, unmanned aircraft systems, and wind turbines.
+- [2026-08-27] [OFAC](https://ofac.treasury.gov/recent-actions/general-licenses): OFAC issued amended Venezuela-related general licenses and associated FAQs.
+- [2026-08-20] [OFAC](https://ofac.treasury.gov/recent-actions/20260820): Russia General License 131I authorizes certain transactions to negotiate and enter contingent contracts for sale of Lukoil International GmbH, plus related maintenance.
+- [2026-08-07] [Treasury/CFIUS](https://home.treasury.gov/news/press-releases/sb0599): CFIUS reported 347 notices and declarations of covered transactions/real-estate transactions in 2025; 67% of distinct transactions cleared during the 30-day declaration assessment or initial 45-day notice review. Treasury launched a Known Investor Pilot Program for advance collection of foreign-investor information.
+
+### markets-corporate
+
+- [2026-08-26] [NVIDIA 10-Q](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm): Supply-and-capacity commitments rose from $119 billion in the preceding quarter to $279 billion as of July 26.
+- [2026-08-26] [NVIDIA 10-Q](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm): Vera Rubin began production shipments in Q3 FY2027; NVIDIA disclosed current supply constraints.
+- [2026-08-26] [NVIDIA 10-Q](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm): NVIDIA guaranteed support for approximately 4.25 GW of IT load at SB Energy’s Ohio campus, exclusively hosting NVIDIA compute under 20-year OpenAI leases; aggregate NVIDIA obligation is capped at $105 billion, with nine data centers expected to begin service in FY2029. NVIDIA may add support for approximately 3.8 GW.
+- [2026-08-26] [NVIDIA 10-Q](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm): The company states that shortages of land, power, shell capacity, or customer financing can delay deployments or reduce AI-adoption scale.
+
+## CANDIDATE THEMES
+
+### Pan-RAS pancreatic-cancer commercialization
+
+- Underlying facts: FDA approved RVMD’s Rasonque; 13.2-month median survival versus 6.7 months for chemotherapy in 500 patients; approval arrived 6.5 months before deadline.
+- Implication: A first approved broad RAS inhibitor now has an approved, differentiated pancreatic-cancer indication with a defined previously-treated population.
+- Possible plays: RVMD.
+- Direction: long.
+- Horizon: months.
+- Retail blindspot: Approval headlines compress the label, survival delta, and accelerated review timing into a generic “biotech approval” narrative.
+- Confidence: MED.
+
+### AI buildout bottleneck: power and electrical infrastructure
+
+- Underlying facts: NVDA increased supply/capacity commitments by $160 billion quarter-on-quarter; it is credit-supporting 4.25 GW of IT load and up to a further 3.8 GW, while explicitly identifying land/power/shell availability as deployment constraints.
+- Implication: The constraining input is moving from chips toward deliverable power capacity and the equipment/construction needed to connect it. The disclosed project timeline points to a multi-year rather than quarter-to-quarter demand pull.
+- Possible plays: power-distribution and grid-buildout category; ETN, HUBB, PWR.
+- Direction: long.
+- Horizon: years.
+- Retail blindspot: AI coverage centers GPU revenue; a chipmaker’s $105 billion maximum credit support and 4.25-GW deployment commitment are balance-sheet and infrastructure facts, not conventional semiconductor-demand commentary.
+- Confidence: MED.
+
+### AI-infrastructure financing / concentration risk
+
+- Underlying facts: NVIDIA’s commitments reached $279 billion; the Ohio support obligation can reach $105 billion and is tied to OpenAI lease performance; NVIDIA identifies customer financing and deployment capacity as limiting factors.
+- Implication: AI-infrastructure valuations embed both continued demand and successful financing/deployment by a concentrated set of counterparties. A financing or construction delay would impair timing before necessarily impairing end demand.
+- Possible plays: NVDA downside hedges; high-beta AI-infrastructure suppliers as a category.
+- Direction: short / hedge.
+- Horizon: months.
+- Retail blindspot: Revenue-growth narratives can omit the transfer of infrastructure-financing and counterparty risk into vendor commitments.
+- Confidence: LOW.
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: RVMD, ETN, HUBB, PWR, NVDA.
+- Run catalyst_check.py on: “OpenAI Ohio data-center campus ready-for-service timeline”; “Rasonque commercial launch / payer coverage”; “NVIDIA Rubin supply constraints.”
+- Skip / pass: Ebola-response plays, NWS livestock-health plays, Venezuela licensing, and Section 232 sectors — current facts establish events or policy exposure but not a sufficiently specific, investable earnings mechanism.
+- Watchlist cross-reference: no recall-based flags; `notes/longterm_watchlist.md` was not read.
