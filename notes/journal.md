@@ -11091,3 +11091,38 @@ rule therefore suppressed a message. README and the bankroll cache were refreshe
 changed, so the previously green 384/123/19 validation remains the applicable build state.
 The durable ROI continuation remains uncancelled and must continue until the operator
 manually stops it.
+
+## 2026-08-30 14:09 UTC — scheduled continuation: executable book quiet; no robust entry
+
+The authoritative bankroll marked **$220.42**, with realized P&L unchanged at **+$33.58**.
+Fourteen Polymarket rows cost $162.23 and marked $172.41, while full executable depth was
+$163.04 net; thin books therefore overstated the open sleeve by $9.37. The wallet retained
+exactly 6.000000 deployable pUSD and about 26.3489 yield-accruing aUSDC.e. Six SELL orders
+and zero BUY commitments rested. Position state was CLEAN, UMA reported zero alerts,
+Ostium remained empty, all four daemons were singular/fresh, and `redeem-all --dry-run`
+found zero redeemables. No news or opportunity alert arrived after the prior checkpoint.
+
+The catalyst and exit lanes remained inactive. Oman and Iran's official listings contained
+no qualifying bilateral agreement after the Aug-25 proposed framework, so Iran-Oman YES
+remains p=0.08, HOLD/no-add. The live HLE board still matched Jan-15 after the archive-diff
+control detected historical changes and passed all provider coverage checks; its configured
+cluster cap continues to block adds. Marginal APY, watchlist, constrained Kelly, decision,
+and exit-routing checks produced no action.
+
+Primary discovery covered 1,000 active markets; the thin pass fetched 32,028 and retained
+1,149 win-assumed carry hints without an independently robust fair. Sports covered 108
+liquid markets. Its only >3pp, >$50k-volume discrepancy favored G2 over Leviatán, but the
+live G2 ask was 0.39 and the quadratic taker fee made the all-in price about 0.4019 versus
+roughly 0.405 bookmaker consensus fair—only 0.31pp before uncertainty, so it failed the
+mandatory haircut. Five macro rows had no consensus instrument. Monotonicity inspected
+998 events and found one midpoint-only flag with no executable book; the explicitly
+incomplete consistency pass covered 5,009 markets / 583 events and found zero provisional
+positive baskets. Favorite-fade surfaced only untrusted population hints and no candidate
+survived instance review.
+
+No trade, order change, redemption, swap or bridge occurred, and the material-only Telegram
+rule therefore suppressed a message. Weekly P&L remains current through Aug-28 and world
+state through Aug-23 is under eight days old, so both weekly lanes were skipped. README and
+the bankroll cache were refreshed; no code changed, so the previously green 384/123/19
+validation remains applicable. The durable ROI continuation remains uncancelled and must
+continue until the operator manually stops it.
