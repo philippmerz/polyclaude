@@ -11273,3 +11273,31 @@ the 14-row PM book marks $168.41 but only $159.38 is immediately realizable. HLE
 complete and its cap still binds; Duma's independent-forecast gate opens Sep-1. No trade, order,
 redemption, swap, bridge, code change, or material Telegram occurred. The durable ROI continuation
 remains active until the operator manually cancels it.
+
+## 2026-08-31 10:03 UTC — retaliation cuts Iran–Oman to the interpretation floor
+
+Three MATERIAL alerts after the quiet 06:00 checkpoint were consumed and independently verified.
+AP reported that Iran retaliated toward US bases in Jordan after the Larak strike, while the UAE
+reported intercepting an Iranian drone. Reuters reported that a supertanker in the Strait was hit by
+two mines and caught fire, alongside a new IRGC warning about vessel passage. These are genuinely new
+escalations beyond the Aug-30 Larak strike rather than duplicate headlines. Oman's official statement
+index still contains no bilateral acceptance announcement after Aug-25; that statement continues to
+describe a proposed framework, continuing technical negotiations and hope for a later announcement.
+
+The Iran–Oman YES prior was cut **0.05→0.04**. The fresh-announcement branch is now de minimis; the
+remaining four points are almost entirely the unchanged interpretation/resolution ambiguity over
+whether the Aug-25 joint statement itself eventually qualifies. Gamma remains active through Sep-1
+03:59 UTC at 0.028 midpoint / 0.021 bid / 0.035 ask. The 31 YES shares remain **HOLD/no-add**:
+resolution at the revised prior is worth $1.24 versus about $0.65 from a taker exit, a $0.59 forward
+advantage, while the mandatory 10-point entry stress remains zero. No maker sell was posted because a
+surprise qualifying announcement would make a fill adversely selected.
+
+The authoritative bankroll marks **$216.43**, with realized P&L unchanged at **+$33.59**. Fourteen
+PM rows cost $162.23 and mark $168.90, while the full immediately realizable value is $159.40 net;
+thin books overstate the open sleeve by $9.50. The wallet retains exactly 6.000000 pUSD and 26.350832
+aUSDC.e. Six SELLs and zero BUY commitments rest. Position state is CLEAN, UMA has zero alerts,
+Ostium is empty, redemption found zero, watchlist and marginal-APY scans found no action, no decision
+is overdue, and all four daemons are singular/fresh. HLE remains cap-gated and Duma awaits the Sep-1
+independent-forecast window. No trade, order change, redemption, swap or bridge occurred. A single
+material Telegram summary (message 883) reported the prior change; the durable ROI continuation
+remains active until the operator manually cancels it.
