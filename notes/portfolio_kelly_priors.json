@@ -583,6 +583,34 @@
    }
   ]
  },
+ "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1": {
+  "p_no": 0.45,
+  "verified": "2026-08-31",
+  "criteria_read": "2026-08-31",
+  "cluster": "gta-views",
+  "rho_within": 0,
+  "note": "Measured short-horizon threshold ticket. The official YouTube counter was 15,986,322 at hour 89.15 of 168. New archive points at hours 59.04/70.98/82.78 measured 13,402,781/14,764,829/15,538,649 and close the prior trajectory gap. The latest 18.2 hours ran at about 1.61M views/day versus 1.22M/day required, while defensible recent-decay fits finish around 19.8M-20.4M. Central p_no=0.45 deliberately retains substantial model and counter-batching uncertainty. Buy only while the fee-inclusive cost remains below the standard 0.35 robust bound; unique cluster, no unrelated correlation discount. Re-measure every scheduled tick through the exact Sep-4 01:00:48 UTC endpoint.",
+  "key_facts": [
+   {
+    "claim": "The contract resolves from the official Rockstar YouTube view counter during the first 168 hours after upload; the referenced upload began at 2026-08-28 01:00:48 UTC.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
+    "source_date": "2026-08-31",
+    "checked": "2026-08-31"
+   },
+   {
+    "claim": "First-hand official-page reads measured 15,703,132 at hour 85.2 and 15,986,322 at hour 89.15; reaching 20M from the latter requires 1.22M views/day over the remaining 78.85 hours.",
+    "source": "https://www.youtube.com/watch?v=tJbzMqJGH4k",
+    "source_date": "2026-08-31",
+    "checked": "2026-08-31"
+   },
+   {
+    "claim": "Wayback captures add 13,402,781 views at 2026-08-30 12:03 UTC, 14,764,829 at 23:59 UTC, and 15,538,649 at 2026-08-31 11:47 UTC, establishing a recent trajectory rather than relying on a single counter read.",
+    "source": "https://web.archive.org/web/20260831114726id_/https://www.youtube.com/watch?si=tUvYNMTLix5q9WgW&v=tJbzMqJGH4k",
+    "source_date": "2026-08-31",
+    "checked": "2026-08-31"
+   }
+  ]
+ },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.08,
   "verified": "2026-08-31",

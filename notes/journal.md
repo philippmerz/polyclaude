@@ -11349,3 +11349,36 @@ Aug-28 and world-state rotation through Aug-30. No trade, fill, order change, re
 bridge occurred. Validation passed 392 pytest cases and all 123 standalone money checks. Telegram
 message 884 reported the material scanner fix and measured lead. The durable ROI continuation remains
 active until the operator manually cancels it.
+
+## 2026-08-31 18:01–18:19 UTC — GTA trajectory crosses the robust gate; 18 NO bought (DEC-0107)
+
+This periodic review had one real job beyond routine state hygiene: re-measure the GTA VI one-week
+YouTube threshold. The official counter advanced from **15,703,132 at 14:15** to **15,986,322 at
+18:10**, hour 89.15 of 168. More importantly, Wayback's availability endpoint exposed three valid
+captures missed in the first pass: 13,402,781 at hour 59.04, 14,764,829 at hour 70.98, and
+15,538,649 at hour 82.78. The latest 18.2-hour interval therefore ran near 1.61M views/day versus
+1.22M/day required over the remaining 78.85 hours. Recent log-rate and anchored-decay fits straddle
+the threshold but now cluster around roughly 19.8M–20.4M; the evidence supports an uncertain
+central p(20M or more)=0.45, not a high-conviction forecast.
+
+The executable price moved in the favorable direction despite the count: `NO` on `<20M` was 0.27,
+with a 5% quadratic fee of 0.009855/share, for 0.279855 all-in. The standard 10-point instance
+haircut leaves p_robust=0.35, about 7.0pp above cost. A unique `gta-views` cluster was configured and
+the full entry helper passed the live ask, fee, UMA, exit-depth, 15% ticket and 30% cluster gates.
+I withdrew 5 USDC.e from Polygon Aave, wrapped it to pUSD, and bought **18 NO at 0.27 FAK**:
+$4.86 notional plus $0.17739 fee = **$5.03739 gross**. The order matched in full
+(`0x90b2329ffee1ceac9bc9622b2ddadb714fa41b5730d8ff5a3791a4bbe08a8890`); $5.962610 pUSD remains
+as operating float. One initial Aave withdrawal mistakenly used native USDC rather than USDC.e and
+reverted (`0x2e0a...93b5`), costing only gas; the explicit USDC.e retry succeeded. This is exactly
+why the position is $5 rather than the unconstrained half-Kelly recommendation: threshold-curve and
+counter-batching uncertainty remain material.
+
+Post-trade state is clean: 15 positions, six SELLs and zero BUY commitments, no UMA or redemption
+alert, no below-hurdle position, no overdue decision, and all four daemons are singular/fresh. The
+authoritative bankroll is **$214.52**, realized **+$33.41** after the entry fee; PM mid is $172.20
+versus $165.00 executable. GTA was initially reported uncovered by the generic news audit, so
+`grand theft auto` was added at Tier 2; exact counter monitoring remains the per-tick control through
+Sep-4 01:00:48 UTC. The only fresh Iran alert repeated the already-processed flare-up, and Oman's
+official index still shows no qualifying statement after Aug-25, so Iran–Oman remains p_yes=0.04 and
+HOLD. No other position, resting order, prior, or backlog gate changed. Focused entry/state/news
+validation passed 63 tests; Telegram message 885 reported the fill and next measurement clock.

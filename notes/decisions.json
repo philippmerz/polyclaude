@@ -1,5 +1,5 @@
 {
-  "next_id": 107,
+  "next_id": 108,
   "decisions": [
     {
       "id": 1,
@@ -2066,6 +2066,26 @@
         "youtube",
         "measured-skip",
         "thin-tail"
+      ],
+      "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 107,
+      "timestamp": "2026-08-31T18:16:36Z",
+      "type": "open_position",
+      "thesis": "The official counter reached 15,986,322 at hour 89.15, and newly recovered archive points at hours 59.04, 70.98 and 82.78 show the latest 18.2 hours running near 1.61M views/day versus 1.22M/day required. Defensible recent-decay fits straddle 20M, so central P(20M or more)=0.45 remains deliberately uncertain; however, the live 0.27 NO ask plus 0.99c/share fee costs 0.2799, and the standard 10-point stress prior of 0.35 still leaves about 7pp robust edge. A small independently clustered ticket captures that dislocation without betting the bankroll on a threshold model.",
+      "confidence": "medium",
+      "prediction": "At exactly 168 hours after the 2026-08-28 01:00:48 UTC upload, the official Rockstar YouTube view counter is at least 20,000,000 and the market resolves NO.",
+      "size_usd": 5.03739,
+      "resolution_at": "2026-09-04",
+      "tags": [
+        "gta",
+        "youtube",
+        "measured-threshold",
+        "short-horizon"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
       "outcome": null,
