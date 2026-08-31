@@ -1,5 +1,5 @@
 {
-  "next_id": 104,
+  "next_id": 105,
   "decisions": [
     {
       "id": 1,
@@ -2007,6 +2007,25 @@
         "uma",
         "redemption",
         "deindexing"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 104,
+      "timestamp": "2026-08-31T02:15:57Z",
+      "type": "scaffolding",
+      "thesis": "Harden source_freeze_check against archive-fetch failures discovered during the Aug-31 HLE review. HTTP errors and empty parses previously became empty inventories, so a transient Wayback 503 could either manufacture a frozen source or certify the parser via fake wholesale removals. Fetches now require successful HTTP status and a non-empty inventory; validation also requires a shared anchor between snapshots, uses HTTPS plus a browser-like user agent, and fails inconclusive instead of emitting evidence on ambiguous input.",
+      "confidence": "high",
+      "prediction": "Through 2026-09-30, any HTTP-error, empty-body, or disjoint-snapshot regression returns a nonzero INCONCLUSIVE result, while the real Jun-to-Dec 2025 control still detects additions/removals and the Jan-2026-to-live HLE comparison remains available when Wayback serves both captures.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-30",
+      "tags": [
+        "source-monitoring",
+        "fail-closed",
+        "HLE"
       ],
       "slug": null,
       "outcome": null,

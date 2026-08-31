@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-08-30",
+ "_updated": "2026-08-31",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
@@ -411,7 +411,7 @@
  },
  "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645": {
   "p_no": 0.60,
-  "verified": "2026-08-30",
+  "verified": "2026-08-31",
   "criteria_read": "2026-08-30",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
@@ -427,10 +427,10 @@
     "checked": "2026-08-30"
    },
    {
-    "claim": "The validated archive-diff instrument detected extensive 2025 additions/removals, passed claude/grok/gemini coverage, and found zero additions or removals between 2026-01-15 and the live board on 2026-08-30.",
+    "claim": "The validated archive-diff instrument detected extensive 2025 additions/removals, passed claude/grok/gemini coverage, and found zero additions or removals between 2026-01-15 and the live board on 2026-08-31.",
     "source": "https://agi.safe.ai/",
-    "source_date": "2026-08-30",
-    "checked": "2026-08-30"
+    "source_date": "2026-08-31",
+    "checked": "2026-08-31"
    },
    {
     "claim": "Scale's sister leaderboard lists Gemini 3.1 Pro at 46.44, above the 40 bar, so a catch-up board batch is the direct thesis-break path.",
@@ -519,7 +519,7 @@
  },
  "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
   "p_yes": 0.05,
-  "verified": "2026-08-30",
+  "verified": "2026-08-31",
   "criteria_read": "2026-08-28",
   "note": "DEC-0082. INTERPRETATION/ANNOUNCEMENT LOTTERY, deliberately held to $5.03. The market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Aug-25 joint statement remains ambiguous rather than qualifying on its face: it calls the corridor framework proposed, says technical talks will continue, and separately refers to an agreement to implement joint mine-clearing; Oman's minister said he hoped an announcement would follow. Aug-27 reporting said details were still being worked out while Iran added conditions tied to US action. The Aug-30 22:00 official Oman recheck found no later bilateral acceptance statement. Two independent wires plus Al Jazeera report that US forces struck two IRGC launchers on Iran's Larak Island on Aug-30 after launchers were observed preparing sea-mining rockets; the IRGC reported casualties and threatened response. This materially reduces the already-small last-minute announcement path. p_yes is now 0.05: about 4% interpretation/resolution ambiguity around the Aug-25 text plus 1% for a clear announcement before cutoff. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.022 bid: expected resolution value is $1.55 versus about $0.68 net exit value. Re-underwrite immediately on any new joint/Omani declarative statement.",
   "cluster": "hormuz-agreement",
@@ -534,10 +534,10 @@
     "checked": "2026-08-29"
    },
    {
-    "claim": "The Aug-30 official Oman Foreign Ministry recheck still describes the corridor as proposed, says technical negotiations would continue, and says an announcement is hoped for soon; its recent-statements list shows no later Oman-Iran acceptance statement.",
+    "claim": "The Aug-31 official Oman Foreign Ministry recheck still describes the corridor as proposed, says technical negotiations would continue, and says an announcement is hoped for soon; its recent-statements list shows no later Oman-Iran acceptance statement.",
     "source": "https://www.fm.gov.om/en/53722/",
     "source_date": "2026-08-25",
-    "checked": "2026-08-30"
+    "checked": "2026-08-31"
    },
    {
     "claim": "US forces struck two IRGC launchers on Iran's Larak Island after observing preparations to launch rockets carrying sea mines; the IRGC reported casualties and threatened retaliation. This is the first US strike in Iran since late July and materially lowers the last-minute agreement-announcement branch.",
@@ -567,7 +567,7 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.08,
-  "verified": "2026-08-30",
+  "verified": "2026-08-31",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
@@ -594,16 +594,16 @@
     "checked": "2026-08-28"
    },
    {
-    "claim": "Fresh independent polling does not supply the required independent seat forecast: VCIOM's weekly United Russia support rose from 32.1% on August 2 to 39.2% on August 23, directionally supporting the central range but not resolving list-vote translation or district wins. The 0.08/0.40/0.28 distribution and no-add gate therefore remain unchanged.",
+    "claim": "Fresh independent polling does not supply the required independent seat forecast: VCIOM's live table still ends August 23 with United Russia support at 39.2%, directionally supporting the central range but not resolving list-vote translation or district wins. The 0.08/0.40/0.28 distribution and no-add gate therefore remain unchanged.",
     "source": "https://wciom.ru/ratings/reiting-politicheskikh-partii/",
     "source_date": "2026-08-23",
-    "checked": "2026-08-30"
+    "checked": "2026-08-31"
    }
   ]
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.40,
-  "verified": "2026-08-30",
+  "verified": "2026-08-31",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
@@ -621,7 +621,7 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.28,
-  "verified": "2026-08-30",
+  "verified": "2026-08-31",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,

@@ -33,7 +33,7 @@ import sys
 
 import httpx
 
-WAYBACK = "http://web.archive.org/web/{stamp}/{url}"
+WAYBACK = "https://web.archive.org/web/{stamp}/{url}"
 # Default: model-name shapes on AI leaderboards. Override with --pattern for
 # other sources (registries, official lists, index pages).
 # 2026-08-25: the first version required a HYPHEN (`claude-`, `grok-`) and was
@@ -58,7 +58,15 @@ def tokens(html: str, pattern: str) -> set[str]:
 def fetch(client: httpx.Client, url: str, stamp: str | None) -> set[str] | None:
     target = WAYBACK.format(stamp=stamp, url=url) if stamp else url
     try:
-        return tokens(client.get(target).text, PATTERN)
+        response = client.get(target)
+        response.raise_for_status()
+        parsed = tokens(response.text, PATTERN)
+        # Fail closed. Wayback occasionally returns a successful-looking empty
+        # shell (or an upstream error body); treating that as a real empty
+        # inventory can manufacture either FROZEN or a complete-removal event.
+        if not parsed:
+            raise ValueError("parser returned an empty inventory")
+        return parsed
     except Exception as e:
         print(f"  fetch fail ({stamp or 'live'}): {type(e).__name__} {e}", file=sys.stderr)
         return None
@@ -84,11 +92,21 @@ def main() -> int:
     global PATTERN
     PATTERN = a.pattern
 
-    with httpx.Client(timeout=60, follow_redirects=True) as c:
+    # Wayback intermittently returns 503 to the library default user-agent
+    # while serving the same capture to a normal browser/curl client.
+    with httpx.Client(timeout=60, follow_redirects=True,
+                      headers={"User-Agent": "Mozilla/5.0 (polyclaude source monitor)"}) as c:
         if a.validate:
             early, late = (fetch(c, a.url, s) for s in a.validate)
             if early is None or late is None:
                 print("VALIDATION INCONCLUSIVE — a snapshot could not be fetched")
+                return 2
+            # A known-change control should retain at least one anchor item.
+            # Disjoint sets are indistinguishable from a partially fetched/error
+            # snapshot and must not be allowed to certify the instrument.
+            if not early.intersection(late):
+                print("VALIDATION INCONCLUSIVE — snapshots share no parsed anchor; "
+                      "cannot distinguish wholesale change from a partial/error page")
                 return 2
             moved = (late - early) | (early - late)
             print(f"[validate {a.validate[0]} -> {a.validate[1]}] "

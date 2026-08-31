@@ -11211,3 +11211,49 @@ the live prior and backlog were refreshed; material Telegram message 881 reporte
 alert decision. The Aug-31 resolution/HLE window and Sep-1 Duma gate remain the next work.
 The durable ROI continuation remains uncancelled and must continue until the operator
 manually stops it.
+
+## 2026-08-31 02:00–02:2x UTC — HLE window complete; archive validator hardened fail-closed (DEC-0104)
+
+The scheduled resolution/HLE window produced no trade but did expose and close a real evidence-
+integrity bug. The later Guardian Larak-strike alert was duplicate corroboration of the escalation
+already processed at 22:04, so it received no second probability move. Oman's official statement
+index still has no bilateral acceptance announcement after Aug-25, and Gamma remains active through
+Sep-1 03:59 UTC at 0.0255 midpoint / 0.020 bid. Iran–Oman stays p_yes=0.05 and HOLD/no-add: $1.55
+central terminal value versus about $0.62 from the complete live exit, while the 10-point entry
+stress remains zero.
+
+The HLE review re-walked the entire next-Gemini-Pro debut ladder: executable NO asks are
+0.15/0.17/0.31/0.62 for the >=40/45/50/55 thresholds. The held >=40 leg remains the cleanest
+board-stasis expression at p_no=0.60 / stress=0.45, but no add clears the full portfolio gate. The
+correlated `ai-ships-fast-short` cap is effectively binding and an exact $0.75 rehearsal was rejected
+because the incremental Kelly allocation is below $1. The 169 NO shares remain hold-to-resolution.
+
+While validating the crux, `source_freeze_check.py` initially reported empty archives as a suspect
+instrument, then on retry falsely called itself VALID from one real snapshot and one transient empty
+snapshot. Root cause: HTTP status was never checked and an empty parse was accepted as a real empty
+inventory, so a Wayback 503 could manufacture either complete removals or a frozen source. DEC-0104
+made the instrument fail closed: non-2xx responses and empty inventories are errors; disjoint control
+sets are inconclusive because they lack a shared anchor; Wayback now uses HTTPS and a browser-like
+user agent. Four focused regressions cover HTTP error, empty parse, disjoint control and valid
+shared-anchor change. After the fix, the real Jun→Dec-2025 control detected five additions and eleven
+removals, coverage passed claude/grok/gemini, and a retried Jan-15-to-live comparison found zero
+additions/removals. Thus today's frozen-board conclusion survives, but now rests on valid evidence.
+
+The daily Duma prior rotation also completed: VCIOM's live table still ends Aug-23 at 39.2% United
+Russia support and no independent seat forecast exists, so the 0.08/0.40/0.28 distribution, union
+p=0.76 and Sep-1..10 independent-forecast add gate remain unchanged. Discovery fetched 1,000 primary
+markets plus the thin-tail event pass. Monotonicity found zero violations; the bounded consistency
+slice found zero provisional executable baskets and explicitly remained incomplete. Barcelona–Rayo
+was the one sports consensus discrepancy above 3pp: bookmaker no-vig p(Barcelona)=~0.827 versus the
+0.88 YES ask, but the NO leg's 0.1357 fee-inclusive cost fails the standard 10-point robustness gate
+(p_no 0.173 central / 0.073 stress), so it was correctly skipped.
+
+Final authoritative bankroll is **$215.79**, realized P&L **+$33.59**. Fourteen PM rows cost $162.23
+and mark $168.20, while full executable value is only $158.29 net; thin books overstate by $9.91.
+Wallet state is exactly 6.000000 pUSD, 26.350091 aUSDC.e and zero resting BUY commitments; six SELLs
+remain live. Position state is CLEAN, UMA has zero alerts, Ostium stays empty, redemption found zero,
+watchlist and marginal-APY scans found no action, and all four daemons are singular/fresh. Weekly P&L
+is current through Aug-28 and the Aug-30 world-state review is fresh. No order, redemption, swap,
+bridge, or other capital movement occurred. Telegram message 882 reported the material code incident.
+Validation passed 388 pytest cases, all 123 standalone money checks, Python compilation and
+JSON parsing; the durable ROI continuation remains active until the operator manually cancels it.
