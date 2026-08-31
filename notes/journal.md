@@ -11257,3 +11257,19 @@ is current through Aug-28 and the Aug-30 world-state review is fresh. No order, 
 bridge, or other capital movement occurred. Telegram message 882 reported the material code incident.
 Validation passed 388 pytest cases, all 123 standalone money checks, Python compilation and
 JSON parsing; the durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-08-31 06:00 UTC — periodic continuation quiet; Iran clock unchanged
+
+Reviewed the active backlog and the completed 02:00 work. No news or opportunity alert arrived after
+that journal entry. Oman's official statement index still has no bilateral acceptance announcement
+after Aug-25, and Gamma remains active/unresolved through Sep-1 03:59 UTC at 0.021 midpoint / 0.020
+bid. Iran–Oman remains p_yes=0.05 and HOLD/no-add: the 31 YES shares retain $1.55 central terminal
+value versus about $0.62 from the full executable exit, and the 10-point entry stress remains zero.
+
+The rest of the live state is quiet: no fills among six resting SELLs, zero BUY commitments, UMA zero
+alerts, redemption zero, position state CLEAN, watchlist zero hits, decisions zero overdue, and each
+daemon exactly singular. Authoritative bankroll is **$216.01**, realized P&L remains **+$33.59**;
+the 14-row PM book marks $168.41 but only $159.38 is immediately realizable. HLE's scheduled review is
+complete and its cap still binds; Duma's independent-forecast gate opens Sep-1. No trade, order,
+redemption, swap, bridge, code change, or material Telegram occurred. The durable ROI continuation
+remains active until the operator manually cancels it.
