@@ -203,6 +203,30 @@ def categorize(m: dict) -> tuple[str, float, float, float]:
     return lens, yes, no, days
 
 
+def is_in_play(m: dict, now: datetime.datetime | None = None) -> bool:
+    """Return True only when Gamma gives a parseable start at/before now.
+
+    Bookie workers frequently find cached pregame prices.  Comparing those with
+    a Polymarket price after play has begun manufactures huge phantom deltas.
+    Markets without a usable ``gameStartTime`` remain eligible because absence
+    of metadata is not proof that the event is live; the manual criteria gate
+    still applies to every surfaced comparison.
+    """
+    raw = m.get("gameStartTime")
+    if not raw:
+        return False
+    try:
+        start = datetime.datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
+        if start.tzinfo is None:
+            start = start.replace(tzinfo=datetime.timezone.utc)
+        now_dt = now or datetime.datetime.now(datetime.timezone.utc)
+        if now_dt.tzinfo is None:
+            now_dt = now_dt.replace(tzinfo=datetime.timezone.utc)
+        return start <= now_dt
+    except (TypeError, ValueError):
+        return False
+
+
 def annualized_apy(p: float, days: float, fee_rate: float | None = None) -> float:
     """Fee-aware APY at price ``p``. Capped at 10000x for display.
 
@@ -307,6 +331,8 @@ def main() -> int:
             "liq": float(m.get("liquidityNum", 0) or 0),
             "id": m.get("id"),
             "tokens": m.get("clobTokenIds"),
+            "game_start_time": m.get("gameStartTime"),
+            "in_play": is_in_play(m),
         })
 
     rows.sort(key=lambda r: r["apy_pct"] if r["apy_pct"] != float("inf") else 9e9, reverse=True)
@@ -314,9 +340,14 @@ def main() -> int:
 
     # Fetch bookie consensus for top-N if requested
     if args.with_consensus:
-        print(f"# fetching bookie consensus for top {args.consensus_top_n} candidates "
-              f"(~30s each via scoped worker)...", file=sys.stderr)
-        for i, r in enumerate(rows[: args.consensus_top_n]):
+        eligible_rows = [r for r in rows if not r["in_play"]]
+        skipped_rows = [r for r in rows if r["in_play"]]
+        for r in skipped_rows:
+            r["consensus_summary"] = "SKIP_IN_PLAY: pregame odds are not comparable"
+        selected_rows = eligible_rows[: args.consensus_top_n]
+        print(f"# fetching bookie consensus for top {len(selected_rows)} pregame candidates "
+              f"(~30s each via scoped worker); skipped {len(skipped_rows)} in-play", file=sys.stderr)
+        for i, r in enumerate(selected_rows):
             cons = fetch_bookie_consensus(r["question"], r["days_to_resolve"] * 24,
                                           outcomes=r.get("outcomes"))
             r["consensus"] = cons
@@ -329,7 +360,7 @@ def main() -> int:
             else:
                 r["pm_vs_bookie_pp"] = None
                 r["consensus_summary"] = f"NO_CONSENSUS: {cons.get('error', '?')[:60]}"
-            print(f"  [{i+1}/{args.consensus_top_n}] {r['question'][:50]}: {r.get('consensus_summary','?')}", file=sys.stderr)
+            print(f"  [{i+1}/{len(selected_rows)}] {r['question'][:50]}: {r.get('consensus_summary','?')}", file=sys.stderr)
 
     # Optional public Kalshi comparison.  This receives only the final PM
     # shortlist, uses no credentials, and never exposes an execution method.

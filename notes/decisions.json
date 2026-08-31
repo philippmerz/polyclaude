@@ -1,5 +1,5 @@
 {
-  "next_id": 105,
+  "next_id": 107,
   "decisions": [
     {
       "id": 1,
@@ -2028,6 +2028,46 @@
         "HLE"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 105,
+      "timestamp": "2026-08-31T14:15:03Z",
+      "type": "scaffolding",
+      "thesis": "sports_pm_scan compared a live Polymarket price for G2-Aurora against a cached pregame bookmaker line, manufacturing a 30.5pp discrepancy. Gamma exposes gameStartTime, so consensus comparisons should exclude markets whose scheduled start has passed while preserving them in the ordinary visibility list.",
+      "confidence": "high",
+      "prediction": "On the next consensus scan, G2-Aurora and any other started market will print SKIP_IN_PLAY and consume no bookie worker slot, while the future Gen.G-KT handicap remains eligible.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-01",
+      "tags": [
+        "sports",
+        "scanner",
+        "in-play",
+        "odds-integrity"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 106,
+      "timestamp": "2026-08-31T14:18:47Z",
+      "type": "skip",
+      "thesis": "First-hand YouTube count is 15.703M at hour 85.2 of 168 and valid Wayback snapshots measure 9.483M at hour 22.4 and 11.889M at hour 41.1. Reaching 20M requires 1.246M/day over the remaining 82.8h, but defensible decay models span roughly 16.0M to 23.9M final and cluster-free entry rehearsal prices NO at 0.3411 fee-inclusive. An honest p(NO) near 0.45 leaves only 0.9pp after the mandatory 10pp haircut, too fragile to source/model risk; re-measure rather than spend the operational float now.",
+      "confidence": "medium",
+      "prediction": "The 168-hour official YouTube count will finish between 18M and 23M; until another multi-hour velocity observation narrows the range, neither side will retain more than a marginal edge after the 10pp haircut.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-04",
+      "tags": [
+        "gta-views",
+        "youtube",
+        "measured-skip",
+        "thin-tail"
+      ],
+      "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

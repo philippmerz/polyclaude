@@ -11301,3 +11301,51 @@ is overdue, and all four daemons are singular/fresh. HLE remains cap-gated and D
 independent-forecast window. No trade, order change, redemption, swap or bridge occurred. A single
 material Telegram summary (message 883) reported the prior change; the durable ROI continuation
 remains active until the operator manually cancels it.
+
+## 2026-08-31 14:00–14:20 UTC — measurable GTA lead retained; in-play sports leak closed (DEC-0105/0106)
+
+Six CRITICAL/MATERIAL news records arrived after the 10:03 checkpoint. All were duplicate
+corroboration of the already-processed facts: the US Larak strike, Iranian retaliation toward US
+bases in Jordan, and the UAE interception. Oman's official statements index still has nothing after
+Aug-29 and no Oman–Iran acceptance statement after Aug-25. Gamma remains active/unresolved through
+Sep-1 03:59 UTC at 0.0145 midpoint / 0.010 bid / 0.019 ask. Iran–Oman therefore remains p_yes=0.04
+and **HOLD/no-add**. The 31 shares retain $1.24 central resolution value versus only about $0.31 from
+the full live exit; the probability is now almost entirely the unchanged Aug-25 interpretation
+ambiguity, so repeating the same military facts does not justify cutting it again.
+
+The full opportunity sweep produced one measurable lead and one scanner-integrity finding. Primary
+discovery fetched 973 markets; the thin event pass fetched 30,932 and retained 1,189 win-assumed
+carry hints. Monotonicity inspected 927 multi-market events and found zero violations. The explicitly
+incomplete consistency slice scanned 5,008 open markets / 602 events and found zero provisional
+positive baskets after sequential depth. Macro surfaced seven markets without a consensus
+instrument. Favorite-fade surfaced nine population hints, none of which had an instance edge.
+
+Sports consensus initially printed two huge discrepancies, both false or too weak on inspection.
+G2–Aurora was already in play, so a current Polymarket price had been compared against a cached
+pregame bookmaker line. DEC-0105 added a Gamma `gameStartTime` guard: in-play markets remain visible
+but receive `SKIP_IN_PLAY` and consume no bookie-worker slot. The rerun skipped four live markets and
+correctly compared the top pregame match, where Gen.G's 0.835 price was only 1.6pp above high-confidence
+Betfair/Marathon consensus. The exact Gen.G −1.5 derivative also failed: current Stake/Bettery lines
+put KT +1.5 near 33–35% versus roughly 30% on Polymarket, so the standard 10-point haircut erases the
+apparent edge; the earlier 44% estimate came from a stale single Caliente line.
+
+The best thin-tail lead was the GTA VI Extended Look one-week YouTube counter. First-hand measurement
+found **15,703,132 views at hour 85.2 of 168**. Valid Wayback captures provide a real trajectory:
+420,029 at hour 0.34, 5,680,277 at hour 11.0, 9,482,843 at hour 22.4, and 11,888,535 at hour 41.1.
+Crossing 20M now needs 4.297M more, or 1.246M/day. But reasonable decay fits span approximately
+16.0M–23.9M final; logarithmic central fits land near 19–20M. At 0.33 raw NO ask / 0.3411 including
+fee, an honest p(NO)≈0.45 leaves only 0.9pp after the mandatory 10pp haircut. DEC-0106 therefore
+records a measured **SKIP FOR NOW**, not a pass on the family. The counter and book are now a per-tick
+backlog gate through the exact 168-hour endpoint at Sep-4 01:00:48 UTC.
+
+The authoritative bankroll marks **$212.70**, with realized P&L unchanged at **+$33.59**. Fourteen
+PM rows cost $162.23 and mark $165.48, while immediate executable value is $159.49 net; thin books
+overstate the open sleeve by $5.98. The wallet holds 6.000000 deployable pUSD and 26.351206 aUSDC.e.
+Six SELLs and zero BUY commitments rest. Position state is CLEAN, UMA has zero alerts, Ostium is
+empty, redemption found zero, watchlist and marginal-APY scans found no action, no decision is
+overdue, and all four daemons are singular/fresh. Duma's fresh poll coverage still contains no
+independent whole-seat forecast, so its Sep-1 gate remains closed today. Weekly P&L is current through
+Aug-28 and world-state rotation through Aug-30. No trade, fill, order change, redemption, swap or
+bridge occurred. Validation passed 392 pytest cases and all 123 standalone money checks. Telegram
+message 884 reported the material scanner fix and measured lead. The durable ROI continuation remains
+active until the operator manually cancels it.
