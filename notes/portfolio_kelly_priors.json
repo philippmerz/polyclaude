@@ -584,12 +584,14 @@
   ]
  },
  "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1": {
-  "p_no": 0.45,
+  "p_no": 0.65,
   "verified": "2026-08-31",
   "criteria_read": "2026-08-31",
   "cluster": "gta-views",
   "rho_within": 0,
-  "note": "Measured short-horizon threshold ticket. The official YouTube counter was 15,986,322 at hour 89.15 of 168. New archive points at hours 59.04/70.98/82.78 measured 13,402,781/14,764,829/15,538,649 and close the prior trajectory gap. The latest 18.2 hours ran at about 1.61M views/day versus 1.22M/day required, while defensible recent-decay fits finish around 19.8M-20.4M. Central p_no=0.45 deliberately retains substantial model and counter-batching uncertainty. Buy only while the fee-inclusive cost remains below the standard 0.35 robust bound; unique cluster, no unrelated correlation discount. Re-measure every scheduled tick through the exact Sep-4 01:00:48 UTC endpoint.",
+  "divergence_ack": "2026-08-31",
+  "divergence_ack_reason": "The 0.65 central prior versus the 0.44 mark was explicitly reviewed at the 22:00 add. The counter added 300,005 views in 3.84 hours, the latest 22-hour pace is about 1.66M/day versus 1.19M/day required, and recent-decay fits center around 20.3M-20.6M. The second tranche still cleared at the 0.55 stress prior versus 0.4624 all-in, but total gross exposure was deliberately held to $10.123515 because the remaining disagreement is threshold-curve and counter-batching risk.",
+  "note": "Measured short-horizon threshold ticket. DEC-0107 bought 18 NO at 0.27 ($5.03739 gross). At the Aug-31 22:00 recheck the official counter reached 16,286,327 at hour 93.0, adding 300,005 in 3.84 hours (1.87M/day) while the required remaining pace fell to 1.19M/day. The latest 22 hours averaged about 1.66M/day and recent-decay fits now center around 20.3M-20.6M; central p_no is raised 0.45->0.65, with the standard stress at 0.55. Counter batching and curve specification remain real, so any add stays a second small tranche and must clear the live fee-inclusive gate. Unique cluster, no unrelated correlation discount. Re-measure every scheduled tick through the exact Sep-4 01:00:48 UTC endpoint.",
   "key_facts": [
    {
     "claim": "The contract resolves from the official Rockstar YouTube view counter during the first 168 hours after upload; the referenced upload began at 2026-08-28 01:00:48 UTC.",
@@ -598,7 +600,7 @@
     "checked": "2026-08-31"
    },
    {
-    "claim": "First-hand official-page reads measured 15,703,132 at hour 85.2 and 15,986,322 at hour 89.15; reaching 20M from the latter requires 1.22M views/day over the remaining 78.85 hours.",
+    "claim": "First-hand official-page reads measured 15,703,132 at hour 85.2, 15,986,322 at hour 89.15, and 16,286,327 at hour 93.0; reaching 20M from the latest read requires 1.19M views/day over the remaining 75 hours.",
     "source": "https://www.youtube.com/watch?v=tJbzMqJGH4k",
     "source_date": "2026-08-31",
     "checked": "2026-08-31"

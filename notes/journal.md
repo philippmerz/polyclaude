@@ -11382,3 +11382,31 @@ Sep-4 01:00:48 UTC. The only fresh Iran alert repeated the already-processed fla
 official index still shows no qualifying statement after Aug-25, so Iran–Oman remains p_yes=0.04 and
 HOLD. No other position, resting order, prior, or backlog gate changed. Focused entry/state/news
 validation passed 63 tests; Telegram message 885 reported the fill and next measurement clock.
+
+## 2026-08-31 22:00–22:06 UTC — GTA pace strengthens; second $5 tranche filled (DEC-0108)
+
+The four-hour forward measurement materially strengthened the held threshold thesis. The official
+YouTube counter reached **16,286,327 at hour 93.0**, up 300,005 since 18:10, or about 1.87M/day.
+The latest 22-hour window now averages roughly 1.66M/day while the remaining requirement has fallen
+to 3.714M over 75 hours, **1.19M/day**. Broad log-rate fits now finish near 20.3M–20.4M and anchored
+decay fits around 20.45M–20.56M; short-window variants remain wider, so this is not certainty.
+Central p(20M or more) was raised **0.45→0.65**, with the standard instance stress at 0.55.
+
+The market repriced the same direction from a 0.27 entry to 0.43/0.45, but the live 0.45 NO ask plus
+0.012375/share quadratic fee still cost only 0.462375. The stressed edge remained about 8.8pp.
+The full helper recognized the existing ticket, inferred the unique `gta-views` cluster, and passed
+UMA, exit depth, fee, 15% ticket and 30% cluster caps. I withdrew and wrapped 5.25 USDC.e from
+Polygon Aave to preserve the operating float, then bought **11 additional NO at 0.45 FAK**. The
+order matched in full (`0x372a6fefb9a38df692223304e64fa9353ffce0a4a861675ab6bb1024119bf216`).
+Incremental cost was $4.95 notional plus $0.136125 fee = $5.086125 gross. The combined position is
+**29 NO, $9.81 notional / $10.123515 gross**, about 4.7% of bankroll; 6.126490 pUSD remains.
+
+All controls remain clean after the add: 15 positions, six SELLs and zero BUY commitments, state
+snapshot reconciled to 29 shares, UMA/redeem/watchlist/pending/coverage empty, Ostium unchanged,
+and all four daemons singular/fresh. Authoritative bankroll is **$215.39**, realized **+$33.27**
+after fees; PM mid is $178.19 versus $169.88 executable. The two post-18:23 Iran alerts only repeat
+the active US–Iran flare-up. Oman's official statement and Hormuz indexes still end with the Aug-25
+proposed framework, while Gamma remains active/unresolved at 0.006/0.007 through Sep-1 03:59 UTC;
+Iran–Oman remains p_yes=0.04 and HOLD. Duma's independent-forecast add window opens after midnight,
+so that is the next non-GTA backlog gate. JSON/state validation passed; Telegram message 886
+reported the add, revised trajectory and next clocks.
