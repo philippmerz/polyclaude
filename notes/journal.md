@@ -11630,3 +11630,26 @@ bankroll is **$207.67**, realized **+$22.04 (+13.0%)**; active PM midpoint is $1
 depth-realizable. No trade, order, redemption, swap, bridge, prior, or position changed. Telegram
 message 892 reported the incident and GTA gate. The durable ROI continuation remains active until the operator
 manually cancels it.
+
+## 2026-09-01 22:00–22:04 UTC — GTA burst strengthens but remains below robust re-entry
+
+The official GTA VI counter reached **17,445,386 at about hour 117.0**, adding 211,751 in the latest
+four hours. The 4-hour and 12-hour rates are now roughly 1.28M/day and 1.26M/day versus 1.202M/day
+required through the exact Sep-4 endpoint. The longer evidence remains weaker: 16-hour and 24-hour
+rates are only about 1.15M/day and 1.16M/day, and recent log/power decay fits still land mostly below
+20M. I retain central p(≥20M) around **0.20–0.25**, not the optimistic flat-rate projection.
+
+The market repriced ≥20M NO from 0.27 at 18:00 to a 0.19 ask despite the burst. Quadratic fee makes
+the all-in cost **0.197695**. The standard 10pp stress therefore requires central p above 0.2977;
+the honest range does not clear it. YES at 0.82 also fails. DEC-0110 remains closed with no revenge
+trade or stale order. Official source: [Rockstar's video](https://www.youtube.com/watch?v=tJbzMqJGH4k).
+
+The only new news item was a CBS MINOR story on renewed US–Iran threats, correctly routed by the
+restarted watcher to the live Trump-out risk rather than the settled Iran ticket. It does not
+materially change p_no=0.97. UMA and Hormuz resolution state are unchanged; state is CLEAN at 13
+indexed positions plus one de-indexed dust archive; redemption again sent no transaction. Marginal
+APY reports seven holds, zero close candidates and both protected groups intact. The authoritative
+bankroll is **$208.93**, realized **+$22.04 (+13.0%)**; PM midpoint is $168.22 versus $162.65
+depth-realizable. No trade, order, redemption, swap, bridge, prior or position changed. Per the
+material-only rule, no Telegram was sent. The durable ROI continuation remains active until the
+operator manually cancels it.
