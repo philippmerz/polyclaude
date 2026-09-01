@@ -1,5 +1,5 @@
 {
-  "next_id": 113,
+  "next_id": 114,
   "decisions": [
     {
       "id": 1,
@@ -2193,6 +2193,26 @@
         "consensus",
         "freshness",
         "scanner"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 113,
+      "timestamp": "2026-09-01T18:06:18Z",
+      "type": "scaffolding",
+      "thesis": "The step-1 daemon freshness snapshot can become stale inside the same tick: the 14:00 run edited news_watcher.py after checking process age, then committed without restarting it. The old process emitted two post-resolution Iran portfolio alerts before the 18:00 review. Step 11 now requires a second freshness pass whenever a daemon script changed, plus an exact-one absolute-path verification; the watcher was restarted and its prompt now excludes the settled Iran row.",
+      "confidence": "high",
+      "prediction": "On the next tick that edits a long-lived daemon, the final pre-commit check detects and restarts the stale process; no committed daemon edit remains inactive through the following scheduled review.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-15",
+      "tags": [
+        "daemon",
+        "process-safety",
+        "stale-code",
+        "checkin"
       ],
       "slug": null,
       "outcome": null,

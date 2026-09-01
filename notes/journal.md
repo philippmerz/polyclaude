@@ -11601,3 +11601,32 @@ Aug-30. Validation passed **424 pytest cases plus all 123 standalone money check
 891 delivered the material summary; a malformed shell-expanded first send was immediately deleted.
 No trade, fill, order, redemption, swap or bridge occurred. The durable ROI
 continuation remains active until the operator manually cancels it.
+
+## 2026-09-01 18:00–18:07 UTC — stale watcher corrected; GTA reversal still fails re-entry (DEC-0113)
+
+The periodic review found two new Iran/Hormuz alerts after 14:31: an Al Jazeera CRITICAL at 17:16
+and a Guardian MATERIAL at 17:56. The underlying strikes are real, but both portfolio-impact labels
+are false because Iran–Oman was already final NO and there is no economic Iran/Hormuz exposure.
+The cause was operational: `news_watcher.py` had been edited during the 14:00 tick to exclude settled
+rows, after the tick's initial daemon-age check, and was committed without a restart. The pre-fix
+process continued presenting the settled row to its filter worker. I stopped it, restarted with the
+required absolute command, verified exactly one PID, and directly verified that its current position
+prompt contains no Iran or Hormuz row. DEC-0113 adds the missing end-of-tick invariant to step 11:
+if any daemon script changed, rerun freshness and verify exactly one process before commit.
+
+The due GTA counter read found **17,233,635 views at about hour 113.0**, up 418,446 over roughly
+eight hours, or 1.25M/day versus 1.208M/day now required. That is a modest reversal, but the broader
+12-hour and 20-hour windows remain only about 1.11M/day and 1.14M/day, consistent with batching and
+ordinary decay. The ≥20M outcome (`NO` on the literal “less than 20M” question) costs about
+**0.279855 all-in** at the 0.27 ask plus quadratic fee. With the mandatory 10pp stress, re-entry
+requires central p(≥20M) above 0.3799; the mixed-window evidence remains below that. No revenge trade
+or stale order. Official source: [Rockstar's current video](https://www.youtube.com/watch?v=tJbzMqJGH4k).
+
+Everything else is quiet. UMA reports zero transitions, Ostium remains empty, position state is
+CLEAN at 13 indexed rows plus one de-indexed dust archive, and `redeem-all` skipped the one losing
+settled row with no transaction. Marginal APY found seven holds and no close candidate; both protected
+groups remain whole; exit routing, watchlist and pending decisions produced no action. The authoritative
+bankroll is **$207.67**, realized **+$22.04 (+13.0%)**; active PM midpoint is $166.85 versus $160.09
+depth-realizable. No trade, order, redemption, swap, bridge, prior, or position changed. Telegram
+message 892 reported the incident and GTA gate. The durable ROI continuation remains active until the operator
+manually cancels it.
