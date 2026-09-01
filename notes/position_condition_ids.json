@@ -1,5 +1,5 @@
 {
- "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Refreshed by position_state_audit.py --fix.",
+ "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
  "_refreshed": "2026-09-01",
  "positions": [
   {
@@ -32,14 +32,6 @@
    "size": 47.7196,
    "conditionId": "0x1c842b91d226266fbe0e55d9bce9c52ce48b825d069e039c24d7fe57a5be6eaa",
    "asset": "27944626213701198119611689981836884300701096451168812471764168520890801988056",
-   "negativeRisk": false
-  },
-  {
-   "slug": "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
-   "outcome": "Yes",
-   "size": 31,
-   "conditionId": "0x1c38a64c494e01c9bd81362cfadeadb3b87023d1d9ffae1df5a428c03152fc74",
-   "asset": "71542982741394376771627006689338880117415417908788827680925028639627563224055",
    "negativeRisk": false
   },
   {
@@ -113,6 +105,16 @@
    "conditionId": "0x432986c91a2a364d37179db26f78e8b7b69a5da3c0bc7e09a3458918dc6ad34a",
    "asset": "46758607612833917422236285013995068496804632645622273981549757589704779851841",
    "negativeRisk": false
+  },
+  {
+   "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+   "outcome": "No",
+   "size": 0.003571,
+   "conditionId": "0x60c2c085ee8c16bc8f2419739a94971d4c9d00f637ead10fc0f540afa1be64e8",
+   "asset": "90869494087977018607792751230236923002303032923064138180950209430688758061828",
+   "negativeRisk": false,
+   "deindexed": true,
+   "umaResolutionStatus": null
   }
  ]
 }

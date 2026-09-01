@@ -77,14 +77,14 @@ def load_priors() -> dict:
 
 
 def filter_operational_positions(positions: list[dict]) -> list[dict]:
-    """Exclude sub-0.5-share remnants that have no operational value."""
+    """Exclude dust and economically settled rows from the active book."""
     kept = []
     for pos in positions:
         try:
             size = float(pos.get("size", 0) or 0)
         except (TypeError, ValueError):
             continue
-        if size > MIN_POSITION_SHARES:
+        if size > MIN_POSITION_SHARES and pos.get("redeemable") is not True:
             kept.append(pos)
     return kept
 

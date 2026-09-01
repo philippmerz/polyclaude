@@ -130,7 +130,12 @@ def _live_positions() -> list[dict]:
                             raise ValueError(
                                 f"live position row {index} has invalid curPrice"
                             )
-                    live.append(position)
+                    # The data API can retain settled claims with a positive
+                    # token balance.  They are claims to settle (or worthless
+                    # losing tokens), not economically live positions, and
+                    # must not keep stale priors/snapshots alive forever.
+                    if position.get("redeemable") is not True:
+                        live.append(position)
             return live
         except httpx.HTTPStatusError as exc:
             status = exc.response.status_code
@@ -158,6 +163,46 @@ def _load(name: str, default):
         return json.loads((NOTES / name).read_text())
     except Exception:
         return default
+
+
+def deindexed_claim_rows(
+    snapshot_rows: list[dict], live_slugs: set[str], uma_cache: dict
+) -> list[dict]:
+    """Retain claim metadata when data-api drops an unresolved/winning row.
+
+    The snapshot exists specifically for de-index-at-resolution failures, so a
+    fixer that rebuilds it solely from data-api defeats its purpose. Resolved
+    losing rows are safe to prune; resolved winning rows remain archived until
+    redemption is handled and the record is deliberately removed.
+    """
+    retained: list[dict] = []
+    if not isinstance(snapshot_rows, list) or not isinstance(uma_cache, dict):
+        return retained
+    for row in snapshot_rows:
+        if not isinstance(row, dict):
+            continue
+        slug = row.get("slug")
+        if not isinstance(slug, str) or not slug or slug in live_slugs:
+            continue
+        state = uma_cache.get(slug)
+        if not isinstance(state, dict) or state.get("data_api_visible") is not False:
+            continue
+        status = state.get("umaResolutionStatus")
+        if status == "resolved":
+            prices = state.get("outcomePrices")
+            outcome = str(row.get("outcome") or "").lower()
+            index = 0 if outcome == "yes" else 1 if outcome == "no" else None
+            try:
+                won = index is not None and float(prices[index]) >= 0.999
+            except (IndexError, TypeError, ValueError):
+                won = False
+            if not won:
+                continue
+        preserved = dict(row)
+        preserved["deindexed"] = True
+        preserved["umaResolutionStatus"] = status
+        retained.append(preserved)
+    return retained
 
 
 def set_only_issues(
@@ -410,9 +455,14 @@ def main() -> int:
 
     # 1. conditionId snapshot (claim insurance — must cover every open position)
     snap = _load("position_condition_ids.json", {"positions": []})
-    snapmap = {r["slug"]: float(r.get("size", 0)) for r in snap.get("positions", [])}
+    snap_rows = snap.get("positions", []) if isinstance(snap, dict) else []
+    uma_cache = _load(".uma_status_cache.json", {})
+    deindexed = deindexed_claim_rows(snap_rows, set(live), uma_cache)
+    deindexed_slugs = {r["slug"] for r in deindexed}
+    tracked_slugs = set(live) | deindexed_slugs
+    snapmap = {r["slug"]: float(r.get("size", 0)) for r in snap_rows}
     for s in snapmap:
-        if s not in live:
+        if s not in tracked_slugs:
             issues.append(f"SNAPSHOT stale (position closed): {s[:52]}")
     for s in live:
         if s not in snapmap:
@@ -427,9 +477,7 @@ def main() -> int:
     # flagged triggers (hormuz) was obviously live; had both been genuinely stale
     # the broken check would have printed the right answer by luck. Empty-collection
     # bug, fifth instance in this repo. Assert non-empty rather than trusting it.
-    _snap = _load("position_condition_ids.json", {})
-    _rows = _snap.get("positions", []) if isinstance(_snap, dict) else _snap
-    live_assets = {str(p.get("asset")) for p in _rows
+    live_assets = {str(p.get("asset")) for p in [*pos, *deindexed]
                    if isinstance(p, dict) and p.get("asset")}
     if not live_assets:
         issues.append("AUDIT DEGRADED — no live assets parsed from position_condition_ids.json; "
@@ -515,7 +563,7 @@ def main() -> int:
     for k, v in priors_raw.items():
         if k.startswith("_"):
             continue
-        if not any(k in s or s in k for s in live):
+        if not any(k in s or s in k for s in tracked_slugs):
             note = (v.get("note", "") if isinstance(v, dict) else "")
             if "closed" not in note.lower() and "re-entry" not in note.lower():
                 issues.append(f"PRIOR orphan (no live position, no closure note): {k[:52]}")
@@ -723,13 +771,16 @@ def main() -> int:
         rows = [{"slug": p["slug"], "outcome": p["outcome"], "size": p["size"],
                  "conditionId": p.get("conditionId"), "asset": p.get("asset"),
                  "negativeRisk": p.get("negativeRisk")} for p in pos]
+        rows.extend(deindexed)
         (NOTES / "position_condition_ids.json").write_text(json.dumps(
             {"_purpose": "Claim insurance: de-index-during-resolution is a known failure "
                          "(Mojtaba, Marvel) — redemption must never depend on data-api indexing. "
+                         "Unresolved/final-winning deindexed rows are retained until deliberate cleanup. "
                          "Refreshed by position_state_audit.py --fix.",
              "_refreshed": today, "positions": rows}, indent=1) + "\n")
         (NOTES / "acknowledged_holds.json").write_text(json.dumps(fresh_acks, indent=1) + "\n")
-        print(f"FIXED: snapshot refreshed ({len(rows)} positions), "
+        print(f"FIXED: snapshot refreshed ({len(pos)} indexed + {len(deindexed)} "
+              f"deindexed claim row(s)), "
               f"acked-holds pruned ({len(acks) - len(fresh_acks)} dropped)")
 
     if issues:
@@ -738,7 +789,8 @@ def main() -> int:
             print(f"  - {i}")
         print("\n(judgment items — triggers/priors — are reported, never auto-removed)")
         return 1
-    print(f"position state CLEAN ({len(live)} live positions)")
+    suffix = f", {len(deindexed)} deindexed claim row(s)" if deindexed else ""
+    print(f"position state CLEAN ({len(live)} indexed positions{suffix})")
     return 0
 
 

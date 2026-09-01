@@ -75,14 +75,14 @@ def load_decisions() -> list[dict]:
 
 
 def filter_operational_positions(positions: list[dict]) -> list[dict]:
-    """Drop zero-value sub-0.5-share remnants from the operational book."""
+    """Drop dust and economically settled rows from the operational book."""
     kept = []
     for pos in positions:
         try:
             size = float(pos.get("size", 0) or 0)
         except (TypeError, ValueError):
             continue
-        if size > MIN_POSITION_SHARES:
+        if size > MIN_POSITION_SHARES and pos.get("redeemable") is not True:
             kept.append(pos)
     return kept
 

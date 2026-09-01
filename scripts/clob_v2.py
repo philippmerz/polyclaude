@@ -25,6 +25,7 @@ import datetime
 import fcntl
 import functools
 import json
+import math
 import os
 import secrets
 import sys
@@ -724,11 +725,30 @@ def _redeem_token_balance(ctf: Any, address: str, token_id: str | None) -> int:
     return int(ctf.functions.balanceOf(address, token).call())
 
 
+def _held_outcome_won(position: dict) -> bool:
+    """Fail closed unless data-api proves this held outcome settled at $1.
+
+    Polymarket sets ``redeemable=true`` on both outcome rows after resolution.
+    Redeeming a losing row succeeds on-chain but pays zero, so the flag alone
+    is not authority to spend gas.
+    """
+    if position.get("redeemable") is not True:
+        return False
+    try:
+        price = float(position["curPrice"])
+    except (KeyError, TypeError, ValueError):
+        return False
+    return math.isfinite(price) and price >= 0.999
+
+
 def redeem_all(dry_run: bool = False) -> dict:
-    """Iterate user's positions; redeem any with redeemable=true. Routes negRisk
-    markets through NegRiskAdapter and binary non-negRisk through standard CTF.
-    Returns a summary of attempts. dry_run lists redeemables and exits before
-    any tx — safe to hand to read-only delegated ticks."""
+    """Redeem final winning positions and skip losing outcome rows.
+
+    Routes negRisk markets through NegRiskAdapter and binary non-negRisk through
+    standard CTF. ``redeemable=true`` is insufficient because data-api applies
+    it to losing rows too; a held ``curPrice`` at the final $1 payout is also
+    required. dry_run lists the classified rows and exits before any tx.
+    """
     from web3 import Web3
     from eth_account import Account
     address, pk = _load_wallet()
@@ -741,15 +761,23 @@ def redeem_all(dry_run: bool = False) -> dict:
                                  abi=_CTF_REDEEM_ABI)
 
     positions = _data_api_positions(address)
-    redeemables = [p for p in positions if p.get("redeemable")]
-    print(f"found {len(redeemables)}/{len(positions)} redeemable positions")
+    flagged = [p for p in positions if p.get("redeemable") is True]
+    redeemables = [p for p in flagged if _held_outcome_won(p)]
+    losing = [p for p in flagged if not _held_outcome_won(p)]
+    print(f"found {len(redeemables)}/{len(positions)} winning redeemable positions"
+          f"; skipped {len(losing)} losing/uncertain row(s)")
     if dry_run:
         return {"dry_run": True,
                 "redeemable": [{"title": (p.get("title") or "")[:60],
                                 "conditionId": p["conditionId"],
                                 "size": p.get("size"),
                                 "negativeRisk": bool(p.get("negativeRisk"))}
-                               for p in redeemables]}
+                               for p in redeemables],
+                "skipped_losing_or_uncertain": [
+                    {"title": (p.get("title") or "")[:60],
+                     "outcome": p.get("outcome"), "curPrice": p.get("curPrice")}
+                    for p in losing
+                ]}
 
     summary = []
     for p in redeemables:

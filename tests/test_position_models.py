@@ -63,6 +63,7 @@ def test_operational_filter_excludes_dust(module) -> None:
         {"slug": "boundary-is-not-live", "size": 0.5},
         {"slug": "live", "size": 0.500001},
         {"slug": "also-live", "size": "15"},
+        {"slug": "settled-loser", "size": "31", "redeemable": True},
         {"slug": "invalid", "size": "not-a-number"},
     ]
 
@@ -85,6 +86,7 @@ def test_fetch_positions_requests_threshold_and_defensively_filters(monkeypatch,
             return [
                 {"slug": "resolved-dust", "size": 0.247019},
                 {"slug": "live", "size": 2.0},
+                {"slug": "settled-loser", "size": 31.0, "redeemable": True},
             ]
 
     class FakeClient:

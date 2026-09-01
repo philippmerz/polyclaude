@@ -22,9 +22,19 @@ import httpx
 from web3 import Web3
 
 import book_walk
+from positions import resolved_realizable_value
 
 # Filled by the PM valuation pass; consumed by the REALIZED split in main().
 PM_STATE: dict[str, float] = {}
+
+
+def active_pm_basis(rows: list[dict]) -> tuple[float, float]:
+    """Return cost and midpoint value only for economically unresolved rows."""
+    active = [row for row in rows if row.get("redeemable") is not True]
+    return (
+        sum(float(row.get("initialValue") or 0) for row in active),
+        sum(float(row.get("currentValue") or 0) for row in active),
+    )
 
 
 def realized_split(total: float, ref: float, gas_usd: float,
@@ -179,8 +189,10 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
         # below. Operator directive 2026-08-18: "it's only truly return when the
         # cash settles on the wallet" — so marked gains are explicitly NOT return,
         # and the number they will judge on is cumulative REALIZED P&L.
-        PM_STATE["cost"] = sum(float(p.get("initialValue") or 0) for p in rows)
-        PM_STATE["mid"] = mid
+        # A final row's P&L is realized economically even while data-api keeps
+        # displaying its winning/losing token. Classifying it as open until an
+        # arbitrary de-index event delayed Iran-Oman's 5.03 loss recognition.
+        PM_STATE["cost"], PM_STATE["mid"] = active_pm_basis(rows)
         # Flag (do NOT silently re-base) when midpoints materially overstate the
         # sleeve. This is the number I quote, so the caveat has to live here and
         # not only in positions.py — otherwise the same error just moves one
@@ -188,9 +200,14 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
         # minutes.
         try:
             realizable = 0.0
+            active_realizable = 0.0
             with httpx.Client(timeout=20.0) as c:
                 for p in rows:
                     if float(p.get("size", 0)) <= 0.5:
+                        continue
+                    resolved_value = resolved_realizable_value(p)
+                    if resolved_value is not None:
+                        realizable += resolved_value
                         continue
                     m = c.get("https://gamma-api.polymarket.com/markets",
                               params={"slug": p["slug"]}).json()[0]
@@ -203,9 +220,12 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
                     # across the book, 3.9pp of reported return. Third layer of the
                     # same error: midpoint -> best-bid -> fee-free walk, each fix
                     # leaving the next intact, every one flattering the number.
-                    realizable += book_walk.realizable(
+                    net = book_walk.realizable(
                         bk.get("bids", []), float(p["size"]), m)["net"]
-            PM_STATE["realizable"] = realizable
+                    realizable += net
+                    active_realizable += net
+            PM_STATE["realizable"] = active_realizable
+            PM_STATE["sleeve_realizable"] = realizable
             gap = mid - realizable
             if gap > 1.0:
                 warnings.append(

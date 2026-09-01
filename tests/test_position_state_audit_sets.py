@@ -98,6 +98,54 @@ def test_legacy_overlapping_arb_is_not_misclassified_as_equal_share_set() -> Non
     ) == []
 
 
+def test_unresolved_deindexed_claim_is_retained() -> None:
+    row = {
+        "slug": "deindexed",
+        "outcome": "No",
+        "asset": "123",
+        "conditionId": "0xabc",
+    }
+    cache = {
+        "deindexed": {
+            "data_api_visible": False,
+            "umaResolutionStatus": None,
+            "outcomePrices": [0.0005, 0.9995],
+        }
+    }
+
+    retained = audit.deindexed_claim_rows([row], set(), cache)
+
+    assert retained[0]["slug"] == "deindexed"
+    assert retained[0]["deindexed"] is True
+
+
+def test_resolved_winning_deindexed_claim_is_retained_but_loser_is_pruned() -> None:
+    yes = {"slug": "yes", "outcome": "Yes", "asset": "1"}
+    no = {"slug": "no", "outcome": "No", "asset": "2"}
+    cache = {
+        slug: {
+            "data_api_visible": False,
+            "umaResolutionStatus": "resolved",
+            "outcomePrices": [1, 0],
+        }
+        for slug in ("yes", "no")
+    }
+
+    retained = audit.deindexed_claim_rows([yes, no], set(), cache)
+
+    assert [row["slug"] for row in retained] == ["yes"]
+
+
+def test_indexed_or_untracked_snapshot_row_is_not_preserved_as_deindexed() -> None:
+    rows = [
+        {"slug": "live", "outcome": "No"},
+        {"slug": "closed", "outcome": "No"},
+    ]
+    cache = {"live": {"data_api_visible": False}}
+
+    assert audit.deindexed_claim_rows(rows, {"live"}, cache) == []
+
+
 def test_main_returns_non_clean_when_set_is_broken(monkeypatch, capsys) -> None:
     today = dt.date.today().isoformat()
     live = [
@@ -235,6 +283,13 @@ def test_live_positions_retries_rate_limit_then_validates_success(monkeypatch) -
         _response(429, "rate limited", **{"Retry-After": "0"}),
         _response(200, [
             {"slug": "live", "size": "2.5", "outcome": "Yes"},
+            {
+                "slug": "resolved",
+                "size": "3.0",
+                "outcome": "No",
+                "curPrice": "0",
+                "redeemable": True,
+            },
             {"slug": "dust", "size": "0.1"},
         ]),
     ]

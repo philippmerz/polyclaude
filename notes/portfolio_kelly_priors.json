@@ -517,11 +517,33 @@
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
+ "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320": {
+  "p_no": 0.998,
+  "verified": "2026-09-01",
+  "criteria_read": "2026-08-26",
+  "note": "ECONOMICALLY CLOSED by DEC-0086: 12.11 NO sold at 0.997 on Aug-28, leaving only 0.003571 non-economic on-chain dust. YES required the IMF PortWatch 7-day moving average of Hormuz transit calls to reach 60 on any date through Aug-31. The last verified average was 5.0 and the market is now 0.0005/0.9995 with no UMA proposal; p_no remains 0.998 pending formal resolution. Do not grade DEC-0077/0081/0084/0086 early. The exact deindexed claim archive is retained only to track final resolution and the dust: condition 0x60c2c085ee8c16bc8f2419739a94971d4c9d00f637ead10fc0f540afa1be64e8, NO token 90869494087977018607792751230236923002303032923064138180950209430688758061828. Do not spend gas redeeming dust.",
+  "cluster": "hormuz",
+  "rho_within": 1.0,
+  "key_facts": [
+   {
+    "claim": "Resolution bar: IMF PortWatch 7-day moving average of Hormuz transit calls >=60 on any date by Aug-31, 2026; the final state remains unproposed despite de-indexing.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+    "source_date": "2026-09-01",
+    "checked": "2026-09-01"
+   },
+   {
+    "claim": "Latest first-hand measurement through Aug-23 was 4,6,6,5,4,7,3 transit calls, a 7-day average of 5.0 versus the 60 threshold.",
+    "source": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/ArcGIS/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query?where=portid%3D%27chokepoint6%27&outFields=date%2Cn_total&orderByFields=date%20DESC&resultRecordCount=30&returnGeometry=false&f=json",
+    "source_date": "2026-08-23",
+    "checked": "2026-08-26"
+   }
+  ]
+ },
 "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
-  "p_yes": 0.04,
+  "p_yes": 0.0,
   "verified": "2026-09-01",
   "criteria_read": "2026-08-28",
-  "note": "DEC-0082. INTERPRETATION LOTTERY, deliberately held to $5.03. The market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Sep-1 02:00 official Oman recheck still finds no bilateral statement after Aug-25; that text calls the corridor framework proposed, says technical talks will continue, and says the minister hopes an announcement will follow. With under two hours to the cutoff, the fresh-announcement branch is de minimis. p_yes remains 0.04, almost entirely interpretation/resolution ambiguity around the Aug-25 text. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.005 bid: expected resolution value is $1.24 versus about $0.15 net exit value. Use the resolution-day runbook after Gamma/UMA state transition.",
+  "note": "CLOSED/RESOLVED NO on 2026-09-01. DEC-0082's 31 YES shares expire worthless for a $5.029998 gross loss. The proposed corridor, continuing technical talks, and Oman's hope for a later announcement did not satisfy the required bilateral acceptance announcement. No redemption: the held outcome lost. Keep only until data-api drops the zero-value row, then remove this prior.",
   "cluster": "hormuz-agreement",
   "rho_within": 0.0,
   "divergence_ack": "2026-08-31",

@@ -396,7 +396,10 @@ def main() -> int:
         return 0  # informational; never block
 
     try:
-        positions = _fetch_positions(addr)
+        positions = [
+            position for position in _fetch_positions(addr)
+            if position.get("redeemable") is not True
+        ]
     except Exception as e:
         print(f"ERROR: data-api fetch failed: {e}", file=sys.stderr)
         return 0

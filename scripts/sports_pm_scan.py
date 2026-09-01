@@ -41,6 +41,51 @@ import pm_fees  # per-market takerBaseFee; see pm_fees.py
 KALSHI_TOP_N_HARD_CAP = 5
 
 
+def validate_consensus_freshness(
+    consensus: dict,
+    lim_hours: float,
+    *,
+    now: datetime.datetime | None = None,
+) -> dict:
+    """Reject odds that are stale relative to a near-dated contract clock."""
+    if "yes_prob" not in consensus:
+        return consensus
+    source_url = consensus.get("source_url")
+    if not isinstance(source_url, str) or not source_url.startswith(("http://", "https://")):
+        return {"error": "consensus source omitted an auditable source_url"}
+    raw = consensus.get("source_at")
+    if not isinstance(raw, str) or not raw.strip():
+        return {"error": "consensus source omitted a verifiable source_at timestamp"}
+    try:
+        source_at = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        if source_at.tzinfo is None:
+            source_at = source_at.replace(tzinfo=datetime.timezone.utc)
+    except ValueError:
+        return {"error": "consensus source_at timestamp is malformed"}
+    # Many news/insight URLs encode their publication date. Catch a worker that
+    # relabels an old article with the current check time (the Sep-1 Alvarez
+    # false lead cited a /20260825- Oddschecker article as Sep-1 consensus).
+    url_dates = re.findall(r"(?<!\d)(20\d{6})(?!\d)", source_url)
+    for encoded in url_dates:
+        try:
+            url_date = datetime.datetime.strptime(encoded, "%Y%m%d").date()
+        except ValueError:
+            continue
+        if abs((source_at.date() - url_date).days) > 1:
+            return {"error": "consensus source_at conflicts with date encoded in source_url"}
+    now_dt = now or datetime.datetime.now(datetime.timezone.utc)
+    if now_dt.tzinfo is None:
+        now_dt = now_dt.replace(tzinfo=datetime.timezone.utc)
+    age_hours = (now_dt - source_at).total_seconds() / 3600
+    max_age_hours = min(24.0, max(3.0, float(lim_hours) / 2.0))
+    if age_hours < -0.25:
+        return {"error": "consensus source timestamp is in the future"}
+    if age_hours > max_age_hours:
+        return {"error": (f"consensus stale ({age_hours:.1f}h old; "
+                          f"max {max_age_hours:.1f}h for this contract clock)")}
+    return consensus
+
+
 def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] | None = None,
                             timeout: int = 120) -> dict:
     """Spawn a fast scoped worker to fetch bookie-consensus odds.
@@ -86,17 +131,23 @@ def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] 
                         "are NOT acceptable as a substitute — if you can only find "
                         "match-winner odds, output the error case instead.")
 
-    prompt = f"""Find the bookie-consensus implied probability for the following sports event/market.
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
+    max_age_hours = min(24.0, max(3.0, float(lim_hours) / 2.0))
+    prompt = f"""Find the CURRENT bookie-consensus implied probability for the following sports event/market.
 
 Market question: {question}
-Resolves within: {lim_hours:.1f} hours{deriv_clause}
+Resolves within: {lim_hours:.1f} hours
+Current UTC time: {now_utc.isoformat(timespec='seconds')}
+Maximum acceptable odds age: {max_age_hours:.1f} hours{deriv_clause}
 
 Search public sportsbook aggregators (Pinnacle, DraftKings, FanDuel, Bet365, etc.) or odds-comparison sites (oddsportal.com, oddschecker, ESPN BetTrend) for {target_desc}.
 
 DO NOT use Polymarket as a source — that's the venue we're comparing AGAINST and would create circular reasoning. If you can only find Polymarket odds, output the error case.
 
+FRESHNESS IS MANDATORY. A dated article or odds snapshot older than the maximum age is not current consensus, even if it is the newest search result. For a visibly live sportsbook/aggregator page, use the current check time as source_at and say "live page" in note. Otherwise use the page's actual published/updated timestamp. If neither can be established, output the error case.
+
 Output ONE line of JSON only, no preamble. The yes_prob value MUST be the probability that {json_key_desc} (range 0.0-1.0):
-{{"yes_prob": <0.0-1.0>, "source": "<which book or aggregator, NOT Polymarket>", "confidence": "high|med|low", "note": "<one-sentence sanity check confirming which side this probability is for>"}}
+{{"yes_prob": <0.0-1.0>, "source": "<which book or aggregator, NOT Polymarket>", "source_url": "<exact http(s) page containing the odds>", "source_at": "<ISO-8601 UTC timestamp>", "confidence": "high|med|low", "note": "<one-sentence sanity check confirming side and freshness>"}}
 
 If no non-Polymarket consensus is fetchable (event too obscure, props market with no public odds, etc.), output:
 {{"error": "<one-sentence reason>"}}
@@ -116,7 +167,8 @@ Be concise. ONE line only."""
         return {"error": "no JSON in agent output"}
     try:
         import json as _json
-        return _json.loads(m.group(0))
+        parsed = _json.loads(m.group(0))
+        return validate_consensus_freshness(parsed, lim_hours, now=now_utc)
     except Exception as e:
         return {"error": f"json parse: {e}"}
 

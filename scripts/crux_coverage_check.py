@@ -84,7 +84,11 @@ def _positions() -> list[dict]:
         r = c.get("https://data-api.polymarket.com/positions",
                   params={"user": addr.lower(), "limit": "100"})
         r.raise_for_status()
-        return [p for p in r.json() if float(p.get("size", 0) or 0) > 0.5]
+        return [
+            p for p in r.json()
+            if float(p.get("size", 0) or 0) > 0.5
+            and p.get("redeemable") is not True
+        ]
 
 
 def _salient(question: str) -> set[str]:

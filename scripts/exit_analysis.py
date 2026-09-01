@@ -212,6 +212,9 @@ def main() -> int:
     priors = json.loads(PRIORS.read_text())
     pos = httpx.get("https://data-api.polymarket.com/positions",
                     params={"user": ADDR, "limit": "100"}, timeout=25).json()
+    # Positive losing-token balances can remain indexed after finalization.
+    # They have no hold/sell decision left and must not generate advice.
+    pos = [p for p in pos if p.get("redeemable") is not True]
     group_book = position_groups.evaluate_groups(priors, pos)
     selected_group_ids = {
         group_id

@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -18,15 +19,36 @@ from polyclaude_client import Wallet  # noqa: E402
 DATA_API = "https://data-api.polymarket.com"
 
 
+def resolved_realizable_value(position: dict) -> float | None:
+    """Return fee-free payout for a final row, or None while still active.
+
+    Resolved markets can remain in data-api with an empty Gamma/CLOB book.
+    Walking that nonexistent book both fails reporting and understates winning
+    claims, which are redeemable at $1 per share without a trading fee.
+    """
+    if position.get("redeemable") is not True:
+        return None
+    try:
+        price = float(position["curPrice"])
+        size = float(position["size"])
+    except (KeyError, TypeError, ValueError):
+        return None
+    if not (math.isfinite(price) and math.isfinite(size) and size >= 0):
+        return None
+    return size if price >= 0.999 else 0.0
+
+
 def main() -> None:
     addr = Wallet.load().address
     with httpx.Client(timeout=15.0) as c:
         r = c.get(f"{DATA_API}/positions", params={"user": addr.lower(), "limit": "100"})
         r.raise_for_status()
-        positions = r.json()
-    if not positions:
+        rows = r.json()
+    if not rows:
         print("(no open positions)")
         return
+    positions = [p for p in rows if p.get("redeemable") is not True]
+    resolved = [p for p in rows if p.get("redeemable") is True]
 
     total_init = 0.0
     total_cur = 0.0
@@ -46,8 +68,15 @@ def main() -> None:
         total_max += maxpay
         print(f"{side:4} {entry:>6.3f} {mark:>6.3f} {shares:>8.2f} {cost:>7.2f} {cur:>7.2f} {maxpay:>7.2f} {pnl_pct:>6.2f}  {p['title'][:60]}")
     print()
-    print(f"TOTAL  cost ${total_init:.2f}  mtm ${total_cur:.2f}  max-payout ${total_max:.2f}  unrealised P&L ${total_cur-total_init:+.2f}  ({(total_cur/total_init-1)*100:+.2f}%)")
-    print(f"Max upside if all NO win: ${total_max:.2f}  ({(total_max/total_init-1)*100:+.2f}%)")
+    pnl_pct = (total_cur / total_init - 1) * 100 if total_init else 0.0
+    upside_pct = (total_max / total_init - 1) * 100 if total_init else 0.0
+    print(f"OPEN TOTAL  cost ${total_init:.2f}  mtm ${total_cur:.2f}  max-payout ${total_max:.2f}  unrealised P&L ${total_cur-total_init:+.2f}  ({pnl_pct:+.2f}%)")
+    print(f"Max payout if every held outcome wins: ${total_max:.2f}  ({upside_pct:+.2f}%)")
+    if resolved:
+        settled_pnl = sum(float(p.get("currentValue") or 0)
+                          - float(p.get("initialValue") or 0) for p in resolved)
+        print(f"RESOLVED rows excluded from open P&L: {len(resolved)}  "
+              f"settled P&L ${settled_pnl:+.2f}")
 
     # REALIZABLE vs MARKED (2026-08-13). `curPrice` is a MIDPOINT, and on an
     # illiquid book the midpoint is not a price anyone will pay. That day the

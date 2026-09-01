@@ -175,6 +175,8 @@ def _positions_summary_blocking() -> str:
             timeout=10,
         )
         for p in (r.json() or []):
+            if p.get("redeemable") is True:
+                continue
             cur = float(p.get("curPrice") or 0)
             cost = float(p.get("initialValue") or 0)
             lines.append(f"- {p['outcome']} {cur:.3f} (${cost:.2f}) — {p['title'][:70]}")

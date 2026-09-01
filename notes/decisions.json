@@ -1,5 +1,5 @@
 {
-  "next_id": 111,
+  "next_id": 113,
   "decisions": [
     {
       "id": 1,
@@ -1588,9 +1588,10 @@
         "shortdated"
       ],
       "slug": "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Resolved NO on 2026-09-01. The 31 YES shares expire worthless for a full $5.029998 gross loss; no redemption was attempted because the held outcome lost.",
+      "calibration_delta": "Entry p_yes 0.55 versus binary NO outcome: overconfident by 55pp. The prior was later cut to 0.04 before resolution, but the initial interpretation/announcement branch materially overweighted prospective official language and underweighted contrary high-volume flow.",
+      "lesson": "A proposed framework plus one party saying the route was agreed did not satisfy a contract requiring both governments to clearly announce acceptance. When official wording remains prospective and the market is strongly contrary, do not treat a possible later clarification as a high-probability independent catalyst; price the interpretation branch as ambiguity and size below the venue-minimum threshold if the robust case depends on it.",
+      "resolved_at": "2026-09-01T14:05:46Z"
     },
     {
       "id": 83,
@@ -2154,6 +2155,46 @@
         "thesis-break"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 111,
+      "timestamp": "2026-09-01T14:15:49Z",
+      "type": "scaffolding",
+      "thesis": "Resolution handling had three coupled blind spots: redeem-all treated losing rows as payable because data-api marks both sides redeemable; state-audit rebuilt claim insurance solely from indexed rows and pruned unresolved deindexed Hormuz; and marked-versus-realizable reporting attempted to walk an empty resolved book. The fixes now require a final one-dollar held outcome before redeem-all broadcasts, retain unresolved or final-winning deindexed claim metadata, and value final winners at fee-free payout while final losers contribute zero.",
+      "confidence": "high",
+      "prediction": "At the next resolved losing row, redeem-all skips without a transaction; at Hormuz-normal finalization its archived condition and token remain available despite de-indexing; positions and bankroll continue printing executable value rather than a list-index warning.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-15",
+      "tags": [
+        "redemption",
+        "safety",
+        "deindex",
+        "valuation"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 112,
+      "timestamp": "2026-09-01T14:15:49Z",
+      "type": "scaffolding",
+      "thesis": "The sports consensus worker produced a 38.8-point Alvarez discrepancy from an Aug-25 article, then could relabel odds with the current check time unless the evidence was auditable. Consensus output now requires an exact source URL and ISO timestamp, rejects sources too old for half the remaining contract clock, and rejects declared timestamps that conflict with a date embedded in the URL. Current Sep-1 odds are real, but no Alvarez trade clears the robust gate at a 0.9875 Polymarket price.",
+      "confidence": "high",
+      "prediction": "Near-dated sports scans no longer surface an old or unlinked bookmaker article as high-confidence current consensus; stale, missing-URL, missing-time, and date-conflict cases return NO_CONSENSUS.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-08",
+      "tags": [
+        "sports",
+        "consensus",
+        "freshness",
+        "scanner"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

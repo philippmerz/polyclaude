@@ -51,3 +51,22 @@ def test_redeem_preflight_exposes_zero_balance_noop() -> None:
     assert clob_v2._redeem_token_balance(
         _Contract(0), "0xwallet", "123"
     ) == 0
+
+
+@pytest.mark.parametrize("price", [1, 1.0, "1", 0.999, "0.9999"])
+def test_redeem_all_accepts_only_final_winning_rows(price) -> None:
+    assert clob_v2._held_outcome_won(
+        {"redeemable": True, "curPrice": price}
+    )
+
+
+@pytest.mark.parametrize("price", [0, 0.5, 0.998, None, "bad", float("nan")])
+def test_redeem_all_rejects_losing_or_uncertain_rows(price) -> None:
+    assert not clob_v2._held_outcome_won(
+        {"redeemable": True, "curPrice": price}
+    )
+
+
+def test_redeem_all_requires_explicit_redeemable_flag() -> None:
+    assert not clob_v2._held_outcome_won({"curPrice": 1})
+    assert not clob_v2._held_outcome_won({"redeemable": "true", "curPrice": 1})

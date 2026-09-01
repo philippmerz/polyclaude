@@ -11539,3 +11539,65 @@ authoritative bankroll is **$206.42**, realized **+$27.07**; the PM sleeve costs
 $165.56 and is worth $157.06 at executable depth. The wallet holds 9.732500 pUSD and 16.102584
 Polygon aUSDC.e. No other position, order, bridge or swap changed. The durable ROI continuation
 remains active until the operator manually cancels it.
+
+## 2026-09-01 14:00–14:31 UTC — Iran–Oman settles NO; resolution/accounting safety sweep (DEC-0111/0112)
+
+The scheduled check found one new MATERIAL alert after the 10:13 checkpoint: Fox repeated Trump's
+Iran rhetoric and described US strikes and Iranian retaliation near Hormuz. It is post-cutoff
+corroboration of the already-known escalation, not a fact that could rescue the agreement ticket.
+Gamma/UMA then finalized **Iran–Oman NO**. DEC-0082's 31 YES shares are worthless, an exact
+**$5.029998 gross loss**. The 0.55 entry prior was overconfident by 55pp. The actionable lesson is
+not merely that the news went the other way: a proposed corridor, one party's assertion that the
+route was agreed, and the possibility of later clarification did not satisfy a contract requiring
+both governments to clearly announce acceptance. Prospective wording and strongly contrary volume
+should have made the interpretation branch a small ambiguity tail, not the central case. The prior
+is now zero and DEC-0082 is graded.
+
+Resolution exposed three coupled safety/reporting gaps and one bad archival recovery. Polymarket's
+data API marks both winning and losing settled rows `redeemable=true`; `redeem-all` had therefore
+treated a losing token as payable. It now requires the held row itself to be final at $1 and skips
+losers/uncertain rows before nonce, gas or broadcast. This tick's live redemption pass found zero
+winning claims and sent **no transaction**. Position and bankroll reporting now exclude settled rows
+from open cost/MTM and recognize their P&L immediately, while final winners retain fee-free claim
+value. Kelly, Brownian, marginal-APY, exit, crux and news-advisory inputs also exclude settled rows,
+so the worthless Iran token can no longer appear as held exposure or attract future news work.
+
+The state fixer previously rebuilt claim insurance solely from currently indexed rows, defeating
+the archive when a still-unresolved market disappeared. DEC-0111 now preserves unresolved and
+final-winning de-indexed claim rows while pruning final losers. During verification I caught that
+the recovered Hormuz-normal quantity was itself stale: DEC-0086 had sold 12.11 NO on Aug-28 and left
+only **0.003571 on-chain dust**, not 12.1135 live shares. The snapshot/prior/backlog now say exactly
+that; the unresolved dry-run still reverts as expected, and no gas will be spent redeeming dust.
+State is CLEAN at **13 active indexed positions plus one de-indexed dust archive**.
+
+The opportunity sweep produced no entry. Primary and thin-tail discovery found no fact-backed price
+that survived criteria, executable-cost and pessimistic-prior gates. HLE–T1's roughly +4.1pp
+single-source sports delta disappeared under the 10-point stress. Macro surfaced the September Fed
+distribution without a reliable external consensus. Monotonicity scanned 1,010 events and found four
+midpoint-only flags but zero executable arbitrages; the explicitly incomplete consistency slice
+processed 5,002 markets / 584 baskets and found no provisional positive. Ten favorite-fade rows were
+population hints only.
+
+The apparent Julián Álvarez opportunity prompted a useful scanner fix rather than a trade. A stale
+Aug-25 bookmaker article initially looked like a 38.8pp discrepancy. DEC-0112 now requires an exact
+source URL and timestamp, caps acceptable age to the near contract clock, and rejects dates that
+conflict with a date embedded in the URL. A genuinely current Sep-1 Oddschecker page still quoted
+Atlético at 2/11, while Atlético's official roster and same-day reporting had Álvarez training and
+remaining at the club. At the Polymarket YES price near 0.9875, however, absolute upside was too
+small to clear the mandatory stress while the transfer window remained open; NO contradicted the
+current evidence. **No trade.** Sources:
+[Oddschecker](https://www.oddschecker.com/insight/football/20260901-deadline-day-transfer-odds-alvarez-to-arsenal-odds-and-more),
+[Atlético roster](https://www.atleticodemadrid.com/jugadores/julian-alvarez-2026-2027),
+[AS training report](https://as.com/futbol/el-atletico-prepara-san-mames-con-gimenez-y-lemar-fuera-del-grupo-f202609-n/).
+
+The authoritative bankroll is **$206.97**, up $0.55 from 10:13. Economically realized P&L is now
+**+$22.04 (+13.0%)**, down $5.03 because the Iran loss is final rather than hidden in the open book.
+The 13 active PM rows cost $157.20 and mark at $166.13 (+$8.94); full depth-walked net value is
+**$159.37 (+$2.18)**, a $6.76 midpoint overstatement. The PM wallet holds 9.732500 deployable pUSD
+and 16.102832 aUSDC.e; Ostium remains empty; six SELLs and zero BUY commitments rest. Marginal APY,
+watchlist, exit routing and constrained Kelly produced no position change; HLE deficits remain
+policy/correlation gated. Weekly P&L is current through Aug-28 and world-state rotation through
+Aug-30. Validation passed **424 pytest cases plus all 123 standalone money checks**. Telegram message
+891 delivered the material summary; a malformed shell-expanded first send was immediately deleted.
+No trade, fill, order, redemption, swap or bridge occurred. The durable ROI
+continuation remains active until the operator manually cancels it.
