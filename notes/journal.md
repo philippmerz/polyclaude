@@ -11410,3 +11410,55 @@ proposed framework, while Gamma remains active/unresolved at 0.006/0.007 through
 Iran–Oman remains p_yes=0.04 and HOLD. Duma's independent-forecast add window opens after midnight,
 so that is the next non-GTA backlog gate. JSON/state validation passed; Telegram message 886
 reported the add, revised trajectory and next clocks.
+
+## 2026-09-01 02:00–02:12 UTC — GTA prior corrected; independent Duma forecast closes add gate
+
+The scheduled measurement corrected the prior tick's over-reactive GTA update. Rockstar's official
+YouTube counter reached **16,518,943 at hour 97.06**, up 232,616 over 4.06 hours, or about
+**1.37M/day**. Reaching 20M now needs 3.481M over the remaining 70.94 hours, **1.178M/day**. The
+broader hour-71-to-97 window still averages about 1.61M/day, but the reasonable projections no
+longer cluster above the threshold: recent-window log fits land around 19.6M–20.3M and recent-rate
+decay cases around 19.4M–20.4M. Central p(20M or more) was therefore cut **0.65→0.45**, with the
+standard stress at 0.35. The 29 NO shares remain **HOLD / NO FURTHER ADD**: the live 0.28 bid / 0.29
+ask and 0.285 mark are below revised fair, and exit analysis values resolution at $13.05 versus only
+$7.83 from a full taker sale, but the unstable curve does not support a third tranche. The next exact
+counter read remains the 06:00 tick.
+
+The missing independent Duma forecast was found and the prior was corrected. A RASO survey of 54
+political-technology experts, conducted July 16–August 9, forecasts United Russia at **95–130 list
+seats plus 155–210 district seats**. This is a genuinely independent whole-seat input, not another
+republication of APEK, but its component ranges are very broad and centered near 295 total. Blending
+it with APEK's tighter central case shifts the held 295–309 / 310–324 / 325–339 distribution from
+0.08/0.40/0.28 to **0.18/0.31/0.19**, cutting union p **0.76→0.68**. The equal-share set remains
+HOLD: complete live bids total about 0.598 versus 0.68 fair. The add gate is conclusively closed on
+both evidence (0.68 < 0.75) and price (complete asks about 0.653 > 0.57); no leg was traded alone.
+PolitPro's nominal 231-seat conversion was rejected because it mechanically allocates all 450 seats
+from a national poll and does not model Russia's 225-seat district half. VCIOM's official table still
+ends Aug-23 at 39.2% support and remains polling rather than a seat forecast.
+
+No MATERIAL/CRITICAL news or opportunity alert arrived after the 22:06 checkpoint. Oman's official
+statements and Hormuz indexes still show no bilateral acceptance announcement after Aug-25; the
+joint text remains proposed/prospective. Iran–Oman therefore stays p_yes=0.04 and HOLD through the
+Sep-1 03:59 UTC cutoff: $1.24 central terminal value versus about $0.15 executable exit. GPT-6,
+Hormuz-normal and the Iran-fees skip also remain active/unresolved through the same formal cutoff,
+so their overdue decision rows cannot yet be graded.
+
+The full opportunity sweep fetched 986 primary markets and completed the thin-tail pass. Sports
+consensus found Hanwha Life–T1 at only +3.8pp versus a medium-confidence single-source line; volume
+was about $45k, below the $50k action threshold, and the 10-point instance haircut erased the edge.
+Macro had no consensus instrument. Monotonicity inspected 820 multi-market events: its sole midpoint
+flag had no executable book. The explicitly incomplete consistency slice scanned 5,000 open markets
+and found zero provisional positive baskets after sequential depth. Five favorite-fade rows were
+population hints only, with no vetted instance edge. No entry survived the pipeline.
+
+The authoritative bankroll marks **$210.40**, down $4.99 from 22:00, with realized P&L unchanged at
+**+$33.27**. Fifteen PM rows cost $172.04 and mark $173.16, while full immediately realizable value
+is $164.35 net; thin books overstate the sleeve by $8.81. The wallet retains 6.126490 pUSD and
+16.102123 aUSDC.e. State is clean after reconciliation, UMA has zero alerts, Ostium is empty,
+redemption found zero, watchlist and marginal-APY scans found no exit, and all four daemons are
+singular/fresh. The decision tracker has nine date-overdue rows, but every underlying Aug-31 market
+remains officially active until 03:59 UTC, so none was falsely graded early. Weekly P&L is current
+through Aug-28 and world-state rotation through Aug-30. Validation passed 392 pytest cases and all
+123 standalone money checks. No trade, order, redemption, swap, bridge, or code change occurred.
+Telegram message 887 reported the two material prior corrections; the
+durable ROI continuation remains active until the operator manually cancels it.

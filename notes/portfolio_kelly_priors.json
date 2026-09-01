@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-08-31",
+ "_updated": "2026-09-01",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "POLICY-GATED through 2026-09-01: require a genuinely independent forecast with union p>=0.75 and complete all-in ask<=0.57; cap at 34 equal shares.",
+   "add_gate": "FAILED 2026-09-01: independent RASO forecast moved union p to 0.68 (<0.75) and live complete asks total about 0.653 (>0.57). HOLD equal set; no add.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -517,11 +517,11 @@
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
- "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
+"us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993": {
   "p_yes": 0.04,
-  "verified": "2026-08-31",
+  "verified": "2026-09-01",
   "criteria_read": "2026-08-28",
-  "note": "DEC-0082. INTERPRETATION LOTTERY, deliberately held to $5.03. The market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Aug-25 joint statement remains ambiguous rather than qualifying on its face: it calls the corridor framework proposed, says technical talks will continue, and separately refers to an agreement to implement joint mine-clearing; Oman's minister said he hoped an announcement would follow. The Aug-31 10:00 official Oman recheck found no later bilateral acceptance statement. After the Aug-30 US strike on IRGC launchers at Larak, Iran retaliated toward US bases in Jordan, the UAE intercepted an Iranian drone, and a Hormuz tanker was reported hit by two mines. That escalation makes a new clear announcement before cutoff de minimis. p_yes is now 0.04, almost entirely interpretation/resolution ambiguity around the Aug-25 text. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.021 bid: expected resolution value is $1.24 versus about $0.65 net exit value. Re-underwrite immediately on any new joint/Omani declarative statement or Gamma/UMA state transition.",
+  "note": "DEC-0082. INTERPRETATION LOTTERY, deliberately held to $5.03. The market requires Oman and Iran to clearly announce acceptance of the same traffic-management agreement, not merely negotiate or reopen traffic. The Sep-1 02:00 official Oman recheck still finds no bilateral statement after Aug-25; that text calls the corridor framework proposed, says technical talks will continue, and says the minister hopes an announcement will follow. With under two hours to the cutoff, the fresh-announcement branch is de minimis. p_yes remains 0.04, almost entirely interpretation/resolution ambiguity around the Aug-25 text. No add: the standard 0.10 pessimism haircut fails completely. HOLD the existing 31 YES rather than cross the 0.005 bid: expected resolution value is $1.24 versus about $0.15 net exit value. Use the resolution-day runbook after Gamma/UMA state transition.",
   "cluster": "hormuz-agreement",
   "rho_within": 0.0,
   "divergence_ack": "2026-08-31",
@@ -534,10 +534,10 @@
     "checked": "2026-08-29"
    },
    {
-    "claim": "The Aug-31 official Oman Foreign Ministry recheck still describes the corridor as proposed, says technical negotiations would continue, and says an announcement is hoped for soon; its recent-statements list shows no later Oman-Iran acceptance statement.",
+    "claim": "The Sep-1 official Oman Foreign Ministry recheck still describes the corridor as proposed, says technical negotiations would continue, and says an announcement is hoped for soon; its statements and Hormuz indexes show no later Oman-Iran acceptance statement.",
     "source": "https://www.fm.gov.om/en/53722/",
     "source_date": "2026-08-25",
-    "checked": "2026-08-31"
+    "checked": "2026-09-01"
    },
    {
     "claim": "US forces struck two IRGC launchers on Iran's Larak Island after observing preparations to launch rockets carrying sea mines; the IRGC reported casualties and threatened retaliation. This is the first US strike in Iran since late July and materially lowers the last-minute agreement-announcement branch.",
@@ -584,14 +584,14 @@
   ]
  },
  "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1": {
-  "p_no": 0.65,
-  "verified": "2026-08-31",
+  "p_no": 0.45,
+  "verified": "2026-09-01",
   "criteria_read": "2026-08-31",
   "cluster": "gta-views",
   "rho_within": 0,
-  "divergence_ack": "2026-08-31",
-  "divergence_ack_reason": "The 0.65 central prior versus the 0.44 mark was explicitly reviewed at the 22:00 add. The counter added 300,005 views in 3.84 hours, the latest 22-hour pace is about 1.66M/day versus 1.19M/day required, and recent-decay fits center around 20.3M-20.6M. The second tranche still cleared at the 0.55 stress prior versus 0.4624 all-in, but total gross exposure was deliberately held to $10.123515 because the remaining disagreement is threshold-curve and counter-batching risk.",
-  "note": "Measured short-horizon threshold ticket. DEC-0107 bought 18 NO at 0.27 ($5.03739 gross). At the Aug-31 22:00 recheck the official counter reached 16,286,327 at hour 93.0, adding 300,005 in 3.84 hours (1.87M/day) while the required remaining pace fell to 1.19M/day. The latest 22 hours averaged about 1.66M/day and recent-decay fits now center around 20.3M-20.6M; central p_no is raised 0.45->0.65, with the standard stress at 0.55. Counter batching and curve specification remain real, so any add stays a second small tranche and must clear the live fee-inclusive gate. Unique cluster, no unrelated correlation discount. Re-measure every scheduled tick through the exact Sep-4 01:00:48 UTC endpoint.",
+  "divergence_ack": "2026-09-01",
+  "divergence_ack_reason": "The 0.45 central prior versus the 0.285 mark was explicitly reviewed at the 02:00 re-fit. The official counter reached 16,518,943 at hour 97.06, but the latest 4.06-hour pace cooled to 1.37M/day versus 1.178M/day required. Fits are now threshold-straddling rather than clustered above it: recent-window log fits land around 19.6M-20.3M and plausible recent-rate decay cases around 19.4M-20.4M. This invalidates the reactive 0.65 prior and blocks further adds, but 0.285 remains below the revised fair and a taker exit would surrender material expected value.",
+  "note": "Measured short-horizon threshold ticket. DEC-0107 bought 18 NO at 0.27 ($5.03739 gross) and DEC-0108 added 11 at 0.45 ($5.086125 gross). At the Sep-1 02:04 recheck the official counter reached 16,518,943 at hour 97.06, adding only 232,616 since hour 93.0, about 1.37M/day; the remaining requirement is 3.481M over 70.94 hours, or 1.178M/day. The broader 26-hour pace is still about 1.61M/day, but reasonable decay/log fits now straddle the threshold around 19.4M-20.4M. Central p_no is therefore cut 0.65->0.45, with the standard stress at 0.35. HOLD 29 NO: the 0.285 market is below revised fair, but model instability means NO FURTHER ADD until a fresh trajectory clearly restores the robust gate. Unique cluster, no unrelated correlation discount. Re-measure every scheduled tick through the exact Sep-4 01:00:48 UTC endpoint.",
   "key_facts": [
    {
     "claim": "The contract resolves from the official Rockstar YouTube view counter during the first 168 hours after upload; the referenced upload began at 2026-08-28 01:00:48 UTC.",
@@ -600,10 +600,10 @@
     "checked": "2026-08-31"
    },
    {
-    "claim": "First-hand official-page reads measured 15,703,132 at hour 85.2, 15,986,322 at hour 89.15, and 16,286,327 at hour 93.0; reaching 20M from the latest read requires 1.19M views/day over the remaining 75 hours.",
+    "claim": "First-hand official-page reads measured 15,703,132 at hour 85.2, 15,986,322 at hour 89.15, 16,286,327 at hour 93.0, and 16,518,943 at hour 97.06; reaching 20M from the latest read requires 1.178M views/day over the remaining 70.94 hours.",
     "source": "https://www.youtube.com/watch?v=tJbzMqJGH4k",
-    "source_date": "2026-08-31",
-    "checked": "2026-08-31"
+    "source_date": "2026-09-01",
+    "checked": "2026-09-01"
    },
    {
     "claim": "Wayback captures add 13,402,781 views at 2026-08-30 12:03 UTC, 14,764,829 at 23:59 UTC, and 15,538,649 at 2026-08-31 11:47 UTC, establishing a recent trajectory rather than relying on a single counter read.",
@@ -614,14 +614,14 @@
   ]
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.08,
-  "verified": "2026-08-31",
+  "p_yes": 0.18,
+  "verified": "2026-09-01",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Honest distribution: <280 1%, 280-294 2%, 295-309 8%, 310-324 40%, 325-339 28%, 340-354 16%, 355+ 5%; union p=0.76 versus cost 0.57 and standard 10pp-stress p=0.66. APEK's Aug-10 model gives 51-54% list vote and 190-197 district wins, but apparently independent coverage repeats that one model and APEK undershot 2021's actual total, so the 340+ tail remains 21% rather than being hand-waved away. Initial size is deliberately 20, not the 15% cap. Add toward at most 34 equal shares only if an independent early-September forecast confirms union p>=0.75 at total ask<=0.57. Re-underwrite and transact all legs as one equal-share set.",
+  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate but above the live 0.598 exit bids. HOLD the equal set, NO ADD. The live all-in asks total about 0.653, independently failing the <=0.57 price gate. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
     "claim": "This bucket resolves from United Russia's official seat count resulting from the September 2026 legislative election; unresolved results fall back to the lowest bracket after May 31, 2027.",
@@ -642,22 +642,28 @@
     "checked": "2026-08-28"
    },
    {
-    "claim": "Fresh independent polling does not supply the required independent seat forecast: VCIOM's live table still ends August 23 with United Russia support at 39.2%, directionally supporting the central range but not resolving list-vote translation or district wins. The 0.08/0.40/0.28 distribution and no-add gate therefore remain unchanged.",
+    "claim": "An independent RASO survey of 54 political-technology experts forecasts United Russia at 95-130 party-list seats and 155-210 district seats. The very broad component ranges center near 295 total, shifting probability below the prior APEK-centered distribution and failing to confirm the union add gate.",
+    "source": "https://www.vedomosti.ru/politics/articles/2026/08/12/1220440-v-sohranenii-fraktsii-sr-uvereni-tolko-chetvert-ekspertov",
+    "source_date": "2026-08-12",
+    "checked": "2026-09-01"
+   },
+   {
+    "claim": "VCIOM's live table still ends August 23 with United Russia support at 39.2%; it is directionally useful polling but not a whole-seat forecast.",
     "source": "https://wciom.ru/ratings/reiting-politicheskikh-partii/",
     "source_date": "2026-08-23",
-    "checked": "2026-08-31"
+    "checked": "2026-09-01"
    }
   ]
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.40,
-  "verified": "2026-08-31",
+  "p_yes": 0.31,
+  "verified": "2026-09-01",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Central union p=0.76; standard 10pp-stress p=0.66; cost=0.57. Individual p values exist only for monitoring the distribution. Re-underwrite and transact all legs as one equal-share set. Add toward at most 34 equal shares only if an independent early-September forecast confirms union p>=0.75 at total ask<=0.57.",
+  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. This fails the 0.75 add gate, while live complete asks also fail at about 0.653 versus the 0.57 ceiling. HOLD the 20-share equal set because complete bids total about 0.598, below revised fair. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
     "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
@@ -668,14 +674,14 @@
   ]
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.28,
-  "verified": "2026-08-31",
+  "p_yes": 0.19,
+  "verified": "2026-09-01",
   "criteria_read": "2026-08-28",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Central union p=0.76; standard 10pp-stress p=0.66; cost=0.57. Individual p values exist only for monitoring the distribution. Re-underwrite and transact all legs as one equal-share set. Add toward at most 34 equal shares only if an independent early-September forecast confirms union p>=0.75 at total ask<=0.57.",
+  "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. This fails the 0.75 add gate, while live complete asks also fail at about 0.653 versus the 0.57 ceiling. HOLD the 20-share equal set because complete bids total about 0.598, below revised fair. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
     "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
