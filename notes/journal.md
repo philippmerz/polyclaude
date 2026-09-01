@@ -11462,3 +11462,36 @@ through Aug-28 and world-state rotation through Aug-30. Validation passed 392 py
 123 standalone money checks. No trade, order, redemption, swap, bridge, or code change occurred.
 Telegram message 887 reported the two material prior corrections; the
 durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-01 06:00–06:08 UTC — GTA trajectory breaks; fair-value maker trim rested (DEC-0109)
+
+The second consecutive GTA slowdown converted model uncertainty into a real trajectory break. The
+official Rockstar counter reached **16,676,395 at hour 101.01**, only 157,452 views above the 02:04
+read, or **0.96M/day** versus **1.191M/day now required**. The last eight hours average about
+1.17M/day, also below requirement, and ordinary decay makes a flat continuation optimistic.
+Recent-window log fits now land around 19.55M–19.93M; most decaying-rate cases finish below 20M.
+Central p(20M or more) was therefore cut **0.45→0.20**, with the standard stress at 0.10.
+
+A taker sale still failed the expected-value test: the exact live NO bid was 0.18 and exit analysis
+valued a full sale near $5.01 net versus $5.80 central terminal value. But constrained Kelly now
+wants only about $0.95 of this ticket, $8.86 below the current $9.81 cost. DEC-0109 therefore used
+the public-information maker route: **24 of 29 NO shares now rest for sale at 0.20 post-only**, fair
+and fee-free, leaving five shares if filled. Order
+`0x604c4e14b878895e5cee0df71fd897f29bc8469898ef395c1c90ae7b491ed3ed` is LIVE with zero matched.
+This is not a thesis-break taker exit; it is a growth-optimal fair-value trim. Re-check the public
+counter and cancel/reprice the order at every scheduled tick so a stale fair does not persist.
+
+One new MATERIAL BBC alert reported that the US and Iran traded strikes. It corroborates the
+already-processed escalation and arrived after the Sep-1 03:59 agreement cutoff, so it cannot create
+a qualifying Oman–Iran announcement. Oman's official statement and Hormuz indexes still end with
+the Aug-25 proposed framework. Iran–Oman remains p_yes=0.04 and HOLD while unresolved: the 0.002 bid
+releases only about $0.06 versus $1.24 central interpretation-branch value.
+
+The resolution runbook found **GPT-6-by-Aug-31 proposed NO** and Iran-charges-Hormuz-fees proposed
+NO. Hormuz-normal and Iran–Oman remain unproposed; none of the four is redeemable. No decision row
+was graded at proposal stage because the dispute/finalization path is still open. `redeem-all` found
+zero. Position state reconciled cleanly to 15 live rows. Authoritative bankroll was **$208.53**, with
+realized P&L unchanged at **+$33.27**; PM midpoint was $171.21 versus $163.41 realizable. Seven SELLs
+and zero BUY commitments now rest. No other backlog gate, position, swap, bridge, or code changed.
+Telegram message 888 reported the prior cut, maker order and UMA state. The durable ROI continuation
+remains active until the operator manually cancels it.

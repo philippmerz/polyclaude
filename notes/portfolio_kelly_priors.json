@@ -583,15 +583,15 @@
    }
   ]
  },
- "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1": {
-  "p_no": 0.45,
+"will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1": {
+  "p_no": 0.20,
   "verified": "2026-09-01",
   "criteria_read": "2026-08-31",
   "cluster": "gta-views",
   "rho_within": 0,
   "divergence_ack": "2026-09-01",
-  "divergence_ack_reason": "The 0.45 central prior versus the 0.285 mark was explicitly reviewed at the 02:00 re-fit. The official counter reached 16,518,943 at hour 97.06, but the latest 4.06-hour pace cooled to 1.37M/day versus 1.178M/day required. Fits are now threshold-straddling rather than clustered above it: recent-window log fits land around 19.6M-20.3M and plausible recent-rate decay cases around 19.4M-20.4M. This invalidates the reactive 0.65 prior and blocks further adds, but 0.285 remains below the revised fair and a taker exit would surrender material expected value.",
-  "note": "Measured short-horizon threshold ticket. DEC-0107 bought 18 NO at 0.27 ($5.03739 gross) and DEC-0108 added 11 at 0.45 ($5.086125 gross). At the Sep-1 02:04 recheck the official counter reached 16,518,943 at hour 97.06, adding only 232,616 since hour 93.0, about 1.37M/day; the remaining requirement is 3.481M over 70.94 hours, or 1.178M/day. The broader 26-hour pace is still about 1.61M/day, but reasonable decay/log fits now straddle the threshold around 19.4M-20.4M. Central p_no is therefore cut 0.65->0.45, with the standard stress at 0.35. HOLD 29 NO: the 0.285 market is below revised fair, but model instability means NO FURTHER ADD until a fresh trajectory clearly restores the robust gate. Unique cluster, no unrelated correlation discount. Re-measure every scheduled tick through the exact Sep-4 01:00:48 UTC endpoint.",
+  "divergence_ack_reason": "The 0.20 central prior versus the 0.185 mark was explicitly reviewed at the 06:00 re-fit. The official counter reached 16,676,395 at hour 101.01, adding only 157,452 in 3.95 hours (0.96M/day), below the 1.191M/day now required. The last eight hours average only 1.17M/day and expected decay makes the central path sub-20M; recent-window log fits land around 19.55M-19.93M. The remaining upside is batching/diurnal and slower-decay uncertainty. No add: the standard stress is 0.10. No taker exit: the exact 0.17 NO bid nets about $4.73 for all 29 shares versus $5.80 central terminal value.",
+  "note": "Measured short-horizon threshold ticket. DEC-0107 bought 18 NO at 0.27 ($5.03739 gross) and DEC-0108 added 11 at 0.45 ($5.086125 gross). At the Sep-1 06:01 recheck the official counter reached 16,676,395 at hour 101.01, adding 157,452 since 02:04, about 0.96M/day versus 1.191M/day required. The last eight hours average only about 1.17M/day; recent-window log fits now land around 19.55M-19.93M and most reasonable decaying-rate cases finish below 20M. Central p_no is therefore cut 0.45->0.20, with stress at 0.10. A taker exit still gives up expected value, but constrained Kelly wants only about $1 exposure, so DEC-0109 rests a fee-free post-only SELL for 24 shares at fair 0.20; no fill yet, leaving five shares if filled. NO FURTHER ADD. Re-underwrite/cancel/reprice the order at every scheduled counter read through the exact Sep-4 01:00:48 UTC endpoint.",
   "key_facts": [
    {
     "claim": "The contract resolves from the official Rockstar YouTube view counter during the first 168 hours after upload; the referenced upload began at 2026-08-28 01:00:48 UTC.",
@@ -600,7 +600,7 @@
     "checked": "2026-08-31"
    },
    {
-    "claim": "First-hand official-page reads measured 15,703,132 at hour 85.2, 15,986,322 at hour 89.15, 16,286,327 at hour 93.0, and 16,518,943 at hour 97.06; reaching 20M from the latest read requires 1.178M views/day over the remaining 70.94 hours.",
+    "claim": "First-hand official-page reads measured 15,703,132 at hour 85.2, 15,986,322 at hour 89.15, 16,286,327 at hour 93.0, 16,518,943 at hour 97.06, and 16,676,395 at hour 101.01; reaching 20M from the latest read requires 1.191M views/day over the remaining 66.99 hours.",
     "source": "https://www.youtube.com/watch?v=tJbzMqJGH4k",
     "source_date": "2026-09-01",
     "checked": "2026-09-01"

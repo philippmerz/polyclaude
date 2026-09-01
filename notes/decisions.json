@@ -1,5 +1,5 @@
 {
-  "next_id": 109,
+  "next_id": 110,
   "decisions": [
     {
       "id": 1,
@@ -2106,6 +2106,26 @@
         "youtube",
         "measured-threshold",
         "add"
+      ],
+      "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 109,
+      "timestamp": "2026-09-01T06:04:41Z",
+      "type": "size_change",
+      "thesis": "Rested a fee-free post-only SELL for 24 of 29 GTA >=20M NO shares at 0.20 after the official counter slowed to 0.96M/day versus 1.191M/day required and central p_no fell 0.45 to 0.20. Constrained Kelly now wants only about one dollar of exposure, while a taker sale at 0.18 still gives up expected value. A maker fill at fair releases 4.80 dollars without expected-value sacrifice and leaves five shares, approximately the growth-optimal residual. Public counter risk is observable; reprice or cancel on each scheduled measurement if fair changes.",
+      "confidence": "medium",
+      "prediction": "If the 0.20 maker order fills, retaining five NO shares outperforms continuing to hold all 29 on log-growth grounds; if it does not fill, the position remains held and the order is re-underwritten at the next counter read.",
+      "size_usd": 4.8,
+      "resolution_at": "2026-09-04",
+      "tags": [
+        "gta",
+        "views",
+        "rebalance",
+        "maker"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
       "outcome": null,
