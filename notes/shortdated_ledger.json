@@ -157,8 +157,10 @@
   "decision": "ENTER $9.52",
   "reason": "Instance-sweep candidate, facts verified fresh (GPT-5.6 GA Jul-9, no GPT-6 announced/dated). Strict bar: publicly accessible, no beta, no 5.x relabels. eff 0.712 after 1000bps fee -> +25pp. DEC-0047.",
   "size_usd": 9.52,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "NO",
+  "fade_would_have_won": true,
+  "graded_at": "2026-09-01",
+  "slug": "will-gpt-6-be-released-by-august-31-2026-778"
  },
  {
   "date": "2026-07-15",
@@ -171,8 +173,10 @@
   "decision": "SKIP",
   "reason": "Sweep fair-YES 0.22 vs catalyst 0.74 (MOU expiry Aug-15-17 in-window + Iran resumption commitment + past-perfect interpretation fork). Tools 50pp apart around a $323k market -> UNKNOWABLE, both sides skipped. DEC-0048.",
   "size_usd": 0,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "NO",
+  "fade_would_have_won": true,
+  "graded_at": "2026-09-01",
+  "slug": "iran-charges-hormuz-fees-by-august-31-20260625175039062-177"
  },
  {
   "date": "2026-07-15",
@@ -245,8 +249,10 @@
   "decision": "ADD $9.15",
   "reason": "Dip-buy on rumor flow (0.68->0.59, no fundamental found on fresh check). DEC-0052. Combined 29sh/$18.67.",
   "size_usd": 9.15,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "NO",
+  "fade_would_have_won": true,
+  "graded_at": "2026-09-01",
+  "slug": "will-gpt-6-be-released-by-august-31-2026-778"
  },
  {
   "date": "2026-07-20",
@@ -287,8 +293,10 @@
   "decision": "ADD $4.00",
   "reason": "2nd rumor-flow dip (0.77->0.57, no fundamental change). Prior honestly cut 0.90->0.82 (cadence). Blended 36sh/$22.67, 13.9% cap. DEC-0055.",
   "size_usd": 4.0,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "NO",
+  "fade_would_have_won": true,
+  "graded_at": "2026-09-01",
+  "slug": "will-gpt-6-be-released-by-august-31-2026-778"
  },
  {
   "date": "2026-07-24",

@@ -701,6 +701,29 @@ def _data_api_positions(address: str) -> list[dict]:
     return r.json() or []
 
 
+def _redeem_token_balance(ctf: Any, address: str, token_id: str | None) -> int:
+    """Return the held outcome-token balance, failing closed without an id.
+
+    A successful ``eth_call`` of ``redeemPositions`` does not prove that the
+    caller holds any outcome tokens: the CTF accepts a zero-balance redemption
+    as a no-op. Requiring the archived outcome-token id prevents that known
+    failure mode; final resolution to the held outcome must still be verified
+    separately before broadcast.
+    """
+    if not token_id:
+        raise SystemExit(
+            "redeem-one: need --token-id (snapshot field `asset`) so a "
+            "nonzero held-token balance can be verified before broadcast"
+        )
+    try:
+        token = int(token_id)
+    except (TypeError, ValueError) as exc:
+        raise SystemExit("redeem-one: --token-id must be an integer") from exc
+    if token <= 0:
+        raise SystemExit("redeem-one: --token-id must be positive")
+    return int(ctf.functions.balanceOf(address, token).call())
+
+
 def redeem_all(dry_run: bool = False) -> dict:
     """Iterate user's positions; redeem any with redeemable=true. Routes negRisk
     markets through NegRiskAdapter and binary non-negRisk through standard CTF.
@@ -784,9 +807,11 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
     blind. Verify the market is actually resolved (gamma umaResolutionStatus)
     first — redeeming an unresolved condition reverts.
 
-    Standard-CTF path needs no token ids (the contract pays whatever the caller
-    holds across both index sets). NEGRISK PATH ADDED 2026-08-13: the adapter
-    needs exact balances, which is why this used to refuse outright — but that
+    Both paths require the archived held token id as a preflight: a successful
+    redemption simulation can still be a zero-balance no-op. The standard CTF
+    pays whatever the caller holds across both index sets, but the token id is
+    checked before broadcast to prevent a zero-balance no-op. NEGRISK PATH ADDED
+    2026-08-13: the adapter needs exact balances, which is why this used to refuse outright — but that
     refusal left my LARGEST position with no claim-insurance fallback at all.
     SpaceX ($29.42, 16% of bankroll) was the book's only negRisk market when
     this fallback was added, so a de-index at its Dec-31 resolution would have
@@ -802,6 +827,13 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
     addr_cs = Web3.to_checksum_address(address)
     ctf_redeem = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
                                  abi=_CTF_REDEEM_ABI)
+    ctf_bal = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
+                             abi=_CTF_BAL_ABI)
+    bal = _redeem_token_balance(ctf_bal, addr_cs, token_id)
+    if bal == 0:
+        print("  SKIP redeem: held outcome-token balance is zero")
+        return {"ok": False, "tx": None, "skipped": "zero outcome-token balance",
+                "balance": 0}
     cond_id = bytes.fromhex(cond_id_hex.replace("0x", ""))
     nonce = w.eth.get_transaction_count(addr_cs)
     gp = w.eth.gas_price
@@ -814,8 +846,6 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
         if not token_id or outcome not in ("Yes", "No"):
             raise SystemExit("redeem-one negRisk: need --token-id and --outcome Yes|No "
                              "(both are in notes/position_condition_ids.json)")
-        ctf_bal = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR), abi=_CTF_BAL_ABI)
-        bal = ctf_bal.functions.balanceOf(addr_cs, int(token_id)).call()
         # Adapter takes [yes_amount, no_amount]; I hold exactly one side, so the
         # other is zero. Reading the held side on-chain keeps this independent of
         # data-api, which is precisely what has vanished in a de-index.
@@ -1067,7 +1097,9 @@ def main():
     p.add_argument("--neg-risk", action="store_true",
                    help="negRisk market — also pass --token-id and --outcome (all three fields "
                         "are in notes/position_condition_ids.json for every live position)")
-    p.add_argument("--token-id", help="the held outcome's token id (snapshot field `asset`)")
+    p.add_argument("--token-id", required=True,
+                   help="the held outcome's token id (snapshot field `asset`); used to "
+                        "prevent a zero-balance no-op before any broadcast")
     p.add_argument("--outcome", choices=["Yes", "No"], help="which side is held (snapshot field `outcome`)")
     p.add_argument("--dry-run", action="store_true",
                    help="simulate via eth_call — reverts without broadcasting, so the whole path "

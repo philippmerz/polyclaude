@@ -1,5 +1,5 @@
 {
-  "next_id": 110,
+  "next_id": 111,
   "decisions": [
     {
       "id": 1,
@@ -921,9 +921,10 @@
         "instance-sweep",
         "short-dated"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Resolved NO on 2026-09-01. The blended position was already fully closed on 2026-08-18 at 0.94 for $31.96 proceeds on $21.94 cost, +$10.02 realized (+45.7%).",
+      "calibration_delta": "Predicted p_no 0.96 versus binary NO outcome: underconfident by 4pp; direction correct and profit captured early.",
+      "lesson": "Strict public-access criteria plus absence of an announced product supported high conviction. Maker exit at consumed edge captured nearly all value without waiting for resolution.",
+      "resolved_at": "2026-09-01T10:03:49Z"
     },
     {
       "id": 48,
@@ -940,9 +941,10 @@
         "instance-sweep",
         "gate-catch"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Resolved NO on 2026-09-01. No position was taken; NO at the reviewed 0.57 ask would have won, but the tools disagreed by 50pp and the contract required both an official announcement and consensus reporting of collection.",
+      "calibration_delta": "The catalyst branch's p_yes 0.74 missed the binary outcome by 74pp; the sweep p_yes 0.22 was closer but still 22pp high. The skip avoided staking capital on an unresolved 50pp model disagreement.",
+      "lesson": "Intent, an expiring MOU, and possible historical collection were not substitutes for the contract's conjunction of official announcement plus consensus collection reporting. When independently reasoned tools straddle the market by 50pp, skip remains correct process even if one side later wins.",
+      "resolved_at": "2026-09-01T10:05:00Z"
     },
     {
       "id": 49,
@@ -1014,9 +1016,10 @@
         "add",
         "dip-buy"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Resolved NO on 2026-09-01. This add contributed to the blended GPT-6 position that was fully sold at 0.94 on 2026-08-18; total blended realized profit was $10.02.",
+      "calibration_delta": "The 0.96 NO prior was 4pp below the binary outcome; the rumor-flow dip was correctly classified as non-fundamental.",
+      "lesson": "When YES requires a public release, a large no-news dip can be bought if exact criteria and public product state are freshly verified.",
+      "resolved_at": "2026-09-01T10:03:49Z"
     },
     {
       "id": 53,
@@ -1072,9 +1075,10 @@
         "add",
         "rumor-flow-dip"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Resolved NO on 2026-09-01. The added shares were part of the blended position sold at 0.94 on 2026-08-18; total blended realized profit was $10.02.",
+      "calibration_delta": "The revised 0.82 NO prior was 18pp below the binary outcome. The cadence-based downgrade was directionally too conservative on this strict generation-label contract.",
+      "lesson": "Release cadence for point models should not be transferred one-for-one to a strict next-generation public-launch bar; exact naming and accessibility criteria deserved more weight.",
+      "resolved_at": "2026-09-01T10:03:49Z"
     },
     {
       "id": 56,
@@ -1230,9 +1234,10 @@
       "size_usd": 12.64,
       "resolution_at": "2026-08-31",
       "tags": [],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 16-share trim at 0.79 executed as planned; the remaining 34 shares later sold at 0.94, and the market finally resolved NO on 2026-09-01. Relative to holding the trimmed shares to resolution, the trim forwent $3.36 on the realized path.",
+      "calibration_delta": "The 0.79 NO fair was 21pp below the binary outcome. The trim reduced variance but underperformed hold ex post.",
+      "lesson": "Precommitted Kelly trims can be correct ex ante yet lose on a winning path. Here the strict public-release bar supported a higher fair than 0.79; future trims should preserve criteria-derived confidence rather than over-weighting midpoint convergence.",
+      "resolved_at": "2026-09-01T10:03:49Z"
     },
     {
       "id": 65,
@@ -2126,6 +2131,27 @@
         "views",
         "rebalance",
         "maker"
+      ],
+      "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
+      "outcome": "The 24-share 0.20 maker SELL remained unfilled and was cancelled at the next scheduled counter read after fair fell to 0.08. Cancellation was verified before the replacement close.",
+      "calibration_delta": "No fill and no stale-order loss; the conditional re-underwrite rule worked exactly as intended.",
+      "lesson": "For continuously updating public counters, every maker fair must be cancelled before re-fitting. A fee-free fair-value order is useful only while the measured fair remains current.",
+      "resolved_at": "2026-09-01T10:02:44Z"
+    },
+    {
+      "id": 110,
+      "timestamp": "2026-09-01T10:02:44Z",
+      "type": "close_position",
+      "thesis": "Closed all 29 GTA >=20M NO shares at the live 0.13 bid after the official counter reached 16.815M at hour 105.01 and the latest pace slowed to 0.83M/day versus 1.214M/day required. The last 4, 8, and 12-hour rates are below requirement; nearly every recent-window log and decaying-rate fit now finishes below 20M. Honest p_no fell 0.20 to 0.08, below the fee-adjusted executable bid. The prior 0.20 maker trim was cancelled unfilled before the FOK close.",
+      "confidence": "high",
+      "prediction": "The official counter finishes below 20M at hour 168; closing at 0.13 outperforms holding the 29 NO shares if p_no is below the fee-adjusted bid, with the final count providing the calibration grade.",
+      "size_usd": 3.77,
+      "resolution_at": "2026-09-04",
+      "tags": [
+        "gta",
+        "views",
+        "close",
+        "thesis-break"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
       "outcome": null,

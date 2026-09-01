@@ -11495,3 +11495,47 @@ realized P&L unchanged at **+$33.27**; PM midpoint was $171.21 versus $163.41 re
 and zero BUY commitments now rest. No other backlog gate, position, swap, bridge, or code changed.
 Telegram message 888 reported the prior cut, maker order and UMA state. The durable ROI continuation
 remains active until the operator manually cancels it.
+
+## 2026-09-01 10:00–10:13 UTC — GTA thesis breaks and exits; resolution records reconciled (DEC-0110)
+
+The periodic review found no new news or opportunity alert after the 06:08 checkpoint, but the live
+GTA counter required action. Rockstar's official YouTube counter reached **16,815,189 at hour
+105.01**, only 138,794 views above the 06:01 read, or about **0.83M/day**. Reaching 20M now requires
+3.185M in 62.99 hours, **1.214M/day**. The measured 4h, 8h and 12h rates are all below that hurdle;
+ordinary recent-window log fits finish mostly around 18.6M–20.0M, and only optimistic long-memory or
+slow-decay cases retain the threshold. Honest p(20M or more) therefore fell **0.20→0.08**.
+
+DEC-0109's 24-share post-only SELL at 0.20 was still live and unfilled. I cancelled it and verified
+removal before replacing it. DEC-0110 then sold **all 29 NO shares at the live 0.13 bid FOK**. The
+order matched in full (`0x54d04bc0d60e00cfa21b27adf5cef4fd9065ebd39d3423f3469ae95285062b39`;
+settlement `0x3152d3075517c0d037fc2eda9ff9bb2d6cd82b74250b1ad8eee1a19e11f8f981`). Gross proceeds
+were $3.77 and net proceeds were **$3.606010** after the $0.163990 exit fee. Against $10.123515
+fee-inclusive entry cost, total ticket P&L is **−$6.517505**. The realized-P&L metric declined only
+$6.20 this tick because the $0.313515 entry fees had already been recognized earlier. The exit is a
+model update, not loss aversion: the executable bid exceeded the revised 0.08 fair after fees.
+
+Resolution work also closed several evidence loops. GPT-6-by-Aug-31 finalized **NO**; DEC-0047,
+DEC-0052 and DEC-0055 were directionally correct, and the blended position had already been fully
+sold at 0.94 on Aug-18 for **+$10.02 (+45.7%)**. DEC-0064's 16-share Kelly trim was defensible ex
+ante but forwent $3.36 versus resolution on the realized path. Iran-charges-Hormuz-fees-by-Aug-31
+also finalized **NO**. DEC-0048's skip was retained as correct process despite NO winning at the
+reviewed 0.57 ask: independent tools disagreed by 50pp, and the catalyst branch overweighted intent
+and an expiring MOU against the literal conjunction of official announcement and consensus collection
+reporting. The exact-market short-dated ledger is now 10/15 graded. Iran–Oman is only **proposed NO**,
+and Hormuz-normal remains active/unproposed, so DEC-0077/0081/0082/0084 were not graded early.
+
+One operational mistake produced a small permanent safeguard. `redeem-all` could not see the
+de-indexed GPT market, and the documented condition-ID fallback simulated successfully; I then
+broadcast redemption before checking the historical full exit. It paid zero because the token
+balance was already zero and wasted about **0.0257 POL (~$0.0024)**
+(`0x01a04d866d0796447cc83e095a8fdd5ace6d6d22e2c7900a3579256dd8a88af4`). The lesson is precise:
+simulation success proves only non-reversion, not a nonzero claim. `redeem-one` now requires the
+archived outcome token id, checks on-chain `balanceOf`, and skips zero balances before nonce/gas or
+broadcast. A focused regression was added; the complete suite passes **399 pytest cases** plus all
+**123 money-math checks**.
+
+Post-action position state is CLEAN at 14 live rows. Six SELLs and zero BUY commitments rest. The
+authoritative bankroll is **$206.42**, realized **+$27.07**; the PM sleeve costs $162.23, marks
+$165.56 and is worth $157.06 at executable depth. The wallet holds 9.732500 pUSD and 16.102584
+Polygon aUSDC.e. No other position, order, bridge or swap changed. The durable ROI continuation
+remains active until the operator manually cancels it.

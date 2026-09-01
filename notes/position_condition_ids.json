@@ -51,14 +51,6 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
-   "outcome": "No",
-   "size": 29,
-   "conditionId": "0xabf7b6d2ce976c0f2c31d0ce931608f3c9b3e3c00468e58ee1d68069bdbaeeff",
-   "asset": "36765143009985507730419620242654986498848709032501000808628534246280805740063",
-   "negativeRisk": true
-  },
-  {
    "slug": "trump-out-as-president-before-2027",
    "outcome": "No",
    "size": 28.33,
