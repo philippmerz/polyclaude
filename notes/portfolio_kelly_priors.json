@@ -690,14 +690,14 @@
   ]
  },
  "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1": {
-  "p_yes": 0.92,
+  "p_yes": 0.82,
   "verified": "2026-09-02",
   "criteria_read": "2026-09-02",
   "cluster": "gta-vi-extended-look-week1",
   "rho_within": 0.0,
   "cluster_frac": 0.0,
   "hidden_info": false,
-  "note": "Sep-2 10:00 public-counter re-entry review, opposite side from closed DEC-0110. Rockstar's official counter is 17,829,395 at hour ~129 with 39h remaining. Reaching 20M requires 1.336M/day; measured 4h/8h/12h/16h rates are 0.62/0.66/0.77/0.90M/day, and every trailing linear window through 60h projects below 20M (18.83-19.89M). Decay-rate fits project 18.14-18.80M. Honest central p(<20M)=0.92, deliberately retaining an 8% tail for batching, an unmodeled late attention surge, and measurement/model error. The ordinary 10pp instance haircut gives robust p=0.82. This is a unique cluster because no live holding or BUY commitment references this video/event; the same-event threshold siblings are not fungible positions. Public-information class: remeasure the official counter and cancel/reprice any maker order every tick. Exact criteria use the first 168 hours after the Aug-28 01:00:48 UTC post, so the measurement endpoint is Sep-4 01:00:48 UTC.",
+  "note": "Sep-2 14:02 public-counter re-derivation, opposite side from closed DEC-0110. Rockstar's official counter is 18,074,164 at hour ~133 with 35h remaining. Reaching 20M requires 1.321M/day. The newest 4h burst is 1.469M/day and projects 20.215M, but the 8h/12h/16h rates are only 1.043/0.927/0.943M/day and project 19.595/19.426/19.449M. Honest central p(<20M) is reduced 0.92 to 0.82: the sharp four-hour acceleration is real adverse evidence, while the broader windows, absence of a new distribution catalyst, and normal late-life decay still favor under 20M. The ordinary 10pp instance haircut gives robust p=0.72 versus 0.65152 all-in at the 0.64 ask. HOLD the bounded 12-share position; do not add while a single burst/batching interval dominates the sensitivity. This is a unique cluster because no other live holding or BUY commitment references this video/event; threshold siblings are not fungible positions. Public-information class: remeasure the official counter and cancel/reprice any maker order every tick. Exact criteria use the first 168 hours after the Aug-28 01:00:48 UTC post, so the measurement endpoint is Sep-4 01:00:48 UTC.",
   "key_facts": [
    {
     "claim": "YES resolves if the official Rockstar Games YouTube view counter is below 20 million after the video's first 168 hours; an unveiling or external counter is irrelevant.",
@@ -706,7 +706,7 @@
     "checked": "2026-09-02"
    },
    {
-    "claim": "Official counter 17,829,395 at hour ~129; required remaining pace 1.336M/day versus measured 4h/8h/12h/16h rates 0.62/0.66/0.77/0.90M/day.",
+    "claim": "Official counter 18,074,164 at hour ~133; required remaining pace 1.321M/day versus measured 4h/8h/12h/16h rates 1.469/1.043/0.927/0.943M/day.",
     "source": "https://www.youtube.com/watch?v=tJbzMqJGH4k",
     "source_date": "2026-09-02",
     "checked": "2026-09-02"
