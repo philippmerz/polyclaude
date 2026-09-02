@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-# Non-interactive runtime/auth health check.
-# Provider quota UI is intentionally not scraped from a transient TUI.
+# Read Codex quota headroom without injecting a conversational /usage turn.
 
 set -euo pipefail
 
-RUNNER="${POLYCLAUDE_AGENT_RUNNER:-${HOME}/.local/bin/polyclaude-agent}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
+PYTHON="${POLYCLAUDE_PYTHON:-${POLYCLAUDE_DIR}/.venv/bin/python}"
 
-if [[ ! -x "${RUNNER}" ]]; then
-    echo "ERROR: private agent runtime is unavailable" >&2
+if [[ ! -x "${PYTHON}" ]]; then
+    echo "ERROR: project Python is unavailable: ${PYTHON}" >&2
     exit 3
 fi
 
-"${RUNNER}" status
-echo "Quota details: attach to the operator and use its built-in status command."
+exec "${PYTHON}" "${SCRIPT_DIR}/codex_usage.py" "$@"

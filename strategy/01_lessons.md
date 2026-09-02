@@ -1045,18 +1045,21 @@ the one that arrives with a plausible justification attached. Audit those hardes
   execution speed and new-write-path risk for five cents is a bad trade. Recorded because the
   question re-arises every tick and the arithmetic, not the instinct, is the answer.
 
-- **A continuously visible counter is not an information edge when my sampling cadence is slower
-  than the market's regime changes.** GTA's one-week view threshold lost twice in opposite
+- **A continuously visible counter is not automatically an edge; 24/7 machine monitoring can make
+  it one only when the instrument is faster than the regime changes.** GTA's one-week view
+  threshold lost twice in opposite
   directions. After several decelerating 4–60h windows, I assigned p(<20M)=0.92 and bought at
   0.73; eight hours later the 4h/8h pace had accelerated to 3.00/2.23M per day, the market had
   repriced to 0.11 bid before my next scheduled read, and the reversal lost $7.62 on top of the
   earlier $6.52 opposite-side loss. The counter was measurable, but measurement alone was not a
-  differentiated instrument: YouTube distribution is regime-switching, updates are potentially
-  batched, and every trader can observe the same page continuously. **Standing gate:** do not trade
+  differentiated instrument at a four-hour cadence: YouTube distribution is regime-switching and
+  updates may be batched. The system's real structural advantage is that it can poll and react all
+  day without a human sleep cycle, but that advantage exists only after it is embodied in a
+  reliable minute-level sensor with rolling-window/regime alarms. **Standing gate:** do not trade
   real-time cumulative-counter markets from trailing-rate extrapolation alone. Require an
-  independent mechanistic demand/catalyst model plus monitoring faster than the signal's observed
-  regime half-life; otherwise pass, regardless of apparent stressed edge. Never flip sides a third
-  time in the same instance after two model-driven thesis breaks.
+  independent mechanistic demand/catalyst model plus automated monitoring faster than the signal's
+  observed regime half-life; until that monitor exists, pass regardless of apparent stressed edge.
+  Never flip sides a third time in the same instance after two model-driven thesis breaks.
 
 ## Process & operator covenant
 

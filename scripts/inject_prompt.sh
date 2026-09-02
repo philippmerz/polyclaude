@@ -26,9 +26,25 @@ QUEUE_PROMPT="${PROMPT}"
 GOAL_CONTRACT_APPENDED=0
 case "${PROMPT}" in
   "Cron tick "*|"Periodic check:"*|"Sunday weekly long-term review."*)
+    USAGE_PROBE="${POLYCLAUDE_USAGE_PROBE:-${SCRIPT_DIR}/check_usage.sh}"
+    USAGE_SNAPSHOT="unavailable (refresh with ./scripts/check_usage.sh --brief)"
+    if [[ -x "${USAGE_PROBE}" ]]; then
+        if ! USAGE_SNAPSHOT=$("${USAGE_PROBE}" --brief --no-token-usage 2>/dev/null); then
+            # Quota telemetry is advisory. A broken probe must never suppress a
+            # scheduled portfolio/risk check.
+            USAGE_SNAPSHOT="unavailable (probe failed; refresh with ./scripts/check_usage.sh --brief)"
+        fi
+    fi
+    # Keep an unexpected provider response from bloating the scheduled turn.
+    USAGE_SNAPSHOT="${USAGE_SNAPSHOT:0:2000}"
     QUEUE_PROMPT="${PROMPT}
 
-CONTINUATION CONTRACT: This is a scheduled in-chat run. Before substantive work, inspect this thread's durable goal. If no goal is active, create one whose objective is to keep operating polyclaude for maximum expected ROI through automatic continuation turns after this check-in. If a goal is already active, continue it. Do not mark the goal complete or cancel it merely because this tick is quiet; it stays active until the user manually cancels it."
+CONTINUATION CONTRACT: This is a scheduled in-chat run. Before substantive work, inspect this thread's durable goal. If no goal is active, create one whose objective is to keep operating polyclaude for maximum expected ROI through automatic continuation turns after this check-in. If a goal is already active, continue it. Do not mark the goal complete or cancel it merely because this tick is quiet; it stays active until the user manually cancels it.
+
+RESOURCE SNAPSHOT (read-only, captured by the dispatcher):
+${USAGE_SNAPSHOT}
+
+RESOURCE CONTRACT: Use the main-Codex headroom above to reserve the primary context for portfolio/risk judgment and route bounded routine work to cheaper subagents. Refresh with ./scripts/check_usage.sh --brief before unusually expensive discretionary research. Never skip a required safety check or delay a thesis-break exit merely to conserve quota. The quota probe is direct and read-only; do not inject /usage as a conversational turn."
     GOAL_CONTRACT_APPENDED=1
     ;;
 esac
@@ -56,6 +72,7 @@ fi
     echo "${PROMPT}"
     if (( GOAL_CONTRACT_APPENDED )); then
         echo "[durable ROI-goal continuation contract appended to queued prompt]"
+        echo "[direct Codex quota-headroom contract appended to queued prompt]"
     fi
 } >> "${LOG}"
 

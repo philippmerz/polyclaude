@@ -97,6 +97,11 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 - Scheduled cron/periodic prompts carry a durable Codex ROI-goal contract: continuation turns remain
   active until the user manually cancels the goal. This replaces the provider-specific Claude
   `UserPromptSubmit` hook lost in the 2026-08-26 runtime migration.
+- `check_usage.sh` / `codex_usage.py` — read main-Codex and model-specific quota headroom directly
+  through the supported, read-only app-server account RPC. Scheduled prompts run this before
+  discretionary research; it never injects `/usage` or consumes a conversational turn merely to
+  inspect quota. Keep the primary model for portfolio/risk judgment and use cheaper subagents for
+  bounded routine work; quota pressure never overrides safety checks or a thesis-break exit.
 - `operator_followup.sh` / `cancel_followup.sh` — legacy one-shot delayed continuation fallback via
   nohup-sleep + PID tracking for runtimes without durable-goal support.
 - `inject_prompt.sh` — unified ordered-queue path for cron / followup / news_watcher prompts; appends

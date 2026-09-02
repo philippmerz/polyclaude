@@ -38,11 +38,20 @@ exit "${FAKE_QUEUE_RC:-0}"
 """
     )
     runner.chmod(0o755)
+    usage_probe = tmp_path / "fake-usage.sh"
+    usage_probe.write_text(
+        """#!/usr/bin/env bash
+set -euo pipefail
+printf '%s\n' 'Codex quota headroom:' '  codex: 32% used / 68% headroom (1w, resets later)'
+"""
+    )
+    usage_probe.chmod(0o755)
     env = os.environ.copy()
     env.update(
         {
             "HOME": str(tmp_path),
             "POLYCLAUDE_AGENT_RUNNER": str(runner),
+            "POLYCLAUDE_USAGE_PROBE": str(usage_probe),
             "FAKE_CAPTURE": str(captured),
         }
     )
@@ -70,8 +79,38 @@ def test_scheduled_prompts_append_manual_cancel_only_goal_contract(tmp_path: Pat
     assert "CONTINUATION CONTRACT" in payload
     assert "automatic continuation turns" in payload
     assert "until the user manually cancels it" in payload
+    assert "RESOURCE SNAPSHOT" in payload
+    assert "codex: 32% used / 68% headroom" in payload
+    assert "RESOURCE CONTRACT" in payload
+    assert "check_usage.sh --brief" in payload
+    assert "do not inject /usage" in payload
     inject_log = (tmp_path / "notes" / "inject_log.md").read_text()
     assert "durable ROI-goal continuation contract appended" in inject_log
+    assert "direct Codex quota-headroom contract appended" in inject_log
+
+
+def test_daily_checkin_includes_direct_quota_preflight() -> None:
+    prompt_source = (REPO / "scripts" / "daily_checkin.sh").read_text()
+
+    assert "RESOURCE PRE-FLIGHT" in prompt_source
+    assert "./scripts/check_usage.sh --brief" in prompt_source
+    assert "do not inject `/usage`" in prompt_source
+    assert "Never skip required safety checks" in prompt_source
+
+
+def test_failed_usage_probe_never_blocks_scheduled_risk_prompt(tmp_path: Path) -> None:
+    script, captured, env = _fixture(tmp_path)
+    failed_probe = tmp_path / "failed-usage.sh"
+    failed_probe.write_text("#!/usr/bin/env bash\nexit 2\n")
+    failed_probe.chmod(0o755)
+    env["POLYCLAUDE_USAGE_PROBE"] = str(failed_probe)
+
+    result = _run(script, "Cron tick quota unavailable", env)
+
+    assert result.returncode == 0, result.stderr
+    payload = captured.read_text()
+    assert "quota unavailable" in payload
+    assert "unavailable (probe failed" in payload
 
 
 def test_periodic_prompt_also_restores_goal_but_ordinary_prompt_does_not(

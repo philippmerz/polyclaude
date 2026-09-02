@@ -11818,3 +11818,37 @@ Authoritative bankroll is **$200.02**, realized **+$14.43 (+8.5%)**; active PM m
 versus **$160.29 depth-realizable**. Telegram message **896** reported the close and HLE check. No
 other backlog item, position, order, redemption, swap or bridge changed. The durable ROI
 continuation remains active until the operator manually cancels it.
+
+## 2026-09-02 18:16–18:45 UTC — direct Codex quota telemetry + cheap-worker routing (DEC-0116)
+
+The operator made two useful corrections after the GTA exit. First, a system that can observe and
+act around the clock does have a structural advantage over a human sleep cycle; the failure was the
+four-hour instrument, not automation itself. The consolidated counter lesson now says that the
+advantage exists only when it is embodied in a reliable minute-level sensor with rolling-window /
+regime alarms. Until that monitor exists, pure trailing-rate counter trades remain gated out; an
+independent demand/catalyst model is still required. Second, the primary high-effort context should
+be rationed by measured quota and bounded routine work should use cheaper workers. Two low-cost
+Luna subagents handled the repository/interface reconnaissance for this change.
+
+Official Codex documentation exposed a better implementation than injecting the TUI's `/usage`
+command and then trying to continue the conversation: a short-lived local `codex app-server`
+process supports the read-only `account/rateLimits/read` and `account/usage/read` RPCs after the
+normal initialize handshake. `scripts/codex_usage.py` now calls those endpoints without reading
+auth files or creating a model turn; `scripts/check_usage.sh` is the stable wrapper. The live
+validation snapshot showed main Codex **33% used / 67% headroom**, resetting Sep-7 02:30 UTC, and
+the separate Spark 5h/weekly buckets at **0% used**.
+
+`inject_prompt.sh` now captures a fresh rate-limit-only snapshot into every cron, periodic and
+Sunday-review seed before queueing it. The resource contract reserves the primary context for
+portfolio/risk and new-strategy judgment, routes bounded routine work to cheap subagents, and makes
+quota subordinate to safety checks and thesis-break exits. Telemetry is deliberately fail-open: an
+unavailable probe is reported in the prompt but can never block the tick. The fresh headless
+fallback also carries the same pre-flight. DEC-0116 records the scaffolding prediction for the next
+scheduled dispatch. The current public runner exposes built-in `research` / `fast` profiles and the
+collaboration runtime supplied Luna directly; it does not expose a Fireworks profile, so no secret
+store was touched and the already-working built-in cheap path was used.
+
+Validation passed a live probe, shell syntax and compile checks, **431 pytest cases plus all 123
+standalone money checks**. Telegram message **900** reported the implementation and quota snapshot.
+No trade, order, redemption, swap, bridge, position or prior changed. The durable ROI continuation
+remains active until the operator manually cancels it.
