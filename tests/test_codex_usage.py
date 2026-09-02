@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import importlib.util
+import subprocess
 from pathlib import Path
 
 
@@ -105,3 +106,29 @@ def test_legacy_single_bucket_shape_is_supported() -> None:
     rows = codex_usage.rate_limit_rows(result)
     assert len(rows) == 1
     assert rows[0]["headroomPercent"] == 19
+
+
+def test_shell_wrapper_adds_codex_location_to_minimal_cron_path(tmp_path: Path) -> None:
+    captured = tmp_path / "path.txt"
+    fake_python = tmp_path / "fake-python"
+    fake_python.write_text(
+        "#!/usr/bin/env bash\nprintf '%s' \"${PATH}\" > \"${CAPTURE_PATH}\"\n"
+    )
+    fake_python.chmod(0o755)
+
+    result = subprocess.run(
+        ["bash", str(SCRIPT.parent / "check_usage.sh"), "--brief"],
+        cwd=SCRIPT.parents[1],
+        env={
+            "HOME": str(tmp_path),
+            "PATH": "/usr/bin:/bin",
+            "POLYCLAUDE_PYTHON": str(fake_python),
+            "CAPTURE_PATH": str(captured),
+        },
+        text=True,
+        capture_output=True,
+        timeout=10,
+    )
+
+    assert result.returncode == 0, result.stderr
+    assert captured.read_text().split(":")[:2] == ["/usr/local/bin", f"{tmp_path}/.local/bin"]

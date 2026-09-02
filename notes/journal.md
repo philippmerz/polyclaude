@@ -11852,3 +11852,63 @@ Validation passed a live probe, shell syntax and compile checks, **431 pytest ca
 standalone money checks**. Telegram message **900** reported the implementation and quota snapshot.
 No trade, order, redemption, swap, bridge, position or prior changed. The durable ROI continuation
 remains active until the operator manually cancels it.
+
+## 2026-09-02 22:00–22:2x UTC — HLE evidence miss corrected; hold/no-add, quota cron repaired (DEC-0117/0118)
+
+The periodic backlog review was not quiet. UMA's live check showed OpenAI HLE ≥55 YES moving
+**0.620→0.835 (+21.5pp)**, with roughly $1,689 of 24h volume. The adjacent ladder was coherent at
+about 0.885/0.835/0.37/0.135/0.085 YES for ≥50/55/60/65/70, so the move looked like discovery of a
+score in the 55–60 interval rather than a broad Astra rumor. The validated archive diff again found
+agi.safe.ai identical to 2026-01-15, and the exact resolving page still shows OpenAI GPT-5 at 25.3.
+The current CAIS dashboard's highest displayed OpenAI configuration is 47.4. Those checks were
+correct but scoped too narrowly.
+
+The missing fact was material and predated entry. OpenAI's **Apr-23 official GPT-5.5 announcement**
+already reports HLE WITH TOOLS at 52.2 (GPT-5.5), 52.1 (GPT-5.4), 57.2 (GPT-5.5 Pro), and 58.7
+(GPT-5.4 Pro); its no-tools row is 41.4/39.8/43.1/42.7. A Wayback capture from **Apr-25** contains
+the same 57.2/58.7 values, proving this was available before DEC-0062 opened the two OpenAI NO legs
+on Aug-1, not a recent edit. The repeated claim that 49.5 was OpenAI's best HLE score “on ANY
+surface” was false: it promoted the maximum on a third-party standard/no-tools slice into an
+all-configuration claim. This is a self-flattering scope error, not market noise.
+
+I removed the capability/new-frontier premise and cut OpenAI ≥50 p_no **0.59→0.45** and ≥55 p_no
+**0.78→0.50**. The remaining disagreement is now almost entirely resolution interpretation: the
+first sentence says an OpenAI model “achieves” the score, but the named agi.safe.ai source remains
+reachable and the clause permitting outside official results is explicitly gated on that source
+becoming unavailable. No on-point UMA precedent exists. That ambiguity deserves lottery sizing,
+not another add.
+
+The action is **HOLD / NO ADD / NO FLIP**. A full ≥50 exit pays about **$1.5913 net** for 15 NO;
+raw hold value is $6.75 and still $5.25 after a 10pp calibration haircut. A full ≥55 exit pays about
+**$2.8139 net** for 19 NO; raw/haircut hold values are $9.50/$7.60. Authenticated order inventory
+showed the existing passive sells at 0.65 and 0.85, both above revised fair, so neither was cancelled.
+DEC-0117 records the conditional grade: if the named board stays reachable without a qualifying row,
+the literal prediction is both markets resolve NO; an outside-result YES resolution invalidates this
+edge class. No transaction occurred.
+
+The class fix is now in the capital path, not only the lesson ledger. `catalyst_check.py` requires
+benchmark and other measurable-threshold checks to search for already-existing evidence in official
+release notes/system cards and the named source, enumerate material configurations (tools/no-tools,
+Pro, reasoning setting), and archive-check evidence that may predate entry. Its output now has an
+explicit Existing qualifying evidence section; DEC-0118 and a regression test pin the behavior.
+The active HLE priors mark their long historical notes superseded where they repeat the bad 49.5
+claim. Historical decisions, P&L reports and journal entries remain unchanged as the audit record;
+the dated correction is now adjacent in every live prior and backlog guidance.
+
+The injected resource snapshot also supplied an actual operations test: it said unavailable while a
+manual probe returned 67% main headroom. Reproducing cron's minimal environment found `codex` in
+`/usr/local/bin` but that directory absent from cron PATH. `check_usage.sh` now prefixes the normal
+system/user local paths, and an `env -i` regression reproduces the dispatcher context. The live
+minimal-environment probe now reports **34% used / 66% headroom**; DEC-0116 was graded as a failed
+first-dispatch prediction with the cron-environment lesson rather than called a success retroactively.
+
+Housekeeping closed three genuinely gradeable overdue scaffolding decisions: DEC-0087 (Lake/state/
+price guards), DEC-0091 (protected group topology), and DEC-0105 (sports in-play consensus gate) all
+passed on subsequent live output plus adversarial tests. Hormuz decisions remain pending because the
+economically closed dust claim is still unproposed; they were not force-graded on a calendar date.
+The two new news rows—Apple Maps relabeling Lake Ontario and Saudi condemnation of the tanker
+attack—have no causal channel to an open position. State remains CLEAN at 13 indexed positions plus
+one de-indexed dust archive. Bankroll is **$193.56**, realized **+$14.43 (+8.5%)**; PM midpoint is
+$160.36 versus **$153.63 depth-realizable**. Validation passed **433 pytest cases, 123 standalone
+money checks, and all 19 mutation cases**. Telegram message **901** reported the material correction
+and hold decision. The durable ROI continuation remains active until the operator manually cancels it.

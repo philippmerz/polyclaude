@@ -89,6 +89,18 @@ Steps:
    - "<entity> deadline" / "<entity> announcement"
    - Any specific keyword from the resolution criteria + the year/month
 
+2b. **For benchmark, leaderboard, rank, price, count, or other measurable-threshold
+questions, search for ALREADY-EXISTING qualifying evidence before forecasting future
+catalysts.** Start with the entity's official release notes / system card / filing and
+the criteria's named resolution source. For benchmarks, search the exact benchmark name
+plus every material configuration label (for example `with tools`, `no tools`, `Pro`,
+reasoning effort, pass@k). Report the score and configuration together. Never turn the
+maximum on one third-party tracker into a claim about the maximum on “any surface.” If
+the evidence may predate market entry, use a dated archive capture where possible and
+state whether the literal criteria allow that earlier observation to qualify. A result
+that already satisfies the question is not a future catalyst and must be reflected in
+the central estimate.
+
 3. For each catalyst found, classify impact:
    - HIGH: directly resolves the market (e.g., a scheduled formal confirmation/announcement).
    - MEDIUM: materially shifts probability (e.g., a hearing that could lead to confirmation).
@@ -109,6 +121,11 @@ Resolution: <resolve_date> | Days: <N> | Today: <today_iso>
 
 ### Base rate
 <one sentence on historical base rate for this kind of event in this kind of window>
+
+### Existing qualifying evidence
+- <date> - <measurement + exact configuration> - <first-party or named-source URL>
+(if the question is not measurable-threshold based: "Not applicable."; if it is and no
+qualifying evidence exists: "None found after first-party + named-source sweep.")
 
 ### Catalysts in window
 - [HIGH/MED/LOW] YYYY-MM-DD - <catalyst description> - <source URL>

@@ -1,5 +1,5 @@
 {
-  "next_id": 117,
+  "next_id": 119,
   "decisions": [
     {
       "id": 1,
@@ -1688,9 +1688,10 @@
         "backlog"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS. No Lake exact-label observation occurred, so no rollout alert was emitted. Position-state audit stayed clean; malformed or rate-limited position payloads fail degraded; capped entries reject above-cap prices; and sell-side edge uses executable bids instead of midpoint artifacts. The relevant live controls and adversarial tests continued to pass.",
+      "calibration_delta": "Zero: the high-confidence safety-scaffolding prediction matched subsequent live behavior and regression coverage.",
+      "lesson": "Grade compound safety scaffolding with both live control results and adversarial tests. Keep rollout evidence separate from majority-rollout proof, and use executable depth for action decisions.",
+      "resolved_at": "2026-09-02T22:17:08Z"
     },
     {
       "id": 88,
@@ -1768,9 +1769,10 @@
         "scaffolding"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS. Exactly two protected group structures remained visible; aggregate fair and payout calculations matched the expected Duma and MetaMask values, and no member-leg add, trim, drawdown, or exit recommendation escaped group protection. Broken topology and partial depth continued to fail closed.",
+      "calibration_delta": "Zero: the high-confidence group-protection prediction matched live advisory output and adversarial tests.",
+      "lesson": "Protected structures require canonical machine-readable topology and early membership extraction. Preserve member suppression before parsing or fallback logic can reintroduce naked-leg advice.",
+      "resolved_at": "2026-09-02T22:17:08Z"
     },
     {
       "id": 92,
@@ -2054,9 +2056,10 @@
         "odds-integrity"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS. Started sports markets received SKIP_IN_PLAY and consumed no bookmaker-worker slots, while the future Gen.G-KT market remained eligible. The prior 30.5pp stale-pregame discrepancy disappeared; current tests cover started, future, malformed, missing, and timezone-normalized gameStartTime.",
+      "calibration_delta": "Zero: the high-confidence start-time guard behaved as predicted on the next consensus run.",
+      "lesson": "Gate every live-versus-pregame comparison on scheduled start time before consuming bookmaker data; preserve in-play visibility for audit while excluding it from consensus scoring.",
+      "resolved_at": "2026-09-02T22:17:08Z"
     },
     {
       "id": 106,
@@ -2275,6 +2278,48 @@
         "quota",
         "resource-routing",
         "app-server"
+      ],
+      "slug": null,
+      "outcome": "The first 22:00 scheduled payload reported the resource snapshot unavailable even though a manual probe showed 67% main-Codex headroom. Reproduction under env -i found that the light cron PATH omitted /usr/local/bin, where codex is installed. check_usage.sh now prefixes /usr/local/bin and the user-local bin; a minimal-cron regression test and live minimal-environment probe both pass.",
+      "calibration_delta": "The high-confidence first-dispatch prediction failed on the production cron environment, despite the implementation tests passing in the interactive shell. The RPC choice was correct; environment parity was missing.",
+      "lesson": "Test every scheduled shell wrapper under env -i with cron's actual HOME/PATH. A successful interactive probe does not validate the dispatcher environment.",
+      "resolved_at": "2026-09-02T22:13:26Z"
+    },
+    {
+      "id": 117,
+      "timestamp": "2026-09-02T22:13:26Z",
+      "type": "skip",
+      "thesis": "A 21.5pp repricing in OpenAI HLE >=55 exposed material pre-entry evidence omitted from our priors: OpenAI's Apr-23 official table already showed tool-enabled HLE at 52.2/52.1 and Pro at 57.2/58.7, with Wayback proving publication before the Aug-1 entries. This invalidates the capability/new-frontier premise. The exact agi.safe.ai source is nevertheless reachable and frozen with no qualifying row, and the outside-source escape is explicitly gated on unavailability. Cut OpenAI >=50 p_no 0.59->0.45 and >=55 p_no 0.78->0.50. Hold existing claims because even 10pp-haircut values exceed complete exits; do not add or flip because the factual miss and correlated cluster widen model risk.",
+      "confidence": "medium",
+      "prediction": "If agi.safe.ai remains reachable and has no qualifying OpenAI row at the Dec-31 cutoff, both OpenAI threshold markets resolve NO under the literal named-source reading. A YES resolution based solely on the pre-existing outside tool-enabled results invalidates this named-source-lag edge class.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "openai",
+        "named-source",
+        "fact-correction",
+        "hold-no-add"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 118,
+      "timestamp": "2026-09-02T22:18:07Z",
+      "type": "scaffolding",
+      "thesis": "The HLE factual miss was a research-path failure: catalyst checks asked mainly about future events and did not force measurable-threshold markets to search for already-existing first-party evidence across configurations. catalyst_check now requires an official release/system-card plus named-source sweep, exact benchmark configuration labels, archive timing when evidence may predate entry, and a dedicated existing-evidence report section. A regression test pins those requirements.",
+      "confidence": "high",
+      "prediction": "The next benchmark or measurable-threshold catalyst report explicitly lists already-existing first-party evidence with configuration and date, or states that the first-party plus named-source sweep found none; it does not promote a single third-party tracker maximum to an all-configurations claim.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "research-guard",
+        "benchmark",
+        "source-scope",
+        "catalyst-check"
       ],
       "slug": null,
       "outcome": null,

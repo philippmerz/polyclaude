@@ -599,6 +599,20 @@ Read this before touching any prior.)*
   DATASET date, and the board had added GPT-5, Grok 4, Claude 4.5 and Gemini 3 Pro after it; slow,
   not dead). Wrong inferences off right facts are harder to catch, because every fact-check passes.
 
+- **A benchmark “best score” is scoped to a configuration and source; never promote it to “ANY
+  surface.”** 2026-09-02: the OpenAI HLE entries and repeated re-verifications said GPT-5.6 Sol
+  at 49.5 was OpenAI's best score anywhere. That was false. The third-party trackers being checked
+  covered a standard/no-tools slice, while OpenAI's own Apr-23 release had already published HLE
+  WITH TOOLS at 52.2/52.1 and Pro scores of 57.2/58.7; Wayback proves the table existed before the
+  Aug-1 entry. The resolving board really was frozen, but capability evidence above both held
+  thresholds was hiding outside the narrow surface I kept re-checking. This was a self-flattering
+  scope error and cost 14pp/28pp of prior. Before any benchmark-capability trade, search the lab's
+  official release and system card for the exact benchmark plus variants (`tools`, `no tools`,
+  `Pro`, reasoning setting), record the configuration beside every score, and archive-check whether
+  the evidence existed at entry. A third-party leaderboard can establish only what *that board*
+  shows. A sharp adverse ladder move should trigger this first-party/configuration sweep before it
+  is attributed to flow or future-model rumors.
+
 - **A dated primary source is not a CURRENT one — source-diffing checks FIDELITY, not
   RECENCY.** 2026-08-12: the MacBook prior was rebuilt the day before from a fetched, dated,
   correctly-quoted MacRumors/Gurman piece — and I treated "I verified against a primary source"
