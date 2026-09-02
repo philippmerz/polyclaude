@@ -11784,3 +11784,37 @@ Authoritative bankroll is **$207.40**, realized **+$21.93 (+12.9%)**; active PM 
 versus **$168.90 depth-realizable**. Six SELLs and zero BUYs rest. No trade, fill, redemption, swap,
 bridge or other prior changed. Telegram message **895** reported the GTA risk update. The durable ROI
 continuation remains active until the operator manually cancels it.
+
+## 2026-09-02 18:00–18:07 UTC — GTA regime breaks again; all 12 YES closed (DEC-0115)
+
+The scheduled backlog read found the second consecutive adverse GTA acceleration. Rockstar's
+official counter reached **18,573,813 at about hour 137**, adding 499,649 in four hours, or
+**2.998M/day**. Only 1.426M remains over roughly 31 hours, **1.104M/day required**. Unlike the 14:00
+single-window warning, the broader curve now agrees: 4h/8h/12h/16h rates are
+2.998/2.233/1.695/1.445M/day, all above the requirement. Honest p(<20M) fell 0.82 to roughly
+**0.05–0.08**. The thesis broke; the position was not held merely to avoid realizing the loss.
+
+The live YES CLOB had 985 shares bid at 0.11. DEC-0115 sold all **12 YES at 0.11 FOK**, $1.32 gross
+and **$1.261260 net** after the $0.058740 quadratic fee. Order
+`0x3c7ed690339206113a2193ed7080bb3c0d2d38bb6df9720c0bf615fd0c77345f`; transaction
+`0x5c77d55397b333010eef10ee396e9b88de598b3a2924ef12c29e07432ce09711`. Against DEC-0114's
+$8.878260 fee-inclusive entry, the ticket lost **$7.617000**. Combined with the earlier opposite-side
+ticket, GTA realized P&L is **−$14.134505**. No third entry is permitted in this instance.
+
+The loss exposed a strategy-class problem, not only a bad draw. A continuously visible counter is
+not differentiated information when YouTube distribution can switch regimes inside the four-hour
+sampling interval and the market watches the same page continuously. The consolidated lesson now
+gates out cumulative-counter trades based only on trailing-rate extrapolation. A future instance
+requires an independent mechanistic demand/catalyst model and monitoring faster than the observed
+regime half-life. The live prior was removed after the close; DEC-0110/0114/0115 remain scheduled
+for final calibration at the exact Sep-4 endpoint.
+
+One other price alert received its required factual check. OpenAI ≥55 HLE YES moved five points,
+but the source-freeze instrument detected real 2025 changes, passed claude/grok/gemini coverage,
+and found the live agi.safe.ai model set **identical to 2026-01-15**. No thesis change and no trade.
+The 17:35 BBC tanker-attack alert assigned no causal portfolio impact, correctly. Post-exit state is
+CLEAN at 13 indexed positions plus one de-indexed dust archive; six SELLs and zero BUYs rest.
+Authoritative bankroll is **$200.02**, realized **+$14.43 (+8.5%)**; active PM midpoint is $166.80
+versus **$160.29 depth-realizable**. Telegram message **896** reported the close and HLE check. No
+other backlog item, position, order, redemption, swap or bridge changed. The durable ROI
+continuation remains active until the operator manually cancels it.

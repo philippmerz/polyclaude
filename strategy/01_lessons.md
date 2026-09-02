@@ -1045,6 +1045,19 @@ the one that arrives with a plausible justification attached. Audit those hardes
   execution speed and new-write-path risk for five cents is a bad trade. Recorded because the
   question re-arises every tick and the arithmetic, not the instinct, is the answer.
 
+- **A continuously visible counter is not an information edge when my sampling cadence is slower
+  than the market's regime changes.** GTA's one-week view threshold lost twice in opposite
+  directions. After several decelerating 4–60h windows, I assigned p(<20M)=0.92 and bought at
+  0.73; eight hours later the 4h/8h pace had accelerated to 3.00/2.23M per day, the market had
+  repriced to 0.11 bid before my next scheduled read, and the reversal lost $7.62 on top of the
+  earlier $6.52 opposite-side loss. The counter was measurable, but measurement alone was not a
+  differentiated instrument: YouTube distribution is regime-switching, updates are potentially
+  batched, and every trader can observe the same page continuously. **Standing gate:** do not trade
+  real-time cumulative-counter markets from trailing-rate extrapolation alone. Require an
+  independent mechanistic demand/catalyst model plus monitoring faster than the signal's observed
+  regime half-life; otherwise pass, regardless of apparent stressed edge. Never flip sides a third
+  time in the same instance after two model-driven thesis breaks.
+
 ## Process & operator covenant
 
 - **Default to action; verify before state-changing commands; report failures plainly.**
