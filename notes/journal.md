@@ -11653,3 +11653,52 @@ bankroll is **$208.93**, realized **+$22.04 (+13.0%)**; PM midpoint is $168.22 v
 depth-realizable. No trade, order, redemption, swap, bridge, prior or position changed. Per the
 material-only rule, no Telegram was sent. The durable ROI continuation remains active until the
 operator manually cancels it.
+
+## 2026-09-02 02:00–02:14 UTC — scheduled criteria rotation clears; no robust prospect
+
+The official GTA VI counter reached **17,610,439 at about hour 121.0**, adding 165,053 in four
+hours, or only **0.99M/day** versus **1.220M/day now required**. The 8h/12h windows are both about
+1.14M/day and the 16h window is 1.19M/day. Flat-rate projections through 28 hours finish below 20M;
+all but one noisy recent exponential-rate fit finish around 18.7–19.1M. I cut central p(≥20M)
+slightly to roughly **0.15–0.20**. The live NO ask for ≥20M is 0.21, **0.218295 all-in** after the
+quadratic fee, so the standard stress gate requires central p above 0.3183. The opposite side also
+fails its stressed bound. DEC-0110 remains closed with no revenge trade or stale order. Official
+source: [Rockstar's video](https://www.youtube.com/watch?v=tJbzMqJGH4k).
+
+The state audit required two substantive reads. For Duma, the official VCIOM series still ends
+Aug-23 at 39.2% and I found no newer whole-seat forecast. Re-deriving from the Sep-1 APEK/RASO
+evidence leaves the bucket distribution at 0.18/0.31/0.19 and union fair at 0.68. Executable
+complete-set bids/asks moved to **0.652/0.683**: bids remain below fair and asks remain far above
+the 0.57 add ceiling, so the equal-share set is a fresh group-level HOLD. Source:
+[VCIOM party ratings](https://wciom.ru/ratings/reiting-politicheskikh-partii/).
+
+The Greenland criteria are textually unchanged: only a binding sovereignty transfer or primary /
+exclusive jurisdiction qualifies; frameworks, access and basing agreements do not. The cited May
+report still says no deal. The subsequent rotation found a genuinely new Sep-1 MacBook clue:
+macOS Golden Gate renders some interface elements differently on OLED/HDR displays, and the report
+still describes the OLED laptop as planned **by early 2027**. That supports product existence but
+does not establish a 2026 public sale or even touchscreen-specific launch timing. The live market's
+literal bar remains general-public purchasability by Dec-31, not an unveiling. MacBook p_no stays
+**0.65**, the correlated AI cluster cap leaves no meaningful add capacity, and Sep 8–10 remains the
+pre-committed event read. Source: [MacRumors Sep-1](https://www.macrumors.com/2026/09/01/macos-golden-gate-hdr-liquid-glass/).
+
+Systematic prospecting produced no entry. Primary discovery fetched 999 active markets and the
+event-paginated thin-tail pass found no fact-backed candidate that cleared pessimistic pricing.
+Sports scanned 77 liquid near-term markets. Its strongest verified gap was BIG over Nemiga: bookie
+consensus 0.70 versus Polymarket 0.605, only 9.5pp before execution cost, so it fails the mandatory
+10pp stress bound. The other checked gaps were 4pp and 1pp. Macro exposed the September Fed
+distribution without a reliable external consensus. Monotonicity inspected 924 multi-market events
+and found zero live executable arbitrages. The explicitly incomplete consistency slice scanned
+5,003 open markets / 564 events and found zero provisional positive after its bounded live pass.
+Eight favorite-fade rows remain failed-replication population hints without instance evidence.
+
+One post-checkpoint CBS alert reported further US–Iran threats but assigned no portfolio impact; it
+does not change any live prior. UMA reports zero transitions, Ostium remains empty, state is CLEAN at
+13 indexed rows plus one de-indexed dust archive, and redemption found zero winning claims. Marginal
+APY, watchlist, complete-group exit routing and constrained Kelly produced no action. Six SELLs and
+zero BUY commitments rest. The authoritative bankroll is **$208.95**, realized **+$22.04 (+13.0%)**;
+active PM midpoint is $168.24 versus **$162.31 depth-realizable**. Weekly P&L is current through
+Aug-28 and world-state rotation through Aug-30. Validation passed **424 pytest cases plus all 123
+standalone money checks**. Telegram message 893 reported the MacBook/GTA read. No trade, fill, order,
+redemption, swap, bridge, or position changed. The durable ROI continuation remains active until the
+operator manually cancels it.
