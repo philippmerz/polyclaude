@@ -1,5 +1,5 @@
 {
-  "next_id": 114,
+  "next_id": 115,
   "decisions": [
     {
       "id": 1,
@@ -2215,6 +2215,27 @@
         "checkin"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 114,
+      "timestamp": "2026-09-02T10:07:30Z",
+      "type": "open_position",
+      "thesis": "Opened 12 YES shares on GTA VI Extended Look finishing below 20M after the official counter reached 17,829,395 at hour ~129. Reaching the threshold now needs 1.336M/day for 39 hours, while the measured 4h/8h/12h/16h rates are only 0.62/0.66/0.77/0.90M/day. Every trailing linear window through 60h projects below 20M (18.83-19.89M), and decay-rate fits land at 18.14-18.80M. Honest central p(YES)=0.92; the 10pp instance stress gives 0.82 versus 0.739855 all-in at the 0.73 ask. Sized at only 8.87826 dollars gross despite a much larger Kelly result because this reverses a recently losing ticket and retains protection against counter batching or an unmodeled late attention surge.",
+      "confidence": "medium",
+      "prediction": "The official Rockstar YouTube counter is below 20,000,000 at the exact 168-hour endpoint on 2026-09-04; 12 YES shares then pay 12 dollars, producing 3.12174 dollars versus the fee-inclusive 8.87826-dollar cost.",
+      "size_usd": 8.87826,
+      "resolution_at": "2026-09-04",
+      "tags": [
+        "gta",
+        "views",
+        "reentry",
+        "public-counter",
+        "stressed-edge"
+      ],
+      "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

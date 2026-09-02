@@ -107,6 +107,14 @@
    "negativeRisk": false
   },
   {
+   "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
+   "outcome": "Yes",
+   "size": 12,
+   "conditionId": "0xabf7b6d2ce976c0f2c31d0ce931608f3c9b3e3c00468e58ee1d68069bdbaeeff",
+   "asset": "53967861473705641468116203294259059274377972235301687793639549234478668375381",
+   "negativeRisk": true
+  },
+  {
    "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
    "outcome": "No",
    "size": 0.003571,

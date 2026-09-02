@@ -11719,3 +11719,33 @@ singular/current. The authoritative bankroll is **$208.29**, realized unchanged 
 (+13.0%)**; active PM midpoint is $167.53 versus **$161.71 depth-realizable**. No trade, fill,
 order, redemption, swap, bridge, prior, or position changed. Per the material-only rule, no Telegram
 was sent. The durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-02 10:00–10:11 UTC — GTA reverses into robust <20M entry (DEC-0114)
+
+The backlog review produced one real change. Rockstar's official GTA VI Extended Look counter was
+**17,829,395 at about hour 129.0**, leaving roughly 39 hours and requiring **1.336M/day** to reach
+20M. The measured 4h/8h/12h/16h rates were only 0.62/0.66/0.77/0.90M/day. Every trailing linear
+window through 60 hours projected below 20M, from **18.83M to 19.89M**, and the decay-rate fits
+projected 18.14–18.80M. This is materially different evidence from the earlier ≥20M ticket, not a
+rewrite of it: DEC-0110's **−$6.517505** loss stays closed and graded on its own process.
+
+The exact market says YES iff the official counter is below 20M after the video's first 168 hours,
+ending **2026-09-04 01:00:48 UTC**. I set honest central p(YES)=0.92, leaving an 8% tail for counter
+batching, a late attention surge and model error. The standard 10pp instance stress is 0.82, above
+the **0.739855 fee-inclusive** cost at the 0.73 ask. The mandatory entry helper cleared exact Gamma
+identity, UMA, fees, depth, correlation and portfolio caps, then bought **12 YES shares at 0.73**:
+$8.76 raw plus $0.118260 fee, **$8.878260 gross**. Order
+`0x6986327b8e0baec7ee674e288a9a6612b0dfbf8474211a46c2590acc6992eccc`; transaction
+`0xe92387908859233d1e62b1acff644717ef3333965f0a6b6aca02410abc916a3c`. A win pays $12 for
+$3.121740 profit. I capped the trade far below point-estimate Kelly because it reverses a recent
+loss and the public counter is still exposed to measurement and late-traffic tails. The remaining
+Aave reserve was intentionally not pulled; this was a risk bound, not a cash bottleneck.
+
+Post-fill state is CLEAN at **14 indexed positions** plus one de-indexed dust archive. Open cost is
+$165.96, midpoint $176.42 and depth-realizable value **$170.94**. Authoritative bankroll is
+**$208.30**, realized **+$21.92 (+12.9%)**; entry fee explains the small decline from the prior
+checkpoint. Six SELLs and zero BUYs rest, and the GTA marginal-APY/exit checks both say HOLD. The
+only new news item was an Al Jazeera MINOR alert on further US–Iran attacks; it was correctly routed
+to Trump-out and does not change p_no=0.97. No other position, order, redemption, swap or bridge
+changed. Telegram message **894** reported the fill and next endpoint. The durable ROI continuation
+remains active until the operator manually cancels it.
