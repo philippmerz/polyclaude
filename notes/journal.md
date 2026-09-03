@@ -12008,3 +12008,29 @@ ungraded until that exact clock and there will be no third entry. Hormuz remains
 DEC-0103 still awaits a real recurrence, and the Apple review remains scheduled after the Sep 8–10
 event. No trade, order change, redemption, swap, bridge, prior change, new decision, or Telegram
 message occurred. The durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-03 10:00–10:03 UTC — periodic review: deeper HLE quote, thesis unchanged
+
+No backlog clock became due after 06:03. The 13 indexed rows still cost $157.20 and now mark at
+**$158.16 (+$0.97)**, while depth-realizable value moved the other way to **$147.33 (-$9.86)**;
+the midpoint-over-exit gap widened to $10.83. Authoritative bankroll is **$191.42**, up $1.33 from
+06:00 solely from valuation drift, with realized P&L unchanged at +$14.43. Authenticated inventory
+remains six LIVE SELLs / zero BUYs with no match or cancellation. Ostium is empty, UMA status and
+crux coverage are clean, and the long-term watchlist has no trigger.
+
+The notable move is OpenAI HLE >=50 NO **0.065 -> 0.029 midpoint**, with the complete 15-share exit
+down from about $0.87 to only **$0.29**. There is no board/status change, post-06:03 HLE news, or
+new resolution precedent. The Sep-2 correction already removed the capability pillar; the remaining
+0.45 prior is explicitly the literal reachable-board versus UMA-spirit judgment. Market flow alone
+does not justify replacing that audited contract reading. Even the ten-point-haircut hold value is
+$5.25, eighteen times the executable exit. Decision remains **HOLD / NO ADD / NO FLIP**; the 0.65
+maker sell is above fair. Gemini >=50 NO improved to about 0.163 midpoint / $8.02 complete exit but
+also remains HOLD against 0.55 fair. Duma remains a complete-set HOLD and fails the 0.57 add ceiling.
+
+One 09:57 BBC US-Iran-strike alert was consumed; its structured impact list is empty and it has no
+causal channel to an economic open position. There was no new opportunity alert. Rockstar's official
+counter reached **20,326,703** at hour 153, 15 hours before the exact Sep-4 01:00:48 endpoint. The
+>=20M outcome is locked barring a counter correction, but DEC-0110/0114/0115 remain ungraded until
+their stated clock and no third entry is allowed. Hormuz/DEC-0103 remain non-gradeable; Apple remains
+scheduled after Sep 8–10. No trade, order change, redemption, prior change, new decision, or Telegram
+message occurred. The durable ROI continuation remains active until the operator manually cancels it.
