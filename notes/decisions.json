@@ -1,5 +1,5 @@
 {
-  "next_id": 119,
+  "next_id": 120,
   "decisions": [
     {
       "id": 1,
@@ -2320,6 +2320,26 @@
         "benchmark",
         "source-scope",
         "catalyst-check"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 119,
+      "timestamp": "2026-09-03T02:10:32Z",
+      "type": "skip",
+      "thesis": "The Sep-3 Gemini HLE >=50 YES alert exposed the same configuration-scope research miss found on OpenAI one tick earlier: Google's Feb first-party materials already reported 51.4 and 53.4 HLE with search/code, so the capability-jump premise was false. The exact contract still names the reachable, frozen agi.safe.ai board and gates outside evidence on unavailability. Cut p_no 0.65 to 0.55, hold the existing 59.01 NO because even a 10pp-haircut resolution value far exceeds the 6.23-dollar executable exit, and make no add or flip because the residual edge is resolver interpretation and the correlated cluster is capped.",
+      "confidence": "medium",
+      "prediction": "If agi.safe.ai remains reachable and contains no qualifying Gemini row at the Dec-31 cutoff, the market resolves NO under the literal named-source reading. A YES resolution based on pre-existing outside tool-enabled Google results would invalidate this named-source-lag edge class and the revised central prior.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "gemini",
+        "named-source",
+        "prior-correction"
       ],
       "slug": null,
       "outcome": null,

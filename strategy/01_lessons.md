@@ -611,7 +611,11 @@ Read this before touching any prior.)*
   `Pro`, reasoning setting), record the configuration beside every score, and archive-check whether
   the evidence existed at entry. A third-party leaderboard can establish only what *that board*
   shows. A sharp adverse ladder move should trigger this first-party/configuration sweep before it
-  is attributed to flow or future-model rumors.
+  is attributed to flow or future-model rumors. **Immediate replication 2026-09-03:** the new sweep
+  found the same miss on the held Gemini >=50 leg — Google's February first-party pages already
+  reported 51.4/53.4 with search and code while every prior cited only 44.4/48.4 no-tools maxima.
+  That cut p_no another 10pp and proves configuration scope is a recurring failure class, not an
+  OpenAI-specific mistake. The control worked this time: it found the fact before any add/flip.
 
 - **A dated primary source is not a CURRENT one — source-diffing checks FIDELITY, not
   RECENCY.** 2026-08-12: the MacBook prior was rebuilt the day before from a fetched, dated,

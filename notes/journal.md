@@ -11912,3 +11912,75 @@ one de-indexed dust archive. Bankroll is **$193.56**, realized **+$14.43 (+8.5%)
 $160.36 versus **$153.63 depth-realizable**. Validation passed **433 pytest cases, 123 standalone
 money checks, and all 19 mutation cases**. Telegram message **901** reported the material correction
 and hold decision. The durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-03 02:00–02:13 UTC — Gemini configuration miss corrected; hold/no-add (DEC-0119)
+
+This full check-in was material. The authoritative bankroll is **$191.02**, down $2.54 from the
+prior $193.56 midpoint snapshot while realized P&L remains **+$14.43 (+8.5% of the $170
+reference)**. The 13 indexed Polymarket rows cost $157.20 and mark at **$157.78 (+$0.58)**, but
+complete depth-realizable value is only **$147.73 (-$9.47)**; midpoints overstate liquidation value
+by $10.05, chiefly the OpenAI-55 and MacBook books. PM holds 2.115500 deployable pUSD, 16.104830
+Polygon aUSDC.e and 49.815247 POL; the crypto sleeve holds 7.8684 Arbitrum aUSDC plus small
+stable/gas balances. Ostium has zero open trades and its state diff is unchanged. The indexed book
+plus the de-indexed Hormuz dust archive reconciles CLEAN, crux coverage printed no gap, and
+`redeem-all` found zero winning redeemables and sent no transaction. All four daemons are exact-one
+and fresh: news 2836158, heartbeat 1806213, Telegram 1806864, opportunity 2349187.
+
+UMA initially surfaced two moves: Gemini HLE >=50 YES **0.7920 -> 0.8665 (+7.5pp)** and a partial
+OpenAI >=55 reversal **0.835 -> 0.675 (-16pp)**. The Gemini book is currently 0.845/0.889 YES on
+about $1,083 of 24h volume, while the adjacent highest-score and debut ladders did not move in
+lockstep. That makes the alert largely isolated flow / thin-book repricing, not evidence of a new
+release. The mandatory first-party configuration sweep nevertheless found a more important fact
+that predated the position. Google's February 19 Gemini 3.1 Pro model card reports **44.4 HLE with
+no tools but 51.4 with Search (blocklist) + Code**. The official Gemini 3.1 Deep Think page reports
+**48.4 without tools and 53.4 with Search + code execution**. The prior's claim that public
+Gemini-specific evidence was entirely below 50 was therefore false, repeating yesterday's OpenAI
+scope mistake.
+
+The other half of the thesis remains observed. The exact contract was re-read with no drift: it
+names agi.safe.ai as resolution source, permits outside official results only if that source becomes
+unavailable/permanently unavailable, and otherwise defaults to NO. The validated source diff still
+finds that reachable board identical to 2026-01-15 and without a qualifying Gemini row. I therefore
+removed the capability-jump premise and cut Gemini >=50 p_no **0.65 -> 0.55**, with an honest
+roughly 0.40-0.70 range driven almost entirely by UMA's likely literal-versus-spirit/configuration
+reading. This is not a new buy signal. A complete exit of the 59.01 NO returns only **$6.23** versus
+$32.46 raw resolution value and **$26.56 after a 10pp calibration haircut**. DEC-0119 records
+**HOLD / NO ADD / NO FLIP**; the 0.75 maker sell remains strictly above revised fair. OpenAI-55's
+reverse move supplied no new fact, so its corrected p_no 0.50 and HOLD decision remain unchanged.
+
+The cheap GTA endpoint read also crossed a hard milestone: Rockstar's official counter reached
+**20,059,735**, above 20M about 23 hours before the exact Sep-4 01:00:48 UTC endpoint. This strongly
+confirms DEC-0110 and DEC-0115's exit directions and falsifies DEC-0114's entry direction, but no
+decision was formally graded before its specified endpoint and the **NO THIRD ENTRY** rule remains.
+The Duma daily rotation found no newer whole-seat forecast; VCIOM's live table still ends Aug-23 at
+39.2%. The 0.18/0.31/0.19 distribution and 0.68 union fair remain unchanged. The complete 20-share
+set exits for $12.75 versus $13.60 fair, while a fresh five-unit complete add costs about 0.675/unit
+against the 0.57 policy ceiling: HOLD the equal set, no add, and never trade one leg independently.
+
+There were no news rows after the prior journal entry; the Sep-2 Maps and tanker-condemnation rows
+had already been consumed and have no open-position causal channel. Marginal APY found seven holds,
+two protected groups and zero close candidates. Exit routing found HOLD on every ordinary position
+and both groups. The watchlist had no entry-trigger hits. DEC-0103 remains prospectively pending:
+unit tests cover its UMA resolution/de-indexing behavior, but there has not yet been a subsequent
+live recurrence to grade. Weekly P&L (Aug-28) is not yet seven days old and world state (Aug-30) is
+well inside the eight-day recovery threshold, so neither weekly lane ran.
+
+Discovery remained a pass. The normal scan covered 993 active markets and displayed 80; the thin
+pass covered 38,970 active and found 1,550 hurdle-clearing rows. Favorite-fade produced 22 rough / 9
+validated browse hints; Pegula, Fritz and Shelton US Open NO rows were the best research-only names,
+but all raw model gaps were below the 10pp stress hurdle and the population edge is failed. Sports
+fetched 76 rows. The only auditable Lille first-half -1.5 source implied YES 12.2% versus a 0.14 PM
+ask, and NO carried effectively zero edge; repeated consensus was unstable, so both directions fail.
+Macro surfaced five rows without a reliable consensus instrument. Monotonicity examined 1,218
+events / 956 multi-market events and reduced two apparent inversions to non-executable artifacts.
+The explicitly bounded consistency scan covered 5,015 open markets / 554 events / 28 pages, requested
+live validation on 20 midpoint candidates, obtained 13 complete quotes and found zero provisional
+positive. No opportunity-alert payload has appeared since Aug-28.
+
+No trade, fill, order change, redemption, swap or bridge occurred. The active prior, consolidated
+lesson, backlog and README were corrected; Telegram message **902** reported the material finding
+and GTA milestone.
+Main Codex headroom was refreshed at **65%**, with bounded routine scans delegated and portfolio
+judgment retained here. Validation passed **433 pytest cases, all 123 standalone money checks and
+all 19 financial mutations**; JSON/state/diff and secret hygiene were clean before push. The durable
+ROI continuation remains active until the operator manually cancels it.
