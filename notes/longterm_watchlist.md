@@ -463,3 +463,14 @@ vs the tightened $0.050 gate. Precautionary fresh checks on UNI and SKY both rem
 research gate was tightened to **$0.050**. Neither new equity trigger is an authorization
 to buy—each only reopens underwriting at a materially safer valuation. No polyclaude capital
 action. Telegram message 880 surfaced the weekly result.
+
+## 2026-09-03 trigger re-vet — LRCX
+
+The original LRCX research gate fired at **$279.26 <= $280**, routing to the operator's IBKR
+surface. The automatic fresh fundamental check returned **2/4 PASS**, not an entry: Lam still
+trades at roughly 50x trailing earnings near a semiconductor-equipment cycle peak, so the old
+25–30x-forward framing did not provide the margin of safety it was meant to encode. The price-only
+trigger is tightened to **<=$190** (roughly 25x FY26 EPS before any earnings reset), with an
+alternative research trigger after a material WFE-order correction if Lam retains share, balance-
+sheet strength, and service revenue. **No buy recommendation at $279; suggested size is $0 until
+one of those gates is met.**

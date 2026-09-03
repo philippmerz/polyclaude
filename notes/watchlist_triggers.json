@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-08-30",
+  "updated": "2026-09-03",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -184,10 +184,10 @@
       "ticker": "LRCX",
       "type": "equity",
       "yfinance_symbol": "LRCX",
-      "entry_max": 280.0,
+      "entry_max": 190.0,
       "horizon": "2-5y",
       "route": "ibkr_surface",
-      "rationale": "Semi equipment / AI-capex + advanced packaging. Surfaced 2026-05-31 digest 'Semiconductor Equipment grace-period' (MED): export-control grace through Dec 31 2026 + AI capex cycle. Fresh longterm_check 2.5/4 WATCH at $318 (53.9x P/E, peak cycle, weak margin of safety). Entry $250-280 (25-30x fwd P/E) OR on first negative capex-guidance signal / China-revenue slowdown. Don't chase at peak. Gen 8% / Strong 20% / Modest 42%.",
+      "rationale": "Semi equipment / AI-capex + advanced packaging. The stale $280 gate fired on 2026-09-03 at $279.26, but the automatic fresh longterm_check returned 2/4 PASS: roughly 50x trailing earnings still offers no cycle-peak margin of safety. Reassess only at <=$190 (about 25x FY26 EPS before any earnings reset), or after a material WFE-order correction that leaves Lam's share, balance sheet, and service revenue intact. Do not buy merely because the old trigger fired.",
       "added": "2026-05-31"
     },
     {

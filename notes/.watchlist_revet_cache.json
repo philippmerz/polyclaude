@@ -43,5 +43,14 @@
       "summary": "NOT now at $119. Current risk/reward is asymmetric to downside given 150 P/E and competitive risks. - **Preferred entry**: $90-100 (further 15-25% dip). Would validate correction is sentiment/macro, not fundamentals. De-risks multiple compression scenario. - **Alternative entry**: Confirm Q2 2026 results (expected late July) show backlog-to-revenue conversion on track AND 2026 guidance reaffirmed.",
       "fresh": true
     }
+  },
+  "LRCX": {
+    "ts": 1788444597.2172232,
+    "result": {
+      "verdict": "PASS",
+      "score": "2/4",
+      "summary": "Do not enter at ~50x trailing earnings. Reassess on a cyclical drawdown to **\u2264$190/share** (roughly 25x FY26 EPS, before any earnings reset), or after a material WFE-order correction that leaves Lam\u2019s share, balance sheet, and service revenue intact.",
+      "fresh": true
+    }
   }
 }
