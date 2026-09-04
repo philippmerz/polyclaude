@@ -12225,3 +12225,47 @@ fill, order change, redemption, swap or bridge occurred. Validation passed **434
 123 standalone money checks and all 19 financial mutations**; changed JSON/JSONL, diff whitespace,
 state and daemon hygiene were clean. The durable ROI continuation remains active until the operator
 manually cancels it.
+
+## 2026-09-04 06:00–06:18 UTC — periodic review: GTA final; Duma same-day prior refreshed
+
+The post-02:23 review found no portfolio transaction or thesis-break exit. Authoritative bankroll is
+**$187.71**, up $0.77 from the 02:19 snapshot solely from market/native-token marks; realized P&L is
+unchanged at **+$14.43**. The 13 active indexed positions mark at **$154.33** and depth-realize at
+**$147.35**, up $0.79/$0.46 respectively, with a $6.98 midpoint overstatement. Authenticated
+inventory remains six LIVE sells / zero buys with no new fill or cancellation. Wallet balances are
+unchanged, Ostium is empty, crux/state/watchlist checks are clean, marginal APY has no close
+candidate, and both configured structures now return HOLD_COMPLETE_GROUP. All four monitoring
+daemons remain exact-one and fresh.
+
+GTA transitioned from proposed to **resolved NO** at 03:04:30 UTC. Gamma is closed and
+automatically resolved at 0/1 YES/NO; the CLOB identifies NO as the winner, while the event's
+20–22M bracket is the sole winning bucket. The position was sold in full before resolution, no
+token balance remains, and `redeem-all` found nothing to redeem. This confirms the factual grades
+recorded at 02:00 and requires no new action. The direct agi.safe.ai fetch at 06:02 remained HTTP
+200 and unchanged from Jan-15, with no Astra/GPT-6 row. OpenAI HLE priors therefore remain
+0.35/0.40 p_no and **HOLD / NO ADD / NO FLIP**; complete exits remain far below hold value.
+
+The Duma group did require its final-30-day same-day re-underwrite. No new comparable whole-seat
+forecast or material poll appeared: VCIOM still ends Aug-23, and APEK/RASO remain the latest direct
+seat work. PolitPro's as-of-Sep-4 page displays 234 ER seats, but the arithmetic is mechanically
+47.0 / 90.4 qualifying-party vote × 450 = 234: its generic projection allocates the entire chamber
+proportionally and discloses no model of Russia's 225 single-member districts. Correcting it to the
+225 list seats implies about 117, inside RASO's 95–130 list range; it is not independent new evidence
+against the 155–197 district-win estimates. The adversarial exit case assigned the held union 0.58;
+the hold case retained 0.68. I retain **0.68** centrally because PolitPro reuses known Aug-23 polling
+and its headline seat count is structurally incommensurate, rather than averaging in the same input
+twice. The equal 20-share set exits for about **$13.42** versus $13.60 fair; the complete-set ask is
+about 0.702/unit versus the 0.57 add ceiling. Decision: **HOLD complete set / NO ADD / NO FLIP**;
+all three member priors were refreshed to Sep-4.
+
+The only new structured alert was a 05:14 France24 report that South Korea is considering a Hormuz
+deployment; its impact list is empty and there is no economic open-position channel. Hormuz-normal
+remains unproposed claim dust, so DEC-0077/0081/0084/0086 remain ungradeable. The bounded VfB
+Stuttgart recheck still fails: consensus NO 0.42, 0.37152 fee-inclusive entry, but robust p(NO) is
+only 0.32 after the standing 10pp haircut. Opportunity bounds remain zero executable. DEC-0092 was
+graded PASS after a full prospective week with the mixed-company false monotonicity family absent
+and true same-proposition fixtures still covered. Weekly P&L and world state are already fresh.
+
+No trade, fill, order change, redemption, prior probability change, Telegram message, swap or bridge
+occurred. Targeted decision/group validation passed **67 tests**; JSON, state, daemon and diff checks
+were clean. The durable ROI continuation remains active until the operator manually cancels it.

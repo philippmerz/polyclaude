@@ -1790,9 +1790,10 @@
         "safety"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS \u2014 through the Sep-4 endpoint, repeated daemon and scheduled scans produced zero pairs from the companies-acquired-before-2027 family despite divergent child metadata. Unrelated threshold children likewise did not reach book validation; the latest 05:31 run inspected 893 multi-market events and found zero violation or executable arb, while true same-proposition fixtures remained covered by tests.",
+      "calibration_delta": "No observed divergence: the mixed-proposition false-positive family disappeared for the full prospective week without suppressing the intended same-proposition date/threshold fixtures.",
+      "lesson": "Event membership and Gamma endDate proximity never establish logical implication. Normalize the child proposition and payout rule before any price comparison or live-book walk.",
+      "resolved_at": "2026-09-04T06:06:54Z"
     },
     {
       "id": 93,
