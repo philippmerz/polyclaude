@@ -12374,3 +12374,31 @@ event and the Sep-12 monthly emergency-path drill remain the next operational da
 fresh and the Aug-30 world-state review remains inside the eight-day recovery window. No trade,
 order change, redemption, prior change, Telegram message, swap, bridge or daemon restart occurred.
 The durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-04 22:00–22:05 UTC — periodic review: duplicate alert; marks lower, no action
+
+No actionable portfolio change occurred. Authoritative bankroll is **$188.50**, down $0.67 from
+18:00 on market marks; realized P&L remains **+$14.43**. The 13 indexed Polymarket rows still cost
+$157.20, mark at **$155.20**, and depth-realize at **$149.37**, so midpoints overstate liquidation
+by about $5.83. Apple NO eased 0.400→0.385 and the next-Gemini-model NO leg eased 0.140→0.137, but
+neither had a factual catalyst or thesis break. Inventory remains six LIVE sells / zero buys with
+the same previously partial 33-share sell and no new fill or cancellation. Trading balances are
+unchanged at 2.115500 deployable pUSD and about 16.11 Polygon aUSDC.e; Ostium remains empty.
+
+The only new structured alert since 18:00 was a 19:24 BBC repeat of the Sep-3 Saudi-tanker report,
+including the deaths of two Filipino sailors. Its structured impact set is empty and it has no
+economic-position channel: Hormuz-normal is already de-indexed 0.003571 claim dust pending UMA.
+There is no new opportunity alert, and repeated HLE/MetaMask pair scans remain zero executable.
+agi.safe.ai still has no Astra row, OpenAI still describes the rollout as limited access expanding
+over the coming days, and OpenAI HLE stays 0.35/0.40 p_no, HOLD / NO ADD / NO FLIP. Apple still has
+no primary-source touchscreen confirmation ahead of the Sep-9 event; Duma, MetaMask, Greenland and
+Hormuz judgments are unchanged.
+
+UMA tracked 37 conditions with zero alert. Position state and crux coverage are clean; marginal APY
+has seven clear holds, zero close candidates and two protected groups; every individual exit remains
+HOLD and Duma/MetaMask remain HOLD_COMPLETE_GROUP; the watchlist has no hit; and `redeem-all` found
+zero winning redeemables. All four daemons are exact-one with fresh state files. Hormuz
+DEC-0077/0081/0084/0086 remain ungradeable while unproposed; the next real decision clocks are
+DEC-0099 Sep-5 and DEC-0100 Sep-6. World-state and weekly P&L remain inside their freshness windows.
+No trade, order change, redemption, prior change, Telegram message, swap, bridge or daemon restart
+occurred. The durable ROI continuation remains active until the operator manually cancels it.
