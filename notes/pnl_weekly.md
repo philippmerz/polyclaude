@@ -917,3 +917,66 @@ resolution mechanism.
   one-epoch maker-rewards experiment only if its entry and adverse-selection gates still clear.
 - Grade the Aug-31 short-dated skip-ledger rows and keep the Metamask legs paired.
 - Prepare the Sep 8–10 MacBook re-underwrite rather than reacting to interim midpoint noise.
+
+---
+
+# Week 2026-08-28 → 2026-09-04
+
+## 1. Realized — the metric that counts
+
+| | |
+|---|---|
+| **Cumulative REALIZED (settled cash)** | **+$14.43 (+8.5% of the $170 reference)** |
+| Realized THIS WEEK | **+$9.68** |
+| Bankroll (all-in, incl. unsettled marks) | **$186.94** |
+| Weekly bankroll change | **+$1.42 (+0.8%)** from $185.52 |
+| Unrealized — marked | **−$3.66** |
+| Unrealized — realizable | **−$10.31** |
+
+Realized performance was strong but masked by weaker open marks. The week added about **$9.68**
+of settled P&L: Lake America contributed **+$28.616281**, the two GTA view-count tickets combined
+for **−$14.134505**, Iran–Oman lost **$5.029998**, and small rotations/fees netted roughly +$0.23.
+Marked unrealized P&L fell $7.46, from +$3.80 to −$3.66; gas-token valuation accounts for most of
+the remaining reconciliation to the $1.42 all-in bankroll gain.
+
+## 2. What changed the book
+
+- **Lake America was the week's economic winner:** the strict announcement-template thesis paid
+  **+$28.62**, a +231.9% return on cost.
+- **GTA VI ended above 20M views** (21,667,706 on the first post-endpoint read). Directional entries
+  DEC-0107/0108 were right, but the later 92%-confident under-threshold reversal and exit sequence
+  turned the combined ticket into a **$14.13 loss**. A few low-frequency trailing windows were not
+  evidence for a demand-rate break; the no-third-entry rule prevented another loss.
+- **Iran–Oman resolved NO.** The 0.55 entry prior had confused prospective diplomatic language with
+  an unambiguous joint agreement and was overconfident by about 55pp.
+- **GPT-6 Astra is an adverse HLE catalyst.** OpenAI reports 57.2% HLE with tools for a broadly
+  deployed model. agi.safe.ai is still reachable and unchanged, so no literal resolution fact has
+  occurred, but OpenAI ≥50/≥55 NO priors were cut from 0.45/0.50 to **0.35/0.40**. Exits near
+  $0.45/$1.46 remain inferior to stressed hold values; HOLD / NO ADD / NO FLIP.
+
+## 3. Calibration and decisions
+
+The decision ledger now has **121 decisions: 66 resolved, 55 pending, and 49 recorded lessons**.
+The dominant debugging pattern is overconfidence from proxy evidence: prospective language on
+Iran–Oman, short-window extrapolation on GTA, and benchmark-configuration omissions on both OpenAI
+and Gemini HLE. The response is operational, not score-seeking: retire the public-counter class,
+force first-party configuration sweeps for benchmark contracts, keep the HLE cluster capped, and
+monitor the exact named board. ROI remains the objective; calibration exists to remove repeatable
+loss mechanisms.
+
+## 4. Current book and fragility
+
+The 13 active indexed positions cost **$157.20**, mark at **$153.54**, and would realize only
+**$146.89** through current depth. Midpoints overstate liquidation value by **$6.65**. Six maker
+sells and zero buys remain live; pUSD deployable cash is $2.1155, with about $16.11 in Polygon
+aUSDC.e reserve. The HLE legs remain one correlated resolver-risk cluster, Duma and MetaMask must
+be judged as complete groups, and Hormuz-normal is only de-indexed claim dust pending final UMA
+status.
+
+## 5. Next week
+
+- Monitor agi.safe.ai for an Astra/OpenAI row and any on-point UMA resolution precedent.
+- Re-underwrite touchscreen MacBook immediately after Apple's Sep-9 event, focusing on actual
+  purchasability by Dec-31 rather than an unveiling alone.
+- Preserve cluster/ticket caps and rank only robust, executable new edges; do not add to HLE merely
+  because constrained Kelly prints a nominal deficit.

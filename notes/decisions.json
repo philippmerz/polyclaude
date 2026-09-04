@@ -1,5 +1,5 @@
 {
-  "next_id": 120,
+  "next_id": 122,
   "decisions": [
     {
       "id": 1,
@@ -2017,9 +2017,10 @@
         "deindexing"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS on the scheduled recurrence: Iran\u2013Oman finalized NO on Sep-1 and the tick surfaced the resolved transition, excluded the losing held row from open exposure, and subsequent UMA checks deduped it. Cached de-indexed Hormuz identity also remained available; the transient-fetch and continuing-dispute failure branches were not exercised.",
+      "calibration_delta": "No observed divergence on the main next-resolution/de-indexing prediction; two fail-closed retry branches remain covered by tests rather than a production incident.",
+      "lesson": "Resolution monitoring must preserve canonical identity across de-indexing, emit the transition once, and separately retain unresolved claim metadata; successful alerting is only useful when accounting and redemption also distinguish winners from losers.",
+      "resolved_at": "2026-09-04T02:11:47Z"
     },
     {
       "id": 104,
@@ -2077,9 +2078,10 @@
         "thin-tail"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS \u2014 the threshold was already exceeded three hours before the 168-hour endpoint (21,208,481 at 22:00 UTC) and the first post-endpoint read was 21,667,706. The final count therefore lies inside the predicted 18M\u201323M range; the market's <20M proposition is false.",
+      "calibration_delta": "The broad range contained the outcome; the 0.45 point probability on >=20M was 55pp underconfident, but correctly recognized that the threshold was not robustly predictable yet.",
+      "lesson": "When defensible counter models straddle the threshold, waiting for another independent observation is higher-value than forcing a side; the later sequence showed how quickly short-window extrapolations reverse.",
+      "resolved_at": "2026-09-04T02:09:27Z"
     },
     {
       "id": 107,
@@ -2097,9 +2099,10 @@
         "short-horizon"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Directionally PASS, economically lost after the later exit \u2014 the counter was already 21,208,481 three hours before the endpoint and 21,667,706 just after, so >=20M and market-NO were correct. DEC-0107/0108's combined 29-share ticket was nevertheless sold for $3.606010 net against $10.123515 cost, a $6.517505 realized loss.",
+      "calibration_delta": "Entry p(>=20M)=0.45 versus outcome 1, 55pp underconfidence; the later reversal, not the original direction, converted a winning terminal claim into a realized loss.",
+      "lesson": "Grade an adaptive public-counter trade as a full path, not isolated forecasts: a correct early thesis has no ROI value if noisy short-window updates trigger a bad full exit.",
+      "resolved_at": "2026-09-04T02:09:27Z"
     },
     {
       "id": 108,
@@ -2117,9 +2120,10 @@
         "add"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Directionally PASS, economically lost after the later exit \u2014 the counter was already 21,208,481 three hours before the endpoint and 21,667,706 just after, so >=20M and market-NO were correct. The combined DEC-0107/0108 ticket realized -$6.517505 after DEC-0110 sold all 29 shares.",
+      "calibration_delta": "Updated p(>=20M)=0.65 versus outcome 1, 35pp underconfidence; subsequent recency-weighting overrode the better cumulative-demand signal.",
+      "lesson": "Do not let one short deceleration window erase the cumulative trajectory without an independent demand/catalyst model or substantially faster measurements.",
+      "resolved_at": "2026-09-04T02:09:27Z"
     },
     {
       "id": 109,
@@ -2158,9 +2162,10 @@
         "thesis-break"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "FAIL \u2014 the <20M forecast was false. The count was 21,208,481 three hours before the endpoint and 21,667,706 just after. Selling 29 market-NO shares at 0.13 netted $3.606010 and locked a $6.517505 ticket loss; holding would have paid $29, so the close underperformed hold by $25.393990.",
+      "calibration_delta": "p(>=20M), equivalently the held market-NO side, was cut to 0.08 versus outcome 1: 92pp underconfidence caused by overfitting recent deceleration.",
+      "lesson": "A few low-frequency trailing-rate windows cannot justify a 92% under-threshold call on a batched public counter. Require an independent attention/demand mechanism and faster monitoring before a full thesis-break exit.",
+      "resolved_at": "2026-09-04T02:09:27Z"
     },
     {
       "id": 111,
@@ -2239,9 +2244,10 @@
         "stressed-edge"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "FAIL \u2014 <20M was false. The 12 market-YES shares were sold under DEC-0115 for $1.261260 net against $8.878260 cost, realizing -$7.617000; holding to the endpoint would have paid zero.",
+      "calibration_delta": "p(<20M)=0.92 versus outcome 0: 92pp overconfidence from trailing-rate extrapolation and an unmodeled counter/attention regime reversal.",
+      "lesson": "Do not reverse into the same continuously visible counter using the same falsified trailing-rate model. The no-third-entry rule was essential; this edge class stays retired at the current monitoring cadence.",
+      "resolved_at": "2026-09-04T02:09:27Z"
     },
     {
       "id": 115,
@@ -2260,9 +2266,10 @@
         "regime-switch"
       ],
       "slug": "will-grand-theft-auto-vi-extended-look-get-less-than-20-million-views-on-week-1",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS \u2014 >=20M was already certain from the 21,208,481 pre-endpoint read and confirmed at 21,667,706 just after. Selling the 12 <20M YES shares netted $1.261260 and outperformed holding them to a zero payout by exactly that amount.",
+      "calibration_delta": "Final p(<20M)=0.05\u20130.08 versus outcome 0: direction correct with only 5\u20138pp residual overconfidence.",
+      "lesson": "The multi-window acceleration exit correctly limited the second loss, but it does not rehabilitate pure public-counter trading without an independent mechanism; retain the no-reentry rule.",
+      "resolved_at": "2026-09-04T02:09:27Z"
     },
     {
       "id": 116,
@@ -2340,6 +2347,44 @@
         "gemini",
         "named-source",
         "prior-correction"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 120,
+      "timestamp": "2026-09-04T02:17:08Z",
+      "type": "skip",
+      "thesis": "OpenAI's Sep-3 GPT-6 Astra launch is a genuine adverse catalyst for both held OpenAI HLE-NO legs: the official Academic table reports 57.2% HLE with tools and the model is broadly deployed. The literal named agi.safe.ai board remains reachable and unchanged from Jan-15, so no direct resolution fact has occurred, but Astra raises qualifying-board-addition and UMA-spirit risk. Cut >=50 p_no 0.45->0.35 and >=55 p_no 0.50->0.40. Complete exits near $0.45/$1.46 remain far below even 10pp-haircut hold values $3.75/$5.70, so HOLD / NO ADD / NO FLIP.",
+      "confidence": "medium",
+      "prediction": "If agi.safe.ai remains reachable and adds no qualifying Astra/OpenAI row by Dec-31, the literal reading resolves both markets NO; an Astra row above either threshold or a UMA precedent using the outside 57.2 result materially falsifies the remaining edge.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hle",
+        "astra",
+        "prior-update"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 121,
+      "timestamp": "2026-09-04T02:17:08Z",
+      "type": "scaffolding",
+      "thesis": "The official OpenAI RSS backfilled a major GPT-6 Astra release under a safety-titled post whose summary said 'most capable broadly deployed model'. Existing Astra release phrases matched neither title nor summary, so the watcher marked it seen without alerting and the market moved first. Add that distinctive deployment phrase to Tier 1 and pin the exact RSS blob in a regression; the daemon reloads config every poll, so no restart is required.",
+      "confidence": "high",
+      "prediction": "The captured safety-overview RSS title/summary matches Tier 1 in tests, and any future unseen OpenAI feed item containing 'most capable broadly deployed model' alerts instead of silently entering seen state; ordinary unrelated entries remain unaffected.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-04",
+      "tags": [
+        "news-watcher",
+        "astra",
+        "hle"
       ],
       "slug": null,
       "outcome": null,

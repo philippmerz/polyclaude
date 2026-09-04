@@ -2,7 +2,7 @@
 
 Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-chain sleeves. Fully decentralized — no CEX, no KYC.
 
-**Last updated:** 2026-09-03 (state snapshot updated every cron tick; this header on structural changes)
+**Last updated:** 2026-09-04 (state snapshot updated every cron tick; this header on structural changes)
 
 > **For the next agent:** read this README → `strategy/00_philosophy.md` → **`strategy/01_lessons.md` (the consolidated hard-won lessons — everything compaction loses)** → run `scripts/polyclaude_status.py` for current state. That's a complete onboarding in ~5 minutes. Drill into journal/decisions only when needed for specific calibration questions.
 
@@ -20,11 +20,11 @@ Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-ch
 
 ---
 
-## Current state (snapshot 2026-09-03 14:03 UTC)
+## Current state (snapshot 2026-09-04 02:19 UTC)
 
 **PM sleeve** `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` (Polygon) — [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [Polygonscan](https://polygonscan.com/address/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) · [DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 
-**Total bankroll $190.47; REALIZED +$14.43 (+8.5%) vs the $170 reference** — realized settled cash is the metric that counts. The **13 active indexed PM rows** cost $157.20 and mark at $157.16 (−$0.04), but executable-depth value is only $148.08 (−$9.12): quote both because thin books overstate the active sleeve by $9.08. Data-api also retains one settled losing Iran–Oman row, excluded from open P&L and advisory tools. Hormuz-normal is de-indexed and still unproposed; its archive holds only **0.003571 dust**, not live economic exposure. Six maker sells and zero BUY commitments rest. Duma remains a 0.68-fair equal-share HOLD: the complete exit is $13.10 versus $13.60 fair, while its add gate remains closed. Rockstar's official GTA counter is **20,409,789 at hour 157.0**, already 409,789 above 20M with about 11 hours to the Sep-4 exact endpoint; formal grades still wait for that clock and there will be no third entry. The wallet holds 2.115500 pUSD and about 16.11 Polygon aUSDC.e. Google's Sep-2 Gemini 3.8 Flash release was fully checked: ordinary HLE is **45.4%** (below 50), while the headline 54.9% is **HLE-Verified on a materially revised item set**, not safely the contract's agi.safe.ai HLE Accuracy. Flash is explicitly excluded from the separate next-Pro contract and the named board remains reachable/frozen. Gemini ≥50 / next-Pro ≥40 priors remain **0.55 / 0.60 p_no**, both HOLD / NO ADD / NO FLIP; OpenAI ≥50/≥55 remain **0.45/0.50** and HOLD. MacBook p_no remains 0.65 ahead of Apple's Sep-9 event. All four daemons are singular/current. Money-math suite: 123 checks plus a 19-case mutation harness, pre-commit enforced. Short-dated ledger N=51.
+**Total bankroll $186.94; REALIZED +$14.43 (+8.5%) vs the $170 reference** — realized settled cash is the metric that counts. The **13 active indexed PM rows** cost $157.20 and mark at $153.54 (−$3.66), but executable-depth value is only $146.89 (−$10.31): quote both because thin books overstate the active sleeve by $6.65. Data-api also retains one settled losing Iran–Oman row, excluded from open P&L and advisory tools. Hormuz-normal is de-indexed and still unproposed; its archive holds only **0.003571 dust**, not live economic exposure. Six maker sells and zero BUY commitments rest. Duma remains a 0.68-fair equal-share HOLD with its add gate closed. GTA VI finished above 20M views (**21,667,706** on the first post-endpoint read): the combined counter ticket lost **$14.13**, the short-window 92% under-threshold model failed, and this public-counter edge class remains retired. OpenAI launched broadly deployed **GPT-6 Astra** with an official **57.2% HLE-with-tools** result; agi.safe.ai remains reachable and unchanged, but board-addition/UMA-spirit risk rose. OpenAI ≥50/≥55 p_no fell to **0.35/0.40**; both remain HOLD / NO ADD / NO FLIP because executable exits near $0.45/$1.46 are far below stressed hold values. Gemini ≥50 / next-Pro ≥40 remain **0.55/0.60**. MacBook p_no remains 0.65 ahead of Apple's Sep-9 event. The wallet holds 2.115500 pUSD and about 16.11 Polygon aUSDC.e. All four daemons are singular/current. Money-math suite: 123 checks plus a 19-case mutation harness, pre-commit enforced. Short-dated ledger N=51.
 
 **Operating model (operator directive 2026-07-15): continuous research loop** — research until a profitable opportunity is found, report, invest, repeat; 24/7 `opportunity_watch.py` daemon between ticks. Five population edges falsified this month at $0 deployed (short-dated fade buckets N=836, new-listing mispricing N=833, UMA dispute-window N=2,246, cross-event implication arbs 4,575 pairs) — every falsification shipped a permanent gate upgrade (fee-aware EV, dispute priors, sibling-market routing). Surviving edge = case-by-case catalyst-gated instance mispricing (doctrine §3.1). Ostium's 2026-07-15 $18M oracle exploit: zero exposure (skeptic+champion had parked the planned OLP deposit — DEC-0040). Any Iran/war-adjacent entry must re-pull live conflict state; there is currently no economic Iran/Hormuz exposure beyond 0.003571 claim dust. Run `scripts/bankroll.py` + `scripts/polyclaude_status.py` for live figures.
 
@@ -130,7 +130,7 @@ logs/              — gitignored: cron + news daemon logs
 
 ### Key notes/ files
 - `journal.md` — chronological narrative log (recent ~2 weeks kept; older history in git)
-- `decisions.json` — append-only structured decision tracker (DEC-0001 through DEC-0118 as of this snapshot)
+- `decisions.json` — append-only structured decision tracker (DEC-0001 through DEC-0121 as of this snapshot)
 - `backlog.md` — operator-maintained pending-items list, reviewed each cron tick
 - `recoup_campaign.md` — 2026-05-09 multi-stage engineering campaign log
 - `longterm_watchlist.md` — multi-year IBKR-side candidate doc with verdict table
@@ -169,7 +169,7 @@ logs/              — gitignored: cron + news daemon logs
 - **Skeptic+champion pairing.** For trades > $10 OR new strategy class OR sizable structural change: spawn skeptic + champion in parallel. Routine prospecting (single trade < $10): zero-shot evaluation per 2026-05-02 stress-test data.
 - **Telegram prefix discipline.** Any inbound message with `telegram:` / `reply on telegram:` MUST respond via `scripts/telegram.py msg "..."`. Non-prefixed = local reply.
 - **<1y horizon.** Polyclaude doesn't deploy on multi-year theses. Long-term infra surfaces IBKR-side candidates to operator only.
-- **Calibration data is the actual product.** Every decision via `decisions.py add ...` with thesis + confidence + prediction. Update on resolution with outcome + calibration-delta + lesson.
+- **ROI is the product; calibration is a debugging instrument.** Log every material decision via `decisions.py add ...`, then update its outcome/delta/lesson so systematic errors can be removed without Goodharting the project around a score.
 
 ## Operator interface
 

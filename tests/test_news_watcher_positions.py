@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 from types import SimpleNamespace
@@ -43,3 +44,17 @@ def test_no_hard_coded_closed_xau_position() -> None:
     source = Path(news_watcher.__file__).read_text(encoding="utf-8")
     stale_phrase = "currently long " + "XAU/USD 5x"
     assert stale_phrase not in source
+
+
+def test_broadly_deployed_model_release_matches_tier1() -> None:
+    """A safety-titled launch must not evade the explicit release phrases."""
+    config_path = Path(news_watcher.__file__).with_name("news_watcher_config.json")
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+    rss_blob = (
+        "Safety overview: GPT-6 Astra. GPT-6 Astra is our most capable "
+        "broadly deployed model and our first to reach the Critical level."
+    )
+
+    assert news_watcher.match_keywords(rss_blob, config["tier1_keywords"]) == (
+        "most capable broadly deployed model"
+    )
