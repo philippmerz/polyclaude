@@ -949,8 +949,9 @@ the remaining reconciliation to the $1.42 all-in bankroll gain.
   evidence for a demand-rate break; the no-third-entry rule prevented another loss.
 - **Iran–Oman resolved NO.** The 0.55 entry prior had confused prospective diplomatic language with
   an unambiguous joint agreement and was overconfident by about 55pp.
-- **GPT-6 Astra is an adverse HLE catalyst.** OpenAI reports 57.2% HLE with tools for a broadly
-  deployed model. agi.safe.ai is still reachable and unchanged, so no literal resolution fact has
+- **GPT-6 Astra is an adverse HLE catalyst.** OpenAI reports 57.2% HLE with tools; launch access
+  initially covers a limited set of organizations, with broader availability promised in days.
+  agi.safe.ai is still reachable and unchanged, so no literal resolution fact has
   occurred, but OpenAI ≥50/≥55 NO priors were cut from 0.45/0.50 to **0.35/0.40**. Exits near
   $0.45/$1.46 remain inferior to stressed hold values; HOLD / NO ADD / NO FLIP.
 

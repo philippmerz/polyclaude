@@ -12172,7 +12172,9 @@ resolution/de-indexing recurrence: Iran–Oman surfaced once and was excluded fr
 while the Hormuz archive retained canonical claim identity.
 
 OpenAI's official RSS backfilled **“Safety overview: GPT-6 Astra”** around 01:32 UTC. The paired
-launch page calls Astra broadly deployed and reports **57.2% Humanity's Last Exam with tools**.
+launch page reports **57.2% Humanity's Last Exam with tools** and says access initially covers a
+limited set of organizations, with broader availability promised over the coming days. The safety
+overview separately describes Astra as OpenAI's most capable broadly deployed model.
 That clears both held OpenAI thresholds under a configuration-inclusive/spirit reading and is a
 genuine adverse catalyst. The exact contract source, agi.safe.ai, remains reachable and its nine-row
 board is unchanged from Jan-15 with GPT-5 at 25.3 and no Astra row; the live-versus-Jan control
@@ -12292,3 +12294,55 @@ warnings, but the file mtime is Aug-29; they are historical, not a current incid
 and injection timestamps advance normally. No trade, order change, redemption, prior change,
 Telegram message, swap or bridge occurred. The durable ROI continuation remains active until the
 operator manually cancels it.
+
+## 2026-09-04 14:00–14:10 UTC — full check-in: staged Astra rollout clarified; no trade
+
+No position action was justified. Authoritative bankroll is **$188.79**, up $0.59 from 10:00
+solely from valuation drift; realized P&L remains **+$14.43**. The 13 active indexed Polymarket
+rows still cost $157.20, mark at **$155.50**, and depth-realize at **$148.36**, so midpoints
+overstate liquidation by $7.14. Inventory remains six LIVE sells / zero buys with no fill or
+cancellation. The wallet holds 2.115500 pUSD and about 16.11 Polygon aUSDC.e, Ostium remains empty,
+UMA produced zero alerts, and crux/watchlist/state checks are clean. Marginal APY found seven clear
+ordinary legs, zero close candidates and two protected groups; `redeem-all` found no winning
+redeemable. All four monitoring daemons are exact-one and fresh.
+
+The catalyst review found an important wording correction, not a new position fact. OpenAI's launch
+page says GPT-6 Astra is initially rolling out to a **limited set of organizations**, with access
+through API and the named ChatGPT plans coming over the following days; it also reports **57.2% HLE
+with tools**. The separate safety overview calls Astra OpenAI's “most capable model we have ever
+broadly deployed.” Those statements can coexist, but the second is not evidence of universal access
+today. I corrected the live README, backlog, weekly report, Kelly-prior rationales, DEC-0120 thesis,
+and the same-day journal wording to distinguish launch/deployment from current availability; the
+exact RSS phrase in DEC-0121 and watcher regression remains intact. Sources:
+`https://openai.com/index/gpt-6-astra/` and
+`https://openai.com/index/safety-overview-gpt-6-astra/`.
+
+This clarification does **not** reverse the Sep-4 HLE reprice. The positions resolve at year-end,
+broader access is explicitly promised within days, and the official 57.2 result still increases both
+qualifying-board-addition and UMA-spirit risk. agi.safe.ai remains reachable and frozen with no Astra
+row. OpenAI ≥50/≥55 p_no therefore stays **0.35/0.40**, HOLD / NO ADD / NO FLIP. Current executable
+exits are only **$0.42/$2.75** versus raw hold values **$5.25/$7.60**. Duma's complete-set exit is
+$13.14 versus $13.60 fair, also HOLD. Apple's Sep-9 10:00 PT event is official but no primary source
+confirms a touchscreen MacBook; MetaMask still has no official token/date; Oman's latest statement
+describes only a temporary Hormuz corridor and future negotiations; no current primary source changes
+the Greenland thesis. No structured news arrived after the already-consumed 05:14 France24 row, and
+no opportunity alert has arrived since Aug-28.
+
+Discovery produced no deployable edge. The normal pass scanned 994 active markets. The thin pass
+surfaced gross-APY examples only, with no honest probability edge. Sports covered 83 markets; the
+largest bookie discrepancy was G2 −1.5 at 6.7pp on only about $40k volume, which fails the standing
+10pp robustness haircut and $50k review threshold. Macro surfaced seven Fed-dominated rows without
+consensus. Monotonicity inspected 1,050 events and reduced two midpoint violations to zero executable
+arbs. The bounded consistency scan retained 3,039 of 5,011 markets and live-quoted only 19 of 189
+groups; it found zero provisional positive baskets but remains explicitly incomplete. Eight
+favorite-fade hints are population-only and none cleared the instance gate. Constrained Kelly's
+nominal HLE scale-in deficits remain barred by the correlated cap and the repeated source/configuration
+research misses.
+
+The only overdue decisions remain the unproposed Hormuz DEC-0077/0081/0084/0086 and cannot yet be
+graded; the next real clocks are DEC-0099 Sep-5 and DEC-0100 Sep-6. Weekly P&L was refreshed this
+morning, methodology is concluded, and the Aug-30 world-state review remains inside the eight-day
+recovery window. Telegram **905** carried the rollout correction. No trade, order change, redemption,
+prior change, swap, bridge or daemon restart occurred. Validation passed **434 pytest cases, all 123
+standalone money checks, and all 19 financial mutations**. The durable ROI continuation remains
+active until the operator manually cancels it.
