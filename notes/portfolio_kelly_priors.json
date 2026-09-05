@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-04",
+ "_updated": "2026-09-05",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-04: no new comparable whole-seat forecast; union p remains 0.68 (<0.75) and the complete-set ask is about 0.702/unit (>0.57). PolitPro's 234-seat display is a generic proportional translation of national polls, not a disclosed model of Russia's 225 single-member districts. HOLD equal set; no add.",
+   "add_gate": "FAILED 2026-09-05: all three criteria were re-read without drift. VCIOM's newly published Aug-24-30 poll has United Russia at 37.2% after 39.2%, but the 2pp weekly move is inside its 2.5pp sampling error, the four-week sequence remains 34.0/36.0/39.2/37.2, and it is not a whole-seat forecast. Union p remains 0.68 (<0.75), complete-set ask is about 0.703/unit (>0.57), and the fee-free full exit is $13.32 versus $13.60 fair. HOLD equal set; no add.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -669,20 +669,20 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.18,
-  "verified": "2026-09-04",
-  "criteria_read": "2026-08-28",
+  "verified": "2026-09-05",
+  "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-4 same-day re-derivation found no new credible whole-seat forecast; VCIOM's live table still ends Aug-23 at 39.2%. PolitPro's as-of-Sep-4 page displays 234 ER seats, but that is a generic proportional translation of national polling across all 450 seats and does not disclose/model the 225 single-member districts where APEK/RASO expect 155-197 ER wins. Its poll inputs are not newer than Aug-23, so counting it as fresh whole-seat evidence would both misread the electoral system and double-count known polling. Distribution stays 0.18/0.31/0.19, union p=0.68. Complete exit is about $13.42 versus $13.60 fair; the complete-set ask is about 0.702/unit versus the 0.57 add ceiling. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-5 short-dated re-derivation re-read all three criteria without drift and incorporated VCIOM's newly published Aug-24-30 poll: United Russia is 37.2% after 39.2%, a 2pp weekly move inside the poll's 2.5pp maximum error; the four-week sequence is still 34.0/36.0/39.2/37.2. A simple normalization over the five named parties gives roughly 50.1%, or about 113 of 225 list seats, still inside RASO's 95-130 list range and compatible with the held range when combined with APEK's 190-197 district forecast. This poll is not a whole-seat model and does not justify overreacting to one noisy week. Distribution stays 0.18/0.31/0.19, union p=0.68. Complete exit is $13.32 versus $13.60 fair; complete-set ask is about 0.703/unit versus the 0.57 add ceiling. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
-    "claim": "This bucket resolves from United Russia's official seat count resulting from the September 2026 legislative election; unresolved results fall back to the lowest bracket after May 31, 2027.",
+    "claim": "Criteria re-read without drift: this bucket resolves on United Russia's State Duma seats resulting from the election, first by consensus credible reporting and, if ambiguous, solely by official Russian-government results; if results remain indefinite after May 31, 2027, the lowest bracket wins.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
-    "source_date": "2026-08-28",
-    "checked": "2026-08-28"
+    "source_date": "2026-09-05",
+    "checked": "2026-09-05"
    },
    {
     "claim": "APEK's August 10 forecast puts United Russia's party-list vote at 51-54%.",
@@ -703,10 +703,10 @@
     "checked": "2026-09-01"
    },
    {
-    "claim": "VCIOM's live table still ends August 23 with United Russia support at 39.2%; it is directionally useful polling but not a whole-seat forecast.",
+    "claim": "VCIOM's Sep-4 release extends the weekly series through Aug 30: United Russia support is 37.2% after 39.2%, versus 34.0 and 36.0 the prior two weeks. The 2pp weekly decline is inside the stated 2.5pp maximum sampling error. Normalizing the five named parties gives about 50.1%, roughly 113 of 225 list seats, but this remains polling rather than a turnout, threshold, district, or whole-seat forecast.",
     "source": "https://wciom.ru/ratings/reiting-politicheskikh-partii/",
-    "source_date": "2026-08-23",
-    "checked": "2026-09-04"
+    "source_date": "2026-09-04",
+    "checked": "2026-09-05"
    },
    {
     "claim": "PolitPro's as-of-September-4 page displays 234 ER seats from its national Election Trend. The number is mechanically 47.0 / 90.4 qualifying-party vote x 450 = 234, proving the generic display proportionally allocates the whole chamber and does not model Russia's 225 single-member districts. Its newest conventional poll inputs are still August 23. Treat it only as a qualitative downside sensitivity, not an independent whole-seat forecast.",
@@ -718,13 +718,13 @@
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.31,
-  "verified": "2026-09-04",
-  "criteria_read": "2026-08-28",
+  "verified": "2026-09-05",
+  "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-4 same-day re-derivation leaves the group distribution at 0.18/0.31/0.19 and union p=0.68. No new comparable whole-seat forecast appeared; PolitPro's 234-seat proportional display does not model the single-member district half and reuses poll inputs already known through Aug-23. Complete exit is about $13.42 versus $13.60 fair; the complete-set ask is about 0.702/unit versus the 0.57 ceiling. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-5 short-dated re-derivation leaves the group distribution at 0.18/0.31/0.19 and union p=0.68. VCIOM's new 37.2% weekly reading is down 2pp but inside its 2.5pp maximum error and remains compatible with the existing list-seat range after normalization; no new comparable whole-seat forecast appeared. Complete exit is $13.32 versus $13.60 fair; complete-set ask is about 0.703/unit versus the 0.57 ceiling. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
@@ -732,18 +732,24 @@
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
     "source_date": "2026-08-28",
     "checked": "2026-08-28"
+   },
+   {
+    "claim": "Criteria re-read without drift: this bucket uses the same election-seat, credible-reporting, official-results ambiguity fallback, and May 31, 2027 lowest-bracket clauses as its held siblings.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
+    "source_date": "2026-09-05",
+    "checked": "2026-09-05"
    }
   ]
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.19,
-  "verified": "2026-09-04",
-  "criteria_read": "2026-08-28",
+  "verified": "2026-09-05",
+  "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-4 same-day re-derivation leaves the group distribution at 0.18/0.31/0.19 and union p=0.68. No new comparable whole-seat forecast appeared; PolitPro's 234-seat proportional display does not model the single-member district half and reuses poll inputs already known through Aug-23. Complete exit is about $13.42 versus $13.60 fair; the complete-set ask is about 0.702/unit versus the 0.57 ceiling. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-5 short-dated re-derivation leaves the group distribution at 0.18/0.31/0.19 and union p=0.68. VCIOM's new 37.2% weekly reading is down 2pp but inside its 2.5pp maximum error and remains compatible with the existing list-seat range after normalization; no new comparable whole-seat forecast appeared. Complete exit is $13.32 versus $13.60 fair; complete-set ask is about 0.703/unit versus the 0.57 ceiling. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
@@ -751,6 +757,12 @@
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
     "source_date": "2026-08-28",
     "checked": "2026-08-28"
+   },
+   {
+    "claim": "Criteria re-read without drift: this bucket uses the same election-seat, credible-reporting, official-results ambiguity fallback, and May 31, 2027 lowest-bracket clauses as its held siblings.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
+    "source_date": "2026-09-05",
+    "checked": "2026-09-05"
    }
   ]
  }

@@ -12402,3 +12402,54 @@ DEC-0077/0081/0084/0086 remain ungradeable while unproposed; the next real decis
 DEC-0099 Sep-5 and DEC-0100 Sep-6. World-state and weekly P&L remain inside their freshness windows.
 No trade, order change, redemption, prior change, Telegram message, swap, bridge or daemon restart
 occurred. The durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-05 02:00–02:09 UTC — full check-in: Duma criteria/poll refresh; prior unchanged
+
+No position action was justified. Authoritative bankroll is **$187.78**, down $0.72 from 22:00
+solely from market/native-token marks; realized P&L remains **+$14.43**. The 13 active indexed
+Polymarket rows still cost $157.20, mark at **$154.41**, and depth-realize at **$148.50**, so
+midpoints overstate liquidation by $5.91. Inventory remains six LIVE sells / zero buys, including
+the same partially filled 33-share sell, with no new fill or cancellation. The wallet holds 2.115500
+deployable pUSD and about 16.11 Polygon aUSDC.e; Ostium remains empty. UMA tracked 37 conditions
+with zero alert, state/crux/watchlist checks are clean, marginal APY found seven clear ordinary legs,
+zero close candidates and two protected groups, and `redeem-all` found no winning redeemable. Every
+ordinary exit remains HOLD; Duma and MetaMask remain HOLD_COMPLETE_GROUP. All four daemons are
+exact-one and fresh.
+
+The short-dated Duma group was the only maintenance item due. I re-read the literal criteria for all
+three held buckets; the wording is unchanged and still resolves on United Russia's official seat
+count from the election, with credible-reporting/official-results and May-31-2027 fallback clauses.
+VCIOM's new Sep-4 release extends its polling through Aug 30: United Russia is **37.2% after 39.2%**,
+with a four-week sequence of 34.0/36.0/39.2/37.2. The 2pp weekly decline is inside VCIOM's stated
+2.5pp maximum error. A deliberately simple normalization over the five named parties gives 50.1%,
+or about 113 of 225 list seats, inside RASO's 95–130 list-seat range; no newer comparable whole-seat
+forecast appeared. Because that poll is not a turnout, threshold, district or whole-seat model, it
+does not justify moving the existing 0.18/0.31/0.19 bucket distribution or **0.68 union prior**.
+The complete set exits for **$13.32** versus $13.60 fair, while the complete add costs about
+0.703/unit versus the 0.57 ceiling. Decision: **HOLD complete set / NO ADD / NO FLIP**. The three
+criteria-read and assessment records are now current through Sep-5.
+
+No structured news or opportunity alert arrived after 22:00; the latest remains the already-consumed
+Sep-4 19:24 BBC Saudi-tanker duplicate. agi.safe.ai still has no Astra/GPT-6 row and OpenAI still
+describes limited initial access expanding over the coming days, so HLE p_no stays 0.35/0.40 and
+HOLD / NO ADD / NO FLIP. No primary-source update changes Apple, MetaMask, Greenland or Hormuz-dust
+judgment. Apple's Sep-9 10:00 PT event remains the next portfolio catalyst.
+
+Discovery found no deployable edge. The normal pass scanned 992 active markets; the thin pass
+examined 42,128 markets and surfaced 1,409 gross-APY candidates, but none had a vetted honest-prior
+edge. Sports covered 67 markets; Aston Villa's largest bookie comparison was only −1.9pp, below the
+3pp/$50k review gate. Macro surfaced seven Fed rows without reliable consensus. Monotonicity scanned
+987 events and found zero midpoint violation and zero live arb. The bounded consistency run emitted
+no hit, but is not treated as exchange-wide coverage. Eight favorite-fade hints included Taylor
+Fritz NO +6.7pp and Pegula NO +5.0pp; the population edge failed replication and neither instance was
+independently vetted, so no action followed. Constrained Kelly's nominal Gemini/OpenAI deficits remain
+barred by policy/correlation caps rather than actionable recommendations.
+
+The unproposed Hormuz DEC-0077/0081/0084/0086 remain ungradeable. DEC-0099's thesis explicitly runs
+through Sep-5, so it will be graded only after today's window closes; DEC-0100 resolves Sep-6. Weekly
+P&L is fresh, the Aug-30 world-state review remains inside the eight-day recovery window, and the
+methodology experiment is concluded. Telegram **906** reported the fresh Duma poll and unchanged
+hold. No trade, fill, order change, redemption, prior-probability change, swap, bridge or daemon
+restart occurred. Validation passed **434 pytest cases, all 123 standalone money checks, and all 19
+financial mutations**; JSON and position-state validation were clean. The durable ROI continuation
+remains active until the operator manually cancels it.
