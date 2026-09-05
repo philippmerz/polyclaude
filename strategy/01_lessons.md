@@ -486,6 +486,15 @@ the gap); *verify against a known truth* (absent output and failed output look i
   answer is "none", that claim carries the whole safety burden and must be unit-tested
   against adversarial inputs BEFORE the daemon can fire on it.
 
+- **In rolling-window markets, “by DATE” may bound the START, not the completion.**
+  On 2026-09-05, a first read treated the Sep-7/Sep-11 US–Iran effective-ceasefire titles as
+  requiring the 14 clean days to finish by those dates and called NO nearly certain after an
+  official Sep-1 terrestrial strike. The literal description says the clean period must *begin*
+  between market creation and the specified date and may complete afterward: a Sep-2 start can
+  validly finish Sep-15. The proposed trade vanished. For every rolling-window contract, write
+  three separate clocks before pricing—eligible start, last reset/start cutoff, and completion—and
+  derive each from the operative sentences rather than the title or Gamma `endDate`.
+
 - **Threshold ladders are as monotone as date ladders** (and the scanner was blind to
   them for months, having dismissed same-date families as "categorical"). Any family of
   the form ">= k" over rising k obeys P(X>=k2) <= P(X>=k1) for k1<k2. Watch for the two

@@ -12573,3 +12573,42 @@ resolves Sep-6. Weekly P&L and world state remain fresh. Apple's Sep-9 event and
 emergency-path/fee drill remain the next operational dates. No trade, fill, order change,
 redemption, prior change, Telegram message, swap, bridge or daemon restart occurred. The durable
 ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-05 22:00–22:10 UTC — periodic review: Iran escalation; false criteria edge rejected
+
+No existing position action was justified. Authoritative bankroll is **$189.59**, up $3.26 from
+18:00 on market/native-token marks; realized P&L remains **+$14.43**. The 13 indexed Polymarket rows
+still cost $157.20, mark at **$156.06**, and depth-realize at **$149.77**, so midpoints overstate
+liquidation by $6.29. Inventory remains six LIVE sells / zero buys with the same partial 33-share
+sell and no fill or cancellation. Trading balances remain 2.115500 deployable pUSD and about 16.11
+Polygon aUSDC.e; Ostium has zero open trades. UMA's only alert was a favorable 8.5pp fall in
+OpenAI-≥55 YES / rise in the held NO, without a catalyst; its 0.40 p_no prior and HOLD remain. All
+ordinary exits are HOLD, Duma/MetaMask remain complete-group HOLDs, state/crux/watchlist checks are
+clean, marginal APY has zero close candidates, and `redeem-all` found no winning redeemable. All
+four daemons are exact-one and fresh.
+
+Two news rows arrived after 18:00. The 19:33 BBC Saudi-tanker item is another replay. The 21:04 NPR
+report is a genuine escalation: U.S. forces reportedly struck three Iranian oil tankers after
+Iranian missiles targeted two U.S. warships. It has no direct channel to an open economic position;
+Hormuz is only 0.003571 de-indexed claim dust. A targeted post-news market review nevertheless
+surfaced apparently cheap NO on the Sep-7 and Sep-11 US–Iran “effective ceasefire” legs, initially
+framed as nearly deterministic because CENTCOM had officially reported a Sep-1 US air strike on
+IRGC targets in Iranian territory.
+
+The trade failed the literal criteria read. These contracts do **not** require the 14-day clean
+period to finish by the named date. They require such a period to *begin* between market creation
+and the specified date, and allow it to complete afterward. With no later qualifying terrestrial
+strike, the creation/Sep-2 start can validly run through noon ET Sep-15; therefore the Sep-1 strike
+does not make Sep-7 or Sep-11 YES impossible. Sep-5 tanker strikes are maritime and expressly
+excluded, but that does not rescue the erroneous completion-deadline thesis. With the deterministic
+edge gone, current prices merely express uncertain future strike/ceasefire paths plus resolver risk;
+no honest, fee/depth-robust advantage was established. **No trade.** The backlog and consolidated
+lessons now require three-clock mapping—eligible start, last reset/start cutoff, and completion—on
+every rolling-window market rather than trusting its title or Gamma endDate.
+
+No other catalyst or opportunity alert changed Apple, HLE/Astra, Duma, MetaMask, Greenland or
+Trump judgment. DEC-0099 still runs through the full Sep-5 window and will be graded after the day
+closes; DEC-0100 resolves Sep-6. Weekly P&L and world state remain fresh. Telegram **907** reported
+the escalation and rejected trade. No position, order, redemption, prior probability, swap, bridge
+or daemon state changed. JSON/JSONL, position-state, daemon, diff and secret hygiene were clean. The
+durable ROI continuation remains active until the operator manually cancels it.
