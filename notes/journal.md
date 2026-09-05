@@ -12453,3 +12453,37 @@ hold. No trade, fill, order change, redemption, prior-probability change, swap, 
 restart occurred. Validation passed **434 pytest cases, all 123 standalone money checks, and all 19
 financial mutations**; JSON and position-state validation were clean. The durable ROI continuation
 remains active until the operator manually cancels it.
+
+## 2026-09-05 06:00–06:08 UTC — periodic review: Apple price move checked; no thesis break
+
+No portfolio action became due. Authoritative bankroll is **$186.20**, down $1.58 from 02:00 on
+market/native-token marks; realized P&L remains **+$14.43**. The 13 indexed Polymarket rows still
+cost $157.20, mark at **$152.83**, and depth-realize at **$146.95**, so midpoints overstate
+liquidation by $5.88. Inventory remains six LIVE sells / zero buys with the same partially filled
+33-share sell and no new fill or cancellation. Trading balances remain 2.115500 deployable pUSD and
+about 16.11 Polygon aUSDC.e; Ostium is empty. UMA tracked 37 conditions with zero alert,
+state/crux/watchlist checks are clean, marginal APY has zero close candidates, and `redeem-all`
+found zero winning redeemables. Duma exits as a complete set for $13.30 versus $13.60 fair;
+Duma/MetaMask and every ordinary leg remain HOLD. All four daemons are exact-one and fresh.
+
+Apple touchscreen-MacBook NO was the only move worth investigating: its midpoint fell
+**0.385→0.345** since 02:00 and the current full-position exit averages about 0.313. The operative
+criterion still requires general-public purchasability by Dec-31; unveiling alone is insufficient.
+A targeted fresh-source check found no confirming fact: Apple's live MacBook Pro store still lists
+only non-touchscreen M5-family configurations, while the official Sep-9 event page confirms
+10:00 PT but names no product, purchase date or ship date. Fresh Sep-4 reporting still describes
+only the existing late-2026/early-2027 rumor window. The decline is therefore unsupported
+thin-book/rumor repricing, not a thesis break. **p_no stays 0.65; HOLD / NO ADD / NO FLIP**, with the
+pre-committed full re-underwrite immediately after the event.
+
+No structured news or opportunity alert arrived after the 02:00 entry. Duma's Sep-5 criteria/poll
+refresh remains current and its union prior stays 0.68; HLE, MetaMask, Greenland and Hormuz-dust
+judgments are unchanged. DEC-0099's prediction explicitly runs through all of Sep-5, so grading it
+before the window closes would be premature; DEC-0100 resolves Sep-6. Weekly P&L remains fresh,
+world state from Aug-30 remains inside the eight-day window, and the next emergency-path drill is
+Sep-12. The Aave-Polygon hurdle refreshed to 2.80%.
+
+No trade, fill, order change, redemption, prior-probability change, Telegram message, swap, bridge
+or daemon restart occurred. The Apple verification, backlog and source clocks were persisted; JSON,
+position-state and constrained-portfolio checks were clean, and all **434 pytest cases / 123 money
+checks** passed. The durable ROI continuation remains active until the operator manually cancels it.
