@@ -12690,3 +12690,32 @@ and the Sep-12 emergency-path/fee drill are the next operating dates. The Aave-P
 refreshed from 2.8011% to **2.7968%** without changing any carry verdict. No trade, fill, order
 change, redemption, prior change, Telegram message, swap, bridge or daemon restart occurred. The
 durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-06 10:00–10:03 UTC — periodic review: unconfirmed maritime alert; no action
+
+No portfolio or backlog action became due. Authoritative bankroll is **$188.41**, down $1.58 from
+06:00 on marks; realized P&L remains **+$14.43**. The 13 indexed Polymarket rows still cost $157.20,
+mark at **$154.89**, and depth-realize at **$148.83**, so midpoints overstate liquidation by $6.05.
+Inventory remains six LIVE sells / zero buys with the same partial 33-share sell and no fill or
+cancellation. The PM wallet holds 2.115500 deployable pUSD and about 16.11 Polygon aUSDC.e;
+Ostium remains empty.
+
+One alert arrived at 09:22: Iran claimed it struck an unmanned US vessel in the Strait of Hormuz,
+but the United States had not confirmed the claim; CENTCOM's latest official release confirms only
+the prior tanker strikes and US warships evading Iranian missiles. This is maritime activity, not a
+qualifying terrestrial strike under the rolling ceasefire family, and it has no direct channel to an
+economic holding because Hormuz is only de-indexed dust. No trade or prior change. No opportunity
+alert or fresh thesis fact changed HLE/Astra, Apple, Duma, Trump, Greenland or MetaMask. Apple's
+position mark is at its -15% alert boundary, but there is still no touchscreen announcement or
+general-public purchasability evidence; the pre-committed Sep-9 review remains the correct clock.
+
+UMA tracked 37 conditions with zero alert; position, crux and watchlist checks are clean; marginal
+APY has seven clear ordinary legs / zero close candidates / two protected groups; and `redeem-all`
+found zero winning redeemables. Every ordinary exit remains HOLD; Duma's complete exit is $13.20
+versus $13.60 fair and MetaMask's is $44.52 versus $46.24 fair. All four daemons are exact-one and
+fresh. DEC-0100 remains ungradeable until all of Sep-6 has elapsed, while the unproposed Hormuz
+decisions remain ungradeable. Weekly P&L and world state remain within their freshness windows.
+
+No trade, fill, order change, redemption, prior change, Telegram message, swap, bridge or daemon
+restart occurred. The durable ROI continuation remains active until the operator manually cancels
+it.
