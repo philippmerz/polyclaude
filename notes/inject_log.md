@@ -6920,3 +6920,8 @@ Cron tick 20260906T140001Z. Run your scheduled polyclaude check-in (11-step list
 Sunday weekly long-term review. (1) Pick 2-3 domain slugs from notes/primary_sources.md that haven't been run in the last 4 weeks (check notes/world_state_log.md for last-run timestamps). Available slugs: macro-fiscal-labor, energy-power-infrastructure, critical-minerals-commodities, trade-regulation, tech-ai-chips, biotech-health, geopolitics-security, crypto-on-chain, markets-corporate. Run: python3 scripts/world_state_digest.py --domain <slug1>,<slug2>. (2) For any HIGH/MED-confidence themes surfaced, run scripts/longterm_check.py on the top 1-2 candidate tickers to vet for entry. (3) Update notes/longterm_watchlist.md with new candidates + flag any existing candidates whose entry triggers were hit. (4) Journal + Telegram tick summary.
 [durable ROI-goal continuation contract appended to queued prompt]
 [direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-06T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[durable ROI-goal continuation contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
