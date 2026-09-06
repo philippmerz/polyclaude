@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-05",
+ "_updated": "2026-09-06",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-05: all three criteria were re-read without drift. VCIOM's newly published Aug-24-30 poll has United Russia at 37.2% after 39.2%, but the 2pp weekly move is inside its 2.5pp sampling error, the four-week sequence remains 34.0/36.0/39.2/37.2, and it is not a whole-seat forecast. Union p remains 0.68 (<0.75), complete-set ask is about 0.703/unit (>0.57), and the fee-free full exit is $13.32 versus $13.60 fair. HOLD equal set; no add.",
+   "add_gate": "FAILED 2026-09-06: the daily short-clock re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30 fieldwork. Union p remains 0.68 (<0.75), complete-set best asks total about 0.685/unit (>0.57), and the fee-free full exit is about $13.30 versus $13.60 fair. HOLD equal set; no add.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -135,8 +135,9 @@
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
-  "verified": "2026-08-29",
-  "criteria_read": "2026-08-29",
+  "verified": "2026-09-06",
+  "criteria_read": "2026-09-06",
+  "current_assessment": "Sep-6 recheck found no qualifying cessation, resignation/removal announcement, or criteria drift. The live criteria still require permanent cessation before Dec-31 (or an earlier announcement), exclude temporary Section 3 and unsustained Section 4 transfers plus impeachment without removal, and resolve by credible-reporting consensus. Current White House activity is inconsistent with a qualifying event. p_no remains 0.97; HOLD / NO ADD / NO FLIP.",
   "key_facts": [
    {
     "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
@@ -185,6 +186,12 @@
     "source": "https://www.whitehouse.gov/news/",
     "source_date": "2026-08-28",
     "checked": "2026-08-29"
+   },
+   {
+    "claim": "CRITERIA RE-READ 2026-09-06 against the live Gamma description: no drift. Permanent cessation or a pre-cutoff announcement qualifies; temporary Section 3, unsustained Section 4, and impeachment without removal remain excluded. Current official White House activity showed no qualifying resignation or removal fact.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027 + https://www.whitehouse.gov/news/",
+    "source_date": "2026-09-06",
+    "checked": "2026-09-06"
    }
   ]
  },
@@ -194,9 +201,10 @@
   "rho_within": 0.0,
   "cluster_frac": 0.11,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass (monitoring prior = documented honest central; pessimism lives in entry gates only): 2026-06-10 catalyst check central P(YES) 2.5% [1-6%] -> p_no 0.975. Previous 0.95 was an entry-blend (\"between pessimistic gate 0.915 and central 0.975\"). No dated tail-event inside the horizon (unlike regime-fall's Aug-17/21 cliff), so central applies unweighted. Idiosyncratic tail class.",
-  "verified": "2026-08-22",
+  "verified": "2026-09-06",
   "note": "0.975 -> 0.98 on 2026-08-13. The rotation surfaced this at 8 days stale and the re-read raised the bar considerably: every realistic path short of a signed sovereignty treaty is carved out by name \u2014 frameworks, MOUs, negotiations, basing rights, SOFA/COFA arrangements, leases, commercial concessions. What remains is a binding legal instrument transferring sovereignty or creating exclusive US jurisdiction, inside 4.5 months, against two governments publicly refusing to discuss sovereignty. P(YES) ~1.5%. ALERT TRIAGE for the Greenland keywords added 2026-08-12: a headline about a 'deal', 'agreement' or 'framework' is NOT a thesis break unless the reporting names a BINDING instrument (enacted legislation, signed treaty, signed agreement text, or an executive action implementing one). Basing-rights headlines are noise by construction. 0.98 -> 0.95 on 2026-08-13. The STALE-SOURCE check fired on its first day for this position (203d-old source behind a criteria_read of 0 days) and immediately earned itself: refreshing found live negotiations whose SHAPE \u2014 unlimited, uncurbable exclusive access to defined areas \u2014 creeps toward the Guantanamo-style qualifying example in the criteria, a path I had dismissed when I read 'basing rights are excluded' this morning and stopped there. Still a strong NO: Denmark's sovereignty red line holds, the deal is framed as respecting it, and YES needs a BINDING instrument granting exclusive JURISDICTION rather than guaranteed access. WATCH: any reporting of signed text that displaces Danish legal authority in a defined zone, as opposed to guaranteeing US use of it.",
-  "criteria_read": "2026-09-02",
+  "criteria_read": "2026-09-06",
+  "current_assessment": "Sep-6 recheck found no binding sovereignty transfer or instrument granting primary/exclusive US jurisdiction. The live criteria still exclude frameworks, MOUs, negotiations, access/basing agreements, SOFA/COFA arrangements, leases, and concessions. Current Danish official material continues to describe Greenland within the Kingdom and existing US activity as defense access, not acquisition. p_no remains 0.95 (reasonable range 0.93-0.98); HOLD / NO ADD / NO FLIP.",
   "key_facts": [
    {
     "claim": "YES requires a BINDING agreement or legal instrument producing sovereignty transfer, primary/exclusive US jurisdiction, or acquisition by force.",
@@ -227,10 +235,16 @@
     "source": "https://www.cp24.com/news/world/2026/05/12/progress-in-talks-with-us-but-no-deal-yet-greenland-pm/ + https://thehill.com/policy/international/5716467-us-denmark-greenland-talks/",
     "source_date": "2026-05-12/2026-06",
     "checked": "2026-09-02"
+   },
+   {
+    "claim": "Sep-6 official-source refresh found no qualifying acquisition: Denmark's foreign ministry continues to describe the Realm's constitutional allocation of authority and the US presence in Greenland as defense cooperation/access. Neither changes sovereignty or grants the primary/exclusive US jurisdiction required by the market.",
+    "source": "https://um.dk/en/foreign-policy/the-arctic/greenland-and-the-faroe-islands + https://um.dk/udenrigspolitik/lande-og-regioner/rigsfaellesskabet/usas-tilstedevaerelse-i-groenland",
+    "source_date": "2026-09-06",
+    "checked": "2026-09-06"
    }
   ],
-  "source_ack": "2026-08-22",
-  "source_ack_note": "Searched 2026-08-13 for newer Greenland reporting and there is none \u2014 the freshest available material is the January framework/1951-agreement coverage. The position rests on ~200d-old sources because the STORY has not moved, not because I stopped looking. Ack expires in 21 days, which re-tests that claim rather than letting it calcify; re-check sooner if any Greenland keyword fires."
+  "source_ack": "2026-09-06",
+  "source_ack_note": "Refreshed the live Gamma criteria and current Danish foreign-ministry material on Sep-6. The official record still distinguishes sovereignty/Kingdom authority from US defense access; no binding acquisition instrument or exclusive-jurisdiction transfer surfaced. Re-check immediately if reporting identifies signed text displacing Danish law or authority in a defined zone."
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
   "p_no": 0.65,
@@ -682,13 +696,13 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.18,
-  "verified": "2026-09-05",
+  "verified": "2026-09-06",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-5 short-dated re-derivation re-read all three criteria without drift and incorporated VCIOM's newly published Aug-24-30 poll: United Russia is 37.2% after 39.2%, a 2pp weekly move inside the poll's 2.5pp maximum error; the four-week sequence is still 34.0/36.0/39.2/37.2. A simple normalization over the five named parties gives roughly 50.1%, or about 113 of 225 list seats, still inside RASO's 95-130 list range and compatible with the held range when combined with APEK's 190-197 district forecast. This poll is not a whole-seat model and does not justify overreacting to one noisy week. Distribution stays 0.18/0.31/0.19, union p=0.68. Complete exit is $13.32 versus $13.60 fair; complete-set ask is about 0.703/unit versus the 0.57 add ceiling. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-6 daily short-clock re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30 fieldwork. Distribution stays 0.18/0.31/0.19 and union p=0.68. Current bucket midpoints sum to about 0.675, executable complete-set asks total about 0.685/unit versus the 0.57 add ceiling, and the fee-free full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
@@ -719,7 +733,7 @@
     "claim": "VCIOM's Sep-4 release extends the weekly series through Aug 30: United Russia support is 37.2% after 39.2%, versus 34.0 and 36.0 the prior two weeks. The 2pp weekly decline is inside the stated 2.5pp maximum sampling error. Normalizing the five named parties gives about 50.1%, roughly 113 of 225 list seats, but this remains polling rather than a turnout, threshold, district, or whole-seat forecast.",
     "source": "https://wciom.ru/ratings/reiting-politicheskikh-partii/",
     "source_date": "2026-09-04",
-    "checked": "2026-09-05"
+    "checked": "2026-09-06"
    },
    {
     "claim": "PolitPro's as-of-September-4 page displays 234 ER seats from its national Election Trend. The number is mechanically 47.0 / 90.4 qualifying-party vote x 450 = 234, proving the generic display proportionally allocates the whole chamber and does not model Russia's 225 single-member districts. Its newest conventional poll inputs are still August 23. Treat it only as a qualitative downside sensitivity, not an independent whole-seat forecast.",
@@ -731,13 +745,13 @@
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.31,
-  "verified": "2026-09-05",
+  "verified": "2026-09-06",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-5 short-dated re-derivation leaves the group distribution at 0.18/0.31/0.19 and union p=0.68. VCIOM's new 37.2% weekly reading is down 2pp but inside its 2.5pp maximum error and remains compatible with the existing list-seat range after normalization; no new comparable whole-seat forecast appeared. Complete exit is $13.32 versus $13.60 fair; complete-set ask is about 0.703/unit versus the 0.57 ceiling. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-6 daily short-clock re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30 fieldwork. Group distribution remains 0.18/0.31/0.19 and union p=0.68; complete-set asks total about 0.685/unit and the full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
@@ -756,13 +770,13 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.19,
-  "verified": "2026-09-05",
+  "verified": "2026-09-06",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-5 short-dated re-derivation leaves the group distribution at 0.18/0.31/0.19 and union p=0.68. VCIOM's new 37.2% weekly reading is down 2pp but inside its 2.5pp maximum error and remains compatible with the existing list-seat range after normalization; no new comparable whole-seat forecast appeared. Complete exit is $13.32 versus $13.60 fair; complete-set ask is about 0.703/unit versus the 0.57 ceiling. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-6 daily short-clock re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30 fieldwork. Group distribution remains 0.18/0.31/0.19 and union p=0.68; complete-set asks total about 0.685/unit and the full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {

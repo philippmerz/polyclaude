@@ -12612,3 +12612,58 @@ closes; DEC-0100 resolves Sep-6. Weekly P&L and world state remain fresh. Telegr
 the escalation and rejected trade. No position, order, redemption, prior probability, swap, bridge
 or daemon state changed. JSON/JSONL, position-state, daemon, diff and secret hygiene were clean. The
 durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-06 02:00–02:14 UTC — full check-in: source clocks cleared; DEC-0099 passed
+
+No position action was justified. Authoritative bankroll is **$190.09**, up $0.50 from the prior
+authoritative tick mark on market/native-token valuation; realized P&L remains **+$14.43**. The
+13 active indexed Polymarket rows still cost $157.20, mark at **$156.45**, and depth-realize at
+**$149.99**, so midpoints overstate liquidation by $6.46. Inventory remains six LIVE sells / zero
+buys with the same partially filled 33-share sell and no new fill or cancellation. The PM wallet
+holds 2.115500 deployable pUSD and about 16.11 Polygon aUSDC.e; Ostium remains empty. UMA tracked
+37 conditions with zero alert, marginal APY found seven clear ordinary legs / zero close candidates
+/ two protected groups, `redeem-all` found no winning redeemable, and position/crux/watchlist state
+is clean. Every ordinary exit remains HOLD; Duma exits as a complete set around $13.30 versus
+$13.60 fair, and MetaMask around $44.39 versus $46.24 fair. All four daemons are exact-one and fresh.
+
+The three maintenance flags were resolved without a probability change. Duma's daily short-clock
+re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30
+fieldwork. Its 0.18/0.31/0.19 bucket distribution and **0.68 union prior** remain; current complete
+asks total about 0.685/unit, still above the 0.57 add ceiling, so HOLD COMPLETE SET / NO ADD. The
+Trump-out criteria still require permanent cessation (or an earlier qualifying announcement),
+exclude temporary Section 3, unsustained Section 4, and impeachment without removal, and current
+official activity shows no qualifying event; p_no remains **0.97**. Greenland's live criteria still
+exclude frameworks, MOUs, negotiations, basing/access agreements, SOFA/COFA arrangements, leases
+and concessions. Fresh Danish official material continues to describe Kingdom authority and US
+defense access rather than a sovereignty/exclusive-jurisdiction transfer; p_no remains **0.95**
+(0.93–0.98 reasonable range). Greenland exits around $17.67 versus $18.05 fair. Both remain HOLD /
+NO ADD / NO FLIP.
+
+No structured news or opportunity alert arrived after 22:00. The Sep-5 tanker strikes remain
+maritime and expressly excluded from the rolling US–Iran ceasefire reset definition; no later
+qualifying terrestrial US strike surfaced, and the corrected three-clock reading from the prior
+tick remains controlling. No active-position catalyst changed Apple, HLE/Astra, MetaMask or the
+de-indexed Hormuz dust judgment.
+
+Discovery found no deployable edge. The normal pass covered 1,000 active markets; the thin pass
+examined 42,955 markets and surfaced 1,432 gross-hurdle candidates, none underwritten to a robust
+edge. Sports covered 82 markets and its largest consensus gap was only 0.3pp on Barcelona, below
+the 3pp/$50k gate. Macro surfaced five rows. Monotonicity scanned 924 events with zero midpoint or
+live-CLOB arb, and the bounded consistency pass emitted no hit without claiming exchange-wide
+coverage. Ten favorite-fade hints included Shelton NO +5.3pp and Rybakina NO +3.8pp, but the
+population edge failed replication and neither instance had an independent catalyst edge.
+Constrained Kelly's Gemini/OpenAI/Apple deficits remain policy-, correlation-, and collateral-gated.
+
+DEC-0099 was graded **PASS** after its full Sep-5 window: all 22 subsequent IDs (100–121) were unique
+and monotone, bounded/incomplete scan coverage remained explicit, and no sequential basket snapshot
+was forwarded as actionable or REAL arbitrage. DEC-0100 is not gradeable until Sep-6 has elapsed;
+the unproposed Hormuz decisions remain ungradeable. Weekly P&L (Sep-4) and world state (Aug-30) are
+fresh. Apple's Sep-9 event and the Sep-12 emergency-path/fee drill are the next operating dates.
+
+No trade, fill, order change, redemption, prior-probability change, Telegram message, swap, bridge
+or daemon restart occurred. Validation ultimately passed **434 pytest cases, all 123 standalone
+money checks, all 19 financial mutations, JSON/JSONL parsing, position-state, daemon, diff and secret
+hygiene**. An initial invalid parallel validation exposed transient mutation-test rewrites to pytest;
+the harness was then run serially, production files were confirmed restored, and the clean result
+above was reproduced. The durable ROI continuation remains active until the operator manually
+cancels it.

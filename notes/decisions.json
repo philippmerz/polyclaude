@@ -1937,9 +1937,10 @@
         "execution-safety"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS \u2014 through 2026-09-05, all 22 subsequent decision IDs (100\u2013121) were unique and monotone; repeated consistency/Limitless runs either exposed their bounded incomplete coverage or failed closed, and no sequential basket snapshot was forwarded as actionable/REAL arbitrage.",
+      "calibration_delta": "Matched the high-confidence prediction: 121/121 ledger IDs are unique and ordered, Sep-5 bounded scans continued to label omissions/incomplete coverage, and no post-decision consistency/Limitless execution-language alert appeared.",
+      "lesson": "Make integrity claims prospectively gradeable with independently checkable IDs, coverage telemetry, and alert-language boundaries. A clean bounded scan must continue to say incomplete; sequential books remain revalidation leads, never executable proof.",
+      "resolved_at": "2026-09-06T02:02:59Z"
     },
     {
       "id": 100,
