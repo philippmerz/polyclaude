@@ -12719,3 +12719,45 @@ decisions remain ungradeable. Weekly P&L and world state remain within their fre
 No trade, fill, order change, redemption, prior change, Telegram message, swap, bridge or daemon
 restart occurred. The durable ROI continuation remains active until the operator manually cancels
 it.
+
+## 2026-09-06 14:00–14:05 UTC — full check-in: quiet; executable depth weaker
+
+No position action was justified. Authoritative bankroll is **$188.45**, up $0.04 from 10:00 on
+marks; realized P&L remains **+$14.43**. The 13 indexed Polymarket rows still cost $157.20, mark at
+**$154.90**, and depth-realize at **$147.56**, so midpoints overstate liquidation by $7.34.
+Inventory remains six LIVE sells / zero buys with the same partially filled 33-share sell and no
+fill or cancellation. The PM wallet holds 2.115500 deployable pUSD and about 16.11 Polygon
+aUSDC.e; Ostium remains empty. The weaker executable depth does not change an exit verdict.
+
+No news or opportunity alert arrived after 10:03. The earlier unconfirmed Iranian claim about an
+unmanned US vessel remains maritime, does not reset the rolling ceasefire terrestrial-strike clock,
+and has no direct economic-position channel. No fresh fact changed HLE/Astra, Apple, Duma, Trump,
+Greenland or MetaMask. Apple NO remains at its -15% mark boundary without a touchscreen announcement,
+store listing or public-purchasability fact; HOLD through the pre-committed Sep-9 event review.
+Duma remains a 0.68-fair complete-group HOLD: its live complete add is about 0.675/unit but still
+fails the 0.75 evidence gate and 0.57 price ceiling, while its complete exit is $13.11 versus $13.60
+fair. MetaMask's complete exit is $44.49 versus $46.24 fair. Every ordinary leg remains HOLD.
+
+Operational checks are clean: UMA tracked 37 conditions with zero alert; position, crux and watchlist
+state are clean; marginal APY found seven clear ordinary legs / zero close candidates / two
+protected groups; `redeem-all` found zero winning redeemables; and all four daemons are exact-one
+and fresh. Constrained Kelly's nominal deficits are Gemini HLE $14.67, OpenAI HLE $7.83, Gemini
+debut $7.31 and Apple $5.70, but correlated-cluster policy and available collateral keep them
+non-actionable.
+
+Discovery found no deployable edge. The normal pass scanned 998 active markets; the thin pass
+examined 41,733 and surfaced 1,406 gross-hurdle candidates without a vetted honest-prior edge.
+Sports covered 97 markets and Barcelona's +1.0pp consensus gap was below the 3pp/$50k gate. Macro
+surfaced five Fed-focused rows without reliable consensus. Monotonicity scanned 1,058 events; one
+US-unemployment midpoint anomaly had no book and zero executable arb. The bounded consistency scan
+emitted no hit without claiming full coverage. Seven favorite-fade hints, led by Shelton NO +5.8pp
+and Rybakina NO +4.1pp, remain non-actionable because their population edge failed replication and
+neither instance passed the catalyst/criteria pipeline. Iran gross-APY rows likewise fail robust
+criteria, source and conflict-tail underwriting.
+
+DEC-0100 remains ungradeable until Sep-6 fully elapses; the unproposed Hormuz decisions remain
+ungradeable. Weekly P&L (Sep-4) and world state (Aug-30) remain fresh; the separate Sunday world-state
+rotation is expected later today. No trade, fill, order change, redemption, prior change, Telegram
+message, swap, bridge or daemon restart occurred. Validation passed **434 pytest cases, all 123
+standalone money checks and all 19 financial mutations**. The durable ROI continuation remains
+active until the operator manually cancels it.
