@@ -474,3 +474,32 @@ trigger is tightened to **<=$190** (roughly 25x FY26 EPS before any earnings res
 alternative research trigger after a material WFE-order correction if Lam retains share, balance-
 sheet strength, and service revenue. **No buy recommendation at $279; suggested size is $0 until
 one of those gates is met.**
+
+## 2026-09-06 weekly digest (domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security — least recent, 21d)
+
+No domain was literally unrun for four weeks: this least-recent trio last ran Aug-16, while the
+other six ran Aug-23/Aug-30. The least-recent rotation was run so the scheduled review still
+advanced.
+
+Themes:
+
+- **PJM dispatchable-generation scarcity (MED):** two DOE emergency orders in eleven days,
+  including the Aug-21 order coordinating with Constellation to keep Eddystone units 3 and 4
+  available through Nov-20, reinforce the option value of reliable capacity. CEG was re-vetted.
+- **Grid interconnection and HVDC equipment (MED):** the North Plains Connector final EIS covers
+  a 422-mile, 525-kV, 3-GW HVDC line, while federal grid-planning and emergency interventions
+  corroborate a multi-year transmission buildout. PWR was selected as the clean listed
+  transmission-engineering expression.
+- **Allied heavy-rare-earth supply (LOW):** recorded in the world-state digest but not promoted
+  or vetted because it did not meet the requested MED/HIGH-confidence threshold.
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **CEG (existing)** | **2/4** | PASS | Dispatchable power / nuclear scarcity | $298.96 is roughly 22-26x forward/2026 adjusted EPS, not a cycle-bottom valuation. Reassess at **<=$225** only if investment-grade ratings and the Crane 2027 restart schedule remain intact, or after actual restart at <=~20x forward EPS. The machine gate was tightened from $230. |
+| **PWR (new)** | **2/4** | PASS | Grid/HVDC/data-center buildout | $620.06 is roughly 34x forward earnings after a 65% one-year rerating. Reassess at **$430-470** with electric backlog and 2027 visibility intact, or after two quarters of positive FCF/integration evidence without backlog deterioration. Added an IBKR-surface research trigger at $470. |
+
+Trigger-state: the pre-update live monitor priced all 30 existing candidates and found **zero
+entry hits**. PWR becomes candidate 31; its $470 gate is well below the fresh $620.06 check price.
+These are research triggers, not buy authorizations. Current machine gates supersede historical
+narrative levels. Both candidates route to the operator's IBKR surface; no polyclaude capital
+action.

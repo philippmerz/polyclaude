@@ -36,7 +36,7 @@ Note: Ostium has no public per-address trader profile (wallet-connect SPA). DeBa
 
 Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposit parked pre-exploit — zero exposure through both exploit reports, $18M→$24M revised). Crypto sleeve has ~$7.87 aUSDC Aave-Arb plus small stable/gas balances. The PM wallet holds about 16.11 aUSDC.e on Polygon, $2.115500 pUSD operational float, and small raw stable/gas balances after closing DEC-0114. Status scripts read aTokens/pUSD directly, so idle capital is always visible. Run `scripts/crypto_status.py` + `scripts/aave_deposit.py rate` for live figures.
 
-**Long-term watchlist** (30 machine-monitored price gates; equities and multi-year ideas surface to the operator, while only explicitly <1y EVM catalysts may route back to polyclaude): `notes/longterm_watchlist.md` + `notes/watchlist_triggers.json`. Auto-monitored via `scripts/watchlist_monitor.py`; every hit is a re-underwriting trigger, never an automatic buy. LRCX's stale $280 gate fired Sep-3, but a fresh 2/4 check rejected entry near 50x trailing earnings and tightened the research gate to $190.
+**Long-term watchlist** (31 machine-monitored price gates; equities and multi-year ideas surface to the operator, while only explicitly <1y EVM catalysts may route back to polyclaude): `notes/longterm_watchlist.md` + `notes/watchlist_triggers.json`. Auto-monitored via `scripts/watchlist_monitor.py`; every hit is a re-underwriting trigger, never an automatic buy. LRCX's stale $280 gate fired Sep-3, but a fresh 2/4 check rejected entry near 50x trailing earnings and tightened the research gate to $190.
 
 ---
 

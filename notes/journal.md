@@ -12761,3 +12761,31 @@ rotation is expected later today. No trade, fill, order change, redemption, prio
 message, swap, bridge or daemon restart occurred. Validation passed **434 pytest cases, all 123
 standalone money checks and all 19 financial mutations**. The durable ROI continuation remains
 active until the operator manually cancels it.
+
+## 2026-09-06 16:02–16:09 UTC — Sunday long-term review: grid scarcity; no entry
+
+All nine world-state domains had run within four weeks, so the least-recent trio was selected:
+critical minerals/commodities, energy/power/infrastructure and geopolitics/security, each last run
+Aug-16. The digest surfaced two MED-confidence themes. First, two DOE emergency orders in eleven
+days—including the Aug-21 Eddystone order involving Constellation—reinforce PJM dispatchable-power
+scarcity. Second, the 422-mile, 525-kV, 3-GW North Plains Connector final EIS and continued federal
+grid intervention reinforce the multi-year transmission/HVDC buildout. An allied-heavy-rare-earth
+theme was LOW confidence and therefore was recorded but not promoted or vetted.
+
+Fresh long-term checks rejected immediate entry in both selected expressions. **CEG scored 2/4
+PASS at $298.96**: the nuclear/Calpine thesis remains strong, but roughly 22–26x forward/2026
+adjusted EPS is not cycle-bottom pricing. Its machine research gate was tightened from $230 to
+**$225**, conditional on investment-grade ratings and the Crane 2027 restart schedule remaining
+intact; actual restart at <=~20x forward EPS is the alternative gate. **PWR scored 2/4 PASS at
+$620.06**: $53.44B backlog supports the thesis, but roughly 34x forward earnings, a 65% one-year
+rerating and $6.10B debt leave inadequate margin of safety. PWR was added as candidate 31 with an
+IBKR-surface research gate at **$470**, conditional on electric backlog and 2027 visibility holding;
+two quarters of positive FCF/integration evidence without backlog deterioration is the alternative
+review trigger.
+
+The live monitor priced all 30 pre-existing candidates before the edit and found zero entry hits;
+the post-edit monitor also returned zero hits across all 31. Both new/revised gates are research
+alerts rather than buy authorizations and neither can deploy polyclaude capital. No position,
+order, prior or bankroll changed. Telegram message **908** surfaced the review. JSON validation and
+the post-update monitor passed. The durable ROI continuation remains active until the operator
+manually cancels it.

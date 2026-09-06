@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-09-03",
+  "updated": "2026-09-06",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -58,13 +58,13 @@
       "ticker": "CEG",
       "type": "equity",
       "yfinance_symbol": "CEG",
-      "entry_max": 230.0,
+      "entry_max": 225.0,
       "horizon": "2-5y",
       "route": "ibkr_surface",
-      "rationale": "Advanced Nuclear / AI-power. Trigger fired 2026-07-05 @ $239.25 (was <=250). Fresh longterm_check 3.5/4 WATCH: down 42% to fair-valued (13.3x EV/EBITDA), secular STRONG + catalysts HIGH (TMI/FERC waiver Q4-26, Calpine synergies), but integration + PJM overhang say wait. REVISED entry: $220-230 dip OR Q4 TMI-waiver clarity (then $280-300 valid). Grid-stress digest theme 2026-07-05 (PJM emergency reserves + DOE coal restarts) reinforces the capacity-value thesis. entry_max lowered 250->230 to re-alert at the actual band. Surfaced to operator 2026-07-05.",
+      "rationale": "Sep-6 fresh longterm_check: 2/4 PASS at $298.96. Data-center power scarcity and CEG's nuclear/Calpine fleet remain strong, but ~22-26x forward/2026 adjusted EPS is not a cycle-bottom valuation and already prices much of the theme. Reassess at <=$225 only if investment-grade ratings and the Crane 2027 restart schedule remain intact; alternative review after actual Crane restart at <=~20x forward EPS. This supersedes the old $220-230/TMI-waiver gate.",
       "added": "2026-05-08",
       "revised": "2026-05-13",
-      "updated": "2026-07-05"
+      "updated": "2026-09-06"
     },
     {
       "ticker": "PLTR",
@@ -311,6 +311,16 @@
       "route": "ibkr_surface",
       "rationale": "Fresh 2026-08-30 longterm_check: 2/4 PASS at $402.78. AI/grid demand and backlog are strong, but ~31x forward earnings plus Boyd acquisition leverage leave no current margin of safety. Reassess at <=$300 only if electrical orders remain positive and net debt is demonstrably declining, or after the expected 2027-Q1 Mobility/Dana close clarifies the capital structure.",
       "added": "2026-08-30"
+    },
+    {
+      "ticker": "PWR",
+      "type": "equity",
+      "yfinance_symbol": "PWR",
+      "entry_max": 470.0,
+      "horizon": "3y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-09-06 longterm_check: 2/4 PASS at $620.06. Grid/HVDC/data-center demand and $53.44B backlog are strong, but ~34x forward earnings, a 65% one-year rerating and $6.10B debt leave no current margin of safety. Reassess at $430-470 only if electric backlog and 2027 earnings visibility remain intact; alternative review after two quarters of acquisition integration, positive FCF conversion and no electric-backlog deterioration.",
+      "added": "2026-09-06"
     }
   ]
 }

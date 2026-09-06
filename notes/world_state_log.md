@@ -1998,3 +1998,76 @@ Domains: biotech-health, trade-regulation, markets-corporate | Lookback: 30d
 - Run catalyst_check.py on: “OpenAI Ohio data-center campus ready-for-service timeline”; “Rasonque commercial launch / payer coverage”; “NVIDIA Rubin supply constraints.”
 - Skip / pass: Ebola-response plays, NWS livestock-health plays, Venezuela licensing, and Section 232 sectors — current facts establish events or policy exposure but not a sufficiently specific, investable earnings mechanism.
 - Watchlist cross-reference: no recall-based flags; `notes/longterm_watchlist.md` was not read.
+
+---
+
+## 2026-09-06T16:02:32Z — world_state_digest
+
+**Domains:** critical-minerals-commodities, energy-power-infrastructure, geopolitics-security | **Lookback:** 30d | **Profile:** research
+
+# WORLD-STATE DIGEST — 2026-09-06
+
+Domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### critical-minerals-commodities
+
+- [2026-08-07] [DFC](https://www.dfc.gov/media/press-releases/dfc-announces-financing-madagascar-rare-earths-project): DFC will provide project-development funding to Harena Rare Earths’ 100%-owned Ampasindava ionic-clay project in Madagascar; DFC states this is its first mining investment in Madagascar.
+- [2026-08-20] [DOE](https://www.energy.gov/articles/energy-department-announces-500-million-secure-americas-critical-mineral-and-battery): DOE selected seven projects for **$500 million** to expand U.S. critical-mineral/material processing, battery manufacturing, and recycling.
+- [2026-08-12] [USDA WASDE](https://esmis.nal.usda.gov/?f%5B0%5D=agency%3A3): USDA released the August 2026 WASDE; the report is the current monthly official supply-and-use forecast for grains, oilseeds, cotton, livestock, dairy, and sugar.
+- [2026-08-02] [OPEC](https://www.opec.org/pr-detail/611-2-august-2026.html): Saudi Arabia, Russia, Iraq, Kuwait, Kazakhstan, Algeria, and Oman agreed to a **188,000 b/d** production adjustment effective September 2026; next meeting scheduled for September 6.
+
+### energy-power-infrastructure
+
+- [2026-08-21] [DOE](https://www.energy.gov/articles/energy-secretary-keeps-critical-generation-available-mid-atlantic): DOE ordered PJM and Constellation to keep Eddystone Units 3 and 4 available; the order runs **August 23–November 20**. The units had been scheduled to close May 31, 2025.
+- [2026-09-01] [DOE](https://www.energy.gov/articles/energy-secretary-keeps-mid-atlantic-powered-during-hot-weather-conditions): DOE ordered PJM to dispatch specified units as needed and authorized backup generation before/during an EEA-3; order runs **September 1–8**. DOE estimates **more than 35 GW** of unused backup generation is available nationwide.
+- [2026-09-01] [DOE](https://www.energy.gov/articles/energy-secretary-saves-coal-fired-generation-going-offline-florida): DOE ordered Orlando Utilities Commission to keep Stanton Energy Center Unit 1 available through **November 30**; the unit had been scheduled for extended cold shutdown in June.
+- [2026-08-28] [DOE](https://www.energy.gov/oe/articles/energy-department-announces-major-milestone-north-plains-connector-bridging-eastern-and): DOE and Montana issued the final EIS for the proposed North Plains Connector: **422 miles**, **525-kV HVDC**, and **3,000 MW** bidirectional transfer capability between the Western and Eastern Interconnections.
+- [2026-09-01] [DOE](https://www.energy.gov/oe/articles/does-office-electricity-announces-115m-genesis-mission-project-meet-growing-electricity): DOE awarded **$11.5 million** for GridFM 2.0, targeting evaluation of **1 billion** grid scenarios in 24 hours, planning throughput over **10,000x** higher, and calculations over **1,000x** faster than traditional methods.
+- [2026-08-19] [EIA](https://www.eia.gov/about/new/?r=7590): EIA reported that Permian operators are increasingly using horizontal “super-lateral” wells exceeding **15,000 feet**.
+
+### geopolitics-security
+
+- [2026-08-03] [NATO](https://nato.int/en/news-and-events/articles/news/2026/08/04/change-of-command-at-nato-security-assistance--training-for-ukraine-nsatu): NATO transferred command of NSATU; elements of the U.S. Security Assistance Group–Ukraine will transfer to NSATU, while a European or Canadian officer is expected to assume command in about one year.
+- [2026-08-27] [UN Security Council](https://ethiopia.un.org/en/321782-security-council-press-statement-august-24-attack-against-united-nations-mission-south-sudan): An August 24 attack on a UNMISS convoy in Jonglei State killed **two** peacekeepers and injured **seven** people.
+- [2026-08-10] [UN Security Council](https://main.un.org/securitycouncil/en/content/letters-exchanged-between-secretary-general-and-president-security-council-2026): The Secretary-General transmitted a letter on Houthi attacks on merchant and commercial vessels in the Red Sea, document **S/2026/667**.
+- [2026-08-06] [DoD industrial-base office](https://business.defense.gov/Engage/News/Newsfeed-Repository/): SBA announced a Critical Suppliers Prize Competition with up to **$20 million** in non-dilutive capital, including as many as six prizes of up to **$6 million** each.
+
+## CANDIDATE THEMES
+
+### PJM dispatchable generation / Constellation
+
+- Underlying facts: DOE issued two PJM emergency orders within 11 days; the August 21 order specifically directs coordination with Constellation to keep Eddystone Units 3–4 available through November 20.
+- Implication: previously retired/retiring dispatchable capacity has realized regulatory option value during peak-load events; emergency dispatch authority can extend operating cash flows and supports capacity value.
+- Possible plays: **CEG**
+- Direction: long
+- Horizon: months
+- Retail blindspot: grid-reliability headlines are treated as weather news rather than evidence that regulators are monetizing scarce dispatchable capacity.
+- Confidence: MED
+
+### Grid interconnection and HVDC equipment
+
+- Underlying facts: North Plains Connector reached final-EIS stage for a 422-mile, 525-kV HVDC, 3,000-MW project; DOE simultaneously funded grid-planning acceleration and repeatedly intervened to preserve reliability.
+- Implication: reliability-driven transmission investment remains structurally necessary; final-EIS progress moves a large HVDC project closer to procurement.
+- Possible plays: HVDC cable, transformer, switchgear, and transmission-engineering categories.
+- Direction: long
+- Horizon: years
+- Retail blindspot: the investable demand appears only after permitting milestones, while equipment order books respond later.
+- Confidence: MED
+
+### Allied heavy-rare-earth development
+
+- Underlying facts: DFC funded development of Harena’s Madagascar ionic-clay rare-earth project, which contains Nd, Pr, and Dy; DOE separately committed $500 million across seven U.S. processing, battery, and recycling projects.
+- Implication: government capital is being directed both upstream to allied supply and downstream to domestic processing, reducing financing risk for non-China magnet-material chains.
+- Possible plays: **HREE / CRMNF**; allied heavy-rare-earth developers and processors.
+- Direction: long
+- Horizon: years
+- Retail blindspot: early project-development funding is smaller and less visible than mine-construction announcements, despite its role in unlocking later financing.
+- Confidence: LOW
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: CEG, HREE, CRMNF
+- Run catalyst_check.py on: “Will DOE issue another PJM emergency reliability order before November 2026?”, “Will North Plains Connector receive final federal approval in 2026?”
+- Skip / pass: crude-oil directional trade (OPEC release does not state the adjustment direction in the text); defense primes (no recent primary-source procurement value tied to a listed contractor); uranium/HALEU (recent IAEA material establishes supply-chain requirements but no new commercial demand or contract fact).
