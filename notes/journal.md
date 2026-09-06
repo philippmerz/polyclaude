@@ -12667,3 +12667,26 @@ hygiene**. An initial invalid parallel validation exposed transient mutation-tes
 the harness was then run serially, production files were confirmed restored, and the clean result
 above was reproduced. The durable ROI continuation remains active until the operator manually
 cancels it.
+
+## 2026-09-06 06:00–06:03 UTC — periodic review: quiet; no action due
+
+No portfolio or backlog action became due. Authoritative bankroll is **$189.99**, down $0.10 from
+02:00 on valuation drift; realized P&L remains **+$14.43**. The 13 indexed Polymarket rows still
+cost $157.20, mark at **$156.37**, and depth-realize at **$150.86**, so midpoints overstate
+liquidation by $5.51. Inventory remains six LIVE sells / zero buys with the same partial 33-share
+sell and no fill or cancellation. The PM wallet holds 2.115500 deployable pUSD and about 16.11
+Polygon aUSDC.e; Ostium remains empty.
+
+No news or opportunity alert arrived after the 02:00 review, and no active-position catalyst changed
+the HLE/Astra, Apple, Duma, Trump, Greenland, MetaMask or Hormuz-dust judgment. UMA tracked 37
+conditions with zero alert; position, crux and watchlist checks are clean; marginal APY has seven
+clear ordinary legs / zero close candidates / two protected groups; and `redeem-all` found zero
+winning redeemables. Every ordinary exit remains HOLD; Duma's complete exit is $13.30 versus
+$13.60 fair and MetaMask's is $44.52 versus $46.24 fair. All four daemons are exact-one and fresh.
+
+DEC-0100 remains ungradeable until all of Sep-6 has elapsed, while the unproposed Hormuz decisions
+remain ungradeable. Weekly P&L and the Aug-30 world-state review remain fresh. Apple's Sep-9 event
+and the Sep-12 emergency-path/fee drill are the next operating dates. The Aave-Polygon hurdle
+refreshed from 2.8011% to **2.7968%** without changing any carry verdict. No trade, fill, order
+change, redemption, prior change, Telegram message, swap, bridge or daemon restart occurred. The
+durable ROI continuation remains active until the operator manually cancels it.
