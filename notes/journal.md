@@ -13095,3 +13095,42 @@ $5.65. No new news or opportunity alert arrived, and the daemon scanners' latest
 positive live-depth candidate above their action floors. Telegram received the material order-risk
 correction. No trade, fill, prior change, redemption, swap, bridge or daemon restart occurred. The
 durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-07 22:33–22:38 UTC — continuation: Treasury pair priced against capital cost
+
+Reviewed the recurring below-notification-floor Treasury-yield inversion using two independent
+checks: a bounded reader verified literal rules and the Treasury feed, while the main operator
+priced current CLOB depth, fees and the funding alternative. Exact Gamma markets **677139**
+(`will-the-10-year-treasury-yield-dip-below-3pt5-before-2027-431`) and **677144**
+(`will-the-10-year-treasury-yield-dip-below-3pt7-before-2027-737`) use the same strict-below test,
+official Treasury **10 Yr par yield**, and **Nov-11 2025 through Dec-31 2026** observation window.
+The descriptions' source URL has a stale 2025 filter; the same official 2026 series is required for
+2026 observations. Gamma's Dec-31 00:00 UTC endDate must not shorten that literal final observation
+date. The [Treasury 2025 XML](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2025)
+and [2026 XML](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026)
+have a within-window minimum of **3.97% on Feb-27** and latest **4.78% on Sep-4**; neither threshold
+has already fired in the published observations.
+
+The structure is 3.5%-NO plus 3.7%-YES in equal shares. Fresh identity-checked books quoted
+**0.930 x50** and **0.059 x60** asks, with authoritative feeSchedule rate **0.05**, exponent 1 on
+both. Five pairs cost **$4.97515475** including **$0.03015475** of modeled fees, for a conditional
+minimum payout of $5 and only **$0.02484525** floor profit. Ten and twenty pairs retain the same
+per-pair economics at displayed depth. This is about **1.6% annualized floor carry** over the
+remaining roughly 115 days before settlement delay. A direct read of the wallet's actual
+**Polygon USDC.e** reserve quoted **3.128% annual supply rate**; the generic cached hurdle's 2.8139%
+belongs to native USDC, so the actual reserve is the relevant funding comparison here. At a flat
+3.128% rate the same $4.975 would earn about $0.049 over that period. Rates can change.
+
+Both legs pay only if the full-window minimum lies in **[3.5%, 3.7%)**; that extra payoff means the
+floor alone is not the complete expected return. Beating the actual reserve requires a probability
+above roughly **0.48%** for that interval before extra costs, or **2.48%** if another $0.10 of
+funding/settlement friction is assumed (sensitivity, not a measured fee). No defensible pessimistic
+probability for that path was established. Sequential execution also matters: a complete immediate
+reverse of five pairs fetches only **$4.72730850**, losing $0.24784625, roughly ten times the floor
+profit. **No entry and no resting pair.** Revisit on the existing scanner's >=2pp modeled net alert,
+with full rule/book revalidation, or if fresh evidence supports the interval scenario; do not lower
+the alert threshold merely because this inversion persists.
+
+No new news alert arrived. Live authenticated inventory again proves **five SELLs / zero BUYs /
+zero Apple orders**, so the prior cancellation remains effective. No portfolio, prior, scheduler
+or code change was made, and no additional Telegram was needed. The durable ROI goal remains active.
