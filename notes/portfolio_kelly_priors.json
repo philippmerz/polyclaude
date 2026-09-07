@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-06",
+ "_updated": "2026-09-07",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-06: the daily short-clock re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30 fieldwork. Union p remains 0.68 (<0.75), complete-set best asks total about 0.685/unit (>0.57), and the fee-free full exit is about $13.30 versus $13.60 fair. HOLD equal set; no add.",
+   "add_gate": "FAILED 2026-09-07: the daily short-clock re-derivation rechecked VCIOM's Sep-4 release and found no primary poll or comparable whole-seat forecast newer than its Aug-30 fieldwork. Union p remains 0.68 (<0.75), complete-set best asks total about 0.685/unit (>0.57), and the fee-free full exit is about $13.30 versus $13.60 fair. HOLD equal set; no add.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -544,9 +544,10 @@
  "_comment_key_facts": "key_facts = the load-bearing factual claims a position rests on, each paired with the EXTERNAL source it came from. Added 2026-08-11 after a prior revision inverted the direction of a source's anchor move and then survived TWO re-verifications, because each re-verification re-read my own note and reproduced the error. A re-verification that does not diff the recorded claim against the source's actual words is confirmation, not verification. The audit rotation surfaces these for source-diffing. TAGGING CAVEAT (2026-08-12): the audit tags a source UNVERIFIED when it does not start with http, but a URL that 403s (congress.gov) is no more agent-verifiable than a prose 'sweep'. Where that happens, say so INLINE in the claim and name the independent falsifier used instead \u2014 do not let an unfetchable URL launder a claim into looking checked. SOURCE_DATE (2026-08-12): distinct from `checked`. `checked` is when I last LOOKED; `source_date` is when the source was PUBLISHED. The MacBook staleness cost 18pp precisely because those diverged invisibly \u2014 checked=1d ago on a source published 114d earlier, in a story that had moved three times since. For live-state sources (a leaderboard, an order book, a market description) the two are equal by construction. ATOMICITY REQUIRED (2026-08-13): one independently checkable assertion per entry, each with its own source and source_date. Bundled entries are how an unchecked fact hides inside a checked one \u2014 SpaceX's 'No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T close would need an S-1 already public' bundled OpenAI's TIMING (checked twice) with every other rival's SIZE (never checked), and the second cost the project its largest prior correction. If an entry contains ' and ' joining two verifiable claims, split it. SOURCE TAXONOMY (2026-08-13) \u2014 'is it a URL' is the WRONG test and my first sweep miscategorised because of it. Ranked by what may move a number: (1) FIRST-HAND MEASUREMENT \u2014 a CLOB book walk, a gamma/API read, an on-chain balance. Reproducible on demand and STRONGER than any article, even though it carries no URL. (2) DATED PRIMARY ARTIFACT \u2014 a fetched, dated piece; the standard for a factual claim about the world. (3) NAMED BUT UNLINKED \u2014 e.g. 'third-party trackers'; verifiable with effort, acceptable if the claim is checked periodically. (4) AGGREGATED SEARCH SUMMARY \u2014 a LEAD ONLY. It must never move a prior: on 2026-08-13 one such summary said the M5 reshuffle was an 'acceleration', moved MacBook 0.62->0.58, and pinning it to dated sources REFUTED it outright. Label the kind when the source is not a URL, so a future sweep does not mistake a measurement for a guess.",
  "_comment_divergence_ack": "divergence_ack MUST be a bare ISO date string (e.g. \"2026-08-15\") \u2014 position_state_audit \u00a73c parses it with date.fromisoformat() directly and treats anything else as EXPIRED via the exception path. 14-day window from that date. Put prose in divergence_ack_reason (audit ignores it). Same for source_ack. Learned 2026-08-16: two acks written as rich dicts were silently invalid; one flagged, one was a near-miss.",
  "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632": {
-  "p_yes": 0.078,
-  "verified": "2026-08-30",
-  "criteria_read": "2026-08-30",
+  "p_yes": 0.12,
+  "verified": "2026-09-07",
+  "criteria_read": "2026-09-07",
+  "current_assessment": "Sep-7 criteria re-read found no drift. The direct Dec-31 launch sibling repriced to 0.13 midpoint (0.11/0.15), from 0.085 at the Aug-30 recheck. Retaining the 0.92 conditional chance of >$700M given launch moves p_yes to 0.120. The live logical bound is now correctly ordered (launch probability above the $700M leg), and the 2.97-share unpaired crumb remains too small to trade independently. HOLD complete group.",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: 0.085 x 0.92 = p_yes 0.078 vs mark 0.092 \u2014 the market is marginally rich here, which is the SAME inversion the arb was struck on; 2.97sh of this leg are unpaired (the intentional lottery crumb, ~$0.27).",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -554,14 +555,14 @@
    {
     "claim": "Market resolves NO if MetaMask does not launch a publicly transferable/tradable token by 2026-12-31 23:59 ET; FDV measured 4:00 PM ET the calendar day after launch, 'most liquid price source'.",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
-    "source_date": "2026-08-30",
-    "checked": "2026-08-30"
+    "source_date": "2026-09-07",
+    "checked": "2026-09-07"
    },
    {
-    "claim": "Sibling market prices P(MetaMask launches a token by Dec-31 2026) at YES 0.085 (thin, $11 v24 at the Aug-30 recheck). This is a hard upper bound on every FDV leg.",
+    "claim": "Sibling market prices P(MetaMask launches a token by Dec-31 2026) at YES 0.13 midpoint with a 0.11/0.15 book. This is a hard upper bound on every FDV leg and now sits correctly above the $700M leg.",
     "source": "https://gamma-api.polymarket.com/events?slug=will-metamask-launch-a-token-in-2025",
-    "source_date": "2026-08-30",
-    "checked": "2026-08-30"
+    "source_date": "2026-09-07",
+    "checked": "2026-09-07"
    },
    {
     "claim": "No launch date announced as of Aug-2026; Lubin confirmed the token Sep-2025; ConsenSys is pursuing a 2026 traditional IPO (a reason for delay, not acceleration).",
@@ -573,9 +574,10 @@
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
  "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222": {
-  "p_no": 0.947,
-  "verified": "2026-08-30",
-  "criteria_read": "2026-08-30",
+  "p_no": 0.919,
+  "verified": "2026-09-07",
+  "criteria_read": "2026-09-07",
+  "current_assessment": "Sep-7 criteria re-read found no drift. Updating the direct Dec-31 launch sibling from 0.085 to 0.13 midpoint while retaining P(>$3B | launch)=0.62 gives p_yes 0.081 / p_no 0.919. This remains an inseparable paired leg; HOLD complete group.",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: p_yes = 0.085 x 0.62 = 0.053 -> p_no 0.947 vs mark 0.928. Bought at 0.849 in DEC-0080.",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -583,16 +585,17 @@
    {
     "claim": "Same template/criteria as the 700M leg: one FDV number, same no-launch backstop, so all legs resolve consistently \u2014 which is what makes the pair riskless.",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
-    "source_date": "2026-08-30",
-    "checked": "2026-08-30"
+    "source_date": "2026-09-07",
+    "checked": "2026-09-07"
    }
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
  },
  "metamask-fdv-above-4b-one-day-after-launch-851-782-477-258": {
-  "p_no": 0.956,
-  "verified": "2026-08-30",
-  "criteria_read": "2026-08-30",
+  "p_no": 0.932,
+  "verified": "2026-09-07",
+  "criteria_read": "2026-09-07",
+  "current_assessment": "Sep-7 criteria re-read found no drift. Updating the direct Dec-31 launch sibling from 0.085 to 0.13 midpoint while retaining P(>$4B | launch)=0.52 gives p_yes 0.068 / p_no 0.932. This remains an inseparable paired leg; HOLD complete group.",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: p_yes = 0.085 x 0.52 = 0.044 -> p_no 0.956 vs mark 0.917. Bought at 0.888 in DEC-0079.",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -600,8 +603,8 @@
    {
     "claim": "Same template/criteria as the 700M and 3B legs (one FDV number, same backstop).",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-4b-one-day-after-launch-851-782-477-258",
-    "source_date": "2026-08-30",
-    "checked": "2026-08-30"
+    "source_date": "2026-09-07",
+    "checked": "2026-09-07"
    }
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03"
@@ -696,13 +699,13 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.18,
-  "verified": "2026-09-06",
+  "verified": "2026-09-07",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-6 daily short-clock re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30 fieldwork. Distribution stays 0.18/0.31/0.19 and union p=0.68. Current bucket midpoints sum to about 0.675, executable complete-set asks total about 0.685/unit versus the 0.57 add ceiling, and the fee-free full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-7 daily short-clock re-derivation rechecked VCIOM's Sep-4 release and found no primary poll or comparable whole-seat forecast newer than its Aug-30 fieldwork. Distribution stays 0.18/0.31/0.19 and union p=0.68. Executable complete-set bids/asks total about 0.665/0.685 per unit versus the 0.57 add ceiling, and the fee-free full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
@@ -733,7 +736,7 @@
     "claim": "VCIOM's Sep-4 release extends the weekly series through Aug 30: United Russia support is 37.2% after 39.2%, versus 34.0 and 36.0 the prior two weeks. The 2pp weekly decline is inside the stated 2.5pp maximum sampling error. Normalizing the five named parties gives about 50.1%, roughly 113 of 225 list seats, but this remains polling rather than a turnout, threshold, district, or whole-seat forecast.",
     "source": "https://wciom.ru/ratings/reiting-politicheskikh-partii/",
     "source_date": "2026-09-04",
-    "checked": "2026-09-06"
+    "checked": "2026-09-07"
    },
    {
     "claim": "PolitPro's as-of-September-4 page displays 234 ER seats from its national Election Trend. The number is mechanically 47.0 / 90.4 qualifying-party vote x 450 = 234, proving the generic display proportionally allocates the whole chamber and does not model Russia's 225 single-member districts. Its newest conventional poll inputs are still August 23. Treat it only as a qualitative downside sensitivity, not an independent whole-seat forecast.",
@@ -745,13 +748,13 @@
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.31,
-  "verified": "2026-09-06",
+  "verified": "2026-09-07",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-6 daily short-clock re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30 fieldwork. Group distribution remains 0.18/0.31/0.19 and union p=0.68; complete-set asks total about 0.685/unit and the full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-7 daily short-clock re-derivation rechecked VCIOM's Sep-4 release and found no primary poll or comparable whole-seat forecast newer than its Aug-30 fieldwork. Group distribution remains 0.18/0.31/0.19 and union p=0.68; complete-set bids/asks total about 0.665/0.685 per unit and the full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
@@ -770,13 +773,13 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.19,
-  "verified": "2026-09-06",
+  "verified": "2026-09-07",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-6 daily short-clock re-derivation found no primary poll or comparable whole-seat forecast newer than VCIOM's Aug-30 fieldwork. Group distribution remains 0.18/0.31/0.19 and union p=0.68; complete-set asks total about 0.685/unit and the full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-7 daily short-clock re-derivation rechecked VCIOM's Sep-4 release and found no primary poll or comparable whole-seat forecast newer than its Aug-30 fieldwork. Group distribution remains 0.18/0.31/0.19 and union p=0.68; complete-set bids/asks total about 0.665/0.685 per unit and the full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {

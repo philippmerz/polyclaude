@@ -12851,3 +12851,64 @@ and world state are fresh.
 No trade, fill, order change, redemption, prior change, Telegram message, swap, bridge or daemon
 restart occurred. The durable ROI continuation remains active until the operator manually cancels
 it.
+
+## 2026-09-07 02:00–02:18 UTC — full check-in: due reviews cleared; Arena lead watched
+
+No live-position action was justified. Authoritative bankroll is **$189.37**, up $0.48 from 22:00
+on marks; realized P&L is **+$14.44**. The 13 indexed Polymarket rows still cost $157.20, mark at
+**$155.82**, and depth-realize at **$149.18**, so midpoints overstate liquidation by $6.64. The book
+still has one de-indexed Hormuz dust row, six LIVE sells / zero buys, and the same order partially
+filled 16.994923/33 shares; no new fill, resolution or cancellation occurred. The PM wallet holds
+2.115500 deployable pUSD and 16.110288 Polygon aUSDC.e; crypto inventory is effectively unchanged
+and Ostium remains empty.
+
+No news or opportunity alert arrived after the 22:05 review, and no fresh fact changed HLE/Astra,
+Apple, Trump, Greenland or the Iran/Hormuz dust. Two due audits were completed rather than merely
+acknowledged. The Duma prior was re-derived against VCIOM's Sep-4 release plus the existing APEK and
+RASO whole-seat evidence: no newer authoritative whole-seat forecast exists, distribution remains
+**0.18/0.31/0.19**, union p remains **0.68**, complete bids/asks total about 0.665/0.685 per unit,
+and the 20-share set remains HOLD / NO ADD at a $13.30 exit versus $13.60 fair. All three MetaMask
+FDV descriptions were re-read and remain equivalent apart from thresholds: publicly tradable token,
+4:00 PM ET on the day after launch, most-liquid-source resolution, and a Dec-31 no-launch backstop.
+No criteria, source or launch fact drifted; the complete group remains HOLD at $44.25 executable
+versus fair value. A direct sibling-price reconciliation then found the Dec-31 launch market at
+0.13 midpoint (0.11/0.15), up from the stored 0.085. Retaining the existing conditional FDV
+distribution moves the three leg priors to 0.120 YES / 0.919 NO / 0.932 NO and raises group fair
+value from $46.24 to **$47.05**. This strengthens the complete-group HOLD; the displayed pair adds
+still fail their current-ask gate and the unpaired crumb remains policy-gated.
+
+Operational checks are clean: UMA tracked 37 conditions with zero alert; position state and crux
+coverage are clean; marginal APY found seven clear ordinary legs / zero close candidates / two
+protected groups; all exits remain HOLD; the long-term watchlist has no hit; `redeem-all` found zero
+winning redeemables; and all four daemons are exact-one and fresh. Constrained Kelly's nominal
+deficits are Gemini HLE $15.00, OpenAI HLE $8.02 and Gemini debut $7.66, but cluster/policy gates
+still make each non-actionable. DEC-0100's prospective window elapsed and was graded **PASS**: exact
+lookup continued to recover a below-offset market with literal criteria, fail-closed coverage and
+signed UMA direction held, and no subsequent integrity failure was recorded. The four unproposed
+Hormuz decisions remain correctly ungradeable. Weekly P&L (Sep-4) and world state (Sep-6) are fresh.
+
+Discovery found no deployable arb or ordinary entry. The normal pass fetched 1,000 markets; the
+thin pass fetched 37,625 and retained 1,623 gross-hurdle rows for triage. Sports covered 41 markets;
+the two consensus checks disagreed by only -1.5pp and -1.1pp. Macro exposed five Fed rows without a
+reliable consensus edge. Monotonicity inspected 930 multi-market events with zero violation; the
+explicitly incomplete consistency pass scanned 5,028 open markets, retained 3,538 validated
+neg-risk rows, and found zero positive provisional basket after sequential depth checks. Seven
+favorite-fade hints remained population-only; Barcelona's recent independent gap was only 1pp, so
+none cleared the instance gate.
+
+The one useful new watch is **OpenAI to top Arena Text Overall on Sep-30**. Exact criteria and books
+were read: YES ask 0.161, roughly 0.1664 including the taker fee, versus a broad 0.15/0.30/0.50
+probability range while Anthropic leads and OpenAI ranks 17. Astra's broader rollout is a real
+catalyst, but the low case loses money and the central case clears the mandatory haircut only
+narrowly. The entry helper also refused to assume independence from the near-cap AI cluster. No
+buy; re-underwrite only if Astra reaches the exact leaderboard's top five while effective cost is
+<=0.20, or if cost falls below 0.04. The flagged LiveBench-math sibling was verified to use a
+different source/metric and is not fungible. Israel-airspace YES also failed at a conservative
+p<=0.60 versus a 0.77 ask. The Arena gate was added to backlog; Telegram message **909** surfaced
+the genuine watch without implying an entry, and message **910** delivered the subsequent
+MetaMask prior correction.
+
+No trade, fill, order change, redemption, swap, bridge or daemon restart occurred. The MetaMask
+prior update changed no position action. Validation passed **434 pytest cases, all 123 standalone
+money checks and all 19 financial mutations**. The durable ROI continuation remains active until
+the operator manually cancels it.

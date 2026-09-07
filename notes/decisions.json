@@ -1958,9 +1958,10 @@
         "advisory"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS \u2014 exact lookup resolved a live market below the old offset ceiling with its literal description; ambiguity, malformed input and incomplete keyset coverage continued to fail closed, and signed UMA direction remained correct.",
+      "calibration_delta": "Prediction confirmed: exact below-offset market and literal criteria were recovered; fail-closed and signed-direction guards held throughout the prospective window.",
+      "lesson": "Make integrity claims prospectively gradeable with independently checkable IDs, coverage telemetry and alert-language boundaries. A clean bounded scan must continue to say incomplete; sequential books remain revalidation leads, never executable proof.",
+      "resolved_at": "2026-09-07T02:04:19Z"
     },
     {
       "id": 101,

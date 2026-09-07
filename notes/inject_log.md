@@ -6930,3 +6930,8 @@ Periodic check: anything else to take care of? Review notes/backlog.md and the r
 Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
 [durable ROI-goal continuation contract appended to queued prompt]
 [direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-07T02:00:04Z — inject QUEUED
+Cron tick 20260907T020002Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[durable ROI-goal continuation contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
