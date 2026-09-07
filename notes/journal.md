@@ -12943,3 +12943,36 @@ decisions remain correctly ungradeable pending a formal proposal. No trade, fill
 redemption, prior change, backlog change, swap, bridge, daemon restart or additional manual
 Telegram summary occurred. The durable ROI continuation remains active until the operator manually
 cancels it.
+
+## 2026-09-07 10:00–10:08 UTC — periodic review: HLE mark improved; source and exit still HOLD
+
+The favorable mark move was real enough to review but did not change an action. Authoritative
+bankroll is **$192.77**, up $3.35 from 06:00 on marks; realized P&L remains **+$14.44**. The 13
+indexed Polymarket rows still cost $157.20 and now mark at **$159.21**, while depth-realizable value
+is **$152.41**. Thus the active sleeve is +$2.01 on midpoint, −$4.79 at executable depth, and thin
+books still overstate liquidation by $6.79. The same six SELLs / zero BUYs remain live with the
+16.994923/33 partial fill unchanged. Deployable pUSD remains 2.115500 and Polygon aUSDC.e is about
+16.11. No fill, cancellation, resolution or redemption occurred.
+
+UMA surfaced a 6pp move in OpenAI HLE >=55 YES, 0.785→0.725, favorable to the held NO. The live NO
+mid is about 0.275 and executable exit about $4.89, versus $7.60 central hold value. A direct
+`source_freeze_check.py` rerun passed claude/grok/gemini coverage and found zero additions or
+removals between the Jan-15 snapshot and live agi.safe.ai. With no supporting catalyst or criteria
+change, the quote is not a thesis break or an exit: **HOLD / NO ADD / NO FLIP**. All other ordinary
+exit checks also remain HOLD; Duma's equal set is about $13.32 executable versus $13.60 fair.
+
+MetaMask's direct Dec-31 launch sibling eased from the 02:00 midpoint of 0.130 to **0.115**, with a
+0.10/0.13 book. Keeping the previously vetted conditional FDV distribution moves the three priors
+to 0.106 YES / 0.929 NO / 0.940 NO and group fair value to **$46.80**, versus a roughly $44.25 full
+exit. Re-running the protected-group add screen now rejects both paired components at current asks:
+the better 700M-YES + 4B-NO pair costs about 1.031/unit versus 1.046 central fair, only $0.075 of
+central value for the five-share minimum and below tick noise after a conservative launch/FDV
+sensitivity. The five-share unpaired 700M crumb costs about 0.096/unit versus 0.106 fair, but its
+mandatory uncertainty haircut and manual policy gate fail. No add and no independent-leg action.
+
+No news or opportunity alert arrived after 06:05, and no fresh fact changed Apple, Duma, Trump,
+Greenland or Hormuz. UMA otherwise tracked 37 conditions with zero integrity alert; claims remain
+empty; all four daemons are singular/running; weekly P&L and world state remain fresh. Apple Sep-9
+is still the next hard review. Telegram message **911** reported the material mark/prior update.
+No trade, fill, order change, redemption, swap, bridge or daemon restart occurred. The durable ROI
+continuation remains active until the operator manually cancels it.
