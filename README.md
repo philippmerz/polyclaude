@@ -52,7 +52,7 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 
 3. **Interactive** — `scripts/telegram_listener.py` long-polls Telegram; authorized operator messages enter the same ordered conversation queue as local follow-ups. Telegram replies are action-only by convention (cron tick sends structured summary; material moves outside ticks ping immediately).
 
-   - Telegram-prefixed messages (`telegram:`, `reply on telegram:`) require Telegram reply via `scripts/telegram.py msg "..."`.
+   - Reply to new authenticated Telegram operator messages through `scripts/telegram.py msg "..."`, honoring the private one-time-reader contract: `ALREADY_CLAIMED` means no action or duplicate reply; `EXPIRED` means only a generic fresh-resend request.
 
 ---
 
@@ -168,7 +168,7 @@ logs/              — gitignored: cron + news daemon logs
 - **Default to action.** Bounded cost + reversible + unambiguous goal → just execute. Don't ask for permission. (`feedback_default_to_action.md` memory)
 - **Stepwise compounding.** Small bounded improvements (one CLI flag, one hook line) compound across every future action. Prefer over multi-hour structural projects unless explicitly authorized.
 - **Skeptic+champion pairing.** For trades > $10 OR new strategy class OR sizable structural change: spawn skeptic + champion in parallel. Routine prospecting (single trade < $10): zero-shot evaluation per 2026-05-02 stress-test data.
-- **Telegram prefix discipline.** Any inbound message with `telegram:` / `reply on telegram:` MUST respond via `scripts/telegram.py msg "..."`. Non-prefixed = local reply.
+- **Telegram prefix discipline.** Reply to new authenticated `telegram:` / `reply on telegram:` operator messages via `scripts/telegram.py msg "..."`. Honor the private one-time reader first: no action/reply for `ALREADY_CLAIMED`; only a generic resend request for `EXPIRED`. Non-prefixed = local reply.
 - **<1y horizon.** Polyclaude doesn't deploy on multi-year theses. Long-term infra surfaces IBKR-side candidates to operator only.
 - **ROI is the product; calibration is a debugging instrument.** Log every material decision via `decisions.py add ...`, then update its outcome/delta/lesson so systematic errors can be removed without Goodharting the project around a score.
 

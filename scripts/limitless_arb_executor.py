@@ -1,13 +1,16 @@
-"""Autonomous Limitless ↔ Polymarket arb executor.
+"""Limitless ↔ Polymarket arb live-quote inspector (execution disabled).
 
 Reads the latest scan output, picks the highest-net-edge IDENTICAL
 candidate, re-fetches both venues' orderbooks for actual fillable prices
 (not midpoints — the scanner overestimates because it uses displayed
 midpoint, real fills happen at the orderbook spread), recomputes net
-edge after slippage + fees, and if the post-slippage edge still clears
-the threshold, fires both legs.
+edge after slippage + fees, and reports the result. Auto-execution is
+intentionally disabled. The Polymarket fee total currently aggregates
+``fee_per_share(market, volume_weighted_average_fill) × tokens``; because the
+V2 curve is nonlinear, exact per-level aggregation remains pending and this
+inspector's PM fee/net quote is approximate.
 
-Two-leg execution:
+Proposed two-leg execution (inactive while auto-execution is disabled):
   1. Place Limitless leg as FOK (fill-or-kill) — atomic, guaranteed
      to either fill at the requested price or cancel cleanly.
   2. If Lim fills, immediately place Polymarket leg.
@@ -56,7 +59,7 @@ TOTAL_OPEN_ARB_CAP_USDC = 20.00
 MIN_NET_EDGE = 0.015
 LIMITLESS_API_BASE = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
-import pm_fees  # authoritative per-market quadratic fee; current effective cap 0.07
+import pm_fees  # full market dicts honor feeSchedule; legacy fields use 0.07 cap
 
 
 # ---- helpers ---------------------------------------------------------------
@@ -358,9 +361,11 @@ async def _live_arb_quote(candidate: dict, usdc_per_side: float) -> dict:
     total_cost = quote["lim"]["usdc"] + quote["pm"]["usdc"]
     payout = target_pm_tokens
     gross_profit = payout - total_cost
-    # Fees. Polymarket's true per-share curve is rate × p × (1−p); use the
-    # freshly fetched market so pm_fees.py preserves zero/lower-rate markets
-    # and applies the current 0.07 category cap.
+    # Fees. The full market dict lets pm_fees.py honor a structured
+    # feeSchedule rate/exponent and preserve zero/lower-rate markets. This
+    # inspector still aggregates the PM fee at the volume-weighted average
+    # fill multiplied by tokens; exact nonlinear per-level aggregation is
+    # pending, so this quote remains approximate. Auto-execution is disabled.
     lim_fee_frac = 0.004 + (0.030 - 0.004) * abs(lim_fill_price - 0.5) * 2
     lim_fee_usdc = quote["lim"]["usdc"] * lim_fee_frac
     pm_fee_usdc = pm_fees.fee_per_share(pm, pm_fill_price) * tokens_bought

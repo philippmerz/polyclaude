@@ -4,9 +4,10 @@ Maker orders are a default tool, not an exception (operator 2026-07-24: "limit o
 are standard... part of your everyday repertoire"). Two uses:
 - **SELLS** — consumed-edge take-profits (doctrine §5) at/above fair, fee-free, no spread.
 - **BIDS** — patient entries/adds at the bid side. Saves the per-market taker fee and the
-  spread. The true fee curve is `rate × p × (1−p)` per share (current category cap 0.07;
-  ~1.67c at p=0.61 at that cap); `scripts/pm_fees.py` is authoritative for the market's
-  actual rate.
+  spread. Charge each actual fill using `rate × [p × (1−p)]^exponent` per share;
+  `scripts/pm_fees.py` reads the authoritative structured `feeSchedule`, with the
+  0.07 cap retained only for legacy compatibility. Do not apply the curve at an
+  average fill price or charge unfilled shares.
   `polyclaude_enter.py --maker` does this. Raw CLOB BUYs are now deliberately
   blocked because they bypass full-fill ticket/cluster and indexing-lag reservations.
 
@@ -74,7 +75,7 @@ JUMPED. A premium-to-fair sell (strictly above fair) is allowed when its premium
 for that jump risk. SpaceX qualified (mechanical, public-fact resolution) -> 34@0.96 rested.
 
 **Fed maker-sell (2026-07-28, operator Q "lowest sell price that beats holding?"):** taker breakeven
-is ~0.2636 at the current 0.07 cap because taker net is `p − rate × p × (1−p)`; MAKER
+is ~0.2636 under this example's legacy 0.07 rate because taker net is `p − rate × p × (1−p)`; MAKER
 breakeven = fair 0.25 exactly (fee-free). The actual per-market rate comes from
 `scripts/pm_fees.py`. Rested 41@0.26
 — above both, ask was 0.218, so it fills only if the market pays above my fair. Free option; resolves
@@ -96,7 +97,7 @@ with the release (today it did, 18:00:05, and the order had already filled — l
 ## PLACED: Gemini-HLE-50+ NO maker BUY (2026-08-10 22:30 UTC, DEC-0065)
 
 60 shares NO @ **0.100**, post-only GTC, $6.00, order `0x257e1b10…31e7`. Fee-free by construction;
-at the current 0.07 cap, the taker path was 0.103 ask + 0.65c/share
+under this example's legacy 0.07 rate, the taker path was 0.103 ask + 0.65c/share
 (`rate × p × (1−p)`) = 0.1095 effective, so resting saved ~0.95c/share versus crossing on a
 leg with 4.7 months to run and no scheduled catalyst — exactly the case the maker-first default
 was written for. The actual per-market rate comes from `scripts/pm_fees.py`. It sat one tick above
@@ -134,8 +135,8 @@ as intended: rested at the bid rather than crossing, so neither the spread nor t
 fee was paid.
 
 Original placement rationale: post-only GTC, $3.54, order `0x5d4f7e42…2b86`. Rested at the bid because the
-book was 0.59/0.60 and the helper caps a maker bid one tick under the ask. At p=0.60 and the current
-0.07 cap, `rate × p × (1−p)` is 1.68c/share, so the maker route avoided both that fee and the 1pp
+book was 0.59/0.60 and the helper caps a maker bid one tick under the ask. At p=0.60 and this example's
+legacy 0.07 rate, `rate × p × (1−p)` is 1.68c/share, so the maker route avoided both that fee and the 1pp
 spread to skip a queue on a position with 4.7 months to run. Use `scripts/pm_fees.py` for the
 market's actual rate.
 

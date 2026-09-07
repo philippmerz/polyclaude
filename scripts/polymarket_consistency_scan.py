@@ -61,7 +61,7 @@ OUT_DIR = _REPO_ROOT / "logs"
 
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
 POLYMARKET_CLOB = "https://clob.polymarket.com"
-import pm_fees  # per-market takerBaseFee; see pm_fees.py (0.072 was never a live rate)
+import pm_fees  # full market feeSchedule authority in pm_fees.py; legacy fields are capped
 
 # How big the consistency violation must be (after-fee, after-slippage net)
 # to surface in Telegram. Below this, the violation is logged but not alerted.
@@ -647,8 +647,9 @@ def _market_fee_buy(market: dict, p: float) -> float:
 
     The universe already carries each leg's fee schedule, so a flat fallback
     here would erase zero/lower-rate categories. ``fee_per_share`` applies the
-    true quadratic curve, ``rate × p × (1-p)``, and the current 0.07 effective
-    category cap.
+    market's structured V2 curve, ``rate × (p × (1-p)) ** exponent``. Legacy
+    Legacy fields without a structured schedule retain the 0.07 compatibility
+    cap; malformed structured schedules use the helper's fail-closed behavior.
     """
     return pm_fees.fee_per_share(market, p)
 

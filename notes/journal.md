@@ -13311,3 +13311,47 @@ mutation cases were caught**, including a new mutant restoring average-price/req
 fees. Independent diff review found no blocker. Updated current test counts and the fee
 lesson (including the distinction between structured rates and the old universal 7% claim).
 No trade, order, probability, scheduler change or extra Telegram; the durable ROI goal stays active.
+
+## 2026-09-07 23:38 UTC — continuation: monitoring verified; status output and active guidance repaired
+
+Previous turn classified as progress: the shared exit-fee fix was tested, committed and pushed.
+Revalidated current state before continuing. All four daemons have one live absolute-path
+process and their script mtimes precede process starts. News state had advanced at 23:22;
+heartbeat state at 23:07 is within its one-hour poll interval. The alarming heartbeat-log tail
+was dated **Aug-29**, not a current outage. The same opportunity PID subsequently completed
+the **23:25–23:26** scan: no executable HLE/MetaMask pair, and Treasury's net floor remained
+about **+0.03pp**, below its 2pp alert gate. No new news-alert record followed the already-reviewed
+21:46 item. A fresh UMA check covered **37 tracked market records with zero alerts**; this is
+not a claim of 37 active holdings. Cron still contains the 02/14 full checks, 06/10/18/22
+periodic checks, Sunday review and year-guarded Sep-9 18:30 Apple reminder. No scheduler change.
+
+Found a genuine display-layer regression: `polyclaude_status --telegram` still searched for
+`REALIZABLE (best bids)`, while the producer now prints `REALIZABLE (depth-walked, NET of taker
+fees)`. It therefore omitted the net-depth figure even when `positions.py` supplied one. A
+bounded worker added a pure formatter and checked sender results; main reviewed and hardened
+the parsing. Current net-depth output and unavailable diagnostics are retained, tight-book
+output does not invent an exit quote, and failed/timeout position reads send diagnostic-only
+content with a nonzero command exit. Sender failure also returns nonzero instead of claiming
+success. Error diagnostics omit raw subprocess stderr. Tests cover the actual mocked
+`positions.main()` producer, not only a hand-maintained fixture, and ignore embedded fake
+labels in market text. **All network, wallet and Telegram operations in these tests are mocked.**
+
+The instruction sweep found two stale contracts: universal quadratic/0.07-cap fee prose and
+the old every-tick Telegram heartbeat. Active operator guidance now uses each fill's structured
+rate/exponent with the cap restricted to legacy compatibility, and preserves the Jul-31
+material-only directive plus one-time-reader duplicate/expiry exceptions. Dated numerical
+examples remain explicitly historical. Scalar-rate sports/Limitless helpers are honestly
+described as legacy exponent-1 estimates; comments do not claim unsupported schedule handling.
+The original documentation test itself required the obsolete universal wording and even pinned
+the Limitless inspector's average-price fee expression. Replaced those requirements with the
+actual canonical-helper/structured-versus-legacy contracts; the old linear-fee prohibition stays.
+
+One unfinished prerequisite is now explicit in backlog: the **execution-disabled Limitless
+inspector** still averages PM fill fees and approximates the other venue's fee calculation.
+Its displayed net edge is not reliable execution evidence. Validate both venues' fee/depth
+semantics before relying on that output; do not enable ordering. This turn changed status
+formatting, failure reporting and explanatory text, **not fee arithmetic or trading guards**.
+
+Verification: **482 pytest tests passed**, **140 money-math checks passed**, **all 20 mutation
+cases caught**, shell syntax and diff checks clean. No trade, order, prior, actual Telegram,
+daemon restart or schedule change. The durable ROI goal stays active.

@@ -35,7 +35,7 @@ import subprocess
 import httpx
 
 from agent_runtime import run_agent
-import pm_fees  # per-market takerBaseFee; see pm_fees.py
+import pm_fees  # scalar APY estimate; full market dicts honor feeSchedule
 
 
 KALSHI_TOP_N_HARD_CAP = 5
@@ -282,8 +282,11 @@ def is_in_play(m: dict, now: datetime.datetime | None = None) -> bool:
 def annualized_apy(p: float, days: float, fee_rate: float | None = None) -> float:
     """Fee-aware APY at price ``p``. Capped at 10000x for display.
 
-    Polymarket's true fee per share is ``rate × p × (1−p)``; ``pm_fees.py``
-    applies the current 0.07 category cap to the market's raw rate.
+    ``fee_rate`` is scalar, so this helper deliberately uses the legacy
+    exponent-1 estimate ``effective_rate × p × (1−p)`` and ``pm_fees.py``'s
+    0.07 compatibility cap. It cannot propagate a structured feeSchedule
+    exponent; authoritative full-market calculations should use
+    ``pm_fees.fee_per_share(market, p)``.
     """
     if p >= 0.999 or days < 0.5:
         return 0.0

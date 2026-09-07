@@ -2694,10 +2694,12 @@ def main() -> int:
         print(f"  [mark] live ask unavailable; falling back to gamma mid {gamma_mark:.4f}")
 
     # Taker-fee awareness (2026-08-28): Gamma's structured feeSchedule is the
-    # source of truth. The legacy takerBaseFee=1000 field remains populated even
-    # when the actual category rate is 0.03-0.07, so using it here can reject
-    # profitable entries. All economics run on ask + the actual curve fee; only
-    # the CLOB limit price stays at the ask (the exchange charges fee on top).
+    # source of truth, including its rate and exponent. The legacy
+    # takerBaseFee=1000 field remains populated even when the structured
+    # schedule carries a category-specific rate/exponent, so using it here can
+    # reject profitable entries. All economics run on ask + the actual curve
+    # fee; only the CLOB limit price stays at the ask (the exchange charges fee
+    # on top).
     # Delegate to pm_fees.py; do not reconstruct the curve in this entry path.
     fee_curve = pm_fees.fee_schedule(m)
     maker_px = None
@@ -3002,8 +3004,8 @@ def main() -> int:
     if args.maker:
         # Maker-first entry (operator 2026-07-24: limit orders are everyday
         # repertoire). Rest at best_bid+tick, capped 1 tick under the ask, so
-        # the order is passive: zero taker fee (1000bps markets charge takers
-        # rate x p x (1-p)/share, true curve) and the bid-side price. A resting bid fills
+        # the order is passive: zero taker fee (fee-bearing markets use the V2
+        # curve rate x (p x (1-p)) ** exponent/share) and the bid-side price. A resting bid fills
         # under FUTURE information — allowed only with per-tick re-verification
         # and news_watcher coverage of the market's info channel (rules in
         # notes/resting_orders.md). The price was computed BEFORE the robust

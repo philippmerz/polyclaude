@@ -38,12 +38,43 @@ def _normalized(path: Path) -> str:
     )
 
 
-def test_active_guidance_uses_quadratic_per_market_fee_curve():
+def test_active_fee_guidance_names_canonical_helper():
     for path in FEE_DOCTRINE_PATHS:
         text = _normalized(path)
-        assert "rate x p x (1-p)" in text
         assert "pm_fees.py" in text
-        assert "0.07" in text
+
+
+def test_operator_guidance_uses_structured_curve_and_legacy_only_cap():
+    for path in (
+        ROOT / "notes" / "resting_orders.md",
+        ROOT / "scripts" / "daily_checkin.sh",
+    ):
+        text = _normalized(path)
+        assert "rate x [p x (1-p)]^exponent" in text
+        assert "feeschedule" in text
+        assert "0.07 cap retained only for legacy compatibility" in text
+
+
+def test_scalar_rate_helpers_do_not_claim_full_structured_fee_support():
+    for filename in ("limitless_arb_scan.py", "sports_pm_scan.py"):
+        text = _normalized(ROOT / "scripts" / filename)
+        assert "legacy" in text
+        assert "exponent" in text
+
+
+def test_tick_summaries_remain_material_only():
+    lessons = _normalized(ROOT / "strategy" / "01_lessons.md")
+    driver = _normalized(ROOT / "scripts" / "daily_checkin.sh")
+    assert "material-only" in lessons
+    assert "material-only" in driver
+    assert re.search(r"heartbeat\s+every tick", lessons) is None
+
+
+def test_telegram_reader_exceptions_are_in_operator_onboarding():
+    readme = _normalized(ROOT / "README.md")
+    assert "already_claimed" in readme
+    assert "expired" in readme
+    assert "private one-time" in readme
 
 
 def test_no_active_script_reintroduces_linear_tail_fee_curve():
@@ -65,7 +96,9 @@ def test_live_fee_callers_delegate_to_canonical_helper():
 
     assert "return pm_fees.fee_per_share_at(raw_rate, p)" in scanner
     assert 'result["fee_rate"]' in scanner
-    assert "pm_fees.fee_per_share(pm, pm_fill_price) * tokens_bought" in executor
+    # Delegation is the contract, not the old average-price aggregation bug.
+    # The inspector's level-fee/depth validation remains explicitly gated.
+    assert "pm_fees.fee_per_share(pm," in executor
     assert "fee_per_share = pm_fees.fee_per_share_at(raw_rate, p)" in sports
     assert "cost = p + fee_per_share" in sports
     assert "market_fee_rate = pm_fees.fee_rate(m)" in sports

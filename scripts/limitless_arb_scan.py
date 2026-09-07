@@ -2,10 +2,12 @@
 
 Limitless tags its markets that mirror a Polymarket counterpart with
 `metadata.isPolyArbitrage: true`. This script paginates the active-markets
-endpoint, filters to those flagged, computes a fee-aware breakeven against
-Polymarket's quadratic per-share fee (`fee/share = rate * p * (1-p)`, raw rate
-read per-market and capped at the current 0.07 by `pm_fees.py`; some markets
-charge 0),
+endpoint, filters to those flagged, computes a fee-aware breakeven against a
+scalar Polymarket fee estimate. The rate-only helper uses the legacy
+exponent-1 curve (`fee/share = effective_rate * p * (1-p)`) and the 0.07
+compatibility cap; it does not propagate a market's structured feeSchedule
+exponent. Full market-dict helpers in `pm_fees.py` honor that schedule (and
+some markets charge 0),
 and dumps a sorted table to:
 
   - stdout
@@ -55,7 +57,7 @@ OUT_DIR = _REPO_ROOT / "logs"  # gitignored; routine scans don't need to be comm
 
 LIMITLESS_API = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
-import pm_fees  # authoritative per-market quadratic fee; current effective cap 0.07
+import pm_fees  # scalar legacy estimate here; full market dicts honor feeSchedule
 
 POLYMARKET_PAGE_LIMIT = 100
 POLYMARKET_PAGE_RETRIES = 3
@@ -103,9 +105,12 @@ def fetch_arb_candidates() -> list[dict]:
 def polymarket_buy_fee(p: float, fee_rate: float | None = None) -> float:
     """Polymarket fee per share when buying a token at price ``p``.
 
-    True curve: ``rate × p × (1−p)``. ``fee_rate`` is the market's raw
-    gamma ``takerBaseFee`` rate; ``pm_fees.py`` applies the current 0.07 cap.
-    Before a Polymarket match is known, use its conservative raw fallback.
+    This scalar-rate helper is a legacy exponent-1 estimate:
+    ``effective_rate × p × (1−p)``. ``pm_fees.py`` applies the 0.07
+    compatibility cap to the scalar rate. It cannot carry a market's
+    structured feeSchedule exponent; callers with the full market dict should
+    use ``pm_fees.fee_per_share(market, p)`` instead. Before a Polymarket
+    match is known, use its conservative raw fallback.
     """
     raw_rate = pm_fees.FEE_RATE_FALLBACK if fee_rate is None else fee_rate
     return pm_fees.fee_per_share_at(raw_rate, p)
@@ -407,8 +412,10 @@ def fetch_polymarket_universe(
 def index_polymarket(markets: list[dict]) -> list[dict]:
     """Build index entries with all fields needed downstream.
 
-    Each entry includes match tokens, price/criteria text, and the market's
-    raw fee rate; the fee helper applies the effective category cap.
+    Each entry includes match tokens, price/criteria text, and a scalar fee
+    rate for the legacy exponent-1/0.07-capped estimate used by this scanner.
+    The full market dict remains the authority when a structured feeSchedule
+    exponent must be honored.
     """
     idx: list[dict] = []
     for m in markets:
@@ -646,12 +653,15 @@ def main() -> int:
         f.write(f"Polymarket-matched (top {len(top_for_lookup)} by breakeven): {len(matched)}\n\n")
         f.write("Three-layer screening: (1) distinctive-word overlap ≥ 3 with Jaccard ≥ 0.35, ")
         f.write("(2) numeric-token parity, (3) agent-verified resolution-language equivalence ")
-        f.write("(scoped fast profile). Only `IDENTICAL` verdicts qualify for autonomous execution; ")
-        f.write("`SIMILAR`/`UNCERTAIN`/`DIFFERENT` are visibility-only.\n\n")
-        f.write("Polymarket fee/share = rate × p × (1−p), using each market's raw rate ")
-        f.write("through pm_fees.py (current effective category cap 0.07). ")
+        f.write("(scoped fast profile). Only `IDENTICAL` verdicts qualify for manual review; ")
+        f.write("`SIMILAR`/`UNCERTAIN`/`DIFFERENT` are visibility-only. Downstream ")
+        f.write("auto-execution remains disabled.\n\n")
+        f.write("Polymarket fee/share = effective scalar rate × p × (1−p), using ")
+        f.write("pm_fees.py's legacy exponent-1 estimate and 0.07 compatibility cap; ")
+        f.write("full market-dict feeSchedule exponents are not propagated by this scanner. ")
         f.write(f"Limitless buy fee = 0.4-3.0% (rises away from parity). ")
-        f.write(f"Net edge = |spread| − (lim_fee + pm_fee). Positive = arb-profitable.\n\n")
+        f.write(f"Net edge = |spread| − (lim_fee + pm_fee). Positive = screening candidate only; ")
+        f.write("it is not executable profit.\n\n")
         f.write("## Matched (sorted by net edge)\n\n")
         f.write(f"| Lim YES | PM YES | Spread | Breakeven | Net Edge | Conf | Verdict | Lim title / PM question |\n")
         f.write(f"|---:|---:|---:|---:|---:|---:|:---:|---|\n")

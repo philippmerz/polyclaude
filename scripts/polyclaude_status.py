@@ -50,6 +50,88 @@ def run_script(args: list[str], timeout: int = 60) -> str:
         return f"[EXCEPTION] {e}"
 
 
+_OPEN_TOTAL_RE = re.compile(
+    r"^OPEN TOTAL\s+cost\s+\$([\d.-]+)\s+mtm\s+\$([\d.-]+)",
+    re.MULTILINE,
+)
+_REALIZABLE_RE = re.compile(
+    r"^REALIZABLE \(depth-walked, NET of taker fees\):\s*\$([\d.-]+)",
+    re.MULTILINE,
+)
+
+
+def format_telegram_summary(
+    pos_out: str,
+    ts: str,
+    *,
+    positions_returncode: int = 0,
+) -> str:
+    """Format the compact operator summary from a positions.py result.
+
+    The depth-walked line is intentionally optional: positions.py suppresses
+    it when the book is tight, so absence is not an unavailable-check error.
+    A failed positions subprocess is handled first and never gets a financial
+    cost/MTM summary, even if it happened to emit partial stdout.
+    """
+    if positions_returncode != 0:
+        return (
+            f"polyclaude status {ts}\n"
+            f"PM position check failed: exit {positions_returncode}\n"
+            "realizable unavailable (positions check failed)\n"
+            "(full report via scripts/polyclaude_status.py)"
+        )
+    if pos_out.lstrip().startswith(("[ERR", "[TIMEOUT", "[EXCEPTION")):
+        return (
+            f"polyclaude status {ts}\n"
+            "PM position check failed: positions script error\n"
+            "realizable unavailable (positions check failed)\n"
+            "(full report via scripts/polyclaude_status.py)"
+        )
+
+    total_match = _OPEN_TOTAL_RE.search(pos_out)
+    if total_match:
+        lines = [
+            f"polyclaude status {ts}",
+            f"PM cost ${total_match.group(1)} mtm ${total_match.group(2)}",
+        ]
+    elif pos_out.strip() == "(no open positions)":
+        lines = [f"polyclaude status {ts}", "PM positions: no open positions"]
+    else:
+        lines = [
+            f"polyclaude status {ts}",
+            "PM cost/mtm unavailable (positions output missing OPEN TOTAL)",
+        ]
+    real_match = _REALIZABLE_RE.search(pos_out)
+    if real_match:
+        lines.append(
+            f"realizable ${real_match.group(1)} "
+            "(depth-walked, NET of taker fees)"
+        )
+    else:
+        unavailable = re.search(
+            r"^\(realizable check unavailable:[^\n]+\)$", pos_out, re.MULTILINE
+        )
+        if unavailable:
+            lines.append(unavailable.group(0))
+    lines.append("(full report via scripts/polyclaude_status.py)")
+    return "\n".join(lines)
+
+
+def send_telegram_message(message: str) -> tuple[bool, str]:
+    """Send one Telegram message and return success plus a failure detail."""
+    try:
+        result = subprocess.run(
+            [".venv/bin/python", "scripts/telegram.py", "msg", message],
+            cwd=REPO_ROOT, timeout=15,
+        )
+    except Exception as e:
+        return False, str(e)
+    returncode = result.returncode
+    if returncode:
+        return False, f"exit {returncode}"
+    return True, ""
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("--quick", action="store_true", help="Skip slow checks (UMA, full Kelly).")
@@ -152,34 +234,37 @@ def main() -> int:
 
     # Optionally send Telegram summary
     if args.telegram:
+        positions_ok = True
         try:
             # Compact line for tick summary
-            r = subprocess.run([".venv/bin/python", "scripts/positions.py"],
-                               cwd=REPO_ROOT, capture_output=True, text=True, timeout=15)
-            pos_out = r.stdout
-            mtm_match = re.search(r"mtm\s+\$([\d.-]+)", pos_out)
-            cost_match = re.search(r"cost\s+\$([\d.-]+)", pos_out)
-            mtm = mtm_match.group(1) if mtm_match else "?"
-            cost = cost_match.group(1) if cost_match else "?"
-            # Carry the REALIZABLE figure into the operator-facing line when
-            # positions.py reports one (2026-08-13). This was the last display
-            # layer still quoting the midpoint alone: the fix went into
-            # positions.py, then bankroll.py, and this telegram — the number the
-            # operator actually READS — was still grepping `mtm` only. Same
-            # scope error twice in one morning, which is why the rule is now
-            # "enumerate every display layer", not "fix the display layer".
-            real_match = re.search(r"REALIZABLE \(best bids\): \$([\d.-]+)", pos_out)
-            real_line = f"realizable ${real_match.group(1)} (best bids)\n" if real_match else ""
-
-            tg_msg = (f"polyclaude status {ts}\n"
-                      f"PM cost ${cost} mtm ${mtm}\n"
-                      f"{real_line}"
-                      f"(full report via scripts/polyclaude_status.py)")
-            subprocess.run([".venv/bin/python", "scripts/telegram.py", "msg", tg_msg],
-                           cwd=REPO_ROOT, timeout=15)
-            print("(Telegram summary sent)")
+            try:
+                r = subprocess.run([".venv/bin/python", "scripts/positions.py"],
+                                   cwd=REPO_ROOT, capture_output=True, text=True, timeout=15)
+                positions_ok = r.returncode == 0 and not r.stdout.lstrip().startswith(
+                    ("[ERR", "[TIMEOUT", "[EXCEPTION")
+                )
+                tg_msg = format_telegram_summary(
+                    r.stdout,
+                    ts,
+                    positions_returncode=r.returncode,
+                )
+            except subprocess.TimeoutExpired:
+                positions_ok = False
+                tg_msg = format_telegram_summary("", ts, positions_returncode=124)
+            except Exception:
+                positions_ok = False
+                tg_msg = format_telegram_summary("", ts, positions_returncode=1)
+            sent, detail = send_telegram_message(tg_msg)
+            if sent:
+                print("(Telegram summary sent)")
+            else:
+                print(f"(Telegram send failed: {detail})")
+                return 1
+            if not positions_ok:
+                return 1
         except Exception as e:
             print(f"(Telegram send failed: {e})")
+            return 1
 
     return 0
 

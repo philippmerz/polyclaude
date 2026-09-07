@@ -43,6 +43,12 @@ the gap); *verify against a known truth* (absent output and failed output look i
   both directions and partial fills, with a mutant restoring the exact old bug.
   Preserve requested-size display averages and full-depth group gates: fixing
   fees is not permission to value unsold depth or claim a realized gain.
+- **A correct producer can still feed a broken display.** Sep-7 found the status
+  Telegram matching the obsolete `REALIZABLE (best bids)` label and silently
+  dropping the current net-depth value. Test the actual `positions.main()` output
+  against its consumer, not just a hand-maintained string fixture. Likewise,
+  documentation tests must not freeze an obsolete fee curve or force the known
+  average-price bug merely to prove delegation to a canonical helper.
 - **When hold-vs-sell is close, don't choose.** Rest a post-only sell AT fair (fee-free
   breakeven IS fair) and let the market decide. Validated live: Fed 8.22sh filled at
   0.26 vs 0.25 fair, 2026-07-29 — someone paid above fair, variance retired for free.
@@ -1118,8 +1124,11 @@ the one that arrives with a plausible justification attached. Audit those hardes
   Scored skips, falsifiers, and honest re-grades (Prime, Fed) are deliverables, not
   embarrassments — the operator consistently rewards the honest number over the
   flattering one.
-- **Telegram:** "telegram:"-prefixed → reply via scripts/telegram.py, always. Heartbeat
-  EVERY tick. Idle replies start with "Idle".
+- **Telegram:** follow the authenticated operator-message/one-time-reader contract and
+  reply through the documented sender; duplicate claimed messages get no second action
+  or reply. Tick summaries are **material-only** (operator directive 2026-07-31): flat
+  ticks are journal-only, and `heartbeat_watch` handles pipeline liveness. Idle replies
+  to an operator request start with "Idle"; do not manufacture heartbeat messages.
 - **Weekly P&L vs the $170 reference, grade-inflation stop on** (bankroll.py is the
   only total). Brier ledger + shortdated ledger + clean ops = the January-decision
   evidence stream. Dec-31 is the accountability date.
