@@ -13208,3 +13208,32 @@ source-specific tests include a live-like ten-row fixture, score-only and unfami
 invalid/ambiguous HTML, generic-mode compatibility and imported fetch success. Both Jun→Dec and
 Jun→Sep historical controls pass against live archives. JSON validation also proves that only the
 four HLE source-fact lists changed in the prior file; all probability/sizing fields are untouched.
+
+## 2026-09-07 23:02 UTC — continuation: DRIP eligibility and wallet-scale economics
+
+Revisited the June-26 DRIP watch with a bounded primary-source worker and independent main checks.
+The [July-8 program update](https://forum.arbitrum.foundation/t/entropy-advisors-monthly-update-june-2026/31045)
+confirms the June-25 vote extended the mandate through July-1 2027 while Season 2 remained delayed;
+this is not an allocation or launch. No newer explicit Season 2 activation was verified in this
+pass. The [current Merkl DRIP opportunity query](https://api.merkl.xyz/v4/opportunities?chainId=42161&tags=drip&campaigns=true)
+returned HTTP 200 and an empty list. The [first 100 ARB campaign records](https://api.merkl.xyz/v4/campaigns?chainId=42161&tokenSymbol=ARB&items=100&page=0)
+contain 99 with `creator.creatorId=drip`, latest start Feb-4 and latest end Feb-18. These are
+**bounded negative observations, not exhaustive proof of zero active campaigns**. The August OAT
+update's incentive mechanisms concern Entropy's service arrangement, not a DRIP Season 2 epoch;
+do not repurpose it as campaign-timing evidence.
+
+The decisive correction is eligibility: [Arbitrum's Season 1 recap](https://blog.arbitrum.io/drip-season-1-recap/)
+says Aave received only ETH-pool allocations. Being supplied to Aave does not itself qualify our
+native-USDC reserve for rewards. [The old claim windows](https://forum.arbitrum.foundation/t/drip-february-2026-update/30628)
+also expired before this check. Replaced the backlog's unconditional “deploy the moment S2 opens”
+with a funded-campaign, exact-eligibility, net-cash-return gate; borrowing/looping is a separate
+liquidation-risk strategy, not an equivalent cash-reserve move.
+
+Public on-chain reads at Arbitrum block **502828158** confirmed **7.871301 aUSDC**, **0.004327 plain
+USDC**, and a reserve annual liquidity rate of **2.749646%**, with the live reserve's aToken identity
+matching configuration. Scale matters: an **assumed** $0.05 all-in incremental cost needs another
+**7.73pp annualized return over 30 days**, or **2.58pp over 90 days**, merely to cover friction on
+$7.87. At an assumed $0.25, those figures are 38.64pp/12.88pp. These are sensitivities, not measured
+fees or offered yields; any actual candidate must also pay the foregone reserve yield and price
+reward-token/conversion and protocol risks. No deployment, approval, borrowing, swap, bridge,
+claim, prior change or Telegram occurred. Backlog and journal only; the durable ROI goal stays active.
