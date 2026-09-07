@@ -12976,3 +12976,40 @@ empty; all four daemons are singular/running; weekly P&L and world state remain 
 is still the next hard review. Telegram message **911** reported the material mark/prior update.
 No trade, fill, order change, redemption, swap, bridge or daemon restart occurred. The durable ROI
 continuation remains active until the operator manually cancels it.
+
+## 2026-09-07 14:00–14:08 UTC — full check: books falsify Barcelona fade hint; no trade
+
+The full 11-step check found no portfolio action. Authoritative bankroll is **$193.55**, up $0.78
+from 10:00 on marks; realized P&L remains **+$14.44**. The 13 indexed Polymarket rows still cost
+$157.20 and mark at **$160.04**, while full-depth executable value is **$152.85**. Midpoint therefore
+overstates liquidation by $7.19. The same six SELLs / zero BUYs remain live, including the unchanged
+16.994923/33 partial fill; deployable pUSD is 2.115500 and Polygon aUSDC.e is 16.110975. No fill,
+cancellation, resolution or redemption occurred.
+
+Operational and catalyst checks are clean. UMA tracked 37 conditions with zero integrity alert;
+position state and crux coverage passed; marginal APY found seven ordinary holds, zero close
+candidates and two protected groups; the watchlist had no trigger; all exits remain HOLD; and all
+four daemons are exact-one, current and running. Duma's full exit is about $13.30 versus $13.60 fair,
+and MetaMask's is about $44.32 versus $46.80 fair. No news or opportunity alert arrived after the
+10:08 review, and no fresh fact changed HLE/Astra, Apple, Duma, MetaMask, Trump, Greenland or
+Hormuz. The OpenAI HLE favorable move had already been source-checked at 10:03 and has stabilized;
+it does not justify an exit, add or flip. Apple Sep-9 remains the next hard catalyst. Weekly P&L
+(Sep-4) and world-state work (Sep-6) remain fresh; the four unproposed Hormuz decisions remain
+correctly ungradeable.
+
+Discovery again produced no deployable candidate: normal 1,000; thin 33,699 fetched / 1,567 gross
+hurdle rows; sports 72 with no consensus discrepancy clearing 3pp and $50k; macro six without a
+reliable consensus; monotonicity 995 events / zero live violation; and the explicitly bounded
+consistency pass found no lead. Eight favorite-fade population hints survived mechanically, so the
+only remotely plausible one was instance-vetted. Barcelona to beat Feyenoord on Sep-9 costs about
+0.9045 all-in on YES. Current bookmaker screens imply only roughly 85–88% after normalizing the
+three-way books, falsifying the scanner's 97.3% population estimate. The opposite NO costs about
+0.1149 all-in; even granting p(NO)=0.14 gives only $0.60 central EV at the helper's minimum sizing,
+then **−$1.79** after the mandatory 10pp instance haircut. The unified entry helper rejected both
+sides, so no order was submitted. The other favorite-fade hints lacked an instance-quality edge.
+
+Constrained Kelly still prints nominal deficits in the correlated AI cluster, but every add remains
+blocked by correlation, concentration or uncertainty policy. No trade, order change, redemption,
+prior change, backlog change, swap, bridge, daemon restart or Telegram message occurred. This tick
+changed only live-state records; financial/state audits passed and no code test suite was needed.
+The durable ROI continuation remains active until the operator manually cancels it.
