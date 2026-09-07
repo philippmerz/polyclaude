@@ -13237,3 +13237,44 @@ $7.87. At an assumed $0.25, those figures are 38.64pp/12.88pp. These are sensiti
 fees or offered yields; any actual candidate must also pay the foregone reserve yield and price
 reward-token/conversion and protocol risks. No deployment, approval, borrowing, swap, bridge,
 claim, prior change or Telegram occurred. Backlog and journal only; the durable ROI goal stays active.
+
+## 2026-09-07 23:10 UTC — continuation: Treasury bonus-payoff hypothesis tested, no entry
+
+Closed the remaining analytical question from the 22:33 Treasury review: whether the two-leg
+structure's **extra payout when the observation-window minimum is in [3.5%, 3.7%)** justifies it
+despite weak floor carry. A fresh read of exact markets **677139/677144** retained identical literal
+rules, active/unproposed status and authoritative 5% quadratic taker-fee curves. Identity/freshness/
+minimum-size-checked books had five-share asks **0.936 for 3.5%-NO** and **0.058 for 3.7%-YES**.
+Fee-inclusive pair cost is now **$4.998635**, leaving only **$0.001365 conditional floor profit**;
+the prior scanner observation is not an executable quote. Complete immediate reverse nets
+**$4.82537125**, a $0.17326375 loss. No order was submitted.
+
+The actual Polygon USDC.e reserve rate was **3.125581% annualized** at block 93411575. Over a
+115-day comparison horizon, band probability must exceed **0.9572%** just to beat that reserve
+with no extra friction; the thresholds are **1.9671% / 2.9769% / 6.0064%** for assumed additional
+costs of $0.05/$0.10/$0.25, including carry on that additional capital. These remain cost
+sensitivities, not measured transaction charges or stable future reserve rates.
+
+A bounded worker downloaded official Treasury annual XML for **2020–2026**, yielding **1,671**
+unique observations through Sep-4; main independently reproduced the 2023 hit episode and latest
+volatility from the [2023](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2023),
+[2024](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2024)
+and [2026](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026)
+feeds. Method: integer-basis-point yields, next **80 published observations excluding the start**,
+complete windows only, minimum change **-128 <= delta < -108bp** from the current 4.78% reference.
+This is a translated historical path analogue, not a forecast of today's absolute yield level.
+Results: **18/1,591 = 1.1314%** for all starts; **6/953 = 0.6296%** for starts at yields of 3–6%.
+Using 75/85 observations gives approximately 1.128%/1.135% overall and 0.626%/0.633% in the subset.
+The hits cluster into only **early-2020 and late-2023 macroepisodes**. Across all 80 offsets of
+non-overlapping 80-observation samples, 62 partitions have no hit and 18 have one; those offsets
+are themselves dependent. Overlapping counts do not establish a pessimistic probability floor.
+
+Current 20/60/120-observation daily-difference sample standard deviations are **0.03859/0.04107/
+0.04468 percentage points**. A zero-drift Brownian barrier-difference calculation gives roughly
+**0.155%/0.279%/0.552%** for the band over 80 observations. This omits regime changes and jumps and
+is a diagnostic only; do not promote it to a confidence bound. Neither the historical analogues
+nor this local-volatility check supports the required conservative >~3% band probability with
+$0.10 assumed friction. **No entry; retain reserve.** Revisit on the existing >=2pp net-floor alert
+or new rate/catalyst evidence that changes this underwriting, not merely another quiet iteration
+of the same sub-floor quotes. No probability, portfolio, code, scheduler or Telegram change.
+The durable ROI goal remains active.
