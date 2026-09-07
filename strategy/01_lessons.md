@@ -25,13 +25,24 @@ the gap); *verify against a known truth* (absent output and failed output look i
 
 ## Execution mechanics (the fee decides almost everything)
 
-- **Maker-first, always consider three exits.** Taker fee on fee-bearing markets =
-  0.07 × p × (1−p) per share — QUADRATIC, wallet-verified 2026-08-22 (the long-quoted
-  "10% × min(p,1−p)" was the FIELD rate on the WRONG curve: ~40% high at the tails, ~3×
-  high at 0.50 — see pm_fees.py header for the two reconciled fills). Maker pays $0;
-  RESOLUTION pays $0. So every exit is hold vs taker-net vs maker-at-fair, and
+- **Maker-first, always consider three exits.** Use the market's authoritative
+  `feeSchedule`: rate × [p × (1−p)]^exponent per share, via `pm_fees.py`. The 0.07
+  quadratic curve wallet-verified on 2026-08-22 is the historical legacy cap, not
+  a universal current category rate. The long-quoted "10% × min(p,1−p)" used the
+  wrong curve (see the two reconciled fills in that module). Maker pays $0 under
+  the current taker-only schedules; resolution has no trading fee. Every exit is
+  hold vs taker-net vs maker-at-fair, and
   `exit_analysis.py` computes all three on the LIVE book with the true curve. (Prime exit gave up ~$2 crossing a thin book, 2026-07-24; Fed
   taker-vs-maker gap 2.8pp, 2026-07-28.)
+- **Charge curved fees at each actual fill, never at an average price.** On Sep-7,
+  `book_walk.realizable` still charged `fee(avg_fill) × requested_size`; the tests
+  repeated that shortcut, while `exit_analysis` and grouped exits were already
+  correct. Nonlinear averaging is not equivalent, and the requested-size average
+  also includes unfilled shares that owe no fee. Exponent-2 curves can err in
+  either direction. The shared walk now sums actual level fees; regressions pin
+  both directions and partial fills, with a mutant restoring the exact old bug.
+  Preserve requested-size display averages and full-depth group gates: fixing
+  fees is not permission to value unsold depth or claim a realized gain.
 - **When hold-vs-sell is close, don't choose.** Rest a post-only sell AT fair (fee-free
   breakeven IS fair) and let the market decide. Validated live: Fed 8.22sh filled at
   0.26 vs 0.25 fair, 2026-07-29 — someone paid above fair, variance retired for free.

@@ -28,8 +28,10 @@ MUTS = [
                     'schedule = None'),                                                       # ignore authoritative Gamma schedule
     ("book_walk.py",'levels = sorted(bids or [], key=lambda x: -float(x["price"]))',
                     'levels = bids or []'),                                                   # trust input order
-    ("book_walk.py",'fee = fee_per_share(market, avg_fill) * float(size) if gross > 0 else 0.0',
-                    'fee = 0.0'),                                                             # the fee-free walk bug
+    ("book_walk.py",'fee += take * fee_per_share(market, price)',
+                    'fee += 0.0'),                                                            # the fee-free walk bug
+    ("book_walk.py",'unfilled = max(0.0, left)',
+                    'unfilled = max(0.0, left)\n    fee = fee_per_share(market, avg_fill) * float(size) if gross > 0 else 0.0'), # curved fees at average/requested size
     ("discover_markets.py",'cost = p_buy + pm_fees.fee_per_share(market, p_buy)',
                     'cost = p_buy * (1 + pm_fees.fee_per_share(market, p_buy))'),             # multiplicative fee
     ("bankroll.py", '"realized": (total - gas_usd - ref) - unreal_mid',

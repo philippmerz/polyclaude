@@ -264,12 +264,43 @@ check("walk zero size", book_walk.walk_bids(BIDS, 0)[0], 0.0)
 
 r = book_walk.realizable(BIDS, 20, {"takerBaseFee": 1000})
 check("realizable gross", r["gross"], 11.0)
-check("realizable fee quadratic", r["fee"], 0.07 * 0.55 * 0.45 * 20)
-check("realizable net", r["net"], 11.0 - 0.07 * 0.55 * 0.45 * 20)
+check("realizable fee quadratic per level", r["fee"], 0.343)
+check("realizable net", r["net"], 11.0 - 0.343)
 check("realizable zero-fee market", book_walk.realizable(BIDS, 20, {"takerBaseFee": None})["net"], 11.0)
 check("realizable unknown market uses capped fallback",
-      book_walk.realizable(BIDS, 20, None)["fee"], pm_fees.fee_per_share_at(pm_fees.FEE_RATE_FALLBACK, 0.55) * 20)
+      book_walk.realizable(BIDS, 20, None)["fee"], 0.343)
 check("realizable empty book charges no fee", book_walk.realizable([], 20, {"takerBaseFee": 1000})["fee"], 0.0)
+
+# Fees apply to each actually filled price, not the requested-size average.
+# The old average-price shortcut could either over- or understate curved fees.
+r = book_walk.realizable(list(reversed(BIDS)), 15, {"takerBaseFee": 1000})
+check("realizable sorts before partial last level", r["gross"], 8.5)
+check("realizable partial last level fee", r["fee"], 0.2555)
+r = book_walk.realizable(BIDS, 30, {"takerBaseFee": 1000})
+check("realizable partial gross", r["gross"], 11.0)
+check("realizable partial charges only filled shares", r["fee"], 0.343)
+check("realizable partial net", r["net"], 10.657)
+check("realizable partial requested-size average", r["avg_fill"], 11.0 / 30)
+check("realizable partial unfilled", r["unfilled"], 10.0)
+check("realizable public keys unchanged", set(r), {"gross", "fee", "net", "avg_fill", "unfilled"})
+
+V2_CURVE = {"feeSchedule": {"rate": 0.25, "exponent": 2, "takerOnly": True}}
+r = book_walk.realizable([{"price": "0.1", "size": "1"}, {"price": "0.2", "size": "1"}], 2, V2_CURVE)
+check("realizable exponent two convex-region fee", r["fee"], 0.008425)
+check("realizable exponent two convex-region net", r["net"], 0.291575)
+r = book_walk.realizable([{"price": "0.2", "size": "1"}, {"price": "0.8", "size": "1"}], 2, V2_CURVE)
+check("realizable exponent two central-region fee", r["fee"], 0.0128)
+r = book_walk.realizable([{"price": "0.2", "size": "1"}], 2, V2_CURVE)
+check("realizable exponent two partial fee", r["fee"], 0.0064)
+check("realizable exponent two partial requested-size average", r["avg_fill"], 0.1)
+check("realizable exponent two partial unfilled", r["unfilled"], 1.0)
+for requested in (0, -1):
+    r = book_walk.realizable(BIDS, requested, V2_CURVE)
+    check(f"realizable nonpositive size {requested}", r,
+          {"gross": 0.0, "fee": 0.0, "net": 0.0, "avg_fill": 0.0, "unfilled": 0.0})
+r = book_walk.realizable([], 5, V2_CURVE)
+check("realizable empty book full remainder", r,
+      {"gross": 0.0, "fee": 0.0, "net": 0.0, "avg_fill": 0.0, "unfilled": 5.0})
 
 
 

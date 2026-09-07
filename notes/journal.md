@@ -13278,3 +13278,36 @@ $0.10 assumed friction. **No entry; retain reserve.** Revisit on the existing >=
 or new rate/catalyst evidence that changes this underwriting, not merely another quiet iteration
 of the same sub-floor quotes. No probability, portfolio, code, scheduler or Telegram change.
 The durable ROI goal remains active.
+
+## 2026-09-07 23:22 UTC — continuation: per-fill exit-fee aggregation corrected
+
+The Treasury calculation exposed a shared reporting/gate bug: `book_walk.realizable`
+charged the nonlinear fee curve at `avg_fill`, multiplied by the entire requested size.
+That is not the sum of fees at actual fill prices, and partial-depth averages also dilute
+the price with unsold shares. An independent caller audit confirmed the affected consumers
+are positions, bankroll and single-position marginal-APY estimates. `exit_analysis` and
+grouped exits already charge each fill correctly; their full-depth requirements are unchanged.
+
+Added regression expectations first: the old implementation failed **10 checks**. For a
+legacy 7% quadratic fee and ten shares each at 0.60/0.50, the correct fee is **$0.343**, not
+$0.3465; requesting 30 shares against that same 20-share book still owes only $0.343, not
+$0.487667. A 25% rate/exponent-2 fixture proves the old error can also understate fees, so
+this is not universally a conservative bias. A shared pure fill iterator now preserves
+sorting, gross proceeds, all five public result keys and the requested-size `avg_fill`;
+only actual filled shares incur per-level fees. No execution or sizing code changed.
+
+A read-only 23:19 same-snapshot comparison checked all **13 active indexed positions**,
+including Gamma condition/outcome-token and CLOB identity. Only OpenAI HLE >=55 changed:
+its net estimate increased **$0.00001895**. Across those retrieved books old/new net was
+$154.13665262/$154.13667157, with no unfilled remainder. **These are diagnostic snapshots,
+not fresh executable portfolio quotes:** the Apple book timestamp was about 1,203 seconds
+old and failed a 120-second freshness check. The initial stricter comparison stopped there;
+the subsequent comparison retained the explicit freshness failure solely to isolate the
+formula effect on identical input. Do not attribute movement versus the earlier $155.00
+snapshot to this fix, or count any estimate change as realized profit.
+
+Verification: **463 pytest tests passed**, **140 money-math checks passed**, and **all 20
+mutation cases were caught**, including a new mutant restoring average-price/requested-size
+fees. Independent diff review found no blocker. Updated current test counts and the fee
+lesson (including the distinction between structured rates and the old universal 7% claim).
+No trade, order, probability, scheduler change or extra Telegram; the durable ROI goal stays active.

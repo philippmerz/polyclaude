@@ -29,8 +29,23 @@ which is how two of them silently drifted from the two that were right.
 from __future__ import annotations
 
 import math
+from collections.abc import Iterator
 
 from pm_fees import fee_per_share, fee_per_share_at
+
+
+def _bid_fills(bids: list[dict], size: float) -> Iterator[tuple[float, float]]:
+    """Yield (shares, price) for actual fills, best bid first."""
+    if size <= 0:
+        return
+    levels = sorted(bids or [], key=lambda x: -float(x["price"]))
+    left = float(size)
+    for lvl in levels:
+        if left <= 0:
+            break
+        take = min(left, float(lvl["size"]))
+        yield take, float(lvl["price"])
+        left -= take
 
 
 def walk_bids(bids: list[dict], size: float) -> tuple[float, float, float]:
@@ -50,13 +65,9 @@ def walk_bids(bids: list[dict], size: float) -> tuple[float, float, float]:
     """
     if size <= 0:
         return 0.0, 0.0, 0.0
-    levels = sorted(bids or [], key=lambda x: -float(x["price"]))
     left, proceeds = float(size), 0.0
-    for lvl in levels:
-        if left <= 0:
-            break
-        take = min(left, float(lvl["size"]))
-        proceeds += take * float(lvl["price"])
+    for take, price in _bid_fills(bids, size):
+        proceeds += take * price
         left -= take
     return proceeds, proceeds / float(size), max(0.0, left)
 
@@ -94,11 +105,22 @@ def realizable(bids: list[dict], size: float, market: dict | None) -> dict:
     """Net proceeds of exiting `size` NOW, after the market's own taker fee.
 
     Returns gross / fee / net / avg_fill / unfilled. `market` is the gamma dict
-    (for takerBaseFee); pass None only when it genuinely could not be fetched,
-    which charges the conservative fallback rate rather than assuming free.
+    (feeSchedule, with legacy takerBaseFee fallback); pass None only when it
+    genuinely could not be fetched, which charges the conservative fallback
+    rate rather than assuming free.
+
+    Curved fees must be charged at each actual fill price. Charging the curve
+    at avg_fill is not equivalent, and partial-depth averages also include
+    unsold shares. Those unsold shares have neither proceeds nor fees here.
     """
-    gross, avg_fill, unfilled = walk_bids(bids, size)
-    fee = fee_per_share(market, avg_fill) * float(size) if gross > 0 else 0.0
+    gross, fee = 0.0, 0.0
+    left = float(size)
+    for take, price in _bid_fills(bids, size):
+        gross += take * price
+        fee += take * fee_per_share(market, price)
+        left -= take
+    avg_fill = gross / float(size) if size > 0 else 0.0
+    unfilled = max(0.0, left)
     return {
         "gross": gross,
         "fee": fee,
