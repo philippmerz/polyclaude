@@ -13033,3 +13033,41 @@ the emergency-path drill is due Sep-12, followed by Duma's Sep-20 horizon and th
 watch. No trade, order change, redemption, prior/backlog change, Telegram message, swap, bridge or
 daemon restart occurred. The durable ROI continuation remains active until the operator manually
 cancels it.
+
+## 2026-09-07 22:00–22:15 UTC — periodic review: Hormuz alert scoped; Apple review armed
+
+The new Hormuz headline did not justify a position or clock change. Al Jazeera's 21:46 alert said
+oil rose as US–Iran strikes intensified, but direct cross-checks resolve the potentially important
+ambiguity: CENTCOM's Sep-5 action hit three Iranian crude carriers after attacks on US warships,
+while Sep-7 reporting concerns escalation rhetoric and a proposed restricted maritime zone. None
+is a newly reported US air or surface-to-surface strike directly impacting Iranian terrestrial
+territory or internal waters. The live rolling ceasefire criteria explicitly exclude maritime
+territory, so this reporting does **not** reset the 14-day clean-period clock. Current YES books
+also moved with—not against—that read: about **0.64/0.65** for Sep-11, **0.76/0.77** for Sep-18 and
+**0.78/0.79** for Sep-30. No robust dislocation exists and Hormuz itself is only 0.003571
+de-indexed claim dust. **No trade.**
+
+The alert's agent filter returned `agent unavailable: exit 1`, so the fail-open path persisted the
+raw tier-2 event exactly as designed. The operator runtime is now logged in and live, its status and
+quota probes succeed, and all four daemons are exact-one/fresh; treat this as a recovered transient
+unless it repeats. It caused no missed safety action because the alert was retained for manual
+review.
+
+Apple remains the highest-value near-term clock. The exact market requires a touchscreen MacBook
+to be available for public purchase by Dec-31; unveiling alone is insufficient. NO is about
+**0.38** versus retained p_no **0.65**, and neither Apple's store nor the official event notice adds
+new purchasability evidence. The official Sep-9 keynote begins at **17:00 UTC**. News keywords cover
+an affirmative announcement or store listing, but they cannot reliably fire on the negative signal
+that the event ended without one, so a dated cron injection now schedules an exact criteria/book/
+store re-underwrite for **18:30 UTC** (`polyclaude-once-apple-20260909`), with the ordinary 22:00
+periodic tick as a backstop. HOLD / NO ADD / NO FLIP before that evidence.
+
+Authoritative bankroll is **$193.70**, down $0.37 from 18:00 on midpoint marks; realized P&L remains
+**+$14.44**. The 13 indexed Polymarket rows cost $157.20, mark at **$160.24**, and depth-realize at
+**$154.99**, so midpoints overstate liquidation by $5.25. Inventory remains six SELLs / zero BUYs,
+including the unchanged 16.994923/33 partial fill. UMA tracked 37 conditions with zero alert,
+position state and crux coverage are clean, the watchlist has no hit, marginal APY has zero close
+candidates, every exit remains HOLD and there is no winning redeemable. No fill, cancellation,
+resolution, prior change, order change, redemption, Telegram message, swap, bridge or daemon restart
+occurred. The only action was the bounded Apple monitoring safeguard plus its backlog/README record.
+The durable ROI continuation remains active until the operator manually cancels it.
