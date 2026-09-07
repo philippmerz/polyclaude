@@ -13164,3 +13164,47 @@ The latest persisted news alert is still 21:46. The 22:38–22:39 opportunity ch
 executable HLE/MetaMask pair and the same below-floor **0.50pp** Treasury lead already reviewed.
 Apple's 18:30 UTC Sep-9 review and ordinary check-ins remain scheduled. No new trade, prior change,
 redemption or material Telegram is warranted. Only the calendar reminder and this journal changed.
+
+## 2026-09-07 22:54 UTC — continuation: close a real blind spot in HLE source monitoring
+
+The routine HLE check exposed an instrument gap before any portfolio change: the old regex
+returned nine model-name tokens from the whole HTML page, while the actual results table has ten
+rows. It omitted **Gemini 2.5 Flash and o1**, included prose-only **o3-mini**, and even consumed part
+of Grok's numeric cell. A controlled GPT-5 accuracy change from 25.3 to 55.3 produced the same token
+set. Thus the old broad FROZEN output could miss the very score update that would matter to a held
+threshold, despite passing its historical model-addition and lab-keyword controls.
+
+Hardened `source_freeze_check.py` so existing default agi.safe.ai invocations compare **all model
+rows, Accuracy and Calibration Error**, with no model-name allowlist. It detects additions,
+removals and changed values separately; missing/ambiguous tables, malformed/duplicate rows and
+invalid scores are inconclusive, never silently downgraded to the old regex. Historical missing
+calibration values (blank or dash) are supported explicitly. Other URLs/non-default regexes retain
+token-only mode with a scoped verdict. An independent code/source review caught the historical
+blank-cell case and mismatched-cell markup; both now have regression tests. No new dependency or
+daemon is required.
+
+The strengthened control detects actual 2025 additions/removals **and Gemini 2.5 Pro Accuracy
+18.4→21.6**. The [live named source](https://agi.safe.ai/) and
+[Jan-15 snapshot](https://web.archive.org/web/20260115085643/https://agi.safe.ai/) still match on
+**all ten rows and both numeric columns**. Top Gemini Accuracy remains 38.3; top OpenAI is GPT-5
+at 25.3. Calibration is monitored for source activity, not used as resolving Accuracy. Updated
+only the four HLE source-fact entries; probability, sizing, and full-prior-verification dates are
+unchanged. Re-read exact Gamma markets **3072351/3072352/3072356/3212719**: no criteria change was
+identified and all remain unproposed. The debut contract still requires a newly added Pro row and
+the following-day noon-ET Accuracy reading; a model's previous public availability is irrelevant.
+
+A separate bounded official-release check found no new qualifying model/result to change that
+assessment. [OpenAI's launch table](https://openai.com/index/gpt-6-astra/) still reports **57.2 HLE
+with tools**, and its [current rollout notice](https://help.openai.com/en/articles/20001275) now
+describes paid-plan distribution while explicitly retaining gradual/per-surface availability.
+That corroborates the broader rollout already contemplated in the Sep-4 prior cut, not universal
+completion or a named-board addition. Staff social posts were surfaced but 403ed on the main
+fetch, so they are not required evidence. [Google's model hub](https://deepmind.google/models/gemini/)
+still labels 3.5 Pro coming soon. Keep configuration/Verified scores separate from the exact board.
+No trade, order change, prior-number change or extra Telegram; the durable ROI goal stays active.
+
+Verification: **463 pytest tests passed**, plus the **123-check money-math suite**. The new
+source-specific tests include a live-like ten-row fixture, score-only and unfamiliar-name changes,
+invalid/ambiguous HTML, generic-mode compatibility and imported fetch success. Both Jun→Dec and
+Jun→Sep historical controls pass against live archives. JSON validation also proves that only the
+four HLE source-fact lists changed in the prior file; all probability/sizing fields are untouched.

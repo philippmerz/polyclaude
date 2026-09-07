@@ -537,6 +537,19 @@ my own prose asserted as measurement. The common shape is an ABSENCE — "no cha
   conclusion rests on "X is not there", the instrument needs a coverage test, because absence is
   exactly what a broken instrument produces for free.
 
+- **An unchanged model-name set does not establish unchanged results.** Sep-7's HLE source check
+  passed the old liveness and lab-coverage controls but omitted Flash/o1, picked up prose-only
+  o3-mini, and could not see an accuracy-only revision. The resolving variable is the row's
+  **Accuracy**, not merely whether its name appears somewhere in HTML. The default HLE parser now
+  compares every model row and both numeric columns without a naming-family allowlist. Tests
+  prove score-only changes and arbitrary new names are detected; real 2025 archives additionally
+  reproduce Gemini 2.5 Pro's 18.4→21.6 accuracy revision. Missing/ambiguous tables and invalid
+  rows fail closed, while historical blank calibration cells are explicitly missing, not zero.
+  Calibration changes show source activity but do not themselves satisfy an Accuracy threshold.
+  The recheck still found all 10 live result rows unchanged from Jan-15: no prior change follows
+  from improving the instrument. Scope that conclusion to the results table, not the whole page,
+  dataset, institution or probability of a future update.
+
 - **"Is this source stale?" is MEASURABLE by archive-diff — and the measurement is worthless until
   you validate the instrument.** 2026-08-25: three HLE legs rested on "agi.safe.ai is frozen", a
   claim carried for weeks as an INFERENCE from what was missing from the page, while a newly-listed

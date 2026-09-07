@@ -362,10 +362,10 @@
   "divergence_note": "GPT-6 Astra's official launch and 57.2% HLE-with-tools result are a real new catalyst; rollout initially covers a limited set of organizations, with broader access promised in days. They raise qualifying-board-addition and UMA-spirit risk, cutting p_no 0.45 -> 0.35. The live named board remains reachable/frozen, and both raw and 10pp-haircut hold values still dominate the roughly $0.42 complete exit at 14:00; HOLD / NO ADD / NO FLIP.",
   "key_facts": [
    {
-    "claim": "agi.safe.ai tops at Gemini-3-Pro 38.3, OpenAI row GPT-5 25.3; NO row added since ~Nov-2025 (missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1). The Apr-2025 stamp is the DATASET date, not a frozen board. The 2026-08-30 validated archive diff again detected real 2025 change, passed claude/grok/gemini coverage, and found zero additions or removals from 2026-01-15 to live.",
+    "claim": "Sep-7 structured table diff captures all 10 model rows and both Accuracy/Calibration Error columns, with no additions, removals or value changes versus 2026-01-15. The historical control detects 2025 model changes AND Gemini 2.5 Pro accuracy changing 18.4 to 21.6. Current top Gemini accuracy is 38.3; GPT-5 is the top OpenAI row at 25.3. This is results-table stasis, not whole-page or dataset inactivity.",
     "source": "https://agi.safe.ai/",
-    "checked": "2026-09-02",
-    "source_date": "2026-09-02"
+    "checked": "2026-09-07",
+    "source_date": "2026-09-07"
    },
    {
     "claim": "RETRACTED 2026-09-02: 'OpenAI's best HLE score on ANY surface is 49.5' was false and scope-inflated a third-party standard/no-tools tracker. OpenAI's Apr-23 official table reports HLE WITH TOOLS of 52.2 (GPT-5.5), 52.1 (GPT-5.4), 57.2 (GPT-5.5 Pro), and 58.7 (GPT-5.4 Pro); its no-tools row is 41.4/39.8/43.1/42.7. The tool-enabled results clear 50 and the Pro results clear 55.",
@@ -408,10 +408,10 @@
   "rho_within": 0.7,
   "key_facts": [
    {
-    "claim": "CORRECTED 2026-09-02: the named agi.safe.ai board remains unchanged, showing OpenAI GPT-5 at 25.3 and no qualifying row, but the old inference that OpenAI still had to exceed a 55.5 global frontier was false. OpenAI's Apr-23 official table already reported GPT-5.5 Pro at 57.2 and GPT-5.4 Pro at 58.7 HLE with tools. The discrepancy is configuration/source scope, not absence of an above-55 official result.",
+    "claim": "Sep-7 structured comparison of all 10 agi.safe.ai results rows and both displayed score columns finds no changes versus 2026-01-15. GPT-5 remains the top OpenAI Accuracy row at 25.3, with no Astra row. This establishes only the named board's state, not a capability maximum across other official configurations.",
     "source": "https://agi.safe.ai/",
-    "checked": "2026-09-02",
-    "source_date": "2026-09-02"
+    "checked": "2026-09-07",
+    "source_date": "2026-09-07"
    },
    {
     "claim": "OpenAI's official Apr-23 HLE table reports tool-enabled scores of 52.2 (GPT-5.5), 52.1 (GPT-5.4), 57.2 (GPT-5.5 Pro), and 58.7 (GPT-5.4 Pro), versus no-tools scores of 41.4/39.8/43.1/42.7. A 2026-04-25 Wayback capture contains the same Pro scores, proving the >=55 evidence predated entry.",
@@ -446,10 +446,10 @@
   "divergence_note": "REVISED after finding material pre-entry official Gemini HLE results above 50 in tool-enabled configurations. The capability-jump premise was false; the live edge now rests on the reachable/frozen named board versus UMA spirit and configuration scope. Central p_no cut 0.65 -> 0.55. HOLD because both raw and 10pp-haircut values dominate the complete $6.23 executable exit; NO ADD / NO FLIP because this is the second same-class factual miss in two ticks and the correlated HLE cluster is capped.",
   "key_facts": [
    {
-    "claim": "The named agi.safe.ai board still tops out at Gemini 3 Pro 38.3 and contains no qualifying Gemini row. This supports the literal NO branch, but it is not evidence that Gemini capability remains below 50 across other official configurations.",
+    "claim": "Sep-7 structured comparison captures all 10 agi.safe.ai results rows, including Gemini 2.5 Flash omitted by the old regex, and both displayed score columns; no changes versus 2026-01-15. Gemini 3 Pro remains the top Gemini Accuracy row at 38.3. This supports the literal source branch, not a below-50 capability maximum across other official configurations.",
     "source": "https://agi.safe.ai/",
-    "checked": "2026-09-03",
-    "source_date": "2026-09-03"
+    "checked": "2026-09-07",
+    "source_date": "2026-09-07"
    },
    {
     "claim": "CORRECTED 2026-09-03: Google's official Gemini 3.1 Pro model card, published February 19, reports 44.4 HLE without tools and 51.4 with Search (blocklist) + Code. This first-party above-50 result predates the position and makes capability effectively satisfied under a configuration-inclusive spirit reading even though the named board remains below 50.",
@@ -510,10 +510,10 @@
     "checked": "2026-08-30"
    },
    {
-    "claim": "The validated archive-diff instrument detected extensive 2025 additions/removals, passed claude/grok/gemini coverage, and found zero additions or removals between 2026-01-15 and the live board on 2026-08-31.",
+    "claim": "Sep-7 structured results-table diff captures all 10 model rows and both displayed score columns, including arbitrary model names and score-only changes. The known-change control detects 2025 additions/removals and Gemini 2.5 Pro accuracy changing 18.4 to 21.6; live versus 2026-01-15 has no additions, removals or value changes. No newly added qualifying Gemini Pro row is present.",
     "source": "https://agi.safe.ai/",
-    "source_date": "2026-08-31",
-    "checked": "2026-08-31"
+    "source_date": "2026-09-07",
+    "checked": "2026-09-07"
    },
    {
     "claim": "Scale's sister leaderboard lists Gemini 3.1 Pro at 46.44, above the 40 bar, so a catch-up board batch is the direct thesis-break path.",
