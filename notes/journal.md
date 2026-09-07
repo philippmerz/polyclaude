@@ -12912,3 +12912,34 @@ No trade, fill, order change, redemption, swap, bridge or daemon restart occurre
 prior update changed no position action. Validation passed **434 pytest cases, all 123 standalone
 money checks and all 19 financial mutations**. The durable ROI continuation remains active until
 the operator manually cancels it.
+
+## 2026-09-07 06:00–06:05 UTC — periodic review: Hormuz escalation measured; no trade
+
+No held-position or backlog action became due. Authoritative bankroll is **$189.42**, up $0.05 from
+02:00 on marks; realized P&L remains **+$14.44**. The 13 indexed Polymarket rows still cost $157.20
+and mark at about **$155.85**, while depth-realizable value is **$148.94**, so midpoint marks
+overstate liquidation by $6.91. The same six SELL orders / zero BUY orders remain live, including
+the unchanged 16.994923/33 partial fill. Deployable pUSD remains 2.115500 and Polygon aUSDC.e is
+16.110516. UMA tracked 37 conditions with zero alert; all exits remain HOLD; `redeem-all` found no
+winning claim; and all four daemons are singular and running.
+
+Two new tier-2 alerts were assessed. Iran's security chief announced a forthcoming maritime
+exclusion zone outside Hormuz, extending the escalation but not changing any live holding; Hormuz
+exposure is only de-indexed 0.003571 claim dust. Direct IMF PortWatch measurement now runs through
+Aug-30: Aug-24--30 prints are 3/4/5/2/7/3/6, totaling 30, or **4.29/day**, versus the 60/day
+normalization threshold. The Sep-30 normalization market is already about 0.022/0.024 YES, implying
+a roughly 0.978 NO take. The new restriction points in the NO direction, but this horizon still
+contains a genuine ceasefire-and-reopening tail rather than the Aug-31 contract's measured physical
+impossibility; the central margin is tiny and a five-times tail stress does not clear entry. The
+new Sep-7--13 ship-count buckets are also too wide and forecast-dependent to pass the robust gate.
+No Hormuz or Iran-Oman trade was placed.
+
+The second alert concerned an armed man charging toward Ohio Democratic gubernatorial nominee Amy
+Acton. Acton was not injured, the suspect was stopped, and the Democratic/Republican governor
+markets remain about 0.565/0.435. There is no stable causal estimate or criteria edge to justify
+chasing the headline. No fresh fact changed HLE/Astra, Apple, Duma, MetaMask, Trump or Greenland.
+Apple's Sep-9 event remains the next hard review. DEC-0100 is already graded; the four Hormuz
+decisions remain correctly ungradeable pending a formal proposal. No trade, fill, order change,
+redemption, prior change, backlog change, swap, bridge, daemon restart or additional manual
+Telegram summary occurred. The durable ROI continuation remains active until the operator manually
+cancels it.
