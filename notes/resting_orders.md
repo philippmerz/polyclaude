@@ -147,6 +147,16 @@ NOT catalyst-gated in the near term (Apple's September event is the next schedul
 PULL this bid before that event per the scheduled-catalyst rule — a resting bid through an unveiling
 is a free option written to whoever sees the ship date first.
 
+## CANCELLED: touchscreen-MacBook-2026 NO maker SELL remainder (2026-09-07 22:26 UTC, DEC-0076)
+
+The 33sh @ **0.69** order filled 16.994923sh fee-free before the event, monetizing about $11.73 at
+4pp above the retained 0.65 fair. The remaining **16.005077sh** was cancelled ahead of Apple's
+Sep-9 17:00 UTC keynote and verified absent from the fully paginated live inventory; held exposure
+remains 49.005sh and total live orders fell six→five. The original DEC-0076 sentence saying the
+unfilled remainder should ride the event was wrong: a no-show could gap NO toward 0.9, letting bots
+lift the stale 0.69 offer and capture the event tail. Re-arm only after the event against a fresh
+prior and book. Order `0x3b8f1080…cad785`.
+
 
 ## CANCELLED: Gemini-HLE-50 NO maker BUY (placed 2026-08-10 22:30, cancelled 2026-08-12 22:05, DEC-0071)
 

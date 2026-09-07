@@ -13071,3 +13071,27 @@ candidates, every exit remains HOLD and there is no winning redeemable. No fill,
 resolution, prior change, order change, redemption, Telegram message, swap, bridge or daemon restart
 occurred. The only action was the bounded Apple monitoring safeguard plus its backlog/README record.
 The durable ROI continuation remains active until the operator manually cancels it.
+
+## 2026-09-07 22:18–22:29 UTC — continuation: stale Apple event sell pulled
+
+The duplicate-seed check became useful after mapping all six live order asset IDs back to held
+markets. Order `0x3b8f1080…cad785` was the Apple touchscreen-MacBook NO maker sell: originally 33sh
+at 0.69, with 16.994923sh already filled and **16.005077sh still resting**. That remainder was a
+free option against this book through the scheduled Sep-9 17:00 UTC keynote. A no-show could gap NO
+toward 0.9, at which point bots would lift the stale 0.69 offer and capture the event tail; its 4pp
+premium over the retained 0.65 fair does not compensate that binary jump risk.
+
+I cancelled that exact order through the guarded v2 path. The helper verified it disappeared from
+the fully paginated inventory; a fresh inventory contains **five** SELLs, zero BUYs and **zero Apple
+orders**. The held Apple balance remains 49.005sh, so this changed no position or thesis. DEC-0076
+is now closed accurately: 16.994923/33sh (51.5%) filled fee-free at 0.69 for about $11.73 before the
+event, rather than the predicted full fill, and the old instruction for the remainder to ride the
+event was corrected as inconsistent with the scheduled-catalyst pull rule. Re-arm only after the
+keynote against a fresh prior and book.
+
+The post-action bankroll mark is **$194.11**; realized P&L remains **+$14.44**. The 13 indexed rows
+cost $157.20, mark at **$160.65**, and depth-realize at **$155.00**, so midpoint overstatement is
+$5.65. No new news or opportunity alert arrived, and the daemon scanners' latest outputs contain no
+positive live-depth candidate above their action floors. Telegram received the material order-risk
+correction. No trade, fill, prior change, redemption, swap, bridge or daemon restart occurred. The
+durable ROI continuation remains active until the operator manually cancels it.

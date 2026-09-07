@@ -1471,9 +1471,10 @@
         "exit-liquidity"
       ],
       "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 33-share Apple NO maker SELL at 0.69 filled 16.994923 shares fee-free before the event, monetizing about 11.73 dollars. The remaining 16.005077 shares were canceled and verified absent at 2026-09-07 22:26 UTC, ahead of the Sep-9 17:00 UTC Apple keynote. The held balance remains 49.005 shares.",
+      "calibration_delta": "Partial success: 51.5% filled pre-event rather than the predicted full fill. More importantly, the original plan for an unfilled remainder to ride the event conflicted with the existing scheduled-catalyst pull rule and would have left a stale 0.69 offer exposed to an event-driven NO jump.",
+      "lesson": "Every scheduled binary catalyst needs a live-order-to-market reconciliation before the release, not merely a position review. Pull both bids and sells early enough that informed flow cannot exercise a stale quote; only re-arm after the event against a fresh prior.",
+      "resolved_at": "2026-09-07T22:29:24Z"
     },
     {
       "id": 77,
