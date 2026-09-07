@@ -13134,3 +13134,33 @@ the alert threshold merely because this inversion persists.
 No new news alert arrived. Live authenticated inventory again proves **five SELLs / zero BUYs /
 zero Apple orders**, so the prior cancellation remains effective. No portfolio, prior, scheduler
 or code change was made, and no additional Telegram was needed. The durable ROI goal remains active.
+
+## 2026-09-07 22:39–22:43 UTC — continuation: catalyst coverage and live news-filter check
+
+Reviewed backlog and recent journal, keeping the durable ROI goal active. A bounded source reader
+and the main operator independently verified [AVAV's Sep-9 earnings announcement](https://investor.avinc.com/node/21336)
+and [20:30 UTC call](https://investor.avinc.com/events/event-details/aerovironment-inc-first-quarter-fiscal-year-2027-earnings-call).
+The release is scheduled after market close, without an exact publication time. Added a dated
+backlog reminder for the existing **Sep-9 22:00 UTC periodic check**; no extra cron is needed for
+this unheld IBKR watchlist name. The conjunctive research gate remains **≤$110, guidance
+maintained/raised, and funded backlog ≥$1.2B**. Latest yfinance daily close returned **$144.65 on
+Sep-4**, so the price gate is not hit. The comparison baseline is the [June-29 results](https://investor.avinc.com/news-releases/news-release-details/aerovironment-announces-fiscal-2026-fourth-quarter-and-fiscal):
+FY27 revenue $2.125–2.225B, adjusted EBITDA $305–325M, non-GAAP EPS $3.02–3.34, and April-30 funded
+backlog $1.2B. Subsequent contract awards do not themselves establish a newer funded-backlog total.
+Do not rerun the full long-term thesis check or surface an entry before the combined gate clears.
+
+The 21:46 Hormuz alert recorded `agent unavailable: exit 1`. Process liveness and quota access
+alone did not prove inference recovery, so directly called the existing Tier-2 filter once with
+that same title, live holdings, and no article summary/body. This was a **read-only title-only
+health check**, not a replay of the original complete input or a duplicate alert. The existing
+fast worker returned **exit 0** with a parseable SEND and one MINOR Trump-out impact. That proves
+this inference/parse path worked at check time, not that the earlier failure's cause is known or
+that all daemon paths are healthy. Its weak indirect political channel is not independent evidence
+for changing the Trump prior. No news state, alert file, Telegram, orders or daemon was touched by
+the test. [Official non-interactive guidance](https://learn.chatgpt.com/docs/non-interactive-mode)
+was consulted for the worker diagnostic; no runtime configuration change was required.
+
+The latest persisted news alert is still 21:46. The 22:38–22:39 opportunity checks show no
+executable HLE/MetaMask pair and the same below-floor **0.50pp** Treasury lead already reviewed.
+Apple's 18:30 UTC Sep-9 review and ordinary check-ins remain scheduled. No new trade, prior change,
+redemption or material Telegram is warranted. Only the calendar reminder and this journal changed.

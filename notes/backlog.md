@@ -47,6 +47,8 @@ Reviewed at end of every turn + by the cron tick (step 4: decision tracker revie
 
 > Future reminders only; decision outcomes and expired clocks remain in git history.
 
+- **2026-09-09 22:00 UTC [AVAV post-earnings research gate]** — use the existing periodic check, not a new cron. [Official IR](https://investor.avinc.com/node/21336) confirms FY27 Q1 results after the Sep-9 market close and the call at **20:30 UTC**. Compare the new disclosure with June-29 FY27 guidance (revenue $2.125–2.225B, adjusted EBITDA $305–325M, non-GAAP EPS $3.02–3.34) and April-30 funded backlog of $1.2B. Re-vet only at **≤$110 AND guidance maintained/raised AND funded backlog ≥$1.2B**; contract award headlines alone do not verify company-reported funded backlog. The Sep-4 close was $144.65 when checked Sep-7, so the price gate had not fired. This is an operator IBKR watchlist candidate, not a polyclaude equity entry. Record results even if price remains above the gate, then remove this dated reminder.
+
 - **2026-11-03** (~152d): US midterm elections. Catalyst for DEC-0004 (Trump-out NO) — even if Dems take House, Senate conviction implausible.
 
 ## Conditional / gated work
