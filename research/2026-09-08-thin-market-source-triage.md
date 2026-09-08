@@ -104,3 +104,71 @@ numerical prior, calendar arbitrage, or robust entry edge was established. Reope
 only with the exact dated series and publication/revision evidence; no paid
 access, new browser infrastructure, account setup or repeated polling for this
 unmeasured optional lead. No orders, trades, priors or portfolio state changed.
+
+## 03:39–03:42 UTC follow-up — Sweden S vote-share bracket
+
+**Pass: no robust probability edge established.** This is the previously surfaced
+candidate, not a newly discovered listing. Delegated bounded primary-poll lookup;
+main independently checked source passages, the full contract and exact books.
+Quota refreshed to 84% main headroom before the discretionary work.
+
+[Gamma market 3562236](https://gamma-api.polymarket.com/markets/3562236) asks whether
+the Swedish Social Democratic Party (S) receives 27–30% of valid parliamentary
+votes on Sep-13. Exact boundaries go to the higher bracket: **[27%,30%)**.
+The denominator is all valid election votes, not bloc support, seats, turnout,
+or all survey respondents. Only votes attributed to S count, apart from the
+specified formal-successor exception. Credible-reporting consensus is primary;
+ambiguity falls back to Valmyndigheten. If results are not definitive by Dec-31
+23:59 ET, the lowest bracket wins. The Sep-13 00:00 UTC Gamma endDate is not
+poll closing time or a promised settlement timestamp.
+
+The [Election Authority's press information](https://www.val.se/servicelankar/servicelankar/pressrum)
+says polls close Sep-13 at 20:00 local (18:00 UTC); initial counting is preliminary,
+and final parliamentary results are expected about a week later. Preliminary
+reporting covers report parties, whereas final results include all participating
+parties. Do not mechanically use a partial report-party denominator as all valid
+votes, or promise cash availability on election night. This does not impose a
+new final-certification requirement on an otherwise unambiguous market consensus.
+
+| Primary poll | S share | Fieldwork | Sample |
+| --- | ---: | --- | ---: |
+| [Novus, Sep-7](https://novus.se/valjarbarometer-arkiv/l-over-4-okar-sakerstallt-s-och-m-bryter-nedatgaende-trenden/) | 27.0% | Sep-1–5 | 2,888 |
+| [Verian/SVT, Sep-3](https://www.veriangroup.com/sv/news-and-insights/valjarbarometer-september-2026) | 29.2% | Aug-20–Sep-2 | 3,069 |
+
+Both sample eligible/adult Swedish voters and weight their results; Novus uses
+primarily Kivra/SMS plus telephone for the oldest group, Verian online/telephone.
+The accessible pages did not give an S-specific numerical uncertainty interval.
+Their reported undecided/non-party shares also differ (Novus 1%, Verian 12.5%),
+so these are not interchangeable raw random draws from final valid ballots.
+Novus reports a 1.2pp increase from its prior wave: neither that movement nor
+the cross-pollster difference can be projected mechanically to election day.
+
+At **03:40:51 UTC**, both exact-token books passed identity, schema and the
+existing freshness gate; their shared book timestamp was 1788838850276, received
+at ages 1.59s/1.63s. Sequential reads are not a fill guarantee. Gamma's structured
+fee is .04, exponent 1; minimum size is five shares.
+
+| Side | Best ask / available shares | Five-share fee-inclusive cost | Per-share cost | Raw p needed after 10pp stress |
+| --- | ---: | ---: | ---: | ---: |
+| YES | .58 / 300 | $2.948720 | .589744 | >.689744 |
+| NO | .43 / 398.43 | $2.199020 | .439804 | >.539804 |
+
+Condition `0x35e937709794b25202be03105093aef831d7532d3252bfa11a6f51da10a395df`;
+YES token `99651778517916963441459208598519583860483475242015325647224805941293647284639`;
+NO token `24202442957019196017081698246499895180158615177287509625999858273864320023142`.
+
+Novus's point estimate sits exactly on the lower boundary; Verian's is inside
+but only 0.8pp below the upper boundary. Neither a poll's location in the band
+nor an average of the polls supplies a calibrated band probability. Sampling
+error alone omits common polling error, turnout, late movement and method
+differences. No evidenced error model was obtained that supports either required
+probability robustly. This is a limit of this bounded underwriting, not proof
+the market is efficient or that no forecasting model could work.
+
+Both minimum taker costs also exceed the last measured idle pUSD ($2.115500 at
+02:01 UTC; not remeasured here). Reserve funding is not justified by the evidence.
+This is not a claim that a maker quote cannot fit the cash balance: a passive
+quote has different economics and future-information risk, and no maker edge
+was underwritten. No entry gate, order, transfer, prior change, scanner or new
+scheduled reminder. Reopen only with materially better forecast evidence or
+relevant election results, not repeated minute-by-minute poll reads.

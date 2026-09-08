@@ -14011,3 +14011,27 @@ Also retain the intervening 03:18 risk refresh: HLE's ten named-table rows and
 both score columns unchanged versus Jan-15 under the already-validated parser;
 35 unique Gamma markets refreshed without alerts and five unfilled LIVE SELLs,
 zero BUYs/Apple orders. No new bankroll quote was taken.
+
+### 03:42 UTC — Sweden vote-share candidate: bounded primary-source review, pass
+
+Previous continuation was a verified wait on live opportunity/news watcher PIDs
+2349187/2836158 through the 03:38:26/27 HLE and MetaMask pair cycle, both zero.
+No later news alert found. Kept the durable goal and existing schedules active.
+
+Used the previously surfaced Sweden S 27–30% candidate rather than rerunning
+discovery. A cheaper worker retrieved primary poll evidence; main independently
+read the relevant passages, exact Gamma 3562236 rules, and fee-aware books.
+[Research detail](../research/2026-09-08-thin-market-source-triage.md#03390342-utc-follow-up--sweden-s-vote-share-bracket):
+Novus Sep-7 S 27.0%, Verian Sep-3 S 29.2%, with different fieldwork and methodology.
+The contract is **[27%,30%) of final election valid votes**, not a poll percentage
+or parliamentary seat share. Preliminary results and the all-valid-vote
+denominator need care; Sep-13 metadata is not a settlement promise.
+
+03:40:51 books passed identity/schema/freshness gates, about 1.6 seconds old.
+Five-share fee-inclusive YES/NO costs are **$2.948720/$2.199020**, requiring raw
+probabilities **>.689744/>.539804** after the ordinary 10pp stress, before other
+costs. No calibrated election-error distribution was established to support
+either claim; point estimates falling inside the band are insufficient.
+Both taker minimums also exceed the 02:01 idle-pUSD measurement, but lack of
+evidence is the reason not to pursue reserve funding. No forecast row, trade,
+order, transfer, portfolio-prior change, new alert, schedule or Telegram.
