@@ -13908,3 +13908,36 @@ infrastructure project or unconditional polling task to the backlog.
 No new trade, order, probability, position, code or schedule change. No duplicate
 Telegram after the earlier material tick summary 913. The 02:01:42 bankroll
 measurement remains $192.15; no fresh portfolio mark is implied by this research.
+
+## 2026-09-08 03:02 UTC — continuation: USGS candidate measured, temporal edge not robust
+
+Previous turn was a verified wait through the 02:50:56/57 opportunity cycle:
+both watched pairs zero executable. Goal active; quota probe 89% main headroom.
+Light safety refresh at 02:52 returned 35 unique Gamma markets / 37 cache aliases,
+positions_fetch_ok=true, no new UMA alerts; authenticated orders remain five LIVE
+SELLs with zero matched shares, zero BUYs and zero Apple orders. No new news alert.
+
+Delegated two-candidate triage of the existing shortlist, then a bounded USGS
+historical count while main read the exact contract/current source and books.
+Earthquake market 4223844 is **≤6**, not exactly six; the literal ET window, not
+Gamma endDate, controls. USGS shows one reviewed M5.5 event in the elapsed window.
+YES/NO asks cost .259375/.78858 after the verified .05 quadratic fee at 02:56.
+One early event alone does not price the remaining six days.
+
+Main independently reproduced all worker statistics from 960 unique USGS events
+across 105 local Monday weeks; separate USGS count endpoint also gives 960.
+Comparable first-period-count=1 weeks end ≤6 in 14/34 pooled, but only 4/19 in the
+latest 52 weeks. The apparent pooled YES edge fails that simple temporal
+sensitivity; the recent NO complement fails after the normal stress. Revised
+catalog history, clustering and small conditional samples prevent asserting a
+calibrated prior. **No entry, no forecast ledger row, no strategy change.**
+Archived exact evidence/derived counts in the USGS research note and a single
+Sep-13 22:00 recheck reminder using the existing periodic run; no new cron or
+scanner. The other surfaced candidate, Sweden's Sep-13 vote-share bracket,
+supplied an upcoming publication clock but no fresh resolving numeric fact, so
+it was not underwritten or promoted to an opportunity recommendation.
+
+No trades, funding, order changes, positions, probabilities or code changed.
+No duplicate Telegram for non-actionable research. Only notes were edited;
+existing 625 tests / 156 money checks were not rerun for prose. Bankroll remains
+the timestamped 02:01:42 measurement, not a new quote.
