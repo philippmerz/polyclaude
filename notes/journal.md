@@ -14118,3 +14118,44 @@ SELLs, all size_matched=0, zero BUYs and zero Apple orders. The 05:12 HLE/MetaMa
 pair scans each found zero executable pairs. No trade, prior change or new bankroll
 mark. Goal and scheduled continuation remain active.
 Material incident summary sent through the documented Telegram sender, message 915.
+
+### 05:58 UTC — pre-06:00 periodic-review snapshot
+
+Prepared fresh reads for the upcoming periodic review; this is not a claim that
+the scheduled 06:00 prompt has already run. Bankroll cache timestamp **05:53:35**:
+authoritative TOTAL **$190.40**, down $1.33 from 04:00. PM midpoint **$156.94**
+versus indicative fee/depth net **$149.40** (full-precision warning gap rounds to
+$7.55); these are sequential observations, not synchronized/freshness-verified
+liquidation proceeds. No fetch failures. Settled profit stays **+$14.44** and
+gas-token value excluded from trading P&L is **$6.22**. No per-position attribution
+of the latest mark decline was established. The 05:56 inventory independently
+confirms 13 active rows above half a share, cost $157.1959, with held quantities
+unchanged. Wallet balance output rounds to $2.12 pUSD, $16.11 Polygon aUSDC.e,
+$7.87 Arbitrum aUSDC and $1.05 Base USDC.
+
+The 05:53 UMA refresh has positions_fetch_ok=true, 37 tracked rows / 35 unique
+Gamma markets and zero alerts. Authenticated inventory still has five LIVE SELLs,
+all size_matched=0, zero BUYs and zero Apple orders. The 05:53 named HLE results
+table is unchanged across ten rows and both score columns, using the earlier
+validated parser; main also read the [primary table](https://agi.safe.ai/).
+No probability, position, order or financial write. The 05:38 keyword check
+reported no uncovered positions; that does not prove coverage of every resolution
+crux. Main quota probe then showed 66% headroom, without conversational injection.
+
+Since the incident, the 05:30 cross-venue scan found zero verified IDENTICAL
+pairs (eight DIFFERENT, ten unverified) in a bounded partial universe; the 05:45
+consistency report has two validated nonpositive groups, sixteen quote failures
+and 190 unquoted groups. Saved first-failure reasons were ten empty ask books and
+six stale timestamps, not recorded transport/schema/budget failures; that does
+not establish that later legs or unquoted groups would pass. No immediate retry
+or re-opening of the already-checked Jinan/Beijing leads was warranted.
+
+Disk remains low at about **334 MiB**. A metadata-only deleted-FD check found zero
+open-but-deleted regular files in accessible processes: ten inspected, 83
+inaccessible across the observed set; three of 13 observed polyclaude processes
+were inaccessible. No whole-host completeness claim and no process intervention.
+All four daemons are live; news state saved valid JSON at 05:56:30 and opportunity
+state at 05:57:06. The operator capacity request remains open, with the existing
+06:00 backlog recheck still due. Apple/AVAV remain Sep-9 and USGS Sep-13; no new
+calendar action is due before that recheck. Updated README and the normal bankroll
+cache; no duplicate Telegram after material incident summary 915. Goal active.
