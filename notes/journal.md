@@ -14349,3 +14349,53 @@ zero actionable observations. A cheaper worker classified twelve empty asks and
 three stale books; no new reported failure class. Partial, non-atomic coverage
 does not prove no edge elsewhere. No financial, prior, schedule, cleanup or code
 change and no Telegram. The 06:49 bankroll remains the latest quote. Goal active.
+
+### 07:36 UTC — Apple indicative exit refreshed; no new source trigger
+
+The prior continuation was a verified wait through the scheduled 07:30 wrapper
+4140622 and scanner 4140633 to their termination. Their 07:31:02 report retained
+709 eligible Limitless leaves and 18 bounded PM matches: zero IDENTICAL, seven
+DIFFERENT, one UNCERTAIN (unparseable verifier response), ten unverified.
+Screening-only, not execution-ready; exact fees, depth and rule identity are
+still prerequisites. The latest monotonicity block inspected 969 events with
+no reported violation or executable result. No manual scanner/executor rerun.
+
+Main refreshed Apple source evidence while a cheaper worker made one read-only
+exact-market/token book check at **07:34:02.131 UTC**. Gamma market **1499672**,
+condition and held NO token matched; marks were YES **0.71**, NO **0.29**, below
+the held NO's 02:00 mark of 0.325. The book covers all **49.005 NO** via 29.900 at
+0.28 and 19.105 at 0.27. Current structured fees are rate 0.04, exponent 1,
+taker-only/enabled. Main independently recomputed gross **$13.530350**, fee
+**$0.391737420**, net **$13.138612580**, versus the old $14.77521882 estimate.
+The book timestamp **07:32:16.901** was **105.5 seconds old** at retrieval, so
+this remains indicative, not freshness-verified executable proceeds. Its raw
+last-trade value 0.700 conflicts with the NO book/mark and was not used. No retry
+or relaxed freshness gate. Source: [exact Gamma market](https://gamma-api.polymarket.com/markets/1499672).
+
+[Apple's current Pro specifications](https://www.apple.com/macbook-pro/specs/)
+describe Touch ID and Force Touch trackpad, not a touchscreen specification.
+The [Mac Newsroom index](https://www.apple.com/newsroom/topics/mac/) has August-25
+desktop announcements at the top, no new qualifying MacBook commitment in that
+retrieved list. The generic Newsroom root returned only navigation, so it is
+not evidence of absent news. The accessible [Sep-4 Macworld recap](https://www.macworld.com/article/2931833/touchscreen-macbook-pro-m6-design-processor-specs-release.html)
+still describes a late-2026/early-2027 window, with schedule uncertainty; its
+reported September roadmap is not an official purchase-date commitment.
+Direct Bloomberg access was restricted; no claim to have verified its full
+latest article. This bounded check did not establish a new probability-changing
+fact or explain the price move. Current absence is weak evidence about year-end,
+and does not justify treating the move as noise. Retain **p_no 0.65** and the
+HOLD / NO ADD / NO FLIP assessment: raw/stressed hold values remain
+**$31.85325 / $26.95275**. These are subjective valuations, not calibrated
+guarantees. Under the indicative quote alone, cash/quantity implies a roughly
+**0.2681** hold/exit probability boundary before time/risk considerations.
+No portfolio or order changes; the 06:49 aggregate bankroll was not rerun.
+
+The current turn also followed scheduled consistency child **4146189** to
+termination. Its **07:35:30** report has three validated nonpositive groups,
+sixteen quote failures and 192 unquoted, zero actionable observations. A cheaper
+worker classified eleven empty asks, four stale books and one insufficient-depth
+failure; no new integrity class. Partial, non-atomic coverage remains explicit.
+News saved valid state at 07:32:27 without a new alert. Four monitors remain live;
+last free-space read was about **537 MiB** at 07:33. Capacity stays open under
+the hourly guard. Updated README/backlog's Apple quote, not priors, schedules,
+code or total bankroll. No cleanup or Telegram. Continuation goal active.
