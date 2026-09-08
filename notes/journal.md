@@ -14035,3 +14035,16 @@ either claim; point estimates falling inside the band are insufficient.
 Both taker minimums also exceed the 02:01 idle-pUSD measurement, but lack of
 evidence is the reason not to pursue reserve funding. No forecast row, trade,
 order, transfer, portfolio-prior change, new alert, schedule or Telegram.
+
+### 03:59 UTC — basket-scan gaps checked without relaxing quote safeguards
+
+Followed live scheduled consistency child PID 4092059 to termination and read
+its 03:54:49 report: eight quoted groups nonpositive, 12 failed, 200 other
+structural groups unquoted. A cheaper worker audited first-failure reasons:
+eight empty ask books, four age rejections. Main checked Jinan 4320176 NO at
+03:57:32 (fresh identity-matched book, no asks) and Beijing 4274564 NO at
+03:58:20 (identity matched, age 1449.5s, no asks). Neither complete-basket path
+is validated; absence of quotes is not evidence of absence of an edge elsewhere.
+Details appended to the existing thin-market source-triage note. No code,
+safeguard, schedule, portfolio or order changes. Future scheduled scans remain
+the appropriate next check; no repeated immediate retry or Telegram.

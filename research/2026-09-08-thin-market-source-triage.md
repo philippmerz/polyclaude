@@ -172,3 +172,33 @@ quote has different economics and future-information risk, and no maker edge
 was underwritten. No entry gate, order, transfer, prior change, scanner or new
 scheduled reminder. Reopen only with materially better forecast evidence or
 relevant election results, not repeated minute-by-minute poll reads.
+
+## 03:56–03:59 UTC — basket quote-failure follow-up
+
+The scheduled 03:54:49 consistency report inspected 5,000 open markets and
+requested 20 structural groups: eight quoted nonpositive, 12 quote-failed,
+with another 200 structural groups unquoted. No positive live-depth observation;
+coverage remains incomplete. A worker checked the recorded failure reasons and
+scanner code while main made two narrow public-market/book reads, not a full scan.
+
+The **first reported** failures were eight missing asks and four book-age
+rejections (Beijing 1211.3s, Tel Aviv 318.1s, Florida Senate turnout 322.7s,
+Warsaw 366.5s). This does not establish that later legs would pass, or that
+unquoted groups have no edge. The live time budget was not exhausted.
+
+- Jinan event 980687, [market 4320176](https://gamma-api.polymarket.com/markets/4320176),
+  lowest temperature ≤12°C NO: at **03:57:32 UTC**, exact asset/condition matched,
+  timestamp 1788839840229 (~12s old), **asks empty**. All 11 event members have
+  identical description hashes. Several other legs have very wide YES metadata
+  spreads; their mids are not entry prices. No complete or subset basket edge
+  was established by this check.
+- Beijing event 973885, [market 4274564](https://gamma-api.polymarket.com/markets/4274564),
+  lowest temperature ≤12°C NO: at **03:58:20 UTC**, exact asset/condition matched,
+  still open/accepting, timestamp 1788838451252 (**1449.5s old**) and **asks empty**.
+  The existing freshness guard rejected it. An old book timestamp does not by
+  itself prove a stale HTTP cache; do not bypass the guard or invent missing asks.
+
+The two complete-basket entry paths remain unvalidated. No relaxed safeguards,
+repeat full scan, new polling task, trade, order or funding action. Existing
+scheduled scans may observe naturally changed liquidity; no further immediate
+retry is justified by these unchanged blockers.
