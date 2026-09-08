@@ -14491,3 +14491,48 @@ actionable candidate, with partial/non-atomic coverage explicit. Four monitors
 remain live; free disk space is about **518 MiB**, still only narrowly above the
 512 MiB warning. Capacity request and hourly guard remain open/active. No trade,
 order, prior, schedule, cleanup or Telegram change. Continuation goal active.
+
+### 08:56 UTC — hourly reconciliation; lower indicative liquidity investigated
+
+The normal bankroll refresh completed successfully with authoritative cache
+timestamp **08:49:23 UTC**, total **$191.22** (+$0.01 versus 07:49). PM midpoint
+is **$157.74**, indicative fee/depth net **$150.26**, warning gap **$7.47** from
+unrounded values. Settled profit remains **+$14.44**, excluded gas-token value
+**$6.25**; pUSD/Polygon Aave/Arbitrum Aave balances still round to
+**$2.12/$16.11/$7.87**. No fetch failures or fresh Ostium count were reported.
+Main's authenticated 08:49 order check returned five LIVE SELLs, each with zero
+matched size, no BUYs and no Apple order. The separate **08:49:19.557694** Data
+API observation has 13 active rows, cost **$157.1959**, mark **$157.7359**; every
+quantity matches the active claim snapshot. This does not include dust or prove
+that every historical order was unfilled.
+
+Because the net estimate fell about **$1.55** despite unchanged quantities,
+requested one bounded per-position coverage check rather than another bankroll
+run. It began **08:51:53.539003 UTC**: one Data API fetch, then one exact Gamma
+slug and held-token book per active claim. All HTTP, identity and fee/book
+parses succeeded. Marks sum to **$157.6385** in this separate observation;
+gross bids **$152.3316486**, fees **$2.11164008**, net **$150.22000852**.
+Every position's requested quantity is covered, with no empty book or unfilled
+remainder. Three books exceeded 60 seconds: Apple **106.7s**, MetaMask $700M
+**72.5s**, Greenland **181.7s**. No retries to manufacture freshness. These are
+sequential, indicative snapshots, not execution-ready quotes. Prior per-leg
+quotes were not retained, so this does not establish exact historical attribution.
+
+Main independently summed the per-leg values and checked the canonical group
+topology. Apple still nets **$13.13861258**, below $31.85325 raw / $26.95275
+10pp-stressed hold values. Duma's complete set nets **$13.18** versus $13.60 raw
+fair; MetaMask nets **$44.53249934** versus $46.7973273 raw fair. The latter's
+rule-state payouts are $44.7510/$92.4706/$62.7533/$47.7196: its **$44.751**
+floor precedes time/resolver risk and is not a stop-loss threshold or a proof
+that holding always beats reserve yield. No new thesis/criteria fact surfaced
+in this quote check; retain current assessments and group protections, no adds
+or independent leg changes.
+
+The **08:49:51** UMA refresh had valid positions retrieval, 37 tracked aliases /
+35 distinct Gamma markets and no alerts; main verified the saved JSON. The
+08:54 consistency report has six validated nonpositive groups, thirteen quote
+failures and 178 unquoted; no actionable candidate, partial/non-atomic coverage.
+All four monitors remain live, latest news alert unchanged. Available space is
+about **515 MiB at 08:55**, close to the existing warning threshold; the capacity
+request and hourly guard remain active. Updated README, journal and ordinary
+bankroll cache only. No financial action, prior, schedule, cleanup or Telegram.
