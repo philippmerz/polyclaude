@@ -1,4 +1,4 @@
-"""Regressions for scheduled-prompt continuation contracts."""
+"""Regressions for bounded scheduled-prompt contracts."""
 
 from __future__ import annotations
 
@@ -69,29 +69,44 @@ def _run(script: Path, prompt: str, env: dict[str, str]) -> subprocess.Completed
     )
 
 
-def test_scheduled_prompts_append_manual_cancel_only_goal_contract(tmp_path: Path) -> None:
+def test_scheduled_prompts_append_bounded_run_contract(tmp_path: Path) -> None:
     script, captured, env = _fixture(tmp_path)
 
     result = _run(script, "Cron tick 20260828T140001Z. Run check-in.", env)
 
     assert result.returncode == 0, result.stderr
     payload = captured.read_text()
-    assert "CONTINUATION CONTRACT" in payload
-    assert "automatic continuation turns" in payload
-    assert "until the user manually cancels it" in payload
+    assert "BOUNDED RUN CONTRACT" in payload
+    assert "complete the concrete necessary follow-up or verification" in payload
+    assert "cron and event watchers handle waiting" in payload
+    assert "Do not create or maintain an indefinite durable goal" in payload
+    assert (
+        "This supersedes earlier scheduled instructions requiring perpetual goal continuation "
+        "(operator-authorized 2026-09-08)."
+    ) in payload
+    assert "automatic continuation turns" not in payload
+    assert "maximum expected ROI" not in payload
+    assert "until the user manually cancels it" not in payload
+    assert "durable ROI-goal" not in payload
     assert "RESOURCE SNAPSHOT" in payload
     assert "codex: 32% used / 68% headroom" in payload
     assert "RESOURCE CONTRACT" in payload
     assert "check_usage.sh --brief" in payload
     assert "do not inject /usage" in payload
     inject_log = (tmp_path / "notes" / "inject_log.md").read_text()
-    assert "durable ROI-goal continuation contract appended" in inject_log
+    assert "bounded scheduled-run contract appended" in inject_log
+    assert "durable ROI-goal continuation contract appended" not in inject_log
     assert "direct Codex quota-headroom contract appended" in inject_log
 
 
 def test_daily_checkin_includes_direct_quota_preflight() -> None:
     prompt_source = (REPO / "scripts" / "daily_checkin.sh").read_text()
 
+    assert "BOUNDED RUN CONTRACT" in prompt_source
+    assert "Do not create or maintain an indefinite durable goal" in prompt_source
+    assert "Cron and event watchers handle waiting" in prompt_source
+    assert "CONTINUATION CONTRACT:" not in prompt_source
+    assert "create one whose objective is to keep operating polyclaude" not in prompt_source
     assert "RESOURCE PRE-FLIGHT" in prompt_source
     assert "./scripts/check_usage.sh --brief" in prompt_source
     assert "do not inject `/usage`" in prompt_source
@@ -113,7 +128,7 @@ def test_failed_usage_probe_never_blocks_scheduled_risk_prompt(tmp_path: Path) -
     assert "unavailable (probe failed" in payload
 
 
-def test_periodic_prompt_also_restores_goal_but_ordinary_prompt_does_not(
+def test_periodic_prompt_also_gets_bounded_contract_but_ordinary_prompt_does_not(
     tmp_path: Path,
 ) -> None:
     script, captured, env = _fixture(tmp_path)
@@ -123,14 +138,20 @@ def test_periodic_prompt_also_restores_goal_but_ordinary_prompt_does_not(
         "Periodic check: anything else to take care of?",
         env,
     )
+    sunday = _run(script, "Sunday weekly long-term review.", env)
     ordinary = _run(script, "operator asked a normal question", env)
 
-    assert periodic.returncode == ordinary.returncode == 0
+    assert periodic.returncode == sunday.returncode == ordinary.returncode == 0
     payload = captured.read_text()
-    assert payload.count("CONTINUATION CONTRACT") == 1
+    assert payload.count("BOUNDED RUN CONTRACT") == 2
+    assert "automatic continuation turns" not in payload
+    assert "maximum expected ROI" not in payload
+    assert "until the user manually cancels it" not in payload
 
 
-def test_continuation_is_never_auto_skipped_for_idle_last_reply(tmp_path: Path) -> None:
+def test_unscheduled_check_prompt_is_delivered_even_when_last_reply_is_idle(
+    tmp_path: Path,
+) -> None:
     script, captured, env = _fixture(tmp_path)
 
     result = _run(script, "Continuation check: keep going", env)
@@ -149,7 +170,7 @@ def test_queue_failure_is_preserved_and_logged(tmp_path: Path) -> None:
     assert result.returncode == 76
     assert "queue failed" in result.stderr
     assert "inject FAILED" in (tmp_path / "notes" / "inject_log.md").read_text()
-    assert "CONTINUATION CONTRACT" in captured.read_text()
+    assert "BOUNDED RUN CONTRACT" in captured.read_text()
 
 
 def test_operator_followup_help_never_schedules_literal_help(tmp_path: Path) -> None:

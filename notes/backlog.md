@@ -2,21 +2,22 @@
 
 Operator-maintained list of pending items. One line per item. Date-tagged. Closed items are deleted (git history preserves).
 
-Reviewed at end of every turn + by the cron tick (step 4: decision tracker review).
+Reviewed during scheduled checks and when relevant to a concrete task; do not start another turn merely to reread this list.
 
 ---
 
 ## Active
 
-> **Continuation discipline (updated 2026-08-28 for Codex).** Every scheduled cron/periodic prompt
-> carries an explicit durable-goal contract. Keep that ROI goal active through automatic continuation
-> turns; a quiet tick is not a completion condition. Only the user manually cancels the goal. For a
-> runtime without durable-goal support, use the legacy one-shot fallback:
-> ```bash
-> ./scripts/operator_followup.sh "anything else on <topic>?" 20
-> ```
-> It fires after 20 min via `inject_prompt.sh`; `cancel_followup.sh` cancels that legacy timer. Periodic
-> 6/10/18/22 UTC cron checks remain the host-level backstop.
+> **Bounded-run discipline (operator-authorized 2026-09-08; supersedes Aug-28 continuation contract).**
+> Execute each due checklist or event-triggered review once, finish concrete necessary follow-up and
+> verification, then end the turn. Do not create or maintain an indefinite ROI goal, invent more work
+> to keep running, poll/sleep until the next tick, or schedule idle "anything else?" follow-ups.
+> The former durable goal was explicitly cleared with the operator's authorization; historical
+> prompts and journal entries requiring its recreation are superseded. Cron and the existing news,
+> opportunity and health daemons handle waiting. Full 02/14 UTC checks, light 06/10/18/22 checks,
+> weekly review and catalyst reminders remain scheduled. Required safety checks are unchanged.
+> `operator_followup.sh` is only for a concrete, time-bound pending task when an existing reminder
+> does not cover it; never use it to perpetuate a general research loop.
 
 - **2026-09-08 [disk capacity — recovered by authorized scoped housekeeping; hourly guard retained]** — VM expansion is explicitly rejected. After the ledger recovery, authorized manual deletion removed seven obsolete user-owned artifacts (Claude native versions 2.1.170/2.1.219 and five study JSONL files: listing census Jul open/closed, census Apr closed, implication open universe/pairs), **692,874,130 bytes** total; no archives were made. Free space rose from **516,726,784** to **1,209,585,664 bytes** (~1.126 GiB) at 10:23 UTC. Scripts/small results were preserved, current CLI `--version` passed, all four daemon PIDs remained unchanged/live, and key state JSONs were valid. Private histories/inbox/credentials and active logs remain untouched. The old active operator log (~115.7 MB) is non-O_APPEND: do not copy-truncate or rotate it while live; no log policy/restart was implemented. Continue manual, narrowly scoped housekeeping only; heartbeat warning remains <512 MiB and critical <128 MiB, with no automatic deletion.
 

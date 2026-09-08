@@ -14678,3 +14678,38 @@ existing hourly warning <512 MiB / critical <128 MiB guard remains active.
 This restores headroom now, not a guarantee that continuing log growth will
 never require more housekeeping. Updated README/backlog with no-expansion
 constraint and scoped cleanup; no trading, order, prior or schedule changes.
+
+## 2026-09-08 10:47 UTC — operator-authorized switch to bounded check-ins
+
+The operator questioned whether the abstract ROI goal was generating unnecessary
+continuation turns and authorized choosing the sensible operating cadence.
+This explicitly supersedes the Aug-28 keep-active/recreate-goal contract:
+retain scheduled and event-triggered checks, finish concrete due work and its
+verification, then stop. No idle LLM polling, indefinite research goal, or
+self-perpetuating "anything else?" follow-ups. Safety checks remain required.
+
+Changed the actual scheduled prompt producer, `scripts/inject_prompt.sh`, to
+append a bounded-run contract while retaining quota telemetry and exact-one
+queue error semantics. Added the same stopping rule to the headless checklist;
+updated README/backlog and the legacy timer's usage comments. Historical
+journal/charter text remains history, not the current cadence instruction.
+
+The existing indefinite goal was cleared through the documented app-server
+`thread/goal/clear` control after matching its exact thread, objective and active
+status. Response: `cleared: true`; both the API reread and this thread's native
+`get_goal` returned null. No goal was falsely marked complete or blocked, and
+no conversational slash-command injection was used. The short-lived control
+process created no model turn and exited; the operator was not restarted.
+Official API reference: https://learn.chatgpt.com/docs/app-server#manage-a-thread-goal
+
+Crontab was left untouched: full 02/14 UTC checks, periodic 06/10/18/22 checks,
+Sunday review, hourly arb scan, keepalive/reboot daemons and Sep-9 Apple
+18:30 UTC reminder remain. There was no pending legacy follow-up PID file.
+The operator, cron and all four monitor PIDs were still live and unchanged at
+verification. No portfolio refresh, trade, order or prior change was performed
+for this cadence task.
+
+Verification: 17 focused prompt/dispatch/private-runtime regression tests passed
+with mocked dispatch; shell syntax and `git diff --check` passed. No live test
+prompt was queued. The temporary generated API schemas were removed after use.
+Existing dispatcher-owned edits to `notes/inject_log.md` were left unstaged.

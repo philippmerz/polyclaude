@@ -1,11 +1,11 @@
 #!/bin/bash
 # Schedule a self-injected follow-up prompt after a delay.
 #
-# Used by the operator agent at the end of any turn where
-# the current thread isn't fully resolved. The follow-up fires after the
-# delay and submits the prompt to the operator queue via inject_prompt.sh.
-# When the follow-up fires, the operator decides whether to schedule
-# another (continuing the loop) or call cancel_followup.sh (resolving).
+# Only for a concrete time-bound pending task that an existing cron or event
+# reminder does not cover. Never schedule idle "anything else?" prompts or
+# perpetuate an indefinite research loop (operator directive 2026-09-08).
+# The follow-up fires once after the delay and submits the prompt to the
+# operator queue via inject_prompt.sh. End after the bounded task is done.
 #
 # Only one followup is queued at a time — re-running this cancels the prior
 # one. PID is tracked in notes/.followup_pid (gitignored).

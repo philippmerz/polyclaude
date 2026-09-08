@@ -32,7 +32,7 @@ Official tool-enabled OpenAI and Google results already clear the held HLE thres
 
 **Reminders and balances:** Apple’s official keynote is Sep 9 at 17:00 UTC, with the one-shot review armed for 18:30; AVAV research is scheduled for Sep 9 at 22:00 UTC per the backlog. There is no economic Hormuz exposure beyond **0.003571** dust; Iran–Oman is closed at a $5.03 loss already reflected in settled P&L. The 09:57 balances round to **$2.12 pUSD**, **$16.11 Polygon aUSDC.e**, and **$7.87 Arbitrum aUSDC**. The ledger has 54 records (22 scored forecast rows, 16 matched-baseline rows after the 06:08 exact-identity Kuwait NO grade; neither count represents independent outcomes). First forecasts cover 16 distinct questions, with shared-event dependence still material. No original forecast or price changed. Tests last passed at **643 total / 156 money-math checks**, including 38 isolated calibration tests and three missing-quote watchlist-reporting regressions; this update changes no code. The earlier disk-full ledger truncation was fully recovered and field-verified. With VM expansion explicitly rejected, authorized manual housekeeping on Sep 8 removed seven obsolete user-owned artifacts (the two superseded Claude native versions and five study JSONL files), **692,874,130 bytes** total; free space rose from **516,726,784** to **1,209,585,664 bytes** (~**1.126 GiB**) at 10:23 UTC. No archives were made; scripts and small results were preserved, the current CLI `--version` passed, all four daemon PIDs remained unchanged/live, and key state JSONs were valid. Private histories/inbox/credentials and active logs were untouched. The old active operator log (~115.7 MB) is non-O_APPEND and must not be copy-truncated or rotated while live; no log policy or restart was implemented. The hourly heartbeat guard remains warning below 512 MiB and critical below 128 MiB; future cleanup is manual and narrowly scoped.
 
-**Operating model (operator directive 2026-07-15): continuous research loop** — research until a profitable opportunity is found, report, invest, repeat; 24/7 `opportunity_watch.py` daemon between ticks. Five population edges falsified this month at $0 deployed (short-dated fade buckets N=836, new-listing mispricing N=833, UMA dispute-window N=2,246, cross-event implication arbs 4,575 pairs) — every falsification shipped a permanent gate upgrade (fee-aware EV, dispute priors, sibling-market routing). Surviving edge = case-by-case catalyst-gated instance mispricing (doctrine §3.1). Ostium's 2026-07-15 $18M oracle exploit: zero exposure (skeptic+champion had parked the planned OLP deposit — DEC-0040). Any Iran/war-adjacent entry must re-pull live conflict state; there is currently no economic Iran/Hormuz exposure beyond 0.003571 claim dust. Run `scripts/bankroll.py` + `scripts/polyclaude_status.py` for live figures.
+**Operating model (operator-authorized update 2026-09-08): bounded, event-driven work** — cron and 24/7 news/opportunity/health daemons trigger concrete reviews; complete the due work and verification, then stop. No indefinite ROI goal, idle LLM polling or self-perpetuating "anything else?" loop. This supersedes the July continuous-research and August automatic-goal-continuation instructions without changing the ROI mandate or safety checks. Five population edges falsified this month at $0 deployed (short-dated fade buckets N=836, new-listing mispricing N=833, UMA dispute-window N=2,246, cross-event implication arbs 4,575 pairs) — every falsification shipped a permanent gate upgrade (fee-aware EV, dispute priors, sibling-market routing). Surviving edge = case-by-case catalyst-gated instance mispricing (doctrine §3.1). Ostium's 2026-07-15 $18M oracle exploit: zero exposure (skeptic+champion had parked the planned OLP deposit — DEC-0040). Any Iran/war-adjacent entry must re-pull live conflict state; there is currently no economic Iran/Hormuz exposure beyond 0.003571 claim dust. Run `scripts/bankroll.py` + `scripts/polyclaude_status.py` for live figures.
 
 Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, watchlist, UMA, Kelly portfolio constrained, news alerts).
 
@@ -103,19 +103,20 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 - `ledger_calibration.py` — exact-identity/final-outcome ledger grading; own forecast scores and matched market-baseline scores have separate counts. Missing quotes stay missing, and row counts are not independent-sample counts. Saves write/fsync a same-directory temporary file before atomic replacement, preserving the previous ledger on pre-replacement failures; this is not concurrent-writer locking or a directory-fsync durability guarantee.
 
 ### Operator-loop infra
-- Scheduled cron/periodic prompts carry a durable Codex ROI-goal contract: continuation turns remain
-  active until the user manually cancels the goal. This replaces the provider-specific Claude
-  `UserPromptSubmit` hook lost in the 2026-08-26 runtime migration.
+- Scheduled cron/periodic prompts carry a bounded-run contract: finish the due checks and concrete
+  follow-up, then end. The operator authorized clearing the indefinite ROI goal on 2026-09-08;
+  scheduled prompts must not recreate it. Cron and event daemons handle waiting between runs.
 - `check_usage.sh` / `codex_usage.py` — read main-Codex and model-specific quota headroom directly
   through the supported, read-only app-server account RPC. Scheduled prompts run this before
   discretionary research; it never injects `/usage` or consumes a conversational turn merely to
   inspect quota. Keep the primary model for portfolio/risk judgment and use cheaper subagents for
   bounded routine work; quota pressure never overrides safety checks or a thesis-break exit.
-- `operator_followup.sh` / `cancel_followup.sh` — legacy one-shot delayed continuation fallback via
-  nohup-sleep + PID tracking for runtimes without durable-goal support.
+- `operator_followup.sh` / `cancel_followup.sh` — one-shot delayed reminder via nohup-sleep + PID
+  tracking, only for a concrete time-bound pending task not covered by an existing reminder; never
+  an idle research-loop fallback.
 - `inject_prompt.sh` — unified ordered-queue path for cron / followup / news_watcher prompts; appends
-  the durable-goal contract to scheduled in-chat seeds and never auto-cancels merely because the last
-  reply was idle.
+  the bounded-run and quota-headroom contracts to scheduled in-chat seeds. A quiet previous reply
+  does not suppress a newly due check or alert.
 - `operator_start.sh` — idempotent starter for the single long-lived operator session.
 - `telegram.py` / `telegram_listener.py` — operator interface.
 
