@@ -14536,3 +14536,38 @@ All four monitors remain live, latest news alert unchanged. Available space is
 about **515 MiB at 08:55**, close to the existing warning threshold; the capacity
 request and hourly guard remain active. Updated README, journal and ordinary
 bankroll cache only. No financial action, prior, schedule, cleanup or Telegram.
+
+### 09:15 UTC — normal low-disk warning verified; monitors remain live
+
+Main first measured the renewed warning-level breach at **09:07:04.759**:
+**536,711,168 bytes / 511.85 MiB**, below 512 MiB but not the 128 MiB critical
+threshold. Followed the same live heartbeat PID **4110253** through its normal
+hourly poll; a cheaper worker checked independently. At **09:14:45.813286** it
+saved valid state and advanced `disk_space_warning` from **1788848082** (06:14)
+to **1788858885** (09:14:45), matching the log's **510.4 MiB** warning. No
+critical/probe-error keys or poll error; the other alert timestamps are unchanged.
+Main's **09:15:22.952** read measured **510.25 MiB**. No forced poll, restart,
+manual duplicate notification or cleanup. This confirms normal warning emission,
+not operator receipt or resolution of the capacity request.
+
+Earlier metadata-only triage covered plain regular logs directly in `logs/` and
+`logs/operator/`, without reading contents. Recurring scan logs remain in use by
+their workflows even between open descriptors; preserve them. The largest old
+inactive operator log is **2,555,754 bytes**, with no visible open descriptor or
+archive collision, but too small to materially relieve capacity. The larger
+active Sep-7 operator log remains open by PID **3987530** and was untouched.
+No worthwhile additional archival action was established in those directories;
+private transcripts/inbox storage were not inspected. Durable disk expansion or
+authorized root-owned cleanup is still needed; updated the backlog and README.
+
+The bounded **08:59:22** [HLE source check](https://agi.safe.ai/) passed all three
+expected model-family checks: ten rows, no additions/removals/changes in either
+accuracy or calibration columns versus Jan-15. Main independently read the live
+table. No claim about whole-page inactivity or resolver certainty; priors stay.
+Verified waits also followed scheduled consistency child **4165272** from live
+to missing/terminal. Its **09:10:16** report has three validated nonpositive
+groups, fifteen quote failures and 178 unquoted, zero actionable observations;
+partial/non-atomic coverage remains explicit. Both 09:09 pair checks report zero
+executable pairs. News saved valid state at **09:13:27** without a new alert.
+Four monitors remain live. No portfolio, order, prior or schedule changes;
+the 08:49 portfolio/UMA snapshots were not repeated. Continuation goal active.
