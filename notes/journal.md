@@ -13976,3 +13976,38 @@ on Sep-3 and 5.24% on Sep-4, with no later row in this retrieval. Neither strict
 threshold has been reached in that published sample; no separate already-known-
 YES entry follows from the source. No new prior, code, schedule, trade or
 Telegram. Existing watcher remains responsible for future re-crossings.
+
+### 03:28 UTC — distinct 10-year Treasury pair: fresh cost and carry fail
+
+Previous turn was a verified wait through the 03:22:40/41 pair cycle, both zero.
+The next log read found a new 03:23:24 monotonicity observation, +0.15pp below
+the 2pp notification floor. This is **not** the 30-year September pair above.
+Delegated exact identity/rule lookup; main re-read both contracts and current
+books. Event 79123, `how-low-will-10-year-treasury-yield-get-before-2027`:
+[677139 NO below 3.5%](https://gamma-api.polymarket.com/markets/677139) plus
+[677144 YES below 3.7%](https://gamma-api.polymarket.com/markets/677144).
+Both strict-lower-than tests share Nov-11 2025–Dec-31 2026 and the official
+Treasury Daily Par Yield Curve / 10 Yr source; the link's 2025 filter does not
+shorten the written window. No exact post-resolution payout time is promised.
+Both remain open/accepting/unproposed, fee rate .05 / exponent 1.
+
+At 03:26:48 UTC, identity/schema/freshness checks passed for both exact books
+(snapshot ages 2.1s/4.6s; still sequential, not atomic execution). Harder NO asks
+start .938 ×5, .939 ×5, .941 ×5; easier YES .059 ×90. Five equal shares cost
+**$5.01341875**, or **1.00268375 per $1 floor / −0.268375pp** after fees.
+Ten cost $10.03161825, twenty $20.10625125, thirty $30.19999825. No minimum-floor
+arbitrage is currently established; no full entry/funding/order path was invoked.
+
+Even the earlier rounded +0.15pp floor-only estimate would annualize to about
+**0.48%** over ~113.86 days using the optimistic Dec-31 00:00 UTC metadata date,
+versus the repo's **2.8139%** Polygon hurdle (cache fetched Sep-7 10:03:29 UTC,
+17 hours old, not a fresh RPC observation). Hurdle carry over that interval is
+~0.87%. This is the reserve-capital/policy benchmark, not a claim that existing
+pUSD can be costlessly unwrapped into Aave. Earlier payout or the pair's possible
+double payout would need a separately evidenced thesis; neither is assumed.
+No trade, probability/position/order change, new scanner, schedule or Telegram.
+
+Also retain the intervening 03:18 risk refresh: HLE's ten named-table rows and
+both score columns unchanged versus Jan-15 under the already-validated parser;
+35 unique Gamma markets refreshed without alerts and five unfilled LIVE SELLs,
+zero BUYs/Apple orders. No new bankroll quote was taken.
