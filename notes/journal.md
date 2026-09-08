@@ -14330,3 +14330,22 @@ about **547 MiB**, still above the warning threshold with a thin margin; the
 capacity request remains open. Updated README's stale below-threshold sentence,
 the portfolio snapshot and ordinary bankroll cache. No new trade, order, prior,
 schedule, cleanup or Telegram. The 06:31 UMA/orders/HLE checks were not repeated.
+
+### 07:15 UTC — scheduled heartbeat recovery checkpoint verified
+
+Followed the existing live heartbeat PID 4110253 through its scheduled hourly
+cycle, without forcing a poll. It saved valid JSON at **07:14:43.573**; the disk
+warning timestamp remains the confirmed 06:14 warning and no critical/probe-error
+key appeared. The heartbeat log contains no new disk warning or poll error.
+A contemporaneous read measured **542.0 MiB available**, above 512 MiB but with
+only about 30 MiB of margin. Updated the due backlog checkpoint; capacity stays
+open and the existing hourly guard / 10:00 periodic recheck remain in force.
+
+The preceding continuations were verified waits through live news/opportunity
+processes: news saved at 07:07:11 and 07:12:14 without new alerts. Main followed
+scheduled consistency child 4137704 to termination and read its 07:04:00 report:
+three validated nonpositive groups, fifteen quote failures and 190 unquoted,
+zero actionable observations. A cheaper worker classified twelve empty asks and
+three stale books; no new reported failure class. Partial, non-atomic coverage
+does not prove no edge elsewhere. No financial, prior, schedule, cleanup or code
+change and no Telegram. The 06:49 bankroll remains the latest quote. Goal active.
