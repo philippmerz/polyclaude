@@ -13701,3 +13701,92 @@ in the exact view plus effective cost <=0.20, or effective cost <0.04). Any futu
 entry also needs explicit AI correlation treatment and current caps. No held
 prior, limit, position, order, schedule, code or Telegram change. Documentation
 diff checked; the previously passing 567-test suite was not rerun for prose.
+
+## 2026-09-08 02:03 UTC — continuation / 02:00 checks: Apple price alert, no new entry
+
+Durable ROI goal remains active. Reviewed backlog and recent journal; finished
+the read-only check-in begun at 01:50 rather than duplicating those scans. Main
+retained portfolio/source judgment; cheaper workers handled discovery and health.
+Latest bankroll refresh at **02:01:42 is $192.15**, down **$6.34** from 01:04,
+mainly Apple/Gemini marks. Settled profit remains **+$14.44 (+8.5%)**. Gas deposits
+valued at $6.25 are excluded from trading P&L, not capital. Thirteen active PM
+rows cost $157.20, midpoint **$158.66**, depth/fee estimate **$151.62**, gap $7.04.
+The latter is a sequential estimate, not a synchronized fresh liquidation quote.
+Ostium remains empty; pUSD 2.115500 and Aave reserves (~$16.11 Polygon, ~$7.87
+Arbitrum) are unchanged apart from accrual. Authenticated orders at 01:52 returned
+200: five LIVE SELLs, all size_matched=0, zero BUYs and zero Apple orders.
+
+UMA at 01:52 emitted one Apple PRICE_MOVE: YES **0.620→0.675**, NO **0.380→0.325**.
+No proposal/dispute alert. Its low-volume heuristic did not establish quote noise:
+vol24 was $476 in the alert and about $1,100 in the direct follow-up. Main re-read
+[exact market 1499672](https://gamma-api.polymarket.com/markets/1499672), the
+[official store](https://www.apple.com/shop/buy-mac/macbook-pro) and
+[event notice](https://www.apple.com/apple-events/). No touchscreen retail
+configuration or product/date commitment surfaced; a bounded news check found no
+new qualifying availability evidence. Accessible old Bloomberg context was only
+February background, not fresh launch proof; main's direct article fetch was
+restricted. Current absence does not prove no 2026 release or explain the flow.
+
+Corrected backlog shorthand: the contract requires general-public purchasability,
+not a separate customer-shipment-by-Dec-31 condition. Preorders remain ambiguous;
+an unveiling alone is explicitly insufficient. Retain Apple p_no **0.65** and
+HOLD / NO ADD / NO FLIP. The 02:00:51 identity-checked NO book covered 49.005 shares
+at 0.32 x 0.3 then 0.31 x 48.705. Matching Gamma/compact fees (rate .04, exponent 1)
+give gross $15.19455, fees $0.41933118, net **$14.77521882**, versus raw **$31.85325**
+and 10pp-stressed **$26.95275** hold values. However, first fetch failed a 30-second
+freshness test at 122 seconds; a second no-cache request was 178 seconds old.
+These are indicative depth values, NOT freshness-verified executable proceeds.
+The discrepancy is recorded rather than silently relaxing the freshness gate.
+
+Gemini ≥50's NO mark also moved, from the earlier .268 to .213 in the final
+portfolio refresh. Re-ran the [named HLE table](https://agi.safe.ai/) comparison
+at 02:00: all ten rows and both score columns remain identical to Jan-15; the
+June→December 2025 control detects additions, removals and a score edit. This is
+not proof of institutional inactivity or how UMA will interpret official lab
+results. No held probability, position or order changed. Exit/marginal screens
+found no sell-above-fair or below-hurdle flags under existing priors; both complete
+groups remain protected. The Kelly run using $192.57 superseded an earlier
+parallel run's stale $198.49 cache; neither ranking overrides the binding cluster
+cap or no-add gates. At final bankroll $192.15 the 30% ceiling is $57.645, below
+last verified configured gross exposure $63.2289. Do not sell just to create
+headroom. Updated Apple assessment prose, not probabilities or limits.
+
+Read-only resolution check at sizeThreshold=0 found only zero-value redeemable
+YES rows (Iran–Oman 31 shares and old July Fed 0.247-share dust), no indexed
+positive payout. No redemption submitted. Hormuz-normal remains pending/de-indexed
+with only .003571 NO dust; overdue DEC-0077/0081/0084/0086 were not falsely graded.
+Position-state audit CLEAN (13 indexed + one de-indexed claim); crux coverage
+silent. Follow-up UMA refreshed 35 unique Gamma IDs across 37 cache aliases,
+positions_fetch_ok=true, zero **additional** alerts after the Apple baseline.
+
+Bounded discovery/scan evidence retained for this tick:
+
+- Thin pass 01:50:55: 33,815 active markets, 1,572 hurdle-clearing rows; normal
+  01:53:19: 999 fetched, 80 displayed. CLARITY id1163699 was already in July's
+  research; BOJ id2589857 had no verified new-instance fact. No genuinely new
+  actionable candidate established. Win-assumed APY is not expected edge.
+- Sports: 67 screened, three consensus comparisons, YES deltas -3.6/-2.8/-1.5pp.
+  These are not zero gaps; the opposite-side margins still lack independently
+  verified, fee/stress-clearing edge. Macro: six rows, no consensus inference.
+  Watchlist: zero trigger hits or auto-revets.
+- Event monotonicity: 1,233 events / 978 multi-market; two midpoint leads, live
+  Hormuz/Treasury net edges -0.20/-0.08pp. No positive observation in that scope.
+- Consistency: incomplete 5,006-market slice, 3,329 validated neg-risk markets;
+  17 live groups requested, four quoted, 13 quote failures. Zero positive basket
+  observations; not an exchange-wide all-clear. Favorite fade hit its 1,000-market
+  cap, walked 23 / displayed eight; falsified population hints justify no entry.
+
+At 01:59 exactly one live absolute-path daemon each: heartbeat 1806213, Telegram
+1806864, opportunity 2349187, news 2836158; every start postdates script mtime.
+Opportunity state advanced to 01:58:38; latest completed pair cycle 01:47:56/57
+had zero executable pairs. No new news alert since the already-reviewed Sep-7
+21:46 item. No restarts or schedule changes. Apple Sep-9 17:00 event / 18:30
+one-shot and AVAV Sep-9 22:00 research gate remain armed. Weekly digest Sep-6 and
+P&L Sep-4 are current; monthly drill/fee check is due Sep-12, not now. No unrelated
+backlog build gate fired. README refreshed; routine dispatcher changes to
+inject_log are left separate. This notes-only update does not require rerunning
+the previously passing 567 tests / 156 money-math checks.
+JSON/prose-only comparison confirms all probabilities, limits and other prior
+fields unchanged; diff whitespace and live state audit pass. Sent one material
+Telegram summary (message 913), including both PM midpoint and qualified depth
+estimate. No financial transaction or schedule change was made.
