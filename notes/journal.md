@@ -14713,3 +14713,82 @@ Verification: 17 focused prompt/dispatch/private-runtime regression tests passed
 with mocked dispatch; shell syntax and `git diff --check` passed. No live test
 prompt was queued. The temporary generated API schemas were removed after use.
 Existing dispatcher-owned edits to `notes/inject_log.md` were left unstaged.
+
+## 2026-09-08 14:00 UTC — bounded scheduled check; net liquidation below trading capital
+
+**Performance first:** authoritative `bankroll.py` total **$180.24 at 14:01:55**,
+PM midpoint **$146.78**, indicative fee/depth net **$139.05**. Replacing only
+that PM component gives whole-account net liquidation **~$172.51**. Excluding
+**$6.22 gas tokens**, trading value is **~$166.29 versus $170 contributed:
+−$3.71 (−2.18%) before VM/other operating costs**. These use rounded outputs;
+sequential/stale quotes and withdrawal/transfer costs prevent treating them as
+guaranteed executable cash. Marked total is down $7.16 from 09:57 / $1.87 from
+the 11:00 operator report; indicative net is down ~$2.08 versus that report.
+Settled **+$14.44** is outweighed by open liquidation P&L **−$18.15**; marked
+unrealized is −$10.42. Updated README and the doctrine's reporting paragraphs
+to preserve the operator's whole-account-first correction. No strategy, prior,
+entry/exit gate or sizing parameter changed; legacy CLI output is unchanged.
+
+**State/risk checks:** positions, both wallets, Ostium status/diff, bankroll,
+UMA, crux coverage, marginal APY, exit analysis, constrained Kelly, watchlist,
+state audit and pending decisions completed. Thirteen active PM rows cost
+$157.20; pUSD/Polygon Aave/Arbitrum Aave remain ~$2.12/$16.11/$7.87. Ostium has
+zero open trades. Authenticated orders: five LIVE SELLs, matched size zero on
+each, no BUYs/Apple orders. Redemption dry-run: zero winning redeemables; the
+losing Iran–Oman YES row is skipped. No broadcast or financial writes.
+State hygiene refreshed only the claim date, with 13 indexed plus one archived
+claim and no pruned holds. Four overdue Hormuz decisions still await actual
+finality, not a price-based grade. No watchlist hit/re-vet or crux gap.
+
+Required follow-up verified the missing full-depth diagnostic: **14:05:55–14:06:00**,
+13/13 active quantities match the pre-tick committed claims within 1e-6 and all
+Gamma condition/token identities match. Thirteen complete walks, **zero empty
+books/unfilled shares/failures**, total **$138.89769104 net**; four books >60s
+old (Gemini debut 120s, Apple 944s, Greenland 137s, OpenAI ≥50 141s). Components:
+Apple $5.44676162; four HLE legs $32.91460731; MetaMask $44.45612211; Duma $11.78;
+Trump/Greenland $44.3002. This later observation is not a replacement for the
+authoritative bankroll snapshot. All individual/group exit verdicts remain HOLD;
+Duma's union prior .68 still fails the ≥.75 add gate, and AI-cluster no-add
+limits remain. Kelly deficits do not override these gates or validate priors.
+
+**Catalysts/news:** no saved news after the 10:47 journal entry or fresh
+opportunity alert. UMA successfully retrieved positions and flagged Apple's
+YES .765→.855 (+9pp). The exact Apple criteria are unchanged; NO Gamma .145,
+24h volume ~$1,506, book .12/.17. Its decline is unexplained, **not assumed
+midpoint noise**. [Apple's Mac news](https://www.apple.com/newsroom/topics/mac/)
+and [Pro specifications](https://www.apple.com/macbook-pro/specs/) supply no new
+qualifying purchase commitment; [existing timing reporting](https://www.macworld.com/article/2931833/touchscreen-macbook-pro-m6-design-processor-specs-release.html)
+still spans late 2026/early 2027. Absence today does not prove year-end NO.
+The validated [HLE table](https://agi.safe.ai/) still matches Jan-15 across
+all ten model rows and both score columns; expected-family coverage passes.
+The [OpenAI launch evidence](https://openai.com/index/gpt-6-astra/) remains
+adverse capability evidence already reflected in priors, not a new board row.
+[VCIOM](https://wciom.ru/) still displays Aug-30's 37.2% United Russia reading.
+[Reuters' Iceland/map report](https://www.investing.com/news/world-news/iceland-summons-us-ambassador-after-trump-posts-map-showing-island-under-american-flag-4890870)
+is diplomatic rhetoric, not evidence of the binding transfer/exclusive-control
+conditions re-read on the exact Greenland contract. No new verified thesis
+break or prior change; stored hold estimates remain unproven.
+
+**Prospecting:** all required scripts completed by 14:06:44. Default discovery
+fetched 998 active markets/published 80 rows; thin-tail published 1,585 filtered
+rows from its capped 20-page events scope. Neither artifact preserves createdAt,
+so this is not a verified census of listings newly active since 02:00. Top
+short-dated non-sports leads were September Fed −25bp NO, Israel-airspace YES,
+and Fed no-change NO. Near-$1 carry alone supplies no measured tail probability;
+the other Fed side has no verified current consensus edge. No entry prior was
+invented from the ranking. Sports: 79 filtered, required top-three consensus
+deltas −1.9/−0.5/−1.5pp; none meets >3pp. Macro: six visibility-only rows.
+Monotonicity: one midpoint violation, no usable book/zero executable hits.
+Consistency: 5,000-market capped slice, ten groups quoted, zero provisional
+positives, nine quote failures and 179 unquoted structural groups—**incomplete,
+not exchange-wide zero**. Nine favorite-fade leads remain unsupported population
+hints, not trade edges. No new qualified entry or decision action.
+
+**Operations/closeout:** all four daemons exactly one/non-stale, disk ~1.2 GB
+available; schedules unchanged, no legacy follow-up PID. Weekly P&L actually
+covers Aug-28→Sep-4 (last heading uses `#`); not overdue. World-state Sep-6
+16:02 is current; methodology experiment remains concluded. Apple Sep-9 18:30
+and AVAV 22:00 reviews remain scheduled; no idle continuation/goal created.
+Material deterioration summary sent once to Telegram, **message 921**. Updated
+README/journal and normal bankroll/hurdle/claim caches; no daemon code changed
+or restart required. Dispatcher-owned inject-log edits remain excluded.

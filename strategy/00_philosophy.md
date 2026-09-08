@@ -14,10 +14,15 @@ never a result. Concretely, and each of these changes a decision:
    paper gain into a smaller real one. **Evaluation timing clarified 2026-08-28:** normal Dec-31
    resolutions/redemptions arriving in the first days of January count toward the start-of-2027
    evaluation. Never manufacture a Dec-31 cash print by crossing a spread at midnight.
-2. **A marked gain is not progress and is not reportable as such.** bankroll.py prints REALIZED
-   (settled cash) as the headline with BOTH unrealized bases beneath it; the weekly P&L leads with
-   realized. Identity: realized = (bankroll − deposits) − unrealized, so fees and gas correctly
-   count against it.
+2. **Report the whole account, not the winning subset (operator correction 2026-09-08).**
+   Lead current performance reports with indicative whole-account net liquidation versus
+   contributed capital, separating gas-token value and disclosing VM/other operating costs.
+   Show authoritative marked bankroll alongside it; neither is settled cash. Realized P&L is
+   a secondary decomposition, never evidence of success while open losses outweigh it.
+   State depth, fee and quote-freshness limitations: sequential estimates are not guaranteed
+   executable proceeds. This supersedes the earlier realized-first reporting instruction;
+   it changes no prior, entry/exit rule, or evaluation date. `bankroll.py` remains the only
+   authoritative total even where its legacy display still prints realized first.
 3. **Premium-to-fair resting sells are the reconciliation**, not a contradiction: they convert
    marks to settled cash at ABOVE fair, fee-free, with a no-fill costing nothing. That is why the
    program exists on every thin leg (see the hidden-info refinement in 01_lessons.md).
@@ -29,7 +34,7 @@ never a result. Concretely, and each of these changes a decision:
    limit on the instinct to mechanise: once a number becomes the target, the number gets optimised
    rather than the goal, and a human verdict is the one thing a good three weeks cannot game. So
    reports INFORM the call and never make it — no "on track" verdicts. Weekly P&L leads with
-   realized, then what drove it, then **what I think is fragile**, which is the part judgment needs
+   whole-account performance, then what drove it, then **what I think is fragile**, which is the part judgment needs
    and no metric supplies. (Live example of that third part: 2 of 3 realized wins came from the
    announce template — narrow, possibly closing; the largest open leg moved 18pp against me for
    unidentified reasons; the HLE cluster rests on ONE clause about a leaderboard staying stale.)
