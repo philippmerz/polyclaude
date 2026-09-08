@@ -55,3 +55,52 @@ matched rows, zero verified IDENTICAL, execution_ready=false. Its PM side covers
 only the first 3,000 active volume-ranked markets. The displayed positive
 midpoint leads were DIFFERENT propositions, not transferable hedges. Do not call
 this an exchange-wide zero or open a venue/fund a wallet to pursue these rows.
+
+## 02:36–02:43 follow-up: Chicago housing, no calendar edge established
+
+Read [exact market 2760585](https://gamma-api.polymarket.com/markets/2760585),
+created Jul-1 19:56:40.929967 UTC. Condition
+`0xb2ad342889b7f07217f3740344ae50b9eb645365e801a7b5396093d64146cb2a`;
+slug `will-the-median-home-value-in-the-chicago-metro-be-between-340000-and-345000-on-september-30-20260630182304849`.
+At 02:42 UTC, YES/NO metadata .285/.715, liquidity ~$639, vol24 ~$407,
+structured fee rate .05 / exponent 1; open and no UMA proposal. No books walked
+and these marks are not executable entry prices.
+
+Despite the median-home-value headline, the literal measurement is Chicago
+Metro all-property-type **Parcl_ID 2899845 Sales Price Index × 1,500 sqft** on
+Sep-30. It is not Zillow, Case-Shiller, a generic regional median transaction
+price, or Chicago's year-over-year percentage change. Boundaries go to the
+higher bracket: algebraically the $340k–$345k range maps to PPSF
+**[226.666666…, 230)** before any source rounding, which remains unverified.
+The rules say Sep-30 data are expected that day, but explicitly allow publication
+through **Oct-10 23:59 ET**; only absence of that dated observation by the latter
+deadline invokes the most-recently-published-data fallback.
+
+[Parcl's dataset page](https://www.parcllabs.com/datasets/sale-price-index)
+describes a daily USD/sqft series. Direct HTTP visible HTML also explicitly
+labels it pricefeed v3; that sentence was absent from the web reader's extracted
+page, so search-snippet-only evidence was independently checked. The generic
+[API data overview](https://docs.parcllabs.com/data_overview.html) says preceding-
+day daily observations are available each afternoon. That is not a guaranteed
+publication timestamp for this contract, but it does not support the suspected
+monthly-release mismatch. Monthly revisions are explicitly documented; daily
+historical finality and any first-versus-revised print settlement policy remain
+unverified. The older [price-feed whitepaper](https://www.parcllabs.com/articles/parcl-labs-price-feed-whitepaper)
+describes filtered moving medians, dynamic windows, timely-data blending and
+seven-day smoothing, not same-day closed-sale sampling. Do not assume every
+legacy methodological detail carries unchanged into the current feed.
+
+The named [resolution page /54](https://www.parcllabs.com/prediction-market-resolutions/54)
+redirects app→www and returns HTTP 200 with visible **Market not found** here.
+The live [official directory](https://www.parcllabs.com/prediction-market-resolutions)
+still lists Chicago Sep-30 and links to /54: no replacement URL found. Its
+resolved Chicago June-30 control /46 also returns Market not found. This is an
+observed detail-page retrieval limit, not proof the entire source is unavailable
+or grounds to activate the October fallback now. No exact current Chicago PPSF
+level or dated history was recovered. The homepage's YoY growth cannot supply it.
+
+**Pass pending actual measurement, not an opportunity recommendation.** No
+numerical prior, calendar arbitrage, or robust entry edge was established. Reopen
+only with the exact dated series and publication/revision evidence; no paid
+access, new browser infrastructure, account setup or repeated polling for this
+unmeasured optional lead. No orders, trades, priors or portfolio state changed.

@@ -13886,3 +13886,25 @@ No new capital candidate, trade, probability/position/order change, code change,
 restart, schedule change or Telegram. No portfolio refresh was needed only
 minutes after the full tick; prior timestamped figures were not relabeled fresh.
 Notes-only diff checked; the 625 tests / 156 money checks were not rerun for prose.
+
+## 2026-09-08 02:43 UTC — continuation: Chicago source/calendar hypothesis checked
+
+Goal remains active. Previous turn was a verified wait: live opportunity process
+advanced to 02:35:08/09 with both watched pairs zero executable. Reused the saved
+thin shortlist and 02:36 resource probe (90% main headroom); delegated bounded
+Parcl methodology/cadence research while main read exact rules and source routes.
+
+Chicago Sep-30 market 2760585 measures Parcl_ID 2899845 PPSF × 1,500, not a generic
+median house price. The daily feed and explicit Oct-10 fallback window do not
+establish the hypothesized monthly-release/calendar edge. The official directory
+still links to /54, but that detail page and a resolved June control /46 both
+return HTTP 200 with visible Market not found here. This is a retrieval limit,
+not proof of permanent source loss or permission to use the fallback early.
+Current exact PPSF/history and daily revision/finality policy remain unverified.
+No honest prior or entry case was established; banked rules and next evidence
+gate in `research/2026-09-08-thin-market-source-triage.md`, without adding a new
+infrastructure project or unconditional polling task to the backlog.
+
+No new trade, order, probability, position, code or schedule change. No duplicate
+Telegram after the earlier material tick summary 913. The 02:01:42 bankroll
+measurement remains $192.15; no fresh portfolio mark is implied by this research.
