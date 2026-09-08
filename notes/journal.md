@@ -14429,3 +14429,35 @@ at 07:50, still only narrowly above the 512 MiB warning threshold; the hourly
 guard and open capacity request remain in force. Updated README and ordinary
 bankroll cache, not probabilities, quantities, orders, schedules or code.
 No financial action, cleanup or Telegram. Continuation goal remains active.
+
+### 08:15 UTC — hourly capacity checkpoint; feed and HLE checks banked
+
+Continued verified waits on live news/opportunity processes and heartbeat PID
+**4110253**. A cheaper worker followed the unchanged heartbeat process through
+its normal hourly poll; main independently checked the result. State advanced
+to **08:14:44.505206 UTC**, valid JSON. The sole disk alert remains the confirmed
+06:14 warning (`1788848082`); no new warning, critical/probe-error key or log error.
+The heartbeat log is unchanged since 06:14. A contemporaneous read at **08:15**
+measured **526.2 MiB free**, above 512 MiB with only 14.2 MiB of margin. This is
+not durable capacity recovery; the hourly guard and existing 10:00 periodic check
+remain in force. No forced poll, restart, cleanup or duplicate notification.
+
+Earlier bounded checks: at **07:55:50**, a cheaper worker probed all **16**
+configured news feeds once: HTTP 200, non-empty entries, no parser bozo flags.
+CoinDesk's redirect removed a trailing slash and still returned a valid feed.
+This verifies retrieval at that time, not exhaustive catalyst coverage. Code
+inspection noted that non-throwing empty/error responses can escape the current
+exception log; no such live outage was found, and no code change was made.
+At **07:58:51**, the validated [HLE comparison](https://agi.safe.ai/) passed
+claude/grok/gemini coverage and found no added, removed or changed model rows
+versus Jan-15, with both numeric columns unchanged. Main independently inspected
+the live ten-row table. This is not evidence of institutional inactivity or a
+guarantee about resolver interpretation; all priors and no-add gates remain.
+
+The **08:07:01** scheduled consistency report has five validated nonpositive
+groups, fourteen quote failures and 180 unquoted; zero actionable observations.
+The worker classified thirteen empty asks and one stale book, no new integrity
+issue. Partial, non-atomic coverage remains explicit. News saved valid state at
+**08:12:51** without new alerts. The last portfolio/UMA snapshots remain
+07:49/07:41; no redundant financial query this turn. Updated the backlog capacity
+checkpoint only; no position, order, prior, schedule or code change. Goal active.
