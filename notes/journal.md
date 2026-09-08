@@ -14222,3 +14222,35 @@ was recorded. News state saved valid JSON at 06:11:39, with no new news alert.
 No extra cleanup, restart, manual Telegram, financial write or schedule change.
 Capacity remains open: next existing hourly probe around 07:14, periodic review
 10:00, immediate attention to any intervening critical warning. Goal stays active.
+
+### 06:32 UTC — scheduled cross-venue scan and held-risk refresh
+
+Previous turn was a verified wait on news PID 2836158 through its successful
+06:26:48 state save, with no new alert. This turn observed live cron PID 373
+until the scheduled 06:30 wrapper/scanner appeared as PIDs 4127452/4127467,
+then confirmed both handles missing after completion. Did not launch a scan.
+
+A cheaper worker reviewed the 06:30:59 cross-venue output; main verified the
+saved counters. There are 709 eligible Limitless leaves, 18 PM matches,
+zero verified IDENTICAL pairs, eight DIFFERENT and ten unverified. PM coverage
+is the bounded first 3,000 volume-ranked open markets, not the whole venue.
+Screening-only remains true and execution-ready false; the 3% received-contract
+fee bound is still an assumption. The companion monotonicity report has 959
+events inspected, zero violations and zero executable results. The 06:32:26
+consistency report has six validated groups, thirteen quote failures and 184
+unquoted groups, zero actionable/positive-depth observations; non-atomic,
+incomplete coverage must not be read as no edge everywhere.
+
+One normal delegated UMA refresh finished at 06:31:12: positions_fetch_ok=true,
+37 tracked rows / 35 unique Gamma IDs, zero alerts or failures. Main verified
+the valid 06:31:07 cache and independently read authenticated orders: five LIVE
+SELLs, all size_matched=0, zero BUYs and zero Apple orders. Main also re-ran the
+HLE diff with the earlier validated parser: all ten rows and both score columns
+unchanged from Jan-15, all expected model families present, and directly read
+the [named primary table](https://agi.safe.ai/). This is not a whole-page freeze
+or an all-configurations capability claim. No prior or financial write.
+
+News/opportunity state saved valid JSON at 06:31:51/06:32:29; the last news alert
+remains Sep-7 21:46. All four daemons are live. Disk is about 327 MiB; capacity
+request and hourly guard remain active. No new bankroll quote, README snapshot,
+manual Telegram, process intervention or schedule change. Goal active.
