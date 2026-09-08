@@ -14060,3 +14060,61 @@ from trading P&L. No fetch failures reported. Main found exactly one live
 process for each of heartbeat, Telegram, opportunity and news watchers; each
 main script predates its process start. No new news alert, restart, financial
 write, schedule change or Telegram. Normal bankroll cache updated; goal active.
+
+### 05:15 UTC — quote provenance repaired; disk-full incident recovered and guarded
+
+Previous continuation was a verified wait through the 05:00 news refresh.
+A bounded calibration audit found six legacy `ask` values that were completed
+sales, a maker fill, or posted maker bids. Main verified their original commits,
+preserved the prices separately with provenance and set the missing asks to null.
+No probability, outcome, identity or unrelated record field changed. All 54 rows
+remain; own forecast cohort stays 21, with 15 genuinely matched baseline rows
+instead of 18. Own Brier remains 0.1498609; matched-only Brier is 0.1731652 versus
+0.1971855. This is a cohort correction, not evidence for a trading-policy change.
+Details: `research/2026-09-08-calibration-cohort-audit.md`. Resolver dry-run still
+reports ten missing identifiers and zero newly resolved records. The worker also
+located candidate historical identity sources, including Kuwait; no additional
+identity or final outcome was assigned during this turn.
+
+**Operational incident:** at roughly 05:04–05:05 the 15 GB root filesystem had
+zero available space. An `apply_patch` write failed after truncating the ledger.
+Stopped the audit immediately; initial small cache relief was insufficient for
+recovery. Cleared three pip download-cache files (366 kB), repo bytecode and about
+100 MB of regenerable virtual-environment `__pycache__` bytecode. Restored the
+missing ledger suffix from committed HEAD, then compared every field of every
+row: exactly the six intended baseline/provenance repairs, no other changes.
+No financial write was attempted. Full tests subsequently passed: **632 tests
+and 156 money-math checks**; a final focused rerun passed 37 heartbeat/calibration
+tests after strengthening test isolation against production state access.
+
+For further relief, main and a worker verified four old operator logs were not
+open by any process, then compressed them losslessly: `operator_20260826T182257Z`,
+`operator_20260715T215145Z`, `operator_20260609T203134Z`, and
+`operator_20260506T164541Z`, all under `logs/operator/` and now suffixed `.log.gz`.
+Their combined size fell from 282,902,827 to 16,728,143 bytes. Decompressed SHA-256
+hashes matched all four originals; their content is recoverable, not discarded.
+The active Sep-7 operator log and private transcript/inbox storage were untouched.
+Free space initially rose to 359 MiB, then measured about **341 MiB at 05:14**,
+still low. Root-owned apt download archives are about 292 MB, but noninteractive
+sudo requires a password; no privilege workaround or installed-package removal.
+Operator disk expansion or authorized root-owned cleanup remains necessary for
+durable headroom; the backlog calls for another check at the existing 06:00 run.
+
+Added a read-only disk probe to the existing hourly heartbeat: warning below
+512 MiB, critical below 128 MiB, distinct one-hour cooldown keys for immediate
+critical escalation, and an explicit bounded UNKNOWN alert on probe failure.
+No automatic deletion or financial behavior. Restarted only heartbeat after tests;
+exactly one absolute-path instance, **PID 4110253**, started 05:14:40 after the edit.
+Its first poll completed, saved valid state at 05:14:41 and confirmed sending the
+341.4 MiB warning. Other daemon PIDs stayed live. News and opportunity state JSON
+were valid and refreshed after recovery; this does not prove no transient write
+was missed while space was exhausted.
+
+Risk checks stayed active: 05:02 HLE all ten rows/both score columns unchanged
+under the previously validated parser and independently checked named page;
+05:12 held-risk refresh had positions_fetch_ok=true, 37 tracked rows / 35 unique
+Gamma markets and no alerts. Authenticated order inventory remains five LIVE
+SELLs, all size_matched=0, zero BUYs and zero Apple orders. The 05:12 HLE/MetaMask
+pair scans each found zero executable pairs. No trade, prior change or new bankroll
+mark. Goal and scheduled continuation remain active.
+Material incident summary sent through the documented Telegram sender, message 915.

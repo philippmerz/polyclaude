@@ -153,3 +153,39 @@ not a proven effective independent sample size. Neither these means nor the raw
 matched comparison justifies a universal hold haircut or proves positive ROI.
 The remaining work is better identity/quote provenance and genuinely new outcomes,
 not further slicing this small cohort to obtain a preferred policy conclusion.
+
+## Quote-provenance repair, 05:11 UTC
+
+A bounded follow-up found six further `ask` fields that described an execution
+or posted order rather than a contemporaneous buy-side ask. Main read the
+original pre-outcome ledger in each cited commit before changing the fields:
+
+| Record | Original value actually represented | Pre-outcome commit |
+| --- | --- | --- |
+| Jul-20 U.S. invasion exit | SELL at .78 bid | `8c6ef66` |
+| Jul-24 Prime Video exit | Completed 18-share SELL at .77 | `853ab90` |
+| Jul-24 Apple TV bid | Posted .80 maker BUY; prose explicitly says asks empty | `ab7e223` |
+| Jul-24 Prime Video bid | Posted .78 maker BUY; separate prose mentions a .99 ask stub | `ab7e223` |
+| Jul-26 Satoshi exit | Completed six-share SELL at .957 | `b4b9410` |
+| Jul-28 MacBook fill | Resting maker BUY filled at .40 | `ca0f48f` |
+
+Each original price is preserved as `reported_execution_price` or
+`reported_order_price`, with full commit/path provenance. `ask` is now null;
+no current quote, posted bid, or unvetted stub substitutes for the missing
+baseline. Forecasts, outcomes, identities and all other record data are unchanged.
+The three pending rows do not affect today's score; the three scored SDCC rows
+reduce the market-matched subset from 18 to **15**, while all **21 own forecasts**
+remain scored. Own Brier stays **0.1498609**; the new matched-only comparison is
+**0.1731652 versus 0.1971855**. The differing cohort matters: this is not a changed
+forecast score, a demonstrated ROI edge, or evidence for a hold-policy adjustment.
+The 15-question initial-forecast count is unchanged. Resolver dry-run still has
+10 missing identifiers; this quote repair does not establish market finality.
+
+Recovery incident: the filesystem reached zero available space during the edit,
+and `apply_patch` left the ledger truncated. Main stopped the audit, freed only
+regenerable caches, and restored the missing suffix from committed HEAD. A full
+54-row comparison against HEAD verified exactly the six intended price/provenance
+repairs and no other changed fields. All 30 isolated calibration tests passed.
+Four inactive operator logs were subsequently compressed losslessly, with their
+decompressed SHA-256 hashes verified against the originals. No financial writes
+or forecast/outcome changes occurred; disk headroom remains an operational risk.

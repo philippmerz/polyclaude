@@ -23,6 +23,7 @@ import argparse
 import json
 import os
 import signal
+import shutil
 import subprocess
 import sys
 import time
@@ -353,6 +354,10 @@ def check_opportunity_watch(state: dict) -> None:
 MEM_AVAILABLE_FLOOR_KB = 250 * 1024   # alert when the whole box has <250MB headroom
 MEM_ALERT_COOLDOWN = 2 * 3600
 
+DISK_WARNING_BYTES = 512 * 1024 * 1024
+DISK_CRITICAL_BYTES = 128 * 1024 * 1024
+DISK_ALERT_COOLDOWN = 3600
+
 
 def check_memory_pressure(state: dict) -> None:
     """OOM early-warning (2026-07-16, after the 3rd OOM crash took the VM +
@@ -407,6 +412,37 @@ def check_memory_pressure(state: dict) -> None:
               f"{me}. If polyclaude RSS dominates: serialize/kill agent subprocesses. "
               f"If other-user dominates: shared-host contention — reduce concurrent sessions.",
               cooldown=MEM_ALERT_COOLDOWN)
+
+
+def check_disk_space(state: dict) -> None:
+    """Alert when the repository filesystem is running out of space.
+
+    This is a read-only probe.  A failed probe is explicitly unknown rather
+    than healthy, but its error is bounded so a filesystem/tool failure cannot
+    flood the heartbeat log or Telegram message.
+    """
+    try:
+        free = shutil.disk_usage(_REPO_ROOT).free
+    except Exception as exc:
+        detail = _secrets.scrub(str(exc)).replace("\n", " ")[:160]
+        _emit(state, "disk_space_probe_error",
+              "DISK SPACE UNKNOWN: repository filesystem free-space probe failed"
+              + (f" ({detail})" if detail else ""),
+              cooldown=DISK_ALERT_COOLDOWN)
+        return
+
+    if free < DISK_CRITICAL_BYTES:
+        _emit(state, "disk_space_critical",
+              f"DISK SPACE CRITICAL: only {free / (1024 * 1024):.1f} MiB free on "
+              f"repository filesystem (critical threshold "
+              f"{DISK_CRITICAL_BYTES / (1024 * 1024):.0f} MiB)",
+              cooldown=DISK_ALERT_COOLDOWN)
+    elif free < DISK_WARNING_BYTES:
+        _emit(state, "disk_space_warning",
+              f"DISK SPACE WARNING: only {free / (1024 * 1024):.1f} MiB free on "
+              f"repository filesystem (warning threshold "
+              f"{DISK_WARNING_BYTES / (1024 * 1024):.0f} MiB)",
+              cooldown=DISK_ALERT_COOLDOWN)
 
 
 TICK_EXEC_GRACE_SECONDS = 45 * 60
@@ -477,6 +513,7 @@ def poll_once() -> None:
     check_session_liveness(state)
     check_opportunity_watch(state)
     check_memory_pressure(state)
+    check_disk_space(state)
     check_tick_execution(state)
     check_operator_session(state)
     _save_state(state)
