@@ -14304,3 +14304,29 @@ than repeating an outdated below-threshold status. The remaining margin is only
 about 36 MiB, so the capacity request stays open and the existing 07:14 hourly /
 10:00 periodic rechecks remain appropriate. No extra Telegram after reliability
 message 917; no active logs, private storage, financial state or schedules changed.
+
+### 06:51 UTC — bankroll refresh; capacity recovery holding
+
+Previous turn made concrete progress: hardened the resolver's document writer,
+passed 640 tests / 156 money-math checks, and verified the subsequent automatic
+Git packing process ended with improved free space. Kept the durable goal active.
+
+One normal delegated bankroll read completed with no fetch failures. Main read
+the authoritative cache timestamp **06:49:34**: TOTAL **$191.07**, up $0.67 from
+05:53. PM midpoint **$157.61** versus indicative fee/depth net **$150.27**, with
+the full-precision warning gap rounding to $7.35. Quotes are sequential, not
+synchronized/freshness-verified liquidation proceeds. Settled profit remains
+**+$14.44**; excluded gas-token value is **$6.21**. Main independently fetched
+inventory at 06:50:15: thirteen active rows above half a share, cost $157.1959,
+marked value $157.6136, and no quantity difference from the claim snapshot.
+No per-position attribution of the aggregate mark change is established.
+
+The latest scheduled pair checks at 06:47:31/32 both found zero executable
+pairs. The 06:48:16 consistency report has three validated groups, fifteen
+quote failures and 185 unquoted groups, with zero actionable/positive-depth
+observations; coverage remains partial and snapshots non-atomic. No new news
+alert. All four monitors remain live; state saves remain valid. Free space is
+about **547 MiB**, still above the warning threshold with a thin margin; the
+capacity request remains open. Updated README's stale below-threshold sentence,
+the portfolio snapshot and ordinary bankroll cache. No new trade, order, prior,
+schedule, cleanup or Telegram. The 06:31 UMA/orders/HLE checks were not repeated.
