@@ -131,7 +131,9 @@ def main() -> None:
         if gap_total > 1.0:
             print(f"REALIZABLE (depth-walked, NET of taker fees): ${realizable:.2f}  "
                   f"({(realizable/total_init-1)*100:+.2f}%)  "
-                  f"— midpoints overstate by ${gap_total:.2f}")
+                  f"— indicative depth/fee estimate only; not a synchronized or "
+                  f"freshness-verified liquidation quote; midpoints overstate by "
+                  f"${gap_total:.2f}")
             for g, slug, mk, bd in sorted(worst, reverse=True):
                 print(f"   thin book: {slug} mark {mk:.3f} vs avg-fill {bd:.3f} "
                       f"({g*100:.1f}pp to exit the full position)")

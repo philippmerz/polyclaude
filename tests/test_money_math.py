@@ -294,10 +294,16 @@ r = book_walk.realizable([{"price": "0.2", "size": "1"}], 2, V2_CURVE)
 check("realizable exponent two partial fee", r["fee"], 0.0064)
 check("realizable exponent two partial requested-size average", r["avg_fill"], 0.1)
 check("realizable exponent two partial unfilled", r["unfilled"], 1.0)
-for requested in (0, -1):
-    r = book_walk.realizable(BIDS, requested, V2_CURVE)
-    check(f"realizable nonpositive size {requested}", r,
-          {"gross": 0.0, "fee": 0.0, "net": 0.0, "avg_fill": 0.0, "unfilled": 0.0})
+r = book_walk.realizable(BIDS, 0, V2_CURVE)
+check("realizable zero size", r,
+      {"gross": 0.0, "fee": 0.0, "net": 0.0, "avg_fill": 0.0, "unfilled": 0.0})
+# A negative holding is malformed input, not an empty position worth zero.
+try:
+    book_walk.realizable(BIDS, -1, V2_CURVE)
+except ValueError:
+    check("realizable negative size rejected", True, True)
+else:
+    check("realizable negative size rejected", False, True)
 r = book_walk.realizable([], 5, V2_CURVE)
 check("realizable empty book full remainder", r,
       {"gross": 0.0, "fee": 0.0, "net": 0.0, "avg_fill": 0.0, "unfilled": 5.0})

@@ -13803,3 +13803,54 @@ orders. All four daemon PIDs remain unique/live; opportunity state advanced to
 advanced to 02:04:13 with no new alert since Sep-7 21:46. No new action, probability
 change, restart or schedule change. The 02:01:42 bankroll snapshot above remains
 the tick's measurement; it was not relabeled as a fresh 02:07 quote.
+
+## 2026-09-08 02:16 UTC — continuation: reject malformed valuation depth; qualify estimates
+
+Previous turn completed the queued-tick reconciliation (442a38a), hence progress.
+Goal remains active. Confirmed the four original daemon handles live before
+bounded work; resource probe reports 94% main headroom. Delegated timestamp-source
+clarification/reporting edits and independent arithmetic QA to cheaper workers,
+while main reproduced the valuation defect and reviewed the integration.
+
+The Apple snapshot-age observation prompted an evidence check, not an invented
+cache diagnosis. [Official REST documentation](https://docs.polymarket.com/api-reference/market-data/get-order-book)
+calls the field a snapshot timestamp but does not establish whether an unchanged
+quiet book receives a new timestamp on each request. The
+[official SDK hash implementation](https://github.com/Polymarket/py-clob-client/blob/main/py_clob_client/utilities.py)
+includes timestamp in the summary hash; identical levels alone do not imply
+identical hashes. Neither source proves the cause of the observed 122/178-second
+ages. No blanket timestamp rejection or new trading rule was added. Existing
+Apple values remain indicative, not newly verified executable quotes.
+
+Main reproduced a separate concrete defect in the shared pure `book_walk`:
+price 1.5 returned $1.50 for one binary share, NaN propagated into proceeds, and
+negative depth could produce negative full-fill proceeds. Invalid infinite size
+also passed as usable liquidity. It now validates requested quantity and the
+entire supplied bid side before any nonzero walk: finite nonnegative quantities,
+finite prices in [0,1], required fields/list shape, no booleans masquerading as
+numbers. Even an unconsumed malformed level fails. Legitimate zero/one prices,
+zero-size no-ops, empty books, partial fills, unsorted levels and nonlinear
+per-fill fees retain their arithmetic and public result keys. The old negative-
+requested-size test was deliberately changed from silent zero to ValueError.
+This does not validate token identity, HTTP schema/finality, or synchronization.
+
+Positions/bankroll output now explicitly qualifies depth/fee values as indicative,
+not synchronized or freshness-verified liquidation quotes; parser-compatible
+REALIZABLE prefixes and numeric calculations/cache keys are unchanged. Removed
+the unsupported assertion that these values are what the book would actually
+fetch today. Mocked end-to-end reporting tests cover the caveat, an out-of-range
+book reporting unavailable instead of a fabricated estimate, and temporary cache
+isolation. Main tightened the invalid-book fixture to the reproduced 1.5 case
+and isolated PM_STATE with monkeypatch rather than clearing shared test state.
+
+Independent arithmetic review found no regression; final suite **625 passed**,
+plus **156 money-math checks**. Production cache SHA remains
+`521bb33b91bfb9c713466f1150faf01c1ec5f1d045c1a212ad887aafb600138d` and calibration
+ledger SHA remains `be7824b65fbffc902fa2b6fcb4b965dc48f73e0391286f094910cf5cf7858322`.
+Recorded/verified **DEC-0122**, a $0 scaffolding decision, not a market forecast or
+profit observation; all preceding decision rows are unchanged. README updated.
+No probabilities, risk caps, orders, positions, financial transactions or
+schedules changed. Four daemon handles remain live; changed modules are not
+loaded by those long-lived processes, so no restart is needed. No new news alert;
+latest completed opportunity pair cycle remains 02:03:39/40, both zero. No second
+Telegram for this maintenance following the already-sent material tick summary.

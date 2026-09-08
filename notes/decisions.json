@@ -1,5 +1,5 @@
 {
-  "next_id": 122,
+  "next_id": 123,
   "decisions": [
     {
       "id": 1,
@@ -2394,6 +2394,26 @@
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
+    },
+    {
+      "id": 122,
+      "timestamp": "2026-09-08T02:14:48Z",
+      "type": "scaffolding",
+      "thesis": "Apple exit review reproduced a concrete valuation defect: the shared bid walk accepted nonfinite and negative depth or prices above the binary payout. Reject malformed inputs before valuation, retain legitimate zero/partial/boundary arithmetic, and qualify sequential portfolio exit estimates as indicative. Timestamp docs do not establish quiet-book versus cache behavior, so add no blanket freshness rejection or trading-rule change.",
+      "confidence": "high",
+      "prediction": "Focused invalid-input and reporting regressions pass; valid fee/depth arithmetic and machine-readable prefixes remain unchanged. No orders, positions, probabilities, caps or production ledger/cache are changed by tests.",
+      "size_usd": 0.0,
+      "resolution_at": null,
+      "tags": [
+        "safety",
+        "valuation",
+        "reporting"
+      ],
+      "slug": null,
+      "outcome": "PASS at implementation: 625 pytest tests and 156 money-math checks pass; targeted malformed-input cases now raise and reporting preserves numeric prefixes with explicit indicative-quote caveats. Production bankroll cache and calibration ledger hashes remain unchanged; only this scaffolding decision was intentionally added to the decision store.",
+      "calibration_delta": "Engineering regression verification, not an independent market outcome or ROI observation.",
+      "lesson": "A successful HTTP read and fee-aware depth sum do not establish an executable liquidation path. Validate numerical inputs and label quote limitations without inferring undocumented timestamp behavior.",
+      "resolved_at": "2026-09-08T02:16:47Z"
     }
   ]
 }

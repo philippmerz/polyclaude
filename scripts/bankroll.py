@@ -177,7 +177,9 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
     0.685 midpoint inside a 0.57/0.76 spread on ZERO 24h volume, inflating the
     headline by $8.64. That is handled where it belongs — positions.py prints
     a REALIZABLE line naming any book whose mark exceeds its bid materially —
-    rather than by silently switching this number's basis.
+    rather than by silently switching this number's basis. That line is an
+    indicative depth/fee estimate from sequential snapshots, not a synchronized
+    or freshness-verified liquidation quote.
     """
     try:
         r = httpx.get(f"{DATA_API}/positions",
@@ -230,8 +232,10 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
             if gap > 1.0:
                 warnings.append(
                     f"PM sleeve marked at MIDPOINTS overstates NET realizable by ${gap:.2f} "
-                    f"(mid ${mid:.2f} vs ${realizable:.2f}) — illiquid book(s); see positions.py "
-                    f"for which. Quote the realizable figure alongside any headline return.")
+                    f"(mid ${mid:.2f} vs ${realizable:.2f}) — indicative depth/fee estimate "
+                    f"only; not a synchronized or freshness-verified liquidation quote; "
+                    f"illiquid book(s); see positions.py for which. Quote the realizable "
+                    f"figure alongside any headline return.")
         except Exception as e:
             warnings.append(f"realizable cross-check unavailable ({str(e)[:40]})")
         return mid
@@ -329,7 +333,9 @@ def main() -> int:
     #   realized = (bankroll - deposits) - unrealized
     # Both unrealized bases are shown because the honest realized figure depends
     # on which you believe: marked unrealized is the conventional one, realizable
-    # unrealized is what the book would actually fetch. The RANGE is the point —
+    # unrealized is an indicative depth/fee estimate from sequential book
+    # snapshots, not a synchronized or freshness-verified liquidation quote.
+    # The RANGE is the point —
     # quoting a single realized number would hide the same midpoint problem this
     # script already warns about one line above.
     # GAS IS DEPOSITED CAPITAL, NOT TRADING GAIN (2026-08-20). The $170 reference
@@ -360,7 +366,8 @@ def main() -> int:
         if rz is not None:
             unreal_rz = rz - cost
             print(f"{'  unrealized (realizable)':38s} {unreal_rz:>+9.2f}  "
-                  f"— what the open book would actually fetch today")
+                  f"— indicative depth/fee estimate only; not a synchronized or "
+                  f"freshness-verified liquidation quote")
     for msg in warnings:
         print(f"WARNING: {msg}")
     return 0

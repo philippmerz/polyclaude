@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""What a position is actually worth if you sell it right now.
+"""Indicative position proceeds at supplied bid depth, including per-fill fees.
 
 WHY THIS EXISTS (2026-08-14). "Realizable value" was computed in four places
 with three different answers:
@@ -34,17 +34,49 @@ from collections.abc import Iterator
 from pm_fees import fee_per_share, fee_per_share_at
 
 
+def _finite_nonnegative(value: object, name: str) -> float:
+    """Reject unknown/non-numeric quantities, including bool's numeric alias."""
+    if isinstance(value, bool):
+        raise ValueError(f"invalid {name}: expected a finite nonnegative number")
+    try:
+        number = float(value)
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise ValueError(f"invalid {name}: expected a finite nonnegative number") from exc
+    if not math.isfinite(number) or number < 0:
+        raise ValueError(f"invalid {name}: expected a finite nonnegative number")
+    return number
+
+
 def _bid_fills(bids: list[dict], size: float) -> Iterator[tuple[float, float]]:
-    """Yield (shares, price) for actual fills, best bid first."""
-    if size <= 0:
+    """Yield hypothetical (shares, price) fills from a fully validated bid side.
+
+    Bad depth must not become a real-valued exit estimate. Validate even levels
+    below the requested fill before yielding; otherwise changing the requested
+    size can make the same malformed payload appear safe. This pure arithmetic
+    check does not verify market identity, timestamps, or execution availability.
+    A zero requested size is a no-op and does not inspect the unused bid side.
+    """
+    left = _finite_nonnegative(size, "requested size")
+    if left == 0:
         return
-    levels = sorted(bids or [], key=lambda x: -float(x["price"]))
-    left = float(size)
-    for lvl in levels:
+    if not isinstance(bids, list):
+        raise ValueError("invalid bid side: expected a list")
+    levels = []
+    for lvl in bids:
+        if not isinstance(lvl, dict) or "price" not in lvl or "size" not in lvl:
+            raise ValueError("invalid bid level: price and size are required")
+        price = _finite_nonnegative(lvl["price"], "bid price")
+        quantity = _finite_nonnegative(lvl["size"], "bid size")
+        if price > 1:
+            raise ValueError("invalid bid price: binary price exceeds 1")
+        levels.append((price, quantity))
+    for price, quantity in sorted(levels, key=lambda level: -level[0]):
         if left <= 0:
             break
-        take = min(left, float(lvl["size"]))
-        yield take, float(lvl["price"])
+        if quantity == 0:
+            continue
+        take = min(left, quantity)
+        yield take, price
         left -= take
 
 
@@ -63,7 +95,8 @@ def walk_bids(bids: list[dict], size: float) -> tuple[float, float, float]:
     the FULL requested size, so a half-filled walk shows a visibly poor average
     rather than a flattering one computed over just the filled part.
     """
-    if size <= 0:
+    size = _finite_nonnegative(size, "requested size")
+    if size == 0:
         return 0.0, 0.0, 0.0
     left, proceeds = float(size), 0.0
     for take, price in _bid_fills(bids, size):
@@ -102,7 +135,7 @@ def effective_entry_cost(mark: float, taker_bps: int, maker_px: float | None = N
 
 
 def realizable(bids: list[dict], size: float, market: dict | None) -> dict:
-    """Net proceeds of exiting `size` NOW, after the market's own taker fee.
+    """Indicative proceeds at supplied depth, after the market's own taker fee.
 
     Returns gross / fee / net / avg_fill / unfilled. `market` is the gamma dict
     (feeSchedule, with legacy takerBaseFee fallback); pass None only when it
@@ -113,8 +146,9 @@ def realizable(bids: list[dict], size: float, market: dict | None) -> dict:
     at avg_fill is not equivalent, and partial-depth averages also include
     unsold shares. Those unsold shares have neither proceeds nor fees here.
     """
+    size = _finite_nonnegative(size, "requested size")
     gross, fee = 0.0, 0.0
-    left = float(size)
+    left = size
     for take, price in _bid_fills(bids, size):
         gross += take * price
         fee += take * fee_per_share(market, price)
