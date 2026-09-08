@@ -13477,3 +13477,41 @@ Post-update verification: position-state audit **CLEAN** (13 indexed positions,
 one de-indexed claim row), Duma exit report now **HOLD_COMPLETE_GROUP**, valid JSON,
 clean diff and **515 passing tests / 156 money-math checks**. Only portfolio cache
 and research/review records changed in this turn; trading code was untouched.
+
+## 2026-09-08 00:40 UTC — continuation: Gemini mark alert; calibration sample reconciled
+
+Previous turn was a verified wait: the same live opportunity PID advanced to
+00:29:04/05 with zero executable HLE/MetaMask pairs. Reconfirmed all four daemons
+live, the goal active, and a clean worktree. State audit remains CLEAN (13 indexed
+positions and one de-indexed claim); crux coverage is silent. UMA checked 37 records
+and found one price alert, not a proposal/dispute: Gemini >=50 YES moved from
+0.8055 to 0.7390 (-6.65pp), with $283 reported 24h volume.
+
+Immediately re-read the exact Gemini criteria and [named HLE source](https://agi.safe.ai/).
+All ten result rows and both numeric columns are unchanged versus Jan-15; the
+June-to-December 2025 control still detects model and score changes and expected
+lab coverage passes. A fresh exact condition/token book (29.95 seconds old),
+with matching Gamma/compact fees of 0.04 and exponent 1, absorbs all 59.01 NO for
+**$13.8033 net**. This remains below **$32.4555** raw or **$26.5545** 10pp-stressed
+hold value. No source/criteria change or resolution event was established; retain
+the existing prior and no-add constraint. The earlier exit report's $13.76 was a
+different read-time quote, not a discrepancy to conceal. An initial hand-built
+fee-info URL returned 404; the documented repo path `/clob-markets/{condition}`
+then supplied the matching fee descriptor. No order was attempted.
+
+The bounded calibration backlog audit found a genuine coverage problem. Fifteen
+legacy scored rows collapse to 11 questions; three finalized August initial-entry
+forecasts are missing. Main verified DEC-0082/0085/0107 against their first-entry
+commits with outcome still null, and exact Gamma IDs now show final NO/YES/NO.
+GTA's initial P(>=20M)=0.45 maps to market-YES 0.55, not 0.45. Later GTA updates,
+reversal and exits are path evidence, not independent outcomes. Rejected the
+worker's initial exclusion of Wimbledon solely because a population screen found
+the candidates: their records contain explicit instance judgments.
+
+The resulting candidate cohort has 14 distinct questions, but five SDCC contracts
+share a catalyst/mechanism. A simple event collapse leaves 10 units, without proving
+remaining independence. The sample does not establish a universal 10pp hold
+correction, nor validate raw priors. Updated the backlog and preserved the three
+omissions, exact provenance, descriptive scores and remaining data-quality limits
+in `research/2026-09-08-calibration-cohort-audit.md`. No retrospective probabilities,
+trades, limits or hold/exit semantics changed; the archival ledger is untouched.
