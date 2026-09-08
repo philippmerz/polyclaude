@@ -14607,3 +14607,44 @@ Monitors remain live, latest news alert unchanged. Free space is about 503 MiB
 at 09:46 under the existing warning. Main headroom was **38% at 09:20**; bounded
 routine work stayed delegated, with no expensive discretionary research. No
 portfolio, order, prior, schedule, cleanup or manual Telegram change. Goal active.
+
+### 10:03 UTC — periodic refresh caught further Apple bid deterioration
+
+Continued the active goal after a verified wait on the live monitors. The
+09:57:45 authoritative bankroll refresh is **$187.40**, down $3.82 from 08:49;
+PM midpoint **$153.88**, indicative fee/depth net **$143.77**, gap $10.11.
+Settled profit remains +$14.44; no fetch failure reported. Main independently
+checked active quantities (13 unchanged, no expected missing) and authenticated
+orders (HTTP 200, five LIVE SELLs each size_matched=0, zero BUYs/Apple orders).
+
+UMA had valid position retrieval, 37 aliases/35 distinct Gamma markets and
+one Apple YES price alert, .71→.765, without finality alerts or errors. Rather
+than accepting its wide-spread midpoint-flap heuristic, requested a bounded
+all-position identity/depth audit. At **09:59:13–15** every quantity was covered,
+but three books exceeded 60s; total net $143.29299845. Main's decimal comparison
+against the retained 08:51 results attributes that separate $6.92701007 decline
+to Apple -$5.56126346, Gemini ≥50 -$1.42422068, other legs +$0.05847407. This
+does not exactly attribute the differently timed aggregate bankroll change.
+
+Main then reread Apple's exact criteria and held-token book at **10:00:21.304351**.
+The fresh-at-observation book (age .958s, NO touch .12/.17) covers 49.005 shares
+for **$5.24710642 net**, versus $13.13861258 at 08:51. Gamma's NO mark .175 is
+not the live-book midpoint. No independent shipment deadline appears in the
+criteria; preorder interpretation remains open. Current Apple pages and bounded
+reporting checks establish no firm new purchase date, but cannot prove year-end
+absence or explain the move. Stored .65 prior is unchanged, not newly proven;
+no-add/monitoring assessment remains under review. No financial/order action.
+Preserved all-position result rows, the exact later Apple fills and source
+limitations in `research/2026-09-08-1000-portfolio-depth-check.md`.
+
+The 09:57 HLE guard passed expected-family coverage and found the same ten rows
+and both score columns versus Jan-15; interpretation/UMA and cluster risks stay.
+Followed existing consistency child **4176713** from live to missing; its
+**09:57:42** report has nine validated nonpositive groups, eleven quote failures
+(nine empty asks, one stale book 5590.6s, one insufficient-depth market 4279257),
+182 unquoted and zero positive/actionable observations. Partial/non-atomic
+coverage remains explicit. No fresh news-alert JSONL entry; all four daemons live.
+Free space **499.35 MiB at 10:02:11**, still warning-level, next normal guard
+about 10:14; no cleanup/restart. Material Telegram **919** sent once. Updated
+README/backlog/journal and normal bankroll cache, no code/prior/schedule changes.
+Goal remains active; the monthly drill, Apple and AVAV reminders are not due yet.
