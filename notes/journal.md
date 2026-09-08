@@ -13667,3 +13667,37 @@ May Iran aliases share one ID, explaining the count difference. Position state
 is CLEAN (13 indexed positions, one de-indexed claim row). README updated. No
 trade, Telegram, daemon restart or schedule change; continuous monitoring remains
 active. The same live opportunity PID advanced through 01:32:12, both pairs zero.
+
+## 2026-09-08 01:41 UTC — Arena watch: quote improved, source configuration corrected
+
+Previous turn made progress (UMA coverage fix pushed as 7415796). Goal remains
+active; all four existing daemon PIDs are live, and the completed 01:32 pair
+cycle found no executable HLE/MetaMask pair. News tail is unchanged. Refreshed
+quota before bounded discretionary work: the probe now reports 99% main headroom,
+reset Sep-15 01:22 UTC. Delegated the exact Arena ranking check while main read
+the literal market criteria, IDs and fresh fee/depth evidence.
+
+The Sep-30 OpenAI Arena watch is cheaper: exact Gamma market 3008499 and the
+matching YES-token book give **0.121 ask / 0.12525436 fee-inclusive**, 410 shares
+at best ask, book 0.51 seconds old at 01:37:57. Gamma/compact CLOB fees agree at
+rate 0.04, exponent 1. Forty shares would cost $5.01017 at that observed depth;
+no order was submitted and this is not full-pipeline eligibility.
+
+However, main and worker independently found the old rank-17 note was not pinned
+to the contract's exact view. The explicit no-style-control page displays a
+Sep-2 snapshot with OpenAI's gpt-5.5-high at rank 24; the default Overall page
+shows gpt-5.6-sol-xhigh at rank 17 on that same date. This is consistent with a
+configuration mixup, not proof of a subsequent seven-place decline. The dated
+target snapshot contains no identified Astra row and cannot establish fresh
+post-launch performance. The resolving variable is Rank in Models with
+Adjustments None, not an alternative leaderboard category or rank-spread bound.
+
+Updated backlog and `research/2026-09-08-arena-source-gate-review.md` with exact
+identity, rules, source links/timestamps and quote arithmetic. The old
+0.15/0.30/0.50 range is historical, not a revalidated entry prior after this
+correction; do not buy solely because the cheaper quote clears that old low
+case. Existing research triggers remain unestablished (verified Astra top-five
+in the exact view plus effective cost <=0.20, or effective cost <0.04). Any future
+entry also needs explicit AI correlation treatment and current caps. No held
+prior, limit, position, order, schedule, code or Telegram change. Documentation
+diff checked; the previously passing 567-test suite was not rerun for prose.
