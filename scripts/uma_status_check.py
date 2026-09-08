@@ -37,6 +37,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -69,20 +70,57 @@ def fetch_market(market_id: str) -> dict | None:
             r = c.get(f"https://gamma-api.polymarket.com/markets/{market_id}")
             if r.status_code != 200:
                 return None
-            return r.json()
+            payload = r.json()
+            return payload if isinstance(payload, dict) else None
     except Exception:
         return None
 
 
 def fetch_positions(addr: str) -> list[dict]:
+    positions, ok, _ = _fetch_positions_checked(addr)
+    # Preserve the historical list API, including valid rows returned at the
+    # request cap; callers that need coverage status should use the helper.
+    return positions
+
+
+def _fetch_positions_checked(addr: str) -> tuple[list[dict], bool, str | None]:
+    """Fetch positions while distinguishing a valid empty result from failure.
+
+    ``fetch_positions`` remains the historical list-returning API for callers;
+    ``main`` uses this status-bearing helper so an outage cannot masquerade as
+    an empty wallet.
+    """
     try:
         with httpx.Client(timeout=15) as c:
             r = c.get("https://data-api.polymarket.com/positions",
                       params={"user": addr.lower(), "limit": 100, "sizeThreshold": 0.0})
             r.raise_for_status()
-            return r.json() or []
-    except Exception:
-        return []
+            payload = r.json()
+        if not isinstance(payload, list):
+            return [], False, "response was not a list"
+        for position in payload:
+            if not isinstance(position, dict):
+                return [], False, "response contained a non-object position"
+            slug = position.get("slug")
+            if not isinstance(slug, str) or not slug.strip():
+                return [], False, "position missing usable slug"
+            raw_size = position.get("size")
+            if isinstance(raw_size, bool):
+                return [], False, "position size was boolean"
+            try:
+                size = float(raw_size)
+            except (TypeError, ValueError, OverflowError):
+                return [], False, "position size was not numeric"
+            if not math.isfinite(size) or size < 0:
+                return [], False, "position size was non-finite or negative"
+        if len(payload) >= 100:
+            # The fixed request limit cannot prove that the inventory is
+            # complete. Keep rows for direct Gamma checks, but make visibility
+            # unknown rather than claiming omitted cached rows disappeared.
+            return payload, False, "response reached the 100-row cap"
+        return payload, True, None
+    except Exception as exc:
+        return [], False, str(exc)[:160]
 
 
 def parse_outcome_prices(p) -> tuple[float, float] | None:
@@ -148,6 +186,55 @@ def _cache_entry_after_fetch_failure(previous: dict | None,
     return entry
 
 
+def _price_move_alert(slug: str, market_id: str, market: dict,
+                      previous_prices, prices, threshold_pp: float) -> dict | None:
+    """Build the usual price-move alert for either visible or cached rows."""
+    if not prices or not previous_prices or len(previous_prices) < 2:
+        return None
+    try:
+        yes_move = (prices[0] - previous_prices[0]) * 100
+        threshold = float(threshold_pp)
+    except (TypeError, ValueError, OverflowError, IndexError):
+        return None
+    if not math.isfinite(yes_move) or not math.isfinite(threshold):
+        return None
+    if abs(yes_move) < threshold:
+        return None
+
+    # Optional context must not hide a valid movement alert.  An invalid
+    # volume/spread simply renders as the same n/a context as an unavailable
+    # quote field.
+    try:
+        raw_volume = market.get("volume24hr")
+        vol24 = float(raw_volume) if not isinstance(raw_volume, bool) else None
+        if vol24 is not None and (not math.isfinite(vol24) or vol24 < 0):
+            vol24 = None
+    except (TypeError, ValueError, OverflowError, AttributeError):
+        vol24 = None
+    try:
+        bb = float(market.get("bestBid") or 0)
+        ba = float(market.get("bestAsk") or 0)
+        spread_pp = (ba - bb) * 100 if (bb and ba) else None
+        if spread_pp is not None and not math.isfinite(spread_pp):
+            spread_pp = None
+    except (TypeError, ValueError, OverflowError, AttributeError):
+        spread_pp = None
+    volume_text = f"${vol24:,.0f}" if vol24 is not None else "n/a"
+    ctx = (f" [vol24 {volume_text}; spread "
+           + (f"{spread_pp:.1f}pp" if spread_pp is not None else "n/a")
+           + ("; WIDE BOOK — likely midpoint flap, walk the book before believing"
+              if (spread_pp or 0) >= 5 or (vol24 is not None and vol24 < 500)
+              else "; quote context incomplete — walk the book before believing"
+              if vol24 is None or spread_pp is None else "")
+           + "]")
+    return {
+        "slug": slug,
+        "type": "PRICE_MOVE",
+        "market_id": market_id,
+        "msg": _yes_price_move_message(previous_prices[0], prices[0], ctx),
+    }
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0] if __doc__ else "")
     p.add_argument("--wallet", default=str(_secrets.path("POLYCLAUDE_WALLET")))
@@ -158,7 +245,7 @@ def main() -> int:
 
     addr = json.load(open(args.wallet))["address"]
     cache = load_cache()
-    positions_now = fetch_positions(addr)
+    positions_now, positions_fetch_ok, positions_error = _fetch_positions_checked(addr)
     visible_slugs = {p.get("slug", "") for p in positions_now}
 
     # Collect market IDs to check: union of (current positions, known-disputed-cached, decisions.json open)
@@ -183,7 +270,16 @@ def main() -> int:
 
     # For each visible position, fetch market details from gamma to get id
     alerts: list[dict] = []
+    if not positions_fetch_ok:
+        detail = f": {positions_error}" if positions_error else ""
+        alerts.append({
+            "slug": "__positions__",
+            "type": "POSITION_API_UNAVAILABLE",
+            "msg": "data-api positions coverage unavailable; position visibility is unknown"
+                   + detail,
+        })
     new_cache: dict = {}
+    refreshed_market_ids: set[str] = set()
     for p in positions_now:
         slug = p.get("slug", "")
         if not slug:
@@ -231,6 +327,7 @@ def main() -> int:
                 "msg": "gamma-api fetch failed (slug exists but ID lookup failed)"
             })
             continue
+        refreshed_market_ids.add(str(market_id))
 
         uma_status = m.get("umaResolutionStatus")
         prices = parse_outcome_prices(m.get("outcomePrices"))
@@ -270,40 +367,80 @@ def main() -> int:
             alerts.append(alert)
 
         # Alert on large outcomePrice moves.
-        # 2026-08-17: carry vol24 + spread INLINE so step (0) of unexplained-move
-        # classification ("did it actually trade, or is a midpoint flapping in a
-        # wide book?") is pre-answered. The HLE legs generated a PRICE_MOVE line
-        # on ~6 consecutive ticks, each manually classified to the same verdict
-        # (spread noise, 11-40pp books, board unchanged). outcomePrices IS a
-        # midpoint, so without these two numbers the alert cannot distinguish
-        # information from quote drift — and a low-context tick reading a bare
-        # "+13pp" line is one bad inference from panic-selling a flap.
-        if prices and prev_prices and len(prev_prices) >= 2:
-            yes_move = (prices[0] - prev_prices[0]) * 100
-            if abs(yes_move) >= args.alert_pp_move:
-                vol24 = float(m.get("volume24hr") or 0)
-                try:
-                    bb, ba = float(m.get("bestBid") or 0), float(m.get("bestAsk") or 0)
-                    spread_pp = (ba - bb) * 100 if (bb and ba) else None
-                except (TypeError, ValueError):
-                    spread_pp = None
-                ctx = (f" [vol24 ${vol24:,.0f}; spread "
-                       + (f"{spread_pp:.1f}pp" if spread_pp is not None else "n/a")
-                       + ("; WIDE BOOK — likely midpoint flap, walk the book before believing"
-                          if (spread_pp or 0) >= 5 or vol24 < 500 else "")
-                       + "]")
-                alerts.append({
-                    "slug": slug, "type": "PRICE_MOVE",
-                    "market_id": market_id,
-                    "msg": _yes_price_move_message(prev_prices[0], prices[0], ctx),
-                })
+        # 2026-08-17: carry vol24 + spread INLINE so a midpoint flap is not
+        # mistaken for information without walking the book.
+        price_alert = _price_move_alert(
+            slug, market_id, m, prev_prices, prices, args.alert_pp_move)
+        if price_alert:
+            alerts.append(price_alert)
 
         # Cross-check: if data-api positions doesn't show this slug but on-chain has it,
         # something weird (the R-U pattern). Already shown in visible_slugs.
 
+    # If the positions request failed (or hit its fixed 100-row cap), retain
+    # every cached row and refresh only its direct Gamma identity/state.  The
+    # rows are not known to have disappeared, so do not emit INVISIBLE alerts
+    # or overwrite the last-good data-api visibility marker.
+    if not positions_fetch_ok:
+        for slug, prev in cache.items():
+            if slug in new_cache:
+                continue
+            if not isinstance(prev, dict):
+                new_cache[slug] = prev
+                continue
+            market_id = prev.get("market_id")
+            if not market_id:
+                # Preserve cache entries without an identity; there is no safe
+                # Gamma request to make and no evidence that they vanished.
+                new_cache[slug] = dict(prev)
+                continue
+            market_id = str(market_id)
+            m = fetch_market(market_id)
+            if not m:
+                new_cache[slug] = dict(prev)
+                alerts.append({
+                    "slug": slug,
+                    "type": "GAMMA_FETCH_FAILED_UNKNOWN_VISIBILITY",
+                    "market_id": market_id,
+                    "msg": "positions visibility unknown; cached Gamma state retained",
+                })
+                continue
+            refreshed_market_ids.add(str(market_id))
+            uma_status = m.get("umaResolutionStatus")
+            prices = parse_outcome_prices(m.get("outcomePrices"))
+            updated = dict(prev)
+            updated.update({
+                "market_id": market_id,
+                "umaResolutionStatus": uma_status,
+                "outcomePrices": prices,
+                "checked_at": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z",
+            })
+            # Deliberately leave data_api_visible untouched: a failed/capped
+            # inventory response cannot establish either visibility state.
+            new_cache[slug] = updated
+            status_alert_type = _status_change_alert_type(
+                prev.get("umaResolutionStatus"), uma_status, visible=True)
+            if status_alert_type:
+                alerts.append({
+                    "slug": slug,
+                    "type": status_alert_type,
+                    "market_id": market_id,
+                    "msg": "cached Gamma check while positions visibility was unknown: "
+                           f"umaResolutionStatus: {prev.get('umaResolutionStatus')} → {uma_status}",
+                    "outcomePrices": prices,
+                })
+            price_alert = _price_move_alert(
+                slug, market_id, m, prev.get("outcomePrices"), prices,
+                args.alert_pp_move)
+            if price_alert:
+                price_alert["msg"] += " [positions visibility unknown]"
+                alerts.append(price_alert)
+
     # Cache positions that DISAPPEARED from data-api but were tracked previously
     for slug, prev in cache.items():
         if slug in new_cache:
+            continue
+        if not positions_fetch_ok:
             continue
         # was tracked, now invisible
         market_id = prev.get("market_id")
@@ -311,6 +448,7 @@ def main() -> int:
             continue
         m = fetch_market(market_id)
         if m:
+            refreshed_market_ids.add(str(market_id))
             uma_status = m.get("umaResolutionStatus")
             prices = parse_outcome_prices(m.get("outcomePrices"))
             new_cache[slug] = {
@@ -340,14 +478,26 @@ def main() -> int:
                        "gamma-api fetch failed; cached identity preserved",
             })
 
-    save_cache(new_cache)
+    # On a failed request with no prior cache, avoid replacing a potentially
+    # useful absent cache with an assertion of an empty wallet.
+    if positions_fetch_ok or cache or new_cache:
+        save_cache(new_cache)
 
     # Output
+    gamma_refreshed_count = len(refreshed_market_ids)
     if args.json:
-        print(json.dumps({"alerts": alerts, "checked_count": len(new_cache)}, indent=2, default=str))
+        print(json.dumps({
+            "alerts": alerts,
+            "checked_count": gamma_refreshed_count,
+            "tracked_count": len(new_cache),
+            "gamma_refreshed_count": gamma_refreshed_count,
+            "positions_fetch_ok": positions_fetch_ok,
+        }, indent=2, default=str))
         return 0
 
-    print(f"# uma_status_check: {len(new_cache)} positions tracked, {len(alerts)} alerts")
+    print(f"# uma_status_check: {len(new_cache)} positions tracked, "
+          f"{gamma_refreshed_count} Gamma markets refreshed, {len(alerts)} alerts"
+          f"; positions_fetch_ok={positions_fetch_ok}")
     if not alerts:
         print("  (all clean)")
         return 0

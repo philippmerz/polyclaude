@@ -13615,3 +13615,55 @@ provenance and cohort arithmetic. **545 tests and 156 money-math checks pass**;
 dry-run reports zero new grades and ten missing-identifier rows. No trading-code
 change, trade, prior/limit change, Telegram, restart or schedule change. Apple
 Sep-9 reviews and AVAV's Sep-9 22:00 research gate remain the next dated reminders.
+
+## 2026-09-08 01:32 UTC — continuation: distinguish unavailable inventory from an empty wallet
+
+Previous turn made progress (Fed record repair pushed as c014cd9). Goal remains
+active. Rechecked the clean worktree and all four live daemon handles; the
+Telegram listener's momentary D-state returned to S on the same PID, with no
+restart. Bounded backlog triage found no overdue dated review or >21-day verified
+prior; weekly digest and P&L are current. Remaining calibration identity work is
+a prerequisite to any policy-changing inference, not a reason to keep slicing
+the same small sample now. Apple/AVAV Sep-9 clocks remain armed as documented.
+
+Live UMA at 01:19 found zero alerts. Marginal-APY reported no below-hurdle exit
+flags and retained both complete groups; the existing OpenAI drawdowns remain
+visible, not dismissed as clean P&L. Re-ran the [named HLE table](https://agi.safe.ai/)
+comparison: all ten rows and both score columns remain identical to Jan-15, and
+the June-to-December 2025 control detects model and score changes. This is table
+stasis, not institutional inactivity or proof that UMA must follow that reading.
+No probability, limit, position or order change is warranted by these checks.
+
+Source inspection found a concrete latent safety defect in `uma_status_check`:
+a failed positions request returned the same [] as a genuinely empty response.
+The cached-market fallback could then mark every row invisible and report
+"all clean" when statuses were unchanged. The current live request had succeeded;
+this was a reproduced failure path, not evidence of a current outage.
+
+Delegated the scoped monitor/tests fix and retained main review. Failed, malformed
+or capped inventory reads now emit POSITION_API_UNAVAILABLE and explicit unknown
+coverage. Last-good metadata/IDs survive, including rows without IDs; cached
+Gamma checks continue to report real status transitions and price moves without
+inventing disappearance. Successful empty coverage remains distinguishable. The
+fixed 100-row query reports incomplete coverage at its cap rather than pretending
+it exhausted the API; this is not an archive-inclusive or exchange-wide coverage
+claim. [Official endpoint documentation](https://docs.polymarket.com/api-reference/core/get-current-positions-for-a-user)
+confirms the limit/offset and response schema. Exit code stays zero for operational
+alerts so the existing status aggregator retains their stdout report.
+
+Main review caught and corrected three follow-on reporting hazards: unknown
+visibility must not update away an unreported price move; malformed optional
+quote context must not suppress the move or fabricate zero volume; and retained
+rows are not all freshly checked markets. Added explicit tests for these cases,
+empty-cache failure, request/decode failures and duplicate cached identities.
+
+Final validation: **567 pytest tests and 156 money-math checks pass**. Monitor tests
+use temporary caches/decisions and a fake wallet, deny real HTTP and assert the
+production cache/ledger bytes unchanged. The production ledger remains
+`be7824b65fbffc902fa2b6fcb4b965dc48f73e0391286f094910cf5cf7858322`.
+A subsequent real monitor run returned **positions_fetch_ok=true, zero alerts,
+37 tracked cache rows and 35 unique Gamma market IDs refreshed**; three historical
+May Iran aliases share one ID, explaining the count difference. Position state
+is CLEAN (13 indexed positions, one de-indexed claim row). README updated. No
+trade, Telegram, daemon restart or schedule change; continuous monitoring remains
+active. The same live opportunity PID advanced through 01:32:12, both pairs zero.
