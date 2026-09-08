@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-07",
+ "_updated": "2026-09-08",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-07: the daily short-clock re-derivation rechecked VCIOM's Sep-4 release and found no primary poll or comparable whole-seat forecast newer than its Aug-30 fieldwork. Union p remains 0.68 (<0.75), complete-set best asks total about 0.685/unit (>0.57), and the fee-free full exit is about $13.30 versus $13.60 fair. HOLD equal set; no add.",
+   "add_gate": "FAILED 2026-09-08: fresh VCIOM table/release still ends Aug-30; direct APEK report confirms the unchanged Aug-10 national forecast, and the bounded search found no newer comparable RASO forecast. Union p remains 0.68 (<0.75). HOLD equal set; no add. Any future entry also needs fresh complete-set fee-inclusive asks <=0.57; prior price snapshots are not standing executable quotes.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -253,10 +253,10 @@
   "cluster_frac": 0.0,
   "rationale": "[ENTRY-TIME RECORD 2026-07-15, superseded by `note` \u2014 do NOT read as current] DEC-0046: Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out. Entry p_no 0.85.",
   "note": "CORRECTED 0.80 -> 0.62 on 2026-08-12 after MacBook NO fell 0.595 -> 0.495 over twelve hours, sustained and one-directional, on a hidden-info-class position where the doctrine says informed flow may lead public reporting. It did. My 0.80 rested entirely on Gurman's APRIL read ('early 2027 more likely'); the July supply-chain reporting I had never looked for says ~2.5M Samsung panels with shipments spanning late-2026 AND early-2027 and a launch 'late 2026 or early 2027' \u2014 three months newer and materially less committed to 2027. New p_no 0.62 = P(launch slips past 2026) ~0.55 plus the branch where a very late 2026 unveiling still is not PURCHASABLE by Dec-31. Caution that cut the other way and is worth recording: an aggregated search summary claimed 'mass production since May, 2M panels by year-end', which would have justified cutting to ~0.45 \u2014 fetching the dated article showed the primary source says no such thing. Summary overstated; artifact corrected it. HOLD, no trade: at a 0.495 mark against 0.62 fair the edge is 12pp, the position is cap-bound anyway, and a taker exit pays 4.5c/share (10% of min(p,1-p)) which swamps the gap. Hidden-info class so still NO resting sell. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (MacBook: 20pp spread, ZERO shares bid within 5% of mark.) 0.62 -> 0.58 on 2026-08-13 after the day's round trip (mark 0.495 -> 0.685 midpoint spike -> 0.420) and a fetched clarification. Two corrections in opposite directions netting slightly toward YES: the M5-chip reshuffle is an ACCELERATION not a schedule-hold, but the late-2026 machine everyone is reporting on is the NON-touchscreen M6. Bloomberg's 'end of 2026 or early 2027' on the actual touchscreen line is roughly a coin flip on the calendar boundary, and my criteria need PURCHASABLE by Dec-31, which is stricter than 'launched end of 2026' \u2014 so P(YES) ~0.42 against a market at 0.58. Applying my own measured instance-overconfidence (6-23pp) would put me nearer 0.45, still below the market. HOLD: cannot add (cost $27.19 exceeds 15% of the reduced $175.97 bankroll \u2014 drift, not a breach, so no forced sale either) and would not sell NO at 0.42 believing 0.58. 0.58 -> 0.65 on 2026-08-13 evening: REVERTING a move I made this morning on an unsourced claim. I had cut 0.62 -> 0.58 partly because a search summary said the M5 chip reshuffle was an ACCELERATION; pinning it to dated sources shows the opposite \u2014 'stick with M5 Pro/Max' is neutral framing, and Gurman's own trajectory is Feb 'back half of 2026' -> now 'early 2027 more likely', i.e. a SLIP. With that leg removed, the evidence converges: the late-2026 M6 has no touchscreen, the touchscreen line is separately timed at 'end 2026 or early 2027' with early-2027 favoured, and the criteria need PURCHASABLE not merely launched. P(YES) ~0.35. Offsets kept: the pre-order ambiguity and Apple's capacity to surprise. Market 0.555 NO, so ~9.5pp edge \u2014 but the position is cap-bound and illiquid (20pp spread, zero bid depth within 5%), so this changes the RECORD, not the trade. || 2026-08-24 divergence acked (prior 0.65 vs NO mid ~0.35, 30pp): book WALKED (bid 0.30x27 / ask 0.40x8, $293 vol24 \u2014 thin), sources refreshed 2026-08-23 (early-2027 still favored; macOS 27.1 Oct alignment is the YES-branch driver the market may be trading). Hold under both measures; re-underwrite PRE-COMMITTED at the Sep 8-10 event, not on mid flaps. Note 2000sh NO ask wall at 0.50.",
-  "verified": "2026-09-05",
-  "criteria_read": "2026-09-02",
+  "verified": "2026-09-08",
+  "criteria_read": "2026-09-08",
   "hidden_info": true,
-  "current_assessment": "Sep-5 06:00 UTC targeted recheck after the NO midpoint fell 0.385 -> 0.345: Apple's live store still offers only non-touchscreen MacBook Pro configurations, and the official Sep-9 event page confirms the time but names no product, purchase date, or ship date. Fresh Sep-4 reporting still describes only a late-2026/early-2027 rumor window. No new fact clears the stricter general-public-purchasability-by-Dec-31 criterion, so p_no remains 0.65. The 49.01-share position exits around 0.313 average versus $31.85 raw hold value; HOLD / NO ADD / NO FLIP and re-underwrite immediately after the Sep-9 event or on purchase evidence.",
+  "current_assessment": "Sep-8 price/prior divergence review: exact Gamma criteria still require a true touchscreen explicitly branded MacBook and general-public purchase availability by Dec-31, not an unveiling. Apple's current store shows no touchscreen configuration, but current absence does not prove no year-end release; the late-2026/early-2027 branch remains real. No new fact in the bounded check changes p_no=0.65. At 49.005 NO shares, raw hold value is $31.85 versus the 00:08 depth/fee estimate of $17.67. HOLD / NO ADD / NO FLIP. A pure fresh cap-state calculation rejects even a hypothetical $1 add: configured ai-ships-fast-short gross exposure is $63.2289 versus the $59.178 factor cap at bankroll $197.26; Apple ticket cost including fees is $20.4358 versus a $29.589 ticket cap. The factor, not today's ticket cap, binds. No order path was called. The Sep-9 post-keynote review remains the next discrete evidence gate; re-underwrite immediately on purchase evidence.",
   "key_facts": [
    {
     "claim": "The late-2026 M6 MacBook Pro has NO touchscreen and NO OLED.",
@@ -331,10 +331,10 @@
     "checked": "2026-09-02"
    },
    {
-    "claim": "Sep-5 targeted check after another 4pp NO midpoint decline: Apple's live MacBook Pro store lists M5-family machines and standard/nano-texture displays, with no touchscreen configuration or pending public ship date.",
+    "claim": "Sep-8 direct store check still lists M5-family MacBook Pro machines with standard/nano-texture displays and no touchscreen configuration. This is a current availability observation, not proof that no qualifying machine can ship before year-end.",
     "source": "https://www.apple.com/shop/buy-mac/macbook-pro",
-    "source_date": "2026-09-05",
-    "checked": "2026-09-05"
+    "source_date": "2026-09-08",
+    "checked": "2026-09-08"
    },
    {
     "claim": "Apple's official event page confirms Sep-9 at 10:00 PT but does not identify a MacBook, purchase date, or ship date. Together with the live-store check, the price move is unsupported by a new public purchasability fact; p_no stays 0.65 pending the event.",
@@ -343,8 +343,8 @@
     "checked": "2026-09-05"
    }
   ],
-  "divergence_ack": "2026-08-24",
-  "divergence_note": "REVISED same day. The 02:00 ack claimed 'prior freshly sourced, today's drop carries no news' \u2014 that was WRONG in its basis: the source was fetched-and-dated but FOUR MONTHS OLD in a fast-moving supply-chain story, and I had never asked whether a NEWER source existed. Gap is now 12pp (0.62 vs 0.495), not 30pp.",
+  "divergence_ack": "2026-09-08",
+  "divergence_note": "Sep-8 acknowledged after fresh criteria/store/risk-cap checks, not merely to silence the audit: p_no 0.65 versus NO midpoint 0.38 leaves a 27pp disagreement. Current store absence is weak evidence about year-end; the prior remains a judgment based on the retained late-2026/early-2027 launch window, not certainty. No add because the configured correlation cluster is already $63.2289 against its $59.178 cap; even a $1 hypothetical fails. No forced sale solely to accommodate another trade. Keep the Sep-9 post-keynote review and no Apple resting order through the event. Earlier Aug-24 acknowledgment relied on insufficiently current reporting; that historical failure remains in note and journal.",
   "source_ack": "2026-09-05"
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
@@ -699,13 +699,13 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.18,
-  "verified": "2026-09-07",
+  "verified": "2026-09-08",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-7 daily short-clock re-derivation rechecked VCIOM's Sep-4 release and found no primary poll or comparable whole-seat forecast newer than its Aug-30 fieldwork. Distribution stays 0.18/0.31/0.19 and union p=0.68. Executable complete-set bids/asks total about 0.665/0.685 per unit versus the 0.57 add ceiling, and the fee-free full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-8 daily short-clock review re-read VCIOM's Sep-4 release/live table and the primary Aug-10 APEK forecast. No newer comparable national forecast surfaced in the bounded search. ER support remains 37.2% of all adults; five-party normalization is about 50.1% but is not a turnout-adjusted or district-seat model. Retain the prior APEK/RASO blend: 0.18/0.31/0.19, union p=0.68, fair $13.60 for the equal 20-share set. No probability increase merely because sources remain unchanged. HOLD equal set; NO ADD / NO FLIP. The >=0.75 evidence gate fails independently of price; recheck full fresh depth before any action.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
@@ -716,15 +716,15 @@
    },
    {
     "claim": "APEK's August 10 forecast puts United Russia's party-list vote at 51-54%.",
-    "source": "https://www.vedomosti.ru/politics/articles/2026/08/10/1219878-na-viborah-v-gosdumu-yavka",
+    "source": "https://regcomment.ru/reports/parlamentskie-vybory-2026-start-kampanii-i-prognoz-apek/",
     "source_date": "2026-08-10",
-    "checked": "2026-08-28"
+    "checked": "2026-09-08"
    },
    {
     "claim": "APEK's August 10 forecast puts United Russia's single-member-district wins at 190-197.",
-    "source": "https://www.vedomosti.ru/politics/articles/2026/08/10/1219878-na-viborah-v-gosdumu-yavka",
+    "source": "https://regcomment.ru/reports/parlamentskie-vybory-2026-start-kampanii-i-prognoz-apek/",
     "source_date": "2026-08-10",
-    "checked": "2026-08-28"
+    "checked": "2026-09-08"
    },
    {
     "claim": "An independent RASO survey of 54 political-technology experts forecasts United Russia at 95-130 party-list seats and 155-210 district seats. The very broad component ranges center near 295 total, shifting probability below the prior APEK-centered distribution and failing to confirm the union add gate.",
@@ -736,7 +736,7 @@
     "claim": "VCIOM's Sep-4 release extends the weekly series through Aug 30: United Russia support is 37.2% after 39.2%, versus 34.0 and 36.0 the prior two weeks. The 2pp weekly decline is inside the stated 2.5pp maximum sampling error. Normalizing the five named parties gives about 50.1%, roughly 113 of 225 list seats, but this remains polling rather than a turnout, threshold, district, or whole-seat forecast.",
     "source": "https://wciom.ru/ratings/reiting-politicheskikh-partii/",
     "source_date": "2026-09-04",
-    "checked": "2026-09-07"
+    "checked": "2026-09-08"
    },
    {
     "claim": "PolitPro's as-of-September-4 page displays 234 ER seats from its national Election Trend. The number is mechanically 47.0 / 90.4 qualifying-party vote x 450 = 234, proving the generic display proportionally allocates the whole chamber and does not model Russia's 225 single-member districts. Its newest conventional poll inputs are still August 23. Treat it only as a qualitative downside sensitivity, not an independent whole-seat forecast.",
@@ -748,13 +748,13 @@
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.31,
-  "verified": "2026-09-07",
+  "verified": "2026-09-08",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-7 daily short-clock re-derivation rechecked VCIOM's Sep-4 release and found no primary poll or comparable whole-seat forecast newer than its Aug-30 fieldwork. Group distribution remains 0.18/0.31/0.19 and union p=0.68; complete-set bids/asks total about 0.665/0.685 per unit and the full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-8 complete-set review re-read the unchanged VCIOM Sep-4 release and primary APEK Aug-10 forecast; no newer comparable national forecast surfaced. Retain 0.18/0.31/0.19 and union p=0.68, not a probability increase from source stasis. See the 295-309 leg for source details. HOLD equal set; NO ADD / NO FLIP. Evidence remains below the >=0.75 add gate; any action also requires independently fresh full-set depth.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {
@@ -773,13 +773,13 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.19,
-  "verified": "2026-09-07",
+  "verified": "2026-09-08",
   "criteria_read": "2026-09-05",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-7 daily short-clock re-derivation rechecked VCIOM's Sep-4 release and found no primary poll or comparable whole-seat forecast newer than its Aug-30 fieldwork. Group distribution remains 0.18/0.31/0.19 and union p=0.68; complete-set bids/asks total about 0.665/0.685 per unit and the full exit is about $13.30 versus $13.60 fair. HOLD equal set; NO ADD / NO FLIP.",
+  "current_assessment": "Sep-8 complete-set review re-read the unchanged VCIOM Sep-4 release and primary APEK Aug-10 forecast; no newer comparable national forecast surfaced. Retain 0.18/0.31/0.19 and union p=0.68, not a probability increase from source stasis. See the 295-309 leg for source details. HOLD equal set; NO ADD / NO FLIP. Evidence remains below the >=0.75 add gate; any action also requires independently fresh full-set depth.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "key_facts": [
    {

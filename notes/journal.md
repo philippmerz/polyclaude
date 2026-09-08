@@ -13406,3 +13406,74 @@ Verification: **515 pytest tests passed**, **156 money-math checks passed**, and
 validation was read-only; tests mocked network and outward actions. Updated the
 backlog, fee lesson, source audit and README. No trade, actual Telegram, daemon
 restart or scheduler change. The durable ROI goal remains active.
+
+## 2026-09-08 00:16 UTC — continuation: portfolio marked; Duma daily review renewed
+
+Previous turn classified as progress: Limitless quote corrections were tested and
+pushed as `6a81330`. Rechecked the live goal and worktree. The fresh 00:08 bankroll
+aggregate is **$197.26**, with **realized +$14.44** unchanged and gas excluded from
+P&L at $6.20. PM midpoint value is $163.82 versus a **$154.81 depth/fee estimate**,
+a $9.01 gap. These are marked and diagnostic values, not realized return or a
+synchronized liquidation quote. An independent 13-position identity/fee/book audit
+found matching Gamma/CLOB identities and active status throughout; 12 books passed
+the 120-second timestamp check, while Greenland was about 162 seconds old and a
+repeat read remained stale. Do not treat the aggregate as a verified fresh exit.
+The one excluded redeemable 31-share row is the settled losing **Iran–Oman** market,
+not the separate de-indexed Hormuz-normal dust position.
+
+The exit report found no ordinary sell-over-hold signal; Duma correctly demanded
+its same-day short-clock prior review. A bounded worker checked for newer primary
+evidence, and main independently read the [VCIOM Sep-4 release](https://wciom.ru/analytical-reviews/analiticheskii-obzor/reitingi-prezidenta-pravitelstva-i-politicheskikh-partii-04092026),
+the [live party table](https://wciom.ru/ratings/reiting-politicheskikh-partii/) and
+the [primary APEK report](https://regcomment.ru/reports/parlamentskie-vybory-2026-start-kampanii-i-prognoz-apek/).
+VCIOM still ends with Aug-24–30 fieldwork; ER support remains 37.2%. Five-party
+normalization is about 50.1%, but does not model turnout or district seats. The
+APEK report is dated **Aug-10**, despite a current-date page header; it retains
+51–54% list support and 190–197 district seats. No newer comparable national
+forecast surfaced; the broad RASO range remains the counterweight. Retain the
+judgmental **0.18/0.31/0.19** distribution and **0.68 union probability**. Source
+stasis is not evidence for increasing that probability. Updated only the daily
+verified dates/assessment and replaced secondary APEK links with the primary report.
+
+Main independently validated exact Duma YES tokens/conditions, open/unproposed
+status, explicit fee-free metadata and fresh books. Twenty YES shares in each
+bucket sell completely for **$13.15 net**, versus $13.60 raw hold value. The common
+five-share minimum costs **$3.43884** to buy across all three YES legs, or
+**$0.687768 per covered payout dollar**. Evidence (requires >=0.75) and price
+(requires <=0.57) both fail the add gate. The worker initially returned NO-complement
+asks; rejected that interpretation and obtained actual held-YES ask books, then
+reproduced the corrected totals independently. **HOLD equal set; no add/flip.**
+
+All four daemons have exactly one live absolute-path process and code predating
+their start. News/heartbeat state advanced after midnight; the Telegram process
+is live, though old operational-log/state timestamps alone do not prove message
+delivery. The verified-live opportunity PID 2349187 advanced from its 23:57 cycle
+to **00:13:19–20**, again finding no executable HLE/MetaMask pair. Full/periodic/
+weekly cron entries and the year-guarded Sep-9 Apple 18:30 reminder remain present.
+Crux coverage is quiet. A fresh authenticated read shows **five SELLs, zero BUYs,
+zero Apple orders**, with no fills on the five rests. No order was submitted.
+
+Bounded primary catalyst checks found the [Apple store](https://www.apple.com/shop/buy-mac/macbook-pro)
+still listing M5-family standard/nano-texture displays without a touchscreen
+configuration. [OpenAI's release note](https://help.openai.com/en/articles/6825453)
+still describes staged Astra access, and [Google's model-news page](https://blog.google/products-and-platforms/products/gemini/)
+still leads with 3.8 Flash; these checks supplied no new position-changing fact.
+No trade, probability change, Telegram, restart or schedule change. Continuation
+remains active; next full check is 02:00 UTC, with live watchers between checks.
+
+Final state audit surfaced one real follow-up: Apple's 27pp prior/mark divergence
+acknowledgment had expired (Aug-24). Re-read exact live criteria and used the pure
+cap-state helper on fresh public positions/Gamma metadata, with the five-SELL/zero-BUY
+order read as the commitment check. Apple gross ticket cost is **$20.4358**, below
+the $29.589 ticket cap, but its configured `ai-ships-fast-short` cluster totals
+**$63.2289** against a **$59.178** cap. A hypothetical $1 add is rejected; no order
+or entry command was invoked. Thus the old ticket-cap explanation is no longer
+current, while the correlation gate still independently prevents adding. Retained
+p_no 0.65, recorded the launch-window uncertainty (no current store configuration
+is not proof about year-end), refreshed criteria/verified/divergence dates and
+explicitly retained the Sep-9 review. No probability, position or limit changed.
+
+Post-update verification: position-state audit **CLEAN** (13 indexed positions,
+one de-indexed claim row), Duma exit report now **HOLD_COMPLETE_GROUP**, valid JSON,
+clean diff and **515 passing tests / 156 money-math checks**. Only portfolio cache
+and research/review records changed in this turn; trading code was untouched.
