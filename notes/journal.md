@@ -14399,3 +14399,33 @@ News saved valid state at 07:32:27 without a new alert. Four monitors remain liv
 last free-space read was about **537 MiB** at 07:33. Capacity stays open under
 the hourly guard. Updated README/backlog's Apple quote, not priors, schedules,
 code or total bankroll. No cleanup or Telegram. Continuation goal active.
+
+### 07:50 UTC — hourly portfolio snapshot and order reconciliation
+
+After a verified wait on news PID 2836158 and opportunity PID 2349187 through
+their valid 07:47 state saves, refreshed the hour-old portfolio snapshot once.
+A cheaper worker's normal bankroll run completed successfully; the authoritative
+cache timestamp is **07:49:04 UTC**, total **$191.21**, up **$0.14** from 06:49.
+PM midpoint is **$157.71**, indicative fee/depth net **$151.81**, gap **$5.90**.
+Settled profit is unchanged at **+$14.44**; gas-token value is **$6.25**, excluded
+from trading P&L. No fetch failure. Rounded pUSD/Aave reserves remain
+**$2.12 / $16.11 Polygon / $7.87 Arbitrum**. The net estimate is sequential,
+unsynchronized and not freshness-verified executable proceeds; no per-position
+attribution of the aggregate move is established, and the output did not provide
+a fresh Ostium count.
+
+Main's authenticated **07:48** order read returned HTTP 200: five LIVE SELLs at
+the prior prices, each with zero matched size, no BUYs and no Apple orders.
+The separate **07:49:24.400526** Data API read found 13 active rows, initial value
+**$157.1959**, current value **$157.6894**. All quantities match the 13 active
+claims within 1e-6; no expected active asset is missing. This read is capped at
+100 rows and excludes size <=0.5 and redeemable rows; it does not claim a dust-free
+wallet. Its mark is a different sequential observation from the bankroll run.
+
+The preceding **07:41** UMA refresh had valid positions retrieval, 37 tracked
+aliases / 35 distinct Gamma markets and no alerts; main independently verified
+the saved cache. All four monitors remain live. Free space is about **533 MiB**
+at 07:50, still only narrowly above the 512 MiB warning threshold; the hourly
+guard and open capacity request remain in force. Updated README and ordinary
+bankroll cache, not probabilities, quantities, orders, schedules or code.
+No financial action, cleanup or Telegram. Continuation goal remains active.
