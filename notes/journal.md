@@ -14159,3 +14159,33 @@ state at 05:57:06. The operator capacity request remains open, with the existing
 06:00 backlog recheck still due. Apple/AVAV remain Sep-9 and USGS Sep-13; no new
 calendar action is due before that recheck. Updated README and the normal bankroll
 cache; no duplicate Telegram after material incident summary 915. Goal active.
+
+### 06:05 UTC — 06:00 periodic review: low-disk follow-up remains open
+
+Reviewed backlog, recent journal and existing calendar. The queued 02:00 cron
+was already completed/reconciled at 02:03/02:07; no duplicate full check-in.
+Carried forward the explicitly timestamped 05:53–05:56 portfolio/risk snapshot
+above rather than repeating those reads minutes later. No new portfolio quote,
+order read, financial write or prior change is claimed by this review.
+
+The due disk recheck measured **334.6 MiB available at 06:04**, still below the
+512 MiB warning threshold and above the 128 MiB critical threshold. No further
+cleanup or restart. The operator capacity request remains open. All four known
+daemon PIDs are live; news state saved valid JSON at 06:01:33 and opportunity
+state at 06:03:58. The last news alert is still Sep-7 21:46 with no position
+impacts. The existing hourly disk guard should next poll around 06:14; moved
+the backlog's next periodic capacity review to 10:00, without postponing any
+intervening critical alert.
+
+The scheduled 06:00:12/13 HLE and MetaMask pair checks each found zero executable
+pairs. A cheaper worker classified the saved 06:00:55 consistency report; main
+verified its counters: four validated nonpositive groups, fifteen quote failures
+and 193 unquoted groups, zero actionable/positive-depth observations. Reported
+first failures are ten empty ask books and five stale timestamps. Coverage is
+bounded and incomplete, snapshots non-atomic; this is not proof of no edge in
+unquoted markets. No new integrity issue warrants a retry or safeguard change.
+
+Apple's Sep-9 18:30 one-shot remains armed; AVAV Sep-9 22:00 and USGS Sep-13
+22:00 use existing periodic slots. No calendar change is due now. No new
+scanner, discretionary research or duplicate Telegram. README retains the
+fresh 05:53–05:56 snapshot. Durable goal and continuation schedules stay active.
