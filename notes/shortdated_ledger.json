@@ -499,8 +499,20 @@
   "decision": "KILLED at deploy gate",
   "reason": "Deploy-time re-verify FAILED: Iran actively striking Kuwait for days (Ali Al Salem, airport, oil facility; heaviest barrage; Wikipedia page exists), regime figures weighing ground incursion for bases/hostages, peace commitments suspended. My Jul-25 p_yes 0.01 was PEACETIME LOGIC on a stale world-model (tier-2 Iran demotion under-integrated the Gulf-war escalation). Revised p_yes 0.02-0.05 -> edge at 0.968 zero-to-negative. Market is right.",
   "size_usd": 0,
-  "outcome": null,
-  "fade_would_have_won": null
+  "outcome": "NO",
+  "fade_would_have_won": true,
+  "market_id": "2995866",
+  "slug": "iran-invades-kuwait-by-august-31-20260720015031546",
+  "condition_id": "0x968e7d0e59659dc602480ed9ca6fbd933a25912e1667dcec1f43d243cec5e0b0",
+  "forecast_source_commit": "e27e6330b361c2c8556762eda7b2e365689f3814",
+  "forecast_source_path": "notes/shortdated_ledger.json",
+  "identity_source_path": "data/snapshots/shortlist_20260725T020400Z.json",
+  "identity_source_sha256": "9a724b95349c4677736bfe91a0444ccdc6fddac240cc38bc958fddda8ab658da",
+  "identity_note": "Manual historical join on 2026-09-08: the title-only forecast in the pre-outcome July-26 commit exactly matches the question in the locally archived July-25 shortlist. That archive supplies market ID/slug and both outcome token IDs; both current exact-ID and exact-slug endpoints match them. The shortlist is not git-tracked, so its filename date is not immutable pre-outcome provenance. The original forecast had no identifiers; condition_id comes from the current exact Gamma response, not the archive.",
+  "graded_at": "2026-09-08T06:08:40Z",
+  "outcome_source": "https://gamma-api.polymarket.com/markets/2995866",
+  "grade_note": "Exact market closed=true, UMA resolved, labelled Yes/No payouts 0/1. Records the venue's final NO outcome, not a fresh independent reconstruction of conflict events or realized profit: this candidate was skipped with zero capital. Original probability 0.035 is unchanged; the prose's earlier 0.01 is not added as another forecast.",
+  "baseline_note": "Retains original pre-outcome ledger ask=0.968; not independently reconstructed from historical order-book data. Archived shortlist mids 0.0365/0.9635 do not replace this baseline."
  },
  {
   "date": "2026-07-26",

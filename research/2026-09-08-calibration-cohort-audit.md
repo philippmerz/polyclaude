@@ -189,3 +189,45 @@ repairs and no other changed fields. All 30 isolated calibration tests passed.
 Four inactive operator logs were subsequently compressed losslessly, with their
 decompressed SHA-256 hashes verified against the originals. No financial writes
 or forecast/outcome changes occurred; disk headroom remains an operational risk.
+
+## Kuwait historical identity and final grade, 06:08 UTC
+
+The previously unidentified existing record is now graded from the
+[exact Gamma market 2995866](https://gamma-api.polymarket.com/markets/2995866),
+not from an expired date or an inferred absence of conflict. Main independently
+read the original title-only forecast in pre-outcome commit
+`e27e6330b361c2c8556762eda7b2e365689f3814` (July 26): P(YES)=.035,
+NO ask=.968, zero capital, outcome null, decision KILLED at deploy gate.
+The locally archived `data/snapshots/shortlist_20260725T020400Z.json` matches the
+complete question, supplies ID 2995866 and slug
+`iran-invades-kuwait-by-august-31-20260720015031546`, and supplies both outcome
+token IDs. Main's exact-ID and exact-slug reads match all these identifiers.
+The archive's SHA-256 is preserved in the ledger. It is not git-tracked: its
+filename timestamp is not immutable pre-outcome evidence. This remains a
+documented manual archival join, not a claim that the original forecast carried
+an identifier. The condition ID comes from the current exact-market response.
+
+At 06:08:40 UTC Gamma returned closed=true, UMA resolved, and labelled Yes/No
+payouts 0/1. Main read the complete criteria: qualifying territorial control by
+ground forces is required, with minimum-duration and confirmation provisions;
+air strikes alone do not qualify. This grades the venue's terminal result,
+not a fresh independent reconstruction of the war. The snapshot's UTC endDate
+is not used to establish finality. The original .035 probability and .968 ask
+are unchanged; the ask remains a historical ledger observation, not a rebuilt
+order book. Neither the archive's midpoint nor today's payout fills a missing
+quote. The prose's earlier .01 belief is not added as another forecast.
+
+All 54 records remain; only this row's outcome/provenance changed. Counts are
+now **22 own / 16 market-matched**, seven pending forecasts, 25 missing/bad
+forecasts and six missing baselines. Own Brier is **0.1431047**; matched-only
+Brier is **0.1624189 versus 0.1849254**. Earliest-forecast-per-exact-question
+gives 16 questions, Brier **0.1812564**, selected-side mean error **+0.46875pp**.
+Collapsing the five SDCC contracts gives 12 illustrative event units, not proven
+independence. Resolver dry-run reports zero new fills, 28 already-outcome rows,
+17 non-candidates and nine missing identifiers. Thirty isolated calibration
+tests pass; an independent worker also checked the single-row diff.
+
+The skipped NO would have won, but the original central NO probability .965
+was below the .968 ask by 0.3pp before any other costs. A winning result does
+not retroactively make that stated-probability skip inconsistent. No realized
+profit, new forecast, portfolio probability or hold/entry-policy change follows.

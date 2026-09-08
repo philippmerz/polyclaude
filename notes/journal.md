@@ -14189,3 +14189,36 @@ Apple's Sep-9 18:30 one-shot remains armed; AVAV Sep-9 22:00 and USGS Sep-13
 22:00 use existing periodic slots. No calendar change is due now. No new
 scanner, discretionary research or duplicate Telegram. README retains the
 fresh 05:53–05:56 snapshot. Durable goal and continuation schedules stay active.
+
+### 06:15 UTC — Kuwait exact-identity grade; scheduled disk alert verified
+
+Previous goal turn was a verified wait on the still-live news/opportunity/
+heartbeat processes while reconciling the late periodic prompt; no new alert.
+This turn completed a bounded archival lead while following the existing
+heartbeat PID 4110253 to its next scheduled poll. No new scanner or forced poll.
+
+A cheaper worker located the pre-outcome Kuwait forecast in commit e27e633 and
+the matching local July-25 shortlist. Main independently read both, then matched
+the complete question, ID 2995866, slug and both outcome token IDs through Gamma's
+exact-ID and exact-slug endpoints. The original forecast was title-only and the
+shortlist is not git-tracked; the manual join and that provenance limitation are
+explicitly preserved. At 06:08:40 the exact market is closed, UMA-resolved, with
+labelled Yes/No payouts 0/1. Graded only this existing row NO; all 54 records,
+original probabilities, prices and decisions are preserved. No inferred new
+forecast from historical prose, and no claim of realized profit on this skip.
+
+Current scorer: 22 own / 16 market-matched rows, own Brier .1431047, matched
+.1624189 versus .1849254; 16 initial-forecast questions are not 16 independent
+events. Resolver dry-run leaves nine missing identifiers and fills nothing.
+An independent worker verified the sole-row diff and ran all 30 isolated
+calibration tests successfully. Main field-compared every row against HEAD.
+Updated the existing research audit, README and backlog; no portfolio-policy
+change follows from this small dependent cohort or one winning skipped outcome.
+
+At 06:14:42 the existing heartbeat measured **328.7 MiB free**, sent its hourly
+warning and saved valid JSON at 06:14:43. The warning cooldown timestamp advanced
+only after confirmed send; PID 4110253 remains live. No critical/probe-error key
+was recorded. News state saved valid JSON at 06:11:39, with no new news alert.
+No extra cleanup, restart, manual Telegram, financial write or schedule change.
+Capacity remains open: next existing hourly probe around 07:14, periodic review
+10:00, immediate attention to any intervening critical warning. Goal stays active.
