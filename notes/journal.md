@@ -13515,3 +13515,57 @@ correction, nor validate raw priors. Updated the backlog and preserved the three
 omissions, exact provenance, descriptive scores and remaining data-quality limits
 in `research/2026-09-08-calibration-cohort-audit.md`. No retrospective probabilities,
 trades, limits or hold/exit semantics changed; the archival ledger is untouched.
+
+## 2026-09-08 01:02 UTC — calibration reconciliation implemented; test-write incident recovered
+
+Previous turn made progress by establishing three missing pre-outcome forecasts.
+Rechecked the active goal, worktree and live watcher handles. Quota probe shows
+71% main headroom. Routed the bounded scorer/resolver fix and independent data/code
+QA to cheaper workers while main retained cohort interpretation, restoration and
+live portfolio checks.
+
+Appended only DEC-0082/0085/0107 to the short-dated ledger, with exact market and
+condition IDs, full pre-outcome commit hashes, original probabilities, final labelled
+outcomes and source URLs. The original 51 records are preserved. Iran–Oman/Lake
+baseline asks remain explicitly missing; GTA has the documented raw NO ask 0.27.
+No probabilities were inferred from final results or reconstructed from hindsight.
+
+The accounting tool now resolves only exact ID/slug identities, requires closed
+and UMA-resolved status plus complementary labelled 0/1 payouts, and never replaces
+an existing outcome. Pending labels are excluded from scoring. Own forecasts with
+missing asks still score, while market comparisons use only the matching subset.
+Current raw-row counts are **18 own / 16 matched**, not 18 independent theses.
+Own Brier is **0.1569654**; the matched subset is **0.1476799 vs 0.1857395**. These
+are descriptive accounting checks, not evidence for a change to hold priors or
+portfolio limits. The earlier 14-question first-forecast audit remains a different,
+explicitly dependence-limited cohort.
+
+**Incident, fully recovered before handoff:** the first worker test mocked loaded
+rows but left `_write_document` pointed at the real ledger. One successful fixture
+therefore replaced the working ledger with a ten-line test record. Main caught the
+unexpected 671-line deletion in `git diff`, stopped the worker, confirmed no pytest
+process remained, restored the 51 committed records with `apply_patch`, and restored
+the three known additions. No order, wallet, decision/prior file or funds were
+touched. Added mandatory per-test temporary-ledger redirection, confined writes,
+network denial and a byte-level production-ledger invariant before permitting
+testing to resume. All original records were revalidated unchanged. The final
+54-record ledger hash is
+`d6e37fd3f4edeb281d1da5559febc9ab5eb1309d24473f49d1c6d6118f0df76e`.
+
+Main also caught and fixed a reporting regression that displayed every baseline
+as n/a despite correct matched-subset totals. A specific output test now separates
+quoted/unquoted rows and proves the comparison uses the matched own error rather
+than the full own cohort's error. Added adversarial identity/finality cases and
+retained the established log-loss clipping. Final verification: **545 pytest
+tests pass**, **156 money-math checks pass**, valid JSON/clean diff and unchanged
+production-ledger hash after tests. Live read-only helper calls verified exact
+NO/YES/NO finality for all three added records. `resolve --dry-run` made no changes:
+zero filled, 24 already-outcome, 17 non-candidates, 13 missing identifiers; it does
+not fabricate resolutions for those legacy rows.
+
+Position state remains CLEAN (13 indexed, one de-indexed claim). The same live
+opportunity PID advanced through **01:00:37/38**, finding no executable HLE/MetaMask
+pair. The Treasury screen's **+0.04pp** remains below its 2pp alert gate; public news
+tail is unchanged. Updated README, backlog and the cohort audit to distinguish the
+reconciled data from the earlier snapshot. No trade, prior/limit change, Telegram,
+daemon restart or schedule change. Continuation remains active.

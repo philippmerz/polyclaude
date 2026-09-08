@@ -93,6 +93,7 @@ Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposi
 - `spot_swap.py` — Uniswap V3 exact-input spot swaps. Default routing retries and compares every standard fee tier by token output, surfaces gas evidence and divergent/dust pools, requires an independently derived `--min-out`, and requotes immediately before signing after any approval delay without ever weakening the exact floor already confirmed.
 - `ostium_client.py` — Ostium perps client.
 - `decisions.py` — append-only decision tracker with calibration-delta + outcome + lesson.
+- `ledger_calibration.py` — exact-identity/final-outcome ledger grading; own forecast scores and matched market-baseline scores have separate counts. Missing quotes stay missing, and row counts are not independent-sample counts.
 
 ### Operator-loop infra
 - Scheduled cron/periodic prompts carry a durable Codex ROI-goal contract: continuation turns remain

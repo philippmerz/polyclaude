@@ -4,9 +4,9 @@ Reviewed 2026-09-08 UTC. Research only; no probability, sizing, or hold/exit
 policy change. This audit supersedes treating the legacy scorer's N as a count
 of independent instance theses, or deferring reconciliation solely until December.
 
-## What the current scorer actually measures
+## Audit-start snapshot (before reconciliation)
 
-`scripts/ledger_calibration.py score` reports 15 scored rows, 11 pending and 25
+`scripts/ledger_calibration.py score` reported 15 scored rows, 11 pending and 25
 excluded/study rows. Its Brier score is 0.1374 versus 0.1626 for its ask-derived
 market baseline. These are decision-row statistics, not independent experiments.
 Keeping the earliest dated forecast for each exact question removes two later
@@ -17,9 +17,9 @@ the most successful update after the result.
 
 The old July grades are read from the existing ledger, not freshly revalidated
 against every market in this audit. Some older rows lack stable market identifiers.
-The scorer also treats `PENDING-NO*` as NO; that must not establish finality. The
+The old scorer also treated `PENDING-NO*` as NO; that must not establish finality. The
 one such current row has no numeric central prior, so excluding it leaves today's
-15-row score unchanged. Do not use the fuzzy-question `resolve` path to establish
+15-row score unchanged. Do not use fuzzy-question matching to establish
 future grades: the ledger's own schema requires exact market identity.
 
 Do not exclude the Wimbledon forecasts merely because population screening found
@@ -78,5 +78,40 @@ and pre-outcome provenance, mark genuinely unavailable baseline quotes as missin
 exclude pending outcomes, and report event dependence separately from row count.
 Reassess with new independently settling theses and the named December cohort;
 never count repeated updates as additional outcomes or choose a grouping to obtain
-the desired policy result. This research table preserves the three omissions without
-silently rewriting the archival ledger or changing its existing score semantics.
+the desired policy result. The initial audit preserved the three omissions here;
+the following implementation records the subsequent explicit ledger reconciliation.
+
+## Implementation follow-up, same day
+
+Appended DEC-0082/0085/0107 to `notes/shortdated_ledger.json`, with the exact IDs,
+initial forecast timestamps, full pre-outcome commit hashes, labelled outcomes and
+source URLs. All 51 older records remain unchanged. Iran–Oman and Lake America
+have `ask: null` because no separate historical baseline quote was established;
+GTA retains the explicit initial raw NO ask of 0.27. No baseline was backfilled
+from a cap, average fill, midpoint or a current quote.
+
+The corrected scorer reports **18 own forecast rows**, Brier **0.1569654**, and a
+**16-row market-matched subset**. Within that same subset, own Brier is **0.1476799**
+versus **0.1857395** for the raw-ask-implied market baseline. These are row-level
+descriptions, not the 14-question initial-forecast cohort above or an independent
+sample. The positive matched-subset score difference is not a demonstrated ROI
+edge, and cannot validate a portfolio-policy change.
+
+The resolver now uses exact [market-ID](https://docs.polymarket.com/api-reference/markets/get-market-by-id)
+or [market-slug](https://docs.polymarket.com/api-reference/markets/get-market-by-slug)
+endpoints and checks every supplied identity. It requires closed=true, UMA status
+resolved, exact YES/NO labels and complementary 0/1 payouts. Pending labels never
+score as final; uncertain/unidentified rows stay ungraded. Missing baseline asks
+do not erase a valid own-forecast/outcome observation, and market comparisons use
+only matched rows. Dry-run preserved the ledger and reported **13 no-identifier
+rows**, rather than guessing their market from titles. Legacy identity repair and
+explicit first-forecast/event-group reporting remain separate work before any
+policy-changing inference.
+
+Implementation incident: an initial test mocked loaded rows but not the output
+path, briefly replacing the working ledger with a one-row fixture. Main stopped
+the worker, restored all 51 committed rows and the three known additions, and
+verified the original records unchanged. Tests now automatically redirect to a
+temporary ledger, confine writes, deny live network access and assert the real
+ledger's bytes are unchanged. No order or funds were touched. A separate output
+regression caught in main review (valid baselines displayed as n/a) is also tested.
