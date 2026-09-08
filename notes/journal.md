@@ -14571,3 +14571,39 @@ partial/non-atomic coverage remains explicit. Both 09:09 pair checks report zero
 executable pairs. News saved valid state at **09:13:27** without a new alert.
 Four monitors remain live. No portfolio, order, prior or schedule changes;
 the 08:49 portfolio/UMA snapshots were not repeated. Continuation goal active.
+
+### 09:46 UTC — bounded listing and HIP-4 gates checked
+
+Verified the NYCC backlog's assumed alert rather than building another one:
+`nycc-announce` is actionable through Oct-31 and runs every 900 seconds. Its
+runtime listing checkpoint was **09:25:20** with no recorded failure. Main's
+single **09:37:12.936** Gamma public-search probe returned HTTP 200, three
+events and zero active events/matches. Fuzzy search and literal `comic-con`
+matching remain bounded coverage, not proof of no listing anywhere. No alert,
+state mutation or config change was invoked by that probe.
+
+A cheaper worker made one public mainnet HIP-4 `outcomeMeta` request at
+**09:41:15.102324–09:41:15.544150**, HTTP 200. The visible BTC price-bucket
+question **227** has thresholds 76,964/80,105 and three named binary outcome
+objects plus a fallback, with expiry encoded `20260909-0600`. This is worth
+recording but is not proven newly launched or actively tradeable: no full old
+inventory or current active-status field, and no complete resolver formula.
+Main corrected the worker's unsupported testnet-only claim after independently
+reading the current official docs. Preserved the exact captured objects and
+limitations in `research/2026-09-08-hip4-metadata-gate.md`; no raw full-response
+archive or total counts are claimed. No order books, PM counterleg search,
+funding, trading or scanner build; no exact-rule hedge established.
+
+The existing **09:30** wrapper/scanner was followed from live to termination;
+its **09:31:02** report retained 706 eligible leaves, excluded 35 duplicate
+identities, and found 17 bounded PM matches: zero IDENTICAL, seven DIFFERENT,
+one UNCERTAIN and nine unverified. Main inspected the uncertain row: the parser
+rejected a bullet-prefixed DIFFERENT response citing $20/month versus $90/week;
+this is no evidence of equivalence. Latest monotonicity block inspected 1,002
+events without violations or executable rows. The **09:41:45** consistency
+report has five validated nonpositive groups, fourteen quote failures and 183
+unquoted, zero actionable observations; partial/non-atomic coverage explicit.
+Monitors remain live, latest news alert unchanged. Free space is about 503 MiB
+at 09:46 under the existing warning. Main headroom was **38% at 09:20**; bounded
+routine work stayed delegated, with no expensive discretionary research. No
+portfolio, order, prior, schedule, cleanup or manual Telegram change. Goal active.
