@@ -14648,3 +14648,33 @@ Free space **499.35 MiB at 10:02:11**, still warning-level, next normal guard
 about 10:14; no cleanup/restart. Material Telegram **919** sent once. Updated
 README/backlog/journal and normal bankroll cache, no code/prior/schedule changes.
 Goal remains active; the monthly drill, Apple and AVAV reminders are not due yet.
+
+### 10:24 UTC — authorized scoped capacity housekeeping
+
+The user rejected VM expansion and explicitly authorized deleting the identified
+obsolete files outright rather than archiving. Removed exactly seven files:
+
+- `/home/polyclaude/.local/share/claude/versions/2.1.170`
+- `/home/polyclaude/.local/share/claude/versions/2.1.219`
+- `/tmp/listing_study/census_jul_open.jsonl`
+- `/tmp/listing_study/census_jul_closed.jsonl`
+- `/tmp/listing_study/census_apr_closed.jsonl`
+- `/tmp/implication_study/open_universe.jsonl`
+- `/tmp/implication_study/pairs.jsonl`
+
+Total file bytes **692,874,130** (~660.8 MiB). Observed available space rose
+from **516,726,784** to **1,209,585,664 bytes**; the 10:23 check still had
+about **1.126 GiB**. No archives/backups were made by this cleanup, so the
+deleted raw datasets cannot be restored from it. Study scripts, small results
+and conclusions remain. Linked Claude native **2.1.220** was preserved and
+`--version` passed. All four daemon PIDs remained unchanged/live; four key
+portfolio/cache JSON files parsed successfully. Private histories, inbox,
+credentials, live operator process and active logs were not cleanup targets.
+
+Metadata-only log inspection found the active operator log at ~115.7 MB,
+held by PID 3987530 without O_APPEND; do not copy-truncate/rotate it while
+live. No log policy, restart or automatic deletion was implemented. The
+existing hourly warning <512 MiB / critical <128 MiB guard remains active.
+This restores headroom now, not a guarantee that continuing log growth will
+never require more housekeeping. Updated README/backlog with no-expansion
+constraint and scoped cleanup; no trading, order, prior or schedule changes.
