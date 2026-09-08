@@ -14461,3 +14461,33 @@ issue. Partial, non-atomic coverage remains explicit. News saved valid state at
 **08:12:51** without new alerts. The last portfolio/UMA snapshots remain
 07:49/07:41; no redundant financial query this turn. Updated the backlog capacity
 checkpoint only; no position, order, prior, schedule or code change. Goal active.
+
+### 08:48 UTC — missing-quote reporting repaired; no overdue holding review
+
+The bounded watchlist price refresh evaluated all **31** configured candidates:
+zero trigger hits and zero missing quotes. Equity observations are Yahoo's last
+daily closes, not fresh intraday quotes; the monitor does not expose their dates.
+No automatic fundamental re-vet was launched. A separate local audit matched all
+**13** active claims to priors without missing dates or ambiguous identities.
+The oldest `verified` date is Sep-3 (5 days), and the oldest `criteria_read` is
+Sep-2 (6 days): neither existing review-age threshold is exceeded. Non-economic
+Hormuz dust is excluded; this was not a new live inventory fetch.
+
+While inspecting the monitor, main reproduced an offline **KeyError: route**
+when a missing quote reached the default plain-text renderer. That could hide
+later candidates in a full report. The scheduled `--hits-only` path filters
+missing rows first, and JSON bypasses the renderer, so neither was affected by
+this crash. A cheaper worker restored the missing NO_DATA metadata and added
+three isolated regressions covering mixed missing/valid results, JSON metadata
+and hits-only behavior. Main reviewed the narrow diff and ran the full suite:
+**643 passed**, plus **156 money-math checks**; one existing websockets warning.
+No quote, threshold, routing, auto-revet or financial behavior changed; no daemon
+restart is needed for this per-invocation script.
+
+Verified waits followed live news/opportunity processes through the normal
+08:43 news save without a new alert. The 08:38 consistency report has five
+validated nonpositive groups, fourteen quote failures and 181 unquoted; no
+actionable candidate, with partial/non-atomic coverage explicit. Four monitors
+remain live; free disk space is about **518 MiB**, still only narrowly above the
+512 MiB warning. Capacity request and hourly guard remain open/active. No trade,
+order, prior, schedule, cleanup or Telegram change. Continuation goal active.

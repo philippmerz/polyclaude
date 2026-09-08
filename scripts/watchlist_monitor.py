@@ -157,7 +157,11 @@ def evaluate(trigger: dict, current: float | None) -> dict:
     if current is None:
         return {"ticker": ticker, "status": "NO_DATA", "current": None,
                 "entry_max": entry_max, "entry_min": entry_min,
-                "rationale": rationale, "type": trigger.get("type")}
+                "direction": "", "rationale": rationale,
+                "type": trigger.get("type"),
+                "currency": trigger.get("currency", "USD"),
+                "route": trigger.get("route", "polyclaude"),
+                "horizon": trigger.get("horizon", "?")}
 
     hit = False
     direction = ""
