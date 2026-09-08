@@ -13941,3 +13941,38 @@ No trades, funding, order changes, positions, probabilities or code changed.
 No duplicate Telegram for non-actionable research. Only notes were edited;
 existing 625 tests / 156 money checks were not rerun for prose. Bankroll remains
 the timestamped 02:01:42 measurement, not a new quote.
+
+### 03:10 UTC — sub-threshold Treasury observation rechecked; current pair negative
+
+The post-research health tail exposed a 02:51:42 monotonicity log entry: +0.63pp
+net, below the watcher's 2pp alert-dispatch floor. Reviewed rather than treating
+the alert filter as a complete entry verdict. Its documented concerns about fee/
+slippage error and one-leg fill risk still apply; no policy exception was made.
+Delegated exact identity lookup while main read both full rules and fresh books.
+
+Event 956934, `how-low-will-30-year-treasury-yield-get-in-september`: pair is
+[4178772 NO, below 5.12%](https://gamma-api.polymarket.com/markets/4178772) plus
+[4178773 YES, below 5.15%](https://gamma-api.polymarket.com/markets/4178773).
+Both use strict **lower than**, the same Sep-3–Sep-30 observation window and
+Oct-14 missing-data deadline, and the official Treasury **Daily Treasury Par
+Yield Curve Rates / 30 Yr** column. Not intraday bond yields or the entire month
+starting Sep-1. This is genuinely nested under the shared rules, but that does
+not guarantee inexpensive or atomic fills. Both Gamma markets remain open,
+accepting orders and unproposed, with structured .05 / exponent-1 fees.
+
+At 03:08:11 UTC, exact-token/condition validated books showed .59 ×40 on the
+harder NO and .39 ×19.95 on the easier YES. Both passed the scanner's existing
+freshness/schema gate, but timestamp ages were 94s/36s: sequential snapshots,
+not a synchronized executable promise. Five equal shares cost **$5.01995**
+including $0.11995 fees, or **1.00399 per $1 floor / −0.399pp**. Fifteen equal
+shares cost $15.05985. At 25 shares the YES walk crosses to .48 and total cost
+reaches $25.55720425 (**−2.228817pp**). The older −1.39pp walk and subsequent
++0.63pp log need not contradict each other; quotes at different times can move.
+Neither establishes current profit. No entry gate, order or funding was invoked.
+
+The [named Treasury source](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026)
+was also checked directly: the in-window published 30-year values are 5.25%
+on Sep-3 and 5.24% on Sep-4, with no later row in this retrieval. Neither strict
+threshold has been reached in that published sample; no separate already-known-
+YES entry follows from the source. No new prior, code, schedule, trade or
+Telegram. Existing watcher remains responsible for future re-crossings.
