@@ -14288,3 +14288,19 @@ Available disk remains about **321 MiB**. Main quota preflight at 06:38 reported
 and risk judgment. README updated. Sent the scoped reliability update through
 the documented Telegram sender, message **917**; capacity remains open under
 the existing hourly guard and 10:00 periodic recheck. Goal and schedules active.
+
+### 06:47 UTC — automatic Git packing completed; capacity margin improved
+
+The commit for the writer guard triggered Git's own automatic incremental
+packing. Main observed live gc/repack/pack-objects PIDs 4135592/4135593/4135594
+at 06:45:25, then all handles missing at 06:46:18; no restart or manual gc was
+issued. There is no `.git/gc.log`, HEAD remains readable and the push succeeded.
+This is not a full repository-object integrity audit. Available space rose from
+about 321 to 549 MiB over that interval and measured **548.2 MiB at 06:47:20**.
+All four monitors are live; the production ledger remains valid with 54 rows.
+
+Updated backlog to reflect recovery above the 512 MiB warning threshold rather
+than repeating an outdated below-threshold status. The remaining margin is only
+about 36 MiB, so the capacity request stays open and the existing 07:14 hourly /
+10:00 periodic rechecks remain appropriate. No extra Telegram after reliability
+message 917; no active logs, private storage, financial state or schedules changed.
