@@ -12,8 +12,11 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import re
+import stat
 import sys
+import tempfile
 from collections import Counter
 from pathlib import Path
 from typing import Any, Mapping
@@ -40,7 +43,37 @@ def _load() -> list[Any]:
 
 
 def _write_document(document: Any) -> None:
-    LEDGER.write_text(json.dumps(document, indent=1, ensure_ascii=False) + "\n")
+    """Preserve the existing ledger if writing its replacement fails.
+
+    The temporary file is on the same filesystem, fully written and synced
+    before replacement. This prevents truncate-in-place corruption on ENOSPC;
+    it does not provide concurrent-writer locking or directory-fsync durability.
+    """
+    payload = json.dumps(document, indent=1, ensure_ascii=False) + "\n"
+    try:
+        mode = stat.S_IMODE(LEDGER.stat().st_mode)
+    except FileNotFoundError:
+        mode = 0o600
+    fd, temporary = tempfile.mkstemp(
+        prefix=f".{LEDGER.name}.", suffix=".tmp", dir=LEDGER.parent,
+    )
+    try:
+        try:
+            handle = os.fdopen(fd, "w", encoding="utf-8")
+        except BaseException:
+            os.close(fd)
+            raise
+        with handle:
+            os.fchmod(handle.fileno(), mode)
+            handle.write(payload)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, LEDGER)
+    finally:
+        try:
+            os.unlink(temporary)
+        except FileNotFoundError:
+            pass
 
 
 def _stored_id(rec: Mapping[str, Any]) -> str | None:

@@ -14254,3 +14254,37 @@ News/opportunity state saved valid JSON at 06:31:51/06:32:29; the last news aler
 remains Sep-7 21:46. All four daemons are live. Disk is about 327 MiB; capacity
 request and hourly guard remain active. No new bankroll quote, README snapshot,
 manual Telegram, process intervention or schedule change. Goal active.
+
+### 06:44 UTC — resolver ledger saves hardened against partial writes
+
+Previous continuation was a verified wait on live news PID 2836158 through
+its successful 06:36:54 refresh, without a new alert. In the quiet interval,
+inspected a concrete analogue of this morning's disk-full failure: the
+calibration resolver's `_write_document` truncated the live ledger in place.
+The earlier incident occurred inside apply_patch; this is a separate exposed
+writer, not a claim that the resolver caused the earlier corruption.
+
+Changed only that writer: serialize before opening, create a unique temporary
+file in the ledger directory, preserve existing mode (0600 for a new ledger),
+write/flush/fsync, then atomically replace. Pre-replacement errors preserve the
+previous ledger; temporary files are cleaned up on the tested failure paths.
+This does not fix apply_patch, unrelated cache writers, concurrent-writer lost
+updates, directory-fsync crash durability, or the underlying capacity shortage.
+
+A cheaper worker added isolated success, mode, serialization, ENOSPC write/
+flush, fsync and replace regressions; the write failure actually flushes a
+partial prefix into the temporary file before failing. Another worker reviewed
+the implementation and confirmed no daemon imports it. Main inspected both
+diffs and ran the full final suite: **640 tests plus 156 money-math checks pass**,
+including 38 calibration tests. One existing websockets deprecation warning.
+After tests, production ledger and bankroll cache are byte-identical to HEAD.
+The decision store's original 122 records are unchanged; only engineering
+DEC-0123 and the next-ID advance were added with apply_patch. No new market
+grade, forecast, order, position or financial write.
+
+All four daemons remain live; news saved valid JSON at 06:41:57, no new alert.
+Available disk remains about **321 MiB**. Main quota preflight at 06:38 reported
+59% headroom; routine tests/review were delegated while main handled the change
+and risk judgment. README updated. Sent the scoped reliability update through
+the documented Telegram sender, message **917**; capacity remains open under
+the existing hourly guard and 10:00 periodic recheck. Goal and schedules active.

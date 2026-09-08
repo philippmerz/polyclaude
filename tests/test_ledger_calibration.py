@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import errno
 import json
 from argparse import Namespace
 from pathlib import Path
@@ -251,3 +252,135 @@ def test_envelope_shape_and_unrelated_fields_preserved_on_write(monkeypatch, tmp
     assert isinstance(written, dict)
     assert written["metadata"] == original["metadata"]
     assert written["records"][0]["outcome"] == "YES"
+
+
+@pytest.mark.parametrize("document", [
+    [row(outcome="YES")],
+    {"records": [row(outcome="NO")], "metadata": {"keep": "exact"}},
+])
+def test_atomic_write_success_preserves_existing_mode_and_document_shape(
+        monkeypatch, tmp_path: Path, document):
+    path = tmp_path / "ledger.json"
+    original_bytes = b'{"old": true}\n'
+    path.write_bytes(original_bytes)
+    path.chmod(0o640)
+    monkeypatch.setattr(lc, "LEDGER", path)
+
+    lc._write_document(document)
+
+    assert json.loads(path.read_text()) == document
+    assert path.stat().st_mode & 0o777 == 0o640
+    assert original_bytes != path.read_bytes()
+    assert list(tmp_path.iterdir()) == [path]
+
+
+def test_atomic_write_new_ledger_is_private(monkeypatch, tmp_path: Path):
+    path = tmp_path / "new-ledger.json"
+    monkeypatch.setattr(lc, "LEDGER", path)
+
+    lc._write_document([row(outcome="YES")])
+
+    assert path.exists()
+    assert path.stat().st_mode & 0o777 == 0o600
+    assert {item.name for item in tmp_path.iterdir()} == {
+        "ledger.json", "new-ledger.json"
+    }
+
+
+def test_atomic_write_serialization_failure_preserves_original(monkeypatch, tmp_path: Path):
+    path = tmp_path / "ledger.json"
+    original = b"unchanged\n"
+    path.write_bytes(original)
+    monkeypatch.setattr(lc, "LEDGER", path)
+
+    def fail_serialization(*args, **kwargs):
+        raise ValueError("serialization failed")
+
+    monkeypatch.setattr(lc.json, "dumps", fail_serialization)
+    with pytest.raises(ValueError, match="serialization failed"):
+        lc._write_document([row()])
+
+    assert path.read_bytes() == original
+    assert list(tmp_path.iterdir()) == [path]
+
+
+@pytest.mark.parametrize("failure_phase", ["write", "flush"])
+def test_atomic_write_enospc_during_temp_write_preserves_original(
+        monkeypatch, tmp_path: Path, failure_phase):
+    path = tmp_path / "ledger.json"
+    original = b"original bytes\n"
+    path.write_bytes(original)
+    monkeypatch.setattr(lc, "LEDGER", path)
+    real_fdopen = lc.os.fdopen
+
+    class FailingFile:
+        def __init__(self, wrapped):
+            self.wrapped = wrapped
+
+        def __enter__(self):
+            self.wrapped.__enter__()
+            return self
+
+        def __exit__(self, *exc_info):
+            return self.wrapped.__exit__(*exc_info)
+
+        def write(self, data):
+            if failure_phase == "write":
+                self.wrapped.write(data[:max(1, len(data) // 2)])
+                self.wrapped.flush()
+                raise OSError(errno.ENOSPC, "no space left on device")
+            return self.wrapped.write(data)
+
+        def flush(self):
+            if failure_phase == "flush":
+                raise OSError(errno.ENOSPC, "no space left on device")
+            return self.wrapped.flush()
+
+        def __getattr__(self, name):
+            return getattr(self.wrapped, name)
+
+    def fdopen(fd, *args, **kwargs):
+        return FailingFile(real_fdopen(fd, *args, **kwargs))
+
+    monkeypatch.setattr(lc.os, "fdopen", fdopen)
+    with pytest.raises(OSError) as exc_info:
+        lc._write_document([row(outcome="YES")])
+
+    assert exc_info.value.errno == errno.ENOSPC
+    assert path.read_bytes() == original
+    assert list(tmp_path.iterdir()) == [path]
+
+
+def test_atomic_write_fsync_failure_preserves_original(monkeypatch, tmp_path: Path):
+    path = tmp_path / "ledger.json"
+    original = b"original bytes\n"
+    path.write_bytes(original)
+    monkeypatch.setattr(lc, "LEDGER", path)
+
+    def fail_fsync(fd):
+        raise OSError(errno.EIO, "fsync failed")
+
+    monkeypatch.setattr(lc.os, "fsync", fail_fsync)
+    with pytest.raises(OSError, match="fsync failed"):
+        lc._write_document([row(outcome="YES")])
+
+    assert path.read_bytes() == original
+    assert list(tmp_path.iterdir()) == [path]
+
+
+def test_atomic_write_replace_failure_preserves_original(monkeypatch, tmp_path: Path):
+    path = tmp_path / "ledger.json"
+    original = b"original bytes\n"
+    path.write_bytes(original)
+    monkeypatch.setattr(lc, "LEDGER", path)
+
+    def fail_replace(source, destination):
+        assert destination == path
+        raise OSError(errno.EIO, "replace failed")
+
+    monkeypatch.setattr(lc.os, "replace", fail_replace)
+    with pytest.raises(OSError, match="replace failed"):
+        lc._write_document([row(outcome="YES")])
+
+    assert path.read_bytes() == original
+    assert list(tmp_path.iterdir()) == [path]

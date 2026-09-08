@@ -1,5 +1,5 @@
 {
-  "next_id": 123,
+  "next_id": 124,
   "decisions": [
     {
       "id": 1,
@@ -2414,6 +2414,22 @@
       "calibration_delta": "Engineering regression verification, not an independent market outcome or ROI observation.",
       "lesson": "A successful HTTP read and fee-aware depth sum do not establish an executable liquidation path. Validate numerical inputs and label quote limitations without inferring undocumented timestamp behavior.",
       "resolved_at": "2026-09-08T02:16:47Z"
+    },
+    {
+      "id": 123,
+      "timestamp": "2026-09-08T06:38:24Z",
+      "type": "scaffolding",
+      "thesis": "The morning disk-full incident truncated a ledger during an apply_patch edit. A bounded follow-up found the calibration resolver independently used the same truncate-in-place write pattern. Change only its document writer to serialize first, write and fsync a same-directory temporary file, then replace atomically, preserving existing file mode. This guards future resolver saves; it does not fix apply_patch, other cache writers, disk capacity, concurrent-writer lost updates or directory-fsync crash durability.",
+      "confidence": "high",
+      "prediction": "Serialization, partial-temp ENOSPC, flush, file-fsync and replacement failures leave the old ledger bytes intact; successful list/wrapped documents preserve format and mode, and failed writes remove their temporary file under normal cleanup conditions. Tests never mutate production ledger, bankroll cache or decisions.",
+      "size_usd": 0.0,
+      "resolution_at": null,
+      "tags": ["safety", "persistence", "calibration-ledger"],
+      "slug": null,
+      "outcome": "PASS at implementation: 38 isolated calibration tests, full 640-test suite and 156 money-math checks pass. Failure tests include a flushed partial temporary write. Production ledger, bankroll cache and decision store were byte-identical to HEAD after tests; only this scaffolding decision is subsequently appended. No daemon imports the writer, so no restart is needed.",
+      "calibration_delta": "Engineering failure-path verification, not a market outcome or realized ROI observation.",
+      "lesson": "Do not truncate the only persisted copy before replacement bytes are safely written. State a narrow atomicity guarantee explicitly; it is not a substitute for storage headroom or a transaction/locking protocol.",
+      "resolved_at": "2026-09-08T06:43:51Z"
     }
   ]
 }
