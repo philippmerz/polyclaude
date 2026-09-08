@@ -13854,3 +13854,35 @@ schedules changed. Four daemon handles remain live; changed modules are not
 loaded by those long-lived processes, so no restart is needed. No new news alert;
 latest completed opportunity pair cycle remains 02:03:39/40, both zero. No second
 Telegram for this maintenance following the already-sent material tick summary.
+
+## 2026-09-08 02:26 UTC — continuation: bounded thin-market source triage
+
+Previous turn was a verified wait: live opportunity PID 2349187 advanced through
+the 02:19:22 cycle, both pairs zero; news PID 2836158 remained live without new
+alerts. Goal remains active. Refreshed quota (93% main headroom) and reused the
+saved 1,572-row thin shortlist; delegated bounded candidate/identity triage while
+main checked the existing 01:31 cross-venue report and a measurable-source lead.
+
+Read exact HIP-3 OI market 1185735. It is a January listing, not new. Its $5B test
+uses Artemis's daily Total chart and following-day finalization, not an intraday
+headline, volume or arbitrary on-chain aggregator. The source returned an HTTP
+200 client shell but no retrievable series here; neither a 2026 crossing nor an
+honest hitting-probability prior was established. Do not treat our retrieval
+limit as permanent source failure. Banked exact rules and a conditional research
+gate, not a buy recommendation or a reason to build new scraping infrastructure.
+
+Worker's other two unreviewed leads (White House press-secretary deadline and
+Russian rate increase) were deadline/carry leads, not established edge. Main
+read both exact criteria: a non-interim appointment announcement can count before
+the person starts service; a no-change rate sibling is not itself a structural
+anomaly. At the saved NO marks neither clears the ordinary 10pp stress even from
+p=1, before fees; this is not a live-book verdict or a ban on opposite-side
+research with fresh evidence. No numerical prior was invented. Existing
+Limitless scan has zero IDENTICAL among 18 matched rows, with partial PM coverage
+and execution disabled. Full scope/identities/access limits are recorded in
+`research/2026-09-08-thin-market-source-triage.md`.
+
+No new capital candidate, trade, probability/position/order change, code change,
+restart, schedule change or Telegram. No portfolio refresh was needed only
+minutes after the full tick; prior timestamped figures were not relabeled fresh.
+Notes-only diff checked; the 625 tests / 156 money checks were not rerun for prose.
