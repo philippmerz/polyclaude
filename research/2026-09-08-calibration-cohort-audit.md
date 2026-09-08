@@ -115,3 +115,41 @@ verified the original records unchanged. Tests now automatically redirect to a
 temporary ledger, confine writes, deny live network access and assert the real
 ledger's bytes are unchanged. No order or funds were touched. A separate output
 regression caught in main review (valid baselines displayed as n/a) is also tested.
+
+## Legacy Fed identity repair, 01:16 UTC
+
+Recovered three existing July Fed forecast rows without creating new records or
+changing their probabilities. The entry, add and partial-exit forecasts are present
+with outcome null in commits `62db071`, `bf4f3f0` and `6eb50e0`, respectively.
+DEC-0058/0059 and the 41-share position / 8.22-share partial exit link those records
+to the exact-slug `resolved_flat` entry archived in `d4135a7`. This is a documented
+manual historical join: the original forecast rows did not contain identifiers.
+Full commit hashes and that limitation are preserved on each repaired row.
+
+The [exact Gamma market 1654959](https://gamma-api.polymarket.com/markets/1654959)
+matches the archived slug and complete question, is closed and UMA-resolved, and
+has labelled Yes/No payouts of 0/1. Its literal criteria measure the July meeting's
+change in the target range's upper bound. The [July 29 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm)
+confirms an unchanged range. All three forecasts therefore grade NO; the trade's
+pre-decision maker exits and small realized profit remain separate path evidence.
+
+The exit row's original `ask: 0.26` explicitly described a completed maker SELL,
+not an executable BUY ask. It is retained as `reported_execution_price`, with
+`ask: null`; its original 0.25 forecast still scores. The two entry/add ask fields
+are retained as historical ledger observations, not independently reconstructed
+order-book quotes. No current quote, limit or result supplies a missing baseline.
+
+The ledger still has **54 records**: **21 scored forecast rows**, **18 matched
+baseline rows**, eight pending numeric forecasts and 25 missing/non-numeric
+forecasts. Own Brier is **0.1498609**; the matched comparison is **0.1456710 versus
+0.1721712**. Dry-run reports zero new resolutions, 27 already-outcome rows, 17
+non-candidates and **10 missing identifiers**. Kuwait remains unidentified and
+ungraded; composite execution notes are not silently turned into binary markets.
+
+Under the same earliest-forecast-per-exact-question convention, Fed contributes
+only **one** new question: **15 questions**, Brier **0.1932585**, selected-side mean
+error **+0.7333pp**. Collapsing the five SDCC contracts illustrates **11 event units**,
+not a proven effective independent sample size. Neither these means nor the raw
+matched comparison justifies a universal hold haircut or proves positive ROI.
+The remaining work is better identity/quote provenance and genuinely new outcomes,
+not further slicing this small cohort to obtain a preferred policy conclusion.

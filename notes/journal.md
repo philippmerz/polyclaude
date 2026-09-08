@@ -13569,3 +13569,49 @@ pair. The Treasury screen's **+0.04pp** remains below its 2pp alert gate; public
 tail is unchanged. Updated README, backlog and the cohort audit to distinguish the
 reconciled data from the earlier snapshot. No trade, prior/limit change, Telegram,
 daemon restart or schedule change. Continuation remains active.
+
+## 2026-09-08 01:18 UTC — periodic continuation: Fed history repaired; no live action
+
+Goal remains active. Reviewed backlog and the recent journal; delegated README
+refresh and an independent historical-data QA to cheaper workers while main
+retained portfolio judgment and the archival identity join. No fresh trade gate
+or thesis-break evidence surfaced in these bounded checks.
+
+The 01:04:54 bankroll refresh is **$198.49**, up $1.23 in marks from 00:08, with
+settled realized profit unchanged at **+$14.44**. The 13 active PM rows mark at
+**$165.02** versus a **$159.56** depth/fee estimate (gap $5.46); this estimate is not
+a synchronized, freshness-verified liquidation quote. The authenticated 01:05
+inventory contains exactly five live SELL orders, zero BUYs and zero Apple orders;
+all five report zero matched shares. No order was posted or cancelled.
+
+The exit review retains HOLD under the recorded priors. Duma's complete exit is
+$13.15 versus $13.60 fair; MetaMask's is $45.12 versus $46.80 fair. Their complete
+groups stay intact and Duma's independent evidence/entry-price add gates still
+fail. HLE interpretation risk and the correlated no-add cap remain explicit.
+Position-state audit is CLEAN (13 indexed positions, one de-indexed dust claim);
+all 13 have keyword coverage, which is not proof of complete crux coverage.
+All four existing daemons are live. The same opportunity process advanced through
+**01:16:24**, with zero executable HLE/MetaMask pairs. The latest completed Treasury
+screen was **+0.23pp**, below its 2pp alert gate. News tail is unchanged; a later
+successful relevance-filter suppression follows the previously noted agent error.
+
+Repaired only the three existing July Fed forecast records. Main verified their
+original probabilities and null outcomes in the entry/add/partial-exit commits,
+then manually joined the documented position history to the archived exact-slug
+resolved-flat record. Exact Gamma ID 1654959, full criteria, final labelled 0/1
+payouts and the official July 29 unchanged-rate statement verify NO. The new
+metadata explicitly says original rows lacked IDs; no fuzzy title grade or
+hindsight probability was substituted. The exit row's 0.26 was a completed maker
+SELL, not a market ask: preserved it as an execution price and excluded it from
+baseline scoring. All other 51 rows are unchanged; Kuwait remains ungraded.
+
+Current ledger: **54 records, 21 scored / 18 matched-baseline rows**. The initial
+forecast convention gives **15 questions**, Brier **0.1932585**, selected-side mean
+error **+0.7333pp**; five SDCC questions share one catalyst. The small dependent
+sample does not justify changing hold priors, entry stresses or portfolio caps.
+Updated the cohort audit, backlog and README; corrected the worker's draft fill
+and gas-accounting wording before publication. Independent QA confirms scope,
+provenance and cohort arithmetic. **545 tests and 156 money-math checks pass**;
+dry-run reports zero new grades and ten missing-identifier rows. No trading-code
+change, trade, prior/limit change, Telegram, restart or schedule change. Apple
+Sep-9 reviews and AVAV's Sep-9 22:00 research gate remain the next dated reminders.
