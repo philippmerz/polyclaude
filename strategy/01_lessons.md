@@ -25,6 +25,8 @@ the gap); *verify against a known truth* (absent output and failed output look i
 
 ## Execution mechanics (the fee decides almost everything)
 
+- **2026-09-08 — fees have an asset, not just a percentage.** Limitless BUY fees reduce received contracts, so matching gross shares manufactures a payout floor that does not exist. Match net shares, enforce both leg cash caps, and keep any lower-fee surplus out of the floor. Raw orderbook sizes were also micro-contracts, not USDC; NO asks must mirror the venue's YES bids. Separately, missing parent-group prices are not 50c: expand exact leaves or exclude. Current docs conflict with an older whitepaper formula; use an explicitly conditional bound rather than inventing an exact curve. The public-read inspector remains execution-disabled. Source and counterexample: `research/2026-09-08-limitless-quote-audit.md`.
+
 - **Maker-first, always consider three exits.** Use the market's authoritative
   `feeSchedule`: rate × [p × (1−p)]^exponent per share, via `pm_fees.py`. The 0.07
   quadratic curve wallet-verified on 2026-08-22 is the historical legacy cap, not

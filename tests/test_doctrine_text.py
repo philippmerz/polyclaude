@@ -95,10 +95,12 @@ def test_live_fee_callers_delegate_to_canonical_helper():
     consistency = _normalized(ROOT / "scripts" / "polymarket_consistency_scan.py")
 
     assert "return pm_fees.fee_per_share_at(raw_rate, p)" in scanner
-    assert 'result["fee_rate"]' in scanner
-    # Delegation is the contract, not the old average-price aggregation bug.
-    # The inspector's level-fee/depth validation remains explicitly gated.
-    assert "pm_fees.fee_per_share(pm," in executor
+    assert 'result["fee_market"]' in scanner
+    assert "return pm_fees.fee_per_share(fee_rate, p)" in scanner
+    # Pure per-level math owns fees; the public-data wrapper owns identity.
+    quote_math = _normalized(ROOT / "scripts" / "limitless_quote_math.py")
+    assert "quote_pair(" in executor
+    assert "fee_per_share(dict(market), float(price))" in quote_math
     assert "fee_per_share = pm_fees.fee_per_share_at(raw_rate, p)" in sports
     assert "cost = p + fee_per_share" in sports
     assert "market_fee_rate = pm_fees.fee_rate(m)" in sports

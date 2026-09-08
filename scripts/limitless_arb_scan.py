@@ -2,33 +2,32 @@
 
 Limitless tags its markets that mirror a Polymarket counterpart with
 `metadata.isPolyArbitrage: true`. This script paginates the active-markets
-endpoint, filters to those flagged, computes a fee-aware breakeven against a
-scalar Polymarket fee estimate. The rate-only helper uses the legacy
-exponent-1 curve (`fee/share = effective_rate * p * (1-p)`) and the 0.07
-compatibility cap; it does not propagate a market's structured feeSchedule
-exponent. Full market-dict helpers in `pm_fees.py` honor that schedule (and
-some markets charge 0),
-and dumps a sorted table to:
+endpoint, expands flagged groups into priced leaves, and computes a
+conditional midpoint screen. Polymarket uses its full feeSchedule through
+`pm_fees.py`; only explicit legacy scalar callers use the capped exponent-1
+compatibility path. Limitless assumes a maximum 3% deduction from received
+contracts, not a USDC surcharge. Exact fees, rounding, depth, freshness and
+cross-venue resolution equivalence remain unverified by this screen. It
+dumps a sorted table to:
 
   - stdout
-  - notes/limitless_arb_<UTC ts>.md (gitignored — fresh each run)
+  - logs/limitless_arb_<UTC ts>.md (gitignored — fresh each run)
 
 For each candidate, the table shows:
-  - Limitless YES price + volume
-  - The fee-aware breakeven spread Polymarket would need to make this profitable
-  - Whether p is favorable (near 0.9+ = low Polymarket fee, arb-able with small spreads)
+  - Limitless and matched Polymarket YES midpoints
+  - Conditional spread hurdle and net edge per matched net payout share
+  - Match confidence and an agent's resolution-language assessment
 
-Phase 1 (this script): data collection + visibility. No automated trading.
-Phase 2 (deferred until phase 1 shows ≥ X profitable cycles per week): add
-fuzzy-match against Polymarket gamma-api + auto-execution. Phase 2 is only
-worth building if phase 1 surfaces real opportunities at our $30 working capital.
+This script provides data collection, fuzzy matching and visibility only.
+The downstream public-book inspector is also execution-disabled. Neither a
+positive midpoint edge nor an IDENTICAL label authorizes trading.
 
 Usage:
     python scripts/limitless_arb_scan.py
     python scripts/limitless_arb_scan.py --threshold-edge 0.02 --notify
 
-The `--notify` flag posts a Telegram summary if any candidate has a fee-aware
-breakeven < the threshold (i.e., a small spread would already be profitable).
+The `--notify` flag summarizes IDENTICAL mechanical-resolution candidates
+above the conditional midpoint-edge threshold; it is not an execution alert.
 """
 
 from __future__ import annotations
@@ -57,11 +56,23 @@ OUT_DIR = _REPO_ROOT / "logs"  # gitignored; routine scans don't need to be comm
 
 LIMITLESS_API = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
-import pm_fees  # scalar legacy estimate here; full market dicts honor feeSchedule
+import pm_fees
+
+LIMITLESS_CONTRACT_FEE_BOUND = 0.03  # conditional documented CLOB maximum, not an exact curve
+LIMITLESS_ACTIVE_PAGE_LIMIT = 25
+LIMITLESS_ACTIVE_PAGE_CAP = 80
 
 POLYMARKET_PAGE_LIMIT = 100
 POLYMARKET_PAGE_RETRIES = 3
 POLYMARKET_UNIVERSE_LIMIT = 3000
+
+LAST_ARB_NORMALIZATION_STATS: dict[str, object] = {
+    "flagged_parents": 0,
+    "expanded_children": 0,
+    "eligible_leaves": 0,
+    "excluded": 0,
+    "exclusions": {},
+}
 
 
 def _telegram(text: str) -> None:
@@ -74,68 +85,303 @@ def _telegram(text: str) -> None:
         pass
 
 
-def fetch_arb_candidates() -> list[dict]:
-    """Paginate /markets/active and return all markets with isPolyArbitrage=true."""
+def _market_title(market: dict) -> str:
+    return str(market.get("title") or market.get("question") or "").strip()
+
+
+def _market_description(market: dict) -> str:
+    for key in ("description", "resolution", "rules"):
+        value = market.get(key)
+        if value:
+            return str(value).strip()
+    return ""
+
+
+def _parse_binary_prices(raw: object) -> list[float] | None:
+    if isinstance(raw, str):
+        try:
+            raw = json.loads(raw)
+        except (TypeError, ValueError):
+            return None
+    if not isinstance(raw, list) or len(raw) != 2:
+        return None
+    try:
+        prices = [float(value) for value in raw]
+    except (TypeError, ValueError):
+        return None
+    if any(not math.isfinite(price) or not 0.0 <= price <= 1.0 for price in prices):
+        return None
+    return prices
+
+
+def _parse_binary_tokens(raw: object) -> dict[str, str] | None:
+    if isinstance(raw, str):
+        try:
+            raw = json.loads(raw)
+        except (TypeError, ValueError):
+            return None
+    if isinstance(raw, dict):
+        yes = raw.get("yes") or raw.get("YES")
+        no = raw.get("no") or raw.get("NO")
+    elif isinstance(raw, list) and len(raw) == 2:
+        yes, no = raw
+    else:
+        return None
+    yes, no = str(yes or "").strip(), str(no or "").strip()
+    if not yes or not no or yes == no:
+        return None
+    return {"yes": yes, "no": no}
+
+
+def _child_markets(market: dict) -> list[object]:
+    for key in ("children", "markets", "subMarkets", "submarkets"):
+        children = market.get(key)
+        if isinstance(children, list):
+            return children
+    return []
+
+
+def _record_exclusion(stats: dict[str, object], reason: str) -> None:
+    stats["excluded"] = int(stats.get("excluded", 0)) + 1
+    exclusions = stats.setdefault("exclusions", {})
+    assert isinstance(exclusions, dict)
+    exclusions[reason] = int(exclusions.get(reason, 0)) + 1
+
+
+def _normalise_leaf(
+    parent: dict,
+    leaf: dict,
+    stats: dict[str, object],
+    parent_title: str,
+    parent_description: str,
+) -> dict | None:
+    """Return one fully identified/priced leaf, or exclude it explicitly.
+
+    Parent metadata is used only to carry discovery context. Execution fields
+    (prices, tokens, descriptions, and oracle metadata) must come from the
+    leaf itself; no parent midpoint or token is synthesized.
+    """
+    leaf_id = str(leaf.get("id") or "").strip()
+    leaf_slug = str(leaf.get("slug") or "").strip()
+    if not leaf_id or not leaf_slug:
+        _record_exclusion(stats, "missing_leaf_identity")
+        return None
+    child_title = _market_title(leaf)
+    if not child_title and not parent_title:
+        _record_exclusion(stats, "missing_leaf_title")
+        return None
+    prices = _parse_binary_prices(leaf.get("prices"))
+    if prices is None:
+        _record_exclusion(stats, "missing_or_malformed_prices")
+        return None
+    tokens = _parse_binary_tokens(leaf.get("tokens"))
+    if tokens is None:
+        _record_exclusion(stats, "missing_or_duplicate_tokens")
+        return None
+
+    child_description = _market_description(leaf)
+    title_parts: list[str] = []
+    for part in (parent_title, child_title):
+        if part and part not in title_parts:
+            title_parts.append(part)
+    match_title = " — ".join(title_parts)
+    # Avoid repeating an identical parent/child title while retaining both
+    # levels whenever the group provides useful context.
+    if parent_title and child_title == parent_title:
+        match_title = parent_title
+    match_description = "\n\n".join(
+        part for part in (
+            f"Parent market: {parent_description}" if parent_description else "",
+            f"Child market: {child_description}" if child_description else "",
+        ) if part
+    )
+
+    candidate = dict(leaf)
+    candidate["id"] = leaf_id
+    candidate["slug"] = leaf_slug
+    candidate["prices"] = prices
+    candidate["tokens"] = tokens
+    candidate["title"] = child_title or parent_title
+    candidate["description"] = child_description
+    candidate["_match_title"] = match_title or child_title or parent_title
+    candidate["_match_description"] = match_description or child_description or parent_description
+    candidate["_discovery_parent_id"] = str(parent.get("id") or "").strip() or None
+    candidate["_discovery_parent_slug"] = str(parent.get("slug") or "").strip() or None
+    # This is intentionally the only inherited metadata: a flagged parent
+    # authorizes discovery, not execution/oracle/fee assumptions.
+    child_metadata_raw = leaf.get("metadata")
+    child_metadata = dict(child_metadata_raw) if isinstance(child_metadata_raw, dict) else {}
+    child_metadata["isPolyArbitrage"] = True
+    candidate["metadata"] = child_metadata
+    stats["eligible_leaves"] = int(stats.get("eligible_leaves", 0)) + 1
+    return candidate
+
+
+def _normalise_arb_markets(parents: list[dict]) -> list[dict]:
+    stats: dict[str, object] = {
+        "flagged_parents": len(parents),
+        "expanded_children": 0,
+        "eligible_leaves": 0,
+        "excluded": 0,
+        "exclusions": {},
+    }
     out: list[dict] = []
+    seen: dict[str, dict] = {}
+
+    def walk(parent: dict, node: dict, parent_title: str, parent_description: str) -> None:
+        children = _child_markets(node)
+        if children:
+            stats["expanded_children"] = int(stats.get("expanded_children", 0)) + len(children)
+            node_title = _market_title(node) or parent_title
+            node_description = _market_description(node) or parent_description
+            for child in children:
+                if not isinstance(child, dict):
+                    _record_exclusion(stats, "malformed_child_record")
+                    continue
+                walk(parent, child, node_title, node_description)
+            return
+        candidate = _normalise_leaf(parent, node, stats, parent_title, parent_description)
+        if candidate is None:
+            return
+        identity = candidate["id"]
+        previous = seen.get(identity)
+        if previous is not None:
+            if (previous["slug"] != candidate["slug"]
+                    or previous["tokens"] != candidate["tokens"]
+                    or previous["prices"] != candidate["prices"]):
+                raise RuntimeError(
+                    f"Limitless leaf id {identity} has conflicting identity or pricing"
+                )
+            _record_exclusion(stats, "duplicate_leaf_identity")
+            return
+        seen[identity] = candidate
+        out.append(candidate)
+
+    for parent in parents:
+        title = _market_title(parent)
+        description = _market_description(parent)
+        walk(parent, parent, title, description)
+
+    stats["eligible_leaves"] = len(out)
+    global LAST_ARB_NORMALIZATION_STATS
+    LAST_ARB_NORMALIZATION_STATS = stats
+    return out
+
+
+def fetch_arb_candidates() -> list[dict]:
+    """Paginate active markets and return only fully identified priced leaves.
+
+    A partial or malformed response is not a valid empty universe: callers
+    must be able to distinguish it from a successful zero-candidate scan.
+    """
+    flagged: list[dict] = []
+    fetched = 0
     page = 1
     while True:
         try:
             r = httpx.get(f"{LIMITLESS_API}/markets/active",
-                          params={"page": page}, timeout=15)
+                          params={"page": page, "limit": LIMITLESS_ACTIVE_PAGE_LIMIT},
+                          timeout=15)
             r.raise_for_status()
             d = r.json()
-        except Exception as e:
-            print(f"page {page} fetch failed: {e}", file=sys.stderr)
-            break
-        markets = d.get("data") or []
-        total = d.get("totalMarketsCount") or 0
+        except Exception as exc:
+            raise RuntimeError(
+                f"Limitless active-market page {page} failed; refusing partial coverage"
+            ) from exc
+        if not isinstance(d, dict):
+            raise RuntimeError(
+                f"Limitless active-market page {page} returned a malformed response"
+            )
+        markets = d.get("data")
+        total = d.get("totalMarketsCount")
+        if not isinstance(markets, list):
+            raise RuntimeError(
+                f"Limitless active-market page {page} omitted its data list"
+            )
+        if (isinstance(total, bool) or not isinstance(total, int)
+                or total < 0):
+            raise RuntimeError(
+                "Limitless active-market response omitted a valid totalMarketsCount"
+            )
         if not markets:
+            if fetched < total:
+                raise RuntimeError(
+                    f"Limitless active-market page {page} was empty before totalMarketsCount"
+                )
             break
+        if len(markets) > LIMITLESS_ACTIVE_PAGE_LIMIT:
+            raise RuntimeError(
+                f"Limitless active-market page {page} exceeded its requested limit"
+            )
         for m in markets:
-            if (m.get("metadata") or {}).get("isPolyArbitrage"):
-                out.append(m)
-        if page * 25 >= total:
+            if not isinstance(m, dict):
+                raise RuntimeError(
+                    f"Limitless active-market page {page} contains a malformed record"
+                )
+            metadata = m.get("metadata")
+            if metadata is not None and not isinstance(metadata, dict):
+                raise RuntimeError(
+                    f"Limitless active-market page {page} contains malformed metadata"
+                )
+            if (metadata or {}).get("isPolyArbitrage") is True:
+                flagged.append(m)
+        fetched += len(markets)
+        if fetched > total:
+            raise RuntimeError(
+                "Limitless active-market response totalMarketsCount was smaller "
+                "than the records returned"
+            )
+        if fetched >= total:
             break
         page += 1
-        if page > 80:  # safety cap
-            break
-    return out
+        if page > LIMITLESS_ACTIVE_PAGE_CAP:
+            raise RuntimeError(
+                "Limitless active-market pagination exceeded its safety cap; "
+                "refusing partial coverage"
+            )
+    candidates = _normalise_arb_markets(flagged)
+    LAST_ARB_NORMALIZATION_STATS["fetch_pages"] = page
+    LAST_ARB_NORMALIZATION_STATS["fetch_total"] = total
+    LAST_ARB_NORMALIZATION_STATS["fetch_complete"] = True
+    return candidates
 
 
-def polymarket_buy_fee(p: float, fee_rate: float | None = None) -> float:
+def polymarket_buy_fee(p: float, fee_rate: dict | float | None = None) -> float:
     """Polymarket fee per share when buying a token at price ``p``.
 
-    This scalar-rate helper is a legacy exponent-1 estimate:
-    ``effective_rate × p × (1−p)``. ``pm_fees.py`` applies the 0.07
-    compatibility cap to the scalar rate. It cannot carry a market's
-    structured feeSchedule exponent; callers with the full market dict should
-    use ``pm_fees.fee_per_share(market, p)`` instead. Before a Polymarket
-    match is known, use its conservative raw fallback.
+    Full market dictionaries preserve the authoritative rate and exponent.
+    Explicit scalar inputs retain the legacy capped exponent-1 estimate.
+    Before a match is known the legacy fallback is only a ranking heuristic,
+    not an upper bound on all possible structured schedules.
     """
+    if isinstance(fee_rate, dict):
+        return pm_fees.fee_per_share(fee_rate, p)
     raw_rate = pm_fees.FEE_RATE_FALLBACK if fee_rate is None else fee_rate
     return pm_fees.fee_per_share_at(raw_rate, p)
 
 
 def limitless_buy_fee(p: float) -> float:
-    """Limitless buy fee at price p, in fraction of notional.
+    """Extra cash per NET matched share under the 3% contract-fee assumption.
 
-    Per docs.limitless.exchange/user-guide/fees: 0.40% near parity, up to
-    3.00% at extremes. Modeling as symmetric around p=0.5 since the docs
-    are unclear on asymmetry; this is the conservative assumption (slightly
-    over-estimates fees at high p, which suppresses false positives).
-    Maker rebates exist but the arb requires takers on both legs.
+    Buying 1/(1-r) gross contracts at p supplies one net contract if the
+    deduction is r: cash cost p/(1-r), incremental cost p*r/(1-r).
+    This is NOT a notional fee rate or the venue's exact unpublished curve.
+    Source: https://docs.limitless.exchange/user-guide/fees (2026-09-07).
+    Unknown per-maker rounding and market-specific applicability remain gates.
     """
-    distance_from_parity = abs(p - 0.5) * 2  # 0 at p=0.5, 1 at p=0 or p=1
-    return 0.004 + (0.030 - 0.004) * distance_from_parity
+    if not math.isfinite(p) or not 0 <= p <= 1:
+        raise ValueError("Limitless price must be finite and in [0, 1]")
+    return p * LIMITLESS_CONTRACT_FEE_BOUND / (1 - LIMITLESS_CONTRACT_FEE_BOUND)
 
 
 def arb_breakeven(p_lim: float, p_pm: float,
-                  pm_fee_rate: float | None = None) -> float:
-    """Minimum spread |p_pm - p_lim| needed to clear fees on a paired arb.
+                  pm_fee_rate: dict | float | None = None) -> float:
+    """Conditional midpoint spread hurdle per NET matched payout share.
 
     The trade (when lim_yes < pm_yes): buy Lim YES at p_lim + buy PM NO at
     (1 - p_pm). Pays one Limitless buy fee at p_lim and one Polymarket buy
-    fee at (1 - p_pm). Symmetric for the inverse case.
+    fee at (1 - p_pm). Both quantities are net matched shares. This ignores
+    spreads/depth and is not an execution quote; see limitless_quote_math.py.
     """
     if p_lim < p_pm:
         # Buy Lim YES at p_lim, Buy PM NO at (1 - p_pm)
@@ -152,7 +398,8 @@ def round_trip_breakeven(p_yes: float) -> float:
     # Conservative estimate: Lim fee at this price + PM fee at (1-p_yes)
     # (we don't yet know p_pm; assume similar to p_yes and use the more
     # demanding of the two arb directions)
-    return limitless_buy_fee(p_yes) + polymarket_buy_fee(1 - p_yes)
+    return max(limitless_buy_fee(p_yes) + polymarket_buy_fee(1 - p_yes),
+               limitless_buy_fee(1 - p_yes) + polymarket_buy_fee(p_yes))
 
 
 _STOPWORDS = {
@@ -412,10 +659,8 @@ def fetch_polymarket_universe(
 def index_polymarket(markets: list[dict]) -> list[dict]:
     """Build index entries with all fields needed downstream.
 
-    Each entry includes match tokens, price/criteria text, and a scalar fee
-    rate for the legacy exponent-1/0.07-capped estimate used by this scanner.
-    The full market dict remains the authority when a structured feeSchedule
-    exponent must be honored.
+    Retain the full fee market, and map the YES price by its outcome label.
+    Non-binary, missing-label or malformed-price markets are excluded.
     """
     idx: list[dict] = []
     for m in markets:
@@ -425,9 +670,15 @@ def index_polymarket(markets: list[dict]) -> list[dict]:
         prices_raw = m.get("outcomePrices") or "[]"
         try:
             prices = json.loads(prices_raw) if isinstance(prices_raw, str) else prices_raw
-            if not (isinstance(prices, list) and prices):
+            prices = _parse_binary_prices(prices)
+            outcomes = m.get("outcomes")
+            outcomes = json.loads(outcomes) if isinstance(outcomes, str) else outcomes
+            if not prices or not isinstance(outcomes, list) or len(outcomes) != 2:
                 continue
-            yes_price = float(prices[0])
+            labels = [str(label).strip().casefold() for label in outcomes]
+            if set(labels) != {"yes", "no"}:
+                continue
+            yes_price = prices[labels.index("yes")]
         except Exception:
             continue
         idx.append({
@@ -436,6 +687,7 @@ def index_polymarket(markets: list[dict]) -> list[dict]:
             "propers": _proper_nouns(q),
             "yes_price": yes_price,
             "fee_rate": pm_fees.fee_rate(m),
+            "fee_market": m,
             "question": q,
             "slug": m.get("slug") or "",
             "description": m.get("description") or "",
@@ -450,9 +702,8 @@ def verify_resolution_match(lim_desc: str, pm_desc: str,
     Returns (verdict, reason) where verdict is one of IDENTICAL / SIMILAR /
     DIFFERENT / UNCERTAIN. On agent error, returns (UNCERTAIN, reason).
 
-    Used to gate autonomous arb execution. Only IDENTICAL pairs are eligible
-    for cross-venue capital deployment — anything less is too risky given the
-    asymmetric loss (a single resolution-language mismatch wipes both legs).
+    Used only to prioritize human review. Even IDENTICAL is an agent judgment,
+    not proof of resolution identity or authorization to deploy capital.
     """
     # Strip HTML, keep readable text
     import re as _re
@@ -553,25 +804,74 @@ def fuzzy_match(title: str, pm_index: list[dict],
     return out
 
 
+def _write_empty_latest_scan() -> None:
+    """Replace any prior candidate payload when this scan finds no leaves."""
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    ts = dt.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+    payload = {
+        "generated_at": ts,
+        "total_candidates": 0,
+        "matched_count": 0,
+        "normalization": LAST_ARB_NORMALIZATION_STATS,
+        "screening_only": True,
+        "execution_ready": False,
+        "verified_identical": [],
+        "verified_other": [],
+    }
+    (OUT_DIR / "limitless_arb_latest.json").write_text(json.dumps(payload, indent=2))
+    print(f"wrote {OUT_DIR / 'limitless_arb_latest.json'}")
+
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--threshold-edge", type=float, default=0.015,
-                   help="net-edge threshold for autonomous-execution eligibility (default 1.5%)")
+                   help="conditional midpoint-edge threshold for review (default 1.5%)")
     p.add_argument("--notify", action="store_true",
                    help="post a Telegram if any candidate clears the threshold")
     p.add_argument("--max-show", type=int, default=40)
     args = p.parse_args()
 
     print("fetching Limitless active markets (isPolyArbitrage filter)...")
-    cands = fetch_arb_candidates()
+    try:
+        cands = fetch_arb_candidates()
+    except (RuntimeError, ValueError) as exc:
+        print(f"ABORT: Limitless universe unavailable: {exc}", file=sys.stderr)
+        return 2
+    # Keep the execution boundary fail-closed even when a caller/test supplies
+    # candidates without going through fetch_arb_candidates().
+    valid: list[dict] = []
+    for candidate in cands:
+        if not str(candidate.get("id") or "").strip() or not str(candidate.get("slug") or "").strip():
+            _record_exclusion(LAST_ARB_NORMALIZATION_STATS, "missing_leaf_identity")
+            continue
+        if not _market_title(candidate):
+            _record_exclusion(LAST_ARB_NORMALIZATION_STATS, "missing_leaf_title")
+            continue
+        prices = _parse_binary_prices(candidate.get("prices"))
+        tokens = _parse_binary_tokens(candidate.get("tokens"))
+        if prices is None:
+            _record_exclusion(LAST_ARB_NORMALIZATION_STATS, "missing_or_malformed_prices")
+            continue
+        if tokens is None:
+            _record_exclusion(LAST_ARB_NORMALIZATION_STATS, "missing_or_duplicate_tokens")
+            continue
+        candidate["prices"] = prices
+        candidate["tokens"] = tokens
+        valid.append(candidate)
+    cands = valid
     print(f"found {len(cands)} candidates")
+    excluded = int(LAST_ARB_NORMALIZATION_STATS.get("excluded", 0))
+    if excluded:
+        print(f"excluded {excluded} malformed/duplicate/non-leaf records: "
+              f"{LAST_ARB_NORMALIZATION_STATS.get('exclusions', {})}")
     if not cands:
+        _write_empty_latest_scan()
         return 0
 
     # Annotate each with breakeven + arbability
     for m in cands:
-        prices = m.get("prices") or [0.5, 0.5]
-        yes_price = float(prices[0]) if prices else 0.5
+        prices = m["prices"]
+        yes_price = prices[0]
         m["_yes_price"] = yes_price
         m["_breakeven"] = round_trip_breakeven(yes_price)
 
@@ -598,7 +898,7 @@ def main() -> int:
     top_for_lookup = cands[: max(args.max_show, 50)]
     print(f"\nfuzzy-matching top {len(top_for_lookup)} candidates...")
     for m in top_for_lookup:
-        result = fuzzy_match(m["title"], pm_index)
+        result = fuzzy_match(m.get("_match_title") or m["title"], pm_index)
         if result:
             m["_pm_yes"] = result["yes_price"]
             m["_pm_question"] = result["question"]
@@ -607,9 +907,9 @@ def main() -> int:
             m["_pm_fee_rate"] = result["fee_rate"]
             m["_match_confidence"] = result["_jaccard"]
             m["_spread"] = result["yes_price"] - m["_yes_price"]
-            # Real fee-aware breakeven uses both sides' actual fees
+            # Conditional Limitless bound plus the full PM fee descriptor.
             m["_breakeven"] = arb_breakeven(
-                m["_yes_price"], result["yes_price"], result["fee_rate"]
+                m["_yes_price"], result["yes_price"], result["fee_market"]
             )
             m["_net_edge"] = abs(m["_spread"]) - m["_breakeven"]
         else:
@@ -628,9 +928,9 @@ def main() -> int:
           f"profitable matches with a scoped worker...")
     for m in matched_for_verify:
         verdict, reason = verify_resolution_match(
-            lim_desc=m.get("description", ""),
+            lim_desc=m.get("_match_description", m.get("description", "")),
             pm_desc=m.get("_pm_description", ""),
-            lim_title=m["title"],
+            lim_title=m.get("_match_title") or m["title"],
             pm_question=m.get("_pm_question", ""),
         )
         m["_verify_verdict"] = verdict
@@ -651,17 +951,17 @@ def main() -> int:
         f.write(f"Total `isPolyArbitrage:true` markets: {len(cands)}\n")
         f.write(f"Polymarket universe coverage: **{pm_fetch.coverage_label}**\n")
         f.write(f"Polymarket-matched (top {len(top_for_lookup)} by breakeven): {len(matched)}\n\n")
-        f.write("Three-layer screening: (1) distinctive-word overlap ≥ 3 with Jaccard ≥ 0.35, ")
+        f.write("Three-layer screening: (1) distinctive-word overlap ≥ 3 with Jaccard ≥ 0.55, ")
         f.write("(2) numeric-token parity, (3) agent-verified resolution-language equivalence ")
         f.write("(scoped fast profile). Only `IDENTICAL` verdicts qualify for manual review; ")
         f.write("`SIMILAR`/`UNCERTAIN`/`DIFFERENT` are visibility-only. Downstream ")
         f.write("auto-execution remains disabled.\n\n")
-        f.write("Polymarket fee/share = effective scalar rate × p × (1−p), using ")
-        f.write("pm_fees.py's legacy exponent-1 estimate and 0.07 compatibility cap; ")
-        f.write("full market-dict feeSchedule exponents are not propagated by this scanner. ")
-        f.write(f"Limitless buy fee = 0.4-3.0% (rises away from parity). ")
-        f.write(f"Net edge = |spread| − (lim_fee + pm_fee). Positive = screening candidate only; ")
-        f.write("it is not executable profit.\n\n")
+        f.write("Polymarket uses its full feeSchedule rate/exponent via pm_fees.py. ")
+        f.write("Limitless assumes at most 3% of received contracts deducted: ")
+        f.write("cash per net share = price / 0.97, not price plus a notional fee. ")
+        f.write("Net edge = |midpoint spread| minus incremental fee costs per net share. ")
+        f.write("Positive is conditional screening only, not executable profit: exact ")
+        f.write("fees/rounding, book depth/freshness and rule equivalence remain unverified.\n\n")
         f.write("## Matched (sorted by net edge)\n\n")
         f.write(f"| Lim YES | PM YES | Spread | Breakeven | Net Edge | Conf | Verdict | Lim title / PM question |\n")
         f.write(f"|---:|---:|---:|---:|---:|---:|:---:|---|\n")
@@ -682,7 +982,11 @@ def main() -> int:
         "generated_at": ts,
         "total_candidates": len(cands),
         "matched_count": len(matched),
+        "normalization": LAST_ARB_NORMALIZATION_STATS,
         "polymarket_universe": pm_fetch.metadata(),
+        "screening_only": True,
+        "execution_ready": False,
+        "limitless_contract_fee_bound": LIMITLESS_CONTRACT_FEE_BOUND,
         "verified_identical": [],
         "verified_other": [],
     }
@@ -691,6 +995,7 @@ def main() -> int:
                                   .get("chainlinkDataStream", {}).get("enabled"))
         record = {
             "lim_id": m["id"],
+            "lim_slug": m["slug"],
             "lim_title": m["title"],
             "lim_yes_price": m["_yes_price"],
             "lim_yes_token": (m.get("tokens") or {}).get("yes"),
@@ -705,6 +1010,8 @@ def main() -> int:
             "spread": m["_spread"],
             "breakeven": m["_breakeven"],
             "net_edge": m["_net_edge"],
+            "screening_only": True,
+            "execution_ready": False,
             "match_confidence": m.get("_match_confidence"),
             "verify_verdict": m.get("_verify_verdict"),
             "verify_reason": m.get("_verify_reason"),
@@ -744,8 +1051,9 @@ def main() -> int:
         for m in subjective[:5]:
             print(f"  +{m['_net_edge']*100:.2f}%  {m['title'][:80]}")
     if mechanical and args.notify:
-        lines = [f"limitless arb: {len(mechanical)} mechanical-resolution IDENTICAL "
-                 f"candidate(s) above {args.threshold_edge*100:.1f}% net edge"]
+        lines = [f"Limitless screening ONLY: {len(mechanical)} mechanical-resolution IDENTICAL "
+                 f"candidate(s) above {args.threshold_edge*100:.1f}% conditional midpoint edge; "
+                 "not execution-ready"]
         for m in mechanical[:5]:
             direction = "LONG Lim YES + LONG PM NO" if m["_yes_price"] < m["_pm_yes"] else "LONG PM YES + LONG Lim NO"
             lines.append(

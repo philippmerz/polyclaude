@@ -18,6 +18,16 @@ import subprocess, pathlib, shutil, sys
 
 REPO = pathlib.Path("/home/polyclaude/polyclaude")
 MUTS = [
+    ("limitless_quote_math.py", '_MICRO = Decimal("1000000")',
+                    '_MICRO = Decimal("1")'),                                               # micro-contract depth mistaken for shares
+    ("limitless_quote_math.py", 'mirrored.append(BookLevel(_ONE - level.price, level.size, level.source_index))',
+                    'mirrored.append(BookLevel(level.price, level.size, level.source_index))'), # NO side not inverted
+    ("limitless_quote_math.py", 'bound = _decimal(lim_fee_bound, "lim_fee_bound")',
+                    'bound = Decimal("0")'),                                                # contract deduction dropped from payout
+    ("limitless_quote_math.py", 'fee_share = _pm_fee(market, level.price)\n        notional',
+                    'fee_share = Decimal("0")\n        notional'),                          # per-fill PM charge omitted
+    ("limitless_arb_scan.py", 'return p * LIMITLESS_CONTRACT_FEE_BOUND / (1 - LIMITLESS_CONTRACT_FEE_BOUND)',
+                    'return 0.004'),                                                        # old false parity fee
     ("pm_fees.py",  'return FeeCurve(parsed_bps / 10000.0, FEE_EXPONENT_FALLBACK, True, False)',
                     'return FeeCurve(0.10, FEE_EXPONENT_FALLBACK, True, False)'),             # ignore per-market legacy fee
     ("pm_fees.py",  'return rate * (price * (1.0 - price)) ** float(exponent)',

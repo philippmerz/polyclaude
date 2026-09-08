@@ -1,93 +1,57 @@
-"""Limitless ↔ Polymarket arb live-quote inspector (execution disabled).
+"""Public-read Limitless/Polymarket arb quote inspector.
 
-Reads the latest scan output, picks the highest-net-edge IDENTICAL
-candidate, re-fetches both venues' orderbooks for actual fillable prices
-(not midpoints — the scanner overestimates because it uses displayed
-midpoint, real fills happen at the orderbook spread), recomputes net
-edge after slippage + fees, and reports the result. Auto-execution is
-intentionally disabled. The Polymarket fee total currently aggregates
-``fee_per_share(market, volume_weighted_average_fill) × tokens``; because the
-V2 curve is nonlinear, exact per-level aggregation remains pending and this
-inspector's PM fee/net quote is approximate.
+Execution is permanently disabled.  The inspector validates exact market
+identities, reads public books, and calls ``limitless_quote_math.quote_pair``
+for both complementary directions.  Results are conditional screening only;
+fees, rounding, minimums, freshness, and resolution equivalence are not an
+executable guarantee.
 
-Proposed two-leg execution (inactive while auto-execution is disabled):
-  1. Place Limitless leg as FOK (fill-or-kill) — atomic, guaranteed
-     to either fill at the requested price or cancel cleanly.
-  2. If Lim fills, immediately place Polymarket leg.
-  3. If PM leg fails to fill, market-close the Lim leg at best bid
-     (emergency exit, accept slippage to avoid one-sided exposure).
-
-Per-arb cap: $3/leg ($6 total exposure). Total open arb cap: $20.
-Net-edge threshold (post-slippage): 1.5%.
-First-trade self-throttle: $1/leg until at least one arb resolves cleanly.
-
-Subcommands:
-  status       Read-only: print state, balances, latest candidate
-  run          Attempt one execution if eligible
-  dry-run      Compute the trade but don't submit
-  resolve      Mark closed/resolved arbs, tally realized P&L
+The per-level Polymarket fee source remains ``pm_fees.py`` through the pure
+quote helper; this wrapper does not estimate fees from an average fill.
 """
 
 from __future__ import annotations
 
 import argparse
-import asyncio
 import json
-import os
-import subprocess
+import math
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any, Callable, Mapping
 
 import httpx
-from eth_account import Account
 
-import _paths as _secrets
-
-_secrets.install_scrubbing_excepthook()
+try:
+    from .limitless_quote_math import quote_pair
+except ImportError:
+    from limitless_quote_math import quote_pair  # type: ignore
 
 
 _SCRIPT_DIR = Path(__file__).resolve().parent
 _REPO_ROOT = _SCRIPT_DIR.parent
 SCAN_OUTPUT = _REPO_ROOT / "logs" / "limitless_arb_latest.json"
 STATE_PATH = Path.home() / ".polyclaude_arb_state.json"
-
-# Risk parameters
 PER_ARB_CAP_USDC = 3.00
-PER_ARB_FIRST_TRADE_CAP_USDC = 1.00  # used until first arb resolves cleanly
+PER_ARB_FIRST_TRADE_CAP_USDC = 1.00
 TOTAL_OPEN_ARB_CAP_USDC = 20.00
 MIN_NET_EDGE = 0.015
 LIMITLESS_API_BASE = "https://api.limitless.exchange"
 POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
-import pm_fees  # full market dicts honor feeSchedule; legacy fields use 0.07 cap
+POLYMARKET_CLOB = "https://clob.polymarket.com/book"
+LIMITLESS_FEE_BOUND = 0.03
+PM_BOOK_MAX_AGE_SECONDS = 120.0
+SCAN_MAX_AGE_SECONDS = 2 * 60 * 60
+BASE_NATIVE_USDC = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+_DRY_RUN = False  # compatibility only; there is no alert/order path
 
-
-# ---- helpers ---------------------------------------------------------------
-
-
-_DRY_RUN = False   # set from --dry-run in main(); gates all operator alerts
-
-
-def _telegram(text: str) -> None:
-    """Best-effort Telegram; never raise.
-
-    DRY-RUN GATE (2026-08-12): gated at the FUNCTION, not per call site, so a
-    new call site cannot forget it. Origin: five --dry-run drills of the
-    Polymarket exit each Telegrammed "submitted: 7/8" — indistinguishable from
-    a real liquidation on the operator's screen. Dry-run suppressed the ORDERS
-    and did nothing about the ALARM; with a monthly drill scheduled that would
-    have become a recurring false emergency.
-    """
-    if _DRY_RUN:
-        print(f"  (dry run — operator NOT telegrammed: {text.splitlines()[0][:70]})")
-        return
-    try:
-        subprocess.run(
-            [".venv/bin/python", "scripts/telegram.py", "msg", text],
-            cwd=_REPO_ROOT, check=False, timeout=15, capture_output=True,
-        )
-    except Exception:
-        pass
+_ASSUMPTIONS = (
+    "Limitless buy fee is bounded at 3% from public documentation, not an exact pre-trade quote.",
+    "Limitless fee asset/rounding and Polymarket execution rounding remain unverified.",
+    "Displayed-book freshness, minimum-order rules, and resolution-rule equivalence remain unverified.",
+    "Screening math only; execution_ready is always false and no order is submitted.",
+)
 
 
 def _load_state() -> dict:
@@ -95,48 +59,32 @@ def _load_state() -> dict:
         return {"open_arbs": [], "resolved_arbs": [], "last_run_at": 0,
                 "first_trade_completed": False}
     try:
-        return json.loads(STATE_PATH.read_text())
+        value = json.loads(STATE_PATH.read_text())
+        return value if isinstance(value, dict) else {}
     except Exception:
         return {"open_arbs": [], "resolved_arbs": [], "last_run_at": 0,
                 "first_trade_completed": False}
-
-
-def _save_state(s: dict) -> None:
-    STATE_PATH.write_text(json.dumps(s, indent=2, default=str))
-    os.chmod(STATE_PATH, 0o600)
-
-
-def _have_limitless_creds() -> bool:
-    return bool(os.environ.get("LIMITLESS_API_KEY") and
-                os.environ.get("LIMITLESS_API_SECRET"))
 
 
 def _read_scan() -> dict:
     if not SCAN_OUTPUT.exists():
         return {}
     try:
-        return json.loads(SCAN_OUTPUT.read_text())
+        value = json.loads(SCAN_OUTPUT.read_text())
+        return value if isinstance(value, dict) else {}
     except Exception:
         return {}
 
 
 def _select_candidate(scan: dict, state: dict) -> dict | None:
-    """Highest-net-edge IDENTICAL candidate not already open AND with
-    mechanical/oracle resolution (Limitless Chainlink Data Stream enabled).
-    Subjective-resolution markets (FDV / launch / sports props) are excluded
-    even if the agent verified them as IDENTICAL — single resolution-language
-    disagreement can wipe ~25 successful arbs at our size.
-    """
     identical = scan.get("verified_identical") or []
-    open_lim_ids = {a.get("lim_id") for a in state.get("open_arbs", [])}
-    eligible = [c for c in identical
-                if (c.get("net_edge") or 0) >= MIN_NET_EDGE
-                and c.get("lim_id") not in open_lim_ids
+    open_ids = {str(a.get("lim_id")) for a in state.get("open_arbs", [])}
+    eligible = [c for c in identical if isinstance(c, dict)
+                and (c.get("net_edge") or 0) >= MIN_NET_EDGE
+                and str(c.get("lim_id")) not in open_ids
                 and c.get("lim_chainlink_enabled")]
-    if not eligible:
-        return None
     eligible.sort(key=lambda c: -(c.get("net_edge") or 0))
-    return eligible[0]
+    return eligible[0] if eligible else None
 
 
 def _open_capital_used(state: dict) -> float:
@@ -144,364 +92,404 @@ def _open_capital_used(state: dict) -> float:
                for a in state.get("open_arbs", []))
 
 
-# ---- orderbook walking ----------------------------------------------------
-
-
-def _walk_book_buy_ask(asks: list[dict], usdc_target: float) -> tuple[float, float] | None:
-    """Walk an ask-side book, computing avg fill price for `usdc_target` of buys.
-
-    Returns (avg_price, tokens_received) or None if depth is insufficient.
-
-    Each ask entry: {'price': float, 'size': int (microUSDC of size at that price)}
-    For Limitless: size is in 6-decimal USDC units (microUSDC). We treat it as
-    USDC-equivalent of token-quantity at that price: tokens = size / 1e6 / price.
-    """
-    target_usdc = float(usdc_target)
-    spent_usdc = 0.0
-    tokens = 0.0
-    for ask in asks:
-        if spent_usdc >= target_usdc - 1e-9:
-            break
-        p = float(ask["price"])
-        size_usdc = float(ask["size"]) / 1_000_000  # microUSDC -> USDC
-        # USDC needed to clear this level
-        room = target_usdc - spent_usdc
-        take_usdc = min(room, size_usdc)
-        spent_usdc += take_usdc
-        tokens += take_usdc / p
-    if spent_usdc < target_usdc - 1e-6:
-        return None  # insufficient depth
-    avg_price = spent_usdc / tokens if tokens > 0 else 0
-    return (avg_price, tokens)
-
-
-# ---- Polymarket orderbook fetch -------------------------------------------
-
-
-def _polymarket_token_orderbook(token_id: str) -> dict | None:
-    """Fetch Polymarket orderbook for a token via the public CLOB endpoint."""
-    try:
-        r = httpx.get(f"https://clob.polymarket.com/book",
-                      params={"token_id": token_id}, timeout=10)
-        r.raise_for_status()
-        return r.json()
-    except Exception:
-        return None
-
-
-def _polymarket_walk_book_buy(book: dict, usdc_target: float) -> tuple[float, float] | None:
-    """Walk Polymarket orderbook (asks). Returns (avg_price, tokens) or None.
-
-    Polymarket book shape: {'bids': [{'price': '0.14', 'size': '12.5'}, ...], 'asks': ...}
-    Sizes are in tokens (shares), not USDC. To buy `usdc_target` USDC worth, we
-    walk asks ascending.
-    """
-    asks = book.get("asks") or []
-    # Asks come sorted descending by price typically; ensure ascending
-    parsed = sorted([(float(a["price"]), float(a["size"])) for a in asks
-                     if float(a.get("size", 0)) > 0], key=lambda x: x[0])
-    spent_usdc = 0.0
-    tokens = 0.0
-    for price, size in parsed:
-        if spent_usdc >= usdc_target - 1e-9:
-            break
-        room = usdc_target - spent_usdc
-        max_tokens_here = size
-        max_usdc_here = max_tokens_here * price
-        take_usdc = min(room, max_usdc_here)
-        spent_usdc += take_usdc
-        tokens += take_usdc / price
-    if spent_usdc < usdc_target - 1e-6:
-        return None
-    avg_price = spent_usdc / tokens if tokens > 0 else 0
-    return (avg_price, tokens)
-
-
-# ---- live arb evaluation --------------------------------------------------
-
-
-async def _live_arb_quote(candidate: dict, usdc_per_side: float) -> dict:
-    """Fetch live orderbooks on both venues, compute actual fill prices,
-    and return a rich quote dict with net edge after real slippage.
-
-    Decision is symmetric: if Lim YES < PM YES → buy Lim YES + buy PM NO.
-    Else → buy PM YES + buy Lim NO.
-    """
-    from limitless_sdk import HMACCredentials
-    from limitless_sdk.api import HttpClient
-
-    key = os.environ["LIMITLESS_API_KEY"]
-    sec = os.environ["LIMITLESS_API_SECRET"]
-    creds = HMACCredentials(token_id=key, secret=sec)
-    http = HttpClient(hmac_credentials=creds)
-
-    # Determine direction by the scan's last-seen prices
-    lim_yes_scan = float(candidate["lim_yes_price"])
-    pm_yes_scan = float(candidate["pm_yes_price"])
-    direction = "lim_yes_pm_no" if lim_yes_scan < pm_yes_scan else "pm_yes_lim_no"
-
-    quote = {"direction": direction, "ok": False, "reason": "", "lim": {}, "pm": {}}
-
-    try:
-        # Limitless market data fresh — find current slug by id (slugs rotate)
-        all_pages = []
-        page = 1
-        while True:
-            r = await http.get(f"/markets/active?page={page}")
-            all_pages.extend(r.get("data") or [])
-            if not r.get("data") or len(all_pages) >= (r.get("totalMarketsCount") or 0):
-                break
-            page += 1
-            if page > 50:
-                break
-        lim_market = next((m for m in all_pages if m["id"] == candidate["lim_id"]), None)
-        if not lim_market:
-            quote["reason"] = "limitless market not found in active set"
-            return quote
-        slug = lim_market["slug"]
-
-        # Limitless orderbook — note: SDK returns one tokenId at a time. Choose
-        # the side we're buying.
-        if direction == "lim_yes_pm_no":
-            lim_token = lim_market["tokens"]["yes"]
-        else:
-            lim_token = lim_market["tokens"]["no"]
-        # The /markets/{slug}/orderbook endpoint returns the YES book by default.
-        # For NO, need /markets/{slug}/orderbook?tokenId={no_token}
-        ob_path = f"/markets/{slug}/orderbook"
-        if direction == "pm_yes_lim_no":
-            ob_path += f"?tokenId={lim_token}"
-        try:
-            lim_book = await http.get(ob_path)
-        except Exception as e:
-            quote["reason"] = f"limitless orderbook fetch failed: {str(e)[:120]}"
-            return quote
-
-        lim_walk = _walk_book_buy_ask(lim_book.get("asks") or [], usdc_per_side)
-        if not lim_walk:
-            quote["reason"] = f"limitless insufficient depth at ${usdc_per_side}"
-            return quote
-        lim_fill_price, lim_tokens = lim_walk
-        quote["lim"] = {
-            "slug": slug,
-            "token_id": lim_token,
-            "buy_token": "YES" if direction == "lim_yes_pm_no" else "NO",
-            "fill_price": lim_fill_price,
-            "tokens": lim_tokens,
-            "usdc": usdc_per_side,
-        }
-    finally:
-        await http.close()
-
-    # Polymarket orderbook lookup. We need the token_id for the side we buy.
-    pm_slug = candidate["pm_slug"]
-    pm_market = httpx.get(f"{POLYMARKET_GAMMA}/markets",
-                           params={"slug": pm_slug}, timeout=10).json()
-    if not pm_market or not (isinstance(pm_market, list) and len(pm_market)):
-        # Try direct fetch path
-        pm_market_data = httpx.get(f"{POLYMARKET_GAMMA}/markets/{pm_slug}",
-                                    timeout=10).json()
-        if isinstance(pm_market_data, dict):
-            pm_market = [pm_market_data]
-        else:
-            quote["reason"] = "polymarket market not found"
-            return quote
-    pm = pm_market[0]
-    pm_clob_tokens = pm.get("clobTokenIds") or "[]"
-    if isinstance(pm_clob_tokens, str):
-        pm_clob_tokens = json.loads(pm_clob_tokens)
-    if not pm_clob_tokens or len(pm_clob_tokens) < 2:
-        quote["reason"] = "polymarket missing clob tokens"
-        return quote
-
-    # Polymarket outcome ordering is ["Yes", "No"] (verified via gamma).
-    pm_yes_token = pm_clob_tokens[0]
-    pm_no_token = pm_clob_tokens[1]
-    pm_buy_token = pm_no_token if direction == "lim_yes_pm_no" else pm_yes_token
-
-    pm_book = _polymarket_token_orderbook(pm_buy_token)
-    if not pm_book:
-        quote["reason"] = "polymarket orderbook fetch failed"
-        return quote
-    pm_walk = _polymarket_walk_book_buy(pm_book, usdc_per_side * (1 - lim_yes_scan if direction == "lim_yes_pm_no" else lim_yes_scan))
-    # Actually we want SAME tokens on each side, not same USDC. Recompute.
-    # But for now, simpler: target the matching token quantity, not USDC.
-    # We bought lim_tokens above; need lim_tokens on PM side too.
-    target_pm_tokens = quote["lim"]["tokens"]
-
-    # Re-walk for token-quantity targeting on PM side
-    asks = pm_book.get("asks") or []
-    parsed = sorted([(float(a["price"]), float(a["size"])) for a in asks
-                     if float(a.get("size", 0)) > 0], key=lambda x: x[0])
-    spent_usdc = 0.0
-    tokens_bought = 0.0
-    for price, size in parsed:
-        if tokens_bought >= target_pm_tokens - 1e-6:
-            break
-        take_tokens = min(size, target_pm_tokens - tokens_bought)
-        spent_usdc += take_tokens * price
-        tokens_bought += take_tokens
-    if tokens_bought < target_pm_tokens - 1e-3:
-        quote["reason"] = (f"polymarket insufficient depth: have {tokens_bought:.3f} "
-                           f"tokens, need {target_pm_tokens:.3f}")
-        return quote
-    pm_fill_price = spent_usdc / tokens_bought if tokens_bought > 0 else 0
-
-    quote["pm"] = {
-        "slug": pm_slug,
-        "token_id": pm_buy_token,
-        "buy_token": "NO" if direction == "lim_yes_pm_no" else "YES",
-        "fill_price": pm_fill_price,
-        "tokens": tokens_bought,
-        "usdc": spent_usdc,
+def _unpriced(reason: str, **extra: Any) -> dict[str, Any]:
+    result: dict[str, Any] = {
+        "status": "unpriced", "ok": False, "screening_only": True,
+        "execution_ready": False, "reason": f"unpriced: {reason}",
+        "assumptions": list(_ASSUMPTIONS),
     }
-
-    # Net edge: each side bought ~`target_pm_tokens` shares; total cost is
-    # lim_usdc + pm_spent_usdc; payout at resolution is target_pm_tokens × $1.
-    total_cost = quote["lim"]["usdc"] + quote["pm"]["usdc"]
-    payout = target_pm_tokens
-    gross_profit = payout - total_cost
-    # Fees. The full market dict lets pm_fees.py honor a structured
-    # feeSchedule rate/exponent and preserve zero/lower-rate markets. This
-    # inspector still aggregates the PM fee at the volume-weighted average
-    # fill multiplied by tokens; exact nonlinear per-level aggregation is
-    # pending, so this quote remains approximate. Auto-execution is disabled.
-    lim_fee_frac = 0.004 + (0.030 - 0.004) * abs(lim_fill_price - 0.5) * 2
-    lim_fee_usdc = quote["lim"]["usdc"] * lim_fee_frac
-    pm_fee_usdc = pm_fees.fee_per_share(pm, pm_fill_price) * tokens_bought
-    quote["lim"]["fee_usdc"] = lim_fee_usdc
-    quote["pm"]["fee_usdc"] = pm_fee_usdc
-    fees_usdc = lim_fee_usdc + pm_fee_usdc
-    net_profit = gross_profit - fees_usdc
-
-    quote["total_cost"] = total_cost
-    quote["payout_if_resolves"] = payout
-    quote["gross_profit"] = gross_profit
-    quote["fees_usdc"] = fees_usdc
-    quote["net_profit"] = net_profit
-    quote["net_edge_frac"] = net_profit / total_cost if total_cost > 0 else 0
-    quote["ok"] = net_profit > 0 and quote["net_edge_frac"] >= MIN_NET_EDGE
-    quote["reason"] = "ok" if quote["ok"] else f"net edge {quote['net_edge_frac']*100:.2f}% < threshold {MIN_NET_EDGE*100:.1f}%"
-    return quote
+    result.update(extra)
+    return result
 
 
-# ---- subcommands -----------------------------------------------------------
+def _json_get(url: str, *, params: Mapping[str, Any] | None = None,
+              get: Callable[..., Any] | None = None) -> Any:
+    request = get or httpx.get
+    response = request(url, params=params, timeout=10)
+    response.raise_for_status()
+    return response.json()
+
+
+def _text(value: Any) -> str:
+    return str(value).strip() if value is not None else ""
+
+
+def _same_id(a: Any, b: Any) -> bool:
+    return bool(_text(a)) and _text(a).casefold() == _text(b).casefold()
+
+
+def _number(value: Any) -> float | None:
+    if isinstance(value, bool):
+        return None
+    try:
+        parsed = float(value)
+    except (TypeError, ValueError):
+        return None
+    return parsed if math.isfinite(parsed) else None
+
+
+def _timestamp(value: Any) -> float | None:
+    number = _number(value)
+    if number is not None:
+        return number / 1000.0 if number > 10_000_000_000 else number
+    if not isinstance(value, str):
+        return None
+    raw = value.strip()
+    if raw.endswith("Z"):
+        raw = raw[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(raw)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.timestamp()
+
+
+def _expiry(market: Mapping[str, Any]) -> float | None:
+    for key in ("expirationTimestamp", "expiration_timestamp", "expirationDate",
+                "expiration_date", "endDate", "end_date"):
+        if key in market and market[key] not in (None, ""):
+            return _timestamp(market[key])
+    return None
+
+
+def _limitless_market_ok(market: Any, candidate: Mapping[str, Any], now: float) -> str | None:
+    if not isinstance(market, Mapping):
+        return "Limitless market response is not an object"
+    if not _same_id(market.get("id"), candidate.get("lim_id")):
+        return "Limitless response id does not match candidate lim_id"
+    if not _same_id(market.get("slug"), candidate.get("lim_slug")):
+        return "Limitless response slug does not match candidate lim_slug"
+    status = _text(market.get("status")).casefold()
+    if status not in {"created", "funded"}:
+        return f"Limitless market is not active CLOB status CREATED/FUNDED ({status or 'missing'})"
+    trade_type = _text(market.get("tradeType") or market.get("trade_type")).casefold()
+    if trade_type != "clob":
+        return "Limitless market is not CLOB"
+    market_type = _text(market.get("marketType") or market.get("market_type")).casefold()
+    child_values = [market.get(key) for key in
+                    ("children", "markets", "subMarkets", "submarkets")]
+    if any(value for value in child_values):
+        return "Limitless group has children; an exact leaf is required"
+    expiry = _expiry(market)
+    if expiry is None:
+        return "Limitless market has no verifiable expiry"
+    if expiry <= now:
+        return "Limitless market is expired"
+    tokens = market.get("tokens")
+    yes = tokens.get("yes") if isinstance(tokens, Mapping) else None
+    no = tokens.get("no") if isinstance(tokens, Mapping) else None
+    if not _same_id(yes, candidate.get("lim_yes_token")):
+        return "Limitless YES token does not match candidate"
+    if not _same_id(no, candidate.get("lim_no_token")):
+        return "Limitless NO token does not match candidate"
+    if not yes or not no or _same_id(yes, no):
+        return "Limitless tokens are missing or not distinct"
+    collateral = market.get("collateralToken")
+    if isinstance(collateral, Mapping):
+        address = collateral.get("address") or collateral.get("token")
+        decimals = collateral.get("decimals")
+    else:
+        address = collateral
+        decimals = market.get("collateralDecimals")
+    if not _same_id(address, BASE_NATIVE_USDC):
+        return "Limitless collateral is not Base native USDC"
+    if _number(decimals) != 6:
+        return "Limitless collateral decimals are not 6"
+    return None
+
+
+def _parse_list(value: Any) -> list[Any] | None:
+    if isinstance(value, str):
+        try:
+            value = json.loads(value)
+        except (TypeError, ValueError):
+            return None
+    return list(value) if isinstance(value, (list, tuple)) else None
+
+
+def _pm_market_tokens(market: Mapping[str, Any]) -> tuple[str, str] | None:
+    outcomes = _parse_list(market.get("outcomes"))
+    token_ids = _parse_list(market.get("clobTokenIds") or market.get("clob_token_ids"))
+    if not outcomes or not token_ids or len(outcomes) != 2 or len(token_ids) != 2:
+        return None
+    found: dict[str, str] = {}
+    for label, token in zip(outcomes, token_ids):
+        key = _text(label).casefold()
+        if key in {"yes", "no"} and _text(token):
+            if key in found:
+                return None
+            found[key] = _text(token)
+    yes, no = found.get("yes"), found.get("no")
+    return (yes, no) if yes and no and not _same_id(yes, no) else None
+
+
+def _pm_fee_metadata_ok(market: Mapping[str, Any]) -> str | None:
+    """Require explicit fee evidence before presenting a priced quote."""
+    if market.get("feesEnabled") is False:
+        return None
+    schedule = market.get("feeSchedule")
+    if not isinstance(schedule, Mapping):
+        return "Polymarket fee metadata is missing a structured feeSchedule"
+    rate = _number(schedule.get("rate"))
+    exponent = _number(schedule.get("exponent"))
+    if rate is None or rate < 0 or exponent is None or exponent < 0:
+        return "Polymarket feeSchedule rate/exponent is invalid"
+    return None
+
+
+def _pm_market_ok(market: Any, candidate: Mapping[str, Any]) -> tuple[str | None, tuple[str, str] | None]:
+    if not isinstance(market, Mapping):
+        return "Polymarket Gamma response is not an object", None
+    if not _same_id(market.get("slug"), candidate.get("pm_slug")):
+        return "Polymarket response slug does not match candidate pm_slug", None
+    if market.get("active") is not True:
+        return "Polymarket market is inactive", None
+    if market.get("closed") is True or market.get("resolved") is True:
+        return "Polymarket market is resolved/closed", None
+    if market.get("proposed") is True or market.get("disputed") is True:
+        return "Polymarket market is proposed/disputed", None
+    for key in ("umaResolutionStatus", "umaResolutionStatuses"):
+        value = market.get(key)
+        parsed = _parse_list(value) if isinstance(value, str) else None
+        values = parsed if parsed is not None else (
+            value if isinstance(value, (list, tuple)) else [value])
+        for item in values:
+            state = _text(item).casefold()
+            if state in {"resolved", "proposed", "disputed", "inactive", "closed"}:
+                return f"Polymarket UMA resolution status is {state}", None
+    status = _text(market.get("status")).casefold()
+    if status in {"resolved", "proposed", "disputed", "inactive", "closed"}:
+        return f"Polymarket market status is {status}", None
+    if market.get("acceptingOrders") is False or market.get("enableOrderBook") is False:
+        return "Polymarket market is not accepting CLOB orders", None
+    fee_reason = _pm_fee_metadata_ok(market)
+    if fee_reason:
+        return fee_reason, None
+    tokens = _pm_market_tokens(market)
+    if tokens is None:
+        return "Polymarket outcomes/tokens are not a distinct Yes/No mapping", None
+    condition = market.get("conditionId") or market.get("condition_id")
+    if not _text(condition):
+        return "Polymarket conditionId is missing", None
+    return None, tokens
+
+
+def _pm_book_ok(book: Any, token: str, condition: str, now: float) -> str | None:
+    if not isinstance(book, Mapping):
+        return "Polymarket book is not an object"
+    book_token = book.get("asset_id") or book.get("token_id") or book.get("tokenId")
+    if not _same_id(book_token, token):
+        return "Polymarket book token identity mismatch"
+    book_condition = book.get("market") or book.get("conditionId") or book.get("condition_id")
+    if not _same_id(book_condition, condition):
+        return "Polymarket book condition identity mismatch"
+    stamp = _timestamp(book.get("timestamp"))
+    if stamp is None:
+        return "Polymarket book timestamp is missing or invalid"
+    age = now - stamp
+    if age < 0 or age > PM_BOOK_MAX_AGE_SECONDS:
+        return f"Polymarket book timestamp age {age:.1f}s exceeds {PM_BOOK_MAX_AGE_SECONDS:.0f}s"
+    minimum = _number(book.get("min_order_size"))
+    if minimum is None or minimum <= 0:
+        return "Polymarket minimum order size is missing or invalid"
+    return None
+
+
+def _direction_result(raw: dict[str, Any], direction: str, lim_outcome: str,
+                      pm_outcome: str, lim_token: str, pm_token: str,
+                      pm_minimum: float, cap_usdc: float) -> dict[str, Any]:
+    result = dict(raw)
+    result.update({"direction": direction, "screening_only": True,
+                   "execution_ready": False, "lim_outcome": lim_outcome,
+                   "pm_outcome": pm_outcome, "pm_min_order_size": pm_minimum,
+                   "assumptions": list(_ASSUMPTIONS),
+                   "cash_cap_usdc": cap_usdc})
+    result["lim"]["buy_token"] = lim_outcome
+    result["lim"]["token_id"] = lim_token
+    result["pm"]["buy_token"] = pm_outcome
+    result["pm"]["token_id"] = pm_token
+    result["pm"]["min_order_size"] = pm_minimum
+    matched = float(result["matched_net_shares"])
+    if matched < pm_minimum:
+        result["ok"] = False
+        result["reason"] = f"PM minimum order size {pm_minimum:g} exceeds matched {matched:g}"
+    else:
+        floor = result["conditional_profit_floor_usdc"]
+        total = result["total_cash_usdc"]
+        edge = floor / total if total else 0
+        result["conditional_net_edge_frac"] = edge
+        result["ok"] = bool(floor > 0 and edge >= MIN_NET_EDGE)
+        result["reason"] = ("passes conditional screening" if result["ok"] else
+                             f"conditional floor edge {edge * 100:.2f}% below {MIN_NET_EDGE * 100:.1f}%")
+    return result
+
+
+def _live_arb_quote(candidate: dict, usdc_per_side: float, *, now: float | None = None,
+                    get: Callable[..., Any] | None = None) -> dict[str, Any]:
+    """Fetch and validate public data, returning both conditional directions."""
+    base: dict[str, Any] = {"screening_only": True, "execution_ready": False,
+                            "assumptions": list(_ASSUMPTIONS), "directions": {}}
+    if not isinstance(candidate, Mapping):
+        return _unpriced("candidate is not an object", **base)
+    required = ("lim_id", "lim_slug", "lim_yes_token", "lim_no_token", "pm_slug")
+    missing = [key for key in required if not _text(candidate.get(key))]
+    if missing:
+        return _unpriced(f"candidate missing {', '.join(missing)}", **base)
+    current = time.time() if now is None else float(now)
+    try:
+        lim_market = _json_get(f"{LIMITLESS_API_BASE}/markets/{candidate['lim_slug']}", get=get)
+    except Exception as exc:
+        return _unpriced(f"Limitless market fetch failed: {str(exc)[:120]}", **base)
+    reason = _limitless_market_ok(lim_market, candidate, current)
+    if reason:
+        return _unpriced(reason, **base)
+    try:
+        lim_book = _json_get(f"{LIMITLESS_API_BASE}/markets/{candidate['lim_slug']}/orderbook", get=get)
+    except Exception as exc:
+        return _unpriced(f"Limitless YES orderbook fetch failed: {str(exc)[:120]}", **base)
+    if not isinstance(lim_book, Mapping) or not _same_id(lim_book.get("tokenId"), candidate["lim_yes_token"]):
+        return _unpriced("Limitless orderbook is not the exact YES book", **base)
+    try:
+        gamma = _json_get(f"{POLYMARKET_GAMMA}/markets", params={"slug": candidate["pm_slug"]}, get=get)
+    except Exception as exc:
+        return _unpriced(f"Polymarket Gamma fetch failed: {str(exc)[:120]}", **base)
+    if not isinstance(gamma, list) or len(gamma) != 1:
+        return _unpriced("Polymarket Gamma exact slug did not return one market", **base)
+    pm_market = gamma[0]
+    reason, pm_tokens = _pm_market_ok(pm_market, candidate)
+    if reason or pm_tokens is None:
+        return _unpriced(reason or "Polymarket token mapping failed", **base)
+    pm_yes, pm_no = pm_tokens
+    condition = _text(pm_market.get("conditionId") or pm_market.get("condition_id"))
+    books: dict[str, dict] = {}
+    minima: dict[str, float] = {}
+    for token, label in ((pm_yes, "YES"), (pm_no, "NO")):
+        try:
+            book = _json_get(POLYMARKET_CLOB, params={"token_id": token}, get=get)
+        except Exception as exc:
+            return _unpriced(f"Polymarket {label} orderbook fetch failed: {str(exc)[:120]}", **base)
+        books[label] = book
+    validation_now = current if now is not None else time.time()
+    # Recheck the Limitless expiry after all network reads; a short-lived
+    # market must not be treated as fresh based only on the initial timestamp.
+    reason = _limitless_market_ok(lim_market, candidate, validation_now)
+    if reason:
+        return _unpriced(reason, **base)
+    for token, label in ((pm_yes, "YES"), (pm_no, "NO")):
+        reason = _pm_book_ok(books[label], token, condition, validation_now)
+        if reason:
+            return _unpriced(f"Polymarket {label} book: {reason}", **base)
+        minima[label] = float(books[label]["min_order_size"])
+
+    specs = (("lim_yes_pm_no", "YES", "NO", pm_no, "NO"),
+             ("lim_no_pm_yes", "NO", "YES", pm_yes, "YES"))
+    for direction, lim_outcome, pm_outcome, pm_token, pm_label in specs:
+        try:
+            raw = quote_pair(lim_book, str(candidate["lim_yes_token"]), lim_outcome,
+                             books[pm_label], pm_market, usdc_per_side,
+                             lim_fee_bound=LIMITLESS_FEE_BOUND)
+            result = _direction_result(raw, direction, lim_outcome, pm_outcome,
+                                       str(candidate[f"lim_{lim_outcome.lower()}_token"]),
+                                       pm_token, minima[pm_label], float(usdc_per_side))
+        except Exception as exc:
+            result = _unpriced(f"{direction} quote unavailable: {str(exc)[:120]}")
+            result.update({"direction": direction, "screening_only": True,
+                           "execution_ready": False})
+        base["directions"][direction] = result
+    priced = [q for q in base["directions"].values() if q.get("status") == "screening_quote_only"]
+    if not priced:
+        return _unpriced("both complementary directions are unpriced", **base)
+    eligible = [q for q in priced if q.get("ok")]
+    best = max(eligible or priced, key=lambda q: q["conditional_profit_floor_usdc"])
+    base.update({"status": "screening_quote_only", "best_direction": best["direction"],
+                 "selected": best, "ok": bool(best.get("ok")),
+                 "reason": ("passes conditional screening" if best.get("ok") else
+                            "no direction clears the conditional profit/edge screen")})
+    # Legacy result names remain available, but values are explicitly screening
+    # floors and are never called executable/locked.
+    for key in ("lim", "pm", "total_cash_usdc", "conditional_payout_floor_usdc",
+                "conditional_profit_floor_usdc"):
+        base[key] = best[key]
+    base["direction"] = best["direction"]
+    base["net_profit"] = best["conditional_profit_floor_usdc"]
+    base["net_edge_frac"] = best.get("conditional_net_edge_frac", 0)
+    base["fees_usdc"] = best["pm"].get("fee_usdc")
+    return base
 
 
 def cmd_status(_args: argparse.Namespace) -> int:
     state = _load_state()
-    print("limitless arb executor")
+    print("limitless arb quote inspector (execution disabled)")
     print(f"  state file: {STATE_PATH} ({'exists' if STATE_PATH.exists() else 'fresh'})")
     print(f"  open arbs:  {len(state.get('open_arbs', []))}")
-    for a in state.get("open_arbs", [])[:10]:
-        print(f"    {json.dumps(a, default=str)[:200]}")
     print(f"  resolved:   {len(state.get('resolved_arbs', []))}")
     print(f"  last run:   {state.get('last_run_at', 'never')}")
     print(f"  scan file:  {SCAN_OUTPUT} ({'exists' if SCAN_OUTPUT.exists() else 'missing'})")
-    print(f"  creds:      {'set' if _have_limitless_creds() else 'MISSING'}")
-    print(f"  first trade completed: {state.get('first_trade_completed', False)}")
+    print("  credentials: not required (public reads only)")
     return 0
 
 
 def _candidate_is_mechanical(scan_record: dict) -> bool:
-    """Filter for candidates where resolution is a mechanical/oracle event.
-
-    Limitless side: market metadata must have `chainlinkDataStream.enabled`.
-    These are crypto-price-at-time markets — objective, hard for the two
-    venues' oracles to disagree on. Excludes FDV/launch/sports/props markets
-    where resolution language is subjective and divergence risk is real.
-    """
     return bool((scan_record.get("lim_metadata") or {})
                 .get("chainlinkDataStream", {}).get("enabled"))
 
 
+def _scan_is_fresh(scan: Mapping[str, Any], now: float | None = None) -> tuple[bool, str]:
+    stamp = _timestamp(scan.get("generated_at"))
+    if stamp is None:
+        return False, "scan snapshot has no verifiable generated_at"
+    current = time.time() if now is None else float(now)
+    age = current - stamp
+    if age < 0 or age > SCAN_MAX_AGE_SECONDS:
+        return False, f"scan snapshot age {age:.0f}s exceeds {SCAN_MAX_AGE_SECONDS}s"
+    return True, ""
+
+
 def cmd_run(args: argparse.Namespace) -> int:
+    """Inspect one candidate.  This command has no order or alert path."""
     state = _load_state()
-    state["last_run_at"] = int(time.time())
-
-    if not _have_limitless_creds():
-        msg = ("limitless arb executor blocked: credentials not set in env. "
-               "Drop ~/secrets/limitless_creds.json with key+secret, or populate "
-               "~/.polyclaude/env with LIMITLESS_API_KEY + LIMITLESS_API_SECRET.")
-        print(msg)
-        last = state.get("last_missing_key_alert", 0)
-        now = int(time.time())
-        if now - last >= 6 * 3600:
-            _telegram(msg)
-            state["last_missing_key_alert"] = now
-        _save_state(state)
-        return 2
-
     scan = _read_scan()
     if not scan:
         print("no scan output; run scripts/limitless_arb_scan.py first")
-        _save_state(state)
         return 1
-
-    if _open_capital_used(state) >= TOTAL_OPEN_ARB_CAP_USDC:
-        print(f"open arb capital ${_open_capital_used(state):.2f} at cap; skipping")
-        _save_state(state)
+    fresh, freshness_reason = _scan_is_fresh(scan)
+    if not fresh:
+        print(f"stale/unverifiable scan; {freshness_reason}")
         return 0
-
+    used = _open_capital_used(state)
+    if used >= TOTAL_OPEN_ARB_CAP_USDC:
+        print(f"open arb capital ${used:.2f} at cap; skipping")
+        return 0
     candidate = _select_candidate(scan, state)
     if not candidate:
         print("no eligible IDENTICAL candidate above net-edge threshold")
-        _save_state(state)
         return 0
-
-    print(f"selected: {candidate.get('lim_title','')[:80]}")
-    print(f"  scan net edge: {(candidate.get('net_edge') or 0)*100:+.2f}% "
-          f"(midpoint-based; will recompute on real orderbook)")
-
-    # First-trade self-throttle: $1/leg until the first arb resolves cleanly.
     cap = (PER_ARB_FIRST_TRADE_CAP_USDC
            if not state.get("first_trade_completed") else PER_ARB_CAP_USDC)
-    print(f"  position size per leg: ${cap}")
-
-    quote = asyncio.run(_live_arb_quote(candidate, cap))
-    if not quote.get("ok"):
-        msg = f"arb quote rejected: {quote.get('reason', 'unknown')}"
-        print(msg)
-        if quote.get("lim", {}).get("fill_price") and quote.get("pm", {}).get("fill_price"):
-            print(f"  Lim fill: {quote['lim']['fill_price']:.4f}  PM fill: {quote['pm']['fill_price']:.4f}")
-            print(f"  net edge after slippage: {quote.get('net_edge_frac', 0)*100:+.2f}%")
-        _save_state(state)
-        return 0
-
-    print(f"\nLIVE QUOTE — net edge {quote['net_edge_frac']*100:+.2f}% after slippage:")
-    print(f"  {quote['direction']}")
-    print(f"  Lim {quote['lim']['buy_token']}: {quote['lim']['tokens']:.4f} tokens @ {quote['lim']['fill_price']:.4f}  cost ${quote['lim']['usdc']:.4f}")
-    print(f"  PM  {quote['pm']['buy_token']}: {quote['pm']['tokens']:.4f} tokens @ {quote['pm']['fill_price']:.4f}  cost ${quote['pm']['usdc']:.4f}")
-    print(f"  total cost: ${quote['total_cost']:.4f}  payout if resolves: ${quote['payout_if_resolves']:.4f}")
-    print(f"  fees: ${quote['fees_usdc']:.4f}  net profit (locked): ${quote['net_profit']:.4f}")
-
-    # Auto-execution is intentionally disabled. Pre-execution analysis
-    # (2026-04-30) showed that even on agent-verified IDENTICAL pairs, the
-    # post-slippage net edge is small enough that a single resolution-language
-    # disagreement on a subjective market (FDV/launch/sports props) wipes
-    # ~25 successful arbs. At our $1-3/leg size with ~80-90% verifier accuracy
-    # on subtle edge cases, expected value goes negative. This script now
-    # functions as a live-quote inspector: it tells us what the real
-    # post-slippage edge would have been if we'd executed, but does not
-    # fire orders. Use the data to decide manually whether a specific
-    # candidate is worth a manual trade.
-    _save_state(state)
+    print(f"selected: {candidate.get('lim_title', '')[:80]}")
+    print(f"  conditional screening cap per leg: ${cap:.2f}")
+    quote = _live_arb_quote(candidate, cap)
+    if quote.get("ok"):
+        print(f"SCREENING QUOTE ONLY — conditional floor edge {float(quote.get('net_edge_frac', 0))*100:+.2f}%")
+        print(f"  direction: {quote.get('direction')}")
+    else:
+        print(f"screening quote unavailable/rejected: {quote.get('reason', 'unknown')}")
+    print("  execution_ready=False; no order submitted")
     return 0
 
 
 def main() -> int:
-    p = argparse.ArgumentParser()
-    sub = p.add_subparsers(dest="cmd", required=True)
+    parser = argparse.ArgumentParser()
+    sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("status").set_defaults(fn=cmd_status)
-    s = sub.add_parser("run", help="compute live post-slippage quote (no live execution)")
-    s.add_argument("--dry-run", action="store_true",
-                   help="kept for compat; the executor never submits live orders")
-    s.set_defaults(fn=cmd_run)
-    args = p.parse_args()
-    # Gate operator alerts on dry-run (2026-08-12). Setting the module flag
-    # here covers EVERY _telegram call site in the file at once — the gate
-    # without this wiring is inert, which is exactly the half-fix that let the
-    # same bug survive one round of repair earlier today.
+    run = sub.add_parser("run", help="compute a public-read screening quote (never submits)")
+    run.add_argument("--dry-run", action="store_true", help="kept for compatibility")
+    sub.add_parser("dry-run", help="compatibility alias for run --dry-run").set_defaults(
+        fn=cmd_run, dry_run=True)
+    run.set_defaults(fn=cmd_run)
+    args = parser.parse_args()
     global _DRY_RUN
     _DRY_RUN = bool(getattr(args, "dry_run", False))
     return args.fn(args)

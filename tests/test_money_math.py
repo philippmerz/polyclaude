@@ -552,3 +552,45 @@ with tempfile.TemporaryDirectory() as _tmp:
               _missing_cluster_failed, True)
     finally:
         pe.REPO_ROOT = _prior_root
+
+# -------------------------------------------- Limitless net-contract screening
+# 2026-09-07: old inspector mistook raw micro-contract depth for USDC, read
+# YES asks for NO, and charged received-contract fees as extra cash instead
+# of reducing the payout floor. Keep the actual false-profit example pinned.
+import limitless_quote_math as lqm  # noqa: E402
+import limitless_arb_scan as las  # noqa: E402
+
+_lim_book = {"tokenId": "yes", "asks": [{"price": ".50", "size": 20_000_000}],
+             "bids": [{"price": ".8", "size": 3_000_000}]}
+_pm_book = {"asks": [{"price": ".49", "size": 20}]}
+_free = {"feeSchedule": {"rate": 0, "exponent": 1, "takerOnly": True}}
+_q = lqm.quote_pair(_lim_book, "yes", "YES", _pm_book, _free, 10)
+check("Limitless gross contracts are raw size / 1e6", float(_q["lim"]["gross_contracts"]), 20)
+check("Limitless fee reduces net contracts", float(_q["matched_net_shares"]), 19.4)
+check("Limitless contract deduction not cash surcharge", float(_q["lim"]["cost_usdc"]), 10)
+check("PM quantity matches NET, not gross", float(_q["pm"]["shares"]), 19.4)
+check("conditional pair cost", float(_q["total_cash_usdc"]), 19.506)
+check("old apparent-profit example is a loss", float(_q["conditional_profit_floor_usdc"]), -.106)
+_no = lqm.normalize_limitless_book(_lim_book, "yes", "NO")
+check("Limitless NO asks mirror YES bids", float(_no[0].price), .2)
+check("Limitless NO mirror preserves contract quantity", float(_no[0].size), 3)
+_q2 = lqm.quote_pair(
+    {"tokenId": "yes", "asks": [{"price": ".3", "size": 2_000_000}]},
+    "yes", "YES", {"asks": [{"price": ".4", "size": 1}, {"price": ".2", "size": 1}]},
+    m_exp2, 10, lim_fee_bound=0)
+check("cross-venue PM exponent-2 fee sums levels", float(_q2["pm"]["fee_usdc"]), .0208)
+_capped = lqm.quote_pair(
+    {"tokenId": "yes", "asks": [{"price": ".1", "size": 100_000_000}]},
+    "yes", "YES", {"asks": [{"price": ".89", "size": 100}]}, _free, 3)
+check("cheap Limitless leg cannot overrun PM cash cap", float(_capped["pm"]["cost_usdc"]) <= 3, True)
+check("both leg cash caps apply", float(_capped["lim"]["cost_usdc"]) <= 3, True)
+check("scanner cost is per net contract", las.limitless_buy_fee(.5), .5 * .03 / .97)
+check("scanner propagates structured PM exponent", las.polymarket_buy_fee(.4, m_exp2), .0144)
+check("scanner midpoint positive spread can still fail", .01 - las.arb_breakeven(.5, .51, _free) < 0, True)
+_indexed = las.index_polymarket([{
+    "question": "Will Example happen?", "slug": "example",
+    "outcomes": '["No", "Yes"]', "outcomePrices": '["0.7", "0.3"]', **m_exp2,
+}])
+check("scanner YES price uses outcome label", _indexed[0]["yes_price"], .3)
+check("scanner index preserves complete PM curve",
+      las.polymarket_buy_fee(.4, _indexed[0]["fee_market"]), .0144)

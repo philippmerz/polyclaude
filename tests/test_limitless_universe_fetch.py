@@ -31,6 +31,7 @@ def _markets(start: int, count: int) -> list[dict]:
             "closed": False,
             "volume24hr": 1_000_000 - i,
             "outcomePrices": "[\"0.5\", \"0.5\"]",
+            "outcomes": '["Yes", "No"]',
         }
         for i in range(start, start + count)
     ]
@@ -189,8 +190,10 @@ def test_main_persists_explicit_partial_coverage_label(
 ) -> None:
     candidate = {
         "id": "lim-1",
+        "slug": "example-subject-2026",
         "title": "Will Example Subject happen in 2026?",
         "prices": [0.5, 0.5],
+        "tokens": {"yes": "lim-yes-1", "no": "lim-no-1"},
         "metadata": {},
     }
     partial = scan.PolymarketUniverseFetch(
@@ -221,8 +224,10 @@ def test_main_aborts_without_publishing_on_keyset_failure(
 ) -> None:
     candidate = {
         "id": "lim-1",
+        "slug": "example-subject-2026",
         "title": "Will Example Subject happen in 2026?",
         "prices": [0.5, 0.5],
+        "tokens": {"yes": "lim-yes-1", "no": "lim-no-1"},
         "metadata": {},
     }
     monkeypatch.setattr(scan, "OUT_DIR", tmp_path)
@@ -245,3 +250,248 @@ def test_main_aborts_without_publishing_on_keyset_failure(
 def test_keyset_fetch_requires_positive_integer_bound(value) -> None:
     with pytest.raises(ValueError, match="positive integer"):
         scan.fetch_polymarket_universe(max_markets=value)
+
+
+def test_flagged_groups_expand_to_priced_leaf_contracts(monkeypatch) -> None:
+    parent = {
+        "id": "parent-1",
+        "slug": "parent-event",
+        "title": "Will Example Subject happen?",
+        "description": "Parent event rule.",
+        "metadata": {
+            "isPolyArbitrage": True,
+            "chainlinkDataStream": {"enabled": True},
+        },
+        "marketType": "group",
+        "prices": None,
+        "tokens": None,
+        "children": [
+            {
+                "id": "child-1",
+                "slug": "example-subject-yes",
+                "title": "Example Subject by 2026?",
+                "description": "Child-specific deadline rule.",
+                "marketType": "group",
+                "prices": ["0.62", "0.38"],
+                "tokens": {"yes": "token-1-yes", "no": "token-1-no"},
+                "metadata": {},
+            },
+            {
+                "id": "child-bad",
+                "slug": "example-subject-bad",
+                "title": "Bad child",
+                "prices": None,
+                "tokens": None,
+            },
+        ],
+    }
+    monkeypatch.setattr(
+        scan.httpx,
+        "get",
+        lambda *_args, **_kwargs: _Response({
+            "data": [parent],
+            "totalMarketsCount": 1,
+        }),
+    )
+
+    result = scan.fetch_arb_candidates()
+
+    assert [market["id"] for market in result] == ["child-1"]
+    assert result[0]["slug"] == "example-subject-yes"
+    assert result[0]["prices"] == [0.62, 0.38]
+    assert result[0]["tokens"] == {"yes": "token-1-yes", "no": "token-1-no"}
+    assert "Will Example Subject happen?" in result[0]["_match_title"]
+    assert "Example Subject by 2026?" in result[0]["_match_title"]
+    assert "Parent event rule." in result[0]["_match_description"]
+    assert "Child-specific deadline rule." in result[0]["_match_description"]
+    assert result[0]["metadata"] == {"isPolyArbitrage": True}
+    assert scan.LAST_ARB_NORMALIZATION_STATS["expanded_children"] == 2
+    assert scan.LAST_ARB_NORMALIZATION_STATS["eligible_leaves"] == 1
+    assert scan.LAST_ARB_NORMALIZATION_STATS["excluded"] == 1
+
+
+def _flagged_leaf(leaf_id: str = "leaf-1", slug: str = "leaf-slug",
+                  tokens: dict[str, str] | None = None) -> dict:
+    return {
+        "id": leaf_id,
+        "slug": slug,
+        "title": "Will Example Subject happen?",
+        "prices": [0.4, 0.6],
+        "tokens": tokens or {"yes": "yes-token", "no": "no-token"},
+    }
+
+
+def _flagged_parent(leaf: dict) -> dict:
+    return {
+        "id": f"parent-{leaf['id']}",
+        "slug": f"parent-{leaf['slug']}",
+        "title": "Example parent",
+        "metadata": {"isPolyArbitrage": True},
+        "children": [leaf],
+    }
+
+
+def test_active_fetch_requests_explicit_limit_and_fails_closed_on_page_error(monkeypatch) -> None:
+    calls = []
+
+    def fail_on_page(_url, *, params, timeout):
+        calls.append((params, timeout))
+        raise OSError("offline")
+
+    monkeypatch.setattr(scan.httpx, "get", fail_on_page)
+
+    with pytest.raises(RuntimeError, match="refusing partial coverage"):
+        scan.fetch_arb_candidates()
+    assert calls == [({"page": 1, "limit": 25}, 15)]
+
+
+def test_active_fetch_fails_closed_on_later_page_error(monkeypatch) -> None:
+    calls = 0
+
+    def first_then_fail(_url, *, params, timeout):
+        nonlocal calls
+        calls += 1
+        assert params["limit"] == 25
+        if calls == 1:
+            return _Response({"data": [{}] * 25, "totalMarketsCount": 26})
+        raise OSError("offline")
+
+    monkeypatch.setattr(scan.httpx, "get", first_then_fail)
+
+    with pytest.raises(RuntimeError, match="refusing partial coverage"):
+        scan.fetch_arb_candidates()
+    assert calls == 2
+
+
+def test_active_fetch_fails_closed_on_unknown_or_early_empty_total(monkeypatch) -> None:
+    monkeypatch.setattr(
+        scan.httpx, "get",
+        lambda *_args, **_kwargs: _Response({"data": [], "totalMarketsCount": None}),
+    )
+    with pytest.raises(RuntimeError, match="valid totalMarketsCount"):
+        scan.fetch_arb_candidates()
+
+    monkeypatch.setattr(
+        scan.httpx, "get",
+        lambda *_args, **_kwargs: _Response({"data": [], "totalMarketsCount": 1}),
+    )
+    with pytest.raises(RuntimeError, match="empty before totalMarketsCount"):
+        scan.fetch_arb_candidates()
+
+
+def test_active_fetch_aborts_at_page_cap_instead_of_publishing_partial(monkeypatch) -> None:
+    monkeypatch.setattr(scan, "LIMITLESS_ACTIVE_PAGE_CAP", 1)
+    monkeypatch.setattr(
+        scan.httpx, "get",
+        lambda *_args, **_kwargs: _Response({
+            "data": [{}] * 25,
+            "totalMarketsCount": 26,
+        }),
+    )
+
+    with pytest.raises(RuntimeError, match="safety cap"):
+        scan.fetch_arb_candidates()
+
+
+def test_exact_duplicate_leaf_is_emitted_once() -> None:
+    leaf = _flagged_leaf()
+
+    result = scan._normalise_arb_markets([
+        _flagged_parent(dict(leaf)),
+        _flagged_parent(dict(leaf)),
+    ])
+
+    assert [market["id"] for market in result] == ["leaf-1"]
+    assert scan.LAST_ARB_NORMALIZATION_STATS["excluded"] == 1
+
+
+@pytest.mark.parametrize("mutation", ["slug", "tokens"])
+def test_conflicting_leaf_identity_aborts_normalization(mutation) -> None:
+    first = _flagged_leaf()
+    second = _flagged_leaf()
+    if mutation == "slug":
+        second["slug"] = "different-slug"
+    else:
+        second["tokens"] = {"yes": "other-yes", "no": "other-no"}
+
+    with pytest.raises(RuntimeError, match="conflicting identity"):
+        scan._normalise_arb_markets([
+            _flagged_parent(first),
+            _flagged_parent(second),
+        ])
+
+
+def test_main_returns_two_and_does_not_publish_on_limitless_fetch_failure(
+    monkeypatch, tmp_path, capsys,
+) -> None:
+    monkeypatch.setattr(scan, "OUT_DIR", tmp_path)
+    stale = tmp_path / "limitless_arb_latest.json"
+    stale.write_text(json.dumps({"verified_identical": [{"lim_id": "stale"}]}))
+    monkeypatch.setattr(
+        scan, "fetch_arb_candidates",
+        lambda: (_ for _ in ()).throw(RuntimeError("refusing partial coverage")),
+    )
+    monkeypatch.setattr(sys, "argv", ["limitless_arb_scan.py"])
+
+    assert scan.main() == 2
+    assert json.loads(stale.read_text())["verified_identical"][0]["lim_id"] == "stale"
+    assert "ABORT: Limitless universe unavailable" in capsys.readouterr().err
+
+
+def test_leaf_normalization_rejects_fake_midpoint_and_duplicate_tokens(monkeypatch) -> None:
+    parent = {
+        "id": "parent-2",
+        "slug": "parent-event-2",
+        "title": "Will Another Subject happen?",
+        "metadata": {"isPolyArbitrage": True},
+        "children": [
+            {
+                "id": "child-no-price",
+                "slug": "another-subject-no-price",
+                "title": "Another Subject?",
+                "prices": None,
+                "tokens": {"yes": "yes", "no": "no"},
+            },
+            {
+                "id": "child-same-token",
+                "slug": "another-subject-same-token",
+                "title": "Another Subject?",
+                "prices": [0.4, 0.6],
+                "tokens": {"yes": "same", "no": "same"},
+            },
+        ],
+    }
+    monkeypatch.setattr(
+        scan.httpx,
+        "get",
+        lambda *_args, **_kwargs: _Response({"data": [parent], "totalMarketsCount": 1}),
+    )
+
+    result = scan.fetch_arb_candidates()
+
+    assert result == []
+    assert scan.LAST_ARB_NORMALIZATION_STATS["excluded"] == 2
+    assert scan.LAST_ARB_NORMALIZATION_STATS["exclusions"] == {
+        "missing_or_malformed_prices": 1,
+        "missing_or_duplicate_tokens": 1,
+    }
+
+
+def test_main_overwrites_latest_json_when_no_eligible_leaves(
+    monkeypatch, tmp_path, capsys,
+) -> None:
+    monkeypatch.setattr(scan, "OUT_DIR", tmp_path)
+    (tmp_path / "limitless_arb_latest.json").write_text(json.dumps({
+        "verified_identical": [{"lim_id": "stale"}],
+        "verified_other": [{"lim_id": "stale"}],
+    }))
+    monkeypatch.setattr(scan, "fetch_arb_candidates", lambda: [])
+    monkeypatch.setattr(sys, "argv", ["limitless_arb_scan.py"])
+
+    assert scan.main() == 0
+
+    payload = json.loads((tmp_path / "limitless_arb_latest.json").read_text())
+    assert payload["total_candidates"] == 0
+    assert payload["verified_identical"] == []
+    assert payload["verified_other"] == []
+    assert "wrote" in capsys.readouterr().out

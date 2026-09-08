@@ -13355,3 +13355,54 @@ formatting, failure reporting and explanatory text, **not fee arithmetic or trad
 Verification: **482 pytest tests passed**, **140 money-math checks passed**, **all 20 mutation
 cases caught**, shell syntax and diff checks clean. No trade, order, prior, actual Telegram,
 daemon restart or schedule change. The durable ROI goal stays active.
+
+## 2026-09-08 00:06 UTC — continuation: Limitless false-quote class corrected; no trade
+
+Continued the active durable goal and the backlog's explicitly execution-disabled
+Limitless fee/depth audit. Primary documentation and a public REST/official Python
+SDK comparison exposed three independent unit/identity errors: missing parent-group
+prices were synthesized as 50c, the YES orderbook was incorrectly queried as a NO
+book, and raw micro-contract quantities were treated as USDC depth. Current CLOB
+BUY fees are deducted from received contracts; the old symmetric notional-fee
+approximation could manufacture profit. Source details/version conflict and the
+counterexample are in `research/2026-09-08-limitless-quote-audit.md`.
+
+Three bounded workers handled normalization, pure quote math and public-data
+integration; main retained fee/risk judgment and independent review. The scanner
+now expands exact priced leaves, preserves child execution identities, maps PM YES
+by outcome label and retains the full structured PM fee schedule. Failed/malformed
+pages, unknown totals, cap exhaustion and conflicting duplicate identities abort
+without publishing a clean partial/empty result. A genuinely successful empty scan
+replaces old candidates. Final live schema validation completed 23 pages / 557
+advertised rows, producing **161 flagged parents and 709 priced leaves**, including
+651 group-labeled children. This is a rolling snapshot, not an atomic universe.
+
+The pure math mirrors NO asks from YES bids, divides raw sizes by 1e6, charges PM
+fees at each fill, and matches conservative NET shares under both independent cash
+caps and displayed depth. Removed a double-flooring risk found in review. The
+Limitless 3% deduction is an explicit conditional bound, not an invented exact
+formula. Example: $10 at 0.50 gives 20 gross / 19.4 net contracts; matching 19.4 PM
+shares at 0.49 costs $9.506 and loses **$0.106**, whereas the old method advertised
+profit. Lower-fee surplus contracts never inflate the floor.
+
+The public-read inspector validates exact leaf/Gamma identities, collateral/token
+mapping, active/UMA status, expiry, known PM minimums and book/scan freshness, then
+checks both directions. Missing or invalid fee metadata/data is unpriced. Removed
+unnecessary authenticated SDK/credential-reminder scaffolding; there is **no order
+or Telegram path** in the inspector. Every result remains `execution_ready=False`.
+Exact Limitless minimums, freshness, fee applicability/rounding, final rule identity
+and all cross-venue frictions remain outstanding gates. No capital is justified by
+a positive screen or an LLM `IDENTICAL` label alone.
+
+Portfolio monitoring continued during implementation: the fresh all-row/all-score
+HLE comparison remained unchanged versus Jan-15, with the June-to-December 2025
+control detecting both model and score changes; expected lab coverage passed. A
+fresh UMA check returned **37 tracked records, zero alerts**. No new news alert
+followed the reviewed 21:46 record; the 23:57 opportunity scan found no executable
+HLE/MetaMask pair. No position/prior change or new opportunity was established.
+
+Verification: **515 pytest tests passed**, **156 money-math checks passed**, and
+**all 25 mutation cases caught**, including five new Limitless regressions. Public
+validation was read-only; tests mocked network and outward actions. Updated the
+backlog, fee lesson, source audit and README. No trade, actual Telegram, daemon
+restart or scheduler change. The durable ROI goal remains active.
