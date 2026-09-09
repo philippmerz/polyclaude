@@ -14894,3 +14894,75 @@ deprecation warning; **156 money-math checks passed**; shell syntax and diff
 checks clean. Retrieval smoke tests found the Duma gate, newest journal
 headings and the true latest weekly P&L, with exact continuation lines.
 Unrelated news/inject daemon appends remain outside this change.
+
+## 2026-09-09 14:30 UTC — bounded full check; HLE UMA proposal exception
+
+**Indicative whole-account net liquidation ~$176.63**, down ~$0.84 from
+02:00. Marked bankroll **$182.20 at 14:19:23Z**; replace its PM midpoint
+$148.69 with fee/depth estimate $143.12. Included gas $6.26; trading net
+~$170.37 vs $170 contributions, +$0.37/+0.22% **before VM/other costs**.
+Settled realized +$14.44; open liquidation P&L −$14.07. Sequential rounded
+estimates, not synchronized executable cash; aggregate output did not expose
+full coverage for every book. Five targeted walks covered full quantities,
+but four had older timestamps. Do not inherit the prior tick's coverage claim.
+
+All required portfolio, wallet, crypto, Ostium, bankroll, UMA, marginal,
+exit, constrained Kelly, watchlist, crux, audit and decision checks completed.
+13 active positions, $157.20 cost, quantities unchanged; Ostium zero/unchanged.
+Authenticated orders around 14:18: five LIVE SELLs, each matched size zero,
+no BUY/Apple order. Dry-run: no winning redemption; losing Iran YES skipped.
+State audit: 13 indexed + one de-indexed claim, CLEAN, no expired holds
+dropped. Watchlist no hits/re-vets; crux no uncovered holdings. Aave hurdle
+2.83%; pUSD/Polygon Aave/Arbitrum Aave ~$2.12/$16.11/$7.87.
+
+**Material exception:** [OpenAI HLE ≥50](https://gamma-api.polymarket.com/markets/3072351)
+changed to UMA `proposed`, YES/NO .997/.003; OpenAI ≥55 YES .775→.855.
+The [named leaderboard](https://agi.safe.ai/) remains reachable with all ten
+rows and both score columns unchanged vs Jan-15; coverage passes. Full
+criteria reread distinguishes the shared older named-source family from the
+stricter Gemini debut row-only contract. This is on-point resolver risk,
+not a final outcome or established precedent. **Old automatic HLE HOLD
+outputs are not current underwriting.** Numeric priors/original dates were
+preserved; three older-family records gained explicit agent-facing review
+warnings, not software execution interlocks. NO ADD / NO FLIP; no financial
+write. OpenAI ≥55 fresh 19-share net exit estimate at 14:25:11 was $2.568496;
+≥50's older-timestamp full bid only $0.0144. Exact identities, full walks,
+source conflict and outstanding proposal questions are in the
+[risk memo](../research/2026-09-09-hle-uma-proposal-review.md).
+
+Consumed alerts since the processed 02:00 check, not the intervening docs
+entry. Three France24 Iran/US/Hormuz reports at 10:15/11:46 provide no direct
+Trump-cessation evidence; no economic Iran/Hormuz exposure. News reports
+were not independently confirmed as military facts. No new opportunity
+payload in this interval. Hormuz-normal itself is now proposed but not final;
+dust only, four pending outcome grades deferred. Decisions: 123 total,
+73 resolved/50 pending; summed historical pending capital is not current
+exposure. Duma daily primary review already completed at 02:00; protected
+Duma/MetaMask structures unchanged. [Apple Mac newsroom](https://www.apple.com/newsroom/topics/mac/)
+has no qualifying purchase commitment in the bounded check; exact Apple
+criteria reread, no prior change before the [17:00 keynote](https://developer.apple.com/news/?id=s6spdug0).
+
+Scans once: default 998 fetched/80 published rows; thin event scope 35,923
+active, 1,420 hurdle-clearers (capped, not a verified newly-listed census).
+Sports 109 rows; only first top-three worker result retained, so consensus
+coverage is incomplete. Its Rams −3.5 market 3340157 passed identity/time
+and $203,964 volume checks, but **+7.7pp rejected**: reviewer found
+[OddsChecker](https://www.oddschecker.com/us/football/nfl/san-francisco-49ers-at-los-angeles-rams/spread)
+AI 42.82%, not bookmaker probability; −110 implies 52.38% raw. Main renderer
+could not reproduce the full large page; no paired-book consensus certified.
+Backlog records source-type gate. Macro six visibility-only rows. Monotonicity
+1,431 events/1,107 multi-market, two midpoint artifacts/zero live survivors.
+Consistency 5,004 open/334 groups: zero provisional positives, 175 unquoted,
+five failures, cursor not exhausted. Fade 11 leads/five live candidates,
+population calibration only. **No newly qualified entry**, not an
+exchange-wide absence of opportunity.
+
+Four daemons exactly one/non-stale; progress seen in heartbeat/news/opportunity
+state. Telegram process alive but no reliable activity heartbeat; old log
+mtime alone is not failure. Disk ~1.14GB free, above warning. Weekly P&L
+Sep-4/world digest Sep-6 not due. Apple 18:30 one-shot and AVAV 22:00 review
+remain; no schedule change or idle follow-up. Material Telegram **923** sent,
+on the unresolved proposal and need for fresh underwriting. README/backlog/order
+note/risk memo and routine caches updated. Focused docs/dispatch/retrieval
+tests **42 passed**; numeric prior/verification/topology comparison unchanged,
+JSON and diff checks clean. Earlier KB work persisted separately.

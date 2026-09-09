@@ -6,22 +6,22 @@ Agent-assisted trading research and monitoring. Objective: maximize expected ROI
 
 ## Portfolio dashboard
 
-Snapshot **2026-09-09 02:01 UTC**, not a live quote. This documentation cleanup did not refresh balances or change positions.
+Snapshot **2026-09-09 14:19 UTC**, not a live quote. No position/order change this tick.
 
 | Metric | Value |
 |---|---:|
-| Whole-account indicative net liquidation | ~$177.47 |
-| Less included gas-token value | $6.22 |
-| Trading net liquidation vs $170 contributions | ~$171.25; +$1.25 / +0.74%, **before VM/other costs** |
-| Authoritative marked bankroll, 02:01:44 UTC | $184.49 |
-| PM midpoint / fee-and-depth estimate | $151.03 / $144.0099083 |
-| Settled realized / open liquidation P&L | +$14.44 / −$13.19 |
+| Whole-account indicative net liquidation | ~$176.63 |
+| Less included gas-token value | $6.26 |
+| Trading net liquidation vs $170 contributions | ~$170.37; +$0.37 / +0.22%, **before VM/other costs** |
+| Authoritative marked bankroll, 14:19:23 UTC | $182.20 |
+| PM midpoint / fee-and-depth estimate | $148.69 / $143.12 |
+| Settled realized / open liquidation P&L | +$14.44 / −$14.07 |
 
-Net liquidation replaces the PM midpoint in `bankroll.py`'s total with indicative bid-depth proceeds. It is sequential, excludes withdrawal/transfer costs, and is **not synchronized or freshness-verified executable cash**. All 13 position walks covered their quantities, but not every book's identity/age was independently verified. See [reporting definitions](docs/reference/reporting.md) and the [Sep-9 journal entry](notes/journal.md#2026-09-09-0200-utc--bounded-full-check-bid-recovery-no-trade).
+Net liquidation replaces the PM midpoint in `bankroll.py`'s total with indicative bid-depth proceeds. It is sequential, excludes withdrawal/transfer costs, and is **not synchronized or freshness-verified executable cash**. The aggregate output does not certify full coverage for every book; targeted checks found older timestamps on four books. See [reporting definitions](docs/reference/reporting.md) and the [HLE risk review](research/2026-09-09-hle-uma-proposal-review.md).
 
-- 13 active PM positions, $157.20 cost. Authenticated orders at 02:01:06: five LIVE SELLs with matched size zero; no BUYs or Apple orders. No order change this tick.
+- 13 active PM positions, $157.20 cost. Authenticated orders checked around 14:18: five LIVE SELLs with matched size zero; no BUYs or Apple orders.
 - Approximate reserves: $2.12 pUSD, $16.11 Polygon Aave, $7.87 Arbitrum Aave; Ostium has no open position. Tiny Hormuz claim dust is not economic exposure.
-- Thesis summary: HOLD / no add pending evidence. Official OpenAI/Google tool-enabled HLE results already exceed held thresholds; the remaining thesis is **named-board/resolver behavior**, not lack of capability. Duma and MetaMask must be assessed as protected complete groups. Current assumptions live in [priors](notes/portfolio_kelly_priors.json), not this dashboard.
+- **HLE risk exception:** OpenAI ≥50 is now UMA `proposed`, YES/NO .997/.003, despite an unchanged named board. Proposal is not finality. Old automated HOLD conclusions are not a current underwrite of this event; no add/flip, fresh underwriting required. OpenAI ≥55 fresh 19-share NO bid-depth estimate fell to $2.57. Duma/MetaMask remain protected complete groups; HLE is correlated, not atomic. [Priors](notes/portfolio_kelly_priors.json) retain original numeric assessments pending verified resolution evidence.
 - Next dated reviews: **Sep-9 Apple 18:30 UTC**, **AVAV 22:00 UTC**. Exact triggers, sources and reminder handling: [backlog](notes/backlog.md).
 
 ## How the project runs

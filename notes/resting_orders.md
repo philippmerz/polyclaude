@@ -39,8 +39,9 @@ unfilled shares.
 
 Duma and MetaMask monotonicity are protected `_groups` where applicable: do not
 independently add, trim, or exit a leg. HLE is a correlated exposure for
-caps/sizing, not an atomic `_groups` topology; retain its current HOLD / NO ADD
-/ NO FLIP assessment and correlation limits, but do not apply the Duma/MetaMask
+caps/sizing, not an atomic `_groups` topology; retain NO ADD / NO FLIP and
+correlation limits, but re-underwrite the Sep-9 UMA proposal exception in the
+backlog rather than accepting stale HOLD outputs. Do not apply the Duma/MetaMask
 leg prohibition by analogy. Check
 [backlog.md](backlog.md) for current clocks (Apple Sep-9, AVAV Sep-9, the
 Sep-12 drill, and USGS Sep-13). Preserve the existing drill procedure and

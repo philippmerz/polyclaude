@@ -6,6 +6,7 @@ Updated 2026-09-09. This is a routing index, not a trade list. Dated scans are s
 
 | Memo | Status and revisit trigger |
 |---|---|
+| [`2026-09-09-hle-uma-proposal-review.md`](2026-09-09-hle-uma-proposal-review.md) | Active risk exception: OpenAI ≥50 proposed despite unchanged named board; proposal/finality and correlated-leg review, no new exposure. |
 | [`2026-09-08-1000-portfolio-depth-check.md`](2026-09-08-1000-portfolio-depth-check.md) | Sep 8 depth snapshot; no action. Recheck only with a synchronized executable quote and current positions. |
 | [`2026-09-08-arena-source-gate-review.md`](2026-09-08-arena-source-gate-review.md) | Arena exact-contract/source gate; watch-only. Revisit on a fresh authoritative source and criteria match. |
 | [`2026-09-08-calibration-cohort-audit.md`](2026-09-08-calibration-cohort-audit.md) | Ledger identity/quote reconciliation snapshot; not independent evidence or a policy change. Revisit with a new cohort or corrected provenance. |

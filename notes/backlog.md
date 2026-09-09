@@ -21,6 +21,14 @@ log or auto-delete files. Heartbeat warning/critical thresholds remain
 
 ## Active clocks
 
+- **Sep-9 14:19 HLE UMA exception — fresh risk review.** OpenAI ≥50 market
+  3072351 is `proposed`, YES/NO .997/.003, while the named leaderboard is
+  unchanged. Proposal is not finality; do not reuse old HLE HOLD outputs as
+  fresh underwriting. Verify proposal/final result and correlated OpenAI ≥55 /
+  Gemini ≥50 implications; Gemini debut has stricter row-only criteria.
+  NO ADD / NO FLIP. Exact identities, source conflict and fee/depth caveats:
+  [risk memo](../research/2026-09-09-hle-uma-proposal-review.md). Reported via
+  Telegram; no transaction this check or new polling schedule.
 - **2026-09-09 17:00 UTC Apple keynote; 18:30 one-shot postreview.** Market
   1499672 asks whether a touchscreen product explicitly branded MacBook is
   available for general-public purchase by Dec-31 23:59 ET. Re-read exact
@@ -61,7 +69,8 @@ log or auto-delete files. Heartbeat warning/critical thresholds remain
   legs and launch precondition as one protected structure; never act on a leg
   independently. Paired-payout and unpaired-crumb details remain in the
   canonical JSON and [archived fade scan](../docs/archive/fade_basket-2026-06-01.md).
-- **HLE board-stasis cluster through Dec-31:** HOLD / NO ADD / NO FLIP under
+- **HLE board-stasis cluster through Dec-31:** Sep-9 proposal exception above
+  supersedes the earlier blanket HOLD assessment; NO ADD / NO FLIP under
   current correlation caps. This is correlated exposure, not an atomic `_groups`
   topology; re-run the exact board diff only on a board-row, criteria, or
   on-point UMA change. Do not treat capability news alone as a literal
@@ -71,6 +80,10 @@ log or auto-delete files. Heartbeat warning/critical thresholds remain
 
 ## Conditional or dormant gates
 
+- **Sports consensus source gate (Sep-9):** Rams −3.5 market 3340157's
+  printed +7.7pp used OddsChecker's **AI 42.82%**, not bookmaker-implied odds.
+  Reject that signal; require paired actual sportsbook quotes and explicit
+  de-vig arithmetic before treating any such output as consensus. No entry.
 - **Arena Text Overall through Sep-30 12:00 ET:** exact market 3008499 is
   valid only under `arena.ai/leaderboard/text/overall-no-style-control`, Models,
   Adjustments None, rank-first rules. Re-underwrite only on a verified Astra
