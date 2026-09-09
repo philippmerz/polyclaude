@@ -1,94 +1,54 @@
 # Operations
 
-Single canonical home for the project's operational infrastructure. Other docs reference this file rather than restate it.
+Status: CURRENT runbook, consolidated 2026-09-09. Read for dispatch, VM, daemon or communication work. [Task map](../docs/INDEX.md) · [full check-in](../docs/checkin.md) · [historical operations](../docs/archive/operations-2026-09-09.md).
 
-## Cron — autonomous check-in driver
+## Cadence and dispatch
 
-- **Schedule (UTC):** `0 2 * * *` and `0 14 * * *` — symmetric 12h spacing. The 14:00 anchor catches the US-morning news cycle; 02:00 fills the otherwise-quiet window and catches Asia-morning + late-US news.
-- **Driver:** `scripts/daily_checkin.sh`. Resolves repo root from `${BASH_SOURCE[0]}`, sources `~/.polyclaude/env` for secret paths, queues to the long-lived operator when available, and otherwise starts a fresh fully onboarded headless fallback.
-- **Per-tick token cap:** ~100K (the prompt itself caps).
-- **Logs:** `polyclaude/logs/cron/checkin_<UTC ts>.log` (gitignored, auto-pruned at 30d).
-- **What each tick does:** load context (memory, journal tail, strategy), mark portfolio + bankroll via `scripts/positions.py` + `scripts/bankroll.py` (authoritative total), scan WebSearch for active-position catalysts, decide hold/adjust/add/close, journal it, write a weekly report if ≥7d since last, commit + push (audit diff for secrets first), Telegram-alert if anything material moved.
+| Trigger (UTC) | Work |
+|---|---|
+| 02:00 / 14:00 daily | Full 11-step check-in |
+| 06:00 / 10:00 / 18:00 / 22:00 | Bounded backlog/recent-journal review |
+| Sunday 16:00 | Weekly long-term research; recovery check if log age >8 days |
+| Hourly :30 | Limitless scan and execution-disabled quote inspector |
+| News / opportunity event | Relevant trigger first, then due safety checks |
 
-## News watcher — 24/7 reactive layer
+Treat schedules here as configured intent; inspect `crontab -l` when verifying installation. Dated exceptions belong in [backlog](../notes/backlog.md). Do not duplicate an existing reminder.
 
-- **Daemon:** `scripts/news_watcher.py` (subcommands `start | status | stop | once`). Restarts on reboot via `@reboot` crontab.
-- **Feeds:** 11 RSS sources (BBC World/Politics/ME, Al Jazeera, NPR World/Politics, Guardian World/US, France24, CBS, Fox World). Polled every 300s.
-- **Config:** `scripts/news_watcher_config.json` — feeds + tiered keyword lists, editable; daemon re-reads each poll.
-- **Tier 1** (book-resolving): Trump dies / 25A-removed, Iranian regime falls / Khamenei dies, US-Iran permanent peace deal, Pahlavi takes power, aliens confirmed, Jesus returns, Iran missile-strikes a European city. → `[URGENT]` Telegram **and** auto-spawns `daily_checkin.sh` for max-effort response. 30-min rate limit between auto-fires.
-- **Tier 2** (notable): Trump health/security, Hormuz blockade ops, US-Iran talks state, Khamenei health, UAP/AARO reports, Eurovision rehearsals, Ohio primary, La Liga title race. → scoped agent filter, then structured persistence for the next material tick summary. Per-keyword 30-min cooldown.
+`daily_checkin.sh` is a **dispatcher**, not a read-only check command. Do not execute it to read its checklist: it can queue another asset-capable session. Read `docs/checkin.md` and perform the steps in the current run.
 
-## Telegram bridge
+Exact-one dispatch: queue acknowledgment rc=0 → exit; rc=69 → fallback only after the runtime proves no live operator; all ambiguous/error responses → fail closed, no second worker. The fallback uses a fresh session and the same checklist. `.checkin.lock` prevents overlapping drivers; never force headless to bypass a busy live operator.
 
-- **Bot:** `@<bot-handle>`.
-- **Outbound:** `scripts/telegram.py {setup --expected-chat-id,msg,file,md}`.
-- **Inbound:** `scripts/telegram_listener.py start` long-polls, enforces the configured private chat ID, writes authorized text to a private ordered spool, then submits it through the operator's durable conversation queue. The Telegram cursor advances only after durable local spooling; delivery retries preserve order without terminal keystrokes. Message text is not written to the listener log.
+Scheduled work ends after its concrete follow-up. No indefinite ROI goal, idle loops, or speculative token-filling work. Use `check_usage.sh --brief` before expensive discretionary research, main context for judgment and cheaper agents for bounded routine tasks. Quota pressure never removes safety checks.
 
-## Secrets — path-leak hygiene
+## Daemons and stale code
 
-- **Path resolution:** scripts read all secret/state file locations from env vars resolved through `scripts/_paths.py`, which auto-loads `~/.polyclaude/env` (gitignored, 0o600, outside the repo) on import. Public source contains env-var names only — never absolute filesystem paths.
-- **Stored files** (all in the gitignored secrets directory, mode 0o600): two wallet keyfiles (Polymarket sleeve + crypto sleeve), Polymarket API creds, Telegram bot token, private agent state, and watcher state.
-- **Adding a new secret:** declare it in `~/.polyclaude/env`, then read via `_paths.path("VAR_NAME")` in script. Never hardcode a path.
+Four services: `news_watcher`, `telegram_listener`, `heartbeat_watch`, `opportunity_watch`. Config, script status and process inspection are authoritative; do not rely on a static PID list.
 
-## Wallets
+- News polls feeds; tier-1 events trigger urgent review, tier-2 events persist structured impacts. Opportunity watcher observes configured triggers. Heartbeat monitors health, journal/dispatch liveness and disk capacity. Telegram listener privately queues authenticated operator messages.
+- Verify exactly **one** process per service and its start time versus script mtime. A live PID can still run pre-edit code. Check again after any daemon edit.
+- For an in-scope authorized restart, use the script's `stop` then an **absolute-path** Python/script `start`; keepalive matches exact command lines and can duplicate a relative-path start. Verify the new PID postdates the edit and count=1. See `scripts/daemon_keepalive.sh` before changing launch conventions.
+- Config reload is not code reload. Documentation-only work requires no restart.
 
-| Sleeve | Address | Holds | Strategy spec |
-|---|---|---|---|
-| Polymarket | `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` | PM positions + Aave Polygon idle + pUSD + POL gas | `strategy/00_philosophy.md`; live positions via `scripts/positions.py`, decisions in `notes/decisions.json` |
-| Crypto | `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` | Aave Arb/Base idle + dust (Ostium venue wallet) | Same doctrine; aggregate via `scripts/bankroll.py` |
+## Telegram
 
-Both wallets resolved via the same `_paths.py` mechanism (`POLYCLAUDE_WALLET`, `POLYCLAUDE_WALLET_CRYPTO`).
+Use `.venv/bin/python scripts/telegram.py msg "<message>"` only for requested replies/material operational notifications. Flat scheduled checks send nothing; watchdog owns aliveness.
 
-## Daemons currently running
+For a fresh authenticated `telegram:` notification, invoke its exact private one-time reader command. Never inspect inbox storage directly. `ALREADY_CLAIMED`: no action or reply. `EXPIRED`: no original text revealed; send only a generic resend request. A fresh envelope is operator input, but not a bypass of safety or scope.
 
-- `scripts/news_watcher.py start` — PID in `~/.polyclaude_news_watcher.pid`
-- `scripts/telegram_listener.py start` — PID in `~/.polyclaude_telegram_listener.pid`
-- Both restart on reboot via `@reboot` crontab entries.
+Tick summaries: one message ≤700 characters when material (fills/changes/incidents/genuine findings/weekly reports). Lead with net liquidation and marked value together per [reporting policy](../docs/reference/reporting.md). Blocking questions go to the operator, not a revived `questions.md`. Ordinary local questions get local replies.
 
-## README.md as living portfolio dashboard
+## Secrets and storage
 
-Each cron tick (and any other meaningful state change) refreshes `README.md` at the repo root with: current portfolio across both sleeves, MTM, recent decisions, links to the canonical strategy/research docs. GitHub renders this on the front of the repo so the operator can see project state at a glance without reading the journal. Treat it as a public face — concise, link-heavy, no operational secrets.
+- Secret/state paths resolve through `scripts/_paths.py` and environment configuration outside the repo. Do not read secrets for documentation or put credentials/private locations in public docs/logs. Scrub errors before publishing.
+- Wallet identities: PM `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B`; crypto `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6`. Aggregate with `bankroll.py`; no hard-coded balances here.
+- VM expansion was rejected. Heartbeat warns below 512 MiB free, critical below 128 MiB; failed probes mean unknown, not healthy. Cleanup remains manual and narrowly scoped.
+- The old active operator log is non-O_APPEND: **do not copy-truncate or rotate it while live**. Do not inspect/delete private histories, inboxes, credentials, active logs or current CLI artifacts as routine housekeeping.
+- Financial JSON/audit records must survive partial-write failures. Check capacity, preserve originals and verify exact fields. Never rewrite original forecasts during calibration.
 
-## Operator-blocking questions
+## Incidents and handoff
 
-Surface via Telegram (`scripts/telegram.py msg "..."`) rather than a tracked file. The previous `questions.md` was retired 2026-04-29 in favor of the live channel — operator wants questions to interrupt them in real time, not pile up in a file.
+[Emergency assessment](../docs/reference/emergency.md) owns the corroboration gates and scoped response procedure. Diagnose promptly, verify the exact affected surface, and preserve the operator's mandate and existing safeguards. Report concrete findings and actual actions without conflating a dry-run with an executed transaction.
 
-## Heartbeat watchdog
+Full ticks append the result to `notes/journal.md`, refresh the compact README dashboard, audit diffs for secrets and commit/push scoped changes. Quiet light reviews do not need a journal/Telegram entry. Do not stage daemon-owned changes incidentally. Code changes require focused tests; documentation changes require link, routing and contract checks.
 
-`scripts/heartbeat_watch.py` runs as its own daemon (PID file `~/.polyclaude_heartbeat.pid`, restarts on reboot via `@reboot` crontab). Hourly probe — checks news_watcher and telegram_listener PIDs are alive, news_watcher's state file is fresh (< 30 min), and no headless model worker has been running > 60 min. Telegram-alerts on anomaly with a 1-hour per-anomaly cooldown. Was added 2026-04-29 after a 3-day deadlocked cron tick from the prior week; this layer would have caught it within an hour.
-
-## Emergency-exit protocol
-
-When a Tier-1 news_watcher alert indicates a real exploit / depeg / chain halt affecting our positions, the cron tick that gets auto-fired runs a 3-layer sanity check, then invokes a pre-built `scripts/emergency_exit_*.py` script. The scripts are dumb executors; the *intelligence* (deciding whether to call them) is in the cron tick.
-
-### Three-layer sanity check (all must pass before invoking any emergency script)
-
-1. **Multi-source corroboration.** WebFetch ≥ 3 independent crypto-news sources. Require ≥ 2 to confirm the same event. If only 1 source mentions it, especially a low-reputation feed → HOLD + Telegram operator. (This alone catches the substring-regex false positive that hit on 2026-04-29 — only one feed had the keyword, others would not corroborate.)
-2. **Market-reaction consistency.** The market should already be reacting if the event is real:
-   - *USDC/USDT depeg*: actual price on Coingecko's multi-exchange aggregate. Must be < $0.98 to confirm.
-   - *Ostium / Across hack*: TVL via DefiLlama or directly from the contract balance. Sudden drawdown > 10% in last 1h = real signal.
-   - *Polymarket halt*: try fetching a market via gamma-api. If responsive, protocol is operational.
-   - *Sequencer halt*: issue an `eth_chainId` RPC to that chain. If responsive, no halt.
-3. **On-chain ground truth.** Read the at-risk contract's relevant balance directly. Authoritative, overrides news source claims. Blockchain state is what an attacker can't fake.
-
-**Decision tree:**
-- All 3 PASS → invoke the script. Telegram an "executed emergency exit" notice.
-- Any FAIL → abort, Telegram operator with the discrepancy. Wait 10 min for operator decision; default to inaction on timeout.
-- Layers 1+2 PASS but 3 uncertain (RPC slow/unreachable) → Telegram with all data, wait 5 min for operator response, proceed if no objection.
-
-### Script catalog
-
-| Script | Trigger keywords (Tier-1) | What it does |
-|---|---|---|
-| `emergency_exit_ostium.py` | `ostium hack`, `ostium exploit`, `ostium drained`, `ostium rugged` | Reads all open Ostium positions via SDK, market-closes 100% each, aborts after 3 retries on any single fail. |
-| `emergency_exit_polymarket.py` | `polymarket halted`, `polymarket banned`, `polymarket sec lawsuit`, `polymarket frozen` | Cancels open orders, places SELL at best_bid for every position, 10% slippage cap. |
-| `emergency_bridge_to_safety.py` | `arbitrum sequencer halt`, `base sequencer halt`, `arbitrum exploit`, `base exploit` | Reads full USDC balance on at-risk chain, bridges to Polygon (or specified safe chain) via Across. |
-| `emergency_swap_usdc_to_eth.py` | `usdc depeg`, `usdc breaks peg`, `tether depeg` | Swaps full USDC balance to WETH via Uniswap V3 on the chain, 5% slippage cap. |
-
-The operator can also invoke any of these manually via Telegram. Explicit authenticated operator authority is trusted, but the agent still revalidates message freshness, current live state, and the hard execution gates immediately before acting; a stale consequential message requires reconfirmation.
-
-### What NOT to do under panic
-
-- Don't write new emergency code under time pressure — the scripts are pre-built for exactly this. If the situation requires something not pre-built, Telegram the operator and let them decide.
-- Don't escalate sizing (e.g., "since this is bad, sell *more* of the safe sleeve too"). Each script handles its scoped at-risk surface; cross-contamination of scope is a recipe for loss.
-- Don't panic-bridge through a bridge that's the at-risk component (e.g., if Across is exploited, do not use `emergency_bridge_to_safety.py` since it uses Across).
+Preserve append-only log paths: generators and health checks consume them. Use bounded retrieval from [the knowledge map](../docs/INDEX.md#retrieve-without-loading-history); do not truncate history simply to shorten context.

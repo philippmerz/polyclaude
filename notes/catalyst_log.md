@@ -1,3 +1,6 @@
+# Catalyst analysis history
+
+> HISTORY: append-only output from `scripts/catalyst_check.py`, newest at bottom. Dated recommendations and facts are not current authority. Read the relevant entry with `python3 scripts/kb.py recent notes/catalyst_log.md` or `toc`; never preload the full log. [Knowledge map](../docs/INDEX.md).
 
 ---
 

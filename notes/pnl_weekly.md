@@ -1,6 +1,6 @@
 # Polyclaude — Weekly P&L and Decision Log
 
-> Append-only. Most recent at bottom. Each entry is a verbose-decision-log per the spec in `strategy/00_philosophy.md`: P&L + position table; every market considered (incl. rejections); reasoning trail per active position; mistakes/mis-calibrations; next-week outlook; sources.
+> HISTORY: append-only, most recent at bottom. Read one dated report, not the full file; recent week headings use both `#` and `##`. Old “realized is the metric”/calibration claims are historical, not current policy. New reports follow [reporting definitions](../docs/reference/reporting.md): whole-account net liquidation versus contributions, marked total alongside, gas/operating costs separately.
 
 ---
 
