@@ -2207,9 +2207,10 @@
         "scanner"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PARTIAL / empirically unverified as of 2026-09-09: all 10 focused sports-consensus regressions pass, including stale/missing/date-conflict/future evidence rejection. No retained standalone post-fix scan audit establishes the universal production claim.",
+      "calibration_delta": "No numeric calibration: scaffolding decision, zero capital. Deterministic guard behavior verified; live bookmaker quote freshness and production reliability not proven.",
+      "lesson": "A supplied timestamp and agreement with a URL date constrain obvious relabeling but do not prove odds were live. Audit the actual source/update evidence before treating consensus as an entry prior.",
+      "resolved_at": "2026-09-09T02:04:53Z"
     },
     {
       "id": 113,

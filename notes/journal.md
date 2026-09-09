@@ -14792,3 +14792,73 @@ and AVAV 22:00 reviews remain scheduled; no idle continuation/goal created.
 Material deterioration summary sent once to Telegram, **message 921**. Updated
 README/journal and normal bankroll/hurdle/claim caches; no daemon code changed
 or restart required. Dispatcher-owned inject-log edits remain excluded.
+
+## 2026-09-09 02:00 UTC — bounded full check; bid recovery, no trade
+
+Authoritative bankroll **$184.49 at 02:01:44**, up $4.25 from the prior full
+tick; PM midpoint **$151.03**, fee/depth net **$144.0099083**. Replacing only the
+PM midpoint yields indicative whole-account net **~$177.47**; excluding $6.22
+gas tokens, **~$171.25 vs $170: +$1.25/+0.74%, before VM/other operating costs**.
+Settled +$14.44 is secondary; unrealized liquidation −$13.19, marked −$6.16.
+Rounded aggregate inputs, sequential books and unpriced transfer/withdrawal
+costs prevent interpreting this as guaranteed executable cash. The bankroll
+wrapper captured 13 full walks, zero unfilled; 13 active quantities match the
+pre-tick committed claims within 1e-6. All-book identity/age was not independently
+validated. Reserves unchanged to cents: pUSD/Polygon Aave/Arbitrum Aave
+$2.12/$16.11/$7.87; Ostium zero open, unchanged.
+
+Full required state/risk scripts completed: both wallets, positions, bankroll,
+UMA/Ostium diff, crux, marginal APY, exit analysis, constrained Kelly, watchlist,
+state audit and pending decisions. Five LIVE SELLs at 02:01:06, matched size
+zero on each, zero BUYs/Apple orders. No winning redeemables; losing Iran YES
+skipped in dry-run. No broadcast/trade/order change. Watchlist/crux clean.
+Two UMA price alerts, no new finality alert: Apple YES .855→.720 and OpenAI
+≥55 .725→.775. Independent 02:03:32 exact-market/CLOB checks cover full size:
+Apple NO .26/.30, age 12.0s, **$11.69761952 net**; OpenAI ≥55 NO .22/.23,
+age 1.7s, **$4.049584 net**. Fresh at observation is not guaranteed available
+later. Both remain below raw/10pp-stressed holds ($31.85/$26.95 and $7.60/$5.70);
+those priors remain uncertain. All exit verdicts HOLD. No numeric prior change.
+
+[Apple Mac news](https://www.apple.com/newsroom/topics/mac/) provides no new
+qualifying purchase commitment; the [official event](https://developer.apple.com/news/?id=s6spdug0)
+is today 17:00 UTC, with existing review at 18:30 and no Apple order to pull.
+No announcement yet does not prove year-end NO. The [HLE table](https://agi.safe.ai/)
+still has the same ten rows and both scores as Jan-15; expected-family coverage
+passes. Re-read both exact OpenAI criteria, retaining the named-source and
+source-unavailability fallback distinction; criteria dates updated. [GitLab's
+Sep-8 Astra availability](https://about.gitlab.com/blog/gpt6-astra-on-gitlab/)
+corroborates rollout, not a qualifying HLE row or a new benchmark result.
+Capability/UMA risk was already reflected in .35/.40 OpenAI NO priors; no add.
+Two saved news alerts since the previous journal concern Ohio and a claimed
+Iran drone seizure, neither with a direct channel to current economic holdings.
+
+Duma daily review: [VCIOM](https://wciom.ru/ratings/reiting-politicheskikh-partii/)
+still ends Aug-30 at 37.2%; [APEK](https://regcomment.ru/reports/parlamentskie-vybory-2026-start-kampanii-i-prognoz-apek/)
+still forecasts 51–54% list votes/190–197 district seats. [RASO's committee
+publication](https://t.me/s/Politteh/3217) confirms the same 95–130/155–210-seat
+survey, not new independent evidence. No newer comparable forecast surfaced;
+retain .18/.31/.19, union .68, below .75 add gate. Refreshed all three assessment
+dates after the initial stale-review warning. Whole Duma/MetaMask indicative
+exits $11.86/$43.50 versus $13.60/$46.80 raw fair; preserve group protections.
+
+Discovery: 973 fetched/80 default rows; 1,568 filtered thin-tail rows from
+20-page scope (not a verified new-listing census; createdAt absent). Top short
+non-sports leads were September Fed no-change/−25bp/+50bp NO. No current
+consensus prior for the first, no measured near-certain tail edge for the others;
+YES asks are not NO entry costs. Sports 78 rows, top-three deltas
+−1.1/−1.2/−1.4pp; macro seven visibility-only rows. Monotonicity two midpoint
+flags, zero live executable hits. Consistency capped at 5,000 markets: eight
+groups quoted, zero provisional positives, eleven quote failures/188 unquoted;
+incomplete coverage, not an exchange-wide zero. Nine population-fade leads
+establish no instance edge. No new qualified entry.
+
+Closed overdue **DEC-0112** retrospective as **PARTIAL / empirically unverified**:
+10 focused sports freshness tests pass, but declared source time/URL-date
+agreement does not prove live bookmaker odds or production-wide reliability.
+No numerical calibration grade or profit claimed. Four overdue Hormuz decisions
+remain deferred pending actual final UMA status. Weekly P&L (Sep-4) and world
+digest (Sep-6) current; concluded methodology not repeated. Four daemons exactly
+one/non-stale; disk ~1.2 GB free. Apple/AVAV reviews today 18:30/22:00 remain
+scheduled; no idle goal/follow-up. Material account/quote update sent once,
+Telegram **922**. README, backlog, review metadata and routine caches updated;
+no code or schedule change. Existing news/inject-log changes remain unstaged.
