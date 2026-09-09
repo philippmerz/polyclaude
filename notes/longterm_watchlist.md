@@ -1,33 +1,41 @@
 # Polyclaude Long-Term Watchlist
 
-> Current scope (2026-09-09): Polyclaude's operating mandate is sub-1-year, liquid, executable opportunities. Multi-year equities and themes are research for the user's IBKR sleeve. A price or trigger hit means re-vet, not buy.
+> Living document for multi-year (~1-5y) generational-mispricing candidates. Created 2026-05-08 in response to user directive: scan and analyze across stocks / crypto / other categories; invest from polyclaude where accessible; surface IBKR-side candidates for user's personal sleeve.
 >
-> Candidate records below are research seeds. Before any action, require a current exact criterion and primary source, a defined time window, conservative probability, and fee-aware live depth. Gross APY, population counts, stale quotes, and historical recommendations are not edge.
+> Reference pattern: SanDisk 2023-2025 — memory-cycle bottom + AI-compute secular demand + Western-Digital-spinoff catalyst + margin of safety = generational return. Hunt for analogous convergences elsewhere.
 
 ## Operating model
 
-**Cadence.** Review dated triggers during the normal checklist; add or update a candidate only with fresh evidence. Historical rows remain historical until re-vetted against current sources.
+**Cadence.** Weekly review (Sunday cron extension or manual sweep). Add/update candidates with fresh thesis. Monthly: prune stale entries. Quarterly: realized-vs-prediction calibration check.
 
-**Selection framework.** Treat the following as research prompts, not an automatic entry rule:
+**Selection framework.** A "generational mispricing" candidate scores on FOUR dimensions; need at least 3 of 4 strongly:
 
 1. **Cyclical position.** Asset is at or near a multi-year bottom (e.g., post-glut/post-bear). Avoid mid-cycle / euphoria.
 2. **Secular tailwind.** Multi-year demand driver that markets haven't fully priced (e.g., AI compute, on-chain RWA, energy transition).
 3. **Specific catalyst within window.** Identifiable event (product cycle, mainnet launch, regulatory shift, spinoff, M&A) that forces a re-rating.
 4. **Margin of safety.** Downside is bounded — strong balance sheet, profitable already, low debt, hard-asset backing, or low-multiple entry. Generational doesn't mean YOLO.
 
-**Decision framework.** Preserve the operator mandate and the existing portfolio/risk and execution gates. This watchlist supplies research inputs; sizing depends on current evidence, capital and the relevant sleeve.
+**Decision criteria (polyclaude-accessible candidates).**
+- Position size per name: ~5-10% of allocated long-term sleeve (TBD; not yet allocated).
+- Time horizon: 1-5 years.
+- Exit triggers: thesis broken (catalyst missed, secular driver evaporates), or +3-5x reached, or capital better deployed elsewhere.
 
-**For IBKR-side candidates.** Record a dated research lead with entry reference, thesis, catalyst timeline, exit triggers, and downside scenario. Retain the existing live-document/Telegram interface to the user's separate IBKR sleeve.
+**For IBKR-side candidates.** Surface to user via Telegram + this doc. Include: entry price reference, thesis (3 sentences), catalyst timeline, exit triggers, downside scenario.
 
 ## Accessibility map
 
-Accessibility is venue-, wallet-, and liquidity-dependent; verify it at review time. Polyclaude research is primarily for currently supported EVM venues and sub-1-year opportunities.
+Polyclaude wallets can deploy directly to:
+- **Crypto-native tokens** on Polygon/Arbitrum/Base/Optimism/Ethereum (anything Uniswap-V3-listed with reasonable liquidity)
+- **Solana ecosystem** (would need new wallet — not currently set up)
+- **Tokenized real-world assets** via Backed Finance (bSPY, bCSPX on Polygon/Base/Gnosis), dShares (USDC.e-quoted on Arbitrum), Centrifuge RWA pools
 
-Traditional equities, OTC, private placements, and unsupported commodity futures remain manual/user-side (for example, the user's IBKR sleeve).
+NOT directly accessible without manual user intervention:
+- **Traditional equities** (NYSE/NASDAQ): user's IBKR sleeve only
+- **OTC pink sheets**: same
+- **Private placements / pre-IPO**: same
+- **Specific commodity futures**: Ostium covers gold/SPX/NDX; not e.g. uranium, lithium
 
-**Tokenized-equity caveats.** Wrappers carry issuer/counterparty risk, thin liquidity, and variable spreads; they require a fresh accessibility and book-depth check before consideration.
-
-**Routing.** The machine-readable trigger source is [`notes/watchlist_triggers.json`](watchlist_triggers.json). The research memo map and current-versus-historical status are [`research/INDEX.md`](../research/INDEX.md).
+**Tokenized-equity caveats.** Backed/dShares wrappers carry counterparty risk (the issuer must hold the underlying). Liquidity is thin. Spreads can be 0.5-2%. For long-term holds these are tolerable, but verify accessibility + book depth before committing capital.
 
 ---
 

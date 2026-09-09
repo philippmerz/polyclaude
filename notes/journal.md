@@ -1,7 +1,7 @@
 # Polyclaude Journal
 
 > Append-only log. Most recent at bottom. Each entry: time (UTC), what happened, why, what's next.
-> HISTORY, not current instructions. Earlier entries through 2026-05-19 live in git; this file is not a rolling two-week window. Use `python3 scripts/kb.py recent notes/journal.md` or a dated section, not a full read. Current routing/policy: [knowledge map](../docs/INDEX.md).
+> Older entries (kickoff through 2026-05-19) live in git history; this file keeps ~the last 2 weeks.
 
 ---
 
@@ -14862,38 +14862,6 @@ one/non-stale; disk ~1.2 GB free. Apple/AVAV reviews today 18:30/22:00 remain
 scheduled; no idle goal/follow-up. Material account/quote update sent once,
 Telegram **922**. README, backlog, review metadata and routine caches updated;
 no code or schedule change. Existing news/inject-log changes remain unstaged.
-
-## 2026-09-09 14:13 UTC — operator-requested knowledge-base consolidation
-
-Documentation task, **not a portfolio/check-in refresh**. Last full verified
-risk/account snapshot remains Sep-9 02:00; the README preserves that timestamp.
-The next full tick must consume alerts since that processed check, not since
-this documentation entry. Apple 18:30, AVAV 22:00, Sep-12 drill and Sep-13 USGS
-clocks remain; no cron/daemon restart, transaction or Telegram send occurred.
-
-Portable entry is `docs/START.md`; `docs/INDEX.md` routes canonical policy,
-current state and dated evidence. A small host-local ignored AGENTS pointer
-loads START without publishing private operator setup. Startup reading shrank
-from 23,870 to 1,878 words (~92%); backlog 8,367 to ~1,200. Strategy/lessons,
-orders and tool guidance are distilled, with full originals in explicitly
-historical archives. All retained research prose is indexed; generated logs
-stay in place, retrieved by bounded `scripts/kb.py` search/toc/read/recent.
-
-The 11-step list is now `docs/checkin.md`, loaded by the existing fallback;
-queued prompts point there. Dispatch locking/return-code safety is unchanged.
-Current docs retain bounded work, dry-run verification,
-protected Duma/MetaMask topology, HLE correlation (not an atomic
-set), exact fee math, net-liq-first reporting and material-only Telegram.
-The operator's Sep-8 bounded-run update supersedes continuous-goal instructions.
-
-Archive comparisons preserve all ten consolidated originals; long-term
-candidate records and machine JSON/source schemas are unchanged. Document
-link, coverage, size and dispatch contracts are covered by offline tests.
-Final verification: **664 pytest tests passed**, one pre-existing websockets
-deprecation warning; **156 money-math checks passed**; shell syntax and diff
-checks clean. Retrieval smoke tests found the Duma gate, newest journal
-headings and the true latest weekly P&L, with exact continuation lines.
-Unrelated news/inject daemon appends remain outside this change.
 
 ## 2026-09-09 14:30 UTC — bounded full check; HLE UMA proposal exception
 

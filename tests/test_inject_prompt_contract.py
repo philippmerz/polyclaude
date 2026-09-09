@@ -100,10 +100,7 @@ def test_scheduled_prompts_append_bounded_run_contract(tmp_path: Path) -> None:
 
 
 def test_daily_checkin_includes_direct_quota_preflight() -> None:
-    driver = (REPO / "scripts" / "daily_checkin.sh").read_text()
-    assert 'PROMPT=$(<"${POLYCLAUDE_DIR}/docs/checkin.md")' in driver
-    assert "11-step list in docs/checkin.md" in driver
-    prompt_source = (REPO / "docs" / "checkin.md").read_text()
+    prompt_source = (REPO / "scripts" / "daily_checkin.sh").read_text()
 
     assert "BOUNDED RUN CONTRACT" in prompt_source
     assert "Do not create or maintain an indefinite durable goal" in prompt_source

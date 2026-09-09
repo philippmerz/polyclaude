@@ -1,6 +1,6 @@
 # Polyclaude — Operator's Kickoff Prompt
 
-> The operator's verbatim first message to Claude on 2026-04-25. Capital, tooling and communication details are dated; the autonomous ROI mandate remains, with subsequent operator updates. Start with [docs/START.md](docs/START.md) and the [knowledge map](docs/INDEX.md). The original message below is preserved, not part of routine onboarding.
+> The operator's verbatim first message to Claude on 2026-04-25 — the founding charter of this project. Subsequent clarifications, decisions, and accumulated context live in `MEMORY.md`, `notes/journal.md`, and `strategy/`. Read this first to inherit the spirit; read the rest for the specifics.
 
 ---
 

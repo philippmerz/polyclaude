@@ -18,8 +18,6 @@ def _dispatch_fixture(tmp_path: Path):
     runner = home / ".local" / "bin" / "polyclaude-agent"
     scripts.mkdir(parents=True)
     notes.mkdir()
-    (repo / "docs").mkdir()
-    shutil.copy2(SCRIPTS.parent / "docs" / "checkin.md", repo / "docs" / "checkin.md")
     runner.parent.mkdir(parents=True)
 
     for name in ("inject_prompt.sh", "daily_checkin.sh"):
@@ -36,7 +34,7 @@ case "${1:-}" in
     exit "${FAKE_QUEUE_RC:?}"
     ;;
   run)
-    cat > "${FAKE_PROMPT_CAPTURE:?}"
+    cat >/dev/null
     printf 'fallback-run\\n' >> "${FAKE_RUN_MARKER:?}"
     ;;
   *)
@@ -55,7 +53,6 @@ esac
             "HOME": str(home),
             "POLYCLAUDE_AGENT_RUNNER": str(runner),
             "FAKE_RUN_MARKER": str(marker),
-            "FAKE_PROMPT_CAPTURE": str(tmp_path / "fallback-prompt.txt"),
         }
     )
     env.pop("POLYCLAUDE_FORCE_HEADLESS", None)
@@ -117,18 +114,3 @@ def test_daily_checkin_falls_back_only_when_no_operator_is_proven(tmp_path):
 
     assert result.returncode == 0
     assert marker.read_text(encoding="utf-8").splitlines() == ["fallback-run"]
-    payload = Path(env["FAKE_PROMPT_CAPTURE"]).read_text()
-    assert (repo / "docs" / "checkin.md").read_text().strip() in payload
-    assert "read docs/START.md" in payload
-
-
-def test_missing_checklist_never_starts_fallback(tmp_path):
-    repo, _runner, marker, env = _dispatch_fixture(tmp_path)
-    env["FAKE_QUEUE_RC"] = "69"
-    (repo / "docs" / "checkin.md").unlink()
-    result = subprocess.run(
-        [str(repo / "scripts" / "daily_checkin.sh")],
-        cwd=repo, env=env, capture_output=True, text=True, timeout=10,
-    )
-    assert result.returncode != 0
-    assert not marker.exists()

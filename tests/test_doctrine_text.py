@@ -3,10 +3,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CHECKLIST = ROOT / "docs" / "checkin.md"
 FEE_DOCTRINE_PATHS = (
     ROOT / "notes" / "resting_orders.md",
-    CHECKLIST,
+    ROOT / "scripts" / "daily_checkin.sh",
     ROOT / "scripts" / "limitless_arb_scan.py",
     ROOT / "scripts" / "limitless_arb_executor.py",
     ROOT / "scripts" / "sports_pm_scan.py",
@@ -15,7 +14,7 @@ FEE_DOCTRINE_PATHS = (
 )
 HIDDEN_INFO_PATHS = (
     ROOT / "notes" / "resting_orders.md",
-    CHECKLIST,
+    ROOT / "scripts" / "daily_checkin.sh",
     ROOT / "scripts" / "portfolio_kelly.py",
 )
 ACTIVE_SCRIPT_PATHS = tuple(
@@ -48,7 +47,7 @@ def test_active_fee_guidance_names_canonical_helper():
 def test_operator_guidance_uses_structured_curve_and_legacy_only_cap():
     for path in (
         ROOT / "notes" / "resting_orders.md",
-        CHECKLIST,
+        ROOT / "scripts" / "daily_checkin.sh",
     ):
         text = _normalized(path)
         assert "rate x [p x (1-p)]^exponent" in text
@@ -65,7 +64,7 @@ def test_scalar_rate_helpers_do_not_claim_full_structured_fee_support():
 
 def test_tick_summaries_remain_material_only():
     lessons = _normalized(ROOT / "strategy" / "01_lessons.md")
-    driver = _normalized(CHECKLIST)
+    driver = _normalized(ROOT / "scripts" / "daily_checkin.sh")
     assert "material-only" in lessons
     assert "material-only" in driver
     assert re.search(r"heartbeat\s+every tick", lessons) is None
