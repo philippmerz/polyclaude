@@ -1,5 +1,5 @@
 {
-  "next_id": 124,
+  "next_id": 132,
   "decisions": [
     {
       "id": 1,
@@ -2425,12 +2425,175 @@
       "prediction": "Serialization, partial-temp ENOSPC, flush, file-fsync and replacement failures leave the old ledger bytes intact; successful list/wrapped documents preserve format and mode, and failed writes remove their temporary file under normal cleanup conditions. Tests never mutate production ledger, bankroll cache or decisions.",
       "size_usd": 0.0,
       "resolution_at": null,
-      "tags": ["safety", "persistence", "calibration-ledger"],
+      "tags": [
+        "safety",
+        "persistence",
+        "calibration-ledger"
+      ],
       "slug": null,
       "outcome": "PASS at implementation: 38 isolated calibration tests, full 640-test suite and 156 money-math checks pass. Failure tests include a flushed partial temporary write. Production ledger, bankroll cache and decision store were byte-identical to HEAD after tests; only this scaffolding decision is subsequently appended. No daemon imports the writer, so no restart is needed.",
       "calibration_delta": "Engineering failure-path verification, not a market outcome or realized ROI observation.",
       "lesson": "Do not truncate the only persisted copy before replacement bytes are safely written. State a narrow atomicity guarantee explicitly; it is not a substitute for storage headroom or a transaction/locking protocol.",
       "resolved_at": "2026-09-08T06:43:51Z"
+    },
+    {
+      "id": 124,
+      "timestamp": "2026-09-10T19:01:07Z",
+      "type": "scaffolding",
+      "thesis": "The HLE review failed because the monitor parsed a stale server-rendered table instead of the API that populates the resolving chart. Route HLE monitoring to strict live and raw-archive chart API parsing, include it in full status, retain actionable subprocess diagnostics, and accept price-improved overfill only for ordinary cash-capped BUYs.",
+      "confidence": "high",
+      "prediction": "The next full status run reports the live HLE API inventory against the July 3 archive, detects the 44-to-58 row change, and all focused source, status and entry reconciliation tests pass without relaxing exact bundle or SELL amounts.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-11",
+      "tags": [
+        "hle",
+        "source_identity",
+        "scaffolding",
+        "execution_error"
+      ],
+      "slug": null,
+      "outcome": "PASS at implementation: the live full status report follows the chart API, shows 14 additions versus July 3 and an UPDATING verdict; 671 pytest tests plus 156 money-math checks pass.",
+      "calibration_delta": "Engineering correction rather than a market forecast. The source path, diagnostics and cash-capped BUY overfill behavior are verified; exact bundle and SELL reconciliation remain strict.",
+      "lesson": "Parser correctness and coverage do not establish endpoint identity. Trace the visible product network path before source evidence can authorize a transaction.",
+      "resolved_at": "2026-09-10T19:03:04Z"
+    },
+    {
+      "id": 125,
+      "timestamp": "2026-09-10T19:01:07Z",
+      "type": "close_position",
+      "thesis": "Retroactive audit record: sold all 59.01 Gemini HLE >=50 NO at raw 0.169 after trusting a false static-table freeze premise. The chart data path had not been traced, so this exit lacked the source evidence required for an informed trade.",
+      "confidence": "low",
+      "prediction": "The actual resolving chart source is frozen or already proves Gemini >=50, making immediate sale superior to retaining the NO claims.",
+      "size_usd": 10.02664,
+      "resolution_at": "2026-09-10",
+      "tags": [
+        "hle",
+        "close",
+        "source_failure"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+      "outcome": "FAIL on the same day: the actual chart API is active and Gemini currently tops out at 46.2, below 50. The position was repurchased after losing spread and fees.",
+      "calibration_delta": "The endpoint-identity premise was categorical and false; the sale netted about 9.69372 dollars and restoring 58.723405 claims cost about 11.37809 dollars all-in, with 0.286595 fewer claims than before.",
+      "lesson": "Trace the browser data path and verify the parsed inventory against the visible resolving product before a source-driven transaction.",
+      "resolved_at": "2026-09-10T19:01:29Z"
+    },
+    {
+      "id": 126,
+      "timestamp": "2026-09-10T19:01:07Z",
+      "type": "close_position",
+      "thesis": "Retroactive audit record: sold all 19 OpenAI HLE >=55 NO at raw 0.13 after trusting a false static-table freeze premise. The resolving chart data path had not been traced, so this exit was made on a disproven source model.",
+      "confidence": "low",
+      "prediction": "The actual resolving chart already establishes an OpenAI score at or above 55, making immediate sale superior to retaining the NO claims.",
+      "size_usd": 2.47,
+      "resolution_at": "2026-09-10",
+      "tags": [
+        "hle",
+        "close",
+        "source_failure"
+      ],
+      "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
+      "outcome": "FAIL on the same day: the actual chart API lists GPT-6 Astra at 53.6, below 55. The 19 NO claims were repurchased after losing spread and fees.",
+      "calibration_delta": "The endpoint-identity premise was categorical and false; the sale netted about 2.384044 dollars and restoring 19 claims cost about 3.14214 dollars all-in.",
+      "lesson": "A final sibling result does not transfer across thresholds; inspect the exact resolving chart row and bar before closing the unresolved leg.",
+      "resolved_at": "2026-09-10T19:01:29Z"
+    },
+    {
+      "id": 127,
+      "timestamp": "2026-09-10T19:01:08Z",
+      "type": "size_change",
+      "thesis": "Restored 58.723405 Gemini HLE >=50 NO after proving the resolving chart API is active but currently tops out at 46.2 for Gemini. Central p_no 0.35 with 0.20-0.55 range exceeds the fee-inclusive entry and current net exit; no enlargement because shared technology-release exposure is near its 30 percent cap.",
+      "confidence": "medium",
+      "prediction": "The resolving chart displays no qualifying Gemini score at or above 50 by the contract cutoff and the restored NO claims resolve for one dollar each; a qualifying row grades this probability wrong.",
+      "size_usd": 11.37809,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "hle",
+        "repair",
+        "source_corrected"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 128,
+      "timestamp": "2026-09-10T19:01:08Z",
+      "type": "size_change",
+      "thesis": "Restored exactly 19 OpenAI HLE >=55 NO after proving the live chart records GPT-6 Astra at 53.6, below the bar. Central p_no 0.30 with 0.12-0.50 range supports the small repair but not an add because another model row or score revision can cross 55 and the shared cluster is near cap.",
+      "confidence": "low",
+      "prediction": "The resolving chart displays no qualifying OpenAI score at or above 55 by the contract cutoff and the 19 restored NO claims resolve for one dollar each; a qualifying row grades this probability wrong.",
+      "size_usd": 3.14214,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "hle",
+        "repair",
+        "source_corrected"
+      ],
+      "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 129,
+      "timestamp": "2026-09-10T19:01:08Z",
+      "type": "skip",
+      "thesis": "Hold the 49.005 touchscreen MacBook NO and make no add. The Sep 9 event omission is weak evidence because same-day Gurman reporting kept later-2026 hardware open; revised p_no is 0.55 with a wide 0.35-0.70 range, versus a fresh full net exit near 0.363 per claim and a binding shared cluster cap.",
+      "confidence": "low",
+      "prediction": "No touchscreen product explicitly branded MacBook becomes available for public purchase by December 31, so held NO resolves at one dollar; a qualifying 2026 purchase grades the central prior wrong.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "apple",
+        "hold",
+        "no_add"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 130,
+      "timestamp": "2026-09-10T19:01:08Z",
+      "type": "skip",
+      "thesis": "Hold the exact 20-share equal Duma 295-339 YES union and do not add. New APEK evidence and qualifying-vote normalization give a 0.72 union probability, but the 0.75 evidence gate and 0.57 price ceiling both fail; every action must preserve equal legs.",
+      "confidence": "medium",
+      "prediction": "United Russia wins 295 through 339 seats, paying exactly one of the three held 20-share bucket legs; a result outside the union grades the 0.72 estimate wrong.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-30",
+      "tags": [
+        "duma",
+        "group",
+        "hold",
+        "no_add"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 131,
+      "timestamp": "2026-09-10T19:01:08Z",
+      "type": "scaffolding",
+      "thesis": "Performance lacked a durable passive comparator and portfolio Kelly recommended correlated additions without counting aggregate live cluster cost. Pin contribution-timed VT VTI SPY total-return policy and suppress scale-in lines when their combined request exceeds observed fee-inclusive 30 percent cluster headroom.",
+      "confidence": "high",
+      "prediction": "The benchmark reproduces all three funds from completed sessions and refuses malformed or stale data; live constrained Kelly reports the ai-ships-fast-short policy cap and no longer recommends its unaffordable OpenAI add.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-11",
+      "tags": [
+        "benchmark",
+        "kelly",
+        "cluster_cap",
+        "scaffolding"
+      ],
+      "slug": null,
+      "outcome": "PASS at implementation: benchmark reproduces VT, VTI and SPY from completed sessions; live constrained Kelly suppresses both the Trump scale-in at the 15% ticket cap and the OpenAI scale-in at the 30% shared cluster cap. Repository-wide validation passes 673 pytest tests plus 156 money-math checks.",
+      "calibration_delta": "Engineering and benchmark-policy validation rather than a market outcome. The passive comparison now measures the same contribution schedule reproducibly, and Kelly reporting matches the execution gates.",
+      "lesson": "A sizing report must count current fee-inclusive exposure on the same basis as the final entry gate. Pin the passive benchmark policy before comparing performance.",
+      "resolved_at": "2026-09-10T19:07:17Z"
     }
   ]
 }

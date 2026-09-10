@@ -1,6 +1,6 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-09-09",
+ "_refreshed": "2026-09-10",
  "positions": [
   {
    "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
@@ -13,7 +13,7 @@
   {
    "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
    "outcome": "No",
-   "size": 59.01,
+   "size": 58.7234,
    "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
    "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
    "negativeRisk": false
@@ -99,14 +99,6 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063",
-   "outcome": "No",
-   "size": 15,
-   "conditionId": "0x432986c91a2a364d37179db26f78e8b7b69a5da3c0bc7e09a3458918dc6ad34a",
-   "asset": "46758607612833917422236285013995068496804632645622273981549757589704779851841",
-   "negativeRisk": false
-  },
-  {
    "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
    "outcome": "No",
    "size": 0.003571,
@@ -114,7 +106,7 @@
    "asset": "90869494087977018607792751230236923002303032923064138180950209430688758061828",
    "negativeRisk": false,
    "deindexed": true,
-   "umaResolutionStatus": null
+   "umaResolutionStatus": "resolved"
   }
  ]
 }

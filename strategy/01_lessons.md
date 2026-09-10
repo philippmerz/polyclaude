@@ -218,7 +218,8 @@ the gap); *verify against a known truth* (absent output and failed output look i
 
 - **RE-READ the criteria when the world moves — reading them once at entry is not enough.**
   Twice in one week a re-read of criteria I had already "read" changed a position: the HLE
-  legs (the named source is frozen, and the fallback clause triggers on "unavailable", not
+  legs (the stale server-rendered table then appeared frozen; Sep-10 later proved the actual
+  chart API was updating, while the fallback clause still triggers on "unavailable", not
   "stale") and GPT-6 (YES does NOT require the name — "recognized as a successor to GPT-5"
   also counts, which killed ~45% of my thesis's edge). Entry-time reading answers "is there
   an edge?"; the world then moves and the SAME text can answer differently. Trigger a
@@ -273,7 +274,9 @@ the gap); *verify against a known truth* (absent output and failed output look i
   a stale/non-reporting source, so those go to a 48h token-holder vote, i.e. a judgment call
   where the crowd's read aggregates better than mine. The HLE legs looked like criteria-
   mechanics edge but were really resolver-behaviour bets; the market moved 20pp against me
-  with the source verifiably unchanged (2026-08-04), and cutting was correct. Rule: if the
+  while the wrong static table was verifiably unchanged (2026-08-04), and cutting was correct
+  on the information then available. Sep-10 proved the resolving chart API itself was updating.
+  Rule: if the
   edge rests on how someone will READ something rather than on a checkable fact, size it as
   a lottery ticket, not an edge trade.
 
@@ -546,7 +549,8 @@ my own prose asserted as measurement. The common shape is an ABSENCE — "no cha
   gemini-3-pro appearing across 2025), and I treated that as "instrument valid". It was blind
   anyway — the pattern required a hyphen, so `claude 4.5 sonnet` and `grok 4` were invisible, and a
   Claude row added during 2026 could not have been seen. The FROZEN verdict my whole HLE cluster
-  rests on would have been right by luck. What caught it was not the control but an INDEPENDENT
+  then rested on would have been right by luck even for that table; Sep-10 later showed the table
+  was also the wrong product. What caught this earlier defect was not the control but an INDEPENDENT
   INVENTORY: my own 2026-08-10 note said the board carried Grok 4 and Claude 4.5, which contradicted
   the parse. So the control to run is not only "can it detect change" (liveness) but "does it find
   every item I already know is there" (coverage) — two different failures, and only the second one
@@ -565,12 +569,26 @@ my own prose asserted as measurement. The common shape is an ABSENCE — "no cha
   reproduce Gemini 2.5 Pro's 18.4→21.6 accuracy revision. Missing/ambiguous tables and invalid
   rows fail closed, while historical blank calibration cells are explicitly missing, not zero.
   Calibration changes show source activity but do not themselves satisfy an Accuracy threshold.
-  The recheck still found all 10 live result rows unchanged from Jan-15: no prior change follows
-  from improving the instrument. Scope that conclusion to the results table, not the whole page,
-  dataset, institution or probability of a future update.
+  The recheck found all 10 server-rendered table rows unchanged from Jan-15. That historical
+  finding is superseded for HLE underwriting: Sep-10 network tracing showed the visible chart
+  reads a separate 58-row API. Scope any conclusion to the exact data product, not the whole page,
+  chart, dataset, institution or probability of a future update.
 
-- **"Is this source stale?" is MEASURABLE by archive-diff — and the measurement is worthless until
-  you validate the instrument.** 2026-08-25: three HLE legs rested on "agi.safe.ai is frozen", a
+- **A perfectly parsed table can still be the wrong data product.** Sep-10's decisive HLE
+  failure survived row-count, score-change, historical-liveness and known-name coverage tests:
+  the parser accurately read a stale ten-row server-rendered table while the named “AI Progress”
+  chart fetched `dashboard.safe.ai/api/models` in the browser. Raw Wayback API captures show that
+  chart growing **44 rows on Jul-3 → 52 on Aug-4 → 58 live**, including GPT-6 Astra at 53.6.
+  The old FROZEN verdict was therefore precise and false. Before trusting any rendered-source
+  measurement, trace the browser's network/data path and verify the parsed inventory against the
+  visible product. Controls for parser liveness and coverage do not establish endpoint identity.
+  The failed first review caused avoidable live exits; both positions were restored, with the
+  spread/fee loss recorded. `source_freeze_check.py` now uses one strict parser on raw archived and
+  live chart-API payloads, and the full status report runs it against a pre-market Jul-3 baseline.
+
+- **HISTORICAL / SUPERSEDED HLE INSTRUMENT: "Is this source stale?" is measurable by archive-diff,
+  and the measurement is worthless until you validate both the parser and endpoint.** 2026-08-25:
+  three HLE legs rested on "agi.safe.ai is frozen", a
   claim carried for weeks as an INFERENCE from what was missing from the page, while a newly-listed
   market priced the same variable ~65pp against me. Measuring it is cheap: fetch the live page and
   a Wayback snapshot, parse BOTH with ONE instrument, diff. The subtle half is that "no change"
@@ -579,8 +597,9 @@ my own prose asserted as measurement. The common shape is an ABSENCE — "no cha
   confirming whatever you already believe. My first attempt WAS partly blind (it missed
   gemini-3-pro on one side) and I nearly read that as "the board changed". The fix is a control:
   run the same parser across a window where change is KNOWN to have happened. Doing so upgraded a
-  vibe into a located change-point — additions in 2025-09 and 2025-12 plus five removals, then
-  nothing across 2026 — which is a far stronger claim than "it looks stale". Shipped as
+  vibe into a located change-point for the server-rendered table — additions in 2025-09 and
+  2025-12 plus five removals, then nothing across 2026. Sep-10 proved that conclusion did not
+  transfer to the browser chart's API, which grew 44→52→58 rows. Shipped as
   `scripts/source_freeze_check.py --validate` so the control cannot be skipped by a future session
   in a hurry. Same family as the empty-list bug: absent output and broken output look identical
   until you check against a known truth.
@@ -635,18 +654,20 @@ Read this before touching any prior.)*
   the $2.1T figure wrong; SPCX in fact closed day one at $160.95, a cap above $2.1T. The fix
   was the error. So: "I corrected this on <date>" is a claim to check, not a reason to skip
   checking.
-  (c) HLE — a DIFFERENT sub-type worth naming: the recorded FACTS were right (board top 38.3,
-  OpenAI 25.3) but the recorded INFERENCE was wrong ("frozen since Apr-2025" — that stamp is the
-  DATASET date, and the board had added GPT-5, Grok 4, Claude 4.5 and Gemini 3 Pro after it; slow,
-  not dead). Wrong inferences off right facts are harder to catch, because every fact-check passes.
+  (c) HLE — a DIFFERENT sub-type worth naming: the recorded values (38.3/25.3) accurately described
+  a stale server-rendered table, but that table was not the browser chart named by the contracts.
+  Even the earlier inference ("frozen since Apr-2025") was wrong for the table: that stamp is the
+  DATASET date, and it had added GPT-5, Grok 4, Claude 4.5 and Gemini 3 Pro afterward. Facts from
+  the wrong product are not load-bearing facts; endpoint identity comes before interpretation.
 
 - **A benchmark “best score” is scoped to a configuration and source; never promote it to “ANY
   surface.”** 2026-09-02: the OpenAI HLE entries and repeated re-verifications said GPT-5.6 Sol
   at 49.5 was OpenAI's best score anywhere. That was false. The third-party trackers being checked
   covered a standard/no-tools slice, while OpenAI's own Apr-23 release had already published HLE
   WITH TOOLS at 52.2/52.1 and Pro scores of 57.2/58.7; Wayback proves the table existed before the
-  Aug-1 entry. The resolving board really was frozen, but capability evidence above both held
-  thresholds was hiding outside the narrow surface I kept re-checking. This was a self-flattering
+  Aug-1 entry. The stale server-rendered table really was frozen; Sep-10 later proved the actual
+  resolving chart API was updating. Capability evidence above both held thresholds was also hiding
+  outside the narrow surface I kept re-checking. This was a self-flattering
   scope error and cost 14pp/28pp of prior. Before any benchmark-capability trade, search the lab's
   official release and system card for the exact benchmark plus variants (`tools`, `no tools`,
   `Pro`, reasoning setting), record the configuration beside every score, and archive-check whether
@@ -752,7 +773,7 @@ Read this before touching any prior.)*
 
 - **Check that your alerting actually covers the CRUX of each position, not just its topic.**
   2026-08-12: three HLE positions (~10% of bankroll) plus a resting bid rest entirely on whether
-  agi.safe.ai posts a 2026 model row — and ZERO of the 217 news_watcher keywords across both
+  the agi.safe.ai chart API posts a qualifying model row — and ZERO of the 217 news_watcher keywords across both
   tiers touched that. The thesis-break event for the whole cluster would have arrived with no
   alerting at all. It surfaced sideways, from checking whether a stale resting bid still met its
   own precondition ("resting bids allowed only with news coverage of the market's info channel"),

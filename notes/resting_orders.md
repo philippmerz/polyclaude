@@ -1,6 +1,8 @@
 # Standing resting orders (GTC post-only makers)
 
-**Sep-9 14:19 HLE update:** HLE is correlated exposure for caps/sizing, not an atomic `_groups` topology. Retain NO ADD / NO FLIP and correlation limits, but re-underwrite the UMA proposal exception in [backlog.md](backlog.md) rather than accepting stale HOLD outputs. Duma/MetaMask protected-group leg rules do not apply to HLE by analogy.
+**Sep-10 18:50 UTC:** complete authenticated pagination found only two LIVE SELLs, both zero-filled: Greenland 19 NO @ 0.98 (`0xeeaeb082…ba690`) and Trump-out 28 NO @ 0.97 (`0xa28…23c1`). The OpenAI ≥55 and Gemini ≥50 sells were cancelled before an erroneous taker exit, and were not re-armed after both positions were restored under corrected source underwriting. There are no live BUY or Apple/HLE orders. See the [autonomy review](../research/2026-09-10-frontier-model-autonomy-review.md).
+
+**Sep-9 14:19 HLE update (superseded by Sep-10 finality):** HLE is correlated exposure for caps/sizing, not an atomic `_groups` topology. Re-underwrite each remaining contract using the final payout evidence in [backlog.md](backlog.md). Duma/MetaMask protected-group leg rules do not apply to HLE by analogy.
 
 Maker orders are a default tool, not an exception (operator 2026-07-24: "limit orders
 are standard... part of your everyday repertoire"). Two uses:
@@ -64,7 +66,7 @@ text never verified removal. True GPT-6 position: 50sh @0.645 (cap overshoot +5.
 unintended). RULE: after every cancel, VERIFY via `clob_v2.py orders` that the id is gone.
 The current cancel helper now refuses to send DELETE unless the exact target and side appear in a
 fully paginated pre-cancel inventory; an unreserved BUY or a reappeared cancel marker leaves a
-persistent manual-reconciliation block rather than letting an indexing race authorize new risk.
+persistent authoritative-reconciliation block rather than letting an indexing race authorize new risk.
 Historical snapshot at that fill: Trump-out SELL 28@0.97, Greenland SELL 29@0.98,
 Fed-hike YES SELL 41@0.26,
 SpaceX YES SELL 34@0.96.

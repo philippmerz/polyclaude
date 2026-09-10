@@ -14934,3 +14934,70 @@ on the unresolved proposal and need for fresh underwriting. README/backlog/order
 note/risk memo and routine caches updated. Focused docs/dispatch/retrieval
 tests **42 passed**; numeric prior/verification/topology comparison unchanged,
 JSON and diff checks clean. Earlier KB work persisted separately.
+
+## 2026-09-10 19:08 UTC — autonomous portfolio review, source correction and recovery
+
+Completed the operator-requested bounded autonomy review through the start-of-2027
+evaluation horizon. The inherited working tree contained broad unreviewed rewrites. Before
+restoring reviewed history, preserved every byte on local branch
+`backup/pre-cleanup-20260910-1834` at stash commit
+`2afdcce2c13ba57dac27596c7f17370965171915`. Kept the current mandate, Sep-10 handover,
+live account state and unrelated daemon output. The full analysis and evidence trail are in
+[the Sep-10 autonomy review](../research/2026-09-10-frontier-model-autonomy-review.md).
+
+The principal finding was a source-identity failure. The HLE monitor had parsed a stale
+ten-row table embedded in `agi.safe.ai`, while the resolving “AI Progress on Humanity's Last
+Exam” chart is populated by [dashboard.safe.ai/api/models](https://dashboard.safe.ai/api/models).
+Raw archives contain 44 rows on Jul-3 and 52 on Aug-4; the live API contains 58. It currently
+shows GPT-6 Astra 53.6, Gemini 3.8 Flash 46.2 and Gemini 3.1 Pro 45.9. OpenAI >=50's verified
+YES is therefore literal chart evidence, but neither Gemini >=50 nor OpenAI >=55 is currently
+over its threshold. Retired the frozen-source premise and revised central NO probabilities to
+.35 Gemini >=50, .30 OpenAI >=55 and .20 next-Gemini-Pro debut >=40, each with wide recorded
+ranges. Independent Astra review reached the same hold/no-add conclusion and used .25 for the
+small OpenAI leg. No Fireworks API or paid service was used.
+
+An initial pass trusted the wrong table and incorrectly sold 59.01 Gemini >=50 NO at raw .169
+and 19 OpenAI >=55 NO at raw .13. Sale transactions were
+`0xeb63d8a433978c060ee36660bd4c2a5c4ea82cf6089ecaff52f1f3953b821a0d` and
+`0x51e74513f6808412372385cfd3b41fd02cd1c5529b409a09f46fdf97479c9763`, netting about
+$9.69372 and $2.384044. After proving the real API path, restored 58.723405 Gemini NO for an
+approximately $11.37809 wallet debit and exactly 19 OpenAI NO for approximately $3.14214;
+recovery transactions were `0x633081e32bc587d70e6fb74ea63887ae1de2a9a494034470b43a33c48ce8e344`
+and `0x226e051d2526c7f8194aea08099e171a5a91e622c7842ce8715b9bbe24938071`.
+Withdrew and wrapped $0.50 from Polygon Aave only to meet collateral minimums. The avoidable
+round trip cost about **$2.44** in spread and fees and restored 0.286595 fewer Gemini claims;
+separate POL gas remains excluded from trading capital. DEC-0125 and DEC-0126 are graded FAIL;
+the repaired positions are tracked in DEC-0127 and DEC-0128.
+
+At the 18:49 snapshot, whole-account midpoint was $183.20 including $6.09 separately
+contributed gas. Replacing the $152.31 PM midpoint with its $146.72 complete depth/fee estimate
+gives about **$171.52 trading value against $170 contributed**, +$1.52/+0.9%, before VM and
+other costs. The fixed contribution-timed passive benchmark is $180.85 VT, $181.13 VTI and
+$181.17 SPY at the completed Sep-9 close, so the pilot trails by $9.33-$9.65 or about
+5.5-5.7 percentage points on the economically relevant depth basis. The comparator assumes
+ideal fractional shares, reinvested distributions and no spread, commissions, tax or idle-cash
+yield; gas is excluded from both sides.
+
+Re-underwrote the rest of the book as whole economic structures. Apple NO is .55 after giving
+little evidentiary weight to omission from the Sep-9 event; same-day Gurman reporting kept a
+later-2026 wave open. Hold/no add. The exact Duma 295-339 union is .72 after the Sep-10 APEK
+forecast and qualifying-party normalization; hold all equal legs, with no add because both its
+.75 evidence gate and .57 price ceiling fail. Preserve the MetaMask payoff structure because
+its $44.751 rule floor remains above the approximately $43.32 full exit. Trump and Greenland
+remain holds with their premium maker sells. The 169-share Gemini debut leg is the first trim
+candidate only if a fresh meaningful full bid reaches .18 and source/catalyst evidence is
+rechecked. No reviewed new allocation cleared evidence, price, ticket and correlation gates,
+so reserves remain at the 2.8764% Aave hurdle. Only two live zero-fill orders remain: Greenland
+19 NO at .98 and Trump-out 28 NO at .97.
+
+Permanent repairs: `source_freeze_check.py` now follows and strictly validates the actual HLE
+API for live/archive comparisons; full status includes the check and retains bounded stderr;
+the entry helper recognizes beneficial overfill only for ordinary cash-capped BUYs while exact
+bundles and sells stay strict; and a read-only benchmark pins contribution dates and completed
+session behavior. Portfolio Kelly now uses live fee-inclusive exposure on the entry gate's
+basis and suppresses additions that breach either the 15% ticket or 30% cluster cap. Live output
+blocks the former $12.93 Trump suggestion at $2.52 ticket headroom and the former $10.88 OpenAI
+suggestion at $1.77 shared headroom. Final validation: **673 pytest tests plus 156 money-math
+checks pass**, the source monitor sees the 44-to-58-row update, constrained Kelly prints both
+cap suppressions, JSON parses, and the 12-position state audit is CLEAN. DEC-0124 and DEC-0131
+are graded PASS. No further trade was justified.

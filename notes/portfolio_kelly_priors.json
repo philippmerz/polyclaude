@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-09",
+ "_updated": "2026-09-10",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-08: fresh VCIOM table/release still ends Aug-30; direct APEK report confirms the unchanged Aug-10 national forecast, and the bounded search found no newer comparable RASO forecast. Union p remains 0.68 (<0.75). HOLD equal set; no add. Any future entry also needs fresh complete-set fee-inclusive asks <=0.57; prior price snapshots are not standing executable quotes.",
+   "add_gate": "FAILED 2026-09-10: APEK's new Sep-10 express forecast is 49-52% list votes and 185-195 district wins. Correctly normalizing list votes among qualifying parties puts its midpoint near 318 seats if Just Russia clears 5% and 326 if it does not. Revised held-union p=0.72 remains below the 0.75 evidence gate, and a fresh five-share complete set cost 0.615 per payout unit, above the 0.57 price ceiling. HOLD the equal set; no add or single-leg action.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -247,16 +247,16 @@
   "source_ack_note": "Refreshed the live Gamma criteria and current Danish foreign-ministry material on Sep-6. The official record still distinguishes sovereignty/Kingdom authority from US defense access; no binding acquisition instrument or exclusive-jurisdiction transfer surfaced. Re-check immediately if reporting identifies signed text displacing Danish law or authority in a defined zone."
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
-  "p_no": 0.65,
+  "p_no": 0.55,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.4,
   "cluster_frac": 0.0,
   "rationale": "[ENTRY-TIME RECORD 2026-07-15, superseded by `note` \u2014 do NOT read as current] DEC-0046: Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out. Entry p_no 0.85.",
   "note": "CORRECTED 0.80 -> 0.62 on 2026-08-12 after MacBook NO fell 0.595 -> 0.495 over twelve hours, sustained and one-directional, on a hidden-info-class position where the doctrine says informed flow may lead public reporting. It did. My 0.80 rested entirely on Gurman's APRIL read ('early 2027 more likely'); the July supply-chain reporting I had never looked for says ~2.5M Samsung panels with shipments spanning late-2026 AND early-2027 and a launch 'late 2026 or early 2027' \u2014 three months newer and materially less committed to 2027. New p_no 0.62 = P(launch slips past 2026) ~0.55 plus the branch where a very late 2026 unveiling still is not PURCHASABLE by Dec-31. Caution that cut the other way and is worth recording: an aggregated search summary claimed 'mass production since May, 2M panels by year-end', which would have justified cutting to ~0.45 \u2014 fetching the dated article showed the primary source says no such thing. Summary overstated; artifact corrected it. HOLD, no trade: at a 0.495 mark against 0.62 fair the edge is 12pp, the position is cap-bound anyway, and a taker exit pays 4.5c/share (10% of min(p,1-p)) which swamps the gap. Hidden-info class so still NO resting sell. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (MacBook: 20pp spread, ZERO shares bid within 5% of mark.) 0.62 -> 0.58 on 2026-08-13 after the day's round trip (mark 0.495 -> 0.685 midpoint spike -> 0.420) and a fetched clarification. Two corrections in opposite directions netting slightly toward YES: the M5-chip reshuffle is an ACCELERATION not a schedule-hold, but the late-2026 machine everyone is reporting on is the NON-touchscreen M6. Bloomberg's 'end of 2026 or early 2027' on the actual touchscreen line is roughly a coin flip on the calendar boundary, and my criteria need PURCHASABLE by Dec-31, which is stricter than 'launched end of 2026' \u2014 so P(YES) ~0.42 against a market at 0.58. Applying my own measured instance-overconfidence (6-23pp) would put me nearer 0.45, still below the market. HOLD: cannot add (cost $27.19 exceeds 15% of the reduced $175.97 bankroll \u2014 drift, not a breach, so no forced sale either) and would not sell NO at 0.42 believing 0.58. 0.58 -> 0.65 on 2026-08-13 evening: REVERTING a move I made this morning on an unsourced claim. I had cut 0.62 -> 0.58 partly because a search summary said the M5 chip reshuffle was an ACCELERATION; pinning it to dated sources shows the opposite \u2014 'stick with M5 Pro/Max' is neutral framing, and Gurman's own trajectory is Feb 'back half of 2026' -> now 'early 2027 more likely', i.e. a SLIP. With that leg removed, the evidence converges: the late-2026 M6 has no touchscreen, the touchscreen line is separately timed at 'end 2026 or early 2027' with early-2027 favoured, and the criteria need PURCHASABLE not merely launched. P(YES) ~0.35. Offsets kept: the pre-order ambiguity and Apple's capacity to surprise. Market 0.555 NO, so ~9.5pp edge \u2014 but the position is cap-bound and illiquid (20pp spread, zero bid depth within 5%), so this changes the RECORD, not the trade. || 2026-08-24 divergence acked (prior 0.65 vs NO mid ~0.35, 30pp): book WALKED (bid 0.30x27 / ask 0.40x8, $293 vol24 \u2014 thin), sources refreshed 2026-08-23 (early-2027 still favored; macOS 27.1 Oct alignment is the YES-branch driver the market may be trading). Hold under both measures; re-underwrite PRE-COMMITTED at the Sep 8-10 event, not on mid flaps. Note 2000sh NO ask wall at 0.50.",
-  "verified": "2026-09-08",
-  "criteria_read": "2026-09-08",
+  "verified": "2026-09-10",
+  "criteria_read": "2026-09-10",
   "hidden_info": true,
-    "current_assessment": "Sep-8 02:00 price-alert review: YES moved 0.620 to 0.675; NO is 0.325, vol24 about $1,100. Exact market 1499672 still requires a true touchscreen explicitly branded MacBook, available for public purchase by Dec-31, not unveiling alone. It does not separately require customer shipment by year-end; preorder interpretation remains unresolved. Main re-read official store/event pages and a bounded news check found no new qualifying availability evidence. Current store absence is weak evidence about year-end, not proof the price move is noise. Retain p_no=0.65, HOLD / NO ADD / NO FLIP. At 49.005 shares, raw/stressed hold values are $31.85/$26.95 (10pp stress). The exact-token book and matching Gamma/compact fees imply a complete exit of $14.77522 after $0.41933 fees, but the book timestamp was 178s old at 02:00:51: indicative only, not a fresh executable quote. Last verified configured cluster gross exposure $63.2289 already exceeds 30% of the updated $192.15 bankroll ($57.645); no new size is permitted. Sep-8 01:52 authenticated inventory has zero Apple orders. Sep-9 17:00 UTC keynote / 18:30 review remain the next discrete gate; re-underwrite immediately on credible purchase evidence.",
+    "current_assessment": "Sep-10 post-event review: Apple's Sep-9 event had no MacBook, but that absence was weak evidence because Mark Gurman's same-day post explicitly said it was only September and reporting expected a later hardware wave. Older early-2027-favored timing and the exact public-purchase-by-Dec-31 criterion still support NO; July/fall-launch reporting supports YES. Revised p_no=0.55 (subjective 0.35-0.70). HOLD 49.005 NO because the fresh full net exit near $17.78 implies only about 0.363 per share; no add because the ai-ships-fast-short cluster is near its 30% cost cap.",
   "key_facts": [
    {
     "claim": "The late-2026 M6 MacBook Pro has NO touchscreen and NO OLED.",
@@ -337,31 +337,49 @@
     "checked": "2026-09-08"
    },
    {
-    "claim": "Apple's official event page confirms Sep-9 at 10:00 PT but does not identify a MacBook, purchase date, or ship date. Together with the live-store check, the price move is unsupported by a new public purchasability fact; p_no stays 0.65 pending the event.",
+    "claim": "Apple's official event page confirms Sep-9 at 10:00 PT but does not identify a MacBook, purchase date, or ship date. Together with the live-store check, the price move was unsupported by a new public purchasability fact before the event.",
     "source": "https://developer.apple.com/hello/september26/",
     "source_date": "2026-09-05",
     "checked": "2026-09-05"
+   },
+   {
+    "claim": "Same-day reporting quotes Mark Gurman saying a missing touchscreen MacBook at the Sep-9 event would not rule out 2026 because it was only September; the article anticipates a later hardware wave but provides no on-sale date. This makes the event absence weak NO evidence rather than a thesis confirmation.",
+    "source": "https://www.macworld.com/article/3230458/touchscreen-macbook-homepad-apple-tv-are-coming-but-probably-not-today.html",
+    "source_date": "2026-09-09",
+    "checked": "2026-09-10"
    }
   ],
-  "divergence_ack": "2026-09-08",
-    "divergence_note": "Sep-8 02:00 renewed after the 5.5pp YES alert: p_no 0.65 versus NO midpoint 0.325 leaves a 32.5pp disagreement. The exact criteria, current store and official event page supply no new purchase fact; absence today does not establish no year-end release or explain the flow. The prior remains a judgment on the retained late-2026/early-2027 window, not certainty. No add: last verified configured cluster gross $63.2289 exceeds the $57.645 cap at bankroll $192.15. No forced sale solely to manufacture headroom. Keep the Sep-9 post-keynote review and zero Apple resting orders through the event. Earlier Aug-24 acknowledgment relied on insufficiently current reporting; that failure remains in note/journal. The displayed $14.78 exit is over-age-book indicative, not a freshness-verified alternative.",
-  "source_ack": "2026-09-05"
+  "divergence_ack": "2026-09-10",
+    "divergence_note": "Post-event re-underwriting cuts p_no 0.60 to 0.55 because Gurman's same-day comment explicitly keeps later-2026 hardware alive. The range remains wide at 0.35-0.70. A fresh complete exit near $17.78 is only about 0.363/share net, below central and most of the range, so HOLD. No add under the shared cluster cap.",
+  "source_ack": "2026-09-10"
  },
-  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063": {
-    "review_required": "2026-09-09 14:19 UTC: Gamma 3072351 entered UMA proposed at YES/NO .997/.003 while named board remains reachable/unchanged. Proposal is not finality. Numeric prior/verified date below are pre-event assessments, not re-endorsed; automated HOLD is stale to this event. NO ADD / NO FLIP; resolution and correlated-exposure review. See research/2026-09-09-hle-uma-proposal-review.md. This field is an agent-facing warning, not a programmatic execution interlock.",
-  "p_no": 0.35,
-  "verified": "2026-09-04",
-  "current_assessment": "REVISED 2026-09-04 after GPT-6 Astra's official launch with a staged rollout. OpenAI now reports Astra at 57.2% Humanity's Last Exam with tools, directly clearing both held thresholds under a spirit/configuration-inclusive reading. Access initially covers a limited set of organizations, with broader availability promised over the coming days. The named agi.safe.ai board is still reachable and unchanged from Jan-15, with GPT-5 at 25.3 and no Astra row; the outside-source escape remains gated on source unavailability. The launch nevertheless raises the chance of a qualifying board addition before Dec-31, so p_no falls 0.45 -> 0.35 (rough sensitivity 0.20-0.50). HOLD / NO ADD / NO FLIP: 15-share raw hold value is $5.25 and 10pp-haircut value $3.75 versus only about $0.42 executable exit at 14:00. Re-open immediately on an Astra row or on-point UMA precedent.",
-  "latest_catalyst": "2026-09-04 14:00 UTC clarification: OpenAI's Sep-3 GPT-6 Astra launch page reports 57.2% HLE with tools, but launch access initially covers a limited set of organizations, with broader availability promised over the coming days. OpenAI's safety overview separately calls Astra its most capable broadly deployed model. The named agi.safe.ai source remains frozen with no Astra row, so this is a board-addition/resolver-risk update rather than a literal resolution fact; the rollout clarification does not change p_no or the HOLD / NO ADD / NO FLIP action.",
-  "historical_note_status": "SUPERSEDED 2026-09-02: the note below is retained as an audit trail but contains the retracted 49.5-any-surface capability premise. Use current_assessment and dated key_facts for live judgment.",
+  "_resolved_20260910_openai_hle_50": {
+    "review_required": "CLOSED / RESOLVED 2026-09-10: Gamma 3072351 and Polygon CTF payout [1,0] confirm final YES; the former 15 NO shares pay zero. The correct resolving chart API contains GPT-6 Astra at 53.6, so this finality has a literal named-source explanation and is not evidence for substituting OpenAI's outside 57.2 tool score.",
+  "p_no": 0.0,
+  "verified": "2026-09-10",
+  "current_assessment": "CLOSED / RESOLVED final YES on 2026-09-10. The held 15 NO shares have zero payout. This record remains only to prevent the finality and source-monitor correction from being lost; resolved-market priors may be pruned after the research note and decision record carry the evidence.",
+  "latest_catalyst": "2026-09-10 finality and source correction: Gamma and Polygon CTF confirm YES, while the actual resolving chart API contains GPT-6 Astra at 53.6. The live API has 58 rows versus 44 on Jul-3; OpenAI's separate 57.2 with-tools figure remains a different configuration.",
+  "historical_note_status": "SUPERSEDED 2026-09-10: the long note and every key_fact checked before Sep-10 treat a stale server-rendered table as the resolving chart or preserve the old resolver thesis. Keep them only as error history. Use review_required/current_assessment, the Sep-10 key_fact and the autonomy review.",
   "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. p_no HELD at 0.50 \u2014 tonight's re-verification reproduced the 08-04 number from scratch (p_yes = 0.20 board + 0.80*0.45*0.95 capability = 0.54). CORRECTION TO MY OWN FRAMING: I described this leg to the operator as 'moot' because it marks 0.07 with only 47sh of bid. That conflated UNEXITABLE with WORTHLESS. The plan was always hold-to-resolution, which needs no bid; at p_no 0.50 vs a 0.09 ask this is the largest edge in the book, not a dead position. Do not re-describe it as moot. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. SELF-APPLIED DRIFT CORRECTION 2026-08-13: this morning I measured that my INSTANCE-thesis priors run 6-23pp overconfident on re-derivation (N=5, all one direction) and raised the entry haircut accordingly \u2014 then did not apply the finding to the thesis I am most confident about, which is where it bites hardest. The board-failure input was 0.85; haircut by the observed ~13pp mean to 0.72. OpenAI>=50 p_no 0.50 -> 0.41, Gemini>=50 0.56 -> 0.54. NO ACTION FOLLOWS \u2014 everything is held to Dec-31, sized as lottery tickets, and both marks (0.065, ~0.27) remain far below even the haircut numbers. The point is calibration honesty rather than trading: a correction I apply only to future entries and never to my live convictions is not a correction, it is a ritual. Note this ALSO shrinks the headline disagreement I reported this morning \u2014 market prices the crux at ~6.5%, I now price it at ~28% rather than ~20% failure-to-resolve... i.e. the gap narrows from 73pp to ~65pp, still enormous and still the whole position. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (OpenAI-HLE-50: already flagged unexitable; this quantifies it.) || CRUX MEASUREMENT UPGRADED 2026-08-25: 'board unchanged since ~Nov-2025' was an INFERENCE from what was MISSING. It is now a differenced OBSERVATION with a located change-point, via `scripts/source_freeze_check.py` (archive-diff, one instrument both sides): the board was heavily curated through ~Dec-2025 (ADDED claude 4.5 sonnet, grok 4, gpt-5, gpt-5-mini, gemini 3 pro; REMOVED claude 3.5/3.7 sonnet, claude 4 opus/sonnet, llama 4 maverick, qwen3-235b, gpt-4.1, gpt-4.5, o3, o4-mini) and has changed in NO respect between 2026-01-15 and 2026-08-25. Instrument validated for BOTH liveness (detects those 2025 changes) and coverage (--expect claude,grok; an earlier narrow pattern was blind to space-separated names and would have returned FROZEN for the wrong reason). Re-run before any cluster sizing. NOTE the residual risk is now w_spirit (resolver behaviour when the board fails), NOT the board's behaviour, which is measured. || PRIOR RE-DERIVED 2026-08-25 on the MEASURED board freeze (same decomposition as the Gemini leg): the recorded number was built on P(board posts a qualifying row) ~0.20, set BEFORE the freeze was measured. Measurement now gives P(board adds ANY row by Dec-31) ~0.15 and the qualifying-row term collapses accordingly. term1 = 0.15 x P(row is an OpenAI row clearing this bar | add); term2 = P(no row) x w_spirit 0.45 x P(capability). SELF-SKEPTICISM: this raises p_no on a position I already hold, so note that term2 \u2014 resolver behaviour, a JUDGMENT \u2014 now supplies the large majority of the number, and the honest reading is 'the measurable half is confirmed, the unmeasurable half dominates', not 'my edge grew'. term1 0.045, term2 0.365 -> p_no 0.59 (was 0.41). SENSITIVITY: w_spirit 0.30/0.45/0.60 -> 0.711/0.590/0.468. ORDER CONSEQUENCE: rest was 0.45 \u2014 BELOW fair under EVERY w_spirit in range; cancelled, re-posted 15sh @ 0.65.",
-  "criteria_read": "2026-09-09",
+  "criteria_read": "2026-09-10",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.7,
-  "divergence_ack": "2026-09-04",
-  "divergence_note": "GPT-6 Astra's official launch and 57.2% HLE-with-tools result are a real new catalyst; rollout initially covers a limited set of organizations, with broader access promised in days. They raise qualifying-board-addition and UMA-spirit risk, cutting p_no 0.45 -> 0.35. The live named board remains reachable/frozen, and both raw and 10pp-haircut hold values still dominate the roughly $0.42 complete exit at 14:00; HOLD / NO ADD / NO FLIP.",
+  "divergence_ack": "2026-09-10",
+  "divergence_note": "Closed final YES after the actual chart API showed GPT-6 Astra at 53.6. The former divergence analysis monitored the wrong static table and is superseded.",
   "key_facts": [
+   {
+    "claim": "The actual agi.safe.ai chart data path is dashboard.safe.ai/api/models. On Sep-10 it contains 58 rows and lists GPT-6 Astra at 53.6, above this resolved contract's 50 threshold.",
+    "source": "https://dashboard.safe.ai/api/models",
+    "checked": "2026-09-10",
+    "source_date": "2026-09-10"
+   },
+   {
+    "claim": "The raw July 3 chart-API archive contains 44 rows, establishing that the resolving chart added models before Sep-10.",
+    "source": "https://web.archive.org/web/20260703id_/https://dashboard.safe.ai/api/models",
+    "checked": "2026-09-10",
+    "source_date": "2026-07-03"
+   },
    {
     "claim": "Sep-7 structured table diff captures all 10 model rows and both Accuracy/Calibration Error columns, with no additions, removals or value changes versus 2026-01-15. The historical control detects 2025 model changes AND Gemini 2.5 Pro accuracy changing 18.4 to 21.6. Current top Gemini accuracy is 38.3; GPT-5 is the top OpenAI row at 25.3. This is results-table stasis, not whole-page or dataset inactivity.",
     "source": "https://agi.safe.ai/",
@@ -393,22 +411,34 @@
     "checked": "2026-08-26"
    }
   ],
-  "divergence_ack_reason": "At the 2026-09-04 check, Astra's official launch and 57.2% HLE-with-tools result increased both board-addition and UMA-spirit risk, so p_no fell to 0.35. The rollout initially covers a limited set of organizations, with broader access promised in days; this clarification does not change the central estimate. The literal source still points to the reachable/frozen agi.safe.ai board and gates outside evidence on unavailability. The 15 NO have $5.25 raw / $3.75 haircut hold value versus about $0.42 executable exit at 14:00. Hold, do not add or flip, and re-open on any board row, criteria change, or resolution precedent.",
-  "source_ack": "2026-09-04"
+  "divergence_ack_reason": "Closed Sep-10: the actual resolving chart API contains GPT-6 Astra at 53.6 and the market finalized YES. The prior frozen-source interpretation was wrong because it monitored a stale server-rendered table.",
+  "source_ack": "2026-09-10"
  },
   "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
-    "review_required": "2026-09-09 14:19 UTC: sibling OpenAI >=50 entered UMA proposed despite unchanged named board; same-wording resolver branch needs reassessment. This leg itself is not proposed. Numeric prior/verified date below remain historical, not re-endorsed; 14:25:11 full19NO fresh fee/depth exit estimate was $2.568496. NO ADD / NO FLIP; see research/2026-09-09-hle-uma-proposal-review.md. Agent-facing warning only, not a programmatic execution interlock.",
-  "p_no": 0.4,
-  "verified": "2026-09-04",
-  "current_assessment": "REVISED 2026-09-04 after GPT-6 Astra's official launch with a staged rollout. OpenAI reports Astra at 57.2% Humanity's Last Exam with tools, clearing 55 under a spirit/configuration-inclusive reading and making a new qualifying board row more plausible. Access initially covers a limited set of organizations, with broader availability promised over the coming days. The exact agi.safe.ai board remains reachable and frozen with no Astra row, while the outside-source escape is still textually gated on unavailability. p_no falls 0.50 -> 0.40 (rough sensitivity 0.25-0.55). HOLD / NO ADD / NO FLIP: 19-share raw hold value is $7.60 and 10pp-haircut value $5.70 versus about $2.75 executable exit at 14:00. Re-open immediately on an Astra row or on-point UMA precedent.",
-  "latest_catalyst": "2026-09-04 14:00 UTC clarification: OpenAI's Sep-3 GPT-6 Astra launch page reports 57.2% HLE with tools, but launch access initially covers a limited set of organizations, with broader availability promised over the coming days. OpenAI's safety overview separately calls Astra its most capable broadly deployed model. The named agi.safe.ai source remains frozen with no Astra row, so this raises board-addition/resolver risk without completing the literal criteria; the rollout clarification does not change p_no or the HOLD / NO ADD / NO FLIP action.",
-  "historical_note_status": "SUPERSEDED 2026-09-02: the note below is retained as an audit trail but contains the retracted 49.5-any-surface/global-frontier premise. Use current_assessment and dated key_facts for live judgment.",
+    "review_required": "REVIEW COMPLETE 2026-09-10: the chart API contains GPT-6 Astra at 53.6 and OpenAI >=50 finalized YES. This >=55 leg remains unresolved. Revised p_no=0.30; 19 NO were restored at raw 0.16 after the source-path error. HOLD / NO ADD. See research/2026-09-10-frontier-model-autonomy-review.md.",
+  "p_no": 0.30,
+  "verified": "2026-09-10",
+  "current_assessment": "Sep-10 correction: agi.safe.ai's actual resolving chart API lists GPT-6 Astra at 53.6, below 55, and grew from 44 archived rows on Jul-3 to 58 live rows. The old static-table freeze thesis is false. Revised p_no=0.30 (subjective 0.12-0.50): roughly 85% chance of another mainline OpenAI row by Dec-31, 78% chance it clears 55 conditional on appearing, plus an 11% residual YES route via rescoring/configuration/source interpretation. After an erroneous exit at 0.13, restored exactly 19 NO at raw 0.16 on current expected value; HOLD, no enlargement.",
+  "latest_catalyst": "2026-09-10: the actual chart API lists GPT-6 Astra at 53.6, below 55, while OpenAI's own tool-enabled score is 57.2. The API has grown from 44 Jul-3 rows to 58, so another row or rescore before Dec-31 is a live risk. Revised p_no=0.30; HOLD restored 19 NO, no enlargement.",
+  "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and every key_fact checked before Sep-10 treat a stale server-rendered table as the resolving chart or preserve the old resolver thesis. Keep them only as error history; use current_assessment and the Sep-10 key_fact.",
   "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. 0.65->0.64 (immaterial, re-derived not marked): p_yes = 0.10 board + 0.90*0.45*0.65 capability = 0.36. 55+ keeps the most NO margin of the OpenAI pair because it needs a score above TODAY'S GLOBAL FRONTIER (55.5 Fable 5) from OpenAI specifically, AND a board row. This leg has a real two-sided book (0.45/0.46) \u2014 unlike the 50+ leg it IS exitable. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. || CRUX MEASUREMENT UPGRADED 2026-08-25: 'board unchanged since ~Nov-2025' was an INFERENCE from what was MISSING. It is now a differenced OBSERVATION with a located change-point, via `scripts/source_freeze_check.py` (archive-diff, one instrument both sides): the board was heavily curated through ~Dec-2025 (ADDED claude 4.5 sonnet, grok 4, gpt-5, gpt-5-mini, gemini 3 pro; REMOVED claude 3.5/3.7 sonnet, claude 4 opus/sonnet, llama 4 maverick, qwen3-235b, gpt-4.1, gpt-4.5, o3, o4-mini) and has changed in NO respect between 2026-01-15 and 2026-08-25. Instrument validated for BOTH liveness (detects those 2025 changes) and coverage (--expect claude,grok; an earlier narrow pattern was blind to space-separated names and would have returned FROZEN for the wrong reason). Re-run before any cluster sizing. NOTE the residual risk is now w_spirit (resolver behaviour when the board fails), NOT the board's behaviour, which is measured. || PRIOR RE-DERIVED 2026-08-25 on the MEASURED board freeze (same decomposition as the Gemini leg): the recorded number was built on P(board posts a qualifying row) ~0.20, set BEFORE the freeze was measured. Measurement now gives P(board adds ANY row by Dec-31) ~0.15 and the qualifying-row term collapses accordingly. term1 = 0.15 x P(row is an OpenAI row clearing this bar | add); term2 = P(no row) x w_spirit 0.45 x P(capability). SELF-SKEPTICISM: this raises p_no on a position I already hold, so note that term2 \u2014 resolver behaviour, a JUDGMENT \u2014 now supplies the large majority of the number, and the honest reading is 'the measurable half is confirmed, the unmeasurable half dominates', not 'my edge grew'. term1 0.022, term2 0.198 -> p_no 0.78 (was 0.64). SENSITIVITY: w_spirit 0.30/0.45/0.60 -> 0.846/0.780/0.714. ORDER CONSEQUENCE: rest was 0.70 \u2014 BELOW fair under EVERY w_spirit in range; cancelled, re-posted 19sh @ 0.85.",
-  "criteria_read": "2026-09-09",
+  "criteria_read": "2026-09-10",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.7,
   "key_facts": [
+   {
+    "claim": "The actual agi.safe.ai chart data path is dashboard.safe.ai/api/models. On Sep-10 it contains 58 rows and lists GPT-6 Astra at 53.6, below this contract's 55 threshold.",
+    "source": "https://dashboard.safe.ai/api/models",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
+   {
+    "claim": "The raw July 3 chart-API archive contains 44 rows, establishing that the resolving chart added models before Sep-10.",
+    "source": "https://web.archive.org/web/20260703id_/https://dashboard.safe.ai/api/models",
+    "source_date": "2026-07-03",
+    "checked": "2026-09-10"
+   },
    {
     "claim": "Sep-7 structured comparison of all 10 agi.safe.ai results rows and both displayed score columns finds no changes versus 2026-01-15. GPT-5 remains the top OpenAI Accuracy row at 25.3, with no Astra row. This establishes only the named board's state, not a capability maximum across other official configurations.",
     "source": "https://agi.safe.ai/",
@@ -428,26 +458,36 @@
     "checked": "2026-08-26"
    }
   ],
-  "divergence_ack": "2026-09-04",
-  "divergence_note": "GPT-6 Astra's official launch and 57.2% HLE-with-tools score raise the chance of an agi.safe.ai addition and strengthen the spirit branch; rollout initially covers a limited set of organizations, with broader access promised in days. Central p_no falls 0.50 -> 0.40. The board remains reachable/frozen, and both raw and 10pp-haircut hold values remain far above the roughly $2.75 complete exit at 14:00; HOLD / NO ADD / NO FLIP.",
-  "divergence_ack_reason": "At the 2026-09-04 check, Astra's official launch and 57.2% HLE-with-tools result increased both board-addition and UMA-spirit risk, so p_no fell to 0.40. The rollout initially covers a limited set of organizations, with broader access promised in days; this clarification does not change the central estimate. The named agi.safe.ai board remains reachable/frozen and outside-source use is textually gated on unavailability. The 19 NO have $7.60 raw / $5.70 haircut hold value versus about $2.75 executable exit at 14:00. Hold, do not add or flip, and re-open on any board row, criteria change, or resolution precedent.",
-  "source_ack": "2026-09-04"
+  "divergence_ack": "2026-09-10",
+  "divergence_note": "Source-path correction cuts p_no to 0.30. The actual chart API is active and shows Astra at 53.6, only 1.4 points below the bar; its 44-to-58-row growth makes another row or rescore a live risk. HOLD the restored 19 NO; no add under the shared cap.",
+  "divergence_ack_reason": "Sep-10 review traced the browser data path, compared raw Jul-3/Aug-4 archives with live data and separated the chart's 53.6 from OpenAI's different 57.2 with-tools configuration. Central and stressed hold values still exceed the complete exit, but uncertainty and cluster exposure prohibit enlargement.",
+  "source_ack": "2026-09-10"
  },
   "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
-    "review_required": "2026-09-09 14:19 UTC: OpenAI >=50 proposal tests the shared named-board/resolver branch; proposal is not final precedent and this Gemini market itself is not proposed. Numeric prior/verified date below are pre-event assessments, not re-endorsed. NO ADD / NO FLIP; assess correlated interpretation risk using research/2026-09-09-hle-uma-proposal-review.md. Agent-facing warning only, not a programmatic execution interlock.",
-  "p_no": 0.55,
-  "verified": "2026-09-03",
-  "current_assessment": "CORRECTED 2026-09-03 after the +7.5pp YES alert forced the official-source/configuration sweep introduced yesterday. Google's pre-entry first-party material already reported Gemini 3.1 Pro at 51.4 HLE with Search (blocklist) + Code and Gemini 3.1 Deep Think at 53.4 with Search + code execution; the old claim that public Gemini evidence was entirely below 50 was false. The named agi.safe.ai board is still reachable/frozen and shows no qualifying row, so the residual position is a literal named-source versus UMA-spirit/configuration bet, not a capability-jump bet. Central p_no is cut 0.65 -> 0.55 with an honest roughly 0.40-0.70 range. HOLD / NO ADD: 59.01 shares have $32.46 raw / $26.56 after a 10pp haircut of resolution value versus $6.23 executable exit; the existing 0.75 maker sell remains above revised fair, while the repeated research miss and capped correlated cluster prohibit adding or flipping.",
-  "latest_catalyst": "2026-09-03 14:00 UTC: Google's Sep-2 Gemini 3.8 Flash release was checked after the overnight price move. The ordinary Humanity's Last Exam figure is 45.4%, below 50. A separate HLE-Verified figure is 54.9%, but Google's methodology materially changes the evaluated set (668 verified original items plus 1,143 revised items, excluding 689 uncertain originals) and does not disclose the HLE tool configuration. That is not safely interchangeable with agi.safe.ai HLE Accuracy. The named board remains reachable and unchanged, so p_no stays 0.55 and the action stays HOLD / NO ADD / NO FLIP; re-open immediately on a board row or UMA precedent treating HLE-Verified as equivalent.",
-  "historical_note_status": "SUPERSEDED 2026-09-03 FOR LIVE JUDGMENT: the long note below contains false all-surface capability claims for both OpenAI and Gemini. Preserve it only as decision history; use current_assessment and the dated key_facts.",
+    "review_required": "REVIEW COMPLETE 2026-09-10: the actual chart API is active and its highest Gemini score is 46.2. Revised p_no=0.35; 58.723405 NO were restored after the source-path error. HOLD / NO ADD. See research/2026-09-10-frontier-model-autonomy-review.md.",
+  "p_no": 0.35,
+  "verified": "2026-09-10",
+  "current_assessment": "Sep-10 correction: the actual resolving chart API is actively maintained and lists Gemini 3.1 Pro at 45.9 and Gemini 3.8 Flash at 46.2, both below 50. Google's 51.4/53.4 tool-enabled figures do not control the chart measurement. Revised p_no=0.35 (subjective 0.20-0.55). After an erroneous 59.01-share exit at raw 0.169, restored 58.723405 NO through the capped helper at $11.02 raw cost and raw limit 0.19; price improvement produced the fractional quantity. HOLD; no add because correlated cluster cost is near the 30% cap.",
+  "latest_catalyst": "2026-09-10 source correction: the resolving chart API is active and currently displays Gemini 3.8 Flash at 46.2 and Gemini 3.1 Pro at 45.9, both below 50. Google's 51.4/53.4 tool-enabled figures do not control this chart. Revised p_no=0.35 (0.20-0.55); HOLD restored 58.723405 NO, no add.",
+  "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and every key_fact checked before Sep-10 treat a stale server-rendered table as the resolving chart or preserve the old resolver thesis. Keep them only as error history; use current_assessment and the Sep-10 key_fact.",
   "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. CUT 0.70->0.56: my 0.70 was 2 revisions behind the doctrine I applied to the OpenAI siblings on 08-04 and implied a 60pp edge I was not acting on \u2014 incoherent. New number decomposes explicitly: p_yes = P(board posts Gemini >=50) 0.15 + 0.85 * w_spirit 0.45 * P(capability>=50 by Dec-31) 0.75. w_spirit is the chance a UMA vote overrides clean text under 90%-of-OI YES pressure. ADDED 60sh NO @0.100 maker 2026-08-10 (DEC-0065). CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. SELF-APPLIED DRIFT CORRECTION 2026-08-13: this morning I measured that my INSTANCE-thesis priors run 6-23pp overconfident on re-derivation (N=5, all one direction) and raised the entry haircut accordingly \u2014 then did not apply the finding to the thesis I am most confident about, which is where it bites hardest. The board-failure input was 0.85; haircut by the observed ~13pp mean to 0.72. OpenAI>=50 p_no 0.50 -> 0.41, Gemini>=50 0.56 -> 0.54. NO ACTION FOLLOWS \u2014 everything is held to Dec-31, sized as lottery tickets, and both marks (0.065, ~0.27) remain far below even the haircut numbers. The point is calibration honesty rather than trading: a correction I apply only to future entries and never to my live convictions is not a correction, it is a ritual. Note this ALSO shrinks the headline disagreement I reported this morning \u2014 market prices the crux at ~6.5%, I now price it at ~28% rather than ~20% failure-to-resolve... i.e. the gap narrows from 73pp to ~65pp, still enormous and still the whole position. || 2026-08-21 MOVE VERIFIED FIRST-HAND (UMA flagged YES 0.71->0.81 mid, +9.3pp): board UNCHANGED (live fetch, Gemini max still 38.3, no new row); Scale sister board best Gemini = gemini-3.1-pro-preview 46.4 < 50. So the repricing is ANTICIPATORY (future release crossing 50), not a board event or a current >=50 score anywhere. Live book walked: NO 0.124/0.249, spread 12.5pp, our 59sh walk ~$7.25 gross vs hold-at-prior ~$31.9 -> hold wins under both measures; lottery leg rides. Resting asks 0.60 stay premium-to-fair (permitted). NEW MEASURED INPUT for next deep derivation: 46.4 is the first hard Gemini number I hold (prior derivation had none) - re-derive P(capability by Dec-31) from it properly OFF-tick, not here (mid-tick edits are drafts). || CRUX MEASUREMENT UPGRADED 2026-08-25: 'board unchanged since ~Nov-2025' was an INFERENCE from what was MISSING. It is now a differenced OBSERVATION with a located change-point, via `scripts/source_freeze_check.py` (archive-diff, one instrument both sides): the board was heavily curated through ~Dec-2025 (ADDED claude 4.5 sonnet, grok 4, gpt-5, gpt-5-mini, gemini 3 pro; REMOVED claude 3.5/3.7 sonnet, claude 4 opus/sonnet, llama 4 maverick, qwen3-235b, gpt-4.1, gpt-4.5, o3, o4-mini) and has changed in NO respect between 2026-01-15 and 2026-08-25. Instrument validated for BOTH liveness (detects those 2025 changes) and coverage (--expect claude,grok; an earlier narrow pattern was blind to space-separated names and would have returned FROZEN for the wrong reason). Re-run before any cluster sizing. NOTE the residual risk is now w_spirit (resolver behaviour when the board fails), NOT the board's behaviour, which is measured. || PRIOR RE-DERIVED 2026-08-25, deliberately (not a mid-tick edit): 0.54 -> 0.65. Decomposition written out so it is auditable: term1 = P(board adds ANY row 0.15, measured change-point) x P(that row is a Gemini Pro scoring >=50 | add) 0.35 = 0.052 \u2014 the next Gemini Pro is likely 3.1-pro at 46.4, which is BELOW 50, so a qualifying row needs a newer model both released AND added; term2 = P(no qualifying row) 0.948 x w_spirit 0.45 x P(Gemini capability >=50 by Dec-31) 0.70 = 0.298. p_yes 0.351 -> p_no 0.649. SENSITIVITY (term2 dominates, and it rests on a JUDGMENT not a measurement): w_spirit 0.30/0.45/0.60 -> p_no 0.75/0.65/0.55. NOTE WHAT THIS EXPOSED: the previously recorded 0.54 implied w_spirit ~0.62, inconsistent with the 0.45 documented on the sibling legs \u2014 the old number was not wrong so much as silently assuming a different resolver model than the one I had written down. SELF-SKEPTICISM, since this revision FLATTERS a winning position: the move comes entirely from term1 collapsing on MEASURED board stasis, while term2's inputs are unchanged; if anything the honest read is that my edge here is smaller than the headline, because 85% of my p_no now rests on resolver behaviour I cannot measure. ORDER CONSEQUENCE: the two resting sells at 0.60 were BELOW this fair \u2014 banned on a hidden-info market (donates the news). Cancelled both (23sh + 36sh) and re-posted 59sh @ 0.75 post-only, a ~10pp premium chosen to leave room for the mechanical UPWARD drift of fair as Dec-31 approaches with the board frozen. RE-CHECK the rest price whenever this prior moves.",
-  "criteria_read": "2026-09-03",
+  "criteria_read": "2026-09-10",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.7,
-  "divergence_ack": "2026-09-03",
-  "divergence_note": "REVISED after finding material pre-entry official Gemini HLE results above 50 in tool-enabled configurations. The capability-jump premise was false; the live edge now rests on the reachable/frozen named board versus UMA spirit and configuration scope. Central p_no cut 0.65 -> 0.55. HOLD because both raw and 10pp-haircut values dominate the complete $6.23 executable exit; NO ADD / NO FLIP because this is the second same-class factual miss in two ticks and the correlated HLE cluster is capped.",
   "key_facts": [
+   {
+    "claim": "The actual agi.safe.ai chart data path is dashboard.safe.ai/api/models. On Sep-10 it contains 58 rows and lists Gemini 3.8 Flash at 46.2 and Gemini 3.1 Pro at 45.9, both below this contract's 50 threshold.",
+    "source": "https://dashboard.safe.ai/api/models",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
+   {
+    "claim": "The raw July 3 chart-API archive contains 44 rows, establishing that the resolving chart added models before Sep-10.",
+    "source": "https://web.archive.org/web/20260703id_/https://dashboard.safe.ai/api/models",
+    "source_date": "2026-07-03",
+    "checked": "2026-09-10"
+   },
    {
     "claim": "Sep-7 structured comparison captures all 10 agi.safe.ai results rows, including Gemini 2.5 Flash omitted by the old regex, and both displayed score columns; no changes versus 2026-01-15. Gemini 3 Pro remains the top Gemini Accuracy row at 38.3. This supports the literal source branch, not a below-50 capability maximum across other official configurations.",
     "source": "https://agi.safe.ai/",
@@ -491,21 +531,42 @@
     "checked": "2026-09-03"
    }
   ],
- "divergence_ack_reason": "At the 2026-09-03 check, YES moved 0.7920 -> 0.8665 and current NO marked about 0.133 versus the corrected 0.55 p_no. The move was thin-book/isolated rather than a synchronized new-release shock, but the required official-source search found older Google evidence that mattered more than the move: tool-enabled HLE scores of 51.4 and 53.4 existed before entry. The named board remains reachable/frozen, preserving the literal NO branch. The 59.01 NO have $32.46 raw / $26.56 haircut hold value versus $6.23 executable exit. Hold, do not add or flip, and re-open on a board row, criteria change, qualifying resolution precedent, or evidence that UMA excludes/includes tool configurations.",
- "source_ack": "2026-09-03"
+  "divergence_ack": "2026-09-10",
+  "divergence_note": "Source-path correction cuts p_no to 0.35. The actual chart API is active, with current Gemini scores at 46.2 and 45.9 rather than the stale table's 38.3. HOLD the restored 58.723405 NO; no add under the shared cap.",
+ "divergence_ack_reason": "Sep-10 review traced the browser data path and separated current chart scores from Google's different tool-enabled configurations. Even the 0.20 lower estimate exceeds the observed complete exit, while source-update and cluster risks prohibit enlargement.",
+ "source_ack": "2026-09-10"
  },
  "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645": {
-  "p_no": 0.60,
-  "verified": "2026-09-03",
-  "criteria_read": "2026-09-03",
+  "p_no": 0.20,
+  "verified": "2026-09-10",
+  "criteria_read": "2026-09-10",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.95,
   "note": "DEC-0089 opened 49 NO shares at 0.09/0.10 and DEC-0096 added 50 at 0.09. After Lake America resolved and released fresh cap headroom, DEC-0102 added exactly 70 more NO at 0.12 FAK: $8.40 notional plus $0.29568 fee. The full ticket is 169 NO for $17.60 notional plus $0.62940 in 4% quadratic taker fees, $18.22940 gross. This remains the cleanest measured board-stasis expression in the HLE cluster: the contract resolves NO explicitly if no qualifying Gemini Pro row is added by Dec-31, without the older family's resolver-spirit branch. The Aug-30 validated diff again detected real 2025 changes, passed claude/grok/gemini coverage and found zero additions/removals since 2026-01-15. However, an independent skeptic found that CAIS is not institutionally dormant: its official HLE repository recorded a July-27 dataset release on Aug-1. That does not update the model-results board, but it invalidates an abandonment extrapolation. Central p_no is therefore cut 0.65->0.60 and the 15-point stress becomes 0.45; both remain strongly above the 0.124224 incremental all-in cost. Already-released Gemini 3.1 Pro scores 46.44 on Scale and may qualify if the board catches up, while Google says 3.5 Pro is coming soon. Treat as hold-to-resolution: exit liquidity is thin, and one board update can gap the leg before an active exit. Execution-time ai-ships-fast-short gross cost was $63.22900 against a $65.034 cap, leaving $1.805; the 0.12 level is gone and any further add is prohibited absent new bankroll headroom plus another full-cluster review. Apparent per-leg edge is not independent diversification.",
-  "latest_catalyst": "2026-09-03: Google released Gemini 3.8 Flash, not a Pro model. The live criteria explicitly exclude models labeled only Flash/Flash-Lite/non-Pro, and agi.safe.ai added no qualifying row. Its ordinary HLE score of 45.4% is capability context only. This release neither starts nor resolves the debut clock; p_no remains 0.60 and the position remains HOLD / NO ADD.",
-  "divergence_ack": "2026-08-30",
-  "divergence_ack_reason": "The large prior/mark gap was revalidated and acted on through DEC-0102 only after the board diff, literal criteria, fee curve, current book, ticket cap and full configured-cluster cap all passed. The skeptical primary-source check found active CAIS dataset maintenance, so p_no was cut 0.65->0.60 immediately rather than treating scoreboard stasis as organizational abandonment; the trade still clears at the corresponding 0.45 stress bound. Exactly 70 shares consumed only the visible 0.12 level and left $1.805 execution-time cluster slack. The next ask jumped to 0.16 and must not be chased. Re-open immediately if agi.safe.ai adds/removes any row, Google dates 3.5 Pro, or the debut ladder moves on identifiable evidence.",
+  "latest_catalyst": "2026-09-10 source correction: Wayback's Jul-3 API archive already contained Gemini 3.1 Pro at 45.9 before this market opened Jul-29, and an archived Jul-15 agi.safe.ai bundle proves that API powered the named chart. The Google Pro set is unchanged across Jul-3, Aug-4 and Sep-10, but total chart rows grew 44 to 52 to 58. Thus 3.1 Pro cannot be the next newly added row, while whole-source freeze is false. Revised p_no=0.20 (0.08-0.35), reflecting about 82% chance of a qualifying Pro addition by year-end and 97% chance it displays at least 40 conditional on addition. HOLD 169 NO; no add.",
+  "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and every key_fact checked before Sep-10 rest on a false whole-source-freeze premise or the wrong data product. The Google Pro subset was unchanged, but the chart API as a whole was actively adding rows. Use latest_catalyst and the Sep-10 key_facts.",
+  "divergence_ack": "2026-09-10",
+  "divergence_ack_reason": "Sep-10 review proved the chart API grew 44 to 58 rows, while its Google Pro subset stayed unchanged and already contained Gemini 3.1 Pro at 45.9 before the market opened. Central p_no falls to 0.20; hold the existing ticket, no add under the shared cap, and review a fresh full bid at or above 0.18.",
   "key_facts": [
+   {
+    "claim": "The raw July 3 chart-API archive contains 44 rows and already lists Gemini 3.1 Pro at 45.9, so that model predates the Jul-29 market and cannot itself be the next newly added Pro row.",
+    "source": "https://web.archive.org/web/20260703id_/https://dashboard.safe.ai/api/models",
+    "source_date": "2026-07-03",
+    "checked": "2026-09-10"
+   },
+   {
+    "claim": "The raw August 4 chart-API archive contains 52 rows and the same Gemini Pro subset as July 3.",
+    "source": "https://web.archive.org/web/20260804id_/https://dashboard.safe.ai/api/models",
+    "source_date": "2026-08-04",
+    "checked": "2026-09-10"
+   },
+   {
+    "claim": "The Sep-10 live chart API contains 58 rows and still has no Gemini Pro row newer than Gemini 3.1 Pro at 45.9.",
+    "source": "https://dashboard.safe.ai/api/models",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
    {
     "claim": "The exact criteria use only a newly added Gemini Pro row on agi.safe.ai and state that no qualifying addition by 2026-12-31 23:59 ET resolves NO; an already released model may qualify when newly added.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
@@ -701,16 +762,29 @@
   ]
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.18,
-  "verified": "2026-09-09",
-  "criteria_read": "2026-09-05",
+  "p_yes": 0.15,
+  "verified": "2026-09-10",
+  "criteria_read": "2026-09-10",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-9 daily complete-set review: VCIOM still ends Aug-30 at 37.2%; primary APEK retains 51-54% list votes and 190-197 district wins. RASO committee publication confirms the same 95-130 list / 155-210 district forecast, not a new independent survey. No newer comparable national forecast surfaced. Retain 0.18/0.31/0.19, union p=0.68: no probability increase from unchanged sources. HOLD equal set; NO ADD / NO FLIP, evidence gate >=0.75 fails. Fresh full-set depth remains required before action. Sources and limitations: Sep-9 02:00 journal.",
+  "current_assessment": "Sep-10 complete-set review: new APEK express forecast lowers United Russia to 49-52% list votes and 185-195 district wins. Normalizing list votes among qualifying parties gives about 318 seats if Just Russia clears 5% and 326 if it misses. With wider RASO/source tails, revised distribution is 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. Existing 20-share equal set has $14.40 central expected payout versus $11.51 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and five-share set ask 0.615 exceeds 0.57 ceiling.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
+  "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and pre-Sep10 APEK key_facts describe the older Aug-10 forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
+    "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
+   {
+    "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
+    "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
    {
     "claim": "Criteria re-read without drift: this bucket resolves on United Russia's State Duma seats resulting from the election, first by consensus credible reporting and, if ambiguous, solely by official Russian-government results; if results remain indefinite after May 31, 2027, the lowest bracket wins.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
@@ -750,16 +824,29 @@
   ]
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.31,
-  "verified": "2026-09-09",
-  "criteria_read": "2026-09-05",
+  "p_yes": 0.32,
+  "verified": "2026-09-10",
+  "criteria_read": "2026-09-10",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-9 daily complete-set review: VCIOM still ends Aug-30 at 37.2%; primary APEK retains 51-54% list votes and 190-197 district wins. RASO committee publication confirms the same 95-130 list / 155-210 district forecast, not a new independent survey. No newer comparable national forecast surfaced. Retain 0.18/0.31/0.19, union p=0.68: no probability increase from unchanged sources. HOLD equal set; NO ADD / NO FLIP, evidence gate >=0.75 fails. Fresh full-set depth remains required before action. Sources and limitations: Sep-9 02:00 journal.",
+  "current_assessment": "Sep-10 complete-set review: new APEK express forecast lowers United Russia to 49-52% list votes and 185-195 district wins. Normalizing list votes among qualifying parties gives about 318 seats if Just Russia clears 5% and 326 if it misses. With wider RASO/source tails, revised distribution is 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. Existing 20-share equal set has $14.40 central expected payout versus $11.51 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and five-share set ask 0.615 exceeds 0.57 ceiling.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
+  "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
+    "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
+   {
+    "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
+    "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
    {
     "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
@@ -775,16 +862,29 @@
   ]
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.19,
-  "verified": "2026-09-09",
-  "criteria_read": "2026-09-05",
+  "p_yes": 0.25,
+  "verified": "2026-09-10",
+  "criteria_read": "2026-09-10",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-9 daily complete-set review: VCIOM still ends Aug-30 at 37.2%; primary APEK retains 51-54% list votes and 190-197 district wins. RASO committee publication confirms the same 95-130 list / 155-210 district forecast, not a new independent survey. No newer comparable national forecast surfaced. Retain 0.18/0.31/0.19, union p=0.68: no probability increase from unchanged sources. HOLD equal set; NO ADD / NO FLIP, evidence gate >=0.75 fails. Fresh full-set depth remains required before action. Sources and limitations: Sep-9 02:00 journal.",
+  "current_assessment": "Sep-10 complete-set review: new APEK express forecast lowers United Russia to 49-52% list votes and 185-195 district wins. Normalizing list votes among qualifying parties gives about 318 seats if Just Russia clears 5% and 326 if it misses. With wider RASO/source tails, revised distribution is 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. Existing 20-share equal set has $14.40 central expected payout versus $11.51 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and five-share set ask 0.615 exceeds 0.57 ceiling.",
   "note": "*** SET-ONLY LEG — DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
+  "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
+    "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
+   {
+    "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
+    "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-10"
+   },
    {
     "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",

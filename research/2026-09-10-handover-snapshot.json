@@ -1,0 +1,626 @@
+{
+  "started_at": "2026-09-10T10:55:29.329847+00:00",
+  "completed_at": "2026-09-10T10:55:30.570330+00:00",
+  "position_source": "https://data-api.polymarket.com/positions",
+  "position_query": {
+    "user": "0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B",
+    "limit": 100,
+    "offset": 0,
+    "sizeThreshold": 0
+  },
+  "inventory_count": 15,
+  "inventory_limit_reached": false,
+  "positions": [
+    {
+      "asset": "67951575343428346736827544478449934796473993940055164453800722378542887483258",
+      "conditionId": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
+      "outcome": "No",
+      "title": "Will the next Google Gemini Pro model debut with a Humanity\u2019s Last Exam score of 40% or higher?",
+      "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+      "size": 169,
+      "avgPrice": 0.1041,
+      "initialValue": 17.5999,
+      "currentValue": 19.435,
+      "curPrice": 0.115,
+      "redeemable": false,
+      "market_id": "3212719",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0.04,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.11,
+      "ask": 0.12,
+      "book_timestamp_ms": "1789037703637",
+      "retrieved_at": "2026-09-10T10:55:29.961113+00:00",
+      "book_age_seconds": 26.32411289215088,
+      "bid_walk": {
+        "gross": 18.59,
+        "fee": 0.6618040000000001,
+        "net": 17.928196,
+        "avg_fill": 0.11,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
+      "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
+      "outcome": "No",
+      "title": "Will the highest score achieved by a Google Gemini model on Humanity\u2019s Last Exam in 2026 be 50% or higher?",
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+      "size": 59.01,
+      "avgPrice": 0.1345,
+      "initialValue": 7.9408,
+      "currentValue": 10.8873,
+      "curPrice": 0.1845,
+      "redeemable": false,
+      "market_id": "3072356",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0.04,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.181,
+      "ask": 0.188,
+      "book_timestamp_ms": "1789037646071",
+      "retrieved_at": "2026-09-10T10:55:29.855470+00:00",
+      "book_age_seconds": 83.78446984291077,
+      "bid_walk": {
+        "gross": 10.6418,
+        "fee": 0.34890624,
+        "net": 10.29289376,
+        "avg_fill": 0.18033892560582954,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "23514447719471100390569154455440417533353453232779340703972009767897223549881",
+      "conditionId": "0x3b8ffe267a348097806237bd9af95050896ee12e4d461b421ca703c8bdf31022",
+      "outcome": "No",
+      "title": "Will Apple release a touchscreen MacBook in 2026?",
+      "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+      "size": 49.005,
+      "avgPrice": 0.4119,
+      "initialValue": 20.1885,
+      "currentValue": 19.1119,
+      "curPrice": 0.39,
+      "redeemable": false,
+      "market_id": "1499672",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0.04,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.38,
+      "ask": 0.4,
+      "book_timestamp_ms": "1789037552473",
+      "retrieved_at": "2026-09-10T10:55:29.963445+00:00",
+      "book_age_seconds": 177.49044489860535,
+      "bid_walk": {
+        "gross": 16.58185,
+        "fee": 0.43660558000000005,
+        "net": 16.14524442,
+        "avg_fill": 0.33837057443118046,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "27944626213701198119611689981836884300701096451168812471764168520890801988056",
+      "conditionId": "0x1c842b91d226266fbe0e55d9bce9c52ce48b825d069e039c24d7fe57a5be6eaa",
+      "outcome": "Yes",
+      "title": "Metamask FDV above $700M one day after launch?",
+      "slug": "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
+      "size": 47.7196,
+      "avgPrice": 0.0798,
+      "initialValue": 3.8099,
+      "currentValue": 3.4358,
+      "curPrice": 0.072,
+      "redeemable": false,
+      "market_id": "665531",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0.07,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.067,
+      "ask": 0.076,
+      "book_timestamp_ms": "1789037712030",
+      "retrieved_at": "2026-09-10T10:55:29.917279+00:00",
+      "book_age_seconds": 17.88727903366089,
+      "bid_walk": {
+        "gross": 3.1972132,
+        "fee": 0.20880999409200005,
+        "net": 2.9884032059080003,
+        "avg_fill": 0.067,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "71542982741394376771627006689338880117415417908788827680925028639627563224055",
+      "conditionId": "0x1c38a64c494e01c9bd81362cfadeadb3b87023d1d9ffae1df5a428c03152fc74",
+      "outcome": "Yes",
+      "title": "Iran-Oman Hormuz Agreement by August 31?",
+      "slug": "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
+      "size": 31,
+      "avgPrice": 0.1622,
+      "initialValue": 5.0299,
+      "currentValue": 0,
+      "curPrice": 0,
+      "redeemable": true,
+      "valuation_kind": "reported_redeemable"
+    },
+    {
+      "asset": "100885541765991307903032754280870234009741669840630929196757341278043960084869",
+      "conditionId": "0xb326b78f905b8ff9a1764d42ef3c46bd61b78c9e32a53607ab7245a2da456291",
+      "outcome": "No",
+      "title": "Metamask FDV above $3B one day after launch?",
+      "slug": "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
+      "size": 29.7173,
+      "avgPrice": 0.8489,
+      "initialValue": 25.2299,
+      "currentValue": 27.5479,
+      "curPrice": 0.927,
+      "redeemable": false,
+      "market_id": "665533",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0.07,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.922,
+      "ask": 0.932,
+      "book_timestamp_ms": "1789037728332",
+      "retrieved_at": "2026-09-10T10:55:30.088651+00:00",
+      "book_age_seconds": 1.7566509246826172,
+      "bid_walk": {
+        "gross": 27.399350600000002,
+        "fee": 0.14960045427599994,
+        "net": 27.249750145724,
+        "avg_fill": 0.922,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+      "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "outcome": "No",
+      "title": "Trump out as President before 2027?",
+      "slug": "trump-out-as-president-before-2027",
+      "size": 28.33,
+      "avgPrice": 0.8809,
+      "initialValue": 24.9571,
+      "currentValue": 26.7718,
+      "curPrice": 0.945,
+      "redeemable": false,
+      "market_id": "666861",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.94,
+      "ask": 0.95,
+      "book_timestamp_ms": "1789037726002",
+      "retrieved_at": "2026-09-10T10:55:30.234406+00:00",
+      "book_age_seconds": 4.2324059009552,
+      "bid_walk": {
+        "gross": 26.6302,
+        "fee": 0.0,
+        "net": 26.6302,
+        "avg_fill": 0.9400000000000001,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "36654380138980286408755216940812345632701505883007076173124647888379931416486",
+      "conditionId": "0xe62ab836381dd820968f6b58ab546958aaa63de184c48bc6e0522d551807e1b1",
+      "outcome": "Yes",
+      "title": "Will United Russia win between 325 and 339 seats in the next Russian State Duma election?",
+      "slug": "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
+      "size": 20,
+      "avgPrice": 0.33,
+      "initialValue": 6.6,
+      "currentValue": 7.3,
+      "curPrice": 0.365,
+      "redeemable": false,
+      "market_id": "1125104",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.36,
+      "ask": 0.37,
+      "book_timestamp_ms": "1789037723274",
+      "retrieved_at": "2026-09-10T10:55:30.192060+00:00",
+      "book_age_seconds": 6.918060064315796,
+      "bid_walk": {
+        "gross": 7.199999999999999,
+        "fee": 0.0,
+        "net": 7.199999999999999,
+        "avg_fill": 0.36,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "55194946908077358946678288054444144925253856497002247503827745964051403029179",
+      "conditionId": "0x8e41c5c2c887553ea7cce7f3644b50c62c8ab55238b50e939048f6d71aae6d4c",
+      "outcome": "Yes",
+      "title": "Will United Russia win between 310 and 324 seats in the next Russian State Duma election?",
+      "slug": "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
+      "size": 20,
+      "avgPrice": 0.19,
+      "initialValue": 3.8,
+      "currentValue": 4.36,
+      "curPrice": 0.218,
+      "redeemable": false,
+      "market_id": "1125103",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.203,
+      "ask": 0.231,
+      "book_timestamp_ms": "1789037727972",
+      "retrieved_at": "2026-09-10T10:55:30.234900+00:00",
+      "book_age_seconds": 2.2629001140594482,
+      "bid_walk": {
+        "gross": 4.055000000000001,
+        "fee": 0.0,
+        "net": 4.055000000000001,
+        "avg_fill": 0.20275000000000004,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "64185329950651325995811365760471851443559550508668407058343096277276377997961",
+      "conditionId": "0x0a9bb5f9c32f57b1683bec4170da0a1116876f2bf0665a1ec9bf6c6db76d2f57",
+      "outcome": "Yes",
+      "title": "Will United Russia win between 295 and 309 seats in the next Russian State Duma election?",
+      "slug": "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
+      "size": 20,
+      "avgPrice": 0.05,
+      "initialValue": 1,
+      "currentValue": 0.92,
+      "curPrice": 0.046,
+      "redeemable": false,
+      "market_id": "1125102",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.044,
+      "ask": 0.048,
+      "book_timestamp_ms": "1789037723957",
+      "retrieved_at": "2026-09-10T10:55:30.373420+00:00",
+      "book_age_seconds": 6.416419982910156,
+      "bid_walk": {
+        "gross": 0.8749999999999999,
+        "fee": 0.0,
+        "net": 0.8749999999999999,
+        "avg_fill": 0.04375,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
+      "conditionId": "0x890fc3ba40458db0b67560691aa1597344c2a0560d18e80f586a4b35f510b4ce",
+      "outcome": "No",
+      "title": "Will the US acquire part of Greenland in 2026?",
+      "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
+      "size": 19,
+      "avgPrice": 0.87,
+      "initialValue": 16.53,
+      "currentValue": 17.955,
+      "curPrice": 0.945,
+      "redeemable": false,
+      "market_id": "1126504",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.94,
+      "ask": 0.95,
+      "book_timestamp_ms": "1789037714075",
+      "retrieved_at": "2026-09-10T10:55:30.441234+00:00",
+      "book_age_seconds": 16.366234064102173,
+      "bid_walk": {
+        "gross": 17.86,
+        "fee": 0.0,
+        "net": 17.86,
+        "avg_fill": 0.94,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "2261859210057397360733755370829699556983953980550942465322842594827769255576",
+      "conditionId": "0xd30e3b4e2d6bf4594f44ad982b55435c3add71d3622993b0dee67354defaf598",
+      "outcome": "No",
+      "title": "Will the highest score achieved by an OpenAI model on Humanity\u2019s Last Exam in 2026 be 55% or higher?",
+      "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
+      "size": 19,
+      "avgPrice": 0.5599,
+      "initialValue": 10.6399,
+      "currentValue": 2.945,
+      "curPrice": 0.155,
+      "redeemable": false,
+      "market_id": "3072352",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0.04,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.14,
+      "ask": 0.17,
+      "book_timestamp_ms": "1789037723213",
+      "retrieved_at": "2026-09-10T10:55:30.539322+00:00",
+      "book_age_seconds": 7.326321840286255,
+      "bid_walk": {
+        "gross": 2.66,
+        "fee": 0.091504,
+        "net": 2.568496,
+        "avg_fill": 0.14,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "70962867555721536468794820816920873482905460253708950137269131341948100258712",
+      "conditionId": "0xd450db2ea773df8f91797d594b15333d8e9ed2d74930ac0ffb54c123f78e3d0f",
+      "outcome": "No",
+      "title": "Metamask FDV above $4B one day after launch?",
+      "slug": "metamask-fdv-above-4b-one-day-after-launch-851-782-477-258",
+      "size": 15.0337,
+      "avgPrice": 0.8879,
+      "initialValue": 13.3499,
+      "currentValue": 13.9663,
+      "curPrice": 0.929,
+      "redeemable": false,
+      "market_id": "667005",
+      "gamma_status": null,
+      "gamma_closed": false,
+      "fee_schedule": {
+        "rate": 0.07,
+        "exponent": 1,
+        "takerOnly": true
+      },
+      "bid": 0.916,
+      "ask": 0.942,
+      "book_timestamp_ms": "1789037728315",
+      "retrieved_at": "2026-09-10T10:55:30.569056+00:00",
+      "book_age_seconds": 2.254055976867676,
+      "bid_walk": {
+        "gross": 13.7708692,
+        "fee": 0.08097271089599999,
+        "net": 13.689896489104,
+        "avg_fill": 0.916,
+        "unfilled": 0.0
+      },
+      "valuation_kind": "indicative_unsynchronized_bid_walk"
+    },
+    {
+      "asset": "46758607612833917422236285013995068496804632645622273981549757589704779851841",
+      "conditionId": "0x432986c91a2a364d37179db26f78e8b7b69a5da3c0bc7e09a3458918dc6ad34a",
+      "outcome": "No",
+      "title": "Will the highest score achieved by an OpenAI model on Humanity\u2019s Last Exam in 2026 be 50% or higher?",
+      "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063",
+      "size": 15,
+      "avgPrice": 0.37,
+      "initialValue": 5.55,
+      "currentValue": 0,
+      "curPrice": 0,
+      "redeemable": true,
+      "valuation_kind": "reported_redeemable"
+    },
+    {
+      "asset": "10547381015916960267379463101229159185405356924982461726471550099674011526491",
+      "conditionId": "0xb5c0abeecb5502e6e8d83155c27819174d8317af3c425c3afc5a8c45257a3793",
+      "outcome": "Yes",
+      "title": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+      "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
+      "size": 0.247,
+      "avgPrice": 0.2535,
+      "initialValue": 0.0626,
+      "currentValue": 0,
+      "curPrice": 0,
+      "redeemable": true,
+      "valuation_kind": "reported_redeemable"
+    }
+  ],
+  "hle_markets": {
+    "retrieved_at": "2026-09-10T10:52:23.814209+00:00",
+    "markets": [
+      {
+        "id": "3072351",
+        "question": "Will the highest score achieved by an OpenAI model on Humanity\u2019s Last Exam in 2026 be 50% or higher?",
+        "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063",
+        "conditionId": "0x432986c91a2a364d37179db26f78e8b7b69a5da3c0bc7e09a3458918dc6ad34a",
+        "active": true,
+        "closed": true,
+        "umaResolutionStatus": "resolved",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"69704908009376919353357135561260625662904842602354355575062272436958244493827\", \"46758607612833917422236285013995068496804632645622273981549757589704779851841\"]",
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.04,
+          "takerOnly": true,
+          "rebateRate": 0.25
+        },
+        "updatedAt": "2026-09-10T10:50:32.337583Z",
+        "criteria_sha256": "3920090ada93087744eca9f75db58bd32897d9c579a074dfaf19333d17338d0f",
+        "source_url": "https://gamma-api.polymarket.com/markets/3072351"
+      },
+      {
+        "id": "3072352",
+        "question": "Will the highest score achieved by an OpenAI model on Humanity\u2019s Last Exam in 2026 be 55% or higher?",
+        "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
+        "conditionId": "0xd30e3b4e2d6bf4594f44ad982b55435c3add71d3622993b0dee67354defaf598",
+        "active": true,
+        "closed": false,
+        "umaResolutionStatus": null,
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.845\", \"0.155\"]",
+        "clobTokenIds": "[\"95838866293424458434357396721995284671601295594880858924284682662112626178910\", \"2261859210057397360733755370829699556983953980550942465322842594827769255576\"]",
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.04,
+          "takerOnly": true,
+          "rebateRate": 0.25
+        },
+        "updatedAt": "2026-09-10T10:48:06.50434Z",
+        "criteria_sha256": "3920090ada93087744eca9f75db58bd32897d9c579a074dfaf19333d17338d0f",
+        "source_url": "https://gamma-api.polymarket.com/markets/3072352"
+      },
+      {
+        "id": "3072356",
+        "question": "Will the highest score achieved by a Google Gemini model on Humanity\u2019s Last Exam in 2026 be 50% or higher?",
+        "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+        "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
+        "active": true,
+        "closed": false,
+        "umaResolutionStatus": null,
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.8155\", \"0.1845\"]",
+        "clobTokenIds": "[\"85763325553404394224355572659845303593900555295752446801953497885030187584012\", \"111835132798139435193189586258024326073875835103403390559042061675379269236081\"]",
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.04,
+          "takerOnly": true,
+          "rebateRate": 0.25
+        },
+        "updatedAt": "2026-09-10T10:46:06.829072Z",
+        "criteria_sha256": "4b1620fbcc2c5161fbe44973b10f6175f282189b0aee18a033030e13fcf0fbc2",
+        "source_url": "https://gamma-api.polymarket.com/markets/3072356"
+      },
+      {
+        "id": "3212719",
+        "question": "Will the next Google Gemini Pro model debut with a Humanity\u2019s Last Exam score of 40% or higher?",
+        "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+        "conditionId": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
+        "active": true,
+        "closed": false,
+        "umaResolutionStatus": null,
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.885\", \"0.115\"]",
+        "clobTokenIds": "[\"61626396936135534387255598822072032822427356046085661886191264067533617653935\", \"67951575343428346736827544478449934796473993940055164453800722378542887483258\"]",
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.04,
+          "takerOnly": true,
+          "rebateRate": 0.25
+        },
+        "updatedAt": "2026-09-10T10:48:06.50434Z",
+        "criteria_sha256": "d8bb2e827220612c7da6063db8ded8ee57f7d3745c33134cc0561edf08beafae",
+        "source_url": "https://gamma-api.polymarket.com/markets/3212719"
+      }
+    ]
+  },
+  "orders": {
+    "retrieval_window": "2026-09-10T10:52:23Z/2026-09-10T10:52:25Z",
+    "complete_pagination": true,
+    "rows": [
+      {
+        "market": "0x890fc3ba40458db0b67560691aa1597344c2a0560d18e80f586a4b35f510b4ce",
+        "asset_id": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
+        "side": "SELL",
+        "status": "LIVE",
+        "price": "0.98",
+        "original_size": "19",
+        "size_matched": "0",
+        "outcome": "No"
+      },
+      {
+        "market": "0xd30e3b4e2d6bf4594f44ad982b55435c3add71d3622993b0dee67354defaf598",
+        "asset_id": "2261859210057397360733755370829699556983953980550942465322842594827769255576",
+        "side": "SELL",
+        "status": "LIVE",
+        "price": "0.85",
+        "original_size": "19",
+        "size_matched": "0",
+        "outcome": "No"
+      },
+      {
+        "market": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
+        "asset_id": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
+        "side": "SELL",
+        "status": "LIVE",
+        "price": "0.75",
+        "original_size": "59",
+        "size_matched": "0",
+        "outcome": "No"
+      },
+      {
+        "market": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+        "asset_id": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+        "side": "SELL",
+        "status": "LIVE",
+        "price": "0.97",
+        "original_size": "28",
+        "size_matched": "0",
+        "outcome": "No"
+      }
+    ]
+  },
+  "hle_50_finality": {
+    "chain_id": 137,
+    "ctf": "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045",
+    "condition_id": "0x432986c91a2a364d37179db26f78e8b7b69a5da3c0bc7e09a3458918dc6ad34a",
+    "block": 93555083,
+    "denominator": 1,
+    "numerators": [
+      1,
+      0
+    ]
+  },
+  "reported_bankroll": {
+    "cache": {
+      "total": 187.73,
+      "at": "2026-09-10T10:52:14+00:00"
+    },
+    "pm_mid_usd": 154.44,
+    "pm_indicative_bid_walk_usd": 147.54,
+    "mid_minus_walk_gap_usd": 6.89,
+    "gas_value_usd": 6.05,
+    "legacy_realized_residual_usd": 8.89,
+    "open_marked_pnl_usd": 2.79,
+    "open_bid_walk_pnl_usd": -4.1,
+    "trading_capital_contributed_usd": 170,
+    "notes": "Rounded printed outputs of scripts/bankroll.py. Sequential reads; stablecoins/aTokens valued at par. Legacy realized residual includes accruals and is not a reconciled cash-flow ledger. Gas separately contributed; historical gas acquisition value and off-wallet costs unknown. This total predates the separate position-depth observations below."
+  }
+}
