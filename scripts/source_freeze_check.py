@@ -2,11 +2,11 @@
 """Is a named resolution source actually UPDATING? Measure it, don't assume it.
 
 WHY THIS EXISTS (2026-08-25). Several positions resolve on a named web source
-(agi.safe.ai for the HLE cluster), and the whole thesis is "that source is
+(agi.safe.ai for the HLE cluster), and the whole thesis was "that source is
 frozen". That claim was carried for weeks as an INFERENCE from what was missing
 from the page. Inference is not measurement, and the market disagreed with me by
-~65pp on exactly this variable — so it got measured: fetch the live page and an
-archived snapshot, parse BOTH with ONE instrument, and diff.
+~65pp on exactly this variable — so it got measured: fetch the live source and
+an archived snapshot, parse BOTH with ONE instrument, and diff.
 
 THE STEP THAT MATTERS MOST IS --validate. A diff showing "no change" has two
 causes: the source really is frozen, or the parser is blind (it reads a static
@@ -20,15 +20,16 @@ board looks stale" into a located change-point: additions in 2025-09 (gpt-5) and
 across 2026. Same shape as the empty-list lesson — absent output and broken
 output look identical until you check against a known truth.
 
-2026-09-07: the default for agi.safe.ai now compares EVERY results-table row,
-including both displayed numeric columns. The old whole-page name regex missed
-Flash/o1, included prose-only names and could not detect a score-only revision.
+2026-09-10 CORRECTION: agi.safe.ai's resolving "AI Progress" chart is populated
+by dashboard.safe.ai/api/models. The server-rendered ten-row HTML table is a
+different, stale surface. Reading that table manufactured a false FROZEN result
+while the chart API grew from 44 archived rows on July 3 to 58 live rows. HLE
+mode now compares raw archived and live API payloads with the same parser.
 Other URLs and custom --pattern uses retain explicitly labeled token-only mode.
-An unchanged table is not evidence that the dataset, prose or institution is idle.
 
 CLI:
-  source_freeze_check.py --url https://agi.safe.ai/ --since 20260115
-  source_freeze_check.py --url https://agi.safe.ai/ --validate 20250601 20251201
+  source_freeze_check.py --url https://agi.safe.ai/ --since 20260703
+  source_freeze_check.py --url https://agi.safe.ai/ --validate 20260703 20260804
 """
 
 from __future__ import annotations
@@ -43,6 +44,8 @@ from urllib.parse import urlsplit
 import httpx
 
 WAYBACK = "https://web.archive.org/web/{stamp}/{url}"
+WAYBACK_RAW = "https://web.archive.org/web/{stamp}id_/{url}"
+HLE_CHART_API = "https://dashboard.safe.ai/api/models"
 # Default: model-name shapes on AI leaderboards. Override with --pattern for
 # other sources (registries, official lists, index pages).
 # 2026-08-25: the first version required a HYPHEN (`claude-`, `grok-`) and was
@@ -56,6 +59,21 @@ DEFAULT_PATTERN = (r"gpt[\w.\-]{0,10}|gemini[\w.\- ]{0,10}pro"
                    r"|qwen[\w.\-]{0,12}|o[34]-?\w*")
 PATTERN = DEFAULT_PATTERN
 Inventory = set[str] | dict[str, tuple[str, str]]
+
+
+def _score(value: object, *, missing_ok: bool = False) -> str:
+    """Normalize a percentage without accepting NaN, booleans or junk."""
+    if missing_ok and (value is None or value in ("", "-")):
+        return "-"
+    if isinstance(value, bool) or not isinstance(value, (str, int, float, Decimal)):
+        raise ValueError(f"invalid result value: {value!r}")
+    raw = str(value).removesuffix("%").strip()
+    if not re.fullmatch(r"\d+(?:\.\d+)?", raw):
+        raise ValueError(f"invalid result value: {value!r}")
+    number = Decimal(raw)
+    if not number.is_finite() or not 0 <= number <= 100:
+        raise ValueError("result outside percentage range")
+    return format(number.normalize(), "f")
 
 
 class _Tables(HTMLParser):
@@ -127,17 +145,6 @@ def hle_results(html: str) -> dict[str, tuple[str, str]]:
     if len(tables) != 1:
         raise ValueError("expected exactly one recognizable HLE results table")
 
-    def score(cell: str, *, missing_ok: bool = False) -> str:
-        if missing_ok and cell in ("", "-"):
-            return "-"  # 2025 snapshots use both blank and '-' for missing calibration.
-        value = cell.removesuffix("%").strip()
-        if not re.fullmatch(r"\d+(?:\.\d+)?", value):
-            raise ValueError(f"invalid result value: {cell!r}")
-        number = Decimal(value)
-        if not 0 <= number <= 100:
-            raise ValueError("result outside percentage range")
-        return format(number.normalize(), "f")
-
     rows = {}
     for cells in tables[0][1:]:
         if len(cells) != 3 or not cells[0]:
@@ -145,9 +152,40 @@ def hle_results(html: str) -> dict[str, tuple[str, str]]:
         name = cells[0].casefold()
         if name in rows:
             raise ValueError(f"duplicate model row: {name}")
-        rows[name] = (score(cells[1]), score(cells[2], missing_ok=True))
+        rows[name] = (_score(cells[1]), _score(cells[2], missing_ok=True))
     if not rows:
         raise ValueError("empty HLE results table")
+    return rows
+
+
+def hle_chart_results(payload: object) -> dict[str, tuple[str, str]]:
+    """Parse the API that actually populates agi.safe.ai's resolving chart.
+
+    The displayed chart rounds ``scores.hle`` to one decimal, but retaining the
+    API's full numeric precision also detects source revisions that do not cross
+    a displayed tenth. Missing HLE scores, malformed identities and duplicate
+    displayed names are inconclusive rather than silently omitted.
+    """
+    if not isinstance(payload, list) or not payload:
+        raise ValueError("expected a non-empty HLE chart model list")
+    rows: dict[str, tuple[str, str]] = {}
+    for item in payload:
+        if not isinstance(item, dict):
+            raise ValueError("HLE chart model row is not an object")
+        name_raw = item.get("name")
+        model_id = item.get("id")
+        scores = item.get("scores")
+        if (not isinstance(name_raw, str) or not name_raw.strip()
+                or not isinstance(model_id, str) or not model_id.strip()
+                or not isinstance(scores, dict) or "hle" not in scores):
+            raise ValueError("HLE chart row lacks identity or score data")
+        name = name_raw.strip().casefold()
+        if name in rows:
+            raise ValueError(f"duplicate model row: {name}")
+        rows[name] = (
+            _score(scores["hle"]),
+            _score(scores.get("hle_calibration_error"), missing_ok=True),
+        )
     return rows
 
 
@@ -174,11 +212,16 @@ def tokens(html: str, pattern: str) -> set[str]:
 
 
 def fetch(client: httpx.Client, url: str, stamp: str | None) -> Inventory | None:
-    target = WAYBACK.format(stamp=stamp, url=url) if stamp else url
+    hle_mode = uses_hle_results(url)
+    if hle_mode:
+        target = (WAYBACK_RAW.format(stamp=stamp, url=HLE_CHART_API)
+                  if stamp else HLE_CHART_API)
+    else:
+        target = WAYBACK.format(stamp=stamp, url=url) if stamp else url
     try:
         response = client.get(target)
         response.raise_for_status()
-        parsed = (hle_results(response.text) if uses_hle_results(url)
+        parsed = (hle_chart_results(response.json()) if hle_mode
                   else tokens(response.text, PATTERN))
         # Fail closed. Wayback occasionally returns a successful-looking empty
         # shell (or an upstream error body); treating that as a real empty
@@ -200,7 +243,7 @@ def main() -> int:
                          "occurred; proves the parser can see change at all")
     ap.add_argument("--pattern", default=DEFAULT_PATTERN,
                     help="non-default regex uses token-only mode; default on agi.safe.ai "
-                         "compares every result row and both score columns")
+                         "compares every live/archived resolving-chart API row")
     ap.add_argument("--expect", default=None,
                     help="comma-separated substrings that MUST appear in the live parse "
                          "(e.g. 'claude,grok'). --validate only proves the parser sees SOME "
@@ -209,17 +252,24 @@ def main() -> int:
                          "while the pattern was blind to space-separated names, and the gap was "
                          "caught only by cross-checking a known inventory. This is that check, "
                          "mechanised.")
+    ap.add_argument("--brief", action="store_true",
+                    help="omit the full live inventory while retaining every diff and verdict")
     a = ap.parse_args()
     global PATTERN
     PATTERN = a.pattern
     table_mode = uses_hle_results(a.url)
-    print("[mode] HLE results table: all model rows + accuracy + calibration" if table_mode else
+    print("[mode] HLE resolving chart API: all model rows + accuracy + calibration" if table_mode else
           "[mode] regex tokens only: no claim about scores or whole-page stasis")
 
     # Wayback intermittently returns 503 to the library default user-agent
     # while serving the same capture to a normal browser/curl client.
     with httpx.Client(timeout=60, follow_redirects=True,
-                      headers={"User-Agent": "Mozilla/5.0 (polyclaude source monitor)"}) as c:
+                      headers={
+                          "User-Agent": "Mozilla/5.0 (polyclaude source monitor)",
+                          "Accept": "application/json, text/html;q=0.9, */*;q=0.8",
+                          "Origin": "https://agi.safe.ai",
+                          "Referer": "https://agi.safe.ai/",
+                      }) as c:
         if a.validate:
             early, late = (fetch(c, a.url, s) for s in a.validate)
             if early is None or late is None:
@@ -259,10 +309,11 @@ def main() -> int:
             added, removed, changed = differences(old, live)
             print(f"[live vs {a.since}] added {added or 'NONE'} | removed {removed or 'NONE'} "
                   f"| changed {changed or 'NONE'}")
-            print(f"  live inventory ({len(live)}): "
-                  f"{dict(sorted(live.items())) if isinstance(live, dict) else sorted(live)}")
+            if not a.brief:
+                print(f"  live inventory ({len(live)}): "
+                      f"{dict(sorted(live.items())) if isinstance(live, dict) else sorted(live)}")
             if not added and not removed and not changed:
-                subject = "RESULTS TABLE" if table_mode else "REGEX TOKEN SET"
+                subject = "RESOLVING CHART API" if table_mode else "REGEX TOKEN SET"
                 print(f"VERDICT: {subject} UNCHANGED over this window "
                       "(run --validate before trusting it; not a whole-page claim)")
             else:

@@ -50,6 +50,8 @@ import position_groups
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PRIORS_PATH = REPO_ROOT / "notes" / "portfolio_kelly_priors.json"
 MIN_POSITION_SHARES = 0.5
+TICKET_COST_CAP_FRACTION = 0.15
+CLUSTER_COST_CAP_FRACTION = 0.30
 
 
 
@@ -87,6 +89,213 @@ def filter_operational_positions(positions: list[dict]) -> list[dict]:
         if size > MIN_POSITION_SHARES and pos.get("redeemable") is not True:
             kept.append(pos)
     return kept
+
+
+def prior_for_slug(priors: dict, slug: str) -> dict:
+    """Resolve the same exact-or-prefix prior used by the Kelly row model."""
+    exact = priors.get(slug)
+    if isinstance(exact, dict):
+        return exact
+    for prior_slug, prior in priors.items():
+        if (isinstance(prior_slug, str) and not prior_slug.startswith("_")
+                and isinstance(prior, dict) and slug.startswith(prior_slug)):
+            return prior
+    return {}
+
+
+def _required_position_number(position: dict, key: str, context: str) -> float:
+    """Read a required nonnegative position number without NaN fail-open."""
+    try:
+        value = float(position[key])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError(f"{context} {key} is unavailable") from exc
+    if not math.isfinite(value) or value < 0.0:
+        raise ValueError(f"{context} {key} is invalid")
+    return value
+
+
+def _position_gross_cost(position: dict, context: str) -> float:
+    """Match the entry gate's collateral-plus-entry-fee cap basis."""
+    return (
+        _required_position_number(position, "initialValue", context)
+        + _required_position_number(position, "entryFeesUsdc", context)
+    )
+
+
+def cluster_cap_states(
+    positions: list[dict], priors: dict, bankroll: float
+) -> dict[str, dict[str, float]]:
+    """Aggregate live gross cost once per configured correlation cluster.
+
+    This intentionally follows the single-entry gate's cost basis and excludes
+    redeemable claim/cash rows. Missing cluster or cost data fails closed so a
+    Kelly delta cannot silently become an actionable scale-in recommendation.
+    """
+    try:
+        bankroll = float(bankroll)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("bankroll is unavailable") from exc
+    if not math.isfinite(bankroll) or bankroll <= 0.0:
+        raise ValueError("bankroll is invalid")
+    if not isinstance(positions, list) or not isinstance(priors, dict):
+        raise ValueError("positions/priors are malformed")
+
+    gross_by_cluster: dict[str, float] = {}
+    for position in positions:
+        if not isinstance(position, dict):
+            raise ValueError("position row is not an object")
+        slug = str(position.get("slug") or "")
+        context = f"position {slug or position.get('title') or '?'}"
+        size = _required_position_number(position, "size", context)
+        if size <= MIN_POSITION_SHARES or position.get("redeemable") is True:
+            continue
+        if not slug:
+            raise ValueError(f"{context} lacks a slug")
+        prior = prior_for_slug(priors, slug)
+        cluster = prior.get("cluster") if prior else None
+        if not isinstance(cluster, str) or not cluster.strip():
+            raise ValueError(f"{context} lacks an explicit correlation cluster")
+        cluster = cluster.strip()
+        gross_by_cluster[cluster] = (
+            gross_by_cluster.get(cluster, 0.0)
+            + _position_gross_cost(position, context)
+        )
+
+    cap = bankroll * CLUSTER_COST_CAP_FRACTION
+    return {
+        cluster: {
+            "gross_cost": gross_cost,
+            "cap": cap,
+            "headroom": max(0.0, cap - gross_cost),
+            "fraction": min(1.0, gross_cost / bankroll),
+        }
+        for cluster, gross_cost in gross_by_cluster.items()
+    }
+
+
+def ticket_cap_states(
+    positions: list[dict], bankroll: float
+) -> dict[str, dict[str, float]]:
+    """Return the entry gate's fee-inclusive 15% headroom for each held market."""
+    try:
+        bankroll = float(bankroll)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("bankroll is unavailable") from exc
+    if not math.isfinite(bankroll) or bankroll <= 0.0:
+        raise ValueError("bankroll is invalid")
+    if not isinstance(positions, list):
+        raise ValueError("positions are malformed")
+
+    live: list[dict] = []
+    for position in positions:
+        if not isinstance(position, dict):
+            raise ValueError("position row is not an object")
+        slug = str(position.get("slug") or "")
+        context = f"position {slug or position.get('title') or '?'}"
+        size = _required_position_number(position, "size", context)
+        if size <= MIN_POSITION_SHARES or position.get("redeemable") is True:
+            continue
+        if not slug:
+            raise ValueError(f"{context} lacks a slug")
+        live.append({
+            "slug": slug,
+            "condition": str(position.get("conditionId") or "").lower(),
+            "title": str(position.get("title") or "").strip().lower(),
+            "gross_cost": _position_gross_cost(position, context),
+        })
+
+    cap = bankroll * TICKET_COST_CAP_FRACTION
+    states: dict[str, dict[str, float]] = {}
+    for candidate in live:
+        gross_cost = sum(
+            position["gross_cost"]
+            for position in live
+            if (
+                position["slug"] == candidate["slug"]
+                or bool(candidate["condition"]
+                        and position["condition"] == candidate["condition"])
+                or bool(candidate["title"]
+                        and position["title"] == candidate["title"])
+            )
+        )
+        states[candidate["slug"]] = {
+            "gross_cost": gross_cost,
+            "cap": cap,
+            "headroom": max(0.0, cap - gross_cost),
+        }
+    return states
+
+
+def gate_scale_in_candidates(
+    candidates: list[dict],
+    cap_states: dict[str, dict[str, float]],
+    policy_error: str | None = None,
+    ticket_states: dict[str, dict[str, float]] | None = None,
+) -> tuple[list[dict], list[dict]]:
+    """Suppress recommendations exceeding ticket or shared-cluster headroom."""
+    if not candidates:
+        return [], []
+    if policy_error:
+        return [], [{
+            "cluster": "unavailable",
+            "count": len(candidates),
+            "reason": policy_error,
+        }]
+
+    ticket_eligible: list[dict] = []
+    blocked: list[dict] = []
+    for row in candidates:
+        if ticket_states is not None:
+            slug = str(row.get("slug") or "")
+            state = ticket_states.get(slug)
+            if state is None:
+                blocked.append({
+                    "kind": "ticket",
+                    "slug": slug or "unavailable",
+                    "count": 1,
+                    "reason": "ticket exposure is unavailable",
+                })
+                continue
+            requested = max(0.0, float(row["delta"]))
+            if requested > state["headroom"] + 1e-9:
+                blocked.append({
+                    "kind": "ticket",
+                    "slug": slug,
+                    "count": 1,
+                    "requested": requested,
+                    **state,
+                })
+                continue
+        ticket_eligible.append(row)
+
+    by_cluster: dict[str, list[dict]] = {}
+    for row in ticket_eligible:
+        cluster = str(row.get("cluster") or "").strip()
+        by_cluster.setdefault(cluster, []).append(row)
+
+    allowed: list[dict] = []
+    for cluster, cluster_rows in by_cluster.items():
+        state = cap_states.get(cluster)
+        if not cluster or cluster == "uncategorized" or state is None:
+            blocked.append({
+                "kind": "cluster",
+                "cluster": cluster or "unavailable",
+                "count": len(cluster_rows),
+                "reason": "configured cluster exposure is unavailable",
+            })
+            continue
+        requested = sum(max(0.0, float(row["delta"])) for row in cluster_rows)
+        if requested > state["headroom"] + 1e-9:
+            blocked.append({
+                "kind": "cluster",
+                "cluster": cluster,
+                "count": len(cluster_rows),
+                "requested": requested,
+                **state,
+            })
+            continue
+        allowed.extend(cluster_rows)
+    return allowed, blocked
 
 
 def fetch_positions(addr: str) -> list[dict]:
@@ -196,6 +405,19 @@ def main() -> int:
             file=sys.stderr,
         )
         return 2
+    try:
+        cluster_caps = cluster_cap_states(positions, priors, args.bankroll)
+        ticket_caps = ticket_cap_states(positions, args.bankroll)
+        cluster_policy_error = None
+    except ValueError as exc:
+        cluster_caps = {}
+        ticket_caps = {}
+        cluster_policy_error = str(exc)
+        print(
+            f"# WARNING: ticket/cluster-cap accounting unavailable ({exc}); "
+            "scale-in recommendations suppressed",
+            file=sys.stderr,
+        )
     group_book = position_groups.evaluate_groups(priors, positions)
     grouped_slugs = set(group_book.by_slug)
     group_add_quotes: dict[str, list[tuple[str, dict, dict]]] = {}
@@ -306,19 +528,10 @@ def main() -> int:
         days = None  # not used in current Kelly calc; leave as placeholder
         title = pos.get("title", "?")
 
-        # Resolve P(win) from priors or default.
-        # Exact match first; if none, prefix match (actual position slugs from
-        # data-api have random numeric suffixes like "...-333-871-241-192-799-449"
-        # appended to the canonical event-name stem stored in priors). 2026-05-19
-        # catalyst_check on May-31 revealed two positions silently using the
-        # default mark+0.05 because slug-suffix mismatch — priors were 5pp/10pp
-        # tighter and being ignored. Prefix match restores prior usage.
-        prior = priors.get(slug, {})
-        if not prior:
-            for k, v in priors.items():
-                if slug.startswith(k):
-                    prior = v
-                    break
+        # Resolve P(win) from priors or default. Exact match comes first; the
+        # prefix fallback handles data-api's numeric suffixes on canonical
+        # event-name stems.
+        prior = prior_for_slug(priors, slug)
         if side == "Yes":
             p_win = prior.get("p_yes", min(0.99, mark + 0.05))
         else:
@@ -326,6 +539,14 @@ def main() -> int:
         cluster = prior.get("cluster", "uncategorized")
         rho_within = prior.get("rho_within", 0.6)
         cluster_frac = prior.get("cluster_frac", 0.20)
+        cluster_state = cluster_caps.get(cluster)
+        if cluster_state is not None:
+            # Match entry sizing: a stale per-row declaration may increase the
+            # correlation discount, but it may never understate current gross
+            # exposure in the configured cluster.
+            cluster_frac = max(
+                float(cluster_frac), float(cluster_state["fraction"])
+            )
         set_only = set_only_label(prior)
         # Prior-staleness tag (2026-07-25): kimi verification went 3-for-3
         # catching priors resting on stale evidence this week (GPT-6, MacBook,
@@ -569,6 +790,40 @@ def main() -> int:
     print(f"\nRecommended actions (delta > $5 = scale-in candidate):")
     candidates = [r for r in actives if r["delta"] is not None and r["delta"] > 5]
     candidates.sort(key=lambda r: -r["delta"])
+    candidates, policy_blocks = gate_scale_in_candidates(
+        candidates,
+        cluster_caps,
+        cluster_policy_error,
+        ticket_states=ticket_caps,
+    )
+    for block in policy_blocks:
+        if block.get("kind") == "ticket" and "gross_cost" in block:
+            print(
+                f"  TICKET_CAP {block['slug']}: suppressed scale-in; current gross "
+                f"${block['gross_cost']:.2f}, 15% cap ${block['cap']:.2f}, "
+                f"headroom ${block['headroom']:.2f} < requested "
+                f"${block['requested']:.2f}. Entry gate also rechecks pending BUYs."
+            )
+            continue
+        if block.get("kind") == "ticket":
+            print(
+                f"  TICKET_CAP {block['slug']}: suppressed scale-in; "
+                f"{block['reason']}"
+            )
+            continue
+        if "gross_cost" not in block:
+            print(
+                f"  POLICY_CAP {block['cluster']}: suppressed {block['count']} "
+                f"scale-in candidate(s); {block['reason']}"
+            )
+            continue
+        print(
+            f"  POLICY_CAP {block['cluster']}: suppressed {block['count']} "
+            f"correlated scale-in candidate(s); current gross "
+            f"${block['gross_cost']:.2f}, 30% cap ${block['cap']:.2f}, "
+            f"headroom ${block['headroom']:.2f} < requested "
+            f"${block['requested']:.2f}. Entry gate also rechecks pending BUYs."
+        )
     for r in candidates[:5]:
         print(f"  +${r['delta']:>6.2f}  {r['side']} @ ${r['mark']}  edge={r['edge_pp']:>5.2f}pp  {r['title']}{r.get('stale','')}")
 

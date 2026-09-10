@@ -439,12 +439,15 @@ _RESERVATION_MISSING_GRACE_SECONDS = 300.0
 
 
 def _parse_clob_result(stdout: str, side: str,
-                       expected_shares: float) -> tuple[bool, dict | None]:
-    """Parse clob_v2 output and prove an immediate, exact exchange match.
+                       expected_shares: float, *,
+                       allow_buy_overfill: bool = False) -> tuple[bool, dict | None]:
+    """Parse clob_v2 output and prove an immediate exchange match.
 
     HTTP 200 and ``success=true`` are not fill proofs: the CLOB can return live
     or delayed orders, and a nominal match can carry the wrong amount. Bundle
-    execution also reconciles the ERC-1155 balance before sending the next leg.
+    execution requires an exact amount and also reconciles the ERC-1155 balance
+    before sending the next leg. An ordinary cash-sized BUY may accept extra
+    shares from price improvement because its downside remains cash-capped.
     """
     start = stdout.find("{")
     if start < 0:
@@ -476,16 +479,25 @@ def _parse_clob_result(stdout: str, side: str,
         expected = float(expected_shares)
     except (KeyError, TypeError, ValueError):
         return False, result
+    amount_matches = (
+        amount + _BALANCE_TOL >= expected
+        if allow_buy_overfill and side.upper() == "BUY"
+        else abs(amount - expected) <= _BALANCE_TOL
+    )
     if (not math.isfinite(amount) or not math.isfinite(expected)
-            or expected <= 0.0 or abs(amount - expected) > _BALANCE_TOL):
+            or expected <= 0.0 or not amount_matches):
         return False, result
     return True, result
 
 
 def _classify_clob_result(stdout: str, side: str,
-                          expected_shares: float) -> tuple[str, dict | None]:
+                          expected_shares: float, *,
+                          allow_buy_overfill: bool = False) -> tuple[str, dict | None]:
     """Return ``matched``, ``failed``, or ``ambiguous`` for a response."""
-    ok, result = _parse_clob_result(stdout, side, expected_shares)
+    ok, result = _parse_clob_result(
+        stdout, side, expected_shares,
+        allow_buy_overfill=allow_buy_overfill,
+    )
     if ok:
         return "matched", result
     if result is None:
@@ -3077,7 +3089,12 @@ def main() -> int:
               "manual reconciliation", file=sys.stderr)
         return 4
     print(r.stdout)
-    state, result = _classify_clob_result(r.stdout, "BUY", target_shares)
+    # A marketable BUY signs a cash amount at a worst-case limit. Price
+    # improvement can therefore return more net shares than the conservative
+    # target without increasing the capped cash risk. Exact-share bundles keep
+    # the strict parser path above because an overfill would break equal legs.
+    state, result = _classify_clob_result(
+        r.stdout, "BUY", target_shares, allow_buy_overfill=True)
     body = result.get("body") if isinstance(result, dict) else None
     order_id = str(body.get("orderID") or "") if isinstance(body, dict) else ""
     accepted_live = bool(

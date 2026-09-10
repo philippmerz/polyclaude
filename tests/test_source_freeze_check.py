@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sys
 
 import httpx
@@ -26,14 +27,29 @@ def _row(name="GPT-5", accuracy="25.3", calibration="50.0") -> str:
 class _Client:
     def __init__(self, response: httpx.Response):
         self.response = response
+        self.urls: list[str] = []
 
     def get(self, _url: str) -> httpx.Response:
+        self.urls.append(_url)
         return self.response
 
 
 def _response(status: int, body: str) -> httpx.Response:
     request = httpx.Request("GET", "https://example.test/")
     return httpx.Response(status, text=body, request=request)
+
+
+def _json_response(payload: object, status: int = 200) -> httpx.Response:
+    return _response(status, json.dumps(payload))
+
+
+def _api_row(name="GPT-6 Astra", model_id="gpt-6-astra-high", hle=53.6,
+             calibration=44.2) -> dict:
+    return {
+        "name": name,
+        "id": model_id,
+        "scores": {"hle": hle, "hle_calibration_error": calibration},
+    }
 
 
 def test_fetch_rejects_http_error() -> None:
@@ -75,6 +91,37 @@ def test_hle_live_like_ten_row_inventory() -> None:
     assert sfc.hle_results(body) == {
         name.casefold(): (accuracy, calibration) for name, accuracy, calibration in data
     }
+
+
+def test_hle_chart_api_parses_actual_score_fields_and_missing_calibration() -> None:
+    payload = [
+        _api_row(),
+        _api_row("o3", "o3-high", 20, None),
+        _api_row("Gemini 3.1 Pro", "gemini-3.1-pro-preview-high", 45.90, 50.30),
+    ]
+    assert sfc.hle_chart_results(payload) == {
+        "gpt-6 astra": ("53.6", "44.2"),
+        "o3": ("20", "-"),
+        "gemini 3.1 pro": ("45.9", "50.3"),
+    }
+
+
+@pytest.mark.parametrize("payload", [
+    None,
+    [],
+    ["not an object"],
+    [{}],
+    [_api_row(name="")],
+    [_api_row(model_id="")],
+    [{"name": "GPT-6 Astra", "id": "x", "scores": {}}],
+    [_api_row(hle=None)],
+    [_api_row(hle=float("nan"))],
+    [_api_row(hle=101)],
+    [_api_row(), _api_row(model_id="a-duplicate-id")],
+])
+def test_hle_chart_api_rejects_incomplete_or_ambiguous_payloads(payload) -> None:
+    with pytest.raises(ValueError):
+        sfc.hle_chart_results(payload)
 
 
 def test_hle_detects_score_only_change_that_regex_misses() -> None:
@@ -131,10 +178,25 @@ def test_hle_rejects_invalid_or_ambiguous_results(body) -> None:
 
 
 def test_hle_fetch_is_structured_and_custom_pattern_is_explicit_fallback(monkeypatch) -> None:
-    client = _Client(_response(200, "<p>o3-mini</p>" + _table(_row())))
-    assert sfc.fetch(client, "https://agi.safe.ai/", None) == {"gpt-5": ("25.3", "50")}
+    client = _Client(_json_response([_api_row()]))
+    assert sfc.fetch(client, "https://agi.safe.ai/", None) == {
+        "gpt-6 astra": ("53.6", "44.2")
+    }
+    assert client.urls == [sfc.HLE_CHART_API]
     monkeypatch.setattr(sfc, "PATTERN", r"o3-mini")
-    assert sfc.fetch(client, "https://agi.safe.ai/", None) == {"o3-mini"}
+    generic = _Client(_response(200, "<p>o3-mini</p>"))
+    assert sfc.fetch(generic, "https://agi.safe.ai/", None) == {"o3-mini"}
+    assert generic.urls == ["https://agi.safe.ai/"]
+
+
+def test_hle_archives_the_same_api_surface_with_raw_wayback_capture() -> None:
+    client = _Client(_json_response([_api_row("Gemini 3.1 Pro", "gemini", 45.9, 50.3)]))
+    assert sfc.fetch(client, "https://agi.safe.ai/", "20260703") == {
+        "gemini 3.1 pro": ("45.9", "50.3")
+    }
+    assert client.urls == [
+        "https://web.archive.org/web/20260703id_/https://dashboard.safe.ai/api/models"
+    ]
 
 
 def test_table_mode_is_limited_to_exact_source_root() -> None:
@@ -184,7 +246,7 @@ def test_hle_cli_validation_and_live_comparison_detect_score_change(monkeypatch,
     assert "UNCHANGED" not in out
 
 
-def test_hle_cli_unchanged_is_scoped_to_results_table(monkeypatch, capsys) -> None:
+def test_hle_cli_unchanged_is_scoped_to_resolving_chart(monkeypatch, capsys) -> None:
     monkeypatch.setattr(sfc, "fetch", lambda *_args: {"gpt-5": ("25.3", "50")})
     monkeypatch.setattr(sys, "argv", [
         "source_freeze_check.py", "--url", "https://agi.safe.ai/",
@@ -192,8 +254,25 @@ def test_hle_cli_unchanged_is_scoped_to_results_table(monkeypatch, capsys) -> No
     ])
     assert sfc.main() == 0
     out = capsys.readouterr().out
-    assert "RESULTS TABLE UNCHANGED" in out
+    assert "RESOLVING CHART API UNCHANGED" in out
     assert "not a whole-page claim" in out
+
+
+def test_hle_cli_brief_keeps_diff_but_omits_full_inventory(monkeypatch, capsys) -> None:
+    values = iter((
+        {"gpt-6 astra": ("53.6", "39.8")},
+        {"gpt-5.6 sol": ("45.52", "46.74")},
+    ))
+    monkeypatch.setattr(sfc, "fetch", lambda *_args: next(values))
+    monkeypatch.setattr(sys, "argv", [
+        "source_freeze_check.py", "--url", "https://agi.safe.ai/",
+        "--since", "20260703", "--brief",
+    ])
+
+    assert sfc.main() == 0
+    out = capsys.readouterr().out
+    assert "added ['gpt-6 astra']" in out
+    assert "live inventory" not in out
 
 
 def test_hle_cli_missing_expected_model_still_fails(monkeypatch, capsys) -> None:

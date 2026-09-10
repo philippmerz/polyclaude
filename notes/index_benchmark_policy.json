@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "policy_name": "contribution_timed_passive_index_benchmark",
+  "currency": "USD",
+  "reference_capital": "170.00",
+  "evaluation_start": "2027-01-01",
+  "contributions": [
+    {
+      "date": "2026-04-25",
+      "amount": "70.00",
+      "source": "notes/capital_ledger.md"
+    },
+    {
+      "date": "2026-04-29",
+      "amount": "100.00",
+      "source": "notes/capital_ledger.md"
+    }
+  ],
+  "benchmarks": [
+    {
+      "ticker": "VT",
+      "name": "Vanguard Total World Stock ETF",
+      "fund_url": "https://investor.vanguard.com/investment-products/etfs/profile/vt"
+    },
+    {
+      "ticker": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "fund_url": "https://investor.vanguard.com/investment-products/etfs/profile/vti"
+    },
+    {
+      "ticker": "SPY",
+      "name": "State Street SPDR S&P 500 ETF Trust",
+      "fund_url": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy"
+    }
+  ],
+  "entry_rule": "first_complete_trading_session_strictly_after_contribution_date",
+  "price_source": {
+    "provider": "Yahoo Finance chart API",
+    "endpoint_template": "https://query2.finance.yahoo.com/v8/finance/chart/{ticker}",
+    "interval": "1d",
+    "purchase_price_field": "chart.result[0].indicators.quote[0].close",
+    "total_return_field": "chart.result[0].indicators.adjclose[0].adjclose",
+    "adjustment_definition_url": "https://help.yahoo.com/kb/SLN28256.html",
+    "max_entry_lag_calendar_days": 5,
+    "max_price_age_calendar_days": 4
+  },
+  "assumptions": [
+    "Each contribution remains cash at zero return until the first completed exchange session strictly after its ledger date.",
+    "Raw closes determine initial fractional shares; adjusted-close growth factors model distributions reinvested and split adjustments.",
+    "Commissions, bid-ask spread, slippage and taxes are zero, so this is an idealized passive comparator.",
+    "Gas-token contributions are excluded because the project reference capital is the 170 USD of trading capital.",
+    "The script excludes an in-progress session and refuses future, missing, malformed or stale prices.",
+    "Yahoo's public chart feed can revise historical adjustments; retain the report's retrieval time and source URLs with any recorded comparison."
+  ]
+}

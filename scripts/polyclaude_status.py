@@ -7,7 +7,8 @@ Bundles into a single status summary:
 3. Watchlist trigger check (watchlist_monitor --hits-only)
 4. UMA status check (uma_status_check)
 5. Kelly portfolio audit (portfolio_kelly --constrained)
-6. Recent news alerts (last 6h)
+6. HLE resolving-chart source check (full report only)
+7. Recent news alerts (last 6h)
 
 Output: structured markdown summary + Telegram-friendly tick line.
 
@@ -43,7 +44,12 @@ def run_script(args: list[str], timeout: int = 60) -> str:
         )
         if r.returncode != 0:
             return f"[ERR exit {r.returncode}] {r.stderr.strip()[:300]}"
-        return r.stdout.strip()
+        stdout = r.stdout.strip()
+        stderr = " ".join(r.stderr.split())[:300]
+        if stderr:
+            diagnostic = f"[stderr] {stderr}"
+            return f"{stdout}\n{diagnostic}" if stdout else diagnostic
+        return stdout
     except subprocess.TimeoutExpired:
         return f"[TIMEOUT after {timeout}s]"
     except Exception as e:
@@ -58,6 +64,45 @@ _REALIZABLE_RE = re.compile(
     r"^REALIZABLE \(depth-walked, NET of taker fees\):\s*\$([\d.-]+)",
     re.MULTILINE,
 )
+
+
+def summarize_hurdle_output(output: str) -> str:
+    """Keep actionable hurdle diagnostics while omitting routine hold rows."""
+    summary: list[str] = []
+    capture_flagged = False
+    capture_drawdowns = False
+    diagnostics = ("[ERR", "[TIMEOUT", "[EXCEPTION", "[stderr]")
+    markers = (
+        "DRAWDOWN ALERT",
+        "NEGATIVE_EDGE",
+        "CLOSE_CANDIDATE",
+        "below hurdle",
+        "below-hurdle",
+        "clear hurdle",
+    )
+
+    for line in output.splitlines():
+        stripped = line.strip()
+        if line.startswith("=== FLAGGED"):
+            capture_flagged = True
+            summary.append(line)
+            continue
+        if capture_flagged and line.startswith("==="):
+            capture_flagged = False
+        if line.startswith("!!! DRAWDOWN ALERTS"):
+            capture_drawdowns = True
+            summary.append(line)
+            continue
+        if capture_drawdowns and not stripped:
+            capture_drawdowns = False
+        if capture_flagged or capture_drawdowns:
+            if stripped:
+                summary.append(line)
+            continue
+        if stripped.startswith(diagnostics) or any(marker in line for marker in markers):
+            summary.append(line)
+
+    return "\n".join(summary) if summary else "(see full check_marginal_apy.py output)"
 
 
 def format_telegram_summary(
@@ -153,16 +198,7 @@ def main() -> int:
     # 2. Hurdle scan + drawdown
     print("\n## Hurdle scan (marginal APY + drawdown guard)")
     out = run_script(["scripts/check_marginal_apy.py"], timeout=30)
-    # Show only header + drawdown alerts + close candidates
-    lines = out.split("\n")
-    summary_lines = []
-    in_drawdown = False
-    for line in lines:
-        if "DRAWDOWN ALERT" in line or "below hurdle" in line or "clear hurdle" in line:
-            summary_lines.append(line)
-        elif "Will" in line and "%" in line[:20]:  # data row
-            pass  # skip individual hold rows here
-    print("\n".join(summary_lines) if summary_lines else "(see full check_marginal_apy.py output)")
+    print(summarize_hurdle_output(out))
 
     # 3. Watchlist
     print("\n## Watchlist hits (12 candidates)")
@@ -170,11 +206,23 @@ def main() -> int:
     print(out if out.strip() else "(no triggers hit)")
 
     if not args.quick:
-        # 4. UMA
+        # 4. HLE resolving source. The public page's server-rendered table is
+        # stale; source_freeze_check reads the API that populates the actual
+        # resolving chart and compares it with a pre-market raw archive.
+        print("\n## HLE resolving chart (live API vs Jul-3 pre-market archive)")
+        print(run_script([
+            "scripts/source_freeze_check.py",
+            "--url", "https://agi.safe.ai/",
+            "--since", "20260703",
+            "--expect", "gpt-6,gemini",
+            "--brief",
+        ], timeout=90))
+
+        # 5. UMA
         print("\n## UMA status check")
         print(run_script(["scripts/uma_status_check.py"], timeout=120))
 
-        # 5. Kelly portfolio
+        # 6. Kelly portfolio
         print("\n## Kelly portfolio (constrained)")
         out = run_script(["scripts/portfolio_kelly.py", "--constrained"], timeout=30)
         # Show summary lines only
@@ -188,7 +236,7 @@ def main() -> int:
                 summary.append(line)
         print("\n".join(summary) if summary else out[-1500:])
 
-        # 5b. Brownian-bridge fair-value
+        # 6b. Brownian-bridge fair-value
         print("\n## Brownian-bridge fair-value (time-decay-adjusted)")
         out = run_script(["scripts/brownian_bridge_fv.py"], timeout=30)
         # Show only TRIM/SCALE_UP summary
@@ -202,7 +250,7 @@ def main() -> int:
                 summary.append(line)
         print("\n".join(summary) if summary else "(see brownian_bridge_fv.py for details)")
 
-    # 6. News alerts (last 6h)
+    # 7. News alerts (last 6h)
     print("\n## News alerts (last 6h)")
     cutoff = (datetime.datetime.utcnow() - datetime.timedelta(hours=6)).isoformat()
     alerts_path = REPO_ROOT / "notes" / "news_alerts.jsonl"

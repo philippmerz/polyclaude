@@ -19,6 +19,42 @@ REALIZABLE (depth-walked, NET of taker fees): $46.81  (+5.76%)  — midpoints ov
 """
 
 
+def test_run_script_preserves_stderr_from_successful_command(monkeypatch) -> None:
+    completed = SimpleNamespace(
+        returncode=0,
+        stdout="financial output\n",
+        stderr="warning: fallback value used\n",
+    )
+    monkeypatch.setattr(status.subprocess, "run", lambda *args, **kwargs: completed)
+
+    output = status.run_script(["scripts/example.py"])
+
+    assert output == "financial output\n[stderr] warning: fallback value used"
+
+
+def test_hurdle_summary_keeps_actionable_rows_and_success_diagnostics() -> None:
+    output = """# 8 clear; 3 flagged (NEGATIVE_EDGE / below-hurdle); 0 protected group(s)
+
+=== FLAGGED (negative edge at own prior, or expected edge < hurdle) ===
+  [NEGATIVE_EDGE — EXIT CLEARS COST] No 0.800 | 10.0d | example one
+  [CLOSE_CANDIDATE — EXIT CLEARS COST] No 0.950 | 40.0d | example two
+  [NO_PRIOR (gross-carry only)] No 0.990 | 400.0d | below hurdle example
+
+=== HOLDS (expected edge clears hurdle) ===
+  No 0.500 | 100.0d | routine hold
+[stderr] warning: one quote used a fallback
+"""
+
+    summary = status.summarize_hurdle_output(output)
+
+    assert "NEGATIVE_EDGE" in summary
+    assert "CLOSE_CANDIDATE" in summary
+    assert "below hurdle example" in summary
+    assert "[stderr] warning: one quote used a fallback" in summary
+    assert "routine hold" not in summary
+    assert summary != "(see full check_marginal_apy.py output)"
+
+
 def test_telegram_summary_carries_current_net_depth_value() -> None:
     message = status.format_telegram_summary(CURRENT_POSITIONS_OUTPUT, "2026-09-07T23:00 UTC")
 

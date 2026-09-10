@@ -70,6 +70,20 @@ def test_clob_fill_parser_requires_exact_terminal_evidence():
     assert entry._classify_clob_result("malformed", "BUY", 20)[0] == "ambiguous"
 
 
+def test_cash_sized_buy_accepts_price_improvement_but_bundle_path_stays_exact():
+    improved = _response(amount="20.75")
+
+    assert not entry._parse_clob_result(improved, "BUY", 20)[0]
+    assert entry._parse_clob_result(
+        improved, "BUY", 20, allow_buy_overfill=True)[0]
+    assert entry._classify_clob_result(
+        improved, "BUY", 20, allow_buy_overfill=True)[0] == "matched"
+    assert not entry._parse_clob_result(_response(amount="19.99"), "BUY", 20,
+                                        allow_buy_overfill=True)[0]
+    assert not entry._parse_clob_result(improved, "SELL", 20,
+                                        allow_buy_overfill=True)[0]
+
+
 def test_async_trade_ids_are_resolved_to_hash_proof_before_bundle_parse(monkeypatch):
     body = json.loads(_response(txs=[]))["body"]
     body["tradeIDs"] = ["trade-1"]
