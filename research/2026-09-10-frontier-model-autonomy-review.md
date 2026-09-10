@@ -24,11 +24,13 @@ Gemini 3.8 Flash at **46.2**, and Gemini 3.1 Pro at **45.9**. OpenAI ≥50 there
 literal chart-based YES result. The former “frozen source” thesis is retired.
 
 An initial review trusted the wrong table and sold the Gemini ≥50 and OpenAI ≥55 NO
-positions. Once the real data path was proved, both positions still had positive expected
-value under conservative revised probabilities, so they were repurchased. The round trip
-cost approximately **$2.44 in spread and fees** and restored 0.286595 fewer Gemini claims.
-The error is included in performance and recorded here rather than absorbed into a later
-mark.
+positions. Once the real data path was proved, both positions had positive marginal value
+under the revised central probabilities and the standard ten-point haircut, so they were
+repurchased. This was not true at every published lower bound: OpenAI is the weaker leg and
+is negative below roughly 16.7% NO probability. The round trip caused approximately **$2.44
+of cash damage**, including about $0.88 of explicit exchange fees and $1.56 from adverse
+repricing/spread, and restored 0.286595 fewer Gemini claims. The error is included in
+performance and recorded here rather than absorbed into a later mark.
 
 ## Performance against passive funds
 
@@ -79,9 +81,34 @@ The sell/rebuy sequence was an avoidable research loss, not a portfolio thesis c
 
 Wallet debits for the two buys were approximately $11.37809 and $3.14214 including the
 fee effect, versus approximately $12.077764 total net sale proceeds. That implies the
-reported **$2.44** round-trip cost. The $0.50 Aave withdrawal was an internal collateral
-move, not an expense or external contribution. About 0.106 POL of separately contributed
-gas was also used during the recovery and remains outside trading-return accounting.[21]
+reported **$2.442466** round-trip cash cost. Of this, approximately $0.460230 was re-entry
+fees and $0.418876 was exit fees; the remaining $1.563360 came from buying back at worse
+raw prices and with fewer Gemini claims. At the .35 central Gemini probability, the missing
+0.286595 claim has another $0.1003 of expected payout value. The $0.50 Aave withdrawal was
+an internal collateral move, not an expense or external contribution. About 0.106 POL of
+separately contributed gas was also used during the recovery and remains outside
+trading-return accounting.[21]
+
+### Re-entry EV audit
+
+The churn loss was already sunk when the exits completed. The correct recovery question
+was whether an unpositioned portfolio should buy the claims at their new all-in prices.
+Using a conservative 114-day wait through January 2 at the 2.8764% Aave cash hurdle:
+
+| Re-entry | Claims | All-in cost | Hurdle break-even P(NO) | Recorded P(NO) | Central EV after cash hurdle | Lower-bound EV after hurdle |
+|---|---:|---:|---:|---:|---:|---:|
+| Gemini ≥50 NO | 58.723405 | $11.37809 | .1955 | .35 (.20–.55) | +$9.07 | +$0.26 |
+| OpenAI ≥55 NO | 19 | $3.14214 | .1669 | .30 (.12–.50) | +$2.53 | −$0.89 |
+| **Combined** | — | **$14.52023** | — | — | **+$11.60** | **−$0.63** |
+
+At the central estimates, expected payout is $26.2532 against $14.52023 all-in cost.
+At a ten-point haircut to .25 Gemini and .20 OpenAI, combined hurdle-adjusted EV remains
+about +$3.83. Both published lower bounds occurring together make the re-entry negative.
+Correlation does not change arithmetic expectation, but it worsens portfolio risk; the
+restored exposure remained just inside the shared 30% cost cap. Gemini was justified with
+moderate confidence. OpenAI was defensible under the adopted prior and an independent .25
+estimate, but materially less robust. Re-entry did not erase or earn back the churn loss,
+and full restoration was not proved to be globally optimal sizing.
 
 The Gemini entry helper initially returned an ambiguous status because price improvement
 delivered more shares than its conservative cash-sized target. The exchange and indexed

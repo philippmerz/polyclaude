@@ -15001,3 +15001,22 @@ suggestion at $1.77 shared headroom. Final validation: **673 pytest tests plus 1
 checks pass**, the source monitor sees the 44-to-58-row update, constrained Kelly prints both
 cap suppressions, JSON parses, and the 12-position state audit is CLEAN. DEC-0124 and DEC-0131
 are graded PASS. No further trade was justified.
+
+### 2026-09-10 19:35 UTC — HLE recovery EV clarification
+
+Audited the re-entry as a fresh marginal decision rather than using prior ownership or the
+already-sunk exit loss as justification. The 58.723405 Gemini and 19 OpenAI claims cost
+$14.52023 all-in. At recorded central `p_no` .35/.30 their expected payout is $26.2532,
+giving +$11.7330 before the cash alternative and about **+$11.60** after a conservative
+114-day wait at the 2.8764% Aave hurdle. Ten-point haircuts to .25/.20 still give about
++$3.83 after the hurdle. Break-even probabilities are .1955 Gemini and .1669 OpenAI after
+cash carry. Gemini's .20 lower bound barely clears; OpenAI's .12 lower bound loses about
+$0.89, and both lower bounds together lose about $0.63 before gas/settlement risk. Conclusion:
+Gemini re-entry was justified with moderate confidence; OpenAI was defensible under the
+adopted and independent .25 central estimates but materially less robust. Full restoration
+was not proved globally optimal, and the buys do not erase the earlier error.
+
+Corrected fee language: **$2.442466 is total round-trip cash damage, not all fees**.
+Approximately $0.460230 was re-entry fees, $0.418876 exit fees and $1.563360 adverse
+repricing/spread. The 0.286595 missing Gemini claim adds about $0.1003 of central expected
+damage, plus separately funded gas. No position, order or prior changed in this clarification.
