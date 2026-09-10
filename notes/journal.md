@@ -15020,3 +15020,52 @@ Corrected fee language: **$2.442466 is total round-trip cash damage, not all fee
 Approximately $0.460230 was re-entry fees, $0.418876 exit fees and $1.563360 adverse
 repricing/spread. The 0.286595 missing Gemini claim adds about $0.1003 of central expected
 damage, plus separately funded gas. No position, order or prior changed in this clarification.
+
+## 2026-09-10 20:32 UTC — index outside-option review and execution-path repairs
+
+Made broad equities an explicit investable outside option rather than treating the passive
+benchmark as reporting only. The full underwriting and source trail are in the
+[Sep-10 index allocation review](../research/2026-09-10-index-allocation-review.md). The
+subjective SPX distribution has +2.25% expected price return and 7.92% terminal standard
+deviation through the start-of-2027 evaluation. Two scheduled SPY ex-dates put a conservative
+dividend-owning total-return range near 2.7-3.0%, with material model uncertainty.
+
+No index trade cleared the executable net hurdle. Ostium's live US500 fields imply 5.804856%
+annual long carry and about 1.78370% through Jan-1; adding the live 1bp open fee and 1.053bp
+spread gives 1.80423% direct 1x drag plus gas. Its $0.10 oracle reserve is refunded on a
+successful full close and was excluded from lifecycle cost. A 1x position needs about 2.65%
+SPX price return merely to match 2.74% Arbitrum Aave before gas: on $7.873, modeled price P&L
+after direct cost is only +$0.035 versus about $0.066 Aave carry. Leverage begins to clear the
+simple arithmetic hurdle near 1.9x, but the edge at 2x is under half a cent, the scenario
+expected-log result worsens sharply, and liquidation/path risk is not compensated. More
+decisively, Ostium's current terms cover API/repository Services and bar use from an EU
+location; this VM is in Finland. New Ostium entries are now hard-blocked on both eligibility
+and writer-integrity grounds.
+
+The best spot route found was dividend-rebasing SPYx on Solana through Jupiter. Fresh $10-$29
+round trips lost only 0.0147-0.0152% at the AMM, but Circle's live median forwarding quotes
+made two-reserve mobilization plus one eventual return about $0.545 before Aave withdrawals,
+Polygon USDC.e conversion, source gas, the swap, product fee or new-writer risk. The full
+$23.49 reserve therefore needs at least about 3.22% total return to beat its ~$0.21 Aave carry
+before omitted costs, above the modeled range. Idealized 3.0% growth of every current full
+Polymarket exit also remains below its central hold value except Greenland by about $0.15;
+the route's fixed cost reverses that near tie, while its existing .98 maker sell seeks a better
+exit. DEC-0132 records the fixed Sep-10 counterfactual. No market position, order or reserve
+allocation changed, and Fireworks/model spend was $0.
+
+Removed a separate standing risk after confirming zero Ostium trades and zero active limits:
+revoked the legacy SDK's 999,979.90 USDC TradingStorage allowance to zero in successful
+Arbitrum transaction
+`0x36c77d9b8ecc6e71568aa3dd2ccffa1deb2ba22119677d6773a4b8fe3a56b337`.
+The local Ostium client now deletes the bypassable unsafe open implementation, blocks opens on
+both hard gates, validates exact close identity/percentage and asynchronous oracle completion,
+and surfaces locally computed transaction hashes before RPC submission ambiguity.
+
+Corrected the old false claim that pUSD was one-way. The official v2 CollateralOfframp at
+`0x2957922Eb93258b93368531d39fAcCA3B4dC5854` is deployed, points to the exact pUSD token and
+is live for USDC.e; native USDC is currently paused. `wrap_pusd.py` now supports exact-decimal,
+exact-allowance pUSD -> USDC.e conversion with deployment/pause/simulation checks and tx-local
+event reconciliation. The marginal hurdle now reads the actually reachable Polygon USDC.e
+reserve, 3.007% at review time, and tags the cache by asset. Final validation passed **702
+pytest tests and 156 money-math checks**, live ramp status, zero-exposure/zero-allowance Ostium
+status, CLI refusal checks, JSON parsing and diff whitespace checks. DEC-0133 is graded PASS.

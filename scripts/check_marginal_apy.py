@@ -57,19 +57,14 @@ import httpx
 # real carry.
 HURDLE_APY_FALLBACK = 0.05
 
-# Benchmark chain: freed Polymarket capital is pUSD on Polygon, so the yield it
-# can reach WITHOUT a bridge is Aave-Polygon USDC. Base pays more (3.59% vs
-# 2.88% on 2026-08-14) but getting there costs ~$0.50 of bridge against ~$0.34
-# of annual pickup on a $28 float — so the higher number is not actually
-# available to this capital and using it would overstate the hurdle.
-#
-# HONEST CAVEAT: no pUSD->USDC.e unwrap path exists today (wrap_pusd.py is
-# one-way by design), so freed PM capital cannot literally reach Aave right
-# now — it waits at 0% for the next bet. That makes this a FLOOR PROXY for
-# "capital has somewhere better to be", not a literal opportunity cost. The
-# real alternative to a held position is almost always ANOTHER position; Aave
-# is the number that answers "is this leg worth the slot at all".
+# Benchmark asset: freed Polymarket capital can unwrap 1:1 from pUSD to USDC.e
+# through the deployed CollateralOfframp, then enter Aave Polygon without a
+# bridge. Use that literal same-chain alternative. A different chain or asset
+# only replaces it when its incremental net yield exceeds gas, swap/bridge and
+# operational cost. Aave remains the investable floor; every review should also
+# compare the best lawful, executable higher-return alternative then available.
 HURDLE_CHAIN = "polygon"
+HURDLE_TOKEN = "USDC.e"
 HURDLE_CACHE = Path(__file__).resolve().parent.parent / "notes" / "aave_hurdle.json"
 HURDLE_TTL_HOURS = 24
 
@@ -85,8 +80,12 @@ def _live_hurdle() -> tuple[float, str]:
     try:
         cached = json.loads(HURDLE_CACHE.read_text())
         age_h = (now - dt.datetime.fromisoformat(cached["fetched"])).total_seconds() / 3600
-        if age_h < HURDLE_TTL_HOURS:
-            return float(cached["apy"]), f"live {cached['apy']*100:.2f}% ({cached['chain']}, {age_h:.0f}h old)"
+        if (age_h < HURDLE_TTL_HOURS
+                and cached.get("chain") == HURDLE_CHAIN
+                and cached.get("token") == HURDLE_TOKEN):
+            return float(cached["apy"]), (
+                f"live {cached['apy']*100:.2f}% "
+                f"({cached['chain']}/{cached['token']}, {age_h:.0f}h old)")
     except Exception:
         pass
     try:
@@ -97,13 +96,14 @@ def _live_hurdle() -> tuple[float, str]:
         w = _w3(HURDLE_CHAIN)
         pool = w.eth.contract(address=Web3.to_checksum_address(cfg["pool"]), abi=POOL_ABI)
         rd = pool.functions.getReserveData(
-            Web3.to_checksum_address(cfg["tokens"]["USDC"])).call()
+            Web3.to_checksum_address(cfg["tokens"][HURDLE_TOKEN])).call()
         apy = rd[2] / RAY          # index 2 = currentLiquidityRate, RAY-scaled
         if not (0.0 <= apy < 0.50):   # sanity-bound: a RAY misread shows up as absurd
             raise ValueError(f"implausible APY {apy}")
         HURDLE_CACHE.write_text(json.dumps(
-            {"apy": round(apy, 6), "chain": HURDLE_CHAIN, "fetched": now.isoformat()}, indent=2))
-        return apy, f"live {apy*100:.2f}% ({HURDLE_CHAIN}, fresh)"
+            {"apy": round(apy, 6), "chain": HURDLE_CHAIN,
+             "token": HURDLE_TOKEN, "fetched": now.isoformat()}, indent=2))
+        return apy, f"live {apy*100:.2f}% ({HURDLE_CHAIN}/{HURDLE_TOKEN}, fresh)"
     except Exception as e:
         return HURDLE_APY_FALLBACK, f"FALLBACK {HURDLE_APY_FALLBACK*100:.2f}% (live fetch failed: {str(e)[:40]})"
 
@@ -371,7 +371,7 @@ def _arb_paired(slug: str, priors_raw: dict) -> str | None:
 def main() -> int:
     p = argparse.ArgumentParser(description="Flag held positions whose marginal-APY-to-resolution falls below a hurdle.")
     p.add_argument("--hurdle-apy", type=float, default=None,
-                   help="hurdle APY. Default: LIVE Aave-Polygon USDC supply rate "
+                   help="hurdle APY. Default: LIVE Aave-Polygon USDC.e supply rate "
                         f"(24h cache, falls back to {HURDLE_APY_FALLBACK*100:.2f}%%). "
                         "Pass a value to pin it.")
     p.add_argument("--drawdown-alert-pct", type=float, default=15.0,
@@ -576,14 +576,19 @@ def main() -> int:
                     holds.append(record)
                 else:
                     # EXIT-COST GATE (2026-08-14). A flag is only actionable if
-                    # acting beats not acting. Honest comparison: exit now and
-                    # redeploy the proceeds at the hurdle until this market would
-                    # have resolved, versus hold to resolution at my own prior.
+                    # acting beats not acting. Comparison: exit now and redeploy
+                    # the proceeds at the hurdle until this market would have
+                    # resolved, versus hold to resolution at my own prior.
                     # Anything less (comparing edge to zero, or exiting at the
                     # mark) treats an illiquid book as a free door.
                     net = quote["net"] if quote is not None else None
                     record["exit_net"] = round(net, 2) if net is not None else None
                     if net is not None:
+                        # Gross hurdle carry excludes the two Polygon ramp txs.
+                        # The one-tick materiality floor below currently exceeds
+                        # that route cost and prevents acting on such a small
+                        # modeled advantage. If gas rises above that floor, a
+                        # flagged exit still needs a fresh net route quote.
                         redeployed = net * (1.0 + args.hurdle_apy * days / 365.0)
                         hold_value = size * prior_p
                         record["exit_then_hurdle"] = round(redeployed, 2)

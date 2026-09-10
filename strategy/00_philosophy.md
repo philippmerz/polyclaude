@@ -245,10 +245,16 @@ ever fails (DEC-0083).
    still binds — the same K=5 gate accepted Hormuz Aug-31 (+0.4pp) and rejected the
    Sep-30 sibling (−5pp) precisely because longer horizons load on regime-change
    probability the measurement cannot bound (2026-08-19 regime lesson).
-6. **Op-cost hurdle**: annualized return must beat the riskless alternative (Aave
-   supply APY, currently ~3-4%) plus friction (gas, wrap, spread, fees). Idle capital
-   is never "doing nothing" — it earns the hurdle in Aave **on the chain it already
-   sits on** (a ~0.5pp APY gap never justifies a bridge on sub-$100 amounts).
+6. **Op-cost hurdle**: expected net return must beat the best lawful, executable
+   alternative after financing, dividends, gas, spread, fees, liquidity, correlation
+   and venue risk. Same-chain Aave supply is the investable floor/default, not the
+   whole opportunity set. Broad equity exposure is a candidate whenever its
+   forward net return clears that floor and competing positions; benchmark
+   outperformance to date is evidence about results, not a forecast by itself.
+   Idle capital is never "doing nothing" — it earns the best net hurdle it can
+   actually reach (a small headline APY gap does not justify a bridge on sub-$100
+   amounts). Polymarket pUSD can be unwrapped 1:1 to Polygon USDC.e through the
+   deployed CollateralOfframp, so released capital can literally reach Aave.
    Deploy idle into any entry that clears the pipeline, without an allocation-ratio
    target; discipline lives in these gates, not in a static Aave/PM split.
 

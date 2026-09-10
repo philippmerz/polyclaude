@@ -1,5 +1,5 @@
 {
-  "next_id": 132,
+  "next_id": 134,
   "decisions": [
     {
       "id": 1,
@@ -2594,6 +2594,49 @@
       "calibration_delta": "Engineering and benchmark-policy validation rather than a market outcome. The passive comparison now measures the same contribution schedule reproducibly, and Kelly reporting matches the execution gates.",
       "lesson": "A sizing report must count current fee-inclusive exposure on the same basis as the final entry gate. Pin the passive benchmark policy before comparing performance.",
       "resolved_at": "2026-09-10T19:07:17Z"
+    },
+    {
+      "id": 132,
+      "timestamp": "2026-09-10T20:18:09Z",
+      "type": "skip",
+      "thesis": "Compared the Sep-10 portfolio exits and both Aave reserves with live Ostium US500 and spot SPYx. At 1x, Ostium carry, missing dividends, venue risk and the current EU Services restriction erase the modeled index edge; leverage lacks a lawful path and adequate log-growth/liquidation compensation. SPYx bridge and setup costs erase the small-ticket edge. No current holding has a better executable rotation at its central prior.",
+      "confidence": "medium",
+      "prediction": "Under the Sep-10 20:15 UTC route snapshot and absent a new contribution, the 23.49 dollars held in the two Aave reserves earns more through 2027-01-01 than an unlevered Ostium US500 or SPYx counterfactual after realized index return, dividends, carry and lifecycle costs; any full-position rotation is graded against that position's recorded central hold value.",
+      "size_usd": 23.49,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "index",
+        "allocation",
+        "ostium",
+        "spyx",
+        "opportunity_cost"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 133,
+      "timestamp": "2026-09-10T20:18:09Z",
+      "type": "scaffolding",
+      "thesis": "Current Polymarket v2 contracts expose a supported 1:1 pUSD to USDC.e offramp, while the legacy Ostium SDK left a one-million-dollar approval, uses unsafe open defaults and is independently ineligible from the current environment. Add a validated simulated unwrap path, point the hurdle at reachable Aave USDC.e, block Ostium opens on both gates, and revoke the stale allowance after proving zero trades and limits.",
+      "confidence": "high",
+      "prediction": "Targeted and repository tests pass; live ramp identity and pause checks pass; Ostium USDC allowance is zero with no position or order change.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-11",
+      "tags": [
+        "scaffolding",
+        "collateral",
+        "mobility",
+        "allowance",
+        "safety"
+      ],
+      "slug": null,
+      "outcome": "PASS at implementation: 702 repository pytest tests and 156 money-math checks pass. Live reads confirm the exact pUSD CollateralOfframp is deployed and unpaused for USDC.e (native USDC is paused), and Ostium has zero open trades, zero active limits and zero TradingStorage allowance after confirmed revocation transaction 0x36c77d9b8ecc6e71568aa3dd2ccffa1deb2ba22119677d6773a4b8fe3a56b337.",
+      "calibration_delta": "Engineering and live-state validation rather than a market outcome; every predicted safety property was observed with no market position, order or reserve allocation changed.",
+      "lesson": "Verify current primary contracts before treating collateral as trapped. Treat venue eligibility, allowance scope, transaction ambiguity and asynchronous oracle fill as separate hard gates.",
+      "resolved_at": "2026-09-10T20:31:55Z"
     }
   ]
 }

@@ -16,7 +16,7 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 ## Sleeve clients (libraries imported by other scripts)
 
 - `polyclaude_client.py` — Polymarket CLOB wrapper. EOA signing (`signature_type=0`). `place_limit_buy/sell`, `orderbook`, allowance setup, position queries.
-- `ostium_client.py` — thin CLI on `ostium-python-sdk`. Subcommands: `status`, `pairs`, `open`, `close`. Used for Arbitrum RWA-perp positions.
+- `ostium_client.py` — legacy Ostium reader/guarded-close client plus allowance revocation. New entries are blocked while this execution environment fails Ostium's current eligibility terms; a future entry also requires a current writer with exact allowance, bounded slippage and final oracle-fill verification.
 - `_paths.py` — secret/state file resolution from `~/.polyclaude/env` (canonical), plus `~/secrets/limitless_creds.json`. Provides `path()` and `scrub()` + `install_scrubbing_excepthook()` so secrets never reach logs.
 
 ## Decision-quality tracking
@@ -34,6 +34,7 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 
 - `across_bridge.py` — Across V3 bridge for USDC and native ETH across Arbitrum / Base / Polygon / Optimism.
 - `aave_deposit.py` — Aave V3 `supply` / `withdraw` / `rate` across the same chains.
+- `wrap_pusd.py` — exact 1:1 Polygon conversion in both directions: USDC.e → pUSD through CollateralOnramp and pUSD → USDC.e (or native USDC when that asset is unpaused) through CollateralOfframp. Write paths validate the deployment and simulate before broadcast.
 - `limitless_arb_scan.py` — paginates Limitless `isPolyArbitrage:true` markets, fuzzy-matches Polymarket counterparts, uses a scoped fast worker to verify resolution-language equivalence, and tags Chainlink-Data-Stream-backed markets as mechanical resolution. Output: `logs/limitless_arb_<ts>.md` + `logs/limitless_arb_latest.json`.
 - `limitless_arb_executor.py` — live-quote inspector. Reads scan output, recomputes net edge after real orderbook slippage. **Does not submit orders** — the auto-execution path was removed after honest EV analysis showed expected value goes negative at our size given resolution-divergence risk on subjective markets.
 

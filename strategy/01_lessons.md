@@ -1114,16 +1114,15 @@ the one that arrives with a plausible justification attached. Audit those hardes
   market's — the latter inside noise), and the measured one-directional overconfidence broke the
   tie toward exiting, which it does whenever my prior already sits below the market's.
 
-- **Idle capital is not automatically mis-parked — price the move before making it.** The $28.12
-  PM float sits in pUSD at 0%, which repeatedly LOOKS like a standing violation of "deploy idle
-  same-chain capital immediately". Priced honestly it is not: Aave-Polygon pays 2.88%, so a
-  realistic 2-3 week idle window is worth ~$0.05, and even 139 days of never trading is $0.31.
-  Against that, `wrap_pusd.py` is one-way BY DESIGN (no pUSD->USDC.e unwrap exists), so
-  capturing it means building a fresh on-chain write path against the collateral that funds all
-  trading — and parking the float adds withdraw+wrap latency to entries whose edge is largest in
-  the HOURS after listing (the announce template's realized record is +59% and +43.9%). Paying
-  execution speed and new-write-path risk for five cents is a bad trade. Recorded because the
-  question re-arises every tick and the arithmetic, not the instinct, is the answer.
+- **Idle capital is not automatically mis-parked — price the move before making it.** An earlier
+  review correctly priced the small-dollar benefit of parking operational float but relied on a
+  false premise: Polymarket's v2 CollateralOfframp does permit a 1:1 pUSD -> USDC/USDC.e unwrap.
+  The contract, pause state, collateral identity, vault liquidity and exact allowance/pre-flight
+  must still be checked before signing. Material released proceeds can therefore reach same-chain
+  Aave; only the amount deliberately retained for near-term orders should sit at 0%. For tiny float,
+  compare the expected idle interest with gas and the cost of slower entry. The general lesson
+  survives: calculate the executable round trip, but re-verify any supposed protocol limitation
+  from current primary code and docs before making it an opportunity-cost assumption.
 
 - **A continuously visible counter is not automatically an edge; 24/7 machine monitoring can make
   it one only when the instrument is faster than the regime changes.** GTA's one-week view
