@@ -15069,3 +15069,33 @@ event reconciliation. The marginal hurdle now reads the actually reachable Polyg
 reserve, 3.007% at review time, and tags the cache by asset. Final validation passed **702
 pytest tests and 156 money-math checks**, live ramp status, zero-exposure/zero-allowance Ostium
 status, CLI refusal checks, JSON parsing and diff whitespace checks. DEC-0133 is graded PASS.
+
+## 2026-09-10 22:07 UTC — overdue AVAV gate closed; stale daemons refreshed
+
+Consumed the overdue Sep-9 AVAV earnings reminder. [AeroVironment's FY27 Q1
+release](https://investor.avinc.com/news-releases/news-release-details/aerovironment-announces-fiscal-2027-first-quarter-results)
+kept revenue at **$2.125–2.225B**, adjusted EBITDA at **$305–325M**, and adjusted diluted EPS
+at **$3.02–3.34**. The [10-Q](https://investor.avinc.com/node/21396/html) reports funded
+backlog of **$1.457822B at Aug-1**, versus $1.183B at Apr-30. Those two gates pass, but AVAV
+closed Sep-10 at **$147.07**, 33.7% above the preset **≤$110** valuation gate. Keep watch-only
+and preserve $110 as the next fresh-valuation trigger; the screen is not an automatic buy.
+Removed the consumed dated reminder.
+
+The Sep-9 Apple one-shot has no surviving cron/inject execution marker, but Sep-10's substantive
+post-event review did consume its required evidence: no qualifying MacBook announcement,
+exact purchase criteria reread, Apple newsroom/store checked, and later-2026 timing evidence
+retained. Removed the stale pre-event and maker-gate reminders; the current **p_no .55 / HOLD /
+NO ADD** assessment remains in the active Sep-10 backlog summary.
+
+The 22:02 light-tick status found no watchlist hit, UMA alert, negative-edge/below-hurdle flag,
+Ostium exposure, crux-coverage gap, or new six-hour news alert. Whole-account midpoint was
+**$184.86**, including $6.08 of separately contributed gas; replacing the $153.98 PM midpoint
+with its indicative $146.12 net depth value gives **$177.00 including gas**. No trade, order,
+prior, or reserve allocation changed.
+
+The prescribed stale-code check found `news_watcher`, `heartbeat_watch`, and
+`telegram_listener` running versions older than their files. Restarted all three via their
+absolute paths; the listener needed a second start after its terminating process briefly held
+the singleton lock. Final verification found exactly one current process for each of those
+daemons and `opportunity_watch`, with listener cursor 62572700 and zero pending messages.
+Material Telegram **936** sent.
