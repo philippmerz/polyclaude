@@ -40,6 +40,24 @@ def test_pair_requires_early_subset_and_exact_shared_criteria():
         validate_pair_markets(market(435), market(445, end="2027-01-01T00:00:00Z"))
 
 
+def test_pair_accepts_primary_source_sentence_when_gamma_field_is_blank():
+    description = (
+        "Only official regular-season wins count.\n\n"
+        "The primary resolution source will be official NCAA and conference "
+        "records (https://www.ncaa.com); however, a consensus of credible "
+        "reporting may also be used."
+    )
+    early, late = market(1050, comparator="or higher"), market(
+        950, comparator="or higher"
+    )
+    for candidate in (early, late):
+        candidate["resolutionSource"] = ""
+        candidate["description"] = description
+
+    result = validate_pair_markets(early, late)
+    assert result["source"].startswith("official ncaa and conference records")
+
+
 def test_pair_rejects_non_binary_or_active_uma():
     bad = market(435)
     bad["outcomes"] = '["Yes", "Maybe"]'

@@ -1,5 +1,5 @@
 {
-  "next_id": 135,
+  "next_id": 136,
   "decisions": [
     {
       "id": 1,
@@ -2656,6 +2656,25 @@
         "monotonicity-arb",
         "execution-safety",
         "treasury-yield"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 135,
+      "timestamp": "2026-09-11T04:44:03Z",
+      "type": "scaffolding",
+      "thesis": "The 04:34 LSU win-total alert was a logically valid >10.5 NO plus >9.5 YES floor pair, but the quoted books were no longer fresh or complete at immediate recheck, so no trade or funding was authorized. The exact market descriptions share event, deadline, fallback, source and regular-season-only rules. Extended the guarded pair executor to recognize the explicit primary-resolution-source wording when Gamma leaves its source field blank, while retaining exact full-description comparison, and registered exact inactive pair topology plus pair-only priors before any future trigger.",
+      "confidence": "high",
+      "prediction": "A future fresh LSU monotonicity trigger will either pass exact identity, fee, book, cap, funds and equal-fill checks through the pair executor; restore any definite orphan within its loss cap; or retain a fail-closed reservation for ambiguous or unwind-incomplete exposure while sending no further orders. Missing or differing source language will still fail closed.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-27",
+      "tags": [
+        "monotonicity-arb",
+        "lsu",
+        "execution-safety"
       ],
       "slug": null,
       "outcome": null,

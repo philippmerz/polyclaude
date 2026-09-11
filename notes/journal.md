@@ -15286,3 +15286,50 @@ lead failed direct seven-book de-vigging: executable NO cost .55242 versus
 .53938 consensus fair. The due weekly report was already published at 02:25;
 methodology and world-state work were not due. No Fireworks spend.
 Material summary sent once as Telegram **939**.
+
+## 2026-09-11 04:35–04:44 UTC — LSU monotonicity alert valid; live book gone, no trade
+
+Consumed the 04:34:59 opportunity alert before the checklist. The exact LSU
+regular-season win-total siblings are >10.5 (market 3540088) and >9.5 (market
+3540087), both in event 838852 on the standard exchange route. Their full rules
+are identical: only played regular-season wins count; conference championships,
+bowls and playoffs do not; cancellations and forfeits do not manufacture wins;
+both use the same Dec-26 determination fallback and official NCAA/conference
+records with credible-reporting consensus. Buying >10.5 **NO** plus >9.5
+**YES** therefore pays $1 if LSU finishes at nine or fewer or eleven-plus wins,
+and $2 at exactly ten wins. The alert's minimum five-share live walk reported
++16.60pp after fees, implying about **0.834 per pair**, $4.17 cost and $0.83
+logical floor profit before carry, gas and separate-resolution risk.
+
+That was an observation rather than an executable instruction. The immediate
+full scanner rerun inspected 1,039 multi-market events and found **zero real
+arbs**: the LSU pair and four other midpoint violations had no validated book.
+An independent identity/rules audit reached the same result, and a guarded
+16-share dry-run failed on the stale/absent >10.5 NO book before any wallet,
+reservation or order path. **No funds moved and no order was signed or posted.**
+The trigger was not polled or chased after that bounded recheck.
+
+The review exposed one reusable execution gap: Gamma leaves `resolutionSource`
+blank on these markets and writes “The primary resolution source will be…” in
+the criteria, while the new pair executor recognized only its earlier wording.
+The parser now recognizes both explicit forms and still requires exact source,
+full description, event, deadline, threshold proposition, token, route, fee and
+fresh-book agreement. The exact LSU legs are registered as an inactive
+`lsu-2026-win-total-monotonicity` group with pair-only priors and the standing
+0.93 signed-cost ceiling. Zero legs evaluate INACTIVE, one leg GROUP_BROKEN,
+and 16 balanced shares produce a $16 rule floor. DEC-0135 records the change.
+
+The rest of the 11-step check was flat. Authoritative midpoint bankroll was
+**$186.18**, including $6.05 separately contributed gas; PM midpoint was
+$155.32 and indicative net depth $146.22, or about $171.02 trading value after
+substituting depth and excluding gas. Twelve positions remain and state, UMA,
+Ostium, crux coverage, marginal APY, exits, watchlist, overdue decisions and
+redemption checks were clean. Constrained Kelly adds remain cap-suppressed.
+Discovery and consistency produced no qualified entry. WTI-$105 lacked primary
+source confirmation and its fresh 16-share YES+NO cost was about 1.025; the
+three sports consensus comparisons were within 1.8pp, below the 3pp review bar.
+Weekly P&L was published at 02:25, world-state review was two days old, and the
+completed methodology experiment was not due. No Fireworks spend.
+The source-parser and group changes pass 97 focused checks, all **715**
+repository tests, and all 156 money-math checks. Material summary sent once as
+Telegram **941**.

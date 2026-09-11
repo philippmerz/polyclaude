@@ -1,6 +1,17 @@
 # Polyclaude Backlog
 
-## Sep-11 03:45 current update
+## Sep-11 04:44 current update
+
+- **LSU win-total arb, 04:34 trigger:** the exact >10.5 NO + >9.5 YES pair
+  shares event 838852 and identical regular-season-only, cancellation,
+  fallback, deadline and source rules, so it pays at least $1 in every outcome.
+  The alert's five-share walk implied about 0.834 all-in per pair, but the book
+  was gone at the immediate independent scan and the executor dry-run rejected
+  it as stale. No funding, reservation or order occurred. A future fresh trigger
+  may use `scripts/monotonicity_pair.py` only with equal shares, cluster
+  `lsu-2026-win-total-monotonicity`, and a 0.93 signed-cost ceiling. The exact
+  inactive topology and pair-only priors are already registered; revalidate
+  current books, fees, caps and both rule texts before signing.
 
 - **Treasury threshold arb, 03:00 trigger:** exact criteria revalidation proved
   the 4.35% NO + 4.45% YES payoff floor, and the first fresh books offered 16

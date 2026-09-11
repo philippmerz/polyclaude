@@ -176,6 +176,55 @@
      "directional": false
     }
    ]
+  },
+  "lsu-2026-win-total-monotonicity": {
+   "label": "LSU 2026 regular-season wins 9.5/10.5 monotonicity pair",
+   "add_gate": "PAIR-GATED: enter only equal LSU >10.5 NO + LSU >9.5 YES shares through monotonicity_pair.py when fresh fee-inclusive signed cost is at most 0.93.",
+   "add_policy": {
+    "manual_gate": true,
+    "max_component_all_in": {
+     "floor-pair": 0.93
+    }
+   },
+   "quantity_mode": "proportional_live",
+   "inactive_until_present": true,
+   "event_model": {
+    "kind": "monotone_yes",
+    "event_id": "838852",
+    "end_date": "2026-12-12",
+    "negative_risk": false,
+    "order": [
+     "9.5",
+     "10.5"
+    ],
+    "thresholds": {
+     "9.5": 9.5,
+     "10.5": 10.5
+    }
+   },
+   "legs": {
+    "9.5": {
+     "slug": "will-lsu-have-more-than-9pt5-wins-during-the-2026-cfb-season-20260810194022887",
+     "outcome": "Yes",
+     "asset": "97825247060876421898388085398822822452446781675351465255270568828068004478679"
+    },
+    "10.5": {
+     "slug": "will-lsu-have-more-than-10pt5-wins-during-the-2026-cfb-season-20260810194022888",
+     "outcome": "No",
+     "asset": "111228342528859150717142157215533549175230067916627528306582187565209447882586"
+    }
+   },
+   "components": [
+    {
+     "id": "floor-pair",
+     "quantity": 1.0,
+     "weights": {
+      "9.5": 1.0,
+      "10.5": 1.0
+     },
+     "directional": false
+    }
+   ]
   }
  },
  "trump-out-as-president-before-2027": {
@@ -1049,5 +1098,27 @@
   "arb_paired": "DEC-0134 Treasury monotonicity pair: trade and manage only as equal 4.35% NO + 4.45% YES shares through the guarded pair executor.",
   "current_assessment": "Conservative isotonic floor prior for portfolio accounting: P(YES below 4.45%)=0.50. This leg is not independently underwritten; the paired position has a logical $1 payout floor before separate-resolution risk.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 prior deliberately assigns zero probability to the bonus 4.35%-4.45% band and values only the pair's guaranteed logical floor."
+ },
+ "will-lsu-have-more-than-9pt5-wins-during-the-2026-cfb-season-20260810194022887": {
+  "p_yes": 0.5,
+  "verified": "2026-09-11",
+  "criteria_read": "2026-09-11",
+  "cluster": "lsu-2026-win-total-monotonicity",
+  "rho_within": 1.0,
+  "cluster_frac": 0.0,
+  "arb_paired": "LSU 2026 regular-season wins monotonicity pair: trade and manage only as equal >10.5 NO + >9.5 YES shares through the guarded pair executor.",
+  "current_assessment": "Conservative portfolio floor prior: P(LSU records more than 9.5 regular-season wins)=0.50. This leg is not independently underwritten; the equal pair has a logical $1 payout floor before separate-resolution risk.",
+  "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 prior assigns zero probability to the 10-win bonus state and values only the pair's logical floor."
+ },
+ "will-lsu-have-more-than-10pt5-wins-during-the-2026-cfb-season-20260810194022888": {
+  "p_no": 0.5,
+  "verified": "2026-09-11",
+  "criteria_read": "2026-09-11",
+  "cluster": "lsu-2026-win-total-monotonicity",
+  "rho_within": 1.0,
+  "cluster_frac": 0.0,
+  "arb_paired": "LSU 2026 regular-season wins monotonicity pair: trade and manage only as equal >10.5 NO + >9.5 YES shares through the guarded pair executor.",
+  "current_assessment": "Conservative portfolio floor prior: P(LSU does not record more than 10.5 regular-season wins)=0.50. This leg is not independently underwritten; the equal pair has a logical $1 payout floor before separate-resolution risk.",
+  "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 prior assigns zero probability to the 10-win bonus state and values only the pair's logical floor."
  }
 }

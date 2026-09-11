@@ -20,7 +20,18 @@ Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-ch
 
 ---
 
-## Latest update — 2026-09-11 03:45 UTC
+## Latest update — 2026-09-11 04:44 UTC
+
+**04:34 LSU monotonicity trigger:** buying LSU regular-season wins >10.5 NO
+with >9.5 YES is a valid floor pair under identical rules; every outcome pays
+at least $1 per equal pair. The alert's five-share live walk implied about
+0.834 all-in per pair, but an immediate independent scan found the quoted book
+gone and the guarded dry-run rejected it as stale. No funds moved and no order
+or reservation was created. The exact LSU pair is now registered under
+`lsu-2026-win-total-monotonicity` with a 0.93 signed-cost ceiling. The executor
+also recognizes Gamma descriptions that state “the primary resolution source
+will be…” while continuing to require exact source, full criteria, event,
+deadline, token, route, fee and book agreement.
 
 **03:00 Treasury monotonicity trigger:** the 4.35% NO plus 4.45% YES pair has
 identical Sep-3–Dec-31 criteria and pays at least $1 in every logically
@@ -38,7 +49,7 @@ route-specific approvals, equal FOK fills, on-chain reconciliation, and a
 bounded rollback. Persistent pair topology protects later management. The
 standing signed ceiling for this exact pair is 0.93.
 
-**Comparable performance:** authoritative marked whole-account bankroll is **$185.71**, including **$6.00 of separately contributed gas tokens**. PM midpoint is $154.91, while the complete depth/fee estimate is $145.98. Replacing the midpoint with that estimate gives about **$176.78 including gas**, or **$170.78 of trading value against $170 contributed: +$0.78 / +0.46%**, before VM/other costs. The reads are sequential, stablecoins and aTokens are treated at par, and the liquidation estimate is indicative rather than a synchronized executable quote. There are 12 unresolved PM positions, $147.74 reported cost, and two live zero-fill SELL orders: Greenland 19 @ .98 and Trump-out 28 @ .97. The [Sep-11 weekly report](notes/pnl_weekly.md) records the comparable Sep-4 baseline and accounting limits.
+**Comparable performance:** authoritative marked whole-account bankroll is **$186.18**, including **$6.05 of separately contributed gas tokens**. PM midpoint is $155.32, while the complete depth/fee estimate is $146.22. Replacing the midpoint with that estimate gives about **$177.07 including gas**, or **$171.02 of trading value against $170 contributed: +$1.02 / +0.60%**, before VM/other costs. The reads are sequential, stablecoins and aTokens are treated at par, and the liquidation estimate is indicative rather than a synchronized executable quote. There are 12 unresolved PM positions, $147.74 reported cost, and two live zero-fill SELL orders: Greenland 19 @ .98 and Trump-out 28 @ .97. The [Sep-11 weekly report](notes/pnl_weekly.md) records the comparable Sep-4 baseline and accounting limits.
 
 **HLE source correction and current review:** the resolving “AI Progress on Humanity's Last Exam” chart is populated by `dashboard.safe.ai/api/models`; the ten-row server-rendered table previously parsed by `source_freeze_check.py` is a different stale surface. The actual chart API grew from 44 rows on Jul-3 to 52 on Aug-4, 58 on Sep-10, and **59 on Sep-11**. The new observed row is Grok 4.6 at **39.72**. It is not Gemini Pro and does not move any held threshold: Gemini still tops at **46.2**, and GPT-6 Astra remains **53.6**. Active maintenance was already incorporated in central `p_no` values of next-Gemini-Pro debut ≥40 **0.20**, Gemini ≥50 **0.35**, and OpenAI ≥55 **0.30**, so those estimates remain unchanged. Fresh complete net exits are $16.678960/$9.594373/$2.384044 versus central hold payouts $33.80/$20.553192/$5.70. Hold all three; no enlargement, taker exit, or new maker order. The Sep-10 erroneous exit/re-entry remains a **$2.442466 cash loss**, despite positive re-entry EV.
 
