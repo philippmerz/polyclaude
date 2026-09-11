@@ -981,3 +981,143 @@ status.
   purchasability by Dec-31 rather than an unveiling alone.
 - Preserve cluster/ticket caps and rank only robust, executable new edges; do not add to HLE merely
   because constrained Kelly prints a nominal deficit.
+
+---
+
+# Week 2026-09-04 → 2026-09-11
+
+The pilot ended the week at approximately **$171.03 on an indicative net-depth
+basis, excluding separately contributed gas**, against **$170 of trading
+contributions: +$1.03 (+0.61%) before VM and other operating costs**. The
+midpoint trading value is $179.58.
+
+## Whole-account performance
+
+| Metric | Sep-4 | Sep-11 | Change |
+|---|---:|---:|---:|
+| Authoritative all-in midpoint bankroll | $186.94 | $185.61 | −$1.33 |
+| Separately contributed gas-token value | ~$6.17 | $6.03 | ~−$0.14 |
+| Trading value, midpoint basis | ~$180.77 | $179.58 | ~−$1.19 |
+| Trading value, indicative depth/fee basis | ~$174.12 | **$171.03** | **~−$3.09** |
+| PM midpoint value | $153.54 | $154.78 | +$1.24 |
+| PM indicative net-depth value | $146.89 | $146.23 | −$0.66 |
+| PM midpoint/depth gap | $6.65 | **$8.55** | +$1.90 |
+| Open PM reported cost basis | $157.20 | $147.12 | −$10.08 |
+| Open unrealized P&L, marked | −$3.66 | +$7.66 | +$11.32 |
+| Open unrealized P&L, depth basis | −$10.31 | −$0.90 | +$9.41 |
+| Accounting residual labeled “realized” | +$14.43 | +$1.93 | −$12.50 |
+
+The Sep-4 baseline is the committed 02:19:23 UTC snapshot. Its ~$6.17 gas
+value is reconstructed from that report's rounded accounting identity. Current
+figures are sequential and rounded. The depth estimate replaces only PM
+midpoint assets in the authoritative aggregate; it is not a synchronized or
+freshness-certified liquidation quote and omits withdrawal and transfer costs.
+
+The apparent improvement in open P&L is mainly reclassification. OpenAI ≥50 NO
+became a settled loser, while Sep-10 exits and repurchases reset two reported
+cost bases. It does not represent an $11.32 wealth gain. The script's “realized”
+number is an accounting residual rather than an independently reconciled cash
+ledger. Whole-account trading value is the primary performance measure. No
+external trading-capital contribution or operator withdrawal was recorded;
+the $0.50 Aave withdrawal and pUSD wrapping were internal transfers.
+
+## Passive comparison
+
+The fixed benchmark enters the $70 and $100 contributions at the first
+completed session strictly after each ledger date. At the Sep-10 completed
+close it is worth **$179.32 in VT (+5.48%)**, **$180.01 in VTI (+5.89%)**, and
+**$180.09 in SPY (+5.93%)**.
+
+The pilot's $179.58 midpoint trading value is $0.26 above VT, $0.43 below VTI,
+and $0.51 below SPY. The economically more relevant $171.03 depth estimate
+trails them by $8.29, $8.98, and $9.06, or about 4.88, 5.28, and 5.33
+percentage points of contributed capital. The comparator assumes ideal
+fractional shares, reinvested distributions, and no commission, spread,
+slippage, tax, or idle-cash yield; gas is excluded from both sides.
+
+## Trading, execution, and settlement
+
+Public activity contains four trades after the Sep-4 cutoff, all on Sep-10:
+
+| Action | Claims | Audited net cash |
+|---|---:|---:|
+| Sell Gemini ≥50 NO | 59.01 | +$9.693720 |
+| Sell OpenAI ≥55 NO | 19 | +$2.384044 |
+| Rebuy Gemini ≥50 NO | 58.723405 | −$11.378090 |
+| Rebuy OpenAI ≥55 NO | 19 | −$3.142140 |
+
+The avoidable round trip cost **$2.442466 in cash**: approximately $0.879106
+of explicit exchange fees and $1.563360 of adverse repricing/spread. It also
+restored 0.286595 fewer Gemini claims and used separately funded gas. The
+mistake was source identity: a stale server-rendered table was treated as the
+resolving chart instead of dashboard.safe.ai/api/models.
+
+The repurchases were fresh marginal decisions. At the recorded .35 Gemini and
+.30 OpenAI central probabilities, expected payout is $26.2532 against
+$14.52023 all-in cost, about +$11.60 after cash carry. A ten-point haircut
+still gives about +$3.83; both published lower bounds together lose about
+$0.63. Gemini was the stronger re-entry. Positive re-entry EV does not repay
+the preceding churn.
+
+OpenAI ≥50 NO finalized as a $5.55 principal loss, with historical entry fees
+separate; settlement recognized an existing loss rather than causing a new
+Sep-10 cash debit. Hormuz-normal finalized NO after all economic claims had
+been sold at .996-.997. The 0.003571 winning dust passes a redemption dry-run
+but is worth less than gas, so it remains unredeemed. Apple’s partial maker
+fill predates this window; only its remaining unfilled order was cancelled
+during the week.
+
+## Current book and opportunity decisions
+
+Twelve unresolved PM positions remain. The three held HLE claims are one
+correlated technology/evaluation cluster: 169 next-Gemini-Pro ≥40 debut NO,
+58.723405 Gemini ≥50 NO, and 19 OpenAI ≥55 NO. The exact chart API grew from
+58 to 59 observed rows overnight with Grok 4.6 at 39.72. It is xAI, not Gemini
+Pro, and it leaves Gemini's maximum at 46.2 and OpenAI's at 53.6. The active
+source was already incorporated in central probabilities .20/.35/.30. Fresh
+net exits of $16.678960/$9.594373/$2.384044 remain below central hold payouts
+of $33.80/$20.553192/$5.70. HOLD / NO ADD; the debut leg remains the first
+trim candidate if its own evidence worsens or meaningful net exit reaches the
+recorded review gate.
+
+The Duma 295–339 equal-share union remains .72 after VCIOM's Sep-10 list
+forecast corroborated the central 319/326-seat scenarios without adding an
+independent district forecast. Its $14.40 central payout exceeds the $11.82
+fresh complete exit; the .75 evidence gate and .57 add-price ceiling both
+fail. MetaMask's direct Dec-31 token-launch sibling fell to .06/.08, improving
+the protected structure's conditional valuation; preserve the complete group
+and do not add at current asks. Apple remains .55 NO / HOLD after no qualifying
+Sep-9 product event but continuing later-2026 timing evidence.
+
+No discovery, sports, macro, favorite-fade, or executable-arbitrage candidate
+cleared the evidence and cost gates. The Grok 4.6 debut monotonicity pair locked
+only about $0.002 on a five-share minimum and was rejected. The broad-index
+outside option remains open in principle, but current Ostium carry/eligibility
+and spot-route fixed costs leave Aave or the existing book with higher expected
+value at this bankroll.
+
+## Calibration and process
+
+The ledger now has **133 decisions: 83 resolved, 50 pending, and 66 recorded
+lessons**. These include engineering checks, repeated updates, dependent
+positions, and strategy decisions; they are not 83 independent settled
+forecasts.
+
+DEC-0034 resolved **MIXED**. Removing the position-count cap avoided count
+friction, but the confident claim that the revised framework would prevent
+further UMA-class losses failed: the permanent-peace-deal position lost
+$11.31, and Iran–Oman later lost $5.029998 on interpretation-heavy evidence.
+The better repair is to retain dollar caps while validating the exact source
+and every qualifying resolution path, then skip when robust size is below the
+venue minimum. The week's HLE churn reinforces the same source-identity
+lesson: parser correctness and broad coverage do not prove that the parsed
+endpoint is the resolving product.
+
+## Next clocks
+
+- Sep-12: monthly emergency-path drill.
+- Sep-13: Sunday world-state review and the 22:00 UTC USGS weekly-count recheck.
+- Through Sep-20: Duma election evidence and complete-set monitoring.
+- Sep-30, 12:00 ET: exact Arena Text Overall source snapshot.
+- Continuous: qualifying HLE chart changes and actual touchscreen-MacBook
+  purchase availability.

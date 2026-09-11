@@ -15099,3 +15099,103 @@ absolute paths; the listener needed a second start after its terminating process
 the singleton lock. Final verification found exactly one current process for each of those
 daemons and `opportunity_watch`, with listener cursor 62572700 and zero pending messages.
 Material Telegram **936** sent.
+
+## 2026-09-11 02:25 UTC — bounded full check; fresh HLE row and weekly report
+
+Completed the scheduled 11-step check once. Authoritative whole-account midpoint
+was **$185.61 at 02:06:14 UTC**, including **$6.03 of separately contributed
+gas**. PM positions cost **$147.12**, marked **$154.78**, and had an indicative
+full depth/fee value of **$146.23**, an $8.55 midpoint gap. Replacing the PM
+midpoint in the authoritative aggregate gives about **$177.06 including gas**,
+or **$171.03 trading value versus $170 contributed: +$1.03/+0.61% before VM
+and other operating costs**. The reads are sequential, rounded, and not a
+synchronized executable liquidation quote. Twelve unresolved indexed positions
+remain. Wallet state: 49.709437 POL, $0.095025 USDC, $0.173070 pUSD, and
+$15.615682 Polygon aUSDC.e; the crypto sleeve has $7.8732 Arbitrum aUSDC and
+$1.0478 Base USDC plus small gas balances. Ostium has zero trades, limits, and
+allowance; its state diff is unchanged. Only the Greenland 19 NO at .98 and
+Trump-out 28 NO at .97 zero-fill maker sells remain live.
+
+All required state checks passed: no UMA alert, marginal-APY flag, watchlist
+hit, crux-coverage gap, Ostium change, or expired state hold. The fixed state
+audit reconciles 12 indexed positions plus one de-indexed claim row. All four
+news, heartbeat, Telegram, and opportunity daemons are exactly one process and
+running current code. Disk had about 2.2 GB free. The only post-journal news
+alert was [Al Jazeera's report](https://www.aljazeera.com/video/newsfeed/2026/9/11/iran-claims-to-have-captured-a-us-sail-drone-near-hormuz-strait)
+that Iran claimed capture of a US sail drone near Hormuz. It has no direct
+causal channel to the open positions and is maritime, so it does not satisfy
+the terrestrial-strike rule in the watched US-Iran ceasefire family. No action.
+
+**Fresh HLE source change:** the exact [resolving chart API](https://dashboard.safe.ai/api/models)
+contained **59 rows**, versus the documented 58-row Sep-10 snapshot. The newly
+observed row is Grok 4.6, provider xAI, HLE **39.72**, calibration error 25.24.
+Its API release date does not establish insertion time. It is not a qualifying
+Gemini Pro row; Gemini's maximum remains 46.2 and OpenAI's remains GPT-6 Astra
+53.6. Independent re-underwriting retained central NO probabilities of .20
+next-Gemini-Pro debut ≥40, .35 Gemini ≥50, and .30 OpenAI ≥55. Yesterday's
+source correction already replaced the frozen-board assumption with active
+maintenance, so changing a lab-specific prior for one unrelated row would add
+false precision. Fresh complete net exits were **$16.678960 / $9.594373 /
+$2.384044** versus central hold payouts **$33.80 / $20.553192 / $5.70**.
+HOLD all three; no add, taker exit, or new maker order. The debut leg remains
+the first trim candidate if its own evidence worsens or meaningful full bids
+reach the recorded .18 review trigger. A scanner found a Grok 4.6 ≥55 YES plus
+≥50 NO monotonicity combination costing $4.997977 for a five-share payout; the
+locked edge was only about $0.002 and was rejected after costs and operational
+risk.
+
+**Other held structures:** [VCIOM's Sep-10 Duma forecast](https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom)
+puts United Russia at 51–53%, CPRF 13–15%, New People and LDPR 9–11%, and Just
+Russia 4–6%. It supplies no district forecast and is partly correlated with
+APEK. Combining its normalized list midpoint with APEK's 185–195 district
+range centers near 319 seats if Just Russia passes and 326 if it misses.
+Retained .15/.32/.25 held-bucket probabilities, union .72. The set's $14.40
+central payout exceeds the $11.82 fresh complete exit; a five-share set costs
+.635 per payout unit, so both the .75 evidence and .57 price gates fail.
+HOLD complete set / NO ADD.
+
+The direct MetaMask Dec-31 token-launch sibling refreshed to .06/.08.
+[MetaMask's Sep-9 corporate-separation announcement](https://metamask.io/en-GB/news/metamask-next-chapter)
+names no token and says nothing changes for users. Updating only the direct
+launch input gives .064 YES above $700M, .957 NO above $3B, and .964 NO above
+$4B. The protected group has $45.99 central fair and a $44.75 rule floor versus
+$43.29 full exit. HOLD intact / NO ADD.
+
+[Gamma market 2774056](https://gamma-api.polymarket.com/markets/2774056)
+finalized Hormuz-normal **NO**, outcome prices 0/1 and resolution status
+resolved. The archived condition and NO token still match; a redemption
+dry-run succeeded. Only 0.003571 winning dust remains, worth less than gas, so
+redeem-all correctly broadcast no transaction. Graded DEC-0077, DEC-0081,
+DEC-0084, and DEC-0086. Near-one exits gave up $0.016/$0.048/$0.03633 of
+eventual payout on the rotated lots; the Lake redeployment won decisively,
+Iran–Oman lost, and Duma remains open. Removed the active resolution monitor.
+
+DEC-0034, the June strategy-rewrite prediction, resolved **MIXED**. Removing
+the position-count cap avoided count friction, but the confident claim of no
+further UMA-class loss failed: DEC-0038 lost $11.31 when a public-confirmation
+path defeated the strict signing interpretation, and Iran–Oman later lost
+$5.029998 on prospective language. Keep economic caps rather than restoring a
+blanket ban; validate the exact source and every qualifying resolution path,
+widen uncertainty from observed class failures, and skip when robust size is
+below the venue minimum. Ledger summary: **133 total, 83 resolved, 50 pending,
+66 lessons**, with no overdue decision.
+
+Discovery, thin-tail discovery, sports, macro, monotonicity, consistency, and
+favorite-fade scans ran once. No candidate cleared current evidence, price,
+fee, liquidity, correlation, and execution gates. Sports checked 68 markets
+with no certified consensus delta above 3pp; one FURIA–G2 consensus worker
+timed out, so that coverage is incomplete. Consistency scanned a capped 5,005
+market scope; only 20 of 195 candidate groups were live-quoted and zero of 11
+quoted groups was provisionally positive, so this is not an exchange-wide
+absence claim. A Treasury midpoint violation and Mt Washington row lacked an
+executable book. No trade or order change was justified.
+
+Published the due Sep-4→Sep-11 weekly report. Depth-based trading value fell
+about $3.09 during the week and now trails the completed Sep-10 passive
+benchmarks by **$8.29 VT / $8.98 VTI / $9.06 SPY**. Midpoint trading value
+$179.58 is $0.26 above VT but $0.43/$0.51 below VTI/SPY. The report separately
+records the Sep-10 HLE churn's **$2.442466 cash damage**, including $0.879106
+explicit fees. Methodology is concluded and was not rerun; the Sep-6 world
+digest is not yet due. Next clocks are the Sep-12 emergency drill, Sep-13
+Sunday world review and 22:00 UTC USGS count, Sep-20 Duma, and Sep-30 Arena.
+Material summary sent once as Telegram **937**. No Fireworks spend.
