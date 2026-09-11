@@ -4,7 +4,7 @@
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-11: VCIOM's Sep-10 turnout-adjusted list forecast supports the same 319/326-seat central scenarios as APEK but supplies no independent district forecast. Retaining the RASO and model tails leaves held-union p=0.72 below the 0.75 evidence gate, and a fresh five-share complete set cost 0.635 per payout unit, above the 0.57 price ceiling. HOLD the equal set; no add or single-leg action.",
+   "add_gate": "FAILED 2026-09-11 14:00: Turovsky's qualitative district-upside commentary has no numerical replacement forecast; modest outperformance remains inside the held 295-339 range and existing tails cover a larger miss. Retain union p=0.72, below the 0.75 evidence gate; a fresh five-share complete set costs 0.662 per payout unit, above the 0.57 price ceiling. HOLD the equal set; no add or single-leg action.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -61,7 +61,7 @@
   },
   "metamask-fdv-monotonicity": {
    "label": "MetaMask FDV overlapping monotonicity pairs plus 700M directional crumb",
-   "add_gate": "POLICY-GATED: re-underwrite the selected pair/component and cluster exposure; never scale the directional crumb automatically.",
+   "add_gate": "FAILED 2026-09-11 14:00: the 700M-YES plus 4B-NO component cost 1.005 all-in per pair versus 1.028 central fair. At the five-share minimum, about $0.115 gross central EV falls to roughly $0.019 after ~111 days of 3.01% cash carry and the $0.05 operational reserve, before shared launch/FDV-model and separate-resolution risk. That margin is not robust. No add; never scale the directional crumb automatically.",
    "add_policy": {
     "manual_gate": true
    },
@@ -929,10 +929,16 @@
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-11 complete-set review: VCIOM's turnout-adjusted list forecast gives United Russia 51-53%, CPRF 13-15%, New People and LDPR 9-11% each, and Just Russia 4-6%, but supplies no district forecast and is partly reflected in APEK. Combining VCIOM normalization with APEK's 185-195 district range centers near 319 seats if Just Russia passes and 326 if it misses. Retaining RASO, source, and model tails leaves distribution 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. The 20-share equal set has $14.40 central expected payout versus $11.82 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and five-share set ask 0.635 exceeds 0.57 ceiling.",
+  "current_assessment": "Sep-11 14:00 complete-set review: VCIOM's turnout-adjusted list forecast gives United Russia 51-53%, while APEK gives 185-195 district wins, centering near 319/326 total seats depending on Just Russia's threshold result. Turovsky's Sep-11 commentary argues United Russia may exceed APEK's district estimate because few opposition concessions are visible, but supplies no numerical replacement forecast. Modest district outperformance mostly shifts mass upward inside 295-339, while the existing tails already cover a larger miss. Retain 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. The 20-share equal set has $14.40 central expected payout versus $11.94 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and the five-share set ask 0.662 exceeds the 0.57 ceiling.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and pre-Sep10 APEK key_facts describe the older Aug-10 forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
+    "source": "https://regcomment.ru/analytics/edinaya-rossiya-mozhet-prevzojti-prognozy-v-odnomandatnyh-okrugah/",
+    "source_date": "2026-09-11",
+    "checked": "2026-09-11"
+   },
    {
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
@@ -997,10 +1003,16 @@
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-11 complete-set review: VCIOM's turnout-adjusted list forecast gives United Russia 51-53%, CPRF 13-15%, New People and LDPR 9-11% each, and Just Russia 4-6%, but supplies no district forecast and is partly reflected in APEK. Combining VCIOM normalization with APEK's 185-195 district range centers near 319 seats if Just Russia passes and 326 if it misses. Retaining RASO, source, and model tails leaves distribution 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. The 20-share equal set has $14.40 central expected payout versus $11.82 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and five-share set ask 0.635 exceeds 0.57 ceiling.",
+  "current_assessment": "Sep-11 14:00 complete-set review: VCIOM's turnout-adjusted list forecast gives United Russia 51-53%, while APEK gives 185-195 district wins, centering near 319/326 total seats depending on Just Russia's threshold result. Turovsky's Sep-11 commentary argues United Russia may exceed APEK's district estimate because few opposition concessions are visible, but supplies no numerical replacement forecast. Modest district outperformance mostly shifts mass upward inside 295-339, while the existing tails already cover a larger miss. Retain 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. The 20-share equal set has $14.40 central expected payout versus $11.94 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and the five-share set ask 0.662 exceeds the 0.57 ceiling.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
+    "source": "https://regcomment.ru/analytics/edinaya-rossiya-mozhet-prevzojti-prognozy-v-odnomandatnyh-okrugah/",
+    "source_date": "2026-09-11",
+    "checked": "2026-09-11"
+   },
    {
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
@@ -1041,10 +1053,16 @@
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-11 complete-set review: VCIOM's turnout-adjusted list forecast gives United Russia 51-53%, CPRF 13-15%, New People and LDPR 9-11% each, and Just Russia 4-6%, but supplies no district forecast and is partly reflected in APEK. Combining VCIOM normalization with APEK's 185-195 district range centers near 319 seats if Just Russia passes and 326 if it misses. Retaining RASO, source, and model tails leaves distribution 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. The 20-share equal set has $14.40 central expected payout versus $11.82 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and five-share set ask 0.635 exceeds 0.57 ceiling.",
+  "current_assessment": "Sep-11 14:00 complete-set review: VCIOM's turnout-adjusted list forecast gives United Russia 51-53%, while APEK gives 185-195 district wins, centering near 319/326 total seats depending on Just Russia's threshold result. Turovsky's Sep-11 commentary argues United Russia may exceed APEK's district estimate because few opposition concessions are visible, but supplies no numerical replacement forecast. Modest district outperformance mostly shifts mass upward inside 295-339, while the existing tails already cover a larger miss. Retain 0.15/0.32/0.25 across 295-309/310-324/325-339, union p=0.72. The 20-share equal set has $14.40 central expected payout versus $11.94 fresh full liquidation. HOLD complete group; NO ADD because union p<0.75 and the five-share set ask 0.662 exceeds the 0.57 ceiling.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
+    "source": "https://regcomment.ru/analytics/edinaya-rossiya-mozhet-prevzojti-prognozy-v-odnomandatnyh-okrugah/",
+    "source_date": "2026-09-11",
+    "checked": "2026-09-11"
+   },
    {
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",

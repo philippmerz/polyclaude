@@ -15347,3 +15347,67 @@ days old and below the eight-day catch-up threshold; the preceding entry's
 “two days old” wording was corrected. Disk headroom is 2.24 GB and all four
 daemons remain exactly one process. No new alert, trade, order, funding, prior,
 or Telegram action was warranted.
+
+## 2026-09-11 14:00–14:10 UTC — full check; Duma upper-tail source recorded, no trade
+
+Completed the scheduled 11-step check once. The authoritative whole-account
+midpoint was **$189.31 at 14:01 UTC**, including **$6.34 of separately
+contributed gas**. PM cost was $147.12, midpoint $158.16 and indicative complete
+depth/fee value $150.37. Replacing the PM midpoint in the authoritative total
+gives about **$181.52 including gas**, or **$175.18 trading value against $170
+contributed: +$5.18/+3.05%** before VM and other operating costs. These are
+sequential rounded reads, not a synchronized executable liquidation quote.
+Twelve unresolved positions remain. Polygon PM balances were 15.616313 aUSDC.e,
+0.173070 pUSD, 0.095025 USDC and 49.225259 POL; both crypto-sleeve Aave/stable
+balances remain intact. Ostium has zero trades, limits and allowance. The two
+live orders remain zero-fill premium sells: Greenland 19 NO at .98 and
+Trump-out 28 NO at .97.
+
+The first UMA pass flagged a real **+6.0pp** move in the Duma 325–339 YES mark,
+.39 to .45, with $13,369 of 24-hour volume and a four-point spread. Complete-set
+analysis still favors holding: its fresh net exit was about **$11.94** versus
+**$14.40** central resolution value. A new [Sep-11 Turovsky
+commentary](https://regcomment.ru/analytics/edinaya-rossiya-mozhet-prevzojti-prognozy-v-odnomandatnyh-okrugah/)
+argues United Russia may exceed APEK's 185–195 district forecast because few
+opposition concessions are visible. It gives no numerical replacement forecast.
+Modest district outperformance mostly moves probability upward inside the held
+295–339 range; the existing outside-range tail already covers a larger miss.
+Retained the .15/.32/.25 bucket assessment and **.72 union probability** rather
+than adding false precision. The five-share complete-set ask rose to .662, still
+above the .57 add ceiling. HOLD the equal set; no add and no single-leg action.
+
+The favorite-fade scan's separate Duma 355+ NO lead was fully checked. The exact
+active negRisk market was fee-free with 11.11 shares at .91. VCIOM and APEK center
+near 319/326 seats, but RASO's broad component ranges and the new district-upside
+commentary leave an honest **p(NO)=.92 [.80-.98]**, not a near-certain tail. Ten
+shares have only +$0.10 central EV before about $0.015 cash carry and the entry
+path's operational reserve; the standard downside stress is negative. SKIP at
+.91. The other two surfaced fades also failed instance underwriting: Elversberg
+NO cost about .94395 after fees versus 92–93% bookmaker-consensus fair, and AfD
+Berlin NO cost .91521 versus a low-confidence 91–92% central estimate with an
+83–96% range. Sports consensus otherwise found no delta above three points.
+
+All other required checks were clean. No marginal-APY or crux-coverage flag,
+watchlist hit, Ostium change, overdue decision, redeemable winning balance,
+reservation or reconciliation block appeared. State audit reconciled 12 indexed
+positions plus one de-indexed claim row. HLE's resolving API remains 59 rows;
+none changes a held threshold, and fresh full exits remain below central hold
+values. Greenland's mechanical Kelly deficit fails tail stress at current price;
+the small MetaMask 700M-YES/4B-NO component edge is consumed by cash carry,
+operational reserve and model/resolution uncertainty. No add or exit is justified.
+
+Primary and thin-tail discovery, macro, monotonicity, consistency and favorite-
+fade scans ran once. Monotonicity found no live executable arb; an independently
+checked Sonnet threshold pair had only a 1.22-point indicative floor margin and
+one 211-second-old book, so robust executable size was zero. Consistency's
+capped 5,001-market slice found zero provisionally positive baskets among 14
+live-quoted groups; coverage remains explicitly incomplete. `redeem-all` found
+zero winning redeemables. All four daemons are exact-one and current; disk had
+about 2.1 GB free. The sole post-journal news alert, Houthi control of Yemen's
+Red Sea coast, has no causal channel to a held position.
+
+The Sep-11 weekly report was already complete, Friday methodology work is not
+due, and the Sep-6 16:02 world-state review remains inside the eight-day limit.
+Next due work is the Sep-12 emergency-path and fee drill. No trade, order, fund
+movement, decision record or Fireworks spend occurred. Material summary sent
+once as Telegram **942**.
