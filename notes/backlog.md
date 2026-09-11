@@ -1,7 +1,17 @@
 # Polyclaude Backlog
 
-## Sep-11 02:20 current update
+## Sep-11 03:45 current update
 
+- **Treasury threshold arb, 03:00 trigger:** exact criteria revalidation proved
+  the 4.35% NO + 4.45% YES payoff floor, and the first fresh books offered 16
+  pairs at 0.904640 all-in. A 03:42 scan found 16 pairs again at 0.914695, but
+  the thin book's timestamp exceeded 120 seconds before both signing attempts.
+  No reservation or order was created and both $15 staging cycles were returned
+  to Polygon Aave. An interim 1.980990 quote was a fixed raw-book sorting bug,
+  not evidence that liquidity withdrew.
+  On a new scanner trigger, use `scripts/monotonicity_pair.py` with equal shares
+  and a hard 0.93 signed-cost ceiling plus cluster
+  `treasury-5y-monotonicity-2026`; never infer executability from the alert.
 - **HLE current review:** the exact chart API contains 59 rows, up from the documented Sep-10 count of 58. The newly observed Grok 4.6 row is xAI at 39.72 and does not satisfy any held contract. Gemini remains below 50 at 46.2 and OpenAI remains below 55 at 53.6. Active source maintenance was already incorporated in current `p_no` values: next Gemini Pro ≥40 debut .20, Gemini ≥50 .35, OpenAI ≥55 .30. Fresh net exits $16.678960/$9.594373/$2.384044 remain far below central hold payouts $33.80/$20.553192/$5.70. HOLD all; NO ADD, taker exit, or new maker order. Preserve the ≥.18 meaningful-depth trim-review trigger on the debut leg.
 - **Duma current review:** VCIOM's Sep-10 turnout-adjusted list forecast is United Russia 51–53%, CPRF 13–15%, New People and LDPR 9–11%, and Just Russia 4–6%. It has no district forecast and is partly correlated with APEK. Combining the list midpoint with APEK's 185–195 district range centers near 319/326 seats depending on Just Russia's threshold result. Retain .15/.32/.25, union .72. The 20-share set's central payout is $14.40 versus $11.82 fresh exit; no add because .72 < .75 and the new set ask .635 > .57.
 - **MetaMask current review:** the direct Dec-31 launch sibling is .06/.08. MetaMask's Sep-9 corporate-separation announcement names no token and says nothing changes for users. Updated conditional priors are .064 YES above $700M, .957 NO above $3B, and .964 NO above $4B. The protected group remains HOLD/no add: $45.99 central fair and $44.75 rule floor exceed its $43.29 complete exit.

@@ -20,13 +20,29 @@ Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-ch
 
 ---
 
-## Latest update — 2026-09-11 02:06 UTC
+## Latest update — 2026-09-11 03:45 UTC
 
-**Comparable performance:** authoritative marked whole-account bankroll is **$185.61**, including **$6.03 of separately contributed gas tokens**. PM midpoint is $154.78, while the complete depth/fee estimate is $146.23. Replacing the midpoint with that estimate gives about **$177.06 including gas**, or **$171.03 of trading value against $170 contributed: +$1.03 / +0.61%**, before VM/other costs. The reads are sequential, stablecoins and aTokens are treated at par, and the liquidation estimate is indicative rather than a synchronized executable quote. There are 12 unresolved PM positions, $147.12 reported cost, and two live zero-fill SELL orders: Greenland 19 @ .98 and Trump-out 28 @ .97. The [Sep-11 weekly report](notes/pnl_weekly.md) records the comparable Sep-4 baseline and accounting limits.
+**03:00 Treasury monotonicity trigger:** the 4.35% NO plus 4.45% YES pair has
+identical Sep-3–Dec-31 criteria and pays at least $1 in every logically
+consistent outcome. The first validated quote cost 0.904640 per pair including
+fees. A later scan again found 16 pairs at 0.914695, but the thin 4.45% book's
+timestamp crossed the 120-second freshness limit before either signing pass.
+No reservation or order was created. One early rehearsal misread the CLOB's
+worst-first raw ask order as a 1.980990 pair; that was a sorting defect, not
+withdrawn liquidity, and it was fixed before commit. The $15 temporarily moved
+from Polygon Aave in each attempt was unwrapped and resupplied; final balances
+are 15.615764 aUSDC.e and 0.173070 pUSD, with only gas spent. A new
+`scripts/monotonicity_pair.py` path now requires exact shared criteria/event
+identity, fresh CLOB books, matching fee and exchange metadata, portfolio caps,
+route-specific approvals, equal FOK fills, on-chain reconciliation, and a
+bounded rollback. Persistent pair topology protects later management. The
+standing signed ceiling for this exact pair is 0.93.
+
+**Comparable performance:** authoritative marked whole-account bankroll is **$185.71**, including **$6.00 of separately contributed gas tokens**. PM midpoint is $154.91, while the complete depth/fee estimate is $145.98. Replacing the midpoint with that estimate gives about **$176.78 including gas**, or **$170.78 of trading value against $170 contributed: +$0.78 / +0.46%**, before VM/other costs. The reads are sequential, stablecoins and aTokens are treated at par, and the liquidation estimate is indicative rather than a synchronized executable quote. There are 12 unresolved PM positions, $147.74 reported cost, and two live zero-fill SELL orders: Greenland 19 @ .98 and Trump-out 28 @ .97. The [Sep-11 weekly report](notes/pnl_weekly.md) records the comparable Sep-4 baseline and accounting limits.
 
 **HLE source correction and current review:** the resolving “AI Progress on Humanity's Last Exam” chart is populated by `dashboard.safe.ai/api/models`; the ten-row server-rendered table previously parsed by `source_freeze_check.py` is a different stale surface. The actual chart API grew from 44 rows on Jul-3 to 52 on Aug-4, 58 on Sep-10, and **59 on Sep-11**. The new observed row is Grok 4.6 at **39.72**. It is not Gemini Pro and does not move any held threshold: Gemini still tops at **46.2**, and GPT-6 Astra remains **53.6**. Active maintenance was already incorporated in central `p_no` values of next-Gemini-Pro debut ≥40 **0.20**, Gemini ≥50 **0.35**, and OpenAI ≥55 **0.30**, so those estimates remain unchanged. Fresh complete net exits are $16.678960/$9.594373/$2.384044 versus central hold payouts $33.80/$20.553192/$5.70. Hold all three; no enlargement, taker exit, or new maker order. The Sep-10 erroneous exit/re-entry remains a **$2.442466 cash loss**, despite positive re-entry EV.
 
-**Passive benchmark:** the same $70/$100 contribution schedule, entered at the first completed trading session strictly after each ledger date, is worth **$179.32 in VT (+5.48%)**, **$180.01 in VTI (+5.89%)**, or **$180.09 in SPY (+5.93%)** at the Sep-10 completed close. Against the current $171.03 depth-based trading value, the pilot trails those asynchronous comparators by about **$8.29–$9.06**, or roughly 4.9–5.3 percentage points of capital. The reproducible policy and script exclude gas and model ideal fractional shares, reinvested distributions and zero trading/tax friction.
+**Passive benchmark:** the same $70/$100 contribution schedule, entered at the first completed trading session strictly after each ledger date, is worth **$179.32 in VT (+5.48%)**, **$180.01 in VTI (+5.89%)**, or **$180.09 in SPY (+5.93%)** at the Sep-10 completed close. Against the current $170.60 depth-based trading value, the pilot trails those asynchronous comparators by about **$8.72–$9.49**, or roughly 5.1–5.6 percentage points of capital. The reproducible policy and script exclude gas and model ideal fractional shares, reinvested distributions and zero trading/tax friction.
 
 **Index allocation review:** broad equities are now an explicit investable outside option, but no purchase clears the net-return gate today. A +2.25% modeled SPX price return through Dec-31 loses at 1x to Ostium's current 5.805% annualized long carry, Aave opportunity cost and legal/venue risk; its $0.10 oracle reserve is refunded after a successful full close and is not counted as a lifecycle cost. Spot SPYx through Jupiter is the best alternative found, but its estimated $0.45-$0.85 one-off bridge/setup/exit cost erases the edge on the current $23.49 reserve. Current full-position exit quotes also lose to their recorded central hold values after the actual index route cost. The stale legacy Ostium approval was revoked after proving zero open trades and limits. Full arithmetic, route evidence and reopening gates are in the [Sep-10 index allocation review](research/2026-09-10-index-allocation-review.md).
 

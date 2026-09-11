@@ -177,6 +177,26 @@ def _meta_positions() -> list[dict]:
     return rows
 
 
+def test_preconfigured_descending_monotonic_group_activates_on_first_leg():
+    priors = _meta_priors()
+    raw = priors["_groups"]["meta"]
+    raw["inactive_until_present"] = True
+    raw["event_model"]["order"] = ["4b", "3b", "700"]
+    raw["event_model"]["thresholds"] = {
+        "4b": 4_000_000_000,
+        "3b": 3_000_000_000,
+        "700": 700_000_000,
+    }
+    raw["event_model"]["threshold_direction"] = "descending"
+
+    inactive = groups.evaluate_groups(priors, [])
+    assert inactive.issues == []
+    assert inactive.groups["meta"]["status"] == "INACTIVE"
+
+    partial = groups.evaluate_groups(priors, _meta_positions()[:1])
+    assert partial.groups["meta"]["status"] == "GROUP_BROKEN"
+
+
 def test_duma_equal_union_aggregates_probability_cost_and_redistribution() -> None:
     group = _duma_group()
 

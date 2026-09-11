@@ -126,6 +126,56 @@
      "directional": true
     }
    ]
+  },
+  "treasury-5y-monotonicity-2026": {
+   "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
+   "add_gate": "PAIR-GATED: enter only equal 4.35% NO + 4.45% YES shares through monotonicity_pair.py when fresh fee-inclusive signed cost is at most 0.93.",
+   "add_policy": {
+    "manual_gate": true,
+    "max_component_all_in": {
+     "floor-pair": 0.93
+    }
+   },
+   "quantity_mode": "proportional_live",
+   "inactive_until_present": true,
+   "event_model": {
+    "kind": "monotone_yes",
+    "event_id": "956932",
+    "end_date": "2026-12-31",
+    "negative_risk": false,
+    "order": [
+     "4.45",
+     "4.35"
+    ],
+    "thresholds": {
+     "4.45": 4.45,
+     "4.35": 4.35
+    },
+    "threshold_direction": "descending"
+   },
+   "legs": {
+    "4.35": {
+     "slug": "will-the-5-year-treasury-yield-dip-below-4pt35-before-2027",
+     "outcome": "No",
+     "asset": "73797146799209695228166040351154234975731233867926528069095933610378910112457"
+    },
+    "4.45": {
+     "slug": "will-the-5-year-treasury-yield-dip-below-4pt45-before-2027",
+     "outcome": "Yes",
+     "asset": "98587237403743048906664687732332464121150022085348712816779874812203102626352"
+    }
+   },
+   "components": [
+    {
+     "id": "floor-pair",
+     "quantity": 1.0,
+     "weights": {
+      "4.35": 1.0,
+      "4.45": 1.0
+     },
+     "directional": false
+    }
+   ]
   }
  },
  "trump-out-as-president-before-2027": {
@@ -977,5 +1027,27 @@
     "checked": "2026-09-05"
    }
   ]
+ },
+ "will-the-5-year-treasury-yield-dip-below-4pt35-before-2027": {
+  "p_no": 0.5,
+  "verified": "2026-09-11",
+  "criteria_read": "2026-09-11",
+  "cluster": "treasury-5y-monotonicity-2026",
+  "rho_within": 1.0,
+  "cluster_frac": 0.0,
+  "arb_paired": "DEC-0134 Treasury monotonicity pair: trade and manage only as equal 4.35% NO + 4.45% YES shares through the guarded pair executor.",
+  "current_assessment": "Conservative isotonic floor prior for portfolio accounting: P(NO below 4.35%)=0.50. This leg is not independently underwritten; the paired position has a logical $1 payout floor before separate-resolution risk.",
+  "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 prior deliberately assigns zero probability to the bonus 4.35%-4.45% band and values only the pair's guaranteed logical floor."
+ },
+ "will-the-5-year-treasury-yield-dip-below-4pt45-before-2027": {
+  "p_yes": 0.5,
+  "verified": "2026-09-11",
+  "criteria_read": "2026-09-11",
+  "cluster": "treasury-5y-monotonicity-2026",
+  "rho_within": 1.0,
+  "cluster_frac": 0.0,
+  "arb_paired": "DEC-0134 Treasury monotonicity pair: trade and manage only as equal 4.35% NO + 4.45% YES shares through the guarded pair executor.",
+  "current_assessment": "Conservative isotonic floor prior for portfolio accounting: P(YES below 4.45%)=0.50. This leg is not independently underwritten; the paired position has a logical $1 payout floor before separate-resolution risk.",
+  "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 prior deliberately assigns zero probability to the bonus 4.35%-4.45% band and values only the pair's guaranteed logical floor."
  }
 }

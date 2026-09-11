@@ -35,6 +35,11 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 - `across_bridge.py` — Across V3 bridge for USDC and native ETH across Arbitrum / Base / Polygon / Optimism.
 - `aave_deposit.py` — Aave V3 `supply` / `withdraw` / `rate` across the same chains.
 - `wrap_pusd.py` — exact 1:1 Polygon conversion in both directions: USDC.e → pUSD through CollateralOnramp and pUSD → USDC.e (or native USDC when that asset is unpaused) through CollateralOfframp. Write paths validate the deployment and simulate before broadcast.
+- `monotonicity_pair.py` — guarded equal-share execution for a revalidated
+  sibling implication pair. It defaults to dry-run and requires exact shared
+  criteria/event identity, fresh CLOB books, fee/route parity, portfolio caps,
+  route-specific approvals, persistent correlation/group topology, FOK balance
+  reconciliation, and bounded rollback.
 - `limitless_arb_scan.py` — paginates Limitless `isPolyArbitrage:true` markets, fuzzy-matches Polymarket counterparts, uses a scoped fast worker to verify resolution-language equivalence, and tags Chainlink-Data-Stream-backed markets as mechanical resolution. Output: `logs/limitless_arb_<ts>.md` + `logs/limitless_arb_latest.json`.
 - `limitless_arb_executor.py` — live-quote inspector. Reads scan output, recomputes net edge after real orderbook slippage. **Does not submit orders** — the auto-execution path was removed after honest EV analysis showed expected value goes negative at our size given resolution-divergence risk on subjective markets.
 

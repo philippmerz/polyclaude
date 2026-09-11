@@ -39,6 +39,7 @@ class GroupSpec:
     components: tuple[dict[str, Any], ...]
     expected_qty: dict[str, float]
     quantity_mode: str
+    inactive_until_present: bool
     add_gate: str
     add_policy: dict[str, Any]
 
@@ -236,6 +237,11 @@ def parse_group_specs(priors: dict[str, Any]) -> dict[str, GroupSpec]:
             raise GroupConfigError(
                 f"{group_id}: quantity_mode must be fixed or proportional_live"
             )
+        inactive_until_present = raw.get("inactive_until_present", False)
+        if not isinstance(inactive_until_present, bool):
+            raise GroupConfigError(
+                f"{group_id}: inactive_until_present must be boolean"
+            )
         legs_raw = raw.get("legs")
         components_raw = raw.get("components")
         if not isinstance(event_model, dict):
@@ -366,8 +372,22 @@ def parse_group_specs(priors: dict[str, Any]) -> dict[str, GroupSpec]:
                 )
                 for leg_id in order
             ]
-            if any(left >= right for left, right in zip(numeric_thresholds, numeric_thresholds[1:])):
-                raise GroupConfigError(f"{group_id}: monotone thresholds must strictly increase")
+            threshold_direction = event_model.get("threshold_direction", "ascending")
+            if threshold_direction not in ("ascending", "descending"):
+                raise GroupConfigError(
+                    f"{group_id}: threshold_direction must be ascending or descending"
+                )
+            pairs = zip(numeric_thresholds, numeric_thresholds[1:])
+            out_of_order = (
+                any(left >= right for left, right in pairs)
+                if threshold_direction == "ascending"
+                else any(left <= right for left, right in pairs)
+            )
+            if out_of_order:
+                verb = "increase" if threshold_direction == "ascending" else "decrease"
+                raise GroupConfigError(
+                    f"{group_id}: monotone thresholds must strictly {verb}"
+                )
         else:
             raise GroupConfigError(f"{group_id}: unsupported event_model kind {kind!r}")
         event_id = event_model.get("event_id")
@@ -411,6 +431,7 @@ def parse_group_specs(priors: dict[str, Any]) -> dict[str, GroupSpec]:
             components=tuple(components),
             expected_qty=expected,
             quantity_mode=quantity_mode,
+            inactive_until_present=inactive_until_present,
             add_gate=add_gate.strip(),
             add_policy=dict(add_policy),
         )
@@ -801,6 +822,29 @@ def evaluate_groups(
     for group_id, spec in specs.items():
         for leg in spec.legs.values():
             book.by_slug[leg["slug"]] = group_id
+        if spec.inactive_until_present:
+            member_slugs = {leg["slug"] for leg in spec.legs.values()}
+            member_assets = {leg["asset"] for leg in spec.legs.values()}
+            any_member = any(
+                isinstance(position, dict)
+                and (str(position.get("slug") or "") in member_slugs
+                     or str(position.get("asset") or "") in member_assets)
+                for position in positions
+            )
+            if not any_member:
+                book.groups[group_id] = {
+                    "group_id": group_id,
+                    "label": spec.label,
+                    "status": "INACTIVE",
+                    "actionable": False,
+                    "issues": [],
+                    "expected_qty": dict(spec.expected_qty),
+                    "slugs": sorted(member_slugs),
+                    "event_model": dict(spec.event_model),
+                    "add_gate": spec.add_gate,
+                    "add_policy": dict(spec.add_policy),
+                }
+                continue
         result = evaluate_group(spec, priors, positions, size_tolerance=size_tolerance)
         book.groups[group_id] = result
         book.issues.extend(result["issues"])

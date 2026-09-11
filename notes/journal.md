@@ -15199,3 +15199,90 @@ explicit fees. Methodology is concluded and was not rerun; the Sep-6 world
 digest is not yet due. Next clocks are the Sep-12 emergency drill, Sep-13
 Sunday world review and 22:00 UTC USGS count, Sep-20 Duma, and Sep-30 Arena.
 Material summary sent once as Telegram **937**. No Fireworks spend.
+
+## 2026-09-11 03:21–03:45 UTC — Treasury monotonicity trigger revalidated; stale books blocked both signing passes
+
+Consumed the 03:00 opportunity alert before the routine checklist. The exact
+siblings are 5-year Treasury yield below 4.35% and below 4.45% during the same
+Sep-3–Dec-31 window, with the same Department of the Treasury 5-year daily
+curve source, Jan-14 missing-data fallback, event 956932, standard exchange
+route, and no UMA status. Buying 4.35% **NO** with 4.45% **YES** pays at least
+$1 per equal pair: below 4.35 only the latter pays, 4.35–4.45 both pay, and at
+or above 4.45 only the former pays. Published observations through Sep-10 were
+all above both thresholds.
+
+The first identity- and freshness-validated books offered both legs at .44.
+Their 5% quadratic taker curves made the signed all-in cost **0.904640 per
+pair**; 16 pairs would have cost at most **$14.474240** for a logically
+consistent payout floor of $16, or **$1.525760 / 10.54%** before foregone Aave
+yield, gas, venue credit, and inconsistent separate-resolution risk. The 0.93
+hard ceiling retained at least $1.12 of floor profit at that size. A second
+independent analysis confirmed the criteria and selected the deep 4.35% NO leg
+first because its immediate unwind was much cheaper than orphaning the thin
+4.45% YES leg.
+
+No safe standard-market paired executor existed, so the signing path was
+hardened before funds could be risked. It now verifies exact criteria and event
+identity, explicit active/UMA/negRisk state, CLOB token and fee parity, <=120s
+book freshness and depth, the combined 15% ticket and 30% cluster caps, the
+correct exchange allowance and CTF approval, one shared reservation, exact FOK
+balances, and a loss-capped prefix rollback. The final review also pinned each
+leg to persistent correlation and group topology, refreshes fees and identity
+before every signature and rollback, and retains reservations only for actual
+or ambiguous exposure. Mocked end-to-end tests caught ordering, reservation and
+freshness bugs that smaller unit tests had missed. **163 focused integration
+tests, all 714 repository tests, and all 156 money-math checks pass.** DEC-0134
+records the scaffolding.
+
+The first late pass found both raw .44 asks still present, but their timestamps
+aged beyond the 120-second freshness limit. An early executor rehearsal printed
+1.980990 because it read the CLOB's worst-first raw asks without sorting; this
+was a code defect, not evidence that liquidity withdrew, and no signature was
+possible on that path. The corrected executor sorts the book and its test pins
+the .44 touch. The first final scanner therefore reported
+`real_executable: []` and the executor refused the stale book.
+
+One bounded final scan at 03:42 found the edge fresh again: 16 shares were
+available at .44 NO/.45 YES, or **0.914695 all-in per pair**, $14.635120 total
+and a $1.364880 / 9.33% logical floor margin. I restaged $15, but by the actual
+executor invocation the 4.45% book timestamp had again crossed 120 seconds. It
+failed before the wallet, reservation, or order path. **No order was signed or
+posted in either attempt.** Per bounded-run policy I did not poll for a third
+window.
+
+The $15 staged from Aave was returned rather than left idle after each attempt.
+The first internal path was Aave withdrawal
+`0x3948b404363361429f405221dd2b80c74045fb0e532cf17e1a9e8cd69a316aac`,
+USDC.e→pUSD wrap
+`0xe7e1651397c63bd409ba83ea8e04a64a1a336ff41162ee4c468d3435f33e4204`,
+exact pUSD allowance
+`0x6c17a2c237fafade6cfd486efaac52782a279976928f8160f45839922cb34f87`,
+unwrap `0x00c38720d379852aae2733a54e8d3ccc0db464d4bc0ecad3f2fb696ff5be2e8f`,
+and Aave resupply
+`0x1f5c48b5474579fd2a53050383ce2695b9ecd6b474bc73cb4874c4b07bb76b26`.
+The second was withdrawal
+`0x2201a8c7d7564ba37c27e7a52e519c52cefb7bf2d7026f8b5608b458b549a975`,
+wrap `0xf9373b3116d82a09293e1ac18b4d7c1b505db36eaa43cf03040fb43b6f09d93f`,
+offramp approval
+`0x52563643a7e9f0455630b90ce63efcf817ce526dfea96904b9ecd9d1dd4d6a70`,
+unwrap `0x383c40e0cdb1b267ea590bab118c70dec489402a3414a82a2b3e73958d757664`,
+and resupply
+`0x05bcacaeb76e3c94402279e7cb69d8e38944e95138874ef3eeed084c9a7b0f02`.
+Final wallet verification shows **15.615764 aUSDC.e, 0.173070 pUSD, zero raw
+USDC.e, zero resting BUY commitment, no reservation/reconciliation file, and no
+new outcome-token balance**. POL fell 49.709437→49.225259 across both staging
+cycles.
+
+The remaining 11-step check was otherwise flat. The 03:45 authoritative
+midpoint was **$185.71**, with 12 positions, PM midpoint $154.91 and indicative
+net depth $145.98. Replacing midpoint with depth gives about $176.78 including
+$6.00 separately contributed gas, or $170.78 trading value. No new material
+news, UMA/Ostium change,
+marginal-APY flag, watchlist hit, crux gap, state-audit issue, overdue decision,
+redeemable economic balance, or thesis-break exit appeared. Constrained Kelly
+adds remain cap-suppressed. Discovery, thin-tail, macro, consistency and
+favorite-fade passes produced no vetted entry. The apparent Sevilla sports
+lead failed direct seven-book de-vigging: executable NO cost .55242 versus
+.53938 consensus fair. The due weekly report was already published at 02:25;
+methodology and world-state work were not due. No Fireworks spend.
+Material summary sent once as Telegram **939**.

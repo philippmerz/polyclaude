@@ -560,8 +560,16 @@ def main() -> int:
             )
 
     # 3a. orphan priors (position gone — keep only if a deliberate re-entry candidate)
+    inactive_preconfigured_slugs = {
+        slug
+        for group in group_book.groups.values()
+        if group.get("status") == "INACTIVE"
+        for slug in group.get("slugs", [])
+    }
     for k, v in priors_raw.items():
         if k.startswith("_"):
+            continue
+        if k in inactive_preconfigured_slugs:
             continue
         if not any(k in s or s in k for s in tracked_slugs):
             note = (v.get("note", "") if isinstance(v, dict) else "")

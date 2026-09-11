@@ -391,6 +391,9 @@ def test_single_entry_cap_requires_affirmative_correlation_identity(
               "events": [{"id": "event-1"}]}
     with pytest.raises(RuntimeError, match="configured correlation cluster"):
         entry._single_entry_cap_state(market, [], 100, 5)
+    with pytest.raises(RuntimeError, match="cannot replace a missing configured cluster"):
+        entry._single_entry_cap_state(
+            market, [], 100, 5, cluster_override="new-factor")
 
     (notes / "portfolio_kelly_priors.json").write_text(json.dumps({
         "candidate": {"cluster": "explicit-independent-candidate"},

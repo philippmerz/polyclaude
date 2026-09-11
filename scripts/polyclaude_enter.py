@@ -536,10 +536,12 @@ def _classify_clob_result(stdout: str, side: str,
 
 def _run_clob_order(side: str, token: str, price: float, size: float,
                     expected_shares: float,
-                    reservation_id: str | None = None) -> tuple[str, str]:
+                    reservation_id: str | None = None,
+                    *, neg_risk: bool = True) -> tuple[str, str]:
     cmd = [
         ".venv/bin/python", "scripts/clob_v2.py", side.lower(), token,
-        str(price), str(size), "--order-type", "FOK", "--neg-risk", "true",
+        str(price), str(size), "--order-type", "FOK", "--neg-risk",
+        "true" if neg_risk else "false",
     ]
     if side.upper() == "BUY":
         if not reservation_id:
@@ -1121,6 +1123,7 @@ def _entry_reservation_commitments(positions: list[dict],
         slug = str(record.get("slug") or "")
         events = record.get("eventIds")
         asset = str(record.get("asset") or "")
+        reserved_cluster = str(record.get("cluster") or "").strip()
         if (not all(math.isfinite(value) for value in (risk, shares, baseline_bought))
                 or risk <= 0.0 or shares <= 0.0 or baseline_bought < 0.0
                 or not condition_id.startswith("0x") or not slug
@@ -1196,6 +1199,7 @@ def _entry_reservation_commitments(positions: list[dict],
             "remainingShares": shares,
             "reservationId": str(record.get("reservationId") or ""),
             "submissionState": submission_state,
+            "cluster": reserved_cluster or None,
         })
         retained.append(record)
     if prune and retained != rows:
@@ -1341,11 +1345,11 @@ def _remove_entry_reservations(reservation_ids: set[str]) -> None:
     _write_entry_reservations(retained)
 
 
-def _chain_reader() -> dict:
+def _chain_reader(neg_risk: bool = True) -> dict:
     """Create one Polygon reader for balance/allowance reconciliation."""
     from web3 import Web3
     from polyclaude_client import CTF, CTF_ABI, ERC20_ABI, Wallet, pick_rpc
-    from clob_v2 import NEG_RISK_EXCHANGE_V2, PUSD_ADDR
+    from clob_v2 import EXCHANGE_V2, NEG_RISK_EXCHANGE_V2, PUSD_ADDR
     w3 = pick_rpc()
     address = Wallet.load().address
     ctf = w3.eth.contract(address=CTF, abi=CTF_ABI)
@@ -1355,7 +1359,8 @@ def _chain_reader() -> dict:
         "address": address,
         "ctf": ctf,
         "pusd": pusd,
-        "exchange": Web3.to_checksum_address(NEG_RISK_EXCHANGE_V2),
+        "exchange": Web3.to_checksum_address(
+            NEG_RISK_EXCHANGE_V2 if neg_risk else EXCHANGE_V2),
     }
 
 
@@ -1653,7 +1658,8 @@ def _pending_bundle_ticket_cost(legs: list[dict],
 def _single_entry_cap_state(market: dict, positions: list[dict], bankroll: float,
                             new_risk: float,
                             declared_cluster_frac: float = 0.0,
-                            pending_buys: list[dict] | None = None) -> dict:
+                            pending_buys: list[dict] | None = None,
+                            cluster_override: str | None = None) -> dict:
     """Return fail-closed ticket and correlation-cap state for one BUY.
 
     Single-market entry used to *print* the 15% ticket doctrine and ask the
@@ -1699,6 +1705,16 @@ def _single_entry_cap_state(market: dict, positions: list[dict], bankroll: float
     candidate_prior = priors.get(slug)
     cluster = (candidate_prior.get("cluster")
                if isinstance(candidate_prior, dict) else None)
+    if cluster_override is not None:
+        requested_cluster = str(cluster_override).strip()
+        if not isinstance(cluster, str) or not cluster.strip():
+            raise RuntimeError(
+                "explicit cluster cannot replace a missing configured cluster; "
+                "persist the candidate classification in portfolio priors first")
+        if cluster.strip() != requested_cluster:
+            raise RuntimeError(
+                f"explicit cluster {requested_cluster!r} disagrees with configured "
+                f"cluster {cluster.strip()!r}")
     if not isinstance(cluster, str) or not cluster.strip():
         raise RuntimeError(
             "candidate lacks a configured correlation cluster; add an explicit "
@@ -1770,8 +1786,21 @@ def _single_entry_cap_state(market: dict, positions: list[dict], bankroll: float
         if not pending_events:
             raise RuntimeError("open BUY commitment has no valid event identity")
         pending_prior = priors.get(pending_slug)
-        pending_cluster = (pending_prior.get("cluster")
-                           if isinstance(pending_prior, dict) else None)
+        configured_pending_cluster = (pending_prior.get("cluster")
+                                      if isinstance(pending_prior, dict) else None)
+        reserved_pending_cluster = commitment.get("cluster")
+        if (isinstance(configured_pending_cluster, str)
+                and configured_pending_cluster.strip()
+                and isinstance(reserved_pending_cluster, str)
+                and reserved_pending_cluster.strip()
+                and configured_pending_cluster.strip()
+                != reserved_pending_cluster.strip()):
+            raise RuntimeError(
+                f"open BUY {pending_slug} reservation cluster disagrees with its prior")
+        pending_cluster = (reserved_pending_cluster
+                           if isinstance(reserved_pending_cluster, str)
+                           and reserved_pending_cluster.strip()
+                           else configured_pending_cluster)
         if not isinstance(pending_cluster, str) or not pending_cluster.strip():
             raise RuntimeError(
                 f"open BUY {pending_slug} lacks an explicit correlation/independence cluster")
@@ -1893,22 +1922,31 @@ def _configure_rollback_guards(legs: list[dict], shares: float,
 
 
 def _rollback_bundle(filled: list[dict], baselines: dict[str, float],
-                     reader: dict) -> bool:
+                     reader: dict, *, refresh_leg=None) -> bool:
     """Best-effort FOK unwind of the *observed* incremental balances."""
     print("\n!! BUNDLE LEG FAILED — unwinding filled legs to avoid naked exposure",
           file=sys.stderr)
     all_ok = True
     for leg in reversed(filled):
         try:
+            live_leg = refresh_leg(leg) if refresh_leg is not None else leg
+            if (not isinstance(live_leg, dict)
+                    or str(live_leg.get("token")) != str(leg.get("token"))
+                    or str(live_leg.get("condition_id") or "").casefold()
+                    != str(leg.get("condition_id") or "").casefold()
+                    or bool(live_leg.get("neg_risk", True))
+                    != bool(leg.get("neg_risk", True))):
+                raise RuntimeError("rollback refresh changed leg identity or exchange route")
             current = _read_token_balances(reader, [leg["token"]])[leg["token"]]
             shares = current - baselines[leg["token"]]
             if shares <= _BALANCE_TOL:
                 continue
-            book = _book_snapshot(leg["token"])
+            book = (live_leg["book"] if refresh_leg is not None
+                    else _book_snapshot(leg["token"]))
             # SELL amount precision is shares, so retain the exact fine-tick bid
             # rather than widening a 0.996 market to a 0.99 limit.
             sell_px, depth, net_proceeds = _marketable_sell_plan(
-                book["bids"], shares, leg["fee_market"])
+                book["bids"], shares, live_leg["fee_market"])
             max_entry_cost = shares * (leg["limit"] + leg["fee_at_limit"])
             modeled_loss = max(0.0, max_entry_cost - net_proceeds)
             loss_cap = shares * leg["rollback_loss_per_share"]
@@ -1917,7 +1955,8 @@ def _rollback_bundle(filled: list[dict], baselines: dict[str, float],
                     f"live unwind loss ${modeled_loss:.2f} through bid {sell_px:g} "
                     f"exceeds authorized ${loss_cap:.2f}")
             state, _ = _run_clob_order(
-                "SELL", leg["token"], sell_px, shares, shares)
+                "SELL", leg["token"], sell_px, shares, shares,
+                neg_risk=bool(leg.get("neg_risk", True)))
             observed = _wait_token_balance(
                 reader, leg["token"], baselines[leg["token"]])
             reconciled = (state == "matched" and observed is not None and

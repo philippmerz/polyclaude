@@ -1,5 +1,5 @@
 {
-  "next_id": 134,
+  "next_id": 135,
   "decisions": [
     {
       "id": 1,
@@ -2642,6 +2642,25 @@
       "calibration_delta": "Engineering and live-state validation rather than a market outcome; every predicted safety property was observed with no market position, order or reserve allocation changed.",
       "lesson": "Verify current primary contracts before treating collateral as trapped. Treat venue eligibility, allowance scope, transaction ambiguity and asynchronous oracle fill as separate hard gates.",
       "resolved_at": "2026-09-10T20:31:55Z"
+    },
+    {
+      "id": 134,
+      "timestamp": "2026-09-11T03:20:19Z",
+      "type": "scaffolding",
+      "thesis": "The 03:00 Treasury threshold alert was logically valid and initially priced 16 matched pairs at 0.904640 all-in against a one-dollar payoff floor, but the repository lacked a safe paired executor for standard binary markets. Add exact-criteria and event checks, sorted fresh identity-matched books, fee and cap validation, route-specific approvals, persistent group topology, equal-share FOK reconciliation, reservations, and bounded orphan rollback. A later 0.914695 quote also cleared the 0.93 ceiling, but its thin-leg timestamp exceeded 120 seconds before signing; no reservation or order was created and the staged reserve was returned to Aave.",
+      "confidence": "high",
+      "prediction": "Any future monotonicity-pair execution will either acquire equal quantities of both proven sibling legs within its signed all-in ceiling, restore the baseline after a definite second-leg failure within the rollback cap, or retain a fail-closed reconciliation record without sending further orders.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "monotonicity-arb",
+        "execution-safety",
+        "treasury-yield"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

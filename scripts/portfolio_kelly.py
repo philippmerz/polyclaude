@@ -628,6 +628,11 @@ def main() -> int:
     # neither becomes an add instruction without a complete executable ask.
     # Reserve current cost once and expose component fairs for underwriting.
     for group_id, group in group_book.groups.items():
+        if group.get("status") == "INACTIVE":
+            # Preconfigured topology protects a future atomic entry without
+            # inventing a held structure or reserving capital before either
+            # leg exists.
+            continue
         if group.get("status") != "OK":
             member_rows = [
                 position for position in positions
