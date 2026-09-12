@@ -1,6 +1,6 @@
 # Polyclaude Backlog
 
-## Sep-12 02:16 current update
+## Sep-12 14:14 current update
 
 - **LSU win-total arb, 04:34 trigger:** the exact >10.5 NO + >9.5 YES pair
   shares event 838852 and identical regular-season-only, cancellation,
@@ -23,11 +23,20 @@
   On a new scanner trigger, use `scripts/monotonicity_pair.py` with equal shares
   and a hard 0.93 signed-cost ceiling plus cluster
   `treasury-5y-monotonicity-2026`; never infer executability from the alert.
-- **HLE current review:** the exact chart API contains 60 rows, up from 59 on Sep-11. The newly observed Muse Spark 1.3 row is 43.2 and does not satisfy any held contract. Gemini remains below 50 at 46.2 and OpenAI remains below 55 at 53.6. Active source maintenance was already incorporated in current `p_no` values: next Gemini Pro ≥40 debut .20, Gemini ≥50 .35, OpenAI ≥55 .30. Fresh net exits about $18.12/$9.61/$2.94 remain far below central hold payouts $33.80/$20.55/$5.70. HOLD all; NO ADD, taker exit, or new maker order. Preserve the ≥.18 meaningful-depth trim-review trigger on the debut leg.
-- **Duma current review:** VCIOM's Sep-10 turnout-adjusted list forecast is United Russia 51–53%, while its weekly series now ends Sep-6 at 37.4%, essentially flat from 37.2% Aug-30 and not a whole-seat forecast. Combining the list midpoint with APEK's 185–195 district range centers near 319/326 seats depending on Just Russia's threshold result. Turovsky's Sep-11 commentary remains qualitative and supplies no replacement forecast. Retain .15/.32/.25, union .72. The 20-share set's central payout is $14.40 versus $12.58 fresh exit; no add because .72 < .75 and a fresh five-unit set costs .673 per payout dollar, above the .57 ceiling. The separate 355+ NO candidate remains rejected because its modest central edge fails stress.
-- **MetaMask current review:** the direct Dec-31 launch sibling is near .06. MetaMask's Sep-9 corporate-separation announcement names no token and says nothing changes for users. Updated conditional priors are .064 YES above $700M, .957 NO above $3B, and .964 NO above $4B. The protected group remains HOLD/no add: $45.99 central fair and $44.75 rule floor exceed its $42.92 complete exit. Current component asks fail the add policy after carry, operational reserve, shared-model and separate-resolution risk.
+- **US×Iran effective-ceasefire Sep-18 review:** the exact criteria again prove
+  that Sep-18 is the last permissible clean-period start/reset date, not its
+  completion deadline. The clearly qualifying Sep-1 southern-Iran strike wave
+  preceded the market's Sep-2 00:24 UTC creation. Sep-5/8 tanker strikes are
+  maritime and explicitly excluded; no later clearly qualifying US strike on
+  Iranian terrestrial territory was found. The fresh fee-free book was YES
+  .89/.90 and NO .10/.11. An honest YES estimate near .91 with a wide .82–.96
+  range leaves neither side robustly positive. SKIP at size zero; continue to
+  require an exact live criteria/fact/book revalidation on any later trigger.
+- **HLE current review:** the exact chart API contains 60 rows, up from 59 on Sep-11. The newly observed Muse Spark 1.3 row is 43.2 and does not satisfy any held contract. Gemini remains below 50 at 46.2 and OpenAI remains below 55 at 53.6. Active source maintenance was already incorporated in current `p_no` values: next Gemini Pro ≥40 debut .20, Gemini ≥50 .35, OpenAI ≥55 .30. Fresh net exits about $19.76/$9.62/$2.94 remain far below central hold payouts $33.80/$20.55/$5.70. HOLD all; NO ADD, taker exit, or new maker order. Preserve the ≥.18 meaningful-depth trim-review trigger on the debut leg.
+- **Duma current review:** VCIOM's Sep-10 turnout-adjusted list forecast is United Russia 51–53%, while its weekly series now ends Sep-6 at 37.4%, essentially flat from 37.2% Aug-30 and not a whole-seat forecast. Combining the list midpoint with APEK's 185–195 district range centers near 319/326 seats depending on Just Russia's threshold result. Turovsky's Sep-11 commentary remains qualitative and supplies no replacement forecast. Retain .15/.32/.25, union .72. The 20-share set's central payout is $14.40 versus about $12.10 fresh exit; no add because .72 < .75 and a fresh five-unit set costs about .667 per payout dollar, above the .57 ceiling. The separate 355+ NO candidate remains rejected because its modest central edge fails stress.
+- **MetaMask current review:** the direct Dec-31 launch sibling is near .06. MetaMask's Sep-9 corporate-separation announcement names no token and says nothing changes for users. Updated conditional priors are .064 YES above $700M, .957 NO above $3B, and .964 NO above $4B. The protected group remains HOLD/no add: $45.99 central fair and $44.75 rule floor exceed its $43.67 complete exit. Current component asks fail the add policy after carry, operational reserve, shared-model and separate-resolution risk.
 - **Hormuz-normal final:** Gamma finalized NO. DEC-0077/0081/0084/0086 are graded. The archived 0.003571 winning dust passes a redemption dry-run but is worth less than gas, so leave it unredeemed; no active resolution monitor remains.
-- **Apple current review:** Sep-9's event had no MacBook, but same-day reporting explicitly anticipated later-2026 hardware. Revised p_no .55 (wide .35–.70). Hold 49.005 NO because the Sep-12 full net exit near $15.76 remains below $26.95 central hold value; no add under the shared cluster cap. Do not treat the event omission as a decisive NO catalyst.
+- **Apple current review:** Sep-9's event had no MacBook, but same-day reporting explicitly anticipated later-2026 hardware. Revised p_no .55 (wide .35–.70). Sep-12's first UMA pass recorded a favorable YES move from .615 to .565; it was a price move, not a new launch fact. Hold 49.005 NO because the fresh full net exit near $19.43 remains below $26.95 central hold value; no add under the shared cluster cap. Do not treat the event omission or price move as a decisive NO catalyst.
 
 ## Sep-9 14:19 update (historical; superseded above)
 

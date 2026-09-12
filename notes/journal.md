@@ -15529,3 +15529,75 @@ disk remains at about 2.1 GB free, and entry reservation/reconciliation files
 remain absent. No backlog item is due before the 14:00 full check; the next
 special clock is the Sep-13 22:00 USGS recount. No trade, external message,
 prior change or Fireworks spend.
+
+## 2026-09-12 14:00–14:14 UTC — full check; Apple move favorable; ceasefire candidate corrected; no trade
+
+Completed the scheduled 11-step check once. The authoritative whole-account
+midpoint was **$191.75 at 14:11 UTC**, up $3.64 from the 02:00 full tick and
+including **$6.27 of separately contributed gas tokens**. PM cost was $147.12,
+midpoint $160.67 and complete indicative depth/fee value $151.81. Replacing the
+PM midpoint gives about **$182.89 including gas**, or **$176.62 trading value
+against $170 contributed: +$6.62/+3.89%**, before VM and other operating costs.
+The sequential reads are not a synchronized executable liquidation quote. The
+Sep-11 completed-close passive comparators remain $180.91 VT, $181.49 VTI and
+$181.62 SPY, ahead of current trading value by $4.29–$5.00.
+
+The first UMA pass produced one real alert: Apple touchscreen-MacBook YES moved
+from .615 to .565, a favorable five-point move for the held NO. There was no new
+Apple launch fact, and the complete 49.005-share NO exit averages about .396,
+roughly $19.43 net, versus $26.95 central hold value. HOLD / NO ADD. The later
+UMA read was quiet because the first pass correctly refreshed its cache. HLE's
+resolving API remains active at 60 rows; Muse Spark 1.3 at 43.2 does not change
+a held threshold, Gemini remains 46.2 and GPT-6 Astra remains 53.6. Fresh HLE
+exits of about $19.76/$9.62/$2.94 remain below central hold values of
+$33.80/$20.55/$5.70. Duma's equal set exits near $12.10 versus $14.40 central
+fair, and a five-unit add near .667 per payout dollar still fails its .75
+evidence and .57 price gates. MetaMask exits near $43.67 versus $45.99 central
+fair and its $44.75 rule floor. Every ordinary and protected-group exit verdict
+remains HOLD.
+
+Constrained Kelly produced no actionable allocation. Trump-out has only $3.26
+of ticket headroom; OpenAI ≥55 has only $3.25 of cluster headroom. Greenland's
+mechanical $5.17 deficit rests on a 1.5-point central edge that fails uncertainty
+stress. Gemini-debut's apparent overweight is a hidden-information position
+whose executable exit remains far below hold value, so it does not justify a
+trim. No prior changed.
+
+The US×Iran effective-ceasefire Sep-18 candidate required an independent
+correction after a scanner read the title as a completion cutoff and treated
+tanker attacks as qualifying. The literal criteria say Sep-18 is the last
+permissible 14-day clean-period **start/reset** date; completion may occur
+afterward. The clearly qualifying Sep-1 US strike wave on southern Iranian land
+preceded the Sep-2 00:24 UTC market creation. [AP reported the terrestrial
+strikes](https://apnews.com/article/ad84a64884aedbbd1e5914182bb3cd8d), while
+the Sep-5 and Sep-8 actions hit oil tankers and are maritime, which the contract
+explicitly excludes. The exact fee-free Sep-18 book was fresh at YES .89/.90
+and NO .10/.11, not .99; raw CLOB arrays are ordered worst-first and must be
+sorted. An honest YES estimate is about **.91 with a wide .82–.96 range**. The
+.90 YES ask and .11 NO ask leave no robust edge on either side. SKIP, size zero.
+
+All required scanner families ran once. Primary discovery covered 1,000 active
+markets and the thin-tail pass completed separately. Monotonicity checked 1,150
+multi-market events; its only midpoint inversion was a three-point five-year
+Treasury threshold ordering with no live book, so executable arb was zero.
+Consistency found 217 raw sum-over-one and 87 sum-under-one groups but no
+provisionally positive fully covered basket. Garcia–Benn YES costs about .7252
+after fees versus .754 bookmaker central and .704 stressed fair. KPRF
+second-most YES costs about .9904 versus roughly .90 central/.85 stressed. The
+Hamilton and Verstappen pole NOs lacked an instance-level thesis. All were
+skipped at size zero.
+
+The remaining safety and operations checks were clean. State audit reconciled
+12 indexed positions plus one de-indexed claim row. Marginal APY, watchlist,
+crux coverage, Ostium diff, overdue decisions and redemption produced no action.
+The authenticated order inventory still contains only two zero-fill premium
+sells: Greenland 19 NO at .98 and Trump-out 28 NO at .97. Polygon PM holds
+15.617595 aUSDC.e, .173070 pUSD, .095025 USDC and 49.225259 POL. The crypto
+sleeve's 7.8740 Arbitrum aUSDC and small stable/gas balances remain intact;
+Ostium has zero trades, limits and allowance. No news or opportunity alert
+arrived after 10:00. All four daemons are exact-one and current, disk has about
+2.1 GB free, the Sep-11 weekly report is current, and the Sep-6 world-state
+review remains inside the eight-day limit. The next special clock is the Sep-13
+22:00 USGS recount. No trade, fill, order change, transfer, decision record,
+code change or Fireworks spend occurred. Material summary sent once as Telegram
+**944**.
