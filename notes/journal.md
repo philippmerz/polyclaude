@@ -15411,3 +15411,90 @@ due, and the Sep-6 16:02 world-state review remains inside the eight-day limit.
 Next due work is the Sep-12 emergency-path and fee drill. No trade, order, fund
 movement, decision record or Fireworks spend occurred. Material summary sent
 once as Telegram **942**.
+
+## 2026-09-12 02:00–02:16 UTC — full check; monthly emergency drill passed; Duma refreshed; no trade
+
+Completed the scheduled 11-step check once. The authoritative whole-account
+midpoint was **$188.11 at 02:03 UTC**, down $1.20 from the prior full tick and
+including **$6.26 of separately contributed gas tokens**. PM cost was $147.12,
+midpoint $157.04 and the latest indicative complete depth/fee value $146.32.
+Replacing the PM midpoint in the authoritative total gives about **$177.39
+including gas**, or **$171.13 trading value against $170 contributed:
++$1.13/+0.66%**, before VM and other operating costs. These are sequential
+rounded reads, not a synchronized executable liquidation quote. Twelve
+unresolved positions remain. Polygon PM balances were 15.616957 aUSDC.e,
+0.173070 pUSD, 0.095025 USDC and 49.225259 POL; the crypto sleeve and its 7.8738
+Arbitrum aUSDC remain intact. Ostium has zero trades, limits and allowance. The
+same two zero-fill premium sells remain live: Greenland 19 NO at .98 and
+Trump-out 28 NO at .97.
+
+The due monthly emergency-path drill passed every semantic gate. The
+Polymarket dry run authenticated the two resting orders, enumerated all 14
+indexed position rows, walked real bids, printed **11/14 WOULD SUBMIT**, stopped
+the illiquid MetaMask-$700M leg at 13.6% slippage and routed two resolved rows
+to redemption. A real 1-share Apple-NO FOK at .999 reached CLOB v2 and returned
+HTTP 400 `order couldn't be fully filled. FOK orders are fully filled or
+killed`, with no fill. A low-level all-zero order cancel reached the venue and
+returned HTTP 200 `order can't be found - already canceled or matched`. Apple
+had 49.005 shares before and after. `redeem_one` on its live condition passed
+the nonzero token-balance guard and simulated `would REVERT: result for
+condition not received yet`, without broadcasting. The Ostium dry run found no
+open positions and suppressed Telegram. Afterwards POL was exactly 49.225259,
+both original order IDs and their zero matched sizes were unchanged, and no
+entry reservation or reconciliation file existed. The documented Ostium drill
+command now includes its required `--reason` argument. Next drill is Oct-12.
+
+The monthly fee guard also passed: 100 active markets contained fee rates 0,
+.03, .04, .05 and .07; the observed maximum peak fee was .0175/share and the
+fallback peak remains .0175. The backlog records the pass and next date.
+
+The eight-day Duma review was re-derived as one economic position. VCIOM's
+Sep-10 turnout-adjusted forecast still puts United Russia at 51–53%; its weekly
+series now ends Sep-6 at 37.4%, essentially flat from 37.2% and not a whole-seat
+forecast. APEK still supplies the only current quantified district range,
+185–195 wins. Combined midpoints center near 319 seats if Just Russia qualifies
+and 326 otherwise. Turovsky's Sep-11 upside commentary remains qualitative.
+Retained **.15/.32/.25** for the 295–309/310–324/325–339 held buckets, union
+**p=.72**. The full equal-set exit was $12.58 versus $14.40 central resolution
+value. A five-unit add costs .673 per payout dollar, failing the .75 evidence
+gate and .57 ceiling. HOLD all equal legs; no add or single-leg action. All
+three prior dates were refreshed and the second state audit was clean.
+
+HLE's resolving API grew from 59 to 60 rows; Muse Spark 1.3 at 43.2 was the new
+observation. Gemini still tops at 46.2 and GPT-6 Astra at 53.6, so no held
+threshold or corrected prior changes. Fresh complete exits of about
+$18.12/$9.61/$2.94 remain below central hold payouts $33.80/$20.55/$5.70.
+Apple and MetaMask have no new official launch fact. Every ordinary exit verdict
+remains HOLD. The mechanical Kelly adds were explicitly rejected: Greenland's
+1.5-point central edge fails uncertainty stress; Trump-out has only $3.26 of
+ticket headroom; OpenAI-HLE has only $3.25 of cluster headroom. The oversized
+Gemini-debut row is hidden-information class and its executable exit is far
+below hold value, so no trim order is justified.
+
+Primary and thin-tail discovery, sports, macro, monotonicity, consistency and
+favorite-fade scans ran once. Monotonicity inspected 1,021 multi-market events
+and found zero midpoint or executable violations. Consistency's bounded 5,003-
+market slice found zero provisionally positive baskets after live depth, with
+coverage explicitly incomplete. Israel-airspace YES was fillable near .982 but
+the available official notices describe localized restrictions excluded by the
+contract; no credible p>.982 case exists. Zverev-US-Open YES was a stale in-play
+scanner comparison: current stage odds imply p about .57 versus .60919 all-in;
+NO is also negative. September 25-bp Fed-hike YES has p about .825 versus
+.798295 all-in but fails the required 10-point stress. Houthis-seize-tanker NO
+at .96 has central p about .975 but fails the 5x tail stress amid current
+Mokha/Mayun control and live tanker targeting; attacks alone remain excluded by
+the criteria. Prior AfD and Duma-355+ fade skips remain below robust value. No
+new market, cross-venue, sports, macro or fade candidate cleared the entry gate.
+
+No new news or opportunity alert appeared after the prior journal cutoff. UMA
+refreshed 35 markets across 37 tracked rows with zero alert; coverage, marginal
+APY, watchlist, Ostium diff and overdue-decision checks were clean. `redeem-all`
+found no winning redeemable position. All four daemons are exact-one and their
+process starts postdate the current script mtimes; disk has about 2.1 GB free.
+The Sep-11
+weekly report is current, the methodology experiment is concluded, and the
+Sep-6 16:02 world-state review remains inside the eight-day catch-up limit. The
+Sep-11 completed-close passive comparator is $180.91 VT / $181.49 VTI / $181.62
+SPY, ahead of the current $171.13 indicative depth-based trading value. No
+trade, fill, order-state change, external transfer, new decision record or
+Fireworks spend occurred. Material summary sent once as Telegram **943**.

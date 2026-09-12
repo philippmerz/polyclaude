@@ -2,7 +2,7 @@
 
 Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-chain sleeves. Fully decentralized — no CEX, no KYC.
 
-**Last updated:** 2026-09-11 (state snapshot updated every cron tick; this header on structural changes)
+**Last updated:** 2026-09-12 (state snapshot updated every cron tick; this header on structural changes)
 
 > **For the next agent:** read [`MANDATE.md`](MANDATE.md) → this README → `strategy/00_philosophy.md` → **`strategy/01_lessons.md` (the consolidated hard-won lessons — everything compaction loses)** → run `scripts/polyclaude_status.py` for current state. That's a complete onboarding in ~5 minutes. Drill into journal/decisions only when needed for specific calibration questions.
 
@@ -20,19 +20,38 @@ Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-ch
 
 ---
 
-## Latest update — 2026-09-11 14:07 UTC
+## Latest update — 2026-09-12 02:16 UTC
 
-**14:00 full check:** all 12 unresolved positions, both sleeves, UMA state,
-Ostium state, coverage, marginal APY, resting orders, redemption state and the
-four daemons are clean. Discovery found no executable consistency or
-monotonicity arbitrage. Three favorite-fade leads were underwritten and
-rejected: Elversberg NO is below bookmaker fair after fees; AfD Berlin NO is
-roughly fair with a wide polling-error range; and United Russia 355+ seats NO
-at .91 has only about one point of central edge and fails downside stress.
-Turovsky's Sep-11 commentary says United Russia may beat APEK's district-seat
-forecast because few opposition concessions are visible, but gives no numeric
-forecast. The held 295–339 range stays at .72 and HOLD: modest district
-outperformance remains inside it and the existing tails cover a larger miss.
+**02:00 full check:** all 12 unresolved positions, both sleeves, UMA state,
+Ostium state, coverage, marginal APY, authenticated orders, redemption state
+and the four daemons are clean. The monthly emergency-path drill passed. Its
+Polymarket dry run found all 14 indexed rows, walked real bids, produced 11
+`WOULD SUBMIT` exits, stopped one illiquid leg for slippage and routed two
+resolved rows to redemption. A live unfillable FOK was semantically killed, a
+fake-order cancel reached the v2 venue and returned “already canceled or
+matched,” and an unresolved-condition redemption simulation reverted only
+after its nonzero-balance preflight. The Ostium dry run found no trades. The
+two real resting order IDs, 49.005 Apple-NO shares, 49.225259 POL and the empty
+reservation/reconciliation state were unchanged. The live fee self-check also
+passed: its observed curves ranged from zero to .07 and the fallback peak still
+covers the live maximum. Next drill: October 12.
+
+Fresh monotonicity and consistency scans found no executable arb. The apparent
+Zverev sports edge was a stale, in-play raw bookmaker reciprocal; synchronized
+stage odds imply about .57 YES versus a .60919 fee-inclusive CLOB cost, while
+NO is also negative. September's 25 bp Fed-hike leg has only a small central
+edge at .798295 all-in and fails the required probability stress. The Houthis
+tanker-seizure NO at .96 fails tail stress amid current control of Mokha/Mayun
+and live targeting. Israel-airspace YES at .982 lacks evidence that a qualifying
+national closure is more likely than its price. All four are skips at size zero.
+
+The short-dated Duma group was re-underwritten from current VCIOM, APEK and
+weekly-rating evidence. No quantified district forecast replaced the Sep-10
+inputs. The .15/.32/.25 bucket distribution and .72 union probability remain;
+the complete equal-share set is worth $14.40 centrally versus a $12.58 fresh
+exit. A five-unit add costs .673 per payout dollar and fails both the .75
+probability gate and .57 price ceiling. HOLD the complete set with no
+single-leg action.
 
 **04:34 LSU monotonicity trigger:** buying LSU regular-season wins >10.5 NO
 with >9.5 YES is a valid floor pair under identical rules; every outcome pays
@@ -61,15 +80,15 @@ route-specific approvals, equal FOK fills, on-chain reconciliation, and a
 bounded rollback. Persistent pair topology protects later management. The
 standing signed ceiling for this exact pair is 0.93.
 
-**Comparable performance:** authoritative marked whole-account bankroll is **$189.31**, including **$6.34 of separately contributed gas tokens**. PM midpoint is $158.16, while the complete depth/fee estimate is $150.37. Replacing the midpoint with that estimate gives about **$181.52 including gas**, or **$175.18 of trading value against $170 contributed: +$5.18 / +3.05%**, before VM/other costs. The reads are sequential, stablecoins and aTokens are treated at par, and the liquidation estimate is indicative rather than a synchronized executable quote. There are 12 unresolved PM positions, $147.12 displayed cost ($147.74 fee-inclusive Kelly exposure), and two live zero-fill SELL orders: Greenland 19 @ .98 and Trump-out 28 @ .97. The [Sep-11 weekly report](notes/pnl_weekly.md) records the comparable Sep-4 baseline and accounting limits.
+**Comparable performance:** authoritative marked whole-account bankroll is **$188.11**, including **$6.26 of separately contributed gas tokens**. PM midpoint is $157.04, while the latest complete depth/fee estimate is $146.32. Replacing the midpoint with that estimate gives about **$177.39 including gas**, or **$171.13 of trading value against $170 contributed: +$1.13 / +0.66%**, before VM/other costs. The reads are sequential, stablecoins and aTokens are treated at par, and the liquidation estimate is indicative rather than a synchronized executable quote. There are 12 unresolved PM positions, $147.12 displayed cost ($147.74 fee-inclusive Kelly exposure), and two live zero-fill SELL orders: Greenland 19 @ .98 and Trump-out 28 @ .97. The [Sep-11 weekly report](notes/pnl_weekly.md) records the comparable Sep-4 baseline and accounting limits.
 
-**HLE source correction and current review:** the resolving “AI Progress on Humanity's Last Exam” chart is populated by `dashboard.safe.ai/api/models`; the ten-row server-rendered table previously parsed by `source_freeze_check.py` is a different stale surface. The actual chart API grew from 44 rows on Jul-3 to 52 on Aug-4, 58 on Sep-10, and **59 on Sep-11**. The new observed row is Grok 4.6 at **39.72**. It is not Gemini Pro and does not move any held threshold: Gemini still tops at **46.2**, and GPT-6 Astra remains **53.6**. Active maintenance was already incorporated in central `p_no` values of next-Gemini-Pro debut ≥40 **0.20**, Gemini ≥50 **0.35**, and OpenAI ≥55 **0.30**, so those estimates remain unchanged. Fresh complete net exits are about $18.12/$10.93/$2.75 versus central hold payouts $33.80/$20.553192/$5.70. Hold all three; no enlargement, taker exit, or new maker order. The Sep-10 erroneous exit/re-entry remains a **$2.442466 cash loss**, despite positive re-entry EV.
+**HLE source correction and current review:** the resolving “AI Progress on Humanity's Last Exam” chart is populated by `dashboard.safe.ai/api/models`; the ten-row server-rendered table previously parsed by `source_freeze_check.py` is a different stale surface. The actual chart API grew from 44 rows on Jul-3 to 52 on Aug-4, 58 on Sep-10, 59 on Sep-11 and **60 on Sep-12**. The newest observed row is Muse Spark 1.3 at **43.2**. It does not move a held threshold: Gemini still tops at **46.2**, and GPT-6 Astra remains **53.6**. Active maintenance was already incorporated in central `p_no` values of next-Gemini-Pro debut ≥40 **0.20**, Gemini ≥50 **0.35**, and OpenAI ≥55 **0.30**, so those estimates remain unchanged. Fresh complete net exits are about $18.12/$9.61/$2.94 versus central hold payouts $33.80/$20.55/$5.70. Hold all three; no enlargement, taker exit, or new maker order. The Sep-10 erroneous exit/re-entry remains a **$2.442466 cash loss**, despite positive re-entry EV.
 
-**Passive benchmark:** the same $70/$100 contribution schedule, entered at the first completed trading session strictly after each ledger date, is worth **$179.32 in VT (+5.48%)**, **$180.01 in VTI (+5.89%)**, or **$180.09 in SPY (+5.93%)** at the Sep-10 completed close. Against the current $175.18 indicative depth-based trading value, the pilot trails those asynchronous comparators by about **$4.14–$4.91**, or roughly 2.4–2.9 percentage points of capital. The reproducible policy and script exclude gas and model ideal fractional shares, reinvested distributions and zero trading/tax friction.
+**Passive benchmark:** the same $70/$100 contribution schedule, entered at the first completed trading session strictly after each ledger date, is worth **$180.91 in VT (+6.42%)**, **$181.49 in VTI (+6.76%)**, or **$181.62 in SPY (+6.84%)** at the Sep-11 completed close. Against the current $171.13 indicative depth-based trading value, the pilot trails those asynchronous comparators by about **$9.78–$10.49**, or roughly 5.8–6.2 percentage points of capital. The reproducible policy and script exclude gas and model ideal fractional shares, reinvested distributions and zero trading/tax friction.
 
 **Index allocation review:** broad equities are now an explicit investable outside option, but no purchase clears the net-return gate today. A +2.25% modeled SPX price return through Dec-31 loses at 1x to Ostium's current 5.805% annualized long carry, Aave opportunity cost and legal/venue risk; its $0.10 oracle reserve is refunded after a successful full close and is not counted as a lifecycle cost. Spot SPYx through Jupiter is the best alternative found, but its estimated $0.45-$0.85 one-off bridge/setup/exit cost erases the edge on the current $23.49 reserve. Current full-position exit quotes also lose to their recorded central hold values after the actual index route cost. The stale legacy Ostium approval was revoked after proving zero open trades and limits. Full arithmetic, route evidence and reopening gates are in the [Sep-10 index allocation review](research/2026-09-10-index-allocation-review.md).
 
-**Other current decisions:** VCIOM's Sep-10 list forecast and Turovsky's qualitative Sep-11 district commentary leave the protected Duma 295–339 union at **0.72**. Hold all three equal legs; do not add because the probability gate (≥.75) and price ceiling (≤.57 per covered payout dollar) both fail—the fresh complete-set ask is .662 and its full exit is about $11.94 versus $14.40 central hold value. The direct MetaMask token-launch sibling is near a **0.06** midpoint; updated conditional priors support the protected group, whose $44.75 rule floor and $45.99 central fair remain above its $43.19 complete exit. Hormuz-normal finalized **NO**; the four linked decisions are graded, and its remaining 0.003571 winning dust is below redemption gas. Apple NO remains **0.55 / HOLD / NO ADD**. Full HLE recovery reasoning and transaction evidence remain in the [Sep-10 autonomy review](research/2026-09-10-frontier-model-autonomy-review.md).
+**Other current decisions:** VCIOM's Sep-10 list forecast, its Sep-6 weekly reading and Turovsky's qualitative Sep-11 district commentary leave the protected Duma 295–339 union at **0.72**. Hold all three equal legs; do not add because the probability gate (≥.75) and price ceiling (≤.57 per covered payout dollar) both fail—the fresh five-unit complete-set cost is .673 per payout dollar and its full exit is about $12.58 versus $14.40 central hold value. The direct MetaMask token-launch sibling is near a **0.06** midpoint; updated conditional priors support the protected group, whose $44.75 rule floor and $45.99 central fair remain above its $42.92 complete exit. Hormuz-normal finalized **NO**; the four linked decisions are graded, and its remaining 0.003571 winning dust is below redemption gas. Apple NO remains **0.55 / HOLD / NO ADD**. Full HLE recovery reasoning and transaction evidence remain in the [Sep-10 autonomy review](research/2026-09-10-frontier-model-autonomy-review.md).
 
 ## Earlier update — 2026-09-09 14:19 UTC
 
