@@ -503,3 +503,34 @@ entry hits**. PWR becomes candidate 31; its $470 gate is well below the fresh $6
 These are research triggers, not buy authorizations. Current machine gates supersede historical
 narrative levels. Both candidates route to the operator's IBKR surface; no polyclaude capital
 action.
+
+## 2026-09-13 weekly digest (domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain — least recent, 21d)
+
+No domain was literally unrun for four weeks: this least-recent trio last ran Aug-23, while the
+other six ran Aug-30/Sep-6. The least-recent rotation was run so the weekly review still advanced.
+
+Themes:
+
+- **Persistent energy-inflation / restrictive-rate risk (HIGH):** August energy CPI was +16.3%
+  YoY, final-demand PPI +5.4% and core PPI +4.7%, while the ECB raised rates. The facts challenge
+  an easy global-easing narrative, but the proposed energy-equity implementation is already
+  late-cycle. XLE was selected as the diversified listed expression and rejected at its current
+  price.
+- **AI bottleneck broadens to leading-edge supply and optical interconnect (MED):** TSMC August
+  revenue rose 53.3% YoY and NVIDIA guided $108B quarterly revenue excluding China, alongside
+  co-packaged-optics ramps. This corroborates the existing TSM watch; COHR was selected as the
+  unvetted optical expression and rejected at its current valuation.
+- **L2/lending usage growth with selective token accrual (MED):** Aave TVL rose 24.8% over one
+  month, Base and Arbitrum secure $14.51B/$12.23B and L2s post 97.5% of Ethereum blob data. This
+  supports the existing selective-value-accrual doctrine rather than a blanket L2-token buy.
+  STRK's isolated unlock short was LOW confidence and was not promoted.
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **XLE (new)** | **1/4** | PASS | Energy inflation / oil disruption | $65.14 is 1.6% below its 52-week high after a 53.8% one-year return. Reassess at **≤$50** only if forward P/E stays below 13x and oil/inventories show a real cycle trough rather than a temporary geopolitical premium. Added an IBKR-surface research trigger. |
+| **COHR (new)** | **2/4** | PASS | AI optical interconnect / CPO | $305.37 follows a 196% one-year rerating; ~72x trailing earnings, weak current FCF and dilution defeat margin of safety. Reassess at **≤$190** with Datacenter & Communications growth above 25% and falling net debt, or after two positive-FCF FY27 quarters validate CPO/1.6T conversion. Added an IBKR-surface research trigger. |
+
+Trigger-state: the 14:00 live monitor priced all 31 existing candidates and found **zero hits and
+zero missing prices**. The two new gates are far below the fresh vet prices; a post-update monitor
+also found no hit. Both route to the operator's IBKR surface and are research prompts rather than
+buy authorizations. No polyclaude capital action.

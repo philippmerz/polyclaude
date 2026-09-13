@@ -1401,3 +1401,123 @@ Strong secular stablecoin/RWA infrastructure and improving fundamentals are pres
 - [Sky Q2 2026 quarterly report](https://insights.skyeco.com/insights/sky-ecosystem-q2-2026-quarterly-report)
 - [Sky July 2026 financial and operational update](https://insights.skyeco.com/insights/sky-ecosystem-july-financial-operational-update)
 - [SKY token mechanics](https://sky.money/blog/understanding-the-sky-token)
+
+---
+
+## 2026-09-13T16:04:45Z — longterm_check
+
+**Query:** `Energy Select Sector SPDR Fund (XLE)` (equity, 3y horizon)
+
+## LONGTERM CHECK: Energy Select Sector SPDR Fund (XLE)
+
+Date: 2026-09-13 | Type: equity | Horizon: 3y
+
+### Current state
+XLE closed at **$65.14** on 2026-09-11, just **1.6% below** its 52-week high of $66.17 and 53.8% total-return higher year-on-year; its 52-week low was $42.35. Fund FY1 P/E is 12.85x, price/cash flow 8.89x, and 30-day SEC yield 2.31%.
+
+### Cyclical position
+**Topping / late-cycle, not a cyclical bottom.** XLE has risen roughly 54% over one year and trades near its 52-week high. The immediate earnings backdrop is unusually strong because Brent averaged $91/b in August and EIA expects about $90/b in 2H26 amid Middle East supply disruption and inventory draws. EIA’s base case is for production recovery, inventory rebuilding, and Brent falling to $74/b in 2027—an unfavorable setup for a fresh energy-equity re-rating.
+
+### Secular tailwind
+There is no strong broad oil-demand secular tailwind substantiated here. Major constituents are executing well—Exxon’s Permian/Guyana output and Chevron’s US production are growing, and Chevron signed a 20-year West Texas data-center power agreement with Microsoft—but these are company-specific offsets to a structurally mature commodity market. The IEA’s September report forecasts global oil demand declining 2.5 mb/d in 2026 due to disruption-related demand destruction; this is not evidence of accelerating secular oil demand.
+
+### Catalyst window
+
+- [MED] 2026-Q4 — Exxon’s fifth Guyana FPSO is scheduled to start, adding 250 kb/d capacity; supports Exxon earnings/volume, but is unlikely alone to re-rate XLE. — [Exxon Q2 release](https://investor.exxonmobil.com/sec-filings/all-sec-filings/content/0002115436-26-000006/livef8k2q26991.htm)
+- [LOW] 2027-Q1/Q2 — Middle East export normalization and global supply recovery are EIA’s base case; likely lowers Brent rather than catalyzes upside. — [EIA September STEO](https://www.eia.gov/outlooks/steo/report/)
+- [MED] 2026-2029 — Sustained power demand could benefit integrated gas/power exposure, illustrated by Chevron’s 20-year Microsoft agreement; too narrow to be an XLE-wide re-rating catalyst. — [Chevron Q2 results](https://www.chevron.com/newsroom/2026/q3/chevron-reports-second-quarter-2026-results)
+
+### Margin of safety
+The fund owns profitable, large-cap integrated operators: Exxon and Chevron comprise roughly 35.5% of XLE. Valuation is modest at 12.85x forward earnings and 8.89x cash flow, and the fund yields 2.31%; however, these are cyclical earnings multiples measured near a price high, not a balance-sheet-backed deep-value entry. Downside is moderated, not bounded.
+
+### Top 3 risks
+
+1. Oil-price normalization — EIA expects inventories to rebuild and Brent to average $74/b in 2027, compressing upstream cash flow and sector earnings.
+2. Demand deterioration / electrification — IEA forecasts a 2026 global oil-demand decline; sustained EV adoption, efficiency, or weak growth would reduce long-run earnings power.
+3. Concentration and geopolitical premium reversal — XOM and CVX dominate the fund, while current earnings and oil prices embed a substantial Middle East disruption premium that can unwind quickly.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 0%
+- Strong (3-5x): 2%
+- Modest (1.5-3x): 13%
+- Flat (-30% to +50%): 55%
+- Thesis broken (-50%+): 30%
+
+### Entry trigger
+Do not enter at $65.14. Reassess only on a **$50-or-lower** XLE entry (about 23% below current price) while forward P/E remains below 13x and Brent/inventories indicate a genuine supply-driven cycle trough—not merely a transient geopolitical spike.
+
+### Verdict: 1/4 — PASS
+Low valuation and incumbent profitability provide one strong dimension, but XLE is near a cycle high with no fund-wide secular-growth or identifiable re-rating catalyst.
+
+### Sources
+
+- [State Street XLE fund page](https://www.ssga.com/us/en/individual/etfs/state-street-energy-select-sector-spdr-etf-xle)
+- [XLE historical prices](https://chartexchange.com/symbol/nyse-xle/historical/)
+- [XLE one-year total return](https://etfiq.com/funds/XLE)
+- [EIA September 2026 Short-Term Energy Outlook](https://www.eia.gov/outlooks/steo/report/)
+- [IEA September 2026 Oil Market Report](https://www.iea.org/reports/oil-market-report-september-2026)
+- [ExxonMobil Q2 2026 results](https://investor.exxonmobil.com/sec-filings/all-sec-filings/content/0002115436-26-000006/livef8k2q26991.htm)
+- [Chevron Q2 2026 results](https://www.chevron.com/newsroom/2026/q3/chevron-reports-second-quarter-2026-results)
+
+---
+
+## 2026-09-13T16:05:48Z — longterm_check
+
+**Query:** `Coherent Corp. (COHR)` (equity, 3y horizon)
+
+## LONGTERM CHECK: Coherent Corp. (COHR)
+
+Date: 2026-09-13 | Type: equity | Horizon: 3y
+
+### Current state
+
+$305.37 close (Sep. 11); +196% versus $102.99 one year ago; 52-week range $100.63–$440.00. Market cap is roughly $58–60B; trailing P/E ~72x and forward P/E ~31.5x.
+
+### Cyclical position
+
+Mid/late-cycle, not a bottom: COHR is 203% above its 52-week low despite being 31% below its June high. Fundamentals are accelerating—FY26 revenue grew 22.5% and Q4 Datacenter & Communications revenue grew 59%—but the valuation already capitalizes substantial earnings expansion. This is an AI-optics upcycle participant, not a depressed cyclical recovery.
+
+### Secular tailwind
+
+Intact and accelerating: AI clusters require rapidly increasing optical interconnect density as architectures move beyond copper. Coherent’s Datacenter & Communications revenue reached $5.27B in FY26, +40% YoY; Microsoft expects FY27 capex to grow and guided next-quarter capex above $50B, while Azure demand continues to exceed supply. This supports demand, but does not establish that today’s stock price is mispriced.
+
+### Catalyst window
+
+- [HIGH] 2026-Q4 — FY27 Q1 results: management guided $2.2–2.4B revenue and $1.85–2.05 non-GAAP EPS; a delivered beat with sustained margin expansion could support a re-rating.
+- [HIGH] 2026-Q4 to 2027 — Co-packaged-optics and 1.6T/next-generation optical ramps; management targets doubling internal InP output by end-2026 and more than doubling it again in 2027.
+- [MED] 2027 — NVIDIA strategic agreement and Sherman, Texas capacity expansion: conversion into production revenue/volume would validate Coherent’s AI-infrastructure position. The facility has a letter of intent for up to $50M in CHIPS Act support.
+
+### Margin of safety
+
+Limited at the current price. Coherent is profitable (FY26 GAAP EPS $4.12; non-GAAP EPS $5.61), with $1.99B of cash plus short-term investments against $3.22B of debt, but FY26 operating cash flow was only $79.5M while capex was $1.10B. The balance sheet is serviceable, not a hard downside floor; 72x trailing earnings and 26% YoY share-count growth weaken entry protection.
+
+### Top 3 risks
+
+1. AI-capex digestion or optical inventory correction — hyperscalers can defer buildouts; revenue and operating leverage would reverse quickly.
+2. Execution/competition in 1.6T and CPO — capacity spending, yield failures, or superior offerings from optical peers/internal customer designs could prevent expected returns.
+3. Valuation and dilution — high earnings expectations leave downside even under continued growth; further financing/share issuance would dilute per-share economics.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 0%
+- Strong (3-5x): 10%
+- Modest (1.5-3x): 25%
+- Flat (-30% to +50%): 35%
+- Thesis broken (-50%+): 30%
+
+### Entry trigger
+
+Do not enter at $305. An actionable trigger would be a decline to ≤$190 (roughly 34x FY26 non-GAAP EPS) while Datacenter & Communications growth remains above 25% and net debt continues falling; alternatively, require two consecutive FY27 quarters confirming CPO/1.6T revenue conversion and positive free cash flow after expansion capex.
+
+### Verdict: 2/4 — PASS
+
+Strong secular tailwind and identifiable catalysts, but neither a cyclical-bottom entry nor a margin-of-safety valuation; this is a high-quality growth company rather than a generational-mispricing candidate.
+
+### Sources
+
+- [COHR historical price data](https://stockanalysis.com/stocks/cohr/history/)
+- [COHR valuation statistics](https://stockanalysis.com/stocks/cohr/statistics/)
+- [Coherent FY26 Q4 earnings release](https://www.coherent.com/content/dam/coherent/site/en/documents/investors/financial-releases/2026/august-12/earnings-release-fy26-q4.pdf)
+- [Coherent FY26 investor presentation](https://www.sec.gov/Archives/edgar/data/820318/000119312526346860/d128030dex992.htm)
+- [Microsoft FY26 Q4 earnings call](https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4)

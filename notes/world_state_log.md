@@ -2071,3 +2071,85 @@ Domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics
 - Run longterm_check.py on: CEG, HREE, CRMNF
 - Run catalyst_check.py on: “Will DOE issue another PJM emergency reliability order before November 2026?”, “Will North Plains Connector receive final federal approval in 2026?”
 - Skip / pass: crude-oil directional trade (OPEC release does not state the adjustment direction in the text); defense primes (no recent primary-source procurement value tied to a listed contractor); uranium/HALEU (recent IAEA material establishes supply-chain requirements but no new commercial demand or contract fact).
+
+---
+
+## 2026-09-13T16:03:06Z — world_state_digest
+
+**Domains:** macro-fiscal-labor, tech-ai-chips, crypto-on-chain | **Lookback:** 30d | **Profile:** research
+
+# WORLD-STATE DIGEST — 2026-09-13
+
+Domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### Macro-fiscal-labor
+
+- [2026-09-11] [BLS CPI](https://www.bls.gov/news.release/cpi.nr0.htm): August CPI-U rose 0.4% m/m and 3.4% y/y; core CPI rose 0.3% m/m and 2.4% y/y.
+- [2026-09-11] [BLS CPI](https://www.bls.gov/news.release/cpi.nr0.htm): Energy rose 2.1% m/m and 16.3% y/y; gasoline rose 3.9% m/m and 27.4% y/y.
+- [2026-09-10] [BLS PPI](https://www.bls.gov/news.release/ppi.nr0.htm): Final-demand PPI rose 0.4% m/m and 5.4% y/y in August; core PPI excluding food, energy, and trade services rose 0.3% m/m and 4.7% y/y.
+- [2026-09-04] [BLS Employment Situation](https://www.bls.gov/news.release/empsit.htm): August nonfarm payrolls increased 162,000; unemployment rate was 4.1%; average hourly earnings rose 0.3% m/m and 3.1% y/y.
+- [2026-09-04] [BLS Employment Situation](https://www.bls.gov/news.release/empsit.htm): Manufacturing employment increased 16,000 in August and was 58,000 above its December 2025 low; information employment fell 23,000.
+- [2026-08-26] [BEA Personal Income and Outlays](https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026): July personal income rose 0.4% m/m, real DPI rose 0.4%, nominal PCE rose 0.2%, and real PCE was less than 0.1% higher; personal saving rate was 3.0%.
+- [2026-08-26] [BEA Personal Income and Outlays](https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026): July PCE price index rose 3.7% y/y; core PCE rose 3.3% y/y.
+- [2026-09-10] [ECB monetary-policy decision](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.pl.html): ECB raised all three policy rates 25 bp; effective September 16, deposit rate will be 2.50%, MRO 2.65%, marginal lending 2.90%.
+- [2026-09-10] [ECB monetary-policy decision](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.pl.html): ECB baseline projects headline inflation of 3.0% in 2026, 2.5% in 2027, and 2.1% in 2028; core inflation 2.5%, 2.6%, and 2.3%.
+- [2026-09-10] [Bank of Japan](https://www.boj.or.jp/en/): BOJ’s overnight-call-rate guideline remains around 1.0%; its next policy meeting is September 17–18.
+
+### Tech-ai-chips
+
+- [2026-09-10] [TSMC monthly revenue](https://investor.tsmc.com/english/monthly-revenue/2026): August consolidated revenue was NT$514.806 billion, +53.3% y/y; January–August revenue was NT$3.387 trillion, +39.3% y/y.
+- [2026-08-26] [NVIDIA Q2 FY2027 results](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027): Revenue was $96.221 billion, +18% q/q and +106% y/y; GAAP gross margin was 75.0%; data-center revenue was $89.0 billion, +117% y/y.
+- [2026-08-26] [NVIDIA Q2 FY2027 results](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027): Q3 FY2027 revenue outlook is $108.0 billion ±2%, with no China data-center-compute revenue assumed; gross-margin outlook is 74.0% ±50 bp.
+- [2026-08-26] [NVIDIA Q2 FY2027 results](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027): NVIDIA announced Spectrum-6 systems supporting pluggable and co-packaged optics are arriving at AI factories.
+- [2026-08-26] [NVIDIA Q2 FY2027 results](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027): NVIDIA announced proposed compute-financing partnerships intended to mobilize over $500 billion of third-party AI-infrastructure capital, subject to definitive agreements.
+- [2026-09-10] [TSMC Q2 call / Q3 guidance](https://investor.tsmc.com/japanese/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf): TSMC guided Q3 revenue to $44.6–45.8 billion, midpoint +12% q/q and +37% y/y; Q2 capex was $15.7 billion.
+- [2026-09-10] [TSMC Q2 call / Q3 guidance](https://investor.tsmc.com/japanese/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf): TSMC stated it has begun COUPE production and that the technology should ramp over coming years.
+
+### Crypto-on-chain
+
+- [2026-09-13] [DefiLlama](https://defillama.com/): Stablecoin market capitalization was $305.271 billion.
+- [2026-09-13] [DefiLlama](https://defillama.com/): Lido TVL was $24.0 billion, +34.37% over one month; Aave TVL was $18.133 billion, +24.83% over one month, with $1.17 million of 24-hour fees and $155,066 of 24-hour revenue.
+- [2026-09-13] [L2BEAT](https://l2beat.com/): Ethereum economic security was $71.84 billion; layer 2s posted 97.5% of blob data; L2 activity was 18.61 UOPS.
+- [2026-09-13] [L2BEAT](https://l2beat.com/): Base value secured was $14.51 billion; Arbitrum One $12.23 billion; OP Mainnet $1.66 billion.
+- [2026-09-13] [Tokenomist](https://tokenomist.ai/): STRK showed 36.47% circulating supply and a next unlock of $3.70 million / 3.48% within roughly two days; source timestamped 15:38 UTC.
+
+## CANDIDATE THEMES
+
+### Persistent energy-inflation / restrictive-rate risk
+
+- Underlying facts: U.S. energy CPI +16.3% y/y; U.S. final-demand PPI +5.4% y/y and core +4.7% y/y; ECB raised rates and projects 2027 core inflation at 2.6%.
+- Implication: Energy-price pass-through is present in consumer and producer prices while both US PCE inflation and ECB projections remain above target; the global easing assumption is less secure.
+- Possible plays: XLE, XOP; short duration-sensitive long-duration growth baskets.
+- Direction: Long energy equities; short long-duration equities.
+- Horizon: Weeks to months.
+- Retail blindspot: Headline CPI labels energy as temporary while producer-price persistence and foreign central-bank tightening are separate narrative streams.
+- Confidence: HIGH
+
+### AI bottleneck shifts from accelerators to interconnect and leading-edge supply
+
+- Underlying facts: NVIDIA guided $108 billion quarterly revenue excluding China data-center compute; TSMC August revenue +53.3% y/y and Q3 midpoint +37% y/y; both disclosed production/ramp activity in co-packaged optics.
+- Implication: Accelerator demand is translating into wafer, packaging, optical-interconnect, and power/networking demand; the marginal bottleneck is broader than GPUs.
+- Possible plays: TSM; optical-interconnect / co-packaged-optics category (COHR, LITE).
+- Direction: Long.
+- Horizon: Months.
+- Retail blindspot: GPU-revenue headlines compress the supply chain into a single NVIDIA narrative.
+- Confidence: MED
+
+### L2 settlement and lending usage is growing, but token supply remains selective
+
+- Underlying facts: Aave TVL +24.83% m/m; Lido TVL +34.37% m/m; Base and Arbitrum secure $14.51 billion and $12.23 billion; 97.5% of Ethereum blob data is posted by L2s.
+- Implication: Ethereum L2 and DeFi usage data are expanding, but activity/TVL does not mechanically accrue to every governance token; scheduled issuance can dominate near-term token returns.
+- Possible plays: ETH category exposure; short STRK around its scheduled unlock.
+- Direction: Long ETH category / short STRK.
+- Horizon: ETH months; STRK days to weeks.
+- Retail blindspot: “L2 growth” is treated as a blanket token thesis despite value capture and circulating-supply differences.
+- Confidence: MED for ETH category; LOW for STRK.
+
+## NEXT-STEPS
+
+- Run `longterm_check.py` on: XLE, XOP, TSM, COHR, LITE, ETH, STRK.
+- Run `catalyst_check.py` on: “Will ECB raise rates again in 2026?”, “Will US CPI exceed 3% in September 2026?”, “Will NVIDIA Q3 FY2027 revenue exceed $108bn?”
+- Skip / pass: direct NVDA long (exceptional facts but valuation/pricing not established here); broad L2 governance-token long; BoJ/PBOC themes (no sufficiently material new primary release in-window).
+- Watchlist cross-reference: none recalled; `notes/longterm_watchlist.md` was not read.

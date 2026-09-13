@@ -1,6 +1,16 @@
 # Polyclaude Backlog
 
-## Sep-13 14:04 current update
+## Sep-13 16:09 current update
+
+- **16:00 Sunday world-state rotation:** no domain was literally older than
+  four weeks, so the oldest trio from Aug-23 (macro/fiscal/labor, tech/AI/chips,
+  crypto/on-chain) ran. Energy inflation surfaced HIGH confidence; AI optical
+  infrastructure and selective L2/DeFi growth surfaced MED. Fresh vets rejected
+  both chosen implementations at current prices: XLE 1/4 PASS at $65.14 and
+  COHR 2/4 PASS at $305.37. Added conditional IBKR research gates at XLE <=$50
+  and COHR <=$190. The monitor now covers 33 candidates with zero hits. No
+  portfolio action; Telegram 947 sent. The next due item is the 22:00 USGS
+  final-window recount.
 
 - **14:00 full review:** 11 positions remain at $130.59 cost, $144.18 midpoint
   and $136.41 indicative net depth. Authoritative bankroll is $193.28 and

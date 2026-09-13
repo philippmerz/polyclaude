@@ -15872,3 +15872,41 @@ No trade, fill, order change, transfer, prior change, external funding,
 Telegram message or Fireworks spend occurred. Weekly P&L is current; the Sep-6
 16:02 world-state review remains inside the eight-day catch-up rule. `main`
 matched `origin/main` at `e02f22d` before this note.
+
+## 2026-09-13 16:00–16:09 UTC — Sunday world-state rotation; two fresh passes
+
+The rotation log showed that no domain was literally unrun for four weeks. The
+oldest natural trio—`macro-fiscal-labor`, `tech-ai-chips` and
+`crypto-on-chain`—last ran Aug-23; the other groups ran Aug-30 and Sep-6. I ran
+that least-recent trio once through `world_state_digest.py` with the default
+30-day research profile. The scoped 14-source result was appended at 16:03.
+
+Three themes survived the digest's fact screen. Persistent energy inflation was
+HIGH confidence: August energy CPI was +16.3% YoY, final-demand/core PPI were
++5.4%/+4.7%, and the ECB raised rates. AI supply broadening from accelerators
+into leading-edge wafers and optical interconnect was MED: TSMC August revenue
+rose 53.3% YoY and NVIDIA guided $108B quarterly revenue excluding China while
+both supply chains advance co-packaged optics. L2/lending activity was MED, but
+the facts support selective value-accrual analysis rather than a blanket token
+long; the isolated STRK unlock short was LOW and was not promoted.
+
+I used the two vetting slots on the clearest new implementations. XLE closed at
+$65.14, 1.6% below its 52-week high after a 53.8% one-year total return. The
+fresh check scored **1/4 PASS**: current oil prices embed disruption premium,
+the sector is late-cycle, and EIA's base case has Brent normalizing in 2027.
+Reopen only at <=$50 while forward earnings remain below 13x and inventories
+show a real supply-cycle trough. COHR at $305.37 is up 196% in a year; although
+data-center/communications revenue and the CPO/1.6T catalyst are real, about 72x
+trailing earnings, $79.5M operating cash flow against $1.10B capex and dilution
+leave no margin of safety. It scored **2/4 PASS**. Reopen at <=$190 only with
+data-center growth above 25% and falling net debt, or after two positive-FCF
+FY27 quarters validate the optical ramp.
+
+The 14:00 monitor had priced all 31 existing research candidates with zero hits
+and zero missing prices. I added XLE <=$50 and COHR <=$190 as conditional
+`ibkr_surface` research gates, bringing the list to 33; the post-update
+hits-only monitor returned clean. These gates prompt fresh underwriting rather
+than authorize a buy. No existing trigger fired and no polyclaude or personal
+capital action was recommended. No trade, transfer, external funding or
+Fireworks spend occurred. Telegram **947** carried the weekly result. `main`
+matched `origin/main` at `0d67e1a` before this review.

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-09-06",
+  "updated": "2026-09-13",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -321,6 +321,26 @@
       "route": "ibkr_surface",
       "rationale": "Fresh 2026-09-06 longterm_check: 2/4 PASS at $620.06. Grid/HVDC/data-center demand and $53.44B backlog are strong, but ~34x forward earnings, a 65% one-year rerating and $6.10B debt leave no current margin of safety. Reassess at $430-470 only if electric backlog and 2027 earnings visibility remain intact; alternative review after two quarters of acquisition integration, positive FCF conversion and no electric-backlog deterioration.",
       "added": "2026-09-06"
+    },
+    {
+      "ticker": "XLE",
+      "type": "equity",
+      "yfinance_symbol": "XLE",
+      "entry_max": 50.0,
+      "horizon": "1-3y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-09-13 longterm_check: 1/4 PASS at $65.14, 1.6% below its 52-week high after a 53.8% one-year total return. Current oil prices and cyclical earnings embed substantial disruption premium, while EIA expects Brent normalization in 2027. Reassess at <=$50 only if forward P/E remains below 13x and Brent/inventories indicate a genuine supply-driven cycle trough rather than a transient geopolitical spike.",
+      "added": "2026-09-13"
+    },
+    {
+      "ticker": "COHR",
+      "type": "equity",
+      "yfinance_symbol": "COHR",
+      "entry_max": 190.0,
+      "horizon": "2-3y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-09-13 longterm_check: 2/4 PASS at $305.37 after a 196% one-year rerating. AI optical-interconnect demand and CPO/1.6T catalysts are real, but ~72x trailing earnings, weak current FCF and share dilution provide no margin of safety. Reassess at <=$190 only if Datacenter & Communications growth remains above 25% and net debt falls; alternative review after two consecutive FY27 quarters of CPO/1.6T conversion and positive FCF.",
+      "added": "2026-09-13"
     }
   ]
 }

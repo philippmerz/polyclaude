@@ -20,7 +20,18 @@ Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-ch
 
 ---
 
-## Latest update — 2026-09-13 14:04 UTC
+## Latest update — 2026-09-13 16:09 UTC
+
+**16:00 weekly long-term rotation:** all nine domains were inside four weeks, so
+the oldest trio—macro/fiscal/labor, tech/AI/chips and crypto/on-chain, last run
+Aug-23—was refreshed. The digest surfaced persistent energy inflation (HIGH),
+AI optical/leading-edge bottlenecks (MED) and selective L2/DeFi growth (MED).
+Fresh checks rejected both selected implementations at current prices: XLE is
+near its 52-week high after a 53.8% annual return (1/4 PASS), and COHR is up 196%
+in a year with weak current free cash flow and about 72x trailing earnings (2/4
+PASS). Research-only IBKR gates were added at XLE <=$50 and COHR <=$190, each
+conditional on its operating thesis remaining intact. The expanded 33-name
+monitor has zero hits; no capital action followed.
 
 **14:00 full check:** 11 unresolved positions remain at $130.59 cost. The
 authoritative whole-account midpoint is **$193.28**, down $1.17 from 10:00 and
@@ -57,8 +68,9 @@ redemption produced no action. Polygon PM holds about 33.708 aUSDC.e, .173 pUSD,
 .095 USDC and 49.097 POL; the crypto sleeve remains intact and Ostium has no
 open trade. All four daemons are exact-one/current, disk has about 2.1 GB free,
 and no news or opportunity alert arrived after 10:02. The Sunday world-state
-rotation is due separately at 16:00 UTC and the USGS recount at 22:00. No fill,
-position, prior, order, transfer, Telegram message or Fireworks spend occurred.
+rotation completed at 16:03 UTC; the USGS recount remains due at 22:00. No fill,
+position, prior, order or transfer occurred; the weekly result was sent in
+Telegram 947, and Fireworks spend was zero.
 
 ## Earlier update — 2026-09-09 14:19 UTC
 
