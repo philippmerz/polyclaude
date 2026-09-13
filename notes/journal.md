@@ -15587,7 +15587,7 @@ second-most YES costs about .9904 versus roughly .90 central/.85 stressed. The
 Hamilton and Verstappen pole NOs lacked an instance-level thesis. All were
 skipped at size zero.
 
-The remaining safety and operations checks were clean. State audit reconciled
+The initial safety and operations checks were clean. State audit reconciled
 12 indexed positions plus one de-indexed claim row. Marginal APY, watchlist,
 crux coverage, Ostium diff, overdue decisions and redemption produced no action.
 The authenticated order inventory still contains only two zero-fill premium
@@ -15647,3 +15647,123 @@ exact-one and current, disk remains about 2.1 GB free, and `main` matched
 `origin/main` before this note. Nothing is due before the Sep-13 22:00 UTC USGS
 recount. No trade, fill, order change, transfer, Telegram message or Fireworks
 spend occurred.
+
+
+## 2026-09-13 02:00–02:15 UTC — full check; Duma prior updated; Greenland closed at .952
+
+Completed the scheduled 11-step check once. The authoritative whole-account
+midpoint was **$193.40 at 02:07 UTC**, up $1.65 from the Sep-12 14:11 full tick
+and including **$6.24 of separately contributed gas tokens**. PM cost was
+$147.12, midpoint $162.35 and complete indicative depth/fee value $154.04.
+Replacing the PM midpoint gives about **$185.09 including gas**, or **$178.85
+trading value against $170 contributed: +$8.85/+5.21%**, before VM and other
+operating costs. The reads are sequential, not a synchronized executable
+liquidation quote. Settled realized P&L is +$1.93; the bankroll script estimates
+another +$6.91 on an indicative realizable basis. The Sep-11 completed-close
+passive comparators remain $180.91 VT / $181.49 VTI / $181.62 SPY, ahead of the
+current trading value by $2.06–$2.77.
+
+The daily Duma evidence re-derivation found a material new primary input. FOM's
+Sep-10 final forecast puts United Russia at 47–49%, KPRF at 14–17%, LDPR at
+10–12%, New People at 8–9% and Just Russia at 6–7%. Normalizing the five
+qualifying-party midpoints implies about 120.7 of 225 list seats for United
+Russia; adding APEK's 185–195 district range centers near 311 seats. The
+analogous VCIOM-midpoint calculation centers near 319. [FOM primary
+forecast](https://fom.ru/Politika/15378), [VCIOM turnout-adjusted
+forecast](https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom),
+[APEK district forecast](https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/).
+The new lower center justifies moving six points out of 325–339 and three each
+into 295–309 and 310–324: **.15/.32/.25 → .18/.35/.19**. It does not justify
+changing the .72 union because RASO's broad component ranges and Turovsky's
+qualitative district-upside case preserve meaningful below-295 and above-339
+tails. The complete set exits for $12.54 versus $14.40 central payout. A
+five-unit add costs .646 per payout dollar, above the .57 hard ceiling, and
+.72 remains below the .75 evidence gate. HOLD the equal set / NO ADD / no
+single-leg action. The state audit is clean after refreshing all three daily
+verification dates.
+
+The initial active-thesis pass left every other position as HOLD. The exact HLE
+API is active at 60 rows:
+Muse Spark 1.3 is 43.2, Gemini remains 46.2 and GPT-6 Astra remains 53.6. Fresh
+net exits for next-Gemini-Pro debut / Gemini ≥50 / OpenAI ≥55 are about
+$19.16/$9.62/$3.31 versus $33.80/$20.55/$5.70 central hold value. Apple exits
+near $20.37 versus $26.95 central hold value. Trump-out exits near $26.63 versus
+$27.48, Greenland near $17.86 versus $18.05, and MetaMask's complete group near
+$44.37 versus $45.99 central fair and a $44.75 rule floor. Constrained Kelly
+found no robust cap-compliant add: Trump-out has only about $4.05 ticket
+headroom, while the AI cluster has about $4.83 headroom. Greenland's mechanical
+negative edge is below the exit-cost/tick-noise threshold and already has a
+premium .98 sell; the HLE debut leg remains hidden-information class. No new
+maker order or trim is justified.
+
+All required prospecting families ran exactly once. Default discovery covered
+1,000 active markets (`shortlist_20260913T020048Z.json`), and the thin-tail pass
+completed (`shortlist_20260913T020100Z.json`). Sports produced 70 qualified
+rows and three consensus reads. Barcelona and Bilibili appeared as NO leads at
+9.5pp/5.2pp from scanner consensus fields, but exact displayed prices refuted
+the magnitude: Oddschecker's Barcelona 1X2 prices de-vig to roughly 83.3% YES
+/ 16.7% NO and Stake's BLG/Anyone's Legend prices de-vig to roughly 82.35% /
+17.65%. The live executable NO asks were .99 in both books, so both are sharply
+negative EV and size zero. The macro pass returned five markets; yesterday's
+Sep-Fed +25 underwriting still fails uncertainty stress at the current price.
+Favorite-fade leads (KPRF second-most, Schwesig, US×Iran Sep-18 and George
+Russell pole) supplied no new instance evidence that clears stress and cost.
+
+Monotonicity inspected 1,329 events, including 985 multi-market events, and
+found zero midpoint violations or real arbs. The bounded consistency pass
+covered 5,000 open markets / 579 events, including 3,656 negRisk markets, and
+found zero provisionally positive fully covered basket; coverage remains
+explicitly incomplete rather than exchange-wide. No news or opportunity alert
+arrived after the Sep-12 22:03 journal cutoff. The previously reviewed Treasury
+and LSU pair triggers remain absent from current books and created no
+reservation or funding action.
+
+The pre-trade safety and operations checks were clean. State audit reconciled
+12 indexed positions plus one de-indexed claim row. Marginal APY found six
+clear and zero flagged rows; watchlist, UMA (37 rows / 35 refreshed / zero
+alerts), crux coverage, Ostium diff and overdue decisions produced no action.
+`redeem-all` found zero winning redeemables among 14 checked rows. The exact
+authenticated order inventory remains two LIVE zero-fill sells: Greenland 19 NO
+at .98 and Trump-out 28 NO at .97. Polygon PM holds 15.618241 aUSDC.e, .173070
+pUSD, .095025 USDC and 49.225259 POL. The crypto sleeve retains about 7.8743
+Arbitrum aUSDC, 1.0478 Base USDC and gas balances; Ostium has zero trades,
+limits and allowance. All four daemons are exact-one and current, disk has about
+2.1 GB free, the Sep-11 weekly report is current, and the Sep-6 16:02 world-state
+review remains inside the eight-day catch-up rule. These were the pre-trade
+snapshots; a final aggregate refresh then surfaced the Greenland exit below.
+
+At 02:11 the aggregate hurdle check found Greenland NO newly executable above
+fair: 60 shares bid at .952 against the recorded .95 central prior. A direct
+book pull verified the exact token/condition identity and a book timestamp less
+than four seconds old. `exit_analysis.py` priced all 19 shares at **$18.088**
+versus **$18.05** central hold payout, before the additional value of investing
+cash through the remaining 109.9 days. I canceled the zero-fill .98 maker order
+and verified it absent, then sold all 19 NO FOK at .952. CLOB order
+`0x74e43a968e7f4f316658ceed47861ff483c0c02fef50eec04c11e19faa266abc`
+matched in full for 18.088 pUSD, transaction
+`0x2ba1b8018f0364752a07b25828b2428b150177cefa786557e1f40b93522fff22`.
+This realizes about **+$1.558 / +9.4%** on $16.53 cost, recycles capital above
+central fair, and removes the criteria/tail risk. The live 3.039% Aave rate adds
+about $0.16 expected carry through Dec 31 before gas. DEC-0136 records the close.
+
+The sale balance indexed immediately: Greenland disappeared from positions and
+only Trump's zero-fill .97 premium sell remains. I unwrapped exactly 18.088
+pUSD to USDC.e after approval (approval
+`b398cfab0224b52ff08d50d476dd435552a763da6db24637d2c59cc3a7c8ff6b`,
+unwrap `e27bec325e444b9defa5a9a3211cbde1d529c855f64832d6ade3cf7c2860ba7a`)
+and supplied it to Polygon Aave
+(`0xdf0c40ab9b2441edfe0e7066dfe16bcb5e926d0bdb0cfba63c97de00b61b1940`).
+Verified final PM balances are 33.706254 aUSDC.e, .173070 pUSD, .095025 USDC and
+49.096928 POL. The post-trade state audit is clean with 11 indexed positions
+plus one de-indexed claim row; the closed Greenland prior was removed.
+
+Final authoritative midpoint is **$193.25**, with $6.22 gas; PM positions are
+$130.59 cost / $144.13 midpoint / $135.98 indicative full-depth proceeds.
+Replacing PM midpoint with depth gives **$185.10 including gas**, or **$178.88
+trading value against $170: +$8.88/+5.22%**. The $0.15 drop from the pre-trade
+headline mainly crystallizes Greenland's midpoint-to-bid spread; realizable
+trading value improved slightly and future reserve carry is higher. Bankroll
+settled realized P&L rose to **+$3.49**. No other trade, fill, order change,
+external transfer or Fireworks spend occurred. Telegram **945** carried the
+initial Duma result; immediate execution correction **946** carries the final
+close and balances.

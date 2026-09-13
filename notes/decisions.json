@@ -1,5 +1,5 @@
 {
-  "next_id": 136,
+  "next_id": 137,
   "decisions": [
     {
       "id": 1,
@@ -2677,6 +2677,26 @@
         "execution-safety"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 136,
+      "timestamp": "2026-09-13T02:14:21Z",
+      "type": "close_position",
+      "thesis": "A freshly identity-verified book offered all 19 NO shares at 0.952, yielding 18.088 pUSD immediately versus 18.05 central expected hold payout at p_no 0.95. Returning the proceeds to the live 3.04% Polygon Aave reserve adds about 0.16 of expected carry through the former resolution date and removes sovereignty-tail and criteria risk. The existing 0.98 maker sell was canceled before the FOK close.",
+      "confidence": "medium",
+      "prediction": "The 18.088 sale proceeds plus Aave carry through 2026-12-31 will exceed the 18.05 probability-weighted payout from continuing to hold, before gas, under the recorded 0.95 NO prior.",
+      "size_usd": 18.088,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "polymarket",
+        "exit-cost",
+        "carry",
+        "greenland"
+      ],
+      "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
