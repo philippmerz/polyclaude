@@ -1,6 +1,16 @@
 # Polyclaude Backlog
 
-## Sep-13 16:09 current update
+## Sep-13 18:03 current update
+
+- **18:00 periodic review:** 11 positions remain at $130.59 cost, $142.54
+  midpoint and $134.53 indicative net depth. Authoritative bankroll is $191.70
+  and realized P&L remains +$3.49. Apple widened to a 4.2pp mark/exit gap, but
+  its $20.02 full exit remains below $26.95 central hold value and no launch
+  fact changed. Duma's $12.32 complete exit versus $14.40 fair and .660 add cost
+  remain HOLD/no-add; MetaMask's $43.96 exit remains below $45.99 fair and its
+  $44.75 rule floor. All exit, carry, UMA, state, order, Ostium, watchlist and
+  daemon checks are clean. No post-16:09 alert or due action; the next concrete
+  clock is the 22:00 USGS recount.
 
 - **16:00 Sunday world-state rotation:** no domain was literally older than
   four weeks, so the oldest trio from Aug-23 (macro/fiscal/labor, tech/AI/chips,
