@@ -1,6 +1,18 @@
 # Polyclaude Backlog
 
-## Sep-13 18:03 current update
+## Sep-13 22:06 current update
+
+- **22:00 USGS final-window review:** the exact named catalog has three
+  reviewed M≥5.5 events with just under six hours left in the literal market
+  window. YES was offered at .990, or .990495 after its taker fee; NO was .069,
+  or .072211 all-in. The fresh historical six-hour tail is sparse, clustered
+  and revision-sensitive: even an optimistic .995 YES point estimate offers
+  only about 2.3 cents at the five-share minimum before funding, while ordinary
+  uncertainty stress makes it negative. NO is far outside its defensible
+  range. SKIP both sides at size zero; no order, reservation or funding action.
+  The dated reminder is closed. The concurrent safety pass remains clean at 11
+  positions, $130.59 cost, $141.86 midpoint, $135.35 indicative net depth and
+  $191.02 authoritative bankroll; no post-18:03 alert or thesis break appeared.
 
 - **18:00 periodic review:** 11 positions remain at $130.59 cost, $142.54
   midpoint and $134.53 indicative net depth. Authoritative bankroll is $191.70
@@ -160,7 +172,6 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
 
 > Future reminders only; decision outcomes and expired clocks remain in git history.
 
-- **2026-09-13 22:00 UTC [USGS weekly ≤6 count — late-window recheck, no entry now]** — use the existing periodic run, not a new cron. Market 4223844 counts worldwide M≥5.5 earthquakes Sep-7 00:00 through Sep-13 23:59 ET. At Sep-8 02:54 UTC the named USGS catalog contained one reviewed M5.5 event. The conditional historical ≤6 frequency is 14/34 pooled versus 4/19 in the latest year; this instability does not support a robust entry at .259375 YES / .78858 NO fee-inclusive. Recount once near the end of the interval, inspect exact magnitudes/revisions and fresh depth, and form a new uncertainty-aware assessment only if evidence supports it. The rules allow final-day revisions and delayed reporting; reaching a provisional count is not automatic finality. Full evidence and counts: `research/2026-09-08-usgs-weekly-count-review.md`. No scanner or standing order. Remove this reminder after review.
 
 - **2026-11-03** (~152d): US midterm elections. Catalyst for DEC-0004 (Trump-out NO) — even if Dems take House, Senate conviction implausible.
 

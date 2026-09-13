@@ -15938,3 +15938,45 @@ positions plus one de-indexed claim row. No decision is overdue and the
 disk has about 2.0 GB free. No trade, fill, order change, transfer, prior change,
 Telegram message or Fireworks spend occurred. `main` matched `origin/main` at
 `59d852f` before this note.
+
+## 2026-09-13 22:00–22:06 UTC — USGS final-window review; no entry
+
+Explicit filtering after the 18:03 cutoff found zero news alerts and zero
+opportunity alerts. The one due backlog item was the final-window review of
+Polymarket market 4223844, “Will there be ≤6 earthquakes of 5.5 or above
+magnitude worldwide?” Its literal counting window closes Sep-14 03:59 UTC;
+the criteria permit later catalog revisions and delayed reports before finality.
+
+The exact named USGS catalog contained three reviewed qualifying events at
+22:01 UTC: `us7000teu1`, M5.5 at Sep-7 05:50:44.529 UTC; `us7000tgl2`, M5.9 at
+Sep-11 11:56:23.115 UTC; and `us7000tgrk`, M6.5 at Sep-11 21:23:55.907 UTC.
+The wider M5.0 query contained one reviewed M5.4 and five M5.3 events, none near
+the closing boundary. A re-run of the same historical window returned 959
+events rather than the prior snapshot's 960, confirming real revision risk.
+Four or more new qualifying events appeared in 2/105 matching final-six-hour
+weekly slices and 93/17,494 rolling six-hour windows; after a preceding 48
+hours with no event, as now, the overlapping rate was 5/1,886. A Poisson
+benchmark was 0.036%, but the empirical positives came from a few clusters, so
+none of these estimates is calibrated tightly enough to support a tail bet.
+
+The exact token and condition identities matched the archived market. The
+latest book was already about four minutes old: YES offered eight shares at
+.990, or **.990495** all-in after the .05 × p × (1-p) taker fee; NO offered
+15.18 shares at .069, or **.072211** all-in. Even an optimistic .995 central
+YES estimate gives only .004505 per share, about **$0.0225** at the five-share
+minimum, and fails ordinary clustering/revision/delayed-reporting stress. NO
+requires more than 7.2211%, far outside the defensible tail range. Only .173070
+pUSD was deployable, so withdrawing from Aave and wrapping would cost more than
+the optimistic YES sliver. **SKIP both sides, size zero.** The forecast is in
+the short-dated ledger and the dated backlog reminder is removed.
+
+The concurrent safety reconciliation remains clean at 11 positions and
+$130.59 cost. PM midpoint is $141.86, indicative net depth is $135.35,
+authoritative whole-account midpoint is **$191.02**, and settled realized P&L
+remains **+$3.49**. Polygon Aave holds 33.708531 USDC.e; other balances are
+stable. The sole authenticated order remains Trump's zero-fill 28-NO GTC sell
+at .97. Marginal APY had five clear / zero flagged, UMA refreshed 35 of 37 rows
+with zero alerts, and crux, state, Ostium, reservation and daemon checks are
+clean. No trade, fill, order change, transfer, prior change, Telegram message
+or Fireworks spend occurred. `main` matched `origin/main` at `6cde44c` before
+this review.

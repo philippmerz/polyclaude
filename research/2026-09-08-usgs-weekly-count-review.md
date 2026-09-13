@@ -99,3 +99,45 @@ a raw catalog archive or a forecast/calibration ledger.
 (7,2),(13,1),(10,6),(10,2),(10,0),(10,1),(6,2),(14,2),(8,3),(16,0),
 (7,0),(20,2),(14,1),(7,2),(12,1)
 ```
+
+## Final-window recheck — 2026-09-13 22:00–22:04 UTC
+
+The exact named-source query through 22:01 UTC returned **three** qualifying
+events, leaving just under six hours until the literal Sep-14 03:59 UTC cutoff:
+
+- `us7000teu1`, M5.5, Sep-7 05:50:44.529 UTC, southeast of the Loyalty Islands;
+  reviewed, last updated Sep-8 05:56:40.942 UTC.
+- `us7000tgl2`, M5.9, Sep-11 11:56:23.115 UTC, east-northeast of Lospalos;
+  reviewed, last updated Sep-12 12:04:14.404 UTC.
+- `us7000tgrk`, M6.5, Sep-11 21:23:55.907 UTC, north-northeast of Teluknaga;
+  reviewed, last updated Sep-12 21:29:59.017 UTC.
+
+A broader M5.0 query found one reviewed M5.4 and five reviewed M5.3 events in
+the week, but none near the closing boundary and none whose promotion alone
+would threaten the <=6 outcome. The M5.5 threshold event and all catalog
+history remain revision-sensitive. Indeed, the same two-year historical query
+now returns 959 qualifying events rather than the Sep-8 snapshot's 960, direct
+evidence that retrospective counts can change.
+
+The historical final-six-hour slice contained four or more new events in 2/105
+weeks; among the five weeks with three events at the matching cutoff, none
+finished above six. Hourly rolling six-hour windows had >=4 events in 93/17,494
+(0.532%); after a preceding 48 hours with zero events, as now, the rate was
+5/1,886 (0.265%). Those overlapping positives represent only a few clusters,
+and a Poisson benchmark gives 0.036%, so none is a calibrated tail probability.
+A broad honest range leaves only a small possible central YES edge and material
+model uncertainty.
+
+The exact token/condition identities still match. The latest book timestamp was
+21:57:12 UTC, already about four minutes old at inspection. YES offered only
+eight shares at .990; its .05 x p x (1-p) taker fee makes the all-in cost
+**.990495**. NO offered 15.18 shares at .069, or **.072211** all-in. YES therefore
+needs p>.990495 before funding and operating costs; even a .995 point estimate
+earns only about 2.3 cents at the five-share minimum, while the applicable tail
+stress makes it decisively negative. The wallet has only .173070 pUSD, so an
+Aave withdrawal and wrap would cost more than that optimistic sliver. NO is far
+below its executable break-even under every defensible estimate.
+
+**Final verdict: SKIP both sides, size zero.** No order, reservation, funding or
+new monitor is warranted. The dated Sep-13 reminder is closed; ordinary
+resolution monitoring can handle the final catalog/revision window.

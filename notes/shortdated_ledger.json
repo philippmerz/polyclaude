@@ -818,5 +818,21 @@
   "graded_at": "2026-09-08",
   "outcome_source": "https://gamma-api.polymarket.com/markets/3962583",
   "grade_note": "Exact market ID/slug/condition confirmed closed and UMA-resolved with labelled YES/NO payouts 0/1. Initial commit had outcome null. DEC-0108/0110/0114/0115 remain subsequent same-event path decisions, not extra independent samples; the terminal initial-forecast grade does not erase their realized trading losses."
+ },
+ {
+  "date": "2026-09-13",
+  "forecast_at": "2026-09-13T22:01:10Z",
+  "question": "Will there be ≤6 earthquakes of 5.5 or above magnitude worldwide?",
+  "slug": "will-there-be-6-earthquakes-of-5pt5-or-above-magnitude-worldwide-copy-copy",
+  "market_id": "4223844",
+  "condition_id": "0x9a98524b9b3c92df212408993583404c8b7a7c9296eef9b6aacc5422fd26d6a6",
+  "side": "YES",
+  "ask": 0.99,
+  "baseline_note": "Exact YES token book observed at 22:01 UTC with 8 shares at the raw .990 ask; structured taker fee rate .05, exponent 1 makes .990495 all-in. The book timestamp was about four minutes old, so this is a calibration baseline rather than an execution claim.",
+  "catalyst_p_yes_central": 0.995,
+  "decision": "SKIP",
+  "reason": "Named USGS catalog showed 3 qualifying reviewed events with just under six hours left, after more than 48 hours with no new M>=5.5 event. Historical six-hour tail estimates span roughly 0.04%-1.9% and are driven by a few clusters; catalog revisions and delayed reporting prevent a tight prior. Even the optimistic .995 YES point estimate yields only ~0.45pp before funding/operations, fails tail stress, and pays about $0.023 at the five-share minimum; available pUSD was below minimum cost. NO at .069 plus fee required >7.22%, far outside the defensible range. Size zero.",
+  "size_usd": 0.0,
+  "resolve_by": "2026-09-16"
  }
 ]
