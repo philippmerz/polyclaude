@@ -1,6 +1,19 @@
 # Polyclaude Backlog
 
-## Sep-13 10:02 current update
+## Sep-13 14:04 current update
+
+- **14:00 full review:** 11 positions remain at $130.59 cost, $144.18 midpoint
+  and $136.41 indicative net depth. Authoritative bankroll is $193.28 and
+  realized P&L remains +$3.49. The $1.17 marked decline since 10:00 was almost
+  entirely midpoint movement; depth changed only $0.16. HLE's resolving API is
+  unchanged at 60 rows (Gemini 46.2, GPT-6 Astra 53.6), and Duma stays
+  .18/.35/.19 with .72 union. The complete discovery suite found no executable
+  arb or robust new entry: Barcelona's theoretical NO lead met a .99 executable
+  ask, while macro and favorite-fade rows lacked qualifying instance evidence.
+  Polygon Aave holds 33.707612 USDC.e; Trump's zero-fill 28 NO @ .97 sell is the
+  sole authenticated order. Safety, state, UMA, carry, watchlist, redemption,
+  Ostium and daemon checks are clean. No post-10:02 alert or due action; the
+  world-state rotation remains due at 16:00 UTC and USGS recount at 22:00.
 
 - **10:00 periodic review:** post-Greenland state remains reconciled at 11
   positions, $130.59 cost, $145.41 midpoint and $136.57 indicative net depth.

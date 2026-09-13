@@ -15816,3 +15816,59 @@ sole authenticated order is Trump's zero-fill 28-NO sell at .97. All four
 daemons are exact-one/current, disk has about 2.1 GB free, and `main` matched
 `origin/main` at `fb881ee` before this note. No trade, fill, order change,
 transfer, prior change, Telegram message or Fireworks spend occurred.
+
+## 2026-09-13 14:00–14:04 UTC — full check; books and safety clean; no action
+
+Explicit filtering after the 10:02 journal cutoff found zero news alerts and
+zero opportunity alerts. The active-thesis review found no new Duma election
+evidence, HLE row/score change, Apple launch fact, MetaMask trigger or Trump
+thesis break. The exact HLE API remains at 60 rows, with Gemini at 46.2 and
+GPT-6 Astra at 53.6. Duma stays .18/.35/.19 with .72 union; its current
+five-unit add costs about .649 per covered payout dollar versus the .57 ceiling.
+All active positions remain HOLD / NO ADD. The separate Sunday world-state
+rotation is due at 16:00 UTC and the USGS final-window recount at 22:00 UTC.
+
+The complete mechanical pass is clean. Eleven PM positions remain at $130.59
+cost, $144.18 midpoint and $136.41 indicative net depth. Authoritative
+whole-account midpoint is **$193.28**, down $1.17 from 10:00; settled realized
+P&L remains **+$3.49**. The $7.77 midpoint/depth gap is still led by thin Apple.
+Polygon PM holds 49.096928 POL, .095025 USDC, .173070 pUSD and 33.707612
+aUSDC.e; the crypto sleeve remains intact. Ostium has zero trades, zero limits
+and zero allowance. The authenticated order inventory contains only Trump's
+zero-fill 28-NO GTC sell at .97. Greenland remains absent and reconciled.
+
+UMA checked 37 rows / refreshed 35 with zero alerts; crux coverage and Ostium
+diff were clean. State audit refreshed 11 indexed positions plus one de-indexed
+claim row and pruned zero holds. Marginal APY had five clear / zero flagged,
+watchlist had 31 candidates / zero hits / zero missing data, and no decision was
+overdue. Constrained Kelly showed $131.21 modeled cost versus $147.23 optimal,
+with prospective adds suppressed by ticket/cluster caps or their own price
+gates. `redeem-all` found zero winning redeemables among 13 checked rows and
+skipped two losing/uncertain rows. All four daemons are exact-one, and their
+process start times remain newer than their script mtimes; disk has about 2.1 GB
+free.
+
+All prospecting families ran exactly once. Default discovery covered 1,000
+active markets (`shortlist_20260913T140100Z.json`); the event-derived thin-tail
+pass wrote `shortlist_20260913T140112Z.json`. Sports retained 110 markets and
+three consensus reads. Barcelona YES appeared 6.5pp rich to the scanner's
+Oddschecker field, but exact market 4019535 offered candidate NO only at .99 and
+below, sharply defeating the putative edge. BLG–Anyone's Legend was already
+in-play/stale and its exact market had no executable NO ask. Both are size zero.
+The five-row macro view supplied no robust entry.
+
+Monotonicity inspected 1,492 events, including 1,096 multi-market events, and
+found zero midpoint violations or real executable arbs. The bounded consistency
+pass covered 5,007 open markets / 596 events and retained 3,460 validated
+neg-risk markets. It live-checked 20 of 202 midpoint sum>1 groups (15 quoted),
+finding zero provisional positive baskets and zero above 2% modeled net; the
+5,000-market cap means coverage remains explicitly incomplete. Favorite-fade
+surfaced four live rough-zone rows (US×Iran Sep-18 YES, Leclerc and Verstappen
+Spanish GP NO, and Iranian-blockade Sep-30 NO). The population signal has failed
+replication, and none supplied fresh strict-criteria/catalyst evidence that
+clears the instance pipeline, so all remain size zero.
+
+No trade, fill, order change, transfer, prior change, external funding,
+Telegram message or Fireworks spend occurred. Weekly P&L is current; the Sep-6
+16:02 world-state review remains inside the eight-day catch-up rule. `main`
+matched `origin/main` at `e02f22d` before this note.

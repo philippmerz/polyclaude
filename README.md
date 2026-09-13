@@ -20,66 +20,45 @@ Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-ch
 
 ---
 
-## Latest update — 2026-09-13 02:15 UTC
+## Latest update — 2026-09-13 14:04 UTC
 
-**02:00 full check:** 11 unresolved positions remain after closing Greenland.
-The authoritative post-trade whole-account midpoint is **$193.25**, up **$1.50**
-from the Sep-12 14:11 full tick and including **$6.22 of separately contributed
-gas tokens**. PM midpoint is $144.13 and complete indicative depth/fee value is
-$135.98. Replacing the PM midpoint gives about **$185.10 including gas**, or
-**$178.88 of trading value against $170 contributed: +$8.88/+5.22%**, before VM
-and other operating costs. The reads are sequential and the liquidation estimate
-is not a synchronized, freshness-verified executable quote. The Sep-11
+**14:00 full check:** 11 unresolved positions remain at $130.59 cost. The
+authoritative whole-account midpoint is **$193.28**, down $1.17 from 10:00 and
+including about **$6.22 of separately contributed gas tokens**. PM midpoint is
+$144.18 and complete indicative depth/fee value is $136.41; the latter changed
+only $0.16 while midpoint moved $1.23. Replacing PM midpoint with depth gives
+about **$185.51 including gas**, or **$179.29 of trading value against $170
+contributed: +$9.29/+5.46%**, before VM and other operating costs. These reads
+are sequential rather than a synchronized executable quote. The Sep-11
 completed-close comparators remain $180.91 VT, $181.49 VTI and $181.62 SPY,
-ahead by $2.03–$2.74.
+ahead of realizable trading value by $1.62–$2.33.
 
-A new primary FOM final election forecast puts United Russia at 47–49%, below
-VCIOM's 51–53%. Normalizing FOM's five qualifying-party midpoints implies about
-121 list seats; combining that with APEK's 185–195 district range centers near
-311 total, versus about 319 from the analogous VCIOM calculation. The Duma held
-buckets were therefore reallocated **.15/.32/.25 → .18/.35/.19**, while the
-295–339 union remains **.72** because RASO's wide range and qualitative district
-upside leave meaningful tails on both sides. The set exits around $12.54 versus
-$14.40 fair. A five-unit add costs .646 per covered payout dollar, so both the
-.75 evidence gate and .57 price ceiling still fail: HOLD the complete equal set,
-NO ADD, and no single-leg action.
+No active thesis changed. The HLE API remains at 60 rows with Gemini at 46.2
+and GPT-6 Astra at 53.6, so the held HLE priors and no-add decision stand. The
+Duma bucket estimates remain **.18/.35/.19**, union **.72**; a five-unit set now
+costs about .649 per covered payout dollar, above the .57 ceiling. Apple remains
+the sole thin-book warning, MetaMask remains protected above its rule floor,
+and Trump's zero-fill 28-NO premium sell remains live at .97. The Sep-13
+Greenland close remains fully reconciled, with its proceeds earning reserve
+yield in Polygon Aave.
 
-The final hurdle refresh found one capital-velocity exit. Greenland NO had a
-fresh 60-share bid at .952, above the .95 central prior. The old zero-fill .98
-maker sell was canceled and all 19 shares sold FOK at .952 for **18.088 pUSD**,
-realizing about **$1.56** over $16.53 cost. Immediate proceeds were $0.04 above
-central hold value; investing them at the live 3.039% reserve rate adds about
-$0.16 expected carry through Dec 31. The proceeds were unwrapped to USDC.e and
-supplied to Polygon Aave; no Greenland exposure or order remains (DEC-0136).
+All required scanner families ran once. Monotonicity inspected 1,492 events
+(1,096 multi-market) and found no midpoint violation or executable arb. The
+bounded consistency pass covered 5,007 open markets / 596 events and found no
+positive live basket. Barcelona again appeared as a sportsbook-relative NO
+lead, but the exact Polymarket NO book began at .99; the in-play Bilibili row was
+also non-actionable. Primary, thin-tail, macro and favorite-fade candidates did
+not clear the instance-evidence and robust executable gates. No trade or funding
+action followed.
 
-The remaining active-position review found no thesis change. The HLE API remains
-at 60 rows with Gemini 46.2 and GPT-6 Astra 53.6. Fresh HLE exits of about
-$19.16/$9.62/$3.31 remain below central hold values of $33.80/$20.55/$5.70.
-Apple's full exit is about $20.37 versus $26.95 central hold value; MetaMask's
-complete exit is $44.36 versus $45.99 central fair and a $44.75 rule floor.
-Trump-out's zero-fill premium sell remains at .97. Constrained Kelly found no
-cap-compliant robust add or additional value-improving trim.
-
-All required scanner families ran once. Monotonicity found no midpoint
-violation or executable arb, and the bounded consistency pass found no
-provisionally positive fully covered basket. Barcelona and Bilibili surfaced as
-sports-consensus NO leads, but exact displayed sportsbook odds de-vigged to only
-about 16.7% and 17.7% NO respectively, while current executable NO asks were
-.99. The larger printed deltas came from consensus/AI fields rather than the
-displayed book prices. Both fail price and evidence gates at size zero. Macro,
-favorite-fade, primary and thin-tail leads likewise produced no robust entry.
-
-Post-trade state audit reconciled 11 indexed positions plus one de-indexed claim
-row and removed the closed prior; marginal APY then had no flagged live row.
-Watchlist, UMA, crux coverage, Ostium diff, overdue decisions and redemption were
-clean. Polygon PM holds about 33.706 aUSDC.e, .173 pUSD, .095 USDC and 49.097
-POL; the crypto sleeve retains about 7.874 Arbitrum aUSDC, 1.048 Base USDC and
-gas. Ostium has zero trades. The sole authenticated order is Trump's zero-fill
-premium sell. All four daemons are exact-one and current, disk has about 2.1 GB
-free, the weekly report and world-state rotation are current, and no post-22:03
-news or opportunity alert appeared. Apart from the Greenland close and reserve
-transfer, no position, order or external transfer changed; Fireworks spend was
-zero.
+State audit is clean at 11 indexed positions plus one de-indexed claim row.
+Marginal APY, watchlist, UMA, crux coverage, Ostium diff, pending decisions and
+redemption produced no action. Polygon PM holds about 33.708 aUSDC.e, .173 pUSD,
+.095 USDC and 49.097 POL; the crypto sleeve remains intact and Ostium has no
+open trade. All four daemons are exact-one/current, disk has about 2.1 GB free,
+and no news or opportunity alert arrived after 10:02. The Sunday world-state
+rotation is due separately at 16:00 UTC and the USGS recount at 22:00. No fill,
+position, prior, order, transfer, Telegram message or Fireworks spend occurred.
 
 ## Earlier update — 2026-09-09 14:19 UTC
 
