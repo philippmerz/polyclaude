@@ -1,14 +1,17 @@
 # Polyclaude Backlog
 
-## Sep-13 06:02 current update
+## Sep-13 10:02 current update
 
-- **06:00 periodic review:** post-Greenland state remains reconciled at 11
-  positions, $130.59 cost, $144.03 midpoint and $136.43 indicative net depth.
-  Authoritative bankroll is $193.14 and realized P&L remains +$3.49. Polygon
-  Aave holds 33.706692 USDC.e; the sole authenticated order is Trump's zero-fill
-  28 NO @ .97 sell. No post-02:15 news/opportunity alert, hurdle flag, UMA alert,
-  state issue or backlog item requires action. The Sunday world-state rotation
-  remains scheduled for 16:00 UTC and the USGS final-window recount for 22:00.
+- **10:00 periodic review:** post-Greenland state remains reconciled at 11
+  positions, $130.59 cost, $145.41 midpoint and $136.57 indicative net depth.
+  Authoritative bankroll is $194.45 and realized P&L remains +$3.49. The marked
+  rise since 06:00 was mostly a favorable Gemini-NO midpoint move; depth rose
+  only $0.14. A targeted resolving-source read remains 60 rows with Gemini at
+  46.2 and GPT-6 Astra at 53.6. Polygon Aave holds 33.707152 USDC.e; the sole
+  authenticated order is Trump's zero-fill 28 NO @ .97 sell. No post-06:02
+  alert, hurdle/UMA flag, state issue or due backlog item requires action. The
+  Sunday world-state rotation remains scheduled for 16:00 UTC and the USGS
+  final-window recount for 22:00.
 
 - **LSU win-total arb, 04:34 trigger:** the exact >10.5 NO + >9.5 YES pair
   shares event 838852 and identical regular-season-only, cancellation,
