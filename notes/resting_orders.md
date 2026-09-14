@@ -1,5 +1,16 @@
 # Standing resting orders (GTC post-only makers)
 
+**Sep-14 23:47 UTC:** authenticated inventory has exactly one LIVE SELL:
+Trump-out 28 NO @ 0.97 (`0xa28…23c1`), zero-filled. Its public-information
+fair remains 0.97, so retain it fee-free at fair. The operator reaffirmed that
+regularly refreshed maker exits may beat either a taker sale or passive
+resolution. Re-auditing every direct position found no omitted order: Apple and
+the three HLE legs are hidden-information contracts and lack a justified
+premium-to-fair price today; Duma and MetaMask must remain intact as protected
+multi-leg structures. Continue reconciling the authenticated inventory every
+tick and on relevant news, reprice whenever fair changes, and pull before a
+scheduled catalyst. Telegram response: message 951.
+
 **Sep-10 18:50 UTC:** complete authenticated pagination found only two LIVE SELLs, both zero-filled: Greenland 19 NO @ 0.98 (`0xeeaeb082…ba690`) and Trump-out 28 NO @ 0.97 (`0xa28…23c1`). The OpenAI ≥55 and Gemini ≥50 sells were cancelled before an erroneous taker exit, and were not re-armed after both positions were restored under corrected source underwriting. There are no live BUY or Apple/HLE orders. See the [autonomy review](../research/2026-09-10-frontier-model-autonomy-review.md).
 
 **Sep-9 14:19 HLE update (superseded by Sep-10 finality):** HLE is correlated exposure for caps/sizing, not an atomic `_groups` topology. Re-underwrite each remaining contract using the final payout evidence in [backlog.md](backlog.md). Duma/MetaMask protected-group leg rules do not apply to HLE by analogy.

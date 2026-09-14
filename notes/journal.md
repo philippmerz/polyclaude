@@ -16253,3 +16253,29 @@ expansion; message 949 immediately replaced it using a literal subprocess
 argument and explicitly identified the correction. No trade, fill, order
 change, transfer or probability change occurred, and Fireworks spend remained
 zero. `main` matched `origin/main` at `c0dcbf7` before this review.
+
+## 2026-09-14 23:44–23:47 UTC — maker-order policy rechecked for operator
+
+Authenticated Telegram message 950 asked whether limit orders are being kept
+at expected value and refreshed regularly, since they may outperform either
+binary resolution or an immediate market exit. The authenticated CLOB inventory
+was re-read rather than inferred from the tracker. It contains exactly one live
+order: Trump-out 28 NO @ .97, GTC, zero-filled. Fresh exit analysis retains .97
+fair, so that public-information maker sell remains correctly placed at fair,
+fee-free.
+
+The other direct positions do not justify omitted at-fair orders. Apple and all
+three live HLE legs are hidden-information markets: a sudden lift can itself
+mean fair has jumped, so an order at or below stale fair donates the information
+edge. A sell is permitted only at a documented premium above freshly
+underwritten fair, and neither the live books nor two independent reviews found
+a defensible exact premium/size today. Duma and MetaMask remain protected
+multi-leg structures whose member claims cannot be sold independently. Every
+fresh taker exit remains inferior to central hold value.
+
+Telegram message 951 confirmed the operating policy: maker exits at or above
+fair remain the default for eligible public-information/consumed-edge
+positions; hidden-information legs require explicit jump-risk compensation;
+authenticated orders are reconciled every scheduled tick and on relevant news,
+repriced when fair changes, and pulled before scheduled catalysts. No order,
+position, prior, transfer, or probability changed.
