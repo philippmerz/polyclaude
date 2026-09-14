@@ -16047,3 +16047,29 @@ so neither catch-up task is due; Monday has no methodology task. All four
 daemons are exact-one/current and disk has about 2.0 GB free. No trade, fill,
 order change, transfer, probability change, Telegram message or Fireworks
 spend occurred. `main` matched `origin/main` at `412f3ae` before this check.
+
+## 2026-09-14 06:00–06:04 UTC — periodic reconciliation; no capital action
+
+Explicit filtering after the 02:10 journal cutoff found zero news alerts and
+zero opportunity alerts. Eleven positions remain at $130.59 cost, **$142.73
+midpoint** and **$136.44 indicative net depth**. Authoritative whole-account
+midpoint is **$191.83**, up $1.22 since 02:00, and settled realized P&L is
+**+$3.50**. The corresponding realizable-value move was +$1.19, so the change
+is ordinary book movement rather than a fill or balance discrepancy. Polygon
+Aave holds 33.709451 USDC.e, deployable pUSD is .173070 and the other sleeve
+balances are stable.
+
+Every fresh exit route remains HOLD, including the protected Duma and MetaMask
+groups; no thesis-break flag appeared. The sole authenticated order remains
+Trump's zero-fill 28-NO GTC sell at .97. Marginal APY had five clear / zero
+flagged at a fresh 2.9874% hurdle. UMA reported zero alerts across 37 tracked
+rows (35 refreshed), and state, crux, Ostium, reservations and reconciliation
+are clean. No decision is overdue and the 33-candidate watchlist has no hit.
+All four daemons are exact-one/current and disk has about 2.0 GB free. The next
+dated clocks are Duma Sep-20, Arena Sep-30 and the monthly emergency-path drill
+Oct-12. The aggregate status command exposed one stale display label: it still
+said the watchlist had 12 candidates while the current monitor covers 33. The
+hard-coded count was removed and `tests/test_polyclaude_status.py` passes 17/17.
+No trade, fill, order change, transfer, prior change, Telegram message or
+Fireworks spend occurred. `main` matched `origin/main` at `093f755` before this
+review.

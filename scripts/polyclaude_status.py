@@ -201,7 +201,7 @@ def main() -> int:
     print(summarize_hurdle_output(out))
 
     # 3. Watchlist
-    print("\n## Watchlist hits (12 candidates)")
+    print("\n## Watchlist hits")
     out = run_script(["scripts/watchlist_monitor.py", "--hits-only"], timeout=30)
     print(out if out.strip() else "(no triggers hit)")
 

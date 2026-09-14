@@ -1,6 +1,19 @@
 # Polyclaude Backlog
 
-## Sep-14 02:10 current update
+## Sep-14 06:04 current update
+
+- **06:00 periodic review:** 11 positions remain at $130.59 cost, $142.73
+  midpoint and $136.44 indicative net depth. Authoritative bankroll is $191.83
+  and settled realized P&L is +$3.50. The $1.22 midpoint and $1.19 realizable
+  gains since 02:00 reflect price movement rather than a fill or balance change.
+  Every exit remains HOLD, including the protected Duma and MetaMask groups;
+  the sole authenticated order is still Trump's zero-fill 28-NO sell at .97.
+  Marginal APY, UMA, state, order, balance, Ostium, crux, reservations,
+  watchlist and daemon checks are clean. No post-02:10 alert, overdue decision,
+  thesis break or due catalyst requires action. The next dated clocks are Duma
+  Sep-20, Arena Sep-30 and the monthly emergency-path drill Oct-12. Removed the
+  aggregate status command's stale hard-coded 12-candidate watchlist label;
+  its focused test suite passes 17/17.
 
 - **02:00 full check:** 11 positions remain at $130.59 cost, $141.51 midpoint
   and $135.25 indicative net depth. Authoritative bankroll is $190.61 and
