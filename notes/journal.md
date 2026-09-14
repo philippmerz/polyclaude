@@ -16189,3 +16189,67 @@ exact-one/current and disk has about 2.0 GB free. The next clocks remain Duma
 Sep-20, Arena Sep-30 and the monthly emergency-path drill Oct-12. No trade,
 fill, order change, transfer, prior change, Telegram message or Fireworks spend
 occurred. `main` matched `origin/main` at `ec8cfed` before this review.
+
+## 2026-09-14 22:00–22:06 UTC — Apple move revalidated; HOLD
+
+Explicit filtering after the 18:03 journal cutoff found one news alert and zero
+opportunity alerts. The 21:26 Al Jazeera item reports that the United States
+blocked Iran's nuclear chief from attending a Vienna conference. Its impact
+mapping is empty, it has no causal channel to a held instrument and it does not
+establish a priced new opportunity. No action followed.
+
+Eleven positions remain at $130.59 cost, **$140.81 midpoint** and **$130.21
+indicative net depth**. Authoritative whole-account midpoint is **$189.96**,
+down $2.68 since 18:00, and settled realized P&L remains **+$3.50**. Realizable
+value fell $7.08 and the midpoint/depth gap widened to $10.60. Polygon Aave
+holds 33.711290 USDC.e, deployable pUSD is .173070 and the other sleeve balances
+are stable. The sole authenticated order remains Trump's zero-fill 28-NO GTC
+sell at .97.
+
+UMA supplied the only safety follow-up: Apple touchscreen-MacBook YES moved
+.565→.630 (+6.5pp), leaving held NO near .375. The exact live Gamma instrument
+is market 1499672 / condition
+`0x3b8ffe267a348097806237bd9af95050896ee12e4d461b421ca703c8bdf31022`;
+it still requires a touchscreen product explicitly branded MacBook to be
+available for general-public purchase by Dec-31 23:59 ET, and an announcement
+alone is insufficient. The 4% × p × (1−p) taker fee applies.
+
+Public trade history contains only one post-18:00 trade: 89.26 NO sold at
+.406098 at 20:50:58 UTC, about $36.25 of outcome-token notional. A fresh CLOB
+book timestamped 22:01:40.602 UTC and fetched at 22:02:27 offered NO bids of
+.35 × 15.39 and then .24 × 251.25. Liquidating all 49.005 claims would gross
+$13.4541, incur $0.3853 of modeled fees and net **$13.0688**, or .26665/share.
+The agent review initially mistranslated the epoch timestamp by one hour; direct
+UTC conversion corrected it, establishing that the book was about 47 seconds
+old at the root fetch rather than stale.
+
+Apple's current newsroom archive and Buy Mac page show no touchscreen MacBook
+release, preorder or purchasable product. The Sep-13 October-products article
+extrapolates an October possibility from Gurman's already-reviewed Sep-9 post,
+then itself says the machine may not arrive until early 2027. Macworld's current
+timing roundup likewise preserves late 2026 but calls early 2027 more likely.
+Two independent reviews therefore support retaining **p_no .55 with the wide
+.35–.70 range**. Central hold payout is $26.9528, the standard 10pp-stressed
+hold is $22.0523 and even the .35 range floor is $17.1518, all above the fresh
+complete exit. The constrained Kelly target is only another $3.43 and the
+shared cluster has $3.80 of cap headroom, both below the $5 venue floor. This
+hidden-information leg also has no competitive premium-to-fair maker route.
+**HOLD / NO ADD / no taker or maker sell.** Re-open on an official store or
+preorder listing, an Apple announcement with a qualifying public-sale date, or
+a credible dated report committing to 2026 availability. Apple verification,
+source-ack and divergence-ack metadata were advanced to Sep-14 with no
+probability change; the state audit remains clean.
+
+Every other fresh exit remains HOLD. Marginal APY has five clear / zero
+flagged, UMA has no second alert, and state, crux, Ostium, reservations and
+reconciliation are clean. No decision is overdue and the 33-candidate
+watchlist has no hit. All four daemons are exact-one/current and disk has about
+2.0 GB free. The next clocks remain Duma Sep-20, Arena Sep-30 and the monthly
+emergency-path drill Oct-12.
+
+This material price alert warranted a Telegram tick summary. Message 948 was
+sent through a double-quoted shell argument, which stripped currency fields by
+expansion; message 949 immediately replaced it using a literal subprocess
+argument and explicitly identified the correction. No trade, fill, order
+change, transfer or probability change occurred, and Fireworks spend remained
+zero. `main` matched `origin/main` at `c0dcbf7` before this review.

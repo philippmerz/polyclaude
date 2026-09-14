@@ -1,6 +1,24 @@
 # Polyclaude Backlog
 
-## Sep-14 18:03 current update
+## Sep-14 22:06 current update
+
+- **22:00 periodic review / Apple price-move revalidation:** 11 positions
+  remain at $130.59 cost, $140.81 midpoint and $130.21 indicative net depth.
+  Authoritative bankroll is $189.96 and settled realized P&L remains +$3.50.
+  UMA flagged touchscreen-MacBook YES .565→.630; public tape shows one 89.26-NO
+  sale at .406098 around 20:51 UTC rather than a broad information cascade.
+  Exact criteria still require general-public purchasability by Dec-31, and
+  fresh Apple newsroom/store checks show no qualifying release. Current rumor
+  coverage repeats the late-2026/early-2027 split and still favors early 2027.
+  Retain p_no .55 [.35–.70]: the fresh full NO exit is only $13.0688 versus
+  $26.9528 central, $22.0523 at 10pp stress and $17.1518 even at the range
+  floor. HOLD / NO ADD / no maker sell; source/divergence metadata refreshed.
+  The separate Iran-conference alert has no held-position impact. All other
+  exit, balance, carry, UMA, order, state, Ostium, crux, reservation,
+  reconciliation, watchlist and daemon checks are clean. Telegram 948 lost
+  currency fields to shell expansion and was immediately corrected by literal
+  message 949. Next clocks remain Duma Sep-20, Arena Sep-30 and the monthly
+  emergency-path drill Oct-12.
 
 - **18:00 periodic review:** 11 positions remain at $130.59 cost, $143.47
   midpoint and $137.29 indicative net depth. Authoritative bankroll is $192.64
