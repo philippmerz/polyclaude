@@ -16155,3 +16155,37 @@ or Fireworks spend occurred. The README's stale claim that the trigger file had
 12 all-IBKR candidates was corrected to the live 33-trigger split (32 IBKR, one
 Polyclaude); this changes no trigger or routing. `main` matched `origin/main` at
 `e8d4929` before this check.
+
+## 2026-09-14 18:00–18:03 UTC — periodic reconciliation; no capital action
+
+Explicit filtering after the 14:05 journal cutoff found one news alert and zero
+opportunity alerts. The 15:27 NPR Hormuz-talks row uses the same article URL as
+the item reviewed at 10:00; a corrected headline and likely changed RSS GUID
+bypassed the watcher's GUID/exact-title dedup. Its impact mapping is again empty
+and it has no causal channel to a held instrument. The duplicate caused no
+Telegram message or event-fired tick.
+
+A bounded code audit confirmed that adding unconditional canonical-URL dedup
+would remove this noise but could also hide a materially revised article or
+live-blog update at the same URL, including a thesis-breaking change. That
+false-negative risk outweighs one harmless Tier-2 duplicate, so no watcher code
+or daemon process changed. A later revision-aware scheme would need to preserve
+material headline/content changes rather than treating every stable URL as one
+immutable story.
+
+Eleven positions remain at $130.59 cost, **$143.47 midpoint** and **$137.29
+indicative net depth**. Authoritative whole-account midpoint is **$192.64**,
+down $0.02 since 14:00, and settled realized P&L remains **+$3.50**. Midpoint is
+effectively flat while realizable value improved $0.36. Polygon Aave holds
+33.710830 USDC.e, deployable pUSD is .173070 and the other sleeve balances are
+stable.
+
+Every fresh exit remains HOLD, including the protected groups. The sole
+authenticated order remains Trump's zero-fill 28-NO GTC sell at .97. Marginal
+APY had five clear / zero flagged at the 2.99% hurdle; UMA has zero alerts, and
+state, crux, Ostium, reservations and reconciliation are clean. No decision is
+overdue and the 33-candidate watchlist has no hit. All four daemons remain
+exact-one/current and disk has about 2.0 GB free. The next clocks remain Duma
+Sep-20, Arena Sep-30 and the monthly emergency-path drill Oct-12. No trade,
+fill, order change, transfer, prior change, Telegram message or Fireworks spend
+occurred. `main` matched `origin/main` at `ec8cfed` before this review.

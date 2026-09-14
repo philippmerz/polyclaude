@@ -1,6 +1,20 @@
 # Polyclaude Backlog
 
-## Sep-14 14:05 current update
+## Sep-14 18:03 current update
+
+- **18:00 periodic review:** 11 positions remain at $130.59 cost, $143.47
+  midpoint and $137.29 indicative net depth. Authoritative bankroll is $192.64
+  and settled realized P&L remains +$3.50. Since 14:00, midpoint is effectively
+  flat and realizable value improved $0.36. Every exit remains HOLD; the sole
+  authenticated order is still Trump's zero-fill 28-NO sell at .97, and all
+  balance, carry, UMA, state, Ostium, crux, reservation and reconciliation
+  checks are clean. The one post-14:05 news row is the same NPR Hormuz article
+  already reviewed at 10:00, repeated after its headline/GUID changed; it still
+  has no held-position impact. A bounded watcher audit rejected unconditional
+  URL dedup because it could suppress materially revised live articles; no code
+  or daemon change followed. There is no opportunity alert, overdue decision,
+  watchlist hit, thesis break or due catalyst. Next clocks remain Duma Sep-20,
+  Arena Sep-30 and the monthly emergency-path drill Oct-12.
 
 - **14:00 full check:** 11 positions remain at $130.59 cost, $143.46 midpoint
   and $136.93 indicative net depth. Authoritative bankroll is $192.66 and
