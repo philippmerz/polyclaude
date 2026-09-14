@@ -1,6 +1,19 @@
 # Polyclaude Backlog
 
-## Sep-13 22:06 current update
+## Sep-14 02:10 current update
+
+- **02:00 full check:** 11 positions remain at $130.59 cost, $141.51 midpoint
+  and $135.25 indicative net depth. Authoritative bankroll is $190.61 and
+  settled realized P&L remains +$3.49. The daily Duma re-derivation retains
+  .18/.35/.19 across the equal-share buckets (union .72): the full exit is
+  $12.36 versus $14.40 central fair, while fresh five-share asks rose from .642
+  to .654 and fail both the .57 ceiling and the 10pp-stressed entry gate. HOLD
+  / NO ADD.
+  Trump's exact criteria and current official activity were source-diffed with
+  no change; retain .97 NO and its zero-fill 28-share maker sell at .97. Every
+  exit, APY, UMA, state, order, balance, Ostium, watchlist, redemption and
+  daemon check is clean. The full discovery suite found no executable arb or
+  robust new entry; no post-22:06 alert appeared and no capital action followed.
 
 - **22:00 USGS final-window review:** the exact named catalog has three
   reviewed M≥5.5 events with just under six hours left in the literal market

@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-13",
+ "_updated": "2026-09-14",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-13 02:00: FOM's final forecast centers near 311 seats when its party-list midpoint is normalized across the five qualifying parties and combined with APEK's district midpoint, below the analogous VCIOM-centered estimate near 319. Reallocate the held-bucket prior to 0.18/0.35/0.19 while retaining union p=0.72, below the 0.75 evidence gate; a fresh five-share complete set costs 0.646 per payout unit, above the 0.57 ceiling. HOLD the equal set; no add or single-leg action.",
+   "add_gate": "FAILED 2026-09-14 02:05: fresh source re-derivation leaves the held-bucket distribution at 0.18/0.35/0.19 and union p=0.72. FOM's qualifying-party-normalized midpoint plus APEK's district midpoint centers near 311 seats; the analogous VCIOM branches center near 319 if Just Russia passes and 326 if it misses. Sep-13 campaign commentary emphasizes undecideds and regional variation but supplies no replacement whole-seat forecast. Fresh sequential five-share asks rose from .046/.146/.450 (.642 total at 02:05) to .046/.148/.460 (.654 total at 02:13), above the .57 ceiling and negative at the 10pp-stressed p=.62. Complete bids sum .618. HOLD the equal set; no add or single-leg action.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -234,9 +234,9 @@
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
-  "verified": "2026-09-06",
-  "criteria_read": "2026-09-06",
-  "current_assessment": "Sep-6 recheck found no qualifying cessation, resignation/removal announcement, or criteria drift. The live criteria still require permanent cessation before Dec-31 (or an earlier announcement), exclude temporary Section 3 and unsustained Section 4 transfers plus impeachment without removal, and resolve by credible-reporting consensus. Current White House activity is inconsistent with a qualifying event. p_no remains 0.97; HOLD / NO ADD / NO FLIP.",
+  "verified": "2026-09-14",
+  "criteria_read": "2026-09-14",
+  "current_assessment": "Sep-14 source-diff and criteria reread found no drift. The live description still resolves YES on permanent cessation before Dec-31 or an earlier resignation/removal announcement, excludes temporary Section 3, unsustained Section 4, and impeachment without removal, and uses consensus credible reporting. The stored any-period/permanent-removal textual tension also remains. Current White House releases continue to identify Trump as President and no qualifying cessation or announcement surfaced. Retain p_no=0.97; HOLD / NO ADD / NO FLIP. The zero-fill 28-NO maker sell at .97 already implements the fee-free fair-value exit route.",
   "key_facts": [
    {
     "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
@@ -291,6 +291,18 @@
     "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027 + https://www.whitehouse.gov/news/",
     "source_date": "2026-09-06",
     "checked": "2026-09-06"
+   },
+   {
+    "claim": "SOURCE-DIFF 2026-09-14: the stored Sep-6 criteria summary and the live Gamma description match on every operative clause. The live text still says any-period cessation in its opener but then limits qualification to permanent removal; the immediate announcement rule, temporary Section 3/unsustained Section 4/impeachment exclusions, sustained Section 4 inclusion, and credible-reporting source are unchanged.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-09-14",
+    "checked": "2026-09-14"
+   },
+   {
+    "claim": "The current White House releases page continues to identify Donald Trump as President, with its latest Sep-10 release attributed to him; no resignation, removal, sustained Section 4 transfer, or future-effective cessation announcement appears.",
+    "source": "https://www.whitehouse.gov/releases/",
+    "source_date": "2026-09-10",
+    "checked": "2026-09-14"
    }
   ]
  },
@@ -872,13 +884,13 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.18,
-  "verified": "2026-09-13",
+  "verified": "2026-09-14",
   "criteria_read": "2026-09-10",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-13 02:00 complete-set re-underwrite: FOM's Sep-10 final forecast puts United Russia at 47-49%, KPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 United Russia list seats; combined with APEK's 185-195 district range, that centers near 311 total, below the analogous VCIOM-centered estimate near 319. RASO's broad ranges and Turovsky's qualitative district-upside case preserve meaningful tails. Reallocate 0.18/0.35/0.19 across 295-309/310-324/325-339 while retaining union p=0.72. The equal set's fresh full exit is $12.54 versus $14.40 central expected payout. HOLD complete group; NO ADD because union p<0.75 and the five-share set costs 0.646 per payout unit, above the 0.57 ceiling.",
+  "current_assessment": "Sep-14 02:05 complete-set re-underwrite: FOM's 47-49% United Russia midpoint, normalized across its five qualifying parties, implies 120.7 list seats; adding APEK's 185-195 district midpoint gives 310.7 total. VCIOM's 51-53% midpoint gives about 318.6 if Just Russia passes and 326.0 if it misses. Sep-13 campaign commentary stresses undecided voters and regional variation but provides no quantitative replacement for the Sep-10 forecasts; RASO's broad ranges and district-upside commentary still preserve both tails. Recomputed held buckets remain 0.18/0.35/0.19, union p=0.72. Fresh complete bids sum .618, yielding $12.36 for 20 equal shares versus $14.40 central expected payout: HOLD. Fresh sequential five-share asks rose from .642 to .654 per covered payout during the review, which fails the 0.75 evidence gate, the .57 price ceiling, and the 10pp-stressed robust-edge gate: NO ADD. Never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and pre-Sep10 APEK key_facts describe the older Aug-10 forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -886,31 +898,31 @@
     "claim": "FOM's September 10 final forecast puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats and shifts mass from 325-339 toward the two lower held buckets.",
     "source": "https://fom.ru/Politika/15378",
     "source_date": "2026-09-10",
-    "checked": "2026-09-13"
+    "checked": "2026-09-14"
    },
    {
     "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
     "source": "https://regcomment.ru/analytics/edinaya-rossiya-mozhet-prevzojti-prognozy-v-odnomandatnyh-okrugah/",
     "source_date": "2026-09-11",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "Criteria re-read without drift: this bucket resolves on United Russia's State Duma seats resulting from the election, first by consensus credible reporting and, if ambiguous, solely by official Russian-government results; if results remain indefinite after May 31, 2027, the lowest bracket wins.",
@@ -947,18 +959,24 @@
     "source": "https://politpro.eu/en/russia/election/parliament/2026",
     "source_date": "2026-09-04",
     "checked": "2026-09-04"
+   },
+   {
+    "claim": "September 13 final-campaign commentary says divergent forecasts reflect a material undecided bloc and regional variation in United Russia's result; it supplies no new numerical national vote or district-seat forecast. A separate same-day commentary still expects KPRF to finish second. This widens uncertainty but does not displace the Sep-10 FOM/VCIOM/APEK inputs.",
+    "source": "https://regcomment.ru/analytics/finish-kampanii-neopredelivshiesya-rezultat-er-i-bitva-za-trete-mesto/ + https://regcomment.ru/analytics/bitva-za-vtoroe-mesto-kprf-sohranyaet-pozitsii-no-intriga-ostayotsya/",
+    "source_date": "2026-09-13",
+    "checked": "2026-09-14"
    }
   ]
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.35,
-  "verified": "2026-09-13",
+  "verified": "2026-09-14",
   "criteria_read": "2026-09-10",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-13 02:00 complete-set re-underwrite: FOM's Sep-10 final forecast puts United Russia at 47-49%, KPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 United Russia list seats; combined with APEK's 185-195 district range, that centers near 311 total, below the analogous VCIOM-centered estimate near 319. RASO's broad ranges and Turovsky's qualitative district-upside case preserve meaningful tails. Reallocate 0.18/0.35/0.19 across 295-309/310-324/325-339 while retaining union p=0.72. The equal set's fresh full exit is $12.54 versus $14.40 central expected payout. HOLD complete group; NO ADD because union p<0.75 and the five-share set costs 0.646 per payout unit, above the 0.57 ceiling.",
+  "current_assessment": "Sep-14 02:05 complete-set re-underwrite: FOM's 47-49% United Russia midpoint, normalized across its five qualifying parties, implies 120.7 list seats; adding APEK's 185-195 district midpoint gives 310.7 total. VCIOM's 51-53% midpoint gives about 318.6 if Just Russia passes and 326.0 if it misses. Sep-13 campaign commentary stresses undecided voters and regional variation but provides no quantitative replacement for the Sep-10 forecasts; RASO's broad ranges and district-upside commentary still preserve both tails. Recomputed held buckets remain 0.18/0.35/0.19, union p=0.72. Fresh complete bids sum .618, yielding $12.36 for 20 equal shares versus $14.40 central expected payout: HOLD. Fresh sequential five-share asks rose from .642 to .654 per covered payout during the review, which fails the 0.75 evidence gate, the .57 price ceiling, and the 10pp-stressed robust-edge gate: NO ADD. Never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -966,31 +984,31 @@
     "claim": "FOM's September 10 final forecast puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats and shifts mass from 325-339 toward the two lower held buckets.",
     "source": "https://fom.ru/Politika/15378",
     "source_date": "2026-09-10",
-    "checked": "2026-09-13"
+    "checked": "2026-09-14"
    },
    {
     "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
     "source": "https://regcomment.ru/analytics/edinaya-rossiya-mozhet-prevzojti-prognozy-v-odnomandatnyh-okrugah/",
     "source_date": "2026-09-11",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
@@ -1003,18 +1021,24 @@
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
     "source_date": "2026-09-05",
     "checked": "2026-09-05"
+   },
+   {
+    "claim": "September 13 final-campaign commentary says divergent forecasts reflect a material undecided bloc and regional variation in United Russia's result; it supplies no new numerical national vote or district-seat forecast. A separate same-day commentary still expects KPRF to finish second. This widens uncertainty but does not displace the Sep-10 FOM/VCIOM/APEK inputs.",
+    "source": "https://regcomment.ru/analytics/finish-kampanii-neopredelivshiesya-rezultat-er-i-bitva-za-trete-mesto/ + https://regcomment.ru/analytics/bitva-za-vtoroe-mesto-kprf-sohranyaet-pozitsii-no-intriga-ostayotsya/",
+    "source_date": "2026-09-13",
+    "checked": "2026-09-14"
    }
   ]
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.19,
-  "verified": "2026-09-13",
+  "verified": "2026-09-14",
   "criteria_read": "2026-09-10",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-13 02:00 complete-set re-underwrite: FOM's Sep-10 final forecast puts United Russia at 47-49%, KPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 United Russia list seats; combined with APEK's 185-195 district range, that centers near 311 total, below the analogous VCIOM-centered estimate near 319. RASO's broad ranges and Turovsky's qualitative district-upside case preserve meaningful tails. Reallocate 0.18/0.35/0.19 across 295-309/310-324/325-339 while retaining union p=0.72. The equal set's fresh full exit is $12.54 versus $14.40 central expected payout. HOLD complete group; NO ADD because union p<0.75 and the five-share set costs 0.646 per payout unit, above the 0.57 ceiling.",
+  "current_assessment": "Sep-14 02:05 complete-set re-underwrite: FOM's 47-49% United Russia midpoint, normalized across its five qualifying parties, implies 120.7 list seats; adding APEK's 185-195 district midpoint gives 310.7 total. VCIOM's 51-53% midpoint gives about 318.6 if Just Russia passes and 326.0 if it misses. Sep-13 campaign commentary stresses undecided voters and regional variation but provides no quantitative replacement for the Sep-10 forecasts; RASO's broad ranges and district-upside commentary still preserve both tails. Recomputed held buckets remain 0.18/0.35/0.19, union p=0.72. Fresh complete bids sum .618, yielding $12.36 for 20 equal shares versus $14.40 central expected payout: HOLD. Fresh sequential five-share asks rose from .642 to .654 per covered payout during the review, which fails the 0.75 evidence gate, the .57 price ceiling, and the 10pp-stressed robust-edge gate: NO ADD. Never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -1022,31 +1046,31 @@
     "claim": "FOM's September 10 final forecast puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats and shifts mass from 325-339 toward the two lower held buckets.",
     "source": "https://fom.ru/Politika/15378",
     "source_date": "2026-09-10",
-    "checked": "2026-09-13"
+    "checked": "2026-09-14"
    },
    {
     "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
     "source": "https://regcomment.ru/analytics/edinaya-rossiya-mozhet-prevzojti-prognozy-v-odnomandatnyh-okrugah/",
     "source_date": "2026-09-11",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-12"
+    "checked": "2026-09-14"
    },
    {
     "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
@@ -1059,6 +1083,12 @@
     "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
     "source_date": "2026-09-05",
     "checked": "2026-09-05"
+   },
+   {
+    "claim": "September 13 final-campaign commentary says divergent forecasts reflect a material undecided bloc and regional variation in United Russia's result; it supplies no new numerical national vote or district-seat forecast. A separate same-day commentary still expects KPRF to finish second. This widens uncertainty but does not displace the Sep-10 FOM/VCIOM/APEK inputs.",
+    "source": "https://regcomment.ru/analytics/finish-kampanii-neopredelivshiesya-rezultat-er-i-bitva-za-trete-mesto/ + https://regcomment.ru/analytics/bitva-za-vtoroe-mesto-kprf-sohranyaet-pozitsii-no-intriga-ostayotsya/",
+    "source_date": "2026-09-13",
+    "checked": "2026-09-14"
    }
   ]
  },

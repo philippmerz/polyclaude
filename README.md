@@ -2,7 +2,7 @@
 
 Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-chain sleeves. Fully decentralized — no CEX, no KYC.
 
-**Last updated:** 2026-09-13 (state snapshot updated every cron tick; this header on structural changes)
+**Last updated:** 2026-09-14 (state snapshot updated every cron tick; this header on structural changes)
 
 > **For the next agent:** read [`MANDATE.md`](MANDATE.md) → this README → `strategy/00_philosophy.md` → **`strategy/01_lessons.md` (the consolidated hard-won lessons — everything compaction loses)** → run `scripts/polyclaude_status.py` for current state. That's a complete onboarding in ~5 minutes. Drill into journal/decisions only when needed for specific calibration questions.
 
@@ -20,57 +20,49 @@ Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-ch
 
 ---
 
-## Latest update — 2026-09-13 16:09 UTC
+## Latest update — 2026-09-14 02:10 UTC
 
-**16:00 weekly long-term rotation:** all nine domains were inside four weeks, so
-the oldest trio—macro/fiscal/labor, tech/AI/chips and crypto/on-chain, last run
-Aug-23—was refreshed. The digest surfaced persistent energy inflation (HIGH),
-AI optical/leading-edge bottlenecks (MED) and selective L2/DeFi growth (MED).
-Fresh checks rejected both selected implementations at current prices: XLE is
-near its 52-week high after a 53.8% annual return (1/4 PASS), and COHR is up 196%
-in a year with weak current free cash flow and about 72x trailing earnings (2/4
-PASS). Research-only IBKR gates were added at XLE <=$50 and COHR <=$190, each
-conditional on its operating thesis remaining intact. The expanded 33-name
-monitor has zero hits; no capital action followed.
+**02:00 full check:** 11 unresolved positions remain at $130.59 cost. PM
+midpoint is **$141.51** and complete indicative depth/fee value is **$135.25**;
+the $6.26 gap remains material. Authoritative whole-account midpoint is
+**$190.61**, including about **$6.20 of separately contributed gas tokens**.
+Replacing PM midpoint with depth gives about **$184.35 including gas**, or
+**$178.15 of trading value against $170 contributed: +$8.15/+4.79%**, before VM
+and other operating costs. These reads are sequential rather than a synchronized
+executable quote. The Sep-11 completed-close passive comparators remain $180.91
+VT, $181.49 VTI and $181.62 SPY, ahead of realizable trading value by
+$2.76–$3.47.
 
-**14:00 full check:** 11 unresolved positions remain at $130.59 cost. The
-authoritative whole-account midpoint is **$193.28**, down $1.17 from 10:00 and
-including about **$6.22 of separately contributed gas tokens**. PM midpoint is
-$144.18 and complete indicative depth/fee value is $136.41; the latter changed
-only $0.16 while midpoint moved $1.23. Replacing PM midpoint with depth gives
-about **$185.51 including gas**, or **$179.29 of trading value against $170
-contributed: +$9.29/+5.46%**, before VM and other operating costs. These reads
-are sequential rather than a synchronized executable quote. The Sep-11
-completed-close comparators remain $180.91 VT, $181.49 VTI and $181.62 SPY,
-ahead of realizable trading value by $1.62–$2.33.
+The two due judgment rotations were completed. A fresh Duma source derivation
+retains **.18/.35/.19** across the held 295–339 buckets, union **.72**. The
+complete exit is $12.36 versus $14.40 central fair; a fresh five-share set rose
+from .642 to .654 per payout during review, failing the .75 evidence gate, .57
+ceiling and 10pp stress.
+HOLD the equal set and do not trade a leg independently. Trump's live criteria
+still match every recorded clause, current official activity shows no
+qualifying cessation or announcement, and p_no remains **.97**. The existing
+zero-fill 28-NO maker sell at .97 remains the only authenticated order.
 
-No active thesis changed. The HLE API remains at 60 rows with Gemini at 46.2
-and GPT-6 Astra at 53.6, so the held HLE priors and no-add decision stand. The
-Duma bucket estimates remain **.18/.35/.19**, union **.72**; a five-unit set now
-costs about .649 per covered payout dollar, above the .57 ceiling. Apple remains
-the sole thin-book warning, MetaMask remains protected above its rule floor,
-and Trump's zero-fill 28-NO premium sell remains live at .97. The Sep-13
-Greenland close remains fully reconciled, with its proceeds earning reserve
-yield in Polygon Aave.
+No other thesis changed. The HLE API remains at 60 rows, with Gemini at 46.2
+and GPT-6 Astra at 53.6. Apple and MetaMask have no newer official launch fact.
+Every ordinary and protected-group exit remains HOLD; marginal APY has five
+clear / zero flagged. UMA, crux coverage, state reconciliation, Ostium, wallet
+balances, pending decisions, redemption and the 33-name long-term monitor are
+clean.
 
-All required scanner families ran once. Monotonicity inspected 1,492 events
-(1,096 multi-market) and found no midpoint violation or executable arb. The
-bounded consistency pass covered 5,007 open markets / 596 events and found no
-positive live basket. Barcelona again appeared as a sportsbook-relative NO
-lead, but the exact Polymarket NO book began at .99; the in-play Bilibili row was
-also non-actionable. Primary, thin-tail, macro and favorite-fade candidates did
-not clear the instance-evidence and robust executable gates. No trade or funding
-action followed.
+All required discovery families ran once. Primary and thin-tail discovery,
+sports, macro and favorite-fade produced no candidate that cleared exact
+criteria, current evidence and robust executable pricing. Monotonicity found no
+violation or executable arb. The bounded consistency scan covered 5,009 open
+markets and found no positive live-depth basket, with its market-cap limitation
+explicitly retained. No trade, order change, transfer, probability change or
+funding action followed.
 
-State audit is clean at 11 indexed positions plus one de-indexed claim row.
-Marginal APY, watchlist, UMA, crux coverage, Ostium diff, pending decisions and
-redemption produced no action. Polygon PM holds about 33.708 aUSDC.e, .173 pUSD,
-.095 USDC and 49.097 POL; the crypto sleeve remains intact and Ostium has no
-open trade. All four daemons are exact-one/current, disk has about 2.1 GB free,
-and no news or opportunity alert arrived after 10:02. The Sunday world-state
-rotation completed at 16:03 UTC; the USGS recount remains due at 22:00. No fill,
-position, prior, order or transfer occurred; the weekly result was sent in
-Telegram 947, and Fireworks spend was zero.
+Weekly P&L is current through Sep-11 and the world-state rotation ran Sep-13.
+All four daemons are exact-one/current, disk has about 2.0 GB free, and no news
+or opportunity alert arrived after the Sep-13 22:06 review. The next portfolio
+catalyst is the Duma election on Sep-20. No Telegram summary was sent for this
+flat tick, and Fireworks spend was zero.
 
 ## Earlier update — 2026-09-09 14:19 UTC
 
@@ -102,9 +94,9 @@ Run `scripts/polyclaude_status.py` for live numbers (positions, hurdle scan, wat
 
 Note: Ostium has no public per-address trader profile (wallet-connect SPA). DeBank aggregates Ostium positions + Aave aUSDC + cross-chain balances; Arbiscan shows the raw on-chain trace incl. each Ostium open/close.
 
-Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposit parked pre-exploit — zero exposure through both exploit reports, $18M→$24M revised). Crypto sleeve has ~$7.87 aUSDC Aave-Arb plus small stable/gas balances. The PM wallet holds about 16.11 aUSDC.e on Polygon, $2.115500 pUSD operational float, and small raw stable/gas balances after closing DEC-0114. Status scripts read aTokens/pUSD directly, so idle capital is always visible. Run `scripts/crypto_status.py` + `scripts/aave_deposit.py rate` for live figures.
+Ostium: 0 open perps (SPX / NDX / XAU all TP-closed May-2026; planned OLP deposit parked pre-exploit — zero exposure through both exploit reports, $18M→$24M revised). Crypto sleeve has ~$7.87 aUSDC Aave-Arb plus small stable/gas balances. The PM wallet holds about 33.709 aUSDC.e on Polygon, .173070 pUSD operational float, and small raw stable/gas balances after the Sep-13 Greenland close. Status scripts read aTokens/pUSD directly, so idle capital is always visible. Run `scripts/crypto_status.py` + `scripts/aave_deposit.py rate` for live figures.
 
-**Long-term watchlist** (31 machine-monitored price gates; equities and multi-year ideas surface to the operator, while only explicitly <1y EVM catalysts may route back to polyclaude): `notes/longterm_watchlist.md` + `notes/watchlist_triggers.json`. Auto-monitored via `scripts/watchlist_monitor.py`; every hit is a re-underwriting trigger, never an automatic buy. LRCX's stale $280 gate fired Sep-3, but a fresh 2/4 check rejected entry near 50x trailing earnings and tightened the research gate to $190.
+**Long-term watchlist** (33 machine-monitored price gates; equities and multi-year ideas surface to the operator, while only explicitly <1y EVM catalysts may route back to polyclaude): `notes/longterm_watchlist.md` + `notes/watchlist_triggers.json`. Auto-monitored via `scripts/watchlist_monitor.py`; every hit is a re-underwriting trigger, never an automatic buy. LRCX's stale $280 gate fired Sep-3, but a fresh 2/4 check rejected entry near 50x trailing earnings and tightened the research gate to $190.
 
 ---
 

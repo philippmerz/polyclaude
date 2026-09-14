@@ -15980,3 +15980,70 @@ with zero alerts, and crux, state, Ostium, reservation and daemon checks are
 clean. No trade, fill, order change, transfer, prior change, Telegram message
 or Fireworks spend occurred. `main` matched `origin/main` at `6cde44c` before
 this review.
+
+## 2026-09-14 02:00–02:10 UTC — full check; two rotations cleared; no trade
+
+The eleven-step scheduled pass completed once. Explicit filtering after the
+Sep-13 22:06 journal cutoff found zero news alerts and zero opportunity alerts.
+No position quantity, fill or balance discrepancy appeared. Eleven PM
+positions remain at $130.59 cost, **$141.51 midpoint** and **$135.25 indicative
+depth/fee value**; the midpoint/depth gap is $6.26. Authoritative whole-account
+midpoint is **$190.61**, down $0.41 from 22:00, and settled realized P&L remains
+**+$3.49**. Polygon Aave holds 33.7090 USDC.e, deployable pUSD is .1731 and the
+other sleeve balances are stable. Ostium has zero trades, limits and allowance.
+
+The state audit surfaced and this run completed both judgment rotations. For
+the Duma equal-share structure, current FOM, VCIOM and APEK forecasts still
+center near 311–326 seats depending mainly on source and whether Just Russia
+clears 5%. Sep-13 campaign commentary adds undecided-voter and regional-result
+uncertainty but no replacement national or district-seat estimate. A fresh
+re-derivation therefore retains bucket probabilities **.18/.35/.19**, union
+**.72**. Current bids .040/.138/.440 make the complete 20-share exit **$12.36**
+versus $14.40 central fair. Sequential five-share asks rose from
+.046/.146/.450 (**.642** total) to .046/.148/.460 (**.654**) during the
+review; both exceed the .57 ceiling and are negative at the 10pp-stressed
+p=.62. HOLD the complete set and NO ADD; no leg may be traded independently.
+
+Trump's live Gamma description was diffed against every recorded operative
+claim. It still requires permanent cessation before Dec-31 or an earlier
+resignation/removal announcement, excludes temporary Section 3, unsustained
+Section 4 and impeachment without removal, and resolves by credible-reporting
+consensus. The recorded any-period/permanent-removal textual tension also
+remains. Current White House releases still identify Trump as President and no
+qualifying announcement surfaced, so p_no remains .97. HOLD / NO ADD / NO FLIP;
+the existing zero-fill 28-NO maker sell at .97 already implements the
+fee-free fair-value exit. After recording both reviews,
+`position_state_audit.py --fix` is clean at 11 indexed positions plus one
+de-indexed claim row.
+
+All other active-source checks remain stable. The HLE resolving API still has
+60 rows, with Gemini's best displayed score 46.2 and GPT-6 Astra at 53.6;
+current priors already account for the board's observed updating. Apple's
+official archive has no MacBook announcement after Sep-9, and MetaMask's own
+news page still has no token-launch detail beyond the Sep-9 corporate
+separation. Exit routing remains HOLD throughout: Gemini debut/Gemini HLE/
+Apple/OpenAI HLE net exits are $19.57/$9.62/$20.02/$3.31 versus central hold
+values $33.80/$20.55/$26.95/$5.70; MetaMask's complete $44.04 exit remains
+below $45.99 fair and its $44.75 rule floor. Marginal APY had five clear / zero
+flagged, UMA checked 37 rows and refreshed 35 with zero alerts, and crux,
+reservations, order inventory and reconciliation are clean. `redeem-all` found
+zero winning redeemables among 13 checked rows and skipped two losing/uncertain
+rows. No decision is overdue, and the 33-candidate watchlist has no hit.
+
+Default discovery covered 1,000 active markets; the event-derived thin-tail
+pass also ran. Sports surfaced no reproducible >3pp executable edge. Macro was
+visibility-only. Monotonicity found zero midpoint violation or executable arb.
+The bounded consistency pass covered 5,009 open markets, retained 3,167
+validated neg-risk markets and found no positive live-depth basket; coverage
+remains incomplete because the scan reached its market cap. Favorite-fade
+produced seven rough-zone rows, including Duma party-order markets, but its
+population edge remains falsified and none cleared the instance evidence and
+robust-entry gates. Output artifacts are `shortlist_20260914T020050Z.json`,
+`shortlist_20260914T020059Z.json` and
+`polymarket_consistency_20260914T020157Z.md`.
+
+Weekly P&L is current through Sep-11 and the world-state rotation ran Sep-13,
+so neither catch-up task is due; Monday has no methodology task. All four
+daemons are exact-one/current and disk has about 2.0 GB free. No trade, fill,
+order change, transfer, probability change, Telegram message or Fireworks
+spend occurred. `main` matched `origin/main` at `412f3ae` before this check.
