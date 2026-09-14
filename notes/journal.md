@@ -16100,3 +16100,58 @@ dated clocks remain Duma Sep-20, Arena Sep-30 and the monthly emergency-path
 drill Oct-12. No trade, fill, order change, transfer, prior change, Telegram
 message or Fireworks spend occurred. `main` matched `origin/main` at `d804c49`
 before this review.
+
+## 2026-09-14 14:00–14:05 UTC — full check; no capital action
+
+The eleven-step scheduled pass completed once. Explicit filtering after the
+10:02 journal cutoff found one news alert and zero opportunity alerts. The
+11:43 Guardian item reports attacks on Saudi Arabia, a pipeline closure
+affecting oil supply and prices above $108. Its impact mapping is empty and it
+has no direct causal channel to a held instrument; it also moves the XLE theme
+farther from its conditional long-term price gate. No follow-up position or
+research action is justified.
+
+Eleven PM positions remain at $130.59 cost, **$143.46 midpoint** and **$136.93
+indicative net depth**; the midpoint/depth gap is $6.54. Authoritative
+whole-account midpoint is **$192.66**, up $0.50 since 10:00, and settled
+realized P&L remains **+$3.50**. Polygon Aave holds 33.710370 USDC.e, deployable
+pUSD is .173070 and the other sleeve balances are stable. The sole
+authenticated order remains Trump's zero-fill 28-NO GTC sell at .97. No
+winning redeemable appeared among 13 checked rows.
+
+Every ordinary and protected-group exit remains HOLD. Marginal APY had five
+clear / zero flagged at the 2.99% hurdle. The HLE resolving API still has 60
+rows, with Gemini's best displayed score 46.2 and GPT-6 Astra at 53.6. The
+constrained Kelly pass shows nominal deficits on Trump and OpenAI ≥55, but the
+ticket and shared-cluster caps suppress both adds. It labels Gemini debut
+over-sized; that source-driven position is hidden-information class, so the
+documented rule forbids a maker sell at or below its .20 fair value and the
+fresh complete exit remains HOLD. Brownian-bridge has no trim or scale-up
+candidate. UMA reported zero alerts, and state, crux, Ostium, reservations and
+reconciliation are clean. No decision is overdue and the 33-candidate
+watchlist has no hit.
+
+Default discovery covered 1,000 active markets and the exact 20-page/event
+thin-tail pass also ran. Sports covered 72 qualifying markets and made three
+consensus lookups; the only apparent larger discrepancy, Broncos–Chiefs total
+43.5, used the opposite-side convention and had no matching cheap executable
+ask, so it was rejected. Macro surfaced ten visibility-only markets with no
+defensible consensus edge. Monotonicity inspected 1,005 multi-market events
+from 1,306 and found zero midpoint violation or live arb. The bounded
+consistency pass scanned 5,001 open markets / 601 events, retained 3,033
+validated neg-risk markets and found zero provisional positive basket; its
+5,000-market cap still makes coverage incomplete. Five live favorite-fade
+candidate rows did not overcome the failed population replication and
+instance-specific criteria/fact uncertainty. Artifacts are
+`shortlist_20260914T140053Z.json`, `shortlist_20260914T140102Z.json` and
+`polymarket_consistency_20260914T140156Z.md`.
+
+Weekly P&L is current through Sep-11, the Sunday world-state rotation ran
+Sep-13, methodology is concluded and the monthly drill is current. All four
+daemons are exact-one/current and disk has about 2.0 GB free. The next clocks
+are Duma Sep-20, Arena Sep-30 and the monthly emergency-path drill Oct-12. No
+trade, fill, redemption, order change, transfer, prior change, Telegram message
+or Fireworks spend occurred. The README's stale claim that the trigger file had
+12 all-IBKR candidates was corrected to the live 33-trigger split (32 IBKR, one
+Polyclaude); this changes no trigger or routing. `main` matched `origin/main` at
+`e8d4929` before this check.

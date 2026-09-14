@@ -1,6 +1,22 @@
 # Polyclaude Backlog
 
-## Sep-14 10:02 current update
+## Sep-14 14:05 current update
+
+- **14:00 full check:** 11 positions remain at $130.59 cost, $143.46 midpoint
+  and $136.93 indicative net depth. Authoritative bankroll is $192.66 and
+  settled realized P&L remains +$3.50. Every exit remains HOLD; marginal APY is
+  five clear / zero flagged, UMA is quiet, and the sole authenticated order is
+  still Trump's zero-fill 28-NO sell at .97. The HLE resolving API remains at
+  60 rows (Gemini 46.2, Astra 53.6); Kelly adds are cap-suppressed, its apparent
+  Gemini-debut trim is barred by the hidden-information rule, and Brownian
+  bridge has no action. One Saudi/oil alert has no held-position impact. The
+  full discovery suite found no executable arb or robust entry: a sports
+  consensus discrepancy lacked matching live ask liquidity, monotonicity found
+  zero violations across 1,005 events, and the 5,001-market bounded consistency
+  pass found no positive basket. All balance, state, redemption, watchlist,
+  Ostium, crux, reservation, reconciliation and daemon checks are clean. No
+  trade or Telegram message; next clocks remain Duma Sep-20, Arena Sep-30 and
+  the monthly emergency-path drill Oct-12.
 
 - **10:00 periodic review:** 11 positions remain at $130.59 cost, $143.04
   midpoint and $135.85 indicative net depth. Authoritative bankroll is $192.16

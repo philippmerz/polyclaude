@@ -20,49 +20,49 @@ Autonomous agent-driven trading project. Mandate: **maximize return**. Two on-ch
 
 ---
 
-## Latest update — 2026-09-14 02:10 UTC
+## Latest update — 2026-09-14 14:05 UTC
 
-**02:00 full check:** 11 unresolved positions remain at $130.59 cost. PM
-midpoint is **$141.51** and complete indicative depth/fee value is **$135.25**;
-the $6.26 gap remains material. Authoritative whole-account midpoint is
-**$190.61**, including about **$6.20 of separately contributed gas tokens**.
-Replacing PM midpoint with depth gives about **$184.35 including gas**, or
-**$178.15 of trading value against $170 contributed: +$8.15/+4.79%**, before VM
+**14:00 full check:** 11 unresolved positions remain at $130.59 cost. PM
+midpoint is **$143.46** and complete indicative depth/fee value is **$136.93**;
+the $6.54 gap remains material. Authoritative whole-account midpoint is
+**$192.66**, including **$6.29 of separately contributed gas tokens**.
+Replacing PM midpoint with depth gives about **$186.13 including gas**, or
+**$179.84 of trading value against $170 contributed: +$9.84/+5.79%**, before VM
 and other operating costs. These reads are sequential rather than a synchronized
 executable quote. The Sep-11 completed-close passive comparators remain $180.91
 VT, $181.49 VTI and $181.62 SPY, ahead of realizable trading value by
-$2.76–$3.47.
+$1.07–$1.78.
 
-The two due judgment rotations were completed. A fresh Duma source derivation
-retains **.18/.35/.19** across the held 295–339 buckets, union **.72**. The
-complete exit is $12.36 versus $14.40 central fair; a fresh five-share set rose
-from .642 to .654 per payout during review, failing the .75 evidence gate, .57
-ceiling and 10pp stress.
-HOLD the equal set and do not trade a leg independently. Trump's live criteria
-still match every recorded clause, current official activity shows no
-qualifying cessation or announcement, and p_no remains **.97**. The existing
-zero-fill 28-NO maker sell at .97 remains the only authenticated order.
+No thesis, position, prior or order changed. Every ordinary and protected-group
+exit remains HOLD; marginal APY has five clear / zero flagged. The Duma set
+retains its .18/.35/.19 distribution and .72 union from the 02:00 source
+derivation. The HLE resolving API still has 60 rows, with Gemini's best score at
+46.2 and GPT-6 Astra at 53.6. Kelly's apparent Gemini-debut trim is barred by
+the position's hidden-information classification, while proposed Trump and
+OpenAI adds are suppressed by ticket/cluster caps. Brownian-bridge produced no
+trim or scale-up signal. Trump's zero-fill 28-NO maker sell at .97 remains the
+only authenticated order.
 
-No other thesis changed. The HLE API remains at 60 rows, with Gemini at 46.2
-and GPT-6 Astra at 53.6. Apple and MetaMask have no newer official launch fact.
-Every ordinary and protected-group exit remains HOLD; marginal APY has five
-clear / zero flagged. UMA, crux coverage, state reconciliation, Ostium, wallet
-balances, pending decisions, redemption and the 33-name long-term monitor are
-clean.
+One post-10:02 news alert reported Saudi attacks, a pipeline closure and oil
+above $108. It has no causal channel to a held position and pushes the already
+expensive energy theme farther from its long-term price gate. UMA, crux
+coverage, state reconciliation, Ostium, wallet balances, pending decisions,
+redemption and the 33-name long-term monitor are clean.
 
 All required discovery families ran once. Primary and thin-tail discovery,
 sports, macro and favorite-fade produced no candidate that cleared exact
-criteria, current evidence and robust executable pricing. Monotonicity found no
-violation or executable arb. The bounded consistency scan covered 5,009 open
+criteria, current evidence and robust executable pricing. A Broncos–Chiefs
+total apparent consensus discrepancy had no matching cheap live ask and was
+rejected. Monotonicity inspected 1,005 multi-market events and found no
+violation or executable arb. The bounded consistency scan covered 5,001 open
 markets and found no positive live-depth basket, with its market-cap limitation
-explicitly retained. No trade, order change, transfer, probability change or
-funding action followed.
+explicitly retained.
 
 Weekly P&L is current through Sep-11 and the world-state rotation ran Sep-13.
-All four daemons are exact-one/current, disk has about 2.0 GB free, and no news
-or opportunity alert arrived after the Sep-13 22:06 review. The next portfolio
-catalyst is the Duma election on Sep-20. No Telegram summary was sent for this
-flat tick, and Fireworks spend was zero.
+All four daemons are exact-one/current, disk has about 2.0 GB free, and there is
+no due methodology or calendar task. The next portfolio catalyst is the Duma
+election on Sep-20. No trade, fill, redemption, order change, transfer, Telegram
+message or Fireworks spend occurred.
 
 ## Earlier update — 2026-09-09 14:19 UTC
 
@@ -200,7 +200,8 @@ logs/              — gitignored: cron + news daemon logs
 - `recoup_campaign.md` — 2026-05-09 multi-stage engineering campaign log
 - `longterm_watchlist.md` — multi-year IBKR-side candidate doc with verdict table
 - `portfolio_kelly_priors.json` — per-position P(win) priors + cluster + ρ_within + canonical `_groups` component topology
-- `watchlist_triggers.json` — entry-trigger config for `watchlist_monitor.py` (12 candidates, all `route=ibkr_surface`)
+- `watchlist_triggers.json` — entry-trigger config for `watchlist_monitor.py`
+  (33 candidates: 32 `route=ibkr_surface`, one `route=polyclaude`)
 - `primary_sources.md` — curated factual URLs for `world_state_digest.py`
 - `pnl_weekly.md` — weekly P&L reports
 - `capital_ledger.md` — authoritative record of operator deposits in/out ($170 trading capital + gas). Log every external flow here immediately.
