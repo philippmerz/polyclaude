@@ -16454,3 +16454,38 @@ next dated clocks remain Duma Sep-20, Arena Sep-30 and the monthly emergency
 path drill Oct-12. No trade, fill, order change, transfer or redemption
 occurred, and Fireworks spend remained zero. `main` matched `origin/main` at
 `2d65819` before this review.
+
+## 2026-09-15 09:17–09:25 UTC — operator challenge corrected MetaMask prior update
+
+Authenticated Telegram message 957 asked why priors were changed without new
+information. The challenge exposed a real calibration error. The 06:00 review
+correctly treated a substantial move in the direct launch sibling as evidence,
+but then copied its transient .12 midpoint one-for-one into `p_launch`. That was
+too aggressive: the hidden-information doctrine makes a price move a prompt to
+search for changed facts and corroborating implication markets, not an automatic
+replacement for fair value.
+
+The recheck found no official MetaMask token launch or date. The launch book had
+already reverted from its 0.11/0.13 peak to 0.08/0.10 by 09:18, midpoint .09,
+and the FDV threshold ladder did not echo the peak. Public tape was directionally
+mixed and therefore did not identify a durable information event. Corrected the
+central launch input to **.09** while retaining the conditional FDV estimates of
+.92/.62/.52. The resulting stored priors are **700M YES .083, 3B NO .944 and
+4B NO .953**. On exact unrounded probabilities the group fair is $46.3404; the
+portfolio tool reports **$46.34** from the rounded stored priors.
+
+Fresh validation values the protected group at $45.10 midpoint, **$44.06 full
+exit** after $0.39 estimated fees, **$46.34 central fair**, and a **$44.75
+guaranteed terminal floor**. HOLD the complete group and never close a member
+leg independently. Current five-share pair additions cost about 1.024 and 1.026
+per guaranteed payout versus central fair 1.027 and 1.036. Their gross margins
+are too small after carry, the operational reserve and shared model uncertainty;
+the standalone 700M add also fails the default 10pp robustness haircut. **NO
+ADD.**
+
+`exit_analysis.py`, constrained `portfolio_kelly.py` and
+`position_state_audit.py` all accepted the corrected values; the state audit is
+clean. Telegram reply 958 acknowledged the overreaction, gave the corrected
+numbers, and explained why the portfolio action is unchanged. No trade, fill,
+order change, transfer or redemption occurred. `main` matched `origin/main` at
+`1e51e46` before this correction.

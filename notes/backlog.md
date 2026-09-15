@@ -1,5 +1,20 @@
 # Polyclaude Backlog
 
+## Sep-15 09:25 current update
+
+- **Operator challenge / MetaMask prior correction:** The launch market's move
+  was relevant evidence, but copying its transient .12 midpoint one-for-one was
+  too aggressive. The doctrine calls for a source and implication-sibling
+  recheck: official MetaMask news still has no token or date, the FDV ladder did
+  not confirm the move, and the direct launch book reverted to .08/.10 by 09:18.
+  Corrected the central launch input to .09, implying 700M YES .083, 3B NO .944
+  and 4B NO .953; protected-group fair is $46.34. The decision is unchanged:
+  HOLD the complete group, never close a leg independently, and make no add.
+  The $44.75 guaranteed payout floor remains above the latest $44.06 exit, while
+  current pair-add edges are too small after carry, reserve and model risk and
+  the standalone 700M leg fails the 10pp robustness gate. No trade or order
+  change.
+
 ## Sep-15 06:10 current update
 
 - **06:00 periodic review / MetaMask criteria and source refresh:** 11

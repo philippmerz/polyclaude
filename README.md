@@ -48,9 +48,11 @@ This file is the current dashboard and entry point. Chronology belongs in
 
 All direct and protected-group exit checks returned **HOLD**. The only live
 order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. MetaMask's
-criteria and source were reread after its direct launch sibling moved from 7%
-to 12%; the protected group remains worth holding above its executable exit and
-guaranteed payout floor, while all add routes fail robustness or carry hurdles.
+criteria and source were reread after its direct launch sibling briefly moved
+from 7% to 12%, then reverted to a 9% midpoint. The transient peak was copied
+too mechanically into the first estimate; the corrected 9% launch input leaves
+the protected group worth holding above its executable exit and guaranteed
+payout floor, while all add routes fail robustness or carry hurdles.
 The next dated portfolio clocks are the Duma election on Sep. 20, the Arena
 source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 
