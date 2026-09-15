@@ -1,5 +1,23 @@
 # Polyclaude Backlog
 
+## Sep-15 14:08 current update
+
+- **14:00 full check:** 11 positions remain at $130.59 cost, $142.99 midpoint
+  and $135.64 indicative net depth. Authoritative bankroll is $192.12 and
+  settled realized P&L remains +$3.50. All exits remain HOLD; the sole order is
+  still Trump's zero-fill 28-NO sell at .97, and redemption found zero winning
+  claims. One BBC Hormuz alert has no causal path to the book. The newest Duma
+  primary forecasts remain Sep-10; its complete exit is $12.78 versus $14.40
+  fair and a .691 add cost remains above the .57 ceiling. HLE remains at 60
+  source rows with no new qualifying Gemini Pro. Discovery scanned 998 default
+  and 34,503 thin-tail markets; monotonicity found zero violations across 1,024
+  events and consistency found no basket above 2% modeled net in its bounded
+  slice. AC Milan and Real Madrid NO had only 1.76pp/2.23pp central edge after
+  fees and both turned negative under a 5pp probability stress, so no entry.
+  State, balances, carry, UMA, Ostium, crux, watchlist, decisions, reservations,
+  reconciliation and daemons are clean. No trade or order change. Next clocks:
+  Duma Sep-20, Arena Sep-30, emergency-path drill Oct-12.
+
 ## Sep-15 10:06 current update
 
 - **Periodic review / fleeting Gemini-debut mark:** No news or opportunity alert

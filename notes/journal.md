@@ -16548,3 +16548,74 @@ was unchanged. `position_groups.format_group_summary` now prints both the raw
 exit-versus-fair margin and the after-hurdle-carry margin whenever they differ;
 the immediate `exit_analysis.py` view retains the raw comparison. Focused group
 and portfolio tests pass **102/102**.
+
+## 2026-09-15 14:00–14:09 UTC — full check; robust gates reject two sports leads
+
+Explicit filtering after the 10:11 journal cutoff found one persisted news
+alert and zero opportunity alerts. The 13:11 BBC report of two missing sailors
+after a Hormuz tanker attack maps to no held position and creates no portfolio
+action. The watchlist produced no hit or re-vet, no decision is overdue, and no
+operator request remains unresolved.
+
+Eleven positions remain at **$130.59 cost, $142.99 midpoint and $135.64
+indicative net depth**. Authoritative whole-account midpoint is **$192.12** and
+settled realized P&L remains **+$3.50**. Against the committed 10:06 snapshot,
+midpoint is up $0.50, realizable value is up $2.79 and bankroll is up $0.52.
+Polygon Aave holds 33.713130 USDC.e, deployable pUSD is .173070, and the crypto
+sleeve holds 7.8758 USDC in Aave. No unexplained balance, position, fill or
+order movement appeared. The sole authenticated order remains Trump's
+zero-fill 28-NO GTC sell at .97. `redeem-all` found zero winning redeemables
+among 13 rows and sent no transaction.
+
+All direct and protected-group exits remain HOLD. Duma's fresh complete exit is
+**$12.78** versus **$14.40** central fair; a five-unit covered add costs about
+.691 per payout dollar, still above the .57 policy ceiling. A bounded primary
+source check found no whole-election forecast newer than the Sep-10 VCIOM/FOM
+releases; VCIOM's Sep-11 party-rating publication still measures the week
+through Sep-6 and supplies no new district decomposition. Retain .18/.35/.19
+across the held buckets and union p=.72. MetaMask's complete exit is **$44.11**
+versus **$46.34** fair and its **$44.75 guaranteed floor**. Its pair additions
+remain too thin after carry, reserve and shared-model risk. Never transact a
+member leg independently.
+
+The HLE resolving API remains at 60 rows with no newly added qualifying Gemini
+Pro. Gemini-debut NO is back near .13 after the transient .18 print reviewed at
+10:00, and no thesis fact changed. Apple NO improved to .425; its full-depth
+exit still averages about .389 versus .55 fair. Constrained Kelly suppresses
+Trump and OpenAI additions on ticket/cluster headroom, while the apparent
+Gemini-debut trim remains barred by its hidden-information and poor-depth
+rules. Brownian bridge has no eligible model or action. Marginal APY is five
+clear / zero flagged; UMA, position state, Ostium, crux coverage, reservations
+and reconciliation are clean. All four daemons are exact-one/current and disk
+has about 2.0 GB free.
+
+The complete discovery pass found no robust entry. Default discovery fetched
+998 active markets; thin-tail discovery fetched 34,503 and retained 1,488
+win-assumed-hurdle candidates for underwriting. Sports checked 62 markets and
+three external-consensus rows. Two headline discrepancies received exact
+criteria, book and fee reviews:
+
+- AC Milan NO was offered at .54 with a .01242 taker fee, or **.55242 all-in**,
+  versus .570 consensus fair. The 1.76pp central edge becomes -3.24pp after a
+  five-point probability stress. SKIP.
+- Real Madrid NO was offered at .19 with a .007695 fee, or **.197695 all-in**,
+  versus .220 consensus fair. The 2.23pp central edge becomes -2.77pp after the
+  same stress. SKIP.
+
+Macro surfaced 12 markets. The Federal Reserve's primary calendar confirms the
+Sep-15/16 meeting and a Sep-16 decision; no independent validated probability
+surface was available to improve on current prices, so these remain visibility
+only. Monotonicity inspected 1,024 multi-market events and found zero midpoint
+or live violations. Consistency scanned 5,008 markets / 595 events and found
+zero provisional basket above 2% modeled net in its explicitly incomplete
+bounded slice. Favorite-fade returned four population-signal candidates, none
+with instance evidence sufficient to clear the current pipeline. An optional
+unparameterized cross-event invocation returned its expected usage error
+because no implication pair was specified; it was outside the mandated scan
+set and produced no signal.
+
+Weekly P&L remains current through Sep-11, the Sep-13 world-state rotation is
+fresh, and the methodology experiment remains concluded. No trade, fill, order
+change, transfer, redemption or probability change occurred. No Telegram was
+sent under the material-only rule, and Fireworks spend remained zero. `main`
+matched `origin/main` at `cde0f27` before this review.
