@@ -35,26 +35,24 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-15 14:01 UTC
+## Last audited snapshot — 2026-09-15 18:03 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved positions | 11 |
 | Position cost | $130.59 |
-| Polymarket midpoint | $142.99 |
-| Indicative depth/fee value | $135.64 |
-| Authoritative whole-account mark | $192.12 |
+| Polymarket midpoint | $139.46 |
+| Indicative depth/fee value | $130.15 |
+| Authoritative whole-account mark | $188.63 |
 | Settled realized P&L | +$3.50 |
 
 All direct and protected-group exit checks returned **HOLD**. The only live
-order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. MetaMask's
-criteria and source were reread after its direct launch sibling briefly moved
-from 7% to 12%, then reverted to a 9% midpoint. The transient peak was copied
-too mechanically into the first estimate; the corrected 9% launch input leaves
-the protected group worth holding above its executable exit and guaranteed
-payout floor, while all add routes fail robustness or carry hurdles. A fleeting
-18% mark on Gemini-debut NO also failed review and has reverted to 13%; the HLE
-source still has no new qualifying Gemini Pro row.
+order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. Gemini-debut
+NO is near 11%; its resolving source still contains no new qualifying Gemini
+Pro row, and its $15.66 executable exit remains far below $33.80 central hold
+value. Apple bid depth also weakened, but its $16.97 exit remains below $26.95
+fair value. MetaMask and Duma protected groups remain worth holding as complete
+sets, and all add routes fail robustness or carry hurdles.
 The next dated portfolio clocks are the Duma election on Sep. 20, the Arena
 source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 

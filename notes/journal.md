@@ -16619,3 +16619,42 @@ fresh, and the methodology experiment remains concluded. No trade, fill, order
 change, transfer, redemption or probability change occurred. No Telegram was
 sent under the material-only rule, and Fireworks spend remained zero. `main`
 matched `origin/main` at `cde0f27` before this review.
+
+## 2026-09-15 18:00–18:05 UTC — periodic review; weaker depth, no thesis change
+
+Explicit filtering after the 14:09 journal cutoff found zero persisted news
+alerts and zero opportunity alerts. The watchlist returned no hit or re-vet,
+no decision is overdue, and there is no due catalyst or unresolved operator
+request. The Sep-13 world-state rotation and weekly P&L through Sep-11 remain
+current.
+
+Eleven positions remain at **$130.59 cost, $139.46 midpoint and $130.15
+indicative net depth**. Authoritative whole-account midpoint is **$188.63** and
+settled realized P&L remains **+$3.50**. Against the 14:01 snapshot, midpoint
+is down $3.53, realizable value is down $5.49 and bankroll is down $3.49. No
+position quantity, fill or cash balance moved. The decline is concentrated in
+Gemini-debut NO moving from about .13 to .11 and in weaker executable depth for
+that leg and Apple NO.
+
+The HLE resolving API remains at 60 rows with no newly added qualifying Gemini
+Pro. Gemini-debut's fresh complete exit is **$15.66** versus **$33.80** central
+hold value. Apple's midpoint remains near .42; its full exit is **$16.97**
+versus **$26.95** fair. Both remain inside their stored uncertainty ranges and
+neither has a fresh source fact, so both remain HOLD with no new maker order.
+Every other direct exit also remains HOLD. Duma's complete-group exit is
+**$12.57** versus **$14.40** fair; MetaMask's is **$44.08** versus **$46.34**
+fair and its **$44.75 guaranteed floor**. Never transact a protected member leg
+independently.
+
+The position-state refresh is clean at 11 indexed positions plus one deindexed
+claim row. Marginal APY remains five clear / zero flagged and UMA returned zero
+alerts. Polygon Aave holds 33.713595 USDC.e with .173070 deployable pUSD; the
+crypto sleeve holds 7.8759 Aave USDC. Ostium has zero positions, all 11 cruxes
+are covered, and reservations and reconciliation are clean. The sole live
+order remains Trump's zero-fill 28-NO GTC sell at .97. All four daemons are
+exact-one/current.
+
+No trade, fill, order change, transfer, redemption or probability change
+occurred. No Telegram was sent under the material-only rule, and Fireworks
+spend remained zero. `main` matched `origin/main` at `1ded531` before this
+review.

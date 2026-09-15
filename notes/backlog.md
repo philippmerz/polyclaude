@@ -1,5 +1,20 @@
 # Polyclaude Backlog
 
+## Sep-15 18:04 current update
+
+- **18:00 periodic review:** No news or opportunity alert appeared after the
+  14:09 cutoff, and no watchlist hit, overdue decision, thesis break or dated
+  catalyst is due. Eleven positions remain at $130.59 cost, $139.46 midpoint
+  and $130.15 indicative net depth; authoritative bankroll is $188.63 and
+  settled realized P&L remains +$3.50. The decline since 14:00 is concentrated
+  in Gemini-debut's mark and Gemini/Apple bid depth. The HLE source remains at
+  60 rows with no qualifying Gemini Pro addition: Gemini-debut's $15.66 exit is
+  below $33.80 fair hold value, while Apple's $16.97 exit is below $26.95 fair.
+  All direct and protected-group exits remain HOLD. The sole order is still
+  Trump's zero-fill 28-NO sell at .97; balances, state, carry, UMA, Ostium,
+  crux, reservations, reconciliation and daemons are clean. No trade or order
+  change. Next clocks: Duma Sep-20, Arena Sep-30, emergency-path drill Oct-12.
+
 ## Sep-15 14:08 current update
 
 - **14:00 full check:** 11 positions remain at $130.59 cost, $142.99 midpoint
