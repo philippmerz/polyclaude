@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-09-13",
+  "updated": "2026-09-15",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -143,12 +143,12 @@
       "ticker": "CCJ",
       "type": "equity",
       "yfinance_symbol": "CCJ",
-      "entry_max": 95.0,
+      "entry_max": 75.0,
       "horizon": "2-5y",
       "route": "ibkr_surface",
-      "rationale": "Advanced Nuclear. Original $110 trigger fired 2026-05-16 at $107.51; fresh longterm_check 3/4 WATCH said still overvalued (fwd P/E 92x vs 24x historical). Revised entry: $85-95 (on uranium dip to $70-75/lb) OR Q2 2027 earnings inflection. Don't chase rallies above $120. Thesis intact, valuation stretched.",
+      "rationale": "Advanced Nuclear. The $95 gate fired again 2026-09-15 at $93.26, but the automatic fresh longterm_check returned only 2/4 PASS and rejected entry because valuation still lacks margin of safety. Reassess at <=$75 only if uranium term pricing remains above $80/lb and production guidance is intact, or after Q4 2026 results verify Westinghouse cash-flow recovery without materially higher capital needs. Suggested conditional starter is 1-2% of the operator's IBKR sleeve; current size is zero.",
       "added": "2026-05-10",
-      "revised": "2026-05-16"
+      "revised": "2026-09-15"
     },
     {
       "ticker": "NVDA",

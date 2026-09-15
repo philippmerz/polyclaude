@@ -1,6 +1,25 @@
 # Polyclaude Backlog
 
-## Sep-14 22:06 current update
+## Sep-15 02:10 current update
+
+- **02:00 full check / Apple drawdown and CCJ trigger:** 11 positions remain at
+  $130.59 cost, $135.39 midpoint and $121.20 indicative net depth.
+  Authoritative bankroll is $184.53 and settled realized P&L remains +$3.50.
+  Apple NO fell to roughly .35, but official store/newsroom pages remain
+  unchanged and only two small opposing trades printed. Its fresh full exit
+  ranged from $14.29 to $15.02 versus $26.95 central and $17.15 range-floor
+  hold value, so HOLD / NO ADD / no maker sell. Duma remains .18/.35/.19
+  (union .72), its $12.54 exit is below $14.40 central, and a .674 complete add
+  fails the .57 ceiling and stress gate. HLE's named chart remains 60 rows with
+  Gemini 46.2 and Astra 53.6. A focused watchlist rerun caught CCJ at $93.26
+  below its stale $95 gate; the fresh 2/4 vet rejected entry and reset the
+  IBKR-surface trigger to $75, conditional on uranium term pricing above
+  $80/lb and intact production guidance or later Westinghouse cash-flow proof.
+  All exits, carry, UMA, state, balances, redemption, order, Ostium, crux,
+  reservations, reconciliation and daemon checks are clean; discovery found
+  no executable arb or robust new entry. No trade or order change. Telegram
+  954 carried the portfolio alert and 955 added the missed CCJ surface. Next
+  clocks: Duma Sep-20, Arena Sep-30, emergency-path drill Oct-12.
 
 - **22:00 periodic review / Apple price-move revalidation:** 11 positions
   remain at $130.59 cost, $140.81 midpoint and $130.21 indicative net depth.

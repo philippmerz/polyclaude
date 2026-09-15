@@ -4,6 +4,17 @@
 >
 > Reference pattern: SanDisk 2023-2025 — memory-cycle bottom + AI-compute secular demand + Western-Digital-spinoff catalyst + margin of safety = generational return. Hunt for analogous convergences elsewhere.
 
+## 2026-09-15 trigger review
+
+- **CCJ:** the quote reached $93.26 and crossed the stored $95 IBKR-surface
+  gate. The automatic fresh vet returned **2/4 PASS** and rejected entry at the
+  current valuation. The live trigger is now **$75** and still requires uranium
+  term pricing above $80/lb plus intact production guidance; the alternative is
+  Q4-2026 evidence that Westinghouse cash flow is recovering without materially
+  larger capital needs. Suggested size is **0% now** and a **1-2% IBKR-sleeve
+  starter** only after that revised gate clears. Telegram 955 surfaced the
+  result to the operator.
+
 ## Operating model
 
 **Cadence.** Weekly review (Sunday cron extension or manual sweep). Add/update candidates with fresh thesis. Monthly: prune stale entries. Quarterly: realized-vs-prediction calibration check.

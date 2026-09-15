@@ -16299,3 +16299,87 @@ journal or dated research. Relative README links all resolve, the historical
 clutter check is clean, shell syntax passes, and the focused onboarding/doctrine
 suite passes 11/11. This documentation-only change made no portfolio, order,
 prior, daemon, or account-state change.
+
+## 2026-09-15 02:00–02:10 UTC — full check; Apple and CCJ revalidated
+
+Explicit filtering after the 00:20 journal cutoff found zero persisted news
+alerts and zero persisted opportunity alerts. The Clarity rows printed by the
+opportunity daemon between 00:52 and 01:56 were non-firing log observations:
+their best live edge was only 0.23–1.25pp, below the 2pp threshold. No alert
+required a position response.
+
+Eleven positions remain at $130.59 cost, **$135.39 midpoint** and **$121.20
+indicative net depth**. Authoritative whole-account midpoint is **$184.53**,
+down $5.43 since 22:00, while settled realized P&L remains **+$3.50**. The
+position midpoint fell $4.81 and realizable value fell $10.36; the midpoint to
+depth gap widened to $14.19. Polygon Aave holds 33.711750 USDC.e, deployable
+pUSD is .173070, the crypto sleeve holds 7.8755 USDC in Aave, and native gas is
+worth about $6.24. No unexplained balance movement appeared. The sole
+authenticated order remains Trump's zero-fill 28-NO GTC sell at .97.
+
+Apple touchscreen-MacBook NO supplied the mandatory drawdown review. A fresh
+book timestamped 02:02:21 UTC was approximately .30/.40, with enough .30 bid
+depth to liquidate all 49.005 NO shares for about $14.29 net; the later full
+exit pass improved to about $15.02 as bids moved. Only two post-22:00 trades
+appeared: 25 NO at .40 and 16.331693 YES at .612306391. Apple's current
+newsroom archive, Buy Mac page and MacBook Pro page still show no qualifying
+touchscreen MacBook, preorder or public-sale commitment. Retain p_no .55 with
+the wide .35–.70 range: central hold value is $26.9528, standard 10pp-stressed
+hold is $22.0523, and even range-floor hold is $17.1518. All exceed the fresh
+full exit. **HOLD / NO ADD / no hidden-information maker sell.** Verification,
+source-ack and divergence metadata advanced to Sep-15 without a probability
+change.
+
+The Duma protected set was independently refreshed. The newest primary FOM and
+VCIOM list-support forecasts and APEK district estimate remain dated Sep-10.
+PolitPro KI's Sep-13 46% list-support print has no 225-district decomposition,
+no published historical-accuracy score and internally inconsistent generated
+seat displays, so it is qualitative downside sensitivity rather than a valid
+whole-seat replacement. Retain .18/.35/.19 across the held buckets, union
+p=.72. The complete exit is $12.54 versus $14.40 central hold value; a fresh
+five-share complete add costs .674 per covered payout, above the .57 policy
+ceiling and negative under p=.62 stress. **HOLD / NO ADD; never trade a leg
+independently.**
+
+The exact HLE resolving chart still has 60 rows: Gemini's high remains 46.2 and
+GPT-6 Astra remains 53.6. Google's current release notes contain no newer
+Gemini Pro release. Gemini-debut NO therefore retains p_no .20; its poor taker
+exit and hidden-information jump risk still rule out both a taker sale and an
+at-fair maker sale. All other direct and protected-group exits remain HOLD.
+The constrained Kelly pass suppressed Trump and OpenAI adds on ticket/cluster
+headroom, kept Apple below the venue/action gates, and correctly left Duma at
+`SKIP_ADD_POLICY_PRICE_CAP`; no sizing action cleared the full pipeline.
+
+Marginal APY returned five clear / zero flagged at the roughly 2.99% hurdle.
+UMA returned zero alerts across 37 tracked rows (35 refreshed). Position-state,
+crux, Ostium, reservations and reconciliation are clean. `redeem-all` found
+zero winning redeemables among 13 rows and sent no transaction. Brownian bridge
+returned `NO_BB_MODEL` for all eleven positions. No decision is overdue.
+
+The full prospecting suite found no executable edge. Default discovery scanned
+1,000 active markets; the thin-tail pass fetched 38,426 and surfaced 1,550
+hurdle candidates for filtering. Sports checked 62 markets and three consensus
+comparisons, with no delta above 3pp. Macro exposed 11 markets for visibility.
+Monotonicity scanned 968 events: four midpoint flags all vanished on live
+books. The consistency pass covered 5,010 markets / 558 events and found no
+basket above 2% net; favorite-fade's six rows remained candidate-only. No new
+entry survived criteria, fact, book, fee and robustness checks.
+
+The first delegated watchlist read incorrectly reported no hit. A focused root
+rerun caught **CCJ at $93.26**, below its stored $95 IBKR-surface gate. The
+automatic 02:01 fresh vet returned only **2/4 PASS** and rejected entry at the
+current valuation. Its trigger was tightened to $75, conditional on uranium
+term pricing above $80/lb and intact production guidance, or later Q4-2026
+proof of Westinghouse cash-flow recovery without materially larger capital
+needs. Suggested IBKR size is 0% now and a 1–2% sleeve starter only after the
+new gate clears. Telegram 954 carried the portfolio alert; corrective message
+955 added the CCJ surface. The 24-hour re-vet cache was retained to prevent a
+repeat model call on the same rejected setup.
+
+The Sunday world-state review is fresh from Sep-13, weekly P&L is current
+through Sep-11 and the methodology experiment remains concluded. All four
+daemons are exact-one/current and disk has about 2.0 GB free. The next dated
+clocks are Duma Sep-20, Arena Sep-30 and the monthly emergency-path drill
+Oct-12. No trade, fill, order change, transfer, redemption or probability
+change occurred, and Fireworks spend remained zero. `main` matched
+`origin/main` at `31f0d85` before this review.

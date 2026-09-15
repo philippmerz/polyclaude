@@ -52,5 +52,14 @@
       "summary": "Do not enter at ~50x trailing earnings. Reassess on a cyclical drawdown to **\u2264$190/share** (roughly 25x FY26 EPS, before any earnings reset), or after a material WFE-order correction that leaves Lam\u2019s share, balance sheet, and service revenue intact.",
       "fresh": true
     }
+  },
+  "CCJ": {
+    "ts": 1789437668.2625077,
+    "result": {
+      "verdict": "PASS",
+      "score": "2/4",
+      "summary": "Do not enter at $96.68. Reassess on a **<$75** share price with uranium long-term pricing still above $80/lb and production guidance intact, or after Q4 2026 results verify Westinghouse cash-flow recovery without a material increase in capital needs.",
+      "fresh": true
+    }
   }
 }

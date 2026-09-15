@@ -35,22 +35,25 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-14 22:06 UTC
+## Last audited snapshot — 2026-09-15 02:10 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved positions | 11 |
 | Position cost | $130.59 |
-| Polymarket midpoint | $140.81 |
-| Indicative depth/fee value | $130.21 |
-| Authoritative whole-account mark | $189.96 |
+| Polymarket midpoint | $135.39 |
+| Indicative depth/fee value | $121.20 |
+| Authoritative whole-account mark | $184.53 |
 | Settled realized P&L | +$3.50 |
 
 All direct and protected-group exit checks returned **HOLD**. The only live
 order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. Apple was
-re-underwritten after its price move with no trade or prior change. The next
-dated portfolio clocks are the Duma election on Sep. 20, the Arena source
-snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
+re-underwritten after its drawdown; current official pages and mixed small-trade
+flow supplied no thesis break. Duma remains 0.72 across its protected held
+buckets. CCJ hit its old IBKR watchlist gate, but a fresh vet rejected entry and
+tightened the trigger to $75. The next dated portfolio clocks are the Duma
+election on Sep. 20, the Arena source snapshot on Sep. 30, and the emergency-path
+drill on Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
