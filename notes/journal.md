@@ -16279,3 +16279,23 @@ positions; hidden-information legs require explicit jump-risk compensation;
 authenticated orders are reconciled every scheduled tick and on relevant news,
 repriced when fair changes, and pulled before scheduled catalysts. No order,
 position, prior, transfer, or probability changed.
+
+## 2026-09-15 00:16–00:20 UTC — README reduced to a current dashboard
+
+Authenticated Telegram message 952 requested removal of obsolete state and
+"supersedes" narration from README because it needlessly enlarged onboarding
+context. Replaced the 245-line / 33,093-byte document with a 128-line / roughly
+6.1-KB entry point: mandate and constraints, one timestamped audited snapshot,
+the operating model, essential commands, canonical records, public sleeve
+links, and the private one-time Telegram rules. Removed both earlier-state
+sections, the May postmortem, dated update accumulation, fixed decision counts,
+stale balances and priors, and the long duplicated tool catalog; their
+canonical history remains in the journal, strategy, research, and scripts
+documentation.
+
+Changed `daily_checkin.sh` step 7 to replace the single snapshot rather than
+append old updates, explicitly routing chronology and postmortems to the
+journal or dated research. Relative README links all resolve, the historical
+clutter check is clean, shell syntax passes, and the focused onboarding/doctrine
+suite passes 11/11. This documentation-only change made no portfolio, order,
+prior, daemon, or account-state change.
