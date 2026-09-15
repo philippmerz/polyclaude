@@ -16658,3 +16658,55 @@ No trade, fill, order change, transfer, redemption or probability change
 occurred. No Telegram was sent under the material-only rule, and Fireworks
 spend remained zero. `main` matched `origin/main` at `1ded531` before this
 review.
+
+## 2026-09-15 22:00–22:06 UTC — Gemini >=50 drawdown is a wide-book move; hold
+
+Explicit filtering after the 18:05 journal cutoff found zero persisted news
+alerts and zero opportunity alerts. The watchlist returned no hit or re-vet,
+no decision is overdue, and no dated catalyst or operator request is due. The
+Sep-13 world-state rotation and weekly P&L through Sep-11 remain current.
+
+Eleven positions remain at **$130.59 cost, $135.19 midpoint and $120.04
+indicative net depth**. Authoritative whole-account midpoint is **$184.04** and
+settled realized P&L remains **+$3.50**. Against the 18:03 snapshot, midpoint
+is down $4.27, realizable value is down $10.11 and bankroll is down $4.59. No
+position quantity, fill or cash balance moved. The realizable gap is dominated
+by the two illiquid Gemini legs rather than an account-state change.
+
+UMA correctly surfaced a drawdown review on the held Gemini HLE >=50 NO:
+displayed YES moved from .7900 to .8505, taking the NO mark to about .1495 and
+the ticket 20.3% below cost. The exact market is active/open with no UMA
+proposal and unchanged criteria. Direct inspection of the named resolving API
+returned all **60 rows**; Gemini 3.8 Flash remains the maximum at **46.2**, below
+the 50 threshold. No qualifying source fact appeared.
+
+The tape and book reject treating .8505 as an informed transaction. The only
+post-cutoff prints were **YES sells**, 66.19 shares at .77918 at 18:26 and 36.14
+at .805 at 21:20. The last trade is .805, while the current .818/.883 YES book
+creates a **6.5pp spread** and an .8505 midpoint. The complementary NO book has
+69.86 shares bid at .115, enough for the entire 58.72-share ticket; its fresh
+net exit is **$6.51** versus **$20.55** central hold value. Retain p_no=.35
+[.20-.55], HOLD and place no maker sell. A correlated add is also barred:
+cluster headroom remains below the $5 venue minimum before hidden-information
+risk.
+
+Gemini-debut NO remains near .11 but its bid depth also deteriorated; its fresh
+exit is **$8.85** versus **$33.80** central hold value, with the same 60-row API
+showing no newly added qualifying Gemini Pro. Apple exits at **$18.43** versus
+$26.95 fair. Duma's complete-group exit is **$12.68** versus $14.40 fair, and
+MetaMask's is **$44.00** versus $46.34 fair and its $44.75 guaranteed floor.
+Every direct and protected-group exit remains HOLD.
+
+The position-state refresh is clean at 11 indexed positions plus one deindexed
+claim row. Polygon Aave holds 33.714073 USDC.e with .173070 deployable pUSD;
+the crypto sleeve holds 7.8760 Aave USDC. Ostium has zero positions, every crux
+is covered, all four daemons are exact-one/current, and the sole live order
+remains Trump's zero-fill 28-NO GTC sell at .97. A legacy `--expect claude`
+coverage assertion did not match the current API's model naming, so it was not
+used as evidence; the complete 60-row JSON and all Gemini rows were read
+directly.
+
+Telegram 960 reported the material drawdown review and HOLD/no-add decision.
+No trade, fill, order change, transfer, redemption or probability change
+occurred, and Fireworks spend remained zero. `main` matched `origin/main` at
+`c6b13e3` before this review.

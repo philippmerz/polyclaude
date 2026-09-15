@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-15 22:05 current update
+
+- **22:00 periodic review / Gemini >=50 drawdown:** No news or opportunity
+  alert appeared after the 18:05 cutoff, and no watchlist hit, overdue decision
+  or catalyst is due. Eleven positions remain at $130.59 cost, $135.19 midpoint
+  and $120.04 indicative net depth; authoritative bankroll is $184.04 and
+  settled realized P&L remains +$3.50. UMA flagged Gemini >=50 YES .7900 ->
+  .8505, but exact revalidation found an unchanged 60-row resolving chart with
+  Gemini still topping at 46.2, an open market with no UMA proposal, and two
+  post-cutoff YES sells at .779/.805. The 6.5pp book spread, rather than a trade
+  at .85, produced the midpoint move. Gemini >=50's $6.51 exit remains below
+  $20.55 fair hold value; Gemini-debut's thinner $8.85 exit remains below $33.80
+  fair. HOLD / NO ADD; cluster headroom is below the venue minimum. All other
+  exits, balances, state, orders, Ostium, crux and daemons are clean. Telegram
+  960 sent. Next clocks: Duma Sep-20, Arena Sep-30, emergency-path drill Oct-12.
+
 ## Sep-15 18:04 current update
 
 - **18:00 periodic review:** No news or opportunity alert appeared after the
