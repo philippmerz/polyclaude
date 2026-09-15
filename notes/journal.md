@@ -16383,3 +16383,74 @@ clocks are Duma Sep-20, Arena Sep-30 and the monthly emergency-path drill
 Oct-12. No trade, fill, order change, transfer, redemption or probability
 change occurred, and Fireworks spend remained zero. `main` matched
 `origin/main` at `31f0d85` before this review.
+
+## 2026-09-15 06:00–06:10 UTC — periodic review; MetaMask input repriced
+
+Explicit filtering after the 02:10 journal cutoff found zero persisted news
+alerts and zero opportunity alerts. No decision is overdue, the revised
+watchlist produced no hit, the Sep-13 world-state review is fresh and weekly
+P&L remains current through Sep-11.
+
+Eleven positions remain at $130.59 cost, **$138.73 midpoint** and **$128.42
+indicative net depth**. Authoritative whole-account midpoint is **$187.84**,
+up $3.31 since 02:00, while settled realized P&L remains **+$3.50**. Position
+midpoint rose $3.34 and realizable value rose $7.22; the remaining midpoint to
+depth gap is $10.31. Polygon Aave holds 33.712211 USDC.e, deployable pUSD is
+.173070 and the crypto sleeve holds 7.8756 USDC in Aave. No unexplained
+balance movement, fill or order change appeared. The sole authenticated order
+remains Trump's zero-fill 28-NO GTC sell at .97.
+
+The position-state audit surfaced one due judgment item: reread the MetaMask
+700M FDV criteria and its recorded sources. Fresh Gamma reads of all three held
+thresholds confirm the same template: the token must be actively, publicly
+transferable and tradable; FDV is measured at 4:00 PM ET on the calendar day
+after launch using the most liquid price source; no launch by Dec-31 23:59 ET
+resolves every threshold NO. The 3B and 4B texts remain identical apart from
+their stated threshold, preserving the protected pair topology.
+
+The input did move. The direct Dec-31 token-launch sibling is now .11/.13,
+midpoint .12, versus .06/.08 and .07 midpoint on Sep-11. Public tape shows the
+repricing came through substantial flow, including a 698.25-share NO sale near
+.911 on Sep-14 and several later NO sales, followed by smaller NO buys around
+.88-.89 after 03:00. MetaMask's official news index contains no token launch or
+launch date; the Sep-9 corporate separation remains the latest relevant
+company item and says nothing changes for users today. Because this is a
+hidden-information pre-launch market, the absence of an official announcement
+does not justify ignoring the traded move.
+
+Retaining the conditional estimates P(FDV>$700M | launch)=.92,
+P(FDV>$3B | launch)=.62 and P(FDV>$4B | launch)=.52 changes the live priors to
+**700M YES .110, 3B NO .926 and 4B NO .938**. The complete group's central fair
+value rises to **$46.87**; its current full exit is **$44.17** after $0.40 of
+fees and its guaranteed terminal floor remains **$44.75**. HOLD the protected
+group and never close a member leg independently.
+
+Fresh five-share 700M-YES+3B-NO and 700M-YES+4B-NO additions cost 1.0233 and
+1.0252 all-in versus central fair 1.036 and 1.048. Their approximate $0.065
+and $0.115 gross five-share surplus becomes negative/about $0.02 after roughly
+$0.045 of foregone cash carry and the $0.05 operational reserve, before shared
+launch/FDV-model error. A standalone 700M directional add also fails the hard
+instance robustness gate: the default 10pp haircut takes .110 fair to .010,
+well below the .0756 effective cost, while the $5 venue floor would require
+about 66 shares. The mandatory entry helper independently rejected the first
+quote on its hard price ceiling as the ask moved. **NO ADD.**
+
+The helper also surfaced the full eight-threshold MetaMask ladder. An exact
+same-event criteria and live-book walk found no fee-positive monotonicity pair.
+The closest raw pair, 500M YES at .06 plus 700M NO at .937, costs .997 before
+fees but about **1.0051 all-in**, already above its guaranteed $1 payout. Every
+other adjacent pair is more expensive. No arbitrage action followed.
+
+Every other fresh exit remains HOLD. Apple recovered to a .355 mark and its
+full exit improved to $15.26, still below central hold value. Duma's complete
+exit is $12.76 versus $14.40 fair and its .678 add cost remains above the .57
+ceiling. Marginal APY returned five clear / zero flagged at a 2.9879% hurdle;
+UMA returned zero alerts across 37 tracked rows, and state is clean after the
+MetaMask reread. Crux, Ostium, reservations and reconciliation are clean. All
+four daemons are exact-one/current and disk has about 2.0 GB free.
+
+Telegram 956 reported the MetaMask prior change and HOLD/no-add decision. The
+next dated clocks remain Duma Sep-20, Arena Sep-30 and the monthly emergency
+path drill Oct-12. No trade, fill, order change, transfer or redemption
+occurred, and Fireworks spend remained zero. `main` matched `origin/main` at
+`2d65819` before this review.

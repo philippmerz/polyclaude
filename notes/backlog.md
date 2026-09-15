@@ -1,6 +1,25 @@
 # Polyclaude Backlog
 
-## Sep-15 02:10 current update
+## Sep-15 06:10 current update
+
+- **06:00 periodic review / MetaMask criteria and source refresh:** 11
+  positions remain at $130.59 cost, $138.73 midpoint and $128.42 indicative
+  net depth. Authoritative bankroll is $187.84 and settled realized P&L remains
+  +$3.50. All exits remain HOLD; the sole authenticated order is still Trump's
+  zero-fill 28-NO sell at .97. The MetaMask FDV legs retain identical criteria:
+  active public token transfer/trading, next-day 4 PM ET FDV, and a Dec-31
+  no-launch backstop. The direct launch sibling moved from .07 to .12 midpoint
+  on substantial flow without an official token announcement. Respecting the
+  hidden-information move changed fair probabilities to 700M YES .110, 3B NO
+  .926 and 4B NO .938. The protected group is $44.17 to exit versus $46.87
+  central fair and a $44.75 guaranteed floor. Five-share pair adds cost
+  1.0233/1.0252 and leave no robust surplus after carry, reserve and shared
+  model risk; a directional 700M add fails the 10pp haircut (.01 robust fair
+  versus .0756 effective cost). A live walk of all eight FDV thresholds found
+  no fee-positive monotonicity pair. No trade. Alerts, watchlist, decisions,
+  carry, UMA, state, balances, Ostium, crux, reservations, reconciliation and
+  daemons are clean. Telegram 956 sent. Next clocks: Duma Sep-20, Arena Sep-30,
+  emergency-path drill Oct-12.
 
 - **02:00 full check / Apple drawdown and CCJ trigger:** 11 positions remain at
   $130.59 cost, $135.39 midpoint and $121.20 indicative net depth.
