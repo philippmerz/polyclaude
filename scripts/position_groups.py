@@ -1403,8 +1403,17 @@ def format_group_summary(
     if quote.get("status") != "OK":
         return text + " | exit=UNPRICED (" + "; ".join(quote.get("issues", [])) + ")"
     verdict = verdict or group_exit_verdict(group, quote)
+    raw_margin = float(quote["net"]) - float(group["fair_value"])
+    verdict_margin = float(verdict["margin"])
+    if abs(verdict_margin - raw_margin) > VALUE_TOLERANCE:
+        margin_text = (
+            f"{raw_margin:+.2f} raw vs fair; "
+            f"{verdict_margin:+.2f} after hurdle carry"
+        )
+    else:
+        margin_text = f"{raw_margin:+.2f} vs fair"
     return (
         text
         + f" | full exit=${quote['net']:.2f} (fee ${quote['fee']:.2f}) "
-        + f"| {verdict['verdict']} ({verdict['margin']:+.2f} vs fair)"
+        + f"| {verdict['verdict']} ({margin_text})"
     )

@@ -16489,3 +16489,62 @@ clean. Telegram reply 958 acknowledged the overreaction, gave the corrected
 numbers, and explained why the portfolio action is unchanged. No trade, fill,
 order change, transfer or redemption occurred. `main` matched `origin/main` at
 `1e51e46` before this correction.
+
+## 2026-09-15 10:00–10:11 UTC — periodic review; fleeting Gemini-debut mark rejected
+
+Explicit filtering after the 09:25 MetaMask-correction cutoff found zero
+persisted news alerts and zero opportunity alerts. The watchlist has no hit,
+no decision is overdue, the Sep-13 world-state review remains fresh, and weekly
+P&L is current through Sep-11.
+
+The first status read caught a fleeting favorable repricing in the held
+Gemini-debut NO. Gamma moved YES from .88 to .82 / NO from .12 to .18 on about
+$879 of 24-hour volume, temporarily lifting the 11-position portfolio midpoint
+to $149.27 and authoritative bankroll to $198.39. The move was not durable. By
+10:04 Gamma was back to YES/NO .86/.14; the final snapshot is **$130.59 cost,
+$142.49 midpoint and $132.85 indicative net depth**, with **$191.60
+authoritative bankroll** and settled realized P&L unchanged at **+$3.50**.
+Relative to 06:00, midpoint and bankroll are up $3.76 and realizable value is up
+$4.43. No balance or position quantity moved.
+
+The focused trigger review reread the exact contract. It requires the next
+newly added Gemini model labeled Pro on the named HLE chart to display at least
+40% HLE Accuracy; Flash variants do not qualify, and no qualifying addition by
+Dec-31 resolves NO. The live resolving API remains at 60 rows. Its latest
+documented addition, Muse Spark 1.3 at 43.2, is unrelated; there is no newer
+qualifying Gemini Pro row. The existing Gemini 3.1 Pro row predates the market,
+and Google's current official page still describes 3.5 Pro only as coming soon.
+No thesis fact changed.
+
+The stored >=.18 trigger explicitly requires meaningful exit depth, which was
+absent. At 10:02 the NO book offered only .12 x 91.21 and .11 x 63.63 on the bid
+side before lower levels. A full 169-share net exit was **$18.68** (about .111
+per share) versus **$33.80** central hold value. Retain p_no=.20 with the
+.08-.35 range. **HOLD / NO ADD / no new maker sell:** a taker exit destroys
+value, and this hidden-information leg may only rest a sell above fair with an
+explicitly sufficient jump-risk premium. The brief .18 mark therefore did not
+meet the stored review gate.
+
+All other fresh exits remain HOLD: Duma's complete exit is $12.86 versus $14.40
+fair, and MetaMask's is $44.06 versus $46.34 fair and its $44.75 guaranteed
+floor. Marginal APY is five clear / zero flagged. Position state, wallet and
+crypto balances, UMA after consuming the price alert, Ostium, crux coverage,
+reservations and reconciliation are clean. The sole authenticated order remains
+Trump's zero-fill 28-NO GTC sell at .97. All four daemons are exact-one/current
+and disk has about 2.0 GB free.
+
+Telegram 959 reported the transient mark and HOLD decision. The next dated
+clocks remain Duma Sep-20, Arena Sep-30 and the monthly emergency-path drill
+Oct-12. No trade, fill, order change, transfer, redemption or probability
+change occurred, and Fireworks spend remained zero. `main` matched
+`origin/main` at `3c78f88` before this review.
+
+The final APY validation exposed one reporting ambiguity. A protected-group row
+showed the immediate net exit beside a margin that already credited redeployment
+at the Aave hurdle, but labeled that margin only “vs fair.” For MetaMask this
+made a roughly $44.1 exit and $46.34 fair value appear to have a smaller raw gap
+than their visible arithmetic. The economics were correct and the HOLD verdict
+was unchanged. `position_groups.format_group_summary` now prints both the raw
+exit-versus-fair margin and the after-hurdle-carry margin whenever they differ;
+the immediate `exit_analysis.py` view retains the raw comparison. Focused group
+and portfolio tests pass **102/102**.

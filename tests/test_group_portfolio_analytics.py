@@ -574,7 +574,18 @@ def test_hurdle_aware_verdict_is_preserved_by_human_formatter() -> None:
         as_of=dt.date(2026, 8, 28),
     )
     assert verdict["verdict"] == "EXIT_COMPLETE_GROUP"
-    assert "EXIT_COMPLETE_GROUP" in groups.format_group_summary(group, quote, verdict)
+    summary = groups.format_group_summary(group, quote, verdict)
+    assert "EXIT_COMPLETE_GROUP" in summary
+    assert "-0.10 raw vs fair; +0.66 after hurdle carry" in summary
+
+    raw_verdict = groups.group_exit_verdict(
+        group,
+        quote,
+        as_of=dt.date(2026, 8, 28),
+    )
+    raw_summary = groups.format_group_summary(group, quote, raw_verdict)
+    assert "-0.10 vs fair" in raw_summary
+    assert "after hurdle carry" not in raw_summary
 
 
 @pytest.mark.parametrize(

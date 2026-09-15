@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-15 06:10 UTC
+## Last audited snapshot — 2026-09-15 10:06 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved positions | 11 |
 | Position cost | $130.59 |
-| Polymarket midpoint | $138.73 |
-| Indicative depth/fee value | $128.42 |
-| Authoritative whole-account mark | $187.84 |
+| Polymarket midpoint | $142.49 |
+| Indicative depth/fee value | $132.85 |
+| Authoritative whole-account mark | $191.60 |
 | Settled realized P&L | +$3.50 |
 
 All direct and protected-group exit checks returned **HOLD**. The only live
@@ -52,7 +52,9 @@ criteria and source were reread after its direct launch sibling briefly moved
 from 7% to 12%, then reverted to a 9% midpoint. The transient peak was copied
 too mechanically into the first estimate; the corrected 9% launch input leaves
 the protected group worth holding above its executable exit and guaranteed
-payout floor, while all add routes fail robustness or carry hurdles.
+payout floor, while all add routes fail robustness or carry hurdles. A fleeting
+18% mark on Gemini-debut NO also failed review: it reverted to 14%, had no
+qualifying HLE-source change, and lacked meaningful exit depth.
 The next dated portfolio clocks are the Duma election on Sep. 20, the Arena
 source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 

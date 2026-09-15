@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-15 10:06 current update
+
+- **Periodic review / fleeting Gemini-debut mark:** No news or opportunity alert
+  appeared after the 09:25 cutoff, and no watchlist hit, overdue decision or
+  dated catalyst is due. The first mark briefly showed $149.27 portfolio MTM and
+  $198.39 bankroll when Gemini-debut NO printed .18, but it reverted to .14 by
+  10:04. The final snapshot is 11 positions at $130.59 cost, $142.49 midpoint,
+  $132.85 indicative net depth and $191.60 authoritative bankroll; settled P&L
+  remains +$3.50. The exact Gemini criteria are unchanged, the resolving API
+  remains at 60 rows with no newer qualifying Gemini Pro, and Google's official
+  page still describes 3.5 Pro only as coming soon. The preserved >=.18
+  **meaningful-depth** trim trigger did not fire: live NO bids were .12 and below,
+  and the 169-share full exit was $18.68 versus $33.80 central hold value. Retain
+  p_no=.20 [.08-.35]; HOLD / NO ADD / no new maker sell. All other exits, order,
+  balances, state, carry, UMA, Ostium, crux, reservation, reconciliation and
+  daemon checks are clean. Next clocks: Duma Sep-20, Arena Sep-30,
+  emergency-path drill Oct-12. Also corrected the protected-group summary label
+  so it now distinguishes immediate exit-versus-fair from exit proceeds grown
+  at the Aave hurdle; the earlier mixed label understated visible exit friction
+  without changing any verdict.
+
 ## Sep-15 09:25 current update
 
 - **Operator challenge / MetaMask prior correction:** The launch market's move
