@@ -1,5 +1,19 @@
 # Polyclaude Backlog
 
+## Sep-16 06:03 current update
+
+- **06:00 periodic review:** No alert, watchlist hit, overdue decision, request
+  or catalyst appeared after the 02:12 cutoff. Eleven positions remain at
+  $130.59 cost, $146.52 midpoint and $130.75 indicative net depth;
+  authoritative bankroll is $195.34 and settled realized P&L remains +$3.50.
+  Google HLE >=50 NO is still 24.06% below cost, but its $6.74 exit remains far
+  below $20.55 central hold value and no resolving-source fact changed. All
+  direct and protected-group exits remain HOLD. Duma, Fed and Gemini
+  short-clock conclusions are unchanged. State, balances, carry, redemption,
+  order, Ostium, crux, reservations, reconciliation and daemons are clean. No
+  trade or order change. Next clocks: Duma Sep-20, Arena Sep-30,
+  emergency-path drill Oct-12.
+
 ## Sep-16 02:12 current update
 
 - **02:00 full check:** No persisted alert, watchlist hit or due catalyst
