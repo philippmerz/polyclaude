@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-15. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-16. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -35,25 +35,25 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-15 22:03 UTC
+## Last audited snapshot — 2026-09-16 02:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved positions | 11 |
 | Position cost | $130.59 |
-| Polymarket midpoint | $135.19 |
-| Indicative depth/fee value | $120.04 |
-| Authoritative whole-account mark | $184.04 |
+| Polymarket midpoint | $144.69 |
+| Indicative depth/fee value | $120.57 |
+| Authoritative whole-account mark | $193.49 |
 | Settled realized P&L | +$3.50 |
 
 All direct and protected-group exit checks returned **HOLD**. The only live
-order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. Gemini >=50 NO
-crossed its drawdown guard, but the resolving chart remains at 60 rows with a
-46.2 Gemini maximum. Two post-cutoff trades were YES sells below the displayed
-midpoint, and the 6.5-point spread confirms a book-driven mark. Its $6.51 exit
-remains below $20.55 fair hold value. Gemini-debut depth also weakened without a
-source change. MetaMask and Duma remain worth holding as complete groups, and
-all add routes fail cap, robustness or carry hurdles.
+order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $24.12
+midpoint-to-depth gap is concentrated in the illiquid Gemini, Apple and Google
+HLE books; the headline midpoint rebound is therefore not an economic gain.
+The named HLE source remains unchanged, and Gemini >=50's fresh $6.74 net exit
+remains far below its $20.55 fair hold value. MetaMask and Duma remain worth
+holding as complete groups, and all add routes fail cap, robustness, price or
+carry hurdles.
 The next dated portfolio clocks are the Duma election on Sep. 20, the Arena
 source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 

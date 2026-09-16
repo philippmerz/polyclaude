@@ -16710,3 +16710,77 @@ Telegram 960 reported the material drawdown review and HOLD/no-add decision.
 No trade, fill, order change, transfer, redemption or probability change
 occurred, and Fireworks spend remained zero. `main` matched `origin/main` at
 `c6b13e3` before this review.
+
+## 2026-09-16 02:00–02:12 UTC — full check; short-clock reviews reject both adds
+
+Explicit filtering after the 22:06 journal cutoff found zero persisted news
+alerts and zero opportunity alerts. The watchlist returned no hit or re-vet,
+the Sep-13 world-state rotation and weekly P&L through Sep-11 remain current,
+and no dated catalyst or operator request is due.
+
+Eleven positions remain at **$130.59 cost, $144.69 midpoint and $120.57
+indicative net depth**. Authoritative whole-account midpoint is **$193.49** and
+settled realized P&L remains **+$3.50**. No position quantity, fill or cash
+balance moved. The $24.12 midpoint-to-depth gap is concentrated in the
+illiquid Gemini, Apple and Google HLE books, so the midpoint rebound since
+22:00 is mark noise rather than realizable portfolio appreciation. Every direct
+and protected-group exit remains HOLD. Gemini >=50's fresh complete exit is
+$6.74 versus $20.55 central hold value; the named HLE chart remains unchanged.
+
+Duma's required short-clock primary-source review found VCIOM's Sep-14 survey,
+fielded Sep-9/12. Its 76% expected-winner result confirms United Russia's
+favorite status but provides no national list-vote forecast, district-seat
+decomposition or whole-seat distribution. The latest quantitative FOM/VCIOM
+and APEK forecasts therefore remain Sep-10, and the held bucket priors stay at
+**.18/.35/.19 (union .72)**. The complete group exits for $12.46 versus $14.40
+central fair. Top asks sum to about .667 per covered payout and the five-share
+sequential estimate is about .665, both above the .57 ceiling and negative at
+the 10pp-stressed .62 union prior. HOLD / NO ADD; never transact a member leg
+independently.
+
+The full discovery suite ran once. The default pass covered 980 markets and the
+thin-tail pass fetched 38,710, retaining 1,529 win-assumed-hurdle candidates.
+Sports checked 54 markets and three external-consensus rows; Barcelona NO's
+1.55pp central edge after fees turned negative under a five-point stress.
+Monotonicity inspected 903 events and its two live structures offered only
+0.37pp and 0.84pp, below the 2pp floor. The explicitly incomplete consistency
+slice covered 5,010 markets / 563 events and found no basket above 2% modeled
+net. Favorite-fade surfaced four rough candidates, none with instance evidence
+sufficient for entry.
+
+Macro visibility surfaced the fee-enabled **Fed Rate Hike by September 2026
+Meeting?** market at .87/.89 YES. Exact criteria count any hike from Dec-16,
+2025 through the Sep-16 meeting; the official calendar confirms the decision
+today. The live YES ask had over 1,000 shares at .89, whose 5% quadratic taker
+fee is .004895, for **.894895 all-in**. CME's Sep-15 market update reported a
+92% FedWatch hike probability, and contemporaneous reporting quoted 92.5%.
+That leaves only 2.51-3.01pp central edge, essentially zero after a modest 3pp
+probability stress and decisively negative under the standard 10pp robustness
+gate. The roughly $0.17 central EV at the $5 venue minimum also requires moving
+capital from Aave because deployable pUSD is only .173070. SKIP; no order.
+Sources: https://www.cmegroup.com/videos/2026/09/15/gold-futures-hold-inside-range-as-volume-declines-9-15-26.html,
+https://www.foxbusiness.com/economy/stubborn-inflation-sets-stage-federal-reserve-hike-interest-rates,
+and https://www.federalreserve.gov/monetarypolicy.htm.
+
+The position-state refresh is clean at 11 indexed positions plus one deindexed
+claim row. Marginal APY is five clear / zero flagged, UMA produced only the
+wide-book Gemini review above, Polygon Aave holds 33.714544 USDC.e with .173070
+deployable pUSD, and the crypto sleeve holds 7.8761 Aave USDC. Ostium has zero
+positions, all cruxes are covered, reservations and reconciliation are clean,
+and all four daemons are exact-one/current. The sole live order remains Trump's
+zero-fill 28-NO GTC sell at .97. Redemption found zero winning indexed claims;
+the retained finalized Hormuz dust remains worth less than gas.
+
+DEC-0111 and DEC-0113 were graded PASS after their safeguards had each been
+exercised in production: redemption preserved and dry-ran the deindexed winning
+claim without confusing a losing resolved row, and the Sep-8 heartbeat edit
+received the required affected-daemon restart plus exact-one current-process
+verification. No decision is now overdue. Constrained Kelly found no permitted
+resize: AI adds remain cluster-cap suppressed, Trump's headroom is below the
+venue minimum, the Gemini-debut trim remains barred below its hidden-information
+premium, and protected-group adds fail their own gates.
+
+No trade, fill, order change, transfer, redemption or probability change
+occurred. No Telegram was sent under the material-only rule, and Fireworks
+spend remained zero. `main` matched `origin/main` at `6f4cb64` before this
+review.

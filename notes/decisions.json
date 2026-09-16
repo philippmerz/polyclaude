@@ -2192,9 +2192,10 @@
         "valuation"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS: redeem-all skipped the resolved losing Iran-Oman row without broadcasting; after Hormuz-normal finalized NO, its de-indexed 0.003571 winning-NO archive retained the exact condition and token and passed a redemption dry-run, while positions and bankroll continued producing values without the former list-index failure. The dust was intentionally left unredeemed because payout is below gas.",
+      "calibration_delta": "Engineering invariant validation, not an independent market forecast. All three predicted resolution and reporting behaviors were observed in production.",
+      "lesson": "Redemption safety requires checking that the held outcome finalized at one dollar, preserving claim identity across de-indexing, and comparing small winning claims with gas before broadcasting.",
+      "resolved_at": "2026-09-16T02:03:49Z"
     },
     {
       "id": 112,
@@ -2233,9 +2234,10 @@
         "checkin"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PASS: the next long-lived-daemon edit added the Sep 8 heartbeat disk probe; the final handoff restarted only heartbeat and verified one absolute-path process started after the edit. No committed daemon edit remained inactive into the following scheduled review.",
+      "calibration_delta": "Operational safeguard validation, not a market forecast. The first qualifying production edit exercised the intended end-of-tick restart and exact-one verification.",
+      "lesson": "Any daemon source edit invalidates the opening freshness snapshot. Recheck code mtime against process start at handoff, restart only the affected daemon by absolute path, and verify exactly one current process.",
+      "resolved_at": "2026-09-16T02:03:49Z"
     },
     {
       "id": 114,

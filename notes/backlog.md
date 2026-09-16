@@ -1,5 +1,24 @@
 # Polyclaude Backlog
 
+## Sep-16 02:12 current update
+
+- **02:00 full check:** No persisted alert, watchlist hit or due catalyst
+  required action. Eleven positions remain at $130.59 cost, $144.69 midpoint
+  and $120.57 indicative net depth; authoritative bankroll is $193.49 and
+  settled realized P&L remains +$3.50. The $24.12 midpoint/depth gap is an
+  illiquid-book effect, led by Gemini, Apple and Google HLE legs; every direct
+  and protected-group exit remains HOLD. Duma's short-clock re-derivation
+  retains .18/.35/.19 (union .72): Sep-14 VCIOM confirms United Russia as the
+  favorite but supplies no seat distribution, while the .665-.667 complete-add
+  cost remains above the .57 ceiling. Full discovery found no executable arb
+  or robust entry. A final manual review rejected Sep-Fed-hike YES at .89:
+  CME's 92-92.5% futures prior leaves only 2.5-3.0pp after the .004895 taker
+  fee, essentially zero under a 3pp probability stress and negative under the
+  required robustness gate. Two overdue operational safeguards were graded
+  PASS. State, balances, carry, redemption, order, Ostium, crux,
+  reconciliation and daemons are clean. No trade or order change. Next clocks:
+  Duma Sep-20, Arena Sep-30, emergency-path drill Oct-12.
+
 ## Sep-15 22:05 current update
 
 - **22:00 periodic review / Gemini >=50 drawdown:** No news or opportunity
