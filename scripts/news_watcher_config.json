@@ -67,6 +67,10 @@
   {
    "url": "https://openai.com/news/rss.xml",
    "name": "openai-news"
+  },
+  {
+   "name": "MacRumors",
+   "url": "https://www.macrumors.com/macrumors.xml"
   }
  ],
  "tier1_keywords": [

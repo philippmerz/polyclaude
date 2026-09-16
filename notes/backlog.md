@@ -1,5 +1,23 @@
 # Polyclaude Backlog
 
+## Sep-16 22:09 current update
+
+- **22:00 periodic review / Apple prior correction:** No post-18:05 news or
+  opportunity alert, watchlist hit, overdue decision, request or dated backlog
+  item requires action. Eleven positions remain at $130.59 cost, $143.53
+  midpoint and $137.14 indicative net depth; authoritative bankroll is $192.47
+  and settled realized P&L remains +$3.50. Apple touchscreen-MacBook YES moved
+  .610->.675 on real flow. The review recovered a Sep-14 Gurman timing report
+  missed by the Sep-14/Sep-15 source checks, so held NO p_no was corrected
+  .55->.40 (wide .25-.60 range). The fresh complete exit is $14.29 net versus
+  $19.60 central hold and $14.70 at the 10pp stress; exit plus hurdle carry is
+  about $14.42. HOLD / NO ADD / no hidden-information maker sell; re-open below
+  the ~.294 carry-adjusted p_no exit boundary or on a qualifying Apple sale
+  fact. MacRumors RSS is now in the watcher feed set to close the source gap.
+  Other positions and all state, balance, carry, order, redemption, Ostium,
+  crux, reservation, reconciliation and daemon checks are clean. Next clocks:
+  Duma Sep-20, Arena Sep-30, emergency-path drill Oct-12.
+
 ## Sep-16 18:05 current update
 
 - **18:00 periodic review / Fed outcome:** No post-14:06 alert, watchlist hit,

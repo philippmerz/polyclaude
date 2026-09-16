@@ -1,5 +1,5 @@
 {
-  "next_id": 137,
+  "next_id": 138,
   "decisions": [
     {
       "id": 1,
@@ -2699,6 +2699,26 @@
         "greenland"
       ],
       "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 137,
+      "timestamp": "2026-09-16T22:08:37Z",
+      "type": "skip",
+      "thesis": "Revised touchscreen-MacBook NO p_no from 0.55 to 0.40 after recovering the Sep-14 MacRumors report that Gurman now places the touch OLED models among products coming later in 2026. The report materially weakens the early-2027 thesis, but Apple has no official release or public-sale date and the exact market requires general-public purchasability by Dec-31. At the live 0.30 bid, selling all 49.005 NO returns $14.289858 net versus $19.602 central hold; even the 10pp-stressed 0.30 hold is $14.7015 versus roughly $14.4186 after exit plus Aave carry. Hold, make no add, and place no hidden-information maker sell; exit if central p_no drops below about 0.294 or a qualifying Apple availability fact arrives.",
+      "confidence": "medium",
+      "prediction": "By Dec-31, Apple will not make a touchscreen MacBook available for general-public purchase; if it does, the revised 0.40 NO prior grades wrong. Before resolution, a new official purchase listing or credible dated 2026 availability commitment should push the posterior below the documented exit boundary and trigger re-evaluation.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "apple",
+        "prior-revision",
+        "hold",
+        "missed-source"
+      ],
+      "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

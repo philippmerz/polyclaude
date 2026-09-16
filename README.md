@@ -35,25 +35,25 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-16 18:02 UTC
+## Last audited snapshot — 2026-09-16 22:01 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved positions | 11 |
 | Position cost | $130.59 |
-| Polymarket midpoint | $146.91 |
-| Indicative depth/fee value | $139.65 |
-| Authoritative whole-account mark | $195.78 |
+| Polymarket midpoint | $143.53 |
+| Indicative depth/fee value | $137.14 |
+| Authoritative whole-account mark | $192.47 |
 | Settled realized P&L | +$3.50 |
 
 All direct and protected-group exit checks returned **HOLD**. The only live
-order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $7.26
+order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $6.39
 midpoint-to-depth gap is concentrated in the illiquid Gemini, Apple and Google
 HLE books, so executable depth remains the more conservative portfolio view.
-The named HLE source remains unchanged, and Gemini >=50's fresh $8.74 net exit
-remains far below its $20.55 fair hold value. MetaMask and Duma remain worth
-holding as complete groups, and all add routes fail cap, robustness, price or
-carry hurdles.
+Apple's touchscreen-MacBook NO prior was corrected from 0.55 to 0.40 after a
+missed Sep. 14 Gurman timing update; its $14.29 complete exit remains below
+$19.60 central hold value and $14.70 at the 10-point stress. No add clears the
+robust gate. MetaMask and Duma remain worth holding as complete groups.
 The next dated portfolio clocks are the Duma election on Sep. 20, the Arena
 source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 

@@ -16976,3 +16976,70 @@ No trade, fill, order change, transfer, redemption or probability change
 occurred. No Telegram was sent under the material-only rule, and Fireworks
 spend remained zero. `main` matched `origin/main` at `ddfaaa2` before this
 review.
+
+## 2026-09-16 22:00–22:09 UTC — missed Apple source recovered; prior cut, HOLD
+
+Explicit filtering after the 18:05 cutoff found zero persisted news alerts and
+zero opportunity alerts. The watchlist returned no hit or re-vet, no decision
+is overdue, and no dated backlog item or operator request is due. The Sep-13
+world-state rotation and weekly P&L through Sep-11 remain current.
+
+Eleven positions remain at **$130.59 cost, $143.53 midpoint and $137.14
+indicative net depth**. Authoritative whole-account midpoint is **$192.47** and
+settled realized P&L remains **+$3.50**. Against 18:00, midpoint fell $3.38,
+realizable value fell $2.51 and bankroll fell $3.31 without a quantity, fill or
+cash-balance change. The midpoint/depth gap is $6.39.
+
+The only mandatory manual review was touchscreen-MacBook YES moving
+**.610 -> .675 (+6.5pp)**, leaving the held 49.005 NO near .325 and 21.1% below
+cost. The move had real flow: around 20:56 UTC the public tape included YES buys
+at .64, .66 and .67, including 144.01 shares at .67. The 21:59:48 book was YES
+.65/.70 and NO .30/.35; its .30 NO bid had enough depth for the entire holding.
+At the market's 4% linear-in-p(1-p) taker schedule, a complete NO exit would
+gross $14.7015, pay $0.411642 and net **$14.289858**.
+
+The source review found a material item missed by both the Sep-14 price review
+and Sep-15 drawdown review. A [Sep-14 MacRumors report](https://www.macrumors.com/2026/09/14/oled-macbook-pro-macos-27-1-testing/),
+published at 21:04 UTC before the Sep-14 review, says Gurman's latest Bloomberg
+product list places the touch-enabled OLED 14/16-inch laptops among products
+coming later in 2026 and reports internal testing on macOS 27.1. That
+supersedes the older early-2027-favored read. It is still secondary reporting
+and schedule intent, rather than an Apple public-sale commitment; the exact
+market requires general-public purchasability by Dec-31. Apple's current
+[Mac archive](https://www.apple.com/newsroom/archive/mac/) and
+[store](https://www.apple.com/shop/buy-mac/macbook-pro) still show no qualifying
+product, preorder or sale date. The older Sep-4 Macworld recap predates the new
+Gurman update and is no longer sufficient to preserve the old prior.
+
+Revised held **p_no .55 -> .40**, with a wide **.25-.60** range. The 15-point
+cut treats the later-2026 report and corroborating directional flow as material,
+while discounting MacRumors' interpretation, execution/slippage risk in Apple's
+schedule and the stricter purchasability clause. Central hold value is
+**$19.6020**. At the standard 10pp stress, .30 hold value is **$14.7015**;
+selling and compounding the $14.289858 proceeds at the 3.10% Aave hurdle for
+106.1 days is about **$14.4186**. The carry-adjusted taker-exit boundary is
+therefore p_no about **.294**. `exit_analysis.py` confirms HOLD by $5.31 at the
+central prior. Constrained half-Kelly now calls the legacy position $10.67
+oversized, but paying the taker gap to trim still destroys expected value, and
+the hidden-information rule bars an at-fair maker sell. A new add fails the
+10pp robust entry gate and the remaining shared-cluster headroom is below the
+$5 venue floor. **HOLD / NO ADD / no maker sell.** DEC-0137 records the
+probability correction and exit boundary.
+
+The miss was a source-set gap: the watcher had broad MacBook keywords but no
+Apple-specialist feed. Added the validated 20-entry MacRumors RSS feed to the
+hot-reloaded watcher configuration; no daemon restart is needed. This would
+have surfaced the exact headline while retaining the existing Tier-2 model
+filter against routine Apple noise.
+
+Every other direct and protected-group exit remains HOLD. Marginal APY has five
+clear / zero flagged at the 3.10% hurdle. Polygon Aave holds 33.716930 USDC.e
+with .173070 deployable pUSD; the crypto sleeve holds 7.8765 Aave USDC. UMA has
+no proposal or dispute on the held Apple market, Ostium has zero positions,
+crux coverage is complete, reservations and reconciliation are clean, and all
+four daemons are exact-one/current. The sole live order remains Trump's
+zero-fill 28-NO GTC sell at .97. Redemption found no winning indexed claim.
+
+No trade, fill, order change, transfer or redemption occurred. The material
+prior change was sent once by Telegram as message **961**; Fireworks spend
+remained zero. `main` matched `origin/main` at `1f37421` before this review.
