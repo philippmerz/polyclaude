@@ -35,22 +35,22 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-16 06:02 UTC
+## Last audited snapshot — 2026-09-16 10:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved positions | 11 |
 | Position cost | $130.59 |
-| Polymarket midpoint | $146.52 |
-| Indicative depth/fee value | $130.75 |
-| Authoritative whole-account mark | $195.34 |
+| Polymarket midpoint | $147.56 |
+| Indicative depth/fee value | $140.40 |
+| Authoritative whole-account mark | $196.56 |
 | Settled realized P&L | +$3.50 |
 
 All direct and protected-group exit checks returned **HOLD**. The only live
-order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $15.77
+order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $7.16
 midpoint-to-depth gap is concentrated in the illiquid Gemini, Apple and Google
 HLE books, so executable depth remains the more conservative portfolio view.
-The named HLE source remains unchanged, and Gemini >=50's fresh $6.74 net exit
+The named HLE source remains unchanged, and Gemini >=50's fresh $8.68 net exit
 remains far below its $20.55 fair hold value. MetaMask and Duma remain worth
 holding as complete groups, and all add routes fail cap, robustness, price or
 carry hurdles.

@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-16 10:03 current update
+
+- **10:00 periodic review:** No post-06:03 alert, watchlist hit, overdue
+  decision, request or catalyst requires action. Eleven positions remain at
+  $130.59 cost, $147.56 midpoint and $140.40 indicative net depth;
+  authoritative bankroll is $196.56 and settled realized P&L remains +$3.50.
+  Google HLE >=50 NO is now 15.27% below cost and still barely crosses its
+  drawdown guard, but the named source remains at 60 rows with Gemini at 46.2;
+  Google's own current results are also below 50. Its $8.68 exit remains below
+  $20.55 central hold value, so HOLD / NO ADD. Every other direct and protected
+  exit also remains HOLD. Aave's refreshed hurdle is 3.1002%; five positions
+  are clear and none is flagged. All state, order, balance, redemption, Ostium,
+  crux, reservation, reconciliation and daemon checks are clean. No trade or
+  order change. Next clocks: Duma Sep-20, Arena Sep-30, emergency-path drill
+  Oct-12.
+
 ## Sep-16 06:03 current update
 
 - **06:00 periodic review:** No alert, watchlist hit, overdue decision, request
