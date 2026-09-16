@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-16 14:06 current update
+
+- **14:00 full check:** No post-10:03 alert, watchlist hit, overdue decision,
+  request or catalyst requires action. Eleven positions remain at $130.59
+  cost, $147.59 midpoint and $140.04 indicative net depth; authoritative
+  bankroll is $196.46 and settled realized P&L remains +$3.50. No position now
+  crosses its drawdown guard, and every direct and protected-group exit remains
+  HOLD. Initial exit, carry and crux reads hit a transient data-api 429; bounded
+  retries completed successfully with five carry checks clear and no crux gap.
+  Discovery covered 989 default markets plus 1,417 thin-tail candidates. Four
+  live monotonicity structures topped out at 1.16pp, while Beşiktaş and 9z NO
+  offered 6.75pp/6.23pp central sports edges after fees but became
+  -3.25pp/-3.77pp under the required 10pp instance haircut. No trade or order
+  change. State, balances, redemption, Ostium, reservations, reconciliation
+  and daemons are clean. Next clocks: Duma Sep-20, Arena Sep-30,
+  emergency-path drill Oct-12.
+
 ## Sep-16 10:03 current update
 
 - **10:00 periodic review:** No post-06:03 alert, watchlist hit, overdue
