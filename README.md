@@ -35,19 +35,19 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-16 14:02 UTC
+## Last audited snapshot — 2026-09-16 18:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved positions | 11 |
 | Position cost | $130.59 |
-| Polymarket midpoint | $147.59 |
-| Indicative depth/fee value | $140.04 |
-| Authoritative whole-account mark | $196.46 |
+| Polymarket midpoint | $146.91 |
+| Indicative depth/fee value | $139.65 |
+| Authoritative whole-account mark | $195.78 |
 | Settled realized P&L | +$3.50 |
 
 All direct and protected-group exit checks returned **HOLD**. The only live
-order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $7.56
+order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $7.26
 midpoint-to-depth gap is concentrated in the illiquid Gemini, Apple and Google
 HLE books, so executable depth remains the more conservative portfolio view.
 The named HLE source remains unchanged, and Gemini >=50's fresh $8.74 net exit

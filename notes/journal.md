@@ -16922,3 +16922,57 @@ No trade, fill, order change, transfer, redemption or probability change
 occurred. No Telegram was sent under the material-only rule, and Fireworks
 spend remained zero. `main` matched `origin/main` at `04d04cb` before this
 review.
+
+## 2026-09-16 18:00–18:05 UTC — Fed skip wins ex post; no live action
+
+Explicit filtering after the 14:06 journal cutoff found zero persisted news
+alerts and zero opportunity alerts. The watchlist returned no hit or re-vet,
+no decision is overdue, and no operator request or held-position catalyst is
+due. The Sep-13 world-state rotation and weekly P&L through Sep-11 remain
+current.
+
+Eleven positions remain at **$130.59 cost, $146.91 midpoint and $139.65
+indicative net depth**. Authoritative whole-account midpoint is **$195.78** and
+settled realized P&L remains **+$3.50**. Against 14:00, midpoint fell $0.68,
+realizable value fell $0.39 and bankroll fell $0.68 without any quantity, fill
+or cash movement. The midpoint/depth gap is $7.26. No position crosses its 15%
+drawdown guard, and every direct and protected-group exit remains HOLD.
+
+The official Sep-16 FOMC statement reports a unanimous 12–0 decision to raise
+the target range 25bp to 3.75–4.00%. This makes the previously reviewed
+Sep-hike contract a YES. Gamma still reports market 1808547 active/open but in
+`umaResolutionStatus=proposed`; the live CLOB has 9,556.5 YES shares bid at
+.999, no YES asks, and complementary NO inventory offered at .001. This is
+post-proposal settlement inventory, not a remaining entry.
+Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm.
+
+The 02:10 pre-outcome review had observed 1,030.69 YES shares at a raw .89 ask.
+Its .004895 taker fee made the cost .894895 versus the latest contemporaneous
+.925 futures-implied prior. The configured 10pp instance haircut rejected that
+positive central edge; ex post, a raw-$5 minimum purchase would have earned
+about **$0.59 after the quoted fee** before negligible chain costs. The exact
+forecast, source commit and outcome are now recorded in
+`notes/shortdated_ledger.json`. Its scoring pass succeeds with 23 own-prior rows
+and 17 market-matched rows. This is one opportunity-cost observation, not enough
+evidence to alter the robustness gate.
+
+No new Duma seat-distribution evidence appeared. Google's new Gemini 3.8 Audio
+material is neither a Gemini Pro row nor a qualifying addition to the named HLE
+resolving source, which remains at 60 rows. Held HLE priors and verdicts are
+unchanged. Fresh exits include Gemini-debut $27.78 versus $33.80 fair, Google
+>=50 $8.74 versus $20.55, Apple $16.83 versus $26.95, Duma $12.94 versus $14.40
+and MetaMask $44.09 versus $46.34; all route HOLD.
+
+The state audit is clean at 11 indexed positions plus one deindexed claim row.
+Marginal APY is five clear / zero flagged at the 3.1002% hurdle. Polygon Aave
+holds 33.716453 USDC.e with .173070 deployable pUSD; the crypto sleeve holds
+7.8764 Aave USDC. UMA has no held-market alert, Ostium has zero positions,
+crux coverage is complete, reservations and reconciliation are clean, and all
+four daemons are exact-one/current. The sole live order remains Trump's
+zero-fill 28-NO GTC sell at .97. Redemption found zero winning indexed claims
+and broadcast no transaction.
+
+No trade, fill, order change, transfer, redemption or probability change
+occurred. No Telegram was sent under the material-only rule, and Fireworks
+spend remained zero. `main` matched `origin/main` at `ddfaaa2` before this
+review.

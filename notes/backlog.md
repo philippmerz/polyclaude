@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-16 18:05 current update
+
+- **18:00 periodic review / Fed outcome:** No post-14:06 alert, watchlist hit,
+  overdue decision, request or held-position catalyst requires action. Eleven
+  positions remain at $130.59 cost, $146.91 midpoint and $139.65 indicative
+  net depth; authoritative bankroll is $195.78 and settled realized P&L remains
+  +$3.50. Every direct and protected-group exit remains HOLD; state, balances,
+  carry, UMA, order, redemption, Ostium, crux, reservations, reconciliation and
+  daemons are clean. The FOMC unanimously raised rates 25bp, so the 02:00
+  Sep-hike YES skip would have won; a raw-$5 minimum counterfactual earned about
+  $0.59 after its quoted fee. The exact pre-outcome forecast and realized
+  opportunity cost are now graded in the short-dated ledger. One outcome does
+  not justify weakening the 10pp robustness gate. The market is already in UMA
+  proposal with YES bids at .999 and no YES asks, so there is no post-release
+  trade. Next clocks: Duma Sep-20, Arena Sep-30, emergency-path drill Oct-12.
+
 ## Sep-16 14:06 current update
 
 - **14:00 full check:** No post-10:03 alert, watchlist hit, overdue decision,

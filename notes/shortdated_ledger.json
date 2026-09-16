@@ -834,5 +834,28 @@
   "reason": "Named USGS catalog showed 3 qualifying reviewed events with just under six hours left, after more than 48 hours with no new M>=5.5 event. Historical six-hour tail estimates span roughly 0.04%-1.9% and are driven by a few clusters; catalog revisions and delayed reporting prevent a tight prior. Even the optimistic .995 YES point estimate yields only ~0.45pp before funding/operations, fails tail stress, and pays about $0.023 at the five-share minimum; available pUSD was below minimum cost. NO at .069 plus fee required >7.22%, far outside the defensible range. Size zero.",
   "size_usd": 0.0,
   "resolve_by": "2026-09-16"
+ },
+ {
+  "date": "2026-09-16",
+  "forecast_at": "2026-09-16T02:10:00Z",
+  "question": "Fed Rate Hike by September 2026 Meeting?",
+  "slug": "fed-rate-hike-by-september-2026-meeting",
+  "market_id": "1808547",
+  "condition_id": "0x73d8a8208d23a74937d114a713d6a56cd4161a1068056c52ac74c8419c99da7c",
+  "side": "YES",
+  "ask": 0.89,
+  "baseline_note": "Exact YES book observed before outcome with 1,030.69 shares at the raw .89 ask. The structured taker fee rate .05, exponent 1 adds .004895 per share, for .894895 all-in. Same-day CME/FedWatch evidence was 92-92.5%; the latest contemporaneous point estimate used for this calibration row is .925.",
+  "catalyst_p_yes_central": 0.925,
+  "decision": "SKIP",
+  "reason": "Central edge was about 3.01pp after the taker fee, but a 3pp probability stress left effectively zero and the configured 10pp instance/catalyst haircut made the trade negative. Deployable pUSD was below the venue minimum and funding required an Aave withdrawal plus wrap. Size zero. The pre-outcome analysis is preserved in commit 1bd8dee.",
+  "size_usd": 0.0,
+  "resolve_by": "2026-09-16",
+  "outcome": "YES",
+  "fade_would_have_won": true,
+  "graded_at": "2026-09-16",
+  "outcome_source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+  "forecast_source_commit": "1bd8dee1920ead421be32c8e87b50082696bcc15",
+  "forecast_source_path": "notes/journal.md",
+  "grade_note": "The FOMC unanimously raised the target range 25bp to 3.75-4.00%, so YES won. A raw-$5 minimum counterfactual would have earned about $0.59 after the quoted taker fee before negligible chain costs. This is one correctly identified central edge that failed the standing robustness gate; record the opportunity cost without changing the gate from one dependent macro outcome."
  }
 ]
