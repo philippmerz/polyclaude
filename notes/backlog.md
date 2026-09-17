@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-17 09:09 current update
+
+- **Gemini HLE ≥40 take-profit review — HOLD:** The displayed NO mark reached
+  .22, but fresh executable depth was only 6 shares at .17 and 60 at .16 before
+  falling to .07/.05/.04. A hypothetical sale of all 169 shares would return
+  $14.929782 net versus $18.22940 all-in cost, so the apparent doubling was not
+  a realizable profit.
+  Selling the first 66 would realize $3.1444 against allocated cost, but its
+  $10.263576 proceeds are $2.936424 below their $13.20 central hold value. The
+  live resolving API still has 60 rows and exactly the Jul-3 pre-market Gemini
+  Pro subset; no qualifying new Pro row, criteria change or UMA event appeared.
+  Retain p(NO)=.20 [.08-.35], all 169 shares, and the meaningful full-depth
+  trim review near .21-.22 after fees. No taker trim or maker order; the sole
+  authenticated order remains Trump-out 28 NO at .97. DEC-0147 and Telegram
+  977 record the decision.
+
 ## Sep-17 08:44 current update
 
 - **08:18 Clarity revalidation / watcher history repair:** The alert tail was

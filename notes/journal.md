@@ -17473,3 +17473,31 @@ indicative net depth**. Authoritative whole-account midpoint is **$198.48**;
 settled realized P&L remains **+$3.22**. The sole live order remains the
 zero-fill Trump 28-NO maker sell at .97. Telegram summary **973** was sent
 once; Fireworks spend remained zero.
+
+## 2026-09-17 09:03–09:09 UTC — Gemini HLE mark was not executable profit
+
+The operator asked whether to take profit after the 169-share next-Gemini-Pro
+HLE ≥40 NO position displayed a .22 mark, more than twice its .104 nominal
+entry. The exact token, condition and 4% fee schedule matched the recorded
+position. Two fresh book reads showed the quote moving rapidly; the final
+complete walk was 6 shares at .17, 60 at .16, then .07/.05/.04. A hypothetical
+sale of the entire position would return only **$14.929782 net** versus
+**$18.22940 all-in cost**, an implied loss of about $3.30 despite the headline
+mark.
+
+A partial sale was also rejected on EV rather than accounting optics. The
+first 66 shares would return **$10.263576 net** and book $3.1444 above their
+allocated cost, but their central hold value at p(NO)=.20 is $13.20. Taking
+that visible profit would surrender **$2.936424** of expected payout. The live
+resolving API contains 60 rows and exactly the same four Gemini Pro rows and
+scores as the Jul-3 pre-market archive; there is no newly qualifying Pro row,
+criteria change or UMA event. Google still describes 3.5 Pro as coming soon,
+which remains inside the recorded .08-.35 uncertainty range rather than a new
+catalyst.
+
+Retain p(NO)=.20 and all 169 shares. No taker trim or hidden-information maker
+sell was placed. Re-open the exit decision on a qualifying source row or a
+genuine full-depth bid near .21-.22, where fee-net proceeds become competitive
+with central hold value and carry. Authenticated orders confirm the only live
+order remains the zero-fill Trump 28-NO sell at .97. DEC-0147 records the skip;
+Telegram reply **977** was sent once.
