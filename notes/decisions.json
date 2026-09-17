@@ -1,5 +1,5 @@
 {
-  "next_id": 140,
+  "next_id": 141,
   "decisions": [
     {
       "id": 1,
@@ -2759,6 +2759,26 @@
         "protected-pair"
       ],
       "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 140,
+      "timestamp": "2026-09-17T04:47:58Z",
+      "type": "scaffolding",
+      "thesis": "The opportunity watcher correctly appends every raw signal, but it launched a second bounded review 94 minutes after the already-reviewed Clarity payload stayed unchanged. Persist the exact payload only after a review tick succeeds, retry when the shared cooldown blocks the first dispatch, and suppress subsequent reviews until the payload changes. Add broad Clarity Act and crypto market structure Tier-2 terms because the new held pair had no matching news coverage.",
+      "confidence": "high",
+      "prediction": "Through 2026-09-24, an unchanged actionable payload that already launched a review will continue to append observations without firing another tick; a changed payload or a first review blocked by the shared cooldown will remain eligible, and crux_coverage_check will keep both Clarity legs covered.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-24",
+      "tags": [
+        "opportunity-watch",
+        "alert-dedupe",
+        "news-coverage",
+        "clarity-act"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -1,5 +1,25 @@
 # Polyclaude Backlog
 
+## Sep-17 04:48 current update
+
+- **04:39 repeat Clarity alert revalidated / no add:** The held over-58-NO +
+  over-50-YES pair still costs .9665 per new five-share unit and retains a
+  3.35pp payout-floor edge, but a five-share add would put the over-58 ticket
+  at $30.39 against its $29.10 cap; smaller orders violate the venue minimum.
+  Four other exact-threshold structures net only .25pp–1.41pp after fees. No
+  trade, switch or trim is justified. The repeated unchanged signal had fired
+  a second bounded tick after 94 minutes, so opportunity-watch now records the
+  exact payload only after a review dispatch succeeds, retries a first dispatch
+  blocked by the shared cooldown, and suppresses later reviews until the
+  payload changes. The daemon was restarted exact-one/current and four focused
+  regressions pass. Added `clarity act` and `crypto market structure` Tier-2
+  terms; all 13 held legs now pass crux coverage. Thirteen legs stand at
+  $158.72 cost, $178.42 midpoint and $147.39 indicative net depth;
+  authoritative bankroll is $199.18 and settled realized P&L is +$3.31. Full
+  discovery found no other executable structure above the required gates.
+  DEC-0140 records the watcher change. Next clocks: Duma Sep-18–20, Arena
+  Sep-30, emergency-path drill Oct-12.
+
 ## Sep-17 03:17 current update
 
 - **03:05 trigger / Clarity Act monotonicity pair filled:** The alert was

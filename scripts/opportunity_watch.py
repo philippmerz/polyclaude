@@ -153,7 +153,35 @@ def _alert(state: dict, key: str, text: str, actionable: bool) -> bool:
         state.setdefault("alert_texts", {})[key] = text
         _telegram(f"[OPPWATCH] {text}")
     if actionable:
-        return _fire_tick(state, key)
+        # Telegram dedupe and review-tick dedupe are separate concerns.  A
+        # first review can be blocked by the shared 90-minute cron cooldown,
+        # so keep retrying until _fire_tick succeeds.  Once this exact payload
+        # has launched a review, however, a persistently open/cap-blocked arb
+        # must not launch another review every 90 minutes.
+        reviewed = state.setdefault("reviewed_alert_texts", {})
+        if reviewed.get(key) == text:
+            _log(f"review tick suppressed (unchanged payload): {key}")
+            return False
+
+        # Backward-compatible migration for state written before
+        # reviewed_alert_texts existed.  If an unchanged payload was already
+        # sent and a tick ran at or after that send, that review covered it.
+        # If an unrelated tick caused the original cooldown, last_cron is
+        # earlier than the alert timestamp and the retry remains armed.
+        if (
+            key not in reviewed
+            and prev_text == text
+            and last > 0
+            and state.get("last_cron", 0) >= last
+        ):
+            reviewed[key] = text
+            _log(f"review tick recorded from legacy state: {key}")
+            return False
+
+        fired = _fire_tick(state, key)
+        if fired:
+            reviewed[key] = text
+        return fired
     return False
 
 

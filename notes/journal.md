@@ -17221,3 +17221,65 @@ Sep-11 remain current.
 
 Telegram summary **964** was sent once. Fireworks spend remained zero. `main`
 matched `origin/main` at `9d53152` before this trigger review.
+
+## 2026-09-17 04:39–04:48 UTC — repeat Clarity signal cap-blocked; watcher gaps fixed
+
+The opportunity-alert tail was again inspected first. Six identical live-book
+observations had accumulated at roughly 15-minute intervals from 03:20 through
+04:39, all reporting five Clarity Act threshold structures and a best 3.35pp
+fee-inclusive payout-floor edge. The 04:39 observation launched another bounded
+review 94 minutes after the 03:05 review even though its payload had not changed.
+The alert remained an observation until independently revalidated.
+
+A fresh 1,199-event monotonicity scan inspected 926 markets and reproduced the
+five exact structures at five-share executable size:
+
+- over-58 NO + over-50 YES: .9665 all-in per pair, **3.35pp** floor edge;
+- over-60 NO + over-50 YES: .9859, 1.41pp;
+- over-58 NO + over-55 YES: .9975, .25pp;
+- over-64 NO + over-50 YES: .9878, 1.22pp;
+- over-62 NO + over-50 YES: .9955, .45pp.
+
+Only the first clears the 2pp operational floor, and it is the same 29-share
+protected pair already held. A guarded five-share rehearsal failed before any
+order: the over-58 ticket would rise to **$30.39** against the live **$29.10**
+15% cap, leaving only $3.17 of ticket headroom; a smaller order fails the
+five-share venue minimum. The event-cluster cap, current collateral and
+pair-only rule were also rechecked. **HOLD / NO ADD / NO SWITCH / never manage
+one leg independently.** The pair's current midpoint is $27.55, complete net
+exit about $27.07, and guaranteed payout floor $29.00.
+
+The broader bounded discovery pass covered 1,000 default markets, 1,532
+thin-tail candidates, 38 sports qualifiers with three consensus checks, eight
+macro rows and 3,270 retained consistency rows. Nineteen consistency groups
+were requested, seven quoted and none cleared 2% modeled net. The best sports
+delta, Luminosity–M80 at 4.9pp, lacked completed identity/book/in-play
+validation. Fifteen favorite-fade rows remained population-calibration leads.
+Limitless aborted safely when its keyset repeated market ID 4599795. No second
+candidate cleared identity, robustness and execution gates.
+
+Two operational gaps were closed. First, both new Clarity legs were absent from
+the news keyword map. Added broad but distinctive Tier-2 terms `clarity act`
+and `crypto market structure`; the scoped article filter remains in front of
+Telegram, and `crux_coverage_check.py` now covers all 13 positions. Second,
+`opportunity_watch._alert` used the six-hour unchanged-payload cooldown only for
+Telegram while still calling the 90-minute tick dispatcher every scan. It now
+persists the reviewed text only after a review dispatch succeeds, keeps retrying
+when the shared cooldown blocks the first dispatch, and suppresses later ticks
+until the payload changes. Legacy state migrates only when a tick ran at or
+after the stored alert. Four focused regressions plus the existing Google Maps
+watch tests pass. The opportunity watcher was restarted with the canonical
+absolute command; exactly one process is running on code newer than its start.
+DEC-0140 records the change.
+
+Final live state is 13 legs at **$158.72 cost, $178.42 midpoint and $147.39
+indicative net depth**. Authoritative whole-account midpoint is **$199.18**;
+settled realized P&L remains **+$3.31**. The $31.03 midpoint/depth gap remains
+Gemini-debut book illiquidity, not a new source fact. All exits remain HOLD,
+marginal APY is five clear / zero flagged, UMA and Ostium are empty, state and
+reservations are clean, no redemption is available, and the sole live order is
+the zero-fill Trump 28-NO sell at .97. The Sep-13 world-state review and weekly
+P&L through Sep-11 remain current. The full suite passed **720 tests**, including
+156 money-math checks. No trade, order, transfer or redemption occurred. Telegram
+summary **966** was sent once for the two watcher fixes; Fireworks spend remained
+zero.
