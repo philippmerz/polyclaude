@@ -17501,3 +17501,33 @@ genuine full-depth bid near .21-.22, where fee-net proceeds become competitive
 with central hold value and carry. Authenticated orders confirm the only live
 order remains the zero-fill Trump 28-NO sell at .97. DEC-0147 records the skip;
 Telegram reply **977** was sent once.
+
+## 2026-09-17 12:39–12:50 UTC — stopped stale Clarity arb Telegram repeats
+
+The operator reported repeatedly receiving outdated Clarity Act arb scans.
+The source was opportunity-watch, not the hourly Limitless job or the raw
+monotonicity scanner. The 08:44 repair correctly suppressed repeat review
+ticks, but `_alert()` still routed direct Telegram before consulting semantic
+review history. That path compared the entire rendered scan line, so changes
+in candidate count or diagnostic gross spread became a new payload after the
+one-hour cooldown even when the best pair and executable edge were already
+reviewed. The 11:23 state advance with a simultaneous `review tick suppressed
+(covered opportunity)` log proves that split behavior.
+
+Opportunity-watch now maintains bounded notification history separately from
+review-dispatch history. Both use the stable pair fingerprint and best
+executable edge, but a notification record is written only after Telegram
+succeeds. A new pair or an improvement of at least 0.5pp rearms both paths;
+cosmetic changes and A→B→A returns do not. A one-time migration seeds the three
+historical Clarity pairs without allowing future review records to masquerade
+as successful notifications. New alerts blocked by Telegram cooldown and
+failed sends remain eligible to notify later.
+
+The focused suite passed 19 tests. The full suite passed **741 tests**,
+including **156 money-math checks**. A copy of the live pre-upgrade state
+suppressed the known 4.38pp repeat with zero Telegram/tick calls and correctly
+rearmed at 4.88pp. Opportunity-watch was stopped and restarted with the
+canonical absolute command; PID **1535442** is the sole process and started
+after the edited script. The latest live Clarity scan is only **1.28pp**, below
+the 2pp wake threshold, so there is no current trade or review. DEC-0148 records
+the repair. Telegram reply **982** was sent once.

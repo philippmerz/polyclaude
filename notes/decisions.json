@@ -1,5 +1,5 @@
 {
-  "next_id": 148,
+  "next_id": 149,
   "decisions": [
     {
       "id": 1,
@@ -2921,6 +2921,27 @@
         "skip-exit"
       ],
       "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 148,
+      "timestamp": "2026-09-17T12:48:51Z",
+      "type": "scaffolding",
+      "thesis": "The opportunity watcher semantically deduped review ticks but still deduped direct Telegram messages by the fully rendered scanner line. Cosmetic Clarity candidate-count and gross-spread changes therefore resent an already reviewed pair, including the 11:23 UTC message. Add independent bounded notification history keyed by pair identity and best executable edge, migrate historical reviewed alerts once, record only successful sends, and rearm only for a new pair or at least 0.5 percentage points of edge improvement.",
+      "confidence": "high",
+      "prediction": "Through 2026-09-24, repeated Clarity observations for an already-notified pair below its recorded edge plus 0.5pp produce no additional OPPWATCH Telegram; a new pair or qualifying improvement still produces one message, and failed or cooldown-blocked delivery retries later.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-24",
+      "tags": [
+        "watcher",
+        "telegram",
+        "dedupe",
+        "monotonicity",
+        "clarity-act"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -110,12 +110,21 @@ def _append_alert(rec: dict) -> None:
         _log(f"alert append failed: {e}")
 
 
-def _telegram(text: str) -> None:
+def _telegram(text: str) -> bool:
     try:
-        subprocess.run([PY, str(SCRIPTS / "telegram.py"), "msg", text],
-                       capture_output=True, timeout=30, cwd=str(REPO))
+        result = subprocess.run(
+            [PY, str(SCRIPTS / "telegram.py"), "msg", text],
+            capture_output=True,
+            timeout=30,
+            cwd=str(REPO),
+        )
+        if result.returncode != 0:
+            _log(f"telegram failed: exit {result.returncode}")
+            return False
+        return True
     except Exception as e:
         _log(f"telegram failed: {e}")
+        return False
 
 
 def _fire_tick(state: dict, why: str) -> bool:
@@ -260,6 +269,115 @@ def _review_history(state: dict, key: str) -> list[dict]:
     return history
 
 
+def _record_semantic_alert(
+    history: list[dict],
+    fingerprint: str,
+    metric: float | None,
+    text: str,
+) -> dict:
+    """Replace one semantic record and keep the bounded history recent."""
+    record = {
+        "fingerprint": fingerprint,
+        "metric": metric,
+        "text": text,
+    }
+    history[:] = [
+        row for row in history
+        if not (
+            isinstance(row, dict)
+            and row.get("fingerprint") == fingerprint
+        )
+    ]
+    history.append(record)
+    del history[:-REVIEW_HISTORY_LIMIT]
+    return record
+
+
+def _notification_history(state: dict, key: str) -> list[dict]:
+    """Return semantic Telegram history, migrating already-reviewed alerts.
+
+    Review dispatches and operator notifications have separate delivery
+    concerns, but both must use the same economic identity.  The old Telegram
+    path compared full scanner prose, so harmless candidate-count and gross-
+    spread changes could resend an already-reviewed Clarity pair every hour.
+    """
+    history_map = _state_dict(state, "notified_alert_history")
+    initialized_map = _state_dict(state, "notified_alert_history_initialized")
+    history = history_map.get(key)
+    if not isinstance(history, list):
+        history = []
+        history_map[key] = history
+        initialized_map[key] = False
+
+    by_fingerprint: dict[str, dict] = {}
+    order: list[str] = []
+    for row in history:
+        if not isinstance(row, dict) or not isinstance(row.get("fingerprint"), str):
+            continue
+        fingerprint = row["fingerprint"]
+        by_fingerprint[fingerprint] = _prefer_review_record(
+            by_fingerprint.get(fingerprint), row
+        )
+        if fingerprint in order:
+            order.remove(fingerprint)
+        order.append(fingerprint)
+    history[:] = [by_fingerprint[fingerprint] for fingerprint in order]
+
+    if initialized_map.get(key) is not True:
+        # Existing successful review records came from alerts that traversed
+        # the Telegram path first. Seed them once on upgrade so deploying this
+        # repair does not resend every historical pair. Keep the histories
+        # independent afterward: a review may run while Telegram is on
+        # cooldown, and the improved opportunity must still notify later.
+        for row in _review_history(state, key):
+            if (
+                not isinstance(row, dict)
+                or not isinstance(row.get("fingerprint"), str)
+            ):
+                continue
+            fingerprint = row["fingerprint"]
+            existing = next(
+                (
+                    item for item in history
+                    if item.get("fingerprint") == fingerprint
+                ),
+                None,
+            )
+            preferred = _prefer_review_record(existing, row)
+            if existing is None:
+                history.append(dict(row))
+            elif preferred is not existing:
+                history[history.index(existing)] = preferred
+
+        # A pre-upgrade alert may have sent while its review tick was blocked
+        # by the global cooldown. Preserve that last known notification too.
+        last_text = _state_dict(state, "alert_texts").get(key)
+        if isinstance(last_text, str):
+            fingerprint, metric = _review_descriptor(key, last_text)
+            existing = next(
+                (
+                    item for item in history
+                    if item.get("fingerprint") == fingerprint
+                ),
+                None,
+            )
+            candidate = {
+                "fingerprint": fingerprint,
+                "metric": metric,
+                "text": last_text,
+            }
+            preferred = _prefer_review_record(existing, candidate)
+            if existing is None:
+                history.append(candidate)
+            elif preferred is not existing:
+                history[history.index(existing)] = preferred
+        initialized_map[key] = True
+
+    if len(history) > REVIEW_HISTORY_LIMIT:
+        del history[:-REVIEW_HISTORY_LIMIT]
+    return history
+
+
 def _alert(
     state: dict,
     key: str,
@@ -273,34 +391,68 @@ def _alert(
     alerts = _state_dict(state, "alerts")
     alert_texts = _state_dict(state, "alert_texts")
     last = alerts.get(key, 0)
+
+    fingerprint = text
+    metric = None
+    history: list[dict] | None = None
+    record = None
+    if actionable:
+        if review_fingerprint is None:
+            fingerprint, metric = _review_descriptor(key, text)
+        else:
+            fingerprint, metric = review_fingerprint, review_metric
+        history = _review_history(state, key)
+        record = next(
+            (
+                row for row in reversed(history)
+                if isinstance(row, dict)
+                and row.get("fingerprint") == fingerprint
+            ),
+            None,
+        )
+
     # Unchanged-payload dedupe (2026-07-16 audit): a persistently-true
     # condition (trigger stays crossed, arb stays open-but-unactable) used to
     # re-telegram every hour indefinitely. Same key AND same text → 6h
-    # between sends; a CHANGED payload (new price/count) keeps the 1h cadence.
+    # between sends; a CHANGED payload normally keeps the 1h cadence. For
+    # monotonicity alerts, semantic history below prevents cosmetic scanner
+    # changes from bypassing that rule.
     prev_text = alert_texts.get(key)
     cooldown = ALERT_COOLDOWN * 6 if prev_text == text else ALERT_COOLDOWN
-    if _now() - last < cooldown:
+    notified_history = None
+    notified_record = None
+    if actionable and key == "monotonicity-arb":
+        notified_history = _notification_history(state, key)
+        notified_record = next(
+            (
+                row for row in reversed(notified_history)
+                if isinstance(row, dict)
+                and row.get("fingerprint") == fingerprint
+            ),
+            None,
+        )
+
+    if _review_is_covered(notified_record, fingerprint, metric):
+        _log(f"telegram suppressed (covered opportunity): {key}")
+    elif _now() - last < cooldown:
         _log(f"telegram suppressed (cooldown): {key}")
     else:
-        alerts[key] = _now()
-        alert_texts[key] = text
-        _telegram(f"[OPPWATCH] {text}")
+        if _telegram(f"[OPPWATCH] {text}"):
+            alerts[key] = _now()
+            alert_texts[key] = text
+            if notified_history is not None:
+                _record_semantic_alert(
+                    notified_history, fingerprint, metric, text
+                )
     if actionable:
         # Telegram dedupe and review-tick dedupe are separate concerns.  A
         # first review can be blocked by the shared 90-minute cron cooldown,
         # so keep retrying until _fire_tick succeeds.  Once the same economic
         # opportunity has launched a review, however, a persistently
         # open/cap-blocked arb must not launch another review every 90 minutes.
-        if review_fingerprint is None:
-            fingerprint, metric = _review_descriptor(key, text)
-        else:
-            fingerprint, metric = review_fingerprint, review_metric
         reviewed_texts = _state_dict(state, "reviewed_alert_texts")
         reviewed = _state_dict(state, "reviewed_alerts")
-        history = _review_history(state, key)
-        record = next((row for row in reversed(history)
-                       if isinstance(row, dict)
-                       and row.get("fingerprint") == fingerprint), None)
+        assert history is not None
 
         if _review_is_covered(record, fingerprint, metric):
             _log(f"review tick suppressed (covered opportunity): {key}")
@@ -334,16 +486,9 @@ def _alert(
 
         fired = _fire_tick(state, key)
         if fired:
-            record = {
-                "fingerprint": fingerprint,
-                "metric": metric,
-                "text": text,
-            }
-            history[:] = [row for row in history
-                          if not (isinstance(row, dict)
-                                  and row.get("fingerprint") == fingerprint)]
-            history.append(record)
-            del history[:-REVIEW_HISTORY_LIMIT]
+            record = _record_semantic_alert(
+                history, fingerprint, metric, text
+            )
             reviewed_texts[key] = text
             reviewed[key] = record
         return fired

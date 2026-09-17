@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-17 12:50 current update
+
+- **Repeated Clarity arb Telegrams fixed:** The operator reported stale Clarity
+  scan alerts. Review-tick history was already semantic, but direct Telegram
+  cooldown still compared the full rendered scanner line; harmless changes in
+  candidate count or gross spread could therefore resend an already-reviewed
+  pair. Opportunity-watch now keeps a separate bounded notification history
+  keyed by pair identity and best executable edge, records only successful
+  sends, migrates pre-fix history once, and rearms only for a new pair or a
+  >=0.5pp improvement. Failed or cooldown-blocked sends remain retryable. The
+  live-state rehearsal suppresses the known 4.38pp repeat and preserves a
+  4.88pp improvement; all 741 tests and 156 money checks pass. The daemon was
+  restarted exact-one/current as PID 1535442. Current Clarity best is 1.28pp,
+  below the 2pp wake threshold, so no trade or review is due. DEC-0148 records
+  the repair; Telegram 982 was sent.
+
 ## Sep-17 09:09 current update
 
 - **Gemini HLE ≥40 take-profit review — HOLD:** The displayed NO mark reached
