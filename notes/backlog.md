@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-17 22:10 current update
+
+- **Gemini Pro HLE ≥40 real-flow review — HOLD:** YES repriced to .90/.92 on
+  **$1,006.80** of 24-hour volume, including a 403-share YES buy near .848 and
+  later prints near .90. The likely public catalyst is a same-day, unverified
+  claim that an Arena model labeled Gemini 3.8 Flash is a Gemini 4 Pro
+  checkpoint. Google still lists 3.5 Pro as **coming soon**, its API changelog
+  and model-card index show no newer Pro release, and a fresh resolving-chart
+  read still has 60 rows with the same four Gemini Pro entries; there is no
+  qualifying source event or UMA proposal. Give the credible hidden-information
+  flow a modest update: `p_no` **.20→.18**, with a deliberately wide .06–.35
+  range. The 169-share full fee-net exit is about **$10.22** versus **$30.42**
+  central hold value and $13.52 even at `p_no=.08`; the carry-adjusted exit
+  boundary is only about .06. HOLD all / NO ADD / NO TAKER TRIM / NO MAKER
+  ORDER. DEC-0151 and Telegram **989** record the decision.
+- The rest of the 22:01 periodic check is clean: 13 legs at $158.72 cost,
+  $154.66 midpoint and $144.24 indicative net depth; no marginal-APY flag,
+  watchlist hit, overdue decision, UMA issue, redemption, state/order anomaly,
+  or daemon problem. The sole order remains the zero-fill Trump 28-NO sell at
+  .97. Duma voting Sep. 18–20 is the next scheduled portfolio catalyst.
+
 ## Sep-17 21:50 current update
 
 - **Jev 1.13 evaluated; shadow semantic prefilter only:** The operator supplied

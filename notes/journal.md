@@ -17698,3 +17698,48 @@ atomic checks over one already-produced state may still save work; a one-off
 candidate whose state must be researched specially may gain nothing. Telegram
 reply **988** acknowledged the correction. No adapter or production path needed
 to change.
+
+## 2026-09-17 22:00–22:10 UTC — Gemini Pro HLE real flow reviewed; HOLD
+
+The periodic backlog review surfaced one material item after the 18:04 cutoff.
+The held next-Gemini-Pro HLE ≥40 market moved to YES **.90/.92** (NO .08/.10)
+on **$1,006.80** of 24-hour volume and a two-point spread. Public trade history
+confirms this was more than a midpoint flap: a 403-share YES buy printed near
+.848 at 20:26 UTC, followed by 162 shares near .905 and 50 at .90. The current
+NO book remained shallow and discontinuous, with bids beginning .08 x55, .06
+x72.17 and .05 x135.83.
+
+The same-day information search identified a plausible source of the move, but
+not a qualifying fact. Community accounts and low-authority coverage claimed
+that an anonymous Arena checkpoint labeled `gemini-3.8-flash` is really Gemini
+4 Pro. Google has not made that identification. Its [current Gemini
+page](https://deepmind.google/models/gemini/) still says Gemini 3.5 Pro is
+coming soon and lists 3.1 Pro as the current Pro model; the [official API
+changelog](https://ai.google.dev/gemini-api/docs/changelog) and [model-card
+index](https://deepmind.google/models/model-cards/) through Sep. 15 contain new
+Live and Flash variants but no newer Pro model. Fresh `source_freeze_check`
+output successfully read 60 resolving-chart rows. The Gemini Pro subset remains
+2.5 Pro-Exp 18.8, 2.5 Pro 21.64, 3 Pro 38.3 and 3.1 Pro 45.9, exactly the Jul. 3
+subset. Flash models are explicitly excluded by the contract. No UMA proposal
+or criteria change exists.
+
+The genuine flow modestly increases the chance of a new qualifying Pro row by
+year-end, while the rumor's unidentified model and Google's silence prevent
+treating it as a release. Update central `p_no` **.20→.18** and retain a wide
+**.06–.35** range. At the final synchronized read, `exit_analysis.py` valued a
+complete 169-share taker sale at about **$10.22 net**, versus **$30.42** central
+hold value. Even `p_no=.08` implies $13.52; a full exit only becomes competitive
+near .06 after carry. Partial sales receive no better thesis economics, and a
+hidden-information maker sell at or below fair remains prohibited. HOLD all
+169, with no add, taker trim or new maker order. Reopen immediately on a new
+qualifying chart row, official Pro release, UMA proposal, a posterior near the
+.06 exit boundary, or a complete fee-net exit above hold value. DEC-0151 and
+Telegram **989** record the review.
+
+All remaining periodic checks were clean. The 22:01 snapshot had 13 legs at
+**$158.72 cost, $154.66 midpoint and $144.24 indicative net depth**. Marginal
+APY reported five clear holds and zero flags; watchlist, position state, UMA and
+pending decisions had no issue. The sole order remains the zero-fill Trump
+28-NO sell at .97, all four daemons are exact-one/current, and no transfer,
+redemption or other portfolio action was due. Duma voting Sep. 18–20 is the
+next scheduled catalyst.

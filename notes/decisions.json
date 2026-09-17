@@ -1,5 +1,5 @@
 {
-  "next_id": 151,
+  "next_id": 152,
   "decisions": [
     {
       "id": 1,
@@ -2982,6 +2982,27 @@
         "cost-control"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 151,
+      "timestamp": "2026-09-17T22:08:10Z",
+      "type": "skip",
+      "thesis": "Gemini Pro HLE >=40 YES repriced to 0.90/0.92 on about $1,007 of 24-hour volume and concentrated YES flow. The likely public catalyst is an unverified same-day claim that an Arena model labeled Gemini 3.8 Flash is really a Gemini 4 Pro checkpoint. Google still labels 3.5 Pro as coming soon, its API changelog and model-card index show no newer Pro release, and a fresh 60-row resolving-chart read retains the same four Gemini Pro rows with no qualifying addition. Give the real hidden-information flow a modest update from p_no 0.20 to 0.18, with a wide 0.06-0.35 range. Current 169-share fee-net exit is only about 10.1-10.4 dollars versus 30.42 dollars central hold value and 13.52 dollars even at p_no 0.08. Hold all shares; no add, taker trim, or resting maker order.",
+      "confidence": "medium",
+      "prediction": "Unless Google officially releases a new Pro model and the resolving chart adds a qualifying Pro row, the rumor-driven book may remain volatile without resolving the contract. Re-evaluate immediately on a new Pro row, official Pro release, UMA proposal, p_no near or below the roughly 0.06 carry-adjusted full-exit boundary, or a fee-net complete exit above hold value; otherwise the full ticket remains worth more held than sold.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "gemini",
+        "hle",
+        "hidden-info",
+        "hold",
+        "skip-exit"
+      ],
+      "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
