@@ -35,27 +35,28 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-17 06:55 UTC
+## Last audited snapshot — 2026-09-17 08:44 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 13 |
 | Position cost | $158.72 |
-| Polymarket midpoint | $178.53 |
-| Indicative depth/fee value | $145.45 |
-| Authoritative whole-account mark | $199.14 |
+| Polymarket midpoint | $177.85 |
+| Indicative depth/fee value | $151.96 |
+| Authoritative whole-account mark | $198.48 |
 | Settled realized P&L | +$3.22 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor. The venue's separate $1 marketable-BUY floor makes the
-current low-price Clarity structures 17-share trades. An add to the held pair
-is ticket-cap blocked; the best unheld structure locks only $0.448844 before
-funding friction and foregone carry, so it was skipped. All exit checks return
-**HOLD**. The only live order is a zero-fill maker sell for **28 Trump-out NO
-at 0.97**. The $33.08 midpoint-to-depth gap is dominated by Gemini-debut and
-Apple's thin books. The next dated clocks are Duma voting Sep. 18–20, the Arena
-source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
+$29.00 payout floor. A fresh over-60-NO/over-50-YES structure costs $16.419552
+for a $17 floor, but only about $0.432 remains after foregone carry; funding it
+would drain cross-chain stable reserves, require gas conversion, and first
+requires an overlapping protected-group topology. It was skipped. All exit
+checks return **HOLD**. The only live order is a zero-fill maker sell for **28
+Trump-out NO at 0.97**. The $25.89 midpoint-to-depth gap is dominated by
+Gemini-debut and Apple's thin books. The next dated clocks are Duma voting Sep.
+18–20, the Arena source snapshot on Sep. 30, and the emergency-path drill on
+Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

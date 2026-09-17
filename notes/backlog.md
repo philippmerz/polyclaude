@@ -1,5 +1,28 @@
 # Polyclaude Backlog
 
+## Sep-17 08:44 current update
+
+- **08:18 Clarity revalidation / watcher history repair:** The alert tail was
+  read first. The new over-64-NO/over-50-YES best identity was criteria-valid,
+  but its then-current 17-share signed cost of $16.584044 left only $0.268421
+  after foregone Aave carry and still exceeded available non-gas stables. No
+  trade. During the run, books rotated to over-60/over-50 at $16.419552 for a
+  $17 payout floor. The $0.580448 gross surplus leaves about $0.432 after carry,
+  while funding requires draining all cross-chain stables, converting gas, and
+  giving up the $5 operating reserve; the existing protected group also needs
+  an explicit overlapping-component topology first. DEC-0146 records the
+  second skip. Opportunity-watch now retains up to 64 reviewed pair identities
+  and each pair's maximum reviewed edge, so A→B→A book oscillation cannot
+  relaunch an unchanged review; malformed/duplicate state is repaired and
+  blocked first dispatches still retry. The three Clarity identities reviewed
+  today were seeded, the daemon was restarted exact-one/current, and the full
+  **735-test** suite passes. DEC-0145 records the repair. Dollar signs and
+  amounts corrupted by shell expansion in DEC-0142 through DEC-0144 were also
+  restored. Thirteen legs stand at $158.72 cost, $177.85 midpoint and $151.96
+  indicative net depth; authoritative bankroll is $198.48 and settled realized
+  P&L is +$3.22. All exits remain HOLD; state, balances, orders, carry, UMA,
+  Ostium, redemption, crux and daemons are clean.
+
 ## Sep-17 06:55 current update
 
 - **06:28 Clarity review / partial-fill recovery:** The alert correctly rearmed

@@ -63,6 +63,7 @@ LISTING_EVERY = 900        # new-market listing watch (catalyst families)
 CRON_FIRE_COOLDOWN = 5400   # 90 min, matches news_watcher
 ALERT_COOLDOWN = 3600       # per-key telegram cooldown
 MONOTONICITY_REVIEW_DELTA_PP = 0.5  # re-review same pair only on material improvement
+REVIEW_HISTORY_LIMIT = 64
 
 
 def _now() -> int:
@@ -85,7 +86,10 @@ def _rss_mb() -> float:
 
 def _load_state() -> dict:
     try:
-        return json.loads(STATE_PATH.read_text())
+        state = json.loads(STATE_PATH.read_text())
+        if not isinstance(state, dict):
+            raise ValueError("watcher state must be a JSON object")
+        return state
     except Exception:
         return {"last": {}, "alerts": {}, "last_cron": 0}
 
@@ -176,6 +180,86 @@ def _review_is_covered(record: object, fingerprint: str, metric: float | None) -
     return metric < float(prior_metric) + MONOTONICITY_REVIEW_DELTA_PP
 
 
+def _state_dict(state: dict, field: str) -> dict:
+    """Return a mutable dictionary field, repairing valid-but-malformed JSON."""
+    value = state.get(field)
+    if not isinstance(value, dict):
+        value = {}
+        state[field] = value
+    return value
+
+
+def _prefer_review_record(current: dict | None, candidate: dict) -> dict:
+    """Keep the record with the highest numeric review metric."""
+    if current is None:
+        return dict(candidate)
+    current_metric = current.get("metric")
+    candidate_metric = candidate.get("metric")
+    if isinstance(candidate_metric, (int, float)) and not isinstance(
+        current_metric, (int, float)
+    ):
+        return dict(candidate)
+    if (
+        isinstance(candidate_metric, (int, float))
+        and isinstance(current_metric, (int, float))
+        and candidate_metric > current_metric
+    ):
+        return dict(candidate)
+    return current
+
+
+def _review_history(state: dict, key: str) -> list[dict]:
+    """Return bounded per-fingerprint review records, migrating old state."""
+    history_map = _state_dict(state, "reviewed_alert_history")
+    history = history_map.get(key)
+    if not isinstance(history, list):
+        history = []
+        history_map[key] = history
+    # Repair duplicate or malformed records from interrupted/manual migrations.
+    # Recency controls eviction, while the maximum metric controls rearming.
+    by_fingerprint: dict[str, dict] = {}
+    order: list[str] = []
+    for row in history:
+        if not isinstance(row, dict) or not isinstance(row.get("fingerprint"), str):
+            continue
+        fingerprint = row["fingerprint"]
+        by_fingerprint[fingerprint] = _prefer_review_record(
+            by_fingerprint.get(fingerprint), row
+        )
+        if fingerprint in order:
+            order.remove(fingerprint)
+        order.append(fingerprint)
+    history[:] = [by_fingerprint[fingerprint] for fingerprint in order]
+    # Migrate the single-record semantic state written before fingerprint
+    # history existed. Keep the legacy fields for compatibility with older
+    # operators, but make history authoritative for future A->B->A cycles.
+    reviewed = _state_dict(state, "reviewed_alerts")
+    old = reviewed.get(key)
+    if isinstance(old, dict) and old.get("fingerprint"):
+        existing = next(
+            (row for row in history if row.get("fingerprint") == old["fingerprint"]),
+            None,
+        )
+        preferred = _prefer_review_record(existing, old)
+        if existing is None:
+            history.append(dict(old))
+        elif preferred is not existing:
+            history[history.index(existing)] = preferred
+    # Exact-text migration is handled here too so a legacy process can restart
+    # without losing its already-reviewed opportunity.
+    if not history:
+        text = _state_dict(state, "reviewed_alert_texts").get(key)
+        if text is not None:
+            fingerprint, metric = _review_descriptor(key, text)
+            migrated = {"fingerprint": fingerprint, "metric": metric,
+                        "text": text}
+            history.append(migrated)
+            reviewed[key] = migrated
+    if len(history) > REVIEW_HISTORY_LIMIT:
+        del history[:-REVIEW_HISTORY_LIMIT]
+    return history
+
+
 def _alert(
     state: dict,
     key: str,
@@ -186,18 +270,20 @@ def _alert(
     review_metric: float | None = None,
 ) -> bool:
     _append_alert({"key": key, "text": text, "review_required": actionable})
-    last = state.get("alerts", {}).get(key, 0)
+    alerts = _state_dict(state, "alerts")
+    alert_texts = _state_dict(state, "alert_texts")
+    last = alerts.get(key, 0)
     # Unchanged-payload dedupe (2026-07-16 audit): a persistently-true
     # condition (trigger stays crossed, arb stays open-but-unactable) used to
     # re-telegram every hour indefinitely. Same key AND same text → 6h
     # between sends; a CHANGED payload (new price/count) keeps the 1h cadence.
-    prev_text = state.get("alert_texts", {}).get(key)
+    prev_text = alert_texts.get(key)
     cooldown = ALERT_COOLDOWN * 6 if prev_text == text else ALERT_COOLDOWN
     if _now() - last < cooldown:
         _log(f"telegram suppressed (cooldown): {key}")
     else:
-        state.setdefault("alerts", {})[key] = _now()
-        state.setdefault("alert_texts", {})[key] = text
+        alerts[key] = _now()
+        alert_texts[key] = text
         _telegram(f"[OPPWATCH] {text}")
     if actionable:
         # Telegram dedupe and review-tick dedupe are separate concerns.  A
@@ -209,24 +295,12 @@ def _alert(
             fingerprint, metric = _review_descriptor(key, text)
         else:
             fingerprint, metric = review_fingerprint, review_metric
-        reviewed_texts = state.setdefault("reviewed_alert_texts", {})
-        reviewed = state.setdefault("reviewed_alerts", {})
-        record = reviewed.get(key)
-
-        # Migrate the exact-text state written by the first dedupe version.
-        # Recomputing its descriptor also collapses cosmetic count/gross-edge
-        # changes that appeared after that version shipped.
-        legacy_reviewed_text = reviewed_texts.get(key)
-        if record is None and legacy_reviewed_text is not None:
-            legacy_fingerprint, legacy_metric = _review_descriptor(
-                key, legacy_reviewed_text
-            )
-            record = {
-                "fingerprint": legacy_fingerprint,
-                "metric": legacy_metric,
-                "text": legacy_reviewed_text,
-            }
-            reviewed[key] = record
+        reviewed_texts = _state_dict(state, "reviewed_alert_texts")
+        reviewed = _state_dict(state, "reviewed_alerts")
+        history = _review_history(state, key)
+        record = next((row for row in reversed(history)
+                       if isinstance(row, dict)
+                       and row.get("fingerprint") == fingerprint), None)
 
         if _review_is_covered(record, fingerprint, metric):
             _log(f"review tick suppressed (covered opportunity): {key}")
@@ -243,23 +317,35 @@ def _alert(
             and last > 0
             and state.get("last_cron", 0) >= last
         ):
-            reviewed_texts[key] = text
-            reviewed[key] = {
+            record = {
                 "fingerprint": fingerprint,
                 "metric": metric,
                 "text": text,
             }
+            history[:] = [row for row in history
+                          if not (isinstance(row, dict)
+                                  and row.get("fingerprint") == fingerprint)]
+            history.append(record)
+            del history[:-REVIEW_HISTORY_LIMIT]
+            reviewed_texts[key] = text
+            reviewed[key] = record
             _log(f"review tick recorded from legacy state: {key}")
             return False
 
         fired = _fire_tick(state, key)
         if fired:
-            reviewed_texts[key] = text
-            reviewed[key] = {
+            record = {
                 "fingerprint": fingerprint,
                 "metric": metric,
                 "text": text,
             }
+            history[:] = [row for row in history
+                          if not (isinstance(row, dict)
+                                  and row.get("fingerprint") == fingerprint)]
+            history.append(record)
+            del history[:-REVIEW_HISTORY_LIMIT]
+            reviewed_texts[key] = text
+            reviewed[key] = record
         return fired
     return False
 

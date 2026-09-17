@@ -1,5 +1,5 @@
 {
-  "next_id": 145,
+  "next_id": 147,
   "decisions": [
     {
       "id": 1,
@@ -2807,9 +2807,9 @@
       "id": 142,
       "timestamp": "2026-09-17T06:48:09Z",
       "type": "close_position",
-      "thesis": "The guarded monotonicity executor filled 5 over-60 NO at 0.90, then the venue definitively rejected the intended 5-share over-50 YES leg because its /bin/bash.30 collateral amount was below the separate  marketable-BUY minimum. The orphan NO had no independently underwritten edge. Completing the hedge required at least 17 YES shares and excess-leg disposal, consuming more capital and likely erasing the pair surplus; carrying the orphan introduced unpriced directional risk. Sell the 5 NO immediately at the live 0.89 bid, accept the bounded /bin/bash.08758 round-trip loss including taker fees, and reconcile on-chain balances and reservations to baseline.",
+      "thesis": "The guarded monotonicity executor filled 5 over-60 NO at 0.90, then the venue definitively rejected the intended 5-share over-50 YES leg because its $0.30 collateral amount was below the separate $1 marketable-BUY minimum. The orphan NO had no independently underwritten edge. Completing the hedge required at least 17 YES shares and excess-leg disposal, consuming more capital and likely erasing the pair surplus; carrying the orphan introduced unpriced directional risk. Sell the 5 NO immediately at the live 0.89 bid, accept the bounded $0.08758 round-trip loss including taker fees, and reconcile on-chain balances and reservations to baseline.",
       "confidence": "high",
-      "prediction": "The 5-share FOK sell will remain terminally matched, over-60 NO will stay at zero, over-50 YES will stay at its 29-share baseline, and no late fill or reservation blocker will appear through the next 24 hours; the realized loss will remain below /bin/bash.10 and below the expected cost/risk of forcing the hedge.",
+      "prediction": "The 5-share FOK sell will remain terminally matched, over-60 NO will stay at zero, over-50 YES will stay at its 29-share baseline, and no late fill or reservation blocker will appear through the next 24 hours; the realized loss will remain below $0.10 and below the expected cost/risk of forcing the hedge.",
       "size_usd": 4.43042,
       "resolution_at": "2026-09-18",
       "tags": [
@@ -2827,9 +2827,9 @@
       "id": 143,
       "timestamp": "2026-09-17T06:48:09Z",
       "type": "scaffolding",
-      "thesis": "The pair preview enforced the CLOB share minimum but missed the venue's separate  marketable-BUY collateral minimum, while an evidence-free HTTP 400 invalid-amount response was classified ambiguous and suppressed automatic rollback. Enforce rounded BUY notional before reservation claim and again at pair submission; classify nonretryable 4xx responses without order/trade evidence as definitive failures while preserving ambiguity for retryable statuses or exchange evidence.",
+      "thesis": "The pair preview enforced the CLOB share minimum but missed the venue's separate $1 marketable-BUY collateral minimum, while an evidence-free HTTP 400 invalid-amount response was classified ambiguous and suppressed automatic rollback. Enforce rounded BUY notional before reservation claim and again at pair submission; classify nonretryable 4xx responses without order/trade evidence as definitive failures while preserving ambiguity for retryable statuses or exchange evidence.",
       "confidence": "high",
-      "prediction": "Through 2026-09-24, a pair leg below  will fail before any reservation is claimed or order signed; an evidence-free nonretryable 4xx will enter the existing automatic rollback path, while retryable or order-bearing responses will remain fail-closed as ambiguous.",
+      "prediction": "Through 2026-09-24, a pair leg below $1 will fail before any reservation is claimed or order signed; an evidence-free nonretryable 4xx will enter the existing automatic rollback path, while retryable or order-bearing responses will remain fail-closed as ambiguous.",
       "size_usd": 0.0,
       "resolution_at": "2026-09-24",
       "tags": [
@@ -2847,9 +2847,9 @@
       "id": 144,
       "timestamp": "2026-09-17T06:50:40Z",
       "type": "skip",
-      "thesis": "After correcting the scanner for the venue's  marketable-BUY floor, every Clarity pair using over-50 YES requires 17 equal shares. The held over-58/over-50 pair remains best at 4.38pp net but cannot clear the over-58 ticket cap. The best unheld pair is over-64 NO plus over-50 YES: 6.551156 all-in for a 7 logical floor, only /bin/bash.448844 gross. The 4.49 non-gas stable inventory is about .06 short before bridge costs; expected Aave carry to Dec-31 consumes about /bin/bash.15, leaving only about /bin/bash.30 for funding, execution, and operating-risk costs. Funding it would drain the liquid reserve and require multiple-chain movement or gas-token conversion for a small residual surplus. Skip and preserve the existing protected pair.",
+      "thesis": "After correcting the scanner for the venue's $1 marketable-BUY floor, every Clarity pair using over-50 YES requires 17 equal shares. The held over-58/over-50 pair remains best at 4.38pp net but cannot clear the over-58 ticket cap. The best unheld pair is over-64 NO plus over-50 YES: $16.551156 all-in for a $17 logical floor, only $0.448844 gross. The $14.49 non-gas stable inventory is about $2.06 short before bridge costs; expected Aave carry to Dec-31 consumes about $0.15, leaving only about $0.30 for funding, execution, and operating-risk costs. Funding it would drain the liquid reserve and require multiple-chain movement or gas-token conversion for a small residual surplus. Skip and preserve the existing protected pair.",
       "confidence": "high",
-      "prediction": "If the exact criteria settle consistently, the skipped 17-share over-64-NO/over-50-YES pair would return at least 7 against the quoted 6.551156 cost, but after foregone Aave carry and necessary funding friction its incremental net benefit at this wallet state will be no more than about /bin/bash.30; reconsider only if same-chain free cash appears or executable cost improves materially.",
+      "prediction": "If the exact criteria settle consistently, the skipped 17-share over-64-NO/over-50-YES pair would return at least $17 against the quoted $16.551156 cost, but after foregone Aave carry and necessary funding friction its incremental net benefit at this wallet state will be no more than about $0.30; reconsider only if same-chain free cash appears or executable cost improves materially.",
       "size_usd": 0.0,
       "resolution_at": "2027-01-01",
       "tags": [
@@ -2859,6 +2859,47 @@
         "funding-friction"
       ],
       "slug": "will-over-64-senators-vote-for-the-clarity-act-20260729193533312",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 145,
+      "timestamp": "2026-09-17T08:35:07Z",
+      "type": "scaffolding",
+      "thesis": "The monotonicity watcher retained only the latest reviewed best-pair identity. When books changed from the reviewed Clarity over-58/over-50 pair to over-64/over-50, the old identity was overwritten, so an A-to-B-to-A oscillation could launch another full review without any new economic information. Keep a bounded per-fingerprint history with each identity\u2019s maximum reviewed executable edge; migrate legacy state, repair malformed or duplicate records, and seed the two Clarity identities already reviewed this morning.",
+      "confidence": "high",
+      "prediction": "Through 2026-09-24, oscillation between the reviewed Clarity over-58/over-50 edge at 4.38pp and over-64/over-50 edge at 2.64pp will append observations without firing another review. A pair will rearm only when its own executable edge improves by at least 0.5pp; cooldown-blocked first reviews will still retry.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-24",
+      "tags": [
+        "opportunity-watch",
+        "per-fingerprint-history",
+        "monotonicity",
+        "alert-noise"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 146,
+      "timestamp": "2026-09-17T08:41:26Z",
+      "type": "skip",
+      "thesis": "A fresh Clarity over-60-NO plus over-50-YES quote materially improved after DEC-0144. Seventeen equal shares at signed limits 0.90 and 0.06 cost $16.419552 including authoritative fees and have a criteria-consistent $17 payout floor, locking $0.580448 gross. Foregone Polygon Aave carry at 3.101% to Jan 1 is about $0.148, leaving only about $0.432 before funding, gas, settlement, and partial-fill risk. Total non-gas stables are about $14.50 across Polygon, Arbitrum, and Base, so entry requires draining all stable reserves, two cross-chain consolidations, and converting roughly $1.94 of gas collateral; preserving a $5 operating reserve creates about a $6.92 shortfall. The existing protected group also needs an explicit overlapping-component topology before adding 46 over-50 YES, 29 over-58 NO, and 17 over-60 NO shares. Skip rather than bypass classification, consume the reserve, or accept a rollback tail larger than the residual surplus.",
+      "confidence": "high",
+      "prediction": "The exact pair will remain logically floor-positive whenever the signed cost is below $17, but at this wallet state its incremental benefit after carry and necessary operating costs will remain too small to justify entry. Reconsider if same-chain deployable pUSD can fund the pair while preserving the $5 operating reserve, or if executable cost improves enough to cover funding and rollback risk.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "monotonicity",
+        "clarity-act",
+        "capital-allocation",
+        "funding-friction",
+        "protected-group"
+      ],
+      "slug": "will-over-60-senators-vote-for-the-clarity-act-20260729193533310",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

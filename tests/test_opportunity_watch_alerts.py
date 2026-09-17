@@ -178,6 +178,96 @@ def test_monotonicity_different_best_pair_rearms_review(monkeypatch) -> None:
     assert fired == ["monotonicity-arb", "monotonicity-arb"]
 
 
+def test_monotonicity_pair_history_suppresses_return_and_rearms_improvement(monkeypatch) -> None:
+    _quiet_side_effects(monkeypatch)
+    monkeypatch.setattr(watch, "_now", lambda: 10_000)
+    fired: list[str] = []
+    monkeypatch.setattr(
+        watch, "_fire_tick", lambda _state, key: fired.append(key) or True,
+    )
+    state: dict = {}
+    pair_a = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +5.00pp +3.35pp REAL ARB"
+    )
+    pair_b = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=64.0 bar>=50.0 +5.00pp +3.35pp REAL ARB"
+    )
+    pair_b_improved = pair_b.replace("best +3.35pp", "best +3.90pp").replace(
+        "+3.35pp REAL", "+3.90pp REAL")
+
+    assert watch._alert(state, "monotonicity-arb", pair_a, True) is True
+    assert watch._alert(state, "monotonicity-arb", pair_b, True) is True
+    assert watch._alert(state, "monotonicity-arb", pair_a, True) is False
+    assert watch._alert(state, "monotonicity-arb", pair_b_improved, True) is True
+
+    assert fired == ["monotonicity-arb"] * 3
+    history = state["reviewed_alert_history"]["monotonicity-arb"]
+    assert {row["fingerprint"] for row in history} == {
+        "Clarity Act bar>=58.0 bar>=50.0",
+        "Clarity Act bar>=64.0 bar>=50.0",
+    }
+    assert next(row for row in history
+                if row["fingerprint"].endswith("bar>=64.0 bar>=50.0"))["metric"] == 3.90
+
+
+def test_review_history_repairs_malformed_fields(monkeypatch) -> None:
+    _quiet_side_effects(monkeypatch)
+    monkeypatch.setattr(watch, "_now", lambda: 10_000)
+    fired: list[str] = []
+    monkeypatch.setattr(
+        watch, "_fire_tick", lambda _state, key: fired.append(key) or True,
+    )
+    state = {
+        "alerts": None,
+        "alert_texts": None,
+        "reviewed_alert_history": None,
+        "reviewed_alerts": None,
+        "reviewed_alert_texts": None,
+    }
+
+    assert watch._alert(state, "monotonicity-arb", "new quote", True) is True
+    assert fired == ["monotonicity-arb"]
+    assert state["reviewed_alert_history"]["monotonicity-arb"]
+
+
+def test_review_history_duplicate_keeps_highest_metric(monkeypatch) -> None:
+    _quiet_side_effects(monkeypatch)
+    monkeypatch.setattr(watch, "_now", lambda: 10_000)
+    monkeypatch.setattr(
+        watch,
+        "_fire_tick",
+        lambda *_args: (_ for _ in ()).throw(AssertionError("duplicate tick")),
+    )
+    fingerprint = "Clarity Act bar>=58.0 bar>=50.0"
+    state = {
+        "reviewed_alert_history": {
+            "monotonicity-arb": [
+                {"fingerprint": fingerprint, "metric": 4.38, "text": "higher"},
+                {"fingerprint": fingerprint, "metric": 3.35, "text": "later lower"},
+            ]
+        }
+    }
+    text = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +4.50pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +6.00pp +4.50pp REAL ARB"
+    )
+
+    assert watch._alert(state, "monotonicity-arb", text, True) is False
+    history = state["reviewed_alert_history"]["monotonicity-arb"]
+    assert len(history) == 1
+    assert history[0]["metric"] == 4.38
+
+
+def test_load_state_rejects_non_object_json(monkeypatch, tmp_path) -> None:
+    state_path = tmp_path / "state.json"
+    state_path.write_text("[]")
+    monkeypatch.setattr(watch, "STATE_PATH", state_path)
+
+    assert watch._load_state() == {"last": {}, "alerts": {}, "last_cron": 0}
+
+
 def test_legacy_state_records_already_reviewed_payload(monkeypatch) -> None:
     _quiet_side_effects(monkeypatch)
     monkeypatch.setattr(watch, "_now", lambda: 10_000)

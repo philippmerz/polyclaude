@@ -17408,3 +17408,68 @@ indicative net depth**. Authoritative whole-account midpoint is **$199.14**;
 settled realized P&L is **+$3.22** after the recovery loss. The sole live order
 remains the zero-fill Trump 28-NO maker sell at .97. Telegram summary **970**
 was sent once; Fireworks spend remained zero.
+
+## 2026-09-17 08:18–08:44 UTC — Clarity revalidation and per-pair review history
+
+The opportunity-alert tail was read before any other check. The 08:18 trigger
+was a new best-pair identity, over-64 NO plus over-50 YES, rather than evidence
+that a trade remained executable. Exact Gamma criteria matched on event,
+strict threshold implication, first-final-passage vote, official sources,
+deadline, fallback clauses and route. A fresh 17-share CLOB walk initially
+cost **$16.584044** including fees for a criteria-consistent $17 floor. Its
+$0.415956 gross surplus fell to **$0.268421** after foregone 3.101% Aave carry,
+before funding friction, and non-gas stable inventory was about $2.09 short.
+That did not improve DEC-0144's allocation case, so no trade was made.
+
+The trigger exposed a separate control defect. Opportunity-watch remembered
+only the latest reviewed best-pair fingerprint. When books rotated A→B→A, the
+old fingerprint had been overwritten and could launch a redundant full review.
+The watcher now keeps a bounded 64-record history per alert key, retains the
+maximum reviewed edge for each fingerprint, migrates legacy state, repairs
+malformed or duplicate records, and still leaves a first dispatch that was
+blocked by cooldown eligible to retry. Focused coverage includes A→B→A,
+material same-pair improvement, malformed state and duplicate-max recovery.
+
+While the repair was being installed, the 08:33 observation rotated to
+over-60 NO plus over-50 YES at +3.41pp. Independent raw-token reconciliation
+caught and corrected one analyst's descending-ask read: the exact current
+books were **.90 × 50** for over-60 NO and **.06 × 100** for over-50 YES. At
+17 equal shares, authoritative 4% fee curves produce **$16.419552 all-in**,
+a **$17 floor**, and **$0.580448 gross / 3.535%**. Roughly $0.148 of carry
+leaves about **$0.432** before funding, settlement and execution risk.
+
+That residual does not justify this wallet's required route. Approximately
+$14.50 of non-gas stables is split across Polygon, Arbitrum and Base; Across
+quotes on the two small bridges alone cost about $0.0194, and the remaining
+shortfall requires converting roughly $1.94 of native gas collateral. The path
+would consume the full stable reserve rather than preserve the standing $5
+operating buffer. A one-leg rollback comparable to this morning's observed
+round trip scales to roughly $0.30, while its configured stress ceiling exceeds
+the entire residual surplus. The proposed 46 over-50 YES / 29 over-58 NO / 17
+over-60 NO inventory also requires an explicit overlapping-component group
+before entry; the current proportional 50/58 definition cannot represent it.
+The pair and aggregate cluster fit their 15%/30% dollar caps, so caps were not
+misstated as the blocker. DEC-0146 records the skip and reconsideration gates.
+
+DEC-0145 records the watcher repair. The already-reviewed over-58, over-64 and
+over-60 Clarity fingerprints were seeded at 4.38pp, 2.64pp and 3.41pp so the
+live state reflects work actually completed. The daemon was restarted with its
+canonical absolute command and verified as one post-edit process. The full
+suite passed **735 tests**, including 156 money-math checks. A ledger audit also
+found that shell expansion had corrupted dollar signs and amounts in
+DEC-0142–0144; those exact financial fields were restored without changing the
+underlying decisions.
+
+The scheduled checklist found no post-cutoff material held-position news,
+watchlist hit, overdue decision or thesis break. Discovery covered 1,000
+default and 1,441 thin-tail markets plus sports, macro, consistency,
+favorite-fade and Limitless scans; no other robust entry surfaced. Every direct
+and protected-group exit remains HOLD; marginal APY is five clear and zero
+flagged. Orders, reservations, reconciliation, UMA, Ostium, redemption, crux,
+world-state freshness and all four daemons are clean.
+
+Final state is 13 legs at **$158.72 cost, $177.85 midpoint and $151.96
+indicative net depth**. Authoritative whole-account midpoint is **$198.48**;
+settled realized P&L remains **+$3.22**. The sole live order remains the
+zero-fill Trump 28-NO maker sell at .97. Telegram summary **973** was sent
+once; Fireworks spend remained zero.
