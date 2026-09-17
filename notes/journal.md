@@ -17580,3 +17580,46 @@ Gemini-debut and Apple liquidity. No trade, fill, transfer, order change or
 redemption occurred. Next dated clocks are Duma voting Sep. 18–20, the Arena
 source snapshot Sep. 30 and the emergency-path drill Oct. 12. Telegram summary
 **983** was sent once; Fireworks spend remained zero.
+
+## 2026-09-17 18:00–18:04 UTC — Apple move rechecked without double-counting known evidence
+
+The post-14:11 alert tail contained a 17:08 MATERIAL Clarity article and a
+17:43 MINOR follow-up. The first confirms that the 49–50 result was failed
+cloture, says a motion to reconsider preserves a route back to the floor, and
+notes the Senate's Oct. 2 recess as a tightening clock. This adds legislative
+timing context but no qualifying final-passage vote, criteria change or UMA
+event. Both held threshold contracts explicitly exclude cloture and the motion
+to proceed, and the equal protected pair still pays at least $29 under every
+consistent branch. Hold the complete pair and never trade one leg.
+
+UMA also flagged Apple touchscreen-MacBook YES moving .68→.74. Unlike a thin
+midpoint flap, this had a .72/.74 market, about $1,799 of 24-hour volume and a
+full-size NO bid. It therefore required a fresh thesis and exit review. The
+underlying evidence, however, was already inside the Sep. 17 02:09 posterior:
+that review explicitly incorporated YES trades at .73/.77 and the Sep. 14
+MacRumors summary of Gurman's report. The source says touch-OLED MacBook Pro
+test units run macOS 27.1 and moves them from a late-2026/early-2027 window into
+a products-coming-later-in-2026 list. It still gives no public purchase date.
+Fresh Gamma remains active at YES .74 / NO .26, with unchanged criteria that
+require general-public purchasability by Dec. 31 and reject an announcement or
+unveiling alone. Apple's newsroom archive contains no touchscreen MacBook
+release, preorder or sale notice. Counting the same report and same price
+region a second time would overreact to a baseline reset rather than new
+information, so p(NO) remains **.35 [.18,.55]**.
+
+The exact 18:02 NO book had 271.9 shares bid at .24, enough for all 49.005 held
+shares. A full taker sale would gross $11.76120 and net **$11.40365952** after
+the authoritative 4% fee curve. Central hold value remains **$17.15175**; even
+the existing carry-adjusted exit boundary is only about p(NO)=.245. Partial
+sale offers no price improvement because the whole position fits at the touch.
+The result is HOLD, no add and no hidden-information maker sell. Re-open on an
+official Apple purchase/preorder/availability fact, a genuinely newer dated
+source, or a posterior below the documented boundary.
+
+Watchlist monitoring found no hit and the decision tracker has no overdue row.
+Position state is clean at 13 indexed legs plus one deindexed claim row; the
+sole order is still the zero-fill Trump 28-NO sell at .97. Opportunity-watch
+shows only the known Clarity structure near +0.31pp, below its 2pp wake floor.
+UMA has no unresolved alert after the review, and all four daemons are
+exact-one/current. No trade, transfer, fill, order change, new decision record
+or Telegram was warranted.

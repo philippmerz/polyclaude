@@ -1,5 +1,24 @@
 # Polyclaude Backlog
 
+## Sep-17 18:04 current update
+
+- **Apple move and later Clarity coverage revalidated — HOLD:** Apple
+  touchscreen-MacBook YES moved .68→.74 with a 4pp spread and $1,799 of 24h
+  volume. This is credible flow but not incremental evidence: the 02:09 review
+  already incorporated YES trades at .73/.77 and the Sep-14 report that the
+  touch-OLED models are being tested with macOS 27.1 and now sit in Gurman's
+  later-2026 product list. Gamma remains active with unchanged criteria that
+  require general-public purchasability, while Apple still has no release,
+  preorder or sale notice. Retain p(NO)=.35 [.18,.55]. The exact NO book can
+  sell all 49.005 shares at .24 for **$11.40366 net**, versus **$17.15175**
+  central hold value and an approximately .245 carry-adjusted exit boundary.
+  No exit, add or maker order. The 17:08/17:43 Clarity stories restate the
+  excluded 49–50 cloture loss and add a motion to reconsider plus an Oct. 2
+  recess clock; they do not supply a qualifying final-passage vote or disturb
+  the protected pair's $29 floor. State, orders, UMA, opportunity monitoring
+  and all four daemons remain clean. No trade, order change, decision record or
+  Telegram was warranted.
+
 ## Sep-17 14:11 current update
 
 - **Full check / Clarity procedural vote — HOLD:** Two material news alerts

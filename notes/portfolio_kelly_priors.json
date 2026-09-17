@@ -368,7 +368,7 @@
   "verified": "2026-09-17",
   "criteria_read": "2026-09-10",
   "hidden_info": true,
-  "current_assessment": "Sep-17 02:09 manual re-underwrite: no newer official Apple release, preorder, or public-sale fact appeared after the Sep-14 Gurman/MacRumors timing update. An independent strict-criteria decomposition put P(YES) at 0.69 central (0.45-0.82), while post-22:00 tape showed conflicting NO buying followed by one 277.91-share NO sweep sale near 0.229 and later YES buys at 0.73/0.77. Treat the sustained repricing as hidden-information evidence but discount the single large actor: revise p_no 0.40 -> 0.35, wide range 0.18-0.55. The live 0.25 NO bid could absorb all 49.005 shares for $11.8837 net after the 4% fee; central hold is $17.1518 and 10pp-stressed 0.25 hold is $12.2513 versus about $11.9906 for exit plus Aave carry. HOLD narrowly survives stress; NO ADD fails at the 0.30 ask; no hidden-information maker sell. Re-open on a qualifying Apple sale fact or if central p_no falls below the approximately 0.245 carry-adjusted exit boundary.",
+  "current_assessment": "Sep-17 18:04 recheck: YES moved .68 -> .74 on a 4pp spread and $1,799 24h volume, but this is not incremental to the 02:09 re-underwrite: that review already incorporated YES trades at .73/.77 and the Sep-14 Gurman/MacRumors report placing touch-OLED test units among later-2026 products. Fresh Gamma remains active at YES .74 / NO .26 with unchanged criteria requiring general-public purchasability; Apple's newsroom still has no touchscreen MacBook release, preorder, or sale notice. Retain p_no 0.35, range 0.18-0.55. The exact NO book at 18:02 has 271.9 shares bid at .24, enough for the entire 49.005-share position; taker exit is $11.40366 net versus $17.15175 central hold and a carry-adjusted exit boundary near p_no .245. HOLD; no add, no hidden-information maker sell, and re-open on a qualifying Apple availability fact or posterior below the boundary.",
   "key_facts": [
    {
     "claim": "The late-2026 M6 MacBook Pro has NO touchscreen and NO OLED.",
@@ -1267,7 +1267,7 @@
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
   "current_assessment": "Conservative portfolio floor prior: P(over 50 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-58 NO it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
-  "latest_catalyst": "Sep-17 official recheck: Sep-15 vote 234 was 49-50 cloture on the motion to proceed; the exact criteria exclude it. This is directionally negative for future passage but has no resolving effect. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
+  "latest_catalyst": "Sep-17 18:04 recheck: a follow-up reports the same 49-50 failed cloture vote, a preserved motion to reconsider, and an Oct-2 Senate recess that narrows the legislative timeline. Cloture and the motion to proceed remain explicitly excluded; there is no qualifying final-passage vote, criteria change, or UMA event. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
  },
  "will-over-58-senators-vote-for-the-clarity-act-20260729193533309": {
   "p_no": 0.5,
@@ -1279,6 +1279,6 @@
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
   "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-50 YES it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
-  "latest_catalyst": "Sep-17 official recheck: Sep-15 vote 234 was 49-50 cloture on the motion to proceed; the exact criteria exclude it. This is directionally negative for future passage but has no resolving effect. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
+  "latest_catalyst": "Sep-17 18:04 recheck: a follow-up reports the same 49-50 failed cloture vote, a preserved motion to reconsider, and an Oct-2 Senate recess that narrows the legislative timeline. Cloture and the motion to proceed remain explicitly excluded; there is no qualifying final-passage vote, criteria change, or UMA event. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
  }
 }
