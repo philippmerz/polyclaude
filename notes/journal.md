@@ -17283,3 +17283,45 @@ P&L through Sep-11 remain current. The full suite passed **720 tests**, includin
 156 money-math checks. No trade, order, transfer or redemption occurred. Telegram
 summary **966** was sent once for the two watcher fixes; Fireworks spend remained
 zero.
+
+## 2026-09-17 06:00–06:09 UTC — periodic review; semantic opportunity dedupe
+
+The current backlog and the 04:39–04:48 journal entry were reviewed first. No
+new news alert, watchlist hit, overdue decision, dated task or held-position
+catalyst appeared. Five post-cutoff opportunity rows at 04:54, 05:09, 05:25,
+05:41 and 05:57 all described the already-held Clarity over-58-NO +
+over-50-YES pair with the same **3.35pp executable net edge**. The 29/29 pair
+remains ticket-cap filled, so no add, switch, trim or independent-leg action is
+permitted or economically justified.
+
+The rows did expose a remaining watcher issue. Total live candidates oscillated
+5→4→5 and the scanner's diagnostic gross spread moved 5.00pp→5.50pp while the
+best pair and its net edge stayed unchanged. Exact-text review dedupe therefore
+treated these as new payloads and kept retrying the dispatcher; the shared
+90-minute cooldown prevented an actual third review, but a later retry would
+eventually have fired. The 05:25 identical-text row was correctly suppressed,
+which isolated the failure to cosmetic diagnostic changes rather than state
+persistence.
+
+Opportunity-watch now derives a stable review descriptor from the best pair's
+title/threshold identity and its executable net edge. Falling or improving by
+less than **0.5pp** remains covered by the completed review; a different best
+pair or a same-pair improvement of at least 0.5pp rearms review. Raw alert rows
+and Telegram behavior are unchanged, and a first dispatch blocked by the shared
+cooldown still retries. Existing exact-text review state migrates through the
+same descriptor. A read-only production-state comparison confirmed that the
+stored 3.35pp Clarity review and the latest 3.35pp row have the same identity
+and are covered. The daemon was restarted with its canonical absolute command;
+exactly one current process is running. DEC-0141 records the refinement.
+
+Current state is 13 legs at **$158.72 cost, $182.15 midpoint and $148.99
+indicative net depth**. Authoritative whole-account midpoint is **$202.87**;
+settled realized P&L remains **+$3.31**. The $33.16 midpoint/depth gap is mainly
+Gemini-debut and Apple book illiquidity. Every direct and protected-group exit
+remains HOLD; marginal APY is five clear / zero flagged, and state,
+reservations, the sole zero-fill Trump maker sell, UMA, Ostium, redemption and
+crux checks are clean. World state from Sep-13 and weekly P&L through Sep-11
+remain current. No trade, fill, order change, transfer or redemption occurred.
+The full suite passed **725 tests**, including 156 money-math checks. Telegram
+summary **968** was sent once for the corrected watcher behavior; Fireworks
+spend remained zero.

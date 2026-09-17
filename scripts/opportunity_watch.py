@@ -62,6 +62,7 @@ SCAN_EVERY = 900
 LISTING_EVERY = 900        # new-market listing watch (catalyst families)
 CRON_FIRE_COOLDOWN = 5400   # 90 min, matches news_watcher
 ALERT_COOLDOWN = 3600       # per-key telegram cooldown
+MONOTONICITY_REVIEW_DELTA_PP = 0.5  # re-review same pair only on material improvement
 
 
 def _now() -> int:
@@ -137,7 +138,53 @@ def _fire_tick(state: dict, why: str) -> bool:
     return True
 
 
-def _alert(state: dict, key: str, text: str, actionable: bool) -> bool:
+def _review_descriptor(key: str, text: str) -> tuple[str, float | None]:
+    """Return the stable opportunity identity and its review metric.
+
+    Monotonicity alert prose includes the total candidate count and the gross
+    midpoint spread.  Both can oscillate while the best executable pair and
+    its net edge are unchanged.  They are diagnostics, not a new opportunity.
+    """
+    if key != "monotonicity-arb":
+        return text, None
+
+    match = re.search(
+        r"best\s+([+-]?\d+(?:\.\d+)?)pp\s+—\s+(.*)",
+        text,
+    )
+    if match is None:
+        return text, None
+    edge = float(match.group(1))
+    identity = re.sub(
+        r"(?:\s+[+-]?\d+(?:\.\d+)?pp){1,2}\s+REAL ARB.*$",
+        "",
+        match.group(2),
+    )
+    return " ".join(identity.split()), edge
+
+
+def _review_is_covered(record: object, fingerprint: str, metric: float | None) -> bool:
+    if not isinstance(record, dict) or record.get("fingerprint") != fingerprint:
+        return False
+    prior_metric = record.get("metric")
+    if metric is None:
+        return prior_metric is None
+    if not isinstance(prior_metric, (int, float)):
+        return False
+    # Falling or sub-materially improving edge does not justify another full
+    # review.  A different best pair always has a different fingerprint.
+    return metric < float(prior_metric) + MONOTONICITY_REVIEW_DELTA_PP
+
+
+def _alert(
+    state: dict,
+    key: str,
+    text: str,
+    actionable: bool,
+    *,
+    review_fingerprint: str | None = None,
+    review_metric: float | None = None,
+) -> bool:
     _append_alert({"key": key, "text": text, "review_required": actionable})
     last = state.get("alerts", {}).get(key, 0)
     # Unchanged-payload dedupe (2026-07-16 audit): a persistently-true
@@ -155,12 +202,34 @@ def _alert(state: dict, key: str, text: str, actionable: bool) -> bool:
     if actionable:
         # Telegram dedupe and review-tick dedupe are separate concerns.  A
         # first review can be blocked by the shared 90-minute cron cooldown,
-        # so keep retrying until _fire_tick succeeds.  Once this exact payload
-        # has launched a review, however, a persistently open/cap-blocked arb
-        # must not launch another review every 90 minutes.
-        reviewed = state.setdefault("reviewed_alert_texts", {})
-        if reviewed.get(key) == text:
-            _log(f"review tick suppressed (unchanged payload): {key}")
+        # so keep retrying until _fire_tick succeeds.  Once the same economic
+        # opportunity has launched a review, however, a persistently
+        # open/cap-blocked arb must not launch another review every 90 minutes.
+        if review_fingerprint is None:
+            fingerprint, metric = _review_descriptor(key, text)
+        else:
+            fingerprint, metric = review_fingerprint, review_metric
+        reviewed_texts = state.setdefault("reviewed_alert_texts", {})
+        reviewed = state.setdefault("reviewed_alerts", {})
+        record = reviewed.get(key)
+
+        # Migrate the exact-text state written by the first dedupe version.
+        # Recomputing its descriptor also collapses cosmetic count/gross-edge
+        # changes that appeared after that version shipped.
+        legacy_reviewed_text = reviewed_texts.get(key)
+        if record is None and legacy_reviewed_text is not None:
+            legacy_fingerprint, legacy_metric = _review_descriptor(
+                key, legacy_reviewed_text
+            )
+            record = {
+                "fingerprint": legacy_fingerprint,
+                "metric": legacy_metric,
+                "text": legacy_reviewed_text,
+            }
+            reviewed[key] = record
+
+        if _review_is_covered(record, fingerprint, metric):
+            _log(f"review tick suppressed (covered opportunity): {key}")
             return False
 
         # Backward-compatible migration for state written before
@@ -169,18 +238,28 @@ def _alert(state: dict, key: str, text: str, actionable: bool) -> bool:
         # If an unrelated tick caused the original cooldown, last_cron is
         # earlier than the alert timestamp and the retry remains armed.
         if (
-            key not in reviewed
+            record is None
             and prev_text == text
             and last > 0
             and state.get("last_cron", 0) >= last
         ):
-            reviewed[key] = text
+            reviewed_texts[key] = text
+            reviewed[key] = {
+                "fingerprint": fingerprint,
+                "metric": metric,
+                "text": text,
+            }
             _log(f"review tick recorded from legacy state: {key}")
             return False
 
         fired = _fire_tick(state, key)
         if fired:
-            reviewed[key] = text
+            reviewed_texts[key] = text
+            reviewed[key] = {
+                "fingerprint": fingerprint,
+                "metric": metric,
+                "text": text,
+            }
         return fired
     return False
 
@@ -564,9 +643,20 @@ def run_monotonicity(state: dict) -> None:
         _log(f"monotonicity: {n_real} real arb(s) but best edge {edge:+.2f}pp < "
              f"{MIN_ARB_EDGE_PP}pp floor — logged, not firing: {line[:120]}")
         return
-    _alert(state, "monotonicity-arb",
-           f"monotonicity: {n_real} EXECUTABLE arb(s) after live-CLOB walk, best {edge:+.2f}pp — {line[:140]}",
-           actionable=True)
+    full_text = (
+        f"monotonicity: {n_real} EXECUTABLE arb(s) after live-CLOB walk, "
+        f"best {edge:+.2f}pp — {line}"
+    )
+    fingerprint, _ = _review_descriptor("monotonicity-arb", full_text)
+    _alert(
+        state,
+        "monotonicity-arb",
+        f"monotonicity: {n_real} EXECUTABLE arb(s) after live-CLOB walk, "
+        f"best {edge:+.2f}pp — {line[:140]}",
+        actionable=True,
+        review_fingerprint=fingerprint,
+        review_metric=edge,
+    )
 
 
 # ---------- main ----------

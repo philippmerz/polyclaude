@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-17 04:48 UTC
+## Last audited snapshot — 2026-09-17 06:05 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 13 |
 | Position cost | $158.72 |
-| Polymarket midpoint | $178.42 |
-| Indicative depth/fee value | $147.39 |
-| Authoritative whole-account mark | $199.18 |
+| Polymarket midpoint | $182.15 |
+| Indicative depth/fee value | $148.99 |
+| Authoritative whole-account mark | $202.87 |
 | Settled realized P&L | +$3.31 |
 
 The Sep. 17 opportunity trigger produced a filled **Clarity Act Senate vote
@@ -53,12 +53,12 @@ That locks $0.67107 gross before funding gas and foregone carry. A fresh
 3.35pp repeat signal cannot clear the 15% ticket cap at the five-share venue
 minimum, and the other threshold pairs net at most 1.41pp; neither leg may be
 managed independently. All exit checks returned **HOLD**. The only live order
-is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $31.03
-midpoint-to-depth gap is dominated by Gemini-debut's thin book, whose resolving
-source still has no newly qualifying Gemini Pro row; executable depth remains
-the conservative liquidation view. The next dated portfolio clocks are Duma
-voting Sep. 18–20, the Arena source snapshot on Sep. 30, and the emergency-path
-drill on Oct. 12.
+is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $33.16
+midpoint-to-depth gap is dominated by Gemini-debut and Apple's thin books; the
+Gemini resolving source still has no newly qualifying Gemini Pro row, so
+executable depth remains the conservative liquidation view. The next dated
+portfolio clocks are Duma voting Sep. 18–20, the Arena source snapshot on Sep.
+30, and the emergency-path drill on Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

@@ -53,6 +53,131 @@ def test_cooldown_blocked_first_review_stays_armed(monkeypatch) -> None:
     assert fired == ["monotonicity-arb", "monotonicity-arb"]
 
 
+def test_monotonicity_cosmetic_changes_do_not_rearm_review(monkeypatch) -> None:
+    _quiet_side_effects(monkeypatch)
+    monkeypatch.setattr(watch, "_now", lambda: 10_000)
+    fired: list[str] = []
+    monkeypatch.setattr(
+        watch,
+        "_fire_tick",
+        lambda _state, key: fired.append(key) or True,
+    )
+    state: dict = {}
+    initial = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +5.00pp +3.35pp REAL ARB"
+    )
+    cosmetic_change = (
+        "monotonicity: 4 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +5.50pp +3.35pp REAL ARB"
+    )
+
+    assert watch._alert(state, "monotonicity-arb", initial, True) is True
+    assert watch._alert(state, "monotonicity-arb", cosmetic_change, True) is False
+
+    assert fired == ["monotonicity-arb"]
+
+
+def test_exact_text_state_migrates_to_semantic_review(monkeypatch) -> None:
+    _quiet_side_effects(monkeypatch)
+    monkeypatch.setattr(watch, "_now", lambda: 10_000)
+    monkeypatch.setattr(
+        watch,
+        "_fire_tick",
+        lambda *_args: (_ for _ in ()).throw(AssertionError("duplicate tick")),
+    )
+    initial = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +5.00pp +3.35pp REAL ARB"
+    )
+    cosmetic_change = (
+        "monotonicity: 4 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +5.50pp +3.35pp REAL ARB"
+    )
+    state = {"reviewed_alert_texts": {"monotonicity-arb": initial}}
+
+    assert watch._alert(state, "monotonicity-arb", cosmetic_change, True) is False
+    record = state["reviewed_alerts"]["monotonicity-arb"]
+    assert record["metric"] == 3.35
+    assert record["fingerprint"] == "Clarity Act bar>=58.0 bar>=50.0"
+
+
+def test_monotonicity_material_improvement_rearms_review(monkeypatch) -> None:
+    _quiet_side_effects(monkeypatch)
+    monkeypatch.setattr(watch, "_now", lambda: 10_000)
+    fired: list[str] = []
+    monkeypatch.setattr(
+        watch,
+        "_fire_tick",
+        lambda _state, key: fired.append(key) or True,
+    )
+    state: dict = {}
+    initial = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +5.00pp +3.35pp REAL ARB"
+    )
+    improved = (
+        "monotonicity: 6 EXECUTABLE arb(s) after live-CLOB walk, best +3.85pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +6.00pp +3.85pp REAL ARB"
+    )
+
+    assert watch._alert(state, "monotonicity-arb", initial, True) is True
+    assert watch._alert(state, "monotonicity-arb", improved, True) is True
+
+    assert fired == ["monotonicity-arb", "monotonicity-arb"]
+    assert state["reviewed_alerts"]["monotonicity-arb"]["metric"] == 3.85
+
+
+def test_monotonicity_small_improvement_does_not_rearm_review(monkeypatch) -> None:
+    _quiet_side_effects(monkeypatch)
+    monkeypatch.setattr(watch, "_now", lambda: 10_000)
+    fired: list[str] = []
+    monkeypatch.setattr(
+        watch,
+        "_fire_tick",
+        lambda _state, key: fired.append(key) or True,
+    )
+    state: dict = {}
+    initial = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +5.00pp +3.35pp REAL ARB"
+    )
+    small_improvement = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.84pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +6.00pp +3.84pp REAL ARB"
+    )
+
+    assert watch._alert(state, "monotonicity-arb", initial, True) is True
+    assert watch._alert(state, "monotonicity-arb", small_improvement, True) is False
+
+    assert fired == ["monotonicity-arb"]
+
+
+def test_monotonicity_different_best_pair_rearms_review(monkeypatch) -> None:
+    _quiet_side_effects(monkeypatch)
+    monkeypatch.setattr(watch, "_now", lambda: 10_000)
+    fired: list[str] = []
+    monkeypatch.setattr(
+        watch,
+        "_fire_tick",
+        lambda _state, key: fired.append(key) or True,
+    )
+    state: dict = {}
+    initial = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Clarity Act bar>=58.0 bar>=50.0 +5.00pp +3.35pp REAL ARB"
+    )
+    different_pair = (
+        "monotonicity: 5 EXECUTABLE arb(s) after live-CLOB walk, best +3.35pp — "
+        "Another ladder bar>=60.0 bar>=55.0 +5.00pp +3.35pp REAL ARB"
+    )
+
+    assert watch._alert(state, "monotonicity-arb", initial, True) is True
+    assert watch._alert(state, "monotonicity-arb", different_pair, True) is True
+
+    assert fired == ["monotonicity-arb", "monotonicity-arb"]
+
+
 def test_legacy_state_records_already_reviewed_payload(monkeypatch) -> None:
     _quiet_side_effects(monkeypatch)
     monkeypatch.setattr(watch, "_now", lambda: 10_000)

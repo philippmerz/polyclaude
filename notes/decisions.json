@@ -1,5 +1,5 @@
 {
-  "next_id": 141,
+  "next_id": 142,
   "decisions": [
     {
       "id": 1,
@@ -2777,6 +2777,26 @@
         "alert-dedupe",
         "news-coverage",
         "clarity-act"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 141,
+      "timestamp": "2026-09-17T06:03:58Z",
+      "type": "scaffolding",
+      "thesis": "DEC-0140's exact-text review dedupe was still too sensitive: the Clarity best pair and +3.35pp executable net edge stayed unchanged, while total candidate count and gross midpoint spread oscillated and rearmed the shared-cooldown retry. Canonicalize monotonicity reviews by best pair identity and executable net edge, suppress falling or sub-0.5pp improvements, and rearm for a different pair or at least 0.5pp net improvement.",
+      "confidence": "high",
+      "prediction": "Through 2026-09-24, changes only to monotonicity candidate count or gross midpoint spread will append raw alerts without launching a review; a different best pair or a same-pair net-edge improvement of at least 0.5pp will remain eligible.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-24",
+      "tags": [
+        "opportunity-watch",
+        "semantic-dedupe",
+        "monotonicity",
+        "alert-noise"
       ],
       "slug": null,
       "outcome": null,

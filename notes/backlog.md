@@ -1,5 +1,24 @@
 # Polyclaude Backlog
 
+## Sep-17 06:05 current update
+
+- **06:00 periodic review / opportunity dedupe hardened:** No post-04:48 news,
+  watchlist hit, overdue decision or portfolio catalyst requires action. Five
+  raw Clarity observations kept the same over-58/over-50 best pair and 3.35pp
+  executable net edge, but candidate count moved 5→4→5 and the diagnostic
+  gross spread moved 5.00pp→5.50pp. Those cosmetic text changes rearmed the
+  first dedupe version's retry, although the shared cooldown prevented another
+  tick. Opportunity-watch now canonicalizes reviews by best pair identity and
+  executable net edge: raw observations still append, a blocked first dispatch
+  still retries, and a different pair or ≥0.5pp net-edge improvement rearms a
+  review. The daemon was restarted exact-one/current; DEC-0141 records the
+  refinement, and the full 725-test suite passes. No trade or order change.
+  Thirteen legs stand at $158.72 cost,
+  $182.15 midpoint and $148.99 indicative net depth; authoritative bankroll is
+  $202.87 and settled realized P&L remains +$3.31. Every exit is HOLD; state,
+  carry, orders, reservations, UMA, Ostium, redemption and crux are clean.
+  Next clocks: Duma Sep-18–20, Arena Sep-30, emergency-path drill Oct-12.
+
 ## Sep-17 04:48 current update
 
 - **04:39 repeat Clarity alert revalidated / no add:** The held over-58-NO +
