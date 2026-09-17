@@ -1,5 +1,29 @@
 # Polyclaude Backlog
 
+## Sep-17 14:11 current update
+
+- **Full check / Clarity procedural vote — HOLD:** Two material news alerts
+  described the Clarity Act as having failed. The official Sep. 15 roll call
+  was 49–50 on cloture for the motion to proceed; both held markets explicitly
+  exclude motions to proceed and cloture and resolve on the first final-passage
+  vote. It is directionally negative for passage but has no resolving effect.
+  The protected 29 over-50-YES + 29 over-58-NO pair still costs $28.32893
+  all-in, guarantees at least $29 under consistent settlement, and would exit
+  for only about $27.65. Hold the complete pair; never transact one leg.
+  DEC-0149 records the decision. Gemini's 5pp alert was another thin-book
+  midpoint move: its resolving source has no new qualifying Pro row and the
+  full exit is $20.30 versus $33.80 central hold value. All other direct and
+  protected exits are HOLD. Carry, watchlist, pending decisions, Kelly, state,
+  orders, reservations, UMA, redemption, Ostium, crux and four exact-one/current
+  daemons are clean. Full default, thin-tail, sports, macro, monotonicity,
+  consistency, favorite-fade and Limitless discovery produced no entry above
+  the current gates. Thirteen legs stand at **$158.72 cost, $186.87 midpoint
+  and $158.59 indicative net depth**; authoritative bankroll is **$207.56**
+  and settled realized P&L is **+$3.22**. The sole live order remains the
+  zero-fill Trump 28-NO maker sell at .97. Weekly P&L and world-state rotation
+  are current. Telegram summary **983** was sent once; Fireworks spend remained
+  zero.
+
 ## Sep-17 12:50 current update
 
 - **Repeated Clarity arb Telegrams fixed:** The operator reported stale Clarity

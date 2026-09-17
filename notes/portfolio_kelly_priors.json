@@ -1266,7 +1266,8 @@
   "cluster_frac": 0.1463,
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
-  "current_assessment": "Conservative portfolio floor prior: P(over 50 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-58 NO it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly."
+  "current_assessment": "Conservative portfolio floor prior: P(over 50 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-58 NO it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
+  "latest_catalyst": "Sep-17 official recheck: Sep-15 vote 234 was 49-50 cloture on the motion to proceed; the exact criteria exclude it. This is directionally negative for future passage but has no resolving effect. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
  },
  "will-over-58-senators-vote-for-the-clarity-act-20260729193533309": {
   "p_no": 0.5,
@@ -1277,6 +1278,7 @@
   "cluster_frac": 0.1463,
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
-  "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-50 YES it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly."
+  "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-50 YES it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
+  "latest_catalyst": "Sep-17 official recheck: Sep-15 vote 234 was 49-50 cloture on the motion to proceed; the exact criteria exclude it. This is directionally negative for future passage but has no resolving effect. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
  }
 }

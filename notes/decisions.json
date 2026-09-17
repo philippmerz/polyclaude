@@ -1,5 +1,5 @@
 {
-  "next_id": 149,
+  "next_id": 150,
   "decisions": [
     {
       "id": 1,
@@ -2942,6 +2942,26 @@
         "clarity-act"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 149,
+      "timestamp": "2026-09-17T14:09:03Z",
+      "type": "skip",
+      "thesis": "Two material alerts described the Clarity Act as having failed, but an official Senate recheck shows the September 15 roll call was a 49-50 cloture vote on the motion to proceed. Both held threshold markets explicitly exclude motions to proceed and cloture and resolve on the first final-passage vote, so this vote does not resolve either leg. The equal 29-share over-50 YES plus over-58 NO position still has a criteria-consistent 29-dollar payout floor against 28.32893 all-in cost; the fresh full-pair exit is about 27.65. Hold the complete pair and never trade one leg independently.",
+      "confidence": "high",
+      "prediction": "If the two contracts resolve consistently under their matching criteria, the complete equal-share pair pays at least 29 dollars in every final-vote or no-vote branch. The September 15 procedural roll call will not itself be used as the qualifying final-passage vote; reconsider only on a qualifying vote, criteria or UMA change, or a complete-pair exit above hold value.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "clarity-act",
+        "protected-group",
+        "cloture",
+        "skip-exit"
+      ],
+      "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -17531,3 +17531,52 @@ canonical absolute command; PID **1535442** is the sole process and started
 after the edited script. The latest live Clarity scan is only **1.28pp**, below
 the 2pp wake threshold, so there is no current trade or review. DEC-0148 records
 the repair. Telegram reply **982** was sent once.
+
+## 2026-09-17 14:00–14:11 UTC — full check; Clarity procedural vote revalidated
+
+Two post-journal MATERIAL alerts described the Clarity Act as having failed and
+linked that claim to the held Senate-vote thresholds. The official Senate roll
+call was independently checked before acting. Vote 234 on Sep. 15 was rejected
+49–50 on cloture for the motion to proceed. The exact Gamma criteria for both
+held markets say the qualifying event is the first full-Senate final-passage
+vote and explicitly exclude a motion to proceed, cloture and amendments. The
+procedural loss is directionally negative for eventual passage, but it neither
+resolves the markets nor supplies the Yea count they ask for. Both markets
+remain open with no UMA proposal or criteria change.
+
+Economics still favor holding the protected position as one unit. The 29
+over-50 YES plus 29 over-58 NO shares cost **$28.32893 all-in** and, under
+matching settlement, pay at least **$29** whether the final count is at most 50,
+51–58, over 58, or no qualifying vote occurs by the deadline. Fresh complete-
+pair exit value is about **$27.65**, below that floor before foregone carry.
+No independent-leg trade is permitted or justified. DEC-0149 records the HOLD,
+and both Kelly-prior rows now carry the procedural-vote catalyst without
+changing the conservative floor prior.
+
+The other catalyst and exit checks found no thesis break. Gemini HLE ≥40's
+5pp UMA mark move was a thin-book midpoint flap: the live chart still has the
+same qualifying Gemini Pro subset and no new Pro row, while a complete exit is
+**$20.30** versus **$33.80** central hold value. Apple exits for $13.33 versus
+$17.15 hold value; the remaining direct legs and the Duma, MetaMask and Clarity
+groups also remain HOLD. Marginal APY returned five holds and zero flags;
+watchlist monitoring found no trigger; decisions had no overdue row; constrained
+Kelly required no size change. State audit refreshed 13 indexed positions plus
+one deindexed row cleanly. Orders show only the zero-fill Trump 28-NO maker sell
+at .97. UMA, Ostium state diff, crux coverage, reservations, reconciliation and
+redemption were clean; `redeem-all` found no winning redeemable position. All
+four daemons were exact-one, current and on their canonical commands.
+
+Full discovery covered the default and thin-tail market passes, sports, macro,
+monotonicity, consistency, favorite-fade and a fresh 19-match Limitless scan.
+No candidate cleared evidence, depth, fee and allocation gates. The current
+Clarity 58/50 structure offered only about **0.31pp** after fees, below action
+thresholds. Weekly P&L through Sep. 11 is only six days old and the Sep. 13
+world-state rotation is current, so neither weekly task was due.
+
+Final state is 13 legs at **$158.72 cost, $186.87 midpoint and $158.59
+indicative net depth**. Authoritative whole-account mark is **$207.56** and
+settled realized P&L remains **+$3.22**. The $28.27 midpoint/depth gap is led by
+Gemini-debut and Apple liquidity. No trade, fill, transfer, order change or
+redemption occurred. Next dated clocks are Duma voting Sep. 18–20, the Arena
+source snapshot Sep. 30 and the emergency-path drill Oct. 12. Telegram summary
+**983** was sent once; Fireworks spend remained zero.
