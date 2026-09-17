@@ -17685,3 +17685,16 @@ adapter validations added roughly $0.000029. Full measurements and the proposed
 `research/jev_eval_2026-09-17.md`. DEC-0150 records the scaffolding choice. No
 trading, watcher, alert-suppression or portfolio-probability path was changed.
 Telegram reply **985** reported the result once.
+
+The operator immediately identified the binding caveat: Jev has no internet or
+tools, so its cheap, fast call presupposes that another system supplied every
+relevant fact. That observation narrows the conclusion. The 76-call benchmark
+measured marginal inference only; it did not measure discovery, source
+retrieval, criteria/book collection, verification or state assembly, and Jev
+cannot flag an omitted decisive fact. Any shadow trial must therefore record
+the complete end-to-end cost and latency, require timestamped source-backed
+inputs, and fail missing or stale fields open to frontier review. Batching many
+atomic checks over one already-produced state may still save work; a one-off
+candidate whose state must be researched specially may gain nothing. Telegram
+reply **988** acknowledged the correction. No adapter or production path needed
+to change.

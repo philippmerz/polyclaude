@@ -1,6 +1,6 @@
 # Polyclaude Backlog
 
-## Sep-17 21:46 current update
+## Sep-17 21:50 current update
 
 - **Jev 1.13 evaluated; shadow semantic prefilter only:** The operator supplied
   TypeSafe/Jev API access. The credential is stored only in the private mode-
@@ -19,6 +19,14 @@
   `research/jev_eval_2026-09-17.md`. Telegram reply **985** was sent. Next gate
   is 200–500 prospectively frozen shadow rows before considering even a review-
   routing role; Jev cannot suppress material alerts or set a portfolio prior.
+  **Operator correction:** Jev has no internet or tools, so the headline cost
+  and latency begin only after a caller has found, verified and assembled every
+  relevant input. Missing state is an unobservable failure mode for the model.
+  Treat the system as post-retrieval classification only, fail incomplete or
+  stale states open to frontier review, and include retrieval/assembly in the
+  prospective end-to-end benchmark. No workflow-level speed, cost, recall or
+  ROI advantage is established yet. Telegram replies **987–988** recorded the
+  completed adapter and this narrower conclusion.
 
 ## Sep-17 18:04 current update
 
