@@ -17623,3 +17623,65 @@ shows only the known Clarity structure near +0.31pp, below its 2pp wake floor.
 UMA has no unresolved alert after the review, and all four daemons are
 exact-one/current. No trade, transfer, fill, order change, new decision record
 or Telegram was warranted.
+
+## 2026-09-17 21:33–21:46 UTC — Jev API evaluated and bounded as shadow-only
+
+The operator supplied a Jev API credential and asked whether it could make
+opportunity and probability scoring faster and cheaper. The authenticated
+service is TypeSafe AI's System One endpoint. `GET /v1/models` confirmed
+`jev-latest` and `jev-preview`; all evaluation calls pinned the underlying
+`jev-1.13.0` version. Public documentation quotes $0.042 per million input
+tokens with free output and advises that this model is literal, works best on
+fast atomic judgments, and struggles with numeric precision, date comparison,
+indirection and generation. The credential was written once to the private
+mode-0600 `~/.polyclaude/env` as `POLYCLAUDE_JEV_API_KEY`; it never entered a
+tracked file, command output, benchmark artifact or usage record.
+
+The first current-state call asked five typed Apple questions in one request.
+It used 960 input tokens, cost approximately **$0.00004032**, returned in .76
+seconds and correctly classified the absence of a qualifying release and the
+lack of incremental evidence. Twenty concurrent repeats then demonstrated the
+operational advantage: all succeeded in 1.73 seconds total, with .79-second
+p50 and .94-second p95 per-call latency, for **$0.0005754** total. Outputs were
+probabilistically stable on the nouls, although the low-confidence action label
+varied between HOLD and SELL. Actual VM latency was slower than the vendor's
+70–500 ms claim but still suitable for broad shadow screening.
+
+The decisive probability test replayed five archived July states, five samples
+each, against the fair probabilities from the previously graded Kimi research
+run. Jev means were Bears .084 versus .55, Hormuz .264 versus .52,
+cyclosporiasis .294 versus .85, Apple .226 versus .40, and SpaceX .670 versus
+.96. Run-to-run standard deviations were only .005–.015, but mean absolute
+disagreement was **.348** and every forecast was conservative. A fuller Apple
+state had separately produced .39 rather than the compact state's .22–.23.
+The benchmark is disagreement with a research reference rather than resolved
+ground truth, but the size and prompt sensitivity rule out treating a raw Jev
+probability as a portfolio fair value.
+
+The semantic-routing result was much better. Six archived selectivity cases
+supplied exact criteria, price context and an already-verified fact. Sulyok was
+the single instance-fact candidate; WTI, Hormuz traffic, Fed, France/Hormuz and
+Prime/SDCC were rejects. Across five repeats each, Jev returned **30/30 stable
+route labels and 6/6 correct majority routes**. This is a valid low-cost use:
+deterministic code and source collectors prepare public state, Jev cheaply
+promotes candidates for frontier review, and the existing agent still verifies
+facts, sets probabilities and makes every position decision. During shadowing,
+a Jev reject cannot suppress a material alert or opportunity.
+
+`scripts/jev_shadow.py` implements that boundary without any production caller.
+It uses the exact TypeSafe endpoint and typed question map, pins `jev-1.13.0`,
+caps state/question size, timeout and matching-state repeats, and enforces a
+preventive **$0.50 calendar-month spend cap**. Its private mode-0600 usage log
+contains only timestamp, provider/model, token counts, latency, estimated cost,
+status and a canonical state hash—never the key, raw state or answer. Six
+focused tests cover the exact wire shape, raw-env authentication seam, request
+bounds, stable hashing, log redaction/permissions, repeat limit and monthly
+cap. A final live adapter call correctly scored an excluded Clarity procedural
+vote at .03 qualifying probability.
+
+The 76-call evaluation used **47,982 input tokens / about $0.002015**; two final
+adapter validations added roughly $0.000029. Full measurements and the proposed
+200–500-row prospective shadow gate are in
+`research/jev_eval_2026-09-17.md`. DEC-0150 records the scaffolding choice. No
+trading, watcher, alert-suppression or portfolio-probability path was changed.
+Telegram reply **985** reported the result once.

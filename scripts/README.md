@@ -22,6 +22,7 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 ## Decision-quality tracking
 
 - `decisions.py` — record/list/update/summarize structured decision entries. Stored in `notes/decisions.json`. Foundation for evaluating reasoning quality at scale; spec in `strategy/00_philosophy.md`.
+- `jev_shadow.py` — standalone, capped System One research client. It is shadow-only: no watcher, probability, order, or trade path calls it. `models` is read-only; `ask` accepts typed state plus an ID-keyed `{type, instructions, criteria}` question map, pins `jev-1.13.0` by default, and records only metering metadata plus a state hash in private local usage history. It enforces input, timeout, repeat, and $0.50 calendar-month caps.
 
 ## Status / inspection (read-only)
 

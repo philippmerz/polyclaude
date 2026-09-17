@@ -1,5 +1,25 @@
 # Polyclaude Backlog
 
+## Sep-17 21:46 current update
+
+- **Jev 1.13 evaluated; shadow semantic prefilter only:** The operator supplied
+  TypeSafe/Jev API access. The credential is stored only in the private mode-
+  0600 `~/.polyclaude/env`. A live 76-call benchmark used 47,982 input tokens
+  for about **$0.002015** with zero failures; concurrent p50/p95 latency was
+  roughly .8/.99 seconds. Jev routed all six archived selectivity cases
+  correctly across 30/30 stable samples, making it promising for cheap
+  candidate promotion. It is not a fair-probability replacement: five archived
+  forecasts had **.348 mean absolute disagreement** versus the graded Kimi
+  references, and modest Apple-state framing moved P(YES) from .22 to .39.
+  Added `scripts/jev_shadow.py`, pinned to `jev-1.13.0`, with exact typed-schema
+  validation, tight input/time/repeat caps, a **$0.50 calendar-month cap**, and
+  private mode-0600 metadata-only usage logging. It has no caller in watchers,
+  probability code, orders or execution. Six focused tests plus a live harmless
+  criteria check pass. DEC-0150 records the boundary; the full evaluation is in
+  `research/jev_eval_2026-09-17.md`. Telegram reply **985** was sent. Next gate
+  is 200–500 prospectively frozen shadow rows before considering even a review-
+  routing role; Jev cannot suppress material alerts or set a portfolio prior.
+
 ## Sep-17 18:04 current update
 
 - **Apple move and later Clarity coverage revalidated — HOLD:** Apple

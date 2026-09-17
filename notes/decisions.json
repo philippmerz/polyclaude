@@ -1,5 +1,5 @@
 {
-  "next_id": 150,
+  "next_id": 151,
   "decisions": [
     {
       "id": 1,
@@ -2962,6 +2962,26 @@
         "skip-exit"
       ],
       "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 150,
+      "timestamp": "2026-09-17T21:46:06Z",
+      "type": "scaffolding",
+      "thesis": "A live Jev 1.13 evaluation showed strong economics and semantic routing but inadequate standalone forecasting. Seventy-six benchmark calls cost about 0.002 dollars with roughly 0.8-second median latency, and archived opportunity routing was correct on all six cases. However, five-market probability disagreement versus the graded research-model references averaged 0.348 and Apple scores were materially framing-sensitive. Add only a pinned, capped, shadow-only adapter with private metadata logging; do not connect Jev to material-alert suppression, portfolio priors, orders, or execution.",
+      "confidence": "high",
+      "prediction": "Through 2026-09-24, the Jev adapter will accept bounded public-state typed questions, keep credentials and raw states out of tracked files and usage logs, enforce repeat and 0.50-dollar monthly caps, and remain unreferenced by all production trading and watcher paths. Further shadow samples will preserve useful candidate-routing signal but will not justify raw Jev probabilities as fair values without prospective calibration.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-24",
+      "tags": [
+        "jev",
+        "shadow-inference",
+        "provider-eval",
+        "cost-control"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
