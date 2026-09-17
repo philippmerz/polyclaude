@@ -17383,6 +17383,16 @@ $0.15 of Aave carry to Dec-31 leaves only about $0.30 for funding, slippage and
 operational risk. Draining the reserve, converting gas or selling a positive-EV
 position is not justified for that remainder. DEC-0144 records the skip.
 
+The recovery had left the withdrawn capital in idle pUSD. With no new pair
+justified, **$4.51242 pUSD** was unwrapped back to USDC.e (approval
+`0xbd3d79aacb8e1cf4464591b20a7127cdc794319e7c1615e61b9fb57dc4ae0e66`,
+unwrap `0x4af6599e3074bbd83e32dee8c367f9bfd0961a112add5da499d2725a3d1a4da8`)
+and supplied to Polygon Aave
+(`0xfd72348f8369a0d114979c4121597e0a438c36dc210531c3b076186837445471`).
+The final wallet has $0.34414 pUSD, zero loose USDC.e and $5.130031 aUSDC.e
+earning the live **3.101% APY**, restoring the pre-attempt operating balance
+minus the realized loss.
+
 The scheduled checklist found no post-cutoff material position news, watchlist
 hit or overdue decision. The 00:48 CENTCOM/Hormuz alert has no causal channel
 to a held position. Discovery covered 1,000 default and 1,441 thin-tail
@@ -17393,8 +17403,8 @@ and zero flagged, and UMA, Ostium, crux, redemption, state, orders,
 reservations, reconciliation and all four exact-one/current daemons are clean.
 World state from Sep-13 and weekly P&L through Sep-11 remain current.
 
-Final state is 13 legs at **$158.72 cost, $175.31 midpoint and $146.12
-indicative net depth**. Authoritative whole-account midpoint is **$195.93**;
+Final state is 13 legs at **$158.72 cost, $178.53 midpoint and $145.45
+indicative net depth**. Authoritative whole-account midpoint is **$199.14**;
 settled realized P&L is **+$3.22** after the recovery loss. The sole live order
 remains the zero-fill Trump 28-NO maker sell at .97. Telegram summary **970**
 was sent once; Fireworks spend remained zero.

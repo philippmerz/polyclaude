@@ -18,11 +18,13 @@
   unheld over-64/over-50 pair costs $16.551156 for a $17 floor, but only
   $14.49 of non-gas stables is liquid and carry/funding friction consumes its
   $0.448844 gross surplus, so no new trade was made. DEC-0142 through DEC-0144
-  record recovery, repair and allocation; Telegram 970 was sent. Thirteen legs
-  stand at $158.72 cost, $175.31 midpoint and $146.12 indicative net depth;
-  authoritative bankroll is $195.93 and settled realized P&L is +$3.22. All
-  exits remain HOLD; state, balances, orders, reservations, UMA, Ostium,
-  redemption, crux and daemons are clean.
+  record recovery, repair and allocation. Recovered pUSD was unwrapped and
+  supplied back to Polygon Aave; pUSD is restored to its $0.34414 operating
+  balance and aUSDC.e is $5.13003 at 3.101% APY. Telegram 970 was sent.
+  Thirteen legs stand at $158.72 cost, $178.53 midpoint and $145.45 indicative
+  net depth; authoritative bankroll is $199.14 and settled realized P&L is
+  +$3.22. All exits remain HOLD; state, balances, orders, reservations, UMA,
+  Ostium, redemption, crux and daemons are clean.
 
 ## Sep-17 06:05 current update
 

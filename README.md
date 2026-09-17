@@ -41,9 +41,9 @@ This file is the current dashboard and entry point. Chronology belongs in
 |---|---:|
 | Unresolved position legs | 13 |
 | Position cost | $158.72 |
-| Polymarket midpoint | $175.31 |
-| Indicative depth/fee value | $146.12 |
-| Authoritative whole-account mark | $195.93 |
+| Polymarket midpoint | $178.53 |
+| Indicative depth/fee value | $145.45 |
+| Authoritative whole-account mark | $199.14 |
 | Settled realized P&L | +$3.22 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -53,7 +53,7 @@ current low-price Clarity structures 17-share trades. An add to the held pair
 is ticket-cap blocked; the best unheld structure locks only $0.448844 before
 funding friction and foregone carry, so it was skipped. All exit checks return
 **HOLD**. The only live order is a zero-fill maker sell for **28 Trump-out NO
-at 0.97**. The $29.18 midpoint-to-depth gap is dominated by Gemini-debut and
+at 0.97**. The $33.08 midpoint-to-depth gap is dominated by Gemini-debut and
 Apple's thin books. The next dated clocks are Duma voting Sep. 18–20, the Arena
 source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 
