@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-16. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-17. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -35,27 +35,29 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-16 22:01 UTC
+## Last audited snapshot — 2026-09-17 02:11 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved positions | 11 |
 | Position cost | $130.59 |
-| Polymarket midpoint | $143.53 |
-| Indicative depth/fee value | $137.14 |
-| Authoritative whole-account mark | $192.47 |
+| Polymarket midpoint | $142.07 |
+| Indicative depth/fee value | $135.81 |
+| Authoritative whole-account mark | $191.12 |
 | Settled realized P&L | +$3.50 |
 
 All direct and protected-group exit checks returned **HOLD**. The only live
-order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $6.39
-midpoint-to-depth gap is concentrated in the illiquid Gemini, Apple and Google
-HLE books, so executable depth remains the more conservative portfolio view.
-Apple's touchscreen-MacBook NO prior was corrected from 0.55 to 0.40 after a
-missed Sep. 14 Gurman timing update; its $14.29 complete exit remains below
-$19.60 central hold value and $14.70 at the 10-point stress. No add clears the
-robust gate. MetaMask and Duma remain worth holding as complete groups.
-The next dated portfolio clocks are the Duma election on Sep. 20, the Arena
-source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
+order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $6.27
+midpoint-to-depth gap is concentrated in illiquid books, so executable depth
+remains the more conservative portfolio view. Apple's touchscreen-MacBook NO
+prior is now 0.35 after a strict-criteria re-underwrite and adverse tape; no
+new official sale fact appeared. Its $11.88 complete exit remains below $17.15
+central hold value and $12.25 at the 10-point stress, while exit plus hurdle
+carry is about $11.99. Duma remains 0.18/0.35/0.19 across its held buckets
+(union 0.72); its $12.98 complete exit remains below $14.40 fair value, and no
+add clears the robust gate. The next dated portfolio clocks are Duma voting
+Sep. 18–20, the Arena source snapshot on Sep. 30, and the emergency-path drill
+on Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

@@ -1,5 +1,24 @@
 # Polyclaude Backlog
 
+## Sep-17 02:13 current update
+
+- **02:00 full check / Apple and Duma re-underwrites:** Eleven positions remain
+  at $130.59 cost, $142.07 midpoint and $135.81 indicative net depth;
+  authoritative bankroll is $191.12 and settled realized P&L remains +$3.50.
+  Apple's touchscreen-MacBook NO prior was revised .40->.35 after a fresh
+  strict-criteria decomposition and adverse but single-actor-dominated tape;
+  no newer official Apple availability fact appeared. The $11.88 full exit is
+  below $17.15 central hold and $12.25 at a 10pp stress, versus about $11.99
+  after exit plus hurdle carry: HOLD / NO ADD, with a new ~.245 exit boundary.
+  The required three-day Duma re-derivation retains .18/.35/.19 (union .72): a
+  Sep-16 search-volume/reputation forecast has no district model and does not
+  displace FOM/VCIOM/APEK. Its complete exit is $12.98 versus $14.40 fair and
+  the .663 ask sum exceeds the .57 add ceiling. Full discovery found no
+  executable arb or robust entry. State, balances, carry, orders, redemption,
+  Ostium, crux, reconciliation and daemons are clean. No trade or order change.
+  Telegram 962 sent. Next clocks: Duma voting Sep-18–20, Arena Sep-30,
+  emergency-path drill Oct-12.
+
 ## Sep-16 22:09 current update
 
 - **22:00 periodic review / Apple prior correction:** No post-18:05 news or

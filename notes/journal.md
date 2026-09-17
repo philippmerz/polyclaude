@@ -17043,3 +17043,84 @@ zero-fill 28-NO GTC sell at .97. Redemption found no winning indexed claim.
 No trade, fill, order change, transfer or redemption occurred. The material
 prior change was sent once by Telegram as message **961**; Fireworks spend
 remained zero. `main` matched `origin/main` at `1f37421` before this review.
+
+## 2026-09-17 02:00–02:13 UTC — full check; Apple prior tightened, Duma re-derived
+
+After the 22:09 cutoff, one persisted news item appeared: an Al Jazeera/CENTCOM
+Hormuz update at 00:48. Its structured impact list was empty and manual review
+found no causal path to a held contract. There was no opportunity alert,
+watchlist hit, overdue decision, operator request or other due backlog item.
+The Sep-13 world-state rotation and weekly P&L through Sep-11 remain current.
+
+Eleven positions remain at **$130.59 cost, $142.07 midpoint and $135.81
+indicative net depth**. Authoritative whole-account midpoint is **$191.12** and
+settled realized P&L remains **+$3.50**. Against 22:00, midpoint fell $1.46,
+realizable value fell $1.33 and bankroll fell $1.35 without a quantity, fill or
+cash-balance change. The midpoint/depth gap is $6.27.
+
+Apple was the only material thesis review. The live market remained open with
+YES/NO at roughly .725/.275 and the held NO book at **.25/.30**. Its post-22:00
+tape was informative but not clean consensus: several NO buys printed from
+.40-.429, then one 277.91-share NO sweep sale averaged about .229, followed by
+YES buys at .73 and .77. The .25 bid had enough depth for all 49.005 NO. At the
+4% linear-in-p(1-p) taker schedule, a full exit would gross $12.25125, pay
+$0.36754 and net **$11.88371**.
+
+No newer qualifying fact appeared after the [Sep-14 Gurman timing report via
+MacRumors](https://www.macrumors.com/2026/09/14/oled-macbook-pro-macos-27-1-testing/).
+Apple's current [Mac newsroom archive](https://www.apple.com/newsroom/archive/mac/)
+and [store](https://www.apple.com/shop/buy-mac/macbook-pro) still show no
+touchscreen MacBook release, preorder or public-sale date. A separate strict-
+criteria decomposition of the existing schedule and purchasability evidence
+estimated P(YES) .69 central with a wide .45-.82 range. The estimate is not a
+new fact, but it exposed that the prior still gave too little weight to the
+latest schedule evidence. Discounting the single large tape actor while
+acknowledging hidden-information flow, revised held **p_no .40 -> .35**, with a
+wide **.18-.55** range.
+
+Central hold value is **$17.15175**. The standard 10pp-stressed .25 hold is
+**$12.25125**, still above the approximately **$11.9906** from selling and
+compounding proceeds at the 3.10% Aave hurdle through year-end. The
+carry-adjusted taker-exit boundary is p_no about **.245**. `exit_analysis.py`
+confirms HOLD by $5.27 at the central prior. A new NO buy at the .30 ask costs
+about .3084 all-in and is negative at the robust .25 probability, while shared
+cluster headroom is below the $5 venue minimum. **HOLD / NO ADD / no hidden-
+information maker sell.** DEC-0138 records the 5-point revision and boundary.
+
+The Duma three-leg set received its required three-day re-derivation. A new
+[Sep-16 Pravdaserm list-vote forecast](https://pravdaserm.com/%D1%8D%D0%BA%D1%81%D0%BA%D0%BB%D1%8E%D0%B7%D0%B8%D0%B2-pravdaserm-%D1%84%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80/)
+puts United Russia at 38.6%, but derives it from reputation times search-query
+volume with party turnout coefficients reverse-fitted from 2021; the underlying
+series gave New People 76.8% of information share and it supplies no district
+forecast. This is a weak downside sensitivity, not a replacement for the
+Sep-10 FOM/VCIOM list forecasts and APEK's 185-195 district range. The automated
+single-bucket catalyst estimate of 6% was also rejected because it backed out a
+residual from sibling market quotes rather than new seat-distribution evidence.
+Retain **.18/.35/.19** across the held buckets, union **p=.72**. Fresh top bids
+sum to .649, making the complete exit **$12.98** versus **$14.40** central fair;
+top asks sum to .663, above the .57 add ceiling and negative at the 10pp-stressed
+union p=.62. **HOLD COMPLETE GROUP / NO ADD / never trade one leg.**
+
+Full discovery covered 1,000 default markets and 1,531 thin-tail candidates.
+Sports checked 48 markets and three consensus comparisons; macro checked eight.
+Monotonicity fetched 1,237 and inspected 947 markets, with four midpoint flags
+and zero executable structures. Consistency scanned 5,003 and validated 3,192,
+with no positive live basket in the bounded coverage. Favorite-fade surfaced
+14 rough and six live names but no instance-qualified edge. The Limitless
+cross-venue pass checked 918 candidates and 16 top matches; none of the leading
+matches was an identical contract above the 1.5% gate. Gemini HLE's exact source
+remains at 60 rows with no new qualifying Gemini Pro entry; MetaMask still has
+no official token or date. No new trade cleared fees, robustness and identity.
+
+The post-update state audit is clean across 11 indexed positions and one
+resolved claim row. Marginal APY has five clear / zero flagged at the 3.10%
+hurdle. Polygon Aave holds about 33.72 USDC.e with .173070 deployable pUSD; the
+crypto sleeve holds about 7.88 Aave USDC. UMA found no held-market proposal or
+dispute. Ostium has zero positions, crux coverage is complete, reservations and
+reconciliation are clean, and all four daemons are exact-one/current. The sole
+live order remains Trump's zero-fill 28-NO GTC sell at .97. Redemption found no
+winning claim among 13 indexed checks.
+
+No trade, fill, order change, transfer or redemption occurred. Telegram summary
+**962** was sent once because the Apple prior changed; Fireworks spend remained
+zero. `main` matched `origin/main` at `5c9b0d5` before this review.

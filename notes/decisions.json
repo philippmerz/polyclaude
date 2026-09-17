@@ -1,5 +1,5 @@
 {
-  "next_id": 138,
+  "next_id": 139,
   "decisions": [
     {
       "id": 1,
@@ -2717,6 +2717,26 @@
         "prior-revision",
         "hold",
         "missed-source"
+      ],
+      "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 138,
+      "timestamp": "2026-09-17T02:09:16Z",
+      "type": "skip",
+      "thesis": "Fresh strict-criteria decomposition of the known Sep-14 Gurman schedule report estimated touchscreen-MacBook NO near 0.31, while post-22:00 flow was mixed but ultimately dominated by one 277.91-share NO sweep sale near 0.229 and later YES buys at 0.73/0.77. With no newer official Apple availability fact, discount the single actor but acknowledge hidden-information flow by revising p_no from 0.40 to 0.35. The live 0.25 bid returned $11.8837 net for all 49.005 NO versus $17.1518 central hold and $12.2513 at a 10pp stress; exit plus Aave carry was about $11.9906. Hold, do not add at the 0.30 ask, and place no hidden-information maker sell.",
+      "confidence": "medium",
+      "prediction": "By Dec-31 Apple will not make a touchscreen MacBook available for general-public purchase; if it does, the revised 0.35 NO prior grades wrong. Before resolution, a qualifying Apple purchase listing or central p_no below the approximately 0.245 carry-adjusted exit boundary should cause a fresh exit review.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "apple",
+        "prior-revision",
+        "hold",
+        "hidden-information-flow"
       ],
       "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
       "outcome": null,

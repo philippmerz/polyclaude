@@ -903,3 +903,134 @@ None identified. Technical negotiations and Iran’s forthcoming conditions list
 - [AP: potential agreement and 30–60-day further talks](https://apnews.com/article/middle-east-iran-israel-west-bank-august-26-2026-cb19bc3f0b467db591edbef52d0db273)
 - [Reuters: Iran sets conditions; details still being worked out](https://www.investing.com/news/commodities-news/iran-sets-conditions-for-reopening-strait-of-hormuz-top-security-official-rezaei-says-4880217)
 - [AP: Qatar discusses proposed Iran-Oman plan](https://apnews.com/article/middle-east-iran-israel-west-bank-august-27-2026-c457cd178b05f6c39c8c2e33f0a565ba)
+
+---
+
+## 2026-09-17T02:01:57Z — catalyst_check
+
+**Query:** `Will Apple release a touchscreen MacBook in 2026?` resolves 2027-01-01 (106d)
+
+## CATALYST CHECK: Will Apple release a touchscreen MacBook in 2026?
+
+Resolution: 2027-01-01 | Days: 106 | Today: 2026-09-17
+
+### Base rate
+
+Apple has never released a touchscreen MacBook; absent product-specific late-stage reporting, the 106-day base rate is effectively 0%.
+
+### Existing qualifying evidence
+
+Not applicable.
+
+### Catalysts in window
+
+- [MED] 2026-10 (expected) - macOS 27.1 is reportedly due in late October; touchscreen OLED MacBooks are reportedly being tested on it. This is a strong readiness/timing signal, but neither an announcement nor public availability. [Source](https://www.macrumors.com/2026/09/14/oled-macbook-pro-macos-27-1-testing/)
+- [MED] 2026-10 to 2026-11 (unconfirmed) - probable Apple fall Mac launch window; no Apple event/date has been announced. A product announcement would materially update odds, but still does not resolve YES unless public ordering/delivery is available by Dec. 31. [Source](https://www.macworld.com/article/672537/when-is-apples-next-event.html)
+- [HIGH] By 2026-12-31 - Apple Store general-public availability of a touchscreen product explicitly branded “MacBook” would directly resolve YES; announcement-only does not qualify. [Apple Mac newsroom archive](https://www.apple.com/newsroom/archive/mac/)
+
+### Recent news (last 14d)
+
+- 2026-09-14 - Touchscreen OLED MacBook Pro reportedly testing with macOS 27.1 and listed for later in 2026: raises the chance of a year-end launch, but remains unconfirmed reporting. [Source](https://www.macrumors.com/2026/09/14/oled-macbook-pro-macos-27-1-testing/)
+- 2026-09-02 - Apple Maps renames Lake Ontario to “Lake America”: no relevance to the qualifying product release.
+
+### P(YES) estimate
+
+- Low: 45%
+- Central: 69%
+- High: 82%
+- Reasoning: Credible reporting has shifted from a broad “late 2026 or early 2027” range toward “later this year,” and software testing supports readiness. The strict risk is timing: a fall unveiling with January availability still resolves NO.
+- Multiplicative breakdown: P(touchscreen MacBook ships in 2026) 75% × P(general-public purchase availability by Dec. 31 | ships) 93% × P(explicit MacBook branding and true touchscreen | available) 99% = 69%.
+- Reconciliation: Central equals the strict-criteria product; announcement/testing evidence is not treated as qualifying release evidence.
+
+### Sources
+
+- [Apple Mac newsroom archive](https://www.apple.com/newsroom/archive/mac/)
+- [Bloomberg: Apple readies first touchscreen MacBook](https://www.bloomberg.com/news/articles/2025-10-16/apple-readies-high-end-macbook-pro-with-touch-hole-punch-screen)
+- [MacRumors: macOS 27.1 testing report](https://www.macrumors.com/2026/09/14/oled-macbook-pro-macos-27-1-testing/)
+- [Macworld: touchscreen MacBook timeline](https://www.macworld.com/article/2931833)
+
+---
+
+## 2026-09-17T02:05:19Z — catalyst_check
+
+**Query:** `Will United Russia win between 295 and 309 seats in the next Russian State Duma election?` resolves 2026-09-20 (3d)
+
+## CATALYST CHECK: Will United Russia win between 295 and 309 seats in the next Russian State Duma election?
+
+Resolution: 2026-09-20 | Days: 3 | Today: 2026-09-17
+
+### Base rate
+
+United Russia won 343 seats in 2016 and 324 in 2021; the 295–309 bracket hit 0/2 analogous elections, though the sample is small.
+
+### Existing qualifying evidence
+
+- None found after first-party + named-source sweep; the criterion is seats won in the 2026 election, not current United Russia holdings or polling.
+
+### Catalysts in window
+
+- [HIGH] 2026-09-18 to 2026-09-20 - State Duma voting occurs; all 450 seats are contested, with voting formally scheduled across these three days. Preliminary tallies could sharply reprice the bracket, but do not themselves satisfy the literal criterion unless credible reporting establishes final seats won. - [CEC election calendar](https://base.garant.ru/414402039/)
+- [HIGH] 2026-09-20 - Poll close / preliminary CEC count expected; this is the first direct read on United Russia’s actual seat total. Official certification may follow after the window. - [CEC voting decision](https://base.garant.ru/414402159/)
+- [LOW] 2026-09-18 to 2026-09-20 - Electronic voting is scheduled alongside in-person voting; operational disruption could affect timing, but does not change the literal seat-count test absent changed results. - [CEC remote-voting order](https://www.consultant.ru/document/cons_doc_LAW_537650/)
+
+### Recent news (last 14d)
+
+- 2026-09-15 - Reuters reports VTsIOM’s late-August United Russia support at 37%, with the party still expected to dominate: lower vote support does not map cleanly to seats because 225 seats are single-member districts.
+- 2026-09-16 - AP reports voting begins Friday and highlights the tightly managed wartime election: supports a United Russia win, but not this narrow 15-seat band.
+- 2026-09-16 - Reported CEC-system breach: potential count/timing risk, not qualifying evidence of any seat total.
+
+### P(YES) estimate
+
+- Low: 2%
+- Central: 6%
+- High: 12%
+- Reasoning: The literal test is the eventual number of seats won, not merely United Russia retaining dominance or a constitutional majority. A contemporaneous forecast assigns 80% to United Russia winning at least 300 seats, while a related market reportedly prices 325+ at 72.5% and 310–324 around 18–22%, leaving a small residual probability below 310; 295–309 is only part of that tail.
+
+### Sources
+
+- [CEC election calendar: voting 18–20 September](https://base.garant.ru/414402039/)
+- [Reuters election preview and VTsIOM poll](https://www.marketscreener.com/news/what-to-know-about-russia-s-upcoming-parliamentary-election-ce785bddd888fe2c)
+- [AP: wartime Russia election begins Friday](https://apnews.com/article/fe0926d8b3f42ebd9e43f9eb003df5ae)
+- [2021 official-result reporting: United Russia 324 seats](https://interfax.com/newsroom/top-stories/72732/)
+- [IPU: 2016 result, United Russia 343 seats](https://data.ipu.org/parliament/RU/RU-LC01/election/RU-LC01-E20160918/)
+- [Pre-election assessment: at least 300 seats, 80%](https://aegeanintel.com/research/after-the-duma/)
+
+---
+
+## 2026-09-17T02:05:28Z — catalyst_check
+
+**Query:** `Will the next Google Gemini Pro model debut with a Humanity’s Last Exam score of 40% or higher?` resolves 2026-12-31 (105d)
+
+## CATALYST CHECK: Will the next Google Gemini Pro model debut with a Humanity’s Last Exam score of 40% or higher?
+
+Resolution: 2026-12-31 | Days: 105 | Today: 2026-09-17
+
+### Base rate
+Among the three recent Gemini Pro entries visible across official/named HLE evidence, 1/3 cleared 40% (Gemini 3.1 Pro at 44.4%; 3 Pro at 38.3%; 2.5 Pro at 21.6%), but the latest step already cleared the threshold.
+
+### Existing qualifying evidence
+- 2026-02-19 - Gemini 3.1 Pro, HLE full set (text + multimodal), no tools, Thinking High: **44.4%** — [Google model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/)
+- Current named-source static table - Gemini 3 Pro: **38.3%**; Gemini 2.5 Pro: **21.6%** — [HLE](https://agi.safe.ai/)
+
+These are pre-existing models, so they do not themselves satisfy the criterion requiring a newly added next Pro result.
+
+### Catalysts in window
+- [MED] 2026-09-17 to 2026-12-31 - Gemini 3.5 Pro remains the publicly flagged next Pro model, but Google’s current model-card index contains no 3.5 Pro card; its eventual release plus HLE addition is the direct pathway to resolution — [Google model cards](https://deepmind.google/models/model-cards/)
+- [HIGH] 2026-12-31 - If no qualifying new Gemini Pro result is added by 11:59 PM ET, literal criteria force **No** — [HLE](https://agi.safe.ai/)
+
+### Recent news (last 14d)
+- 2026-09-15 - Google added Gemini 3.8 Live model-card material, not a Pro model: confirms continued Gemini releases but does not qualify.
+- No material scheduled Google Pro-model announcement identified.
+
+### P(YES) estimate
+- Low: 28%
+- Central: 48%
+- High: 64%
+- Reasoning: The strict bar is not Google releasing a Pro model, nor Google publishing a benchmark claim: a newly added **Pro-labeled** result must persist to the next-day noon ET check and display at least 40% on HLE. The prior 44.4% no-tools result supports threshold clearance conditional on a new Pro entry, but the delayed/absent 3.5 Pro makes timely qualifying addition uncertain.
+- Multiplicative breakdown: P(new qualifying Pro added by deadline and persists) **60%** × P(displayed HLE Accuracy ≥40% | added) **80%** = **48%**
+
+### Sources
+- [Humanity’s Last Exam](https://agi.safe.ai/)
+- [Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/)
+- [Google DeepMind model-card index](https://deepmind.google/models/model-cards/)
+- [Google I/O 2026 announcement](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/)
