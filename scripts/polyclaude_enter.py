@@ -527,6 +527,12 @@ def _classify_clob_result(stdout: str, side: str,
         http_status = 999
     if http_status >= 500 or http_status in {408, 409, 425, 429}:
         return "ambiguous", result
+    # Non-retryable client errors mean the exchange rejected this request. In
+    # particular, HTTP 400 "invalid amount" is a definitive no-fill; leaving
+    # it ambiguous can strand a bundle's first leg and suppress the safe
+    # automatic unwind. Keep retryable/racy statuses above ambiguous.
+    if 400 <= http_status < 500:
+        return "failed", result
     if body.get("success") is False:
         return "failed", result
     if status in terminal_statuses:

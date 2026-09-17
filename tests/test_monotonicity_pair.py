@@ -169,6 +169,26 @@ def test_build_leg_sorts_raw_book_and_enforces_both_minimums(monkeypatch):
         pair._build_leg(market(435), "NO", 4)
 
 
+def test_build_leg_rejects_buy_below_one_dollar_venue_notional(monkeypatch):
+    curve = SimpleNamespace(authoritative=True)
+    monkeypatch.setattr(pair.entry, "_clob_market_info", lambda _: {
+        "full": {"tokens": [{"token_id": "2", "outcome": "No"}],
+                 "neg_risk": False},
+        "minimum_tick_size": .01, "minimum_order_size": 5,
+    })
+    monkeypatch.setattr(pair.entry, "_clob_fee_market", lambda _: {})
+    monkeypatch.setattr(pair.pm_fees, "fee_schedule", lambda _: curve)
+    monkeypatch.setattr(pair.pm_fees, "max_taker_buy_cost_through",
+                        lambda _market, price: price)
+    monkeypatch.setattr(pair, "_fetch_validated_clob_book", lambda *_: {
+        "asks": [(.06, 100)], "bids": [(.05, 100)],
+        "min_order_size": 5, "timestamp": 1,
+    })
+
+    with pytest.raises(RuntimeError, match="below venue minimum"):
+        pair._build_leg(market(435), "NO", 5)
+
+
 def test_submission_rejects_fee_increase_above_reservation(monkeypatch):
     planned = {
         "token": "token", "condition_id": "0xabc", "neg_risk": False,
@@ -298,3 +318,94 @@ def test_execute_path_keeps_one_bundle_and_reconciles_both_legs(monkeypatch):
         ("rid-late", "order-late-yes", {"submission_state": "matched"}),
     ]
     assert balances == {"early-no": 16.0, "late-yes": 16.0}
+
+
+def test_execute_http400_invalid_amount_unwinds_first_leg(monkeypatch):
+    early, late = market(435), market(445)
+    balances = {"early-no": 0.0, "late-yes": 0.0}
+    reservations, removed, rollback_calls, submitted = [], [], [], []
+
+    monkeypatch.setattr(pair, "lookup_active_market_identifier",
+                        lambda identifier: early if "435" in identifier else late)
+
+    def build_leg(raw, outcome, shares):
+        is_early = raw["id"] == "435"
+        return {
+            "market": raw, "slug": raw["slug"], "question": raw["question"],
+            "condition_id": raw["conditionId"],
+            "token": "early-no" if is_early else "late-yes", "outcome": outcome,
+            "limit": .45, "buy_usd_size": round(shares * .45, 2),
+            "fee_at_limit": 0.0, "depth": 100.0 if is_early else 20.0,
+            "neg_risk": False,
+            "book": {"asks": [{"price": .45, "size": 100.0}],
+                     "bids": [{"price": .44, "size": 100.0}]},
+            "fee_market": {"feesEnabled": False},
+        }
+
+    monkeypatch.setattr(pair, "_build_leg", build_leg)
+    monkeypatch.setattr(entry, "_chain_reader", lambda **_: {"reader": True})
+    monkeypatch.setattr(entry, "_fetch_live_positions", lambda: [])
+    monkeypatch.setattr(entry, "_fetch_open_buy_commitments", lambda: [])
+    monkeypatch.setattr(entry, "_merge_entry_commitments", lambda *a, **k: [])
+    monkeypatch.setattr(entry, "_single_entry_cap_state", lambda *a, **k: {
+        "cluster_before": 0.0, "cluster_after": 7.2, "cluster_cap": 60.0,
+        "ticket_before": 0.0, "ticket_after": 7.2, "ticket_cap": 30.0,
+        "new_risk": 7.2, "cluster": "treasury",
+    })
+    monkeypatch.setattr(entry, "_single_entry_cap_error", lambda _: None)
+    monkeypatch.setattr(entry, "_wallet_funds_state", lambda *_: {
+        "ctf_approved": True, "deployable": 20.0, "allowance": 100.0,
+        "committed": 0.0,
+    })
+    monkeypatch.setattr(entry, "_read_token_balances",
+                        lambda _reader, tokens: {token: balances[token] for token in tokens})
+    monkeypatch.setattr(entry, "_configure_rollback_guards", lambda *_: .2)
+    monkeypatch.setattr(entry, "_acquire_entry_lock",
+                        lambda: SimpleNamespace(close=lambda: None))
+    monkeypatch.setattr(entry, "_add_entry_reservations",
+                        lambda rows: reservations.extend(rows) or ["rid-early", "rid-late"])
+    monkeypatch.setattr(entry, "_reservation_indexed_bought", lambda *_: 0)
+    monkeypatch.setattr(entry, "_update_entry_reservation",
+                        lambda *a, **k: None)
+    monkeypatch.setattr(entry, "_remove_entry_reservations",
+                        lambda ids: removed.append(set(ids)))
+
+    def run_order(_side, token, *_args, **_kwargs):
+        submitted.append(token)
+        if token == "early-no":
+            balances[token] += 16
+            return "matched", json.dumps({
+                "status_code": 200,
+                "body": {"success": True, "status": "matched",
+                          "orderID": "order-early", "transactionsHashes": ["tx"],
+                          "takingAmount": "16"},
+            })
+        return "failed", json.dumps({
+            "status_code": 400,
+            "body": {"errorMsg": "invalid amount", "status": ""},
+        })
+
+    monkeypatch.setattr(entry, "_run_clob_order", run_order)
+    monkeypatch.setattr(entry, "_wait_token_balance",
+                        lambda _reader, token, _expected: balances[token])
+
+    def rollback(filled, baselines, _reader, **_kwargs):
+        rollback_calls.append((list(filled), dict(baselines)))
+        for token, baseline in baselines.items():
+            balances[token] = baseline
+        return True
+
+    monkeypatch.setattr(entry, "_rollback_bundle", rollback)
+    monkeypatch.setattr(entry, "_wait_bundle_baselines",
+                        lambda _reader, baselines: dict(baselines))
+    monkeypatch.setattr(sys, "argv", [
+        "monotonicity_pair.py", "--early", "market-435", "--late", "market-445",
+        "--shares", "16", "--max-cost", ".93", "--bankroll", "200",
+        "--cluster", "treasury", "--execute",
+    ])
+
+    assert pair.main() == 1
+    assert submitted == ["early-no", "late-yes"]
+    assert len(rollback_calls) == 1
+    assert balances == {"early-no": 0.0, "late-yes": 0.0}
+    assert removed == [{"rid-early", "rid-late"}]

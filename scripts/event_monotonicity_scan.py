@@ -50,7 +50,7 @@ from __future__ import annotations
 import argparse
 import calendar
 import datetime
-from decimal import Decimal, InvalidOperation
+from decimal import Decimal, InvalidOperation, ROUND_CEILING
 import json
 import math
 import re
@@ -553,6 +553,15 @@ def _walk_clob_asks(levels: list[tuple[Decimal, Decimal]], size: Decimal,
     }
 
 
+def _marketable_buy_limit(ask: Decimal) -> Decimal | None:
+    """Return the two-decimal BUY limit used by the v2 execution path."""
+    limit = ((ask * Decimal("100")).to_integral_value(rounding=ROUND_CEILING)
+             / Decimal("100"))
+    if limit > Decimal("0.99"):
+        return None
+    return limit
+
+
 def _fee_market_from_row(row: dict) -> dict | None:
     """Return the best fee payload carried by a scanner row.
 
@@ -618,6 +627,24 @@ def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
         late_book["min_order_size"],
         early_book["min_order_size"],
     )
+    # clob_v2 BUY takes USD collateral, and the venue rejects marketable BUYs
+    # below $1 even when the share minimum is met. The executor signs a
+    # two-decimal price and rounds USD size to cents, so choose the next
+    # integer number of shares that clears that same collateral floor before
+    # walking depth and fees. This prevents low-price 5-share false arbs.
+    if not late_book["asks"] or not early_book["asks"]:
+        return None
+    late_ask = min(price for price, _ in late_book["asks"])
+    early_ask = min(price for price, _ in early_book["asks"])
+    for ask in (late_ask, early_ask):
+        limit = _marketable_buy_limit(ask)
+        if limit is None or limit <= 0:
+            return None
+        comparison_size = max(
+            comparison_size,
+            (Decimal("1") / limit).to_integral_value(rounding=ROUND_CEILING),
+        )
+    comparison_size = comparison_size.to_integral_value(rounding=ROUND_CEILING)
     if comparison_size <= 0 or comparison_size > MAX_EXECUTABLE_CHECK_SIZE:
         return None
 

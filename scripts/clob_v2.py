@@ -96,6 +96,7 @@ USDC_DECIMALS = 6
 RESOLVE_TRADES_TIMEOUT_SECONDS = 15.0
 RESOLVE_TRADES_POLL_INTERVAL_SECONDS = 0.25
 FAILED_TRADE_STATUS = "FAILED"
+MIN_BUY_USD_SIZE = 1.0
 
 
 # --- wallet + creds loading ----------------------------------------------
@@ -929,6 +930,15 @@ def _check_neg_risk(token_id: str) -> bool:
 def cmd_buy(args):
     reservation_lock = _acquire_reservation_lock()
     try:
+        # The venue rejects marketable BUYs whose collateral amount is below
+        # $1. Validate before claiming the reservation so an invalid request
+        # cannot strand a claimed row awaiting reconciliation.
+        if (not math.isfinite(args.price) or not 0.0 < args.price < 1.0
+                or not math.isfinite(args.usd_size)
+                or args.usd_size < MIN_BUY_USD_SIZE):
+            print("BUY blocked: USD size must be at least $1.00 and price "
+                  "must be finite in (0,1)", file=sys.stderr)
+            return 3
         try:
             _claim_buy_reservation(
                 args.token_id, args.price, args.usd_size, args.reservation_id)

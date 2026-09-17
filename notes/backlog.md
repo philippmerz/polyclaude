@@ -1,5 +1,29 @@
 # Polyclaude Backlog
 
+## Sep-17 06:55 current update
+
+- **06:28 Clarity review / partial-fill recovery:** The alert correctly rearmed
+  when the held over-58-NO/over-50-YES pair improved to 4.38pp net. A proposed
+  five-share over-60-NO/over-50-YES pair passed the old preview, but its first
+  leg filled at .90 and the venue rejected the $.30 second-leg BUY because a
+  separate $1 marketable-BUY floor had not been modeled. The orphan was sold
+  immediately at .89. On-chain balances returned exactly to the 0/29-share
+  baseline, reservations were cleared under lock, and the all-in round-trip
+  loss was **$0.08758**. Scanner sizing now incorporates the dollar floor;
+  pair preview and submission reject sub-dollar legs; low-level BUY validation
+  runs before reservation claim; and evidence-free nonretryable 4xx responses
+  enter the existing automatic rollback path. A live rehearsal rejects the
+  old five-share order before signing and the full **731-test** suite passes.
+  Corrected scans require 17 shares. The held pair is cap-blocked; the best
+  unheld over-64/over-50 pair costs $16.551156 for a $17 floor, but only
+  $14.49 of non-gas stables is liquid and carry/funding friction consumes its
+  $0.448844 gross surplus, so no new trade was made. DEC-0142 through DEC-0144
+  record recovery, repair and allocation; Telegram 970 was sent. Thirteen legs
+  stand at $158.72 cost, $175.31 midpoint and $146.12 indicative net depth;
+  authoritative bankroll is $195.93 and settled realized P&L is +$3.22. All
+  exits remain HOLD; state, balances, orders, reservations, UMA, Ostium,
+  redemption, crux and daemons are clean.
+
 ## Sep-17 06:05 current update
 
 - **06:00 periodic review / opportunity dedupe hardened:** No post-04:48 news,

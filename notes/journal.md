@@ -17325,3 +17325,76 @@ remain current. No trade, fill, order change, transfer or redemption occurred.
 The full suite passed **725 tests**, including 156 money-math checks. Telegram
 summary **968** was sent once for the corrected watcher behavior; Fireworks
 spend remained zero.
+
+## 2026-09-17 06:28–06:55 UTC — Clarity revalidation; partial-fill recovery and dollar-minimum repair
+
+The opportunity-alert tail was read before any other check. The 06:28 row was
+a valid semantic rearm: the same held over-58-NO/over-50-YES pair's executable
+net edge improved from 3.35pp to **4.38pp**, more than the configured 0.5pp
+review threshold. Fresh books also appeared to offer a distinct five-share
+over-60-NO/over-50-YES floor pair near a 3.4pp edge. The held over-58 ticket
+could not accept another minimum order; the new over-60 ticket and the shared
+cluster passed the dollar caps. A provisional pair-only prior was added and
+$4.60 Polygon Aave USDC.e was withdrawn (`0x6f211f82bcb126426c0ccb2b388ba50eea6bd4d0b370f9216ef24fc7ed4aba9b`)
+then wrapped to pUSD (`0x7fdf34830ac9ae756141061b759a374244f46d63d1e8442b504a9e7045c30639`).
+
+The guarded rehearsal passed, but execution exposed an unmodeled venue rule.
+Five over-60 NO filled at .90 (order
+`0x31a3a3f8dbd20e555d5be41d166ef1c657b4b1f978383d78140adad36b84bf06`,
+fill `0x997ea788b118421b16626bbbf23a226d0741e9607a07476ff59bb44a307b6123`).
+The intended five over-50 YES at .06 was then rejected: its $.30 collateral
+amount was below the venue's separate **$1 minimum for a marketable BUY**, even
+though five shares met the book's advertised share minimum. The response had
+HTTP 400 and no order or trade evidence, but the classifier called it
+ambiguous, so the executor correctly stopped further ordering under its old
+rules and left the first leg for explicit reconciliation.
+
+Forcing the hedge would have required at least 17 over-50 YES shares and an
+excess-leg disposal or a much larger protected pair. That consumed more
+capital and erased most or all of the edge. The orphan had no independent
+underwriting, so it was sold immediately at the live .89 bid: five shares
+matched FOK (order
+`0x0d72aeb8708488137fd58fc920f9ba5ca2ec59a7d395284bde311167d16b08c8`,
+fill `0xa1179c4afecac8198c1159366b9bcb40ebcf1d412ae38d62a88b5eb0e04614da`).
+The BUY spent $4.518 including fee and the SELL returned $4.43042, bounding the
+round-trip loss at **$0.08758**. Direct Polygon CTF reads then showed over-60 NO
+at exactly zero and over-50 YES at its 29-share baseline; authenticated orders
+showed no BUY. Both stale reservations were removed under the entry lock, the
+provisional unheld prior was deleted, and state audit returned clean.
+
+The repair covers every layer of the failure. `event_monotonicity_scan.py` now
+raises comparison size to an integer clearing both share minima and the $1
+collateral floor, then re-walks books and fees. `monotonicity_pair.py` enforces
+the rounded dollar floor at preview and final submission. `clob_v2.py` rejects
+invalid price/sub-dollar BUYs before claiming a reservation.
+`polyclaude_enter.py` treats evidence-free nonretryable 4xx responses as
+definitive failures, allowing the existing automatic bundle rollback, while
+retryable statuses and responses carrying order/trade evidence remain
+ambiguous. The exact old five-share rehearsal now fails before any reservation
+or signature. The full suite passed **731 tests**, including 156 money-math
+checks. DEC-0142 records the recovery and DEC-0143 the execution repair.
+
+The corrected live scanner requires 17 shares for every structure using the
+.06 over-50 YES ask. The held over-58/over-50 pair is still best at 4.38pp but
+cannot clear its ticket cap. The best unheld pair was over-64 NO plus over-50
+YES: **$16.551156 all-in for a $17 floor**, only $0.448844 gross. Non-gas stable
+balances total about $14.49, leaving a $2.06 shortfall before bridging; roughly
+$0.15 of Aave carry to Dec-31 leaves only about $0.30 for funding, slippage and
+operational risk. Draining the reserve, converting gas or selling a positive-EV
+position is not justified for that remainder. DEC-0144 records the skip.
+
+The scheduled checklist found no post-cutoff material position news, watchlist
+hit or overdue decision. The 00:48 CENTCOM/Hormuz alert has no causal channel
+to a held position. Discovery covered 1,000 default and 1,441 thin-tail
+candidates, 36 sports markets, eight macro rows, 5,000 consistency rows and 16
+favorite-fade leads; none cleared the current evidence and execution gates.
+Every direct and protected-group exit remains HOLD, marginal APY is five clear
+and zero flagged, and UMA, Ostium, crux, redemption, state, orders,
+reservations, reconciliation and all four exact-one/current daemons are clean.
+World state from Sep-13 and weekly P&L through Sep-11 remain current.
+
+Final state is 13 legs at **$158.72 cost, $175.31 midpoint and $146.12
+indicative net depth**. Authoritative whole-account midpoint is **$195.93**;
+settled realized P&L is **+$3.22** after the recovery loss. The sole live order
+remains the zero-fill Trump 28-NO maker sell at .97. Telegram summary **970**
+was sent once; Fireworks spend remained zero.

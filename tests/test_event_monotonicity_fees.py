@@ -234,7 +234,6 @@ def test_executable_walk_rejects_dust_and_unknown_fee_metadata(monkeypatch) -> N
     late = {**base, "clob_tokens": json.dumps(["101", "102"])}
     early = {**base, "clob_tokens": json.dumps(["201", "202"])}
     assert scanner._executable_monotonic_arb(early, late) is None
-
     books["101"] = deep
     late["fee_market"] = {
         "feesEnabled": True,
@@ -242,6 +241,53 @@ def test_executable_walk_rejects_dust_and_unknown_fee_metadata(monkeypatch) -> N
         "feeSchedule": None,
     }
     assert scanner._executable_monotonic_arb(early, late) is None
+
+
+def test_executable_walk_rejects_empty_ask_without_raising(monkeypatch) -> None:
+    timestamp = datetime(2026, 8, 28, tzinfo=timezone.utc)
+    books = {
+        "101": {"asks": [], "bids": [], "min_order_size": Decimal("5"),
+                "timestamp": timestamp},
+        "202": {"asks": [(Decimal("0.30"), Decimal("20"))], "bids": [],
+                "min_order_size": Decimal("5"), "timestamp": timestamp},
+    }
+    monkeypatch.setattr(
+        scanner, "_fetch_validated_clob_book", lambda token, _condition: books[token],
+    )
+    base = {
+        "outcomes": json.dumps(["Yes", "No"]), "condition_id": "condition",
+        "order_min_size": 5, "fee_market": {"feesEnabled": False},
+    }
+    late = {**base, "clob_tokens": json.dumps(["101", "102"])}
+    early = {**base, "clob_tokens": json.dumps(["201", "202"])}
+
+    assert scanner._executable_monotonic_arb(early, late) is None
+
+
+def test_executable_walk_raises_size_for_one_dollar_buy_floor(monkeypatch) -> None:
+    timestamp = datetime(2026, 8, 28, tzinfo=timezone.utc)
+    books = {
+        "101": {"asks": [(Decimal("0.06"), Decimal("20"))], "bids": [],
+                "min_order_size": Decimal("5"), "timestamp": timestamp},
+        "202": {"asks": [(Decimal("0.07"), Decimal("20"))], "bids": [],
+                "min_order_size": Decimal("5"), "timestamp": timestamp},
+    }
+    monkeypatch.setattr(
+        scanner, "_fetch_validated_clob_book", lambda token, _condition: books[token],
+    )
+    base = {
+        "outcomes": json.dumps(["Yes", "No"]), "condition_id": "condition",
+        "order_min_size": 5, "fee_market": {"feesEnabled": False},
+    }
+    late = {**base, "clob_tokens": json.dumps(["101", "102"])}
+    early = {**base, "clob_tokens": json.dumps(["201", "202"])}
+
+    result = scanner._executable_monotonic_arb(early, late)
+
+    assert result is not None
+    # Five shares would spend only $0.30 at the late .06 ask; 17 are required
+    # after the executor's two-decimal BUY limit and $1 venue floor.
+    assert result["comparison_size"] == 17.0
 
 
 def test_main_preserves_unknown_fee_field_presence(monkeypatch, capsys) -> None:

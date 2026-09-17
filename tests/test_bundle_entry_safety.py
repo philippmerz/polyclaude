@@ -154,6 +154,15 @@ def test_clob_failure_classifier_requires_terminal_exchange_evidence():
         async_contradiction, "BUY", 20)[0] == "ambiguous"
 
 
+def test_nonretryable_http_400_invalid_amount_is_definitive_failure():
+    invalid_amount = json.dumps({
+        "status_code": 400,
+        "body": {"errorMsg": "invalid amount", "status": ""},
+    })
+    assert entry._classify_clob_result(
+        invalid_amount, "BUY", 5)[0] == "failed"
+
+
 def test_fresh_bundle_requires_no_add_flag():
     baselines, cost = entry._validate_existing_bundle(
         _legs(), [], {"1": 0.0, "2": 0.0, "3": 0.0}, False)
@@ -744,6 +753,21 @@ def test_low_level_buy_holds_shared_ledger_lock_through_post(
     )
     assert clob_v2.cmd_buy(args) == 0
     assert json.loads(ledger.read_text())[0]["submissionState"] == "claimed"
+
+
+def test_low_level_buy_rejects_subdollar_amount_before_claim(
+        tmp_path, monkeypatch):
+    monkeypatch.setattr(clob_v2, "REPO_ROOT", tmp_path)
+    monkeypatch.setattr(
+        clob_v2, "_claim_buy_reservation",
+        lambda *_args: pytest.fail("invalid amount must be rejected before claim"),
+    )
+    args = SimpleNamespace(
+        token_id="token-yes", price=0.06, usd_size=0.30,
+        reservation_id="r1", neg_risk=False, order_type="FOK",
+        post_only=False,
+    )
+    assert clob_v2.cmd_buy(args) == 3
 
 
 @pytest.mark.parametrize("orders", [

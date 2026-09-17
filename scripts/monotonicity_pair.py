@@ -22,6 +22,8 @@ from event_monotonicity_scan import _parse_threshold_detail
 from event_monotonicity_scan import _fetch_validated_clob_book
 from gamma_market_lookup import GammaLookupError, lookup_active_market_identifier
 
+MIN_MARKETABLE_BUY_NOTIONAL = 1.0
+
 
 def _list(value):
     if isinstance(value, str):
@@ -171,6 +173,11 @@ def _build_leg(market: dict, outcome: str, shares: int) -> dict:
         raise RuntimeError(f"empty ask book for {market.get('slug')}")
     limit = entry._two_decimal_marketable_limit(
         ask, leg["info"]["minimum_tick_size"])
+    buy_usd_size = round(float(shares) * limit, 2)
+    if buy_usd_size + 1e-9 < MIN_MARKETABLE_BUY_NOTIONAL:
+        raise RuntimeError(
+            f"requested BUY notional ${buy_usd_size:.2f} is below venue "
+            f"minimum ${MIN_MARKETABLE_BUY_NOTIONAL:.2f} for {market.get('slug')}")
     depth = sum(float(level["size"]) for level in leg["book"]["asks"]
                 if float(level["price"]) <= limit + 1e-12)
     if depth + 1e-9 < shares or not math.isfinite(depth):
@@ -179,7 +186,8 @@ def _build_leg(market: dict, outcome: str, shares: int) -> dict:
             f"{market.get('slug')}")
     fee_limit = pm_fees.max_taker_buy_cost_through(
         leg["fee_market"], limit) - limit
-    leg.update({"ask": ask, "limit": limit, "depth": depth,
+    leg.update({"ask": ask, "limit": limit, "buy_usd_size": buy_usd_size,
+                "depth": depth,
                 "fee_at_limit": fee_limit})
     return leg
 
@@ -245,6 +253,11 @@ def _submission_leg(planned: dict, fresh_market: dict, shares: int) -> dict:
             f"{planned['slug']} has only {depth:.2f} fresh shares through "
             "its reserved limit")
     current["limit"] = planned["limit"]
+    current["buy_usd_size"] = round(float(shares) * planned["limit"], 2)
+    if current["buy_usd_size"] + 1e-9 < MIN_MARKETABLE_BUY_NOTIONAL:
+        raise RuntimeError(
+            f"requested BUY notional ${current['buy_usd_size']:.2f} is below "
+            f"venue minimum ${MIN_MARKETABLE_BUY_NOTIONAL:.2f}")
     current["depth"] = depth
     current["fee_at_limit"] = (
         pm_fees.max_taker_buy_cost_through(
@@ -436,7 +449,8 @@ def main() -> int:
                 submitted_ids.add(reservation_id)
                 state, raw_result = entry._run_clob_order(
                     "BUY", leg["token"], leg["limit"],
-                    round(args.shares * leg["limit"], 2), args.shares,
+                    leg.get("buy_usd_size", round(args.shares * leg["limit"], 2)),
+                    args.shares,
                     reservation_id, neg_risk=leg["neg_risk"])
                 _, parsed = entry._classify_clob_result(
                     raw_result, "BUY", args.shares)
