@@ -1,5 +1,23 @@
 # Polyclaude Backlog
 
+## Sep-17 03:17 current update
+
+- **03:05 trigger / Clarity Act monotonicity pair filled:** The alert was
+  independently re-walked and the exact over-58 subset / over-50 superset
+  criteria matched on event, first final-passage vote, deadline, official
+  sources and fallback clauses. After a guarded dry-run, $28.50 was withdrawn
+  from Polygon Aave and wrapped to pUSD; the executor then bought 29 over-50
+  YES at .08 plus 29 over-58 NO at .89. Both FOK legs matched and reconciled.
+  Actual pUSD spend was $28.32893 including fees against a $29.00 payout floor,
+  locking $0.67107 gross (2.37%) and about $0.42 above foregone Aave carry
+  before gas. The 15% ticket cap now blocks additions; never manage one leg.
+  Thirteen legs stand at $158.72 nominal cost, $173.22 midpoint and $137.58
+  indicative net depth; bankroll is $193.97 and settled realized P&L is +$3.31
+  after the entry fees. State, reservations, balances, orders, carry, UMA,
+  Ostium, crux and daemons are clean. Full discovery found no second robust
+  entry. DEC-0139 and Telegram 964 record the fill. Next clocks: Duma voting
+  Sep-18–20, Arena Sep-30, emergency-path drill Oct-12.
+
 ## Sep-17 02:13 current update
 
 - **02:00 full check / Apple and Duma re-underwrites:** Eleven positions remain

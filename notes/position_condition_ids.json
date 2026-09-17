@@ -43,6 +43,22 @@
    "negativeRisk": false
   },
   {
+   "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
+   "outcome": "Yes",
+   "size": 29,
+   "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+   "asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+   "negativeRisk": false
+  },
+  {
+   "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
+   "outcome": "No",
+   "size": 29,
+   "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+   "asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+   "negativeRisk": false
+  },
+  {
    "slug": "trump-out-as-president-before-2027",
    "outcome": "No",
    "size": 28.33,

@@ -48,13 +48,17 @@ def _criteria(market: dict) -> tuple[str, str, str]:
     if not source:
         # Gamma commonly leaves resolutionSource empty while embedding the
         # authoritative source in the displayed criteria body.
-        match = re.search(
+        patterns = (
             r"(?:^|\n)\s*(?:the\s+)?(?:primary\s+)?resolution source"
             r"(?:\s+for this market)?\s+(?:is|will be)\s+(.+?)(?:\n|$)",
-            description,
-            re.IGNORECASE,
+            r"(?:^|\n)\s*this market will resolve according to\s+"
+            r"(.+?)(?:\n|$)",
         )
-        source = " ".join(match.group(1).split()) if match else ""
+        for pattern in patterns:
+            match = re.search(pattern, description, re.IGNORECASE)
+            if match:
+                source = " ".join(match.group(1).split())
+                break
     deadline = str(market.get("endDate") or market.get("endDateIso") or "").strip()
     detail = _parse_threshold_detail(str(market.get("question") or ""))
     if not source or not deadline or detail is None or not description:

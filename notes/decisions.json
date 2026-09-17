@@ -1,5 +1,5 @@
 {
-  "next_id": 139,
+  "next_id": 140,
   "decisions": [
     {
       "id": 1,
@@ -2739,6 +2739,26 @@
         "hidden-information-flow"
       ],
       "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 139,
+      "timestamp": "2026-09-17T03:13:35Z",
+      "type": "open_position",
+      "thesis": "A fresh live-CLOB rewalk of the Clarity Act Senate threshold ladder showed an exact same-event implication violation after fees. The over-58 contract is a subset of over-50 under identical first-final-passage-vote, deadline, official-source, no-vote and voice-vote clauses. After extending the guarded parser to recognize the explicit resolve-according-to-source sentence, moved $28.50 from Polygon Aave and bought 29 equal over-50 YES at 0.08 plus over-58 NO at 0.89 through the guarded FOK pair executor. Nominal cost was $28.13 and pUSD spend including the 4% taker curves was $28.32893, versus a criteria-consistent payout floor of $29.00: $0.67107 locked gross (2.37%), about $0.42 above foregone 3.10% Aave carry before gas. Both legs matched and balances/reservations reconciled; never manage either leg independently.",
+      "confidence": "high",
+      "prediction": "The two exact-source markets will resolve consistently and redeem at least $29.00 against $28.32893 all-in cost regardless of the vote outcome, for at least $0.67107 gross profit before funding gas; a recorded Yea count from 51 through 58 pays $58. Any lower combined payout means the identical-criteria settlement assumption failed and requires a strategy-class review.",
+      "size_usd": 28.32893,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "arb",
+        "monotonicity",
+        "clarity-act",
+        "protected-pair"
+      ],
+      "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -58,6 +58,24 @@ def test_pair_accepts_primary_source_sentence_when_gamma_field_is_blank():
     assert result["source"].startswith("official ncaa and conference records")
 
 
+def test_pair_accepts_resolve_according_to_sentence_when_gamma_field_is_blank():
+    description = (
+        "Only the first full-Senate final-passage vote counts.\n\n"
+        "This market will resolve according to official records of the U.S. "
+        "Senate (http://senate.gov) and Library of Congress "
+        "(http://congress.gov)."
+    )
+    early, late = market(58, comparator="or higher", subject="votes"), market(
+        50, comparator="or higher", subject="votes"
+    )
+    for candidate in (early, late):
+        candidate["resolutionSource"] = ""
+        candidate["description"] = description
+
+    result = validate_pair_markets(early, late)
+    assert result["source"].startswith("official records of the u.s. senate")
+
+
 def test_pair_rejects_non_binary_or_active_uma():
     bad = market(435)
     bad["outcomes"] = '["Yes", "Maybe"]'

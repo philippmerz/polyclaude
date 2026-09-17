@@ -35,29 +35,28 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-17 02:11 UTC
+## Last audited snapshot — 2026-09-17 03:15 UTC
 
 | Measure | Value |
 |---|---:|
-| Unresolved positions | 11 |
-| Position cost | $130.59 |
-| Polymarket midpoint | $142.07 |
-| Indicative depth/fee value | $135.81 |
-| Authoritative whole-account mark | $191.12 |
-| Settled realized P&L | +$3.50 |
+| Unresolved position legs | 13 |
+| Position cost | $158.72 |
+| Polymarket midpoint | $173.22 |
+| Indicative depth/fee value | $137.58 |
+| Authoritative whole-account mark | $193.97 |
+| Settled realized P&L | +$3.31 |
 
-All direct and protected-group exit checks returned **HOLD**. The only live
-order is a zero-fill maker sell for **28 Trump-out NO at 0.97**. The $6.27
-midpoint-to-depth gap is concentrated in illiquid books, so executable depth
-remains the more conservative portfolio view. Apple's touchscreen-MacBook NO
-prior is now 0.35 after a strict-criteria re-underwrite and adverse tape; no
-new official sale fact appeared. Its $11.88 complete exit remains below $17.15
-central hold value and $12.25 at the 10-point stress, while exit plus hurdle
-carry is about $11.99. Duma remains 0.18/0.35/0.19 across its held buckets
-(union 0.72); its $12.98 complete exit remains below $14.40 fair value, and no
-add clears the robust gate. The next dated portfolio clocks are Duma voting
-Sep. 18–20, the Arena source snapshot on Sep. 30, and the emergency-path drill
-on Oct. 12.
+The Sep. 17 opportunity trigger produced a filled **Clarity Act Senate vote
+monotonicity pair**: 29 over-50 YES plus 29 over-58 NO shares cost $28.32893
+including taker fees and have a criteria-consistent payout floor of $29.00.
+That locks $0.67107 gross before funding gas and foregone carry; the 15% ticket
+cap blocks additions, and neither leg may be managed independently. All exit
+checks returned **HOLD**. The only live order is a zero-fill maker sell for
+**28 Trump-out NO at 0.97**. The $35.64 midpoint-to-depth gap is dominated by
+Gemini-debut's thin book, whose resolving source still has no newly qualifying
+Gemini Pro row; executable depth remains the conservative liquidation view.
+The next dated portfolio clocks are Duma voting Sep. 18–20, the Arena source
+snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

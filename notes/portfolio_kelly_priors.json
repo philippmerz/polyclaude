@@ -225,6 +225,58 @@
      "directional": false
     }
    ]
+  },
+  "clarity-act-senate-threshold-monotonicity": {
+   "label": "Clarity Act Senate over-50/over-58 monotonicity pair",
+   "add_gate": "FILLED DEC-0139 on 2026-09-17: 29 equal over-58 NO + over-50 YES shares bought for $28.13 nominal and $28.32893 including taker fees, versus a $29.00 logical payout floor. The pair consumes the 15% ticket allowance; NO ADD and never transact one leg independently.",
+   "add_policy": {
+    "manual_gate": true,
+    "max_component_all_in": {
+     "floor-pair": 0.98
+    },
+    "max_total_component_quantity": {
+     "floor-pair": 29.0
+    }
+   },
+   "quantity_mode": "proportional_live",
+   "inactive_until_present": true,
+   "event_model": {
+    "kind": "monotone_yes",
+    "event_id": "769594",
+    "end_date": "2027-01-01",
+    "negative_risk": false,
+    "order": [
+     "50",
+     "58"
+    ],
+    "thresholds": {
+     "50": 50.0,
+     "58": 58.0
+    }
+   },
+   "legs": {
+    "50": {
+     "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
+     "outcome": "Yes",
+     "asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352"
+    },
+    "58": {
+     "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
+     "outcome": "No",
+     "asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750"
+    }
+   },
+   "components": [
+    {
+     "id": "floor-pair",
+     "quantity": 1.0,
+     "weights": {
+      "50": 1.0,
+      "58": 1.0
+     },
+     "directional": false
+    }
+   ]
   }
  },
  "trump-out-as-president-before-2027": {
@@ -1204,5 +1256,27 @@
   "arb_paired": "LSU 2026 regular-season wins monotonicity pair: trade and manage only as equal >10.5 NO + >9.5 YES shares through the guarded pair executor.",
   "current_assessment": "Conservative portfolio floor prior: P(LSU does not record more than 10.5 regular-season wins)=0.50. This leg is not independently underwritten; the equal pair has a logical $1 payout floor before separate-resolution risk.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 prior assigns zero probability to the 10-win bonus state and values only the pair's logical floor."
+ },
+ "will-over-50-senators-vote-for-the-clarity-act-20260729193533307": {
+  "p_yes": 0.5,
+  "verified": "2026-09-17",
+  "criteria_read": "2026-09-17",
+  "cluster": "clarity-act-senate-threshold-monotonicity",
+  "rho_within": 1.0,
+  "cluster_frac": 0.1463,
+  "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
+  "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
+  "current_assessment": "Conservative portfolio floor prior: P(over 50 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-58 NO it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly."
+ },
+ "will-over-58-senators-vote-for-the-clarity-act-20260729193533309": {
+  "p_no": 0.5,
+  "verified": "2026-09-17",
+  "criteria_read": "2026-09-17",
+  "cluster": "clarity-act-senate-threshold-monotonicity",
+  "rho_within": 1.0,
+  "cluster_frac": 0.1463,
+  "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
+  "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
+  "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-50 YES it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly."
  }
 }

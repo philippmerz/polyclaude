@@ -17124,3 +17124,100 @@ winning claim among 13 indexed checks.
 No trade, fill, order change, transfer or redemption occurred. Telegram summary
 **962** was sent once because the Apple prior changed; Fireworks spend remained
 zero. `main` matched `origin/main` at `5c9b0d5` before this review.
+
+## 2026-09-17 03:05–03:18 UTC — Clarity Act monotonicity pair filled
+
+The opportunity-alert tail was inspected before any other action. Its newest
+row, timestamped 03:05:38, reported three live monotonicity violations in the
+“How many Senators will vote for the Clarity Act?” ladder, led by over-58 versus
+over-50 at 2.31pp after fees. The alert was treated as an observation. A fresh
+1,255-event scan reproduced the relevant books, then exact Gamma and CLOB reads
+independently verified the two required outcomes.
+
+The structure is **over-58 NO + over-50 YES**. Both contracts share event
+769594, a Jan. 1, 2027 04:59 UTC deadline, standard-binary routing, and
+byte-identical criteria. They resolve on the first full-Senate final-passage
+vote on qualifying crypto market-structure legislation, use official Senate
+and Library of Congress records, and share the same no-vote and voice-vote
+fallbacks. “Over” is explicitly strict. The payout proof survives every branch:
+
+- no qualifying vote or a recorded count of 50 or fewer: over-58 NO pays;
+- a recorded count from 51 through 58: both legs pay;
+- a recorded count above 58, or qualifying voice/unanimous-consent passage:
+  over-50 YES pays.
+
+Thus equal shares pay at least $1 per pair, and $2 in the 51-58 bonus band.
+Separate condition IDs create leg-execution and settlement-process risk, but do
+not change the literal implication.
+
+Required-outcome asks were **.89 for over-58 NO** and **.08 for over-50 YES**,
+with about 233 shares at each price. The authoritative 4% linear fee curves add
+.003916 and .002944 per share, respectively, for a signed all-in cost of
+**.97686** and a **2.314% payout-floor edge**. Sequential reads of the opposite
+outcomes briefly made the books look untradeable; re-reading the actual NO/YES
+pair resolved that side-selection error. Immediately before action the guarded
+29-share preview passed active-market, exact identity, criteria, event, route,
+book freshness, depth, fee, 15% ticket and 30% cluster checks. It stopped only
+at the collateral gate.
+
+Gamma leaves `resolutionSource` blank for these contracts even though the
+criteria say “This market will resolve according to official records ...”. The
+guarded pair executor previously recognized only an explicit “primary
+resolution source” sentence. Extended that fail-closed parser to accept this
+second explicit form while retaining full-description equality and every
+identity check. Added a regression fixture and registered the exact protected
+pair topology plus pair-only floor priors. The final execution, analytics, state, decision and
+reporting suite passed **166 tests**.
+
+With the edge still live, withdrew **28.50 USDC.e** from Polygon Aave (tx
+`0x05f7f7ab0fce828ddf723a4bffd497caecc5939b8719d31d9b044104e6a97f0d`)
+and wrapped it to pUSD (tx
+`0x53f8d422fdb49346e579abe8ed0423a663dd764cf0cf8533a7fbdfb58bc525b1`).
+The guarded executor revalidated all inputs again under its entry lock and sent
+both legs as equal 29-share FOK orders:
+
+- over-50 YES: 29 at .08, order
+  `0x7ae49b23f06c7ee71612a57fae1405bc788d12b53034aa50135f71b54986920c`,
+  fill tx `0x3b6b7328bc5489155b8415d4cc40f0aca97856f683903f6d0572e8b9c79e85bf`;
+- over-58 NO: 29 at .89, order
+  `0xd65a6cab5ab0d40a2e1025f317fe7bedbf60d38f31cc04cd3326bc83800b29b9`,
+  fill tx `0x2171958089f6be7c9ff2fbc04af09a992de66ff723d89c27e5184760713c05c9`.
+
+Both matched. Nominal cost was $28.13; pUSD fell from 28.673070 to .344140, so
+actual spend including taker fees was **$28.32893**. Against the $29 floor this
+locks **$0.67107 gross**, a **2.3689%** return. Foregone 3.10% Aave carry over
+about 105.9 days is approximately $0.2548, leaving **$0.4163** incremental
+before funding gas. Aave retains 5.217547 USDC.e. Live position balances show
+29 shares on both legs, all entry reservations pruned to zero, no open BUY and
+no orphan exposure. The 29-pair maximum is now encoded; the 15% ticket cap
+blocks any add. **Never transact either leg independently.** DEC-0139 records
+the trade.
+
+After the fill, 13 open legs stand at **$158.72 nominal cost, $173.22 midpoint
+and $137.58 indicative net depth**. Authoritative whole-account midpoint is
+**$193.97**. Settled realized P&L is **+$3.31**, lower by the approximately
+$0.199 entry fees; the pair's $0.671 floor profit remains unrealized until
+redemption. The $35.64 midpoint/depth gap is dominated by Gemini-debut's thin
+book: its 169-share exit is only about $3.57 versus $33.80 central hold value.
+The resolving-source review still shows no newly qualifying Gemini Pro row, so
+this is a liquidity anomaly, not a thesis break. Apple's fresh complete exit is
+about $12.36 versus $17.15 central hold. Every direct and protected-group exit
+remains HOLD; marginal APY has five clear / zero flagged.
+
+The rest of full discovery ran once: 1,000 default markets, 1,531 thin-tail
+candidates, 48 sports markets with three consensus checks, eight macro rows,
+5,000 consistency rows, 14 rough/seven live favorite-fade candidates, and 918
+Limitless candidates with 21 fuzzy matches. No second entry cleared exact
+identity, fees and robustness; the sole identical Limitless match was only
+1.12% net, below its 1.5% threshold.
+
+The final state audit is clean across 13 indexed legs and one deindexed claim
+row. UMA found no held-market proposal or dispute; Ostium is empty; crux,
+orders, reservations and reconciliation are clean. The sole live order remains
+the zero-fill 28 Trump-out NO sell at .97. Redemption found no winning claim,
+the watchlist had no hit, no decision is overdue, and all four daemons are
+exact-one/current. The Sep-13 world-state rotation and weekly P&L through
+Sep-11 remain current.
+
+Telegram summary **964** was sent once. Fireworks spend remained zero. `main`
+matched `origin/main` at `9d53152` before this trigger review.
