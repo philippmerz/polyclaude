@@ -1,5 +1,34 @@
 # Polyclaude Backlog
 
+## Sep-18 15:34 current update
+
+- **Spare-quota adversarial review produced two fills:** Sold 15 of 49.005
+  Apple touchscreen-MacBook NO FOK at .38-.39 for $5.75 gross / $5.60818
+  fee-net, versus $5.25 central hold value and about $5.657 after Aave carry;
+  retain 34.005. The realized loss is about $0.57 because entry cost was
+  higher, but prospective central EV improves about $0.36 before carry. No
+  re-entry. DEC-0153.
+- The Apple trim freed AI-cluster room. The entry wrapper then bought
+  43.361345 Gemini-HLE>=50 NO at a .120 signed cap for $5.16 gross plus
+  $0.18183 fee, leaving 102.08475 shares. Central/stressed expected profit on
+  the add is about $7.67/$3.33 after fees. Post-fill review caught that the
+  triggering +$5.30 Kelly deficit used the .0965 midpoint: at the executable
+  .119 ask plus fee, the incremental central target was only about $3.23 and
+  below the $5 venue minimum. The fill therefore overshot the executable-price
+  target by about $2.1. Reversing into .072/.070 bids would lose over $2.3;
+  HOLD and make no further add. DEC-0155 records the sizing-control error.
+- **Duma distribution update / same union:** Sep-16 Carnegie commentary and
+  its Aug-4 RBC basis support a >200-district high scenario but still identify
+  up to 15 competitive districts. Shift held buckets .18/.35/.19 to
+  **.14/.29/.29** and outside tails to .09/.19; union stays .72. Complete exit
+  $12.45 remains below $14.40 fair, while the .638 ask fails the .57 cap, .62
+  stress and .75 independent probability gate. HOLD / NO ADD; FOM Sep-10 is a
+  preliminary forecast, not final. DEC-0154.
+- Post-trade state is clean: 13 legs, $157.71 cost, $154.93 midpoint, $144.13
+  indicative fee-net depth and $176.15 authoritative bankroll; settled P&L is
+  +$2.47. Only the zero-fill Trump 28-NO sell at .97 remains open. Telegram
+  replies 993-994 reported the actions and sizing correction.
+
 ## Sep-18 14:06 current update
 
 - **Full check — no executable change:** Thirteen legs stand at $158.72 cost,

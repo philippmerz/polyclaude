@@ -17932,3 +17932,120 @@ and the long-term watchlist had no actionable match or trigger. No trade,
 transfer, fill, cancel, prior change, order change or Telegram followed. Weekly
 P&L and the Sep. 13 world-state rotation remain current. Duma results through
 Sep. 20 are the next live catalyst.
+
+## 2026-09-18 15:21–15:34 UTC — spare-quota deep review; Apple trim and Gemini add
+
+The authenticated operator offered the remaining model quota for useful deep
+work. The direct quota probe showed 28% rather than the stated 36% headroom,
+resetting Sep. 19 08:30 UTC. Three independent Astra reviews challenged the
+short-clock Duma distribution, Apple touchscreen-MacBook prior and held AI-HLE
+positions against exact criteria, live sources, books and tape.
+
+### Apple: bounded partial exit executed
+
+Apple's official newsroom and store still contain no qualifying touchscreen
+MacBook purchase listing. The latest located schedule evidence remains the
+Sep. 14 [MacRumors account of Gurman](https://www.macrumors.com/2026/09/14/oled-macbook-pro-macos-27-1-testing/):
+touch OLED models are testing macOS 27.1 and appear in a later-2026 product
+list, but the stronger year-end timing claim is editorial inference rather
+than an Apple shipping commitment. July panel-production reporting confirms a
+real manufacturing program without establishing retail availability. Retain
+p(NO)=.35 with the deliberately wide .18-.55 range.
+
+The live NO ladder improved to .39 x5 / .38 x10 / .37 x5 / .36 x25 / .35 x5.
+Recent flow was real but mixed: roughly 282.7 NO bought near .339, 76.7 near
+.391, several 25-share buys near .39-.40, then smaller YES buys. No independent
+delay fact justified copying .40 into the prior. The best 15 shares nevertheless
+offered distinct economics: **$5.60818 fee-net** versus **$5.25** central hold
+value and about **$5.657** if the proceeds earn Aave carry. Deeper bids supplied
+little incremental edge and a full exit was not robust to a .40 sensitivity.
+
+After exact token, balance, order and state revalidation, a 15-share FOK sell
+at a .38 floor matched five at .39 and ten at .38. Order
+`0x7fe6709a1267a0c14780980e7b202d5f26e5f351b7e7663de606f2d68778ec8e`,
+transaction
+`0x743f59c4770df8ea9dc4a1cf0c741f1ab048cec517ac2f82c390f96dc638a4b4`.
+Gross proceeds were $5.75 and the wallet increase confirms $5.60818 after the
+$0.14182 taker fee. Retain **34.005 NO**. The sale realizes about a **$0.57
+accounting loss** because proportional entry cost was higher, while improving
+prospective central EV by $0.358 before carry. This is an exit, not a round
+trip: do not re-enter Apple without a new robust edge. DEC-0153.
+
+### Duma: distribution moved upward; union and action unchanged
+
+The review found material evidence missed by the 02:00 renewal. Andrei
+Pertsev's [Sep. 16 Carnegie analysis](https://carnegieendowment.org/ru/russia-eurasia/politika/2026/09/russia-putin-united-russia-trouble)
+expects more than 200 United Russia district winners. Its underlying
+[Aug. 4 RBC investigation](https://www.rbc.ru/politics/04/08/2026/6a707f629a79475f056ac963)
+confirms 16 negotiated opposition concessions but also identifies up to 15
+additional competitive districts. Treat roughly 200-205 as a meaningful high
+scenario rather than a result. Combined with FOM/VCIOM/APEK list forecasts, it
+shifts probability toward 325-339 and above 339.
+
+Revise the full distribution from below/.18/.35/.19/above to
+**.09/.14/.29/.29/.19**, retaining **P(295-339)=.72**. A scenario mixture
+re-derived the union near .731, but sensitivity to the district model spans
+roughly .656-.805, so the new commentary does not justify false precision or
+greater union confidence. The live complete-set exit was $12.44656 versus
+$14.40 central hold; its .638 ask exceeded the .57 cap and .62 ten-point-stress
+probability, while the independent .75 add gate remained unmet. HOLD all three
+equal legs / NO ADD / never trade one independently. The source page also
+corrects the record: FOM's Sep. 10 item is a **preliminary forecast based on
+Sep. 4-6 fieldwork**, not a final forecast. DEC-0154.
+
+### AI HLE: sources unchanged, then a sizing-control error
+
+The resolving API still had 60 rows: Gemini 3.8 Flash at 46.2, Gemini 3.1 Pro
+at 45.9 and Astra at 53.6. Google's separate 54.9 **HLE-Verified** result for
+3.8 Flash uses a revised 1,811-item dataset—668 verified original questions
+plus 1,143 revised questions, excluding 689 uncertain originals—and therefore
+has no current mechanical effect on a named-source HLE Accuracy contract. The
+Sep. 17 API changelog concerns Antigravity Agent, not a new Pro model. One
+actor supplied 531.93 of the 571.93 overnight Gemini>=50 YES buys; a later
+104.78-share YES sale weakened the claim of independent informed confirmation.
+Retain Gemini-debut p(NO)=.18 [.06,.35] and Gemini>=50 p(NO)=.30 [.10,.50]. An
+independent OpenAI>=55 estimate of .25 sat inside the recorded uncertainty and
+did not displace the .30 stored prior. All three were HOLD at their pre-action
+sizes.
+
+The Apple trim then freed AI-cluster capacity, and constrained Kelly surfaced
+a **+$5.30 Gemini>=50** deficit using the .0965 midpoint. A fresh entry preview
+used the real .119 ask plus the authoritative 4% p(1-p) fee, giving .12319
+all-in; p=.30 and p_robust=.20 both cleared positive-EV, the exact market had
+no UMA status, and proposed cluster exposure was 29.4% versus the 30% cap. The
+vetted wrapper bought **43.361345 NO** at a .120 signed ceiling for $5.16 gross
+plus **$0.18183 fee**. Order
+`0x4d19721d48817688f09514996035efa952ddffaf6f094a482987018d76594912`,
+transaction
+`0x1eac043fda29167401c354fc652b2c5ceefc87356b65a118ca3bf9c047d4f782`.
+The holding is now **102.08475 NO**.
+
+The post-fill independent sizing audit caught an error: the portfolio deficit
+had used midpoint rather than executable cost. At .119 plus fee, the same
+central correlation-adjusted half-Kelly target called for only about **$3.23
+additional**, below the $5 venue minimum. The $5.34183 all-in fill therefore
+overshot the executable-price target by about $2.1. It remains positive-EV:
+expected profit is about **$7.67 at p=.30** and **$3.33 at p=.20**, both after
+fees, but it carries more correlated tail risk than intended. Immediate
+reversal into .072/.070 bids would lose more than $2.3 and further fees, so the
+least-cost correction is HOLD / NO FURTHER ADD. DEC-0155 explicitly records
+the sizing-control failure. Future adds must recompute the *marginal* Kelly
+deficit at signed executable price rather than use a midpoint ranking as a
+dollar instruction.
+
+Across the Apple sale and Gemini buy, total fees were about **$0.32365**. The
+combined central expected improvement is about **$8.02 after those fees**
+($0.358 Apple value captured plus $7.67 Gemini expected profit); at the
+standard Gemini ten-point stress it is about **$3.69**. The .10 Gemini lower
+bound remains a losing branch, and the Kelly overshoot is real even though
+arithmetic EV is positive.
+
+Post-trade reconciliation is clean: 13 legs, **$157.71 cost, $154.93 midpoint
+and $144.13 indicative fee-net depth**. Authoritative bankroll is **$176.15**,
+including $6.45 separately contributed gas; settled realized P&L is **+$2.47**.
+The sole live order remains the zero-fill Trump 28-NO sell at .97, entry
+reservations are clear, and position state matches 34.005 Apple plus 102.08475
+Gemini>=50 shares. All exits return HOLD and constrained Kelly has no permitted
+scale-in above $5. Telegram **993** reported the initial trim and deep-review
+results; **994** promptly disclosed the subsequent Gemini fill and sizing
+correction.

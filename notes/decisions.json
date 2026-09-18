@@ -1,5 +1,5 @@
 {
-  "next_id": 153,
+  "next_id": 156,
   "decisions": [
     {
       "id": 1,
@@ -3021,6 +3021,69 @@
         "hle",
         "flow-review",
         "hold"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 153,
+      "timestamp": "2026-09-18T15:27:47Z",
+      "type": "size_change",
+      "thesis": "Trimmed 15 of 49.005 Apple touchscreen MacBook NO shares into five shares bid at 0.39 and ten at 0.38 after fresh source and tape review found no new availability fact. The bounded FOK produced 5.60818 fee-net versus 5.25 central expected payout at p(NO)=0.35, about 5.657 with Aave carry, while bids below 0.38 did not pay enough for model and hidden-information risk. Retain 34.005 shares; do not chase lower bids or re-enter absent a fresh robust edge.",
+      "confidence": "medium",
+      "prediction": "The contract has a 0.35 probability of resolving NO; by resolution, reinvestable proceeds from the 15-share trim should exceed the 5.25 central expected payout retired, while the retained 34.005 shares preserve most NO exposure.",
+      "size_usd": 5.60818,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "apple",
+        "touchscreen-macbook",
+        "partial-exit",
+        "hidden-info",
+        "ev-capture"
+      ],
+      "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 154,
+      "timestamp": "2026-09-18T15:29:29Z",
+      "type": "skip",
+      "thesis": "A Sep-16 Carnegie analysis expecting more than 200 United Russia district winners and its Aug-4 RBC basis shift the protected three-bucket distribution upward from 0.18/0.35/0.19 to 0.14/0.29/0.29, but also expand the above-339 tail and leave P(295-339)=0.72. Hold the equal 20-share set because its 12.44656 complete exit is below 14.40 central value. Do not add: the 0.638 ask exceeds the 0.57 ceiling and the 0.62 ten-point-stressed union probability, and the independent 0.75 gate remains unmet.",
+      "confidence": "medium",
+      "prediction": "United Russia has probabilities 0.14/0.29/0.29 of finishing in the held 295-309/310-324/325-339 buckets, for 0.72 union probability; the result should fall in 295-339 more often than the 0.6223 exit-implied threshold but evidence is insufficient for an add.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-20",
+      "tags": [
+        "duma",
+        "protected-group",
+        "prior-update",
+        "no-add"
+      ],
+      "slug": "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 155,
+      "timestamp": "2026-09-18T15:33:05Z",
+      "type": "size_change",
+      "thesis": "Added 43.361345 Gemini HLE >=50 NO claims at a 0.120 signed cap for 5.16 gross plus 0.18183 fee after the Apple trim freed AI-cluster capacity. The wrapper confirmed exact identity, no UMA status, p(NO)=0.30, p_robust=0.20 versus about 0.12319 all-in, and 29.4% post-trade cluster exposure under the 30% cap. Post-fill audit found the triggering +5.30 constrained-Kelly deficit was computed at the 0.0965 midpoint; at the executable ask, the central half-Kelly incremental target was only about 3.23 and below the venue minimum. The add therefore overshot central target by about 2.1. Do not reverse into 0.072/0.070 bids because doing so would lose over 2.3; hold and make no further deployment.",
+      "confidence": "medium",
+      "prediction": "The contract has a 0.30 probability of resolving NO, with a 0.20 stressed probability; the added claims have positive expected payout at both estimates, but realized sizing should be graded as an execution-price Kelly-control error regardless of outcome.",
+      "size_usd": 5.34183,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "gemini",
+        "hle",
+        "add",
+        "sizing-error",
+        "executable-price",
+        "kelly"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
       "outcome": null,
