@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-18 18:04 current update
+
+- **Clarity CFTC-rulemaking alert — HOLD complete pair:** A 16:11 Decrypt
+  alert called congressional prospects sharply worse as CFTC rulemaking moved
+  ahead. The underlying Senate event is still the Sep-15 49-50 cloture vote on
+  the motion to proceed, which both exact contracts exclude; no final-passage
+  vote, Sep-18 Clarity-specific CFTC announcement, UMA change or criteria
+  drift exists. The protected 29 over-50-YES + 29 over-58-NO pair exits for about
+  $27.95 versus its $29 settlement floor. No leg action or prior change.
+- No opportunity alert, watchlist hit, marginal-APY flag, overdue decision,
+  UMA issue, redeemable claim, state/order/reservation anomaly or daemon issue
+  followed the 15:34 actions. Apple 34.005 and Gemini>=50 102.08475 holdings
+  reconcile exactly; all exits remain HOLD and constrained Kelly permits no
+  add above $5. Latest read: 13 legs, $157.71 cost, $154.21 midpoint, $143.75
+  indicative depth, $175.45 authoritative bankroll and +$2.47 settled P&L.
+
 ## Sep-18 15:34 current update
 
 - **Spare-quota adversarial review produced two fills:** Sold 15 of 49.005

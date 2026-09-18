@@ -18049,3 +18049,41 @@ Gemini>=50 shares. All exits return HOLD and constrained Kelly has no permitted
 scale-in above $5. Telegram **993** reported the initial trim and deep-review
 results; **994** promptly disclosed the subsequent Gemini fill and sizing
 correction.
+
+## 2026-09-18 18:00–18:04 UTC — CFTC/Clarity alert revalidated; HOLD
+
+The bounded periodic review processed one new material item after the 15:34
+cutoff. A 15:21 CoinDesk item and 16:11 Decrypt alert report CFTC crypto
+rulemaking moving to White House review while Congress remains stalled on the
+Clarity Act. The watcher labeled the latter CRITICAL for over-50 YES and
+MATERIAL for over-58 NO, but its resolution inference was too strong. The
+official Senate record still shows only the Sep. 15 **49-50 cloture vote on the
+motion to proceed**. Both exact held contracts require the first full-Senate
+final-passage vote and explicitly exclude a motion to proceed, cloture and
+amendments. The official CFTC press-release index contains no Sep. 18
+Clarity-specific rulemaking announcement, and neither market has an UMA
+proposal or criteria change.
+
+Policy substitution and a narrowing legislative clock are directionally
+negative for eventual passage but cannot damage the pair's criteria-consistent
+floor. The 29 over-50 YES plus 29 over-58 NO shares still pay at least $29
+under every consistent final-count or no-vote branch. Fresh complete exit was
+about **$27.95**, so HOLD the complete pair and never transact one leg. No
+prior, order or decision record changed; no Telegram was warranted because the
+alert added no position action or new resolving fact.
+
+The rest of the post-trade safety pass was clean. Apple remains exactly 34.005
+NO and Gemini>=50 exactly 102.08475 NO; their complete fee-net exits are about
+$11.01 versus $11.90 hold and $6.98 versus $30.63 hold, respectively. Duma's
+equal three-leg set exits near $12.64 versus $14.40 fair. Marginal APY has five
+clear holds and zero flags; constrained Kelly has no permitted add above the
+$5 venue minimum; watchlist and opportunity monitoring have no hit. Position
+state, authenticated orders, reservations, UMA, Ostium, redemption, crux,
+private permissions and all four exact-one/current daemons show no anomaly.
+The sole order remains Trump's zero-fill 28-NO sell at .97.
+
+The 18:03 account read has 13 legs at **$157.71 cost, $154.21 midpoint and
+$143.75 indicative fee-net depth**. Authoritative bankroll is **$175.45**,
+including $6.48 separately contributed gas, and settled realized P&L remains
+**+$2.47**. No trade, transfer, fill, cancel, prior change or message followed.
+Duma results through Sep. 20 remain the next live catalyst.
