@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-17. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-18. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -35,27 +35,28 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-17 14:11 UTC
+## Last audited snapshot — 2026-09-18 02:10 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 13 |
 | Position cost | $158.72 |
-| Polymarket midpoint | $186.87 |
-| Indicative depth/fee value | $158.59 |
-| Authoritative whole-account mark | $207.56 |
+| Polymarket midpoint | $154.61 |
+| Indicative depth/fee value | $144.59 |
+| Authoritative whole-account mark | $175.33 |
 | Settled realized P&L | +$3.22 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor. The Sep. 15 Senate roll call was a 49–50 cloture vote on
-the motion to proceed, which both contracts explicitly exclude; it does not
-resolve either leg. Manage the pair only as a complete position. All exit
-checks return **HOLD**. The only live order is a zero-fill maker sell for **28
-Trump-out NO at 0.97**. The $28.27 midpoint-to-depth gap is led by
-Gemini-debut and Apple's thin books. The next dated clocks are Duma voting Sep.
-18–20, the Arena source snapshot on Sep. 30, and the emergency-path drill on
-Oct. 12.
+$29.00 payout floor; manage it only as a complete position. Sep. 18 renewals
+left the Duma union at .72 and Apple NO at .35: voting has begun without a seat
+result, and Apple still has no qualifying touchscreen MacBook for public sale.
+All exit checks return **HOLD**. The only live order is a zero-fill maker sell
+for **28 Trump-out NO at 0.97**. The $10.02 midpoint-to-depth gap is led by
+Gemini-debut and Apple's thin books. Excluding separately contributed gas,
+trading value is approximately $169.10 at midpoint or $159.08 on the
+indicative depth basis. The next dated clocks are Duma voting Sep. 18–20, the
+Arena source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

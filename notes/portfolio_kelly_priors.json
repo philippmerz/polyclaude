@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-17",
+ "_updated": "2026-09-18",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-17 02:09: the required short-clock re-derivation retains 0.18/0.35/0.19 across the held buckets and union p=0.72. The Sep-16 Pravdaserm list-vote projection is a search-volume/reputation model reverse-fitted to 2021, has no district forecast, and is too weak to displace the Sep-10 FOM/VCIOM/APEK inputs. Fresh top bids sum to 0.649 ($12.98 complete exit) versus $14.40 central fair; top asks sum to 0.663, above the 0.57 add ceiling and negative at 10pp-stressed union p=0.62. HOLD the equal set; no add or single-leg action.",
+   "add_gate": "FAILED 2026-09-18 02:08: the required short-clock re-derivation retains 0.18/0.35/0.19 across the held buckets and union p=0.72. Voting is underway, but no official seat result or newer quantitative national/district forecast displaces the Sep-10 FOM/VCIOM/APEK inputs. Fresh complete-set exit is about $12.43 versus $14.40 central fair; fee-inclusive asks are about $0.646 per unit, above the $0.57 add ceiling and the 10pp-stressed union p=0.62. HOLD the equal set; no add or single-leg action.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -365,10 +365,10 @@
   "cluster_frac": 0.0,
   "rationale": "[ENTRY-TIME RECORD 2026-07-15, superseded by `note` \u2014 do NOT read as current] DEC-0046: Gurman Apr-2026 push to early-2027 (DRAM/NAND shortages, M5-chip reshuffle to hold THAT schedule); criteria need general-public purchasability by Dec-31. 15% = late-2026 ship not-ruled-out. Entry p_no 0.85.",
   "note": "CORRECTED 0.80 -> 0.62 on 2026-08-12 after MacBook NO fell 0.595 -> 0.495 over twelve hours, sustained and one-directional, on a hidden-info-class position where the doctrine says informed flow may lead public reporting. It did. My 0.80 rested entirely on Gurman's APRIL read ('early 2027 more likely'); the July supply-chain reporting I had never looked for says ~2.5M Samsung panels with shipments spanning late-2026 AND early-2027 and a launch 'late 2026 or early 2027' \u2014 three months newer and materially less committed to 2027. New p_no 0.62 = P(launch slips past 2026) ~0.55 plus the branch where a very late 2026 unveiling still is not PURCHASABLE by Dec-31. Caution that cut the other way and is worth recording: an aggregated search summary claimed 'mass production since May, 2M panels by year-end', which would have justified cutting to ~0.45 \u2014 fetching the dated article showed the primary source says no such thing. Summary overstated; artifact corrected it. HOLD, no trade: at a 0.495 mark against 0.62 fair the edge is 12pp, the position is cap-bound anyway, and a taker exit pays 4.5c/share (10% of min(p,1-p)) which swamps the gap. Hidden-info class so still NO resting sell. LIQUIDITY REALITY 2026-08-13: measured exitable depth across the book \u2014 6 of 8 positions are tight (1pp spreads, 100% of the holding sellable within 5% of mark). THIS ONE IS NOT. Consequence for the thesis-break plan: an exit is largely FICTION here. If the break arrives the market gaps and there is no bid to hit, so the only real lever on this position was sizing at ENTRY \u2014 which the 15% ticket cap already set \u2014 not a reaction afterwards. Write thesis-break rules for illiquid legs as 'hold and accept the outcome, re-underwrite for information value', not as 'exit'. Combined illiquid exposure is $32.74 = 22% of book by cost, which is acceptable for a hold-to-resolution strategy but is NOT acceptable to keep believing I can trade out of. (MacBook: 20pp spread, ZERO shares bid within 5% of mark.) 0.62 -> 0.58 on 2026-08-13 after the day's round trip (mark 0.495 -> 0.685 midpoint spike -> 0.420) and a fetched clarification. Two corrections in opposite directions netting slightly toward YES: the M5-chip reshuffle is an ACCELERATION not a schedule-hold, but the late-2026 machine everyone is reporting on is the NON-touchscreen M6. Bloomberg's 'end of 2026 or early 2027' on the actual touchscreen line is roughly a coin flip on the calendar boundary, and my criteria need PURCHASABLE by Dec-31, which is stricter than 'launched end of 2026' \u2014 so P(YES) ~0.42 against a market at 0.58. Applying my own measured instance-overconfidence (6-23pp) would put me nearer 0.45, still below the market. HOLD: cannot add (cost $27.19 exceeds 15% of the reduced $175.97 bankroll \u2014 drift, not a breach, so no forced sale either) and would not sell NO at 0.42 believing 0.58. 0.58 -> 0.65 on 2026-08-13 evening: REVERTING a move I made this morning on an unsourced claim. I had cut 0.62 -> 0.58 partly because a search summary said the M5 chip reshuffle was an ACCELERATION; pinning it to dated sources shows the opposite \u2014 'stick with M5 Pro/Max' is neutral framing, and Gurman's own trajectory is Feb 'back half of 2026' -> now 'early 2027 more likely', i.e. a SLIP. With that leg removed, the evidence converges: the late-2026 M6 has no touchscreen, the touchscreen line is separately timed at 'end 2026 or early 2027' with early-2027 favoured, and the criteria need PURCHASABLE not merely launched. P(YES) ~0.35. Offsets kept: the pre-order ambiguity and Apple's capacity to surprise. Market 0.555 NO, so ~9.5pp edge \u2014 but the position is cap-bound and illiquid (20pp spread, zero bid depth within 5%), so this changes the RECORD, not the trade. || 2026-08-24 divergence acked (prior 0.65 vs NO mid ~0.35, 30pp): book WALKED (bid 0.30x27 / ask 0.40x8, $293 vol24 \u2014 thin), sources refreshed 2026-08-23 (early-2027 still favored; macOS 27.1 Oct alignment is the YES-branch driver the market may be trading). Hold under both measures; re-underwrite PRE-COMMITTED at the Sep 8-10 event, not on mid flaps. Note 2000sh NO ask wall at 0.50. || 2026-09-16 correction: the Sep-14 21:04 UTC MacRumors report was missed by that evening's price-move review. It says Gurman's latest Bloomberg list places the OLED touchscreen laptops among products coming later in 2026, superseding the earlier-2027-favored read. This is strong schedule evidence but remains a secondary interpretation rather than an Apple sale commitment, and the exact contract needs general-public purchasability by Dec-31. Incorporating the source, official-store absence, execution risk and subsequent directional flow: p_no 0.55 -> 0.40, wide range 0.25-0.60. At the fresh 0.30 NO bid the 49.005-share full exit was $14.289858 net; central hold is $19.6020 and the 10pp-stressed 0.30 hold is $14.7015, still slightly above exit plus 106-day Aave carry (~$14.4186). HOLD, no add and no maker sell; a central p_no below about 0.294 is the carry-adjusted taker-exit boundary. || 2026-09-17 short-clock correction: fresh structured decomposition of the already-known Sep-14 schedule evidence and exact public-purchasability clause produced p_no ~0.31, while the post-22:00 tape contained several NO buys but was ultimately dominated by one 277.91-share NO sweep sale near 0.229 followed by YES buys at 0.73/0.77. With no new official Apple availability fact, discount the single actor but acknowledge hidden-information flow: p_no 0.40 -> 0.35, range 0.18-0.55. The 0.25 bid absorbed the full holding for $11.8837 net; central hold $17.1518 and 10pp-stressed hold $12.2513 both exceed exit plus roughly $0.1069 carry ($11.9906). HOLD; no add at the 0.30 ask; no hidden-information maker sell; boundary ~0.245.",
-  "verified": "2026-09-17",
-  "criteria_read": "2026-09-10",
+  "verified": "2026-09-18",
+  "criteria_read": "2026-09-18",
   "hidden_info": true,
-  "current_assessment": "Sep-17 18:04 recheck: YES moved .68 -> .74 on a 4pp spread and $1,799 24h volume, but this is not incremental to the 02:09 re-underwrite: that review already incorporated YES trades at .73/.77 and the Sep-14 Gurman/MacRumors report placing touch-OLED test units among later-2026 products. Fresh Gamma remains active at YES .74 / NO .26 with unchanged criteria requiring general-public purchasability; Apple's newsroom still has no touchscreen MacBook release, preorder, or sale notice. Retain p_no 0.35, range 0.18-0.55. The exact NO book at 18:02 has 271.9 shares bid at .24, enough for the entire 49.005-share position; taker exit is $11.40366 net versus $17.15175 central hold and a carry-adjusted exit boundary near p_no .245. HOLD; no add, no hidden-information maker sell, and re-open on a qualifying Apple availability fact or posterior below the boundary.",
+  "current_assessment": "Sep-18 02:08 criteria/source renewal: exact Gamma remains active at YES .715 / NO .285, with no UMA status and the same strict bar\u2014an explicitly branded true-touchscreen MacBook must be available for general-public purchase by Dec-31; announcement alone is insufficient. Apple's current Mac newsroom archive, MacBook Pro store, and product page show no qualifying release, preorder, or sale. No new fact supersedes the Sep-14 Gurman timing report. Retain p_no=0.35 with range 0.18-0.55. The fresh fee-net exit remains below central hold and the stored stressed boundary, so HOLD / NO ADD / NO hidden-information maker sell; reopen on an official availability fact, UMA proposal, or posterior below the carry-adjusted exit boundary.",
   "key_facts": [
    {
     "claim": "The late-2026 M6 MacBook Pro has NO touchscreen and NO OLED.",
@@ -404,13 +404,13 @@
     "claim": "Criteria require GENERAL-PUBLIC PURCHASABILITY by Dec-31; an unveiling alone is explicitly insufficient.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
     "source_date": "2026-09-02",
-    "checked": "2026-09-02"
+    "checked": "2026-09-18"
    },
    {
     "claim": "Criteria are SILENT on whether a PRE-ORDER counts as 'available for purchase' \u2014 an unresolved interpretation branch worth ~3-5pp of P(YES).",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-apple-release-a-touchscreen-macbook-in-2026",
     "source_date": "2026-09-02",
-    "checked": "2026-09-02"
+    "checked": "2026-09-18"
    },
    {
     "claim": "EXIT LIQUIDITY is a RANGE on this leg, not a number, and it moves fast enough that any point estimate here is stale on arrival. Three readings on 2026-08-13 alone: 10:00 \u2014 20pp spread, ZERO 24h volume, no bid within 5% of mark (exit effectively impossible); 22:00 \u2014 1.0pp spread, $2,543 traded, full-position walk ~6.5% below mark; 22:40 \u2014 ~9.6% below mark. So budget 5-10% to exit the full 66 and re-measure at decision time; the spread has become reliably tight while DEPTH stays thin (a handful of shares at the touch, then a gap). PRACTICAL INSTRUCTION: a genuine thesis break IS actionable here \u2014 pay the ~10% and go \u2014 which is the opposite of the 'unactionable, entry size is your only control' reading this fact carried twelve hours ago. For context the rest of the book exits at 0.5-1.1%, except OpenAI-HLE-50 at 27% which remains effectively stranded.",
@@ -483,6 +483,12 @@
     "source": "https://www.macrumors.com/2026/09/14/oled-macbook-pro-macos-27-1-testing/ + https://www.apple.com/newsroom/archive/mac/ + https://www.apple.com/shop/buy-mac/macbook-pro + https://data-api.polymarket.com/trades + https://clob.polymarket.com/book",
     "source_date": "2026-09-14/2026-09-17",
     "checked": "2026-09-17"
+   },
+   {
+    "claim": "Sep-18 direct official-source renewal found no touchscreen MacBook release, preorder, or general-public purchase listing in Apple's Mac newsroom archive, MacBook Pro store, or MacBook Pro product page; the current store still offers only non-touchscreen models.",
+    "source": "https://www.apple.com/newsroom/archive/mac/ + https://www.apple.com/shop/buy-mac/macbook-pro + https://www.apple.com/macbook-pro/",
+    "source_date": "2026-09-18",
+    "checked": "2026-09-18"
    }
   ],
   "divergence_ack": "2026-09-17",
@@ -981,13 +987,13 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.18,
-  "verified": "2026-09-17",
-  "criteria_read": "2026-09-10",
+  "verified": "2026-09-18",
+  "criteria_read": "2026-09-18",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-17 02:09 required short-clock complete-set re-derivation: the new Sep-16 Pravdaserm party-list forecast (ER 38.6%, CPRF 24.1%, New People 22.0%) is derived from reputation multiplied by search-query volume and party-specific turnout coefficients reverse-fitted from 2021; its underlying information-share series gave New People 76.8% and it supplies no district-seat forecast. Treat it as a weak downside sensitivity, not evidence strong enough to displace the Sep-10 FOM/VCIOM list forecasts plus APEK's 185-195 district forecast. Retain held buckets 0.18/0.35/0.19 and union p=0.72. Fresh complete top-bid exit is $12.98 versus $14.40 central; top asks sum to 0.663, above the 0.57 add ceiling and negative at 10pp-stressed union p=0.62. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-18 02:08 required short-clock complete-set re-derivation: voting has begun, but no official seat result or newer quantitative national/district forecast is available. Direct rechecks leave the Sep-10 FOM/VCIOM list forecasts and APEK's 185-195 district forecast as the best quantitative inputs; VCIOM's Sep-14 expected-winner survey and the weak Sep-16 Pravdaserm search-volume model do not change the seat distribution. Exact Gamma criteria remain active and unchanged, with no UMA status. Retain held-bucket p=0.18/0.35/0.19 and union p=0.72. Fresh complete-set exit is about $12.43 versus $14.40 central hold; the roughly $0.646 fee-inclusive ask per unit exceeds both the $0.57 add ceiling and the 0.62 10pp-stressed union probability. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and pre-Sep10 APEK key_facts describe the older Aug-10 forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -995,7 +1001,7 @@
     "claim": "FOM's September 10 final forecast puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats and shifts mass from 325-339 toward the two lower held buckets.",
     "source": "https://fom.ru/Politika/15378",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
@@ -1007,19 +1013,19 @@
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "Criteria re-read without drift: this bucket resolves on United Russia's State Duma seats resulting from the election, first by consensus credible reporting and, if ambiguous, solely by official Russian-government results; if results remain indefinite after May 31, 2027, the lowest bracket wins.",
@@ -1079,13 +1085,13 @@
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.35,
-  "verified": "2026-09-17",
-  "criteria_read": "2026-09-10",
+  "verified": "2026-09-18",
+  "criteria_read": "2026-09-18",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-17 02:09 required short-clock complete-set re-derivation: the new Sep-16 Pravdaserm party-list forecast (ER 38.6%, CPRF 24.1%, New People 22.0%) is derived from reputation multiplied by search-query volume and party-specific turnout coefficients reverse-fitted from 2021; its underlying information-share series gave New People 76.8% and it supplies no district-seat forecast. Treat it as a weak downside sensitivity, not evidence strong enough to displace the Sep-10 FOM/VCIOM list forecasts plus APEK's 185-195 district forecast. Retain held buckets 0.18/0.35/0.19 and union p=0.72. Fresh complete top-bid exit is $12.98 versus $14.40 central; top asks sum to 0.663, above the 0.57 add ceiling and negative at 10pp-stressed union p=0.62. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-18 02:08 required short-clock complete-set re-derivation: voting has begun, but no official seat result or newer quantitative national/district forecast is available. Direct rechecks leave the Sep-10 FOM/VCIOM list forecasts and APEK's 185-195 district forecast as the best quantitative inputs; VCIOM's Sep-14 expected-winner survey and the weak Sep-16 Pravdaserm search-volume model do not change the seat distribution. Exact Gamma criteria remain active and unchanged, with no UMA status. Retain held-bucket p=0.18/0.35/0.19 and union p=0.72. Fresh complete-set exit is about $12.43 versus $14.40 central hold; the roughly $0.646 fee-inclusive ask per unit exceeds both the $0.57 add ceiling and the 0.62 10pp-stressed union probability. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -1093,7 +1099,7 @@
     "claim": "FOM's September 10 final forecast puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats and shifts mass from 325-339 toward the two lower held buckets.",
     "source": "https://fom.ru/Politika/15378",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
@@ -1105,19 +1111,19 @@
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
@@ -1153,13 +1159,13 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.19,
-  "verified": "2026-09-17",
-  "criteria_read": "2026-09-10",
+  "verified": "2026-09-18",
+  "criteria_read": "2026-09-18",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-17 02:09 required short-clock complete-set re-derivation: the new Sep-16 Pravdaserm party-list forecast (ER 38.6%, CPRF 24.1%, New People 22.0%) is derived from reputation multiplied by search-query volume and party-specific turnout coefficients reverse-fitted from 2021; its underlying information-share series gave New People 76.8% and it supplies no district-seat forecast. Treat it as a weak downside sensitivity, not evidence strong enough to displace the Sep-10 FOM/VCIOM list forecasts plus APEK's 185-195 district forecast. Retain held buckets 0.18/0.35/0.19 and union p=0.72. Fresh complete top-bid exit is $12.98 versus $14.40 central; top asks sum to 0.663, above the 0.57 add ceiling and negative at 10pp-stressed union p=0.62. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-18 02:08 required short-clock complete-set re-derivation: voting has begun, but no official seat result or newer quantitative national/district forecast is available. Direct rechecks leave the Sep-10 FOM/VCIOM list forecasts and APEK's 185-195 district forecast as the best quantitative inputs; VCIOM's Sep-14 expected-winner survey and the weak Sep-16 Pravdaserm search-volume model do not change the seat distribution. Exact Gamma criteria remain active and unchanged, with no UMA status. Retain held-bucket p=0.18/0.35/0.19 and union p=0.72. Fresh complete-set exit is about $12.43 versus $14.40 central hold; the roughly $0.646 fee-inclusive ask per unit exceeds both the $0.57 add ceiling and the 0.62 10pp-stressed union probability. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -1167,7 +1173,7 @@
     "claim": "FOM's September 10 final forecast puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats and shifts mass from 325-339 toward the two lower held buckets.",
     "source": "https://fom.ru/Politika/15378",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
@@ -1179,19 +1185,19 @@
     "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
     "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
     "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
     "source_date": "2026-09-10",
-    "checked": "2026-09-14"
+    "checked": "2026-09-18"
    },
    {
     "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",

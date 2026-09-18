@@ -17743,3 +17743,91 @@ pending decisions had no issue. The sole order remains the zero-fill Trump
 28-NO sell at .97, all four daemons are exact-one/current, and no transfer,
 redemption or other portfolio action was due. Duma voting Sep. 18–20 is the
 next scheduled catalyst.
+
+## 2026-09-18 02:00–02:11 UTC — full check; due evidence and weekly P&L renewed
+
+Completed the scheduled 11-step check once. Thirteen open legs have **$158.72
+cost, $154.61 midpoint and $144.59 indicative fee-net depth**; midpoint
+overstates the sequential liquidation estimate by $10.02. The authoritative
+whole-account midpoint is **$175.33**, including $6.23 of separately contributed
+gas tokens. Excluding that gas gives about **$169.10 trading value at midpoint
+or $159.08 on the indicative depth basis**, versus $170 contributed. Settled
+P&L in `bankroll.py` is +$3.22. These are sequential planning reads rather than
+a synchronized liquidation quote.
+
+The required Duma short-clock review re-read all three exact Gamma contracts.
+They remain active/open, have no UMA status, and retain identical criteria:
+resolution uses the number of United Russia State Duma seats, consensus
+credible reporting with official Russian results as the ambiguity fallback,
+and the lowest bracket if results remain indefinite after May 31, 2027. Current
+Gamma midpoints were .052/.1765/.405. Direct source renewals found no newer
+quantitative national or district forecast than the Sep-10 [FOM final list
+forecast](https://fom.ru/Politika/15378), [VCIOM turnout-adjusted
+forecast](https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom),
+and [APEK list/district forecast](https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/).
+Voting is underway, but no official seat result exists. VCIOM's Sep-14
+expected-winner survey and the weak Sep-16 search-volume model do not supply a
+replacement seat distribution. Retain **.18/.35/.19** across the held buckets
+and **.72** for the complete 295–339 union. Fresh full exit is $12.46 versus
+$14.40 central hold; a five-unit add costs about .644 per payout dollar, above
+the .57 price cap and the .62 ten-point-stressed probability. HOLD / NO ADD;
+never transact one leg independently.
+
+The due Apple criteria/source renewal also found no state change. Exact Gamma
+remains active at YES .715 / NO .285, with no UMA status. The bar still requires
+an explicitly branded true-touchscreen MacBook available for general-public
+purchase by Dec. 31; announcement alone does not count. Apple's [Mac newsroom
+archive](https://www.apple.com/newsroom/archive/mac/), [MacBook Pro
+store](https://www.apple.com/shop/buy-mac/macbook-pro), and [product
+page](https://www.apple.com/macbook-pro/) show no qualifying release, preorder,
+or sale. Retain p(NO)=.35 with range .18–.55. The 49.005-share fee-net exit is
+$11.61 versus $17.15 central hold. HOLD / NO ADD / no hidden-information maker
+sell. After both renewals, `position_state_audit.py --fix` reports all 13
+indexed legs and one deindexed claim row clean.
+
+Every other exit remains HOLD. Gemini-debut / Gemini ≥50 / OpenAI ≥55 net exits
+are approximately $10.03/$8.68/$3.49 versus $30.42/$20.55/$5.70 central hold.
+Trump-out exits for $26.63 versus $27.48. The Clarity protected pair exits for
+$27.65 versus its $29 criteria floor; MetaMask exits for $44.03 versus $46.34
+central and a $44.75 floor. Marginal APY has five clear ordinary holds, zero
+flags, and protected-member actions suppressed. Constrained Kelly found no
+permitted add: the AI cluster is over its configured 30% cap and Trump has only
+$1.34 of ticket headroom, below the $5 venue minimum. No decision is overdue.
+
+The operational checks were clean. `redeem-all` found zero winning redeemables
+among 15 rows. UMA tracked 39 positions, refreshed 37 Gamma markets and raised
+zero alerts. Ostium has no trade or limit order. The authenticated order
+inventory contains only the zero-fill 28-NO Trump GTC sell at .97. Wallet,
+reservation, crux, daemon, private-file-permission and origin-state checks
+showed no incident. No news alert arrived after the Sep-17 22:10 journal
+cutoff; no emergency path was applicable. The Sep-13 world-state rotation is
+inside the eight-day catch-up threshold.
+
+Full prospecting ran once. Default and thin-tail discovery returned only
+unverified gross-carry rows. Sports scanned 69 liquid near-term markets; the
+only consensus discrepancy above three points was a 4.1pp medium-confidence
+single-book estimate on Team WE/JD Gaming, which fails the ten-point stressed
+probability gate before fees. Macro surfaced six rows without a new verified
+edge. Monotonicity inspected 1,047 multi-market events and found two midpoint
+artifacts but **zero executable live-book arbs**. The bounded consistency scan
+found zero positive sequential-depth baskets in its incomplete slice.
+Favorite-fade results remained population hints with unpriced geopolitical
+tails, not instance-underwritten entries. Watchlist and Limitless monitoring
+had no actionable hit. No trade, transfer, fill, cancel, or new order followed.
+
+The weekly P&L report is now current through Sep. 18. Trading value fell about
+$10.48 at midpoint and $11.95 on the depth basis since Sep. 11, while the
+bankroll settled-P&L residual rose $1.29 to +$3.22. Greenland's verified .952
+exit realized about +$1.558; the Clarity pair added a $0.671 gross settlement
+floor. `decisions.py summary` reports **151 total / 85 resolved / 66 pending /
+68 lessons**. Source identity, exact criteria and executable-depth discipline
+remain the repeated calibration theme.
+
+The passive benchmark failed closed for Sep. 17 because Yahoo supplied a dated
+VT bar with null raw and adjusted closes. Its latest complete comparison is the
+Sep-16 session: $178.05 VT, $179.06 VTI and $179.19 SPY, all ahead of both
+portfolio valuation bases. `index_benchmark.py` now excludes null placeholders
+only when the session itself is outside the admissible completed-bar set; a
+malformed completed bar still fails closed. All eight focused benchmark tests
+pass. Weekly material summary **Telegram 990** was sent once. Duma result
+monitoring is the next live catalyst.

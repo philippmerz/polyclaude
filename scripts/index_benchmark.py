@@ -319,11 +319,6 @@ def parse_chart_payload(
     ):
         if isinstance(stamp, bool) or not isinstance(stamp, (int, float)) or not math.isfinite(stamp):
             raise BenchmarkError(f"{ticker}: invalid timestamp at row {index}")
-        raw_close = _positive_decimal(close, f"{ticker} raw close row {index}")
-        adjusted_close = _positive_decimal(
-            adjusted,
-            f"{ticker} adjusted close row {index}",
-        )
         try:
             session = datetime.fromtimestamp(float(stamp), timezone.utc).astimezone(
                 exchange_timezone
@@ -337,6 +332,14 @@ def parse_chart_payload(
             continue
         if session == local_today and not today_is_complete:
             continue
+        # Yahoo can include a placeholder for the current, incomplete session
+        # with null prices.  Exclude bars outside the completed valuation set
+        # before validating prices; malformed completed bars still fail closed.
+        raw_close = _positive_decimal(close, f"{ticker} raw close row {index}")
+        adjusted_close = _positive_decimal(
+            adjusted,
+            f"{ticker} adjusted close row {index}",
+        )
         bars.append(PriceBar(session, raw_close, adjusted_close))
     bars.sort(key=lambda row: row.session)
     if not bars:

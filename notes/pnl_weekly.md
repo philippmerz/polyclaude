@@ -1121,3 +1121,131 @@ endpoint is the resolving product.
 - Sep-30, 12:00 ET: exact Arena Text Overall source snapshot.
 - Continuous: qualifying HLE chart changes and actual touchscreen-MacBook
   purchase availability.
+
+# Week 2026-09-11 → 2026-09-18
+
+The pilot ends the week at approximately **$159.08 on an indicative net-depth
+basis, excluding separately contributed gas**, against **$170 of trading
+contributions: −$10.92 (−6.42%) before VM and other operating costs**. The
+midpoint trading value is $169.10 (−$0.90 / −0.53%).
+
+## Whole-account performance
+
+| Metric | Sep-11 | Sep-18 | Change |
+|---|---:|---:|---:|
+| Authoritative all-in midpoint bankroll | $185.61 | $175.33 | −$10.28 |
+| Separately contributed gas-token value | $6.03 | $6.23 | +$0.20 |
+| Trading value, midpoint basis | $179.58 | **$169.10** | **−$10.48** |
+| Trading value, indicative depth/fee basis | $171.03 | **$159.08** | **−$11.95** |
+| PM midpoint value | $154.78 | $154.61 | −$0.17 |
+| PM indicative net-depth value | $146.23 | $144.59 | −$1.64 |
+| PM midpoint/depth gap | $8.55 | **$10.02** | +$1.47 |
+| Open PM reported cost basis | $147.12 | $158.72 | +$11.60 |
+| Open unrealized P&L, marked | +$7.66 | −$4.12 | −$11.78 |
+| Open unrealized P&L, depth basis | −$0.90 | −$14.14 | −$13.24 |
+| Bankroll settled-P&L residual | +$1.93 | **+$3.22** | **+$1.29** |
+
+The current figures are sequential and rounded. The depth estimate replaces
+only PM midpoint assets in the whole-account aggregate; it is not a
+synchronized or freshness-certified liquidation quote and omits transfer and
+withdrawal costs. The position report's cumulative settled-row number uses a
+different basis from `bankroll.py`; the table retains the bankroll residual as
+the established whole-account headline and does not treat it as audited
+weekly cash profit.
+
+## Passive comparison
+
+Yahoo's Sep-17 VT row was present with null raw and adjusted closes when this
+report ran, so the fail-closed benchmark could not publish a Sep-17 close. The
+latest fully validated comparison is the Sep-16 completed session: **$178.05
+VT (+4.74%)**, **$179.06 VTI (+5.33%)**, and **$179.19 SPY (+5.41%)**. Against
+that two-day-lagged comparator, the pilot's $169.10 midpoint trading value
+trails by $8.95–$10.09; the $159.08 indicative depth value trails by
+$18.97–$20.11, or 11.16–11.83 percentage points of contributed capital.
+The comparator assumes ideal fractional shares, reinvested distributions and
+no commission, spread, slippage, tax or idle-cash yield; gas is excluded from
+both sides.
+
+## Trading, execution, and settlement
+
+Greenland was the week's only discretionary close. On Sep-13 the live .952 bid
+exceeded the recorded .95 central probability and the $18.088 fee-net sale
+value exceeded the $18.05 hold payout before reserve carry. The 19 NO shares
+sold FOK in full, realizing about **+$1.558 / +9.4%** on $16.53 cost. The
+$18.088 proceeds were unwrapped and supplied to Polygon Aave. This was a
+verified executable-value exit rather than a midpoint-driven sale.
+
+The other material allocation was the protected Clarity pair: 29 over-50 YES
+plus 29 over-58 NO shares for **$28.32893 all-in**. Identical criteria and
+strictly nested thresholds give the complete pair a $29 payout floor under
+every consistent result, with a $58-vote bonus branch. The locked gross floor
+is **$0.67107**; after approximately 106 days of foregone 3.10% Aave carry,
+estimated incremental value at entry was about $0.416 before funding gas.
+The later 49–50 cloture vote was explicitly excluded by both contracts and did
+not impair the structure. Preserve equal shares and never transact one leg
+independently.
+
+## Current book and opportunity decisions
+
+Thirteen unresolved legs now have $158.72 reported cost, $154.61 midpoint,
+$144.59 indicative fee-net depth and $534.53 maximum payout if every held
+outcome won. Every direct and protected-group exit remains HOLD.
+
+Apple was materially re-underwritten after the Sep-14 Gurman/MacRumors report
+moved the touchscreen-OLED line back into a later-2026 product list. Its exact
+contract still requires general-public purchase availability, and Apple's
+official newsroom, store and product pages show no qualifying release. The
+prior moved .55→.40→**.35 NO**, range .18–.55. Current fee-net exit is $11.61
+versus $17.15 central hold, so there is no taker exit, add or hidden-information
+maker sale.
+
+Gemini-debut YES moved to .90/.92 on real buying. The public catalyst was an
+unverified claim that an anonymous Arena `gemini-3.8-flash` checkpoint is a
+Gemini 4 Pro model. Google's official pages still do not identify it as Pro,
+and the resolving chart's Gemini Pro subset was unchanged on the successful
+source read. The prior moved .20→**.18 NO**, range .06–.35. Current full exit is
+about $10.03 versus $30.42 central hold; HOLD with no trim or maker sale at or
+below fair.
+
+The Duma position remains a complete 20/20/20 YES union across 295–339 seats.
+FOM/VCIOM list forecasts plus APEK's 185–195 district forecast still support
+.18/.35/.19 bucket probabilities and a .72 union after a Sep-18 short-clock
+re-derivation. Voting has begun, but no official seat result or stronger
+quantitative forecast has appeared. Complete exit is about $12.46 versus
+$14.40 central fair; asks near .644 per payout dollar exceed the .57 price cap
+and the .62 stressed probability. HOLD / NO ADD / no individual-leg action.
+
+No default, thin-tail, sports, macro, favorite-fade, Limitless, monotonicity or
+consistency candidate cleared exact-identity, source, depth, fee and stressed-
+probability gates. The only sports consensus gap over three points was a 4.1pp
+single-book estimate, below the 10pp probability haircut before fees. The AI
+cluster has no capacity; Trump's $1.34 ticket headroom is below the $5 venue
+minimum. Marginal APY has five clear ordinary holds and zero close candidates.
+
+## Decisions and calibration
+
+`decisions.py summary` reports **151 total decisions, 85 resolved, 66 pending
+and 68 lessons**. By type: 40 opens (30 resolved), 31 size changes (14), 21
+closes (17), 22 skips (4), 33 scaffolding decisions (19), three strategy
+changes (one), and one pending infrastructure decision. These are repeated,
+dependent operational records rather than 85 independent forecasts.
+
+The repeated error pattern is source identity and hidden-information
+discipline. The earlier HLE churn showed that parser coverage does not prove
+the resolving endpoint; Apple's missed dated report showed that a fresh source
+can matter more than a price move; Gemini's genuine flow still did not turn a
+Flash rumor into a qualifying Pro result. The operational response is to trace
+exact criteria/source paths, compare hold value to executable depth rather than
+marks, and retain correlated caps and complete-group handling. Calibration is
+used to remove repeat loss mechanisms, not as an objective.
+
+## Next clocks
+
+- Sep 18–20: Duma voting, credible seat counts and official-result monitoring;
+  any action applies to the full equal-share set.
+- Continuous: qualifying Gemini Pro chart row, official Pro release or UMA
+  proposal; re-open the exit decision if p(NO) approaches .06 or fee-net exit
+  exceeds hold value.
+- Continuous: official Apple preorder or general-public purchase availability.
+- Sep 30, 12:00 ET: exact Arena Text Overall source snapshot.
+- Oct 12: monthly emergency-path drill.

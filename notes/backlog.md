@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-18 02:10 current update
+
+- **Full check / Duma and Apple evidence renewals — HOLD:** Voting is underway,
+  but no official Duma seat result or newer quantitative forecast displaces the
+  Sep-10 FOM/VCIOM/APEK inputs. Retain .18/.35/.19 across the held buckets and
+  .72 for the complete 295–339 union. Fresh complete exit is $12.46 versus
+  $14.40 fair; asks near .644 exceed both the .57 cap and .62 stressed prior.
+  Apple's exact criteria remain unchanged, with no touchscreen MacBook for
+  public purchase on its official newsroom/store/product pages; retain
+  p(NO)=.35 [.18,.55]. Its $11.61 fee-net exit remains below $17.15 hold value.
+  No add, exit, trim, maker-order change, or single-leg action.
+- The full 11-step check is clean: 13 legs at $158.72 cost, $154.61 midpoint
+  and $144.59 indicative depth; authoritative bankroll $175.33 and settled P&L
+  +$3.22. Carry has five clear / zero flags; no watchlist hit, overdue decision,
+  UMA issue, redeemable claim, state anomaly, or positive live-depth arb. The
+  sole order is Trump's zero-fill 28-NO sell at .97. Discovery produced no
+  robust entry; the only >3pp sports gap was a 4.1pp single-book estimate that
+  failed the 10pp stress gate before fees. Weekly P&L is current through Sep-18;
+  the indicative trading value excluding gas is $169.10 at midpoint or $159.08
+  at depth, versus $170 contributed. Duma results are the next live catalyst.
+
 ## Sep-17 22:10 current update
 
 - **Gemini Pro HLE ≥40 real-flow review — HOLD:** YES repriced to .90/.92 on

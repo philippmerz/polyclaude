@@ -97,7 +97,9 @@ def test_contributions_enter_strictly_after_dates_and_intraday_bar_is_excluded()
         (date(2026, 4, 29), 110.0),
         (date(2026, 4, 30), 125.0),
         (date(2026, 9, 9), 150.0),
-        (date(2026, 9, 10), 999.0),  # current, incomplete session: must be ignored
+        # Yahoo may publish a null placeholder before the current session has
+        # completed. It is outside the benchmark's admissible price set.
+        (date(2026, 9, 10), None),
     ])
     client = _Client({"VT": payload})
 
