@@ -56,8 +56,9 @@ executable-price half-Kelly increment by about $2.1; do not add further or
 reverse into the thin bid. A later measured-source trade bought **13 Sep. 18
 Trump approval 38.5–38.9 YES at .40**, $5.32480 including fee, after the named
 chart printed 38.49159 and two prior weekly settlements validated the source
-mapping. Its margin above the 38.45 rounding boundary is thin: no add, with a
-one-time source check queued before the 23:59 UTC close. New Duma district
+mapping. Its margin above the 38.45 rounding boundary is thin: no add. The
+23:28 UTC check found new chart version 7777 carrying the same 38.49159 value,
+so the position remains HOLD through finalization. New Duma district
 evidence shifts the held buckets to .14/.29/.29 while leaving the complete
 union at .72. All remaining exit checks return **HOLD**. The only live order is
 a zero-fill maker sell for **28 Trump-out NO at 0.97**. The midpoint-to-depth

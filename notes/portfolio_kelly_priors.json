@@ -1336,16 +1336,16 @@
   "cluster": "us-politics",
   "rho_within": 0.2,
   "cluster_frac": 0.1437,
-  "current_assessment": "Silver Bulletin resolving-chart Datawrapper version 7776, published Sep-18 22:04 UTC, reports Sep-18 approval 38.49159, which rounds to 38.5 and selects this bucket. The canonical article embed redirects through to the current chart. Across 23 distinct late-day source snapshots from Aug-26 through Sep-17, 22 were unchanged in the later historical series and one revised upward; none had an adverse revision larger than today's 0.04159 rounding margin. Underwrite p(YES)=0.80 and use an unusually large 0.20 execution haircut to p_robust=0.60. Sep-4 and Sep-11 predecessor markets resolved to the buckets implied by this same chart. Time-sensitive measured-source entry only; no add after the next data point or a source move below 38.45.",
+  "current_assessment": "Silver Bulletin resolving-chart entry version 7776 and current version 7777 both report Sep-18 approval 38.49159, which rounds to 38.5 and selects this bucket. The canonical article embed redirects through to version 7777, published Sep-18 23:05 UTC. Across 23 distinct late-day source snapshots from Aug-26 through Sep-17, 22 were unchanged in the later historical series and one revised upward; none had an adverse revision larger than today's 0.04159 rounding margin. Underwrite p(YES)=0.80 and use an unusually large 0.20 execution haircut to p_robust=0.60. Sep-4 and Sep-11 predecessor markets resolved to the buckets implied by this same chart. Time-sensitive measured-source entry only; no add after the next data point or a source move below 38.45.",
   "key_facts": [
    {
-    "claim": "The live resolving chart reports 38.49159 for September 18, 2026, which rounds to 38.5 at the one-decimal precision required by the market.",
-    "source": "https://datawrapper.dwcdn.net/kSCt4/7776/data.csv",
+    "claim": "The live resolving chart's version 7777 reports 38.49159 for September 18, 2026, unchanged from entry version 7776 and rounding to 38.5 at the one-decimal precision required by the market.",
+    "source": "https://datawrapper.dwcdn.net/kSCt4/7777/data.csv",
     "source_date": "2026-09-18",
     "checked": "2026-09-18"
    },
    {
-    "claim": "The named Silver Bulletin article embed redirects to current Datawrapper version 7776; chart metadata reports an update on September 18 at 6:04 PM ET.",
+    "claim": "The named Silver Bulletin article embed follows a live redirect chain to current Datawrapper version 7777; chart metadata reports publication on September 18 at 23:05 UTC.",
     "source": "https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin",
     "source_date": "2026-09-18",
     "checked": "2026-09-18"
@@ -1358,6 +1358,7 @@
    }
   ],
   "divergence_ack": "2026-09-18",
-  "divergence_ack_reason": "The large prior-to-market gap is the measured source edge that justified the entry: the named chart reads 38.49159 and two prior weekly markets resolved to this chart, while a 23-day late-version audit found zero adverse revisions large enough to cross today's 38.45 boundary. Size is deliberately limited to 13 shares because the margin is thin and the next data point has not yet finalized the date."
+  "divergence_ack_reason": "The large prior-to-market gap is the measured source edge that justified the entry: the named chart reads 38.49159 and two prior weekly markets resolved to this chart, while a 23-day late-version audit found zero adverse revisions large enough to cross today's 38.45 boundary. Size is deliberately limited to 13 shares because the margin is thin and the next data point has not yet finalized the date.",
+  "latest_catalyst": "Sep-18 23:28 UTC pre-close check: the canonical embed now terminates at Datawrapper version 7777, published 23:05 UTC, and the Sep-18 value remains exactly 38.49159. No thesis break; HOLD through finalization and do not add."
  }
 }

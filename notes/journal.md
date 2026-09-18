@@ -18175,3 +18175,23 @@ coverage. Because the regular 22:00 check had already passed and the next one
 is after close, a single bounded source recheck is queued for about **23:28
 UTC**; it will independently re-read the chart and market and act only on a
 current thesis break before the 23:59 close.
+
+## 2026-09-18 23:28–23:30 UTC — approval source update unchanged; HOLD
+
+The queued pre-close source check completed once. Silver Bulletin's canonical
+topline iframe still starts at Datawrapper version 7379, whose live redirect
+chain now terminates at **7777** through
+`7379→7507→7635→7763→7771→7775→7777`. Version 7777 was published at 23:05:11
+UTC and reports Sep. 18 approval **38.49159**, exactly unchanged from entry
+version 7776. It remains 0.04159 above the 38.45 lower rounding boundary and
+therefore still resolves to the held 38.5–38.9 bucket if finalized here.
+
+The exact market remained active with no UMA state through its 23:59 UTC close.
+The YES book had only 32 shares bid at .01, while the best ask remained .40 and
+the last trade was .32. That one-sided withdrawal is not source evidence and a
+13-share exit into .01 would destroy nearly all source-supported value. There
+was no thesis break, exit, add, order, transfer or prior-probability change.
+Position state remained clean with no BUY commitment or reservation and only
+the pre-existing Trump-out 28-NO sell at .97. HOLD through source finalization.
+The one-time cron entry and temporary reminder script removed themselves; no
+further follow-up was scheduled.

@@ -1,5 +1,17 @@
 # Polyclaude Backlog
 
+## Sep-18 23:30 current update
+
+- **Approval source check completed — unchanged / HOLD:** the canonical Silver
+  Bulletin embed now follows `7379→7507→7635→7763→7771→7775→7777`.
+  Datawrapper version **7777**, published 23:05:11 UTC, still reports Sep. 18
+  approval **38.49159**, exactly unchanged from entry version 7776 and still
+  rounding to 38.5. The market remains active through 23:59 UTC with no UMA
+  state. Its YES book is now only .01 bid / .40 ask, so a discretionary exit
+  would sacrifice the source-supported value; no thesis break, exit, add, or
+  order change. The one-time reminder cleaned itself up and no further
+  follow-up was scheduled.
+
 ## Sep-18 22:24 current update
 
 - **Sep-18 Trump approval 38.5–38.9 YES — 13 shares bought / source watch
