@@ -18115,3 +18115,63 @@ Python compilation and diff checks are clean. No order, position, transfer, prio
 or live state changed. DEC-0156 records the strategy change; Telegram 996 gave the
 immediate answer to authenticated message 995, with a completion follow-up due
 after the code is committed.
+
+## 2026-09-18 21:53–22:24 UTC — Astra discovery finds a measured-source edge; bought 13 approval YES
+
+The operator offered remaining model quota for an advanced Astra opportunity
+pass while preserving independent portfolio judgment. The bounded, analysis-only
+pass examined the active opportunity universe and produced two useful rejections
+before one actionable candidate. The apparent Russian Duma trade failed once the
+rules' outgoing-Duma baseline was applied: official pages also disagreed on the
+current United Russia/New People seat counts, so the claimed protected floor was
+not established. Arbitrum's Sep. 8 Entropy update says DRIP Season 2 contracts are
+signed and targets October, but there is still no live funded campaign, return,
+or verified asset/action eligibility. Both remain SKIP/WATCH, respectively.
+
+The actionable market was Sep. 18 Trump approval **38.5–38.9 YES**. Its named
+Silver Bulletin source embeds Datawrapper chart `kSCt4`; the redirect chain led
+to current version **7776**, published at 22:04:48 UTC. That CSV reports Sep. 18
+approval **38.49159**, which rounds to **38.5** at the one-decimal precision in
+the market rules. Versions 7777 through 7810 did not exist at the final 22:22
+pre-record check. The Sep. 4 and Sep. 11 predecessor Polymarket events resolved
+to the exact buckets implied by the same chart's current historical series. A
+23-date sample of late-day chart snapshots from Aug. 26 through Sep. 17 found
+22 values unchanged in the later series and one revised upward by 0.25696;
+none revised adversely by more than today's **0.04159** margin over the 38.45
+rounding boundary. This is descriptive source behavior rather than an iid
+statistical sample, so the position retained meaningful revision and resolver
+risk. I set p(YES)=**.80** and stressed it by twenty points to **.60**.
+
+The initial .33 ask disappeared during validation and the next live ask was .40.
+At .40 the protocol fee was .0096 per share. The full entry preview confirmed
+exact identity and criteria, no UMA state, enough collateral, a $5.30 manual
+ticket below both ticket and `us-politics` cluster caps, central and stressed
+positive EV, and a thin book suitable only for hold-to-resolution sizing. A
+maker bid was rejected because the source observation was already published,
+the market closed at 23:59 UTC, and the six-point repricing made a later maker
+fill disproportionately likely to follow adverse source information. This is
+the short-lived catalyst required by the new taker guard, not a claim that
+positive arithmetic EV alone justifies crossing.
+
+To fund the ticket without bridging, I withdrew **5.130730 Polygon USDC.e**
+from Aave and wrapped it one-for-one to Polymarket collateral. The vetted entry
+wrapper then bought **13 YES at .40** for **$5.20 gross + $0.12480 fee =
+$5.32480 all-in**. Order
+`0xcbbeb7a72681531942fb5ac4486b8e9b55aeca6bc724f47217541366907a3e30`;
+transaction
+`0x0642484578b43207d42cba30b96165b21f07c44e7702002dc2aa4bfaec0167e9`.
+Central expected profit is **$5.0752** and the .60 stress is **+$2.4752**;
+profit on a YES resolution is **$7.6752**. No add is allowed after the next
+source point or following a move below 38.45. DEC-0157 records the prediction
+and execution judgment.
+
+The post-fill audit is clean. The exact condition and token are indexed, no
+BUY commitment or reservation remains, and the only live order is still the
+zero-fill Trump-out 28-NO sell at .97. Fourteen open legs have **$162.91 cost,
+$157.24 midpoint and $146.52 indicative fee-net depth**. Authoritative bankroll
+is **$173.43**, including $6.75 separately contributed gas; settled realized
+P&L is **+$2.34** after the new fee. `trump approval` is now in tier-2 watcher
+coverage. Because the regular 22:00 check had already passed and the next one
+is after close, a single bounded source recheck is queued for about **23:28
+UTC**; it will independently re-read the chart and market and act only on a
+current thesis break before the 23:59 close.

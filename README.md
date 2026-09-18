@@ -35,16 +35,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-18 15:34 UTC
+## Last audited snapshot — 2026-09-18 22:24 UTC
 
 | Measure | Value |
 |---|---:|
-| Unresolved position legs | 13 |
-| Position cost | $157.71 |
-| Polymarket midpoint | $154.93 |
-| Indicative depth/fee value | $144.13 |
-| Authoritative whole-account mark | $176.15 |
-| Settled realized P&L | +$2.47 |
+| Unresolved position legs | 14 |
+| Position cost | $162.91 |
+| Polymarket midpoint | $157.24 |
+| Indicative depth/fee value | $146.52 |
+| Authoritative whole-account mark | $173.43 |
+| Settled realized P&L | +$2.34 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
@@ -53,14 +53,19 @@ review sold 15 Apple NO at .38-.39, leaving 34.005, then added 43.361345
 Gemini-HLE>=50 NO at .119 plus fees, leaving 102.08475. The Gemini add remains
 positive-EV under the standard ten-point stress but exceeded the
 executable-price half-Kelly increment by about $2.1; do not add further or
-reverse into the thin bid. New Duma district evidence shifts the held buckets
-to .14/.29/.29 while leaving the complete union at .72. All remaining exit
-checks return **HOLD**. The only live order is a zero-fill maker sell for **28
-Trump-out NO at 0.97**. The midpoint-to-depth gap is $10.80. Excluding
-separately contributed gas, trading value is approximately $169.70 at midpoint
-or $158.90 on the indicative depth basis. The next dated clocks are Duma
-results through Sep. 20, the Arena source snapshot on Sep. 30, and the
-emergency-path drill on Oct. 12.
+reverse into the thin bid. A later measured-source trade bought **13 Sep. 18
+Trump approval 38.5–38.9 YES at .40**, $5.32480 including fee, after the named
+chart printed 38.49159 and two prior weekly settlements validated the source
+mapping. Its margin above the 38.45 rounding boundary is thin: no add, with a
+one-time source check queued before the 23:59 UTC close. New Duma district
+evidence shifts the held buckets to .14/.29/.29 while leaving the complete
+union at .72. All remaining exit checks return **HOLD**. The only live order is
+a zero-fill maker sell for **28 Trump-out NO at 0.97**. The midpoint-to-depth
+gap is $10.72. Excluding separately contributed gas, trading value is
+approximately $166.68 at midpoint or $155.97 on the indicative depth basis.
+The next dated clocks are the approval source finalization and Duma results
+through Sep. 20, the Arena source snapshot on Sep. 30, and the emergency-path
+drill on Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

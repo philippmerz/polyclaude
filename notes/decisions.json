@@ -1,5 +1,5 @@
 {
-  "next_id": 157,
+  "next_id": 158,
   "decisions": [
     {
       "id": 1,
@@ -3107,6 +3107,27 @@
         "guard"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 157,
+      "timestamp": "2026-09-18T22:23:06Z",
+      "type": "open_position",
+      "thesis": "Bought 13 Sep-18 Trump approval 38.5-38.9 YES claims at 0.40 for $5.20 gross plus $0.12480 taker fee, $5.32480 all-in. Silver Bulletin's named Datawrapper chart version 7776 reports 38.49159 for Sep. 18, which rounds to 38.5 under the market's one-decimal rule; the article embed redirects to that live version, and the Sep. 4 and Sep. 11 predecessor markets resolved to the buckets implied by this same series. A 23-snapshot late-day audit found 22 unchanged values and one upward revision, with no adverse revision exceeding today's 0.04159 margin above the 38.45 boundary. Underwrite p(YES)=0.80 and stress to 0.60; deliberately limit size to 13 shares. Crossing the spread was justified because the resolving observation was already published, the market closed in under two hours, and the ask repriced from 0.33 to 0.40 during validation, making a maker fill likely only after adverse source information. No add after the next data point or if the source moves below 38.45.",
+      "confidence": "medium",
+      "prediction": "The next Silver Bulletin daily data point finalizes the Sep. 18 value at 38.5 after one-decimal rounding, so this bucket resolves YES and pays $13 on $5.32480 all-in cost.",
+      "size_usd": 5.3248,
+      "resolution_at": "2026-09-20",
+      "tags": [
+        "trump-approval",
+        "measured-source",
+        "datawrapper",
+        "short-dated",
+        "taker"
+      ],
+      "slug": "will-trumps-approval-rating-be-between-38pt5-and-38pt9-on-september-18-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

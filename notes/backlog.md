@@ -1,5 +1,37 @@
 # Polyclaude Backlog
 
+## Sep-18 22:24 current update
+
+- **Sep-18 Trump approval 38.5–38.9 YES — 13 shares bought / source watch
+  active:** Silver Bulletin's live resolving-chart version 7776 reports
+  **38.49159**, which rounds to 38.5 under the exact market rule. The canonical
+  article embed reaches that version; the Sep. 4 and Sep. 11 predecessor markets
+  resolved to the buckets implied by the same series. A 23-snapshot late-day
+  audit found 22 unchanged values and one upward revision, with no adverse move
+  exceeding today's thin 0.04159 margin over the 38.45 boundary. Underwrite
+  p(YES)=.80 / stress=.60. Bought **13 YES @ .40** for $5.20 gross plus
+  **$0.12480 fee = $5.32480 all-in**. Central/stressed EV is +$5.0752/+2.4752;
+  win profit is $7.6752. The ask moved .33→.40 while the source was validated,
+  and the market closes 23:59 UTC, so the explicit taker-urgency gate passed;
+  a resting bid faced acute adverse-selection risk. **No add.** A one-time
+  23:28 UTC source check is queued before close; exit only if the source crosses
+  below 38.45 or another thesis break changes net EV. Order
+  `0xcbbeb7a72681531942fb5ac4486b8e9b55aeca6bc724f47217541366907a3e30`;
+  transaction
+  `0x0642484578b43207d42cba30b96165b21f07c44e7702002dc2aa4bfaec0167e9`;
+  DEC-0157.
+- The bounded Astra discovery pass rejected the apparent Duma seat-count trade
+  after the rules' outgoing-Duma baseline and conflicting official seat counts
+  removed the claimed floor. Arbitrum DRIP Season 2 remains watch-only: official
+  material targets October, with no live funded campaign or verified asset/action
+  eligibility. No other scanner produced an executable candidate.
+- Post-fill state is clean: 14 legs, $162.91 position cost, $157.24 midpoint,
+  $146.52 indicative fee-net depth, $173.43 authoritative bankroll and +$2.34
+  settled P&L after the new taker fee. No BUY order or reservation remains; the
+  sole live order is the zero-fill Trump-out 28-NO sell at .97. The new exact
+  condition/token identity is indexed and `trump approval` watcher coverage is
+  live.
+
 ## Sep-18 20:30 current update
 
 - **Routine single-market entries are now maker-or-skip:** the operator correctly
