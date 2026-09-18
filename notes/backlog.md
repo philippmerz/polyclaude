@@ -1,5 +1,17 @@
 # Polyclaude Backlog
 
+## Sep-18 20:30 current update
+
+- **Routine single-market entries are now maker-or-skip:** the operator correctly
+  challenged the $0.18183 fee on the $5.16 Gemini add (3.52%). It remained positive
+  arithmetic EV, but there was no short-lived catalyst and the executable-price
+  Kelly target was below the venue minimum, so taker execution was not the best
+  route. `polyclaude_enter.py` now blocks a non-maker single-market `--execute`
+  before market lookup unless `--taker-urgency` records a concrete expiring reason;
+  the reason is printed in the execution log. Atomic bundles and direct guarded
+  thesis-break exits retain taker paths. Focused guard tests pass, 18/18. No order,
+  position, prior, or transfer changed. DEC-0156; Telegram 995-996.
+
 ## Sep-18 18:04 current update
 
 - **Clarity CFTC-rulemaking alert — HOLD complete pair:** A 16:11 Decrypt

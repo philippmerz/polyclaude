@@ -434,6 +434,26 @@ def _single_buy_preflight(reference_price: float, tick: float,
     return signed_price
 
 
+def _single_taker_route_error(*, execute: bool, maker: bool,
+                              urgency: str | None) -> str | None:
+    """Reject an unintentional single-market taker entry.
+
+    Ordinary entries should rest post-only or be skipped. Crossing the spread
+    remains available when expiring information makes fill certainty worth its
+    fee and slippage, but the caller has to state that reason explicitly so it
+    is visible in the execution log. Bundle execution is validated separately
+    and does not call this helper because atomicity requires its taker-only path.
+    """
+    if maker and urgency is not None:
+        return "--taker-urgency is incompatible with --maker"
+    if not execute or maker:
+        return None
+    if not urgency or not urgency.strip():
+        return ("single-market taker execution requires --taker-urgency; "
+                "use --maker for a routine/nonurgent entry or skip")
+    return None
+
+
 _BALANCE_TOL = 1e-4
 _RESERVATION_MISSING_GRACE_SECONDS = 300.0
 
@@ -2577,6 +2597,11 @@ def main() -> int:
                         "no taker fee, bid-side price, fill NOT guaranteed. Record in "
                         "notes/resting_orders.md and re-verify each tick. NOT for "
                         "catalyst-imminent entries — cross the spread for those.")
+    p.add_argument("--taker-urgency", default=None, metavar="REASON",
+                   help="Required to execute a non-maker single-market BUY. State the "
+                        "concrete short-lived catalyst or fill-urgency reason whose "
+                        "incremental EV exceeds fee and slippage; positive EV after fees "
+                        "alone is not urgency. Routine entries must use --maker or skip.")
     p.add_argument("--usd", type=float, default=None,
                    help="Override Kelly recommendation with manual $ size")
     p.add_argument("--skip-catalyst-check", action="store_true",
@@ -2617,6 +2642,11 @@ def main() -> int:
         return _bundle_entry(args)
     if args.bundle_add:
         print("ERROR: --bundle-add requires --bundle-slug", file=sys.stderr)
+        return 2
+    route_error = _single_taker_route_error(
+        execute=args.execute, maker=args.maker, urgency=args.taker_urgency)
+    if route_error:
+        print(f"ERROR: {route_error}", file=sys.stderr)
         return 2
     if args.side is None:
         args.side = "NO"
@@ -3023,6 +3053,10 @@ def main() -> int:
             print(f"\nDECISION: WOULD_BUY ${deploy_dollar:.2f} of {side} @ {mark:.4f}")
         print(f"  Re-run with --execute to actually post the order.")
         return 0
+
+    if not args.maker:
+        urgency_log = " ".join(args.taker_urgency.split())
+        print(f"\n  [taker urgency] {urgency_log}")
 
     try:
         execution_lock = _acquire_entry_lock()

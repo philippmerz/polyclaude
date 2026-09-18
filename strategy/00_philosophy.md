@@ -257,6 +257,16 @@ ever fails (DEC-0083).
    deployed CollateralOfframp, so released capital can literally reach Aave.
    Deploy idle into any entry that clears the pipeline, without an allocation-ratio
    target; discipline lives in these gates, not in a static Aave/PM split.
+7. **Execution-route gate**: ordinary single-market entries are maker-or-skip.
+   `polyclaude_enter.py --execute` blocks a taker BUY unless `--taker-urgency`
+   records the concrete short-lived catalyst or fill-urgency reason whose incremental
+   EV exceeds fee, spread and adverse-selection cost. Positive EV after fees alone is
+   insufficient: a nonurgent edge can be pursued with a post-only bid or left alone.
+   Multi-leg bundles remain taker-only because synchronized equal-share execution and
+   bounded rollback require fill certainty; thesis-break exits retain their direct
+   guarded sell path. This route rule addresses the 2026-09-18 Gemini add, where a
+   nonurgent $5.16 taker fill paid $0.18183 (3.52%) despite a viable maker-or-skip
+   choice (DEC-0156).
 
 ## 5. Sizing and exits
 

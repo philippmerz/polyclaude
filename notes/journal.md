@@ -18087,3 +18087,31 @@ $143.75 indicative fee-net depth**. Authoritative bankroll is **$175.45**,
 including $6.48 separately contributed gas, and settled realized P&L remains
 **+$2.47**. No trade, transfer, fill, cancel, prior change or message followed.
 Duma results through Sep. 20 remain the next live catalyst.
+
+## 2026-09-18 20:22–20:30 UTC — taker-fee challenge encoded as a route guard
+
+The operator asked whether taker execution still made sense after the Gemini
+add paid **$0.18183 on $5.16**, or **3.52%**. The direct answer was no for that
+route: the add remained positive arithmetic EV after the fee, but it had no
+expiring catalyst and the post-fill executable-price Kelly reconstruction called
+for only about $3.23, below the venue minimum. A post-only bid or no trade was
+the justified choice. Reversing the completed fill into the current thin bids
+would crystallize more than $2.3 of additional loss, so the position remains
+HOLD / NO ADD.
+
+The control now matches that judgment. Ordinary single-market execution through
+`polyclaude_enter.py` hard-fails before market lookup when `--execute` would use
+the taker route without `--taker-urgency REASON`. The reason must identify the
+concrete short-lived catalyst or fill urgency whose incremental EV exceeds fee,
+spread and adverse-selection cost, and is printed in the execution log. Positive
+EV after fees alone is explicitly insufficient. Dry-run analysis remains
+available; post-only maker entries remain available; maker plus a taker reason is
+rejected as contradictory. Separately guarded equal-share bundles retain their
+taker-only atomic path, and direct thesis-break sells are unaffected.
+
+The focused route and executable-price suite passes **18/18**, including an
+end-to-end assertion that a missing urgency reason stops before market lookup.
+Python compilation and diff checks are clean. No order, position, transfer, prior,
+or live state changed. DEC-0156 records the strategy change; Telegram 996 gave the
+immediate answer to authenticated message 995, with a completion follow-up due
+after the code is committed.

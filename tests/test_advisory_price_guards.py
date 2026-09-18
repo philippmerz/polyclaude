@@ -83,6 +83,53 @@ def test_cli_help_explains_signed_live_max_price() -> None:
     assert "signed price" in help_text
     assert "fresh live ask" in help_text
     assert "preserve their already-gated post-only price" in help_text
+    assert "--taker-urgency" in help_text
+    assert "concrete short-lived catalyst" in help_text
+    assert "Routine entries must use --maker or skip" in help_text
+
+
+@pytest.mark.parametrize(
+    ("execute", "maker", "urgency", "expected"),
+    [
+        (True, False, None, "requires --taker-urgency"),
+        (True, False, "   ", "requires --taker-urgency"),
+        (True, False, "result posts before resting bid can fill", None),
+        (True, True, None, None),
+        (True, True, "result imminent", "incompatible with --maker"),
+        (False, False, None, None),
+    ],
+)
+def test_single_taker_route_requires_logged_urgency(
+        execute: bool, maker: bool, urgency: str | None,
+        expected: str | None) -> None:
+    error = entry._single_taker_route_error(
+        execute=execute, maker=maker, urgency=urgency)
+    if expected is None:
+        assert error is None
+    else:
+        assert expected in error
+
+
+def test_execute_taker_without_urgency_stops_before_market_lookup(
+        monkeypatch, capsys) -> None:
+    looked_up: list[str] = []
+    monkeypatch.setattr(
+        entry,
+        "fetch_market_by_slug_or_question",
+        lambda query: looked_up.append(query),
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "polyclaude_enter.py", "--slug", "guard-test", "--side", "NO",
+            "--my-p", "0.70", "--bankroll", "100", "--execute",
+        ],
+    )
+
+    assert entry.main() == 2
+    assert "requires --taker-urgency" in capsys.readouterr().err
+    assert looked_up == []
 
 
 def test_execute_rechecks_live_ask_and_never_submits_above_cap(
@@ -133,11 +180,13 @@ def test_execute_rechecks_live_ask_and_never_submits_above_cap(
             "polyclaude_enter.py", "--slug", "cap-test", "--side", "YES",
             "--my-p", "0.80", "--edge-haircut", "0.10", "--usd", "10",
             "--bankroll", "100", "--max-price", "0.30", "--execute",
+            "--taker-urgency", "live catalyst requires immediate fill",
         ],
     )
 
     assert entry.main() == 0
     output = capsys.readouterr().out
+    assert "[taker urgency] live catalyst requires immediate fill" in output
     assert "hard price cap at execution" in output
     assert "0.3100 exceeds --max-price 0.3000" in output
     assert submitted == []

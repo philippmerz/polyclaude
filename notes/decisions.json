@@ -1,5 +1,5 @@
 {
-  "next_id": 156,
+  "next_id": 157,
   "decisions": [
     {
       "id": 1,
@@ -3086,6 +3086,27 @@
         "kelly"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 156,
+      "timestamp": "2026-09-18T20:30:26Z",
+      "type": "strategy_change",
+      "thesis": "The nonurgent Gemini HLE add paid $0.18183, or 3.52% of its $5.16 notional, despite no expiring catalyst and an executable-price Kelly target below the venue minimum. Positive EV after fees did not make crossing the spread the best available route. Make ordinary single-market entries maker-or-skip: polyclaude_enter now rejects a non-maker --execute unless --taker-urgency records the concrete short-lived reason whose incremental EV exceeds fee, spread, and adverse-selection cost. Preserve taker execution for separately guarded atomic bundles and direct thesis-break exits.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-18, any attempted single-market taker entry through polyclaude_enter without an explicit urgency reason will fail before market lookup or order construction; any executed single-market taker entry will expose its reason in the log. Routine entries will use post-only maker orders or be skipped, while bundle and urgent-exit paths remain available.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-18",
+      "tags": [
+        "execution",
+        "taker",
+        "maker",
+        "fees",
+        "guard"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
