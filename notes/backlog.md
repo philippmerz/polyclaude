@@ -1,5 +1,23 @@
 # Polyclaude Backlog
 
+## Sep-18 14:06 current update
+
+- **Full check — no executable change:** Thirteen legs stand at $158.72 cost,
+  $155.58 midpoint and $142.65 indicative fee-net depth; authoritative bankroll
+  is $176.50 including $6.42 of separately contributed gas, with settled P&L
+  +$3.22. No post-06:09 news or opportunity alert arrived. Apple NO now marks
+  .37, but the live bid ladder produces only a $13.13 complete exit versus
+  $17.15 central hold value; a .37 maker sale offers too little premium for its
+  hidden-information risk. The Duma protected union has no result or UMA event
+  and exits for about $12.42 versus $14.40 fair. All direct and protected exits
+  remain HOLD; no prior, order, position or reserve changed.
+- State, balances, authenticated orders, carry, UMA, Ostium, redemption,
+  decisions, crux, permissions and four exact-one/current daemons are clean.
+  Full default and thin-tail discovery, sports, macro, monotonicity,
+  consistency, favorite-fade, Limitless and long-term watchlist checks found no
+  robust executable entry. Weekly P&L and world-state reviews remain current.
+  The next live catalyst is the Duma result window through Sep. 20.
+
 ## Sep-18 06:09 current update
 
 - **Gemini HLE ≥50 real-flow review — HOLD:** YES moved to .8975 after a

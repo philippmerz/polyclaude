@@ -17884,3 +17884,51 @@ Sep-17 ETF rows populated by 06:01. The weekly passive comparison now validates
 VT **$180.10**, VTI **$181.02**, and SPY **$181.22** through that session; the
 report was corrected in place. No trade, transfer, fill, cancel or order change
 occurred. Material summary **Telegram 991** was sent once.
+
+## 2026-09-18 14:00–14:06 UTC — full check; no executable change
+
+Completed the scheduled 11-step check once. Thirteen open legs have **$158.72
+cost, $155.58 midpoint and $142.65 indicative fee-net depth**. The $12.93 gap
+is led by Apple's thin exit book. Authoritative whole-account midpoint is
+**$176.50**, including $6.42 of separately contributed gas; settled realized
+P&L remains **+$3.22**. Excluding gas, the corresponding trading values are
+about $170.08 at midpoint and $157.15 on the sequential depth basis. These are
+planning reads rather than synchronized liquidation quotes.
+
+No news or opportunity alert arrived after the 06:09 decision cutoff. Apple NO
+now marks .37 after its recent flow, but only 24.99 shares bid .32 before the
+book falls to .23; the complete fee-net taker exit is about **$13.13** versus
+**$17.15** central hold value. A .37 maker sale is only two points above the
+.35 prior and lies well inside the .18–.55 uncertainty range, so it does not
+compensate for an informed jump in this hidden-information market. There is no
+new qualifying public-sale fact. HOLD / no add / no taker trim / no maker
+order; the prior is unchanged.
+
+Duma voting continues without an official seat result, new quantitative seat
+evidence or UMA event. The protected 295–339 union exits for about $12.42
+versus $14.40 central fair, so retain all three legs and never transact one in
+isolation. Gemini-debut, Gemini HLE >=50, OpenAI HLE, Trump, MetaMask and the
+Clarity protected pair also remain HOLD: every complete fee-net exit is below
+its central hold value or documented settlement floor. Marginal APY returned
+five clear holds and zero flags; constrained Kelly permits no add because the
+AI cluster is capped and Trump's remaining ticket headroom is below the venue
+minimum. The sole live order remains the zero-fill 28-share Trump-out NO maker
+sell at .97.
+
+Operational state is clean. `position_state_audit.py --fix` refreshed 13
+indexed positions plus one deindexed claim row with no judgment item. UMA
+refreshed 37 Gamma markets with zero alert; Ostium remains empty; `redeem-all`
+found zero winning redeemables. Wallets, reservations, crux coverage, private
+permissions and all four exact-one/current daemons show no issue, and no
+decision is overdue.
+
+Full prospecting ran once. Default and completed thin-tail discovery produced
+only unverified win-assumed carry rows. Sports scanned 61 qualifying markets;
+its top consensus gap was only 0.5 points. Macro returned six rows without a
+verified edge. Monotonicity inspected 1,225 events and found zero violation or
+executable arb. The bounded consistency slice found zero positive live-depth
+basket; favorite-fade rows remained unvetted population hints, and Limitless
+and the long-term watchlist had no actionable match or trigger. No trade,
+transfer, fill, cancel, prior change, order change or Telegram followed. Weekly
+P&L and the Sep. 13 world-state rotation remain current. Duma results through
+Sep. 20 are the next live catalyst.
