@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-18 06:09 current update
+
+- **Gemini HLE ≥50 real-flow review — HOLD:** YES moved to .8975 after a
+  concentrated ~572-share buy burst at 04:13–04:18 UTC, apparently on the same
+  unverified claim that an Arena model labeled Gemini 3.8 Flash is a Gemini 4
+  Pro checkpoint. The exact resolving chart still tops out at Gemini 3.8 Flash
+  46.2 / Gemini 3.1 Pro 45.9, and Google's current model page, changelog and
+  model-card index show Flash/Live releases but no new Pro. Treat the flow as
+  adverse hidden-information evidence: `p_no` **.35→.30**, wide range .10–.50.
+  Full fee-net exit is only **$4.52**; hold value is $17.62 centrally and $5.87
+  even at the lower bound, versus about $4.56 after exit plus carry. HOLD all /
+  NO ADD / NO TAKER TRIM / NO NEW MAKER ORDER. DEC-0152 records the review.
+- No post-02:11 news or opportunity alert arrived. Duma still has no count or
+  result; complete exit is $11.90 versus $14.40 fair and asks near .628 remain
+  above both the .57 cap and .62 stressed prior. State, orders, UMA, Ostium and
+  daemons are clean; the sole order remains Trump's zero-fill 28-NO sell at
+  .97. Latest account read is $174.10 authoritative midpoint, with PM at
+  $153.28 midpoint / $141.44 indicative depth and settled P&L +$3.22. Yahoo's
+  delayed Sep-17 ETF closes populated at 06:01, so the weekly benchmark is now
+  updated to VT $180.10 / VTI $181.02 / SPY $181.22.
+
 ## Sep-18 02:10 current update
 
 - **Full check / Duma and Apple evidence renewals — HOLD:** Voting is underway,

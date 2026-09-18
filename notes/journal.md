@@ -17831,3 +17831,56 @@ only when the session itself is outside the admissible completed-bar set; a
 malformed completed bar still fails closed. All eight focused benchmark tests
 pass. Weekly material summary **Telegram 990** was sent once. Duma result
 monitoring is the next live catalyst.
+
+## 2026-09-18 06:00–06:09 UTC — Gemini ≥50 flow re-underwritten; HOLD
+
+The periodic backlog review found no news or opportunity alert after the 02:11
+journal cutoff. The safety refresh did surface a fresh price-state alert on the
+held Gemini HLE ≥50 market: YES moved from .8365 to **.8975** (NO .1025), with
+$611.91 of 24-hour volume and a 4.5-point displayed spread. Public trade history
+confirms real but concentrated flow. From 04:13–04:18 UTC, roughly 572 YES
+shares traded, dominated by 374.43 shares near .847 and 157.5 near .892.
+
+The exact contract remains active/open with no UMA status and resolves solely
+on a Google Gemini row reaching 50 HLE Accuracy on the official chart. A fresh
+[`source_freeze_check`](https://dashboard.safe.ai/api/models) still has Gemini
+3.8 Flash at 46.2 and Gemini 3.1 Pro at 45.9, with no qualifying row. Google's
+[current Gemini page](https://deepmind.google/models/gemini/), [API
+changelog](https://ai.google.dev/gemini-api/docs/changelog), and [model-card
+index](https://deepmind.google/models/model-cards/) identify the September
+models as Gemini 3.8 Flash/Live and still show no newer Pro release. The
+apparent catalyst remains a same-day, unverified community claim that an
+anonymous Arena checkpoint labeled `gemini-3.8-flash` is really Gemini 4 Pro
+or Argon, inferred from its SVG output. That is capability/launch evidence of
+low authority, not a model identity or HLE result from Google or the resolver.
+
+The flow nevertheless carries hidden-information value. Reduce p(NO)
+**.35→.30** and widen the subjective range from .20–.55 to **.10–.50** rather
+than copying the market. The 58.723405-share direct NO book fits entirely at
+.08 and yields only **$4.52 fee-net**. Hold EV is $17.62 centrally, $11.74 at
+.20 and $5.87 at the .10 lower bound. Investing exit proceeds at the 3.07%
+Aave hurdle for roughly 104 days raises them only to about $4.56, putting the
+carry-adjusted exit boundary at p(NO)≈.0776. A partial sale has the same poor
+per-share economics. The AI cluster cap blocks an add, and the hidden-
+information rule bars maker sales at or below fair. **HOLD all / NO ADD / NO
+TAKER TRIM / NO NEW MAKER ORDER.** DEC-0152 records the decision; reopen on a
+qualifying chart row, official launch/benchmark evidence, UMA action, or a
+materially better executable bid.
+
+The rest of the bounded check is clean. Duma voting continues without a seat
+count or result; the complete held set exits for about $11.90 versus $14.40
+central fair, while current all-in asks near .628 exceed the .57 add ceiling
+and the .62 stressed probability. Apple NO firmed near .335, but its $13.10
+fee-net exit remains below $17.15 hold value and no new Apple fact appeared.
+Position state is clean across 13 indexed legs and one deindexed claim row;
+the sole order is Trump's zero-fill 28-NO GTC sell at .97. Ostium remains empty,
+all four daemons are exact-one/current, and no overdue decision, redemption or
+operational incident is due.
+
+The latest account read is **$174.10 authoritative midpoint**, including $6.32
+of separately contributed gas; PM is $153.28 at midpoint and $141.44 at
+indicative fee-net depth, with settled P&L +$3.22. Yahoo's previously null
+Sep-17 ETF rows populated by 06:01. The weekly passive comparison now validates
+VT **$180.10**, VTI **$181.02**, and SPY **$181.22** through that session; the
+report was corrected in place. No trade, transfer, fill, cancel or order change
+occurred. Material summary **Telegram 991** was sent once.

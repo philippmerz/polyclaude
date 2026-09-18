@@ -1155,16 +1155,15 @@ weekly cash profit.
 
 ## Passive comparison
 
-Yahoo's Sep-17 VT row was present with null raw and adjusted closes when this
-report ran, so the fail-closed benchmark could not publish a Sep-17 close. The
-latest fully validated comparison is the Sep-16 completed session: **$178.05
-VT (+4.74%)**, **$179.06 VTI (+5.33%)**, and **$179.19 SPY (+5.41%)**. Against
-that two-day-lagged comparator, the pilot's $169.10 midpoint trading value
-trails by $8.95–$10.09; the $159.08 indicative depth value trails by
-$18.97–$20.11, or 11.16–11.83 percentage points of contributed capital.
-The comparator assumes ideal fractional shares, reinvested distributions and
-no commission, spread, slippage, tax or idle-cash yield; gas is excluded from
-both sides.
+Yahoo's Sep-17 VT row was initially present with null prices at 02:10 UTC, so
+the benchmark correctly failed closed. A 06:01 retry after the provider filled
+the completed session validated **$180.10 VT (+5.94%)**, **$181.02 VTI
+(+6.48%)**, and **$181.22 SPY (+6.60%)** through Sep. 17. The pilot's $169.10
+midpoint trading value trails by $11.00–$12.12; the $159.08 indicative depth
+value trails by $21.02–$22.14, or 12.36–13.02 percentage points of contributed
+capital. The comparator assumes ideal fractional shares, reinvested
+distributions and no commission, spread, slippage, tax or idle-cash yield; gas
+is excluded from both sides.
 
 ## Trading, execution, and settlement
 

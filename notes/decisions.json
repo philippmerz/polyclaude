@@ -1,5 +1,5 @@
 {
-  "next_id": 152,
+  "next_id": 153,
   "decisions": [
     {
       "id": 1,
@@ -3003,6 +3003,26 @@
         "skip-exit"
       ],
       "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 152,
+      "timestamp": "2026-09-18T06:08:12Z",
+      "type": "skip",
+      "thesis": "A concentrated 572-share Gemini HLE >=50 YES burst and the related Arena checkpoint rumor are adverse hidden-information evidence, so p(NO) falls from 0.35 to 0.30 with a 0.10-0.50 range. The exact resolving chart remains below 50, official Google sources show no new Pro release, and the $4.52 fee-net exit is dominated even by $5.87 hold value at the lower bound; retain all shares with no add, trim, or maker sale.",
+      "confidence": "medium",
+      "prediction": "The market resolves NO with a 30% probability; absent a qualifying >=50 chart row, official benchmark/model evidence, or UMA action, fee-net exit value remains below probability-weighted hold value.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "gemini",
+        "hle",
+        "flow-review",
+        "hold"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
