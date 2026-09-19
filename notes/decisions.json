@@ -2819,9 +2819,10 @@
         "risk-control"
       ],
       "slug": "will-over-60-senators-vote-for-the-clarity-act-20260729193533310",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Confirmed after 24 hours: the five-share over-60 NO FOK sale remained terminally matched, the position stayed at zero, over-50 YES remained at the 29-share protected-pair baseline, no late order or reservation appeared, and the realized round-trip loss remained $0.08758.",
+      "calibration_delta": "No material divergence. The high-confidence recovery prediction held exactly and the realized loss stayed below $0.10.",
+      "lesson": "When an atomic pair leaves an independently unsupported orphan, immediate verified rollback is preferable to forcing a larger hedge. Enforce both the share minimum and marketable-BUY dollar minimum before signing either leg, then confirm token balances, authenticated orders, and reservations after recovery.",
+      "resolved_at": "2026-09-19T02:01:31Z"
     },
     {
       "id": 143,

@@ -1,5 +1,37 @@
 # Polyclaude Backlog
 
+## Sep-19 02:11 current update
+
+- **Full check — no executable change:** fourteen open legs stand at $162.91
+  cost, $158.20 midpoint and $142.34 indicative fee-net depth. Authoritative
+  bankroll is **$174.30**, including $6.66 separately contributed gas; settled
+  P&L is +$2.34. State, balances, authenticated orders, reservations, UMA,
+  Ostium, redemption, crux coverage and all four daemons are clean. The sole
+  live order remains the zero-fill Trump-out 28-NO sell at .97; deployable
+  Polymarket collateral is $0.416410.
+- **Approval source unchanged / HOLD:** the canonical Silver Bulletin embed now
+  terminates at Datawrapper **7779**, published Sep. 19 01:05 UTC. Sep. 18
+  remains **38.49159→38.5**, with no Sep. 19 point yet, so the date is not
+  finalized. The venue still labels the market active/unresolved with no UMA
+  state. Its .505 mark is a midpoint artifact: the complete 13-share exit is
+  only about $0.25 fee-net. No exit or add.
+- **Duma complete set refreshed / HOLD / NO ADD:** the CEC feed shows voting but
+  no seat result, so retain .14/.29/.29 and .72 union. The 20-share equal set
+  exits for $11.40 versus $14.40 fair. A five-unit add costs .586 per payout
+  unit, above the .57 policy ceiling; the independent .75 evidence gate also
+  fails. Never transact one leg.
+- **OpenAI HLE >=55 source/criteria refreshed:** exact wording and the named
+  agi.safe.ai source have no substantive drift. The live API has 60 models and
+  18 OpenAI rows; GPT-6 Astra remains highest at 53.6, below 55. Keep p(NO)=.30,
+  HOLD / NO ADD. DEC-0142's 24-hour orphan-pair recovery prediction resolved
+  exactly, with the loss fixed at $0.08758.
+- No new news/opportunity/watchlist trigger, negative marginal-APY flag, or
+  robust discovery candidate. Default/thin-tail, sports, macro, monotonicity,
+  consistency, favorite-fade and Limitless scans produced no executable edge;
+  Limitless had zero identical matches above 1.5% net. Weekly P&L is current
+  through Sep. 18 and the concluded methodology study requires no rerun. No
+  Telegram summary for this flat tick.
+
 ## Sep-18 23:30 current update
 
 - **Approval source check completed — unchanged / HOLD:** the canonical Silver

@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-18 22:24 UTC
+## Last audited snapshot — 2026-09-19 02:11 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 14 |
 | Position cost | $162.91 |
-| Polymarket midpoint | $157.24 |
-| Indicative depth/fee value | $146.52 |
-| Authoritative whole-account mark | $173.43 |
+| Polymarket midpoint | $158.20 |
+| Indicative depth/fee value | $142.34 |
+| Authoritative whole-account mark | $174.30 |
 | Settled realized P&L | +$2.34 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -57,13 +57,13 @@ reverse into the thin bid. A later measured-source trade bought **13 Sep. 18
 Trump approval 38.5–38.9 YES at .40**, $5.32480 including fee, after the named
 chart printed 38.49159 and two prior weekly settlements validated the source
 mapping. Its margin above the 38.45 rounding boundary is thin: no add. The
-23:28 UTC check found new chart version 7777 carrying the same 38.49159 value,
-so the position remains HOLD through finalization. New Duma district
+02:04 UTC check found chart version 7779 carrying the same 38.49159 value and
+no Sep. 19 point, so the position remains HOLD through finalization. New Duma district
 evidence shifts the held buckets to .14/.29/.29 while leaving the complete
 union at .72. All remaining exit checks return **HOLD**. The only live order is
 a zero-fill maker sell for **28 Trump-out NO at 0.97**. The midpoint-to-depth
-gap is $10.72. Excluding separately contributed gas, trading value is
-approximately $166.68 at midpoint or $155.97 on the indicative depth basis.
+gap is $15.86. Excluding separately contributed gas, trading value is
+approximately $167.64 at midpoint or $151.78 on the indicative depth basis.
 The next dated clocks are the approval source finalization and Duma results
 through Sep. 20, the Arena source snapshot on Sep. 30, and the emergency-path
 drill on Oct. 12.

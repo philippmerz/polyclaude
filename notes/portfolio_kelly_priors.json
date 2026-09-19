@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-18",
+ "_updated": "2026-09-19",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-18 15:25: a Sep-16 Carnegie analysis expecting more than 200 United Russia district winners shifts the held-bucket distribution upward to 0.14/0.29/0.29, but the underlying RBC evidence still leaves up to 15 competitive districts and the union remains p=0.72. Fresh complete-set exit is $12.44656 versus $14.40 central fair; asks are $0.638 per unit, above the $0.57 add ceiling, the 10pp-stressed union p=0.62, and the independent 0.75 probability gate remains unmet. HOLD the equal set; no add or single-leg action.",
+   "add_gate": "FAILED 2026-09-19 02:04: the CEC public feed shows voting underway but no seat result, and no new quantified forecast displaces the 0.14/0.29/0.29 held-bucket distribution or p=0.72 union. Fresh complete-set exit is $11.40 versus $14.40 central fair; a five-unit add costs $0.586 per covered payout unit, above the $0.57 policy ceiling even though below the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD the equal set; no add or single-leg action.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -557,18 +557,24 @@
   "source_ack": "2026-09-10"
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
-  "review_required": "REVIEW COMPLETE 2026-09-10: the chart API contains GPT-6 Astra at 53.6 and OpenAI >=50 finalized YES. This >=55 leg remains unresolved. Revised p_no=0.30; 19 NO were restored at raw 0.16 after the source-path error. HOLD / NO ADD. See research/2026-09-10-frontier-model-autonomy-review.md.",
+  "review_required": "REVIEW COMPLETE 2026-09-19: exact criteria and named source are unchanged; the live chart API has 60 rows and OpenAI still tops out at GPT-6 Astra 53.6, below 55. Keep p_no=0.30; HOLD / NO ADD.",
   "p_no": 0.3,
-  "verified": "2026-09-11",
-  "current_assessment": "Sep-11 source-change review: the live resolving API grew from 58 to 59 observed rows with Grok 4.6 (xAI) at 39.72. This does not change the OpenAI maximum: GPT-6 Astra remains 53.6, below 55. Active board maintenance was already incorporated in p_no=0.30 (subjective 0.12-0.50), so an unrelated sub-threshold row does not justify false-precision repricing. The fresh 19-share net exit is $2.384044 versus $5.70 central hold payout. HOLD; no enlargement or new maker order.",
-  "latest_catalyst": "2026-09-10: the actual chart API lists GPT-6 Astra at 53.6, below 55, while OpenAI's own tool-enabled score is 57.2. The API has grown from 44 Jul-3 rows to 58, so another row or rescore before Dec-31 is a live risk. Revised p_no=0.30; HOLD restored 19 NO, no enlargement.",
+  "verified": "2026-09-19",
+  "current_assessment": "Sep-19 exact criteria/source refresh: the contract still requires an OpenAI model to achieve at least 55% HLE Accuracy by Dec-31, names agi.safe.ai as the resolution source, and permits alternative official results only under the stated source-unavailability conditions. The live chart API now contains 60 models, including 18 OpenAI rows; GPT-6 Astra remains OpenAI's maximum at 53.6, 1.4 points below the threshold. The active-source update risk and achieves-versus-source ambiguity remain incorporated in p_no=0.30 (subjective 0.12-0.50). No source fact justifies a probability change. HOLD; no enlargement or new maker order.",
+  "latest_catalyst": "2026-09-19: exact market criteria have no substantive drift; the live chart API contains 60 models and 18 OpenAI rows, with GPT-6 Astra still highest at 53.6 below the 55 threshold. No UMA status. p_no remains 0.30; HOLD / NO ADD.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and every key_fact checked before Sep-10 treat a stale server-rendered table as the resolving chart or preserve the old resolver thesis. Keep them only as error history; use current_assessment and the Sep-10 key_fact.",
   "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. 0.65->0.64 (immaterial, re-derived not marked): p_yes = 0.10 board + 0.90*0.45*0.65 capability = 0.36. 55+ keeps the most NO margin of the OpenAI pair because it needs a score above TODAY'S GLOBAL FRONTIER (55.5 Fable 5) from OpenAI specifically, AND a board row. This leg has a real two-sided book (0.45/0.46) \u2014 unlike the 50+ leg it IS exitable. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. || CRUX MEASUREMENT UPGRADED 2026-08-25: 'board unchanged since ~Nov-2025' was an INFERENCE from what was MISSING. It is now a differenced OBSERVATION with a located change-point, via `scripts/source_freeze_check.py` (archive-diff, one instrument both sides): the board was heavily curated through ~Dec-2025 (ADDED claude 4.5 sonnet, grok 4, gpt-5, gpt-5-mini, gemini 3 pro; REMOVED claude 3.5/3.7 sonnet, claude 4 opus/sonnet, llama 4 maverick, qwen3-235b, gpt-4.1, gpt-4.5, o3, o4-mini) and has changed in NO respect between 2026-01-15 and 2026-08-25. Instrument validated for BOTH liveness (detects those 2025 changes) and coverage (--expect claude,grok; an earlier narrow pattern was blind to space-separated names and would have returned FROZEN for the wrong reason). Re-run before any cluster sizing. NOTE the residual risk is now w_spirit (resolver behaviour when the board fails), NOT the board's behaviour, which is measured. || PRIOR RE-DERIVED 2026-08-25 on the MEASURED board freeze (same decomposition as the Gemini leg): the recorded number was built on P(board posts a qualifying row) ~0.20, set BEFORE the freeze was measured. Measurement now gives P(board adds ANY row by Dec-31) ~0.15 and the qualifying-row term collapses accordingly. term1 = 0.15 x P(row is an OpenAI row clearing this bar | add); term2 = P(no row) x w_spirit 0.45 x P(capability). SELF-SKEPTICISM: this raises p_no on a position I already hold, so note that term2 \u2014 resolver behaviour, a JUDGMENT \u2014 now supplies the large majority of the number, and the honest reading is 'the measurable half is confirmed, the unmeasurable half dominates', not 'my edge grew'. term1 0.022, term2 0.198 -> p_no 0.78 (was 0.64). SENSITIVITY: w_spirit 0.30/0.45/0.60 -> 0.846/0.780/0.714. ORDER CONSEQUENCE: rest was 0.70 \u2014 BELOW fair under EVERY w_spirit in range; cancelled, re-posted 19sh @ 0.85.",
-  "criteria_read": "2026-09-11",
+  "criteria_read": "2026-09-19",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.7,
   "key_facts": [
+   {
+    "claim": "On September 19 the live resolving API contains 60 models, including 18 OpenAI rows. GPT-6 Astra remains the highest OpenAI HLE Accuracy result at 53.6, below this contract's 55 threshold; no OpenAI row reaches 55.",
+    "source": "https://dashboard.safe.ai/api/models",
+    "source_date": "2026-09-19",
+    "checked": "2026-09-19"
+   },
    {
     "claim": "The Sep-11 live resolving API contains 59 rows. The newly observed row versus the documented Sep-10 count is Grok 4.6 (xAI) at HLE 39.72; GPT-6 Astra remains the highest OpenAI row at 53.6, below this contract's 55 threshold.",
     "source": "https://dashboard.safe.ai/api/models",
@@ -609,7 +615,7 @@
   "divergence_ack": "2026-09-10",
   "divergence_note": "Source-path correction cuts p_no to 0.30. The actual chart API is active and shows Astra at 53.6, only 1.4 points below the bar; its 44-to-58-row growth makes another row or rescore a live risk. HOLD the restored 19 NO; no add under the shared cap.",
   "divergence_ack_reason": "Sep-10 review traced the browser data path, compared raw Jul-3/Aug-4 archives with live data and separated the chart's 53.6 from OpenAI's different 57.2 with-tools configuration. Central and stressed hold values still exceed the complete exit, but uncertainty and cluster exposure prohibit enlargement.",
-  "source_ack": "2026-09-10"
+  "source_ack": "2026-09-19"
  },
  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
   "review_required": "REVIEW COMPLETE 2026-09-18 15:33: exact chart remains below 50; Google's separate 54.9 HLE-Verified result uses a different revised dataset; concentrated adverse flow has no independent source confirmation. Retain p_no 0.30, range 0.10-0.50. A post-Apple-trim add raised the holding to 102.08475 NO, but a post-fill audit found the midpoint-based Kelly deficit overstated the executable-price increment by about $2.1. HOLD / NO FURTHER ADD / NO TAKER EXIT / NO NEW MAKER ORDER.",
@@ -999,16 +1005,22 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.14,
-  "verified": "2026-09-18",
-  "criteria_read": "2026-09-18",
+  "verified": "2026-09-19",
+  "criteria_read": "2026-09-19",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-18 15:25 adversarial short-clock re-derivation: a Sep-16 Carnegie analysis expects more than 200 United Russia district winners, but its Aug-4 RBC basis confirms 16 conceded districts plus up to 15 additional competitive seats, so this is a high-district scenario rather than a result. Shift held-bucket p from 0.18/0.35/0.19 to 0.14/0.29/0.29 while retaining union p=0.72; outside-range tails are 0.09 below and 0.19 above. Exact markets remain active/open with no UMA status. Complete exit is $12.44656 versus $14.40 central hold; asks cost $0.638 per unit, above the $0.57 ceiling and 0.62 stressed union probability, while the independent 0.75 probability gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-19 02:04 complete-set re-underwrite: the CEC public feed shows voting underway but no seat result, and no new quantified forecast displaces the Sep-18 distribution of 0.14/0.29/0.29 across the held buckets, p=0.72 union, and 0.09/0.19 outside-range tails. Exact criteria remain unchanged and there is no UMA status. A complete 20-share set exits for $11.40 versus $14.40 central fair; a five-unit add costs $0.586 per covered payout unit, above the $0.57 policy ceiling even though below the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and pre-Sep10 APEK key_facts describe the older Aug-10 forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "The Russian CEC public feed as of September 19 at 02:04 UTC reports voting, turnout, and observation arrangements but no State Duma seat result. It supplies no new quantified evidence that displaces the September 18 complete-set distribution.",
+    "source": "https://t.me/s/cikrossii",
+    "source_date": "2026-09-19",
+    "checked": "2026-09-19"
+   },
    {
     "claim": "FOM's September 10 preliminary forecast, based on September 4-6 fieldwork, puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats.",
     "source": "https://fom.ru/Politika/15378",
@@ -1103,16 +1115,22 @@
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.29,
-  "verified": "2026-09-18",
-  "criteria_read": "2026-09-18",
+  "verified": "2026-09-19",
+  "criteria_read": "2026-09-19",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-18 15:25 adversarial short-clock re-derivation: a Sep-16 Carnegie analysis expects more than 200 United Russia district winners, but its Aug-4 RBC basis confirms 16 conceded districts plus up to 15 additional competitive seats, so this is a high-district scenario rather than a result. Shift held-bucket p from 0.18/0.35/0.19 to 0.14/0.29/0.29 while retaining union p=0.72; outside-range tails are 0.09 below and 0.19 above. Exact markets remain active/open with no UMA status. Complete exit is $12.44656 versus $14.40 central hold; asks cost $0.638 per unit, above the $0.57 ceiling and 0.62 stressed union probability, while the independent 0.75 probability gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-19 02:04 complete-set re-underwrite: the CEC public feed shows voting underway but no seat result, and no new quantified forecast displaces the Sep-18 distribution of 0.14/0.29/0.29 across the held buckets, p=0.72 union, and 0.09/0.19 outside-range tails. Exact criteria remain unchanged and there is no UMA status. A complete 20-share set exits for $11.40 versus $14.40 central fair; a five-unit add costs $0.586 per covered payout unit, above the $0.57 policy ceiling even though below the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "The Russian CEC public feed as of September 19 at 02:04 UTC reports voting, turnout, and observation arrangements but no State Duma seat result. It supplies no new quantified evidence that displaces the September 18 complete-set distribution.",
+    "source": "https://t.me/s/cikrossii",
+    "source_date": "2026-09-19",
+    "checked": "2026-09-19"
+   },
    {
     "claim": "FOM's September 10 preliminary forecast, based on September 4-6 fieldwork, puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats.",
     "source": "https://fom.ru/Politika/15378",
@@ -1183,16 +1201,22 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.29,
-  "verified": "2026-09-18",
-  "criteria_read": "2026-09-18",
+  "verified": "2026-09-19",
+  "criteria_read": "2026-09-19",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-18 15:25 adversarial short-clock re-derivation: a Sep-16 Carnegie analysis expects more than 200 United Russia district winners, but its Aug-4 RBC basis confirms 16 conceded districts plus up to 15 additional competitive seats, so this is a high-district scenario rather than a result. Shift held-bucket p from 0.18/0.35/0.19 to 0.14/0.29/0.29 while retaining union p=0.72; outside-range tails are 0.09 below and 0.19 above. Exact markets remain active/open with no UMA status. Complete exit is $12.44656 versus $14.40 central hold; asks cost $0.638 per unit, above the $0.57 ceiling and 0.62 stressed union probability, while the independent 0.75 probability gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-19 02:04 complete-set re-underwrite: the CEC public feed shows voting underway but no seat result, and no new quantified forecast displaces the Sep-18 distribution of 0.14/0.29/0.29 across the held buckets, p=0.72 union, and 0.09/0.19 outside-range tails. Exact criteria remain unchanged and there is no UMA status. A complete 20-share set exits for $11.40 versus $14.40 central fair; a five-unit add costs $0.586 per covered payout unit, above the $0.57 policy ceiling even though below the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
+   {
+    "claim": "The Russian CEC public feed as of September 19 at 02:04 UTC reports voting, turnout, and observation arrangements but no State Duma seat result. It supplies no new quantified evidence that displaces the September 18 complete-set distribution.",
+    "source": "https://t.me/s/cikrossii",
+    "source_date": "2026-09-19",
+    "checked": "2026-09-19"
+   },
    {
     "claim": "FOM's September 10 preliminary forecast, based on September 4-6 fieldwork, puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats.",
     "source": "https://fom.ru/Politika/15378",
@@ -1331,24 +1355,24 @@
  },
  "will-trumps-approval-rating-be-between-38pt5-and-38pt9-on-september-18-2026": {
   "p_yes": 0.8,
-  "verified": "2026-09-18",
-  "criteria_read": "2026-09-18",
+  "verified": "2026-09-19",
+  "criteria_read": "2026-09-19",
   "cluster": "us-politics",
   "rho_within": 0.2,
   "cluster_frac": 0.1437,
-  "current_assessment": "Silver Bulletin resolving-chart entry version 7776 and current version 7777 both report Sep-18 approval 38.49159, which rounds to 38.5 and selects this bucket. The canonical article embed redirects through to version 7777, published Sep-18 23:05 UTC. Across 23 distinct late-day source snapshots from Aug-26 through Sep-17, 22 were unchanged in the later historical series and one revised upward; none had an adverse revision larger than today's 0.04159 rounding margin. Underwrite p(YES)=0.80 and use an unusually large 0.20 execution haircut to p_robust=0.60. Sep-4 and Sep-11 predecessor markets resolved to the buckets implied by this same chart. Time-sensitive measured-source entry only; no add after the next data point or a source move below 38.45.",
+  "current_assessment": "Silver Bulletin resolving-chart entry version 7776 and current version 7779 both report Sep-18 approval 38.49159, which rounds to 38.5 and selects this bucket. The canonical article embed redirects through to version 7779, published Sep-19 01:05 UTC; no Sep-19 data point exists yet, so Sep-18 is not final under the exact rule. Across 23 distinct late-day source snapshots from Aug-26 through Sep-17, 22 were unchanged in the later historical series and one revised upward; none had an adverse revision larger than the 0.04159 rounding margin. Underwrite p(YES)=0.80 and use a 0.20 execution haircut to p_robust=0.60. Sep-4 and Sep-11 predecessor markets resolved to the buckets implied by this chart. HOLD through finalization; no add or exit absent a source move outside the 38.5 bucket or another thesis break.",
   "key_facts": [
    {
-    "claim": "The live resolving chart's version 7777 reports 38.49159 for September 18, 2026, unchanged from entry version 7776 and rounding to 38.5 at the one-decimal precision required by the market.",
-    "source": "https://datawrapper.dwcdn.net/kSCt4/7777/data.csv",
-    "source_date": "2026-09-18",
-    "checked": "2026-09-18"
+    "claim": "The live resolving chart's version 7779 reports 38.49159 for September 18, 2026, unchanged from entry version 7776 and rounding to 38.5 at the one-decimal precision required by the market; it has no September 19 data point yet.",
+    "source": "https://datawrapper.dwcdn.net/kSCt4/7779/data.csv",
+    "source_date": "2026-09-19",
+    "checked": "2026-09-19"
    },
    {
-    "claim": "The named Silver Bulletin article embed follows a live redirect chain to current Datawrapper version 7777; chart metadata reports publication on September 18 at 23:05 UTC.",
+    "claim": "The named Silver Bulletin article embed follows a live redirect chain to current Datawrapper version 7779; chart metadata reports publication on September 19 at 01:05 UTC.",
     "source": "https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin",
-    "source_date": "2026-09-18",
-    "checked": "2026-09-18"
+    "source_date": "2026-09-19",
+    "checked": "2026-09-19"
    },
    {
     "claim": "The September 4 and September 11 predecessor Polymarket events resolved to the exact one-decimal buckets implied by the same current Datawrapper historical series.",
@@ -1359,6 +1383,6 @@
   ],
   "divergence_ack": "2026-09-18",
   "divergence_ack_reason": "The large prior-to-market gap is the measured source edge that justified the entry: the named chart reads 38.49159 and two prior weekly markets resolved to this chart, while a 23-day late-version audit found zero adverse revisions large enough to cross today's 38.45 boundary. Size is deliberately limited to 13 shares because the margin is thin and the next data point has not yet finalized the date.",
-  "latest_catalyst": "Sep-18 23:28 UTC pre-close check: the canonical embed now terminates at Datawrapper version 7777, published 23:05 UTC, and the Sep-18 value remains exactly 38.49159. No thesis break; HOLD through finalization and do not add."
+  "latest_catalyst": "Sep-19 02:04 UTC check: the canonical embed terminates at Datawrapper version 7779, published 01:05 UTC, and the Sep-18 value remains exactly 38.49159. There is no Sep-19 point yet, so HOLD pending finalization and do not add."
  }
 }

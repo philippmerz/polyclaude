@@ -18195,3 +18195,60 @@ Position state remained clean with no BUY commitment or reservation and only
 the pre-existing Trump-out 28-NO sell at .97. HOLD through source finalization.
 The one-time cron entry and temporary reminder script removed themselves; no
 further follow-up was scheduled.
+
+## 2026-09-19 02:00–02:11 UTC — full check; source and Duma refreshes, no action
+
+The complete scheduled checklist ran once. Fresh authoritative bankroll is
+**$174.30**, including $6.66 separately contributed gas, with settled account
+P&L **+$2.34**. Fourteen open Polymarket legs have **$162.91 cost, $158.20
+midpoint and $142.34 indicative fee-net depth**. Polymarket collateral is
+$0.416410 with no resting BUY commitment. Position state, wallets, authenticated
+orders, reservations, UMA, Ostium, redemption, crux coverage and all four
+exact-one/current daemons are clean. The only order remains the zero-fill
+Trump-out 28-NO sell at .97; no redeemable winner exists.
+
+The approval source advanced again without changing the held observation. The
+canonical Silver Bulletin redirect chain now terminates at Datawrapper version
+**7779**, published Sep. 19 at 01:05:47 UTC. It still reports Sep. 18 approval
+**38.49159**, which rounds to 38.5, and contains no Sep. 19 data point. The
+date therefore remains unfinalized under the exact rule. Gamma still labels the
+market active and unresolved with no UMA state after its nominal end time. Its
+.505 mark is non-executable: the YES book is approximately .01/.99 and the full
+13-share fee-net exit is only about **$0.25**. That midpoint flap is not contrary
+source evidence. HOLD through finalization; no exit or add.
+
+The Duma equal-share set received the complete re-underwrite required by the
+fresh Kelly quote. The Russian CEC feed reports voting, turnout and observation
+arrangements but no seat result, and no new quantified forecast displaces the
+**.14/.29/.29** held-bucket probabilities or **.72** union. Current bids return
+**$11.40** for all 20 shares in each bucket versus $14.40 central fair. Five
+new covered units cost **.586 per payout unit**; this exceeds the .57 policy
+ceiling even though it is below the .62 ten-point stress, and the independent
+.75 evidence gate still fails. HOLD / NO ADD / never transact one leg.
+
+The remaining criteria/source rotation found no thesis break. The exact OpenAI
+HLE >=55 contract still requires HLE Accuracy of at least 55 by Dec. 31, names
+agi.safe.ai, and opens the alternative-source path only under the stated source
+unavailability conditions. Its live API now has **60 models and 18 OpenAI
+rows**; GPT-6 Astra remains the OpenAI maximum at **53.6**, 1.4 points below
+the bar. Keep p(NO)=.30 and HOLD / NO ADD. Gemini's Pro subset is unchanged,
+Apple has no qualifying touchscreen purchase release, MetaMask has no token
+launch, and current presidential activity supplies no Trump-out catalyst. A
+fresh Senate page returned 403, but no alert, market state or criteria change
+disturbed the Clarity pair's identical-rule payout floor.
+
+No post-cutoff news or opportunity alert and no watchlist hit arrived. Marginal
+APY has five clear ordinary holds and zero close flags; all protected groups
+remain complete. Default and thin-tail discovery, sports, macro, event
+monotonicity, consistency and favorite-fade scans produced no instance-level
+robust edge. Barcelona's 3.5pp single-book sports gap does not survive the
+probability haircut and fees. Limitless screened 913 candidates and found zero
+identical matches above 1.5% net. Constrained Kelly suggests no permitted add:
+the approval market is already past entry and the Duma gate fails.
+
+DEC-0142 was closed after its 24-hour prediction held exactly: the rolled-back
+five-share over-60 NO remained at zero, over-50 YES stayed at 29, no late order
+or reservation appeared, and the loss remained **$0.08758**. Weekly P&L is
+current through Sep. 18, the world-state review is current through Sep. 13, and
+the concluded Saturday methodology study requires no rerun. No trade, cancel,
+transfer, probability change or Telegram summary followed this flat tick.
