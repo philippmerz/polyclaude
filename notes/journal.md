@@ -18277,3 +18277,39 @@ Duma still has no result or new quantified seat evidence. Position identity is
 clean, the only order remains the zero-fill Trump-out 28-NO sell at .97, and no
 BUY reservation, opportunity alert or watchlist hit appeared. No trade, order,
 probability change, Telegram message or follow-up was warranted.
+
+## 2026-09-19 10:00–10:07 UTC — captured the approval market's 0.99 bid
+
+The periodic check initially found no new alert, watchlist hit, opportunity or
+Duma result. Silver Bulletin's canonical chart still terminates at Datawrapper
+version **7781**, published at 03:04:49 UTC, with Sep. 18 approval unchanged at
+**38.49159** and no Sep. 19 point. The approval market remains active,
+unresolved and UMA-clear after its nominal close.
+
+The live book did create an actionable exit that the full-position depth walk
+obscured: **9.56 YES shares were bid at .99**, after which bids collapsed to
+roughly .012 and below. The fee schedule is the authoritative 4% × p × (1-p)
+curve, so a .99 taker sale nets **.989604 per share**. Selling therefore beats
+holding unless true p(YES) exceeds **98.9604%**. The recorded p=.80 gives a
+$1.801238 expected improvement on 9.5 shares; even p=.98 leaves +$0.091238.
+Repeated unchanged chart versions support the thesis but do not establish the
+next-data-point finalization required for near-certainty.
+
+After a final source and 9.56-share depth check, the vetted seller submitted a
+**9.5-share .99 FOK**, which matched in full. Gross proceeds were $9.405;
+the fee was $0.003762 and net proceeds were **$9.401238**. Order
+`0xf05bf5660744b080fefb77ea50d39dea8ebee3c1cf848f82637649a9b832c3a1`;
+transaction
+`0xbeca4333235062b14e70e3660ac00b7495819546585249a5685a83e0b9888d51`.
+Against $3.80 gross entry cost plus $0.0912 allocated entry fee, the sold slice
+realized approximately **+$5.510038**. The remaining **3.5 YES** preserve
+limited resolution upside and are held rather than dumped into the collapsed
+lower bids. DEC-0158 records the EV capture.
+
+Reconciliation is clean. The exact token balance and claim snapshot are 3.5,
+pUSD rose to $9.8177 by the expected net amount, no BUY reservation or new live
+order exists, and the only authenticated order remains the zero-fill Trump-out
+28-NO sell at .97. Fourteen open legs now have **$159.11 cost, $155.24 midpoint
+and $142.25 indicative fee-net depth**. Authoritative bankroll is **$180.70**,
+including $6.62 separately contributed gas, and settled P&L is **+$7.94**.
+No other position action followed.

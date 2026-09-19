@@ -1,5 +1,5 @@
 {
-  "next_id": 158,
+  "next_id": 159,
   "decisions": [
     {
       "id": 1,
@@ -3127,6 +3127,27 @@
         "datawrapper",
         "short-dated",
         "taker"
+      ],
+      "slug": "will-trumps-approval-rating-be-between-38pt5-and-38pt9-on-september-18-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 158,
+      "timestamp": "2026-09-19T10:05:21Z",
+      "type": "size_change",
+      "thesis": "Sold 9.5 of 13 Sep-18 Trump approval 38.5-38.9 YES shares FOK at 0.99 for $9.405 gross and $9.401238 net after a $0.003762 taker fee, retaining 3.5 shares to resolve. Datawrapper version 7781 still reports 38.49159 and no Sep-19 point, so the source thesis remains intact, but the live 0.99 bid exceeded fee-adjusted hold value unless p(YES) exceeded 98.9604%. At the recorded p=0.80, selling improved expected value by $1.801238; even at p=0.98 it improved EV by $0.091238. A full exit was rejected because depth collapsed below the 9.56-share top bid. The sold slice realized approximately $5.510038 profit after allocated entry and exit fees.",
+      "confidence": "high",
+      "prediction": "The 9.5-share sale remains fully matched and net proceeds remain $9.401238; retaining 3.5 shares preserves limited upside while avoiding any sale into the collapsed lower bids. Regardless of final resolution, the sale outperforms holding the sold slice unless the true YES probability at execution exceeded 98.9604%.",
+      "size_usd": 9.401238,
+      "resolution_at": "2026-09-22",
+      "tags": [
+        "trump-approval",
+        "partial-exit",
+        "ev-capture",
+        "source-trade",
+        "fok"
       ],
       "slug": "will-trumps-approval-rating-be-between-38pt5-and-38pt9-on-september-18-2026",
       "outcome": null,

@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-19 10:07 current update
+
+- **Approval partial exit — sold 9.5 YES @ .99:** the canonical source remains
+  Datawrapper 7781 at **38.49159→38.5** with no Sep. 19 point, but a live
+  .99 bid appeared for 9.56 shares. After the authoritative fee, selling beat
+  hold value unless p(YES) exceeded **.989604**. Sold 9.5 FOK for $9.405 gross
+  / **$9.401238 net**, realizing about **+$5.510038** on that slice after
+  allocated entry and exit fees and improving EV by $1.801238 at the recorded
+  .80 prior (+$0.091238 even at .98). Retain **3.5 YES** to resolve; do not
+  sell them into the collapsed lower bids or add. Order
+  `0xf05bf5660744b080fefb77ea50d39dea8ebee3c1cf848f82637649a9b832c3a1`;
+  transaction
+  `0xbeca4333235062b14e70e3660ac00b7495819546585249a5685a83e0b9888d51`;
+  DEC-0158.
+- Post-sale state is clean: 14 legs, $159.11 cost, $155.24 midpoint and
+  $142.25 indicative fee-net depth. Authoritative bankroll is **$180.70**,
+  including $6.62 separately contributed gas; settled P&L is **+$7.94**.
+  Polymarket pUSD is $9.8177, no BUY reservation exists, and the sole live
+  order remains the zero-fill Trump-out 28-NO sell at .97. No new alert,
+  watchlist hit or Duma result appeared.
+
 ## Sep-19 06:01 current update
 
 - **Bounded check — no action:** Silver Bulletin's canonical chart advanced to
