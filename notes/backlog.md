@@ -1,5 +1,20 @@
 # Polyclaude Backlog
 
+## Sep-19 22:02 current update
+
+- **Bounded review — no action:** the only post-cutoff alert is an 18:07 CBS
+  update on U.S.-escorted oil through Hormuz, with no causal channel to a held
+  position. No official or credible Duma seat result has appeared; the held set
+  remains exactly 20 YES in each bucket and exits for about $12.22 versus
+  $14.40 fair. HOLD the complete set and never trade one leg.
+- Thirteen open legs have $157.71 cost, $150.00 midpoint and $136.99 indicative
+  fee-net depth; the lower marks are uncorroborated quote/depth volatility and
+  all direct and protected-group exits remain HOLD. Authoritative bankroll is
+  **$178.94** and settled P&L remains **+$10.04**. Orders, reservations, UMA,
+  Ostium, redemption, marginal APY, position state and all four daemons are
+  clean. No opportunity alert, watchlist hit, overdue decision, trade, prior
+  change, Telegram message or follow-up.
+
 ## Sep-19 18:02 current update
 
 - **Bounded review — no action:** two post-cutoff Clarity Act alerts at 15:39
