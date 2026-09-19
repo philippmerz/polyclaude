@@ -35,40 +35,35 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-19 10:07 UTC
+## Last audited snapshot — 2026-09-19 14:14 UTC
 
 | Measure | Value |
 |---|---:|
-| Unresolved position legs | 14 |
-| Position cost | $159.11 |
-| Polymarket midpoint | $155.24 |
-| Indicative depth/fee value | $142.25 |
-| Authoritative whole-account mark | $180.70 |
-| Settled realized P&L | +$7.94 |
+| Unresolved position legs | 13 |
+| Position cost | $157.71 |
+| Polymarket midpoint | $152.30 |
+| Indicative depth/fee value | $140.24 |
+| Authoritative whole-account mark | $181.32 |
+| Settled realized P&L | +$10.04 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor; manage it only as a complete position. A Sep. 18 deep
-review sold 15 Apple NO at .38-.39, leaving 34.005, then added 43.361345
-Gemini-HLE>=50 NO at .119 plus fees, leaving 102.08475. The Gemini add remains
-positive-EV under the standard ten-point stress but exceeded the
-executable-price half-Kelly increment by about $2.1; do not add further or
-reverse into the thin bid. A later measured-source trade bought **13 Sep. 18
-Trump approval 38.5–38.9 YES at .40**, $5.32480 including fee, after the named
-chart printed 38.49159 and two prior weekly settlements validated the source
-mapping. Its margin above the 38.45 rounding boundary is thin: no add. On Sep.
-19, a .99 bid allowed **9.5 of 13 shares** to sell for $9.401238 fee-net,
-capturing about $5.51 realized profit and beating hold value below 98.9604%
-YES probability. Retain 3.5 shares through finalization; chart version 7781
-still carries 38.49159 with no Sep. 19 point. New Duma district
-evidence shifts the held buckets to .14/.29/.29 while leaving the complete
-union at .72. All remaining exit checks return **HOLD**. The only live order is
-a zero-fill maker sell for **28 Trump-out NO at 0.97**. The midpoint-to-depth
-gap is $13.00. Excluding separately contributed gas, trading value is
-approximately $174.08 at midpoint or $161.08 on the indicative depth basis.
-The next dated clocks are the approval source finalization and Duma results
-through Sep. 20, the Arena source snapshot on Sep. 30, and the emergency-path
-drill on Oct. 12.
+$29.00 payout floor; manage it only as a complete position. The Duma position
+remains an equal 20/20/20 YES set across 295–339 seats, with .14/.29/.29
+bucket probabilities and a .72 union; hold the complete set and never trade
+one leg. The Sep. 18 Trump approval source trade is closed. Datawrapper version
+7784 added the Sep. 19 point while preserving Sep. 18 at **38.49159→38.5**,
+so the retained 3.5 YES resolved and redeemed for $3.50. Together with the
+earlier 9.5-share sale, the trade returned **$12.901238** on $5.324800 all-in
+cost, a **$7.576438 profit (+142.29%)** before separately funded chain gas.
+
+All remaining exit checks return **HOLD**. The only live order is a zero-fill
+maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $9.817650 and
+the $3.50 redemption was supplied to Polygon Aave as USDC.e at about 3.10%
+APY. The midpoint-to-depth gap is $12.06. Excluding separately contributed
+gas, trading value is approximately $174.63 at midpoint or $162.57 on the
+indicative depth basis. The next dated clocks are Duma results through Sep. 20,
+the Arena source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

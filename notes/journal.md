@@ -18313,3 +18313,55 @@ order exists, and the only authenticated order remains the zero-fill Trump-out
 and $142.25 indicative fee-net depth**. Authoritative bankroll is **$180.70**,
 including $6.62 separately contributed gas, and settled P&L is **+$7.94**.
 No other position action followed.
+
+## 2026-09-19 14:00–14:14 UTC — approval resolved YES; redeemed, swept, and hardened the redemption path
+
+The complete scheduled check found the approval market's finalization event.
+Silver Bulletin's canonical Datawrapper chain now ends at version **7784**,
+published at 13:04:51 UTC. It adds the Sep. 19 point and preserves Sep. 18 at
+**38.49159**, so the one-decimal resolving value is 38.5. Gamma market 4485384
+is closed, non-orderable and `resolved`, with YES/NO prices 1/0; the data API
+independently showed the held 3.5 YES at price 1 and `redeemable=true`.
+
+The first vetted NegRiskAdapter redemption reverted. Its receipt used 249,475
+of a hardcoded 250,000 gas ceiling and status was zero; the claim and $3.50
+payout remained intact. The same calldata then simulated successfully and
+estimated at 305,922 gas, isolating an out-of-gas defect rather than a source,
+resolution or entitlement problem. The failed attempt cost **0.069818535 POL**
+and moved no funds. I fixed both `redeem-all` and `redeem-one` to simulate,
+estimate gas live, add the greater of 20% or 30,000 gas, and stop before signing
+on any preflight failure. Focused redemption/CLOB tests pass. The single retry
+used a 367,107 limit, consumed 255,082 gas, and redeemed the 3.5 claims for
+**$3.50 USDC.e** in transaction
+`0xb096cad6b6a470926572acf705faed94ec820828731801ef8346736e1dd2dbff`.
+
+The completed source trade returned $9.401238 net from the 9.5-share sale plus
+$3.500000 redemption, or **$12.901238** against **$5.324800** all-in entry cost:
+**+$7.576438 / +142.29%** before separately contributed chain gas. Full holding
+would have earned $0.098762 more because YES occurred; DEC-0158 records that
+ex-post regret separately from the sale's positive expected value at the
+recorded .80 posterior and .989604 fee-adjusted breakeven. DEC-0157 records the
+correct measured-source forecast; DEC-0159 records the gas-preflight repair.
+
+The payout was below Polymarket's $5 ticket minimum and pUSD already provides
+$9.817650 of immediately deployable collateral, so leaving USDC.e idle had no
+option-value benefit. I supplied the full **$3.50 USDC.e** to Polygon Aave at
+**3.102% APY** in transaction
+`0x7b0f1d576936ba1c1e4c6b0fdedfbebc6fbbffbcf851fac364cba6b991393215`.
+Post-action state is clean: no winning redemption remains, the resolved claim
+snapshot and prior are pruned, there is no BUY commitment, and the only live
+order is the zero-fill Trump-out 28-NO sell at .97. Thirteen open legs have
+**$157.71 cost, $152.30 midpoint and $140.24 indicative fee-net depth**.
+Authoritative bankroll is **$181.32**, including $6.69 separately contributed
+gas, and settled P&L is **+$10.04**.
+
+No other action cleared the bar. CEC updates report Duma participation rather
+than seat results, so the complete 20/20/20 set stays intact. The exact HLE API,
+Gemini Pro subset, Apple store/newsroom, Senate floor, MetaMask and White House
+checks produced no thesis break. The post-cutoff CBS Hormuz alert has no direct
+position channel. Default and thin-tail discovery, sports, macro, event
+monotonicity, consistency, favorite-fade and Limitless scans found no
+instance-level robust edge. Marginal-APY has five ordinary holds and no close
+flag; all protected groups and exit analyses remain HOLD. Weekly P&L and the
+world-state rotation are current, all four daemons are single/current, and no
+further follow-up was scheduled.

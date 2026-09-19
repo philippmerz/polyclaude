@@ -34,6 +34,28 @@ class _Contract:
         self.functions = _Functions(balance)
 
 
+class _RedeemCall:
+    def __init__(self, gas_estimate: int = 305_922, fail_at: str | None = None):
+        self.gas_estimate = gas_estimate
+        self.fail_at = fail_at
+        self.events: list[tuple[str, dict]] = []
+
+    def call(self, tx: dict) -> None:
+        self.events.append(("call", tx))
+        if self.fail_at == "call":
+            raise RuntimeError("simulation reverted")
+
+    def estimate_gas(self, tx: dict) -> int:
+        self.events.append(("estimate", tx))
+        if self.fail_at == "estimate":
+            raise RuntimeError("estimation failed")
+        return self.gas_estimate
+
+    def build_transaction(self, tx: dict) -> dict:
+        self.events.append(("build", tx))
+        return dict(tx)
+
+
 def test_redeem_preflight_reads_archived_token_balance() -> None:
     ctf = _Contract(34_000_000)
 
@@ -70,3 +92,40 @@ def test_redeem_all_rejects_losing_or_uncertain_rows(price) -> None:
 def test_redeem_all_requires_explicit_redeemable_flag() -> None:
     assert not clob_v2._held_outcome_won({"curPrice": 1})
     assert not clob_v2._held_outcome_won({"redeemable": "true", "curPrice": 1})
+
+
+def test_redeem_preflight_simulates_then_estimates_with_buffer() -> None:
+    redeem_call = _RedeemCall(gas_estimate=305_922)
+    common_tx = {"from": "0xwallet", "nonce": 7, "chainId": 137}
+
+    tx, estimate, gas_limit = clob_v2._prepare_redeem_transaction(
+        redeem_call, common_tx
+    )
+
+    assert estimate == 305_922
+    assert gas_limit == 367_107
+    assert tx["gas"] == gas_limit
+    assert "gas" not in common_tx
+    assert [event for event, _ in redeem_call.events] == [
+        "call", "estimate", "build",
+    ]
+    assert redeem_call.events[0][1] == {"from": "0xwallet"}
+    assert redeem_call.events[1][1] == {"from": "0xwallet"}
+
+
+@pytest.mark.parametrize("fail_at", ["call", "estimate"])
+def test_redeem_preflight_failure_never_builds_transaction(fail_at: str) -> None:
+    redeem_call = _RedeemCall(fail_at=fail_at)
+
+    with pytest.raises(RuntimeError):
+        clob_v2._prepare_redeem_transaction(
+            redeem_call, {"from": "0xwallet", "nonce": 7, "chainId": 137}
+        )
+
+    assert "build" not in [event for event, _ in redeem_call.events]
+
+
+@pytest.mark.parametrize("estimate", [0, -1, True, "bad"])
+def test_redeem_gas_buffer_rejects_invalid_estimate(estimate) -> None:
+    with pytest.raises(ValueError, match="positive integer"):
+        clob_v2._buffered_redeem_gas(estimate)

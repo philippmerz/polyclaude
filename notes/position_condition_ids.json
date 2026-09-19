@@ -107,14 +107,6 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-trumps-approval-rating-be-between-38pt5-and-38pt9-on-september-18-2026",
-   "outcome": "Yes",
-   "size": 3.5,
-   "conditionId": "0xdc0aac847da312351bfe88f9755a4a19f417ce96176273f01eefa8d9a0a2758e",
-   "asset": "19129503609453591744551955481670603178387563409991220223511977207336944128091",
-   "negativeRisk": true
-  },
-  {
    "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
    "outcome": "No",
    "size": 0.003571,

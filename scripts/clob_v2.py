@@ -672,6 +672,14 @@ USDC_E_ADDR = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
 PUSD_ADDR = "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB"
 POLYGON_RPC = "https://polygon.drpc.org"
 
+# Redemption costs vary materially by condition and NegRisk adapter state. A
+# Sep-19 redemption exhausted 249,475 of a hard-coded 250,000-gas limit while
+# the same calldata estimated at 305,922. Estimate each current call and leave
+# headroom for small state-dependent changes between preflight and inclusion.
+# The gas limit is a ceiling; unused gas is not charged.
+REDEEM_GAS_BUFFER_PERCENT = 20
+REDEEM_GAS_MIN_BUFFER = 30_000
+
 _NEG_RISK_REDEEM_ABI = [{
     "inputs": [
         {"name": "_conditionId", "type": "bytes32"},
@@ -742,6 +750,41 @@ def _held_outcome_won(position: dict) -> bool:
     return math.isfinite(price) and price >= 0.999
 
 
+def _buffered_redeem_gas(estimate: int) -> int:
+    """Return a validated redemption gas estimate with conservative headroom."""
+    if isinstance(estimate, bool):
+        raise ValueError("redemption gas estimate must be a positive integer")
+    try:
+        gas_estimate = int(estimate)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("redemption gas estimate must be a positive integer") from exc
+    if gas_estimate <= 0:
+        raise ValueError("redemption gas estimate must be a positive integer")
+    proportional = (
+        gas_estimate * (100 + REDEEM_GAS_BUFFER_PERCENT) + 99
+    ) // 100
+    return max(proportional, gas_estimate + REDEEM_GAS_MIN_BUFFER)
+
+
+def _prepare_redeem_transaction(
+    redeem_call: Any, common_tx: dict
+) -> tuple[dict, int, int]:
+    """Simulate, estimate, and build a redemption transaction, in that order.
+
+    Any simulation or estimation error propagates before signing or broadcast.
+    Keeping this preflight shared prevents redeem-all and redeem-one from
+    drifting back to different safety behavior.
+    """
+    if "gas" in common_tx:
+        raise ValueError("redemption transaction gas must come from live estimation")
+    call_tx = {"from": common_tx["from"]}
+    redeem_call.call(call_tx)
+    gas_estimate = int(redeem_call.estimate_gas(call_tx))
+    gas_limit = _buffered_redeem_gas(gas_estimate)
+    tx = redeem_call.build_transaction({**common_tx, "gas": gas_limit})
+    return tx, gas_estimate, gas_limit
+
+
 def redeem_all(dry_run: bool = False) -> dict:
     """Redeem final winning positions and skip losing outcome rows.
 
@@ -801,20 +844,39 @@ def redeem_all(dry_run: bool = False) -> dict:
         gp = w.eth.gas_price
         common_tx = {
             "from": addr_cs, "nonce": nonce, "chainId": 137,
-            "gas": 250_000,
             "maxFeePerGas": max(int(gp * 3), int(gp + 1_000_000_000)),
             "maxPriorityFeePerGas": 30_000_000_000,
         }
         if is_neg:
-            tx = adapter.functions.redeemPositions(cond_id, [bal_yes, bal_no]).build_transaction(common_tx)
+            redeem_call = adapter.functions.redeemPositions(
+                cond_id, [bal_yes, bal_no]
+            )
         else:
             # Standard CTF: indexSets = [1] (YES) | [2] (NO) — pass both, contract no-ops the loser
-            tx = ctf_redeem.functions.redeemPositions(
+            redeem_call = ctf_redeem.functions.redeemPositions(
                 Web3.to_checksum_address(USDC_E_ADDR),
                 b"\x00" * 32,
                 cond_id,
                 [1, 2],
-            ).build_transaction(common_tx)
+            )
+
+        try:
+            tx, gas_estimate, gas_limit = _prepare_redeem_transaction(
+                redeem_call, common_tx
+            )
+        except Exception as exc:
+            error = f"preflight failed; no broadcast: {str(exc)[:180]}"
+            print(f"  SKIP ({error}) {title}")
+            summary.append({
+                "title": title, "conditionId": cond_id_hex, "negRisk": is_neg,
+                "tx": None, "ok": False, "error": error,
+                "yes_redeemed": bal_yes / 1e6, "no_redeemed": bal_no / 1e6,
+            })
+            continue
+        print(
+            f"  preflight OK {title}: gas estimate {gas_estimate}, "
+            f"limit {gas_limit}"
+        )
 
         h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
         r = w.eth.wait_for_transaction_receipt(h, timeout=120)
@@ -867,7 +929,7 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
     nonce = w.eth.get_transaction_count(addr_cs)
     gp = w.eth.gas_price
     common_tx = {
-        "from": addr_cs, "nonce": nonce, "chainId": 137, "gas": 250_000,
+        "from": addr_cs, "nonce": nonce, "chainId": 137,
         "maxFeePerGas": max(int(gp * 3), int(gp + 1_000_000_000)),
         "maxPriorityFeePerGas": 30_000_000_000,
     }
@@ -882,11 +944,11 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
         print(f"  negRisk redeem: on-chain balance {bal} on the {outcome} leg -> amounts {amounts}")
         adapter = w.eth.contract(address=Web3.to_checksum_address(NEG_RISK_ADAPTER),
                                  abi=_NEG_RISK_REDEEM_ABI)
-        tx = adapter.functions.redeemPositions(cond_id, amounts).build_transaction(common_tx)
+        redeem_call = adapter.functions.redeemPositions(cond_id, amounts)
     else:
-        tx = ctf_redeem.functions.redeemPositions(
+        redeem_call = ctf_redeem.functions.redeemPositions(
             Web3.to_checksum_address(PUSD_ADDR), b"\x00" * 32, cond_id, [1, 2],
-        ).build_transaction(common_tx)
+        )
     # SIMULATE-FIRST (2026-08-12). This function had no dry path, and on that
     # date I called it as a "probe" of the redemption wiring: it sent a real
     # transaction, which reverted (correctly — the condition was unresolved)
@@ -895,12 +957,21 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
     # believes they are testing. eth_call executes against current state and
     # reverts WITHOUT broadcasting, so the wiring verifies for free and a real
     # redemption can be rehearsed before it is sent.
+    try:
+        tx, gas_estimate, gas_limit = _prepare_redeem_transaction(
+            redeem_call, common_tx
+        )
+    except Exception as exc:
+        if dry_run:
+            return {"ok": False, "tx": None,
+                    "simulated": f"would REVERT: {str(exc)[:180]}"}
+        raise RuntimeError(
+            f"redeem preflight failed; transaction not broadcast: {str(exc)[:180]}"
+        ) from exc
     if dry_run:
-        try:
-            w.eth.call({"from": tx["from"], "to": tx["to"], "data": tx["data"]})
-            return {"ok": True, "tx": None, "simulated": "would SUCCEED"}
-        except Exception as e:
-            return {"ok": False, "tx": None, "simulated": f"would REVERT: {str(e)[:180]}"}
+        return {"ok": True, "tx": None, "simulated": "would SUCCEED",
+                "gas_estimate": gas_estimate, "gas_limit": gas_limit}
+    print(f"  preflight OK: gas estimate {gas_estimate}, limit {gas_limit}")
     h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
     r = w.eth.wait_for_transaction_receipt(h, timeout=120)
     print(f"  {'OK' if r.status == 1 else 'FAIL'} redeem {cond_id_hex[:18]}...  tx 0x{r.transactionHash.hex()}")

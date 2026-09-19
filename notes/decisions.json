@@ -1,5 +1,5 @@
 {
-  "next_id": 159,
+  "next_id": 160,
   "decisions": [
     {
       "id": 1,
@@ -3129,9 +3129,10 @@
         "taker"
       ],
       "slug": "will-trumps-approval-rating-be-between-38pt5-and-38pt9-on-september-18-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Resolved YES after Datawrapper version 7784 added the September 19 point and preserved September 18 at 38.49159, which rounds to 38.5. The original 13 claims produced $9.401238 net from the 9.5-share partial sale plus $3.500000 redemption proceeds, $12.901238 total, against $5.324800 all-in entry cost: +$7.576438 protocol-fee-net profit (+142.29%).",
+      "calibration_delta": "The directional prediction was correct. The recorded 0.80 probability cannot be recalibrated from one win; the useful evidence is that the exact-source mapping and next-point finalization behaved as underwritten.",
+      "lesson": "Measured-source trades can support large edge when the exact chart, rounding rule, predecessor settlements, revision history, and finalization condition are verified. Retain a revision-risk haircut when the value sits near a bucket boundary.",
+      "resolved_at": "2026-09-19T14:14:05Z"
     },
     {
       "id": 158,
@@ -3150,6 +3151,27 @@
         "fok"
       ],
       "slug": "will-trumps-approval-rating-be-between-38pt5-and-38pt9-on-september-18-2026",
+      "outcome": "The 9.5-share sale remained fully matched with $9.401238 net proceeds, and the retained 3.5 YES resolved for $3.50. Because the market ultimately resolved YES, holding the sold slice would have paid $9.50, so the sale underperformed the realized counterfactual by $0.098762 while sharply reducing downside exposure.",
+      "calibration_delta": "Ex post YES implies $0.098762 regret on the sold slice. This does not negate the ex-ante EV calculation: at the recorded 0.80 posterior the sale added $1.801238 expected value and broke even at p=0.989604. The outcome shows only that the high-probability branch occurred.",
+      "lesson": "Judge near-par exits by the posterior and fee-adjusted breakeven, while separately recording ex-post regret. A correct EV sale can trail the winning hold path by the small premium surrendered.",
+      "resolved_at": "2026-09-19T14:14:05Z"
+    },
+    {
+      "id": 159,
+      "timestamp": "2026-09-19T14:14:05Z",
+      "type": "scaffolding",
+      "thesis": "A winning negative-risk redemption reverted after consuming 249,475 of a hardcoded 250,000 gas ceiling even though the same call simulated and estimated at 305,922. Both redemption paths now simulate, obtain a live gas estimate, add the greater of 20% or 30,000 gas, and refuse to broadcast on any preflight failure. The hardened retry used a 367,107 limit and succeeded with 255,082 gas.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-19, every redemption sent by clob_v2 will first pass simulation and live estimation, use buffered gas instead of the former fixed ceiling, and fail before broadcast if either preflight step fails.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-19",
+      "tags": [
+        "redemption",
+        "gas-estimation",
+        "preflight",
+        "transaction-safety"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

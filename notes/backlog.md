@@ -1,5 +1,37 @@
 # Polyclaude Backlog
 
+## Sep-19 14:14 current update
+
+- **Approval resolved YES and is fully closed:** canonical Datawrapper version
+  **7784** added the Sep. 19 point and left Sep. 18 at **38.49159**, which
+  rounds to 38.5. Gamma market 4485384 is closed/resolved at YES=1 and the
+  data API exposed the remaining 3.5 YES as redeemable. The successful
+  redemption paid **$3.50 USDC.e** in transaction
+  `0xb096cad6b6a470926572acf705faed94ec820828731801ef8346736e1dd2dbff`.
+  Combined with the earlier partial sale, proceeds were **$12.901238** against
+  $5.324800 all-in entry cost: **+$7.576438 / +142.29%** before separately
+  funded chain gas. DEC-0157 and DEC-0158 now record both the correct forecast
+  and the sale's $0.098762 ex-post regret versus the winning hold branch.
+- **Redemption incident fixed:** the first attempt reverted after consuming
+  249,475 of its fixed 250,000 gas limit, costing 0.069818535 POL and moving no
+  funds. `clob_v2.py` now simulates every redemption, estimates gas live, adds
+  max(20%, 30,000) headroom, and fails before broadcast if preflight fails.
+  The retry estimated 305,922, used a 367,107 limit, and consumed 255,082 gas.
+  Focused tests cover the buffer and fail-closed paths; DEC-0159 records the
+  tooling change.
+- **Capital and state reconciled:** the $3.50 USDC.e payout was supplied to
+  Polygon Aave at **3.102% APY**; pUSD remains $9.817650 with no BUY
+  commitment. State audit is clean after pruning the resolved claim and Kelly
+  prior. Thirteen open legs have $157.71 cost, $152.30 midpoint and $140.24
+  indicative fee-net depth. Authoritative bankroll is **$181.32**, including
+  $6.69 separately contributed gas; settled P&L is **+$10.04**. The sole live
+  order remains the zero-fill Trump-out 28-NO sell at .97.
+- **Rest of full check:** no Duma result or thesis break; HLE, Gemini, Apple,
+  Clarity, MetaMask and Trump-out primary sources are unchanged. The 13:47 CBS
+  Hormuz alert has no held-position causal channel. Default/thin-tail, sports,
+  macro, monotonicity, consistency, favorite-fade and Limitless scans found no
+  executable robust edge; marginal-APY and all remaining exit routes say HOLD.
+
 ## Sep-19 10:07 current update
 
 - **Approval partial exit — sold 9.5 YES @ .99:** the canonical source remains

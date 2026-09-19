@@ -1352,37 +1352,5 @@
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
   "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-50 YES it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
   "latest_catalyst": "Sep-19 06:00 review: a Sep-16 article surfaced after the prior cutoff reporting Gillibrand and six other Democratic senators still committed to passage, while analysts remain pessimistic after the 49-50 procedural vote. The article adds no final-passage vote; both exact contracts exclude the procedural motion and cloture. No criteria or UMA change. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
- },
- "will-trumps-approval-rating-be-between-38pt5-and-38pt9-on-september-18-2026": {
-  "p_yes": 0.8,
-  "verified": "2026-09-19",
-  "criteria_read": "2026-09-19",
-  "cluster": "us-politics",
-  "rho_within": 0.2,
-  "cluster_frac": 0.1437,
-  "current_assessment": "Silver Bulletin resolving-chart entry version 7776 and current version 7781 both report Sep-18 approval 38.49159, which rounds to 38.5 and selects this bucket. The canonical article embed redirects through to version 7781, published Sep-19 03:04 UTC; no Sep-19 data point exists yet, so Sep-18 is not final under the exact rule. Across 23 distinct late-day source snapshots from Aug-26 through Sep-17, 22 were unchanged in the later historical series and one revised upward; none had an adverse revision larger than the 0.04159 rounding margin. Underwrite p(YES)=0.80. On Sep-19 at 10:05, sell-side depth allowed 9.5 of 13 shares to exit FOK at 0.99, whose fee-adjusted breakeven was p=0.989604; retain 3.5 shares to resolve rather than cross the collapsed lower bids. HOLD the remainder through finalization; no add.",
-  "key_facts": [
-   {
-    "claim": "The live resolving chart's version 7781 reports 38.49159 for September 18, 2026, unchanged from entry version 7776 and rounding to 38.5 at the one-decimal precision required by the market; it has no September 19 data point yet.",
-    "source": "https://datawrapper.dwcdn.net/kSCt4/7781/data.csv",
-    "source_date": "2026-09-19",
-    "checked": "2026-09-19"
-   },
-   {
-    "claim": "The named Silver Bulletin article embed follows a live redirect chain to current Datawrapper version 7781; chart metadata reports publication on September 19 at 03:04 UTC.",
-    "source": "https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin",
-    "source_date": "2026-09-19",
-    "checked": "2026-09-19"
-   },
-   {
-    "claim": "The September 4 and September 11 predecessor Polymarket events resolved to the exact one-decimal buckets implied by the same current Datawrapper historical series.",
-    "source": "https://gamma-api.polymarket.com/events?id=927895 + https://gamma-api.polymarket.com/events?id=983377",
-    "source_date": "2026-09-18",
-    "checked": "2026-09-18"
-   }
-  ],
-  "divergence_ack": "2026-09-18",
-  "divergence_ack_reason": "The large prior-to-market gap is the measured source edge that justified the entry: the named chart reads 38.49159 and two prior weekly markets resolved to this chart, while a 23-day late-version audit found zero adverse revisions large enough to cross today's 38.45 boundary. Size is deliberately limited to 13 shares because the margin is thin and the next data point has not yet finalized the date.",
-  "latest_catalyst": "Sep-19 10:05 UTC: source version 7781 still reports 38.49159 with no Sep-19 point. Sold 9.5 YES FOK at 0.99 for $9.401238 fee-net because the exit beat hold value unless p(YES)>0.989604; retained 3.5 shares to resolve. HOLD remainder / NO ADD."
  }
 }
