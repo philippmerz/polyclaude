@@ -1,5 +1,20 @@
 # Polyclaude Backlog
 
+## Sep-19 06:01 current update
+
+- **Bounded check — no action:** Silver Bulletin's canonical chart advanced to
+  Datawrapper **7781** at 03:04 UTC but still ends on Sep. 18 at
+  **38.49159→38.5**; no Sep. 19 point exists, so the held approval bucket is
+  not yet final. The market remains active/unresolved with no UMA state. Its
+  .745 mark is another wide-book midpoint: complete fee-net exit is only about
+  $4.04. HOLD 13 YES / NO ADD.
+- One new MATERIAL-tagged Clarity article was stale Sep. 16 context: Gillibrand
+  and six other Democrats remain committed, while analysts remain pessimistic
+  after the already-reviewed 49-50 procedural vote. Both contracts exclude
+  that vote; there is no final-passage vote, criteria drift or UMA event. HOLD
+  the complete protected pair. No opportunity alert, watchlist hit, Duma result,
+  order, reservation or other actionable change.
+
 ## Sep-19 02:11 current update
 
 - **Full check — no executable change:** fourteen open legs stand at $162.91

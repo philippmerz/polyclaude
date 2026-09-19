@@ -18252,3 +18252,28 @@ or reservation appeared, and the loss remained **$0.08758**. Weekly P&L is
 current through Sep. 18, the world-state review is current through Sep. 13, and
 the concluded Saturday methodology study requires no rerun. No trade, cancel,
 transfer, probability change or Telegram summary followed this flat tick.
+
+## 2026-09-19 06:00–06:01 UTC — approval source and stale Clarity alert; HOLD
+
+The bounded periodic review found no action. Silver Bulletin's canonical chart
+advanced through versions 7780 and **7781**, last modified at 03:04:49 UTC,
+without changing the held observation. Version 7781 still ends on Sep. 18 at
+**38.49159**, which rounds to 38.5, and has no Sep. 19 point. The exact market
+remains active and unresolved with no UMA state. Its .745 mark is a wide-book
+midpoint: complete fee-net exit is only about **$4.04** versus $9.685 marked
+value. The source remains valid and that exit destroys expected value, so HOLD
+13 YES / NO ADD pending finalization.
+
+One post-cutoff alert surfaced a Sep. 16 The Block article reporting that
+Gillibrand and six other Democratic senators remain committed to passing the
+Clarity Act, while analysts remain pessimistic after the 49-50 procedural vote.
+That is stale legislative context, not a resolving event: the seven senators'
+reported votes were on the procedural motion, which both held contracts
+explicitly exclude. There is no final-passage vote, criteria change or UMA
+event. The protected over-50 YES plus over-58 NO floor remains intact; HOLD the
+complete pair and never transact one leg.
+
+Duma still has no result or new quantified seat evidence. Position identity is
+clean, the only order remains the zero-fill Trump-out 28-NO sell at .97, and no
+BUY reservation, opportunity alert or watchlist hit appeared. No trade, order,
+probability change, Telegram message or follow-up was warranted.
