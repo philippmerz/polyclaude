@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-19 18:02 current update
+
+- **Bounded review — no action:** two post-cutoff Clarity Act alerts at 15:39
+  and 17:06 UTC restate the already-reviewed Senate setback and agency-rulemaking
+  context. The official record still contains only the Sep. 15 failed cloture
+  vote on the motion to proceed, which both held contracts exclude; there is no
+  final-passage vote or UMA event. The 29 over-50 YES plus 29 over-58 NO pair's
+  $29 logical floor is unchanged. HOLD the complete pair and never trade one
+  leg.
+- Duma remains exactly 20 YES in each held bucket with no official seat result;
+  complete exit is about $12.22 versus $14.40 fair. Thirteen open legs have
+  $157.71 cost, $152.33 midpoint and $141.60 indicative fee-net depth.
+  Authoritative bankroll is about **$181.10** and settled P&L remains
+  **+$10.04**. Orders, reservations, UMA, Ostium, redemption, marginal APY,
+  state audit and all four daemons are clean. No opportunity alert, watchlist
+  hit, overdue decision, trade, prior change, Telegram message or follow-up.
+
 ## Sep-19 14:14 current update
 
 - **Approval resolved YES and is fully closed:** canonical Datawrapper version

@@ -18365,3 +18365,29 @@ instance-level robust edge. Marginal-APY has five ordinary holds and no close
 flag; all protected groups and exit analyses remain HOLD. Weekly P&L and the
 world-state rotation are current, all four daemons are single/current, and no
 further follow-up was scheduled.
+
+## 2026-09-19 18:00–18:02 UTC — repeated Clarity coverage and no Duma result; no action
+
+The bounded periodic review consumed two post-14:14 alerts. The Block at 15:39
+and Decrypt at 17:06 repeat the already-reviewed Clarity Act setback and the
+shift toward SEC/CFTC rulemaking. The official Senate record still shows only
+the Sep. 15 failed cloture vote on the motion to proceed, not a final-passage
+vote; both exact held contracts exclude that procedural vote. There is no new
+vote count, criteria change or UMA event. The 29 over-50 YES plus 29 over-58
+NO complete pair therefore retains its criteria-consistent $29 payout floor.
+HOLD the complete pair and never trade one leg.
+
+No official or credible Duma seat result has appeared. The protected set still
+contains exactly 20 YES shares in each of 295–309, 310–324 and 325–339, with a
+complete exit near $12.22 versus $14.40 central fair. The exact HLE chart API,
+Gemini, Apple, Senate, MetaMask and White House primary-source checks found no
+new decision-changing fact.
+
+Thirteen open legs have **$157.71 cost, $152.33 midpoint and $141.60 indicative
+fee-net depth**. Authoritative bankroll is approximately **$181.10** and settled
+P&L remains **+$10.04**. Polymarket has $9.817650 deployable pUSD with no BUY
+commitment; the sole live order remains the zero-fill Trump-out 28-NO sell at
+.97. UMA, Ostium, redemption, position state, marginal APY, exit routing and
+all four daemons are clean. There is no opportunity alert, watchlist hit or
+overdue decision. No trade, order, transfer, probability change, Telegram
+message or further follow-up was warranted.
