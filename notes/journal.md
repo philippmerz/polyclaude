@@ -18686,3 +18686,42 @@ contradicted the authoritative `bankroll.py` ledger, which remains **+$10.04
 cumulative realized P&L**. I relabeled the diagnostic `visible-row P&L` and
 made the output direct cumulative reporting to `bankroll.py`; no valuation,
 position or execution behavior changed. DEC-0164 records the correction.
+
+## 2026-09-20 22:00–22:14 UTC — live Duma count cuts prior; HOLD
+
+The bounded periodic review found one material update after the 18:17 cutoff.
+[RBC's live result article](https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142),
+published at 22:00:27 UTC and modified at 22:03:39 UTC, reports 45.08% of
+protocols counted. United Russia had 57.67% of the list vote; RBC explicitly
+estimated **138–139 list seats** and reported United Russia leading in **200
+single-member districts**. Other parties and independents led in 16, while
+nine districts had no preliminary data. I reproduced those figures directly
+from the article body rather than inferring the district count from the party
+vote. Earlier CEC-linked wire snapshots of 161 leads at 20.12% and 181 at
+24.56% corroborate the adverse direction but are less current.
+
+The observed components imply a provisional United Russia total of **338–339
+before the nine unseen districts**. The held 295–339 range therefore requires
+the final district count to stay at no more than 200–201, depending on the
+list allocation. Further list-vote drift and reversals in current district
+leads leave a meaningful held tail, but gaining even one or two of the nine
+unreported districts can move the total above 339. I reduced the three held
+bucket probabilities from .08/.18/.23 to **.001/.009/.160**, or **.17** for
+the covered union, with .07 ten-point stress and a deliberately wide .04–.35
+judgment range. DEC-0165 records the re-underwrite.
+
+At 22:14 UTC the [exact Gamma event](https://gamma-api.polymarket.com/events/147974)
+remained active, unclosed, unresolved and UMA-clear. The 295–309 YES book had
+no bid; 310–324 bid **.006** and 325–339 bid **.09**, so only the latter two
+legs could sell, for **$1.92** across 20 shares each. Both bids were below
+their .009 and .160 central probabilities, and there was no synchronized
+complete-set exit. A five-unit add cost about .150 per covered payout unit and
+failed both the .07 stress test and the independent .75 evidence floor.
+**HOLD the exact 20/20/20 set; NO ADD; do not leg out.** No trade, order,
+transfer or redemption followed.
+
+The rest of the bounded review was clear: no unrelated news or opportunity
+catalyst, watchlist trigger, overdue decision or due backlog item appeared.
+Position state and UMA checks remained clean, and every other modeled exit
+remained a hold. Telegram **1015** reported the material prior change and
+unchanged action.

@@ -4,7 +4,7 @@
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-20 18:12 after the first official result-window evidence: VCIOM and INSOMAR list-vote exit polls imply about 123 and 130 United Russia list seats after normalizing the five qualifying parties, but neither reports the decisive district winners. The early CEC 57.54% figure is also list vote, not a seat total. A fresh market/source blend lowers the held buckets to 0.08/0.18/0.23, p=0.49 union and 0.39 ten-point stress. The synchronized 20/20/20 exit was $3.83, only 0.1915 per covered payout, below central, stress and the 0.248 market-only union probability. HOLD the equal set; no add because the independent 0.75 evidence floor fails, and no single-leg action.",
+   "add_gate": "FAILED 2026-09-20 22:14 after actual counting displaced the forecast model: RBC explicitly estimates 138-139 ER list seats at 45.08% of protocols and reports ER leading 200 districts, 16 other leads and nine districts without preliminary data. The held range now has p=0.17, 0.07 ten-point stress and 0.04-0.35 wider range. A complete exit is unavailable because 295-309 has no bids; the 0.006 and 0.09 bids on 310-324 and 325-339 return only $1.92 across those two 20-share legs and remain below their 0.009/0.160 central probabilities. HOLD the equal set, no leg sale. NO ADD because the ask fails stress and the independent 0.75 evidence floor.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -1004,14 +1004,14 @@
   ]
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.08,
+  "p_yes": 0.001,
   "verified": "2026-09-20",
   "criteria_read": "2026-09-20",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-20 18:12 result-window update: VCIOM's official exit poll reports United Russia 49.4%, KPRF 14.2%, LDPR 10.7%, New People 9.7% and Just Russia 6.6%; normalizing those five qualifying parties implies about 123 United Russia list seats. INSOMAR's 52.8/14.8/9.9/8.6/5.5 implies about 130. Neither poll reports district winners, and the early CEC 57.54% is also a geographically incomplete list-vote count rather than a total-seat result. APEK's 185-195 district range maps the named polls to roughly 308-325 total seats, mostly inside the held range, while the broad market move remains genuine hidden information. Updating the 50/50 source/market blend at the 18:08 book gives below-295 / 295-309 / 310-324 / 325-339 / above-339 = 0.06/0.08/0.18/0.23/0.45, so the covered union moves 0.51->0.49 with 0.39 ten-point stress. The synchronized full-depth 20-share exit was $3.83 (0.1915 breakeven) versus $9.80 central, $7.80 stressed and about $4.96 even at the market-only 0.248 probability. HOLD / NO ADD; the independent 0.75 add-evidence floor fails and no leg may be traded independently.",
+  "current_assessment": "Sep-20 22:14 count-driven re-underwrite: RBC's live article at 45.08% of protocols has United Russia 57.67%, KPRF 13.81%, LDPR 8.88%, New People 7.87% and Just Russia 5.18%, explicitly estimates 138-139 United Russia list seats, reports United Russia leading 200 single-member districts and reports 16 other leads with nine districts lacking preliminary data. The provisional total is therefore 338-339 before the nine unseen districts; the held range requires the final district count to stay at no more than 200-201 depending on the list allocation. The progression from 161 ER district leads at 20.12% to 181 at 24.56% and 200 at 45.08% is adverse corroboration, while later list-vote drift and lead reversals preserve a meaningful held tail. Revised held-bucket probabilities are 0.001/0.009/0.160, union p=0.17, ten-point stress 0.07 and wider range 0.04-0.35. Gamma remains active, unclosed and UMA-clear. A synchronized group exit is unavailable because 295-309 has no bids; the current 0.006 and 0.09 bids on the other legs provide only $1.92 across those two 20-share legs and both remain below their individual central probabilities. HOLD the exact 20/20/20 set / NO ADD / no leg sale. The five-unit all-in ask near 0.150 fails stress and the independent 0.75 evidence floor.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and pre-Sep10 APEK key_facts describe the older Aug-10 forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -1140,18 +1140,30 @@
     "source": "https://t.me/WCIOMofficial/15552 + https://t.me/tass_agency/396425 + https://t.me/tass_agency/396428",
     "source_date": "2026-09-20",
     "checked": "2026-09-20"
+   },
+   {
+    "claim": "RBC's article published at September 20 22:00:27 UTC reported 45.08% of protocols counted: United Russia 57.67%, KPRF 13.81%, LDPR 8.88%, New People 7.87% and Just Russia 5.18%. It explicitly estimated 138-139 United Russia list seats, reported United Russia leading 200 single-member districts, and reported 16 other leads with nine districts lacking preliminary data.",
+    "source": "https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142 + https://t.me/rbc_news/157189",
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
+   },
+   {
+    "claim": "At September 20 22:14 UTC, Gamma remained active, unclosed and UMA-clear. The 295-309 YES book had no bid; 20 shares of 310-324 and 325-339 could sell for $0.12 and $1.80 respectively, not a synchronized complete-set exit.",
+    "source": "https://gamma-api.polymarket.com/events/147974 + https://clob.polymarket.com/book + scripts/exit_analysis.py",
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
    }
   ]
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.18,
+  "p_yes": 0.009,
   "verified": "2026-09-20",
   "criteria_read": "2026-09-20",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-20 18:12 result-window update: VCIOM's official exit poll reports United Russia 49.4%, KPRF 14.2%, LDPR 10.7%, New People 9.7% and Just Russia 6.6%; normalizing those five qualifying parties implies about 123 United Russia list seats. INSOMAR's 52.8/14.8/9.9/8.6/5.5 implies about 130. Neither poll reports district winners, and the early CEC 57.54% is also a geographically incomplete list-vote count rather than a total-seat result. APEK's 185-195 district range maps the named polls to roughly 308-325 total seats, mostly inside the held range, while the broad market move remains genuine hidden information. Updating the 50/50 source/market blend at the 18:08 book gives below-295 / 295-309 / 310-324 / 325-339 / above-339 = 0.06/0.08/0.18/0.23/0.45, so the covered union moves 0.51->0.49 with 0.39 ten-point stress. The synchronized full-depth 20-share exit was $3.83 (0.1915 breakeven) versus $9.80 central, $7.80 stressed and about $4.96 even at the market-only 0.248 probability. HOLD / NO ADD; the independent 0.75 add-evidence floor fails and no leg may be traded independently.",
+  "current_assessment": "Sep-20 22:14 count-driven re-underwrite: RBC's live article at 45.08% of protocols has United Russia 57.67%, KPRF 13.81%, LDPR 8.88%, New People 7.87% and Just Russia 5.18%, explicitly estimates 138-139 United Russia list seats, reports United Russia leading 200 single-member districts and reports 16 other leads with nine districts lacking preliminary data. The provisional total is therefore 338-339 before the nine unseen districts; the held range requires the final district count to stay at no more than 200-201 depending on the list allocation. The progression from 161 ER district leads at 20.12% to 181 at 24.56% and 200 at 45.08% is adverse corroboration, while later list-vote drift and lead reversals preserve a meaningful held tail. Revised held-bucket probabilities are 0.001/0.009/0.160, union p=0.17, ten-point stress 0.07 and wider range 0.04-0.35. Gamma remains active, unclosed and UMA-clear. A synchronized group exit is unavailable because 295-309 has no bids; the current 0.006 and 0.09 bids on the other legs provide only $1.92 across those two 20-share legs and both remain below their individual central probabilities. HOLD the exact 20/20/20 set / NO ADD / no leg sale. The five-unit all-in ask near 0.150 fails stress and the independent 0.75 evidence floor.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -1254,20 +1266,32 @@
    {
     "claim": "At 18:00 UTC, VCIOM's official exit poll reported United Russia 49.4%, KPRF 14.2%, LDPR 10.7%, New People 9.7% and Just Russia 6.6%; INSOMAR reported 52.8%, 14.8%, 9.9%, 8.6% and 5.5%. These are party-list votes, not district or total-seat results. Early CEC reporting likewise gave only a 57.54% United Russia list share.",
     "source": "https://t.me/WCIOMofficial/15552 + https://t.me/tass_agency/396425 + https://t.me/tass_agency/396428",
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
+   },
+   {
+    "claim": "RBC's article published at September 20 22:00:27 UTC reported 45.08% of protocols counted: United Russia 57.67%, KPRF 13.81%, LDPR 8.88%, New People 7.87% and Just Russia 5.18%. It explicitly estimated 138-139 United Russia list seats, reported United Russia leading 200 single-member districts, and reported 16 other leads with nine districts lacking preliminary data.",
+    "source": "https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142 + https://t.me/rbc_news/157189",
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
+   },
+   {
+    "claim": "At September 20 22:14 UTC, Gamma remained active, unclosed and UMA-clear. The 295-309 YES book had no bid; 20 shares of 310-324 and 325-339 could sell for $0.12 and $1.80 respectively, not a synchronized complete-set exit.",
+    "source": "https://gamma-api.polymarket.com/events/147974 + https://clob.polymarket.com/book + scripts/exit_analysis.py",
     "source_date": "2026-09-20",
     "checked": "2026-09-20"
    }
   ]
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.23,
+  "p_yes": 0.16,
   "verified": "2026-09-20",
   "criteria_read": "2026-09-20",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-20 18:12 result-window update: VCIOM's official exit poll reports United Russia 49.4%, KPRF 14.2%, LDPR 10.7%, New People 9.7% and Just Russia 6.6%; normalizing those five qualifying parties implies about 123 United Russia list seats. INSOMAR's 52.8/14.8/9.9/8.6/5.5 implies about 130. Neither poll reports district winners, and the early CEC 57.54% is also a geographically incomplete list-vote count rather than a total-seat result. APEK's 185-195 district range maps the named polls to roughly 308-325 total seats, mostly inside the held range, while the broad market move remains genuine hidden information. Updating the 50/50 source/market blend at the 18:08 book gives below-295 / 295-309 / 310-324 / 325-339 / above-339 = 0.06/0.08/0.18/0.23/0.45, so the covered union moves 0.51->0.49 with 0.39 ten-point stress. The synchronized full-depth 20-share exit was $3.83 (0.1915 breakeven) versus $9.80 central, $7.80 stressed and about $4.96 even at the market-only 0.248 probability. HOLD / NO ADD; the independent 0.75 add-evidence floor fails and no leg may be traded independently.",
+  "current_assessment": "Sep-20 22:14 count-driven re-underwrite: RBC's live article at 45.08% of protocols has United Russia 57.67%, KPRF 13.81%, LDPR 8.88%, New People 7.87% and Just Russia 5.18%, explicitly estimates 138-139 United Russia list seats, reports United Russia leading 200 single-member districts and reports 16 other leads with nine districts lacking preliminary data. The provisional total is therefore 338-339 before the nine unseen districts; the held range requires the final district count to stay at no more than 200-201 depending on the list allocation. The progression from 161 ER district leads at 20.12% to 181 at 24.56% and 200 at 45.08% is adverse corroboration, while later list-vote drift and lead reversals preserve a meaningful held tail. Revised held-bucket probabilities are 0.001/0.009/0.160, union p=0.17, ten-point stress 0.07 and wider range 0.04-0.35. Gamma remains active, unclosed and UMA-clear. A synchronized group exit is unavailable because 295-309 has no bids; the current 0.006 and 0.09 bids on the other legs provide only $1.92 across those two 20-share legs and both remain below their individual central probabilities. HOLD the exact 20/20/20 set / NO ADD / no leg sale. The five-unit all-in ask near 0.150 fails stress and the independent 0.75 evidence floor.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
@@ -1370,6 +1394,18 @@
    {
     "claim": "At 18:00 UTC, VCIOM's official exit poll reported United Russia 49.4%, KPRF 14.2%, LDPR 10.7%, New People 9.7% and Just Russia 6.6%; INSOMAR reported 52.8%, 14.8%, 9.9%, 8.6% and 5.5%. These are party-list votes, not district or total-seat results. Early CEC reporting likewise gave only a 57.54% United Russia list share.",
     "source": "https://t.me/WCIOMofficial/15552 + https://t.me/tass_agency/396425 + https://t.me/tass_agency/396428",
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
+   },
+   {
+    "claim": "RBC's article published at September 20 22:00:27 UTC reported 45.08% of protocols counted: United Russia 57.67%, KPRF 13.81%, LDPR 8.88%, New People 7.87% and Just Russia 5.18%. It explicitly estimated 138-139 United Russia list seats, reported United Russia leading 200 single-member districts, and reported 16 other leads with nine districts lacking preliminary data.",
+    "source": "https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142 + https://t.me/rbc_news/157189",
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
+   },
+   {
+    "claim": "At September 20 22:14 UTC, Gamma remained active, unclosed and UMA-clear. The 295-309 YES book had no bid; 20 shares of 310-324 and 325-339 could sell for $0.12 and $1.80 respectively, not a synchronized complete-set exit.",
+    "source": "https://gamma-api.polymarket.com/events/147974 + https://clob.polymarket.com/book + scripts/exit_analysis.py",
     "source_date": "2026-09-20",
     "checked": "2026-09-20"
    }

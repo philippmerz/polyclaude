@@ -1,5 +1,25 @@
 # Polyclaude Backlog
 
+## Sep-20 22:14 current update
+
+- **Duma live count cuts covered-range prior .49→.17; HOLD / NO ADD:**
+  RBC's 22:00:27 UTC live article explicitly reports 45.08% of protocols,
+  United Russia at 57.67%, an estimated **138–139 list seats**, **200**
+  district leads, 16 other leads and nine districts without preliminary data.
+  That is a provisional **338–339 seats before the nine unseen districts**.
+  Lead flips and further list-vote drift preserve a tail into the held range,
+  but the 295–339 union is now .17 (.07 ten-point stress; .04–.35 wider
+  range), concentrated in 325–339. DEC-0165.
+- The exact event remains active, unclosed, unresolved and UMA-clear. At the
+  22:14 final execution check, 295–309 had no bid; the 310–324 and 325–339 bids
+  were .006 and .09. Selling those two legs alone would return only $1.92 and
+  both bids are below their .009/.160 central probabilities; a synchronized
+  exit is unavailable. Preserve the exact 20/20/20 set and do not leg out.
+  The five-unit add also fails stress and the independent .75 evidence gate.
+- No unrelated news/opportunity catalyst, watchlist hit, overdue decision or
+  due backlog item appeared after the 18:17 cutoff. No trade, order, transfer
+  or redemption followed. Telegram 1015 reported the material prior change.
+
 ## Sep-20 18:13 current update
 
 - **Duma result-window evidence; prior .59→.49, HOLD / NO ADD:** VCIOM's
