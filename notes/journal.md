@@ -18632,3 +18632,57 @@ JETS/IYT are tactical short expressions and were not added to the long-only
 watchlist. RARE was added as the 34th research gate and is not hit. No trade,
 order, transfer or portfolio change followed. Telegram 1013 carried the bounded
 weekly summary.
+
+## 2026-09-20 18:00–18:14 UTC — Duma result-window re-underwrite; HOLD
+
+The bounded periodic review found one due item: the official Duma preliminary
+reporting window had opened. The 16:10 Sunday long-term review was already
+complete, all 34 watchlist triggers were clear, the alert tails contained no
+new portfolio catalyst, and the decision ledger had no overdue item.
+
+The first named vote evidence was material but did not reveal the contract's
+decisive quantity. [VCIOM's official exit poll](https://t.me/WCIOMofficial/15552)
+reported United Russia 49.4%, KPRF 14.2%, LDPR 10.7%, New People 9.7% and Just
+Russia 6.6%. Normalizing over those five qualifying parties implies about 123
+United Russia list seats. [INSOMAR's poll](https://t.me/tass_agency/396425)
+reported 52.8/14.8/9.9/8.6/5.5, implying about 130 list seats. The
+[first CEC report](https://t.me/tass_agency/396428) put United Russia at 57.54%
+on the party list after early protocols. None of these sources reported
+single-member district winners or a total-seat projection. The official CEC
+feed and a bounded current-news search likewise had no district or aggregate
+seat count through 18:12 UTC.
+
+The exit polls still cover the independent forecast's central region. With 123
+list seats, the held 295–339 range requires 172–216 district wins; with 130 it
+requires 165–209. APEK's 185–195 district range therefore maps to about 308–325
+total seats, while Carnegie's upper-district case and the early CEC list share
+preserve substantial 340+ risk. I retained the broad market move as genuine
+hidden information and reduced the final distribution to below 295 / 295–309 /
+310–324 / 325–339 / above 339 = **.06/.08/.18/.23/.45**. The covered union is
+**.49**, down from .59 before this run, with .39 ten-point stress and a wider
+.25–.72 judgment range. DEC-0162 records the first live-window update and
+DEC-0163 records the named-poll re-underwrite.
+
+At the final synchronized check, the [exact Gamma event](https://gamma-api.polymarket.com/events/147974)
+remained active, unclosed, unresolved and UMA-clear. The contemporaneous
+normalized market midpoint assigned about **.217** to the held union. Selling
+all 20 shares in each bucket realized **$3.96**, or **.198** per possible $20
+payout, versus $9.80 central, $7.80 stressed and about $4.34 even at the
+market-only probability. Thus an exit destroyed expected value under every
+defensible weighting of the available evidence. The cheap-looking add also
+failed the independent .75 evidence floor. **HOLD the exact 20/20/20 group;
+NO ADD; never transact one leg independently.** No trade, order, transfer or
+redemption followed. Telegram **1014** carried the material bounded summary.
+
+A final 18:17 safety guard found no newer CEC or wire district/seat result.
+The complete exit had slipped to **$3.77** but remained far below both central
+and stressed hold value, so the action did not change.
+
+The required consolidated status pass also exposed a reporting ambiguity.
+`positions.py` printed **-$10.58 settled P&L** by summing only the two final
+losing rows that the data API still returns. Redeemed winning rows have already
+disappeared from that endpoint, so the number was never cumulative and
+contradicted the authoritative `bankroll.py` ledger, which remains **+$10.04
+cumulative realized P&L**. I relabeled the diagnostic `visible-row P&L` and
+made the output direct cumulative reporting to `bankroll.py`; no valuation,
+position or execution behavior changed. DEC-0164 records the correction.

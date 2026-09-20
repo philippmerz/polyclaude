@@ -1,5 +1,5 @@
 {
-  "next_id": 162,
+  "next_id": 165,
   "decisions": [
     {
       "id": 1,
@@ -3209,6 +3209,65 @@
         "probability-update",
         "hidden-information",
         "hold-no-add"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 162,
+      "timestamp": "2026-09-20T18:05:57Z",
+      "type": "skip",
+      "thesis": "The Duma event repriced further during the official result window while the CEC still showed no seat total. Current normalized market probability for the held 295-339 union is 0.291. A fresh 50/50 blend with the unchanged independent source distribution lowers the central union prior from 0.59 to 0.51, stress 0.41. The protected 20/20/20 full-depth exit realizes only 0.226 per payout dollar, below central, stress, and even the market-only probability, so exiting destroys EV. The apparent add also remains blocked by the independent 0.75 evidence floor.",
+      "confidence": "medium",
+      "prediction": "The official or consensus United Russia seat total falls in 295-339 with 51% probability; the equal set remains intact, with no pre-result add or single-leg transaction.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-22",
+      "tags": [
+        "duma",
+        "probability-update",
+        "hidden-information",
+        "hold-no-add"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 163,
+      "timestamp": "2026-09-20T18:12:32Z",
+      "type": "skip",
+      "thesis": "Official result-window evidence remains list-only: VCIOM and INSOMAR imply roughly 123 and 130 United Russia list seats after normalization, while the early CEC 57.54% is an incomplete list count and no credible district or total-seat result exists. Combining that source evidence with the further broad market repricing lowers P(295-339) from 0.51 to 0.49. The protected full-depth exit realizes only 0.1915 per covered payout, below the 0.49 central, 0.39 stress and 0.248 market-only estimates, so selling would destroy expected value.",
+      "confidence": "medium",
+      "prediction": "United Russia finishes with 295-339 seats with 49% probability; until a credible district-seat total drives that probability below the executable complete-set threshold, the exact 20/20/20 group remains intact.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-22",
+      "tags": [
+        "duma",
+        "exit-poll",
+        "probability-update",
+        "hold-no-add"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 164,
+      "timestamp": "2026-09-20T18:16:17Z",
+      "type": "scaffolding",
+      "thesis": "positions.py labeled the subtotal of final rows still returned by Polymarket's data API as settled P&L. The API currently retains two losing rows while prior redeemed winners have disappeared, so that -$10.58 subtotal contradicted the authoritative bankroll ledger's +$10.04 cumulative realized P&L. Relabel the subtotal as visible-row P&L and explicitly direct cumulative reporting to bankroll.py; valuation and trade logic are unchanged.",
+      "confidence": "high",
+      "prediction": "Future positions/status output will describe retained final-row P&L as a non-cumulative diagnostic, while bankroll.py remains the sole cumulative realized-P&L source.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-20",
+      "tags": [
+        "accounting",
+        "reporting",
+        "positions"
       ],
       "slug": null,
       "outcome": null,

@@ -73,10 +73,16 @@ def main() -> None:
     print(f"OPEN TOTAL  cost ${total_init:.2f}  mtm ${total_cur:.2f}  max-payout ${total_max:.2f}  unrealised P&L ${total_cur-total_init:+.2f}  ({pnl_pct:+.2f}%)")
     print(f"Max payout if every held outcome wins: ${total_max:.2f}  ({upside_pct:+.2f}%)")
     if resolved:
-        settled_pnl = sum(float(p.get("currentValue") or 0)
-                          - float(p.get("initialValue") or 0) for p in resolved)
+        # The data API keeps some final rows (especially losing claims) long
+        # after other settled rows have disappeared.  Their subtotal is useful
+        # for explaining what was excluded from OPEN TOTAL, but it is not the
+        # account's cumulative realized P&L.  bankroll.py owns that ledger.
+        visible_resolved_pnl = sum(float(p.get("currentValue") or 0)
+                                   - float(p.get("initialValue") or 0)
+                                   for p in resolved)
         print(f"RESOLVED rows excluded from open P&L: {len(resolved)}  "
-              f"settled P&L ${settled_pnl:+.2f}")
+              f"visible-row P&L ${visible_resolved_pnl:+.2f} "
+              f"(not cumulative; use bankroll.py)")
 
     # REALIZABLE vs MARKED (2026-08-13). `curPrice` is a MIDPOINT, and on an
     # illiquid book the midpoint is not a price anyone will pay. That day the

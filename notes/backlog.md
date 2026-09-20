@@ -1,5 +1,32 @@
 # Polyclaude Backlog
 
+## Sep-20 18:13 current update
+
+- **Duma result-window evidence; prior .59→.49, HOLD / NO ADD:** VCIOM's
+  official exit poll reports United Russia at 49.4% and INSOMAR reports 52.8%.
+  Normalizing each poll over the five qualifying parties implies about 123 and
+  130 list seats, respectively, but neither supplies the decisive district
+  winners. The first CEC 57.54% figure is likewise an incomplete party-list
+  count, not a total-seat result; no credible district or aggregate seat count
+  appeared through the final 18:17 UTC guard. The full-event, high-volume repricing remains
+  real hidden information, so the final blended covered-range prior is .49
+  (.39 ten-point stress; .25–.72 wider range). The exact 20/20/20 exit was
+  $3.96 at 18:12 and $3.77 at the final guard, versus $9.80 central / $7.80
+  stressed hold value. Preserve the equal set; never trade one leg.
+  DEC-0162/0163.
+- All seven venue buckets remain active, unclosed, unresolved and UMA-clear.
+  The independent .75 add-evidence gate still fails despite cheap asks. No
+  trade, order, transfer or redemption followed. The recent journal, alert
+  tails and decision ledger contain no other due or overdue item; the 16:10
+  Sunday long-term review is current and all 34 watchlist triggers were clear.
+- **Resolved-row label corrected:** `positions.py` called the P&L subtotal of
+  the final rows still returned by the data API “settled P&L.” The API now
+  retains two losing rows while redeemed winners have disappeared, so its
+  -$10.58 subtotal is not the cumulative realized result. The output now says
+  `visible-row P&L` and directs cumulative reporting to `bankroll.py`, whose
+  authoritative realized P&L remains **+$10.04**. Valuation and trading logic
+  did not change; DEC-0164.
+
 ## Sep-20 14:15 current update
 
 - **Duma prior cut .72→.59; HOLD / NO ADD:** two held buckets moved 7.7–8.5pp
