@@ -18500,3 +18500,30 @@ HOLD, and all four daemons are exact-one/current. The exact HLE, Gemini, Apple,
 Senate, MetaMask and White House sources are unchanged. No permitted Kelly add,
 trade, order, transfer, prior change, Telegram message or further follow-up was
 warranted.
+
+## 2026-09-20 10:00–10:02 UTC — official Duma reporting clock; no action
+
+The bounded review found no post-06:02 news or opportunity alert, watchlist hit,
+overdue decision, due backlog item or thesis break. The only new fact is timing:
+the [CEC's 06:43:55 UTC announcement](https://t.me/cikrossii/5731) schedules
+preliminary-results reporting for **21:00–22:00 Moscow time, approximately
+18:00–19:00 UTC** today. It contains no party-seat totals. At 10:01:45 UTC the
+[exact event](https://gamma-api.polymarket.com/events/147974) still showed all
+three held Duma markets active, orderable, unclosed and without UMA resolution
+status. No official or credible seat result has surfaced.
+
+Preserve exactly 20 YES shares in each of 295–309, 310–324 and 325–339. Current
+complete-set exit is about **$12.36** versus $14.40 fair; a five-unit add costs
+**.659 per covered payout unit**, above the .57 policy cap. Constrained Kelly
+therefore keeps `SKIP_ADD_POLICY_PRICE_CAP`, and every protected-group exit
+remains HOLD. Never trade one leg independently.
+
+Thirteen open legs have **$157.71 cost, $149.20 midpoint and $135.04 indicative
+fee-net depth**; the midpoint exceeds realizable depth by $14.16. Fresh
+authoritative bankroll is **$179.39** and settled P&L remains **+$10.04**.
+Deployable pUSD is $9.817650 with no BUY commitment. The sole live order is the
+zero-fill Trump-out 28-NO sell at .97. UMA, Ostium, redemption, position state,
+marginal APY and all four daemons are clean; direct exit analysis still says
+HOLD despite existing Gemini and Apple drawdown alerts. The exact HLE, Gemini,
+Apple, Senate, MetaMask and White House sources are unchanged. No trade, order,
+transfer, prior change, Telegram message or further follow-up was warranted.

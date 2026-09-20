@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-20 10:02 current update
+
+- **Duma result clock clarified / HOLD:** the CEC's 06:43:55 UTC announcement
+  schedules preliminary-results reporting for roughly **18:00–19:00 UTC**
+  today and contains no party-seat total. At 10:01 UTC all three exact held
+  markets remained active, orderable, unclosed and without UMA resolution
+  status. Preserve the exact 20/20/20 set. Complete exit is about $12.36 versus
+  $14.40 fair; a five-unit add costs .659 per payout unit, above the .57 cap.
+  HOLD / NO ADD / never trade one leg.
+- Thirteen open legs have $157.71 cost, $149.20 midpoint and $135.04 indicative
+  fee-net depth. Authoritative bankroll is **$179.39**, settled P&L remains
+  **+$10.04**, pUSD is $9.817650 with no BUY commitment, and the sole live
+  order is the zero-fill Trump-out 28-NO sell at .97. No new alert, watchlist
+  hit, overdue decision, source break, permitted Kelly add or exit appeared.
+  UMA, Ostium, redemption, position state, marginal APY and all four daemons
+  are clean. No trade, order, transfer, prior change or Telegram message.
+
 ## Sep-20 06:02 current update
 
 - **Bounded review — no action:** Duma voting remains underway and preliminary
