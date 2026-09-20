@@ -612,6 +612,28 @@ def test_group_exit_verdict_rejects_nonfinite_or_negative_inputs(
     assert verdict["margin"] is None
 
 
+def test_formatter_fails_closed_when_verdict_margin_is_unpriced() -> None:
+    group = _duma_group()
+    quote = {
+        "status": "OK",
+        "actionable": True,
+        "gross": 12.0,
+        "fee": 0.0,
+        "net": 12.0,
+        "unfilled_by_leg": {},
+    }
+    verdict = {
+        "actionable": False,
+        "verdict": "GROUP_VERDICT_UNPRICED — HOLD",
+        "margin": None,
+    }
+
+    summary = groups.format_group_summary(group, quote, verdict)
+
+    assert "GROUP_VERDICT_UNPRICED" in summary
+    assert "after hurdle carry UNPRICED" in summary
+
+
 def test_stale_member_prior_gates_complete_group_exit_and_add() -> None:
     priors = _duma_priors()
     priors["duma-a"]["verified"] = "2026-08-01"

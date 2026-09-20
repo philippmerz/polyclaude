@@ -1,10 +1,10 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-19",
+ "_updated": "2026-09-20",
  "_groups": {
   "duma-295-339": {
    "label": "Duma 295-339 equal-share YES union",
-   "add_gate": "FAILED 2026-09-19 02:04: the CEC public feed shows voting underway but no seat result, and no new quantified forecast displaces the 0.14/0.29/0.29 held-bucket distribution or p=0.72 union. Fresh complete-set exit is $11.40 versus $14.40 central fair; a five-unit add costs $0.586 per covered payout unit, above the $0.57 policy ceiling even though below the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD the equal set; no add or single-leg action.",
+   "add_gate": "FAILED 2026-09-20 02:07 after a fresh complete-set re-derivation, not a date roll: live CEC and market checks show no seat result, no resolution and no new quantified input. Recombining the FOM/APEK central case, VCIOM threshold variants, Carnegie/RBC high-district case and RASO downside width still gives about 0.731 for the covered union, with 0.656-0.805 district-model sensitivity; retain the conservative rounded 0.14/0.29/0.29 held buckets and p=0.72 union. Fresh complete exit is about $12.28 versus $14.40 central fair; a five-unit add costs $0.638 per covered payout unit, above the $0.57 policy ceiling and the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD the equal set; no add or single-leg action.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -1005,21 +1005,21 @@
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.14,
-  "verified": "2026-09-19",
+  "verified": "2026-09-20",
   "criteria_read": "2026-09-19",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-19 02:04 complete-set re-underwrite: the CEC public feed shows voting underway but no seat result, and no new quantified forecast displaces the Sep-18 distribution of 0.14/0.29/0.29 across the held buckets, p=0.72 union, and 0.09/0.19 outside-range tails. Exact criteria remain unchanged and there is no UMA status. A complete 20-share set exits for $11.40 versus $14.40 central fair; a five-unit add costs $0.586 per covered payout unit, above the $0.57 policy ceiling even though below the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-20 02:07 complete-set re-derivation, not a date roll: live CEC and market checks show no seat result, no resolution, no UMA status, and no new quantified input. Recombining the FOM/APEK central case, VCIOM threshold variants, Carnegie/RBC high-district case, and RASO downside width still gives about 0.731 for the covered union, with 0.656-0.805 district-model sensitivity; retain the conservative rounded 0.09/0.14/0.29/0.29/0.19 full distribution and p=0.72 union. A complete 20-share set exits for about $12.28 versus $14.40 central fair; a five-unit add costs $0.638 per covered payout unit, above the $0.57 policy ceiling and the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** DEC-0083 bought 20 equal YES shares across 295-309, 310-324, and 325-339 for $11.40 total. One covered bucket pays $20, so the economic position is P(295-339), not any leg alone. Sep-1 correction: an independent RASO survey of 54 political-technology experts, conducted Jul-16 to Aug-9, forecasts United Russia at 95-130 list seats plus 155-210 district seats, a very broad component range centered near 295 total. Blended with APEK's tighter 305-318-style central case, this moves probability toward the lower held bucket and expands the below-295 tail. Revised distribution is 18% / 31% / 19% across the held buckets, union p=0.68; this is below the 0.75 add gate. Sep-2 short-clock re-derivation found no new whole-seat forecast and VCIOM's live table still ends Aug-23 at 39.2%; executable complete-set bids/asks are now about 0.652/0.683. HOLD the equal set, NO ADD: bids remain below 0.68 fair and asks remain far above the <=0.57 add gate. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and pre-Sep10 APEK key_facts describe the older Aug-10 forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
    {
-    "claim": "The Russian CEC public feed as of September 19 at 02:04 UTC reports voting, turnout, and observation arrangements but no State Duma seat result. It supplies no new quantified evidence that displaces the September 18 complete-set distribution.",
+    "claim": "The Russian CEC public feed as of September 20 at 02:02 UTC reports election participation and operations but no State Duma seat result. It supplies no new quantified evidence for the complete-set distribution.",
     "source": "https://t.me/s/cikrossii",
-    "source_date": "2026-09-19",
-    "checked": "2026-09-19"
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
    },
    {
     "claim": "FOM's September 10 preliminary forecast, based on September 4-6 fieldwork, puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats.",
@@ -1115,21 +1115,21 @@
  },
  "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.29,
-  "verified": "2026-09-19",
+  "verified": "2026-09-20",
   "criteria_read": "2026-09-19",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-19 02:04 complete-set re-underwrite: the CEC public feed shows voting underway but no seat result, and no new quantified forecast displaces the Sep-18 distribution of 0.14/0.29/0.29 across the held buckets, p=0.72 union, and 0.09/0.19 outside-range tails. Exact criteria remain unchanged and there is no UMA status. A complete 20-share set exits for $11.40 versus $14.40 central fair; a five-unit add costs $0.586 per covered payout unit, above the $0.57 policy ceiling even though below the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-20 02:07 complete-set re-derivation, not a date roll: live CEC and market checks show no seat result, no resolution, no UMA status, and no new quantified input. Recombining the FOM/APEK central case, VCIOM threshold variants, Carnegie/RBC high-district case, and RASO downside width still gives about 0.731 for the covered union, with 0.656-0.805 district-model sensitivity; retain the conservative rounded 0.09/0.14/0.29/0.29/0.19 full distribution and p=0.72 union. A complete 20-share set exits for about $12.28 versus $14.40 central fair; a five-unit add costs $0.638 per covered payout unit, above the $0.57 policy ceiling and the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
    {
-    "claim": "The Russian CEC public feed as of September 19 at 02:04 UTC reports voting, turnout, and observation arrangements but no State Duma seat result. It supplies no new quantified evidence that displaces the September 18 complete-set distribution.",
+    "claim": "The Russian CEC public feed as of September 20 at 02:02 UTC reports election participation and operations but no State Duma seat result. It supplies no new quantified evidence for the complete-set distribution.",
     "source": "https://t.me/s/cikrossii",
-    "source_date": "2026-09-19",
-    "checked": "2026-09-19"
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
    },
    {
     "claim": "FOM's September 10 preliminary forecast, based on September 4-6 fieldwork, puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats.",
@@ -1201,21 +1201,21 @@
  },
  "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
   "p_yes": 0.29,
-  "verified": "2026-09-19",
+  "verified": "2026-09-20",
   "criteria_read": "2026-09-19",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0616,
   "set_only": "DEC-0083 Duma 295-339 range: 20 equal YES shares in 295-309 / 310-324 / 325-339. Directional, not riskless; never add, trim, or exit one leg independently.",
-  "current_assessment": "Sep-19 02:04 complete-set re-underwrite: the CEC public feed shows voting underway but no seat result, and no new quantified forecast displaces the Sep-18 distribution of 0.14/0.29/0.29 across the held buckets, p=0.72 union, and 0.09/0.19 outside-range tails. Exact criteria remain unchanged and there is no UMA status. A complete 20-share set exits for $11.40 versus $14.40 central fair; a five-unit add costs $0.586 per covered payout unit, above the $0.57 policy ceiling even though below the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
+  "current_assessment": "Sep-20 02:07 complete-set re-derivation, not a date roll: live CEC and market checks show no seat result, no resolution, no UMA status, and no new quantified input. Recombining the FOM/APEK central case, VCIOM threshold variants, Carnegie/RBC high-district case, and RASO downside width still gives about 0.731 for the covered union, with 0.656-0.805 district-model sensitivity; retain the conservative rounded 0.09/0.14/0.29/0.29/0.19 full distribution and p=0.72 union. A complete 20-share set exits for about $12.28 versus $14.40 central fair; a five-unit add costs $0.638 per covered payout unit, above the $0.57 policy ceiling and the 0.62 ten-point-stressed union probability. The independent 0.75 evidence gate remains unmet. HOLD / NO ADD; never transact one leg independently.",
   "note": "*** SET-ONLY LEG \u2014 DO NOT TRADE INDEPENDENTLY. *** Sep-1 independent RASO evidence shifts the held-bucket distribution to 0.18/0.31/0.19 and union p to 0.68. Sep-2 short-clock re-derivation found no newer whole-seat forecast; VCIOM still ends Aug-23. Complete bids/asks are about 0.652/0.683: HOLD the 20-share equal set because bids remain below fair; NO ADD because the union prior is below 0.75 and asks exceed the 0.57 ceiling. Re-underwrite and transact all legs as one equal-share set.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note predates APEK's Sep-10 express forecast. Use current_assessment and the Sep-10 APEK key_facts for the complete three-leg structure.",
   "key_facts": [
    {
-    "claim": "The Russian CEC public feed as of September 19 at 02:04 UTC reports voting, turnout, and observation arrangements but no State Duma seat result. It supplies no new quantified evidence that displaces the September 18 complete-set distribution.",
+    "claim": "The Russian CEC public feed as of September 20 at 02:02 UTC reports election participation and operations but no State Duma seat result. It supplies no new quantified evidence for the complete-set distribution.",
     "source": "https://t.me/s/cikrossii",
-    "source_date": "2026-09-19",
-    "checked": "2026-09-19"
+    "source_date": "2026-09-20",
+    "checked": "2026-09-20"
    },
    {
     "claim": "FOM's September 10 preliminary forecast, based on September 4-6 fieldwork, puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats.",

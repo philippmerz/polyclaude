@@ -1404,14 +1404,22 @@ def format_group_summary(
         return text + " | exit=UNPRICED (" + "; ".join(quote.get("issues", [])) + ")"
     verdict = verdict or group_exit_verdict(group, quote)
     raw_margin = float(quote["net"]) - float(group["fair_value"])
-    verdict_margin = float(verdict["margin"])
-    if abs(verdict_margin - raw_margin) > VALUE_TOLERANCE:
-        margin_text = (
-            f"{raw_margin:+.2f} raw vs fair; "
-            f"{verdict_margin:+.2f} after hurdle carry"
-        )
+    # A fail-closed verdict may be explicitly unpriced even when the raw exit
+    # quote itself is complete (for example, a missing/invalid hurdle input).
+    # Keep the diagnostic row printable; never coerce None into a number or
+    # silently turn it into an actionable margin.
+    verdict_margin_raw = verdict.get("margin")
+    if verdict_margin_raw is None:
+        margin_text = f"{raw_margin:+.2f} raw vs fair; after hurdle carry UNPRICED"
     else:
-        margin_text = f"{raw_margin:+.2f} vs fair"
+        verdict_margin = float(verdict_margin_raw)
+        if abs(verdict_margin - raw_margin) > VALUE_TOLERANCE:
+            margin_text = (
+                f"{raw_margin:+.2f} raw vs fair; "
+                f"{verdict_margin:+.2f} after hurdle carry"
+            )
+        else:
+            margin_text = f"{raw_margin:+.2f} vs fair"
     return (
         text
         + f" | full exit=${quote['net']:.2f} (fee ${quote['fee']:.2f}) "

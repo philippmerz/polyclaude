@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-18. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-20. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -35,35 +35,35 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-19 14:14 UTC
+## Last audited snapshot — 2026-09-20 02:08 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 13 |
 | Position cost | $157.71 |
-| Polymarket midpoint | $152.30 |
-| Indicative depth/fee value | $140.24 |
-| Authoritative whole-account mark | $181.32 |
+| Polymarket midpoint | $151.39 |
+| Indicative depth/fee value | $139.85 |
+| Authoritative whole-account mark | $180.41 |
 | Settled realized P&L | +$10.04 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
 $29.00 payout floor; manage it only as a complete position. The Duma position
-remains an equal 20/20/20 YES set across 295–339 seats, with .14/.29/.29
-bucket probabilities and a .72 union; hold the complete set and never trade
-one leg. The Sep. 18 Trump approval source trade is closed. Datawrapper version
-7784 added the Sep. 19 point while preserving Sep. 18 at **38.49159→38.5**,
-so the retained 3.5 YES resolved and redeemed for $3.50. Together with the
-earlier 9.5-share sale, the trade returned **$12.901238** on $5.324800 all-in
-cost, a **$7.576438 profit (+142.29%)** before separately funded chain gas.
+remains an equal 20/20/20 YES set across 295–339 seats. A Sep. 20 fresh
+scenario re-derivation retained .14/.29/.29 bucket probabilities and a .72
+union; no official seat result or UMA state is present. Hold the complete set,
+do not add, and never trade one leg. The Sep. 18 Trump approval source trade
+is closed at a **$7.576438 profit (+142.29%)** before separately funded chain
+gas.
 
 All remaining exit checks return **HOLD**. The only live order is a zero-fill
 maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $9.817650 and
 the $3.50 redemption was supplied to Polygon Aave as USDC.e at about 3.10%
-APY. The midpoint-to-depth gap is $12.06. Excluding separately contributed
-gas, trading value is approximately $174.63 at midpoint or $162.57 on the
-indicative depth basis. The next dated clocks are Duma results through Sep. 20,
-the Arena source snapshot on Sep. 30, and the emergency-path drill on Oct. 12.
+APY. The midpoint-to-depth gap is $11.54. Excluding separately contributed
+gas, trading value is approximately $173.72 at midpoint or $162.18 on the
+indicative depth basis. The next dated clocks are publication of the Duma
+result, the Arena source snapshot on Sep. 30, and the emergency-path drill on
+Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

@@ -18415,3 +18415,58 @@ BUY commitment, and the only live order remains the zero-fill Trump-out 28-NO
 sell at .97. UMA, Ostium, redemption, position state and all four daemons are
 clean. No trade, order, transfer, probability change, Telegram message or
 further follow-up was warranted.
+
+## 2026-09-20 02:00–02:08 UTC — full check; Duma re-derived and risk reporter repaired
+
+The complete scheduled checklist ran once. Thirteen open Polymarket legs have
+**$157.71 cost, $151.39 midpoint and $139.85 indicative fee-net depth**. Fresh
+authoritative bankroll is **$180.41**, including $6.69 of separately
+contributed gas, and settled account P&L remains **+$10.04**. Polymarket holds
+$9.817650 deployable pUSD with no BUY commitment. The sole authenticated order
+is still the zero-fill Trump-out 28-NO sell at .97. Wallets, reservations, UMA,
+Ostium, crux coverage, position identity and all four exact-one/current daemons
+are clean; `redeem-all` found no winning redeemable claim.
+
+The Duma set received the short-clock re-derivation required on its dated end.
+This was a fresh calculation rather than a date roll. Live CEC and venue checks
+show election participation and operations but no seat result, resolution or
+UMA status. Recombining the FOM-list plus APEK-district central case, VCIOM's
+party-threshold variants, the Carnegie/RBC high-district case and RASO's broad
+downside width again gives about **.731** for 295–339, with roughly
+**.656–.805** sensitivity to the district model. Keep the conservatively
+rounded full distribution **.09/.14/.29/.29/.19** and covered union **.72**.
+The exact 20/20/20 set exits for about **$12.28** versus $14.40 central fair.
+A five-unit add costs **.638 per covered payout unit**, above the .57 policy
+cap and .62 ten-point-stressed union probability; the independent .75 evidence
+gate also fails. HOLD / NO ADD / never transact one leg independently.
+
+That dated-end check exposed a reporting defect in a required risk gate. The
+group model correctly failed closed because Duma's passed `endDate` makes its
+carry horizon negative, returning an unpriced verdict with `margin=None` even
+though a raw exit quote exists. `format_group_summary()` unconditionally cast
+that value to a float, crashing `check_marginal_apy.py` before all protected
+groups printed. The formatter now preserves the non-actionable verdict and
+prints `after hurdle carry UNPRICED`; it neither invents a margin nor changes
+the exit decision. The 66-test group regression file, compilation, diff check
+and live command pass. Marginal APY now completes with five ordinary holds,
+zero close flags and all protected structures displayed. DEC-0160 records the
+repair.
+
+No other primary-source check changed a thesis: HLE, Gemini, Apple, Senate,
+MetaMask, White House and Duma sources remain decision-stable. No new
+post-cutoff material news or opportunity alert and no watchlist hit appeared.
+Direct exit analysis says HOLD for all five ordinary positions; Duma, Clarity
+and MetaMask remain complete-group HOLDs. Constrained Kelly permits no add:
+Trump-out has only about $2.10 ticket-cap headroom, below the $5 venue minimum,
+and the Duma price and evidence gates fail.
+
+Default and thin-tail discovery, sports, macro, event monotonicity,
+consistency, favorite-fade and Limitless scans produced no executable robust
+edge. The only monotonicity observation was a Clarity midpoint inversion whose
+live asks and fees leave about **-0.59pp**, so it is not an arbitrage. The
+consistency scan found zero candidates above 2% net and Limitless found no
+identical match above 1.5% net. Weekly P&L is current through Sep. 18, the
+world-state rotation is current through Sep. 13, the completed methodology
+study requires no rerun, and there is no overdue decision. No trade, cancel,
+transfer or position change followed. A single material Telegram summary
+reported the fail-closed formatter repair and unchanged Duma hold.

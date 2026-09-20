@@ -1,5 +1,29 @@
 # Polyclaude Backlog
 
+## Sep-20 02:08 current update
+
+- **Duma re-derived / HOLD / NO ADD:** live CEC and venue checks still show no
+  seat result, resolution or UMA state. A fresh recombination of the
+  FOM/APEK central case, VCIOM threshold variants, Carnegie/RBC high-district
+  case and RASO downside width again gives about .731 for 295–339, with broad
+  .656–.805 district-model sensitivity. Retain the conservative
+  .09/.14/.29/.29/.19 distribution and .72 covered union. The 20/20/20 set
+  exits for about $12.28 versus $14.40 fair; a five-unit add costs .638 per
+  payout unit, above the .57 cap and .62 stress probability. Preserve the
+  equal set and never trade one leg.
+- **Required risk report repaired:** Duma's passed `endDate` correctly made
+  its carry-adjusted group verdict unpriced and fail closed, but the marginal
+  APY formatter tried to cast the `None` margin to a float and crashed. It now
+  prints `after hurdle carry UNPRICED` without changing the non-actionable
+  verdict. The regression suite passes and the live scan completes with five
+  ordinary holds and zero close flags; DEC-0160.
+- Thirteen open legs have $157.71 cost, $151.39 midpoint and $139.85 indicative
+  fee-net depth. Authoritative bankroll is **$180.41**, including $6.69 of
+  separately contributed gas, and settled P&L remains **+$10.04**. Orders,
+  reservations, UMA, Ostium, redemption, state audit, crux coverage and all
+  four daemons are clean. Full discovery found no executable robust edge, so
+  there was no trade, order, transfer or position change.
+
 ## Sep-19 22:02 current update
 
 - **Bounded review — no action:** the only post-cutoff alert is an 18:07 CBS

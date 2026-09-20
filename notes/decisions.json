@@ -1,5 +1,5 @@
 {
-  "next_id": 160,
+  "next_id": 161,
   "decisions": [
     {
       "id": 1,
@@ -3170,6 +3170,25 @@
         "gas-estimation",
         "preflight",
         "transaction-safety"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 160,
+      "timestamp": "2026-09-20T02:08:30Z",
+      "type": "scaffolding",
+      "thesis": "The protected-group formatter assumed every verdict had a numeric carry-adjusted margin, but an expired endDate correctly makes the hurdle verdict fail closed with margin=None even when the raw exit quote is complete. Rendering None as an explicit UNPRICED carry margin preserves the conservative verdict and prevents the required marginal-APY scan from crashing.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-20, check_marginal_apy.py will complete protected-group reporting without an exception when group_exit_verdict returns margin=None, will print after hurdle carry UNPRICED, and will leave the underlying group non-actionable.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-20",
+      "tags": [
+        "tooling",
+        "risk-gate",
+        "fail-closed"
       ],
       "slug": null,
       "outcome": null,
