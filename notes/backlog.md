@@ -1,5 +1,31 @@
 # Polyclaude Backlog
 
+## Sep-20 14:15 current update
+
+- **Duma prior cut .72→.59; HOLD / NO ADD:** two held buckets moved 7.7–8.5pp
+  and the full seven-bucket event repriced on substantial real volume, making
+  this a hidden-information signal rather than midpoint noise. A 50/50 blend
+  of the prior source model and refreshed normalized market distribution gives
+  below/.295–309/.310–324/.325–339/above = **.06/.10/.19/.30/.35**, covered
+  union .59, stress .49 and wider range .40–.72. The anonymous 53.5–54% exit
+  polls have no named pollster or method, and VCIOM says it publishes no
+  interim exit results; they receive no separate evidentiary weight. CEC still
+  has no seat total and expects preliminary reporting around 18:00–19:00 UTC.
+  Current complete exit is $8.80 versus $11.80 central / $9.80 stressed hold
+  value. A five-unit add costs .499, above stress, and the .75 evidence gate
+  fails. Preserve the 20/20/20 set and never trade one leg; DEC-0161.
+- Thirteen open legs have $157.71 cost, $148.12 midpoint and $133.77 indicative
+  fee-net depth. Authoritative bankroll is **$177.00**, including $6.54 of
+  separately contributed gas, and settled P&L remains **+$10.04**. The sole
+  live order is the zero-fill Trump-out 28-NO sell at .97; pUSD is $9.817650
+  with no BUY commitment. No new alert, watchlist hit, overdue decision,
+  redemption, UMA resolution or Ostium trade appeared. State, crux coverage,
+  marginal APY, exit routing and all four daemons are clean.
+- Default/thin-tail, sports, macro, monotonicity, consistency, favorite-fade
+  and Limitless scans found no robust executable edge. Weekly P&L is current,
+  the Sunday world-state rotation is separately scheduled for 16:00 UTC, and
+  the completed methodology study is not due. No trade, order or transfer.
+
 ## Sep-20 10:02 current update
 
 - **Duma result clock clarified / HOLD:** the CEC's 06:43:55 UTC announcement

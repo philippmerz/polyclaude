@@ -18527,3 +18527,81 @@ marginal APY and all four daemons are clean; direct exit analysis still says
 HOLD despite existing Gemini and Apple drawdown alerts. The exact HLE, Gemini,
 Apple, Senate, MetaMask and White House sources are unchanged. No trade, order,
 transfer, prior change, Telegram message or further follow-up was warranted.
+
+## 2026-09-20 14:00–14:16 UTC — full check; Duma market signal cuts prior, HOLD
+
+The complete scheduled checklist ran once. Thirteen open Polymarket legs have
+**$157.71 cost, $148.12 midpoint and $133.77 indicative fee-net depth**; the
+midpoint exceeds depth by $14.35. Fresh authoritative bankroll is **$177.00**,
+including $6.54 of separately contributed gas, and settled P&L remains
+**+$10.04**. Polymarket has $9.817650 deployable pUSD with no BUY commitment.
+The sole authenticated order remains the zero-fill Trump-out 28-NO sell at .97.
+Wallets, reservations, Ostium, crux coverage, position state and all four
+exact-one/current daemons are clean. `redeem-all` found no winning claim.
+
+### Duma: real adverse information, prior .72→.59, no transaction
+
+UMA monitoring flagged genuine 7.7–8.5pp declines in the held 310–324 and
+325–339 marks. This was not a thin midpoint artifact: the entire seven-bucket
+event repriced on substantial traded volume, shifting most market probability
+toward 340 or more seats. All seven markets nevertheless remained active,
+unclosed and without UMA status, while the [CEC schedule](https://t.me/cikrossii/5731)
+still placed preliminary-result reporting around **18:00–19:00 UTC** and
+contained no party-seat total.
+
+The circulating 53.5% claim was already published Sep. 19 at 17:24 UTC by an
+[anonymous channel](https://t.me/Cbpub/76875), not a new count. A conflicting
+54% aggregation likewise discloses no pollster, sample or method. More
+importantly, [VCIOM's own warning](https://t.me/WCIOMofficial/15546) says it
+publishes no interim exit-poll results and that figures attributed to it before
+polls close are unreliable. Those rumors therefore receive no evidentiary
+weight separate from the genuine market move.
+
+Ignoring the move would violate the hidden-information rule, while copying it
+one-for-one would discard the independent FOM/APEK/VCIOM forecast and
+Carnegie/RBC/RASO district evidence. A judgmental 50/50 model average between
+the prior fundamental distribution and the refreshed normalized market
+snapshot gives:
+
+| United Russia seats | Updated probability |
+|---|---:|
+| Below 295 | .06 |
+| 295–309 | .10 |
+| 310–324 | .19 |
+| 325–339 | .30 |
+| Above 339 | .35 |
+
+The covered union falls **.72→.59**, with default ten-point stress **.49** and
+a wider plausible range **.40–.72**. The skeptic case anchored entirely to the
+market at .376 and would have sold the full set at $7.85; the champion case
+retained independent evidence and estimated .58. At 14:12 the exact fee-free
+complete exit was $8.45, a .4225 breakeven, versus **$11.80 central / $9.80
+stressed** hold value. At the final gate it was $8.80, still below both. A
+five-unit add cost .499 per payout unit, above the .49 stress probability, and
+the independent .75 evidence gate also fails. Preserve the exact 20/20/20 set:
+**HOLD / NO ADD / never transact one leg independently**. DEC-0161 records the
+probability change and action threshold.
+
+### Remaining checklist
+
+No news or opportunity alert arrived after the 10:02 cutoff; the watchlist and
+overdue-decision checks were empty. HLE remains 60 rows with OpenAI at 53.6 and
+Gemini at 46.2; Google has no new qualifying Pro row, Apple has no touchscreen
+MacBook purchase listing, the Senate had only a Sep. 18 pro-forma session,
+MetaMask has no token launch, and current White House activity does not break
+Trump-out. Direct exit analysis says HOLD for every ordinary position and all
+protected structures. Marginal APY has five clear ordinary holds and zero
+close flags. Kelly permits no add: Duma fails stress/evidence, and Trump-out's
+$1.65 ticket headroom is below the venue minimum.
+
+The required discovery passes found no robust entry. Default discovery fetched
+985 markets and shortlisted 80; thin-tail inspected over 42,000 rows and more
+than 1,300 hurdle surfaces. Sports rewalks failed the ten-point stress gate,
+macro produced no actionable instance, three monotonicity midpoint flags were
+negative after live asks, the bounded consistency scan found no positive
+quoted group, favorite-fade produced no validated instance, and Limitless had
+zero identical positive match. Weekly P&L is current through Sep. 18, the
+Sunday world-state rotation is separately scheduled for 16:00 UTC, and the
+completed methodology study requires no rerun. No trade, order, cancel or
+transfer followed. Telegram 1012 reported the material Duma prior change and
+unchanged complete-set hold.

@@ -1,5 +1,5 @@
 {
-  "next_id": 161,
+  "next_id": 162,
   "decisions": [
     {
       "id": 1,
@@ -3189,6 +3189,26 @@
         "tooling",
         "risk-gate",
         "fail-closed"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 161,
+      "timestamp": "2026-09-20T14:15:38Z",
+      "type": "skip",
+      "thesis": "The Duma event repriced broadly on substantial volume, so retaining the pre-move 0.72 covered-union prior would ignore a genuine hidden-information signal. A judgmental 50/50 blend of the independent source model and refreshed normalized market distribution lowers P(295-339) to 0.59 (0.49 stress; 0.40-0.72 wider range). The complete equal-share exit remains below both central and stress hold value, while a new add fails stress and the independent 0.75 evidence floor.",
+      "confidence": "medium",
+      "prediction": "The official or consensus United Russia seat total will fall in the held 295-339 range with 59% probability; regardless of outcome, no single Duma leg will be traded and any pre-result add remains blocked unless the complete-set quote clears the stress and evidence gates.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-22",
+      "tags": [
+        "duma",
+        "probability-update",
+        "hidden-information",
+        "hold-no-add"
       ],
       "slug": null,
       "outcome": null,
