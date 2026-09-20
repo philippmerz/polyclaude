@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-20 06:02 current update
+
+- **Bounded review — no action:** Duma voting remains underway and preliminary
+  results are expected only after polls close this evening. No official or
+  credible party-seat total, venue resolution or UMA state has appeared. The
+  held set remains exactly 20 YES in each of 295–309, 310–324 and 325–339;
+  current complete exit is about $12.34 versus $14.40 fair. A five-unit add
+  costs .656 per payout unit, above the .57 cap. HOLD the equal set / NO ADD /
+  never trade one leg.
+- Thirteen open legs have $157.71 cost, $150.50 midpoint and $140.43 indicative
+  fee-net depth. Authoritative bankroll is **$179.39**, including $6.55 of
+  separately contributed gas, and settled P&L remains **+$10.04**. No new
+  alert, watchlist hit, overdue decision, thesis break, state issue or
+  permitted Kelly add appeared. Orders, reservations, UMA, Ostium, redemption,
+  marginal APY, exit routing, position state and all four daemons are clean.
+  No trade, order, transfer, prior change, Telegram message or follow-up.
+
 ## Sep-20 02:08 current update
 
 - **Duma re-derived / HOLD / NO ADD:** live CEC and venue checks still show no

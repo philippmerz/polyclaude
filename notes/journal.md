@@ -18470,3 +18470,33 @@ world-state rotation is current through Sep. 13, the completed methodology
 study requires no rerun, and there is no overdue decision. No trade, cancel,
 transfer or position change followed. A single material Telegram summary
 reported the fail-closed formatter repair and unchanged Duma hold.
+
+## 2026-09-20 06:00–06:02 UTC — voting still underway; no action
+
+The bounded periodic review found no new news or opportunity alert, watchlist
+hit, overdue decision, due backlog item or thesis break after the 02:08 cutoff.
+The Sep. 19 18:07 CBS Hormuz item remains the newest alert and was already
+consumed with no held-position channel.
+
+The Duma election is still in its voting window on Sep. 20; the passed venue
+`endDate` is not evidence that polling or counting has finished. Current
+[election timing](https://amp.rbc.ru/rbcnews/politics/12/09/2026/6aa296a69a794738f90ac5f7)
+and the [CEC feed](https://t.me/s/cikrossii) show operations rather than an
+official party-seat total, with preliminary reporting expected only after polls
+close this evening. The venue remains unresolved with no UMA state. Preserve
+exactly 20 YES shares in each of 295–309, 310–324 and 325–339. The complete set
+exits for about **$12.34** versus $14.40 fair; a five-unit add costs **.656 per
+covered payout unit**, above the .57 policy cap. HOLD / NO ADD / never trade
+one leg independently.
+
+Thirteen open legs have **$157.71 cost, $150.50 midpoint and $140.43 indicative
+fee-net depth**. Fresh authoritative bankroll is **$179.39**, including $6.55
+of separately contributed gas, and settled P&L remains **+$10.04**. Deployable
+pUSD is $9.817650 with no BUY commitment; the sole live order remains the
+zero-fill Trump-out 28-NO sell at .97. UMA and Ostium show no event, redemption
+finds no winner, position audit is clean, marginal APY completes with five
+ordinary holds and zero flags, every direct and protected-group exit remains
+HOLD, and all four daemons are exact-one/current. The exact HLE, Gemini, Apple,
+Senate, MetaMask and White House sources are unchanged. No permitted Kelly add,
+trade, order, transfer, prior change, Telegram message or further follow-up was
+warranted.
