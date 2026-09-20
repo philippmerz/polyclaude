@@ -18605,3 +18605,30 @@ Sunday world-state rotation is separately scheduled for 16:00 UTC, and the
 completed methodology study requires no rerun. No trade, order, cancel or
 transfer followed. Telegram 1012 reported the material Duma prior change and
 unchanged complete-set hold.
+
+## 2026-09-20 16:00–16:10 UTC — Sunday long-term rotation; RARE watch, no entry
+
+All nine source domains had been run within four weeks. The least-recent group—
+biotech-health, trade-regulation and markets-corporate, last covered Aug. 30—
+was therefore used for the due rotation. The digest surfaced MED-confidence
+nominal-price/duration risk and energy/freight pass-through, plus LOW-confidence
+biotech regulatory optionality. The raw output's `ULGN` symbol was wrong: the
+FDA identifies Fayuvi's sponsor as Ultragenyx Pharmaceutical (**RARE**), and the
+log now carries that correction.
+
+The required follow-up checks produced no entry. **TIP was 2/4 PASS** at $105.27:
+positive real carry and sovereign credit quality make it a defensible inflation
+hedge, but it has no generational return profile or forced re-rating catalyst.
+**RARE was 3/4 WATCH** at $14.51 after the GTX-102 failure: commercial revenue and
+the GENGLYCOS/FAYUVI launches create real optionality, but $294M of first-half
+operating cash use against $436M cash/investments, dilution risk and Crysvita
+concentration leave an inadequate margin of safety. Add only as an IBKR research
+candidate below $12.75 after Q3 confirms runway and launch guidance, or after
+demonstrated launch uptake plus a credible path to 2027 profitability.
+
+The live read-only monitor found zero trigger hits across all 33 existing gates.
+XLE's fresh Sep. 13 1/4 PASS and $50 gate stand, so it was not redundantly re-run;
+JETS/IYT are tactical short expressions and were not added to the long-only
+watchlist. RARE was added as the 34th research gate and is not hit. No trade,
+order, transfer or portfolio change followed. Telegram 1013 carried the bounded
+weekly summary.

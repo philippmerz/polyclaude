@@ -2153,3 +2153,90 @@ Domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain  |  Lookback: 30d
 - Run `catalyst_check.py` on: “Will ECB raise rates again in 2026?”, “Will US CPI exceed 3% in September 2026?”, “Will NVIDIA Q3 FY2027 revenue exceed $108bn?”
 - Skip / pass: direct NVDA long (exceptional facts but valuation/pricing not established here); broad L2 governance-token long; BoJ/PBOC themes (no sufficiently material new primary release in-window).
 - Watchlist cross-reference: none recalled; `notes/longterm_watchlist.md` was not read.
+
+---
+
+## 2026-09-20T16:03:59Z — world_state_digest
+
+**Domains:** biotech-health, trade-regulation, markets-corporate | **Lookback:** 30d | **Profile:** research
+
+# WORLD-STATE DIGEST — 2026-09-20
+
+Domains: biotech-health, trade-regulation, markets-corporate  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### biotech-health
+
+- [2026-09-17] [FDA](https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-pediatric-patients-sanfilippo-syndrome-type): Approved Fayuvi (rebisufligene etisparvovec-hopf), the first FDA-approved treatment for pediatric MPS IIIA/Sanfilippo A; it is a one-time intravenous AAV9 gene therapy.
+- [2026-09-17] [FDA](https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-pediatric-patients-sanfilippo-syndrome-type): The approval evidence was an open-label, single-arm multicenter pediatric study; treated patients maintained or improved cognitive function versus an untreated historical-control cohort.
+- [2026-09-15] [FDA](https://www.fda.gov/industry/fda-actions-accelerate-and-modernize-early-and-late-stage-clinical-development/fda-expedited-investigational-new-drug-ind-pilot-program): Opened its Expedited IND Pilot. Applications close October 30; FDA will select and notify its cohort by December 18. Eligible novel candidates span CDER, CBER therapeutic products, and oncology.
+- [2026-09-18] [EMA](https://www.ema.europa.eu/nl/news): CHMP recommended 12 new medicines for EU approval and 11 therapeutic-indication extensions.
+- [2026-09-04] [EMA](https://www.ema.europa.eu/nl/news): PRAC began a safety review of injectable iron-containing medicines.
+- [2026-09-01] [CDC MMWR](https://www.cdc.gov/mmwr/index.html): Published a field report on the 2026 Bundibugyo Ebola outbreak in the DRC.
+
+### trade-regulation
+
+- [2026-09-08] [OFAC](https://ofac.treasury.gov/recent-actions/20260908): Issued Counter Terrorism General License 37 to authorize wind-down of transactions involving persons blocked that day.
+- [2026-09-08] [OFAC](https://ofac.treasury.gov/recent-actions/20260908): Suspended Iran General License J-1, which had authorized temporary reexportation of certain civil aircraft to Iran; issued Iran GL DD for wind-down of certain previously authorized civil-aviation transactions.
+- [2026-09-08] [OFAC](https://ofac.treasury.gov/recent-actions/20260908): Added Air Shiraz and ASA Jet Airline to sanctions lists, alongside aircraft-management entities.
+- [2026-09-15] [USTR](https://www.ustr.gov/about-us/policy-offices/press-office/press-releases): Convened more than 50 trading partners for training on imposing and enforcing forced-labor import prohibitions.
+- [2026-09-14] [USTR](https://www.ustr.gov/about-us/policy-offices/press-office/press-releases): Requested public comment for the 2027 National Trade Estimate Report.
+
+### markets-corporate
+
+- [2026-09-04] [BLS](https://www.bls.gov/news.release/empsit.htm): August payrolls increased 162,000; unemployment was 4.1%; labor-force participation was 61.6%, down 0.5 percentage point since January.
+- [2026-09-01] [BLS JOLTS](https://www.bls.gov/news.release/jolts.htm): July job openings were 7.3 million; hires were 5.1 million; quits were 3.1 million; layoffs and discharges were 1.7 million.
+- [2026-09-11] [BLS CPI](https://www.bls.gov/news.release/archives/cpi_09112026.htm): August CPI rose 0.4% m/m and 3.4% y/y; core CPI rose 0.3% m/m and 2.4% y/y. Energy rose 2.1% m/m and 16.3% y/y; gasoline rose 3.9% m/m and 27.4% y/y.
+- [2026-09-10] [BLS PPI](https://www.bls.gov/news.release/archives/ppi_09102026.htm): August final-demand PPI rose 0.4% m/m and 5.4% y/y; core final-demand PPI rose 0.3% m/m and 4.7% y/y. Diesel prices rose 24.1% m/m; transportation and warehousing services rose 2.3% m/m.
+- [2026-08-26] [BEA](https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-2nd-quarter-2026): Q2 real GDP grew 1.5% SAAR; real final sales to private domestic purchasers grew 4.2%; the gross-domestic-purchases price index rose 5.8% SAAR; core PCE price index rose 3.6% SAAR.
+- [2026-08-26] [BEA](https://bea.gov/news/2026/personal-income-and-outlays-july-2026): July personal income rose 0.4% m/m, DPI 0.5%, nominal PCE 0.2%, and real PCE less than 0.1%; the saving rate was 3.0%.
+
+## CANDIDATE THEMES
+
+### Persistent nominal-price pressure / duration risk
+
+- Underlying facts: CPI 3.4% y/y; PPI 5.4% y/y and core PPI 4.7% y/y; Q2 core PCE price index 3.6% SAAR; domestic final sales grew 4.2% SAAR; payrolls still grew 162,000.
+- Implication: Consumer, producer, and domestic-demand price measures are elevated while employment remains positive. The factual setup is unfavorable to a rapid nominal-yield decline.
+- Possible plays: TIPS / inflation-linked Treasuries (TIP); short long-duration nominal Treasuries (TLT).
+- Direction: Long TIP; short TLT.
+- Horizon: Months.
+- Retail blindspot: Headlines compress inflation into one CPI print and omit producer prices, domestic-demand prices, and the distinction between real growth and nominal-price pressure.
+- Confidence: MED.
+
+### Energy and freight-input pass-through
+
+- Underlying facts: Energy CPI rose 16.3% y/y; gasoline rose 27.4% y/y; PPI diesel rose 24.1% m/m; PPI transport and warehousing rose 2.3% m/m.
+- Implication: Fuel and logistics costs are re-accelerating at both consumer and producer levels; sectors with direct fuel exposure face margin pressure, while upstream energy cash flows benefit if the input-cost move persists.
+- Possible plays: Energy producers (XLE); avoid/short fuel-sensitive transportation exposure (JETS, IYT).
+- Direction: Long XLE; short JETS/IYT.
+- Horizon: Weeks to months.
+- Retail blindspot: The consumer gasoline figure is usually treated as a household-cost story rather than as a diesel, freight, inventory, and margin transmission channel.
+- Confidence: MED.
+
+### Early-stage biotech regulatory optionality
+
+- Underlying facts: FDA opened a rolling-submission Expedited IND Pilot for novel CDER, CBER, and oncology candidates; selection occurs December 18. FDA also approved an AAV9 gene therapy for pediatric MPS IIIA.
+- Implication: The pilot creates a discrete December regulatory catalyst for selected early-stage sponsors; the approval validates one additional systemic AAV9 pediatric CNS application.
+- Possible plays: Early-stage cell/gene-therapy and oncology-biotech basket (XBI); individual applicants only after cohort disclosure.
+- Direction: Long selectively.
+- Horizon: Months.
+- Retail blindspot: “FDA reform” is a broad narrative; the tradable facts are the application cutoff, limited cohort, eligibility constraints, and December selection date.
+- Confidence: LOW.
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: TIP, TLT, XLE, JETS, IYT, XBI, ULGN.
+- Run catalyst_check.py on: “Which companies will FDA select for the Expedited IND Pilot by December 18, 2026?”
+- Skip / pass: Iran aviation sanctions as an equity theme; forced-labor enforcement as a sector trade; injectable-iron safety review; ULGN as a fresh-approval momentum trade without pricing/reimbursement data.
+- Watchlist cross-reference: no obvious recalled match; `notes/longterm_watchlist.md` was not read.
+
+### Operator verification
+
+- The generated `ULGN` symbol is incorrect. The FDA approval notice identifies
+  **Ultragenyx Pharmaceutical**, whose listed ticker is **RARE**. The follow-up
+  check used RARE and did not treat the approval itself as an entry signal.
+- XLE was not re-run because its fresh 2026-09-13 check remains a 1/4 PASS and
+  its revised $50 research gate is not hit. JETS and IYT are tactical short or
+  avoidance expressions, so they were not promoted into the long-only
+  multi-year candidate list.

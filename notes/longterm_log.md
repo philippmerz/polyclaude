@@ -1521,3 +1521,127 @@ Strong secular tailwind and identifiable catalysts, but neither a cyclical-botto
 - [Coherent FY26 Q4 earnings release](https://www.coherent.com/content/dam/coherent/site/en/documents/investors/financial-releases/2026/august-12/earnings-release-fy26-q4.pdf)
 - [Coherent FY26 investor presentation](https://www.sec.gov/Archives/edgar/data/820318/000119312526346860/d128030dex992.htm)
 - [Microsoft FY26 Q4 earnings call](https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4)
+
+---
+
+## 2026-09-20T16:06:13Z — longterm_check
+
+**Query:** `iShares TIPS Bond ETF (TIP)` (equity, 3y horizon)
+
+## LONGTERM CHECK: iShares TIPS Bond ETF (TIP)
+
+Date: 2026-09-20 | Type: equity (ETF; underlying fixed income) | Horizon: 3y
+
+### Current state
+
+Latest close: **$105.27** (Sep. 18), essentially its **52-week low of $105.27** versus a $112.24 high; trailing one-year total return **-1.55%**. TIP owns 99.96% U.S. Treasuries, with 6.29-year duration, 2.61% real yield, 4.84% weighted YTM, and 0.18% expense ratio. [iShares](https://www.ishares.com/us/products/239467/ishares-tips-bond-etf?ihpq=true&qt=TIP) [StockAnalysis](https://stockanalysis.com/etf/tip/)
+
+### Cyclical position
+
+Near a 52-week price low and well below its November 2021 all-time high of $131.37, but not a classic distressed/capacity-cycle bottom: it is a duration-sensitive Treasury portfolio. The recent weakness reflects elevated real rates, not impaired credit—real yield is 2.61%, a meaningful starting income cushion, while duration of 6.29 years leaves NAV exposed if real yields rise further. **Strong cyclical score: yes**, conditional on real yields being nearer a peak than a new secular regime. [iShares](https://www.ishares.com/us/products/239467/ishares-tips-bond-etf?ihpq=true&qt=TIP) [StockScan](https://stockscan.io/stocks/TIP/price-history)
+
+### Secular tailwind
+
+The durable demand driver is inflation protection amid structurally large fiscal deficits and uncertain inflation outcomes. August CPI was 3.4% year-over-year, above the Fed’s 2% objective; TIP’s principal adjusts with CPI. This is intact, but it is an insurance/carry thesis, not a compounding-growth engine: the Fed’s own projections imply policy rates declining only gradually through 2029, which limits a clear near-term duration tailwind. **Strong secular score: partial.** [Federal Reserve projections](https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm)
+
+### Catalyst window
+
+- [MED] 2026-Q4 to 2027 — Inflation decelerates and real yields fall, producing duration-driven NAV recovery; the next FOMC decisions and inflation releases are the observable catalysts. [Federal Reserve projections](https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm)
+- [MED] 2026-Q4 to 2029 — Inflation persists above market-implied expectations; CPI indexation raises TIPS principal and relative returns versus nominal Treasuries.
+- [LOW] 2027-2029 — No company-specific catalyst, earnings inflection, buyback, or re-rating mechanism exists; TIP mechanically tracks its Treasury index.
+
+### Margin of safety
+
+Credit default risk is effectively U.S. sovereign risk: 99.96% of portfolio value is Treasuries, and the ETF traded at only a 0.01% premium/discount to NAV. Entry at a 2.61% real yield provides positive inflation-adjusted carry before fees, but **does not cap mark-to-market downside**: a roughly one-percentage-point rise in real yields implies about a 6% NAV decline from duration alone. [iShares](https://www.ishares.com/us/products/239467/ishares-tips-bond-etf?ihpq=true&qt=TIP)
+
+### Top 3 risks
+
+1. Real yields rise further — 6.29-year duration can drive material NAV losses even while CPI is positive.
+2. Inflation undershoots breakeven expectations — nominal Treasuries outperform TIPS, reducing relative returns.
+3. ETF is a rolling portfolio, not a bond held to maturity — investors cannot lock in today’s real yield or eliminate interim price risk by waiting for a single maturity.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 0%
+- Strong (3-5x): 0%
+- Modest (1.5-3x): 2%
+- Flat (-30% to +50%): 88%
+- Thesis broken (-50%+): 10%
+
+### Entry trigger
+
+Not an asymmetric “generational” entry at $105.27. Consider only as a fixed-income/inflation-hedge allocation if real yield remains at or above **2.5%** and the investor accepts duration risk; a more attractive tactical trigger is TIP below **$100** or a sustained decline in real yields after inflation data stabilizes.
+
+### Verdict: 2/4 — PASS
+
+Near-52-week-low pricing and sovereign-backed real yield provide two supports, but TIP lacks an equity-style secular growth driver and a specific re-rating catalyst; its plausible return profile cannot meet generational-mispricing criteria.
+
+### Sources
+
+- [iShares TIPS Bond ETF fund page](https://www.ishares.com/us/products/239467/ishares-tips-bond-etf?ihpq=true&qt=TIP)
+- [TIP ETF market data and performance](https://stockanalysis.com/etf/tip/)
+- [Federal Reserve September 2026 projections](https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm)
+- [iShares TIP annual shareholder report](https://www.ishares.com/us/literature/annual-report/ar-tip-en.pdf)
+
+---
+
+## 2026-09-20T16:08:11Z — longterm_check
+
+**Query:** `Ultragenyx Pharmaceutical (RARE)` (equity, 3y horizon)
+
+## LONGTERM CHECK: Ultragenyx Pharmaceutical (RARE)
+
+Date: 2026-09-20 | Type: equity | Horizon: 3y
+
+### Current state
+
+Last close: **$14.51** (Sep. 18); **-50.2% 1-year**, versus 52-week range **$12.73–$39.89**. Market cap is **$1.43B**, ~**2.0x trailing sales** ($673M); unprofitable. [Price/valuation data](https://stockanalysis.com/stocks/rare/statistics/)
+
+### Cyclical position
+
+Near a multi-year trough, but this is a company-specific clinical-reset bottom rather than a normal business cycle: shares are 85% below their five-year level and fell 44% on Sep. 3 after pivotal Angelman candidate GTX-102 missed both primary and key secondary endpoints. The selloff removed a major pipeline value component; this is depressed sentiment, not proven fundamental capitulation. [Five-year price history](https://www.marketbeat.com/stocks/NASDAQ/RARE/chart/), [Aspire outcome](https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-announces-phase-3-aspire-results-angelman-syndrome)
+
+### Secular tailwind
+
+The rare-genetic-disease market remains intact: approved therapies address high-unmet-need orphan populations with durable reimbursement economics. Commercial evidence is tangible—Q2 revenue was a record **$214M**, including **$156M Crysvita** and **$27M Dojolvi**, and management reaffirmed **$730M–$760M** 2026 revenue guidance. This is growth in an established franchise, though not evidence that the failed GTX-102 opportunity can be replaced. [Q2 results](https://www.globenewswire.com/news-release/2026/08/04/3338827/0/en/ultragenyx-reports-second-quarter-2026-financial-results-and-corporate-update.html)
+
+### Catalyst window
+
+- [HIGH] 2026-Q4 onward — Launch/ramp of newly approved **GENGLYCOS** for GSDIa and **FAYUVI** for Sanfilippo A; FAYUVI approval also delivered a Priority Review Voucher. [FAYUVI approval](https://www.ultragenyx.com/newsroom/news-and-press-releases/)
+- [MED] 2026-Q4 — UX701 Wilson disease Stage-1 dose-finding data. [Corporate presentation](https://ir.ultragenyx.com/static-files/ebde99f9-1891-4798-b0b2-f088bdb72131)
+- [HIGH] 2027-H1 — DTX301 Phase 3 ammonia and complete-responder analyses in OTC deficiency. [Corporate presentation](https://ir.ultragenyx.com/static-files/ebde99f9-1891-4798-b0b2-f088bdb72131)
+- [HIGH] 2027 — Management’s stated profitability target; credible delivery would change valuation from pipeline-optionality to operating earnings. [Q2 results](https://www.globenewswire.com/news-release/2026/08/04/3338827/0/en/ultragenyx-reports-second-quarter-2026-financial-results-and-corporate-update.html)
+
+### Margin of safety
+
+Partial, not strong. At $1.43B market cap, RARE trades near 2.0x trailing revenue and has an established commercial base, but Q2 cash/investments were only **$436M** while six-month operating cash use was **$294M** and the company recorded a **$277M** first-half net loss. A weak pipeline or delayed profitability could require dilution; cash is not a hard downside floor. [Q2 10-Q](https://www.sec.gov/Archives/edgar/data/1515673/000119312526333233/rare-20260630.htm)
+
+### Top 3 risks
+
+1. GTX-102 failure and pipeline attrition — the Phase 3 miss erased a flagship asset; future trials may fail or have less commercial value.
+2. Cash burn/dilution — current operating cash consumption is high relative to cash/investments; profitability by 2027 is guidance, not achieved fact.
+3. Crysvita concentration and exclusivity — Crysvita supplied 73% of Q2 product revenue; slower growth, competition, or future loss of exclusivity would impair the core valuation.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 2%
+- Strong (3-5x): 13%
+- Modest (1.5-3x): 27%
+- Flat (-30% to +50%): 33%
+- Thesis broken (-50%+): 25%
+
+### Entry trigger
+
+Do not enter solely because of the GTX-102 washout. Consider entry only below **$12.75** (the current 52-week low) after Q3 results confirm post-restructuring cash runway and commercial launch guidance; alternatively, enter on demonstrated GENGLYCOS/FAYUVI uptake plus a credible path to 2027 profitability.
+
+### Verdict: 3/4 — WATCH
+
+Strong post-failure cyclical setup, intact rare-disease commercial tailwind, and real launch/data catalysts merit monitoring, but cash burn and concentration mean the margin of safety is not yet strong.
+
+### Sources
+
+- [RARE price, return, range, and valuation](https://stockanalysis.com/stocks/rare/statistics/)
+- [Q2 2026 results and guidance](https://www.globenewswire.com/news-release/2026/08/04/3338827/0/en/ultragenyx-reports-second-quarter-2026-financial-results-and-corporate-update.html)
+- [GTX-102 Phase 3 Aspire results](https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-announces-phase-3-aspire-results-angelman-syndrome)
+- [FDA approval of GENGLYCOS](https://ir.ultragenyx.com/node/19186/html)
+- [Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1515673/000119312526333233/rare-20260630.htm)

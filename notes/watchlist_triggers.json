@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-09-15",
+  "updated": "2026-09-20",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -341,6 +341,16 @@
       "route": "ibkr_surface",
       "rationale": "Fresh 2026-09-13 longterm_check: 2/4 PASS at $305.37 after a 196% one-year rerating. AI optical-interconnect demand and CPO/1.6T catalysts are real, but ~72x trailing earnings, weak current FCF and share dilution provide no margin of safety. Reassess at <=$190 only if Datacenter & Communications growth remains above 25% and net debt falls; alternative review after two consecutive FY27 quarters of CPO/1.6T conversion and positive FCF.",
       "added": "2026-09-13"
+    },
+    {
+      "ticker": "RARE",
+      "type": "equity",
+      "yfinance_symbol": "RARE",
+      "entry_max": 12.75,
+      "horizon": "2-3y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-09-20 longterm_check: 3/4 WATCH at $14.51 after the GTX-102 Phase 3 miss. Reassess below $12.75 only after Q3 confirms post-restructuring cash runway and GENGLYCOS/FAYUVI launch guidance; alternative review after demonstrated launch uptake plus a credible path to 2027 profitability. Do not buy the approval alone: first-half operating cash use was $294M against $436M cash/investments, with dilution and Crysvita concentration risks.",
+      "added": "2026-09-20"
     }
   ]
 }

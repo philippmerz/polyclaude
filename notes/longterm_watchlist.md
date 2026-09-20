@@ -545,3 +545,28 @@ Trigger-state: the 14:00 live monitor priced all 31 existing candidates and foun
 zero missing prices**. The two new gates are far below the fresh vet prices; a post-update monitor
 also found no hit. Both route to the operator's IBKR surface and are research prompts rather than
 buy authorizations. No polyclaude capital action.
+
+## 2026-09-20 weekly digest (domains: biotech-health, trade-regulation, markets-corporate — least recent, 21d)
+
+No domain was literally unrun for four weeks. This least-recent trio last ran Aug-30, while the
+other six ran Sep-6/Sep-13, so the due rotation was used.
+
+Themes:
+
+- **Persistent nominal-price pressure / duration risk (MED):** CPI, PPI and core-PCE facts argue
+  against assuming a rapid nominal-yield decline. TIP was the clean long expression and failed the
+  generational-mispricing test; it remains a portfolio hedge rather than a return candidate.
+- **Energy/freight input pass-through (MED):** fuel and logistics costs are accelerating. XLE's
+  fresh Sep-13 1/4 PASS and unhit $50 gate stand; JETS/IYT are tactical shorts with heterogeneous
+  pass-through and were not added as long-term longs.
+- **Early-stage biotech optionality (LOW):** the FDA pilot is not investable before sponsor
+  disclosure. The digest misidentified Fayuvi's sponsor ticker as `ULGN`; the FDA identifies
+  Ultragenyx (**RARE**), which was vetted as the only new company-specific candidate.
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **TIP** | **2/4** | PASS | Inflation protection / positive real carry | $105.27 is at its 52-week low and carries a 2.61% issuer-reported real yield, but the ETF has no compounding engine or forced re-rating catalyst. Consider only as an inflation hedge at real yield >=2.5%; a stronger tactical price gate is **<$100**. Not added to the generational watchlist. |
+| **RARE (new)** | **3/4** | WATCH | Rare-disease launch optionality after GTX-102 failure | $14.51 after a 50% one-year fall. Reassess **below $12.75 only after Q3 confirms post-restructuring runway and launch guidance**, or after GENGLYCOS/FAYUVI uptake plus a credible path to 2027 profitability. Cash burn, dilution and Crysvita concentration prevent entry now. Added an IBKR-surface research trigger. |
+
+The pre-update monitor found **zero live hits across 33 existing gates**. RARE's new $12.75 gate is
+below its $14.51 Sep-18 close, so it is also unhit. No entry or portfolio action followed.
