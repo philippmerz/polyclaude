@@ -1,5 +1,30 @@
 # Polyclaude Backlog
 
+## Sep-21 10:11 current update
+
+- **Duma preliminary allocation confirms the residual loss; no executable
+  exit:** TASS has United Russia leading 208 of 225 districts after 95.97% of
+  district protocols and only four parties above 5% after 95.45% of list
+  protocols. RBC's 95.18% snapshot projects 355 United Russia seats with Just
+  Russia at 4.96%; the CEC chair separately says Just Russia still has a large
+  chance to cross 5%, which would instead put United Russia around 347. Both
+  branches are far above 295–309. The residual 20 YES remain p=1e-8, with no
+  bid and a .001 ask. The 09:00 Al Jazeera alert merely restated the older
+  90.43% count, and its automated claim that a landslide helps 295–309 was
+  directionally wrong.
+- **No new 355+ entry:** the fee-free executable ask was .692 with ample depth.
+  A central .60–.65 probability and .50–.55 conservative case, driven by the
+  explicit 5% threshold uncertainty and still-preliminary district leads, are
+  below the ask. The sibling 340–354 ask near .302 likewise has no robust edge.
+  A final vetted dry-run saw the signed 355+ limit rise to .700 and rejected it
+  above the .692 hard cap. No trade, order, transfer or prior change followed.
+- Eleven open legs have $147.31 cost, $134.86 midpoint and $124.90 indicative
+  fee-net depth. Authoritative bankroll is **$164.42**, cumulative realized P&L
+  is **-$0.07**, and deployable pUSD is $10.097650. Positions, state, orders,
+  UMA, Ostium, decisions and all 34 watchlist gates are clean. The stale active
+  equal-set instruction below was replaced with the actual residual/finality
+  task; no other backlog item is due. Telegram **1018** reported the check.
+
 ## Sep-21 06:07 current update
 
 - **Duma 325–339 thesis break; full leg sold:** two 05:02/05:47 alerts prompted
@@ -1166,19 +1191,7 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
 
 - **2026-09-08 [disk capacity — recovered by authorized scoped housekeeping; hourly guard retained]** — VM expansion is explicitly rejected. After the ledger recovery, authorized manual deletion removed seven obsolete user-owned artifacts (Claude native versions 2.1.170/2.1.219 and five study JSONL files: listing census Jul open/closed, census Apr closed, implication open universe/pairs), **692,874,130 bytes** total; no archives were made. Free space rose from **516,726,784** to **1,209,585,664 bytes** (~1.126 GiB) at 10:23 UTC. Scripts/small results were preserved, current CLI `--version` passed, all four daemon PIDs remained unchanged/live, and key state JSONs were valid. Private histories/inbox/credentials and active logs remain untouched. The old active operator log (~115.7 MB) is non-O_APPEND: do not copy-truncate or rotate it while live; no log policy/restart was implemented. Continue manual, narrowly scoped housekeeping only; heartbeat warning remains <512 MiB and critical <128 MiB, with no automatic deletion.
 
-- **THROUGH 2026-09-20 [Duma 295–339 equal-share set — HOLD / add gate failed]** — DEC-0083 holds 20 equal YES shares in 295–309 / 310–324 / 325–339, cost 0.57 per covered payout dollar. Sep-1 found the missing independent forecast: a RASO survey of 54 political-technology experts forecasts United Russia at 95–130 list seats plus 155–210 district seats, a broad range centered near 295 total. Blending that with APEK moves the bucket distribution **0.08/0.40/0.28→0.18/0.31/0.19** and union p **0.76→0.68**. The Sep-5 short-dated review re-read all three criteria without drift. VCIOM's Sep-4 release has United Russia at **37.2% after 39.2%** through Aug-30; that 2pp weekly move is inside its 2.5pp maximum error, while the four-week sequence remains 34.0/36.0/39.2/37.2. A simple normalization over the five named parties gives about 50.1%, or roughly 113 of 225 list seats—inside RASO's 95–130 range and compatible with the held union alongside APEK's district forecast. The Sep-8 daily review re-read that release and the direct APEK Aug-10 forecast and found no newer comparable national forecast in the bounded search, so the distribution and union p stay **0.18/0.31/0.19 / 0.68**. The add gate still fails on evidence (requires ≥0.75) and price (complete-set asks **0.687768/unit** at the five-share common minimum, requires ≤0.57). Hold the equal set: complete exit is **$13.15** versus $13.60 fair. Do not add, trim, or exit one leg independently.
-
-  **Sep-10 review supersedes the probabilities and quotes above:** new APEK evidence and correct list-seat normalization produce **.15/.32/.25**, union **.72**. A fresh complete exit was about **$11.51** and a five-share add cost **.615 per covered payout unit**. HOLD the complete equal set; NO ADD and no single-leg action.
-
-  **Sep-11 review:** VCIOM's fresh list forecast corroborates the same central range but supplies no district forecast and is partly correlated with APEK. Keep **.15/.32/.25 / .72**. Fresh complete exit **$11.82**; five-share add **.635 per covered payout unit**. HOLD / NO ADD.
-
-  **Sep-11 14:00 review:** Turovsky says United Russia may beat APEK's district forecast because few seats were conceded to opposition parties, but gives no numeric forecast. This raises the upper-tail watch without supporting a false-precision prior change: modest district outperformance remains within the held range, while the retained outside-range tail covers a larger miss. Keep **.15/.32/.25 / .72**; complete exit **$11.94**, five-share add **.662**. HOLD / NO ADD. Reject separate 355+ NO at .91 because its .92 [.80-.98] p(NO) estimate fails robust entry stress.
-
-  **Sep-12 review supersedes the quotes above:** VCIOM's weekly series now ends Sep-6 at 37.4%, essentially unchanged from Aug-30, and no new quantified district forecast replaces APEK. Keep **.15/.32/.25 / .72**; complete exit **$12.58**, while a five-unit add costs **.673 per payout dollar** and still fails both gates. HOLD / NO ADD; all three verification dates are current.
-
-  **Sep-13 review supersedes the probabilities and quotes above:** FOM's final forecast centers near 311 total seats when its five qualifying-party midpoints are normalized for the list allocation and combined with APEK's district midpoint, versus about 319 from VCIOM. Shift the held-bucket distribution to **.18/.35/.19** but retain union **.72** given the broad RASO tails and qualitative district-upside evidence. Complete exit **$12.54**; a five-unit add costs **.646** and still fails the .75 evidence and .57 price gates. HOLD the complete equal set / NO ADD / no single-leg action; all three verification dates are current.
-
-  **Sep-9 02:00 review:** primary VCIOM/APEK inputs remain unchanged; RASO's own committee publication corroborates the same old survey, not an independent new forecast. Union p stays .68, equal-set HOLD / NO ADD; all three assessment dates refreshed. Indicative whole-set exit ~$11.86, not a synchronized executable quote. Sources: latest journal.
+- **THROUGH 2026-09-25 [Duma final result/settlement — one unexitable residual]** — DEC-0166 and DEC-0167 sold all 20 YES shares in 310–324 at .003 and all 20 YES shares in 325–339 at .011 after the live count broke both theses. The protected equal-share topology is retired. Only 20 YES in 295–309 remain, cost $1.00, with p_yes=1e-8; the book has no bid, so this is an economically unexitable zero-like claim. At the Sep. 21 10:08 review, TASS had United Russia leading 208 of 225 districts after 95.97% of district protocols and only four parties above 5% after 95.45% of list protocols. RBC's 95.18% snapshot projected 355 United Russia seats if Just Russia stays below 5%; CEC chair Ella Pamfilova said the party still has a large chance to cross the threshold, which would put United Russia around 347 instead. Both branches remain far above 309. The separate 355+ YES ask at .692 failed robust EV because the threshold and district uncertainty put central probability around .60–.65 and the conservative case around .50–.55. **NO ADD.** Recheck the residual only if a positive bid appears or when the CEC final result/venue resolution arrives; use the normal scheduled or event-triggered run rather than an idle follow-up.
 
 - **THROUGH 2026-12-31 [HLE source/row cluster — live monitoring after DEC-0089/0096/0102]** — The scheduled Aug-31 full review again validated the instrument against known 2025 changes, passed claude/grok/gemini coverage, and found the live model-results board identical to 2026-01-15. The debut ladder's executable NO asks are now 0.15/0.17/0.31/0.62 for ≥40/45/50/55. The held ≥40 leg remains the cleanest expression at p_no 0.60 / stress 0.45, but the full entry helper rejects the sub-$1 incremental size and the correlated `ai-ships-fast-short` cap is effectively binding; **NO FURTHER ADD / DO NOT CHASE**. The ticket remains 169 NO, $17.60 notional plus $0.62940 fees = $18.22940 gross. CAIS's active July dataset maintenance still prevents treating the frozen results board as organizational abandonment. The direct falsifier is any agi.safe.ai model-row change, especially a catch-up addition of Gemini 3.1 Pro (46.44 on Scale); Google also says 3.5 Pro is coming soon. HLE-specific and Gemini-Pro news coverage remains live. Re-run the validated diff immediately on any alert; treat all HLE legs as one correlated cluster and this thin leg as hold-to-resolution. The old reward experiment remains cap-blocked, unfunded and unproven.
   **Sep-10 source correction supersedes the frozen-board premise and old probabilities in this block:** the resolving chart's API actively changed 44→52→58 rows and already contained Gemini 3.1 Pro before the debut market opened. The current chart has GPT-6 Astra 53.6, Gemini 3.8 Flash 46.2 and Gemini 3.1 Pro 45.9. OpenAI ≥50 is final YES. Current `p_no` values are next-Gemini-Pro ≥40 **.20**, Gemini ≥50 **.35**, and OpenAI ≥55 **.30**. All three remain HOLD on current net exits, with no enlargement under the shared cluster cap. The historical paragraphs below explain superseded reasoning only.

@@ -18852,3 +18852,43 @@ or protected exit is HOLD. Constrained Kelly identifies no permitted add, the
 watchlist has no hit, and the Sep. 20 world-state and Sep. 18 weekly P&L work
 are current. No broad discovery rerun was due four hours after the completed
 full scan. Telegram **1017** carried the material exit and portfolio state.
+
+## 2026-09-21 10:00–10:11 UTC — Duma count confirms residual loss; no new entry
+
+The bounded periodic review consumed two post-06:07 alerts. The 06:28 France24
+item was qualitative, while the 09:00 Al Jazeera article merely repeated the
+older 90.43% count. Its automated impact text claimed that a United Russia
+landslide helped the held 295–309 bucket; that direction was wrong.
+
+Fresh CEC-linked evidence strengthened the opposite conclusion. [TASS at
+07:42](https://t.me/tass_agency/396540) reported United Russia leading **208
+of 225 districts** after 95.97% of district protocols, and [TASS at
+07:52](https://t.me/tass_agency/396542) reported that only United Russia,
+KPRF, LDPR and New People cleared 5% after 95.45% of list protocols. The
+[updated RBC count](https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142)
+at 95.18% put United Russia at 57.83%, Just Russia at 4.96% and projected
+**355 seats** under the four-party allocation. This is not final: CEC chair
+Ella Pamfilova said Just Russia still had a [large chance to cross
+5%](https://www.interfax.ru/russia/1117417), which would reduce United
+Russia's list allocation and put its total around 347. Either branch remains
+far above 309. Keep the residual 20 YES at `p_yes=1e-8`; its exact fee-free
+book still had **no bid** and a .001 ask, so no exit exists.
+
+I also tested whether the provisional total created a new 355+ trade. The live
+fee-free ask was **.692** with more than 8,600 shares available. Explicit
+threshold uncertainty, preliminary district leads and allocation rounding put
+the defensible central probability around **.60–.65** and the conservative
+case around **.50–.55**, both below the ask. The 340–354 sibling at about .302
+had no robust edge either. A final vetted entry dry-run saw the signed 355+
+limit rise to .700 and rejected it above the .692 hard cap. **No entry, trade,
+order, transfer or prior change.**
+
+Eleven open legs reconcile at **$147.31 cost, $134.86 midpoint and $124.90
+indicative fee-net depth**. Authoritative bankroll is **$164.42**, cumulative
+realized P&L remains **-$0.07**, and deployable pUSD is $10.097650. Position
+state is clean, the only live order remains the zero-fill Trump-out 28-NO sell
+at .97, UMA has zero alerts, Ostium has zero trades, no decision is overdue,
+and all 34 watchlist gates are clear. I replaced the stale active-backlog
+instruction to preserve the former three-leg Duma set with the actual
+one-residual/finality task. Telegram **1018** reported the material count and
+no-trade conclusion. No other action is due.

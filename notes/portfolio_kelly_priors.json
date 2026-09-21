@@ -953,8 +953,8 @@
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0061,
-  "current_assessment": "Sep-21 06:06 live-count re-underwrite: at 90.43% of protocols, United Russia had 57.86%, Just Russia was below the 5% threshold at 4.95%, and United Russia led 209 of 225 districts. Both the four-party and five-party allocation branches put United Russia far above 309 seats. Set p_yes=0.00000001. The YES book still has no bid, so the residual 20 shares remain an economically unexitable zero-like claim. NO ADD.",
-  "note": "RESIDUAL LEG AFTER DEC-0166. The original DEC-0083 position held 20 equal YES shares in 295-309, 310-324 and 325-339. On Sep-21, actual count evidence made 310-324 effectively impossible and its live 0.003 bid exceeded fair, so all 20 were sold. The protected equal-set topology is retired; this 295-309 leg has no bid and is held only because it cannot be monetized.",
+  "current_assessment": "Sep-21 10:08 live-count recheck: TASS had United Russia leading 208 of 225 districts after 95.97% of district protocols and only four parties above 5% after 95.45% of list protocols. RBC's 95.18% snapshot projected 355 United Russia seats with Just Russia at 4.96%, while the CEC chair said Just Russia still had a large chance to cross 5%; the five-party branch is around 347. Both branches are far above 309 seats. Keep p_yes=0.00000001. The YES book still has no bid, so the residual 20 shares remain an economically unexitable zero-like claim. NO ADD.",
+  "note": "RESIDUAL LEG AFTER DEC-0166/0167. The original DEC-0083 position held 20 equal YES shares in 295-309, 310-324 and 325-339. On Sep-21, live count evidence made the latter two legs worth less than their bids, so all 20 of each were sold. The protected equal-set topology is retired; this 295-309 leg has no bid and is held only because it cannot be monetized.",
   "historical_note_status": "SUPERSEDED 2026-09-21 FOR LIVE JUDGMENT: pre-Sep21 notes describe the former equal three-leg set and forecast-era evidence. Use current_assessment and the Sep-21 key facts.",
   "key_facts": [
    {
@@ -1110,6 +1110,12 @@
    {
     "claim": "At September 21 05:11 UTC, TASS/CEC reported 90.43% of protocols with United Russia at 57.86% and Just Russia at 4.95%, below the 5% threshold. RBC subsequently reported United Russia leading 209 of 225 districts. DEC-0167 sold all 20 of the 325-339 YES leg FOK at 0.011 for 0.22 pUSD after p_yes fell to about 0.006.",
     "source": "https://t.me/tass_agency/396518 + https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142 + order 0x6932fbd5640e175c5348a939db1d6facd7a002ae65e923779ececf876e49bfd1",
+    "source_date": "2026-09-21",
+    "checked": "2026-09-21"
+   },
+   {
+    "claim": "At September 21 10:08 UTC, TASS reported United Russia leading 208 of 225 districts after 95.97% of district protocols and only four parties above 5% after 95.45% of list protocols. RBC's 95.18% snapshot projected 355 United Russia seats with Just Russia at 4.96%, while CEC chair Ella Pamfilova said Just Russia retained a large chance to cross 5%. Either allocation branch remains far above 309. The exact 295-309 market was active and UMA-null but still had no YES bid.",
+    "source": "https://t.me/tass_agency/396540 + https://t.me/tass_agency/396542 + https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142 + https://www.interfax.ru/russia/1117417 + https://gamma-api.polymarket.com/events/147974",
     "source_date": "2026-09-21",
     "checked": "2026-09-21"
    }
