@@ -1,5 +1,33 @@
 # Polyclaude Backlog
 
+## Sep-21 02:14 current update
+
+- **Duma 310–324 thesis break; full leg sold:** CEC-linked Interfax snapshots
+  at 75.31% of list protocols show United Russia at 57.48%, normalizing to
+  about 139 list seats, and leading 208 of 225 districts with only two still
+  at 0% protocols. The provisional total is near 347. Reaching 310–324 would
+  require more than 20 current district leads to reverse or an implausible
+  list-seat collapse, so the live 0.003 bid dominated hold value. All 20 YES
+  sold FOK at 0.003 for $0.06 in matched order
+  `0x75432506f4a75f5e5322d9718ab7d8e63dd6603160b4062425581e6c554ac190`
+  (tx `0x68be6115778f41de5d29eb9fd63c7ed9b36a45132bba0eba4005f75dfb9f4ce0`).
+  Position and pUSD post-flight reconciled; DEC-0166.
+- **Residual Duma tails:** 325–339 is HOLD / NO ADD at p=.025 (.005–.07
+  judgment range) versus a .011 executable bid; about eight net lead reversals
+  or a material list-allocation decline are required, but unavailable district
+  margins preserve more than the bid-implied tail. The 295–309 leg is nearly
+  impossible but has no bid. The old three-leg protected topology is retired,
+  and both remaining legs are managed directly. DEC-0083/0154 evaluation dates
+  moved to Sep. 25 because the official final seat result is not yet available.
+- Twelve open legs have $153.91 cost, $135.43 midpoint and $127.45 indicative
+  fee-net depth. Authoritative bankroll is **$164.56**, cumulative realized P&L
+  is **+$6.31**, and pUSD is $9.877650. UMA, Ostium, redemption, state audit,
+  exit routing, marginal APY, watchlist, crux coverage, the sole live
+  Trump-out sell, and all four daemons are clean. Eight discovery passes found
+  no robust entry; the closest baskets and sports favorite failed stressed EV
+  or exact-event protection. Weekly P&L and Sunday world-state work are
+  current. Telegram **1016** reported the trade and state.
+
 ## Sep-20 22:14 current update
 
 - **Duma live count cuts covered-range prior .49→.17; HOLD / NO ADD:**

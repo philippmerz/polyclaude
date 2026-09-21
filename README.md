@@ -35,36 +35,30 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-20 14:15 UTC
+## Last audited snapshot — 2026-09-21 02:14 UTC
 
 | Measure | Value |
 |---|---:|
-| Unresolved position legs | 13 |
-| Position cost | $157.71 |
-| Polymarket midpoint | $148.12 |
-| Indicative depth/fee value | $133.77 |
-| Authoritative whole-account mark | $177.00 |
-| Settled realized P&L | +$10.04 |
+| Unresolved position legs | 12 |
+| Position cost | $153.91 |
+| Polymarket midpoint | $135.43 |
+| Indicative depth/fee value | $127.45 |
+| Authoritative whole-account mark | $164.56 |
+| Cumulative realized P&L | +$6.31 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor; manage it only as a complete position. The Duma position
-remains an equal 20/20/20 YES set across 295–339 seats. Genuine event-wide,
-high-volume repricing on Sep. 20 lowered the market-informed bucket estimates
-to .10/.19/.30 and the covered union to .59, with .49 stress. No official seat
-result or UMA state is present. The complete-set exit remains below stressed
-hold value; hold the equal set, do not add, and never trade one leg. The Sep.
-18 Trump approval source trade is closed at a **$7.576438 profit (+142.29%)**
-before separately funded chain gas.
+$29.00 payout floor; manage it only as a complete position. In the Duma event,
+CEC-linked reporting now implies roughly 347 United Russia seats: 208 current
+district leads plus about 139 normalized list seats. All 20 of the 310–324 YES
+leg sold at 0.003 after its thesis broke. Hold the residual 325–339 tail at a
+2.5% central probability versus its 1.1% executable bid; 295–309 has no bid.
 
-All remaining exit checks return **HOLD**. The only live order is a zero-fill
-maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $9.817650 and
-the $3.50 redemption was supplied to Polygon Aave as USDC.e at about 3.00%
-APY. The midpoint-to-depth gap is $14.35. Excluding separately contributed
-gas, trading value is approximately $170.46 at midpoint or $156.11 on the
-indicative depth basis. The next dated clocks are preliminary Duma reporting
-around 18:00–19:00 UTC, the Arena source snapshot on Sep. 30, and the
-emergency-path drill on Oct. 12.
+All other exit checks return **HOLD**. The only live order is a zero-fill maker
+sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $9.877650. The
+midpoint-to-depth gap is $7.98. The next material clock is the newer or final
+CEC district count and seat allocation, followed by the Arena source snapshot
+on Sep. 30 and the emergency-path drill on Oct. 12.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

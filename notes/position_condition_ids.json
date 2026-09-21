@@ -1,6 +1,6 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-09-20",
+ "_refreshed": "2026-09-21",
  "positions": [
   {
    "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
@@ -72,14 +72,6 @@
    "size": 20,
    "conditionId": "0xe62ab836381dd820968f6b58ab546958aaa63de184c48bc6e0522d551807e1b1",
    "asset": "36654380138980286408755216940812345632701505883007076173124647888379931416486",
-   "negativeRisk": true
-  },
-  {
-   "slug": "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
-   "outcome": "Yes",
-   "size": 20,
-   "conditionId": "0x8e41c5c2c887553ea7cce7f3644b50c62c8ab55238b50e939048f6d71aae6d4c",
-   "asset": "55194946908077358946678288054444144925253856497002247503827745964051403029179",
    "negativeRisk": true
   },
   {

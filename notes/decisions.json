@@ -1,5 +1,5 @@
 {
-  "next_id": 166,
+  "next_id": 167,
   "decisions": [
     {
       "id": 1,
@@ -1605,7 +1605,7 @@
       "confidence": "medium",
       "prediction": "United Russia officially wins 295-339 State Duma seats in the September 2026 election, so exactly one of the three held buckets resolves YES and the equal-share set pays 20 dollars on 11.40 dollars cost. Re-underwrite before any add; only add equal shares if an independent early-September forecast keeps union probability at least 75 percent and total ask at most 0.57.",
       "size_usd": 11.4,
-      "resolution_at": "2026-09-20",
+      "resolution_at": "2026-09-25",
       "tags": [
         "russia",
         "duma",
@@ -3057,7 +3057,7 @@
       "confidence": "medium",
       "prediction": "United Russia has probabilities 0.14/0.29/0.29 of finishing in the held 295-309/310-324/325-339 buckets, for 0.72 union probability; the result should fall in 295-339 more often than the 0.6223 exit-implied threshold but evidence is insufficient for an add.",
       "size_usd": 0.0,
-      "resolution_at": "2026-09-20",
+      "resolution_at": "2026-09-25",
       "tags": [
         "duma",
         "protected-group",
@@ -3270,9 +3270,10 @@
         "positions"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Verified on the next scheduled check: positions.py labels -$10.58 as visible-row P&L, explicitly says it is not cumulative, and directs cumulative reporting to bankroll.py; bankroll remains the authoritative source. No valuation or execution behavior changed.",
+      "calibration_delta": "No divergence: the corrected label and authority boundary appeared exactly as predicted.",
+      "lesson": "When an upstream API drops redeemed winners, any subtotal of surviving final rows must be labeled as partial visibility rather than cumulative realized P&L.",
+      "resolved_at": "2026-09-21T02:06:32Z"
     },
     {
       "id": 165,
@@ -3290,6 +3291,26 @@
         "hold-no-add"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 166,
+      "timestamp": "2026-09-21T02:06:32Z",
+      "type": "size_change",
+      "thesis": "At 01:52 UTC, CEC-linked Interfax reporting showed United Russia leading 208 of 225 districts with only two districts still at zero protocols. With 75.31% of list protocols counted and a 57.48% raw vote, normalization over the five qualifying parties implies about 139 list seats and a provisional total near 347 before the last two districts. Reaching 310-324 would require more than twenty current district leads to reverse or an implausible list-seat collapse, so its probability is far below the live 0.003 bid. Sold all 20 YES FOK at 0.003 for 0.06 pUSD; the order matched and balance/position post-flight reconciled.",
+      "confidence": "high",
+      "prediction": "The 310-324 contract resolves NO; order 0x75432506f4a75f5e5322d9718ab7d8e63dd6603160b4062425581e6c554ac190 remains fully matched for 20 shares and 0.06 pUSD, and the final United Russia total exceeds 324.",
+      "size_usd": 0.06,
+      "resolution_at": "2026-09-25",
+      "tags": [
+        "duma",
+        "live-count",
+        "thesis-break",
+        "exit"
+      ],
+      "slug": "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

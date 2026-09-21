@@ -18725,3 +18725,78 @@ catalyst, watchlist trigger, overdue decision or due backlog item appeared.
 Position state and UMA checks remained clean, and every other modeled exit
 remained a hold. Telegram **1015** reported the material prior change and
 unchanged action.
+
+## 2026-09-21 02:00–02:14 UTC — Duma count breaks 310–324; exit matched
+
+The scheduled 11-step check ran once. Twelve open Polymarket legs now have
+**$153.91 cost, $135.43 midpoint and $127.45 indicative fee-net depth**; the
+midpoint exceeds realizable depth by $7.98. Fresh authoritative bankroll is
+**$164.56**, cumulative realized P&L is **+$6.31**, and the marked unrealized
+loss is $18.47. Wallet post-flight shows $9.877650 deployable pUSD, $3.500359
+Polygon aUSDC.e, and no resting BUY commitment. The crypto sleeve holds about
+$7.8792 Arbitrum aUSDC plus small gas/stable balances; Ostium has zero trades
+and zero limits. The only live order remains the zero-fill 28-share Trump-out
+NO sell at .97.
+
+### Duma live count and transaction
+
+Two fresh CEC-linked reports materially displaced the 22:14 prior. [Interfax's
+party-list snapshot](https://www.interfax.ru/russia/1117322) at 75.31% of
+protocols reported United Russia at 57.48%, KPRF 14.03%, LDPR 8.75%, New People
+8.01% and Just Russia 5.01%. Normalizing over the five parties above the 5%
+threshold implies about **139 of 225 list seats**. Its [district
+snapshot](https://www.interfax.ru/russia/1117325) reported United Russia
+leading **208 of 225 districts**, with only two districts still at 0%
+protocols. The components imply roughly **347 seats before the last two
+districts**, although district margins and the final statutory allocation are
+not yet available.
+
+At the 02:04 execution check the exact Gamma event remained active, unclosed,
+unresolved and UMA-clear. The 295–309 YES book had no bid, 310–324 bid .003,
+and 325–339 bid .011. A 310–324 finish would require more than twenty current
+United Russia district leads to reverse or a large list-seat collapse. Its
+probability is therefore far below .003. I sold all **20 310–324 YES at .003
+FOK for $0.06**. Order
+`0x75432506f4a75f5e5322d9718ab7d8e63dd6603160b4062425581e6c554ac190`
+fully matched in transaction
+`0x68be6115778f41de5d29eb9fd63c7ed9b36a45132bba0eba4005f75dfb9f4ce0`.
+The data API removed the position and pUSD increased by exactly $0.06. Against
+$3.80 entry cost this realizes a $3.74 loss, but the sale adds about $0.06 of
+expected terminal value versus an effectively zero hold branch; execution
+fees did not reduce the credited proceeds. DEC-0166 records the action.
+
+The 325–339 tail is different. Finishing there requires roughly eight net
+lead reversals or a material drop in the eventual list allocation. Without
+current district margins, I retain **p=.025 with a .005–.07 range**. Its .011
+bid returns about $0.22 for 20 shares versus $0.50 central hold value, so
+**HOLD / NO ADD**. The 295–309 leg has p≈0 but no executable bid. Actual count
+evidence has invalidated the original equal-set management rule; the protected
+group entry was removed and the two residual legs are now evaluated directly.
+DEC-0083 and DEC-0154 were not falsely scored before the final result; their
+evaluation dates moved to Sep. 25. DEC-0164 resolved exactly as predicted: the
+positions report now labels retained final-row P&L as partial visibility and
+uses `bankroll.py` for cumulative realized P&L.
+
+### Remaining checklist
+
+The alert tails contain nothing newer than the prior 22:14 review. Direct exit
+analysis says HOLD on every remaining position, including $0.50 fair versus
+$0.22 executable for Duma 325–339. Marginal APY has five clear ordinary holds
+and no close candidate; constrained Kelly allows no scale-in because the only
+positive deficit is Trump-out and its ticket cap is already binding. Position
+state is clean after refreshing the 12 indexed plus one de-indexed claim row.
+UMA has zero alerts, Ostium has no state change, crux coverage is silent,
+`redeem-all` found no winner, all 34 watchlist triggers are clear, and all four
+daemons are current with exactly one process each.
+
+All eight required discovery passes completed without an executable edge.
+Default and thin-tail discovery, sports, macro, monotonicity, consistency,
+favorite-fade and Limitless found no candidate that cleared identity, depth,
+fee and stressed-probability gates. The closest equal-outcome Abbotsford-
+Mission pair cost .796984 but had a roughly .65 stressed union probability
+because a snap general election could cancel the by-election; the five-name
+CMA basket offered only about four cents gross on a $5 payout before
+cancellation/carry risk; Astralis cost .78858 versus .7983 consensus central
+but .6983 stressed. All were skipped. Weekly P&L is current through Sep. 18,
+the Sep. 20 world-state rotation is fresh, and the completed methodology study
+is not due. Telegram **1016** reported the material trade and portfolio mark.
