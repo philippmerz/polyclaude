@@ -18800,3 +18800,55 @@ cancellation/carry risk; Astralis cost .78858 versus .7983 consensus central
 but .6983 stressed. All were skipped. Weekly P&L is current through Sep. 18,
 the Sep. 20 world-state rotation is fresh, and the completed methodology study
 is not due. Telegram **1016** reported the material trade and portfolio mark.
+
+## 2026-09-21 06:00–06:07 UTC — threshold break closes Duma 325–339
+
+The bounded periodic review consumed two new France24 alerts from 05:02 and
+05:47 UTC. Their qualitative “large majority” language did not itself support
+a trade, but it triggered a fresh count and book walk. No opportunity alert,
+watchlist hit, overdue decision, or other backlog item appeared after the
+02:14 cutoff.
+
+[TASS's CEC snapshot](https://t.me/tass_agency/396518) at 05:11 UTC reported
+90.43% of protocols: United Russia 57.86%, KPRF 13.84%, LDPR 8.90%, New People
+7.94%, and Just Russia **4.95%**, now below the 5% list threshold. [RBC's live
+result page](https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142)
+subsequently reported United Russia leading **209 of 225 districts**. The
+statutory allocation method admits lists at 5% and divides their combined vote
+by 225 ([Federal Law No. 20-FZ, art. 89](https://www.consultant.ru/document/cons_doc_LAW_159349/e6cd1497922b90f3027e9f4927b4958dc7e9a42f/)). A straightforward four-party
+normalization therefore produces about 147 United Russia list seats if Just
+Russia stays below threshold; five-party qualification produces about 139.
+RBC's same live paragraph retained a 138–139 estimate despite describing Just
+Russia below threshold, so I treated threshold recovery and list allocation as
+uncertain rather than relying on that internally inconsistent estimate.
+
+For 325–339 to win, the five-party branch near 348 total seats requires roughly
+nine net United Russia district-lead reversals; the four-party branch near 356
+requires roughly 17. I assigned **P(Just Russia recovers)=.30** (.15–.50),
+a **.02** conditional probability of enough reversals in the recovery branch,
+and **.0005** otherwise. The combined p is about **.00635**, with a deliberately
+wide .001–.02 range. At 06:05 the exact event remained active, unclosed,
+orderable and UMA-null. The 325–339 YES book bid .011 for 156.18 shares, with
+fees disabled. Selling 20 returned $0.22 versus about $0.127 central hold
+value, a roughly **$0.093 expected-value improvement**.
+
+I sold all **20 325–339 YES at .011 FOK for $0.22**. Order
+`0x6932fbd5640e175c5348a939db1d6facd7a002ae65e923779ececf876e49bfd1`
+fully matched in transaction
+`0xb9eab58c95cd8023a2e2074678bac33cfb261665e399709e1ff0f60880cc12ab`.
+The data API removed the row, the on-chain CTF balance is zero, and pUSD rose
+exactly $0.22 to $10.097650. Against $6.60 entry cost, this realizes a $6.38
+loss; no execution fee reduced the proceeds. DEC-0167 records the action. The
+stale claim-insurance row was deliberately removed only after the zero on-chain
+balance check. Duma 295–309 remains a 20-share zero-like claim with no bid; its
+prior is now 1e-8.
+
+Post-flight, eleven open legs have **$147.31 cost, $134.85 midpoint and $125.56
+indicative fee-net depth**. Authoritative bankroll is **$164.23** and cumulative
+realized P&L is **-$0.07**. The only live order remains 28 Trump-out NO at .97;
+UMA has zero alerts, Ostium has no trade change, position state is clean with
+11 indexed plus one legitimate de-indexed claim row, and every remaining direct
+or protected exit is HOLD. Constrained Kelly identifies no permitted add, the
+watchlist has no hit, and the Sep. 20 world-state and Sep. 18 weekly P&L work
+are current. No broad discovery rerun was due four hours after the completed
+full scan. Telegram **1017** carried the material exit and portfolio state.

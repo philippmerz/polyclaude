@@ -1,5 +1,28 @@
 # Polyclaude Backlog
 
+## Sep-21 06:07 current update
+
+- **Duma 325–339 thesis break; full leg sold:** two 05:02/05:47 alerts prompted
+  a quantitative reread. TASS/CEC at 90.43% of protocols had United Russia at
+  57.86% and Just Russia at 4.95%, below the 5% list threshold; RBC then had
+  United Russia leading 209 of 225 districts. A branch model gives p=.006
+  (.001–.02): about .30 that Just Russia recovers, multiplied by about .02
+  that at least nine district leads reverse; the below-threshold branch needs
+  roughly 17 reversals and is near zero. The live fee-free .011 bid exceeded
+  fair. All 20 YES sold FOK at .011 for $0.22 in matched order
+  `0x6932fbd5640e175c5348a939db1d6facd7a002ae65e923779ececf876e49bfd1`
+  (tx `0xb9eab58c95cd8023a2e2074678bac33cfb261665e399709e1ff0f60880cc12ab`).
+  Wallet, on-chain token balance and position post-flight reconciled; DEC-0167.
+- Only Duma 295–309 remains: p≈0 and the YES book still has no bid. Its prior
+  is 1e-8 and the snapshot is clean after deliberate removal of the zero-balance
+  325–339 claim row. No official resolution or UMA state exists; final CEC
+  results are due no earlier than Sep. 25.
+- Eleven open legs have $147.31 cost, $134.85 midpoint and $125.56 indicative
+  fee-net depth. Authoritative bankroll is **$164.23**, cumulative realized P&L
+  is **-$0.07**, and deployable pUSD is $10.097650. Orders, UMA, Ostium, state,
+  direct exits, Kelly and watchlist checks show no other action. Weekly P&L and
+  Sunday world-state work remain current. Telegram **1017** reported the exit.
+
 ## Sep-21 02:14 current update
 
 - **Duma 310–324 thesis break; full leg sold:** CEC-linked Interfax snapshots

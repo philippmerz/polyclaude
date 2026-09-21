@@ -1,5 +1,5 @@
 {
-  "next_id": 167,
+  "next_id": 168,
   "decisions": [
     {
       "id": 1,
@@ -3311,6 +3311,27 @@
         "exit"
       ],
       "slug": "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 167,
+      "timestamp": "2026-09-21T06:05:44Z",
+      "type": "close_position",
+      "thesis": "At 90.43% of protocols, TASS/CEC reported United Russia 57.86% and Just Russia 4.95%, below the 5% threshold; RBC then reported United Russia leading 209 of 225 districts. If Just Russia stays below threshold, the components point near 356 seats and 325-339 needs roughly 17 net district-lead reversals. Even if Just Russia recovers, the total is near 348 and needs roughly nine reversals. Judgmental p_yes fell from 0.025 to 0.006 (0.001-0.02 range), below the live fee-free 0.011 bid. Sold all 20 YES FOK at 0.011 for 0.22 pUSD; order matched and position/balance post-flight reconciled.",
+      "confidence": "high",
+      "prediction": "The 325-339 contract resolves NO and United Russia finishes above 339 seats; order 0x6932fbd5640e175c5348a939db1d6facd7a002ae65e923779ececf876e49bfd1 remains fully matched for 20 shares and 0.22 pUSD.",
+      "size_usd": 0.22,
+      "resolution_at": "2026-09-25",
+      "tags": [
+        "duma",
+        "live-count",
+        "threshold",
+        "thesis-break",
+        "exit"
+      ],
+      "slug": "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

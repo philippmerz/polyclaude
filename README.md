@@ -35,30 +35,29 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-21 02:14 UTC
+## Last audited snapshot — 2026-09-21 06:07 UTC
 
 | Measure | Value |
 |---|---:|
-| Unresolved position legs | 12 |
-| Position cost | $153.91 |
-| Polymarket midpoint | $135.43 |
-| Indicative depth/fee value | $127.45 |
-| Authoritative whole-account mark | $164.56 |
-| Cumulative realized P&L | +$6.31 |
+| Unresolved position legs | 11 |
+| Position cost | $147.31 |
+| Polymarket midpoint | $134.85 |
+| Indicative depth/fee value | $125.56 |
+| Authoritative whole-account mark | $164.23 |
+| Cumulative realized P&L | -$0.07 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor; manage it only as a complete position. In the Duma event,
-CEC-linked reporting now implies roughly 347 United Russia seats: 208 current
-district leads plus about 139 normalized list seats. All 20 of the 310–324 YES
-leg sold at 0.003 after its thesis broke. Hold the residual 325–339 tail at a
-2.5% central probability versus its 1.1% executable bid; 295–309 has no bid.
+$29.00 payout floor; manage it only as a complete position. Fresh Duma counting
+broke both tradable residual theses: all 20 of 310–324 YES sold at 0.003 and
+all 20 of 325–339 YES sold at 0.011. Only 20 shares of 295–309 remain; the
+outcome is effectively impossible, but its YES book has no bid.
 
 All other exit checks return **HOLD**. The only live order is a zero-fill maker
-sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $9.877650. The
-midpoint-to-depth gap is $7.98. The next material clock is the newer or final
-CEC district count and seat allocation, followed by the Arena source snapshot
-on Sep. 30 and the emergency-path drill on Oct. 12.
+sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $10.097650. The
+midpoint-to-depth gap is $9.28. The next material clock is the CEC's final
+threshold, district and seat allocation, expected no earlier than Sep. 25,
+followed by the Arena source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

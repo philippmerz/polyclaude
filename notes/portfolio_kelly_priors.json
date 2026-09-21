@@ -947,13 +947,13 @@
   ]
  },
  "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 1e-06,
+  "p_yes": 1e-08,
   "verified": "2026-09-21",
   "criteria_read": "2026-09-21",
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
-  "cluster_frac": 0.0462,
-  "current_assessment": "Sep-21 02:04 live-count re-underwrite: United Russia leads 208 of 225 districts with only two districts still at 0% protocols. At 75.31% of list protocols, 57.48% raw support normalizes to about 139 of 225 list seats, implying roughly 347 seats before the last two districts. A 295-309 finish would require an extraordinary collapse of both components; p_yes=0.000001. The YES book has no bid, so the residual 20 shares are economically unexitable and remain only as a zero-like tail claim. NO ADD.",
+  "cluster_frac": 0.0061,
+  "current_assessment": "Sep-21 06:06 live-count re-underwrite: at 90.43% of protocols, United Russia had 57.86%, Just Russia was below the 5% threshold at 4.95%, and United Russia led 209 of 225 districts. Both the four-party and five-party allocation branches put United Russia far above 309 seats. Set p_yes=0.00000001. The YES book still has no bid, so the residual 20 shares remain an economically unexitable zero-like claim. NO ADD.",
   "note": "RESIDUAL LEG AFTER DEC-0166. The original DEC-0083 position held 20 equal YES shares in 295-309, 310-324 and 325-339. On Sep-21, actual count evidence made 310-324 effectively impossible and its live 0.003 bid exceeded fair, so all 20 were sold. The protected equal-set topology is retired; this 295-309 leg has no bid and is held only because it cannot be monetized.",
   "historical_note_status": "SUPERSEDED 2026-09-21 FOR LIVE JUDGMENT: pre-Sep21 notes describe the former equal three-leg set and forecast-era evidence. Use current_assessment and the Sep-21 key facts.",
   "key_facts": [
@@ -1106,143 +1106,10 @@
     "source": "https://gamma-api.polymarket.com/events/147974 + https://clob.polymarket.com/book + order 0x75432506f4a75f5e5322d9718ab7d8e63dd6603160b4062425581e6c554ac190",
     "source_date": "2026-09-21",
     "checked": "2026-09-21"
-   }
-  ]
- },
- "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election": {
-  "p_yes": 0.025,
-  "verified": "2026-09-21",
-  "criteria_read": "2026-09-21",
-  "cluster": "russia-duma-range",
-  "rho_within": 1.0,
-  "cluster_frac": 0.0462,
-  "current_assessment": "Sep-21 02:04 live-count re-underwrite: United Russia leads 208 of 225 districts with only two districts still at 0% protocols. At 75.31% of list protocols, 57.48% raw support normalizes to about 139 of 225 list seats, implying roughly 347 seats before the last two districts. Finishing at 325-339 requires at least about eight net district-lead reversals or a material list-allocation decline. Set p_yes=0.025 with a wide 0.005-0.07 range because district-level protocol maturity and margins are unavailable. The 0.011 bid returns about $0.22 for 20 shares, below $0.50 central hold value; HOLD / NO ADD and recheck on a newer district count or final allocation.",
-  "note": "RESIDUAL LEG AFTER DEC-0166. The original DEC-0083 position held 20 equal YES shares in 295-309, 310-324 and 325-339. Actual count evidence justified selling the effectively impossible 310-324 leg at 0.003 on Sep-21. The equal-set topology is retired; manage this 325-339 tail directly against current count evidence and executable bids.",
-  "historical_note_status": "SUPERSEDED 2026-09-21 FOR LIVE JUDGMENT: pre-Sep21 notes describe the former equal three-leg set and forecast-era evidence. Use current_assessment and the Sep-21 key facts.",
-  "key_facts": [
-   {
-    "claim": "At September 20 14:13 UTC the CEC had published no party-seat total; its official schedule places preliminary-result reporting around 18:00-19:00 UTC.",
-    "source": "https://t.me/cikrossii/5731",
-    "source_date": "2026-09-20",
-    "checked": "2026-09-20"
    },
    {
-    "claim": "The exact seven-bucket event repriced broadly on substantial real volume, so the move is an information signal rather than a thin midpoint artifact. At 14:12 UTC the refreshed normalized market distribution assigned 0.4557 to the held 295-339 union; all buckets remained active, unclosed and without UMA status. A complete 20/20/20 exit was $8.45 fee-free.",
-    "source": "https://gamma-api.polymarket.com/events/147974",
-    "source_date": "2026-09-20",
-    "checked": "2026-09-20"
-   },
-   {
-    "claim": "Circulating 53.5%-54% United Russia exit-poll claims disclose no named pollster, sample or method. VCIOM explicitly warned on September 17 that it publishes no interim exit-poll results and that figures attributed to it before polls close are unreliable; the rumors therefore receive no independent evidentiary weight beyond the observed market move.",
-    "source": "https://t.me/Cbpub/76875 + https://t.me/WCIOMofficial/15546",
-    "source_date": "2026-09-19/2026-09-17",
-    "checked": "2026-09-20"
-   },
-   {
-    "claim": "FOM's September 10 preliminary forecast, based on September 4-6 fieldwork, puts United Russia at 47-49%, CPRF at 14-17%, LDPR at 10-12%, New People at 8-9%, and Just Russia at 6-7%. Normalizing the five qualifying-party midpoints implies about 121 of 225 list seats for United Russia; adding APEK's 185-195 district range centers near 311 total seats.",
-    "source": "https://fom.ru/Politika/15378",
-    "source_date": "2026-09-10",
-    "checked": "2026-09-18"
-   },
-   {
-    "claim": "Andrei Pertsev's September 16 Carnegie analysis expects more than 200 United Russia district winners. Its underlying August 4 RBC investigation confirms 16 negotiated opposition concessions but also identifies up to 15 additional competitive districts, making roughly 200-205 a meaningful high-district scenario rather than an observed result. Combined with the list forecasts, this shifts probability toward 325-339 and above 339 without increasing the 295-339 union prior.",
-    "source": "https://carnegieendowment.org/ru/russia-eurasia/politika/2026/09/russia-putin-united-russia-trouble + https://www.rbc.ru/politics/04/08/2026/6a707f629a79475f056ac963",
-    "source_date": "2026-09-16/2026-08-04",
-    "checked": "2026-09-18"
-   },
-   {
-    "claim": "Turovsky's September 11 commentary argues APEK may understate United Russia's district wins: LDPR and New People are unlikely to win the forecast districts without explicit United Russia concessions, of which he identifies few. He gives no numerical replacement forecast or confidence interval.",
-    "source": "https://regcomment.ru/analytics/edinaya-rossiya-mozhet-prevzojti-prognozy-v-odnomandatnyh-okrugah/",
-    "source_date": "2026-09-11",
-    "checked": "2026-09-14"
-   },
-   {
-    "claim": "VCIOM's September 10 turnout-adjusted forecast puts United Russia at 51-53%, CPRF at 13-15%, New People and LDPR at 9-11% each, and Just Russia at 4-6%. It supplies no district forecast; normalized list seats combined with APEK's district range center near 319 total seats if Just Russia passes and 326 if it misses.",
-    "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-v-gosudarstvennuju-dumu-2026-prognoz-ac-vciom",
-    "source_date": "2026-09-10",
-    "checked": "2026-09-18"
-   },
-   {
-    "claim": "APEK's September 10 express forecast puts United Russia's party-list vote at 49-52%.",
-    "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
-    "source_date": "2026-09-10",
-    "checked": "2026-09-18"
-   },
-   {
-    "claim": "APEK's September 10 express forecast puts United Russia's single-member-district wins at 185-195.",
-    "source": "https://regcomment.ru/reviews/rezultaty-vyborov-v-gosudarstvennuyu-dumu-ekspress-prognoz-apek/",
-    "source_date": "2026-09-10",
-    "checked": "2026-09-18"
-   },
-   {
-    "claim": "This bucket shares event 147974 and negRiskMarketID 0xd5593051376df9abb69332bd6f07bfc57c4e5b3148576349889046645a3fe000 with the other two held buckets.",
-    "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
-    "source_date": "2026-08-28",
-    "checked": "2026-08-28"
-   },
-   {
-    "claim": "Criteria re-read without drift: this bucket uses the same election-seat, credible-reporting, official-results ambiguity fallback, and May 31, 2027 lowest-bracket clauses as its held siblings.",
-    "source": "https://gamma-api.polymarket.com/markets?slug=will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
-    "source_date": "2026-09-05",
-    "checked": "2026-09-05"
-   },
-   {
-    "claim": "September 13 final-campaign commentary says divergent forecasts reflect a material undecided bloc and regional variation in United Russia's result; it supplies no new numerical national vote or district-seat forecast. A separate same-day commentary still expects KPRF to finish second. This widens uncertainty but does not displace the Sep-10 FOM/VCIOM/APEK inputs.",
-    "source": "https://regcomment.ru/analytics/finish-kampanii-neopredelivshiesya-rezultat-er-i-bitva-za-trete-mesto/ + https://regcomment.ru/analytics/bitva-za-vtoroe-mesto-kprf-sohranyaet-pozitsii-no-intriga-ostayotsya/",
-    "source_date": "2026-09-13",
-    "checked": "2026-09-14"
-   },
-   {
-    "claim": "VCIOM's September 14 campaign-awareness survey, fielded September 9-12, reports that 76% of respondents expect United Russia to win. It provides campaign visibility and expected-winner data but no party-list vote forecast, district-seat forecast, or whole-seat distribution, so it confirms favorite status without moving the 295-339 bucket probabilities.",
-    "source": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/vybory-2026-na-finishnoi-prjamoi",
-    "source_date": "2026-09-14",
-    "checked": "2026-09-16"
-   },
-   {
-    "claim": "Pravdaserm's September 16 final party-list forecast puts United Russia at 38.6%, but its method multiplies reputation by search-query volume and party-specific turnout coefficients reverse-fitted from 2021; its September 9 raw information-share series assigned New People 76.8%. It has no district-seat forecast. Treat this as a low-quality downside sensitivity that does not displace the Sep-10 FOM/VCIOM/APEK evidence or move the held complete-set distribution.",
-    "source": "https://pravdaserm.com/%D1%8D%D0%BA%D1%81%D0%BA%D0%BB%D1%8E%D0%B7%D0%B8%D0%B2-pravdaserm-%D1%84%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80/ + https://pravdaserm.com/%D1%8D%D0%BA%D1%81%D0%BA%D0%BB%D1%8E%D0%B7%D0%B8%D0%B2-pravdaserm-9-%D1%81%D0%B5%D0%BD%D1%82%D1%8F%D0%B1%D1%80%D1%8F-%D0%B2%D1%81%D0%B5-%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8-%D0%B2-%D1%84/",
-    "source_date": "2026-09-16/2026-09-09",
-    "checked": "2026-09-17"
-   },
-   {
-    "claim": "At September 20 18:04 UTC, the official CEC Telegram feed still contained no party-seat total; its published schedule placed preliminary-results reporting in the 18:00-19:00 UTC window.",
-    "source": "https://t.me/s/cikrossii + https://t.me/cikrossii/5731",
-    "source_date": "2026-09-20",
-    "checked": "2026-09-20"
-   },
-   {
-    "claim": "At September 20 18:04 UTC all seven exact Gamma buckets remained active, unclosed and UMA-clear. Normalized midpoints assigned 0.291 to 295-339; a synchronized protected-group walk realized only $4.52 for 20/20/20, a 0.226 payout-unit breakeven.",
-    "source": "https://gamma-api.polymarket.com/events/147974 + scripts/exit_analysis.py",
-    "source_date": "2026-09-20",
-    "checked": "2026-09-20"
-   },
-   {
-    "claim": "At 18:00 UTC, VCIOM's official exit poll reported United Russia 49.4%, KPRF 14.2%, LDPR 10.7%, New People 9.7% and Just Russia 6.6%; INSOMAR reported 52.8%, 14.8%, 9.9%, 8.6% and 5.5%. These are party-list votes, not district or total-seat results. Early CEC reporting likewise gave only a 57.54% United Russia list share.",
-    "source": "https://t.me/WCIOMofficial/15552 + https://t.me/tass_agency/396425 + https://t.me/tass_agency/396428",
-    "source_date": "2026-09-20",
-    "checked": "2026-09-20"
-   },
-   {
-    "claim": "RBC's article published at September 20 22:00:27 UTC reported 45.08% of protocols counted: United Russia 57.67%, KPRF 13.81%, LDPR 8.88%, New People 7.87% and Just Russia 5.18%. It explicitly estimated 138-139 United Russia list seats, reported United Russia leading 200 single-member districts, and reported 16 other leads with nine districts lacking preliminary data.",
-    "source": "https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142 + https://t.me/rbc_news/157189",
-    "source_date": "2026-09-20",
-    "checked": "2026-09-20"
-   },
-   {
-    "claim": "At September 20 22:14 UTC, Gamma remained active, unclosed and UMA-clear. The 295-309 YES book had no bid; 20 shares of 310-324 and 325-339 could sell for $0.12 and $1.80 respectively, not a synchronized complete-set exit.",
-    "source": "https://gamma-api.polymarket.com/events/147974 + https://clob.polymarket.com/book + scripts/exit_analysis.py",
-    "source_date": "2026-09-20",
-    "checked": "2026-09-20"
-   },
-   {
-    "claim": "At September 21 01:52 UTC, CEC-linked reporting showed United Russia leading 208 of 225 single-member districts, with only two districts still at 0% protocols. At 01:48 UTC, 75.31% of list protocols put United Russia at 57.48%; normalizing over the five parties above 5% implies about 139 list seats and a provisional total near 347 before the last two districts.",
-    "source": "https://www.interfax.ru/russia/1117325 + https://www.interfax.ru/russia/1117322",
-    "source_date": "2026-09-21",
-    "checked": "2026-09-21"
-   },
-   {
-    "claim": "At the September 21 02:04 UTC execution check, 295-309 had no YES bid, 310-324 bid 0.003, and 325-339 bid 0.011. All markets remained active, unclosed, unresolved and UMA-clear. DEC-0166 sold all 20 of the effectively impossible 310-324 YES leg FOK at 0.003 for 0.06 pUSD; the matched order and pUSD balance reconciled.",
-    "source": "https://gamma-api.polymarket.com/events/147974 + https://clob.polymarket.com/book + order 0x75432506f4a75f5e5322d9718ab7d8e63dd6603160b4062425581e6c554ac190",
+    "claim": "At September 21 05:11 UTC, TASS/CEC reported 90.43% of protocols with United Russia at 57.86% and Just Russia at 4.95%, below the 5% threshold. RBC subsequently reported United Russia leading 209 of 225 districts. DEC-0167 sold all 20 of the 325-339 YES leg FOK at 0.011 for 0.22 pUSD after p_yes fell to about 0.006.",
+    "source": "https://t.me/tass_agency/396518 + https://amp.rbc.ru/rbcnews/politics/20/09/2026/6aa940649a7947803fdcc142 + order 0x6932fbd5640e175c5348a939db1d6facd7a002ae65e923779ececf876e49bfd1",
     "source_date": "2026-09-21",
     "checked": "2026-09-21"
    }

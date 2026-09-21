@@ -67,14 +67,6 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
-   "outcome": "Yes",
-   "size": 20,
-   "conditionId": "0xe62ab836381dd820968f6b58ab546958aaa63de184c48bc6e0522d551807e1b1",
-   "asset": "36654380138980286408755216940812345632701505883007076173124647888379931416486",
-   "negativeRisk": true
-  },
-  {
    "slug": "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
    "outcome": "Yes",
    "size": 20,
