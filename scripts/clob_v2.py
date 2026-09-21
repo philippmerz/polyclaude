@@ -708,7 +708,23 @@ _CTF_BAL_ABI = [{
 def _data_api_positions(address: str) -> list[dict]:
     r = httpx.get("https://data-api.polymarket.com/positions",
                   params={"user": address.lower(), "limit": 50}, timeout=15)
-    return r.json() or []
+    status = getattr(r, "status_code", None)
+    if not isinstance(status, int) or not 200 <= status < 300:
+        raise RuntimeError(
+            f"data-api positions request failed (HTTP {status!s})"
+        )
+    try:
+        body = r.json()
+    except Exception as exc:
+        raise RuntimeError("data-api positions response was not valid JSON") from exc
+    if not isinstance(body, list):
+        raise RuntimeError("data-api positions response was not a list")
+    for index, row in enumerate(body):
+        if not isinstance(row, dict):
+            raise RuntimeError(
+                f"data-api positions response row {index} was not an object"
+            )
+    return body
 
 
 def _redeem_token_balance(ctf: Any, address: str, token_id: str | None) -> int:

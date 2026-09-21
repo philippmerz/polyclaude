@@ -1,5 +1,33 @@
 # Polyclaude Backlog
 
+## Sep-21 14:10 current update
+
+- **Duma headline revalidated; no new trade:** the 13:55 Guardian alert repeated
+  the CEC's preliminary four-party allocation of 355 United Russia seats, which
+  is outside the held 295–309 range but is not a final result. Newer CEC-linked
+  reporting at 96.95% of protocols put A Just Russia at the displayed 5.00%
+  list threshold. Qualification would reallocate roughly eight list seats and
+  put United Russia around 347–349. Live asks were .947 for 340–354 YES and
+  .068 for 355+ YES; uncertainty about the exact unrounded threshold, the
+  remaining count and final allocation leaves neither side robustly +EV.
+  DEC-0170 records the skip.
+- **Held Duma claim entered proposal:** Gamma shows 295–309, plus the two
+  already-sold neighboring buckets, as `umaResolutionStatus=proposed`. The held
+  20 YES remain effectively worthless with no bid. There is no redeemable
+  winner or executable exit, so wait for final UMA/CEC state.
+- **Redemption fail-closed repair:** the first required `redeem-all` call
+  received a non-list data-api payload and crashed during classification before
+  any transaction preparation. The parser now requires a successful HTTP
+  response and a list of object rows. The rerun found zero winning redeemables
+  and attempted no transaction; 30 focused tests pass. DEC-0169.
+- Eleven open legs have $147.31 cost, $135.29 midpoint and $127.71 indicative
+  fee-net depth. Authoritative bankroll is **$164.96**, cumulative realized P&L
+  is **-$0.07**, and deployable pUSD is $10.097650. The only live order remains
+  the zero-fill Trump-out 28-NO sell at .97. All eight discovery passes found no
+  robust entry; watchlist, decisions, state, coverage, Ostium and daemons are
+  otherwise clean. Weekly P&L and Sep. 20 world-state work remain current.
+  Telegram **1033** reported the material result/UMA update and parser repair.
+
 ## Sep-21 10:27 current update
 
 - **Telegram currency corruption fixed:** outbound messages 1018, 1020, 1022

@@ -18921,3 +18921,51 @@ The operator correctly challenged the framing behind the recent loss review: a p
 I changed the ordinary output to **HOLD CANDIDATE**, print `P(terminal $0)` on every row, and state that stressed probability, joint correlated terminal states and redeployment remain mandatory. `check_marginal_apy.py` now exposes the same zero-payoff probability instead of displaying a large expected APY without its loss branch. The exit walk now preserves every cumulative bid prefix and surfaces the quantity with the largest central arithmetic improvement, so worse lower bids cannot conceal a profitable partial sale. Doctrine and the scheduled checklist now say explicitly that entry cost and hoped-for recovery are irrelevant, that the Kelly tool is a midpoint/rho advisory rather than true joint-state portfolio Kelly, and that material correlated positions require explicit states. DEC-0168 records the strategy correction. Twenty-eight focused exit/Kelly/hurdle tests pass, including a regression where a two-share profitable trim was formerly hidden by three worse lower-book shares.
 
 The fresh live output makes the current risk plain: central priors imply terminal-zero probabilities of **82%** for next-Gemini-Pro debut NO, **70%** for Gemini ≥50 NO, **70%** for OpenAI ≥55 NO, and **65%** for touchscreen-MacBook NO. Their current full fee-net exits are about $6.01, $9.78, $3.86 and $8.93, versus central terminal values $30.42, $30.63, $5.70 and $11.90. Reasonable downside cases still strongly favor holding the two Gemini legs: debut p_no .06 gives $10.14 and Gemini ≥50 p_no .10 gives $10.21, both above exit plus roughly 100 days of 3% carry. OpenAI at p_no .20 and Apple at p_no .25 are calibration-sensitive: stress terminal values $3.80/$8.50 are just below exit-plus-carry near $3.89/$9.00, while central hold values exceed exits by $1.84/$2.97. No new source fact changed either posterior, no bid prefix exceeded central expected payout, and the central expected-log direction remains hold. Therefore **no trade or order change** follows solely from the display correction. These are forward HOLD CANDIDATES with explicit break-even posteriors near .205 OpenAI and .265 Apple, not claims that either price will recover. The AI/Apple sleeve remains a shared-model-risk cluster; no add is permitted.
+
+## 2026-09-21 14:00–14:10 UTC — Duma threshold update; redemption parser repaired
+
+The scheduled check consumed one new CRITICAL alert. The Guardian repeated the
+CEC chair's preliminary allocation of **355 United Russia seats**, correctly
+confirming that the held 295–309 YES claim cannot win under that snapshot but
+overstating it as a resolved result. The exact Gamma market remains active and
+unclosed; 295–309 and the two already-sold neighboring buckets now show
+`umaResolutionStatus=proposed`. The held 20 YES have no bid, so there is no
+executable exit or redemption.
+
+The 355 headline also did not create a new entry. [Newer CEC-linked
+reporting](https://www.rbc.ru/politics/21/09/2026/6ab10bc9cb6206d0763de852)
+at 96.95% of protocols put A Just Russia at the displayed **5.00%** list
+threshold, up from 4.96% at 95.18%. If it qualifies, the fifth-party allocation
+reduces United Russia's preliminary total by roughly eight seats to about
+347–349. At the final 14:06 book read, 340–354 YES was .931/.947 and 355+ YES
+was .052/.068. The exact unrounded threshold, remaining protocols and final
+CEC allocation remain uncertain; buying either mutually opposed branch at
+those asks fails a conservative probability bound. No order was placed.
+DEC-0170 records the skip for final-result calibration.
+
+The first required `clob_v2.py redeem-all` call exposed a separate safety bug:
+the public positions endpoint returned a non-list JSON payload, and the command
+iterated its string keys as rows. It crashed before classification or any
+on-chain preparation. `_data_api_positions` now accepts only a successful HTTP
+response containing a list of object rows and otherwise raises a concise,
+non-secret error. The repaired live rerun found **0/13 winning redeemables**,
+skipped two losing/uncertain rows, and attempted no transaction. Thirty focused
+redemption tests pass; DEC-0169 records the fail-closed change.
+
+All eight prospecting passes completed at 14:02–14:04: default, thin-tail,
+sports consensus, macro, monotonicity, consistency, favorite-fade and Limitless.
+No candidate cleared identity, live depth and stressed-probability gates.
+Monotonicity found zero violations; consistency found zero positive quoted
+baskets, though 198 structural groups remained unquoted and five quote calls
+failed, so that result is not comprehensive. The closest election pair cost
+.6563 per payout dollar against a .65 stressed probability, while the closest
+sports candidates failed their ten-point stress cases.
+
+Eleven open legs reconcile at **$147.31 cost, $135.29 midpoint and $127.71
+indicative fee-net depth**. Authoritative bankroll is **$164.96**, cumulative
+realized P&L remains **-$0.07**, and deployable pUSD is $10.097650. The sole
+live order remains 28 Trump-out NO at .97 with zero fill. Watchlist, decision
+deadlines, position state, crux coverage, Ostium and all four daemons are clean;
+Sep. 18 weekly P&L and Sep. 20 world-state work are current. No trade, order,
+transfer or redemption occurred. Telegram **1033** reported the material
+result/UMA update, no-trade decision and redemption repair.

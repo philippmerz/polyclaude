@@ -11,6 +11,44 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import clob_v2  # noqa: E402
 
 
+class _HttpResponse:
+    def __init__(self, body, status_code: int = 200):
+        self.body = body
+        self.status_code = status_code
+
+    def json(self):
+        return self.body
+
+
+def test_data_api_positions_accepts_a_list_of_objects(monkeypatch) -> None:
+    rows = [{"conditionId": "0xabc", "redeemable": False}]
+    monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse(rows))
+
+    assert clob_v2._data_api_positions("0xWALLET") == rows
+
+
+def test_data_api_positions_rejects_object_payload(monkeypatch) -> None:
+    monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse({"data": []}))
+
+    with pytest.raises(RuntimeError, match="was not a list"):
+        clob_v2._data_api_positions("0xWALLET")
+
+
+def test_data_api_positions_rejects_non_object_row(monkeypatch) -> None:
+    monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse([{"ok": 1}, "bad"]))
+
+    with pytest.raises(RuntimeError, match="row 1 was not an object"):
+        clob_v2._data_api_positions("0xWALLET")
+
+
+def test_data_api_positions_rejects_http_error_without_body_leak(monkeypatch) -> None:
+    monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse("secret", 503))
+
+    with pytest.raises(RuntimeError, match=r"HTTP 503") as exc_info:
+        clob_v2._data_api_positions("0xWALLET")
+    assert "secret" not in str(exc_info.value)
+
+
 class _Call:
     def __init__(self, balance: int):
         self.balance = balance

@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-21 10:11 UTC
+## Last audited snapshot — 2026-09-21 14:10 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 11 |
 | Position cost | $147.31 |
-| Polymarket midpoint | $134.86 |
-| Indicative depth/fee value | $124.90 |
-| Authoritative whole-account mark | $164.42 |
+| Polymarket midpoint | $135.29 |
+| Indicative depth/fee value | $127.71 |
+| Authoritative whole-account mark | $164.96 |
 | Cumulative realized P&L | -$0.07 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -51,16 +51,17 @@ plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
 $29.00 payout floor; manage it only as a complete position. Fresh Duma counting
 broke both tradable residual theses: all 20 of 310–324 YES sold at 0.003 and
 all 20 of 325–339 YES sold at 0.011. Only 20 shares of 295–309 remain; the
-outcome is effectively impossible, but its YES book has no bid. At 95.18% of
-protocols, the live CEC-linked projection is 355 United Russia seats if Just
-Russia remains below 5%; the CEC chair says the threshold can still be crossed,
-which would put United Russia in the high 340s. Neither branch helps 295–309.
+outcome is effectively impossible, its YES book has no bid, and UMA now shows
+the market as proposed. The earlier four-party projection of 355 United Russia
+seats is preliminary. At 96.95% of protocols, A Just Russia reached the
+displayed 5.00% list threshold; qualification would reduce United Russia to
+roughly 347–349. Neither allocation branch helps the held claim.
 
 All other central-arithmetic exit screens return **HOLD CANDIDATE**; each is a
 Bernoulli comparison that includes a zero-payoff loss branch and still requires
 stressed-prior and joint portfolio-risk review. The only live order is a
 zero-fill maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $10.097650. The
-midpoint-to-depth gap is $9.96. The next material clock is the CEC's final
+midpoint-to-depth gap is $7.58. The next material clock is the CEC's final
 threshold, district and seat allocation, expected no earlier than Sep. 25,
 followed by the Arena source snapshot on Sep. 30.
 

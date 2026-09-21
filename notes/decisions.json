@@ -1,5 +1,5 @@
 {
-  "next_id": 169,
+  "next_id": 171,
   "decisions": [
     {
       "id": 1,
@@ -3352,6 +3352,45 @@
         "operator-correction"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 169,
+      "timestamp": "2026-09-21T14:07:56Z",
+      "type": "scaffolding",
+      "thesis": "The public positions endpoint can transiently return a JSON object or malformed row even with an apparent response; accepting arbitrary JSON lets redeem-all crash mid-classification. Strictly require a successful HTTP response and a list of object rows so redemption fails closed before any on-chain preparation.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-21, malformed positions payloads will produce a concise non-secret parser error and no redemption transaction; valid list payloads will preserve normal redeem-all behavior.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-21",
+      "tags": [
+        "redemption",
+        "execution-safety",
+        "data-api"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 170,
+      "timestamp": "2026-09-21T14:08:08Z",
+      "type": "skip",
+      "thesis": "CEC-linked reporting at 96.95% shows A Just Russia at the displayed 5.00% threshold, superseding the earlier four-party preliminary 355-seat allocation and explaining the live shift to 340-354 YES. The exact unrounded threshold and final allocation remain unsettled; executable asks of 0.947 for 340-354 and 0.068 for 355+ leave no robust edge after that branch uncertainty, final-count risk, and carry.",
+      "confidence": "medium",
+      "prediction": "The final CEC allocation will place United Russia in 340-354 seats with approximately 0.90 probability; neither skipped ask will outperform its entry cost on the stated conservative probabilities.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-25",
+      "tags": [
+        "duma",
+        "election",
+        "threshold",
+        "no-trade"
+      ],
+      "slug": "will-united-russia-win-between-340-and-354-seats-in-the-next-russian-state-duma-election",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
