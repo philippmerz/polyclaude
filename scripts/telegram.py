@@ -6,7 +6,12 @@ Subcommands:
 
     setup --expected-chat-id ID
                      Store only an explicitly pre-authorized private chat.
-    msg "<text>"     Send a text message. Long text auto-splits at ~3500 chars.
+    msg TEXT         Send an already-tokenized argv message. Long text
+                     auto-splits at ~3500 chars; shell callers use --stdin.
+    msg --stdin      Read message text literally from stdin (safe for shell
+                     metacharacters such as $, backticks, and $()).
+    msg --input-file PATH
+                     Read message text literally from a UTF-8 file.
     file <path> [-c "caption"]
                      Send a file as a document. Up to 50 MB.
     md <path>        Send a markdown file. If small, send as text; if large,
@@ -132,9 +137,36 @@ def _split(text: str, n: int = TEXT_CHUNK) -> list[str]:
     return parts
 
 
+def _message_text(args: argparse.Namespace) -> str:
+    """Resolve exactly one message source without invoking a shell."""
+    positional = getattr(args, "text", None)
+    use_stdin = bool(getattr(args, "stdin", False))
+    input_file = getattr(args, "input_file", None)
+    source_count = sum((positional is not None, use_stdin, input_file is not None))
+    if source_count != 1:
+        raise ValueError("provide exactly one of TEXT, --stdin, or --input-file")
+
+    if positional is not None:
+        text = positional
+    elif use_stdin:
+        text = sys.stdin.read()
+    else:
+        path = Path(input_file).expanduser()
+        with path.open("r", encoding="utf-8", newline="") as handle:
+            text = handle.read()
+
+    if not text:
+        raise ValueError("message text is empty")
+    return text
+
+
 def cmd_msg(args: argparse.Namespace) -> int:
+    try:
+        text = _message_text(args)
+    except (OSError, UnicodeError, ValueError) as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        return 2
     token = _token(); chat_id = _chat_id()
-    text = args.text
     parse_mode = args.parse_mode
     chunks = _split(text)
     with httpx.Client(timeout=20) as c:
@@ -178,7 +210,9 @@ def cmd_md(args: argparse.Namespace) -> int:
         print(f"ERROR: {p} not found", file=sys.stderr); return 1
     body = p.read_text()
     if len(body) <= SMALL_MD_LIMIT:
-        ns = argparse.Namespace(text=body, parse_mode=None)
+        ns = argparse.Namespace(
+            text=body, stdin=False, input_file=None, parse_mode=None
+        )
         return cmd_msg(ns)
     ns = argparse.Namespace(path=str(p), caption=args.caption or p.name)
     return cmd_file(ns)
@@ -195,7 +229,14 @@ def main() -> int:
     s.set_defaults(func=cmd_setup)
 
     s = sub.add_parser("msg", help="Send a text message")
-    s.add_argument("text")
+    s.add_argument(
+        "text", nargs="?", default=None,
+        help="message passed as one argv element; shell-composed text should use --stdin",
+    )
+    s.add_argument("--stdin", action="store_true",
+                   help="read the message body literally from stdin")
+    s.add_argument("--input-file", type=Path, default=None,
+                   help="read the message body literally from a UTF-8 file")
     s.add_argument("--parse-mode", default=None, choices=[None, "Markdown", "MarkdownV2", "HTML"])
     s.set_defaults(func=cmd_msg)
 

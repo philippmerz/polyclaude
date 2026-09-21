@@ -22,6 +22,19 @@ Single canonical home for the project's operational infrastructure. Other docs r
 
 - **Bot:** `@<bot-handle>`.
 - **Outbound:** `scripts/telegram.py {setup --expected-chat-id,msg,file,md}`.
+  For agent-composed shell messages, pass the body through literal stdin with a
+  single-quoted heredoc delimiter; never put arbitrary text containing `$`,
+  backticks, or `$()` in a double-quoted shell argument:
+
+  ```bash
+  .venv/bin/python scripts/telegram.py msg --stdin <<'TELEGRAM'
+  Portfolio value is $164.65.
+  TELEGRAM
+  ```
+
+  `msg --input-file PATH` is the equivalent safe route for an existing UTF-8
+  file. Python callers already pass message bodies as argv list elements and
+  do not invoke a shell.
 - **Inbound:** `scripts/telegram_listener.py start` long-polls, enforces the configured private chat ID, writes authorized text to a private ordered spool, then submits it through the operator's durable conversation queue. The Telegram cursor advances only after durable local spooling; delivery retries preserve order without terminal keystrokes. Message text is not written to the listener log.
 
 ## Secrets — path-leak hygiene
@@ -51,7 +64,10 @@ Each cron tick (and any other meaningful state change) refreshes `README.md` at 
 
 ## Operator-blocking questions
 
-Surface via Telegram (`scripts/telegram.py msg "..."`) rather than a tracked file. The previous `questions.md` was retired 2026-04-29 in favor of the live channel — operator wants questions to interrupt them in real time, not pile up in a file.
+Surface via Telegram using the literal `msg --stdin` form above rather than a
+tracked file. The previous `questions.md` was retired 2026-04-29 in favor of
+the live channel — operator wants questions to interrupt them in real time,
+not pile up in a file.
 
 ## Heartbeat watchdog
 

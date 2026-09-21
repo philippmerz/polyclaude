@@ -18892,3 +18892,24 @@ and all 34 watchlist gates are clear. I replaced the stale active-backlog
 instruction to preserve the former three-leg Duma set with the actual
 one-residual/finality task. Telegram **1018** reported the material count and
 no-trade conclusion. No other action is due.
+
+## 2026-09-21 10:23–10:27 UTC — Telegram dollar-value corruption fixed
+
+The operator reported that Telegram had removed the first digit from several
+currency values. The account data were correct. The corruption happened in my
+manual shell invocation: arbitrary message text was enclosed in double quotes,
+so Bash interpreted `$170` as positional parameter `$1` followed by `70` before
+`telegram.py` received the text. Messages **1018, 1020, 1022 and 1024** contain
+shell-mangled dollar strings and should not be used as financial records.
+Message **1026**, sent with literal `USD` labels, supplied the correct figures.
+
+I added two shell-safe sources to the outbound CLI: `msg --stdin` and
+`msg --input-file PATH`. The resolver requires exactly one positional, stdin or
+file source, rejects errors before loading credentials, and leaves existing
+Python subprocess callers backward compatible. README, AGENTS, operations and
+tooling documentation now require a single-quoted heredoc for agent-composed
+shell messages. Fourteen targeted outbound/listener tests pass, covering
+literal dollar signs, command substitutions, backticks, Unicode, multiline
+stdin, CRLF files, ambiguous sources and the final send payload. Telegram
+**1028** exercised the new route end to end with literal `$170.00`, `$164.65`
+and `$12.35`. No wallet, position, order or financial record changed.

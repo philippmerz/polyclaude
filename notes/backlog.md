@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-21 10:27 current update
+
+- **Telegram currency corruption fixed:** outbound messages 1018, 1020, 1022
+  and 1024 were composed as double-quoted shell arguments, so Bash expanded
+  strings such as `$170` as positional parameter `$1` plus `70` before the
+  sender received them. This changed display text only; repository records,
+  wallet state and calculations were unaffected. Message 1026 supplied the
+  corrected values.
+- `telegram.py msg` now supports literal `--stdin` and `--input-file` sources,
+  rejects missing or ambiguous sources before reading credentials, and retains
+  positional text for shell-free subprocess callers. Agent and operations docs
+  now require the quoted-heredoc stdin route. Fourteen outbound/listener tests
+  pass, including literal dollar signs, `$()`, backticks, Unicode, multiline
+  text and CRLF files. Telegram **1028** was the end-to-end literal-value check.
+  No asset action or financial-state change occurred.
+
 ## Sep-21 10:11 current update
 
 - **Duma preliminary allocation confirms the residual loss; no executable

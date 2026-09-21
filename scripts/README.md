@@ -57,7 +57,11 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 
 ## Telegram interface
 
-- `telegram.py` — outbound. Subcommands: `setup --expected-chat-id`, `msg`, `file`, `md`.
+- `telegram.py` — outbound. Subcommands: `setup --expected-chat-id`, `msg`,
+  `file`, `md`. Shell-composed messages should use `msg --stdin` with a
+  single-quoted heredoc (or `msg --input-file PATH`) so currency `$`,
+  backticks, and command substitutions remain literal. Positional `msg TEXT`
+  remains available for subprocess argv callers.
 
 ## Conventions
 

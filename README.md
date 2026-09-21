@@ -133,6 +133,8 @@ and [multi-chain wallet](https://debank.com/profile/0x83dADaC202cd1276E985703f90
 
 ## Telegram
 
-Outbound replies use `scripts/telegram.py msg`. Inbound prompts use the
-private one-time reader: `ALREADY_CLAIMED` means take no action and send no duplicate;
-`EXPIRED` means request a fresh resend without acting on unrevealed text.
+Outbound shell replies use `scripts/telegram.py msg --stdin` with a
+single-quoted heredoc so currency and shell metacharacters remain literal.
+Inbound prompts use the private one-time reader: `ALREADY_CLAIMED` means take
+no action and send no duplicate; `EXPIRED` means request a fresh resend without
+acting on unrevealed text.
