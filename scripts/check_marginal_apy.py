@@ -768,8 +768,9 @@ def main() -> int:
             bid_edge = r.get("sell_bid_expected_edge_apy_pct")
             bid_s = (f", bid E{bid_edge:+.2f}% @ {r['sell_bid']:.3f}"
                      if bid_edge is not None else "")
+            zero_p = 100.0 * (1.0 - r["prior_p"])
             return (f"mid E{r['expected_edge_apy_pct']:>+7.2f}%{bid_s} "
-                    f"(p={r['prior_p']:.3f}, {gross_s})")
+                    f"(p={r['prior_p']:.3f}, P($0)={zero_p:.1f}%, {gross_s})")
         return f"gross {gross:>+7.2f}% (NO PRIOR)"
 
     print(f"# marginal-APY scan (EXPECTED-edge vs prior) @ {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}")
@@ -784,7 +785,7 @@ def main() -> int:
             print(f"  [{r['verdict']}] {r['outcome']} {r['mark']:.3f} | {r['days_to_resolve']:>5.1f}d | "
                   f"{_apy_col(r)}  {r['question'][:60]}")
         print()
-    print("=== HOLDS (expected edge clears hurdle, or acknowledged deliberate holds) ===")
+    print("=== HOLD CANDIDATES (central expected edge clears hurdle, or acknowledged hold) ===")
     for r in sorted(holds, key=lambda x: (x.get("expected_edge_apy_pct") if x.get("expected_edge_apy_pct") is not None else (x.get("gross_carry_apy_pct") or 0))):
         v = str(r.get("verdict",""))
         # A gated hold is NOT a clean hold — it is a position with no edge left

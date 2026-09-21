@@ -316,8 +316,22 @@ ever fails (DEC-0083).
   (gamma midpoints lie — stub bids vs real asks; walk the CLOB book). Never
   market-buy.
 - **Hold/exit — use the right tool** (mixing them produces false signals):
+  - An ordinary prediction-market share is a Bernoulli claim, not a linear asset:
+    it pays $1 with probability `p` and **$0 with probability `1-p`**. Thus
+    `shares × p` is only a central expected terminal payout; it never means the
+    marked claim should recover. Entry cost and the desire to avoid realizing a
+    loss are sunk and irrelevant to today's choice. `exit_analysis.py` therefore
+    labels a positive central comparison **HOLD CANDIDATE**, not HOLD. Final action
+    compares executable exit plus redeployment with a stressed probability and the
+    joint cluster outcome/log-growth effect. A bad bid can still make holding
+    optimal, but only on that forward comparison.
   - `portfolio_kelly.py` answers "would I ENTER at this mark?" — static edge
-    `p − mark`, time-agnostic. Use for entries and adds.
+    `p − mark`, time-agnostic. Use for entries and adds. Its ordinary-position
+    output uses the Gamma midpoint and a scalar `rho` discount, so it is an
+    advisory ranking rather than true joint-state portfolio Kelly. The entry
+    wrapper rechecks executable asks and fees. For a material correlated
+    hold/exit decision, write the joint terminal states explicitly rather than
+    treating the `rho` heuristic as a full loss-distribution model.
   - `brownian_bridge_fv.py` answers "is HOLDING still +EV?" — conditional fair value
     `fair_BB(t) = p^(1−t/T)`: given no YES event through elapsed t/T, P(NO survives
     the remainder) is strictly above the unconditional prior, so a late-stage

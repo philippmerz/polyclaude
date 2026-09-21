@@ -119,6 +119,34 @@ def test_book_walk_charges_each_level_with_structured_exponent(monkeypatch) -> N
     assert fee == pytest.approx(expected_fee)
 
 
+def test_best_sale_prefix_finds_profitable_trim_hidden_by_full_walk(monkeypatch) -> None:
+    book = {
+        "bids": [
+            {"price": "0.40", "size": "3"},
+            {"price": "0.60", "size": "2"},
+        ]
+    }
+    monkeypatch.setattr(exits.httpx, "get", lambda *_args, **_kwargs: _Response(book))
+
+    options = exits._walk_bid_options("token", 5.0, {"takerBaseFee": 0})
+    best = exits._best_sale_prefix(options, fair=0.50)
+
+    assert options[-1] == pytest.approx((2.4, 5.0, 0.0))
+    assert best == pytest.approx((1.2, 2.0, 0.0, 0.2))
+
+
+def test_best_sale_prefix_rejects_every_bid_below_fair(monkeypatch) -> None:
+    monkeypatch.setattr(
+        exits.httpx,
+        "get",
+        lambda *_args, **_kwargs: _Response({"bids": [{"price": "0.49", "size": "5"}]}),
+    )
+
+    options = exits._walk_bid_options("token", 5.0, {"takerBaseFee": 0})
+
+    assert exits._best_sale_prefix(options, fair=0.50) is None
+
+
 @pytest.mark.parametrize(
     "level",
     [
@@ -158,3 +186,24 @@ def test_breakeven_refuses_nonmonotone_extreme_curve() -> None:
     }
 
     assert exits._taker_breakeven(0.05, market) is None
+
+
+@pytest.mark.parametrize(
+    ("fair", "expected"),
+    [
+        (0.18, "P(terminal $0)=82.0%"),
+        (0.97, "P(terminal $0)=3.0%"),
+        (0.0, "P(terminal $0)=100.0%"),
+        (1.0, "P(terminal $0)=0.0%"),
+    ],
+)
+def test_binary_risk_text_exposes_zero_payoff_branch(
+    fair: float, expected: str
+) -> None:
+    assert exits._binary_risk_text(fair) == expected
+
+
+@pytest.mark.parametrize("fair", [-0.01, 1.01, float("nan")])
+def test_binary_risk_text_rejects_invalid_probability(fair: float) -> None:
+    with pytest.raises(ValueError, match="fair must be between 0 and 1"):
+        exits._binary_risk_text(fair)

@@ -56,8 +56,10 @@ protocols, the live CEC-linked projection is 355 United Russia seats if Just
 Russia remains below 5%; the CEC chair says the threshold can still be crossed,
 which would put United Russia in the high 340s. Neither branch helps 295–309.
 
-All other exit checks return **HOLD**. The only live order is a zero-fill maker
-sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $10.097650. The
+All other central-arithmetic exit screens return **HOLD CANDIDATE**; each is a
+Bernoulli comparison that includes a zero-payoff loss branch and still requires
+stressed-prior and joint portfolio-risk review. The only live order is a
+zero-fill maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $10.097650. The
 midpoint-to-depth gap is $9.96. The next material clock is the CEC's final
 threshold, district and seat allocation, expected no earlier than Sep. 25,
 followed by the Arena source snapshot on Sep. 30.

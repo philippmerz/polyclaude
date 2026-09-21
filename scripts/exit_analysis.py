@@ -8,6 +8,12 @@ Every exit is three options, not two, and the fee makes the route decisive:
   REST MAKER sell -> post-only, fee-free, so the breakeven price IS `fair`;
                      the order only fills if someone pays >= fair.
 
+For an ordinary binary, ``shares x fair`` is a Bernoulli expectation: the
+position pays ``shares`` with probability ``fair`` and zero otherwise. A
+central-arithmetic HOLD candidate is therefore not a recovery forecast and is
+not, by itself, a portfolio-risk verdict. Final action also needs a stressed
+probability, joint cluster/log-growth risk, and redeployment value.
+
 Lesson sources: the Prime-SDCC exit (2026-07-24) sold taker into a thin book at
 the midpoint's flattering price and gave up ~$2 of EV vs holding; the Fed
 position (2026-07-28) showed taker breakeven 0.2778 vs maker breakeven 0.2500 —
@@ -115,18 +121,24 @@ def _execution_fee_market(condition_id: str) -> dict | None:
     return None
 
 
-def _walk_bids(token: str, shares: float,
-               fee_market: dict | None) -> tuple[float, float, float]:
-    """Return gross, filled shares, and exact fee walking the real bid side.
+def _walk_bid_options(token: str, shares: float,
+                      fee_market: dict | None) -> list[tuple[float, float, float]]:
+    """Return cumulative ``(gross, filled, fee)`` at each real bid level.
 
     Fees are calculated at every fill level. Applying a non-linear V2 curve to
     the volume-weighted average price is not equivalent when a sale crosses
     multiple levels, particularly when ``feeSchedule.exponent != 1``.
+
+    Keeping every prefix matters for binaries: the best forward action can be
+    to sell only top-of-book shares whose net bid exceeds their expected
+    terminal payout, while retaining the lower-book remainder. Comparing only
+    an all-position walk can hide that EV-improving trim.
     """
     b = httpx.get("https://clob.polymarket.com/book",
                   params={"token_id": token}, timeout=15).json()
     bids = sorted(b.get("bids", []), key=lambda x: -float(x["price"]))
     rem, gross, fees = shares, 0.0, 0.0
+    options: list[tuple[float, float, float]] = []
     for lvl in bids:
         px, sz = float(lvl["price"]), float(lvl["size"])
         if (not math.isfinite(px) or not 0.0 <= px <= 1.0
@@ -136,9 +148,35 @@ def _walk_bids(token: str, shares: float,
         gross += take * px
         fees += take * fee_per_share(fee_market, px)
         rem -= take
+        options.append((gross, shares - rem, fees))
         if rem <= 0:
             break
-    return gross, shares - rem, fees
+    return options
+
+
+def _walk_bids(token: str, shares: float,
+               fee_market: dict | None) -> tuple[float, float, float]:
+    """Return the deepest cumulative real-book sale option."""
+    options = _walk_bid_options(token, shares, fee_market)
+    return options[-1] if options else (0.0, 0.0, 0.0)
+
+
+def _best_sale_prefix(
+    options: list[tuple[float, float, float]], fair: float
+) -> tuple[float, float, float, float] | None:
+    """Return the prefix with maximum central arithmetic gain over holding.
+
+    The result is ``(gross, filled, fee, gain)``. ``None`` means no executable
+    prefix has positive central arithmetic value. This remains a candidate;
+    hidden information, probability stress, correlation and redeployment can
+    change the final action.
+    """
+    best: tuple[float, float, float, float] | None = None
+    for gross, filled, fee in options:
+        gain = gross - fee - filled * fair
+        if gain > 1e-9 and (best is None or gain > best[3]):
+            best = (gross, filled, fee, gain)
+    return best
 
 
 def _curve_is_monotone_from(fair: float, rate: float, exponent: float) -> bool:
@@ -204,6 +242,13 @@ def _taker_breakeven(fair: float, fee_market: dict | None) -> float | None:
     return hi
 
 
+def _binary_risk_text(fair: float) -> str:
+    """Make the zero-payoff branch explicit in every ordinary-leg verdict."""
+    if not math.isfinite(fair) or not 0.0 <= fair <= 1.0:
+        raise ValueError("fair must be between 0 and 1")
+    return f"P(terminal $0)={100.0 * (1.0 - fair):.1f}%"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug-filter", default=None)
@@ -258,7 +303,10 @@ def main() -> int:
         # fallback; only an explicit legacy zero can establish fee-free status.
         try:
             fee_market = _execution_fee_market(str(p.get("conditionId")))
-            gross, filled, taker_fee = _walk_bids(p["asset"], shares, fee_market)
+            bid_options = _walk_bid_options(p["asset"], shares, fee_market)
+            gross, filled, taker_fee = (
+                bid_options[-1] if bid_options else (0.0, 0.0, 0.0)
+            )
         except Exception as exc:
             print(
                 f"  [UNPRICED] exit book unavailable for {slug[:52]} "
@@ -300,6 +348,8 @@ def main() -> int:
                 set_only = vv.get("set_only") or vv.get("arb_paired")
                 break
         grouped = slug in group_book.by_slug
+        binary_risk = _binary_risk_text(fair)
+        best_sale = _best_sale_prefix(bid_options, fair)
         if set_only or grouped:
             # SET-ONLY legs are priced per-leg but only mean anything as a set.
             # For riskless pairs, closing one leg creates naked exposure; for a
@@ -316,8 +366,11 @@ def main() -> int:
             verdict = (f"HOLD — SET-ONLY ({marker}); per-leg math says "
                        f"{'SELL +' if gap > 0 else 'hold '}${abs(gap):.2f} but that number is "
                        f"MEANINGLESS ALONE. Re-underwrite and transact the complete set, or let it resolve.")
-        elif taker_net > hold_ev:
-            verdict = f"SELL TAKER NOW (+${taker_net - hold_ev:.2f} vs hold)"
+        elif best_sale is not None:
+            _, best_filled, _, best_gain = best_sale
+            quantity = "ALL" if best_filled >= shares - 1e-9 else f"{best_filled:.1f} SHARES"
+            verdict = (f"SELL TAKER {quantity} NOW (+${best_gain:.2f} vs central "
+                       f"Bernoulli EV on those shares; {binary_risk})")
             if hidden:
                 verdict += " [hidden-info: VERIFY the move first]"
         elif hidden:
@@ -331,11 +384,15 @@ def main() -> int:
             # both the doctrine and the live book. The lesson sitting next to
             # the refinement says it: when practice diverges from a written
             # rule, the expensive outcome is leaving both on the page.
-            verdict = (f"HOLD (+${hold_ev - taker_net:.2f}); HIDDEN-INFO: rest maker sell only "
+            verdict = (f"HOLD CANDIDATE (central arithmetic +${hold_ev - taker_net:.2f}; "
+                       f"{binary_risk}); CONFIRM stressed p + joint cluster/log-growth; "
+                       f"HIDDEN-INFO: rest maker sell only "
                        f"ABOVE fair {fair:.3f} (premium = jump-risk pay; at/below fair is BANNED "
                        f"— donates the news). Taker breakeven {taker_be_text}")
         else:
-            verdict = (f"HOLD (+${hold_ev - taker_net:.2f}); rest maker sell >= "
+            verdict = (f"HOLD CANDIDATE (central arithmetic +${hold_ev - taker_net:.2f}; "
+                       f"{binary_risk}); CONFIRM stressed p + joint cluster/log-growth; "
+                       f"rest maker sell >= "
                        f"{fair:.3f} (taker would need {taker_be_text})")
         rows.append((slug, side, shares, fair, avg_fill, hold_ev, taker_net, verdict, stale))
 
@@ -368,7 +425,11 @@ def main() -> int:
             print("\nGROUP CONFIGURATION ISSUES (all member-leg actions suppressed)")
             for issue in extra_issues:
                 print(f"  {issue}")
-    print("\nresolution is fee-free; maker sells are fee-free; taker sells pay "
+    print("\nordinary hold$ is p × $1 + (1-p) × $0 per share. HOLD CANDIDATE is "
+          "a central-arithmetic screen, not a recovery forecast or a complete "
+          "portfolio-risk verdict; confirm stressed p, joint outcomes and "
+          "redeployment before action. Resolution is fee-free; maker sells are "
+          "fee-free; taker sells pay "
           "rate x [p x (1-p)]^exponent/share at each fill level (V2 curve) — "
           "that gap is usually the whole decision.")
     return 0

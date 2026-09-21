@@ -1,5 +1,5 @@
 {
-  "next_id": 168,
+  "next_id": 169,
   "decisions": [
     {
       "id": 1,
@@ -3332,6 +3332,26 @@
         "exit"
       ],
       "slug": "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 168,
+      "timestamp": "2026-09-21T10:50:29Z",
+      "type": "strategy_change",
+      "thesis": "The operator correctly emphasized that prediction-market claims resolve to either one dollar or zero and cannot be managed as recoverable linear drawdowns. The underlying ordinary-leg EV and Kelly formulas already use Bernoulli payoffs, but the generic exit display labeled a central arithmetic comparison HOLD, hid the zero branch, used an approximate rho-discounted midpoint Kelly separately, and compared only the deepest full-book walk. Reclassified the output as HOLD CANDIDATE, exposed P(terminal zero), required stressed probability plus explicit joint states for material correlated exposure, and added every cumulative bid prefix so a profitable partial trim cannot be hidden by worse lower bids.",
+      "confidence": "high",
+      "prediction": "Every ordinary exit review will visibly state the terminal-zero probability; no bare central-EV HOLD will be treated as a recovery forecast or complete portfolio-risk verdict; and any top-of-book partial sale with net bid above central expected payout will surface even when selling the entire holding would not.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "binary-payoff",
+        "exit-analysis",
+        "portfolio-risk",
+        "operator-correction"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
