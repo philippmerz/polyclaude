@@ -1613,9 +1613,10 @@
         "negRisk"
       ],
       "slug": "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "All three 295-339 YES buckets resolved NO. The set returned $0.28 from two pre-resolution exits and $0 from the residual against $11.40 cost, an $11.12 loss.",
+      "calibration_delta": "The forecast assigned 76% to an event that did not occur; realized indicator 0 implies -76 percentage points, with a -97.5% cash return on the set.",
+      "lesson": "Shared forecast inputs understated the upper-seat tail and were slow to yield to broad informed repricing plus actual district counts. Future election ranges need explicit live-count transition rules and heavier weight on cross-bucket flow.",
+      "resolved_at": "2026-09-21T18:04:57Z"
     },
     {
       "id": 84,
@@ -2577,9 +2578,10 @@
         "no_add"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "United Russia finished outside 295-339 and all three held buckets resolved NO. The no-add decision avoided increasing the loss, although the retained set lost.",
+      "calibration_delta": "The 72% union estimate resolved to 0 (-72 percentage points). The action-level skip was correct because an add would also have lost.",
+      "lesson": "A correct no-add gate can coexist with a badly overstated hold prior. Grade probability and action separately, and let live count evidence displace correlated forecast models sooner.",
+      "resolved_at": "2026-09-21T18:04:57Z"
     },
     {
       "id": 131,
@@ -3065,9 +3067,10 @@
         "no-add"
       ],
       "slug": "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "All 295-339 buckets resolved NO. Holding lost the remaining set value; declining the proposed add avoided an additional loss.",
+      "calibration_delta": "The 72% union estimate resolved to 0 (-72 percentage points); no-add was correct but the hold prior was overconfident.",
+      "lesson": "Do not treat several analyses sharing district assumptions as independent support. Price a larger above-range tail and specify an evidence threshold for exiting, not only for adding.",
+      "resolved_at": "2026-09-21T18:04:58Z"
     },
     {
       "id": 155,
@@ -3211,9 +3214,10 @@
         "hold-no-add"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 295-339 union resolved false. No add was made, but continued holding was worse than the then-executable complete exit in hindsight.",
+      "calibration_delta": "The 59% estimate resolved to 0 (-59 percentage points). The downward revision was directionally right but still too slow.",
+      "lesson": "Broad high-volume repricing during a result window deserved more than a 50% blend with stale forecast evidence. Use an explicit likelihood update once voting closes.",
+      "resolved_at": "2026-09-21T18:04:58Z"
     },
     {
       "id": 162,
@@ -3231,9 +3235,10 @@
         "hold-no-add"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 295-339 union resolved false. The protected set was held and no additional capital was deployed.",
+      "calibration_delta": "The 51% estimate resolved to 0 (-51 percentage points); the market-only 29.1% signal was materially closer.",
+      "lesson": "When official reporting is incomplete but event-wide flow is coherent, correlated pre-election forecasts should receive sharply declining weight rather than a fixed equal blend.",
+      "resolved_at": "2026-09-21T18:04:58Z"
     },
     {
       "id": 163,
@@ -3251,9 +3256,10 @@
         "hold-no-add"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 295-339 union resolved false. The set was held at a 0.1915 executable exit ratio and later realized only $0.28 from two legs plus zero on the residual.",
+      "calibration_delta": "The 49% estimate resolved to 0 (-49 percentage points); rejecting the live market signal destroyed realized value ex post.",
+      "lesson": "Result-window order flow across every mutually exclusive bucket is evidence. Require stronger justification to remain far above the normalized market once polls close.",
+      "resolved_at": "2026-09-21T18:04:58Z"
     },
     {
       "id": 164,
@@ -3291,9 +3297,10 @@
         "hold-no-add"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 295-339 union resolved false. Later sales recovered $0.06 from 310-324 and $0.22 from 325-339; 295-309 resolved worthless.",
+      "calibration_delta": "The 17% estimate resolved to 0 (-17 percentage points). This was the closest live-count estimate but still overstated the tail and delayed a much better 0.09 exit on 325-339.",
+      "lesson": "Once mature counts imply a total above the set, compare each bid with a count-driven tail that is independent of the pre-election prior. Do not preserve stale tail mass merely because district margins are unavailable.",
+      "resolved_at": "2026-09-21T18:04:58Z"
     },
     {
       "id": 166,
@@ -3311,9 +3318,10 @@
         "exit"
       ],
       "slug": "will-united-russia-win-between-310-and-324-seats-in-the-next-russian-state-duma-election",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 310-324 YES contract resolved NO at $0. The pre-resolution sale remained fully matched for 20 shares at 0.003 and recovered $0.06.",
+      "calibration_delta": "Prediction correct: the contract lost and the sale improved realized value by $0.06 versus holding.",
+      "lesson": "Mature component counts can justify exiting a near-zero tail even before the headline total is final, provided the exact book and settlement state are verified.",
+      "resolved_at": "2026-09-21T18:04:58Z"
     },
     {
       "id": 167,
@@ -3332,9 +3340,10 @@
         "exit"
       ],
       "slug": "will-united-russia-win-between-325-and-339-seats-in-the-next-russian-state-duma-election",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 325-339 YES contract resolved NO at $0. The pre-resolution sale remained fully matched for 20 shares at 0.011 and recovered $0.22.",
+      "calibration_delta": "Prediction correct: the contract lost and the sale improved realized value by $0.22 versus holding.",
+      "lesson": "A late live-count posterior should be compared directly with executable bids. Selling when the bid exceeds even the upper probability range preserves value after the broader thesis has broken.",
+      "resolved_at": "2026-09-21T18:04:58Z"
     },
     {
       "id": 168,

@@ -1,5 +1,32 @@
 # Polyclaude Backlog
 
+## Sep-21 18:07 current update
+
+- **Duma position resolved NO and is closed:** UMA finalized all three former
+  295–339 YES buckets at zero. The last 20 shares of 295–309 paid $0, realizing
+  a $1.00 residual loss; the two earlier exits recovered $0.06 and $0.22. The
+  complete DEC-0083 set therefore returned **$0.28 on $11.40 cost**, an $11.12
+  loss. `redeem-all` found zero winners and made no transaction. The position
+  snapshot is refreshed, the closed prior is annotated, and the state audit is
+  clean with 10 indexed positions plus one legitimate deindexed claim.
+- Nine Duma decisions were graded. Forecasts from 76% down through 17% all
+  overestimated the 295–339 tail; the no-add calls avoided further loss, while
+  the final two count-driven exits correctly recovered $0.28 that would
+  otherwise have gone to zero. The recurring error was retaining correlated
+  pre-election priors too long after broad result-window flow and mature counts
+  pointed above the range.
+- Three Clarity Act alerts add no qualifying vote. The official 49–50 action
+  remains a procedural cloture vote explicitly excluded by both contracts, and
+  Fairshake spending does not change resolution state. The equal 29-share pair
+  still has a $29 logical payout floor; complete fee-net exit was $28.53, so
+  HOLD the complete pair and never transact one leg.
+- Ten open legs have $146.31 cost, $137.83 midpoint and $129.42 indicative
+  fee-net depth. Authoritative bankroll is **$167.42**, cumulative realized P&L
+  is **-$1.07**, and deployable pUSD is $10.097650. The sole live order remains
+  the zero-fill Trump-out 28-NO sell at .97. No watchlist hit, overdue decision,
+  opportunity alert, redemption, or other due backlog item remains. Telegram
+  **1034** reported the resolution and protected-pair hold.
+
 ## Sep-21 14:10 current update
 
 - **Duma headline revalidated; no new trade:** the 13:55 Guardian alert repeated

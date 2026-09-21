@@ -953,8 +953,8 @@
   "cluster": "russia-duma-range",
   "rho_within": 1.0,
   "cluster_frac": 0.0061,
-  "current_assessment": "Sep-21 10:08 live-count recheck: TASS had United Russia leading 208 of 225 districts after 95.97% of district protocols and only four parties above 5% after 95.45% of list protocols. RBC's 95.18% snapshot projected 355 United Russia seats with Just Russia at 4.96%, while the CEC chair said Just Russia still had a large chance to cross 5%; the five-party branch is around 347. Both branches are far above 309 seats. Keep p_yes=0.00000001. The YES book still has no bid, so the residual 20 shares remain an economically unexitable zero-like claim. NO ADD.",
-  "note": "RESIDUAL LEG AFTER DEC-0166/0167. The original DEC-0083 position held 20 equal YES shares in 295-309, 310-324 and 325-339. On Sep-21, live count evidence made the latter two legs worth less than their bids, so all 20 of each were sold. The protected equal-set topology is retired; this 295-309 leg has no bid and is held only because it cannot be monetized.",
+  "current_assessment": "CLOSED 2026-09-21: UMA resolved 295-309 NO with YES=0 and NO=1. The residual 20 YES paid $0, crystallizing a $1.00 loss. The data-api row is redeemable but is the losing outcome, so redeem-all correctly skipped it.",
+  "note": "CLOSED 2026-09-21. The original DEC-0083 position held 20 equal YES shares in 295-309, 310-324 and 325-339. DEC-0166 and DEC-0167 sold the latter two legs for $0.06 and $0.22 before all three buckets resolved NO. The residual 295-309 leg had no bid and expired worthless; retain this prior only as a closure/calibration record, not a re-entry candidate.",
   "historical_note_status": "SUPERSEDED 2026-09-21 FOR LIVE JUDGMENT: pre-Sep21 notes describe the former equal three-leg set and forecast-era evidence. Use current_assessment and the Sep-21 key facts.",
   "key_facts": [
    {
@@ -1175,7 +1175,7 @@
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
   "current_assessment": "Conservative portfolio floor prior: P(over 50 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-58 NO it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
-  "latest_catalyst": "Sep-19 06:00 review: a Sep-16 article surfaced after the prior cutoff reporting Gillibrand and six other Democratic senators still committed to passage, while analysts remain pessimistic after the 49-50 procedural vote. The article adds no final-passage vote; both exact contracts exclude the procedural motion and cloture. No criteria or UMA change. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
+  "latest_catalyst": "Sep-21 18:00 review: three articles repeat the Senate defeat/setback framing and report Fairshake political spending, but the latest official action remains the Sep-15 49-50 procedural cloture vote. Both exact contracts exclude motions to proceed and cloture; no qualifying final-passage vote, criteria change or UMA state exists. The complete pair's $29 logical floor is unchanged; HOLD the complete pair and never transact one leg."
  },
  "will-over-58-senators-vote-for-the-clarity-act-20260729193533309": {
   "p_no": 0.5,
@@ -1187,6 +1187,6 @@
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
   "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-50 YES it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
-  "latest_catalyst": "Sep-19 06:00 review: a Sep-16 article surfaced after the prior cutoff reporting Gillibrand and six other Democratic senators still committed to passage, while analysts remain pessimistic after the 49-50 procedural vote. The article adds no final-passage vote; both exact contracts exclude the procedural motion and cloture. No criteria or UMA change. The complete pair floor is unchanged; HOLD the complete pair and never transact one leg."
+  "latest_catalyst": "Sep-21 18:00 review: three articles repeat the Senate defeat/setback framing and report Fairshake political spending, but the latest official action remains the Sep-15 49-50 procedural cloture vote. Both exact contracts exclude motions to proceed and cloture; no qualifying final-passage vote, criteria change or UMA state exists. The complete pair's $29 logical floor is unchanged; HOLD the complete pair and never transact one leg."
  }
 }

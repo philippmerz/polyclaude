@@ -18969,3 +18969,42 @@ deadlines, position state, crux coverage, Ostium and all four daemons are clean;
 Sep. 18 weekly P&L and Sep. 20 world-state work are current. No trade, order,
 transfer or redemption occurred. Telegram **1033** reported the material
 result/UMA update, no-trade decision and redemption repair.
+
+## 2026-09-21 18:00–18:07 UTC — Duma resolves NO; stale Clarity coverage held
+
+The bounded periodic review found one material venue-state change. UMA moved
+all three former United Russia 295–339 buckets from proposed to resolved, with
+YES=0 and NO=1. The last live exposure, 20 shares of 295–309 YES, therefore paid
+$0 and crystallized its **$1.00** cost as a loss. The complete DEC-0083 set
+returned only the two pre-resolution exit proceeds, $0.06 from 310–324 and
+$0.22 from 325–339, for **$0.28 recovered on $11.40 cost** and a **$11.12
+loss**. A live `redeem-all` rerun found 0/13 winning redeemables, skipped the
+three losing rows, and prepared no transaction.
+
+State hygiene removed the closed 295–309 row from the claim snapshot and marked
+its Kelly prior CLOSED. The final audit is clean with ten indexed positions and
+one legitimate deindexed claim row. I graded DEC-0083, DEC-0130, DEC-0154,
+DEC-0161/0162/0163/0165 and the two exits DEC-0166/0167. The 76%, 72%, 59%,
+51%, 49% and 17% union forecasts all assigned too much mass to 295–339. The
+no-add choices correctly avoided compounding the loss, and the two final exits
+correctly preserved $0.28, but the framework retained correlated pre-election
+evidence too long after broad informed repricing and mature district counts
+pointed above the range. Future election positions need an explicit
+post-poll live-count transition that sharply decays forecast weight.
+
+Three post-cutoff Clarity Act alerts repeat the Senate defeat/setback framing
+and report Fairshake's $30 million political commitment. The latest official
+action remains the September 15 **49–50 procedural cloture vote**, which both
+exact contracts expressly exclude; there is no final-passage vote, criteria
+change or UMA state. The 29 over-50 YES plus 29 over-58 NO structure still has
+a criteria-consistent $29 payout floor under every vote/no-vote branch. Its
+complete fee-net exit was $28.53, so **HOLD the complete pair** and never trade
+one leg.
+
+Ten open legs reconcile at **$146.31 cost, $137.83 midpoint and $129.42
+indicative fee-net depth**. Authoritative bankroll is **$167.42**, cumulative
+realized P&L is **-$1.07**, and deployable pUSD remains $10.097650. The sole
+live order is still 28 Trump-out NO at .97 with zero fill. Watchlist, decision
+deadlines, position state and daemons are clean; no trade, order, transfer or
+redemption occurred. Telegram **1034** reported the resolution, realized loss,
+and protected-pair hold.

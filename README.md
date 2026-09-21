@@ -35,33 +35,30 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-21 14:10 UTC
+## Last audited snapshot — 2026-09-21 18:07 UTC
 
 | Measure | Value |
 |---|---:|
-| Unresolved position legs | 11 |
-| Position cost | $147.31 |
-| Polymarket midpoint | $135.29 |
-| Indicative depth/fee value | $127.71 |
-| Authoritative whole-account mark | $164.96 |
-| Cumulative realized P&L | -$0.07 |
+| Unresolved position legs | 10 |
+| Position cost | $146.31 |
+| Polymarket midpoint | $137.83 |
+| Indicative depth/fee value | $129.42 |
+| Authoritative whole-account mark | $167.42 |
+| Cumulative realized P&L | -$1.07 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor; manage it only as a complete position. Fresh Duma counting
-broke both tradable residual theses: all 20 of 310–324 YES sold at 0.003 and
-all 20 of 325–339 YES sold at 0.011. Only 20 shares of 295–309 remain; the
-outcome is effectively impossible, its YES book has no bid, and UMA now shows
-the market as proposed. The earlier four-party projection of 355 United Russia
-seats is preliminary. At 96.95% of protocols, A Just Russia reached the
-displayed 5.00% list threshold; qualification would reduce United Russia to
-roughly 347–349. Neither allocation branch helps the held claim.
+$29.00 payout floor; manage it only as a complete position. The Duma
+295–339 position is closed: all three YES buckets resolved NO. Pre-resolution
+sales recovered $0.06 from 310–324 and $0.22 from 325–339; the unmarketable
+295–309 residual paid $0. Total recovery was $0.28 on $11.40 cost, an $11.12
+loss. The resolved rows remain calibration history rather than live exposure.
 
 All other central-arithmetic exit screens return **HOLD CANDIDATE**; each is a
 Bernoulli comparison that includes a zero-payoff loss branch and still requires
 stressed-prior and joint portfolio-risk review. The only live order is a
 zero-fill maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $10.097650. The
-midpoint-to-depth gap is $7.58. The next material clock is the CEC's final
+midpoint-to-depth gap is $8.41. The next material clock is the CEC's final
 threshold, district and seat allocation, expected no earlier than Sep. 25,
 followed by the Arena source snapshot on Sep. 30.
 
