@@ -35,27 +35,29 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-22 02:08 UTC
+## Last audited snapshot — 2026-09-22 06:12 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $146.31 |
-| Polymarket midpoint | $139.48 |
-| Indicative depth/fee value | $133.00 |
-| Authoritative whole-account mark | $169.07 |
+| Polymarket midpoint | $138.91 |
+| Indicative depth/fee value | $128.17 |
+| Authoritative whole-account mark | $168.44 |
 | Cumulative realized P&L | -$1.07 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor; manage it only as a complete position. The MetaMask
-monotonicity structure is likewise managed only as a complete economic group.
+$29.00 payout floor; manage it only as a complete position. Both legs now show
+the same Jan. 2 operational end metadata while retaining the same written
+before-Jan. 1 vote cutoff. The MetaMask monotonicity structure is likewise
+managed only as a complete economic group.
 
 All other central-arithmetic exit screens return **HOLD CANDIDATE**; each is a
 Bernoulli comparison that includes a zero-payoff loss branch and still requires
 stressed-prior and joint portfolio-risk review. The only live order is a
 zero-fill maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is
-$10.097650. The midpoint-to-depth gap is $6.48. The next dated material clock
+$10.097650. The midpoint-to-depth gap is $10.74. The next dated material clock
 is the exact Arena Text Overall source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed

@@ -171,7 +171,7 @@
   },
   "clarity-act-senate-threshold-monotonicity": {
    "label": "Clarity Act Senate over-50/over-58 monotonicity pair",
-   "add_gate": "FILLED DEC-0139 on 2026-09-17: 29 equal over-58 NO + over-50 YES shares bought for $28.13 nominal and $28.32893 including taker fees, versus a $29.00 logical payout floor. The pair consumes the 15% ticket allowance; NO ADD and never transact one leg independently.",
+   "add_gate": "FILLED DEC-0139 on 2026-09-17: 29 equal over-58 NO + over-50 YES shares bought for $28.13 nominal and $28.32893 including taker fees, versus a $29.00 logical payout floor. Sep-22 live source reconciliation confirmed byte-identical criteria and matching Jan-2 operational end metadata on both legs; the written qualifying cutoff remains before Jan-1. The pair consumes the 15% ticket allowance; NO ADD and never transact one leg independently.",
    "add_policy": {
     "manual_gate": true,
     "max_component_all_in": {
@@ -186,7 +186,7 @@
    "event_model": {
     "kind": "monotone_yes",
     "event_id": "769594",
-    "end_date": "2027-01-01",
+    "end_date": "2027-01-02",
     "negative_risk": false,
     "order": [
      "50",
@@ -1179,26 +1179,26 @@
  },
  "will-over-50-senators-vote-for-the-clarity-act-20260729193533307": {
   "p_yes": 0.5,
-  "verified": "2026-09-17",
-  "criteria_read": "2026-09-17",
+  "verified": "2026-09-22",
+  "criteria_read": "2026-09-22",
   "cluster": "clarity-act-senate-threshold-monotonicity",
   "rho_within": 1.0,
   "cluster_frac": 0.1463,
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
-  "current_assessment": "Conservative portfolio floor prior: P(over 50 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-58 NO it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
-  "latest_catalyst": "Sep-21 18:00 review: three articles repeat the Senate defeat/setback framing and report Fairshake political spending, but the latest official action remains the Sep-15 49-50 procedural cloture vote. Both exact contracts exclude motions to proceed and cloture; no qualifying final-passage vote, criteria change or UMA state exists. The complete pair's $29 logical floor is unchanged; HOLD the complete pair and never transact one leg."
+  "current_assessment": "Conservative portfolio floor prior: P(over 50 Senators vote Yea)=0.50. Sep-22 live Gamma/CLOB reconciliation found byte-identical criteria across both legs and matching Jan-2 operational end metadata; the written qualifying cutoff remains before Jan-1. Paired with over-58 NO, every written terminal state pays at least $1 per equal pair. HOLD the complete pair; never transact this leg independently.",
+  "latest_catalyst": "Sep-22 topology reconciliation: live Gamma reports both event legs at endDate 2027-01-02T04:59Z while the stored topology used Jan-1; no archived raw snapshot establishes when or whether that metadata changed. Their identical text still admits only a qualifying vote before Jan-1. Both remain event 769594, active, open, negRisk=false and UMA-unproposed. Updating the stored operational end date restores validation without changing the semantic cutoff or $29 floor."
  },
  "will-over-58-senators-vote-for-the-clarity-act-20260729193533309": {
   "p_no": 0.5,
-  "verified": "2026-09-17",
-  "criteria_read": "2026-09-17",
+  "verified": "2026-09-22",
+  "criteria_read": "2026-09-22",
   "cluster": "clarity-act-senate-threshold-monotonicity",
   "rho_within": 1.0,
   "cluster_frac": 0.1463,
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
-  "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. This leg is not independently underwritten; paired with over-50 YES it has a logical $1 payout floor because the criteria, event, vote, deadline, source and fallback clauses match exactly.",
-  "latest_catalyst": "Sep-21 18:00 review: three articles repeat the Senate defeat/setback framing and report Fairshake political spending, but the latest official action remains the Sep-15 49-50 procedural cloture vote. Both exact contracts exclude motions to proceed and cloture; no qualifying final-passage vote, criteria change or UMA state exists. The complete pair's $29 logical floor is unchanged; HOLD the complete pair and never transact one leg."
+  "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. Sep-22 live Gamma/CLOB reconciliation found byte-identical criteria across both legs and matching Jan-2 operational end metadata; the written qualifying cutoff remains before Jan-1. Paired with over-50 YES, every written terminal state pays at least $1 per equal pair. HOLD the complete pair; never transact this leg independently.",
+  "latest_catalyst": "Sep-22 topology reconciliation: live Gamma reports both event legs at endDate 2027-01-02T04:59Z while the stored topology used Jan-1; no archived raw snapshot establishes when or whether that metadata changed. Their identical text still admits only a qualifying vote before Jan-1. Both remain event 769594, active, open, negRisk=false and UMA-unproposed. Updating the stored operational end date restores validation without changing the semantic cutoff or $29 floor."
  }
 }

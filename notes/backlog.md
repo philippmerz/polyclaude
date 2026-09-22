@@ -1,5 +1,30 @@
 # Polyclaude Backlog
 
+## Sep-22 06:12 current update
+
+- **Clarity topology reconciled; $29 floor intact:** the state audit caught a
+  live end-date mismatch because the complete eight-leg event now reports
+  Jan. 2 operational metadata while the stored topology used Jan. 1. Fresh
+  Gamma and CLOB reads show both held legs still belong to event 769594, remain
+  active and UMA-unproposed, and have byte-identical criteria. Their written
+  qualifying cutoff remains before
+  Jan. 1. No vote, <=50 Yea, 51–58 Yea, >=59 Yea, and qualifying voice-vote
+  states pay the equal over-50-YES plus over-58-NO pair $29, $29, $58, $29 and
+  $29 respectively. The stored operational date is now Jan. 2; the semantic
+  cutoff did not change. Audit is clean, 25 focused tests pass, and complete
+  fee-net exit is $28.53, so HOLD the complete pair and never trade one leg.
+- **Gemini source rechecked after the midpoint fell .075→.065:** the live
+  60-row resolving chart is reachable and updating. No new Gemini Pro row
+  exists, and the highest relevant Gemini rows remain 3.8 Flash at 46.2 and
+  3.1 Pro at 45.9. No Gemini score reaches 50; Flash does not qualify for the
+  next-Pro contract. Retain p(NO)=.18 debut and .30 highest-score; fresh full
+  exits of $4.06/$9.90 remain below stressed hold values. HOLD / NO ADD.
+- Ten legs have $146.31 cost, $138.91 midpoint and $128.17 indicative fee-net
+  depth. Authoritative bankroll is **$168.44**, realized P&L remains **-$1.07**,
+  and deployable pUSD is $10.097650. No new alert, UMA/Ostium change, watchlist
+  hit, overdue decision, trade, fill, transfer or redemption exists. Telegram
+  **1035** reported the material topology repair.
+
 ## Sep-21 18:07 current update
 
 - **Duma position resolved NO and is closed:** UMA finalized all three former

@@ -19067,3 +19067,48 @@ union has no payout floor and an unresolved snap-election cancellation branch,
 so neither clears robust entry. No trade, order change, transfer or Telegram
 summary was warranted. Sep. 18 weekly P&L and Sep. 20 world-state work remain
 current.
+
+## 2026-09-22 06:00–06:12 UTC — Clarity metadata drift reconciled; floor intact
+
+No news or opportunity alert arrived after the 02:08 cutoff, and there is no
+watchlist hit, overdue decision, UMA/Ostium change, fill or settlement event.
+The light state audit did catch one actionable integrity failure: the stored
+Clarity monotonicity topology still expected a Jan. 1 end date because live
+Gamma reports Jan. 2 operational metadata while the topology stored Jan. 1.
+No archived raw snapshot establishes when or whether that field changed.
+
+I re-read both held contracts independently through Gamma and CLOB. Over-50
+YES and over-58 NO retain their exact token and condition identities, event
+769594, `negRisk=false`, active/open state and no UMA proposal. Both Gamma
+descriptions, both CLOB descriptions and the event description are
+byte-identical. They still use the first full-Senate final-passage vote before
+Jan. 1, exclude cloture/motions/amendments, share the no-vote and voice-vote
+fallbacks, and resolve from official Senate and Library of Congress records.
+Gamma now reports Jan. 2 04:59 UTC and CLOB Jan. 2 00:00 UTC on both legs; that
+administrative date does not extend the written eligibility window.
+
+Every joint terminal state still preserves the pair: no qualifying vote or
+<=50 Yea pays over-58 NO; 51–58 pays both; >=59 or qualifying voice/unanimous
+passage pays over-50 YES. The equal 29-share position therefore retains its
+**$29 floor**. I updated only the stored operational end date to Jan. 2 and
+refreshed both criteria records; the before-Jan. 1 semantic cutoff is unchanged.
+The state audit is clean, 25 focused group/Kelly tests pass, and a fresh
+complete-group exit is $28.53 after fees. **HOLD the complete pair** and never
+transact one leg independently.
+
+The next-Gemini-Pro NO midpoint also moved .075→.065 after the 02:00 wrapper's
+archive request had received HTTP 429, so I completed a fresh exact-source
+check rather than inferring from price. The uncached 60-row agi.safe.ai chart
+responded normally and the validated parser detected known historical changes.
+No new Gemini Pro row exists and no Gemini score reaches 50: 3.8 Flash remains
+46.2 and 3.1 Pro 45.9; Flash is excluded from the debut contract. Retain
+p(NO)=.18 for debut >=40 and .30 for highest-score >=50. Their $4.06/$9.90
+full exits and best partial exits remain below stressed hold values, so HOLD /
+NO ADD with no prior or order change.
+
+Ten open legs reconcile at **$146.31 cost, $138.91 midpoint and $128.17
+indicative fee-net depth**. Authoritative bankroll is **$168.44**, cumulative
+realized P&L remains **-$1.07**, deployable pUSD is $10.097650, and the sole
+live order remains the zero-fill Trump-out 28-NO maker sell at .97. No trade,
+order change, transfer or redemption occurred. Telegram **1035** reported the
+material topology repair.
