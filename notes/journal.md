@@ -19198,3 +19198,28 @@ single-book fair, fails the ten-point stress case at .318 and was skipped. The
 Sep. 18 weekly P&L and Sep. 20 world-state review remain current. No trade,
 order change, transfer, prior change, decision record or Telegram summary was
 warranted.
+
+## 2026-09-22 18:00–18:02 UTC — periodic review: recycled Clarity alerts; floor preserved
+
+Four post-14:08 Tier-2 alerts required no asset action. CoinDesk and The Block
+repeated the Sep. 16 Senate setback: the reported 49–50 action was a cloture
+vote, which both held Clarity contracts explicitly exclude. Fairshake's $30
+million political commitment changes no qualifying vote count, and the latest
+conditional Hormuz diplomacy has no causal channel to a held position. No new
+opportunity alert, watchlist trigger, overdue decision or backlog clock exists.
+
+The equal 29-share over-50-YES plus over-58-NO pair still has a criteria-
+consistent **$29 payout floor**. Its fresh complete fee-net exit is $28.25, so
+**HOLD the complete group** and never transact one leg. All ordinary exit
+screens also remain holds. Gemini >=50 NO marks .050, but there is no new
+source-level break; fresh fee-net exits of $2.32 for >=50 and $8.51 for debut
+remain below their recorded lower-bound terminal values of about $8.17 and
+$10.14. Marginal APY has zero below-hurdle positions.
+
+Ten open legs reconcile at **$146.31 cost, $135.57 midpoint and $124.98
+indicative fee-net depth**. Authoritative bankroll is **$165.06**, cumulative
+realized P&L remains **-$1.07**, deployable pUSD is $10.097650, and the sole
+live order remains the zero-fill Trump-out 28-NO maker sell at .97. UMA,
+Ostium, protected-group topology and the 10-indexed plus one legitimate
+claim-row state audit are clean. No trade, order change, transfer, prior change
+or material Telegram summary was warranted.
