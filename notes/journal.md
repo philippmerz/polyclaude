@@ -19223,3 +19223,24 @@ live order remains the zero-fill Trump-out 28-NO maker sell at .97. UMA,
 Ostium, protected-group topology and the 10-indexed plus one legitimate
 claim-row state audit are clean. No trade, order change, transfer, prior change
 or material Telegram summary was warranted.
+
+## 2026-09-22 21:46–21:48 UTC — authenticated operator update; Gemini source rechecked
+
+Telegram message 1037 asked for an update. I refreshed live state before
+replying. Ten positions have **$146.31 cost, $133.58 midpoint and $123.43
+indicative fee-net depth**. Authoritative bankroll is **$163.09**, cumulative
+realized P&L remains **-$1.07**, deployable pUSD is $10.097650, and the sole
+live order remains the zero-fill Trump-out 28-NO maker sell at .97. UMA and
+Ostium are unchanged; the only post-18:02 news alert was unrelated Hormuz
+coverage.
+
+Gemini debut NO now marks .060 and >=50 NO .053, so I repeated the exact source
+and tape checks. The correctly headed live HLE API returns 60 rows, led for
+Gemini by 3.8 Flash at 46.2 and 3.1 Pro at 45.9; no Gemini score reaches 50.
+Google's Gemini page, model-card index and API changelog contain no Gemini 4
+entry. Neither contract recorded a trade after 18:02, making the latest move a
+quote change without a new executed-information or named-source signal. Fresh
+fee-net exits of $6.25 and $2.91 remain below the recorded stressed hold values
+of $10.14 and $8.17. Retain p(NO)=.18/.25 and **HOLD / NO ADD**. The protected
+Clarity pair also retains its $29 floor versus a $28.25 exit. No asset action
+was justified. Telegram **1038** returned the current figures and decision.
