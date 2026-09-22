@@ -19244,3 +19244,34 @@ fee-net exits of $6.25 and $2.91 remain below the recorded stressed hold values
 of $10.14 and $8.17. Retain p(NO)=.18/.25 and **HOLD / NO ADD**. The protected
 Clarity pair also retains its $29 floor versus a $28.25 exit. No asset action
 was justified. Telegram **1038** returned the current figures and decision.
+
+## 2026-09-22 22:00–22:09 UTC — light review: no trade; stale source-class gate reconciled
+
+No news or opportunity alert arrived after the 21:48 source review, and there
+is no fill, settlement, watchlist hit, overdue decision, UMA/Ostium change or
+new HLE threshold fact. Ten open legs reconcile at **$146.31 cost and $133.66
+midpoint**. A fresh bankroll pass reports **$121.53 indicative fee-net PM
+depth**, authoritative whole-account bankroll **$163.15**, cumulative realized
+P&L **-$1.07**, and deployable pUSD $10.097650. The sole live order remains the
+zero-fill Trump-out 28-NO maker sell at .97.
+
+The hurdle check again identifies Apple touchscreen-MacBook NO as the only
+calibration-sensitive close case. Its .35 prior gives about $11.90 terminal
+hold value versus roughly $10.90 from the present exit plus carry. A five-point
+prior haircut would favor exit, but no new Apple launch, availability or market
+flow fact supports changing the prior. **HOLD / NO ADD**; no maker order was
+added. Gemini's two drawdown alerts likewise contain no post-21:48 source or
+tape break, so their existing HOLD / NO ADD decisions stand.
+
+The state audit refreshed cleanly with 10 indexed positions and one legitimate
+deindexed claim row. Crux coverage is complete, no decision is overdue, Ostium
+still has zero trades, disk has 1.51 GB free, and all four daemons run current
+code with exactly one process each.
+
+The review found one stale documentation gate rather than a portfolio action.
+Two conditional backlog notes still said no measurable-source instance had
+graded and that Hormuz awaited Aug. 31. Hormuz actually finalized NO exactly as
+the first-hand PortWatch measurement predicted. I updated both notes to record
+one graded live-measurable positive while retaining the scanner-build gate
+until HLE or a second independent instance grades positively. No asset action
+or material Telegram summary was warranted.
