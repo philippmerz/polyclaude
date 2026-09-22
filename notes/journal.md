@@ -19151,3 +19151,50 @@ realized P&L remains **-$1.07**, deployable pUSD is $10.097650, and the only
 live order remains the zero-fill Trump-out 28-NO maker sell at .97. Clarity and
 MetaMask group topology remains intact and the state audit is clean. Telegram
 **1036** reported the prior change and hold decision.
+
+## 2026-09-22 14:00–14:08 UTC — full check: Gemini source intact; no action
+
+The eleven-step check completed once. Ten open legs reconcile at **$146.31
+cost, $136.04 midpoint and $123.16 indicative fee-net depth**. Authoritative
+bankroll is **$165.55**, cumulative realized P&L remains **-$1.07**, deployable
+pUSD is $10.097650 and no BUY collateral is reserved. The sole live order is
+the zero-fill Trump-out 28-NO maker sell at .97. Wallets, zero-position Ostium
+state, UMA, crux coverage, protected Clarity/MetaMask groups, and the 10-indexed
+plus one legitimate deindexed-claim state audit are clean. All four daemons are
+current and exactly one instance each. Redemption found 0/13 winners and
+prepared no transaction.
+
+One 13:43 Tier-2 alert reported a conditional Iranian offer to reopen Hormuz
+within seven days if the United States eases military pressure and lifts its
+blockade. The report was not independently confirmed and has no causal channel
+to a held position. No opportunity alert, watchlist trigger, overdue decision,
+settlement or fill arrived after the 10:13 review.
+
+Gemini >=50 NO marked .051, but a fresh source/tape check found no new adverse
+fact. The correctly headed live HLE API returned 60 rows; Gemini 3.8 Flash
+remains 46.2 and Gemini 3.1 Pro 45.9, with no Gemini score at or above 50 and no
+new Pro row. Google's current Gemini, model-card and API-changelog surfaces
+contain no Gemini 4 entry. Since 10:13, the >=50 market recorded only one
+3.17-share YES sale at .908, directionally favorable to NO, and the debut
+market recorded no trade. The lower midpoint therefore reflects quote
+withdrawal rather than a new executed-information signal.
+
+Fresh fee-net exits are $2.27 for the 102.08-share >=50 NO and $6.33 for the
+169-share debut NO. Their recorded lower-bound terminal values are about $8.17
+at p(NO)=.08 and $10.14 at p(NO)=.06; even their combined stressed $18.31
+exceeds the $8.60 immediate exits. Joint binary-loss risk remains high, but
+selling gives up robust source-weighted value and adding would worsen an
+already concentrated AI cluster. Retain p(NO)=.25/.18 and **HOLD / NO ADD**.
+All other direct and protected-group exit screens remain holds; marginal APY
+found zero below-hurdle positions.
+
+Seven discovery passes completed. Default discovery shortlisted 80 of 999;
+thin-tail screened 35,269; sports surfaced 12 of 42 eligible; macro surfaced
+five October FOMC markets; monotonicity found zero violations; consistency
+found no positive quoted basket, with incomplete unquoted structural coverage;
+and favorite-fade produced only unsubstantiated instance leads. The closest
+sports lead, Otter Side game-one YES at .381655 fee-inclusive versus .418
+single-book fair, fails the ten-point stress case at .318 and was skipped. The
+Sep. 18 weekly P&L and Sep. 20 world-state review remain current. No trade,
+order change, transfer, prior change, decision record or Telegram summary was
+warranted.
