@@ -19112,3 +19112,42 @@ realized P&L remains **-$1.07**, deployable pUSD is $10.097650, and the sole
 live order remains the zero-fill Trump-out 28-NO maker sell at .97. No trade,
 order change, transfer or redemption occurred. Telegram **1035** reported the
 material topology repair.
+
+## 2026-09-22 10:00–10:13 UTC — Gemini adverse flow reweighted; source thesis intact
+
+No post-06:12 news or opportunity alert, backlog clock, watchlist hit, overdue
+decision, fill, settlement, UMA/Ostium change or daemon fault exists. The
+material change was market-derived: in the Gemini >=50 market, takers bought
+362.073 YES at .90269 VWAP and sold 134.37 NO at .08513 VWAP between 09:03:33
+and 09:17:13 UTC. One 213-share YES purchase represented 58.6% of the YES-buy
+notional. The NO bid also withdrew sharply. The paired next-Gemini-Pro debut
+market had no post-06:12 trades and only $6.08 of trailing 24-hour volume, so
+the move is genuine but concentrated rather than a consistent two-market
+signal.
+
+I independently re-read the resolving and first-party release surfaces. The
+uncached agi.safe.ai HLE endpoint still returns 60 rows: Gemini 3.8 Flash is
+46.2 and Gemini 3.1 Pro 45.9, with no Gemini score at or above 50 and no new
+Gemini Pro row. Flash remains ineligible for the next-Pro-debut contract.
+Google DeepMind's Gemini page still labels 3.5 Pro as coming soon, and the
+current Google API changelog and model-card index contain no Gemini 4 Pro
+release. Derivative Sep. 21 reporting about secret Arena testing explicitly
+lacks Google confirmation and repeats the already-known identity rumor rather
+than supplying a qualifying release or score.
+
+The flow merits partial probability weight. I lowered the >=50 position's
+p(NO) from .30 to **.25**, with a judgment range of roughly .08–.45, and
+retained next-Pro-debut p(NO)=**.18**, roughly .06–.35. Fresh full fee-net exits
+were only $3.63 for 102.08 >=50 NO shares and $5.19 for 169 debut NO shares,
+versus central terminal values of $25.52 and $30.42. Even the lower judgment
+bounds exceed the approximately 3–4% terminal-NO probabilities needed to beat
+those immediate exits. Joint loss risk remains high, but adding would worsen
+cluster concentration and selling would surrender much more source-weighted EV.
+**HOLD / NO ADD** both positions; no order or transaction was placed.
+
+Ten open legs reconcile at **$146.31 cost, $134.85 midpoint and $123.38
+indicative fee-net depth**. Authoritative bankroll is **$164.36**, cumulative
+realized P&L remains **-$1.07**, deployable pUSD is $10.097650, and the only
+live order remains the zero-fill Trump-out 28-NO maker sell at .97. Clarity and
+MetaMask group topology remains intact and the state audit is clean. Telegram
+**1036** reported the prior change and hold decision.

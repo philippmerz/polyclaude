@@ -1,5 +1,28 @@
 # Polyclaude Backlog
 
+## Sep-22 10:13 current update
+
+- **Gemini >=50 adverse flow is real but does not clear the exit threshold:**
+  between 09:03 and 09:17 UTC, takers bought about 362 YES at .9027 VWAP and
+  sold about 134 NO at .0851 VWAP. One 213-share YES buy supplied 58.6% of the
+  YES-buy notional, while the paired next-Pro-debut market printed no trades.
+  This is meaningful price evidence, but it is concentrated and not enough by
+  itself to establish a new qualifying model or score.
+- **Fresh resolving-source checks found no thesis break:** the uncached
+  60-row HLE chart still tops relevant Gemini entries at 46.2 for 3.8 Flash
+  and 45.9 for 3.1 Pro, with no score at or above 50 and no new Pro row.
+  Google's model, API-changelog and model-card surfaces still have no Gemini 4
+  Pro release; the model page continues to label 3.5 Pro as coming soon.
+  Lower the >=50 p(NO) from .30 to **.25** to partially weight the flow; retain
+  debut p(NO)=**.18**. Fresh fee-net exits are only $3.63 and $5.19 versus
+  $25.52 and $30.42 central hold values. **HOLD / NO ADD** both positions; no
+  order or transaction.
+- Ten legs have $146.31 cost, $134.85 midpoint and $123.38 indicative fee-net
+  depth. Authoritative bankroll is **$164.36**, realized P&L remains **-$1.07**,
+  and deployable pUSD is $10.097650. No new alert, backlog clock, watchlist hit,
+  overdue decision, UMA/Ostium change or settlement exists. Telegram **1036**
+  reported the material prior update.
+
 ## Sep-22 06:12 current update
 
 - **Clarity topology reconciled; $29 floor intact:** the state audit caught a
