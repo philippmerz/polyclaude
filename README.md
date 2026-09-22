@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-21. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-22. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -35,32 +35,28 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-21 22:02 UTC
+## Last audited snapshot — 2026-09-22 02:08 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $146.31 |
-| Polymarket midpoint | $138.14 |
-| Indicative depth/fee value | $129.33 |
-| Authoritative whole-account mark | $167.82 |
+| Polymarket midpoint | $139.48 |
+| Indicative depth/fee value | $133.00 |
+| Authoritative whole-account mark | $169.07 |
 | Cumulative realized P&L | -$1.07 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor; manage it only as a complete position. The Duma
-295–339 position is closed: all three YES buckets resolved NO. Pre-resolution
-sales recovered $0.06 from 310–324 and $0.22 from 325–339; the unmarketable
-295–309 residual paid $0. Total recovery was $0.28 on $11.40 cost, an $11.12
-loss. The resolved rows remain calibration history rather than live exposure.
+$29.00 payout floor; manage it only as a complete position. The MetaMask
+monotonicity structure is likewise managed only as a complete economic group.
 
 All other central-arithmetic exit screens return **HOLD CANDIDATE**; each is a
 Bernoulli comparison that includes a zero-payoff loss branch and still requires
 stressed-prior and joint portfolio-risk review. The only live order is a
-zero-fill maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $10.097650. The
-midpoint-to-depth gap is $8.80. The next material clock is the CEC's final
-threshold, district and seat allocation, expected no earlier than Sep. 25,
-followed by the Arena source snapshot on Sep. 30.
+zero-fill maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is
+$10.097650. The midpoint-to-depth gap is $6.48. The next dated material clock
+is the exact Arena Text Overall source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

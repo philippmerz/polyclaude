@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-21",
+ "_updated": "2026-09-22",
  "_groups": {
   "metamask-fdv-monotonicity": {
    "label": "MetaMask FDV overlapping monotonicity pairs plus 700M directional crumb",
@@ -229,9 +229,9 @@
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
-  "verified": "2026-09-14",
-  "criteria_read": "2026-09-14",
-  "current_assessment": "Sep-14 source-diff and criteria reread found no drift. The live description still resolves YES on permanent cessation before Dec-31 or an earlier resignation/removal announcement, excludes temporary Section 3, unsustained Section 4, and impeachment without removal, and uses consensus credible reporting. The stored any-period/permanent-removal textual tension also remains. Current White House releases continue to identify Trump as President and no qualifying cessation or announcement surfaced. Retain p_no=0.97; HOLD / NO ADD / NO FLIP. The zero-fill 28-NO maker sell at .97 already implements the fee-free fair-value exit route.",
+  "verified": "2026-09-22",
+  "criteria_read": "2026-09-22",
+  "current_assessment": "Sep-22 live source-diff and criteria reread found no drift. The contract still resolves YES only for permanent cessation before Dec-31 or an earlier resignation/removal announcement; it excludes temporary Section 3, unsustained Section 4, and impeachment without removal, includes sustained Section 4, and uses consensus credible reporting. The any-period/permanent-removal textual tension remains. Current White House releases identify Trump as President and contain no qualifying cessation or announcement. Retain p_no=0.97; HOLD / NO ADD / NO FLIP. The zero-fill 28-NO maker sell at .97 remains the fee-free fair-value exit route.",
   "key_facts": [
    {
     "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
@@ -298,6 +298,18 @@
     "source": "https://www.whitehouse.gov/releases/",
     "source_date": "2026-09-10",
     "checked": "2026-09-14"
+   },
+   {
+    "claim": "SOURCE-DIFF 2026-09-22: the live Gamma description is unchanged from the Sep-14 record on every operative clause. Permanent cessation or an earlier announcement qualifies; temporary Section 3, unsustained Section 4 and impeachment without removal remain excluded; sustained Section 4 qualifies; consensus credible reporting remains the source. The any-period/permanent-removal textual tension is also unchanged.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-09-22",
+    "checked": "2026-09-22"
+   },
+   {
+    "claim": "The Sep-22 White House releases feed continues to identify Donald Trump as President, including a current President Trump policy release, and contains no resignation, removal, sustained Section 4 transfer, or future-effective cessation announcement.",
+    "source": "https://www.whitehouse.gov/releases/",
+    "source_date": "2026-09-22",
+    "checked": "2026-09-22"
    }
   ]
  },
