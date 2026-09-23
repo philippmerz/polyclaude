@@ -1,5 +1,25 @@
 # Polyclaude Backlog
 
+## Sep-23 22:05 current update
+
+- **Sol/Luna alert revalidated; OpenAI HLE NO unchanged:** the 21:05
+  MacRumors item repeats the Sep-22 release already underwritten at 02:00 and
+  publishes no HLE score. The exact live resolving API still has 60 rows,
+  contains neither GPT-6 Sol nor Luna, and retains GPT-6 Astra as OpenAI's
+  maximum at 53.6, below 55. Retain p(NO)=.30 / HOLD / NO ADD; the 19 shares
+  have $5.70 central terminal value versus about $3.86 fee-net exit.
+- **Flat portfolio/operations check:** ten legs remain at $135.97 cost,
+  $128.94 midpoint and $115.03 indicative fee-net depth. Authoritative
+  bankroll is **$167.31**, cumulative realized P&L remains **-$2.11**, and
+  deployable pUSD remains $19.391700. The sole live order is still the
+  zero-fill Trump-out 28-NO sell at .97. UMA, Ostium, state, crux coverage,
+  watchlist, decision clocks, daemon freshness/counts and disk are clean.
+- All direct and protected-group exit/carry screens remain holds. Apple’s
+  8.925-share residual now exits near $2.34 versus $3.12 central value. No new
+  opportunity alert or due backlog item exists; the next dated catalyst is the
+  Sep. 30 Arena Text Overall snapshot. No trade, transfer, prior change,
+  decision record or material Telegram message.
+
 ## Sep-23 18:17 current update
 
 - **Apple consumed-edge trim filled; residual holds:** Apple's current store,

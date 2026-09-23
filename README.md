@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-23 18:17 UTC
+## Last audited snapshot — 2026-09-23 22:05 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $135.97 |
-| Polymarket midpoint | $128.56 |
-| Indicative depth/fee value | $118.56 |
-| Authoritative whole-account mark | $166.96 |
+| Polymarket midpoint | $128.94 |
+| Indicative depth/fee value | $115.03 |
+| Authoritative whole-account mark | $167.31 |
 | Cumulative realized P&L | -$2.11 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -56,12 +56,12 @@ managed only as a complete economic group.
 All other central-arithmetic exit screens remain holds after exit-cost,
 stressed-prior and joint portfolio-risk review. The Gemini NO pair has no new
 resolving-source or executed-information signal; its $55.94 central terminal
-value remains far above $11.69 of executable exits. Apple NO was trimmed by
+value remains far above $8.71 of executable exits. Apple NO was trimmed by
 25.08 shares when only that fee-net bid prefix moved above its unchanged .35
 fair value; the retained 8.925 shares have about $3.12 of central value versus
-$3.04 from an immediate sale. The only live order is a zero-fill maker sell
+$2.34 from an immediate sale. The only live order is a zero-fill maker sell
 for **28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
-midpoint-to-depth gap is $10.00. The next dated material clock is the exact
+midpoint-to-depth gap is $13.91. The next dated material clock is the exact
 Arena Text Overall source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
