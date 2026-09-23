@@ -30,6 +30,7 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 - `positions.py` — Polymarket open positions with mark-to-market P&L.
 - `crypto_status.py` — multi-chain balance reader for either sleeve. Subcommand: `crypto` (default) or `polymarket`.
 - `discover_markets.py` — paginated Polymarket gamma-api scan. Snapshots into `data/snapshots/`.
+- `market_context_batches.py` — deterministic offline organizer for discovery snapshots. It compares the latest two snapshots of one scan kind, ranks material identity/criteria/quote changes, keeps observed rows from an exact Gamma event together, and emits proof-hashed JSON or Markdown batches. It never calls the network, a model, or execution; each item still requires exact-criteria review and a fresh live-book walk.
 
 ## On-chain operations
 

@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-22. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-23. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -77,6 +77,10 @@ marked total; `scripts/positions.py` supplies the Polymarket depth view.
   and disk headroom.
 - **Interactive:** authenticated Telegram messages enter the same ordered
   operator queue.
+
+Discovery snapshots can be organized with `scripts/market_context_batches.py`.
+Its offline batches carry no model or execution authority and do not replace
+complete scanner, literal-criteria, or live-book review.
 
 New Polymarket buys must use `scripts/polyclaude_enter.py`, which enforces
 identity, criteria, fee, robust-EV, ticket, cluster, collateral, and reservation

@@ -1,5 +1,5 @@
 {
-  "next_id": 172,
+  "next_id": 173,
   "decisions": [
     {
       "id": 1,
@@ -3417,6 +3417,26 @@
         "news-watcher",
         "hle",
         "coverage"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 172,
+      "timestamp": "2026-09-23T11:07:35Z",
+      "type": "scaffolding",
+      "thesis": "Broad discovery is deterministic, but the prior 1,500-plus-row thin-tail handoff forced the frontier reviewer to reconstruct cohort, family and criteria context from an unstructured dump. Enriched proof-hashed snapshots and exact-event, material-delta batches reduce repeated context while preserving literal criteria, exact instrument identities, full fee metadata, malformed-input fail-open behavior and mandatory live-book revalidation. The organizer has no model or execution path; a cheaper model remains shadow-only until prospective recall evidence justifies routing authority.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-23, scheduled discovery batching will compare only proof-verified same-kind cohorts, keep all observed members of each exact event together, surface malformed or incompatible inputs fail-open, and submit no model call or order. Stable consecutive primary snapshots should emit zero triggers while genuine thin-tail entrants or material changes remain visible.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-23",
+      "tags": [
+        "scanner",
+        "context-batching",
+        "proof-carrying",
+        "fail-open"
       ],
       "slug": null,
       "outcome": null,

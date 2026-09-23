@@ -29,6 +29,22 @@
   $46.16 central fair and $44.75 logical floor versus $44.62 full exit; no add
   clears fair or robustness gates. Apple, Clarity and Trump sources also show
   no thesis break. Weekly P&L and world-state work remain current.
+- **Discovery context batching shipped; cheap-model authority remains gated:**
+  schema-v2 discovery snapshots now feed deterministic, proof-hashed,
+  same-kind material-delta batches with literal criteria and exact identities.
+  A live primary comparison emitted 0/80 deltas; thin-tail reduced 1,540 rows
+  to two triggers plus one observed event sibling. The organizer is offline and
+  non-executable. Run Luna and Jev only as prospective shadow classifiers over
+  the same frozen packet cohort; require 200–500 rows, zero severe misses,
+  strong per-stratum recall and measurable work reduction before any routing
+  role. Never let either suppress held-position alerts, deterministic arb/math,
+  changed criteria, incomplete inputs or frontier review.
+- **CLOB request batching — next bounded scanner optimization:** the four broad
+  book scanners still issue singular `/book` requests. A shared POST `/books`
+  transport could remove roughly 75–99% of requests. Implement only with
+  response mapping by `asset_id` (the endpoint may omit invalid IDs), strict
+  per-book validation, fail-closed missing rows and a final fresh rewalk before
+  action; batch snapshots are not atomic execution quotes.
 
 ## Sep-22 22:09 current update
 

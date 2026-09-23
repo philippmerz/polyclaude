@@ -19350,3 +19350,47 @@ incomplete unquoted coverage, and favorite-fade's largest stale population
 lead was only 7.3pp. Weekly P&L and world-state work remain current. No trade,
 order change, transfer or redemption occurred. Telegram message **1041**
 reported the material source, watcher and thesis updates.
+
+## 2026-09-23 10:20–11:08 UTC — discovery context batching added; live shadow check clean
+
+The broad market scan was not being delegated to the cheap model. The primary
+and thin-tail scanners, monotonicity, consistency and favorite-fade passes are
+deterministic Python; the scheduled frontier session interprets their output.
+The active runtime maps `main` to GPT-6 Astra, `research` to GPT-5.6 Terra and
+`fast` to GPT-5.6 Luna. Luna is used only for scoped follow-ons such as Tier-2
+news filtering, sports consensus and selected rule comparisons. Fireworks is
+not in this path. Jev also remains a capped, callerless shadow adapter.
+
+The structural bottleneck was the handoff: a thin-tail snapshot recently held
+roughly 1,500–1,700 rows, while the old shortlist omitted exact parent-event
+identity and literal resolution criteria. I added
+`scripts/market_context_batches.py` and enriched schema-v2 discovery snapshots
+with exact condition/token/outcome/event identities, literal public criteria
+plus an exact canonical hash, timestamps, full structured fee metadata and
+collision-safe proof sidecars. The offline organizer compares only compatible
+same-kind cohorts, ranks exact criteria/identity/term changes, new-to-snapshot
+rows and quote moves of at least 3pp, then keeps every observed sibling from an
+exact Gamma event together. It explicitly records that filtered snapshots may
+omit other siblings, never infers proposition equivalence, and never calls a
+model, network or execution client. Every row remains `execution_ready=false`
+and requires a fresh CLOB rewalk.
+
+Malformed hashes, metadata, criteria, dates, outcome mappings, quotes, fee
+descriptors and identifiers fail open. Snapshot writes are atomic, scan-kind
+identified and microsecond-stamped; duplicate outer-event observations are
+accumulated rather than assigning the first parent seen. Named-outcome sports
+markets now retain their two labels and prices instead of losing them because
+they are not literally called Yes and No. Continuous volume/liquidity/time
+drift is excluded from review triggers, while incomplete semantic context
+continues to surface.
+
+Two live primary and thin-tail passes established comparable baselines. The
+second primary comparison covered 80/80 rows with verified provenance and
+emitted **zero** material deltas. The second thin-tail comparison covered 1,540
+rows and emitted only two new-to-snapshot triggers plus one exact-event context
+sibling; it separately warned that three prior filtered rows disappeared and
+did not treat omission as closure. All three selected rows had complete
+semantic context. `family_routing_ready` remains false because a filtered
+snapshot cannot prove full event membership. Seventeen focused tests and all
+156 money-math regression checks pass. DEC-0172 records the scaffold. No model
+call, trade, order, transfer or portfolio-prior change occurred.

@@ -8,7 +8,9 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
+import math
 import os
 from pathlib import Path
 from typing import Any
@@ -45,6 +47,152 @@ def live_hurdle_apy() -> float:
 # The hurdle filter compares APY-equivalent yield, so sub-week trades that pass the
 # threshold ARE genuinely attractive — the prior floor was overcautious.
 HURDLE_DAYS_FLOOR_DEFAULT = 3
+SNAPSHOT_SCHEMA_VERSION = 2
+
+# These fields together describe the proposition and its resolution contract.
+# Keep the exact public text in the local snapshot as evidence for later review;
+# the digest makes silent edits easy to detect without treating a title or
+# event label as a substitute for the actual criteria.
+CRITERIA_FIELDS = ("question", "description", "resolutionSource", "rules")
+
+
+def criteria_payload(market: dict[str, Any]) -> dict[str, Any]:
+    """Return the exact non-empty public criteria fields from Gamma."""
+    return {
+        field: market.get(field)
+        for field in CRITERIA_FIELDS
+        if market.get(field) not in (None, "", [], {})
+    }
+
+
+def criteria_sha256(market: dict[str, Any]) -> str | None:
+    """Fingerprint the exact resolution criteria using canonical JSON."""
+    criteria = criteria_payload(market)
+    if not criteria:
+        return None
+    encoded = json.dumps(
+        criteria, ensure_ascii=False, sort_keys=True, separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def parent_event_identity(market: dict[str, Any]) -> tuple[str | None, str | None]:
+    """Return an unambiguous Gamma parent event identity, without inference."""
+    raw_events = market.get("events")
+    if isinstance(raw_events, dict):
+        raw_events = [raw_events]
+    if not isinstance(raw_events, list):
+        return None, None
+    by_id: dict[str, set[str]] = {}
+    title_without_id: set[str] = set()
+    for event in raw_events:
+        if not isinstance(event, dict):
+            continue
+        event_id = str(event.get("id") or "").strip()
+        title = str(event.get("title") or "").strip()
+        if event_id:
+            by_id.setdefault(event_id, set())
+            if title:
+                by_id[event_id].add(title)
+        elif title:
+            title_without_id.add(title)
+    if len(by_id) != 1:
+        title = next(iter(title_without_id)) if not by_id and len(title_without_id) == 1 else None
+        return None, title
+    event_id, titles = next(iter(by_id.items()))
+    return event_id, next(iter(titles)) if len(titles) == 1 else None
+
+
+def snapshot_metadata_path(snapshot_path: Path) -> Path:
+    return snapshot_path.with_name(f"{snapshot_path.stem}.meta.json")
+
+
+def _atomic_write_text(path: Path, content: str) -> None:
+    temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    temporary.write_text(content, encoding="utf-8")
+    os.replace(temporary, path)
+
+
+def write_snapshot(
+    rows: list[dict[str, Any]], *, scan_kind: str, params: dict[str, Any],
+    snapshot_dir: Path = SNAP_DIR, now: dt.datetime | None = None,
+) -> tuple[Path, Path]:
+    """Write the legacy list snapshot plus an additive metadata sidecar."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=dt.timezone.utc)
+    snapshot_dir.mkdir(parents=True, exist_ok=True)
+    # Microseconds keep primary and thin-tail scans from overwriting each other
+    # when a caller supplies or reaches the same wall-clock second.
+    ts = now.astimezone(dt.timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    if not scan_kind or any(ch not in "abcdefghijklmnopqrstuvwxyz0123456789_" for ch in scan_kind):
+        raise ValueError(f"invalid scan kind for snapshot identity: {scan_kind!r}")
+    snap_path = snapshot_dir / f"shortlist_{ts}_{scan_kind}.json"
+    if snap_path.exists() or snapshot_metadata_path(snap_path).exists():
+        raise FileExistsError(f"refusing to overwrite snapshot identity: {snap_path}")
+    payload = json.dumps(rows, indent=2)
+    _atomic_write_text(snap_path, payload)
+    meta_path = snapshot_metadata_path(snap_path)
+    metadata = {
+        "schema_version": SNAPSHOT_SCHEMA_VERSION,
+        "snapshot": snap_path.name,
+        "created_at": now.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
+        "scan_kind": scan_kind,
+        "params": params,
+        "market_count": len(rows),
+        "snapshot_sha256": hashlib.sha256(payload.encode("utf-8")).hexdigest(),
+        "criteria_fingerprint": "sha256:canonical-json-exact-v1",
+    }
+    _atomic_write_text(meta_path, json.dumps(metadata, indent=2))
+
+    latest = snapshot_dir / "shortlist_latest.json"
+    temporary_link = latest.with_name(f".{latest.name}.{os.getpid()}.tmp")
+    try:
+        temporary_link.unlink()
+    except FileNotFoundError:
+        pass
+    os.symlink(snap_path.name, temporary_link)
+    os.replace(temporary_link, latest)
+    return snap_path, meta_path
+
+
+def _merge_event_refs(
+    target: dict[str, Any], incoming: dict[str, Any] | None,
+    outer_event: dict[str, Any],
+) -> None:
+    """Accumulate every observed exact parent instead of first-parent wins."""
+    refs: list[dict[str, Any]] = []
+    for source in (target, incoming or {}):
+        raw = source.get("events")
+        if isinstance(raw, dict):
+            raw = [raw]
+        if isinstance(raw, list):
+            refs.extend(ref for ref in raw if isinstance(ref, dict))
+    refs.append({"id": outer_event.get("id"), "title": outer_event.get("title")})
+    unique: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    for ref in refs:
+        normalized = {
+            "id": ref.get("id"),
+            "title": ref.get("title"),
+        }
+        key = (
+            str(normalized.get("id") or "").strip(),
+            str(normalized.get("title") or "").strip(),
+        )
+        if key == ("", "") or key in seen:
+            continue
+        seen.add(key)
+        unique.append(normalized)
+    target["events"] = unique
+
+
+def _optional_number(value: Any) -> float | None:
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    return number if math.isfinite(number) else None
 
 
 def annualized_yield_after_fee(p_buy: float, days: float,
@@ -94,7 +242,7 @@ def fetch_active_via_events(limit_per_page: int = 100, max_pages: int = 20) -> l
     the parent event is attached under 'events' for group-aware consumers.
     """
     out: list[dict[str, Any]] = []
-    seen_ids: set[str] = set()
+    by_id: dict[str, dict[str, Any]] = {}
     with httpx.Client(timeout=20.0) as c:
         for page in range(max_pages):
             r = c.get(
@@ -114,11 +262,18 @@ def fetch_active_via_events(limit_per_page: int = 100, max_pages: int = 20) -> l
                 break
             for ev in batch:
                 for m in ev.get("markets") or []:
-                    mid = str(m.get("id"))
-                    if mid in seen_ids:
+                    if not isinstance(m, dict):
                         continue
-                    seen_ids.add(mid)
-                    m.setdefault("events", [{"id": ev.get("id"), "title": ev.get("title")}])
+                    mid = str(m.get("id") or "").strip()
+                    if not mid:
+                        _merge_event_refs(m, None, ev)
+                        out.append(m)
+                        continue
+                    if mid in by_id:
+                        _merge_event_refs(by_id[mid], m, ev)
+                        continue
+                    _merge_event_refs(m, None, ev)
+                    by_id[mid] = m
                     out.append(m)
             if len(batch) < limit_per_page:
                 break
@@ -186,8 +341,8 @@ def fetch_active(limit_per_page: int = 100, max_pages: int = 8) -> list[dict[str
     return out
 
 
-def parse_outcome_prices(m: dict[str, Any]) -> tuple[float, float] | None:
-    """Return (yes_price, no_price) for binary markets, else None."""
+def parse_binary_outcomes(m: dict[str, Any]) -> tuple[list[str], list[float]] | None:
+    """Return exact labels and prices for a valid two-outcome market."""
     raw = m.get("outcomePrices")
     outs = m.get("outcomes")
     if not raw or not outs:
@@ -197,10 +352,32 @@ def parse_outcome_prices(m: dict[str, Any]) -> tuple[float, float] | None:
         outs_l = json.loads(outs) if isinstance(outs, str) else outs
     except Exception:
         return None
-    if len(prices) != 2 or set(map(str, outs_l)) != {"Yes", "No"}:
+    if not isinstance(prices, list) or not isinstance(outs_l, list):
         return None
-    p_yes = float(prices[outs_l.index("Yes")])
-    p_no = float(prices[outs_l.index("No")])
+    if len(prices) != 2 or len(outs_l) != 2:
+        return None
+    try:
+        parsed_prices = [float(price) for price in prices]
+    except (TypeError, ValueError):
+        return None
+    if not all(math.isfinite(price) and 0 <= price <= 1 for price in parsed_prices):
+        return None
+    labels = [str(outcome) for outcome in outs_l]
+    if not all(label.strip() for label in labels) or labels[0] == labels[1]:
+        return None
+    return labels, parsed_prices
+
+
+def parse_outcome_prices(m: dict[str, Any]) -> tuple[float, float] | None:
+    """Return (yes_price, no_price) for literal Yes/No markets, else None."""
+    parsed = parse_binary_outcomes(m)
+    if parsed is None:
+        return None
+    outs_l, prices = parsed
+    if set(outs_l) != {"Yes", "No"}:
+        return None
+    p_yes = prices[outs_l.index("Yes")]
+    p_no = prices[outs_l.index("No")]
     return p_yes, p_no
 
 
@@ -294,6 +471,7 @@ def shortlist(
         if ttr is None or ttr <= 0 or ttr > horizon_days:
             continue
         prices = parse_outcome_prices(m)
+        binary_outcomes = parse_binary_outcomes(m)
         if prices is None:
             yes = None
             no = None
@@ -311,27 +489,43 @@ def shortlist(
             else:
                 dominant_side = "NO"
                 apy_dominant = annualized_yield_after_fee(no, ttr, m)
+        event_id, event_title = parent_event_identity(m)
         rows.append({
             "id": m.get("id"),
+            "condition_id": m.get("conditionId"),
             "slug": m.get("slug"),
             "question": m.get("question"),
+            "event_id": event_id,
+            "event_title": event_title,
+            "created_at": m.get("createdAt") or m.get("created_at"),
+            "updated_at": m.get("updatedAt") or m.get("updated_at"),
+            "criteria": criteria_payload(m),
+            "criteria_sha256": criteria_sha256(m),
             "category": category_of(m),
             "yes_price": yes,
             "no_price": no,
-            "spread": float(m.get("spread") or 0),
-            "best_bid": float(m.get("bestBid") or 0),
-            "best_ask": float(m.get("bestAsk") or 0),
+            "outcome_labels": binary_outcomes[0] if binary_outcomes else None,
+            "outcome_prices": binary_outcomes[1] if binary_outcomes else None,
+            "spread": _optional_number(m.get("spread")),
+            "best_bid": _optional_number(m.get("bestBid")),
+            "best_ask": _optional_number(m.get("bestAsk")),
             "liquidity": float(m.get("liquidityNum") or 0),
             "vol24h": float(m.get("volume24hr") or 0),
             "vol_total": float(m.get("volumeNum") or m.get("volume") or 0) if not isinstance(m.get("volume"), str) else float(m.get("volume") or 0),
             "days_to_resolve": round(ttr, 2),
-            "neg_risk": bool(m.get("negRisk")),
-            "fees_enabled": bool(m.get("feesEnabled")),
-            "fee_rate": (m.get("feeSchedule") or {}).get("rate"),
-            "min_size_usd": float(m.get("orderMinSize") or 0),
-            "tick": float(m.get("orderPriceMinTickSize") or 0.01),
+            "neg_risk": m.get("negRisk") if isinstance(m.get("negRisk"), bool) else None,
+            "fees_enabled": (
+                m.get("feesEnabled") if isinstance(m.get("feesEnabled"), bool) else None
+            ),
+            "fee_schedule": m.get("feeSchedule"),
+            "fee_rate": (
+                m.get("feeSchedule", {}).get("rate")
+                if isinstance(m.get("feeSchedule"), dict) else None
+            ),
+            "min_size_usd": _optional_number(m.get("orderMinSize")),
+            "tick": _optional_number(m.get("orderPriceMinTickSize")),
             "clob_token_ids": m.get("clobTokenIds"),
-            "end_date": m.get("endDate"),
+            "end_date": m.get("endDate") or m.get("endDateIso"),
             "url": f"https://polymarket.com/market/{m.get('slug')}",
             "dominant_side": dominant_side,
             "apy_dominant": round(apy_dominant, 4) if apy_dominant is not None and apy_dominant != float("inf") else None,
@@ -398,16 +592,22 @@ def main() -> None:
         print(f"filtered to {len(short)} candidates clearing {args.hurdle_apy*100:.2f}% APY / {args.hurdle_days_floor:.0f}d-floor hurdle")
 
     if not args.no_snapshot:
-        ts = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        snap_path = SNAP_DIR / f"shortlist_{ts}.json"
-        snap_path.write_text(json.dumps(short, indent=2))
-        latest = SNAP_DIR / "shortlist_latest.json"
-        try:
-            if latest.exists() or latest.is_symlink():
-                latest.unlink()
-        except FileNotFoundError:
-            pass
-        os.symlink(snap_path.name, latest)
+        scan_kind = "thin_tail" if args.via_events else "primary"
+        snapshot_params = {
+            "min_liquidity": args.min_liquidity,
+            "min_vol24": args.min_vol24,
+            "max_spread": args.max_spread,
+            "horizon_days": args.horizon_days,
+            "top": args.top,
+            "max_pages": args.max_pages,
+            "via_events": args.via_events,
+            "clears_hurdle_only": args.clears_hurdle_only,
+            "hurdle_apy": args.hurdle_apy,
+            "hurdle_days_floor": args.hurdle_days_floor,
+        }
+        snap_path, _ = write_snapshot(
+            short, scan_kind=scan_kind, params=snapshot_params,
+        )
         print(f"wrote {snap_path}")
 
     # Also print a compact table
@@ -427,7 +627,8 @@ def main() -> None:
             # traffic 35% "APY", Hormuz-transit) it seduced until honest priors
             # showed negative expected edge. The ✓ means "gross carry clears
             # hurdle IF the fade always wins" — never an entry signal by itself.
-            print(f"  yes={yp}  gross_apy_{side}={apy}{hurdle}  spd={r['spread']:.3f}  liq={r['liquidity']:>9.0f}  v24={r['vol24h']:>9.0f}  d={r['days_to_resolve']:>6.1f}  {r['question'][:80]}")
+            spread = f"{r['spread']:.3f}" if r.get("spread") is not None else "  -  "
+            print(f"  yes={yp}  gross_apy_{side}={apy}{hurdle}  spd={spread}  liq={r['liquidity']:>9.0f}  v24={r['vol24h']:>9.0f}  d={r['days_to_resolve']:>6.1f}  {r['question'][:80]}")
     print("\n# gross_apy = WIN-ASSUMED carry, not expected edge — price P(loss) with an honest prior before any entry (2026-07-02 guard lesson, applied to discovery 2026-07-18)")
 
     # Optional: run catalyst_check.py on top N candidates (post-philosophy update
