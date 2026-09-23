@@ -19394,3 +19394,50 @@ semantic context. `family_routing_ready` remains false because a filtered
 snapshot cannot prove full event membership. Seventeen focused tests and all
 156 money-math regression checks pass. DEC-0172 records the scaffold. No model
 call, trade, order, transfer or portfolio-prior change occurred.
+
+## 2026-09-23 14:00–14:09 UTC — full check; sports discrepancy fails robust gate, no trade
+
+The eleven-step check completed once. Ten open legs reconcile at **$146.31
+cost, $136.06 midpoint and $126.43 indicative fee-net depth**. Authoritative
+whole-account bankroll is **$165.44**, cumulative realized P&L remains
+**-$1.07**, deployable pUSD is $10.097650, and no BUY collateral is reserved.
+The sole live order remains the zero-fill Trump-out 28-NO maker sell at .97.
+Wallets, zero-position Ostium state, UMA, crux coverage, protected-group
+topology and the 10-indexed plus one legitimate deindexed-claim state audit are
+clean. All four daemons run exactly once on current code, disk headroom remains
+above the warning floor, and redemption found 0/13 winning positions.
+
+The only post-11:08 news item was Trump's UN address, which reinforces rather
+than breaks the Trump-out NO thesis. No post-cutoff opportunity alert,
+watchlist hit, overdue decision, settlement or fill exists. The recycled
+Clarity headline adds no qualifying Senate vote, so its protected $29 payout
+floor remains intact. Fresh exit analysis leaves every ordinary leg a hold and
+both monotonicity structures complete. Apple remains the sole
+calibration-sensitive case: its .35 prior gives $11.90 of terminal value versus
+$11.55 from the present exit, and no new launch or availability fact supports
+the five-point prior cut that would flip the result. The Gemini pair likewise
+has $55.94 of central terminal value versus $11.31 of fee-net exits with no new
+resolving-source or executed-information signal. **HOLD / NO ADD** throughout.
+
+All seven discovery passes completed. The primary snapshot contains 80 rows;
+the thin-tail pass retained 1,690 of 41,468 active markets above the 1.1906%
+hurdle. Proof-checked context batching emitted 27 primary and 467 thin-tail
+review triggers, plus exact-event siblings, with no truncation. Most are
+shortlist churn or quote changes; no criteria hash, condition/token identity,
+fee or minimum-size change appeared. The large thin-tail moves were concentrated
+in oil, metals, Iran and model-benchmark markets and constitute movement alerts,
+not priced edge.
+
+Sports comparison produced one candidate worth a bounded recheck: Packers
+-6.5 YES at a live **.45 ask** against multi-book no-vig cover estimates around
+.49–.50. The exact market resolves Packers only for a seven-point-or-larger win
+and was still pregame. The apparent 4–5pp point-estimate gap fails the required
+10pp probability stress (`p-.10 < .45`), despite ample depth and zero venue fee,
+so it is not an entry. Macro showed four October Fed outcomes repricing without
+an independent probability instrument. Monotonicity found one LI.FI midpoint
+artifact with **-3.97pp executable edge**; consistency found no validated
+positive basket but hit explicit book and coverage limits; favorite-fade rows
+remain prompts from a falsified population heuristic. No trade, order change,
+transfer, prior change or decision record was warranted. Weekly P&L and
+world-state work are current, and a flat tick does not justify a Telegram
+summary.
