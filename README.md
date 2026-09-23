@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-22 22:06 UTC
+## Last audited snapshot — 2026-09-23 02:20 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $146.31 |
-| Polymarket midpoint | $133.66 |
-| Indicative depth/fee value | $121.53 |
-| Authoritative whole-account mark | $163.15 |
+| Polymarket midpoint | $131.54 |
+| Indicative depth/fee value | $122.13 |
+| Authoritative whole-account mark | $161.05 |
 | Cumulative realized P&L | -$1.07 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -54,12 +54,14 @@ before-Jan. 1 vote cutoff. The MetaMask monotonicity structure is likewise
 managed only as a complete economic group.
 
 All other central-arithmetic exit screens remain holds after exit-cost,
-stressed-prior and joint portfolio-risk review. Apple NO is the only
-calibration-sensitive case: a five-point prior haircut would flip it to exit,
-but no fresh product fact supports that haircut. The only live order is a
-zero-fill maker sell for **28 Trump-out NO at 0.97**. Deployable pUSD is
-$10.097650. The midpoint-to-depth gap is $12.13. The next dated material clock
-is the exact Arena Text Overall source snapshot on Sep. 30.
+stressed-prior and joint portfolio-risk review. Gemini's two NO legs marked
+near five cents without a new source row or executed trade; their combined
+lower-bound terminal value remains about $18.31 versus $7.42 of executable
+exits. Apple NO remains the only calibration-sensitive close case. The only
+live order is a zero-fill maker sell for **28 Trump-out NO at 0.97**.
+Deployable pUSD is $10.097650. The midpoint-to-depth gap is $9.42. The next
+dated material clock is the exact Arena Text Overall source snapshot on Sep.
+30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

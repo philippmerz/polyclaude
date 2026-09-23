@@ -4,7 +4,7 @@
  "_groups": {
   "metamask-fdv-monotonicity": {
    "label": "MetaMask FDV overlapping monotonicity pairs plus 700M directional crumb",
-   "add_gate": "FAILED 2026-09-15 09:25 correction: copying the direct Dec-31 launch sibling's transient 0.11/0.13 peak (midpoint 0.12) one-for-one was too aggressive. By 09:18 the book had reverted to 0.08/0.10 (midpoint 0.09), official MetaMask news still had no token launch or date, and the FDV implication siblings had not confirmed the peak. Use p_launch=0.09 with the retained conditional FDV probabilities 0.92/0.62/0.52: aggregate group fair is about $46.34. Fresh 700M-YES + 3B-NO and 700M-YES + 4B-NO asks cost about 1.0244 and 1.0263 all-in versus central fair 1.027 and 1.036; those roughly $0.013/$0.049 five-share gross surpluses do not clear foregone cash carry, the operational reserve, and shared launch/FDV-model risk. A standalone 700M-YES add fails the default 10pp robustness gate because p_robust floors at zero. No add; never scale the directional crumb automatically or trade a leg independently.",
+   "add_gate": "REFRESHED 2026-09-23 02:09: all three FDV criteria remain byte-identical except their threshold, official MetaMask news still has no token launch/TGE/date, and the direct Dec-31 launch sibling is 0.07/0.09 (midpoint 0.08). Use p_launch=0.08 with retained conditional FDV probabilities 0.92/0.62/0.52: aggregate group fair is about $46.16. Fresh five-unit add routes cost about 1.036 and 1.072 all-in for 700M-YES + 3B-NO and 700M-YES + 4B-NO, above central fair per unit 1.024 and 1.032. The standalone 700M-YES add likewise fails the default 10pp robustness gate. No add; never scale the directional crumb automatically or trade a leg independently.",
    "add_policy": {
     "manual_gate": true
    },
@@ -512,11 +512,11 @@
   "source_ack": "2026-09-10"
  },
  "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064": {
-  "review_required": "REVIEW COMPLETE 2026-09-19: exact criteria and named source are unchanged; the live chart API has 60 rows and OpenAI still tops out at GPT-6 Astra 53.6, below 55. Keep p_no=0.30; HOLD / NO ADD.",
+  "review_required": "REVIEW COMPLETE 2026-09-23: OpenAI released GPT-6 Sol and Luna, but published no HLE score for either; the live named-source API still has 60 rows, neither new model is present, and Astra remains OpenAI's maximum at 53.6 below 55. Keep p_no=0.30; HOLD / NO ADD.",
   "p_no": 0.3,
-  "verified": "2026-09-19",
-  "current_assessment": "Sep-19 exact criteria/source refresh: the contract still requires an OpenAI model to achieve at least 55% HLE Accuracy by Dec-31, names agi.safe.ai as the resolution source, and permits alternative official results only under the stated source-unavailability conditions. The live chart API now contains 60 models, including 18 OpenAI rows; GPT-6 Astra remains OpenAI's maximum at 53.6, 1.4 points below the threshold. The active-source update risk and achieves-versus-source ambiguity remain incorporated in p_no=0.30 (subjective 0.12-0.50). Sep-21 binary-risk review values the 19 shares at $5.70 central versus about $3.86 fee-net / $3.89 after carry; a 10pp stress is $3.80. This is calibration-sensitive and a HOLD CANDIDATE rather than a recovery thesis. No source fact justifies a probability change; exit if the honest posterior reaches the live carry-adjusted boundary near p_no=0.205. No enlargement or new maker order.",
-  "latest_catalyst": "2026-09-19: exact market criteria have no substantive drift; the live chart API contains 60 models and 18 OpenAI rows, with GPT-6 Astra still highest at 53.6 below the 55 threshold. No UMA status. p_no remains 0.30; HOLD / NO ADD.",
+  "verified": "2026-09-23",
+  "current_assessment": "Sep-23 catalyst/source refresh: OpenAI officially released GPT-6 Sol and Luna on Sep-22, but its announcement and API changelog publish no HLE score for either. The named resolving chart remains at 60 models and contains neither new row; GPT-6 Astra remains OpenAI's maximum there at 53.6, 1.4 points below the threshold. The release is a new-row watch rather than a present threshold fact, and Astra remains OpenAI's most capable model in the official API materials. Keep the active-source update risk and achieves-versus-source ambiguity in p_no=0.30 (subjective 0.12-0.50). The 19 shares have $5.70 central hold value versus about $3.86 fresh fee-net exit; the 10pp stress is $3.80. HOLD CANDIDATE / NO ADD / no maker order; exit if the honest posterior reaches the carry-adjusted boundary near p_no=0.205.",
+  "latest_catalyst": "2026-09-23: GPT-6 Sol and Luna are officially released, but no HLE score is published and neither appears on the 60-row resolving chart. Astra remains OpenAI's highest named-source row at 53.6 below 55. p_no remains 0.30; HOLD / NO ADD.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and every key_fact checked before Sep-10 treat a stale server-rendered table as the resolving chart or preserve the old resolver thesis. Keep them only as error history; use current_assessment and the Sep-10 key_fact.",
   "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. 0.65->0.64 (immaterial, re-derived not marked): p_yes = 0.10 board + 0.90*0.45*0.65 capability = 0.36. 55+ keeps the most NO margin of the OpenAI pair because it needs a score above TODAY'S GLOBAL FRONTIER (55.5 Fable 5) from OpenAI specifically, AND a board row. This leg has a real two-sided book (0.45/0.46) \u2014 unlike the 50+ leg it IS exitable. CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. || CRUX MEASUREMENT UPGRADED 2026-08-25: 'board unchanged since ~Nov-2025' was an INFERENCE from what was MISSING. It is now a differenced OBSERVATION with a located change-point, via `scripts/source_freeze_check.py` (archive-diff, one instrument both sides): the board was heavily curated through ~Dec-2025 (ADDED claude 4.5 sonnet, grok 4, gpt-5, gpt-5-mini, gemini 3 pro; REMOVED claude 3.5/3.7 sonnet, claude 4 opus/sonnet, llama 4 maverick, qwen3-235b, gpt-4.1, gpt-4.5, o3, o4-mini) and has changed in NO respect between 2026-01-15 and 2026-08-25. Instrument validated for BOTH liveness (detects those 2025 changes) and coverage (--expect claude,grok; an earlier narrow pattern was blind to space-separated names and would have returned FROZEN for the wrong reason). Re-run before any cluster sizing. NOTE the residual risk is now w_spirit (resolver behaviour when the board fails), NOT the board's behaviour, which is measured. || PRIOR RE-DERIVED 2026-08-25 on the MEASURED board freeze (same decomposition as the Gemini leg): the recorded number was built on P(board posts a qualifying row) ~0.20, set BEFORE the freeze was measured. Measurement now gives P(board adds ANY row by Dec-31) ~0.15 and the qualifying-row term collapses accordingly. term1 = 0.15 x P(row is an OpenAI row clearing this bar | add); term2 = P(no row) x w_spirit 0.45 x P(capability). SELF-SKEPTICISM: this raises p_no on a position I already hold, so note that term2 \u2014 resolver behaviour, a JUDGMENT \u2014 now supplies the large majority of the number, and the honest reading is 'the measurable half is confirmed, the unmeasurable half dominates', not 'my edge grew'. term1 0.022, term2 0.198 -> p_no 0.78 (was 0.64). SENSITIVITY: w_spirit 0.30/0.45/0.60 -> 0.846/0.780/0.714. ORDER CONSEQUENCE: rest was 0.70 \u2014 BELOW fair under EVERY w_spirit in range; cancelled, re-posted 19sh @ 0.85.",
   "criteria_read": "2026-09-19",
@@ -525,10 +525,16 @@
   "rho_within": 0.7,
   "key_facts": [
    {
-    "claim": "On September 19 the live resolving API contains 60 models, including 18 OpenAI rows. GPT-6 Astra remains the highest OpenAI HLE Accuracy result at 53.6, below this contract's 55 threshold; no OpenAI row reaches 55.",
+    "claim": "On September 23 the live resolving API contains 60 models. GPT-6 Astra remains the highest OpenAI HLE Accuracy result at 53.6, below this contract's 55 threshold; neither GPT-6 Sol nor GPT-6 Luna is present and no OpenAI row reaches 55.",
     "source": "https://dashboard.safe.ai/api/models",
-    "source_date": "2026-09-19",
-    "checked": "2026-09-19"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
+   },
+   {
+    "claim": "OpenAI released GPT-6 Sol and GPT-6 Luna in the Responses and Chat Completions APIs on September 22; the changelog publishes no HLE result for either model.",
+    "source": "https://developers.openai.com/api/docs/changelog",
+    "source_date": "2026-09-22",
+    "checked": "2026-09-23"
    },
    {
     "claim": "The Sep-11 live resolving API contains 59 rows. The newly observed row versus the documented Sep-10 count is Grok 4.6 (xAI) at HLE 39.72; GPT-6 Astra remains the highest OpenAI row at 53.6, below this contract's 55 threshold.",
@@ -573,11 +579,11 @@
   "source_ack": "2026-09-19"
  },
  "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546": {
-  "review_required": "REVIEW COMPLETE 2026-09-22 10:13: exact chart and official Google surfaces remain unchanged, but real 09:03-09:17 adverse flow plus bid withdrawal warrants p_no .30->.25, range .08-.45. Fresh full fee-net exit $3.63 and arithmetic terminal-NO exit boundary about .0356 remain below even the lower bound. HOLD / NO ADD / NO TAKER EXIT / NO NEW MAKER ORDER.",
+  "review_required": "REVIEW COMPLETE 2026-09-23 02:09: the NO midpoint fell to .051, but the exact chart and official Google surfaces remain unchanged and the market recorded no trade after the 21:48 review. Retain p_no=.25 (.08-.45); fresh fee-net exit $2.89 remains below the $8.17 lower-bound hold value. HOLD / NO ADD / NO TAKER EXIT / NO NEW MAKER ORDER.",
   "p_no": 0.25,
-  "verified": "2026-09-22",
-  "current_assessment": "Sep-22 10:13 hidden-information review: the post-06:12 tape is real but not broad independent confirmation. From 09:03:33-09:17:13, 362.073 YES were bought and 134.37 NO sold; one 213-share YES purchase supplied 58.6% of YES-buy notional. The NO bid also withdrew from .101 to .044, while executed NO sales were mainly .081-.090, so thin-book widening amplified the midpoint collapse. The uncached 60-row resolving chart exactly matches the 06:09 score inventory; Gemini 3.8 Flash remains 46.2 and 3.1 Pro 45.9. Official Google still labels 3.5 Pro coming soon and has no Gemini 4 Pro release, API entry, or model card. Give the genuine adverse flow partial weight: p_no .30->.25, range .08-.45. Fresh full fee-net exit is $3.63, an arithmetic terminal-NO boundary about .0356, central hold $25.52 and lower-bound hold $8.17. HOLD all 102.08475 / NO FURTHER ADD / no taker exit or hidden-information maker sell.",
-  "latest_catalyst": "Sep-22 09:03-09:17: real directional flow bought 362.073 YES and sold 134.37 NO, dominated by one 213-share YES purchase, while the NO bid withdrew .101->.044. No qualifying chart or official Google change corroborates it. p_no .30->.25 (.08-.45); HOLD because the fresh arithmetic exit boundary is only about .0356.",
+  "verified": "2026-09-23",
+  "current_assessment": "Sep-23 02:09 hidden-information recheck: the NO midpoint fell to .051, but neither this market nor the paired next-Pro-debut market recorded a trade after the Sep-22 21:48 review. The uncached resolving API remains at 60 rows; Gemini 3.8 Flash is 46.2 and 3.1 Pro 45.9, with no Gemini result at or above 50. Official Google still labels 3.5 Pro coming soon and has no Gemini 4 Pro release, API entry or model card. The move is quote withdrawal without new executed or named-source evidence, so retain p_no=.25 (.08-.45). Fresh fee-net exit is $2.89 versus $25.52 central and $8.17 lower-bound hold value. HOLD all 102.08475 / NO ADD / no taker exit or hidden-information maker sell.",
+  "latest_catalyst": "Sep-23 02:09: NO marked .051, but the 60-row chart, official Google surfaces and post-21:48 tape show no qualifying change or trade. Retain p_no=.25 (.08-.45); HOLD because $2.89 exit remains below $8.17 lower-bound hold value.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and every key_fact checked before Sep-10 treat a stale server-rendered table as the resolving chart or preserve the old resolver thesis. Keep them only as error history; use current_assessment and the Sep-10 key_fact.",
   "note": "2026-08-10 BOARD RE-VERIFIED (live fetch + criteria re-read): agi.safe.ai tops at Gemini-3-Pro 38.3 / GPT-5 25.3 and has added NO row since ~Nov-2025 (missing GPT-5 Pro, Claude Opus 4.6/5, Fable 5, GPT-5.6 Sol, Gemini 3.1 Pro \u2014 all evaluated by the sister Scale board). Criteria name agi.safe.ai as THE source; the 'published elsewhere' clause is gated on the source being UNAVAILABLE (reachable-but-lagging does NOT qualify) and the stated default is resolve-NO. Best OpenAI score on ANY surface today = 49.5 (GPT-5.6 Sol), still under the 50 bar. CUT 0.70->0.56: my 0.70 was 2 revisions behind the doctrine I applied to the OpenAI siblings on 08-04 and implied a 60pp edge I was not acting on \u2014 incoherent. New number decomposes explicitly: p_yes = P(board posts Gemini >=50) 0.15 + 0.85 * w_spirit 0.45 * P(capability>=50 by Dec-31) 0.75. w_spirit is the chance a UMA vote overrides clean text under 90%-of-OI YES pressure. ADDED 60sh NO @0.100 maker 2026-08-10 (DEC-0065). CLUSTER DECOMPOSITION 2026-08-13 \u2014 read this before crediting any HLE price move. The board branch is COMMON to every leg, and OpenAI's capability is already settled (49.5 third-party, needs only the 0.5 to clear 50), so the OpenAI>=50 leg prices MY CRUX ALMOST PURELY. At YES 0.935 the market implies P(board fails to produce a qualifying resolution) ~ 6.5%. My thesis implies ~80% (board unchanged since ~Nov-2025, missing GPT-5 Pro, Opus 4.6/5, Fable 5, Sol, Gemini 3.1 \u2014 re-verified 2026-08-13). That 73pp gap IS the position. CONSEQUENCE I had been getting wrong: the Gemini leg's +246% is NOT evidence my thesis is winning. Subtracting the common board branch, Gemini's move decomposes as the market raising P(Gemini capability stays <50) from ~1.5% to ~20.8% \u2014 a CAPABILITY repricing on a different variable. My actual bet has not moved at all, and the leg that reads it cleanly (OpenAI>=50, entry 0.37 -> 0.065) has gone hard AGAINST me. Grade the thesis on the OpenAI legs at Dec-31, not on Gemini's P&L. SELF-APPLIED DRIFT CORRECTION 2026-08-13: this morning I measured that my INSTANCE-thesis priors run 6-23pp overconfident on re-derivation (N=5, all one direction) and raised the entry haircut accordingly \u2014 then did not apply the finding to the thesis I am most confident about, which is where it bites hardest. The board-failure input was 0.85; haircut by the observed ~13pp mean to 0.72. OpenAI>=50 p_no 0.50 -> 0.41, Gemini>=50 0.56 -> 0.54. NO ACTION FOLLOWS \u2014 everything is held to Dec-31, sized as lottery tickets, and both marks (0.065, ~0.27) remain far below even the haircut numbers. The point is calibration honesty rather than trading: a correction I apply only to future entries and never to my live convictions is not a correction, it is a ritual. Note this ALSO shrinks the headline disagreement I reported this morning \u2014 market prices the crux at ~6.5%, I now price it at ~28% rather than ~20% failure-to-resolve... i.e. the gap narrows from 73pp to ~65pp, still enormous and still the whole position. || 2026-08-21 MOVE VERIFIED FIRST-HAND (UMA flagged YES 0.71->0.81 mid, +9.3pp): board UNCHANGED (live fetch, Gemini max still 38.3, no new row); Scale sister board best Gemini = gemini-3.1-pro-preview 46.4 < 50. So the repricing is ANTICIPATORY (future release crossing 50), not a board event or a current >=50 score anywhere. Live book walked: NO 0.124/0.249, spread 12.5pp, our 59sh walk ~$7.25 gross vs hold-at-prior ~$31.9 -> hold wins under both measures; lottery leg rides. Resting asks 0.60 stay premium-to-fair (permitted). NEW MEASURED INPUT for next deep derivation: 46.4 is the first hard Gemini number I hold (prior derivation had none) - re-derive P(capability by Dec-31) from it properly OFF-tick, not here (mid-tick edits are drafts). || CRUX MEASUREMENT UPGRADED 2026-08-25: 'board unchanged since ~Nov-2025' was an INFERENCE from what was MISSING. It is now a differenced OBSERVATION with a located change-point, via `scripts/source_freeze_check.py` (archive-diff, one instrument both sides): the board was heavily curated through ~Dec-2025 (ADDED claude 4.5 sonnet, grok 4, gpt-5, gpt-5-mini, gemini 3 pro; REMOVED claude 3.5/3.7 sonnet, claude 4 opus/sonnet, llama 4 maverick, qwen3-235b, gpt-4.1, gpt-4.5, o3, o4-mini) and has changed in NO respect between 2026-01-15 and 2026-08-25. Instrument validated for BOTH liveness (detects those 2025 changes) and coverage (--expect claude,grok; an earlier narrow pattern was blind to space-separated names and would have returned FROZEN for the wrong reason). Re-run before any cluster sizing. NOTE the residual risk is now w_spirit (resolver behaviour when the board fails), NOT the board's behaviour, which is measured. || PRIOR RE-DERIVED 2026-08-25, deliberately (not a mid-tick edit): 0.54 -> 0.65. Decomposition written out so it is auditable: term1 = P(board adds ANY row 0.15, measured change-point) x P(that row is a Gemini Pro scoring >=50 | add) 0.35 = 0.052 \u2014 the next Gemini Pro is likely 3.1-pro at 46.4, which is BELOW 50, so a qualifying row needs a newer model both released AND added; term2 = P(no qualifying row) 0.948 x w_spirit 0.45 x P(Gemini capability >=50 by Dec-31) 0.70 = 0.298. p_yes 0.351 -> p_no 0.649. SENSITIVITY (term2 dominates, and it rests on a JUDGMENT not a measurement): w_spirit 0.30/0.45/0.60 -> p_no 0.75/0.65/0.55. NOTE WHAT THIS EXPOSED: the previously recorded 0.54 implied w_spirit ~0.62, inconsistent with the 0.45 documented on the sibling legs \u2014 the old number was not wrong so much as silently assuming a different resolver model than the one I had written down. SELF-SKEPTICISM, since this revision FLATTERS a winning position: the move comes entirely from term1 collapsing on MEASURED board stasis, while term2's inputs are unchanged; if anything the honest read is that my edge here is smaller than the headline, because 85% of my p_no now rests on resolver behaviour I cannot measure. ORDER CONSEQUENCE: the two resting sells at 0.60 were BELOW this fair \u2014 banned on a hidden-info market (donates the news). Cancelled both (23sh + 36sh) and re-posted 59sh @ 0.75 post-only, a ~10pp premium chosen to leave room for the mechanical UPWARD drift of fair as Dec-31 approaches with the board frozen. RE-CHECK the rest price whenever this prior moves.",
   "criteria_read": "2026-09-22",
@@ -664,16 +670,16 @@
     "checked": "2026-09-22"
    },
    {
-    "claim": "At 10:04 UTC Sep-22 the uncached 60-row resolving-chart response exactly matched the 06:09 score inventory: Gemini 3.8 Flash remained 46.2 and Gemini 3.1 Pro 45.9, with no Gemini score at or above 50.",
+    "claim": "At 02:04 UTC Sep-23 the uncached resolving-chart response still contained 60 rows: Gemini 3.8 Flash remained 46.2 and Gemini 3.1 Pro 45.9, with no Gemini score at or above 50.",
     "source": "https://dashboard.safe.ai/api/models",
-    "source_date": "2026-09-22",
-    "checked": "2026-09-22"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    },
    {
-    "claim": "On Sep-22 Google still labeled Gemini 3.5 Pro as coming soon; its current Gemini page, API changelog and model-card index contained no Gemini 4 Pro release, API entry or model card.",
+    "claim": "On Sep-23 Google still labeled Gemini 3.5 Pro as coming soon; its current Gemini page, API changelog and model-card index contained no Gemini 4 Pro release, API entry or model card.",
     "source": "https://deepmind.google/models/gemini/ + https://ai.google.dev/gemini-api/docs/changelog + https://deepmind.google/models/model-cards/",
-    "source_date": "2026-09-22",
-    "checked": "2026-09-22"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    }
   ],
   "divergence_ack": "2026-09-22",
@@ -683,13 +689,13 @@
  },
  "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645": {
   "p_no": 0.18,
-  "verified": "2026-09-22",
+  "verified": "2026-09-23",
   "criteria_read": "2026-09-22",
   "hidden_info": true,
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.95,
   "note": "DEC-0089 opened 49 NO shares at 0.09/0.10 and DEC-0096 added 50 at 0.09. After Lake America resolved and released fresh cap headroom, DEC-0102 added exactly 70 more NO at 0.12 FAK: $8.40 notional plus $0.29568 fee. The full ticket is 169 NO for $17.60 notional plus $0.62940 in 4% quadratic taker fees, $18.22940 gross. This remains the cleanest measured board-stasis expression in the HLE cluster: the contract resolves NO explicitly if no qualifying Gemini Pro row is added by Dec-31, without the older family's resolver-spirit branch. The Aug-30 validated diff again detected real 2025 changes, passed claude/grok/gemini coverage and found zero additions/removals since 2026-01-15. However, an independent skeptic found that CAIS is not institutionally dormant: its official HLE repository recorded a July-27 dataset release on Aug-1. That does not update the model-results board, but it invalidates an abandonment extrapolation. Central p_no is therefore cut 0.65->0.60 and the 15-point stress becomes 0.45; both remain strongly above the 0.124224 incremental all-in cost. Already-released Gemini 3.1 Pro scores 46.44 on Scale and may qualify if the board catches up, while Google says 3.5 Pro is coming soon. Treat as hold-to-resolution: exit liquidity is thin, and one board update can gap the leg before an active exit. Execution-time ai-ships-fast-short gross cost was $63.22900 against a $65.034 cap, leaving $1.805; the 0.12 level is gone and any further add is prohibited absent new bankroll headroom plus another full-cluster review. Apparent per-leg edge is not independent diversification.",
-  "latest_catalyst": "2026-09-17 22:08 UTC hidden-information flow review: Gamma moved to YES 0.90/0.92 (NO 0.08/0.10) on $1,006.80 of 24h volume, including a 403-share YES buy near 0.848 at 20:26 UTC and later prints near 0.90. The same-day public rumor claims an Arena model labeled Gemini 3.8 Flash is a Gemini 4 Pro checkpoint, but Google has not identified it as Pro. Fresh resolving-chart output still has 60 rows and the unchanged four-row Gemini Pro subset; Google's official model page still says 3.5 Pro is coming soon, and its Sep-15 API changelog/model-card index contains no newer Pro release. Give the credible flow a modest hidden-information update: p_no 0.20->0.18 with a deliberately wide 0.06-0.35 range. The 169-share fee-net taker exit is only about $10.1-$10.4 versus $30.42 central hold value; even p_no 0.08 pays $13.52. HOLD all 169 / NO ADD / NO TAKER TRIM / NO MAKER ORDER. Reopen on a new qualifying source row, official Pro release, UMA proposal, posterior near or below the roughly 0.06 carry-adjusted exit boundary, or a full fee-net exit above hold value.",
+  "latest_catalyst": "2026-09-23 02:09 hidden-information recheck: NO marked .050, but the uncached resolving API remains at 60 rows with no Pro newer than Gemini 3.1 Pro at 45.9, Google's official surfaces still have no Gemini 4 Pro release, and this market recorded no trade after the Sep-22 21:48 review. Retain p_no=.18 (.06-.35). Fresh fee-net exit is $4.53 versus $30.42 central and $10.14 lower-bound hold value. HOLD all 169 / NO ADD / NO TAKER TRIM / NO MAKER ORDER; reopen on a qualifying source row, official Pro release, UMA proposal, posterior near/below the carry-adjusted exit boundary, or exit above hold value.",
   "historical_note_status": "SUPERSEDED 2026-09-10 FOR LIVE JUDGMENT: the long note and every key_fact checked before Sep-10 rest on a false whole-source-freeze premise or the wrong data product. The Google Pro subset was unchanged, but the chart API as a whole was actively adding rows. Use latest_catalyst and the Sep-10 key_facts.",
   "divergence_ack": "2026-09-17",
   "divergence_ack_reason": "Real YES flow and a same-day Gemini 4 Pro Arena rumor justify a modest p_no cut to 0.18, but official Google sources and the exact resolving chart show no qualifying Pro fact. Current full-depth NO exit remains far below central and reasonable stressed hold value.",
@@ -767,27 +773,27 @@
     "checked": "2026-09-17"
    },
    {
-    "claim": "At 10:04 UTC Sep-22 the uncached 60-row resolving chart exactly matched the 06:09 score inventory and contained no Gemini Pro row newer than Gemini 3.1 Pro at 45.9.",
+    "claim": "At 02:04 UTC Sep-23 the uncached resolving chart still contained 60 rows and no Gemini Pro row newer than Gemini 3.1 Pro at 45.9.",
     "source": "https://dashboard.safe.ai/api/models",
-    "source_date": "2026-09-22",
-    "checked": "2026-09-22"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    },
    {
-    "claim": "The debut >=40 market recorded zero trades after 06:12 UTC on Sep-22 and only $6.08 reported 24-hour volume, so the concurrent >=50 sibling sweep was not corroborated by direct debut-market flow.",
+    "claim": "The debut >=40 market recorded zero trades between the Sep-22 21:48 review and the Sep-23 02:04 recheck, so the latest quote decline has no direct executed-flow confirmation.",
     "source": "https://data-api.polymarket.com/trades?market=0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724&limit=1000&takerOnly=true",
-    "source_date": "2026-09-22",
-    "checked": "2026-09-22"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    }
   ],
-  "current_assessment": "Sep-22 10:13 source/flow cross-check: the uncached resolving chart remains at 60 rows with no Gemini Pro row newer than 3.1 Pro at 45.9; official Google still labels 3.5 Pro coming soon and has no Gemini 4 Pro release. This exact debut market recorded zero trades after 06:12 and only $6.08 of 24-hour volume, so the >=50 sibling sweep is not independent debut-market confirmation. Retain p_no=.18, range .06-.35. Fresh full fee-net exit is $5.19, an arithmetic terminal-NO boundary about .0307, and lower-bound hold is $10.14. HOLD all 169 / NO ADD / no taker trim or hidden-information maker order."
+  "current_assessment": "Sep-23 02:09 source/flow cross-check: the uncached resolving chart remains at 60 rows with no Gemini Pro row newer than 3.1 Pro at 45.9; official Google still labels 3.5 Pro coming soon and has no Gemini 4 Pro release. This market recorded zero trades after the Sep-22 21:48 review, so the .050 NO mark is a quote move without new executed confirmation. Retain p_no=.18 (.06-.35). Fresh full fee-net exit is $4.53 versus $30.42 central and $10.14 lower-bound hold value. HOLD all 169 / NO ADD / no taker trim or hidden-information maker order."
  },
  "_comment_key_facts": "key_facts = the load-bearing factual claims a position rests on, each paired with the EXTERNAL source it came from. Added 2026-08-11 after a prior revision inverted the direction of a source's anchor move and then survived TWO re-verifications, because each re-verification re-read my own note and reproduced the error. A re-verification that does not diff the recorded claim against the source's actual words is confirmation, not verification. The audit rotation surfaces these for source-diffing. TAGGING CAVEAT (2026-08-12): the audit tags a source UNVERIFIED when it does not start with http, but a URL that 403s (congress.gov) is no more agent-verifiable than a prose 'sweep'. Where that happens, say so INLINE in the claim and name the independent falsifier used instead \u2014 do not let an unfetchable URL launder a claim into looking checked. SOURCE_DATE (2026-08-12): distinct from `checked`. `checked` is when I last LOOKED; `source_date` is when the source was PUBLISHED. The MacBook staleness cost 18pp precisely because those diverged invisibly \u2014 checked=1d ago on a source published 114d earlier, in a story that had moved three times since. For live-state sources (a leaderboard, an order book, a market description) the two are equal by construction. ATOMICITY REQUIRED (2026-08-13): one independently checkable assertion per entry, each with its own source and source_date. Bundled entries are how an unchecked fact hides inside a checked one \u2014 SpaceX's 'No plausible 2026 rival: OpenAI pushed to 2027, and a >$2.1T close would need an S-1 already public' bundled OpenAI's TIMING (checked twice) with every other rival's SIZE (never checked), and the second cost the project its largest prior correction. If an entry contains ' and ' joining two verifiable claims, split it. SOURCE TAXONOMY (2026-08-13) \u2014 'is it a URL' is the WRONG test and my first sweep miscategorised because of it. Ranked by what may move a number: (1) FIRST-HAND MEASUREMENT \u2014 a CLOB book walk, a gamma/API read, an on-chain balance. Reproducible on demand and STRONGER than any article, even though it carries no URL. (2) DATED PRIMARY ARTIFACT \u2014 a fetched, dated piece; the standard for a factual claim about the world. (3) NAMED BUT UNLINKED \u2014 e.g. 'third-party trackers'; verifiable with effort, acceptable if the claim is checked periodically. (4) AGGREGATED SEARCH SUMMARY \u2014 a LEAD ONLY. It must never move a prior: on 2026-08-13 one such summary said the M5 reshuffle was an 'acceleration', moved MacBook 0.62->0.58, and pinning it to dated sources REFUTED it outright. Label the kind when the source is not a URL, so a future sweep does not mistake a measurement for a guess.",
  "_comment_divergence_ack": "divergence_ack MUST be a bare ISO date string (e.g. \"2026-08-15\") \u2014 position_state_audit \u00a73c parses it with date.fromisoformat() directly and treats anything else as EXPIRED via the exception path. 14-day window from that date. Put prose in divergence_ack_reason (audit ignores it). Same for source_ack. Learned 2026-08-16: two acks written as rich dicts were silently invalid; one flagged, one was a near-miss.",
  "metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632": {
-  "p_yes": 0.083,
-  "verified": "2026-09-15",
-  "criteria_read": "2026-09-15",
-  "current_assessment": "Sep-15 09:25 correction after criteria/source and implication-sibling review: all three FDV descriptions remain identical except their threshold. A token must be actively, publicly transferable and tradable; FDV is measured at 4:00 PM ET on the next calendar day from the most liquid price source; no launch by Dec-31 23:59 ET resolves NO. The direct launch sibling briefly reached 0.11/0.13 (midpoint 0.12) but reverted to 0.08/0.10 (midpoint 0.09) by 09:18; official MetaMask news still has no token or date and the FDV ladder did not confirm the peak. Use p_launch=0.09 and retain P(FDV > $700M | launch)=0.92: p_yes=0.083. The 2.97-share directional crumb remains small; HOLD the complete protected group, no add.",
+  "p_yes": 0.074,
+  "verified": "2026-09-23",
+  "criteria_read": "2026-09-23",
+  "current_assessment": "Sep-23 02:09 criteria/source refresh: all three FDV descriptions remain byte-identical except their threshold. A token must be actively, publicly transferable and tradable; FDV is measured at 4:00 PM ET on the next calendar day from the most liquid price source; no launch by Dec-31 23:59 ET resolves NO. Official MetaMask news through Sep-23 has no token launch, TGE or date, and the direct launch sibling is 0.07/0.09 (midpoint 0.08). Use p_launch=0.08 and retain P(FDV > $700M | launch)=0.92: p_yes=0.074. The complete group remains worth about $46.16 centrally with a $44.75 logical floor versus a $44.62 fresh exit. HOLD the complete protected group / NO ADD; the 2.97-share directional crumb stays small.",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: 0.085 x 0.92 = p_yes 0.078 vs mark 0.092 \u2014 the market is marginally rich here, which is the SAME inversion the arb was struck on; 2.97sh of this leg are unpaired (the intentional lottery crumb, ~$0.27).",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -796,25 +802,25 @@
     "claim": "MetaMask announced on September 9 that Consensys Software Inc. is separating into independent MetaMask consumer and Consensys infrastructure companies, with completion expected by year-end. The announcement names no token and says nothing changes for users today.",
     "source": "https://metamask.io/en-GB/news/metamask-next-chapter",
     "source_date": "2026-09-09",
-    "checked": "2026-09-15"
+    "checked": "2026-09-23"
    },
    {
-    "claim": "The direct December 31 MetaMask token-launch sibling briefly showed a 0.11/0.13 YES book (midpoint 0.12) during the 06:00 review, then reverted to 0.08/0.10 (midpoint 0.09) by 09:18. The FDV ladder did not confirm the peak and no official launch fact appeared, so 0.09 is the corrected central launch input rather than mechanically carrying forward the peak.",
+    "claim": "At 02:09 UTC Sep-23 the direct December 31 MetaMask token-launch sibling had a 0.07/0.09 YES book (midpoint 0.08). No official launch fact appeared, so 0.08 is the refreshed central launch input.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-metamask-launch-a-token-by-december-31-2026",
-    "source_date": "2026-09-15",
-    "checked": "2026-09-15"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    },
    {
     "claim": "Market resolves NO if MetaMask does not launch a publicly transferable/tradable token by 2026-12-31 23:59 ET; FDV measured 4:00 PM ET the calendar day after launch, 'most liquid price source'.",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-700m-one-day-after-launch-696-977-652-246-632",
-    "source_date": "2026-09-15",
-    "checked": "2026-09-15"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    },
    {
-    "claim": "Sibling market prices P(MetaMask launches a token by Dec-31 2026) at YES 0.115 midpoint with a 0.10/0.13 book as of 10:06 UTC. This is a hard upper bound on every FDV leg and sits correctly above the $700M leg.",
-    "source": "https://gamma-api.polymarket.com/events?slug=will-metamask-launch-a-token-in-2025",
-    "source_date": "2026-09-07",
-    "checked": "2026-09-07"
+    "claim": "The direct launch sibling's 0.08 midpoint is a hard upper bound on every FDV-YES probability and sits above the $700M leg's 0.0685 venue midpoint.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=will-metamask-launch-a-token-by-december-31-2026",
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    },
    {
     "claim": "No launch date announced as of Aug-2026; Lubin confirmed the token Sep-2025; ConsenSys is pursuing a 2026 traditional IPO (a reason for delay, not acceleration).",
@@ -823,20 +829,20 @@
     "checked": "2026-08-25"
    },
    {
-    "claim": "MetaMask official news through Sep-15 contains no token launch or launch date; the Sep-9 corporate separation remains the latest relevant company announcement and says nothing changes for users today.",
-    "source": "https://metamask.io/news/metamask + https://metamask.io/en-GB/news/metamask-next-chapter",
-    "source_date": "2026-09-15",
-    "checked": "2026-09-15"
+    "claim": "MetaMask's official news index through Sep-23 contains no token launch, TGE or launch date; the Sep-9 corporate separation remains the latest relevant company announcement.",
+    "source": "https://metamask.io/news/",
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    }
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03",
   "historical_note_status": "SUPERSEDED FOR LIVE JUDGMENT 2026-09-15: the long note preserves entry-time decomposition and execution history; use current_assessment for the current launch input and fair probabilities."
  },
  "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222": {
-  "p_no": 0.944,
-  "verified": "2026-09-15",
-  "criteria_read": "2026-09-15",
-  "current_assessment": "Sep-15 09:25 correction: its description remains the same launch, measurement-time, price-source and no-launch backstop template as the 700M/4B legs. The direct launch sibling briefly reached 0.11/0.13 (midpoint 0.12) but reverted to 0.08/0.10 (midpoint 0.09) by 09:18; official MetaMask news still has no token or date and the FDV ladder did not confirm the peak. Use p_launch=0.09 and retain P(FDV > $3B | launch)=0.62: p_yes=0.056 / p_no=0.944. This remains an inseparable paired leg; HOLD the complete protected group, no add.",
+  "p_no": 0.95,
+  "verified": "2026-09-23",
+  "criteria_read": "2026-09-23",
+  "current_assessment": "Sep-23 02:09 criteria/source refresh: its description remains the same launch, measurement-time, price-source and no-launch backstop template as the 700M/4B legs. Official MetaMask news through Sep-23 has no token launch, TGE or date, and the direct launch sibling is 0.07/0.09 (midpoint 0.08). Use p_launch=0.08 and retain P(FDV > $3B | launch)=0.62: p_yes=0.050 / p_no=0.950. This remains an inseparable paired leg; HOLD the complete protected group / NO ADD.",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: p_yes = 0.085 x 0.62 = 0.053 -> p_no 0.947 vs mark 0.928. Bought at 0.849 in DEC-0080.",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -845,29 +851,29 @@
     "claim": "MetaMask announced on September 9 that Consensys Software Inc. is separating into independent MetaMask consumer and Consensys infrastructure companies, with completion expected by year-end. The announcement names no token and says nothing changes for users today.",
     "source": "https://metamask.io/en-GB/news/metamask-next-chapter",
     "source_date": "2026-09-09",
-    "checked": "2026-09-15"
+    "checked": "2026-09-23"
    },
    {
-    "claim": "The direct December 31 MetaMask token-launch sibling briefly showed a 0.11/0.13 YES book (midpoint 0.12) during the 06:00 review, then reverted to 0.08/0.10 (midpoint 0.09) by 09:18. The FDV ladder did not confirm the peak and no official launch fact appeared, so 0.09 is the corrected central launch input rather than mechanically carrying forward the peak.",
+    "claim": "At 02:09 UTC Sep-23 the direct December 31 MetaMask token-launch sibling had a 0.07/0.09 YES book (midpoint 0.08), with no official launch fact.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-metamask-launch-a-token-by-december-31-2026",
-    "source_date": "2026-09-15",
-    "checked": "2026-09-15"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    },
    {
     "claim": "Same template/criteria as the 700M leg: one FDV number, same no-launch backstop, so all legs resolve consistently \u2014 which is what makes the pair riskless.",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
-    "source_date": "2026-09-15",
-    "checked": "2026-09-15"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    }
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03",
   "historical_note_status": "SUPERSEDED FOR LIVE JUDGMENT 2026-09-15: the long note preserves entry-time decomposition and execution history; use current_assessment for the current launch input and fair probabilities."
  },
  "metamask-fdv-above-4b-one-day-after-launch-851-782-477-258": {
-  "p_no": 0.953,
-  "verified": "2026-09-15",
-  "criteria_read": "2026-09-15",
-  "current_assessment": "Sep-15 09:25 correction: its description remains the same launch, measurement-time, price-source and no-launch backstop template as the 700M/3B legs. The direct launch sibling briefly reached 0.11/0.13 (midpoint 0.12) but reverted to 0.08/0.10 (midpoint 0.09) by 09:18; official MetaMask news still has no token or date and the FDV ladder did not confirm the peak. Use p_launch=0.09 and retain P(FDV > $4B | launch)=0.52: p_yes=0.047 / p_no=0.953. This remains an inseparable paired leg; HOLD the complete protected group, no add.",
+  "p_no": 0.958,
+  "verified": "2026-09-23",
+  "criteria_read": "2026-09-23",
+  "current_assessment": "Sep-23 02:09 criteria/source refresh: its description remains the same launch, measurement-time, price-source and no-launch backstop template as the 700M/3B legs. Official MetaMask news through Sep-23 has no token launch, TGE or date, and the direct launch sibling is 0.07/0.09 (midpoint 0.08). Use p_launch=0.08 and retain P(FDV > $4B | launch)=0.52: p_yes=0.042 / p_no=0.958. This remains an inseparable paired leg; HOLD the complete protected group / NO ADD.",
   "note": "*** ARB-PAIRED LEG \u2014 DO NOT EXIT INDEPENDENTLY. *** This is one leg of the DEC-0079/0080 monotonicity structure (700M-YES 47.72sh / 3B-NO 29.72sh / 4B-NO 15.03sh). The pairs pay >=$1 in EVERY state including the no-launch backstop; closing ONE leg converts a riskless structure into a naked directional position on a pre-launch token. Any exit must close matched pairs, and resolution is the intended (fee-free) exit. Priors below exist so exit_analysis/kelly stop printing placeholders \u2014 they are NOT a mandate to trade the leg on its own. || DECOMPOSED 2026-08-25, not vibes: p_yes = P(launch by Dec-31 2026) x P(FDV > bar | launch). P(launch) is priced DIRECTLY by a sibling market (will-metamask-launch-a-token-in-2025 event, 'by December 31, 2026' leg) at YES 0.085 on 2026-08-25 \u2014 thin ($61 v24) but it is the crux variable and I take the market's number rather than inventing one: Lubin confirmed the token in Sep-2025, Rewards Season 1 paid $30M in LINEA (Oct-25->Jan-26) with points carrying to S2, but no date is announced with ~4 months left, and ConsenSys running a 2026 traditional IPO argues AGAINST a simultaneous token launch (securities scrutiny), not for it. P(FDV | launch) from comparable large-brand launches (UNI ~$6B day-one, JUP ~$7B, ENA >$10B) against MetaMask's ~30M MAU brand: >700M ~0.92, >3B ~0.62, >4B ~0.52 \u2014 wide, and deliberately NOT sized against, because the arb structure makes the conditional distribution nearly moot. NOTE THE LIVE BOUND VIOLATION: FDV>700M YES (0.092 mid) prices ABOVE its own precondition P(launch)=0.085 \u2014 logically impossible, ~0.7pp, far under the 2pp executable floor on books this thin. Watch it: if the gap widens on real depth, BUY 700M-NO + BUY launch-YES pays >=1 in every state (same template as the pairs already held). || THIS LEG: p_yes = 0.085 x 0.52 = 0.044 -> p_no 0.956 vs mark 0.917. Bought at 0.888 in DEC-0079.",
   "cluster": "metamask-fdv-arb",
   "rho_within": 0.95,
@@ -876,19 +882,19 @@
     "claim": "MetaMask announced on September 9 that Consensys Software Inc. is separating into independent MetaMask consumer and Consensys infrastructure companies, with completion expected by year-end. The announcement names no token and says nothing changes for users today.",
     "source": "https://metamask.io/en-GB/news/metamask-next-chapter",
     "source_date": "2026-09-09",
-    "checked": "2026-09-15"
+    "checked": "2026-09-23"
    },
    {
-    "claim": "The direct December 31 MetaMask token-launch sibling briefly showed a 0.11/0.13 YES book (midpoint 0.12) during the 06:00 review, then reverted to 0.08/0.10 (midpoint 0.09) by 09:18. The FDV ladder did not confirm the peak and no official launch fact appeared, so 0.09 is the corrected central launch input rather than mechanically carrying forward the peak.",
+    "claim": "At 02:09 UTC Sep-23 the direct December 31 MetaMask token-launch sibling had a 0.07/0.09 YES book (midpoint 0.08), with no official launch fact.",
     "source": "https://gamma-api.polymarket.com/markets?slug=will-metamask-launch-a-token-by-december-31-2026",
-    "source_date": "2026-09-15",
-    "checked": "2026-09-15"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    },
    {
     "claim": "Same template/criteria as the 700M and 3B legs (one FDV number, same backstop).",
     "source": "https://gamma-api.polymarket.com/markets?slug=metamask-fdv-above-4b-one-day-after-launch-851-782-477-258",
-    "source_date": "2026-09-15",
-    "checked": "2026-09-15"
+    "source_date": "2026-09-23",
+    "checked": "2026-09-23"
    }
   ],
   "arb_paired": "DEC-0079/0080 monotonicity structure: 700M-YES 47.72 / 3B-NO 29.72 / 4B-NO 15.03",

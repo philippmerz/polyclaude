@@ -204,7 +204,7 @@
   "mewfour",
   "synthwavedd astra"
  ],
- "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through a scoped fast agent filter before reaching Telegram \u2014 the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them. | HLE COVERAGE ADDED 2026-08-12: three positions (~10% of bankroll) plus a resting bid rest entirely on whether agi.safe.ai posts a 2026 model row, and ZERO of the 217 existing keywords covered that crux \u2014 the thesis-break event would have arrived with no alerting at all. Deliberately TIER-2 rather than tier-1: a board update is consequential but not an emergency (these resolve Dec-31, so surfacing at the next tick is ample), and 'humanity's last exam' appears in routine AI commentary often enough that tier-1 would manufacture false alarms. Prune after the family resolves. | CLARITY COVERAGE ADDED 2026-09-17: the held Senate-vote threshold pair depends on final-passage procedure and vote count; broad distinctive Clarity Act and crypto-market-structure phrases route relevant reporting through the scoped filter. Prune after the event resolves.",
+ "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through a scoped fast agent filter before reaching Telegram \u2014 the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them. | HLE COVERAGE ADDED 2026-08-12: three positions (~10% of bankroll) plus a resting bid rest entirely on whether agi.safe.ai posts a 2026 model row, and ZERO of the 217 existing keywords covered that crux \u2014 the thesis-break event would have arrived with no alerting at all. Deliberately TIER-2 rather than tier-1: a board update is consequential but not an emergency (these resolve Dec-31, so surfacing at the next tick is ample), and 'humanity's last exam' appears in routine AI commentary often enough that tier-1 would manufacture false alarms. Sep-23 added exact GPT-6 Sol/Luna names after OpenAI's 'Introducing' title evaded the generic release verbs. Prune after the family resolves. | CLARITY COVERAGE ADDED 2026-09-17: the held Senate-vote threshold pair depends on final-passage procedure and vote count; broad distinctive Clarity Act and crypto-market-structure phrases route relevant reporting through the scoped filter. Prune after the event resolves.",
  "tier2_keywords": [
   "trump approval",
   "trump health",
@@ -298,6 +298,8 @@
   "hle leaderboard",
   "hle benchmark",
   "hle score",
+  "gpt-6 sol",
+  "gpt-6 luna",
   "gemini 3.5 pro",
   "gemini pro",
   "acquire greenland",

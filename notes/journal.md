@@ -19275,3 +19275,78 @@ the first-hand PortWatch measurement predicted. I updated both notes to record
 one graded live-measurable positive while retaining the scanner-build gate
 until HLE or a second independent instance grades positively. No asset action
 or material Telegram summary was warranted.
+
+## 2026-09-23 02:00–02:21 UTC — full check; Sol/Luna watcher gap fixed, no trade
+
+The eleven-step check completed once. Ten open legs reconcile at **$146.31
+cost, $131.54 midpoint and $122.13 indicative fee-net depth**. Authoritative
+whole-account bankroll is **$161.05**, cumulative realized P&L remains
+**-$1.07**, deployable pUSD is $10.097650, and no BUY collateral is reserved.
+The sole live order is the zero-fill Trump-out 28-NO maker sell at .97. Wallets,
+zero-position Ostium state, UMA, crux coverage and the 10-indexed plus one
+legitimate deindexed-claim state audit are clean. All four daemons run current
+code exactly once. Redemption found 0/13 winning positions and prepared no
+transaction.
+
+The post-22:09 alert tail contains one Guardian report about US-Iran talks and
+possible Hormuz reopening, with no causal channel to a held position. No new
+opportunity alert, watchlist trigger, overdue decision, settlement or fill
+exists.
+
+Both Gemini NO legs marked near five cents, so I repeated their hidden-
+information checks. The correctly headed live HLE API still returns 60 rows:
+Gemini 3.8 Flash is 46.2 and Gemini 3.1 Pro 45.9, with no Gemini result at or
+above 50 and no Pro row newer than 3.1 Pro. Google's Gemini page still labels
+3.5 Pro coming soon; its API changelog and model-card index contain no Gemini
+4 Pro release. Public taker-only history shows zero trades in either held
+market after the Sep. 22 21:48 review. The latest move is therefore quote
+withdrawal without new executed or named-source evidence. Retain p(NO)=.18 for
+debut and .25 for >=50. Their fresh fee-net exits total **$7.42** versus
+recorded lower-bound terminal values totaling **$18.31**. **HOLD / NO ADD**;
+no taker exit or hidden-information maker sell.
+
+One material catalyst escaped the alert tail. OpenAI officially released
+GPT-6 Sol and GPT-6 Luna on Sep. 22 in its API, Codex and ChatGPT surfaces, but
+published no Humanity's Last Exam result for either. Neither model appears in
+the named resolving chart, where GPT-6 Astra remains OpenAI's maximum at 53.6,
+below the 55 threshold. The release adds a future-row watch but does not change
+the current outcome evidence or the .30 NO prior. The 19-share OpenAI >=55 NO
+position remains **HOLD / NO ADD** at $5.70 central value versus $3.86 fee-net
+exit.
+
+The official release title used “Introducing GPT-6 Sol and Luna,” which matched
+none of the watcher's generic `gpt-6 release/released/available/launch`
+phrases. I added exact `gpt-6 sol` and `gpt-6 luna` tier-2 keywords; this keeps
+the scoped relevance filter while closing the observed title gap. A regression
+test proves the exact title now matches. Fifty-two focused watcher/source tests
+pass. The daemon rereads its config every poll, so no process restart is
+needed. DEC-0171 records the safeguard.
+
+The criteria rotation required a MetaMask group reread. Live Gamma descriptions
+for the $700M, $3B and $4B legs remain byte-identical except their threshold:
+the token must be actively and publicly tradable, FDV is measured at 4 PM ET
+the next calendar day from the most liquid source, and no launch by Dec. 31
+resolves NO. MetaMask's official news index contains no token launch, TGE or
+date. The direct launch sibling is .07/.09, so I move p(launch) .09->.08 while
+retaining conditional FDV probabilities .92/.62/.52. Leg priors become .074
+YES / .950 NO / .958 NO. The complete protected group remains **HOLD / NO
+ADD** at $46.16 central fair and $44.75 logical floor versus $44.62 full exit;
+all five-unit add routes cost more than fair.
+
+Apple's Sep. 22 official Mac update contains no touchscreen MacBook, Clarity's
+latest official action remains the excluded 49-50 cloture vote, and current
+White House material still identifies Trump acting as President. Apple remains
+the sole calibration-sensitive close case: $11.90 central hold versus about
+$10.90 exit plus carry, with no new fact supporting the five-point prior cut
+that would flip it.
+
+All seven discovery passes completed. Default and thin-tail discovery found no
+candidate-specific robust edge. Toronto-Baltimore O/U showed the largest sports
+consensus difference at 3.7pp but failed the ten-point stress case; Dota was
+within 0.1pp. Macro surfaced five October FOMC markets without a probability
+instrument. Monotonicity found two LI.FI midpoint flags with no book and zero
+executable arbs. Consistency found no positive quoted basket, with explicitly
+incomplete unquoted coverage, and favorite-fade's largest stale population
+lead was only 7.3pp. Weekly P&L and world-state work remain current. No trade,
+order change, transfer or redemption occurred. Telegram message **1041**
+reported the material source, watcher and thesis updates.

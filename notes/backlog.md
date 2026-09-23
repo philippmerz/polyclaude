@@ -1,5 +1,35 @@
 # Polyclaude Backlog
 
+## Sep-23 02:21 current update
+
+- **Full check — no trade:** ten legs have $146.31 cost, $131.54 midpoint and
+  $122.13 indicative fee-net depth. Authoritative bankroll is **$161.05**,
+  realized P&L remains **-$1.07**, and deployable pUSD is $10.097650. The sole
+  live order remains the zero-fill Trump-out 28-NO sell at .97. State, UMA,
+  Ostium, crux coverage, watchlist, decisions, redemption, daemons and disk are
+  clean; seven discovery passes found no robust entry or executable arb.
+- **Gemini five-cent marks revalidated / HOLD / NO ADD:** the uncached HLE API
+  still has 60 rows, led for Gemini by 3.8 Flash at 46.2 and 3.1 Pro at 45.9,
+  with no result at or above 50 and no newer Pro row. Google's official
+  surfaces still have no Gemini 4 Pro release. Neither held Gemini market
+  traded after the Sep-22 21:48 review, so the move is quote withdrawal rather
+  than new executed evidence. Retain p(NO)=.18/.25; combined fee-net exits are
+  only $7.42 versus $18.31 of recorded lower-bound terminal value.
+- **GPT-6 Sol/Luna catalyst and watcher gap:** OpenAI officially released both
+  models Sep. 22, but published no HLE score; neither appears on the resolving
+  board and Astra remains the highest OpenAI row at 53.6, below 55. OpenAI
+  >=55 NO stays p(NO)=.30 / HOLD / NO ADD. The title used "Introducing" and
+  evaded generic release verbs, so exact `gpt-6 sol` / `gpt-6 luna` tier-2
+  coverage plus a regression test now closes the gap; DEC-0171. Fifty-two
+  focused tests pass and the daemon reloads config each poll.
+- **MetaMask weekly criteria/source refresh:** all three FDV descriptions
+  remain identical except threshold; official news has no token/TGE/date. The
+  direct launch sibling is .07/.09, so p(launch) moves .09->.08 and leg priors
+  become .074 YES / .950 NO / .958 NO. The complete group remains HOLD at
+  $46.16 central fair and $44.75 logical floor versus $44.62 full exit; no add
+  clears fair or robustness gates. Apple, Clarity and Trump sources also show
+  no thesis break. Weekly P&L and world-state work remain current.
+
 ## Sep-22 22:09 current update
 
 - **Bounded light review — no asset action:** no news or opportunity alert,

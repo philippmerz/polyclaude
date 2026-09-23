@@ -58,3 +58,14 @@ def test_broadly_deployed_model_release_matches_tier1() -> None:
     assert news_watcher.match_keywords(rss_blob, config["tier1_keywords"]) == (
         "most capable broadly deployed model"
     )
+
+
+def test_introducing_named_gpt6_variants_matches_tier2() -> None:
+    """Named releases must match even when a title avoids release verbs."""
+    config_path = Path(news_watcher.__file__).with_name("news_watcher_config.json")
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+
+    assert news_watcher.match_keywords(
+        "Introducing GPT-6 Sol and GPT-6 Luna",
+        config["tier2_keywords"],
+    ) == "gpt-6 sol"
