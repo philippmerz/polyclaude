@@ -1,5 +1,5 @@
 {
-  "next_id": 173,
+  "next_id": 174,
   "decisions": [
     {
       "id": 1,
@@ -3439,6 +3439,26 @@
         "fail-open"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 173,
+      "timestamp": "2026-09-23T18:15:22Z",
+      "type": "size_change",
+      "thesis": "Apple's official Mac store and product pages still showed no qualifying touchscreen MacBook on Sep 23, and the day's rumor roundup added no new sourced public-availability date, so the 0.35 NO prior remained unchanged. The executable NO bid had moved above that fair value only for the first 25.08 shares after the authoritative 4% fee curve; the next 8.925 shares were bid at 0.34 and remained worth holding. Sold only the favorable prefix to realize consumed edge while preserving residual upside.",
+      "confidence": "medium",
+      "prediction": "At resolution, the fee-net value realized from the 25.08-share trim will exceed the value of holding those shares at the 0.35 central NO probability; the retained 8.925-share tranche should remain preferable to selling at the observed 0.34 bid absent new qualifying evidence.",
+      "size_usd": 9.2941,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "apple",
+        "consumed-edge",
+        "partial-exit"
+      ],
+      "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

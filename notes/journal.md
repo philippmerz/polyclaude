@@ -19441,3 +19441,54 @@ remain prompts from a falsified population heuristic. No trade, order change,
 transfer, prior change or decision record was warranted. Weekly P&L and
 world-state work are current, and a flat tick does not justify a Telegram
 summary.
+
+## 2026-09-23 18:00–18:17 UTC — periodic review; Apple favorable prefix sold
+
+The backlog and recent journal were reviewed once. The only post-14:09 alert
+was an exact repeat of the already-reviewed Fairshake campaign-spending story;
+it changes neither the qualifying Clarity vote count nor the protected pair's
+$29 payout floor. No new opportunity alert, fill, settlement, watchlist hit,
+overdue decision or dated backlog clock appeared. Weekly P&L through Sep. 18
+and the Sep. 20 world-state review remain current.
+
+Apple's executable book did require action. I re-read the exact Gamma market:
+it still requires a true touchscreen, explicitly MacBook-branded product to be
+available for general-public purchase by Dec. 31; an announcement alone does
+not qualify. Apple's live store, MacBook Pro page and Mac newsroom still show
+no qualifying product. The Sep. 23 rumor roundup adds no new sourced sale or
+availability date beyond the Sep. 14 schedule evidence already in the prior.
+The honest p(NO) therefore remains **.35**, range .18–.55.
+
+Recent public flow was concentrated in one buyer, including roughly 281 NO
+shares around .389–.417, so I treated the move as adverse-selection evidence
+and independently verified the source rather than mechanically selling. With
+the source unchanged, the fresh book offered 10 NO at .39, 5.08 at .38 and 10
+at .37, then dropped to 13.71 at .34. Under the authoritative 4% taker curve,
+only the first **25.08** shares beat .35 fair: $9.5304 gross, about $0.2363 fee
+and **$9.2941 fee-net**, roughly $0.52 above their $8.778 central terminal
+value. Selling the final 8.925 at .34 would have destroyed about $0.16 of
+central value. Independent skeptic and execution reviews therefore converged
+on the same selective trim.
+
+I sold **25.08 Apple NO FOK at a .37 limit**. The order matched completely
+(`0xec21d382ed4619ff977c6a6fa16e79053a82063b908cf165c518bdecb175ab09`),
+with transaction
+`0xbb2bc18872328b4ef296d811788707e77eb119c38c72f959432fa7d79c1c57b7`.
+Wallet and on-chain reconciliation show 8.925 NO remaining, no Apple order and
+$19.391700 deployable pUSD. A post-trade rewalk gives about $3.04 fee-net for
+the residual versus $3.12 central terminal value, so **HOLD 8.925 / NO ADD / no
+hidden-information maker sell**. The roughly $9 excess over the operating cash
+range would earn only about three cents at the current 1.19% Aave hurdle through
+resolution, insufficient to justify a separate unwrap-and-supply cycle.
+DEC-0173 records the size change.
+
+Post-trade state is **10 legs, $135.97 cost, $128.56 midpoint and $118.56
+indicative fee-net depth**. Authoritative whole-account bankroll is **$166.96**,
+cumulative realized P&L is **-$2.11**, and the sole live order remains the
+zero-fill Trump-out 28-NO sell at .97. The refreshed state audit reconciles 10
+indexed positions plus one legitimate deindexed claim row; all remaining
+ordinary and protected-group exit/carry gates pass. I also corrected the
+backlog's stale headline snapshot and its conflicting HLE current-prior text to
+.18/.25/.30. No other portfolio or operational action is due before the Sep. 30
+Arena source snapshot.
+Telegram message **1042** reported the material trim and reconciled state.

@@ -27,14 +27,6 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
-   "outcome": "No",
-   "size": 34.005,
-   "conditionId": "0x3b8ffe267a348097806237bd9af95050896ee12e4d461b421ca703c8bdf31022",
-   "asset": "23514447719471100390569154455440417533353453232779340703972009767897223549881",
-   "negativeRisk": false
-  },
-  {
    "slug": "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
    "outcome": "No",
    "size": 29.7173,
@@ -80,6 +72,14 @@
    "size": 15.0337,
    "conditionId": "0xd450db2ea773df8f91797d594b15333d8e9ed2d74930ac0ffb54c123f78e3d0f",
    "asset": "70962867555721536468794820816920873482905460253708950137269131341948100258712",
+   "negativeRisk": false
+  },
+  {
+   "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+   "outcome": "No",
+   "size": 8.925,
+   "conditionId": "0x3b8ffe267a348097806237bd9af95050896ee12e4d461b421ca703c8bdf31022",
+   "asset": "23514447719471100390569154455440417533353453232779340703972009767897223549881",
    "negativeRisk": false
   },
   {

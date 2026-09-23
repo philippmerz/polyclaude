@@ -35,16 +35,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-23 14:09 UTC
+## Last audited snapshot — 2026-09-23 18:17 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
-| Position cost | $146.31 |
-| Polymarket midpoint | $136.06 |
-| Indicative depth/fee value | $126.43 |
-| Authoritative whole-account mark | $165.44 |
-| Cumulative realized P&L | -$1.07 |
+| Position cost | $135.97 |
+| Polymarket midpoint | $128.56 |
+| Indicative depth/fee value | $118.56 |
+| Authoritative whole-account mark | $166.96 |
+| Cumulative realized P&L | -$2.11 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
@@ -56,12 +56,13 @@ managed only as a complete economic group.
 All other central-arithmetic exit screens remain holds after exit-cost,
 stressed-prior and joint portfolio-risk review. The Gemini NO pair has no new
 resolving-source or executed-information signal; its $55.94 central terminal
-value remains far above $11.31 of executable exits. Apple NO remains the only
-calibration-sensitive close case, with about $11.90 of central hold value
-versus $11.55 from an immediate sale. The only live order is a zero-fill maker
-sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $10.097650. The
-midpoint-to-depth gap is $9.63. The next dated material clock is the exact Arena
-Text Overall source snapshot on Sep. 30.
+value remains far above $11.69 of executable exits. Apple NO was trimmed by
+25.08 shares when only that fee-net bid prefix moved above its unchanged .35
+fair value; the retained 8.925 shares have about $3.12 of central value versus
+$3.04 from an immediate sale. The only live order is a zero-fill maker sell
+for **28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
+midpoint-to-depth gap is $10.00. The next dated material clock is the exact
+Arena Text Overall source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
