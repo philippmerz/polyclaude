@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-23. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-24. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-23 22:05 UTC
+## Last audited snapshot — 2026-09-24 02:10 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $135.97 |
-| Polymarket midpoint | $128.94 |
-| Indicative depth/fee value | $115.03 |
-| Authoritative whole-account mark | $167.31 |
+| Polymarket midpoint | $124.24 |
+| Indicative depth/fee value | $114.65 |
+| Authoritative whole-account mark | $162.59 |
 | Cumulative realized P&L | -$2.11 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -54,14 +54,17 @@ before-Jan. 1 vote cutoff. The MetaMask monotonicity structure is likewise
 managed only as a complete economic group.
 
 All other central-arithmetic exit screens remain holds after exit-cost,
-stressed-prior and joint portfolio-risk review. The Gemini NO pair has no new
-resolving-source or executed-information signal; its $55.94 central terminal
-value remains far above $8.71 of executable exits. Apple NO was trimmed by
+stressed-prior and joint portfolio-risk review. A corrected tape review found
+repeated YES buying across both Gemini markets, led by one broad-ladder wallet,
+so their p(NO) priors are now .15/.20. The resolving board and Google's
+official release surfaces remain unchanged; $45.77 of central terminal value
+still exceeds $8.23 of fee-net exits. Apple NO was trimmed by
 25.08 shares when only that fee-net bid prefix moved above its unchanged .35
 fair value; the retained 8.925 shares have about $3.12 of central value versus
 $2.34 from an immediate sale. The only live order is a zero-fill maker sell
 for **28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
-midpoint-to-depth gap is $13.91. The next dated material clock is the exact
+midpoint-to-depth gap is $9.59; the approximate whole-account depth-realizable
+value is $153.00. The next dated material clock is the exact
 Arena Text Overall source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed

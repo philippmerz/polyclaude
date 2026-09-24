@@ -19520,3 +19520,73 @@ freshness/counts and disk are clean. There is no new opportunity alert or due
 backlog task; the next dated catalyst is the Sep. 30 Arena Text Overall source
 snapshot. No trade, order change, transfer, prior change, decision record or
 material Telegram message was warranted.
+
+## 2026-09-24 02:00–02:10 UTC — full check; missed Gemini flow corrected, no trade
+
+The eleven-step check completed once. Ten open legs reconcile at **$135.97
+cost, $124.24 midpoint and $114.65 indicative fee-net depth**. Authoritative
+whole-account bankroll is **$162.59**, approximate depth-realizable
+whole-account value is **$153.00**, cumulative realized P&L remains **-$2.11**,
+and deployable pUSD is $19.391700 with no BUY collateral reserved. The sole
+live order remains the zero-fill Trump-out 28-NO maker sell at .97. Wallets,
+the zero-position Ostium sleeve, UMA, crux coverage, protected-group topology,
+watchlist and decision clocks are clean. The state audit reconciles ten indexed
+positions plus one legitimate deindexed claim row. All four daemons run current
+code exactly once. Redemption found 0/13 winning positions and submitted no
+transaction. Weekly P&L through Sep. 18 and the Sep. 20 world-state review are
+current.
+
+The post-22:05 news tail contained one repeated Guardian item about US-Iran
+talks and possible Hormuz reopening, with no causal channel to a held position.
+Opportunity alerts contained no executable pair. The 5-year Treasury move was
+only +0.12pp versus its 2pp trigger. No fill, settlement, watchlist hit, overdue
+decision or separate thesis break appeared.
+
+The complete public Gemini tape did expose an error in the prior review. Wallet
+`0x8d1b...6e20` bought **135.922 next-Pro >=40 YES at .91964 VWAP** and
+**239.828 Gemini >=50 YES at .91732 VWAP**. Another wallet bought 20 >=50 YES
+at .923 and 20 NO sold at .08. The main buyer also accumulated the broader
+Gemini HLE ladder. This is executed adverse evidence and explicitly supersedes
+Sep. 23's incomplete statement that the move had no executed confirmation; its
+single broad-ladder source means it is concentrated thematic flow rather than
+several independent criteria-specific signals.
+
+I re-read both exact criteria and rechecked the uncached resolving board,
+Google's official Gemini API changelog, current models page and model-card
+index. The board remains at 60 rows, with Gemini 3.8 Flash at 46.2 and Gemini
+3.1 Pro at 45.9; no newer qualifying Pro release or score exists on those
+official surfaces. Independent champion and skeptic reviews both favored a
+probability haircut without an exit. I cut next-Pro debut p(NO) **.18 -> .15**
+with range .06-.25 and Gemini >=50 p(NO) **.25 -> .20** with range .08-.32.
+Fresh fee-net exits are **$3.28/$4.95** versus $25.35/$20.42 central terminal
+values and $10.14/$8.17 range-floor values. The executable bids imply only
+about 2.1%/4.9% terminal-NO break-even probabilities before carry. Joint Kelly
+reports both legs oversized under the lower priors, but hidden-information
+maker sells at or below fair are banned and taker exits destroy more value.
+**HOLD both / NO ADD / no new maker order.** OpenAI >=55 remains p(NO)=.30.
+
+All required discovery passes then completed. Primary discovery reviewed 997
+active markets, shortlisted 80 and emitted 49 proof-checked batched rows
+(`6468db24a5a2cacc95aeef2158fecba93d3ebc1c35037d786333267d17737fff`).
+Thin-tail discovery reviewed 43,471 active markets, shortlisted 1,723 and
+emitted 879 rows
+(`808248ca82f38cfef652841d0744c308475f8beae1408bd5a478f6cec51ebc75`).
+The raw outputs and every context batch were reviewed; absent filtered rows
+were not treated as closure. Monotonicity found three Treasury midpoint flags
+without usable books and zero executable arb. Consistency hit its explicit
+5,000-market coverage cap, validated 2,998 negRisk groups, and found zero
+positive basket after live depth. Macro surfaced five October Fed markets
+without a probability instrument, while favorite-fade remained a browse hint
+from a failed population heuristic.
+
+The sports scan's only bounded candidate was Green Bay moneyline YES at a .70
+ask. Its apparent edge used stale Oddschecker -375 odds; current quoted books
+center the no-vig Packers probability around .69-.71, so the entry fails even
+before the required 10pp stress. A Gemini 4 by Sep. 30 NO around .933 likewise
+fails robust stress, and the thin-tail geopolitical/commodity rows supplied no
+fresh strict-fact edge. Marginal-APY, explicit exit, pessimistic-prior and
+protected-group checks leave every held exposure unchanged. No trade, order
+change, transfer, redemption or decision record occurred. The next dated
+catalyst is the exact Arena Text Overall snapshot on Sep. 30.
+Telegram message **1043** reported the material tape correction, prior cuts and
+reconciled portfolio state.
