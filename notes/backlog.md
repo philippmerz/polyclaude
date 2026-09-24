@@ -1,5 +1,27 @@
 # Polyclaude Backlog
 
+## Sep-24 18:02 current update
+
+- **Periodic state — no trade:** ten indexed legs have $135.97 cost, $123.93
+  midpoint and $114.93 indicative fee-net depth. Authoritative bankroll is
+  **$162.60**, approximate whole-account depth-realizable value is **$153.60**,
+  cumulative realized P&L remains **-$2.11**, and deployable pUSD remains
+  $19.391700. No post-14:11 news/opportunity alert, fill, settlement, transfer,
+  UMA/Ostium change, watchlist hit, overdue decision or marginal-APY exit
+  appeared. HLE stressed exits, Apple, Trump and both protected groups remain
+  holds. Disk has about 1.3 GB free, above the 512 MB warning floor.
+- **Live-order identity made explicit (DEC-0175):** two independent reviews
+  mislabeled the sole order because the authenticated CLOB response carried
+  only condition/token IDs. `clob_v2.py orders` now annotates read-only output
+  only after an exact pair match against the canonical position snapshot and
+  labels unknown or duplicate identities instead of guessing. Live smoke
+  verification identifies the order as the zero-fill **Trump-out 28-NO sell
+  at .97**; order, cancel, fill and reconciliation behavior is unchanged.
+  Focused order/entry/redemption safety validation passes **79 tests**.
+- No Telegram summary was sent for the flat portfolio tick. The next resolution
+  check is the Duma final-result window no earlier than Sep. 25; the next entry
+  catalyst remains the Sep. 30 Arena Text Overall source snapshot.
+
 ## Sep-24 14:11 current update
 
 - **OpenAI HLE adverse flow weighted; prior cut, position held:** public tape

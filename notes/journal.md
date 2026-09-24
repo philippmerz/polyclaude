@@ -19685,3 +19685,45 @@ entry, arb, transfer, redemption, order change or decision record followed.
 Telegram message **1045** reported the material prior change and reconciled
 state. The next dated catalyst remains the Sep. 30 Arena Text Overall source
 snapshot.
+
+## 2026-09-24 18:00–18:02 UTC — periodic review; flat book, order identity hardened
+
+The bounded backlog and recent-journal review found no portfolio action. Ten
+indexed legs reconcile at **$135.97 cost, $123.93 midpoint and $114.93
+indicative fee-net depth**. Authoritative whole-account bankroll is **$162.60**,
+approximate depth-realizable whole-account value is **$153.60**, cumulative
+realized P&L remains **-$2.11**, and deployable pUSD remains $19.391700. The
+move since 14:11 is entirely in marks: no fill, settlement, transfer, UMA or
+Ostium transition appeared. State audit remains clean at ten indexed positions
+plus one legitimate deindexed claim row; watchlist and decision clocks are
+clear, all four daemons are current and exact-one, and disk has about 1.3 GB
+free against the 512 MB warning floor.
+
+There are no news or opportunity entries after the 14:11 review. Marginal APY
+flags zero positions. Fresh fee-net exits for Gemini debut, Gemini >=50 and
+OpenAI >=55 are about **$2.58/$7.51/$1.83**, below their $25.35/$20.42/$4.75
+central terminal values; the recorded range floors of $10.14/$8.17/$2.85 also
+remain above exit plus carry. Apple exits near $2.60 versus $3.12 central,
+Trump near $26.91 versus $27.48, Clarity's complete pair near $28.25 versus its
+$29 floor, and MetaMask near $45.10 versus $46.16 central fair. All remain
+holds with no add under the existing gates.
+
+One operational ambiguity did merit repair. A second independent review called
+the live 28-NO sell a Clarity order even though the exact asset ID in
+`notes/position_condition_ids.json` maps to
+`trump-out-as-president-before-2027`. The raw authenticated order response had
+no slug, inviting a guess. `clob_v2.py orders` now adds human-readable identity
+only after an exact normalized condition-ID plus token-ID join against that
+canonical snapshot. Matched rows receive the slug and position outcome;
+unknown and duplicate identities remain visibly unmapped or ambiguous, and a
+malformed snapshot fails visibly. The annotation is confined to the read-only
+display path, so order, cancel, fill and reconciliation semantics do not move.
+The live command now identifies the sole zero-fill order as **Trump-out 28 NO
+at .97**. Three focused annotation tests plus the existing entry, order and
+redemption safety suites pass **79/79**. DEC-0175 records and immediately
+verifies the change.
+
+No trade, order change, transfer, redemption or prior change occurred, and no
+Telegram summary was sent for the flat portfolio tick. The next resolution
+check is the Duma final-result window no earlier than Sep. 25; the next entry
+catalyst remains the Sep. 30 Arena Text Overall source snapshot.

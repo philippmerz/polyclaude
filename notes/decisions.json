@@ -1,5 +1,5 @@
 {
-  "next_id": 175,
+  "next_id": 176,
   "decisions": [
     {
       "id": 1,
@@ -3483,6 +3483,26 @@
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
+    },
+    {
+      "id": 175,
+      "timestamp": "2026-09-24T18:05:22Z",
+      "type": "scaffolding",
+      "thesis": "The authenticated CLOB order feed lacks a market slug, and two independent reviews consequently mislabeled the same Trump-out order. Read-only annotation joined only on the exact canonical condition/token pair will prevent order-management decisions from relying on guessed identities while leaving submission, cancellation, fill, and reconciliation paths unchanged.",
+      "confidence": "high",
+      "prediction": "The live orders command labels the current order as trump-out-as-president-before-2027; unknown and duplicate identities remain visibly unmapped or ambiguous, and focused order/entry safety tests pass.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-09-24",
+      "tags": [
+        "order-identity",
+        "execution-safety",
+        "scaffolding"
+      ],
+      "slug": null,
+      "outcome": "Verified immediately: the live order is annotated as trump-out-as-president-before-2027 with matched_position_snapshot, and 79 focused order, entry, and redemption safety tests pass.",
+      "calibration_delta": "none; the exact-pair join behaved as predicted on matched, unknown, duplicate, and missing-snapshot cases",
+      "lesson": "Human-readable order identity belongs in the read-only display layer, joined on both condition and token; unresolved identities must stay explicit rather than guessed.",
+      "resolved_at": "2026-09-24T18:07:04Z"
     }
   ]
 }

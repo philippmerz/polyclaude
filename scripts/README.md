@@ -45,6 +45,10 @@ provisional and requires an independent fresh rewalk before any action.
   execution defaults to maker-or-skip: `--execute` with a taker route requires a
   logged `--taker-urgency` naming the short-lived reason that justifies fee and
   slippage. Multi-leg bundles retain their separately guarded taker-only path.
+- `clob_v2.py` — authenticated order, cancel, sell and redemption client. Its
+  read-only `orders` display adds a canonical slug only after an exact
+  condition-ID plus token-ID match against `notes/position_condition_ids.json`;
+  unknown or duplicate identities are labeled explicitly rather than guessed.
 - `across_bridge.py` — Across V3 bridge for USDC and native ETH across Arbitrum / Base / Polygon / Optimism.
 - `aave_deposit.py` — Aave V3 `supply` / `withdraw` / `rate` across the same chains.
 - `wrap_pusd.py` — exact 1:1 Polygon conversion in both directions: USDC.e → pUSD through CollateralOnramp and pUSD → USDC.e (or native USDC when that asset is unpaused) through CollateralOfframp. Write paths validate the deployment and simulate before broadcast.

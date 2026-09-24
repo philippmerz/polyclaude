@@ -614,6 +614,68 @@ def list_open_orders() -> dict:
             "body": {"data": rows, "next_cursor": "LTE="}}
 
 
+def annotate_open_orders(result: dict, *, snapshot_path: Path | None = None) -> dict:
+    """Add fail-safe held-position identity labels to a read-only order result.
+
+    The authenticated CLOB order response has a condition id and token id but
+    no canonical market slug.  Join only on the exact condition/token pair in
+    the local position snapshot.  Unknown or ambiguous rows stay explicitly
+    unmapped; this helper never guesses from outcome or array position and has
+    no effect on order, cancel, or reconciliation semantics.
+    """
+    if not isinstance(result, dict):
+        raise ValueError("open-order result is malformed")
+    body = result.get("body")
+    if not isinstance(body, dict):
+        return result
+    rows = body.get("data")
+    if not isinstance(rows, list):
+        return result
+    path = snapshot_path or (REPO_ROOT / "notes" / "position_condition_ids.json")
+    try:
+        raw = json.loads(path.read_text())
+        positions = raw.get("positions") if isinstance(raw, dict) else None
+        if not isinstance(positions, list):
+            raise ValueError("position snapshot positions is malformed")
+    except (OSError, json.JSONDecodeError, ValueError) as exc:
+        raise RuntimeError(f"position identity snapshot unavailable: {exc}") from exc
+
+    index: dict[tuple[str, str], list[dict]] = {}
+    for position in positions:
+        if not isinstance(position, dict):
+            raise RuntimeError("position identity snapshot contains a malformed row")
+        condition = str(position.get("conditionId") or "").strip().lower()
+        asset = str(position.get("asset") or "").strip()
+        slug = str(position.get("slug") or "").strip()
+        outcome = str(position.get("outcome") or "").strip()
+        if not condition or not asset or not slug or outcome not in {"Yes", "No"}:
+            raise RuntimeError("position identity snapshot contains incomplete identity")
+        index.setdefault((condition, asset), []).append(position)
+
+    annotated = []
+    for order in rows:
+        if not isinstance(order, dict):
+            raise RuntimeError("open-order response contains a malformed row")
+        item = dict(order)
+        condition = str(order.get("market") or order.get("conditionId") or "").strip().lower()
+        asset = str(order.get("asset_id") or order.get("asset") or "").strip()
+        matches = index.get((condition, asset), [])
+        if len(matches) == 1:
+            match = matches[0]
+            item["canonical_slug"] = match["slug"]
+            item["position_outcome"] = match["outcome"]
+            item["identity_status"] = "matched_position_snapshot"
+        elif len(matches) > 1:
+            item["identity_status"] = "ambiguous_position_snapshot"
+        else:
+            item["identity_status"] = "unmapped_position_snapshot"
+        annotated.append(item)
+    out = dict(result)
+    out["body"] = dict(body)
+    out["body"]["data"] = annotated
+    return out
+
+
 def list_authenticated_trades() -> dict:
     """Return the wallet's complete authenticated trade history page set.
 
@@ -1165,6 +1227,7 @@ def cmd_cancel(args):
 
 def cmd_orders(_args):
     result = list_open_orders()
+    result = annotate_open_orders(result)
     print(json.dumps(result, indent=2))
     return 0 if result["status_code"] < 400 else 2
 

@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-24 14:11 UTC
+## Last audited snapshot — 2026-09-24 18:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $135.97 |
-| Polymarket midpoint | $125.09 |
-| Indicative depth/fee value | $115.78 |
-| Authoritative whole-account mark | $163.64 |
+| Polymarket midpoint | $123.93 |
+| Indicative depth/fee value | $114.93 |
+| Authoritative whole-account mark | $162.60 |
 | Cumulative realized P&L | -$2.11 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -58,14 +58,15 @@ stressed-prior and joint portfolio-risk review. Executed adverse flow across
 the three HLE markets moved their p(NO) priors to **.15/.20/.25** for next
 Gemini Pro debut, Gemini >=50 and OpenAI >=55. The exact 60-row source still
 shows Gemini below 50 and OpenAI below 55; their $50.52 of central terminal
-value exceeds $12.95 of current fee-net exits. The OpenAI leg also remains a
+value exceeds $11.92 of current fee-net exits. The OpenAI leg also remains a
 hold at its .15 range floor, and the Dec. 31 hold-only rule blocks enlargement.
 Apple's retained 8.925 NO shares have about $3.12 of central value versus $2.60
 from an immediate sale. The only live order is a zero-fill maker sell for
 **28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
-midpoint-to-depth gap is $9.30; the approximate whole-account depth-realizable
-value is $154.33. The next dated material clock is the exact Arena Text Overall
-source snapshot on Sep. 30.
+midpoint-to-depth gap is $9.00; the approximate whole-account depth-realizable
+value is $153.60. The next resolution clock is the Duma final-result window
+from Sep. 25; the next entry catalyst is the exact Arena Text Overall source
+snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
@@ -97,6 +98,10 @@ checks. Direct raw buys are blocked. Existing-position sells and verified
 cancels use `scripts/clob_v2.py`. Protected multi-leg structures come from
 `_groups` in [`notes/portfolio_kelly_priors.json`](notes/portfolio_kelly_priors.json)
 and must be managed as complete economic positions.
+
+The `clob_v2.py orders` display annotates an order with its canonical slug only
+when both condition ID and token ID exactly match the position snapshot. Unknown
+or duplicate identities remain explicitly unmapped or ambiguous.
 
 Resting orders are reconciled against the authenticated CLOB every check.
 Ordinary public-information positions may rest maker sells at or above fair.
