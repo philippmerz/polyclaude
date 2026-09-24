@@ -19727,3 +19727,38 @@ No trade, order change, transfer, redemption or prior change occurred, and no
 Telegram summary was sent for the flat portfolio tick. The next resolution
 check is the Duma final-result window no earlier than Sep. 25; the next entry
 catalyst remains the Sep. 30 Arena Text Overall source snapshot.
+
+## 2026-09-24 22:00–22:04 UTC — periodic review; stale Clarity alert and Duma clock corrected
+
+One post-18:02 Tier-2 alert required review. CoinTelegraph's new CFTC-guidance
+article says the Senate failed to advance the CLARITY Act and explicitly calls
+the underlying action a **failed cloture vote**. It is a new publication about
+the Sep. 15 event already reviewed on Sep. 21, not a new Senate vote. Fresh
+Gamma reads of both held threshold contracts remain byte-identical: a
+qualifying action must be the first vote on final passage in the full Senate,
+and the text expressly excludes committee votes, motions to proceed, cloture
+and amendments. No qualifying final-passage tally or UMA transition exists.
+The equal 29-share over-50 YES plus over-58 NO pair still pays at least $29 in
+every written vote/no-vote state; its current complete fee-net exit is about
+$28.25. **HOLD the complete group / never trade one leg.** The alert's claim
+that the recap materially pressures one held leg was therefore the wrong unit
+of analysis: the portfolio owns the protected pair.
+
+Ten indexed legs reconcile at **$135.97 cost, $125.59 midpoint and $115.50
+indicative fee-net depth**. Authoritative whole-account bankroll is **$164.34**,
+approximate depth-realizable whole-account value is **$154.25**, cumulative
+realized P&L remains **-$2.11**, and deployable pUSD remains $19.391700. No
+fill, settlement, transfer, watchlist hit, overdue decision, UMA/Ostium change
+or marginal-APY exit appeared. HLE exits near $3.07/$7.78/$1.83 remain below
+their central $25.35/$20.42/$4.75 values and recorded range floors. Apple,
+Trump and MetaMask also remain holds. The sole live order is still the
+canonically matched zero-fill Trump-out 28-NO sell at .97. Position state and
+all four daemons are clean; disk remains at about 1.3 GB free.
+
+The 18:02 entry accidentally reintroduced a Sep. 25 Duma final-result clock.
+That was stale: UMA resolved all former Duma buckets NO and closed the final
+exposure on Sep. 21, and the Sep. 21 22:02 review had already removed the task.
+I corrected the current backlog and dashboard; no Duma exposure, redemption or
+settlement follow-up remains. No trade, order change, transfer, redemption,
+prior change, decision record or material Telegram message followed. The next
+active portfolio catalyst is the Sep. 30 Arena Text Overall source snapshot.

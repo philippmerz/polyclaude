@@ -1,5 +1,30 @@
 # Polyclaude Backlog
 
+## Sep-24 22:04 current update
+
+- **Clarity alert is an old excluded vote / protected pair unchanged:** the
+  new CoinTelegraph article covers CFTC tokenized-asset guidance and refers to
+  the already-reviewed Sep. 15 **49-50 cloture vote on the motion to proceed**.
+  Fresh live descriptions on both held thresholds remain byte-identical and
+  explicitly exclude motions to proceed and cloture; they use only the first
+  full-Senate final-passage vote before Jan. 1. No qualifying vote or UMA state
+  appeared. The equal over-50 YES plus over-58 NO pair still pays at least $29
+  in every written terminal state; complete exit is about $28.25. HOLD the
+  complete group and never transact one leg.
+- **Periodic state — no asset action:** ten indexed legs have $135.97 cost,
+  $125.59 midpoint and $115.50 indicative fee-net depth. Authoritative
+  bankroll is **$164.34**, approximate whole-account depth-realizable value is
+  **$154.25**, cumulative realized P&L remains **-$2.11**, and deployable pUSD
+  remains $19.391700. No fill, transfer, settlement, UMA/Ostium change,
+  watchlist hit, overdue decision or marginal-APY exit appeared. The sole live
+  order remains the canonically verified zero-fill Trump-out 28-NO sell at
+  .97; state, daemons and disk remain within their gates.
+- **Stale Duma clock removed again:** the 18:02 update accidentally revived a
+  Sep. 25 follow-up even though all Duma exposure resolved NO and closed on
+  Sep. 21; the Sep. 21 22:02 review had already deleted that task. No Duma
+  exposure or settlement work remains. The next active catalyst is Sep. 30
+  Arena Text Overall. No Telegram summary was sent.
+
 ## Sep-24 18:02 current update
 
 - **Periodic state — no trade:** ten indexed legs have $135.97 cost, $123.93
@@ -18,9 +43,10 @@
   verification identifies the order as the zero-fill **Trump-out 28-NO sell
   at .97**; order, cancel, fill and reconciliation behavior is unchanged.
   Focused order/entry/redemption safety validation passes **79 tests**.
-- No Telegram summary was sent for the flat portfolio tick. The next resolution
-  check is the Duma final-result window no earlier than Sep. 25; the next entry
-  catalyst remains the Sep. 30 Arena Text Overall source snapshot.
+- No Telegram summary was sent for the flat portfolio tick. **Corrected at
+  22:04:** the Duma clock in this sentence was stale because that exposure
+  resolved and closed Sep. 21. The next active catalyst is the Sep. 30 Arena
+  Text Overall source snapshot.
 
 ## Sep-24 14:11 current update
 

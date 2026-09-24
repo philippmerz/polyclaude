@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-24 18:02 UTC
+## Last audited snapshot — 2026-09-24 22:04 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $135.97 |
-| Polymarket midpoint | $123.93 |
-| Indicative depth/fee value | $114.93 |
-| Authoritative whole-account mark | $162.60 |
+| Polymarket midpoint | $125.59 |
+| Indicative depth/fee value | $115.50 |
+| Authoritative whole-account mark | $164.34 |
 | Cumulative realized P&L | -$2.11 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -51,22 +51,25 @@ plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
 $29.00 payout floor; manage it only as a complete position. Both legs now show
 the same Jan. 2 operational end metadata while retaining the same written
 before-Jan. 1 vote cutoff. The MetaMask monotonicity structure is likewise
-managed only as a complete economic group.
+managed only as a complete economic group. A Sep. 24 CFTC-guidance article
+recaps the already-reviewed Sep. 15 failed cloture vote; both contracts
+explicitly exclude cloture and motions to proceed, so it does not change the
+pair's resolution state or floor.
 
 All other central-arithmetic exit screens remain holds after exit-cost,
 stressed-prior and joint portfolio-risk review. Executed adverse flow across
 the three HLE markets moved their p(NO) priors to **.15/.20/.25** for next
 Gemini Pro debut, Gemini >=50 and OpenAI >=55. The exact 60-row source still
 shows Gemini below 50 and OpenAI below 55; their $50.52 of central terminal
-value exceeds $11.92 of current fee-net exits. The OpenAI leg also remains a
+value exceeds $12.68 of current fee-net exits. The OpenAI leg also remains a
 hold at its .15 range floor, and the Dec. 31 hold-only rule blocks enlargement.
 Apple's retained 8.925 NO shares have about $3.12 of central value versus $2.60
 from an immediate sale. The only live order is a zero-fill maker sell for
 **28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
-midpoint-to-depth gap is $9.00; the approximate whole-account depth-realizable
-value is $153.60. The next resolution clock is the Duma final-result window
-from Sep. 25; the next entry catalyst is the exact Arena Text Overall source
-snapshot on Sep. 30.
+midpoint-to-depth gap is $10.09; the approximate whole-account
+depth-realizable value is $154.25. Duma resolved and closed on Sep. 21; the
+next active portfolio catalyst is the exact Arena Text Overall source snapshot
+on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
