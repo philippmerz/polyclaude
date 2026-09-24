@@ -19625,4 +19625,8 @@ already-falsified population heuristic. The focused scanner/watcher suite
 passes **124 tests**, changed scripts compile, and `git diff --check` is clean.
 DEC-0174 records the scaffolding decision. No trade, order change, transfer, or
 redemption occurred.
+Because `opportunity_watch.py` changed, I stopped its stale process and
+restarted it through the required absolute-path command. PID 2857585 postdates
+the script edit, the exact command-line count is one, and the four-daemon
+stale-code sweep is clean.
 Telegram message **1044** reported the scanner upgrade and reconciled state.
