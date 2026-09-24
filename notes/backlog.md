@@ -1,5 +1,32 @@
 # Polyclaude Backlog
 
+## Sep-24 14:11 current update
+
+- **OpenAI HLE adverse flow weighted; prior cut, position held:** public tape
+  after the 10:20 review contains four-wallet buying of 180.442 OpenAI >=55 YES
+  at .79000 VWAP and four NO-sale executions totaling 69.07 at .17552 VWAP.
+  The exact resolving API remains at 60 rows, with GPT-6 Astra still OpenAI's
+  maximum at 53.6 and no result at or above 55. Cut p(NO) **.30 -> .25** with
+  a .15-.38 range. The 19 NO shares have $4.75 central and $2.85 range-floor
+  terminal value versus a fresh **$1.83** fee-net exit. HOLD / no taker exit.
+  A vetted $6.50 maker rehearsal would rest at .11 and fit the nominal cluster
+  cap, but the pessimistic case supports only about $3 and the durable Dec. 31
+  book rule is HOLD-ONLY: no new entries or adds. No order was placed.
+- **Full check and discovery — no asset action:** ten legs have $135.97 cost,
+  $125.09 midpoint and $115.78 indicative fee-net depth. Authoritative
+  bankroll is **$163.64**, approximate whole-account depth-realizable value is
+  **$154.33**, cumulative realized P&L remains **-$2.11**, and deployable pUSD
+  is $19.391700. The only order is the zero-fill Trump-out 28-NO sell at .97.
+  State, redemption, UMA/Ostium, crux coverage, watchlist, decision clocks,
+  protected groups and all four exact-one daemons are clean.
+- Primary/thin discovery reviewed 1,000/43,054 active markets and emitted 3/66
+  proof-hashed context batches. No live-book monotonicity or consistency arb,
+  consensus-backed sports edge, macro setup or instance-level favorite fade
+  cleared the entry pipeline. A 13:38 consistency-scan exit was transient: the
+  bounded rerun completed cleanly with zero positive basket. Weekly P&L and
+  the Sep-20 world-state review remain current. Telegram **1045** reported the
+  material prior change; next dated catalyst is Sep. 30 Arena Text Overall.
+
 ## Sep-24 10:20 current update
 
 - **Periodic state — no trade:** ten legs have $135.97 cost, $129.29 midpoint
@@ -1439,7 +1466,7 @@
   value by $0.04 and the 3.039% Aave reserve adds about $0.16 expected carry to
   Dec 31. Unwrapped and supplied all 18.088 to Polygon Aave; aUSDC.e is 33.706,
   no Greenland exposure/order remains, and state audit is clean (DEC-0136).
-- **HLE current review:** the exact chart API remains active at 60 rows. Muse Spark 1.3 is still 43.2; Gemini remains below 50 at 46.2 and OpenAI remains below 55 at 53.6. Current `p_no` values are next Gemini Pro ≥40 debut .15, Gemini ≥50 .20, and OpenAI ≥55 .30. Fresh net exits about $3.28/$4.95/$3.86 remain far below central hold payouts $25.35/$20.42/$5.70. HOLD all; NO ADD, taker exit, or new maker order. Preserve the ≥.18 meaningful-depth trim-review trigger on the debut leg.
+- **HLE current review:** the exact chart API remains active at 60 rows. Muse Spark 1.3 is still 43.2; Gemini remains below 50 at 46.2 and OpenAI remains below 55 at 53.6. Current `p_no` values are next Gemini Pro ≥40 debut .15, Gemini ≥50 .20, and OpenAI ≥55 .25. Fresh net exits about $5.13/$5.99/$1.83 remain far below central hold payouts $25.35/$20.42/$4.75; OpenAI's $2.85 range-floor value also exceeds exit plus carry. HOLD all; NO ADD under the Dec. 31 hold-only rule, no taker exit, and no new maker order. Preserve the ≥.18 meaningful-depth trim-review trigger on the debut leg.
 - **Duma current review:** FOM's Sep-10 final forecast is United Russia 47–49%, KPRF 14–17%, LDPR 10–12%, New People 8–9%, and Just Russia 6–7%. Normalizing the five qualifying-party midpoints implies about 121 United Russia list seats; with APEK's 185–195 district range, that centers near 311 total, below the analogous VCIOM-centered estimate near 319. Reallocate the held buckets .15/.32/.25 → **.18/.35/.19** while retaining union **.72** because RASO's broad ranges and Turovsky's qualitative district-upside case preserve both tails. The complete exit is $12.54 versus $14.40 fair. NO ADD: .72 < .75 and a five-unit set costs .646 per payout dollar, above the .57 ceiling. Never transact one leg independently.
 - **MetaMask current review:** the direct Dec-31 launch sibling is near .06. MetaMask's Sep-9 corporate-separation announcement names no token and says nothing changes for users. Updated conditional priors are .064 YES above $700M, .957 NO above $3B, and .964 NO above $4B. The protected group remains HOLD/no add: $45.99 central fair and $44.75 rule floor exceed its $44.37 complete exit. Current component asks fail the add policy after carry, operational reserve, shared-model and separate-resolution risk.
 - **Hormuz-normal final:** Gamma finalized NO. DEC-0077/0081/0084/0086 are graded. The archived 0.003571 winning dust passes a redemption dry-run but is worth less than gas, so leave it unredeemed; no active resolution monitor remains.
@@ -1477,7 +1504,8 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   **Sep-12 source-change review:** the API changed 59→60 with Muse Spark 1.3 at 43.2. It remains unrelated to the held Gemini/OpenAI identities and changes no threshold or prior. Fresh full exits remain below central hold values. HOLD / NO ADD.
   **Sep-21 binary-risk review:** that review used next-Gemini-Pro ≥40 p_no **.18** (wide .06–.35), Gemini ≥50 **.30** (.10–.50), and OpenAI ≥55 **.30** (.12–.50). Treat every value as a probability of receiving the full share payout and its complement as terminal zero, never as expected price recovery. The two Gemini claims remained above current fee-net exits even at their recorded lower bounds. OpenAI is stress-sensitive: its current exit plus carry overtakes hold near p_no **.205**, versus .30 central. No source change or central-positive bid prefix exists, so HOLD CANDIDATE / NO ADD; re-run a full source and joint-cluster exit review if the honest posterior reaches .205 or lower, a qualifying OpenAI ≥55 row appears, or UMA status changes.
   **Sep-23 current-prior reconciliation:** the Sep-22 executed-information review moved Gemini ≥50 from .30 to **.25** while debut stayed **.18** and OpenAI ≥55 stayed **.30**. Thus .18/.25/.30 supersedes the Sep-10/11 and Sep-21 values above. Sep-23 fee-net exits are about $3.46/$8.23/$3.86 versus $30.42/$25.52/$5.70 central terminal value. HOLD / NO ADD.
-  **Sep-24 current-prior reconciliation:** complete tape history corrected the prior “no executed signal” assessment: one broad-ladder wallet bought about 136 debut YES and 240 Gemini ≥50 YES, with an additional 20-YES buy and 20-NO sale in ≥50. The source board and official Google release state remain unchanged, so this concentrated adverse signal cuts the Gemini priors to **.15/.20** rather than copying the market's roughly .02/.05 executable NO valuations; OpenAI ≥55 remains **.30**. Fresh exits of $3.28/$4.95/$3.86 remain below $25.35/$20.42/$5.70 central terminal value and below the Gemini range-floor values. HOLD / NO ADD.
+  **Sep-24 02:00 current-prior reconciliation:** complete tape history corrected the prior “no executed signal” assessment: one broad-ladder wallet bought about 136 debut YES and 240 Gemini ≥50 YES, with an additional 20-YES buy and 20-NO sale in ≥50. The source board and official Google release state remain unchanged, so this concentrated adverse signal cuts the Gemini priors to **.15/.20** rather than copying the market's roughly .02/.05 executable NO valuations; OpenAI ≥55 remained **.30** at that review. Fresh exits of $3.28/$4.95/$3.86 remained below $25.35/$20.42/$5.70 central terminal value and below the Gemini range-floor values. HOLD / NO ADD.
+  **Sep-24 14:00 OpenAI-flow reconciliation:** four wallets bought 180.442 OpenAI >=55 YES at .79000 VWAP and four executions sold 69.07 NO at .17552 VWAP after the 10:20 cutoff. The 60-row resolving source still tops OpenAI at Astra 53.6, so weight the dispersed executed pressure without treating it as a qualifying fact: OpenAI p_no **.30 -> .25** (.15-.38). Current HLE priors are therefore **.15/.20/.25**. Fee-net exits of about $5.13/$5.99/$1.83 remain below central values $25.35/$20.42/$4.75, and OpenAI's $2.85 range-floor value remains above exit plus carry. HOLD / NO ADD under the Dec. 31 hold-only rule.
   **Sep-2 material correction:** OpenAI's Apr-23 official GPT-5.5 table already reported HLE-with-tools scores of 52.2/52.1 and Pro scores of 57.2/58.7; an Apr-25 Wayback capture proves this predated the Aug-1 OpenAI entries. The prior claim that 49.5 was OpenAI's best score “on any surface” was false—it generalized a third-party standard/no-tools tracker beyond its scope. The exact agi.safe.ai board is still reachable and frozen, so the literal named-source branch remains, but the capability pillar is gone. OpenAI ≥50 p_no is **0.45 (was 0.59)** and ≥55 p_no is **0.50 (was 0.78)**. HOLD both because complete exits (~$1.59 / ~$2.81 net) remain far below raw and 10pp-haircut hold values; **NO ADD / NO FLIP**, and re-open immediately on a board row, criteria change, or on-point UMA precedent.
   **Sep-3 material correction:** the new benchmark-configuration sweep immediately found the Gemini analogue. Google's Feb-19 model card reports Gemini 3.1 Pro at **51.4 HLE with Search (blocklist) + Code**, and the official Deep Think page reports **53.4 with Search + code execution**. Both predate entry, so the claim that all public Gemini evidence remained below 50 was also false. Gemini ≥50 p_no is **0.55 (was 0.65)** with a roughly 0.40–0.70 interpretation range. The board is still reachable/frozen, the 59.01 NO exit for only about **$6.23**, and the 0.75 maker sell remains above revised fair: **HOLD / NO ADD / NO FLIP** (DEC-0119).
   **Sep-3 14:00 catalyst check:** Google released Gemini 3.8 **Flash** on Sep-2. Official ordinary HLE is **45.4%**, below 50; the separate **54.9% HLE-Verified** headline uses a materially revised 1,811-item set and discloses no tool configuration, so it is not safely agi.safe.ai HLE Accuracy. Flash is explicitly excluded from the next-Pro contract. The board remains unchanged; both Gemini priors/actions stay unchanged. Re-open on any board row or an UMA precedent treating HLE-Verified as equivalent.

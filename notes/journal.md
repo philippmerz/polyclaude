@@ -19630,3 +19630,58 @@ restarted it through the required absolute-path command. PID 2857585 postdates
 the script edit, the exact command-line count is one, and the four-daemon
 stale-code sweep is clean.
 Telegram message **1044** reported the scanner upgrade and reconciled state.
+
+## 2026-09-24 14:00–14:11 UTC — full check; OpenAI HLE flow cuts prior, no trade
+
+The eleven-step check completed once. Ten open legs reconcile at **$135.97
+cost, $125.09 midpoint and $115.78 indicative fee-net depth**. Authoritative
+whole-account bankroll is **$163.64**, approximate depth-realizable
+whole-account value is **$154.33**, cumulative realized P&L remains **-$2.11**,
+and deployable pUSD is $19.391700 with no BUY collateral reserved. The only
+live order remains the zero-fill Trump-out 28-NO maker sell at .97. Wallets,
+the zero-position Ostium sleeve, state audit, crux coverage, protected groups,
+watchlist, decision clocks and all four exact-one daemons are clean. UMA caught
+one real price move in OpenAI HLE >=55; redemption found no winning claim and
+submitted no transaction. Weekly P&L through Sep. 18 and the Sep. 20
+world-state review remain current.
+
+The only new news item was a general CFTC crypto-rule announcement with no
+held-position criterion impact. Opportunity logs contained no executable
+alert. One consistency watcher subprocess exited at 13:38, but the required
+fresh read-only rerun completed normally; daemon health remained exact-one and
+current, so this was a transient scan failure rather than a batching regression.
+
+The OpenAI HLE move had executed confirmation. Public tape after the 10:20
+cutoff records four wallets buying **180.442276 >=55 YES at .79000 VWAP** and
+four executions selling **69.07 NO at .17552 VWAP** between 11:31 and 13:51.
+Unlike the earlier single-wallet Gemini ladder flow, this is dispersed adverse
+price evidence. The exact resolving API nevertheless remains at 60 rows:
+GPT-6 Astra is still OpenAI's maximum at **53.6**, GPT-5.6 Sol/Luna are
+45.52/31.8, and no OpenAI result reaches 55. I therefore cut p(NO) **.30 ->
+.25**, range .15-.38, rather than copying the market or dismissing its tape.
+
+The fresh 19-share exit is about **$1.83 fee-net**, versus **$4.75** central
+and **$2.85** range-floor terminal value. Exit plus hurdle carry does not beat
+even the pessimistic hold, so there is no taker sale. Constrained Kelly flags a
+nominal $7.15 deficit, but the correlated cluster suppresses it above roughly
+$7.04. A vetted $6.50 maker rehearsal would rest at .11 fee-free and fit the
+nominal cap by only about $0.54; under p=.15 the appropriate half-Kelly size is
+only about $3. More decisively, the durable Dec. 31 book rule is **HOLD-ONLY:
+no new entries and no adds** because this book previously fell to roughly
+Aave-grade expected carry with tail risk. I placed no order and left all
+exposure unchanged.
+
+Discovery reviewed 1,000 primary and 43,054 thin-tail active markets, then
+emitted three primary and 66 thin-tail proof-hashed context batches with
+integrity checks passing; omitted filtered rows were not treated as negative
+evidence. Monotonicity produced one 5-year Treasury midpoint observation near
++1.05pp without an executable book. The bounded consistency rerun retained
+2,858 negRisk markets at its coverage cap, requested 20 candidate groups,
+validated 14 and found zero positive basket. Sports consensus left Packers
+-6.5 about 7.9pp worse than the market, five October Fed markets lacked an
+independent probability source, favorite-fade supplied no instance thesis,
+and both HLE/MetaMask cross-event checks were non-positive after fees. No new
+entry, arb, transfer, redemption, order change or decision record followed.
+Telegram message **1045** reported the material prior change and reconciled
+state. The next dated catalyst remains the Sep. 30 Arena Text Overall source
+snapshot.

@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-24 10:18 UTC
+## Last audited snapshot — 2026-09-24 14:11 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $135.97 |
-| Polymarket midpoint | $129.29 |
-| Indicative depth/fee value | $122.08 |
-| Authoritative whole-account mark | $167.65 |
+| Polymarket midpoint | $125.09 |
+| Indicative depth/fee value | $115.78 |
+| Authoritative whole-account mark | $163.64 |
 | Cumulative realized P&L | -$2.11 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -54,18 +54,18 @@ before-Jan. 1 vote cutoff. The MetaMask monotonicity structure is likewise
 managed only as a complete economic group.
 
 All other central-arithmetic exit screens remain holds after exit-cost,
-stressed-prior and joint portfolio-risk review. A corrected tape review found
-repeated YES buying across both Gemini markets, led by one broad-ladder wallet,
-so their p(NO) priors are now .15/.20. The resolving board and Google's
-official release surfaces remain unchanged; $45.77 of central terminal value
-still exceeds $15.39 of fee-net exits. Apple NO was trimmed by
-25.08 shares when only that fee-net bid prefix moved above its unchanged .35
-fair value; the retained 8.925 shares have about $3.12 of central value versus
-$2.51 from an immediate sale. The only live order is a zero-fill maker sell
-for **28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
-midpoint-to-depth gap is $7.21; the approximate whole-account depth-realizable
-value is $160.44. The next dated material clock is the exact
-Arena Text Overall source snapshot on Sep. 30.
+stressed-prior and joint portfolio-risk review. Executed adverse flow across
+the three HLE markets moved their p(NO) priors to **.15/.20/.25** for next
+Gemini Pro debut, Gemini >=50 and OpenAI >=55. The exact 60-row source still
+shows Gemini below 50 and OpenAI below 55; their $50.52 of central terminal
+value exceeds $12.95 of current fee-net exits. The OpenAI leg also remains a
+hold at its .15 range floor, and the Dec. 31 hold-only rule blocks enlargement.
+Apple's retained 8.925 NO shares have about $3.12 of central value versus $2.60
+from an immediate sale. The only live order is a zero-fill maker sell for
+**28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
+midpoint-to-depth gap is $9.30; the approximate whole-account depth-realizable
+value is $154.33. The next dated material clock is the exact Arena Text Overall
+source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
