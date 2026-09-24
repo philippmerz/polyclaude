@@ -1,5 +1,25 @@
 # Polyclaude Backlog
 
+## Sep-24 10:20 current update
+
+- **Periodic state — no trade:** ten legs have $135.97 cost, $129.29 midpoint
+  and $122.08 indicative fee-net depth. Authoritative bankroll is **$167.65**,
+  approximate whole-account depth-realizable value is **$160.44**, cumulative
+  realized P&L remains **-$2.11**, and deployable pUSD is $19.391700. The sole
+  live order remains the zero-fill Trump-out 28-NO sell at .97. No new alert,
+  fill, settlement, UMA/watchlist change, or due portfolio action appeared;
+  all direct and protected-group exit screens remain holds. The next dated
+  catalyst is the Sep. 30 Arena Text Overall snapshot.
+- **CLOB request batching shipped (DEC-0174):** added a shared read-only
+  `POST /books` transport and moved event monotonicity, negRisk consistency,
+  favorite-fade, and cross-event-bound discovery to it. Requests chunk at the
+  observed 500-unique-token venue limit; responses join only by `asset_id`.
+  Missing, unexpected, duplicate, malformed, stale, crossed, or
+  token/condition-conflicting rows fail closed. Outputs explicitly treat batch
+  snapshots as non-atomic and provisional, while execution-adjacent paths keep
+  the mandatory fresh singular rewalk. Focused validation passes **124 tests**;
+  live smoke scans produced no actionable entry or trade.
+
 ## Sep-24 02:10 current update
 
 - **Missed Gemini flow corrected; priors cut, positions held:** complete public
@@ -115,12 +135,9 @@
   strong per-stratum recall and measurable work reduction before any routing
   role. Never let either suppress held-position alerts, deterministic arb/math,
   changed criteria, incomplete inputs or frontier review.
-- **CLOB request batching — next bounded scanner optimization:** the four broad
-  book scanners still issue singular `/book` requests. A shared POST `/books`
-  transport could remove roughly 75–99% of requests. Implement only with
-  response mapping by `asset_id` (the endpoint may omit invalid IDs), strict
-  per-book validation, fail-closed missing rows and a final fresh rewalk before
-  action; batch snapshots are not atomic execution quotes.
+- **CLOB request batching — completed Sep. 24:** the bounded transport and four
+  broad-scanner migrations are recorded in the current update above and
+  DEC-0174.
 
 ## Sep-22 22:09 current update
 

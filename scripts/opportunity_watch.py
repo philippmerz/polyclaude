@@ -169,7 +169,7 @@ def _review_descriptor(key: str, text: str) -> tuple[str, float | None]:
         return text, None
     edge = float(match.group(1))
     identity = re.sub(
-        r"(?:\s+[+-]?\d+(?:\.\d+)?pp){1,2}\s+REAL ARB.*$",
+        r"(?:\s+[+-]?\d+(?:\.\d+)?pp){1,2}\s+(?:REAL|PROVISIONAL) ARB.*$",
         "",
         match.group(2),
     )
@@ -777,7 +777,7 @@ def run_pair_arb(state: dict) -> None:
             continue
         n_exec = None
         for line in out.splitlines():
-            if "executable after live-CLOB walk" in line:
+            if "provisional after batched live-CLOB walk" in line:
                 parts = line.replace("#", " ").split(";")
                 if len(parts) > 1:
                     tok = parts[1].strip().split()[0]
@@ -787,7 +787,9 @@ def run_pair_arb(state: dict) -> None:
             continue
         if n_exec > 0:
             _alert(state, t["key"],
-                   f"pair-arb EXECUTABLE after live books + fees: {t['key']}. {t.get('note','')}",
+                   f"pair-arb REVALIDATION candidate after a non-atomic batched book "
+                   f"snapshot + fees: {t['key']}. Freshly rewalk both legs before "
+                   f"any action. {t.get('note','')}",
                    actionable=True)
         else:
             _log(f"pair_arb {t['key']}: 0 executable (bound may be violated on mids; books say no)")
@@ -836,14 +838,18 @@ def run_monotonicity(state: dict) -> None:
     except Exception as e:
         _log(f"monotonicity run failed: {e}")
         return
-    # 2026-07-23: only fire on REAL (live-CLOB-validated) arbs, never on
-    # midpoint mirages. The scanner now prints "... ; M REAL after live-CLOB
-    # walk"; parse M. A 3-hour false-positive storm (Elon-tweet mid-flag,
+    # 2026-07-23: only fire on positive live-CLOB-screened candidates, never on
+    # midpoint mirages. The scanner now prints an explicit provisional count
+    # from a non-atomic batch; parse it and require a fresh rewalk in review. A
+    # 3-hour false-positive storm (Elon-tweet mid-flag,
     # -10.95pp executable) is exactly what this prevents.
     import re as _re
-    m = _re.search(r";\s*(\d+)\s+REAL after live-CLOB walk", out)
+    m = _re.search(
+        r";\s*(\d+)\s+PROVISIONAL after batched CLOB walk; REVALIDATION REQUIRED",
+        out,
+    )
     if m is None:
-        _log("monotonicity: no REAL-count line parsed (scanner output format?)")
+        _log("monotonicity: no provisional-count line parsed (scanner output format?)")
         return
     n_real = int(m.group(1))
     if n_real <= 0:
@@ -861,7 +867,7 @@ def run_monotonicity(state: dict) -> None:
     MIN_ARB_EDGE_PP = 2.0
     best = None
     for line in out.splitlines():
-        if "REAL ARB" not in line:
+        if "PROVISIONAL ARB" not in line:
             continue
         edges = _re.findall(r"([+-]?\d+\.\d+)pp", line)
         edge = float(edges[-1]) if edges else 0.0
@@ -875,15 +881,17 @@ def run_monotonicity(state: dict) -> None:
              f"{MIN_ARB_EDGE_PP}pp floor — logged, not firing: {line[:120]}")
         return
     full_text = (
-        f"monotonicity: {n_real} EXECUTABLE arb(s) after live-CLOB walk, "
+        f"monotonicity: {n_real} REVALIDATION candidate(s) after a non-atomic "
+        f"batched CLOB walk, "
         f"best {edge:+.2f}pp — {line}"
     )
     fingerprint, _ = _review_descriptor("monotonicity-arb", full_text)
     _alert(
         state,
         "monotonicity-arb",
-        f"monotonicity: {n_real} EXECUTABLE arb(s) after live-CLOB walk, "
-        f"best {edge:+.2f}pp — {line[:140]}",
+        f"monotonicity: {n_real} REVALIDATION candidate(s) after a non-atomic "
+        f"batched CLOB walk, best {edge:+.2f}pp — {line[:140]}. Freshly rewalk "
+        "both legs before any action.",
         actionable=True,
         review_fingerprint=fingerprint,
         review_metric=edge,

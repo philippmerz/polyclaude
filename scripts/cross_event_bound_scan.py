@@ -47,16 +47,53 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import sys
+import time
 
 import httpx
 
+from clob_books import fetch_books
 from pm_fees import fee_per_share_at
 
 from event_monotonicity_scan import parse_threshold
 
 GAMMA = "https://gamma-api.polymarket.com"
-CLOB = "https://clob.polymarket.com"
+MAX_BOOK_AGE_SECONDS = 120.0
+
+
+def _validated_book(book: dict | None, token: str, condition_id: str) -> dict | None:
+    """Strictly validate one fresh batched book; missing rows fail closed."""
+    if (not isinstance(book, dict) or book.get("asset_id") != token
+            or str(book.get("market") or "").casefold() != condition_id.casefold()):
+        return None
+    try:
+        age = time.time() - float(book["timestamp"]) / 1000
+        if age < -30 or age > MAX_BOOK_AGE_SECONDS:
+            return None
+        def levels(raw):
+            if not isinstance(raw, list):
+                return None
+            out = []
+            seen = set()
+            for level in raw:
+                if not isinstance(level, dict):
+                    return None
+                price, size = float(level["price"]), float(level["size"])
+                if (not math.isfinite(price) or not math.isfinite(size)
+                        or not 0 < price < 1 or size <= 0 or price in seen):
+                    return None
+                seen.add(price)
+                out.append((price, size))
+            return out
+        asks, bids = levels(book["asks"]), levels(book["bids"])
+        if asks is None or bids is None:
+            return None
+        if asks and bids and max(p for p, _ in bids) >= min(p for p, _ in asks):
+            return None
+        return {"asks": asks, "bids": bids}
+    except (KeyError, TypeError, ValueError, OverflowError):
+        return None
 
 
 def _rungs(slug: str) -> dict[float, dict]:
@@ -77,30 +114,35 @@ def _rungs(slug: str) -> dict[float, dict]:
             "vol24": float(m.get("volume24hr") or 0),
             "tokens": json.loads(m.get("clobTokenIds") or "[]"),
             "outcomes": json.loads(m.get("outcomes") or "[]"),
+            "condition_id": str(m.get("conditionId") or ""),
             "slug": m.get("slug"),
         }
     return out
 
 
-def _ask(row: dict, side: str) -> tuple[float | None, float]:
+def _ask(row: dict, side: str, books: dict[str, dict | None]) -> tuple[float | None, float]:
     """Best ask for one side, plus depth in shares."""
     try:
         tok = row["tokens"][row["outcomes"].index(side)]
-        book = httpx.get(f"{CLOB}/book", params={"token_id": tok}, timeout=25).json()
-        asks = sorted(book.get("asks", []), key=lambda x: float(x["price"]))
+        book = _validated_book(books.get(tok), tok, row["condition_id"])
+        if book is None:
+            return None, 0.0
+        asks = sorted(book.get("asks", []), key=lambda x: x[0])
         if not asks:
             return None, 0.0
-        return float(asks[0]["price"]), float(asks[0]["size"])
+        return asks[0][0], asks[0][1]
     except Exception:
         return None, 0.0
 
 
-def _bid(row: dict, side: str) -> float | None:
+def _bid(row: dict, side: str, books: dict[str, dict | None]) -> float | None:
     try:
         tok = row["tokens"][row["outcomes"].index(side)]
-        book = httpx.get(f"{CLOB}/book", params={"token_id": tok}, timeout=25).json()
-        bids = sorted(book.get("bids", []), key=lambda x: -float(x["price"]))
-        return float(bids[0]["price"]) if bids else None
+        book = _validated_book(books.get(tok), tok, row["condition_id"])
+        if book is None:
+            return None
+        bids = sorted(book.get("bids", []), key=lambda x: -x[0])
+        return bids[0][0] if bids else None
     except Exception:
         return None
 
@@ -113,6 +155,7 @@ def _market(slug: str) -> dict | None:
     return {"yes_mid": float(json.loads(m["outcomePrices"])[0]),
             "tokens": json.loads(m.get("clobTokenIds") or "[]"),
             "outcomes": json.loads(m.get("outcomes") or "[]"),
+            "condition_id": str(m.get("conditionId") or ""),
             "question": m.get("question"), "vol24": float(m.get("volume24hr") or 0)}
 
 
@@ -133,25 +176,31 @@ def implication_pair(a_slug: str, b_slug: str, fee_rate: float, min_edge_pp: flo
     gap = (A["yes_mid"] - B["yes_mid"]) * 100
     print(f"\nbound: P(A) <= P(B).  mid gap = {gap:+.2f}pp "
           f"({'VIOLATION' if gap > 0 else 'consistent'})")
-    a_ask, a_dep = _ask(A, "No")
-    b_ask, b_dep = _ask(B, "Yes")
+    tokens = [
+        A["tokens"][A["outcomes"].index("No")],
+        B["tokens"][B["outcomes"].index("Yes")],
+    ]
+    books = fetch_books(dict.fromkeys(tokens), timeout=25)
+    a_ask, a_dep = _ask(A, "No", books)
+    b_ask, b_dep = _ask(B, "Yes", books)
     if a_ask is None or b_ask is None:
         print("-> NO BOOK on one leg — mid-only, not executable")
         return 0
     fees = fee_per_share_at(fee_rate, a_ask) + fee_per_share_at(fee_rate, b_ask)
     net = (1.0 - (a_ask + b_ask) - fees) * 100
-    ab, bb = _bid(A, "No"), _bid(B, "Yes")
+    ab, bb = _bid(A, "No", books), _bid(B, "Yes", books)
     maker_cost = (ab or 0) + 0.01 + (bb or 0) + 0.01
     print(f"A-NO ask {a_ask:.3f} x{a_dep:g}   B-YES ask {b_ask:.3f} x{b_dep:g}")
     print(f"TAKER: cost {a_ask + b_ask:.4f} + fees {fees:.4f} -> net {net:+.2f}pp"
-          f"   ({'REAL ARB' if net >= min_edge_pp else 'dead — spread/fees eat it'})")
+          f"   ({'PROVISIONAL ARB' if net >= min_edge_pp else 'dead — spread/fees eat it'})")
     print(f"MAKER: both rested at bid+tick ~{maker_cost:.4f} -> net {(1 - maker_cost) * 100:+.2f}pp"
           f"   (fill NOT guaranteed; a half-fill is an outright directional position)")
     # Machine-parseable summary, same shape as the umbrella mode's, so the
     # daemon can gate on the EXECUTABLE number rather than a mid violation.
     hit = 1 if net >= min_edge_pp else 0
     print(f"\n# {1 if net > 0 else 0} mid violation(s); {hit} "
-          f"executable after live-CLOB walk + fees (floor {min_edge_pp:.1f}pp)")
+          f"provisional after batched live-CLOB walk + fees (floor {min_edge_pp:.1f}pp); "
+          "REVALIDATION REQUIRED")
     return 0
 
 
@@ -184,8 +233,20 @@ def main() -> int:
     fee_rate = args.fee_bps / 10000.0
     n_mid = n_real = 0
 
+    relevant_tokens = []
+    subsets = {sub_slug: _rungs(sub_slug) for sub_slug in args.subset}
+    for sub_slug, sub in subsets.items():
+        for bar in set(umb) & set(sub):
+            relevant_tokens.extend([
+                umb[bar]["tokens"][umb[bar]["outcomes"].index("Yes")],
+                sub[bar]["tokens"][sub[bar]["outcomes"].index("No")],
+                umb[bar]["tokens"][umb[bar]["outcomes"].index("No")],
+                sub[bar]["tokens"][sub[bar]["outcomes"].index("Yes")],
+            ])
+    books = fetch_books(dict.fromkeys(relevant_tokens), timeout=25)
+
     for sub_slug in args.subset:
-        sub = _rungs(sub_slug)
+        sub = subsets[sub_slug]
         label = sub_slug.split("-on-humanitys")[0][:34]
         for bar in sorted(set(umb) & set(sub)):
             u, s = umb[bar], sub[bar]
@@ -196,9 +257,9 @@ def main() -> int:
             print(f"\n[MID VIOLATION {gap:+.1f}pp] bar>={bar:g}  {label}")
             print(f"   umbrella YES mid {u['yes_mid']:.3f} (v24 ${u['vol24']:.0f})  <  "
                   f"subset YES mid {s['yes_mid']:.3f} (v24 ${s['vol24']:.0f})")
-            ua, ud = _ask(u, "Yes")
-            sa, sd = _ask(s, "No")
-            ub, sb = _bid(u, "Yes"), _bid(s, "No")
+            ua, ud = _ask(u, "Yes", books)
+            sa, sd = _ask(s, "No", books)
+            ub, sb = _bid(u, "Yes", books), _bid(s, "No", books)
             if ua is None or sa is None:
                 print("   -> NO BOOK on one leg — mid-only artifact, not executable")
                 continue
@@ -208,14 +269,14 @@ def main() -> int:
             maker_net = (1.0 - maker_cost) * 100
             print(f"   umbrella-YES ask {ua:.3f} x{ud:g}   subset-NO ask {sa:.3f} x{sd:g}")
             print(f"   TAKER: cost {ua + sa:.4f} + fees {fees:.4f} -> net {taker_net:+.2f}pp"
-                  f"   ({'REAL ARB' if taker_net >= args.min_edge_pp else 'dead — spread/fees eat it'})")
+                  f"   ({'PROVISIONAL ARB' if taker_net >= args.min_edge_pp else 'dead — spread/fees eat it'})")
             print(f"   MAKER: resting both at bid+tick costs ~{maker_cost:.4f} -> net {maker_net:+.2f}pp"
                   f"   (fill NOT guaranteed; a half-fill is an outright directional position)")
             if taker_net >= args.min_edge_pp:
                 n_real += 1
 
-    print(f"\n# {n_mid} mid violation(s); {n_real} executable after live-CLOB walk + fees "
-          f"(floor {args.min_edge_pp:.1f}pp)")
+    print(f"\n# {n_mid} mid violation(s); {n_real} provisional after batched live-CLOB walk + fees "
+          f"(floor {args.min_edge_pp:.1f}pp); REVALIDATION REQUIRED")
     return 0
 
 

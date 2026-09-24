@@ -31,6 +31,13 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 - `crypto_status.py` — multi-chain balance reader for either sleeve. Subcommand: `crypto` (default) or `polymarket`.
 - `discover_markets.py` — paginated Polymarket gamma-api scan. Snapshots into `data/snapshots/`.
 - `market_context_batches.py` — deterministic offline organizer for discovery snapshots. It compares the latest two snapshots of one scan kind, ranks material identity/criteria/quote changes, keeps observed rows from an exact Gamma event together, and emits proof-hashed JSON or Markdown batches. It never calls the network, a model, or execution; each item still requires exact-criteria review and a fresh live-book walk.
+- `clob_books.py` — strict read-only Polymarket `POST /books` transport. It chunks requests at 500 unique token IDs, maps responses only by `asset_id`, preserves omitted requested IDs as missing, and rejects malformed, duplicate, or unexpected rows.
+
+`event_monotonicity_scan.py`, `polymarket_consistency_scan.py`,
+`favorite_fade_scan.py`, and `cross_event_bound_scan.py` use that transport for
+broad discovery walks while retaining their own identity, freshness, fee, and
+depth validation. A batch is not an atomic execution quote: positive output is
+provisional and requires an independent fresh rewalk before any action.
 
 ## On-chain operations
 

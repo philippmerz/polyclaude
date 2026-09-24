@@ -51,6 +51,7 @@ from pathlib import Path
 import httpx
 
 import _paths as _secrets
+from clob_books import fetch_books
 
 _secrets.install_scrubbing_excepthook()
 
@@ -823,15 +824,17 @@ def _orderbook(token_id: str, condition_id: str,
                expected_min_size: float,
                expected_tick_size: float,
                client: httpx.Client | None = None,
-               deadline: float | None = None) -> dict:
+               deadline: float | None = None,
+               payload: dict | None = None) -> dict:
     """Fetch and strictly validate one current CLOB token book."""
-    getter = client.get if client is not None else httpx.get
-    r = getter(
-        f"{POLYMARKET_CLOB}/book", params={"token_id": token_id},
-        timeout=_remaining_timeout(deadline, 10.0),
-    )
-    r.raise_for_status()
-    payload = r.json()
+    if payload is None:
+        getter = client.get if client is not None else httpx.get
+        r = getter(
+            f"{POLYMARKET_CLOB}/book", params={"token_id": token_id},
+            timeout=_remaining_timeout(deadline, 10.0),
+        )
+        r.raise_for_status()
+        payload = r.json()
     _check_deadline(deadline)
     if not isinstance(payload, dict):
         raise ValueError("CLOB book is not an object")
@@ -975,22 +978,39 @@ def live_quote_group(members: list[tuple[dict, float]], action: str,
     if target_shares + 1e-9 < group_min_size:
         return {"live_skipped": "target is below a member minimum order size"}
 
-    side_quotes = []
+    # One public POST /books replaces one GET /book per basket leg.  The
+    # transport maps strictly by asset_id and represents omissions as None;
+    # every payload still passes the scanner's full identity/freshness/depth
+    # validator below.  This snapshot is advisory and remains non-atomic.
+    requested_tokens: list[str] = []
     for m, _yp in members:
+        tokens = m["clobTokenIds"]
+        requested_tokens.append(str(
+            tokens[1] if action.startswith("buy_all_no") else tokens[0]
+        ))
+    try:
+        raw_books = fetch_books(
+            requested_tokens, client=client, deadline=deadline, timeout=10.0,
+        )
+        _check_deadline(deadline)
+    except Exception as exc:
+        return {"live_skipped": f"batch book fetch failed: {exc}"}
+
+    side_quotes = []
+    for (m, _yp), token in zip(members, requested_tokens, strict=True):
         try:
             _check_deadline(deadline)
         except TimeoutError as exc:
             return {"live_skipped": str(exc)}
-        tokens = m["clobTokenIds"]
-        # action == buy_all_no  → buy NO token (index 1)
-        # action == buy_all_yes → buy YES token (index 0)
-        token = tokens[1] if action.startswith("buy_all_no") else tokens[0]
         min_size = _finite_number(m.get("orderMinSize"), "orderMinSize")
         try:
+            payload = raw_books.get(token)
+            if payload is None:
+                raise ValueError("requested asset missing from CLOB /books response")
             ob = _orderbook(
                 token, m["conditionId"], min_size,
                 _finite_number(m.get("clobTickSize"), "CLOB tick size"),
-                client=client, deadline=deadline,
+                client=client, deadline=deadline, payload=payload,
             )
         except Exception as exc:
             return {"live_skipped": f"book validation failed for {m['id']}: {exc}"}

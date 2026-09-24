@@ -1,5 +1,5 @@
 {
-  "next_id": 174,
+  "next_id": 175,
   "decisions": [
     {
       "id": 1,
@@ -3459,6 +3459,27 @@
         "partial-exit"
       ],
       "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 174,
+      "timestamp": "2026-09-24T10:18:37Z",
+      "type": "scaffolding",
+      "thesis": "Replace singular CLOB book reads in broad discovery scanners with bounded POST /books batches keyed only by asset_id. Strict response and per-book identity validation, explicit missing rows, conflict rejection, and execution-path revalidation preserve fail-closed behavior while materially reducing request count and scan latency.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-24, broad scans use no more than one CLOB request per 500 unique tokens, never join a book by response position, reject omissions or conflicting identities, and no position is executed from a non-atomic batch snapshot without a fresh rewalk.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-24",
+      "tags": [
+        "scanner",
+        "clob",
+        "batching",
+        "fail-closed",
+        "revalidation"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

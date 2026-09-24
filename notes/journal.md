@@ -19590,3 +19590,39 @@ change, transfer, redemption or decision record occurred. The next dated
 catalyst is the exact Arena Text Overall snapshot on Sep. 30.
 Telegram message **1043** reported the material tape correction, prior cuts and
 reconciled portfolio state.
+
+## 2026-09-24 10:00–10:20 UTC — periodic review; CLOB batching shipped, no trade
+
+The bounded review found no post-02:10 portfolio event. Ten open legs reconcile
+at **$135.97 cost, $129.29 midpoint and $122.08 indicative fee-net depth**.
+Authoritative whole-account bankroll is **$167.65**, approximate
+depth-realizable whole-account value is **$160.44**, cumulative realized P&L
+remains **-$2.11**, and deployable pUSD remains $19.391700. The sole live order
+is still the zero-fill Trump-out 28-NO maker sell at .97. UMA and watchlist
+checks are clean. Fresh direct and protected-group exit screens remain holds;
+the midpoint rise since 02:10 is unrealized market movement, not a fill or
+thesis change. No new news or opportunity alert requires action. The next dated
+catalyst remains the exact Arena Text Overall snapshot on Sep. 30.
+
+I completed the pending scanner transport improvement. `scripts/clob_books.py`
+now batches public CLOB reads in chunks of at most 500 unique tokens, maps every
+returned row strictly by `asset_id`, represents an omitted requested asset as
+missing, and rejects malformed, duplicate, or unexpected rows. Event
+monotonicity, negRisk consistency, favorite-fade, and cross-event-bound scans
+now use it while retaining their existing per-book identity, freshness, fee,
+minimum-size, crossed-book, and depth checks. A second review caught and fixed
+two pre-handoff gaps: scans larger than 500 tokens now chunk instead of losing
+all books, and a token claimed by conflicting condition IDs is dropped before
+fetch rather than accepting the last mapping.
+
+Because batch timestamps can differ, scanner positives are now explicitly
+**provisional** and tagged `snapshot_atomic: false` / `requires_revalidation`;
+the opportunity watcher requests a fresh two-leg review, and the singular
+execution-adjacent rewalk remains mandatory. Live smoke runs found one
+sub-floor Treasury observation and no actionable monotonicity, consistency, or
+cross-event opportunity; favorite-fade remained a browse-only hint from its
+already-falsified population heuristic. The focused scanner/watcher suite
+passes **124 tests**, changed scripts compile, and `git diff --check` is clean.
+DEC-0174 records the scaffolding decision. No trade, order change, transfer, or
+redemption occurred.
+Telegram message **1044** reported the scanner upgrade and reconciled state.

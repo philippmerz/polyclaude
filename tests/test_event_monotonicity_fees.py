@@ -111,6 +111,99 @@ def test_live_clob_validation_uses_each_rows_full_fee_schedule(monkeypatch) -> N
     assert result["exec_cost"] == round(0.4 + 0.7 + expected, 4)
 
 
+def test_batch_book_fetch_maps_by_asset_and_fails_closed(monkeypatch) -> None:
+    now_ms = int(datetime.now(timezone.utc).timestamp() * 1000)
+    payloads = {
+        "101": {
+            "asset_id": "101", "market": "condition-a", "timestamp": now_ms,
+            "min_order_size": "5", "asks": [{"price": "0.40", "size": "5"}],
+            "bids": [],
+        },
+        # The endpoint is allowed to omit a requested asset.
+        "202": None,
+        # A malformed returned row must not become executable.
+        "303": {
+            "asset_id": "303", "market": "condition-c", "timestamp": now_ms,
+            "min_order_size": "5", "asks": [{"price": "bad", "size": "5"}],
+            "bids": [],
+        },
+    }
+    calls = []
+
+    def fetch(tokens):
+        calls.append(tokens)
+        return payloads
+
+    monkeypatch.setattr(scanner, "fetch_books", fetch)
+    result = scanner._fetch_validated_clob_books({
+        "101": "condition-a", "202": "condition-b", "303": "condition-c",
+    })
+
+    assert calls == [["101", "202", "303"]]
+    assert set(result) == {"101"}
+    assert result["101"]["asks"] == [(Decimal("0.40"), Decimal("5"))]
+
+
+def test_main_fetches_one_batch_for_all_candidate_legs(monkeypatch, capsys) -> None:
+    rows = [_market(f"rung-{bar}", bar, yes, None) for bar, yes in (
+        (10, 0.20), (20, 0.40), (30, 0.60),
+    )]
+    for index, row in enumerate(rows):
+        row["clobTokenIds"] = json.dumps([str(100 + index * 2), str(101 + index * 2)])
+        row["conditionId"] = f"condition-{index}"
+        row["orderMinSize"] = 5
+    event = {"id": "batch-event", "slug": "batch-event",
+             "title": "Threshold ladder", "markets": rows}
+    monkeypatch.setattr(scanner, "fetch_events", lambda **_kwargs: [event])
+    requested = []
+    monkeypatch.setattr(
+        scanner, "_fetch_validated_clob_books",
+        lambda mapping: requested.append(mapping) or {},
+    )
+    monkeypatch.setattr(
+        scanner, "_executable_monotonic_arb",
+        lambda *_args, **_kwargs: None,
+    )
+    monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py", "--json"])
+
+    assert scanner.main() == 0
+    assert len(requested) == 1
+    # Three pairwise violations share the middle/outer token roles; only the
+    # selected YES/NO legs are requested and the map is deduplicated by asset.
+    assert set(requested[0]) == {"100", "102", "103", "105"}
+    capsys.readouterr()
+
+
+def test_batch_token_conditions_drops_conflicting_asset_identity() -> None:
+    early_a = _market("early-a", 10, 0.4, None)
+    late_a = _market("late-a", 20, 0.3, None)
+    early_b = _market("early-b", 10, 0.4, None)
+    late_b = _market("late-b", 20, 0.3, None)
+    early_a.update({"clob_tokens": json.dumps(["900", "101"]),
+                    "condition_id": "condition-a"})
+    late_a.update({"clob_tokens": json.dumps(["201", "202"]),
+                   "condition_id": "condition-a"})
+    early_b.update({"clob_tokens": json.dumps(["900", "301"]),
+                    "condition_id": "condition-b"})
+    late_b.update({"clob_tokens": json.dumps(["401", "402"]),
+                   "condition_id": "condition-b"})
+    # The selected earlier leg is NO, so make that the conflicting token.
+    early_a["clob_tokens"] = json.dumps(["101", "900"])
+    early_b["clob_tokens"] = json.dumps(["301", "900"])
+    violations = [
+        {"_row_early": early_a, "_row_late": late_a},
+        {"_row_early": early_b, "_row_late": late_b},
+    ]
+
+    result = scanner._batch_token_conditions(violations)
+
+    assert "900" not in result
+    assert result == {
+        "201": "condition-a",
+        "401": "condition-b",
+    }
+
+
 def test_threshold_group_key_preserves_dimension_and_rejects_ambiguous_suffix() -> None:
     usd_m = scanner._parse_threshold_detail("Will Alpha be $50M or higher?")
     usd_b = scanner._parse_threshold_detail("Will Alpha be $1B or higher?")
@@ -308,7 +401,7 @@ def test_main_preserves_unknown_fee_field_presence(monkeypatch, capsys) -> None:
     monkeypatch.setattr(
         scanner,
         "_executable_monotonic_arb",
-        lambda early, late: captured.extend([early, late]) or None,
+        lambda early, late, **_kwargs: captured.extend([early, late]) or None,
     )
     monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py", "--json"])
 
@@ -371,7 +464,7 @@ def test_threshold_pass_uses_sorted_hard_and_easy_rows_for_fees(
         "markets": [easy, hard, middle],
     }
     monkeypatch.setattr(scanner, "fetch_events", lambda **_kwargs: [event])
-    monkeypatch.setattr(scanner, "_executable_monotonic_arb", lambda *_args: None)
+    monkeypatch.setattr(scanner, "_executable_monotonic_arb", lambda *_args, **_kwargs: None)
     monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py", "--json"])
 
     assert scanner.main() == 0
@@ -401,7 +494,7 @@ def test_threshold_pass_groups_by_child_proposition_not_event_membership(
         "markets": [alpha_easy, beta, alpha_hard],
     }
     monkeypatch.setattr(scanner, "fetch_events", lambda **_kwargs: [event])
-    monkeypatch.setattr(scanner, "_executable_monotonic_arb", lambda *_args: None)
+    monkeypatch.setattr(scanner, "_executable_monotonic_arb", lambda *_args, **_kwargs: None)
     monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py", "--json"])
 
     assert scanner.main() == 0
@@ -470,6 +563,7 @@ def test_date_pass_rejects_different_entities_inside_one_category_event(
     assert scanner.main() == 0
     payload = json.loads(capsys.readouterr().out)
     assert payload["violations"] == []
+    assert payload["provisional_positive"] == []
     assert payload["real_executable"] == []
 
 
@@ -490,7 +584,7 @@ def test_date_pass_keeps_true_same_proposition_ladder(monkeypatch, capsys) -> No
         ],
     }
     monkeypatch.setattr(scanner, "fetch_events", lambda **_kwargs: [event])
-    monkeypatch.setattr(scanner, "_executable_monotonic_arb", lambda *_args: None)
+    monkeypatch.setattr(scanner, "_executable_monotonic_arb", lambda *_args, **_kwargs: None)
     monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py", "--json"])
 
     assert scanner.main() == 0

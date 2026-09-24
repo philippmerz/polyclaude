@@ -37,13 +37,16 @@ from __future__ import annotations
 import argparse
 import ast
 import json
+import math
 import sys
 from datetime import datetime, timezone
 
 import httpx
 
+from clob_books import fetch_books
+
 GAMMA = "https://gamma-api.polymarket.com/markets"
-CLOB_BOOK = "https://clob.polymarket.com/book"
+MAX_BOOK_AGE_SECONDS = 120.0
 
 # Empirical favorite-side win-rate by live-ask bucket (from the N=1513 7d backtest).
 # Used as the expected resolution probability for a market whose favorite trades there.
@@ -118,18 +121,40 @@ def fetch_active(max_pages: int, client: httpx.Client) -> list:
     return out
 
 
-def best_ask(token: str, client: httpx.Client) -> tuple[float | None, float]:
+def _validated_book(book: dict | None, token: str, condition_id: str) -> dict | None:
+    """Validate one batched book before using its ask/depth advisory quote."""
+    if (not isinstance(book, dict) or book.get("asset_id") != token
+            or str(book.get("market") or "").casefold() != condition_id.casefold()):
+        return None
     try:
-        b = client.get(CLOB_BOOK, params={"token_id": token}, timeout=15).json()
-    except Exception:
-        return None, 0.0
-    asks = b.get("asks", []) if isinstance(b, dict) else []
-    if not asks:
-        return None, 0.0
-    best = min(asks, key=lambda a: float(a["price"]))
-    bp = float(best["price"])
-    depth = sum(float(a["size"]) for a in asks if float(a["price"]) <= bp + 0.02)
-    return bp, depth
+        age = datetime.now(timezone.utc).timestamp() - float(book["timestamp"]) / 1000
+        if age < -30 or age > MAX_BOOK_AGE_SECONDS:
+            return None
+        asks = book["asks"]
+        bids = book["bids"]
+        if not isinstance(asks, list) or not isinstance(bids, list):
+            return None
+        def levels(raw):
+            out = []
+            seen = set()
+            for level in raw:
+                if not isinstance(level, dict):
+                    return None
+                price, size = float(level["price"]), float(level["size"])
+                if (not math.isfinite(price) or not math.isfinite(size)
+                        or not 0 < price < 1 or size <= 0 or price in seen):
+                    return None
+                seen.add(price)
+                out.append((price, size))
+            return out
+        asks_v, bids_v = levels(asks), levels(bids)
+        if asks_v is None or bids_v is None:
+            return None
+        if asks_v and bids_v and max(p for p, _ in bids_v) >= min(p for p, _ in asks_v):
+            return None
+        return {"asks": asks_v, "bids": bids_v}
+    except (KeyError, TypeError, ValueError, OverflowError):
+        return None
 
 
 def main() -> int:
@@ -199,6 +224,7 @@ def main() -> int:
             cands.append({
                 "q": m.get("question", ""), "fav_is_yes": fav_is_yes,
                 "fav_tok": toks[0] if fav_is_yes else toks[1],
+                "condition_id": str(m.get("conditionId") or ""),
                 "days": days, "liq": liq, "cat": cat,
                 "vol24": float(m.get("volume24hr") or 0),
             })
@@ -207,10 +233,21 @@ def main() -> int:
         print(f"# {len(cands)} candidates in rough zone; walking live books", file=sys.stderr)
 
         rows = []
+        tokens = list(dict.fromkeys(c["fav_tok"] for c in cands))
+        books = fetch_books(tokens, client=client, timeout=15)
         for c in cands:
-            ask, depth = best_ask(c["fav_tok"], client)
-            if ask is None:
+            if not c["condition_id"]:
                 continue
+            book = _validated_book(
+                books.get(c["fav_tok"]), c["fav_tok"], c["condition_id"],
+            )
+            if book is None or not book["asks"]:
+                continue
+            best = min(book["asks"], key=lambda a: a[0])
+            ask = best[0]
+            depth = sum(
+                size for price, size in book["asks"] if price <= ask + 0.02
+            )
             wr = empirical_winrate(ask)
             if wr is None:
                 continue  # live ask outside the validated 0.90-0.98 zone

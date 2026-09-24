@@ -59,6 +59,7 @@ import sys
 import httpx
 
 import pm_fees  # per-market Gamma feeSchedule; see pm_fees.py for source-of-truth rules
+from clob_books import fetch_books
 
 
 def fetch_events(min_vol: float = 1000, max_pages: int = 15) -> list[dict]:
@@ -519,6 +520,64 @@ def _fetch_validated_clob_book(token_id: str, condition_id: str) -> dict | None:
     )
 
 
+def _fetch_validated_clob_books(token_conditions: dict[str, str]) -> dict[str, dict]:
+    """Fetch and validate the main scan's books in bounded POST /books chunks.
+
+    Missing assets and malformed books are unexecutable. The singular helper
+    remains the default for execution-adjacent callers and focused tests.
+    """
+    if not token_conditions:
+        return {}
+    try:
+        payloads = fetch_books(list(token_conditions))
+    except Exception:
+        return {}
+    now = datetime.datetime.now(datetime.timezone.utc)
+    validated: dict[str, dict] = {}
+    for token_id, payload in payloads.items():
+        if payload is None:
+            continue
+        book = _validated_clob_book(
+            payload,
+            token_id=token_id,
+            condition_id=token_conditions[token_id],
+            now=now,
+        )
+        if book is not None:
+            validated[token_id] = book
+    return validated
+
+
+def _batch_token_conditions(violations: list[dict]) -> dict[str, str]:
+    """Collect candidate tokens, dropping any conflicting token identity.
+
+    A CLOB token should identify exactly one condition.  If Gamma rows claim
+    otherwise, the token is unsafe to cache by asset ID and every candidate
+    using it must fail closed.
+    """
+    token_conditions: dict[str, str] = {}
+    conflicts: set[str] = set()
+    for violation in violations:
+        for row, outcome in (
+            (violation["_row_late"], "yes"),
+            (violation["_row_early"], "no"),
+        ):
+            tokens = _named_binary_tokens(row)
+            condition_id = str(row.get("condition_id") or "").strip()
+            if tokens is None or not condition_id:
+                continue
+            token = tokens[outcome]
+            if token in conflicts:
+                continue
+            previous = token_conditions.get(token)
+            if previous is None:
+                token_conditions[token] = condition_id
+            elif previous.casefold() != condition_id.casefold():
+                token_conditions.pop(token, None)
+                conflicts.add(token)
+    return token_conditions
+
+
 def _walk_clob_asks(levels: list[tuple[Decimal, Decimal]], size: Decimal,
                     fee_market: dict) -> dict | None:
     remaining = size
@@ -587,7 +646,12 @@ def _fee_market_from_row(row: dict) -> dict | None:
     return None
 
 
-def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
+def _executable_monotonic_arb(
+    row_early: dict,
+    row_late: dict,
+    *,
+    books_by_token: dict[str, dict] | None = None,
+) -> dict | None:
     """LIVE-CLOB validation (2026-07-23): the monotonicity flag uses gamma
     MIDPOINTS, which sit between stub bids and real asks — the 2026-07-23
     outage surfaced a 3-hour 'actionable' false alarm (Elon-tweet-Hyperliquid:
@@ -611,8 +675,12 @@ def _executable_monotonic_arb(row_early: dict, row_late: dict) -> dict | None:
 
     # The riskless pair is later YES + earlier NO. Outcome names, not array
     # positions, select each token so a reversed Gamma array cannot invert it.
-    late_book = _fetch_validated_clob_book(late_tokens["yes"], late_condition)
-    early_book = _fetch_validated_clob_book(early_tokens["no"], early_condition)
+    if books_by_token is None:
+        late_book = _fetch_validated_clob_book(late_tokens["yes"], late_condition)
+        early_book = _fetch_validated_clob_book(early_tokens["no"], early_condition)
+    else:
+        late_book = books_by_token.get(late_tokens["yes"])
+        early_book = books_by_token.get(early_tokens["no"])
     if late_book is None or early_book is None:
         return None
 
@@ -952,11 +1020,18 @@ def main() -> int:
 
     # LIVE-CLOB VALIDATION (2026-07-23): walk real books on each mid-flagged
     # violation — the midpoint spread is NOT executable. Keep the mid-flag as
-    # a candidate list but split REAL (executable arb after fees) from ARTIFACT.
+    # a candidate list but split PROVISIONAL-positive batch snapshots from
+    # artifacts. A batch is not atomic and never authorizes execution; the
+    # execution path must independently rewalk both books immediately before
+    # signing.
     n_mid = len(violations)
     real = []
+    token_conditions = _batch_token_conditions(violations)
+    books_by_token = _fetch_validated_clob_books(token_conditions)
     for v in violations:
-        ex = _executable_monotonic_arb(v["_row_early"], v["_row_late"])
+        ex = _executable_monotonic_arb(
+            v["_row_early"], v["_row_late"], books_by_token=books_by_token,
+        )
         if ex is not None:
             v["executable"] = ex
             if ex["exec_edge_pp"] > 0:
@@ -965,12 +1040,18 @@ def main() -> int:
         v.pop("_row_early", None); v.pop("_row_late", None)
 
     if args.json:
-        print(json.dumps({"violations": violations, "real_executable": real,
+        print(json.dumps({"violations": violations,
+                          "provisional_positive": real,
+                          # Backward-compatible alias; batch observations are
+                          # non-atomic and never execution authority.
+                          "real_executable": real,
+                          "snapshot_atomic": False,
+                          "requires_revalidation": True,
                           "events_inspected": multi_market_events}, indent=2))
         return 0
 
     print(f"\n# {multi_market_events} multi-market events inspected; {n_mid} midpoint violation(s) >= {args.min_violation_pp}pp; "
-          f"{len(real)} REAL after live-CLOB walk\n")
+          f"{len(real)} PROVISIONAL after batched CLOB walk; REVALIDATION REQUIRED\n")
     if not violations:
         print("(no violations)")
         return 0
@@ -979,12 +1060,12 @@ def main() -> int:
     for v in violations[:30]:
         ex = v.get("executable")
         exec_s = f"{ex['exec_edge_pp']:>+6.2f}pp" if ex else "  n/a  "
-        verdict = ("REAL ARB" if ex and ex["exec_edge_pp"] > 0
+        verdict = ("PROVISIONAL ARB" if ex and ex["exec_edge_pp"] > 0
                    else "ARTIFACT (mid-only)" if ex else "no book")
         print(f"{v['event_title'][:44]:<44} {v['t1_end']:<11} {v['t2_end']:<11} "
               f"{v['violation_pp']:>+6.2f}pp {exec_s:<9} {verdict}")
     if not real:
-        print("\n# 0 REAL executable arbs — all midpoint flags evaporated on live books (the usual outcome).")
+        print("\n# 0 provisional positive arbs — all midpoint flags evaporated on live books (the usual outcome).")
     return 0
 
 

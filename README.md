@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-24 02:10 UTC
+## Last audited snapshot — 2026-09-24 10:18 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 10 |
 | Position cost | $135.97 |
-| Polymarket midpoint | $124.24 |
-| Indicative depth/fee value | $114.65 |
-| Authoritative whole-account mark | $162.59 |
+| Polymarket midpoint | $129.29 |
+| Indicative depth/fee value | $122.08 |
+| Authoritative whole-account mark | $167.65 |
 | Cumulative realized P&L | -$2.11 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -58,13 +58,13 @@ stressed-prior and joint portfolio-risk review. A corrected tape review found
 repeated YES buying across both Gemini markets, led by one broad-ladder wallet,
 so their p(NO) priors are now .15/.20. The resolving board and Google's
 official release surfaces remain unchanged; $45.77 of central terminal value
-still exceeds $8.23 of fee-net exits. Apple NO was trimmed by
+still exceeds $15.39 of fee-net exits. Apple NO was trimmed by
 25.08 shares when only that fee-net bid prefix moved above its unchanged .35
 fair value; the retained 8.925 shares have about $3.12 of central value versus
-$2.34 from an immediate sale. The only live order is a zero-fill maker sell
+$2.51 from an immediate sale. The only live order is a zero-fill maker sell
 for **28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
-midpoint-to-depth gap is $9.59; the approximate whole-account depth-realizable
-value is $153.00. The next dated material clock is the exact
+midpoint-to-depth gap is $7.21; the approximate whole-account depth-realizable
+value is $160.44. The next dated material clock is the exact
 Arena Text Overall source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
@@ -85,6 +85,11 @@ marked total; `scripts/positions.py` supplies the Polymarket depth view.
 Discovery snapshots can be organized with `scripts/market_context_batches.py`.
 Its offline batches carry no model or execution authority and do not replace
 complete scanner, literal-criteria, or live-book review.
+
+Broad book scanners use `scripts/clob_books.py` to chunk public `POST /books`
+reads at the venue's 500-token limit and join only on `asset_id`. Missing,
+conflicting, stale, malformed, or crossed books fail closed. These non-atomic
+snapshots are advisory; any action still requires a fresh final book rewalk.
 
 New Polymarket buys must use `scripts/polyclaude_enter.py`, which enforces
 identity, criteria, fee, robust-EV, ticket, cluster, collateral, and reservation

@@ -375,6 +375,7 @@ def _raw_for_condition(raw_by_id: dict[str, dict], condition_id: str) -> dict:
 def test_live_quote_refreshes_exact_fees_and_walks_every_level(monkeypatch) -> None:
     members, raw_by_id = _live_members()
     monkeypatch.setattr(consistency.time, "time", lambda: 1_000.0)
+    batch_calls = []
 
     def fake_get(url, *, params=None, timeout):
         del timeout
@@ -384,34 +385,41 @@ def test_live_quote_refreshes_exact_fees_and_walks_every_level(monkeypatch) -> N
             return _Response(_clob_info(
                 _raw_for_condition(raw_by_id, url.rsplit("/", 1)[1])
             ))
-        token = params["token_id"]
-        market = next(
-            m for m, _ in members if token in m["clobTokenIds"]
-        )
-        asks = (
-            [{"price": "0.30", "size": "2"}, {"price": "0.40", "size": "3"}]
-            if market["id"] == "70"
-            else [{"price": "0.20", "size": "5"}]
-        )
-        return _Response({
-            "asset_id": token,
-            "market": market["conditionId"],
-            "timestamp": "1000000",
-            "min_order_size": "5",
-            "tick_size": "0.01",
-            "neg_risk": True,
-            "hash": f"hash-{token}",
-            "bids": [{"price": "0.10", "size": "50"}],
-            "asks": asks,
-        })
+        raise AssertionError("live books must use the batch transport")
+
+    def fake_books(tokens, **_kwargs):
+        batch_calls.append(list(tokens))
+        out = {}
+        for token in tokens:
+            market = next(m for m, _ in members if token in m["clobTokenIds"])
+            asks = (
+                [{"price": "0.30", "size": "2"}, {"price": "0.40", "size": "3"}]
+                if market["id"] == "70"
+                else [{"price": "0.20", "size": "5"}]
+            )
+            out[token] = {
+                "asset_id": token,
+                "market": market["conditionId"],
+                "timestamp": "1000000",
+                "min_order_size": "5",
+                "tick_size": "0.01",
+                "neg_risk": True,
+                "hash": f"hash-{token}",
+                "bids": [{"price": "0.10", "size": "50"}],
+                "asks": asks,
+            }
+        return out
 
     monkeypatch.setattr(consistency.httpx, "get", fake_get)
+    monkeypatch.setattr(consistency, "fetch_books", fake_books)
     quote = consistency.live_quote_group(members, "buy_all_no")
 
     expected_fees = (
         (2 * 0.04 * 0.30 * 0.70 + 3 * 0.04 * 0.40 * 0.60) / 5
         + 0.04 * 0.20 * 0.80
     )
+    assert len(batch_calls) == 1
+    assert len(batch_calls[0]) == len(members)
     assert quote["target_shares"] == 5
     assert quote["snapshot_atomic"] is False
     assert math.isclose(quote["live_notional_per_unit"], 0.56, abs_tol=1e-12)
@@ -455,22 +463,51 @@ def test_live_quote_rejects_orderbook_identity_mismatch(monkeypatch) -> None:
             return _Response(_clob_info(
                 _raw_for_condition(raw_by_id, url.rsplit("/", 1)[1])
             ))
-        return _Response({
-            "asset_id": params["token_id"],
-            "market": "0x" + "f" * 64,
-            "timestamp": "1000000",
-            "min_order_size": "5",
-            "tick_size": "0.01",
-            "neg_risk": True,
-            "hash": "hash",
-            "bids": [],
-            "asks": [{"price": "0.20", "size": "5"}],
-        })
+        raise AssertionError("live books must use the batch transport")
+
+    def fake_books(tokens, **_kwargs):
+        return {
+            token: {
+                "asset_id": token,
+                "market": "0x" + "f" * 64,
+                "timestamp": "1000000",
+                "min_order_size": "5",
+                "tick_size": "0.01",
+                "neg_risk": True,
+                "hash": "hash",
+                "bids": [],
+                "asks": [{"price": "0.20", "size": "5"}],
+            }
+            for token in tokens
+        }
 
     monkeypatch.setattr(consistency.httpx, "get", fake_get)
+    monkeypatch.setattr(consistency, "fetch_books", fake_books)
     quote = consistency.live_quote_group(members, "buy_all_no")
 
     assert "condition identity mismatch" in quote["live_skipped"]
+
+
+def test_live_quote_missing_batched_book_fails_closed(monkeypatch) -> None:
+    members, raw_by_id = _live_members()
+
+    def fake_get(url, **_kwargs):
+        if "/markets/" in url:
+            return _Response(raw_by_id[url.rsplit("/", 1)[1]])
+        return _Response(_clob_info(
+            _raw_for_condition(raw_by_id, url.rsplit("/", 1)[1])
+        ))
+
+    monkeypatch.setattr(consistency.httpx, "get", fake_get)
+    monkeypatch.setattr(
+        consistency, "fetch_books", lambda tokens, **_kwargs: {
+            token: None for token in tokens
+        },
+    )
+
+    quote = consistency.live_quote_group(members, "buy_all_no")
+
+    assert "requested asset missing" in quote["live_skipped"]
 
 
 @pytest.mark.parametrize("neg_risk", [None, False, "true"])
