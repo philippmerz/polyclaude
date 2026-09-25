@@ -1,5 +1,27 @@
 # Polyclaude Backlog
 
+## Sep-25 06:08 current update
+
+- **Periodic state — no asset action:** ten indexed legs have $135.97 cost,
+  $124.49 midpoint and $114.72 indicative fee-net depth. Authoritative
+  bankroll is **$163.24**, approximate whole-account depth-realizable value is
+  **$153.47**, cumulative realized P&L remains **-$2.11**, and deployable pUSD
+  is $19.391700. No post-02:09 news/opportunity alert, fill, settlement,
+  transfer, UMA/Ostium change, watchlist hit or overdue decision appeared. The
+  sole live order remains the canonically matched zero-fill Trump-out 28-NO
+  sell at .97.
+- **Apple residual revalidated and held:** the raw central-arithmetic screen
+  values an immediate full taker exit near $3.19 versus $3.12 at p(NO)=.35.
+  Exit plus carry clears hold by only about $0.06-$0.08, below the $0.09
+  one-tick position-noise guard. The exact criteria remain unchanged; Apple's
+  current store, MacBook Pro page and Mac newsroom contain no qualifying
+  touchscreen product, while the move reflects concentrated NO buying rather
+  than a new availability fact. HOLD 8.925 / NO ADD / no order change.
+- State, protected groups, crux coverage, marginal APY, the four exact-one
+  current daemons and disk remain within their gates. No material Telegram
+  summary was sent. The next dated catalyst remains the Sep. 30 Arena Text
+  Overall source snapshot.
+
 ## Sep-25 02:09 current update
 
 - **Full check — no asset action:** ten indexed legs have $135.97 cost,

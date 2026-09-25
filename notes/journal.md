@@ -19832,3 +19832,41 @@ The Sep. 20 world-state rotation remains fresh; the completed methodology
 experiment is not due. Telegram message **1046** reported the material weekly
 P&L, Duma loss and benchmark caveat. The next dated catalyst is the exact Sep.
 30 Arena Text Overall source snapshot.
+
+## 2026-09-25 06:00–06:08 UTC — periodic review; Apple noise-level exit rejected
+
+No news or opportunity alert arrived after the 02:09 full check, and there is
+no fill, settlement, transfer, watchlist hit, overdue decision, UMA/Ostium
+change or new dated backlog task. Ten indexed legs reconcile at **$135.97
+cost, $124.49 midpoint and $114.72 indicative fee-net depth**. Authoritative
+whole-account bankroll is **$163.24**, approximate depth-realizable value is
+**$153.47**, cumulative realized P&L remains **-$2.11**, and deployable pUSD
+remains $19.391700. The sole live order is still the canonically matched,
+zero-fill Trump-out 28-NO maker sell at .97. Position state is clean at ten
+indexed rows plus one legitimate deindexed claim row; crux coverage is
+complete, all four daemons are current and exact-one, and disk has about 1.2
+GB free against the 512 MB warning floor.
+
+Apple's 8.925-share touchscreen-MacBook NO residual was the only item requiring
+a bounded follow-up. A fresh depth walk can sell 6.43 shares at .37 and the
+balance at .36, about **$3.19 fee-net**, versus **$3.12375** central terminal
+value at p(NO)=.35. Roughly 98 days of 1.20% carry lifts sale proceeds by about
+one cent, leaving only a **$0.06-$0.08** advantage. That is below the
+position's $0.09 one-tick noise guard and is fragile to less than a one-point
+posterior change.
+
+The required hidden-information check found no thesis break. The exact market
+still requires a true touchscreen product explicitly branded MacBook to be
+available for general-public purchase by Dec. 31; an unveiling alone does not
+count. Apple's live Mac store, MacBook Pro page and Mac newsroom still show no
+qualifying product. Post-trim tape is concentrated rather than independently
+confirmatory: one wallet bought about 264 NO near .379 after several smaller
+NO buys, lifting the executable bid without a new named-source fact. Selling
+into potentially informed NO demand for less than one tick of estimated edge
+would donate information value if fair has risen even slightly. **HOLD 8.925 /
+NO ADD / no order change**; the .35 prior and .18-.55 range remain unchanged.
+
+All other direct, carry and protected-group screens remain holds. No trade,
+order change, transfer, prior change, decision record or material Telegram
+summary was warranted. The next dated catalyst remains the Sep. 30 Arena Text
+Overall source snapshot.
