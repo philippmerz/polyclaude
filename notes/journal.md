@@ -19918,3 +19918,81 @@ matched zero-fill Trump-out 28-NO sell at .97, and every remaining direct and
 protected-group exit is below hold value. The next dated catalyst remains the
 Sep. 30 Arena Text Overall source snapshot. Telegram message **1047** reported
 the material close and reconciled state.
+
+## 2026-09-25 14:00–14:17 UTC — full check; discovery candidates fail robust gates
+
+The scheduled eleven-step check completed once. Nine indexed Polymarket legs
+reconcile at **$132.30 cost, $120.40 midpoint and $109.19 indicative fee-net
+depth**. Authoritative whole-account bankroll is **$162.62**, including $7.09
+of separately contributed gas-token value; replacing the Polymarket midpoint
+with its depth walk gives an approximate **$151.41 whole-account depth value**.
+Cumulative realized P&L remains **-$2.57**, deployable pUSD is $22.608930, and
+no BUY collateral is reserved. The sole live order is still the canonically
+matched, zero-fill 28-share Trump-out NO maker sell at .97.
+
+No news or opportunity alert appeared after the 10:14 close review. UMA
+reported zero alerts across 40 tracked / 38 refreshed markets, Ostium remains
+empty with zero trading allowance, the watchlist has no hit, no decision is
+overdue, crux coverage is complete, and the state audit is clean at nine
+indexed positions plus one deindexed claim row. Redemption found **0/12 winning
+redeemables** and submitted no transaction. All four daemons are current and
+exact-one; disk retained about 1.13 GiB free against the 512 MiB warning floor.
+Weekly P&L through Sep. 25 and the Sep. 20 world-state rotation remain current.
+
+The largest mark change was Gemini HLE >=50, but it had **zero public trades
+after 10:14**; the next-Gemini-Pro market likewise had zero. The move is quote
+withdrawal rather than executed evidence. The exact resolving API remains at
+60 rows, with Google's maximum at 46.2/45.9 and OpenAI's maximum at 53.6.
+Fresh fee-net exits are about **$3.47/$4.39/$1.83** for Gemini debut, Gemini
+>=50 and OpenAI >=55, versus $25.35/$20.42/$4.75 central terminal values and
+$10.14/$8.17/$2.85 recorded range-floor values. Marginal APY has zero close
+flags. HOLD all three / NO ADD under the durable Dec. 31 hold-only rule. The
+nominal Kelly OpenAI add is advisory and blocked by that rule. Clarity exits
+near $28.25 versus its $29 floor and MetaMask near $44.83 versus $46.16 central
+and $44.75 rule-floor value, so both remain complete-group holds. Trump remains
+a hold at about $26.91 exit versus $27.48 central value.
+
+Discovery fetched 999 primary and 50,318 thin-tail active markets; 1,451
+thin-tail rows cleared the mechanical APY filter. The primary snapshot emitted
+47 triggers plus seven sibling rows in three context batches. Thin-tail emitted
+620 triggers plus 356 sibling rows in 55 batches. Snapshot hashes, every batch
+group-content proof, trigger ranks and semantic readiness passed; no duplicate,
+crossed, incomplete or malformed identity appeared. The 43/601 prior rows
+omitted from the filtered snapshots were treated only as omissions. Three
+non-triggering Israel-recognition rows lacked a minimum-size field and were not
+promoted. Family membership remains context-only and every shortlisted family
+received a full live rewalk.
+
+Four named-source families warranted bounded follow-up:
+
+- The exact USGS window, Sep. 21 04:00 UTC through Sep. 28 03:59:59 UTC,
+  contains one reviewed event: USGS `us6000tx3m`, M5.7. Historical-rate and
+  empirical-window estimates put P(at most six) around .83–.91, central .87,
+  versus .856375 fee-inclusive YES and .177055 NO taker costs. A five-point
+  haircut to the central estimate gives .82, below the .84 YES maker level;
+  the default ten-point stress fails even from the .91 range high. All nine
+  count brackets likewise fail robust entry.
+- Ornn showed RTX 5090 at $0.65 and B200 at $8.02. Current-family asks plus the
+  structured taker curve erase the RTX basket discount, while the individual
+  $0.55–$0.60 and B200 >=$7.50 histories fail the required uncertainty bound.
+- NOAA recorded 2.21 inches at Central Park through Sep. 24, while the grid
+  forecast added roughly 2.38 inches and centered the month near 4.59. Official
+  forecast products span several one-inch buckets because of storm-track risk;
+  neither 3–4 nor the plausible 4–5 sibling clears its robust price threshold.
+- The Anthropic HLE ladder's resolving API still has 60 rows and tops Anthropic
+  at Opus 5's 51, below 65/70. The price change is unrelated to any held-lab
+  source change, the ladder remains internally ordered, and new Dec. 31 HLE
+  exposure is barred by the hold-only rule.
+
+Event monotonicity inspected 1,044 multi-market events and found zero live-book
+violation. Consistency retained 2,927 validated negRisk markets in its capped
+slice, requested 18/194 structural groups, obtained nine live quotes and found
+zero positive basket; coverage is explicitly incomplete. Sports consensus
+produced three negative candidate deltas. The strongest independently anchored
+favorite still failed even a five-point probability haircut, while the
+remaining population-fade rows lacked an instance thesis. Fed, Hormuz, Iran,
+Taiwan and ceasefire markets
+failed current fact, correlation or ten-point stress gates. No new entry,
+close, resize, redemption, transfer, order change, prior change or decision
+record followed. This flat tick did not warrant Telegram. The next dated
+catalyst remains the exact Sep. 30 Arena Text Overall source snapshot.

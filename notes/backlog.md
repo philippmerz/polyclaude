@@ -1,5 +1,30 @@
 # Polyclaude Backlog
 
+## Sep-25 14:17 current update
+
+- **Full check — no asset action:** nine indexed legs have $132.30 cost,
+  $120.40 midpoint and $109.19 indicative fee-net depth. Authoritative
+  bankroll is **$162.62**, approximate whole-account depth-realizable value is
+  **$151.41**, cumulative realized P&L remains **-$2.57**, and deployable pUSD
+  remains $22.608930. No alert, fill, settlement, transfer, UMA/Ostium change,
+  watchlist hit, overdue decision, redemption or marginal-APY exit appeared.
+  The sole order remains the canonically matched zero-fill Trump-out 28-NO
+  sell at .97; state, crux coverage, daemons and disk are clean.
+- **Gemini quote decline is not executed evidence:** the exact HLE API remains
+  at 60 rows with Gemini below 50 and OpenAI below 55, and neither Gemini
+  market had a post-10:14 trade. Current fee-net HLE exits of
+  $3.47/$4.39/$1.83 remain below central and recorded stress-floor terminal
+  values. HOLD / NO ADD under the Dec. 31 hold-only rule. Clarity and MetaMask
+  also remain complete-group holds.
+- Discovery refreshed 999 primary and 50,318 thin-tail active markets, with
+  1,451 thin-tail rows clearing the mechanical hurdle. All 3 primary and 55
+  thin-tail context batches passed proof/integrity review. Fresh USGS count,
+  Ornn hardware indices, NOAA precipitation products, Anthropic HLE ladder,
+  sports consensus, macro/geopolitical facts and live books produced no entry
+  surviving fees plus uncertainty bounds. Monotonicity and consistency found
+  zero provisional executable basket. No material Telegram summary was sent;
+  the next dated catalyst remains the Sep. 30 Arena Text Overall snapshot.
+
 ## Sep-25 10:14 current update
 
 - **Apple residual closed at the measured gate (DEC-0176):** at 10:04 UTC the
