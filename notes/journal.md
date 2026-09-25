@@ -19996,3 +19996,37 @@ failed current fact, correlation or ten-point stress gates. No new entry,
 close, resize, redemption, transfer, order change, prior change or decision
 record followed. This flat tick did not warrant Telegram. The next dated
 catalyst remains the exact Sep. 30 Arena Text Overall source snapshot.
+
+## 2026-09-25 18:00–18:04 UTC — periodic check; no actionable delta
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $119.88 midpoint
+and $110.36 indicative fee-net depth**. Authoritative whole-account bankroll
+was **$162.11** at the refresh, including about $7.10 of separately contributed
+gas-token value; substituting the depth walk for the midpoint gives an
+approximate **$152.59 whole-account depth value**. Cumulative realized P&L
+remains **-$2.57**, deployable pUSD remains $22.608930 with no BUY collateral
+reserved, and the position-state audit is clean at nine indexed positions plus
+one legitimate deindexed claim row. The sole live order remains the
+canonically matched, zero-fill 28-share Trump-out NO maker sell at .97.
+
+Every held market had zero public trades after the 14:17 review. The exact HLE
+source remains unchanged with Gemini and OpenAI below the held thresholds.
+Current fee-net exits of $3.84/$4.19/$1.83 remain below the three HLE legs'
+$25.35/$20.42/$4.75 central values and $10.14/$8.17/$2.85 recorded range-floor
+values. Clarity's complete-group exit is about $28.25 versus its $29.00 floor.
+MetaMask's complete-group exit improved to about $45.34, but exit plus carry
+remains roughly $0.67 below its $46.16 central hold value. Trump's exit remains
+about $26.91 versus $27.48 central value. Marginal APY found zero close flags,
+so all positions remain holds with no resize, add or order change.
+
+The only new news row was a conditional Iranian proposal for a seven-day
+Hormuz reopening process; it has no held-position channel and is not an
+accepted qualifying agreement. No new opportunity alert appeared. A transient
+Next-Claude HLE monotonicity indication reached +0.43pp, below the 2pp fire
+floor, and the next scan returned zero candidates; consistency and Limitless
+also found no executable structure. UMA, Ostium, all 34 watchlist rows and the
+decision/backlog clocks were clean. All four daemons were current and
+exact-one, Telegram had no pending message, and disk retained about 1.11 GiB
+free. No trade, transfer, redemption, prior change or material Telegram
+summary was warranted. The next dated catalyst remains the Sep. 30 Arena Text
+Overall source snapshot.

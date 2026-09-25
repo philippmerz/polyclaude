@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-25 14:17 UTC
+## Last audited snapshot — 2026-09-25 18:04 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 9 |
 | Position cost | $132.30 |
-| Polymarket midpoint | $120.40 |
-| Indicative depth/fee value | $109.19 |
-| Authoritative whole-account mark | $162.62 |
+| Polymarket midpoint | $119.88 |
+| Indicative depth/fee value | $110.36 |
+| Authoritative whole-account mark | $162.11 |
 | Cumulative realized P&L | -$2.57 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -61,7 +61,7 @@ stressed-prior and joint portfolio-risk review. Executed adverse flow across
 the three HLE markets moved their p(NO) priors to **.15/.20/.25** for next
 Gemini Pro debut, Gemini >=50 and OpenAI >=55. The exact 60-row source still
 shows Gemini below 50 and OpenAI below 55; their $50.52 of central terminal
-value exceeds $9.69 of current fee-net exits. The OpenAI leg also remains a
+value exceeds $9.86 of current fee-net exits. The OpenAI leg also remains a
 hold at its .15 range floor, and the Dec. 31 hold-only rule blocks enlargement.
 Apple's final executable balance closed on Sep. 25. A fresh .37 bid covered the
 entire 8.925-share residual; the authoritative fee curve and carry valued an
@@ -72,7 +72,7 @@ Official Apple sources still showed no qualifying product, so this was a
 price/carry exit rather than a thesis break; do not re-enter without a fresh
 robust edge. The only live order is a zero-fill maker sell for **28 Trump-out
 NO at 0.97**. Deployable pUSD is $22.608930. The midpoint-to-depth gap is
-$11.21; the approximate whole-account depth-realizable value is $151.41. Duma
+$9.52; the approximate whole-account depth-realizable value is $152.59. Duma
 resolved and closed on Sep. 21; the next active portfolio catalyst is the exact
 Arena Text Overall source snapshot on Sep. 30.
 
