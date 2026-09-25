@@ -163,8 +163,13 @@ def hle_chart_results(payload: object) -> dict[str, tuple[str, str]]:
 
     The displayed chart rounds ``scores.hle`` to one decimal, but retaining the
     API's full numeric precision also detects source revisions that do not cross
-    a displayed tenth. Missing HLE scores, malformed identities and duplicate
-    displayed names are inconclusive rather than silently omitted.
+    a displayed tenth. The API may publish an identified model row before its
+    HLE evaluation is ready; an explicit null HLE score with no calibration is
+    retained as ``("-", "-")``. That keeps the row addition visible, excludes
+    it from numeric threshold conclusions, and makes a later score population a
+    detectable change. Missing score keys, inconsistent placeholders, malformed
+    scored values, malformed identities and duplicate displayed names remain
+    inconclusive rather than being silently omitted.
     """
     if not isinstance(payload, list) or not payload:
         raise ValueError("expected a non-empty HLE chart model list")
@@ -182,10 +187,19 @@ def hle_chart_results(payload: object) -> dict[str, tuple[str, str]]:
         name = name_raw.strip().casefold()
         if name in rows:
             raise ValueError(f"duplicate model row: {name}")
-        rows[name] = (
-            _score(scores["hle"]),
-            _score(scores.get("hle_calibration_error"), missing_ok=True),
-        )
+        hle = scores["hle"]
+        calibration = scores.get("hle_calibration_error")
+        if hle is None:
+            if calibration is not None:
+                raise ValueError("unscored HLE row has calibration data")
+            rows[name] = ("-", "-")
+        else:
+            rows[name] = (
+                _score(hle),
+                _score(calibration, missing_ok=True),
+            )
+    if not any(result[0] != "-" for result in rows.values()):
+        raise ValueError("HLE chart contains no scored model rows")
     return rows
 
 
@@ -306,6 +320,12 @@ def main() -> int:
                           f"before believing any verdict below.")
                     return 1
                 print(f"[coverage] all expected items present: {a.expect}")
+            if table_mode:
+                unscored = sorted(name for name, result in live.items()
+                                  if result[0] == "-")
+                if unscored:
+                    print(f"[unscored HLE rows] {unscored} — identities retained for "
+                          "change detection; excluded from accuracy thresholds")
             added, removed, changed = differences(old, live)
             print(f"[live vs {a.since}] added {added or 'NONE'} | removed {removed or 'NONE'} "
                   f"| changed {changed or 'NONE'}")

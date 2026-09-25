@@ -1,5 +1,28 @@
 # Polyclaude Backlog
 
+## Sep-25 22:12 current update
+
+- **HLE source changed; HOLD / monitor repaired:** the exact API grew from 60
+  to 63 rows, adding GPT-6 Sol, Claude Opus 5.5 and Grok 4.7 with null HLE
+  Accuracy and calibration values. No threshold is met: scored OpenAI still
+  tops at Astra 53.6 and Gemini at 46.2. OpenAI >=55 p(NO) remains .25
+  (.15-.38), with a $2.02 fee-net exit below $4.75 central and $2.85
+  range-floor terminal value. `source_freeze_check.py` now preserves and
+  reports legitimate unscored rows, detects later score population, and still
+  fails closed on malformed or wholly unscored payloads; 70 focused tests pass.
+- **Periodic state — no asset action:** nine indexed legs have $132.30 cost,
+  $118.37 midpoint and $108.78 indicative fee-net depth. Authoritative
+  bankroll is **$160.67**, approximate whole-account depth-realizable value is
+  **$151.08**, cumulative realized P&L remains **-$2.57**, and deployable pUSD
+  remains $22.608930. All direct and protected-group exit screens remain
+  holds; the sole Trump-out 28-NO sell at .97 is still zero-fill.
+- Two Clarity alerts only recap the explicitly excluded Sep. 15 cloture vote;
+  the complete pair still exits near $28.25 versus its $29 payout floor. No
+  qualifying vote, HLE threshold, fill, settlement, UMA/Ostium change,
+  watchlist hit, overdue decision or executable scanner signal appeared.
+  Telegram **1048** reported the material source and monitor update. The next
+  dated catalyst remains the Sep. 30 Arena Text Overall snapshot.
+
 ## Sep-25 18:04 current update
 
 - **Periodic state — no asset action:** nine indexed legs have $132.30 cost,

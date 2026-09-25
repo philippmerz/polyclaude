@@ -19871,6 +19871,67 @@ order change, transfer, prior change, decision record or material Telegram
 summary was warranted. The next dated catalyst remains the Sep. 30 Arena Text
 Overall source snapshot.
 
+## 2026-09-25 22:00–22:12 UTC — unscored HLE rows surfaced; monitor repaired; HOLD
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $118.37 midpoint
+and $108.78 indicative fee-net depth**. Authoritative whole-account bankroll
+was **$160.67** at the refresh, including about $7.17 of separately contributed
+gas-token value; substituting the depth walk for the midpoint gives an
+approximate **$151.08 whole-account depth value**. Cumulative realized P&L
+remains **-$2.57**, deployable pUSD remains $22.608930 with no BUY collateral
+reserved, and the state audit is clean at nine indexed positions plus one
+legitimate deindexed claim row. The sole live order remains the canonically
+matched, zero-fill 28-share Trump-out NO maker sell at .97. One third party
+bought 78.12 Trump NO at .96 after the prior review, supporting the held side
+but below the resting order; no other held market recorded a new public trade.
+
+The exact HLE resolving API changed from 60 to 63 rows after the 18:04 check.
+It added GPT-6 Sol, Claude Opus 5.5 and Grok 4.7, each with explicit null HLE
+Accuracy and null calibration values. The live criterion uses HLE Accuracy, so
+none currently qualifies. GPT-6 Astra remains OpenAI's highest scored row at
+53.6, below 55; Gemini remains led by 3.8 Flash at 46.2 and 3.1 Pro at 45.9,
+below the held thresholds. GPT-6 Sol's source listing is adverse predicate
+progress, but its Sep. 22 release and the dispersed Sep. 24 adverse tape were
+already incorporated when OpenAI >=55 p(NO) moved from .30 to .25, and no
+market trade followed the new listing. I retained p(NO)=.25 with the recorded
+.15-.38 range. The 19 NO shares' fresh fee-net exit is about **$2.02** versus
+$4.75 central and $2.85 range-floor terminal value; exit plus carry remains
+below even the range floor. **HOLD / NO ADD / no maker order.** The Gemini
+exits of about $3.32/$3.06 likewise remain below $25.35/$20.42 central and
+$10.14/$8.17 range-floor values.
+
+The source monitor initially rejected the explicit null score as malformed.
+That was a parser defect rather than a reason to hide the row or assign it a
+numeric result. `source_freeze_check.py` now retains a fully identified
+null/null row as an explicit unscored placeholder. Its addition stays visible,
+a later numeric score becomes a changed-row event, and CLI output states that
+the row is excluded from accuracy thresholds. Missing score keys,
+null-with-calibration inconsistencies, malformed numeric values, duplicate
+identities and wholly unscored payloads still fail closed. The live command now
+returns the three unscored additions and an UPDATING verdict. Seventy focused
+source/status tests pass, compilation and `git diff --check` pass, and DEC-0177
+records the immediately verified safeguard.
+
+Two post-18:04 Clarity alerts describe Blockchain Association turnover and
+CFTC tokenization guidance after the already-reviewed Sep. 15 **49-50 cloture
+vote on the motion to proceed**. Neither reports a new Senate roll call. Both
+held contracts require the first full-Senate final-passage vote and explicitly
+exclude cloture and motions to proceed. Their equal over-50 YES plus over-58 NO
+pair therefore retains its $29 criteria floor versus a roughly $28.25 complete
+exit. MetaMask's group exits near $45.22 versus $46.16 central value, and every
+other direct or protected-group screen remains a hold. Marginal APY has zero
+close flags.
+
+There was no new opportunity alert or executable scanner candidate. A single
+consistency subprocess failure at 19:18 recovered on every later cycle. UMA,
+Ostium, all 34 watchlist rows, decision clocks, all four exact-one/current
+daemons and the Telegram queue were clean; disk retained about 1.11 GiB free.
+No trade, transfer, redemption, order change or prior change followed. The
+documented Telegram command was corrected to include the repository virtual
+environment after its bare-script form failed before sending; the venv-backed
+send succeeded as message **1048**. The next dated catalyst remains the Sep. 30
+Arena Text Overall source snapshot.
+
 ## 2026-09-25 10:00–10:14 UTC — Apple residual closed at the measured exit gate
 
 The bounded periodic review found no new opportunity trigger or pre-existing fill,

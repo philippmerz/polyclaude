@@ -3530,6 +3530,27 @@
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
+    },
+    {
+      "id": 177,
+      "timestamp": "2026-09-25T22:08:00Z",
+      "type": "scaffolding",
+      "thesis": "The live HLE API began publishing fully identified model rows before their HLE evaluations were populated. Treating an explicit null HLE and null calibration as malformed made the source monitor fail closed precisely when GPT-6 Sol, Claude Opus 5.5, and Grok 4.7 appeared. Retain a legitimate null/null row as an explicit unscored placeholder so its addition and later score population remain observable, while continuing to reject missing keys, inconsistent placeholders, malformed scores, duplicate identities, and wholly unscored payloads.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-25, source_freeze_check will report identified null/null HLE rows as unscored additions, will report later numeric score population as a change, and will still return inconclusive on malformed or entirely unscored payloads.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-25",
+      "tags": [
+        "hle",
+        "source-monitor",
+        "parser",
+        "fail-closed"
+      ],
+      "slug": null,
+      "outcome": "Verified immediately: the live 63-row API reports all three new null/null rows as unscored additions while preserving the UPDATING verdict; 70 focused source/status tests pass.",
+      "calibration_delta": "none; the parser now distinguishes legitimate pending evaluations from malformed score data without making a threshold claim",
+      "lesson": "A source can publish an instrument identity before publishing its measured value. Preserve that state explicitly so both the addition and the later value transition remain auditable.",
+      "resolved_at": "2026-09-25T22:09:00Z"
     }
   ]
 }

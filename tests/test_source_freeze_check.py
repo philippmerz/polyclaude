@@ -106,6 +106,35 @@ def test_hle_chart_api_parses_actual_score_fields_and_missing_calibration() -> N
     }
 
 
+def test_hle_chart_api_retains_explicit_unscored_placeholder() -> None:
+    payload = [
+        _api_row(),
+        _api_row("GPT-6 Sol", "gpt-6-sol-high", None, None),
+    ]
+
+    assert sfc.hle_chart_results(payload) == {
+        "gpt-6 astra": ("53.6", "44.2"),
+        "gpt-6 sol": ("-", "-"),
+    }
+
+
+def test_hle_chart_diff_preserves_placeholder_add_and_later_score() -> None:
+    old = sfc.hle_chart_results([_api_row()])
+    with_placeholder = sfc.hle_chart_results([
+        _api_row(),
+        _api_row("GPT-6 Sol", "gpt-6-sol-high", None, None),
+    ])
+    with_score = sfc.hle_chart_results([
+        _api_row(),
+        _api_row("GPT-6 Sol", "gpt-6-sol-high", 54.1, 42.0),
+    ])
+
+    assert sfc.differences(old, with_placeholder) == (["gpt-6 sol"], [], [])
+    assert sfc.differences(with_placeholder, with_score) == (
+        [], [], [("gpt-6 sol", ("-", "-"), ("54.1", "42"))],
+    )
+
+
 @pytest.mark.parametrize("payload", [
     None,
     [],
@@ -114,9 +143,12 @@ def test_hle_chart_api_parses_actual_score_fields_and_missing_calibration() -> N
     [_api_row(name="")],
     [_api_row(model_id="")],
     [{"name": "GPT-6 Astra", "id": "x", "scores": {}}],
-    [_api_row(hle=None)],
+    [_api_row(hle=None, calibration=20)],
+    [_api_row(hle="")],
+    [_api_row(calibration="not-a-score")],
     [_api_row(hle=float("nan"))],
     [_api_row(hle=101)],
+    [_api_row("GPT-6 Sol", "gpt-6-sol-high", None, None)],
     [_api_row(), _api_row(model_id="a-duplicate-id")],
 ])
 def test_hle_chart_api_rejects_incomplete_or_ambiguous_payloads(payload) -> None:
@@ -273,6 +305,29 @@ def test_hle_cli_brief_keeps_diff_but_omits_full_inventory(monkeypatch, capsys) 
     out = capsys.readouterr().out
     assert "added ['gpt-6 astra']" in out
     assert "live inventory" not in out
+
+
+def test_hle_cli_reports_unscored_rows_without_hiding_diff(monkeypatch, capsys) -> None:
+    values = iter((
+        {
+            "gpt-6 astra": ("53.6", "39.8"),
+            "gpt-6 sol": ("-", "-"),
+        },
+        {"gpt-6 astra": ("53.6", "39.8")},
+    ))
+    monkeypatch.setattr(sfc, "fetch", lambda *_args: next(values))
+    monkeypatch.setattr(sys, "argv", [
+        "source_freeze_check.py", "--url", "https://agi.safe.ai/",
+        "--since", "20260703", "--brief",
+    ])
+
+    assert sfc.main() == 0
+    out = capsys.readouterr().out
+    assert "[unscored HLE rows] ['gpt-6 sol']" in out
+    assert "excluded from accuracy thresholds" in out
+    assert "added ['gpt-6 sol']" in out
+    assert "UPDATING" in out
+    assert "UNCHANGED" not in out
 
 
 def test_hle_cli_missing_expected_model_still_fails(monkeypatch, capsys) -> None:
