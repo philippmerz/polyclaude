@@ -1248,3 +1248,129 @@ used to remove repeat loss mechanisms, not as an objective.
 - Continuous: official Apple preorder or general-public purchase availability.
 - Sep 30, 12:00 ET: exact Arena Text Overall source snapshot.
 - Oct 12: monthly emergency-path drill.
+
+# Week 2026-09-18 → 2026-09-25
+
+The pilot ends the week at approximately **$146.04 on an indicative net-depth
+basis, excluding separately contributed gas**, against **$170 of trading
+contributions: -$23.96 (-14.09%) before VM and other operating costs**. The
+midpoint trading value is **$156.46 (-$13.54 / -7.96%)**.
+
+## Whole-account performance
+
+| Metric | Sep-18 | Sep-25 | Change |
+|---|---:|---:|---:|
+| Authoritative all-in midpoint bankroll | $175.33 | **$163.40** | **-$11.93** |
+| Separately contributed gas-token value | $6.23 | $6.94 | +$0.71 |
+| Trading value, midpoint basis | $169.10 | **$156.46** | **-$12.64** |
+| Trading value, indicative depth/fee basis | $159.08 | **$146.04** | **-$13.04** |
+| PM midpoint value | $154.61 | $124.54 | -$30.07 |
+| PM indicative net-depth value | $144.59 | $114.12 | -$30.47 |
+| PM midpoint/depth gap | $10.02 | **$10.42** | +$0.40 |
+| Open PM reported cost basis | $158.72 | $135.97 | -$22.75 |
+| Open unrealized P&L, marked | -$4.12 | -$11.43 | -$7.31 |
+| Open unrealized P&L, depth basis | -$14.14 | -$21.85 | -$7.71 |
+| Bankroll settled-P&L residual | +$3.22 | **-$2.11** | **-$5.33** |
+
+The current figures are sequential and rounded. The depth estimate replaces
+only PM midpoint assets in the authoritative aggregate; it is not a
+synchronized or freshness-certified liquidation quote and omits transfer and
+withdrawal costs. No external capital entered or left the project. The open
+cost reduction mainly reflects approval resolution, Duma closure and Apple
+trims rather than a comparable cash withdrawal.
+
+## Passive comparison
+
+The strict `index_benchmark.py --as-of 2026-09-24` run is **unavailable**:
+Yahoo returned fully null raw and adjusted closes for VT and VTI on Sep. 22,
+and the pinned parser correctly failed closed rather than silently changing the
+price series. For diagnostic context only, removing those two all-null rows
+while retaining the same validated entry lots and Sep. 24 closes gives
+**$180.37 VT (+6.10%)**, **$182.34 VTI (+7.26%)** and **$182.76 SPY (+7.51%)**.
+This reconstruction is not the strict benchmark result.
+
+Against those diagnostic values, the pilot's $156.46 midpoint trading value
+trails by $23.91–$26.30, and the $146.04 indicative depth value trails by
+$34.33–$36.72. The comparator assumes ideal fractional shares, reinvested
+distributions and no commission, spread, slippage, tax or idle-cash yield;
+gas is excluded from both sides.
+
+## Trading, execution, and settlement
+
+The week's best trade was Sep. 18 approval 38.5–38.9 YES. Thirteen claims cost
+**$5.324800 all-in** after the exact Silver Bulletin/Datawrapper value printed
+38.49159. A 9.5-share .99 sale returned $9.401238 net and the retained 3.5
+claims redeemed for $3.50 after the source finalized unchanged. Total proceeds
+were **$12.901238**, for **+$7.576438 / +142.29%** before separately contributed
+gas. The partial sale gave up $0.098762 versus the realized all-hold outcome,
+but required a true YES probability above 98.9604% to reject at execution.
+
+Duma dominated the loss. The equal 20/20/20 YES set across 295–339 seats cost
+$11.40. Mature counts forced sales of 310–324 for $0.06 and 325–339 for $0.22;
+295–309 had no bid and resolved NO. The set returned **$0.28 and lost $11.12**.
+The two late exits preserved value, and repeated no-add decisions avoided a
+larger loss, but the book retained correlated forecast mass too long after
+broad informed repricing and live component counts implied a total above 339.
+
+Apple was trimmed twice at favorable bid prefixes: 15 NO returned $5.60818
+net on Sep. 18, then 25.08 returned $9.29410 net on Sep. 23. The remaining
+8.925 shares preserve exposure where the book no longer exceeded the .35
+central payout probability. The Sep. 18 Gemini >=50 add bought 43.361345 NO
+for $5.34183 all-in. It retained positive arithmetic EV at the .30 central and
+.20 stress probabilities, but the post-fill audit found that midpoint-based
+Kelly overstated the executable-price add by about $2.1. The position remains
+HOLD / NO ADD; a new guard now requires concrete urgency before a single-market
+taker entry.
+
+Internal Aave withdrawals, wrapping, redemption sweeps and supplies were asset
+relocations. The capital ledger records no external contribution or operator
+withdrawal during the week.
+
+## Current book and opportunity decisions
+
+Ten unresolved PM legs have **$135.97 cost, $124.54 midpoint, $114.12
+indicative fee-net depth and $477.81 maximum payout if every held outcome
+won**. All direct and protected-group exit screens remain holds.
+
+Executed adverse flow moved the next-Gemini-Pro, Gemini >=50 and OpenAI >=55
+NO priors to **.15/.20/.25**, but the exact resolving board still has Gemini
+below 50 and OpenAI below 55. Their current full exits of about
+$2.80/$6.13/$1.83 remain below central payouts of $25.35/$20.42/$4.75 and the
+recorded pessimistic floors; the Dec. 31 sleeve stays HOLD-ONLY. Apple's
+residual exits near $2.84 versus $3.12 central value. Trump exits near $26.91
+versus $27.48 central value. The complete Clarity pair exits near $28.25 versus
+its exact $29 floor, while MetaMask exits near $45.05 versus $46.16 central
+fair and a $44.75 logical floor. Never trade a protected member independently.
+
+Deployable pUSD is $19.391700. The sole live order is a zero-fill 28-share
+Trump-out NO maker sell at .97. Full primary/thin-tail discovery and sports,
+macro, favorite-fade, monotonicity, consistency and cross-event scans produced
+no candidate that cleared exact criteria, current depth, fees and stressed
+portfolio gates.
+
+## Decisions and calibration
+
+After this week's grading, `decisions.py summary` reports **175 total decisions,
+105 resolved, 70 pending and 88 lessons**. The ledger contains repeated,
+dependent engineering and position updates rather than 105 independent
+forecasts. Six Sep. 17 engineering decisions due this tick passed within their
+stated scopes: semantic review and notification dedupe, venue-minimum and
+rollback handling, per-fingerprint history, and the isolated capped Jev shadow
+adapter. No decision is overdue.
+
+The repeated economic error is slower updating in correlated event forecasts.
+Duma union estimates moved 72%→59%→51%→49%→17% as evidence worsened, but even
+the last estimate retained too much pre-election tail after mature list and
+district counts. Once live counts and event-wide flow conflict with the prior,
+future reviews must sharply decay correlated model weight and compare each
+executable bid directly with a count-driven terminal tail. The secondary
+execution error was translating midpoint Kelly into taker dollars; the
+executable-price reconstruction and maker-or-urgency guard now address it.
+Calibration remains a way to remove repeat loss mechanisms, not an objective.
+
+## Next clocks
+
+- Sep. 30, 12:00 ET: exact Arena Text Overall resolving-source snapshot.
+- Continuous: qualifying Gemini Pro/HLE source rows or UMA state changes.
+- Continuous: actual touchscreen-MacBook public purchase availability.
+- Oct. 12: monthly emergency-path drill.

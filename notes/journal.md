@@ -19762,3 +19762,73 @@ I corrected the current backlog and dashboard; no Duma exposure, redemption or
 settlement follow-up remains. No trade, order change, transfer, redemption,
 prior change, decision record or material Telegram message followed. The next
 active portfolio catalyst is the Sep. 30 Arena Text Overall source snapshot.
+
+## 2026-09-25 02:00–02:09 UTC — full check and weekly P&L; no trade
+
+The scheduled eleven-step check completed once. Ten indexed Polymarket legs
+reconcile at **$135.97 cost, $124.54 midpoint and $114.12 indicative fee-net
+depth**. Authoritative whole-account bankroll is **$163.40**, including $6.94
+of separately contributed gas-token value; replacing the $124.54 PM midpoint
+with the depth walk gives an approximate **$152.98 whole-account depth value**.
+Trading value excluding gas is **$156.46 midpoint / $146.04 depth**, cumulative
+settled P&L remains **-$2.11**, and deployable pUSD is $19.391700. The only
+live order remains a canonically matched, zero-fill 28-share Trump-out NO sell
+at .97.
+
+State hygiene refreshed ten indexed rows plus one legitimate deindexed claim
+row. UMA returned 0 alerts across 40 tracked / 38 refreshed markets, Ostium
+remains empty, crux coverage is complete, the watchlist has no hit, marginal
+APY has zero close flags, and all direct and protected-group exit screens
+remain holds after pessimistic-prior, carry and joint-state review. All four
+daemons are current and exact-one; disk has about 1.2 GB free. The first
+`redeem-all` request hit a transient data-API HTTP 429 before any preparation;
+the bounded retry completed with **0/13 winning redeemables**, skipped three
+losing/uncertain rows and submitted no transaction.
+
+One post-22:04 Guardian alert concerned a conditional proposal to reopen the
+Strait of Hormuz and has no causal channel to any held position. The Clarity
+article reviewed at 22:04 remains a recap of the excluded Sep. 15 cloture vote,
+not a qualifying final-passage vote. Independent Duma reconciliation confirmed
+that all three former buckets are final NO and absent from the live book; the
+stale Sep. 25 clock stays deleted.
+
+The full discovery branch reviewed 1,000 primary and 51,224 thin-tail active
+markets, with 1,618 thin-tail hurdle candidates. Four primary and 63 thin-tail
+proof-hashed context batches passed source-integrity checks; prior rows absent
+from the new filtered snapshots were treated only as omissions. Monotonicity
+found zero provisional violations. Consistency validated 3,056 negRisk markets
+and live-quoted 20 candidate groups with zero positive basket. Sports supplied
+no positive consensus gap above three points, macro had no independent
+probability source, favorite-fade supplied no fresh instance thesis, and the
+HLE and MetaMask cross-event checks were non-positive after fees. No candidate
+cleared exact identity, criteria, fee, depth and robust portfolio gates.
+
+The weekly report now covers Sep. 18–25. Against Sep. 18, trading midpoint and
+indicative depth values fell **$12.64/$13.04**; against the fixed $170 trading
+contribution they are **-$13.54 (-7.96%) / -$23.96 (-14.09%)**. The measured
+approval-source trade earned **$7.576438**, but the Duma 295–339 set recovered
+only $0.28 on $11.40 cost, a **$11.12 loss**. The repeated Duma posteriors
+retained too much correlated pre-election weight after broad repricing and
+mature live counts; future result-window work must sharply decay that weight
+and compare each bid with a count-driven tail. Apple's two favorable-prefix
+sales and the Gemini add are recorded separately; the latter exposed a roughly
+$2.1 executable-price Kelly overshoot even though its stressed arithmetic EV
+remained positive.
+
+The strict passive-index command failed closed because Yahoo returned fully
+null Sep. 22 raw and adjusted closes for VT and VTI. A transparent diagnostic
+reconstruction omitted only those null rows and used valid Sep. 24 closes,
+yielding $180.37 VT, $182.34 VTI and $182.76 SPY on the fixed contributions.
+Those figures are useful context but are not labeled as a successful strict
+benchmark run. Six due engineering records—DEC-0140, DEC-0141, DEC-0143,
+DEC-0145, DEC-0148 and DEC-0150—were graded PASS within their stated scopes;
+the tracker now has **175 total, 105 resolved, 70 pending and no overdue
+record**. Two focused watcher, execution and Jev runs passed **42 and 84
+tests**; their overlapping coverage was not double-counted as a unique-test
+total.
+
+No trade, order change, transfer, prior change or new decision was warranted.
+The Sep. 20 world-state rotation remains fresh; the completed methodology
+experiment is not due. Telegram message **1046** reported the material weekly
+P&L, Duma loss and benchmark caveat. The next dated catalyst is the exact Sep.
+30 Arena Text Overall source snapshot.

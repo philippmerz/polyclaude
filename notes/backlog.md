@@ -1,5 +1,37 @@
 # Polyclaude Backlog
 
+## Sep-25 02:09 current update
+
+- **Full check — no asset action:** ten indexed legs have $135.97 cost,
+  $124.54 midpoint and $114.12 indicative fee-net depth. Authoritative
+  bankroll is **$163.40**, approximate whole-account depth-realizable value is
+  **$152.98**, cumulative realized P&L remains **-$2.11**, and deployable pUSD
+  is $19.391700. No fill, settlement, transfer, UMA/Ostium change, watchlist
+  hit, marginal-APY exit or redemption appeared. The sole live order remains
+  the canonically matched zero-fill Trump-out 28-NO sell at .97. State,
+  protected groups, crux coverage, four exact-one/current daemons and disk are
+  within their gates. The first redemption query received a transient HTTP
+  429; the bounded retry completed normally with 0/13 winning redeemables.
+- **Weekly P&L renewed through Sep. 25:** trading value excluding separately
+  contributed gas is **$156.46 at midpoint / $146.04 at indicative fee-net
+  depth**, down $12.64/$13.04 from Sep. 18 and down $13.54/$23.96 versus the
+  fixed $170 contribution. The approval-source trade earned $7.576438, while
+  the Duma set lost $11.12 and remains the week's main calibration failure.
+  No external capital flow occurred. The strict passive-index command failed
+  closed because Yahoo supplied all-null Sep. 22 VT/VTI rows; a separately
+  identified diagnostic that omitted only those rows put Sep. 24 VT/VTI/SPY
+  at $180.37/$182.34/$182.76. Do not treat that reconstruction as the strict
+  benchmark result; retain the provider-quality caveat.
+- **Decision and discovery hygiene complete:** six due engineering decisions
+  (DEC-0140/0141/0143/0145/0148/0150) were graded PASS within their stated
+  implementation scopes; there are no overdue records. Primary discovery
+  reviewed 1,000 markets and thin-tail discovery 51,224; context integrity
+  passed, and sports, macro, monotonicity, consistency, favorite-fade and both
+  cross-event scans found no candidate clearing exact criteria, executable
+  depth, fees and robust portfolio gates. The Duma clock remains deleted. The
+  next dated catalyst is the Sep. 30 Arena Text Overall snapshot. Telegram
+  **1046** carried the material weekly summary.
+
 ## Sep-24 22:04 current update
 
 - **Clarity alert is an old excluded vote / protected pair unchanged:** the
