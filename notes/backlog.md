@@ -1,5 +1,34 @@
 # Polyclaude Backlog
 
+## Sep-25 10:14 current update
+
+- **Apple residual closed at the measured gate (DEC-0176):** at 10:04 UTC the
+  live NO book improved from the 06:08 split .37/.36 exit to 106.43 shares bid
+  at .37, enough for the full 8.925 residual. At unchanged p(NO)=.35, the
+  authoritative 4% fee curve valued the exit near $3.219 and 97.6 days of
+  1.20% carry lifted it to about $3.229, versus $3.12375 held. The roughly
+  $0.106 advantage cleared the $0.089 one-tick materiality floor by only
+  $0.016, so the decision remains sensitivity-limited. Official Apple pages
+  still showed no qualifying public-purchase product, and the only third-party
+  trade from 06:08 through the decision was a 2.56-share NO buy near .39. The
+  first 8.925 FOK submission was
+  rejected before matching because sell size permits two decimals; the
+  corrected **8.92 NO FOK at .37** filled for $3.3004 gross / **$3.217230
+  net**, leaving 0.005077 token dust. No re-entry absent a fresh robust edge.
+- **Post-trade reconciliation:** nine indexed legs have $132.30 cost, $120.84
+  midpoint and $109.82 indicative fee-net depth. Authoritative bankroll is
+  **$162.90**, approximate whole-account depth-realizable value is **$151.88**,
+  cumulative realized P&L is **-$2.57**, and deployable pUSD is $22.608930.
+  Position state is clean at nine indexed legs plus the exact deindexed claim
+  row; the sole live order remains the canonically matched zero-fill
+  Trump-out 28-NO sell at .97.
+- The post-06:08 KelpDAO/LayerZero rsETH exploit alert has no held-exposure
+  channel. No opportunity alert, other fill, settlement, transfer, UMA/Ostium
+  change, watchlist hit, overdue decision or other exit appeared. All four
+  daemons are exact-one/current and disk remains above its warning floor. The
+  next dated catalyst is the Sep. 30 Arena Text Overall source snapshot.
+  Telegram **1047** reported the material close.
+
 ## Sep-25 06:08 current update
 
 - **Periodic state — no asset action:** ten indexed legs have $135.97 cost,
@@ -1572,7 +1601,7 @@
 - **Duma current review:** FOM's Sep-10 final forecast is United Russia 47–49%, KPRF 14–17%, LDPR 10–12%, New People 8–9%, and Just Russia 6–7%. Normalizing the five qualifying-party midpoints implies about 121 United Russia list seats; with APEK's 185–195 district range, that centers near 311 total, below the analogous VCIOM-centered estimate near 319. Reallocate the held buckets .15/.32/.25 → **.18/.35/.19** while retaining union **.72** because RASO's broad ranges and Turovsky's qualitative district-upside case preserve both tails. The complete exit is $12.54 versus $14.40 fair. NO ADD: .72 < .75 and a five-unit set costs .646 per payout dollar, above the .57 ceiling. Never transact one leg independently.
 - **MetaMask current review:** the direct Dec-31 launch sibling is near .06. MetaMask's Sep-9 corporate-separation announcement names no token and says nothing changes for users. Updated conditional priors are .064 YES above $700M, .957 NO above $3B, and .964 NO above $4B. The protected group remains HOLD/no add: $45.99 central fair and $44.75 rule floor exceed its $44.37 complete exit. Current component asks fail the add policy after carry, operational reserve, shared-model and separate-resolution risk.
 - **Hormuz-normal final:** Gamma finalized NO. DEC-0077/0081/0084/0086 are graded. The archived 0.003571 winning dust passes a redemption dry-run but is worth less than gas, so leave it unredeemed; no active resolution monitor remains.
-- **Apple current review:** Sep-23 official pages still have no qualifying public-purchase listing, and the day's rumor roundup adds no sourced availability date. Retain p_no .35 (wide .18-.55). A bounded consumed-edge trim sold 25.08 NO whose fee-net bids exceeded fair; retain 8.925 because its $3.04 full exit remains below $3.12 central value. NO ADD and no hidden-information maker sell (DEC-0173).
+- **Apple closed Sep-25 10:05 (DEC-0176):** official pages still had no qualifying public-purchase listing and p_no remained .35 (wide .18-.55), but a fresh .37 bid covered the full 8.925 residual. Fee-net exit plus carry was about $3.229 versus $3.12375 held, clearing the one-tick gate by about $0.016. Sold the venue-supported 8.92 NO FOK for $3.217230 net; 0.005077 token dust remains below venue size precision. No re-entry absent a fresh robust edge.
 
 ## Sep-9 14:19 update (historical; superseded above)
 

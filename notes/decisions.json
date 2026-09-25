@@ -1,5 +1,5 @@
 {
-  "next_id": 176,
+  "next_id": 177,
   "decisions": [
     {
       "id": 1,
@@ -3509,6 +3509,27 @@
       "calibration_delta": "none; the exact-pair join behaved as predicted on matched, unknown, duplicate, and missing-snapshot cases",
       "lesson": "Human-readable order identity belongs in the read-only display layer, joined on both condition and token; unresolved identities must stay explicit rather than guessed.",
       "resolved_at": "2026-09-24T18:07:04Z"
+    },
+    {
+      "id": 176,
+      "timestamp": "2026-09-25T10:08:16Z",
+      "type": "close_position",
+      "thesis": "The 8.925-share Apple touchscreen-MacBook NO residual was worth $3.12375 at the unchanged p(NO)=0.35 prior. At 10:04 UTC the live book improved from a split 0.37/0.36 exit to 106.43 shares bid at 0.37, enough for the full residual. The authoritative 4% quadratic taker curve valued 8.925 shares near $3.219 fee-net and about $3.229 after 97.6 days of 1.20% carry, clearing hold by roughly $0.106 and the $0.089 one-tick materiality floor. Current Apple store, MacBook Pro and newsroom pages showed no qualifying product, and the only third-party trade from 06:08 through the decision was a 2.56-share NO buy near 0.39. Sold the venue-supported 8.92-share amount FOK at 0.37 for $3.3004 gross and $3.21723 net, leaving 0.005077 token dust; no re-entry absent a fresh robust edge.",
+      "confidence": "medium",
+      "prediction": "A qualifying touchscreen MacBook will be available for general-public purchase by December 31 and the contract will resolve YES; regardless of the binary result, the 8.92-share sale will beat holding at the recorded 0.35 NO probability after fees and carry.",
+      "size_usd": 3.21723,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "polymarket",
+        "apple",
+        "exit-cost-gate",
+        "consumed-edge",
+        "full-exit"
+      ],
+      "slug": "will-apple-release-a-touchscreen-macbook-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

@@ -173,6 +173,17 @@ unfilled remainder should ride the event was wrong: a no-show could gap NO towar
 lift the stale 0.69 offer and capture the event tail. Re-arm only after the event against a fresh
 prior and book. Order `0x3b8f1080…cad785`.
 
+## ECONOMICALLY CLOSED: touchscreen-MacBook-2026 NO residual (2026-09-25 10:05 UTC, DEC-0176)
+
+The final executable balance closed after the full 8.925-share residual became
+sellable at .37. The first 8.925 FOK submission was rejected before matching
+because sell quantities support at most two decimals. Retried with the
+venue-supported **8.92 NO @ .37 FOK**: order
+`0x630f924dc360fff453e1bd88aa529bad09b62dc3ad45af4ef8c650085a7f32e6`
+matched for $3.3004 gross / $3.217230 net in transaction
+`0xd8b7e9fed448234c6f7cb86d0134438a6f0aea2144e89456dcd48e4553ac93f9`.
+On-chain balance is 0.005077 token dust, below venue size precision. No Apple
+order remains and no re-entry is allowed without a fresh robust edge.
 
 ## CANCELLED: Gemini-HLE-50 NO maker BUY (placed 2026-08-10 22:30, cancelled 2026-08-12 22:05, DEC-0071)
 

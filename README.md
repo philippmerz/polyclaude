@@ -35,16 +35,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-25 06:08 UTC
+## Last audited snapshot — 2026-09-25 10:14 UTC
 
 | Measure | Value |
 |---|---:|
-| Unresolved position legs | 10 |
-| Position cost | $135.97 |
-| Polymarket midpoint | $124.49 |
-| Indicative depth/fee value | $114.72 |
-| Authoritative whole-account mark | $163.24 |
-| Cumulative realized P&L | -$2.11 |
+| Unresolved position legs | 9 |
+| Position cost | $132.30 |
+| Polymarket midpoint | $120.84 |
+| Indicative depth/fee value | $109.82 |
+| Authoritative whole-account mark | $162.90 |
+| Cumulative realized P&L | -$2.57 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
@@ -61,18 +61,20 @@ stressed-prior and joint portfolio-risk review. Executed adverse flow across
 the three HLE markets moved their p(NO) priors to **.15/.20/.25** for next
 Gemini Pro debut, Gemini >=50 and OpenAI >=55. The exact 60-row source still
 shows Gemini below 50 and OpenAI below 55; their $50.52 of central terminal
-value exceeds $10.74 of current fee-net exits. The OpenAI leg also remains a
+value exceeds $9.76 of current fee-net exits. The OpenAI leg also remains a
 hold at its .15 range floor, and the Dec. 31 hold-only rule blocks enlargement.
-Apple's retained 8.925 NO shares have about $3.12 of central value versus $3.19
-from an immediate sale. That apparent $0.07 advantage is below the position's
-$0.09 one-tick noise threshold; fresh official-source and tape review found no
-qualifying release fact and concentrated NO buying, so the hidden-information
-gate remains HOLD. The only live order is a zero-fill maker sell for
-**28 Trump-out NO at 0.97**. Deployable pUSD is $19.391700. The
-midpoint-to-depth gap is $9.77; the approximate whole-account
-depth-realizable value is $153.47. Duma resolved and closed on Sep. 21; the
-next active portfolio catalyst is the exact Arena Text Overall source snapshot
-on Sep. 30.
+Apple's final executable balance closed on Sep. 25. A fresh .37 bid covered the
+entire 8.925-share residual; the authoritative fee curve and carry valued an
+exit near $3.229 versus $3.124 of central hold value, clearing the $0.089
+one-tick materiality floor by only about $0.016. The venue accepted 8.92 NO
+FOK for $3.217230 net and left 0.005077 token dust below its size precision.
+Official Apple sources still showed no qualifying product, so this was a
+price/carry exit rather than a thesis break; do not re-enter without a fresh
+robust edge. The only live order is a zero-fill maker sell for **28 Trump-out
+NO at 0.97**. Deployable pUSD is $22.608930. The midpoint-to-depth gap is
+$11.01; the approximate whole-account depth-realizable value is $151.88. Duma
+resolved and closed on Sep. 21; the next active portfolio catalyst is the exact
+Arena Text Overall source snapshot on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

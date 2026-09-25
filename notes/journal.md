@@ -19870,3 +19870,51 @@ All other direct, carry and protected-group screens remain holds. No trade,
 order change, transfer, prior change, decision record or material Telegram
 summary was warranted. The next dated catalyst remains the Sep. 30 Arena Text
 Overall source snapshot.
+
+## 2026-09-25 10:00–10:14 UTC — Apple residual closed at the measured exit gate
+
+The bounded periodic review found no new opportunity trigger or pre-existing fill,
+settlement, transfer, watchlist hit, overdue decision, UMA/Ostium change or
+dated task. The only new news item was the Sep. 25 KelpDAO/LayerZero rsETH
+exploit alert, which has no channel to a held position. All four daemons were
+current and exact-one, and disk retained about 1.16 GiB free.
+
+Apple's remaining 8.925 touchscreen-MacBook NO shares were the sole actionable
+change. At 06:08, a complete exit had required 6.43 shares at .37 and the rest
+at .36 and failed the one-tick materiality gate. At 10:04, a fresh book showed
+106.43 shares bid at .37, enough to execute the entire residual at the same
+favorable price used for Sep. 23's trim. The exact market criteria and current
+Apple store, MacBook Pro, and newsroom pages remained unchanged and showed no
+qualifying public-purchase product. The only third-party public trade between
+06:08 and execution was a 2.564103-share NO buy near .39, so there was no new
+source fact or broad tape confirmation.
+
+At the unchanged p(NO)=.35 prior, holding was worth $3.12375. The live 4%
+quadratic taker curve valued 8.925 shares near $3.219 fee-net, and 97.6 days of
+1.20% carry raised the proceeds comparison to about $3.229. The resulting
+roughly $0.106 advantage cleared the $0.08925 one-tick floor by only about
+$0.016. The market midpoint and hidden-information interpretation still made
+the choice sensitive to a small prior change, so DEC-0176 records medium
+confidence rather than treating the result as a thesis break. The measured
+central-prior gate and the prior consumed-edge policy nevertheless favored a
+complete exit; no re-entry is permitted absent fresh robust edge.
+
+The first FOK submission for 8.925 was rejected by the venue before matching
+because sell sizes support only two decimal places. The corrected **8.92 NO
+FOK at .37** matched as order
+`0x630f924dc360fff453e1bd88aa529bad09b62dc3ad45af4ef8c650085a7f32e6`,
+transaction
+`0xd8b7e9fed448234c6f7cb86d0134438a6f0aea2144e89456dcd48e4553ac93f9`.
+Gross proceeds were $3.3004 and wallet pUSD rose exactly $3.217230, from
+$19.391700 to $22.608930. Direct on-chain balance is 0.005077 token dust; its
+condition and asset identity remain preserved in the closed prior record.
+
+Post-trade reconciliation shows nine indexed legs at **$132.30 cost, $120.84
+midpoint and $109.82 indicative fee-net depth**. Authoritative bankroll is
+**$162.90**, approximate whole-account depth-realizable value is **$151.88**,
+cumulative realized P&L is **-$2.57**, and deployable pUSD is $22.608930. The
+position-state audit is clean, the sole live order remains the canonically
+matched zero-fill Trump-out 28-NO sell at .97, and every remaining direct and
+protected-group exit is below hold value. The next dated catalyst remains the
+Sep. 30 Arena Text Overall source snapshot. Telegram message **1047** reported
+the material close and reconciled state.
