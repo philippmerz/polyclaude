@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-26 14:05 current update
+
+- **Full check — HOLD all / no asset action:** nine indexed legs have $132.30
+  cost, $122.11 midpoint and $116.68 indicative fee-net depth. Authoritative
+  bankroll is **$164.62**, approximate whole-account depth-realizable value is
+  **$159.19**, cumulative realized P&L remains **-$2.57**, and deployable pUSD
+  remains $22.608930. No fill, settlement, transfer, UMA/Ostium change,
+  watchlist hit, redemption or due task appeared; the sole Trump-out 28-NO sell
+  at .97 remains zero-fill. All direct and protected-group exits remain holds.
+- The 63-row HLE source is unchanged and both post-cutoff Trump prints favored
+  held NO. Two Hormuz headlines produced only a MINOR Trump political-risk tag,
+  with no probability change. Discovery reviewed 1,000 primary and 57,114
+  thin-tail markets; context proofs passed and every structural or surfaced
+  candidate failed live execution or instance-level evidence. No material
+  Telegram summary was sent. The next dated catalyst remains the Sep. 30 Arena
+  Text Overall snapshot.
+
 ## Sep-26 10:05 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have

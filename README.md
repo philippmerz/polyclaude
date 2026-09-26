@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-26 10:03 UTC
+## Last audited snapshot — 2026-09-26 14:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 9 |
 | Position cost | $132.30 |
-| Polymarket midpoint | $122.60 |
-| Indicative depth/fee value | $118.48 |
-| Authoritative whole-account mark | $165.07 |
+| Polymarket midpoint | $122.11 |
+| Indicative depth/fee value | $116.68 |
+| Authoritative whole-account mark | $164.62 |
 | Cumulative realized P&L | -$2.57 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -55,12 +55,12 @@ exits are about $28.25 and $45.36, both below central hold value.
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
 Gemini >=50 and OpenAI >=55. Recent public Gemini >=50 NO demand supports the
 held side, but the exact 63-row source still has Gemini below 50 and OpenAI
-below 55. The three central terminal values total $50.52 versus about $17.87
+below 55. The three central terminal values total $50.52 versus about $16.04
 of current exits, so all remain holds and the
 Dec. 31 hold-only rule blocks enlargement. Every other direct and protected
 group screen is also a hold. The only live order is a zero-fill maker sell for
 **28 Trump-out NO at 0.97**. Deployable pUSD is $22.608930. The midpoint-to-depth
-gap is $4.12; approximate whole-account depth-realizable value is $160.95. The
+gap is $5.43; approximate whole-account depth-realizable value is $159.19. The
 next active portfolio catalyst is the exact Arena Text Overall source snapshot
 on Sep. 30.
 
