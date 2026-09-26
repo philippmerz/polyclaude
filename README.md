@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-26 02:04 UTC
+## Last audited snapshot — 2026-09-26 06:01 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 9 |
 | Position cost | $132.30 |
-| Polymarket midpoint | $125.23 |
-| Indicative depth/fee value | $116.55 |
-| Authoritative whole-account mark | $167.68 |
+| Polymarket midpoint | $124.91 |
+| Indicative depth/fee value | $117.23 |
+| Authoritative whole-account mark | $167.40 |
 | Cumulative realized P&L | -$2.57 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -53,14 +53,14 @@ structure likewise remains a complete economic group. Their current complete
 exits are about $28.25 and $45.36, both below central hold value.
 
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
-Gemini >=50 and OpenAI >=55. Two public Gemini >=50 NO buys totaling 170 shares
-improved that leg's fee-net exit to about $11.20, but the exact 63-row source
-still has Gemini below 50 and OpenAI below 55. The three central terminal values
-total $50.52 versus about $16.02 of current exits, so all remain holds and the
+Gemini >=50 and OpenAI >=55. Recent public Gemini >=50 NO buys totaling 170
+shares support the held side, but the exact 63-row source still has Gemini below
+50 and OpenAI below 55. The three central terminal values total $50.52 versus
+about $16.71 of current exits, so all remain holds and the
 Dec. 31 hold-only rule blocks enlargement. Every other direct and protected
 group screen is also a hold. The only live order is a zero-fill maker sell for
 **28 Trump-out NO at 0.97**. Deployable pUSD is $22.608930. The midpoint-to-depth
-gap is $8.68; approximate whole-account depth-realizable value is $159.00. The
+gap is $7.68; approximate whole-account depth-realizable value is $159.72. The
 next active portfolio catalyst is the exact Arena Text Overall source snapshot
 on Sep. 30.
 

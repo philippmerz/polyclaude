@@ -20143,3 +20143,33 @@ was **-4.7pp expected edge before costs**, so the skip was justified ex ante.
 No overdue decision remains. No trade, transfer, redemption, order or prior
 change followed, and this otherwise flat tick did not warrant Telegram. The
 next dated catalyst remains the exact Sep. 30 Arena Text Overall snapshot.
+
+## 2026-09-26 06:00–06:04 UTC — periodic review; no actionable delta
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $124.91 midpoint and
+$117.23 indicative fee-net depth**. Authoritative whole-account bankroll is
+**$167.40**; replacing midpoint marks with the complete depth walk gives an
+approximate **$159.72 whole-account depth value**. Cumulative realized P&L
+remains **-$2.57**, deployable pUSD is $22.608930 with no BUY commitment, and
+there were no authenticated fills after the 02:08 full review. The sole live
+order remains the canonically matched, zero-fill 28-share Trump-out NO sell at
+.97.
+
+All direct and protected-group screens remain holds. Current fee-net exits are
+about $4.00/$10.88/$1.83 for Gemini debut, Gemini >=50 and OpenAI >=55 versus
+$25.35/$20.42/$4.75 central terminal values. Gemini >=50 remains above its
+recorded range-floor value but far below central hold value, and the recent
+executed NO buying supports the held side. Clarity exits near $28.25 versus its
+$29 floor, MetaMask near $45.36 versus $46.16 central value, and Trump near
+$26.91 versus $27.48. Marginal APY has zero close flags. **HOLD all / NO ADD**;
+leave the Trump order unchanged.
+
+No post-cutoff news or opportunity alert, settlement, UMA/Ostium status change,
+watchlist hit, redemption or overdue decision appeared. Redemption found 0/12
+winning claims and broadcast nothing. State and crux coverage are clean, all
+four daemons are current and exact-one, and disk retains about 1.075 GiB free.
+The state audit's only tracked change was its routine claim-insurance `_refreshed`
+date advancing to Sep. 26; no position membership changed. Weekly P&L and the
+world-state rotation remain current. No trade, transfer, order, prior or
+material Telegram summary was warranted. The next dated catalyst remains the
+exact Sep. 30 Arena Text Overall source snapshot.

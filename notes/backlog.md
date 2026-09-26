@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-26 06:04 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $124.91 midpoint and $117.23 indicative fee-net depth.
+  Authoritative bankroll is **$167.40**, approximate whole-account
+  depth-realizable value is **$159.72**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. No post-02:08 fill,
+  alert, settlement, UMA/Ostium change, watchlist hit, redemption or due task
+  appeared. The sole Trump-out 28-NO sell at .97 remains zero-fill.
+- All direct and protected-group exits remain holds. Gemini >=50's $10.88
+  current exit remains below its $20.42 central terminal value; Clarity and
+  MetaMask retain their complete-group value. State, crux coverage, carry,
+  daemons and disk are clean. The audit refreshed its claim-insurance snapshot
+  date to Sep. 26 without changing membership. No Telegram summary was sent;
+  the next dated catalyst remains the Sep. 30 Arena Text Overall snapshot.
+
 ## Sep-26 02:08 current update
 
 - **Full check — HOLD all / no asset action:** nine indexed legs have $132.30
