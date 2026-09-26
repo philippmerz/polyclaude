@@ -20173,3 +20173,37 @@ date advancing to Sep. 26; no position membership changed. Weekly P&L and the
 world-state rotation remain current. No trade, transfer, order, prior or
 material Telegram summary was warranted. The next dated catalyst remains the
 exact Sep. 30 Arena Text Overall source snapshot.
+
+## 2026-09-26 10:00–10:05 UTC — periodic review; midpoint falls while depth improves
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $122.60 midpoint and
+$118.48 indicative fee-net depth**. Authoritative whole-account bankroll is
+**$165.07**; replacing midpoint marks with the complete depth walk gives an
+approximate **$160.95 whole-account depth value**. Since 06:04, midpoint and
+bankroll fell $2.31/$2.33 while fee-net depth and whole-account depth rose
+$1.25/$1.23. The headline decline therefore reflects wide-book quote geometry,
+not a comparable loss of executable value. Cumulative realized P&L remains
+**-$2.57**, deployable pUSD remains $22.608930 with no BUY commitment, and
+there were no authenticated fills. The sole live order remains the canonical,
+zero-fill 28-share Trump-out NO sell at .97.
+
+All direct and protected-group screens remain holds. Current fee-net exits are
+about $5.36/$9.94/$2.57 for Gemini debut, Gemini >=50 and OpenAI >=55 versus
+$25.35/$20.42/$4.75 central terminal values. A fresh 21.65-share Gemini >=50 NO
+buy near .109 supports the held side; the other post-cutoff held-market prints
+were a 34.09-share OpenAI YES sale near .82 and a 20-share Trump YES buy near
+.05, neither a source or identity thesis break. Clarity exits near $28.25
+versus its $29 floor, MetaMask near $45.45 versus $46.16 central value, and
+Trump near $26.91 versus $27.48. Marginal APY has zero close flags. **HOLD all /
+NO ADD** under the Dec. 31 rule; leave the Trump order unchanged.
+
+The only new alert reports that Trump rejected Iran's proposed seven-day
+Hormuz reopening plan. It has no held-position channel, and the opportunity
+watcher found no executable structure. No settlement, UMA/Ostium status change,
+watchlist hit, redemption, overdue decision or due backlog task appeared.
+Redemption found 0/12 winning claims and broadcast nothing. State and crux
+coverage are clean, all four daemons are current and exact-one, and disk retains
+about 1.067 GiB free. The audit snapshot content remained byte-identical. No
+trade, transfer, order, prior or material Telegram summary was warranted. The
+next dated catalyst remains the exact Sep. 30 Arena Text Overall source
+snapshot.

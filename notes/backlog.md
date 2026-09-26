@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-26 10:05 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $122.60 midpoint and $118.48 indicative fee-net depth.
+  Authoritative bankroll is **$165.07**, approximate whole-account
+  depth-realizable value is **$160.95**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. Since 06:04, midpoint
+  fell $2.31 while depth rose $1.25, confirming that the headline move was
+  largely quote geometry rather than lost executable value.
+- No authenticated fill, settlement, UMA/Ostium change, watchlist hit,
+  redemption or due task appeared. All direct and protected-group exits remain
+  holds; the sole Trump-out 28-NO sell at .97 remains zero-fill. A reported
+  rejection of Iran's Hormuz reopening proposal has no held-position channel,
+  and no opportunity alert followed. State, carry, crux coverage, daemons and
+  disk are clean. No Telegram summary was sent; the next dated catalyst remains
+  the Sep. 30 Arena Text Overall snapshot.
+
 ## Sep-26 06:04 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have
