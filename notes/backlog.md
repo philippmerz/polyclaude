@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-26 22:03 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $119.39 midpoint and $112.88 indicative fee-net depth.
+  Authoritative bankroll is **$161.88**, approximate whole-account
+  depth-realizable value is **$155.37**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. No fill, settlement,
+  transfer, UMA/Ostium change, watchlist hit, redemption or due task appeared;
+  the sole Trump-out 28-NO sell at .97 remains zero-fill.
+- The $4.02 depth decline since 18:05 is HLE quote withdrawal rather than
+  executed adverse evidence: all three HLE markets had zero public trades, the
+  63-row source is unchanged, and every taker exit remains below its recorded
+  pessimistic terminal value. The only held-market print favored Trump NO. All
+  direct and protected-group screens remain holds; state and daemons are clean.
+  No Telegram summary was sent. The next dated catalyst remains Sep. 30.
+
 ## Sep-26 18:05 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have
