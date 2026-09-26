@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-26 18:05 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $123.11 midpoint and $116.90 indicative fee-net depth.
+  Authoritative bankroll is **$165.56**, approximate whole-account
+  depth-realizable value is **$159.35**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. No fill, settlement,
+  transfer, UMA/Ostium change, watchlist hit, redemption or due task appeared;
+  the sole Trump-out 28-NO sell at .97 remains zero-fill.
+- **Clarity alert rejected as stale criteria noise:** the article recaps the
+  Sep. 15 cloture vote on the motion to proceed. Both live contracts explicitly
+  exclude that vote and still use the first full-Senate final-passage vote
+  before Jan. 1. The equal-share pair retains its exact $29 payout floor versus
+  a $28.25 exit. HLE and all other exits remain holds; state and daemons are
+  clean. No Telegram summary was sent. The next dated catalyst remains the
+  Sep. 30 Arena Text Overall snapshot.
+
 ## Sep-26 14:05 current update
 
 - **Full check — HOLD all / no asset action:** nine indexed legs have $132.30

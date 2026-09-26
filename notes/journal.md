@@ -20253,3 +20253,42 @@ current books, fees and uncertainty bounds.
 No trade, transfer, redemption, order, prior or material Telegram summary was
 warranted. The next dated catalyst remains the exact Sep. 30 Arena Text Overall
 source snapshot.
+
+## 2026-09-26 18:00–18:05 UTC — periodic review; stale Clarity alert rejected
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $123.11 midpoint and
+$116.90 indicative fee-net depth**. Authoritative whole-account bankroll is
+**$165.56**; replacing midpoint marks with the complete depth walk gives an
+approximate **$159.35 whole-account depth value**. Cumulative realized P&L
+remains **-$2.57**, deployable pUSD is $22.608930 with no BUY commitment, and
+there were no authenticated fills after the 14:05 review. The sole live order
+remains the canonically matched, zero-fill 28-share Trump-out NO sell at .97.
+
+The Decrypt Clarity alert was tagged MATERIAL, then rejected as stale criteria
+noise. It recaps the Sep. 15 failed vote without a new roll call. The [official
+Senate cloture record](https://www.senate.gov/legislative/cloture/119.htm)
+identifies that 49–50 vote as cloture on the motion to proceed to H.R. 3633.
+Both live contracts retain byte-identical criteria that explicitly exclude a
+motion to proceed and cloture and use only the first full-Senate final-passage
+vote before Jan. 1. Their equal 29-share over-50 YES plus over-58 NO structure
+therefore still pays at least $29 in every written terminal state versus a
+roughly $28.25 complete exit. **HOLD the complete pair** and never transact one
+leg independently.
+
+All other direct and protected-group screens remain holds. Current fee-net HLE
+exits are about $4.10/$9.94/$2.38 versus $25.35/$20.42/$4.75 central terminal
+values. The exact source remains at 63 rows with Gemini below 50, OpenAI below
+55 and all three placeholders unscored. MetaMask exits near $45.32 versus
+$46.16 central value and Trump near $26.91 versus $27.48; its only two public
+prints favored held NO. Marginal APY has zero close flags. **HOLD all / NO
+ADD** under the Dec. 31 rule; leave the Trump order unchanged.
+
+The other new alert was the known Hormuz proposal, with only a MINOR favorable
+Trump implication. No opportunity alert, settlement, UMA/Ostium status change,
+watchlist hit, overdue decision or due backlog task appeared. Redemption's
+first query hit a transient HTTP 429; the immediate bounded retry completed
+with 0/12 winning claims and no broadcast. State and crux coverage are clean,
+all four daemons are current and exact-one, and disk retains about 1.046 GiB
+free. No trade, transfer, order, prior or material Telegram summary was
+warranted. The next dated catalyst remains the exact Sep. 30 Arena Text Overall
+source snapshot.
