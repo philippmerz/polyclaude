@@ -1,5 +1,27 @@
 # Polyclaude Backlog
 
+## Sep-26 02:08 current update
+
+- **Full check — HOLD all / no asset action:** nine indexed legs have $132.30
+  cost, $125.23 midpoint and $116.55 indicative fee-net depth. Authoritative
+  bankroll is **$167.68**, approximate whole-account depth-realizable value is
+  **$159.00**, cumulative realized P&L remains **-$2.57**, and deployable pUSD
+  remains $22.608930. State, orders, UMA/Ostium, carry, watchlist, redemption,
+  daemons and disk are clean; the sole Trump-out 28-NO sell at .97 remains
+  zero-fill.
+- Gemini >=50's depth improvement followed two public NO buys totaling 170
+  shares. Its $11.20 exit remains below $20.42 central terminal value, while
+  the exact 63-row source still tops Gemini at 46.2. All direct and protected
+  group exits remain holds; no prior or order changed.
+- Discovery reviewed 1,000 primary and 59,030 thin-tail markets, organizing 58
+  and 772 proof-checked context rows. All structural flags failed fresh-book
+  execution and the sports/macro/favorite-fade surfacers lacked a robust
+  instance edge. DEC-0170 was graded: United Russia 340–354 resolved YES as
+  forecast, but the skipped .947 ask was still -4.7pp EV at the recorded .90
+  probability despite its realized 5.6% gross return. No material Telegram
+  summary was sent. The next dated catalyst remains the Sep. 30 Arena Text
+  Overall snapshot.
+
 ## Sep-25 22:12 current update
 
 - **HLE source changed; HOLD / monitor repaired:** the exact API grew from 60

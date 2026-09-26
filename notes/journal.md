@@ -20091,3 +20091,55 @@ exact-one, Telegram had no pending message, and disk retained about 1.11 GiB
 free. No trade, transfer, redemption, prior change or material Telegram
 summary was warranted. The next dated catalyst remains the Sep. 30 Arena Text
 Overall source snapshot.
+
+## 2026-09-26 02:00–02:08 UTC — full check; favorable Gemini flow, no action
+
+The scheduled eleven-step check completed once. Nine indexed Polymarket legs
+reconcile at **$132.30 cost, $125.23 midpoint and $116.55 indicative fee-net
+depth**. Authoritative whole-account bankroll is **$167.68**; substituting the
+depth walk for the midpoint gives an approximate **$159.00 whole-account depth
+value**. Cumulative realized P&L remains **-$2.57**, deployable pUSD is
+$22.608930 with no BUY collateral reserved, and there were no authenticated
+post-cutoff fills. The state audit is clean at nine indexed positions plus one
+legitimate deindexed claim. The sole live order remains the canonically matched,
+zero-fill 28-share Trump-out NO maker sell at .97.
+
+All exit and carry screens remain holds. Gemini >=50's fee-net exit improved to
+about **$11.20** after two independent public NO buys totaling 170 shares (150
+at .0874 and 20 at .121). This is favorable executed evidence for the held NO,
+not a thesis break: the exact resolving API remains at 63 rows, Gemini still
+tops at 46.2 overall / 45.9 Pro, and the unchanged p(NO)=.20 values the terminal
+claim at $20.42. The other HLE exits are about $2.99/$1.83 against $25.35/$4.75
+central terminal values. Clarity's complete group exits near $28.25 versus its
+$29 floor, MetaMask near $45.36 versus $46.16 central value, and Trump near
+$26.91 versus $27.48. Marginal APY has zero close flags. **HOLD all / NO ADD**
+under the Dec. 31 rule; leave the Trump order unchanged.
+
+UMA recorded only the Gemini price move and no resolution-status change. Ostium
+remains empty, redemption found 0/12 winning redeemables and broadcast nothing,
+and wallet, crux coverage, watchlist, four exact-one/current daemons and disk
+headroom are clean. Three post-cutoff news rows (conditional Hormuz diplomacy,
+a MacBook roadmap item for the already closed position, and an Iran interview)
+have no held-position impact. No opportunity alert appeared; the transient
+Claude monotonicity indication was only +0.03pp against the 2pp fire floor.
+Weekly P&L through Sep. 25 and the Sep. 20 world-state rotation remain current.
+
+Discovery refreshed **1,000 primary** and **59,030 thin-tail** active markets;
+1,518 thin-tail rows cleared the mechanical hurdle. The context organizer
+emitted four primary batches / 58 rows and 63 thin-tail batches / 772 rows with
+snapshot and group-content proofs intact. Two HLE midpoint monotonicity flags
+were live-book artifacts; consistency had zero positive live basket in its
+explicitly incomplete capped coverage; HLE and MetaMask cross-event scans found
+no executable violation. Sports had no >3pp consensus delta, macro surfaced six
+visibility-only rows, and the top five favorite-fade rows lacked a fresh
+instance fact or catalyst. No candidate survived literal criteria, current
+books, fees and uncertainty bounds.
+
+The only overdue tracker item, DEC-0170, was graded from final Gamma state.
+United Russia 340–354 resolved YES, matching its recorded .90 forecast; the
+skipped .947 YES would have earned about 5.6% gross in realization. Entry
+quality remains separate from outcome luck: .90 probability against a .947 ask
+was **-4.7pp expected edge before costs**, so the skip was justified ex ante.
+No overdue decision remains. No trade, transfer, redemption, order or prior
+change followed, and this otherwise flat tick did not warrant Telegram. The
+next dated catalyst remains the exact Sep. 30 Arena Text Overall snapshot.

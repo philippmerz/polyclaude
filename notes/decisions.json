@@ -3406,9 +3406,10 @@
         "no-trade"
       ],
       "slug": "will-united-russia-win-between-340-and-354-seats-in-the-next-russian-state-duma-election",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The 340\u2013354 United Russia bucket resolved YES (Gamma event 147974); the 94.7-cent skipped YES would have returned 5.3 cents per share, about 5.6% gross, while 355+ resolved NO.",
+      "calibration_delta": "The modal outcome matched the 0.90 forecast (binary Brier 0.01). Realized opportunity cost was positive, but at the recorded 0.90 probability the 0.947 ask still had -4.7pp expected edge before costs; one realized win does not retroactively make the entry positive-EV.",
+      "lesson": "Grade forecast calibration and entry quality separately: record foregone realized P&L, but judge the skip against the probability and executable price known at decision time.",
+      "resolved_at": "2026-09-26T02:04:24Z"
     },
     {
       "id": 171,
