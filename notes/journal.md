@@ -20382,3 +20382,29 @@ through Sep. 25 is current and the Sep. 20 world-state rotation is seven days
 old, below the >8-day catch-up trigger. No trade, transfer, order, prior or
 material Telegram summary was warranted. The next dated catalyst remains the
 exact Sep. 30 Arena Text Overall source snapshot.
+
+## 2026-09-27 10:00–10:03 UTC — periodic review; liquidity improves, HOLD
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $119.39 midpoint and
+$113.52 indicative fee-net depth**. Authoritative whole-account bankroll is
+**$161.97**; replacing midpoint marks with the depth walk gives an approximate
+**$156.10 whole-account depth value**. Since 02:06, midpoint/bankroll improved
+$2.43 and position/whole-account depth improved $4.22. Cumulative realized P&L
+remains **-$2.57**, deployable pUSD remains $22.608930, and the canonical
+28-share Trump-out NO sell at .97 remains live with zero matched.
+
+All direct and protected-group screens remain holds. Current fee-net HLE exits
+are about $5.86/$5.13/$2.20 for Gemini debut, Gemini >=50 and OpenAI >=55,
+still below $25.35/$20.42/$4.75 central values; the exact source has no scored
+threshold change. Trump exits near $26.91 versus $27.48 central value, Clarity
+near $28.25 versus its exact $29 floor, and MetaMask near $45.17 versus $46.16
+central value. Marginal APY has zero close flags. **HOLD all / NO ADD.**
+
+No post-02:06 news or opportunity alert, authenticated fill, settlement,
+UMA/Ostium change, watchlist hit, overdue decision or safety issue appeared.
+State and crux coverage are clean; all four daemons are current and exact-one,
+with about 1.1 GiB disk free. Weekly P&L through Sep. 25 is current and the Sep.
+20 world-state rotation remains below its greater-than-eight-day catch-up
+trigger. No trade, transfer, order, prior or material Telegram summary was
+warranted. The next dated catalyst remains the exact Sep. 30 Arena Text Overall
+source snapshot.
