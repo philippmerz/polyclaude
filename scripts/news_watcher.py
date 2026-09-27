@@ -49,6 +49,7 @@ ALERTS_LOG_PATH = _REPO_ROOT / "notes" / "news_alerts.jsonl"
 TELEGRAM_TOKEN_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_TOKEN")
 TELEGRAM_STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
 CRON_SCRIPT = _SCRIPT_DIR / "daily_checkin.sh"
+TITLE_DEDUP_SECONDS = 72 * 60 * 60
 
 
 def _append_news_alert(record: dict) -> None:
@@ -82,11 +83,13 @@ def load_state() -> dict:
 
 def save_state(s: dict) -> None:
     s["seen_ids"] = s.get("seen_ids", [])[-5000:]  # bounded
-    # Prune seen_titles older than 24h to keep state file bounded.
-    # Title-dedup is intra-day; older syndicated copies of the same story
-    # are rare enough that re-firing once a day is acceptable.
+    # Keep exact normalized titles for three days. Some RSS publishers refresh
+    # the GUID on an unchanged article once per day; the former 24h boundary
+    # let one CoinTelegraph story fire on three consecutive checks. Three days
+    # outlasts normal feed residence without suppressing a genuinely reused
+    # headline indefinitely.
     now = time.time()
-    cutoff = now - 86400  # 24h
+    cutoff = now - TITLE_DEDUP_SECONDS
     s["seen_titles"] = {t: ts for t, ts in s.get("seen_titles", {}).items()
                         if ts >= cutoff}
     STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -509,7 +512,7 @@ def poll_once(config: dict, state: dict) -> int:
             title = entry.get("title", "")
             # Title-hash dedup across feeds: same syndicated story
             # republished with new GUIDs across N feeds was firing N alerts.
-            # Normalize title and check the seen_titles dict (24h window).
+            # Normalize title and check the seen_titles dict (72h window).
             # Lesson source: 2026-05-08 saw "Trump shelved Project Freedom"
             # fire 9× in 4h across syndicated feeds.
             tnorm = _normalize_title(title)

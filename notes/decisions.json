@@ -1,5 +1,5 @@
 {
-  "next_id": 177,
+  "next_id": 179,
   "decisions": [
     {
       "id": 1,
@@ -3552,6 +3552,25 @@
       "calibration_delta": "none; the parser now distinguishes legitimate pending evaluations from malformed score data without making a threshold claim",
       "lesson": "A source can publish an instrument identity before publishing its measured value. Preserve that state explicitly so both the addition and the later value transition remain auditable.",
       "resolved_at": "2026-09-25T22:09:00Z"
+    },
+    {
+      "id": 178,
+      "timestamp": "2026-09-27T02:04:32Z",
+      "type": "scaffolding",
+      "thesis": "The 24-hour normalized-title retention admitted one unchanged CoinTelegraph article on three consecutive days because its refreshed feed entry arrived just after each expiry. Retaining exact normalized titles for 72 hours should remove this repeated LLM/review cost while allowing ordinary feed turnover.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-04, an unchanged normalized headline will not produce more than one news_alerts row inside any 72-hour window; novel headline text remains eligible immediately.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-04",
+      "tags": [
+        "news-watcher",
+        "dedup",
+        "cost-control"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

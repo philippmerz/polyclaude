@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sys
+import time
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -11,6 +12,26 @@ from types import SimpleNamespace
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import news_watcher  # noqa: E402
+
+
+def test_title_dedup_state_survives_daily_guid_refresh(monkeypatch, tmp_path) -> None:
+    """An unchanged headline must not re-enter on the next two daily polls."""
+    state_path = tmp_path / "news_state.json"
+    now = time.time()
+    monkeypatch.setattr(news_watcher, "STATE_PATH", state_path)
+    monkeypatch.setattr(news_watcher.time, "time", lambda: now)
+
+    news_watcher.save_state({
+        "seen_ids": [],
+        "seen_titles": {
+            "same daily-refreshed story": now - (48 * 60 * 60),
+            "expired story": now - (96 * 60 * 60),
+        },
+    })
+
+    saved = json.loads(state_path.read_text())
+    assert "same daily-refreshed story" in saved["seen_titles"]
+    assert "expired story" not in saved["seen_titles"]
 
 
 def test_ostium_summary_reports_live_zero(monkeypatch) -> None:

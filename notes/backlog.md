@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-27 02:06 current update
+
+- **Full check — HOLD all / no asset action:** nine indexed legs have $132.30
+  cost, $116.96 midpoint and $109.30 indicative fee-net depth. Authoritative
+  bankroll is **$159.54**, approximate whole-account depth-realizable value is
+  **$151.88**, cumulative realized P&L remains **-$2.57**, and deployable pUSD
+  remains $22.608930. No authenticated fill, settlement, transfer, UMA/Ostium
+  change, watchlist hit or redemption appeared; the Trump-out 28-NO sell at
+  .97 remains zero-fill. All direct and protected-group screens remain holds.
+- Trump's 1,130 net adverse YES shares came from three wallets but 85% from one.
+  With no resolving fact change, p(NO)=.97 still values hold about $0.48 above
+  full exit plus carry; retain the prior and maker. HLE's source is unchanged
+  and its depth loss remains unexecuted quote withdrawal.
+- Discovery reviewed 999 primary and 57,858 thin-tail markets with all context
+  proofs intact; no live structural arb, positive sports delta or robust
+  instance entry survived. The same CoinTelegraph story had fired on three
+  consecutive days just beyond the old 24-hour title window. Exact-title dedup
+  now retains 72 hours; six focused tests pass and the watcher was restarted
+  exact-one/current (DEC-0178). No material Telegram summary was sent. The next
+  dated catalyst remains Sep. 30.
+
 ## Sep-26 22:03 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have

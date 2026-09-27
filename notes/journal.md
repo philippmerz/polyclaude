@@ -20324,3 +20324,61 @@ crux coverage are clean, all four daemons are current and exact-one, and disk
 retains about 1.045 GiB free. No trade, transfer, order, prior or material
 Telegram summary was warranted. The next dated catalyst remains the exact Sep.
 30 Arena Text Overall source snapshot.
+
+## 2026-09-27 02:00–02:06 UTC — full check; repeat-alert dedup repaired, HOLD
+
+The scheduled eleven-step check completed once. Nine indexed Polymarket legs
+reconcile at **$132.30 cost, $116.96 midpoint and $109.30 indicative fee-net
+depth**. Authoritative whole-account bankroll is **$159.54**; replacing midpoint
+marks with the complete depth walk gives an approximate **$151.88 whole-account
+depth value**. Cumulative realized P&L remains **-$2.57**, deployable pUSD is
+$22.608930 with no BUY commitment, and there were no authenticated fills after
+the 22:03 review. The sole live order remains the canonically matched, zero-fill
+28-share Trump-out NO sell at .97.
+
+Trump-out printed 1,230 YES buys at .05 across four wallets, one of which fully
+round-tripped 100 shares at .04. The remaining 1,130 net adverse YES shares span
+three wallets, but one 960-share buyer contributes 85% of that durable volume.
+Two other wallets bought 7.05 NO at .96. No resolving fact changed. A complete
+NO exit is $26.9135; with 95.9 days of 1.2% carry it is worth about $26.9984,
+versus $27.4801 held at p(NO)=.97. The exit only overtakes holding near
+p(NO)=.953. Concentrated $56.50 adverse notional at an unchanged price does not
+justify a 1.7pp probability cut through that threshold. Retain p(NO)=.97 and the
+fee-free .97 maker; no taker exit.
+
+All other direct and protected-group screens remain holds. Current fee-net HLE
+exits are about $2.46/$4.21/$2.02 for Gemini debut, Gemini >=50 and OpenAI >=55
+versus $25.35/$20.42/$4.75 central and $10.14/$8.17/$2.85 pessimistic terminal
+values. There was zero HLE tape and the exact API remains at 63 rows with no
+threshold change. Clarity exits near $28.25 versus its exact $29 floor and
+MetaMask near $45.45 versus $46.16 central value. Marginal APY has zero close
+flags. The constrained Kelly OpenAI add remains blocked by the Dec. 31 hold-only
+rule. **HOLD all / NO ADD.**
+
+The sole new alert was the identical CoinTelegraph Clarity story already logged
+on Sep. 24 and Sep. 25; it again recaps the excluded cloture/motion-to-proceed
+vote and cannot impair the protected pair. Its new GUID arrived just after the
+watcher's 24-hour normalized-title expiry on three consecutive days. Exact-title
+retention is now **72 hours**, long enough to outlast normal RSS residence while
+still allowing headline reuse later. A regression test retains a 48-hour title
+and prunes a 96-hour title; all six focused watcher tests pass. The daemon was
+restarted through the required absolute command and verified exact-one/current
+at PID 3310146. DEC-0178 records the testable suppression outcome.
+
+Discovery refreshed **999 primary** and **57,858 thin-tail** active markets;
+1,509 thin-tail rows cleared the mechanical hurdle. Proof-hashed context output
+covered four primary batches / 62 rows and 61 thin-tail batches / 1,103 rows
+with integrity true. The sole event-monotonicity midpoint flag became -0.84pp
+at executable books, consistency found no positive live basket in its capped
+coverage, and HLE/MetaMask cross-event scans found no violation. Sports had no
+positive delta above 3pp; macro remained visibility-only; revalidated
+favorite-fade rows lacked an instance thesis. No candidate survived literal
+criteria, current books, fees and uncertainty bounds.
+
+UMA, Ostium, redemption, crux and watchlist checks are clean; all four daemons
+are current and exact-one, and disk retains about 1.029 GiB free. The state
+audit advanced only the claim-insurance refresh date to Sep. 27. Weekly P&L
+through Sep. 25 is current and the Sep. 20 world-state rotation is seven days
+old, below the >8-day catch-up trigger. No trade, transfer, order, prior or
+material Telegram summary was warranted. The next dated catalyst remains the
+exact Sep. 30 Arena Text Overall source snapshot.
