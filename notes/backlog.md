@@ -1,5 +1,24 @@
 # Polyclaude Backlog
 
+## Sep-27 22:33 discovery update
+
+- **One measured Astra discovery pass completed; no trade:** a neutral 2,000-
+  market batch used 300 highest-volume executable-filter survivors plus 1,700
+  fixed-hash selections, with zero manual exclusions. Astra read all rows and
+  21 exact criteria records. The end-to-end preparation/pass interval moved
+  the coarse weekly Codex meter from 7% to 8% used.
+- Astra's non-obvious Kuwait recognition-YES + Abraham-Accords-NO pair cost
+  0.958 live and would lock 4.2 cents only if an Accords signing necessarily
+  satisfies the separate formal-recognition criterion. The exact text does not
+  exclude Accords-YES/recognition-NO, and execution is non-atomic: no robust
+  arb, no entry. Rhine NO had strong current gauge direction but no forecast
+  bound above its 0.6318 all-in cost; Trump-AI-rename NO failed the 10pp stress
+  at about 0.6986 all-in. Both were skipped.
+- All ten unfiltered Astra hypotheses, and the top-three validations, are preserved in
+  `research/2026-09-27-astra-discovery-pass.md`; the seven remaining items are
+  unvalidated research leads, not due work or entry signals. Telegram **1055**
+  reported the experiment. Portfolio state and orders were unchanged.
+
 ## Sep-27 22:04 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have

@@ -20584,3 +20584,50 @@ all four daemons are current and exact-one, and disk retains about 1.0 GiB
 free. No trade, transfer, order or prior change was warranted. Telegram
 **1053** reported the new complete-group exit gate. The next dated catalyst
 remains the exact Sep. 30 Arena Text Overall source snapshot.
+
+## 2026-09-27 22:15–22:33 UTC — measured Astra broad-discovery experiment
+
+At the operator's request, one independent GPT-6 Astra pass reviewed a compact
+large-market batch without seeing prior team picks, rejections, journal,
+watchlist or strategy context. The public event fetch returned 56,031 active
+rows; mechanical liquidity/volume/spread/horizon filters retained 5,189. Input
+was the 300 highest-volume survivors plus 1,700 fixed-hash selections, with
+zero manual exclusions. The 584,700-byte TSV hash was
+`2e84e32a3e314231f86433cbe06cfe1ecdbc3addfc53157e4341f0a625c5c3d5`.
+Astra read all 2,000 rows and 21 exact full criteria records.
+
+The direct quota probe read **7% weekly usage / 93% headroom** before batch
+preparation and **8% / 92%** immediately after Astra, before validation. Thus
+the complete preparation-plus-pass interval consumed one displayed percentage
+point; the meter is too coarse to isolate the Astra call from the primary
+agent's preparation inside that interval.
+
+Astra's leading idea was non-obvious in this pass: combine Kuwait formal-
+recognition YES at .038 with Kuwait Abraham-Accords NO at .92. Fresh fee-free
+books supported 143.1 paired shares at a .958 total cost. The pair pays at
+least $1 in three intuitive states, but pays zero if Kuwait signs a qualifying
+Accords normalization agreement without separately satisfying the recognition
+market's formal-state-recognition test. The criteria strongly correlate the
+events but do not explicitly eliminate that semantic state, and execution is
+non-atomic. The apparent 4.2-cent lock is therefore not robust; **no trade**.
+
+The second lead measured cleanly but lacked a probability bound. Official Kaub
+gauge history had zero readings at or above the Rhine contract's 77 cm trigger
+since its Sep. 6 start, a 36 cm maximum and a latest 3 cm reading. NO nevertheless
+cost about .6318 fee-inclusive and October runoff remains uncertain, so the
+source history alone did not clear the evidence gate. The third lead correctly
+identified that Trump's “Super Intelligence” speech and fact sheet do not meet
+the AI-rename market's signed-action requirement. However, live NO cost about
+.6986 all-in, and a conservative .70–.80 prior became .60–.70 under the required
+10pp stress. Both were skipped.
+
+The unchanged top-three ranking was validated rather than filtered through old
+team opinions. Astra's other seven hypotheses, plus its rejected false
+positives, are preserved in
+`research/2026-09-27-astra-discovery-pass.md`; none is an entry signal or due
+follow-up. The batch also revealed 1,194 empty structured source fields, 215
+rows without a YES bid, category errors and metadata/criteria-window mismatch.
+That supports a two-stage design—broad deterministic context, then exact
+criteria/source/live-book validation—while the measured cost argues against
+running a 2,000-row frontier pass on every quiet tick. No portfolio state,
+order or prior changed. Telegram **1055** reported the result.
