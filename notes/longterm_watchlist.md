@@ -570,3 +570,37 @@ Themes:
 
 The pre-update monitor found **zero live hits across 33 existing gates**. RARE's new $12.75 gate is
 below its $14.51 Sep-18 close, so it is also unhit. No entry or portfolio action followed.
+
+## 2026-09-27 weekly digest (domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security — least recent, 21d)
+
+No domain was literally unrun for four weeks. This oldest trio last ran Sep-6,
+while the other six ran Sep-13/Sep-20, so the due least-recent rotation was
+used.
+
+Themes:
+
+- **U.S. LNG export-capacity buildout (HIGH):** EIA forecasts gross exports
+  rising from 15 Bcf/d in 2025 to 17 in 2026 and 19 in 2027; FERC advanced
+  Sabine Pass Stage 5 and Corpus Christi Stage 4 environmental review and
+  approved 1.175 million Dth/d of pipeline capacity. LNG and NEXT were vetted
+  as the direct listed expressions; neither has a current margin of safety.
+- **Grid bottleneck / transmission equipment (MED):** repeated DOE reliability
+  orders and 31 planned grid projects reinforce the existing PWR/ETN/HUBB
+  theme. Fresh Sep-6/Sep-20 PWR and ETN checks remain valuation-gated, so a
+  redundant re-vet had no incremental value.
+- **Hormuz disruption optionality (MED):** official sources confirm physical
+  shipping stress while OPEC+ held October output requirements flat. The theme
+  is directional oil beta already represented by valuation-gated XLE/XOM
+  research, not a new issuer-specific long.
+- Nuclear optionality was LOW confidence; critical-minerals and defense facts
+  lacked an issuer-specific earnings catalyst and were passed.
+
+| Candidate | Score | Verdict | Theme | Entry |
+|---|---|---|---|---|
+| **Cheniere ($LNG, new)** | **2/4** | PASS | Contracted LNG export growth | $268.54 is only 10.7% below its 52-week high and not a cycle-bottom valuation. Reassess at **≤$215** while contracted coverage and DCF guidance remain intact, or after a fully financed Sabine Pass Expansion FID with sufficient SPAs. Added an IBKR-surface research trigger. |
+| **NextDecade ($NEXT, new)** | **2/4** | PASS | Rio Grande LNG commissioning | $6.56 prices a pre-revenue, highly leveraged construction equity. Reassess at **≤$4.75** only with construction/funding on schedule and a favorable FERC appeal, or after verified Train 1 LNG and stable operations. Added an IBKR-surface research trigger. |
+
+The pre-update live monitor found **zero hits across 34 existing gates**. Both
+new gates are below their fresh check prices; a trigger is permission to
+re-underwrite, not a buy authorization. Both candidates route to the operator's
+IBKR surface, and no polyclaude capital action followed.

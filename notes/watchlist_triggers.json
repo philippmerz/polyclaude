@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-09-20",
+  "updated": "2026-09-27",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
   "triggers": [
     {
@@ -351,6 +351,26 @@
       "route": "ibkr_surface",
       "rationale": "Fresh 2026-09-20 longterm_check: 3/4 WATCH at $14.51 after the GTX-102 Phase 3 miss. Reassess below $12.75 only after Q3 confirms post-restructuring cash runway and GENGLYCOS/FAYUVI launch guidance; alternative review after demonstrated launch uptake plus a credible path to 2027 profitability. Do not buy the approval alone: first-half operating cash use was $294M against $436M cash/investments, with dilution and Crysvita concentration risks.",
       "added": "2026-09-20"
+    },
+    {
+      "ticker": "LNG",
+      "type": "equity",
+      "yfinance_symbol": "LNG",
+      "entry_max": 215.0,
+      "horizon": "3y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-09-27 longterm_check: 2/4 PASS at $268.54. Contracted cash flows and Corpus Christi/Sabine Pass catalysts are strong, but the shares are near the top of their cycle and global liquefaction capacity is expanding. Reassess at <=$215 only if contracted-volume coverage and DCF guidance remain intact, or after a fully financed Sabine Pass Expansion FID with sufficient long-term SPAs.",
+      "added": "2026-09-27"
+    },
+    {
+      "ticker": "NEXT",
+      "type": "equity",
+      "yfinance_symbol": "NEXT",
+      "entry_max": 4.75,
+      "horizon": "3y",
+      "route": "ibkr_surface",
+      "rationale": "Fresh 2026-09-27 longterm_check: 2/4 PASS at $6.56. Rio Grande LNG has first-gas and Train 1 catalysts, but common equity has no current earnings and sits behind heavy project leverage and construction/litigation risk. A <=$4.75 quote only reopens research if construction and funding remain on schedule and the FERC appeal is resolved favorably; alternatively reassess after verified first LNG and stable operations.",
+      "added": "2026-09-27"
     }
   ]
 }

@@ -20460,3 +20460,35 @@ Sep. 20 world-state rotation remains below its greater-than-eight-day catch-up
 trigger. No trade, transfer, redemption, order, prior or material Telegram
 summary was warranted. The next dated catalyst remains the exact Sep. 30 Arena
 Text Overall source snapshot.
+
+## 2026-09-27 16:00–16:07 UTC — weekly long-term review; LNG candidates gated
+
+Every domain was still inside the literal four-week window. The least-recent
+cohort—critical-minerals-commodities, energy-power-infrastructure and
+geopolitics-security—last ran Sep. 6, so the due rotation used those three.
+The primary-source digest logged 17 in-scope sources and surfaced a HIGH-
+confidence U.S. LNG export-capacity theme: EIA forecasts gross exports rising
+from 15 Bcf/d in 2025 to 17 in 2026 and 19 in 2027, while FERC advanced Sabine
+Pass Stage 5 and Corpus Christi Stage 4 review and approved 1.175 million Dth/d
+of pipeline capacity. MED grid-stress and Hormuz themes corroborated existing
+valuation-gated names; LOW-confidence nuclear optionality was not promoted.
+
+Fresh long-term checks rejected both direct LNG expressions at current prices.
+Cheniere (**LNG**) scored **2/4 PASS** at $268.54: contracted cash flows and
+Corpus Christi/Sabine Pass catalysts are real, but the stock is only 10.7%
+below its 52-week high and global liquefaction capacity is expanding. Its new
+IBKR research gate is **≤$215**, conditional on intact contracted coverage and
+DCF guidance, or a fully financed Sabine Pass Expansion FID with sufficient
+SPAs. NextDecade (**NEXT**) also scored **2/4 PASS** at $6.56: first gas and
+Train 1 are identifiable catalysts, but the pre-revenue common equity sits
+behind heavy project leverage, construction risk and a pending FERC appeal.
+Its new gate is **≤$4.75** only with construction/funding on schedule and a
+favorable appeal; verified first LNG plus stable operations is the alternative
+event gate.
+
+The pre-update monitor found zero hits across 34 existing gates, and the
+post-update monitor found zero hits after LNG/NEXT increased the set to 36.
+`notes/longterm_watchlist.md` and `notes/watchlist_triggers.json` now record the
+two research candidates. Both route to the operator's IBKR sleeve; neither gate
+is a buy authorization and no polyclaude capital action followed. Telegram
+**1049** delivered the requested weekly summary.

@@ -2240,3 +2240,93 @@ Domains: biotech-health, trade-regulation, markets-corporate  |  Lookback: 30d
   its revised $50 research gate is not hit. JETS and IYT are tactical short or
   avoidance expressions, so they were not promoted into the long-only
   multi-year candidate list.
+
+---
+
+## 2026-09-27T16:02:46Z — world_state_digest
+
+**Domains:** critical-minerals-commodities, energy-power-infrastructure, geopolitics-security | **Lookback:** 30d | **Profile:** research
+
+# WORLD-STATE DIGEST — 2026-09-27
+
+Domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics-security  |  Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### Critical minerals / commodities
+
+- [2026-09-08] [U.S. State Department](https://ebs.publicnow.com/view/6EF7C36B8F3A2174C6256C2FE7AE7633D676E3A6): U.S. and Colombia signed arrangements covering critical-minerals and civil-nuclear cooperation.
+- [2026-09-09] [DOE](https://www.energy.gov/collection/view?page=0&paragraph=796949): Announced $73 million for domestic mining-technology projects.
+- [2026-09-14] [DOE](https://www.energy.gov/collection/view?page=0&paragraph=796949): Launched a $16 million mining-and-critical-minerals workforce prize.
+- [2026-09-18] [USGS](https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release): Released 2026 Mineral Commodity Summaries data covering more than 90 nonfuel commodities, including U.S. production, imports, exports, prices, stocks, consumption, and import reliance.
+- [2026-09-11] [USDA WASDE](https://esmis.nal.usda.gov/?f%5B0%5D=agency%3A3&f%5B1%5D=latest_release_date%3A2026-09&order=desc&sort=search_api_relevance): Released September WASDE; no single material crop revision extracted from the primary release index.
+
+### Energy / power infrastructure
+
+- [2026-09-09] [EIA](https://www.eia.gov/pressroom/releases/press592.php): Forecasts U.S. electricity generation of 4,368 BkWh in 2026, up 2.2%, followed by 1.7% growth in 2027; electricity sales are forecast at 4,135 BkWh in 2026 and 4,211 BkWh in 2027.
+- [2026-09-09] [EIA](https://www.eia.gov/pressroom/releases/press592.php): Forecasts U.S. LNG gross exports of 17 Bcf/d in 2026 and 19 Bcf/d in 2027, versus 15 Bcf/d in 2025.
+- [2026-09-09] [EIA](https://www.eia.gov/pressroom/releases/press592.php): Forecasts 5.7 million b/d of Middle East crude production shut in on average in 4Q26; forecasts Brent at $91/bbl in 2026 and $74/bbl in 2027.
+- [2026-09-17, 19] [DOE](https://www.energy.gov/collection/view?paragraph=852491): Issued emergency grid-stabilization orders for anticipated Mid-Atlantic stress and Carolinas hot-weather blackout risk; also issued orders to keep coal capacity operating in Indiana and the Northwest.
+- [2026-09-24] [DOE](https://www.energy.gov/collection/view?page=0&paragraph=796949): Announced intent to fund 31 grid-improvement projects across 26 states.
+- [2026-09-25] [FERC](https://www.ferc.gov/news-events/news/news-releases-headlines): Staff issued final EIS for Sabine Pass Stage 5 expansion; issued draft EIS for Corpus Christi Liquefaction Stage 4 and CCPL expansion on September 18.
+- [2026-09-10] [FERC/NERC](https://www.ferc.gov/news-events/news/ferc-nerc-review-shows-bulk-power-system-improvements-preparation-and-coordination): Reported no significant electric- or gas-system disruptions during Winter 2026 Arctic events.
+- [2026-09-10] [FERC](https://www.ferc.gov/sites/default/files/2026-09/Bulk-Power%20System%20Performed%20Well%20During%20Winter%202026%20Arctic%20Weather.pdf): Approved a Mississippi pipeline adding approximately 1.175 million Dth/d of firm transportation service.
+- [2026-09-06] [OPEC](https://www.opec.org/pr-detail/613-6-september-2026.html): Saudi Arabia, Russia, Iraq, Kuwait, Kazakhstan, Algeria, and Oman retained October required output at September levels.
+- [2026-09-22] [DOE](https://www.energy.gov/collection/view?paragraph=852491): Delivered more than 4,700 pounds of molten-salt-reactor salt to Natura Resources.
+- [2026-09-11] [NRC](https://www.nrc.gov/about-nrc/news-releases/2026): Proposed a broad overhaul of nuclear-reactor regulations.
+
+### Geopolitics / security
+
+- [2026-09-10] [UN Security Council](https://www.un.org/en/security-council-live-fresh-attacks-prompt-emergency-meeting-yemen): Reported Houthi attacks on Saudi Arabia and seizure of eight UN vehicles at a Red Sea aid hub.
+- [2026-09-11] [UNSC Resolution 2828](https://main.un.org/securitycouncil/en/content/sres28282026): Extended the Sudan sanctions Panel of Experts to November 9 and renewed sanctions measures to October 9.
+- [2026-09-17] [NATO](https://nato.int/en/news-and-events/articles/news/2026/09/17/prepare-protect-prevail-nato-publishes-baseline-requirements-for-resilience): Publicly released its Baseline Requirements for Resilience; Allies had agreed at the 2025 summit to account for up to 1.5% of GDP in defense- and security-related spending.
+- [2026-09-19] [NATO](https://nato.int/en/news-and-events/articles/news/2026/09/19/nato-chiefs-of-defence-in-copenhagen-met-for-the-military-committee-conference): All 32 Allied Chiefs of Defence met; conference message to industry was that Allies are ready to buy at scale and require speed, scale, and predictability.
+- [2026-09-25] [State Department](https://content.govdelivery.com/accounts/USSTATEBPA/bulletins/42c7ab7): Stated U.S. forces were defending and keeping the Strait of Hormuz open and that Iran had fired on ships that morning.
+
+## CANDIDATE THEMES
+
+### U.S. grid bottleneck / transmission equipment
+
+- Underlying facts: EIA forecasts 2.2% generation growth in 2026; DOE issued multiple September reliability orders and intends to fund 31 grid projects in 26 states.
+- Implication: Load growth is arriving before sufficient transmission, distribution, and dispatchable capacity; emergency interventions convert a forecast capacity problem into near-term procurement.
+- Possible plays: PWR, ETN, HUBB; transmission and substation equipment.
+- Direction: Long.
+- Horizon: Months to years.
+- Retail blindspot: “Data-center demand” is treated as an AI narrative; the primary record shows physical grid stress and federal intervention.
+- Confidence: MED.
+
+### U.S. LNG export capacity buildout
+
+- Underlying facts: EIA forecasts LNG exports rising from 15 Bcf/d in 2025 to 17 Bcf/d in 2026 and 19 Bcf/d in 2027; FERC advanced Sabine Pass Stage 5 and Corpus Christi Stage 4 environmental review; 1.175 million Dth/d of additional pipeline transport was approved.
+- Implication: Incremental liquefaction and feedgas capacity continue moving through formal approval stages despite high domestic gas inventories.
+- Possible plays: LNG, NEXT; LNG export infrastructure and Gulf Coast gas transportation.
+- Direction: Long.
+- Horizon: Months to years.
+- Retail blindspot: Summer Henry Hub weakness and high storage obscure contracted export-volume growth and project de-risking.
+- Confidence: HIGH.
+
+### Nuclear fuel-cycle / advanced-reactor optionality
+
+- Underlying facts: NRC proposed broad reactor-regulation overhaul; DOE shipped 4,700+ lb of reactor salt; Westinghouse completed eVinci criticality testing.
+- Implication: Regulatory and demonstration milestones are reducing non-fuel technical barriers, but commercial deployment remains distant.
+- Possible plays: uranium category; LEU/HALEU fuel-cycle suppliers; BWXT.
+- Direction: Long.
+- Horizon: Years.
+- Retail blindspot: Coverage focuses on reactor announcements rather than fuel qualification, materials availability, and licensing throughput.
+- Confidence: LOW.
+
+### Hormuz supply-disruption optionality
+
+- Underlying facts: EIA forecasts 5.7 million b/d shut in during 4Q26 and Brent at $91/bbl in 2026; State reported active U.S. defense of Hormuz and Iranian firing on ships; OPEC+ held October production requirements flat.
+- Implication: Current price exposure remains unusually dependent on a maritime-security outcome, while spare supply is not being increased through the October requirement.
+- Possible plays: crude-oil upside optionality; energy producers with unhedged oil exposure.
+- Direction: Long.
+- Horizon: Weeks to months.
+- Retail blindspot: Coverage compresses a shipping-security constraint into generic “oil volatility”; official sources identify a physical throughput disruption.
+- Confidence: MED.
+
+## NEXT-STEPS
+
+- Run longterm_check.py on: PWR, ETN, HUBB, LNG, NEXT, BWXT.
+- Run catalyst_check.py on: “Will Hormuz transit disruption persist through Q4 2026?”, “Will FERC complete Sabine Pass Stage 5 approval in 2026?”
+- Skip / pass: critical-mineral miners; defense primes; geothermal. Recent facts show policy activity or broad procurement intent, but no issuer-specific earnings or volume catalyst.

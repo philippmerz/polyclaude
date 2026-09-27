@@ -1645,3 +1645,129 @@ Strong post-failure cyclical setup, intact rare-disease commercial tailwind, and
 - [GTX-102 Phase 3 Aspire results](https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-announces-phase-3-aspire-results-angelman-syndrome)
 - [FDA approval of GENGLYCOS](https://ir.ultragenyx.com/node/19186/html)
 - [Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1515673/000119312526333233/rare-20260630.htm)
+
+---
+
+## 2026-09-27T16:04:32Z — longterm_check
+
+**Query:** `Cheniere Energy ($LNG)` (equity, 3y horizon)
+
+## LONGTERM CHECK: Cheniere Energy ($LNG)
+
+Date: 2026-09-27 | Type: equity | Horizon: 3y
+
+### Current state
+
+$268.54 close (Sep. 25); +13.0% price return versus $237.62 a year ago. 52-week range: $186.20–$300.89; market cap $55.7B and EV/EBITDA ~10.6x. Q2 revenue grew 24% YoY to $5.73B; adjusted EBITDA grew 27% to $1.80B.
+
+### Cyclical position
+
+Mid-cycle to late-cycle/tight-market, not a trough. The share price is only 10.7% below its 52-week high and 44% above its low. LNG supply was expected to grow sharply in 2026, but Middle East disruptions delayed the supply-wave effect by roughly two years; this supports near-term pricing, not a contrarian bottom entry. At ~10.6x EV/EBITDA, valuation is not distressed.
+
+### Secular tailwind
+
+Intact: Europe’s permanent replacement of Russian pipeline gas and Asian/electricity demand support LNG trade. Cheniere is the largest U.S. producer and second-largest global operator, with ~55 mtpa operating capacity. However, the IEA expects roughly 300 bcm/year of new global LNG capacity by 2030, a 50% supply increase; long-run demand must absorb a major supply wave.
+
+### Catalyst window
+
+- [HIGH] 2026-Q4 — Corpus Christi Stage 3 Train 7 substantial completion; the project adds over 10 mtpa in total — [Q2 release](https://lngir.cheniere.com/news-events/press-releases/detail/343/cheniere-reports-second-quarter-2026-results-and-raises/)
+- [MED] 2028-H2 — Corpus Christi Trains 8 & 9, ~5 mtpa, targeted for substantial completion — [Q2 release](https://lngir.cheniere.com/news-events/press-releases/detail/343/cheniere-reports-second-quarter-2026-results-and-raises/)
+- [MED] 2026-28 — FID/permits for Sabine Pass Expansion Phase 1 (>6 mtpa); EPC early work began, but FERC/DOE approvals and commercial financing remain pending — [Q2 release](https://lngir.cheniere.com/news-events/press-releases/detail/343/cheniere-reports-second-quarter-2026-results-and-raises/)
+
+### Margin of safety
+
+Operations have unusually durable contracted cash flows: ~90% of anticipated production is contracted through the mid-2030s, with ~15 years’ weighted-average remaining contract life. Q2 liquidity was $7.48B and 2026 distributable-cash-flow guidance was raised to $5.3B–$5.8B. But this is not a balance-sheet bargain: year-end 2025 long-term debt was $22.5B, so downside is bounded by contracts rather than net cash or a low entry multiple.
+
+### Top 3 risks
+
+1. Global LNG oversupply — 300 bcm/year of capacity scheduled by 2030 could compress spreads, marketing margins, and the multiple.
+2. Expansion execution/regulatory risk — delayed permits, FID, construction inflation, or Train 8/9/Sabine Pass delays reduce the growth case.
+3. Demand destruction/geopolitics — high LNG prices already caused projected 2026 gas-demand declines in Asia and Europe; coal switching, renewables, recession, or easing geopolitical disruptions could weaken LNG economics.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 0.5%
+- Strong (3-5x): 4.5%
+- Modest (1.5-3x): 21%
+- Flat (-30% to +50%): 52%
+- Thesis broken (-50%+): 22%
+
+### Entry trigger
+
+Wait for ≤$215/share (about 20% below current price, implying a materially lower EV/EBITDA entry) while contracted-volume coverage and 2026 DCF guidance remain intact; alternatively reassess after a fully financed Sabine Pass Expansion FID with sufficient long-term SPAs.
+
+### Verdict: 2/4 — PASS
+
+Secular demand and identifiable capacity catalysts are real, but LNG is not at a cyclical/valuation trough and the contracted cash-flow moat is already reflected in a ~$56B equity value.
+
+### Sources
+
+- [Cheniere Q2 2026 results and raised guidance](https://lngir.cheniere.com/news-events/press-releases/detail/343/cheniere-reports-second-quarter-2026-results-and-raises/)
+- [Cheniere 2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/3570/000000357026000005/lng-20251231.htm)
+- [IEA Gas Market Report Q3 2026](https://www.iea.org/reports/gas-market-report-q3-2026/executive-summary)
+- [IEA World Energy Outlook 2025](https://www.iea.org/reports/world-energy-outlook-2025/executive-summary)
+- [LNG historical price data](https://ca.finance.yahoo.com/quote/LNG/history/)
+- [LNG valuation statistics](https://stockanalysis.com/stocks/lng/statistics/)
+
+---
+
+## 2026-09-27T16:05:38Z — longterm_check
+
+**Query:** `NextDecade Corporation ($NEXT)` (equity, 3y horizon)
+
+## LONGTERM CHECK: NextDecade Corporation ($NEXT)
+
+Date: 2026-09-27 | Type: equity | Horizon: 3y
+
+### Current state
+
+$6.56 close (Sep. 25); -4.5% versus $6.87 one year ago; 52-week range $4.75–$9.24. Market cap is ~$1.75B, but NEXT has no operating revenue yet; June-quarter common loss was $65.4M.
+
+### Cyclical position
+
+Not a demonstrable cyclical bottom: shares are 29% below their 52-week high but 38% above the low. This is principally a construction/de-risking equity, not an operating LNG-cycle valuation. Industry conditions are mixed: the IEA expects an unprecedented LNG supply wave through 2030, potentially adding 250 bcm/year, which can pressure uncontracted economics; geopolitical supply disruption has partly delayed that wave. NEXT’s contracted project structure reduces, but does not eliminate, this exposure.
+
+### Secular tailwind
+
+Global LNG trade and energy-security demand remain structurally supportive, and NEXT signed >7 MTPA of 20-year SPAs in 2025 with Aramco, TotalEnergies, JERA, EQT, and ConocoPhillips for Trains 4–5. However, this is a mature infrastructure build-out, not an accelerating scarcity trade: record U.S. LNG FIDs and global capacity additions are the offset.
+
+### Catalyst window
+
+- [HIGH] 2026-H2 — First gas into Rio Grande LNG, expected by management — [Q2 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1612720/000161272026000049/next-20260630.htm)
+- [HIGH] 2027-H1 — First LNG production from Train 1; transition from pre-revenue construction company toward operations — [Corporate presentation](https://www.investors.next-decade.com/static-files/8f95290b-3458-4b4e-945f-989e4896b885)
+- [MED] 2027-H2 — Potential Train 6 FID, contingent on permitting, SPAs, and financing; management’s stated earliest target — [Corporate presentation](https://www.investors.next-decade.com/static-files/8f95290b-3458-4b4e-945f-989e4896b885)
+- [MED] 2026–27 — Favorable resolution of the pending D.C. Circuit appeal of FERC authorization for Trains 1–5 — [Q2 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1612720/000161272026000049/next-20260630.htm)
+
+### Margin of safety
+
+Weak. The company reported $10.34B total debt versus $83.7M unrestricted cash ($415.9M restricted cash) at June 30, and zero revenue. Much of the financing is project-level/non-recourse and Phase 1 has $6.2B of equity commitments, but common equity remains structurally subordinate to construction completion, debt service, and project partners. The company’s projected post-flip distributable cash flow of $0.8B is management guidance, not current cash generation.
+
+### Top 3 risks
+
+1. Construction delay/cost overrun — delays first LNG and increases financing needs while debt interest compounds.
+2. Permitting/litigation — the FERC authorization for Trains 1–5 remains under D.C. Circuit review; an adverse outcome could impair the core asset.
+3. LNG oversupply/contract and counterparty risk — the coming global LNG capacity wave can reduce margins, constrain Train 6 financing, or weaken offtaker economics.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 3%
+- Strong (3-5x): 15%
+- Modest (1.5-3x): 27%
+- Flat (-30% to +50%): 30%
+- Thesis broken (-50%+): 25%
+
+### Entry trigger
+
+Do not enter solely on the current discount. Reassess after verified Train 1 first LNG and initial stable operations in 2027; alternatively, a <$4.75 entry only if construction remains on schedule, funding is intact, and the FERC appeal is resolved favorably.
+
+### Verdict: 2/4 — PASS
+
+Strong secular LNG demand and identifiable operating catalysts are outweighed by no current earnings, highly leveraged construction execution, and no credible balance-sheet margin of safety.
+
+### Sources
+
+- [NextDecade historical prices](https://nextdecade.gcs-web.com/stock-data/historical-prices/)
+- [NEXT market capitalization](https://stockanalysis.com/stocks/next/market-cap/)
+- [NextDecade Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1612720/000161272026000049/next-20260630.htm)
+- [NextDecade July 2026 corporate presentation](https://www.investors.next-decade.com/static-files/8f95290b-3458-4b4e-945f-989e4896b885)
+- [IEA Gas 2025 outlook](https://www.iea.org/reports/gas-2025/executive-summary)
