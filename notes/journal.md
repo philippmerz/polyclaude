@@ -20524,3 +20524,24 @@ and exact-one, and disk retains about 1.0 GiB free. The 16:07 weekly long-term
 rotation is complete. No trade, transfer, order, prior or material Telegram
 summary was warranted. The next dated catalyst remains the exact Sep. 30 Arena
 Text Overall source snapshot.
+
+## 2026-09-27 21:32–21:37 UTC — operator Astra review; selective use retained
+
+The operator asked whether Astra is still in use and requested its current
+view. Recent routine audits had used Luna under the resource contract; a fresh
+bounded GPT-6 Astra review found no immediate trade or prior change. It
+identified correlated HLE source/timing uncertainty as the main portfolio risk
+and warned that low executable exits do not themselves validate the stored
+.15/.20/.25 NO priors. Astra remains reserved for exact-source and criteria
+disputes, correlated joint scenarios, novel measurable opportunities and
+failure audits; deterministic tools and cheaper models remain appropriate for
+unchanged-state extraction and triage.
+
+Astra also identified MetaMask as the closest exit decision: the 18:05
+$45.79 complete exit was only $0.37 below $46.16 central hold value, and an
+illustrative joint-state/log-utility calculation reduced the advantage after
+carry to roughly $0.06–$0.09. The required fresh live recheck found the
+complete-group fee-net exit had worsened to about **$45.64**, so the close
+trigger was not hit. **HOLD the complete group**; no order or prior changed.
+Telegram **1051** reported the Astra review and **1052** reported the live
+revalidation.
