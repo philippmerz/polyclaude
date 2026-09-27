@@ -20408,3 +20408,55 @@ with about 1.1 GiB disk free. Weekly P&L through Sep. 25 is current and the Sep.
 trigger. No trade, transfer, order, prior or material Telegram summary was
 warranted. The next dated catalyst remains the exact Sep. 30 Arena Text Overall
 source snapshot.
+
+## 2026-09-27 14:00–14:08 UTC — full check; procedural-vote alert rejected, HOLD
+
+The scheduled eleven-step check completed once. Nine indexed Polymarket legs
+reconcile at **$132.30 cost, $122.43 midpoint and $113.14 indicative fee-net
+depth**. Authoritative whole-account bankroll is **$165.03**; substituting the
+depth walk gives an approximate **$155.74 whole-account depth value**. Since
+10:03, midpoint and bankroll improved $3.04/$3.06 while position and whole-
+account depth slipped $0.38/$0.36. The headline gain is therefore quote
+geometry rather than realizable profit. Cumulative realized P&L remains
+**-$2.57**, deployable pUSD remains $22.608930, and authenticated history shows
+no fill. The canonical 28-share Trump-out NO sell at .97 remains live and zero-
+matched.
+
+The only new alert was CoinDesk's retrospective on the Clarity Act's 49-50
+failure. The [official Senate cloture record](https://www.senate.gov/legislative/cloture/119.htm)
+still identifies that tally as cloture on the motion to proceed to H.R. 3633,
+not final passage. Both live contracts explicitly exclude motions to proceed
+and cloture. Their equal 29-share over-50 YES plus over-58 NO position retains
+an exact $29 payout floor in every written terminal state versus about $28.25
+for a complete exit. The alert is stale criteria noise; **HOLD the pair** and
+never transact either leg independently.
+
+The exact HLE source remains at 63 rows: Gemini tops at 46.2 overall / 45.9 Pro
+and OpenAI at 53.6, with Claude Opus 5.5, GPT-6 Sol and Grok 4.7 still unscored.
+One 21.65-share Gemini >=50 NO sale at .0609 is adverse but isolated and lacks
+source confirmation. Current fee-net HLE exits are about $4.09/$6.26/$2.20
+versus $25.35/$20.42/$4.75 central and $10.14/$8.17/$2.85 pessimistic terminal
+values. MetaMask tape was mixed but favorable in aggregate to its complete
+structure, whose $45.34 exit remains below $46.16 central value. Trump exits
+near $26.91 versus $27.48 central value. Marginal APY has zero close flags and
+the constrained Kelly OpenAI add remains blocked by the Dec. 31 hold-only rule.
+**HOLD all / NO ADD.**
+
+Discovery fetched **1,000 primary** markets and retained 80, then fetched
+**54,845 thin-tail** markets and retained 1,397 hurdle-clearing rows. Verified
+context output covered four primary batches / 66 rows and 49 thin-tail batches
+/ 889 rows with zero missing criteria hashes or fail-open rows. Sports produced
+only negative consensus deltas; event monotonicity found zero violations;
+consistency found no provisional positive live basket in its explicitly capped
+coverage; HLE and MetaMask cross-event scans found no executable violation.
+Macro remained visibility-only and five favorite-fade hints lacked a fresh
+instance thesis. No candidate survived literal criteria, current books, fees
+and uncertainty bounds.
+
+UMA, Ostium, redemption, crux, state-audit and watchlist checks are clean; no
+decision is overdue. All four daemons are current and exact-one, and disk has
+about 1.1 GiB free at 93% used. Weekly P&L through Sep. 25 is current and the
+Sep. 20 world-state rotation remains below its greater-than-eight-day catch-up
+trigger. No trade, transfer, redemption, order, prior or material Telegram
+summary was warranted. The next dated catalyst remains the exact Sep. 30 Arena
+Text Overall source snapshot.

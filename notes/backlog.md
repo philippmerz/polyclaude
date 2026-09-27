@@ -1,5 +1,25 @@
 # Polyclaude Backlog
 
+## Sep-27 14:08 current update
+
+- **Full check — HOLD all / no asset action:** nine indexed legs have $132.30
+  cost, $122.43 midpoint and $113.14 indicative fee-net depth. Authoritative
+  bankroll is **$165.03**, approximate whole-account depth-realizable value is
+  **$155.74**, cumulative realized P&L remains **-$2.57**, and deployable pUSD
+  remains $22.608930. There was no authenticated fill or settlement; the sole
+  Trump-out 28-NO sell at .97 remains live and zero-fill.
+- A new CoinDesk Clarity story recycles the Sep. 15 49-50 cloture vote on the
+  motion to proceed. The official Senate record and live criteria confirm it
+  is not the qualifying final-passage vote. The complete pair retains its exact
+  $29 floor versus a $28.25 exit. HLE's 63-row source is unchanged; one small
+  adverse Gemini >=50 print does not break the thesis. All exit screens remain
+  holds.
+- Discovery covered 1,000 primary and 54,845 thin-tail active markets with
+  proof-checked context; no structural arb, positive sports edge or robust
+  instance candidate survived current books, fees and criteria. State,
+  redemption, watchlist, daemons and cadence checks are clean. No Telegram
+  summary was sent; the next dated catalyst remains Sep. 30.
+
 ## Sep-27 10:03 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have

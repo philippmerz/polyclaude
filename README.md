@@ -35,32 +35,32 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-27 10:02 UTC
+## Last audited snapshot — 2026-09-27 14:08 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 9 |
 | Position cost | $132.30 |
-| Polymarket midpoint | $119.39 |
-| Indicative depth/fee value | $113.52 |
-| Authoritative whole-account mark | $161.97 |
+| Polymarket midpoint | $122.43 |
+| Indicative depth/fee value | $113.14 |
+| Authoritative whole-account mark | $165.03 |
 | Cumulative realized P&L | -$2.57 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
 $29.00 payout floor; manage it only as a complete position. The MetaMask
 structure likewise remains a complete economic group. Their current complete
-exits are about $28.25 and $45.17, both below central hold value.
+exits are about $28.25 and $45.34, both below central hold value.
 
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
-Gemini >=50 and OpenAI >=55. Recent public Gemini >=50 NO demand supports the
-held side, but the exact 63-row source still has Gemini below 50 and OpenAI
-below 55. The three central terminal values total $50.52 versus about $13.19
-of current exits, so all remain holds and the
+Gemini >=50 and OpenAI >=55. An isolated 21.65-share Gemini >=50 NO sale lacks
+source confirmation, while the exact 63-row source still has Gemini below 50
+and OpenAI below 55. The three central terminal values total $50.52 versus
+about $12.55 of current exits, so all remain holds and the
 Dec. 31 hold-only rule blocks enlargement. Every other direct and protected
 group screen is also a hold. The only live order is a zero-fill maker sell for
 **28 Trump-out NO at 0.97**. Deployable pUSD is $22.608930. The midpoint-to-depth
-gap is $5.87; approximate whole-account depth-realizable value is $156.10. The
+gap is $9.29; approximate whole-account depth-realizable value is $155.74. The
 next active portfolio catalyst is the exact Arena Text Overall source snapshot
 on Sep. 30.
 
