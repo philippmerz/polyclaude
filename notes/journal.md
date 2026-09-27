@@ -20545,3 +20545,42 @@ complete-group fee-net exit had worsened to about **$45.64**, so the close
 trigger was not hit. **HOLD the complete group**; no order or prior changed.
 Telegram **1051** reported the Astra review and **1052** reported the live
 revalidation.
+
+## 2026-09-27 22:00–22:04 UTC — periodic review; MetaMask exit gate quantified
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $121.69 midpoint and
+$113.26 indicative fee-net depth**. Authoritative whole-account bankroll is
+**$164.39**; substituting the depth walk gives an approximate **$155.96
+whole-account depth value**. Since 18:05, midpoint/bankroll improved about
+$1.07/$1.18 and position/whole-account depth improved about $2.05/$2.16.
+Cumulative realized P&L remains **-$2.57**, deployable pUSD remains $22.608930,
+and authenticated inventory shows no fill: the canonical 28-share Trump-out NO
+sell at .97 remains live and zero-matched.
+
+All direct and protected-group screens remain holds. The exact HLE API remains
+at 63 rows, with Gemini below 50, OpenAI below 55 and the three recent rows
+unscored. Current fee-net HLE exits are about $6.33/$3.56/$2.38 versus
+$25.35/$20.42/$4.75 central and $10.14/$8.17/$2.85 recorded pessimistic
+terminal values. Clarity exits near $28.25 versus its exact $29 floor and
+Trump near $26.91 versus $27.48 central value. Marginal APY has zero close
+flags. **HOLD all / NO ADD** under the Dec. 31 rule; leave the Trump order
+unchanged.
+
+MetaMask's complete-group exit improved from the 21:37 recheck's $45.64 to
+**$45.82**, versus $46.16 central hold value. Because this was Astra's identified
+close call, a bounded frontier follow-up recomputed the stored exact joint
+states. Depending on $75–$150 of other terminal wealth, the central immediate
+cash breakeven is about $45.835–$45.897 after 95.1 days of 1.2% carry. Holding
+therefore wins by only $0.015–$0.077, effectively a tie within book and model
+uncertainty. The operational switch is a **full complete-group exit at $46.10
+fee-net or better**, contingent on a fresh book walk and unchanged launch and
+conditional-FDV evidence. Today's book does not clear it; never transact a
+single leg.
+
+No new news or opportunity alert, watchlist hit, overdue decision, UMA/Ostium
+change or redemption appeared after the Astra review. Position state is clean
+at nine indexed legs plus one deindexed claim row; crux coverage is complete,
+all four daemons are current and exact-one, and disk retains about 1.0 GiB
+free. No trade, transfer, order or prior change was warranted. Telegram
+**1053** reported the new complete-group exit gate. The next dated catalyst
+remains the exact Sep. 30 Arena Text Overall source snapshot.

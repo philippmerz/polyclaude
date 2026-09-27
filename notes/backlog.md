@@ -1,5 +1,24 @@
 # Polyclaude Backlog
 
+## Sep-27 22:04 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $121.69 midpoint and $113.26 indicative fee-net depth.
+  Authoritative bankroll is **$164.39**, approximate whole-account
+  depth-realizable value is **$155.96**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. There was no authenticated
+  fill or settlement; the sole Trump-out 28-NO sell at .97 remains live and
+  zero-fill.
+- **MetaMask complete-group exit gate quantified:** the current $45.82 fee-net
+  exit is just below central risk-adjusted cash breakevens of about
+  $45.84–$45.90. HOLD through book noise; switch to a full complete-group exit
+  at **$46.10 fee-net or better**, after a fresh book walk and confirmation that
+  launch/conditional-FDV evidence is unchanged. Never transact one leg alone.
+- No new news/opportunity alert, watchlist hit, overdue decision, UMA/Ostium
+  change or redemption appeared. The exact 63-row HLE source remains unchanged
+  at the held thresholds and all direct/group exits remain holds. State, crux
+  coverage, daemons and disk are clean. The next dated catalyst remains Sep. 30.
+
 ## Sep-27 18:05 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have
