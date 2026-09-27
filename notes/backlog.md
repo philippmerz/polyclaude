@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-27 18:05 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $120.62 midpoint and $111.21 indicative fee-net depth.
+  Authoritative bankroll is **$163.21**, approximate whole-account
+  depth-realizable value is **$153.80**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. There was no authenticated
+  fill or settlement; the sole Trump-out 28-NO sell at .97 remains live and
+  zero-fill.
+- The exact 63-row HLE source remains unchanged at the held thresholds. Thinner
+  next-Gemini-Pro depth reduced the three HLE exits to about $10.25 combined,
+  still below their $21.16 recorded pessimistic terminal value and $50.52
+  central value. Clarity and MetaMask complete exits remain below hold value;
+  all direct and protected-group screens remain holds.
+- The sole post-review alert reports continued U.S.-Iran/Hormuz tension and is
+  only a MINOR Trump political-risk input. It does not justify the roughly
+  1.7pp p(NO) cut needed for a taker exit. UMA/Ostium, watchlist, redemption,
+  state, crux coverage, decisions, daemons and disk are clean. The weekly
+  long-term rotation is complete, no Telegram summary was sent, and the next
+  dated catalyst remains Sep. 30.
+
 ## Sep-27 14:08 current update
 
 - **Full check — HOLD all / no asset action:** nine indexed legs have $132.30
