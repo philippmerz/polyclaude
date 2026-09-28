@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Sep-28 06:03 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $123.51 midpoint and $118.25 indicative fee-net depth.
+  Authoritative bankroll is **$165.78**, approximate whole-account
+  depth-realizable value is **$160.52**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. The sole Trump-out
+  28-NO maker sell at .97 remains live and zero-fill.
+- HLE's exact API remains byte-identical at 63 rows and all three thresholds
+  remain unmet. MetaMask's complete exit improved to $45.92 but remains below
+  the $46.10 fee-net switch; Clarity and every direct/group exit remain holds.
+- The only post-check alert was an Iran/Hormuz diplomacy-and-escalation live
+  update with no direct held-position channel. UMA/Ostium, redemption,
+  watchlist, decisions and daemons are clean. No Telegram summary was sent;
+  the next dated catalyst remains Sep. 30.
+
 ## Sep-27 22:33 discovery update
 
 - **One measured Astra discovery pass completed; no trade:** a neutral 2,000-

@@ -20677,3 +20677,33 @@ complete; all four daemons are current and exact-one; disk has about 955 MiB
 free. No trade, transfer, order or prior changed. Per the material-only rule,
 no Telegram tick summary was sent. The next dated catalyst remains the exact
 Sep. 30 Arena Text Overall source snapshot.
+
+## 2026-09-28 06:00–06:03 UTC — periodic review; quiet Iran alert, all holds
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $123.51 midpoint and
+$118.25 indicative fee-net depth**. Authoritative whole-account bankroll is
+**$165.78**; substituting the depth walk gives about **$160.52**. Since the
+02:11 full check, midpoint/bankroll declined $0.77/$0.93 while position and
+whole-account depth declined only $0.16/$0.32. Cumulative realized P&L remains
+**-$2.57**, deployable pUSD remains $22.608930, and authenticated inventory
+still shows the sole 28-share Trump-out NO maker sell at .97 live and
+zero-matched.
+
+Every direct and protected-group exit remains a hold. MetaMask's complete
+fee-net exit improved from $45.80 to **$45.92**, still below the $46.10 switch
+and $46.16 central fair. Clarity remains about $28.25 versus its exact $29
+floor. Current next-Gemini-Pro/Gemini >=50/OpenAI >=55 exits are about
+$6.41/$8.38/$2.38 versus central terminal values of $25.35/$20.42/$4.75. The
+exact HLE API is byte-identical to 02:08 at 63 rows, with Gemini below 50,
+OpenAI below 55 and the three recent rows unscored. **HOLD all / NO ADD**; no
+prior changed.
+
+The sole alert after the prior journal entry was a 05:38 Al Jazeera Iran-war
+live update pairing openness to diplomacy with escalation rhetoric and tying
+Hormuz reopening to talks. It contains no resolving fact or direct causal
+channel to a held position. UMA and Ostium are unchanged, the live order is
+cleanly mapped, no watchlist trigger or overdue decision fired, no winning
+claim is redeemable, and all four daemons are current. No trade, transfer,
+redemption, order or prior changed. Per the material-only rule, no Telegram
+summary was sent. The next dated catalyst remains the exact Sep. 30 Arena Text
+Overall source snapshot.
