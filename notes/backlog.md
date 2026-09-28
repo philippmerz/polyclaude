@@ -1,5 +1,23 @@
 # Polyclaude Backlog
 
+## Sep-28 18:03 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $122.19 midpoint and $118.10 indicative fee-net depth.
+  Authoritative bankroll is **$164.56**, approximate whole-account
+  depth-realizable value is **$160.47**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. The Trump-out 28-NO
+  maker sell at .97 remains live and zero-fill.
+- MetaMask's complete exit improved to **$46.09**, one cent below the $46.10
+  operational switch and seven cents below central fair. Clarity remains
+  $28.25 versus its $29 floor. The exact HLE source retains 63 rows with every
+  held threshold unmet; current HLE exits are about $7.75/$6.72/$2.38 versus
+  $25.35/$20.42/$4.75 central values. **HOLD all / NO ADD.**
+- No post-14:40 news or opportunity alert, watchlist hit, overdue decision,
+  UMA/Ostium change, redemption or state discrepancy appeared. All four
+  daemons are current and exact-one. No Telegram summary was sent; the next
+  dated catalyst remains the exact Sep. 30 Arena Text Overall snapshot.
+
 ## Sep-28 14:40 current update
 
 - **Full-check state — HOLD all / no asset action:** nine indexed legs have
