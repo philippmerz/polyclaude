@@ -20707,3 +20707,33 @@ claim is redeemable, and all four daemons are current. No trade, transfer,
 redemption, order or prior changed. Per the material-only rule, no Telegram
 summary was sent. The next dated catalyst remains the exact Sep. 30 Arena Text
 Overall source snapshot.
+
+## 2026-09-28 10:00–10:04 UTC — periodic review; HLE depth rechecked, HOLD
+
+Nine indexed Polymarket legs reconcile at **$132.30 cost, $121.90 midpoint and
+$115.21 indicative fee-net depth**. Authoritative whole-account bankroll is
+**$164.05**; substituting the depth walk gives about **$157.36**. Since 06:03,
+midpoint/bankroll declined $1.61/$1.73 and position/whole-account depth
+declined $3.04/$3.16. Cumulative realized P&L remains **-$2.57**, deployable
+pUSD remains $22.608930, and the exact authenticated Trump-out 28-NO maker
+sell at .97 remains live and zero-matched.
+
+The decline is concentrated in HLE depth. Current fee-net exits are about
+$3.84/$7.96/$2.38 for next-Gemini-Pro, Gemini >=50 and OpenAI >=55 versus
+$25.35/$20.42/$4.75 central terminal values. The exact resolving API is
+byte-identical at 63 rows with Gemini below 50, OpenAI below 55 and three
+unscored rows. Public tape after 06:03 shows zero next-Gemini-Pro trades, one
+30-share Gemini >=50 YES buy at .914, and one larger 126.58-share OpenAI >=55
+YES sale at .86. That is mixed cross-contract flow, while the largest depth
+loss has no execution behind it. **HOLD / NO ADD**; no prior changed.
+
+MetaMask's complete exit is about $45.86 versus $46.16 central fair and the
+$46.10 switch; Clarity remains $28.25 versus its exact $29 floor; every direct
+and protected-group screen remains a hold. The only new alert reports Trump
+rejecting Iran's Hormuz reopening plan and Brent above $107. It has no direct
+causal channel to a held position and no resolving fact for Trump-out. UMA and
+Ostium are unchanged, no watchlist trigger or overdue decision fired, no
+winning claim is redeemable, and all four daemons are current. No trade,
+transfer, redemption, order or prior changed. Per the material-only rule, no
+Telegram summary was sent. The next dated catalyst remains the exact Sep. 30
+Arena Text Overall source snapshot.

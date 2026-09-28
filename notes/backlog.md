@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-28 10:04 current update
+
+- **Periodic state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $121.90 midpoint and $115.21 indicative fee-net depth.
+  Authoritative bankroll is **$164.05**, approximate whole-account
+  depth-realizable value is **$157.36**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. The Trump-out 28-NO
+  maker sell at .97 remains live and zero-fill.
+- HLE depth weakened, but the exact 63-row source is byte-identical and
+  next-Gemini-Pro had zero post-06:03 trades. Gemini >=50 had one 30-share YES
+  buy at .914; OpenAI >=55 had a larger 126.58-share YES sale at .86. This is
+  not a coherent thesis-breaking flow signal, so the priors remain unchanged.
+- The new Hormuz/oil alert has no direct held-position channel. MetaMask's
+  complete exit is $45.86, below the $46.10 switch; every exit remains a hold.
+  UMA/Ostium, redemption, watchlist, decisions and daemons are clean. No
+  Telegram summary was sent; the next dated catalyst remains Sep. 30.
+
 ## Sep-28 06:03 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have
