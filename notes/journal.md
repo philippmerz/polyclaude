@@ -20631,3 +20631,49 @@ That supports a two-stage design—broad deterministic context, then exact
 criteria/source/live-book validation—while the measured cost argues against
 running a 2,000-row frontier pass on every quiet tick. No portfolio state,
 order or prior changed. Telegram **1055** reported the result.
+
+## 2026-09-28 02:00–02:11 UTC — full check; all gates hold, no executable discovery edge
+
+The final synchronized mark has nine indexed Polymarket legs at **$132.30
+cost, $124.28 midpoint and $118.41 indicative fee-net depth**. Authoritative
+whole-account bankroll is **$166.71**; replacing midpoint with the sequential
+depth estimate gives about **$160.84**. Versus the Sep. 27 22:04 snapshot,
+midpoint/authoritative bankroll improved $2.59/$2.32 and the position/whole-
+account depth estimates improved $5.15/$4.88. Cumulative realized P&L remains
+**-$2.57**, deployable pUSD remains $22.608930, and the exact authenticated
+order inventory still contains only the zero-fill 28-share Trump-out NO maker
+sell at .97.
+
+All exit, carry, stress and protected-group screens remain holds. Fresh
+fee-net exits are about $7.17/$7.90/$2.38 for next-Gemini-Pro, Gemini >=50 and
+OpenAI >=55 versus $25.35/$20.42/$4.75 central terminal values. The exact HLE
+chart API remains at 63 rows with three explicit unscored additions; Gemini is
+still below 50 and GPT-6 Astra remains OpenAI's scored maximum at 53.6, below
+55. Keep the correlated cluster **HOLD / NO ADD** under the Dec. 31 rule. The
+Clarity pair exits near $28.25 versus its exact $29 floor. MetaMask's complete
+group exits near $45.80 versus $46.16 central fair and remains below the $46.10
+fee-net switch; never transact a protected member independently. Trump's
+taker exit remains about $26.91 versus $27.48 central. No prior changed.
+
+The required discovery suite completed. Primary discovery fetched 1,000 rows;
+thin-tail event discovery fetched 47,353 and retained 1,600 win-assumed hurdle
+surfaces. Every organizer row was reviewed: 52 primary rows across three
+batches and 764 thin-tail rows across 44 batches, with criteria proofs and no
+fail-open semantic rows. The S&P 500 September $720/$740 low ladder had a
+0.95pp midpoint inversion, but fresh NO-$720 plus YES-$740 asks cost 1.031
+before fees. Multi-outcome overrounds likewise failed live depth and fees;
+event monotonicity found zero provisional violations and the explicitly
+incomplete consistency scan found zero positive baskets in its quoted slice.
+Sports consensus put Bears at .390 versus a fresh fee-free .350 ask, but the
+4pp central gap fails the mandatory ten-point stress. Macro exposed four
+October FOMC outcomes without a consensus anchor, and the favorite-fade output
+remained a failed-population candidate list. **No entry.**
+
+There was no news or opportunity alert newer than the prior journal entry, no
+watchlist hit, overdue decision, UMA/Ostium change, redemption or state-audit
+judgment item. Weekly P&L is current through Sep. 25 and the world-state review
+through Sep. 27 16:02, so neither weekly task was due. Crux coverage is
+complete; all four daemons are current and exact-one; disk has about 955 MiB
+free. No trade, transfer, order or prior changed. Per the material-only rule,
+no Telegram tick summary was sent. The next dated catalyst remains the exact
+Sep. 30 Arena Text Overall source snapshot.
