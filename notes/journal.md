@@ -20737,3 +20737,53 @@ winning claim is redeemable, and all four daemons are current. No trade,
 transfer, redemption, order or prior changed. Per the material-only rule, no
 Telegram summary was sent. The next dated catalyst remains the exact Sep. 30
 Arena Text Overall source snapshot.
+
+## 2026-09-28 14:00–14:40 UTC — full check; Mykolaivka map lead fails robust gate
+
+The final synchronized mark has nine indexed Polymarket legs at **$132.30
+cost, $122.07 midpoint and $113.59 indicative fee-net depth**. Authoritative
+whole-account bankroll is **$164.45**; replacing midpoint with the sequential
+depth estimate gives about **$155.97**. Since 10:04, midpoint and bankroll
+improved $0.17/$0.40, while position and whole-account depth declined
+$1.62/$1.39. Cumulative realized P&L remains **-$2.57**, deployable pUSD
+remains $22.608930, and authenticated inventory still contains only the
+zero-fill 28-share Trump-out NO maker sell at .97.
+
+All exit, carry, stress and protected-group screens remain holds. Current
+fee-net exits are about $3.44/$6.58/$2.38 for next-Gemini-Pro, Gemini >=50
+and OpenAI >=55 versus $25.35/$20.42/$4.75 central terminal values. The exact
+HLE chart API remains at 63 rows and the held thresholds remain unmet. Keep
+the correlated cluster **HOLD / NO ADD**. Clarity's complete exit is $28.25
+versus its exact $29 floor. MetaMask's complete exit is $46.06 versus $46.16
+central fair; it remains four cents below the $46.10 operational switch, so
+hold the complete group and never transact one member independently. No prior
+changed.
+
+The required discovery suite completed. Primary discovery fetched 1,000 rows;
+thin-tail event discovery fetched 43,153 and retained 1,448 candidates. Every
+emitted organizer batch and the complete raw scanner output were reviewed.
+Sports consensus produced no ten-point-stress survivor, macro exposed no
+consensus-backed trade, event monotonicity found zero provisional violation,
+the explicitly incomplete consistency slice found zero positive basket, and
+favorite-fade remained a failed-population candidate list.
+
+The strongest new lead was market 4743339, Mykolaivka by Oct. 31 YES, offered
+at .23. Exact criteria and the official ISW ArcGIS geometry showed nearby
+qualifying infiltration shading, but point-in-polygon tests found neither the
+market coordinate nor the OSM settlement polygon covered; the nearest
+qualifying polygon ended roughly 180 m outside the town boundary. Independent
+estimates ranged from .12 to .40 and therefore did not preserve positive EV
+under the required pessimistic bound. **No entry.** Two other apparent
+source-lag leads were also rejected: Claude Sonnet 5 predated the Arena market,
+and the Iran contract's title and preamble clearly require a meeting after the
+Sep. 22 meeting. No stale sports result, source-known SPR result or HLE lag was
+found.
+
+There was no new material news alert, watchlist hit, overdue decision,
+UMA/Ostium change or redeemable claim. Position state remains clean at nine
+indexed legs plus one deindexed claim row; crux coverage is complete, and all
+four daemons are current, unstale and exact-one. Weekly P&L is current through
+Sep. 25 and world-state review through Sep. 27, so neither weekly task was due.
+No trade, transfer, redemption, order or prior changed. Telegram **1056**
+reported the map finding. The next dated catalyst remains the exact Sep. 30
+Arena Text Overall source snapshot.

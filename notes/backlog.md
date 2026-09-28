@@ -1,5 +1,27 @@
 # Polyclaude Backlog
 
+## Sep-28 14:40 current update
+
+- **Full-check state — HOLD all / no asset action:** nine indexed legs have
+  $132.30 cost, $122.07 midpoint and $113.59 indicative fee-net depth.
+  Authoritative bankroll is **$164.45**, approximate whole-account
+  depth-realizable value is **$155.97**, cumulative realized P&L remains
+  **-$2.57**, and deployable pUSD remains $22.608930. The Trump-out 28-NO
+  maker sell at .97 remains live and zero-fill.
+- The exact 63-row HLE source is unchanged at every held threshold. Current
+  HLE exits are about $3.44/$6.58/$2.38 versus $25.35/$20.42/$4.75 central
+  values. Clarity exits near $28.25 versus its $29 floor; MetaMask exits near
+  $46.06 versus $46.16 central fair and the $46.10 operational switch. All
+  positions remain **HOLD / NO ADD**; no prior changed.
+- Complete primary and thin-tail discovery review found no robust entry. The
+  strongest lead, Mykolaivka Oct-31 YES at .23, failed exact ArcGIS/OSM
+  validation: the current qualifying infiltration polygon ends roughly 180 m
+  outside the mapped town boundary, and independent p(YES) estimates spanned
+  .12-.40. Sonnet-source and Iran-meeting apparent lags were criteria traps;
+  sports, macro, monotonicity, consistency and favorite-fade scans produced no
+  executable edge. Telegram **1056** reported the genuine map finding. The
+  next dated catalyst remains Sep. 30.
+
 ## Sep-28 10:04 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have
