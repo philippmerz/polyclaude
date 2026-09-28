@@ -20816,3 +20816,48 @@ about 776 MiB free, above the existing cleanup guard. No trade, transfer,
 redemption, order or prior changed. Per the material-only rule, no Telegram
 summary was sent. The next dated catalyst remains the exact Sep. 30 Arena Text
 Overall source snapshot.
+
+## 2026-09-28 22:00–22:15 UTC — MetaMask complete-group exit at the precommitted switch
+
+The periodic review found one actionable portfolio change. MetaMask's complete
+group had moved from $46.09 at 18:03 to roughly $46.16 fee-net, above the
+precommitted **$46.10** switch. Before acting, I rechecked MetaMask's official
+news and Sep. 9 corporate-separation materials: there was still no token, TGE,
+or launch-date announcement. The direct Dec. 31 launch sibling remained
+.07/.08, so the retained launch and conditional-FDV evidence was unchanged.
+Fresh books showed enough top-level depth to close every venue-supported share.
+
+The group had no atomic exit route, so I used the vetted single-leg FOK sell
+path in risk-minimizing order. An initial exact 47.7196-share request was safely
+rejected before any fill because the venue caps sell maker amounts at two
+decimal places. I then sold **47.71 700M YES at .067** (tx
+`0xf60eba460ba455ea209c39f5e0bf2b76c1e51df8c8c3c5317fa0e892b3cdcaf3`),
+**29.71 3B NO at .962** (tx
+`0x62d5268f30317659ccb4b60ea878774eb176991a76a986b561e6774fb566533c`),
+and **15.03 4B NO at .977** (tx
+`0xccb0d654f007ac327e780cc6a9bbabdc72768d696313ee4ded6bd42e092f38ad`).
+All three matched. pUSD rose from $22.608930 to **$68.762410**, exact fee-net
+proceeds of **$46.153480**. Residual balances of 0.0096/0.0073/0.0037 shares are
+below venue precision and the indexed-position threshold. No related order
+remains. DEC-0179 records the close; the obsolete group topology and leg priors
+were retired, while the independent cross-event implication watcher remains
+armed as a fresh-entry lead.
+
+The final 22:18 post-trade read has six indexed legs at **$89.91 cost, $73.81
+midpoint and $67.10 indicative fee-net depth**. Authoritative bankroll is
+**$162.24**, approximate whole-account depth-realizable value is **$155.53**,
+cumulative realized P&L is **+$1.20**, and the sole authenticated order remains
+the zero-fill 28-share Trump-out NO sell at .97. Position state is clean at six
+indexed legs plus one deindexed dust claim; Clarity's complete exit remains
+$28.25 against its $29 floor, and all remaining direct/group exits are holds.
+
+Two source changes did not alter a held thesis. The exact HLE API repeatedly
+returned 60 rows rather than 63, removing the three prior unscored placeholders
+while leaving GPT-6 Astra at 53.6, Gemini 3.1 Pro at 45.9 and Gemini 3.8 Flash
+at 46.2. No held threshold crossed, so the .15/.20/.25 HLE priors remain and the
+Dec. 31 no-add rule still applies. A new Clarity article repeated the prior
+failed cloture vote and new SEC/CFTC staff guidance; neither is the contract's
+qualifying final-passage vote, and the guidance expressly lacks legal force.
+No Clarity action followed. The next dated catalyst remains the exact Sep. 30
+Arena Text Overall snapshot. Telegram **1057** reported the exit, reconciled
+portfolio state and HLE source change.

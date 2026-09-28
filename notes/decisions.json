@@ -1,5 +1,5 @@
 {
-  "next_id": 179,
+  "next_id": 180,
   "decisions": [
     {
       "id": 1,
@@ -3568,6 +3568,27 @@
         "cost-control"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 179,
+      "timestamp": "2026-09-28T22:14:34Z",
+      "type": "close_position",
+      "thesis": "Closed the complete MetaMask monotonicity group after its precommitted $46.10 fee-net switch was exceeded. Fresh source revalidation found no MetaMask token, TGE, or launch-date announcement; the direct Dec-31 launch sibling remained 0.07/0.08. Sold the venue-supported 47.71 FDV>$700M YES at 0.067, 29.71 FDV>$3B NO at 0.962, and 15.03 FDV>$4B NO at 0.977 by separate FOK orders only after a fresh full-depth rewalk. The three fills raised pUSD by exactly $46.15348; only sub-cent-share dust below venue precision remains.",
+      "confidence": "high",
+      "prediction": "The three MetaMask positions remain economically closed with no meaningful residual exposure, and the realized $46.15348 proceeds exceed the precommitted forward-value switch; no re-entry is justified without a new primary-source catalyst or fresh complete-structure edge.",
+      "size_usd": 46.15348,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "polymarket",
+        "metamask",
+        "group-exit",
+        "full-exit",
+        "consumed-edge"
+      ],
+      "slug": "metamask-fdv-above-one-day-after-launch",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -1,5 +1,28 @@
 # Polyclaude Backlog
 
+## Sep-28 22:18 current update
+
+- **MetaMask group fully exited at the precommitted switch:** fresh official
+  evidence still showed no token/TGE/date and the direct Dec. 31 launch sibling
+  remained .07/.08. After a fresh depth walk put the complete fee-net exit above
+  $46.10, three venue-supported FOK sells closed 47.71 700M YES at .067, 29.71
+  3B NO at .962 and 15.03 4B NO at .977. pUSD increased exactly **$46.153480**;
+  only sub-precision dust remains. The group topology and live priors are retired
+  and DEC-0179 records the close.
+- **Post-trade state:** six indexed legs have $89.91 cost, $73.81 midpoint and
+  $67.10 indicative fee-net depth. Authoritative bankroll is **$162.24**,
+  approximate whole-account depth-realizable value is **$155.53**, cumulative
+  realized P&L is **+$1.20**, and deployable pUSD is $68.762410. The sole
+  Trump-out 28-NO maker sell at .97 remains live and zero-fill.
+- The exact HLE source changed from 63 to 60 rows by removing the three unscored
+  placeholders, but Gemini remains below 50, OpenAI remains below 55 and no held
+  threshold or prior changed. A new Clarity headline only repeated the failed
+  cloture vote plus non-binding staff guidance; it was not a qualifying final-
+  passage vote. Clarity and every remaining direct/group exit remain **HOLD / NO
+  ADD**. State, decisions, orders and protected-group checks are clean; the next
+  dated catalyst remains the exact Sep. 30 Arena Text Overall snapshot.
+  Telegram **1057** reported the exit and source change.
+
 ## Sep-28 18:03 current update
 
 - **Periodic state — HOLD all / no asset action:** nine indexed legs have
