@@ -7,12 +7,38 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import opportunity_watch as watch
+from _crypto_prices import PriceFetchError
 
 
 def _quiet_side_effects(monkeypatch) -> None:
     monkeypatch.setattr(watch, "_append_alert", lambda _record: None)
     monkeypatch.setattr(watch, "_telegram", lambda _text: None)
     monkeypatch.setattr(watch, "_log", lambda _text: None)
+
+
+def test_price_source_failure_records_blind_round_without_firing(
+    monkeypatch, tmp_path: Path,
+) -> None:
+    trigger_path = tmp_path / "triggers.json"
+    trigger_path.write_text(
+        '[{"key":"arb-price","kind":"coingecko","id":"arbitrum",'
+        '"op":"<=","level":0.10,"actionable":true}]')
+    monkeypatch.setattr(watch, "TRIGGERS_PATH", trigger_path)
+    monkeypatch.setattr(
+        watch,
+        "fetch_usd_prices",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(
+            PriceFetchError("both price sources failed")),
+    )
+    alerts: list[tuple] = []
+    monkeypatch.setattr(watch, "_alert", lambda *args, **kwargs: alerts.append((args, kwargs)))
+    monkeypatch.setattr(watch, "_log", lambda _text: None)
+    state: dict = {}
+
+    watch.check_price_triggers(state)
+
+    assert state["trig_fails"] == {"arb-price": 1}
+    assert alerts == []
 
 
 def test_actionable_payload_fires_once_after_success(monkeypatch) -> None:

@@ -8,8 +8,8 @@ can swap back.
 Behavior:
   - Read full USDC balance on the chain.
   - Fetch a Uniswap V3 quote at the 0.05% fee tier (most liquid USDC/ETH pool).
-  - Slippage cap: 5%. If the quote implies > 5% loss vs. mid-market ETH price
-    pulled from Coingecko, abort and Telegram. Past 5% the market is in
+  - Slippage cap: 5%. If the quote implies > 5% loss vs. a validated primary /
+    fallback ETH price, abort and Telegram. Past 5% the market is in
     chaotic price discovery and waiting is usually better than swapping.
   - Approve USDC to SwapRouter (once, MAX_UINT). Then call exactInputSingle.
   - Telegram-summarize the result.
@@ -33,11 +33,11 @@ import subprocess
 import sys
 import time
 
-import httpx
 from eth_account import Account
 from web3 import Web3
 
 import _paths as _secrets
+from _crypto_prices import PriceFetchError, fetch_usd_prices
 
 _secrets.install_scrubbing_excepthook()
 
@@ -170,15 +170,11 @@ def _telegram(text: str) -> None:
         pass
 
 
-def _coingecko_eth_usd() -> float | None:
-    """Fetch ETH/USD spot price from Coingecko's public API."""
+def _market_eth_usd() -> float | None:
+    """Fetch a fresh validated ETH/USD primary/fallback quote."""
     try:
-        r = httpx.get("https://api.coingecko.com/api/v3/simple/price",
-                      params={"ids": "ethereum", "vs_currencies": "usd"},
-                      timeout=10)
-        r.raise_for_status()
-        return float(r.json()["ethereum"]["usd"])
-    except Exception:
+        return fetch_usd_prices(["ethereum"], timeout=10).prices["ethereum"]
+    except PriceFetchError:
         return None
 
 
@@ -251,7 +247,7 @@ def main() -> int:
     eth_out_quote = amount_out_quote / 1e18
     print(f"quote: {bal_usdc:.4f} {args.token} -> {eth_out_quote:.6f} WETH")
 
-    eth_market = _coingecko_eth_usd()
+    eth_market = _market_eth_usd()
     if eth_market:
         # implied USD value of the swap output (assumes WETH pegged to ETH)
         out_usd = eth_out_quote * eth_market
@@ -265,7 +261,11 @@ def main() -> int:
             _telegram(msg)
             return 2
     else:
-        print("WARN: coingecko ETH price unavailable; proceeding without market-cross check")
+        msg = (f"emergency_swap_usdc_to_eth ABORT (reason: {args.reason}): "
+               "fresh ETH/USD market cross-check unavailable from both sources.")
+        print(msg)
+        _telegram(msg)
+        return 2
 
     # amountOutMinimum = quote * (1 - slippage cap), giving us 5% protection at the pool level
     amount_out_min = int(amount_out_quote * (1 - SLIPPAGE_CAP_PCT / 100))

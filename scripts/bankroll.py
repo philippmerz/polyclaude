@@ -1,9 +1,9 @@
 """One authoritative bankroll number across every asset home. Read-only.
 
 Sums: PM positions MTM (data-api) + stables/pUSD/Aave-aTokens on every chain
-for BOTH sleeves + native gas tokens (POL, ETH) at live CoinGecko prices.
+for BOTH sleeves + native gas tokens (POL, ETH) at validated live prices.
 Warns (never silently omits) when a component can't be valued: dead RPC,
-CoinGecko down, open Ostium trades.
+both crypto-price sources down, open Ostium trades.
 
 Lesson source 2026-05-29 (-12%% misreport) and 2026-06-10 ($22-vs-$75.68 idle
 blindness): hand-assembled aggregates from stale memory get the operator-facing
@@ -22,6 +22,7 @@ import httpx
 from web3 import Web3
 
 import book_walk
+from _crypto_prices import PriceFetchError, fetch_usd_prices
 from positions import resolved_realizable_value
 
 # Filled by the PM valuation pass; consumed by the REALIZED split in main().
@@ -65,7 +66,6 @@ def realized_split(total: float, ref: float, gas_usd: float,
 import _paths as _secrets
 
 DATA_API = "https://data-api.polymarket.com"
-COINGECKO = "https://api.coingecko.com/api/v3/simple/price"
 
 ERC20_ABI = [
     {"constant": True, "inputs": [{"name": "_owner", "type": "address"}],
@@ -141,17 +141,21 @@ def pick_rpc(rpcs: list[str], chain_id: int) -> Web3 | None:
 
 
 def native_prices(warnings: list[str]) -> dict[str, float]:
+    ids = ["ethereum", "polygon-ecosystem-token",
+           *(cg for cg, _ in NONSTABLE.values())]
     try:
-        ids = "ethereum,polygon-ecosystem-token," + ",".join(cg for cg, _ in NONSTABLE.values())
-        r = httpx.get(COINGECKO, params={"ids": ids, "vs_currencies": "usd"}, timeout=10)
-        r.raise_for_status()
-        j = r.json()
-        out = {"ETH": j["ethereum"]["usd"], "POL": j["polygon-ecosystem-token"]["usd"]}
+        batch = fetch_usd_prices(ids, timeout=10)
+        warnings.extend(f"crypto prices: {message}" for message in batch.warnings)
+        out = {
+            "ETH": batch.prices["ethereum"],
+            "POL": batch.prices["polygon-ecosystem-token"],
+        }
         for sym, (cg, _dec) in NONSTABLE.items():
-            out[sym] = j.get(cg, {}).get("usd", 0.0)
+            out[sym] = batch.prices[cg]
         return out
-    except Exception as e:
-        warnings.append(f"CoinGecko unavailable ({e}); native/non-stable tokens valued at $0")
+    except PriceFetchError as e:
+        warnings.append(
+            f"crypto price sources unavailable ({e}); native/non-stable tokens valued at $0")
         return {"ETH": 0.0, "POL": 0.0, **{sym: 0.0 for sym in NONSTABLE}}
 
 

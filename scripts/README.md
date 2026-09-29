@@ -66,7 +66,7 @@ provisional and requires an independent fresh rewalk before any action.
 - `emergency_exit_ostium.py` — close all open Ostium positions at market.
 - `emergency_exit_polymarket.py` — sell every Polymarket position at best_bid (10% slippage cap).
 - `emergency_bridge_to_safety.py` — bridge full USDC off an at-risk chain via Across.
-- `emergency_swap_usdc_to_eth.py` — Uniswap V3 USDC → WETH on a chain (5% slippage cap, Coingecko cross-check).
+- `emergency_swap_usdc_to_eth.py` — Uniswap V3 USDC → WETH on a chain (5% slippage cap, validated CoinGecko quote with fresh DefiLlama fallback; aborts if neither is available).
 
 ## Telegram interface
 

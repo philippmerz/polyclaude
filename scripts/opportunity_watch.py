@@ -45,6 +45,7 @@ from pathlib import Path
 
 import httpx
 
+from _crypto_prices import fetch_usd_prices
 from google_maps_label_check import LabelCheckError, check_google_maps_label
 
 REPO = Path(__file__).resolve().parent.parent
@@ -512,9 +513,8 @@ def check_price_triggers(state: dict) -> None:
     for t in trigs:
         try:
             if t["kind"] == "coingecko":
-                r = httpx.get("https://api.coingecko.com/api/v3/simple/price",
-                              params={"ids": t["id"], "vs_currencies": "usd"}, timeout=15).json()
-                px = float(r[t["id"]]["usd"])
+                px = fetch_usd_prices(
+                    [t["id"]], timeout=15).prices[t["id"]]
             elif t["kind"] == "clob_no_ask":
                 b = httpx.get("https://clob.polymarket.com/book",
                               params={"token_id": t["id"]}, timeout=15).json()

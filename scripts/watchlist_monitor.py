@@ -12,7 +12,7 @@ discovery → vetting → tracking pipeline (world_state_digest -> longterm_chec
 -> longterm_watchlist) had no automated alerting layer.
 
 Sources:
-- Crypto: CoinGecko free public API (no key, ~50 req/min limit, plenty for ~10 names)
+- Crypto: CoinGecko primary, fresh DefiLlama fallback
 - Equities: yfinance (Yahoo public quote feed)
 
 Usage:
@@ -35,7 +35,7 @@ import sys
 import time
 from pathlib import Path
 
-import httpx
+from _crypto_prices import PriceFetchError, fetch_usd_prices
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = REPO_ROOT / "notes" / "watchlist_triggers.json"
@@ -117,20 +117,16 @@ def auto_revet_ticker(ticker: str, asset_type: str) -> dict:
 
 
 def fetch_crypto_prices(coingecko_ids: list[str]) -> dict[str, float]:
-    """Batch-fetch USD prices from CoinGecko. Returns {id: usd_price}."""
+    """Batch-fetch validated USD prices. Returns {CoinGecko id: usd_price}."""
     if not coingecko_ids:
         return {}
     try:
-        with httpx.Client(timeout=15.0) as c:
-            r = c.get(
-                "https://api.coingecko.com/api/v3/simple/price",
-                params={"ids": ",".join(coingecko_ids), "vs_currencies": "usd"},
-            )
-            r.raise_for_status()
-            data = r.json() or {}
-            return {k: float(v.get("usd", 0)) for k, v in data.items() if v.get("usd")}
-    except Exception as e:
-        print(f"WARN: CoinGecko fetch failed: {e}", file=sys.stderr)
+        batch = fetch_usd_prices(coingecko_ids, timeout=15)
+        for warning in batch.warnings:
+            print(f"WARN: crypto prices: {warning}", file=sys.stderr)
+        return batch.prices
+    except PriceFetchError as e:
+        print(f"WARN: crypto price fetch failed: {e}", file=sys.stderr)
         return {}
 
 

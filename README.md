@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-29 02:17 UTC
+## Last audited snapshot — 2026-09-29 10:15 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 6 |
 | Position cost | $89.91 |
-| Polymarket midpoint | $75.91 |
-| Indicative depth/fee value | $72.09 |
-| Authoritative whole-account mark | $164.26 |
+| Polymarket midpoint | $74.01 |
+| Indicative depth/fee value | $69.97 |
+| Authoritative whole-account mark | $162.52 |
 | Cumulative realized P&L | +$1.20 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -55,22 +55,25 @@ raised pUSD by **$46.153480**, with only sub-precision dust left.
 
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
 Gemini >=50 and OpenAI >=55. The exact source currently has 60 rows, with
-Gemini below 50 and OpenAI below 55; the three previously unscored placeholder
-rows disappeared without changing either threshold. The three central terminal
-values total $50.52 versus about $11.60 of current exits, so all remain holds
-and the Dec. 31 hold-only rule blocks enlargement. Every other direct and
+Gemini below 50 and OpenAI below 55. Its 10:12 source hash is byte-identical to
+the 02:00/06:00 reads despite a bare-request access denial. The three central
+terminal values total $50.52 versus about $14.80 of current exits, so all
+remain holds and the Dec. 31 hold-only rule blocks enlargement. Every other direct and
 protected group screen is also a hold. The only live order is a zero-fill maker
 sell for **28 Trump-out NO at 0.97**. Deployable pUSD is **$33.762410**.
-Another **$34.997648 native USDC** earns the live Polygon Aave rate after the
-legacy USDC.e reserve froze new supply; existing legacy aUSDC.e is $3.501271.
-The midpoint-to-depth gap is $3.82; approximate whole-account
-depth-realizable value is $160.44. The
+Another **$34.9987 native aUSDC** earns the live Polygon Aave rate after the
+legacy USDC.e reserve froze new supply; existing legacy aUSDC.e is about $3.5013.
+The midpoint-to-depth gap is $4.04; approximate whole-account
+depth-realizable value is $158.48. The
 next active portfolio catalyst is the exact Arena Text Overall source snapshot
 on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
 marked total; `scripts/positions.py` supplies the Polymarket depth view.
+Crypto valuation uses complete, fresh CoinGecko batches with a high-confidence
+DefiLlama fallback. Incomplete or stale batches fail visibly; emergency swaps
+abort before approval if neither source passes validation.
 
 ## Operating model
 

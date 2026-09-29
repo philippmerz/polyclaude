@@ -1,5 +1,5 @@
 {
-  "next_id": 181,
+  "next_id": 182,
   "decisions": [
     {
       "id": 1,
@@ -3607,6 +3607,27 @@
         "aave",
         "polygon",
         "cash-management"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 181,
+      "timestamp": "2026-09-29T10:14:50Z",
+      "type": "scaffolding",
+      "thesis": "CoinGecko began returning HTTP 403 to this VM, causing the authoritative bankroll to omit gas-token value and leaving the armed ARB price trigger blind. Route curated CoinGecko IDs through one complete-batch validator that prefers fresh CoinGecko data and falls back to fresh high-confidence DefiLlama data, while preserving visible all-source failure and making the emergency USDC-to-ETH path abort before approval if neither feed passes.",
+      "confidence": "high",
+      "prediction": "Through 2026-10-29, CoinGecko-only blocking will not omit ETH, POL or ARB from bankroll valuation or leave the ARB opportunity trigger blind; incomplete, stale, future-dated, nonfinite or low-confidence batches will produce no trigger and no emergency approval or swap.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-29",
+      "tags": [
+        "price-feed",
+        "fallback",
+        "bankroll",
+        "opportunity-watch",
+        "emergency-safety"
       ],
       "slug": null,
       "outcome": null,

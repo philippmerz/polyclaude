@@ -81,7 +81,7 @@ When a Tier-1 news_watcher alert indicates a real exploit / depeg / chain halt a
 
 1. **Multi-source corroboration.** WebFetch ≥ 3 independent crypto-news sources. Require ≥ 2 to confirm the same event. If only 1 source mentions it, especially a low-reputation feed → HOLD + Telegram operator. (This alone catches the substring-regex false positive that hit on 2026-04-29 — only one feed had the keyword, others would not corroborate.)
 2. **Market-reaction consistency.** The market should already be reacting if the event is real:
-   - *USDC/USDT depeg*: actual price on Coingecko's multi-exchange aggregate. Must be < $0.98 to confirm.
+   - *USDC/USDT depeg*: actual price from a validated CoinGecko quote with fresh DefiLlama fallback. Must be < $0.98 to confirm.
    - *Ostium / Across hack*: TVL via DefiLlama or directly from the contract balance. Sudden drawdown > 10% in last 1h = real signal.
    - *Polymarket halt*: try fetching a market via gamma-api. If responsive, protocol is operational.
    - *Sequencer halt*: issue an `eth_chainId` RPC to that chain. If responsive, no halt.

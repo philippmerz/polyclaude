@@ -20981,3 +20981,50 @@ carry checks are clean; all four daemons are exact-one and disk has about 713
 MiB free. Weekly tasks remain current. No trade, order, transfer, prior change
 or material update occurred, so no Telegram summary was sent. The next dated
 catalyst remains the exact Sep. 30 Arena Text Overall snapshot.
+
+## 2026-09-29 10:00–10:15 UTC — periodic review; price-feed blindness repaired
+
+Six indexed Polymarket legs reconcile at **$89.91 cost, $74.01 midpoint and
+$69.97 indicative fee-net depth**. With validated gas-token prices restored,
+whole-account mark is **$162.52** and the depth-substituted estimate is about
+**$158.48**; cumulative settled P&L remains **+$1.20**. Deployable pUSD is
+$33.762410, and the sole authenticated order remains the zero-fill 28-share
+Trump-out NO sell at .97. Position state is clean at six indexed legs plus the
+retained deindexed Hormuz dust claim.
+
+Every held exit remains a hold. Fresh HLE exits are about
+$5.54/$6.88/$2.38 versus $25.35/$20.42/$4.75 central terminal values. A bare
+request to the exact HLE endpoint returned 403, but the validated browser-shaped
+official request returned HTTP 200 at 10:12 with **60 rows** and SHA-256
+`86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`,
+identical to 02:00 and 06:00. Gemini 3.1 Pro remains 45.9, Gemini 3.8 Flash
+46.2 and GPT-6 Astra 53.6. The access-path denial is not source unavailability
+or a thesis change. Clarity's complete exit remains $28.25 against its exact
+$29 floor; Trump remains $26.91 against $27.48 central. **HOLD all / NO ADD.**
+
+The only new alert was a non-actionable 07:38 notice that the dormant ARB
+deep-value trigger had been blind for about an hour. CoinGecko was returning
+HTTP 403 to this VM, which also made the first 10:00 bankroll run omit all gas
+tokens and made crypto watchlist quotes unavailable. DefiLlama returned fresh
+0.99-confidence ETH/POL/ARB quotes; the contemporaneous ETH $2,715.53, POL
+$0.116455 and ARB $0.208433 values agreed with Coinbase and Kraken within
+0.04%. DEC-0181 consolidates bankroll, long-term watchlist, opportunity trigger
+and emergency-swap prices behind one complete-batch validator: fresh CoinGecko
+first, then fresh high-confidence DefiLlama fallback. Missing, stale,
+future-dated, nonfinite or out-of-range-confidence batches fail visibly. The
+emergency USDC-to-ETH route now aborts before approval or signing if neither
+source passes instead of proceeding without its market cross-check.
+
+The opportunity watcher was restarted onto the repaired code and verifies as
+exact-one; its accumulated `arb-deep-value-surface` failure count cleared to
+zero on a successful fallback quote. The current ARB price remains above its
+dormant trigger, and the watchlist has no entry hit. Native Polygon USDC remains
+active/unfrozen/unpaused at **3.185%**, with about 34.9987 aUSDC accrued; legacy
+USDC.e remains frozen for new supply with zero loose balance. A fresh White
+House/Federal Register check found no qualifying signed instrument renaming AI;
+the live AI-rename book moved to YES .53/.55 and NO .45/.47, still without a
+robust entry edge. No trade, order, transfer, redemption or prior changed.
+
+The full suite passes **851 tests plus 156 money-math checks**. Weekly work is
+current. The next dated catalyst remains the exact Sep. 30 Arena Text Overall
+snapshot.
