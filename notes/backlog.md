@@ -1,5 +1,25 @@
 # Polyclaude Backlog
 
+## Sep-29 22:05 current update
+
+- **Periodic state — HOLD all / no asset action:** six indexed legs have
+  $89.91 cost, $75.81 midpoint and $68.97 indicative fee-net depth.
+  Authoritative bankroll is **$164.40**, approximate whole-account
+  depth-realizable value is **$157.56**, cumulative realized P&L remains
+  **+$1.20**, and deployable pUSD remains $33.762410. The Trump-out 28-NO
+  maker sell at .97 remains live and zero-fill.
+- The 14:09 CoinDesk opinion alert recycles the Sep. 15 Clarity vote. Official
+  Senate records identify Roll Call 234 as failed cloture on the motion to
+  proceed, which both held contracts explicitly exclude. No final-passage vote
+  occurred. The complete pair exits near $28.53 versus its exact $29 floor, so
+  it remains a complete-group hold.
+- The exact HLE endpoint is still byte-identical at 60 rows; the status tool's
+  UPDATING label compares today with the Jul. 3 archive and is not a new source
+  mutation. Current HLE exits remain below central and stress values. No new
+  opportunity, carry exit, UMA/Ostium change, watchlist hit or due decision
+  appeared. Daemons, operator session and disk are healthy. The next dated
+  catalyst is the Sep. 30 Arena snapshot; no duplicate Telegram was sent.
+
 ## Sep-29 14:10 current update
 
 - **Full check — HOLD all / no asset action:** six indexed legs have $89.91

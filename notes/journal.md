@@ -21074,3 +21074,39 @@ watchlist, marginal carry, decisions and all four exact-one/current daemons are
 clean. Weekly P&L and the Sep. 27 world-state review remain current. No material
 asset action or new thesis occurred, so no Telegram summary was sent. The next
 dated catalyst remains the exact Sep. 30 Arena Text Overall snapshot.
+
+## 2026-09-29 22:00–22:05 UTC — critical Clarity alert revalidated; no action
+
+Six indexed Polymarket legs reconcile at **$89.91 cost, $75.81 midpoint and
+$68.97 indicative fee-net depth**. The authoritative whole-account mark is
+**$164.40** and the depth-substituted estimate is about **$157.56**; cumulative
+settled P&L remains **+$1.20**. Deployable pUSD remains $33.762410, native
+Polygon aUSDC has accrued to about $35.0002, and the sole authenticated order
+remains the zero-fill 28-share Trump-out NO maker sell at .97.
+
+The only item requiring a fresh safety review was the 14:09 CoinDesk opinion
+alert titled “Democrats killed the Clarity Act.” Its text says no Senate
+Democrat voted to advance the bill, but the official Senate record identifies
+the referenced Sep. 15 Roll Call 234 as a **49–50 cloture vote on the motion to
+proceed**. Both live Gamma descriptions remain identical and expressly exclude
+motions to proceed, cloture and amendments; only the first full-Senate vote on
+final passage qualifies. No qualifying vote has occurred. The complete 29/29
+over-50 YES plus over-58 NO position exits near **$28.53** after fees versus
+its criteria-consistent **$29 floor**, or about $28.76 after the current Aave
+carry hurdle. **HOLD COMPLETE GROUP; never transact one member alone.**
+
+The exact HLE chart API returned HTTP 200, 35,732 bytes and the unchanged
+60-row SHA-256 `86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`.
+Gemini 3.1 Pro remains 45.9, Gemini 3.8 Flash 46.2 and GPT-6 Astra 53.6. The
+status report's UPDATING verdict is its explicit live-versus-Jul. 3 comparison,
+not an intraday mutation. Current fee-net exits for next-Gemini-Pro, Gemini
+>=50 and OpenAI >=55 are about $4.24/$6.90/$2.38 versus central values of
+$25.35/$20.42/$4.75 and remain below recorded stress floors. All remain
+**HOLD / NO ADD** under the Dec. 31 rule.
+
+No later news item has a held-position channel, and the opportunity watcher
+shows no executable arb. Marginal carry, UMA, Ostium, watchlist and decision
+clocks are clean. All four daemons are live, the operator session is active,
+and disk retains about 1.0 GiB free. The Arena snapshot remains due Sep. 30 at
+12:00 ET; current leaderboard evidence creates no robust unheld entry. No
+trade, transfer, order change, prior change or duplicate Telegram followed.
