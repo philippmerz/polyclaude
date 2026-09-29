@@ -21029,3 +21029,48 @@ The full suite passes **851 tests plus 156 money-math checks**. Telegram
 **1060** reported the repaired feed path, recovered watcher, unchanged HLE
 source and no-trade portfolio state. Weekly work is current. The next dated
 catalyst remains the exact Sep. 30 Arena Text Overall snapshot.
+
+## 2026-09-29 14:00–14:10 UTC — full check; all holds, no entry, disk headroom restored
+
+Six indexed Polymarket legs reconcile at **$89.91 cost, $78.77 midpoint and
+$73.80 indicative fee-net depth**. The authoritative whole-account mark is
+**$167.70** and the depth-substituted estimate is about **$162.73**; cumulative
+settled P&L remains **+$1.20**. Deployable pUSD is $33.762410, native Polygon
+aUSDC has accrued to about $34.9992 at a 3.23% live hurdle, and the sole
+authenticated order remains the zero-fill 28-share Trump-out NO maker sell at
+.97. State audit is clean at six indexed legs plus one deindexed claim row.
+The first redemption sweep was rate-limited by the public data API; one bounded
+retry completed and found no winning redeemable position.
+
+No held thesis broke. The browser-shaped exact HLE request returned 60 rows
+and the same SHA-256 `86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`;
+Gemini 3.1 Pro remains 45.9, Gemini 3.8 Flash 46.2 and GPT-6 Astra 53.6.
+Current fee-net exits for next-Gemini-Pro, Gemini >=50 and OpenAI >=55 are
+about $9.07/$6.90/$2.38 versus $25.35/$20.42/$4.75 central terminal values and
+remain above none of the recorded stress floors. Clarity's complete pair exits
+near $28.53 against its exact $29 floor, while Trump exits near $26.91 against
+$27.48 central. **HOLD all / NO ADD.** The Kelly scale-in suggestion is
+overridden by the explicit Dec. 31 hold-only cluster rule.
+
+Primary discovery fetched 1,000 markets and shortlisted 80; thin-tail fetched
+43,716 event markets and retained 1,294 hurdle-clearing rows. All 3 primary and
+48 thin-tail context batches were reviewed with no truncated trigger set.
+Sports reviewed 68 markets, macro five, monotonicity 1,076 multi-market events,
+and consistency 3,030 validated neg-risk markets across 585 events; no
+executable arb or robust instance edge survived. The two bookie-delta leads
+were exact-match esports contracts: current NO asks of .30 and .40 become
+roughly .3147 and .4168 after the enabled fee, versus consensus probabilities
+near .333 and .426. Their sub-2pp residual margins fail the ten-point
+pessimistic-probability gate. Four favorite-fade rows remain unsupported
+population hints. No trade followed.
+
+Root-disk free space had fallen to 692 MiB. I removed 228 ignored discovery
+snapshots and 8,988 stale scanner reports older than 14 days (119,429,726 bytes
+combined), removed stale user-owned temporary artifacts, and packed 119.82 MiB
+of loose Git objects into a 5.00 MiB pack. Free space recovered to about
+**1.1 GiB**. Active operator/daemon logs, private histories, financial records
+and all process identities were preserved. UMA, Ostium, crux coverage,
+watchlist, marginal carry, decisions and all four exact-one/current daemons are
+clean. Weekly P&L and the Sep. 27 world-state review remain current. No material
+asset action or new thesis occurred, so no Telegram summary was sent. The next
+dated catalyst remains the exact Sep. 30 Arena Text Overall snapshot.
