@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-29 06:06 current update
+
+- **Periodic state — HOLD all / no asset action:** six indexed legs have
+  $89.91 cost, $75.11 midpoint and $72.18 indicative fee-net depth.
+  Authoritative bankroll is **$163.55**, approximate whole-account
+  depth-realizable value is **$160.62**, cumulative realized P&L remains
+  **+$1.20**, and deployable pUSD remains $33.762410. The sole Trump-out
+  28-NO maker sell at .97 remains live and zero-fill.
+- The exact HLE API is byte-identical to 02:00 at 60 rows; Gemini remains below
+  50 and OpenAI below 55. All individual and protected-group exits remain
+  holds. The Trump-AI-rename market still has no qualifying signed presidential
+  instrument and its fee-inclusive NO at .48 still fails pessimistic stress.
+- Native Polygon USDC remains supply-enabled at 3.234%; 34.9981 aUSDC is
+  accruing and the legacy USDC.e reserve remains frozen only to new supply.
+  The retained MetaMask cross-event watcher is intentional for a possible fresh
+  entry; a direct current scan parsed successfully and found zero executable
+  edge. No post-02:17 alert, overdue decision, watchlist hit, redemption or
+  safety issue appeared. All four daemons are exact-one and disk remains above
+  the existing guard. No Telegram summary was sent; the next dated catalyst is
+  the Sep. 30 Arena Text Overall snapshot.
+
 ## Sep-28 22:18 current update
 
 - **MetaMask group fully exited at the precommitted switch:** fresh official
