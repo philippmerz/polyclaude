@@ -243,6 +243,56 @@ def _pick_rpc(rpcs: list[str], chain_id: int) -> Web3:
     raise RuntimeError(f"no working rpc for chain {chain_id}")
 
 
+def _gas_fields(w: Web3, cfg: dict, gas_limit: int) -> dict:
+    """Return chain-aware EIP-1559 fields.
+
+    Polygon validators enforce a priority-fee floor.  A zero-tip envelope is
+    rejected before broadcast even when the public RPC's gas-price estimate is
+    otherwise current.
+    """
+    base = int(w.eth.gas_price)
+    try:
+        tip = int(w.eth.max_priority_fee)
+    except Exception:
+        tip = 0
+    if cfg["id"] == 137:
+        tip = max(tip, 30_000_000_000)
+    return {
+        "gas": gas_limit,
+        "maxFeePerGas": base * 2 + tip,
+        "maxPriorityFeePerGas": tip,
+    }
+
+
+def _send_receipt(w: Web3, pk: str, tx: dict, *, timeout: int = 180):
+    """Submit once while preserving the signed hash for ambiguous RPC errors."""
+    signed = Account.sign_transaction(tx, pk)
+    expected_hash = Web3.keccak(signed.raw_transaction).hex()
+    print(f"prepared tx hash: {expected_hash}")
+    try:
+        h = w.eth.send_raw_transaction(signed.raw_transaction)
+    except Exception as exc:
+        raise RuntimeError(
+            f"submission response failed for {expected_hash} ({type(exc).__name__}); "
+            "inspect that hash before any retry"
+        ) from None
+    txh = h.hex()
+    if txh.lower() != expected_hash.lower():
+        raise RuntimeError(
+            f"signed hash {expected_hash} differs from RPC hash {txh}; "
+            "inspect both before any retry"
+        )
+    print(f"submitted tx: {txh}")
+    try:
+        receipt = w.eth.wait_for_transaction_receipt(h, timeout=timeout)
+    except Exception as exc:
+        raise RuntimeError(
+            f"receipt unavailable for submitted tx {txh} ({type(exc).__name__}); "
+            "inspect that hash before any retry"
+        ) from None
+    return txh, receipt
+
+
 def _resolve_token(cfg: dict, w: Web3, name_or_addr: str):
     addr = cfg["tokens"].get(name_or_addr.upper()) or cfg["tokens"].get(name_or_addr) or name_or_addr
     addr = Web3.to_checksum_address(addr)
@@ -374,11 +424,15 @@ def main() -> int:
     if in_c.functions.allowance(addr, router_addr).call() < amount_units:
         tx = in_c.functions.approve(router_addr, MAX_UINT).build_transaction({
             "from": addr, "nonce": w.eth.get_transaction_count(addr), "chainId": cfg["id"],
-            "gas": 100_000, "maxFeePerGas": int(w.eth.gas_price * 2), "maxPriorityFeePerGas": 0,
+            **_gas_fields(w, cfg, 100_000),
         })
-        h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
-        print(f"approve tx: 0x{h.hex()}")
-        if w.eth.wait_for_transaction_receipt(h, timeout=120).status != 1:
+        try:
+            txh, receipt = _send_receipt(w, pk, tx, timeout=120)
+        except RuntimeError as exc:
+            print(f"ERROR: approval {exc}", file=sys.stderr)
+            return 3
+        print(f"approve tx: {txh}")
+        if receipt.status != 1:
             print("ERROR: approve failed", file=sys.stderr)
             return 3
 
@@ -416,16 +470,27 @@ def main() -> int:
           f"{amount_out_min / 10**out_dec:.8f}{movement}")
 
     router = w.eth.contract(address=router_addr, abi=ROUTER_ABI)
-    tx = router.functions.exactInputSingle((
+    swap_call = router.functions.exactInputSingle((
         in_addr, out_addr, fee_used, addr, int(time.time()) + 600,
         amount_units, amount_out_min, 0,
-    )).build_transaction({
+    ))
+    try:
+        swap_call.call({"from": addr})
+    except Exception as exc:
+        print(f"ERROR: swap simulation failed ({type(exc).__name__}); no swap sent",
+              file=sys.stderr)
+        return 4
+    tx = swap_call.build_transaction({
         "from": addr, "nonce": w.eth.get_transaction_count(addr), "chainId": cfg["id"],
-        "gas": 400_000, "maxFeePerGas": int(w.eth.gas_price * 2), "maxPriorityFeePerGas": 0,
+        **_gas_fields(w, cfg, 400_000),
     })
-    h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
-    print(f"swap tx: 0x{h.hex()}")
-    if w.eth.wait_for_transaction_receipt(h, timeout=180).status != 1:
+    try:
+        txh, receipt = _send_receipt(w, pk, tx)
+    except RuntimeError as exc:
+        print(f"ERROR: swap {exc}", file=sys.stderr)
+        return 4
+    print(f"swap tx: {txh}")
+    if receipt.status != 1:
         print("ERROR: swap failed", file=sys.stderr)
         return 4
     print(f"OK: swapped {human_in:.6f} {in_sym} -> ~{human_out:.6f} {out_sym} (min {amount_out_min / 10**out_dec:.6f})")

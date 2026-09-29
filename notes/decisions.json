@@ -1,5 +1,5 @@
 {
-  "next_id": 180,
+  "next_id": 181,
   "decisions": [
     {
       "id": 1,
@@ -3589,6 +3589,26 @@
         "consumed-edge"
       ],
       "slug": "metamask-fdv-above-one-day-after-launch",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 180,
+      "timestamp": "2026-09-29T02:14:56Z",
+      "type": "scaffolding",
+      "thesis": "Aave supply must fail closed on inactive, paused, or frozen reserves and spot swaps must use Polygon's validator priority-fee floor plus pre-sign simulation. After legacy USDC.e supply froze, convert only the planned 35-dollar reserve tranche at a hard stable-parity floor and supply native USDC, while retaining 33.762410 pUSD for immediate opportunities.",
+      "confidence": "high",
+      "prediction": "Frozen-reserve supply attempts will stop before approval/signing; Polygon spot swaps will submit with at least a 30 gwei tip; and approximately 34.997648 native USDC will remain supplied and withdrawable at the next scheduled check.",
+      "size_usd": 35.0,
+      "resolution_at": "2026-10-01",
+      "tags": [
+        "execution-safety",
+        "aave",
+        "polygon",
+        "cash-management"
+      ],
+      "slug": null,
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

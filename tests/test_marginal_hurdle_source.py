@@ -16,12 +16,13 @@ import aave_deposit  # noqa: E402
 import check_marginal_apy as marginal  # noqa: E402
 
 
-def test_matching_usdce_cache_is_used_without_rpc(tmp_path, monkeypatch) -> None:
+def test_matching_live_usdc_cache_is_used_without_rpc(tmp_path, monkeypatch) -> None:
     cache = tmp_path / "hurdle.json"
     cache.write_text(json.dumps({
         "apy": 0.03007,
         "chain": "polygon",
-        "token": "USDC.e",
+        "token": "USDC",
+        "supply_status": "live",
         "fetched": dt.datetime.now(dt.timezone.utc).isoformat(),
     }))
     monkeypatch.setattr(marginal, "HURDLE_CACHE", cache)
@@ -33,10 +34,10 @@ def test_matching_usdce_cache_is_used_without_rpc(tmp_path, monkeypatch) -> None
     apy, source = marginal._live_hurdle()
 
     assert apy == 0.03007
-    assert "polygon/USDC.e" in source
+    assert "polygon/USDC" in source
 
 
-def test_old_untagged_cache_is_rejected_and_usdce_is_queried(
+def test_old_untagged_cache_is_rejected_and_native_usdc_is_queried(
         tmp_path, monkeypatch) -> None:
     cache = tmp_path / "hurdle.json"
     cache.write_text(json.dumps({
@@ -49,7 +50,7 @@ def test_old_untagged_cache_is_rejected_and_usdce_is_queried(
     class Call:
         @staticmethod
         def call():
-            return [None, None, int(0.031 * aave_deposit.RAY)]
+            return [((1 << 56),), None, int(0.031 * aave_deposit.RAY)]
 
     class Functions:
         @staticmethod
@@ -74,9 +75,48 @@ def test_old_untagged_cache_is_rejected_and_usdce_is_queried(
     apy, source = marginal._live_hurdle()
 
     assert apy == pytest.approx(0.031)
-    assert source.endswith("(polygon/USDC.e, fresh)")
+    assert source.endswith("(polygon/USDC, fresh)")
     assert seen["asset"].lower() == (
-        aave_deposit.CHAIN["polygon"]["tokens"]["USDC.e"].lower())
+        aave_deposit.CHAIN["polygon"]["tokens"]["USDC"].lower())
     saved = json.loads(cache.read_text())
     assert saved["chain"] == "polygon"
-    assert saved["token"] == "USDC.e"
+    assert saved["token"] == "USDC"
+    assert saved["supply_status"] == "live"
+
+
+def test_cached_asset_without_live_supply_proof_is_revalidated(
+        tmp_path, monkeypatch) -> None:
+    cache = tmp_path / "hurdle.json"
+    cache.write_text(json.dumps({
+        "apy": 0.01,
+        "chain": "polygon",
+        "token": "USDC",
+        "fetched": dt.datetime.now(dt.timezone.utc).isoformat(),
+    }))
+
+    class Call:
+        @staticmethod
+        def call():
+            return [((1 << 56) | (1 << 57),), None,
+                    int(0.01 * aave_deposit.RAY)]
+
+    class Functions:
+        @staticmethod
+        def getReserveData(_asset):  # noqa: N802
+            return Call()
+
+    class Eth:
+        @staticmethod
+        def contract(**_kwargs):
+            return type("Pool", (), {"functions": Functions()})()
+
+    class W3:
+        eth = Eth()
+
+    monkeypatch.setattr(marginal, "HURDLE_CACHE", cache)
+    monkeypatch.setattr(aave_deposit, "_w3", lambda _chain: W3())
+
+    apy, source = marginal._live_hurdle()
+
+    assert apy == marginal.HURDLE_APY_FALLBACK
+    assert "reserve is frozen" in source

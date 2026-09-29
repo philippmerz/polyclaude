@@ -20861,3 +20861,84 @@ qualifying final-passage vote, and the guidance expressly lacks legal force.
 No Clarity action followed. The next dated catalyst remains the exact Sep. 30
 Arena Text Overall snapshot. Telegram **1057** reported the exit, reconciled
 portfolio state and HLE source change.
+
+## 2026-09-29 02:00–02:17 UTC — full check; no entry, reserve migrated after frozen-reserve reject
+
+Six indexed Polymarket legs reconcile at **$89.91 cost, $75.91 midpoint and
+$72.09 indicative fee-net depth**. Authoritative whole-account mark is
+**$164.26** and the depth-substituted estimate is about **$160.44**; cumulative
+settled P&L remains **+$1.20**. The only authenticated order is still the
+zero-fill 28-share Trump-out NO maker sell at .97. State audit is clean at six
+indexed legs plus the retained deindexed Hormuz dust claim, and there is no
+BUY reservation.
+
+Every held-position review remains a hold. The exact HLE endpoint returned 60
+rows (SHA-256 `86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`):
+Gemini 3.1 Pro is 45.9, Gemini 3.8 Flash 46.2 and GPT-6 Astra 53.6. Fresh
+fee-net exits for next-Gemini-Pro/Gemini >=50/OpenAI >=55 were about
+$6.26/$6.93/$2.38 versus $25.35/$20.42/$4.75 central terminal values. Keep
+the shared cluster **HOLD / NO ADD** under the Dec. 31 rule. Clarity's complete
+exit remains about $28.25 against its exact $29 floor, and Trump's taker exit
+about $26.91 against $27.48 central. The 00:03 CBS approval alert was minor;
+current White House releases still show Trump performing presidential duties
+and contain no contract-resolving removal or resignation fact. No prior moved.
+
+The complete discovery suite produced no robust entry. Primary discovery
+organized 64 markets / 47 ranked rows into four proof-hashed batches. Thin-tail
+discovery fetched 45,310 markets and retained 1,441 candidates across 57
+batches; all raw and organized rows were reviewed. Sports returned 73 markets
+with no >3pp survivor, macro returned five visibility-only rows, monotonicity
+found zero violations among 964 events, the explicitly incomplete consistency
+slice found no provisional basket, and four favorite-fade hints supplied no
+instance evidence.
+
+The strongest short-dated lead, market 4769494 (Trump renames AI by Sep. 30),
+requires a signed EO, proclamation, or presidential memorandum. Speeches, the
+Sep. 25 White House fact sheet and reported State Department terminology do not
+qualify. At 02:08 the atomic book was YES .52/.54 and NO .46/.48; fee-inclusive
+NO cost was about .489984. An honest p(NO) range of .55-.70 falls to .45 at the
+required ten-point pessimistic bound, so it fails the robust gate amid the
+Sep. 29 White House AI summit and late-signing risk. **No trade.** For Hormuz
+traffic-normal-by-Oct-31, direct PortWatch data through Sep. 20 has a seven-day
+mean of **3.143 ships** versus the contract's >=60 threshold, but the remaining
+war-end/reopening tail prevents improving the existing .96-.97 p(NO) range;
+the executable NO near .96 has no stress edge. Saudi's East-West pipeline is
+reported restarted, but the strict market needs an official Saudi-government
+announcement and YES near .775 likewise lacks a robust margin. No candidate
+advanced to execution.
+
+The MetaMask exit left $68.762410 idle pUSD, so I retained **$33.762410** for
+one full-size immediate ticket plus arb capacity and routed $35 toward the
+same-chain reserve. The pUSD unwrap succeeded 1:1 (approval
+`4ebc67ec406a57c232e8b93fe2f95a5b79f1a80ff17d95aa0f849886f0cbe41d`,
+unwrap `e94528e971e06b5c0dcf0cd0bbe7c3179add626a0611bc35940f948bd0828f4d`).
+The first legacy-USDC.e Aave supply transaction
+`845a734671c2ad4327c615a0db394b514e82b70ed080650edabe903dd221261c`
+reverted with `ReserveFrozen()` (configuration active=1, frozen=1, paused=0),
+used 0.030852318 separately funded POL and moved no principal. A direct quote
+then converted 35 USDC.e to **34.997649 native USDC** through the 0.01% pool
+with a $34.97 hard floor (approval
+`e25bb461e164401764a97eecc33581de2206366211ec9db0c7d897ccb1de5a20`, swap
+`f0cd5164e28ba787dfeb6971757e8d535e48a8e79a7f545619852c614cbdf2ba`).
+The native reserve was live at **3.234%** and accepted 34.997649 USDC (approval
+`1f995ff3f665b0111d7092e374ea062f238a541f49bf6ea073929a3f0bbc5edc`, supply
+`4199754532cb051504f09cbc081c4b5f99029d95add7bfa3298c0c18f493f606`).
+Final balances verify 34.997648 aUSDC, 3.501271 legacy aUSDC.e, .095025 loose
+USDC, zero loose USDC.e and $33.762410 pUSD.
+
+The incident exposed two deterministic preflight gaps. `aave_deposit.py` now
+decodes live reserve flags before approval, reports supply status, and simulates
+before signing. `spot_swap.py` now enforces Polygon's priority-fee floor,
+simulates the final route and preserves signed hashes across ambiguous RPC
+responses. The marginal-hurdle scanner now follows supply-enabled native USDC
+rather than quoting the frozen legacy reserve, and its cache records live
+supply status. Focused safety/hurdle coverage passes **16 tests** and the full
+suite passes **836 tests plus 156 money-math checks**; DEC-0180 records the
+repair and cash-management prediction.
+
+UMA, Ostium, watchlist, redemption, crux coverage, overdue decisions and all
+four exact-one/current daemons are clean. Weekly P&L through Sep. 25 and the
+Sep. 27 world-state rotation remain current. The next dated catalyst is the
+exact Sep. 30 Arena Text Overall snapshot. Telegram **1058** reported the
+reserve migration, safely contained revert, execution hardening and no-entry
+scan result.

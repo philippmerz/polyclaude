@@ -58,13 +58,15 @@ import httpx
 HURDLE_APY_FALLBACK = 0.05
 
 # Benchmark asset: freed Polymarket capital can unwrap 1:1 from pUSD to USDC.e
-# through the deployed CollateralOfframp, then enter Aave Polygon without a
-# bridge. Use that literal same-chain alternative. A different chain or asset
-# only replaces it when its incremental net yield exceeds gas, swap/bridge and
-# operational cost. Aave remains the investable floor; every review should also
-# compare the best lawful, executable higher-return alternative then available.
+# through the deployed CollateralOfframp, then swap through the liquid Polygon
+# stable pool into native USDC.  Aave froze new USDC.e supply on 2026-09-29, so
+# its displayed legacy-reserve rate is no longer an investable marginal hurdle.
+# Native USDC is the current same-chain supply-enabled alternative.  Carry
+# decisions still subtract stable-swap, gas and eventual return costs at the
+# contemplated size; this headline APY is the advisory screen, not an automatic
+# close rule.
 HURDLE_CHAIN = "polygon"
-HURDLE_TOKEN = "USDC.e"
+HURDLE_TOKEN = "USDC"
 HURDLE_CACHE = Path(__file__).resolve().parent.parent / "notes" / "aave_hurdle.json"
 HURDLE_TTL_HOURS = 24
 
@@ -82,7 +84,8 @@ def _live_hurdle() -> tuple[float, str]:
         age_h = (now - dt.datetime.fromisoformat(cached["fetched"])).total_seconds() / 3600
         if (age_h < HURDLE_TTL_HOURS
                 and cached.get("chain") == HURDLE_CHAIN
-                and cached.get("token") == HURDLE_TOKEN):
+                and cached.get("token") == HURDLE_TOKEN
+                and cached.get("supply_status") == "live"):
             return float(cached["apy"]), (
                 f"live {cached['apy']*100:.2f}% "
                 f"({cached['chain']}/{cached['token']}, {age_h:.0f}h old)")
@@ -91,18 +94,23 @@ def _live_hurdle() -> tuple[float, str]:
     try:
         from web3 import Web3
 
-        from aave_deposit import CHAIN, POOL_ABI, RAY, _w3
+        from aave_deposit import (CHAIN, POOL_ABI, RAY, _reserve_supply_status,
+                                  _w3)
         cfg = CHAIN[HURDLE_CHAIN]
         w = _w3(HURDLE_CHAIN)
         pool = w.eth.contract(address=Web3.to_checksum_address(cfg["pool"]), abi=POOL_ABI)
         rd = pool.functions.getReserveData(
             Web3.to_checksum_address(cfg["tokens"][HURDLE_TOKEN])).call()
+        supply_ok, supply_status = _reserve_supply_status(rd)
+        if not supply_ok:
+            raise ValueError(f"reserve is {supply_status}")
         apy = rd[2] / RAY          # index 2 = currentLiquidityRate, RAY-scaled
         if not (0.0 <= apy < 0.50):   # sanity-bound: a RAY misread shows up as absurd
             raise ValueError(f"implausible APY {apy}")
         HURDLE_CACHE.write_text(json.dumps(
             {"apy": round(apy, 6), "chain": HURDLE_CHAIN,
-             "token": HURDLE_TOKEN, "fetched": now.isoformat()}, indent=2))
+             "token": HURDLE_TOKEN, "supply_status": supply_status,
+             "fetched": now.isoformat()}, indent=2))
         return apy, f"live {apy*100:.2f}% ({HURDLE_CHAIN}/{HURDLE_TOKEN}, fresh)"
     except Exception as e:
         return HURDLE_APY_FALLBACK, f"FALLBACK {HURDLE_APY_FALLBACK*100:.2f}% (live fetch failed: {str(e)[:40]})"
@@ -371,7 +379,7 @@ def _arb_paired(slug: str, priors_raw: dict) -> str | None:
 def main() -> int:
     p = argparse.ArgumentParser(description="Flag held positions whose marginal-APY-to-resolution falls below a hurdle.")
     p.add_argument("--hurdle-apy", type=float, default=None,
-                   help="hurdle APY. Default: LIVE Aave-Polygon USDC.e supply rate "
+                   help="hurdle APY. Default: LIVE supply-enabled Aave-Polygon USDC rate "
                         f"(24h cache, falls back to {HURDLE_APY_FALLBACK*100:.2f}%%). "
                         "Pass a value to pin it.")
     p.add_argument("--drawdown-alert-pct", type=float, default=15.0,

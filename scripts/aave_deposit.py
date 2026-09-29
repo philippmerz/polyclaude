@@ -108,6 +108,23 @@ MAX_UINT = (1 << 256) - 1
 RAY = 10**27  # Aave's fixed-point precision for rates
 
 
+def _reserve_supply_status(reserve_data) -> tuple[bool, str]:
+    """Decode the Aave V3 configuration bits relevant to new supply."""
+    configuration = reserve_data[0]
+    raw = int(configuration[0] if isinstance(configuration, (tuple, list))
+              else configuration)
+    active = bool((raw >> 56) & 1)
+    frozen = bool((raw >> 57) & 1)
+    paused = bool((raw >> 60) & 1)
+    if not active:
+        return False, "inactive"
+    if paused:
+        return False, "paused"
+    if frozen:
+        return False, "frozen"
+    return True, "live"
+
+
 def _wallet(sleeve: str) -> tuple[str, str]:
     env = "POLYCLAUDE_WALLET" if sleeve == "polymarket" else "POLYCLAUDE_WALLET_CRYPTO"
     d = json.loads(_secrets.path(env).read_text())
@@ -169,6 +186,8 @@ def cmd_rate(args: argparse.Namespace) -> int:
 
     print(f"{args.chain}/{args.token} (sleeve {args.sleeve}, {addr})")
     print(f"  current supply APY:  {apy:.3f}%")
+    supply_ok, supply_status = _reserve_supply_status(rd)
+    print(f"  new-supply status:   {supply_status}")
     print(f"  walleted (idle):     {bal_plain:.4f} {args.token}")
     print(f"  supplied (a{args.token}): {bal_a:.4f}  ({bal_a / max(bal_plain + bal_a, 1e-9) * 100:.1f}% of total)")
     return 0
@@ -183,6 +202,12 @@ def cmd_supply(args: argparse.Namespace) -> int:
 
     amount_units = int(args.amount_usdc * 1_000_000)
     plain = w.eth.contract(address=asset, abi=ERC20_ABI)
+    pool = w.eth.contract(address=pool_addr, abi=POOL_ABI)
+    reserve_data = pool.functions.getReserveData(asset).call()
+    supply_ok, supply_status = _reserve_supply_status(reserve_data)
+    if not supply_ok:
+        print(f"refusing supply: {args.chain}/{args.token} reserve is {supply_status}")
+        return 2
     bal = plain.functions.balanceOf(addr).call()
     if bal < amount_units:
         print(f"insufficient {args.token}: have {bal/1e6}, need {args.amount_usdc}")
@@ -210,9 +235,14 @@ def cmd_supply(args: argparse.Namespace) -> int:
             return 3
 
     print(f"supplying {args.amount_usdc} {args.token}...")
-    pool = w.eth.contract(address=pool_addr, abi=POOL_ABI)
     nonce = w.eth.get_transaction_count(addr)
-    supply_tx = pool.functions.supply(asset, amount_units, addr, 0).build_transaction({
+    supply_call = pool.functions.supply(asset, amount_units, addr, 0)
+    try:
+        supply_call.call({"from": addr})
+    except Exception as exc:
+        print(f"supply simulation failed ({type(exc).__name__}); no supply sent")
+        return 4
+    supply_tx = supply_call.build_transaction({
         "from": addr, "nonce": nonce, "chainId": cfg["id"],
         **_gas_fields(w, cfg, 400_000),
     })

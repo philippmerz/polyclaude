@@ -97,3 +97,17 @@ def test_quote_tiers_retry_failures_and_retain_gas_evidence() -> None:
     assert gas == {500: 50_500, 3000: 53_000}
     assert failures == [10000]
     assert calls == {500: 2, 3000: 1, 10000: 2}
+
+
+def test_polygon_gas_fields_enforce_validator_tip_floor() -> None:
+    class Eth:
+        gas_price = 100_000_000_000
+        max_priority_fee = 0
+
+    class W3:
+        eth = Eth()
+
+    fields = spot_swap._gas_fields(W3(), {"id": 137}, 400_000)
+    assert fields["maxPriorityFeePerGas"] == 30_000_000_000
+    assert fields["maxFeePerGas"] == 230_000_000_000
+    assert fields["gas"] == 400_000

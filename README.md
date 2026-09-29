@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-28. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-29. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-28 22:18 UTC
+## Last audited snapshot — 2026-09-29 02:17 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 6 |
 | Position cost | $89.91 |
-| Polymarket midpoint | $73.81 |
-| Indicative depth/fee value | $67.10 |
-| Authoritative whole-account mark | $162.24 |
+| Polymarket midpoint | $75.91 |
+| Indicative depth/fee value | $72.09 |
+| Authoritative whole-account mark | $164.26 |
 | Cumulative realized P&L | +$1.20 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -60,9 +60,11 @@ rows disappeared without changing either threshold. The three central terminal
 values total $50.52 versus about $11.60 of current exits, so all remain holds
 and the Dec. 31 hold-only rule blocks enlargement. Every other direct and
 protected group screen is also a hold. The only live order is a zero-fill maker
-sell for **28 Trump-out NO at 0.97**. Deployable pUSD is $68.762410. The
-midpoint-to-depth gap is $6.71; approximate whole-account depth-realizable
-value is $155.53. The
+sell for **28 Trump-out NO at 0.97**. Deployable pUSD is **$33.762410**.
+Another **$34.997648 native USDC** earns the live Polygon Aave rate after the
+legacy USDC.e reserve froze new supply; existing legacy aUSDC.e is $3.501271.
+The midpoint-to-depth gap is $3.82; approximate whole-account
+depth-realizable value is $160.44. The
 next active portfolio catalyst is the exact Arena Text Overall source snapshot
 on Sep. 30.
 
