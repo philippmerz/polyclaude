@@ -21025,6 +21025,7 @@ House/Federal Register check found no qualifying signed instrument renaming AI;
 the live AI-rename book moved to YES .53/.55 and NO .45/.47, still without a
 robust entry edge. No trade, order, transfer, redemption or prior changed.
 
-The full suite passes **851 tests plus 156 money-math checks**. Weekly work is
-current. The next dated catalyst remains the exact Sep. 30 Arena Text Overall
-snapshot.
+The full suite passes **851 tests plus 156 money-math checks**. Telegram
+**1060** reported the repaired feed path, recovered watcher, unchanged HLE
+source and no-trade portfolio state. Weekly work is current. The next dated
+catalyst remains the exact Sep. 30 Arena Text Overall snapshot.
