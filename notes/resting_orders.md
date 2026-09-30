@@ -1,5 +1,20 @@
 # Standing resting orders (GTC post-only makers)
 
+**Sep-30 22:00 check / DEC-0182 — CANCELLED UNFILLED:** Swift BUY 10 NO @ .56,
+order `0x265e1bb0b25c12d72a89167d88c6df3305de2f1e7260884de63abd5bf596a454`,
+was removed through the vetted cancellation CLI at 22:03:37 UTC. Terminal
+CANCELED status showed zero matched shares. At 22:09:13, after 333.9 seconds
+of cancellation grace, exhaustive authenticated trades and indexed totalBought
+also showed zero; Polygon block 94,734,009 confirmed zero NO shares and
+unchanged pUSD $33.762410. Vetted reconciliation retired the full $5.60
+reservation. No fills, trade fees or trading P&L; the album forecast remains
+unresolved and ungraded. No renewed order or price chase.
+
+Complete authenticated inventory now contains only Trump-out **SELL 28 NO
+@ .97**, LIVE, zero matched, order
+`0xa28cb275d1bbf7cf652c7a29460a5c14c10c3abbe58b149929843865ecd623c1`.
+All $33.762410 pUSD is uncommitted. Entries below are dated history.
+
 **Sep-30 21:08 reactive full-check revalidation:** complete authenticated
 inventory still has exactly Swift BUY 10 NO @ .56 and Trump-out SELL 28 NO
 @ .97, both LIVE and zero matched. Independent Polygon read at block

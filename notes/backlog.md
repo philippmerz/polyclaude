@@ -1,5 +1,23 @@
 # Polyclaude Backlog
 
+## Sep-30 22:00 periodic update — Swift order lifecycle complete
+
+- Cancelled the unfilled Swift 10-NO maker bid at .56 using the vetted CLI.
+  Authoritative cancellation was verified at 22:03:37 UTC; the five-minute
+  reservation reconciliation completed at 22:09:13 UTC. Terminal matches,
+  exhaustive authenticated trade matches, indexed buys and on-chain shares
+  are all zero. No trade fees or trading P&L; no renewal or price chase.
+- The $5.60 reservation is retired, leaving all $33.762410 pUSD uncommitted.
+  Six held legs remain unchanged; the sole live order is Trump-out SELL 28
+  NO @ .97, still zero-filled. DEC-0182 records an unfilled operational
+  closure, not a resolved forecast or earned conditional EV.
+- Bankroll at 22:05 is $165.68; PM midpoint/depth $77.41/$70.28. Approximate
+  whole-account depth is $158.54 including $6.97 separately contributed gas.
+  HLE still has the identical 60-row source; no new watchlist hit or news.
+- No other immediate backlog action is due. Four daemons are running;
+  disk has 573 MiB free, above the 512 MiB warning. UNI proposal 102 review
+  remains due after block 26,109,012 (estimated Oct. 3).
+
 ## Sep-30 21:08 opportunity-triggered full check
 
 - Revalidated the Gemini debut >=45 YES / >=50 NO threshold candidate using
@@ -23,11 +41,11 @@
 
 ## Sep-30 active research update — DEC-0182
 
-- **22:00 existing periodic check: CANCEL the unfilled Swift maker remainder.**
+- **COMPLETED at the 22:00 periodic check: cancelled the Swift maker remainder.**
   Order `0x265e1bb0b25c12d72a89167d88c6df3305de2f1e7260884de63abd5bf596a454`
-  is BUY 10 NO @ .56, max $5.60, accepted with zero fill. Verify authoritative
-  removal, current on-chain shares and cash, and reconcile the entry reservation
-  for any cancellation race. No automatic renewal or price chase.
+  was BUY 10 NO @ .56, max $5.60, accepted with zero fill. Authoritative
+  removal, on-chain shares/cash and the entry reservation are reconciled;
+  the completed verification is recorded above. No renewal or price chase.
 - Source thesis: Sep-25 Encore is 4 new tracks of 16 and fails the explicit
   >=50%-new album rule, verified with Spotify and UMG. Root pNO .70/.60
   stress; Astra .72/.62. Surprise original or standalone vault albums can

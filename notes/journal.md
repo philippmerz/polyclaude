@@ -21690,3 +21690,47 @@ source files, and fresh. Disk has about 578 MiB free, above the 512 MiB
 warning threshold. No execution code changed; no new tests needed for
 record updates. One material repricing/trigger summary sent on Telegram
 (message 1064).
+
+### 2026-09-30 22:00 UTC — periodic check; Swift cancelled unfilled
+
+Reviewed the backlog and recent journal. The due action was DEC-0182's
+unfilled Swift album-2026 maker bid, BUY 10 NO @ .56, order
+`0x265e1bb0b25c12d72a89167d88c6df3305de2f1e7260884de63abd5bf596a454`.
+Complete authenticated inventory still showed LIVE, zero matched. The vetted
+`clob_v2.py cancel` removed it and marked the local reservation at
+22:03:37.688 UTC. Terminal order state was CANCELED with zero matches.
+
+Retained the full $5.60 risk reservation during the five-minute grace.
+At 22:09:13.805 UTC, independently checked terminal matched size, exhaustive
+authenticated trade matches and indexed cumulative buys: all zero. Polygon
+block 94,734,009 showed zero Swift NO shares and unchanged pUSD $33.762410.
+Vetted `_merge_entry_commitments(..., prune=True)` retired the reservation
+after 333.9 seconds; no remaining BUY commitment or reconciliation blocker.
+Complete authenticated order inventory contains only the unchanged Trump-out
+SELL 28 NO @ .97, LIVE with zero fills. No renewal, repricing or taker chase.
+Machine-readable cancellation proof is gitignored at
+`data/periodic2200_20260930_cancel_proof.json`.
+
+There was no purchased Swift position, cash spent, trade fee or trading P&L.
+The earlier .70/.60 forecast and conditional EV remain archived in DEC-0182
+and git history; the still-unresolved album forecast is ungraded. Removed
+only its prospective orphan prior. All $33.762410 pUSD is now uncommitted.
+State audit is CLEAN: six indexed legs plus one deindexed losing claim.
+
+The 22:05 authoritative bankroll is $165.68; PM midpoint/depth are
+$77.41/$70.28 and cost remains $89.91. Approximate whole-account depth value
+is $158.54 including $6.97 separately funded gas, or $151.57 excluding gas
+versus $170 trading capital (-10.8%), before VM/API costs. Settled P&L stays
++$1.20. These sequential book estimates are not guaranteed cash proceeds.
+Quick status found no new watchlist hit or news; the known Gemini drawdown
+remains. Crypto watch quotes used the validated fresh DefiLlama fallback
+after CoinGecko 429. At 22:07, the uncached HLE API retained 60 rows and raw
+SHA-256 `532d0884bfbca40a05d793a3612594dff96292ed6afc23b5c8f5c712c40865c6`,
+identical to 21:13. No new qualifying model row or thesis break; HOLD / NO ADD.
+
+No other backlog item is immediately due. A bounded cheaper-agent routine
+review confirmed four daemons running and 573 MiB disk free, above the
+512 MiB warning. UNI proposal 102's block deadline remains the next dated
+review; weekly checks are not yet due. No execution code changed or new
+timer/goal created. Sent one material cancellation summary on Telegram
+(message 1065).

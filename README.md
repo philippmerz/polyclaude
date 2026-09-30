@@ -35,51 +35,51 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-30 21:12 UTC
+## Last audited snapshot — 2026-09-30 22:05 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 6 |
 | Position cost | $89.91 |
-| Polymarket midpoint | $72.80 |
-| Indicative depth/fee value | $67.60 |
-| Authoritative whole-account mark | $161.09 |
+| Polymarket midpoint | $77.41 |
+| Indicative depth/fee value | $70.28 |
+| Authoritative whole-account mark | $165.68 |
 | Cumulative realized P&L | +$1.20 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
 $29.00 payout floor; manage it only as a complete position. Its complete
-exit at the late-run rewalk is about $28.25. The fresh lobbying article
+exit at the earlier 21:12 rewalk was about $28.25. The fresh lobbying article
 supplies no qualifying final-passage vote, and both contracts retain their
 exact criteria.
 
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
 Gemini >=50 and OpenAI >=55. The latest 60-row source matches the evening
 research snapshot, with no qualifying new Pro row. Gemini's highest is 46.2
-and OpenAI's 53.6, below the 50/55 bars. OpenAI's current fee-net exit is
-about $3.31 versus $4.75
+and OpenAI's 53.6, below the 50/55 bars. OpenAI's fee-net exit at the earlier
+21:12 rewalk was about $3.31 versus $4.75
 central and $2.85 pessimistic terminal value. No qualifying resolving update
 was found. The correlated HLE positions remain **HOLD / NO ADD**; a joint
 adverse source update can cause terminal losses. The Gemini debut 45/50
 threshold alert was revalidated, but its signed fee-inclusive pair cost
 moved to $1.12918 before execution, above its $1 payout floor. No new pair.
 
-DEC-0182 placed a post-only maker bid for **10 Swift album-2026 NO at 0.56**,
-maximum **$5.60**. The order is LIVE with **zero fills**; it is additional
-pending exposure, not a seventh held leg. Central p(NO) is .70, stressed to
-.60; a qualifying surprise album remains a real loss case. Cancel any
-unfilled remainder at the existing **22:00 UTC check**, or sooner on changed
-release information, and verify any cancellation race. No automatic renewal.
-The other live order is the zero-fill maker sell for **28 Trump-out NO at
-0.97**. pUSD is **$33.762410**, with **$5.60 reserved** and **$28.162410
-uncommitted**. See [`notes/resting_orders.md`](notes/resting_orders.md) and
+DEC-0182's post-only bid for **10 Swift album-2026 NO at 0.56** was
+**cancelled unfilled** during the 22:00 check. Reconciliation completed at
+22:09 UTC: terminal order state, exhaustive trade history, indexed buys and
+on-chain balance all confirm zero fills. The $5.60 reservation is retired;
+no trade fees or trading profit were incurred, and the unresolved album
+forecast remains ungraded. No renewal or price chase. The sole live order is
+the zero-fill maker sell for **28 Trump-out NO at 0.97**. All **$33.762410
+pUSD is uncommitted**; there are still six held legs.
+See [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md) for identity and source evidence.
 
 Another **$35.00 native aUSDC** earns the Polygon Aave rate; existing legacy
 aUSDC.e is about $3.50. The midpoint-to-depth gap in the timestamped
-snapshot is $5.20; approximate whole-account depth-realizable value is
-$155.89. This includes $6.99 of separately funded
-gas; excluding it gives about $148.90 versus $170 trading capital (-12.4%),
+snapshot is $7.14; approximate whole-account depth-realizable value is
+$158.54. This includes $6.97 of separately funded
+gas; excluding it gives about $151.57 versus $170 trading capital (-10.8%),
 before VM/API operating costs. The Sep. 30 Arena cutoff has passed: the exact
 source still shows Anthropic first and market 3008499 is now UMA proposed.
 The expired OpenAI entry watch is retired; proposal is not final settlement.

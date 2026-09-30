@@ -3648,9 +3648,10 @@
         "criteria-maker"
       ],
       "slug": "will-taylor-swift-release-an-album-in-2026",
-      "outcome": null,
+      "outcome": "Maker order cancelled unfilled at 2026-09-30 22:03:37 UTC; five-minute vetted reconciliation completed 22:09:13 UTC. Terminal size matched, exhaustive authenticated trade matches, indexed totalBought and Polygon balance all zero. No shares bought, no cash spent, no trade fees and no realized trading P&L from this attempt. $5.60 reservation retired; $33.762410 pUSD uncommitted. Order lifecycle is complete; the still-unresolved album forecast is not graded and its conditional EV is not earned profit.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "Maker value requires an actual fill. A positive conditional entry EV does not justify counting an unfilled bid as deployment or profit. Cancel the unfilled remainder at the recorded deadline without automatic renewal or chasing; retain the full reservation until terminal order state, exhaustive trade history and cumulative buys agree after the grace period.",
+      "resolved_at": "2026-09-30T22:10:01Z"
     }
   ]
 }
