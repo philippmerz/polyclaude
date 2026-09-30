@@ -35,28 +35,28 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-30 14:14 UTC
+## Last audited snapshot — 2026-09-30 16:37 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 6 |
 | Position cost | $89.91 |
-| Polymarket midpoint | $77.25 |
-| Indicative depth/fee value | $70.59 |
-| Authoritative whole-account mark | $165.75 |
+| Polymarket midpoint | $78.35 |
+| Indicative depth/fee value | $70.24 |
+| Authoritative whole-account mark | $166.69 |
 | Cumulative realized P&L | +$1.20 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor; manage it only as a complete position. Its current
-complete exit is about $28.53. The MetaMask group was fully exited on Sep. 28
-after the precommitted $46.10 fee-net switch was crossed: three FOK fills
+$29.00 payout floor; manage it only as a complete position. Its complete
+exit at the 14:00 review was about $28.53. The MetaMask group was fully exited
+on Sep. 28 after the precommitted $46.10 fee-net switch was crossed: three FOK fills
 raised pUSD by **$46.153480**, with only sub-precision dust left.
 
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
 Gemini >=50 and OpenAI >=55. The exact 60-row source and its hash remain
-unchanged, with Gemini below 50 and OpenAI below 55. Their current fee-net
-exits total about $15.04 versus $50.52 of central terminal value. OpenAI's
+unchanged, with Gemini below 50 and OpenAI below 55. At the 14:00 review their
+fee-net exits totaled about $15.04 versus $50.52 of central terminal value. OpenAI's
 $4.42 exit is close to its $4.75 central value, but the source is unchanged,
 the latest large execution bought NO, and its .24 bid remains below .25 fair;
 the hidden-information and cluster review therefore still favors hold without
@@ -66,9 +66,12 @@ only live order is a zero-fill maker
 sell for **28 Trump-out NO at 0.97**. Deployable pUSD is **$33.762410**.
 Another **$35.0007 native aUSDC** earns the live Polygon Aave rate after the
 legacy USDC.e reserve froze new supply; existing legacy aUSDC.e is about $3.5013.
-The midpoint-to-depth gap is $6.66; approximate whole-account
-depth-realizable value is $159.09. The next active portfolio catalyst is the
-exact Arena Text Overall source snapshot at 16:00 UTC on Sep. 30.
+The midpoint-to-depth gap is $8.11; approximate whole-account
+depth-realizable value is $158.58. This includes $7.04 of separately funded
+gas; excluding it gives about $151.54 versus $170 trading capital (-10.9%),
+before VM/API operating costs. The Sep. 30 Arena cutoff has passed: the exact
+source still shows Anthropic first and market 3008499 is now UMA proposed.
+The expired OpenAI entry watch is retired; proposal is not final settlement.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

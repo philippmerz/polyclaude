@@ -21283,3 +21283,37 @@ the Sep. 27 world-state review remain current. The exact Arena Text Overall
 observation is due at 16:00 UTC; there is no pre-snapshot entry. No asset,
 order, probability prior
 or durable strategy changed, so no Telegram summary was sent.
+
+## 2026-09-30 16:37 UTC — operator update; expired Arena entry watch retired
+
+Fresh full status and authoritative bankroll reads show six unchanged held
+legs at $89.91 cost, $78.35 midpoint and $70.24 indicative fee-net depth.
+Marked whole-account bankroll is $166.69; substituting the current sequential
+depth estimate gives about $158.58, including $7.04 separately funded gas.
+Excluding that gas gives about $151.54 versus $170 trading capital (-10.9%),
+before VM/API operating costs. These are planning estimates, not settled
+cash or guaranteed executable proceeds; cumulative settled P&L remains +$1.20.
+The sole authenticated order remains the zero-fill 28-NO Trump-out sell at
+.97. Carry, watchlist, held UMA and Brownian-bridge checks found no new action.
+
+A direct browser-shaped read of the official HLE model API is HTTP 200 with
+60 rows and unchanged SHA-256
+`86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`.
+Gemini 3.1 Pro remains 45.9, Gemini 3.8 Flash 46.2 and GPT-6 Astra 53.6.
+The status display's UPDATING label compares against July 3, not this tick.
+HOLD / NO ADD; no transaction, order or prior change.
+
+The exact Arena market 3008499
+(`will-openai-have-the-best-ai-model-at-the-end-of-september-2026-20260717143137058`,
+condition `0xbce02d9a6a2d4f0f9c61f636dab64ba93b60ce16a09dc34f6f82b2e1243142e0`)
+has passed its written Sep. 30 12:00 ET / 16:00 UTC observation clock.
+The exact [resolving source](https://arena.ai/leaderboard/text/overall-no-style-control),
+Models with Adjustments None, still displays Sep. 25 data: Anthropic's
+claude-opus-5.5-high is first at 1518 and OpenAI's best is gpt-5.5-high at
+rank 26. [Live Gamma](https://gamma-api.polymarket.com/markets/3008499)
+reports UMA proposed, active/unclosed and accepting orders, with YES/NO
+midpoints .0005/.9995. The UMA entry gate therefore bars a new position
+even though the venue still accepts orders. This post-cutoff observation is
+not an independently archived exact-16:00 snapshot or final settlement proof.
+Retired the expired OpenAI entry watch from the backlog; no entry was made.
+No additional reminder or idle follow-up was scheduled.
