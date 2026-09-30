@@ -1,5 +1,26 @@
 # Polyclaude Backlog
 
+## Sep-30 21:08 opportunity-triggered full check
+
+- Revalidated the Gemini debut >=45 YES / >=50 NO threshold candidate using
+  exact live criteria and both books. Ten shares failed touch depth; the
+  nine-share preflight then cost $1.12918 per pair, above its $1 floor. SKIP;
+  no orders sent and no new group or directional exposure.
+- Six held legs, both zero-fill resting orders and probability priors remain
+  unchanged. Swift's existing **22:00 UTC cancellation deadline remains in
+  force** after this early reactive check; no renewal or chase. Authenticated
+  inventory and on-chain zero Swift shares/cash were checked again.
+- The 21:12 bankroll is $161.09; PM midpoint/depth $72.80/$67.60. Approximate
+  whole-account depth is $155.89 including $6.99 separately contributed gas.
+  HLE source still has the same 60 rows; adverse Gemini YES flow was reviewed,
+  with no qualifying new model score. HOLD / NO ADD remains model-sensitive.
+- All discovery batches were reviewed. Bonneville adult Chinook already
+  exceeds its count threshold, but stale books and a few-cent maximum gain
+  cannot support robust entry after revision/outage risk. Consistency coverage
+  remains explicitly incomplete; no positive in its checked slice.
+- State audit, coverage, UMA, watchlist, decisions and Ostium checks passed;
+  no winning redemption. All four daemons exact-one/current; disk 578 MiB free.
+
 ## Sep-30 active research update — DEC-0182
 
 - **22:00 existing periodic check: CANCEL the unfilled Swift maker remainder.**

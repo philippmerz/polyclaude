@@ -21563,3 +21563,130 @@ exactly Swift BUY 10 NO @ .56 and Trump-out SELL 28 NO @ .97, both LIVE
 with zero matched shares. $5.60 remains reserved; pUSD is $33.762410 and
 uncommitted pUSD $28.162410. The existing news daemon remains exact-one
 and fresh after restart; all follow-up is recorded for the existing check.
+
+## 2026-09-30 21:08 UTC — opportunity-triggered full check, no asset action
+
+Read the opportunity-alert tail first. The 21:08:47 observation identified
+the next Google Gemini Pro debut >=50 / >=45 ladder; independently fetched
+event 770183 and both exact active child identities, literal Gamma criteria,
+CLOB token/route metadata, structured fees and individually validated books.
+Both descriptions are identical and select the same first qualifying newly
+added Pro row, next-day noon-ET score, same-day highest-score selection,
+source-outage fallback and Dec-31 cutoff. >=45 YES plus >=50 NO therefore
+has a criteria-consistent $1 floor per equal pair, including no qualifying
+model. This validates the logical relationship, not the earlier quote.
+
+At the initial independent rewalk, >=50 NO was .29 for nine shares, and
+>=45 YES .64 for 23.52 shares. With the .04 quadratic taker schedule the
+touch pair cost was .947452. The vetted ten-share dry-run rejected inadequate
+depth at .29; the subsequent nine-share preflight returned signed all-in
+cost **1.129180**, above both the .96 ceiling and $1 floor. A final fresh
+book check found NO ask .47 and YES ask .64. **SKIP — no signed or submitted
+order, no new topology, and no new HLE directional exposure.** The alert
+was a transient observation. No price ceiling or gate was loosened to chase it.
+
+Relevant immutable identities: >=50 market 3212721, condition
+0x8fca3783aac880990b3c11ffe941e81b1417140429e63dfede4e8b0f6deae839,
+NO 21014004920695702081779080912909857729559256777131980640576807358125684494606;
+>=45 market 3212720, condition
+0x8c167bd5ed8c173517f1266a460a1d27f4e94b428c1e4998aaecf87b3929951f,
+YES 14468150072305860151439241177850686113656123773934349453504221456985624518313.
+
+The authoritative 21:12:13 bankroll is **$161.09**, down $5.71 from the
+20:32 mark through quote changes. Six unresolved legs retain $89.91 cost,
+$72.80 midpoint and $67.60 indicative fee-net depth. Approximate whole-account
+depth is $155.89 including $6.99 separately funded gas, or $148.90 excluding
+gas (-12.4% versus $170 before VM/API costs). Realized settled P&L remains
++$1.20. Sequential marks and depth walks are planning estimates.
+
+Held HLE price alerts were re-underwritten: Google highest >=50 YES moved
+to .976 and OpenAI >=55 YES to .815. Complete recent public tape since
+20:00 shows one 1,031.37-share Gemini-highest YES purchase for $975.69
+at .94601, while the debut contract had 217.54 YES sold at .93023; OpenAI
+had no fresh executed trade. This is meaningful directional flow, with mixed
+directions across contracts, rather than an observed resolving-model fact.
+The uncached live [chart API](https://dashboard.safe.ai/api/models) still has
+60 rows and SHA-256
+532d0884bfbca40a05d793a3612594dff96292ed6afc23b5c8f5c712c40865c6,
+matching the late evening research response. Gemini 3.1 Pro remains 45.9,
+3.8 Flash 46.2 and GPT-6 Astra 53.6. No qualifying newer Pro or >=50/55
+score was found. The [Google changelog](https://ai.google.dev/gemini-api/docs/changelog)
+latest release is Sep-22 Flash TTS, not a new qualifying Pro. The full
+status UPDATING label compares with July 3; it does not establish a new
+resolving fact in this tick. Priors remain .15/.20/.25; HOLD / NO ADD.
+
+Vetted fee-net full exits are about $7.82/$1.30/$3.31 versus central terminal
+values $25.35/$20.42/$4.75. At stressed .06/.08/.15, the values are
+$10.14/$8.17/$2.85; OpenAI alone favors exit at the stress prior and remains
+model-sensitive. Kelly rerun at the refreshed $161.09 bankroll advises
+reducing the existing debut stake by about $11.95, using midpoint/rho
+heuristics. There is no new fact establishing an
+information-safe premium maker sell or an arithmetic-central taker advantage.
+For an explicit correlated scenario, couple the three Bernoulli outcomes
+maximally: central states pay $290.0847/$121.0847/$19/$0 with probabilities
+.15/.05/.05/.75; stress states use .06/.02/.07/.85. Stressed terminal EV is
+$21.16 versus $12.53 from full exits plus 92.1-day Aave carry. Holding the
+$144.05 non-HLE marked sleeve fixed, the stress expected-log advantage is
+only .00366; the central case is .11877. These are conditional judgment
+scenarios, not fitted joint probabilities; an adverse common source update
+can make all three legs pay zero. They support no add and leave model risk
+explicit, without treating a HOLD screen as expected price recovery.
+
+The Clarity complete exit remains $28.25 versus its $29 floor. The official
+[Senate record](https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00234.htm)
+still describes Sep-15 Roll Call 234 as rejected cloture on the motion to
+proceed, excluded by the contracts. No post-journal material news alert
+arrived. The fresh White House [briefing index](https://www.whitehouse.gov/briefings-statements/)
+and Sep-30 S.2398 signing notice establish current presidential duties,
+with no qualifying Trump departure observation. Existing Trump-out .97
+maker sell remains live, zero-filled.
+
+Swift's exact Gamma/CLOB criteria hashes remain
+850831bf683bdd3cedeea3c7b8b6af6a22c8659abb60fef327ef7260281665dc,
+active and UMA-unproposed. The [official UMG feed](https://www.universal-music.co.jp/taylor-swift/feed/)
+latest article is the Sep-28 Patient Zero music-video/VMA notice; no newer
+qualifying album announcement appeared there. The direct Spotify probe did
+not return its expected NEXT_DATA structure, so it supplied no fresh catalog
+confirmation and was not interpreted as a product change. Complete final
+authenticated inventory retains two orders, Swift BUY 10 NO @ .56 and
+Trump-out SELL 28 NO @ .97, both zero matched. Polygon block 94,732,125
+confirms Swift NO zero and pUSD $33.762410; $5.60 remains reserved and
+$28.162410 uncommitted. This early reactive review retains the explicit
+**22:00 UTC pull-unfilled deadline**, with no renewal or chase. Clarified
+the prior's operating wording to that exact existing deadline; no probability
+estimate changed and no new timer was created.
+
+Delegated bounded discovery completed 991 primary rows / 80 shortlisted and
+44,316 event-expanded thin-tail rows / 1,343 shortlisted. Every one of four
+primary and 45 thin-tail context batches, plus all 6/546 unbatched snapshot
+rows, was reviewed. Source/prior/delta integrity verified, no truncated
+triggers; family routing remains unproved and execution_ready=false. Sports
+reviewed 16 candidates, no consensus delta over 3pp; macro five markets;
+favorite fade ten display rows does not establish instance EV. Monotonicity
+covered 1,384 events with this one provisional. Consistency covered a
+volume-ranked slice of 5,003 markets and quoted 14/203 structural groups:
+seven valid, seven failed, 189 unquoted. No positive in that slice; it is
+explicitly **incomplete**, with empty/depth/stale-book failures preserved.
+
+One new measurable-source lead was vetted: Bonneville >550,000 adult Chinook,
+market 4599362. Its [exact Jan-1/Oct-31 DART query](https://www.cbr.washington.edu/dart/cs/php/rpt/adult_annual.php?outputFormat=html&proj=BON&startdate=1/1&enddate=10/31)
+reports 562,443 through Sep-29, and independently summed daily Chin counts
+reconcile, excluding Jack Chinook. The threshold crossed Sep-25. Despite
+this genuine source fact, the book's 21:02 timestamp fails 120-second
+freshness; indicative six-share entry at .99/.998 costs $5.950575 for only
+$.049425 maximum settlement gain. Revision and permanent-source-outage
+risk through Nov-17 cannot be bounded tightly enough for robust entry.
+**SKIP**, no order or unsupported near-certainty prior. Raw evidence and
+complete scan outputs are gitignored under
+logs/tick_20260930T210848_discovery/.
+
+Wallet, crypto and Ostium state checked; Ostium has zero trades/limits and
+no count change. Coverage and state audit clean (six indexed plus one
+deindexed losing claim), no watchlist hit or overdue decision. Redemption
+dry-run finds no winning claim; three losing/uncertain rows skipped, no
+broadcast. Weekly P&L Sep-25 and world-state Sep-27 are not yet overdue.
+All four daemons are exact-one, absolute-path processes newer than their
+source files, and fresh. Disk has about 578 MiB free, above the 512 MiB
+warning threshold. No execution code changed; no new tests needed for
+record updates. One material repricing/trigger summary sent on Telegram
+(message 1064).

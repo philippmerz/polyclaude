@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-30 20:32 UTC
+## Last audited snapshot — 2026-09-30 21:12 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 6 |
 | Position cost | $89.91 |
-| Polymarket midpoint | $78.50 |
-| Indicative depth/fee value | $72.97 |
-| Authoritative whole-account mark | $166.80 |
+| Polymarket midpoint | $72.80 |
+| Indicative depth/fee value | $67.60 |
+| Authoritative whole-account mark | $161.09 |
 | Cumulative realized P&L | +$1.20 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -54,12 +54,15 @@ supplies no qualifying final-passage vote, and both contracts retain their
 exact criteria.
 
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
-Gemini >=50 and OpenAI >=55. The latest 60-row source has changed raw bytes,
-but the relevant 2026 model scores and release identities remain below the
-held thresholds. OpenAI's late-run fee-net exit was about $3.31 versus $4.75
+Gemini >=50 and OpenAI >=55. The latest 60-row source matches the evening
+research snapshot, with no qualifying new Pro row. Gemini's highest is 46.2
+and OpenAI's 53.6, below the 50/55 bars. OpenAI's current fee-net exit is
+about $3.31 versus $4.75
 central and $2.85 pessimistic terminal value. No qualifying resolving update
 was found. The correlated HLE positions remain **HOLD / NO ADD**; a joint
-adverse source update can cause terminal losses.
+adverse source update can cause terminal losses. The Gemini debut 45/50
+threshold alert was revalidated, but its signed fee-inclusive pair cost
+moved to $1.12918 before execution, above its $1 payout floor. No new pair.
 
 DEC-0182 placed a post-only maker bid for **10 Swift album-2026 NO at 0.56**,
 maximum **$5.60**. The order is LIVE with **zero fills**; it is additional
@@ -74,9 +77,9 @@ uncommitted**. See [`notes/resting_orders.md`](notes/resting_orders.md) and
 
 Another **$35.00 native aUSDC** earns the Polygon Aave rate; existing legacy
 aUSDC.e is about $3.50. The midpoint-to-depth gap in the timestamped
-snapshot is $5.53; approximate whole-account depth-realizable value is
-$161.27. This includes $7.00 of separately funded
-gas; excluding it gives about $154.27 versus $170 trading capital (-9.3%),
+snapshot is $5.20; approximate whole-account depth-realizable value is
+$155.89. This includes $6.99 of separately funded
+gas; excluding it gives about $148.90 versus $170 trading capital (-12.4%),
 before VM/API operating costs. The Sep. 30 Arena cutoff has passed: the exact
 source still shows Anthropic first and market 3008499 is now UMA proposed.
 The expired OpenAI entry watch is retired; proposal is not final settlement.

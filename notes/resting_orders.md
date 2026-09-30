@@ -1,5 +1,15 @@
 # Standing resting orders (GTC post-only makers)
 
+**Sep-30 21:08 reactive full-check revalidation:** complete authenticated
+inventory still has exactly Swift BUY 10 NO @ .56 and Trump-out SELL 28 NO
+@ .97, both LIVE and zero matched. Independent Polygon read at block
+94,732,125 confirms Swift NO balance zero and unchanged pUSD $33.762410.
+The early opportunity-triggered check retains the explicit **22:00 UTC
+unfilled-remainder cancellation deadline** below; it does not extend it.
+UMG's live feed has no newer album announcement beyond the known Encore
+release, criteria identities remain unchanged, and the pending-order watcher
+is exact-one/current. No automatic renewal or taker chase.
+
 **Sep-30 20:13 UTC / DEC-0182:** submitted and independently verified LIVE
 Swift album-2026 **BUY 10 NO @ .56**, post-only GTC, maximum **$5.60** cash,
 order `0x265e1bb0b25c12d72a89167d88c6df3305de2f1e7260884de63abd5bf596a454`.
