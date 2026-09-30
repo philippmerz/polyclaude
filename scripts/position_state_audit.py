@@ -436,6 +436,62 @@ def short_dated_prior_issues(
     return issues
 
 
+def orphan_prior_issues(priors: dict, tracked_slugs: set[str],
+                        inactive_preconfigured_slugs: set[str]) -> list[str]:
+    """Recognize exact pending BUY identity without inventing a held position."""
+    candidates = []
+    for key, prior in priors.items():
+        if key.startswith("_") or key in inactive_preconfigured_slugs:
+            continue
+        if any(key in slug or slug in key for slug in tracked_slugs):
+            continue
+        note = prior.get("note", "") if isinstance(prior, dict) else ""
+        if "closed" not in note.lower() and "re-entry" not in note.lower():
+            candidates.append((key, prior))
+    if not candidates:
+        return []
+
+    issues = []
+    pending_keys = set()
+    try:
+        # This reader validates pagination, remaining BUY risk and Gamma identity.
+        # Do not use reservation reconciliation: this audit must remain read-only.
+        from polyclaude_enter import _fetch_open_buy_commitments
+
+        rows = _fetch_open_buy_commitments()
+        if not isinstance(rows, list):
+            raise RuntimeError("unexpected pending inventory shape")
+        for row in rows:
+            side = str(row.get("side") or "BUY").upper()
+            if side == "SELL":
+                continue
+            if side != "BUY":
+                raise RuntimeError("unknown pending order side")
+            slug = str(row.get("slug") or "")
+            condition = str(row.get("conditionId") or "").lower()
+            asset = str(row.get("asset") or "")
+            remaining = float(row["remainingShares"])
+            if (not slug or not condition.startswith("0x") or not asset
+                    or not row.get("orderId") or not math.isfinite(remaining)
+                    or remaining <= 0):
+                raise RuntimeError("incomplete pending BUY identity/quantity")
+            pending_keys.add((slug, condition, asset))
+    except Exception:
+        pending_keys.clear()
+        issues.append("AUDIT DEGRADED — pending BUY inventory unavailable; "
+                      "orphan priors remain unresolved")
+
+    for key, prior in candidates:
+        identity = (
+            key,
+            str(prior.get("condition_id") or "").lower() if isinstance(prior, dict) else "",
+            str(prior.get("asset") or "") if isinstance(prior, dict) else "",
+        )
+        if identity not in pending_keys:
+            issues.append(f"PRIOR orphan (no live position, no closure note): {key[:52]}")
+    return issues
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--fix", action="store_true",
@@ -566,15 +622,8 @@ def main() -> int:
         if group.get("status") == "INACTIVE"
         for slug in group.get("slugs", [])
     }
-    for k, v in priors_raw.items():
-        if k.startswith("_"):
-            continue
-        if k in inactive_preconfigured_slugs:
-            continue
-        if not any(k in s or s in k for s in tracked_slugs):
-            note = (v.get("note", "") if isinstance(v, dict) else "")
-            if "closed" not in note.lower() and "re-entry" not in note.lower():
-                issues.append(f"PRIOR orphan (no live position, no closure note): {k[:52]}")
+    issues.extend(orphan_prior_issues(priors_raw, tracked_slugs,
+                                     inactive_preconfigured_slugs))
 
     # 3b. SHORT-DATED PRIOR rotation. The 2026-08-12 backlog gate fired when
     # Lake America, the Iran-Oman agreement, and the Duma set simultaneously

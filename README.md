@@ -35,39 +35,48 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-30 18:01 UTC
+## Last audited snapshot — 2026-09-30 20:32 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 6 |
 | Position cost | $89.91 |
-| Polymarket midpoint | $77.97 |
-| Indicative depth/fee value | $70.77 |
-| Authoritative whole-account mark | $166.28 |
+| Polymarket midpoint | $78.50 |
+| Indicative depth/fee value | $72.97 |
+| Authoritative whole-account mark | $166.80 |
 | Cumulative realized P&L | +$1.20 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
 $29.00 payout floor; manage it only as a complete position. Its complete
-exit is about $28.53. The fresh lobbying article supplies no qualifying
-final-passage vote, and both contracts retain their exact criteria.
+exit at the late-run rewalk is about $28.25. The fresh lobbying article
+supplies no qualifying final-passage vote, and both contracts retain their
+exact criteria.
 
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
-Gemini >=50 and OpenAI >=55. The exact 60-row source and its hash remain
-unchanged, with Gemini below 50 and OpenAI below 55. OpenAI's independently
-revalidated fee-net exit at 18:07 was $4.61 versus $4.75 central and $2.85
-pessimistic terminal value. The source/criteria review and transient quote
-crossover do not establish a robust exit or a change in the probability prior.
-The correlated HLE positions remain **HOLD / NO ADD**; a joint adverse source
-update can cause terminal losses. Every other direct and protected-group
-screen is also a hold. The
-only live order is a zero-fill maker
-sell for **28 Trump-out NO at 0.97**. Deployable pUSD is **$33.762410**.
+Gemini >=50 and OpenAI >=55. The latest 60-row source has changed raw bytes,
+but the relevant 2026 model scores and release identities remain below the
+held thresholds. OpenAI's late-run fee-net exit was about $3.31 versus $4.75
+central and $2.85 pessimistic terminal value. No qualifying resolving update
+was found. The correlated HLE positions remain **HOLD / NO ADD**; a joint
+adverse source update can cause terminal losses.
+
+DEC-0182 placed a post-only maker bid for **10 Swift album-2026 NO at 0.56**,
+maximum **$5.60**. The order is LIVE with **zero fills**; it is additional
+pending exposure, not a seventh held leg. Central p(NO) is .70, stressed to
+.60; a qualifying surprise album remains a real loss case. Cancel any
+unfilled remainder at the existing **22:00 UTC check**, or sooner on changed
+release information, and verify any cancellation race. No automatic renewal.
+The other live order is the zero-fill maker sell for **28 Trump-out NO at
+0.97**. pUSD is **$33.762410**, with **$5.60 reserved** and **$28.162410
+uncommitted**. See [`notes/resting_orders.md`](notes/resting_orders.md) and
+[`notes/journal.md`](notes/journal.md) for identity and source evidence.
+
 Another **$35.00 native aUSDC** earns the Polygon Aave rate; existing legacy
 aUSDC.e is about $3.50. The midpoint-to-depth gap in the timestamped
-snapshot is $7.20; approximate whole-account depth-realizable value is
-$159.08. This includes $7.02 of separately funded
-gas; excluding it gives about $152.06 versus $170 trading capital (-10.6%),
+snapshot is $5.53; approximate whole-account depth-realizable value is
+$161.27. This includes $7.00 of separately funded
+gas; excluding it gives about $154.27 versus $170 trading capital (-9.3%),
 before VM/API operating costs. The Sep. 30 Arena cutoff has passed: the exact
 source still shows Anthropic first and market 3008499 is now UMA proposed.
 The expired OpenAI entry watch is retired; proposal is not final settlement.
@@ -114,6 +123,8 @@ when both condition ID and token ID exactly match the position snapshot. Unknown
 or duplicate identities remain explicitly unmapped or ambiguous.
 
 Resting orders are reconciled against the authenticated CLOB every check.
+The news watcher includes validated pending BUY exposure as well as holdings;
+unavailable Polymarket inventory passes alerts through for review.
 Ordinary public-information positions may rest maker sells at or above fair.
 Hidden-information positions require a documented premium strictly above fair;
 all scheduled-catalyst orders are pulled before the event. See

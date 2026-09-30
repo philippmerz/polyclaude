@@ -1,5 +1,32 @@
 # Polyclaude Backlog
 
+## Sep-30 active research update — DEC-0182
+
+- **22:00 existing periodic check: CANCEL the unfilled Swift maker remainder.**
+  Order `0x265e1bb0b25c12d72a89167d88c6df3305de2f1e7260884de63abd5bf596a454`
+  is BUY 10 NO @ .56, max $5.60, accepted with zero fill. Verify authoritative
+  removal, current on-chain shares and cash, and reconcile the entry reservation
+  for any cancellation race. No automatic renewal or price chase.
+- Source thesis: Sep-25 Encore is 4 new tracks of 16 and fails the explicit
+  >=50%-new album rule, verified with Spotify and UMG. Root pNO .70/.60
+  stress; Astra .72/.62. Surprise original or standalone vault albums can
+  still defeat the trade. Cancel first on new release information; Oct-24
+  debut anniversary and Dec-13 birthday warrant source review if shares fill.
+- Expanded crypto, lending and tokenized equity research found the Swift
+  maker opportunity but no better independently supported non-PM deployment.
+  Polygon Morpho WBTC lending is an actual permissionless route, but its
+  carry premium follows concentrated withdrawals and a completed curator
+  wind-down. LNGx is issued; checked ETH/Arb routes lack liquidity. Small
+  ETH SPYx round trips cost about 7.6%-10.7% including quoted swap gas.
+  Evidence is in the journal and long-term watchlist; no cash migrated.
+- Pending-buy news context and exact-identity state audit are repaired and
+  tested; existing watcher was safely restarted. Telegram opportunity summary
+  sent (1062). The PM holdings remain six legs; the maker commitment is separate.
+- Final 20:32 account mark is $166.80; PM midpoint/depth $78.50/$72.97.
+  Approximate whole-account depth is $161.27 including $7.00 separately
+  funded gas. Both live orders remain zero-filled; free pUSD is $28.162410.
+
+
 ## Sep-30 18:09 periodic update
 
 - Six held legs and the sole zero-fill Trump-out 28-NO sell at .97 are

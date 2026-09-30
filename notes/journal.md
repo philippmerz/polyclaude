@@ -21419,3 +21419,147 @@ not an automatic taker action on the one-tick crossover. With no current
 central-EV exit advantage or thesis-breaking fact, HOLD all / NO ADD; no
 hidden-information resting sell was justified. No Telegram summary, durable
 goal, new watcher or idle follow-up was created.
+
+
+## 2026-09-30 19:41 UTC — concrete opportunity research / DEC-0182
+
+The operator requested continued active research until a concrete accessible
+opportunity was found. Refreshed the direct usage probe (68% used, 32%
+headroom); delegated independent crypto, yield/venue and targeted prediction-
+market work. No Fireworks or other paid research API was used. This was an
+active research run, with no durable goal or idle follow-up created.
+
+**Action: accepted maker BUY, not a filled holding.** Placed 10 Taylor Swift
+album-2026 NO at .56 through `polyclaude_enter.py`, capped at $5.60, after
+literal criteria, exact Gamma/CLOB identity, UMA, live book, fee, account,
+reservation, independence and capital-cap checks. Market 1686673; condition
+0x986578c2655979e0a8414ce04793c6e8226c7a368c25d1379cd300259cba1c09;
+NO token 99454279001328554196416885476166477869861423072785045253820226845030445887953.
+Gamma/CLOB descriptions both hash to
+850831bf683bdd3cedeea3c7b8b6af6a22c8659abb60fef327ef7260281665dc.
+Raw maker ceiling .56 is below the .57 ask; taker culture fee is .05 times
+p(1-p), whereas this post-only order pays no maker fee. Minimum is five
+shares. Near-entry bid depth comfortably covered ten-share exit size; future
+liquidity is not guaranteed. Written release cutoff is Dec-31 23:59 PT,
+with Jan-2 operational end metadata; ordinary early-January settlement is
+allowed by the evaluation boundary.
+
+The known product fails the contract: [UMG's Sep-25 notice](https://www.universal-music.co.jp/taylor-swift/news/2026-09-25/)
+confirms twelve previously released original tracks plus four new tracks.
+[Spotify](https://open.spotify.com/album/4hF2gTGuPYlykYuphDxi8J), the first
+precedence source, directly identifies the sixteen-track Encore album.
+Four of sixteen is 25%, below the explicit >=50%-new exception for deluxe
+and altered releases. The original Showgirl was released in 2025, outside
+the market's Mar-22 creation window; the Toy Story contribution is a single.
+The official label and current artist catalog produced no other qualifying
+release. This does not establish that none will occur later.
+
+Root deliberately used central NO .70 with the full .10 haircut to .60,
+below Astra's independent .72/.62, and recorded the broader .58-.82 range.
+Judgmental mutually exclusive YES branches are .20 new original/surprise
+album, .06 standalone album-class vault release, .02 other qualifying
+>=50%-new package, and .02 adverse interpretation/settlement. These are
+not fitted frequencies. The [evermore one-day surprise precedent](https://www.universal-music.co.jp/taylor-swift/news/2020-12-11/)
+limits what absence of an announcement proves. The completed debut
+rerecording and Oct-24 twentieth anniversary, plus possible Reputation vault
+tracks, are genuine countercases; old songs rerecorded are not automatically
+never-released tracks under the express altered-version exclusion.
+
+If all ten shares fill, terminal arithmetic EV profit is $1.40 central,
+$.40 at .60 stress and $.20 at .58, before settlement cost and about $.045
+foregone 93-day Aave interest. After an additional $.05 operating buffer,
+stress still retains about $.305. Max loss is $5.60, win profit $4.40,
+about 3.4% of the $164.35 account. With other holdings held fixed, expected
+log contribution remains positive at .70, .60 and .58 after that $.095
+carry/cost budget. Music releases have no direct causal dependence on held
+HLE or political propositions; venue and settlement risks remain shared.
+The small size addresses estimation error rather than pretending certainty.
+
+Order 0x265e1bb0b25c12d72a89167d88c6df3305de2f1e7260884de63abd5bf596a454
+was accepted LIVE and complete authenticated inventory confirmed ten
+original shares, zero matched, correct NO token/condition and .56. Polygon
+on-chain read at block 94,729,512 confirmed zero Swift NO, unchanged pUSD
+33.762410 and $28.162410 uncommitted after its $5.60 promise. The only
+other live order remains Trump-out SELL 28 NO @ .97. Cancel the unfilled
+remainder at the next existing 22:00 check; cancel first on material release
+news, verify removal/fill races and do not renew automatically.
+
+**Non-PM research:** fresh BTC/ETH risk-premium cases are genuinely
+accessible but probability-sensitive: ETH's current testnet catalyst is not
+a scheduled mainnet upgrade, and the latest Fed decision raised rates.
+A $10 same-chain Polygon WETH round trip costs about .10% before gas,
+but the modeled advantage over cash disappears after a five-percentage-point
+upside-to-downside probability shift. No discretionary beta allocation was
+made just to establish exposure.
+
+Direct Polygon [Morpho WBTC/native-USDC](https://app.morpho.org/polygon/variable/0x1cfe584af3db05c7f39d60e458a87a8b2f6b5d8c6125631984ec489f1d13553b/usdc-wbtc)
+is an actual route: 8.82% current / 6.15% trailing-month gross APY, 86%
+LLTV, about $69.8k liquidity. [Gauntlet's official thread](https://www.comp.xyz/t/gauntlet-compound-x-morpho-x-polygon-vault-management-updates/6554)
+explains the disabled vault as a completed strategic wind-down, not a new
+WBTC credit incident. Major suppliers are withdrawing, liquidation/oracle
+maintenance remains unproven, and higher yield need not persist. Even
+$25 deployment would add only about $.14 at the monthly rate after $.04
+incremental gas over the horizon. Conditional collateral-gap calculations
+and current borrower health are favorable, but no defensible incremental
+loss estimate closes the narrow premium. No reserve moved.
+
+Cheniere is no longer correctly described as brokerage-only: official
+[LNGx metadata](https://api.xstocks.fi/api/v2/public/assets/LNGx) and
+[reserves](https://api.xstocks.fi/api/v2/public/proof-of-reserves/LNGx)
+confirm issuance. However four-tier native-USDC V3 searches and Kyber
+read-only route queries established no economical ETH/Arb route for $20/$50.
+SPYx ETH V1 is tradable, but wider aggregator round trips return about
+$19.23 from $20 and $45.51 from $50; quoted swap gas raises total losses
+to 7.63% and 10.70%, before approvals, bridge and future slippage. Arbitrum
+wrappers are empty and examined routes absent. These are limitations of
+checked infrastructure, not proof that every decentralized venue is absent.
+No unsupported eligibility assumption or token acquisition was made.
+
+Targeted PM research also rejected Tesla consensus disagreement because
+several thousand dollars of recent concentrated YES flow may reflect
+information the public consensus lacks. Disney's subscriber reporting
+policy/ESPN annual omission is a real source mismatch, but annual Disney+
+omission is not assured and the wide bid/ask makes a patient entry uncertain.
+A Spider-Man rank-one/rank-two equal-NO set has a small logical floor edge;
+its five-pair floor profit is only $.081 before carry and leg/settlement risk.
+No additional trade or paired executor was built for that tiny floor.
+
+**Bounded safety follow-up:** added working UMG/Guardian RSS feeds and Swift
+keywords to the existing watcher. Found and repaired a real blind spot:
+its scoped news prompt omitted unfilled BUY orders, so a future release
+could be suppressed as having no held-position channel. The validated
+reader now includes exact remaining BUY shares, price, cash and identities;
+unknown held/pending inventory passes alerts through instead of suppressing.
+Fourteen watcher tests and three existing reader tests passed. The pending
+prior audit was also fixed to recognize only exact live BUY slug/condition/
+asset identities; SELL, failed read, mismatch and absent order cannot clear
+it. Thirty-nine targeted audit tests passed. Root verified real pending
+inventory and a clean six-position/one-deindexed-claim audit. Safely stopped
+the exact single old watcher and restarted it once; new PID 4013145 runs
+current code, with successful pending inventory context. No new daemon was
+created. Telegram opportunity summary 1062 was delivered.
+
+The 20:00:25 marked account is $164.35, with $76.09 PM midpoint and $71.85
+indicative fee-net depth. Approximate depth-substituted whole account is
+$160.11 including $6.96 separately funded gas, or $153.15 excluding gas
+(-9.9% versus $170 before VM/API cost); settled P&L remains +$1.20. Quotes
+are sequential planning estimates. At the late-run safety check, HLE's raw
+API bytes hash changed to 532d0884bfbca40a05d793a3612594dff96292ed6afc23b5c8f5c712c40865c6
+from the earlier recorded hash, while the 60-row count and relevant 2026
+Google/OpenAI scores/release identities remained below the held thresholds:
+Gemini 3.1 Pro45.9, 3.8 Flash46.2, GPT-6 Astra53.6. Without the earlier raw
+body, the changed bytes are not attributed to a specific non-HLE field.
+The vetted exit rewalk gave about $6.50/$6.88/$3.31 for the three HLE legs,
+below their central $25.35/$20.42/$4.75; Clarity complete exit about $28.25
+remains below its $29 floor. No thesis-breaking resolving observation was
+found; existing holdings and priors remain unchanged.
+
+Final 20:32:23 account snapshot: $166.80 whole-account mark, $78.50 PM
+midpoint and $72.97 indicative fee-net depth. Approximate whole-account
+depth value is $161.27 including $7.00 separately contributed gas, or
+$154.27 excluding gas (-9.3% versus $170 before VM/API costs). Realized
+P&L remains +$1.20. Complete authenticated order inventory still finds
+exactly Swift BUY 10 NO @ .56 and Trump-out SELL 28 NO @ .97, both LIVE
+with zero matched shares. $5.60 remains reserved; pUSD is $33.762410 and
+uncommitted pUSD $28.162410. The existing news daemon remains exact-one
+and fresh after restart; all follow-up is recorded for the existing check.

@@ -8,10 +8,117 @@ import time
 from pathlib import Path
 from types import SimpleNamespace
 
+import pytest
+
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import news_watcher  # noqa: E402
+import polyclaude_enter  # noqa: E402
+
+
+def _pending_buy(**changes) -> dict:
+    return {
+        "orderId": "order-swift-no", "asset": "token-no", "conditionId": "0xswift",
+        "question": "Will Taylor Swift release a Japanese album?", "slug": "swift-japanese-album",
+        "originalShares": 10.0, "matchedShares": 4.0, "remainingShares": 6.0,
+        "price": 0.56, "risk": 3.3600000000000003, **changes,
+    }
+
+
+def _mock_inventory(monkeypatch, tmp_path, *, positions=None, orders=None) -> None:
+    wallet = tmp_path / "public_wallet.json"
+    wallet.write_text(json.dumps({"address": "0xpublic"}))
+    monkeypatch.setattr(news_watcher._secrets, "path", lambda _name: wallet)
+    monkeypatch.setattr(news_watcher, "_POSITIONS_CACHE", {
+        "text": None, "ts": 0.0, "polymarket_available": False,
+    })
+    monkeypatch.setattr(news_watcher.httpx, "get", lambda *_a, **_kw: SimpleNamespace(
+        raise_for_status=lambda: None, json=lambda: positions or [],
+    ))
+    monkeypatch.setattr(polyclaude_enter, "_fetch_open_buy_commitments", lambda: orders or [])
+    monkeypatch.setattr(news_watcher, "_ostium_positions_summary_blocking", lambda: "No crypto trades.")
+
+
+def test_partial_buy_is_additional_to_held_and_order_duplicates_removed(monkeypatch, tmp_path):
+    buy = _pending_buy()
+    held = {"outcome": "NO", "curPrice": 0.55, "initialValue": 2.24,
+            "title": buy["question"], "asset": buy["asset"]}
+    _mock_inventory(monkeypatch, tmp_path, positions=[held], orders=[buy, dict(buy)])
+    text = news_watcher._positions_summary_blocking()
+    assert text.count("order=order-swift-no") == 1
+    assert "remaining=6.0 shares @ 0.56" in text
+    assert "capped commitment=$3.3600000000000003" in text
+    assert "slug=swift-japanese-album" in text and "asset=token-no" in text
+    assert "NO 0.550 ($2.24)" in text
+    assert "remaining=10.0" not in text
+    assert news_watcher._POSITIONS_CACHE["polymarket_available"] is True
+
+
+@pytest.mark.parametrize("failed", [False, True])
+def test_pending_inventory_success_and_failure_share_existing_ttl(monkeypatch, tmp_path, failed):
+    _mock_inventory(monkeypatch, tmp_path)
+    calls = []
+
+    def read():
+        calls.append(1)
+        if failed:
+            raise RuntimeError("read failed")
+        return [_pending_buy()]
+
+    monkeypatch.setattr(polyclaude_enter, "_fetch_open_buy_commitments", read)
+    first = news_watcher._positions_summary_blocking()
+    assert ("pending BUY inventory unavailable" in first) is failed
+    assert news_watcher._positions_summary_blocking() == first
+    assert calls == [1]
+    assert news_watcher._POSITIONS_CACHE["polymarket_available"] is not failed
+
+
+@pytest.mark.parametrize("failure", ["held", "pending"])
+def test_inventory_failure_passes_alert_without_agent(monkeypatch, tmp_path, failure):
+    _mock_inventory(monkeypatch, tmp_path)
+
+    def fail(*_a, **_kw):
+        raise RuntimeError("inventory read failed")
+
+    if failure == "held":
+        monkeypatch.setattr(news_watcher.httpx, "get", fail)
+    else:
+        monkeypatch.setattr(polyclaude_enter, "_fetch_open_buy_commitments", fail)
+    monkeypatch.setattr(news_watcher, "run_agent", lambda *_a, **_kw: pytest.fail("must pass through"))
+    send, reason, impacts = news_watcher._agent_filter_tier2("RSS", "Taylor Swift", "New album", "")
+    assert send is True and "inventory unavailable" in reason and impacts == []
+
+
+def test_pending_order_identity_conflict_fails_inventory(monkeypatch, tmp_path):
+    _mock_inventory(monkeypatch, tmp_path, orders=[_pending_buy(), _pending_buy(asset="other-token")])
+    text = news_watcher._positions_summary_blocking()
+    assert "inconsistent duplicate order identity" in text
+    assert news_watcher._POSITIONS_CACHE["polymarket_available"] is False
+
+
+def test_distinct_orders_same_asset_remain_distinct_and_sell_is_not_exposure(monkeypatch, tmp_path):
+    _mock_inventory(monkeypatch, tmp_path, orders=[
+        _pending_buy(), _pending_buy(orderId="second-order"),
+        {"side": "SELL", "orderId": "sell-order"},
+    ])
+    text = news_watcher._positions_summary_blocking()
+    assert "order=order-swift-no" in text and "order=second-order" in text
+    assert "sell-order" not in text
+
+
+def test_pending_buy_only_prompt_has_cancellation_channel(monkeypatch, tmp_path):
+    _mock_inventory(monkeypatch, tmp_path, orders=[_pending_buy()])
+    prompts = []
+
+    def agent(prompt, **_kwargs):
+        prompts.append(prompt)
+        return SimpleNamespace(returncode=0, stdout="SEND: album announcement\n")
+
+    monkeypatch.setattr(news_watcher, "run_agent", agent)
+    assert news_watcher._agent_filter_tier2("RSS", "Taylor Swift", "New album", "")[0] is True
+    assert "swift-japanese-album" in prompts[0]
+    assert "cancellation or re-evaluation" in prompts[0]
 
 
 def test_title_dedup_state_survives_daily_guid_refresh(monkeypatch, tmp_path) -> None:

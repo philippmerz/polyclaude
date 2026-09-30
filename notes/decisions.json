@@ -1,5 +1,5 @@
 {
-  "next_id": 182,
+  "next_id": 183,
   "decisions": [
     {
       "id": 1,
@@ -3630,6 +3630,24 @@
         "emergency-safety"
       ],
       "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 182,
+      "timestamp": "2026-09-30T20:08:20Z",
+      "type": "open_position",
+      "thesis": "Authorize at most ten Swift album-2026 NO shares at 0.56 maker, maximum cash 5.60. Sep-25 Encore is 4 new of 16 tracks and fails the explicit at-least-50%-new rule; Spotify and UMG agree. No other qualifying release found. Remaining surprise studio album, standalone vault album, Oct-24 debut anniversary and resolver interpretation are genuine YES risks. Root pNO .70, .60 after full .10 stress; independent Astra .72/.62 with .58-.82 plausible range. This is a submitted-order decision, not a claim of fill. No chase or automatic add; cancel unfilled remainder at next scheduled check or first material source change.",
+      "confidence": "medium",
+      "prediction": "At ten shares and 0.56 maker, central terminal EV profit 1.40, stress .40 before settlement costs and approximately .045 foregone Aave carry; maximum loss 5.60, win profit4.40. Small 3.4% allocation keeps positive expected log at .60 and even .58 before material covariance. Whole-market surprise remains possible. Record exact order status and any actual cash/share delta after submission.",
+      "size_usd": 5.6,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "music",
+        "criteria-maker"
+      ],
+      "slug": "will-taylor-swift-release-an-album-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

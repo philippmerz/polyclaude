@@ -763,3 +763,29 @@ venue does not itself establish a return thesis. Its
 restriction like Ostium's, but owner eligibility and the selected service's
 terms still require verification before funding. No account, key, transfer,
 order or new execution path was created.
+
+
+### Sep-30 20:25 UTC — LNGx access correction and small-account route costs
+
+Cheniere has an issued decentralized tracker, [LNGx](https://api.xstocks.fi/api/v2/public/assets/LNGx),
+with [issuer reserves](https://api.xstocks.fi/api/v2/public/proof-of-reserves/LNGx)
+reporting 418 underlying shares versus 387.3067 circulating units at 19:45.
+Original token: `0xdce993f8a6dbce7f27434874f5dfe9a8d58509c9`;
+V2 wrapper: `0x52987e7bf8d84136ab6501d437cd743652f5772e`.
+This corrects the earlier brokerage-only assumption, but does not establish
+an executable investment: native-USDC V3 pools and Kyber routes checked on
+ETH/Arb were absent for $20/$50. No accessible economical route was verified.
+Product restrictions still apply independently of technical transferability;
+no owner-eligibility conclusion or direct-issuer redemption access is assumed.
+
+[SPYx metadata](https://api.xstocks.fi/api/v2/public/assets/SPYx) confirms Arbitrum
+deployment, but its checked wrappers have zero supply and no quoted routes.
+Ethereum V1 aggregator buy/sell quotes around 20:01 returned $19.229 from
+$20 and $45.505 from $50; quoted swap gas makes round-trip losses about
+7.63%/10.70% before approval/bridge/slippage. Direct vetted V3 single-hop
+quotes are worse. No allocation justified by a generic equity-risk premium.
+Higher-rate stablecoin routes were also reviewed: direct Polygon Morpho
+WBTC lending has a modest premium but concentrated withdrawals and a
+completed Compound/Gauntlet wind-down; no reserve migration justified.
+The active search did produce DEC-0182's small Swift maker opportunity,
+recorded in the journal, with cash reserved but no filled position assumed.

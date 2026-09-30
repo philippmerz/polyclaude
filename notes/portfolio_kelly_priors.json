@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-09-28",
+ "_updated": "2026-09-30",
  "_groups": {
   "treasury-5y-monotonicity-2026": {
    "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1106,5 +1106,43 @@
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
   "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. Sep-30 live Gamma descriptions remain byte-identical across both legs (SHA-256 35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693), with matching Jan-2 operational end metadata and a written qualifying cutoff before Jan-1. The Sep-15 cloture vote on the motion to proceed is explicitly excluded. Paired with over-50 YES, every written terminal state pays at least $1 per equal pair. HOLD the complete pair; never transact this leg independently.",
   "latest_catalyst": "Sep-22 topology reconciliation: live Gamma reports both event legs at endDate 2027-01-02T04:59Z while the stored topology used Jan-1; no archived raw snapshot establishes when or whether that metadata changed. Their identical text still admits only a qualifying vote before Jan-1. Both remain event 769594, active, open, negRisk=false and UMA-unproposed. Updating the stored operational end date restores validation without changing the semantic cutoff or $29 floor."
+ },
+ "will-taylor-swift-release-an-album-in-2026": {
+  "p_no": 0.7,
+  "p_no_stress": 0.6,
+  "p_no_range": [
+   0.58,
+   0.82
+  ],
+  "cluster": "taylor-swift-release-2026",
+  "rho_within": 0.0,
+  "cluster_frac": 0.0,
+  "hidden_info": true,
+  "verified": "2026-09-30",
+  "criteria_read": "2026-09-30",
+  "condition_id": "0x986578c2655979e0a8414ce04793c6e8226c7a368c25d1379cd300259cba1c09",
+  "asset": "99454279001328554196416885476166477869861423072785045253820226845030445887953",
+  "criteria_sha256": "850831bf683bdd3cedeea3c7b8b6af6a22c8659abb60fef327ef7260281665dc",
+  "current_assessment": "Prospective small maker entry, not a filled position. Central NO .70 and explicit .10 haircut to .60. Independent Astra central .72/.62 stress; broad plausible .58-.82. Sep-25 Encore contains 12 previously released 2025 tracks plus 4 new tracks; Spotify album classification and UMG confirm 16 total, so 25% new fails the written >=50% gate. Original Showgirl predates Mar-22 creation. A qualifying surprise original album or standalone album-class vault collection before Dec-31 23:59 PT can still win YES. No-announcement is weak evidence: evermore had one-day notice. Oct-24 debut twentieth anniversary and future Reputation vault are material countercases. Unique music-release cluster is independent of current HLE and political propositions, with shared venue/settlement risk.",
+  "probability_model": "Judgment, not fitted frequencies. Root conservative mutually exclusive YES branches: .20 original album/surprise, .06 standalone vault album, .02 other >=50%-new package, .02 adverse interpretation/settlement; NO .70. No guarantee of no future release.",
+  "entry_policy": "At most 10 NO shares and $5.60 maker cash, raw limit <=.56; no chase or automatic add. Existing periodic checks must cancel any unfilled bid at the next check, and cancel first on changed release information. No taker urgency claimed.",
+  "kill_trigger": "Official album countdown, preorder, tracklist, new-release metadata or vault announcement: cancel any live BUY first, reread exact Spotify classification/track novelty and re-underwrite held shares. Debut anniversary Oct-24 and birthday Dec-13 need source review; rerecording old songs is not automatically never-released material.",
+  "key_facts": [
+   {
+    "claim": "UMG confirms twelve original tracks plus four new tracks on Sep-25 Encore.",
+    "source": "https://www.universal-music.co.jp/taylor-swift/news/2026-09-25/",
+    "checked": "2026-09-30"
+   },
+   {
+    "claim": "Spotify identifies Encore as an album with sixteen tracks, not a separate four-track album.",
+    "source": "https://open.spotify.com/album/4hF2gTGuPYlykYuphDxi8J",
+    "checked": "2026-09-30"
+   },
+   {
+    "claim": "Evermore surprise release is a real counterexample to inferring no album from no announcement.",
+    "source": "https://www.universal-music.co.jp/taylor-swift/news/2020-12-11/",
+    "checked": "2026-09-30"
+   }
+  ]
  }
 }

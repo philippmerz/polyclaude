@@ -1,5 +1,27 @@
 # Standing resting orders (GTC post-only makers)
 
+**Sep-30 20:13 UTC / DEC-0182:** submitted and independently verified LIVE
+Swift album-2026 **BUY 10 NO @ .56**, post-only GTC, maximum **$5.60** cash,
+order `0x265e1bb0b25c12d72a89167d88c6df3305de2f1e7260884de63abd5bf596a454`.
+Zero matched shares, zero on-chain NO balance and unchanged pUSD $33.762410
+were verified; $5.60 is reserved and $28.162410 remains uncommitted. This is
+an order commitment, not a purchased position. Exact condition and token
+are in `portfolio_kelly_priors.json`; the entry reservation remains active.
+
+**At the next existing scheduled check (Sep-30 22:00 UTC), cancel any
+unfilled remainder first and verify authenticated removal plus any fill that
+raced cancellation. Do not automatically renew or chase it.** Cancel sooner
+on a changed official countdown, album preorder, tracklist, vault release or
+Spotify classification. If filled, re-underwrite the holding from current
+sources. Central p(NO)=.70, stress=.60, plausible .58-.82; this is a modest
+forecast, not a claim that a surprise album cannot arrive. No new timer or
+idle follow-up is required. Existing news coverage includes official UMG and
+Guardian Swift feeds; the watcher now includes validated pending BUY risk.
+No maker sell at/below fair on this hidden-information proposition.
+
+The Trump-out **SELL 28 NO @ .97** remains the other live order, zero-filled.
+
+
 **Sep-28 22:15 UTC:** authenticated inventory has exactly one LIVE SELL:
 Trump-out 28 NO @ 0.97 (`0xa28…23c1`), zero-filled. Its public-information
 fair remains 0.97, so retain it fee-free at fair. The operator reaffirmed that

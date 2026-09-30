@@ -22,6 +22,7 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import math
 import os
 import signal
 import subprocess
@@ -155,21 +156,22 @@ def fire_cron_tick() -> None:
 
 # In-process cache of formatted positions; refreshed every 5 min so the
 # agent always sees roughly-current book without hammering data-api.
-_POSITIONS_CACHE: dict = {"text": None, "ts": 0.0}
+_POSITIONS_CACHE: dict = {"text": None, "ts": 0.0, "polymarket_available": False}
 _POSITIONS_CACHE_TTL_SECONDS = 300
 
 
 def _positions_summary_blocking() -> str:
     """Fetch + format current positions for inclusion in agent prompts.
 
-    Cached for 5 min in-process. On any failure, returns a short string
-    so the agent still has something to reason about.
+    Cached for 5 min in-process. Polymarket inventory failures mark the
+    cache unavailable so Tier-2 alerts bypass suppression.
     """
     now = time.time()
     if _POSITIONS_CACHE["text"] and now - _POSITIONS_CACHE["ts"] < _POSITIONS_CACHE_TTL_SECONDS:
         return _POSITIONS_CACHE["text"]
 
-    lines: list[str] = ["Polymarket sleeve:"]
+    lines: list[str] = ["Polymarket sleeve (held positions):"]
+    available = True
     try:
         addr = json.loads(_secrets.path("POLYCLAUDE_WALLET").read_text())["address"]
         r = httpx.get(
@@ -177,14 +179,25 @@ def _positions_summary_blocking() -> str:
             params={"user": addr.lower(), "limit": "50"},
             timeout=10,
         )
-        for p in (r.json() or []):
+        r.raise_for_status()
+        positions = r.json()
+        if not isinstance(positions, list) or len(positions) >= 50:
+            raise RuntimeError("positions response unavailable or potentially incomplete")
+        for p in positions:
             if p.get("redeemable") is True:
                 continue
             cur = float(p.get("curPrice") or 0)
             cost = float(p.get("initialValue") or 0)
             lines.append(f"- {p['outcome']} {cur:.3f} (${cost:.2f}) — {p['title'][:70]}")
     except Exception as e:
+        available = False
         lines.append(f"  (positions read failed: {_secrets.scrub(str(e))[:120]})")
+
+    try:
+        lines.append("\n" + _pending_buy_summary_blocking())
+    except Exception as e:
+        available = False
+        lines.append(f"  (pending BUY inventory unavailable: {_secrets.scrub(str(e))[:120]})")
 
     # Crypto/Ostium must be live too. A hard-coded May-era XAU long survived
     # here after the trade closed and caused an Aug-27 alert to fabricate a
@@ -195,7 +208,54 @@ def _positions_summary_blocking() -> str:
     text = "\n".join(lines)
     _POSITIONS_CACHE["text"] = text
     _POSITIONS_CACHE["ts"] = now
+    _POSITIONS_CACHE["polymarket_available"] = available
     return text
+
+
+def _pending_buy_summary_blocking() -> str:
+    """Use the vetted authenticated reader; never reconcile or mutate orders.
+
+    The caller's five-minute cache covers both successful and failed reads.
+    Remaining BUY risk is additional to held shares, not a second held position.
+    """
+    from polyclaude_enter import _fetch_open_buy_commitments
+
+    lines = ["Polymarket pending BUY orders (additional unfilled exposure; "
+             "news may require cancellation before a fill):"]
+    seen: dict[str, dict] = {}
+    for row in _fetch_open_buy_commitments():
+        side = str(row.get("side") or "BUY").upper()
+        if side == "SELL":
+            continue
+        if side != "BUY":
+            raise RuntimeError("pending order has unknown side")
+        order_id = str(row.get("orderId") or "")
+        if not order_id or not row.get("asset") or not row.get("conditionId"):
+            raise RuntimeError("pending BUY omitted order/token/market identity")
+        if order_id in seen:
+            if seen[order_id] != row:
+                raise RuntimeError("pending BUY has inconsistent duplicate order identity")
+            continue
+        seen[order_id] = row
+        remaining = float(row["remainingShares"])
+        price = float(row["price"])
+        risk = float(row["risk"])
+        if (not all(math.isfinite(v) for v in (remaining, price, risk))
+                or remaining <= 0 or not 0 < price < 1
+                or abs(risk - remaining * price) > 1e-8):
+            raise RuntimeError("pending BUY remaining quantity/commitment is invalid")
+        question = str(row.get("question") or "")
+        slug = str(row.get("slug") or "")
+        if not question or not slug:
+            raise RuntimeError("pending BUY lacks title/slug")
+        lines.append(
+            f"- BUY remaining={remaining!r} shares @ {price!r}; "
+            f"capped commitment=${risk!r} — {question}; slug={slug}; "
+            f"order={order_id}; asset={row['asset']}; condition={row['conditionId']}"
+        )
+    if not seen:
+        lines.append("- No pending BUY orders.")
+    return "\n".join(lines)
 
 
 def _ostium_positions_summary_blocking() -> str:
@@ -273,12 +333,13 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
     — fail-OPEN so the operator sees raw alerts rather than silent drops.
     """
     pos = _positions_summary_blocking()
-    if "positions read failed" in pos:
+    if not _POSITIONS_CACHE.get("polymarket_available", False):
         print(f"[watcher] WARN positions block unavailable for agent filter", flush=True)
+        return (True, "Polymarket held/pending inventory unavailable; alert passed through", [])
     body = (summary or "")[:600].replace("\n", " ").strip()
     prompt = (
         "You filter news for polyclaude (autonomous trading project) AND assess "
-        "per-position impact. Open positions:\n\n"
+        "per-position impact. Held positions and pending BUY exposure:\n\n"
         f"{pos}\n\n"
         f"News article (matched keyword \"{kw}\", source {feed_name}):\n"
         f"Title: {title}\n"
@@ -297,6 +358,10 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
         "'Atletico Madrid top-4 La Liga' → 'atletico-top4'). Skip positions where "
         "the news has no causal channel — don't fabricate connections. If a "
         "position is no longer in the list above, do NOT score it.\n\n"
+        "Pending BUY orders can fill until canceled. Treat news affecting their "
+        "market as relevant even with no held shares; assess whether it calls "
+        "for cancellation or re-evaluation. Do not add their unfilled quantity "
+        "to held shares a second time.\n\n"
         "Respond:\n"
         "LINE 1: SEND: <why> OR SUPPRESS: <why>\n"
         "LINE 2+: IMPACT lines (only if SEND and positions are actually impacted)"
