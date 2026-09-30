@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-30 18:09 periodic update
+
+- Six held legs and the sole zero-fill Trump-out 28-NO sell at .97 are
+  unchanged. The 18:01 snapshot is $77.97 midpoint / $70.77 indicative
+  fee-net depth, $166.28 whole-account mark and $159.08 approximate
+  depth-substituted value; cumulative realized P&L remains +$1.20.
+- The exact 60-row HLE source hash and Clarity/OpenAI criteria remain
+  unchanged. OpenAI's initial $4.79 exit briefly exceeded $4.75 central EV;
+  the independent book rewalk and targeted exit check returned $4.61.
+  HOLD / NO ADD after source, stress and correlated terminal-risk review.
+- The new Clarity lobbying retrospective establishes no qualifying final-
+  passage vote. The protected pair exits near $28.53 versus its $29 floor.
+  No overdue decision, watchlist hit, UMA/Ostium change or actionable trigger.
+  All four daemons are exact-one/current; disk has about 621 MiB free, above
+  the 512 MiB warning. Next dated review: UNI proposal 102 after block
+  26,109,012 (estimated Oct. 3); no extra follow-up or Telegram was scheduled.
+
 ## Sep-30 16:37 operator update
 
 - Fresh full status and bankroll reads show six unchanged held legs, $78.35

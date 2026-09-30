@@ -21366,3 +21366,56 @@ crypto position. The configured-token readers are not an exhaustive audit
 of unknown assets or personal accounts. Broad BTC/ETH underwriting remains
 distinct from selecting a venue. No transaction, new account, key, watcher
 or execution-code change; private operator context was not recorded.
+
+## 2026-09-30 18:00–18:09 UTC — periodic check; transient OpenAI exit revalidated
+
+Reviewed the active backlog and recent journal. A bounded routine worker
+confirmed no dated task is due: Arena's entry clock was already retired,
+weekly P&L/world-state work is current, UNI proposal 102 is due after block
+26,109,012 (approximately Oct. 3), and the next monthly drill is Oct. 12.
+All four daemons are exact-one, alive and newer than their source files;
+disk has about 621 MiB free, above the existing 512 MiB warning threshold.
+
+The fresh 18:01 status/bankroll snapshot has six unresolved legs at $89.91
+cost, $77.97 midpoint and $70.77 indicative fee-net depth. Whole-account
+mark is $166.28; approximate depth-substituted value is $159.08 including
+$7.02 separately funded gas, or $152.06 excluding gas before VM/API costs.
+Settled P&L remains +$1.20. Authenticated complete order pagination finds
+only the zero-fill Trump-out 28-NO sell at .97. State audit is clean at six
+indexed positions and one deindexed claim row; UMA, Ostium, watchlist and
+overdue decisions are clean. No asset, order or probability prior changed.
+
+The 17:20 Clarity alert was independently checked against CoinDesk's public
+article body. It reviews first-half lobbying spending and the failed legislative
+push, with an uncertain lame-duck opportunity; it does not report a new
+final-passage vote. The [official Senate record](https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00234.htm)
+still identifies Sep-15 Roll Call 234 as failed cloture on the motion to
+proceed. Fresh exact-condition Gamma reads retain both Clarity descriptions
+at SHA-256 35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693.
+Both explicitly exclude that vote. The equal-share pair's full exit is
+about $28.53 versus its $29 payout floor: HOLD_COMPLETE_GROUP / NO ADD.
+
+The exact live HLE API remains HTTP 200, 60 rows, SHA-256
+86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177.
+Gemini 3.1 Pro/3.8 Flash remain 45.9/46.2; GPT-6 Astra remains 53.6.
+The status tool's UPDATING label compares with July 3, not this tick. OpenAI
+>=55 retains its exact description hash
+3920090ada93087744eca9f75db58bd32897d9c579a074dfaf19333d17338d0f,
+with no UMA proposal or new qualifying score.
+
+Initial exit analysis at a .26 bid returned $4.7938 net, $0.0438 above the
+19-share OpenAI central Bernoulli value of $4.75. Independent book/flow
+verification then found the top bid had fallen to .25; a targeted vetted
+exit rerun returned $4.6075, below $4.75 central and about $4.65 after
+illustrative cash carry. The latest execution sold 50 YES at .73 and the
+earlier 303.84-NO purchase remains in the tape; neither supplies a resolving
+fact that changes the current .25 prior. The recorded .15 pessimistic case
+is $2.85 and favors exit, so the choice remains model-sensitive. Gemini
+exits of about $3.63/$6.90 remain below their $10.14/$8.17 stress values.
+A joint rapid model/source update can make all three HLE NOs lose their
+roughly $36.82 displayed position cost, with paid fees additional; an OpenAI-only favorable outcome can pay
+$19 while Gemini loses. The midpoint/rho Kelly advisory supports no add,
+not an automatic taker action on the one-tick crossover. With no current
+central-EV exit advantage or thesis-breaking fact, HOLD all / NO ADD; no
+hidden-information resting sell was justified. No Telegram summary, durable
+goal, new watcher or idle follow-up was created.
