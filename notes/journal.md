@@ -21229,3 +21229,57 @@ trigger fired. The exact Arena Text Overall source still shows the Sep. 25
 snapshot; today's scheduled observation is at 16:00 UTC, so no pre-snapshot
 entry is warranted. No asset, order, source, or probability prior changed;
 no Telegram summary was sent.
+
+## 2026-09-30 14:00–14:14 UTC — full check; OpenAI exit re-underwritten, no action
+
+Six indexed Polymarket legs reconcile at **$89.91 cost, $77.25 midpoint and
+$70.59 indicative fee-net depth**. The authoritative whole-account mark is
+**$165.75** and replacing the Polymarket midpoint with current depth gives
+about **$159.09**; cumulative settled P&L remains **+$1.20**. Deployable pUSD
+is $33.762410 and the sole authenticated order remains the zero-fill 28-share
+Trump-out NO maker sell at .97. UMA, Ostium, crux coverage, marginal carry,
+watchlist, decision, state-audit and redemption checks are clean.
+
+The exact HLE API remains the same 60-row snapshot at SHA-256
+`86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`:
+Gemini 3.1 Pro is 45.9, Gemini 3.8 Flash is 46.2 and GPT-6 Astra is 53.6.
+Current fee-net exits for next-Gemini-Pro, Gemini >=50 and OpenAI >=55 are
+about $3.72/$6.90/$4.42 versus central terminal values of
+$25.35/$20.42/$4.75. OpenAI's improved exit prompted a full re-underwrite. Its
+NO book bids .24 for 81.32 shares, below the .25 fair prior; the latest large
+execution bought 303.84 NO near .1989, and no source, criteria or UMA fact
+changed. A .15 stress prior would favor selling, but current evidence does not
+justify replacing the .25 central prior with that tail case. The $0.33 central
+hold advantage is about $0.30 after allowing for reserve carry, while a resting
+hidden-information sell at .26 would offer too little premium for jump risk.
+In the adverse joint source-update/high-score state this leg can lose its full
+$3.04 cost while the two Gemini legs also weaken; in the unchanged-source
+state it pays independently of Gemini outcomes. That covariance and the
+midpoint-Kelly overage rule out adding, but the small leg does not warrant an
+otherwise negative-central-EV trim. **HOLD all / NO ADD; no order change.** The
+official Senate record still has no qualifying Clarity final-passage vote, and
+the White House still identifies Trump as President.
+
+Primary discovery scanned 24,021 active markets and shortlisted 80. The first
+thin-tail request failed before producing a snapshot; a bounded retry exited
+zero and emitted 1,361 rows with source proof
+`d401c4a145b70763d339a9f578371ec6eec1eff4026beb3b1f993e5ca815384d`.
+All 74 batches and all 1,361 rows were reviewed without truncation. Sports
+review found no positive consensus gap above three points, macro surfaced five
+markets without usable consensus, favorite-fade hints lacked instance support,
+and the monotonicity pass's sole 1.03-point provisional net violation had no
+executable positive prefix. The explicitly incomplete consistency slice found
+no candidate above two points across 2,967 validated markets/609 events. No
+entry survived literal-criteria, live-book and stress review.
+
+Disk free space fell to 548 MiB during generated scans. Narrow cleanup removed
+only stale ignored artifacts: an old 85 MiB `/tmp/shapelypkg`, a 3 MiB pytest
+tree, 32 discovery snapshots older than seven days, stale consistency reports
+and old top-level temporary source/context files. It preserved active logs,
+current scanner outputs, financial records and operator material; free space
+recovered to about 652 MiB at handoff. All four daemons are exact-one and their
+process start times postdate the corresponding source files. Weekly P&L and
+the Sep. 27 world-state review remain current. The exact Arena Text Overall
+observation is due at 16:00 UTC; there is no pre-snapshot entry. No asset,
+order, probability prior
+or durable strategy changed, so no Telegram summary was sent.

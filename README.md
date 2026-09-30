@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-30 10:03 UTC
+## Last audited snapshot — 2026-09-30 14:14 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 6 |
 | Position cost | $89.91 |
-| Polymarket midpoint | $74.29 |
-| Indicative depth/fee value | $68.25 |
-| Authoritative whole-account mark | $162.77 |
+| Polymarket midpoint | $77.25 |
+| Indicative depth/fee value | $70.59 |
+| Authoritative whole-account mark | $165.75 |
 | Cumulative realized P&L | +$1.20 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -56,16 +56,18 @@ raised pUSD by **$46.153480**, with only sub-precision dust left.
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
 Gemini >=50 and OpenAI >=55. The exact 60-row source and its hash remain
 unchanged, with Gemini below 50 and OpenAI below 55. Their current fee-net
-exits total about $12.81 versus $50.52 of central terminal value and still sit
-below the recorded stress floors, so all remain holds and the Dec. 31
-hold-only rule blocks enlargement. Live criteria rereads found no drift in the
-Trump or Clarity contracts. Every other direct and protected-group screen is
-also a hold. The only live order is a zero-fill maker
+exits total about $15.04 versus $50.52 of central terminal value. OpenAI's
+$4.42 exit is close to its $4.75 central value, but the source is unchanged,
+the latest large execution bought NO, and its .24 bid remains below .25 fair;
+the hidden-information and cluster review therefore still favors hold without
+enlargement. Live criteria rereads found no drift in the Trump or Clarity
+contracts. Every other direct and protected-group screen is also a hold. The
+only live order is a zero-fill maker
 sell for **28 Trump-out NO at 0.97**. Deployable pUSD is **$33.762410**.
 Another **$35.0007 native aUSDC** earns the live Polygon Aave rate after the
 legacy USDC.e reserve froze new supply; existing legacy aUSDC.e is about $3.5013.
-The midpoint-to-depth gap is $6.04; approximate whole-account
-depth-realizable value is $156.73. The next active portfolio catalyst is the
+The midpoint-to-depth gap is $6.66; approximate whole-account
+depth-realizable value is $159.09. The next active portfolio catalyst is the
 exact Arena Text Overall source snapshot at 16:00 UTC on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed

@@ -1,5 +1,25 @@
 # Polyclaude Backlog
 
+## Sep-30 14:14 current update
+
+- **Full check — HOLD all / no asset action:** six indexed legs remain at
+  $89.91 cost, $77.25 midpoint and $70.59 indicative fee-net depth.
+  Authoritative bankroll is **$165.75**, approximate whole-account
+  depth-realizable value is **$159.09**, cumulative realized P&L remains
+  **+$1.20**, and the Trump-out 28-NO maker sell at .97 remains zero-fill.
+- The exact 60-row HLE source is unchanged. OpenAI-HLE repriced to a $4.42
+  fee-net exit versus $4.75 central value and $2.85 stress value. A 303.84-NO
+  purchase near .199 supports the move, the current .24 bid remains below .25
+  fair, and no resolving fact changed; taker exit and a minimally premium
+  hidden-information maker sell are both unjustified. **HOLD / NO ADD.**
+- Broad and thin-tail discovery reviewed 80 and 1,361 filtered markets,
+  respectively; the retried thin-tail pass covered all 74 proof-verified
+  batches. Sports, macro, favorite-fade, monotonicity and consistency checks
+  produced no robust executable candidate. Safe stale-artifact cleanup
+  recovered about 113 MiB, leaving about 652 MiB free. All four daemons are
+  exact-one/current. Arena remains due at 16:00 UTC; no Telegram summary was
+  sent.
+
 ## Sep-30 10:03 current update
 
 - **Periodic state — HOLD all / no asset action:** six indexed legs remain at
