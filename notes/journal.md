@@ -21110,3 +21110,61 @@ clocks are clean. All four daemons are live, the operator session is active,
 and disk retains about 1.0 GiB free. The Arena snapshot remains due Sep. 30 at
 12:00 ET; current leaderboard evidence creates no robust unheld entry. No
 trade, transfer, order change, prior change or duplicate Telegram followed.
+
+## 2026-09-30 02:00–02:12 UTC — full check; criteria current, all holds, no entry
+
+Six indexed Polymarket legs reconcile at **$89.91 cost, $75.50 midpoint and
+$69.25 indicative fee-net depth**. The authoritative whole-account mark is
+**$164.07** and replacing the Polymarket midpoint with current depth gives
+about **$157.82**; cumulative settled P&L remains **+$1.20**. Deployable pUSD
+is $33.762410, native Polygon aUSDC has accrued to $35.000737, and the sole
+authenticated order remains the zero-fill 28-share Trump-out NO maker sell at
+.97. UMA reports 40 tracked positions, 38 refreshed Gamma markets and zero
+alerts; Ostium remains empty. Crux coverage, marginal carry, watchlist and
+decision clocks are clean. The state audit refreshed six indexed and one
+retained deindexed claim row, pruned none, and the redemption sweep found zero
+redeemable winners.
+
+The scheduled criteria rotation reread the live Trump contract and both
+Clarity legs. Trump's description is unchanged at SHA-256
+`7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9`:
+permanent cessation or an earlier announcement qualifies, while temporary
+Section 3, unsustained Section 4 and impeachment without removal remain
+excluded. Current White House releases still identify Trump as President and
+contain no qualifying cessation. The Clarity descriptions remain byte-identical
+at SHA-256
+`35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693`,
+retain the pre-Jan. 1 qualifying cutoff, and explicitly exclude the Sep. 15
+cloture/motion-to-proceed vote. Verification dates were advanced without a
+probability change. The complete Clarity pair exits near **$28.53** versus its
+exact $29 floor; Trump exits near $26.91 versus $27.48 central value.
+
+The exact HLE endpoint remains the same 60-row snapshot at SHA-256
+`86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`.
+Gemini 3.1 Pro remains 45.9, Gemini 3.8 Flash 46.2 and GPT-6 Astra 53.6.
+Current fee-net exits for next-Gemini-Pro, Gemini >=50 and OpenAI >=55 are
+about $4.34/$6.90/$2.57 versus central values of $25.35/$20.42/$4.75 and
+stress-floor values of about $10.14/$8.17/$2.85. **HOLD all / NO ADD.** The
+Kelly OpenAI scale-in suggestion remains overridden by the correlated-cluster
+hold-only rule. BBC's 00:27 Hormuz report has no causal channel to a held
+contract.
+
+Primary-style discovery shortlisted 80 of 23,731 active markets and the
+hurdle pass retained 536 of 47,176. All four/29 context batches covering
+36/237 observed exact-event groups were reviewed. Sports surfaced three
+bookie gaps above three points, each checked against literal criteria, current
+books and the enabled 5% taker-fee curve. T1 Academy–Galions NO cost .4221
+fee-inclusive against p=.4377, BetBoom YES cost .7789 against p=.82, and B8
+YES cost .5723 against p=.61. Their central $5-size EVs were only
+$0.18/$0.26/$0.33 and became -$1.00/-$0.38/-$0.54 under the required 10-point
+instance haircut, so all were skipped. Macro surfaced five markets without an
+independent consensus; favorite-fade retained nine unsupported book-walk
+hints; monotonicity found zero violations across 1,317 events; and the
+incomplete consistency slice found zero modeled candidates across 3,105
+markets/567 events. No trade followed.
+
+All four daemons are exact-one, and none of their source files is newer than
+its running process; disk retains about 1.0 GiB free. Weekly P&L and the
+Sep. 27 world-state review remain current. The exact Arena Text Overall
+snapshot is due today at 16:00 UTC; there is no pre-snapshot entry. No asset,
+order, or probability prior changed, so no Telegram summary was sent.

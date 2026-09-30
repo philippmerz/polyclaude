@@ -1,5 +1,24 @@
 # Polyclaude Backlog
 
+## Sep-30 02:12 current update
+
+- **Full check — HOLD all / no asset action:** six indexed legs have $89.91
+  cost, $75.50 midpoint and $69.25 indicative fee-net depth. Authoritative
+  bankroll is **$164.07**, approximate whole-account depth-realizable value is
+  **$157.82**, cumulative realized P&L remains **+$1.20**, and deployable pUSD
+  remains $33.762410. The Trump-out 28-NO maker sell at .97 remains live and
+  zero-fill.
+- Live Trump and Clarity criteria rereads found no source drift; their
+  verification dates and exact description hashes are now current. The exact
+  60-row HLE source is unchanged, and every individual/protected-group exit
+  remains a hold. No UMA/Ostium change, redemption, marginal-carry exit,
+  watchlist hit, overdue decision or daemon issue appeared.
+- Complete primary/thin-tail context review and sports, macro, favorite-fade,
+  monotonicity and consistency scans found no robust entry. Three esports
+  consensus gaps had positive central arithmetic after current asks and fees,
+  but all failed the required 10-point probability stress. The next dated
+  catalyst is today's 16:00 UTC Arena snapshot. No Telegram summary was sent.
+
 ## Sep-29 22:05 current update
 
 - **Periodic state — HOLD all / no asset action:** six indexed legs have

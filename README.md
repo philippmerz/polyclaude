@@ -4,7 +4,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-09-29. Portfolio figures below are a timestamped
+**Last maintained:** 2026-09-30. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -35,15 +35,15 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-09-29 22:05 UTC
+## Last audited snapshot — 2026-09-30 02:12 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs | 6 |
 | Position cost | $89.91 |
-| Polymarket midpoint | $75.81 |
-| Indicative depth/fee value | $68.97 |
-| Authoritative whole-account mark | $164.40 |
+| Polymarket midpoint | $75.50 |
+| Indicative depth/fee value | $69.25 |
+| Authoritative whole-account mark | $164.07 |
 | Cumulative realized P&L | +$1.20 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -54,19 +54,19 @@ after the precommitted $46.10 fee-net switch was crossed: three FOK fills
 raised pUSD by **$46.153480**, with only sub-precision dust left.
 
 The three HLE p(NO) priors remain **.15/.20/.25** for next Gemini Pro debut,
-Gemini >=50 and OpenAI >=55. The exact source currently has 60 rows, with
-Gemini below 50 and OpenAI below 55. Its 22:03 source hash is byte-identical to
-the earlier reads despite a bare-request access denial. The three central
-terminal values total $50.52 versus about $13.52 of current exits, so all
-remain holds and the Dec. 31 hold-only rule blocks enlargement. Every other direct and
-protected group screen is also a hold. The only live order is a zero-fill maker
+Gemini >=50 and OpenAI >=55. The exact 60-row source and its hash remain
+unchanged, with Gemini below 50 and OpenAI below 55. Their current fee-net
+exits total about $13.81 versus $50.52 of central terminal value and still sit
+below the recorded stress floors, so all remain holds and the Dec. 31
+hold-only rule blocks enlargement. Live criteria rereads found no drift in the
+Trump or Clarity contracts. Every other direct and protected-group screen is
+also a hold. The only live order is a zero-fill maker
 sell for **28 Trump-out NO at 0.97**. Deployable pUSD is **$33.762410**.
-Another **$35.0002 native aUSDC** earns the live Polygon Aave rate after the
+Another **$35.0007 native aUSDC** earns the live Polygon Aave rate after the
 legacy USDC.e reserve froze new supply; existing legacy aUSDC.e is about $3.5013.
-The midpoint-to-depth gap is $6.84; approximate whole-account
-depth-realizable value is $157.56. The
-next active portfolio catalyst is the exact Arena Text Overall source snapshot
-on Sep. 30.
+The midpoint-to-depth gap is $6.25; approximate whole-account
+depth-realizable value is $157.82. The next active portfolio catalyst is the
+exact Arena Text Overall source snapshot at 16:00 UTC on Sep. 30.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
