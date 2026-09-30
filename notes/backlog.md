@@ -1,5 +1,20 @@
 # Polyclaude Backlog
 
+## Sep-30 06:07 current update
+
+- **Periodic state — HOLD all / no asset action:** six indexed legs remain at
+  $89.91 cost, $75.75 midpoint and $68.70 indicative fee-net depth.
+  Authoritative bankroll is **$164.27**, approximate whole-account
+  depth-realizable value is **$157.22**, cumulative realized P&L remains
+  **+$1.20**, and the Trump-out 28-NO maker sell at .97 remains zero-fill.
+- No new held-position alert or thesis break appeared. The exact HLE source and
+  Trump/Clarity criteria hashes remain unchanged; all exits remain holds. The
+  Arena Text Overall snapshot is due at 16:00 UTC, with no pre-snapshot entry.
+- Earlier consistency subprocess exits recovered. The latest scheduled report
+  succeeded, and a fresh bounded rerun exited zero with no provisional positive
+  in its explicitly incomplete volume-ranked slice. All four daemons are
+  exact-one/current. No Telegram summary was sent.
+
 ## Sep-30 02:12 current update
 
 - **Full check — HOLD all / no asset action:** six indexed legs have $89.91

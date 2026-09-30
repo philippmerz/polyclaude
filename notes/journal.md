@@ -21168,3 +21168,33 @@ its running process; disk retains about 1.0 GiB free. Weekly P&L and the
 Sep. 27 world-state review remain current. The exact Arena Text Overall
 snapshot is due today at 16:00 UTC; there is no pre-snapshot entry. No asset,
 order, or probability prior changed, so no Telegram summary was sent.
+
+## 2026-09-30 06:00–06:07 UTC — periodic review; transient scanner exit recovered
+
+Six indexed Polymarket legs remain at **$89.91 cost, $75.75 midpoint and
+$68.70 indicative fee-net depth**. The authoritative whole-account mark is
+**$164.27**, giving an approximate depth-substituted value of **$157.22**;
+cumulative settled P&L remains **+$1.20**. The sole live order is still the
+zero-fill 28-share Trump-out NO maker sell at .97. UMA remains clean at 40
+tracked positions and 38 refreshed Gamma markets, while Ostium remains empty.
+
+No post-02:12 news item affects a held contract. The exact 60-row HLE source
+retains SHA-256
+`86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`,
+and the Trump and Clarity description hashes remain unchanged. Current HLE
+fee-net exits are about $3.61/$6.90/$2.75 versus recorded stress floors of
+$10.14/$8.17/$2.85. The Clarity structure and Trump leg also remain holds.
+**HOLD all / NO ADD.** The Arena Text Overall resolving-source snapshot remains
+due at 16:00 UTC; the source still shows Sep. 25 data, so there is no
+pre-snapshot entry.
+
+The opportunity log showed transient consistency subprocess exits at 02:10
+and 02:40. Later scheduled runs resumed successfully. A fresh bounded manual
+rerun at 06:06 streamed 5,002 open markets, retained 3,124 validated neg-risk
+markets across 324 events, and returned exit zero with **0 provisional positive
+structural baskets** after the sequential depth pass. Its market-cap-bounded
+coverage remains explicitly incomplete and one malformed event was excluded,
+so this is a clean recovery check rather than a comprehensive exchange-wide
+zero. All four daemons are exact-one/current and disk retains about 1.0 GiB.
+No asset, order, source, or probability prior changed, so no Telegram summary
+was sent.
