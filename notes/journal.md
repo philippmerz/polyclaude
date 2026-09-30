@@ -21198,3 +21198,34 @@ so this is a clean recovery check rather than a comprehensive exchange-wide
 zero. All four daemons are exact-one/current and disk retains about 1.0 GiB.
 No asset, order, source, or probability prior changed, so no Telegram summary
 was sent.
+
+## 2026-09-30 10:00–10:03 UTC — periodic review; no action before Arena clock
+
+Six indexed Polymarket legs remain at **$89.91 cost, $74.29 midpoint and
+$68.25 indicative fee-net depth**. The authoritative whole-account mark is
+**$162.77**, giving an approximate depth-substituted value of **$156.73**;
+cumulative settled P&L remains **+$1.20**. The sole live order is still the
+zero-fill 28-share Trump-out NO maker sell at .97. UMA remains clean at 40
+tracked positions and 38 refreshed Gamma markets, Ostium remains empty, all
+four daemons are exact-one/current, and disk retains about 1.0 GiB.
+
+The only new news item is NPR discussion of Trump rejecting Iran's proposal.
+It contains no resignation, removal or incapacity fact and therefore has no
+causal channel to the held Trump contract. The exact HLE source remains the
+same 60-row SHA-256
+`86c5c52f9d579a9bdbd42c4b97b186cd7a06577f421bd371a6f46bb9221e2177`;
+Trump and Clarity descriptions also retain their recorded hashes. Current
+fee-net HLE exits are about $2.97/$6.90/$2.94 versus central terminal values
+of $25.35/$20.42/$4.75. OpenAI-HLE's exit is now nine cents above its $2.85
+stress value, but it remains $1.81 below central value and no resolving-source
+or thesis fact changed. A taker exit on this hidden-information leg is not
+justified by that small stress-case crossover. **HOLD all / NO ADD.**
+
+Fresh direct cross-event checks found zero midpoint or executable HLE-bound
+violations. MetaMask's 700M-FDV midpoint exceeds launch-by-Dec. 31 by 1.5
+points, but one leg has no book, so the structure is not executable. The
+earlier consistency-scanner recovery remains intact, and no opportunity
+trigger fired. The exact Arena Text Overall source still shows the Sep. 25
+snapshot; today's scheduled observation is at 16:00 UTC, so no pre-snapshot
+entry is warranted. No asset, order, source, or probability prior changed;
+no Telegram summary was sent.

@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Sep-30 10:03 current update
+
+- **Periodic state — HOLD all / no asset action:** six indexed legs remain at
+  $89.91 cost, $74.29 midpoint and $68.25 indicative fee-net depth.
+  Authoritative bankroll is **$162.77**, approximate whole-account
+  depth-realizable value is **$156.73**, and cumulative realized P&L remains
+  **+$1.20**. The Trump-out 28-NO maker sell at .97 remains zero-fill.
+- The new NPR Hormuz item has no held-contract channel. HLE and the
+  Trump/Clarity criteria hashes remain unchanged. OpenAI-HLE's fee-net exit
+  improved to $2.94, barely above its $2.85 stress value but well below $4.75
+  central value; absent a source change, the small stress-case crossover does
+  not justify a hidden-information taker exit. HOLD / NO ADD.
+- Fresh two-leg checks found no executable HLE cross-event edge; MetaMask's
+  1.5-point midpoint implication gap lacks a book on one leg and is not
+  executable. Arena remains due at 16:00 UTC. All four daemons are
+  exact-one/current; no Telegram summary was sent.
+
 ## Sep-30 06:07 current update
 
 - **Periodic state — HOLD all / no asset action:** six indexed legs remain at
