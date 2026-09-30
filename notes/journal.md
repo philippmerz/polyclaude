@@ -21317,3 +21317,32 @@ even though the venue still accepts orders. This post-cutoff observation is
 not an independently archived exact-16:00 snapshot or final settlement proof.
 Retired the expired OpenAI entry watch from the backlog; no entry was made.
 No additional reminder or idle follow-up was scheduled.
+
+## 2026-09-30 17:09–17:29 UTC — broader investment review and venue access
+
+Operator requested ideas beyond Polymarket and offered VM relocation. A
+bounded review used Astra for crypto underwriting and a cheaper agent for
+Ostium metadata/costs, alongside primary-source Cheniere/PWR checks. Ranked
+LNG as the strongest operating-business thesis, UNI as the clearest dated
+near-term event, and PWR as a demand/backlog thesis with valuation risk.
+No sufficient present excess-return/execution case was established, so no
+asset/order/prior changed. Full evidence, prices, cost comparison and
+limitations are recorded in the Sep-30 longterm_watchlist entry.
+
+Independent Governor reads verified UNI Arc proposal 102 Active/unexecuted,
+~10.93M For against 40M quorum, ending at block 26109012 (approximately Oct3
+03:10 UTC at sampled block speed). Added this evidence event to the existing
+backlog. Retained the $3.25 valuation review trigger; corrected UNI's route
+to the demonstrated Arbitrum spot path and refreshed AAVE's stale buyback
+wording. The $7.50 discussion level does not justify a purchase.
+
+Current Ostium terms still restrict EU location/residence/citizenship;
+relocation alone cannot establish owner eligibility. Requested country-only
+residence/citizenship context while continuing independent research; the
+operator then supplied private residence context, which is not stored here.
+No blanket owner restriction is inferred from the current VM location. Index
+carry at the current rate plus spread/opening costs is about 1.52% over 93d,
+requiring about 2.34% SPX price appreciation to match illustrative Aave cash
+before gas. No venue/writer/relocation change was made. Fireworks and other
+external model APIs were not used. Quota probe before research showed 66%
+used/34% headroom; no durable goal, new watcher or idle reminder was created.

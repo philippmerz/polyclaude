@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "updated": "2026-09-27",
-  "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Each entry has a `route` field: 'polyclaude' (script may auto-deploy on trigger) or 'ibkr_surface' (script Telegrams operator on trigger; operator executes via IBKR personal sleeve). Polyclaude horizon constraint per project memory 2026-05-08: bankroll locked to <1y holding horizon. Multi-year plays go to IBKR. Polyclaude-route requires: (a) <1y catalyst clock, (b) EVM-chain accessible (crypto on Uniswap V3 / wrapped tokens) \u2014 equities default to ibkr_surface regardless.",
+  "updated": "2026-09-30",
+  "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Routes identify the venue for a fresh agent review: 'polyclaude' uses project-accessible assets and 'ibkr_surface' goes to the operator's personal brokerage. The monitor does not submit trades; a price or event trigger is an observation, not automatic entry authority. Project positions must fit a less-than-one-year horizon and all current evidence, funding, fee, liquidity and execution checks. Multi-year theses remain brokerage-side research.",
   "triggers": [
     {
       "ticker": "SOL",
@@ -216,10 +216,10 @@
       "coingecko_id": "uniswap",
       "entry_max": 3.25,
       "horizon": "1y",
-      "route": "ibkr_surface",
-      "rationale": "Fresh 2026-08-30 longterm_check: 2/4 PASS near $5.20. A price hit is re-underwriting permission, not an automatic buy: require retained material DEX share plus >=$75M-$100M sustained annualized fee-funded burn, or two full quarters of verified v4/Permissioned Pool fee growth at <=~$3B circulating market cap.",
+      "route": "polyclaude",
+      "rationale": "Sep-30 evidence refresh: retain the $3.25 price review gate; no automatic entry. Arc GovernorBravo proposal 102 is Active and unexecuted, with ~10.93M For against 40M quorum; block 26109012 is the voting deadline. Require actual executable fee activation and sustained burn economics reconciled against the 20M UNI/year treasury growth budget, not gross burn alone. UNI spot is accessible on Arbitrum through the vetted max-output/min-out swap path; a $20 public quote round trip lost 0.607% before gas or funding. Polygon direct pools were not demonstrated. The $7.50 discussion level is not a replacement valuation gate.",
       "added": "2026-08-28",
-      "updated": "2026-08-30"
+      "updated": "2026-09-30"
     },
     {
       "ticker": "HUT",
@@ -278,8 +278,9 @@
       "entry_max": 105.0,
       "horizon": "1y",
       "route": "polyclaude",
-      "rationale": "2026-08-28 triage: price hit is only a review trigger. Require a formal executable AIP restoring automated revenue-funded AAVE purchases at >=$20M/year before a full check or entry. Buybacks remain paused; current protocol growth does not yet accrue tightly enough to holders. Arbitrum spot route is available only through the hardened max-output/min-out swap gate.",
-      "added": "2026-08-28"
+      "rationale": "Sep-30 evidence refresh: the $105 price gate is a review trigger, not an automatic buy. V4/Arc and Base stock launches already occurred. Require funded and executed recurring revenue-funded AAVE purchases with a disclosed cadence, plus a review of incident liabilities. April buyback pause is established, while August/September steward allowances for AAVE do not prove current recurring execution; do not assert that all present buybacks are zero without onchain verification. Arbitrum spot route is available through the hardened max-output/min-out gate, with a $20 round-trip quote loss of 0.612% before gas or funding.",
+      "added": "2026-08-28",
+      "updated": "2026-09-30"
     },
     {
       "ticker": "SKY",

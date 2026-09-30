@@ -2144,6 +2144,8 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
 
 ## Active
 
+- **2026-10-03 [UNI Arc fee expansion — evidence review, no automatic entry]** — Sep-30 independent GovernorBravo reads verified proposal 102 as Active, unexecuted and uncanceled, with about 10.93M UNI For against 40M quorum. Authoritative deadline is block **26,109,012** (rough estimate Oct-3 03:10 UTC; actual block timing controls). At the next existing check after the deadline, verify outcome, queue/execution state and actual fee activation. UNI is about $8.98 after a 74% 30-day rally; retain the $3.25 valuation review gate. Gross burn must be reconciled with the 20M UNI/year treasury growth budget. No new reminder or watcher is needed. Full evidence and venue comparison: Sep-30 entry in `notes/longterm_watchlist.md`.
+
 > **Bounded-run discipline (operator-authorized 2026-09-08; supersedes Aug-28 continuation contract).**
 > Execute each due checklist or event-triggered review once, finish concrete necessary follow-up and
 > verification, then end the turn. Do not create or maintain an indefinite ROI goal, invent more work

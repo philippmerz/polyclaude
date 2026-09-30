@@ -604,3 +604,116 @@ The pre-update live monitor found **zero hits across 34 existing gates**. Both
 new gates are below their fresh check prices; a trigger is permission to
 re-underwrite, not a buy authorization. Both candidates route to the operator's
 IBKR surface, and no polyclaude capital action followed.
+
+## 2026-09-30 — non-Polymarket opportunity review requested by operator
+
+The daily discovery pipeline is predominantly Polymarket; a quiet scanner
+result is not evidence that equities, crypto or cash alternatives lack
+reasonable investment theses. This bounded review used independent crypto
+and venue specialists plus a primary-source equity review. No position,
+order or probability prior changed, and no Fireworks/API spend was incurred.
+The existing generational-mispricing score is not a requirement that every
+positive-EV investment be at a cycle bottom.
+
+### Ranked theses and entry limitations
+
+1. **Cheniere (LNG): strongest operating-business thesis in this review.**
+   [Completed CCL Stage 3](https://lngir.cheniere.com/news-events/press-releases/detail/345/cheniere-announces-substantial-completion-of-ccl-stage-3)
+   raises capacity by over 20%; the last train was turned over August 28.
+   [Q2 guidance](https://lngir.cheniere.com/news-events/press-releases/detail/343/cheniere-reports-second-quarter-2026-results-and-raises)
+   puts company distributable cash flow at $5.3–5.8B and records $1.1B H1
+   share repurchases. The September 29
+   [Petrobras SPA](https://lngir.cheniere.com/news-events/press-releases/detail/346/cheniere-and-petrobras-sign-long-term-lng-sale-and-purchase)
+   adds 0.8 mtpa of contracted sales over 22 years; no immediate quarterly
+   cash-flow increment is assumed. At the $268.05 indicative quote / $56.16B
+   equity capitalization near 17:00 UTC, guided DCF is about 9.4–10.3% of
+   equity value. This is not a shareholder cash yield: DCF excludes expansion
+   capex, and capital also funds debt reduction and projects. Q3 earnings and
+   2027 cash-flow guidance are useful evidence events, with no release date
+   asserted. Capacity execution, debt/project commitments and global LNG
+   oversupply remain risks. Retain the prior $215 price review gate or the
+   funded-FID evidence gate; no demonstrated vetted spot-equity route exists
+   for this portfolio, so current access is the operator's brokerage.
+
+2. **UNI: clearest dated near-term catalyst, but considerable anticipation.**
+   The official [Arc proposal](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287)
+   extends fee collection and burn across v2/v3/v4. Independent public RPC
+   reads of the officially documented GovernorBravo
+   `0x408ED6354d4973f66138C91495F2f2FCbd8724C3` verified proposal 102 as
+   Active, unexecuted and uncanceled at block 26,091,743 (17:18:59 UTC),
+   with 10.931M UNI For against 40M quorum. Its creation transaction
+   [identifies the Arc proposal](https://etherscan.io/tx/0x51fac05c65aa5a8be704316a82b55f82b1cbe475b56756b9198f9e3cf22d3d29).
+   The authoritative end is block 26,109,012, estimated near Oct-3 03:10 UTC
+   at the sampled block rate; passing still requires quorum and subsequent
+   queue/execution. The [official app](https://app.uniswap.org/vote/2/15)
+   separately lists it active.
+   Public CoinGecko/DefiLlama prices near 17:09–17:13 UTC were $8.98, with
+   +74.2% over 30 days and about $5.57B circulating capitalization. The
+   [fee-burn mechanism](https://developers.uniswap.org/docs/protocols/protocol-fee/overview)
+   is real, but holders receive no cash dividend. Trailing public holder
+   revenue was $15.68M/30d, approximately $191M annualized, versus the
+   [20M UNI annual treasury growth budget](https://blog.uniswap.org/unification),
+   worth about $180M at spot. Treasury distribution is neither new minting
+   nor guaranteed selling; gross burn is nevertheless insufficient evidence
+   of net float scarcity. The seven-day revenue pace was weaker.
+   A read-only Arbitrum V3 $20 USDC round trip returned $19.878689,
+   a 0.607% drag before gas/funding; Polygon direct pools were not demonstrated.
+   Retain $3.25 as the valuation review gate. $7.50 alone is not a buy or a
+   replacement gate: even sustained $20M/month burn implies only about 1.93%
+   annual net float reduction after the treasury budget at that price.
+   Verify actual Arc execution and sustainable net burn before revising value.
+
+3. **PWR: grid construction and power bottlenecks, with valuation risk.**
+   [Q2 results](https://investors.quantaservices.com/news-events/press-releases/detail/402/quanta-services-reports-second-quarter-2026-results)
+   report $53.4B total backlog, $33.6B remaining performance obligations,
+   $0.9B quarterly FCF and adjusted diluted EPS of $4.24. These support a
+   real demand-to-earnings channel, but growth includes acquisitions and
+   backlog is not all contracted near-term revenue. The indicative $646.40
+   quote / $98.54B equity capitalization near 17:00 UTC leaves little room
+   for treating the theme itself as an undiscovered edge. Backlog conversion,
+   integration and 2027 guidance are the relevant evidence; retain the
+   $430–470 review range and prior FCF/integration gate. Brokerage access only
+   through the currently established routes.
+
+**AAVE / HYPE alternatives:** AAVE at $161.56 has lower dilution than HYPE,
+but V4 and Arc deployment have already occurred. The
+[April buyback pause](https://governance.aave.com/t/arfc-pause-aave-buybacks/24686)
+is established; the
+[August/September funding allowances](https://governance.aave.com/t/direct-to-aip-august-september-2026-funding-update/25597)
+do not independently verify restarted recurring purchases. A funded, executed
+buyback program with incident liabilities addressed is the useful catalyst.
+A public Arbitrum $20 round trip lost 0.612% before gas/funding. HYPE at about
+$90.83 has real Assistance Fund token accrual, but the public price snapshot
+shows ~$20.19B circulating cap versus ~$86.71B diluted value. Neither a
+new dated Q4 catalyst nor a primary-source near-term distribution schedule
+was established; no new venue setup is justified by this screen.
+
+### Cash/index outside option and venue feasibility
+
+At an illustrative 3.2% Aave rate, cash earns roughly 0.81% over 93 days.
+UNI/AAVE thus require more than about 1.4% gross return simply to match cash
+after the observed two-way swap quote cost, before gas, funding and token risk.
+The specialists' broad subjective return branches did not establish a
+reliable excess return. Scenario weights are not calibrated probabilities;
+no precise alpha claim or buy sizing is derived from them.
+
+Fresh public [Ostium pair](https://builder.prod.bedrock.ostium.io/v1/pairs)
+and depth reads around 17:12–17:14 UTC show 1x US500 technically available
+with $5 minimum collateral, 1bp opening fee and roughly 5.897% annualized
+long rollover. At a constant current rate, 93-day carry is about 1.503%;
+opening plus snapshot spread raise direct drag to about 1.52%, before gas.
+It needs about 2.34% index price appreciation merely to match Aave. Gold's
+corresponding hurdle is about 2.83%; US100 had no long capacity in the last
+quote. These are USDC-settled synthetic perps without ETF dividends. Future
+carry is variable, not an exact prepaid lifecycle charge.
+
+Current [Ostium terms](https://docs.ostium.com/legal/terms-of-use) restrict
+EU location, residence or citizenship and include API/code use in Services.
+Finland VM relocation alone does not establish account-owner eligibility.
+The operator offered relocation and supplied additional private residence
+context. This does not establish every owner-eligibility criterion; no blanket
+owner restriction is inferred from the present VM location. No relocation was
+performed, and the legacy writer remains blocked pending eligibility plus
+safe allowance/slippage/final-fill support.
+The prior spot-index route needs a fresh all-in quote if reconsidered at the
+larger deployable cash balance; its Sep-10 costs are not current quotes.
