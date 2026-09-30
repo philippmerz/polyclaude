@@ -717,3 +717,49 @@ performed, and the legacy writer remains blocked pending eligibility plus
 safe allowance/slippage/final-fill support.
 The prior spot-index route needs a fresh all-in quote if reconsidered at the
 larger deployable cash balance; its Sep-10 costs are not current quotes.
+
+### Sep-30 17:40–17:47 UTC — dYdX venue shortlist and broad crypto exposure
+
+dYdX was initially scoped on June 2, but no account integration or funded
+position was created. Refreshed its public mainnet indexer successfully from
+the present VM: 296 perpetual markets, with BTC/ETH active. Snapshot oracle
+prices were about $83,988/$2,679 and quantity increments .0001 BTC/.001 ETH
+(about $8.40/$2.68). These are increments, not independently verified minimum
+order tickets. [Current endpoints](https://docs.dydx.xyz/interaction/endpoints)
+and [market metadata](https://indexer.dydx.trade/v4/perpetualMarkets).
+
+[Published base fees](https://docs.dydx.xyz/concepts/trading/rewards) are
+1bp maker/5bps taker at our volume tier, before rebates or discounts.
+Trading itself has no gas fee; funding and deposit/withdrawal/bridge costs
+are separate. Do not budget an incentive until eligibility and the current
+on-chain rate are verified. Sep-30 17:44 orderbook snapshots had roughly
+2.38bps BTC and 9.71bps ETH top-of-book spreads; displayed first-level depth
+was thin, so these are not full-size executable quotes.
+
+The 168 hourly settled funding rows Sep-23 18:00 through Sep-30 17:00 sum to
++0.0082% BTC and -0.02055% ETH. Simple annualization is +0.43%/-1.07% of
+perpetual notional, respectively; positive pays shorts, negative pays longs.
+These are historical observations, not forward rates. A hedged BTC carry
+position would also tie up spot capital plus collateral. This sample does
+not establish an attractive cash-and-carry alternative to Aave.
+[BTC history](https://indexer.dydx.trade/v4/historicalFunding/BTC-USD?limit=168),
+[ETH history](https://indexer.dydx.trade/v4/historicalFunding/ETH-USD?limit=168),
+[funding mechanics](https://docs.dydx.xyz/concepts/trading/funding).
+
+Both managed EVM wallets were re-read. ARB on Arbitrum and WETH on
+Arbitrum/Base/Polygon are zero. Native ETH totals about .000513 and POL
+50.141866, about $7.02 combined at fresh validated prices, held for gas.
+Aave USDC/aUSDC.e deposits total about $46.39; these are dollar credit and
+protocol exposure, not long BTC/ETH. No deliberate broad BTC/ETH/SOL
+position exists in the managed portfolio records. This is a check of known
+wallets/assets, not an exhaustive unknown-token inventory or an audit of
+the operator's personal accounts.
+
+Add dYdX to the venue shortlist for directional shorts, tactical positions
+and attractive hedged funding. Compare spot BTC/ETH against a
+fully collateralized perpetual for any broad directional allocation; the
+venue does not itself establish a return thesis. Its
+[software terms](https://dydx.exchange/v4-terms) do not list a blanket EU
+restriction like Ostium's, but owner eligibility and the selected service's
+terms still require verification before funding. No account, key, transfer,
+order or new execution path was created.

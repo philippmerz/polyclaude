@@ -21346,3 +21346,23 @@ requiring about 2.34% SPX price appreciation to match illustrative Aave cash
 before gas. No venue/writer/relocation change was made. Fireworks and other
 external model APIs were not used. Quota probe before research showed 66%
 used/34% headroom; no durable goal, new watcher or idle reminder was created.
+
+## 2026-09-30 17:40–17:47 UTC — dYdX and existing crypto exposure
+
+Operator asked whether dYdX is on the radar and whether the managed account
+already has general crypto exposure. The June-2 venue scoping had included
+dYdX, but it was never integrated or funded. Fresh public mainnet reads
+worked from the VM; refreshed the venue shortlist and fee/funding evidence
+in longterm_watchlist. Published base fees are 1bp maker/5bps taker before
+incentives. The recent 168-hour BTC funding sample annualizes to only +0.43%
+of perp notional, before the spot-plus-margin capital denominator, fees and
+transfers; it does not establish a competitive hedged yield trade.
+
+Re-read both managed EVM wallets plus explicit ARB/WETH balances. ARB and
+WETH are zero on the checked chains; gas ETH/POL is about $7.02 at fresh
+validated quotes. Aave USDC deposits total about $46.39 and do not provide
+BTC/ETH price exposure. Portfolio records contain no deliberate broad
+crypto position. The configured-token readers are not an exhaustive audit
+of unknown assets or personal accounts. Broad BTC/ETH underwriting remains
+distinct from selecting a venue. No transaction, new account, key, watcher
+or execution-code change; private operator context was not recorded.
