@@ -600,3 +600,100 @@ _indexed = las.index_polymarket([{
 check("scanner YES price uses outcome label", _indexed[0]["yes_price"], .3)
 check("scanner index preserves complete PM curve",
       las.polymarket_buy_fee(.4, _indexed[0]["fee_market"]), .0144)
+
+# ---------------------------------------------------- held residual inventory
+# Model the API's default size filter, rather than returning dust regardless of
+# the request. Omitting sizeThreshold=0 must lose the row and fail these checks.
+import contextlib
+import io
+from types import SimpleNamespace
+from unittest.mock import patch
+
+import httpx
+import positions as positions_report
+import position_state_audit as state_audit
+
+_inventory_rows = [
+    {"slug": "ordinary", "outcome": "No", "size": 2,
+     "initialValue": 1, "currentValue": 1.2, "avgPrice": .5,
+     "curPrice": .6, "percentPnl": 20, "title": "Ordinary",
+     "redeemable": False, "conditionId": "0xordinary", "asset": "ordinary-no"},
+    {"slug": "trump-residual", "outcome": "No", "size": .33,
+     "initialValue": .2907, "currentValue": .3151, "avgPrice": .8809,
+     "curPrice": .955, "percentPnl": 8.39, "title": "Trump residual",
+     "redeemable": False, "conditionId": "0xtrump", "asset": "trump-no"},
+    {"slug": "settled-winner", "outcome": "Yes", "size": 2,
+     "initialValue": 1, "currentValue": 2, "curPrice": 1, "redeemable": True},
+    {"slug": "settled-loser", "outcome": "Yes", "size": 1,
+     "initialValue": .3, "currentValue": 0, "curPrice": 0, "redeemable": True},
+]
+_inventory_requests = []
+_book_requests = []
+
+
+def _filtered_inventory(request):
+    threshold = float(request.url.params.get("sizeThreshold", "1"))
+    return [row for row in _inventory_rows if row["size"] > threshold]
+
+
+def _inventory_transport(request):
+    if request.url.path == "/positions":
+        _inventory_requests.append(request)
+        return httpx.Response(200, json=_filtered_inventory(request))
+    if request.url.path == "/markets":
+        _book_requests.append(request.url.params["slug"])
+        return httpx.Response(200, json=[{
+            "clobTokenIds": '["ordinary-no"]', "outcomes": '["No"]',
+            "takerBaseFee": None,
+        }])
+    if request.url.path == "/book":
+        return httpx.Response(200, json={"bids": [{"price": ".5", "size": "2"}]})
+    raise AssertionError(f"unexpected request: {request.url}")
+
+
+_real_httpx_client = httpx.Client
+
+
+def _inventory_client(*args, **kwargs):
+    return _real_httpx_client(transport=httpx.MockTransport(_inventory_transport))
+
+
+def _inventory_get(url, *, params, **kwargs):
+    with _inventory_client() as client:
+        return client.get(url, params=params)
+
+
+_default_request = httpx.Request("GET", bankroll.DATA_API + "/positions")
+check("default API hides sub-one-share residual",
+      "trump-residual" in [r["slug"] for r in _filtered_inventory(_default_request)], False)
+with patch.object(httpx, "get", _inventory_get), patch.object(httpx, "Client", _inventory_client):
+    with patch.dict(bankroll.PM_STATE, {}, clear=True):
+        _warnings = []
+        _complete_mid = bankroll.pm_positions_mtm("0xwallet", _warnings)
+        check("bankroll retains dust and settled payout in total", _complete_mid, 3.5151)
+        check("bankroll retains unresolved dust cost", bankroll.PM_STATE["cost"], 1.2907)
+        check("bankroll keeps settled rows out of open midpoint", bankroll.PM_STATE["mid"], 1.5151)
+        check("dust never enters minimum-lot depth walk", bankroll.PM_STATE["realizable"], 1)
+        check("resolved winning claim still has fee-free value", bankroll.PM_STATE["sleeve_realizable"], 3)
+        _complete_realized = bankroll.realized_split(
+            180 + _complete_mid, 170, 5, bankroll.PM_STATE["mid"],
+            bankroll.PM_STATE["cost"], bankroll.PM_STATE["realizable"])["realized"]
+        _filtered_realized = bankroll.realized_split(183.2, 170, 5, 1.2, 1)["realized"]
+        check("restoring dust corrects realized by remaining cost",
+              _complete_realized - _filtered_realized, .2907)
+    _printed = io.StringIO()
+    with patch.object(positions_report.Wallet, "load", return_value=SimpleNamespace(address="0xwallet")), contextlib.redirect_stdout(_printed):
+        positions_report.main()
+    check("positions display includes residual", "Trump residual" in _printed.getvalue(), True)
+    check("positions open totals include dust cost and midpoint",
+          "OPEN TOTAL  cost $1.29  mtm $1.52" in _printed.getvalue(), True)
+    check("positions preserve resolved-row separation",
+          "RESOLVED rows excluded from open P&L: 2" in _printed.getvalue(), True)
+    _audit_inventory = state_audit._live_positions()
+    check("claim-insurance inventory retains sub-.5 unresolved token",
+          [(r["slug"], r["size"], r["asset"]) for r in _audit_inventory],
+          [("ordinary", 2, "ordinary-no"), ("trump-residual", .33, "trump-no")])
+check("all three readers explicitly disable API size filtering",
+      [r.url.params.get("sizeThreshold") for r in _inventory_requests], ["0", "0", "0"])
+check("only tradeable ordinary inventory requests a book",
+      _book_requests, ["ordinary", "ordinary"])

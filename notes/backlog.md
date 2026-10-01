@@ -1,5 +1,37 @@
 # Polyclaude Backlog
 
+## Oct-1 02:00 full check — fills reconciled; Gemini risk reduced
+
+- Trump-out's standing SELL 28 NO @ .97 filled at 01:55:12 UTC for $27.16
+  maker cash, no fee. Exact residual .33 shares is retained in accounting
+  and claim insurance. No resting orders remain.
+- Independently reviewed the official Sep-30 Gemini 4 Argon announcement,
+  unchanged resolving HLE chart and literal Google criteria. Root debut-NO
+  prior .15 -> .25 (.12 stress); any-Gemini >=50 NO .20 -> .12 (.03 stress).
+  Sold 100 debut NO for $19.66472 net, $.64745 fee; 69 remain. The trim
+  sacrifices central dollar EV but improves tested joint expected log wealth.
+  Remaining HLE exposure is model-sensitive; HOLD / NO ADD after explicit
+  central, stress and correlation checks, with no hold-until-resolution rule.
+- Closing bankroll $192.40; PM midpoint/depth $57.24/$46.13, cost $54.83.
+  Whole-account depth about $181.29, or $174.25 excluding $7.04 funded gas,
+  before VM/API costs. Settled P&L +$12.94. Swept $50 pUSD through the
+  verified USDC.e/native-USDC route to Aave: $49.995395 supplied at the
+  current 2.82% rate, about $85 native aUSDC now held. All $30.587130 pUSD
+  remains uncommitted for one full-size immediate ticket. Receipts, balances
+  and zero remaining offramp allowance independently verified; DEC-0186.
+- Fixed API dust filtering in accounting and state readers; meaningful
+  financial/claim regressions pass. Added official Google RSS and matching
+  Gemini 4/Argon terms; live title matching and hot-reload path verified.
+  State audit and coverage clean; no overdue decision, winning redemption,
+  Ostium change, carry exit or watchlist hit. Four daemons exact-one/current.
+- Both discovery passes and every emitted context batch were reviewed.
+  Sports candidates failed stressed entry EV; no executable structural edge
+  in the checked slice. Consistency coverage remains explicitly incomplete.
+  No new prediction position. DEC-0183/184/185 record trim, fill and reader/feed changes;
+  DEC-0104's source-error guards are verified, without claiming archive uptime.
+- Next dated work: weekly P&L around Oct. 2; UNI proposal 102 after block
+  26,109,012 (estimated Oct. 3). No new timer or durable goal.
+
 ## Sep-30 22:00 periodic update — Swift order lifecycle complete
 
 - Cancelled the unfilled Swift 10-NO maker bid at .56 using the vetted CLI.

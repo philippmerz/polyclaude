@@ -21734,3 +21734,156 @@ review confirmed four daemons running and 573 MiB disk free, above the
 review; weekly checks are not yet due. No execution code changed or new
 timer/goal created. Sent one material cancellation summary on Telegram
 (message 1065).
+
+### 2026-10-01 02:00 UTC — full check; Trump maker fill and Gemini partial trim
+
+The standing Trump-out SELL 28 NO @ .97 filled at **01:55:12 UTC**.
+Terminal MATCHED size 28 and exhaustive authenticated maker trade
+`d840fc6c-4953-4674-bf5d-68c6e8afed61` reconcile **$27.16 gross/net**, zero
+maker fee. Order `0xa28cb275d1bbf7cf652c7a29460a5c14c10c3abbe58b149929843865ecd623c1`.
+Polygon block **94,743,494** confirms pUSD $60.922410 and **.33 NO** remaining;
+threshold-zero indexed inventory agrees. No dust sale or replacement order.
+DEC-0184 records a partial exit; the underlying forecast is still ungraded.
+
+Independently read Google's dated primary
+[Gemini 4 Argon announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/),
+published Sep-30 20:00 UTC. It announces restricted initial access and later
+broader access, without a Pro label or HLE score. The
+[API changelog](https://ai.google.dev/gemini-api/docs/changelog) still ends at
+Sep-22 Flash TTS. The uncached [resolving chart API](https://dashboard.safe.ai/api/models)
+retains 60 rows, SHA-256
+`532d0884bfbca40a05d793a3612594dff96292ed6afc23b5c8f5c712c40865c6`,
+verified again before signing. Gemini remains 46.2, OpenAI 53.6; no new
+qualifying Pro/Argon row or threshold score. A failed browser-tool fetch
+supplied no additional confirmation; live primary HTTP/RSS reads are saved.
+
+Root revised debut-Pro NO **.15 -> .25**, stress .12, range .12-.45:
+.22 no qualifying Pro addition plus .03 below-40/operational NO. Naming
+substitution is an inference; future Pro labeling or Preview-to-GA promotion
+can defeat it. Revised any-Gemini >=50 NO **.20 -> .12**, stress .03,
+range .03-.25, for adverse frontier capability/release progress. Engineering
+benchmarks do not prove HLE >=50. OpenAI NO remains .25, stress .15.
+Both bounded independent skeptic and champion reviews required this source
+revision and opposed an automatic full sweep based on the older prior.
+
+DEC-0183 authorized **100 debut NO** FOK, raw limit .18, after exact
+criteria, identity, UMA, fee, account, source and on-chain checks. Final
+POST/books age was **7.4 seconds**, with full depth. The verified fill used
+70.64 @ .204, 5 @ .203, 21.11 @ .201 and 3.25 @ .198. Gross **$20.312170**,
+net **$19.664720**, actual taker fee **$.647450**, reconciled to pUSD. Order
+`0xf6d068bae2f16cb26f30b1a6b1ee987458e590f64784f1309011a737de91c71f`;
+transaction `0xa82db7f493f9eb15e9f132b982dfce4ff70cacc1c9b351453acba0f93c5846ed`.
+Receipt status 1, block **94,744,315**; independent post-flight block
+94,744,367, confirmed authenticated trade and indexed inventory all show
+**169 -> 69 shares** and pUSD **$80.587130**. Orders and BUY reservations
+are empty. A local fee-helper argument error and stale initial GET quote
+were rejected before signing; corrected preflight was rerun in full.
+
+The trim gives up **$5.33528 central expected dollar payoff** at p=.25;
+its purpose is expected compounded return under concentrated terminal risk.
+Explicit D/G/O NO states, with probabilities, were central
+111:.08, 101:.12, 100:.05, 010:.04, 001:.05, 000:.66; stress
+111:.02, 101:.06, 100:.04, 010:.01, 001:.07, 000:.80.
+At conservative non-HLE wealth $137.78 and the earlier $18.80958 net quote,
+selling 100 improved E[log wealth] by .02654 central, .07736 stress, .01567
+independent and .03346 maximally correlated; the .45/.25/.38 upper case
+favored holding (-.06493). These are judgment scenarios, not fitted
+probabilities or proof the position will recover. The central optimum near
+111 shares was flat; 100 preserved more upside rather than chasing precision.
+
+Post-trim sequential exits are debut **$12.46**, Gemini >=50 **$2.17**,
+OpenAI >=55 **$3.31**, versus central terminal EV $17.25/$12.25/$4.75 and
+stress $8.28/$3.06/$2.85. At remaining non-HLE wealth $157.44, full HLE
+exit versus holding changes Elog by **-.05258 central / +.03792 stress**;
+individual central exit deltas are -.00443/-.03538/-.00132. Independence
+favors holding; maximal positive correlation slightly favors exiting debut
+and OpenAI. Small Aave carry does not remove the model disagreement.
+HOLD remaining / NO ADD, with active source/exit review. The midpoint/rho
+Kelly advisory flags debut and Gemini >=50 as oversized; it does not model
+joint terminal loss or executable bids. No hidden-information maker sell at
+fair. Clarity's intact 29/29 pair exits about $28.25 versus its $29 floor.
+
+Found and repaired a real residual-accounting bug: the API's default size
+filter hid .33 Trump shares. All three accounting/state readers now request
+sizeThreshold=0; claim insurance retains every positive unresolved balance.
+This restores $.3151 marked value and increases formula-derived settled P&L
+by $.2907 remaining basis at the observed check. Sub-lot dust is still
+excluded from immediately executable book cash. Regression coverage models
+the default API filter, cost/realized arithmetic, resolved rows and exact
+claim identity: **169 money checks, 43 focused tests pass**. DEC-0185 also
+adds official Google RSS and Gemini 4/Argon Tier-2 terms; the actual live
+Argon title matches. Config is loaded each poll; daemon code did not change.
+
+All scheduled routine and discovery checks completed. Primary 1,000 fetched /
+80 retained; thin-tail 47,001 fetched / 1,377 retained. Reviewed all 2/38
+context batches and complete raw outputs, verified proof hashes and zero
+truncated triggers; execution_ready stays false. Monotonicity's three
+midpoint flags have no executable positive cost advantage. Consistency's
+5,006-market slice quoted 7 of 186 relevant structural groups, with six
+quote failures and 173 unquoted; **coverage is incomplete**, not a universal
+no-edge claim. TYLOO's .247/.248 worker fair at .20 ask fails the .10 stress
+haircut against .208 fee-inclusive cost. Other sports, macro and favorite
+surfaces supplied no independently robust entry. No new position.
+
+Wallet/crypto/Ostium checked: zero Ostium trades/limits or state change.
+No carry exit, watchlist hit, winning redemption or overdue decision.
+DEC-0104's HTTP/error/empty/disjoint source guards pass **53 regressions**;
+this grades engineering behavior, not historical archive uptime. State audit
+CLEAN: six indexed legs including dust plus one retained deindexed losing
+claim. News coverage clean; no new post-journal structured material alert.
+Four daemons exact-one, absolute-path, newer than source; disk **538.5 MiB**
+free, above 512 MiB guard. Weekly P&L Sep-25 and world-state Sep-27 are not
+late; next dated reviews are Oct-2 P&L and UNI proposal 102 after block
+26,109,012 (estimated Oct-3). No new timer, Fireworks spend or durable goal.
+
+The 02:39 authoritative bankroll is **$192.38**; PM cost/midpoint/depth
+**$54.83/$57.24/$46.19**. Approximate whole-account depth is **$181.32**,
+or **$174.30 excluding $7.02 separately funded gas** versus $170 trading
+capital (+2.5%), before VM/API costs. Cumulative settled P&L **+$12.95**.
+Sequential midpoints/depth are planning estimates, not guaranteed proceeds.
+Full evidence is gitignored under logs/tick_20261001T020001_routine/,
+logs/tick_20261001T020001_discovery/ and data/tick_20261001T020001/.
+
+At 02:48–03:01, completed the cash-management follow-up (DEC-0186).
+Native-USDC direct offramp is PAUSED; USDC.e Aave new supply is frozen.
+The working route is pUSD -> USDC.e -> native USDC -> existing Aave V3.
+A cheaper-agent independent check quoted all four fee tiers, verified live
+2.8199% native supply, ample withdrawal liquidity and a successful withdrawal
+simulation. Tier 100 dominated; higher-tier pools were severely depleted.
+At a constant rate, $50 earns about $.355 through year-end against about
+$.152 conservative round-trip cost. Retain **$30.587130 pUSD** for one
+full-size immediate ticket rather than assume every dollar stays idle.
+
+The first unwrap command confirmed exact-$50 approval, then stopped on
+`TransferFromFailed()` simulation **before any unwrap was signed**. Both
+independent RPCs subsequently confirmed unchanged cash, allowance 50 and
+successful simulation. This is consistent with post-approval read lag,
+not proof of a persistent route defect. A fresh vetted CLI then unwrapped
+**once**; no ambiguous broadcast was retried. Exact Unwrapped event and
+balance changes confirmed 50 pUSD -> 50 USDC.e. The fresh best-output swap
+returned **49.995395 native USDC**, above the independent 49.95 floor and
+stricter signing-time 49.970397 floor. Supplied that exact amount after live
+reserve, allowance and successful supply-call checks.
+
+Cash-route transactions: approval
+`0x6e2afab30eacf009511e364dcac89ead4ea54ff59031f9b1a8b4d127887c2dca`;
+unwrap `0xd78ca1622cf58205931bdf473a9859f73ca81ad1ec864c9476a69015d878362b`;
+swap `0xe1efbba2f1b0805dbc43c14118cfbedd9847130d3c9001d6c4caa5f78c7a8806`;
+supply `0xdf64559aa6f75912e651884a19d12a94c91ad6d9eadf1fd48a52e68cf2379fcb`.
+Independent Polygon block **94,745,677** confirms all four status-1 receipts,
+pUSD **30.587130**, native aUSDC **84.999041**, loose native USDC .095025,
+USDC.e zero and **offramp allowance zero**. Conversion cost $.004605;
+actual total gas .1338862813 separately funded POL, about $.015 at the
+current quote. Cash management is not trading profit or a graded APY forecast.
+
+Closing 03:00 authoritative bankroll **$192.40**; PM midpoint/depth
+**$57.24/$46.13**, cost $54.83. Whole-account indicative depth **$181.29**,
+or **$174.25 excluding $7.04 funded gas**, +2.5% versus $170 before VM/API
+costs. Settled P&L **+$12.94**. State audit remains clean, no new structured
+material alert, no new prediction-market entry or resting order.
+
+Sent one material 585-character Telegram summary, message **1066**.
+Scoped source/record diff, JSON and credential-pattern audit pass. Financial
+reader and claim tests are recorded above; the required money-math hook also
+runs at commit. Unrelated runtime cache, dispatcher and alert-log changes are
+left unstaged. No additional follow-up is scheduled.

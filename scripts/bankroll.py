@@ -187,7 +187,7 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
     """
     try:
         r = httpx.get(f"{DATA_API}/positions",
-                      params={"user": addr.lower(), "limit": "100"}, timeout=15)
+                      params={"user": addr.lower(), "limit": "100", "sizeThreshold": "0"}, timeout=15)
         r.raise_for_status()
         rows = r.json()
         mid = sum(p["currentValue"] for p in rows)

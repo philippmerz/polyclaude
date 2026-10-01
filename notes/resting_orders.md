@@ -1,5 +1,20 @@
 # Standing resting orders (GTC post-only makers)
 
+**Oct-1 02:00 check / DEC-0184 — TRUMP MAKER FILLED:** SELL 28 NO @ .97,
+order `0xa28cb275d1bbf7cf652c7a29460a5c14c10c3abbe58b149929843865ecd623c1`,
+matched at 01:55:12 UTC. Exhaustive authenticated maker trades and terminal
+MATCHED size 28 confirm $27.16 gross/net, zero maker fee. Polygon block
+94,743,494 confirmed pUSD $60.922410 and residual **0.33 NO**; threshold-zero
+indexed inventory independently agrees. The residual remains in cost, value
+and claim-insurance records; no below-minimum dust sale or replacement order.
+
+Complete authenticated inventory is **empty** after this fill and the
+subsequent DEC-0183 Gemini debut FOK trim. That taker sale is recorded in the
+journal, not a resting commitment. After the DEC-0186 $50 Aave sweep, final
+verified pUSD **$30.587130** is uncommitted; no BUY reservation or
+reconciliation blocker remains. Entries
+below are dated history and are not live-order inventory.
+
 **Sep-30 22:00 check / DEC-0182 — CANCELLED UNFILLED:** Swift BUY 10 NO @ .56,
 order `0x265e1bb0b25c12d72a89167d88c6df3305de2f1e7260884de63abd5bf596a454`,
 was removed through the vetted cancellation CLI at 22:03:37 UTC. Terminal

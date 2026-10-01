@@ -1,21 +1,21 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-09-28",
+ "_refreshed": "2026-10-01",
  "positions": [
-  {
-   "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
-   "outcome": "No",
-   "size": 169,
-   "conditionId": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
-   "asset": "67951575343428346736827544478449934796473993940055164453800722378542887483258",
-   "negativeRisk": false
-  },
   {
    "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
    "outcome": "No",
    "size": 102.0847,
    "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
    "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
+   "negativeRisk": false
+  },
+  {
+   "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+   "outcome": "No",
+   "size": 69,
+   "conditionId": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
+   "asset": "67951575343428346736827544478449934796473993940055164453800722378542887483258",
    "negativeRisk": false
   },
   {
@@ -35,19 +35,19 @@
    "negativeRisk": false
   },
   {
-   "slug": "trump-out-as-president-before-2027",
-   "outcome": "No",
-   "size": 28.33,
-   "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
-   "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
-   "negativeRisk": false
-  },
-  {
    "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
    "outcome": "No",
    "size": 19,
    "conditionId": "0xd30e3b4e2d6bf4594f44ad982b55435c3add71d3622993b0dee67354defaf598",
    "asset": "2261859210057397360733755370829699556983953980550942465322842594827769255576",
+   "negativeRisk": false
+  },
+  {
+   "slug": "trump-out-as-president-before-2027",
+   "outcome": "No",
+   "size": 0.33,
+   "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+   "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
    "negativeRisk": false
   },
   {

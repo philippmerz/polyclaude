@@ -84,7 +84,7 @@ def _live_positions() -> list[dict]:
         try:
             response = httpx.get(
                 POSITIONS_URL,
-                params={"user": ADDR, "limit": "100"},
+                params={"user": ADDR, "limit": "100", "sizeThreshold": "0"},
                 timeout=25,
             )
             response.raise_for_status()
@@ -107,7 +107,9 @@ def _live_positions() -> list[dict]:
                     raise ValueError(f"position row {index} has invalid size") from exc
                 if not math.isfinite(size) or size < 0:
                     raise ValueError(f"position row {index} has invalid size")
-                if size > MIN_LIVE_SHARES:
+                # Claim insurance covers every held token, including residuals
+                # below the liquidation minimum after a partial sale.
+                if size > 0:
                     slug = position.get("slug")
                     if not isinstance(slug, str) or not slug.strip():
                         raise ValueError(

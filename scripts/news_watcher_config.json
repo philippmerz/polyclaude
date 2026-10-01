@@ -79,6 +79,10 @@
   {
    "name": "Guardian Taylor Swift",
    "url": "https://www.theguardian.com/music/taylor-swift/rss"
+  },
+  {
+   "name": "Google The Keyword",
+   "url": "https://blog.google/rss/"
   }
  ],
  "tier1_keywords": [
@@ -340,10 +344,13 @@
   "clarity act",
   "crypto market structure",
   "Taylor Swift",
-  "\u30c6\u30a4\u30e9\u30fc\u30fb\u30b9\u30a6\u30a3\u30d5\u30c8"
+  "\u30c6\u30a4\u30e9\u30fc\u30fb\u30b9\u30a6\u30a3\u30d5\u30c8",
+  "gemini 4",
+  "gemini argon"
  ],
-  "_trump_approval_note": "Trump approval coverage added 2026-09-18 for the short-dated held 38.5-38.9 YES bucket. The exact Datawrapper source is checked separately before close; tier 2 catches broader source/methodology reporting. Prune after the event resolves.",
-  "_duma_note": "Duma coverage added 2026-08-28 for the held 295-339 equal-share range. Tier 2 is appropriate because forecasts/results need judgment, not an emergency tick. Prune after the September 2026 election resolves.",
+ "_trump_approval_note": "Trump approval coverage added 2026-09-18 for the short-dated held 38.5-38.9 YES bucket. The exact Datawrapper source is checked separately before close; tier 2 catches broader source/methodology reporting. Prune after the event resolves.",
+ "_duma_note": "Duma coverage added 2026-08-28 for the held 295-339 equal-share range. Tier 2 is appropriate because forecasts/results need judgment, not an emergency tick. Prune after the September 2026 election resolves.",
  "_lake_america_note": "Lake America coverage added 2026-08-28 for the held Google Maps-by-August-31 catalyst. The distinctive phrase is Tier 2 because rollout evidence needs criteria-aware review. Prune after resolution.",
- "_gta_views_note": "Grand Theft Auto coverage added 2026-08-31 for the held one-week official-YouTube threshold. Tier 2 catches material distribution/news catalysts; the exact counter is measured separately every scheduled tick through the Sep-4 endpoint. Prune after resolution."
+ "_gta_views_note": "Grand Theft Auto coverage added 2026-08-31 for the held one-week official-YouTube threshold. Tier 2 catches material distribution/news catalysts; the exact counter is measured separately every scheduled tick through the Sep-4 endpoint. Prune after resolution.",
+ "_gemini_argon_note": "Oct-1 primary-source repair: the Sep-30 Gemini4Argon release was absent from configured feeds and evaded older Pro-only phrases. Official Google RSS plus Gemini4/Argon names cover Pro and non-Pro variants for both held HLE contracts; classification remains criteria-aware Tier2, not an automatic trade."
 }

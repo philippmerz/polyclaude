@@ -1,5 +1,5 @@
 {
-  "next_id": 183,
+  "next_id": 187,
   "decisions": [
     {
       "id": 1,
@@ -2047,9 +2047,10 @@
         "HLE"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Engineering guard checks PASS: 53 source_freeze_check regressions pass, including HTTP errors, empty parses and disjoint-inventory ambiguity. The current Jul3-to-live HLE comparison still reports the expected real source additions instead of falsely certifying a freeze. An independent current-source HTTP403 was treated as unavailable, not an empty board. This grades the guard behavior; it does not claim uninterrupted historical archive availability.",
+      "calibration_delta": "Scaffolding verification, not a market probability or trading return. Required error and ambiguity handling is demonstrated by the regression suite; past real control evidence remains in the Aug31 journal.",
+      "lesson": "An unavailable source is missing evidence. Never convert an HTTP error or disjoint empty parse into proof that a resolving source is frozen.",
+      "resolved_at": "2026-10-01T02:35:10Z"
     },
     {
       "id": 105,
@@ -3652,6 +3653,180 @@
       "calibration_delta": null,
       "lesson": "Maker value requires an actual fill. A positive conditional entry EV does not justify counting an unfilled bid as deployment or profit. Cancel the unfilled remainder at the recorded deadline without automatic renewal or chasing; retain the full reservation until terminal order state, exhaustive trade history and cumulative buys agree after the grace period.",
       "resolved_at": "2026-09-30T22:10:01Z"
+    },
+    {
+      "id": 183,
+      "timestamp": "2026-10-01T02:24:11Z",
+      "type": "size_change",
+      "thesis": "Update Gemini debut NO prior .15 to .25 (.12-.45) and highest-Gemini NO .20 to .12 (.03-.25) after independently reading the Sep30 official Argon announcement and literal chart criteria. Argon is non-Pro in the release prose and lacks a current HLE row/score; naming substitution helps the Pro-only NO while frontier rollout harms any-Gemini>=50 NO. Authorize a bounded 100-share debut-NO FOK trim at raw limit .18 only after current fee, identity, source, depth, account and on-chain checks. This sacrifices central dollar EV at .25 but reduces common terminal loss and improves modeled expected log wealth; retain69shares, not full liquidation. Upper .45 scenario favors holding, so this is model-sensitive and not source proof.",
+      "confidence": "low",
+      "prediction": "For100shares expected fresh netcash about18.8, versus25.0 central terminal expectation. Explicit joint states withD/G/O NO marginals .25/.12/.25 and nonHLEwealth137.78 show central deltaElogabout+.0265, stress+.0774, independence+.0157, uppercase-.0649. A limit .18 bounds netcashfloor17.4096 at current4%linear curve. No new entry or speculative redeployment; verify all actual cash, fees, fills and169->69 on-chain shares after submission.",
+      "size_usd": 18.81,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "hle",
+        "correlated-risk",
+        "partial-trim",
+        "argon"
+      ],
+      "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "execution": {
+        "status": "confirmed",
+        "order_id": "0xf6d068bae2f16cb26f30b1a6b1ee987458e590f64784f1309011a737de91c71f",
+        "tx": "0xa82db7f493f9eb15e9f132b982dfce4ff70cacc1c9b351453acba0f93c5846ed",
+        "sold_shares": 100,
+        "remaining_shares": 69,
+        "gross_proceeds": 20.31217,
+        "net_proceeds": 19.66472,
+        "taker_fee": 0.64745,
+        "verified_at": "2026-10-01T02:28:11.049510+00:00",
+        "receipt_block": 94744315,
+        "pusd_after": 80.58713,
+        "forecast_graded": false
+      },
+      "post_trim_review": {
+        "at": "2026-10-01T02:41:45Z",
+        "remaining_shares": 69,
+        "indicative_exit_net": 12.46,
+        "central_terminal_ev": 17.25,
+        "stress_terminal_ev": 8.28,
+        "central_joint_delta_Elog_full_exit": -0.004432,
+        "stress_joint_delta_Elog_full_exit": 0.035426,
+        "assessment": "Hold remaining 69 with no add. Central/independent and stressed/comonotonic models disagree; midpoint Kelly is advisory, not an executable price or a fitted joint outcome model."
+      }
+    },
+    {
+      "id": 184,
+      "timestamp": "2026-10-01T02:35:10Z",
+      "type": "size_change",
+      "thesis": "The standing post-only Trump-out SELL28NO at.97 filled at01:55:12UTC onOct1. Exhaustive authenticated trades confirm maker role and28shares; terminal order isMATCHED, no open orders remain. Polygon cash increased exactly27.16 and0.33NO remains, verified both on-chain and with threshold-zero indexed inventory. No new maker order or taker dust sale.",
+      "confidence": "high",
+      "prediction": "Operational fill is already proven:27.16pUSD gross/net maker cash, no maker fee, residual0.33shares. Trump termination forecast remains unresolved; no full-position closure or resolved-market claim.",
+      "size_usd": 27.16,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "maker-fill",
+        "partial-exit",
+        "residual"
+      ],
+      "slug": "trump-out-as-president-before-2027",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "execution": {
+        "status": "confirmed",
+        "order_id": "0xa28cb275d1bbf7cf652c7a29460a5c14c10c3abbe58b149929843865ecd623c1",
+        "maker_trade_id": "d840fc6c-4953-4674-bf5d-68c6e8afed61",
+        "sold_shares": 28,
+        "remaining_shares": 0.33,
+        "gross_proceeds": 27.16,
+        "net_proceeds": 27.16,
+        "maker_fee": 0,
+        "verified_at": "2026-10-01T02:06:21.969081+00:00",
+        "chain_block": 94743494,
+        "pusd_after": 60.92241,
+        "forecast_graded": false
+      }
+    },
+    {
+      "id": 185,
+      "timestamp": "2026-10-01T02:35:10Z",
+      "type": "scaffolding",
+      "thesis": "The API default position-size filter hid the0.33Trump residual after a28share sale, understating PM value and derived settled P&L by remaining basis. Explicit sizeThreshold0 inbankroll/positions/state-audit and positive-balance audit retention restore truthful inventory and claim insurance without treating sub-lot dust as executable cash. Add officialGoogleRSS andGemini4/Argon Tier2 terms because a newfrontier non-Pro announcement evaded theold feed/keyword set.",
+      "confidence": "high",
+      "prediction": "ThroughOct31 every positive indexed residual is included inPM cost/midpoint and claim snapshots, resolved rows remain separated, and minimum-lot dust is excluded from book cash. The observed correction adds0.3151marked value and0.2907to the cash-based realized split. Current/next Gemini4orArgon named official release headlines reach criteria-aware review without automatic execution.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-31",
+      "tags": [
+        "accounting",
+        "claim-insurance",
+        "news-coverage"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 186,
+      "timestamp": "2026-10-01T02:51:01Z",
+      "type": "size_change",
+      "thesis": "Park 50 of the verified 80.587130 idle pUSD in existing native Polygon Aave USDC, retaining 30.587130 for one full-size immediate entry. Native direct offramp is paused and legacy Aave supply frozen; use the vetted USDC.e offramp, independently floored best-output stable swap, then live native Aave supply. Fresh rate 2.819899 percent and available withdrawal liquidity support year-end carry above conservative round-trip costs. Liquidity, rate and peg risk remain; this is cash management, not a new directional thesis.",
+      "confidence": "medium",
+      "prediction": "At a constant current rate, 50 earns about 0.355 over 91.9 days. Conservative gas and stable conversion round-trip cost about 0.152, roughly 41 days breakeven; actual fees may be lower. Verify exact 50 unwrap, swap at least49.95 native USDC, actual supplied amount, receipt status, balances and retained pUSD30.587130. No funds move if current route or simulation fails.",
+      "size_usd": 50.0,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "cash-management",
+        "aave",
+        "polygon"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "instrument": {
+        "venue": "Aave V3",
+        "chain_id": 137,
+        "asset": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "pool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
+        "a_token": "0xA4D94019934D8333Ef880ABFFbF2FDd611C762BD"
+      },
+      "execution": {
+        "status": "confirmed",
+        "verified_at": "2026-10-01T03:00:54.803660+00:00",
+        "chain_block": 94745677,
+        "receipts": {
+          "approval": {
+            "tx": "0x6e2afab30eacf009511e364dcac89ead4ea54ff59031f9b1a8b4d127887c2dca",
+            "status": 1,
+            "block": 94745336,
+            "gas_used": 55023,
+            "effective_gas_price": 256355977920,
+            "gas_POL": 0.01410547497309216
+          },
+          "unwrap": {
+            "tx": "0xd78ca1622cf58205931bdf473a9859f73ca81ad1ec864c9476a69015d878362b",
+            "status": 1,
+            "block": 94745447,
+            "gas_used": 157140,
+            "effective_gas_price": 203595583538,
+            "gas_POL": 0.03199300999716132
+          },
+          "swap": {
+            "tx": "0xe1efbba2f1b0805dbc43c14118cfbedd9847130d3c9001d6c4caa5f78c7a8806",
+            "status": 1,
+            "block": 94745485,
+            "gas_used": 187055,
+            "effective_gas_price": 202192012462,
+            "gas_POL": 0.037821026891079405
+          },
+          "supply": {
+            "tx": "0xdf64559aa6f75912e651884a19d12a94c91ad6d9eadf1fd48a52e68cf2379fcb",
+            "status": 1,
+            "block": 94745566,
+            "gas_used": 243845,
+            "effective_gas_price": 204912011359,
+            "gas_POL": 0.049966769409835354
+          }
+        },
+        "p_usd_unwrapped": 50,
+        "actual_native_usdc_supplied": 49.995395,
+        "conversion_cost": 0.004605,
+        "gas_POL": 0.13388628127116825,
+        "balances": {
+          "pusd": 30.58713,
+          "usdce": 0.0,
+          "usdc": 0.095025,
+          "a_usdc": 84.999041
+        },
+        "offramp_allowance_after": 0,
+        "forecast_graded": false
+      },
+      "operational_note": "The first unwrap command confirmed only the exact50 approval, then a TransferFromFailed simulation stopped before unwrap signing. Independent reads on both RPCs proved unchanged funds, allowance50 and successful simulation; consistent with post-approval read lag, not a proven permanent route failure. Fresh vetted CLI then unwrapped once. All four receipts and final balances independently verified; no ambiguous transaction was retried."
     }
   ]
 }

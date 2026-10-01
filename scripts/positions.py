@@ -41,7 +41,7 @@ def resolved_realizable_value(position: dict) -> float | None:
 def main() -> None:
     addr = Wallet.load().address
     with httpx.Client(timeout=15.0) as c:
-        r = c.get(f"{DATA_API}/positions", params={"user": addr.lower(), "limit": "100"})
+        r = c.get(f"{DATA_API}/positions", params={"user": addr.lower(), "limit": "100", "sizeThreshold": "0"})
         r.raise_for_status()
         rows = r.json()
     if not rows:

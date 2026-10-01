@@ -290,7 +290,7 @@ def test_live_positions_retries_rate_limit_then_validates_success(monkeypatch) -
                 "curPrice": "0",
                 "redeemable": True,
             },
-            {"slug": "dust", "size": "0.1"},
+            {"slug": "dust", "size": "0.1", "outcome": "No"},
         ]),
     ]
     sleeps: list[float] = []
@@ -299,7 +299,8 @@ def test_live_positions_retries_rate_limit_then_validates_success(monkeypatch) -
     monkeypatch.setattr(audit.time, "sleep", sleeps.append)
 
     assert audit._live_positions() == [
-        {"slug": "live", "size": "2.5", "outcome": "Yes"}
+        {"slug": "live", "size": "2.5", "outcome": "Yes"},
+        {"slug": "dust", "size": "0.1", "outcome": "No"},
     ]
     assert sleeps == [0.0]
     assert responses == []
