@@ -35,16 +35,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-10-01 03:00 UTC
+## Last audited snapshot — 2026-10-01 06:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 6 |
 | Position cost | $54.83 |
-| Polymarket midpoint | $57.24 |
-| Indicative depth/fee value | $46.13 |
-| Authoritative whole-account mark | $192.40 |
-| Approximate whole-account depth value | $181.29 |
+| Polymarket midpoint | $52.60 |
+| Indicative depth/fee value | $42.90 |
+| Authoritative whole-account mark | $187.80 |
+| Approximate whole-account depth value | $178.10 |
 | Cumulative settled P&L, before VM/API costs | +$12.94 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -75,14 +75,14 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-Another **$85.00 native aUSDC** earns the current 2.82% Polygon Aave rate;
-existing legacy aUSDC.e is about $3.50. The verified $50 pUSD sweep supplied
+Another **$85.00 native aUSDC** earns the Polygon Aave rate (2.82% at the
+03:00 check); existing legacy aUSDC.e is about $3.50. The verified $50 pUSD sweep supplied
 $49.995395 native USDC after conversion, retaining one full-size immediate
 ticket in pUSD. The midpoint-to-depth gap in the timestamped snapshot is
-$11.11. Approximate whole-account depth value excludes sub-lot dust from
-immediately executable cash and includes $7.04 of separately funded gas.
-Excluding gas gives about **$174.25 versus $170 trading capital
-(+2.5%)**, before VM/API operating costs. The next dated research review is
+$9.70. Approximate whole-account depth value excludes sub-lot dust from
+immediately executable cash and includes $7.08 of separately funded gas.
+Excluding gas gives about **$171.02 versus $170 trading capital
+(+0.6%)**, before VM/API operating costs. The next dated research review is
 UNI Arc after proposal 102's deadline at
 block 26,109,012, estimated Oct. 3. dYdX remains an unfunded venue candidate;
 the managed book has no deliberate broad BTC/ETH/SOL allocation.

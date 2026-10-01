@@ -1,5 +1,23 @@
 # Polyclaude Backlog
 
+## Oct-1 06:00 periodic check — no asset action
+
+- Six held legs and exact share counts remain unchanged; authenticated order
+  inventory is empty. pUSD $30.587130 and native aUSDC about $85 remain.
+- Current 60-row HLE dataset has an unchanged hash; no newer Pro/Argon or
+  qualifying threshold score. Official Google RSS has no newer model
+  announcement. UMA has no settlement-status change; debut YES +8.7pp is
+  a wide-book price alert, independently checked against weaker executable
+  NO depth. Priors .25/.12/.25 unchanged; HOLD / NO ADD after stress review.
+- Bankroll $187.80; PM midpoint/depth $52.60/$42.90, cost $54.83.
+  Whole-account depth about $178.10, or $171.02 excluding $7.08 funded gas,
+  before VM/API costs. Settled P&L remains +$12.94; no price-recovery claim.
+- No overdue decision, watchlist hit, new structured news/opportunity alert
+  or state/coverage issue. Four daemons exact-one/current, disk 537 MiB free.
+  Next dated work remains Oct-2 P&L and UNI proposal 102 after block
+  26,109,012 (estimated Oct-3). No new timer or Telegram; price movement
+  alone supplied no new source fact or asset action.
+
 ## Oct-1 02:00 full check — fills reconciled; Gemini risk reduced
 
 - Trump-out's standing SELL 28 NO @ .97 filled at 01:55:12 UTC for $27.16
@@ -2274,7 +2292,16 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
 
 - **2026-09-08 [disk capacity — recovered by authorized scoped housekeeping; hourly guard retained]** — VM expansion is explicitly rejected. After the ledger recovery, authorized manual deletion removed seven obsolete user-owned artifacts (Claude native versions 2.1.170/2.1.219 and five study JSONL files: listing census Jul open/closed, census Apr closed, implication open universe/pairs), **692,874,130 bytes** total; no archives were made. Free space rose from **516,726,784** to **1,209,585,664 bytes** (~1.126 GiB) at 10:23 UTC. Scripts/small results were preserved, current CLI `--version` passed, all four daemon PIDs remained unchanged/live, and key state JSONs were valid. Private histories/inbox/credentials and active logs remain untouched. The old active operator log (~115.7 MB) is non-O_APPEND: do not copy-truncate or rotate it while live; no log policy/restart was implemented. Continue manual, narrowly scoped housekeeping only; heartbeat warning remains <512 MiB and critical <128 MiB, with no automatic deletion.
 
-- **THROUGH 2026-12-31 [HLE source/row cluster — live monitoring after DEC-0089/0096/0102]** — The scheduled Aug-31 full review again validated the instrument against known 2025 changes, passed claude/grok/gemini coverage, and found the live model-results board identical to 2026-01-15. The debut ladder's executable NO asks are now 0.15/0.17/0.31/0.62 for ≥40/45/50/55. The held ≥40 leg remains the cleanest expression at p_no 0.60 / stress 0.45, but the full entry helper rejects the sub-$1 incremental size and the correlated `ai-ships-fast-short` cap is effectively binding; **NO FURTHER ADD / DO NOT CHASE**. The ticket remains 169 NO, $17.60 notional plus $0.62940 fees = $18.22940 gross. CAIS's active July dataset maintenance still prevents treating the frozen results board as organizational abandonment. The direct falsifier is any agi.safe.ai model-row change, especially a catch-up addition of Gemini 3.1 Pro (46.44 on Scale); Google also says 3.5 Pro is coming soon. HLE-specific and Gemini-Pro news coverage remains live. Re-run the validated diff immediately on any alert; treat all HLE legs as one correlated cluster and this thin leg as hold-to-resolution. The old reward experiment remains cap-blocked, unfunded and unproven.
+**Current HLE state, Oct-1:** next-Pro debut NO **69 shares**, any-Gemini
+>=50 NO **102.0847**, OpenAI >=55 NO **19**; priors **.25/.12/.25**, stressed
+**.12/.03/.15**. The 100-share debut trim and Argon review are recorded in
+DEC-0183 and the Oct-1 journal. The resolving API is active and currently
+unchanged, rather than historically frozen. Holdings remain actively
+reviewable under source, executable-exit and joint terminal-risk analysis;
+there is no hold-only rule. Older underwriting below is historical and
+must not replace the current priors or share counts.
+
+- **Historical Aug-31 HLE underwriting after DEC-0089/0096/0102 — superseded by current state above** — The scheduled Aug-31 full review again validated the instrument against known 2025 changes, passed claude/grok/gemini coverage, and found the live model-results board identical to 2026-01-15. The debut ladder's executable NO asks are now 0.15/0.17/0.31/0.62 for ≥40/45/50/55. The held ≥40 leg remains the cleanest expression at p_no 0.60 / stress 0.45, but the full entry helper rejects the sub-$1 incremental size and the correlated `ai-ships-fast-short` cap is effectively binding; **NO FURTHER ADD / DO NOT CHASE**. The ticket remains 169 NO, $17.60 notional plus $0.62940 fees = $18.22940 gross. CAIS's active July dataset maintenance still prevents treating the frozen results board as organizational abandonment. The direct falsifier is any agi.safe.ai model-row change, especially a catch-up addition of Gemini 3.1 Pro (46.44 on Scale); Google also says 3.5 Pro is coming soon. HLE-specific and Gemini-Pro news coverage remains live. Re-run the validated diff immediately on any alert; treat all HLE legs as one correlated cluster and this thin leg as hold-to-resolution. The old reward experiment remains cap-blocked, unfunded and unproven.
   **Sep-10 source correction supersedes the frozen-board premise and old probabilities in this block:** the resolving chart's API actively changed 44→52→58 rows and already contained Gemini 3.1 Pro before the debut market opened. The chart had GPT-6 Astra 53.6, Gemini 3.8 Flash 46.2 and Gemini 3.1 Pro 45.9. OpenAI ≥50 was final YES. The Sep-10 `p_no` values were next-Gemini-Pro ≥40 **.20**, Gemini ≥50 **.35**, and OpenAI ≥55 **.30**; later reviews supersede them below. All three remained HOLD, with no enlargement under the shared cluster cap. The historical paragraphs below explain superseded reasoning only.
   **Sep-11 source-change review:** the API changed again, 58→59, with Grok 4.6 at 39.72. It was unrelated to the held lab/threshold identities and did not move the then-current .20/.35/.30. This confirmed active maintenance already priced in on Sep-10; do not revive the frozen-board premise or churn on an unrelated row. Fresh full exits remained below hold value. HOLD / NO ADD.
   **Sep-12 source-change review:** the API changed 59→60 with Muse Spark 1.3 at 43.2. It remains unrelated to the held Gemini/OpenAI identities and changes no threshold or prior. Fresh full exits remain below central hold values. HOLD / NO ADD.
