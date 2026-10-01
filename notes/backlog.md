@@ -1,5 +1,31 @@
 # Polyclaude Backlog
 
+## Oct-1 10:00 periodic check — Gemini debut fully exited
+
+- Closed the remaining 69 Gemini debut NO at .25 FOK: $17.25 gross,
+  $.5175 fee, **$16.7325 net**. One submitted order; confirmed chain receipt,
+  zero debut balance, all other shares unchanged, no open orders. DEC-0187.
+- Source and judgmental priors unchanged. Independent skeptic and Astra
+  champion checked the risk decision: improved executable liquidity makes
+  the full exit positive for modeled joint Elog, despite giving up $.5175
+  central arithmetic EV. The .45 upper prior would favor holding; this is
+  concentration management, not a resolved forecast or recovery prediction.
+- Five held legs remain: Gemini >=50 NO 102.084750, OpenAI >=55 NO 19,
+  Clarity 29/29 and Trump .33. Remaining G/O priors .12/.25 (.03/.15
+  stress); joint central and combined stress reviews favor holding at
+  current full exits about $2.14/$2.75. HOLD / NO ADD; no automatic re-entry.
+- At 10:35 bankroll $188.48; PM cost/midpoint/depth $47.64/$36.75/$33.14.
+  Whole-account indicative depth $184.87, or $177.99 excluding $6.88
+  contributed gas, before VM/API costs. Settled P&L +$22.49. pUSD
+  **$47.319630**, Polygon native aUSDC about $85; no additional cash sweep.
+- No overdue decision, watchlist hit or new material structured alert.
+  Four daemons exact-one/current; claim insurance and coverage reconciled.
+  Manually removed only the obsolete 20,681,247-byte pip HTTP download
+  cache; free space recovered from 513 to 533 MiB. Hourly guard remains;
+  no automatic deletion or active/private log cleanup.
+- Next dated work: Oct-2 weekly P&L, UNI proposal 102 after block
+  26,109,012 (estimated Oct-3). No extra timer or durable goal.
+
 ## Oct-1 06:00 periodic check — no asset action
 
 - Six held legs and exact share counts remain unchanged; authenticated order
@@ -2292,14 +2318,22 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
 
 - **2026-09-08 [disk capacity — recovered by authorized scoped housekeeping; hourly guard retained]** — VM expansion is explicitly rejected. After the ledger recovery, authorized manual deletion removed seven obsolete user-owned artifacts (Claude native versions 2.1.170/2.1.219 and five study JSONL files: listing census Jul open/closed, census Apr closed, implication open universe/pairs), **692,874,130 bytes** total; no archives were made. Free space rose from **516,726,784** to **1,209,585,664 bytes** (~1.126 GiB) at 10:23 UTC. Scripts/small results were preserved, current CLI `--version` passed, all four daemon PIDs remained unchanged/live, and key state JSONs were valid. Private histories/inbox/credentials and active logs remain untouched. The old active operator log (~115.7 MB) is non-O_APPEND: do not copy-truncate or rotate it while live; no log policy/restart was implemented. Continue manual, narrowly scoped housekeeping only; heartbeat warning remains <512 MiB and critical <128 MiB, with no automatic deletion.
 
-**Current HLE state, Oct-1:** next-Pro debut NO **69 shares**, any-Gemini
->=50 NO **102.0847**, OpenAI >=55 NO **19**; priors **.25/.12/.25**, stressed
-**.12/.03/.15**. The 100-share debut trim and Argon review are recorded in
-DEC-0183 and the Oct-1 journal. The resolving API is active and currently
-unchanged, rather than historically frozen. Holdings remain actively
-reviewable under source, executable-exit and joint terminal-risk analysis;
-there is no hold-only rule. Older underwriting below is historical and
-must not replace the current priors or share counts.
+
+  **Oct-1 capacity follow-up:** manually removed only the obsolete pip
+  `http` download cache (20,681,247 bytes); installed pip26.0.1 uses
+  `http-v2`. Free space recovered 513 ->533 MiB at10:46; installed version
+  verified. The hourly guard and private/active-log exclusions remain.
+
+**Current HLE state, Oct-1 10:35:** next-Pro debut NO is **CLOSED / zero
+shares** after the 100-share trim (DEC-0183) and final 69-share sale
+(DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.
+Held any-Gemini >=50 NO is **102.084750**, OpenAI >=55 NO **19**; priors
+**.12/.25**, stressed **.03/.15**. The resolving API is active and currently
+unchanged, rather than historically frozen. Remaining positions are
+actively reviewable under source, executable-exit and joint terminal-risk
+analysis; there is no hold-only rule or automatic debut re-entry. Older
+underwriting below is historical and must not replace current priors or
+share counts.
 
 - **Historical Aug-31 HLE underwriting after DEC-0089/0096/0102 — superseded by current state above** — The scheduled Aug-31 full review again validated the instrument against known 2025 changes, passed claude/grok/gemini coverage, and found the live model-results board identical to 2026-01-15. The debut ladder's executable NO asks are now 0.15/0.17/0.31/0.62 for ≥40/45/50/55. The held ≥40 leg remains the cleanest expression at p_no 0.60 / stress 0.45, but the full entry helper rejects the sub-$1 incremental size and the correlated `ai-ships-fast-short` cap is effectively binding; **NO FURTHER ADD / DO NOT CHASE**. The ticket remains 169 NO, $17.60 notional plus $0.62940 fees = $18.22940 gross. CAIS's active July dataset maintenance still prevents treating the frozen results board as organizational abandonment. The direct falsifier is any agi.safe.ai model-row change, especially a catch-up addition of Gemini 3.1 Pro (46.44 on Scale); Google also says 3.5 Pro is coming soon. HLE-specific and Gemini-Pro news coverage remains live. Re-run the validated diff immediately on any alert; treat all HLE legs as one correlated cluster and this thin leg as hold-to-resolution. The old reward experiment remains cap-blocked, unfunded and unproven.
   **Sep-10 source correction supersedes the frozen-board premise and old probabilities in this block:** the resolving chart's API actively changed 44→52→58 rows and already contained Gemini 3.1 Pro before the debut market opened. The chart had GPT-6 Astra 53.6, Gemini 3.8 Flash 46.2 and Gemini 3.1 Pro 45.9. OpenAI ≥50 was final YES. The Sep-10 `p_no` values were next-Gemini-Pro ≥40 **.20**, Gemini ≥50 **.35**, and OpenAI ≥55 **.30**; later reviews supersede them below. All three remained HOLD, with no enlargement under the shared cluster cap. The historical paragraphs below explain superseded reasoning only.

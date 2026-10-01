@@ -1,5 +1,5 @@
 {
-  "next_id": 187,
+  "next_id": 188,
   "decisions": [
     {
       "id": 1,
@@ -3827,6 +3827,64 @@
         "forecast_graded": false
       },
       "operational_note": "The first unwrap command confirmed only the exact50 approval, then a TransferFromFailed simulation stopped before unwrap signing. Independent reads on both RPCs proved unchanged funds, allowance50 and successful simulation; consistent with post-approval read lag, not a proven permanent route failure. Fresh vetted CLI then unwrapped once. All four receipts and final balances independently verified; no ambiguous transaction was retried."
+    },
+    {
+      "id": 187,
+      "timestamp": "2026-10-01T10:33:25Z",
+      "type": "close_position",
+      "thesis": "Close remaining69 Gemini Pro debut>=40 NO only at raw FOKlimit.25 after current source, exact identity, account balance/allowance, livefee, REST/newWS full-depth and empty-order checks. Best-estimate pNO.25 and stress.12 unchanged. Current.25 bid gives netexit16.7325 vs17.25 central payout; closing improves modeled expected log wealth through reduced concentration while sacrificing.5175 central arithmeticEV. Skeptic and Astra champion independently agree. Fixed-central-marginal all-correlation bounds positive; upperpNO.45 favorshold. No resolved-forecast or price-recovery claim.",
+      "confidence": "low",
+      "prediction": "Expected gross17.25 fee.5175 net16.7325 for69shares. All-wallet conservative nonHLEwealth157.12 gives deltaElog+.018857 central,+.059770 stress,+.008916 independent,+.025143 comonotonic. Independent optimum61.52 vs69 differs negligibly; full-sale threshold pNO27.62percent withinwide.12-.45 range. Executeone atomicFOK.25 then verify zero debut shares, actualcash, fee, order/fill and chainreceipt. No lower-price chase or automatic reentry under unchanged inputs.",
+      "size_usd": 16.7325,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "hle",
+        "correlated-risk",
+        "liquidity-improvement",
+        "full-exit"
+      ],
+      "slug": "will-the-next-google-gemini-pro-model-debut-with-a-humanitys-last-exam-score-of-40-or-higher-20260729192434645",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "execution": {
+        "order_id": "0x0284c047d47a4d1009f07bda4315e1e85c948b5fadb3bb649019130859b5f6e1",
+        "tx": "0xf1a74fa314b88ed3b8d68bd6e3154aab5d87aac4d62d6c1983f2397894c6c0e6",
+        "sold_shares": 69,
+        "remaining_shares": 0,
+        "gross_proceeds": 17.25,
+        "net_proceeds": 16.7325,
+        "verified_at": "2026-10-01T10:37:58.227601+00:00",
+        "receipt_block": 94763778,
+        "pusd_after": 47.31963,
+        "forecast_graded": false,
+        "status": "confirmed",
+        "taker_fee": 0.5175,
+        "order_type": "FOK",
+        "raw_limit": 0.25,
+        "submitted_orders": 1
+      },
+      "post_close_review": {
+        "at": "2026-10-01T10:46:22.438028+00:00",
+        "remaining_cluster_shares": {
+          "Gemini_NO": 102.08475,
+          "OpenAI_NO": 19.0
+        },
+        "indicative_exit_net": {
+          "Gemini": 2.14,
+          "OpenAI": 2.75
+        },
+        "central_joint_delta_Elog_full_exit": -0.050656758563876636,
+        "stress_joint_delta_Elog_full_exit": -0.0009351413089699889,
+        "assessment": "Hold remaining G/O, no add. Both-sale stress narrowly favors holding; O-only stress narrowly favors closing but central strongly favors holding. Model- and quote-sensitive, not a calibrated outcome model. Source unchanged."
+      },
+      "instrument": {
+        "venue": "Polymarket CLOB V2",
+        "condition_id": "0x4db8c55db6d02654aa84c15ec45ec0011fa960c1405902ab0ea1d234daa05724",
+        "asset": "67951575343428346736827544478449934796473993940055164453800722378542887483258",
+        "outcome": "No",
+        "negative_risk": false
+      }
     }
   ]
 }

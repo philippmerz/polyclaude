@@ -44,17 +44,17 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-01 07:49 UTC
+## Last bankroll snapshot — 2026-10-01 10:35 UTC
 
 | Measure | Value |
 |---|---:|
-| Unresolved position legs, including Trump dust | 6 |
-| Position cost | $54.83 |
-| Polymarket midpoint | $48.79 |
-| Indicative depth/fee value | $43.04 |
-| Authoritative whole-account mark | $183.89 |
-| Approximate whole-account depth value | $178.14 |
-| Cumulative settled P&L, before VM/API costs | +$12.94 |
+| Unresolved position legs, including Trump dust | 5 |
+| Position cost | $47.64 |
+| Polymarket midpoint | $36.75 |
+| Indicative depth/fee value | $33.14 |
+| Authoritative whole-account mark | $188.48 |
+| Approximate whole-account depth value | $184.87 |
+| Cumulative settled P&L, before VM/API costs | +$22.49 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
@@ -62,39 +62,41 @@ $29.00 payout floor; manage it only as a complete position. Its complete
 exit is about $28.25. Both contracts retain their exact criteria; no
 qualifying final-passage vote was found.
 
-HLE p(NO) priors are **.25/.12/.25** for next Gemini Pro debut, Gemini >=50
-and OpenAI >=55; stressed priors are .12/.03/.15. Google's official
+Remaining HLE holdings are **102.084750 Gemini >=50 NO** and **19 OpenAI
+>=55 NO**. Their p(NO) priors remain **.12/.25**, stressed **.03/.15**.
+Google's official
 [Gemini 4 Argon announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)
-contains no Pro label or HLE score. Naming substitution helps the Pro-only
-NO branch while frontier release progress harms the any-Gemini NO branch;
-these are model-sensitive inferences. The resolving 60-row source is
-unchanged: Gemini's maximum is 46.2, OpenAI's 53.6.
+contains no Pro label or HLE score. The resolving 60-row source is unchanged:
+Gemini's maximum is 46.2, OpenAI's 53.6. These probabilities are judgmental
+and remain uncertain.
 
-Sold **100 Gemini debut NO** for **$19.66472 net**, paying $.64745 taker
-fees; **69 remain**, alongside 102.0847 Gemini >=50 NO and 19 OpenAI >=55
-NO. The trim sacrifices central expected dollar payoff to improve modeled
-joint expected log wealth. The remaining holdings favor holding in the
-central scenario and exiting in the stress scenario. **HOLD / NO ADD**
-remains an active allocation judgment, with no price-recovery assumption.
+The **Gemini Pro debut NO position is closed**. The remaining 69 shares
+sold at .25 for **$16.7325 net**, paying **$.5175 fees**, after independent
+skeptic and champion review. The better executable bid made concentration
+reduction attractive under the central joint model; closing sacrifices
+$.5175 central arithmetic EV to improve modeled expected log wealth.
+The prior .25 remains archived and the market forecast is unresolved.
+The two remaining HLE holdings favor holding in the central and combined
+stress review at current exit quotes. **HOLD / NO ADD** remains an active,
+model-sensitive allocation judgment, with no price-recovery assumption.
 
 The Trump-out maker sell filled **28 NO at .97** for **$27.16**, fee-free;
 **0.33 NO remains** in value, cost and claim-insurance records. Complete
-authenticated inventory has **no open orders**. All **$30.587130 pUSD is
+authenticated inventory has **no open orders**. All **$47.319630 pUSD is
 uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-Another **$85.00 native aUSDC** earns the Polygon Aave rate (2.82% at the
-03:00 check); existing legacy aUSDC.e is about $3.50. The verified $50 pUSD sweep supplied
-$49.995395 native USDC after conversion, retaining one full-size immediate
-ticket in pUSD. The midpoint-to-depth gap in the timestamped snapshot is
-$5.75. Approximate whole-account depth value excludes sub-lot dust from
-immediately executable cash and includes $6.98 of separately funded gas.
-Excluding gas gives about **$171.16 versus $170 trading capital
-(+0.7%)**, before VM/API operating costs. The next dated research review is
-UNI Arc after proposal 102's deadline at
-block 26,109,012, estimated Oct. 3. dYdX remains an unfunded venue candidate;
-the managed book has no deliberate broad BTC/ETH/SOL allocation.
+About **$85.00 native aUSDC** earns the Polygon Aave rate (2.82% at the
+03:00 check); existing legacy aUSDC.e is about $3.50. No additional cash
+transfer was made. The midpoint-to-depth gap in the timestamped snapshot
+is $3.61. Approximate whole-account depth value excludes sub-lot dust from
+immediately executable cash and includes $6.88 of separately funded gas.
+Excluding gas gives about **$177.99 versus $170 trading capital (+4.7%)**,
+before VM/API operating costs. The next dated research review is UNI Arc
+after proposal 102's deadline at block 26,109,012, estimated Oct. 3.
+dYdX remains an unfunded venue candidate; the managed book has no deliberate
+broad BTC/ETH/SOL allocation.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
