@@ -1,5 +1,29 @@
 # Polyclaude Backlog
 
+## Oct-1 14:00 full check — holdings unchanged
+
+- Five unresolved legs, exact balances and priors unchanged; pUSD
+  $47.319630, no orders or BUY commitment. No winning redemption, source
+  thesis break, watchlist hit, overdue decision or new structured alert.
+- HLE60rows and parsed source unchanged; no qualifying score or Clarity
+  final-passage vote. G/O full exits about$2.17/$2.38 remain below central
+  and stressed terminal value; joint risk review HOLD / NO ADD. Protected
+  Clarity29/29 exits$28.25 versus$29 floor.
+- At14:03 bankroll$187.62; PM midpoint/depth$35.91/$32.80, cost$47.64.
+  Whole-account indicative depth$184.51, or$177.66 excluding$6.85 gas,
+  before VM/API costs. Settled P&L unchanged+$22.49.
+- Both discovery/context passes and all other scheduled scans completed;
+  no executable structural edge in the checked slice. Consistency coverage
+  remains explicitly incomplete; raw output and all59batches reviewed.
+  LGD–Xtreme's apparent sports edge failed current no-vig/fee verification;
+  its worker arithmetic was inconsistent. Independently verify bookmaker
+  lines, exact outcome order and no-vig math before any future sports entry.
+  Four political/Google leads lack an independent qualifying catalyst;
+  source absence alone supports no high-probability NO claim.
+- Daemons/state/coverage clean; disk517.4MiB above512warning, hourly
+  guard retained. Next dated work Oct-2 P&L and UNI after block26,109,012
+  (estimatedOct-3). No extra timer or durable goal.
+
 ## Oct-1 10:00 periodic check — Gemini debut fully exited
 
 - Closed the remaining 69 Gemini debut NO at .25 FOK: $17.25 gross,
