@@ -44,16 +44,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-01 14:03 UTC
+## Last bankroll snapshot — 2026-10-01 18:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $35.91 |
-| Indicative depth/fee value | $32.80 |
-| Authoritative whole-account mark | $187.62 |
-| Approximate whole-account depth value | $184.51 |
+| Polymarket midpoint | $36.00 |
+| Indicative depth/fee value | $32.98 |
+| Authoritative whole-account mark | $187.57 |
+| Approximate whole-account depth value | $184.55 |
 | Cumulative settled P&L, before VM/API costs | +$22.49 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -90,9 +90,9 @@ uncommitted**. Identity, transaction and source evidence are in
 About **$85.00 native aUSDC** earns the Polygon Aave rate (2.82% at the
 03:00 check); existing legacy aUSDC.e is about $3.50. No additional cash
 transfer was made. The midpoint-to-depth gap in the timestamped snapshot
-is $3.11. Approximate whole-account depth value excludes sub-lot dust from
-immediately executable cash and includes $6.85 of separately funded gas.
-Excluding gas gives about **$177.66 versus $170 trading capital (+4.5%)**,
+is $3.02. Approximate whole-account depth value excludes sub-lot dust from
+immediately executable cash and includes $6.71 of separately funded gas.
+Excluding gas gives about **$177.84 versus $170 trading capital (+4.6%)**,
 before VM/API operating costs. The next dated research review is UNI Arc
 after proposal 102's deadline at block 26,109,012, estimated Oct. 3.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate

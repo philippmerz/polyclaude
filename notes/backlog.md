@@ -1,5 +1,28 @@
 # Polyclaude Backlog
 
+## Oct-1 18:00 periodic check — no asset action; disk warning
+
+- Five held legs and exact balances unchanged; pUSD $47.319630,
+  no orders, winning redemption, overdue decision or watchlist hit.
+  HLE raw/parsed 60-row source unchanged. Google's Guided Vision feature
+  adds no Pro identity or HLE score; the new Clarity article describes
+  Sep-15's excluded procedural vote. Neither breaks the held theses.
+- G/O priors .12/.25, stressed .03/.15, unchanged. Fresh full exits
+  $2.16/$2.57 favor HOLD / NO ADD in the existing judgmental joint models;
+  the stressed OpenAI margin is small. Clarity remains complete 29/29.
+- At 18:02 bankroll $187.57; PM midpoint/depth $36.00/$32.98, cost
+  $47.64. Indicative whole-account depth $184.55, or $177.84 excluding
+  $6.71 contributed gas, before VM/API costs. Settled P&L +$22.49.
+- State/coverage and four daemons are clean. Disk dipped to about 511 MiB,
+  below the 512 MiB warning and above the 128 MiB critical threshold.
+  Scoped obsolete-cache/CLI inspection found no useful safe deletion:
+  only a 115-byte pip selfcheck and the current Claude binary remain.
+  No deletion; existing hourly guard and active/private-log exclusions remain.
+  Telegram 1072 reports the actual capacity warning.
+- Next dated work: Oct-2 weekly P&L; UNI after block 26,109,012
+  (estimated Oct-3). At 18:03 ETH head 26,099,135 was 9,877 blocks short.
+  No additional timer or durable goal.
+
 ## Oct-1 14:00 full check — holdings unchanged
 
 - Five unresolved legs, exact balances and priors unchanged; pUSD
@@ -2348,6 +2371,12 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   `http-v2`. Free space recovered 513 ->533 MiB at10:46; installed version
   verified. The hourly guard and private/active-log exclusions remain.
 
+  **Oct-1 18:00 warning:** free space is about 511 MiB. Read-only inspection
+  of pip/uv caches and installed Claude versions found no useful safe
+  deletion; the sole 275,012,592-byte Claude binary is current, version
+  2.1.220 verified. No cleanup performed. Hourly guard remains; no VM
+  expansion, automatic deletion or live-log rotation.
+
 **Current HLE state, Oct-1 10:35:** next-Pro debut NO is **CLOSED / zero
 shares** after the 100-share trim (DEC-0183) and final 69-share sale
 (DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.
@@ -2390,7 +2419,7 @@ share counts.
 > Future reminders only; decision outcomes and expired clocks remain in git history.
 
 
-- **2026-11-03** (~152d): US midterm elections. Catalyst for DEC-0004 (Trump-out NO) — even if Dems take House, Senate conviction implausible.
+- **2026-11-03**: US midterm elections. Catalyst for DEC-0004 (Trump-out NO) — even if Dems take House, Senate conviction implausible.
 
 ## Conditional / gated work
 
