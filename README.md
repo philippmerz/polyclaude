@@ -1,5 +1,14 @@
 # polyclaude
 
+- [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
+- [Polymarket wallet on DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
+- [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
+
+These views cover **two different wallets**. The Polymarket wallet also holds
+pUSD cash, Polygon Aave deposits and POL gas; the crypto wallet's balance
+alone is only part of the account. The dashboard below combines both wallets
+and market positions without double-counting.
+
 Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
@@ -170,13 +179,6 @@ The full catalog and usage notes live in [`scripts/README.md`](scripts/README.md
 Repository layout: `strategy/` holds durable doctrine, `scripts/` holds tooling,
 `research/` holds dated audits, `notes/` holds operating state, and gitignored
 `data/` and `logs/` hold generated artifacts.
-
-Public views cover **two different wallets**: [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B),
-[the same wallet on DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B),
-and [the separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6).
-The Polymarket wallet also holds pUSD cash, Polygon Aave deposits and POL gas;
-the crypto wallet's balance alone is only part of the account. The dashboard
-above combines both wallets and market positions without double-counting.
 
 ## Telegram
 
