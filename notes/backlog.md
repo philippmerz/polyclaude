@@ -1,5 +1,20 @@
 # Polyclaude Backlog
 
+## Oct-1 22:00 periodic check — no new action due
+
+- Exact holdings unchanged; pUSD $47.319630, no open orders, redemption,
+  overdue decision, watchlist hit, new alert or source thesis break.
+  HLE 60-row source and Google model news unchanged; fresh Senate index
+  has no qualifying Clarity final-passage vote. HOLD / NO ADD after
+  current fee-net exit and joint risk review; priors unchanged.
+- At 22:02 bankroll $188.01; PM cost/midpoint/depth $47.64/$36.41/$32.75.
+  Indicative account depth $184.35, or $177.60 excluding $6.75 funded gas
+  (+4.5% before VM/API costs); reported settled P&L +$22.50.
+- State/coverage and four daemons clean. Closing disk about 507 MiB; existing
+  warning already communicated, hourly guard retained, no new cleanup.
+  Next: Oct-2 P&L and UNI after block 26,109,012 (estimated Oct-3).
+  Current ETH head 26,100,327 is 8,685 blocks short. No extra timer or goal.
+
 ## Oct-1 18:00 periodic check — no asset action; disk warning
 
 - Five held legs and exact balances unchanged; pUSD $47.319630,
