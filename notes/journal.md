@@ -21936,3 +21936,22 @@ review is Oct-2 weekly P&L, then UNI proposal102 after block26,109,012
 (estimatedOct-3). No new code, tests, timer, durable goal or Telegram;
 no new source fact or asset action. Full routine/exit/source evidence is
 gitignored under logs/periodic_20261001T0600* and data/periodic_20261001T0600*.
+
+### 2026-10-01 07:49 UTC — wallet visibility reconciliation
+
+Fresh authoritative bankroll reads and the wallet-address resolver confirm
+two separate public sleeves. The crypto wallet's rounded components sum to
+about **$10.54**, including $7.89 Arbitrum aUSDC. The Polymarket wallet holds
+**$48.79 market positions**, **$30.59 pUSD cash**, **$88.50 Polygon Aave
+deposits** ($85.00 native aUSDC plus $3.50 legacy aUSDC.e), and about **$5.48
+POL gas / loose USDC**. Individual displayed components round separately.
+Combined marked bankroll is **$183.89**; replacing the $48.79 position mark
+with $43.04 indicative fee-net depth gives **$178.14**. Settled P&L is
+unchanged at **+$12.94**, before VM/API operating costs; separately funded
+gas is $6.98. No omitted-balance warning or open Ostium position was reported.
+
+Sent the reconciled allocation and the Polymarket wallet's DeBank link in
+Telegram **1068**. README previously linked only the separate crypto wallet;
+added the second public wallet view and refreshed the financial snapshot to
+prevent treating one wallet or market-position value as the whole account.
+Balance check only; no asset action, new source thesis or probability change.

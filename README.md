@@ -35,16 +35,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last audited snapshot — 2026-10-01 06:02 UTC
+## Last bankroll snapshot — 2026-10-01 07:49 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 6 |
 | Position cost | $54.83 |
-| Polymarket midpoint | $52.60 |
-| Indicative depth/fee value | $42.90 |
-| Authoritative whole-account mark | $187.80 |
-| Approximate whole-account depth value | $178.10 |
+| Polymarket midpoint | $48.79 |
+| Indicative depth/fee value | $43.04 |
+| Authoritative whole-account mark | $183.89 |
+| Approximate whole-account depth value | $178.14 |
 | Cumulative settled P&L, before VM/API costs | +$12.94 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -79,10 +79,10 @@ Another **$85.00 native aUSDC** earns the Polygon Aave rate (2.82% at the
 03:00 check); existing legacy aUSDC.e is about $3.50. The verified $50 pUSD sweep supplied
 $49.995395 native USDC after conversion, retaining one full-size immediate
 ticket in pUSD. The midpoint-to-depth gap in the timestamped snapshot is
-$9.70. Approximate whole-account depth value excludes sub-lot dust from
-immediately executable cash and includes $7.08 of separately funded gas.
-Excluding gas gives about **$171.02 versus $170 trading capital
-(+0.6%)**, before VM/API operating costs. The next dated research review is
+$5.75. Approximate whole-account depth value excludes sub-lot dust from
+immediately executable cash and includes $6.98 of separately funded gas.
+Excluding gas gives about **$171.16 versus $170 trading capital
+(+0.7%)**, before VM/API operating costs. The next dated research review is
 UNI Arc after proposal 102's deadline at
 block 26,109,012, estimated Oct. 3. dYdX remains an unfunded venue candidate;
 the managed book has no deliberate broad BTC/ETH/SOL allocation.
@@ -171,8 +171,12 @@ Repository layout: `strategy/` holds durable doctrine, `scripts/` holds tooling,
 `research/` holds dated audits, `notes/` holds operating state, and gitignored
 `data/` and `logs/` hold generated artifacts.
 
-Public sleeves: [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
-and [multi-chain wallet](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6).
+Public views cover **two different wallets**: [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B),
+[the same wallet on DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B),
+and [the separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6).
+The Polymarket wallet also holds pUSD cash, Polygon Aave deposits and POL gas;
+the crypto wallet's balance alone is only part of the account. The dashboard
+above combines both wallets and market positions without double-counting.
 
 ## Telegram
 
