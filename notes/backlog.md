@@ -1,5 +1,22 @@
 # Polyclaude Backlog
 
+## Oct-2 10:00 periodic check — no new action due
+
+- Exact held shares and priors unchanged; pUSD $47.319630, native aUSDC
+  85.007629, debut zero. No orders, settlement, watchlist hit, overdue
+  decision, UMA/Ostium change or new structured alert.
+- HLE raw/parsed 60 rows and exact held criteria unchanged; no new qualifying
+  Google model item or Senate final-passage vote. G/O full net exit estimates
+  $1.86/$2.20 now favor holding in both central and stress joint models.
+  Clarity's complete-pair exit remains $28.25 versus its $29 floor.
+- At 10:03 bankroll $186.97; PM cost/midpoint/depth $47.64/$35.22/$32.53,
+  funded gas $6.89 and settled P&L +$22.50. Indicative trading depth is
+  about $177.4 (+4.3% versus $170, before VM/API costs).
+- Four daemons exact-one/current/fresh; disk about 476 MiB, already warned,
+  hourly guard retained. Credential rotation remains unverified.
+- UNI head 26,103,932 is 5,080 blocks before deadline 26,109,012; not due.
+  Weekly P&L complete, next around Oct-9. No asset action or extra Telegram.
+
 ## Oct-2 06:00 periodic check — no new asset action
 
 - Holdings and priors unchanged; pUSD $47.319630, no open orders,
