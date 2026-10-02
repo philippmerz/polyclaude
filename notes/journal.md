@@ -22478,3 +22478,25 @@ change, new tests, extra Telegram, timer or durable goal. README current
 snapshot replaced. Evidence: `logs/checkin_20261002T1400/`,
 `data/checkin_20261002T1400_*.json` and
 `data/periodic_20261002T1400_*.json`.
+
+## 2026-10-02 14:38 UTC — routine disk warnings reduced to daily
+
+Changed only the routine disk-warning notification cooldown from one hour
+to 24 hours following the operator's request. Hourly filesystem probes
+continue; critical space below 128 MiB and probe failures retain separate
+one-hour cooldowns. A recent warning cannot block a critical escalation,
+and a failed send does not consume either cooldown. Operations documentation
+and the active capacity item now state this policy.
+
+All 11 scoped heartbeat/daemon-control tests pass, including hourly probing
+through a full warning day, immediate critical escalation on detection,
+critical repeat cadence and failed-send behavior for both severities.
+The first daemonctl restart did not survive its launching shell; post-launch
+verification caught the missing process. The documented setsid/nohup
+absolute-path launch recovered it. At 14:36, heartbeat PID4126749 is live,
+session-detached and newer than the source edit, with fresh state metadata.
+All four daemons have exactly one current canonical process; other PIDs
+are unchanged. Disk is about 449 MiB free. No cleanup, asset action,
+schedule change or private-storage inspection. Telegram1092 confirms the
+active cadence. Public health proof:
+`data/disk_warning_cooldown_20261002_health.json`.

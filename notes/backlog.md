@@ -2488,6 +2488,12 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   2.1.220 verified. No cleanup performed. Hourly guard remains; no VM
   expansion, automatic deletion or live-log rotation.
 
+  **Oct-2 notification cadence:** routine disk warnings below 512 MiB
+  repeat at most once every 24 hours. Hourly probes continue; critical
+  space below 128 MiB and probe failures retain independent hourly alerts.
+  Tests pass and the updated watcher is live. Capacity remains unresolved;
+  latest checked free space is about 449 MiB.
+
 **Current HLE state, Oct-2 14:00:** next-Pro debut NO is **CLOSED / zero
 shares** after the 100-share trim (DEC-0183) and final 69-share sale
 (DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.

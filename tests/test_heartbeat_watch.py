@@ -55,7 +55,7 @@ def test_disk_warning_uses_warning_key_and_read_only_probe(monkeypatch: pytest.M
 
     assert emitted[0][0] == "disk_space_warning"
     assert "DISK SPACE WARNING" in emitted[0][1]
-    assert emitted[0][2] == heartbeat.DISK_ALERT_COOLDOWN
+    assert emitted[0][2] == heartbeat.DISK_WARNING_COOLDOWN
 
 
 def test_disk_critical_escalation_has_distinct_key(monkeypatch: pytest.MonkeyPatch):
@@ -87,7 +87,7 @@ def test_disk_cooldown_suppresses_warning_but_allows_critical_escalation(
         heartbeat, "_telegram",
         lambda message: telegram_messages.append(message) or True,
     )
-    monkeypatch.setattr(heartbeat, "_now", lambda: 10_000)
+    monkeypatch.setattr(heartbeat, "_now", lambda: 100_000)
     free = heartbeat.DISK_WARNING_BYTES - 1
     monkeypatch.setattr(heartbeat.shutil, "disk_usage", lambda path: _usage(free))
 
@@ -99,25 +99,75 @@ def test_disk_cooldown_suppresses_warning_but_allows_critical_escalation(
 
     assert len(telegram_messages) == 2
     assert state["last_alerts"] == {
-        "disk_space_warning": 10_000,
-        "disk_space_critical": 10_000,
+        "disk_space_warning": 100_000,
+        "disk_space_critical": 100_000,
     }
 
 
-def test_failed_disk_alert_send_does_not_burn_cooldown(
+def test_daily_warning_still_probes_hourly_and_critical_keeps_hourly_cooldown(
     monkeypatch: pytest.MonkeyPatch,
 ):
+    messages: list[str] = []
+    probes: list[Path] = []
+    now = 1_000_000
+    free = heartbeat.DISK_WARNING_BYTES - 1
+
+    def usage(path):
+        probes.append(path)
+        return _usage(free)
+
+    monkeypatch.setattr(heartbeat, "_now", lambda: now)
+    monkeypatch.setattr(heartbeat.shutil, "disk_usage", usage)
+    monkeypatch.setattr(heartbeat, "_telegram", lambda msg: messages.append(msg) or True)
+    state = {"last_alerts": {}}
+
+    for hour in range(24):
+        now = 1_000_000 + hour * 3600
+        heartbeat.check_disk_space(state)
+
+    assert len(probes) == 24
+    assert len(messages) == 1
+    assert "DISK SPACE WARNING" in messages[0]
+
+    free = heartbeat.DISK_CRITICAL_BYTES - 1
+    heartbeat.check_disk_space(state)
+    assert len(messages) == 2
+    assert "DISK SPACE CRITICAL" in messages[-1]
+
+    now += 1800
+    heartbeat.check_disk_space(state)
+    assert len(messages) == 2
+    now += 1800
+    heartbeat.check_disk_space(state)
+    assert len(messages) == 3
+    assert "DISK SPACE CRITICAL" in messages[-1]
+
+    free = heartbeat.DISK_WARNING_BYTES - 1
+    heartbeat.check_disk_space(state)
+    assert len(messages) == 4
+    assert "DISK SPACE WARNING" in messages[-1]
+    assert state["last_alerts"] == {
+        "disk_space_warning": now,
+        "disk_space_critical": now,
+    }
+
+
+@pytest.mark.parametrize("severity", ["warning", "critical"])
+def test_failed_disk_alert_send_does_not_burn_cooldown(
+    monkeypatch: pytest.MonkeyPatch, severity: str,
+):
     monkeypatch.setattr(heartbeat, "_telegram", lambda _message: False)
-    monkeypatch.setattr(heartbeat, "_now", lambda: 10_000)
+    monkeypatch.setattr(heartbeat, "_now", lambda: 100_000)
+    threshold = heartbeat.DISK_WARNING_BYTES if severity == "warning" else heartbeat.DISK_CRITICAL_BYTES
     monkeypatch.setattr(
         heartbeat.shutil, "disk_usage",
-        lambda path: _usage(heartbeat.DISK_CRITICAL_BYTES - 1),
+        lambda path: _usage(threshold - 1),
     )
     state = {"last_alerts": {}}
 
     heartbeat.check_disk_space(state)
 
-    assert "disk_space_critical" not in state["last_alerts"]
+    assert f"disk_space_{severity}" not in state["last_alerts"]
 
 
 def test_disk_healthy_is_silent(monkeypatch: pytest.MonkeyPatch):

@@ -12,7 +12,8 @@ Checks performed:
   3. Stuck headless model workers: any such process running > 60 min is
      anomalous (cron ticks should complete much faster).
 
-Each anomaly type has its own 1-hour Telegram-cooldown so we don't spam.
+Each anomaly type has an independent Telegram cooldown. Routine disk warnings
+repeat daily; critical disk alerts retain their hourly cooldown.
 
 Subcommands: start | status | stop | once
 """
@@ -357,6 +358,7 @@ MEM_ALERT_COOLDOWN = 2 * 3600
 DISK_WARNING_BYTES = 512 * 1024 * 1024
 DISK_CRITICAL_BYTES = 128 * 1024 * 1024
 DISK_ALERT_COOLDOWN = 3600
+DISK_WARNING_COOLDOWN = 24 * 3600  # operator requested fewer reminders, 2026-10-02
 
 
 def check_memory_pressure(state: dict) -> None:
@@ -442,7 +444,7 @@ def check_disk_space(state: dict) -> None:
               f"DISK SPACE WARNING: only {free / (1024 * 1024):.1f} MiB free on "
               f"repository filesystem (warning threshold "
               f"{DISK_WARNING_BYTES / (1024 * 1024):.0f} MiB)",
-              cooldown=DISK_ALERT_COOLDOWN)
+              cooldown=DISK_WARNING_COOLDOWN)
 
 
 TICK_EXEC_GRACE_SECONDS = 45 * 60

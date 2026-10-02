@@ -71,7 +71,7 @@ not pile up in a file.
 
 ## Heartbeat watchdog
 
-`scripts/heartbeat_watch.py` runs as its own daemon (PID file `~/.polyclaude_heartbeat.pid`, restarts on reboot via `@reboot` crontab). Hourly probe — checks news_watcher and telegram_listener PIDs are alive, news_watcher's state file is fresh (< 30 min), and no headless model worker has been running > 60 min. Telegram-alerts on anomaly with a 1-hour per-anomaly cooldown. Was added 2026-04-29 after a 3-day deadlocked cron tick from the prior week; this layer would have caught it within an hour.
+`scripts/heartbeat_watch.py` runs as its own daemon (PID file `~/.polyclaude_heartbeat.pid`, restarts on reboot via `@reboot` crontab). Hourly probe — checks news_watcher and telegram_listener PIDs are alive, news_watcher's state file is fresh (< 30 min), and no headless model worker has been running > 60 min. Alerts have separate cooldowns. Routine disk warnings below 512 MiB repeat at most once every 24 hours; critical space below 128 MiB and disk-probe failures retain hourly cooldowns. A recent warning never suppresses a critical alert. Was added 2026-04-29 after a 3-day deadlocked cron tick from the prior week; this layer would have caught it within an hour.
 
 ## Emergency-exit protocol
 
