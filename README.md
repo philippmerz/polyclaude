@@ -13,7 +13,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-10-01. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-02. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -44,16 +44,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-01 22:02 UTC
+## Last bankroll snapshot — 2026-10-02 02:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $36.41 |
-| Indicative depth/fee value | $32.75 |
-| Authoritative whole-account mark | $188.01 |
-| Approximate whole-account depth value | $184.35 |
+| Polymarket midpoint | $36.21 |
+| Indicative depth/fee value | $32.57 |
+| Authoritative whole-account mark | $187.87 |
+| Approximate whole-account depth value | $184.23 |
 | Cumulative settled P&L, before VM/API costs | +$22.50 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -76,9 +76,10 @@ skeptic and champion review. The better executable bid made concentration
 reduction attractive under the central joint model; closing sacrifices
 $.5175 central arithmetic EV to improve modeled expected log wealth.
 The prior .25 remains archived and the market forecast is unresolved.
-The two remaining HLE holdings favor holding in the central and combined
-stress review at current exit quotes. **HOLD / NO ADD** remains an active,
-model-sensitive allocation judgment, with no price-recovery assumption.
+Central joint models favor holding both remaining HLE positions. At current
+quotes the .03/.15 stress model favors selling Gemini alone; the allocation
+retains the central .12/.25 view and adds no exposure. **HOLD / NO ADD**
+remains an active, model-sensitive judgment, with no price-recovery assumption.
 
 The Trump-out maker sell filled **28 NO at .97** for **$27.16**, fee-free;
 **0.33 NO remains** in value, cost and claim-insurance records. Complete
@@ -87,16 +88,26 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.00 native aUSDC** earns the Polygon Aave rate (2.82% at the
-03:00 check); existing legacy aUSDC.e is about $3.50. No additional cash
+About **$85.00 native aUSDC** earns the Polygon Aave supply rate (2.86% at
+02:18); existing legacy aUSDC.e is about $3.50. No additional cash
 transfer was made. The midpoint-to-depth gap in the timestamped snapshot
-is $3.66. Approximate whole-account depth value excludes sub-lot dust from
-immediately executable cash and includes $6.75 of separately funded gas.
-Excluding gas gives about **$177.60 versus $170 trading capital (+4.5%)**,
+is $3.64. Approximate whole-account depth value excludes sub-lot dust from
+immediately executable cash and includes $6.81 of separately funded gas.
+Excluding gas gives about **$177.42 versus $170 trading capital (+4.4%)**,
 before VM/API operating costs. The next dated research review is UNI Arc
 after proposal 102's deadline at block 26,109,012, estimated Oct. 3.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
+
+The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
+SPY $182.00** for the same timed contributions. Indicative trading depth
+trails by **$1.53/$3.98/$4.58** before operating costs; see the current
+[`weekly report`](notes/pnl_weekly.md).
+
+An archived Hormuz NO claim holds **.003571 winning shares**. Its standalone
+redemption cost exceeds the payout, so retain it for a cheaper opportunity.
+Standard CTF redemption now verifies the exact asset, collateral and positive
+on-chain payout before preparing a transaction.
 
 Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative

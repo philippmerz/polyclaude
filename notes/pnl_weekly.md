@@ -1374,3 +1374,57 @@ Calibration remains a way to remove repeat loss mechanisms, not an objective.
 - Continuous: qualifying Gemini Pro/HLE source rows or UMA state changes.
 - Continuous: actual touchscreen-MacBook public purchase availability.
 - Oct. 12: monthly emergency-path drill.
+
+# Week 2026-09-25 → 2026-10-02
+
+The week closes at **$177.42 indicative whole-account depth excluding separately funded gas**, against $170 trading contributions: **+$7.42 (+4.36%)**, before VM/API costs. This improves $31.38 from Sep-25. Trading midpoint is **$181.06 (+6.51%)**; authoritative all-in mark is **$187.87**. These are planning valuations, not settled cash or guaranteed liquidation proceeds. Closing figures come from the Oct-2 02:02 routine check.
+
+## Whole-account performance
+
+| Metric | Sep-25 | Oct-2 closing | Weekly change |
+|---|---:|---:|---:|
+| Authoritative all-in midpoint bankroll | $163.40 | $187.87 | +$24.47 |
+| Separately contributed gas value | $6.94 | $6.81 | -$.13 |
+| Trading value, midpoint | $156.46 | $181.06 | +$24.60 |
+| Trading value, indicative depth/fees | $146.04 | $177.42 | +$31.38 |
+| PM midpoint / indicative depth | $124.54 / $114.12 | $36.21 / $32.57 | -$88.33 / -$81.55 |
+| Open PM cost | $135.97 | $47.64 | -$88.33 |
+| Cumulative settled-P&L residual | -$2.11 | +$22.50 | +$24.61 |
+
+Whole-account depth substitutes a sequential PM bid/fee walk into the authoritative marked aggregate. It excludes sub-lot dust from executable cash and omits routing/withdrawal costs. The capital ledger records no new external contribution or withdrawal; reserve moves were internal relocations. VM/API operating costs are excluded and unreconciled: no public expense ledger or actual billed-period reconciliation was found in the tracked repository records inspected. This is not a claim of zero operating cost. The Sep-25 baseline was recorded at02:00–02:09, before that day's10:08 Apple sale; the sale belongs to this reporting week.
+
+## Passive comparison
+
+The strict contribution-timed benchmark **passed**, using the latest completed US session, **Oct-1**, retrieved Oct-2 02:03:02 UTC. The $70/$100 contributions enter at Apr-27/Apr-30 raw closes; Yahoo adjusted-close ratios include distributions/splits. All symbols, USD ETF metadata, timestamps, complete raw/adjusted arrays and freshness validated. Values: **VT $178.95 (+5.26%), VTI $181.40 (+6.71%), SPY $182.00 (+7.06%)**. Closing trading midpoint is $2.11 above VT, $.34 below VTI and $.94 below SPY; indicative trading depth trails by $1.53/$3.98/$4.58. These are ideal fractional-share comparators with zero commissions, spreads, slippage, taxes and pre-entry cash yield. Last week's unavailable-run diagnostic reconstruction remains historical, not a strict prior benchmark. Exact prices and source URLs are in the [retained benchmark JSON](../research/2026-10-02-index-benchmark.json).
+
+## Trading and cash management
+
+| Executed action | Gross proceeds | Trading fee | Verified net cash |
+|---|---:|---:|---:|
+| Sep-25 Apple: sell 8.92 NO at .37 | $3.300400 | $.083170 | $3.217230 |
+| Sep-28 complete MetaMask exit: 47.71 700M YES at .067, 29.71 3B NO at .962, 15.03 4B NO at .977 | $46.461900 | $.308420 | $46.153480 |
+| Oct-1 Trump maker: sell 28 NO at .97 | $27.160000 | $0 | $27.160000 |
+| Oct-1 Gemini debut: sell 100 NO across .198–.204 | $20.312170 | $.647450 | $19.664720 |
+| Oct-1 Gemini debut: sell remaining 69 NO at .25 | $17.250000 | $.517500 | $16.732500 |
+
+Total sale cash **$112.927930**, trading fees **$1.556540**; proceeds are not profits. Apple cleared its measured central-value/carry/materiality gate narrowly at unchanged pNO=.35. MetaMask crossed its precommitted $46.10 complete-group switch; no token/TGE announcement caused the exit. Trump filled the standing fee-free maker; .33 NO remains in accounting. Apple and MetaMask retain sub-precision dust identities.
+
+Google's Sep-30 Argon release had no Pro label or resolving HLE score. Debut NO changed .15→.25 (stress .12), while any-Gemini>=50 NO changed .20→.12 (stress .03); OpenAI NO stayed .25 (stress .15). Both Gemini-debut sales reduced concentrated terminal risk and improved the explicit modeled expected log wealth despite sacrificing central arithmetic EV. The second sale gave up $.5175 central EV; a .45 debut-NO case favored holding. These are judgmental joint scenarios, not fitted probabilities or graded forecast wins. All historical forecasts remain archived.
+
+Sep-29 $35 and Oct-1 $50 reserve tranches moved through USDC.e to native Polygon Aave, returning 34.997649/49.995395 native USDC before supply: $.006956 combined conversion shortfall. Oct-1 route gas was .1338862813 separately funded POL (~$.015 then); reserve supply was 2.8199% then, variable. Closing balances are $47.319630 uncommitted pUSD and85.005383 native aUSDC, plus the retained legacy reserve. No further sweep was justified by the small marginal carry after routing costs.
+
+## Remaining book, rejected opportunities and fragile assumptions
+
+Remaining holdings: Gemini>=50 NO **102.084750**, OpenAI>=55 NO **19**, Clarity **29 over-50 YES / 29 over-58 NO**, Trump **.33 NO**. Gemini debut is zero. Chain-confirmed deindexed Hormuz dust is **.003571 winning NO shares**; its earlier losing label was incorrect. Current standalone redemption costs about $.005315 estimated, above the $.003571 payout; retain the winning dust. No redemption was broadcast. Its token derives from legacy USDC.e, while the former redeem-one helper used pUSD and could silently no-op. Standard redemption now proves collateral and positive held payout first; 59 scoped tests and a fresh legacy dry-run passed (DEC-0188). G/O priors/stress remain **.12/.25 and .03/.15**; HOLD / NO ADD is sensitive to joint probabilities and current exit quotes. At full exits G$2.489065/O$1.831600, the central joint model favors holding (sale-minus-hold Elog -.038598/-.012943), while the .03/.15 stress model favors selling Gemini alone (+.000890). The retained allocation uses the central judgmental model; this does not establish calibrated probabilities or expected price recovery. HLE's 60-row source still tops Gemini at46.2 and OpenAI at53.6; Argon capability claims do not establish the resolving thresholds. Clarity retains its criteria-consistent $29 payout floor; procedural/cloture headlines do not qualify as final passage.
+
+Swift's ten-share .56 maker bid, pNO .70/.60 stress, was accepted then cancelled **unfilled** at its deadline after full reconciliation: zero investment, fees or trading P&L; album forecast unresolved. Tesla's public consensus conflicted with potentially informed flow. Disney's reporting mismatch lacked sufficiently certain annual omission at executable prices. Spider-Man's tiny paired floor margin did not cover carry and execution risk convincingly. Morpho's incremental yield did not close withdrawal/oracle/liquidation risk; LNGx lacked economical checked routes, and SPYx wrapper round trips were costly. ETH's public catalyst case failed probability sensitivity. Broad scans found no independently robust entry within reviewed coverage; incomplete consistency coverage is not a universal no-edge claim.
+
+## Operations and calibration
+
+During this run a provider check accidentally emitted a private credential in subagent tool output. The lookup was stopped and the operator notified; no asset action followed. Onboarding now explicitly requires the private one-time message reader and forbids inbox/history and broad private-directory searches. Credential revocation has not been verified.
+
+Repairs addressed legitimate null-score HLE rows, repeated-headline deduplication, Aave frozen-reserve preflight, Polygon swap simulation/fees, validated fallback price batches, pending-BUY news exposure and hidden dust accounting. A frozen legacy-reserve supply reverted without moving principal; later allowance/read-lag simulations stopped before signing. Trade precision errors and stale/rounded preflight inputs were rejected before execution. Final trades and cash transfers were verified against receipts and balances; no ambiguous broadcast was blindly repeated. Targeted regression checks passed. Disk fell below the512MiB warning by Oct-1 night; scope-limited cleanup preserved financial/private/active records and the existing guard remains. Closing disk is490.02MiB, below warning, already communicated; four daemons remain clean.
+
+`decisions.py summary`: **188 total,111 resolved,77 pending,94 lessons**, versus175/105/70/88 last week. Types:47 scaffolding,42 opens,39 size changes,29 skips,25 closes,5 strategy changes,1 legacy infra. The $457.31 pending-size sum is repeated historical decision sizing, not current exposure. Outcomes mix engineering verification and order lifecycles with forecasts; 111 resolved records are not 111 independent forecasts. DEC-0180 was resolved after receipt/balance checks and a fresh read-only native-USDC withdrawal simulation; DEC-0188 records the redemption guard. These are engineering verification, not trading forecast wins. The cancelled Swift attempt and exited Gemini debut must not be graded as successful binary predictions. The recurring lessons remain exact source identity, honest fill/accounting state, execution-price sizing and correlation-sensitive updating.
+
+Next clocks: **UNI proposal102 after block26,109,012** (estimated Oct-3; actual block controls), verifying outcome, queue/execution and fee activation with no automatic entry; **Oct-12 emergency-path drill and fee self-check**. No new timer or durable goal.

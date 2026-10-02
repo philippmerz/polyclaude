@@ -1,5 +1,5 @@
 {
-  "next_id": 188,
+  "next_id": 189,
   "decisions": [
     {
       "id": 1,
@@ -3610,9 +3610,10 @@
         "cash-management"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Engineering verification complete: Sep-29 native-USDC supply returned 34.997648 aUSDC after the frozen legacy reserve moved no principal. Focused safety/hurdle regressions passed then. Oct-2 pinned block 94801575 confirms native reserve live, legacy reserve frozen, 85.005456 native aUSDC after the later 50-dollar supply, and a read-only withdrawal of 34.997648 USDC succeeds. No withdrawal was broadcast.",
+      "calibration_delta": "Operational verification, not an independent market forecast or a scored binary win. The earlier legacy supply reverted before this repair; subsequent frozen-reserve paths fail closed before approval/signing.",
+      "lesson": "Inspect reserve flags and simulate before signing; retain receipt and next-check balance evidence. Distinguish withdrawability simulation from an executed withdrawal.",
+      "resolved_at": "2026-10-02T02:22:54Z"
     },
     {
       "id": 181,
@@ -3885,6 +3886,26 @@
         "outcome": "No",
         "negative_risk": false
       }
+    },
+    {
+      "id": 188,
+      "timestamp": "2026-10-02T02:24:07Z",
+      "type": "scaffolding",
+      "thesis": "A successful CTF redemption simulation can silently pay zero when collateral does not match the held asset. Derive a unique supported collateral and outcome index from the exact token and condition, verify a positive on-chain payout, and retain uneconomic winning dust. Clarify the existing private-reader and credential-output boundaries after a provider-audit exposure.",
+      "confidence": "high",
+      "prediction": "Standard redemption will select proven pUSD or USDC.e and reject mismatched, ambiguous, losing or unresolved claims before transaction preparation or signing. Named binary outcomes remain supported. The archived Hormuz claim remains held while its payout is below current gas cost.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-02",
+      "tags": [
+        "execution-safety",
+        "redemption",
+        "claim-insurance"
+      ],
+      "slug": null,
+      "outcome": "59 scoped redemption tests passed, including positive-balance wrong-collateral no-op, both supported collaterals, named outcomes, and fail-before-signing guards. Fresh legacy Hormuz dry-run selected USDC.e and estimated 175036 gas; no broadcast. Its 0.003571-dollar payout is below the 0.005315-dollar current estimated gas cost, so winning dust stays insured. Agent onboarding now explicitly prohibits private inbox/history and broad provider-directory searches. Credential rotation remains with the issuing account operator; no rotation is claimed.",
+      "calibration_delta": "Engineering verification only; not an independent probability forecast or binary trading win. No asset or prior changed.",
+      "lesson": "Bind redemption to exact on-chain token/condition/collateral and payout, not a success boolean. Check actual gas economics. Retrieve operator messages only through the authorized one-time reader; never discover providers by searching private material.",
+      "resolved_at": "2026-10-02T02:24:07Z"
     }
   ]
 }

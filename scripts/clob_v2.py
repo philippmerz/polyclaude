@@ -724,13 +724,8 @@ def get_orderbook(token_id: str) -> dict:
 CTF_ADDR = "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045"
 NEG_RISK_ADAPTER = "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296"
 USDC_E_ADDR = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
-# v2 CLOB collateral (CollateralOnramp-wrapped pUSD). NOTE 2026-07-26: CTF
-# redemption with the WRONG collateral for a position's parent collection
-# silently no-ops (status=1, pays 0) — but whether v2 positions redeem
-# against pUSD or USDC.e is UNVERIFIED (both Marvel attempts no-opped on a
-# ZERO balance — the shares had sold at 0.98 minutes earlier, so neither
-# call tested the collateral). Test at the next real redemption; if pUSD
-# fails, flip redeem_one/redeem_all back to USDC_E_ADDR.
+# Standard CTF collateral must be derived from the held asset: a redemption
+# with the wrong collateral silently succeeds without paying the holder.
 PUSD_ADDR = "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB"
 POLYGON_RPC = "https://polygon.drpc.org"
 
@@ -765,6 +760,20 @@ _CTF_BAL_ABI = [{
     "name": "balanceOf", "outputs": [{"type": "uint256"}],
     "stateMutability": "view", "type": "function",
 }]
+_CTF_IDENTITY_ABI = [
+    {
+        "name": name, "type": "function", "stateMutability": "view",
+        "inputs": [{"name": f"a{i}", "type": kind}
+                   for i, kind in enumerate(inputs)],
+        "outputs": [{"type": output}],
+    }
+    for name, inputs, output in [
+        ("getCollectionId", ["bytes32", "bytes32", "uint256"], "bytes32"),
+        ("getPositionId", ["address", "bytes32"], "uint256"),
+        ("payoutDenominator", ["bytes32"], "uint256"),
+        ("payoutNumerators", ["bytes32", "uint256"], "uint256"),
+    ]
+]
 
 
 def _data_api_positions(address: str) -> list[dict]:
@@ -828,6 +837,49 @@ def _held_outcome_won(position: dict) -> bool:
     return math.isfinite(price) and price >= 0.999
 
 
+def _standard_redeem_identity(
+    ctf: Any, address: str, condition_id: bytes, token_id: str,
+    outcome: str | None = None,
+) -> dict:
+    """Prove a supported collateral and a positive held payout on-chain.
+
+    Simulation alone accepts wrong-collateral no-ops. Match the exact asset
+    against both binary index sets and supported collaterals, then verify the
+    matched held outcome's final payout before preparing any transaction.
+    """
+    if len(condition_id) != 32:
+        raise ValueError("standard redemption: conditionId must be 32 bytes")
+    balance = _redeem_token_balance(ctf, address, token_id)
+    if balance <= 0:
+        raise ValueError("standard redemption: zero held-token balance")
+    matches = []
+    for index in (0, 1):
+        collection = ctf.functions.getCollectionId(
+            b"\x00" * 32, condition_id, 1 << index
+        ).call()
+        for collateral in (PUSD_ADDR, USDC_E_ADDR):
+            derived = ctf.functions.getPositionId(collateral, collection).call()
+            if int(derived) == int(token_id):
+                matches.append((collateral, index))
+    if len(matches) != 1:
+        raise ValueError("standard redemption: asset/condition/collateral identity "
+                         "is mismatched or ambiguous")
+    collateral, index = matches[0]
+    if outcome is not None and outcome != ("Yes", "No")[index]:
+        raise ValueError("standard redemption: held outcome does not match asset")
+    denominator = int(ctf.functions.payoutDenominator(condition_id).call())
+    numerator = int(ctf.functions.payoutNumerators(condition_id, index).call())
+    if denominator <= 0:
+        raise ValueError("standard redemption: condition is unresolved")
+    if numerator <= 0 or numerator > denominator:
+        raise ValueError("standard redemption: held outcome has no valid winning payout")
+    payout = balance * numerator // denominator
+    if payout <= 0:
+        raise ValueError("standard redemption: held payout rounds to zero")
+    return {"collateral": collateral, "outcome_index": index,
+            "balance": balance, "payout_units": payout}
+
+
 def _buffered_redeem_gas(estimate: int) -> int:
     """Return a validated redemption gas estimate with conservative headroom."""
     if isinstance(estimate, bool):
@@ -876,7 +928,8 @@ def redeem_all(dry_run: bool = False) -> dict:
     address, pk = _load_wallet()
     w = Web3(Web3.HTTPProvider(POLYGON_RPC))
     addr_cs = Web3.to_checksum_address(address)
-    ctf = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR), abi=_CTF_BAL_ABI)
+    ctf = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
+                         abi=_CTF_BAL_ABI + _CTF_IDENTITY_ABI)
     adapter = w.eth.contract(address=Web3.to_checksum_address(NEG_RISK_ADAPTER),
                               abi=_NEG_RISK_REDEEM_ABI)
     ctf_redeem = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
@@ -918,6 +971,22 @@ def redeem_all(dry_run: bool = False) -> dict:
             continue
         cond_id = bytes.fromhex(cond_id_hex.replace("0x", ""))
 
+        if not is_neg:
+            try:
+                identity = _standard_redeem_identity(
+                    ctf, addr_cs, cond_id, str(p["asset"]),
+                    # Named binary outcomes (teams, Up/Down) are indexed by
+                    # the proven asset; only Yes/No labels encode this side.
+                    p.get("outcome") if p.get("outcome") in ("Yes", "No") else None,
+                )
+            except (ValueError, RuntimeError) as exc:
+                error = f"identity/payout preflight failed; no broadcast: {str(exc)[:180]}"
+                summary.append({"title": title, "conditionId": cond_id_hex,
+                                "negRisk": False, "tx": None, "ok": False,
+                                "error": error})
+                print(f"  SKIP ({error}) {title}")
+                continue
+
         nonce = w.eth.get_transaction_count(addr_cs)
         gp = w.eth.gas_price
         common_tx = {
@@ -932,7 +1001,7 @@ def redeem_all(dry_run: bool = False) -> dict:
         else:
             # Standard CTF: indexSets = [1] (YES) | [2] (NO) — pass both, contract no-ops the loser
             redeem_call = ctf_redeem.functions.redeemPositions(
-                Web3.to_checksum_address(USDC_E_ADDR),
+                Web3.to_checksum_address(identity["collateral"]),
                 b"\x00" * 32,
                 cond_id,
                 [1, 2],
@@ -997,13 +1066,25 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
     ctf_redeem = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
                                  abi=_CTF_REDEEM_ABI)
     ctf_bal = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
-                             abi=_CTF_BAL_ABI)
+                             abi=_CTF_BAL_ABI + _CTF_IDENTITY_ABI)
     bal = _redeem_token_balance(ctf_bal, addr_cs, token_id)
     if bal == 0:
         print("  SKIP redeem: held outcome-token balance is zero")
         return {"ok": False, "tx": None, "skipped": "zero outcome-token balance",
                 "balance": 0}
     cond_id = bytes.fromhex(cond_id_hex.replace("0x", ""))
+    if not neg_risk:
+        try:
+            identity = _standard_redeem_identity(
+                ctf_bal, addr_cs, cond_id, token_id, outcome
+            )
+        except Exception as exc:
+            if dry_run:
+                return {"ok": False, "tx": None,
+                        "simulated": f"would REVERT: {str(exc)[:180]}"}
+            raise RuntimeError(
+                f"redeem identity/payout preflight failed; no broadcast: {str(exc)[:180]}"
+            ) from exc
     nonce = w.eth.get_transaction_count(addr_cs)
     gp = w.eth.gas_price
     common_tx = {
@@ -1025,7 +1106,8 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
         redeem_call = adapter.functions.redeemPositions(cond_id, amounts)
     else:
         redeem_call = ctf_redeem.functions.redeemPositions(
-            Web3.to_checksum_address(PUSD_ADDR), b"\x00" * 32, cond_id, [1, 2],
+            Web3.to_checksum_address(identity["collateral"]),
+            b"\x00" * 32, cond_id, [1, 2],
         )
     # SIMULATE-FIRST (2026-08-12). This function had no dry path, and on that
     # date I called it as a "probe" of the redemption wiring: it sent a real

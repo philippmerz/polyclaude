@@ -22224,3 +22224,86 @@ ETH head 26,100,327 is 8,685 blocks short, so review is not due. No code,
 tests, trade, transfer, additional research, timer or durable goal. Fresh
 evidence in `logs/periodic_20261001T2200/` and
 `data/periodic_20261001T2200_*.json`.
+
+## 2026-10-02 02:00 UTC — full check; weekly report and redemption repair
+
+All 17 routine commands and 10 scan/context commands completed with exit0;
+full raw output and every emitted context batch reviewed by bounded agents.
+Positions remain G102.084750 NO, O19 NO, Clarity29 YES/29 NO and Trump .33
+NO; debut zero. Pinned Polygon block94,800,980 confirms exact shares,
+pUSD47.319630 and native aUSDC85.005383. Authenticated paginated orders are
+empty. No indexed winning redemption, UMA/Ostium change, watchlist hit,
+new structured alert or uncovered holding. State audit refreshed the five
+indexed legs plus retained deindexed claim; four daemons exact-one/current.
+At02:02 authoritative bankroll$187.87, PM cost/midpoint/depth
+$47.64/$36.21/$32.57, reported settled P&L+$22.50. Indicative account depth
+$184.23, or$177.42 excluding$6.81 separately funded gas (+4.36% versus$170),
+before VM/API costs; depth is sequential, not a guaranteed cash quote.
+
+HLE raw/parsed60rows and legacy hash unchanged; no new Google model item or
+qualifying Clarity final-passage vote. G/O priors.12/.25, stress.03/.15.
+Full fee-net exits$2.489065/$1.831600 with non-HLE wealth$173.85 and no
+carry credit give joint sale-minus-hold Elog-.053847 central/-.004125 stress.
+Individual stress G sale is positive+.000890 while O sale is-.004451;
+central G/O sale deltas are-.038598/-.012943. Retain HOLD / NO ADD under
+the central judgmental model, acknowledging that pessimistic G case now
+favors reducing it. This is terminal probability judgment, not price recovery.
+Clarity stays complete29/29, exit$28.25 versus criteria-consistent$29 floor.
+
+Both discovery/context passes are complete: primary4batches/71rows,
+thin-tail70batches/1,227rows. All raw output reviewed. No verified entry.
+LGD/Xtreme's exact current LGD ask.67 plus fee costs.681055/share; current
+PARI1.50/2.60 normalizes to.634146, a negative4.69c comparison. Worker
+consensus still lacks retained line/date provenance; never size off it alone.
+Monotonicity has no provisional violation; consistency remains INCOMPLETE
+(5,016market cap,15/181groups requested,5quoted). Macro5markets and
+favorite-fade6hints establish no instance probability. Bounded Limitless
+comparison finds no IDENTICAL pair above1.5%; it is partial coverage.
+
+Claim correction and safety follow-up: archived Hormuz NO asset
+90869494087977018607792751230236923002303032923064138180950209430688758061828,
+condition0x60c2c085ee8c16bc8f2419739a94971d4c9d00f637ead10fc0f540afa1be64e8,
+has3,571units and final numerators[0,1]/denominator1 at block94,801,278.
+The previous losing-claim label was wrong. Exact token derives from legacy
+USDC.e; old redeem-one hardcoded pUSD, whose successful simulation paid zero.
+Standard redeem-one/redeem-all now prove unique token/condition/index/
+collateral and positive payout before transaction preparation; named binary
+outcomes are supported and canonical-side mismatches fail closed. **59 scoped
+redemption tests pass**; fresh corrected legacy dry-run succeeds at175,036
+estimated gas/210,044 limit. At279.421gwei and POL$.10867, estimated cost
+$.005315 (fee-cap ceiling$.019134) exceeds payout$.003571. Retain winning
+dust insurance; no signing or broadcast. DEC-0188 records engineering work.
+
+DEC-0180 was overdue and is now resolved as engineering verification. Prior
+supply receipts/regressions and current block94,801,575 confirm native Aave
+live, legacy reserve frozen,85.005456 aUSDC and successful read-only
+34.997648-USDC withdrawal simulation; no withdrawal executed. Fresh native
+supply rate2.8633%. These outcomes are not independent forecast wins.
+
+Security incident: a provider lookup by a scan agent wrongly searched private
+operator storage and emitted a credential into tool output. Interrupted the
+agent, notified the operator via Telegram1074, and resumed only repository
+scans with an explicit private-data boundary. Root did not read or repeat the
+credential. Jev is shadow-only with no trading/watcher caller; it was not used
+in this run. The API reference supplies no documented management path here;
+issuer-account revocation/rotation remains unverified. AGENTS.md now repeats
+the existing one-time-reader and no-private-inbox/history/search instructions.
+
+Weekly P&L Sep-25→Oct-2 is complete. Indicative trading depth improved$31.38
+to$177.42 but remains$1.53/$3.98/$4.58 below the strict Oct-1 VT/VTI/SPY
+comparators$178.95/$181.40/$182.00; midpoint$181.06 overstates executable
+value. Retained public benchmark JSON includes contribution timing and source
+URLs. This week's sale proceeds$112.927930 and fees$1.556540 are not profits;
+VM/API costs remain excluded/unreconciled. Tracker188total/111resolved/
+77pending/94lessons mixes engineering, order lifecycles and forecasts.
+
+Disk490MiB remains below512warning and above128critical; previously notified,
+hourly guard retained, no deletion. World-stateSep27 is current; no duplicate
+rotation or methodology rerun. UNI head26,101,522 remains7,490blocks before
+deadline26,109,012 (estimatedOct3), so not due. Next P&L aroundOct9.
+No trade, transfer, prior change, extra timer or durable goal. Evidence:
+`logs/checkin_20261002T0200/` and `data/checkin_20261002T0200_*.json`.
+
+Telegram1076 sent the material weekly P&L, redemption fix and safety summary
+(one part); credential rotation remains unverified. Local AGENTS.md is
+repository-excluded and remains local; versioned changes preserve that boundary.

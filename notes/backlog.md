@@ -1,5 +1,37 @@
 # Polyclaude Backlog
 
+## Oct-2 02:00 full check — weekly report and redemption guard
+
+- Five unresolved legs, exact shares and priors unchanged; pUSD
+  $47.319630, no orders or indexed winning redemption. HLE 60-row source,
+  Google model news and held criteria unchanged; no qualifying Clarity
+  final-passage vote, material alert or watchlist hit.
+- Fresh G/O full exits $2.489065/$1.831600: central joint models favor
+  holding; the .03/.15 stress model favors Gemini sale alone. HOLD / NO ADD
+  uses the central judgmental priors, with this sensitivity acknowledged.
+- Bankroll $187.87; PM cost/midpoint/depth $47.64/$36.21/$32.57.
+  Indicative account depth $184.23, or $177.42 excluding $6.81 gas
+  (+4.36% before VM/API costs); reported settled P&L +$22.50.
+- Weekly P&L completed: trading depth improved $31.38 from Sep-25;
+  strict Oct-1 VT/VTI/SPY benchmarks $178.95/$181.40/$182.00 still exceed
+  current depth by $1.53/$3.98/$4.58. Operating costs remain excluded.
+- All 17 routine checks and 10 scan/context runs completed; all 74 batches
+  (1,298 rows) reviewed. No verified entry; LGD's fee-inclusive ask exceeds
+  the independently checked bookmaker comparison. Consistency coverage
+  remains incomplete, not a universal no-edge conclusion.
+- Corrected the archived Hormuz claim: .003571 NO shares are winning,
+  but $.005315 estimated standalone gas exceeds $.003571 payout. Retain
+  insurance. Fixed wrong-collateral no-op risk in standard redemption;
+  exact asset/collateral/payout guards, 59 tests and live legacy dry-run pass.
+  DEC-0180 and DEC-0188 resolved as engineering verification, not forecasts.
+- A private credential was emitted during a provider lookup; lookup stopped,
+  operator notified and private-reader/search boundaries made explicit in
+  onboarding. Credential revocation has not been verified.
+- Four daemons/state/coverage clean. Disk about 490 MiB; existing warning
+  and hourly guard retained. No trade, transfer, new timer or durable goal.
+  Next: UNI after block 26,109,012 (estimated Oct-3); current head
+  26,101,522 is 7,490 blocks short. Next weekly P&L around Oct-9.
+
 ## Oct-1 22:00 periodic check — no new action due
 
 - Exact holdings unchanged; pUSD $47.319630, no open orders, redemption,
@@ -2402,6 +2434,13 @@ actively reviewable under source, executable-exit and joint terminal-risk
 analysis; there is no hold-only rule or automatic debut re-entry. Older
 underwriting below is historical and must not replace current priors or
 share counts.
+
+**Oct-2 claim correction:** deindexed Hormuz NO dust is **.003571 winning
+shares**, not losing. Its archived token derives from legacy USDC.e.
+Current standalone redemption costs about $.005315 versus $.003571 payout;
+retain claim insurance and reprice gas when considering redemption. The
+standard helper now verifies exact collateral and positive payout first;
+no new reminder or watcher is needed.
 
 - **Historical Aug-31 HLE underwriting after DEC-0089/0096/0102 — superseded by current state above** — The scheduled Aug-31 full review again validated the instrument against known 2025 changes, passed claude/grok/gemini coverage, and found the live model-results board identical to 2026-01-15. The debut ladder's executable NO asks are now 0.15/0.17/0.31/0.62 for ≥40/45/50/55. The held ≥40 leg remains the cleanest expression at p_no 0.60 / stress 0.45, but the full entry helper rejects the sub-$1 incremental size and the correlated `ai-ships-fast-short` cap is effectively binding; **NO FURTHER ADD / DO NOT CHASE**. The ticket remains 169 NO, $17.60 notional plus $0.62940 fees = $18.22940 gross. CAIS's active July dataset maintenance still prevents treating the frozen results board as organizational abandonment. The direct falsifier is any agi.safe.ai model-row change, especially a catch-up addition of Gemini 3.1 Pro (46.44 on Scale); Google also says 3.5 Pro is coming soon. HLE-specific and Gemini-Pro news coverage remains live. Re-run the validated diff immediately on any alert; treat all HLE legs as one correlated cluster and this thin leg as hold-to-resolution. The old reward experiment remains cap-blocked, unfunded and unproven.
   **Sep-10 source correction supersedes the frozen-board premise and old probabilities in this block:** the resolving chart's API actively changed 44→52→58 rows and already contained Gemini 3.1 Pro before the debut market opened. The chart had GPT-6 Astra 53.6, Gemini 3.8 Flash 46.2 and Gemini 3.1 Pro 45.9. OpenAI ≥50 was final YES. The Sep-10 `p_no` values were next-Gemini-Pro ≥40 **.20**, Gemini ≥50 **.35**, and OpenAI ≥55 **.30**; later reviews supersede them below. All three remained HOLD, with no enlargement under the shared cluster cap. The historical paragraphs below explain superseded reasoning only.

@@ -1,0 +1,128 @@
+{
+  "adjustment_definition_url": "https://help.yahoo.com/kb/SLN28256.html",
+  "as_of": "2026-10-01",
+  "assumptions": [
+    "Each contribution remains cash at zero return until the first completed exchange session strictly after its ledger date.",
+    "Raw closes determine initial fractional shares; adjusted-close growth factors model distributions reinvested and split adjustments.",
+    "Commissions, bid-ask spread, slippage and taxes are zero, so this is an idealized passive comparator.",
+    "Gas-token contributions are excluded because the project reference capital is the 170 USD of trading capital.",
+    "The script excludes an in-progress session and refuses future, missing, malformed or stale prices.",
+    "Yahoo's public chart feed can revise historical adjustments; retain the report's retrieval time and source URLs with any recorded comparison."
+  ],
+  "benchmarks": [
+    {
+      "contributed_capital": "170.00",
+      "exchange_timezone": "America/New_York",
+      "fund_url": "https://investor.vanguard.com/investment-products/etfs/profile/vt",
+      "gain": "8.9493489205711305051805418",
+      "lots": [
+        {
+          "amount": "70.00",
+          "contribution_date": "2026-04-25",
+          "ending_value": "73.93815637786610114108338886",
+          "entry_adjusted_close": "149.39512634277344",
+          "entry_close": "150.32000732421875",
+          "entry_session": "2026-04-27",
+          "initial_fractional_shares": "0.4656732077521790873393066468",
+          "total_return_factor": "1.056259376826658587729762698"
+        },
+        {
+          "amount": "100.00",
+          "contribution_date": "2026-04-29",
+          "ending_value": "105.0111925427050293640971529",
+          "entry_adjusted_close": "150.2696990966797",
+          "entry_close": "151.1999969482422",
+          "entry_session": "2026-04-30",
+          "initial_fractional_shares": "0.6613756747245924211047471754",
+          "total_return_factor": "1.050111925427050293640971529"
+        }
+      ],
+      "name": "Vanguard Total World Stock ETF",
+      "price_age_calendar_days": 0,
+      "return_pct": "5.264322894453606179517965765",
+      "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/VT?period1=1776470400&period2=1790985600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "ticker": "VT",
+      "valuation_adjusted_close": "157.8000030517578",
+      "valuation_session": "2026-10-01",
+      "value": "178.9493489205711305051805418"
+    },
+    {
+      "contributed_capital": "170.00",
+      "exchange_timezone": "America/New_York",
+      "fund_url": "https://investor.vanguard.com/investment-products/etfs/profile/vti",
+      "gain": "11.4023382974532606164892904",
+      "lots": [
+        {
+          "amount": "70.00",
+          "contribution_date": "2026-04-25",
+          "ending_value": "74.90033441625725006128199486",
+          "entry_adjusted_close": "350.6339416503906",
+          "entry_close": "352.5299987792969",
+          "entry_session": "2026-04-27",
+          "initial_fractional_shares": "0.1985646618511573434095240339",
+          "total_return_factor": "1.070004777375103572304028498"
+        },
+        {
+          "amount": "100.00",
+          "contribution_date": "2026-04-29",
+          "ending_value": "106.5020038811960105552072955",
+          "entry_adjusted_close": "352.2750549316406",
+          "entry_close": "354.17999267578125",
+          "entry_session": "2026-04-30",
+          "initial_fractional_shares": "0.2823423176575100144152434522",
+          "total_return_factor": "1.065020038811960105552072955"
+        }
+      ],
+      "name": "Vanguard Total Stock Market ETF",
+      "price_age_calendar_days": 0,
+      "return_pct": "6.707257822031329774405464941",
+      "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/VTI?period1=1776470400&period2=1790985600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "ticker": "VTI",
+      "valuation_adjusted_close": "375.17999267578125",
+      "valuation_session": "2026-10-01",
+      "value": "181.4023382974532606164892904"
+    },
+    {
+      "contributed_capital": "170.00",
+      "exchange_timezone": "America/New_York",
+      "fund_url": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "gain": "12.0033644687827856993211206",
+      "lots": [
+        {
+          "amount": "70.00",
+          "contribution_date": "2026-04-25",
+          "ending_value": "75.15725423469159220657180001",
+          "entry_adjusted_close": "711.5653686523438",
+          "entry_close": "715.1699829101562",
+          "entry_session": "2026-04-27",
+          "initial_fractional_shares": "0.09787882835232726186540860461",
+          "total_return_factor": "1.073675060495594174379597143"
+        },
+        {
+          "amount": "100.00",
+          "contribution_date": "2026-04-29",
+          "ending_value": "106.8461102340911934927493206",
+          "entry_adjusted_close": "715.0377197265625",
+          "entry_close": "718.6599731445312",
+          "entry_session": "2026-04-30",
+          "initial_fractional_shares": "0.1391478637142475058645618362",
+          "total_return_factor": "1.068461102340911934927493206"
+        }
+      ],
+      "name": "State Street SPDR S&P 500 ETF Trust",
+      "price_age_calendar_days": 0,
+      "return_pct": "7.060802628695756293718306235",
+      "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/SPY?period1=1776470400&period2=1790985600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "ticker": "SPY",
+      "valuation_adjusted_close": "763.989990234375",
+      "valuation_session": "2026-10-01",
+      "value": "182.0033644687827856993211206"
+    }
+  ],
+  "currency": "USD",
+  "entry_rule": "first_complete_trading_session_strictly_after_contribution_date",
+  "evaluation_start": "2027-01-01",
+  "reference_capital": "170.00",
+  "retrieved_at": "2026-10-02T02:03:02.272335+00:00",
+  "schema_version": 1
+}

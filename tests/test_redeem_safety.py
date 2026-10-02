@@ -167,3 +167,171 @@ def test_redeem_preflight_failure_never_builds_transaction(fail_at: str) -> None
 def test_redeem_gas_buffer_rejects_invalid_estimate(estimate) -> None:
     with pytest.raises(ValueError, match="positive integer"):
         clob_v2._buffered_redeem_gas(estimate)
+
+
+_CONDITION = bytes.fromhex("60c2c085ee8c16bc8f2419739a94971d4c9d00f637ead10fc0f540afa1be64e8")
+_ARCHIVED_NO = "90869494087977018607792751230236923002303032923064138180950209430688758061828"
+
+
+class _IdentityFunctions:
+    def __init__(self, collateral=clob_v2.USDC_E_ADDR, denominator=1,
+                 numerator=1, ambiguous=False):
+        self.collateral = collateral
+        self.denominator = denominator
+        self.numerator = numerator
+        self.ambiguous = ambiguous
+        self.redeem_collaterals = []
+        self.simulated_payouts = []
+
+    def balanceOf(self, address, token):  # noqa: N802
+        # Positive balance alone does not prove the condition/collateral.
+        return _Call(3571)
+
+    def getCollectionId(self, parent, condition, index_set):  # noqa: N802
+        assert parent == bytes(32)
+        return _Call((condition, index_set))
+
+    def getPositionId(self, collateral, collection):  # noqa: N802
+        if (collection == (_CONDITION, 2)
+                and (collateral == self.collateral or self.ambiguous)):
+            return _Call(int(_ARCHIVED_NO))
+        return _Call(999)
+
+    def payoutDenominator(self, condition):  # noqa: N802
+        assert condition == _CONDITION
+        return _Call(self.denominator)
+
+    def payoutNumerators(self, condition, index):  # noqa: N802
+        assert condition == _CONDITION and index == 1
+        return _Call(self.numerator)
+
+    def redeemPositions(self, collateral, parent, condition, index_sets):  # noqa: N802
+        self.redeem_collaterals.append(collateral)
+        assert parent == bytes(32) and index_sets == [1, 2]
+        functions = self
+
+        class Call(_RedeemCall):
+            def call(self, tx):
+                super().call(tx)
+                functions.simulated_payouts.append(
+                    3571 if collateral == functions.collateral else 0
+                )
+
+        return Call()
+
+
+def _mock_redemption_wallet(monkeypatch, functions):
+    import web3
+    from eth_account import Account
+
+    class Eth:
+        gas_price = 100_000_000_000
+
+        def contract(self, **kwargs):
+            return type("Contract", (), {"functions": functions})()
+
+        def get_transaction_count(self, address):
+            return 0
+
+        def send_raw_transaction(self, *args):
+            pytest.fail("unexpected broadcast")
+
+    class Web3:
+        HTTPProvider = staticmethod(lambda *args: None)
+        to_checksum_address = staticmethod(lambda address: address)
+
+        def __init__(self, provider):
+            self.eth = Eth()
+
+    monkeypatch.setattr(web3, "Web3", Web3)
+    monkeypatch.setattr(clob_v2, "_load_wallet", lambda: ("0xwallet", "unused"))
+    monkeypatch.setattr(Account, "sign_transaction",
+                        lambda *args: pytest.fail("unexpected signing"))
+
+
+@pytest.mark.parametrize("collateral", [clob_v2.USDC_E_ADDR, clob_v2.PUSD_ADDR])
+def test_redeem_one_proves_collateral_before_simulation(monkeypatch, collateral):
+    functions = _IdentityFunctions(collateral=collateral)
+    _mock_redemption_wallet(monkeypatch, functions)
+    # Reproduce the defect: even with archived positive balance, wrong
+    # collateral simulation succeeds and pays zero.
+    wrong = clob_v2.PUSD_ADDR if collateral == clob_v2.USDC_E_ADDR else clob_v2.USDC_E_ADDR
+    functions.redeemPositions(wrong, bytes(32), _CONDITION, [1, 2]).call({})
+    assert functions.simulated_payouts == [0]
+    functions.redeem_collaterals.clear()
+    functions.simulated_payouts.clear()
+
+    result = clob_v2.redeem_one(
+        "0x" + _CONDITION.hex(), token_id=_ARCHIVED_NO, outcome="No", dry_run=True
+    )
+
+    assert result["ok"] is True and result["tx"] is None
+    assert functions.redeem_collaterals == [collateral]
+    assert functions.simulated_payouts == [3571]
+
+
+@pytest.mark.parametrize("failure", ["condition", "token", "losing", "unresolved",
+                                     "ambiguous", "outcome", "invalid_payout"])
+@pytest.mark.parametrize("dry_run", [True, False])
+def test_redeem_one_identity_failures_stop_before_prepare(monkeypatch, failure, dry_run):
+    functions = _IdentityFunctions(
+        denominator=0 if failure == "unresolved" else 1,
+        numerator=0 if failure == "losing" else (2 if failure == "invalid_payout" else 1),
+        ambiguous=failure == "ambiguous",
+    )
+    _mock_redemption_wallet(monkeypatch, functions)
+    monkeypatch.setattr(clob_v2, "_prepare_redeem_transaction",
+                        lambda *args: pytest.fail("unexpected preparation"))
+    kwargs = {"token_id": "123" if failure == "token" else _ARCHIVED_NO,
+              "outcome": "Yes" if failure == "outcome" else "No", "dry_run": dry_run}
+    condition = bytes(32) if failure == "condition" else _CONDITION
+    if dry_run:
+        result = clob_v2.redeem_one("0x" + condition.hex(), **kwargs)
+        assert result["ok"] is False and result["tx"] is None
+    else:
+        with pytest.raises(RuntimeError, match="identity/payout preflight failed"):
+            clob_v2.redeem_one("0x" + condition.hex(), **kwargs)
+    assert functions.redeem_collaterals == []
+
+
+@pytest.mark.parametrize("collateral", [clob_v2.USDC_E_ADDR, clob_v2.PUSD_ADDR])
+@pytest.mark.parametrize("outcome", ["No", "Up", "Down", "Arsenal"])
+def test_redeem_all_standard_uses_same_proven_collateral(monkeypatch, collateral, outcome):
+    functions = _IdentityFunctions(collateral=collateral)
+    _mock_redemption_wallet(monkeypatch, functions)
+    monkeypatch.setattr(clob_v2, "_data_api_positions", lambda address: [{
+        "redeemable": True, "curPrice": 1, "asset": _ARCHIVED_NO,
+        "oppositeAsset": "999", "conditionId": "0x" + _CONDITION.hex(),
+        "outcome": outcome, "outcomeIndex": 1, "negativeRisk": False,
+    }])
+
+    def stop_after_preparation(call, tx):
+        call.call({"from": tx["from"]})
+        raise RuntimeError("test stops before signing")
+
+    monkeypatch.setattr(clob_v2, "_prepare_redeem_transaction", stop_after_preparation)
+    result = clob_v2.redeem_all()
+    assert functions.redeem_collaterals == [collateral]
+    assert functions.simulated_payouts == [3571]
+    assert result["redemptions"][0]["tx"] is None
+
+
+@pytest.mark.parametrize("failure", ["token", "losing", "unresolved", "ambiguous", "outcome"])
+def test_redeem_all_standard_fails_closed_before_prepare(monkeypatch, failure):
+    functions = _IdentityFunctions(
+        denominator=0 if failure == "unresolved" else 1,
+        numerator=0 if failure == "losing" else 1, ambiguous=failure == "ambiguous",
+    )
+    _mock_redemption_wallet(monkeypatch, functions)
+    monkeypatch.setattr(clob_v2, "_data_api_positions", lambda address: [{
+        "redeemable": True, "curPrice": 1,
+        "asset": "123" if failure == "token" else _ARCHIVED_NO,
+        "oppositeAsset": "999", "conditionId": "0x" + _CONDITION.hex(),
+        "outcome": "Yes" if failure == "outcome" else "No", "negativeRisk": False,
+    }])
+    monkeypatch.setattr(clob_v2, "_prepare_redeem_transaction",
+                        lambda *args: pytest.fail("unexpected preparation"))
+    result = clob_v2.redeem_all()
+    assert result["redemptions"][0]["ok"] is False
+    assert result["redemptions"][0]["tx"] is None
+    assert functions.redeem_collaterals == []
