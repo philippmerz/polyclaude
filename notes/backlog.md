@@ -1,5 +1,24 @@
 # Polyclaude Backlog
 
+## Oct-2 06:00 periodic check — no new asset action
+
+- Holdings and priors unchanged; pUSD $47.319630, no open orders,
+  overdue decision, watchlist hit, UMA/Ostium change or new structured alert.
+- Current HLE raw/parsed 60-row dataset and Google model news unchanged;
+  fresh Senate index has no qualifying Clarity final-passage vote. Initial
+  agent HTTP403 failures were recovered by independent vetted-reader retries.
+- Fresh full fee-net G/O exits $2.806826/$2.015596 retain HOLD / NO ADD
+  under central judgmental models; the pessimistic Gemini case still favors
+  selling it. Clarity complete-pair exit $28.24948 remains below its $29 floor.
+- At 06:03 bankroll $188.09; PM cost/midpoint/depth $47.64/$36.35/$33.07.
+  Indicative account depth $184.81, or $177.93 excluding $6.88 funded gas
+  (+4.66% versus $170 before VM/API costs); settled P&L +$22.50.
+- Four daemons exact-one/current/fresh. Disk about 479 MiB remains below
+  the previously notified warning; hourly guard retained, no deletion.
+- Credential rotation remains unverified and is now explicit in Active.
+  UNI head 26,102,745 is 6,267 blocks before deadline 26,109,012, so not due.
+  Weekly P&L is complete; next around Oct-9. No duplicate Telegram or timer.
+
 ## Oct-2 02:00 full check — weekly report and redemption guard
 
 - Five unresolved legs, exact shares and priors unchanged; pUSD
@@ -2396,6 +2415,8 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
 ---
 
 ## Active
+
+- **2026-10-02 [exposed service credential — issuer-account rotation unverified]** — The 02:00 scan agent emitted a private credential during an improperly scoped lookup. The lookup was stopped and the operator notified (Telegram1074); no asset action followed. Revoke or rotate it through the issuing account and verify completion before any further use. No management access is available through the connected tooling. Do not inspect private inbox/history storage or copy the credential to investigate; operator messages must use the notified one-time reader.
 
 - **2026-10-03 [UNI Arc fee expansion — evidence review, no automatic entry]** — Sep-30 independent GovernorBravo reads verified proposal 102 as Active, unexecuted and uncanceled, with about 10.93M UNI For against 40M quorum. Authoritative deadline is block **26,109,012** (rough estimate Oct-3 03:10 UTC; actual block timing controls). At the next existing check after the deadline, verify outcome, queue/execution state and actual fee activation. UNI is about $8.98 after a 74% 30-day rally; retain the $3.25 valuation review gate. Gross burn must be reconciled with the 20M UNI/year treasury growth budget. No new reminder or watcher is needed. Full evidence and venue comparison: Sep-30 entry in `notes/longterm_watchlist.md`.
 
