@@ -44,16 +44,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-03 06:03 UTC
+## Last bankroll snapshot — 2026-10-03 10:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $38.22 |
-| Indicative depth/fee value | $36.44 |
-| Authoritative whole-account mark | $189.84 |
-| Approximate whole-account depth value | $188.06 |
+| Polymarket midpoint | $36.41 |
+| Indicative depth/fee value | $32.95 |
+| Authoritative whole-account mark | $188.04 |
+| Approximate whole-account depth value | $184.58 |
 | Cumulative settled P&L, before VM/API costs | +$22.51 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -73,11 +73,11 @@ and remain uncertain.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$4.52/$3.68**. Central joint models favor holding,
+G/O exits are about **$1.94/$2.75**. Central joint models favor holding,
 including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model favors both full exits; central probabilities reject
-full and partial exits. **HOLD / NO ADD** remains a model-sensitive
-judgment, with no price-recovery assumption. Both new buys fail pessimistic
+The pessimistic model favors a full OpenAI exit and about 10.08 Gemini shares
+trimmed; central probabilities reject full and partial exits. **HOLD / NO ADD**
+remains a model-sensitive judgment, with no price-recovery assumption. Both new buys fail pessimistic
 EV at current asks.
 
 **0.33 Trump-out NO remains** in value, cost and claim-insurance records. Complete
@@ -86,29 +86,30 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.01 native aUSDC** earns the Polygon Aave supply rate (2.799% at
-06:08, variable); existing legacy aUSDC.e is about $3.50.
+About **$85.01 native aUSDC** earns the Polygon Aave supply rate (2.864% read
+during this 10:00 run, variable); existing legacy aUSDC.e is about $3.50.
 No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is about $1.78. Approximate whole-account depth value
-excludes sub-lot dust from immediately executable cash and includes $6.76 of
-separately funded gas. Excluding gas gives about **$181.30 versus $170 trading
-capital (+6.65%)**, before VM/API operating costs. UNI Arc proposal 102 passed
+timestamped snapshot is about $3.46. Approximate whole-account depth value
+excludes sub-lot dust from immediately executable cash and includes $6.77 of
+separately funded gas. Excluding gas gives about **$177.81 versus $170 trading
+capital (+4.59%)**, before VM/API operating costs. UNI Arc proposal 102 passed
 with 46.26M UNI For versus 40M quorum. At 06:05 it is not queued or executed,
-and Arc's fee controls remain inactive. UNI at $9.17 fails the retained $3.25
-valuation review gate; no allocation follows from vote success alone.
+and Arc's fee controls were inactive at that check. The 10:09 UNI quote of
+$9.26 fails the retained $3.25 valuation review gate; no allocation follows
+from vote success alone.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$2.35 above VT and $0.10/$0.70 below VTI/SPY** at those dated values.
+is **$1.14/$3.59/$4.19 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the current [`weekly report`](notes/pnl_weekly.md).
 
-An archived Hormuz NO claim holds **.003571 winning shares**. At 06:05 its
-estimated standalone gas is $.001976; the exact-asset redemption dry-run
-succeeds. Retain the unexpired claim for lower fees: the normal fee ceiling
-allows costs above this tiny payout, and there is no cash need or expiry.
+An archived Hormuz NO claim holds **.003571 winning shares**. At 10:03 its
+estimated standalone gas is $.005299, above the payout. The earlier
+exact-asset redemption dry-run succeeded. Retain the unexpired claim for
+lower fees; there is no cash need or expiry.
 Standard CTF redemption now verifies the exact asset, collateral and positive
 on-chain payout before preparing a transaction.
 
