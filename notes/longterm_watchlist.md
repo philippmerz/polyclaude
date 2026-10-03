@@ -789,3 +789,32 @@ WBTC lending has a modest premium but concentrated withdrawals and a
 completed Compound/Gauntlet wind-down; no reserve migration justified.
 The active search did produce DEC-0182's small Swift maker opportunity,
 recorded in the journal, with cash reserved but no filled position assumed.
+
+### Oct-3 06:00 UTC — UNI Arc vote succeeded; execution and valuation gates remain
+
+Completed the Sep-30 post-deadline review. Two independent public Ethereum
+RPCs agree at block **26,109,905** (06:05:47 UTC): GovernorBravo proposal
+**102** is **Succeeded**, with **46,262,383.08 UNI For**, zero Against/Abstain,
+and **40M quorum**. Deadline block **26,109,012** was mined at 03:06:59 UTC.
+Root's independent read agrees. The proposal has eta zero and executed false:
+**not queued, not executed**. The exact Governor is verified against the
+[official technical reference](https://developers.uniswap.org/docs/ecosystem/governance/technical-reference),
+and all three action targets match the [Arc proposal](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
+
+The [documented Arc mainnet RPC](https://docs.arc.io/arc/tools/node-providers)
+at block **24,004,532** (06:05:53 UTC) still reports v2 `feeTo()` zero,
+v3 owner equal to the Wormhole receiver rather than the fee adapter, and
+v4 `protocolFeeController()` zero. **The proposed Arc fee activation has
+not occurred at this snapshot.** The vote removes one governance uncertainty;
+it does not yet establish fee revenue or UNI burn from this expansion.
+
+Fresh validated CoinGecko UNI is **$9.17** at 06:04:10 UTC, **2.82 times**
+the retained **$3.25 valuation review gate**. No price trigger was hit.
+Retain NO ENTRY: actual execution/activation and sustained net fee-funded
+burn must accompany valuation. Gross burn still needs reconciliation with
+the **20M UNI/year** treasury growth budget; protocol revenue is not a token
+holder cash dividend. The Sep-30 route-cost comparison remains dated and
+would require fresh executable quotes before allocation. No automatic entry,
+new account, transfer or order. Existing scheduled checks/news cover changes.
+Public chain/quote evidence: `data/periodic_20261003T0600_uni.json`, independent
+root read `data/periodic_20261003T0600_uni_root.json`.

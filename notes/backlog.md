@@ -1,5 +1,33 @@
 # Polyclaude Backlog
 
+## Oct-3 06:00 periodic check — UNI review complete, no asset action
+
+- All 17 routine/status checks complete; exact holdings and pUSD
+  $47.319630 unchanged. Native aUSDC 85.013141 adds .001087 since 02:00
+  at Polygon block 94,868,249. No orders, watchlist hit, overdue decision,
+  UMA/Ostium change, audit gap or new structured alert.
+- HLE raw/parsed 60 rows, Google model feed, held criteria and all 256
+  Senate roll calls unchanged. Fresh G/O full net exits $4.516703/$3.678400:
+  central joint models reject all full/partial/combined trims, including
+  free redeployment at live Aave 2.799%; stress favors both full exits.
+  HOLD / NO ADD remains judgmental. Clarity stays complete 29/29.
+- Due UNI review completed: independent Ethereum reads confirm proposal
+  102 Succeeded with 46.26M For versus 40M quorum, but not queued/executed.
+  Arc mainnet fee getters remain inactive. At $9.17 retain the $3.25 value
+  review gate; no entry. Dated evidence is in `notes/longterm_watchlist.md`.
+- Bankroll $189.84; PM cost/midpoint/depth $47.64/$38.22/$36.44,
+  funded gas $6.76, settled P&L +$22.51. Indicative trading depth $181.30
+  (+6.65% versus $170 before VM/API costs; sequential quote limitations).
+- Hormuz estimated gas fell to $.001976 versus $.003571 payout. Exact
+  collateral/payout simulation succeeds. Retain the unexpired claim's
+  lower-fee option; normal indicative fee ceiling is $.007115, not an
+  expected cost. No cash need, signature or broadcast.
+- Four daemons exact-one/current/fresh; disk about 407 MiB, existing guard
+  active. Credential rotation remains unverified. Weekly P&L complete,
+  next around Oct9; world-state next Sunday Oct4; monthly drill Oct12.
+  Material UNI/account summary sent as Telegram1093 (one part).
+  No full discovery scan, new code/tests, timer or durable goal.
+
 ## Oct-3 02:00 full check — no asset action
 
 - All 17 routine/status checks completed. The OpenAI criteria reread was
@@ -2533,8 +2561,6 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
 
 - **2026-10-02 [exposed service credential — issuer-account rotation unverified]** — The 02:00 scan agent emitted a private credential during an improperly scoped lookup. The lookup was stopped and the operator notified (Telegram1074); no asset action followed. Revoke or rotate it through the issuing account and verify completion before any further use. No management access is available through the connected tooling. Do not inspect private inbox/history storage or copy the credential to investigate; operator messages must use the notified one-time reader.
 
-- **2026-10-03 [UNI Arc fee expansion — evidence review, no automatic entry]** — Sep-30 independent GovernorBravo reads verified proposal 102 as Active, unexecuted and uncanceled, with about 10.93M UNI For against 40M quorum. Authoritative deadline is block **26,109,012** (rough estimate Oct-3 03:10 UTC; actual block timing controls). At the next existing check after the deadline, verify outcome, queue/execution state and actual fee activation. UNI is about $8.98 after a 74% 30-day rally; retain the $3.25 valuation review gate. Gross burn must be reconciled with the 20M UNI/year treasury growth budget. No new reminder or watcher is needed. Full evidence and venue comparison: Sep-30 entry in `notes/longterm_watchlist.md`.
-
 > **Bounded-run discipline (operator-authorized 2026-09-08; supersedes Aug-28 continuation contract).**
 > Execute each due checklist or event-triggered review once, finish concrete necessary follow-up and
 > verification, then end the turn. Do not create or maintain an indefinite ROI goal, invent more work
@@ -2564,9 +2590,9 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   repeat at most once every 24 hours. Hourly probes continue; critical
   space below 128 MiB and probe failures retain independent hourly alerts.
   Tests pass and the updated watcher is live. Capacity remains unresolved;
-  latest checked free space is about 424 MiB at Oct-3 02:06.
+  latest checked free space is about 407 MiB at Oct-3 06:05.
 
-**Current HLE state, Oct-3 02:00:** next-Pro debut NO is **CLOSED / zero
+**Current HLE state, Oct-3 06:00:** next-Pro debut NO is **CLOSED / zero
 shares** after the 100-share trim (DEC-0183) and final 69-share sale
 (DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.
 Held any-Gemini >=50 NO is **102.084750**, OpenAI >=55 NO **19**; priors
@@ -2577,17 +2603,20 @@ analysis; there is no hold-only rule or automatic debut re-entry. Older
 underwriting below is historical and must not replace current priors or
 share counts.
 
-Fresh G/O full exits are $2.489362/$3.678400. Central joint Elog favors
-holding and rejects partial/combined trims; stress favors both full exits
-and a 44-share Gemini trim. HOLD / NO ADD uses the central judgmental
+Fresh G/O full exits are $4.516703/$3.678400. Central joint Elog favors
+holding and rejects partial/combined trims; stress favors both full exits.
+HOLD / NO ADD uses the central judgmental
 view with this price-dependent sensitivity acknowledged.
 
 **Oct-2 claim correction:** deindexed Hormuz NO dust is **.003571 winning
 shares**, not losing. Its archived token derives from legacy USDC.e.
-At Oct-3 02:06, standalone gas is estimated at $.005299 versus $.003571 payout;
-retain claim insurance and reprice gas when considering redemption. The
-standard helper now verifies exact collateral and positive payout first;
-no new reminder or watcher is needed.
+At Oct-3 06:05, standalone gas is estimated at $.001976 versus $.003571 payout.
+The vetted exact-asset dry-run verifies legacy collateral and positive payout,
+and simulates success with 175,036 estimated gas. Its normal fee ceiling at
+the sampled gas/price allows $.007115 cost; this is not an expected charge.
+Retain the unexpired claim and its lower-fee option, with no cash need or
+new reminder. Gamma's exact archived slug no longer returns a row; on-chain
+identity/payout and claim insurance remain authoritative.
 
 - **Historical Aug-31 HLE underwriting after DEC-0089/0096/0102 — superseded by current state above** — The scheduled Aug-31 full review again validated the instrument against known 2025 changes, passed claude/grok/gemini coverage, and found the live model-results board identical to 2026-01-15. The debut ladder's executable NO asks are now 0.15/0.17/0.31/0.62 for ≥40/45/50/55. The held ≥40 leg remains the cleanest expression at p_no 0.60 / stress 0.45, but the full entry helper rejects the sub-$1 incremental size and the correlated `ai-ships-fast-short` cap is effectively binding; **NO FURTHER ADD / DO NOT CHASE**. The ticket remains 169 NO, $17.60 notional plus $0.62940 fees = $18.22940 gross. CAIS's active July dataset maintenance still prevents treating the frozen results board as organizational abandonment. The direct falsifier is any agi.safe.ai model-row change, especially a catch-up addition of Gemini 3.1 Pro (46.44 on Scale); Google also says 3.5 Pro is coming soon. HLE-specific and Gemini-Pro news coverage remains live. Re-run the validated diff immediately on any alert; treat all HLE legs as one correlated cluster and this thin leg as hold-to-resolution. The old reward experiment remains cap-blocked, unfunded and unproven.
   **Sep-10 source correction supersedes the frozen-board premise and old probabilities in this block:** the resolving chart's API actively changed 44→52→58 rows and already contained Gemini 3.1 Pro before the debut market opened. The chart had GPT-6 Astra 53.6, Gemini 3.8 Flash 46.2 and Gemini 3.1 Pro 45.9. OpenAI ≥50 was final YES. The Sep-10 `p_no` values were next-Gemini-Pro ≥40 **.20**, Gemini ≥50 **.35**, and OpenAI ≥55 **.30**; later reviews supersede them below. All three remained HOLD, with no enlargement under the shared cluster cap. The historical paragraphs below explain superseded reasoning only.

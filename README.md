@@ -44,17 +44,17 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-03 02:03 UTC
+## Last bankroll snapshot — 2026-10-03 06:03 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $37.71 |
-| Indicative depth/fee value | $34.42 |
-| Authoritative whole-account mark | $189.35 |
-| Approximate whole-account depth value | $186.06 |
-| Cumulative settled P&L, before VM/API costs | +$22.50 |
+| Polymarket midpoint | $38.22 |
+| Indicative depth/fee value | $36.44 |
+| Authoritative whole-account mark | $189.84 |
+| Approximate whole-account depth value | $188.06 |
+| Cumulative settled P&L, before VM/API costs | +$22.51 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
@@ -73,10 +73,10 @@ and remain uncertain.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$2.49/$3.68**. Central joint models favor holding,
+G/O exits are about **$4.52/$3.68**. Central joint models favor holding,
 including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model favors both full exits and a 44-share Gemini trim;
-central probabilities reject them. **HOLD / NO ADD** remains a model-sensitive
+The pessimistic model favors both full exits; central probabilities reject
+full and partial exits. **HOLD / NO ADD** remains a model-sensitive
 judgment, with no price-recovery assumption. Both new buys fail pessimistic
 EV at current asks.
 
@@ -86,25 +86,29 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.01 native aUSDC** earns the Polygon Aave supply rate (2.800% at
-02:05, variable); existing legacy aUSDC.e is about $3.50.
+About **$85.01 native aUSDC** earns the Polygon Aave supply rate (2.799% at
+06:08, variable); existing legacy aUSDC.e is about $3.50.
 No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is $3.29. Approximate whole-account depth value excludes
-sub-lot dust from immediately executable cash and includes $6.78 of separately
-funded gas. Excluding gas gives about **$179.28 versus $170 trading capital (+5.5%)**,
-before VM/API operating costs. The next dated research review is UNI Arc
-after proposal 102's deadline at block 26,109,012, estimated Oct. 3.
+timestamped snapshot is about $1.78. Approximate whole-account depth value
+excludes sub-lot dust from immediately executable cash and includes $6.76 of
+separately funded gas. Excluding gas gives about **$181.30 versus $170 trading
+capital (+6.65%)**, before VM/API operating costs. UNI Arc proposal 102 passed
+with 46.26M UNI For versus 40M quorum. At 06:05 it is not queued or executed,
+and Arc's fee controls remain inactive. UNI at $9.17 fails the retained $3.25
+valuation review gate; no allocation follows from vote success alone.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$0.33 above VT and $2.12/$2.72 below VTI/SPY** at those dated values.
+is **$2.35 above VT and $0.10/$0.70 below VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the current [`weekly report`](notes/pnl_weekly.md).
 
-An archived Hormuz NO claim holds **.003571 winning shares**. Its standalone
-redemption cost exceeds the payout, so retain it for a cheaper opportunity.
+An archived Hormuz NO claim holds **.003571 winning shares**. At 06:05 its
+estimated standalone gas is $.001976; the exact-asset redemption dry-run
+succeeds. Retain the unexpired claim for lower fees: the normal fee ceiling
+allows costs above this tiny payout, and there is no cash need or expiry.
 Standard CTF redemption now verifies the exact asset, collateral and positive
 on-chain payout before preparing a transaction.
 
