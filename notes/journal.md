@@ -22809,3 +22809,108 @@ monthly drill Oct12. No asset action, probability/code change, new tests,
 full discovery scan, extra Telegram, timer or durable goal. README/backlog
 refreshed. Evidence: `logs/periodic_20261003T1000/` and
 `data/periodic_20261003T1000_*.json`, including root risk and bounded tape.
+
+## 2026-10-03 14:00 UTC — full check; price alert and candidates revalidated
+
+Completed all 17 routine commands, all eight discovery scanners and both
+offline context passes. Each returned zero; stdout/stderr and timing metadata
+were reviewed rather than relying on exit codes alone. Watchlist JSON has
+36/36 current WATCH quotes, zero NO_DATA and zero hits; auto-vet not triggered.
+No open orders, pending decisions, uncovered crux, Ostium state change, UMA
+resolution change or new structured news/opportunity alert since 10:00.
+
+Public Polygon block 94,887,397 verifies every exact held/dust token against
+10:00: Gemini 102.084750 NO, OpenAI 19 NO, Clarity 29/29, Trump .33 NO,
+Hormuz .003571 winning NO, archived debut zero. pUSD 47.319630 unchanged;
+native aUSDC 85.015343 adds .001114 interest. Root asserted prior units and
+exact Gamma outcome/token mapping. Mandatory `position_state_audit.py --fix`
+is CLEAN: five indexed plus one deindexed claim, zero holds pruned. All
+snapshot identities, financial sizes and claim insurance are unchanged.
+
+At 14:03 authoritative bankroll is $189.04; PM cost/midpoint/depth
+$47.64/$37.37/$33.93, funded gas $6.80, settled P&L +$22.51. Indicative whole
+account depth $185.60, or $178.80 excluding funded gas (+5.18% versus $170
+before VM/API costs). These are sequential planning estimates, not guaranteed
+proceeds or synchronized passive comparisons. All $47.319630 pUSD remains
+uncommitted. Live Polygon Aave native USDC supply APY is 2.832%, variable;
+the marginal scan independently uses the current 2.83% hurdle.
+
+HLE API200 raw/parsed 60 rows and compact hash match 10:00, with maxima
+Gemini 46.2/OpenAI 53.6. Google model feed and four held Gamma descriptions,
+identities and statuses are unchanged. All 256 Senate XML roll calls match;
+root's [official index check](https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm)
+corroborates the excluded H.R.3633 motion-to-proceed cloture vote. No new
+qualifying final passage established; voice/unanimous-consent pair branches
+remain intact.
+
+UMA reports OpenAI >=55 YES .840 -> .765 (-7.5pp), 7pp spread. Fresh exit
+walk confirms NO bid .20; do not infer execution from the midpoint alone.
+The required exact-condition public taker tape covers 10:00 through 14:11:
+both descending first pages reach pre-cutoff trades; no identity/dedupe
+errors. Gemini has no post-cutoff trades. OpenAI has three NO buys totaling
+53.19 shares/$9.806 from two wallets: 5 and 20 at .17, 28.19 at .197095;
+no YES trades or sells. Thus there is favorable execution evidence as well
+as quote movement, but it is small and does not establish informed flow or
+justify a new point prior. Retain judgmental .12/.25 central, .03/.15 stress.
+
+Fresh full fee-net G/O exits $2.000126/$3.678400. Gemini walks 40 at .021
+then 62.084750 at .02; OpenAI's 19 fill at .20. Non-HLE wealth $173.87 and
+explicit central joint terminal states give sale-minus-hold Elog
+-.041304/-.002945, both -.046251. Independent/comonotonic central cases
+also favor holding. Every feasible bid-prefix endpoint and interior
+stationary point was reviewed; negative central hold-point gradients and
+concavity reject all combined trims, even with optimistic immediate free
+Aave redeployment. Stress favors full OpenAI sale (+.005891) and about
+23.45 Gemini shares trimmed (+.000110); full Gemini loses (-.001846), while
+both full exits improve stressed Elog (+.003466). HOLD / NO ADD uses central
+judgment with this sensitivity acknowledged, not expected price recovery.
+New all-in asks .057079/.277884 fail pessimistic EV; Kelly's cost-based
+oversizing remains advisory and no justified hidden-information maker
+premium was established. Clarity's complete exit $28.24948 with free carry
+$28.443838 remains below its $29 floor. Keep complete 29/29; no add.
+
+Discovery primary/thin snapshots contain 80/1,320 rows. All complete raw
+outputs and 49 emitted context batches/880 rows were reviewed (primary
+3/52, thin 46/828); root independently verified counts, semantic/criteria
+proofs and current snapshot hashes. Context includes every new/changed
+review trigger plus observed sibling context; omitted prior filtered rows
+do not prove closure. Thin-tail has a 20-page bound. Monotonicity found no
+provisional violation in 1,226 multi-market events. Consistency coverage
+is INCOMPLETE: 5,002 markets, 10/199 groups requested quotes, nine received,
+no survivor. Limitless compares only 3,000 PM markets; 15/50 matches and
+all seven apparent positives classified DIFFERENT. No comprehensive-zero
+claim. Three worker sports deltas stay <=2.5pp and are not independently
+paired bookmaker evidence; macro has five FOMC rows without consensus.
+
+Favorite-fade's failed population statistic surfaced four leads. Freshly
+rechecked the two strongest depth leads, exact IDs 5130977 ceasefire YES
+and 5217835 Saudi/Yemen NO: matching literal criteria and tokens, active
+orders, no UMA proposal, five-share minimum, Gamma explicitly disables
+fees and CLOB base fee is zero. Five shares walk at .94 for $4.70 each.
+Ceasefire's literal cutoff is Oct7 20:29 UTC (Iran time), 7h30 earlier than
+Gamma's Oct8 03:59 metadata; this continues-through contract is distinct
+from the 14-day-effective family. Conflicting reports may delay resolution.
+Yemen requires acknowledged regular Saudi forces in combat on Yemeni soil;
+air/foreign-coalition operations do not suffice. Each needs loss probability
+below roughly 6% just to beat Aave before uncertainty and operating costs.
+No independent robust instance bound was established: NO ENTRY. The
+[Oct1 Saudi official statement](https://www.spa.gov.sa/N2690941) attributes
+the Sep29 Taibah drone attack to Houthis and describes deterrent measures;
+this signals escalation, not a qualifying Saudi ground entry. Direct
+CENTCOM index browsing returned403; cached official extracts cannot prove
+current absence of US strikes. No qualifying fresh fact or independent
+fair-value advantage supports the other Leclerc/blockade population hints.
+
+Hormuz estimated standalone gas $.005331 exceeds $.003571 payout; retain
+the unexpired winning claim and prior successful simulation, no repeat
+broadcast. Four daemons exact-one/live/current; watcher-state metadata only.
+Disk 388.35 MiB remains above 128 MiB critical with the existing daily warning
+and hourly guard, no deletion/restart. Credential issuer rotation remains
+unverified; private storage/credentials not inspected. UNI's due chain review
+was completed at 06:00; current $9.15 hits no $3.25 gate and supplies no new
+chain-state claim. Weekly P&L completed Oct2, next around Oct9; world-state
+Sep27 fresh, Sunday review tomorrow Oct4; monthly drill Oct12. Methodology
+concluded, no rerun. No asset action, prior/code change, new tests, extra
+Telegram, timer or durable goal. README/backlog refreshed. Evidence:
+`logs/checkin_20261003T1400/` and `data/checkin_20261003T1400_*.json`, including
+root inventory, batch, joint-risk, tape and candidate verification.

@@ -1,5 +1,38 @@
 # Polyclaude Backlog
 
+## Oct-3 14:00 full check — no asset action
+
+- All 17 routine commands, eight scanners and both context passes completed.
+  Mandatory state `--fix` is CLEAN and preserves all six exact claim rows.
+  All 36 watchlist candidates have current quotes; no hit, open order,
+  overdue decision, UMA resolution change or new structured alert.
+- Exact shares, pUSD $47.319630 and archived debut zero unchanged. Polygon
+  block 94,887,397 confirms native aUSDC 85.015343, up .001114 since 10:00.
+  HLE raw/parsed 60 rows, Google feed, held criteria and 256 Senate roll
+  calls unchanged. The OpenAI price alert was checked against covered tape:
+  three NO buys, 53.19 shares/$9.81 from two wallets; no YES trades or sells.
+  This small favorable flow does not justify a prior change.
+- Fresh G/O full exits $2.000126/$3.678400: central joint models reject
+  full/partial/combined trims, including optimistic free Aave carry at
+  live 2.832%. Stress favors full OpenAI sale and about 23.45 Gemini shares
+  trimmed. HOLD / NO ADD remains judgmental; Clarity stays complete 29/29.
+- All raw scans and 49 context batches/880 emitted rows reviewed; snapshot
+  hashes and counts independently verified. Two favorite-fade leads were
+  rechecked against exact criteria, identities, disabled fees and live books.
+  Ceasefire YES and Yemen NO at .94 need loss risk below roughly 6% before
+  uncertainty; no robust instance bound established. Ceasefire's written
+  Iran-time cutoff precedes Gamma metadata by 7h30. No verified entry in the
+  checked universe; consistency/cross-venue coverage remains incomplete.
+- Bankroll $189.04; PM cost/midpoint/depth $47.64/$37.37/$33.93,
+  funded gas $6.80, settled P&L +$22.51. Indicative trading depth $178.80
+  (+5.18% versus $170 before VM/API costs; sequential quote limitations).
+- Hormuz gas $.005331 exceeds $.003571 payout; retain claim insurance.
+  Four daemons exact-one/current/fresh; disk about 388 MiB, existing guard
+  active. Credential rotation remains unverified. UNI $9.15 hits no price
+  gate; its completed 06:00 chain review remains dated evidence. Weekly
+  P&L around Oct9, world-state tomorrow Oct4, monthly drill Oct12.
+  No new code/tests, extra Telegram, timer or durable goal.
+
 ## Oct-3 10:00 periodic check — no asset action
 
 - All 17 routine commands returned zero. Initial crypto watchlist quotes
@@ -2620,9 +2653,9 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   repeat at most once every 24 hours. Hourly probes continue; critical
   space below 128 MiB and probe failures retain independent hourly alerts.
   Tests pass and the updated watcher is live. Capacity remains unresolved;
-  latest checked free space is about 401 MiB at Oct-3 10:03.
+  latest checked free space is about 388 MiB at Oct-3 14:04.
 
-**Current HLE state, Oct-3 10:00:** next-Pro debut NO is **CLOSED / zero
+**Current HLE state, Oct-3 14:00:** next-Pro debut NO is **CLOSED / zero
 shares** after the 100-share trim (DEC-0183) and final 69-share sale
 (DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.
 Held any-Gemini >=50 NO is **102.084750**, OpenAI >=55 NO **19**; priors
@@ -2633,14 +2666,14 @@ analysis; there is no hold-only rule or automatic debut re-entry. Older
 underwriting below is historical and must not replace current priors or
 share counts.
 
-Fresh G/O full exits are $1.944600/$2.753100. Central joint Elog favors
+Fresh G/O full exits are $2.000126/$3.678400. Central joint Elog favors
 holding and rejects partial/combined trims; stress favors full OpenAI sale
-and about 10.08 Gemini shares trimmed. HOLD / NO ADD uses the central judgmental
+and about 23.45 Gemini shares trimmed. HOLD / NO ADD uses the central judgmental
 view with this price-dependent sensitivity acknowledged.
 
 **Oct-2 claim correction:** deindexed Hormuz NO dust is **.003571 winning
 shares**, not losing. Its archived token derives from legacy USDC.e.
-At Oct-3 10:03, standalone gas is estimated at $.005299 versus $.003571 payout.
+At Oct-3 14:04, standalone gas is estimated at $.005331 versus $.003571 payout.
 The earlier vetted exact-asset dry-run verified legacy collateral and positive
 payout and simulated success with 175,036 estimated gas. Retain the unexpired
 claim and its lower-fee option; the current estimate is uneconomic, with no
