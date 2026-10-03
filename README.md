@@ -44,16 +44,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-03 18:02 UTC
+## Last bankroll snapshot — 2026-10-03 22:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $37.16 |
-| Indicative depth/fee value | $33.74 |
-| Authoritative whole-account mark | $188.87 |
-| Approximate whole-account depth value | $185.45 |
+| Polymarket midpoint | $36.33 |
+| Indicative depth/fee value | $33.25 |
+| Authoritative whole-account mark | $188.06 |
+| Approximate whole-account depth value | $184.98 |
 | Cumulative settled P&L, before VM/API costs | +$22.51 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -73,9 +73,9 @@ and remain uncertain.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$2.12/$3.49**. Central joint models favor holding,
+G/O exits are about **$2.27/$2.94**. Central joint models favor holding,
 including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model favors a full OpenAI exit and 40 Gemini shares
+The pessimistic model favors a full OpenAI exit and about 46.77 Gemini shares
 trimmed; central probabilities reject full and partial exits. **HOLD / NO ADD**
 remains a model-sensitive judgment, with no price-recovery assumption. Both
 new buys fail pessimistic EV at current asks.
@@ -86,28 +86,28 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.02 native aUSDC** earns the Polygon Aave supply rate (2.827% read
-during this 18:00 run, variable); existing legacy aUSDC.e is about $3.50.
+About **$85.02 native aUSDC** earns the Polygon Aave supply rate (2.857% read
+during this 22:00 run, variable); existing legacy aUSDC.e is about $3.50.
 No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is about $3.42. Approximate whole-account depth value
-excludes sub-lot dust from immediately executable cash and includes $6.84 of
-separately funded gas. Excluding gas gives about **$178.61 versus $170 trading
-capital (+5.06%)**, before VM/API operating costs. UNI Arc proposal 102 passed
+timestamped snapshot is about $3.08. Approximate whole-account depth value
+excludes sub-lot dust from immediately executable cash and includes $6.87 of
+separately funded gas. Excluding gas gives about **$178.11 versus $170 trading
+capital (+4.77%)**, before VM/API operating costs. UNI Arc proposal 102 passed
 with 46.26M UNI For versus 40M quorum. At 06:05 it is not queued or executed,
-and Arc's fee controls were inactive at that check. The 18:03 UNI quote of
-$9.02 fails the retained $3.25 valuation review gate; no allocation follows
+and Arc's fee controls were inactive at that check. The 22:02 UNI quote of
+$9.01 fails the retained $3.25 valuation review gate; no allocation follows
 from vote success alone.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$0.34/$2.79/$3.39 below VT/VTI/SPY** at those dated values.
+is **$0.84/$3.29/$3.89 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the current [`weekly report`](notes/pnl_weekly.md).
 
-An archived Hormuz NO claim holds **.003571 winning shares**. At 18:03 its
-estimated standalone gas is $.005365, above the payout. The earlier
+An archived Hormuz NO claim holds **.003571 winning shares**. At 22:03 its
+estimated standalone gas is $.005330, above the payout. The earlier
 exact-asset redemption dry-run succeeded. Retain the unexpired claim for
 lower fees; there is no cash need or expiry.
 Standard CTF redemption now verifies the exact asset, collateral and positive
