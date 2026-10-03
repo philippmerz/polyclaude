@@ -22593,3 +22593,81 @@ around Oct9; monthly drill Oct12 and world-state Sep27 still fresh.
 No asset action, code/prior change, new tests, full discovery scan, Telegram,
 timer or durable goal. README/backlog refreshed. Evidence:
 `logs/periodic_20261002T2200/`, `data/periodic_20261002T2200_*.json`.
+
+## 2026-10-03 02:00 UTC — full check; criteria rotation complete, no asset action
+
+All 17 routine/status checks completed. No open orders, watchlist hit,
+overdue decision, UMA/Ostium change, uncovered crux or new structured alert.
+The required audit --fix refreshed only the claim snapshot date and flagged
+OpenAI's criteria reread, last Sep25 (eight days old). Root reread its exact
+current Gamma description: any OpenAI model, HLE Accuracy >=55, Dec31
+23:59 ET; Calibration Error excluded and official-source substitution gated
+on continued/permanent unavailability. Current criteria and source match
+22:00. Its Sep25 63-row note preceded the already-journaled Sep28 removal of
+three null-score placeholders. This was historical source evidence surfaced
+by the audit, not a new change. Original Sep25 raw payload was not located;
+retain historical notes with this limitation. Updated only OpenAI's criteria/
+source dates, factual assessment and current source fact; every probability
+and historical fact remains. Final read-only position audit passes clean.
+
+At Polygon block 94,858,679, all six held/dust balances and zero debut match
+22:00. pUSD remains 47.319630; native aUSDC 85.012054 adds .001098 interest.
+The delegated inventory initially compared aUSDC to 18:00; final proof was
+corrected without another RPC and root asserted every prior unit against
+22:00. At 02:03 authoritative bankroll is $189.35; PM cost/midpoint/depth
+$47.64/$37.71/$34.42, funded gas $6.78 and settled P&L +$22.50. Indicative
+whole-account depth $186.06, or $179.28 excluding gas (+5.46% versus $170
+before VM/API costs). Sequential depth estimates are not guaranteed proceeds.
+The Oct1 passive benchmarks are dated comparisons, not synchronized marks.
+
+Live HLE API200 has raw/parsed 60 rows identical to 22:00, with Gemini/OpenAI
+maxima 46.2/53.6. All held market identities, descriptions and statuses match.
+Google RSS has no new qualifying model item. Senate XML200 has all 256 rows
+unchanged; the official [HTML index](https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm)
+corroborates the excluded H.R.3633 cloture vote. This roll-call check does
+not exclude voice/unanimous-consent branches; the complete Clarity floor holds.
+
+Fresh full G/O fee-net exits $2.489362/$3.678400; unchanged judgmental priors
+.12/.25 and non-HLE wealth $173.86 give central sale-minus-hold Elog
+-.038595/-.002945, both -.043532. Central independent and maximal positive
+correlation full-exit models also favor holding. All feasible bid-prefix
+endpoints/interior optima were reviewed; both central hold-point gradients
+are negative, so concavity rejects combined partial trims. These conclusions
+survive optimistic immediate cost-free redeployment at live Aave 2.800%
+(02:05 reserve read, variable). Discovery's cached 2.85% hurdle is 12h old
+and within its 24h TTL. Stress .03/.15 favors both full sales (+.006188),
+G alone (+.000892), O alone (+.005891), and a 44-share G trim (+.003094).
+HOLD / NO ADD remains a central judgment with this sensitivity acknowledged;
+no calibrated probability or recovery assumption. New G/O all-in asks
+.051900/.237084 fail pessimistic EV. Kelly's Gemini cost oversizing is
+advisory, not an automatic sale; no justified hidden-information maker
+premium was established. Clarity complete exit $28.24948 plus free carry
+$28.44274 remains below $29; retain the complete 29/29 pair, no add.
+
+All eight required scanners and both offline context passes returned zero.
+Delegated review covered all raw outputs and every batch: 3 primary/55 rows
+and 60 thin-tail/1,044 rows, both integrity proofs verified. Thin discovery
+fetched 55,393 within its 20-page bound and selected 1,428. Consistency was
+incomplete at 5,001 open markets, with 1/9 requested groups actually quoted;
+no provisional survivor. Limitless compared only the first 3,000 PM markets;
+all five profitable-looking top matches differed in resolution. Monotonicity's
+single midpoint flag had no book. None establishes a comprehensive zero.
+Independently revalidated exact Legacy–PARIVISION identity, full criteria,
+current books and structured 5% fee. [Stake's paired odds](https://stake.com/es/sports/counter-strike/international-3/esl-pro-league-season-24-t3/853749-legacy-parivision)
+2.00/1.72 normalize to .46237/.53763; PARIVISION's .59218 fee-inclusive ask
+has -5.45pp comparison edge. Legacy's .442255 ask gives only +2.01pp against
+one bookmaker, insufficient for quote/model uncertainty. Gamma's start time
+also conflicts with its description by five hours. Reject and stop.
+
+Four daemons exact-one/live/current; watcher state inspected by metadata
+only. Disk 423.87 MiB remains above 128 MiB critical; existing daily warning
+and hourly probes active, no deletion/restart. Credential issuer rotation
+remains unverified; no private storage or credential was inspected. Hormuz
+winning dust remains insured: $.005299 standalone gas exceeds $.003571 payout.
+Closing ETH head 26,108,762 at 02:17 is 250 blocks before UNI deadline
+26,109,012, so review is not due; next existing check will handle it.
+Weekly P&L complete Oct2, next around Oct9; monthly drill Oct12, world-state
+Sep27 fresh and methodology concluded. No asset action, probability change,
+new code/tests, Telegram, timer or durable goal. README/backlog refreshed.
+Evidence: `logs/checkin_20261003T0200/`, `data/checkin_20261003T0200_*.json`,
+including root joint/prefix risk calculations and sports revalidation.

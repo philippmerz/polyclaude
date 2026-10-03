@@ -1,5 +1,33 @@
 # Polyclaude Backlog
 
+## Oct-3 02:00 full check — no asset action
+
+- All 17 routine/status checks completed. The OpenAI criteria reread was
+  due after eight days; current exact criteria/source verified, metadata
+  refreshed, and the final read-only audit is clean. Its historical 63-row
+  note preceded the already-recorded Sep28 return to 60; no new source change.
+- Exact holdings and pUSD $47.319630 unchanged; native aUSDC 85.012054,
+  up .001098 from 22:00 at Polygon block 94,858,679. No orders, watchlist
+  hit, overdue decision, UMA/Ostium change or new structured alert.
+- Current HLE raw/parsed 60 rows, Google model feed, held criteria and all
+  256 Senate roll calls unchanged. Fresh G/O exits $2.489362/$3.678400:
+  central joint models reject full/partial/combined trims; stress favors
+  both full exits and a 44-share Gemini trim. HOLD / NO ADD; priors unchanged.
+  Clarity remains complete 29/29. Current Aave supply rate is 2.800%.
+- All eight scans and both context passes completed; all raw outputs and
+  63 batches (1,099 rows) reviewed. Legacy–PARIVISION fails current paired
+  odds/fees/uncertainty checks. Structural and cross-venue coverage remains
+  incomplete; no verified entry in the checked universe.
+- Bankroll $189.35; PM cost/midpoint/depth $47.64/$37.71/$34.42,
+  funded gas $6.78, settled P&L +$22.50. Indicative trading depth $179.28
+  (+5.46% versus $170 before VM/API costs; sequential quote limitations).
+- Four daemons exact-one/current/fresh; disk about 424 MiB, existing guard
+  active. Credential rotation remains unverified. Hormuz standalone gas
+  $.005299 exceeds $.003571 payout; retain winning claim insurance.
+- Final ETH head 26,108,762 is 250 blocks before UNI deadline 26,109,012;
+  not due. Weekly P&L complete, next around Oct9; monthly drill Oct12;
+  world-state Sep27 fresh. No extra Telegram, timer or durable goal.
+
 ## Oct-2 22:00 periodic check — no new action due
 
 - Exact holdings, pUSD $47.319630 and zero debut unchanged. Polygon block
@@ -2536,9 +2564,9 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   repeat at most once every 24 hours. Hourly probes continue; critical
   space below 128 MiB and probe failures retain independent hourly alerts.
   Tests pass and the updated watcher is live. Capacity remains unresolved;
-  latest checked free space is about 439 MiB at Oct-2 22:00.
+  latest checked free space is about 424 MiB at Oct-3 02:06.
 
-**Current HLE state, Oct-2 22:00:** next-Pro debut NO is **CLOSED / zero
+**Current HLE state, Oct-3 02:00:** next-Pro debut NO is **CLOSED / zero
 shares** after the 100-share trim (DEC-0183) and final 69-share sale
 (DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.
 Held any-Gemini >=50 NO is **102.084750**, OpenAI >=55 NO **19**; priors
@@ -2549,14 +2577,14 @@ analysis; there is no hold-only rule or automatic debut re-entry. Older
 underwriting below is historical and must not replace current priors or
 share counts.
 
-Fresh G/O full exits are $1.858067/$3.493036. Central joint Elog favors
-holding and rejects partial trims; stress favors a full OpenAI exit and
-about 10.08 Gemini shares trimmed. HOLD / NO ADD uses the central judgmental
+Fresh G/O full exits are $2.489362/$3.678400. Central joint Elog favors
+holding and rejects partial/combined trims; stress favors both full exits
+and a 44-share Gemini trim. HOLD / NO ADD uses the central judgmental
 view with this price-dependent sensitivity acknowledged.
 
 **Oct-2 claim correction:** deindexed Hormuz NO dust is **.003571 winning
 shares**, not losing. Its archived token derives from legacy USDC.e.
-At Oct-2 22:04, standalone gas is estimated at $.005177 versus $.003571 payout;
+At Oct-3 02:06, standalone gas is estimated at $.005299 versus $.003571 payout;
 retain claim insurance and reprice gas when considering redemption. The
 standard helper now verifies exact collateral and positive payout first;
 no new reminder or watcher is needed.
