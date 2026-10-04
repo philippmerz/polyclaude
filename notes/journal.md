@@ -23056,3 +23056,117 @@ new tests, extra Telegram, timer or durable goal. README/backlog refreshed.
 Evidence: `logs/periodic_20261003T2200/` and
 `data/periodic_20261003T2200_*.json`, including exact inventory, health,
 source, fee/depth and root joint-risk proofs.
+
+## 2026-10-04 02:00 UTC — full scheduled check; no asset action
+
+Completed all 17 routine commands, eight scanners and both offline context
+passes. Exit analysis initially stopped on a malformed data-API response
+with an AttributeError before producing a verdict; one bounded retry passed.
+Mandatory state `--fix` refreshed claim insurance and dropped no holds;
+final read-only audit is CLEAN, five indexed plus one deindexed claim row.
+Watchlist JSON has all 36 WATCH quotes, zero missing data and zero hits;
+all eight crypto prices present. No open orders, overdue decision, uncovered
+crux, Ostium change or UMA alert. The alert cutoff was explicitly corrected
+to Oct-3 22:00 across midnight; the closing 02:21 tail check also found no
+new structured news/opportunity alert.
+
+Public Polygon block 94,916,185 verifies exact held/dust identities and units:
+Gemini 102.084750 NO, OpenAI 19 NO, Clarity 29/29, Trump .33 NO and Hormuz
+.003571 winning NO; archived debut zero. pUSD 47.319630 is unchanged and
+uncommitted; native aUSDC 85.018653 adds .001102 interest since 22:00.
+Root asserted exact conditions, outcomes and current Gamma token mapping.
+Complete public position pagination finds four indexed resolved rows;
+on-chain block 94,916,764 independently proves each exact held asset pays
+zero. An initial standard-collateral-only identity assertion stopped at a
+neg-risk asset; the bounded read-only retry included the live adapter's
+wrapped collateral and proved all four identities and zero payouts. No
+redemption transaction was prepared. Hormuz's positive deindexed claim is
+separately retained: estimated gas $.005420 exceeds $.003571 payout, with
+no expiry or cash need; prior exact-asset simulation remains valid evidence.
+
+At 02:03 authoritative bankroll is $189.43; PM cost/midpoint/depth
+$47.64/$37.68/$32.50, funded gas $6.87 and settled P&L +$22.51. Indicative
+whole-account depth is $184.25, or $177.38 excluding funded gas (+4.34%
+versus $170 before VM/API costs). The earlier positions walk was $32.60;
+sequential books are not synchronized or guaranteed liquidation proceeds.
+Trading depth is $1.57/$4.02/$4.62 below the dated Oct-1 VT/VTI/SPY values;
+this comparison mixes timestamps. Live Aave native-USDC APY is 2.829%,
+variable; routine marginal analysis used a valid 12-hour-old 2.8319% cache.
+
+HLE HTTP200 raw/parsed 60 rows and compact hash match 22:00; Gemini's maximum
+is 46.2, OpenAI's 53.6. Google model feed and all four held Gamma descriptions,
+identities and statuses are unchanged. All 256 Senate XML rows match;
+the [official Senate index](https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm)
+again identifies the excluded H.R.3633 motion-to-proceed cloture vote.
+No new qualifying final passage established; voice/unanimous-consent pair
+branches remain intact. Gemini NO touch .02/.09 versus .024/.051 raises its
+touch midpoint 1.75pp through a wider spread; OpenAI .14/.18 versus .16/.20
+lowers its midpoint 2pp. These quotes do not establish execution or informed
+flow. No large-price/source/UMA trigger requires a fresh taker-tape review.
+Priors remain judgmental .12/.25 central and .03/.15 stress; unchanged
+sources do not prove absence of private information or a recovery path.
+
+Fresh full fee-net G/O exits are $1.685224/$2.568496. Gemini walks 26.17
+at .02, 40 at .017, 12.05 at .016 and 23.864750 at .015; OpenAI fills all
+19 at .14. Exact identities, lot five, structured rate .04/exponent 1 and
+per-level fees were independently verified. Non-HLE wealth $173.88 and
+central joint states give sale-minus-hold Elog -.043051/-.008940, both
+-.054216. Independent/comonotonic central cases agree. Every feasible bid
+prefix endpoint/interior stationary point was reviewed; negative central
+hold gradients and concavity reject combined trims, including optimistic
+instant free Aave carry without conversion/gas/protocol costs. Stress also
+rejects full G/O/both exits (-.003612/-.000311/-.004501), but slightly favors
+separate trims of about 10.07 Gemini shares (+.000019) or five OpenAI shares
+(+.000041). HOLD / NO ADD retains central judgment with this sensitivity
+and terminal-zero risk acknowledged. New all-in asks .093276/.185904 fail
+pessimistic EV. Kelly's cost oversizing is advisory; no justified maker
+premium was established. Clarity's complete exit $28.24948 with free carry
+$28.442556 remains below its $29 floor. Keep complete 29/29; no add.
+
+Primary/thin snapshots contain 80/1,345 rows. The delegated review covered
+every raw scan output and 56 context batches/998 emitted rows (primary
+4/63, thin 52/935); root independently checked counts, semantic/criteria
+proofs and current source/output hashes. Every new/changed review trigger
+was included with observed event context, without `--max-markets` truncation.
+Prior filtered omissions do not prove closure; thin discovery remains bounded
+at 20 pages. Monotonicity found no provisional candidate in 941 events.
+Consistency coverage is INCOMPLETE: 5,014 markets, one malformed event,
+12/201 groups requested live books, eight received them, no survivor.
+Limitless covered only 3,000 PM markets; 17/50 matches, eight DIFFERENT/two
+UNCERTAIN apparent positives and zero IDENTICAL. No comprehensive-zero
+claim. Sports worker deltas are -.5pp/-.9pp, with no fresh Packers-spread
+consensus; these labels are not independently paired bookmaker evidence.
+Macro shows four FOMC rows without a consensus comparison.
+
+Rechecked all three favorite-fade leads: blockade-end NO (4906127), Saudi/
+Yemen NO (5217835) and ceasefire-through-Oct7 YES (5130977). Exact literal
+criteria, CIDs, outcome tokens, active/open/accepting status and null UMA
+match; fees are disabled and five-share asks walk fully at .90/.95/.95
+for $4.50/$4.75/$4.75. These are quote checks, not entry authorization.
+Before uncertainty, conversion or settlement costs, beating Aave requires
+success above .900831/.950514/.950273. No robust instance lower bound was
+established; population hints and gross APY do not supply one. NO ENTRY.
+Blockade criteria count a qualifying official announcement after Sep24
+creation even if later reversed. The [White House achievements page](https://www.whitehouse.gov/achievements/)
+describes a June lifting; its Sep22 modification metadata precedes creation,
+but line-specific first publication is unproven. This is insufficient
+evidence of a post-creation announcement. The [dated White House article](https://www.whitehouse.gov/releases/2026/08/president-trump-was-right-america-controls-the-strait-of-hormuz/)
+says the blockade resumed in July; it cannot prove absence of a later change.
+Direct CENTCOM article access remains HTTP403. The [Oct1 Saudi statement](https://www.spa.gov.sa/N2690941)
+concerns a Houthi attack in Madinah, not acknowledged Saudi regular forces
+entering Yemen for combat. Ceasefire's written Oct7 20:29 UTC cutoff precedes
+Gamma metadata by 7h30; conflicting strike reports may delay adjudication.
+Bounded source searches do not prove no qualifying event occurred.
+
+Four daemons exact-one/live/current; watcher-state metadata inspected only.
+Disk 360.82 MiB remains above 128 MiB critical with the existing daily warning
+and hourly guard; capacity is unresolved, no cleanup/live-log rotation/restart.
+Credential issuer rotation remains unverified; private storage and credentials
+were not inspected. UNI $9.04 hits no $3.25 gate; the completed Oct-3 06:00
+chain review remains dated evidence. Weekly P&L completed Oct2, next around
+Oct9; world-state Sep27 fresh, separate Sunday review later today; monthly
+drill Oct12. Methodology concluded, no rerun. No asset action, prior/code
+change, new tests, extra Telegram, timer or durable goal. README/backlog
+refreshed; financial identity rows preserved. Evidence:
+`logs/checkin_20261004T0200/` and `data/checkin_20261004T0200_*.json`, including
+root inventory, redemption, batch, source, candidate and joint-risk proofs.
