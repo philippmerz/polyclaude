@@ -62,6 +62,16 @@ Both wallets resolved via the same `_paths.py` mechanism (`POLYCLAUDE_WALLET`, `
 
 Each cron tick (and any other meaningful state change) refreshes `README.md` at the repo root with: current portfolio across both sleeves, MTM, recent decisions, links to the canonical strategy/research docs. GitHub renders this on the front of the repo so the operator can see project state at a glance without reading the journal. Treat it as a public face — concise, link-heavy, no operational secrets.
 
+The static performance chart is in `docs/`. After an already-required complete
+portfolio snapshot, manually append its recorded totals to
+`docs/performance.csv` with a public financial source reference. Use values from
+the same check and retain blank fields and timestamp precision; do not make
+extra market requests or infer missing gas from another date. The graph derives
+whole-account trading depth excluding separately funded gas and keeps midpoint
+value alongside it. See `docs/README.md` for the CSV columns and one-time Pages
+setting. Push the CSV with the existing record update; this adds no watcher,
+timer or trading authority.
+
 ## Operator-blocking questions
 
 Surface via Telegram using the literal `msg --stdin` form above rather than a

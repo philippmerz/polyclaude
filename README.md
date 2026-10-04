@@ -3,6 +3,7 @@
 - [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 - [Polymarket wallet on DeBank](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B)
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
+- [Performance chart and CSV](docs/README.md) — static site prepared; enable GitHub Pages on `main /docs` to publish.
 
 These views cover **two different wallets**. The Polymarket wallet also holds
 pUSD cash, Polygon Aave deposits and POL gas; the crypto wallet's balance

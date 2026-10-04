@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recorded performance of the Polyclaude autonomous investing pilot.">
+  <title>Polyclaude · Performance</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <a class="wordmark" href="https://github.com/philippmerz/polyclaude"><span class="dot"></span>polyclaude</a>
+      <span class="status" id="updated">Loading recorded snapshots…</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">AUTONOMOUS INVESTING PILOT</p>
+      <h1>The account, over time.</h1>
+      <p class="description">Whole-account performance against contributed trading capital. Recorded observations, before VM and API costs.</p>
+    </section>
+
+    <p class="error" id="error" role="alert" hidden></p>
+    <noscript><p>Enable JavaScript to view the chart, or <a href="performance.csv">download the recorded data</a>.</p></noscript>
+
+    <section class="stats" aria-label="Latest recorded performance">
+      <article><span class="stat-label">Indicative trading value</span><strong id="value">—</strong><small>After quoted trading fees · excludes funded gas</small></article>
+      <article><span class="stat-label">Return on contributions</span><strong id="return">—</strong><small id="capital">Against recorded trading capital</small></article>
+      <article><span class="stat-label" id="change-label">Change over 14 days</span><strong id="change">—</strong><small id="change-detail">Comparing recorded depth estimates</small></article>
+    </section>
+
+    <section class="chart-card" aria-label="Performance chart">
+      <div class="chart-toolbar">
+        <div class="periods" role="group" aria-label="Time range">
+          <button data-days="0" class="active" aria-pressed="true">All</button>
+          <button data-days="28" aria-pressed="false">4 weeks</button>
+          <button data-days="14" aria-pressed="false">2 weeks</button>
+          <button data-days="7" aria-pressed="false">7 days</button>
+        </div>
+        <div class="units" role="group" aria-label="Chart units">
+          <button data-unit="usd" class="active" aria-pressed="true">USD</button>
+          <button data-unit="return" aria-pressed="false">Return %</button>
+        </div>
+      </div>
+      <div class="legend" aria-label="Chart series">
+        <label><input type="checkbox" data-series="depth" checked><span class="swatch depth"></span>Depth estimate</label>
+        <label><input type="checkbox" data-series="mark" checked><span class="swatch mark"></span>Midpoint value</label>
+        <label><input type="checkbox" data-series="spy" checked><span class="swatch spy"></span>S&amp;P 500 (SPY)</label>
+        <span class="capital-key"><span class="swatch capital"></span>Contributions</span>
+      </div>
+      <div class="chart-wrap" id="chart-wrap">
+        <svg id="chart" viewBox="0 0 960 390" role="img" tabindex="0" aria-label="Recorded trading value over time. Use left and right arrow keys to inspect observations."></svg>
+        <div class="tooltip" id="tooltip" hidden></div>
+      </div>
+      <div class="chart-footer"><span id="range-detail">—</span><span>Hover, tap, or use ← → to inspect</span></div>
+    </section>
+
+    <details class="methodology">
+      <summary>What these numbers mean</summary>
+      <div>
+        <p><b>Depth estimate</b> starts with the whole-account mark, replaces Polymarket midpoint values with recorded bid-depth estimates after trading fees, and subtracts separately funded gas tokens. It includes cash, Aave deposits and other managed assets. It is an indicative valuation, not settled cash or guaranteed liquidation proceeds; quote times differ and routing or withdrawal costs are omitted.</p>
+        <p><b>Midpoint value</b> subtracts funded gas from the whole-account mark. Thin books can make this look better than the available exit price. <b>Return</b> is value divided by contributed trading capital, minus one. The recent history has no external capital flows; this is not a time-weighted return calculation.</p>
+        <p><b>SPY</b> shows only recorded, validated benchmark observations, dated to the market session they value. It assumes the same contribution dates, ideal fractional shares and reinvested distributions, without commissions, tax or execution costs. Missing observations stay missing; points connected on the chart are not daily prices.</p>
+        <p>Historical snapshots are backfilled from the journal, weekly reports and dated repository dashboards. Missing fields remain blank. A tilde (~) marks an approximate scheduled-check time; date-only observations are labeled separately. VM/API costs are unreconciled and excluded from every pilot value shown here. Source links accompany each observation.</p>
+      </div>
+    </details>
+
+    <details class="records">
+      <summary>Recorded observations <span id="record-count"></span></summary>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Timestamp (UTC)</th><th>Depth</th><th>Midpoint</th><th>Return</th><th>Source</th></tr></thead>
+        <tbody id="observations"></tbody>
+      </table></div>
+    </details>
+    <footer class="page-footer">
+      <span>Small account. Open records. No claim of proven alpha.</span>
+      <nav aria-label="Data and source links"><a href="performance.csv" download>Performance CSV</a><a href="benchmarks.csv" download>Benchmark CSV</a><a href="https://github.com/philippmerz/polyclaude">Source repository ↗</a></nav>
+    </footer>
+  </main>
+</body>
+</html>

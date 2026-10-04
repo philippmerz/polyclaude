@@ -1,0 +1,4 @@
+timestamp_utc,trading_capital_usd,spy_usd,source,note
+2026-09-10T20:00:00Z,170,180.09,notes/pnl_weekly.md:1026,"Validated contribution-timed SPY benchmark; as-of completed market session. 20:00 UTC is the standard session-close plotting anchor, not retrieval time. Ideal fractional shares, distributions reinvested; no commissions, execution costs or tax."
+2026-09-17T20:00:00Z,170,181.22,notes/pnl_weekly.md:1157,"Validated contribution-timed SPY benchmark; as-of completed market session. 20:00 UTC is the standard session-close plotting anchor, not retrieval time. Ideal fractional shares, distributions reinvested; no commissions, execution costs or tax."
+2026-10-01T20:00:00Z,170,182.0,research/2026-10-02-index-benchmark.json,"Validated contribution-timed SPY benchmark; as-of completed market session. 20:00 UTC is the standard session-close plotting anchor, not retrieval time. Ideal fractional shares, distributions reinvested; no commissions, execution costs or tax."

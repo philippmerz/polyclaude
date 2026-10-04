@@ -23581,3 +23581,60 @@ Evidence: logs/periodic_20261004T1800/routine/run.json and sources/;
 data/periodic_20261004T1800_{root_inventory,exit_quotes,aave_rate,risk,
 hormuz_gas,health,inventory}.json; source summary/reconciliation in
 data/periodic_20261004T1800_sources/. Record closure: 2026-10-04T18:25:21+00:00.
+
+
+## 2026-10-04 21:40 UTC — source-backed performance chart; GitHub Pages setup pending
+
+Operator requested a small JS graph and manual timestamped CSV, backfilled
+from recent financial records, and asked if results improved since compaction.
+Built `docs/index.html`, `style.css`, `app.mjs` and two CSVs with no production
+dependencies, build, paid provider, tracking or external asset requests. The
+interactive SVG has date/units/series controls, keyboard/touch inspection,
+source links, a data table, and explicit valuation and expense definitions.
+
+Cheaper helper extracted public journal/weekly records and dated README git
+versions; root independently checked source quartets and arithmetic before
+publication. Initial CSV has 27 pilot observations Sep 8–Oct 4, including the
+latest Oct4 18:07 check. Seventeen have all fields for comparable ex-gas
+trading depth; ten missing gas valuations remain blank and break chart lines.
+Sep14 uses the complete 14:05 README at ec8cfedbef609aa5423336b3874c7b7932890852;
+Sep30 uses the complete 18:01 journal snapshot. No fields are merged across
+quote times. Date-only, minute and scheduled-window anchors are documented;
+approximate windows are visibly marked. Source paths/commit links are public.
+Reported settled P&L stays an accounting residual in CSV, not charted as cash
+profit. Three validated SPY closes (Sep10/Sep17/Oct1) are plotted at session
+as-of anchors; the Sep24 failed strict run's diagnostic reconstruction is
+excluded. No daily benchmark values or missing account figures are invented.
+
+Latest whole-account mark $187.73 minus $6.83 gas and $36.03 PM midpoint plus
+$32.93 PM depth gives $177.80 trading depth, +4.588235% vs $170 before VM/API
+costs. Sep25 depth $146.04 to latest is +$31.76 / +21.747466%; Sep8 $178.86 to
+latest is -$1.06 / -0.592643%. The recent recovery is real on this valuation
+basis, while the longer interval is essentially flat. No exact recent model
+compaction date is documented, and this cannot establish compaction-caused
+improvement or repeatable alpha. Exits/settlements changed composition; sale
+cash is not profit, and open losses remain included. Operating costs remain
+unreconciled and excluded, not zero.
+
+Six Node tests passed for account arithmetic, missing fields, CSV quoting,
+invalid/duplicate dates, recent-change math and actual published datasets.
+A temporary Playwright Chromium check passed desktop/mobile rendering,
+financial totals, date/return/series controls, keyboard inspection, CSV reads,
+no horizontal overflow and visible malformed-data failure. One initial browser
+harness read used innerText on an SVG; corrected to textContent and passed.
+Mobile chart dimensions were adjusted after visual inspection for readable
+axis labels. A later retry found the temporary HTTP server unavailable; the
+harness was made self-contained with server startup/cleanup, and the final
+desktop/mobile checks passed. No trading code or execution paths changed.
+
+The public repo has no Pages site configured. Git SSH push works; `gh` has no
+API authentication, including after the normal repository env loader. Official
+configure-pages documents that initial enablement needs a token beyond the
+workflow GITHUB_TOKEN, so no credential workaround or private search was used.
+Prepared the site for main /docs branch publication and left exact one-time
+Settings → Pages instructions in docs/README.md and backlog. Publishing is not
+claimed live until the owner enables the setting. Future CSV rows can use
+already-required checks; no new timer, watcher, durable goal or asset action.
+Only intended chart/record/procedure/test files are committed; unrelated runtime
+changes remain unstaged. Temporary preview tooling is stopped/removed after
+verification. No Telegram was requested or sent for this interactive request.

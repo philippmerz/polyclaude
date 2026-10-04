@@ -1,5 +1,19 @@
 # Polyclaude Backlog
 
+## Oct-4 performance chart — site ready; Pages setting pending
+
+- `docs/` contains a dependency-free JS/SVG chart and manually maintained CSVs.
+  Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
+  ten missing gas fields remain gaps. Three validated SPY closes are separate;
+  the failed Sep-24 diagnostic benchmark is excluded.
+- Latest recorded trading depth $177.80: +4.59% vs $170 before VM/API costs.
+  Real recovery of $31.76 (+21.75%) since Sep 25, but $1.06 below Sep 8.
+  Public records do not identify a recent model-context compaction date.
+- Six focused data/math tests and desktop/mobile browser checks passed.
+  Publish by selecting GitHub Settings → Pages → Deploy from a branch →
+  main → /docs. Git SSH push works, but GitHub API/admin auth is unavailable
+  in this VM; the site is not yet verified live. No asset or scheduler change.
+
 ## Oct-4 18:00 periodic check — no asset action
 
 - All 17 routine commands returned zero; status's nested hurdle read hit
