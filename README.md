@@ -44,16 +44,16 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-04 02:03 UTC
+## Last bankroll snapshot — 2026-10-04 06:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $37.68 |
-| Indicative depth/fee value | $32.50 |
-| Authoritative whole-account mark | $189.43 |
-| Approximate whole-account depth value | $184.25 |
+| Polymarket midpoint | $35.95 |
+| Indicative depth/fee value | $32.98 |
+| Authoritative whole-account mark | $187.68 |
+| Approximate whole-account depth value | $184.71 |
 | Cumulative settled P&L, before VM/API costs | +$22.51 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -73,9 +73,9 @@ and remain uncertain.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$1.69/$2.57**. Central joint models favor holding,
+G/O exits are about **$2.17/$2.57**. Central joint models favor holding,
 including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model slightly favors separate trims of about 10.07 Gemini
+The pessimistic model favors separate trims of 40 Gemini
 shares or five OpenAI shares; full exits lose in that case. Central
 probabilities reject full and partial exits. **HOLD / NO ADD**
 remains a model-sensitive judgment, with no price-recovery assumption. Both
@@ -87,28 +87,28 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.02 native aUSDC** earns the Polygon Aave supply rate (2.829% read
-during this 02:00 run, variable); existing legacy aUSDC.e is about $3.50.
+About **$85.02 native aUSDC** earns the Polygon Aave supply rate (2.864% read
+during this 06:00 run, variable); existing legacy aUSDC.e is about $3.50.
 No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is about $5.18. Approximate whole-account depth value
-excludes sub-lot dust from immediately executable cash and includes $6.87 of
-separately funded gas. Excluding gas gives about **$177.38 versus $170 trading
-capital (+4.34%)**, before VM/API operating costs. UNI Arc proposal 102 passed
+timestamped snapshot is about $2.97. Approximate whole-account depth value
+excludes sub-lot dust from immediately executable cash and includes $6.86 of
+separately funded gas. Excluding gas gives about **$177.85 versus $170 trading
+capital (+4.62%)**, before VM/API operating costs. UNI Arc proposal 102 passed
 with 46.26M UNI For versus 40M quorum. At Oct-3 06:05 it was not queued or
 executed, and Arc's fee controls were inactive at that check. This run's UNI
-quote of $9.04 fails the retained $3.25 valuation review gate; no allocation follows
+quote of $9.02 fails the retained $3.25 valuation review gate; no allocation follows
 from vote success alone.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$1.57/$4.02/$4.62 below VT/VTI/SPY** at those dated values.
+is **$1.10/$3.55/$4.15 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the current [`weekly report`](notes/pnl_weekly.md).
 
-An archived Hormuz NO claim holds **.003571 winning shares**. At 02:04 its
-estimated standalone gas is $.005420, above the payout. The earlier
+An archived Hormuz NO claim holds **.003571 winning shares**. At 06:03 its
+estimated standalone gas is $.005394, above the payout. The earlier
 exact-asset redemption dry-run succeeded. Retain the unexpired claim for
 lower fees; there is no cash need or expiry.
 Standard CTF redemption now verifies the exact asset, collateral and positive
