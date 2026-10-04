@@ -1,5 +1,34 @@
 # Polyclaude Backlog
 
+## Oct-4 18:00 periodic check — no asset action
+
+- All 17 routine commands returned zero; status's nested hurdle read hit
+  HTTP 429, while direct positions and the standalone hurdle succeeded.
+  Read-only state audit CLEAN; no open order, overdue decision,
+  uncovered crux, UMA/Ostium change or new structured alert since 14:00.
+- All 38 watchlist prices present, zero hits. Exact fixed-block balances
+  unchanged at Polygon 94,955,118, including dust and archived debut zero;
+  pUSD $47.319630 unchanged, native aUSDC 85.023132 adds .001162 interest.
+- HLE raw/parsed 60 rows, mounted source and separate Diamond presentation
+  rechecked; no new qualifying change. Held descriptions/identities unchanged.
+  Senate XML blocked; official HTML index supplies current 256-vote coverage,
+  only excluded H.R. 3633 cloture row. Older Google recap adds no Pro/HLE score;
+  broader RSS filter differences are not new announcements.
+- Fresh G/O exits $2.000126/$2.753100: central full/partial/combined trims
+  lose even with free 2.795% Aave carry. Stress favors separate trims of
+  about 23.45 Gemini or all 19 OpenAI shares; interpretation uncertainty
+  remains. HOLD / NO ADD; Clarity stays complete 29/29 against its $29 floor.
+- Bankroll $187.73; PM cost/midpoint/depth $47.64/$36.03/$32.93,
+  gas $6.83, settled P&L +$22.52. Indicative trading depth $177.80
+  (+4.59% vs $170 before VM/API costs; sequential quote limitations).
+  Hormuz gas/price estimate $.005263 exceeds $.003571 payout; no broadcast.
+- Four daemons exact-one/current. Disk about 291 MiB, above 128 MiB critical;
+  existing guard active, capacity unresolved. Credential rotation unverified.
+  Sunday review complete; UNI $9.02 hits no $3.25 gate and the 16:15 queue
+  proof remains dated. Weekly P&L around Oct 9, monthly drill Oct 12. Full
+  discovery completed 14:00; no rerun, code/tests, extra Telegram, new timer
+  or durable goal.
+
 ## Oct-4 16:00 Sunday review — research updated, no asset action
 
 - Refreshed macro-fiscal-labor, tech-ai-chips and crypto-on-chain, the least

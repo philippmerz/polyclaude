@@ -23497,3 +23497,87 @@ implementation tests. Requested Telegram delivered as message 1099,
 one part. Exact task files committed/pushed; unrelated runtime/private-log
 changes remain unstaged. No code/daemon change, new timer or durable goal.
 Bounded review closed at 2026-10-04T16:31:11+00:00.
+
+
+## 2026-10-04 18:00 UTC — periodic check; no new qualifying change
+
+Reviewed the backlog and latest journal. Sunday world-state review is done;
+weekly P&L remains due around Oct 9, monthly drill Oct 12. The 14:00 discovery
+passes already completed; no quiet-tick rerun, new research model, timer or
+durable goal. Bounded routine/source work delegated to cheaper helpers;
+root retained entry/exit judgment and independent chain/fee/risk checks.
+
+All 17 routine commands returned rc 0. The status aggregator's nested hurdle
+read had a data-api HTTP 429 despite its zero exit; direct positions and the
+standalone hurdle succeeded. No false claim of 17 entirely clean service
+responses. Read-only position audit CLEAN: five indexed positions plus the
+deindexed Hormuz claim. Fully paginated authenticated orders empty (HTTP 200,
+terminal LTE=); no overdue decision, uncovered crux, UMA or Ostium change.
+All 38 watchlist quotes present, zero hits/missing. Equity monitor does not
+expose per-symbol as-of times; Friday closes are inferred on this Sunday run.
+
+Root Polygon block 94,955,118 at 18:17 independently verifies exact current
+Gemini 102.084750 NO, OpenAI 19 NO, Clarity 29/29, Trump .33 NO and Hormuz
+.003571 NO; archived Pro-debut balance remains zero. pUSD 47.319630 unchanged;
+native aUSDC 85.023132 adds .001162 since 14:00. Bankroll at 18:07 $187.73;
+PM cost/midpoint/depth $47.64/$36.03/$32.93, funded gas $6.83, settled
+P&L +$22.52. Indicative whole-account depth $184.63, excluding gas $177.80
+(+4.59% vs $170 before VM/API costs). These sequential quotes are not
+synchronized or guaranteed liquidation proceeds. Trading depth is
+$1.15/$3.60/$4.20 below dated Oct 1 VT/VTI/SPY values; timestamps differ.
+
+HLE API at 18:06 returned 60 raw/parsed rows, identical compact hash
+532d0884bfbca40a05d793a3612594dff96292ed6afc23b5c8f5c712c40865c6.
+Gemini maximum 46.2, GPT family 53.6. Separately fetched homepage, mounted
+frontend and Diamond publication: original scores.hle/HLE Accuracy chart
+remains; Diamond still describes a separate 1,000-question release. Root
+mode-aware parsing confirms selected default scores unchanged from 14:00:
+Astra 59.9/82.9 and Gemini 33.3/60.6, without/with web+code respectively,
+publication Sep 22. Initial header stripping removed the dataset-id control;
+the corrected raw-HTML identity check and both score-mode comparisons passed.
+This does not prove every site page or render state unchanged.
+Four held Gamma CIDs/outcome tokens, literal descriptions and open/accepting
+statuses unchanged, UMA null; Trump dust identity/status checked too.
+Direct Senate XML and HTML requests returned 403. The official web reader
+supplied the current 256-vote HTML index and vote 234: H.R. 3633 cloture on
+motion to proceed, 49–50 rejected, not final passage. Current index evidence
+supports no qualifying new final passage; full raw-XML row diff unavailable.
+Google's Oct 2 AI recap repeats known Argon without a Pro label or HLE score.
+The helper's four broader-RSS-filter additions were reconciled; they are
+not four new announcements or same-parser feed changes. No new structured
+news/opportunity alert since 14:00, confirmed again before record closure.
+
+Fresh root 18:09 fee-net full G/O exits $2.000126156/$2.7531. Gemini fills
+40 at .021 then 62.084750 at .02; OpenAI 19 at .15. Exact identities, book age,
+min lot 5 and structured rate .04/exponent 1/taker-only verified. The initial
+root helper referenced nonexistent FeeCurve.malformed; after inspecting
+its actual dataclass, one corrected read succeeded. No failed result used.
+Root non-HLE wealth $173.87 and unchanged central joint states give full
+sale-minus-hold Elog G/O/both -.041304/-.007941/-.051418. Independent and
+comonotonic central cases agree. All feasible bid-prefix endpoints and
+stationary points reviewed; negative hold gradients and concavity reject
+central partial/combined sales, including optimistic instant free carry
+at fresh variable Aave 2.795% with conversion/gas/protocol costs ignored.
+Stress full G/O/both -.001846/+.000723/-.001701; separate best trims are
+about 23.453426 Gemini (+.000110 Elog) or all 19 OpenAI (+.000723). Priors
+.12/.25, stress .03/.15 remain judgmental, dates unchanged. Diamond
+interpretation uncertainty remains; no new posterior or recovery forecast.
+HOLD / NO ADD. No justified hidden-information maker premium; at-fair
+resting sales remain inappropriate. All-in asks .053972/.196156 fail
+pessimistic EV. Clarity full-pair exit $28.24948, free carry $28.44082 below
+$29 floor: retain complete 29/29, no isolated-leg action or add.
+
+Hormuz gas/price quote $.005263 exceeds $.003571 payout using earlier vetted
+simulation units; units not re-estimated this tick. Retain unexpired claim
+insurance; no simulation rerun or broadcast. Four daemons exact-one/current;
+private watcher metadata only. Disk about 291 MiB remains below warning,
+above 128 MiB critical; existing guard active, capacity unresolved. Issuer
+credential rotation still unverified, private contents never inspected.
+UNI $9.02 hits no $3.25 gate; Sunday's 16:15 queue/Arc proof remains dated,
+not a claimed 18:00 chain refresh. No asset action, prior/code/daemon change,
+new tests or extra Telegram. README/backlog refreshed; intended records
+committed/pushed and five preexisting runtime changes kept unstaged.
+Evidence: logs/periodic_20261004T1800/routine/run.json and sources/;
+data/periodic_20261004T1800_{root_inventory,exit_quotes,aave_rate,risk,
+hormuz_gas,health,inventory}.json; source summary/reconciliation in
+data/periodic_20261004T1800_sources/. Record closure: 2026-10-04T18:25:21+00:00.
