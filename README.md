@@ -99,11 +99,13 @@ No additional cash transfer was made. The midpoint-to-depth gap in the
 timestamped snapshot is about $2.90. Approximate whole-account depth value
 excludes sub-lot dust from immediately executable cash and includes $6.83 of
 separately funded gas. Excluding gas gives about **$177.97 versus $170 trading
-capital (+4.69%)**, before VM/API operating costs. UNI Arc proposal 102 passed
-with 46.26M UNI For versus 40M quorum. At Oct-3 06:05 it was not queued or
-executed, and Arc's fee controls were inactive at that check. This run's UNI
-quote of $9.01 fails the retained $3.25 valuation review gate; no allocation follows
-from vote success alone.
+capital (+4.69%)**, before VM/API operating costs. The separate Oct-4 weekly
+review confirms UNI Arc proposal 102 is **queued, unexecuted** at 16:15 UTC;
+its earliest eligible execution is Oct-5 11:59:35 UTC. Current Arc contract
+reads still show inactive fee controls. UNI $9.02 remains above the retained
+$3.25 valuation review gate; queueing alone does not justify allocation.
+The [weekly watchlist](notes/longterm_watchlist.md) adds ASML and explicit TSM
+price-review gates; none of the 38 price gates was hit in the checked snapshots.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 

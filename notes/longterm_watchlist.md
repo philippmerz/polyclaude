@@ -818,3 +818,81 @@ would require fresh executable quotes before allocation. No automatic entry,
 new account, transfer or order. Existing scheduled checks/news cover changes.
 Public chain/quote evidence: `data/periodic_20261003T0600_uni.json`, independent
 root read `data/periodic_20261003T0600_uni_root.json`.
+
+## 2026-10-04 Sunday review — macro, AI/chips and crypto
+
+No domain meets the requested four-week cutoff: these three last ran Sep13,
+the other six Sep20/Sep27. Refreshed the three least recent, with the fallback
+disclosed. The 14-source digest and both requested candidate vets completed.
+
+**MED AI/foundry demand** supports business fundamentals, without establishing
+a mispriced share or an edge through January 2027. TSMC's reported August
+revenue grew 53.3% y/y; September is still unpublished. Its
+[calendar](https://investor.tsmc.com/english/financial-calendar) lists September
+sales on Oct8 and Q3 results on Oct15. ASML's
+[Q2 release](https://investor.asml.com/news-releases/news-release-details/q2-2026-financial-results)
+supports the EUV/DUV capacity thesis; [Q3 results](https://investor.asml.com/quarterly-results)
+are scheduled Oct14. Capacity plans and earnings estimates are forecasts.
+
+| Candidate | Fresh vet | Oct2 close (USD) | Review condition and current decision |
+|---|---|---:|---|
+| **ASML — new explicit watch** | 3/4 WATCH | $1,867.31 | Review at ≤$1,400 if demand, earnings and capacity utilization remain intact. Alternative: proven earnings growth brings forward P/E to ≤25x with adoption and cash-flow evidence. AI capex reversal, export controls and customer concentration remain material. No entry. |
+| **TSM — existing watch refreshed** | 2/4 PASS | $472.78 | Review $325–350 with leading-edge utilization, yields and AI demand intact; machine gate $350. Earnings/ramp confirmation must include margins and free cash flow. Taiwan disruption and overseas capex risks remain. No entry. |
+
+Added ASML and TSM to the machine config as **conditional 2–3y brokerage
+research**. No lawful, economically executable project route was verified for
+either in this review. The four-dimension scores are research summaries,
+not calibrated return estimates or independent investment prohibitions.
+Neither check supplies a robust net excess-return case for this project's
+January evaluation at the observed prices.
+
+Root independently dated both closing prices using Yahoo history. Multiples
+are not consistent across vendors: TSM's vet quotes 32.9x trailing, whereas
+Yahoo reports 35.3x trailing/21.6x forward; ASML's vet reports 58.9x/33.7x
+versus Yahoo 64.9x/32.1x. At $350, TSM is about 26.2x Yahoo's current trailing
+EPS, **not** the vet's stated 22–25x. Price gates require fresh EPS, cash-flow
+and thesis review when hit. Forward EPS is an estimate. The vets' subjective
+five-year scenarios do not match their three-year headers and are not used
+for Kelly sizing or January alpha. Detailed node/fab and customer adoption
+claims not independently verified are excluded from the entry decision.
+
+**Existing trigger review:**
+
+- **Price: 0/38 hit, zero missing.** The original monitor covered 36 candidates;
+  the two dated root quotes add TSM and ASML without rerunning the universe.
+  The original monitor omitted individual quote timestamps; weekend equity
+  session dates are inferred except for these two confirmed Oct2 closes.
+- **TLT: partial research flag, no long entry.** The old Aug23 labor condition
+  is supported by [October 2 employment data](https://www.bls.gov/news.release/empsit.nr0.htm):
+  +29k payrolls and 60k downward revisions. But the
+  [September Fed hike](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm)
+  and inflation conflict with a simple duration long. The digest's MED
+  higher-for-longer theme also supplies no priced short/option edge. No new
+  price gate, order or third longterm vet; retain a conditional hedge watch.
+- **UNI: new queueing milestone, no qualifying entry.** Two public Ethereum
+  RPCs agree at block **26,120,123** (Oct4 16:15:23 UTC): GovernorBravo
+  `0x408ED6354d4973f66138C91495F2f2FCbd8724C3`, proposal **102**, state
+  **Queued**, unexecuted, earliest eligible execution **Oct5 11:59:35 UTC**.
+  Eta is eligibility, not a promised execution. Arc block **24,246,905**
+  (16:15:27) still shows v2 feeTo zero, v3 owner the Wormhole receiver rather
+  than the proposed fee adapter, and v4 protocolFeeController zero. The
+  [Arc proposal](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287)
+  has not activated fees at this snapshot. UNI **$9.02** is above **$3.25**;
+  actual activation and sustainable net burn after the 20M/year treasury
+  budget remain separate conditions. No allocation follows from queueing.
+- Selected ARB/AAVE holder-accrual, XLE, COHR and NVDA event gates supplied
+  no qualifying new entry evidence. This is a bounded review of relevant
+  conditions, not an exhaustive audit of every company's future catalysts;
+  Aave buyback absence was not proved by a chain-wide transaction scan.
+
+The digest's **LOW crypto-unlock** theme is not promoted: aggregate vendors
+cover different windows/universes, and no token-specific schedule, float or
+executable short was vetted. TVL/volume movements alone do not establish
+holder returns. No asset action, new account or recurring task.
+
+Public local evidence: `data/weekly_20261004T1600_watchlist.json`,
+`data/weekly_20261004T1600_equity_quotes.json`,
+`data/weekly_20261004T1600_event_review.json`,
+`data/weekly_20261004T1600_uni_chain.json`; command metadata and reports in
+`logs/weekly_20261004T1600/`. Root's chain proof supersedes the event helper's
+dated-state limitation for UNI only. Existing scheduled checks cover changes.

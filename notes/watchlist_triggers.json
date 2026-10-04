@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-09-30",
+  "updated": "2026-10-04",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Routes identify the venue for a fresh agent review: 'polyclaude' uses project-accessible assets and 'ibkr_surface' goes to the operator's personal brokerage. The monitor does not submit trades; a price or event trigger is an observation, not automatic entry authority. Project positions must fit a less-than-one-year horizon and all current evidence, funding, fee, liquidity and execution checks. Multi-year theses remain brokerage-side research.",
   "triggers": [
     {
@@ -217,9 +217,9 @@
       "entry_max": 3.25,
       "horizon": "1y",
       "route": "polyclaude",
-      "rationale": "Sep-30 evidence refresh: retain the $3.25 price review gate; no automatic entry. Arc GovernorBravo proposal 102 is Active and unexecuted, with ~10.93M For against 40M quorum; block 26109012 is the voting deadline. Require actual executable fee activation and sustained burn economics reconciled against the 20M UNI/year treasury growth budget, not gross burn alone. UNI spot is accessible on Arbitrum through the vetted max-output/min-out swap path; a $20 public quote round trip lost 0.607% before gas or funding. Polygon direct pools were not demonstrated. The $7.50 discussion level is not a replacement valuation gate.",
+      "rationale": "Oct-4 16:15 UTC evidence refresh: retain the $3.25 valuation review gate; no automatic entry. Two public Ethereum RPCs agree proposal 102 is Queued and unexecuted at block 26120123; earliest eligible execution Oct-5 11:59:35 UTC is not a guaranteed execution time. Arc block 24246905 still has v2 feeTo zero, v3 owner the Wormhole receiver rather than the proposed adapter, and v4 protocolFeeController zero. Require actual fee activation and sustained net fee-funded burn reconciled against the 20M UNI/year treasury growth budget. UNI quote $9.02 hits no price gate. The Sep-30 Arbitrum vetted-route cost observation is dated; revalidate lawful access, executable buy/sell depth, funding and gas before allocation. The $7.50 discussion level is not a replacement valuation gate.",
       "added": "2026-08-28",
-      "updated": "2026-09-30"
+      "updated": "2026-10-04"
     },
     {
       "ticker": "HUT",
@@ -372,6 +372,30 @@
       "route": "ibkr_surface",
       "rationale": "Fresh 2026-09-27 longterm_check: 2/4 PASS at $6.56. Rio Grande LNG has first-gas and Train 1 catalysts, but common equity has no current earnings and sits behind heavy project leverage and construction/litigation risk. A <=$4.75 quote only reopens research if construction and funding remain on schedule and the FERC appeal is resolved favorably; alternatively reassess after verified first LNG and stable operations.",
       "added": "2026-09-27"
+    },
+    {
+      "ticker": "TSM",
+      "type": "equity",
+      "yfinance_symbol": "TSM",
+      "currency": "USD",
+      "entry_max": 350.0,
+      "horizon": "2-3y",
+      "route": "ibkr_surface",
+      "rationale": "Oct-4 longterm_check: 2/4 PASS at the Oct-2 $472.78 ADR close. Research in the $325-350 band only if AI demand, leading-edge utilization and yields remain intact, with margins/free cash flow and Taiwan/overseas capex risks re-underwritten. Vendor P/E denominators disagree; at $350 Yahoo trailing EPS implies about 26.2x, not the report's 22-25x. Alternative earnings/ramp confirmation is research, not automatic entry. Multi-year brokerage watch; no executable project route or calibrated January excess-return case verified.",
+      "added": "2026-10-04",
+      "updated": "2026-10-04"
+    },
+    {
+      "ticker": "ASML",
+      "type": "equity",
+      "yfinance_symbol": "ASML",
+      "currency": "USD",
+      "entry_max": 1400.0,
+      "horizon": "2-3y",
+      "route": "ibkr_surface",
+      "rationale": "Oct-4 longterm_check: 3/4 WATCH at the Oct-2 $1867.31 U.S. share close. Research at <=$1400 with demand, cash flow and EUV/DUV capacity utilization intact; alternative is verified earnings growth bringing fresh forward P/E to <=25x with adoption evidence. Q3 results scheduled Oct-14. AI capex reversal, export controls and customer concentration remain material; vendor P/E denominators disagree and estimates require refresh. Multi-year brokerage watch; no executable project route or calibrated January excess-return case verified.",
+      "added": "2026-10-04",
+      "updated": "2026-10-04"
     }
   ]
 }

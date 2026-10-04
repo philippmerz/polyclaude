@@ -1771,3 +1771,154 @@ Strong secular LNG demand and identifiable operating catalysts are outweighed by
 - [NextDecade Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1612720/000161272026000049/next-20260630.htm)
 - [NextDecade July 2026 corporate presentation](https://www.investors.next-decade.com/static-files/8f95290b-3458-4b4e-945f-989e4896b885)
 - [IEA Gas 2025 outlook](https://www.iea.org/reports/gas-2025/executive-summary)
+
+---
+
+## 2026-10-04T16:08:17Z — longterm_check
+
+**Query:** `Taiwan Semiconductor Manufacturing Company (TSM)` (equity, 3y horizon)
+
+## LONGTERM CHECK: Taiwan Semiconductor Manufacturing Company (TSM)
+
+Date: 2026-10-04 | Type: equity | Horizon: 3y
+
+### Current state
+
+TSM closed at **$472.78** on 2026-10-02, versus a 52-week range of **$266.82–$479.00**; 1-year total return was **+65.8%**. Market cap is about **$2.4T** and trailing P/E about **32.9x**—near the yearly high, not a distressed valuation.
+
+### Cyclical position
+
+**Late up-cycle / near a cyclical high, not a bottom.** Q2 revenue rose 36% YoY to NT$1.27T, net income rose 77% YoY, and management guided Q3 revenue to $44.6–45.8B. August revenue was +53.3% YoY, while TSMC raised 2026 USD revenue-growth guidance to slightly above 40% and capex to $60–64B. These are powerful fundamentals but also evidence that AI-led demand and expectations are already elevated; the share price is 1.3% below its 52-week high.
+
+### Secular tailwind
+
+AI/HPC demand remains intact and accelerating. Advanced-node and packaging demand drove TSMC’s raised 2026 growth outlook; Q2 gross margin was 67.7% and 2nm already contributed 3% of wafer revenue during its early ramp. The company has roughly 73% pure-play foundry share, which makes it the principal manufacturing beneficiary of leading-edge AI GPUs/ASICs. The tailwind is real, but the stock already prices substantial continuation.
+
+### Catalyst window
+
+- [HIGH] 2026-Q4 — 3Q26 earnings on 2026-10-15; validation or reversal of $44.6–45.8B Q3 revenue guidance and 40%+ full-year growth outlook — [TSMC calendar](https://investor.cld.tsmc.com/english/financial-calendar)
+- [HIGH] 2027-H2 — Arizona Fab 21 Phase 2 begins 3nm production; expands geographic diversification and could reduce Taiwan-risk discount — [TSMC Q1 call coverage](https://www.tomshardware.com/tech-industry/semiconductors/tsmc-very-nervous-about-ai-bubble-concerns-despite-another-record-setting-quarter-but-assured-of-demand-ceo-says-careless-investment-would-be-a-disaster-for-tsmc-for-sure-company-will-invest-usd52-usd56-billion-in-capex)
+- [MED] 2027 — A16 volume-production/customer ramp; backside-power technology targets HPC and offers 8–10% speed or 15–20% power improvement versus N2P — [TSMC A16 technology](https://www.tsmc.com/english/dedicatedFoundry/technology/logic/l_A16)
+- [MED] 2028 — N2U production, extending the 2nm platform for AI/HPC/mobile — [TSMC 2026 Technology Symposium](https://pr.tsmc.com/system/files/newspdf/attachment/49337b40ff139d51d533076cf7a945b30e107e07/2026%20Tech%20Symposium%20(E)_Final_wmn.pdf)
+
+### Margin of safety
+
+Operational quality is exceptional, not valuation protection: Q2 gross margin was 67.7%, operating margin 60.3%, and net cash reserves were **NT$2.49T** with a **2.5x current ratio**. However, at ~$2.4T market cap, 32.9x trailing earnings, and near the 52-week high, the balance sheet does not create a compelling entry cushion against an AI-capex reset or Taiwan disruption.
+
+### Top 3 risks
+
+1. Taiwan Strait conflict/blockade — a disruption to Taiwan fabs could impair production and equity value regardless of demand or balance-sheet strength.
+2. AI-capex digestion — hyperscaler GPU/ASIC orders and advanced-packaging utilization could fall after an investment boom; current revenue growth and multiple leave little room for this.
+3. Execution/return dilution from global expansion — $60–64B 2026 capex plus U.S. fabrication investment may pressure free cash flow and margins if overseas utilization, yields, or demand disappoint.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 0.5%
+- Strong (3-5x): 8%
+- Modest (1.5-3x): 30%
+- Flat (-30% to +50%): 44.5%
+- Thesis broken (-50%+): 17%
+
+### Entry trigger
+
+Do not enter at $472.78. Reassess on a **$325–350** share price (roughly 22–25x current trailing EPS) if leading-edge utilization, 2nm yields, and AI demand remain intact; alternatively, wait for a post-2027 A16/Arizona ramp that demonstrates revenue growth without material margin or free-cash-flow deterioration.
+
+### Verdict: 2/4 — PASS
+
+Strong secular tailwind and identifiable node/geographic catalysts, but TSM is at a cycle/price high with no strong valuation margin of safety; it does not meet the generational-mispricing threshold.
+
+### Sources
+
+- [TSMC Q2 2026 results and Q3 guidance](https://investor.tsmc.com/english/quarterly-results/2026/q2)
+- [TSMC August 2026 revenue report](https://www.sec.gov/Archives/edgar/data/1046179/000104617926000658/tsm-revenue20260910.htm)
+- [TSMC Q2 2026 management report](https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-07/bf09036349a253e83f78155099133806cad0320b/2Q26%20ManagementReport.pdf)
+- [TSM market data and valuation](https://www.foxbusiness.com/quote?stockTicker=tsm)
+- [TSM one-year total return](https://ycharts.com/companies/TSM/one_year_total_return)
+- [TSMC 2026 capex and revenue-guidance revision](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/tsmc-postq-ai-drives-beat-outlook-raised-higher-capex-weighs-on-sentiment)
+
+---
+
+## 2026-10-04T16:09:18Z — longterm_check
+
+**Query:** `ASML Holding (ASML)` (equity, 3y horizon)
+
+## LONGTERM CHECK: ASML Holding (ASML)
+
+Date: 2026-10-04 | Type: equity | Horizon: 3y
+
+### Current state
+
+$1,867.31 at the Oct. 2 close; +83.5% over one year, versus a $935.41–$1,999.96 52-week range. Valuation is 58.9x trailing and 33.7x forward earnings—excellent business, but not a statistically cheap entry. [Market data](https://stockanalysis.com/stocks/asml/)
+
+### Cyclical position
+
+Late upcycle / approaching a cycle peak, not a bottom. ASML raised 2026 sales guidance to €43–45bn after Q2 revenue of €9.3bn (+21% YoY) and net income of €2.9bn; it is expanding EUV and DUV capacity by 30% in 2027. SEMI forecasts 300mm fab-equipment spending +18% in 2026 and +14% in 2027. The stock is only 6.6% below its 52-week high and trades at 58.9x trailing P/E. [ASML Q2 results](https://investor.asml.com/news-releases/news-release-details/q2-2026-financial-results) [SEMI outlook](https://www.semi.org/en/semi-press-release/semi-projects-double-digit-growth-in-global-300mm-fab-equipment-spending-for-2026-and-2027)
+
+### Secular tailwind
+
+Intact and accelerating: AI requires leading-edge logic, HBM/DRAM, and advanced-node capacity, all lithography-intensive. SEMI projects 300mm equipment spend to rise from $133bn in 2026 to $151bn in 2027 and $172bn in 2029; its forecast identifies sub-2nm logic and AI-memory investment as key drivers. ASML reports customer capacity-expansion commitments and very strong first-half order intake. [SEMI outlook](https://www.semi.org/en/semi-press-release/semi-projects-double-digit-growth-in-global-300mm-fab-equipment-spending-for-2026-and-2027) [ASML Q2 results](https://investor.asml.com/news-releases/news-release-details/q2-2026-financial-results)
+
+### Catalyst window
+
+- [HIGH] 2026-Q4 — Q3 results, October 14 — confirmation or rejection of raised €43–45bn FY2026 sales outlook. [ASML calendar](https://investor.asml.com/quarterly-results)
+- [HIGH] 2027–2028 — Low-NA EUV and DUV immersion output planned +30% in 2027, with a further +30% under evaluation for 2028; 2027 EUV capacity is nearly covered by orders. [ASML Q2 results](https://investor.asml.com/news-releases/news-release-details/q2-2026-financial-results)
+- [HIGH] 2027–2028 — High-NA EUV broad production adoption. Intel has reached first high-volume insertion on selected Panther Lake/18A layers; broader customer insertion is expected in this period. [ASML presentation](https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/presentationinvestorrela.htm)
+- [MED] 2027-06-10 — Capital Markets Day: revised long-term targets could re-rate earnings power if demand visibility and pricing hold. [ASML Q2 results](https://investor.asml.com/news-releases/news-release-details/q2-2026-financial-results)
+
+### Margin of safety
+
+Business-quality protection is high: ASML is the sole commercial EUV supplier, earned a 54.0% Q2 gross margin, and had €7.58bn cash/short-term investments against €1.98bn long-term debt at June 28. But valuation protection is weak: $1,867 implies 58.9x trailing P/E and is near the 52-week high. This is a moat-backed company, not a cheap stock. [Q2 balance sheet](https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/financialstatementsusgaa.htm) [Market data](https://stockanalysis.com/stocks/asml/)
+
+### Top 3 risks
+
+1. AI/fab-capex reversal — a memory or AI infrastructure overspend correction would cut tool orders and compress ASML’s premium multiple.
+2. China/export controls — tighter Dutch/U.S. restrictions could remove shipments, service revenue, and utilization from a major end market.
+3. High-NA execution and customer concentration — delayed yields, adoption, or spending at TSMC, Intel, Samsung, or memory leaders would defer the 2027–28 earnings step-up.
+
+### 5-year scenario probabilities
+
+- Generational (10x+): 1%
+- Strong (3-5x): 7%
+- Modest (1.5-3x): 34%
+- Flat (-30% to +50%): 40%
+- Thesis broken (-50%+): 18%
+
+### Entry trigger
+
+Do not chase at $1,867. Actual entry: a decline to ≤$1,400 (roughly ≤25x current forward earnings), or a 2027–28 earnings reset that preserves EUV capacity utilization and High-NA adoption while bringing forward P/E to ≤25x.
+
+### Verdict: 3/4 — WATCH
+
+Strong secular demand, identifiable High-NA/capacity catalysts, and an exceptional moat balance the thesis; the cycle is elevated and the current valuation supplies insufficient entry margin of safety.
+
+### Sources
+
+- [ASML Q2 2026 financial results](https://investor.asml.com/news-releases/news-release-details/q2-2026-financial-results)
+- [ASML Q2 2026 US GAAP financial statements](https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/financialstatementsusgaa.htm)
+- [ASML market data and valuation](https://stockanalysis.com/stocks/asml/)
+- [SEMI 300mm Fab Outlook](https://www.semi.org/en/semi-press-release/semi-projects-double-digit-growth-in-global-300mm-fab-equipment-spending-for-2026-and-2027)
+
+### Oct-4 root verification and decision qualifications
+
+Both command reports above returned zero; preserve their forecasts as generated.
+Independent Yahoo history confirms Oct2 closes TSM $472.78/ASML $1,867.31.
+The valuation denominators disagree: root trailing/forward P/E is
+TSM 35.3x/21.6x and ASML 64.9x/32.1x, versus the reports' 32.9x and
+58.9x/33.7x. These vendor estimates are not audited fundamentals. TSM at
+$350 is about 26.2x root trailing EPS, not the report's 22–25x assertion.
+Neither a high trailing multiple nor a 2/4 score independently proves
+negative expected ROI. Root retains no entry because an adequate priced
+edge and executable project route have not been established in this review.
+
+ASML becomes a conditional 2–3y brokerage watch at ≤$1,400; existing TSM
+gets a $350 machine review gate for its $325–350 band. Demand, utilization,
+cash flow, geopolitical/export and execution risks require fresh review;
+the price observation cannot trigger an automatic purchase. Forward EPS
+is a forecast, and no January excess-return estimate is calibrated here.
+The reports' five-year scenario weights conflict with their three-year
+headers; they are not used for Kelly or project sizing. Unverified detailed
+Arizona and Intel/High-NA production assertions are not relied on.
+Primary calendars confirm ASML Oct14 results, TSMC Oct15 results and
+Oct8 September sales. Command metadata and independent quotes are in
+`logs/weekly_20261004T1600/` and
+`data/weekly_20261004T1600_equity_quotes.json`.

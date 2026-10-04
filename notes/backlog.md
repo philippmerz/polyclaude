@@ -1,5 +1,27 @@
 # Polyclaude Backlog
 
+## Oct-4 16:00 Sunday review — research updated, no asset action
+
+- Refreshed macro-fiscal-labor, tech-ai-chips and crypto-on-chain, the least
+  recently run domains (Sep13). None of the nine satisfied the four-week
+  cutoff; the fallback is explicit. Digest and two longterm checks returned zero.
+- MED AI/foundry demand: ASML 3/4 WATCH at Oct2 $1,867.31, research gate
+  $1,400; existing TSM 2/4 PASS at $472.78, research band $325–350 and
+  machine gate $350. These are conditional 2–3y brokerage research, with
+  no verified project execution route or January excess-return case.
+  Vendor earnings multiples disagree; scores do not establish expected ROI.
+- Original 36 monitored prices plus the two independently dated equity
+  quotes give 0/38 price hits, zero missing. Selected event gates reviewed:
+  TLT's labor-weakening premise is partly met, but inflation/rate tightening
+  conflicts with a duration long. No qualifying entry established.
+- UNI102 newly queued: two Ethereum RPCs agree at block 26,120,123,
+  unexecuted, earliest execution Oct5 11:59:35 UTC. Arc block 24,246,905
+  still has inactive fee controls. Valuation and sustainable net-burn
+  conditions remain unmet/unverified; $3.25 price gate retained.
+- Watchlist/config and source/vet logs updated; journal and requested Telegram
+  summary completed. Existing checks cover future changes; no new timer,
+  account, transfer, order, code or durable goal.
+
 ## Oct-4 14:00 full check — separate HLE-Diamond publication reviewed
 
 - All 17 routine commands, eight scanners and both context passes returned

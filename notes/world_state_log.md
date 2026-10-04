@@ -2330,3 +2330,96 @@ Domains: critical-minerals-commodities, energy-power-infrastructure, geopolitics
 - Run longterm_check.py on: PWR, ETN, HUBB, LNG, NEXT, BWXT.
 - Run catalyst_check.py on: “Will Hormuz transit disruption persist through Q4 2026?”, “Will FERC complete Sabine Pass Stage 5 approval in 2026?”
 - Skip / pass: critical-mineral miners; defense primes; geothermal. Recent facts show policy activity or broad procurement intent, but no issuer-specific earnings or volume catalyst.
+
+---
+
+## 2026-10-04T16:05:08Z — world_state_digest
+
+**Domains:** macro-fiscal-labor, tech-ai-chips, crypto-on-chain | **Lookback:** 30d | **Profile:** research
+
+# WORLD-STATE DIGEST — 2026-10-04
+
+Domains: macro-fiscal-labor, tech-ai-chips, crypto-on-chain | Lookback: 30d
+
+## BARE FACTS (by domain)
+
+### Macro-fiscal-labor
+
+- [2026-10-02] [BLS Employment Situation](https://www.bls.gov/news.release/empsit.htm): September nonfarm payrolls rose 29,000; unemployment rate was 4.2%; July and August payroll revisions totaled -60,000. Average hourly earnings rose 0.1% m/m and 3.0% y/y; private-sector workweek was 34.4 hours.
+- [2026-09-29] [BLS JOLTS](https://www.bls.gov/news.release/jolts.htm): August job openings were 7.1 million, hires 5.2 million, separations 5.1 million, quits 3.1 million, and layoffs/discharges 1.6 million.
+- [2026-09-30] [BEA GDP third estimate](https://bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-2nd): Q2 real GDP grew 2.2% SAAR; real final sales to private domestic purchasers grew 4.6%; corporate profits from current production increased $384.0 billion; the gross-domestic-purchases price index rose 5.6% SAAR.
+- [2026-09-30] [BEA Personal Income and Outlays](https://bea.gov/news/2026/personal-income-and-outlays-august-2026): August nominal PCE rose 0.9% m/m and real PCE 0.6%; PCE prices rose 0.3% m/m and 3.4% y/y; core PCE rose 0.2% m/m and 3.0% y/y; personal saving rate was 4.1%.
+- [2026-09-16] [Federal Reserve FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm): FOMC raised the target range 25 bp to 3.75%–4.00%, unanimously.
+- [2026-09-16] [Federal Reserve SEP](https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm): Median 2026 projections: GDP growth 2.3%, unemployment 4.1%, PCE inflation 3.7%, core PCE 3.4%, and year-end fed-funds rate 4.1%. June equivalents were 2.2%, 4.3%, 3.6%, 3.3%, and 3.8%.
+- [2026-09-10] [ECB monetary-policy decision](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html): ECB raised all three policy rates 25 bp; deposit facility became 2.50% effective September 16. Staff baseline projects headline inflation of 3.0% in 2026 and 2.5% in 2027.
+- [2026-09-18] [BoJ policy decision](https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf): BoJ raised the complementary-deposit-facility rate to 1.25%, effective September 24, by a 7–2 vote. It stated underlying CPI inflation is approaching 2% and it will continue raising the policy rate as conditions warrant.
+
+### Tech-ai-chips
+
+- [2026-09-10] [TSMC monthly revenue](https://investor.tsmc.com/english/monthly-revenue/2026): August consolidated revenue was NT$514.806 billion, +53.3% y/y; January–August revenue totaled NT$3,386.870 billion, +39.3% y/y.
+- [2026-09-18] [BoJ policy decision](https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf): BoJ stated that global AI-related demand was contributing to rising Japanese exports and industrial production, elevated producer-price growth, and higher semiconductor prices.
+
+### Crypto-on-chain
+
+- [2026-10-04] [DefiLlama](https://defillama.com/): DeFi TVL was $95.826 billion; stablecoin market capitalization was $306.901 billion, +0.59% over seven days. DEX volume was $59.848 billion over seven days, -6.10% w/w; perpetuals volume was $140.263 billion, -10.25% w/w.
+- [2026-10-04] [DefiLlama](https://defillama.com/): Aave TVL was $19.349 billion, +5.03% over one month; Morpho TVL was $11.337 billion, +15.45% over one month.
+- [2026-10-04] [L2BEAT](https://l2beat.com/): Base secured $16.25 billion and Arbitrum One $11.52 billion; both are classified Stage 1. Base and Arbitrum each still lack a ≥30-day exit window for upgrades unrelated to on-chain-provable bugs.
+- [2026-10-04] [Tokenomist](https://tokenomist.ai/): $954.91 million of tracked token supply is scheduled to release this week.
+- [2026-10-04] [DefiLlama](https://defillama.com/): $445.29 million of token unlocks is scheduled over the next 14 days.
+
+## CANDIDATE THEMES
+
+### U.S. duration remains exposed to higher-for-longer policy
+
+- Underlying facts: Fed raised to 3.75%–4.00% and lifted its 2026 median funds-rate projection to 4.1%; August PCE inflation was 3.4% y/y while real PCE rose 0.6% m/m; Q2 private domestic final sales grew 4.6%.
+- Implication: The official policy path moved upward while nominal demand and inflation remained above target. Weak payroll growth is a counterweight, but it has not yet coincided with a collapse in spending or inflation.
+- Possible plays: U.S. duration short / TLT puts; long short-duration Treasuries or floating-rate exposure.
+- Direction: Short duration.
+- Horizon: Weeks to months.
+- Retail blindspot: Payroll headlines compress the data into “labor weakening,” obscuring consumption, inflation, revisions to the Fed path, and the actual rate increase.
+- Confidence: MED.
+
+### AI compute supply chain: foundry exposure remains structurally tight
+
+- Underlying facts: TSMC August revenue rose 53.3% y/y and January–August revenue rose 39.3% y/y. BoJ separately identified global AI demand as a contributor to exports, industrial production, producer prices, and semiconductor-price increases.
+- Implication: Demand is appearing both in the dominant foundry’s reported sales and in downstream Japanese industrial/price data; the pass-through extends beyond GPU vendors.
+- Possible plays: TSM, ASML, semiconductor-capital-equipment category.
+- Direction: Long.
+- Horizon: Months.
+- Retail blindspot: Attention concentrates on NVIDIA earnings and overlooks monthly foundry sales plus equipment-cycle beneficiaries.
+- Confidence: MED.
+
+### Low-float/token-unlock supply pressure
+
+- Underlying facts: Tokenomist shows $954.91 million of tracked releases this week; DefiLlama shows $445.29 million of upcoming unlocks over 14 days. DEX and perpetual volumes both declined more than 6% w/w.
+- Implication: Material incremental transferable supply is entering a market with declining on-chain trading turnover; tokens with concentrated cliff unlocks are most exposed.
+- Possible plays: Short individual high-unlock, low-float tokens only after per-token vesting verification; avoid broad crypto shorts.
+- Direction: Short selected tokens.
+- Horizon: Days to weeks.
+- Retail blindspot: Token-price narratives commonly omit circulating-supply changes and vesting calendars.
+- Confidence: LOW.
+
+## NEXT-STEPS
+
+- Run `longterm_check.py` on: TSM, ASML, TLT.
+- Run `catalyst_check.py` on: “Will the Federal Reserve cut rates before December 2026?”, “Will TSMC September 2026 revenue exceed August revenue?”
+- Skip / pass: broad crypto beta, specific unlock-token shorts before token-level allocation and market-cap validation; NVDA, whose latest reported earnings release falls outside this 30-day window.
+- Watchlist recall: no match asserted; existing `notes/longterm_watchlist.md` was not read.
+
+### Oct-4 operator reconciliation
+
+No domain was unrun for 28 days: macro/tech/crypto were least recent at
+21 days, so those three were refreshed rather than claiming cutoff eligibility.
+Existing watches were independently recalled and reviewed. MED foundry/AI
+demand produced the selected two vets: TSM 2/4 PASS, ASML 3/4 WATCH; price
+and cash-flow uncertainty prevent a current entry conclusion. TSMC September
+revenue is pending Oct8, not a reported fact. MED rate pressure conflicts
+with the existing TLT long's weaker-labor research condition; neither
+direction has a verified priced edge in this review. The LOW unlock theme
+is skipped: different vendor coverage and 7/14-day windows cannot be summed
+or treated as same-universe confirmation, and no token-specific trade was
+validated. Digest confidence is research triage, not calibrated trade EV.
+Watchlist has 0/38 price hits using the 36-row monitor plus two dated root
+quotes. Root also confirmed UNI102 queued/unexecuted, with Arc fees still
+inactive, in `data/weekly_20261004T1600_uni_chain.json`; this is a milestone,
+not a completed entry trigger. No funded position or new timer.

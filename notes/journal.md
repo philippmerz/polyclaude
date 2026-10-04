@@ -23427,3 +23427,73 @@ once (message1097). README/backlog refreshed; only intended records staged.
 Evidence: logs/checkin_20261004T1400/ and data/checkin_20261004T1400_*.json,
 including source/Diamond, exact inventory, candidate, context and root-risk
 proofs. Runtime/private working-tree changes preserved.
+
+
+## 2026-10-04 16:00 UTC — bounded Sunday macro/AI/crypto review
+
+Reviewed the source rotation and existing watchlist. None of the nine domains
+had gone unrun for four weeks: macro/tech/crypto last ran Sep13 (21 days),
+the remaining groups Sep20/Sep27. Disclosed the fallback and selected the
+three least recent: macro-fiscal-labor, tech-ai-chips, crypto-on-chain.
+Direct quota probe was 9% used/91% headroom. A bounded cheaper-model helper
+handled watchlist prices and selected public event checks; root retained
+portfolio/entry judgment and independently reconciled material findings.
+
+Requested world_state_digest completed 16:03:31–16:05:08 UTC, rc0,
+14 sources. Selected MED AI/foundry demand for the two candidate vets;
+MED higher-for-longer rate pressure is an unpriced tactical theme, not an
+automatic long-term entry. LOW crypto unlocks have neither a token-specific
+vesting/float proof nor a vetted short; vendor aggregates have different
+coverage and windows. Do not sum them or infer holder returns from TVL.
+
+TSM longterm_check completed 16:07:09–16:08:17, rc0: 2/4 PASS;
+ASML 16:08:17–16:09:18, rc0: 3/4 WATCH. Root independently confirmed
+Oct2 closing prices $472.78/$1,867.31 and primary Q3 dates Oct15/Oct14.
+TSMC September sales remain pending Oct8. Added ASML and an explicit TSM
+machine research gate at $1,400/$350; TSM's suggested band is $325–350.
+Both are conditional 2–3y brokerage research. Current demand evidence does
+not establish January excess returns or an executable project route.
+No order, account setup, allowance, transfer or funded equity exposure.
+
+Vendor multiples disagree: generated TSM trailing 32.9x vs root Yahoo
+35.3x/21.6x trailing/forward; ASML 58.9x/33.7x vs 64.9x/32.1x.
+TSM at $350 is about 26.2x root trailing EPS, not the vet's 22–25x claim.
+Scores and five-year scenario weights are not calibrated EV/Kelly inputs,
+and the latter conflict with the reports' three-year headers. Detailed
+Arizona/Intel production assertions not independently verified are excluded
+from judgment. Original reports are preserved; qualifications appended.
+A direct TSMC calendar helper hit HTTP403; browser primary-source reads
+verified the dates. No dependent action relied on that failed request.
+
+Original price monitor returned 36/36 quotes, zero hits/missing; individual
+as-of times were omitted. Two independently dated root quotes extend the
+checked coverage to 38/38, zero hits, without a second universe run. The
+TLT labor-weakening condition is partly supported by October employment
+and revisions; rate/inflation tightening conflicts with a simple duration
+long. Flag research only. Selected ARB/AAVE/XLE/COHR/NVDA event conditions
+have no qualifying entry evidence; this is not exhaustive fundamental or
+chain-wide proof of absence.
+
+UNI's official portal newly reports queueing. Root fixed-block public reads
+independently confirm GovernorBravo proposal 102 at Ethereum block
+26,120,123 (16:15:23 UTC), on two RPCs: Queued, unexecuted, earliest
+eligible execution Oct5 11:59:35 UTC. Eta is not promised execution. Arc
+block 24,246,905 (16:15:27) has v2 feeTo zero, v3 owner still the Wormhole
+receiver, and v4 protocolFeeController zero. Fee activation has not occurred
+at this snapshot. Quote $9.02 hits no $3.25 valuation gate; execution,
+activation and sustained net fee-funded burn remain separate conditions.
+The root proof supersedes the helper's stale-chain limitation for UNI only.
+No allocation from vote success or queueing alone; fresh costs needed if
+entry later becomes attractive.
+
+Updated README, backlog, watchlist and trigger config. All 36 prior numeric
+gates and unrelated rows are preserved; UNI rationale/date refreshed only.
+Historical financial/research log prefixes remain intact. Structured review
+and public quote/chain evidence: data/weekly_20261004T1600_*.json;
+command metadata and reports: logs/weekly_20261004T1600/. JSON identities,
+38-gate coverage, preserved history, added-content secret audit and
+whitespace validation passed. Documentation/config changes need no new
+implementation tests. Requested Telegram delivered as message 1099,
+one part. Exact task files committed/pushed; unrelated runtime/private-log
+changes remain unstaged. No code/daemon change, new timer or durable goal.
+Bounded review closed at 2026-10-04T16:31:11+00:00.
