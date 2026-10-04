@@ -44,17 +44,17 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-04 10:06 UTC
+## Last bankroll snapshot — 2026-10-04 14:02 UTC
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $35.58 |
-| Indicative depth/fee value | $32.45 |
-| Authoritative whole-account mark | $187.28 |
-| Approximate whole-account depth value | $184.15 |
-| Cumulative settled P&L, before VM/API costs | +$22.51 |
+| Polymarket midpoint | $35.99 |
+| Indicative depth/fee value | $33.09 |
+| Authoritative whole-account mark | $187.70 |
+| Approximate whole-account depth value | $184.80 |
+| Cumulative settled P&L, before VM/API costs | +$22.52 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
@@ -69,13 +69,19 @@ Google's official
 [Gemini 4 Argon announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)
 contains no Pro label or HLE score. The resolving 60-row source is unchanged:
 Gemini's maximum is 46.2, OpenAI's 53.6. These probabilities are judgmental
-and remain uncertain.
+and remain uncertain. The separate September 22
+[HLE-Diamond release](https://agi.safe.ai/blog/hle-diamond) reports scores on
+a refined 1,000-question subset. The current homepage still connects its
+HLE Accuracy chart to the original dataset/API. Diamond creates material
+interpretation risk under the contracts' equivalent-metric clause; it has
+not demonstrably replaced the resolving leaderboard. HOLD / NO ADD includes
+that uncertainty.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$1.56/$2.75**. Central joint models favor holding,
+G/O exits are about **$2.08/$2.75**. Central joint models favor holding,
 including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model favors separate trims of about 10.07 Gemini
+The pessimistic model favors separate trims of about 35.63 Gemini
 shares or sale of all 19 OpenAI shares; a full Gemini exit loses in that case.
 Central probabilities reject full and partial exits. **HOLD / NO ADD**
 remains a model-sensitive judgment, with no price-recovery assumption. Both
@@ -87,28 +93,28 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.02 native aUSDC** earns the Polygon Aave supply rate (2.862% read
-during this 10:00 run, variable); existing legacy aUSDC.e is about $3.50.
+About **$85.02 native aUSDC** earns the Polygon Aave supply rate (2.795% read
+during this 14:00 run, variable); existing legacy aUSDC.e is about $3.50.
 No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is about $3.13. Approximate whole-account depth value
-excludes sub-lot dust from immediately executable cash and includes $6.82 of
-separately funded gas. Excluding gas gives about **$177.33 versus $170 trading
-capital (+4.31%)**, before VM/API operating costs. UNI Arc proposal 102 passed
+timestamped snapshot is about $2.90. Approximate whole-account depth value
+excludes sub-lot dust from immediately executable cash and includes $6.83 of
+separately funded gas. Excluding gas gives about **$177.97 versus $170 trading
+capital (+4.69%)**, before VM/API operating costs. UNI Arc proposal 102 passed
 with 46.26M UNI For versus 40M quorum. At Oct-3 06:05 it was not queued or
 executed, and Arc's fee controls were inactive at that check. This run's UNI
-quote of $9.05 fails the retained $3.25 valuation review gate; no allocation follows
+quote of $9.01 fails the retained $3.25 valuation review gate; no allocation follows
 from vote success alone.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$1.62/$4.07/$4.67 below VT/VTI/SPY** at those dated values.
+is **$0.98/$3.43/$4.03 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the current [`weekly report`](notes/pnl_weekly.md).
 
-An archived Hormuz NO claim holds **.003571 winning shares**. At 10:08 its
-estimated standalone gas is $.005280, above the payout. The earlier
+An archived Hormuz NO claim holds **.003571 winning shares**. At 14:03 its
+estimated standalone gas is $.005237, above the payout. The earlier
 exact-asset redemption dry-run succeeded. Retain the unexpired claim for
 lower fees; there is no cash need or expiry.
 Standard CTF redemption now verifies the exact asset, collateral and positive

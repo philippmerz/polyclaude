@@ -1,5 +1,42 @@
 # Polyclaude Backlog
 
+## Oct-4 14:00 full check — separate HLE-Diamond publication reviewed
+
+- All 17 routine commands, eight scanners and both context passes returned
+  zero. Required state fix and final read-only audit are CLEAN. All 36
+  watchlist quotes present, zero hits; no order, overdue decision,
+  uncovered crux or UMA/Ostium change.
+- Two new public news alerts reviewed: Hormuz restrictions do not change
+  the archived winning claim; Clarity stalling changes neither exact
+  resolution criteria nor the complete 29/29 pair's $29 payout floor.
+- Polygon block 94,944,969 confirms unchanged exact held/dust shares,
+  pUSD $47.319630 and archived debut zero. Native aUSDC 85.021970 adds
+  .001085 interest. Original HLE API 60 rows and 256 Senate rows unchanged.
+- Newly noticed official Sep22 HLE-Diamond scores use a distinct
+  1,000-question dataset. The current frontend still uses original HLE.
+  If the equivalent-metric clause accepts Diamond, both held NOs could
+  lose; no actual leaderboard replacement or binding clarification found.
+  Source-specific NO interpretation remains stronger, with meaningful
+  uncertainty. Priors .12/.25, stress .03/.15 remain judgmental and unchanged.
+- Fresh G/O full exits $2.082648/$2.753100: central joint models reject
+  full/partial/combined trims, including free Aave carry at live 2.795%.
+  Stress favors separate trims of about 35.63 Gemini or all 19 OpenAI
+  shares. Diamond sensitivity recorded; HOLD / NO ADD remains reviewable.
+- All 52 context batches/939 emitted rows reviewed; counts and hashes
+  verified. Structural and cross-venue coverage remains incomplete.
+  Four favorite leads rechecked for exact criteria, identity, fees and
+  live depth; no robust instance probability. Saints' printed comparison
+  is negative before fees and lacks verified sportsbook provenance.
+  NO ENTRY / no automatic opposite trade.
+- Bankroll $187.70; PM cost/midpoint/depth $47.64/$35.99/$33.09,
+  funded gas $6.83, settled P&L +$22.52. Indicative trading depth $177.97
+  (+4.69% versus $170 before VM/API costs; sequential quote limitations).
+  Hormuz gas $.005237 exceeds $.003571 payout. Four daemons current;
+  disk 328 MiB, existing guard active; credential rotation unverified.
+  UNI $9.01 hits no $3.25 gate. Separate world-state review at 16:00,
+  weekly P&L around Oct9, monthly drill Oct12. Material Telegram summary;
+  no asset action, new code/tests, timer or durable goal.
+
 ## Oct-4 10:00 periodic check — no asset action
 
 - All 17 routine commands returned zero; read-only state audit CLEAN.
@@ -2782,9 +2819,9 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   repeat at most once every 24 hours. Hourly probes continue; critical
   space below 128 MiB and probe failures retain independent hourly alerts.
   Tests pass and the updated watcher is live. Capacity remains unresolved;
-  latest checked free space is about 334 MiB at Oct-4 10:08.
+  latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-4 10:00:** next-Pro debut NO is **CLOSED / zero
+**Current HLE state, Oct-4 14:00:** next-Pro debut NO is **CLOSED / zero
 shares** after the 100-share trim (DEC-0183) and final 69-share sale
 (DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.
 Held any-Gemini >=50 NO is **102.084750**, OpenAI >=55 NO **19**; priors
@@ -2795,15 +2832,24 @@ analysis; there is no hold-only rule or automatic debut re-entry. Older
 underwriting below is historical and must not replace current priors or
 share counts.
 
-Fresh G/O full exits are $1.562219/$2.753100. Central joint Elog favors
+Fresh G/O full exits are $2.082648/$2.753100. Central joint Elog favors
 holding and rejects partial/combined trims, including optimistic free Aave
-carry. Stress favors separate trims of about 10.07 Gemini shares
+carry. Stress favors separate trims of about 35.63 Gemini shares
 or all 19 OpenAI shares. HOLD / NO ADD uses the
 central judgmental view with this price-dependent sensitivity acknowledged.
 
+The official Sep22 [HLE-Diamond release](https://agi.safe.ai/blog/hle-diamond)
+is a separate 1,000-question subset; the live resolving chart still uses
+the original HLE API. Its Astra no-tools 59.9% and Gemini web/code 60.6%
+would cross the respective thresholds if treated as a qualifying equivalent.
+That interpretation remains unresolved; the original-dataset reading is
+stronger, and no automatic threshold crossing is asserted. The root risk
+proof includes an additional zero-payout branch sensitivity, not a calibrated
+posterior or a reason to count existing interpretation risk twice.
+
 **Oct-2 claim correction:** deindexed Hormuz NO dust is **.003571 winning
 shares**, not losing. Its archived token derives from legacy USDC.e.
-At Oct-4 10:08, standalone gas is estimated at $.005280 versus $.003571 payout.
+At Oct-4 14:03, standalone gas is estimated at $.005237 versus $.003571 payout.
 The earlier vetted exact-asset dry-run verified legacy collateral and positive
 payout and simulated success with 175,036 estimated gas. Retain the unexpired
 claim and its lower-fee option; the current estimate is uneconomic, with no
