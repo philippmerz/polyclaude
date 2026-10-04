@@ -45,16 +45,19 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-04 18:07 UTC
+## Last bankroll snapshot — 2026-10-04 22:00 check
+
+Bankroll was read at 22:02:12–34 UTC; PM midpoint/depth at 22:01:50–52.
+These readings are sequential, with no synchronized quote timestamp.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $36.03 |
-| Indicative depth/fee value | $32.93 |
-| Authoritative whole-account mark | $187.73 |
-| Approximate whole-account depth value | $184.63 |
+| Polymarket midpoint | $35.93 |
+| Indicative depth/fee value | $33.00 |
+| Authoritative whole-account mark | $187.69 |
+| Approximate whole-account depth value | $184.76 |
 | Cumulative settled P&L, before VM/API costs | +$22.52 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -82,11 +85,12 @@ that uncertainty.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$2.00/$2.75** in the separate 18:09 quote. Central
+G/O exits are about **$1.52/$2.75** in the separate 22:04 quote. Central
 joint models favor holding,
 including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model favors separate trims of about 23.45 Gemini
-shares or sale of all 19 OpenAI shares; a full Gemini exit loses in that case.
+The pessimistic model favors separate trims of about 10.07 Gemini
+shares (11.92 with optimistic free carry) or sale of all 19 OpenAI shares;
+a full Gemini exit loses in that case.
 Central probabilities reject full and partial exits. **HOLD / NO ADD**
 remains a model-sensitive judgment, with no price-recovery assumption. Both
 new buys fail pessimistic EV at current asks.
@@ -97,13 +101,13 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.02 native aUSDC** earns the Polygon Aave supply rate (2.795% read
-during this 18:00 run, variable); existing legacy aUSDC.e is about $3.50.
+About **$85.02 native aUSDC** earns the Polygon Aave supply rate (2.777% read
+during this 22:00 run, variable); existing legacy aUSDC.e is about $3.50.
 No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is about $3.10. Approximate whole-account depth value
-excludes sub-lot dust from immediately executable cash and includes $6.83 of
-separately funded gas. Excluding gas gives about **$177.80 versus $170 trading
-capital (+4.59%)**, before VM/API operating costs. The separate Oct-4 weekly
+timestamped snapshot is about $2.93. Approximate whole-account depth value
+excludes sub-lot dust from immediately executable cash and includes $6.88 of
+separately funded gas. Excluding gas gives about **$177.88 versus $170 trading
+capital (+4.64%)**, before VM/API operating costs. The separate Oct-4 weekly
 review confirms UNI Arc proposal 102 is **queued, unexecuted** at 16:15 UTC;
 its earliest eligible execution is Oct-5 11:59:35 UTC. Arc fee controls
 were inactive in that 16:15 check. UNI $9.02 remains above the retained
@@ -115,12 +119,12 @@ broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$1.15/$3.60/$4.20 below VT/VTI/SPY** at those dated values.
+is **$1.07/$3.52/$4.12 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the current [`weekly report`](notes/pnl_weekly.md).
 
-An archived Hormuz NO claim holds **.003571 winning shares**. At 18:17 its
-gas/price estimate is $.005263, above the payout, using the earlier simulated
+An archived Hormuz NO claim holds **.003571 winning shares**. At 22:09 its
+gas/price estimate is $.005279, above the payout, using the earlier simulated
 gas units rather than a new transaction simulation. The earlier
 exact-asset redemption dry-run succeeded. Retain the unexpired claim for
 lower fees; there is no cash need or expiry.
