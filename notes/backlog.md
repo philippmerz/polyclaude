@@ -1,5 +1,15 @@
 # Polyclaude Backlog
 
+## Oct-5 22:31 publication check — performance chart live
+
+- GitHub public repository API reports `has_pages=true`.
+  [Live chart](https://philippmerz.github.io/polyclaude/), JavaScript, styles
+  and both CSVs returned HTTP 200 and matched local files byte for byte.
+- Published CSV has 34 observations; latest Oct 5 22:02 UTC trading depth
+  $177.40, +4.35% before VM/API costs and excluding separately funded gas.
+  No new financial observation, asset action or scheduler change. Normal
+  record pushes now publish through `main /docs`; Pages setup is complete.
+
 ## Oct-5 22:00 periodic check — Arc fee configuration observed; no asset action
 
 - Nineteen base routine commands plus one missing-price follow-up returned
@@ -198,7 +208,7 @@
   Sunday review complete; next dated tasks around Oct 9 and Oct 12.
   No trade, extra discovery, Telegram, new timer or durable goal.
 
-## Oct-4 performance chart — site ready; Pages setting pending
+## Oct-4 performance chart — live on GitHub Pages
 
 - `docs/` contains a dependency-free JS/SVG chart and manually maintained CSVs.
   Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
@@ -208,9 +218,9 @@
   Recovery of $31.36 (+21.47%) since Sep 25, but $1.46 below Sep 8.
   Public records do not identify a recent model-context compaction date.
 - Six focused data/math tests and desktop/mobile browser checks passed.
-  Publish by selecting GitHub Settings → Pages → Deploy from a branch →
-  main → /docs. Git SSH push works, but GitHub API/admin auth is unavailable
-  in this VM; the site is not yet verified live. No asset or scheduler change.
+  Publication verified Oct 5 at 22:31 UTC: the live HTML, JavaScript,
+  styles and both CSVs return HTTP 200 and match the local files.
+  GitHub Pages publishes `main /docs`; no asset or scheduler change.
 
 ## Oct-4 18:00 periodic check — no asset action
 

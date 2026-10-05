@@ -6,17 +6,18 @@ Only this directory is intended for GitHub Pages publication.
 
 ## View and publish
 
+Live chart: [philippmerz.github.io/polyclaude](https://philippmerz.github.io/polyclaude/).
+GitHub Pages publishes `main /docs`; each normal push to main updates the
+site and CSVs. Publication was verified on Oct 5, 2026: all five site/data
+files returned HTTP 200 and matched the repository byte for byte.
+
 Local preview from the repository root:
 
 ```bash
 python3 -m http.server 8765 --directory docs
 ```
 
-Open `http://localhost:8765`. In GitHub repository **Settings → Pages**, use
-**Deploy from a branch → main → /docs**. Then each push to main publishes the
-updated CSV and site at `https://philippmerz.github.io/polyclaude/`.
-GitHub API/administration authentication is needed to change that setting;
-the VM's existing Git SSH access alone does not supply it.
+Open `http://localhost:8765`.
 
 ## Append an observation
 

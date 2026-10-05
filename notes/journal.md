@@ -24443,3 +24443,24 @@ observations/24 complete depths, current ex-gas mark180.13/depth177.40, exact
 financial source anchor24336, all historical byte prefixes, and unchanged
 thresholds with only UNI rationale modified. Material summary delivered once
 as Telegram1102 (one part). No second notification or further follow-up.
+
+### 2026-10-05 22:31 UTC — GitHub Pages publication verified
+
+Public repository API reports has_pages=true. At22:31:33 UTC the live
+https://philippmerz.github.io/polyclaude/ HTML, app.mjs, style.css,
+performance.csv and benchmarks.csv all returned HTTP200 with expected MIME
+types and SHA256 hashes equal to the local files. Published CSV contains34
+observations/24 complete trading-depth estimates; latest22:02 UTC depth
+$177.40, +4.35% versus $170, excluding separately funded gas and before
+VM/API costs. This verifies publication of the existing observation; no new
+portfolio quote or financial CSV row. Proof:
+data/github_pages_20261005_public_verification.json.
+
+Updated public links and current Pages status in README/docs/backlog.
+Pages publishes main /docs on normal record pushes. Prior chart tests and
+desktop/mobile checks remain applicable because the five published assets
+match the tested files; no new graphical browser-test claim. No asset,
+execution, daemon or scheduling change; unrelated runtime files preserved.
+
+Publication link and current recorded performance delivered once as
+Telegram1104 (one part). No further follow-up scheduled.
