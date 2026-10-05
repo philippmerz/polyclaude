@@ -2401,9 +2401,10 @@
         "hle"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Bounded Oct5 review: exact Tier1 phrase is deployed and the positive matcher regression passes, along with the named-variant Tier2 check. The fixture is synthetic, not the claimed exact captured RSS fixture; full unseen-item routing and ordinary-item negative coverage were not demonstrated. Dedup and keyword cooldown still qualify future emission. No universal production recall or new live release catch is claimed.",
+      "calibration_delta": "Partial implementation support; the universal future-alert promise and exact-fixture claim exceeded the verified evidence. This operational review is not a calibrated market-probability result.",
+      "lesson": "State matcher/config coverage separately from end-to-end alert delivery. Preserve an actual public feed fixture when claiming one; account for dedup, cooldown and unseen-entry routing before promising universal future alerts.",
+      "resolved_at": "2026-10-05T02:16:40Z"
     },
     {
       "id": 122,
@@ -3569,9 +3570,10 @@
         "cost-control"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "The broad 72-hour no-duplicate prediction has a boundary-crossing counterexample: the same normalized CBS Pezeshkian interview headline emitted Sep26 01:10:58Z and Sep27 15:48:19Z, 38h37m21s apart. Across 845 public alert rows, including the prior 72h baseline, no duplicate pair had both rows after Sep27 02:04:32Z or after the fully warmed Sep30 boundary. The retention regression passes. A transition/deployment cause is not proven, and emitted-alert logs cannot measure suppressed LLM calls.",
+      "calibration_delta": "Universal prediction failed across the change boundary; narrower post-change and warmed-window observations show no counterexample. Operational cost reduction remains unmeasured; no numerical trading calibration inferred.",
+      "lesson": "Define the observation window and transition baseline before changing TTL. Test and report retained-state behavior separately from historical-window guarantees; public duplicate absence does not establish LLM or token savings.",
+      "resolved_at": "2026-10-05T02:16:40Z"
     },
     {
       "id": 179,

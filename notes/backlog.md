@@ -1,5 +1,34 @@
 # Polyclaude Backlog
 
+## Oct-5 02:00 full check — HOLD / NO ADD; two ops reviews closed
+
+- Routine checks succeeded, with a fresh validated DefiLlama fallback after
+  CoinGecko 429. Audit CLEAN; authenticated orders empty; no UMA/Ostium/crux
+  action. Required state fix changed only its refresh date. Watchlist 0/38
+  hits, no missing prices; equity per-symbol quote times remain unverified.
+- Exact fixed-block holdings unchanged, native aUSDC 85.025251 accruing
+  .001074 since 22:00. Original HLE's 60 rows and separate Diamond unchanged;
+  interpretation risk persists. Clarity lobbying alert MINOR, with no
+  qualifying Senate passage or change to the complete pair's payout floor.
+- Fresh fee-net G/O full exits $1.377858/$2.753100. Retained central full,
+  partial and combined sales lose even with free 2.817% variable Aave carry.
+  Stress separately favors ~10.07 Gemini shares (~11.94 with free carry)
+  or all 19 OpenAI, not a joint optimum. Complete Clarity exit $28.249480
+  remains below its $29 floor. No economical standalone dust redemption.
+- Twelve discovery/context commands reviewed: no validated entry; missing
+  quotes and bounded coverage prevent a universe-wide absence claim. Italy
+  NO explicitly rechecked: sourced odds straddle .33088 fee break-even,
+  and a $5 ticket has negative log growth at paired-odds sensitivities.
+- Closed DEC-0121 with partial test evidence, full delivery unproven;
+  DEC-0178's broad 72h promise has one transition-window counterexample.
+  No duplicate pair wholly after the change; cause/token savings unproven.
+  Three focused watcher tests pass; no current deployment defect established.
+- Sequential bankroll $187.42, gas $6.86, PM midpoint/depth $35.68/$32.38,
+  settled P&L +$22.52. Trading depth $177.26 (+4.27% vs $170 before VM/API).
+  CSV appended; one material Telegram summary. Four daemons exact-one/current,
+  disk ~742 MiB above both guards. Pages owner setting still pending.
+  Sunday/weekly reviews current; no trade, new timer or durable goal.
+
 ## Oct-4 22:00 periodic check — no asset action
 
 - All 17 routine commands and their nested reads succeeded; state audit CLEAN,
@@ -32,8 +61,8 @@
   Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
   ten missing gas fields remain gaps. Three validated SPY closes are separate;
   the failed Sep-24 diagnostic benchmark is excluded.
-- Latest recorded trading depth $177.88: +4.64% vs $170 before VM/API costs.
-  Recovery of $31.84 (+21.80%) since Sep 25, but $0.98 below Sep 8.
+- Latest recorded trading depth $177.26: +4.27% vs $170 before VM/API costs.
+  Recovery of $31.22 (+21.38%) since Sep 25, but $1.60 below Sep 8.
   Public records do not identify a recent model-context compaction date.
 - Six focused data/math tests and desktop/mobile browser checks passed.
   Publish by selecting GitHub Settings → Pages → Deploy from a branch →
