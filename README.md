@@ -45,19 +45,19 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-05 14:02 UTC
+## Last bankroll snapshot — 2026-10-05 18:03 UTC
 
-Bankroll ran 14:02:34–54 UTC; PM midpoint/depth at 14:02:11–13.
+Complete bankroll retry ran 18:03:15–34 UTC; PM midpoint/depth at 18:02:32–34.
 These readings are sequential, with no synchronized quote timestamp.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $36.37 |
-| Indicative depth/fee value | $32.90 |
-| Authoritative whole-account mark | $188.04 |
-| Approximate whole-account depth value | $184.57 |
+| Polymarket midpoint | $36.58 |
+| Indicative depth/fee value | $33.39 |
+| Authoritative whole-account mark | $188.19 |
+| Approximate whole-account depth value | $185.00 |
 | Cumulative settled P&L, before VM/API costs | +$22.52 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -84,11 +84,11 @@ that uncertainty.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$1.46/$3.12** in the separate 14:02 quote. Central
+G/O exits are about **$2.20/$2.94** in the separate 18:02 quote. Central
 joint models favor holding,
 including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model favors separate trims of about 10.07 Gemini
-shares (11.95 with optimistic free carry) or sale of all 19 OpenAI shares;
+The pessimistic model favors separate trims of 36 Gemini
+shares, including optimistic free carry, or sale of all 19 OpenAI shares;
 a full Gemini exit loses in that case.
 Central probabilities reject full and partial exits. **HOLD / NO ADD**
 remains a model-sensitive judgment, with no price-recovery assumption. Both
@@ -100,32 +100,33 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.03 native aUSDC** earns the Polygon Aave supply rate (2.847% read
-during this 14:00 run, variable); existing legacy aUSDC.e is about $3.50.
+About **$85.03 native aUSDC** earns the Polygon Aave supply rate (2.863% read
+during this 18:00 run, variable); existing legacy aUSDC.e is about $3.50.
 No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is about $3.47. Approximate whole-account depth value
-excludes sub-lot dust from immediately executable cash and includes $6.78 of
-separately funded gas. Excluding gas gives about **$177.79 versus $170 trading
-capital (+4.58%)**, before VM/API operating costs. At 14:04 UTC, two Ethereum
-RPCs agree UNI Arc proposal 102 is **Executed** at block 26,126,641. Arc fee
-controls remain inactive at block 24,401,661: execution has not established
-fee activation or sustainable token burn. The monitor’s $9.00 UNI quote is
+timestamped snapshot is about $3.19. Approximate whole-account depth value
+excludes sub-lot dust from immediately executable cash and includes $6.72 of
+separately funded gas. Excluding gas gives about **$178.28 versus $170 trading
+capital (+4.87%)**, before VM/API operating costs. At 18:03 UTC, one current
+Ethereum RPC confirms UNI Arc proposal 102 remains **Executed** at block
+26,127,835; the second RPC rate-limited, after both agreed at 14:04. Arc fee
+controls remain inactive at block 24,429,468: execution has not established
+fee activation or sustainable token burn. The monitor’s $8.98 UNI quote is
 above the retained $3.25 valuation gate; no allocation follows.
 The [weekly watchlist](notes/longterm_watchlist.md) records this milestone and
-retains ASML/TSM review gates. No price gate was hit. AFMJF’s initial missing
-quote returned $0.985 USD on one retry, above $0.85; its last-sale time and
+retains ASML/TSM review gates. All 38 candidates returned WATCH with no price
+gate hit. AFMJF returned $0.987 USD, above $0.85; its last-sale time and
 OTC trading status remain unverified.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$1.16/$3.61/$4.21 below VT/VTI/SPY** at those dated values.
+is **$0.67/$3.12/$3.72 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the current [`weekly report`](notes/pnl_weekly.md).
 
 An archived Hormuz NO claim holds **.003571 winning shares**. During this run its
-gas/price estimate is $.005251, above the payout, using the earlier simulated
+gas/price estimate is $.005157, above the payout, using the earlier simulated
 gas units rather than a new transaction simulation. The earlier
 exact-asset redemption dry-run succeeded. Retain the unexpired claim for
 lower fees; there is no cash need or expiry.
@@ -138,8 +139,9 @@ marked total; `scripts/positions.py` supplies the Polymarket depth view.
 Crypto valuation uses complete, fresh CoinGecko batches with a high-confidence
 DefiLlama fallback. Incomplete or stale batches fail visibly; emergency swaps
 abort before approval if neither source passes validation.
-This bankroll read returned a complete aggregate without a token-valuation
-warning; individual price timestamps were not emitted.
+The initial bankroll read omitted native-token values after a rate limit and
+stale fallback. Only the complete retry is used above or in the CSV; it had no
+token-valuation warning. Individual price timestamps were not emitted.
 
 ## Operating model
 

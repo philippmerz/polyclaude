@@ -1,5 +1,34 @@
 # Polyclaude Backlog
 
+## Oct-5 18:00 periodic check — no new action due
+
+- All 20 routine commands, including one bankroll retry and final audit,
+  returned zero. Audits CLEAN; authenticated orders empty; no overdue
+  decision, UMA/Ostium alert or uncovered crux. Kelly used $188.19 explicitly.
+- Initial $181.47 total was incomplete: CoinGecko 429 and stale POL fallback
+  omitted native-token values. Complete retry $188.19, funded gas $6.72,
+  PM midpoint/depth $36.58/$33.39; settled P&L +$22.52. Only the complete
+  retry enters the CSV. Trading depth $178.28 (+4.87% before VM/API), up
+  $.49 since 14:00; sequential planning values, not synchronized cash.
+- Exact holdings/pUSD unchanged; native aUSDC 85.029626 adds .001112
+  interest. HLE all 60 rows/hash and held criteria unchanged. Senate's
+  full 256 rows unchanged; no qualifying final passage. Google RSS adds
+  unrelated Gemini education items; recap HTML changes but visible text
+  matches. Diamond interpretation risk persists; no fresh public alert.
+- UNI 102 remains Executed on one fresh Ethereum RPC at block 26,127,835;
+  second RPC block/state requests HTTP429. Arc controls still inactive at
+  block 24,429,468. No new milestone or gate hit; 38 WATCH, zero missing
+  prices. UNI $8.98 vs $3.25; AFMJF $.987 USD vs $.85, quote times unverified.
+- Root G/O exits $2.203303/$2.937856. Central full/partial/combined trims
+  lose even with optimistic free 2.863% Aave carry. Stress separately favors
+  36 Gemini shares or all OpenAI, not a joint optimum. HOLD / NO ADD;
+  Clarity complete 29/29 floor $29; archived dust remains uneconomic.
+- Four daemons exact-one/current; disk ~687 MiB above both guards. CSV has
+  33 observations/23 complete depths; six chart tests passed. Pages owner
+  setting and unverified credential rotation remain pending. Weekly/Sunday
+  work current; full discovery completed at 14:00. No trade, redundant scan,
+  Telegram, daemon/code change, new timer or durable goal.
+
 ## Oct-5 14:00 full check — UNI execution observed; no asset action
 
 - All 19 routine and 12 discovery/context commands returned zero. Required
@@ -142,8 +171,8 @@
   Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
   ten missing gas fields remain gaps. Three validated SPY closes are separate;
   the failed Sep-24 diagnostic benchmark is excluded.
-- Latest recorded trading depth $177.79: +4.58% vs $170 before VM/API costs.
-  Recovery of $31.75 (+21.74%) since Sep 25, but $1.07 below Sep 8.
+- Latest recorded trading depth $178.28: +4.87% vs $170 before VM/API costs.
+  Recovery of $32.24 (+22.08%) since Sep 25, but $.58 below Sep 8.
   Public records do not identify a recent model-context compaction date.
 - Six focused data/math tests and desktop/mobile browser checks passed.
   Publish by selecting GitHub Settings → Pages → Deploy from a branch →
