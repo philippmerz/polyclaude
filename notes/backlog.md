@@ -1,5 +1,38 @@
 # Polyclaude Backlog
 
+## Oct-5 22:00 periodic check — Arc fee configuration observed; no asset action
+
+- Nineteen base routine commands plus one missing-price follow-up returned
+  zero; all outputs reviewed. Audits CLEAN, authenticated orders empty,
+  no overdue decision, UMA/Ostium alert or uncovered crux. Kelly's last
+  bankroll flag and stderr confirm $187.00 despite inherited duplicate flags.
+- Complete bankroll $187.00, gas $6.87, PM midpoint/depth $35.24/$32.51;
+  settled P&L +$22.53. Trading depth $177.40 (+4.35% before VM/API), down
+  $.88 since18:00. No bankroll retry/provider gap; sequential planning
+  valuation, not settled cash. Exact holdings/pUSD unchanged; native aUSDC
+  85.030728 adds .001102 interest.
+- New UNI catalyst: two Ethereum RPCs agree102 Executed at26,129,031.
+  Arc controls changed to the documented TokenJar/V3OpenFeeAdapter/V4FeeAdapter
+  at24,457,758; root independently reread at24,458,129. Both raw getActions
+  responses and exact nested setters match the primary proposal. Intended
+  configuration observed; pool collections/Releaser/net burn unverified.
+  Corrected prior proposer-as-adapter label in current rationale/watchlist.
+- Fresh UNI $9.16 at22:04:40 versus $3.25 review gate; configuration alone
+  establishes no positive January excess-return case. No allocation or
+  thresholds changed. Initial30 WATCH/eight crypto NO_DATA resolved by one
+  original-ID fresh CoinGecko batch; no price hit across38 quoted candidates.
+  AFMJF $.970 USD vs$.85; equity quote times/OTC status unverified.
+- HLE all60 rows/hash, mounted frontend/Diamond/Google/held Gamma criteria
+  unchanged versus18:00; Senate all256 rows unchanged. No qualifying
+  final passage or new structured public alert. Root G/O exits $1.506466/
+  $2.753100; central full/partial/combined trims lose including free2.828%
+  Aave carry. Stress separate ~10.07 G shares (~11.93 with carry) or all O,
+  not a joint optimum. HOLD / NO ADD; Clarity complete29/29; dust uneconomic.
+- Four daemons exact-one/current; disk~683MiB above guards. CSV34 rows/24
+  complete depths; six chart tests passed. One material Telegram. Pages
+  owner setting/credential rotation pending; weekly/Sunday work current.
+  No extra discovery, daemon/code change, new timer or durable goal.
+
 ## Oct-5 18:00 periodic check — no new action due
 
 - All 20 routine commands, including one bankroll retry and final audit,
@@ -171,8 +204,8 @@
   Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
   ten missing gas fields remain gaps. Three validated SPY closes are separate;
   the failed Sep-24 diagnostic benchmark is excluded.
-- Latest recorded trading depth $178.28: +4.87% vs $170 before VM/API costs.
-  Recovery of $32.24 (+22.08%) since Sep 25, but $.58 below Sep 8.
+- Latest recorded trading depth $177.40: +4.35% vs $170 before VM/API costs.
+  Recovery of $31.36 (+21.47%) since Sep 25, but $1.46 below Sep 8.
   Public records do not identify a recent model-context compaction date.
 - Six focused data/math tests and desktop/mobile browser checks passed.
   Publish by selecting GitHub Settings → Pages → Deploy from a branch →

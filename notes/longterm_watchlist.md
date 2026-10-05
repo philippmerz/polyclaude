@@ -931,3 +931,50 @@ and the CAD primary listing is not substituted for the USD trigger.
 Evidence: `data/checkin_20261005T1400_sources/uni102_arc_current.json`,
 `data/checkin_20261005T1400_afmjf.json`, and exact captures in
 `logs/checkin_20261005T1400/`. No asset action or new scheduled follow-up.
+
+
+### Oct-5 22:00 UTC — UNI Arc control configuration observed; no qualifying entry
+
+The configuration catalyst advanced. Two Ethereum RPCs agree proposal102 is
+Executed at fixed block **26,129,031**. Both return identical `getActions(102)`
+responses; root canonically decoded all three peer/dispatch calls and the
+embedded Arc `setFeeTo`, `setOwner`, `setProtocolFeeController` calls. Their
+exact targets and destination addresses match the
+[official Arc proposal](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
+
+Arc block **24,457,758**, independently reread by root at **24,458,129**:
+
+| Control | Current documented destination |
+|---|---|
+| v2 feeTo | TokenJar `0xfd39ac616e630e9db03efb2c9a4fe63edb949233` |
+| v3 factory owner | V3OpenFeeAdapter `0xa59ffbb55d91fc32b44a06f0b9cc6036a4afbce2` |
+| v4 protocolFeeController | V4FeeAdapter `0x2f2bd3f43880b9644211f16d861b0672aab23782` |
+
+All three changed since18:00, with nonempty runtime code at the destinations.
+This proves intended control configuration; it does not quantify actual pool
+collections, Releaser operations or sustainable net UNI burn. Reconcile burn
+with the [20M UNI annual growth budget](https://blog.uniswap.org/unification)
+before increasing valuation. Fresh CoinGecko UNI **$9.16**, timestamp
+**22:04:40 UTC**, remains above the **$3.25** valuation review threshold.
+No independently calibrated positive January excess-return case was established;
+no project allocation, funding move or new position. Route/depth/gas evidence
+from Sep30 remains dated and must be refreshed before any allocation.
+
+**Address correction:** the Oct5 14:00 note misidentified `0x927c...959c`
+as the proposed fee adapter. That is the proposal getter's proposer; the
+published and encoded V3OpenFeeAdapter is `0xa59f...bce2`. Preserve the dated
+raw observations: v2/v4 were zero and v3 belonged to the receiver then, so the
+earlier inactive-control conclusion does not rely on that mistaken label.
+Current rationale supersedes the old label without changing price/size gates.
+
+Initial watchlist coverage was30 WATCH/eight crypto NO_DATA after CoinGecko429
+and stale Blockstack fallback. One original-ID batch returned all eight fresh
+prices (70–90s old at the22:05:50 read), closing the gaps; all remain above
+unchanged price gates. AFMJF **$.970 USD** versus **$.85**, with last-sale/OTC
+status and per-equity quote timestamps still unverified. No price trigger hit.
+
+Evidence: `data/periodic_20261005T2200_uni_control_followup.json`, root Arc
+revalidation and eight-ID price follow-up JSON. Direct implementation-source
+Etherscan/Sourcify reads were blocked/unsupported; no implementation-source
+verification or actual pool-fee/burn measurement is claimed. Worker follow-up
+ended at model capacity; root completed the captured action/primary-role audit.

@@ -24317,3 +24317,129 @@ anchored to this financial paragraph: 33 rows/23 complete depth estimates.
 Preserved every historical CSV/journal byte; six existing chart tests and
 independent CSV arithmetic/source-anchor checks passed. Updated current
 README/backlog and preserved unrelated runtime working-tree changes.
+
+
+### 2026-10-05 22:00 UTC — bounded periodic review; Arc control milestone
+
+Reviewed backlog/recent journal; full14:00 discovery and Oct4 Sunday review
+remain current. Nineteen base routine commands plus one targeted price batch,
+all rc0 and outputs reviewed, in `logs/periodic_20261005T2200/routine/run.json`.
+Initial inventory records the19 base commands; the follow-up is a separate
+priced proof appended to the20-command manifest. Read-only audits CLEAN,
+5 indexed positions +1 deindexed claim. Authenticated orders HTTP200 empty,
+terminal LTE= cursor. UMA40 tracked/38 refreshed/0 alerts; Ostium zero
+trades/limits/allowance and CLEAN diff, Crux quiet, no overdue decision.
+Kelly's effective bankroll $187.00 confirmed in stderr: inherited188.62 and
+188.19 flags precede187.00, with argparse's last flag winning. Root joint
+risk uses the current complete bankroll directly, not that advisory cache.
+
+Authoritative whole-account mark $187.00; separately funded gas $6.87;
+PM midpoint $35.24 versus indicative fee/depth $32.51, cost $47.64.
+Settled cash P&L +$22.53; marked/depth unrealized -$12.40/-$15.13 before
+VM/API costs. Whole-account indicative depth $184.27, ex-gas trading
+midpoint $180.13 and depth $177.40 (+4.35% versus $170), down$.88 since18:00.
+Complete bankroll22:02:09–25 UTC and PM midpoint/depth22:01:48–49; no
+missing-native-token/provider warning or bankroll retry. Individual asset
+price timestamps not emitted. Sequential planning marks, not synchronized
+quotes, realized returns or guaranteed liquidation proceeds. CSV uses this
+aggregate only; separate later watchlist prices do not change its gas value.
+
+Root Polygon block95,021,711 verifies all exact held CTF quantities and
+$47.319630 pUSD unchanged, closed debut asset zero; native aUSDC85.030728
+accrued.001102 since18:00. Known-asset census only, not an unknown-token scan.
+Current native Aave supply APY2.828476%, variable. Root22:01:57 full fee-net
+G/O exits $1.50646599739/$2.753100; Clarity complete pair $28.249480 against
+$29 criteria-consistent floor. Exact Gamma/asset/CID/tokens/criteria/status,
+authoritative fee schedule, full fills and book ages7.13–167.80s validated
+within180s gate. Public planning snapshot; rewalk before any order. Archived
+.003571 Hormuz claim payout below $.00532935 current estimated gas using
+prior175036 simulated units, not a new simulation. No new redemption query;
+14:00 indexed winning dry-run zero and exact held claim quantities unchanged.
+
+`data/periodic_20261005T2200_risk.json` retains judgmental central p(NO)
+.12/.25, stress.03/.15 and prior correlation/upper scenarios. No newly
+calibrated probabilities inferred from source stability. Common wealth
+W=$173.89 from complete bankroll minus gas/PM mark plus $29 Clarity floor.
+Central sale-minus-hold Elog G/O/both -.044043/-.007940/-.054181; full,
+partial and combined central sales lose, including optimistic free Aave
+redeployment factor1.006677 over87.08 days before transaction/protocol costs.
+All fill sums, feasible segment endpoints/stationary points, whole-leg
+endpoint equivalence and independent2001-point per-leg grids passed.
+Stress separately favors10.07 Gemini shares (~11.93 with free carry) or all19
+OpenAI shares; not a joint optimum. Full Gemini sale loses in stress.
+Current all-in asks.04568256/.165376 exceed stress probabilities. HOLD / NO
+ADD remains model-sensitive, with Diamond interpretation risk, no price-
+recovery assumption; Clarity stays complete29/29 against its $29 floor.
+
+Resolving HLE all60 rows/unique IDs, parsed accuracies/calibration and raw
+SHA256532d0884bfbca40a05d793a3612594dff96292ed6afc23b5c8f5c712c40865c6
+match18:00, maxima Gemini46.2/OpenAI53.6. Mounted frontend/homepage/separate
+Diamond stable. All5 held Gamma selectors/criteria/status/end fields match.
+Senate XML HTTP200 all256 unique rows unchanged; only H.R.3633 row234 is
+rejected49–50 cloture on motion to proceed, no qualifying final passage.
+Google RSS/Argon/September recap raw and normalized content unchanged vs18.
+Worker's initial RSS-rotation prose was inherited from14→18; root verified
+zero22:00 additions/removals and unchanged hashes, and uses actual captures.
+No fresh structured public alert since18:03:31. Root independently rehashed
+all public captures and compared full rows, including both raw10-word UNI
+proposal getter tuples: `data/periodic_20261005T2200_root_source_audit.json`.
+
+Material UNI/Arc change: both Ethereum RPCs agree102 Executed at fixed block
+26,129,031, canceled=false/executed=true. Arc block24,457,758 now has v2
+feeTo0xfd39ac616e630e9db03efb2c9a4fe63edb949233, v3 factory owner
+0xa59ffbb55d91fc32b44a06f0b9cc6036a4afbce2, v4 protocolFeeController
+0x2f2bd3f43880b9644211f16d861b0672aab23782. Root independently reread all
+three at24,458,129; destination runtime code lengths1384/5870/3480bytes.
+These exact destinations match the published
+[TokenJar/V3OpenFeeAdapter/V4FeeAdapter table](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
+Both getActions responses agree; root decoded and canonically re-encoded
+all3 peer/dispatch actions and nested setters with exact target/argument
+checks, Wormhole chain71. Intended control configuration observed; actual
+pool collections, Releaser operation and sustainable net UNI burn unverified.
+Retain net burn reconciliation against the
+[20M UNI annual growth budget](https://blog.uniswap.org/unification), plus
+fresh lawful route/depth/funding/gas checks and a January excess-return case.
+Configuration alone supplies no calibrated expected outperformance at9.16.
+
+Correction: previous Oct5 current rationale mislabeled0x927c...959c as the
+proposed adapter. That is the proposal getter's proposer; the published and
+encoded V3OpenFeeAdapter is0xa59f...bce2. Earlier v2/v4 zero/v3 receiver
+observations still stand. Appended dated correction/milestone to long-term
+watchlist, and changed only UNI's current rationale; no threshold or size
+change. Role worker hit model capacity; root finished its saved two-RPC
+getActions/primary-proposal audit. Direct Etherscan implementation metadata
+was challenge-blocked; legacy Sourcify returned API-version errors. No
+verified implementation-source or actual burn/event-measurement claim.
+Proofs: `data/periodic_20261005T2200_uni_control_followup.json`, root Arc
+revalidation, raw actions and current primary proposal JSON captures.
+
+Initial watchlist30 WATCH/eight crypto NO_DATA: CoinGecko429 plus stale
+Blockstack fallback949s. One bounded original-ID batch returned all8 finite
+positive CoinGecko prices, timestamps70–90s old within900s gate. No stale
+fallback promotion, ticker substitution or new equity request. Together
+with30 original quoted rows all38 have no price gate hit. UNI9.16 quote at
+22:04:40 UTC>$3.25; AFMJF .970 USD>.85, individual equity quote times and
+OTC last sale/status remain unverified. No autorevet or entry. Root verified
+original IDs, values, per-source timestamps, freshness and unchanged gates
+in `data/periodic_20261005T2200_watchlist_price_followup.json`.
+
+At22:04:20 four daemons exact-one/current source versions; disk682.98MiB
+above512/128MiB guards. GitHub public API HTTP200 at22:01:57 still
+has_pages=false; one-time owner main/docs setting pending. Credential
+rotation remains unverified; no private inbox/history/inject-log inspection.
+Weekly P&L/Sunday work current; next dated reviews aroundOct9/Oct12. No
+extra discovery, trade, approval, transfer, redemption, daemon/code change,
+durable goal, new timer or idle continuation. One material Telegram summary
+is prepared for the verified UNI configuration milestone.
+
+Appended one manually sourced minute-precision CSV observation;34 rows/24
+complete depth estimates. Historical CSV/journal/watchlist bytes preserved.
+Updated README/backlog, with existing chart tests and independent CSV/source
+arithmetic verification required before handoff. Six public record/config
+files selected; unrelated runtime working-tree files remain unstaged.
+
+Six existing performance tests passed. Independent CSV parsing verifies34
+observations/24 complete depths, current ex-gas mark180.13/depth177.40, exact
+financial source anchor24336, all historical byte prefixes, and unchanged
+thresholds with only UNI rationale modified. Material summary delivered once
+as Telegram1102 (one part). No second notification or further follow-up.
