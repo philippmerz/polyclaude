@@ -896,3 +896,38 @@ Public local evidence: `data/weekly_20261004T1600_watchlist.json`,
 `data/weekly_20261004T1600_uni_chain.json`; command metadata and reports in
 `logs/weekly_20261004T1600/`. Root's chain proof supersedes the event helper's
 dated-state limitation for UNI only. Existing scheduled checks cover changes.
+
+
+### Oct-5 14:00 UTC — UNI102 executed; Arc activation remains unproved
+
+Two independent public Ethereum RPCs agree at block **26,126,641** (14:04 UTC):
+GovernorBravo `0x408ED6354d4973f66138C91495F2f2FCbd8724C3`, proposal **102**,
+state **7 / Executed**, getter `executed=true`, `canceled=false`. Root decoded
+both exact raw tuples independently. This advances the Oct4 queued milestone;
+the elapsed 11:59:35 eligibility did not itself establish execution.
+
+At Arc block **24,401,661**, v2 `feeTo` remains zero, v3 factory owner remains
+`0xbca30b5429935205037069cf5b8a165f55d05a75` (not the proposed fee adapter
+`0x927c7fd078fc406059957a691c21f6e0fc4a959c`), and v4
+`protocolFeeController` remains zero. The
+[Arc governance proposal](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287)
+has reached execution, but the checked controls do not establish Arc fee
+activation. **Partial catalyst condition hit; no qualifying entry.** Monitor
+UNI **$9.00** remains above **$3.25**. Require actual activation, sustained net
+fee-funded burn after the 20M UNI/year treasury budget, and fresh lawful
+route/depth/funding/gas checks. No price gate or sizing rule changed.
+
+The 38-candidate price sweep had **37 WATCH + one AFMJF NO_DATA**. One bounded
+retry of the original **AFMJF/USD** symbol returned **$0.985**, above its
+**$0.85** threshold, closing this run’s missing-value gap. No source quote
+time was supplied, so this is not a verified OTC last sale. The
+[issuer](https://www.alphaminresources.com/) and
+[TMX list](https://www.tsx.com/en/trading/market-data-and-statistics/market-statistics-and-reports/tsx-tsxv-moc-eligible-stocks)
+confirm the primary TSXV:AFM/JSE:APH listings; the
+[OTC AFMJF page](https://www.otcmarkets.com/stock/AFMJF/quote) could not load its
+quote. OTC current trading status is unverified. A feed miss is not delisting,
+and the CAD primary listing is not substituted for the USD trigger.
+
+Evidence: `data/checkin_20261005T1400_sources/uni102_arc_current.json`,
+`data/checkin_20261005T1400_afmjf.json`, and exact captures in
+`logs/checkin_20261005T1400/`. No asset action or new scheduled follow-up.

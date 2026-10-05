@@ -45,29 +45,28 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-05 10:02 UTC
+## Last bankroll snapshot — 2026-10-05 14:02 UTC
 
-Bankroll ran 10:02:24–44 UTC; PM midpoint/depth at 10:02:03–05.
+Bankroll ran 14:02:34–54 UTC; PM midpoint/depth at 14:02:11–13.
 These readings are sequential, with no synchronized quote timestamp.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $36.84 |
-| Indicative depth/fee value | $33.27 |
-| Authoritative whole-account mark | $188.62 |
-| Approximate whole-account depth value | $185.05 |
+| Polymarket midpoint | $36.37 |
+| Indicative depth/fee value | $32.90 |
+| Authoritative whole-account mark | $188.04 |
+| Approximate whole-account depth value | $184.57 |
 | Cumulative settled P&L, before VM/API costs | +$22.52 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
 $29.00 payout floor; manage it only as a complete position. Its complete
 exit is about $28.25. Both contracts retain their exact criteria; the current
-official Senate HTML index lists 256 roll calls, with no qualifying final
-passage found. Direct XML access returned 403, so a full XML row comparison
-was unavailable. Voice-vote and unanimous-consent branches retain the paired
-floor.
+official Senate XML returned all 256 unique roll calls. H.R.3633’s only
+recorded vote remains rejected cloture on a motion to proceed, not final
+passage. Voice-vote and unanimous-consent branches retain the paired floor.
 
 Remaining HLE holdings are **102.084750 Gemini >=50 NO** and **19 OpenAI
 >=55 NO**. Their p(NO) priors remain **.12/.25**, stressed **.03/.15**.
@@ -85,11 +84,11 @@ that uncertainty.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$1.90/$3.12** in the separate 10:01 quote. Central
+G/O exits are about **$1.46/$3.12** in the separate 14:02 quote. Central
 joint models favor holding,
 including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model favors separate trims of 40 Gemini
-shares (also 40 with optimistic free carry) or sale of all 19 OpenAI shares;
+The pessimistic model favors separate trims of about 10.07 Gemini
+shares (11.95 with optimistic free carry) or sale of all 19 OpenAI shares;
 a full Gemini exit loses in that case.
 Central probabilities reject full and partial exits. **HOLD / NO ADD**
 remains a model-sensitive judgment, with no price-recovery assumption. Both
@@ -101,30 +100,32 @@ uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.03 native aUSDC** earns the Polygon Aave supply rate (2.835% read
-during this 10:00 run, variable); existing legacy aUSDC.e is about $3.50.
+About **$85.03 native aUSDC** earns the Polygon Aave supply rate (2.847% read
+during this 14:00 run, variable); existing legacy aUSDC.e is about $3.50.
 No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is about $3.57. Approximate whole-account depth value
-excludes sub-lot dust from immediately executable cash and includes $6.90 of
-separately funded gas. Excluding gas gives about **$178.15 versus $170 trading
-capital (+4.79%)**, before VM/API operating costs. The separate Oct-4 weekly
-review confirms UNI Arc proposal 102 is **queued, unexecuted** at 16:15 UTC;
-its earliest eligible execution is Oct-5 11:59:35 UTC. Arc fee controls
-were inactive in that 16:15 check. UNI $9.02 remains above the retained
-$3.25 valuation review gate; queueing alone does not justify allocation.
-The [weekly watchlist](notes/longterm_watchlist.md) adds ASML and explicit TSM
-price-review gates; none of the 38 price gates was hit in the checked snapshots.
+timestamped snapshot is about $3.47. Approximate whole-account depth value
+excludes sub-lot dust from immediately executable cash and includes $6.78 of
+separately funded gas. Excluding gas gives about **$177.79 versus $170 trading
+capital (+4.58%)**, before VM/API operating costs. At 14:04 UTC, two Ethereum
+RPCs agree UNI Arc proposal 102 is **Executed** at block 26,126,641. Arc fee
+controls remain inactive at block 24,401,661: execution has not established
+fee activation or sustainable token burn. The monitor’s $9.00 UNI quote is
+above the retained $3.25 valuation gate; no allocation follows.
+The [weekly watchlist](notes/longterm_watchlist.md) records this milestone and
+retains ASML/TSM review gates. No price gate was hit. AFMJF’s initial missing
+quote returned $0.985 USD on one retry, above $0.85; its last-sale time and
+OTC trading status remain unverified.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$0.80/$3.25/$3.85 below VT/VTI/SPY** at those dated values.
+is **$1.16/$3.61/$4.21 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the current [`weekly report`](notes/pnl_weekly.md).
 
 An archived Hormuz NO claim holds **.003571 winning shares**. During this run its
-gas/price estimate is $.005325, above the payout, using the earlier simulated
+gas/price estimate is $.005251, above the payout, using the earlier simulated
 gas units rather than a new transaction simulation. The earlier
 exact-asset redemption dry-run succeeded. Retain the unexpired claim for
 lower fees; there is no cash need or expiry.

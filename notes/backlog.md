@@ -1,5 +1,38 @@
 # Polyclaude Backlog
 
+## Oct-5 14:00 full check — UNI execution observed; no asset action
+
+- All 19 routine and 12 discovery/context commands returned zero. Required
+  audit refresh and final read-only audit CLEAN; authenticated orders empty;
+  no overdue decision, UMA/Ostium alert or uncovered crux. Explicit live
+  bankroll used for Kelly. Redemption dry run: zero indexed winning claims.
+- Bankroll $188.04, funded gas $6.78, PM midpoint/depth $36.37/$32.90;
+  settled P&L +$22.52. Ex-gas trading depth $177.79 (+4.58% before VM/API),
+  down $.36 since 10:00. Exact holdings/pUSD unchanged; native aUSDC
+  85.028514 adds .001095 interest. Sequential estimates, not settled cash.
+- UNI 102 now Executed: two Ethereum RPCs at block 26,126,641; Arc controls
+  at block 24,401,661 still inactive. Partial catalyst milestone only; no
+  price gate hit ($9.00 vs $3.25), activation/burn/route gates retained.
+  Current rationale and long-term watchlist updated; one material Telegram.
+- HLE full 60/hash and source/frontend/Diamond/Gamma criteria unchanged.
+  Google adds unrelated travel news; no fresh public alert. Senate XML 200
+  covers all 256 unique votes; H.R.3633 row 234 is rejected cloture, not passage.
+- Initial AFMJF NO_DATA recovered to WATCH at $.985 USD on one original-symbol
+  retry; $.85 gate unhit. Quote time/OTC status unverified; no ticker substitution.
+- Discovery reviewed all 1,117 emitted rows/62 batches with complete hashes
+  and identity/criteria joins. No verified arb in checked slices; consistency
+  and Limitless coverage incomplete. Albania NO’s fresh books were walked;
+  proportional margin removal gives apparent edge, but Shin/power sensitivities
+  straddle costs and conservative half-Kelly falls below $5. Entry dry run
+  and opposite-side check skip; no forced probability/haircut/size adjustment.
+- Root G/O exits $1.460032/$3.122764. Central full/partial/combined trims lose
+  even with optimistic free 2.847% Aave carry. Stress separately prefers
+  ~10.07 Gemini shares (~11.95 with carry) or all OpenAI; not a joint optimum.
+  HOLD / NO ADD; Clarity complete 29/29 floor $29; archived dust uneconomic.
+- Four daemons exact-one/current; disk ~711 MiB above guards. Six existing
+  chart tests passed; CSV has 32 observations/22 complete depths. Pages still disabled/owner setting
+  pending. Weekly/Sunday work current; no daemon/code change or idle follow-up.
+
 ## Oct-5 10:00 periodic check — no new action due
 
 - All 18 routine commands returned zero; audit CLEAN, authenticated orders
@@ -109,8 +142,8 @@
   Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
   ten missing gas fields remain gaps. Three validated SPY closes are separate;
   the failed Sep-24 diagnostic benchmark is excluded.
-- Latest recorded trading depth $178.15: +4.79% vs $170 before VM/API costs.
-  Recovery of $32.11 (+21.99%) since Sep 25, but $0.71 below Sep 8.
+- Latest recorded trading depth $177.79: +4.58% vs $170 before VM/API costs.
+  Recovery of $31.75 (+21.74%) since Sep 25, but $1.07 below Sep 8.
   Public records do not identify a recent model-context compaction date.
 - Six focused data/math tests and desktop/mobile browser checks passed.
   Publish by selecting GitHub Settings → Pages → Deploy from a branch →

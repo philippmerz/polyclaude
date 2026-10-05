@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-10-04",
+  "updated": "2026-10-05",
   "comment": "Entry-trigger config for scripts/watchlist_monitor.py. Routes identify the venue for a fresh agent review: 'polyclaude' uses project-accessible assets and 'ibkr_surface' goes to the operator's personal brokerage. The monitor does not submit trades; a price or event trigger is an observation, not automatic entry authority. Project positions must fit a less-than-one-year horizon and all current evidence, funding, fee, liquidity and execution checks. Multi-year theses remain brokerage-side research.",
   "triggers": [
     {
@@ -217,9 +217,9 @@
       "entry_max": 3.25,
       "horizon": "1y",
       "route": "polyclaude",
-      "rationale": "Oct-4 16:15 UTC evidence refresh: retain the $3.25 valuation review gate; no automatic entry. Two public Ethereum RPCs agree proposal 102 is Queued and unexecuted at block 26120123; earliest eligible execution Oct-5 11:59:35 UTC is not a guaranteed execution time. Arc block 24246905 still has v2 feeTo zero, v3 owner the Wormhole receiver rather than the proposed adapter, and v4 protocolFeeController zero. Require actual fee activation and sustained net fee-funded burn reconciled against the 20M UNI/year treasury growth budget. UNI quote $9.02 hits no price gate. The Sep-30 Arbitrum vetted-route cost observation is dated; revalidate lawful access, executable buy/sell depth, funding and gas before allocation. The $7.50 discussion level is not a replacement valuation gate.",
+      "rationale": "Oct-5 14:04 UTC evidence refresh: retain the $3.25 valuation review gate; no automatic entry. Two public Ethereum RPCs agree proposal 102 is Executed (state 7, executed=true, uncanceled) at block 26126641. Arc block 24401661 still has v2 feeTo zero, v3 owner the Wormhole receiver rather than the proposed fee adapter, and v4 protocolFeeController zero. Execution is a partial catalyst milestone, not proof of fee activation. Require actual fee activation and sustained net fee-funded burn reconciled against the 20M UNI/year treasury growth budget. Monitor UNI quote $9.00 hits no price gate; individual quote timestamp not emitted. The Sep-30 Arbitrum vetted-route cost observation is dated; revalidate lawful access, executable buy/sell depth, funding and gas before allocation. The $7.50 discussion level is not a replacement valuation gate.",
       "added": "2026-08-28",
-      "updated": "2026-10-04"
+      "updated": "2026-10-05"
     },
     {
       "ticker": "HUT",
