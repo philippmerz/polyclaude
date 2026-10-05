@@ -1,5 +1,29 @@
 # Polyclaude Backlog
 
+## Oct-5 10:00 periodic check — no new action due
+
+- All 18 routine commands returned zero; audit CLEAN, authenticated orders
+  empty, no overdue decision, UMA/Ostium alert or uncovered crux. Kelly used
+  current bankroll explicitly. Crypto prices failed on the hit-only read;
+  subsequent complete JSON has 38 WATCH, zero hits/missing, no provider error.
+- Bankroll $188.62, funded gas $6.90, PM midpoint/depth $36.84/$33.27,
+  settled P&L +$22.52. Trading depth $178.15 (+4.79% before VM/API costs),
+  only +$.08 since 06:00 despite +$1.07 whole-account midpoint; CSV appended
+  with sequential timing. No missing-token warning or bankroll retry needed.
+- Exact fixed-block holdings/pUSD unchanged; native aUSDC 85.027419 adds
+  .001084 interest. Worker HLE API 403s were resolved by a root request using
+  documented headers at 10:07:01: all 60 rows/hash unchanged. Diamond and mounted
+  frontend unchanged; one new Google education item is unrelated. Exact
+  held criteria/status/end metadata unchanged; no new public alert.
+- Fresh G/O exits $1.896502/$3.122764; central full/partial/combined sales
+  lose even with free 2.835% variable Aave carry. Stress separately favors
+  40 Gemini shares or all 19 OpenAI, not a joint optimum. HOLD / NO ADD;
+  Clarity remains complete 29/29 against $29 floor; dust uneconomic.
+- Four daemons exact-one/current, disk ~725 MiB above both guards. Pages
+  still disabled; owner setting pending. Sunday/weekly reviews current;
+  UNI $8.99 above $3.25 gate, execution eligibility at 11:59:35 still future.
+  No trade, redundant scan, Telegram, new timer or durable goal.
+
 ## Oct-5 06:00 periodic check — no new action due
 
 - Eighteen routine checks and one bounded bankroll retry returned zero;
@@ -85,8 +109,8 @@
   Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
   ten missing gas fields remain gaps. Three validated SPY closes are separate;
   the failed Sep-24 diagnostic benchmark is excluded.
-- Latest recorded trading depth $178.07: +4.75% vs $170 before VM/API costs.
-  Recovery of $32.03 (+21.93%) since Sep 25, but $0.79 below Sep 8.
+- Latest recorded trading depth $178.15: +4.79% vs $170 before VM/API costs.
+  Recovery of $32.11 (+21.99%) since Sep 25, but $0.71 below Sep 8.
   Public records do not identify a recent model-context compaction date.
 - Six focused data/math tests and desktop/mobile browser checks passed.
   Publish by selecting GitHub Settings → Pages → Deploy from a branch →
