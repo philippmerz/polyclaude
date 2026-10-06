@@ -1,5 +1,35 @@
 # Polyclaude Backlog
 
+## Oct-6 14:00 full check — no asset action
+
+- All 20 routine and 11 discovery/context commands returned zero; root
+  verified capture/artifact hashes. State audit CLEAN, authenticated orders
+  empty/complete, no overdue decision or UMA/Ostium/crux alert. UNI/AAVE
+  remain above their unchanged review gates; no auto-revet was triggered.
+- Complete bankroll $187.94, gas $6.79, PM midpoint/depth $36.27/$32.91.
+  Indicative trading depth $177.79 (+4.58% before VM/API), up $.94 since
+  10:04; settled P&L unchanged. Positions and bankroll were sequential
+  14:02 readings; no missing-token/provider valuation warning or retry.
+- HLE two 403s followed by independent HTTP200 recovery; all 60 unique IDs,
+  scores and raw fields match 10:00. Five held Gamma contracts and all 256
+  Senate rows unchanged. Three new Google articles contain no qualifying
+  HLE score. UNI 102 Executed on two RPCs; Arc controls match published roles.
+- Root G/O net exits $2.094451/$2.568496. Central full/partial/combined
+  sales lose including free 2.850% Aave carry; stress separately favors
+  ~35.63 Gemini shares (~36 with carry) or five OpenAI (~6.37 with carry).
+  HOLD / NO ADD remains model-sensitive. Complete Clarity pair retains $29 floor.
+- Delegated all 59 batch reviews/1,059 context rows; root independently
+  rebuilt every packet and verified identities/criteria/hashes. Thin-tail
+  delta comparison is unverified because hurdle cohorts differ. No validated
+  arb in the bounded quoted slice. Sports 9z/BetBoom lead fails default
+  uncertainty haircut at .582255 all-in; bookmaker challenge pages provide
+  no auditable live fair. No entry or discretionary consensus rerun.
+- Exact holdings/pUSD unchanged; native aUSDC 85.035120. Dust payout
+  $.003571 remains below indicative gas $.00528–.00529; no redemption.
+  Four daemons exact-one/current, disk ~588 MiB above guards. CSV now 132
+  observations / 45 depths. Next dated reviews Oct9/Oct12. No Telegram,
+  daemon/code change, replacement timer or durable goal; Sunday workflow remains retired.
+
 ## Oct-6 scope update — stock/brokerage workflow retired
 
 - Off-chain stock and personal-brokerage research are outside this project.
