@@ -1,5 +1,33 @@
 # Polyclaude Backlog
 
+## Oct-6 22:00 periodic check — no new action due
+
+- All 19 distinct routine commands completed once, with actual UTC intervals
+  and all 38 capture hashes verified. A whitespace parser stop after bankroll
+  was resolved without rerunning a completed check; the $3.21 liquidity gap
+  is not a missing-provider valuation. Kelly used $187.54 once.
+- State audit CLEAN, authenticated orders empty/complete, no overdue decision,
+  UMA/Ostium alert or uncovered crux. UNI $8.53/AAVE $180.94 remain above their
+  unchanged gates; validated CoinGecko quotes, no fallback warning.
+- Complete bankroll $187.54, gas $6.76, PM midpoint/depth $35.89/$32.68.
+  Trading depth $177.57 (+4.45% before VM/API), up $.49 since 18:00;
+  settled P&L unchanged. Positions22:01 and bankroll22:01–02 agree; later
+  quick-status midpoint35.79 is a separate reading.
+- HLE initial HTTP200 and full 60-row body unchanged; five held Gamma
+  contracts and all 256 Senate rows unchanged. Argon/recap markup changed
+  but main text matches. New prenatal-ultrasound article has no qualifying
+  HLE result. UNI102 Executed on two RPCs; Arc controls retain published roles.
+- Root fee-net G/O exits $1.677076/$2.753100. Central full/partial/combined
+  exit review, including free 2.855% Aave carry, still favors HOLD / NO ADD.
+  Stress separately favors ~23.44 G shares (~25.21 with carry) or all19 O;
+  not a joint optimum. Later Gemini drawdown77.6% reviewed; priors unchanged.
+  Clarity remains complete29/29 against its $29 floor.
+- Holdings/pUSD unchanged; native aUSDC85.037323 accrued .001100. Dust payout
+  $.003571 remains below indicative gas $.00522–.00523; no redemption.
+  Four daemons exact-one/current, disk ~556 MiB above guards. CSV now134
+  observations/47 depths. Next dated reviews Oct9/Oct12; Sunday workflow retired.
+  No extra discovery, asset action, Telegram, code/daemon change or timer.
+
 ## Oct-6 18:00 periodic check — no new action due
 
 - Nineteen required command types completed; 28 actual invocations after a
