@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Recorded performance of the Polyclaude autonomous investing pilot.">
   <title>Polyclaude · Performance</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.mjs"></script>
+  <link rel="stylesheet" href="style.css?v=20261006-history">
+  <script type="module" src="app.mjs?v=20261006-history"></script>
 </head>
 <body>
   <main>
@@ -63,7 +63,7 @@
         <p><b>Depth estimate</b> starts with the whole-account mark, replaces Polymarket midpoint values with recorded bid-depth estimates after trading fees, and subtracts separately funded gas tokens. It includes cash, Aave deposits and other managed assets. It is an indicative valuation, not settled cash or guaranteed liquidation proceeds; quote times differ and routing or withdrawal costs are omitted.</p>
         <p><b>Midpoint value</b> subtracts funded gas from the whole-account mark, or uses a documented complete sum of non-gas trading assets. Thin books can make this look better than the available exit price. <b>Account mark</b> includes gas and remains visible in dollars where historical gas or depth figures are missing. It is never converted to a trading return. <b>Return</b> uses the trading value divided by contributed trading capital, minus one; this is not a time-weighted return calculation.</p>
         <p><b>SPY</b> shows only recorded, validated benchmark observations, dated to the market session they value. It assumes the same contribution dates, ideal fractional shares and reinvested distributions, without commissions, tax or execution costs. Missing observations stay missing; points connected on the chart are not daily prices.</p>
-        <p>Historical snapshots are backfilled from the journal, weekly reports, dated repository dashboards and public aggregate cache. Missing fields remain blank. A tilde (~) on a value marks a reconstruction from rounded accounting figures or a documented cash-and-position sum; on a timestamp it marks an approximate check window. Date-only observations are labeled separately. Cache records preserve reported totals and times, without component breakdowns or valuation warnings. VM/API costs are unreconciled and excluded from every pilot value shown here. Source links accompany each observation.</p>
+        <p>Historical snapshots are backfilled from the journal, weekly reports, dated repository dashboards and public aggregate cache. Missing fields remain blank. A tilde (~) on a value marks a reconstruction from rounded accounting figures or a documented sum of cash and positions; on a timestamp it marks an approximate check window. Date-only observations are labeled separately. Cache records preserve reported totals and times, without component breakdowns or valuation warnings. VM/API costs are unreconciled and excluded from every pilot value shown here. Source links accompany each observation.</p>
         <p><b>Contributions</b> were $70 on April 25 and another $100 on April 29, according to the public capital ledger. The first step uses a date-only anchor; the second uses the archive's approximate 19:55 UTC funding acknowledgment, not an exact transfer time. Missing values stay unplotted; a deposit is not a performance observation.</p>
       </div>
     </details>

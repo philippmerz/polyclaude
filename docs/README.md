@@ -8,8 +8,10 @@ Only this directory is intended for GitHub Pages publication.
 
 Live chart: [philippmerz.github.io/polyclaude](https://philippmerz.github.io/polyclaude/).
 GitHub Pages publishes `main /docs`; each normal push to main updates the
-site and CSVs. Publication was verified on Oct 5, 2026: all five site/data
-files returned HTTP 200 and matched the repository byte for byte.
+site and CSVs. The Oct-6 history publication was verified at 09:19 UTC:
+all six site/data files returned HTTP 200 and matched the repository byte
+for byte. When changing JavaScript or CSS compatibility, update their version
+query in `index.html` so a browser uses the matching assets.
 
 Local preview from the repository root:
 

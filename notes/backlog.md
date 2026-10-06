@@ -1,5 +1,32 @@
 # Polyclaude Backlog
 
+## Oct-6 performance archive review — history backfilled and published
+
+- Two archive workers reviewed Apr-25 inception through Oct-6. The chart
+  now has 130 observations across 118 dates, up from 36: 123 reported
+  account marks, 50 trading midpoints and 43 indicative net-depth estimates.
+- Seven Apr25–29 trading-only sums exclude unpriced funded gas and retain
+  $70 capital before the Apr29 ~19:55 funding acknowledgment. The separate
+  $100 contribution then raises cumulative trading capital to $170; no
+  internal transfer is counted as a deposit.
+- Root verified 16 same-snapshot gas accounting reconstructions against
+  historical function revisions and published inputs, including all ten
+  original September gas blanks. Values are visibly approximate; rounding
+  alone is at most $.02, with larger timing/accounting uncertainty unbounded.
+  Recorded amounts/timestamps remain unchanged. Gas-inclusive marks never
+  become a trading-return series.
+- Apr30–Jun9 plus Jun13/14/29/30, Jul1 and Aug27 remain unvalued. Cache-only
+  aggregates lack component/warning records; known failed captures were
+  excluded/replaced at their own timestamps. Pre-fix gross depth and unclear
+  early sleeve sums were excluded. Source hashes, exclusions and reconstruction
+  inputs: `research/2026-10-06-performance-history.json`.
+- Ten chart tests and the UI smoke passed; selected files passed secret and
+  diff review. The first publication `fa20dc6` returned all six assets HTTP200
+  matching repository bytes at09:19 UTC. Asset-version queries prevent stale
+  JS/CSS after schema changes. Latest observation remains Oct6 06:02,
+  trading depth $177.23 (+4.25% before VM/API); no new asset observation,
+  trade, account mutation, paid API call or scheduling change.
+
 ## Oct-6 06:00 periodic check — no new action due
 
 - Eighteen routine commands returned zero; state audit CLEAN, complete

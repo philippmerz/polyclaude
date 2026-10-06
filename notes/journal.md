@@ -24684,3 +24684,49 @@ observations, 26 complete depths, the financial source anchor 24615, unique
 increasing timestamps and every historical CSV/journal byte. Only the four
 public record/data files are selected for push; runtime changes remain
 unstaged. No Telegram or further follow-up scheduled.
+
+
+## 2026-10-06 09:21 UTC — performance archive review and chart backfill
+
+Two archive workers reviewed public financial records from the Apr-25 kickoff
+through Oct-6; root audited and integrated their findings. The CSV grew from
+36 to 130 observations across 118 of 165 dates. It contains 123 reported
+account marks, 50 trading midpoints and 43 indicative net-depth estimates.
+Seven early PM-position-plus-cash sums are complete trading-only values while
+the second sleeve was unfunded; gas-inclusive totals remain blank. The public
+Apr29 funding acknowledgment at approximately 19:55 supports retaining $70
+capital for that day's 02:00/14:00 observations before the additional $100.
+
+Sixteen gas values were reconstructed from contemporaneous total, trading
+reference, reported accounting residual and marked unrealized inputs, checked
+against each historical bankroll function. All ten original September gas
+blanks are now explicitly labeled rounded estimates, not independent gas
+measurements. Rounding alone contributes at most $.02 ($.015 for Sep4's
+three-input equation); snapshot/provider/accounting uncertainty is not bounded
+by those cents. Original recorded monetary amounts and timestamps remain
+intact. The residual is not promoted to audited trading profit.
+
+Apr30–Jun9 and six later dates lack a supported complete value. Cache-only
+history records aggregates and timestamps without provider/component warnings;
+known failures were excluded or replaced with separately dated observations.
+Unclear early all-sleeve sums and old gross/incorrect-fee walks remain excluded.
+The public source/derivation audit is
+`research/2026-10-06-performance-history.json`. No missing daily prices or gas
+values were interpolated or borrowed from another observation.
+
+The viewer now shows a separate gas-inclusive account series in USD only,
+keeps complete trading-only values where documented, labels reconstructions,
+and checks observation denominators against the contribution steps. All ten
+focused tests and a DOM smoke passed, including current $177.23/+4.25%, all
+130 table rows, range controls and suppression of gas-inclusive return claims.
+This smoke is not a full browser layout test. Selected publication files and
+historical source identities passed diff/secret/Decimal/provenance checks.
+Feature commit `fa20dc65811c5dca632d61a1a87cf3758ea18170` was pushed; at
+09:19:40 UTC all six live site/data assets returned HTTP200 and matched the
+repository byte for byte. JS/CSS version queries were added for compatible
+browser caching; publication evidence is retained in ignored data artifacts.
+
+No market/account request, trade, transfer, order, paid API call or scheduler
+change was made. The newest financial observation remains Oct6 06:02, trading
+depth $177.23 versus $170, before VM/API costs. The history supports observing
+recent recovery, not claiming model causality or proven alpha.
