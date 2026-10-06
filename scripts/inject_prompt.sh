@@ -16,6 +16,15 @@ POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 RUNNER="${POLYCLAUDE_AGENT_RUNNER:-${HOME}/.local/bin/polyclaude-agent}"
 LOG="${POLYCLAUDE_DIR}/notes/inject_log.md"
 
+# The old mixed stock/brokerage review was retired 2026-10-06. Reject its
+# legacy seed before quota probes, operator delivery, or inject-log writes.
+case "${PROMPT}" in
+  "Sunday weekly long-term review."*)
+    echo "Retired stock/brokerage review: no work queued."
+    exit 0
+    ;;
+esac
+
 # Scheduled in-chat work is one bounded run: the queue delivers the scheduled
 # seed prompt and its resource/safety context. Cron and event watchers handle
 # waiting for the next run; this dispatcher must not recreate an indefinite
@@ -23,7 +32,7 @@ LOG="${POLYCLAUDE_DIR}/notes/inject_log.md"
 QUEUE_PROMPT="${PROMPT}"
 BOUNDED_CONTRACT_APPENDED=0
 case "${PROMPT}" in
-  "Cron tick "*|"Periodic check:"*|"Sunday weekly long-term review."*)
+  "Cron tick "*|"Periodic check:"*)
     USAGE_PROBE="${POLYCLAUDE_USAGE_PROBE:-${SCRIPT_DIR}/check_usage.sh}"
     USAGE_SNAPSHOT="unavailable (refresh with ./scripts/check_usage.sh --brief)"
     if [[ -x "${USAGE_PROBE}" ]]; then

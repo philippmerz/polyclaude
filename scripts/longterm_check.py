@@ -1,36 +1,24 @@
 #!/usr/bin/env python3
-"""Multi-year-horizon thesis check for equity / crypto / tokenized-equity candidates.
+"""Bounded thesis review for project-accessible on-chain instruments.
 
-Companion to catalyst_check.py (which targets event-driven Polymarket questions
-with explicit oracle resolution). This script targets continuous markets with
-no resolution date — multi-year holds where the question is "is the thesis
-intact / accelerating / decaying" rather than "will event X happen by date Y."
-
-Selection framework anchored on the 4-dimensional grid from
-notes/longterm_watchlist.md: cyclical position / secular tailwind / specific
-catalyst / margin of safety. Candidate must score on ≥3 of 4 strongly.
-
-Usage:
-    python scripts/longterm_check.py "<asset>" <asset_type> [--horizon-years N]
+Companion to catalyst_check.py for continuous crypto markets and other named
+on-chain instruments. Off-chain stock and personal-brokerage research is retired.
+Research must fit the less-than-one-year project horizon and January 2027
+assessment. No report or price trigger authorizes a trade.
 
 Examples:
-    python scripts/longterm_check.py "Solana ($SOL)" crypto
-    python scripts/longterm_check.py "Micron Technology ($MU)" equity
-    python scripts/longterm_check.py "Arbitrum ($ARB)" crypto --horizon-years 3
+    python scripts/longterm_check.py "Uniswap (UNI)" crypto
+    python scripts/longterm_check.py "Aave (AAVE)" crypto --horizon-years 0.2
+    python scripts/longterm_check.py "Ostium SPX/USD index exposure" onchain
 
-Asset types: equity / crypto / tokenized-equity.
-
-Output: structured markdown report; logged to notes/longterm_log.md.
-
-Lesson source: 2026-05-08 user directive to scan multi-year generational-
-mispricing candidates. catalyst_check.py couldn't be repurposed cleanly —
-the P(YES)/resolution-criteria framing doesn't fit continuous markets.
+Logged to notes/longterm_log.md; current candidates in notes/longterm_watchlist.md.
 """
 
 from __future__ import annotations
 
 import argparse
 import datetime
+import math
 import subprocess
 import sys
 from pathlib import Path
@@ -41,103 +29,64 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "notes" / "longterm_log.md"
 
 
-PROMPT_TEMPLATE = """You are doing a multi-year-horizon thesis check for a long-term investment candidate.
+PROMPT_TEMPLATE = """Review a specific on-chain investment opportunity for this project.
 
 Asset: {asset}
 Asset type: {asset_type}
-Horizon: {horizon_years} years from today {today_iso}
+Analysis horizon: {horizon_years} years from {today_iso}
+Evaluation: start of January 2027; project positions must fit a less-than-one-year holding horizon.
 
-This is for `notes/longterm_watchlist.md` — generational-mispricing candidates that fit the 4-dimensional framework: cyclical position / secular tailwind / specific catalyst / margin of safety. Candidate must score on ≥3 of 4 strongly to merit watchlist inclusion.
+Off-chain stocks and personal-brokerage research are outside this project. Do
+not suggest an IBKR/CEX/KYC route, a multi-year allocation, or a recurring review.
+A tokenized instrument requires its own identity, legal-access and executable
+route evidence; an underlying stock quote is not its token price or liquidity.
 
-Reference pattern: SanDisk 2023-2025 — memory-cycle bottom + AI-compute secular demand + Western-Digital-spinoff catalyst + balance-sheet margin of safety = generational return.
+Use current primary sources. Verify:
+1. Exact token/asset ID, chain, instrument, venue and lawful project access.
+   If accessible exposure is unverified, say so; do not substitute an off-chain
+   stock recommendation or imply that this repository already supports execution.
+2. Current executable buy and sell prices/depth at plausible project size,
+   source times, spread, fees, gas, funding, withdrawal and settlement costs.
+3. Cyclical position, durable demand and tokenholder/instrument value accrual.
+   Protocol adoption or company success alone does not imply holder returns.
+4. A dated catalyst capable of changing value before the evaluation. Separate
+   facts from inference and model probabilities; a multi-year story is insufficient.
+5. Downside, dilution/unlocks, liquidation, custody, counterparty/protocol,
+   regulatory, operational and correlated portfolio risks. Downside is not
+   bounded merely because price has fallen or a balance sheet looks strong.
+6. Explicit terminal scenarios through evaluation, probabilities and uncertainty,
+   expected net return and a pessimistic case versus accessible alternatives,
+   including same-chain Aave. Do not claim calibration without evidence.
+7. Conditional entry/review and thesis-break triggers. A price threshold or
+   qualitative score alone cannot authorize an entry; apply portfolio sizing
+   and the vetted execution gates in a separate fresh review.
 
-Task: web-search current state of the asset and produce a structured thesis-check report. Anchor on FACTS (current valuation, recent earnings, on-chain metrics, etc.) — not vibes. If the thesis can't be substantiated, say so.
+Report only:
 
-Steps:
-
-1. **Fetch current price + recent performance.** Use web search for: "<ticker> price", "<ticker> 1-year chart", "<asset> recent earnings". Note current vs 52-week high/low + 1-year return.
-
-2. **Cyclical position assessment.** Where is this asset in its cycle? At/near multi-year bottom, mid-cycle, or topping? Cite specific evidence (industry cycle indicators, valuation multiples vs history, sentiment indicators).
-
-3. **Secular tailwind identification.** What multi-year demand driver supports this asset? Is the driver intact, accelerating, or decaying? Cite recent data (e.g., AI capex growth rate, on-chain TVL trend).
-
-4. **Catalyst window.** What specific event in the next {horizon_years} years could force re-rating? Scheduled or probable events: product launches, mainnet activations, regulatory shifts, M&A, spinoffs, supply-cycle inflections. Be specific on dates where known.
-
-5. **Margin-of-safety check.** What bounds the downside if thesis is wrong? Strong balance sheet, profitable already, low debt, hard-asset backing, low entry multiple, network-effect moat?
-
-6. **Risks (top 3).** What are the most likely thesis-breakers? Be honest — not bullish.
-
-7. **Scenario probabilities** (5-year outcomes, sum to ~1.0):
-   - Generational (10x+ from current entry): X%
-   - Strong (3-5x): Y%
-   - Modest (1.5-3x): Z%
-   - Flat / mild loss (-30% to +50%): W%
-   - Thesis broken (-50%+): V%
-
-8. **Entry trigger.** What price or event would make this an actual entry? Now, on a specific dip, on a specific event?
-
-9. **Watchlist verdict.** SCORE/4 on the framework + recommendation:
-   - WATCH: keep on list, monitor for entry trigger
-   - ENTER NOW: trigger met, size per Kelly/4 with downside scenario
-   - PASS: <3/4 dimensions, drop from watchlist
-   - FOLLOW-UP NEEDED: missing data, retry in N weeks
-
-Output format:
-
-```
-## LONGTERM CHECK: {asset}
-
+## PROJECT THESIS CHECK: {asset}
 Date: {today_iso} | Type: {asset_type} | Horizon: {horizon_years}y
-
-### Current state
-<price + 1y return + valuation metric one-liner>
-
+### Instrument, access and current executable state
 ### Cyclical position
-<one paragraph + evidence>
-
-### Secular tailwind
-<one paragraph + evidence>
-
+### Secular tailwind and holder value accrual
 ### Catalyst window
-- [HIGH/MED/LOW] YYYY-QQ — <description> — <source>
-- ...
-
-### Margin of safety
-<one paragraph + concrete number/metric>
-
-### Top 3 risks
-1. <risk> — <how it breaks thesis>
-2. ...
-
-### 5-year scenario probabilities
-- Generational (10x+): X%
-- Strong (3-5x): Y%
-- Modest (1.5-3x): Z%
-- Flat (-30% to +50%): W%
-- Thesis broken (-50%+): V%
-
+### Margin of safety and top risks
+### Scenarios through the January 2027 evaluation
 ### Entry trigger
-<concrete entry price / event>
-
-### Verdict: <SCORE/4> — <WATCH | ENTER NOW | PASS | FOLLOW-UP NEEDED>
-<one-sentence reasoning>
-
+### Verdict: <SCORE/4> — <WATCH | ENTER | PASS | FOLLOW-UP NEEDED>
+Use the four thesis dimensions as a qualitative summary, not an allocation gate.
+ENTER means a candidate for fresh agent review, never execution authority.
 ### Sources
-- [Title](URL)
-- ...
-```
-
-End with the report only. Do NOT add commentary outside the report. Be concise but specific — the consumer makes capital-allocation decisions from this output.
+Link the primary evidence supporting each material claim. Identify data gaps.
 """
 
 
 def main() -> int:
-    p = argparse.ArgumentParser(description="Multi-year thesis check for long-term watchlist candidates.")
-    p.add_argument("asset", help="Asset name + ticker, e.g., 'Solana ($SOL)' or 'Micron Technology ($MU)'.")
-    p.add_argument("asset_type", choices=["equity", "crypto", "tokenized-equity"],
+    p = argparse.ArgumentParser(description="Project thesis review for accessible on-chain instruments.")
+    p.add_argument("asset", help="Exact on-chain instrument or token to research, e.g., Uniswap (UNI).")
+    p.add_argument("asset_type", choices=["crypto", "tokenized-equity", "onchain"],
                    help="Asset class — informs the search/analysis approach.")
-    p.add_argument("--horizon-years", type=int, default=3,
-                   help="Investment horizon in years (default: 3).")
+    p.add_argument("--horizon-years", type=float, default=0.25,
+                   help="Analysis horizon in years, strictly below one (default: 0.25); evaluation remains January 2027.")
     p.add_argument("--profile", choices=["research", "fast"], default="research",
                    help="Model workload profile (default: research).")
     p.add_argument("--effort", default="medium",
@@ -145,6 +94,8 @@ def main() -> int:
     p.add_argument("--no-log", action="store_true",
                    help="Skip writing the result to notes/longterm_log.md.")
     args = p.parse_args()
+    if not math.isfinite(args.horizon_years) or not 0 < args.horizon_years < 1:
+        p.error("project horizon must be finite, positive and less than one year")
 
     today = datetime.date.today()
     prompt = PROMPT_TEMPLATE.format(

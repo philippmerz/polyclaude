@@ -167,7 +167,7 @@ the gap); *verify against a known truth* (absent output and failed output look i
   30-38% embedded an inflation-tail RISK PREMIUM (hedging price ≠ probability);
   economists were unanimously opposite. Cost: entered a ~zero-edge position believing
   10-12pp of edge (2026-07-25→26). Same family: verify-full-distribution.
-- **The weekly digest's own "bare facts" need verification too.** world_state_digest is an
+- **A model digest's own "bare facts" need verification too.** world_state_digest is an
   LLM synthesis of curated sources, not ground truth: on 2026-08-10 it framed a biotech
   theme around a Uganda outbreak at "378 cases and growing" when Uganda's outbreak had
   ENDED on Jul-28 at 20 cases, while missing that the real epidemic (DRC, 4,053 cases) had

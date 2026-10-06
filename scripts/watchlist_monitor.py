@@ -1,22 +1,19 @@
 #!/usr/bin/env python3
-"""Watchlist entry-trigger monitor.
+"""Project-crypto watchlist review monitor.
 
 Reads notes/watchlist_triggers.json — structured entry-trigger config seeded
 from the long-term watchlist. For each trigger, pulls current price and flags
-ENTRY_TRIGGER_HIT when current <= entry_max (downside dip entries) or
-current >= entry_min (breakouts, when set).
+ENTRY_TRIGGER_HIT [PROJECT_REVIEW] when current <= entry_max (dip entries) or
+current >= entry_min (breakouts, when set). A trigger is an observation for
+project review, never an automatic buy instruction.
 
-Wired into daily_checkin.sh step 3 alongside check_marginal_apy.py so every
-cron tick auto-surfaces actionable watchlist alerts. Without this, the
-discovery → vetting → tracking pipeline (world_state_digest -> longterm_check
--> longterm_watchlist) had no automated alerting layer.
+Only explicitly routed project crypto triggers are evaluated. Other
+instruments remain in historical/config records but are skipped here.
 
-Sources:
-- Crypto: CoinGecko primary, fresh DefiLlama fallback
-- Equities: yfinance (Yahoo public quote feed)
+Sources: validated CoinGecko primary with fresh DefiLlama fallback.
 
 Usage:
-    python scripts/watchlist_monitor.py             # check all
+    python scripts/watchlist_monitor.py             # check project crypto
     python scripts/watchlist_monitor.py --json      # JSON output (for downstream)
     python scripts/watchlist_monitor.py --hits-only # only print triggered
 
@@ -29,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import subprocess
 import sys
@@ -45,7 +43,7 @@ LONGTERM_CHECK = REPO_ROOT / "scripts" / "longterm_check.py"
 
 
 def auto_revet_ticker(ticker: str, asset_type: str) -> dict:
-    """Spawn scripts/longterm_check.py for ticker; parse verdict.
+    """Spawn project-horizon longterm_check for an eligible crypto ticker.
 
     Returns {"verdict": "ENTER|WATCH|PASS|ERROR", "score": "N/4", "summary": str,
              "fresh": bool, "from_cache": bool}.
@@ -57,6 +55,11 @@ def auto_revet_ticker(ticker: str, asset_type: str) -> dict:
     fire auto-surfaces the fresh fundamental verdict — operator gets the
     actionable picture without waiting for me to re-vet manually.
     """
+    if asset_type != "crypto":
+        return {"verdict": "ERROR", "score": "?/4",
+                "summary": "auto-revet is limited to project crypto",
+                "fresh": False, "from_cache": False}
+
     cache = {}
     try:
         if REVET_CACHE.exists():
@@ -69,11 +72,9 @@ def auto_revet_ticker(ticker: str, asset_type: str) -> dict:
     if entry and now - entry.get("ts", 0) < REVET_TTL_HOURS * 3600:
         return {**entry["result"], "from_cache": True}
 
-    # asset_type from config maps directly to longterm_check positional
-    lt_type = asset_type if asset_type in ("equity", "crypto", "tokenized-equity") else "equity"
     try:
         r = subprocess.run(
-            [sys.executable, str(LONGTERM_CHECK), ticker, lt_type, "--no-log"],
+            [sys.executable, str(LONGTERM_CHECK), ticker, "crypto", "--no-log"],
             capture_output=True, text=True, timeout=180,
         )
         out = (r.stdout or "") + (r.stderr or "")
@@ -130,17 +131,30 @@ def fetch_crypto_prices(coingecko_ids: list[str]) -> dict[str, float]:
         return {}
 
 
-def fetch_equity_price(symbol: str) -> float | None:
-    """Pull last close from yfinance. Returns None on failure."""
-    try:
-        import yfinance as yf
-        t = yf.Ticker(symbol)
-        h = t.history(period="1d")
-        if len(h) > 0:
-            return float(h["Close"].iloc[-1])
-    except Exception as e:
-        print(f"WARN: yfinance fetch failed for {symbol}: {e}", file=sys.stderr)
-    return None
+def is_project_crypto_trigger(trigger: object) -> bool:
+    """Return whether a config row is safe for this project-crypto monitor."""
+    if not isinstance(trigger, dict):
+        return False
+    if trigger.get("type") != "crypto" or trigger.get("route") != "polyclaude":
+        return False
+    if not isinstance(trigger.get("ticker"), str) or not trigger["ticker"].strip():
+        return False
+    if not isinstance(trigger.get("coingecko_id"), str) or not trigger["coingecko_id"].strip():
+        return False
+    if trigger.get("currency", "USD") != "USD":
+        return False
+    for key in ("entry_max", "entry_min"):
+        value = trigger.get(key)
+        if value is not None:
+            if isinstance(value, bool) or not isinstance(value, (int, float)):
+                return False
+            try:
+                finite = math.isfinite(value)
+            except (OverflowError, TypeError):
+                finite = False
+            if not finite:
+                return False
+    return any(trigger.get(key) is not None for key in ("entry_max", "entry_min"))
 
 
 def evaluate(trigger: dict, current: float | None) -> dict:
@@ -184,14 +198,14 @@ def evaluate(trigger: dict, current: float | None) -> dict:
 
 
 def main() -> int:
-    p = argparse.ArgumentParser(description="Long-term watchlist entry-trigger monitor.")
+    p = argparse.ArgumentParser(description="Project-crypto threshold review monitor.")
     p.add_argument("--config", default=str(CONFIG_PATH),
                    help="Path to watchlist_triggers.json")
     p.add_argument("--json", action="store_true", help="Output as JSON.")
     p.add_argument("--hits-only", action="store_true",
-                   help="Only print TRIGGER_HIT entries (silent if none).")
+                   help="Only print project-review trigger observations (silent if none).")
     p.add_argument("--auto-revet", action="store_true",
-                   help="On TRIGGER_HIT, auto-spawn longterm_check for fresh fundamental verdict. "
+                   help="On a project-review trigger, spawn a fresh project-horizon longterm_check. "
                         "Caches per ticker for 24h to avoid duplicate spawns across cron runs. "
                         "Bounded to --max-revet hits per run.")
     p.add_argument("--max-revet", type=int, default=2,
@@ -204,25 +218,26 @@ def main() -> int:
         return 2
 
     cfg = json.loads(cfg_path.read_text())
+    if not isinstance(cfg, dict):
+        print("ERROR: config must be a JSON object", file=sys.stderr)
+        return 2
     triggers = cfg.get("triggers", [])
+    if not isinstance(triggers, list):
+        print("ERROR: triggers must be a JSON array", file=sys.stderr)
+        return 2
     if not triggers:
         print("INFO: zero triggers configured", file=sys.stderr)
         return 0
 
-    # Batch crypto prices, individual equity prices
-    crypto_ids = [t["coingecko_id"] for t in triggers if t.get("type") == "crypto" and t.get("coingecko_id")]
+    # Unsupported and malformed rows are discarded before any price or vetting work.
+    eligible = [t for t in triggers if is_project_crypto_trigger(t)]
+    crypto_ids = list(dict.fromkeys(t["coingecko_id"] for t in eligible))
     crypto_prices = fetch_crypto_prices(crypto_ids)
 
     results = []
-    for t in triggers:
-        if t.get("type") == "crypto":
-            cid = t.get("coingecko_id")
-            price = crypto_prices.get(cid)
-        elif t.get("type") in ("equity", "tokenized-equity"):
-            sym = t.get("yfinance_symbol", t.get("ticker"))
-            price = fetch_equity_price(sym)
-        else:
-            price = None
+    for t in eligible:
+        cid = t["coingecko_id"]
+        price = crypto_prices.get(cid)
         results.append(evaluate(t, price))
 
     if args.hits_only:
@@ -242,15 +257,13 @@ def main() -> int:
     no_data = [r for r in results if r["status"] == "NO_DATA"]
 
     if not args.hits_only:
-        print(f"# watchlist_monitor: {len(results)} candidates  ({len(hits)} HIT, {len(no_data)} NO_DATA)")
+        print(f"# watchlist_monitor: {len(results)} project candidates  ({len(hits)} HIT, {len(no_data)} NO_DATA)")
         print()
 
     revet_done = 0
     for r in results:
-        route_tag = "POLYCLAUDE" if r["route"] == "polyclaude" else "IBKR_SURFACE"
         if r["status"] == "TRIGGER_HIT":
-            action = "POLYCLAUDE_BUY" if r["route"] == "polyclaude" else "IBKR_SURFACE_TO_OPERATOR"
-            print(f"ENTRY_TRIGGER_HIT [{action}]  {r['ticker']:8s} ({r['type']}, {r['horizon']})  current ${r['current']} {r['currency']} {r['direction']}")
+            print(f"ENTRY_TRIGGER_HIT [PROJECT_REVIEW]  {r['ticker']:8s} ({r['type']}, {r['horizon']})  current ${r['current']} {r['currency']} {r['direction']}")
             print(f"                  {r['rationale']}")
             if args.auto_revet and revet_done < args.max_revet:
                 rv = auto_revet_ticker(r['ticker'], r['type'])
@@ -258,10 +271,10 @@ def main() -> int:
                 print(f"                  AUTO_REVET[{tag}]: {rv['verdict']} ({rv['score']})  {rv['summary'][:200]}")
                 revet_done += 1
         elif r["status"] == "NO_DATA" and not args.hits_only:
-            print(f"NO_DATA   [{route_tag}]  {r['ticker']:8s} ({r['type']})  — fetch failed")
+            print(f"NO_DATA   [PROJECT_REVIEW]  {r['ticker']:8s} ({r['type']})  — fetch failed")
         elif not args.hits_only:
             tgt = f"<=${r['entry_max']}" if r['entry_max'] else f">=${r['entry_min']}"
-            print(f"WATCH     [{route_tag}]  {r['ticker']:8s} ({r['type']}, {r['horizon']})  current ${r['current']} {r['currency']}  trigger {tgt}")
+            print(f"WATCH     [PROJECT_REVIEW]  {r['ticker']:8s} ({r['type']}, {r['horizon']})  current ${r['current']} {r['currency']}  trigger {tgt}")
 
     return 0 if not hits else 0  # always exit 0; cron consumer parses output
 

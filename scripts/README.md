@@ -10,6 +10,12 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 
 ## Scheduled (crontab)
 
+The former Sunday stock/brokerage review and missed-week catch-up are retired.
+`watchlist_monitor.py` checks only project-routed crypto candidates.
+`world_state_digest.py` and `longterm_check.py` remain tools for bounded,
+on-demand research supporting accessible on-chain opportunities and held
+positions; they do not create a recurring stock or brokerage workflow.
+
 - `daily_checkin.sh` — main cron tick at `02:00` + `14:00` UTC. Queues to the live operator, or runs a fresh onboarded fallback, then follows the standard portfolio + prospecting + journal flow.
 - `arb_cron.sh` — hourly arb scan + executor at `30 * * * *`.
 

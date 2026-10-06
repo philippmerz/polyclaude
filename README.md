@@ -40,7 +40,7 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Reference trading capital: **$170**. Separately contributed gas is tracked
   independently in [`notes/capital_ledger.md`](notes/capital_ledger.md).
 - Each project position must fit a **less-than-one-year** holding horizon.
-  Multi-year ideas route to the operator's personal brokerage watchlist.
+  Off-chain stocks and personal-brokerage research are outside this project.
 - Normal Dec. 31 resolutions redeemed in the first days of January count for
   the start-of-2027 evaluation. Do not cross a costly spread merely to print
   cash on Dec. 31.
@@ -115,10 +115,11 @@ block 26,132,639. Arc controls at block 24,543,645 retain the
 [published TokenJar/fee-adapter roles](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
 Configuration alone does not verify collections, releaser activity or
 sustainable net burn. UNI $8.87 remains above the $3.25 review gate;
-no allocation follows from that milestone. All 38 quoted watchlist
-identities have no price gate hit or missing price. AFMJF $0.970 USD is
-above $0.85; its last-sale time and OTC status remain unverified.
-See the [`weekly watchlist`](notes/longterm_watchlist.md).
+no allocation follows from that milestone. The active project watchlist now
+contains UNI and AAVE review gates; off-chain stock/brokerage monitoring and
+its Sunday rotation were retired on Oct 6. See the
+[`project watchlist`](notes/longterm_watchlist.md); the prior mixed research
+is retained as a dated archive.
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
@@ -151,7 +152,7 @@ Polymarket depth view.
 - **Reactive:** `news_watcher.py` and `opportunity_watch.py` monitor material
   events and can trigger a bounded review.
 - **Scheduled:** full checks run at 02:00 and 14:00 UTC; light checks run at
-  06:00, 10:00, 18:00, and 22:00 UTC. Sunday rotates long-term source domains.
+  06:00, 10:00, 18:00, and 22:00 UTC. On-chain opportunity research is on demand.
 - **Health:** `heartbeat_watch.py` checks daemon freshness, session progress,
   and disk headroom.
 - **Interactive:** authenticated Telegram messages enter the same ordered
@@ -215,7 +216,7 @@ The full catalog and usage notes live in [`scripts/README.md`](scripts/README.md
 | [`notes/resting_orders.md`](notes/resting_orders.md) | Maker-order policy and audit trail |
 | [`notes/position_condition_ids.json`](notes/position_condition_ids.json) | Exact held-market identities |
 | [`notes/pnl_weekly.md`](notes/pnl_weekly.md) | Weekly performance reviews |
-| [`notes/longterm_watchlist.md`](notes/longterm_watchlist.md) | Brokerage-side candidates |
+| [`notes/longterm_watchlist.md`](notes/longterm_watchlist.md) | Project on-chain candidate review gates |
 | [`notes/capital_ledger.md`](notes/capital_ledger.md) | Contributions and external flows |
 | [`notes/primary_sources.md`](notes/primary_sources.md) | Curated world-state sources |
 

@@ -16,3 +16,9 @@ when evidence supports a better lawful approach.
 
 Measure results against actual contributed capital and whole-account value. Preserve
 historical forecasts, transactions, costs, and losses so reported ROI remains honest.
+
+Project research serves positions and instruments the project can lawfully access
+on-chain. Off-chain stock research, personal-brokerage watchlists, and their weekly
+reviews and alerts are outside this project (scope updated 2026-10-06). Research
+for accessible on-chain exposure remains subject to the project horizon and every
+existing identity, cost, risk, and execution check.

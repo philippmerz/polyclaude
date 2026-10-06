@@ -10,6 +10,13 @@ Single canonical home for the project's operational infrastructure. Other docs r
 - **Logs:** `polyclaude/logs/cron/checkin_<UTC ts>.log` (gitignored, auto-pruned at 30d).
 - **What each tick does:** load context (memory, journal tail, strategy), mark portfolio + bankroll via `scripts/positions.py` + `scripts/bankroll.py` (authoritative total), scan WebSearch for active-position catalysts, decide hold/adjust/add/close, journal it, write a weekly report if ≥7d since last, commit + push (audit diff for secrets first), Telegram-alert if anything material moved.
 
+The general Sunday stock/brokerage source rotation and missed-week catch-up are
+retired as of 2026-10-06. Routine watchlist checks cover project crypto candidates
+only; no stock-price polling or personal-brokerage alerts. On-demand research may
+use macro, industry and protocol sources when they support a held thesis or a
+lawfully accessible on-chain opportunity within the project horizon. Weekly
+portfolio P&L and passive index comparisons remain part of account evaluation.
+
 ## News watcher — 24/7 reactive layer
 
 - **Daemon:** `scripts/news_watcher.py` (subcommands `start | status | stop | once`). Restarts on reboot via `@reboot` crontab.

@@ -24817,3 +24817,39 @@ rotation remains unverified/already surfaced. Next dated reviews Oct9/Oct12.
 Full ignored evidence: logs/periodic_20261006T1000/routine/run.json,
 data/periodic_20261006T1000_root_source_audit.json and matching risk,
 fixed-block inventory, health and gas artifacts.
+
+
+### 2026-10-06 11:04 UTC — retire off-chain stock/brokerage research
+
+Project scope now excludes off-chain stock research and personal-brokerage
+watchlists, reviews and alerts. Removed the Sunday 16:00 source-rotation cron
+and its comments; all nine other jobs are unchanged. Removed the daily
+missed-week catch-up instruction. The dispatcher rejects the retired Sunday
+seed before quota probes, queue delivery or inject-log writes, so an old seed
+cannot restart the workflow.
+
+The active watchlist contains only UNI and AAVE, with their original token
+identities, review thresholds and rationales unchanged. Removed 36 other
+watchlist rows (30 equities and six brokerage-routed crypto candidates), plus
+the separate ARB personal-brokerage price alert. Every other opportunity
+trigger is unchanged. The monitor filters non-project/non-crypto rows before
+price or research calls, including stale configurations. Project price hits
+remain review observations; fresh thesis, route, cost, horizon and joint-risk
+checks precede allocation. No automatic buy instruction was introduced.
+
+Updated mandate, onboarding, strategy, dashboard, tooling/source-catalog
+instructions and research-worker prompts. World-state and thesis tools remain
+available on demand for held positions and accessible on-chain opportunities.
+Weekly portfolio P&L, passive index benchmarks and held-position safety checks
+remain active. Historical research and financial records are preserved: the
+previous mixed watchlist is archived byte for byte (81,533 bytes, SHA-256
+79848849682474b80d0ee19461dad41a2eea14cfaca8b9f118ed1589bed500e0).
+
+All 47 focused offline tests passed, covering crypto monitoring, retired-route
+rejection before worker calls, dispatcher behavior and opportunity alerts.
+Both changed shell scripts passed syntax checks. Verified installed crontab,
+unchanged remaining trigger rows and exact archive bytes. Opportunity checks
+reload the trigger configuration each cycle; no daemon code changed. This was
+an operational scope change, with no new financial observation, asset action,
+paid model call or replacement schedule. Local verification and cron backups:
+logs/retire_brokerage_20261006/.

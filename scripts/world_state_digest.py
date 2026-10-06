@@ -1,32 +1,17 @@
 #!/usr/bin/env python3
-"""World-state digest: pull bare facts from primary sources, distill underpriced themes.
+"""On-demand primary-source digest for project-relevant on-chain opportunities.
 
-Companion to longterm_check.py and catalyst_check.py.
+The old Sunday stock/brokerage rotation is retired. Select source domains only
+for a held thesis, material trigger or concrete opportunity the project can
+lawfully access. This catalog includes macro/industry facts because they can
+inform Polymarket, crypto and named on-chain exposures, not a stock watchlist.
 
-- catalyst_check.py: targeted vetting of a single Polymarket question with a
-  known oracle resolution.
-- longterm_check.py: targeted vetting of a single asset (equity/crypto) for
-  multi-year-horizon thesis intactness.
-- world_state_digest.py: BROAD discovery — pulls factual updates from
-  primary sources (no narrative filter), distills "what's underpriced given
-  these facts", outputs candidate list.
+Example:
+    python scripts/world_state_digest.py --domain crypto-on-chain
+    python scripts/world_state_digest.py --domain macro-fiscal-labor,trade-regulation
 
-Pipeline:
-  primary_sources.md (curated factual URLs by domain)
-    -> world_state_digest.py (this) -> raw fact aggregation + synthesis
-    -> candidate list (printed + appended to notes/world_state_log.md)
-    -> longterm_check.py for individual-ticker vetting
-    -> notes/longterm_watchlist.md for active monitoring
-
-Usage:
-    python scripts/world_state_digest.py --domain energy
-    python scripts/world_state_digest.py --domain "energy,critical-minerals,trade"
-    python scripts/world_state_digest.py --all  # all domains
-
-Lesson source: 2026-05-08 user articulation — retail relies on pre-made
-inferences from outlets; LLM operating on bare facts has structural edge
-because it skips the narrative-compression layer. This script operationalizes
-that edge by reading FACTS not COMMENTARY.
+No argument starts a default rotation. Findings are research inputs, not trading
+or scheduling authority; reports are retained in notes/world_state_log.md.
 """
 
 from __future__ import annotations
@@ -72,82 +57,46 @@ def parse_sources() -> dict[str, list[tuple[str, str]]]:
     return domains
 
 
-PROMPT_TEMPLATE = """You are doing a WORLD-STATE FACT DIGEST — pulling bare facts from primary sources to identify mispriced asset categories.
+PROMPT_TEMPLATE = """Produce a bounded primary-source digest for this investment project.
+Date: {today_iso} | Domains: {domains_csv} | Lookback: {lookback_days} days
 
-Today: {today_iso}
-Domains: {domains_csv}
-Lookback: last {lookback_days} days
-
-You have WebSearch + WebFetch. Tools available: pull each source URL, extract recent FACTUAL updates (numerical data, official statements, regulatory filings, primary statistics — not editorial framing).
-
-The principle is structural: retail relies on pre-made inferences from outlets (3-4 layers of narrative compression). You operate on bare facts and skip the narrative step. Your edge is reading the BLS jobs report directly, not "what the WSJ said about the BLS report".
-
-Sources to consult (curated primary sources for the selected domains):
-
+Source catalog:
 {sources_block}
 
-## Your task
+Scope: held-position catalysts and lawfully accessible on-chain opportunities,
+with less-than-one-year holds and evaluation at the start of January 2027.
+Off-chain stock picking, personal-brokerage watchlists/alerts and a recurring
+Sunday domain rotation are retired. Do not propose restoring them or create a
+catch-up task from historical research timestamps.
 
-1. **Fetch + extract facts.** For each source above, fetch the latest few news/release pages and extract the most material FACTUAL updates from the last {lookback_days} days. For each fact: cite the source, give the date, give the raw number/statement.
+Read current primary sources. Date facts and distinguish announcements,
+implemented state and economic results. Independently verify any factual
+claim material to a position or allocation; a catalog or previous model digest
+is not ground truth. Report source failures and gaps rather than filling them.
 
-   Be ruthless about facts vs framing. "Q1 GDP grew 1.4% annualized" is a fact. "Economy disappoints expectations" is framing — IGNORE.
+Infer candidate themes only when facts support an edge in a named instrument
+that could be accessed on-chain. For each, identify the exact instrument,
+chain/venue and access evidence, holder value-accrual mechanism, catalyst
+before evaluation, current quote/depth and cost gaps, downside and model
+uncertainty. An industry trend or cheap off-chain stock is not a project
+candidate. Unknown route/access or executable economics must remain unverified;
+no instrument may be recommended for execution from this report alone.
 
-   You don't need to hit every source — prioritize sources that yield material recent updates. Skip ones that 404 or have no recent material.
-
-2. **Aggregate into a bare-fact snapshot.** Organize by domain. Group related facts. Note when multiple sources confirm the same trend.
-
-3. **Synthesize: what's underpriced given THESE facts?** Now apply first-principles inference. Given the bare facts, what asset categories or specific tickers should be mispriced?
-
-   For each candidate:
-   - Asset (specific ticker if equity/crypto; category if too early)
-   - Mechanism: which fact(s) drive the mispricing? Be specific.
-   - Direction: long / short
-   - Time horizon: weeks / months / years
-   - Why retail might miss it: what narrative-layer obscuring is happening?
-   - Confidence: HIGH / MEDIUM / LOW (only HIGH if multiple independent facts converge)
-
-   Only include candidates where the FACTS support the thesis. If the digest yields no high-conviction candidates, say so — null result is fine.
-
-4. **Cross-reference.** If any candidate is in the existing `notes/longterm_watchlist.md` (don't read it — just flag if you recall the obvious ones), note that for downstream filtering.
-
-## Output format
-
-```
-# WORLD-STATE DIGEST — {today_iso}
-
-Domains: {domains_csv}  |  Lookback: {lookback_days}d
-
-## BARE FACTS (by domain)
-
-### <Domain 1>
-- [YYYY-MM-DD] <Source>: <raw factual statement with number/specific>
-- ...
-
-### <Domain 2>
-- ...
-
-## CANDIDATE THEMES
-
-### <Theme name>
-- Underlying facts: <which fact(s) from above>
-- Implication: <first-principles inference>
-- Possible plays: <ticker(s) / category>
-- Direction: long/short
-- Horizon: weeks/months/years
-- Retail blindspot: <why this isn't priced>
-- Confidence: HIGH/MED/LOW
-
-### <Theme name 2>
-...
-
-## NEXT-STEPS
-
-- Run longterm_check.py on: <ticker1>, <ticker2>, ...
-- Run catalyst_check.py on: <Polymarket question 1>, ... (if any)
-- Skip / pass: <list any themes that look interesting but factual basis is too thin>
-```
-
-End with the report only. No preamble, no commentary outside the report. Be terse but specific — this output feeds downstream tooling that vets individual names.
+Output only:
+# PROJECT WORLD-STATE DIGEST — {today_iso}
+Domains: {domains_csv} | Lookback: {lookback_days}d
+## PRIMARY FACTS
+Group dated facts by domain, with primary-source links.
+## PROJECT CANDIDATE THEMES
+For each: underlying facts; named on-chain instrument/venue; causal mechanism;
+catalyst/timeframe; net-cost and access evidence/gaps; confidence HIGH/MED/LOW.
+A null result is valid. Do not create off-chain stock or brokerage candidates.
+## BOUNDED NEXT STEPS
+Name only justified, concrete follow-up for the held thesis or accessible
+on-chain candidate. longterm_check.py accepts crypto/tokenized-equity/onchain
+research within the project horizon; catalyst_check.py handles specific
+Polymarket questions. Current candidate notes are notes/longterm_watchlist.md;
+its old mixed archive is historical evidence. Do not schedule an idle follow-up.
 """
 
 

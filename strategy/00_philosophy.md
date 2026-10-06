@@ -75,8 +75,9 @@ conditional-fair-value logic; resolved +47.5%.
 
 - **Legal only; decentralized only** — no CEX, no KYC venues, no jurisdiction-violating
   markets.
-- **<1y holding horizon per position.** Multi-year theses route to the operator's IBKR
-  sleeve via Telegram (watchlist infra: `longterm_check.py`, `watchlist_monitor.py`).
+- **<1y holding horizon per position.** Research must serve the project's January
+  2027 evaluation. Multi-year and personal-brokerage stock theses are outside the
+  project; their recurring reviews and alerts were retired on 2026-10-06.
 - **Public repo** — no secret values, no secret paths, no raw tokens (mechanics in
   `strategy/02_operations.md`).
 - **Telegram protocols + emergency-exit procedure** per `strategy/02_operations.md`.
@@ -248,8 +249,9 @@ ever fails (DEC-0083).
 6. **Op-cost hurdle**: expected net return must beat the best lawful, executable
    alternative after financing, dividends, gas, spread, fees, liquidity, correlation
    and venue risk. Same-chain Aave supply is the investable floor/default, not the
-   whole opportunity set. Broad equity exposure is a candidate whenever its
-   forward net return clears that floor and competing positions; benchmark
+   whole opportunity set. Lawfully accessible on-chain index or equity exposure
+   is a candidate whenever its forward net return clears that floor and competing
+   positions; benchmark
    outperformance to date is evidence about results, not a forecast by itself.
    Idle capital is never "doing nothing" — it earns the best net hurdle it can
    actually reach (a small headline APY gap does not justify a bridge on sub-$100

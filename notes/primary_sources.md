@@ -1,16 +1,22 @@
 # Primary fact sources for first-principles world-state digestion
 
 > Curated list of high-quality FACTUAL sources organized by domain. Used by `scripts/world_state_digest.py` to assemble bare-fact world-state snapshots that bypass narrative-outlet framing.
+
 >
 > **Principle.** Retail-analyst pipeline (outlet → analyst → market → retail) has 3-4 layers of narrative compression. LLM operating from bare facts skips the narrative step. Pre-made inferences from outlets serve as PUBLIC-OPINION data (useful for reflexivity/Schelling) not truth (useful for fundamental valuation). Source quality determines edge.
 >
-> Created 2026-05-08. Iteration cadence: review monthly, add sources as new factual primaries appear.
+> Created 2026-05-08. Add sources when a concrete project question requires them.
+
+This is a source catalog for bounded, on-demand research into held positions or
+accessible on-chain opportunities. The former Sunday stock/brokerage rotation
+was retired on 2026-10-06. A listed company or industry source does not authorize
+stock picking, personal-brokerage monitoring, or a recurring review.
 
 ## Selection criteria
 
 Each source must:
 - Publish RAW facts: numerical data, official statements, regulatory filings, primary statistics — not editorial framing
-- Update on a regular cadence so a periodic digest catches changes
+- Publish dated updates that can be checked when a project question arises
 - Be reasonably stable (URL longevity, not behind hard paywalls for the digest)
 - Provide depth in a specific domain rather than thin coverage of everything
 
@@ -109,14 +115,19 @@ These can serve as "what is the crowd believing?" data when the question is refl
 
 ## How `world_state_digest.py` uses this list
 
-Periodic digest:
+On-demand digest:
 1. Pulls latest factual updates from N sources per domain (rotating to keep token cost bounded)
 2. Aggregates into a single document with timestamps + source attribution
-3. Runs the research-model profile through the provider-neutral runtime adapter with the document + prompt: "what asset categories or specific tickers are underpriced given THESE FACTS?"
-4. Output: structured candidate list to feed into `longterm_check.py` for individual-ticker vetting
+3. Runs the scoped research-model profile through the provider-neutral runtime
+   adapter to check facts relevant to a held thesis or accessible on-chain opportunity
+4. Output: project-relevant facts and accessible on-chain candidates. Vet a named
+   crypto or tokenized instrument only when current evidence justifies that work;
+   identify its lawful route and costs before any allocation.
 
-Cadence: weekly Sunday baseline + on-demand for specific themes.
+Cadence: on demand for a held thesis, material trigger, or concrete project
+opportunity; no general weekly stock or brokerage review.
 
 ## Iteration
 
-This list will evolve. New primary sources discovered → add. Sources that turn out to be heavily narrative → demote to opinion-tracking. Quarterly review.
+Add primary sources when needed for project research. Sources that turn out to
+be heavily narrative belong in opinion-tracking, not the factual catalog.

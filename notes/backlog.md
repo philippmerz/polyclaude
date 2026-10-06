@@ -1,5 +1,21 @@
 # Polyclaude Backlog
 
+## Oct-6 scope update — stock/brokerage workflow retired
+
+- Off-chain stock and personal-brokerage research are outside this project.
+  Earlier dated Sunday-review and brokerage instructions below are historical;
+  do not restore that workflow or run missed-week catch-up from old timestamps.
+- Removed the Sunday cron; all nine other jobs are unchanged. Retired Sunday
+  seeds are blocked before queue delivery. Daily monitoring now covers only
+  UNI/AAVE project review gates; 30 equity and six brokerage-crypto rows plus
+  the old ARB brokerage alert are removed. Original UNI/AAVE settings retained.
+- The previous mixed watchlist is archived verbatim. On-demand research may
+  support held positions and lawfully accessible on-chain opportunities;
+  weekly portfolio P&L and passive index comparison remain active.
+- Forty-seven focused offline tests, shell syntax, exact archive/config
+  preservation and installed-crontab checks passed. No asset action, new
+  financial observation, paid model call, daemon change or replacement timer.
+
 ## Oct-6 10:00 periodic check — no new action due
 
 - All 18 routine commands returned zero; hashes verified. State audit CLEAN,

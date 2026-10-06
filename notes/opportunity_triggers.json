@@ -9,15 +9,6 @@
   "actionable": false
  },
  {
-  "key": "arb-deep-value-surface",
-  "kind": "coingecko",
-  "id": "arbitrum",
-  "op": "<=",
-  "level": 0.065,
-  "note": "ARB DEEP-VALUE only (position CLOSED Jul-24 DEC-0057). Polyclaude does NOT auto-add: multi-year price-only thesis routes to operator IBKR. Price re-entry for polyclaude requires a FILED Tally distribution/buyback proposal (dated <1y catalyst), NOT a price level. This trigger = surface-to-operator at a genuine capitulation only.",
-  "actionable": false
- },
- {
   "key": "nycc-announce",
   "kind": "new_listing",
   "query": "comic con",

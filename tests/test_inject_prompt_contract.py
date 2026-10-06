@@ -138,15 +138,35 @@ def test_periodic_prompt_also_gets_bounded_contract_but_ordinary_prompt_does_not
         "Periodic check: anything else to take care of?",
         env,
     )
-    sunday = _run(script, "Sunday weekly long-term review.", env)
     ordinary = _run(script, "operator asked a normal question", env)
 
-    assert periodic.returncode == sunday.returncode == ordinary.returncode == 0
+    assert periodic.returncode == ordinary.returncode == 0
     payload = captured.read_text()
-    assert payload.count("BOUNDED RUN CONTRACT") == 2
+    assert payload.count("BOUNDED RUN CONTRACT") == 1
     assert "automatic continuation turns" not in payload
     assert "maximum expected ROI" not in payload
     assert "until the user manually cancels it" not in payload
+
+
+def test_retired_sunday_seed_never_probes_queues_or_logs(tmp_path: Path) -> None:
+    script, captured, env = _fixture(tmp_path)
+    probe_marker = tmp_path / "usage-probed"
+    env["FAKE_USAGE_CAPTURE"] = str(probe_marker)
+    Path(env["POLYCLAUDE_USAGE_PROBE"]).write_text(
+        '#!/usr/bin/env bash\nprintf used > "${FAKE_USAGE_CAPTURE}"\n'
+    )
+
+    result = _run(
+        script,
+        "Sunday weekly long-term review. Pick domains, vet stocks, and Telegram.",
+        env,
+    )
+
+    assert result.returncode == 0, result.stderr
+    assert "Retired stock/brokerage review: no work queued." in result.stdout
+    assert not captured.exists()
+    assert not probe_marker.exists()
+    assert not (tmp_path / "notes" / "inject_log.md").exists()
 
 
 def test_unscheduled_check_prompt_is_delivered_even_when_last_reply_is_idle(
