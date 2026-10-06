@@ -46,11 +46,12 @@
       <div class="legend" aria-label="Chart series">
         <label><input type="checkbox" data-series="depth" checked><span class="swatch depth"></span>Depth estimate</label>
         <label><input type="checkbox" data-series="mark" checked><span class="swatch mark"></span>Midpoint value</label>
+        <label><input type="checkbox" data-series="total" checked><span class="swatch total"></span>Account mark · includes gas (USD only)</label>
         <label><input type="checkbox" data-series="spy" checked><span class="swatch spy"></span>S&amp;P 500 (SPY)</label>
         <span class="capital-key"><span class="swatch capital"></span>Contributions</span>
       </div>
       <div class="chart-wrap" id="chart-wrap">
-        <svg id="chart" viewBox="0 0 960 390" role="img" tabindex="0" aria-label="Recorded trading value over time. Use left and right arrow keys to inspect observations."></svg>
+        <svg id="chart" viewBox="0 0 960 390" role="img" tabindex="0" aria-label="Recorded account and trading values over time. Use left and right arrow keys to inspect observations."></svg>
         <div class="tooltip" id="tooltip" hidden></div>
       </div>
       <div class="chart-footer"><span id="range-detail">—</span><span>Hover, tap, or use ← → to inspect</span></div>
@@ -60,22 +61,23 @@
       <summary>What these numbers mean</summary>
       <div>
         <p><b>Depth estimate</b> starts with the whole-account mark, replaces Polymarket midpoint values with recorded bid-depth estimates after trading fees, and subtracts separately funded gas tokens. It includes cash, Aave deposits and other managed assets. It is an indicative valuation, not settled cash or guaranteed liquidation proceeds; quote times differ and routing or withdrawal costs are omitted.</p>
-        <p><b>Midpoint value</b> subtracts funded gas from the whole-account mark. Thin books can make this look better than the available exit price. <b>Return</b> is value divided by contributed trading capital, minus one. The recent history has no external capital flows; this is not a time-weighted return calculation.</p>
+        <p><b>Midpoint value</b> subtracts funded gas from the whole-account mark, or uses a documented complete sum of non-gas trading assets. Thin books can make this look better than the available exit price. <b>Account mark</b> includes gas and remains visible in dollars where historical gas or depth figures are missing. It is never converted to a trading return. <b>Return</b> uses the trading value divided by contributed trading capital, minus one; this is not a time-weighted return calculation.</p>
         <p><b>SPY</b> shows only recorded, validated benchmark observations, dated to the market session they value. It assumes the same contribution dates, ideal fractional shares and reinvested distributions, without commissions, tax or execution costs. Missing observations stay missing; points connected on the chart are not daily prices.</p>
-        <p>Historical snapshots are backfilled from the journal, weekly reports and dated repository dashboards. Missing fields remain blank. A tilde (~) marks an approximate scheduled-check time; date-only observations are labeled separately. VM/API costs are unreconciled and excluded from every pilot value shown here. Source links accompany each observation.</p>
+        <p>Historical snapshots are backfilled from the journal, weekly reports, dated repository dashboards and public aggregate cache. Missing fields remain blank. A tilde (~) on a value marks a reconstruction from rounded accounting figures or a documented cash-and-position sum; on a timestamp it marks an approximate check window. Date-only observations are labeled separately. Cache records preserve reported totals and times, without component breakdowns or valuation warnings. VM/API costs are unreconciled and excluded from every pilot value shown here. Source links accompany each observation.</p>
+        <p><b>Contributions</b> were $70 on April 25 and another $100 on April 29, according to the public capital ledger. The first step uses a date-only anchor; the second uses the archive's approximate 19:55 UTC funding acknowledgment, not an exact transfer time. Missing values stay unplotted; a deposit is not a performance observation.</p>
       </div>
     </details>
 
     <details class="records">
       <summary>Recorded observations <span id="record-count"></span></summary>
       <div class="table-wrap"><table>
-        <thead><tr><th>Timestamp (UTC)</th><th>Depth</th><th>Midpoint</th><th>Return</th><th>Source</th></tr></thead>
+        <thead><tr><th>Timestamp (UTC)</th><th>Account incl. gas</th><th>Trading depth</th><th>Trading midpoint</th><th>Depth return</th><th>Source</th></tr></thead>
         <tbody id="observations"></tbody>
       </table></div>
     </details>
     <footer class="page-footer">
       <span>Small account. Open records. No claim of proven alpha.</span>
-      <nav aria-label="Data and source links"><a href="performance.csv" download>Performance CSV</a><a href="benchmarks.csv" download>Benchmark CSV</a><a href="https://github.com/philippmerz/polyclaude">Source repository ↗</a></nav>
+      <nav aria-label="Data and source links"><a href="performance.csv" download>Performance CSV</a><a href="benchmarks.csv" download>Benchmark CSV</a><a href="contributions.csv" download>Contribution CSV</a><a href="https://github.com/philippmerz/polyclaude/blob/main/research/2026-10-06-performance-history.json">Archive audit ↗</a><a href="https://github.com/philippmerz/polyclaude">Source repository ↗</a></nav>
     </footer>
   </main>
 </body>

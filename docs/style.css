@@ -30,6 +30,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible, svg:focus-visible 
 .legend input { accent-color: var(--teal); margin: 0 2px 0 0; width: 13px; height: 13px; }
 .swatch { display: inline-block; width: 17px; height: 0; border-top: 3px solid var(--teal); }
 .swatch.mark { border-color: var(--mark); }
+.swatch.total { border-color: #697fa8; border-top-style: dashed; }
+.legend label:has(input:disabled) { opacity: .45; cursor: default; }
 .swatch.spy { border-color: var(--spy); border-top-style: dashed; }
 .swatch.capital { border-color: #9eaaa2; border-top-style: dotted; border-top-width: 2px; }
 .chart-wrap { position: relative; margin-top: 6px; }

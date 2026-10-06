@@ -5,6 +5,11 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
+The chart now has 130 recorded observations from the Apr-25 inception through
+Oct-6. Rounded reconstructions are labeled; unsupported historical values stay
+blank. The [source audit](research/2026-10-06-performance-history.json) records
+the remaining gaps and accounting limits.
+
 These views cover **two different wallets**. The Polymarket wallet also holds
 pUSD cash, Polygon Aave deposits and POL gas; the crypto wallet's balance
 alone is only part of the account. The dashboard below combines both wallets

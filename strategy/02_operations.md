@@ -68,8 +68,12 @@ portfolio snapshot, manually append its recorded totals to
 the same check and retain blank fields and timestamp precision; do not make
 extra market requests or infer missing gas from another date. The graph derives
 whole-account trading depth excluding separately funded gas and keeps midpoint
-value alongside it. See `docs/README.md` for the CSV columns and one-time Pages
-setting. Push the CSV with the existing record update; this adds no watcher,
+value alongside it. Archive account totals without a gas split appear only as
+gas-inclusive USD marks; documented trading-only sums and rounded accounting
+reconstructions retain their provenance and approximation labels. External
+trading contributions also update `docs/contributions.csv`; internal transfers
+are not flows. See `docs/README.md` for the CSV columns and Pages setting.
+Push the CSV with the existing record update; this adds no watcher,
 timer or trading authority.
 
 ## Operator-blocking questions

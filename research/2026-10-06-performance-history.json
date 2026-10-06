@@ -1,0 +1,1494 @@
+{
+  "reviewed_utc": "2026-10-06T09:10:56.379008+00:00",
+  "baseline_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+  "scope": "Public financial records from Apr25 inception through Oct6; no private inbox/history or new market data. Approximate observations retain their timestamp precision.",
+  "summary": {
+    "original_rows": 36,
+    "added_rows": 94,
+    "observations": 130,
+    "account_mark_observations": 123,
+    "trading_midpoint_observations": 50,
+    "trading_depth_observations": 43,
+    "rounded_identity_observations": 16,
+    "repaired_original_gas_gaps": 10,
+    "dates_observed": 118,
+    "inception": "2026-04-25",
+    "last_observation": "2026-10-06T06:02:00Z",
+    "unobserved_dates": [
+      "2026-04-30",
+      "2026-05-01",
+      "2026-05-02",
+      "2026-05-03",
+      "2026-05-04",
+      "2026-05-05",
+      "2026-05-06",
+      "2026-05-07",
+      "2026-05-08",
+      "2026-05-09",
+      "2026-05-10",
+      "2026-05-11",
+      "2026-05-12",
+      "2026-05-13",
+      "2026-05-14",
+      "2026-05-15",
+      "2026-05-16",
+      "2026-05-17",
+      "2026-05-18",
+      "2026-05-19",
+      "2026-05-20",
+      "2026-05-21",
+      "2026-05-22",
+      "2026-05-23",
+      "2026-05-24",
+      "2026-05-25",
+      "2026-05-26",
+      "2026-05-27",
+      "2026-05-28",
+      "2026-05-29",
+      "2026-05-30",
+      "2026-05-31",
+      "2026-06-01",
+      "2026-06-02",
+      "2026-06-03",
+      "2026-06-04",
+      "2026-06-05",
+      "2026-06-06",
+      "2026-06-07",
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-13",
+      "2026-06-14",
+      "2026-06-29",
+      "2026-06-30",
+      "2026-07-01",
+      "2026-08-27"
+    ],
+    "account_mark_min": "2026-09-27T02:00:00Z",
+    "account_mark_max": "2026-08-30T06:36:23Z"
+  },
+  "source_proofs": [
+    {
+      "timestamp_utc": "2026-06-10T03:10:00Z",
+      "source": "notes/journal.md:1285",
+      "source_commit": "51d44a8c94112f266c4a1dbd70b34a11476993a3",
+      "source_blob_sha256": "461b243622ff9a03d43a924fa8a502935d3c56ea4e5c1c1cf94a77da0a4a5b7d",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-11T14:14:23Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "fb2f4017a67708405421d53ea8c237b04b7e39cc",
+      "source_blob_sha256": "e489c11adef40b244f105967599709e9e21309732ed9ea5289c175c3654ae0e7",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-12T02:14:22Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "c90bdc7b379341b69894300711ed07419f5aeb00",
+      "source_blob_sha256": "bcbde158b32e26cadc9223ccbe224b06fc6db9bc82e3038610f3a6ad02fb881a",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-15T08:26:43Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "d5563366dbe662bf8556ac6f8ab1f841645fb47a",
+      "source_blob_sha256": "15bae0fc9af11d8495906b0166195e215c9275af29d92145cf96a57497127160",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-16T02:02:17Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "259611113b5df0281fee348e35e945e9064c882e",
+      "source_blob_sha256": "4d98e148d168c2ea9cb8cb1a366cb1be9e5464a8fa265128f7d09e76b348d635",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-17T02:02:04Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "4de875481989925dd446c1733062b9f2a72ef87f",
+      "source_blob_sha256": "b4e3986437d067f60b502c678071adcbea45b5ec62f3d3909bdda934cb4f51f6",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-18T02:09:43Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "d0ced897cfee04368893438f27760a573a42575d",
+      "source_blob_sha256": "284a99ff5ab4a4e9c921a89c16b65e6054db5968ed34dde19d87d3a9fb0ce31c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-19T02:09:33Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "6158a93d531454a2601b18d71942fc0f971f819a",
+      "source_blob_sha256": "a75ca419dbfea70aada323dd148eeb178d3c3ec93554e09e1f7135cb1ddac439",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-20T02:04:33Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "74404845c3c4765f98875a8bd860d1a26a87ddcc",
+      "source_blob_sha256": "fa8f4ba33e4de5624c933ced0de03ce7ca465ab1826acd455fd2710edcfbcad3",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-21T21:10:34Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "90fb3fb83ccb11ab2558d9a2bbf1b917016191eb",
+      "source_blob_sha256": "61e7c30a35f9f30aec33cd5d333c75dff70c8e17bfa8ca452fa768cbb1a81006",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-22T02:11:23Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "524b56a56d61cde6d8a9809a2c5b955928a43ff0",
+      "source_blob_sha256": "56c75a5f80d2b0369993258081ff42a4462095a6caa37f06704a71526c2764ae",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-23T02:05:13Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "4d2e2e8912ebe023aadd1072a936dbbf9ed4e7cd",
+      "source_blob_sha256": "f94a66173ad0a94ab5f3f8f8d92c51416274e06b1589a386481278d23a60915b",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-24T02:01:24Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "ca95c5995fa0ad0bfe029de4ddc7e72c1d5095e9",
+      "source_blob_sha256": "edcd60f3476a0b5709a916c79ede5cd93444b8e33c827612fe6a2e4c13213e27",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-25T02:00:54Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "1e9e5d0d3d117ced87b690b8a64b02bd4a39121f",
+      "source_blob_sha256": "ee591d4076115ba09f4b8969f980ef12ec6d9ff648429806ce9a28d8303f3990",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-26T02:01:33Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "b502055bb2dcb30fb76c2f57e608312b7f450e07",
+      "source_blob_sha256": "fa4ecf59517df3bfdfdea8c92f15c32c153dc94c7652734114b226fec0c03bfe",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-27T02:00:43Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "a3c272c09aad3ee3aecceb8b7f29552e801e8c1b",
+      "source_blob_sha256": "832a08d1102c3d8b19ce60622ecf0e0c528eb4b8cebb304999a8314a26082cf0",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-06-28T02:01:44Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "e9c832fd9797abbce9c4d4d6c08af69ee8ae6bc7",
+      "source_blob_sha256": "1006ece9502775645947eac5fafc963f18d3e3075b7963fe63e53e37b276da69",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-02T17:41:23Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "ab83ac5ceee75129df468a7fe9691d939a69ed9a",
+      "source_blob_sha256": "b75ffcca940e113807391624a2d70c586a61b679eeb2b9b9ff6bc3cadac2253b",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-03T02:02:07Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "72b9635cae6b8b953a8e48d94d59195eba57181e",
+      "source_blob_sha256": "8d53d0fcc568004c4d45b38c1f615831e959dbcf08f54b4cf44d291917c605d5",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-04T02:01:35Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "5f17d28c3311578183b16be54f41da17fd6ec31a",
+      "source_blob_sha256": "2139c07df590002423c051fb41f67025dee5be458d204ae1a99e63037d9d6b32",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-05T02:02:36Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "096e86f75ea3957b79fa0fb1dbdd2d45ee19b989",
+      "source_blob_sha256": "b0ff009826fdca5a9b9b384c662aec9db1dc5a99c407e88df5b22793d7ae9bc1",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-06T02:01:24Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "299b6d18c125913cef95eb0ce193b755db308d7c",
+      "source_blob_sha256": "b368d3e8a992974e73aa302d77e6fc5a1dd52481cb6ce2197fc3ad88cfb166dc",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-07T02:01:22Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "2b58a2d57f882db0a93445ad845c4021d0663d69",
+      "source_blob_sha256": "e2771a862c318b5b4350c819cef58d2824215b6392d2528d762ac5b7b081f379",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-08T02:01:08Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "389aae8eaa0daecbb701591ca305b57ebe14db3d",
+      "source_blob_sha256": "0e1a735308c69e5b98c13106b90f64d78adba3beaad8aa0e822065b334afc1e4",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-09T02:03:44Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "97eb0f3619f57d995802fc3838e6083264d004dd",
+      "source_blob_sha256": "d980fa3e0330345030e22895c02c905df6eb53afc2fd0e09334ab825c4c386fa",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-10T02:02:15Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "9f3b1d52afc07cdbacf437128063af27393470a6",
+      "source_blob_sha256": "f571a2423fe5ecf9dd3fb24797548c3c2b570fdb609face0d28649a85888c379",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-11T02:02:05Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "7acef1a67f8b8a7ad7fb36f60f8a7d69c58ea97f",
+      "source_blob_sha256": "d2f1eddecfd186d9bde113c7e9aa3bcbdc4f290d6a3c7486c691a58016f8d0fa",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-12T02:03:36Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "d5a11389b218f2772b96fe27cce479b5325ac17e",
+      "source_blob_sha256": "d1357175bac01c3965534af59bb2fcc61a4c61f8ca5b968a49e04bd62bc711cd",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-13T02:01:26Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "0e95c8cd32893d33ad4e92271e7069983d614868",
+      "source_blob_sha256": "83adfc647c5c66a2d3a7959fe8b9f063bd49e782d3083b5b9c5e817d5ed73e3b",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-14T02:01:03Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "8c550f80f179e583cf005194249c0a65fdee9e40",
+      "source_blob_sha256": "edc56563afa1f51aa0f409f30c88a9e0da91af953b280a66422c04440a895a60",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-15T02:03:04Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "2f29da2c7cc9dc8331b1f388c226586f59f7eaae",
+      "source_blob_sha256": "121f87b281ff2eda894c62e82884cc3fa38b4908dfcefa6555d56e2fe0f03375",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-16T14:10:00Z",
+      "source": "notes/journal.md:3220",
+      "source_commit": "5433619b7ace7e3f2cf231e562a8e186bb13be5c",
+      "source_blob_sha256": "7075cdb08a092b63c28cb9e091deacbb906c2cbac49339f1dbcb94db0af6365f",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-17T02:10:00Z",
+      "source": "notes/journal.md:3223",
+      "source_commit": "6fb41df362eeb2b90ce5f8c9d145b8c90e5e0e57",
+      "source_blob_sha256": "912317118663d56be768673bb2cb3c447f1014f12d296cff178c1b21ea7f77a8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-18T02:00:54Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "5eb3781b934043e74d28556e760384d09f96b646",
+      "source_blob_sha256": "952af0ac2e10d0e00fd85dd3ad6e9c746d016e7591c5fed7dc427dc9595bdfe5",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-19T02:00:51Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "ab7511fb9c4b90d1adbcb8d839755dd963b9e2c5",
+      "source_blob_sha256": "08010e6d3a4ca144c5187cfbedfea34300971eeab2ee35ef2f79ca816272e811",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-20T14:05:00Z",
+      "source": "notes/journal.md:3330",
+      "source_commit": "baefe2b8c4304b2ecbc2d087a8b15d3db0116207",
+      "source_blob_sha256": "2ab5378f19721d5690f8f3e5464ce38de296fa35d6225a5235f8d4f1075ce87d",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-21T02:10:00Z",
+      "source": "notes/journal.md:3336",
+      "source_commit": "f85f7541071488b6ebdecbe9242f7f752050cab4",
+      "source_blob_sha256": "7e729ac076d8a4f043fe28bf562aea9280558b549981f2d97af6b2576fb4d2c6",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-22T02:01:26Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "512bc0149726af671071be2ec4c3018a81dbbedc",
+      "source_blob_sha256": "d1a7828d2e10fa3dd6b8892cf65c74f4962ec24a3a99b609cd6d906d0055ffca",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-23T14:10:00Z",
+      "source": "notes/journal.md:3373",
+      "source_commit": "379db4ef991c7d3d7090a65c3251a1ce1fed7eba",
+      "source_blob_sha256": "b3293589c0e9b29d513317dea31cfdcb59f35cefc1ca7531d6231cb7fc7db3a2",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-24T02:01:14Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "ddd40fb29bd27b861a88da0969abf63610550ffe",
+      "source_blob_sha256": "10da5ff4f2a77d4aad582d7c1ff8720ec146d52fc246ab1bdda30ae6ce0f597f",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-25T02:01:14Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "62db071d518c38269f59523b43fa8ab3daafc1a4",
+      "source_blob_sha256": "ae2b50e2b996e99542ff707f7184177b8a7a4102c4e9481341cca45e82f76171",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-26T02:00:44Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "14162a33bb4b74caf88e9c5594239c744e6e4ed3",
+      "source_blob_sha256": "5eaa5bfd15ee134618774c96f58b5d80a7ba42cba34888346239f636463f8a09",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-27T02:00:43Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "1d40fe80d52e935919ee03bcbee43e5297ab0af9",
+      "source_blob_sha256": "97da8073fc55b750a4c7d27e66a9a247e96b9e0ddc99d84a9c25b4e107002c4e",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-28T02:01:32Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "63d3e91399149f590114413d07b1af0316148294",
+      "source_blob_sha256": "8bafff27cc2855cfe2d04534fd4900673f96430cf115a5628c7dfb5e13954d6d",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-29T02:01:03Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "6eb50e017f6d0a6fc903d65b3fac2677b757f3e3",
+      "source_blob_sha256": "7f88f77775a6f23a62df00c0b5746451d3104290cc19134981c9426b924ec2c9",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-30T02:00:34Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "23dd7f28f7879801676f306acbdec7ca97bcb7e4",
+      "source_blob_sha256": "45f8451f6963cc1da915eacf0aac83b1bfa4c53a0f909f12bbcf7e0288c6a44e",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-07-31T02:00:55Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "058a1d42c91f5b3ed53a233ece07b5fdffba7702",
+      "source_blob_sha256": "cfd38798c11e7bd82dea4bb8ae4983c85149aa50fdcef6a2ab9682fbfce33c5d",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-01T02:00:43Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "4e8e2f87588b38c91760a5003935b18f4adac334",
+      "source_blob_sha256": "4d1aa61f3826e94283b2bddb2e80172c43badbcac943d528bb5da68a270dd7eb",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-02T15:05:13Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "8f94b161812bb06918fd5fa640fa2a92d928d64e",
+      "source_blob_sha256": "761879201e2bdd750499cfaae3be18c4fb3a79ce040611f1671fa2213a1c312b",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-03T02:00:54Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "5fae4939ae72ddbacdd7aefd069777607c6660eb",
+      "source_blob_sha256": "c6fbe64904c27a124f19aeaa99ca70e5848bab4e8bc3144fabcb8b8a65142ba0",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-04T02:01:24Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "16aa7d0109528f49f5d8c57198d16627d6f6c94a",
+      "source_blob_sha256": "acec4e885ad3acc886613e2ed2f7307623eb3d201bfada01f794e01496194611",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-05T02:01:43Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "10bcb9a3212e12fe61877ee15aa66e5723f45c69",
+      "source_blob_sha256": "8973d0159d909a44f518a391f15429a5aa67165264918e8c65df33dd9e5903f8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-06T02:01:33Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "cb8428b89ab31736c222de1666d081d416c5bc50",
+      "source_blob_sha256": "334e2a43cb4321670c12ecf49a4c6c77af67c15370dd0c0dff43bd9068b5a8a8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-07T02:00:54Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "044c95c321bdfb3f8f95a3d76ffb46cb7b0f1b46",
+      "source_blob_sha256": "e7947786ee8ea0b9e9b9f5145cc663ef58e8bcf96bad171c6a62d0ea97e321f8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-08T02:01:25Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "da99f253a18f5b025bc20e8332279955645e9aaa",
+      "source_blob_sha256": "cc67d6e2eaa0d0076b07f2ba21c70c926b8e70a7e8aef011f70fa4a8d0a032d7",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-09T02:01:43Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "8b8d2392b4adf1abd2e88ec0427d6162e68e9401",
+      "source_blob_sha256": "f943177d6e21764dce6985ef2d9d90acfd8880dbed53f8cc3443ad8ba3fee4c9",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-10T03:25:24Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "fb41efa9fa46cce46bea3d36c4b1d1c91bf926c7",
+      "source_blob_sha256": "4abbc7889f00b5255883f01ca83c97dd89229947ac0427c404f0f8f392aa871f",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-11T02:01:16Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "bd951ffac71d34a9c70fe164dc14c10704da8662",
+      "source_blob_sha256": "318ec114c85862df993fec27ef6af6568c95c1f26e1c571013ba745d66bd629a",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-12T02:00:33Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "c9ba413c8b5b2e961a385ed8deaae3a73487d114",
+      "source_blob_sha256": "af214c49397d6b8359364611e33a260e0694bd2e14737ac1786fd06129223967",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-13T02:00:54Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "c93053551d37c5307d2ccfb7c1c7dcddc3a9e8fb",
+      "source_blob_sha256": "38a97e4b26e85f40c147a2d922d01ffde961d7158072224bb3a92bcb1d5bf760",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-14T02:01:24Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "77cfedbeccd08d8542ec05e19ccf03ee6e40fe29",
+      "source_blob_sha256": "1b1cad0f40d3276686cebc5ce09fd7e792ea6629f4eb00e4861f49ae45ee4215",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-15T02:01:14Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "8309f09caaa72ef82a92b5bcd3a1b5b5e66c69fd",
+      "source_blob_sha256": "a4313fce02a7d94ffe13817fecb1839ac210f8d01d3ef8aace127f00a4fa77fd",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-16T02:00:54Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "30c5e6d7393dc077ee1d691a06bf19a9c3e98140",
+      "source_blob_sha256": "cecb34537dd768d55d97402b81b0958f8a98e68d6ef611dd74a9ac43a5d55e41",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-17T02:00:53Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "d8f12b4c957f883ed9684c1ab2af70f36d42cac7",
+      "source_blob_sha256": "bda0fd3d995a4914ecb14025b3816fa078dc5f70dcc3256a92ffa85a49401197",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-18T02:01:14Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "fc4f8f73d3356a41c63f8dc70763f5196db3ff57",
+      "source_blob_sha256": "9bc95dd76c465f96978871be48e2ab8aedbc390c89b4b09c6da8a38684476339",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-19T02:01:03Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "d8f049a4c049142fdb3efe40ff026888986c06dd",
+      "source_blob_sha256": "32621f7789a5095e80284778140460b6777680b2f6b1cd6ff8931b8d7222ebd3",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-20T02:22:13Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "fa61111db7fc8b99a407ad058e4bfadca9249677",
+      "source_blob_sha256": "4ebdc4910323560ef3148af6d3241e30cb3a61b61fbd62f2ec2baf85254f698c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-21T02:00:54Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "2b6c469bc43ca26e5cc888609ee5f4f1973aef35",
+      "source_blob_sha256": "ba015a2f036f983dfca59b84bbc7dd947f988a0d537c847dd869d4d5161cef32",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-22T02:01:33Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "4fba4aaaa1c76ee57a2f8f61f770edebc2825a4d",
+      "source_blob_sha256": "95bf308e363c8c3e3efeee333a105b6ca685a403c606aea93c95c0cb786ed930",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-23T02:00:43Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "f531aae0a4ea3e2c497bd5afd1cf42c7f12e3271",
+      "source_blob_sha256": "7581f8af9fc919ce9ad4e7bdabbe9942075bd643c1b89eac6cae4b3ce0a34ad1",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-24T02:00:54Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "33272ff4a7225e495c8a838105e3a75086954a95",
+      "source_blob_sha256": "15280bc80666ab08d97acb9298c5170c0492832b6bbeae230cd8ecab077d88b4",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-25T04:27:33Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "cfbdd8fea8e333d755a9590fe00395df91e3ed39",
+      "source_blob_sha256": "94acf69ae5b0ad2113d104d477bed3a2d7bbf8168e6e0ab9a78b36301bd5ca76",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-26T02:00:45Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "46182a8335a6494848ff4a3bc2010f1e0d8f3ed9",
+      "source_blob_sha256": "7248b6ef92a21e95592425779d81112bc625cd74a5e66737c655ccab4c669d2c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-28T21:29:35Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "b09f7fc8ecce785491c3052fccf72747393caf0c",
+      "source_blob_sha256": "0a7bee89b17dee7519a543cfcf86642d1444fbdc5bb0e890c3a632f601e43903",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-29T22:22:22Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "aa6e1ba29b9dafea16175f6544d2f115c461a149",
+      "source_blob_sha256": "107a067dd76fe174bb8ef4c319226bc188b0a662447bac392184ba070523f012",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-30T02:02:44Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "0186266582240a46bb2a73898dd2e3ba8617be24",
+      "source_blob_sha256": "01b414e51c54ec6dd3efa59a62b951d35b064488f3a174706423b8e7ec7df484",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-30T06:36:23Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "5b737200eb96be8739a0710020f37c3f2e1f8e43",
+      "source_blob_sha256": "014e29b90bcef4089baaf09babbd7dcf3a409f6bfa9e96357e5f4cd0c4a7c144",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-31T02:11:04Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "f70adc83cbd0595b2cb07b33a915567ceafc3512",
+      "source_blob_sha256": "ee952d21369078152f793c0da30774c86285c64aec277ed2030f41960379d382",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-08-31T22:05:03Z",
+      "source": "notes/.bankroll_cache.json:1",
+      "source_commit": "cdaaa7aede22aa30b03b512a918cfe89ba6ba298",
+      "source_blob_sha256": "ae6a1c9649a79263504a3502a12292b21e3af848cb4c1f4c5d28310ee400cc2a",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-01T02:00:00Z",
+      "source": "notes/journal.md:11454",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-02T02:00:00Z",
+      "source": "notes/journal.md:11699",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-03T02:00:00Z",
+      "source": "notes/journal.md:11918",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-04T02:19:23Z",
+      "source": "notes/journal.md:12198",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-05T02:00:00Z",
+      "source": "notes/journal.md:12408",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-06T02:00:00Z",
+      "source": "notes/journal.md:12618",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-07T02:00:00Z",
+      "source": "notes/journal.md:12857",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-10T10:52:14Z",
+      "source": "research/2026-09-10-model-neutral-handover.md:22",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "1ab99b6ed1b61aea0ece5ea9dba6ee46e9e8b2761fcf7867b9aeea5e5320876f",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-08T02:01:42Z",
+      "source": "notes/journal.md:13710",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-09T02:01:44Z",
+      "source": "notes/journal.md:14796",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-11T00:00:00Z",
+      "source": "notes/pnl_weekly.md:987",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "5ca5e22db007a3079875e415e1a3d78764e95b14682d2aa3b1edbec90a5359b2",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-12T02:03:00Z",
+      "source": "notes/journal.md:15415",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-13T02:07:00Z",
+      "source": "notes/journal.md:15652",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-14T14:05:00Z",
+      "source": "README.md:23",
+      "source_commit": "ec8cfedbef609aa5423336b3874c7b7932890852",
+      "source_blob_sha256": "d1a8f23dfdab53c62d27f36d6c9351221ebf85d48e65f6af33c24a052b0a6c49",
+      "additional_field_sources": [
+        {
+          "field": "settled_pnl_usd",
+          "source": "notes/journal.md:16104",
+          "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921"
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-09-15T02:00:00Z",
+      "source": "notes/journal.md:16303",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-16T02:00:00Z",
+      "source": "notes/journal.md:16714",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-17T02:00:00Z",
+      "source": "notes/journal.md:17047",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-18T02:00:00Z",
+      "source": "notes/journal.md:17747",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-19T02:00:00Z",
+      "source": "notes/journal.md:18199",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-20T02:00:00Z",
+      "source": "notes/journal.md:18419",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-21T02:00:00Z",
+      "source": "notes/journal.md:18729",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-22T02:00:00Z",
+      "source": "notes/journal.md:19029",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-23T02:00:00Z",
+      "source": "notes/journal.md:19279",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-24T02:00:00Z",
+      "source": "notes/journal.md:19524",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-25T02:00:00Z",
+      "source": "notes/journal.md:19766",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-26T02:00:00Z",
+      "source": "notes/journal.md:20095",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-27T02:00:00Z",
+      "source": "notes/journal.md:20328",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-28T02:00:00Z",
+      "source": "notes/journal.md:20635",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-29T02:00:00Z",
+      "source": "notes/journal.md:20865",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-09-30T18:01:00Z",
+      "source": "notes/journal.md:21379",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-01T02:39:00Z",
+      "source": "notes/journal.md:21839",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-02T02:02:00Z",
+      "source": "notes/journal.md:22228",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-03T02:03:00Z",
+      "source": "notes/journal.md:22597",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-04T02:03:00Z",
+      "source": "notes/journal.md:23060",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-04T18:07:00Z",
+      "source": "notes/journal.md:23522",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-04T22:00:19Z",
+      "source": "notes/journal.md:23663",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-05T02:03:00Z",
+      "source": "notes/journal.md:23759",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-05T06:04:00Z",
+      "source": "notes/journal.md:23917",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-05T10:02:00Z",
+      "source": "notes/journal.md:24001",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-05T14:02:00Z",
+      "source": "notes/journal.md:24094",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-05T18:03:00Z",
+      "source": "notes/journal.md:24244",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-05T22:02:00Z",
+      "source": "notes/journal.md:24336",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-06T02:03:00Z",
+      "source": "notes/journal.md:24468",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-10-06T06:02:00Z",
+      "source": "notes/journal.md:24615",
+      "source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "source_blob_sha256": "8c4090aa0e64ee1248a3aa3b6e9fb9a307ddd7741d19ba717a85912176aa7aa8",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-04-25T16:46:00Z",
+      "source": "notes/journal_archive_2026-04.md:138",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-04-26T14:00:00Z",
+      "source": "notes/journal_archive_2026-04.md:270",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-04-27T14:00:00Z",
+      "source": "notes/journal_archive_2026-04.md:246",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-04-28T02:00:00Z",
+      "source": "notes/journal_archive_2026-04.md:313",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-04-28T14:00:00Z",
+      "source": "notes/journal_archive_2026-04.md:335",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-04-29T02:00:00Z",
+      "source": "notes/journal_archive_2026-04.md:360",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "additional_field_sources": []
+    },
+    {
+      "timestamp_utc": "2026-04-29T14:00:00Z",
+      "source": "notes/journal_archive_2026-04.md:379",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "additional_field_sources": []
+    }
+  ],
+  "gas_reconstructions": [
+    {
+      "timestamp_utc": "2026-09-01T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.01",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 210.4,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 33.27,
+        "pm_midpoint_mark": 173.16,
+        "pm_cost_basis": 172.04,
+        "derived_pm_unrealized_mark": 1.12
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:11454",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:47",
+      "bankroll_formula_source_commit": "ddcc5bd1473a6c9676e2101fd94772e01998e8ce",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-03T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.01",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 191.02,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 14.43,
+        "pm_midpoint_mark": 157.78,
+        "pm_cost_basis": 157.2,
+        "derived_pm_unrealized_mark": 0.58
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:11918",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "1e01b00d35071011e529e64f575625c4827c246e",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-04T02:19:23Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.17",
+      "rounding_bound_usd": "0.015",
+      "inputs_usd": {
+        "total_mark_including_gas": 186.94,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 14.43,
+        "reported_pm_unrealized_mark": -3.66,
+        "pm_midpoint_mark": 153.54,
+        "pm_cost_basis": 157.2
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:12198",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "7499f49f26300b2500c388ccf7d2d5b6e80f2e3e",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-05T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.14",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 187.78,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 14.43,
+        "pm_midpoint_mark": 154.41,
+        "pm_cost_basis": 157.2,
+        "derived_pm_unrealized_mark": -2.79
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:12408",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "a8a146495bbdb0d45527963c9b563305116831a1",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-06T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.41",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 190.09,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 14.43,
+        "pm_midpoint_mark": 156.45,
+        "pm_cost_basis": 157.2,
+        "derived_pm_unrealized_mark": -0.75
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:12618",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "77070edf7a8e8f4f3bdf3a5d963517e4b7a21d47",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-07T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.31",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 189.37,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 14.44,
+        "pm_midpoint_mark": 155.82,
+        "pm_cost_basis": 157.2,
+        "derived_pm_unrealized_mark": -1.38
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:12857",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "345e4aa1a6a7211580e75b6b482af28b7b893f53",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-16T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "5.89",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 193.49,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 3.5,
+        "pm_midpoint_mark": 144.69,
+        "pm_cost_basis": 130.59,
+        "derived_pm_unrealized_mark": 14.1
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:16714",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "1bd8dee1920ead421be32c8e87b50082696bcc15",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-17T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.14",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 191.12,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 3.5,
+        "pm_midpoint_mark": 142.07,
+        "pm_cost_basis": 130.59,
+        "derived_pm_unrealized_mark": 11.48
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:17047",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "9d531521dbde5317a29c070e378db39e382088b3",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-21T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.73",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 164.56,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 6.31,
+        "pm_midpoint_mark": 135.43,
+        "pm_cost_basis": 153.91,
+        "derived_pm_unrealized_mark": -18.48
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:18729",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "c913344df75165e360ff256232853c7930d7ff8a",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-22T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.97",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 169.07,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": -1.07,
+        "pm_midpoint_mark": 139.48,
+        "pm_cost_basis": 146.31,
+        "derived_pm_unrealized_mark": -6.83
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:19029",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "e902811aeeac5ba4c3a427e672dc1a72e3671dcc",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-23T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.89",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 161.05,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": -1.07,
+        "pm_midpoint_mark": 131.54,
+        "pm_cost_basis": 146.31,
+        "derived_pm_unrealized_mark": -14.77
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:19279",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "aa61ba0ebe21f7fefbfa57d64438772a179e60a3",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-24T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "6.43",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 162.59,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": -2.11,
+        "pm_midpoint_mark": 124.24,
+        "pm_cost_basis": 135.97,
+        "derived_pm_unrealized_mark": -11.73
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:19524",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "e4c076ebb00cbb44b4ff270b753d354e9c62bd79",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-26T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "7.32",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 167.68,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": -2.57,
+        "pm_midpoint_mark": 125.23,
+        "pm_cost_basis": 132.3,
+        "derived_pm_unrealized_mark": -7.07
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:20095",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "25ea7ac0df829951a7a1799b86cffabf17d48ed1",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-27T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "7.45",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 159.54,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": -2.57,
+        "pm_midpoint_mark": 116.96,
+        "pm_cost_basis": 132.3,
+        "derived_pm_unrealized_mark": -15.34
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:20328",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "5dd0c993ec66a144dd619e4f092fa232ec500577",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-28T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "7.30",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 166.71,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": -2.57,
+        "pm_midpoint_mark": 124.28,
+        "pm_cost_basis": 132.3,
+        "derived_pm_unrealized_mark": -8.02
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:20635",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "302845c07606d8e5f4199c7479a2beaa78df8da4",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    },
+    {
+      "timestamp_utc": "2026-09-29T02:00:00Z",
+      "original_gas_usd": "",
+      "gas_rounded_usd": "7.06",
+      "rounding_bound_usd": "0.02",
+      "inputs_usd": {
+        "total_mark_including_gas": 164.26,
+        "trading_capital_reference": 170.0,
+        "reported_accounting_residual": 1.2,
+        "pm_midpoint_mark": 75.91,
+        "pm_cost_basis": 89.91,
+        "derived_pm_unrealized_mark": -14.0
+      },
+      "formula": "gas = total - trading capital - reported residual - marked unrealized; marked unrealized = PM midpoint - PM cost",
+      "snapshot_source": "notes/journal.md:20865",
+      "snapshot_source_commit": "ae548514f47a7965c771e8fa056b2b571b3bb921",
+      "bankroll_formula_source": "scripts/bankroll.py:57",
+      "bankroll_formula_source_commit": "c5ad92fd2b34f644a8006d0d97a7f29709e0408c",
+      "limitation": "Rounded accounting reconstruction, not an independent gas measurement; uncertainty bound covers rounding only."
+    }
+  ],
+  "early_trading_midpoints": [
+    {
+      "timestamp_utc": "2026-04-25T16:46:00Z",
+      "timestamp_kind": "minute",
+      "trading_capital_usd": "70",
+      "trading_mark_candidate_usd": "69.99",
+      "equation": "PM positions MTM $64.94 + USDC.e cash $5.05 = $69.99",
+      "source": "notes/journal_archive_2026-04.md:138",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "scope": "Only PM sleeve funded; crypto sleeve did not yet exist/fund. Excludes 53.81 POL supplied solely for gas.",
+      "note": "Explicit same-observation sum; non-gas trading-only total candidate, not all-in total_mark_usd. Timestamp is approximate to minute."
+    },
+    {
+      "timestamp_utc": "2026-04-26T14:00:00Z",
+      "timestamp_kind": "check_window",
+      "trading_capital_usd": "70",
+      "trading_mark_candidate_usd": "69.74",
+      "equation": "PM positions MTM $64.69 + USDC.e cash $5.05 = $69.74",
+      "source": "notes/journal_archive_2026-04.md:270",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "scope": "Only PM sleeve funded; crypto sleeve still empty. Excludes 53.81 POL supplied solely for gas.",
+      "note": "Explicit same-observation sum; non-gas trading-only total candidate. Timestamp is scheduled 14:00 window."
+    },
+    {
+      "timestamp_utc": "2026-04-27T14:00:00Z",
+      "timestamp_kind": "check_window",
+      "trading_capital_usd": "70",
+      "trading_mark_candidate_usd": "70.32",
+      "equation": "PM positions MTM $65.27 + USDC.e cash $5.05 = $70.32",
+      "source": "notes/journal_archive_2026-04.md:246",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "scope": "Only PM sleeve funded; crypto sleeve remained unfunded. Excludes 53.81 POL supplied solely for gas.",
+      "note": "Explicit same-observation sum; non-gas trading-only total candidate. Timestamp is scheduled 14:00 window."
+    },
+    {
+      "timestamp_utc": "2026-04-28T02:00:00Z",
+      "timestamp_kind": "check_window",
+      "trading_capital_usd": "70",
+      "trading_mark_candidate_usd": "70.6",
+      "equation": "PM positions MTM $65.55 + USDC.e cash $5.05 = $70.60",
+      "source": "notes/journal_archive_2026-04.md:313",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "scope": "Only PM sleeve funded; crypto sleeve explicitly empty. Excludes 53.81 MATIC/POL supplied solely for gas.",
+      "note": "Explicit same-observation sum; non-gas trading-only total candidate. Timestamp is scheduled 02:00 window."
+    },
+    {
+      "timestamp_utc": "2026-04-28T14:00:00Z",
+      "timestamp_kind": "check_window",
+      "trading_capital_usd": "70",
+      "trading_mark_candidate_usd": "70.78",
+      "equation": "PM positions MTM $65.73 + USDC.e cash $5.05 = $70.78",
+      "source": "notes/journal_archive_2026-04.md:335",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "scope": "Only PM sleeve funded; crypto sleeve explicitly empty. Excludes 53.81 MATIC/POL supplied solely for gas.",
+      "note": "Explicit same-observation sum; non-gas trading-only total candidate. Timestamp is scheduled 14:00 window."
+    },
+    {
+      "timestamp_utc": "2026-04-29T02:00:00Z",
+      "timestamp_kind": "check_window",
+      "trading_capital_usd": "70",
+      "trading_mark_candidate_usd": "70.5",
+      "equation": "PM positions MTM $65.45 + USDC.e cash $5.05 = $70.50",
+      "source": "notes/journal_archive_2026-04.md:360",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "scope": "Crypto sleeve explicitly still empty before the $100 deposit at ~19:55 UTC. Excludes 53.81 MATIC/POL gas reserve.",
+      "note": "Explicit same-observation sum; non-gas trading-only total candidate before the second external deposit."
+    },
+    {
+      "timestamp_utc": "2026-04-29T14:00:00Z",
+      "timestamp_kind": "check_window",
+      "trading_capital_usd": "70",
+      "trading_mark_candidate_usd": "70.48",
+      "equation": "PM positions MTM $65.43 + USDC.e cash $5.05 = $70.48",
+      "source": "notes/journal_archive_2026-04.md:379",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "scope": "Crypto sleeve explicitly still empty before the $100 deposit at ~19:55 UTC. Excludes 53.81 MATIC/POL gas reserve.",
+      "note": "Explicit same-observation sum; non-gas trading-only total candidate before the second external deposit."
+    }
+  ],
+  "cache_completeness_audit": {
+    "selected_cache_rows": 73,
+    "limitation": "Each selected cache blob stores only total and at; it does not preserve warnings, chain/token components, provider/RPC state, or venue status. Rows are reported aggregate observations only, not certified complete or liquidatable, except where a separate same-capture journal audit is cited in that row note.",
+    "known_incomplete_capture_excluded": "2026-08-13 journal line 7013 reports a CoinGecko timeout and native assets valued at $0; selected daily row is the earlier 02:00 capture, not this 15:54 failed capture.",
+    "known_warning_capture_replaced": "2026-06-11 02:26 cache point replaced by 14:14:23 same-day later cache point because journal lines 1464-65 describe a transient Base RPC omission warning around the earlier capture; later point remains an uncertified cache aggregate.",
+    "audited_capture_replacements": [
+      "2026-08-20T02:22:13Z $192.70 contemporaneous asset reconciliation and Ostium zero-open-trade audit",
+      "2026-08-28T21:29:35Z $188.20 journal reconciliation",
+      "2026-08-29T22:22:22Z $186.24 final authoritative journal checkpoint"
+    ],
+    "scan_scope": "Only public README and notes/journal.md targeted finance/warning/Ostium references; no private histories, provider queries, or broad log scans."
+  },
+  "exclusions": [
+    {
+      "candidate": "2026-04-25 kickoff",
+      "candidate_value_usd": 69.66,
+      "source": "notes/pnl_weekly.md:21",
+      "source_commit": "29a8d1b9f1972d2401d00cbe758f2c2319167dbe",
+      "quote": "bankroll trajectory $70→$69.66; PM MTM $64.61 plus $5.05 USDC reserve; 53.81 POL held for gas.",
+      "reason": "All-in total is not supported because 53.81 POL has no contemporaneous USD price. Separately, a valid non-gas trading-only subtotal is preserved in trading_only_candidates_pre_crypto_funding.",
+      "source_path": "notes/pnl_weekly.md:21",
+      "source_line": 21,
+      "source_blob_sha256": "d258c891624ad063fba2a168a94710570994fd255afffb82c5889bfe9b761ea0",
+      "historical_line_excerpt": "| Bankroll trajectory | $70.00 → $69.66 (-0.49%) |"
+    },
+    {
+      "candidate": "2026-04-25 day-one combined sleeve mark",
+      "candidate_value_usd": "",
+      "source": "notes/journal_archive_2026-04.md:130",
+      "source_commit": "acaea5db8f4582632d2a68c441c3e724b6c0d7eb",
+      "quote": "PM positions $64.95 cost / $64.61 mark, $5.05 USDC cash, 53.81 POL gas; separate crypto sleeve also held Arbitrum/Base ETH gas, Aave and Ostium positions.",
+      "reason": "No contemporaneous USD valuation for POL or all crypto-wallet native gas; cited components are incomplete / mixed point-in-time values.",
+      "source_path": "notes/journal_archive_2026-04.md:130",
+      "source_line": 130,
+      "source_blob_sha256": "23b268d20c67faba2feed57ad3a55ceb50ebc7769431692464c3e7424d8e613c",
+      "historical_line_excerpt": "- May 16: Eurovision Grand Final (S2)."
+    },
+    {
+      "candidate": "2026-05-02 week-one project MTM",
+      "candidate_value_usd": 167.28,
+      "source": "notes/pnl_weekly.md:177",
+      "source_commit": "20ee5466321ffa810087ca7ccf8a9cc2ffdb489a",
+      "quote": "Total project MTM $167.28 on $164.13 deployed; includes PM MTM $66.49, Aave $84.50, Ostium collateral/MTM and crypto idle ~$1.50.",
+      "reason": "Rounded combined figure, mixed component precision; the crypto idle estimate includes some gas but no same-time PM POL valuation is reported. Not proven complete all-in.",
+      "source_path": "notes/pnl_weekly.md:177",
+      "source_line": 177,
+      "source_blob_sha256": "9d0ae5af4d902cc0e2490eeeda838bb815ad6afa786ac00143e40ea541bffd7b",
+      "historical_line_excerpt": "| **Total project MTM** | **$167.28** on $164.13 deployed = +$3.15 (+1.92%) |"
+    },
+    {
+      "candidate": "2026-05-18 PM + other assets retrospective",
+      "candidate_value_usd": 148,
+      "source": "notes/pnl_weekly.md:269",
+      "source_commit": "1ca0038ba62d890862a7df079752b5e43e0b604e",
+      "quote": "Approx $148 MTM = PM $84.46 + Aave ~$10 + Ostium ~$5 collateral + crypto/PM cash ~$48.",
+      "reason": "Explicitly approximate aggregate with no contemporaneous native-gas valuation or exact snapshot; excluded.",
+      "source_path": "notes/pnl_weekly.md:269",
+      "source_line": 269,
+      "source_blob_sha256": "1c59353f3970801aaf20943ebbf4d1ad24670e182a310bd47f5b489d7e955813",
+      "historical_line_excerpt": "- **2026-05-18 02:00 UTC actual:** ~$148 MTM (PM cost $78.72 / MTM $84.46, Aave ~$10, Ostium ~$5 collat, crypto+poly cash ~$48)"
+    },
+    {
+      "candidate": "2026-05-29 corrected manual total",
+      "candidate_value_usd": 162.24,
+      "source": "notes/journal.md:503",
+      "source_commit": "789b6ac64c8dacfd5df1c65ae9f49680178d120d",
+      "quote": "TRUE bankroll = $162.24 (PM positions $83.84 + Aave $71.10 + idle $2.55 + POL $4.74).",
+      "reason": "Aave total reflects Polygon plus crypto-sleeve Base/Arbitrum homes, but $2.55 idle has no wallet/token breakdown. Records show separately held crypto-wallet native ETH dust; full two-wallet native gas/dust inclusion cannot be verified, and the component sum is rounded to $162.23. Excluded as candidate pending gas/dust scope.",
+      "source_path": "notes/journal.md:503",
+      "source_line": 503,
+      "source_blob_sha256": "ca1e0eb7a61fd05900158d9297856246fd30bb403722aed0e0d335dfea0cd64b",
+      "historical_line_excerpt": "- Iran-peace NO resolves May 31"
+    },
+    {
+      "candidate": "2026-04-30 README snapshot (early published component view)",
+      "candidate_value_usd": "",
+      "source": "README.md:13",
+      "source_commit": "012ba794c559d959e06102d92fed9bf2790b1d2f",
+      "quote": "PM sleeve Bankroll $70; PM cash $5.05 USDC.e + 53.81 POL; crypto sleeve Bankroll $100; 3 Ostium positions and Aave balances listed separately.",
+      "reason": "Public README records separate sleeve allocations and components, not a same-capture combined trading mark or all-in total; native gas/dust and crypto idle assets are not reconciled into one USD value.",
+      "source_path": "README.md:13",
+      "source_line": 13,
+      "source_blob_sha256": "63983082cfdb41531c7064e17c7411fc5916c81ee950d8079608ea9b882a06d5",
+      "historical_line_excerpt": "Bankroll $70, two-horizon split per [`strategy/01_horizon_split.md`](strategy/01_horizon_split.md). 9 positions filled 2026-04-25, all carry / longshot-fade theses.",
+      "additional_source_lines": [
+        "README.md:28",
+        "README.md:32",
+        "README.md:40"
+      ],
+      "additional_source_lines_verified": true
+    }
+  ],
+  "limitations": [
+    "The cache records total and timestamp, not valuation warnings or component breakdowns; reported account marks are not independently reconciled historical NAV. Known failed observations were excluded or replaced at their own timestamps.",
+    "Trading-only Apr25–29 points explicitly sum positions and cash while the crypto sleeve was unfunded; all-in total and gas remain unknown.",
+    "Rounded-identity gas is an estimate from contemporaneous published inputs and the historical accounting function; only rounding uncertainty is quantified.",
+    "No gas values, daily prices or whole-account valuations were interpolated or borrowed from other observations. VM/API costs and historic gas acquisition values remain unreconciled.",
+    "PM depth is indicative after fees, sequential and not guaranteed proceeds; old gross/incorrect-fee walks remain excluded."
+  ]
+}

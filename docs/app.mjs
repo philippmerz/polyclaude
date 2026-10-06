@@ -1,7 +1,7 @@
 const DAY = 86400000;
 const NS = 'http://www.w3.org/2000/svg';
 const SOURCE_ROOT = 'https://github.com/philippmerz/polyclaude/blob/main/';
-const COLORS = { depth: '#087f72', mark: '#98aaa6', spy: '#bc8841' };
+const COLORS = { depth: '#087f72', mark: '#98aaa6', total: '#697fa8', spy: '#bc8841' };
 const REQUIRED = ['timestamp_utc', 'trading_capital_usd', 'total_mark_usd', 'gas_usd', 'pm_mark_usd', 'pm_depth_usd', 'settled_pnl_usd', 'source', 'note'];
 
 export function parseCSV(text) {
@@ -65,21 +65,30 @@ function ordered(rows) {
 export function parsePerformance(text) {
   return ordered(records(text, REQUIRED).map(raw => {
     const capital = number(raw.trading_capital_usd, 'trading capital');
-    const total = number(raw.total_mark_usd, 'whole-account mark');
+    const total = number(raw.total_mark_usd, 'whole-account mark', true);
+    const reportedMark = number(raw.reported_trading_mark_usd || '', 'reported trading midpoint', true);
     const gas = number(raw.gas_usd, 'funded gas', true);
     const pm = number(raw.pm_mark_usd, 'PM midpoint', true);
     const bids = number(raw.pm_depth_usd, 'PM depth', true);
     const settled = number(raw.settled_pnl_usd, 'settled P&L', true);
+    const gasKind = raw.gas_kind || (gas === null ? 'missing' : 'recorded');
+    const roundingBound = number(raw.gas_rounding_bound_usd || '', 'gas rounding bound', true);
+    if (!['missing', 'recorded', 'rounded_identity'].includes(gasKind)) throw new Error('Invalid gas provenance.');
+    if ((gasKind === 'missing') !== (gas === null)) throw new Error('Gas provenance disagrees with its value.');
+    if (gasKind === 'rounded_identity' && (roundingBound === null || roundingBound <= 0)) throw new Error('Reconstructed gas needs a rounding bound.');
     const timestampKind = raw.timestamp_kind || 'second';
     if (!['second', 'minute', 'check_window', 'day'].includes(timestampKind)) throw new Error('Invalid timestamp precision.');
-    if (capital <= 0 || total < 0 || [gas, pm, bids].some(x => x !== null && x < 0)) throw new Error('Invalid negative value or nonpositive capital.');
-    if (gas !== null && gas > total) throw new Error('Funded gas exceeds the account value.');
-    if (pm !== null && pm > total) throw new Error('PM midpoint exceeds the account value.');
-    const mark = gas === null ? null : total - gas;
+    if (capital <= 0 || [total, reportedMark, gas, pm, bids].some(x => x !== null && x < 0)) throw new Error('Invalid negative value or nonpositive capital.');
+    if (total === null && reportedMark === null) throw new Error('Every observation needs an account total or a complete reported trading midpoint.');
+    if (gas !== null && (total === null || gas > total)) throw new Error('Funded gas exceeds or lacks the account value.');
+    if (pm !== null && total !== null && pm > total) throw new Error('PM midpoint exceeds the account value.');
+    if (reportedMark !== null && total !== null && reportedMark > total) throw new Error('Trading midpoint exceeds the account value.');
+    if (reportedMark !== null && gas !== null && Math.abs(reportedMark - (total - gas)) > (roundingBound || .02)) throw new Error('Reported trading midpoint disagrees with the account breakdown.');
+    const mark = reportedMark ?? (total === null || gas === null ? null : total - gas);
     const depth = mark === null || pm === null || bids === null ? null : mark - pm + bids;
     if (depth !== null && depth < 0) throw new Error('Invalid negative trading-depth value.');
     if (!raw.source) throw new Error('Every observation needs a source.');
-    return { ...raw, timestampKind, t: timestamp(raw.timestamp_utc), capital, total, gas, pm, bids, settled, mark, depth };
+    return { ...raw, timestampKind, t: timestamp(raw.timestamp_utc), capital, total, gas, pm, bids, settled, mark, depth, reportedMark, gasKind, roundingBound, reconstructed: gasKind === 'rounded_identity' || reportedMark !== null };
   }));
 }
 
@@ -92,6 +101,22 @@ export function parseBenchmarks(text) {
   }));
 }
 
+export function parseContributions(text) {
+  let cumulative = 0;
+  return ordered(records(text, ['timestamp_utc', 'timestamp_kind', 'trading_capital_usd', 'contribution_usd', 'source', 'note']).map(raw => {
+    const capital = number(raw.trading_capital_usd, 'contribution capital');
+    const contribution = number(raw.contribution_usd, 'external contribution');
+    cumulative += contribution;
+    if (capital <= 0 || contribution === 0 || Math.abs(capital - cumulative) > 1e-8 || !raw.source) throw new Error('Invalid cumulative contributions.');
+    if (!['second', 'minute', 'check_window', 'day'].includes(raw.timestamp_kind)) throw new Error('Invalid contribution timestamp precision.');
+    return { ...raw, t: timestamp(raw.timestamp_utc), timestampKind: raw.timestamp_kind, capital, contribution };
+  }));
+}
+
+export function capitalAt(contributions, t) {
+  return contributions.filter(r => r.t <= t).at(-1)?.capital ?? 0;
+}
+
 export function performanceChange(rows, days = 14) {
   const latest = rows.at(-1);
   if (!latest || latest.depth === null) return null;
@@ -101,14 +126,20 @@ export function performanceChange(rows, days = 14) {
   return { start, latest, dollars: latest.depth - start.depth, percent: (latest.depth / start.depth - 1) * 100, sameCapital: latest.capital === start.capital };
 }
 
-export function pathFor(rows, value, x, y) {
+export function pathFor(rows, value, x, y, stepped = false) {
   let connected = false;
   return rows.map(r => {
     const v = value(r);
     if (v === null || !Number.isFinite(v)) { connected = false; return ''; }
-    const part = `${connected ? 'L' : 'M'}${x(r.t).toFixed(2)},${y(v).toFixed(2)}`;
+    const part = connected && stepped ? `H${x(r.t).toFixed(2)}V${y(v).toFixed(2)}` : `${connected ? 'L' : 'M'}${x(r.t).toFixed(2)},${y(v).toFixed(2)}`;
     connected = true; return part;
   }).join(' ');
+}
+
+export function chartValue(row, key, unit = 'usd') {
+  const value = row[key];
+  if (value === null || value === undefined || (key === 'total' && unit !== 'usd')) return null;
+  return unit === 'usd' ? value : (value / row.capital - 1) * 100;
 }
 
 const money = n => n === null || n === undefined ? '—' : new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(n);
@@ -116,6 +147,7 @@ const pct = n => n === null || n === undefined ? '—' : `${n >= 0 ? '+' : ''}${
 const date = t => new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }).format(t);
 const dateTime = t => new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'UTC' }).format(t) + ' UTC';
 const returnOf = (v, capital) => v === null ? null : (v / capital - 1) * 100;
+const valuation = (row, value, format = money) => (row.reconstructed && value !== null ? '~' : '') + format(value);
 
 function sourceLink(ref, commit = '') {
   const match = /^((?:notes|research)\/[a-zA-Z0-9_.-]+|README\.md)(?::(\d+))?$/.exec(ref);
@@ -138,8 +170,9 @@ async function init() {
     if (!r.ok) throw new Error(`Could not load ${file} (HTTP ${r.status}).`);
     return r.text();
   };
-  const [data, benchmarkData] = await Promise.all([read('performance.csv'), read('benchmarks.csv')]);
-  const rows = parsePerformance(data), benchmarks = parseBenchmarks(benchmarkData);
+  const [data, benchmarkData, contributionData] = await Promise.all([read('performance.csv'), read('benchmarks.csv'), read('contributions.csv')]);
+  const rows = parsePerformance(data), benchmarks = parseBenchmarks(benchmarkData), contributions = parseContributions(contributionData);
+  if ([...rows, ...benchmarks].some(r => Math.abs(r.capital - capitalAt(contributions, r.t)) > 1e-8)) throw new Error('An observation disagrees with the contribution ledger.');
   const latest = rows.at(-1), change = performanceChange(rows);
   document.querySelector('#updated').textContent = `Recorded ${dateTime(latest.t)}`;
   document.querySelector('#value').textContent = money(latest.depth);
@@ -152,13 +185,14 @@ async function init() {
     const el = document.querySelector('#change');
     el.textContent = `${change.dollars >= 0 ? '+' : '−'}${money(Math.abs(change.dollars))}`;
     el.className = change.dollars >= 0 ? 'positive' : 'negative';
-    document.querySelector('#change-detail').textContent = `${pct(change.percent)} in value${change.sameCapital ? ' · no change in contributions' : ' · contributions changed'}`;
+    if (change.start.reconstructed || change.latest.reconstructed) el.textContent = '~' + el.textContent;
+    document.querySelector('#change-detail').textContent = `${pct(change.percent)} in value${change.sameCapital ? ' · no change in contributions' : ' · contributions changed'}${change.start.reconstructed || change.latest.reconstructed ? ' · rounded reconstruction' : ''}`;
   }
   document.querySelector('#record-count').textContent = `(${rows.length})`;
   const tbody = document.querySelector('#observations');
   rows.slice().reverse().forEach(r => {
     const tr = document.createElement('tr');
-    [recordTime(r).replace(' UTC', ''), money(r.depth), money(r.mark), pct(returnOf(r.depth, r.capital))].forEach(text => { const td = document.createElement('td'); td.textContent = text; tr.append(td); });
+    [recordTime(r).replace(' UTC', ''), money(r.total), valuation(r, r.depth), valuation(r, r.mark), valuation(r, returnOf(r.depth, r.capital), pct)].forEach(text => { const td = document.createElement('td'); td.textContent = text; tr.append(td); });
     const td = document.createElement('td'), href = sourceLink(r.source, r.source_commit);
     if (href) { const a = document.createElement('a'); a.href = href; a.textContent = 'Record ↗'; a.title = r.note || r.source; td.append(a); }
     else td.textContent = r.source;
@@ -166,7 +200,7 @@ async function init() {
   });
 
   const svg = document.querySelector('#chart'), tooltip = document.querySelector('#tooltip'), wrap = document.querySelector('#chart-wrap');
-  const state = { days: 0, unit: 'usd', enabled: { depth: true, mark: true, spy: true }, selected: -1 };
+  const state = { days: 0, unit: 'usd', enabled: { depth: true, mark: true, total: true, spy: true }, selected: -1 };
   let W = 960, H = 390;
   const left = 64, right = 20, top = 30, bottom = 46;
   let points = [], x, y, lo, hi, guide, valueAt;
@@ -176,12 +210,14 @@ async function init() {
     if (!points.length) return;
     state.selected = Math.max(0, Math.min(points.length - 1, index));
     const point = points[state.selected]; tooltip.replaceChildren();
-    const title = document.createElement('b'); title.textContent = point.pilot ? recordTime(point.pilot) : dateTime(point.t); tooltip.append(title);
+    const title = document.createElement('b'); title.textContent = point.pilot ? recordTime(point.pilot) : point.contribution ? recordTime(point.contribution) : dateTime(point.t); tooltip.append(title);
     const lines = [];
+    if (point.contribution) lines.push(['Trading contributions', money(point.contribution.capital)]);
     if (point.pilot) {
       const r = point.pilot;
-      if (state.enabled.depth) lines.push(['Depth', state.unit === 'usd' ? money(r.depth) : pct(returnOf(r.depth, r.capital))]);
-      if (state.enabled.mark) lines.push(['Midpoint', state.unit === 'usd' ? money(r.mark) : pct(returnOf(r.mark, r.capital))]);
+      if (state.enabled.depth) lines.push(['Depth', state.unit === 'usd' ? valuation(r, r.depth) : valuation(r, returnOf(r.depth, r.capital), pct)]);
+      if (state.enabled.mark) lines.push(['Midpoint', state.unit === 'usd' ? valuation(r, r.mark) : valuation(r, returnOf(r.mark, r.capital), pct)]);
+      if (state.enabled.total && state.unit === 'usd') lines.push(['Account incl. gas', money(r.total)]);
     }
     if (point.benchmark && state.enabled.spy) {
       const r = point.benchmark;
@@ -206,13 +242,17 @@ async function init() {
     W = narrow ? 520 : 960; H = narrow ? 360 : 390;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     svg.style.setProperty('--axis-font-size', narrow ? '17px' : '12px');
-    lo = state.days ? Math.max(rows[0].t, latest.t - state.days * DAY) : rows[0].t; hi = latest.t;
+    const first = Math.min(rows[0].t, contributions[0].t);
+    lo = state.days ? Math.max(first, latest.t - state.days * DAY) : first; hi = latest.t;
     const visible = rows.filter(r => r.t >= lo && r.t <= hi);
     const bench = benchmarks.filter(r => r.t >= lo && r.t <= hi);
-    valueAt = (r, key) => state.unit === 'usd' ? r[key] : returnOf(r[key], r.capital);
-    const values = visible.map(r => state.unit === 'usd' ? r.capital : 0);
+    const flows = contributions.filter(r => r.t > lo && r.t <= hi);
+    const capitalRows = [{ t: lo, capital: capitalAt(contributions, lo) }, ...flows, { t: hi, capital: capitalAt(contributions, hi) }];
+    valueAt = (r, key) => chartValue(r, key, state.unit);
+    const values = capitalRows.map(r => state.unit === 'usd' ? r.capital : 0);
     if (state.enabled.depth) visible.forEach(r => { if (r.depth !== null) values.push(valueAt(r, 'depth')); });
     if (state.enabled.mark) visible.forEach(r => { if (r.mark !== null) values.push(valueAt(r, 'mark')); });
+    if (state.enabled.total && state.unit === 'usd') visible.forEach(r => { if (r.total !== null) values.push(valueAt(r, 'total')); });
     if (state.enabled.spy) bench.forEach(r => values.push(valueAt(r, 'spy')));
     const min = Math.min(...values), max = Math.max(...values), span = Math.max(max - min, state.unit === 'usd' ? 8 : 4);
     const y0 = min - span * .15, y1 = max + span * .15;
@@ -227,11 +267,11 @@ async function init() {
       const t = lo + (hi - lo) * i / 4;
       svg.append(node('text', { x: x(t), y: H - 14, 'text-anchor': i === 0 ? 'start' : i === 4 ? 'end' : 'middle' }, date(t)));
     }
-    svg.append(node('path', { d: pathFor(visible, r => state.unit === 'usd' ? r.capital : 0, x, y), fill: 'none', stroke: '#a8b4ab', 'stroke-dasharray': '3 5', 'stroke-width': 1.3 }));
-    for (const [key, seriesRows] of [['mark', visible], ['spy', bench], ['depth', visible]]) {
-      if (!state.enabled[key] || !seriesRows.length) continue;
+    svg.append(node('path', { d: pathFor(capitalRows, r => state.unit === 'usd' ? r.capital : 0, x, y, true), fill: 'none', stroke: '#a8b4ab', 'stroke-dasharray': '3 5', 'stroke-width': 1.3 }));
+    for (const [key, seriesRows] of [['total', visible], ['mark', visible], ['spy', bench], ['depth', visible]]) {
+      if (!state.enabled[key] || !seriesRows.length || (key === 'total' && state.unit !== 'usd')) continue;
       const attrs = { d: pathFor(seriesRows, r => valueAt(r, key), x, y), class: 'series', stroke: COLORS[key], 'stroke-width': key === 'depth' ? 2.8 : 1.8 };
-      if (key === 'spy') attrs['stroke-dasharray'] = '6 6';
+      if (key === 'spy' || key === 'total') attrs['stroke-dasharray'] = '6 6';
       svg.append(node('path', attrs));
       seriesRows.forEach(r => {
         const v = valueAt(r, key); if (v === null) return;
@@ -241,10 +281,12 @@ async function init() {
     guide = node('line', { x1: 0, x2: 0, y1: top, y2: H - bottom, stroke: '#788d82', 'stroke-dasharray': '3 4', visibility: 'hidden' }); svg.append(guide);
     const merged = new Map();
     visible.forEach(r => merged.set(r.t, { t: r.t, pilot: r }));
+    contributions.filter(r => r.t >= lo && r.t <= hi).forEach(r => merged.set(r.t, { ...merged.get(r.t), t: r.t, contribution: r }));
     if (state.enabled.spy) bench.forEach(r => merged.set(r.t, { ...merged.get(r.t), t: r.t, benchmark: r }));
     points = [...merged.values()].sort((a, b) => a.t - b.t);
     const complete = visible.filter(r => r.depth !== null).length;
-    document.querySelector('#range-detail').textContent = `${date(lo)} – ${date(hi)}, ${new Date(hi).getUTCFullYear()} · ${complete} valued snapshots${complete < visible.length ? ` · ${visible.length - complete} gas gaps` : ''}`;
+    const accountMarks = visible.filter(r => r.total !== null).length;
+    document.querySelector('#range-detail').textContent = `${date(lo)} – ${date(hi)}, ${new Date(hi).getUTCFullYear()} · ${visible.length} observations · ${accountMarks} account marks · ${complete} depth estimates`;
   }
 
   document.querySelectorAll('[data-days]').forEach(button => button.addEventListener('click', () => {
@@ -253,6 +295,7 @@ async function init() {
   }));
   document.querySelectorAll('[data-unit]').forEach(button => button.addEventListener('click', () => {
     state.unit = button.dataset.unit;
+    document.querySelector('[data-series="total"]').disabled = state.unit !== 'usd';
     document.querySelectorAll('[data-unit]').forEach(b => { b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button)); }); render();
   }));
   document.querySelectorAll('[data-series]').forEach(input => input.addEventListener('change', () => { state.enabled[input.dataset.series] = input.checked; render(); }));
