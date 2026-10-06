@@ -1,5 +1,29 @@
 # Polyclaude Backlog
 
+## Oct-6 06:00 periodic check — no new action due
+
+- Eighteen routine commands returned zero; state audit CLEAN, complete
+  authenticated orders empty, no overdue decision, UMA/Ostium alert or
+  uncovered crux. All 38 quoted watchlist rows WATCH, no missing price/hit.
+- Complete bankroll $186.87, funded gas $6.84, PM midpoint/depth
+  $35.14/$32.34; settled P&L +$22.53. Trading depth $177.23 (+4.25% before
+  VM/API), down $.06 since 02:03. Sequential estimates; no provider gap or
+  retry. Exact holdings/pUSD unchanged; native aUSDC 85.032922.
+- HLE full 60/raw hash, frontend/Diamond/Google, five held Gamma contracts
+  and all 256 Senate rows unchanged. No qualifying passage or fresh public
+  alert. UNI 102 Executed on two RPCs; Arc configured roles unchanged,
+  collections/Releaser/net burn unverified. UNI $8.83 above $3.25 gate.
+- Root rejected a stale book and completed one bounded fresh revalidation.
+  G/O net exits $1.517658/$2.568496; central full/partial/combined sales lose
+  even with free 2.825% Aave carry. Stress favors separate ~10.07 Gemini
+  shares (~11.92 with carry), or five OpenAI (~6.37 with carry), not a
+  joint optimum. HOLD / NO ADD; complete Clarity pair retains its $29 floor.
+- Dust payout $.003571 below indicative gas ~$.00524; no redemption.
+  Four daemons exact-one/current; disk ~646 MiB above guards. Pages CSV
+  matches the prior 35-row update; current append makes 36 observations,
+  26 complete depths. Weekly/Sunday work current; next dated reviews
+  Oct-9/Oct-12. No extra discovery, Telegram, code/daemon change or timer.
+
 ## Oct-6 02:00 full check — no asset action
 
 - All 19 routine and 12 discovery/context commands returned zero. Required
@@ -242,8 +266,8 @@
   Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
   ten missing gas fields remain gaps. Three validated SPY closes are separate;
   the failed Sep-24 diagnostic benchmark is excluded.
-- Latest recorded trading depth $177.29: +4.29% vs $170 before VM/API costs.
-  Recovery of $31.25 (+21.40%) since Sep 25, but $1.57 below Sep 8.
+- Latest recorded trading depth $177.23: +4.25% vs $170 before VM/API costs.
+  Recovery of $31.19 (+21.36%) since Sep 25, but $1.63 below Sep 8.
   Public records do not identify a recent model-context compaction date.
 - Six focused data/math tests and desktop/mobile browser checks passed.
   Publication verified Oct 5 at 22:31 UTC: the live HTML, JavaScript,
@@ -3122,7 +3146,7 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-4 14:00:** next-Pro debut NO is **CLOSED / zero
+**Current HLE state, Oct-6 06:00:** next-Pro debut NO is **CLOSED / zero
 shares** after the 100-share trim (DEC-0183) and final 69-share sale
 (DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.
 Held any-Gemini >=50 NO is **102.084750**, OpenAI >=55 NO **19**; priors
@@ -3133,11 +3157,12 @@ analysis; there is no hold-only rule or automatic debut re-entry. Older
 underwriting below is historical and must not replace current priors or
 share counts.
 
-Fresh G/O full exits are $2.082648/$2.753100. Central joint Elog favors
+Fresh G/O full exits are $1.517658/$2.568496. Central joint Elog favors
 holding and rejects partial/combined trims, including optimistic free Aave
-carry. Stress favors separate trims of about 35.63 Gemini shares
-or all 19 OpenAI shares. HOLD / NO ADD uses the
-central judgmental view with this price-dependent sensitivity acknowledged.
+carry. Stress favors separate trims of about 10.07 Gemini shares
+(11.92 with free carry) or five OpenAI shares (6.37 with carry), not a joint
+optimum. HOLD / NO ADD uses the central judgmental view with this
+price-dependent sensitivity acknowledged.
 
 The official Sep22 [HLE-Diamond release](https://agi.safe.ai/blog/hle-diamond)
 is a separate 1,000-question subset; the live resolving chart still uses
