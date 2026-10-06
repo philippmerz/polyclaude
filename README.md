@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 130 recorded observations from the Apr-25 inception through
+The chart now has 131 recorded observations from the Apr-25 inception through
 Oct-6. Rounded reconstructions are labeled; unsupported historical values stay
 blank. The [source audit](research/2026-10-06-performance-history.json) records
 the remaining gaps and accounting limits.
@@ -50,19 +50,20 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-06 06:02 UTC
+## Last bankroll snapshot — 2026-10-06 10:04 UTC
 
-Bankroll ran 06:01:53–06:02:14 UTC; PM midpoint/depth at 06:01:33–34.
-These readings are sequential, with no synchronized quote timestamp.
+Bankroll ran approximately 10:04:10–35 UTC; PM midpoint/depth around
+10:03:50–51. Command intervals were reconstructed from elapsed captures and
+output file times. These are sequential readings, without per-asset quote times.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
 | Polymarket midpoint | $35.14 |
-| Indicative depth/fee value | $32.34 |
-| Authoritative whole-account mark | $186.87 |
-| Approximate whole-account depth value | $184.07 |
+| Indicative depth/fee value | $31.95 |
+| Authoritative whole-account mark | $186.91 |
+| Approximate whole-account depth value | $183.72 |
 | Cumulative settled P&L, before VM/API costs | +$22.53 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -87,10 +88,10 @@ source stability supplies no newly calibrated posterior.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its forecast remains archived and unresolved. Full fee-net G/O exits are
-about **$1.52/$2.57** in the separate 06:03 quote. Central joint models
+about **$1.13/$2.57** in the separate 10:04 quote. Central joint models
 reject full, partial and combined exits even with optimistic free Aave
-redeployment. The pessimistic model separately favors about 10.07 Gemini
-shares (11.92 with free carry) or the minimum five OpenAI shares (6.37 with
+redeployment. The pessimistic model separately favors about 10.06 Gemini
+shares (11.90 with free carry) or the minimum five OpenAI shares (6.36 with
 carry); these are not a joint optimum. **HOLD / NO ADD** remains a
 model-sensitive judgment, with no price-recovery assumption. Both new buys
 fail pessimistic EV at current asks.
@@ -102,17 +103,18 @@ pUSD is uncommitted**. Identity, transaction and source evidence are in
 [`notes/journal.md`](notes/journal.md).
 
 About **$85.03 native aUSDC** earns the variable Polygon Aave supply rate
-(2.825% read during this run); legacy aUSDC.e is about $3.50. The
-midpoint-to-depth gap is about $2.80. Excluding $6.84 of separately funded
-gas gives indicative trading depth **$177.23 versus $170 (+4.25%)**, before
+(2.815% read during this run); legacy aUSDC.e is about $3.50. The
+rounded midpoint-to-depth gap is $3.19 (bankroll warns $3.20 from its
+underlying walk). Excluding $6.87 of separately funded gas gives indicative
+trading depth **$176.85 versus $170 (+4.03%)**, before
 VM/API costs. Exact held quantities and pUSD are unchanged; native aUSDC
-85.032922 accrued .001085 since the prior fixed-block check.
+85.034026 accrued .001104 since the prior fixed-block check.
 
 Two Ethereum RPCs confirm UNI Arc proposal 102 remains **Executed** at
-block 26,131,413. Arc controls at block 24,514,396 retain the
+block 26,132,639. Arc controls at block 24,543,645 retain the
 [published TokenJar/fee-adapter roles](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
 Configuration alone does not verify collections, releaser activity or
-sustainable net burn. UNI $8.83 remains above the $3.25 review gate;
+sustainable net burn. UNI $8.87 remains above the $3.25 review gate;
 no allocation follows from that milestone. All 38 quoted watchlist
 identities have no price gate hit or missing price. AFMJF $0.970 USD is
 above $0.85; its last-sale time and OTC status remain unverified.
@@ -122,12 +124,12 @@ broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading
-depth is **$1.72/$4.17/$4.77 below VT/VTI/SPY** at those dated values.
+depth is **$2.10/$4.55/$5.15 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the [`weekly report`](notes/pnl_weekly.md).
 
 An archived Hormuz NO claim holds **.003571 winning shares**. Its gas/price
-estimate is about $.00524, above the payout, using current gas, the rounded
+estimate is about $.00537, above the payout, using current gas, the rounded
 same-run POL mark and prior simulated gas units rather than a new simulation.
 The 02:00 indexed redemption dry-run found zero winning claims; exact claim
 quantities and UMA status are unchanged. Retain the archived claim for lower
@@ -137,9 +139,10 @@ asset, collateral and positive on-chain payout before preparing a transaction.
 The 02:00 full discovery review emitted 1,243 context rows across 69 batches.
 No verified entry surfaced; bounded/incompletely quoted scanners do not
 establish that no edge exists elsewhere. Midpoints and sequential depth
-walks are planning estimates, not guaranteed cash proceeds. This bankroll
-read was complete without a token-valuation warning or retry; individual
-asset-price timestamps were not emitted. `.venv/bin/python scripts/bankroll.py`
+walks are planning estimates, not guaranteed cash proceeds. The HLE source
+required two 403s then a successful bounded header retry; its full captured
+dataset is unchanged. This bankroll read was complete without a token-valuation
+warning or retry; individual asset-price timestamps were not emitted. `.venv/bin/python scripts/bankroll.py`
 is the authoritative marked total; `scripts/positions.py` supplies the
 Polymarket depth view.
 

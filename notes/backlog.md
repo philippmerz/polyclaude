@@ -1,5 +1,27 @@
 # Polyclaude Backlog
 
+## Oct-6 10:00 periodic check — no new action due
+
+- All 18 routine commands returned zero; hashes verified. State audit CLEAN,
+  authenticated orders empty/complete, no overdue decision, UMA/Ostium alert,
+  uncovered crux or hit among 38 fully priced watchlist identities.
+- Complete bankroll $186.91, gas $6.87, PM midpoint/depth $35.14/$31.95.
+  Indicative trading depth $176.85 (+4.03% before VM/API), down $.38 since 06:02.
+  First-phase command intervals reconstructed, disclosed as approximate;
+  CSV check-window anchor 10:04. No missing-token/provider valuation gap.
+- HLE two 403s then one successful header retry; full 60 IDs/score/hash,
+  frontend/Diamond/Google, five held Gamma contracts and 256 Senate rows
+  unchanged. Zero new public alerts. UNI 102 Executed on two RPCs; Arc roles
+  match published controls. Configuration alone does not prove fee burns.
+- Root G/O fee-net exits $1.130699/$2.568496. Central full/partial/combined
+  sales lose including free 2.815% Aave carry; stress trims remain sensitivity
+  cases, not a joint optimum. HOLD / NO ADD; Clarity retains complete 29/29 floor.
+- Exact held quantities/pUSD unchanged; native aUSDC 85.034026. Archived dust
+  payout $.003571 below indicative gas ~$.00537; no redemption. Four daemons
+  exact-one/current; disk ~624 MiB above guards. CSV now 131 rows / 44 depths.
+  Weekly/Sunday work current, next dated reviews Oct9/Oct12. No extra discovery,
+  Telegram, code/daemon change, timer or durable goal.
+
 ## Oct-6 performance archive review — history backfilled and published
 
 - Two archive workers reviewed Apr-25 inception through Oct-6. The chart
