@@ -1,5 +1,32 @@
 # Polyclaude Backlog
 
+## Oct-6 18:00 periodic check — no new action due
+
+- Nineteen required command types completed; 28 actual invocations after a
+  runner bookkeeping error caused repeat reads. Verified all 19 surviving
+  output pairs; nine overwritten earlier captures have no retained hashes.
+  Kelly used the fresh $187.90 bankroll once; its exact interval is unavailable.
+- State audit CLEAN, authenticated orders empty/complete, no overdue decision,
+  UMA/Ostium alert or uncovered crux. UNI $8.66/AAVE $181.96 remain above their
+  gates; fresh DefiLlama fallback after CoinGecko429, oldest quote18:00:40.
+- Complete bankroll $187.90, gas $6.75, PM midpoint/depth $36.26/$32.19.
+  Trading depth $177.08 (+4.16% before VM/API), down $.71 since 14:00;
+  settled P&L unchanged. Bankroll18:02 and retained positions18:03 agree;
+  separate quick-status depth32.63 is not substituted into this observation.
+- HLE initial HTTP200, all 60 IDs/score/calibration/raw fields unchanged;
+  five held Gamma contracts and 256 Senate rows unchanged. Three Google
+  articles add no qualifying HLE score; EmbeddingGemma2 reports embedding
+  benchmarks. UNI102 Executed on two RPCs; Arc controls retain published roles.
+- Root fee-net G/O exits $1.183670/$2.753100. Central joint models reject
+  full/partial/combined exits including free 2.849% Aave carry. Stress separately
+  favors ~10.07 G shares (~11.92 with carry) or all19 O shares; no joint-optimum
+  claim. HOLD / NO ADD remains model-sensitive; Clarity stays complete29/29.
+- Holdings/pUSD unchanged; native aUSDC85.036223 accrued .001103. Dust payout
+  $.003571 below indicative gas $.00522–.00523; no redemption. Four daemons
+  exact-one/current, disk ~567 MiB above guards. CSV now133 observations/46 depths.
+  Next dated reviews Oct9/Oct12; Sunday workflow retired. No extra discovery,
+  asset action, Telegram, code/daemon change, timer or durable goal.
+
 ## Oct-6 14:00 full check — no asset action
 
 - All 20 routine and 11 discovery/context commands returned zero; root
