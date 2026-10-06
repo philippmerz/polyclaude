@@ -1,5 +1,33 @@
 # Polyclaude Backlog
 
+## Oct-6 02:00 full check — no asset action
+
+- All 19 routine and 12 discovery/context commands returned zero. Required
+  snapshot refresh changed only its date; final audit CLEAN. Authenticated
+  orders empty/complete; UMA/Ostium/crux clean; no overdue decision.
+- Complete bankroll $186.86, gas $6.83, PM midpoint/depth $35.14/$32.40;
+  settled P&L +$22.53. Trading depth $177.29 (+4.29% before VM/API), down
+  $.11 since Oct5 22:02. Sequential estimates; no missing-token warning or
+  bankroll retry. Exact holdings/pUSD unchanged; native aUSDC85.031837.
+- HLE full60/hash, frontend/Diamond/Google, five held Gamma records and
+  Senate all256 rows unchanged; no qualifying passage or new public alert.
+  UNI102 remains Executed on two RPCs; Arc controls retain published roles.
+  Configured controls do not verify collections/releaser/net burn.
+  All38 quoted watchlist rows WATCH, no hit/missing price; UNI8.97>3.25.
+- Root G/O net exits1.583416/2.568496; central full/partial/combined trims
+  lose even with free2.824% Aave carry. Stress separately favors~10.07 G
+  shares (~11.92 with carry), or5 O shares (~6.37 with carry), not a joint
+  optimum. HOLD / NO ADD; Clarity remains complete29/29 against29 floor.
+- Reviewed1243 context rows/69 uncapped batches with matching identities,
+  criteria hashes and counts. No verified entry; consistency/Limitless
+  coverage incomplete. Romania nomination explains repricing; confidence
+  vote remains unresolved, no conservative probability/January case clears
+  live costs. Sports deltas below3pp; failed population priors are not edges.
+- Indexed winning claims zero on dry run; archived Hormuz payout.003571
+  below estimated gas.005160. Four daemons exact-one/current, disk~661MiB
+  above guards. CSV35 rows/25 complete depths; Pages live. Weekly/Sunday
+  work current. No Telegram, code/daemon change, new timer or durable goal.
+
 ## Oct-5 22:31 publication check — performance chart live
 
 - GitHub public repository API reports `has_pages=true`.
@@ -214,8 +242,8 @@
   Backfilled 27 observations Sep 8–Oct 4: 17 complete ex-gas valuations;
   ten missing gas fields remain gaps. Three validated SPY closes are separate;
   the failed Sep-24 diagnostic benchmark is excluded.
-- Latest recorded trading depth $177.40: +4.35% vs $170 before VM/API costs.
-  Recovery of $31.36 (+21.47%) since Sep 25, but $1.46 below Sep 8.
+- Latest recorded trading depth $177.29: +4.29% vs $170 before VM/API costs.
+  Recovery of $31.25 (+21.40%) since Sep 25, but $1.57 below Sep 8.
   Public records do not identify a recent model-context compaction date.
 - Six focused data/math tests and desktop/mobile browser checks passed.
   Publication verified Oct 5 at 22:31 UTC: the live HTML, JavaScript,

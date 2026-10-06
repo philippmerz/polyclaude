@@ -24464,3 +24464,138 @@ execution, daemon or scheduling change; unrelated runtime files preserved.
 
 Publication link and current recorded performance delivered once as
 Telegram1104 (one part). No further follow-up scheduled.
+
+### 2026-10-06 02:00 UTC — full scheduled check; no asset action
+
+Complete required check-in once under the bounded run contract. Nineteen
+routine commands and twelve discovery/context commands returned zero,
+without timeout; all complete outputs reviewed and hashes verified. Required
+position-state --fix refreshed only the insurance snapshot date to Oct6;
+5 indexed positions plus1 deindexed winning claim retained, no expired
+holds pruned. Final read-only audit CLEAN. Authenticated orders HTTP200,
+data empty and terminal cursor LTE=; all $47.319630 pUSD uncommitted.
+UMA40 tracked/38 refreshed/zero alerts; Ostium zero trades, limits and
+allowance with clean diff. Crux coverage quiet; no overdue decision.
+Kelly used the current $186.86 as its single explicit bankroll argument;
+its midpoint/rho ranking remains advisory, not the joint-loss model.
+
+Authoritative whole-account mark $186.86; separately funded gas $6.83;
+PM midpoint $35.14 and indicative fee/depth $32.40, cost $47.64.
+Settled cash P&L +$22.53; open marked/depth losses -$12.50/-$15.24.
+Whole-account indicative depth $184.12; ex-gas trading midpoint $180.03,
+trading depth $177.29 (+4.29% vs $170 before VM/API costs), down$.11 since
+Oct5 22:02. Complete bankroll02:03:29–45 UTC and PM midpoint/depth02:03:08–09;
+no missing-native/provider valuation warning or bankroll retry. Individual
+asset-price timestamps are not emitted. Sequential planning estimates, not
+synchronized quotes, settled returns or guaranteed liquidation proceeds.
+Later root execution books and watchlist/claim prices do not replace fields
+in this financial snapshot. Dated Oct1 VT/VTI/SPY baselines178.95/181.40/182.00
+are1.66/4.11/4.71 above this depth; mixed timestamps and operating costs
+prevent an audited net-alpha claim.
+
+Root exact-asset census at Polygon95,031,416 verifies all held CTF quantities,
+archived Hormuz3571 units, pUSD47.319630 and closed debut zero unchanged.
+Native aUSDC85.031837 adds.001109 interest since the prior fixed-block read.
+Known-asset census only, not an unknown-token search. Fresh native Aave
+rate2.823750%, reserve live; ordinary hurdle's2.79% cache was20h old.
+Current root G/O net exits1.58341639739/2.568496; complete Clarity pair
+28.249480 versus criteria-consistent29 floor. Exact CID/asset/side/criteria,
+positive authoritative fee curves and all actual bid fills validated;
+book ages5.32–86.25s within180s guard. Planning quotes; rewalk before any order.
+
+Retained judgmental p(NO) G/O .12/.25, stress.03/.15 and prior upper/correlation
+scenarios; unchanged sources supply no new calibrated posterior. Explicit
+joint terminal states in data/checkin_20261006T0200_risk.json use W173.89
+from current bankroll minus gas/PM mark plus29 Clarity floor. Central full
+sale-minus-hold Elog G/O/both -.043615/-.008940/-.054785; all central partial
+and combined sales also lose, including optimistic free2.824% Aave carry
+factor1.006653 over86.91days before conversion/transaction/protocol costs.
+Verified fill/fee sums, all model sums/marginals, segment concavity, feasible
+endpoints/stationary points and independent2001-point per-leg grids.
+Stress separately favors ~10.07 Gemini shares (~11.92 with free carry) or
+minimum5 OpenAI shares (~6.37 with carry); these are not a joint optimum.
+Both new asks .04568256/.165376 exceed stress .03/.15. HOLD / NO ADD after
+source review; material Diamond interpretation risk retained, no price-
+recovery assumption or preference to avoid realizing a loss. Clarity stays
+complete29/29; full exit plus free carry28.437412 remains below29 floor.
+No independently justified hidden-information maker premium or new order.
+
+Resolving HLE API HTTP200:60 unique rows/IDs and all accuracy/calibration
+values unchanged, raw SHA256532d0884bfbca40a05d793a3612594dff96292ed6afc23b5c8f5c712c40865c6.
+Maxima Gemini46.2/OpenAI53.6. Mounted homepage/frontend and separate
+1,000-question Diamond publication unchanged; original HLE/API is still
+mounted. Google RSS, Argon and September recap unchanged, no new qualifying
+score. Root web source search found no new official qualifying fact; third-
+party leaderboards are not substituted for the named resolving source.
+All5 held Gamma identity/criteria/status/end records and all256 Senate rows
+unchanged. Only H.R.3633 row234 is rejected49–50 cloture on a motion to
+proceed, not final passage. No new structured public news/opportunity alerts
+since22:03:31. Root audited full saved captures, normalized string/list
+schemas, all IDs, complete Senate rows and both canonical raw UNI tuples;
+summary schema differences were resolved against the actual public captures.
+
+Two Ethereum RPCs agree UNI102 Executed at26,130,230, uncanceled/executed.
+Arc24,486,352 controls retain the published TokenJar/V3/V4 adapter addresses.
+Root recomputed selectors and decoded exact getter returns; the source worker
+preserved/corrected one initial malformed local calldata request. Configured
+controls alone do not verify collection, TokenJar balances, releaser activity
+or sustainable net burn. UNI8.97 remains above3.25 gate. All38 quoted
+watchlist identities reviewed:38 WATCH/zero hits/zero missing, no retry;
+AFMJF .970 USD>.85. Equity/OTC source times not independently emitted.
+No allocation, entry threshold, route or prior change.
+
+Prospecting: primary1000 fetched/80 filtered; thin41,548 fetched/1653 retained.
+Offline uncapped contexts emitted1243 rows across69 batches; every emitted
+count/ID/criteria hash/semantic flag reviewed and verified. Prior shortlist
+omissions40 primary/456 thin do not prove closure. Monotonicity1081 events,
+zero provisional; HLE cross-event zero. Consistency is explicitly incomplete:
+5005 cap, only17/181 structures requested and10 returned, zero provisional.
+Limitless first3000 PM coverage/2497 valid,8 equivalence checks all DIFFERENT;
+large spreads are mismatches. MetaMask one missing book prevents execution
+claim. Favorite-fade9 rows use failed-replication population priors, not an
+instance edge; five macro rows have no consensus. Sports53, three reported
+deltas -1.1/+0.5/+0.5pp, none above3pp; saved outputs omit exact bookmaker
+URLs/quote times. Recurring Albania is not mechanically reopened.
+
+Romania next-PM2166702 repriced YES .1085→.4355, ask .115→.45. Fresh02:08
+exact Gamma/books give fee-inclusive YES .4599/NO .58676284. An
+[AGERPRES first-hand report](https://agerpres.ro/politic/2026/10/05/luca-niculescu---desemnat-de-nicusor-dan-candidat-la-functia-de-premier--1600078)
+confirms Oct5 nomination to form a government; a parliamentary majority is
+still to be built. Nomination alone fails the contract's appointment plus
+confidence-vote condition; cutoff is Dec31,2027. Presidency page timed out;
+no primary confidence roll call or defensible conservative probability
+clearing costs/January timing case. NO ENTRY either side; do not turn a
+price jump or fourth nomination into a manufactured probability.
+
+Redemption dry-run0/7 indexed winning claims,3 losing/uncertain rows skipped.
+Exact archived Hormuz payout .003571 remains below estimated gas .00516033
+using current gas271.032gwei and fresh correct-ID POL .108775 at02:07:20,
+prior175036 simulated units; no new simulation/broadcast. Root discarded an
+outdated matic-network price request (stale/missing), corrected to the vetted
+bankroll POL mapping polygon-ecosystem-token; no stale value promoted and
+no change to the complete financial snapshot. Retain uneconomic claim.
+
+Four daemons exact-one/current code at02:03:05; disk660.68MiB above512/128
+MiB guards. Weekly P&L Oct2 and source rotation Oct4 current; next dated
+reviews Oct9/Oct12. Chart is live on Pages, updates with normal record push.
+No credential-status assertion from private storage. No asset, execution,
+code/daemon, approval, transfer, redemption, new timer or durable goal.
+No material Telegram: held thesis/priors and account state unchanged;
+prospected repricing is already explained by public news without a verified
+entry. Append one sourced minute-precision CSV observation and refresh
+README/backlog; existing focused chart tests and independent source/CSV
+arithmetic verification required before handoff. Preserve runtime changes.
+
+Proofs: logs/checkin_20261006T0200/routine/run.json, scans/run.json and
+scans/review_report.md; data/checkin_20261006T0200_inventory.json,
+root_inventory.json, exit_quotes.json, risk.json, root_source_audit.json,
+root_scan_audit.json, sources/summary.json, scan_review.json,
+romania_root_review.json, redeem_dry_run.json, hormuz_gas.json and health.json.
+
+Six existing chart tests passed. Independent Decimal/CSV checks verify35
+observations/25 complete depths, ex-gas midpoint180.03/depth177.29, exact
+financial source anchor24468 and historical CSV/journal byte prefixes.
+Insurance snapshot changes only its refreshed date; selected public
+additions pass whitespace/credential/envelope checks. Five record/data
+files selected for normal commit/push; runtime files remain unstaged.
+No Telegram or further follow-up scheduled.

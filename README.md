@@ -14,7 +14,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-10-05. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-06. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -45,19 +45,19 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-05 22:02 UTC
+## Last bankroll snapshot — 2026-10-06 02:03 UTC
 
-Bankroll ran 22:02:09–25 UTC; PM midpoint/depth at 22:01:48–49.
+Bankroll ran 02:03:29–45 UTC; PM midpoint/depth at 02:03:08–09.
 These readings are sequential, with no synchronized quote timestamp.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $35.24 |
-| Indicative depth/fee value | $32.51 |
-| Authoritative whole-account mark | $187.00 |
-| Approximate whole-account depth value | $184.27 |
+| Polymarket midpoint | $35.14 |
+| Indicative depth/fee value | $32.40 |
+| Authoritative whole-account mark | $186.86 |
+| Approximate whole-account depth value | $184.12 |
 | Cumulative settled P&L, before VM/API costs | +$22.53 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
@@ -69,83 +69,73 @@ recorded vote remains rejected cloture on a motion to proceed, not final
 passage. Voice-vote and unanimous-consent branches retain the paired floor.
 
 Remaining HLE holdings are **102.084750 Gemini >=50 NO** and **19 OpenAI
->=55 NO**. Their p(NO) priors remain **.12/.25**, stressed **.03/.15**.
-Google's official
+>=55 NO**. Their judgmental p(NO) priors remain **.12/.25**, stressed **.03/.15**.
+The resolving 60-row source and all IDs/accuracy/calibration values are
+unchanged: Gemini’s maximum is 46.2, OpenAI’s 53.6. Google’s official
 [Gemini 4 Argon announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)
-contains no Pro label or HLE score. The resolving 60-row source is unchanged:
-Gemini's maximum is 46.2, OpenAI's 53.6. These probabilities are judgmental
-and remain uncertain. The separate September 22
-[HLE-Diamond release](https://agi.safe.ai/blog/hle-diamond) reports scores on
-a refined 1,000-question subset. The current homepage still connects its
-HLE Accuracy chart to the original dataset/API. Diamond creates material
-interpretation risk under the contracts' equivalent-metric clause; it has
-not demonstrably replaced the resolving leaderboard. HOLD / NO ADD includes
-that uncertainty.
+contains no Pro label or HLE score. The separate September 22
+[HLE-Diamond release](https://agi.safe.ai/blog/hle-diamond) uses a refined
+1,000-question subset; the mounted HLE Accuracy chart still uses the
+original dataset/API. Diamond creates material interpretation risk under
+the contracts’ equivalent-metric clause. HOLD / NO ADD includes that risk;
+source stability supplies no newly calibrated posterior.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
-Its .25 prior remains archived and the forecast is unresolved. Full fee-net
-G/O exits are about **$1.51/$2.75** in the separate 22:01 quote. Central
-joint models favor holding,
-including partial-trim analysis and free Aave redeployment sensitivity.
-The pessimistic model favors separate trims of about 10.07 Gemini
-shares (11.93 with optimistic free carry) or sale of all 19 OpenAI shares;
-a full Gemini exit loses in that case.
-Central probabilities reject full and partial exits. **HOLD / NO ADD**
-remains a model-sensitive judgment, with no price-recovery assumption. Both
-new buys fail pessimistic EV at current asks.
+Its forecast remains archived and unresolved. Full fee-net G/O exits are
+about **$1.58/$2.57** in the separate 02:04 quote. Central joint models
+reject full, partial and combined exits even with optimistic free Aave
+redeployment. The pessimistic model separately favors about 10.07 Gemini
+shares (11.92 with free carry) or the minimum five OpenAI shares (6.37 with
+carry); these are not a joint optimum. **HOLD / NO ADD** remains a
+model-sensitive judgment, with no price-recovery assumption. Both new buys
+fail pessimistic EV at current asks.
 
-**0.33 Trump-out NO remains** in value, cost and claim-insurance records. Complete
-authenticated inventory has **no open orders**. All **$47.319630 pUSD is
-uncommitted**. Identity, transaction and source evidence are in
+**0.33 Trump-out NO remains** in value, cost and claim-insurance records.
+Complete authenticated inventory has **no open orders**. All **$47.319630
+pUSD is uncommitted**. Identity, transaction and source evidence are in
 [`notes/resting_orders.md`](notes/resting_orders.md) and
 [`notes/journal.md`](notes/journal.md).
 
-About **$85.03 native aUSDC** earns the Polygon Aave supply rate (2.828% read
-during this 22:00 run, variable); existing legacy aUSDC.e is about $3.50.
-No additional cash transfer was made. The midpoint-to-depth gap in the
-timestamped snapshot is about $2.73. Approximate whole-account depth value
-excludes sub-lot dust from immediately executable cash and includes $6.87 of
-separately funded gas. Excluding gas gives about **$177.40 versus $170 trading
-capital (+4.35%)**, before VM/API operating costs. Two Ethereum RPCs confirm
-UNI Arc proposal 102 remains **Executed** at fixed block 26,129,031. Arc's
-v2 fee collector, v3 factory owner and v4 fee controller now match the
-[published TokenJar/fee-adapter configuration](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
-Root independently read these controls at Arc block 24,458,129 and decoded
-the proposal's exact nested setter calls. This advances the configuration
-catalyst; actual pool collections, releaser activity and sustainable net
-UNI burn remain unverified. The $9.16 UNI quote at 22:04:40 UTC is above the
-retained $3.25 valuation review gate; no positive January excess-return case
-or allocation follows from configuration alone.
-The [weekly watchlist](notes/longterm_watchlist.md) records this milestone and
-retains ASML/TSM review gates. The initial price sweep had eight crypto gaps;
-one fresh original-ID batch closed them, with no price gate hit across the
-38 quoted candidates. AFMJF returned $0.970 USD, above $0.85; its last-sale time and
-OTC trading status remain unverified.
+About **$85.03 native aUSDC** earns the variable Polygon Aave supply rate
+(2.824% read during this run); legacy aUSDC.e is about $3.50. The
+midpoint-to-depth gap is about $2.74. Excluding $6.83 of separately funded
+gas gives indicative trading depth **$177.29 versus $170 (+4.29%)**, before
+VM/API costs. Exact held quantities and pUSD are unchanged; native aUSDC
+85.031837 accrued .001109 since the prior fixed-block check.
+
+Two Ethereum RPCs confirm UNI Arc proposal 102 remains **Executed** at
+block 26,130,230. Arc controls at block 24,486,352 retain the
+[published TokenJar/fee-adapter roles](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
+Configuration alone does not verify collections, releaser activity or
+sustainable net burn. UNI $8.97 remains above the $3.25 review gate;
+no allocation follows from that milestone. All 38 quoted watchlist
+identities have no price gate hit or missing price. AFMJF $0.970 USD is
+above $0.85; its last-sale time and OTC status remain unverified.
+See the [`weekly watchlist`](notes/longterm_watchlist.md).
 dYdX remains an unfunded venue candidate; the managed book has no deliberate
 broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
-SPY $182.00** for the same timed contributions. Current indicative trading depth
-is **$1.55/$4.00/$4.60 below VT/VTI/SPY** at those dated values.
+SPY $182.00** for the same timed contributions. Current indicative trading
+depth is **$1.66/$4.11/$4.71 below VT/VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
-see the current [`weekly report`](notes/pnl_weekly.md).
+see the [`weekly report`](notes/pnl_weekly.md).
 
-An archived Hormuz NO claim holds **.003571 winning shares**. During this run its
-gas/price estimate is $.005329, above the payout, using the earlier simulated
-gas units rather than a new transaction simulation. The earlier
-exact-asset redemption dry-run succeeded. Retain the unexpired claim for
-lower fees; there is no cash need or expiry.
-Standard CTF redemption now verifies the exact asset, collateral and positive
-on-chain payout before preparing a transaction.
+An archived Hormuz NO claim holds **.003571 winning shares**. Its gas/price
+estimate is $.005160, above the payout, using prior simulated gas units
+rather than a new simulation. Indexed redemption dry-run found zero winning
+claims. Retain the uneconomic archived claim for lower fees; there is no
+cash need or expiry. Standard CTF redemption verifies exact asset,
+collateral and positive on-chain payout before preparing a transaction.
 
-Midpoints and sequential depth walks are planning estimates, not guaranteed
-cash proceeds. `.venv/bin/python scripts/bankroll.py` is the authoritative
-marked total; `scripts/positions.py` supplies the Polymarket depth view.
-Crypto valuation uses complete, fresh CoinGecko batches with a high-confidence
-DefiLlama fallback. Incomplete or stale batches fail visibly; emergency swaps
-abort before approval if neither source passes validation.
-This bankroll read returned a complete aggregate without a token-valuation
-warning or retry. Individual asset price timestamps were not emitted.
+The full discovery review emitted 1,243 context rows across 69 batches.
+No verified entry surfaced; bounded/incompletely quoted scanners do not
+establish that no edge exists elsewhere. Midpoints and sequential depth
+walks are planning estimates, not guaranteed cash proceeds. This bankroll
+read was complete without a token-valuation warning or retry; individual
+asset-price timestamps were not emitted. `.venv/bin/python scripts/bankroll.py`
+is the authoritative marked total; `scripts/positions.py` supplies the
+Polymarket depth view.
 
 ## Operating model
 
