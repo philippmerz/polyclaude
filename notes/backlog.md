@@ -1,5 +1,33 @@
 # Polyclaude Backlog
 
+## Oct-7 18:00 periodic check — HOLD / NO ADD; known disk warning
+
+- All19 distinct routine commands completed once, rc0; actual intervals and
+  all38 captures verified. State audit CLEAN, authenticated orders empty/
+  complete, no overdue decision or UMA/Ostium/crux alert. UNI $7.83/AAVE
+  $171.18 remain above unchanged gates; no watchlist trigger.
+- Complete bankroll $187.34, gas $6.37, PM midpoint/depth $36.06/$32.62.
+  Trading depth $177.53 (+4.43% before VM/API), down $3.31 since14:00;
+  settled P&L unchanged. Positions36.11/32.81 and quick36.11/33.07 are
+  separate sequential reads. Printed gap3.45 vs displayed3.44 is rounding.
+- HLE initial HTTP200/full60 unchanged; five held Gamma identities/criteria/
+  end/status and all256 Senate rows unchanged. Recap markup changed/main
+  text unchanged. No post14:00 official RSS item or structured public alert.
+  All23 captures audited; UNI102 Executed/full tuple on two RPCs; Arc roles match.
+- Fee-net G/O exits $1.883828/$3.122764. Central full/partial/combined risk
+  review including optimistic free2.898% Aave carry favors HOLD / NO ADD.
+  Stress separately favors23.43 G shares(25.21 with carry) or all19 O;
+  not a joint optimum. Gemini77.9% drawdown/Kelly deficit reviewed; no source
+  break or prior change. Clarity remains complete29/29 below its exit floor.
+- Exact quantities/pUSD unchanged; native aUSDC85.042889 accrued .001121.
+  Archived $.003571 remains below indicative gas $.00494–.00495; no new
+  redemption run. Four daemons exact-one/current. Scoped capacity census
+  unchanged (~467MiB at review), no safe obsolete artifact; active binary
+  preserved, existing hourly guard and warning cadence retained.
+- CSV139 observations/52 depths. Weekly P&L nextOct9, monthly drillOct12;
+  Sunday/off-chain workflow remains retired. No asset action, extra discovery,
+  consensus research, Telegram, code/daemon change, timer or durable goal.
+
 ## Oct-7 14:00 full check — HOLD / NO ADD; known disk warning
 
 - All 20 routine and 11 discovery/context commands completed once, rc0;
