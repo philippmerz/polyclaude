@@ -1,5 +1,33 @@
 # Polyclaude Backlog
 
+## Oct-7 22:00 periodic check — HOLD / NO ADD; known disk warning
+
+- All19 distinct routine commands completed once, rc0; actual intervals and
+  all38 capture hashes verified. State audit CLEAN, authenticated orders empty/
+  complete; no overdue decision, UMA/Ostium/crux alert or watchlist trigger.
+  UNI $7.75/AAVE $173.11 remain above unchanged review gates.
+- Complete bankroll $187.06, gas $6.40, PM midpoint/depth $35.76/$32.19.
+  Trading depth $177.09 (+4.17% before VM/API), down $.44 since18:00;
+  settled P&L unchanged. Positions/bankroll/quick rounded PM values match but
+  their actual intervals differ; liquidity gap3.57, no valuation warning.
+- All23 official captures HTTP200/integrity verified; HLE full60, five held
+  contracts and all256 Senate rows unchanged. Argon markup changed/main text
+  unchanged. No post18:00 official RSS item or structured public alert.
+  UNI102 Executed/full tuple on two RPCs; Arc retains published roles.
+- Fee-net G/O exits $1.161478/$2.753100. Central full/partial/combined review
+  including optimistic free2.895% Aave carry favors HOLD / NO ADD. Stress
+  separately favors10.06 G shares(11.92 with carry) or all19 O; no joint optimum.
+  Gemini79.8% drawdown/Kelly deficit reviewed; no source break or prior change.
+  Clarity remains complete29/29; exit with free carry below29 floor.
+- Exact quantities/pUSD unchanged; native aUSDC85.044009 accrued .001120.
+  Archived $.003571 remains below indicative gas $.00498–.00499; no new
+  redemption run. Four daemons exact-one/current. Scoped capacity census
+  unchanged (~465MiB at review); no safe obsolete artifact. Active binary
+  preserved; existing hourly guard and warning cadence retained.
+- CSV140 observations/53 depths. Weekly P&L nextOct9, monthly drillOct12;
+  Sunday/off-chain workflow retired. No asset action, extra discovery,
+  consensus research, Telegram, code/daemon change, timer or durable goal.
+
 ## Oct-7 18:00 periodic check — HOLD / NO ADD; known disk warning
 
 - All19 distinct routine commands completed once, rc0; actual intervals and
