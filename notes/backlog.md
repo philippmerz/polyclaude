@@ -1,5 +1,37 @@
 # Polyclaude Backlog
 
+## Oct-7 14:00 full check — HOLD / NO ADD; known disk warning
+
+- All 20 routine and 11 discovery/context commands completed once, rc0;
+  actual intervals and captures verified. State audit CLEAN, authenticated
+  orders empty/complete, no overdue decision or UMA/Ostium/crux alert.
+  UNI $7.92/AAVE $171.80 remain above unchanged review gates; no trigger.
+- Complete bankroll $188.98, gas $6.43, PM midpoint/depth $37.66/$35.95.
+  Trading depth $180.84 (+6.38% before VM/API), up $.16 since10:00;
+  settled P&L unchanged. Quick status is a separate matching reading.
+- HLE initial HTTP200/full60 and five held contracts/all256 Senate rows
+  unchanged. Two new Google articles have no qualifying HLE result; recap
+  markup changed, main text unchanged. All25 captures audited; UNI102
+  Executed/full tuple on two RPCs, Arc retains published configured roles.
+- Fee-net G/O exits $4.632468/$2.937856. Central full/partial/combined risk
+  review including optimistic free2.896% Aave carry favors HOLD / NO ADD.
+  Stress separately favors full G or full O; not a joint optimum. Gemini
+  67.2% drawdown reviewed; no source break or probability change.
+- All63 batches/1,123 selected rows and raw scanners reviewed; root rebuilt
+  full packets/Markdown. Primary cohort comparison verified; thin-tail
+  unverified due to changed filtering hurdle. Literal criteria unchanged
+  across full intersections, zero truncated triggers. No provisional arb
+  in incomplete consistency slice (16/193 requested, seven quoted).
+  Three fixed sports calls offer no positive >3pp lead; two in-play skips.
+- Exact quantities/pUSD unchanged; native aUSDC85.041768 accrued .001122.
+  Indexed redeem dry-run0/7; archived $.003571 below gas $.00505–.00506.
+  Four daemons exact-one/current. Disk ~483MiB below512 warning/above128
+  critical; scoped cache/version census unchanged, no safe obsolete artifact.
+  Active binary preserved; existing hourly guard and warning cadence retained.
+- CSV138 observations/51 depths. Weekly P&L nextOct9, monthly drillOct12;
+  Sunday/off-chain workflow remains retired. No asset action, extra model
+  research, Telegram, code/daemon change, timer or durable goal.
+
 ## Oct-7 10:00 periodic check — HOLD / NO ADD; disk warning
 
 - All 19 distinct routine commands completed once, rc0; actual intervals and
