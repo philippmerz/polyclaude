@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 136 recorded observations from the Apr-25 inception through
+The chart now has 137 recorded observations from the Apr-25 inception through
 Oct-7. Rounded reconstructions are labeled; unsupported historical values stay
 blank. The [source audit](research/2026-10-06-performance-history.json) records
 the remaining gaps and accounting limits.
@@ -50,22 +50,22 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-07 06:02 UTC
+## Last bankroll snapshot — 2026-10-07 10:02 UTC
 
-Positions ran 06:01:28–33 UTC; bankroll ran 06:01:53–06:02:15 and matches
+Positions ran 10:01:15–22 UTC; bankroll ran 10:01:43–10:02:05 and matches
 those PM fields. These are sequential readings without per-asset quote times.
-A separate 06:02:31–34 quick status also showed PM midpoint $37.83 and depth
-$35.97; the bankroll observation remains the financial snapshot.
+A separate 10:02:21–23 quick status also showed PM midpoint $37.73 and depth
+$35.79; the bankroll observation remains the financial snapshot.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $37.83 |
-| Indicative depth/fee value | $35.97 |
-| Authoritative whole-account mark | $189.25 |
-| Approximate whole-account depth value | $187.39 |
-| Settled P&L accounting residual, before VM/API costs | +$22.53 |
+| Polymarket midpoint | $37.73 |
+| Indicative depth/fee value | $35.79 |
+| Authoritative whole-account mark | $189.09 |
+| Approximate whole-account depth value | $187.15 |
+| Settled P&L accounting residual, before VM/API costs | +$22.54 |
 
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
 plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
@@ -89,14 +89,14 @@ source stability supplies no newly calibrated posterior.
 
 The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
 Its forecast remains archived and unresolved. Full fee-net G/O exits are
-about **$4.97/$2.75** in separate current planning quotes. Central joint models
+about **$4.79/$2.75** in separate current planning quotes. Central joint models
 reject full, partial and combined exits even with optimistic free Aave
 redeployment. The pessimistic model separately favors all 102.084750 Gemini
 shares or all 19 OpenAI shares, with or without
 carry; these are not a joint optimum. **HOLD / NO ADD** remains a
 model-sensitive judgment, with no price-recovery assumption. Both new buys
 fail pessimistic EV at current asks. Gemini's later midpoint drawdown is
-65.0%; this alarm remains subject to source and joint-risk review.
+65.6%; this alarm remains subject to source and joint-risk review.
 
 **0.33 Trump-out NO remains** in value, cost and claim-insurance records.
 Complete authenticated inventory has **no open orders**. All **$47.319630
@@ -105,21 +105,21 @@ pUSD is uncommitted**. Identity, transaction and source evidence are in
 [`notes/journal.md`](notes/journal.md).
 
 About **$85.04 native aUSDC** earns the variable Polygon Aave supply rate
-(2.848% read during this run); legacy aUSDC.e is about $3.50. The
-displayed midpoint-to-depth difference is $1.86; the tool prints $1.85 from
-its less-rounded inputs. Excluding $6.53 of separately funded gas gives
-indicative trading depth **$180.86 versus $170 (+6.39%)**, before VM/API costs.
-This is up $3.62 since 02:00; settled P&L is unchanged. Trading midpoint
-is $182.72, up $2.14. Exact held quantities and pUSD are unchanged; native
-aUSDC 85.039548 accrued .001113 since the prior fixed-block check.
+(2.858% read during this run); legacy aUSDC.e is about $3.50. The
+midpoint-to-depth difference is $1.94. Excluding $6.47 of separately funded
+gas gives indicative trading depth **$180.68 versus $170 (+6.28%)**, before
+VM/API costs. This is down $.18 since 06:00. The settled P&L accounting
+residual is a cent higher without a new trade. Trading midpoint is $182.62,
+down $.10. Exact held quantities and pUSD are unchanged; native
+aUSDC 85.040646 accrued .001098 since the prior fixed-block check.
 
 Two Ethereum RPCs confirm UNI Arc proposal 102 remains **Executed** at
-block 26,138,587. Arc controls at block 24,684,740 retain the
+block 26,139,776. Arc controls at block 24,713,137 retain the
 [published TokenJar/fee-adapter roles](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
 Configuration alone does not verify collections, releaser activity or
-sustainable net burn. UNI $8.17 remains above the $3.25 review gate;
+sustainable net burn. UNI $8.05 remains above the $3.25 review gate;
 no allocation follows from that milestone. The active project watchlist now
-contains UNI and AAVE review gates (AAVE $175.68 versus $105). Current validated
+contains UNI and AAVE review gates (AAVE $174.43 versus $105). Current validated
 CoinGecko quotes produced no fallback warning; individual provider timestamps
 were not emitted by the watchlist command. Off-chain
 stock/brokerage monitoring and its Sunday rotation were retired on Oct 6. See the
@@ -130,12 +130,12 @@ broad BTC/ETH/SOL allocation.
 
 The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
 SPY $182.00** for the same timed contributions. Current indicative trading
-depth is **$1.91 above VT and $.54/$1.14 below VTI/SPY** at those dated values.
+depth is **$1.73 above VT and $.72/$1.32 below VTI/SPY** at those dated values.
 This comparison mixes timestamps and excludes operating costs;
 see the [`weekly report`](notes/pnl_weekly.md).
 
 An archived Hormuz NO claim holds **.003571 winning shares**. Its gas/price
-estimate is about $.00501–.00502, above the payout, using current gas, the rounded
+estimate is about $.00496–.00498, above the payout, using current gas, the rounded
 same-run POL mark and prior simulated gas units rather than a new simulation.
 The Oct-7 02:02 indexed redemption dry-run found zero winning claims; current exact
 claim quantities and resolution states are unchanged. Retain the archived
@@ -154,9 +154,11 @@ Midpoints and sequential depth walks are planning estimates, not guaranteed
 cash proceeds. The HLE source
 returned HTTP200 on its initial request; its full captured dataset is unchanged.
 This periodic check found no new source change, watchlist trigger or overdue
-decision. Four daemons remain current and unique; disk was initially about
-527 MiB and later 513 MiB, above the 512/128 MiB guards. No trade or extra
-discovery run was warranted.
+decision. One Ethereum RPC rate limit was preserved and resolved with a
+targeted retry. Four daemons remain current and unique. Disk fell from about
+514 MiB to 507 MiB, below the 512 MiB warning and above 128 MiB critical.
+The scoped capacity review found no safe obsolete artifact; the existing
+hourly guard remains active. No trade or extra discovery run was warranted.
 This bankroll read was complete without a token-valuation warning or retry;
 individual asset-price timestamps
 were not emitted. `.venv/bin/python scripts/bankroll.py`

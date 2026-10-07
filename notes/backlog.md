@@ -1,5 +1,34 @@
 # Polyclaude Backlog
 
+## Oct-7 10:00 periodic check — HOLD / NO ADD; disk warning
+
+- All 19 distinct routine commands completed once, rc0; actual intervals and
+  all38 capture hashes verified. State audit CLEAN, authenticated orders
+  empty/complete, no overdue decision or UMA/Ostium/crux alert. UNI $8.05/AAVE
+  $174.43 remain above unchanged gates; no watchlist trigger.
+- Complete bankroll $189.09, gas $6.47, PM midpoint/depth $37.73/$35.79.
+  Trading depth $180.68 (+6.28% before VM/API), down $.18 since06:00;
+  settled P&L residual +$22.54, a cent higher without a new trade. Later quick
+  status is a separate matching reading; midpoint/depth gap $1.94.
+- HLE initial HTTP200/full60 unchanged; five held Gamma checked identities/
+  criteria/end/status and all256 Senate rows unchanged. No post06:00 official
+  RSS item or structured public alert. Two RPCs agree UNI102 Executed/full
+  tuple; one initial429 preserved, one targeted retry succeeded. All24 attempts
+  audited; Arc retains published configured roles.
+- Fee-net G/O exits $4.786671/$2.753100. Central full/partial/combined risk
+  review including free2.858% Aave carry favors HOLD / NO ADD. Stress separately
+  favors full G or full O; not a joint optimum. Gemini65.6% drawdown reviewed;
+  no source break or probability update. Clarity remains complete29/29.
+- Exact holdings/pUSD unchanged; native aUSDC85.040646 accrued .001098.
+  Dust payout $.003571 below indicative gas $.00496–.00498. Four daemons
+  exact-one/current. Disk initially513.55/later506.93MiB: warning crossed,
+  above128 critical. Scoped software-cache review found no safe obsolete
+  artifact; active Claude2.1.220 preserved. Existing hourly guard/24h warning
+  cadence continues; no cleanup, expansion, restart or new timer.
+- CSV137 observations/50 depths. Weekly P&L nextOct9, monthly drillOct12;
+  Sunday/off-chain workflow remains retired. No asset action, duplicate
+  discovery, extra model research or Telegram.
+
 ## Oct-7 06:00 periodic check — no new action due
 
 - All 19 distinct routine commands completed once, rc0; actual intervals and
