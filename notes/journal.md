@@ -25986,3 +25986,58 @@ All 23 official captures passed integrity checks. The source audit matched all
 configuration to 02:00; raw Gamma responses changed. The weekly
 P&L review is due around Oct-9 and monthly emergency-path/fee drill around
 Oct-12. Off-chain stock/brokerage Sunday review remains retired.
+
+
+## 2026-10-08 10:00 UTC — light check; HOLD / NO ADD, Gemini freshness guard closed
+
+All 19 required light-routine command types ran once, each rc=0; all 38 captured
+stdout/stderr hashes verified. Kelly received the exact fresh bankroll from this
+run: $186.44. The command manifest and full stream captures are in
+`logs/periodic_20261008T1000/routine/run.json`. No position, order, transfer,
+redemption or broadcast action occurred.
+
+The authoritative bankroll interval was 10:02:42.889789–10:03:03.776846 UTC:
+whole-account mark $186.44, separately funded gas $6.41, PM midpoint/depth
+$35.12/$32.07, cost $47.64, settled accounting residual +$22.54. Whole-account
+depth was $183.39. Ex-gas trading midpoint/depth were $180.03/$176.98; depth
+return was +4.11% versus $170 before VM/API costs. Printed bank gap $3.06 versus
+displayed $3.05 from rounding. Positions interval 10:02:21.270630–
+10:02:23.296996 and quick interval 10:03:19.754442–10:03:22.343949 separately
+match rounded PM readings; these sequential snapshots do not establish sync or
+executable liquidation proceeds. Settled P&L is unchanged; VM/API costs excluded.
+
+The complete 29/29 Clarity Act pair remains held against its $29 payout floor;
+its fee-net full exit of $27.989524 ($28.179399 under the optimistic free-carry
+bound) is below the floor.
+H.R. 3633's sole recorded vote remains rejected cloture on a motion to proceed.
+HOLD the complete pair / NO ADD. HLE priors remain judgmental .12/.25 central,
+.03/.15 stress, .25/.38 upper, with correlations unchanged. Source stability
+does not calibrate the posterior; HLE-Diamond interpretation risk remains.
+OpenAI's fee-net exit is $2.7531: central, upper, and correlation cases reject
+full/partial trims. Stress separately favors all 19 shares as a per-leg exit,
+not a joint optimum. Gemini GET book age was 387.131s and one POST attempt
+387.696s, both outside the 180s guard. No current Gemini exit or combined trim
+is certified. Gemini drawdown is −81.1%; Kelly's individual sizing delta is
+−$8.73. HOLD / NO ADD; no order was placed.
+
+Source audit: all 23 official captures returned HTTP 200 and passed hashes;
+all 60 HLE rows, 256 Senate rows, five Gamma material identity/criteria/status
+sets, and UNI/Arc roles matched 06:00. Raw Gamma hashes changed. The HLE API
+response had an Age header of 1833 seconds, so record the cache limitation.
+No new official RSS items or captured structured alerts after 06:00; this is not
+proof of universal news absence. No new discovery or redemption run.
+
+Native aUSDC was 85.047424 at fixed Polygon block 95,165,735, +0.001147 from
+06:00. The instantaneous variable native USDC rate was 2.9606316%, while the
+cached 2.99% marginal hurdle was about four hours old. UNI $7.84/$3.25 and AAVE
+$172.56/$105 remained WATCH with no hit; quote providers/times were not emitted.
+Authenticated orders were empty; no overdue decisions; UMA 40 positions/38
+markets refreshed/0 alerts; Ostium 0 trades/0 limits/no change; position state
+CLEAN. Four daemons were canonical/current. Disk 381.67 MiB, below warning and
+above critical; no safe cleanup. Hormuz dust remains 0.003571 shares against
+estimated $0.005010–$0.005021 gas using prior simulated units; no new simulation,
+redemption or broadcast. The known Gemini freshness limitation was already
+notified at 06:26 (message 1111); no repeat Telegram was needed.
+
+Weekly P&L is due around Oct-9 and monthly emergency-path/fee drill around
+Oct-12. Off-chain stock/brokerage Sunday review remains retired.

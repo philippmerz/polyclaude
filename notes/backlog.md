@@ -1,3 +1,33 @@
+## Oct-8 10:00 light check — HOLD / NO ADD; Gemini freshness guard closed
+
+- Bankroll interval 10:02:42.889789–10:03:03.776846 UTC: total $186.44, gas
+  $6.41, PM midpoint/depth $35.12/$32.07, position cost $47.64, settled
+  residual +$22.54; trading midpoint/depth $180.03/$176.98, whole depth $183.39
+  (+4.11% depth vs $170 before VM/API costs). Separate positions and quick
+  readings match rounded PM values but are not synchronized. Printed gap $3.06;
+  displayed gap $3.05 from rounding.
+- **HOLD / NO ADD** on retained judgmental HLE priors and source evidence. G/O
+  priors .12/.25 central, .03/.15 stress, .25/.38 upper and correlations
+  unchanged. OpenAI fee-net exit $2.7531; central/upper/correlation reject full
+  and partial trims; stress's full 19-share per-leg exit is not joint optimum.
+  Clarity remains 29/29 against $29 floor; fee-net full $27.989524, free-carry
+  $28.179399. Gemini GET387.131s and POST387.696s fail180s guard; no current G
+  exit or combined trim is certified. Gemini drawdown −81.1%; Kelly delta −$8.73.
+- 23 official captures HTTP200/hash-verified; HLE60, Senate256, five Gamma
+  material fields and UNI/Arc roles match 06:00. Gamma raw hashes changed; HLE
+  API Age header1833s is a cache limitation. No new captured RSS/structured
+  alerts after06, not universal news absence. UNI $7.84/$3.25 and AAVE
+  $172.56/$105 WATCH/no hit; provider/times omitted. Native aUSDC85.047424 at
+  block95165735 (+.001147), variable rate2.960632%; cached marginal2.99% ~4h old.
+- Orders empty, no overdue decisions, UMA0 alerts, Ostium0 trades/limits/no
+  change, state audit clean. Four daemons canonical/current; disk381.67MiB,
+  no safe cleanup. Dust .003571 remains below estimated gas $.005010–$.005021
+  using prior simulated units; no new simulation/redemption/broadcast.
+- All19 routine types returned rc0; Kelly received fresh bankroll186.44. Full
+  stream/hash manifest: `logs/periodic_20261008T1000/routine/run.json`. No asset,
+  order, transfer or position action. Weekly P&L due Oct-9; monthly drill due
+  Oct-12; off-chain stock/brokerage Sunday review remains retired.
+
 ## Oct-8 06:00 light check — HOLD / NO ADD; G freshness gate closed
 
 - Completed bounded read-only check. Authoritative bankroll interval
