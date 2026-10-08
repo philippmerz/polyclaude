@@ -1,3 +1,31 @@
+## Oct-8 06:00 light check — HOLD / NO ADD; G freshness gate closed
+
+- Completed bounded read-only check. Authoritative bankroll interval
+  06:02:24.747256–06:02:45.332248 UTC: total $186.34, gas $6.36, PM
+  midpoint/depth $35.07/$31.99, position cost $47.64, settled residual +$22.54;
+  whole depth $183.26, ex-gas trading midpoint/depth $179.98/$176.90
+  (+4.06% vs $170 before VM/API costs). Depth is indicative and sequential.
+- **HOLD / NO ADD.** Clarity pair remains 29/29 against $29 floor; fee-net full
+  exit $27.989524 ($28.181708 free-carry sensitivity) remains below floor.
+  Retain judgmental HLE p(NO) priors .12/.25; no posterior calibration. OpenAI
+  central/upper/correlation cases reject full/partial trims; stress's all-19
+  per-leg exit is not a joint optimum. Gemini current exit and combined trim are
+  uncertified: GET age334.131s and bounded POST age530.607s both fail180s guard.
+- All23 official captures passed integrity checks; full HLE60, Senate256,
+  five Gamma requested fields and UNI/Arc configuration match 02:00. UNI
+  $7.72/$3.25 and AAVE $171.99/$105 are WATCH/no hit (providers and per-asset
+  quote times omitted); native aUSDC
+  85.046277, rate2.991210%. Orders empty; overdue decisions none; UMA0 alerts;
+  Ostium0 trades/limits/no change. Disk389.51MiB, no safe cleanup. No new
+  redemption or broadcast; dust payout remains below estimated gas using prior
+  simulated units.
+- Routine transparency: 20 actual invocations = 19 required types plus the
+  preserved malformed Kelly attempt rc2. Corrected Kelly at fresh $186.34 and
+  the other18 commands returned rc0. Full captures/hashes under
+  `logs/periodic_20261008T0600/routine/`; no asset/order/transfer action.
+- Weekly P&L due around Oct-9; monthly emergency-path/fee drill around Oct-12.
+  Sunday off-chain stock/brokerage rotation remains retired.
+
 ## Oct-8 02:00 full check — HOLD / NO ADD; audit rereads completed
 
 - The full routine captured20 distinct commands once (19 rc0; initial

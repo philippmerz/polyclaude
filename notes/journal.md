@@ -25931,3 +25931,58 @@ existing chart tests passed 10/10. CSV141 observations/61 midpoint/54 depth
 rows; pre-existing history and unrelated runtime changes were preserved.
 No Telegram was sent: no material trade, prior change, source finding or new
 incident arose. The known disk warning remains under the existing guard.
+
+
+## 2026-10-08 06:00 UTC — light check; HOLD / NO ADD, Gemini book stale
+
+The authoritative bankroll read ran 06:02:24.747256–06:02:45.332248 UTC:
+whole-account mark $186.34, including $6.36 separately funded gas; PM midpoint
+$35.07 and fee-net depth $31.99; position cost $47.64; settled accounting
+residual +$22.54. Whole-account indicative depth was $183.26. Ex-gas trading
+midpoint/depth were $179.98/$176.90 (+4.06% vs $170 before VM/API costs).
+Positions and quick status separately returned the same rounded PM amounts, but
+sequential readings do not establish synchronization. Bank printed gap $3.09
+versus $3.08 from displayed rounded fields. Depth is indicative, not guaranteed;
+VM/API costs remain excluded.
+
+Position read interval was 06:02:00.633099–06:02:06.017455; quick status was
+06:04:23.017509–06:04:25.495701. The check retained a $29 floor for the complete
+29/29 Clarity pair; current fee-net full exit $27.989524 ($28.181708 with
+optimistic free carry) remains below it. Exact criteria and all 256 official
+Senate rows were unchanged; H.R. 3633's sole recorded vote remains rejected
+cloture on the motion to proceed. HOLD the complete pair / NO ADD.
+
+HLE central p(NO) priors remain judgmental .12/.25, with stress .03/.15, upper
+.25/.38 and existing correlation scenarios. The 60-row source and five held
+market identities/criteria/status fields match 02:00; stability is not posterior
+calibration and HLE-Diamond interpretation risk remains. OpenAI's fee-net exit
+was $2.7531; central/upper/correlation proofs reject its full and partial exit.
+Stress separately prefers all 19 OpenAI shares as a per-leg alternative, not a
+joint optimum. Gemini's GET book age was 334.131 seconds and bounded POST retry
+age 530.607 seconds, both beyond the 180-second guard. Therefore no current
+Gemini exit or combined trim is certified. Retain HOLD / NO ADD; no order.
+Gemini's drawdown alert is −81.4% on cost.
+
+Native aUSDC was 85.046277 at fixed Polygon block 95,156,194, +0.001130; current
+instantaneous native USDC reserve rate was 2.991210%. All $47.319630 pUSD was
+uncommitted. UNI $7.72/$3.25 and AAVE $171.99/$105 remained WATCH with no hit;
+per-asset quote provider/times were not emitted. Authenticated orders were
+empty; no overdue decisions; UMA 40 positions/38 markets refreshed/0 alerts;
+Ostium 0 trades/0 limits and unchanged. No structured public alerts or official
+RSS items after 02:00; limited captures do not prove universal news absence.
+Four daemons were unique/current. Disk was 389.51 MiB, below warning and above
+critical; no safe cleanup candidate. Archived Hormuz claim remains 0.003571
+shares versus estimated current-gas $0.004869–$0.004880 using prior simulated
+units; no new simulation, redemption, or broadcast.
+
+The routine's actual 20 invocations represent 19 required command types plus
+the preserved malformed Kelly attempt (rc=2, missing the bankroll value). A
+single corrected Kelly invocation used fresh bankroll $186.34 and returned
+rc=0; the other 18 commands returned rc=0. Captures and hashes are in
+`logs/periodic_20261008T0600/routine/run.json`; the untouched initial record is
+`run_initial_failure.json`. No asset, order, transfer or position action occurred.
+All 23 official captures passed integrity checks. The source audit matched all
+60 HLE rows, all 256 Senate rows, five Gamma requested fields, and UNI/Arc
+configuration to 02:00; raw Gamma responses changed. The weekly
+P&L review is due around Oct-9 and monthly emergency-path/fee drill around
+Oct-12. Off-chain stock/brokerage Sunday review remains retired.
