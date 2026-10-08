@@ -26118,3 +26118,59 @@ Event scan had no positive; sports had no positive >3pp; six favorite-fade items
 are population hints, not entries. No validated entry or new asset action. The
 known Gemini freshness notice was already sent at 06:26 (message 1111); no repeat
 Telegram was warranted.
+
+
+## 2026-10-08 18:00 UTC — light check; HOLD / NO ADD, Gemini freshness guard closed
+
+The 19 required light-routine command types ran once, all rc=0; all 38 captured
+stdout/stderr hashes verified. The manifest and immutable streams are in
+`logs/periodic_20261008T1800/routine/run.json`. Kelly received the fresh $185.93
+bankroll. No position, order, cancel, signing, transfer, redemption or broadcast
+action occurred. No discovery or redemption run was part of this light check.
+
+The authoritative bankroll read ran 18:03:00.381656–18:03:16.646884 UTC:
+whole-account mark $185.93 including $5.99 separately contributed gas, PM
+midpoint/depth $35.03/$31.62, cost $47.64, and rounded settled accounting
+residual +$22.55. Ex-gas trading midpoint/depth were $179.94/$176.53; whole
+account depth was $182.52, or +3.84% versus $170 before VM/API costs. Depth fell
+$0.07 since 14:00. The rounded residual increased $0.01; this does not establish
+new settled trade profit. The printed/displayed PM gap was $3.41. Positions
+18:02:39.011187–18:02:41.032596 and quick status 18:03:33.490882–18:03:36.049834
+separately reported the same rounded PM values. They are sequential snapshots,
+not synchronized NAV; depth is indicative, not certified liquidation proceeds.
+
+HOLD / NO ADD. The complete Clarity 29/29 pair's fee-net full exit is $27.989524
+($28.177689 under the optimistic free-carry bound), below its $29 payout floor.
+All 256 Senate rows and exact criteria matched 14:00; H.R. 3633's recorded vote
+remains rejected cloture on a motion to proceed. Retain judgmental HLE p(NO)
+priors .12/.25 central, .03/.15 stress, .25/.38 upper and existing correlations.
+Source stability does not calibrate a posterior; HLE-Diamond interpretation risk
+remains. OpenAI fee-net full exit is $2.384044; central, stress, upper, and
+correlation cases favor hold at this price. Kelly's midpoint +$5.10 is advisory;
+the fresh $0.2064 all-in ask fails the pessimistic p=.15 EV check, so NO ADD.
+Gemini GET age 193.229998s and one POST age 193.767213s exceeded the 180s guard.
+No current G exit or combined trim is certified. OpenAI and Clarity planning
+quotes passed freshness only at receipt, so later action requires a fresh rewalk.
+Gemini drawdown was −81.4%; individual Kelly sizing delta was −$8.71.
+
+Source audit covered 25 HTTP-200 captures with hashes verified. HLE's 60 rows,
+256 Senate rows, five Gamma identity/criteria/status records, and UNI/Arc
+configuration matched 14:00. The HLE HTTP cache Age was 1832s, not dataset time.
+Two new Google RSS articles were reviewed; neither contained HLE/model-benchmark
+facts. No new structured public alerts after 14:00; this is not universal news
+absence. No priors changed. Native aUSDC was 85.049712 at Polygon block 95,184,902,
+up .001139; instantaneous variable native-USDC supply rate was 2.9454110957%.
+The cached 2.99% marginal hurdle was 12h old. All $47.319630 pUSD remained
+uncommitted. Hormuz dust .003571 shares remained below estimated gas
+$0.004681797–$0.004692063 using current gas and bank POL rounding with prior
+175036 simulated units; no new simulation or broadcast. UNI $7.04/$3.25 and AAVE
+$161.14/$105 remained WATCH, no hit; quote providers/timestamps were not emitted.
+Authenticated orders were empty with terminal cursor LTE=; no overdue decisions;
+UMA 40/38/0; Ostium zero trades/limits/no change; state CLEAN. Four daemons were
+healthy/current/unique; free disk space was 329.89 MiB, below warning and above
+critical, with no safe obsolete cleanup candidate. The active CLI binary was
+retained, the hourly guard stayed on its 24-hour warning cadence, and no daemon
+was restarted.
+
+Weekly P&L is due around Oct-9; monthly emergency-path/fee drill around Oct-12.
+Off-chain stock/brokerage Sunday review remains retired.

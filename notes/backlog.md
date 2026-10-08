@@ -1,3 +1,38 @@
+## Oct-8 18:00 light check — HOLD / NO ADD; Gemini freshness guard closed
+
+- Bankroll 18:03:00.381656–18:03:16.646884 UTC: total $185.93, gas $5.99,
+  PM midpoint/depth $35.03/$31.62, cost $47.64, rounded settled accounting
+  residual +$22.55. Ex-gas trading midpoint/depth $179.94/$176.53; whole depth
+  $182.52, +3.84% versus $170 before VM/API. Positions and quick status at their
+  distinct actual intervals separately match rounded PM values; these are
+  sequential marks, not synchronized NAV or executable proceeds. Printed/displayed
+  PM gap $3.41; depth down $0.07 vs 14:00. The rounded residual increased
+  $0.01; this does not establish new settled trade profit. No asset action.
+- **HOLD / NO ADD.** Clarity 29/29 fee-net full exit $27.989524; free-carry
+  bound $28.177689, both below $29 floor. Keep HLE priors .12/.25 central,
+  .03/.15 stress, .25/.38 upper and correlations unchanged. OpenAI fee-net exit
+  $2.384044; all central/stress/upper/correlation cases favor hold. Kelly +$5.10
+  is advisory; fresh ask $0.2064 fails stress p=.15, so NO ADD. G GET 193.23s and
+  one POST 193.77s fail 180s freshness; no current G exit/combined trim certified.
+  OpenAI/Clarity planning quotes passed freshness at receipt only; rewalk for action.
+  Gemini drawdown −81.4%, Kelly delta −$8.71.
+- 25 official-source captures HTTP 200/hash-verified. HLE 60, Senate 256, five
+  Gamma identity/criteria/status fields, and UNI/Arc configuration match 14:00.
+  HLE Age 1832s is
+  HTTP cache age, not dataset time. Two new Google RSS items contain no HLE or
+  benchmark fact; no new structured alerts after 14:00, not universal absence.
+  Native aUSDC 85.049712 at block 95,184,902 (+.001139), variable rate 2.945411%;
+  cached marginal 2.99% is 12h old. Watch no hits: UNI $7.04/$3.25, AAVE
+  $161.14/$105; quote providers/times unavailable. Orders empty, overdue 0,
+  UMA 0 alerts, Ostium 0 trades/limits/no change, state CLEAN; four daemons healthy.
+  Capacity 329.89 MiB, below 512/above 128, no safe cleanup/restart. Active CLI
+  retained and hourly guard remained on 24h warning cadence. 19 routine
+  command types once, all rc0; no discovery/redemption run in this light check.
+- Hormuz dust .003571 remains below estimated gas $0.004682–$0.004692 using current
+  gas/POL mark and prior 175036 simulated units; no new simulation/broadcast.
+  No position/order/cancel/sign/transfer/redemption/broadcast action. P&L Oct9,
+  drill Oct12; stock/brokerage Sunday review remains retired.
+
 ## Oct-8 14:00 full check — HOLD / NO ADD; G freshness guard closed
 
 - Bankroll 14:03:16.851917–14:03:33.990032 UTC: total $186.34, gas $6.36,
