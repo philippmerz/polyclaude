@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-10-01",
+ "_updated": "2026-10-08",
  "_groups": {
   "treasury-5y-monotonicity-2026": {
    "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -161,9 +161,9 @@
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
-  "verified": "2026-09-30",
-  "criteria_read": "2026-09-30",
-  "current_assessment": "Sep-30 live source-diff and criteria reread found no drift. The contract still resolves YES only for permanent cessation before Dec-31 or an earlier resignation/removal announcement; it excludes temporary Section 3, unsustained Section 4, and impeachment without removal, includes sustained Section 4, and uses consensus credible reporting. The any-period/permanent-removal textual tension remains. Current White House releases through Sep-28 identify Trump as President and contain no qualifying cessation or announcement. Retain p_no=0.97; HOLD / NO ADD / NO FLIP. The zero-fill 28-NO maker sell at .97 remains the fee-free fair-value exit route.",
+  "verified": "2026-10-08",
+  "criteria_read": "2026-10-08",
+  "current_assessment": "Oct-8 live criteria/source reread: exact description SHA-256 7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9 matches the Sep-30 source on every operative clause. Permanent cessation or a pre-cutoff resignation/removal announcement qualifies; temporary Section 3, unsustained Section 4 and impeachment without removal are excluded, while sustained Section 4 qualifies. Consensus credible reporting remains the resolution source; the any-period/permanent-removal textual tension is unchanged and remains interpretation risk. The captured White House releases feed includes Oct-7 President Trump activity with no qualifying cessation announcement in that feed; this is a limited-source observation, not proof of universal absence or a calibrated probability. Retain judgmental p_no=0.97; HOLD / NO ADD / NO FLIP for the remaining0.33 NO shares. Authenticated orders are empty; the historical zero-fill28-share maker order is no longer current. Historical Congress/medical claims were not newly reverified and are not promoted as current evidence.",
   "key_facts": [
    {
     "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
@@ -254,6 +254,18 @@
     "source": "https://www.whitehouse.gov/releases/",
     "source_date": "2026-09-28",
     "checked": "2026-09-30"
+   },
+   {
+    "claim": "SOURCE-DIFF 2026-10-08: current Gamma description SHA-256 7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9 is identical to the Sep-30 description. All operative clauses, Dec-31 11:59PM ET cutoff, immediate pre-cutoff announcement rule, permanent-removal narrowing, temporary-removal exclusions, sustained Section4 inclusion and consensus-credible-reporting source remain unchanged. The opening any-period/permanent-removal tension remains interpretation risk.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "source_date": "2026-10-08",
+    "checked": "2026-10-08"
+   },
+   {
+    "claim": "The Oct-8 captured White House releases feed includes Oct-7 President Trump activity (Texas record release) and no resignation/removal/Section4 transfer announcement among the captured feed entries. This is feed-limited evidence, not universal absence; no new medical or Congress verification is claimed.",
+    "source": "https://www.whitehouse.gov/releases/",
+    "source_date": "2026-10-07",
+    "checked": "2026-10-08"
    }
   ]
  },
@@ -1105,26 +1117,26 @@
  },
  "will-over-50-senators-vote-for-the-clarity-act-20260729193533307": {
   "p_yes": 0.5,
-  "verified": "2026-09-30",
-  "criteria_read": "2026-09-30",
+  "verified": "2026-10-08",
+  "criteria_read": "2026-10-08",
   "cluster": "clarity-act-senate-threshold-monotonicity",
   "rho_within": 1.0,
   "cluster_frac": 0.1463,
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
-  "current_assessment": "Conservative portfolio floor prior: P(over 50 Senators vote Yea)=0.50. Sep-30 live Gamma descriptions remain byte-identical across both legs (SHA-256 35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693), with matching Jan-2 operational end metadata and a written qualifying cutoff before Jan-1. The Sep-15 cloture vote on the motion to proceed is explicitly excluded. Paired with over-58 NO, every written terminal state pays at least $1 per equal pair. HOLD the complete pair; never transact this leg independently.",
+  "current_assessment": "Oct-8 source reread: both live descriptions are byte-identical, SHA-25635bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693, unchanged from Sep-30. Both operational ends remain Jan-2 04:59Z, while the literal qualifying cutoff is before Jan-1. Strict over50/over58 thresholds use only the first full-Senate final-passage vote; cloture, motions to proceed, amendments, later reconsideration and post-announcement tally changes are excluded. No qualifying vote gives both NO; qualifying voice/unanimous passage without a prior recorded final vote gives both YES. For every stated branch, equal over50YES plus over58NO has a criteria-consistent logical payout floor of $1 per pair ($29 for29/29), with a 51-58Yea bonus branch. The current Senate256-row capture contains only Sep15 rejected cloture on the motion to proceed for HR3633, not qualifying final passage. The stored0.50 leg values are conservative paired-floor accounting weights, not separately calibrated forecasts or independent trade authority. HOLD the complete pair / NO ADD; never transact one leg independently.",
   "latest_catalyst": "Sep-22 topology reconciliation: live Gamma reports both event legs at endDate 2027-01-02T04:59Z while the stored topology used Jan-1; no archived raw snapshot establishes when or whether that metadata changed. Their identical text still admits only a qualifying vote before Jan-1. Both remain event 769594, active, open, negRisk=false and UMA-unproposed. Updating the stored operational end date restores validation without changing the semantic cutoff or $29 floor."
  },
  "will-over-58-senators-vote-for-the-clarity-act-20260729193533309": {
   "p_no": 0.5,
-  "verified": "2026-09-30",
-  "criteria_read": "2026-09-30",
+  "verified": "2026-10-08",
+  "criteria_read": "2026-10-08",
   "cluster": "clarity-act-senate-threshold-monotonicity",
   "rho_within": 1.0,
   "cluster_frac": 0.1463,
   "arb_paired": "DEC-0139 Clarity Act Senate threshold pair: trade and manage only as equal over-58 NO + over-50 YES shares through the guarded pair executor.",
   "note": "PAIR-ONLY LEG. Never enter, add, trim, or exit independently. The 0.50 floor prior assigns zero probability to the 51-58 vote-count bonus state and values only the pair's guaranteed logical floor.",
-  "current_assessment": "Conservative portfolio floor prior: P(not over 58 Senators vote Yea)=0.50. Sep-30 live Gamma descriptions remain byte-identical across both legs (SHA-256 35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693), with matching Jan-2 operational end metadata and a written qualifying cutoff before Jan-1. The Sep-15 cloture vote on the motion to proceed is explicitly excluded. Paired with over-50 YES, every written terminal state pays at least $1 per equal pair. HOLD the complete pair; never transact this leg independently.",
+  "current_assessment": "Oct-8 source reread: both live descriptions are byte-identical, SHA-25635bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693, unchanged from Sep-30. Both operational ends remain Jan-2 04:59Z, while the literal qualifying cutoff is before Jan-1. Strict over50/over58 thresholds use only the first full-Senate final-passage vote; cloture, motions to proceed, amendments, later reconsideration and post-announcement tally changes are excluded. No qualifying vote gives both NO; qualifying voice/unanimous passage without a prior recorded final vote gives both YES. For every stated branch, equal over50YES plus over58NO has a criteria-consistent logical payout floor of $1 per pair ($29 for29/29), with a 51-58Yea bonus branch. The current Senate256-row capture contains only Sep15 rejected cloture on the motion to proceed for HR3633, not qualifying final passage. The stored0.50 leg values are conservative paired-floor accounting weights, not separately calibrated forecasts or independent trade authority. HOLD the complete pair / NO ADD; never transact one leg independently.",
   "latest_catalyst": "Sep-22 topology reconciliation: live Gamma reports both event legs at endDate 2027-01-02T04:59Z while the stored topology used Jan-1; no archived raw snapshot establishes when or whether that metadata changed. Their identical text still admits only a qualifying vote before Jan-1. Both remain event 769594, active, open, negRisk=false and UMA-unproposed. Updating the stored operational end date restores validation without changing the semantic cutoff or $29 floor."
  }
 }

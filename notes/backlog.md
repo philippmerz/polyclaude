@@ -1,3 +1,49 @@
+## Oct-8 02:00 full check — HOLD / NO ADD; audit rereads completed
+
+- The full routine captured20 distinct commands once (19 rc0; initial
+  `position_state_audit --fix` rc1). After the initial audit flagged Trump
+  criteria due, the follow-up reread matched the Sep-30 description and current
+  limited White House feed; Clarity was then found due and separately reread.
+  Final audit was CLEAN. Those follow-up command intervals were not recorded;
+  capture-file mtimes are not command intervals. Oct-8 criteria dates changed;
+  probabilities, exact positions, groups and historical records did not.
+- Bankroll interval02:02:33.233–54.496: total$188.09, gas$6.42, PM midpoint/
+  depth$36.76/$31.65, cost$47.64, settled residual+$22.54. Separate positions
+  interval02:02:12.367–14.834 gave36.76/31.66; quick02:03:13.209–15.726 gave
+  36.76/31.95. Indicative whole depth182.98; ex-gas trading midpoint/depth
+  181.67/176.56 (+3.86% vs170). Midpoint/depth walks are sequential estimates.
+- Exact held shares and pUSD remain unchanged; pUSD47.319630 uncommitted.
+  Native aUSDC85.045147 at block95146631 accrued.001138. Live supply2.844507%;
+  cached hurdle2.85% is20h old. Gemini70.6% drawdown alert persists. No overdue
+  decisions; authenticated orders empty; UMA40/38/0alerts, Ostium0trades/
+  0limits unchanged, crux rc0 silent. UNI7.92/$3.25 and AAVE174.11/$105 remain
+  WATCH; no trigger.
+- Current risk review retains p(NO).12/.25, stress.03/.15, upper.25/.38 and
+  correlations; no new calibrated posterior. G/O fee-net exits1.901821/2.384044.
+  Central joint analysis rejects full/partial/combined trims with or without
+  optimistic carry. Stress has only a per-leg G alternative23.43 shares/net
+  .472834 (25.17/.507953 with free carry); O stress favors hold. Clarity
+  remains complete29/29 against floor29; full exit28.2692, carried28.4543.
+  HOLD / NO ADD; no price-recovery assumption.
+- All24 official source captures returned HTTP200 and passed integrity checks;
+  HLE60, five held contract identity/criteria/status fields and Senate256 rows
+  are unchanged. New Google RSS fuel-prices item is unrelated; captured alerts
+  empty after22:00, not universal news absence. UNI proposal102/Arc roles match
+  published configuration, which does not prove fees/burn. Watchlist source
+  timestamps are not emitted.
+- Discovery corrections preserved: final primary default80 and thin-tail500
+  comparisons/packets, 77batches/1,389 rows, no vetted entry. Initial top40 and
+  liquidity100 calls were corrected without overwriting captures. Primary9 and
+  tail294 criteria-object additions are resolutionSource only; literal text
+  unchanged. Sports consensus had no positive >3pp lead; consistency slice
+  incomplete (14/186 requested,9 quoted,5 failures,172 unrequested,one malformed).
+- Indexed redeem dry-run0/7 winners, three losing/uncertain skipped; archived
+  .003571 claim remains below estimated gas. Capacity404.8MiB below512 warning/
+  above128 critical; scoped census no safe obsolete artifact. Four daemons
+  current. CSV141 observations/61 midpoint/54 depth rows. Weekly P&L aroundOct9,
+  monthly fee/emergency drillOct12; off-chain Sunday workflow remains retired.
+  No assets, order, cancellation, transfer or broadcast action.
+
 # Polyclaude Backlog
 
 ## Oct-7 22:00 periodic check — HOLD / NO ADD; known disk warning

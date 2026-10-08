@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 140 recorded observations from the Apr-25 inception through
-Oct-7. Rounded reconstructions are labeled; unsupported historical values stay
+The chart now has 141 recorded observations from the Apr-25 inception through
+Oct-8. Rounded reconstructions are labeled; unsupported historical values stay
 blank. The [source audit](research/2026-10-06-performance-history.json) records
 the remaining gaps and accounting limits.
 
@@ -19,7 +19,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only
 the repository's vetted execution paths.
 
-**Last maintained:** 2026-10-07. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-08. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -50,113 +50,108 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-07 22:02 UTC
+## Last bankroll snapshot — 2026-10-08 02:03 UTC
 
-Bankroll ran 22:01:46–22:02:04 UTC: PM midpoint $35.76 and depth $32.19.
-Positions at 22:01:23–26 and quick status at 22:02:20–23 showed the same
-rounded PM values. These are separate sequential readings without per-asset
-quote times; the bankroll observation remains the financial snapshot.
+The authoritative bankroll read ran 02:02:33.233–02:02:54.496 UTC. It reports
+PM midpoint $36.76 and net depth/fee value $31.65. The separate positions run
+(02:02:12.367–02:02:14.834) reported $36.76/$31.66, and quick status
+(02:03:13.209–02:03:15.726) reported $36.76/$31.95. Sequential depth walks are
+indicative rather than synchronized or guaranteed proceeds; the bank read had
+no missing-token/provider warning.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint | $35.76 |
-| Indicative depth/fee value | $32.19 |
-| Authoritative whole-account mark | $187.06 |
-| Approximate whole-account depth value | $183.49 |
+| Polymarket midpoint / bank depth | $36.76 / $31.65 |
+| Authoritative whole-account mark | $188.09 |
+| Approximate whole-account depth | $182.98 |
 | Settled P&L accounting residual, before VM/API costs | +$22.54 |
 
+The bank includes $6.42 of separately contributed gas. Excluding gas, indicative
+trading midpoint is $181.67 and depth is $176.56, or +3.86% versus $170 before
+VM/API costs. Trading midpoint is up $1.01 and depth is down $0.53 since Oct-7
+22:00; settled P&L is unchanged. These figures do not represent settled cash.
+
 The held **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES
-plus 29 over-58 NO shares at $28.32893 all-in against a criteria-consistent
-$29.00 payout floor; manage it only as a complete position. Its complete
-exit is about $28.25. Both contracts retain their exact criteria; the current
-official Senate XML returned all 256 unique roll calls. H.R.3633’s only
-recorded vote remains rejected cloture on a motion to proceed, not final
-passage. Voice-vote and unanimous-consent branches retain the paired floor.
+and 29 over-58 NO shares, $28.32893 all-in against a $29 payout floor. Its
+fee-net full exit is $28.2692 ($28.4543 with an optimistic free-carry
+sensitivity), still below the floor. The Oct-8 criteria reread confirmed both
+literal descriptions and the 29/29 floor; all 256 official Senate roll-call
+rows remain unchanged. H.R. 3633’s only recorded vote is rejected cloture on a
+motion to proceed, not final passage. **HOLD the complete pair / NO ADD**; never
+manage either leg independently.
 
-Remaining HLE holdings are **102.084750 Gemini >=50 NO** and **19 OpenAI
->=55 NO**. Their judgmental p(NO) priors remain **.12/.25**, stressed **.03/.15**.
-The resolving 60-row source and all IDs/accuracy/calibration values are
-unchanged: Gemini’s maximum is 46.2, OpenAI’s 53.6. Google’s official
-[Gemini 4 Argon announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)
-contains no Pro label or HLE score. The separate September 22
-[HLE-Diamond release](https://agi.safe.ai/blog/hle-diamond) uses a refined
-1,000-question subset; the mounted HLE Accuracy chart still uses the
-original dataset/API. Diamond creates material interpretation risk under
-the contracts’ equivalent-metric clause. HOLD / NO ADD includes that risk;
-source stability supplies no newly calibrated posterior.
+Remaining HLE holdings are **102.084750 Gemini >=50 NO** and **19 OpenAI >=55
+NO**. Judgmental p(NO) priors remain **.12/.25**, stress **.03/.15**, with
+upper **.25/.38** and the existing correlation scenarios. The current 60-row
+source is unchanged; Gemini and OpenAI maxima remain 46.2 and 53.6. HLE-Diamond
+still creates material equivalent-metric interpretation risk, and source
+stability is not a calibrated posterior. Fee-net full exits are **$1.901821 /
+$2.384044** for Gemini/OpenAI. The central joint model rejects full, partial and
+combined trims, including the optimistic free-Aave-carry case. Stress separately
+shows a small Gemini trim as a per-leg alternative (23.43 shares / $0.472834;
+25.17 / $0.507953 with free carry); it is not a joint optimum, while the OpenAI
+stress case favors holding. Both new buys fail the stress EV check. The planning
+books were 3.07–36.90 seconds old within the 180-second guard; any later action
+still requires a fresh rewalk. **HOLD / NO ADD**, without a price-recovery
+assumption.
 
-The **Gemini Pro debut NO position is closed**, with zero on-chain balance.
-Its forecast remains archived and unresolved. Full fee-net G/O exits are
-about **$1.16/$2.75** in separate current planning quotes. Central joint models
-reject full, partial and combined exits even with optimistic free Aave
-redeployment. The pessimistic model separately favors about 10.06 Gemini
-shares (11.92 with free carry) or all 19 OpenAI shares; these are not a joint
-optimum. **HOLD / NO ADD** remains a model-sensitive judgment, with no
-price-recovery assumption. Both new buys fail pessimistic EV at current asks.
-Gemini's midpoint drawdown is 79.8%; the alarm received source and joint-risk review.
+The **0.33 Trump-out NO** remains, with p(NO) 0.97 and no open orders. Its
+Oct-8 reread matched the prior market description; an earlier resignation or
+removal announcement qualifies, while temporary Section 3, unsustained Section 4
+and impeachment without removal do not. The any-period/permanent-removal wording
+tension remains an interpretation risk. The captured White House releases feed
+showed Oct-7 presidential activity but no qualifying announcement; that is a
+limited-source observation, not proof of universal absence. Historical
+Congress/medical claims were not newly reverified.
 
-**0.33 Trump-out NO remains** in value, cost and claim-insurance records.
-Complete authenticated inventory has **no open orders**. All **$47.319630
-pUSD is uncommitted**. Identity, transaction and source evidence are in
-[`notes/resting_orders.md`](notes/resting_orders.md) and
-[`notes/journal.md`](notes/journal.md).
+All **$47.319630 pUSD** is uncommitted. Native Polygon aUSDC was **85.045147** at
+block 95,146,631, up 0.001138 from the prior fixed-block reading; the live
+supply rate was 2.844507%. The cached 2.85% marginal hurdle is 20 hours old and
+is not the live reserve rate. Gemini's current mark is $0.046, down 70.6% on
+cost; the drawdown alert remains. No overdue decision or new watchlist trigger.
 
-About **$85.04 native aUSDC** earns the variable Polygon Aave supply rate
-(2.895% read during this run); legacy aUSDC.e is about $3.50. The
-midpoint-to-depth difference is $3.57. Excluding $6.40 of separately funded
-gas gives indicative trading depth **$177.09 versus $170 (+4.17%)**, before
-VM/API costs. This is down $.44 since 18:00, with settled P&L unchanged.
-Trading midpoint is $180.66, down $.31. Exact held quantities and pUSD are
-unchanged; native aUSDC 85.044009 accrued .001120 since the prior fixed-block check.
+UNI at $7.92 remains above its $3.25 review gate; AAVE at $174.11 remains above
+$105. Both are WATCH, not entry instructions. The validated route prefers CoinGecko
+and has a fresh DefiLlama fallback, but output omits which provider supplied
+each quote and its update time. Proposal 102 remains Executed on two
+Ethereum RPCs at block 26,144,560; Arc getter roles at block 24,826,640 match
+the published TokenJar and fee adapters. Configuration does not establish
+collections, releaser activity or sustainable net burn.
 
-Two Ethereum RPCs confirm UNI Arc proposal 102 remains **Executed** at
-block 26,143,363. Arc controls at block 24,798,179 retain the
-[published TokenJar/fee-adapter roles](https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287).
-Configuration alone does not verify collections, releaser activity or
-sustainable net burn. UNI $7.75 remains above the $3.25 review gate;
-no allocation follows from that milestone. The active project watchlist
-contains UNI and AAVE review gates (AAVE $173.11 versus $105). The validated crypto price
-route produced no warning; the current provider and individual update times
-were not emitted by the watchlist command. Off-chain stock/brokerage monitoring
-and its Sunday rotation were retired on Oct 6. See the
-[`project watchlist`](notes/longterm_watchlist.md); prior mixed research
-is retained as a dated archive. dYdX remains an unfunded venue candidate;
-the managed book has no deliberate broad BTC/ETH/SOL allocation.
+The Oct-8 official-source window returned HTTP 200 for all 24 captures. The HLE
+API and all 60 parsed rows match the Oct-7 baseline; the five held market
+identities/criteria/status fields and all 256 Senate rows are unchanged. One new
+Google RSS article, about UK fuel prices, is unrelated to HLE. Captured structured
+alerts had no qualifying post-22:00 entry; this check does not prove universal
+absence of news. UNI/Arc configuration matches the published roles, with the
+same limits on inferring fee collection or burn.
 
-The strict Oct-1 passive benchmarks are **VT $178.95, VTI $181.40 and
-SPY $182.00** for the same timed contributions. Current indicative trading
-depth is **$1.86/$4.31/$4.91 below VT/VTI/SPY** at those dated values.
-This comparison mixes timestamps and excludes operating costs;
-see the [`weekly report`](notes/pnl_weekly.md).
+The corrected discovery review produced no lead for live pricing or entry. Its
+primary comparison used the default top 80 and the thin-tail comparison used
+liquidity 500; the earlier top-40/liquidity-100 captures were retained, then
+corrected passes and offline packets were preserved. Primary and thin-tail
+literal questions/descriptions were unchanged; their new criteria-object fields
+were resolution-source additions only. Sports consensus produced no positive
+lead above 3pp, and the consistency scan was incomplete. Omissions do not prove
+market closure.
 
-An archived Hormuz NO claim holds **.003571 winning shares**. Its gas/price
-estimate is about $.00498–.00499, above the payout, using current gas, the rounded
-same-run POL mark and prior simulated gas units rather than a new simulation.
-The Oct-7 14:02 indexed redemption dry-run found zero winning claims; exact
-archived claim quantities and resolution states are unchanged. Retain the
-claim for lower fees; there is no cash need or expiry. Standard CTF redemption
-verifies exact asset, collateral and positive on-chain payout before preparing a transaction.
+The archived Hormuz NO claim remains **0.003571** winning shares. Using the
+Oct-8 gas price and prior 175,036-unit estimate gives indicative fees of about
+$0.005054–$0.005065 against the payout; this was not a fresh gas simulation.
+The Oct-8 indexed redemption dry-run found 0/7 winners and skipped three
+losing/uncertain rows; nothing was broadcast. Four daemons were current and
+unique. Disk was 404.8 MiB, below the 512 MiB warning and above the 128 MiB
+critical threshold; the scoped capacity review found no safe obsolete artifact.
 
-The Oct-7 14:00 full discovery review covered **1,123 context rows in 63 batches**;
-no vetted entry surfaced. Three fixed sports-consensus queries supplied no
-positive >3pp lead; two in-play markets were skipped. Arbitrage book coverage
-remains incomplete (consistency: 16/193 groups requested, seven quoted).
-Primary cohort comparison is verified; thin-tail comparison is unverified
-because its filtering yield hurdle changed. Shortlist omissions do not establish
-closure; literal criteria in both full snapshot intersections were unchanged.
-
-All 23 current official-source captures passed integrity checks. No official
-RSS item or structured public alert appeared after 18:00 in the captured sources;
-unchanged sources do not calibrate probabilities. No watchlist trigger or overdue
-decision. Four daemons remain current and unique. Disk is about 458 MiB at the final document check,
-below 512 MiB warning and above 128 MiB critical. The scoped capacity review found no
-safe obsolete artifact; the existing hourly guard remains active.
-This bankroll read was complete without a token-valuation warning or retry.
-Midpoints and sequential depth walks are estimates, not guaranteed cash proceeds.
-`.venv/bin/python scripts/bankroll.py` is the authoritative marked total;
-`scripts/positions.py` supplies the Polymarket depth view.
+The routine's first position-state audit flagged overdue Trump criteria; a
+follow-up reread also found Clarity criteria due, then both were reread and the
+final audit was CLEAN. The initial audit returned rc=1. Follow-up command
+intervals were not recorded, so no times are inferred from their capture-file
+mtimes. Weekly P&L is due around Oct-9 and the monthly emergency-path/fee drill
+around Oct-12. Off-chain stock/brokerage monitoring and its Sunday rotation
+remain retired.
 
 ## Operating model
 
