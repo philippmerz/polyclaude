@@ -1,3 +1,36 @@
+## Oct-8 22:00 light check — HOLD / NO ADD; Gemini freshness guard closed
+
+- Bankroll 22:02:03.669681–22:02:19.912115 UTC: total $186.19, gas $6.20,
+  PM midpoint/depth $35.08/$31.70, cost $47.64, rounded settled residual
+  +$22.55 (unchanged; not audited settled trade profit). Ex-gas trading
+  midpoint/depth $179.99/$176.61, whole depth $182.81, +3.89% versus $170 before
+  VM/API. Positions and quick status at their separate recorded intervals match
+  rounded PM values; sequential observations are not synchronized NAV or
+  certified proceeds. Printed/displayed gap $3.38; depth +$0.08 since 18:00.
+- **HOLD / NO ADD.** Clarity 29/29 net exit $27.989524; free-carry bound
+  $28.179269, both below $29 floor. OpenAI fee-net exit $2.384044; central,
+  stress, upper and correlation full/prefix tests favor hold. Priors remain
+  judgmental .12/.25 central, .03/.15 stress, .25/.38 upper with existing
+  correlations. Kelly +$5.11 is advisory; fresh $0.2064 ask fails stress p=.15.
+  Gemini GET235.41s/POST235.85s exceed 180s; no current G/combined exit certified.
+  Gemini drawdown −81.1%, Kelly delta −$8.74.
+- Source review verified 23 captures/34 hashes. All60 HLE rows match, with maxima
+  46.2 Gemini / 53.6 OpenAI; HTTP Age1761s is cache age, not dataset time. Senate256 rows
+  unchanged; five Gamma identities/rules/state match despite raw hash changes.
+  UNI102 executed across two RPCs and Arc role config matches, not proof of net
+  burn. No new RSS entries or structured public alerts after 18:00; not universal
+  absence. Native aUSDC85.050858 at block95,194,464 (+.001146), live Aave rate
+  2.976343%; marginal hurdle2.99% cached16h. Watch no hits: UNI $7.36/$3.25,
+  AAVE $167.61/$105; providers/timestamps unavailable. Orders empty, overdue0,
+  UMA38 refreshed/0 alerts, Ostium0 orders/trades, state CLEAN. Four daemons
+  exactly one healthy/current each. Free capacity worker323.74MiB/root330.36MiB,
+  below512/above128; no safe obsolete cache. Active CLI retained.
+- Hormuz dust .003571 shares remains below estimated gas $0.004756–$0.004766
+  using current gas/POL and prior simulated units; no new simulation/broadcast.
+  19 light command types once/all rc0/38 hashes verified; no discovery/redemption
+  run. No position/order/cancel/sign/transfer/redemption/broadcast action. P&L
+  Oct-9, monthly drill Oct-12; off-chain stock/brokerage Sunday review retired.
+
 ## Oct-8 18:00 light check — HOLD / NO ADD; Gemini freshness guard closed
 
 - Bankroll 18:03:00.381656–18:03:16.646884 UTC: total $185.93, gas $5.99,

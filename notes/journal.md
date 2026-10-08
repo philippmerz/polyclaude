@@ -26174,3 +26174,68 @@ was restarted.
 
 Weekly P&L is due around Oct-9; monthly emergency-path/fee drill around Oct-12.
 Off-chain stock/brokerage Sunday review remains retired.
+
+
+## 2026-10-08 22:00 UTC — light check; HOLD / NO ADD, Gemini freshness guard closed
+
+All 19 required light-routine command types ran once with rc=0; all 38 captured
+stdout/stderr hashes verified. Kelly received the fresh $186.19 bankroll. The
+manifest and captured streams are in
+`logs/periodic_20261008T2200/routine/run.json`. No position, order, cancel,
+signing, transfer, redemption, or broadcast action occurred; no discovery or
+redemption run was part of this light check.
+
+The authoritative bankroll read ran 22:02:03.669681–22:02:19.912115 UTC:
+whole-account mark $186.19 including $6.20 separately contributed gas, PM
+midpoint/depth $35.08/$31.70, cost $47.64, and rounded settled accounting
+residual +$22.55, unchanged since 18:00. Ex-gas trading midpoint/depth were
+$179.99/$176.61; whole-account depth was $182.81. Trading depth was +3.89%
+versus $170 before VM/API costs, up $0.08 since 18:00. The residual is a rounded
+accounting estimate, not audited new trade profit. The printed/displayed PM gap
+was $3.38. Positions 22:01:42.233233–22:01:44.345314 and quick status
+22:02:37.767700–22:02:40.553515 separately reported the same rounded PM values.
+They are sequential snapshots, not synchronized NAV; depth is indicative, not
+certified liquidation proceeds.
+
+HOLD / NO ADD. The complete Clarity 29/29 pair's fee-net full exit is $27.989524
+($28.179269 under the optimistic free-carry bound), below its $29 payout floor.
+All 256 Senate rows matched; H.R. 3633 vote 00234 remains rejected cloture on a
+motion to proceed. Retain judgmental HLE p(NO) priors .12/.25 central, .03/.15
+stress, .25/.38 upper and existing correlations; source stability does not
+calibrate a posterior, and HLE-Diamond interpretation risk remains. OpenAI's
+fee-net full exit is $2.384044. A full exit changes expected log wealth by
+−0.009939 in the central case; full/prefix exit tests favor hold across central,
+stress, upper, and correlation cases. Kelly's
+midpoint +$5.11 is advisory; the fresh $0.2064 ask fails the pessimistic p=.15
+EV check, so NO ADD. Gemini GET age 235.412896s and one POST age 235.850481s
+exceeded the 180s guard. No current G exit or combined trim is certified.
+OpenAI and Clarity planning quotes passed freshness only at receipt; later action
+requires a fresh rewalk. Gemini drawdown was −81.1%; individual Kelly delta was
+−$8.74.
+
+The exact held inventory and $47.319630 pUSD were unchanged. Native aUSDC was
+85.050858 at fixed Polygon block 95,194,464, up .001146; live variable Aave rate
+was 2.9763429591290778%. Marginal scan used the cached 2.99% hurdle from 16h
+earlier. Hormuz dust .003571 remained below estimated gas $0.0047558586–
+$0.0047659126 using current gas and same-bank rounded POL with prior 175036
+simulated units; no new simulation or broadcast. UNI $7.36/$3.25 and AAVE
+$167.61/$105 remained WATCH, no hits; quote providers/timestamps were not emitted.
+Orders were empty with terminal cursor; UMA had 38 refreshed/0 alerts; Ostium
+had zero orders/trades; no overdue decisions; state CLEAN. Four daemons had
+exactly one current healthy PID each. Capacity was 323.74 MiB in the worker view
+and 330.36 MiB in the root view, below warning and above critical. No safe
+obsolete cache was found; active CLI was retained.
+
+Source audit verified 23 captures and 34 hashes. HLE's 60 rows matched the prior
+capture, with maxima of 46.2 Gemini and 53.6 OpenAI; HTTP cache Age was 1761s,
+not dataset time. Google
+article full text remained stable; there were zero new RSS entries after 18:00.
+Five held Gamma markets retained exact identity, rules, and state despite raw
+hash changes. Senate's 256 rows were unchanged. UNI proposal102 remained executed
+at Ethereum block26150533 across two RPCs; Arc three-role configuration matched
+at block24968452 but does not establish net burn. No new structured public alerts
+after 18:00; this does not establish universal news absence. No priors changed.
+
+Weekly P&L is due Oct-9; monthly emergency-path/fee drill is due Oct-12. The
+known credential-issuer rotation status remains unverified. Off-chain
+stock/brokerage Sunday review remains retired.
