@@ -26041,3 +26041,80 @@ notified at 06:26 (message 1111); no repeat Telegram was needed.
 
 Weekly P&L is due around Oct-9 and monthly emergency-path/fee drill around
 Oct-12. Off-chain stock/brokerage Sunday review remains retired.
+
+
+## 2026-10-08 14:00 UTC — full check; HOLD / NO ADD, Gemini freshness guard closed
+
+All 20 full-check command types ran once with rc=0; all 40 stdout/stderr hashes
+verified. The routine manifest and immutable stream captures are in
+`logs/checkin_20261008T1400/routine/run.json`. Kelly used the fresh $186.34
+bankroll. The indexed `redeem-all --dry-run` found 0/7 winning redeemable
+positions and skipped three losing/uncertain rows; it returned before any
+transaction/sign/broadcast path. No position, order, transfer, redemption, or
+broadcast action occurred.
+
+The authoritative bankroll read ran 14:03:16.851917–14:03:33.990032 UTC:
+whole mark $186.34 including $6.36 gas, PM midpoint/depth $35.08/$31.70,
+position cost $47.64, settled P&L accounting residual +$22.54. Ex-gas trading
+midpoint/depth were $179.98/$176.60; whole depth $182.96; depth return +3.88%
+vs $170 before VM/API costs. Positions 14:02:56.062371–14:02:58.034658 and quick
+14:03:51.018423–14:03:53.515387 separately matched rounded PM values. These
+sequential readings are not synchronized and depth is not guaranteed proceeds.
+Printed/displayed PM gap was $3.38. Depth declined $0.38 since 10:00; settled
+P&L is unchanged.
+
+HOLD / NO ADD. The complete Clarity 29/29 pair's fee-net full exit is
+$27.989524 ($28.178705 with optimistic free carry), below its $29 floor. All
+256 Senate rows and exact held market criteria remain unchanged; H.R. 3633's
+sole vote is rejected cloture on a motion to proceed. Retain judgmental HLE
+p(NO) priors .12/.25 central, .03/.15 stress, .25/.38 upper and existing
+correlations. Source stability does not calibrate a posterior; HLE-Diamond
+interpretation risk remains. OpenAI fee-net full exit is $2.384044. All central,
+stress, upper and correlation cases favor hold at this price. Kelly shows an
+OpenAI midpoint-based +$5.12 delta, but the fresh $0.2064 all-in ask fails the
+pessimistic stress-p=.15 EV check; NO ADD. G GET age 235.56s and its one POST
+age 236.04s both exceeded the 180s guard. No current G exit or combined trim is
+certified. O/Clarity quotes passed the guard only at receipt, so later action
+requires a fresh rewalk. Gemini drawdown was −81.1%; its individual Kelly delta
+was −$8.74.
+
+Source audit covered 26 HTTP-200 captures with integrity checks. The 60 HLE
+rows, 256 Senate rows, five Gamma material fields and UNI/Arc configured roles
+matched 10:00; raw Gamma hashes changed. The HLE API Age header was 1842s, a
+cache limitation. Three new Google RSS articles (Cloud agent and two Maps posts)
+were reviewed; none carried a qualifying HLE/model-score fact. No structured
+public alerts after 10:00; this is not universal news absence. Proposal 102
+remains executed and Arc role getters match published addresses, which does not
+establish fees or burn. No priors changed.
+
+Native aUSDC was 85.048573 at Polygon block 95,175,339, +0.001149 from 10:00;
+instantaneous variable native USDC supply rate was 2.9556117%. The marginal scan
+still used cached 2.99% from eight hours earlier. All $47.319630 pUSD remained
+uncommitted. Archived Hormuz dust is 0.003571 shares against estimated
+$0.0049526–$0.0049628 gas using prior simulated units; no new simulation or
+broadcast. No overdue decisions; orders empty; UMA 40 positions/38 markets/
+0 alerts; Ostium 0 trades/0 limits/no change; position state CLEAN. Four daemons
+were current/unique. Disk was 372.04 MiB, below warning and above critical; no
+safe cleanup. Weekly P&L is due around Oct-9; monthly emergency-path/fee drill
+around Oct-12; off-chain stock/brokerage Sunday review remains retired.
+
+Discovery evidence is retained in `logs/checkin_20261008T1400/discovery/`:
+15 invocations (11 original plus four offline baseline/context recaptures); no
+network scanner rerun. Primary selected 52 across 3 batches with no common
+criteria changes. Thin-tail selected 1,079 across 60 batches with zero
+truncation, but its comparison is unverified because the hurdle changed from
+2.8478% to 2.9912%. Missing shortlist rows are not market closures. One Tinubu
+row (ID 2420428) lacks complete order/context metadata and remains context-only.
+Its literal settlement fallback is October 31, 2027, beyond the nominal
+January 17 snapshot deadline; any future evaluation must reconstruct both
+order terms and the settlement horizon. Root independently verified all 15
+capture pairs, eight context artifacts and every selected row/batch proof in
+`data/checkin_20261008T1400_discovery_audit.json`. The initial explicit priors
+already used the correct Oct-8 02:00 snapshots; four offline recaptures followed
+an agent's mislabeled lineage report and are byte-identical to the originals.
+Consistency coverage was incomplete (market cap, one malformed event, 152
+unquoted, seven quote-failed); no provisional positive in the scanned slice.
+Event scan had no positive; sports had no positive >3pp; six favorite-fade items
+are population hints, not entries. No validated entry or new asset action. The
+known Gemini freshness notice was already sent at 06:26 (message 1111); no repeat
+Telegram was warranted.

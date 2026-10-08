@@ -1,3 +1,39 @@
+## Oct-8 14:00 full check — HOLD / NO ADD; G freshness guard closed
+
+- Bankroll 14:03:16.851917–14:03:33.990032 UTC: total $186.34, gas $6.36,
+  PM midpoint/depth $35.08/$31.70, cost $47.64, settled residual +$22.54;
+  ex-gas trading midpoint/depth $179.98/$176.60, whole depth $182.96,
+  +3.88% depth versus $170
+  before VM/API. Separate positions/quick readings match rounded PM fields;
+  sequential, not synchronized. Printed/displayed gap $3.38; depth down $0.38
+  since 10:00.
+- **HOLD / NO ADD.** Clarity 29/29 fee-net full exit $27.989524, carried
+  $28.178705, both below the $29 floor. HLE p(NO) .12/.25 central, .03/.15
+  stress, .25/.38 upper
+  and correlations unchanged. OpenAI fee-net exit$2.384044; all central/stress/
+  upper/correlation cases hold. Kelly midpoint delta +$5.12 is advisory;
+  all-in ask $0.2064 fails stress p=.15, so NO ADD. G GET 235.56s and POST
+  236.04s fail the 180s guard; no current G exit/combined trim. Gemini drawdown
+  −81.1%, Kelly −$8.74.
+- 26 official captures HTTP 200/hash-verified. HLE 60, Senate 256, five Gamma
+  material fields and UNI/Arc roles match 10:00; raw Gamma hashes changed. HLE
+  API Age 1842s. Three new Google RSS articles contain no qualifying HLE fact;
+  public alerts 0 after 10:00, not universal absence. Native aUSDC 85.048573
+  at block 95,175,339 (+.001149), variable rate 2.955612%. Watchlist no hit:
+  UNI $7.59/$3.25, AAVE $170.29/$105; provider/times omitted. Orders empty,
+  overdue decisions 0, UMA 0 alerts, Ostium 0 trades/limits/no change. Four
+  daemons current; disk 372.04 MiB/no safe cleanup.
+- Indexed dry-run 0/7 winners, skipped 3 losing/uncertain; Hormuz dust .003571
+  remains below estimated gas$.004953–$.004963 using prior simulation; no new
+  simulation/broadcast. Discovery found no validated entry; one Tinubu row
+  context-only: reconstruct missing order terms and the literal Oct-31-2027
+  settlement fallback before any future review. Thin-tail comparison is
+  unverified due to the hurdle change. No new
+  asset/order/transfer/redemption/broadcast action.
+- All 20 routine command types once, rc=0. Full receipt/hash manifest:
+  `logs/checkin_20261008T1400/routine/run.json`. Weekly P&L due Oct-9; monthly
+  drill due Oct-12. Off-chain stock/brokerage Sunday review remains retired.
+
 ## Oct-8 10:00 light check — HOLD / NO ADD; Gemini freshness guard closed
 
 - Bankroll interval 10:02:42.889789–10:03:03.776846 UTC: total $186.44, gas

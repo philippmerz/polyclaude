@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 143 recorded observations from the Apr-25 inception through
-Oct-8, including 63 eligible trading-midpoint and 56 eligible trading-depth
+The chart now has 144 recorded observations from the Apr-25 inception through
+Oct-8, including 64 eligible trading-midpoint and 57 eligible trading-depth
 observations. Rounded reconstructions are labeled; unsupported historical values
 stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records the remaining gaps and accounting limits.
@@ -51,32 +51,32 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-08 10:02 UTC
+## Last bankroll snapshot — 2026-10-08 14:03 UTC
 
-The authoritative bankroll read ran 10:02:42.889789–10:03:03.776846 UTC:
-PM midpoint $35.12 and fee-net depth $32.07. Positions (10:02:21.270630–
-10:02:23.296996) and quick status (10:03:19.754442–10:03:22.343949) separately
-reported the same rounded values; these sequential readings are not synchronized.
-Depth is indicative, not guaranteed proceeds. The bank's printed gap was $3.06;
-the displayed $3.05 difference reflects one-cent rounding.
+The authoritative bankroll read ran 14:03:16.851917–14:03:33.990032 UTC:
+PM midpoint $35.08 and fee-net depth $31.70. Positions (14:02:56.062371–
+14:02:58.034658) and quick status (14:03:51.018423–14:03:53.515387) separately
+reported those same rounded PM values; readings are sequential, not synchronized.
+Depth is indicative rather than guaranteed proceeds. The printed and displayed
+midpoint/depth gap is $3.38.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| Polymarket midpoint / bank depth | $35.12 / $32.07 |
-| Authoritative whole-account mark | $186.44 |
-| Approximate whole-account depth | $183.39 |
+| Polymarket midpoint / bank depth | $35.08 / $31.70 |
+| Authoritative whole-account mark | $186.34 |
+| Approximate whole-account depth | $182.96 |
 | Settled P&L accounting residual, before VM/API costs | +$22.54 |
 
-The bank includes $6.41 of separately contributed gas. Excluding gas, trading
-midpoint is $180.03 and depth is $176.98, or +4.11% versus $170 on depth before
-VM/API costs. Trading depth rose $0.08 since 06:00; settled P&L is unchanged.
-These are marks and sequential estimates, not settled cash.
+The bank includes $6.36 of separately contributed gas. Excluding gas, trading
+midpoint is $179.98 and depth is $176.60, or +3.88% versus $170 on depth before
+VM/API costs. Depth fell $0.38 since 10:00; settled P&L is unchanged. These are
+marks and sequential estimates, not settled cash.
 
 The **Clarity Act Senate vote monotonicity pair** remains 29 over-50 YES and 29
 over-58 NO shares, $28.32893 all-in against a $29 payout floor. Fee-net full
-exit is $27.989524 ($28.179399 under the optimistic free-carry sensitivity),
+exit is $27.989524 ($28.178705 under the optimistic free-carry sensitivity),
 still below the floor. All 256 official Senate rows and both literal criteria
 remain unchanged. H.R. 3633's recorded vote remains rejected cloture on a motion
 to proceed, not final passage. **HOLD the complete pair / NO ADD**; never manage
@@ -84,42 +84,49 @@ either leg independently.
 
 The HLE holdings remain **102.084750 Gemini >=50 NO** and **19 OpenAI >=55 NO**.
 Judgmental p(NO) priors remain **.12/.25**, stress **.03/.15**, upper **.25/.38**,
-with existing correlation scenarios. Source stability is not a calibrated
-posterior; HLE-Diamond interpretation risk remains. OpenAI's fee-net full exit
-is **$2.7531**; central, upper, and correlation cases reject full or partial
-trims. Stress separately favors exiting all 19 OpenAI shares as a per-leg
-alternative, not a joint optimum. Gemini's GET book age was **387.131 seconds**
-and the single POST attempt **387.696 seconds**, both outside the 180-second
-guard. No current Gemini exit or combined trim is certified. The available OpenAI and
-Clarity planning quotes passed the guard only at capture; any later action needs
-a fresh rewalk. **HOLD / NO ADD** on retained priors and source evidence; no
-order was placed. Gemini's drawdown alert is **−81.1%**, and Kelly's individual
-Gemini sizing delta is **−$8.73**.
+with existing correlation scenarios. Source stability is not posterior
+calibration; HLE-Diamond interpretation risk remains. OpenAI's fee-net full
+exit is **$2.384044**. Central, stress, upper, and correlation cases favor hold
+at this price. Kelly's midpoint advisory shows **+$5.12** toward OpenAI's
+individual optimum, but the fresh all-in ask **$0.2064** fails the pessimistic
+EV check at stress p=.15; **NO ADD**. Gemini's GET book age was **235.56 seconds**
+and one POST attempt **236.04 seconds**, both outside the 180-second guard. No
+current Gemini exit or combined trim is certified. OpenAI and Clarity planning
+quotes passed freshness only at their receipts; any later action needs a fresh
+rewalk. **HOLD / NO ADD** on retained priors and evidence. Gemini's drawdown
+alert is **−81.1%**; its individual Kelly sizing delta is **−$8.74**.
 
-The **0.33 Trump-out NO** remains. No authenticated orders were open, decisions
-were not overdue, UMA reported zero alerts, and Ostium had zero trades/limits
-with no state change. Watchlist hits were empty: UNI $7.84 versus its $3.25
-review gate and AAVE $172.56 versus $105 remain WATCH. The output did not provide
-per-asset quote providers or timestamps. Native Polygon aUSDC was **85.047424**
-at block 95,165,735, up 0.001147 from 06:00; the instantaneous native USDC
-supply rate was **2.960632%**, while the marginal scan's 2.99% cached hurdle was
-about four hours old. All $47.319630 pUSD was uncommitted. The archived Hormuz
-claim remains 0.003571 shares, below estimated gas of $0.005010–$0.005021 using
-prior simulated units; no new simulation, redemption, or broadcast occurred.
+The **0.33 Trump-out NO** remains. Authenticated orders were empty, no decisions
+were overdue, UMA reported 0 alerts, and Ostium had zero trades/limits with no
+state change. Watchlist hits were empty: UNI $7.59 versus its $3.25 review gate
+and AAVE $170.29 versus $105 remain WATCH. Per-asset quote providers/timestamps
+were not emitted. Native Polygon aUSDC was **85.048573** at block 95,175,339,
+up 0.001149; the instantaneous native USDC supply rate was **2.955612%**.
+All $47.319630 pUSD was uncommitted. The indexed redemption dry-run found 0/7
+winning redeemables and skipped three losing/uncertain rows. The 0.003571-share
+Hormuz dust claim remains below estimated gas of $0.004953–$0.004963 using
+prior simulated units; no new simulation or broadcast occurred.
 
-All **23 official-source captures** returned HTTP 200 and passed receipt/hash
-checks. HLE's 60 rows, 256 Senate rows, five Gamma material identity/criteria/
-status sets, and UNI/Arc roles matched 06:00; Gamma raw hashes changed. The HLE
-API response had a cache age of 1,833 seconds, recorded as a freshness
-limitation. No new official RSS items or structured alerts appeared after 06:00;
-this does not establish universal absence of news or calibrate priors. Four
-daemons were canonical/current. Disk was **381.67 MiB**, below the 512 MiB
-warning and above the 128 MiB critical threshold; no safe cleanup was found.
-The routine ran all 19 required command types once with rc=0, including Kelly
-using fresh bankroll $186.44. No position, order, transfer, redemption or
-broadcast action occurred.
-Weekly P&L is due around Oct-9; the monthly emergency-path/fee drill is due
-around Oct-12. The off-chain stock/brokerage Sunday review remains retired.
+All **26 official-source captures** returned HTTP 200 and passed integrity
+checks. HLE's 60 rows, five Gamma material fields, 256 Senate rows, and UNI
+proposal/Arc roles matched 10:00; Gamma raw hashes changed. The HLE API response
+had a cache age of **1,842 seconds**. Three new Google RSS articles were reviewed
+and none contained a qualifying HLE/model-score fact; no structured public
+alerts appeared after 10:00. This does not establish universal absence of news
+or calibrate priors. Proposal 102 remains executed with configured Arc roles;
+configuration does not establish fee collections or burn activity.
+
+Discovery review found no validated entry. Primary context had 52 selected
+items with no common criteria changes; thin-tail comparison is unverified after
+the hurdle changed from 2.8478% to 2.9912%. One Tinubu market row is incomplete
+and context-only; consistency coverage is incomplete, and zero positives in the
+scanned slice are not comprehensive. Four daemons were current and unique. Disk
+was **372.04 MiB**, below the 512 MiB warning and above the 128 MiB critical
+threshold; no safe cleanup was found. The full check ran 20 command types once,
+all rc=0; indexed redemption was dry-run only. No position, order, transfer,
+redemption, or broadcast action occurred. Weekly P&L is due around Oct-9 and the
+monthly emergency-path/fee drill around Oct-12. The off-chain stock/brokerage
+Sunday review remains retired.
 
 ## Operating model
 
