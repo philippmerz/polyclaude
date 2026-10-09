@@ -26410,3 +26410,59 @@ Publication checks verified 148 observations, 68 eligible midpoint and 61 eligib
 depth rows, exact historical prefixes/suffixes, unchanged priors/weekly report,
 and clean added-text secret/whitespace review. No chart code changed; its ten
 tests passed at 02:00 and were not repeated for this data-only record update.
+
+## 2026-10-09 10:00 UTC — light check; HOLD / NO ADD, Gemini freshness guard closed
+
+Nineteen distinct routine types ran once, all rc=0; 38 stdout/stderr byte counts and hashes were
+captured and independently verified. Kelly used fresh authoritative bankroll $186.31. Position audit
+refreshed local metadata and reported CLEAN (5 indexed positions, 1 deindexed claim row; 0 holds
+pruned). No trade, order, cancel, signing, transfer, redemption, broadcast, discovery run, or new
+opportunity was made.
+
+Bankroll read 10:02:15.465767–10:02:31.772713 UTC: total $186.31 including $6.28 separately
+contributed gas; PM midpoint/depth $35.12/$31.84; cost $47.64; settled-P&L accounting residual
++$22.55, unchanged since 06:00 and not audited new profit. Ex-gas trading midpoint/depth
+$180.03/$176.75; approximate whole-account depth $183.03. Trading depth fell $0.37 since 06:00 and is
++3.97% versus $170 before unreconciled VM/API costs. Printed gap $3.28. Positions
+10:01:53.742198–10:01:57.540057 and quick status 10:02:51.897190–10:02:54.410032 separately matched
+rounded PM values. Sequential observations, not synchronized NAV or certified liquidation.
+
+HOLD / NO ADD. Clarity's complete 29/29 fee-net exit $28.269200 and optimistic free-carry bound
+$28.464520 remain below its $29 floor. OpenAI's 19-share net exit was $2.384044; central ΔElog
+−0.0099390042. Available OpenAI stress, central, upper and correlation feasible-prefix analyses favor hold. This does not establish a Gemini or full-joint optimum. Its $0.2064 ask exceeds stress p=.15.
+Gemini GET/POST ages 324.252348s/324.769937s fail the 180s guard; current G exit and combined trim are
+uncertified. Probabilities and correlations are judgmental and unchanged.
+
+Exact held CTF inventory and pUSD $47.319630 were unchanged. Native aUSDC was 85.054358 at fixed
+Polygon block 95,223,296 (+0.001166 since 06:00 fixed-block read); separate routine wallet read
+85.054355 was at another block. Sequential accrual, not a transaction. Aave rate 3.05266870745%.
+Resolved Hormuz dust 0.003571 shares remains below estimated gas $0.0048599–$0.0048700 using prior
+175036 simulated units; no new simulation or broadcast.
+
+UNI $7.38/$3.25 and AAVE $166.52/$105 remained WATCH/no trigger. Marginal hurdle refreshed to 3.05%.
+Orders empty, UMA 0 alerts, Ostium no trades/limits and unchanged, no overdue decisions. Quick status
+included one already-reviewed 04:32 Tier-2 Hormuz item in its six-hour window; no public alert
+was timestamped after 06:00. Bounded RSS/public-alert capture is not universal-absence evidence.
+
+Source audit captured 23/23 requests (HTTP 200, no RPC errors), verified 27 integrity files. HLE 60
+rows (maxima 46.2 Gemini/53.6 OpenAI), five Gamma identities/criteria, 256 Senate rows and official
+primary text matched 06:00. HLE HTTP Age 3572s is cache age, not dataset time. The official [Oct-7
+product blog](https://openai.com/index/gpt-6-for-everyone/) and [October safety
+card](https://deploymentsafety.openai.com/gpt-6-october/broken-search-tool) are product/safety
+updates, not new resolving HLE scores; the bounded search is not universal-absence evidence. UNI
+Governor state/tuple matched across two Ethereum RPCs at block 26,154,127; three Arc role getters
+matched at block 25,053,710. Configuration is not sustained net fee-funded burn proof; no allocation.
+Source stability does not recalibrate priors.
+
+A separate Artificial Analysis search snippet claimed a rounded Argon HLE result. Two opened
+primary evaluator pages did not expose that numeric result or its tool configuration. Exact
+57.1%/52.6% claims and equivalence to the market’s named official HLE Accuracy remain unverified.
+The named source is available; no qualifying source change was established. Treat the snippet as
+unverified adverse context, not a validated score or calibrated posterior.
+
+Health review: one canonical/current process for each of four daemons. Free disk 262.33 MiB in health
+read, 254.02 MiB in capacity review; above 128 MiB critical, below 512 MiB warning, no safe cleanup
+found. Active CLI retained. No Telegram was due; weekly update already sent. P&L next Oct-16, monthly
+drill Oct-12. Issuer rotation remains unverified; off-chain reviews stay retired. Priors,
+probabilities, groups and decision dates unchanged. Root completion, risk and source audits passed;
+see data/periodic_20261009T1000_*.

@@ -1,3 +1,24 @@
+## Oct-9 10:00 light check — HOLD / NO ADD
+
+- Mark $186.31 including $6.28 gas; PM midpoint/depth $35.12/$31.84;
+  ex-gas trading midpoint/depth $180.03/$176.75. Depth −$0.37 since 06:00,
+  +3.97% versus $170 before VM/API. Settled residual +$22.55 unchanged,
+  accounting estimate, not audited profit. Sequential indicative observations.
+- Clarity full exit/free-carry $28.269200/$28.464520 remains below $29.
+  Available OpenAI stress, central, upper and correlation prefixes favor hold;
+  central full-exit ΔElog −0.0099390042. Gemini GET/POST ages 324.252348s /
+  324.769937s fail 180s freshness guard. No current G or combined trim certified.
+  O ask $0.2064 exceeds stress p=.15; no add. Priors unchanged.
+- Source validation passed: 23 captures/23 HTTP 200, 27 integrity files; HLE60,
+  Gamma5, Senate256 unchanged. HLE Age3572s is cache age. UNI fixed-block
+  dual-RPC verification passed; Arc role configuration is not proof of net burn.
+  No new RSS/public alert captured after 06:00; bounded evidence, not universal
+  absence. UNI $7.38/$3.25 and AAVE $166.52/$105 WATCH/no hits.
+- Orders, UMA alerts, Ostium trades/limits and overdue decisions empty; state
+  CLEAN. Four daemons canonical/current; capacity 262.33/254.02 MiB above
+  128 MiB critical / below 512 MiB warning, no safe cleanup. No asset action,
+  discovery, redemption or Telegram. P&L Oct-16; monthly drill Oct-12.
+
 ## Oct-9 06:00 light check — HOLD / NO ADD
 
 - Authoritative mark $186.51 including $6.29 gas; PM midpoint/depth $35.31/$32.21.

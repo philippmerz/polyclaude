@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 148 recorded observations from Apr-25 through Oct-9, including
-68 eligible trading-midpoint and 61 eligible trading-depth observations. Rounded
+The chart now has 149 recorded observations from Apr-25 through Oct-9, including
+69 eligible trading-midpoint and 62 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -51,57 +51,58 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-09 06:03 UTC
+## Last bankroll snapshot — 2026-10-09 10:02 UTC
 
-Bankroll was read 06:03:23.747311–06:03:40.364471 UTC. Positions and quick status
-at separate recorded intervals matched rounded PM values. These are sequential
-estimates, not synchronized NAV or certified liquidation proceeds.
+Bankroll was read 10:02:15.465767–10:02:31.772713 UTC. Positions and quick
+status at separate recorded intervals matched rounded PM values. These are
+sequential estimates, not synchronized NAV or certified liquidation proceeds.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| PM midpoint / indicative fee-net depth | $35.31 / $32.21 |
-| Authoritative whole-account marked bankroll | $186.51 |
-| Approximate whole-account depth | $183.41 |
+| PM midpoint / indicative fee-net depth | $35.12 / $31.84 |
+| Authoritative whole-account marked bankroll | $186.31 |
+| Approximate whole-account depth | $183.03 |
 | Settled-P&L accounting residual | +$22.55 |
 
-The bank includes $6.29 separately contributed gas. Ex-gas trading midpoint is
-$180.22 and depth $177.12, up $0.28 since 02:00 and +4.19% versus $170 before
-unreconciled VM/API costs. The unchanged settled residual is a rounded accounting
-estimate, not audited new profit. Midpoint-to-depth gap: $3.10.
+The bankroll includes $6.28 separately contributed gas. Ex-gas trading midpoint
+is $180.03 and depth $176.75, down $0.37 since 06:00 and +3.97% versus $170
+before unreconciled VM/API costs. The unchanged settled residual is a rounded
+accounting estimate, not audited new profit. Midpoint-to-depth gap: $3.28.
 
-**HOLD / NO ADD.** Clarity's complete 29/29 fee-net exit $28.269200 and optimistic
-free-carry bound $28.461715 remain below its $29 floor. OpenAI full exit $2.7531
-has central ΔElog −0.0079397449; central, upper and correlation cases hold.
-Stress conditionally favors selling O19 while Gemini stays held; this is a
-sensitivity, not a certified joint optimum. Its $0.2064 ask exceeds stress p=.15,
-and Kelly +$4.25 is advisory. Gemini's GET 290.10s / POST 290.51s fail the 180s
-freshness guard; current G exit and combined trim remain uncertified. Priors
-and correlations remain judgmental and unchanged.
+**HOLD / NO ADD.** Clarity's complete 29/29 fee-net exit $28.269200 and
+optimistic free-carry bound $28.464520 remain below its $29 floor. OpenAI's
+$2.384044 full exit has central ΔElog −0.0099390042; all available OpenAI
+stress, central, upper and correlation prefix tests favor hold. This does not
+establish a Gemini or full-joint optimum. Its $0.2064 ask exceeds stress
+p=.15. Gemini GET 324.252348s / POST 324.769937s fail the 180s freshness
+guard; current G exit and combined trim remain uncertified. Probabilities and
+correlations remain judgmental and unchanged.
 
-Exact CTF inventory and $47.319630 pUSD were unchanged at Polygon block 95,213,760.
-Native aUSDC was 85.053192 (+.001160 since 02:00); variable Aave rate 3.002329%.
-Resolved Hormuz dust remains below estimated gas; no new simulation or broadcast.
-UNI $7.37 versus $3.25 and AAVE $168.43 versus $105 remain WATCH/no trigger;
-quote providers and per-asset times were not emitted. Orders, UMA alerts,
-Ostium trades/limits and overdue decisions were empty; state audit was CLEAN.
+Exact CTF inventory and $47.319630 pUSD were unchanged. Native aUSDC was
+85.054358 at Polygon block 95,223,296 (+.001166 since the 06:00 fixed-block
+read); a separate routine wallet read was 85.054355 at another block. Live
+Aave variable rate was 3.05266870745%. Hormuz dust 0.003571 shares remains
+below estimated gas $0.0048599–$0.0048700; no new simulation or broadcast.
+UNI $7.38 versus $3.25 and AAVE $166.52 versus $105 remain WATCH/no trigger.
+Orders, UMA alerts, Ostium trades/limits and overdue decisions were empty;
+position state was CLEAN.
 
-Held source checks match 02:00: HLE 60, Gamma 5 and Senate 256; HLE maxima remain
-46.2 Gemini / 53.6 OpenAI. HTTP Age 83s is cache age, not dataset time. Final
-correct-governor UNI state/tuple agree across two RPCs; Arc roles match but do
-not prove net burn. Source accounting preserves 8 wrong-governor RPC-error
-receipts and 1 worker-reported missing receipt: 32 known requests / 31 receipts,
-35 integrity files; final validation passed. No new Google RSS item after 02:00
-was captured. One new 04:32 Hormuz headline is unverified, impacts empty,
-with no active position beyond resolved dust. No universal news-absence claim.
+The source audit captured 23/23 requests (all HTTP 200, no RPC errors) and
+verified 27 integrity files. HLE 60 rows, Gamma 5 identities/criteria, Senate
+256 rows and official primary text matched 06:00; maxima remain 46.2 Gemini /
+53.6 OpenAI. HLE HTTP Age 3572s is cache age, not dataset time. UNI dual-RPC
+state/tuple checks passed; Arc roles match but do not prove net burn. No new
+RSS/public alert was captured after 06:00; bounded capture does not prove
+universal absence. Four daemons were canonical/current. Capacity review found
+254.02 MiB free (health read 262.33), above 128 MiB critical and below 512 MiB
+warning; no safe cleanup candidate was found.
 
-All 19 light routine types ran once with rc=0; 38 stream hashes were independently
-verified. Four daemons were unique/canonical/current; disk 268.86 MiB in root's
-health read and 265.27 MiB in capacity review, above 128 MiB critical / below 512 MiB warning;
-no safe cleanup was found. No asset action, discovery/redemption run or repeat
-Telegram. P&L next Oct 16, monthly drill Oct 12; issuer rotation remains unverified.
-Off-chain stock/brokerage reviews remain retired.
+All 19 light routine types ran once with rc=0; all 38 stream hashes were
+verified. No asset action, discovery or redemption run. Weekly P&L is next due
+Oct-16; monthly diagnostic drill is due Oct-12. Off-chain stock/brokerage
+reviews remain retired.
 
 ## Operating model
 
