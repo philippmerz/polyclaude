@@ -1,3 +1,22 @@
+## Oct-9 18:00 periodic check — HOLD / NO ADD; no new action due
+
+- Fresh total $187.22 includes $6.31 gas; PM midpoint/depth $35.99/$32.05.
+  Trading midpoint/depth $180.91/$176.97, depth +$0.21 since14:00, +4.10%
+  versus $170 before VM/API. Residual +$22.55 unchanged accounting estimate.
+- Priors unchanged G/O .08/.25, stress .01/.15. Named HLE60/G46.2/O53.6,
+  five Gamma rules/state and Senate256 unchanged; AA57% confirmed again.
+  Current fee-net G/O exits $1.3980/$2.5685; central/correlation holds,
+  1% G stress sells. No add; Clarity $28.2692 below $29 floor.
+- All19 routine types pass latest/24 invocations/48 hashes. Five initial
+  interpreter failures preserved, corrected once each. Worker30 bodies lack
+  HTTP metadata from local recorder failure; root critical-source verification
+  passed, broader coverage remains partial. No new structured alerts.
+- Orders/UMA/Ostium/overdue0, state CLEAN, no watch trigger. Inventory unchanged,
+  aUSDC85.056763/rate3.1702%. Four daemons current; capacity189.88 MiB above128
+  critical/below512 warning, no safe cleanup. No asset action or new Telegram.
+  DrillOct12/P&LOct16 not due; manual Base candidates and rotation limitation
+  remain as recorded. No new idle follow-up or durable goal.
+
 ## Oct-9 14:00 full check — AA confirmation; Gemini prior .08, HOLD / NO ADD
 
 - First-party AA Argon High rounded57% shared-subset/no-tools HLE confirmed;

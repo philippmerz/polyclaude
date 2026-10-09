@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 150 recorded observations from Apr-25 through Oct-9, including
-70 eligible trading-midpoint and 63 eligible trading-depth observations. Rounded
+The chart now has 151 recorded observations from Apr-25 through Oct-9, including
+71 eligible trading-midpoint and 64 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -51,43 +51,39 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-09 14:03 UTC
+## Last bankroll snapshot — 2026-10-09 18:02 UTC
 
-Bankroll interval 14:03:20.973–14:03:37.329 UTC; positions and quick status
-separately matched rounded PM values. Sequential indicative estimates are not
-synchronized NAV or guaranteed liquidation proceeds.
+Successful bankroll interval 18:02:47.111395–18:03:02.911594 UTC; separate
+positions and quick status matched rounded PM values. Sequential indicative
+estimates are not synchronized NAV or guaranteed liquidation.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| PM midpoint / indicative fee-net depth | $35.12 / $31.84 |
-| Authoritative whole-account marked bankroll | $186.25 |
-| Approximate whole-account depth | $182.97 |
+| PM midpoint / indicative fee-net depth | $35.99 / $32.05 |
+| Authoritative whole-account marked bankroll | $187.22 |
+| Approximate whole-account depth | $183.28 |
 | Settled-P&L accounting residual | +$22.55 |
 
-Gas $6.21; ex-gas trading midpoint/depth $180.04/$176.76. Depth +$0.01 since
-10:00, +3.98% versus $170 before unreconciled VM/API. The unchanged settled
-residual is a rounded accounting estimate. Midpoint-to-depth gap: $3.28.
+Gas $6.31; ex-gas trading midpoint/depth $180.91/$176.97. Depth +$0.21 since
+14:00, +4.10% versus $170 before unreconciled VM/API. Settled residual remains
+a rounded accounting estimate. Midpoint-to-depth gap: $3.94.
 
-**HOLD / NO ADD.** First-party AA confirms rounded Argon High57% on the shared
-text-only/no-tools HLE subset. Gemini NO central .12→.08, stress .03→.01,
-upper .25→.18; judgmental scenarios, not calibrated probabilities. The available
-named board remains60 rows, Gemini46.2/OpenAI53.6. Fresh Gemini full exit $1.1851
-versus central settlement EV $8.1668; central/correlation joint cases hold,
-1% downside stress favors exiting Gemini. G/O asks .046719/.2064 fail pessimistic
-entry. Clarity full exit/free-carry $28.2692/$28.4648 stays below $29 floor.
-See the [evidence, dependence and exit review](notes/journal.md).
+**HOLD / NO ADD.** G/O judgmental priors remain .08/.25 (stress .01/.15).
+Named HLE source60 rows/G46.2/O53.6 and AA Argon High57% unchanged. Current
+G/O complete fee-net exits $1.3980/$2.5685: central and correlation joint
+cases hold; 1% G downside favors selling. G/O asks fail pessimistic entry.
+Clarity exit/free-carry $28.2692/$28.4741 remains below $29 floor. See the
+[evidence and risk review](notes/journal.md).
 
-Exact CTF/pUSD unchanged; native aUSDC85.055589 at Polygon95,233,259, live Aave
-3.0567%. Orders, UMA alerts, Ostium trades/limits and overdue decisions empty;
-state CLEAN. No asset action. All29 original routine commands and58 stream
-hashes passed; one Kelly rerun followed the material prior revision. All54
-emitted discovery batches reviewed; no validated entry. Consistency covered
-17/194 groups requested, 10 quoted: incomplete, not proof of no arbitrage.
-Source audit partial:29 HTTP200/six403 retained; held resolving-source checks
-passed. Four daemons current; free206.12 MiB above128 critical/below512 warning,
-no safe cleanup. P&L next Oct16; monthly drill Oct12. Off-chain reviews retired.
+Exact inventory/pUSD unchanged; native aUSDC85.056763 at Polygon95,242,552,
+live Aave3.1702%. Orders, UMA, Ostium and overdue decisions empty; state CLEAN.
+No asset action. All19 routine types pass on latest attempt; five initial
+interpreter failures retained. Critical resolving-source checks passed; broader
+capture partial with30 missing HTTP-metadata bodies. Four daemons current;
+free189.88 MiB above128 critical/below512 warning, no safe cleanup. No new
+Telegram/discovery/redemption. P&L nextOct16; monthly drillOct12.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

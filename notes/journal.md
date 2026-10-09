@@ -26648,3 +26648,100 @@ revised forecast, paired mark/depth and explicit low-probability exit sensitivit
 Publication audit passed: append-only financial history, prior/decision prefixes,
 CSV math/provenance and privacy. Only six owned public files will be staged;
 unrelated runtime changes retained. No new idle follow-up or durable goal.
+
+## 2026-10-09 18:00 UTC — periodic review; HOLD / NO ADD, no new action due
+
+Reviewed the active backlog and recent journal. No new trigger or overdue decision.
+Monthly diagnostic drill is next due Oct-12; weekly P&L Oct-16. Issuer-account
+credential rotation remains unverified and requires issuing-account access;
+no management capability or authorization to inspect private histories is present.
+Base MSFTc/NVDAc candidates stay manual/on-demand; no new recurring monitor or
+entry research was launched. No idle follow-up or durable goal created.
+
+Fresh authoritative bankroll at 18:02:47.111395–18:03:02.911594 UTC is $187.22,
+including $6.31 separately funded gas. PM midpoint/indicative fee-net depth
+$35.99/$32.05; cost $47.64, unchanged rounded settled accounting residual +$22.55.
+This is not audited cash profit. Ex-gas trading midpoint/depth $180.91/$176.97,
+whole-account depth $183.28. Trading depth +$0.21 since 14:00; +4.10% versus $170
+before unreconciled VM/API. Midpoint/depth gap $3.94. Positions were read separately
+18:02:26.867905–18:02:28.253825 and quick status 18:02:03.065192–18:02:09.977879;
+rounded PM values match. These are sequential observations, not synchronized NAV
+or guaranteed liquidation. One CSV row uses the approximate 18:02 window anchor
+and these existing readings, without manufacturing a new valuation.
+
+**HOLD / NO ADD.** Retain judgmental G/O central .08/.25, stress .01/.15 and upper
+.18/.38 from DEC-0189, not calibrated probabilities or confidence intervals.
+First-party AA comparison still reports Argon High rounded57% and Sol High44%;
+no new score/configuration is inferred. The currently available named HLE chart
+remains60 rows/Gemini46.2/OpenAI53.6. Current homepage/bundle mount independently
+checked. Root API retry HTTP Age180s and worker Age25s are cache ages, not dataset
+timestamps. All five held Gamma identities/criteria/state match14:00; all256
+Senate rows match through the same raw-XML parser. H.R.3633's rejected49–50 cloture
+on motion to proceed remains distinct from a final-passage vote. No new Google
+RSS or public news/opportunity record captured after14:00; bounded observations,
+not universal absence of releases. Captured Google article main texts match.
+
+All4 planning books passed180s freshness at receipt: G174.241s, C50Y14.463s,
+C58N2.321s, O52.582s. G102.08475 complete exit $1.3980091426; O19 $2.568496.
+Conservative base wealth $173.92 includes the Clarity29 floor and Trump dust0.
+Central joint full-exit ΔElog: G−.0280229250, O−.0105783526, both−.0392023395.
+Central independent/comonotonic and upper cases prefer hold across partial and
+combined exits; 1% G downside still prefers selling102.08 G for $1.3979635236,
+ΔElog+.0034926616 (+0.0035489205 with optimistic free carry), retaining O. The
+initial G trim probability boundary in the comonotonic central-O case is now
+about4.70%, reflecting the new20-share .03 bid; this is not a forecast revision.
+All actual fee-net segments, zero/minimum5-share boxes, stationary/endpoints,
+neighboring .01 lots, KKT and independent2,001-point one-leg grids verified.
+Quotes are receipt-time planning evidence; rewalk full gates before any order.
+
+Clarity29/29 full exit $28.269200 and optimistic free-carry $28.474060 stay below
+$29 floor. Root instantaneous Aave rate3.17019234019% gives free-carry factor
+1.007160638 to exact HLE expiry; a constant variable rate/free conversion and
+supply are sensitivities excluding costs and protocol risk. Clarity uses its own
+Jan-2 04:59 UTC market end for carry (factor1.007246760), one day after HLE.
+Routine hurdle3.05%
+is cached8h, so it is not used as the fresh carry rate. G/O fee-inclusive asks
+.046719/.2064 fail their1%/15% stress values. No add; Kelly is advisory and used
+the fresh187.22 total. Known Gemini drawdown persists, not independent exit proof.
+
+Root fixed-block Polygon95,242,552 census: all six known CTF balances, archived
+debut zero and pUSD47.319630 unchanged. Native aUSDC85.056763 (+.001174 since14:00)
+and reserve live/unpaused/unfrozen. This is a known-token census, not an unknown-
+token scan. Hormuz .003571 winning dust remains below current gas estimate based
+on prior simulated units; no new simulation or broadcast. State audit CLEAN,
+5 indexed and one deindexed claim; no holds pruned. UMA0 alerts, Ostium0 trades/
+limits/no change, Crux silent, watch no hits, authenticated orders empty/terminal
+cursor LTE=, overdue decisions0. No asset/order/approval/transfer/redemption action.
+
+Routine accounting:19 types/24 invocations/48 stream hashes. Five initial system-
+Python calls lacked httpx/web3 and returned1 with empty stdout; each was rerun
+once using repository .venv/bin/python, preserving failures. All19 latest calls
+returned0; no old bankroll substituted and no valuation row came from a failure.
+No discovery or redemption run was due in this light check.
+
+Source accounting remains **PARTIAL**. Worker local recorder shadowed its hash
+function with a header dict after writing response bodies:30 attempts across15
+URLs (original plus one bounded retry) have saved URL/time/bytes/hashes but missing
+status/headers/final URL. They are not asserted HTTP200, and later captures do
+not repair their metadata. Worker separately recorded one HLE HTTP200 and ten
+readonly governance RPCs. Root independently recorded eight critical-source
+responses: six200, two403 (original API and Senate requests), with one correctly
+recorded protocol-header retry on each. Current critical held-source checks passed;
+OpenAI challenge-body text alone does not establish a current403 status or complete
+release coverage. Combined source-only counts49 issued,19 fully receipted,
+30 missing-metadata bodies, plus12 quote and14 census requests. All51 worker
+integrity files and all retained receipts verified. Root corrected current
+source checks and explicit limitations are in the source audit.
+
+UNI102 correct-governor state7/full tuple agree across two RPCs at Ethereum
+26,156,521; Arc three roles match at25,110,540, configuration rather than funded
+fees/net burn. Four daemons each exactly one canonical/current process. Disk health
+197.79 MiB/capacity review189.88 MiB, above128 critical/below512 warning; bounded
+metadata review found no safe obsolete cache. Active CLI and private histories
+preserved; no deletion, expansion, restart or new infrastructure.
+
+No material new trade, finding or persistent incident requiring another Telegram;
+14:00 AA/prior update already sent as1122. Priors, groups, decision ledger, weekly
+P&L, watchlist and contribution/benchmark CSVs unchanged. Root artifacts:
+data/periodic_20261009T1800_{risk,current_sources,root_source_audit,root_inventory,
+aave_rate,exit_quotes,health,hormuz_gas_rpc}.json and logs/periodic_20261009T1800/.
