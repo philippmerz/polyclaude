@@ -26540,3 +26540,111 @@ succeeded. The failed probe is retained as partial receipt evidence rather than 
 
 Telegram reply 1115 (one part) delivered the findings for authenticated update 62572734. No
 additional idle follow-up was scheduled.
+
+## 2026-10-09 14:00 UTC — full check; AA Argon HLE confirmation lowers Gemini NO prior
+
+Authoritative bankroll interval 14:03:20.973–14:03:37.329 UTC: total $186.25,
+gas $6.21, PM midpoint/indicative fee-net depth $35.12/$31.84, cost $47.64 and
+unchanged rounded settled-P&L accounting residual +$22.55. This is not audited
+cash profit. Positions 14:03:00.911–14:03:02.217 and quick status
+14:02:57.073–14:03:00.910 separately matched rounded PM values. Ex-gas trading
+midpoint/depth $180.04/$176.76; whole-account depth $182.97. Trading depth +$0.01
+since 10:00, +3.9765% versus $170 before unreconciled VM/API costs. Account mark
+−$0.06 largely reflects separately funded gas −$0.07. Sequential indicative
+observations are not synchronized NAV or guaranteed liquidation. One CSV row
+uses the approximate 14:03 check-window anchor and these existing readings.
+
+**New evidence and prior revision (DEC-0189):** the [first-party AA comparison](https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-sol-high)
+confirms rounded Gemini 4 Argon (High) HLE **57%**. [Its methodology](https://artificialanalysis.ai/methodology/intelligence-benchmarking)
+uses 2,158 text-only questions from the same May-2025 HLE revision, one open-answer
+response without tools, and pass@1 equality grading. This is substantive adverse
+capability evidence; the earlier 10:00 snippet is now primary-confirmed. No
+unrounded 57.1 or separate second configuration score was validated. The AA
+leaderboard's server-rendered text alone does not expose its client-side chart;
+the comparison establishes the numeric claim. AA evaluates independently and is
+not the currently available market-named source. All 60 [live HLE API rows](https://dashboard.safe.ai/api/models)
+remain unchanged, Gemini maximum 46.2/OpenAI 53.6. HLE HTTP Age 107s is cache age,
+not dataset update time. Literal Gamma rules and the unavailability-gated fallback
+remain unchanged; method differences, official listing/timing and resolution
+interpretation retain a NO branch. Neither source stability nor this reasoning
+calibrates probabilities.
+
+Root lowers Gemini NO central .12→.08, stress .03→.01, upper .25→.18. These are
+judgmental scenarios, not a confidence interval. OpenAI .25/.15/.38 and configured
+cluster/correlation fields stay unchanged. A bounded champion/skeptic review
+challenged the prior and the exit arithmetic; root made the final judgment.
+**HOLD / NO ADD**, with explicit downside sensitivity rather than an all-scenario
+hold claim. At 14:12:47–48, all four fee-authoritative books passed the 180s guard
+at receipt: G 6.658s, C50Y 9.005s, C58N .272s, O 64.407s. G's full 102.08475-share
+13/12/11-mill bid walk returns $1.18506657139 net; central settlement EV $8.16678.
+O19 exit $2.384044. Conservative base wealth $173.92 includes the Clarity $29 floor
+and zero Trump-dust floor. Joint central full-exit ΔElog: G −.0292085460, O
+−.0115933556, both −.0414388167. All central independent/comonotonic dependence
+cases and the upper case prefer holding. At 1% G stress, a feasible 102.08 G sale
+returns $1.1850163884 and improves ΔElog by .0022951250 (.0023412725 with optimistic
+free carry); O holds in that joint optimum. Initial G trim turns favorable near
+2.05% NO in the comonotonic central-O sensitivity. All segment boxes, stationary
+points, endpoints, zero/minimum-5-share constraints and neighboring .01 lots were
+checked; KKT and independent 2,001-point one-leg grids agreed. Actual execution
+would require fresh signing-time gates, not reuse of these planning quotes.
+
+Clarity complete 29/29 fee-net exit $28.269200, optimistic free-carry $28.464846,
+both below $29 floor. The instantaneous Aave 3.05671389046% rate held constant
+through the exact HLE expiry gives factor 1.006920813; free instant conversion and
+supply exclude costs/protocol risk, a bound favoring exit rather than a forecast.
+G/O all-in asks .046719/.2064 fail their .01/.15 stress values: no add. After the
+prior revision, one necessary Kelly rerun returned G deficit −$12.12 and O +$5.11;
+these midpoint/rho heuristics remain advisory and do not override the joint
+analysis or pessimistic entry gate.
+
+Root Polygon fixed-block census at 95,233,259: all six known CTF balances and
+pUSD $47.319630 unchanged; archived debut token remains zero. Native aUSDC
+85.055589 (+.001231 since 10:00), reserve live/unpaused/unfrozen. Known-token census
+is not a claim of an exhaustive unknown-token scan. Hormuz winning dust .003571
+remains below estimated $0.0047965–$0.0048067 gas using the earlier simulated units
+and current gas/POL bounds; no new simulation or broadcast. Routine redemption
+was dry-run only: zero indexed winners; state audit CLEAN with one deindexed claim.
+Orders, UMA alerts, Ostium trades/limits and overdue decisions empty; Crux and
+watch-trigger checks silent. No asset, approval, order, transfer or redemption action.
+
+All 29 original routine invocations returned zero; 58 stream hashes and four
+artifact hashes verified. Both full raw discovery outputs and all emitted context
+batches reviewed: 80 primary/1,358 thin snapshot rows; 3 primary batches (50 emitted
+rows) and 51 thin batches (886), no truncation. Proofs only organize context and
+are not execution authorization; missing prior rows are not closures, with changed
+hurdle cohort metadata. Sports top-three consensus produced no eligible >3pp edge
+and included a ceasefire misclassification. Macro surfaced four Fed candidates
+without calibrated consensus. Monotonicity had two midpoint-only observations,
+zero book-validated executable pairs. Consistency remains **INCOMPLETE** under its
+configured soft caps: 5,011 markets/607 events/31 pages, 17 of 194 structural groups
+requested, 200 legs, 10 groups quoted, zero provisional trades. This is not a
+comprehensive no-arbitrage finding. Favorite-fade population numbers failed
+replication and are browse hints only. Ceasefire/blockade instances lack a
+verified tail-probability edge; no new candidate promoted or entry justified.
+Earlier Base MSFTc/NVDAc candidates remain manual/on-demand, without a new monitor.
+
+Source accounting is **PARTIAL**: 35 receipts, 29 HTTP 200 and six HTTP 403
+(initial plus one retry on each of three OpenAI direct pages). Main 37 integrity
+entries plus six AA entries, quote bodies and 14 root census receipts verified.
+The available named resolving sources were checked despite direct OpenAI-page
+failures; do not infer universal absence of releases. All five exact Gamma
+identities/rules/state and 256 Senate rows match 10:00; H.R.3633's 49–50 rejected
+cloture on motion to proceed is not final passage. UNI102 correct-governor full
+state/tuple agree at Ethereum 26,155,337 across two RPCs. Three Arc role getters
+match at 25,082,387, configuration evidence rather than funded fees/net burn.
+Captured Google RSS and public alert files have no entries after 10:00; root
+reparsed public alerts at completion of source audit.
+
+Four daemons each exactly one canonical/current process. Free disk health 214.11
+MiB/capacity review 206.12 MiB, above 128 MiB critical and below 512 MiB warning;
+bounded metadata inspection found no safe obsolete cache. Active CLI preserved.
+Weekly P&L next Oct-16; monthly drill Oct-12; off-chain reviews retired. Root
+artifacts: data/checkin_20261009T1400_{risk,root_source_audit,root_inventory,aave_rate,
+exit_quotes,health,hormuz_gas_rpc}.json and logs/checkin_20261009T1400*/. Earlier
+financial records retained; only Gemini's prior row and one decision appended.
+
+Material-only Telegram message 1122 delivered in one part with the AA confirmation,
+revised forecast, paired mark/depth and explicit low-probability exit sensitivity.
+Publication audit passed: append-only financial history, prior/decision prefixes,
+CSV math/provenance and privacy. Only six owned public files will be staged;
+unrelated runtime changes retained. No new idle follow-up or durable goal.

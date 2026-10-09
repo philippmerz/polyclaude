@@ -1,5 +1,5 @@
 {
-  "next_id": 189,
+  "next_id": 190,
   "decisions": [
     {
       "id": 1,
@@ -3908,6 +3908,26 @@
       "calibration_delta": "Engineering verification only; not an independent probability forecast or binary trading win. No asset or prior changed.",
       "lesson": "Bind redemption to exact on-chain token/condition/collateral and payout, not a success boolean. Check actual gas economics. Retrieve operator messages only through the authorized one-time reader; never discover providers by searching private material.",
       "resolved_at": "2026-10-02T02:24:07Z"
+    },
+    {
+      "id": 189,
+      "timestamp": "2026-10-09T14:26:46Z",
+      "type": "skip",
+      "thesis": "Gemini >=50 NO: first-party AA rounded57% on shared2158-question no-tools HLE subset confirms adverse capability evidence; named available board46.2 still governs. Lower NO central12% to8%, stress3% to1%, upper25% to18%; scenarios judgmental. Current102.08475-share net exit1.1851; central/correlation joint compounded-return cases hold;1% stress prefers full G exit. HOLD/NO ADD, no asset action.",
+      "confidence": "low",
+      "prediction": "Named-source Gemini >=50 market: P(NO)8% central, sensitivity1%-18%; not calibrated. Official qualifying row or confirmed forthcoming inclusion prompts bounded re-underwriting.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-01T04:59:00Z",
+      "tags": [
+        "hle",
+        "source-confirmation",
+        "prior-revision",
+        "hold"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }
