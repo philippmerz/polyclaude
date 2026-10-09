@@ -26324,3 +26324,89 @@ no chart code changed. Historical CSV/journal/weekly prefixes, backlog suffix,
 and README Operating model tail were preserved. One weekly Telegram summary
 was sent successfully (message 1113, one part). No new goal,
 timer or idle follow-up was created.
+
+
+## 2026-10-09 06:00 UTC — light check; HOLD / NO ADD, Gemini freshness guard closed
+
+Completed the bounded light check: 19 distinct routine types ran once, all rc=0,
+with 38 stdout/stderr hashes and byte counts independently verified. Kelly used
+the fresh authoritative $186.51 bankroll. Position audit refreshed local snapshot
+metadata and returned CLEAN; no holding, order, transfer, cancel, redemption,
+signing or broadcast action occurred. No discovery or redemption run was due.
+
+Bankroll was read 06:03:23.747311–06:03:40.364471 UTC: total mark $186.51,
+gas $6.29, PM midpoint/depth $35.31/$32.21, position cost $47.64, and settled-P&L
+accounting residual +$22.55, unchanged since 02:00 and not audited new trade
+profit. Ex-gas trading midpoint/depth were $180.22/$177.12; indicative whole-account
+depth $183.41. Trading depth rose $0.28 since 02:00 and is +4.19% versus $170
+before unreconciled VM/API costs. Positions 06:03:01.851121–06:03:05.785745 and
+quick status 06:03:56.304604–06:03:58.876892 separately matched rounded PM fields.
+These are sequential estimates, not synchronized NAV or certified liquidation;
+the printed/displayed midpoint-to-depth gap was $3.10.
+
+HOLD / NO ADD. The complete Clarity 29/29 pair's fee-net full exit was $28.269200
+and its optimistic free-carry bound $28.461715, both below the $29 payout floor.
+HLE judgmental Gemini/OpenAI p(NO) priors remain .12/.25 central, .03/.15 stress,
+.25/.38 upper with unchanged correlations; source stability does not calibrate
+them. OpenAI full exit was $2.7531; central ΔElog −0.0079397449. Central, upper
+and correlation cases retain hold. Stress conditionally favors selling O19
+while G is held (+0.000722507 without carry, +0.000827463 with optimistic carry);
+this is a sensitivity, not a certified full-book optimum. Its $0.2064 all-in
+ask exceeds stress p=.15; midpoint Kelly +$4.25 is advisory only. Gemini GET
+290.095837s and one POST 290.513828s fail the 180s freshness guard, so a current
+Gemini exit or combined trim is uncertified. The other quotes passed at receipt
+only; any action requires another current book walk. Gemini drawdown was −81.7%,
+individual Kelly delta −$8.65.
+
+Exact held CTF quantities and $47.319630 pUSD were unchanged at Polygon block
+95,213,760. Native aUSDC was 85.053192 there, +.001160 since the 02:00 fixed-block
+read; the earlier routine wallet read was 85.053186. This is accrual across
+separate reads, not a transaction. Live Aave variable supply rate was
+3.0023291273617737%; the marginal scan still used a 2.99% hurdle cached 24h.
+Resolved Hormuz dust .003571 shares remained below estimated gas $0.004708–
+$0.004718 using current gas/POL and prior 175036 simulated units; no new simulation
+or broadcast. UNI $7.37 versus $3.25 and AAVE $168.43 versus $105 remained WATCH,
+with no entry trigger; providers and per-asset quote times were not emitted.
+Authenticated orders were empty with terminal cursor; UMA reported 38 refreshed
+and 0 alerts, Ostium zero trades/limits/no change, and decisions remained
+188 total / 113 resolved / 75 pending with none overdue.
+
+Root source audit verified 31 response receipts and 35 integrity files. All
+13 literal HTTP sources returned 200; all 60 HLE rows, five Gamma identities/
+criteria/state, all 256 Senate rows, and Google Argon/recap main text matched
+02:00. HLE maxima remained 46.2 Gemini / 53.6 OpenAI; HTTP Age 83s is cache age,
+not dataset time. H.R. 3633 vote 00234 is still rejected cloture on a motion to
+proceed, not final passage. No new Google RSS item after 02:00 was captured;
+this and the bounded primary-source WebSearch do not establish universal absence.
+
+Current final UNI proposal102 state=7 and full tuple agree across two RPCs at
+Ethereum block 26,152,938; Arc's three roles match at block 25,025,519. Role
+configuration is not proof of sustainable net fee-funded burn. Source-call
+accounting preserves 8 wrong-governor RPC-error responses (four distinct reads,
+each initial plus one retry), excluded from validation. One additional corrected
+state request lost its receipt to a local recorder TypeError, as reported by the
+worker; response content/status/timestamps were not recovered. A saved targeted
+recovery and the other three corrected reads provide the final dual-RPC proof.
+Thus 32 known issued requests have 31 captured receipts, 23 successful and 8
+RPC errors; “current validation passed” does not mean every request succeeded
+or was captured. Historical 02:00 failed/missing receipts remain unchanged.
+No probability, group, criteria-read date or financial record was changed.
+
+The new 04:32 Tier-2 Hormuz headline was recorded with impacts empty. Its reported
+military action was not independently verified here and no active Hormuz position
+was identified beyond the resolved winning dust. No new opportunity alert was
+observed. Four daemons were exactly one canonical/current process each. Free disk
+was 268.86 MiB in the root health read and 265.27 MiB in the capacity review,
+below 512 MiB warning and above 128 MiB critical. No safe obsolete cache was
+found; the active CLI was retained and no daemon restart was needed.
+
+No material repeat Telegram summary was due; the weekly report was already sent
+at 02:00. Weekly P&L is next due Oct-16; monthly emergency-path/fee drill Oct-12.
+Issuer credential rotation remains unverified. Off-chain stock/brokerage reviews
+remain retired. Completion/source audits PASS in data/periodic_20261009T0600_*.json.
+One current CSV row was appended; no goal, timer or idle follow-up was created.
+
+Publication checks verified 148 observations, 68 eligible midpoint and 61 eligible
+depth rows, exact historical prefixes/suffixes, unchanged priors/weekly report,
+and clean added-text secret/whitespace review. No chart code changed; its ten
+tests passed at 02:00 and were not repeated for this data-only record update.

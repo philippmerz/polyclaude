@@ -1,3 +1,24 @@
+## Oct-9 06:00 light check — HOLD / NO ADD
+
+- Authoritative mark $186.51 including $6.29 gas; PM midpoint/depth $35.31/$32.21.
+  Ex-gas trading midpoint/depth $180.22/$177.12, depth +$0.28 since 02:00,
+  +4.19% versus $170 before unreconciled VM/API. Sequential, indicative estimates.
+  Settled residual +$22.55 unchanged; no position/cash/order action.
+- Clarity complete 29/29 exit $28.269200 (free-carry $28.461715) stays below $29
+  floor. OpenAI central/upper/correlation cases hold; stress conditional O19 exit
+  remains a sensitivity. Its $0.2064 ask fails p=.15; no add. Gemini GET 290.10s /
+  POST 290.51s fail 180s guard, so current G/combined exit remains uncertified.
+- Held sources unchanged; final correct-governor UNI state/tuple now agree across
+  two RPCs, Arc roles match, not net-burn proof. Source accounting retains eight
+  wrong-governor RPC-error receipts and one worker-reported unreceipted read;
+  32 known requests, 31 receipts/35 integrity files, final validation passed.
+  New 04:32 Hormuz Tier-2 headline unverified, impacts empty, no active holding.
+  UNI $7.37/$3.25 and AAVE $168.43/$105 WATCH/no hits; orders / UMA alerts / overdue decisions: 0.
+- All 19 light command types once / rc=0 / 38 hashes verified; state CLEAN and four
+  daemons canonical/current. Capacity 268.86/265.27 MiB above 128 / below 512; no safe
+  cleanup. No discovery/redemption run or repeat Telegram. P&L next Oct 16,
+  monthly drill Oct 12; issuer rotation unverified; off-chain reviews retired.
+
 ## Oct-9 02:00 full check and weekly P&L — HOLD / NO ADD
 
 - Bankroll 02:03:23.556584–02:03:39.970070 UTC: $186.32 total, $6.24 gas,
