@@ -104,6 +104,18 @@ verified. No asset action, discovery or redemption run. Weekly P&L is next due
 Oct-16; monthly diagnostic drill is due Oct-12. Off-chain stock/brokerage
 reviews remain retired.
 
+## On-demand Base stock-token review — Oct 9 11:10 UTC
+
+Coinbase B20 AAPLc/MSFTc/NVDAc have small-ticket Slipstream quotes losing about
+0.10% on a buy/reverse pair before gas and funding. MSFTc/NVDAc are
+[manual on-chain candidates](notes/longterm_watchlist.md); no allocation was
+made. Issuer redemption requires KYC vesting, so a no-KYC position relies on
+DEX liquidity and must account for issuer controls and legal eligibility.
+The measured route still needs a vetted Slipstream writer and a return thesis
+through January. The review also repaired the existing Base Uniswap quoter
+and Router02 call configuration; 15 focused tests passed. See the
+[research and validation record](notes/journal.md).
+
 ## Operating model
 
 - **Reactive:** `news_watcher.py` and `opportunity_watch.py` monitor material

@@ -529,6 +529,14 @@ proved liveness but not coverage, a docstring describing a check the code never 
 my own prose asserted as measurement. The common shape is an ABSENCE — "no change", "no gap",
 "nothing unwatched" — which is exactly what a broken instrument produces for free.)*
 
+- **2026-10-09 — verify the chain's deployed interface before diagnosing liquidity.** Base's
+  Ethereum-address QuoterV2 calls returned empty data, while the official Base quoter returned
+  a normal WETH/USDC quote. Router02 also needs a seven-field tuple, not V1's eight; its deadline
+  must be retained through deadline-checked multicall. Both swap paths are repaired and tested.
+  B20 stocks are native precompiles (observed marker `0xef`), so ordinary bytecode assumptions
+  cannot establish token identity. Use official addresses plus runtime metadata and policies.
+  Separate missing/failed quotes from dust pools and actual absence; see the Oct 9 journal.
+
 - **Test a guard with a case you KNOW it should fail — its reassuring output is a claim, not
   evidence.** 2026-08-25: `crux_coverage_check` printed "All 10 positions have at least one matching
   keyword" every tick, and I had been reading that silence as "nothing is unwatched". I tested it

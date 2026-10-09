@@ -33,6 +33,7 @@ _secrets.install_scrubbing_excepthook()
 
 UNISWAP_ROUTER_V1 = "0xE592427A0AEce92De3Edee1F18E0157C05861564"
 QUOTER_V2 = "0x61fFE014bA17989E743c5F6cB21bF9697530B21e"
+BASE_QUOTER_V2 = "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a"
 
 CHAIN = {
     "arbitrum": {
@@ -64,7 +65,7 @@ CHAIN = {
         "id": 8453,
         "rpcs": ["https://mainnet.base.org", "https://base.drpc.org"],
         "router": "0x2626664c2603336E57B271c5C0b26F421741e481",  # SwapRouter02
-        "quoter": QUOTER_V2,
+        "quoter": BASE_QUOTER_V2,
         "tokens": {
             "USDC": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
             "WETH": "0x4200000000000000000000000000000000000006",
@@ -122,6 +123,44 @@ ROUTER_ABI = [{
     "stateMutability": "payable",
     "type": "function",
 }]
+
+# Base's SwapRouter02 uses the deadline-free seven-field V3 params struct.
+# Preserve the old 600-second expiry by wrapping its call in MulticallExtended.
+ROUTER02_ABI = [{
+    "inputs": [{"components": [
+        {"name": "tokenIn", "type": "address"},
+        {"name": "tokenOut", "type": "address"},
+        {"name": "fee", "type": "uint24"},
+        {"name": "recipient", "type": "address"},
+        {"name": "amountIn", "type": "uint256"},
+        {"name": "amountOutMinimum", "type": "uint256"},
+        {"name": "sqrtPriceLimitX96", "type": "uint160"},
+    ], "name": "params", "type": "tuple"}],
+    "name": "exactInputSingle", "outputs": [{"name": "amountOut", "type": "uint256"}],
+    "stateMutability": "payable", "type": "function",
+}, {
+    "inputs": [{"name": "deadline", "type": "uint256"},
+                {"name": "data", "type": "bytes[]"}],
+    "name": "multicall", "outputs": [{"name": "results", "type": "bytes[]"}],
+    "stateMutability": "payable", "type": "function",
+}]
+
+
+def _router_swap_call(w, router_addr: str, chain_id: int, token_in: str,
+                      token_out: str, fee: int, recipient: str, deadline: int,
+                      amount_in: int, amount_out_min: int):
+    """Build the chain-specific V3 router call without altering its protections."""
+    if chain_id == 8453:
+        router = w.eth.contract(address=router_addr, abi=ROUTER02_ABI)
+        inner = router.functions.exactInputSingle((
+            token_in, token_out, fee, recipient, amount_in, amount_out_min, 0,
+        ))._encode_transaction_data()
+        return router.functions.multicall(deadline, [bytes.fromhex(inner[2:])])
+    router = w.eth.contract(address=router_addr, abi=ROUTER_ABI)
+    return router.functions.exactInputSingle((
+        token_in, token_out, fee, recipient, deadline, amount_in,
+        amount_out_min, 0,
+    ))
 
 MAX_UINT = (1 << 256) - 1
 FEE_TIERS = [100, 500, 3000, 10000]
@@ -469,11 +508,10 @@ def main() -> int:
           f"px {px:.6f} {in_sym}/{out_sym}{gas_note}; minimum "
           f"{amount_out_min / 10**out_dec:.8f}{movement}")
 
-    router = w.eth.contract(address=router_addr, abi=ROUTER_ABI)
-    swap_call = router.functions.exactInputSingle((
-        in_addr, out_addr, fee_used, addr, int(time.time()) + 600,
-        amount_units, amount_out_min, 0,
-    ))
+    deadline = int(time.time()) + 600
+    swap_call = _router_swap_call(
+        w, router_addr, cfg["id"], in_addr, out_addr, fee_used, addr,
+        deadline, amount_units, amount_out_min)
     try:
         swap_call.call({"from": addr})
     except Exception as exc:

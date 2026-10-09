@@ -1,3 +1,22 @@
+## Oct-9 11:10 Base stock-token review — cheap quotes; manual candidates only
+
+- Coinbase B20 AAPLc/MSFTc/NVDAc Slipstream quotes at Base 52,377,143 lose
+  about 0.10% for $10/$20/$30 buy/reverse pairs, before gas. A $20 pair loses
+  about $0.02; quoted L2 gas about $0.006 and relay fees about $0.0147 are
+  additional, with approval/L1/funding transaction gas unmeasured. Static
+  quote evidence, not guaranteed proceeds. Current issuer API: 117 records,
+  no broad ETF identified. Exact identities and terms are in the journal.
+- Permissionless DEX transfer does not vest issuer rights. No-KYC ownership
+  relies on a DEX exit; redemption needs AML/KYC and eligibility. Freeze,
+  termination, custody, dividend deductions and legal access remain material.
+- MSFTc/NVDAc retained as manual on-chain candidates. Before allocation:
+  current lawful eligibility, a vetted Slipstream writer, full funding/exit
+  costs and a January-horizon return/correlation thesis versus Aave. Cheap
+  access and strong business results alone do not establish an entry.
+- Fixed the existing Base QuoterV2/Router02 mismatch in normal/emergency
+  swap tools; retained deadline and other gates. Fifteen tests and read-only
+  deployed-router/quoter checks passed. No asset action or new monitoring.
+
 ## Oct-9 10:00 light check — HOLD / NO ADD
 
 - Mark $186.31 including $6.28 gas; PM midpoint/depth $35.12/$31.84;

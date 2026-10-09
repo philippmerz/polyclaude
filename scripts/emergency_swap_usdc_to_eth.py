@@ -51,6 +51,7 @@ SLIPPAGE_CAP_PCT = 5.0
 # Uniswap V3 contracts (same address across most EVM chains except Base)
 UNISWAP_ROUTER_V1 = "0xE592427A0AEce92De3Edee1F18E0157C05861564"  # SwapRouter
 QUOTER_V2 = "0x61fFE014bA17989E743c5F6cB21bF9697530B21e"
+BASE_QUOTER_V2 = "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a"
 
 # Per-chain config
 CHAIN = {
@@ -67,7 +68,7 @@ CHAIN = {
         "rpcs": ["https://mainnet.base.org", "https://base.drpc.org"],
         # Base uses SwapRouter02 at a different address
         "router": "0x2626664c2603336E57B271c5C0b26F421741e481",
-        "quoter": QUOTER_V2,
+        "quoter": BASE_QUOTER_V2,
         "weth": "0x4200000000000000000000000000000000000006",
         "tokens": {"USDC": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"},
     },
@@ -123,7 +124,7 @@ QUOTER_ABI = [{
     "type": "function",
 }]
 
-# SwapRouter (V1) and SwapRouter02 share this signature for exactInputSingle
+# SwapRouter V1 uses a deadline in its exactInputSingle tuple.
 ROUTER_ABI = [{
     "inputs": [{"components": [
         {"name": "tokenIn", "type": "address"},
@@ -140,6 +141,44 @@ ROUTER_ABI = [{
     "stateMutability": "payable",
     "type": "function",
 }]
+
+# Base SwapRouter02 omits the tuple deadline; multicall(uint256,bytes[]) keeps
+# the same 600-second transaction expiry as the V1 path.
+ROUTER02_ABI = [{
+    "inputs": [{"components": [
+        {"name": "tokenIn", "type": "address"},
+        {"name": "tokenOut", "type": "address"},
+        {"name": "fee", "type": "uint24"},
+        {"name": "recipient", "type": "address"},
+        {"name": "amountIn", "type": "uint256"},
+        {"name": "amountOutMinimum", "type": "uint256"},
+        {"name": "sqrtPriceLimitX96", "type": "uint160"},
+    ], "name": "params", "type": "tuple"}],
+    "name": "exactInputSingle", "outputs": [{"name": "amountOut", "type": "uint256"}],
+    "stateMutability": "payable", "type": "function",
+}, {
+    "inputs": [{"name": "deadline", "type": "uint256"},
+                {"name": "data", "type": "bytes[]"}],
+    "name": "multicall", "outputs": [{"name": "results", "type": "bytes[]"}],
+    "stateMutability": "payable", "type": "function",
+}]
+
+
+def _router_swap_call(w, router_addr: str, chain_id: int, token_in: str,
+                      token_out: str, fee: int, recipient: str, deadline: int,
+                      amount_in: int, amount_out_min: int):
+    """Build the chain-specific V3 router call, retaining deadline protection."""
+    if chain_id == 8453:
+        router = w.eth.contract(address=router_addr, abi=ROUTER02_ABI)
+        inner = router.functions.exactInputSingle((
+            token_in, token_out, fee, recipient, amount_in, amount_out_min, 0,
+        ))._encode_transaction_data()
+        return router.functions.multicall(deadline, [bytes.fromhex(inner[2:])])
+    router = w.eth.contract(address=router_addr, abi=ROUTER_ABI)
+    return router.functions.exactInputSingle((
+        token_in, token_out, fee, recipient, deadline, amount_in,
+        amount_out_min, 0,
+    ))
 
 POOL_FEE = 500   # 0.05% — most liquid USDC/ETH tier on most chains
 MAX_UINT = (1 << 256) - 1
@@ -299,21 +338,13 @@ def main() -> int:
             return 3
 
     # Step 2: exactInputSingle
-    router = w.eth.contract(address=router_addr, abi=ROUTER_ABI)
     deadline = int(time.time()) + 600
-    swap_params = (
-        usdc_addr,
-        weth_addr,
-        POOL_FEE,
-        addr,
-        deadline,
-        bal_units,
-        amount_out_min,
-        0,
-    )
+    swap_call = _router_swap_call(
+        w, router_addr, cfg["id"], usdc_addr, weth_addr, POOL_FEE, addr,
+        deadline, bal_units, amount_out_min)
     nonce = w.eth.get_transaction_count(addr)
     gas_price = w.eth.gas_price
-    swap_tx = router.functions.exactInputSingle(swap_params).build_transaction({
+    swap_tx = swap_call.build_transaction({
         "from": addr,
         "nonce": nonce,
         "chainId": cfg["id"],

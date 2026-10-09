@@ -26466,3 +26466,77 @@ found. Active CLI retained. No Telegram was due; weekly update already sent. P&L
 drill Oct-12. Issuer rotation remains unverified; off-chain reviews stay retired. Priors,
 probabilities, groups and decision dates unchanged. Root completion, risk and source audits passed;
 see data/periodic_20261009T1000_*.
+
+## 2026-10-09 11:10 UTC — Base tokenized-stock route review; feasible quotes, no entry
+
+On-demand review of Coinbase B20 stock tokens established inexpensive fractional DEX quotes at
+project ticket sizes. The [official issuer API](https://api.coinbase.com/v1/tokenized-stocks) exposed
+117 records; no broad-market ETF was identified in that captured list. A listing or `is_live` flag
+does not establish pool liquidity. This review covers three exact instruments on Base, chain 8453:
+
+| Token | Canonical address | $20 buy output | Reverse USDC quote |
+|---|---|---:|---:|
+| AAPLc | `0xb200000000000000000000C2e324d24d7eEcd1fb` | 0.05986029 | 19.979991 |
+| MSFTc | `0xB200000000000000000000Ab99cFa739E253872B` | 0.03785510 | 19.979981 |
+| NVDAc | `0xb20000000000000000000078ee7ce2fE4908108C` | 0.08515405 | 19.979999 |
+
+Aerodrome Slipstream spacing-10 USDC pools quoted $10/$20/$30 purchases and reverse sales of the
+exact received quantity at Base block 52,377,143, timestamp 11:00:33 UTC. Quote losses were about
+0.1000–0.1002%, including pool fees/impact, before transaction costs. These are independent quotes
+against unchanged state, not a sequential post-buy simulation or guaranteed liquidation. Quoter gas
+times captured L2 gas price and WETH/USDC price suggests another $0.0058–$0.0062 for two legs;
+approval, L1 data, transaction overhead and funding gas remain additional. Checked Aerodrome v2
+AAPLc/NVDAc pairs returned dust; existence alone would have been a destructive routing criterion.
+
+Two RPCs agreed on symbols/multipliers at the pinned block. Tokens have eight decimals and native
+B20 marker code `0xef`; their issuer identity cannot be inferred from ordinary contract bytecode.
+Transfer pause was false; sender/receiver/executor policy 5 existed and authorized the checked
+wallet, selected pools and router. NVDAc multiplier was 1.000537939576369481, AAPLc/MSFTc 1.0.
+The [Base integration docs](https://docs.base.org/build-on-base/integrate-defi/list-tokenized-stocks)
+explain native B20 identity, policies and dividend multipliers. API NAV timestamps were around
+08:05–08:14 UTC, so a difference from the DEX quote is not a concurrent stock-price arbitrage proof.
+
+DEX trading can be permissionless, but issuer-recognized redemption rights require vesting with
+AML/KYC and eligibility checks. An unvested holder relies on a DEX exit and faces freeze, termination
+and claim risks. The instrument is an ADGM certificate/trust interest, not direct registered stock.
+The NVDA prospectus also charges 5% of gross distributions and states 30% U.S. dividend withholding
+unless reduced by treaty; dividends are reinvested after deductions. Non-U.S.-person and applicable
+jurisdiction restrictions still apply. See [NVDA terms, sections 4.4/12.11/14](https://api.coinbase.com/v1/tokenized-stocks/prospectus/NVDAc.pdf)
+and [MSFT terms](https://api.coinbase.com/v1/tokenized-stocks/prospectus/MSFTc.pdf).
+Absence of an issuer-redemption route does not by itself forbid lawful secondary trading, but its
+loss must enter the expected-return and exit-risk assessment. No personal eligibility was certified.
+
+Read-only Across $20 native-USDC relay quotes at 10:59:16 UTC charged $0.005411 Polygon→Base and
+$0.009271 Base→Polygon, excluding source transaction gas and any Aave withdrawal. The earlier
+10:02 account snapshot had only about $1.05 Base cash, so these are hypothetical funding costs.
+Holding the 10:02 Aave variable rate of 3.0526687% fixed would earn about $0.138 on $20 through
+Jan 1 (83.54 days); this is an opportunity-cost illustration, not a rate or stock-return forecast.
+
+MSFTc and NVDAc are manual on-chain research candidates, not entries. Microsoft's [FY26 results](https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast)
+show Azure growth of 43%, adjusted annual EPS $17.28, operating cash $182.935B and cash capex
+$115.948B. The token's indicated $528.33 unit purchase price is about 30.6 times that adjusted
+trailing EPS; its [next announced results](https://www.microsoft.com/en-us/investor/default) are
+Oct 28. NVIDIA's [Q2 FY27 results](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/)
+show $96.2B revenue, 75% gross margin, adjusted EPS $2.22 and Q3 revenue guidance $108B ±2%.
+The multiplier-adjusted indicated purchase price is about 26.4 times four times quarterly adjusted
+EPS. Annualizing one quarter is not forward earnings underwriting. These establish operating
+momentum, not a calibrated excess return by January; AI spending and existing HLE exposure also
+require a correlation assessment. No allocation was justified in this route review.
+
+The review exposed two existing Base swap defects: the Ethereum quoter address and a V1 tuple
+sent to SwapRouter02. Both normal and emergency swap paths now use the [official Base QuoterV2](https://developers.uniswap.org/docs/protocols/v3/deployments/v3-base-deployments)
+and Router02's seven-field call inside deadline-checked multicall, retaining the 600-second expiry.
+Independent output floors, signing-time requotes and existing safety gates remain intact. Fifteen
+focused tests passed. Root read-only probes confirmed a positive canonical WETH/USDC quote and
+the deployed router's expired-deadline rejection. This repairs the existing Uniswap path; the
+measured Slipstream stock route still requires its own vetted writer before an allocation.
+
+No transaction was signed, approved, sent or funded. Existing positions and financial records
+were not revised. Local evidence: logs/base_stocks_20261009T1050/, including 200 verified canonical
+JSON RPC request/response hashes (one retained canonical stock-quote revert), all nine linked
+buy/reverse pairs, source-body hashes and the root economic/runtime audits. Root's initial
+16-method DRPC batch returned HTTP 500 without a captured body; ten individual fallback reads
+succeeded. The failed probe is retained as partial receipt evidence rather than counted as data.
+
+Telegram reply 1115 (one part) delivered the findings for authenticated update 62572734. No
+additional idle follow-up was scheduled.
