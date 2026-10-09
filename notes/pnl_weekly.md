@@ -1428,3 +1428,56 @@ Repairs addressed legitimate null-score HLE rows, repeated-headline deduplicatio
 `decisions.py summary`: **188 total,111 resolved,77 pending,94 lessons**, versus175/105/70/88 last week. Types:47 scaffolding,42 opens,39 size changes,29 skips,25 closes,5 strategy changes,1 legacy infra. The $457.31 pending-size sum is repeated historical decision sizing, not current exposure. Outcomes mix engineering verification and order lifecycles with forecasts; 111 resolved records are not 111 independent forecasts. DEC-0180 was resolved after receipt/balance checks and a fresh read-only native-USDC withdrawal simulation; DEC-0188 records the redemption guard. These are engineering verification, not trading forecast wins. The cancelled Swift attempt and exited Gemini debut must not be graded as successful binary predictions. The recurring lessons remain exact source identity, honest fill/accounting state, execution-price sizing and correlation-sensitive updating.
 
 Next clocks: **UNI proposal102 after block26,109,012** (estimated Oct-3; actual block controls), verifying outcome, queue/execution and fee activation with no automatic entry; **Oct-12 emergency-path drill and fee self-check**. No new timer or durable goal.
+
+# Week 2026-10-02 → 2026-10-09
+
+Indicative **ex-gas trading depth** moved from **$177.42 to $176.84**, a decline of **$0.58 (−0.33%)** from opening trading wealth. The comparison is before VM/API costs, which remain unreconciled and excluded. This is a marked/depth change, not a realized loss. The rounded settled-P&L accounting residual moved from **+$22.50 to +$22.55**; that five-cent difference is not audited new trade profit.
+
+## Whole-account performance
+
+| Measure | Oct 2 opening | Oct 9 close | Change |
+|---|---:|---:|---:|
+| Bankroll mark, including separately valued gas | $187.87 | $186.32 | −$1.55 |
+| Gas-token value | $6.81 | $6.24 | −$0.57 |
+| PM midpoint / indicative fee-net depth | $36.21 / $32.57 | $35.17 / $31.93 | −$1.04 / −$0.64 |
+| Ex-gas trading midpoint | $181.06 | $180.08 | −$0.98 |
+| Ex-gas trading depth | $177.42 | $176.84 | −$0.58 (−0.3269%) |
+| Whole-account indicative depth | $184.23 | $183.08 | −$1.15 |
+| Settled-P&L accounting residual | +$22.50 | +$22.55 | +$0.05, rounded residual only |
+
+The current ex-gas trading depth is **+$6.84 / +4.02% versus the $170 reference capital**, before VM/API costs. That +4.02% is calculated from **$176.84 trading depth**, not the $183.08 whole-account depth. Opening CSV timestamp is minute-rounded at 02:02 UTC; exact opening seconds are unavailable (the preserved Oct-2 bankroll metadata records only return code and 34.06-second duration). The closing bankroll was captured **02:03:23.556584–02:03:39.970070 UTC**; positions ran **02:03:01.089513–02:03:05.365115**, and quick status **02:03:56.731343–02:03:59.179123**. These separate observations share rounded marks but are sequential, not synchronized NAV or guaranteed liquidation proceeds.
+
+## Current holdings
+
+| Position | Side | Shares | Entry | Current mark | Cost | Mark value |
+|---|---:|---:|---:|---:|---:|---:|
+| Clarity Act, over 58 Senate votes | NO | 29 | $0.890 | $0.925 | $25.81 | $26.82 |
+| Gemini Humanity’s Last Exam ≥50 | NO | 102.084750 | $0.158 | $0.029 | $16.18 | $2.96 |
+| OpenAI Humanity’s Last Exam ≥55 | NO | 19 | $0.160 | $0.175 | $3.04 | $3.33 |
+| Clarity Act, over 50 Senate votes | YES | 29 | $0.080 | $0.060 | $2.32 | $1.74 |
+| Trump out before 2027 | NO | 0.33 | $0.881 | $0.955 | $0.29 | $0.32 |
+| **Total** |  | **5 legs** |  |  | **$47.64** | **$35.17** |
+
+Exact held CTF quantities and $47.319630 pUSD remained unchanged at Polygon block 95,204,194. Native aUSDC was 85.052032 there, +0.001174 from the 22:00 fixed-block observation. The earlier routine wallet read showed 85.052023, nine raw units lower because it was a separate earlier read; neither is a transaction. Current variable Aave supply rate was 2.981704335535969%. The marginal scan used a cached 2.99% hurdle, 20 hours old.
+
+## Trades, transfers, and realized P&L
+
+No own-account trade, fill, transfer, supply transaction, withdrawal, or broadcast redemption was recorded for this week. The prior report’s $112.927930 sale proceeds and $1.556540 fees were from Sep 25–Oct 2 and are not included here. The Oct-9 indexed `redeem-all --dry-run` found 0 of 7 winning redeemable rows and skipped three losing or uncertain rows; no transaction was broadcast. The current audit’s final follow-up returned CLEAN after the initial criteria audit flagged Gemini ≥50 for a re-read. The original 20 calls (19 rc=0, audit rc=1) and one follow-up audit invocation (rc=0) give **21 actual invocations across 20 distinct types, with 42 stream hashes**. The criteria reread found the current literal description unchanged, including the ANY-Gemini named-source branch and source-unavailability fallback; only `criteria_read` advanced from Oct 1 to Oct 9. Probabilities, groups, sizes, and recorded facts did not change.
+
+UNI proposal 102 reached an executed state during the week, a governance event rather than an account trade; the available evidence does not establish net fee-funded UNI burn. No capital-flow or trade profit is attributed to that event.
+
+## Decision quality and current judgment
+
+The decision ledger reports **188 total, 113 resolved, 75 pending**, with no overdue decision: two more resolved and two fewer pending than the prior report. Four resolutions in the timestamp window—IDs 121, 178, 180, and 188—were operational/scaffolding outcomes about alert matching, deduplication, Aave safety, and redemption safeguards. They are not independent market-forecast calibration wins. The two Oct-2 resolutions overlap the prior report, whose decision count was captured after the opening financial observation. No forecast-resolution evidence supports inferring calibrated priors from this week.
+
+Retain **HOLD / NO ADD** on the existing judgmental priors: Gemini/OpenAI p(NO) **.12/.25 central, .03/.15 stress, .25/.38 upper**, with existing correlations. Source stability does not calibrate these probabilities, and HLE-Diamond interpretation risk remains. The complete Clarity 29/29 pair has a fee-net full exit of **$27.989524**; even the zero-cost free-carry sensitivity, **$28.179213**, is below its **$29** payout floor. OpenAI’s fee-net full exit is **$2.7531**; its central full-exit Elog change is **−0.0079397449**. Central, upper, and correlation cases favor holding. The stress .03/.15 sensitivity conditionally favors selling all 19 OpenAI shares while retaining Gemini (**+0.000722507** without carry, **+0.000826955** with optimistic carry); because Gemini’s current executable quote is unavailable, this is a per-leg sensitivity, not a certified full-book joint optimum. The all-in OpenAI ask **$0.2064** exceeds the p=.15 stress probability, so **NO ADD**. Kelly’s **+$4.25** OpenAI midpoint delta is advisory only.
+
+Gemini’s GET was **472.471079 seconds** old and its one POST attempt **473.054585 seconds** old, both beyond the 180-second guard. No current Gemini exit or combined trim is certified. OpenAI/Clarity quotes passed freshness at receipt only and require another rewalk before action. The captured Hormuz alert was a Tier-2 public-news item at 00:23 UTC reporting an Iranian-media account of explosions; this weekly accounting review does not independently verify it. The only remaining held Hormuz amount is resolved winning dust, 0.003571 shares, with no active exposure beyond that claim.
+
+New OpenAI GPT-6 release material and its system card were reviewed; the inspected pages did not show a qualifying HLE score, so this did not establish a new contract fact or justify changing the judgmental probabilities ([release](https://openai.com/index/gpt-6-for-everyone/), [system card](https://deploymentsafety.openai.com/gpt-6-october)). The HLE board’s 60 full rows remain at 46.2 Gemini / 53.6 OpenAI, but its 30-second HTTP cache age is not dataset time. The source audit was **partial**: 24 receipts (22 HTTP 200, two HTTP 429), 31 files, and one UNI proposal request without a receipt; this is not an all-sources-passed result. Initial Ethereum proposal state/full tuple was observed at block 26,151,735, but second-RPC validation was incomplete. Arc’s three configured roles matched at block 24,997,204; configuration is not proof of realized token burn. Five held Gamma identities/rules/status and all 256 Senate rows were unchanged; H.R. 3633 vote 00234 remains rejected cloture, not final passage. One new Google/Lancet AMIE article at 22:30 did not concern HLE; no new opportunity alert was observed. Source stability is not universal news absence.
+
+Bounded discovery used 17 calls (nine network scanner/pair calls and eight offline contexts), all rc=0. It reviewed 56 primary and 1,061 thin-tail rows, 1,117 total, with no truncation and groups over 18 preserved. Two primary and 97 thin-tail criteria changes were only a resolution-source Binance URL addition; question descriptions did not change. No validated positive entry emerged. Consistency coverage remains incomplete: 14 of 181 live groups requested, only three quoted. This is a limited scan result, not proof that no edge exists.
+
+## Costs and next clocks
+
+VM/API costs remain unreconciled and excluded; a $0 cost assumption is not made. No off-chain benchmark or price checks were added; the retired stock/brokerage Sunday workflow remains retired. Weekly P&L is next due **Oct 16**; the monthly emergency-path and fee drill is due **Oct 12**. Credential-issuer rotation remains unverified, with no issuer route documented.

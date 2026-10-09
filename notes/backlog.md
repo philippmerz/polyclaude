@@ -1,3 +1,35 @@
+## Oct-9 02:00 full check and weekly P&L — HOLD / NO ADD
+
+- Bankroll 02:03:23.556584–02:03:39.970070 UTC: $186.32 total, $6.24 gas,
+  PM midpoint/depth $35.17/$31.93, position cost $47.64, and $22.55 rounded
+  settled residual (accounting estimate, not audited profit). Positions and
+  quick status at their separate intervals matched rounded marks. Ex-gas
+  trading midpoint/depth $180.08/$176.84; weekly depth change −$0.58 (−0.33%),
+  +4.02% versus $170 before unreconciled VM/API costs. Indicative, sequential
+  observations; not synchronized NAV or certified liquidation.
+- **HOLD / NO ADD.** Clarity fee-net exit $27.989524 and free-carry $28.179213
+  remain below the $29 floor. OpenAI exit $2.7531; central ΔElog −0.0079397449.
+  Conditional G-held stress sensitivity favors selling O19 (+0.000722507 /
+  +0.000826955 with carry); not a certified joint optimum. Ask $0.2064 exceeds
+  stress p=.15; Kelly +$4.25 is advisory. Gemini GET/POST ages 472.471079s /
+  473.054585s exceed 180s; no current G exit/combined trim certified. Retained
+  probabilities are judgmental, not calibrated.
+- Exact CTF/pUSD unchanged; pUSD $47.319630 at Polygon 95,204,194. Native
+  aUSDC 85.052032 (+.001174 since 22:00); live Aave 2.981704%. Earlier routine
+  wallet reading 85.052023 was separate. Dust .003571 remains below gas; no
+  new simulation/broadcast. Watchlist had no hits; orders empty, UMA 0 alerts,
+  Ostium 0 orders/trades, no overdue decisions.
+- Source audit is partial: 24 receipts/25 requests (22 HTTP 200, two HTTP 429),
+  one UNI proposal response uncaptured. New Google/Lancet AMIE article at 22:30
+  was not HLE; 00:23 Tier-2 Hormuz report was unverified with impacts empty.
+  Discovery: 56 primary + 1,061 thin rows, no truncation; no validated entry.
+  Consistency was limited to 14 of 181 groups requested and 3 quoted. Disk 297.75 MiB,
+  above128 MiB critical/below512 MiB warning; no safe cleanup.
+- 20 routine types / 21 invocations / 42 stream hashes: one initial state audit
+  rc=1 was followed once by a CLEAN rc=0 audit; all other commands rc=0. No
+  position/order/transfer/redemption/broadcast action. Weekly P&L next Oct-16;
+  monthly drill Oct-12; issuer rotation unverified. Off-chain review stays retired.
+
 ## Oct-8 22:00 light check — HOLD / NO ADD; Gemini freshness guard closed
 
 - Bankroll 22:02:03.669681–22:02:19.912115 UTC: total $186.19, gas $6.20,

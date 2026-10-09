@@ -26239,3 +26239,88 @@ after 18:00; this does not establish universal news absence. No priors changed.
 Weekly P&L is due Oct-9; monthly emergency-path/fee drill is due Oct-12. The
 known credential-issuer rotation status remains unverified. Off-chain
 stock/brokerage Sunday review remains retired.
+
+## 2026-10-09 02:00 UTC — full check and weekly P&L; HOLD / NO ADD
+
+Bankroll capture 02:03:23.556584–02:03:39.970070 UTC: total $186.32, gas $6.24,
+PM midpoint $35.17, depth $31.93, position cost $47.64, rounded settled-P&L
+residual $22.55. Positions were read 02:03:01.089513–02:03:05.365115 and quick
+status 02:03:56.731343–02:03:59.179123; both separately match rounded PM
+values. They are sequential observations, not synchronized NAV or certified
+liquidation. Printed midpoint/depth gap was $3.24. Ex-gas trading midpoint/depth
+was $180.08/$176.84, +4.02% on trading depth versus $170 before
+unreconciled VM/API costs. Whole-account indicative depth was $183.08. From Oct-2, trading depth declined $0.58 (−0.3269%),
+midpoint declined $0.98, gas declined $0.57, bank declined $1.55, PM midpoint /
+depth changed $36.21/$32.57 to $35.17/$31.93, and the rounded settled residual
+increased $0.05. The residual is not audited new profit.
+
+Held positions and current marks: Clarity >58 NO 29 (cost $25.81, mark $26.82);
+Gemini HLE>=50 NO 102.084750 (cost $16.18, mark $2.96); OpenAI HLE>=55 NO 19
+(cost $3.04, mark $3.33); Clarity >50 YES 29 (cost $2.32, mark $1.74); Trump
+out NO 0.33 dust (cost $0.29, mark $0.32). Total cost $47.64, midpoint $35.17,
+indicative depth $31.93.
+
+**HOLD / NO ADD** on unchanged judgmental priors Gemini/OpenAI p(NO) .12/.25
+central, .03/.15 stress, .25/.38 upper, with existing correlations. The Clarity
+29/29 fee-net full exit is $27.989524; free-carry bound $28.179213 remains below
+the $29 floor. OpenAI full exit is $2.7531 and central ΔElog −0.0079397449.
+Central, upper and correlation cases favor holding. Stress conditionally favors
+selling O19 while G remains held (+0.000722507 without carry, +0.000826955 with
+carry); it is per-leg sensitivity, not a full-book joint optimum while Gemini
+quotes are unavailable. OpenAI ask $0.2064 exceeds stress p=.15; Kelly +$4.25 is
+advisory only. Gemini GET 472.471079s and one POST 473.054585s exceed the 180s
+guard, so no current G exit or combined trim is certified. OpenAI/Clarity quotes
+were fresh at receipt only and need a new walk before action.
+
+Exact CTF inventory and pUSD $47.319630 were unchanged at Polygon block
+95,204,194. Native aUSDC was 85.052032 there (+0.001174 since Oct-8 22:00); an
+earlier routine wallet read was 85.052023, a separate timestamped observation
+nine raw units lower. No transaction is inferred. Live Aave variable rate was
+2.981704335535969%; the marginal scan's 2.99% hurdle was cached. Hormuz winning
+dust 0.003571 remained below $0.004847–$0.004857 estimated gas using current
+gas/POL and prior simulated units; no new simulation or broadcast.
+UNI $7.30/$3.25 and AAVE $166.43/$105 exceeded their review gates with no hits; per-asset quote
+providers/times were unavailable. Orders were empty, UMA 0 alerts, Ostium 0
+orders/trades, and the decision ledger had 188 total/113 resolved/75 pending,
+none overdue. Indexed redemption dry-run found 0 of 7 winning redeemable rows
+and skipped 3 losing/uncertain rows; no broadcast occurred. Discovery was run
+once per scanner/pair, as recorded below.
+
+The source audit is partial: 25 requests, 24 receipts (22 HTTP 200 and two
+HTTP 429), 31 files, and one UNI proposal response was not captured after a
+local capture error. HLE has 60 full rows (46.2 Gemini / 53.6 OpenAI); its
+30-second HTTP cache age is not dataset time. Five held Gamma identities,
+rules and state and all 256 Senate rows were unchanged. UNI proposal 102's first
+full state tuple was observed at Ethereum block 26,151,735; second dual-RPC
+validation was incomplete. Arc's three configured roles matched at block
+24,997,204; configuration does not prove net burn. One new Google/Lancet AMIE
+article at 22:30 did not concern HLE. A Tier-2 Hormuz item at 00:23 was
+unverified with impacts empty; no active position was identified beyond the
+resolved winning dust. No new opportunity alert was observed.
+
+Discovery used 17 calls (9 network, 8 offline): 56 primary and 1,061 thin-tail
+rows, 1,117 total, no truncation, groups over 18 preserved. Two primary and 97
+thin-tail criteria changes reflected only Binance resolution-source URL
+addition; one incomplete Venezuela ID 2412367 was excluded. No validated entry
+emerged. Consistency remained incomplete: 14 of 181 live groups were requested,
+only 3 quoted. This limited scan is not evidence that no edge exists.
+
+Health review found four canonical daemons, exactly one healthy current process
+each. Disk was 297.75 MiB, above 128 MiB critical and below 512 MiB warning;
+no safe cleanup was found. The Oct-9 routine had 20 distinct types and 21 actual
+invocations: initial position-state audit rc=1, one targeted follow-up audit
+02:08:24.806819–02:08:25.215286 rc=0/CLEAN, all other commands rc=0; 42 stream
+hashes were independently verified. Root completion and discovery audits PASS
+(data/checkin_20261009T0200_completion_audit.json and
+data/checkin_20261009T0200_discovery_audit.json). No position, order, transfer, redemption, or broadcast
+action occurred. Weekly P&L is next due Oct-16; monthly emergency-path/fee drill
+is due Oct-12; credential-issuer rotation remains unverified. Off-chain
+stock/brokerage research remains retired.
+
+Publication verification: 147 CSV observations, 67 eligible trading-midpoint and
+60 eligible trading-depth observations. The publication worker ran
+`node --test tests/performance_chart.test.mjs`: rc=0, 10 passed, 0 failed;
+no chart code changed. Historical CSV/journal/weekly prefixes, backlog suffix,
+and README Operating model tail were preserved. One weekly Telegram summary
+was sent successfully (message 1113, one part). No new goal,
+timer or idle follow-up was created.
