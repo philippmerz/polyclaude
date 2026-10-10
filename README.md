@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 154 recorded observations from Apr-25 through Oct-10, including
-74 eligible trading-midpoint and 67 eligible trading-depth observations. Rounded
+The chart now has 155 recorded observations from Apr-25 through Oct-10, including
+75 eligible trading-midpoint and 68 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -51,9 +51,9 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-10 06:03 UTC
+## Last bankroll snapshot — 2026-10-10 10:02 UTC
 
-Successful bankroll interval 06:03:00.367139–06:03:16.464184 UTC; separate
+Successful bankroll interval 10:02:36.475308–10:02:51.883482 UTC; separate
 positions and quick status matched rounded PM values. These are sequential
 indicative estimates, with no synchronized NAV or guaranteed liquidation.
 
@@ -61,33 +61,33 @@ indicative estimates, with no synchronized NAV or guaranteed liquidation.
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| PM midpoint / indicative fee-net depth | $36.18 / $32.42 |
-| Authoritative whole-account marked bankroll | $187.43 |
-| Approximate whole-account depth | $183.67 |
+| PM midpoint / indicative fee-net depth | $36.08 / $32.24 |
+| Authoritative whole-account marked bankroll | $187.32 |
+| Approximate whole-account depth | $183.48 |
 | Settled-P&L accounting residual | +$22.56 |
 
-Gas $6.33; ex-gas trading midpoint/depth $181.10/$177.34, unchanged since
-02:00. Depth +4.32% versus $170 before unreconciled VM/API costs. The rounded
-residual is unchanged and remains an accounting estimate. The midpoint-to-
-depth gap is $3.76.
+Gas $6.31; ex-gas trading midpoint/depth $181.01/$177.17.
+Depth is down $.17 since 06:00, +4.22% versus $170 before unreconciled VM/API
+costs. The residual remains an accounting estimate. Rounded midpoint-depth
+gap $3.84; the routine's unrounded display is $3.85.
 
 **HOLD / NO ADD.** G/O central priors remain .08/.25 (stress .01/.15).
-Named HLE and held market criteria are unchanged. Gemini's GET/POST books
-failed the 180s freshness gate; no current G or combined trim is certified.
-OpenAI's fresh planning exit is $2.7531: central cases favor holding,
-downside scenarios favor sale. Its ask fails stressed entry. Clarity
-exit/free-carry $28.2692/$28.4650 stays below its $29 floor. See the
+Named HLE and held criteria are unchanged. Gemini's GET/POST books failed
+the 180s freshness gate; no current G or combined trim is certified. OpenAI's
+receipt-time planning exit is $2.5685: central cases favor holding, with
+explicit downside and carry sale sensitivities. Its ask fails stressed entry.
+Clarity exit/free-carry $28.2692/$28.4644 stays below its $29 floor. See the
 [evidence and risk review](notes/journal.md).
 
-Known holdings and pUSD are unchanged; native aUSDC is 85.060395 at Polygon
-block 95,271,332, with a live Aave rate of 3.0463%. Orders, UMA alerts,
-Ostium positions and overdue decisions are empty; state audit clean.
-All 19 light command types passed once. Critical held sources were checked;
-wider OpenAI release coverage remains partial/unobserved after the prior
-blocked pages. Four daemons are current. Disk has 143.85 MiB free, above
-the 128 MiB critical threshold and below the 512 MiB warning; no safe
-cleanup was found. No asset action or new Telegram. Next P&L: Oct 16;
-monthly drill: Oct 12.
+Known holdings and pUSD are unchanged; native aUSDC is 85.061568 at Polygon
+block 95,280,856, with live Aave 3.0435%. Orders, UMA alerts, Ostium positions
+and overdue decisions are empty; state audit clean. All 19 light command types
+passed once. Critical held sources checked; wider OpenAI release coverage
+remains partial/unobserved after prior blocked pages. Four daemons are current.
+Manual removal of disposable sourced Python bytecode recovered
+34.54 MiB; 167.41 MiB free after validation is
+above 128 MiB critical and below 512 MiB warning. No asset action. Next monthly
+drill: Oct 12; P&L: Oct 16.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

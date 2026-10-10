@@ -1,3 +1,20 @@
+## Oct-10 10:00 light check — HOLD / NO ADD; scoped capacity recovery
+
+- Trading midpoint/depth $181.01/$177.17, depth −$.17 since
+  06:00; +4.22% before VM/API. Residual +$22.56 unchanged accounting estimate.
+- Held sources/priors unchanged. G GET/POST fail 180s; G/combined trim not
+  certified. Fresh O central cases hold with explicit downside/carry sale
+  sensitivities; no add. Clarity exit/free-carry $28.2692/$28.4644 below $29.
+- 19 routine types once/rc0, 38 hashes; 24 source receipts/34 integrity files
+  verified. Wider OpenAI release coverage remains partial/unobserved.
+- CLEAN state, known inventory unchanged, orders/UMA/Ostium/overdue0; no hit.
+- Manual sourced-bytecode cleanup: 1,728 untracked .pyc files,
+  34.54 MiB recovered; 167.41 MiB free after
+  validation, above 128 critical/below 512 warning. Sources/records retained,
+  imports and unchanged four daemons verified. No automated deletion/restart.
+- One material capacity summary via Telegram after verification; no asset
+  action. Drill Oct12/P&L Oct16 future; Base remains manual/on-demand.
+
 ## Oct-10 06:00 light check — HOLD / NO ADD; no new action due
 
 - Trading midpoint/depth $181.10/$177.34, unchanged since02:00; +4.32%
