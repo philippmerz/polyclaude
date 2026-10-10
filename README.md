@@ -51,6 +51,11 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
+On-demand copper research on Oct 10 verified Ostium XCU/USD and Hyperliquid
+XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_watchlist.md):
+recurring carry, the January horizon and route/eligibility requirements do not
+establish an allocation. No position or new watcher was added.
+
 ## Last bankroll snapshot — 2026-10-10 10:02 UTC
 
 Successful bankroll interval 10:02:36.475308–10:02:51.883482 UTC; separate

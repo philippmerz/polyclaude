@@ -1,6 +1,6 @@
 # Project-only watchlist
 
-Updated 2026-10-09. The original mixed watchlist is preserved verbatim in [the dated archive](longterm_watchlist_archive_2026-10-06.md) (SHA-256 `79848849682474b80d0ee19461dad41a2eea14cfaca8b9f118ed1589bed500e0`). Its stock, brokerage, and older candidate material is historical evidence only, not active project guidance.
+Updated 2026-10-10. The original mixed watchlist is preserved verbatim in [the dated archive](longterm_watchlist_archive_2026-10-06.md) (SHA-256 `79848849682474b80d0ee19461dad41a2eea14cfaca8b9f118ed1589bed500e0`). Its stock, brokerage, and older candidate material is historical evidence only, not active project guidance.
 
 Recurring stock and personal-brokerage research, Sunday reviews, equity-price monitoring, and IBKR surfacing were retired on 2026-10-06. This file tracks only project-accessible, on-chain review gates. It makes no trade recommendation or automatic entry authorization.
 
@@ -30,6 +30,27 @@ and fresh complete funding/exit quotes are required. DEX transfers can be permis
 issuer redemption rights require KYC vesting. A no-KYC position therefore needs an explicitly
 underwritten DEX exit and issuer/custody/control risks, plus lawful non-U.S./jurisdiction eligibility.
 There is no automatic buy trigger or new watcher for either instrument.
+
+## Manual copper candidate — Oct 10 source and route review
+
+Copper has a plausible demand/supply thesis, but no allocation is certified. The
+Oct 9 report of UBS's $15,500/t target is for 2027, with no January deadline;
+it is about 6.7% above the Oct 8 LME cash benchmark. This is reported forecast
+upside on that benchmark, not expected return or a target for a different feed.
+
+| Instrument | Current route evidence | Remaining entry requirements |
+|---|---|---|
+| Ostium XCU/USD | Arbitrum pair 6, raw HG/USD, feed `0xcf2e5ff1c8d081b9454e500162a88da6e54f5f44f92849eda1e3e90dc1ff5e57`; minimum leverage 1x, closed at the Saturday capture. Live opening fee 3 bps; current long carry annualizes to 6.52% at the sampled block cadence, if held constant. | Current environment eligibility and legacy-writer gates still block entry. Minimum collateral is unverified; the 4.5 USDC parameter is a fee base. Recheck market-open quotes, carry, lawful eligibility, funding/exit costs, exact allowance and final oracle fill. |
+| Hyperliquid XYZ `xyz:COPPER` | Active isolated-only HIP-3 market; 0.01 size increment, $10 order minimum. Oct 10 book supported $10–$30 illustrations; a roughly $20 static round trip costs about $0.0062 including inferred base-tier growth-mode fees, before funding, deposits/withdrawals and other costs. Current positive hourly funding annualizes to 5.475% if constant. | Listing and displayed depth do not establish personal eligibility or a vetted writer. Underwrite XYZ/oracle/margin risks, complete funding/exit costs, account fees and a positive net-return thesis into January. |
+
+Hyperliquid's documented `withdraw3` API route charges $1, equivalent to 5% of
+a $20 allocation. Current onboarding also describes other withdrawal methods;
+their costs were not quoted. A cheap order-book spread is not a complete exit
+budget or proof that this legacy route is the best available one.
+
+The [Oct 10 journal](journal.md) records sources, exact captures and cost
+corrections. Both carry rates are variable sensitivities. No price trigger,
+allocation, automatic polling or watcher was added.
 
 ## Project allocation standard
 

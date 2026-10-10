@@ -27081,3 +27081,77 @@ publication verification. Priors/groups/decisions/P&L/watchlist/capital and
 contribution/benchmark records retained. Evidence: data/periodic_20261010T1000_{risk,
 root_source_audit,root_inventory,aave_rate,exit_quotes,health,hormuz_gas_rpc,
 postflight}.json and logs/periodic_20261010T1000/, including the cleanup manifest/validation.
+
+
+### 2026-10-10 10:49 UTC — On-demand copper thesis and on-chain route review
+
+Decision: copper is a plausible directional candidate, but no positive net-return
+entry into the January evaluation is certified. Reserve cash remains in place.
+No signing, approval, transfer, position, gate change, watcher or idle follow-up.
+No new portfolio valuation or performance CSV row was requested for this review.
+
+UBS's [Oct 5 primary view](https://www.ubs.com/global/en/wealthmanagement/insights/marketnews/article.3810439.html)
+supports copper through AI infrastructure/electrification, alongside volatility and
+holding costs. [The Oct 9 report](https://www.investing.com/news/commodities-news/ubs-sees-copper-deficit-widening-in-2027-backs-long-positions-93CH-4940398)
+says deficit 219kt/379kt in 2026/2027 and $15,500/t in 2027; the numeric original
+UBS note was not independently obtained. Treat these as reported forecasts, not
+facts or a January target. The [Oct 9 ICAA brief](https://copper.com.au/news/mining/copper-weekly-brief-week-ending-9-october-2026/)
+places Oct 8 LME official cash at $14,526/t: target gap 6.7052% on that benchmark.
+Its quoted COMEX settlement and Ostium/XYZ feeds are separate instruments/times;
+this gap is not a certified perp return. China's demand, dollar/rates and supply
+recovery remain downside channels. April ICSG projections were dated and not
+substituted for an unavailable October update or a current probability model.
+
+Ostium public API capture 10:34:29–10:35:18: exact XCU-USD, pair 6/raw HG/USD,
+Arbitrum 42161, feed cf2e5ff1…c1ff5e57. Closed Saturday; bid/mid/ask
+6.68286729575/6.68469/6.68652270425, source last price Oct 9 20:58:59 UTC,
+not an executable quote. Current PairInfos V2 at block 513488263 returns long
+pure 328302063 + premium 238000000, divided by 1e18 per block at 1x. Sample
+1527 blocks/418 sec implies 6.52405% annual sensitivity; $20 carry to Jan 1
+00:00 about $0.295129 if rate/cadence stay constant. Current live opening fee
+at block 513488830 is 30000 =>3bps, versus generic 5bps documentation; no
+normal close fee. At $20 notional the static spread/open estimate is $0.016937
+before gas, variable carry or impact. Oracle $0.10 is tied up and refunded on a
+successful full close; failures/partial closes have other economics. Minimum
+leverage 1x/max50x; 4.5 USDC minLevPos is the minimum fee base, not certified
+minimum collateral. Current services [terms](https://docs.ostium.com/legal/terms-of-use)
+cover APIs/repositories and restrict EU/UK/US, among others; the existing Finland
+environment gate and independent unsafe legacy-writer gate remain in force.
+No personal eligibility conclusion was drawn.
+
+Alternative public Hyperliquid reads at 10:42 confirm active isolated-only
+`xyz:COPPER`, max20x, size decimals2; `flx:COPPER` is delisted. L2 snapshot
+10:43:23: ask6.718, bid6.7172 for1.81 then6.717; requested $10/$20/$30 rounded
+to1.49/2.98/4.47 units. Approximately $20.01964 entry/$20.017022 same-size
+reverse in unchanged displayed book; book cost $0.002618. With current growth
+mode/deployerFeeScale1 and inferred baseline taker0.9bps per side, spread plus
+fees is $0.0062213, not an account-specific executable quote. Positive funding
+0.00000625/hour annualizes to5.475% if unchanged; funded margin, transfers,
+withdrawal, oracle/deployer/margin risk and account fees still need review.
+Official minimum order $10; current smallest rounded compliant size1.49.
+[TradeXYZ terms](https://trade.xyz/terms) do not individually name Finland, but
+include additional restricted jurisdictions/applicable-law requirements and
+prohibit circumvention. Listing/VM location does not certify eligibility.
+Script source/map search found Hyperliquid candle reads but no vetted perp writer.
+
+Root verified raw response hashes and both sets of cost arithmetic. Corrected a
+worker's extra100 divisor in 1x rollover, generic opening-fee assumption, small
+spread rounding and report JSON syntax before any recommendation/persistence.
+No financial operation relied on those intermediate errors. Current reports:
+`logs/ostium_copper_20261010/report.json` SHA256
+3ccaa43b042bae14c6ca6e8badd67c26b6949a8997356213698008891010adf2;
+`logs/copper_xyz_feasibility_20261010/report.json` SHA256
+c8aa3e75fc70eda3cf01272d3ca3ea6fc4674bd95fdd12cfa2184f4749155ea9;
+`logs/copper_hyperliquid_20261010/report.json` SHA256
+289f00ed67c030a00757252acd4fd430f5692e2b8750813d0748ed8c825ae206.
+Underlying HTTP/RPC bodies, failed-read notes, fee/limit and block-time receipts
+remain in those scoped log folders. Added manual watchlist evidence only; current
+priors, account financial records and recurring triggers are unchanged. This
+interactive result is returned in chat; no duplicate Telegram tick summary.
+
+Root's final [Hyperliquid withdrawal API check](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint)
+still documents $1 for `withdraw3` (5% of a $20 allocation). Current
+[onboarding](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading)
+instead describes gas costs depending on withdrawal chain/method; the former
+is not treated as a universal fee or the best exit. Other withdrawal/funding
+paths were not quoted, so no complete lifecycle cost or entry is certified.

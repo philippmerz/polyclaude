@@ -1,3 +1,16 @@
+## Oct-10 on-demand copper review — manual candidate, no allocation
+
+- UBS's reported $15,500/t 2027 target is only 6.7% above the Oct 8 LME
+  benchmark and has no certified January deadline. Plausible thesis, not a
+  cash-reserve substitute or calibrated expected return.
+- Ostium XCU/USD exists at 1x; current environment/legacy-writer gates remain.
+  Live 3bp opening fee, current carry 6.52% annualized sensitivity; closed
+  Saturday. Minimum collateral not verified.
+- XYZ `xyz:COPPER` also exists; quoted $10–$30 depth and $10 minimum verified.
+  Funding 5.475% annualized sensitivity; eligibility, vetted execution and
+  full funding/exit costs remain unestablished. Details in project watchlist
+  and journal. No new watcher, price trigger, position or scheduled follow-up.
+
 ## Oct-10 10:00 light check — HOLD / NO ADD; scoped capacity recovery
 
 - Trading midpoint/depth $181.01/$177.17, depth −$.17 since
