@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 153 recorded observations from Apr-25 through Oct-10, including
-73 eligible trading-midpoint and 66 eligible trading-depth observations. Rounded
+The chart now has 154 recorded observations from Apr-25 through Oct-10, including
+74 eligible trading-midpoint and 67 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -51,9 +51,9 @@ This file is the current dashboard and entry point. Chronology belongs in
 - Scheduled runs are bounded. Cron and event watchers handle waiting between
   reviews.
 
-## Last bankroll snapshot — 2026-10-10 02:02 UTC
+## Last bankroll snapshot — 2026-10-10 06:03 UTC
 
-Successful bankroll interval 02:02:39.699848–02:02:56.161660 UTC; separate
+Successful bankroll interval 06:03:00.367139–06:03:16.464184 UTC; separate
 positions and quick status matched rounded PM values. These are sequential
 indicative estimates, with no synchronized NAV or guaranteed liquidation.
 
@@ -62,32 +62,32 @@ indicative estimates, with no synchronized NAV or guaranteed liquidation.
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
 | PM midpoint / indicative fee-net depth | $36.18 / $32.42 |
-| Authoritative whole-account marked bankroll | $187.41 |
-| Approximate whole-account depth | $183.65 |
+| Authoritative whole-account marked bankroll | $187.43 |
+| Approximate whole-account depth | $183.67 |
 | Settled-P&L accounting residual | +$22.56 |
 
-Gas $6.31; ex-gas trading midpoint/depth $181.10/$177.34. Depth +$0.38
-since Oct-9 22:00, +4.32% versus $170 before unreconciled VM/API costs.
-The rounded residual is unchanged and remains an accounting estimate.
-The midpoint-to-depth gap is $3.76.
+Gas $6.33; ex-gas trading midpoint/depth $181.10/$177.34, unchanged since
+02:00. Depth +4.32% versus $170 before unreconciled VM/API costs. The rounded
+residual is unchanged and remains an accounting estimate. The midpoint-to-
+depth gap is $3.76.
 
 **HOLD / NO ADD.** G/O central priors remain .08/.25 (stress .01/.15).
 Named HLE and held market criteria are unchanged. Gemini's GET/POST books
 failed the 180s freshness gate; no current G or combined trim is certified.
 OpenAI's fresh planning exit is $2.7531: central cases favor holding,
 downside scenarios favor sale. Its ask fails stressed entry. Clarity
-exit/free-carry $28.2692/$28.4714 stays below its $29 floor. See the
+exit/free-carry $28.2692/$28.4650 stays below its $29 floor. See the
 [evidence and risk review](notes/journal.md).
 
-Known holdings and pUSD are unchanged; native aUSDC is 85.059202 at Polygon
-block 95,261,745, with a live Aave rate of 3.1406%. Orders, UMA alerts,
+Known holdings and pUSD are unchanged; native aUSDC is 85.060395 at Polygon
+block 95,271,332, with a live Aave rate of 3.0463%. Orders, UMA alerts,
 Ostium positions and overdue decisions are empty; state audit clean.
-All 29 routine command types passed once and 57 discovery batches were
-reviewed, with no validated entry. Arbitrage coverage remains incomplete;
-OpenAI release coverage is partial after three blocked pages. Four daemons
-are current. Disk has 154.52 MiB free, above the 128 MiB critical threshold
-and below the 512 MiB warning; no safe cleanup was found. No asset action
-or new Telegram. Next P&L: Oct 16; monthly drill: Oct 12.
+All 19 light command types passed once. Critical held sources were checked;
+wider OpenAI release coverage remains partial/unobserved after the prior
+blocked pages. Four daemons are current. Disk has 143.85 MiB free, above
+the 128 MiB critical threshold and below the 512 MiB warning; no safe
+cleanup was found. No asset action or new Telegram. Next P&L: Oct 16;
+monthly drill: Oct 12.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

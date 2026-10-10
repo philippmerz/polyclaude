@@ -1,3 +1,16 @@
+## Oct-10 06:00 light check — HOLD / NO ADD; no new action due
+
+- Trading midpoint/depth $181.10/$177.34, unchanged since02:00; +4.32%
+  before VM/API. Residual+$22.56 unchanged accounting estimate, not audited profit.
+- G GET/POST fail180s; no current G/combined trim certified. Fresh O central
+  cases hold, downside cases favor sale; no add. Clarity exit/free-carry
+  $28.2692/$28.4650 below29. Priors.08/.25 unchanged; held sources unchanged.
+- All19 light command types once/rc0,38 hashes;24 source receipts/34 integrity
+  files verified. Wider OpenAI release coverage partial/unobserved. No new alert.
+- State CLEAN, inventory unchanged, orders/UMA/Ostium/overdue0, watch no hits.
+  Four daemons current; free143.85 MiB above128 critical/below512 warning,
+  no safe cleanup. No action/Telegram. DrillOct12/P&LOct16 future; Base manual.
+
 ## Oct-10 02:00 full check — HOLD / NO ADD; Gemini quote stale
 
 - Ex-gas trading midpoint/depth $181.10/$177.34; depth +$0.38 since22:00,
