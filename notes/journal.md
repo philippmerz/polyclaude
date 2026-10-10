@@ -27266,3 +27266,86 @@ data/checkin_20261010T1400_{routine,sources,risk,root_inventory,aave_rate,
 exit_quotes,health,hormuz_gas_rpc,root_receipt_audit,root_artifact_audit,
 root_batch_counts,preserved_records,postflight}.json;
 logs/checkin_20261010T1400_{routine,sources,root}/.
+
+## 2026-10-10 18:00 UTC — light periodic check; HOLD / NO ADD
+
+Reviewed the backlog and recent journal; no new public alert after 14:00,
+watchlist hit, overdue decision or due dated action. Monthly emergency/fee
+drill Oct12 and weekly P&L Oct16 remain future tasks; methodology is concluded.
+Copper/Base candidates remain manual/on demand. Issuer credential rotation
+remains unverified/access-gated. No new goal, watcher or idle follow-up.
+
+Successful same-run authoritative bankroll: $187.31 including $6.35 separately
+contributed gas. PM midpoint/indicative fee-net depth $36.04/$32.07, cost $47.64;
+ex-gas trading midpoint/depth $180.96/$176.99, flat since 14:00. Whole depth
+$183.34; trading depth +4.11% versus $170 before unreconciled VM/API costs.
+Rounded residual +$22.56 is unchanged accounting, not audited cash profit.
+Separate positions and quick status match rounded PM values. These sequential
+estimates are neither synchronized NAV nor guaranteed liquidation.
+
+Capture limitation: the routine helper stopped after command 7 succeeded
+because it expected TOTAL instead of TOTAL BANKROLL. Its code/error and all
+streams were retained; no command was rerun. Exact starts/ends for commands
+1–7 were lost, and file-write mtimes are recorded separately, never treated
+as request times. Commands8–19 have exact UTC timestamps. The CSV uses the
+approximate 18:00 scheduled check window and labels this limitation. Root's
+initial local risk/audit expected the intermediate authoritative_bankroll tag;
+the final manifest used bankroll. Corrected an exact-one alias lookup before
+calculations. No financial operation relied on either parser error.
+
+Retain DEC0189 G/O judgmental priors .08/.25, stress .01/.15, upper .18/.38;
+not calibrated probabilities. Current mounted HLE page/bundle/API all 200,
+all 60 name/ID/accuracy/calibration rows unchanged versus 14:00, G 46.2/O 53.6.
+Five exact held Gamma rules/state, complete 256 Senate rows, Google three
+texts/RSS and first-party AA 57% Argon High/44% Sol High pair unchanged.
+H.R.3633's rejected 49–50 cloture on proceeding is not final passage. No new
+RSS/public-alert item after 14:00. Fourteen source HTTP calls at 18:03:03.173411–
+18:03:09.111721 were captured/hash-verified; 23 integrity files verified.
+OpenAI direct pages were not re-requested after 14:00's403; broader current
+release coverage remains partial/unobserved, not evidence of absence.
+
+All 4 root planning books fresh at own receipts: G 102.487665s/O 90.241042s/
+C50Y 5.275818s/C58N 1.430145s; no fallback. Quotes expire: rewalk all execution
+gates before any action. Fee-net full G/O exits $1.412751603/$2.384044,
+central payout EV $8.16678/$4.75. With conservative W=$173.92, central full
+G/O/both-sale ΔElog −.0279408941/−.0115933556/−.0401568275. Central,
+independent/comonotonic and upper joint cases hold across zero/min 5 and actual
+piecewise fee-net prefixes, even with optimistic free carry. Every continuous
+box's KKT, adjacent .01 lots and independent 2001-point one-leg grids verified.
+Low 1% G downside is not robust: stress favors 102.08 G sold (+.0035755146),
+independent stress 94.69 G; G=.08/O=.15 comonotonic favors O 19 sold. These are
+explicit sensitivities, not a reason to substitute pessimistic priors for the
+retained central judgment without evidence. Initial comonotonic G-trim boundary
+p_NO ≈ .04853. Repeated −76% marked drawdown and entry-cost Kelly deltas are
+review inputs, not sell sizes. G/O asks .046719/.2064 fail stressed entry.
+No justified hidden-information maker premium; orders remain empty.
+Clarity complete 29/29 exit/free-carry $28.269200/$28.462368 remains below $29
+floor, horizon Jan2 04:59 UTC. Variable Aave 3.023244% plus costless conversion/
+supply is an optimistic sensitivity. HOLD / NO ADD; no asset action.
+
+Polygon fixed block 95,300,063: known CTF inventory, archived debut zero and
+pUSD 47.319630 unchanged; native aUSDC 85.063932 adds .001163 since 14:00, reserve
+live/unpaused/unfrozen. Known-asset census is not an unknown-token scan.
+Prior exact-claim simulation 175036 units at current gasPrice/rounded same-
+account POL FX implies Hormuz gas $.0049096 > $.003571 payout; retain claim,
+no simulation or broadcast. No light-tick discovery/redemption scan due.
+
+All 19 routine command types once/rc0, 38 stream hashes independently verified.
+Early rc0 provenance is retained in first_seven_rc_evidence.txt: commands1–6
+printed their return codes; command7's parser branch requires rc0. This does
+not restore the missing request times.
+Quick status internally repeats positions/hurdle/watchlist; standalone
+bankroll is authoritative. Routine hurdle 3.04% is 8h old; root carry uses the
+current reserve rate. Kelly used $187.31 and remains advisory. State audit
+refreshed its index: CLEAN, 5 indexed plus 1 deindexed claim, 0 holds pruned.
+UMA alerts, Ostium trades/limits/allowance/state changes and overdue decisions 0;
+authenticated orders HTTP 200/empty/terminal cursor LTE=. Crux quiet, no watch
+hit. Root 14 inventory and 12 quote bodies also hash-verified.
+
+Four daemons exact-one/canonical/current; disk 1629.81 MiB above 512 warning / 128
+critical. No cleanup or restart. No material action/finding warrants another
+Telegram. Current README/journal/one performance row updated; financial,
+watchlist, capital/contribution/benchmark records and unrelated changes retained.
+Evidence: data/periodic_20261010T1800_{routine,sources,risk,root_inventory,
+aave_rate,exit_quotes,health,hormuz_gas_rpc,root_receipt_audit,preserved_records,
+postflight,publication}.json and logs/periodic_20261010T1800/.

@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 156 recorded observations from Apr-25 through Oct-10, including
-76 eligible trading-midpoint and 69 eligible trading-depth observations. Rounded
+The chart now has 157 recorded observations from Apr-25 through Oct-10, including
+77 eligible trading-midpoint and 70 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -56,10 +56,11 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-10 14:03 UTC
+## Last bankroll snapshot — 2026-10-10 ~18:00 UTC
 
-Successful bankroll interval 14:03:27.044541–14:03:42.657449 UTC; separate
-positions and quick status matched rounded PM values. These are sequential
+Successful same-run bankroll capture; exact request interval was lost in a
+local capture-helper error. The scheduled check window is approximate.
+Positions and quick status matched rounded PM values. These are sequential
 indicative estimates, with no synchronized NAV or guaranteed liquidation.
 
 | Measure | Value |
@@ -67,29 +68,29 @@ indicative estimates, with no synchronized NAV or guaranteed liquidation.
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
 | PM midpoint / indicative fee-net depth | $36.04 / $32.07 |
-| Authoritative whole-account marked bankroll | $187.28 |
-| Approximate whole-account depth | $183.31 |
+| Authoritative whole-account marked bankroll | $187.31 |
+| Approximate whole-account depth | $183.34 |
 | Settled-P&L accounting residual | +$22.56 |
 
-Gas $6.32; ex-gas trading midpoint/depth $180.96/$176.99. Depth is down $.18
-since 10:00, +4.11% versus $170 before unreconciled VM/API costs. The residual
+Gas $6.35; ex-gas trading midpoint/depth $180.96/$176.99, flat since 14:00.
+Depth is +4.11% versus $170 before unreconciled VM/API costs. The residual
 remains an accounting estimate; midpoint-depth gap $3.97.
 
 **HOLD / NO ADD.** G/O central priors remain .08/.25 (stress .01/.15).
-Named HLE and held criteria are unchanged. All four planning books passed
+Named HLE and held criteria are unchanged. Four planning books passed
 freshness at their receipts; G/O fee-net exits $1.4128/$2.3840. Central joint
 cases favor holding, while downside scenarios favor trims. G/O asks fail
-stressed entry. Clarity exit/free-carry $28.2692/$28.4642 stays below its $29
+stressed entry. Clarity exit/free-carry $28.2692/$28.4624 stays below its $29
 floor. See the [evidence and risk review](notes/journal.md).
 
-Known holdings and pUSD are unchanged; native aUSDC 85.062769 at Polygon
-block 95,290,603, live Aave 3.0461%. Orders, UMA alerts, Ostium positions and
-overdue decisions are empty; state audit clean. All 29 routine command types
-passed once; complete 53 emitted discovery batches reviewed, no validated
-entry. Arbitrage quote coverage remains incomplete; broader OpenAI release
-coverage is partial after three 403 pages. Four daemons are current, with
-1636.09 MiB disk free above the 512 MiB warning. No asset action or new
-Telegram. Next monthly drill Oct 12; P&L Oct 16.
+Known holdings and pUSD are unchanged; native aUSDC 85.063932 at Polygon
+block 95,300,063, live Aave 3.0232%. Orders, UMA alerts, Ostium positions and
+overdue decisions are empty; state audit clean. All 19 light command types
+passed once, with 38 output hashes verified. Missing early request times are
+explicitly recorded. Critical source checks passed; broader OpenAI release
+coverage remains partial/unobserved. Four daemons are current, with 1629.81 MiB
+disk free above the 512 MiB warning. No asset action or Telegram. Monthly
+drill Oct 12; P&L Oct 16.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

@@ -1,3 +1,18 @@
+## Oct-10 18:00 light check — HOLD / NO ADD; no new action due
+
+- Trading midpoint/depth $180.96/$176.99, flat since 14:00; +4.11% before
+  VM/API. Residual +$22.56 unchanged accounting estimate, not audited profit.
+- Sources/priors unchanged. Four planning books fresh at receipt only;
+  G/O exits $1.4128/$2.3840. Central joint cases hold; downside cases favor
+  trims, asks fail stressed entry. Clarity exit/free-carry $28.2692/$28.4624<29.
+- All 19 light types once/rc0, 38 stream hashes. Capture helper lost exact
+  starts/ends for first seven successful commands; no command rerun, CSV
+  explicitly uses approximate scheduled window. Broader OpenAI coverage unobserved.
+- State CLEAN, inventory unchanged, orders/UMA/Ostium/overdue 0; no watch hit.
+  Four daemons current; disk 1629.81 MiB above warning. No cleanup or asset action.
+- No Telegram or new follow-up. Drill Oct 12/P&L Oct 16 future;
+  copper/Base manual only; issuer rotation still unverified/access-gated.
+
 ## Oct-10 14:00 full check — HOLD / NO ADD; no new action due
 
 - Trading midpoint/depth $180.96/$176.99, depth −$.18 since 10:00; +4.11%
