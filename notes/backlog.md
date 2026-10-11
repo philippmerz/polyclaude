@@ -1,15 +1,20 @@
-## Oct-10 22:00 light check — HOLD / NO ADD; no new action due
+## Oct-11 02:00 full check — HOLD / NO ADD; criteria review complete
 
-- Trading midpoint/depth $181.11/$176.99: midpoint +$.15 since 18:00,
-  depth flat, +4.11% before VM/API. Residual +$22.56 is an accounting estimate.
-- Held sources/priors unchanged; central joint exit cases hold, downside
-  sensitivities remain. Clarity exit/free-carry $28.2692/$28.4594<29; no add.
-- All 19 light types once/rc0, 38 stream hashes, exact command UTCs captured.
-  State CLEAN; inventory unchanged; orders/UMA/Ostium/overdue 0; no watch hit.
-- Three OpenAI direct pages 403: current broader release coverage unobserved.
-  Four daemons current; disk 1605.51 MiB above warning. No cleanup/asset action.
-- No Telegram or new follow-up. Drill Oct 12/P&L Oct 16 future;
-  copper/Base manual only; issuer rotation still unverified/access-gated.
+- Trading midpoint/depth $181.40/$177.55, +$.29/+$.56 since 22:00;
+  depth +4.44% before VM/API. Residual +$22.56 is an accounting estimate.
+- Held sources/probabilities unchanged. Due OpenAI criteria/assessment dates
+  refreshed with current facts; history/groups/source_ack retained. Central
+  joint cases hold, explicit downside scenarios trim; no add. Clarity
+  exit/free-carry $28.2692/$28.4594<29.
+- All 29 routine types once, 27 rc0. Usage rc2 SQLite failure/no retry;
+  initial state rc1 due review resolved, one required verification rc0/CLEAN.
+  58 stream hashes/UTCs checked; all 70 context batches reviewed, no entry.
+  Consistency incomplete: 17/255 requested, 15 quoted, 238 unquoted/2 failed.
+- Inventory unchanged; orders/UMA/Ostium/overdue 0, no watch hit. OpenAI
+  broader current releases unobserved after three direct-page 403s.
+- Four daemons current; 1581.34 MiB disk above warning. No cleanup/asset
+  action/Telegram or new follow-up. Drill Oct 12/P&L Oct 16 future;
+  copper/Base manual only, issuer rotation still unverified/access-gated.
 
 ## Oct-10 14:00 full check — HOLD / NO ADD; no new action due
 
