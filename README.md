@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 163 recorded observations from Apr-25 through Oct-11, including
-83 eligible trading-midpoint and 76 eligible trading-depth observations. Rounded
+The chart now has 164 recorded observations from Apr-25 through Oct-11, including
+84 eligible trading-midpoint and 77 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -56,9 +56,9 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-11 ~18:02 UTC
+## Last bankroll snapshot — 2026-10-11 ~22:01 UTC
 
-Authoritative bankroll interval 18:02:01.959450–18:02:18.193063 UTC; separate
+Authoritative bankroll interval 22:01:18.013597–22:01:33.575212 UTC; separate
 positions match rounded PM/depth. Sequential indicative estimates are not
 synchronized NAV or guaranteed liquidation.
 
@@ -66,30 +66,30 @@ synchronized NAV or guaranteed liquidation.
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| PM midpoint / indicative fee-net depth | $36.21 / $33.30 |
-| Authoritative whole-account marked bankroll | $187.67 |
-| Approximate whole-account depth | $184.76 |
+| PM midpoint / indicative fee-net depth | $36.16 / $33.28 |
+| Authoritative whole-account marked bankroll | $187.53 |
+| Approximate whole-account depth | $184.65 |
 | Settled-P&L accounting residual | +$22.57 |
 
-Gas $6.53; ex-gas trading midpoint/depth $181.14/$178.23,
-−$1.49/+$0.58 since 14:00. Depth is +4.84% versus $170 before
+Gas $6.45; ex-gas trading midpoint/depth $181.08/$178.20,
+−$0.06/−$0.03 since 18:00. Depth is +4.82% versus $170 before
 unreconciled VM/API costs. Residual unchanged, rounded accounting rather than
-audited cash profit; no new settlement/fill. Rounded midpoint-depth gap $2.91.
+audited cash profit; no new settlement/fill. Rounded midpoint-depth gap $2.88.
 
 **HOLD / NO ADD.** G/O judgmental central priors .08/.25, stress .01/.15
-unchanged. Available critical sources and held criteria match 14:00. Four
-planning books passed freshness at receipt only; G/O fee-net exits $1.9819/$2.7531.
+unchanged. Available critical sources and held criteria match 18:00. Four
+planning books passed freshness at receipt only; G/O fee-net exits $1.9536/$2.7531.
 Central joint cases hold; downside cases favor trims, asks fail stressed entry.
-Clarity exit/free-carry $28.5691/$28.7622 below $29 floor. See the
+Clarity exit/free-carry $28.5691/$28.7606 below $29 floor. See the
 [evidence and risk review](notes/journal.md).
 
-Known CTF/pUSD holdings unchanged; native aUSDC 85.070928 at Polygon
-block 95,357,649, live Aave 3.0277% variable. Orders, UMA alerts,
+Known CTF/pUSD holdings unchanged; native aUSDC 85.072094 at Polygon
+block 95,367,194, live Aave 3.0075% variable. Orders, UMA alerts,
 Ostium positions and overdue decisions empty; state CLEAN, no watch hit.
 All 19 light types once/rc0, 38 streams/UTCs verified; quota 2%/98%.
 No discovery/redemption scan due at this light tick. Three OpenAI403 pages
 leave wider current release coverage partial/unobserved. Four daemons current;
-1522.07 MiB disk exceeds 512 warning. No asset action/Telegram.
+1512.98 MiB disk exceeds 512 warning. No asset action/Telegram.
 Monthly drill Oct 12; weekly P&L Oct 16.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
