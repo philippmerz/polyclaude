@@ -1,17 +1,17 @@
-## Oct-11 06:00 light check — HOLD / NO ADD; no new action due
+## Oct-11 10:00 light check — HOLD / NO ADD; no new action due
 
-- Trading midpoint/depth $181.30/$177.36, −$.10/−$.19 since 02:00;
-  depth +4.33% before VM/API. Residual +$22.57 is rounded accounting,
-  one cent higher without a settlement, not audited cash profit.
-- Held sources/priors unchanged; central joint exit cases hold, downside
-  scenarios favor trims. No add; Clarity exit/free-carry $28.2692/$28.4591<29.
-- All 19 light types invoked once/rc0, 38 streams/UTCs verified. Current
-  quota probe succeeds. State CLEAN; inventory unchanged; orders/UMA/Ostium/
-  overdue 0; no watch hit. No discovery/redemption scan due.
-- Three OpenAI direct pages 403: wider current releases remain unobserved.
-  Four daemons current; 1572.18 MiB disk above warning, no cleanup.
-- No asset action/Telegram/new follow-up. Drill Oct 12/P&L Oct 16 future;
-  copper/Base manual only, issuer rotation still unverified/access-gated.
+- Trading midpoint/depth $181.31/$177.37, each +$.01 since 06:00;
+  depth +4.34% before VM/API. Residual +$22.57 unchanged accounting
+  estimate, not audited cash profit; gas rounds one cent lower, no settlement.
+- Available held sources/priors unchanged; central joint exit cases hold,
+  downside cases favor trims. No add; Clarity exit/free-carry $28.2692/$28.4588<29.
+- All19 light types once/rc0, 38 streams/UTCs checked; quota1%/99%. State CLEAN;
+  inventory unchanged, orders/UMA/Ostium/overdue0, no watch/public-alert trigger.
+  Live hurdle2.99%; no discovery/redemption scan due.
+- Three OpenAI direct403 pages: wider releases partial/unobserved. Four
+  daemons current, 1554.05 MiB disk above warning; no cleanup/restart.
+- No asset action/Telegram/new follow-up. Drill Oct12/P&L Oct16 future;
+  copper/Base manual only; issuer rotation unverified/access-gated.
 
 ## Oct-11 02:00 full check — HOLD / NO ADD; criteria review complete
 
