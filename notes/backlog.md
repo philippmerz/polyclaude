@@ -1,5 +1,8 @@
 ## Oct-12 compact onboarding — completed; existing cadence only
 
+- Writing default is concise bullets with facts/conditions preserved; architecture
+  report reformatted. Independent semantic audit: no material loss; exact numeric
+  literals, links, replay table and diagram retained. Formatting only.
 - Current lessons94,955 →15,421 bytes (83.76% smaller); original ledger preserved
   byte for byte in strategy/archive/01_lessons_2026-10-12.md. Required full current
   philosophy/operations reads and safety gates remain.

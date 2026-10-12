@@ -43,6 +43,17 @@ remains historical evidence. `scripts/context_packet.py` builds bounded packets
 for four task scopes without loading full history or live state. Packets are
 orientation only; the required strategy reads and live execution checks remain.
 
+Writing default for replies, handoffs and maintained documents:
+
+- Lead with the result; use concise bullets with one claim or action each.
+- Preserve relevant facts, numbers, identities, dates, assumptions, uncertainty,
+  conditions and evidence links. Shorten wording, not information.
+- Keep a detail when it changes interpretation, a decision, uncertainty or
+  verification; otherwise link supporting material instead of repeating it.
+- Remove repetition and filler; retain enough grammar to read once. Use tables
+  for comparisons and short headings for navigation; avoid cryptic shorthand
+  and multi-topic bullets. Follow a specifically requested format when it differs.
+
 ## Mandate and constraints
 
 - Reference trading capital: **$170**. Separately contributed gas is tracked

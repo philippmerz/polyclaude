@@ -28345,3 +28345,25 @@ No new performance CSV point or portfolio check was invented from this review.
 Packet-size reduction is measured; no billed-token, forecast-quality or ROI
 improvement is inferred. Public commit and a substantive Telegram status reply
 complete this bounded task;14:00 remains the next already-scheduled review.
+
+
+### 2026-10-12 13:50 UTC — dense writing default and architecture formatting
+
+- Added durable writing instructions to README and local onboarding: lead with
+  results; concise bullets; one claim/action each; preserve facts, identities,
+  dates, assumptions, uncertainty, conditions and evidence. Keep a detail when
+  it changes interpretation, decision, uncertainty or verification; link redundant
+  support. Retain grammar; avoid cryptic shorthand and multi-topic bullets.
+- Reformatted research/2026-10-12-finite-context-architecture.md to bullets and
+  short sections: 14,725 → 13,712 UTF-8 bytes (6.88% smaller). The goal is fast
+  reading with information preserved; byte reduction is not a quality measure.
+- Independent semantic audit found no material loss. Six links, all numeric
+  literals, the exact replay table and Mermaid diagram preserved. Implemented
+  offline prototype versus proposed live routing/validation remains explicit.
+- Eight financial/prior/watchlist/performance records unchanged, including the
+  decision ledger. No strategy, software behavior, probability or asset action.
+- Refreshed the editorial handoff/source hashes after source edits; 14:00 expiry
+  remains the next scheduled boundary. Financial observations stay dated 10:48–10:55;
+  this formatting review is not a new live check or performance CSV point.
+- Evidence:data/dense_docs_20261012/{baseline,semantic_audit}.json and public
+  Git history retain the earlier report; no new archive, timer, watcher or goal.

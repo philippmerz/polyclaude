@@ -1,66 +1,56 @@
 # Reusable reasoning for a continuously running trading agent
 
-The recommended architecture is broad mechanical discovery, followed by a few
-deeply understood source families. The primary model writes and revises the
-reasoning method for each family. The VM retains exact facts, applies reviewed
-contract bindings, and recalculates economics. Primary attention goes to new
-semantics, changed evidence and consequential decisions.
-
-This is an architectural proposal with an implemented offline prototype. Its
-replay establishes lossless context sharing and correct invalidation in the
-tested cases. It establishes neither a profitable strategy nor improved forecast
-accuracy. No allocation, probability in financial records, execution route,
-daemon or schedule was changed.
+- **Architecture:** broad mechanical discovery → deeply understood source
+  families → exact contract bindings → current economics → portfolio judgment.
+- **Primary model:** write/revise each family's reasoning method; review new
+  semantics, changed evidence and consequential decisions.
+- **VM:** retain exact facts, apply reviewed bindings and recalculate economics.
+- **Status:** architectural proposal with an implemented offline prototype.
+  Replay demonstrates lossless context sharing and correct invalidation in the
+  tested cases; it establishes neither a profitable strategy nor better forecasts.
+- **Authority unchanged:** no allocation, probability in financial records,
+  execution route, daemon or schedule changed.
 
 ## Spend intelligence on the underlying question
 
-A station-day has one distribution of maximum temperature and many bucket
-contracts. An official release can have one distribution of reported values and
-many thresholds. A model launch can have one set of score/configuration scenarios
-and many vendor/threshold/deadline claims. Independent prose evaluations of each
-contract repeat work and can produce incompatible probabilities.
-
-Analyze the underlying random variables once. Then project explicit joint
-scenarios onto each contract's reviewed predicate. For example, an integer
-temperature outcome of 28 makes the 28-degree bucket true and the other ordinary
-buckets false. The projection preserves each condition/token identity, literal
-criteria fingerprint, threshold and outcome mapping. Different deadlines,
-rounding rules, sources, fallback branches and correction rights require their
-own bindings. Shared event membership or similar language proves none of these.
-
-The reusable asset is a small analysis program: which exact measurement matters,
-how to extract it, how to interpret units/cutoffs, which branches remain unknown,
-which joint scenarios are defensible, and what would invalidate the conclusion.
-That is how primary intelligence can influence many individual decisions without
-another full primary-model conversation for each arithmetic instance. Supplying
-the scenarios and proving the interpretation remain reasoning tasks; the VM
-does not invent either.
+- Many contracts share underlying random variables:
+  - One station-day maximum-temperature distribution → many temperature buckets.
+  - One official reported-value distribution → many release thresholds.
+  - One model-launch score/configuration scenario set → vendor/threshold/deadline claims.
+- Independent prose reviews repeat work and can produce incompatible probabilities.
+  Analyze the underlying variables once; project explicit joint scenarios onto
+  each contract's reviewed predicate.
+- **Example:** integer temperature 28 makes the 28-degree bucket true and other
+  ordinary buckets false. Preserve every condition/token identity, literal
+  criteria fingerprint, threshold and outcome mapping.
+- **Separate bindings required:** differing deadlines, rounding, sources,
+  fallback branches and correction rights. Shared event membership or similar
+  language proves none of these equivalent.
+- **Reusable analysis program:** exact measurement; extraction method;
+  units/cutoffs; unknown branches; defensible joint scenarios; invalidators.
+- This program carries primary reasoning across many arithmetic instances without
+  a full primary-model conversation for each. Supplying scenarios and proving
+  interpretation remain reasoning tasks; the VM invents neither.
 
 ## Put durable state outside the conversation
 
-OpenAI's agent-memory guidance separates compacted working state from reusable
-memory and retained artifacts. Applied here, the journal is chronology; exact
-source receipts and versioned case records are the evidence used for a decision.
-A fresh review should reconstruct a bounded packet from those records instead
-of inheriting a growing transcript as authority.
-[Agent memory and compaction](https://developers.openai.com/cookbook/examples/agents_sdk/building_reliable_agents_memory_compaction).
-
-The useful records are: exact instrument/rules; source identity and parser
-configuration; typed observations and their receipt/publication times; the
-reviewed analysis/model version; its declared dependencies and expiry; and the
-strongest remaining counterexample. Store the next falsifiable question beside
-the verdict. A summary saying “hold” is insufficient to reconstruct a decision.
-
-Keep a stable small policy/reference prefix and put current case facts afterward
-where the runner supports it. OpenAI prompt caching depends on matching prefixes;
-its presence or savings in this hosted runner have not been measured. Treat
-caching as an optional efficiency improvement. Accurate external records are
-needed regardless of caching or compaction behavior.
-[Prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching).
-
-Typed outputs help enforce identities and missing-data states. Schema adherence
-does not establish factual correctness, which still needs source and semantic
-checks. [Structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs).
+- **Separate records:** journal = chronology; exact source receipts and versioned
+  cases = decision evidence. Reconstruct a bounded review packet from records;
+  do not inherit a growing transcript as authority. OpenAI distinguishes compacted
+  working state, reusable memory and retained artifacts.
+  [Memory and compaction](https://developers.openai.com/cookbook/examples/agents_sdk/building_reliable_agents_memory_compaction).
+- **Retain:** exact instrument/rules; source identity/parser configuration;
+  typed observations and receipt/publication times; reviewed model version;
+  declared dependencies/expiry; strongest counterexample; next falsifiable question.
+  A “hold” summary cannot reconstruct the decision.
+- **Optional caching:** where supported, keep a stable small policy/reference
+  prefix before current facts. OpenAI caching requires matching prefixes; this
+  hosted runner's caching or savings have not been measured. Accurate external
+  records remain necessary regardless of caching/compaction.
+  [Prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching).
+- **Typed outputs:** enforce identities and missing-data states. Schema adherence
+  does not establish facts; source and semantic checks remain necessary.
+  [Structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs).
 
 ## The VM does persistent work; the primary model handles novelty
 
@@ -78,118 +68,109 @@ flowchart TD
     H --> F
 ```
 
-Ordinary code can parse receipts, check hashes, diff typed values, preserve exact
-identities, project scenarios, walk books and calculate fees. A small VM needs
-no GPU or local language model for these tasks. Cheap model workers can collect
-facts or propose bindings; unresolved interpretations and probability judgment
-remain with the primary agent. Agreement between workers does not validate a
-fact.
-
-The proposed attention policy is based on what can change a decision:
-
-- A held thesis-breaking observation receives immediate primary review,
-  independent of token budgets.
-- A genuinely new resolver clause, parser configuration, or unresolved
-  interpretation gets a fresh bounded review.
-- An unchanged source/model with a changed quote needs current arithmetic.
-  Escalate if the plausible return range crosses an economic decision boundary
-  or a portfolio constraint changes.
-- Retain explicit unknown and unreviewed cases, plus a bounded exploration sample
-  outside ordinary ranking. An old rejection or failed source fetch cannot
-  permanently remove a family from discovery.
-
-A future review packet should include the joint scenarios and their assumptions,
-literal rule differences, evidence changes, best falsifier, current positions,
-both-side executable economics and the best lawful alternative. Keep raw receipt
-locators available. Finish a case when the next uncertainty cannot change its
-decision enough to justify further research. This policy is proposed; the new
-prototype does not schedule model calls or calculate value-of-information scores.
-
-Repeated calls are not weight training. Project-specific improvement must be
-retained in tested programs, checked evidence, explicit memory and honest outcome
-records. Replay skipped cases and misses as well as entries. Grade correlated
-contracts as the underlying event when evaluating forecasts; eleven buckets
-are not eleven independent calibration examples.
+- **Ordinary code:** parse receipts; check hashes; diff typed values; preserve
+  exact identities; project scenarios; walk books; calculate fees. No GPU or
+  local language model is needed on the small VM.
+- **Cheap workers:** collect facts or propose bindings. Primary agent retains
+  unresolved interpretation and probability judgment. Worker agreement does
+  not validate a fact.
+- **Proposed attention policy:** prioritize information that can change a decision:
+  - Held thesis break → immediate primary review, independent of token budgets.
+  - New resolver clause, parser configuration or unresolved interpretation →
+    fresh bounded review.
+  - Unchanged source/model, changed quote → current arithmetic; escalate if
+    plausible return ranges cross a decision boundary or portfolio constraints change.
+  - Keep unknown/unreviewed cases and a bounded exploration sample outside ordinary
+    ranking. Old rejections or failed fetches must not permanently exclude a family.
+- **Future review packet:** joint scenarios/assumptions; literal rule differences;
+  evidence changes; strongest falsifier; current positions; both-side executable
+  economics; best lawful alternative; raw receipt locators.
+- **Stopping rule:** finish when remaining uncertainty cannot change the decision
+  enough to justify more research. This policy is proposed; the prototype neither
+  schedules model calls nor calculates value-of-information scores.
+- **Learning:** repeated calls are not weight training. Retain improvements in
+  tested programs, checked evidence, explicit memory and honest outcome records.
+  Replay skips and misses alongside entries; grade correlated contracts as the
+  underlying event. Eleven buckets are not eleven independent calibration examples.
 
 ## Choose a narrow specialty with broad discovery
 
-The first specialty to investigate is late-stage **named-source resolution
-discrepancies**: published or near-final measurements where exact field, date,
-units, configuration, cutoff or revisions can change the contract result.
-Continuous source observation and reusable clause analysis suit this system.
-They also fit short holding periods and small capital when all-in depth/fees
-permit a trade. This is a candidate advantage, not an established edge.
-
-Weather is a useful engineering pilot because many buckets share one station-day.
-In the retained Oct-12 07:43 public capture, the unfiltered-carry discovery
-profile contains 989 contracts pointing to NOAA/weather.gov across 130 events
-with positive metadata time-to-resolution within fourteen
-days. Those counts describe a capped historical discovery profile, not the whole
-venue or executable opportunities. The selected Seoul/Incheon Oct-12 family
-has eleven cases, market IDs 5480518–5480528, event 1162885.
-
-The saved quotes already assign about 0.9995 midpoint to the 28-degree YES,
-with a 1.0 ask; the other YES buckets are around 0.0005 and many lack bids.
-That is poor evidence of a profitable trade. These are old Gamma indications,
-not a current two-sided depth walk. Resolution timing, whole-degree reporting,
-fallback data and correction provisions also require exact interpretation.
-
-A live read of the named [NOAA station page](https://www.weather.gov/wrh/timeseries?site=rksi)
-reached the application interface without verifying RKSI temperature observations.
-The page also describes preliminary data subject to review. Interface reachability
-does not verify the resolving metric, and an unobserved metric does not establish
-the contract's fallback or lowest-bucket branch.
-
-Keep broad cheap discovery while testing this source-centric specialty. Current
-project records do not establish an edge in pure short-term crypto-price
-prediction or sports pricing; continuous model availability does not establish
-one. Favoring a niche
-should follow prospective net economics and independent graded evidence; counts,
-passing software tests and plausible stories cannot establish allocation.
+- **First specialty to investigate:** late-stage **named-source resolution
+  discrepancies**—published/near-final measurements whose exact field, date,
+  units, configuration, cutoff or revisions change the result.
+- Continuous source observation and reusable clause analysis fit this system;
+  short holds and small capital can fit when all-in depth/fees permit. This is
+  a candidate advantage, not an established edge.
+- **Engineering pilot:** weather buckets share one station-day. The saved
+  Oct-12 07:43 public, unfiltered-carry profile contains 989 NOAA/weather.gov
+  contracts across 130 events with positive metadata time-to-resolution within
+  fourteen days. These are capped historical-profile counts, not whole-venue
+  coverage or executable opportunities.
+- **Selected fixture:** Seoul/Incheon Oct-12; eleven cases; market IDs
+  5480518–5480528; event 1162885.
+- **Saved quotes:** 28-degree YES midpoint about 0.9995, ask 1.0; other YES
+  buckets around 0.0005, many without bids. Poor evidence of a profitable trade:
+  old Gamma indications, not a current two-sided depth walk.
+- Resolution timing, whole-degree reporting, fallback data and correction
+  provisions still require exact interpretation.
+- **Live source read:** the [NOAA station page](https://www.weather.gov/wrh/timeseries?site=rksi)
+  reached its application interface but did not verify RKSI temperature observations.
+  Its data are preliminary and subject to review. Reachability does not verify
+  the resolving metric; an unobserved metric establishes neither fallback nor
+  lowest-bucket resolution.
+- Keep broad cheap discovery while testing the source-centric specialty. Current
+  records establish no edge in pure short-term crypto-price prediction or sports
+  pricing; continuous model availability establishes none either.
+- Favor a niche only after prospective net economics and independently graded
+  evidence. Counts, passing tests and plausible stories cannot establish allocation.
 
 ## Implemented shadow core and measured replay
 
-[case_memory.py](../scripts/case_memory.py) stores append-only case/source/
-assessment versions and separate quote receipts in SQLite, with a derived
-current index. A case binds ordered tokens and literal criteria. Source identity
-includes parser configuration, typed payload and availability. Assessments pin
-declared dependencies, policy and expiry. Changed receipts of identical facts
-can refresh evidence freshness without extending an assessment's expiry.
+### Versioned case memory
 
-Packets expose typed current facts and stale/unknown reasons. “Current” here
-means the supplied version/dependency/expiry checks pass, not that live terms,
-source completeness or economic freshness have been independently certified.
-An assessment must postdate its pinned evidence receipt and case version.
-Quote and event-context changes flag arithmetic refresh independently of
-assessment reuse. Missing cases remain visible as unobserved. Mutations validate
-within serialized transactions; packet/bundle reads use a consistent database
-view. All supplied rule bodies remain in the store. Upstream omission of a rule
-field is not detected by a self-consistent hash; current-terms completeness is
-explicitly uncertified. Quote context can be a stale scanner indication, so every
-packet requires live economic refresh and marks quote freshness uncertified.
-Byte-limited individual packets provide exact full-record references;
-oversize bundles fail explicitly instead of truncating a required clause.
+- [case_memory.py](../scripts/case_memory.py): SQLite append-only case/source/
+  assessment versions, separate quote receipts and a derived current index.
+- **Case binding:** ordered tokens and literal criteria. **Source identity:**
+  parser configuration, typed payload and availability. **Assessment:** pinned
+  dependencies, policy and expiry.
+- Identical facts in a changed receipt can refresh evidence freshness without
+  extending assessment expiry. Assessments must postdate pinned evidence
+  receipts and case versions.
+- **Packet “current”:** supplied version/dependency/expiry checks pass. It does
+  not certify live terms, complete source coverage or economic freshness.
+  Packets expose typed facts and stale/unknown reasons.
+- Quote/event-context changes flag arithmetic refresh independently of assessment
+  reuse. Missing cases remain visible as unobserved.
+- **Consistency:** mutations validate inside serialized transactions;
+  packet/bundle reads use a consistent database view.
+- **Rules:** all supplied bodies remain stored. A self-consistent hash cannot
+  detect an upstream omitted rule field; current-terms completeness is uncertified.
+- **Quotes:** scanner indications can be stale. Every packet requires live
+  economic refresh and marks quote freshness uncertified.
+- **Byte limits:** individual packets provide exact full-record references;
+  oversized bundles fail explicitly rather than truncate required clauses.
+- **Lossless bundle:** share only byte-identical description/source/rule fields;
+  retain individual questions, identities and criteria hashes; verify reconstruction
+  before projection. Losslessness covers supplied criteria fields, not proven
+  family semantics or complete live terms.
 
-The bundle shares only byte-identical description/source/rule fields. It retains
-individual questions, identities and criteria hashes, and verifies lossless
-reconstruction before projection. Losslessness is relative to the supplied
-criteria fields. It does not certify family-wide semantics or complete live terms.
+### Joint-scenario projection
 
-[case_distribution.py](../scripts/case_distribution.py) projects supplied joint
-scenarios through explicit exact-case numeric predicates. It checks identity,
-token-side mapping, literal criteria hashes, finite weights, total weight and
-declared numeric types and agreement between binding/variable unit annotations.
-It does not prove those annotations match the literal clause; the reviewer must.
-Unknown state mass produces probability bounds
-and an unset central value; it is never dropped or renormalized. A shared truth
-matrix retains dependence between cases. Outputs remain conditional shadow
-calculations with calibration, live evidence and economics uncertified. A stale
-input's status remains visible; the pure calculator can still show hypothetical
-conditional arithmetic and never certifies assessment reuse.
+- [case_distribution.py](../scripts/case_distribution.py): supplied joint
+  scenarios → explicit exact-case numeric predicates.
+- **Checks:** identity; token-side mapping; literal criteria hashes; finite
+  weights; total weight; declared numeric types; matching binding/variable unit
+  annotations. The reviewer must prove annotations match literal clauses.
+- **Unknown mass:** retain probability bounds and unset central value; never
+  drop or renormalize it. A shared truth matrix preserves dependence.
+- **Limits:** conditional shadow calculations; calibration, live evidence and
+  economics remain uncertified. Stale input status stays visible; hypothetical
+  arithmetic can be displayed without certifying assessment reuse.
 
-The eleven-contract replay used synthetic observations and weights, a fixed past
-clock, and the saved market fixture. No probabilities were added to trading
-records and no model call or execution occurred.
+### Eleven-contract replay
+
+- **Inputs:** synthetic observations/weights, fixed past clock, saved market
+  fixture. No financial-record probabilities, model calls or execution.
 
 | Replay observation | Result |
 |---|---:|
@@ -204,43 +185,38 @@ records and no model call or execution occurred.
 | Cases omitted from next snapshot | All 11 retained as unobserved |
 | Assessment expiry / policy change | All 11 invalidated |
 
-The size baseline is eleven complete new prototype packets, not the existing
-scanner Markdown output, which already prints questions and fingerprints rather
-than every full criteria body. These are measured byte savings, not measured
-token billing or improved decisions. One shared scenario model was projected to
-eleven exact cases; no claim of eleven avoided historical model calls is made.
-
-Validation: 80 targeted tests, including 60 new prototype tests, plus 169
-money-math checks passed. The existing dependency deprecation warning is unrelated
-to these offline tools. Local evidence: `tests/test_case_memory.py`,
-`tests/test_case_distribution.py`, `data/case_architecture_20261012/`, and
-`logs/architecture_20261012/`. The earlier local audits also found duplicate
-captured HLE payloads across dates; that proves byte redundancy, not unchanged
-wider release information or actual prompt-token expenditure.
+- **Baseline:** eleven complete new prototype packets, not existing scanner
+  Markdown, which already prints questions/fingerprints rather than every full
+  criteria body. Measured byte savings establish neither billed-token savings nor better
+  decisions. One shared scenario model was projected onto eleven exact cases;
+  no claim of eleven avoided historical model calls.
+- **Validation:** 80 targeted tests, including 60 new prototype tests, plus 169
+  money-math checks passed. Existing dependency deprecation warning is unrelated
+  to these offline tools.
+- **Local evidence:** tests/test_case_memory.py; tests/test_case_distribution.py;
+  data/case_architecture_20261012/; logs/architecture_20261012/.
+- Earlier audits found duplicate captured HLE payloads across dates: evidence of
+  byte redundancy, not unchanged wider releases or actual prompt-token spending.
 
 ## What would justify using it in the decision path
 
-The next useful experiment is a bounded comparison of source-centric cases with
-fresh primary reviews on the same evidence: exact clause interpretation, missed
-dependency/branch detection, prospective both-side quotes and net returns.
-Record call/input costs when available and grade independent events. A replay
-cannot establish calibration or a live advantage; no new watcher, idle follow-up
-or standing trade signal is warranted by this engineering result.
-
-The hard limitation is declared dependency completeness. The store can check
-versions and expiry; it cannot discover a missing factual dependency, prove a
-parser correct, calibrate supplied scenario weights or certify an interpretation.
-The projection likewise does not certify source-day timezone, fallback/correction
-branches, lawful access or executable economics. Current account, fees, depth,
-cluster caps and transaction checks still apply through the existing writers.
-
-An independent review caught retrospective evidence leakage before publication;
-assessment import now requires the pinned receipt to exist by the assessment
-timestamp, and packet checks expose incompatible legacy chronology. Event
-membership is retained as changing context, without pretending it proves
-proposition equivalence. The review also prompted explicit quote/criteria
-verification flags and binding-unit checks.
-
-This design makes tested pieces of primary reasoning reusable. It keeps the
-remaining uncertainty visible and reserves primary attention for the decisions
-that can materially change net portfolio return.
+- **Next experiment:** bounded comparison with fresh primary reviews on identical
+  evidence: exact clause interpretation; missed dependencies/branches;
+  prospective both-side quotes; net returns. Record available call/input costs;
+  grade independent events.
+- A replay cannot establish calibration or live advantage. This engineering
+  result warrants no new watcher, idle follow-up or standing trade signal.
+- **Hard limit:** declared dependency completeness. The store checks versions/
+  expiry; it cannot discover a missing dependency, prove a parser, calibrate
+  scenario weights or certify interpretation.
+- Projection does not certify source-day timezone, fallback/correction branches,
+  lawful access or executable economics. Current account, fees, depth, cluster
+  caps and transaction checks still apply through existing writers.
+- **Independent-review repair:** retrospective evidence leakage caught before
+  publication. Assessment import requires pinned receipts to exist by the
+  assessment timestamp; packet checks expose incompatible legacy chronology.
+- Event membership remains changing context, not proposition equivalence.
+  Review also added explicit quote/criteria verification flags and binding-unit checks.
+- **Result:** tested primary-reasoning components become reusable; uncertainty
+  stays visible; primary attention remains on decisions that materially affect
+  net portfolio return.
