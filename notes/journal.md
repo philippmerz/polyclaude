@@ -28536,3 +28536,58 @@ Operations, preservation and closeout:
   tests pass. Four offline scopes in JSON/Markdown fit within12,000 bytes,
   declare editorial validity through18:00 and retain execution_ready=false.
   Source hashes match; no quote/account freshness is inferred from the handoff.
+
+
+### 2026-10-12 15:36 UTC — explicit cleanup of four settled losing positions (DEC-0194)
+
+- Cleared all four visible finalized zero-payout leftovers. Data API with
+  sizeThreshold=0/limit100 returned9 rows before and5 after; no pagination cap
+  reached. All four targets absent at15:38:00, all five live assets retained.
+  On-chain balances zero; ten protected CTF balances, including other claims
+  and opposite outcomes, preserved throughout. Historical losses remain recorded.
+- Exact burned shares: Hormuz agreement YES31; United Russia295–309 seats
+  YES20; OpenAI HLE≥50 NO15; July Fed+25bp YES0.247019. Standard positions
+  match USDC.e collateral; NegRisk positions match the canonical adapter's
+  live wrapped collateral0x3A3BD7bb9528E159577F7C2e685CC81A765002E2.
+- Gamma closed/resolved plus on-chain denominator1/numerator0 verified for
+  each exact condition/token/outcome. Initial condition-filter requests omitted
+  closed markets; explicit closed=true/slug requests retrieved all four.
+  Empty results were never treated as finality or authorization to broadcast.
+- Existing standard redeemer rejected losing payouts. Added explicit
+  redeem-one --burn-losing: identity proof retained, final numerator must be
+  exactly0; unresolved, winning, partial, invalid or rounded-positive claims
+  rejected. Standard CTF burns only the identified index set. NegRisk verifies
+  canonical adapter CTF/collateral and derives the exact wrapped token identity.
+  Normal winning-claim sweep remains unchanged and skips losing/uncertain rows.
+- Protocol source: [Polymarket adapter](https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/src/NegRiskAdapter.sol)
+  and [Conditional Tokens](https://github.com/gnosis/conditional-tokens-contracts/blob/master/contracts/ConditionalTokens.sol).
+  Actual chain simulation and payout/balance reads governed these transactions.
+- 77 redemption tests and169 money-math checks passed before broadcast;
+  checks cover default winner behavior, final zero-loss opt-in, both sides,
+  exact collateral, adapter faults, positive rounding dust and post-balance failure.
+- Current four-call gas ceiling sensitivity~$0.05823, no new approvals.
+  Shared account lock, signer/wallet/chain137, no orders/reservations/reconciliation
+  blocker, current nonce/gas, per-call simulation/estimate and exact balances
+  checked before signing. No raw substitute execution or automatic loser sweep.
+- Execution15:35:49.626536–15:36:28.104971, four receipts status1/nonces105–108.
+  Exact gas0.1290048529604278POL, ~$0.0135376 using the preceding complete
+  account's rounded POL FX, not transaction-time FX. Payout0; maintenance cost,
+  no recovered stake or newly realized investment profit. pUSD/nativeUSDC/USDC.e
+  unchanged; native aUSDC accrued normally. No new allocation, prior or order.
+
+| Losing holding | Burned shares | Receipt |
+|---|---:|---|
+| Hormuz YES | 31 | [Polygon receipt](https://polygonscan.com/tx/0x70c019e646bc0628f50b293ad5d38dc3358d022fe6a41279bdcb3038adf48b39) |
+| United Russia295–309 YES | 20 | [Polygon receipt](https://polygonscan.com/tx/0xabbcf88aaade19acd9695f34fdc5bf403b714758e511ef9dbab44d852a29ca50) |
+| OpenAI HLE≥50 NO | 15 | [Polygon receipt](https://polygonscan.com/tx/0xe10a4fe0d9a4b1dedae9c66ff9ebf8681ab6ddf57bd901b9ee9f1f1863212f54) |
+| July Fed+25bp YES | 0.247019 | [Polygon receipt](https://polygonscan.com/tx/0x8a06548c15a28b80702c30f3ff875aca36d700a6bffd56d66610af5cfc1b7135) |
+
+- DEC-0194 is resolved scaffolding/maintenance with exact slugs, condition IDs,
+  token IDs, shares, fees and receipts. No calibration delta or profit grade;
+  all193 earlier decision objects and seven other financial/prior/watchlist/
+  performance/flow/benchmark records preserved. No fabricated NAV point from
+  zero-value token removal. Existing unrelated runtime worktree changes retained.
+- Telegram1140 delivered as one reply; README/backlog/tool catalog/handoff
+  updated. Evidence:data/redemption_cleanup_20261012T1518_{preflight,execution,
+  ui_verification,preserved}.json and logs/redemption_cleanup_20261012T1518/.
+  Next existing check18:00; no recurring cleanup rule, watcher, timer or goal.

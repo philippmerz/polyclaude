@@ -1,15 +1,15 @@
 ---
-reviewed_at: "2026-10-12T15:01:58Z"
+reviewed_at: "2026-10-12T15:43:02Z"
 valid_until: "2026-10-12T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 210348f47f1ed7571524c31dd92588e5bc0ce00bbd4a9b603dad8a855e2af5bc
+  README.md: 8f9bada819fa94f9e47ea174bcd9f0ea194939b1031abfc9c118c938cb2f9ebf
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 5598b3684a415ca92c52d5fd61de8ecff6d274f70561a0dc59d62a9ae55eb6e2
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 4e6c2bebe2886c741153c3ebccb6c0f689822a77b6582c6a9747b7cecc1f44f0
-  scripts/README.md: ba8a12092ed888b55b3d3f3add68b819f8d52176ae1e2de4231ceb2720f170d3
-  notes/backlog.md: 12dcf1d068c0438cd4718e2c181e64af0b5f8cd342b71d3a02f5da79010e1d7a
+  scripts/README.md: 02dfe118f5d6ac7b7edd0020ac54ac7fb6f36df6d5056a52667fe7a2a0f6a8e2
+  notes/backlog.md: 528e740012f5249fe4523e358f45e54dd0073b64b1e03ab7a1bf18ada1b7a8ee
 ---
 
 # Current context — orientation, not live state
@@ -79,6 +79,18 @@ source_hashes:
   state CLEAN. No economical redemption; Hormuz dust retained. Four canonical
   daemons current,1159.08MiB free disk. Material Telegram1137 delivered;
   ten chart checks and receipt/preservation audit passed.
+
+## Latest material operation — requested loss cleanup
+
+- **Oct-12 15:36:** four settled zero-payout leftovers redeemed; four receipts,
+  exact token balances zero, holdings API9→5 verified15:38. Live/protected claims
+  and stables retained. Gas0.129004853POL (~0.0135USD); no recovered stake.
+- **DEC-0194:** resolved zero-size maintenance, not investment profitability.
+  Original forecasts/losses and performance CSV preserved; no new NAV observation.
+- **Writer:** redeem-one --burn-losing requires exact final zero-payout identity,
+  only burns that outcome and verifies post-balance. NegRisk uses the known
+  adapter's live wrapped collateral. Normal redeem-all still skips losers.
+  77 redemption tests and169 money checks pass; Telegram1140 delivered.
 
 ## Blockers and next existing boundaries
 

@@ -1,3 +1,20 @@
+## Oct-12 requested loss cleanup — completed at15:36
+
+- Redeemed four finalized zero-payout leftovers: Hormuz YES31, United Russia
+  295–309 YES20, OpenAI HLE≥50 NO15 and July Fed+25bp YES0.247019 shares.
+  Four confirmed receipts; all four exact on-chain balances zero. Holdings
+  API9→5 at15:38, all five live assets retained; other claims preserved.
+- Gas0.129004853POL, ~$0.0135 using the preceding rounded FX; no stake recovered.
+  Historical losses/forecasts and performance CSV unchanged. DEC-0194 records
+  zero-value maintenance and the explicit cleanup path, not investment profit.
+- clob_v2.py --burn-losing proves exact condition/token/collateral and final
+  zero numerator, preserves the opposite side and verifies zero post-balance.
+  Unknown/unresolved/winning/partial/rounded-positive claims rejected;
+  automatic winning sweeps still skip losing or uncertain rows.
+- 77 redemption tests and169 money-math checks pass. No new approval, order,
+  prior, watcher, timer or recurring cleanup rule. Telegram1140 delivered;
+  next existing review18:00. No remaining action for this request.
+
 ## Oct-12 14:00 full check — completed; cash deployed, PM HOLD / NO ADD
 
 - At ~14:39, trading midpoint/depth $184.93/$182.00; depth +7.06% versus

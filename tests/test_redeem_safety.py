@@ -175,12 +175,14 @@ _ARCHIVED_NO = "9086949408797701860779275123023692300230303292306413818095020943
 
 class _IdentityFunctions:
     def __init__(self, collateral=clob_v2.USDC_E_ADDR, denominator=1,
-                 numerator=1, ambiguous=False):
+                 numerator=1, ambiguous=False, held_index=1):
         self.collateral = collateral
         self.denominator = denominator
         self.numerator = numerator
         self.ambiguous = ambiguous
+        self.held_index = held_index
         self.redeem_collaterals = []
+        self.redeem_index_sets = []
         self.simulated_payouts = []
 
     def balanceOf(self, address, token):  # noqa: N802
@@ -192,7 +194,7 @@ class _IdentityFunctions:
         return _Call((condition, index_set))
 
     def getPositionId(self, collateral, collection):  # noqa: N802
-        if (collection == (_CONDITION, 2)
+        if (collection == (_CONDITION, 1 << self.held_index)
                 and (collateral == self.collateral or self.ambiguous)):
             return _Call(int(_ARCHIVED_NO))
         return _Call(999)
@@ -202,19 +204,22 @@ class _IdentityFunctions:
         return _Call(self.denominator)
 
     def payoutNumerators(self, condition, index):  # noqa: N802
-        assert condition == _CONDITION and index == 1
+        assert condition == _CONDITION and index == self.held_index
         return _Call(self.numerator)
 
     def redeemPositions(self, collateral, parent, condition, index_sets):  # noqa: N802
         self.redeem_collaterals.append(collateral)
-        assert parent == bytes(32) and index_sets == [1, 2]
+        self.redeem_index_sets.append(index_sets)
+        assert parent == bytes(32)
+        assert index_sets in ([1, 2], [1 << self.held_index])
         functions = self
 
         class Call(_RedeemCall):
             def call(self, tx):
                 super().call(tx)
                 functions.simulated_payouts.append(
-                    3571 if collateral == functions.collateral else 0
+                    (3571 * functions.numerator // functions.denominator)
+                    if collateral == functions.collateral else 0
                 )
 
         return Call()
@@ -292,6 +297,144 @@ def test_redeem_one_identity_failures_stop_before_prepare(monkeypatch, failure, 
         with pytest.raises(RuntimeError, match="identity/payout preflight failed"):
             clob_v2.redeem_one("0x" + condition.hex(), **kwargs)
     assert functions.redeem_collaterals == []
+
+
+@pytest.mark.parametrize("collateral", [clob_v2.USDC_E_ADDR, clob_v2.PUSD_ADDR])
+@pytest.mark.parametrize("index,outcome", [(0, "Yes"), (1, "No")])
+def test_explicit_loss_cleanup_burns_only_exact_zero_payout_side(
+    monkeypatch, collateral, index, outcome
+):
+    functions = _IdentityFunctions(collateral=collateral, numerator=0, held_index=index)
+    _mock_redemption_wallet(monkeypatch, functions)
+    result = clob_v2.redeem_one(
+        "0x" + _CONDITION.hex(), token_id=_ARCHIVED_NO, outcome=outcome,
+        dry_run=True, burn_losing=True,
+    )
+    assert result["ok"] is True and result["tx"] is None
+    assert functions.redeem_collaterals == [collateral]
+    assert functions.redeem_index_sets == [[1 << index]]
+    assert functions.simulated_payouts == [0]
+
+
+@pytest.mark.parametrize("denominator,numerator", [(0, 0), (1, 1), (2, 1),
+                                                 (100_000_000, 1), (1, -1), (1, 2)])
+def test_loss_cleanup_rejects_unresolved_winner_partial_and_rounding_dust(
+    monkeypatch, denominator, numerator
+):
+    functions = _IdentityFunctions(denominator=denominator, numerator=numerator)
+    _mock_redemption_wallet(monkeypatch, functions)
+    monkeypatch.setattr(clob_v2, "_prepare_redeem_transaction",
+                        lambda *args: pytest.fail("unexpected preparation"))
+    result = clob_v2.redeem_one(
+        "0x" + _CONDITION.hex(), token_id=_ARCHIVED_NO, outcome="No",
+        dry_run=True, burn_losing=True,
+    )
+    assert result["ok"] is False and result["tx"] is None
+    assert functions.redeem_collaterals == []
+
+
+def test_loss_cleanup_requires_explicit_outcome(monkeypatch):
+    functions = _IdentityFunctions(numerator=0)
+    _mock_redemption_wallet(monkeypatch, functions)
+    with pytest.raises(SystemExit, match="--outcome Yes\\|No is required"):
+        clob_v2.redeem_one("0x" + _CONDITION.hex(), token_id=_ARCHIVED_NO,
+                           dry_run=True, burn_losing=True)
+    assert functions.redeem_collaterals == []
+
+
+_WRAPPED_COLLATERAL = "0x1111111111111111111111111111111111111111"
+
+
+class _NegRiskLossFunctions(_IdentityFunctions):
+    def __init__(self, index=1, fault=None):
+        super().__init__(collateral=_WRAPPED_COLLATERAL, numerator=0,
+                         held_index=index)
+        self.fault = fault
+        self.adapter_amounts = []
+
+    def ctf(self):
+        return _Call("0xwrong" if self.fault == "ctf" else clob_v2.CTF_ADDR)
+
+    def col(self):
+        return _Call("0xwrong" if self.fault == "collateral" else clob_v2.USDC_E_ADDR)
+
+    def wcol(self):
+        return _Call(clob_v2.PUSD_ADDR if self.fault == "wrapped" else _WRAPPED_COLLATERAL)
+
+    def redeemPositions(self, condition, amounts):  # noqa: N802
+        assert condition == _CONDITION
+        self.adapter_amounts.append(amounts)
+        return _RedeemCall()
+
+
+@pytest.mark.parametrize("index,outcome", [(0, "Yes"), (1, "No")])
+def test_neg_risk_loss_cleanup_proves_wrapped_identity_and_exact_amounts(
+    monkeypatch, index, outcome
+):
+    functions = _NegRiskLossFunctions(index=index)
+    _mock_redemption_wallet(monkeypatch, functions)
+    result = clob_v2.redeem_one(
+        "0x" + _CONDITION.hex(), token_id=_ARCHIVED_NO, outcome=outcome,
+        neg_risk=True, dry_run=True, burn_losing=True,
+    )
+    assert result["ok"] is True and result["tx"] is None
+    assert functions.adapter_amounts == [[3571, 0] if index == 0 else [0, 3571]]
+
+
+@pytest.mark.parametrize("fault", ["ctf", "collateral", "wrapped"])
+def test_neg_risk_loss_cleanup_rejects_adapter_identity_faults(monkeypatch, fault):
+    functions = _NegRiskLossFunctions(fault=fault)
+    _mock_redemption_wallet(monkeypatch, functions)
+    result = clob_v2.redeem_one(
+        "0x" + _CONDITION.hex(), token_id=_ARCHIVED_NO, outcome="No",
+        neg_risk=True, dry_run=True, burn_losing=True,
+    )
+    assert result["ok"] is False and result["tx"] is None
+    assert functions.adapter_amounts == []
+
+
+@pytest.mark.parametrize("remaining", [0, 3571])
+def test_loss_cleanup_requires_receipt_and_zero_post_balance(monkeypatch, remaining):
+    import web3
+    from eth_account import Account
+    from types import SimpleNamespace
+
+    functions = _IdentityFunctions(numerator=0)
+    sent = []
+    functions.balanceOf = lambda *args: _Call(remaining if sent else 3571)
+
+    def send(raw):
+        sent.append(raw)
+        return bytes.fromhex("12" * 32)
+
+    eth = SimpleNamespace(
+        gas_price=100_000_000_000,
+        contract=lambda **kwargs: SimpleNamespace(functions=functions),
+        get_transaction_count=lambda address: 7,
+        send_raw_transaction=send,
+        wait_for_transaction_receipt=lambda *args, **kwargs: SimpleNamespace(
+            status=1, transactionHash=bytes.fromhex("12" * 32)
+        ),
+    )
+    fake_web3 = type("Web3", (), {
+        "HTTPProvider": staticmethod(lambda *args: None),
+        "to_checksum_address": staticmethod(lambda address: address),
+        "__init__": lambda self, provider: setattr(self, "eth", eth),
+    })
+    monkeypatch.setattr(web3, "Web3", fake_web3)
+    monkeypatch.setattr(clob_v2, "_load_wallet", lambda: ("0xwallet", "unused"))
+    monkeypatch.setattr(Account, "sign_transaction",
+                        lambda tx, key: SimpleNamespace(raw_transaction=b"signed"))
+    kwargs = dict(token_id=_ARCHIVED_NO, outcome="No", burn_losing=True)
+    if remaining:
+        with pytest.raises(RuntimeError, match="receipt succeeded but token balance remains"):
+            clob_v2.redeem_one("0x" + _CONDITION.hex(), **kwargs)
+    else:
+        result = clob_v2.redeem_one("0x" + _CONDITION.hex(), **kwargs)
+        assert result["ok"] and result["remaining_units"] == 0
+        assert result["burn_losing"] is True
+    assert len(sent) == 1
+    assert functions.redeem_index_sets == [[2]]
 
 
 @pytest.mark.parametrize("collateral", [clob_v2.USDC_E_ADDR, clob_v2.PUSD_ADDR])

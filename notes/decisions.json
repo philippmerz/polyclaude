@@ -1,5 +1,5 @@
 {
-  "next_id": 194,
+  "next_id": 195,
   "decisions": [
     {
       "id": 1,
@@ -4041,6 +4041,102 @@
         "PM_CTF_units_unchanged": true,
         "no_external_contribution": true
       }
+    },
+    {
+      "id": 194,
+      "timestamp": "2026-10-12T15:34:21Z",
+      "type": "scaffolding",
+      "thesis": "Add explicit zero-payout loss cleanup to the vetted single-market redeemer and clear four operator-requested settled losing residual positions. Preserve all live/protected claims and historical losses; automatic winning-claim sweep still skips losers. On-chain exact condition/token/collateral identity and final zero numerator, simulation, gas estimation, shared account lock and receipt/balance verification required.",
+      "confidence": "high",
+      "prediction": "Four finalized losing outcome balances will become zero and leave the held-position API after indexing. No recovered stake or profit is expected; current total gas ceiling about0.0583USD, no new approval. Reject unresolved, winning, split-payout or rounded-positive claims.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-12",
+      "tags": [
+        "maintenance",
+        "loss_cleanup",
+        "redemption",
+        "polygon",
+        "explicit_operator_request"
+      ],
+      "slug": null,
+      "outcome": "Completed explicit zero-payout maintenance: all four settled losing token balances burned to zero, four successful receipts, holdings API9\u21925. No stake recovered or investment profit; only gas spent.",
+      "calibration_delta": null,
+      "lesson": "Zero market price or redeemable flag alone is insufficient. Prove final zero numerator and exact asset/condition/collateral, use an explicit loss-only mode, simulate and estimate, preserve unrelated claims, and verify receipt plus zero post-balance. Ordinary winning-claim sweeps still skip losing or uncertain rows.",
+      "execution": {
+        "completed_at": "2026-10-12T15:36:28.104971+00:00",
+        "chain_id": 137,
+        "gas_POL": 0.1290048529604278,
+        "gas_USD_approx": 0.013537559615477103,
+        "gas_FX_limitation": "Approximate USD uses the preceding complete account rounded POL mark, not transaction-time FX.",
+        "payout_USD": 0,
+        "protected_claims_preserved": true,
+        "receipt_records": [
+          {
+            "condition_id": "0x1c38a64c494e01c9bd81362cfadeadb3b87023d1d9ffae1df5a428c03152fc74",
+            "token_id": "71542982741394376771627006689338880117415417908788827680925028639627563224055",
+            "slug": "us-iran-hormuz-agreement-by-august-31-20260804222025507-868-993",
+            "outcome": "Yes",
+            "burned_units": 31000000,
+            "hash": "0x70c019e646bc0628f50b293ad5d38dc3358d022fe6a41279bdcb3038adf48b39",
+            "nonce": 105,
+            "block": 95409379,
+            "status": 1,
+            "to": "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045",
+            "gas_used": 66609,
+            "effective_gas_price": 278699898436,
+            "gas_wei": 18563921534923524
+          },
+          {
+            "condition_id": "0x0a9bb5f9c32f57b1683bec4170da0a1116876f2bf0665a1ec9bf6c6db76d2f57",
+            "token_id": "64185329950651325995811365760471851443559550508668407058343096277276377997961",
+            "slug": "will-united-russia-win-between-295-and-309-seats-in-the-next-russian-state-duma-election",
+            "outcome": "Yes",
+            "burned_units": 20000000,
+            "hash": "0xabbcf88aaade19acd9695f34fdc5bf403b714758e511ef9dbab44d852a29ca50",
+            "nonce": 106,
+            "block": 95409385,
+            "status": 1,
+            "to": "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
+            "gas_used": 169765,
+            "effective_gas_price": 278142537830,
+            "gas_wei": 47218867934709950
+          },
+          {
+            "condition_id": "0x432986c91a2a364d37179db26f78e8b7b69a5da3c0bc7e09a3458918dc6ad34a",
+            "token_id": "46758607612833917422236285013995068496804632645622273981549757589704779851841",
+            "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723225144063",
+            "outcome": "No",
+            "burned_units": 15000000,
+            "hash": "0xe10a4fe0d9a4b1dedae9c66ff9ebf8681ab6ddf57bd901b9ee9f1f1863212f54",
+            "nonce": 107,
+            "block": 95409391,
+            "status": 1,
+            "to": "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045",
+            "gas_used": 59237,
+            "effective_gas_price": 276137515402,
+            "gas_wei": 16357557999868274
+          },
+          {
+            "condition_id": "0xb5c0abeecb5502e6e8d83155c27819174d8317af3c425c3afc5a8c45257a3793",
+            "token_id": "10547381015916960267379463101229159185405356924982461726471550099674011526491",
+            "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
+            "outcome": "Yes",
+            "burned_units": 247019,
+            "hash": "0x8a06548c15a28b80702c30f3ff875aca36d700a6bffd56d66610af5cfc1b7135",
+            "nonce": 108,
+            "block": 95409397,
+            "status": 1,
+            "to": "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
+            "gas_used": 169638,
+            "effective_gas_price": 276261836917,
+            "gas_wei": 46864505490926046
+          }
+        ],
+        "visible_positions_before": 9,
+        "visible_positions_after": 5,
+        "targets_absent_from_holdings_api": true
+      },
+      "resolved_at": "2026-10-12T15:38:00Z"
     }
   ]
 }

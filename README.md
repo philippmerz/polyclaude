@@ -115,9 +115,12 @@ estimates are not synchronized NAV or guaranteed liquidation.
   organize unreviewed cases. Fed follow-up did not justify entry; no global
   opportunity-absence claim.
 - **Operations:** no open order, UMA/Ostium change, overdue decision or watch
-  trigger. Known PM units unchanged; no economical redemption. Four canonical
+  trigger. Active PM units unchanged; no economical winning redemption. Four canonical
   daemons current; 1159.08 MiB free disk above warning. Next existing check
   18:00 UTC; weekly P&L Oct 16; monthly diagnostic Nov 12.
+- **Resolved leftovers:** four zero-payout loss balances cleared at 15:36 UTC;
+  holdings API now shows five active positions instead of nine. Gas ~$0.0135;
+  other claims and historical losses preserved. This cleanup adds no NAV point.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

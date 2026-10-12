@@ -745,6 +745,11 @@ _NEG_RISK_REDEEM_ABI = [{
     "name": "redeemPositions", "outputs": [],
     "stateMutability": "nonpayable", "type": "function",
 }]
+_NEG_RISK_IDENTITY_ABI = [
+    {"name": name, "type": "function", "stateMutability": "view",
+     "inputs": [], "outputs": [{"type": "address"}]}
+    for name in ("ctf", "col", "wcol")
+]
 _CTF_REDEEM_ABI = [{
     "inputs": [
         {"name": "collateralToken", "type": "address"},
@@ -840,13 +845,20 @@ def _held_outcome_won(position: dict) -> bool:
 def _standard_redeem_identity(
     ctf: Any, address: str, condition_id: bytes, token_id: str,
     outcome: str | None = None,
+    *, burn_losing: bool = False,
+    collaterals: tuple[str, ...] = (PUSD_ADDR, USDC_E_ADDR),
 ) -> dict:
-    """Prove a supported collateral and a positive held payout on-chain.
+    """Prove exact collateral, outcome and a final payout on-chain.
 
     Simulation alone accepts wrong-collateral no-ops. Match the exact asset
     against both binary index sets and supported collaterals, then verify the
     matched held outcome's final payout before preparing any transaction.
+    Explicit loss cleanup requires an exactly zero numerator; it never treats
+    an unresolved condition or a positive payout rounded to zero as a loss.
+    NegRisk loss cleanup supplies only the known adapter's live wrapped collateral.
     """
+    if not burn_losing and collaterals != (PUSD_ADDR, USDC_E_ADDR):
+        raise ValueError("standard redemption: unsupported collateral override")
     if len(condition_id) != 32:
         raise ValueError("standard redemption: conditionId must be 32 bytes")
     balance = _redeem_token_balance(ctf, address, token_id)
@@ -857,7 +869,7 @@ def _standard_redeem_identity(
         collection = ctf.functions.getCollectionId(
             b"\x00" * 32, condition_id, 1 << index
         ).call()
-        for collateral in (PUSD_ADDR, USDC_E_ADDR):
+        for collateral in collaterals:
             derived = ctf.functions.getPositionId(collateral, collection).call()
             if int(derived) == int(token_id):
                 matches.append((collateral, index))
@@ -871,11 +883,16 @@ def _standard_redeem_identity(
     numerator = int(ctf.functions.payoutNumerators(condition_id, index).call())
     if denominator <= 0:
         raise ValueError("standard redemption: condition is unresolved")
-    if numerator <= 0 or numerator > denominator:
-        raise ValueError("standard redemption: held outcome has no valid winning payout")
-    payout = balance * numerator // denominator
-    if payout <= 0:
-        raise ValueError("standard redemption: held payout rounds to zero")
+    if burn_losing:
+        if numerator != 0:
+            raise ValueError("loss cleanup: held outcome is not a final zero-payout loss")
+        payout = 0
+    else:
+        if numerator <= 0 or numerator > denominator:
+            raise ValueError("standard redemption: held outcome has no valid winning payout")
+        payout = balance * numerator // denominator
+        if payout <= 0:
+            raise ValueError("standard redemption: held payout rounds to zero")
     return {"collateral": collateral, "outcome_index": index,
             "balance": balance, "payout_units": payout}
 
@@ -1038,7 +1055,8 @@ def redeem_all(dry_run: bool = False) -> dict:
 
 
 def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
-               token_id: str | None = None, outcome: str | None = None) -> dict:
+               token_id: str | None = None, outcome: str | None = None,
+               *, burn_losing: bool = False) -> dict:
     """Redeem a single resolved market by conditionId — the fallback for
     DE-INDEXED markets (N=2: Mojtaba 2026-07, Marvel-SDCC 2026-07-26) where
     data-api drops the position row so redeem-all's redeemable-flag scan is
@@ -1057,6 +1075,10 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
     balances come from the conditionId snapshot's `asset` + `outcome` fields
     read ON-CHAIN via balanceOf, never from data-api — which is the whole point, since data-api is
     the thing that has disappeared in the scenario being handled.
+
+    burn_losing is an explicit operator-cleanup mode, never enabled by the
+    automatic winning-claim sweep. It proves final zero payout and burns only
+    the identified losing outcome; the other outcome is not redeemed.
     """
     from web3 import Web3
     from eth_account import Account
@@ -1067,16 +1089,35 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
                                  abi=_CTF_REDEEM_ABI)
     ctf_bal = w.eth.contract(address=Web3.to_checksum_address(CTF_ADDR),
                              abi=_CTF_BAL_ABI + _CTF_IDENTITY_ABI)
+    if burn_losing and outcome not in ("Yes", "No"):
+        raise SystemExit("loss cleanup: --outcome Yes|No is required")
     bal = _redeem_token_balance(ctf_bal, addr_cs, token_id)
     if bal == 0:
         print("  SKIP redeem: held outcome-token balance is zero")
         return {"ok": False, "tx": None, "skipped": "zero outcome-token balance",
                 "balance": 0}
     cond_id = bytes.fromhex(cond_id_hex.replace("0x", ""))
-    if not neg_risk:
+    adapter = None
+    if not neg_risk or burn_losing:
         try:
+            collaterals = (PUSD_ADDR, USDC_E_ADDR)
+            if neg_risk:
+                adapter = w.eth.contract(
+                    address=Web3.to_checksum_address(NEG_RISK_ADAPTER),
+                    abi=_NEG_RISK_REDEEM_ABI + _NEG_RISK_IDENTITY_ABI,
+                )
+                if adapter.functions.ctf().call().lower() != CTF_ADDR.lower():
+                    raise ValueError("loss cleanup: adapter CTF identity mismatch")
+                if adapter.functions.col().call().lower() not in {
+                    PUSD_ADDR.lower(), USDC_E_ADDR.lower()
+                }:
+                    raise ValueError("loss cleanup: unsupported adapter collateral")
+                collaterals = (
+                    Web3.to_checksum_address(adapter.functions.wcol().call()),
+                )
             identity = _standard_redeem_identity(
-                ctf_bal, addr_cs, cond_id, token_id, outcome
+                ctf_bal, addr_cs, cond_id, token_id, outcome,
+                burn_losing=burn_losing, collaterals=collaterals,
             )
         except Exception as exc:
             if dry_run:
@@ -1101,13 +1142,15 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
         # data-api, which is precisely what has vanished in a de-index.
         amounts = [bal, 0] if outcome == "Yes" else [0, bal]
         print(f"  negRisk redeem: on-chain balance {bal} on the {outcome} leg -> amounts {amounts}")
-        adapter = w.eth.contract(address=Web3.to_checksum_address(NEG_RISK_ADAPTER),
-                                 abi=_NEG_RISK_REDEEM_ABI)
+        if adapter is None:
+            adapter = w.eth.contract(address=Web3.to_checksum_address(NEG_RISK_ADAPTER),
+                                     abi=_NEG_RISK_REDEEM_ABI)
         redeem_call = adapter.functions.redeemPositions(cond_id, amounts)
     else:
         redeem_call = ctf_redeem.functions.redeemPositions(
             Web3.to_checksum_address(identity["collateral"]),
-            b"\x00" * 32, cond_id, [1, 2],
+            b"\x00" * 32, cond_id,
+            [1 << identity["outcome_index"]] if burn_losing else [1, 2],
         )
     # SIMULATE-FIRST (2026-08-12). This function had no dry path, and on that
     # date I called it as a "probe" of the redemption wiring: it sent a real
@@ -1135,6 +1178,13 @@ def redeem_one(cond_id_hex: str, neg_risk: bool = False, dry_run: bool = False,
     h = w.eth.send_raw_transaction(Account.sign_transaction(tx, pk).raw_transaction)
     r = w.eth.wait_for_transaction_receipt(h, timeout=120)
     print(f"  {'OK' if r.status == 1 else 'FAIL'} redeem {cond_id_hex[:18]}...  tx 0x{r.transactionHash.hex()}")
+    if burn_losing:
+        remaining = _redeem_token_balance(ctf_bal, addr_cs, token_id)
+        if r.status == 1 and remaining != 0:
+            raise RuntimeError("loss cleanup: receipt succeeded but token balance remains; "
+                               "reconcile before retrying")
+        return {"ok": r.status == 1, "tx": "0x" + r.transactionHash.hex(),
+                "burn_losing": True, "remaining_units": remaining}
     return {"ok": r.status == 1, "tx": "0x" + r.transactionHash.hex()}
 
 
@@ -1374,9 +1424,13 @@ def main():
     p.add_argument("--dry-run", action="store_true",
                    help="simulate via eth_call — reverts without broadcasting, so the whole path "
                         "can be rehearsed before resolution day")
+    p.add_argument("--burn-losing", action="store_true",
+                   help="explicit cleanup of a verified final zero-payout outcome; costs gas "
+                        "and preserves the other outcome. Requires --outcome.")
     p.set_defaults(fn=lambda a: (print(json.dumps(
         redeem_one(a.condition_id, neg_risk=a.neg_risk, dry_run=a.dry_run,
-                   token_id=a.token_id, outcome=a.outcome), indent=2)), 0)[1])
+                   token_id=a.token_id, outcome=a.outcome,
+                   burn_losing=a.burn_losing), indent=2)), 0)[1])
 
     args = ap.parse_args()
     sys.exit(args.fn(args))

@@ -67,6 +67,11 @@ provisional and requires an independent fresh rewalk before any action.
   read-only `orders` display adds a canonical slug only after an exact
   condition-ID plus token-ID match against `notes/position_condition_ids.json`;
   unknown or duplicate identities are labeled explicitly rather than guessed.
+  `redeem-all` still skips losing/uncertain rows. Explicit requested cleanup uses
+  `redeem-one CONDITION --token-id ASSET --outcome Yes|No --burn-losing`
+  (add `--neg-risk` when applicable; rehearse with `--dry-run`). It proves exact
+  identity and final zero payout, burns only that side, and verifies zero
+  post-balance. This spends gas; it neither recovers stakes nor erases history.
 - `across_bridge.py` — Across V3 bridge for USDC and native ETH across Arbitrum / Base / Polygon / Optimism.
 - `aave_deposit.py` — Aave V3 `supply` / `withdraw` / `rate` across the same chains; new supply fails closed on inactive, paused, frozen, or simulation-reverting reserves.
 - `spot_swap.py` — guarded Uniswap V3 exact-input swaps with independent output floors, signing-time requotes, chain-aware gas, and pre-sign simulation.
