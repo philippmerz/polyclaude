@@ -127,6 +127,12 @@ then primary judgment on both-side economics and all accessible on-chain
 alternatives. Wider discovery counts establish additional review work, not
 profitable trades.
 
+The [finite-context architecture](research/2026-10-12-finite-context-architecture.md)
+adds an offline shadow prototype for reusable source analysis, versioned case
+memory and joint-scenario projections. One eleven-contract replay reduced full
+packet bytes by 41.1% with lossless supplied rules and tested invalidation. No forecast
+quality, live edge or token-billing savings are established by that replay.
+
 Broad book scanners use `scripts/clob_books.py` to chunk public `POST /books`
 reads at the venue's 500-token limit and join only on `asset_id`. Missing,
 conflicting, stale, malformed, or crossed books fail closed. These non-atomic

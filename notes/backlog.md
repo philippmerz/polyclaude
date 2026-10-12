@@ -1,3 +1,21 @@
+## Oct-12 finite-context architecture — shadow prototype completed
+
+- [Design and measured replay](../research/2026-10-12-finite-context-architecture.md):
+  broad cheap discovery, primary-reviewed source families, explicit joint scenario
+  models and exact per-contract rule bindings. Proposed first research specialty:
+  late-stage named-source resolution discrepancies; no profitable edge established.
+- Offline case memory preserves versions/dependencies/expiry and lossless supplied
+  rules. Eleven-contract replay: 55,341 → 32,617 packet bytes (41.1% smaller);
+  shared evidence/config changes invalidate11; one rule revision invalidates1.
+  Unknown mass and correlation remain explicit; quote-only changes request arithmetic.
+- Independent review repaired retrospective evidence leakage and exposed live
+  quote/criteria verification limits. 80 targeted tests/169 money-math checks pass;
+  DEC-0191 records scaffolding, not calibration or ROI.
+- No allocation/prior/writer change, new watcher, timer or durable goal.
+  A future authorized source-family evaluation should compare fresh reviews,
+  prospective economics and independent graded outcomes before using the prototype
+  for decision routing. Existing financial records and manual access blockers remain.
+
 ## Oct-12 opportunity-method review — completed; no allocation change
 
 - [Method audit](../research/2026-10-12-opportunity-method-review.md) and

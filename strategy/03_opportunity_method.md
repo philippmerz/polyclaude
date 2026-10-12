@@ -73,6 +73,15 @@ new strategy classes and structural ambiguity as specified in doctrine. Separate
 fact collection from the primary agent's probability and portfolio judgment.
 More model calls are useful when they can resolve a load-bearing uncertainty.
 
+The [finite-context architecture](../research/2026-10-12-finite-context-architecture.md)
+proposes reviewing a source family once and projecting explicitly supplied joint
+scenarios through exact per-contract rule bindings. Its offline case memory and
+projection tools are a shadow prototype. Byte-identical prose may be shared;
+unknown branches, distinct thresholds, source configurations and correlation
+must remain explicit. Dependency versions and expiry check declared assumptions,
+not their completeness or the accuracy of a forecast. This does not introduce a
+standing probability signal or a new execution/attention schedule.
+
 ## Forecast and compare both sides
 
 A probability needs dated evidence, explicit assumptions, a falsifiable crux and

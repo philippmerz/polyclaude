@@ -1,5 +1,5 @@
 {
-  "next_id": 191,
+  "next_id": 192,
   "decisions": [
     {
       "id": 1,
@@ -3948,6 +3948,27 @@
       "calibration_delta": "Not a probabilistic trade forecast. Coverage and safety behavior validated; live quote-yield and ROI improvement unobserved.",
       "lesson": "Keep discovery scope, source evidence, probability judgment and execution certification separate. A falsified population curve must not continue to steer attention after being disclaimed.",
       "resolved_at": "2026-10-12T08:11:01Z"
+    },
+    {
+      "id": 191,
+      "timestamp": "2026-10-12T10:36:13Z",
+      "type": "scaffolding",
+      "thesis": "Reusable source-family analysis with exact per-case bindings: offline versioned case memory, lossless context bundles, and joint scenario projections.",
+      "confidence": "high",
+      "prediction": "Matched eleven-case synthetic replay preserves provided literal criteria and correlation, marks all shared-source changes stale, isolates one-case rule changes, and reduces full packet bytes without establishing forecast quality or live edge.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-12T10:40:00Z",
+      "tags": [
+        "architecture",
+        "shadow",
+        "replay",
+        "no-asset-action"
+      ],
+      "slug": null,
+      "outcome": "Observed: 80 targeted tests (60 new shadow tests) and 169 money-math checks pass. Exact eleven-case replay: 55,341 to 32,617 UTF-8 packet bytes (41.1% smaller), lossless supplied criteria; 11 shared-source/parser/unavailable invalidations, one isolated rule invalidation, and one quote-only arithmetic refresh. No model call or asset action in replay; no live ROI/forecast improvement claimed.",
+      "calibration_delta": "Scaffolding outcome observed; not a forecast-calibration sample.",
+      "lesson": "Reuse checked analysis structure and explicit joint scenarios. Exact case bindings, evidence chronology, missing branches and current execution economics remain necessary; cache freshness does not certify completeness or truth.",
+      "resolved_at": "2026-10-12T10:42:02Z"
     }
   ]
 }

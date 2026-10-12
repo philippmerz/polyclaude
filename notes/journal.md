@@ -28150,3 +28150,62 @@ Method-review final validation: selection-policy version added to snapshot
 metadata so a filter-order change cannot masquerade as comparable discovery
 deltas. Final combined suite245 passed plus169 money-math checks; the earlier
 244-pass checkpoint remains above. No additional network collection.
+
+
+### 2026-10-12 10:40 UTC — finite-context architecture; tested shadow core
+
+Bounded on-demand architecture work, following the earlier method review.
+Research/2026-10-12-finite-context-architecture.md proposes broad mechanical
+discovery with a few primary-reviewed source families, explicit joint scenarios
+and exact per-contract bindings. The VM retains facts and performs repeated
+arithmetic; primary attention handles new semantics, source changes and material
+portfolio decisions. The proposed initial research specialty is late-stage
+named-source resolution discrepancies, not an established weather trading edge.
+Official OpenAI memory/caching/structured-output documentation was checked;
+current runner cache hits, prompt bills and forecast-quality gains were not measured.
+
+Implemented offline scripts/case_memory.py and case_distribution.py with no
+network/model/wallet/financial-record integration. The first persists exact case
+versions, quote context, source/configuration receipts and dependency-pinned
+assessments; it builds bounded packets and lossless shared-body bundles. The
+second projects reviewer-supplied joint states onto exact token/criteria bindings,
+preserving dependence and unknown state mass. Supplied criteria completeness,
+live quote freshness, calibration and actual semantics remain uncertified.
+
+Saved Oct-12 07:43 Gamma capture supplied Seoul/Incheon Oct-12 event1162885,
+markets5480518–5480528. All11 provided description/source bodies are identical;
+questions/criteria fingerprints and ordered outcome tokens remain distinct.
+Synthetic fixed-clock replay: 55,341 → 32,617 full packet UTF-8 bytes (41.1%
+smaller); supplied criteria representation27,068→5,744 (78.8%). This compares
+complete new prototype packets, not existing compact scanner Markdown or actual
+LLM prompt spend. One explicit toy scenario model projects11 cases, with10%
+unknown mass; no live probability supplied or trading prior modified.
+All11 shared-source/parser/unavailable changes flaggedstale; one contract-rule
+revision isolated1; one quote-only change leaves11 cache-current and flags1
+arithmetic refresh. Omitted cases remain unobserved, not closed; expiry/policy
+changes invalidate11. Receipt refresh cannot extend assessment expiry.
+
+Independent cheap-agent review caught retrospective dependency leakage; import
+now requires the exact evidence receipt and case version to exist by assessment
+creation, while packet checks expose legacy incompatible chronology. Transactions
+serialize mutation validation; reads are consistent. Event membership remains
+separate quote/risk context; unit bindings check their declared annotations.
+Root reviewed/fixed scope claims: hashes prove supplied-field integrity, not
+live clause completeness; stale memos remain inspectable and pure projections
+are hypothetical, not mechanical reuse authorization. Quote context also must
+postdate its receipt in a cached assessment. Final80 targeted tests
+(60 new prototype cases)/169 money-math checks pass; known websockets dependency
+warning only. DEC-0191 scaffolding recorded/resolved against observed validation.
+
+Named NOAA page reached its dynamic interface without verified RKSI temperatures.
+Measurement unobserved is not source fallback/default-lowest evidence. Saved
+Gamma28-degree YES was already near1.0 ask; no current two-sided books or edge
+certified. Known HLE captured-body redundancy likewise does not prove no wider
+model release. Quick status at10:11 showed PM midpoint/depth38.77/34.94;
+indicative sequential partial-sleeve marks, not new whole-account NAV or CSV point.
+
+All190 prior decision rows and seven other protected financial/prior/watchlist/
+performance files preserved. Existing six dirty runtime files remain outside
+publication scope. No asset/order/transfer/sign/redemption action, forecast change,
+new schedule/watcher or goal. Local replay/audits: data/case_architecture_20261012/,
+logs/architecture_20261012/. Material Telegram architecture reply follows publication.
