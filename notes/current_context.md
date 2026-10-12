@@ -1,15 +1,15 @@
 ---
-reviewed_at: "2026-10-12T13:50:35Z"
-valid_until: "2026-10-12T14:00:00Z"
+reviewed_at: "2026-10-12T15:01:58Z"
+valid_until: "2026-10-12T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 21c7e523f0397c94cfce826b668ebb0ff7d5c239d05b0b9b96101ac47da87950
+  README.md: 210348f47f1ed7571524c31dd92588e5bc0ce00bbd4a9b603dad8a855e2af5bc
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 5598b3684a415ca92c52d5fd61de8ecff6d274f70561a0dc59d62a9ae55eb6e2
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 4e6c2bebe2886c741153c3ebccb6c0f689822a77b6582c6a9747b7cecc1f44f0
   scripts/README.md: ba8a12092ed888b55b3d3f3add68b819f8d52176ae1e2de4231ceb2720f170d3
-  notes/backlog.md: ffeda66a41821d059b6561a3538ae2fc67214ab9785e760d0a304ba68bb372a1
+  notes/backlog.md: 12dcf1d068c0438cd4718e2c181e64af0b5f8cd342b71d3a02f5da79010e1d7a
 ---
 
 # Current context — orientation, not live state
@@ -42,27 +42,48 @@ source_hashes:
 
 ## Last complete check — dated observations
 
-- **As of:** Oct-12 10:00 light check, completed 10:48–10:55 UTC. Dashboard:
-  README; evidence/judgment: corresponding journal entry. These are dated
-  sequential estimates, not synchronized NAV or live balances.
-- **Trading midpoint/depth:** 183.71/179.84 USD; excludes separately funded gas
-  and unreconciled VM/API costs. Five unresolved legs including dust; no new
-  trade, identified settlement or cash-profit event. No CSV point from this review.
-- **HLE:** HOLD / NO ADD under judgmental central Gemini/OpenAI priors;
-  downside favored trims. Use notes/portfolio_kelly_priors.json for probabilities
-  and topology; re-evaluate current inputs.
-- **Source limits:** captured HLE API 60 rows/cache age 2309s; broader OpenAI pages
-  partly blocked. No newer-backend or complete-release-absence claim supported.
-- **Clarity:** protected complete 29/29 pair, floor plus middle-vote option.
-  Specific native-USDC Offramp paused 10:55:57; other conversion costs uncertified.
-  Free constant-rate carry sensitivity was not an executable improvement.
-  Re-check route state before any conversion or pair exit.
-- **Operations then:** orders/UMA/Ostium/overdue empty; four canonical daemons healthy.
+- **As of:** Oct-12 14:00 full check; final account ~14:39, later exit/risk
+  verification and record audit. README is the dashboard; journal heading
+  ~14:39 records evidence and judgments. Sequential estimates, not synchronized
+  NAV, current balances or guaranteed liquidation.
+- **Trading midpoint/depth:** 184.93/182.00 USD; depth +7.06% versus170 before
+  VM/API. Separately funded gas6.52; whole marked191.45, PM40.00/depth37.07.
+  Five unresolved legs including dust. Rounded accounting residual22.57 is
+  not audited cash profit; no new PM fill/settlement. One dated CSV row added.
+- **Cash action, DEC-0193:** 37pUSD →36.993907 native USDC;36.98 supplied to
+  Polygon Aave through vetted same-chain writers. Four confirmed receipts,
+  nonces101–104; exact balances/known CTF units reconciled. Retained10.319630
+  pUSD; native aUSDC122.056909 at block95,407,044. Conversion loss0.006093USD
+  plus gas~0.0188USD. Captured APY~3.017% is variable, future economics pending
+  Jan2. No external contribution, bridge, leverage or PM allocation change.
+- **HLE:** HOLD / NO ADD under retained judgmental Gemini/OpenAI NO priors
+  .08/.25; stress .01/.15 favors sales. Post-action fee-net exits5.0087/3.4930.
+  Gemini initial-trim threshold~7.96% with idealized carry is close to central8%:
+  uncertain narrow hold, not robustness. Priors/topology remain in
+  notes/portfolio_kelly_priors.json; new actions need current evidence/books.
+- **Source limits:** HLE60 full rows/held criteria/Senate facts unchanged in
+  capture; cache age3162s is not publication time. Three direct OpenAI403 pages
+  and incomplete broader release coverage; known official browser views
+  supplement those gaps. No newer-backend or complete-absence claim.
+- **Clarity:** preserve complete29/29,29USD floor plus51–58-vote extra29 option.
+  Post-action exit28.5691/free constant-rate carry28.7595<floor before costs.
+  Native-USDC Offramp paused; alternative USDC.e/DEX/native-Aave cash route
+  was verified and used. Fresh route state/costs required for another action.
+- **Discovery:** corrected required thin-tail profile:3305eligible/3000selected/
+  305top-omitted;20-page cap. 2784context rows/158offline batches, all explicitly
+  unreviewed for semantics/probability/economics/execution. Automatic prior
+  used a different volume cohort; delta labels cannot establish new listings.
+  Independent Fed no-change review did not justify either side. Other capped
+  scanners remain incomplete; no global opportunity-absence conclusion.
+- **Operations:** final orders empty; routine UMA/Ostium/watch/overdue empty,
+  state CLEAN. No economical redemption; Hormuz dust retained. Four canonical
+  daemons current,1159.08MiB free disk. Material Telegram1137 delivered;
+  ten chart checks and receipt/preservation audit passed.
 
 ## Blockers and next existing boundaries
 
-- **Existing schedule:** full check Oct-12 14:00 UTC; weekly P&L Oct-16;
-  monthly drill Nov-12. This editorial review does not refresh financial data.
+- **Existing schedule:** next light check Oct-12 18:00 UTC; weekly P&L Oct-16;
+  monthly drill Nov-12. No idle continuation or additional timer is due.
 - **Manual candidates:** copper/Base stock tokens in notes/longterm_watchlist.md.
   Eligibility, vetted writers/routes and a January net-return thesis govern
   access. A listing or operator interest is not allocation approval.

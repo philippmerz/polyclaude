@@ -28367,3 +28367,172 @@ complete this bounded task;14:00 remains the next already-scheduled review.
   this formatting review is not a new live check or performance CSV point.
 - Evidence:data/dense_docs_20261012/{baseline,semantic_audit}.json and public
   Git history retain the earlier report; no new archive, timer, watcher or goal.
+
+
+### 2026-10-12 ~14:39 UTC — full check: idle cash supplied to Aave; PM HOLD / NO ADD
+
+- **Result:** 37 pUSD converted to 36.993907 native USDC; 36.98 supplied to
+  Polygon Aave through vetted writers. All held PM units unchanged. No new
+  PM entry, trim, fill or identified settlement. DEC-0193 records this cash
+  allocation; its future economics remain unresolved, not graded profitable.
+- **Final account:** authoritative marked bankroll $191.45, gas $6.52,
+  PM midpoint/depth $40.00/$37.07, position cost $47.64. Whole-account depth
+  $188.52; ex-gas trading midpoint/depth $184.93/$182.00, +$1.22/+$2.16 since
+  ~10:48. Depth +7.06% versus $170 before unreconciled VM/API costs.
+  Midpoint-depth gap $2.93; unrealized midpoint/depth −$7.64/−$10.57.
+  +$22.57 is the rounded settled-P&L accounting residual, not audited cash profit.
+- **Timing:** final bankroll output-file birth/last-write span
+  14:39:29.754769–14:39:46.030733 UTC; plotting anchor ~14:39.
+  Positions output spans 14:39:29.742769–14:39:32.222764. These filesystem
+  spans are not exact process-end or synchronized component quote times.
+  Post-action orders HTTP200, fully paginated empty. Earlier routine bank
+  14:04:34.927–14:04:54.709 was $190.52; final price/depth changes warranted
+  one additional exit/risk check rather than treating earlier quotes as current.
+
+Cash allocation and verification:
+
+- Native-USDC Offramp was paused at Polygon block95,406,213; USDC.e Offramp
+  was unpaused. USDC.e Aave reserve was frozen for new supply. Native-USDC
+  Aave was active/unpaused/unfrozen, ~3.017% variable APY. This is a specific
+  route distinction; cash could use the existing USDC.e → native-USDC DEX path.
+- Independent skeptic/champion reviews covered the >$10 allocation. Entry
+  lock, no order/reservation/reconciliation blocker, wallet/chain/token/contract
+  identities, nonces, approvals, simulations, live quote and reverse route,
+  Aave withdrawal probe, fees, gas, retained float and the January horizon checked.
+  No bridge or leverage. The supply increases an existing native-USDC Aave position.
+- At preflight14:30:31, holding the current rate constant through Jan2 implied
+  ~$0.2467 gross interest. Current gas ceilings for entry plus future unwind
+  ~$0.1457 and quoted conversion losses left ~$0.0937 before additional
+  rate, liquidity and protocol risk. This sensitivity justified the small move;
+  it is neither guaranteed carry nor a forecast of realized net profit.
+- Exact execution: wrap_pusd.py unwrap37USDC.e; spot_swap.py Polygon
+  fee-tier100, amount37, slippage0.025%, min-out36.98; aave_deposit.py supply36.98.
+  Existing router/pool allowances sufficed; one exact pUSD allowance was set.
+  Writers re-quoted/simulated as applicable. The outer entry lock spanned all
+  steps; no signing bypass, substitute wallet, raw PM buy or new execution code.
+- Completed14:37:37.564498. Four receipts status1, chain137, nonces101–104,
+  blocks95,407,032/034/040/044. Each step reconciled ERC20/aToken/CTF units;
+  latest/pending nonce105, no outstanding transaction. Received36.993907,
+  conversion loss$0.006093; exact gas0.17894767303538678POL, ~$0.01878 using
+  rounded postflight POL FX, not a transaction-time FX oracle.
+- Final pUSD10.319630; USDC.e0; native-USDC wallet0.108932, including0.013907
+  additional unsupplied remainder. Native aUSDC122.056909 at block95,407,044;
+  includes exact36.98 supply and one micro-USDC of intervening accrual.
+  All known CTF units preserved; no external contribution or capital-ledger change.
+- Public receipts: [approval](https://polygonscan.com/tx/0x080d9d9ffe78c809e46653e248b4eadadb50d2ba97dffa1af5b21d0390f72843),
+  [unwrap](https://polygonscan.com/tx/0xacd50d7b48ea59a608c69839272e4ad6737299769af853d70b793ea842e3aee4),
+  [swap](https://polygonscan.com/tx/0x6bcecc39b4bd4f19f26f9bc0e3227b24a9c0e05145390e9cd569f50e86c2d709),
+  [supply](https://polygonscan.com/tx/0x6eec0d16e36db9ff996e47dccb458f41c5442a3450e7d1d8496c800648189420).
+
+Held risk and sources:
+
+- Retained judgmental Gemini/OpenAI NO priors .08/.25; stress .01/.15.
+  Post-action fee-net G/O full exits $5.0086903/$3.493036. Central joint,
+  independent, comonotonic and upper cases still HOLD; every sizing box/KKT,
+  minimum-size neighbors and one-leg grid checked. Full-sale versus hold
+  expected-log differences: central G−.0081308/O−.0055062/both−.0140266;
+  stress both+.0277755, or+.0280823 with free constant-rate carry.
+- Gemini's initial-trim threshold ~7.9118% without carry and ~7.9626% with
+  idealized carry is close to its 8% central prior. HOLD is narrow and
+  uncertain; downside favors sale. No verified source change justified a new
+  probability, premium maker order or PM add. Four post-action books passed
+  freshness at receipt only, no fallback; another action must refresh them.
+- Clarity complete29/29 exit$28.56906; free constant-rate carry$28.7595259
+  through2027-Jan2 remains below the$29 floor before route costs. The
+  51–58 qualifying-vote extra$29 option further favors retention. HOLD/NO ADD;
+  never evaluate or manage either member as an unprotected independent leg.
+- Source capture14:02:27.377–14:02:33.592:17requests,14HTTP200/3OpenAI403;
+  26 integrity files checked. Named HLE API60 full rows match ~10:48;
+  correct scores.hle Gemini46.2/OpenAI53.6, cacheAge3162s. Cache age is not
+  publication time or proof no newer backend data exists. Five held Gamma
+  identities/full criteria/state and256 Senate vote rows unchanged.
+- HR3633 Sept15 vote49–50 was rejected cloture on the motion to proceed,
+  not qualifying final passage. AA configured Argon/Sol HLE57%/44% unchanged
+  and not the same named-source configuration. Google pages unchanged;
+  RSS added five13:00 Health/Fitbit posts unrelated to held resolution facts.
+- Direct OpenAI release pages remain partly unobserved after three403s.
+  Independent official browser reads reached known GPT6-for-everyone and
+  Sol/Luna/6.1-Sol articles without a newly verified qualifying HLE fact;
+  supplemental views do not complete release coverage. Public alert tails
+  contain no new row since the check; no fresh global-absence claim.
+
+Discovery and bounded candidate follow-up:
+
+- All eight scan types reran successfully with the repository venv after a
+  system-Python httpx failure before network access. Primary fetched1000,
+  10/10-page cap:578 eligible,80 emitted,498 top-omitted. Original secondary
+  argv erroneously used min-vol24=2420;42,871 fetched/516 survivors and its
+  596 combined rows are preserved as a different-profile diagnostic.
+- Required min-liquidity500/min-vol24=20 thin-tail pass ran once
+  14:13:55.468–14:14:02.826:42,057 fetched market rows,511 duplicates,
+  0 malformed;20/20-page cap;3305 eligible,3000 selected,305 top-omitted.
+  Exact snapshot shortlist_20261012T141402452441Z_thin_tail.json preserved.
+- Corrected offline context build once14:14:16.290–14:14:16.927:
+  2784 rows/158 batches;216 unchanged nonsibling rows not emitted.
+  Four batches exceed20 to preserve observed event families. Every emitted
+  row has explicit unreviewed semantics/probability/economics/execution.
+  Automatic prior used the2420 cohort:2489 "new_to_snapshot"/3changed/
+  292sibling-context labels are not comparable evidence of new listings.
+  Complete raw outputs, fields and all emitted batches received structural
+  triage; no batch count or shared event establishes a trade or source truth.
+- Sports52 filter hits/20 emitted/32 omitted,8 in-play skipped; two consensus
+  deltas−0.2pp/−1.8pp, third lacked external consensus. Macro four FOMC
+  brackets lacked automated consensus. Favorite25book checks/14 emitted,
+ 11 outside band; candidate-only, no failed population forecast reused.
+- Monotonicity1421events,15-page cap,zero observed signals. Consistency5012
+  open markets/596events/3099validated negRisk markets:346groups,
+  289midpoint deviations,202structural/87directional. Twenty structural
+  groups/179legs attempted:13validated/7failed,182structural unquoted;
+  zero positive provisional,1invalid event and market cap. Coverage incomplete;
+  no comprehensive zero-opportunity conclusion or executable arbitrage claimed.
+- Independent follow-up: exact no-change Oct FOMC market2589812,
+  condition0xdf9bf27ee5757c55b44b8b9826ddc9ec3a8809aa3278634c45edbb7fc8f1a3e3,
+  not a new listing. Literal upper-bound comparison, nearest25bp rounding,
+  official-statement/default clauses read. [Fed](https://www.federalreserve.gov/monetarypolicy/openmarket.htm)
+  confirms3.75–4.00 and [Oct27–28 meeting](https://www.federalreserve.gov/newsevents/2026-october.htm).
+  CME live widget unavailable. Secondary Investing81.6% at13:25UTC versus
+  earlier79.3% with the same displayed futures price is only a rough benchmark.
+  YES ask.83 costs.837055 with fee; NO's small apparent difference likewise
+  lacks a justified primary prior/ordinary pessimistic margin. No intended-size
+  fresh depth walk or entry certification; SKIP both sides.
+- BTC>$90k Oct18 market5564864,6.07days,19.2k volume/41.1k liquidity and
+  YES.039/NO.961 was absent from the02:02 same-cohort snapshot. CreatedOct11,
+  source-check priority only; not a confirmed fresh listing or reviewed edge.
+  No additional discretionary research or new trigger was required this tick.
+
+Operations, preservation and closeout:
+
+- All19 routine command types once/rc0,38 stream hashes/UTCs independently
+  verified. Routine summary initially double-subtracted cost in a derived
+  depth-unrealized field; root corrected−60.52 to−12.88 from the captured
+  bankroll before decisions, preserving raw evidence. Final depth unrealized
+  is−10.57 at its later mark. No financial action used the defective field.
+- State CLEAN:5indexed plus1deindexed claim; orders/UMA/Ostium/watch hits/
+  overdue0. Pre-action decisions192/116resolved/76pending; DEC-0193 makes
+  193/116/77, future outcome pending. No numeric prior or watchlist change.
+- Redeem-all dry-run:0/7winning,3losing/uncertain skipped. Exact deindexed
+  Hormuz winning claim.003571 versus prior175036gas units/currentgas/rounded
+  same-run FX estimate~.0050795USD: retain gas-negative dust, no broadcast.
+  This gas comparison is not a new redemption simulation.
+- Finalhealth14:54:14: four exact-one canonical absolute-path daemons current;
+  disk1159.08MiB above512warning/128critical, MemAvailable1197.67MiB.
+  No code edit, cleanup or restart. Monthly drill alreadyPASS,nextNov12;
+  weeklyP&LOct16, Saturday experiment concluded; off-chain/Sunday work retired.
+- Final receipt audit independently revalidated routine/source/inventory/quotes/
+  central joint cases,60 additional artifact hashes, corrected thin-tail counts,
+  four cash receipts/unit deltas and final empty orders. Preserved original192
+  decision objects and six other protected financial/prior/watchlist/flow/
+  benchmark records; appended one CSV observation only. Existing unrelated
+  runtime changes retained. Current handoff/source hashes refreshed after edits.
+- Local artifacts:data/checkin_20261012T1400_{routine,sources,discovery,
+  cash_route,cash_preflight,cash_execution,postflight,post_risk,final_audit,
+  postflight_health}.json;logs/checkin_20261012T1400/ including raw response,
+  transaction and corrected-scan manifests. DEC-0193 and public receipts
+  preserve the material financial action. Material Telegram and public
+  publication complete the run; next existing check18:00. No idle continuation,
+  timer, new watcher, goal or further due work created.
+
+- Full-check closeout: Telegram1137 delivered as one material message;10 chart
+  tests pass. Four offline scopes in JSON/Markdown fit within12,000 bytes,
+  declare editorial validity through18:00 and retain execution_ready=false.
+  Source hashes match; no quote/account freshness is inferred from the handoff.

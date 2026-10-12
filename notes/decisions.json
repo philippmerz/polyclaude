@@ -1,5 +1,5 @@
 {
-  "next_id": 193,
+  "next_id": 194,
   "decisions": [
     {
       "id": 1,
@@ -3990,6 +3990,57 @@
       "calibration_delta": null,
       "lesson": "Compact relevant state and preserve original evidence; use editorial expiry and dependency hashes, suppress invalid summary bodies, and refresh at existing work boundaries. Packet size is not proof of forecast quality or ROI.",
       "resolved_at": "2026-10-12T13:02:12Z"
+    },
+    {
+      "id": 193,
+      "timestamp": "2026-10-12T14:33:44Z",
+      "type": "size_change",
+      "thesis": "Move 37 idle pUSD through the vetted same-chain USDC.e Offramp and 100-tier Uniswap conversion, then supply36.98 native USDC into the existing live Aave reserve. Retain10.319630 pUSD float and every protected PM position. Native Offramp paused and USDC.e Aave frozen; current native reserve about3.017% variable, current37-unit swap near parity. Exact independent minimum36.98 and0.025% quote-relative slippage, entry lock, no orders/reservations, simulations and per-transaction balances required.",
+      "confidence": "medium",
+      "prediction": "At current variable rate held constant through Jan2, gross carry is about0.247 and current-price forward-plus-unwind gas ceilings about0.146, before additional protocol/rate/peg/liquidity risk. This is a sensitivity, not guaranteed yield or booked profit. Verify the exact supply and all costs; evaluate net incremental result by the project horizon.",
+      "size_usd": 37.0,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "cash_management",
+        "aave",
+        "polygon",
+        "usdc",
+        "same_chain",
+        "bounded"
+      ],
+      "slug": "aave-v3-polygon-native-usdc",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": "Executed through existing writers after independent skeptic/champion review and current entry-lock/order/reservation checks. Four receipts and per-step token/aToken balances confirm37 pUSD to36.993907 native USDC, supply36.98, remaining10.319630 pUSD. Swap loss0.006093 USD; gas0.178947673 POL (about0.0188 USD from rounded POL FX). Future interest, rates, gas, peg and withdrawal liquidity remain uncertain; economic prediction is not graded yet.",
+      "execution": {
+        "completed_at": "2026-10-12T14:37:37.564498+00:00",
+        "chain_id": 137,
+        "wallet": "0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B",
+        "collateral_out": {
+          "symbol": "pUSD",
+          "contract": "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
+          "units": 37000000
+        },
+        "native_received_units": 36993907,
+        "supplied_asset": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "a_token": "0xA4D94019934D8333Ef880ABFFbF2FDd611C762BD",
+        "supplied_units": 36980000,
+        "pool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
+        "remaining_pUSD_units": 10319630,
+        "gas_POL": 0.17894767303538678,
+        "gas_USD_approx": 0.018778477988813016,
+        "gas_FX_limitation": "Exact gas in POL; USD estimates use rounded current/prior same-run bankroll POL marks, not a tx-time FX oracle.",
+        "swap_cost_USD": 0.006093,
+        "transactions": [
+          "0x080d9d9ffe78c809e46653e248b4eadadb50d2ba97dffa1af5b21d0390f72843",
+          "0xacd50d7b48ea59a608c69839272e4ad6737299769af853d70b793ea842e3aee4",
+          "0x6bcecc39b4bd4f19f26f9bc0e3227b24a9c0e05145390e9cd569f50e86c2d709",
+          "0x6eec0d16e36db9ff996e47dccb458f41c5442a3450e7d1d8496c800648189420"
+        ],
+        "token_balances_reconciled": true,
+        "PM_CTF_units_unchanged": true,
+        "no_external_contribution": true
+      }
     }
   ]
 }

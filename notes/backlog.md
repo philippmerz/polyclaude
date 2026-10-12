@@ -1,3 +1,32 @@
+## Oct-12 14:00 full check — completed; cash deployed, PM HOLD / NO ADD
+
+- At ~14:39, trading midpoint/depth $184.93/$182.00; depth +7.06% versus
+  $170 before VM/API. +$1.22/+$2.16 since ~10:48 reflects sequential marks,
+  depth and cash-route costs; no PM fill, settlement or audited cash profit.
+- DEC-0193: moved 37 pUSD → 36.993907 native USDC through the vetted same-chain
+  route, then supplied 36.98 to Polygon Aave. Four successful receipts and
+  exact balance/nonce reconciliation; all PM units preserved. Retained
+  10.319630 pUSD; native aUSDC 122.056909. Conversion $0.006093 + gas ~$0.0188;
+  ~3.017% supply APY is variable. Future economics remain pending Jan 2.
+- G/O central joint cases hold; downside cases favor sale. Gemini's ~7.96%
+  initial-trim boundary is close to its retained 8% prior; hold is uncertain,
+  no add. Clarity exit/free constant-rate carry $28.5691/$28.7595 < $29 floor;
+  preserve complete 29/29 plus the 51–58-vote extra-payout option.
+- Captured held criteria/HLE/Senate facts unchanged; HLE cache age3162s and
+  three direct OpenAI403 pages leave release coverage partial. No new material
+  public alert, watch hit, open order, UMA/Ostium change or overdue decision.
+- Required thin-tail pass corrected after an erroneous high-volume profile:
+  42,057 fetched rows, 3,305 eligible, 3,000 selected, 305 top-omitted; 20-page
+  cap. 2,784 context rows/158 batches preserve explicit unreviewed states;
+  automatic delta labels compare different cohorts and do not establish new
+  listings. Other scanner caps/failures remain visible; Fed review found no
+  justified entry. No full-market absence inference or new watcher.
+- Receipt audit passed; prior 192 decision objects and six protected records
+  preserved. One CSV observation and current handoff refreshed. Four daemons
+  current; 1159.08 MiB disk above warning. Material Telegram1137 delivered;
+  10 chart checks pass. Next existing check18:00, weeklyOct16, monthlyNov12;
+  Saturday experiment complete; manual copper/Base access blockers unchanged.
+
 ## Oct-12 compact onboarding — completed; existing cadence only
 
 - Writing default is concise bullets with facts/conditions preserved; architecture
