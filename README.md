@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 168 recorded observations from Apr-25 through Oct-12, including
-88 eligible trading-midpoint and 81 eligible trading-depth observations. Rounded
+The chart now has 169 recorded observations from Apr-25 through Oct-12, including
+89 eligible trading-midpoint and 82 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -74,53 +74,49 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-12 ~14:39 UTC
+## Last bankroll snapshot — 2026-10-12 ~18:03 UTC
 
-Bankroll collection approximately 14:39:29.755–14:39:46.031 UTC, inferred from
-output-file creation and last write. Component quotes are sequential; these
+Authoritative bankroll collected 18:03:47.248941–18:04:04.900738 UTC;
+positions collected separately at 18:03:23.265801–18:03:25.983781. Sequential
 estimates are not synchronized NAV or guaranteed liquidation.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| PM midpoint / indicative fee-net depth | $40.00 / $37.07 |
-| Authoritative whole-account marked bankroll | $191.45 |
-| Approximate whole-account depth | $188.52 |
+| PM midpoint / indicative fee-net depth | $39.34 / $36.70 |
+| Authoritative whole-account marked bankroll | $190.65 |
+| Approximate whole-account depth | $188.01 |
 | Settled-P&L accounting residual | +$22.57 |
 
-- **Trading midpoint/depth:** $184.93/$182.00 after excluding $6.52 of separately
-  funded gas; +$1.22/+$2.16 since ~10:48. Depth +7.06% versus $170 before
-  unreconciled VM/API costs. Midpoint-depth gap $2.93. Residual is rounded
-  accounting; no new PM fill, settlement or audited cash-profit event.
-- **Cash management:** moved 37 pUSD through the vetted, same-chain USDC.e →
-  native-USDC route; received 36.993907 and supplied 36.98 to Polygon Aave.
-  Four successful receipts; conversion loss $0.006093 plus gas about $0.0188.
-  Retained 10.319630 pUSD; native aUSDC 122.056909 at block 95,407,044.
-  Captured supply APY ~3.017% is variable; future carry is not realized profit.
-  [DEC-0193 and reconciliation](notes/journal.md) preserve costs and assumptions.
-- **PM HOLD / NO ADD:** unchanged judgmental Gemini/OpenAI NO priors .08/.25;
-  stress .01/.15. Post-action fee-net exits $5.0087/$3.4930. Central joint cases
-  hold; downside favors sales. Gemini's estimated initial-trim boundary is
-  ~7.96% with idealized redeployment carry, close to its 8% central prior.
-  This is a narrow, uncertain hold; captured quotes must be refreshed for action.
-- **Clarity:** retain the complete 29/29 pair. Exit $28.5691 and idealized
-  constant-rate carry $28.7595 remain below the $29 floor before conversion costs
-  and the extra payout at 51–58 qualifying votes. Native-USDC Offramp is paused;
-  the alternative cash route was verified and used without changing this pair.
-- **Evidence and coverage:** captured HLE API 60 rows and held criteria unchanged;
-  cache age 3162s. Three direct OpenAI pages blocked, so release coverage remains
-  partial. Required thin-tail scan corrected to the prescribed volume filter:
-  3,305 eligible, 3,000 selected, 305 omitted; pagination capped. Offline batches
-  organize unreviewed cases. Fed follow-up did not justify entry; no global
-  opportunity-absence claim.
-- **Operations:** no open order, UMA/Ostium change, overdue decision or watch
-  trigger. Active PM units unchanged; no economical winning redemption. Four canonical
-  daemons current; 1159.08 MiB free disk above warning. Next existing check
-  18:00 UTC; weekly P&L Oct 16; monthly diagnostic Nov 12.
-- **Resolved leftovers:** four zero-payout loss balances cleared at 15:36 UTC;
-  holdings API now shows five active positions instead of nine. Gas ~$0.0135;
-  other claims and historical losses preserved. This cleanup adds no NAV point.
+- **Trading midpoint/depth:** $184.27/$181.63 excluding $6.38 of separately
+  funded gas; −$0.66/−$0.37 since ~14:39. Depth +6.84% versus $170 before
+  unreconciled VM/API costs. Midpoint-depth gap $2.64. Residual is rounded
+  accounting; no new fill, settlement or audited cash-profit event this tick.
+- **PM HOLD / NO ADD:** retained judgmental Gemini/OpenAI NO priors .08/.25;
+  stress .01/.15. Planning fee-net exits $5.0087/$3.1228. Central joint cases
+  hold; downside favors sales. Gemini's ~7.9637% initial-trim boundary with
+  idealized carry is close to its 8% prior. Hold remains narrow and uncertain;
+  quotes passed freshness at their receipts only and must be refreshed for action.
+- **Clarity:** preserve complete 29/29. Exit $28.5691 / idealized constant-rate
+  carry $28.7636 remain below its $29 floor before costs and the extra payout
+  at 51–58 qualifying votes. No independent action on either member.
+- **Cash and cleared losses:** retained 10.319630 pUSD; native aUSDC 122.058419
+  at Polygon block 95,415,463, reserve live at ~3.0884% variable APY. Four
+  finalized losing balances cleared earlier remain zero; other claims unchanged.
+  [DEC-0193/0194](notes/journal.md) record the cash route, cleanup and gas costs.
+  No new NAV point was invented from zero-value removal.
+- **Evidence:** HLE 60 full rows, five held criteria and 256 Senate rows unchanged
+  in capture. API cache age415s is not publication time. One Google AI/Health
+  RSS item and a related-stories module changed; core article bodies unchanged.
+  Three direct OpenAI403 pages leave release coverage partial. Official browser
+  views supplement that coverage; provider tool benchmarks do not replace the
+  reachable named leaderboard specified by the contract.
+- **Operations:** 19 routine types once/rc0, 38 streams verified; no order,
+  UMA/Ostium change, watch hit, overdue decision or new public alert. Four
+  canonical daemons current; 1140.71 MiB disk above warning. No asset action,
+  discovery/redemption scan or material Telegram due. Next existing check
+  22:00 UTC; weekly P&L Oct16; monthly diagnostic Nov12.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

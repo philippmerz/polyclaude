@@ -28591,3 +28591,71 @@ Operations, preservation and closeout:
   updated. Evidence:data/redemption_cleanup_20261012T1518_{preflight,execution,
   ui_verification,preserved}.json and logs/redemption_cleanup_20261012T1518/.
   Next existing check18:00; no recurring cleanup rule, watcher, timer or goal.
+
+
+### 2026-10-12 ~18:03 UTC — light check: HOLD / NO ADD; no new action due
+
+- Authoritative bankroll18:03:47.248941–18:04:04.900738 UTC:$190.65, gas$6.38,
+  PM midpoint/depth$39.34/$36.70, cost$47.64. Separate positions18:03:23.265801–
+  18:03:25.983781 match rounded PM/depth. Whole-depth$188.01; ex-gas trading
+  midpoint/depth$184.27/$181.63, −$0.66/−$0.37 since~14:39. Depth+6.84% versus
+  $170 before VM/API. Sequential estimates, not synchronized NAV or guaranteed
+  liquidation. Unrealized midpoint/depth−$8.30/−$10.94. Residual+$22.57 unchanged
+  rounded accounting, not audited cash profit; no new fill/settlement/asset action.
+- Nineteen routine types once/rc0,38 byte/hash streams and actual UTC windows
+  independently verified. Quick status and authoritative components kept separate;
+  same-run$190.65 used for Kelly. State CLEAN, orders/UMA/Ostium/watch hits/
+  overdue0; public alerts strictly after15:36 empty. Decisions194/117resolved/
+  77pending; no prior/decision mutation this tick. Routine cached hurdle3.0149%
+  was7.8721h old; root live native-Aave reserve3.0883653% kept distinct.
+- Sources18:03:25.781177–18:03:31.874983:17requests14HTTP200/3OpenAI403,
+  26 integrity files verified. Mounted live homepage→bundle→actual HLE API,
+  correct scores.hle; all60 rows equal14:00. Gemini46.2/OpenAI53.6; Age415s
+  is cache metadata, not publication time or absence of newer backend data.
+  All five exact held criteria/state and256 full Senate rows unchanged;
+  HR3633 Sept15 rejected49–50 cloture on motion to proceed is not final passage.
+- Google core article bodies unchanged. September recap changed only related
+  stories; one17:30 RSS item, Applying technology to understand and treat disease,
+  has no listed HLE score in its feed. Root browser attempt to inspect the linked
+  Health article failed; body remains unobserved. No global absence inference.
+  AA configured Argon/Sol comparison remains57%/44%, not the named-source metric.
+- Three direct OpenAI pages remain403 gaps. Limited official browser supplement:
+  [publication index](https://openai.com/research/index/publication/) lists known
+  Oct7/Oct6/Sep29 items; [Astra article](https://openai.com/index/gpt-6-astra/) reports
+  tool-enabled HLE57.2%. This is a different evaluation configuration; the current
+  O55 rule names reachable agi.safe.ai and allows alternatives only under its
+  stated source-unavailability fallback. Provider results do not substitute for
+  current named-board53.6. No newly verified qualifying source fact/prior change;
+  limited index/search views do not complete release coverage.
+- Four root planning books received~18:09, ages G8.326/C50Y7.073/C58N16.542/
+  O0.137 seconds; all<180s, no fallback. Literal identities/criteria, venue minima,
+  tick size and authoritative per-fill fees checked. Full G/O net exits
+  $5.0086903/$3.122764. Retained judgmental NO priors central.08/.25, stress.01/.15,
+  upper.18/.38; no calibrated posterior or recovery prediction claimed.
+- Explicit joint terminal states, independent/comonotonic cases, all continuous
+  sizing boxes/KKT, minimum-share constraints, neighboring.01 lots and2001-point
+  one-leg grids checked. Central G/O/both full-sale-minus-hold expected-log
+  −.0081308/−.0075342/−.0160583; central/upper cases hold. Stress both102.08G/19O
+  sells net8.1312212, +.0257438 expected-log or+.0260442 free-carry sensitivity.
+  Gemini initial-trim threshold7.9118% no carry/~7.9637% idealized carry vs8%
+  central: narrow uncertain HOLD, downside sales remain explicit. NO ADD;
+  receipt-time quotes require fresh rewalk/all gates for any later action.
+- Complete Clarity29/29 exit$28.56906; free constant-rate carry$28.7636315 to
+  Jan2<29 floor before conversion/fees/gas/protocol risk and51–58-vote extra29
+  option. HOLD completepair. Native rate is variable, not guaranteed redeployment.
+- Fixed Polygon block95,415,463: known CTF/pUSD10.319630 unchanged; four cleared
+  losing balances still0, archived debut0. Native aUSDC122.058419, +.001093 since
+ 15:36 cleanup state; reserve live/unpaused/unfrozen. Known-asset census only.
+  Exact deindexed Hormuz winning claim.003571 versus prior175036gas units/current
+  gasPrice/same-run rounded FX estimate~.0049719USD: retain claim, no new redemption
+  simulation or broadcast. Eighteen inventory/12 quote receipts independently checked.
+- Finalhealth18:15:36: four exact-one canonical absolute daemons current;
+  disk1140.71MiB>512warning/128critical, MemAvailable1204.55MiB. No cleanup/restart.
+  Monthly drill alreadyPASS,nextNov12; weeklyP&LOct16; Saturday test concluded;
+  off-chain/Sunday work retired. No full discovery or redemption scan due at light tick.
+- README/backlog/journal and one recorded CSV point updated; seven protected
+  financial/prior/watchlist/flow/benchmark records and historical CSV rows retained.
+  Current handoff/source hashes refreshed after source edits. No material Telegram
+  or new follow-up; next existing22:00. Evidence:data/periodic_20261012T1800_
+  {routine,sources,root_inventory,aave_rate,exit_quotes,risk,root_receipt_audit,
+  preserved_records,postflight,postflight_health}.json;logs/periodic_20261012T1800/.
