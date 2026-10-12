@@ -1,5 +1,5 @@
 {
-  "next_id": 192,
+  "next_id": 193,
   "decisions": [
     {
       "id": 1,
@@ -3969,6 +3969,27 @@
       "calibration_delta": "Scaffolding outcome observed; not a forecast-calibration sample.",
       "lesson": "Reuse checked analysis structure and explicit joint scenarios. Exact case bindings, evidence chronology, missing branches and current execution economics remain necessary; cache freshness does not certify completeness or truth.",
       "resolved_at": "2026-10-12T10:42:02Z"
+    },
+    {
+      "id": 192,
+      "timestamp": "2026-10-12T13:00:15Z",
+      "type": "scaffolding",
+      "thesis": "Condense current onboarding lessons with an exact historical archive, add a dated handoff and bounded offline task packets, and refresh them at existing workflow boundaries. Required primary reads and financial/execution authorities stay intact.",
+      "confidence": "high",
+      "prediction": "The current guide becomes substantially smaller; packets flag expiry and dependency changes, omit optional sections whole, and never imply live state or execution readiness. No forecasting or ROI improvement is asserted.",
+      "size_usd": 0.0,
+      "resolution_at": null,
+      "tags": [
+        "memory",
+        "context",
+        "offline",
+        "scaffolding"
+      ],
+      "slug": null,
+      "outcome": "Implemented: active lessons 94955 to15421 bytes with a byte-identical archive; 4673-byte dated handoff; all four JSON/Markdown task scopes below12000 bytes. 18 focused packet tests plus60 case-memory/projection tests and169 money checks pass. Hash/expiry invalidation, whole-section omission and no live/execution authority verified. All191 earlier decisions and7 other financial/prior/CSV records preserved.",
+      "calibration_delta": null,
+      "lesson": "Compact relevant state and preserve original evidence; use editorial expiry and dependency hashes, suppress invalid summary bodies, and refresh at existing work boundaries. Packet size is not proof of forecast quality or ROI.",
+      "resolved_at": "2026-10-12T13:02:12Z"
     }
   ]
 }

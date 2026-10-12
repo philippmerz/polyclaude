@@ -83,6 +83,37 @@ are not flows. See `docs/README.md` for the CSV columns and Pages setting.
 Push the CSV with the existing record update; this adds no watcher,
 timer or trading authority.
 
+## Compact working context
+
+Keep notes/current_context.md as a short public handoff: active work, blockers,
+the last completed check's dated evidence pointers, material unknowns and the
+next already-scheduled boundary. Target 6 KB; never copy private operator text,
+credentials or a stale probability as fresh authority. Original financial
+records and the full journal remain unchanged by condensation.
+
+After an existing check or material decision, refresh it when state changed or
+it expired. Review relevant current documents and records first. Set reviewed_at
+to that actual editorial review, valid_until to the next due check/catalyst,
+and source_hashes to raw-file SHA-256 values for every allowlisted public
+document used for curation. Financial/source observations retain their separate
+as-of times and original evidence; hashing a guide does not refresh them.
+Compute hashes after updating source documents. Do not roll expiry forward by
+copying the old summary; explicitly retain dates and unknowns when no fresh
+financial/source check was performed.
+
+scripts/context_packet.py emits a bounded orientation packet for portfolio,
+research, engineering or operations from allowlisted Git-tracked public files.
+Its default cap is 12,000 UTF-8 bytes, not a model token budget. Expired, future
+or hash-mismatched handoffs remain visibly stale/invalid. Optional matched
+sections are dropped whole on overflow; required reads and the handoff are
+never silently cut. No live/account/model data or execution approval is inferred.
+
+During the already-due weekly P&L review, review strategy/01_lessons.md for
+duplicates and superseded examples, preserving current gates and linked dated
+evidence. The byte-identical pre-condensation ledger is in strategy/archive/.
+Use targeted searches for relevant history; do not load the full journal or
+archive as default onboarding. This adds no timer, watcher or durable goal.
+
 ## Operator-blocking questions
 
 Surface via Telegram using the literal `msg --stdin` form above rather than a

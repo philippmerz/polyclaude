@@ -1,3 +1,19 @@
+## Oct-12 compact onboarding — completed; existing cadence only
+
+- Current lessons94,955 →15,421 bytes (83.76% smaller); original ledger preserved
+  byte for byte in strategy/archive/01_lessons_2026-10-12.md. Required full current
+  philosophy/operations reads and safety gates remain.
+- notes/current_context.md is a~4.7KB dated handoff with source hashes and next
+  due expiry. context_packet.py emits four offline task scopes below12KB;
+  no live/account/model/authorization inference. Hash/date defects flag invalidity;
+  invalid/future bodies suppressed; optional historical sections omitted whole.
+- Existing completed-check record step refreshes handoff when needed; already-due
+  weekly P&L also reviews duplicate/superseded lessons. No new timer/watcher/goal.
+- 18 packet +60 case-memory/projection tests and169 money checks pass; DEC-0192
+  resolved as scaffolding. Financial/prior/performance records preserved.
+- Earlier offline architecture is implemented; live review router and prospective
+  source-family profit validation remain proposals. No ROI/forecast-quality claim.
+
 ## Oct-12 10:00 light check — completed at10:48; HOLD / NO ADD
 
 - Trading midpoint/depth$183.71/$179.84, +$2.24/+$0.89 since06:00;

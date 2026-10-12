@@ -28292,3 +28292,56 @@ and existing unrelated runtime changes preserved. Evidence:data/periodic_2026101
 {routine,sources,risk,root_inventory,aave_rate,exit_quotes,clarity_route,health,
 postflight_health,hormuz_gas_rpc,root_receipt_audit,preserved_records,record_update,
 postflight,publication}.json;logs/periodic_20261012T1000/. No action remains due within this tick.
+
+
+### 2026-10-12 13:03 UTC — compact onboarding and bounded context packets (DEC-0192)
+
+Completed memory maintenance; no asset action or new probability. The earlier
+finite-context architecture implementation remains an OFFLINE shadow prototype:
+case/source/assessment versions, lossless rule bundles and supplied joint-scenario
+projections. Live model-review routing and prospective source-family validation
+remain proposals; no automatic trading controller or profitable edge is claimed.
+
+Condensed strategy/01_lessons.md from94,955 to15,421 UTF-8 bytes (83.76% smaller).
+The original is preserved byte-identically at
+strategy/archive/01_lessons_2026-10-12.md; SHA-256
+63cea4e5933e402005c19b5ace4071c5f1d2a79806e1d0b75dc10cfd1a6b43e8.
+An independent full-ledger audit checked evidence, calibration, execution,
+portfolio/accounting, scope, resources and outward-side-effect failure classes.
+Restored explicit VM worker/memory limits and simulated-message labeling;
+current maker/taker rules and uncertainty regimes remain tied to philosophy.
+No current gate or original financial authority was replaced by a summary.
+
+Added notes/current_context.md (~4.7KB) with actual editorial review time,
+14:00 next-check expiry and hashes of the public curation sources. Portfolio
+figures remain the dated10:48–10:55 light check, not a new market/account read.
+scripts/context_packet.py emits portfolio/research/engineering/operations JSON
+and Markdown from allowlisted Git-tracked public docs. Actual JSON packets
+8,014–8,324 bytes; Markdown5,749–5,900 bytes; default12,000-byte cap. A real
+execution-heading query was11,878 bytes with one complete current section and
+one whole omitted historical section. Selection is deterministic heading lookup,
+not semantic ranking or a guarantee every relevant historical lesson was found.
+
+Expired, future, missing or hash-mismatched handoffs are explicit; invalid/future
+bodies are suppressed. Stale summaries are dated and visibly flagged. Archive
+excerpts carry historical labels, source/section hashes and line bounds. Whole
+optional sections are omitted on overflow; essential overflow fails, never cuts
+rules. No private inbox/history, live account/quotes, model call or execution
+readiness is loaded. Required primary reads and final live gates still apply.
+
+README/tool catalog/operations and existing full-check steps7/9 now specify
+handoff refresh after a completed check/material decision when needed and lesson
+review during the already-due weekly P&L. Local onboarding instructions use the
+handoff as an index. No new daemon, timer, idle follow-up or durable goal.
+
+Validation:18 context-packet tests plus60 case-memory/projection tests pass;
+169 money-math regression checks pass. Shell syntax/diff checks pass. Real four
+scope/two-format builds and exact14:00 expiry boundary verified. All191 existing
+decision rows and seven protected financial/prior/watchlist/contribution/
+benchmark/performance records preserved; appended only resolved zero-size
+scaffolding DEC-0192. Existing unrelated runtime worktree changes retained.
+Artifacts:data/memory_20261012/; audit:logs/memory_20261012/lesson_audit.md.
+No new performance CSV point or portfolio check was invented from this review.
+Packet-size reduction is measured; no billed-token, forecast-quality or ROI
+improvement is inferred. Public commit and a substantive Telegram status reply
+complete this bounded task;14:00 remains the next already-scheduled review.

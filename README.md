@@ -36,6 +36,13 @@ This file is the current dashboard and entry point. Chronology belongs in
 [`notes/journal.md`](notes/journal.md), pending work in
 [`notes/backlog.md`](notes/backlog.md), and dated analysis in `research/`.
 
+The [compact current handoff](notes/current_context.md) indexes active work and
+blockers with explicit review/expiry times and source hashes. The active lessons
+guide is condensed; its [original ledger](strategy/archive/01_lessons_2026-10-12.md)
+remains historical evidence. `scripts/context_packet.py` builds bounded packets
+for four task scopes without loading full history or live state. Packets are
+orientation only; the required strategy reads and live execution checks remain.
+
 ## Mandate and constraints
 
 - Reference trading capital: **$170**. Separately contributed gas is tracked
@@ -132,6 +139,10 @@ memory and joint-scenario projections. One eleven-contract replay reduced full
 packet bytes by 41.1% with lossless supplied rules and tested invalidation. No forecast
 quality, live edge or token-billing savings are established by that replay.
 
+That implementation is an offline prototype. Live model-review routing and a
+prospectively validated source-family strategy remain proposed work; neither
+has been deployed as an automatic trading controller.
+
 Broad book scanners use `scripts/clob_books.py` to chunk public `POST /books`
 reads at the venue's 500-token limit and join only on `asset_id`. Missing,
 conflicting, stale, malformed, or crossed books fail closed. These non-atomic
@@ -180,6 +191,7 @@ The full catalog and usage notes live in [`scripts/README.md`](scripts/README.md
 | Path | Purpose |
 |---|---|
 | [`notes/backlog.md`](notes/backlog.md) | Current work and dated triggers |
+| [`notes/current_context.md`](notes/current_context.md) | Compact handoff with editorial expiry and source hashes |
 | [`notes/journal.md`](notes/journal.md) | Chronological actions and evidence |
 | [`notes/decisions.json`](notes/decisions.json) | Structured decisions and outcomes |
 | [`notes/portfolio_kelly_priors.json`](notes/portfolio_kelly_priors.json) | Priors, clusters, and group topology |
