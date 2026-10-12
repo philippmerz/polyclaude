@@ -58,6 +58,7 @@ COMPACT_FIELDS = (
     "vol24h", "days_to_resolve", "dominant_side", "apy_dominant",
     "clears_hurdle", "fees_enabled", "fee_schedule", "fee_rate",
     "min_size_usd", "tick", "neg_risk",
+    "min_order_shares", "min_size_units",
 )
 
 
@@ -809,6 +810,11 @@ def build_payload(
         )
     comparison_warnings: list[str] = []
     if current_meta and prior_meta:
+        if current_meta.get("selection_policy") != prior_meta.get("selection_policy"):
+            comparison_warnings.append(
+                "current and prior snapshots use different selection policies; "
+                "new-to-snapshot rows may reflect the filter-order change"
+            )
         if current_meta.get("scan_kind") != prior_meta.get("scan_kind"):
             comparison_warnings.append("current and prior snapshots have different scan kinds")
         if current_meta.get("criteria_fingerprint") != prior_meta.get("criteria_fingerprint"):
@@ -858,6 +864,20 @@ def build_payload(
     all_warnings.extend(current_integrity_warnings)
     all_warnings.extend(prior_integrity_warnings)
     all_warnings.extend(comparison_warnings)
+    discovery_coverage = current_meta.get("coverage") if current_meta else None
+    if not isinstance(discovery_coverage, dict):
+        discovery_coverage = None
+        all_warnings.append("upstream fetched/filter/top coverage is unobserved in this snapshot")
+    else:
+        fetch = discovery_coverage.get("fetch") or {}
+        filters = discovery_coverage.get("filters") or {}
+        if fetch.get("pagination_complete") is not True:
+            all_warnings.append(
+                "upstream discovery pagination is incomplete: "
+                + str(fetch.get("stop_reason") or "unknown stop reason")
+            )
+        if filters.get("top_omitted"):
+            all_warnings.append(f"upstream output cap omitted {filters['top_omitted']} eligible rows")
     source_integrity_verified = not current_integrity_warnings
     prior_integrity_verified = bool(prior_path) and not prior_integrity_warnings
     delta_comparison_verified = (
@@ -876,6 +896,7 @@ def build_payload(
             "Re-read literal criteria and rewalk current CLOB books before any action."
         ),
         "source_integrity_verified": source_integrity_verified,
+        "discovery_coverage": discovery_coverage,
         "prior_integrity_verified": prior_integrity_verified,
         "delta_comparison_verified": delta_comparison_verified,
         "family_routing_ready": False,
@@ -935,6 +956,10 @@ def render_markdown(payload: dict[str, Any]) -> str:
     ]
     prior = payload["source"]["prior"]
     lines.append(f"Prior proof: `{prior['sha256'] if prior else 'none'}`")
+    if payload.get("discovery_coverage"):
+        lines.extend(["", "Upstream discovery coverage: `"
+                      + _md(json.dumps(payload["discovery_coverage"], sort_keys=True)) + "`"])
+    lines.append("Minimum order size is in shares; legacy `min_size_usd` is a share-count alias.")
     if payload["warnings"]:
         lines.extend(["", "Warnings:"] + [f"- {_md(warning)}" for warning in payload["warnings"]])
     for batch in payload["batches"]:

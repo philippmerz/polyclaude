@@ -626,3 +626,185 @@ def test_date_pass_rejects_rule_template_mismatch(monkeypatch, capsys) -> None:
     assert scanner.main() == 0
     payload = json.loads(capsys.readouterr().out)
     assert payload["violations"] == []
+
+
+class _FakeGammaResponse:
+    def __init__(self, data=None, status_code=200, error=None):
+        self._data = data
+        self.status_code = status_code
+        self.error = error
+
+    def raise_for_status(self):
+        if self.error:
+            raise self.error
+
+    def json(self):
+        return self._data
+
+
+class _FakeGammaClient:
+    def __init__(self, responses):
+        self.responses = list(responses)
+        self.calls = []
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *_args):
+        return False
+
+    def get(self, _url, *, params):
+        self.calls.append(params)
+        response = self.responses.pop(0)
+        if isinstance(response, Exception):
+            raise response
+        return response
+
+
+def _gamma_page(prefix: str, count: int = 100):
+    return [{"id": f"{prefix}-{i}", "volume24hr": 1001, "markets": []}
+            for i in range(count)]
+
+
+def test_fetch_events_records_skipped_middle_page_and_later_success(monkeypatch, capsys):
+    client = _FakeGammaClient([
+        _FakeGammaResponse(_gamma_page("first")),
+        TimeoutError("middle page timeout"),
+        _FakeGammaResponse(_gamma_page("later")),
+        _FakeGammaResponse([]),
+    ])
+    monkeypatch.setattr(scanner.httpx, "Client", lambda **_kwargs: client)
+
+    result = scanner.fetch_events(min_vol=1000, max_pages=6)
+
+    assert len(result) == 200
+    assert [params["offset"] for params in client.calls] == [0, 100, 200, 300]
+    assert result.coverage == {
+        "attempted_pages": 4,
+        "successful_pages": 3,
+        "failed_pages": [{"page": 1, "error": "TimeoutError: middle page timeout"}],
+        "failed_page_numbers": [1],
+        "stop_reason": "empty_page",
+        "page_cap": 6,
+        "complete": False,
+    }
+    capsys.readouterr()
+
+
+@pytest.mark.parametrize(
+    ("malformed_page", "expected_error"),
+    [
+        (None, "invalid response type: NoneType; expected list"),
+        ({}, "invalid response type: dict; expected list"),
+        ("not an array", "invalid response type: str; expected list"),
+        ([{"volume24hr": 1001}], "row 0 has no usable id"),
+        ([None], "row 0 is not an object"),
+    ],
+)
+def test_fetch_events_rejects_malformed_pages_without_claiming_complete(
+    monkeypatch, capsys, malformed_page, expected_error,
+):
+    client = _FakeGammaClient([
+        _FakeGammaResponse(malformed_page),
+        _FakeGammaResponse([]),
+    ])
+    monkeypatch.setattr(scanner.httpx, "Client", lambda **_kwargs: client)
+
+    result = scanner.fetch_events(min_vol=1000, max_pages=4)
+
+    assert result == []
+    assert result.coverage["attempted_pages"] == 2
+    assert result.coverage["successful_pages"] == 1
+    assert result.coverage["failed_page_numbers"] == [0]
+    assert result.coverage["failed_pages"][0]["error"] == expected_error
+    assert result.coverage["stop_reason"] == "empty_page"
+    assert result.coverage["complete"] is False
+    capsys.readouterr()
+
+
+@pytest.mark.parametrize(
+    ("responses", "stop_reason", "complete"),
+    [
+        ([_FakeGammaResponse(_gamma_page("cap"))] * 2, "max_pages", False),
+        ([_FakeGammaResponse(_gamma_page("short", 7))], "short_page", True),
+        ([_FakeGammaResponse([])], "empty_page", True),
+        ([_FakeGammaResponse(status_code=422)], "api_422", False),
+    ],
+)
+def test_fetch_events_reports_terminal_coverage(monkeypatch, responses, stop_reason, complete):
+    client = _FakeGammaClient(responses)
+    monkeypatch.setattr(scanner.httpx, "Client", lambda **_kwargs: client)
+
+    result = scanner.fetch_events(min_vol=1000, max_pages=len(responses))
+
+    assert result.coverage["attempted_pages"] == len(client.calls)
+    assert result.coverage["successful_pages"] == sum(
+        not (hasattr(response, "status_code") and response.status_code == 422)
+        for response in responses
+    )
+    assert result.coverage["stop_reason"] == stop_reason
+    assert result.coverage["complete"] is complete
+
+
+def test_main_surfaces_incomplete_fetch_on_zero_candidates(monkeypatch, capsys):
+    events = scanner.EventFetchResult([], {
+        "attempted_pages": 3,
+        "successful_pages": 2,
+        "failed_pages": [{"page": 1, "error": "TimeoutError: timeout"}],
+        "failed_page_numbers": [1],
+        "stop_reason": "empty_page",
+        "page_cap": 15,
+        "complete": False,
+    })
+    monkeypatch.setattr(scanner, "fetch_events", lambda **_kwargs: events)
+    monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py", "--json"])
+
+    assert scanner.main() == 1
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["violations"] == []
+    assert payload["coverage_complete"] is False
+    assert payload["fetch_coverage"]["failed_page_numbers"] == [1]
+
+
+def test_main_marks_page_cap_incomplete_without_failing(monkeypatch, capsys):
+    events = scanner.EventFetchResult([], {
+        "attempted_pages": 15,
+        "successful_pages": 15,
+        "failed_pages": [],
+        "failed_page_numbers": [],
+        "stop_reason": "max_pages",
+        "page_cap": 15,
+        "complete": False,
+    })
+    monkeypatch.setattr(scanner, "fetch_events", lambda **_kwargs: events)
+    monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py"])
+
+    assert scanner.main() == 0
+    output = capsys.readouterr().out
+    assert "# Fetch coverage: INCOMPLETE" in output
+    assert "stop=max_pages" in output
+
+
+def test_main_does_not_call_plain_list_source_complete(monkeypatch, capsys):
+    monkeypatch.setattr(scanner, "fetch_events", lambda **_kwargs: [])
+    monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py", "--json"])
+
+    assert scanner.main() == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["coverage_complete"] is False
+    assert payload["fetch_coverage"]["stop_reason"] == "coverage_unobserved_list_source"
+
+
+@pytest.mark.parametrize("malformed_page", [None, {}, "not an array"])
+def test_main_returns_failure_for_malformed_page_payload(monkeypatch, capsys, malformed_page):
+    client = _FakeGammaClient([
+        _FakeGammaResponse(malformed_page),
+        _FakeGammaResponse([]),
+    ])
+    monkeypatch.setattr(scanner.httpx, "Client", lambda **_kwargs: client)
+    monkeypatch.setattr(sys, "argv", ["event_monotonicity_scan.py", "--json"])
+
+    assert scanner.main() == 1
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["coverage_complete"] is False
+    assert payload["fetch_coverage"]["failed_page_numbers"] == [0]

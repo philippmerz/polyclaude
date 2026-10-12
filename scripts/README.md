@@ -35,9 +35,17 @@ positions; they do not create a recurring stock or brokerage workflow.
 - `wallet_status.py` — Polymarket-sleeve MATIC + USDC balance on Polygon.
 - `positions.py` — Polymarket open positions with mark-to-market P&L.
 - `crypto_status.py` — multi-chain balance reader for either sleeve. Subcommand: `crypto` (default) or `polymarket`.
-- `discover_markets.py` — paginated Polymarket gamma-api scan. Snapshots into `data/snapshots/`.
+- `discover_markets.py` — paginated Polymarket Gamma discovery profiles. Snapshot sidecars record fetch stop/completeness, filter exclusions and top-N omissions. Optional win-assumed carry filtering now precedes top-N; `--top 0` retains all survivors. Liquidity/volume are not executable depth.
 - `market_context_batches.py` — deterministic offline organizer for discovery snapshots. It compares the latest two snapshots of one scan kind, ranks material identity/criteria/quote changes, keeps observed rows from an exact Gamma event together, and emits proof-hashed JSON or Markdown batches. It never calls the network, a model, or execution; each item still requires exact-criteria review and a fresh live-book walk.
 - `clob_books.py` — strict read-only Polymarket `POST /books` transport. It chunks requests at 500 unique token IDs, maps responses only by `asset_id`, preserves omitted requested IDs as missing, and rejects malformed, duplicate, or unexpected rows.
+- `favorite_fade_scan.py` — short-horizon favorite-price profile only: exact identities and both-side context, no population probability, edge or APY. Deprecated `--min-edge-pp` warns and is ignored.
+- `event_monotonicity_scan.py` — reports page failures/caps and incomplete fetch coverage; fetch failures exit nonzero while preserving observations for review.
+- `polymarket_consistency_scan.py` — bounded basket quotes default to balanced midpoint-priority plus least-recently-attempted exact groups; `--live-selection midpoint` retains the diagnostic legacy order. Coverage, failures and quote lanes remain explicit.
+
+The [opportunity method](../strategy/03_opportunity_method.md) distinguishes
+discovery profiles, evidence, probability judgment and guarded execution. Offline
+batches do not use a model. Cheap workers perform bounded triage/source collection;
+the primary agent owns the portfolio decision.
 
 `event_monotonicity_scan.py`, `polymarket_consistency_scan.py`,
 `favorite_fade_scan.py`, and `cross_event_bound_scan.py` use that transport for

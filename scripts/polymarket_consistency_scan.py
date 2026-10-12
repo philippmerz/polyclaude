@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import math
 import subprocess
@@ -296,6 +297,11 @@ def _normalize_neg_risk_market(raw: dict, parent: dict) -> dict:
         "id": market_id,
         "conditionId": condition_id,
         "question": question,
+        "description": raw.get("description"),
+        "resolutionSource": raw.get("resolutionSource"),
+        "rules": raw.get("rules"),
+        "resolutionRules": raw.get("resolutionRules"),
+        "resolutionRulesTemplate": raw.get("resolutionRulesTemplate"),
         "slug": raw.get("slug"),
         "groupItemTitle": raw.get("groupItemTitle"),
         "active": True,
@@ -511,6 +517,8 @@ def fetch_universe(
             parent = {
                 "id": event_id,
                 "title": event.get("title"),
+                "description": event.get("description"),
+                "rules": event.get("rules"),
                 "slug": event.get("slug"),
                 "active": True,
                 "closed": False,
@@ -1206,13 +1214,210 @@ def evaluate_group(group_id: str, members: list[dict]) -> dict | None:
     }
 
 
-def _plan_live_candidates(candidates: list[dict], max_groups: int,
-                          max_legs: int) -> tuple[list[dict], list[dict], int]:
-    """Bound live work while accounting explicitly for every structural hit."""
+def _membership_fingerprint(group_id: str,
+                            members: list[tuple[dict, float]]) -> str:
+    """Fingerprint exact basket membership and the terms that define each leg."""
+    criteria_fields = (
+        "id", "conditionId", "clobTokenIds", "outcomes", "negRisk",
+        "negRiskMarketID", "question", "description", "resolutionSource",
+        "resolution_source", "rules", "resolutionRules",
+        "resolutionRulesTemplate", "endDateIso", "endDate",
+    )
+    member_rows = [
+        {key: market.get(key) for key in criteria_fields}
+        for market, _yes_price in members
+    ]
+    member_rows.sort(key=lambda row: (str(row.get("conditionId") or ""),
+                                      str(row.get("id") or "")))
+    encoded = json.dumps(
+        {
+            "neg_risk_market_id": group_id,
+            "event": {
+                key: ((members[0][0].get("events") or [{}])[0].get(key))
+                for key in (
+                    "id", "title", "slug", "negRisk", "negRiskMarketID",
+                    "description", "rules",
+                )
+            },
+            "members": member_rows,
+        },
+        sort_keys=True, separators=(",", ":"), ensure_ascii=False,
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def _parse_attempt_time(value: object) -> dt.datetime | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        parsed = dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return None
+    return parsed.astimezone(dt.timezone.utc)
+
+
+def _load_quote_history(path: Path) -> tuple[dict[tuple[str, str], str], list[str]]:
+    """Load exact group+fingerprint timestamps from the prior latest report."""
+    if not path.exists():
+        return {}, []
+    try:
+        payload = json.loads(path.read_text())
+    except Exception as exc:
+        return {}, [f"prior quote history unreadable; treating groups as novel ({type(exc).__name__})"]
+    if not isinstance(payload, dict) or not isinstance(payload.get("candidates"), list):
+        return {}, ["prior quote history has malformed report shape; treating groups as novel"]
+
+    history: dict[tuple[str, str], str] = {}
+    malformed = 0
+    ambiguous: set[tuple[str, str]] = set()
+    for row in payload["candidates"]:
+        if not isinstance(row, dict):
+            malformed += 1
+            continue
+        attempt = row.get("last_quote_attempt_utc")
+        if attempt is None:
+            # Older reports and never-attempted rows do not suppress candidates.
+            if row.get("quote_attempted_this_run") is True:
+                malformed += 1
+            continue
+        group_id = row.get("neg_risk_market_id")
+        fingerprint = row.get("membership_fingerprint")
+        if (not isinstance(group_id, str) or not group_id
+                or not isinstance(fingerprint, str) or len(fingerprint) != 64
+                or any(ch not in "0123456789abcdef" for ch in fingerprint)
+                or _parse_attempt_time(attempt) is None):
+            malformed += 1
+            continue
+        key = (group_id, fingerprint)
+        if key in history and history[key] != attempt:
+            ambiguous.add(key)
+            malformed += 1
+            continue
+        history[key] = attempt
+    for key in ambiguous:
+        history.pop(key, None)
+    warnings = []
+    if malformed:
+        warnings.append(
+            f"{malformed} malformed/ambiguous prior quote-history row(s); "
+            "affected groups treated as novel"
+        )
+    if payload["candidates"] and not history and not warnings:
+        warnings.append("prior report has no usable quote history; treating groups as novel")
+    return history, warnings
+
+
+def _attach_quote_history(
+    candidates: list[dict],
+    valid_members_by_group: dict[str, list[tuple[dict, float]]],
+    quote_history: dict[tuple[str, str], str],
+) -> None:
+    """Attach exact-match fingerprints/recency while keeping run attempts distinct."""
+    for candidate in candidates:
+        if not candidate["structural_free_arb"]:
+            continue
+        group_id = candidate["neg_risk_market_id"]
+        fingerprint = _membership_fingerprint(
+            group_id, valid_members_by_group[group_id]
+        )
+        candidate["membership_fingerprint"] = fingerprint
+        history_key = (group_id, fingerprint)
+        if history_key in quote_history:
+            candidate["last_quote_attempt_utc"] = quote_history[history_key]
+        candidate["quote_attempted_this_run"] = False
+
+
+def _plan_live_candidates(
+    candidates: list[dict], max_groups: int, max_legs: int, *,
+    selection: str = "balanced",
+    quote_history: dict[tuple[str, str], str] | None = None,
+) -> tuple[list[dict], list[dict], int]:
+    """Bound live work; reserve group and leg capacity for both lanes."""
     relevant = [c for c in candidates if c["structural_free_arb"]]
+    quote_history = quote_history or {}
+    midpoint_ranked = sorted(
+        relevant, key=lambda c: -float(c.get("net_edge_frac", 0.0) or 0.0)
+    )
+    if selection == "midpoint":
+        ordered = [(c, "priority") for c in midpoint_ranked]
+    elif selection == "balanced":
+        priority_target = max(1, (max_groups + 1) // 2)
+        has_alternatives = len(relevant) > 1
+        priority_leg_target = (
+            (max_legs + 1) // 2 if has_alternatives else max_legs
+        )
+        exploration_leg_target = max_legs - priority_leg_target
+        priority: list[dict] = []
+        priority_legs = 0
+        for candidate in midpoint_ranked[:priority_target]:
+            count = int(candidate["members"])
+            if priority_legs + count <= priority_leg_target:
+                priority.append(candidate)
+                priority_legs += count
+        priority_ids = {id(c) for c in priority}
+        exploration = [c for c in relevant if id(c) not in priority_ids]
+
+        def exploration_key(candidate: dict) -> tuple[bool, dt.datetime, int, float]:
+            key = (str(candidate.get("neg_risk_market_id") or ""),
+                   str(candidate.get("membership_fingerprint") or ""))
+            stamp = _parse_attempt_time(quote_history.get(key))
+            # Missing/unusable history is novel; older attempts rotate first.
+            return (stamp is not None,
+                    stamp or dt.datetime.min.replace(tzinfo=dt.timezone.utc),
+                    int(candidate["members"]),
+                    -float(candidate.get("net_edge_frac", 0.0) or 0.0))
+
+        exploration.sort(key=exploration_key)
+        selected: list[dict] = []
+        selected_legs = 0
+        for candidate in priority:
+            count = int(candidate["members"])
+            if len(selected) < priority_target and selected_legs + count <= priority_leg_target:
+                candidate["live_selection_lane"] = "priority"
+                selected.append(candidate)
+                selected_legs += count
+
+        exploration_slots = max_groups - len(selected)
+        exploration_selected: list[dict] = []
+        exploration_legs = 0
+        for candidate in exploration:
+            count = int(candidate["members"])
+            if len(exploration_selected) >= exploration_slots:
+                break
+            if (exploration_legs + count <= exploration_leg_target
+                    and selected_legs + exploration_legs + count <= max_legs):
+                candidate["live_selection_lane"] = "exploration"
+                exploration_selected.append(candidate)
+                exploration_legs += count
+
+        selected.extend(exploration_selected)
+        selected_legs += exploration_legs
+
+        # Backfill unused capacity without relaxing the hard total caps. This
+        # lets a valid large basket through when both half-budget lanes cannot
+        # use their quota (e.g. two 150-leg baskets under a 200-leg cap).
+        backfill_order = ([(c, "priority") for c in midpoint_ranked]
+                          + [(c, "exploration") for c in exploration])
+        selected_ids = {id(c) for c in selected}
+        for candidate, lane in backfill_order:
+            if id(candidate) in selected_ids:
+                continue
+            count = int(candidate["members"])
+            if len(selected) >= max_groups or selected_legs + count > max_legs:
+                continue
+            candidate["live_selection_lane"] = lane
+            selected.append(candidate)
+            selected_ids.add(id(candidate))
+            selected_legs += count
+        ordered = [(c, c["live_selection_lane"]) for c in selected]
+    else:
+        raise ValueError("selection must be 'balanced' or 'midpoint'")
+
     selected: list[dict] = []
     selected_legs = 0
-    for candidate in relevant:
+    for candidate, lane in ordered:
         member_count = int(candidate["members"])
         if len(selected) >= max_groups:
             candidate["live_status"] = "unquoted_group_cap"
@@ -1223,8 +1428,22 @@ def _plan_live_candidates(candidates: list[dict], max_groups: int,
             candidate["live_unquoted_reason"] = "live leg cap"
             continue
         candidate["live_status"] = "queued"
+        candidate["live_selection_lane"] = lane
         selected.append(candidate)
         selected_legs += member_count
+    selected_ids = {id(c) for c in selected}
+    for candidate in relevant:
+        if id(candidate) not in selected_ids:
+            candidate.setdefault("live_selection_lane", "unselected")
+            if candidate.get("live_status") not in {
+                "unquoted_group_cap", "unquoted_leg_cap",
+            }:
+                if int(candidate["members"]) > max_legs or selected_legs + int(candidate["members"]) > max_legs:
+                    candidate["live_status"] = "unquoted_leg_cap"
+                    candidate["live_unquoted_reason"] = "live leg cap"
+                elif len(selected) >= max_groups:
+                    candidate["live_status"] = "unquoted_group_cap"
+                    candidate["live_unquoted_reason"] = "live group cap"
     return relevant, selected, selected_legs
 
 
@@ -1240,10 +1459,26 @@ def _finalize_coverage(coverage: dict, relevant: list[dict],
     coverage["live_groups_relevant"] = len(relevant)
     coverage["live_groups_eligible"] = len(relevant)  # compatibility alias
     coverage["live_groups_requested"] = len(requested)
+    attempted = [c for c in requested if c.get("quote_attempted_this_run") is True]
+    coverage["live_groups_attempted"] = len(attempted)
+    coverage["live_legs_attempted"] = sum(int(c.get("members", 0)) for c in attempted)
     coverage["live_groups_validated"] = validated
     coverage["live_groups_skipped"] = skipped
     coverage["live_groups_unquoted"] = unquoted
     coverage["live_legs_requested"] = live_legs
+    coverage["live_selection_lane_groups"] = {
+        lane: sum(1 for c in requested if c.get("live_selection_lane") == lane)
+        for lane in ("priority", "exploration")
+    }
+    coverage["live_selection_lane_legs"] = {
+        lane: sum(int(c.get("members", 0)) for c in requested
+                  if c.get("live_selection_lane") == lane)
+        for lane in ("priority", "exploration")
+    }
+    coverage["live_selection_lane_attempted"] = {
+        lane: sum(1 for c in attempted if c.get("live_selection_lane") == lane)
+        for lane in ("priority", "exploration")
+    }
     coverage["live_shortlist_complete"] = unquoted == 0
     coverage["live_budget_exhausted"] = budget_exhausted
 
@@ -1309,6 +1544,12 @@ def main() -> int:
                    help="maximum structural groups to cross-check and live-price")
     p.add_argument("--max-live-legs", type=int, default=DEFAULT_MAX_LIVE_LEGS,
                    help="maximum total basket legs to refresh and live-price")
+    p.add_argument(
+        "--live-selection", choices=("balanced", "midpoint"), default="balanced",
+        help=("group selection policy: balanced reserves about half the group cap "
+              "for midpoint rank and rotates the remainder; midpoint reproduces "
+              "legacy midpoint-edge ordering for diagnostics"),
+    )
     p.add_argument("--live-budget-seconds", type=float,
                    default=DEFAULT_LIVE_BUDGET_SECONDS,
                    help="wall-clock budget for the live-quote pass")
@@ -1384,15 +1625,25 @@ def main() -> int:
     candidates.sort(key=lambda c: -c["net_edge_frac"])
     print(f"  {len(candidates)} groups exceed {LOG_THRESHOLD_GROSS*100:.1f}% gross deviation (gamma midpoint)")
 
-    # Pass 2: every logged sum>1 structural hit is relevant.  The bounded plan
-    # prioritizes midpoint edge, but any cap omission keeps final analysis
-    # explicitly incomplete rather than manufacturing a scoped zero.
+    # Load only exact group+membership/criteria history from the previous report.
+    # A corrupt or older report produces a warning and treats rows as novel.
+    prior_json = OUT_DIR / "polymarket_consistency_latest.json"
+    quote_history, quote_history_warnings = _load_quote_history(prior_json)
+    for warning in quote_history_warnings:
+        print(f"WARNING: {warning}")
+    _attach_quote_history(candidates, valid_members_by_group, quote_history)
+    # Every logged sum>1 structural hit is relevant. Any cap omission keeps
+    # final analysis explicitly incomplete rather than manufacturing a zero.
     live_relevant, live_candidates, live_legs = _plan_live_candidates(
-        candidates, args.max_live_groups, args.max_live_legs
+        candidates, args.max_live_groups, args.max_live_legs,
+        selection=args.live_selection, quote_history=quote_history,
     )
+    coverage["live_selection_method"] = args.live_selection
+    coverage["prior_quote_history_records"] = len(quote_history)
+    coverage["prior_quote_history_warnings"] = quote_history_warnings
     print(f"\nlive-quote pass: {len(live_candidates)}/{len(live_relevant)} "
-          f"structural groups requested ({live_legs} legs; every unquoted group "
-          "keeps analysis incomplete)")
+          f"structural groups requested ({live_legs} legs; "
+          f"selection={args.live_selection}; every unquoted group keeps analysis incomplete)")
     live_started = time.monotonic()
     live_deadline = live_started + args.live_budget_seconds
     live_budget_exhausted = False
@@ -1407,6 +1658,13 @@ def main() -> int:
                 c["live_skipped"] = "no valid members"
                 c["live_status"] = "quote_failed"
                 continue
+            # Stamp only when execution reaches a real quote attempt. Queued
+            # groups skipped by group/leg/deadline caps remain unattempted.
+            c["last_quote_attempt_utc"] = (
+                dt.datetime.now(dt.timezone.utc).isoformat(timespec="milliseconds")
+                .replace("+00:00", "Z")
+            )
+            c["quote_attempted_this_run"] = True
             live = live_quote_group(
                 members, c["action"], client=live_client,
                 deadline=live_deadline,
@@ -1453,6 +1711,17 @@ def main() -> int:
         f.write(f"Coverage: **{coverage_state}**. This is a volume-ranked ROI "
                 "slice unless the keyset cursor was exhausted.\n\n")
         f.write(f"- filters: `{json.dumps(coverage['filters'], sort_keys=True)}`\n")
+        f.write(
+            f"- live quote selection: `{coverage.get('live_selection_method')}`; "
+            f"requested priority/exploration groups: "
+            f"{coverage.get('live_selection_lane_groups', {})}; "
+            f"legs: {coverage.get('live_selection_lane_legs', {})}; "
+            f"attempted groups/legs: {coverage.get('live_groups_attempted', 0)}/"
+            f"{coverage.get('live_legs_attempted', 0)}; "
+            f"prior exact-history records: {coverage.get('prior_quote_history_records', 0)}\n"
+        )
+        for warning in coverage.get("prior_quote_history_warnings", []):
+            f.write(f"- **History warning:** {warning}\n")
         f.write(f"- {coverage['pages_fetched']} pages / "
                 f"{coverage['raw_response_bytes'] / (1024 * 1024):.1f} MiB streamed; "
                 f"projected peak memory "

@@ -1,3 +1,20 @@
+## Oct-12 opportunity-method review — completed; no allocation change
+
+- [Method audit](../research/2026-10-12-opportunity-method-review.md) and
+  [operating workflow](../strategy/03_opportunity_method.md) now connect scoped
+  coverage, cheap factual triage, evidence, both-side economics and execution.
+- Corrected carry-before-top; explicit fetch/filter/cap omissions; removed
+  falsified favorite population p/edge/APY and default exclusions; bounded
+  consistency quotes now include least-recently-attempted exact baskets.
+- Missing final taker asks and invalid probabilities/pessimistic bounds fail
+  closed. Venue minima are shares/contracts, separate from route USD minima.
+- Same 40,569 fetched rows: old ordering 1,598 versus corrected 3,000;
+  unfiltered carry profile 6,309. Additional rows are unverified review work, not profits.
+  Pagination remains capped; previous consistency 6/219 quotes was incomplete.
+- 245 targeted tests + 169 money-math checks passed; DEC-0190 records observed
+  scaffolding validation, not ROI. No asset action, new prior, timer or goal.
+  Existing manual on-chain blockers and off-chain retirement remain in force.
+
 ## Oct-12 06:00 light check — HOLD / NO ADD; no new action due
 
 - Trading midpoint/depth $181.47/$178.95, unchanged since 02:00;

@@ -28097,3 +28097,56 @@ records and unrelated changes preserved. Evidence: data/periodic_20261012T0600_
 {routine,sources,risk,root_inventory,aave_rate,exit_quotes,health,postflight_health,
 hormuz_gas_rpc,root_receipt_audit,source_window_audit,preserved_records,record_update,postflight,
 publication}.json; logs/periodic_20261012T0600/.
+
+
+### 2026-10-12 08:05 UTC — opportunity-method review; coverage and entry guards repaired
+
+On-demand bounded review of discovery, context routing, evidence/forecasting,
+both-side costs, portfolio judgment, accessible on-chain alternatives and the
+execution handoff. See research/2026-10-12-opportunity-method-review.md and
+strategy/03_opportunity_method.md for findings, constraints and operating method.
+
+The retained 02:00 consistency slice quoted only 6/219 relevant groups, with
+199 unquoted and 14 failures; a scoped zero is not absence. Removed falsified
+favorite-population p/edge/APY selection and outputs; transparent profile now
+provides exact identities and opposite-side context, with explicit non-execution
+status. Monotonicity/favorite fetches expose failures, caps and unknown coverage;
+real failed fetches return nonzero without discarding observations. Discovery
+sidecars and packets expose stop/filter/cap counts separately from integrity.
+Corrected carry-before-top selection, current share-minimum/fee guidance and
+balanced basket quote scheduling, preserving hard quote/transaction limits.
+
+One matched-input public 20-page fetch 07:42:55–07:43:01 UTC retained 40,569
+unique market rows, 609 duplicates, zero malformed rows; page-cap incomplete.
+Old top-3000-then-carry selected 1,598; corrected order selects 3,000, still
+omits316. Same profile without carry/cap has6,309 (4,711 additional rows);
+no profit or verified-settlement claim. January metadata deadlines are context
+only. Saved gzip input SHA256(uncompressed)
+cff013d9cfb60403bed986e2b816e1b211d3d3c852dc0da8ae2ca47af897906a.
+A correction/replay of the old ordering was offline, no second network fetch.
+Cached2.9904% carry parameter datedOct11 10:05, not current/fixed yield evidence.
+
+Final taker ask failure now stops before reservation/order regardless price cap;
+single-entry/model-parsed probabilities and pessimistic inputs must be finite
+and within valid bounds. This repairs specific stale-fallback/numeric paths,
+not all legacy ask-reader identity/timestamp checks or analyst responsibilities.
+Passed244 targeted tests plus169 money-math checks, shell syntax/diff checks.
+DEC-0190 scaffolding recorded/resolved against observed validation, not ROI.
+All189 previous decision rows and six other financial/prior/watchlist records
+preserved; pre-existing runtime changes remain outside this commit scope.
+
+Cheap agents audited/implemented bounded routine pieces; primary judgment
+reviewed facts, code, method and limits. New method uses exact dated case
+dispositions, both-side/fact-first economics, January horizon and accessible
+non-PM comparisons; no population/fixed1pp shortcut, no allocation target.
+No asset/order/sign/transfer/redemption action or probability revision. Quick
+status PM mid/depth36.54/34.02 unchanged at rounded precision; no new complete
+bankroll snapshot/CSV point synthesized. No new timer/watcher/durable goal;
+manual copper/Base routes and off-chain retirement stay as documented.
+Evidence: logs/scanner_review_20261012/ and data/scanner_review_20261012/.
+Material Telegram reply follows publication.
+
+Method-review final validation: selection-policy version added to snapshot
+metadata so a filter-order change cannot masquerade as comparable discovery
+deltas. Final combined suite245 passed plus169 money-math checks; the earlier
+244-pass checkpoint remains above. No additional network collection.

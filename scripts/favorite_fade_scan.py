@@ -1,36 +1,34 @@
 #!/usr/bin/env python3
 """Favorite-fade scanner — CANDIDATE SURFACER for instance-thesis evaluation.
 
-*** POPULATION EDGE FALSIFIED 2026-07-03 — do NOT trade on the scan's edge_pp alone. ***
+*** POPULATION EDGE FALSIFIED 2026-07-03 — do not infer probability or edge from this profile. ***
 The original localization (longshot_calibration_backtest.py, N=1513, 2026-06-02:
   0.90-0.95 +4.8pp/3.2sigma, 0.95-0.98 +2.8pp/4.7sigma at ~7d) FAILED REPLICATION on 836
 fresh resolved markets (same methodology): 0.90-0.95 -0.5pp+-2.9, 0.95-0.98 -0.5pp+-1.9 —
 calibrated at mid, NEGATIVE at executable asks, at both 3d and 7d horizons
 (logs/backtest_askadjust_v3_20260703.log; doctrine strategy/00_philosophy.md §3.1). Either
 arbed away since June or the original was window-specific; both forbid POPULATION harvesting.
-The `edge_pp` column below is the STALE population-calibration average — it is a MARKET
-DISCOVERY hint, not a tradeable edge. The surviving edge source is case-by-case
-catalyst-gated INSTANCE mispricing; this scanner's job is to SURFACE liquid short-horizon
-0.90-0.98 candidates so a per-market instance thesis (catalyst_check + §4 gates at the flat
-0.05 haircut) can decide. A candidate is a trade ONLY if its own instance analysis clears
-the robust gate — never because the population number looks good.
+The historical population calibration is falsified at executable asks and is not used to
+estimate probability, edge, yield, selection order, or inclusion. This scanner only surfaces
+liquid short-horizon markets whose live favorite ask is in the transparent 0.90-0.98 profile.
+Any trade requires independent case-by-case resolution-criteria and catalyst analysis under
+the current doctrine, including the 0.10 default haircut for instance/catalyst theses (or the
+separately justified 0.05 tail/monitoring-fade class).
 
-This finds CURRENT liquid binary markets whose favorite side trades (live CLOB ask, NOT
-gamma midpoint) in the 0.90-0.98 zone with a short horizon, and ranks by the (stale)
-calibration-curve number purely as a browse-order for instance vetting.
+This finds current liquid binary markets with a 2-14 day horizon and a favorite live CLOB ask
+in the 0.90-0.98 zone. Results are ranked by shorter horizon, then greater liquidity; this is
+only a browsing order and carries no probability or expected-return claim.
 
 Compute-bounded: gamma candidate pre-filter, then live-book walks capped at --max-walks.
-Execution still routes through polyclaude_enter.py (umaResolutionStatus + robust-edge gate
-+ Kelly sizing) — this surfaces a ranked, diversification-tagged buy-list, it does not trade.
+Rows are candidate-only context, never a buy-list or execution certification. Any later
+evaluation must re-read exact criteria and obtain current execution evidence.
 
-Caveats: (1) the calibration win-rate is a POPULATION average — an individual market's
-longshot side may be fairly priced (no edge) or a meme mispricing (more edge); diversify.
-(2) resolution-ambiguity (the R-U risk) is not fully mechanical — proposed/disputed UMA is
-skipped, but run catalyst_check on the top picks before sizing. (3) fat tail: win a few c /
-lose ~the stake — size small (fractional Kelly), spread across uncorrelated `cat` groups.
+Caveats: (1) a favorite-price profile is not a fair-value estimate. (2) resolution ambiguity
+is not fully mechanical; proposed/disputed UMA states are skipped, but exact criteria and
+catalyst checks remain necessary. (3) these candidate rows are not execution-ready.
 
 CLI: favorite_fade_scan.py [--min-days 2] [--max-days 14] [--min-liq 20000]
-                           [--min-edge-pp 1.0] [--max-walks 40] [--json]
+                           [--min-edge-pp LEGACY] [--max-walks 40] [--json]
 """
 from __future__ import annotations
 
@@ -48,31 +46,12 @@ from clob_books import fetch_books
 GAMMA = "https://gamma-api.polymarket.com/markets"
 MAX_BOOK_AGE_SECONDS = 120.0
 
-# Empirical favorite-side win-rate by live-ask bucket (from the N=1513 7d backtest).
-# Used as the expected resolution probability for a market whose favorite trades there.
-CALIB = [
-    (0.90, 0.95, 0.973),
-    (0.95, 0.98, 0.994),
-    (0.98, 0.985, 0.990),  # conservative cap; the raw 100% was small-N luck
-]
-
-
 def _parse(x):
     return ast.literal_eval(x) if isinstance(x, str) else x
 
 
-def empirical_winrate(p: float) -> float | None:
-    for lo, hi, wr in CALIB:
-        if lo <= p < hi:
-            return wr
-    return None
-
-
 def categorize(q: str) -> str:
-    """Category from the question. Per the 2026-06-02 category-segmented backtest
-    (fav>=0.90), the favorite-longshot edge is REAL in other/meme (+1.9pp, 4.8sigma),
-    politics/geo (+2.3pp) and sports (+1.6pp) but ABSENT in crypto/price (+0.4pp, ns) —
-    so crypto/price + macro are excluded by default (efficient markets, spurious edge)."""
+    """Coarse question category for context only; it is not a probability prior."""
     s = (q or "").lower()
     if any(k in s for k in [" vs ", " vs.", "world cup", "french open", "champion",
                             "premier league", "super bowl", "stanley cup", "nba finals",
@@ -96,29 +75,93 @@ def categorize(q: str) -> str:
     return "other/meme"
 
 
-def fetch_active(max_pages: int, client: httpx.Client) -> list:
-    out, offset, retries = [], 0, 0
-    while len(out) < max_pages * 100:
-        try:
-            r = client.get(GAMMA, params={
-                "closed": "false", "active": "true", "limit": 100, "offset": offset,
-                "order": "volume24hr", "ascending": "false",
-            }, timeout=25).json()
-        except Exception:
-            r = None
-        if not isinstance(r, list):
-            retries += 1
-            if retries > 4:
+class MarketFetchResult(list):
+    """List-compatible market rows with explicit pagination coverage metadata."""
+
+    def __init__(self, rows: list, coverage: dict):
+        super().__init__(rows)
+        self.coverage = coverage
+
+
+def fetch_active(max_pages: int, client: httpx.Client) -> MarketFetchResult:
+    page_size = 100
+    retry_budget = 5
+    rows: list[dict] = []
+    failures: list[dict] = []
+    pages_attempted = 0
+    pages_succeeded = 0
+    stop_reason = "max_pages"
+    complete = False
+
+    if max_pages < 1:
+        return MarketFetchResult(rows, {
+            "complete": False, "pages_attempted": 0, "pages_succeeded": 0,
+            "failures": [], "stop_reason": "invalid_max_pages",
+            "command_failed": True,
+        })
+
+    for page_index in range(max_pages):
+        offset = page_index * page_size
+        page = None
+        for attempt in range(1, retry_budget + 1):
+            pages_attempted += 1
+            try:
+                response = client.get(GAMMA, params={
+                    "closed": "false", "active": "true", "limit": page_size,
+                    "offset": offset, "order": "volume24hr", "ascending": "false",
+                }, timeout=25)
+                response.raise_for_status()
+                payload = response.json()
+                if not isinstance(payload, list) or any(not isinstance(item, dict) for item in payload):
+                    raise ValueError("response schema is not a list of market objects")
+                page = payload
+                pages_succeeded += 1
                 break
-            continue
-        if not r:
+            except httpx.HTTPStatusError as exc:
+                status = exc.response.status_code if exc.response is not None else None
+                failures.append({
+                    "offset": offset, "attempt": attempt,
+                    "http_status": status, "reason": "http_status_error",
+                })
+                if status == 422:
+                    stop_reason = "http_422_offset_or_page_limit"
+                    break
+            except Exception as exc:
+                # Keep diagnostics bounded and avoid echoing request URLs or bodies.
+                failures.append({
+                    "offset": offset, "attempt": attempt,
+                    "http_status": getattr(getattr(exc, "response", None), "status_code", None),
+                    "reason": "invalid_json_or_schema" if isinstance(exc, ValueError)
+                              else type(exc).__name__,
+                })
+        if page is None:
+            if stop_reason != "http_422_offset_or_page_limit":
+                stop_reason = "retry_budget_exhausted"
             break
-        retries = 0
-        out.extend([m for m in r if isinstance(m, dict)])
-        offset += 100
-        if offset >= max_pages * 100:
+        rows.extend(page)
+        if len(page) == 0:
+            stop_reason = "valid_empty_page"
+            complete = True
             break
-    return out
+        if len(page) < page_size:
+            stop_reason = "valid_short_page"
+            complete = True
+            break
+    else:
+        # Reaching the configured page cap with full pages is a bounded partial
+        # scan; it cannot be represented as complete universe coverage.
+        stop_reason = "max_pages"
+
+    return MarketFetchResult(rows, {
+        "complete": complete,
+        "pages_attempted": pages_attempted,
+        "pages_succeeded": pages_succeeded,
+        "failures": failures,
+        "stop_reason": stop_reason,
+        "command_failed": stop_reason == "retry_budget_exhausted",
+        "max_pages": max_pages,
+        "page_size": page_size,
+    })
 
 
 def _validated_book(book: dict | None, token: str, condition_id: str) -> dict | None:
@@ -162,32 +205,69 @@ def main() -> int:
     ap.add_argument("--min-days", type=float, default=2.0)
     ap.add_argument("--max-days", type=float, default=14.0)
     ap.add_argument("--min-liq", type=float, default=20000)
-    ap.add_argument("--min-edge-pp", type=float, default=1.0)
+    ap.add_argument(
+        "--min-edge-pp", type=float, default=None,
+        help="deprecated compatibility flag; ignored because historical population edge was falsified",
+    )
     ap.add_argument("--max-walks", type=int, default=40)
     ap.add_argument("--max-pages", type=int, default=10)
-    ap.add_argument("--exclude-cats", default="crypto/price,macro",
-                    help="comma-separated categories to skip as efficient/no-edge "
-                         "(default crypto/price,macro per the category-segmented backtest)")
+    ap.add_argument("--exclude-cats", default="",
+                    help="optional comma-separated categories to omit from this profile scan")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
+    if args.min_edge_pp is not None:
+        print(
+            "WARNING: --min-edge-pp is deprecated and ignored; no population edge is used.",
+            file=sys.stderr,
+        )
     exclude_cats = {c.strip() for c in args.exclude_cats.split(",") if c.strip()}
 
     now = datetime.now(timezone.utc)
     with httpx.Client() as client:
-        mkts = fetch_active(args.max_pages, client)
+        fetched = fetch_active(args.max_pages, client)
+        mkts = fetched if isinstance(fetched, list) else []
+        fetch_coverage = getattr(fetched, "coverage", None)
+        if not isinstance(fetch_coverage, dict):
+            fetch_coverage = {
+                "complete": False, "pages_attempted": None,
+                "pages_succeeded": None, "failures": [],
+                "stop_reason": "legacy_list_without_coverage",
+                "command_failed": False,
+            }
         print(f"# fetched {len(mkts)} active markets", file=sys.stderr)
         cands = []
         for m in mkts:
-            if _parse(m.get("outcomes")) != ["Yes", "No"]:
+            if not isinstance(m, dict):
                 continue
-            if m.get("umaResolutionStatus") not in (None, "", "resolved"):
-                continue  # proposed/disputed -> skip (R-U risk)
-            op = _parse(m.get("outcomePrices") or "[]")
-            if not op or len(op) != 2:
+            # This is a new-entry candidate surfacer. Require explicit current
+            # tradability, and never surface resolved/proposed/disputed markets.
+            if (m.get("active") is not True or m.get("closed") is not False
+                    or m.get("acceptingOrders") is not True
+                    or m.get("enableOrderBook") is not True
+                    or m.get("archived") is not False):
+                continue
+            try:
+                outcomes = _parse(m.get("outcomes"))
+            except (ValueError, SyntaxError, TypeError):
+                continue
+            if outcomes != ["Yes", "No"]:
+                continue
+            uma_status = str(m.get("umaResolutionStatus") or "").strip()
+            if uma_status:
+                continue  # any populated state, including resolved, is not a new entry
+            try:
+                op = _parse(m.get("outcomePrices") or "[]")
+            except (ValueError, SyntaxError, TypeError):
+                continue
+            if not isinstance(op, list) or len(op) != 2:
                 continue
             try:
                 yes = float(op[0])
+                no = float(op[1])
             except Exception:
+                continue
+            if (not math.isfinite(yes) or not math.isfinite(no)
+                    or not 0 < yes < 1 or not 0 < no < 1):
                 continue
             fav = max(yes, 1 - yes)
             if not (0.88 <= fav <= 0.99):  # rough zone; live ask refines
@@ -197,20 +277,37 @@ def main() -> int:
                 continue
             try:
                 edt = datetime.fromisoformat(end.replace("Z", "+00:00"))
+                if edt.tzinfo is None:
+                    edt = edt.replace(tzinfo=timezone.utc)
+                days = (edt - now).total_seconds() / 86400
             except Exception:
                 continue
-            days = (edt - now).total_seconds() / 86400
-            if not (args.min_days <= days <= args.max_days):
+            if not math.isfinite(days) or not (args.min_days <= days <= args.max_days):
                 continue
-            liq = float(m.get("liquidity") or 0)
+            try:
+                liq = float(m.get("liquidity") or 0)
+                vol24 = float(m.get("volume24hr") or 0)
+            except (TypeError, ValueError, OverflowError):
+                continue
+            if not math.isfinite(liq) or not math.isfinite(vol24):
+                continue
             if liq < args.min_liq:
                 continue
-            toks = _parse(m.get("clobTokenIds") or "[]")
-            if len(toks) != 2:
+            try:
+                toks = _parse(m.get("clobTokenIds") or "[]")
+            except (ValueError, SyntaxError, TypeError):
+                continue
+            market_id = str(m.get("id") or "")
+            slug = str(m.get("slug") or "")
+            condition_id = str(m.get("conditionId") or "")
+            if (not isinstance(toks, list) or len(toks) != 2
+                    or not all(str(token or "") for token in toks)
+                    or len({str(token) for token in toks}) != 2
+                    or not market_id or not slug or not condition_id):
                 continue
             cat = categorize(m.get("question", ""))
             if cat in exclude_cats:
-                continue  # efficient category (no favorite-longshot edge) — skip
+                continue
             # Doctrine-skip pattern classes (2026-07-17 noise cut): these
             # surface every tick and are NEVER instance candidates — exact
             # scorelines (population edge overstated for plausible scores,
@@ -223,60 +320,118 @@ def main() -> int:
             fav_is_yes = yes >= 0.5
             cands.append({
                 "q": m.get("question", ""), "fav_is_yes": fav_is_yes,
-                "fav_tok": toks[0] if fav_is_yes else toks[1],
-                "condition_id": str(m.get("conditionId") or ""),
+                "market_id": market_id,
+                "slug": slug,
+                "condition_id": condition_id,
+                "yes_tok": str(toks[0]), "no_tok": str(toks[1]),
+                "yes_gamma_price": float(op[0]), "no_gamma_price": float(op[1]),
                 "days": days, "liq": liq, "cat": cat,
-                "vol24": float(m.get("volume24hr") or 0),
+                "vol24": vol24,
             })
-        cands.sort(key=lambda c: -c["liq"])
+        # Sort by deadline and liquidity only. Population calibration is not
+        # valid evidence for ranking or filtering these candidates.
+        cands.sort(key=lambda c: (c["days"], -c["liq"], c["market_id"]))
+        rough_survivors = len(cands)
         cands = cands[:args.max_walks]
         print(f"# {len(cands)} candidates in rough zone; walking live books", file=sys.stderr)
 
         rows = []
-        tokens = list(dict.fromkeys(c["fav_tok"] for c in cands))
-        books = fetch_books(tokens, client=client, timeout=15)
+        valid_favorite_books = 0
+        missing_favorite_books = 0
+        outside_profile_books = 0
+        book_batch_error = None
+        tokens = list(dict.fromkeys(
+            token for c in cands for token in (c["yes_tok"], c["no_tok"])
+        ))
+        try:
+            books = fetch_books(tokens, client=client, timeout=15)
+            if not isinstance(books, dict):
+                book_batch_error = "invalid_batch_response_type"
+                books = {}
+        except Exception as exc:
+            book_batch_error = type(exc).__name__
+            books = {}
         for c in cands:
             if not c["condition_id"]:
                 continue
-            book = _validated_book(
-                books.get(c["fav_tok"]), c["fav_tok"], c["condition_id"],
+            fav_side = "YES" if c["fav_is_yes"] else "NO"
+            opposite_side = "NO" if c["fav_is_yes"] else "YES"
+            fav_tok = c["yes_tok"] if c["fav_is_yes"] else c["no_tok"]
+            opposite_tok = c["no_tok"] if c["fav_is_yes"] else c["yes_tok"]
+            book = _validated_book(books.get(fav_tok), fav_tok, c["condition_id"])
+            opposite_book = _validated_book(
+                books.get(opposite_tok), opposite_tok, c["condition_id"],
             )
             if book is None or not book["asks"]:
+                missing_favorite_books += 1
                 continue
+            valid_favorite_books += 1
             best = min(book["asks"], key=lambda a: a[0])
             ask = best[0]
-            depth = sum(
-                size for price, size in book["asks"] if price <= ask + 0.02
-            )
-            wr = empirical_winrate(ask)
-            if wr is None:
-                continue  # live ask outside the validated 0.90-0.98 zone
-            edge = wr - ask  # net of the slippage we pay (we cross to the ask)
-            if edge * 100 < args.min_edge_pp:
+            if not 0.90 <= ask <= 0.98:
+                outside_profile_books += 1
                 continue
-            apy = edge / ask * 365 / max(c["days"], 0.5)
-            rows.append({**c, "ask": round(ask, 4), "depth_usd": round(ask * depth, 0),
-                         "exp_winrate": wr, "edge_pp": round(edge * 100, 2),
-                         "apy_pct": round(apy * 100, 0)})
-    rows.sort(key=lambda r: -r["edge_pp"])
+            opp_ask = None
+            opp_bid = None
+            if opposite_book is not None:
+                opp_ask = min((p for p, _ in opposite_book["asks"]), default=None)
+                opp_bid = max((p for p, _ in opposite_book["bids"]), default=None)
+            rows.append({
+                "market_id": c["market_id"], "slug": c["slug"],
+                "condition_id": c["condition_id"], "question": c["q"],
+                "candidate_only": True, "execution_ready": False,
+                "live_rewalk_required": True,
+                "selected_side": fav_side, "selected_token_id": fav_tok,
+                "selected_ask": round(ask, 4),
+                "selected_depth_usd_within_2c": round(sum(
+                    price * size for price, size in book["asks"] if price <= ask + 0.02
+                ), 0),
+                "opposite_side": {
+                    "side": opposite_side, "token_id": opposite_tok,
+                    "gamma_price": c["no_gamma_price"] if c["fav_is_yes"] else c["yes_gamma_price"],
+                    "book_validated": opposite_book is not None,
+                    "best_ask": round(opp_ask, 4) if opp_ask is not None else None,
+                    "best_bid": round(opp_bid, 4) if opp_bid is not None else None,
+                },
+                "tokens": {"YES": c["yes_tok"], "NO": c["no_tok"]},
+                "gamma_prices": {"YES": c["yes_gamma_price"], "NO": c["no_gamma_price"]},
+                "days": c["days"], "liquidity": c["liq"],
+                "volume24h": c["vol24"], "category": c["cat"],
+            })
+
+        coverage_report = {
+            "market_fetch": fetch_coverage,
+            "rough_survivors_before_book_cap": rough_survivors,
+            "max_walks": args.max_walks,
+            "walk_cap_omissions": max(0, rough_survivors - len(cands)),
+            "selected_for_book_walk": len(cands),
+            "valid_favorite_books": valid_favorite_books,
+            "missing_or_invalid_favorite_books": missing_favorite_books,
+            "valid_books_outside_favorite_price_profile": outside_profile_books,
+            "candidate_rows_emitted": len(rows),
+            "book_batch_error": book_batch_error,
+        }
+        print("SCAN_COVERAGE " + json.dumps(coverage_report, sort_keys=True), file=sys.stderr)
+        command_failed = bool(fetch_coverage.get("command_failed")) or book_batch_error is not None
 
     if args.json:
         print(json.dumps(rows, indent=1))
-        return 0
-    print(f"\n# {len(rows)} favorite-fade candidates (live ask in validated 0.90-0.98 zone, "
-          f"{args.min_days:.0f}-{args.max_days:.0f}d, edge>={args.min_edge_pp}pp)\n")
+        return 1 if command_failed else 0
+    print(f"\n# {len(rows)} favorite-price profile candidates (live ask 0.90-0.98, "
+          f"{args.min_days:.0f}-{args.max_days:.0f}d; no probability/edge estimate)\n")
     if not rows:
         print("  none")
-        return 0
-    print(f"{'side':>4} {'ask':>6} {'edgepp':>6} {'APY':>6} {'days':>5} {'depth$':>9} {'cat':>8}  question")
+        return 1 if command_failed else 0
+    print(f"{'side':>4} {'ask':>6} {'days':>5} {'depth$':>9} {'liq$':>10} {'cat':>12}  question")
     print("-" * 92)
     for r in rows:
-        side = "YES" if r["fav_is_yes"] else "NO"
-        print(f"{side:>4} {r['ask']:.3f} {r['edge_pp']:>6.1f} {r['apy_pct']:>5.0f}% "
-              f"{r['days']:>4.0f}d {r['depth_usd']:>9.0f} {r['cat']:>8}  {r['q'][:50]}")
-    print("\n# NOTE: edge = population calibration avg; run catalyst_check on top picks "
-          "(R-U risk), diversify across cat groups, size small (fat tail).")
-    return 0
+        side = r["selected_side"]
+        print(f"{side:>4} {r['selected_ask']:.3f} {r['days']:>4.0f}d "
+              f"{r['selected_depth_usd_within_2c']:>9.0f} {r['liquidity']:>10.0f} "
+              f"{r['category']:>12}  {r['question'][:50]}")
+    print("\n# Profile only: these rows contain no probability, edge, or APY estimate and "
+          "are not execution-ready.")
+    return 1 if command_failed else 0
 
 
 if __name__ == "__main__":

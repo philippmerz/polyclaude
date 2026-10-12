@@ -132,6 +132,103 @@ def test_execute_taker_without_urgency_stops_before_market_lookup(
     assert looked_up == []
 
 
+@pytest.mark.parametrize(
+    ("option", "value"),
+    [
+        ("--my-p", "nan"),
+        ("--my-p", "inf"),
+        ("--my-p", "1.01"),
+        ("--my-p", "-0.01"),
+        ("--edge-haircut", "nan"),
+        ("--edge-haircut", "-0.01"),
+        ("--tail-mult", "nan"),
+        ("--tail-mult", "0.99"),
+    ],
+)
+def test_invalid_probability_and_uncertainty_inputs_stop_before_lookup(
+        monkeypatch, capsys, tmp_path: Path, option: str, value: str) -> None:
+    looked_up: list[str] = []
+    monkeypatch.setattr(entry, "REPO_ROOT", tmp_path)
+    monkeypatch.setattr(
+        entry,
+        "fetch_market_by_slug_or_question",
+        lambda query: looked_up.append(query),
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["polyclaude_enter.py", "--slug", "invalid-input", option, value],
+    )
+
+    assert entry.main() == 2
+    assert "finite" in capsys.readouterr().err
+    assert looked_up == []
+    assert not (tmp_path / ".entry_reservations.json").exists()
+
+
+def test_zero_edge_haircut_remains_a_valid_override() -> None:
+    assert entry._entry_probability_input_error(0.7, 0.0, None) is None
+
+
+def test_catalyst_probability_over_one_stops_before_order_or_reservation(
+        monkeypatch, capsys, tmp_path: Path) -> None:
+    notes = tmp_path / "notes"
+    notes.mkdir()
+    (notes / "portfolio_kelly_priors.json").write_text(json.dumps({
+        "probability-bound-test": {"cluster": "explicit-independent-test"},
+    }))
+    monkeypatch.setattr(entry, "REPO_ROOT", tmp_path)
+    market = {
+        "question": "Will the bounded estimate hold by December 2026?",
+        "slug": "probability-bound-test",
+        "id": "1",
+        "umaResolutionStatus": None,
+        "endDate": "2026-12-31T00:00:00Z",
+        "outcomePrices": json.dumps([0.29, 0.71]),
+        "outcomes": json.dumps(["Yes", "No"]),
+        "clobTokenIds": json.dumps(["yes-token", "no-token"]),
+        "orderPriceMinTickSize": 0.01,
+        "takerBaseFee": None,
+        "negRisk": False,
+        "conditionId": "0xprobabilityboundtest",
+        "events": [{"id": "event-probability-bound-test"}],
+    }
+    monkeypatch.setattr(entry, "fetch_market_by_slug_or_question", lambda _q: market)
+    monkeypatch.setattr(entry, "_existing_exposure", lambda *_args: None)
+    monkeypatch.setattr(entry, "_sibling_markets", lambda *_args: None)
+    monkeypatch.setattr(entry, "_best_ask", lambda _token: 0.29)
+    monkeypatch.setattr(
+        entry.httpx,
+        "get",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(RuntimeError("no book")),
+    )
+    commands = []
+
+    def run_stub(command, **kwargs):
+        commands.append(command)
+        return subprocess.CompletedProcess(command, 0, stdout="Central: 101%", stderr="")
+
+    monkeypatch.setattr(entry.subprocess, "run", run_stub)
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "polyclaude_enter.py", "--slug", "probability-bound-test",
+            "--side", "YES", "--resolve-date", "2026-12-31",
+            "--usd", "10", "--bankroll", "100", "--execute",
+            "--taker-urgency", "bounded probability regression",
+        ],
+    )
+
+    assert entry.main() == 2
+    output = capsys.readouterr().out
+    assert "finite probability between 0 and 1" in output
+    assert len(commands) == 1
+    assert "catalyst_check.py" in commands[0][1]
+    assert not any("clob_v2.py" in str(command) for command in commands)
+    assert not (tmp_path / ".entry_reservations.json").exists()
+
+
 def test_execute_rechecks_live_ask_and_never_submits_above_cap(
         monkeypatch, capsys, tmp_path: Path) -> None:
     notes = tmp_path / "notes"
@@ -190,6 +287,66 @@ def test_execute_rechecks_live_ask_and_never_submits_above_cap(
     assert "hard price cap at execution" in output
     assert "0.3100 exceeds --max-price 0.3000" in output
     assert submitted == []
+
+
+def test_execute_taker_without_price_cap_fails_closed_if_final_ask_unavailable(
+        monkeypatch, capsys, tmp_path: Path) -> None:
+    notes = tmp_path / "notes"
+    notes.mkdir()
+    (notes / "portfolio_kelly_priors.json").write_text(json.dumps({
+        "cap-test": {"cluster": "explicit-independent-cap-test"},
+    }))
+    monkeypatch.setattr(entry, "REPO_ROOT", tmp_path)
+    market = {
+        "question": "Will the cap hold?",
+        "slug": "cap-test",
+        "id": "1",
+        "umaResolutionStatus": None,
+        "endDate": "2026-12-31T00:00:00Z",
+        "outcomePrices": json.dumps([0.29, 0.71]),
+        "outcomes": json.dumps(["Yes", "No"]),
+        "clobTokenIds": json.dumps(["yes-token", "no-token"]),
+        "orderPriceMinTickSize": 0.01,
+        "takerBaseFee": None,
+        "negRisk": False,
+        "conditionId": "0xcaptest",
+        "events": [{"id": "event-cap-test"}],
+    }
+    asks = iter([0.29, None])  # valid gate quote, unavailable execution recheck
+    monkeypatch.setattr(entry, "fetch_market_by_slug_or_question", lambda _q: market)
+    monkeypatch.setattr(entry, "_existing_exposure", lambda *_args: None)
+    monkeypatch.setattr(entry, "_fetch_live_positions", lambda: [])
+    monkeypatch.setattr(entry, "_fetch_open_buy_commitments", lambda: [])
+    monkeypatch.setattr(entry, "_sibling_markets", lambda *_args: None)
+    monkeypatch.setattr(entry, "_best_ask", lambda _token: next(asks))
+    monkeypatch.setattr(
+        entry.httpx,
+        "get",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(RuntimeError("no book")),
+    )
+    submitted = []
+    monkeypatch.setattr(
+        entry.subprocess,
+        "run",
+        lambda *args, **kwargs: submitted.append((args, kwargs)),
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "polyclaude_enter.py", "--slug", "cap-test", "--side", "YES",
+            "--my-p", "0.80", "--edge-haircut", "0.10", "--usd", "10",
+            "--bankroll", "100", "--execute",
+            "--taker-urgency", "live catalyst requires immediate fill",
+        ],
+    )
+
+    assert entry.main() == 1
+    output = capsys.readouterr().out
+    assert "fresh live ask unavailable" in output
+    assert "taker execution requires a current ask" in output
+    assert submitted == []
+    assert not (tmp_path / ".entry_reservations.json").exists()
 
 
 def test_flip_check_prices_the_actual_opposite_token_for_uppercase_cli_side(

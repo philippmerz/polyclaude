@@ -280,6 +280,22 @@ def robust_p(my_p: float, edge_haircut: float, tail_mult: float | None = None) -
     return my_p - edge_haircut
 
 
+def _entry_probability_input_error(my_p: float | None,
+                                   edge_haircut: float,
+                                   tail_mult: float | None) -> str | None:
+    """Validate probability and uncertainty inputs before any entry analysis."""
+    if (my_p is not None
+            and (not math.isfinite(my_p) or not 0.0 <= my_p <= 1.0)):
+        return "--my-p must be a finite probability between 0 and 1"
+    if (not math.isfinite(edge_haircut)
+            or not 0.0 <= edge_haircut <= 1.0):
+        return "--edge-haircut must be finite and between 0 and 1"
+    if (tail_mult is not None
+            and (not math.isfinite(tail_mult) or tail_mult < 1.0)):
+        return "--tail-mult must be finite and at least 1"
+    return None
+
+
 def bundle_metrics(cost_per_share: float, my_p: float, edge_haircut: float,
                    shares: float) -> dict:
     """Economics for equal YES shares across mutually exclusive event buckets.
@@ -2630,6 +2646,11 @@ def main() -> int:
                         "be MEASURED (PortWatch-style first-hand read), not vibes: K multiplies "
                         "whatever error your measurement already carries.")
     args = p.parse_args()
+    input_error = _entry_probability_input_error(
+        args.my_p, args.edge_haircut, args.tail_mult)
+    if input_error:
+        print(f"ERROR: {input_error}", file=sys.stderr)
+        return 2
     if args.max_price is not None and not 0.0 < args.max_price < 1.0:
         print("ERROR: --max-price must be in (0,1)", file=sys.stderr)
         return 2
@@ -2879,6 +2900,14 @@ def main() -> int:
         print(f"DECISION: NEED_REVIEW — no P estimate provided")
         return 2
 
+    # Catalyst output is parsed at runtime, so validate the resolved probability
+    # again immediately before it reaches Kelly sizing and the robust-edge gate.
+    probability_error = _entry_probability_input_error(
+        my_p, args.edge_haircut, args.tail_mult)
+    if probability_error:
+        print(f"DECISION: NEED_REVIEW — {probability_error}")
+        return 2
+
     # Kelly sizing (on effective cost — fee-adjusted when the market charges one)
     kelly_dollar, details = kelly_size(cost_eff, my_p, args.bankroll, args.kelly_frac,
                                         args.rho, args.cluster_frac)
@@ -3072,12 +3101,14 @@ def main() -> int:
     if not args.maker:
         fresh_ask = _best_ask(token)
         if fresh_ask is None:
-            if args.max_price is not None:
-                print("\nDECISION: NEED_REVIEW — fresh live ask unavailable; "
-                      "cannot prove --max-price before execution")
-                return 1
-            fresh_ask = mark
-            print("  [execution recheck] live ask unavailable; using the already-gated ask")
+            # The gate-time mark may be stale after analysis. It remains a
+            # bounded raw limit, but it is not an execution-time quote; fail
+            # closed for this missing-ask path regardless of whether the
+            # operator supplied an additional --max-price ceiling. This does
+            # not claim broader freshness or identity guarantees for the book.
+            print("\nDECISION: NEED_REVIEW — fresh live ask unavailable; "
+                  "taker execution requires a current ask")
+            return 1
         elif abs(fresh_ask - mark) >= 0.001:
             print(f"  [execution recheck] ask moved {mark:.4f} → {fresh_ask:.4f}")
         execution_reference = fresh_ask

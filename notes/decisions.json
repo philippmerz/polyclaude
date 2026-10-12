@@ -1,5 +1,5 @@
 {
-  "next_id": 190,
+  "next_id": 191,
   "decisions": [
     {
       "id": 1,
@@ -3928,6 +3928,26 @@
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
+    },
+    {
+      "id": 190,
+      "timestamp": "2026-10-12T08:04:18Z",
+      "type": "scaffolding",
+      "thesis": "Measured discovery omissions and a falsified population curve were shaping attention; quiet capped scans did not establish absence. Expose coverage, correct filter order, rotate bounded quotes and validate single-entry inputs while preserving current economic and transaction guards.",
+      "confidence": "high",
+      "prediction": "Matched-input and offline counterexamples will demonstrate corrected coverage and rejection of invalid inputs or unavailable final taker asks. Higher net ROI is not established by this review.",
+      "size_usd": 0.0,
+      "resolution_at": null,
+      "tags": [
+        "scanner",
+        "methodology",
+        "execution-safety"
+      ],
+      "slug": null,
+      "outcome": "Implemented and verified in this bounded review: final 245 targeted tests passed plus 169 money-math checks; one matched-input 20-page public fetch found the old ordering retained 1598 rows versus 3000 after correction under the same cap. Selection-policy version change invalidates delta comparison. No trades or probability revisions.",
+      "calibration_delta": "Not a probabilistic trade forecast. Coverage and safety behavior validated; live quote-yield and ROI improvement unobserved.",
+      "lesson": "Keep discovery scope, source evidence, probability judgment and execution certification separate. A falsified population curve must not continue to steer attention after being disclaimed.",
+      "resolved_at": "2026-10-12T08:11:01Z"
     }
   ]
 }

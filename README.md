@@ -119,6 +119,14 @@ Discovery snapshots can be organized with `scripts/market_context_batches.py`.
 Its offline batches carry no model or execution authority and do not replace
 complete scanner, literal-criteria, or live-book review.
 
+The [Oct 12 opportunity-method review](research/2026-10-12-opportunity-method-review.md)
+fixed discovery filter ordering, exposed incomplete coverage, removed the failed
+favorite-population forecasts and diversified bounded basket quoting. The
+[review workflow](strategy/03_opportunity_method.md) uses cheap factual triage,
+then primary judgment on both-side economics and all accessible on-chain
+alternatives. Wider discovery counts establish additional review work, not
+profitable trades.
+
 Broad book scanners use `scripts/clob_books.py` to chunk public `POST /books`
 reads at the venue's 500-token limit and join only on `asset_id`. Missing,
 conflicting, stale, malformed, or crossed books fail closed. These non-atomic

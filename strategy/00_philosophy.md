@@ -84,7 +84,9 @@ conditional-fair-value logic; resolved +47.5%.
 
 ## 3. Where expected return comes from (live edge sources)
 
-Ranked by validated evidence, not aspiration:
+Ranked by validated evidence, not aspiration. Discovery coverage, review routing,
+both-side evaluation and on-chain alternative comparisons follow
+[the opportunity method](03_opportunity_method.md).
 
 1. **Case-by-case catalyst-gated mispricing (the surviving core trade).** Buying NO
    (or YES) where an INSTANCE-level analysis — strict resolution-criteria reading +
@@ -148,11 +150,13 @@ Ranked by validated evidence, not aspiration:
 2. **Decomposition / consistency arbitrage.** Same event expressed at different prices:
    date-monotonicity violations (`event_monotonicity_scan.py`), multi-leg sum≠1
    (`polymarket_consistency_scan.py`, live-CLOB-validated), cross-venue
-   (`limitless_arb_scan.py`). Persistently ~0 hits at our scale — scans stay because
-   they cost nothing and a hit is near-riskless return.
+   (`limitless_arb_scan.py`). Their public-data and review costs are real, and
+   coverage is bounded. A positive observation is provisional until exact
+   implication/settlement, current depth, costs and partial-fill risks are
+   revalidated. A capped scan's zero is a result for that slice.
 3. **Mid-market sports vs bookie consensus** (`sports_pm_scan.py --with-consensus`).
    We have no sports edge; the bookie consensus is the model. EV is computed net of
-   Polymarket's 3% sports taker fee like any other op-cost. Validated signal source
+   Polymarket's current per-market nonlinear fee like any other op-cost. Validated signal source
    (Latvia Eurovision); deploy only on delta > fees + slippage.
 4. **Calendar / hazard-rate mispricing.** Traders anchor on P(event ever) when pricing
    P(event by T); decompose with hazard rates (the Brownian-bridge machinery, §5).
@@ -308,10 +312,12 @@ ever fails (DEC-0083).
 - **No position-count cap.** [Deleted 2026-06-10: no ER derivation. Diversification
   across independent gated edges raises expected log growth; monitoring is automated
   (per-position marginal cost ≈ a UMA row + a news keyword). Binding limits are the
-  $-caps, the venue's $5 `orderMinSize` floor, and book depth. Re-derive only if the
+  $-caps, current venue minimum quantities, applicable route USD minimums, and book depth. Re-derive only if the
   book grows past the point where per-tick attention measurably degrades decisions
   (~15+ positions).]
-- **Venue floor:** $5/ticket (`orderMinSize`). **Operational float:** keep ~$5-10
+- **Venue floor:** read the current minimum quantity in shares/contracts and the
+  route's USD minimum; `orderMinSize=5` means five shares, not $5.
+  **Operational float:** keep ~$5-10
   instantly deployable on the venue where the next action is expected; rest in Aave
   (<3min withdrawable).
 - **Execution:** limit orders on-grid (tick-rounded), cross only a verified live ask

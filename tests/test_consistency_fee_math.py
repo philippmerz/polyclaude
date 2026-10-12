@@ -102,6 +102,8 @@ def test_fetch_universe_flattens_events_with_parent_identity(monkeypatch) -> Non
     assert all(row["events"] == [{
         "id": "7",
         "title": "event 7",
+        "description": None,
+        "rules": None,
         "slug": "event-7",
         "active": True,
         "closed": False,
@@ -668,3 +670,243 @@ def test_basket_fee_is_additive_dollars_per_share_not_price_multiplied() -> None
         rel_tol=0,
         abs_tol=1e-12,
     )
+
+
+def _selection_candidate(index: int, *, edge: float, members: int = 2) -> dict:
+    group_id = "0x" + f"{index:064x}"
+    fingerprint = f"{index:064x}"
+    return {
+        "neg_risk_market_id": group_id,
+        "membership_fingerprint": fingerprint,
+        "structural_free_arb": True,
+        "members": members,
+        "net_edge_frac": edge,
+        "live_status": "not_quoted",
+    }
+
+
+def test_balanced_selection_keeps_midpoint_slots_and_explores_novel_two_leg_groups() -> None:
+    # Simulate many midpoint-ranked weather baskets with weak/non-actionable
+    # eventual books. The bounded quote schedule still reserves two slots for
+    # groups outside that ranking, including the exact two-leg candidate.
+    rows = [_selection_candidate(i, edge=0.50 - i / 100) for i in range(1, 9)]
+    rows.append(_selection_candidate(90, edge=0.006, members=2))
+    prior_attempt = "2026-10-11T02:00:00Z"
+    history = {
+        (c["neg_risk_market_id"], c["membership_fingerprint"]): prior_attempt
+        for c in rows[2:8]
+    }
+    relevant, requested, legs = consistency._plan_live_candidates(
+        rows, max_groups=4, max_legs=8, selection="balanced", quote_history=history,
+    )
+
+    assert len(relevant) == 9
+    assert len(requested) == 4
+    assert legs == 8
+    assert [c["live_selection_lane"] for c in requested] == [
+        "priority", "priority", "exploration", "exploration",
+    ]
+    assert rows[-1] in requested
+    assert len([c for c in requested if c["live_selection_lane"] == "exploration"]) == 2
+
+
+def test_balanced_selection_rotates_unquoted_groups_across_bounded_runs() -> None:
+    rows = [_selection_candidate(i, edge=0.50 - i / 100) for i in range(1, 8)]
+    history: dict[tuple[str, str], str] = {}
+    exploration_rounds = []
+    for run in range(3):
+        copied = [dict(row) for row in rows]
+        _, requested, _ = consistency._plan_live_candidates(
+            copied, max_groups=4, max_legs=8, selection="balanced",
+            quote_history=history,
+        )
+        explore = [c for c in requested if c["live_selection_lane"] == "exploration"]
+        exploration_rounds.append([c["neg_risk_market_id"] for c in explore])
+        stamp = f"2026-10-{12 + run:02d}T02:00:00Z"
+        for candidate in explore:
+            history[(candidate["neg_risk_market_id"],
+                     candidate["membership_fingerprint"])] = stamp
+
+    assert exploration_rounds == [
+        [rows[2]["neg_risk_market_id"], rows[3]["neg_risk_market_id"]],
+        [rows[4]["neg_risk_market_id"], rows[5]["neg_risk_market_id"]],
+        [rows[6]["neg_risk_market_id"], rows[2]["neg_risk_market_id"]],
+    ]
+
+
+def test_midpoint_selection_preserves_legacy_order_and_caps() -> None:
+    rows = [
+        _selection_candidate(1, edge=0.10, members=3),
+        _selection_candidate(2, edge=0.20, members=2),
+        _selection_candidate(3, edge=0.30, members=2),
+    ]
+    _, requested, legs = consistency._plan_live_candidates(
+        rows, max_groups=3, max_legs=4, selection="midpoint",
+    )
+
+    assert [c["neg_risk_market_id"] for c in requested] == [
+        rows[2]["neg_risk_market_id"], rows[1]["neg_risk_market_id"],
+    ]
+    assert legs == 4
+    assert all(c["live_selection_lane"] == "priority" for c in requested)
+    assert rows[0]["live_status"] == "unquoted_leg_cap"
+
+
+def test_quote_history_malformed_is_warned_and_not_suppressive(tmp_path: Path) -> None:
+    prior = tmp_path / "latest.json"
+    prior.write_text(json.dumps({
+        "candidates": [{
+            "neg_risk_market_id": "0x" + "a" * 64,
+            "membership_fingerprint": "bad",
+            "last_quote_attempt_utc": "not-a-time",
+        }],
+    }))
+
+    history, warnings = consistency._load_quote_history(prior)
+    candidate = _selection_candidate(10, edge=0.01)
+    _, requested, _ = consistency._plan_live_candidates(
+        [candidate], 1, 2, quote_history=history,
+    )
+
+    assert history == {}
+    assert warnings and "treated as novel" in warnings[0]
+    assert requested == [candidate]
+
+
+def test_quote_history_uses_exact_group_and_membership_fingerprint(tmp_path: Path) -> None:
+    prior = tmp_path / "latest.json"
+    group_a = "0x" + "a" * 64
+    group_b = "0x" + "b" * 64
+    fp_a = "1" * 64
+    prior.write_text(json.dumps({"candidates": [{
+        "neg_risk_market_id": group_a,
+        "membership_fingerprint": fp_a,
+        "last_quote_attempt_utc": "2026-10-12T02:00:00Z",
+        "title": "same display title",
+    }]}))
+    history, warnings = consistency._load_quote_history(prior)
+
+    novel_group = _selection_candidate(11, edge=0.01)
+    novel_group["neg_risk_market_id"] = group_b
+    novel_group["membership_fingerprint"] = fp_a
+    changed_membership = _selection_candidate(12, edge=0.02)
+    changed_membership["neg_risk_market_id"] = group_a
+    changed_membership["membership_fingerprint"] = "2" * 64
+    never_attempted = _selection_candidate(13, edge=0.03)
+    exact_match = _selection_candidate(14, edge=0.00)
+    exact_match["neg_risk_market_id"] = group_a
+    exact_match["membership_fingerprint"] = fp_a
+    _, requested, _ = consistency._plan_live_candidates(
+        [novel_group, changed_membership, never_attempted, exact_match], 3, 6,
+        quote_history=history,
+    )
+
+    assert warnings == []
+    assert {c["neg_risk_market_id"] for c in requested} == {
+        novel_group["neg_risk_market_id"],
+        changed_membership["neg_risk_market_id"],
+        never_attempted["neg_risk_market_id"],
+    }
+    assert exact_match not in requested
+
+
+def test_membership_fingerprint_changes_on_exact_member_or_criteria_change() -> None:
+    members, _ = _live_members()
+    group_id = members[0][0]["negRiskMarketID"]
+    baseline = consistency._membership_fingerprint(group_id, members)
+
+    changed_question = [(dict(m), p) for m, p in members]
+    changed_question[0][0]["question"] += " (revised criteria)"
+    changed_rules = [(dict(m), p) for m, p in members]
+    changed_rules[0][0]["rules"] = "A new literal resolution rule"
+    changed_condition = [(dict(m), p) for m, p in members]
+    changed_condition[0][0]["conditionId"] = "0x" + "f" * 64
+    changed_event = [(dict(m), p) for m, p in members]
+    changed_event[0][0]["events"] = [
+        dict(changed_event[0][0]["events"][0])
+    ]
+    changed_event[0][0]["events"][0]["id"] = "different-parent-event"
+
+    assert consistency._membership_fingerprint(group_id, changed_question) != baseline
+    assert consistency._membership_fingerprint(group_id, changed_rules) != baseline
+    assert consistency._membership_fingerprint(group_id, changed_condition) != baseline
+    assert consistency._membership_fingerprint(group_id, changed_event) != baseline
+
+
+def test_rule_change_resets_attempt_recency_for_same_exact_group() -> None:
+    members, _ = _live_members()
+    group_id = members[0][0]["negRiskMarketID"]
+    old_fingerprint = consistency._membership_fingerprint(group_id, members)
+    prior_stamp = "2026-10-01T02:00:00Z"
+    candidate = {
+        "structural_free_arb": True,
+        "neg_risk_market_id": group_id,
+    }
+    changed_members = [(dict(market), price) for market, price in members]
+    changed_members[0][0]["rules"] = "Changed literal rules"
+
+    consistency._attach_quote_history(
+        [candidate], {group_id: changed_members},
+        {(group_id, old_fingerprint): prior_stamp},
+    )
+
+    assert candidate["membership_fingerprint"] != old_fingerprint
+    assert "last_quote_attempt_utc" not in candidate
+    assert candidate["quote_attempted_this_run"] is False
+
+
+def test_unattempted_queued_groups_are_not_recorded_as_attempted() -> None:
+    rows = [_selection_candidate(i, edge=0.1 - i / 100) for i in range(3)]
+    relevant, requested, legs = consistency._plan_live_candidates(
+        rows, 2, 4, selection="balanced",
+    )
+    # Historical recency must not be misreported as an attempt this run.
+    requested[0]["last_quote_attempt_utc"] = "2026-10-11T02:00:00Z"
+    requested[0]["quote_attempted_this_run"] = False
+    coverage = {"cursor_exhausted": True, "invalid_neg_risk_events": 0,
+                "stop_reason": None}
+    consistency._finalize_coverage(
+        coverage, relevant, requested, live_legs=legs, budget_exhausted=True,
+    )
+
+    assert coverage["live_groups_attempted"] == 0
+    assert coverage["live_legs_attempted"] == 0
+
+
+def test_leg_budget_reserves_exploration_when_priority_group_fills_cap() -> None:
+    priority = _selection_candidate(1, edge=0.50, members=200)
+    exploration = _selection_candidate(2, edge=0.01, members=2)
+    history = {
+        (priority["neg_risk_market_id"], priority["membership_fingerprint"]):
+            "2026-10-11T02:00:00Z",
+    }
+    _, requested, legs = consistency._plan_live_candidates(
+        [priority, exploration], 2, 200, selection="balanced",
+        quote_history=history,
+    )
+
+    assert [c["live_selection_lane"] for c in requested] == ["exploration"]
+    assert requested[0] is exploration
+    assert legs == 2
+
+
+def test_large_valid_group_backfills_when_half_budgets_cannot_fit_either() -> None:
+    priority = _selection_candidate(1, edge=0.50, members=150)
+    exploration = _selection_candidate(2, edge=0.01, members=150)
+    _, requested, legs = consistency._plan_live_candidates(
+        [priority, exploration], 2, 200, selection="balanced",
+    )
+
+    assert requested == [priority]
+    assert requested[0]["live_selection_lane"] == "priority"
+    assert legs == 150
+
+
+def test_single_large_group_can_use_full_legacy_leg_cap() -> None:
+    only = _selection_candidate(1, edge=0.50, members=200)
+    _, requested, legs = consistency._plan_live_candidates(
+        [only], 10, 200, selection="balanced",
+    )
+
+    assert requested == [only]
+    assert legs == 200

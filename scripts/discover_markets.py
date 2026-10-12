@@ -1,4 +1,4 @@
-"""Pull active markets from Polymarket gamma API, filter for tradability and quality,
+"""Pull active markets from Polymarket gamma API, filter for discovery review,
 and emit a JSON snapshot to data/snapshots/<UTC ts>.json plus a markdown shortlist.
 
 Read-only. Safe to run frequently.
@@ -116,6 +116,7 @@ def _atomic_write_text(path: Path, content: str) -> None:
 def write_snapshot(
     rows: list[dict[str, Any]], *, scan_kind: str, params: dict[str, Any],
     snapshot_dir: Path = SNAP_DIR, now: dt.datetime | None = None,
+    coverage: dict[str, Any] | None = None,
 ) -> tuple[Path, Path]:
     """Write the legacy list snapshot plus an additive metadata sidecar."""
     now = now or dt.datetime.now(dt.timezone.utc)
@@ -142,6 +143,8 @@ def write_snapshot(
         "market_count": len(rows),
         "snapshot_sha256": hashlib.sha256(payload.encode("utf-8")).hexdigest(),
         "criteria_fingerprint": "sha256:canonical-json-exact-v1",
+        "selection_policy": "filter-before-top-v1",
+        "coverage": coverage,
     }
     _atomic_write_text(meta_path, json.dumps(metadata, indent=2))
 
@@ -229,7 +232,21 @@ def annualized_yield_after_fee(p_buy: float, days: float,
         return float("inf")  # effectively infinite APY for ultra-short tail trades
 
 
-def fetch_active_via_events(limit_per_page: int = 100, max_pages: int = 20) -> list[dict[str, Any]]:
+def _fetch_coverage(coverage: dict[str, Any] | None, endpoint: str,
+                    max_pages: int) -> dict[str, Any]:
+    result = coverage if coverage is not None else {}
+    result.update({
+        "endpoint": endpoint, "max_pages": max_pages,
+        "pages_attempted": 0, "pages_succeeded": 0,
+        "response_rows": 0, "duplicate_market_rows": 0,
+        "malformed_rows": 0, "stop_reason": "page_cap",
+        "pagination_complete": False,
+    })
+    return result
+
+
+def fetch_active_via_events(limit_per_page: int = 100, max_pages: int = 20,
+                            *, coverage: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     """Fetch active markets by paginating EVENTS (vol24 desc) and flattening members.
 
     Why (2026-08-01): the /markets endpoint's offset ceiling (~2000, 422 above)
@@ -243,8 +260,10 @@ def fetch_active_via_events(limit_per_page: int = 100, max_pages: int = 20) -> l
     """
     out: list[dict[str, Any]] = []
     by_id: dict[str, dict[str, Any]] = {}
+    stats = _fetch_coverage(coverage, "events", max_pages)
     with httpx.Client(timeout=20.0) as c:
         for page in range(max_pages):
+            stats["pages_attempted"] += 1
             r = c.get(
                 f"{GAMMA}/events",
                 params={
@@ -255,14 +274,25 @@ def fetch_active_via_events(limit_per_page: int = 100, max_pages: int = 20) -> l
                 },
             )
             if r.status_code == 422:
+                stats["stop_reason"] = "api_offset_limit"
                 break
             r.raise_for_status()
             batch = r.json()
+            if not isinstance(batch, list):
+                raise ValueError("Gamma events response is not a list")
+            stats["pages_succeeded"] += 1
+            stats["response_rows"] += len(batch)
             if not batch:
+                stats["stop_reason"] = "empty_page"
+                stats["pagination_complete"] = stats["malformed_rows"] == 0
                 break
             for ev in batch:
+                if not isinstance(ev, dict) or not isinstance(ev.get("markets"), list):
+                    stats["malformed_rows"] += 1
+                    continue
                 for m in ev.get("markets") or []:
                     if not isinstance(m, dict):
+                        stats["malformed_rows"] += 1
                         continue
                     mid = str(m.get("id") or "").strip()
                     if not mid:
@@ -270,17 +300,22 @@ def fetch_active_via_events(limit_per_page: int = 100, max_pages: int = 20) -> l
                         out.append(m)
                         continue
                     if mid in by_id:
+                        stats["duplicate_market_rows"] += 1
                         _merge_event_refs(by_id[mid], m, ev)
                         continue
                     _merge_event_refs(m, None, ev)
                     by_id[mid] = m
                     out.append(m)
             if len(batch) < limit_per_page:
+                stats["stop_reason"] = "short_page"
+                stats["pagination_complete"] = stats["malformed_rows"] == 0
                 break
+    stats["fetched_market_rows"] = len(out)
     return out
 
 
-def fetch_active(limit_per_page: int = 100, max_pages: int = 8) -> list[dict[str, Any]]:
+def fetch_active(limit_per_page: int = 100, max_pages: int = 8,
+                 *, coverage: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     """Fetch active+open markets sorted by 24h volume desc, paginated.
 
     NOTE (2026-05-29 fix): the gamma API hard-caps every response at 100 rows
@@ -294,8 +329,10 @@ def fetch_active(limit_per_page: int = 100, max_pages: int = 8) -> list[dict[str
     markets, reaching down to ~$15-40k-vol mechanical-resolution fades."""
     out: list[dict[str, Any]] = []
     seen_ids: set[str] = set()
+    stats = _fetch_coverage(coverage, "markets", max_pages)
     with httpx.Client(timeout=20.0) as c:
         for page in range(max_pages):
+            stats["pages_attempted"] += 1
             r = c.get(
                 f"{GAMMA}/markets",
                 params={
@@ -311,33 +348,50 @@ def fetch_active(limit_per_page: int = 100, max_pages: int = 8) -> list[dict[str
             if r.status_code == 422:
                 # gamma rejects offset >~2000 — the API's own pagination
                 # ceiling. Stop cleanly with what we have (2026-08-01).
+                stats["stop_reason"] = "api_offset_limit"
                 break
             r.raise_for_status()
             batch = r.json()
+            if not isinstance(batch, list):
+                raise ValueError("Gamma markets response is not a list")
+            stats["pages_succeeded"] += 1
+            stats["response_rows"] += len(batch)
+            terminal_short = len(batch) < limit_per_page
+            valid_batch = [m for m in batch if isinstance(m, dict)]
+            stats["malformed_rows"] += len(batch) - len(valid_batch)
             # Early-stop (2026-08-01): pages are volume24hr-DESC, so once a
             # page's minimum vol24 drops below ~$10 the remaining tail is dead
             # junk — stop paginating instead of walking 40 pages of zeros.
             # (Context: the volume-ordered fetch is itself a filter — HLE legs
             # at ~$150/day vol ranked below the top-1000 and were never even
             # FETCHED, making every downstream liquidity-floor debate moot.)
-            if batch:
+            volume_floor_stop = False
+            if valid_batch:
                 try:
-                    if max(float(m.get("volume24hr") or 0) for m in batch) < 10:
-                        out.extend(m for m in batch if str(m.get("id")) not in seen_ids)
-                        break
+                    volume_floor_stop = max(float(m.get("volume24hr") or 0) for m in valid_batch) < 10
                 except Exception:
                     pass
             if not batch:
+                stats["stop_reason"] = "empty_page"
+                stats["pagination_complete"] = stats["malformed_rows"] == 0
                 break
-            for m in batch:
+            for m in valid_batch:
                 mid = str(m.get("id"))
                 if mid not in seen_ids:
                     seen_ids.add(mid)
                     out.append(m)
+                else:
+                    stats["duplicate_market_rows"] += 1
             # The API caps at 100/page; only stop when a page comes back SHORT of
             # that true cap (i.e., genuinely the end), not short of our request.
-            if len(batch) < limit_per_page:
+            if terminal_short:
+                stats["stop_reason"] = "short_page"
+                stats["pagination_complete"] = stats["malformed_rows"] == 0
                 break
+            if volume_floor_stop:
+                stats["stop_reason"] = "volume_floor"
+                break
+    stats["fetched_market_rows"] = len(out)
     return out
 
 
@@ -383,27 +437,43 @@ def parse_outcome_prices(m: dict[str, Any]) -> tuple[float, float] | None:
 
 def is_tradable(m: dict[str, Any]) -> bool:
     return bool(
-        m.get("acceptingOrders")
-        and m.get("enableOrderBook")
+        m.get("acceptingOrders") is True
+        and m.get("enableOrderBook") is True
         and not m.get("closed")
         and not m.get("archived")
     )
 
 
 def is_quality(m: dict[str, Any], min_liq: float, min_vol24: float, max_spread: float) -> bool:
+    return quality_rejection(m, min_liq, min_vol24, max_spread) is None
+
+
+def quality_rejection(m: dict[str, Any], min_liq: float,
+                      min_vol24: float, max_spread: float) -> str | None:
+    """First failed discovery filter; liquidity is not executable book depth."""
     if not is_tradable(m):
-        return False
-    if float(m.get("liquidityNum") or 0) < min_liq:
-        return False
-    if float(m.get("volume24hr") or 0) < min_vol24:
-        return False
+        return "not_tradable"
+    liq = _optional_number(m.get("liquidityNum") or 0)
+    volume = _optional_number(m.get("volume24hr") or 0)
+    if liq is None or liq < 0:
+        return "invalid_liquidity"
+    if volume is None or volume < 0:
+        return "invalid_volume"
+    if liq < min_liq:
+        return "liquidity"
+    if volume < min_vol24:
+        return "volume"
     spread = m.get("spread")
-    if spread is not None and float(spread) > max_spread:
-        return False
+    if spread is not None:
+        value = _optional_number(spread)
+        if value is None or not 0 <= value <= 1:
+            return "invalid_spread"
+        if value > max_spread:
+            return "spread"
     end = m.get("endDate") or m.get("endDateIso")
     if not end:
-        return False
-    return True
+        return "missing_deadline"
+    return None
 
 
 def days_to_resolution(m: dict[str, Any], now: dt.datetime) -> float | None:
@@ -456,19 +526,32 @@ def shortlist(
     top_n: int,
     hurdle_apy: float | None = None,
     hurdle_days_floor: float = HURDLE_DAYS_FLOOR_DEFAULT,
+    clears_hurdle_only: bool = False,
+    coverage: dict[str, Any] | None = None,
+    now: dt.datetime | None = None,
 ) -> list[dict[str, Any]]:
     # None means "resolve it yourself" — main() normally passes a value, but a
     # library caller taking the default must not reach the `> hurdle_apy`
     # comparison with None and hit a TypeError.
     if hurdle_apy is None:
         hurdle_apy = live_hurdle_apy()
-    now = dt.datetime.now(dt.timezone.utc)
+    now = now or dt.datetime.now(dt.timezone.utc)
+    if top_n < 0:
+        raise ValueError("top_n cannot be negative; 0 keeps all eligible rows")
+    stats = coverage if coverage is not None else {}
+    stats.update({"input_markets": len(markets), "filter_rejections": {},
+                  "eligible_before_top": 0, "top_omitted": 0, "selected": 0})
+    rejected = stats["filter_rejections"]
     rows: list[dict[str, Any]] = []
     for m in markets:
-        if not is_quality(m, min_liq, min_vol24, max_spread):
+        reason = quality_rejection(m, min_liq, min_vol24, max_spread)
+        if reason:
+            rejected[reason] = rejected.get(reason, 0) + 1
             continue
         ttr = days_to_resolution(m, now)
         if ttr is None or ttr <= 0 or ttr > horizon_days:
+            reason = "invalid_deadline" if ttr is None else "past_deadline" if ttr <= 0 else "horizon"
+            rejected[reason] = rejected.get(reason, 0) + 1
             continue
         prices = parse_outcome_prices(m)
         binary_outcomes = parse_binary_outcomes(m)
@@ -490,7 +573,7 @@ def shortlist(
                 dominant_side = "NO"
                 apy_dominant = annualized_yield_after_fee(no, ttr, m)
         event_id, event_title = parent_event_identity(m)
-        rows.append({
+        row = {
             "id": m.get("id"),
             "condition_id": m.get("conditionId"),
             "slug": m.get("slug"),
@@ -523,6 +606,10 @@ def shortlist(
                 if isinstance(m.get("feeSchedule"), dict) else None
             ),
             "min_size_usd": _optional_number(m.get("orderMinSize")),
+            # The legacy key above is kept for old packet readers only.
+            # Gamma orderMinSize is a share count, never a USD amount.
+            "min_order_shares": _optional_number(m.get("orderMinSize")),
+            "min_size_units": "shares",
             "tick": _optional_number(m.get("orderPriceMinTickSize")),
             "clob_token_ids": m.get("clobTokenIds"),
             "end_date": m.get("endDate") or m.get("endDateIso"),
@@ -534,30 +621,41 @@ def shortlist(
                 and apy_dominant > hurdle_apy
                 and ttr >= hurdle_days_floor
             ),
-        })
+        }
+        if clears_hurdle_only and not row["clears_hurdle"]:
+            rejected["win_assumed_hurdle"] = rejected.get("win_assumed_hurdle", 0) + 1
+            continue
+        rows.append(row)
     rows.sort(key=lambda r: (-r["vol24h"], -r["liquidity"]))
-    return rows[:top_n]
+    stats["eligible_before_top"] = len(rows)
+    selected = rows[:top_n] if top_n else rows
+    stats["selected"] = len(selected)
+    stats["top_omitted"] = len(rows) - len(selected)
+    stats["selection_complete"] = not stats["top_omitted"] and not rejected
+    stats["filter_accounting_complete"] = (
+        len(markets) == len(selected) + stats["top_omitted"] + sum(rejected.values())
+    )
+    return selected
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--min-liquidity", type=float, default=20_000)
     ap.add_argument("--min-vol24", type=float, default=500,
-                    help="Min 24h volume. Lowered 2026-05-29 from 2000 → 500: for a TAKER "
-                         "lifting a resting NO/YES ask, fillability is guaranteed by --min-liquidity "
-                         "(book depth), not recent volume. A high volume floor re-excluded the quiet, "
-                         "neglected by-date tail — which is precisely where mispricings live (low volume "
-                         "BECAUSE neglected). Liquidity + spread floors keep junk out.")
+                    help="Min 24h volume for this discovery slice; aggregate Gamma liquidity "
+                         "and volume do not prove fillability. Verify live CLOB depth before acting.")
     ap.add_argument("--max-spread", type=float, default=0.05)
     ap.add_argument("--horizon-days", type=float, default=370)
-    ap.add_argument("--top", type=int, default=80)
+    ap.add_argument("--top", type=int, default=80,
+                    help="volume-ranked output cap; 0 keeps all filter survivors")
     ap.add_argument("--max-pages", type=int, default=10)
     ap.add_argument("--no-snapshot", action="store_true")
     ap.add_argument("--via-events", action="store_true",
                     help="fetch via /events pagination (reaches the thin tail the "
                          "/markets offset ceiling hides — see fetch_active_via_events)")
     ap.add_argument("--clears-hurdle-only", action="store_true",
-                    help="filter to candidates whose dominant-side APY beats the Aave hurdle")
+                    help="optional win-assumed dominant-side carry filter, applied before --top; "
+                         "not expected EV and can omit opposite-side opportunities")
     ap.add_argument("--hurdle-apy", type=float, default=None,
                     help="hurdle APY for clears-hurdle filter (default: LIVE Aave-Polygon, 24h cache)")
     ap.add_argument("--hurdle-days-floor", type=float, default=HURDLE_DAYS_FLOOR_DEFAULT,
@@ -567,13 +665,20 @@ def main() -> None:
                          "Each check spawns a scoped research worker with web search (~5-10K tokens, ~30-60s). "
                          "0 = skip (default).")
     args = ap.parse_args()
+    if args.top < 0 or args.max_pages <= 0:
+        ap.error("--top must be nonnegative and --max-pages must be positive")
 
     SNAP_DIR.mkdir(parents=True, exist_ok=True)
+    fetch_stats: dict[str, Any] = {}
+    filter_stats: dict[str, Any] = {}
     if args.via_events:
-        markets = fetch_active_via_events(max_pages=args.max_pages)
+        markets = fetch_active_via_events(max_pages=args.max_pages, coverage=fetch_stats)
     else:
-        markets = fetch_active(max_pages=args.max_pages)
+        markets = fetch_active(max_pages=args.max_pages, coverage=fetch_stats)
     print(f"fetched {len(markets)} active markets")
+    print(f"fetch coverage: {'COMPLETE declared endpoint scope' if fetch_stats['pagination_complete'] else 'INCOMPLETE slice'}; "
+          f"{fetch_stats['pages_succeeded']}/{fetch_stats['pages_attempted']} pages; "
+          f"stop={fetch_stats['stop_reason']}")
 
     if args.hurdle_apy is None:
         args.hurdle_apy = live_hurdle_apy()
@@ -586,10 +691,12 @@ def main() -> None:
         top_n=args.top,
         hurdle_apy=args.hurdle_apy,
         hurdle_days_floor=args.hurdle_days_floor,
+        clears_hurdle_only=args.clears_hurdle_only,
+        coverage=filter_stats,
     )
     if args.clears_hurdle_only:
-        short = [r for r in short if r.get("clears_hurdle")]
         print(f"filtered to {len(short)} candidates clearing {args.hurdle_apy*100:.2f}% APY / {args.hurdle_days_floor:.0f}d-floor hurdle")
+    print("filter coverage: " + json.dumps(filter_stats, sort_keys=True))
 
     if not args.no_snapshot:
         scan_kind = "thin_tail" if args.via_events else "primary"
@@ -607,6 +714,7 @@ def main() -> None:
         }
         snap_path, _ = write_snapshot(
             short, scan_kind=scan_kind, params=snapshot_params,
+            coverage={"fetch": fetch_stats, "filters": filter_stats},
         )
         print(f"wrote {snap_path}")
 

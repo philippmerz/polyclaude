@@ -62,11 +62,24 @@ import pm_fees  # per-market Gamma feeSchedule; see pm_fees.py for source-of-tru
 from clob_books import fetch_books
 
 
-def fetch_events(min_vol: float = 1000, max_pages: int = 15) -> list[dict]:
+class EventFetchResult(list):
+    """List-compatible event result with explicit bounded-fetch coverage."""
+
+    def __init__(self, events: list[dict], coverage: dict):
+        super().__init__(events)
+        self.coverage = coverage
+
+
+def fetch_events(min_vol: float = 1000, max_pages: int = 15) -> EventFetchResult:
     out: list[dict] = []
     seen = set()
+    attempted_pages = 0
+    successful_pages = 0
+    failed_pages: list[dict[str, str | int]] = []
+    stop_reason = "max_pages"
     with httpx.Client(timeout=20) as c:
         for page in range(max_pages):
+            attempted_pages += 1
             try:
                 r = c.get("https://gamma-api.polymarket.com/events", params={
                     "closed": "false", "active": "true",
@@ -75,13 +88,45 @@ def fetch_events(min_vol: float = 1000, max_pages: int = 15) -> list[dict]:
                     "limit": 100, "offset": page * 100,
                     "order": "volume24hr", "ascending": "false",
                 })
+                if r.status_code == 422:
+                    stop_reason = "api_422"
+                    break
                 r.raise_for_status()
             except Exception as e:
                 print(f"events page {page} err: {e}", file=sys.stderr)
+                failed_pages.append({"page": page, "error": f"{type(e).__name__}: {e}"})
                 continue
-            data = r.json() or []
+            try:
+                data = r.json()
+            except Exception as e:
+                print(f"events page {page} JSON err: {e}", file=sys.stderr)
+                failed_pages.append({"page": page, "error": f"{type(e).__name__}: {e}"})
+                continue
+            if not isinstance(data, list):
+                error = f"invalid response type: {type(data).__name__}; expected list"
+                print(f"events page {page} data err: {error}", file=sys.stderr)
+                failed_pages.append({"page": page, "error": error})
+                continue
+            successful_pages += 1
             if not data:
+                stop_reason = "empty_page"
                 break
+            invalid_row = next((
+                (index, row) for index, row in enumerate(data)
+                if not isinstance(row, dict)
+                or not str(row.get("id") or "").strip()
+            ), None)
+            if invalid_row is not None:
+                index, row = invalid_row
+                reason = (
+                    f"row {index} is not an object"
+                    if not isinstance(row, dict)
+                    else f"row {index} has no usable id"
+                )
+                print(f"events page {page} data err: {reason}", file=sys.stderr)
+                failed_pages.append({"page": page, "error": reason})
+                successful_pages -= 1
+                continue
             for ev in data:
                 eid = ev.get("id")
                 if not eid or eid in seen:
@@ -92,7 +137,19 @@ def fetch_events(min_vol: float = 1000, max_pages: int = 15) -> list[dict]:
                 if ev.get("closed"):
                     continue
                 out.append(ev)
-    return out
+            if len(data) < 100:
+                stop_reason = "short_page"
+                break
+    coverage = {
+        "attempted_pages": attempted_pages,
+        "successful_pages": successful_pages,
+        "failed_pages": failed_pages,
+        "failed_page_numbers": [item["page"] for item in failed_pages],
+        "stop_reason": stop_reason,
+        "page_cap": max_pages,
+        "complete": not failed_pages and stop_reason in {"empty_page", "short_page"},
+    }
+    return EventFetchResult(out, coverage)
 
 
 def parse_outcome_prices(p) -> tuple[float, float] | None:
@@ -803,7 +860,26 @@ def main() -> int:
 
     print(f"# event_monotonicity_scan: fetching active events with vol24hr >= ${args.min_event_vol24}", file=sys.stderr)
     events = fetch_events(min_vol=args.min_event_vol24)
+    fetch_coverage = getattr(events, "coverage", {
+        # Preserve list-based callers and existing isolated tests. The real
+        # fetcher always returns EventFetchResult with explicit telemetry.
+        "attempted_pages": None,
+        "successful_pages": None,
+        "failed_pages": [],
+        "failed_page_numbers": [],
+        "stop_reason": "coverage_unobserved_list_source",
+        "page_cap": None,
+        "complete": False,
+    })
     print(f"# {len(events)} events to inspect", file=sys.stderr)
+    print(
+        f"# fetch coverage: {'COMPLETE' if fetch_coverage['complete'] else 'INCOMPLETE'}; "
+        f"attempted={fetch_coverage['attempted_pages']} "
+        f"successful={fetch_coverage['successful_pages']} "
+        f"failed={len(fetch_coverage['failed_pages'])} "
+        f"stop={fetch_coverage['stop_reason']}",
+        file=sys.stderr,
+    )
 
     violations = []
     multi_market_events = 0
@@ -1047,14 +1123,25 @@ def main() -> int:
                           "real_executable": real,
                           "snapshot_atomic": False,
                           "requires_revalidation": True,
-                          "events_inspected": multi_market_events}, indent=2))
-        return 0
+                          "events_inspected": multi_market_events,
+                          "fetch_coverage": fetch_coverage,
+                          "coverage_complete": fetch_coverage["complete"]}, indent=2))
+        return 1 if fetch_coverage["failed_pages"] else 0
 
     print(f"\n# {multi_market_events} multi-market events inspected; {n_mid} midpoint violation(s) >= {args.min_violation_pp}pp; "
           f"{len(real)} PROVISIONAL after batched CLOB walk; REVALIDATION REQUIRED\n")
+    status = "COMPLETE" if fetch_coverage["complete"] else "INCOMPLETE"
+    print(
+        f"# Fetch coverage: {status}; pages attempted={fetch_coverage['attempted_pages']}, "
+        f"successful={fetch_coverage['successful_pages']}, "
+        f"failed={len(fetch_coverage['failed_pages'])}, "
+        f"stop={fetch_coverage['stop_reason']}, cap={fetch_coverage['page_cap']}"
+    )
+    if fetch_coverage["failed_pages"]:
+        print(f"# Failed page numbers: {fetch_coverage['failed_page_numbers']}")
     if not violations:
         print("(no violations)")
-        return 0
+        return 1 if fetch_coverage["failed_pages"] else 0
     print(f"{'event_title':<44} {'t1':<11} {'t2':<11} {'mid_gross':<9} {'EXEC_edge':<9} {'verdict'}")
     print("-" * 110)
     for v in violations[:30]:
@@ -1066,7 +1153,7 @@ def main() -> int:
               f"{v['violation_pp']:>+6.2f}pp {exec_s:<9} {verdict}")
     if not real:
         print("\n# 0 provisional positive arbs — all midpoint flags evaporated on live books (the usual outcome).")
-    return 0
+    return 1 if fetch_coverage["failed_pages"] else 0
 
 
 if __name__ == "__main__":
