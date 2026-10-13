@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 170 recorded observations from Apr-25 through Oct-12, including
-90 eligible trading-midpoint and 83 eligible trading-depth observations. Rounded
+The chart now has 171 recorded observations from Apr-25 through Oct-13, including
+91 eligible trading-midpoint and 84 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -20,7 +20,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only the
 repository's vetted execution paths.
 
-**Last maintained:** 2026-10-12. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-13. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -74,51 +74,56 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-12 ~22:02 UTC
+## Last bankroll snapshot — 2026-10-13 ~02:03 UTC
 
-Authoritative bankroll collected 22:02:25.704651–22:02:44.157438 UTC;
-positions collected separately at 22:02:02.063459–22:02:04.689000. Sequential
+Authoritative bankroll collected 02:02:55.317503–02:03:14.567398 UTC;
+positions collected separately at 02:02:29.428323–02:02:32.383352. Sequential
 estimates are not synchronized NAV or guaranteed liquidation.
 
 | Measure | Value |
 |---|---:|
 | Unresolved position legs, including Trump dust | 5 |
 | Position cost | $47.64 |
-| PM midpoint / indicative fee-net depth | $39.45 / $37.46 |
-| Authoritative whole-account marked bankroll | $190.66 |
-| Approximate whole-account depth | $188.67 |
-| Settled-P&L accounting residual | +$22.57 |
+| PM midpoint / indicative fee-net depth | $39.20 / $37.34 |
+| Authoritative whole-account marked bankroll | $190.39 |
+| Approximate whole-account depth | $188.53 |
+| Settled-P&L accounting residual | +$22.58 |
 
-- **Trading midpoint/depth:** $184.39/$182.40 excluding $6.27 of separately
-  funded gas; +$0.12/+$0.77 since ~18:03. Depth +7.29% versus $170 before
-  unreconciled VM/API costs. Midpoint-depth gap $1.99. Residual is rounded
+- **Trading midpoint/depth:** $184.14/$182.28 excluding $6.25 of separately
+  funded gas; −$0.25/−$0.12 since Oct12 ~22:02. Depth +7.22% versus $170 before
+  unreconciled VM/API costs. Midpoint-depth gap $1.86. Residual is rounded
   accounting; no new fill, settlement or audited cash-profit event this tick.
 - **PM HOLD / NO ADD:** retained judgmental Gemini/OpenAI NO priors .08/.25;
-  stress .01/.15. Planning fee-net exits $5.0260/$3.8639. Retained central
-  joint-win case .03 and independent cases hold; downside favors sales.
-  Perfect central dependence instead prefers an 8.06-share Gemini trim
-  (10.01 with idealized free carry). Hold is narrow and scenario-dependent;
-  no source change or new probability evidence justifies shifting the central
-  case. Quotes passed freshness at receipt only; refresh all gates for action.
+  stress .01/.15. Planning fee-net exits $4.9103/$3.8639. Central joint-win
+  case .03, independent and perfect central dependence cases hold; downside
+  favors sales. Gemini's 7.8105% initial-trim boundary with idealized free
+  carry remains close to its 8% prior. Hold is narrow and uncertain; no source
+  change justifies a new prior. Receipt-time quotes require fresh gates for action.
 - **Clarity:** preserve complete 29/29. Exit $28.5691 / idealized constant-rate
-  carry $28.7627 remain below its $29 floor before costs and the extra payout
+  carry $28.7622 remain below its $29 floor before costs and the extra payout
   at 51–58 qualifying votes. No independent action on either member.
-- **Cash and cleared losses:** retained 10.319630 pUSD; native aUSDC 122.060094
-  at Polygon block 95,424,831, reserve live at ~3.0802% variable APY. Four
+- **Cash and cleared losses:** retained 10.319630 pUSD; native aUSDC 122.061822
+  at Polygon block 95,434,506, reserve live at ~3.0775% variable APY. Four
   finalized losing balances cleared earlier remain zero; other claims unchanged.
   [DEC-0193/0194](notes/journal.md) record the cash route, cleanup and gas costs.
   No new NAV point was invented from zero-value removal.
 - **Evidence:** HLE 60 full rows, five held criteria and 256 Senate rows unchanged
-  versus 18:00. API cache age3317s is not publication time. Google core articles,
+  versus Oct12 22:00. API cache age3348s is not publication time. Google core articles,
   related stories and observed RSS have no new change. Three direct OpenAI403
   pages leave release coverage partial; limited official browser views supplement
   it. The earlier Health link remains unobserved after browser failure. Provider
   tool benchmarks do not replace the reachable named board specified by the rule.
-- **Operations:** 19 routine types once/rc0, 38 streams verified; no order,
-  UMA/Ostium change, watch hit, overdue decision or new public alert. Four
-  canonical daemons current; 1125.24 MiB disk above warning. No asset action,
-  discovery/redemption scan or material Telegram due. Next existing check
-  Oct13 02:00 UTC; weekly P&L Oct16; monthly diagnostic Nov12.
+- **Discovery:** primary 995 fetched/80 selected, thin 42,260/3,000; page caps
+  and 459/364 top omissions leave coverage incomplete. Only three candidate
+  criteria were substantively read; remaining cases stay unreviewed. The LoL
+  lead's reported bookmaker probability is unverified; both fresh fee-aware
+  prices also exceed its secondary-odds illustration. No justified entry;
+  structural scans found zero provisional positives only within their quoted slice.
+- **Operations:** 19 routine +10 discovery/batch types once/rc0; no order,
+  UMA/Ostium change, watch hit, overdue decision or new public alert. Winning
+  redemption scan empty; known dust retained gas-negative. Four canonical
+  daemons current; 1097.20 MiB disk above warning. No asset action or quiet
+  Telegram; next existing Oct13 06:00, weekly P&L Oct16, monthly diagnostic Nov12.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

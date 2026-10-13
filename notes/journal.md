@@ -28732,3 +28732,104 @@ Operations, preservation and closeout:
   data/periodic_20261012T2200_{routine,sources,root_inventory,aave_rate,exit_quotes,
   risk,root_receipt_audit,postflight_health,poll_metadata}.json;
   logs/periodic_20261012T2200/.
+
+
+### 2026-10-13 ~02:03 UTC — full check: HOLD / NO ADD; sports lead fails verification
+
+- Authoritative bankroll02:02:55.317503–02:03:14.567398:$190.39, gas$6.25,
+  PM midpoint/depth$39.20/$37.34, cost$47.64. Positions02:02:29.428323–
+ 02:02:32.383352 are a separate capture. Whole-depth$188.53, ex-gas trading
+  midpoint/depth$184.14/$182.28, −$0.25/−$0.12 since Oct12~22:02. Depth+7.22%
+  versus$170 before VM/API. Sequential estimates, not synchronized NAV or
+  guaranteed liquidation. Unrealized midpoint/depth−$8.44/−$10.30; residual
+ 22.58 is rounded accounting (+.01), not audited cash profit or a settlement.
+- All19 routine types once/rc0,38 streams/exact wrapper UTC windows verified;
+  direct-first quota13%used/87%headroom. Same-run190.39 used for Kelly. State
+  CLEAN, orders/UMA/Ostium/watch/overdue0; decisions194/117resolved/77pending
+  unchanged. Final public-alert read02:21:58 confirms no entries strictly after
+  Oct12 22:02. Gemini drawdown−66.56% remains a flag, not automatic exit authority.
+- Sources02:02:26.883962–02:02:31.907425:17requests14HTTP200/3OpenAI403,
+ 26 integrity entries. Current homepage→derivedbundle→actualHLE API/full60
+  scores.hle rows unchanged versus22:00; G46.2/O53.6. Age3348s is cache metadata,
+  not publication time. Five exact held criteria/state and256 full Senate rows
+  unchanged; HR3633 failed49–50 motion-to-proceed cloture is not final passage.
+- Google core/related modules and observed RSS unchanged; AA57%/44% uses a
+  different evaluator. Three directOpenAI403 gaps retain partial coverage.
+  Limited official [publication index](https://openai.com/research/index/publication/)
+  and [Astra](https://openai.com/index/gpt-6-astra/) browser views expose known
+  items/tool-HLE57.2, not a new qualifying named-board55 result. O55's reachable
+  board/source-fallback rule controls. Prior Health body remains unobserved;
+  no global no-release claim. Historical freeze scan versusJuly3 finds16 additions/
+ 3score changes: the chart has updated, not a permanent freeze thesis or new listing today.
+- Planning books complete02:05:38.043663; receipt agesG5.643/C50Y2.830/C58N1.506/
+  O5.967 seconds, all<180s without fallback. Literal IDs/criteria/venue minima/tick
+  and authoritative per-fill fees verified. Full G/O fee-net exits4.9102765/
+ 3.863916. Retained judgmental NO priorsG.08/stress.01/upper.18, O.25/.15/.38;
+  central joint-win.03. G/O/both full-sale-minus-hold Elog−.0086676/−.0034788/
+  −.0125339. All bid-segment sizing boxes/KKT/minimum shares/.01 lots/one-leg grids
+  checked; central/independent/perfect central dependence/upper cases hold.
+- Stress prefers102.08G+19O net8.773964, ΔElog+.0292662 or+.0295867 with free
+  carry. Gemini comonotonic initial-trim boundary7.7600% no carry/7.8105% free
+  carry versus8%central remains narrow, not robustness or a recovery forecast.
+  No verified source change justifies new priors/dependence. NO ADD; no maker
+  premium authorized. Quotes passed freshness only at receipt; any action needs rewalk.
+- Complete Clarity29/29 exit28.56906/freeconstant-rate carry28.7621619 toJan2
+  remains below29 floor before all routing/fees/gas/protocol risks and extra29
+  option at51–58 qualifying votes. HOLD completepair. Fresh nativeAave3.0774609%
+  variable differs from cached3.0149%/15.8588h; constant future carry is sensitivity.
+- Fixed Polygon95,434,506: known CTF/pUSD10.319630 unchanged; four cleaned
+  losses/archived debut0. Native aUSDC122.061822,+.001728 since22:00. Known-asset
+  census only. Redeem-all once02:05:38–02:05:39 rc0 found0/4 filtered indexed
+  winners; threshold0 census has5 includingTrump.33. Deindexed Hormuz winning
+  claim.003571 is distinct; prior175036gas units/currentgas/roundedsame-runFX
+  estimate.0049161>payout, retain. No new redemption simulation/broadcast.
+- Ten discovery/batch commands once/rc0;20 streams/30 artifacts independently
+  verified. Primary995unique fetched/539eligible/80selected/459top-omitted,
+ 10-pagecap; requiredthin vol20/liquidity500/viaevents profile42260/3364/3000/
+ 364,20-pagecap. Carry is win-assumed, not expected return. Batches3primary/
+ 131thin represent56/2309rows; new-to-filter labels do not prove new listings.
+  Only3 candidate criteria substantively read;3077 selected rows remain unreviewed
+  for thesis/probability/economics/execution. No global opportunity-absence claim.
+- Sports14rows/3consensus lookups; macro5rows/no consensus. Monotonicity1125
+  events/15-pagecap, one MuseSpark midpoint flag/no usable book,0 provisional.
+  Consistency5026open/584events/30-page marketcap,1malformed event;193sum>1/
+ 89sum<1 midpoint groups,20/193structural groups and200legs requested,9valid/
+ 11skipped/173unquoted,0provisional positives in quoted slice. Favorite18profile
+  rows/29valid books/10-pagecap supplies no population probability/edge/APY.
+- LoL5430568, conditione2dab234…208fb8, sluglol-bro2-lgd-2026-10-13: sports
+  scanner claimed first-team.360/+11.5pp from an aggregator name without URL/time.
+  Independent4queries/2page attempts locate no exact primary bookmaker both-team
+  quote or official fixture. [Secondary OddsDigger](https://oddsdigger.com/pl/e-sports/lgd-gaming-vs-hanjin-brion-23651699)
+  reportsBR1.96–2.00/LGD1.70–1.73, without operator/as-of mapping; most secondary
+  times09:00Z, one un-opened result08:50Z. Venue gameStartTime/literal initial
+  start09:00Z agree, but endDate15:00Z is not kickoff proof. Cancellation, tie,
+  pre-start walkover and qualifying reschedule branches resolve50-50.
+- Root exact criterion fields equal discovery snapshot; canonical criterion
+  hash4e7a4c9f…fb0a33 and raw-description SHA c0204737…d1f16 are different domains.
+  Initial hash-domain assertion stopped before fees/books, then corrected with
+  field equality and the retained singleGamma receipt; no criteria change invented.
+  At02:18:06, named outcome0BR and1LGD asks.48/.53; authoritative rate.05/exponent1
+  gives5-share costs2.4624/2.712275, unit.49248/.542455, minimum5shares. Books
+  ages.160/.210s at receipt; exact token/condition/state/tick proved.
+- Illustrative de-vig bounds from unpaired secondary prices:BR.45946–.46883/
+  LGD.53117–.54054, both below those fee-aware asks. Not matched/executable bookie
+  consensus or a forecast;50-50 branches also need their own evidence/probability.
+  SKIP both sides: no verified robust edge. Change condition: current same-match
+  primary odds/operator/time and exact official status, then fresh both-side books,
+  horizon/cost/risk/account gates. No allocation, invented forecast or new watcher.
+- Source collector initially used an old scratch path;22:00 raw/data/report/
+  summary26 integrity entries and originaldataSHA09a587… remained intact.
+  Its dated collect.py scratch code was overwritten and original code was not
+  recovered; no bogus fresh22 observation recorded. Actual02fresh17requests are
+  isolated. Consistency's expected mutable latest alias refreshed; dated outputs
+  copied and prior dated history retained, no stale alias restoration.
+- Finalhealth02:20:09: four exact-one canonical absolute daemons/current code,
+  disk1097.20MiB>512warning/128critical, MemAvailable924.68MiB; no restart/cleanup.
+  Routine news/heartbeat state metadata25s/28.3m within limits, contents not read.
+  Financial/prior/decision/watchlist/flow/benchmark records/history unchanged;
+  one dated CSV point,README/backlog/handoff updated. No tracked-code/asset change,
+  material Telegram,new timer/goal or idle follow-up. Nextexisting06:00, weeklyOct16,
+  monthlyNov12; manual copper/Base blockers unchanged. Evidence:data/checkin_
+  20261013T0200_{routine,sources,root_inventory,aave_rate,exit_quotes,risk,redeem_check,
+  root_receipt_audit,discovery,discovery_receipt_audit,sports_sources,sports_books,
+  sports_review,postflight_health,final_alerts}.json;logs/checkin_20261013T0200/.

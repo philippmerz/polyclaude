@@ -1,3 +1,31 @@
+## Oct-13 02:00 full check — completed; HOLD / NO ADD, no justified entry
+
+- Trading midpoint/depth $184.14/$182.28, −$0.25/−$0.12 since Oct12~22:02;
+  depth +7.22% versus $170 before VM/API. Residual22.58 is rounded accounting,
+  not audited profit or a new settlement. No asset action.
+- All19 routine +10 discovery/batch types once/rc0; winning redeem-all0/4
+  filtered rows, census5 at threshold0. Orders/UMA/Ostium/watch/overdue/alerts empty.
+  Known CTF/pUSD unchanged, four cleared losses0; native aUSDC122.061822,
+  live variable3.0775% versus cached3.0149%/15.86h. Retain gas-negative claim.
+- G/O central .08/.25, .03 joint-win case and central dependence alternatives
+  hold; stress favors near-full exits. G carry boundary7.8105% versus8% is
+  narrow. Clarity fullpair28.5691/freecarry28.7622<29: preserve29/29, no add.
+- HLE60/five criteria/Senate256 unchanged, Age3348s not publication time.
+  DirectOpenAI3×403/limited browser remain partial; July3 freeze comparison
+  proves historical updating, not a new release or permanent source freeze.
+- Primary995fetched/539eligible/80selected/459top-omitted,10-pagecap; thin42260/
+ 3364/3000/364,20-pagecap. Correct vol20profile used. Batches3+131,56+2309rows;
+  only3 candidate criteria substantively reviewed;3077 selected rows unreviewed.
+  No global absence claim; filtered disappearance is not closure.
+- LoL5430568: reported .360 first-team probability lacks primary bookmaker/
+  exact official-fixture proof. Fresh5-share pricesBR.49248/LGD.542455 after fees;
+  neither beats illustrative secondary de-vig odds. SKIP both; no forecast/action.
+  Source/operator timestamps and50-50 branches remain unpriced, not certified.
+- Four canonical daemons current;1097.20MiB disk above warning. Original financial
+  records/history preserved; one CSV point and current handoff updated. No new
+  goal/timer or quiet Telegram. Next06:00; weeklyOct16/monthlyNov12 future;
+  manual copper/Base blockers unchanged. Evidence:journal~02:03/current run logs.
+
 ## Oct-12 22:00 light check — completed; HOLD / NO ADD
 
 - Trading midpoint/depth $184.39/$182.40, +$0.12/+$0.77 since ~18:03;
