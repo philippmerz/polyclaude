@@ -28906,3 +28906,61 @@ Operations, preservation and closeout:
 - Validation:10 chart checks pass; four offline packets10398/10708/10399/10598
   bytes remain valid within declared expiry, with no source mismatch or execution
   authority. Financial history and the new CSV source line independently verified.
+
+
+### 2026-10-13 ~10:02 UTC — light check: HOLD / NO ADD; OpenAI depth worsens
+
+- Bankroll10:02:21.698672–10:02:41.102396:$190.52, gas6.48, PM midpoint/depth
+ 39.10/36.79,cost47.64. Positions10:01:56.569538–10:01:59.470262 separate.
+  Wholedepth188.21, ex-gas midpoint/depth184.04/181.73, −.48/−.92vs06:02;
+  depth+6.90%vs170 beforeVM/API. Sequential estimates, not synchronized NAV or
+  guaranteed liquidation. Unrealizedmarked/depth−8.54/−10.85; residual22.58
+  unchanged rounded accounting, not audited profit/new settlement. OpenAIthin
+  book mark.215 vs avg-fee-net-exit.174/4.1ppgap; Gemini−66.56% drawdown flag.
+- All19 routine types once/rc0,38 streams/exact wrapper UTCwindows independently
+  verified; quota4%used/96%headroom, same-run190.52 forKelly. StateCLEAN, orders/
+  UMA/Ostium/watch/overdue0; decisions194/117resolved/77pending unchanged. Closing
+  public alert tails 2026-10-13T10:08:21Z: zero after06:02/zero parseerrors.
+- Sources10:02:38.339697–10:02:42.609297:17requests14HTTP200/3OpenAI403,
+ 26integrity files verified. Homepage→currentbundle→actualAPI/full60 IDs/names/
+  scores/calibrations, five exact held criteria/state and Senate256 unchangedvs06.
+  G46.2/O53.6; Age3043s is cache metadata, not publication time. HR3633failed
+ 49–50 procedural cloture is not passage. AA57/44 separate evaluator. Google
+  Argon/September and CAIS/ScaleDiamond core/related/RSS unchanged; prior unheld
+  Wonder edit now also visible in browser. Earlier version disagreement remains
+  historical; no inferred release date or new held threshold. Different1000-
+  question subset/equivalence interpretation risk persists. ThreeOpenAI403
+  gaps/limited browser index remain partial, not a global no-release claim.
+- Planning quotes 2026-10-13T10:03:19.728048+00:00:12 receipts, exact identities/criteria/min5/tick/
+  authoritativefees verified; bookagesG19.318/C50Y22.307/C58N1.058/O1.720s all≤180,
+  nofallback. G/O fee-net full exits4.9102765/3.307824; W173.94 includesClarity29
+  andTrump0. Retained judgmental NOcentral.08/.25, stress.01/.15, upper.18/.38,
+  joint-win.03. Fullsale-minus-holdElogG−.0086676/O−.0065198/both−.0155820.
+- Bid-segment boxes/KKT/min5/.01lots/2001-point one-leg grids: central,
+  independent, perfect-central-dependence andupper cases hold, with/without
+  idealized free constant-rate Aavecarry. This differs from06's perfect-dependence
+  Otrim corner because current bids are lower. Stress variants favor full exits,
+  O-only stress favors sale; G boundary7.7600%nocarry/7.8105%freecarry near8%.
+  No new qualifying source fact warrants changing retained priors/joint model.
+  HOLD / NO ADD, no recovery/calibrated robustness claim or certified makerpremium.
+  Clarity28.56906/freecarry28.76207<29floor beforecosts/51–58-voteextra29option;
+  preservecomplete29/29. Receipt freshness cannot authorize a later order.
+- Polygon95,453,636 knownCTF/pUSD10.319630 unchanged, fourclearedlosses/archived
+  debut0. NativeaUSDC122.065248,+.001714vs06, reserve live/unpaused/unfrozen3.088870%
+  variable vs cached3.0149%/23.85h. Inventory18receipts verified; knownassets only.
+  Hormuzwinning.003571 retained: estimatedgas.0051151>payout from prior175036units/
+  currentgas/roundedFX, not freshsimulation/broadcast. No redemption/discovery due.
+- Health10:04:47:four exact-one canonical current-code daemons;disk1073.79MiB
+  >512warning/128critical, MemAvailable1134.18MiB. Routine news/heartbeat metadata
+ 77s/~26.8min withinlimits; privatecontents unread. No restart/cleanup. Original
+  seven protected records/prior journal andCSV bytes preserved, oneCSV observation/
+  README/backlog/handoff refreshed. No code/asset change, quietTelegram, newgoal/
+  timer or idle follow-up. Next14:00, weeklyOct16/monthlyNov12 future; manual
+  copper/Base funding/writer/Januarythesis and issuer-account rotation blockers
+  unchanged. Evidence:data/periodic_20261013T1000_{routine,sources,root_inventory,aave_rate,
+  exit_quotes,risk,root_receipt_audit,postflight_health,final_alerts}.json;
+  logs/periodic_20261013T1000/. Quote helper's initial missing-inventory preflight made zero
+  requests; its emptydirectory removed before the one actual12-receipt pass.
+- Validation:10 chart checks pass; four valid offline packets9736/10047/9737/9936
+  bytes, no source mismatches/live state/execution authority. Original financial
+  records/history and the CSV source line/counts independently verified.

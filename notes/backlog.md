@@ -1,3 +1,22 @@
+## Oct-13 10:00 light check — completed; HOLD / NO ADD
+
+- Trading midpoint/depth184.04/181.73USD, −.48/−.92vs06:02; depth+6.90%vs170
+  beforeVM/API. OpenAI exit depth worsened; residual22.58 remains accounting,
+  not audited profit. No asset action or new entry.
+- All19 routine types once/rc0,38 streams/exact windows verified. Orders/UMA/
+  Ostium/watch/overdue/alerts empty. FullHLE60/five criteria/Senate256/article
+  cores unchanged; browser now matches earlier Diamond unheld-row edit. Three
+  directOpenAI403 gaps/metric equivalence risk remain, not new threshold facts.
+- Central/joint/independent/perfect-dependence cases hold at current prices;
+  stress exits explicit, G carry boundary7.8105% near8%, no add. Claritycomplete
+ 29/29 exit28.5691/freecarry28.7621<29floor. KnownCTF/pUSD unchanged, four losses0;
+  aUSDC122.065248, variable3.0889% vs cached3.0149%/23.85h. Retain gas-negative dust.
+- Four canonical daemons current,1073.79MiB disk above warning. Records/history
+  preserved, one CSV point/handoff refreshed. No discovery rerun, quiet Telegram,
+  timer/goal or idle follow-up. Next14:00, weeklyOct16/monthlyNov12 future;
+  manual copper/Base routes and issuer credential rotation remain external blockers.
+  Evidence:journal~10:02,data/periodic_20261013T1000_*.json,current run logs.
+
 ## Oct-13 06:00 light check — completed; HOLD / NO ADD
 
 - Trading midpoint/depth $184.52/$182.65, +$0.38/+$0.37 since~02:03;
@@ -4192,25 +4211,20 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-13 06:00:** next-Pro debut is closed/zero shares;
+**Current HLE state, Oct-13 10:00:** next-Pro debut is closed/zero shares;
 its archived forecast remains unresolved. Held Gemini≥50 NO102.084750 and
-OpenAI≥55 NO19; retained judgmental priors .08/.25, stress .01/.15. The mounted
-full60-row source remains G46.2/O53.6; historical freezes/prior values below
-are superseded. No hold-only rule, automatic re-entry or enlargement.
+OpenAI≥55 NO19; judgmental central .08/.25, stress .01/.15. Mounted full60
+remains G46.2/O53.6, sampled Diamond core unchangedvs06; older priors below
+are historical. No hold-only rule, automatic re-entry or enlargement.
 
-Planning full exits4.9103/4.2354: central joint-win .03 and independent cases
-hold; perfect central dependence prefers an OpenAI trim13.97shares (15.62 with
-idealized free carry). Stress favors full exits. Dependence/probabilities are
-uncalibrated; Gemini's7.8106% free-carry trim boundary is near8%. HOLD / NO ADD
-uses the retained central judgment and acknowledges these price sensitivities.
-
-The Sep22-dated CAIS/Scale HLE-Diamond article's unheld Muse row changed;
-G/O subset rows did not. Root direct06:12 recheck and browser return different
-versions. It is a separate1,000-question subset: existing rule-equivalence
-interpretation risk remains, without a new automatic threshold crossing.
-The reachable named board and exact fallback rules control the current review;
-provider tool results cannot silently replace them. Three direct OpenAI403
-pages keep broader release coverage partial. Evidence: latest journal/README.
+Planning exits4.9103/3.3078: central joint-win .03, independent and perfect
+central dependence all hold at current bids. Stress favors full exits; G's
+free-carry trim boundary7.8105% is near8%. Worse OpenAI depth does not require
+sale or imply recovery. HOLD / NO ADD acknowledges uncalibrated dependence/
+priors and existing1,000-question Diamond rule-equivalence risk. Browser now
+matches the previously observed unheld Wonder row; no new held threshold fact.
+Three direct OpenAI403 pages keep releases partial; exact named-source/fallback
+rules and fresh gates control later action. Evidence: latest journal/README.
 
 **Oct-2 claim correction:** deindexed Hormuz NO dust is **.003571 winning
 shares**, not losing. Its archived token derives from legacy USDC.e.
