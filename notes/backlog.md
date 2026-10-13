@@ -1,3 +1,26 @@
+## Oct-13 06:00 light check — completed; HOLD / NO ADD
+
+- Trading midpoint/depth $184.52/$182.65, +$0.38/+$0.37 since~02:03;
+  depth+7.44% versus170 before VM/API. Residual22.58 is rounded accounting,
+  not audited profit or a settlement. No asset action or new entry.
+- All19 routine types once/rc0,38 streams/exact UTC windows verified. Orders/
+  UMA/Ostium/watch/overdue/public alerts empty; knownCTF/pUSD unchanged.
+  Native aUSDC122.063534, live3.0846% versus cached3.0149%/19.85h. Four losses0;
+  winning Hormuz dust remains gas-negative; no new simulation/broadcast.
+- HLE60/five criteria/Senate256 unchanged. CAIS/Scale HLE-Diamond core replaced
+  unheld Muse Spark1.3 with Muse Wonder; G/O subset rows unchanged. Direct
+  06:12 recheck confirms the edit; browser shows the older version. Subset
+  equivalence risk remains; three OpenAI403 pages leave coverage partial.
+- G/O retained .08/.25 central/.03 joint-win case holds; perfect central
+  dependence favors O trims13.97shares or15.62 with idealized carry, not a
+  calibrated dependence estimate. Stress favors full exits. G carry boundary
+ 7.8106% vs8% remains narrow; no add. Clarity28.5691/28.7622<29, keep29/29.
+- Four canonical daemons current;1083.64MiB disk above warning. Records/history
+  preserved, one CSV point/handoff refreshed; no discovery rerun, Telegram,
+  goal/timer or idle follow-up. Next10:00, weeklyOct16/monthlyNov12 future;
+  manual copper/Base routes and unverified issuer credential rotation remain
+  external blockers. Evidence: journal~06:02 and logs/periodic_20261013T0600/.
+
 ## Oct-13 02:00 full check — completed; HOLD / NO ADD, no justified entry
 
 - Trading midpoint/depth $184.14/$182.28, −$0.25/−$0.12 since Oct12~22:02;
@@ -4169,32 +4192,25 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-6 06:00:** next-Pro debut NO is **CLOSED / zero
-shares** after the 100-share trim (DEC-0183) and final 69-share sale
-(DEC-0187). Its .25 prior (.12 stress) remains archived and unresolved.
-Held any-Gemini >=50 NO is **102.084750**, OpenAI >=55 NO **19**; priors
-**.12/.25**, stressed **.03/.15**. The resolving API is active and currently
-unchanged, rather than historically frozen. Remaining positions are
-actively reviewable under source, executable-exit and joint terminal-risk
-analysis; there is no hold-only rule or automatic debut re-entry. Older
-underwriting below is historical and must not replace current priors or
-share counts.
+**Current HLE state, Oct-13 06:00:** next-Pro debut is closed/zero shares;
+its archived forecast remains unresolved. Held Gemini≥50 NO102.084750 and
+OpenAI≥55 NO19; retained judgmental priors .08/.25, stress .01/.15. The mounted
+full60-row source remains G46.2/O53.6; historical freezes/prior values below
+are superseded. No hold-only rule, automatic re-entry or enlargement.
 
-Fresh G/O full exits are $1.517658/$2.568496. Central joint Elog favors
-holding and rejects partial/combined trims, including optimistic free Aave
-carry. Stress favors separate trims of about 10.07 Gemini shares
-(11.92 with free carry) or five OpenAI shares (6.37 with carry), not a joint
-optimum. HOLD / NO ADD uses the central judgmental view with this
-price-dependent sensitivity acknowledged.
+Planning full exits4.9103/4.2354: central joint-win .03 and independent cases
+hold; perfect central dependence prefers an OpenAI trim13.97shares (15.62 with
+idealized free carry). Stress favors full exits. Dependence/probabilities are
+uncalibrated; Gemini's7.8106% free-carry trim boundary is near8%. HOLD / NO ADD
+uses the retained central judgment and acknowledges these price sensitivities.
 
-The official Sep22 [HLE-Diamond release](https://agi.safe.ai/blog/hle-diamond)
-is a separate 1,000-question subset; the live resolving chart still uses
-the original HLE API. Its Astra no-tools 59.9% and Gemini web/code 60.6%
-would cross the respective thresholds if treated as a qualifying equivalent.
-That interpretation remains unresolved; the original-dataset reading is
-stronger, and no automatic threshold crossing is asserted. The root risk
-proof includes an additional zero-payout branch sensitivity, not a calibrated
-posterior or a reason to count existing interpretation risk twice.
+The Sep22-dated CAIS/Scale HLE-Diamond article's unheld Muse row changed;
+G/O subset rows did not. Root direct06:12 recheck and browser return different
+versions. It is a separate1,000-question subset: existing rule-equivalence
+interpretation risk remains, without a new automatic threshold crossing.
+The reachable named board and exact fallback rules control the current review;
+provider tool results cannot silently replace them. Three direct OpenAI403
+pages keep broader release coverage partial. Evidence: latest journal/README.
 
 **Oct-2 claim correction:** deindexed Hormuz NO dust is **.003571 winning
 shares**, not losing. Its archived token derives from legacy USDC.e.
