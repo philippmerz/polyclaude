@@ -29067,3 +29067,80 @@ Operations, preservation and closeout:
   Evidence:data/checkin_20261013T1400_*.json;logs/checkin_20261013T1400/;
   logs/fee_quote_validation_20261013.json. Required chart/packet/publication checks
   are recorded in this run's completion audit.
+
+
+### 2026-10-13 ~18:05 UTC — light check: Argon rollout and Diamond update reviewed; holdings unchanged
+
+- Authoritative bankroll18:05:26.898963–18:05:44.958596 UTC:197.65 total,
+  gas6.28, PM midpoint34.17/depth32.32, cost32.10. Trading midpoint/depth
+  191.37/189.52, −1.05/−.08 versus15:08; depth+11.48% versus170 before VM/API.
+  Whole-account depth195.80. Positions18:05:06.491880–18:05:07.947074 separately
+  show midpoint34.27/depth32.32: preserve the .10 difference, not synchronized NAV
+  or guaranteed liquidation. Rounded residual19.30 versus19.29 is accounting,
+  not a new settlement or audited cash profit; known CTF/pUSD unchanged.
+- All19 routine types ran once/rc0,38 stream sizes/hashes/exact UTC windows
+  verified; direct quota probe first, same-run197.65 for Kelly. State audit CLEAN
+  (5indexed+1deindexed), orders terminal-empty, UMA clean, Ostium0, watch hits/
+  overdue decisions0. Gemini residual drawdown39.74% reviewed; no size creation
+  or automatic buy to clear residue. Last14:00 sale/fee correction remain recorded.
+- Source18:02:04.410168–18:02:18.826510:17 requests,14HTTP200/3OpenAI403;
+  40 outer integrity files including follow-up verified. Mounted homepage/current
+  bundle/actual full60 HLE rows, five exact held criteria and all256 Senate rows
+  unchanged versus14:00. G46.2/O53.6; APIAge2970/VercelHIT is cache metadata,
+  not publication time. AA57/44 remains a separate evaluator. Failed49–50
+  procedural cloture is not final Clarity passage; directOpenAI gaps remain.
+- Seven new Google RSS items include three Gemini4 Argon announcements at16:00
+  UTC. Primary release/app/developer pages and linked model card each fetched
+  once, all fourHTTP200, at18:04:09.983027–18:04:12.327410. Release confirms
+  rollout/global availability, not an HLE result. Root viewed the full extracted
+ 19-row results table: Agent's Last Exam39.5% is a computer-use pass rate;
+  no Humanity's Last Exam row is present in that table. Model card is labeled
+  Published October2026; Last-Modified18:01:58 is HTTP metadata, not proven
+  evaluation/publication time. No prior card version or methodology-page fetch.
+  Browser opens failed; direct primary receipts provide the observed evidence.
+- CAIS/Scale HLE-Diamond changed its separate with-tools table: GPT6.1 Sol
+ 53.2% without tools/69.1% with web+code added, Gemini3.8 Flash33.3/60.6 row
+  removed there. Other displayed no-tools rows remain. Diamond uses1000 questions;
+  source edit time was not observed, and this is not evidence of a newly released
+  OpenAI model or a new full-board score. Earlier Google Argon/recap cores remain
+  unchanged, related links changed. Literal named-source/clear-equivalent/fallback
+  rules control; neither benchmark nor availability is silently substituted.
+- Retain judgmental G/O NO central.08/.25, stress.01/.15, upper.18/.38 and
+  joint-win.03 after reviewing these material observations. Broader capability
+  was already adverse in these priors; no new qualifying full-HLE fact supports
+  a numeric revision. Availability can increase testing/submission plausibility;
+  equivalence, cached backend and unobserved OpenAI releases remain risks.
+  These probabilities/dependence are uncalibrated; no recovery or robust-hold claim.
+- Fresh planning quotes used corrected conservative SELL fees, exact identities/
+  criteria/tick/minimum and authoritative schedules:12 raw receipts, all books
+  passed180s guard at receipt (G4.651/C50Y9.498/C58N.326/O10.571s), no fallback.
+  G indicative net.26023825 is size-infeasible:4.034750<min5, so Gsell0 only.
+  O19 net3.12276; all1401 positive O .01-share lots5..19 plus zero enumerated,
+  current G held, W186.20. Central, independent/perfect central dependence and
+  upper variants hold; central full-O-sale Elog−.0076280, stress favors O19 sale
+  with+.0020657. Idealized free constant-rate carry does not change central hold.
+  This is a bounded corrected-fee grid, not KKT/global optimality or later execution
+  authority. NO ADD; ask economics unsupported. Clarity complete29/29 exit28.56905/
+  idealized free carry28.76108<29floor before costs/51–58-vote extra29 payout.
+- Polygon95,472,910 known-asset census:CTF/pUSD22.571890 unchanged, four cleared
+  losses/archived debut still zero. NativeaUSDC122.068734,+.001481 versus14:40
+  execution receipt. Live native-USDC APY3.085980%, unpaused/unfrozen, versus
+  cached3.1277%/4.0696h.18 receipts verified; known-assets only. Winning Hormuz
+  .003571 retained as gas-negative using prior175036units/current gas/rounded
+  FX; no new simulation, redemption rerun, transfer or other asset action.
+- Bounded consistency follow-up verified the repeated-event-ID check is an
+  intentional fail-closed pagination guard. The watcher rejects nonzero scans
+  before reading latest output; no execution-consumer bug established. The14:03
+  failure lacked event/page/cursor evidence, so root cause is unknown. A later
+ 17:53 last-good alias was observed, not certified here as reviewed opportunity
+  coverage. No scan rerun/code change/extra timer; future full review remains due.
+- Health18:11:16: four exact-one canonical current-code daemons unchanged;
+  disk1033.00MiB>512warning/128critical, MemAvailable1175MiB. Routine news state
+  310.7s/heartbeat1715.1s within thresholds. Public alert tails after15:08 have no
+  new entries; that does not prove no news. Seven protected records, all196
+  decision objects, prior journal/CSV prefix preserved. One CSV point/README/
+  backlog/handoff updated; material Telegram1142 delivered once.
+  Next existing22:00, weeklyOct16/monthlyNov12; manual copper/Base access/writer/
+  January thesis and issuer-account credential rotation remain external blockers.
+  No discovery rerun, watcher, goal or idle follow-up. Evidence:
+  data/periodic_20261013T1800_*.json;logs/periodic_20261013T1800/.
