@@ -1,3 +1,23 @@
+## Oct-13 14:00 full check — completed; Gemini sale verified, no new entry
+
+- Sold98.05 Gemini≥50 NO for12.252260 pUSD net, .442030 implied deduction;
+  remaining4.034750 is below5-share minimum. Approx $3.29 loss versus allocated
+  entry cost. Central8% favors cash at current bids; upper18% favors retention.
+  OpenAI19/Clarity29-29 held, priors unchanged, no add or recovery claim.
+- Final trading midpoint/depth192.42/189.60 at~15:08, +8.38/+7.87 versus10:02;
+  depth+11.53% versus170 beforeVM/API. Residual19.29 is rounded accounting.
+  Receipt-driven SELL-fee quote correction validated by169 checks/137 tests.
+- All19 initial routine types once/rc0; source60/five criteria/Senate256 unchanged.
+  DirectOpenAI403/caching/subset risks remain.10 discovery types:9rc0/consistency
+  rc1, no fresh consistency result. One candidate criterion read;3079 unreviewed.
+  Fed lead lacks verified December-matched probability/economics; no vetted entry.
+- Post-sale token/cash/tx/orders verified; snapshot fix followed byCLEAN audit.
+  Six protected records and original forecasts/history retained. News restarted
+  for changed imported module; four daemons current,1052.43MiB disk above warning.
+  Telegram1141 sent once; oneCSV point/handoff refreshed. Next18:00, weeklyOct16,
+  monthlyNov12; manual access/credential blockers unchanged, no new timer/goal.
+  Evidence:journal~15:08,data/checkin_20261013T1400_*.json,current run logs.
+
 ## Oct-13 10:00 light check — completed; HOLD / NO ADD
 
 - Trading midpoint/depth184.04/181.73USD, −.48/−.92vs06:02; depth+6.90%vs170
@@ -4211,20 +4231,27 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-13 10:00:** next-Pro debut is closed/zero shares;
-its archived forecast remains unresolved. Held Gemini≥50 NO102.084750 and
-OpenAI≥55 NO19; judgmental central .08/.25, stress .01/.15. Mounted full60
-remains G46.2/O53.6, sampled Diamond core unchangedvs06; older priors below
-are historical. No hold-only rule, automatic re-entry or enlargement.
+**Current HLE state, Oct-13 14:00 full check:** Gemini≥50 NO reduced from
+102.084750 to4.034750 shares: one verified98.05-share FOK sale credited12.252260
+pUSD net. Remainder is below5-share minimum; no automatic buy to clear it.
+OpenAI≥55 NO19 and Clarity complete29/29 retained. Next-Pro debut remains zero;
+its archived forecast stays unresolved. Judgmental central G/O .08/.25, stress
+.01/.15, upper .18/.38 and joint-win .03 unchanged. Older priors below are historical.
 
-Planning exits4.9103/3.3078: central joint-win .03, independent and perfect
-central dependence all hold at current bids. Stress favors full exits; G's
-free-carry trim boundary7.8105% is near8%. Worse OpenAI depth does not require
-sale or imply recovery. HOLD / NO ADD acknowledges uncalibrated dependence/
-priors and existing1,000-question Diamond rule-equivalence risk. Browser now
-matches the previously observed unheld Wonder row; no new held threshold fact.
-Three direct OpenAI403 pages keep releases partial; exact named-source/fallback
-rules and fresh gates control later action. Evidence: latest journal/README.
+Higher Gemini bids favored cash under the central model; upper18% favored more
+retention. Actual-cash central sale-minus-hold Elog+.0322708, upper-independent
+−.0112594; no calibrated robustness/recovery claim. Original per-level optimizer
+calculations remain approximations after the receipt-driven SELL-fee correction.
+Quotes now use max(level-sum, aggregate filled-price curve), ceiled to5dp; no
+universal grouping claim. Sources still full60 G46.2/O53.6, subset-equivalence
+risk and directOpenAI403 gaps persist. Fresh exact criteria/source/account/book/
+fee/lock gates govern later actions. No automatic re-entry/enlargement/hold-only rule.
+
+**Discovery coverage gap, Oct-13 14:00:** consistency scan failed on a repeated
+active-event keyset ID and produced no fresh result. Capped discovery selected3080
+rows, but only one literal criterion was reviewed. Broader output is not vetted
+probability/economics or exchange-wide absence evidence. Existing cron handles
+the next review; no extra timer or idle retry. See latest journal/README.
 
 **Oct-2 claim correction:** deindexed Hormuz NO dust is **.003571 winning
 shares**, not losing. Its archived token derives from legacy USDC.e.

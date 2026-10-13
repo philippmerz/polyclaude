@@ -49,7 +49,7 @@ from pathlib import Path
 
 import httpx
 
-from book_walk import maker_rest_price
+from book_walk import conservative_sell_fee, maker_rest_price
 from gamma_market_lookup import GammaLookupError, lookup_active_market_identifier
 import pm_fees
 
@@ -1912,16 +1912,22 @@ def _marketable_sell_plan(bids: list[dict], shares: float,
         levels.append((price, size))
     cumulative = 0.0
     remaining = target
-    net_proceeds = 0.0
+    gross_proceeds = 0.0
+    level_fee = 0.0
     for price, size in sorted(levels, key=lambda level: -level[0]):
         cumulative += size
         take = min(size, remaining)
         fee = pm_fees.fee_per_share(fee_market, price)
         if not math.isfinite(fee) or fee < 0.0 or fee >= price:
             raise RuntimeError("invalid rollback fee curve")
-        net_proceeds += take * (price - fee)
+        gross_proceeds += take * price
+        level_fee += take * fee
         remaining -= take
         if remaining <= 1e-9:
+            fee = conservative_sell_fee(
+                gross_proceeds, target, level_fee, fee_market
+            )
+            net_proceeds = gross_proceeds - fee
             return price, cumulative, net_proceeds
     raise RuntimeError(f"only {cumulative:.2f} shares bid across the book")
 

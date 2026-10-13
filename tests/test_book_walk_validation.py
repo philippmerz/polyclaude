@@ -76,11 +76,13 @@ def test_empty_book_and_zero_request_remain_valid():
     }
 
 
-def test_numeric_strings_and_nonlinear_per_level_fees_are_preserved():
+def test_numeric_strings_and_conservative_aggregate_fee_are_preserved():
     bids = [{"price": ".2", "size": "2"}, {"price": ".6", "size": "2"}]
     market = {"feeSchedule": {"rate": .25, "exponent": 2, "takerOnly": True}}
     result = book_walk.realizable(bids, "3", market)
     assert result["gross"] == pytest.approx(1.4)
-    assert result["fee"] == pytest.approx(2 * .25 * (.6 * .4) ** 2 + .25 * (.2 * .8) ** 2)
-    assert result["net"] == pytest.approx(result["gross"] - result["fee"])
+    # The executed average fee is greater than this schedule's per-level sum;
+    # quote the conservative max and ceil to five decimal places.
+    assert result["fee"] == pytest.approx(0.04646)
+    assert result["net"] == pytest.approx(1.35354)
     assert result["unfilled"] == 0

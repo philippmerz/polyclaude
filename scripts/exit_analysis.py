@@ -3,8 +3,8 @@
 
 Every exit is three options, not two, and the fee makes the route decisive:
   HOLD            -> EV = shares x fair            (resolution is FEE-FREE)
-  SELL TAKER now  -> walk the real BID book, minus the execution-time V2 taker
-                     curve at each level (`pm_fees`, including its exponent)
+  SELL TAKER now  -> walk the real BID book, minus a conservative execution-
+                     time V2 fee estimate (`pm_fees`, including its exponent)
   REST MAKER sell -> post-only, fee-free, so the breakeven price IS `fair`;
                      the order only fills if someone pays >= fair.
 
@@ -38,6 +38,7 @@ from pathlib import Path
 
 import httpx
 
+import book_walk
 from pm_fees import fee_per_share, fee_schedule
 import position_groups
 
@@ -125,9 +126,12 @@ def _walk_bid_options(token: str, shares: float,
                       fee_market: dict | None) -> list[tuple[float, float, float]]:
     """Return cumulative ``(gross, filled, fee)`` at each real bid level.
 
-    Fees are calculated at every fill level. Applying a non-linear V2 curve to
-    the volume-weighted average price is not equivalent when a sale crosses
-    multiple levels, particularly when ``feeSchedule.exponent != 1``.
+    Each prefix uses the greater of per-level fees and the fee curve at that
+    prefix's actual executed average. A confirmed multi-price SELL tracked
+    aggregate execution-price behavior within rounding, but does not prove
+    universal grouping; retaining the level sum protects schedules where it is
+    larger. The resulting fee estimate is rounded upward to five decimal
+    places, with sub-picodollar float noise guarded at the decimal boundary.
 
     Keeping every prefix matters for binaries: the best forward action can be
     to sell only top-of-book shares whose net bid exceeds their expected
@@ -137,7 +141,7 @@ def _walk_bid_options(token: str, shares: float,
     b = httpx.get("https://clob.polymarket.com/book",
                   params={"token_id": token}, timeout=15).json()
     bids = sorted(b.get("bids", []), key=lambda x: -float(x["price"]))
-    rem, gross, fees = shares, 0.0, 0.0
+    rem, gross, level_fees = shares, 0.0, 0.0
     options: list[tuple[float, float, float]] = []
     for lvl in bids:
         px, sz = float(lvl["price"]), float(lvl["size"])
@@ -146,9 +150,13 @@ def _walk_bid_options(token: str, shares: float,
             raise ValueError("malformed binary bid level")
         take = min(rem, sz)
         gross += take * px
-        fees += take * fee_per_share(fee_market, px)
+        level_fees += take * fee_per_share(fee_market, px)
         rem -= take
-        options.append((gross, shares - rem, fees))
+        filled = shares - rem
+        fees = book_walk.conservative_sell_fee(
+            gross, filled, level_fees, fee_market
+        )
+        options.append((gross, filled, fees))
         if rem <= 0:
             break
     return options

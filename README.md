@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 173 recorded observations from Apr-25 through Oct-13, including
-93 eligible trading-midpoint and 86 eligible trading-depth observations. Rounded
+The chart now has 174 recorded observations from Apr-25 through Oct-13, including
+94 eligible trading-midpoint and 87 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -74,48 +74,51 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-13 ~10:02 UTC
+## Last bankroll snapshot — 2026-10-13 ~15:08 UTC
 
-Bankroll collected 10:02:21.698672–10:02:41.102396 UTC; positions collected
-separately at 10:01:56.569538–10:01:59.470262. Sequential estimates are not
-synchronized NAV or guaranteed liquidation.
+Final bankroll collected 15:07:46.378936–15:08:01.726672 UTC after the 14:00
+check's Gemini sale and fee correction. Positions were collected separately
+at 15:07:44.798359–15:07:46.378373. Sequential estimates are not synchronized
+NAV or guaranteed liquidation; the Gemini remainder is below venue minimum.
 
 | Measure | Value |
 |---|---:|
-| Unresolved legs, including Trump dust | 5 |
-| Position cost | $47.64 |
-| PM midpoint / indicative fee-net depth | $39.10 / $36.79 |
-| Whole-account marked / approximate depth | $190.52 / $188.21 |
-| Settled-P&L accounting residual | +$22.58 |
+| Indexed unresolved legs, including dust | 5 |
+| Remaining position cost | $32.10 |
+| PM midpoint / indicative fee-net depth | $35.23 / $32.41 |
+| Whole-account marked / approximate depth | $198.72 / $195.90 |
+| Settled-P&L accounting residual | +$19.29 |
 
-- **Trading midpoint/depth:** $184.04/$181.73 excluding separately funded gas
-  $6.48; −$0.48/−$0.92 since ~06:02. Depth +6.90% versus $170 before VM/API
-  costs. Residual unchanged rounded accounting, not audited profit. No asset action.
-- **HOLD / NO ADD:** judgmental G/O NO priors .08/.25, stress .01/.15.
-  Planning full exits $4.9103/$3.3078. Central joint-win .03, independent and
-  perfect central dependence cases hold at current bids; stress favors exits.
-  OpenAI's thin book worsened. Gemini's idealized-carry trim boundary7.8105%
-  remains near8%; no recovery or calibrated robustness claim. Later action needs
-  fresh execution gates. Clarity complete29/29 exit28.5691/freecarry28.7621<29
-  floor before costs and the51–58-vote extra payout; never act on one member.
-- **Sources:** full HLE60, five held criteria/state, Senate256 and sampled
-  article cores/RSS unchangedvs06:00; G46.2/O53.6, APIAge3043s is cache metadata.
-  Browser now matches the earlier unheld Wonder edit in the CAIS/Scale Diamond
-  article. Its different1,000-question subset leaves existing equivalence risk;
-  no new held threshold fact. AA57/44 is a separate evaluator. Three direct
-  OpenAI403 pages and limited browser coverage do not establish release absence.
-- **Inventory/cash:** knownCTF/pUSD10.319630 unchanged, four cleared losses0.
-  Native aUSDC122.065248 at Polygon95,453,636; live variable3.0889% APY versus
-  cached3.0149%/23.85h. Winning Hormuz dust remains gas-negative; no new simulation.
-- **Last discovery02:00:** primary995fetched/80selected, thin42260/3000, capped
-  with459/364 top omissions; only3 criteria read, remaining cases unreviewed.
-  LoL lead lacked verified primary odds/status and passed neither fee-aware price
-  screen. No discovery rerun at this light check or exchange-wide absence claim.
-- **Operations:** all19 routine types once/rc0,38 streams verified; no orders,
-  UMA/Ostium change, watch hit, overdue decision or public alert through
-  2026-10-13T10:08:21Z. Four canonical daemons current; disk1073.79MiB
-  above warning. Original records/history retained; no quiet Telegram/new timer/
-  goal. Next existing14:00, weeklyOct16, monthlyNov12; manual access blockers remain.
+- **Trading midpoint/depth: $192.42/$189.60**, excluding $6.30 separately funded
+  gas; +$8.38/+$7.87 since ~10:02. Depth +11.53% versus $170 before VM/API costs.
+  The residual is rounded accounting, not audited cash profit.
+- **Gemini sale verified:** one FOK sold98.05 NO shares for12.252260 pUSD net,
+  with .442030 implied deduction; remaining4.034750 shares are below the5-share
+  minimum. Wallet pUSD22.571890; other known CTF/nativePOL unchanged. Approximate
+  loss versus allocated entry cost $3.29. The retained judgmental8% NO central
+  case favored cash at these bids; the18% alternative favored more retention.
+  Original probabilities/forecasts remain unchanged; no recovery/robustness claim.
+- **Fee correction:** the receipt differed from per-level fees by .00173115 USD.
+  Aggregate execution-price formula reconciles at5dp in this one case. SELL quotes
+  now conservatively compare both estimates and round upward; partial fills use
+  filled shares. 169 money checks/137 tests pass; universal fee grouping is unproven.
+- **Retained positions:** OpenAI19 NO and complete Clarity29/29, no add. Clarity
+  pre-sale exit28.5691/free-carry28.7641<29floor before costs and its extra payout.
+  Final OpenAI mark.265 versus average fee-net exit.174 exposes a9.1pp depth gap.
+  Fresh execution gates are required for any later action.
+- **Sources:** mounted fullHLE60, five held criteria/state, Senate256 and sampled
+  article cores unchanged versus10:00; G46.2/O53.6, AA57/44 separate. Cache metadata,
+  Diamond's different1000-question subset and three directOpenAI403 gaps retain
+  uncertainty; limited browser supplements do not establish release absence.
+- **Discovery:** primary995 fetched/80selected, thin42938/3000; capped with558/281
+  top omissions. Only one literal candidate criterion read;3079 selected cases
+  unreviewed. Consistency scan failed; no fresh result. Fed lead lacked a verified
+  December-matched distribution/economics. No vetted entry or global absence claim.
+- **Operations:**19 initial routine types/rc0, post-sale snapshot reconciled/CLEAN,
+  no open orders or redemption. Four canonical daemons current; news restarted
+  to reload an imported module. Disk1052.43MiB above warning. Material Telegram1141
+  delivered; one CSV point and records updated. Next existing18:00, weeklyOct16,
+  monthlyNov12; manual copper/Base and credential-rotation blockers remain.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

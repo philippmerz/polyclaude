@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Indicative position proceeds at supplied bid depth, including per-fill fees.
+"""Indicative position proceeds at supplied bid depth with conservative fees.
 
 WHY THIS EXISTS (2026-08-14). "Realizable value" was computed in four places
 with three different answers:
@@ -30,8 +30,24 @@ from __future__ import annotations
 
 import math
 from collections.abc import Iterator
+from decimal import Decimal, ROUND_CEILING
 
 from pm_fees import fee_per_share, fee_per_share_at
+
+_FEE_QUOTE_QUANTUM = Decimal("0.00001")
+_FEE_FLOAT_GUARD = 1e-12
+
+
+def _ceil_fee_quote(value: float) -> float:
+    """Round a nonnegative quote fee up to the observed five-decimal precision."""
+    if value == 0:
+        return 0.0
+    # Values are accumulated in binary floats. Nudge only sub-picodollar
+    # representation noise below a decimal boundary before strict ceiling.
+    adjusted = max(0.0, value - _FEE_FLOAT_GUARD)
+    return float(Decimal(str(adjusted)).quantize(
+        _FEE_QUOTE_QUANTUM, rounding=ROUND_CEILING
+    ))
 
 
 def _finite_nonnegative(value: object, name: str) -> float:
@@ -105,6 +121,35 @@ def walk_bids(bids: list[dict], size: float) -> tuple[float, float, float]:
     return proceeds, proceeds / float(size), max(0.0, left)
 
 
+def conservative_sell_fee(
+    gross: float, filled: float, level_fee: float, market: dict | None
+) -> float:
+    """Conservative quote across observed per-level and aggregate-fee models.
+
+    A confirmed multi-price SELL receipt reconciled more closely to the fee
+    curve applied at the execution's aggregate price (gross / actually filled)
+    than to a sum charged independently at each maker price. The grouping rule
+    is not established universally, so quote at least the existing level-wise
+    amount and take the greater of the two, rounded upward at observed
+    five-decimal fee precision. Do not divide by requested shares: unfilled
+    depth incurs no fee and would bias the executed average down.
+    """
+    gross = _finite_nonnegative(gross, "gross proceeds")
+    filled = _finite_nonnegative(filled, "filled shares")
+    level_fee = _finite_nonnegative(level_fee, "level fee")
+    if filled == 0:
+        if gross != 0 or level_fee != 0:
+            raise ValueError("zero filled shares cannot have proceeds or fees")
+        return 0.0
+    if gross > filled:
+        raise ValueError("gross proceeds exceed binary share payout")
+    aggregate_price = gross / filled
+    aggregate_fee = filled * fee_per_share(market, aggregate_price)
+    if not math.isfinite(aggregate_fee) or aggregate_fee < 0:
+        raise ValueError("invalid aggregate sell fee")
+    return _ceil_fee_quote(max(level_fee, aggregate_fee))
+
+
 def maker_rest_price(best_bid: float, best_ask: float | None, tick: float) -> float:
     """Where a passive maker BUY actually rests: best_bid+tick, capped one tick
     under the ask, floored to the 2-dec amount grid (CLOB maker-USD precision —
@@ -142,17 +187,20 @@ def realizable(bids: list[dict], size: float, market: dict | None) -> dict:
     genuinely could not be fetched, which charges the conservative fallback
     rate rather than assuming free.
 
-    Curved fees must be charged at each actual fill price. Charging the curve
-    at avg_fill is not equivalent, and partial-depth averages also include
-    unsold shares. Those unsold shares have neither proceeds nor fees here.
+    The per-level fee sum remains a conservative floor. A confirmed multi-price
+    SELL reconciled to the fee curve evaluated at aggregate executed price;
+    because universal fee grouping is unproven, use the greater estimate.
+    Unfilled shares have neither proceeds nor fees.
     """
     size = _finite_nonnegative(size, "requested size")
-    gross, fee = 0.0, 0.0
+    gross, level_fee = 0.0, 0.0
     left = size
     for take, price in _bid_fills(bids, size):
         gross += take * price
-        fee += take * fee_per_share(market, price)
+        level_fee += take * fee_per_share(market, price)
         left -= take
+    filled = size - max(0.0, left)
+    fee = conservative_sell_fee(gross, filled, level_fee, market)
     avg_fill = gross / float(size) if size > 0 else 0.0
     unfilled = max(0.0, left)
     return {

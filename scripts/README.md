@@ -38,6 +38,7 @@ positions; they do not create a recurring stock or brokerage workflow.
 
 - `wallet_status.py` — Polymarket-sleeve MATIC + USDC balance on Polygon.
 - `positions.py` — Polymarket open positions with mark-to-market P&L.
+- `book_walk.py` — indicative bid proceeds. SELL fees use the greater of per-level and aggregate executed-price estimates, rounded upward to five decimals; partial fills use filled shares. This conservative convention follows one reconciled receipt and does not prove universal exchange fee grouping or executable depth.
 - `crypto_status.py` — multi-chain balance reader for either sleeve. Subcommand: `crypto` (default) or `polymarket`.
 - `discover_markets.py` — paginated Polymarket Gamma discovery profiles. Snapshot sidecars record fetch stop/completeness, filter exclusions and top-N omissions. Optional win-assumed carry filtering now precedes top-N; `--top 0` retains all survivors. Liquidity/volume are not executable depth.
 - `market_context_batches.py` — deterministic offline organizer for discovery snapshots. It compares the latest two snapshots of one scan kind, ranks material identity/criteria/quote changes, keeps observed rows from an exact Gamma event together, and emits proof-hashed JSON or Markdown batches. It never calls the network, a model, or execution; each item still requires exact-criteria review and a fresh live-book walk.

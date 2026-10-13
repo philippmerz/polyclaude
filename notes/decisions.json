@@ -1,5 +1,5 @@
 {
-  "next_id": 195,
+  "next_id": 197,
   "decisions": [
     {
       "id": 1,
@@ -4137,6 +4137,45 @@
         "targets_absent_from_holdings_api": true
       },
       "resolved_at": "2026-10-12T15:38:00Z"
+    },
+    {
+      "id": 195,
+      "timestamp": "2026-10-13T14:43:50Z",
+      "type": "size_change",
+      "thesis": "Gemini NO repriced while mounted named-source60 rows/rules/AA remained unchanged. Retain judgmental NO8% central (1% stress,18% upper); two independent reviews expose unobserved-info/upper-prior risks. Live bid-segment log-growth optimum98.06; executable98.05 shares at FOKlimit.088 with cashprecision/one-tick bound. Sold98.05 for12.252260 pUSD net (12.694290 gross,0.442030 fee), leaving4.034750 below min5. Current cash beats central terminal value7.844USD; no new probability or profit-from-entry claim. O19 and Clarity29/29 intact; original forecasts remain pending.",
+      "confidence": "medium",
+      "prediction": "One FOK SELL reduces exact Gunits102084750 to4034750 and raises pUSD10319630 to22571890, other knownCTF/POL unchanged, no live order; these execution facts are verified. Investment prediction: at retained NO8% the sale improves expected log wealth versus holding; grade the foregone98.05-share binary payout at year-end/Jan2. If NO wins, foregone payout98.05 exceeds sale cash; if NO loses, retained cash avoids zero. Upper18% favors a smaller trim, not full robustness.",
+      "size_usd": 12.25226,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "gemini-hle",
+        "quantized-exit",
+        "conditional-log-growth"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 196,
+      "timestamp": "2026-10-13T15:09:39Z",
+      "type": "scaffolding",
+      "thesis": "The confirmed Gemini SELL implied 0.442030 USD deduction versus 0.4402988468 per-level estimate. One-order aggregate-price formula reconciles at documented 5dp, without proving universal grouping. Book walks, exit prefixes and rollback quotes now use max(level_sum, aggregate executed-price fee), ceiled to 5dp with 1e-12 float tolerance; BUY and writer paths unchanged.",
+      "confidence": "high",
+      "prediction": "The observed 98.05-share/gross12.694290 case quotes fee0.44204/net12.25225 conservatively; partial-depth uses filled shares and no-fee cases stay zero; required money and affected-consumer tests pass.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-13",
+      "tags": [
+        "sell_fee",
+        "receipt_reconciliation",
+        "validation"
+      ],
+      "slug": null,
+      "outcome": "Implemented quote-only correction in book_walk, exit_analysis and rollback preflight. Receipt-anchored tests passed: 169 money-math checks and 137 focused pytest cases, including partial depth, 5dp rounding and other curve schedules. No new trade.",
+      "calibration_delta": "Operational validation only; no probability or ROI grading.",
+      "lesson": "Preserve actual receipt fees and original forecasts. A single trade supports conservative quote math but does not establish every venue aggregation/rounding rule. Historical per-level optimizer certificates remain approximations for the corrected engine.",
+      "resolved_at": "2026-10-13T15:09:39Z"
     }
   ]
 }

@@ -98,7 +98,7 @@ def test_unreachable_compact_metadata_fails_closed(monkeypatch) -> None:
     assert exits._execution_fee_market(CID) is None
 
 
-def test_book_walk_charges_each_level_with_structured_exponent(monkeypatch) -> None:
+def test_book_walk_keeps_conservative_max_for_structured_exponent(monkeypatch) -> None:
     book = {
         "bids": [
             {"price": "0.40", "size": "3"},
@@ -113,10 +113,11 @@ def test_book_walk_charges_each_level_with_structured_exponent(monkeypatch) -> N
 
     gross, filled, fee = exits._walk_bids("token", 4.0, market)
 
-    expected_fee = 2 * 0.25 * (0.60 * 0.40) ** 2 + 2 * 0.25 * (0.40 * 0.60) ** 2
+    level_fee = 2 * 0.25 * (0.60 * 0.40) ** 2 + 2 * 0.25 * (0.40 * 0.60) ** 2
+    aggregate_fee = 4 * 0.25 * (0.50 * 0.50) ** 2
     assert gross == pytest.approx(2.0)
     assert filled == pytest.approx(4.0)
-    assert fee == pytest.approx(expected_fee)
+    assert fee == pytest.approx(max(level_fee, aggregate_fee))
 
 
 def test_best_sale_prefix_finds_profitable_trim_hidden_by_full_walk(monkeypatch) -> None:

@@ -28964,3 +28964,106 @@ Operations, preservation and closeout:
 - Validation:10 chart checks pass; four valid offline packets9736/10047/9737/9936
   bytes, no source mismatches/live state/execution authority. Original financial
   records/history and the CSV source line/counts independently verified.
+
+
+### 2026-10-13 ~15:08 UTC — 14:00 full check: Gemini sale verified; SELL-fee estimate corrected
+
+- Final bankroll collected 15:07:46.378936–15:08:01.726672 UTC after the sale
+  and fee correction: $198.72 total, $6.30 separately funded gas, PM midpoint
+  $35.23 and indicative fee-net depth $32.41, remaining basis $32.10.
+  Trading midpoint/depth $192.42/$189.60; +$8.38/+$7.87 versus ~10:02,
+  depth +11.53% versus $170 before VM/API costs. Whole-account depth $195.90.
+  Positions were separately collected 15:07:44.798359–15:07:46.378373.
+  Sequential estimates are not synchronized NAV or guaranteed liquidation.
+  Settled-P&L residual $19.29 is rounded accounting, not audited cash profit.
+  The sale reduced that residual by about $3.29 versus allocated entry cost.
+  Initial 14:02 bankroll $200.36/PM49.14/depth43.29 and separate position depth
+  43.71 remain recorded; they are not the post-sale chart point.
+- All 19 initial routine types ran once with rc0; 38 streams and exact process
+  windows verified. Usage 6% used/94% headroom; Kelly used same-run200.36.
+  No pre-existing orders, Ostium change, watch hit or overdue decision. UMA
+  flagged Gemini YES .947→.858; held NO's available bids rose. No source-based
+  probability revision: judgmental G/O NO .08/.25, stress .01/.15, upper .18/.38
+  and central joint-win .03 remain unchanged. These are uncalibrated inputs.
+- Mounted homepage→current bundle→actual HLE API verified full60 equal to10:00:
+  G46.2/O53.6. Five exact criteria/state records and all256 Senate rows unchanged;
+  HR3633's failed49–50 procedural cloture is not final passage. Source window
+  14:01:47–14:01:53: 17 requests,14HTTP200/3directOpenAI403;26 integrity files.
+  APIAge2977s is cache metadata. Actual chart request headers were required for
+  the execution source read. Google Argon/September and CAIS/ScaleDiamond cores/
+  RSS unchanged; AA57/44 is a separate evaluator. Diamond's different1000-question
+  subset still presents rule-equivalence risk. Limited browser supplements and
+  403 gaps do not establish that no release exists. Targeted Gemini source check
+  observed no qualifying change; cached/unobserved information remains possible.
+- Root's pre-sale joint scenarios/bid-segment optimization and independent
+  skeptic/champion review favored reducing G under the retained central model.
+  The upper .18 case favored a smaller trim, exposing real probability risk.
+  Two attempts failed before any writer: bare-source403, then insufficient current
+  depth for102.08 shares at.11. No order from either failed preflight. Final current
+  book gave a conditional98.06-share continuous optimum,98.05 feasible, limit.088
+  (one tick below the lowest walked bid). These original per-level-fee calculations
+  remain approximations, not global-optimum certificates for the corrected engine.
+- One vetted CLOBv2 FOK SELL at14:40:06.180306–14:40:07.052929 sold98.05 Gemini
+  ≥50 NO shares, market3072356, condition
+  0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e.
+  Exact slug/token are preserved in DEC0195 and execution receipts. Fresh account,
+  fully paginated orders, reservations/entry locks, criteria/deadline, approval,
+  min5/tick.001, fees, quantity and depth gates passed. Gross12.694290 pUSD;
+  receipt-matched wallet credit12.252260; implied deduction .442030.
+  Tx0x21aeb55feaa69d01d2edbf6437175fa9acea2a845419576240cb1cf145a1294d
+  confirmed status1/block95,464,732; authenticated trade CONFIRMED/order MATCHED.
+  G units102,084,750→4,034,750; pUSD10,319,630→22,571,890. All other known CTF
+  units/nativePOL unchanged; post-orders empty. Remaining4.034750 shares are below
+  the5-share venue minimum, not a fully closed position. No buy to clear residue.
+- Fee reconciliation found .0017311532 USD more deduction than the old per-level
+  estimate .4402988468. Applying the published curve at aggregate execution price
+  gives .44203167196, consistent with observed .442030 at documented5dp.
+  One receipt does not prove universal fee grouping. Shared SELL quotes now use
+  max(level-sum, aggregate filled-price fee), ceil to.00001 with1e-12 float tolerance.
+  Filled shares determine the fee denominator; requested-size display stays intact.
+  Exit prefixes and rollback loss guards use that helper; BUY/writer paths unchanged.
+  Corrected quote .44204/net12.25225; corrected limit-floor8.31363 exceeds central
+  raw terminal EV7.844. Actual-cash sale-minus-hold Elog+.0322708 under retained
+  central scenarios, versus−.0112594 upper-independent. No calibrated robustness,
+  recovery or profit claim. 169 money checks/137 focused tests pass; independent
+  review agrees with the bounded correction. DEC0196 grades operational validation
+  only; original195 decisions remain exact. DEC0195's financial outcome remains pending.
+- Keep OpenAI19 and complete Clarity29/29, no add. Pre-sale Clarity exit28.56906/
+  idealized free constant-rate Aave carry28.76407 remains below29 floor, before
+  costs and51–58-vote extra29 payout. Never act on one member. Polygon95,463,259
+  initial known-asset census proved four cleared losses and archived debut zero;
+  nativeaUSDC122.066985. Execution verification later read122.067253.
+  Live native-USDC reserve unpaused/unfrozen, variable APY3.127695%; cached3.13%
+  was fresh. Keep pUSD22.571890 as CLOB funding buffer; no additional route assumed
+  free. Known-assets only, not an exhaustive chain census. Normal redeem-all once
+  rc0 returned no winning redemption; deindexed winning Hormuz.003571 retained,
+  gas-negative from prior175036 units/current gas/rounded FX, not a fresh simulation.
+- Discovery ran10 bounded types once:9rc0, consistencyrc1 (active-event keyset
+  repeated an event id), no fresh consistency result. Its accidentally copied stale
+  report was removed; exact removed-copy path/hash were not retained and are excluded
+  from verified counts. Primary995fetched/638eligible/80selected/558top-omitted,
+  10-pagecap. Thin42938/3281/3000/281 with correct vol20 profile,20event-pagecap.
+  Offline batches3+131 emitted56+2309 rows; all batch/scanner output reviewed,
+  only1 literal candidate criterion read;3079 selected rows remain unreviewed.
+  Monotonicity's one measured candidate walked−5.94pp; sports lacked a verified
+  actionable probability; favorite profile supplies no certified edge/population prior.
+  July3 source-freeze comparison proves updating, not a new release or permanent freeze.
+  Fed candidate1168141 exact criteria match, but no current December-matched FedWatch
+  distribution/fee-aware executable economics was verified. SKIP; no mean-rate proxy,
+  new forecast or entry. Pagecaps and errors preclude exchange-wide absence claims.
+- Post-sale snapshot audit initially rc1 for old G size; vetted --fix updated5
+  indexed+1deindexed rows and returnedrc1 for its initial finding. Following read-only
+  audit rc0/CLEAN. Receipt audit verified18 initial inventory/12 planning/37 final
+  execution receipts, six untouched protected records and original194 decision objects.
+  Closing80-row public tails had zero after14:00:01/zero parse errors; no private
+  inbox/history read. News watcher restarted once because it imports the changed
+  module in-process; exact-one canonical newPID599698, other three unchanged.
+  Health15:07:51: four current canonical daemons,1052.43MiB disk above512warning/
+  128critical, MemAvailable1123.13MiB. No cleanup/new watcher/timer/goal or idle follow-up.
+- Telegram1141 delivered once. One final CSV observation/README/backlog/handoff
+  refreshed; original journal/CSV prefix and six protected records retained. Next
+  existing18:00, weeklyOct16, monthlyNov12; manual copper/Base route/writer/January
+  thesis and issuer-account credential rotation remain external blockers.
+  Evidence:data/checkin_20261013T1400_*.json;logs/checkin_20261013T1400/;
+  logs/fee_quote_validation_20261013.json. Required chart/packet/publication checks
+  are recorded in this run's completion audit.
