@@ -124,7 +124,7 @@ def _execution_fee_market(condition_id: str) -> dict | None:
 
 def _walk_bid_options(token: str, shares: float,
                       fee_market: dict | None) -> list[tuple[float, float, float]]:
-    """Return cumulative ``(gross, filled, fee)`` at each real bid level.
+    """Return minimum-size-valid ``(gross, filled, fee)`` planning prefixes.
 
     Each prefix uses the greater of per-level fees and the fee curve at that
     prefix's actual executed average. A confirmed multi-price SELL tracked
@@ -133,13 +133,27 @@ def _walk_bid_options(token: str, shares: float,
     larger. The resulting fee estimate is rounded upward to five decimal
     places, with sub-picodollar float noise guarded at the decimal boundary.
 
-    Keeping every prefix matters for binaries: the best forward action can be
+    The exact ``min_order_size`` boundary is included when it falls inside a
+    bid level, as well as each later level endpoint. Missing or invalid minimum
+    metadata fails closed: a partial depth below the venue minimum cannot
+    justify a taker recommendation. These are planning candidates, not a fill
+    guarantee. Keeping every minimum-size-valid prefix matters for binaries:
+    the best forward action can be
     to sell only top-of-book shares whose net bid exceeds their expected
     terminal payout, while retaining the lower-book remainder. Comparing only
     an all-position walk can hide that EV-improving trim.
     """
     b = httpx.get("https://clob.polymarket.com/book",
                   params={"token_id": token}, timeout=15).json()
+    try:
+        raw_minimum = b["min_order_size"]
+        if isinstance(raw_minimum, bool):
+            raise ValueError("boolean minimum")
+        min_order_size = float(raw_minimum)
+    except (KeyError, TypeError, ValueError):
+        raise ValueError("missing or invalid book min_order_size") from None
+    if not math.isfinite(min_order_size) or min_order_size <= 0.0:
+        raise ValueError("missing or invalid book min_order_size")
     bids = sorted(b.get("bids", []), key=lambda x: -float(x["price"]))
     rem, gross, level_fees = shares, 0.0, 0.0
     options: list[tuple[float, float, float]] = []
@@ -148,15 +162,28 @@ def _walk_bid_options(token: str, shares: float,
         if (not math.isfinite(px) or not 0.0 <= px <= 1.0
                 or not math.isfinite(sz) or sz < 0.0):
             raise ValueError("malformed binary bid level")
+        prior_filled = shares - rem
+        prior_gross, prior_level_fees = gross, level_fees
         take = min(rem, sz)
         gross += take * px
         level_fees += take * fee_per_share(fee_market, px)
         rem -= take
         filled = shares - rem
+        if prior_filled < min_order_size < filled:
+            boundary_take = min_order_size - prior_filled
+            boundary_gross = prior_gross + boundary_take * px
+            boundary_level_fees = (
+                prior_level_fees + boundary_take * fee_per_share(fee_market, px)
+            )
+            boundary_fee = book_walk.conservative_sell_fee(
+                boundary_gross, min_order_size, boundary_level_fees, fee_market
+            )
+            options.append((boundary_gross, min_order_size, boundary_fee))
         fees = book_walk.conservative_sell_fee(
             gross, filled, level_fees, fee_market
         )
-        options.append((gross, filled, fees))
+        if filled >= min_order_size:
+            options.append((gross, filled, fees))
         if rem <= 0:
             break
     return options
@@ -318,7 +345,7 @@ def main() -> int:
         except Exception as exc:
             print(
                 f"  [UNPRICED] exit book unavailable for {slug[:52]} "
-                f"({type(exc).__name__})",
+                f"({type(exc).__name__}: {exc})",
                 file=sys.stderr,
             )
             # For a group, the absent quote is consumed below as one explicit

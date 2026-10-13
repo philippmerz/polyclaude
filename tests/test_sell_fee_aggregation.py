@@ -112,7 +112,7 @@ def test_exit_analysis_prefix_walk_uses_shared_sell_fee_correction(monkeypatch) 
     monkeypatch.setattr(
         exit_analysis.httpx,
         "get",
-        lambda *_args, **_kwargs: _Response({"bids": bids}),
+        lambda *_args, **_kwargs: _Response({"bids": bids, "min_order_size": "1"}),
     )
 
     options = exit_analysis._walk_bid_options("token", 98.05, MARKET)

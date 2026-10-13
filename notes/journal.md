@@ -29144,3 +29144,83 @@ Operations, preservation and closeout:
   January thesis and issuer-account credential rotation remain external blockers.
   No discovery rerun, watcher, goal or idle follow-up. Evidence:
   data/periodic_20261013T1800_*.json;logs/periodic_20261013T1800/.
+
+
+### 2026-10-13 ~22:03 UTC — light check: Diamond-only API additions reviewed; exit minimum fixed
+
+- Bankroll22:03:07.891490–22:03:23.652703 UTC:197.38 total, gas6.35,
+  PM midpoint33.84/indicative fee-net depth32.29, cost32.10. Trading midpoint/
+  depth191.03/189.48, −.34/−.04 versus18:05; depth+11.46% versus170 before
+  VM/API. Whole-account depth195.83. Separate positions22:02:47.463648–
+ 22:02:48.812320 print the same midpoint/depth; this does not make them
+  synchronized NAV or guaranteed liquidation. Residual19.30 is unchanged
+  rounded accounting, not audited cash profit. No fill, transfer or redemption.
+- All19 routine types once/rc0,38 streams and exact process windows verified;
+  direct usage11%used/89%headroom, same-run197.38 forKelly. Initial collector
+  parent-directory guard stopped before any command; isolated routine directory
+  then used, preserving root/source artifacts. StateCLEAN5indexed+1deindexed,
+  orders terminal-empty, UMA/Ostium/watch/overdue clean. Existing blocked manual
+  copper/Base routes and issuer-account credential rotation remain unchanged.
+- Source22:01:23.865877–22:01:29.434435:17 receipts14HTTP200/3OpenAI403;
+  two Argon announcement/card follow-ups once each.30 source integrity files
+  verified, structural revalidation has two additional integrity files.
+  API has63 model objects: all old60 equal across EVERY field, plus Opus5.5,
+  GPT6.1 Sol and Muse Wonder. New rows have null original-HLE/calibration values,
+  while separate Diamond scores are54.6/53.2/34.7. Highest reported numeric
+  original-HLE G46.2/O53.6 unchanged; missing HLE scores are unknown, not zero.
+  APIAge284s is cache metadata, not publication time or an unknown model's score.
+- Mounted page-bundle URL changed since18:00, but captured code bytes are
+  identical (132823 bytes/SHA243f97cf…). Code still maps scores.hle, filters
+  null HLE scores and labels HLE Accuracy. No current chart switch/relabel to
+  Diamond observed. Raw Diamond59.9 on Astra already existed at18:00; its
+  original-HLE score stays53.6. Literal named-source/clear-equivalent/fallback
+  rules were reread; equivalent-metric/adjudication risk remains, not a certainty.
+- Five held Gamma criteria/state and Senate256 unchanged; AA57/44 separate.
+  Diamond article22vs18 only adds unheld MuseSpark1.3 24.6/55.4 to its with-tools
+  table. It remains a distinct1000-question subset with unobserved edit time.
+  Google Argon/recap cores unchanged, related links changed. No new sampled RSS
+  item after18 cutoff. Current announcement adds public-availability banner/
+  pricing footnote; linked PDF exactly matches18:00, so not reparsed/rendered.
+  Three directOpenAI403 pages and limited browser coverage leave release gaps;
+  no global no-news/no-release or permanently-frozen-source claim.
+- Retain uncalibrated G/O NO .08/.25 central, .01/.15 stress, .18/.38 upper,
+  joint-win.03. New API identities carry no original-HLE qualifier; same source
+  metric binding and broader capability already adverse in priors. Pipeline,
+  equivalence and unobserved information remain risks. HOLD O19/Clarity29-29
+  and size-infeasible G4.034750, no add/recovery/robust-hold claim.
+ 12 current quote receipts, authoritative fees/minimum/tick/exact identities,
+  book receipt agesG2.873/C50Y2.144/C58N2.191/O32.701s within180, no fallback.
+  G indicative net.27581725 is belowmin5 in size and cannot execute; O19 net3.30782.
+  Corrected-fee O0-or5..19 .01-lot grid with Gfixed/W186.19 favors central/
+  dependence/upper hold; central full-O-sale Elog−.0066530, stress O19 sale
+  +.0030426. No global optimum/execution guarantee. Clarity exit28.56905/
+  idealized free constant-rate carry28.76046<29floor before costs/extra payout.
+- Routine exit analyzer had recommended selling the4.03-share G residue despite
+  current minimum5. Quote-only fix now requires valid live min_order_size and
+  excludes undersized taker candidates. It also retains the exact minimum
+  crossing INSIDE a bid level; simply filtering endpoints would lose a valid
+ 5-share candidate in4.03@.99 plus lower bids. Root caught that initial omission
+  before commit; corrected case gross3.9994/gain1.4994 at.50 fair (zero fee),
+  fee-aware test recomputes the truncated fee. Final108 tests/169 money checks
+  passed; root independently checked actual captured G book yields no candidate.
+  Missing/invalid minimum fails closed; writer/BUY/priors/group topology unchanged.
+  DEC0197 grades operational validation only, original196 objects preserved.
+  Production HLE parser already handles null rows correctly; only the collection
+  helper's derived float('-') summary needed offline repair. No refetch; transient
+  error trace not retained, so no artifact claim about its exact traceback.
+- Polygon95,482,376 known CTF/pUSD22.571890 unchanged, four cleared losses/
+  archived debut zero. NativeaUSDC122.070431,+.001697 versus18 block; wallet's
+  later122.070442 is a separate capture. Live native-USDC APY3.082325%, supply
+  unpaused/unfrozen, versus cached3.1277% reported8h old.18 raw receipts verified;
+  known-assets only. Winning Hormuz.003571 retained as gas-negative using prior
+ 175036units/current gas/roundedFX, not a new simulation/redemption call.
+- Health22:08:29: four exact-one canonical current daemons,1017.75MiB disk
+  >512warning/128critical, MemAvailable1190.62MiB. Routine lacked configured
+  news-state path; root stat-only follow-up22:14:50 proved age276.07s<1800,
+  no private contents read. Changed analyzer has no in-process daemon import,
+  so no restart required. Public80-row closing tails parsed without errors/no sampled additions
+  since18:05; latest sampled newsOct9/opportunitySep30, not complete news evidence. Six protected records, original196 decisions and prior
+  journal/175-row CSV bytes retained; one new dated point and handoff refreshed.
+  Material Telegram message1143 acknowledged (one575-char part). Next existingOct14 02:00,
+  weeklyOct16/monthlyNov12; no discovery rerun, new watcher/timer/goal or idle work.
+  Evidence:data/periodic_20261013T2200_*.json;logs/periodic_20261013T2200/.

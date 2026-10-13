@@ -893,7 +893,10 @@ def test_exit_cli_replaces_member_rows_with_one_group_row(
                 {"c": condition_id, "fd": {"r": 0, "e": 1, "to": True}}
             )
         if url.endswith("/book"):
-            return _Response({"bids": [{"price": "0.10", "size": "20"}]})
+            return _Response({
+                "bids": [{"price": "0.10", "size": "20"}],
+                "min_order_size": "5",
+            })
         raise AssertionError(url)
 
     monkeypatch.setattr(exits, "PRIORS", priors_path)

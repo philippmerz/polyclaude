@@ -1,5 +1,5 @@
 {
-  "next_id": 197,
+  "next_id": 198,
   "decisions": [
     {
       "id": 1,
@@ -4176,6 +4176,26 @@
       "calibration_delta": "Operational validation only; no probability or ROI grading.",
       "lesson": "Preserve actual receipt fees and original forecasts. A single trade supports conservative quote math but does not establish every venue aggregation/rounding rule. Historical per-level optimizer certificates remain approximations for the corrected engine.",
       "resolved_at": "2026-10-13T15:09:39Z"
+    },
+    {
+      "id": 197,
+      "timestamp": "2026-10-13T22:15:55Z",
+      "type": "scaffolding",
+      "thesis": "Exit analyzer considered subminimum taker prefixes and could recommend selling4.03 shares despite current book minimum5. It now requires live finite positive min_order_size, excludes undersized candidates, and includes the exact minimum crossing inside a price level with recalculated conservative fees. No writer/BUY or portfolio-probability change.",
+      "confidence": "high",
+      "prediction": "Captured G4.03475 under min5 yields no taker candidate. A mixed-price book with4.03 at.99 plus lower bids under min5 retains a legal5-share candidate (gross3.9994, gain1.4994 versus.50 fair without fees), so the size guard does not erase a useful boundary. Existing group/fee paths and money checks pass.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-13",
+      "tags": [
+        "exit_analysis",
+        "live_minimum",
+        "validation"
+      ],
+      "slug": null,
+      "outcome": "Final quote-only fix passed108 focused tests and169 money checks. Root independently verified the captured actual G book is size-infeasible and the exact five-share boundary has gross3.9994/gain1.4994 in the controlled counterexample. Missing/invalid minimum metadata fails closed. No live trade or new probability forecast.",
+      "calibration_delta": "Operational validation only; no financial ROI/probability grading.",
+      "lesson": "Candidate size must meet actual venue minimum while preserving the feasible boundary inside a price level. Planning candidates still need identity/freshness/fees/precision/locks and actual execution verification before an order.",
+      "resolved_at": "2026-10-13T22:15:55Z"
     }
   ]
 }

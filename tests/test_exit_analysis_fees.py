@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sys
+import json
 from pathlib import Path
 
 import pytest
@@ -103,7 +104,8 @@ def test_book_walk_keeps_conservative_max_for_structured_exponent(monkeypatch) -
         "bids": [
             {"price": "0.40", "size": "3"},
             {"price": "0.60", "size": "2"},
-        ]
+        ],
+        "min_order_size": "1",
     }
     monkeypatch.setattr(exits.httpx, "get", lambda *_args, **_kwargs: _Response(book))
     market = {
@@ -125,7 +127,8 @@ def test_best_sale_prefix_finds_profitable_trim_hidden_by_full_walk(monkeypatch)
         "bids": [
             {"price": "0.40", "size": "3"},
             {"price": "0.60", "size": "2"},
-        ]
+        ],
+        "min_order_size": "2",
     }
     monkeypatch.setattr(exits.httpx, "get", lambda *_args, **_kwargs: _Response(book))
 
@@ -140,7 +143,10 @@ def test_best_sale_prefix_rejects_every_bid_below_fair(monkeypatch) -> None:
     monkeypatch.setattr(
         exits.httpx,
         "get",
-        lambda *_args, **_kwargs: _Response({"bids": [{"price": "0.49", "size": "5"}]}),
+        lambda *_args, **_kwargs: _Response({
+            "bids": [{"price": "0.49", "size": "5"}],
+            "min_order_size": "1",
+        }),
     )
 
     options = exits._walk_bid_options("token", 5.0, {"takerBaseFee": 0})
@@ -160,11 +166,168 @@ def test_book_walk_rejects_malformed_binary_levels(monkeypatch, level: dict) -> 
     monkeypatch.setattr(
         exits.httpx,
         "get",
-        lambda *_args, **_kwargs: _Response({"bids": [level]}),
+        lambda *_args, **_kwargs: _Response({"bids": [level], "min_order_size": "1"}),
     )
 
     with pytest.raises(ValueError, match="malformed binary bid level"):
         exits._walk_bids("token", 1.0, {"takerBaseFee": 0})
+
+
+def test_subminimum_residue_cannot_become_a_taker_sale_prefix(monkeypatch) -> None:
+    # A favorable 4.03-share residue is below this book's actual five-share
+    # minimum, so it is not an executable recommendation even at a 0.99 bid.
+    book = {
+        "bids": [{"price": "0.99", "size": "4.03"}],
+        "min_order_size": "5",
+    }
+    monkeypatch.setattr(exits.httpx, "get", lambda *_args, **_kwargs: _Response(book))
+
+    options = exits._walk_bid_options("token", 4.03, {"takerBaseFee": 0})
+
+    assert options == []
+    assert exits._best_sale_prefix(options, fair=0.50) is None
+
+
+def test_live_minimum_is_used_instead_of_a_hardcoded_share_floor(monkeypatch) -> None:
+    book = {
+        "bids": [{"price": "0.99", "size": "4.03"}],
+        "min_order_size": "4",
+    }
+    monkeypatch.setattr(exits.httpx, "get", lambda *_args, **_kwargs: _Response(book))
+
+    options = exits._walk_bid_options("token", 4.03, {"takerBaseFee": 0})
+
+    assert options[-1] == pytest.approx((3.9897, 4.03, 0.0))
+    assert exits._best_sale_prefix(options, fair=0.50) == pytest.approx(
+        (3.9897, 4.03, 0.0, 1.9747)
+    )
+
+
+@pytest.mark.parametrize(
+    "minimum", [None, "not-a-number", "nan", "inf", "0", "-1", True]
+)
+def test_missing_or_invalid_live_minimum_fails_closed(monkeypatch, minimum) -> None:
+    book = {"bids": [{"price": "0.99", "size": "10"}]}
+    if minimum is not None:
+        book["min_order_size"] = minimum
+    monkeypatch.setattr(exits.httpx, "get", lambda *_args, **_kwargs: _Response(book))
+
+    with pytest.raises(ValueError, match="min_order_size"):
+        exits._walk_bid_options("token", 10.0, {"takerBaseFee": 0})
+
+
+def test_exact_minimum_boundary_inside_level_can_be_profitable(
+    monkeypatch,
+) -> None:
+    # The 4.03-share first level alone is below min size, but a legal five-share
+    # planning prefix takes only 0.97 shares from the next level. The full
+    # ten-share endpoint loses to fair, so omitting the interior boundary would
+    # hide a profitable minimum-sized option.
+    book = {
+        "bids": [
+            {"price": "0.99", "size": "4.03"},
+            {"price": "0.01", "size": "5.97"},
+        ],
+        "min_order_size": "5",
+    }
+    monkeypatch.setattr(exits.httpx, "get", lambda *_args, **_kwargs: _Response(book))
+
+    options = exits._walk_bid_options("token", 10.0, {"takerBaseFee": 0})
+
+    assert options == [
+        (pytest.approx(3.9994), pytest.approx(5.0), pytest.approx(0.0)),
+        (pytest.approx(4.0494), pytest.approx(10.0), pytest.approx(0.0)),
+    ]
+    assert exits._best_sale_prefix(options, fair=0.50) == pytest.approx(
+        (3.9994, 5.0, 0.0, 1.4994)
+    )
+
+
+def test_exact_minimum_boundary_recomputes_fee_for_truncated_fill(monkeypatch) -> None:
+    book = {
+        "bids": [
+            {"price": "0.99", "size": "4.03"},
+            {"price": "0.01", "size": "5.97"},
+        ],
+        "min_order_size": "5",
+    }
+    market = {
+        "feesEnabled": True,
+        "feeSchedule": {"rate": 0.04, "exponent": 1, "takerOnly": True},
+    }
+    monkeypatch.setattr(exits.httpx, "get", lambda *_args, **_kwargs: _Response(book))
+
+    options = exits._walk_bid_options("token", 10.0, market)
+
+    assert options[0] == pytest.approx((3.9994, 5.0, 0.03202))
+    assert exits._best_sale_prefix(options, fair=0.50) == pytest.approx(
+        (3.9994, 5.0, 0.03202, 1.46738)
+    )
+
+
+def test_exit_cli_does_not_recommend_subminimum_taker_sale(
+    monkeypatch, tmp_path, capsys
+) -> None:
+    priors_path = tmp_path / "priors.json"
+    priors_path.write_text(json.dumps({
+        "g4.03-residue": {"p_yes": 0.50, "verified": "2026-10-13"},
+    }))
+    positions = [{
+        "slug": "g4.03-residue", "outcome": "Yes", "size": "4.03",
+        "asset": "token", "conditionId": CID,
+    }]
+
+    def get(url: str, **_kwargs) -> _Response:
+        if "data-api.polymarket.com/positions" in url:
+            return _Response(positions)
+        if url.endswith("/book"):
+            return _Response({
+                "bids": [{"price": "0.99", "size": "4.03"}],
+                "min_order_size": "5",
+            })
+        raise AssertionError(url)
+
+    monkeypatch.setattr(exits, "PRIORS", priors_path)
+    monkeypatch.setattr(exits, "_execution_fee_market", lambda _condition: {"takerBaseFee": 0})
+    monkeypatch.setattr(exits.httpx, "get", get)
+    monkeypatch.setattr(sys, "argv", ["exit_analysis.py"])
+
+    assert exits.main() == 0
+
+    output = capsys.readouterr().out
+    assert "SELL TAKER" not in output
+    assert "HOLD CANDIDATE" in output
+
+
+def test_exit_cli_fails_closed_when_book_minimum_is_missing(
+    monkeypatch, tmp_path, capsys
+) -> None:
+    priors_path = tmp_path / "priors.json"
+    priors_path.write_text(json.dumps({
+        "g4.03-residue": {"p_yes": 0.50, "verified": "2026-10-13"},
+    }))
+    positions = [{
+        "slug": "g4.03-residue", "outcome": "Yes", "size": "4.03",
+        "asset": "token", "conditionId": CID,
+    }]
+
+    def get(url: str, **_kwargs) -> _Response:
+        if "data-api.polymarket.com/positions" in url:
+            return _Response(positions)
+        if url.endswith("/book"):
+            return _Response({"bids": [{"price": "0.99", "size": "10"}]})
+        raise AssertionError(url)
+
+    monkeypatch.setattr(exits, "PRIORS", priors_path)
+    monkeypatch.setattr(exits, "_execution_fee_market", lambda _condition: {"takerBaseFee": 0})
+    monkeypatch.setattr(exits.httpx, "get", get)
+    monkeypatch.setattr(sys, "argv", ["exit_analysis.py"])
+
+    assert exits.main() == 0
+
+    captured = capsys.readouterr()
+    assert "SELL TAKER" not in captured.out
+    assert "min_order_size" in captured.err
 
 
 def test_breakeven_solves_general_v2_exponent() -> None:

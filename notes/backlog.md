@@ -1,3 +1,21 @@
+## Oct-13 22:00 light check — completed; source API additions reviewed, exit-size fix
+
+- Trading midpoint/depth191.03/189.48 at~22:03, −.34/−.04 versus18:05;
+  depth+11.46% versus170 before VM/API. Residual19.30 unchanged accounting,
+  no fill/transfer/redemption/new entry. G4.034750/O19/Clarity29-29 retained.
+- API63: old60 unchanged, three new rows have Diamond values but null original-HLE.
+  Mounted code still uses HLE Accuracy; no qualifying numeric change established.
+  Sources/equivalence/unknown-score gaps remain; highest reported G46.2/O53.6.
+- Exit analyzer minimum-size bug fixed, including minimum crossing inside a bid
+  level;108 tests/169 money checks passed. No BUY/writer/priors change. DEC0197
+  grades operational validation only; original196 decisions/history preserved.
+- All19 routine types once/rc0,38 streams verified; operational checks clean.
+  KnownCTF/pUSD22.571890 unchanged, aUSDC122.070431/live variable3.0823%.
+  Four daemons current,1017.75MiB disk above warning; news freshness stat verified.
+  One CSV point/handoff refreshed, material Telegram recorded separately. Next
+  existingOct14 02:00, weeklyOct16/monthlyNov12; no new timer/goal/idle work.
+  Evidence:journal~22:03/data/periodic_20261013T2200_*.json/current logs.
+
 ## Oct-13 18:00 light check — completed; material source changes reviewed, no action
 
 - Trading midpoint/depth191.37/189.52 at~18:05, −1.05/−.08 versus15:08;
@@ -4250,23 +4268,23 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-13 18:00:** Gemini≥50 NO4.034750 (belowmin5),
-OpenAI≥55 NO19, Clarity complete29/29.14:40 sale98.05/net12.252260 remains
-verified; next-Pro debut zero, archived forecast unresolved. Judgmental G/O
-central.08/.25, stress.01/.15, upper.18/.38, joint-win.03 unchanged. Older priors
-below are historical; no automatic re-entry, enlargement or residue-clearing buy.
+**Current HLE state, Oct-13 22:00:** G≥50 NO4.034750 belowmin5,
+OpenAI≥55 NO19 and completeClarity29/29.14:40 sale98.05/net12.252260 verified;
+next-Pro debut zero, original forecasts pending. CentralG/O.08/.25, stress.01/.15,
+upper.18/.38 and joint-win.03 remain uncalibrated; older priors below historical.
 
-Google16:00 Argon rollout reviewed; release/model card does not supply an HLE
-result in the inspected table. Agent's Last Exam39.5 is distinct. Diamond's
-with-tools table added Sol53.2/69.1 and removed Flash33.3/60.6;1000-question
-subset/edit-time/equivalence limits remain. Namedfull60 G46.2/O53.6 unchanged;
-cached backend and three directOpenAI403 gaps retain uncertainty.
+API63 includes old60 identical full objects plus3 Diamond-scored/null-original-HLE
+models. Mounted code still charts scores.hle and labels HLE Accuracy; URL changed,
+captured code identical. Highest reported numeric G46.2/O53.6 unchanged; null HLE
+is unknown, not zero. No source metric restructuring observed, equivalence/UMA/
+cache/OpenAI403 risks remain. Diamond is a distinct1000-question subset; its
+latest separate with-tools edit adds unheld MuseSpark24.6/55.4, edit time unknown.
 
-Corrected-fee current O .01-lot grid favors hold under central/dependence cases;
-stress favors O sale. G sale is size-infeasible. Clarity exit28.56905/free-carry
-28.76108<29floor before costs/extra payout. No calibrated robustness/recovery or
-global optimum claim. Original per-level optimizer records stay approximate;
-fresh literal-source/account/book/fee/lock gates control later action.
+Current O grid central/dependence hold, stress exit explicit; Gsell0 feasible only.
+Clarity exit28.56905/free-carry28.76046<29floor before costs/extra payout. NO ADD,
+no automatic residue-clearing buy/re-entry or recovery/robustness claim. Analyzer
+now respects actual live minimum and preserves its interior boundary;108 tests/
+169 checks passed, DEC0197 operational only. Fresh gates control later orders.
 
 **Consistency coverage follow-up, Oct-13 18:00:**14:03 failure was an intentional
 duplicate-event guard, not a proved implementation bug. Watcher rejects failed

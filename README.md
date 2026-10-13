@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 175 recorded observations from Apr-25 through Oct-13, including
-95 eligible trading-midpoint and 88 eligible trading-depth observations. Rounded
+The chart now has 176 recorded observations from Apr-25 through Oct-13, including
+96 eligible trading-midpoint and 89 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -74,47 +74,45 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-13 ~18:05 UTC
+## Last bankroll snapshot — 2026-10-13 ~22:03 UTC
 
-Bankroll collected18:05:26.898963–18:05:44.958596 UTC; positions separately at
-18:05:06.491880–18:05:07.947074. Sequential estimates are not synchronized NAV
-or guaranteed liquidation. The Gemini remainder is below venue minimum.
+Bankroll collected22:03:07.891490–22:03:23.652703 UTC; separate positions at
+22:02:47.463648–22:02:48.812320. Same printed figures do not establish synchronized
+NAV or guaranteed liquidation; the Gemini remainder is below venue minimum.
 
 | Measure | Value |
 |---|---:|
 | Indexed unresolved legs, including dust | 5 |
 | Remaining position cost | $32.10 |
-| PM midpoint / indicative fee-net depth | $34.17 / $32.32 |
-| Whole-account marked / approximate depth | $197.65 / $195.80 |
+| PM midpoint / indicative fee-net depth | $33.84 / $32.29 |
+| Whole-account marked / approximate depth | $197.38 / $195.83 |
 | Settled-P&L accounting residual | +$19.30 |
 
-- **Trading midpoint/depth: $191.37/$189.52**, excluding $6.28 separately funded
-  gas; −$1.05/−$0.08 versus15:08. Depth+11.48% versus170 before VM/API costs.
-  Residual is rounded accounting, not audited cash profit or a new settlement.
-  Separate positions midpoint34.27 differs by .10 from the bankroll capture.
-- **HOLD / NO ADD:** Gemini4.034750 NO is below5-share minimum; OpenAI19 NO
-  and complete Clarity29/29 retained. Corrected-fee O lot grid favors hold under
-  retained central/dependence cases; stress favors sale. Judgmental probabilities
-  unchanged and uncalibrated. Clarity exit28.56905/free-carry28.76108<29floor.
-  No asset action; fresh gates are required for any later order.
-- **Material sources reviewed:** Google announced Gemini4 Argon rollout at16:00.
-  Release/app/developer pages and model card verified; inspected results table
-  has no HLE row. Agent's Last Exam39.5% is a different benchmark. The separate
-  1000-question Diamond with-tools table added Sol53.2/69.1 and removed Flash's
-  row; no edit time/new-release inference. Named fullHLE60 remains G46.2/O53.6,
-  five criteria/Senate256 unchanged. Cache, equivalence and OpenAI403 gaps remain.
-- **Prior sale:**14:40 FOK sold98.05 Gemini NO for12.252260 pUSD net, .442030
-  implied deduction; approx3.29 loss versus allocated entry cost. Its fee correction
-  passed169 checks/137 tests then. Original forecasts preserved; no recovery claim.
-- **Inventory:** knownCTF/pUSD22.571890 unchanged, four cleared losses zero.
-  NativeaUSDC122.068734; live variable3.0860% APY versus cached3.1277%/4.07h.
-  Winning Hormuz dust retained as gas-negative; no new simulation/redemption.
-- **Operations:**19 routine types once/rc0,38 streams verified; no orders,
-  UMA/Ostium change, watch hit or overdue decision. Four current canonical daemons;
-  disk1033MiB above warning. Consistency failure guard/watcher handling audited,
-  no provable execution defect; light check did not rerun discovery. One CSV point
-  and records refreshed. Next existing22:00, weeklyOct16/monthlyNov12; manual
-  copper/Base and credential-rotation blockers remain.
+- **Trading midpoint/depth: $191.03/$189.48**, excluding $6.35 separately funded
+  gas; −$.34/−$.04 versus18:05. Depth+11.46% versus170 before VM/API costs.
+  Residual is unchanged rounded accounting, not audited cash profit.
+- **HOLD / NO ADD:** G4.034750 NO belowmin5, OpenAI19 NO and completeClarity29/29
+  retained. Current O lot grid holds under central/dependence cases; stress sells.
+  Judgmental probabilities unchanged/uncalibrated. Clarity exit28.56905/
+  idealized free carry28.76046<29floor. No asset action; fresh gates before later orders.
+- **Source change reviewed:** API now63 models, old60 fully unchanged. New Opus5.5,
+  Sol and MuseWonder have null original-HLE scores and separate Diamond values.
+  Current mounted code still charts scores.hle/HLE Accuracy: no switch observed;
+  bundle URL changed but captured bytes are identical. Highest reported numeric
+  original-HLE G46.2/O53.6 unchanged. Unknown HLE values are not zero; cached,
+  unobserved-source and equivalence risks remain. Five criteria/Senate256 unchanged.
+- **Tool fix:** exit analyzer no longer recommends taker quantities below the
+  live venue minimum. Valid minimum crossings within a price level remain candidates;
+  missing metadata fails closed.108 focused tests/169 money checks passed.
+  Writer/BUY logic unchanged; planning candidates do not guarantee execution.
+- **Inventory:** knownCTF/pUSD22.571890 unchanged; four cleared losses zero.
+  NativeaUSDC122.070431; live variable3.0823% versus cached3.1277% reported8h old.
+  Prior14:40 G sale/approx3.29 basis loss remains recorded; no recovery claim.
+- **Operations:**19 routine types once/rc0,38 streams verified; state/orders/UMA/
+  Ostium/watch/overdue clean. Four current daemons,1017.75MiB disk above warning.
+  No discovery rerun; earlier consistency failure was audited. One CSV point,
+  records and handoff refreshed. Next existingOct14 02:00, weeklyOct16/monthlyNov12;
+  manual copper/Base and issuer-account rotation blockers remain.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
