@@ -74,40 +74,39 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-14 ~18:01 UTC
+## Last bankroll snapshot — 2026-10-14 ~22:02 UTC
 
-Bankroll18:01:46.548153–18:02:03.670179 UTC. Earlier positions18:01:24.178237–
-18:01:25.548985 marked PM at33.31, $0.19 below the later bankroll mark;
-depth32.06 matches. Use the bankroll's own components. Sequential estimates,
-not synchronized NAV or guaranteed liquidation.
+Bankroll22:02:17.042183–22:02:33.214718 UTC; positions separately at
+22:01:57.239554–22:01:58.469334 print the same PM estimates. Sequential
+observations remain indicative, not synchronized NAV or guaranteed liquidation.
 
 | Measure | Value |
 |---|---:|
 | Indexed unresolved legs, including dust | 4 |
 | Remaining open-position cost | $31.46 |
-| PM midpoint / indicative fee-net depth | $33.50 / $32.06 |
-| Whole-account marked / approximate depth | $196.73 / $195.29 |
+| PM midpoint / indicative fee-net depth | $33.31 / $32.06 |
+| Whole-account marked / approximate depth | $196.52 / $195.27 |
 | Settled-P&L accounting residual | +$18.67 |
 
-- **Trading midpoint/depth: $190.71/$189.27**, excluding $6.02 gas;
-  +$0.10/+$0.01 since14:02. Depth+11.34% versus170 before VM/API costs.
-  Residual+$0.01 is rounded accounting/carry; no new trade or repeated settlement.
-- **Positions retained:** OpenAI NO19 and completeClarity29/29, no add.
-  OpenAI originalHLE53.6<55. Root books passed180s at receipt; central/upper
-  O sensitivity holds, stress exits. Clarity exit/freecarry remains below29floor.
-- **Gemini final YES:** exact payouts1/1/0 reconfirmed at Polygon95530401.
-  Losing4.034750 NO tokens remain at payout0; no burn. Priors and199 decisions
-  unchanged; no recovery or double-booked loss.
-- **Source/operations:**65 raw HLE objects unchanged; frontend bytes changed
-  with the same metric semantics. Seventeen primary GETs/three OpenAI403 gaps.
-  CLEAN4+1, no alerts/orders/watchlist hits. Four current daemons; disk892.43MiB
-  above warning. Telegram quiet; no code change/restart or asset action.
-- **Inventory:** known CTF balances unchanged; pUSD22.571890, aUSDC122.079070,
-  variable live APY3.1578%. Known assets only; dust redemption remains gas-negative.
-- **Discovery:** last full check14:00 was capped; five literal contracts,
-  3041 selected identities unreviewed. Silver qualification remains unknown
-  after history419. Full discovery/redemption and a silver repeat were not due.
-- **Next:** existing22:00, weeklyOct16/monthlyNov12; no new timer/goal.
+- **Trading midpoint/depth: $190.52/$189.27**, excluding $6.00 gas;
+  −$0.19/flat since18:01. Depth+11.34% versus170 before VM/API costs.
+  Residual unchanged; no new trade or repeated settlement.
+- **Clarity alert reviewed:** The Block reports Witt's assignment expired.
+  Matched rules preserve the complete29/29 pair's29 payout floor, including
+  no vote/voice passage. Captured exit28.56905/freecarry28.76313<29; retain.
+  Report may reduce bonus upside; no supported separate-leg trim or add.
+- **Other positions retained:** OpenAI NO19, originalHLE53.6<55; stress exit
+  remains explicit. G final payouts1/1/0 reconfirmed at Polygon95540005;
+  losing4.034750 tokens remain at0. No burn, new decision or prior change.
+- **Source/operations:**65 raw HLE objects/frontend unchanged;17 primary
+  GETs/three OpenAI403 gaps. CLEAN4+1, empty orders/no hits. Four current
+  daemons/disk883.93MiB above warning. Material Telegram1147 sent once.
+- **Inventory:** known CTF balances unchanged; pUSD22.571890/aUSDC122.080839,
+  variable live APY3.1659%. Hormuz dust dry-run succeeds; base-gas margin
+  only.00012064, configured fee ceiling exceeds payout. No broadcast.
+- **Discovery:** last full14:00 capped/five literal reviews,3041 identities
+  unreviewed. Silver qualification remains unknown after419; no repeat due.
+- **Next:** existingOct15 02:00, weeklyOct16/monthlyNov12; no new timer/goal.
   Manual copper/Base routes and issuer-account rotation remain blocked.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC

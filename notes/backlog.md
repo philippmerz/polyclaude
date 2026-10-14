@@ -1,3 +1,18 @@
+## Oct-14 22:00 light check — completed; Witt alert reviewed, pair retained
+
+- One new material Clarity alert; published report quotes WhiteHouse official.
+  Current matched29/29 pair rules preserve29floor (including no vote/voice),
+  exit28.56905/freecarry28.76313<29. Retain; no supported independent-leg trim.
+- Trading midpoint/depth190.52/189.27 at~22:02, −.19/flat vs18; gas6.00
+  excluded, residual18.67 unchanged. One CSV point/history preserved.
+- Routine19/allrc0/CLEAN4+1; source17/three403 gaps, raw65/frontend stable.
+  O19retained/stress explicit; G final0 unchanged, no burn/prior/decision change.
+- Hormuz dry-run succeeds, tiny positive base-gas margin before uncertainty;
+  configured fee ceiling exceeds payout, no broadcast. MaterialTelegram1147 sent.
+- Four current daemons/disk883.93MiB above warning. Full discovery/redeem-all/
+  silver repeats not due; manual blockers unchanged. NextOct15 02:00,
+  weeklyOct16/monthlyNov12. No new timer/goal/idle work. Evidence:journal~22:02.
+
 ## Oct-14 18:00 light check — completed; unchanged positions, no new alert
 
 - Trading midpoint/depth190.71/189.27 at~18:01, +.10/+.01 vs14; gas6.02
@@ -4349,15 +4364,24 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-14 18:00:** fixed Polygon95530401 reconfirms
-G finalYES1/1/0; losing4034750units remain at value0. Persistent finality is
-not a new source break. All199 decisions/prior archives unchanged. O19 and
-completeClarity29/29 retained, no add;65 fullraw objects stable, O53.6<55.
-Frontend bytes changed, defaultoriginalHLE/separateDiamond semantics unchanged.
-NO.25central/.15stress/.38upper remains judgmental. Nine GETs, all rootbooks
-pass180s at receipt only; Oexit3.49303/W186.21, central/upper hold/stress19exit.
-Clarity exit28.56905/freecarry28.76306<29floor. Refresh all current gates before
-action; no independent Clarity leg trade or G recovery.
+**Current HLE state, Oct-14 22:00:** G finalYES1/1/0 reconfirmed at
+Polygon95540005; losing4034750units remain at0. All199 decisions/priors unchanged.
+All65 raw objects/frontend stable versus18, O53.6<55. RetainO19, no add;
+NO.25central/.15stress/.38upper remains judgmental. Nine root GETs/pass180s
+at receipt only; Oexit3.49303/W186.21, central/upper hold/stress19exit.
+
+**Current Clarity review, Oct-14 22:00:** Witt departure report verified as
+published reporting citing WhiteHouse email; direct public confirmation not
+established in checked sources. Matched criteria preserve complete29/29 floor29
+including no vote/voice passage;51–58 gives58. Exit28.56905/freecarry28.76313<29.
+Keep pair; no supported separate-leg forecast change. Floor is criteria-based,
+subject to existing settlement/platform risk. Material verdictTelegram1147 sent.
+
+**Hormuz dust, Oct-14 22:00:** base-gas point estimate now slightly positive;
+fresh exactdry-run succeeds175036gas/210044limit. Margin.00012064 vs configured
+max-fee risk ceiling.01242135 and payout.003571; no justified broadcast/fee-policy
+change. Initial sluglookupempty/metadata gap retained; directID200/current exact
+writer collateral/payout proof. Do not call the current point estimate gas-negative.
 
 **Current discovery coverage, Oct-14 14:00:** primary999dedup/631eligible/
 80selected/551omitted, thin43697/3183/3000/183omitted; both page-capped.
