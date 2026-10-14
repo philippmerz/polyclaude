@@ -1,3 +1,21 @@
+## Oct-14 02:00 full check — completed; HLE source updated, no asset action
+
+- Trading midpoint/depth $190.91/$189.52 at~02:04, −$0.12/+$0.04 since22:03;
+  depth+11.48% versus170 before VM/API. Residual19.30 unchanged accounting.
+- Board64: three new original-HLE scores and a separate Diamond selector;
+  default HLE remains. Google/OpenAI46.2/53.6 below held thresholds. Gemini YES
+  moved+5.9pp; G4.034750 belowmin5. O19/Clarity29-29 held; no add, stress explicit.
+- Routine19/discovery10 types once/rc0, required redeem-all0/4 winners; one
+  usage timing gap documented. Root completed the omitted --auto-revet flag
+  in one silent/rc0 follow-up. Thirty-eight original streams/source proofs verify.
+  Three literal reviews; capped scopes and3029 unreviewed selected identities.
+- KnownCTF/pUSD22.571890 unchanged; aUSDC122.072190/live3.0834%. Four current
+  daemons,979.40MiB disk above warning. No production-code or probability change.
+- One CSV point, journal/dashboard/handoff updated; material Telegram1144 sent.
+  Next existing06:00, weeklyOct16/monthlyNov12. Manual route/credential blockers
+  unchanged; no new watcher/timer/goal or idle continuation.
+  Evidence:journal~02:04/data/checkin_20261014T0200_*.json/current logs.
+
 ## Oct-13 22:00 light check — completed; source API additions reviewed, exit-size fix
 
 - Trading midpoint/depth191.03/189.48 at~22:03, −.34/−.04 versus18:05;
@@ -4268,23 +4286,28 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-13 22:00:** G≥50 NO4.034750 belowmin5,
-OpenAI≥55 NO19 and completeClarity29/29.14:40 sale98.05/net12.252260 verified;
-next-Pro debut zero, original forecasts pending. CentralG/O.08/.25, stress.01/.15,
-upper.18/.38 and joint-win.03 remain uncalibrated; older priors below historical.
+**Current HLE state, Oct-14 02:00:** G≥50 NO4.034750 below live min5,
+OpenAI≥55 NO19 and completeClarity29/29. G cannot be sold through a subminimum
+taker order; no automatic residue-clearing buy. Original forecasts remain pending.
 
-API63 includes old60 identical full objects plus3 Diamond-scored/null-original-HLE
-models. Mounted code still charts scores.hle and labels HLE Accuracy; URL changed,
-captured code identical. Highest reported numeric G46.2/O53.6 unchanged; null HLE
-is unknown, not zero. No source metric restructuring observed, equivalence/UMA/
-cache/OpenAI403 risks remain. Diamond is a distinct1000-question subset; its
-latest separate with-tools edit adds unheld MuseSpark24.6/55.4, edit time unknown.
+API64: Opus5.5 HLE55.36 (Anthropic), Sol51.28, MuseWonder47.6 now scored;
+Grok4.7 is null-HLE/Diamond22.8. Old60 identities/score fields stable, Fable5.1
+score note changed. Frontend now defaults to HLE with a separate Diamond toggle;
+Google/OpenAI maxima46.2/53.6 remain below held thresholds. Clear-equivalent,
+cache and unobserved-source risks remain; no frozen-source/absence assertion.
 
-Current O grid central/dependence hold, stress exit explicit; Gsell0 feasible only.
-Clarity exit28.56905/free-carry28.76046<29floor before costs/extra payout. NO ADD,
-no automatic residue-clearing buy/re-entry or recovery/robustness claim. Analyzer
-now respects actual live minimum and preserves its interior boundary;108 tests/
-169 checks passed, DEC0197 operational only. Fresh gates control later orders.
+G/O NO central.08/.25, stress.01/.15, upper.18/.38, joint-win.03 unchanged and
+uncalibrated. O19 indicative exit3.49303; central/dependence grid holds, stress
+sells. Clarity28.56905/freecarry28.76012<29floor. NO ADD. Exact identities,
+criteria, account/orders/locks/depth/fees/limits must be fresh before any action.
+
+**Current discovery coverage, Oct-14 02:00:** primary1000/564eligible/80selected,
+484 top-omitted; thin47476/3367/3000,367 top-omitted. Both hit page caps.
+Batches compare Oct12 filtered snapshots, so new-to-snapshot is not newly created
+since the last tick. Three literal contracts reviewed;3029 unique selected and
+2164 new/changed identities remain unreviewed. Google Pro4838804 skipped on both
+sides: exact Pro labeling/access and a robust probability bound are unestablished.
+No scanner positive or global absence certification; old coverage below historical.
 
 **Consistency coverage follow-up, Oct-13 18:00:**14:03 failure was an intentional
 duplicate-event guard, not a proved implementation bug. Watcher rejects failed

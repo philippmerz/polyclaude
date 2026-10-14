@@ -29224,3 +29224,115 @@ Operations, preservation and closeout:
   Material Telegram message1143 acknowledged (one575-char part). Next existingOct14 02:00,
   weeklyOct16/monthlyNov12; no discovery rerun, new watcher/timer/goal or idle work.
   Evidence:data/periodic_20261013T2200_*.json;logs/periodic_20261013T2200/.
+
+
+### 2026-10-14 ~02:04 UTC — full check: HLE scores and selector updated; no asset action
+
+- Trading midpoint $190.91 / indicative fee-net depth $189.52, excluding $6.33
+  separately contributed gas; −$0.12 / +$0.04 since Oct13~22:03. Depth is
+  +11.48% versus $170 before VM/API costs. No fill, transfer or redemption.
+- Authoritative bankroll $197.24, approximate whole-account depth $195.85;
+  PM midpoint/depth $33.71/$32.32, cost $32.10. Bankroll window
+  2026-10-14T02:04:33.918371+00:00–2026-10-14T02:04:50.020776+00:00; positions separately
+  02:04:15.105605–02:04:16.417689 UTC. Equal printed estimates do not establish
+  synchronized NAV or guaranteed liquidation. Residual $19.30 is unchanged
+  rounded accounting, not audited cash profit. The Gemini remainder is below
+  venue minimum; indicative depth is not fully executable portfolio cash.
+- Required routine 19 types once, all rc0, 38 stream hashes/byte counts verified.
+  Eighteen commands have exact UTC windows; the first direct usage probe's
+  tool response lacked them. Its saved output says12%used/88%headroom; no retry
+  or invented timing. Same-run bankroll197.24 used for Kelly.
+  The template omitted --auto-revet from its initial --hits-only watchlist call.
+  Root completed the exact required --hits-only --auto-revet command once at
+  02:31:25.857855–02:31:26.300034 UTC, rc0/silent/no trigger. This is one bounded
+  follow-up in addition to the original19 direct template calls, not an assertion
+  that their original argv already contained the flag.
+- UMA flagged Gemini YES .8665→.9255 (+5.9pp), $1578 volume and1.7pp spread.
+  Hurdle/quick status also flagged −53% marked drawdown on its remaining $.64
+  basis. These are price observations, not evidence of a qualifying HLE score.
+  State audit --fix CLEAN:5 indexed+1 deindexed; orders HTTP200/empty/end cursor;
+  Ostium0/no change, watch/crux/overdue clear. Snapshot refreshed, no holds pruned.
+- Primary collection 2026-10-14T02:04:37.229560+00:00–2026-10-14T02:04:41.599334+00:00:
+  17 receipts (14HTTP200/3directOpenAI403), 26 integrity entries verified.
+  Current API64 vs previous63: Opus5.5 original-HLE55.36, GPT6.1Sol51.28,
+  MuseWonder47.6 replace their previous null HLE scores. Null calibration is
+  missing calibration metadata, not a missing HLE score. Added Grok4.7 remains
+  null-HLE/Diamond22.8. Original60 IDs and score fields stay unchanged; Fable5.1
+  adds a score note, so its full raw object is changed. Opus adds a refusal/
+  fallback score note too. Missing HLE remains unknown rather than zero.
+- Mounted frontend code changed: default useState("hle"), selected scores[Z],
+  dynamically assembled HLE Accuracy label, separate HLE-Diamond selector.
+  This is an actual presentation change, not unchanged bundle bytes. Original
+  HLE remains available/default and Diamond remains explicitly distinct.
+  Provider-bound maxima are Google46.2/OpenAI53.6; Anthropic Opus55.36 does
+  not qualify for OpenAI≥55. AstraDiamond59.9 is separate from HLE53.6.
+  Literal clear-equivalent/fallback language was reread; interpreting the
+  separate Diamond choice as non-equivalent is judgment, with adjudication risk.
+- Five held Gamma criteria/state are unchanged, apart from price observations.
+  Senate feed256 unchanged; Sep15 HR3633 49–50 is cloture on motion to proceed,
+  not final passage. Google Argon/recap/Diamond cores unchanged; AA57/44 is a
+  separate observation. APIAge3341s is cache metadata, not score-publication
+  time. Three directOpenAI403 pages leave coverage partial; no global release
+  absence or permanently frozen-source assertion. Collector's initial literal
+  label check was red because the label is now assembled dynamically; reviewed
+  and repaired offline using the same receipts. Production parser already
+  handles numeric HLE with null calibration; no production code change.
+- Retain uncalibrated G/O NO .08/.25 central, .01/.15 stress, .18/.38 upper,
+  joint-win .03. New Sol51.28 is below existing Astra53.6. Other-lab progress
+  and presentation changes are adverse context, not a calibrated provider
+  forecast. No point-prior change; unseen releases/cache/equivalence remain risks.
+- HOLD O19 and completeClarity29/29; G4.034750 has no current size-valid taker
+  sale (min5); NO ADD. Twelve current planning receipts independently validate
+  identities/criteria/fees/min/tick, book agesG10.028/C50Y5.221/C58N27.075/O34.766s
+  at receipt, no fallback. O19 indicative net3.49303. G hypothetical net.2563435
+  is size-infeasible and cannot be used as an exit recommendation.
+- Corrected-fee O0-or5..19 .01-lot grid at W186.20 favors hold under central,
+  dependence and upper cases; full O exit central Elog−.00567745, stress O19
+  sale+.00401910. Idealized free carry keeps central hold. No global optimum,
+  robust-hold or execution guarantee. Clarity exit28.56905/free constant-rate
+  carry28.76012<29floor before costs and extra51–58-vote payout; preserve both legs.
+- Discovery10 types once/rc0;32 saved artifacts and every emitted batch row's
+  identity/condition/criteria hash verified. Primary1000 fetched/564eligible/
+  80selected/484top-omitted,10-page cap. Thin47476/3367/3000/367,20-page cap;
+  both incomplete. Batches4+147,73+2659 rows, compared with Oct12 same-kind
+  snapshots, not the immediately preceding isolated Oct13 run. New-to-snapshot
+  is not a creation-time claim or venue-wide absence. Three literal contracts
+  reviewed;3029 unique selected and2164 new/changed identities remain unreviewed.
+- Sports3 reported consensus deltas do not exceed3pp and lack primary bookmaker/
+  fixture proof. Macro has no automated consensus. Structural scanners produced
+  no positive live basket in their capped/partly unquoted scopes. Favorite-price
+  rows carry no population probability/edge forecast. No justified new entry.
+- Root revalidated Google Pro market4838804 createdSep22: public-access AND Pro
+  labeling after creation are required. Reviewed Argon material does not establish
+  that Pro label; availability wording alone does not suffice. Live-at-receipt
+  25YES ask walk costs1.74628(.0698512/share),5NO4.8895(.9779/share), including
+  indicative taker fees. Initial one-level derivation stopped at16.53 top-ask
+  shares; offline full walk fixed that assumption without repeating the YES GET.
+  Four exact Gamma/fee/book receipts, no order. SKIP both: no independently
+  supported bound clears the robust gate for the future Oct23 release outcome.
+  This is not a source-freeze or future-no-release forecast.
+- Known-asset Polygon95492204 census: CTF/pUSD22.571890 unchanged, four cleared
+  losses and archived debut remain0. NativeaUSDC122.072190 (+.001759 vs22 block),
+  variable nativeUSDC APY3.083436%, live/unpaused/unfrozen; cached hurdle3.1277%
+  reported12h old. Eighteen RPC/public receipts verify; known assets only.
+- Required redeem-all once/rc0 at02:10:19.877741–02:10:21.216136 UTC:
+  0/4 winning redeemables, no losing rows or transactions. Independent public
+  sizeThreshold0 census has5 rows; deindexed Hormuz.003571 stays gas-negative
+  (~.00496769USD from prior175036units/current gas/roundedFX), no new simulation.
+- Four exact-one canonical current-code daemons at02:08:10; disk979.40MiB
+  above512warning/128critical, MemAvailable940.45MiB. News stat142s and heartbeat
+  stat28.9min satisfy their intervals; no private state contents read. No daemon
+  code changed, so no restart. Closing public80-row tails parse without errors;
+  no sampled additions after22:03 (latest newsOct9/opportunitySep30). This is
+  incomplete coverage. Scoped primary web search finds an Oct13 White House
+  presidential appearance: https://www.whitehouse.gov/videos/president-trump-gaggles-with-press-upon-departure-from-the-white-house-oct-13-2026/ .
+  It does not exclude a later removal/resignation. Congress.gov is robots-blocked;
+  Senate XML above remains the captured official vote input, not complete news.
+- Original197 decisions, seven protected financial/strategy records, full prior
+  journal and176-row CSV prefix preserved; one new dated performance point.
+  README/backlog/handoff refreshed after current review. Material Telegram
+  message1144 acknowledged once (605chars).
+  Weekly P&L Oct9→Oct16, monthlyNov12 future; method experiment concluded.
+  Next existing06:00. Manual copper/Base route and issuer-account rotation
+  blockers unchanged; no new watcher/timer/durable goal or idle follow-up.
+  Evidence:data/checkin_20261014T0200_*.json;logs/checkin_20261014T0200/.
