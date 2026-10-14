@@ -1,3 +1,17 @@
+## Oct-14 18:00 light check — completed; unchanged positions, no new alert
+
+- Trading midpoint/depth190.71/189.27 at~18:01, +.10/+.01 vs14; gas6.02
+  excluded. Bankroll PMmid33.50 versus earlierpositions33.31 is separate-time
+  .19 difference; its own depth32.06 used. Residual18.67 rounded accounting.
+- Routine19/allrc0/CLEAN4+1, orders empty/no hits/overdue. Sources17/three403
+  gaps;65 raw objects unchanged. Changed frontend retains HLE/Diamond semantics.
+- O19/completeClarity29-29 retained; fresh-at-receipt exits/stress case explicit.
+  G final0 reconfirmed at95530401; no burn, new decision or prior/asset change.
+- One CSV point; original180 rows/history preserved. Four current daemons,
+  disk892.43MiB above warning. Telegram quiet; full discovery/redemption/silver
+  reruns not due. Manual blockers unchanged. Next22:00; weeklyOct16/monthlyNov12.
+  No new timer/goal/idle work. Evidence:journal~18:01/current periodic artifacts.
+
 ## Oct-14 14:00 full check — completed; positions retained, silver unverified
 
 - Trading midpoint/depth190.61/189.26 at~14:02, −.85/−.37 since10; gas6.08
@@ -4335,13 +4349,14 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-14 14:00:** Gemini finalYES reconfirmed at
-Polygon95520867, payouts1/1/0; losing4034750 units remain at value0. Original
-prior archives and198 forecasts unchanged. O19/completeClarity29/29 retained,
-no add; originalHLEO53.6<55 and all65 raw source objects unchanged. O NO
-.25central/.15stress/.38upper remains judgmental. Root books pass180s at receipt
-only; O netexit3.49303, central/upper hold/stress19exit sensitivity. Clarity
-pair exit28.56905/freecarry28.76184<29floor. Refresh all current gates before
+**Current HLE state, Oct-14 18:00:** fixed Polygon95530401 reconfirms
+G finalYES1/1/0; losing4034750units remain at value0. Persistent finality is
+not a new source break. All199 decisions/prior archives unchanged. O19 and
+completeClarity29/29 retained, no add;65 fullraw objects stable, O53.6<55.
+Frontend bytes changed, defaultoriginalHLE/separateDiamond semantics unchanged.
+NO.25central/.15stress/.38upper remains judgmental. Nine GETs, all rootbooks
+pass180s at receipt only; Oexit3.49303/W186.21, central/upper hold/stress19exit.
+Clarity exit28.56905/freecarry28.76306<29floor. Refresh all current gates before
 action; no independent Clarity leg trade or G recovery.
 
 **Current discovery coverage, Oct-14 14:00:** primary999dedup/631eligible/
