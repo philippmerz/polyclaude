@@ -2522,9 +2522,10 @@
         "source_corrected"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Final YES verified Oct14 at Polygon95511240: exact CTF condition denominator1/YESnumerator1/NOnumerator0; named Google Gemini4Argon55.6 HLE qualifies. Held residual4.034750 NO pays0. Earlier lots were partly sold; final token payout alone is not lot-by-lot realized P&L. NO-payout prediction failed. Evidence: data/periodic_20261014T1000_G_finality.json and source receipts; condition 0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e.",
+      "calibration_delta": "Original p(NO).35 versus observed NO event0 (event-minus-forecast -.35); one Bernoulli outcome does not establish statistical miscalibration. Original prediction retained.",
+      "lesson": "An available named source was active and later added a qualifying model; keep source/configuration evidence current and do not revive the obsolete frozen-board premise.",
+      "resolved_at": "2026-10-14T10:10:57Z"
     },
     {
       "id": 128,
@@ -3034,9 +3035,10 @@
         "hold"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Final YES verified Oct14 at Polygon95511240: exact CTF condition denominator1/YESnumerator1/NOnumerator0; named Google Gemini4Argon55.6 HLE qualifies. Held residual4.034750 NO pays0. Earlier lots were partly sold; final token payout alone is not lot-by-lot realized P&L. Evidence: data/periodic_20261014T1000_G_finality.json and source receipts; condition 0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e.",
+      "calibration_delta": "Original p(NO).30 versus final NO event0 (event-minus-forecast -.30). Later source revisions are separate; one outcome is not a probability calibration estimate.",
+      "lesson": "Adverse-flow evidence should trigger exact source review; preserve the dated forecast rather than judging it against a later posterior.",
+      "resolved_at": "2026-10-14T10:10:57Z"
     },
     {
       "id": 153,
@@ -3098,9 +3100,10 @@
         "kelly"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Final YES verified Oct14 at Polygon95511240: exact CTF condition denominator1/YESnumerator1/NOnumerator0; named Google Gemini4Argon55.6 HLE qualifies. Held residual4.034750 NO pays0. Earlier lots were partly sold; final token payout alone is not lot-by-lot realized P&L. Evidence: data/periodic_20261014T1000_G_finality.json and source receipts; condition 0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e.",
+      "calibration_delta": "Original p(NO).30/stress.20 realized NO0. The executable-price Kelly oversizing error was recorded at entry and remains an error regardless of final outcome; no invented per-lot cash attribution.",
+      "lesson": "Use executable all-in prices for sizing; neither a winning nor losing binary outcome repairs a sizing-control error.",
+      "resolved_at": "2026-10-14T10:10:57Z"
     },
     {
       "id": 156,
@@ -3925,9 +3928,10 @@
         "hold"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Final YES verified Oct14 at Polygon95511240: exact CTF condition denominator1/YESnumerator1/NOnumerator0; named Google Gemini4Argon55.6 HLE qualifies. Held residual4.034750 NO pays0. Earlier lots were partly sold; final token payout alone is not lot-by-lot realized P&L. Evidence: data/periodic_20261014T1000_G_finality.json and source receipts; condition 0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e.",
+      "calibration_delta": "Oct9 central NO8%/range1%-18% realized NO0; descriptive event-minus-central -.08. YES was the high-probability branch, so a single loss does not prove8% was systematically too high.",
+      "lesson": "A qualifying named-source row should retire the residual source-lag branch promptly; keep stress exits and forecasts distinct.",
+      "resolved_at": "2026-10-14T10:10:57Z"
     },
     {
       "id": 190,
@@ -4153,9 +4157,10 @@
         "conditional-log-growth"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Final YES verified Oct14 at Polygon95511240: exact CTF condition denominator1/YESnumerator1/NOnumerator0; named Google Gemini4Argon55.6 HLE qualifies. Held residual4.034750 NO pays0. Earlier lots were partly sold; final token payout alone is not lot-by-lot realized P&L. The98.05 sold shares would pay0; actual12.252260 pUSD sale proceeds remain secured. Ex-post cash exceeds the foregone payout by12.252260, without turning the entry loss into a profit. Evidence: data/periodic_20261014T1000_G_finality.json and source receipts; condition 0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e.",
+      "calibration_delta": "Execution was already verified Oct13; final payout now confirms the cash-preserving branch. One favorable realized branch does not prove the original8% or the exact trim size was calibrated/optimal.",
+      "lesson": "Sell versus hold uses current net proceeds and terminal states; report cash preserved separately from entry-basis P&L and residual loss.",
+      "resolved_at": "2026-10-14T10:10:57Z"
     },
     {
       "id": 196,
@@ -4213,9 +4218,10 @@
         "pending-finality"
       ],
       "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Final YES verified Oct14 at Polygon95511240: exact CTF condition denominator1/YESnumerator1/NOnumerator0; named Google Gemini4Argon55.6 HLE qualifies. Held residual4.034750 NO pays0. Earlier lots were partly sold; final token payout alone is not lot-by-lot realized P&L. The source-break forecast of final NO0 is confirmed. No sale was feasible for the subminimum residue and no recovery/burn occurred. Evidence: data/periodic_20261014T1000_G_finality.json and source receipts; condition 0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e.",
+      "calibration_delta": "Residual NO.001 realized0; this was a judgmental source/adjudication allowance, not calibrated confidence. Final payout proof replaces that forecast; preserve it as history.",
+      "lesson": "Separate proposed UMA state from final payout proof; record final loss only after exact on-chain settlement, and avoid spending gas for zero recovery.",
+      "resolved_at": "2026-10-14T10:10:57Z"
     }
   ]
 }

@@ -1,107 +1,101 @@
 ---
-reviewed_at: "2026-10-14T06:24:14Z"
-valid_until: "2026-10-14T10:00:00Z"
+reviewed_at: "2026-10-14T10:19:05Z"
+valid_until: "2026-10-14T14:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: e5865e496e6012f0a5700bcc41c35be63841b4c0f3f144cb3d3fe8e3ad341724
+  README.md: 382edaeea62e63fc29434e35114a1290f84021b18e16108af8f896af19bdc0a2
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 5598b3684a415ca92c52d5fd61de8ecff6d274f70561a0dc59d62a9ae55eb6e2
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 4e6c2bebe2886c741153c3ebccb6c0f689822a77b6582c6a9747b7cecc1f44f0
   scripts/README.md: 8a5b43f42faa5cace24ddf53b2e0553c835294b4c1775fc851e9cc6c175583cc
-  notes/backlog.md: 34482c2ad3cf8e7c7a2db6ed810d6ddd6322591c14cb3a6fe229d6cd095cfdb3
+  notes/backlog.md: d32916770370a25e85b2726b53bd6103047e545c5730df58768a45c7574223b5
 ---
 
-# Current context — orientation, not live state
+# Current context — dated orientation, not live state
 
-- Maximize legal expected compounded ROI through start-of-2027. Lawful
-  decentralized/noCEX/noKYC, holdings under one year; normal Dec31 resolutions
-  redeemed earlyJanuary count. Off-chain brokerage/Sunday stock review retired.
-  Required onboarding and live gates remain; packets are offline orientation.
-- Existing cron/watchers handle waits. Next10:00; weeklyOct16/monthlyNov12;
-  Saturday experiment concluded. No new timer/goal or idle continuation.
-  Operator messages only through the notified one-time reader; no private history.
+- Maximize lawful expected compounded ROI through start-of-2027; decentralized,
+  noCEX/noKYC, holdings under one year. Normal Dec31 resolutions redeemed early
+  January count. Off-chain brokerage/Sunday reviews retired. Required onboarding,
+  current source/account/execution gates remain; packets provide no live authority.
+- Existing cron/watchers handle waits. Next14:00; weeklyOct16/monthlyNov12.
+  No new timer/goal or idle follow-up. Operator messages only through notified
+  one-time reader; never inspect private inbox/history or save operator text.
 
-## Current priority — Gemini thesis broken
+## Current priority — Gemini final YES, no recovery
 
-- Oct14~06:02 named HLE source lists Google Gemini4Argon originalHLE55.6,
-  meeting exact market3072356's >=50 rule. Default chart metric remains HLE;
-  Diamond56.9 is separate. Calibration is irrelevant under the literal rule.
-- Gamma is proposed, YES snapshot.9995 (+7.4pp), not verified proposal side
-  or final payout. At Polygon95501791: denominator/YES/NO numerators all0;
-  exact held NO4.034750 unchanged. No finality or forecast grade.
-- Current NO book has no bids and min5, so no size-valid taker or maker exit.
-  No size-creating buy, burn or redemption. Retain stranded residue pending
-  genuine finality through existing checks; do not schedule an idle recheck.
-  Earlier98.05 bulk sale is historical; remaining basis≈.64 is exposed.
-- G NO prior.08→.001, stress0/range0–.01 is judgmental residual source/
-  adjudication allowance, not calibrated confidence or price recovery. Prior
-  assessment/probabilities archived verbatim in the entry. All other priors/
-  group topology unchanged. DEC0198 skip/ungraded; original197 decisions retained.
+- Oct14~10:02 market3072356 resolved/closed, acceptingOrdersfalse. At fixed
+  Polygon95511240, exact denominator1/YESnumerator1/NOnumerator0 confirms final
+  NO payout0. Exact4034750 losing units remain: absence from open positions
+  does not mean burned. Source Argon55.6 originalHLE still qualifies;65 rows.
+- Final allocated residue loss≈.64. Earlier98.05 sale preserved12.252260 cash;
+  this is separate from entry loss/ex-post cash, not proof of calibrated sizing.
+  No transaction/burn: zero cash recovery and gas cost, no identified benefit
+  after runtime closure. Preserve exact identities in finality/inventory/journal.
+- Only G prior retired to0/0/[0,0] as observed payout;06 .001/earlier8% archives
+  retain original assessments and note. Six exact-slug decisions127/152/155/189/
+  195/198 graded via vetted update; all original forecasts and other192 unchanged.
+  No new decision:198 total/125resolved/73pending, next199. Legacy records without
+  exact slug remain ungraded from finality alone; one outcome is not calibration.
 
-## Portfolio and evidence — completed06:00 light check
+## Latest completed10:00 evidence
 
-- data/periodic_20261014T0600_*.json;logs/periodic_20261014T0600/;journal~06:02.
-  Bankroll06:02:47.539201–06:03:04.064736 UTC; separate positions
-  06:02:28.278609–06:02:29.502682. Sequential indicative estimates, not current
-  balances/synchronized NAV/guaranteed liquidation. One dated CSV point appended.
-- Trading midpoint/depth190.61/189.26, −.30/−.26 since02:04; depth+11.33%
-  versus170 beforeVM/API. Gas6.27 excluded; wholemarked196.88/depth195.53,
-  PM33.41/depth32.06/cost32.10. Residual19.30 unchanged rounded accounting,
-  not audited cash profit. No trade, transfer, redemption or finalized loss grade.
-- Retain OpenAI≥55 NO19 and completeClarity29/29, Trump.33 and Hormuz winning
-  dust.003571. OpenAI originalHLE53.6 remains below55; its NO prior.25central/
-  .15stress/.38upper unchanged and uncalibrated. Strong Argon capability was
-  already known via AA57; new named listing breaks Google thesis specifically.
-- Six valid joint scenarios use G.001/0/.01 and discard old impossible.03
-  joint-win. Current O0-or5..19 .01-lot grid/W186.20: central/independence/
-  comonotonic/upper hold, stress O19exit. Net3.49303; full-sale Elog−.00570507
-  central/+.00401121 stress. Quotes passed180s at their own receipt only;
-  current action requires fresh gates. No global/robust-hold certificate. NO ADD.
-- Clarity exit28.56905/idealized free constant-rate carry28.75876<29floor
-  before costs and51–58-vote extra29. Preserve complete29/29, never one leg.
-- Known-asset census Polygon95501791: CTF/pUSD22.571890 unchanged, cleared
-  four losses/debut0; nativeaUSDC122.073900,+.001710 vs02 block. Live variable
-  nativeUSDC3.067853%, unpaused/unfrozen; cachedhurdle3.1277%/16h. Known
-  assets only. Winning Hormuz dust previously gas-negative; no new simulation.
+- data/periodic_20261014T1000_*.json;logs/periodic_20261014T1000/;journal~10:02.
+  Bankroll10:02:45.016373–10:03:02.021418; positions10:02:26.120615–10:02:27.317956.
+  Sequential indicative estimates, not balances now or synchronized NAV.
+- Trading midpoint/depth191.46/189.63, +.85/+.37 vs06; gas6.17 excluded,
+  depth+11.55% vs170 beforeVM/API. Wholemarked197.63/approxdepth195.80,
+  PM34.26/depth32.43/open cost31.46. Settled residual18.66 (−.64) is rounded
+  accounting, not audited cash profit. One CSV point; old178-row/journal retained.
+- Retain OpenAI≥55 NO19, completeClarity29/29, Trump.33 and Hormuz.003571.
+  O named HLE53.6<55; NO.25central/.15stress/.38upper unchanged/uncalibrated.
+  G finality does not prove O qualification or a calibrated posterior revision.
+- O GET/POST books failed180s guard (364.787/364.849s at receipt); no fresh
+  execution quote or override/polling loop. Rejected-book illustration net3.86391,
+  central sale Elog−.00375192/stress+.00596446; central/upper hold/stress O19sell
+  is conditional, not current-optimum/execution proof. No add; fresh gates before
+  any order. G fixed payout removes the former joint random state.
+- Clarity books passed guard at receipt only5.387/6.051s. Pair exit28.56905/
+  idealized free constant-rate carry28.75850<29floor before costs/51–58bonus.
+  Preserve complete29/29; no independent leg trade. Signing-time rewalk required.
+- Known-asset Polygon95511240: CTF/pUSD22.571890 unchanged, four cleared losses/
+  debut0; aUSDC122.075589,+.001689vs06; variable live nativeUSDC3.069982%, live/
+  unpaused/unfrozen. Known assets only. Winning Hormuz dust gas-negative using
+  prior simulation units/current gas/roundedFX (~.00483649USD); no new simulation.
 
 ## Source and operations
 
-- Seventeen primary receipts14HTTP200/3OpenAI403 plus one official model-card
-  follow-up200;29 integrity entries verify. API65 adds Argon;63 old full objects
-  stable, Fable Diamond50.7→51.6/note changed while HLE54.6 stays unchanged.
-  Current mounted bundle changed bytes but defaults HLE/separateDiamond.
-  APIAge3094s is cache metadata, not publication time. Card dates Oct13 but
-  mentions no HLE; the named board supplies the qualifier.
-- Five held criteria unchanged; G proposed status is the material state change.
-  Senate256 unchanged; Google Argon/recap cores unchanged, Diamond article
-  updated separately. DirectOpenAI403/browser limitations leave coverage partial.
-  Missing scores remain unknown, not zero; fallback/equivalence risks persist.
-- Routine19 types once/rc0, all timed including first usage13%used;38 streams
-  verify. Same-run196.88 forKelly; watch --hits-only --auto-revet/no hit.
-  StateCLEAN5+1; orders terminal-empty, Ostium/crux/watch/overdue clear.
-  G Kelly de-indexing is not zero balance. No full discovery/redemption scan due.
-- Four canonical current-code daemons at06:08:54; disk961.57MiB>512warning/
-  128critical, MemAvailable1019.21MiB. Stat-only freshness passes; no private
-  contents, daemon edits or restart. Public alert tails are limited evidence.
-  Material Telegram1145 acknowledged. Initial offline audit's all64-stable claim
-  corrected from exact raw diff; original preserved, risk arithmetic verified.
+-17 primary GETs14HTTP200/3OpenAI403,26 integrity entries. Separate onboarding
+  status embedded live reads documented with minute-precision/19.5s timing gap;
+  not counted among17. No model-card repeat. All65 raw objects unchanged vs06;
+  bundle URL changed/bytes identical, defaultHLE/separateDiamond56.9.
+- Five literal criteria/Senate256 stable; only G market state changed. Google
+  article cores stable; three RSS items lack held keywords. Public80-line tails
+  clear in sampled scope after06:02. Source/browser/403 gaps leave wider coverage
+  partial; missing scores/absence of alerts are not complete negative evidence.
+-19 routine types once18rc0/auditrc1: stale G snapshot and closure note missing.
+  Runtime refreshed; one necessary follow-up --fix CLEAN4indexed+1deindexed,
+  one updated decision-summary rc0. Exact windows/38 streams verify; same197.63
+  forKelly, usage18%used. Watch --hits-only --auto-revet/no hit; orders terminal-
+  empty, Ostium/crux/overdue clear. No production code or daemon restart.
+- Four canonical current-code daemons at10:13:35; disk939.13MiB>512warning/
+  128critical, MemAvailable1124.86MiB. Stat-only freshness passes; no private
+  contents. Material Telegram1146 acknowledged once. Full discovery not due.
 
-## Remaining gates
+## Remaining work and gates
 
-- Last full02:00 discovery: capped primary1000/564eligible/80selected and
-  thin47476/3367/3000;3 literal reviews,3029 selected identities unreviewed.
-  Batches compare Oct12 filtered snapshots. No global opportunity-absence claim.
-  GooglePro4838804 skipped: required Pro label/access and robust bound unverified.
-- Current project watchlist: manual copper/Base need lawful access/funding,
-  vetted writer and January net-return thesis. Issuer-account credential rotation
-  unverified/management unavailable; no further use or private-history lookup.
-- SELL fees use conservative max(per-level, aggregate filled), ceil5dp; grouping
-  unproven. Analyzer enforces same-book minimum/interior boundary. Oct13 validation
-  108tests/169money checks; planning is not execution. Offline context prototype
-  research/2026-10-12-finite-context-architecture.md proves no forecast/ROI gain.
-- DEC0193 cash route/DEC0195 sale outcomesJan2 pending; DEC0194 loser cleanup
-  recovered no stakes; DEC0196/197 operational validations only. Preserve history.
-- Before action refresh identities/criteria/config/account/orders/reservations/
-  books/fees/limits/alternatives. BUY via polyclaude_enter.py; sells/cancels/
-  redemptions via clob_v2.py. Verify balances; proposed status never proves finality.
+- Last full02:00 discovery capped: primary1000/564eligible/80selected, thin47476/
+  3367/3000;3 literal reviews,3029 selected identities unreviewed. Compared with
+  Oct12 filtered snapshots. No global opportunity-absence claim. GooglePro4838804
+  skipped: Pro label/public access and robust forecast unverified.
+- Manual copper/Base candidates still need lawful access/funding, vetted writer
+  and January net-return thesis. Issuer-account rotation unverified/management
+  unavailable; no further use/private-history lookup. No retired equity polling.
+- SELL fees conservative max(per-level, aggregate filled), ceil5dp; grouping
+  unproven. Analyzer enforces same-book minimum/interior boundary. Oct13 pricing
+  validation108tests/169money checks; planning is not execution. Offline context
+  prototype proves no forecast/ROI gain; no live automatic controller.
+- Before asset action refresh exact identities/criteria/config/account/orders/
+  reservations/books/fees/limits/alternatives. BUY via polyclaude_enter.py;
+  sells/cancels/redemptions via clob_v2.py. Verify resulting balances. Winning
+  redemption requires nonzero exact balance/payout; worthless tokens need no burn.
