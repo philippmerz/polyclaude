@@ -29336,3 +29336,81 @@ Operations, preservation and closeout:
   Next existing06:00. Manual copper/Base route and issuer-account rotation
   blockers unchanged; no new watcher/timer/durable goal or idle follow-up.
   Evidence:data/checkin_20261014T0200_*.json;logs/checkin_20261014T0200/.
+
+
+### 2026-10-14 ~06:02 UTC — Gemini HLE thesis broken; residue cannot exit, proposal not final
+
+- Google Gemini4Argon now scores55.6 in the named source's original scores.hle,
+  meeting held market3072356's >=50 rule. It is not the separate Diamond56.9.
+  Current mounted frontend defaults to HLE/HLE Accuracy; null calibration is
+  explicitly irrelevant under the unchanged literal rule. Argon is the new65th
+  row. Only Fable5.1 changes among prior64: Diamond50.7→51.6/new Diamond note,
+  originalHLE54.6 unchanged. OpenAI maximum remains53.6, below its55 threshold.
+- Gamma reports proposed status and YES.9255→.9995 (+7.4pp), volume13022,
+  .1pp spread. Proposal status alone proves neither its side nor final payout.
+  At fixed Polygon95501791, CTF denominator0/YESnumerator0/NOnumerator0;
+  4.034750 exact NO shares remain. No finality, no forecast grade, no burn.
+- Vetted exit analysis: current NO book has NO bids and live minimum5; neither
+  taker nor maker can sell the4.034750 residue. NO best ask.001 before fees;
+  buying to create size is not an exit and is rejected for proposed UMA by the
+  guarded entry path. With no bid and added cost/risk it does not establish
+  positive EV. No writer/order/transfer/redemption was submitted. Retain the
+  stranded residue pending genuine finality through existing checks; no idle poll.
+- Gemini NO thesis is broken. Current judgmental residual p(NO) .08→.001,
+  stress .01→0, range .01–.18→0–.01 is solely a source/adjudication allowance,
+  not calibrated confidence or price recovery. Prior assessment/probabilities
+  archived verbatim inside the entry; all other priors and group topology unchanged.
+  DEC0198 records the skipped infeasible exit, size0/new funds0, ungraded;
+  original197 decisions unchanged. Earlier98.05-share bulk sale remains recorded
+  separately; remaining basis≈.64 is exposed, not a new realized loss.
+- O19 and completeClarity29/29 retained; NO ADD. Argon's strong independent
+  AA57 result was known before this named listing, so no new OpenAI marginal
+  probability is inferred. Retain O NO.25 central/.15 stress/.38 upper,
+  uncalibrated. Rebuild valid joint states with G.001/0/.01; discard obsolete
+  joint-win.03. All six scenarios sum1. Current O0-or5..19 .01-lot grid/W186.20
+  holds under central/independent/comonotonic/upper cases; stress sells O19.
+  FullO exit net3.49303, central Elog−.00570507/stress+.00401121. No global
+  optimum or robust-hold guarantee. Clarity exit28.56905/free constant-rate
+  carry28.75876<29floor before costs and51–58-vote extra29; preserve both legs.
+- Authoritative bankroll196.88 at06:02:47.539201–06:03:04.064736 UTC;
+  positions separately06:02:28.278609–06:02:29.502682. PM midpoint33.41/
+  indicative fee-net depth32.06, cost32.10. Trading midpoint/depth190.61/189.26,
+  −.30/−.26 since02:04, gas6.27 excluded; whole approximate depth195.53.
+  Depth+11.33% versus170 beforeVM/API. Sequential estimates, not synchronized
+  NAV/guaranteed liquidation. Residual19.30 unchanged rounded accounting,
+  not audited settled profit. One new CSV point; original177-row prefix retained.
+- Required light routine19 types once/rc0, all19 exact UTC windows including
+  first direct usage13%used/87%headroom;38 streams hash/byte verified. Same-run
+  bankroll196.88 used forKelly. Correct --hits-only --auto-revet from the start,
+  no trigger. StateCLEAN5indexed+1deindexed, orders terminal-empty, Ostium0/
+  no change, crux/watch/overdue clear. G Kelly de-indexing is not zero balance.
+- Sources06:02:08.299670–06:02:13.710401:17 primary receipts14HTTP200/3OpenAI403,
+  one justified official model-card GET200,29 integrity entries. Card dates
+  publicationOct13/resultsOctober but has no HLE text; named board is qualifier.
+  Bundle URL/bytes changed; metric semantics remain defaultHLE/separateDiamond.
+  APIAge3094s is cache metadata, not publication time. Google Argon/recap cores
+  unchanged; Diamond article core updated separately. Five criteria unchanged;
+  Senate256 unchanged. OpenAI403/browser limitations leave broader coverage partial.
+- Eighteen known-asset RPC/public receipts: CTF/pUSD22.571890 unchanged,
+  four cleared losses/debut0, nativeaUSDC122.073900 (+.001710vs02 block).
+  Live nativeUSDC variable APY3.067853%, unpaused/unfrozen; cached3.1277%/16h.
+  Hormuz dust indicative gas $0.00493>$0.003571
+  at captured gas/rounded FX and earlier units; no new simulation or broadcast.
+  Twelve quote receipts validate exact identity/criteria/fees/limits: ages at
+  receiptG139.543/C50Y4.533/C58N11.794/O87.995s, no fallback. G unfilled4.03475,
+  zero quoted proceeds is no exit offer. New three fixed-block payout reads
+  separately prove unfinalized status. Known-asset census is not exhaustive.
+- Four exact-one canonical current-code daemons at06:08:54; disk961.57MiB
+  above512warning/128critical, MemAvailable1019.21MiB; news/heartbeat stat
+  freshness passes. No private contents or daemon changes/restart. Five protected
+  financial/strategy records unchanged; source/prior/decision changes scoped.
+  Initial offline audit incorrectly claimed all64 prior API objects stable;
+  root raw diff corrected Fable's change, original audit preserved separately.
+  Revised risk arithmetic verified independently. Closing public80-line tails
+  parsed separately; coverage remains limited.
+- Material Telegram1145 acknowledged once (532chars).
+  README/backlog/handoff refreshed after review. No full discovery/redemption
+  rerun due for this light check. WeeklyOct16/monthlyNov12 future, experiment
+  concluded. Manual route/credential blockers unchanged. Next existing10:00;
+  no new watcher/timer/durable goal or idle follow-up. Evidence:
+  data/periodic_20261014T0600_*.json;logs/periodic_20261014T0600/.

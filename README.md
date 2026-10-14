@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 177 recorded observations from Apr-25 through Oct-14, including
-97 eligible trading-midpoint and 90 eligible trading-depth observations. Rounded
+The chart now has 178 recorded observations from Apr-25 through Oct-14, including
+98 eligible trading-midpoint and 91 eligible trading-depth observations. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -74,43 +74,39 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-14 ~02:04 UTC
+## Last bankroll snapshot — 2026-10-14 ~06:02 UTC
 
-Authoritative bankroll collected02:04:33.918371–02:04:50.020776 UTC; positions
-separately at02:04:15.105605–02:04:16.417689. These are sequential indicative
-estimates; the Gemini remainder is below venue minimum.
+Bankroll06:02:47.539201–06:03:04.064736 UTC; positions separately at
+06:02:28.278609–06:02:29.502682. Sequential indicative estimates, not
+synchronized NAV or guaranteed liquidation.
 
 | Measure | Value |
 |---|---:|
 | Indexed unresolved legs, including dust | 5 |
 | Remaining position cost | $32.10 |
-| PM midpoint / indicative fee-net depth | $33.71 / $32.32 |
-| Whole-account marked / approximate depth | $197.24 / $195.85 |
+| PM midpoint / indicative fee-net depth | $33.41 / $32.06 |
+| Whole-account marked / approximate depth | $196.88 / $195.53 |
 | Settled-P&L accounting residual | +$19.30 |
 
-- **Trading midpoint/depth: $190.91/$189.52**, excluding $6.33 separately funded
-  gas; −$0.12/+$0.04 since Oct13~22:03. Depth+11.48% versus $170 before VM/API.
+- **Trading midpoint/depth: $190.61/$189.26**, excluding $6.27 gas;
+  −$0.30/−$0.26 since02:04. Depth+11.33% versus170 before VM/API costs.
   Residual is unchanged rounded accounting, not audited cash profit.
-- **HOLD / NO ADD:** OpenAI19 NO and completeClarity29/29 retained. Central and
-  dependence scenarios favor hold; stress favors OpenAI exit. Gemini4.034750 NO
-  is below live min5. No trades, transfers or redemptions; quotes need fresh gates.
-- **Material source update:** original HLE scores now include Opus5.5 55.36
-  (Anthropic), GPT6.1Sol51.28 and MuseWonder47.6. The new frontend defaults to
-  HLE and exposes Diamond separately. Google/OpenAI maxima remain46.2/53.6;
-  Opus does not qualify for the OpenAI threshold. Priors remain uncalibrated;
-  source/cache/equivalence risks persist. Gemini YES moved+5.9pp.
-- **Discovery:** required10 types completed; both profiles hit page caps. Three
-  literal contracts reviewed,3029 selected identities remain unreviewed. Google
-  Pro candidate skipped: no verified qualifying Pro release or supported robust
-  forecast. Scanner observations do not certify fills or venue-wide absence.
-- **Inventory:** knownCTF/pUSD22.571890 unchanged, four cleared losses/debut0.
-  NativeaUSDC122.072190; live variable APY3.0834%. Redeem-all found0/4 winners.
-  Deindexed winning dust remains gas-negative. Original financial history retained.
-- **Operations:**19 routine types/38 streams verify; the usage probe is the one
-  untimed command. Required watchlist --auto-revet follow-up was silent/rc0.
-  State/orders/Ostium/watch/overdue clean; four current daemons,
-  979.40MiB disk above warning. Material Telegram sent. Next existing06:00,
-  weeklyOct16/monthlyNov12; manual route/credential blockers unchanged.
+- **Gemini NO thesis broken:** Argon55.6 originalHLE meets the50% rule.
+  Market UMA is proposed; on-chain payouts remain unfinalized. The4.034750 NO
+  residue has no bids and is below live min5: no executable exit or redemption.
+  Residual NO prior8%→0.1%, judgmental; old assessment/forecasts preserved.
+- **O/Clarity HOLD, NO ADD:** OpenAI originalHLE53.6 remains below55; central
+  cases hold O19, stress exits. Clarity29/29 exit/freecarry stays below29floor.
+  No asset action, size-creating buy, finality grade or premature burn.
+- **Source/operations:**19 routine types timed/rc0,38 streams verified;17
+  primary receipts plus one official follow-up. Sixty-five API rows; Diamond
+  remains a separate metric. State/orders/watch/overdue clear; four current
+  daemons,961.57MiB disk above warning. Material Telegram sent.
+- **Inventory/history:** knownCTF/pUSD22.571890 unchanged; aUSDC122.073900,
+  variable live APY3.0679%. Earlier bulk98.05 sale preserved; residual basis
+  about$0.64 is still exposed. DEC0198 ungraded; original197 decisions retained.
+- **Next:** existing10:00, weeklyOct16/monthlyNov12; no new timer/goal.
+  Manual copper/Base routes and issuer-account rotation remain blocked.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

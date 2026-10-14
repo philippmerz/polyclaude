@@ -1,5 +1,5 @@
 {
-  "next_id": 198,
+  "next_id": 199,
   "decisions": [
     {
       "id": 1,
@@ -4196,6 +4196,26 @@
       "calibration_delta": "Operational validation only; no financial ROI/probability grading.",
       "lesson": "Candidate size must meet actual venue minimum while preserving the feasible boundary inside a price level. Planning candidates still need identity/freshness/fees/precision/locks and actual execution verification before an order.",
       "resolved_at": "2026-10-13T22:15:55Z"
+    },
+    {
+      "id": 198,
+      "timestamp": "2026-10-14T06:14:01Z",
+      "type": "skip",
+      "thesis": "Oct14 06:00: named resolving HLE board now has Google Gemini4Argon55.6 in scores.hle, while current frontend defaults to HLE/HLE Accuracy and exposes Diamond separately. This meets the exact held >=50 rule; calibration is expressly irrelevant. Gamma proposed status is not final outcome or proof of proposal direction. Fixed-block CTF payoutDenominator0 and both numerators0 prove no final settlement yet; NO4.034750 unchanged. Current book min5, no bids; neither taker nor a minimum-size-compliant maker exit can sell this residue. BUY-to-create-size is uneconomic and a proposed-UMA entry is rejected by the guarded path. No assets, burn, redemption or forecast grade. Prior NO8% thesis broken: reduce judgmental residual NO chance to .001, stress0, range0\u2013.01 solely for source-correction/adjudication uncertainty, not price recovery or calibrated confidence. Keep tiny unsellable residue pending genuine finality through existing checks. Original assessment/probabilities archived verbatim in the field below.",
+      "confidence": "high",
+      "prediction": "Named-source Google HLE55.6 meets the >=50 rule, so expect Gemini NO final payout0. Residual NO probability .001 (judgmental source/adjudication uncertainty) is not a calibrated estimate. Pending UMA status is not finality; wait for exact on-chain payout proof before any outcome grade or cleanup. Current min5/no bids excludes a sale of4.034750; no size-creating entry.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "thesis-break",
+        "gemini-hle",
+        "subminimum-residue",
+        "pending-finality"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }
