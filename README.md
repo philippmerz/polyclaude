@@ -74,38 +74,38 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-14 ~10:02 UTC
+## Last bankroll snapshot — 2026-10-14 ~14:02 UTC
 
-Bankroll10:02:45.016373–10:03:02.021418 UTC; positions separately at
-10:02:26.120615–10:02:27.317956. Sequential indicative estimates, not
+Bankroll14:02:21.858955–14:02:38.013407 UTC; positions separately at
+14:01:59.846956–14:02:01.171072. Sequential indicative estimates, not
 synchronized NAV or guaranteed liquidation.
 
 | Measure | Value |
 |---|---:|
 | Indexed unresolved legs, including dust | 4 |
 | Remaining open-position cost | $31.46 |
-| PM midpoint / indicative fee-net depth | $34.26 / $32.43 |
-| Whole-account marked / approximate depth | $197.63 / $195.80 |
+| PM midpoint / indicative fee-net depth | $33.41 / $32.06 |
+| Whole-account marked / approximate depth | $196.69 / $195.34 |
 | Settled-P&L accounting residual | +$18.66 |
 
-- **Trading midpoint/depth: $191.46/$189.63**, excluding $6.17 gas;
-  +$0.85/+$0.37 since06:02. Depth+11.55% versus170 before VM/API costs.
-  Residual fell$0.64 with Gemini settlement; it is rounded accounting.
-- **Gemini finalized YES:** exact on-chain payouts1/1/0 confirm held NO pays0.
-  Losing4.034750 tokens remain; about$0.64 residual cost is lost. Earlier98.05
-  sale preserved12.252260 pUSD cash, separate from entry loss. No burn or trade.
-- **History retained:** G prior retired after finality, both old assessments
-  archived; six exact-market outcomes graded with all original forecasts intact.
-  Initial closure-state warning fixed; post-fix audit CLEAN4+1.
-- **O/Clarity retained, NO ADD:** OpenAI HLE53.6 remains below55. Both current O
-  books failed180s freshness; no certified exit quote. CompleteClarity29/29
-  exit/freecarry remains below29floor. O stress exit remains explicit.
-- **Source/operations:**65 raw HLE objects unchanged;17 primary source GETs
-  plus documented separate onboarding reads. Four current daemons,
-  939.13MiB disk above warning. Material Telegram sent; no code/restart change.
-- **Inventory:** knownCTF/pUSD22.571890 unchanged; aUSDC122.075589,
-  variable live APY3.0700%. Zero-payout tokens are excluded, not secretly burned.
-- **Next:** existing14:00, weeklyOct16/monthlyNov12; no new timer/goal.
+- **Trading midpoint/depth: $190.61/$189.26**, excluding $6.08 gas;
+  −$0.85/−$0.37 since10:02. Depth+11.33% versus170 before VM/API costs.
+  Accounting residual unchanged; the Gemini final loss was recorded at10:00.
+- **Positions retained:** OpenAI NO19 and completeClarity29/29, no add.
+  OpenAI originalHLE53.6<55. Root books passed180s at receipt; central/upper
+  O sensitivity holds, stress exits. Clarity exit/freecarry remains below29floor.
+- **Gemini final YES:** exact payouts1/1/0 reconfirmed at Polygon95520867.
+  Losing4.034750 NO tokens remain at payout0; no burn. Historical priors and
+  original198 decisions preserved; no recovery or double-booked loss.
+- **Discovery:** capped primary/thin scans, five literal contracts reviewed;
+  3041 selected identities remain unreviewed. Silver minute-history request419
+  left qualification unknown; DEC0199 size0 skip, no numeric forecast or entry.
+- **Source/operations:**65 raw HLE objects unchanged;17 primary GETs with
+  three OpenAI403 gaps. CLEAN4+1; redeem-all0/4, no broadcast. Four current
+  daemons,912.93MiB disk above warning. Telegram quiet; no code/restart change.
+- **Inventory:** known CTF balances unchanged; pUSD22.571890, aUSDC122.077330,
+  variable live APY3.1312%. Known assets only; dust redemption remains gas-negative.
+- **Next:** existing18:00, weeklyOct16/monthlyNov12; no new timer/goal.
   Manual copper/Base routes and issuer-account rotation remain blocked.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC

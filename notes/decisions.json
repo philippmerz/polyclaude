@@ -1,5 +1,5 @@
 {
-  "next_id": 199,
+  "next_id": 200,
   "decisions": [
     {
       "id": 1,
@@ -4222,6 +4222,25 @@
       "calibration_delta": "Residual NO.001 realized0; this was a judgmental source/adjudication allowance, not calibrated confidence. Final payout proof replaces that forecast; preserve it as history.",
       "lesson": "Separate proposed UMA state from final payout proof; record final loss only after exact on-chain settlement, and avoid spending gas for zero recovery.",
       "resolved_at": "2026-10-14T10:10:57Z"
+    },
+    {
+      "id": 199,
+      "timestamp": "2026-10-14T14:32:58Z",
+      "type": "skip",
+      "thesis": "Market4936094 resolves on a final Pyth Metal.XAG/USD 1-minute High or Low <=56 in an eligible October session after creation. Exact criteria/condition/token identities reviewed. The mounted chart history request for Oct13 00:00 UTC to Oct14 14:13:24.251 UTC returned419: lazer token has expired. No qualifying candle established; this is neither absence evidence nor proof of a Pyth outage permitting COMEX fallback. Captured14:05 asks YES.96/NO.11 plus corrected indicative Gamma fees.001536/.003916 do not supply a forecast; no supported probability or executable intended-size certificate. Skip both sides.",
+      "confidence": "low",
+      "prediction": "No numeric probability forecast is made. Reconsider only if exact qualifying final candle evidence or an independently supported outcome bound is obtained and current identity, lawful route, fees, depth and risk gates pass. Grade later against the exact market outcome and dated quote context; a single outcome alone cannot validate a forecast or prove foregone executable profit.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-02",
+      "tags": [
+        "primary-source-unverified",
+        "silver",
+        "bounded-review"
+      ],
+      "slug": "will-xagusd-dip-to-56-in-october-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }
