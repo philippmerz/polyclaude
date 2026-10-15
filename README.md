@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 183 recorded observations from Apr-25 through Oct-15. Rounded
+The chart now has 184 recorded observations from Apr-25 through Oct-15. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -73,39 +73,36 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-15 ~02:01 UTC
+## Last bankroll snapshot — 2026-10-15 ~06:02 UTC
 
-Bankroll02:01:39.922050–02:01:57.332806 UTC; positions separately at
-02:01:18.988077–02:01:20.496929 print the same PM estimates. Sequential
-observations remain indicative, not synchronized NAV or guaranteed liquidation.
+Bankroll06:02:40.134325–06:02:56.097271 UTC; positions separately at06:02:20.023899–06:02:21.341735.
+The bankroll's own PM values are used below. Sequential rounded observations
+remain indicative, not synchronized NAV or guaranteed liquidation.
 
 | Measure | Value |
 |---|---:|
 | Indexed unresolved legs, including dust | 4 |
 | Remaining open-position cost | $31.46 |
-| PM midpoint / indicative fee-net depth | $33.31 / $32.06 |
-| Whole-account marked / approximate depth | $196.47 / $195.22 |
+| PM midpoint / indicative fee-net depth | $33.17 / $32.06 |
+| Whole-account marked / approximate depth | $196.19 / $195.08 |
 | Settled-P&L accounting residual | +$18.67 |
 
-- **Trading midpoint/depth: $190.52/$189.27**, excluding $5.95 gas;
-  both flat since22:02. Depth+11.34% versus170 before VM/API costs.
+- **Trading midpoint/depth: $190.37/$189.26**, excluding $5.82 gas;
+  -0.15/-0.01 since02:01. Depth+11.33% versus170 beforeVM/API.
   Residual unchanged; no new trade or repeated settlement.
 - **Positions retained:** OpenAI NO19, originalHLE53.6<55; stress exit
   remains explicit. CompleteClarity29/29 floor29 exceeds captured exit28.56905/
-  idealized freecarry28.76037, including no vote/voice passage. No add.
-- **Inventory:** known CTF/pUSD unchanged at Polygon95549582;
-  pUSD22.571890/aUSDC122.082578, live variable APY3.1269%. G final1/1/0;
-  losing4.034750 tokens stillheld at0, no rebook/burn. Redeem-all0/4,
-  no broadcast; Hormuz gas pointcost exceeds its tiny payout.
-- **Source/operations:**65 raw HLE objects stable; changed frontend retains
-  HLE/Diamond semantics.17 primary GETs/three OpenAI403 gaps. CLEAN4+1,
-  empty orders/no hits. Four current daemons/disk869.55MiB above warning.
-- **Discovery:** primary/thin capped; four exact contracts reviewed,
-  3026 selected identities lack substantive review. Fed/Fable/Ossoff lack
-  supported forward forecasts; sports fee/uncertainty gate fails, size0 DEC200.
-  No reviewed candidate cleared entry. No exchange-wide absence claim.
-- **Next:** existingOct15 06:00, weeklyOct16/monthlyNov12; no new timer/goal.
-  Telegram quiet. Manual copper/Base and issuer-account rotation stay blocked.
+  idealized freecarry28.75958, including no vote/voice passage. No add.
+- **Inventory:** knownCTF/pUSD unchanged at Polygon95559184;
+  pUSD22.571890/aUSDC122.084318, variable liveAPY3.1206%. G final1/1/0;
+  losing4.034750 tokens stillheld0, no rebook/burn. Hormuz remains gas-negative.
+- **Source/operations:**65rawHLEobjects/frontend/metric stable vs02;
+ 17primaryGETs/threeOpenAI403 gaps. CLEAN4+1, emptyorders/nohits. Four current
+  daemons/disk840.76MiB above warning. Telegramquiet.
+- **Discovery:** lastfull02capped/fourliteralreviews/3026selectedunreviewed.
+  No full scan/redeem-all repeat due06; no new trade or forecast claim.
+- **Next:** existingOct15 10:00, weeklyOct16/monthlyNov12; no newtimer/goal.
+  Manual copper/Base and issuer-account rotation remain externally blocked.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

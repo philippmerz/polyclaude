@@ -1,3 +1,18 @@
+## Oct-15 06:00 light check — completed; positions retained, no new alert
+
+- Trading midpoint/depth190.37/189.26 at~06:02, -0.15/-0.01vs02;
+  gas5.82 excluded. Wholemarked196.19/approxdepth195.08; residual18.67
+  unchanged accounting. One CSV point/history preserved; no asset/prior/decision change.
+- Routine19once/allrc0/38rawstreamproofs; quota wrapper lost timing after one
+  successful probe, no rerun. Other18 timed. CLEAN4+1/orders/UMA/watch/overdue clear.
+- Sources17/three403gaps,65rawHLE/frontend/metric/fivecriteria unchanged. O19/
+  completeClarity29-29 retained; stress exit explicit, pairfloor29>exit+freecarry.
+  KnownCTF/pUSD unchanged, Aaveinterest accrued; Gfinal0/no burn/rebook.
+- Fourcurrentdaemons/disk840.76MiB above warning. Hormuzgas-negative,
+  no newsim. Full discovery/redeem-all not due; last02scope remains partial.
+  Telegramquiet, next10:00, weeklyOct16/monthlyNov12 future; manualblockers
+  unchanged, no newtimer/goal. Evidence:journal~06:02/data/periodic_20261015T0600_*.json.
+
 ## Oct-15 02:00 full check — completed; positions retained, four candidate cases declined
 
 - Trading midpoint/depth190.52/189.27 at~02:01, flat vs22; gas5.95 excluded.
@@ -4385,25 +4400,24 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-15 02:00:** G finalYES1/1/0 reconfirmed at
-Polygon95549582; losing4034750units remain0, loss already recorded. All65raw
-objects unchanged versus22; frontendbytes changed with HLE/Diamond semantics
-preserved. O53.6<55; retainO19, no add. NO.25central/.15stress/.38upper stays
-judgmental. Nine root GETs pass180s at receipt only, Oexit3.49303/W186.21;
-central/upper hold/stress19exit. Original199 decisions preserved plus size0DEC200.
+**Current HLE state, Oct-15 06:00:** G finalYES1/1/0 reconfirmed at
+Polygon95559184; losing4034750units remain0, loss already recorded. All65raw
+objects/frontend/metric stable versus02, O53.6<55; retainO19/noadd. Judgmental
+NO.25central/.15stress/.38upper unchanged. Nine rootGETs pass180s at receipt only;
+Oexit3.49303/W186.20, captured central/upperhold/stress19exit. All200decisions intact.
 
-**Current Clarity review, Oct-15 02:00:** matched complete29/29 rules preserve
+**Current Clarity review, Oct-15 06:00:** matched complete29/29 rules preserve
 floor29 including no vote/voice passage;51–58 gives58. Exit28.56905/idealized
-freecarry28.76037<29. Keep pair; no supported separate-leg forecast change.
-Witt departure report reviewed/notified22 remains dated reporting citing an
-anonymous official; underlying email/direct public confirmation not established.
-Criteria-consistent settlement/platform risks remain; no duplicate Telegram.
+freecarry28.75958<29. Keep pair/noadd; no supported independenttrim forecast.
+Wittreport reviewed/notifiedOct14 22 remains dated reporting citing anonymous
+official; underlyingemail/directpublicconfirmationunestablished in checked sources.
+Criteria-consistent settlement/platform risks remain; no duplicateTelegram.
 
-**Hormuz dust, Oct-15 02:00:** gas pointcost.00457432>payout.003571 using
-last vetted175036unit dry-run/current gas/roundedFX. Retain gas-negative dust;
-no new simulation/broadcast/fee-policy change. Last exact dry-run22:10 succeeds
-with210044limit, retained as dated evidence; its tiny-positive gas observation
-is historical. Initial sluglookupempty/metadata gap and directID200 proof remain.
+**Hormuz dust, Oct-15 06:00:** currentgas/roundedFX pointcost0.00450684>
+payout.003571 using lastvetted175036units. Retain gas-negative dust; no newsim,
+broadcast or fee-policychange. ExactdryrunOct14 22:10 succeeded with210044limit,
+retained as dated evidence; its tinypositive gas observation is historical.
+Initialsluglookupempty/metadata gap and directID200/payoutproof remain.
 
 **Current discovery coverage, Oct-15 02:00:** primary996dedup/570eligible/
 80selected/490omitted; thin45075/3119/3000/119omitted; both page-capped.
