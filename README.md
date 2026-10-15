@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 185 recorded observations from Apr-25 through Oct-15. Rounded
+The chart now has 186 recorded observations from Apr-25 through Oct-15. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -73,9 +73,9 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-15 ~10:02 UTC
+## Last bankroll snapshot — 2026-10-15 ~14:01 UTC
 
-Bankroll10:02:14.873023–10:02:29.939487 UTC; positions separately at10:01:56.129902–10:01:57.311909.
+Bankroll14:01:41.690303–14:01:57.927515 UTC; positions separately at14:01:21.911161–14:01:23.224204.
 The bankroll's own PM values are used below. Sequential rounded observations
 remain indicative, not synchronized NAV or guaranteed liquidation.
 
@@ -84,24 +84,27 @@ remain indicative, not synchronized NAV or guaranteed liquidation.
 | Indexed unresolved legs, including dust | 4 |
 | Remaining open-position cost | $31.46 |
 | PM midpoint / indicative fee-net depth | $33.17 / $32.06 |
-| Whole-account marked / approximate depth | $196.25 / $195.14 |
-| Settled-P&L accounting residual | +$18.67 |
+| Whole-account marked / approximate depth | $196.14 / $195.03 |
+| Settled-P&L accounting residual | +$18.68 |
 
-- **Trading midpoint/depth: $190.38/$189.27**, excluding $5.87 gas;
-  +0.01/+0.01 since06:02. Depth+11.34% versus170 beforeVM/API.
-  Residual unchanged; no new trade or repeated settlement.
+- **Trading midpoint/depth: $190.38/$189.27**, excluding $5.76 gas;
+  +0.00/+0.00 since10:02. Depth+11.34% versus170 beforeVM/API.
+  Residual+0.01 is rounding/carry; no new trade or repeated settlement.
 - **Positions retained:** OpenAI NO19, originalHLE53.6<55; stress exit
   remains explicit. CompleteClarity29/29 floor29 exceeds captured exit28.56905/
-  idealized freecarry28.75930, including no vote/voice passage. No add.
-- **Inventory:** knownCTF/pUSD unchanged at Polygon95568788;
-  pUSD22.571890/aUSDC122.086060, variable liveAPY3.1225%. G final1/1/0;
+  idealized freecarry28.76173, including no vote/voice passage. No add.
+- **Inventory:** knownCTF/pUSD unchanged at Polygon95578387;
+  pUSD22.571890/aUSDC122.087816, variable liveAPY3.1697%. G final1/1/0;
   losing4.034750 tokens stillheld0, no rebook/burn. Hormuz remains gas-negative.
-- **Source/operations:**65rawHLEobjects/frontend/metric stable vs06;
+- **Source/operations:**65rawHLEobjects/frontend/metric stable vs10;
  17primaryGETs/threeOpenAI403 gaps. CLEAN4+1, emptyorders/nohits. Four current
-  daemons/disk829.35MiB above warning. Telegramquiet.
-- **Discovery:** lastfull02capped/fourliteralreviews/3026selectedunreviewed.
-  No full scan/redeem-all repeat due10; no new trade or forecast claim.
-- **Next:** existingOct15 14:00, weeklyOct16/monthlyNov12; no newtimer/goal.
+  daemons/disk811.27MiB above warning. Telegramquiet.
+- **Discovery:**10types/allrc0, capped primary/thin; four exactcases reviewed,
+  3045selectedconditions substantivelyunreviewed. ETH source/volatility check
+  fails fee/uncertainty gate, size0DEC201; no reviewed entry cleared. Snapshot
+  output-path correction documented; no scanner rerun or global absence claim.
+  Mandatoryredeem-all0/4,no broadcast.
+- **Next:** existingOct15 18:00, weeklyOct16/monthlyNov12; no newtimer/goal.
   Manual copper/Base and issuer-account rotation remain externally blocked.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC

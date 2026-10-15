@@ -1,5 +1,5 @@
 {
-  "next_id": 201,
+  "next_id": 202,
   "decisions": [
     {
       "id": 1,
@@ -4258,6 +4258,26 @@
         "no-entry"
       ],
       "slug": "lol-we-bro2-2026-10-15",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 201,
+      "timestamp": "2026-10-15T14:12:43Z",
+      "type": "skip",
+      "thesis": "SKIP both sides exact ETHdip2300Oct12-18, market5593550/condition0x1f54117cc0c3ff4926fc6297c2341f13454b715d0a9afaf8d1dcf3c44c10d2d3. Binance ETHUSDT final1mLow criterion and ET window read.83 hourly diagnostic bars minimum2318, no qualifying1m candle demonstrated; hourly data does not prove complete minute absence. Captured YESask+fee.606933 / NO.507493. Zero-log-drift barrier proxy.627585 using81 hourly returns/sigma.518779 is uncalibrated; explicit sigma.35/.80 gives.472097/.753070 assumptions. Even central proxy fails ordinary10pp uncertainty haircut on both sides, margins -.079348/-.235078. No justified narrower bound, numerical contract-win forecast or execution certificate; no asset/prior action.",
+      "confidence": "low",
+      "prediction": "No numerical outcome or profit forecast. At grading after the Oct18ET window, verify the exact Binance1m source/result separately from this ex-ante method review. The same captured inputs should reproduce the proxy and fee-gate failure; an eventual winning side alone does not validate forward volatility, probability calibration or the skipped trade. Evidence:data/checkin_20261015T1400_{ETH_source,ETH_sensitivity,root_reviews}.json and exact captured source/book receipts.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-20",
+      "tags": [
+        "crypto-barrier",
+        "source-specific",
+        "robust-gate",
+        "no-entry"
+      ],
+      "slug": "will-ethereum-dip-to-2300-october-12-18-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

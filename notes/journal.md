@@ -29937,3 +29937,100 @@ Operations, preservation and closeout:
   README/backlog/handoff refreshed; chart/context checks and immutablepublication
   verification follow. Telegramquiet: no new material action/position/prior change.
   Next existing14:00. Evidence:data/periodic_20261015T1000_*.json;logs/periodic_20261015T1000/.
+
+
+### 2026-10-15 ~14:01 UTC — full check; positions retained, four candidate cases declined
+
+- Backlog/recent journal reviewed; due14:00 full check completed once.
+  Retain OpenAI NO19, completeClarity29/29 and dust. No trade, order, transfer,
+  burn or prior change. New size0DEC201 records the ETH skip; no numerical
+  contract-win forecast. Mandatoryredeem-all once0/4,redemptions[],no broadcast.
+  Ledger201/125resolved/76pending/next202; original forecasts/history unchanged.
+- Nineteen direct routine types once/allrc0,38 fullytimed byte/hash-proved
+  stdout/stderr streams. Direct quota8%used/92%headroom.
+  AuthoritativeTOTAL196.14 suppliedKelly; CLEAN4indexed+1deindexed,
+  terminal-empty orders, UMA/Ostium/watch--auto-revet/crux/overdue clear.
+- Bankroll14:01:41.690303–14:01:57.927515 UTC: wholemarked196.14, PMmid33.17/indicative fee-net
+  depth32.06, gas5.76, open cost31.46. Separatepositions14:01:21.911161–14:01:23.224204 UTC
+  report PMmid33.17; difference from bankroll
+  PMmid+0.00. Sequential rounded
+  observations, not synchronized NAV or certified liquidation. Trading ex-gas
+  midpoint190.38/depth189.27, +0.00/+0.00vs10;
+  wholeapproxdepth195.03, depth+11.34%vs170 beforeVM/API.
+  Residual18.68 (+0.01vs10) reflects rounding/carry, not audited cash profit or
+  a repeatedG settlement. One CSV point; no operating-cost-zero assumption.
+- Fixed Polygon95578387:18knownassetreceipts, CTF/pUSDunchanged,
+  pUSD22.571890/aUSDC122.087816 (+0.001756vs10).
+  Live variable nativeUSDC3.169746%, unpaused/unfrozen. Fourclearedlosses/debut0.
+  Three exactG payoutreads remain denominator1/YES1/NO0; losing4.034750 NO
+  retainedat0, no burn/grade/lossrebook. Knownassets only, not an unknownscan.
+- Nine exactrootGamma/fee/bookGETs, nofallback. Ages C50Y4.931051/
+  C58N0.054755/O84.995629s pass180s atreceipt only. Conservative
+  SELLfees max(per-level,aggregate), ceil5dp; universal fee grouping unproven.
+  O19netexit3.49303/W186.21, unchangedNO.25central/.15stress/.38upper;
+  captured0-or5..19grid central/upperhold, stress19exit. Full-sale minus-hold
+  no-carryElog-0.00570491/+0.00401096/-0.01833555. Conditional sensitivity, not calibration/globaloptimum/
+  signingauthority. O53.6<55; Gfinality alone does not prove Oqualification.
+- CompleteClarity29/29 criteriafloor29: no vote or0–50Yea pays0/29;51–58 pays
+  29/29;59+ or voice/unanimouspassage pays29/0. Exit28.56905/idealizedfree
+  constant-ratecarry28.76173<29; keep pair/noadd. No supported joint bound
+  for independenttrim. Criteria-consistent settlement/platform risks remain.
+  Previously reviewed/notifiedWitt report is not new; no passage fact added.
+- Sources17GETs14:01:30.778303–14:01:35.215040,14HTTP200/3OpenAI403;
+  26-entryintegrity verified. All65fullrawHLE objects, mountedfrontendURL/bytes
+  and defaultoriginalHLE/separateDiamond semantics unchanged vs10. Argon55.6/
+  Diamond56.9/persistentGfinalYES not new; Omax53.6<55. Five literalcriteria/
+  states, Senate256/AA57/44 andarticlecores unchanged. Three GoogleRSSitems concern
+  shopping/SynthID; feed descriptions contain no threshold claim. Two newarticle
+  URLs were inaccessible through browser; fullarticles not verified. Raw mounted
+  API is independently captured; direct403/browser/cache gaps leave coverage partial.
+- Hormuz.003571 winningdust: currentgas/roundedFX with dated175036unit dryrun
+  gives pointcost0.00443056>payout; retain gas-negative dust.
+  Last exactdryrunOct14 22:10 is dated evidence, not rerun. No simulation,
+  broadcast, fee-policy change or new timer. LosingG tokens supply no recovery.
+- Four exact-onecanonical/currentcodedaemons2026-10-15T14:01:44.207577+00:00; disk
+  811.27MiB>512warning/128critical, MemAvailable
+  1113.73MiB; news/heartbeat freshness under30min.
+  No codechange/restart. Closing last80publictails contain no newer row after
+  10:02 within sampled scope; no privateinbox/history read or notification replay.
+- Full discovery10types once/allrc0. Primary1000fetched/666eligible/80selected/
+  586topomitted,10pagecap; thin47063dedup/3026eligible/3000selected/26omitted,
+  20pagecap. Same-profile02baseline, not intervening lightchecks. Emitted1482row
+  occurrences/1475uniqueconditions;3049selectedunique(31shared),1574notemitted.
+  All rowidentity/criteriaSHA proofs pass; four literalreviews leave3045selected
+  conditions without substantive review. Filter exclusions/rawoutputs retained;
+  this is partial coverage, not global absence or an execution certificate.
+- Wrapper reassignment missed write_snapshot's import-bound default: two scans
+  initially wrote to shared data/snapshots. Exact captures/sidecars preserved in
+  isolated run and valid shared paths; currentlatest targets newthin snapshot.
+  Intermediate inferred-old pointer was unproven, then corrected to new output;
+  pre-run pointer was not captured, no exactrestoration claim. Final50entry
+  manifest verifies, no scanner rerun/productioncode/financial-record mutation.
+- Four exact cases read on both sides, all currentplanningbooks captured14:06:26:
+  Fed2589812 nochangeYES.739855/NO.290080 afterobservedfees; no independent
+  Octoberforecast. Ceasefire5686981 literalOct17 23:59Iran cutoff/territory/
+  weapon exclusions/three-dayconflict extension read; observedfeesdisabled,
+  YES.957/NO.048, no calibrated strike-hazard bound or livefee certificate.
+- ETH5593550 needs BinanceETHUSDT closed1m finalLow<=2300 in exactET window.
+  Mainendpoint200 hourlydiagnostic83bars/min2318, no qualifying1m demonstrated;
+  hourlydata is not requiredminute proof or complete-minute absence. Captured
+  spot2358.03 and81hourlyreturns/sigma.518779 give uncalibrated zero-log-drift
+  first-passage proxy.627585; sigma.35/.80 assumptions give.472097/.753070.
+  YEScost.606933/NO.507493 aftercurvefees; centralproxy minus10pp margins
+  -.079348/-.235078. Both fail; no tighter bound justified, size0DEC201.
+- MLB1395732: MLB0–3, not eliminated. Early-elimination clause not triggered;
+  winner/OtherNov30ET fallback read. YES.102700/NO.912457 afterfees, no supported
+  multigame forecast. Default10pp cannotclearNO evenp1; no measured-tail
+  exception justified. No numerical contract-win forecast/entry in anycase.
+- Sports69passed/20printed/6inplay, oneunverifiedconsensusVitality/LOUD.465/
+  exactly−3.0pp, not >3pp; twoNO_CONSENSUS. Macro11/noconsensus. Event1497/
+  1239inspected/15pagecap,no midpoint/provisionalpositive. Consistency5001markets/
+  629events/32pages/marketcap,324groups/255midflags,20requested/8valid/12failed/
+  149unquoted/200legs,no structuralpositive. Favorite1000/10pagecap,22walked/
+  12profile/10outside/no walkcap omission; no populationprobability. July3→65
+  sourcefreeze changes persist, not new. Manualroute/credential blockers unchanged;
+  weeklyOct16/monthlyNov12 future, experiment concluded. No newtimer/goal/idlework.
+- One CSV point/original185-point and journalprefix/original200 decisions preserved plus size0DEC201.
+  README/backlog/handoff refreshed; chart/context checks and immutablepublication
+  verification follow. Telegramquiet: no new material action/position/prior change.
+  Next existing18:00. Evidence:data/checkin_20261015T1400_*.json;logs/checkin_20261015T1400/.
