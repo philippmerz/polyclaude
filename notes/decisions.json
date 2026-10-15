@@ -1,5 +1,5 @@
 {
-  "next_id": 200,
+  "next_id": 201,
   "decisions": [
     {
       "id": 1,
@@ -4238,6 +4238,26 @@
         "bounded-review"
       ],
       "slug": "will-xagusd-dip-to-56-in-october-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 200,
+      "timestamp": "2026-10-15T02:14:37Z",
+      "type": "skip",
+      "thesis": "SKIP size0 exact WE/BRION BO5 Demacia semifinal market5649738, condition0xde50a145b8e5f7a84c367a307f9708600a724ae9f2760e304daf6e1334568637. Bovada match Win EVEN/-130 normalizes to WE46.9388% book proxy, not calibrated true win probability; original unknown-age -115/-115 extract preserved. Captured WE ask.44 plus5% fee.01232=.45232 leaves1.7068pp proxy edge and fails ordinary10pp haircut (even2pp). BRION cost.582255 exceeds53.0612% proxy. No justified narrower haircut, current independent second book, Gol.gg exact fixture/status or intended-size gate. Cancellation/ambiguous identity/prestart walkover resolve50/50; postponement cutoffOct29 ET. Both sides declined; no prior/asset action.",
+      "confidence": "low",
+      "prediction": "No numerical outcome forecast or performance claim. Same captured source/fee inputs must reproduce the gate failure; review eventual exact-condition outcome after the Oct29 postponement cutoff. Price movement or eventual WE win alone would not show this risk bound was valid or justify an entry ex ante. Root review and receipt paths: data/checkin_20261015T0200_{sports_review,root_reviews}.json; logs/checkin_20261015T0200/root_browser_candidate_readback.txt.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-30",
+      "tags": [
+        "sports",
+        "source-proxy",
+        "robust-gate",
+        "no-entry"
+      ],
+      "slug": "lol-we-bro2-2026-10-15",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
