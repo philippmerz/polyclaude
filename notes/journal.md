@@ -30099,3 +30099,33 @@ Operations, preservation and closeout:
   no timer, durable goal or idle continuation. Material diagnostic incident sent
   once as Telegram1148; publication and offline verification follow.
   Evidence:data/periodic_20261015T1800_*.json;logs/periodic_20261015T1800/.
+
+## Oct-15 22:00 light check — completed; positions retained, no new threshold transition
+
+- Routine manifest 19/19 types, rc0, 38 streams hashed and all 19 UTC windows
+  recorded. Bankroll 22:02:21.906209–22:02:37.333890 UTC is the plotting anchor
+  minute 22:02; its own components total $196.71, PM midpoint $33.46, gas $6.03.
+  PM fee-net depth is $32.06; separate positions and bankroll midpoint agree.
+- Trading midpoint/depth $190.68/$189.28 (+$0.01/+$0.01 versus18:00), whole
+  approximate depth $195.31, open cost $31.46, settled residual $18.68. These
+  are rounded sequential accounting marks; residual is not audited cash profit.
+- No asset, prior or decision changes. Retain O NO19 and full Clarity29/29.
+  Root review retains O .25 central/.15 stress/.38 upper; stress19-exit,
+  central/upper-hold are capture-time planning, not calibration or execution.
+  Clarity floor29 exceeds exit28.56905 and idealized carry28.76137154.
+- G finality remains 1/1/0; 4.034750 losing tokens remain at0, no rebook/burn.
+  CTF/pUSD unchanged; aUSDC122.091354 (+1,752 units), APY3.17746487%.
+- Source review: HLE API has 65 rows and seven changed raw objects, but HLE and
+  Diamond values are unchanged. G55.6/YES3072356 are persistent; Omax53.6<55.
+  Calibration/auxiliary-field updates do not establish a new posterior. Cache
+  Age2587s is not publication time; no new RSS/alert rows after18:05; 3 OpenAI
+  pages remain 403 gaps. Trump Gamma YES3.85→3.50 is feed-only, not event proof.
+- Hormuz point gas .004666476 exceeds payout .003571; no resimulation. Full14
+  scan remains capped at3049 selected/four literal/3045 unreviewed; no full scan
+  or redeem-all. Four daemons, disk770.21875MiB. Manual route/issuer rotation
+  blockers unchanged; weeklyOct16/monthlyNov12 future.
+- The prior18 wrapper incident and old10 raw evidence damage remain dated and
+  unrepaired; no repeat notification. A risk helper stopped read-only before
+  routine JSON was ready, then completed after readiness without repeating an
+  account probe. Ledger201/125/76/next202 unchanged. Evidence:
+  data/periodic_20261015T2200_*.json; logs/periodic_20261015T2200/.

@@ -1,95 +1,58 @@
 ---
-reviewed_at: "2026-10-15T18:09:28Z"
-valid_until: "2026-10-15T22:00:00Z"
+reviewed_at: "2026-10-15T22:09:08Z"
+valid_until: "2026-10-16T02:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 80325e882f11d46d6bbfb1c15e7a4f5f58c46377a254a09c255183736353a465
+  README.md: c78dbb8a0461048c3147e4ea73168b8fed274d84d6c83ee8514b64b91e4f6fd8
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 5598b3684a415ca92c52d5fd61de8ecff6d274f70561a0dc59d62a9ae55eb6e2
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 4e6c2bebe2886c741153c3ebccb6c0f689822a77b6582c6a9747b7cecc1f44f0
   scripts/README.md: 8a5b43f42faa5cace24ddf53b2e0553c835294b4c1775fc851e9cc6c175583cc
-  notes/backlog.md: f97377c96168326891704c7db60c896623569b9f3c2c7deb7556da7978678460
+  notes/backlog.md: 28e9eb2143624760382b99b7146d3a0c603bc2a51369738122c6586a444b9d8d
 ---
 
 # Current context — dated orientation, not live state
 
-- Mandate: lawful compounded ROI through start-of-2027; decentralized/noCEX/
-  noKYC, holding under one year. NormalDec31 resolutions redeemed earlyJanuary
-  count. Off-chain brokerage/Sunday reviews retired. Required reads/live gates
-  remain; packets carry no execution authority. Existing cron/watchers handle
-  waits; next22:00/weeklyOct16/monthlyNov12. No timer/goal/idle continuation.
-- Private messages only via notified one-time reader; no inbox/history replay.
-  Material Telegram text via msg --stdin/single-quoted heredoc, max700 chars.
+- Mandate: lawful compounded ROI through start-of-2027; decentralized/no-CEX/
+  no-KYC, under-one-year horizon. Brokerage/Sunday reviews remain retired.
+  Existing schedules only; next02:00, weeklyOct16 and monthlyNov12. No new
+  timer/goal or idle continuation.
 
-## Latest18:00 check
+## Latest22:00 check — capture-time only
 
-- Evidence:data/periodic_20261015T1800_*.json;logs/periodic_20261015T1800/;journal~18:05.
-  Bankroll18:05:58.468916–18:06:16.233045UTC TOTAL196.64; its own PMmid/depth33.46/32.06.
-  Separate positions PMmid33.46, exact UTC lost in wrapper interruption.
-  Rounded sequential marks, not synchronized NAV/certified liquidation.
-- Ex-gas midpoint/depth190.67/189.27 (+0.29/-0.00vs14), gas5.97;
-  wholeapproxdepth195.24/cost31.46/residual18.68(+0.00). DepthROI
-  +11.34%vs170 beforeVM/API. Residual is accounting/carry, not auditedcashprofit.
-  CSV187/original186prefix intact;201decisions/125resolved/76pending/next202
-  unchanged. No asset, order, prior or decision change.
+- Bankroll22:02:21.906209–22:02:37.333890UTC, total196.71; gas6.03,
+  PMmid/depth33.46/32.06, tradingmid/depth190.68/189.28, wholeapproxdepth195.31,
+  open cost31.46, accounting residual18.68. Trading mid/depth +.01/+.01vs18.
+  Sequential rounded marks; residual is carry/accounting, not cash profit.
+  One CSV observation; 188 total. No asset, prior or decision change.
+- O NO19 remains held; root sensitivity .25central/.15stress/.38upper.
+  Stress favors 19-exit; central/upper hold. Planning is not calibration or
+  signing authority; accepted book valid only at receipt. OpenAI HLE max53.6<55.
+  Keep Clarity29/29: floor29>captured exit28.56905/idealized carry28.76137154.
+- G final YES denominator1/YES1/NO0. Losing4.034750 tokens stay at0; no rebook
+  or burn. CTF/pUSD unchanged. aUSDC122.091354 (+1752units), APY3.17746487%.
+- HLE65 rows: seven raw objects changed in auxiliary metrics/flags, but HLE and
+  Diamond scores did not. Argon55.6 and resolved YES3072356 are persistent, not
+  new. API Age2587s is cache age, not publication time. No new RSS/public-tail
+  entries after18:05; three OpenAI403 gaps. Trump-out YES3.85→3.50 is a feed
+  snapshot, not executable price/event fact. See source report.
+- Hormuz gas .004666476 exceeds .003571 payout; no resim. Full discovery remains
+  dated/capped:3049 selected/four literal/3045 unreviewed; no full scan or
+  redeem-all. Four current daemons; disk770.21875MiB.
+- Routine19/19 rc0,38 hashes,19 timed windows. The earlier18 wrapper incident
+  damaged six old10 raw captures; it remains documented, no restoration or
+  repeat notice. A pre-ready risk helper stopped read-only; it completed once
+  source data was ready, without repeating account probes.
+- Canonical ledger201 decisions:125 resolved/76 pending/next202. Manual route
+  and issuer-rotation blockers unchanged. Before any action, refresh exact
+  identity, criteria, account/orders, locks, books, fees and limits.
 
-## Portfolio judgment, capture-time only
+## Source pointers and limitations
 
-- Retain OpenAI≥55 NO19, completeClarity29/29, TrumpNO.33/Hormuz.003571.
-  OriginalHLE O53.6<55; NO.25central/.15stress/.38upper remain judgmental.
-  Nine exactGETs/no fallback; bookages C50Y34.130/C58N0.361/O49.954s
-  pass180s at receipt. O19exit3.49303/W186.21; captured0-or5..19grid
-  central/upperhold, stress19exit. Sensitivity is not calibration/global optimum
-  or later signing authority. G finality does not establish O qualification.
-- Clarity criteria: no vote/0–50Yea pays0/29;51–58 pays29/29;59+/voice/
-  unanimous passage pays29/0. Floor29 versus pair exit28.56905/idealized
-  constant-rate freecarry28.76199; keep complete pair/noadd. No supported
-  independent-trim forecast. Settlement/platform risk remains. Over58 GammaYES
-  snapshot.065→.055 is not a live quote/passage fact. Witt report already
-  reviewed/notifiedOct14 22; underlying email/directconfirmation unestablished.
-
-## Sources, inventory and operational incident
-
--17GETs18:04:29.201665–18:04:35.137909UTC;14HTTP200/3OpenAI403 gaps;26 integrity entries.
-  65 full rawHLE objects/frontendURL/bytes/defaultoriginalHLE/separateDiamond
-  semantics stable versus14; G55.6/Diamond56.9 persistent. Five criteria/state,
-  Senate256/AA57/44/articlecores stable. Six newGoogleRSSitems (scam detection,
-  disasterresilience, earthquakealerts, publisherpilot, Search, repair) contain
-  no threshold claim in titles/descriptions; fullnewarticles notverified.
-  Last80 publictails zero after14:01; direct403/browser/cache gaps remain partial.
-- Polygon95588081:18 knownasset receipts,CTF/pUSD unchanged,
-  pUSD22.571890/aUSDC122.089602(+0.001786vs14); variableAPY3.181056%,
-  unpaused/unfrozen. Clearedlosses/debut0; threeGfinalreads1/1/0. Losing4.034750
-  tokens remainat0, no burn/grade/rebook. Knownassets only, no fullredeem-all due.
-- Hormuz payout.003571/currentgaspoint0.00461250 using dated175036units/
-  currentgas/roundedFX; gas-negative, no new simulation/broadcast. ExactOct14
-  22:10dryrun/210044limit/initialslugmetadata gap remain dated evidence.
-- Routine wrapper used old10 path and overwrote raw captures1–6; exact current
-  bytes preserved in18. Old10 manifest/summary leftunchanged; lost raw links
-  explicitly impaired, no guessed restoration. Bankroll firstattempt interrupted,
-  retried; completed1–6 notrerun, remaining types completed.19typescaptured/firstsixRCunknown/last13rc0/38hashes/
-  13 measured UTCwindows; unknownwindows remainunknown. Corrected18 confinement
-  independently reviewed. Financial records/prefixes preserved. Incidentmetadata:
-  logs/periodic_20261015T1800/routine_capture_incident.json.
-- CLEAN4+1/orders/UMA/Ostium/watchauto-revet/crux/overdue clear; sameTOTALtoKelly.
-  Four canonical/currentdaemons, disk776.51MiB>512warning/128critical,
-  memory661.65MiB; no production edit/restart. Telegram1148 incident notice sent.
-
-## Dated discovery and blockers
-
-- Last full14:10typesonce/rc0; primary1000/666eligible/80selected/586omitted,
-  thin47063/3026/3000/26, bothcapped.3049selectedunique/fourliteralreviews/
-  3045unreviewed; rowidentity proofs are not substantive coverage/globalabsence.
-  Snapshot bound-default incident fixed by preserved exactcaptures/validshared
-  paths/latestnewthin; pre-runpointer unproven, no restorationclaim. Dated14
-  artifactmanifest50entries. No full scan repeated18.
-- ETH5593550 size0DEC201: hourlymin2318 not requiredclosed1m proof;
-  assumedvolatility/first-passage sensitivity fails fees/10pphaircut, no numeric
-  winforecast. Fed/ceasefire/MLB lacked supported bounds; no unheld rerun/skipgrade.
-  Silver prior-minutequalification unknown afterOct14Pyth419, no substitute.
-- Manualcopper/Base need lawfulroute/access,vettedwriter/Januarythesis;
-  issuer-account rotation unverified. No retired stock review/private lookup.
-  Before action refresh exactidentity/criteria/account/orders/locks/books/fees/
-  limits/joint risk. BUYvia polyclaude_enter.py; vettedSELL/cancel/redemption
-  paths and post-state verification remain. No automatic controller.
+- Current source report: `logs/periodic_20261015T2200/sources/report.md`;
+  risk judgment: `data/periodic_20261015T2200_risk.json`.
+- The 18:00 diagnostic overwritten raw streams are permanently an evidence gap;
+  preserved replacement bytes do not reconstruct original 10:00 captures.
+- Prior14 discovery has bounded coverage; 3045 selected conditions remain
+  unreviewed. No absence claim from four literal cases or public-tail samples.

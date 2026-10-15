@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The chart now has 187 recorded observations from Apr-25 through Oct-15. Rounded
+The chart now has 188 recorded observations from Apr-25 through Oct-15. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [source audit](research/2026-10-06-performance-history.json) records remaining
 gaps and accounting limits.
@@ -73,39 +73,49 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-15 ~18:05 UTC
+## Last bankroll snapshot — 2026-10-15 ~22:02 UTC
 
-Bankroll 18:05:58.468916–18:06:16.233045 UTC; separate positions PMmid 33.46.
-Their exact UTC window was lost in the diagnostic wrapper interruption below.
-The bankroll's own components are used; these rounded sequential observations
-are indicative, not synchronized NAV or guaranteed liquidation.
+Bankroll 22:02:21.906209–22:02:37.333890 UTC. The snapshot includes both
+wallets and market positions; account values are rounded, sequential marks,
+not synchronized NAV or certified liquidation.
 
 | Measure | Value |
 |---|---:|
-| Indexed unresolved legs, including dust | 4 |
+| Trading capital reference | $170.00 |
+| Total marked bankroll | $196.71 |
+| Gas token mark | $6.03 |
+| Trading midpoint / fee-net depth | $190.68 / $189.28 |
+| PM midpoint / fee-net depth | $33.46 / $32.06 |
+| Whole-account approximate depth | $195.31 |
 | Remaining open-position cost | $31.46 |
-| PM midpoint / indicative fee-net depth | $33.46 / $32.06 |
-| Whole-account marked / approximate depth | $196.64 / $195.24 |
-| Settled-P&L accounting residual | +$18.68 |
+| Settled accounting residual | $18.68 |
 
-- Trading midpoint/depth **$190.67/$189.27**, excluding $5.97 gas;
-  +0.29/-0.00 versus14. Depth+11.34% versus170 before VM/API.
-  Residual change+0.00 is rounded accounting/carry, not audited cash profit.
-- Retain OpenAI NO19 and complete Clarity29/29; O53.6<55, stress exit remains
-  explicit. Pair floor29 exceeds captured exit28.56905/
-  idealized freecarry28.76199; no add. No asset/prior/decision change.
-- CTF/pUSD unchanged at Polygon95588081; aUSDC122.089602,
-  variable APY3.1811%. G final1/1/0, losing tokens at0; no repeated loss/burn.
-  Hormuz dust remains gas-negative. Four current daemons; disk776.51MiB.
-- Resolving scores/criteria stable; six new Google RSS descriptions supply no
-  threshold claim. Three direct OpenAI403 gaps; broader coverage partial.
-- Diagnostic wrapper overwrote six old10 captures. New bytes preserved;
-  earlier raw-evidence gap documented, financial records intact. Corrected18
-  output isolation independently checked. Nineteen routine types captured, firstsix RCunknown/last13 rc0;
-  interrupted bankroll retried; 13/19 measured UTC windows. Telegram incident notice.
-- Last full discovery14 remains capped:four literal reviews/3045 selected
-  conditions unreviewed; size0DEC201 unchanged. No full scan/redemption repeat.
-  Next existing22:00, weeklyOct16/monthlyNov12; manual route/rotation blockers remain.
+Trading midpoint/depth increased $0.01/$0.01 from 18:00. The residual is
+rounded accounting/carry, not new cash profit. VM/API costs are excluded.
+
+- Retain OpenAI NO19 and complete Clarity29/29. OpenAI HLE maximum is 53.6,
+below 55. Planning priors remain .25 central, .15 stress and .38 upper; the
+captured scenario favors 19-share exit only under stress, but is not calibration
+or signing-time authority. Clarity payout floor $29 exceeds captured exit
+$28.56905 and idealized free-carry bound $28.76137154. No add.
+- Google Argon’s 55.6 original HLE and Gamma 3072356 final YES are persistent;
+losing 4.034750 NO tokens remain at $0, with no rebook or burn. CTF/pUSD are
+unchanged. Polygon aUSDC is 122.091354 (+1,752 units), APY 3.17746487%.
+- The mounted HLE metric remains original HLE by default, with a separate
+Diamond selector. Seven of 65 raw objects changed auxiliary metrics, flags or notes, but no
+HLE or Diamond score changed; API cache Age 2,587 seconds is not publication
+freshness. No new RSS or public-alert-tail rows after 18:05; three OpenAI 403
+pages remain coverage gaps. Trump Gamma YES 3.85%→3.50% is a feed snapshot,
+not an executable quote or event fact. See the [22:00 source report](logs/periodic_20261015T2200/sources/report.md).
+- Hormuz point gas cost 0.004666476 exceeds 0.003571 payout; no resimulation.
+The last full discovery remains capped at 3,049 selected conditions, four
+literal reviews and 3,045 unreviewed; no full scan or redeem-all was due.
+- All 19 routine types completed with rc=0 and 38 hashed streams. The historical
+18:00 wrapper incident and damaged 10:00 raw captures remain a dated evidence
+gap; no restoration or repeat notice. Four current daemons; disk 770.21875 MiB.
+No holdings, priors or decisions changed (201 total / 125 resolved / 76 pending;
+next decision 202). Weekly Oct 16 and monthly Nov 12 remain future; manual
+route and issuer-rotation blockers remain.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
