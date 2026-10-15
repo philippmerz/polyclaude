@@ -1,103 +1,95 @@
 ---
-reviewed_at: "2026-10-15T14:16:17Z"
-valid_until: "2026-10-15T18:00:00Z"
+reviewed_at: "2026-10-15T18:09:28Z"
+valid_until: "2026-10-15T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: b7af588ca9ebe517b7d10ca3097ffc9f0ba38cefdfd585eb355f4e289694ffa2
+  README.md: 80325e882f11d46d6bbfb1c15e7a4f5f58c46377a254a09c255183736353a465
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 5598b3684a415ca92c52d5fd61de8ecff6d274f70561a0dc59d62a9ae55eb6e2
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 4e6c2bebe2886c741153c3ebccb6c0f689822a77b6582c6a9747b7cecc1f44f0
   scripts/README.md: 8a5b43f42faa5cace24ddf53b2e0553c835294b4c1775fc851e9cc6c175583cc
-  notes/backlog.md: 54a0628439217b60eb7c7e51a224234ccd756e1aaf897ef933c82e89620ae322
+  notes/backlog.md: f97377c96168326891704c7db60c896623569b9f3c2c7deb7556da7978678460
 ---
 
 # Current context — dated orientation, not live state
 
-- Maximize lawful compounded ROI through start-of-2027; decentralized/noCEX/noKYC,
-  positions under one year. NormalDec31 resolutions redeemed earlyJanuary count.
-  Brokerage/Sunday reviews retired. Required reads/live checks/execution gates
-  remain; offline packets carry no action authority.
-- Existing cron/watchers handle waits. NextOct15 18:00, weeklyOct16/monthlyNov12
-  future. No newtimer/goal/idlefollowup. Operator messages only through notified
-  one-time reader; never privateinbox/history or copiedoperator text.
+- Mandate: lawful compounded ROI through start-of-2027; decentralized/noCEX/
+  noKYC, holding under one year. NormalDec31 resolutions redeemed earlyJanuary
+  count. Off-chain brokerage/Sunday reviews retired. Required reads/live gates
+  remain; packets carry no execution authority. Existing cron/watchers handle
+  waits; next22:00/weeklyOct16/monthlyNov12. No timer/goal/idle continuation.
+- Private messages only via notified one-time reader; no inbox/history replay.
+  Material Telegram text via msg --stdin/single-quoted heredoc, max700 chars.
 
-## Latest completed14:00 full check
+## Latest18:00 check
 
-- data/checkin_20261015T1400_*.json;logs/checkin_20261015T1400/;journal~14:01.
-  Bankroll14:01:41.690303–14:01:57.927515UTC, authoritativeTOTAL196.14. Positions separately
-  14:01:21.911161–14:01:23.224204UTC; theirPMmid33.17 vs bankroll33.17.
-  Sequential rounded estimates, not synchronized NAV/certified liquidation.
-- Trading ex-gas midpoint/depth190.38/189.27, +0.00/+0.00vs10;
-  gas5.76. Wholemarked196.14/approxdepth195.03; PM33.17/depth32.06/cost31.46/
-  residual18.68. Depth+11.34%vs170 beforeVM/API; accountingresidual is not
-  audited cash profit or anotherG settlement. CSV186points/original185prefix intact.
+- Evidence:data/periodic_20261015T1800_*.json;logs/periodic_20261015T1800/;journal~18:05.
+  Bankroll18:05:58.468916–18:06:16.233045UTC TOTAL196.64; its own PMmid/depth33.46/32.06.
+  Separate positions PMmid33.46, exact UTC lost in wrapper interruption.
+  Rounded sequential marks, not synchronized NAV/certified liquidation.
+- Ex-gas midpoint/depth190.67/189.27 (+0.29/-0.00vs14), gas5.97;
+  wholeapproxdepth195.24/cost31.46/residual18.68(+0.00). DepthROI
+  +11.34%vs170 beforeVM/API. Residual is accounting/carry, not auditedcashprofit.
+  CSV187/original186prefix intact;201decisions/125resolved/76pending/next202
+  unchanged. No asset, order, prior or decision change.
+
+## Portfolio judgment, capture-time only
+
 - Retain OpenAI≥55 NO19, completeClarity29/29, TrumpNO.33/Hormuz.003571.
-  No asset/prior change; size0DEC201 added;ledger201/125resolved/76pending/next202.
+  OriginalHLE O53.6<55; NO.25central/.15stress/.38upper remain judgmental.
+  Nine exactGETs/no fallback; bookages C50Y34.130/C58N0.361/O49.954s
+  pass180s at receipt. O19exit3.49303/W186.21; captured0-or5..19grid
+  central/upperhold, stress19exit. Sensitivity is not calibration/global optimum
+  or later signing authority. G finality does not establish O qualification.
+- Clarity criteria: no vote/0–50Yea pays0/29;51–58 pays29/29;59+/voice/
+  unanimous passage pays29/0. Floor29 versus pair exit28.56905/idealized
+  constant-rate freecarry28.76199; keep complete pair/noadd. No supported
+  independent-trim forecast. Settlement/platform risk remains. Over58 GammaYES
+  snapshot.065→.055 is not a live quote/passage fact. Witt report already
+  reviewed/notifiedOct14 22; underlying email/directconfirmation unestablished.
 
-## Captured hold/exit judgment
+## Sources, inventory and operational incident
 
-- O53.6<55, NO.25central/.15stress/.38upper judgmental. NineGETs/no fallback;
-  ages C50Y4.931051/C58N0.054755/O84.995629s pass180s at receipt only.
-  O19exit3.49303/W186.21, captured0-or5..19grid central/upperhold, stress19exit.
-  Full-sale minus-hold no-carryElog-0.00570491/+0.00401096/-0.01833555. Conditional sensitivity,
-  not calibrated forecast/globaloptimum/signingtime authority; no add.
-- CompleteClarity29/29 pays0/29 with no vote or0–50Yea;29/29 with51–58;
-  29/0 with59+ or voice/unanimouspassage. Criteriafloor29/bonus58 exceeds
-  exit28.56905/idealizedfreecarry28.76173. Keep pair/noadd; no supported jointbound
-  for independenttrim. Criteria-consistent settlement/platform risk remains.
-- Witt20:31Oct14 report remains reviewed/notified22; no new passage fact.
-  Reporting/source limitations are in the journal.
+-17GETs18:04:29.201665–18:04:35.137909UTC;14HTTP200/3OpenAI403 gaps;26 integrity entries.
+  65 full rawHLE objects/frontendURL/bytes/defaultoriginalHLE/separateDiamond
+  semantics stable versus14; G55.6/Diamond56.9 persistent. Five criteria/state,
+  Senate256/AA57/44/articlecores stable. Six newGoogleRSSitems (scam detection,
+  disasterresilience, earthquakealerts, publisherpilot, Search, repair) contain
+  no threshold claim in titles/descriptions; fullnewarticles notverified.
+  Last80 publictails zero after14:01; direct403/browser/cache gaps remain partial.
+- Polygon95588081:18 knownasset receipts,CTF/pUSD unchanged,
+  pUSD22.571890/aUSDC122.089602(+0.001786vs14); variableAPY3.181056%,
+  unpaused/unfrozen. Clearedlosses/debut0; threeGfinalreads1/1/0. Losing4.034750
+  tokens remainat0, no burn/grade/rebook. Knownassets only, no fullredeem-all due.
+- Hormuz payout.003571/currentgaspoint0.00461250 using dated175036units/
+  currentgas/roundedFX; gas-negative, no new simulation/broadcast. ExactOct14
+  22:10dryrun/210044limit/initialslugmetadata gap remain dated evidence.
+- Routine wrapper used old10 path and overwrote raw captures1–6; exact current
+  bytes preserved in18. Old10 manifest/summary leftunchanged; lost raw links
+  explicitly impaired, no guessed restoration. Bankroll firstattempt interrupted,
+  retried; completed1–6 notrerun, remaining types completed.19typescaptured/firstsixRCunknown/last13rc0/38hashes/
+  13 measured UTCwindows; unknownwindows remainunknown. Corrected18 confinement
+  independently reviewed. Financial records/prefixes preserved. Incidentmetadata:
+  logs/periodic_20261015T1800/routine_capture_incident.json.
+- CLEAN4+1/orders/UMA/Ostium/watchauto-revet/crux/overdue clear; sameTOTALtoKelly.
+  Four canonical/currentdaemons, disk776.51MiB>512warning/128critical,
+  memory661.65MiB; no production edit/restart. Telegram1148 incident notice sent.
 
-## Inventory, sources and operations
+## Dated discovery and blockers
 
-- Polygon95578387:18knownassetreceipts,CTF/pUSDunchanged,pUSD22.571890;
-  aUSDC122.087816(+0.001756vs10),live variable nativeUSDC3.169746%,
-  unpaused/unfrozen. Fourclearedlosses/debut0. ThreeGfinalpayoutreads1/1/0;
-  losing4034750NOunits remain0. No burn/grade/rebook; originalforecasts/history
-  preserved. Knownassets only. Mandatoryredeem-allonce0/4,no broadcast.
-- Hormuz.003571 payout/currentpointgas.00443056 uses dated175036units and
-  currentgas/roundedFX; retain gas-negative dust. No resimulation/broadcast.
-  Last exactdryrunOct14 22:10/limit210044/txnull and metadata gaps remain dated
-  journal evidence; no fee-policy change.
--17GETs14:01:30.778303–14:01:35.215040,14HTTP200/3OpenAI403,26integrityentries.
- 65fullrawHLEobjects/frontendURL/bytes/defaultoriginalHLE/separateDiamond semantics
-  unchangedvs10. GArgon55.6/Diamond56.9/persistentfinalYES not new; Omax53.6<55.
-  Fivecriteria/state/Senate256/AA57/44 stable; three newGoogleRSSitems have no
-  threshold evidence in feed descriptions, no newpublictailrowafter10:02.
-  Two newRSS articleURLs inaccessible via browser; fullarticles not verified.
-  Direct403/cache/browser limits keep broadercoveragepartial.
-- Routine19once/allrc0/38fullytimedhashedstreams,same196.14toKelly,
-  quota8%used/92%headroom. All exact UTCwindows and hashes retained.
-  CLEAN4+1,orders/UMA/Ostium/watch--auto-revet/crux/overdue clear. Fourcanonical/
-  currentdaemons14:01:44.207577,disk811.27MiB>512warning/128critical;
-  MemAvailable1113.73MiB/statfreshness<30min. No codechange/restart;
-  Telegramquiet. No newtimer/durablegoal/idlework.
-
-## Current14:00 discovery and remaining gates
-
--10requiredtypesonce/allrc0. Primary1000/666eligible/80selected/586omitted;
-  thin47063/3026/3000/26,bothpagecaps. Same-profile02baseline.1482batchrows/
- 1475uniqueconditions,3049selectedunique/fourliteralreviews/3045unreviewed;
- 1574notemitted. Rowproofs valid, not substantivecoverage/globalabsence.
-- Snapshotwrapper missed bounddefault; exact outputs preserved in isolated and
-  validsharedpaths, latestnewthin. Intermediate inferredoldpointer unproven,
-  correctedtonew; pre-run linknotcaptured/no restorationclaim.50hashentries,
-  no scanner rerun/productioncode/financialhistory edit.
-- ETH5593550: BinanceETHUSDT83hourlybars/min2318, not requiredclosed1mproof;
-  no qualifyingminute demonstrated/complete-minuteabsenceclaim. Uncalibrated
-  zero-log-drift barrierproxy.627585 at observedspot2358.03/sigma.518779;
- .35/.80vol assumptions give.472097/.753070, not confidencebounds. Captured
-  YES.606933/NO.507493 costs; proxyminus10ppfailsboth. Size0DEC201/no assigned
-  contract-win forecast. Fed2589812/ceasefire5686981/MLB1395732 lack supported
-  downsidebounds too; literalcriteria/bothsides/rootjudgment in root_reviews.
-- Sports69/20printed/6inplay, onlyunverified.465consensus/exactly−3pp not>3.
-  Event1497/1239inspected/15pagecap/0flags. Consistency5001markets/629events/
- 32pages/marketcap,20of324groups/8valid/12failed/149unquoted/200legs/0positive.
-  Favorite1000/10pagecap,22walks/12profile/10outside; no populationforecast.
-- Silver4936094minutequalificationunknown afterOct14 14Pyth419,no repeat.
-  Manualcopper/Base needlawfulfunding/access,vettedwriter/Januarythesis;
-  issuer-accountrotationunverified. No retiredstockreview/privatehistorylookup.
-- Beforeaction refresh exactidentity/criteria/account/orders/locks/books/fees/
-  limits/alternatives. BUYvia polyclaude_enter.py; sells/cancels/redemptionvia
-  clob_v2.py,verifybalances. Losing tokens neednoburn. No automaticcontroller.
+- Last full14:10typesonce/rc0; primary1000/666eligible/80selected/586omitted,
+  thin47063/3026/3000/26, bothcapped.3049selectedunique/fourliteralreviews/
+  3045unreviewed; rowidentity proofs are not substantive coverage/globalabsence.
+  Snapshot bound-default incident fixed by preserved exactcaptures/validshared
+  paths/latestnewthin; pre-runpointer unproven, no restorationclaim. Dated14
+  artifactmanifest50entries. No full scan repeated18.
+- ETH5593550 size0DEC201: hourlymin2318 not requiredclosed1m proof;
+  assumedvolatility/first-passage sensitivity fails fees/10pphaircut, no numeric
+  winforecast. Fed/ceasefire/MLB lacked supported bounds; no unheld rerun/skipgrade.
+  Silver prior-minutequalification unknown afterOct14Pyth419, no substitute.
+- Manualcopper/Base need lawfulroute/access,vettedwriter/Januarythesis;
+  issuer-account rotation unverified. No retired stock review/private lookup.
+  Before action refresh exactidentity/criteria/account/orders/locks/books/fees/
+  limits/joint risk. BUYvia polyclaude_enter.py; vettedSELL/cancel/redemption
+  paths and post-state verification remain. No automatic controller.

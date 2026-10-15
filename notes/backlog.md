@@ -1,3 +1,21 @@
+## Oct-15 18:00 light check — completed; positions retained, diagnostic incident recorded
+
+- Trading midpoint/depth190.67/189.27 at~18:05, +0.29/-0.00 versus14;
+  wholemarked196.64, gas5.97, approximate depth195.24, residual18.68.
+  No asset/prior/decision change; CSV187 points/original186 prefix intact.
+- Routine19 captured, firstsix RCunknown/last13 rc0; bankroll retried after interruption. Wrapper wrote
+  six new captures over old10 diagnostic files; current bytes preserved and old
+  raw-evidence gap documented. No inferred restoration/financial-history edit;
+  corrected18 output confinement independently checked; 13/19 UTC windows retained.
+- Scores/criteria stable; O19 and complete Clarity29/29 retained with explicit
+  stress sensitivity/floor29 versus exit+carry. Six new RSS items; no new held
+  alert in sampled public tails. Three OpenAI403 gaps keep coverage partial.
+- Four current daemons/disk776.51MiB above warning. Hormuz gas-negative;
+  no resimulation. Full discovery/redeem-all not due;14 coverage remains partial.
+  One Telegram incident notice. Next22:00; weeklyOct16/monthlyNov12 future;
+  manual route/rotation blockers unchanged. No new timer/goal/idle follow-up.
+  Evidence:journal~18:05;data/periodic_20261015T1800_*.json;logs/periodic_20261015T1800/.
+
 ## Oct-15 14:00 full check — completed; positions retained, no new alert
 
 - Trading midpoint/depth190.38/189.27 at~14:01, +0.00/+0.00vs10;
@@ -4432,24 +4450,22 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-15 14:00:** G finalYES1/1/0 reconfirmed at
-Polygon95578387; losing4034750units remain0, loss already recorded. All65raw
-objects/frontend/metric stable versus10, O53.6<55; retainO19/noadd. Judgmental
-NO.25central/.15stress/.38upper unchanged. Nine rootGETs pass180s at receipt only;
-Oexit3.49303/W186.21, captured central/upperhold/stress19exit. Original200decisions intact, newsize0DEC201.
+**Current HLE state, Oct-15 18:00:** Polygon95588081 payout1/1/0;
+losing4034750units remain0/loss already recorded. All65 raw objects and frontend
+semantics stable versus14; O53.6<55, retainO19/noadd. Judgmental NO.25central/
+.15stress/.38upper unchanged; captured exit3.49303/W186.21, stress19exit.
+All201 decisions unchanged/next202; diagnostic10 raw-capture gap is documented above.
 
-**Current Clarity review, Oct-15 14:00:** matched complete29/29 rules preserve
-floor29 including no vote/voice passage;51–58 gives58. Exit28.56905/idealized
-freecarry28.76173<29. Keep pair/noadd; no supported independenttrim forecast.
-Wittreport reviewed/notifiedOct14 22 remains dated reporting citing anonymous
-official; underlyingemail/directpublicconfirmationunestablished in checked sources.
-Criteria-consistent settlement/platform risks remain; no duplicateTelegram.
+**Current Clarity review, Oct-15 18:00:** matched29/29 floor29 includes no vote/
+voice passage;51–58 pays58. Exit28.56905/idealizedfreecarry28.76199<29;
+keep complete pair/noadd. Over58 YES Gamma snapshot−1pp is not an executable
+quote/passage fact. Prior Witt report reviewed/notifiedOct14 22; underlying
+email not independently authenticated. Settlement/platform risk remains.
 
-**Hormuz dust, Oct-15 14:00:** currentgas/roundedFX pointcost0.00443056>
-payout.003571 using lastvetted175036units. Retain gas-negative dust; no newsim,
-broadcast or fee-policychange. ExactdryrunOct14 22:10 succeeded with210044limit,
-retained as dated evidence; its tinypositive gas observation is historical.
-Initialsluglookupempty/metadata gap and directID200/payoutproof remain.
+**Hormuz dust, Oct-15 18:00:** gas pointcost0.00461250>payout.003571,
+using dated175036 units/current gas/rounded FX. Retain; no new simulation or
+broadcast. ExactOct14 22:10 dry-run/210044limit and initial slug/metadata gap
+remain dated evidence; no fee-policy change.
 
 **Current discovery coverage, Oct-15 14:00:** primary1000/666eligible/80selected/
 586omitted; thin47063/3026/3000/26omitted; both pagecapped. Same-profile02baseline.

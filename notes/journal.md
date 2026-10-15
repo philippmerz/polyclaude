@@ -30034,3 +30034,68 @@ Operations, preservation and closeout:
   README/backlog/handoff refreshed; chart/context checks and immutablepublication
   verification follow. Telegramquiet: no new material action/position/prior change.
   Next existing18:00. Evidence:data/checkin_20261015T1400_*.json;logs/checkin_20261015T1400/.
+
+
+### 2026-10-15 ~18:05 UTC — light check; positions retained, diagnostic capture incident
+
+- Backlog/recent journal reviewed; due18:00 check completed. Retain OpenAI NO19,
+  complete Clarity29/29 and dust. No asset, order, prior or decision change;
+  ledger201/125resolved/76pending/next202 intact. Full discovery/redeem-all not due.
+- Authoritative bankroll 18:05:58.468916–18:06:16.233045 UTC: whole marked 196.64, gas 5.97, PM
+  midpoint/depth 33.46/32.06, remaining cost 31.46.
+  Trading ex-gas midpoint/depth 190.67/189.27, +0.29/-0.00 versus14;
+  whole approximate depth 195.24; depth +11.34% versus170
+  before VM/API. Residual 18.68 (+0.00) is rounded accounting/carry, not
+  audited cash profit or a repeated settlement. Separate positions PMmid
+  33.46; UTC window unavailable after wrapper interruption. Sequential estimates, not
+  synchronized NAV or certified liquidation. One CSV point appended.
+- Routine wrapper used the old10 output path: completed types1–6 overwrote
+  their earlier raw captures; first bankroll attempt was interrupted. Current
+  bytes preserved in the18 folder; old10 manifest/summary left unchanged and
+  damaged raw-evidence links explicitly recorded. No inferred restoration.
+  Completed1–6 were not rerun; bankroll retried, then remaining types completed.
+  Nineteen captured types; types7–19 rc0, types1–6 RCunknown;38 byte/hash-proved
+  streams, 13/19 measured
+  UTC windows; missing windows are unknown. Corrected runner confines outputs
+  to the new18 directory. Independent offline review retained. Original financial
+  records/forecasts and journal/CSV prefixes intact; this does not repair old receipts.
+- Same authoritative TOTAL 196.64 supplied to Kelly. CLEAN4indexed+1claim;
+  orders, UMA, Ostium, watch auto-revet, crux and overdue checks clear.
+- Polygon95588081:18 known-asset receipts, CTF/pUSD unchanged;
+  pUSD22.571890/aUSDC122.089602, accrual +0.001786 versus14.
+  Variable native-USDC APY 3.181056%, unpaused/unfrozen. Four cleared losses/debut0.
+  Three G payout reads remain denominator1/YES1/NO0; losing4.034750 NO at0,
+  no burn, grade or repeated loss. Known assets only.
+- Nine exact Gamma/fee/book GETs; no fallback. Ages C50Y34.130047/
+  C58N0.360689/O49.953553s pass180s at receipt only. O19 fee-net
+  exit3.49303/W186.21; unchanged judgmental NO.25/.15stress/.38upper.
+  Captured0-or5..19 grid central/upperhold, stress19exit; conditional sensitivity,
+  not calibration, global optimum or signing authority. Original HLE O53.6<55;
+  persistent G finality supplies no new O qualification evidence. No add.
+- Clarity exact matched criteria: no vote/0–50Yea pays0/29;51–58 pays29/29;
+  59+ or voice/unanimous passage pays29/0. Floor29 exceeds captured pair exit
+  28.56905/idealized constant-rate freecarry28.76199.
+  Keep complete pair/no add; no supported independent-trim forecast. Settlement/
+  platform risk remains. Gamma over58 YES snapshot fell.065→.055; observation
+  is not an executable quote or passage evidence. Prior Witt report already reviewed.
+- Source17 GETs 18:04:29.201665–18:04:35.137909 UTC,14HTTP200/3OpenAI403 gaps;26 integrity entries.
+  All65 raw HLE objects and mounted frontend/default original-HLE/separate-Diamond
+  semantics stable versus14; five literal criteria/state, Senate256 and AA57/44 stable.
+  Six new Google RSS items cover scam detection, disaster resilience, earthquake
+  alerts, publisher pilot, Search and repair. Captured titles/descriptions contain
+  no HLE threshold claim; full new articles not verified. Related-story module only
+  changed; article cores stable. Browser static view is not a dynamic score census.
+  Public last80 tails have no rows after14:01; broader coverage remains partial.
+- Hormuz payout.003571 versus indicative gas0.00461250, using
+  dated175036 units/current gas/rounded FX. Retain gas-negative dust; no new
+  simulation/broadcast. Last exact dry-run Oct14 22:10 remains dated evidence.
+- Four exact-one canonical/current daemons; disk776.51MiB
+  above512warning/128critical; memory661.65MiB. No production
+  code edit/restart. The14 discovery remains dated/capped:3049 selected conditions,
+  four literal reviews/3045 unreviewed. ETH size0DEC201 unchanged; no unheld
+  source rerun/forecast grading. Manual route/issuer-rotation blockers unchanged.
+- README/backlog/handoff refreshed; original186 CSV rows/201 decisions/journal
+  prefix preserved. Existing22:00/weeklyOct16/monthlyNov12 boundaries remain;
+  no timer, durable goal or idle continuation. Material diagnostic incident sent
+  once as Telegram1148; publication and offline verification follow.
+  Evidence:data/periodic_20261015T1800_*.json;logs/periodic_20261015T1800/.
