@@ -1,3 +1,40 @@
+## Oct-16 14:00 UTC full check — complete; positions retained; sports source mismatch logged
+
+- Bankroll window14:02:03.334702–14:02:19.171545 UTC: total$196.74, gas$6.02,
+  trading midpoint/depth$190.72/$188.90, PM midpoint/depth$33.49/$31.67,
+  approximate whole-account depth$194.92, cost$31.46, residual$18.69. Versus
+  10:00 trading midpoint/depth −$0.91/−$0.57; residual unchanged at precision.
+  Sequential rounded accounting, not cash profit; VM/API excluded.
+- Retain O NO19 and Clarity29/29, no add. O max53.6<55; priors.25/.15/.38
+  unchanged. Stress favors O19 exit; central/upper hold. Captured POST NO book
+  .20/.27, full exit$3.67840, all-in ask.277884>.25 central; 104.43s old at
+  capture, planning only. Clarity complete-pair exit/carry unknown because C50Y
+  GET/POST ages643.83/644.16s exceeded180s; current C58N-only net26.59462 does
+  not price pair. Retention is not proof of optimality.
+- Source17/17: all65 HLE raw objects and mounted bundle/metric semantics stable;
+  Argon55.6, OpenAI max53.6; Age2319s is cache metadata. Five exact Gamma
+  criteria/state, Senate256, article cores, AA57/44 unchanged. Three OpenAI403
+  gaps. O-market Gamma YES snapshot .750→.765 (+1.5pp), not a criteria change.
+- G final YES1/NO0 at block95635991; 4.034750 losing NO remains zero, no rebook
+  or burn. Required redeem-all found0/4 winners, skipped one losing/uncertain
+  row, redemptions=[] and no broadcast (not dry-run). aUSDC122.098370 (+1761
+  raw), APY3.1562647%; pUSD/CTF unchanged. Hormuz gas.004671710756 exceeds
+  .003571 payout; no resimulation/broadcast.
+- Routine19/allrc0, 38 streams timed/hashed, CLEAN4+1; 76 pending, none overdue.
+  Two health attempts failed before inspection with raw streams preserved;
+  third stat-only attempt succeeded once. Four daemons; heartbeat1525s/3600s,
+  news101s, disk619.12MiB. One root Telegram1152 sent; no repeat.
+- Discovery run10 command types/allrc0, but selection is capped: 3031 unique
+  conditions, one current literal review plus two carried reviews; 3028 lack
+  documented literal review. Fulham–Hull5263885 fixture confirmed for Oct17
+  14:00 BST; scanner .530 equals Oddschecker AI Probability, not established
+  bookmaker consensus. No forecast/entry. Follow-up: require named-book,
+  timestamped same-book 1X2 prices for all outcomes, reject AI/model probabilities,
+  and margin-normalize those three prices before `sports_pm_scan.py` reports
+  consensus. No scanner code changed. Evidence: `logs/checkin_20261016T1400/discovery/review.md`.
+- No asset/prior/decision change; weeklyOct23, monthlyNov12; no new timer/goal.
+  Full source, risk, discovery and routine receipts remain in `data/checkin_20261016T1400_*.json`.
+
 ## Oct-16 10:00 UTC light check — complete; holdings retained; price flap reviewed
 
 - Bankroll window10:02:15.635299–10:02:29.853932 UTC: total$197.64, gas$6.01,
@@ -4605,39 +4642,37 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-16 10:00:** G remains final YES1/NO0; losing4.034750
+**Current HLE state, Oct-16 14:00:** G remains final YES1/NO0; losing4.034750
 NO shares remain at0 without rebook/burn. All65 HLE raw objects and mounted
-bundle/default-HLE/separate-Diamond semantics match06:00; Argon is HLE55.6 /
-Diamond56.9 and OpenAI max53.6<55. API Age2547s is cache metadata. Gamma
-3072352 YES snapshot fell .805→.750, but the wide-book flap is not a source or
-criteria change. Separate NO book at10:04:52Z was .20/.28; captured fee-net full
-exit $3.67840. Retain O NO19; priors.25/.15/.38 unchanged. Stress favors exit,
-central/upper hold; ask .288064 exceeds central/stress bounds. Three OpenAI403
-coverage gaps remain.
+bundle/default-HLE/separate-Diamond semantics match10:00; Argon HLE55.6 /
+Diamond56.9, OpenAI max53.6<55. API Age2319s is cache metadata. Gamma3072352
+YES snapshot moved .750→.765 (+1.5pp) since10:00, with criteria unchanged.
+O NO19 retained; priors.25/.15/.38 unchanged. Stress favors exit, central/upper
+hold. Captured POST NO book .20/.27, full exit$3.67840, all-in ask.277884>.25;
+104.43s at capture, planning only. Three OpenAI403 coverage gaps remain.
 
-**Current Clarity review, Oct-16 10:00:** retain complete29/29; payout floor29
-exceeds captured exit28.56905 and idealized carry28.75878752. Exact first-full-
-Senate-passage criteria and all256 Senate rows are unchanged; H.R.3633 cloture
-remains rejected49–50, not final passage. No add or independent leg trim.
+**Current Clarity review, Oct-16 14:00:** retain complete29/29 conditional on
+unchanged criteria; payout floor29. C50Y book paths aged643.83/644.16s and failed
+the180s guard, so current full-pair exit/carry are unknown. C58N-only exit net
+26.59462 at9.32s cannot price the pair. No source break, add, or demonstrated
+superior full-pair exit. Retention does not prove optimality.
 
-**Hormuz dust, Oct-16 10:00:** retain .003571 claim; point-gas estimate
-.00465071582 exceeds payout using dated175036-unit simulation/current gas/
-rounded FX. No new simulation or broadcast; estimate is not a current
-liquidation certificate.
+**Hormuz dust, Oct-16 14:00:** retain .003571 claim; point-gas estimate
+.004671710756 exceeds payout using dated175036-unit simulation/current gas/
+rounded FX. No new simulation or broadcast; estimate is not a current liquidation
+certificate.
 
-**Current discovery coverage, Oct-16 02:00:** ten command types/allrc0;3031
-unique conditions selected,1245 emitted occurrences/1244 unique,1787 selected not
-emitted and3028 selected without documented literal review. One current and two
-carried prior literal reviews are counted; capped coverage is not a global absence
-claim. Current sports lead5504916's criteria were read. Gamma YES .445 is5.5pp
-below, and NO .555 is5.5pp above, the unverified Stake .500 proxy. Fixture
-URL/time and independent in-play proof are missing; raw gap is below the ordinary
-.10 stress haircut. Source verification lead only, not a forecast/entry. No current
-scanner candidate exists for Treasury event79123; no new quote or dry-run. The
-00:14 decision is historical; both carried criteria were unchanged. Exact evidence:
-`data/checkin_20261016T0200_discovery.json` and
-`data/checkin_20261016T0200_carried_criteria_proof.json`; no complete-universe
-assertion.
+**Current discovery coverage, Oct-16 14:00:** all10 command types/allrc0;
+3031 unique conditions selected across capped primary/thin-tail pages. One exact
+current literal review plus two carried reviews;3028 current conditions still
+lack documented literal review. This is filtered review work, not exchange-wide
+coverage or absence. Fulham–Hull5263885 criteria read; official fixture Oct17
+14:00 BST. Scanner .530 tracks Oddschecker AI Probability, not established
+bookmaker consensus; displayed sportsbook odds lack a verified same-book,
+time-stamped complete 1X2 set. No probability, edge, or entry claim. Narrow
+sports consensus validation is queued above; no scanner code change. Evidence:
+`data/checkin_20261016T1400_discovery.json` and
+`logs/checkin_20261016T1400/discovery/review.md`.
 
 **Consistency coverage follow-up, Oct-13 18:00:**14:03 failure was an intentional
 duplicate-event guard, not a proved implementation bug. Watcher rejects failed

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 192 recorded observations from Apr-25
+The local performance CSV now has 193 recorded observations from Apr-25
 through Oct-16. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -73,63 +73,69 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-16 ~10:02 UTC
+## Last bankroll snapshot — 2026-10-16 ~14:02 UTC
 
-The bankroll call ran 10:02:15.635299–10:02:29.853932 UTC. These are rounded,
+The bankroll call ran 14:02:03.334702–14:02:19.171545 UTC. These are rounded,
 sequential marks, not synchronized NAV or certified liquidation.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $197.64 |
-| Gas token mark | $6.01 |
-| Trading midpoint / fee-net depth | $191.63 / $189.47 |
-| PM midpoint / fee-net depth | $34.41 / $32.25 |
-| Whole-account approximate depth | $195.48 |
+| Total marked bankroll | $196.74 |
+| Gas token mark | $6.02 |
+| Trading midpoint / fee-net depth | $190.72 / $188.90 |
+| PM midpoint / fee-net depth | $33.49 / $31.67 |
+| Whole-account approximate depth | $194.92 |
 | Remaining open-position cost | $31.46 |
 | Settled accounting residual | $18.69 |
 
-Trading midpoint and depth increased $0.95 and $0.19 versus06:00. The residual
-rose $0.01 as rounded accounting/carry, not cash profit; VM/API costs are
-excluded. The weekly review is complete; next review Oct23.
+Trading midpoint and depth declined $0.91 and $0.57 versus10:00; residual was
+unchanged at rounded precision. These are sequential accounting marks, not cash
+profit; VM/API costs are excluded. The weekly review is complete; next review
+Oct23.
 
 - Retain OpenAI NO19 and complete Clarity29/29; no add. The official board's
   OpenAI maximum remains HLE53.6<55. Judgmental NO priors remain .25 central,
   .15 stress, and .38 upper; stress favors O19 exit while central/upper hold.
-  Captured full exit is $3.67840; a fresh NO book was .20 bid/.28 ask with an
-  8pp spread. The all-in ask .288064 exceeds central and stress bounds; rewalk
-  at signing time remains required. Clarity's $29 floor exceeds captured exit
-  $28.56905 and $28.75878752 idealized carry.
-- Gamma3072352's YES snapshot fell .805→.750 (-5.5pp; 24h volume$217, spread10pp),
-  labeled a wide-book/midpoint flap. The separate NO book receipt and full-exit
-  estimate are in the [10:00 quote review](data/periodic_20261016T1000_O_followup_quotes.json);
-  neither Gamma midpoint nor captured book is a later execution certificate.
-  HLE65 full raw objects, mounted bundle URL/bytes, and default-HLE/separate-
-  Diamond semantics match06:00. Google Argon is HLE55.6/Diamond56.9; API Age2547s
-  is cache age, not publication time. Three direct OpenAI pages remain HTTP403
-  coverage gaps. Five held Gamma criteria/state fields, Senate256 rows, article
-  cores and AA57/44 are unchanged; no qualifying score/source change.
-- Gamma3072356 remains final YES (fixed-block denominator1, YES1/NO0); 4.034750
-  losing NO tokens remain at zero, with no rebook or burn. Polygon block95626379
-  shows aUSDC122.096609 (+1,754 raw units) at APY3.1547537%; pUSD/CTF are
-  unchanged. Hormuz dust payout .003571 remains below the .00465071582 point-gas
-  estimate using dated simulation/current gas/rounded FX; no resimulation or
-  broadcast.
-- Routine19 ran once, all rc0; 38 main streams remain timed/hashed and the final
-  position audit is CLEAN4+1. Orders/watch/Ostium/overdue checks were quiet;
-  76 decisions remain pending. The UMA PRICE_MOVE alert was processed once.
-  One health wrapper initially failed rc2 before inspection due to a wrong
-  filename; the corrected stat-only check succeeded rc0. The initial wrapper's
-  raw stdout/stderr/receipt were overwritten and are not retained; the 19
-  routine probes and their 38 streams are intact. Four current daemons remain;
-  heartbeat1504s is within3600s cadence, news state34s old, disk free646.32MiB.
-  No full discovery, redeem-all, or weekly review was due or rerun. One material
-  Telegram update (1151) was sent by root; it was not repeated. See the
-  [10:00 source report](logs/periodic_20261016T1000/sources/report.md),
-  [root review](data/periodic_20261016T1000_root_judgment.json), and
-  [routine incident record](logs/periodic_20261016T1000/routine/runtime_health_initial_wrapper_incident.json).
-  The last full discovery was the bounded 02:00 review; its partial coverage
-  remains dated there.
+  Captured POST book was .20 bid/.27 ask, with fee-net full exit $3.67840.
+  The all-in ask .277884 exceeds the .25 central prior. Receipt age was104.43s at
+  capture; this is planning only and needs a fresh signing-time rewalk. Clarity
+  remains conditional on the unchanged $29 floor, but current pair exit/carry
+  are unknown: C50Y books were stale at643.83s GET and644.16s POST, beyond the
+  180s guard. C58N exit net26.59462 was current at9.32s but cannot price the
+  full pair. Retention does not prove optimality.
+- HLE API65 full raw objects, mounted bundle URL/bytes and default-HLE/separate-
+  Diamond semantics match10:00. Google Argon is HLE55.6/Diamond56.9; OpenAI
+  max53.6. API Age2319s is cache age, not publication time. Five held Gamma
+  criteria/state fields, Senate256 rows, article cores and AA57/44 are unchanged.
+  Three direct OpenAI pages returned HTTP403 coverage gaps. Gamma3072352 YES
+  price snapshot moved .750→.765 (+1.5pp since10:00), with no criteria change.
+- Gamma3072356 is final YES at fixed block95635991 (denominator1, YES1/NO0);
+  4.034750 losing NO tokens remain at zero, with no rebook or burn. The required
+  redeem-all call found0/4 winning positions, skipped one losing/uncertain row,
+  and returned redemptions=[] with no broadcast; it was not a dry-run. Polygon
+  block95635991 shows aUSDC122.098370 (+1,761 raw units) at APY3.1562647%;
+  pUSD/CTF are unchanged. Hormuz dust payout .003571 remains below the
+  .004671710756 point-gas estimate using dated simulation/current gas/rounded
+  FX; no new simulation or broadcast.
+- Routine19 ran once, all rc0; all38 main streams are timed/hashed and match
+  their manifest; final position audit CLEAN4+1. Orders/UMA/watch/Ostium/overdue
+  checks were quiet; 76 decisions remain pending. Two stat-only health attempts
+  failed before inspection with captured raw output; a third succeeded once.
+  Four current daemons remain; heartbeat1525s is within3600s cadence, news
+  state101s old, disk free619.12MiB. The risk-summary helper first failed rc1
+  because system Python lacked httpx, before network/account calls; the .venv
+  invocation passed and the first raw streams were not retained. Root sent one
+  material Telegram update1152; it was not repeated. See the [14:00 source report](logs/checkin_20261016T1400/sources/report.md),
+  [discovery review](logs/checkin_20261016T1400/discovery/review.md),
+  [root risk review](data/checkin_20261016T1400_risk.json), and
+  [routine record](data/checkin_20261016T1400_routine.json).
+- The bounded discovery review selected3031 unique conditions; page caps and
+  filters leave incomplete coverage, with3028 current conditions lacking
+  documented literal review. Fulham–Hull market5263885 is a factual source lead:
+  the official fixture is Oct17 14:00 BST; scanner .530 matches Oddschecker’s
+  AI Probability label, not proved bookmaker consensus. No forecast or entry
+  follows. Narrow source-validation work is recorded in the backlog.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
