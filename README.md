@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 189 recorded observations from Apr-25
+The local performance CSV now has 190 recorded observations from Apr-25
 through Oct-16. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -73,68 +73,63 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-16 ~00:17 UTC
+## Last bankroll snapshot — 2026-10-16 ~02:02 UTC
 
-The bankroll call ran 00:17:26.123609–00:17:42.244707 UTC. These are rounded,
+The bankroll call ran 02:02:26.468787–02:02:42.762957 UTC. These are rounded,
 sequential marks, not synchronized NAV or certified liquidation.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $196.69 |
-| Gas token mark | $6.01 |
+| Total marked bankroll | $196.67 |
+| Gas token mark | $5.99 |
 | Trading midpoint / fee-net depth | $190.68 / $189.28 |
 | PM midpoint / fee-net depth | $33.46 / $32.06 |
-| Whole-account approximate depth | $195.29 |
+| Whole-account approximate depth | $195.27 |
 | Remaining open-position cost | $31.46 |
 | Settled accounting residual | $18.68 |
 
-Trading midpoint/depth are flat versus 22:00. The residual is accounting/carry,
-not new cash profit. VM/API costs remain unreconciled and excluded.
+Trading midpoint/depth are flat versus 00:17. The residual is rounded accounting
+and carry, not new cash profit; VM/API costs remain unreconciled and excluded.
+The weekly review is complete; details are in [`notes/pnl_weekly.md`](notes/pnl_weekly.md)
+and the next review is Oct 23.
 
-- The weekly window is 6.926 days from Oct 9 02:03 UTC: trading midpoint +$10.60
-  and depth +$12.44. The Oct 13 Gemini conversion supplied $12.252260 net cash
-  against a $2.96 opening mark; that approximate $9.292260 bridge explains most
-  of the midpoint change. It is not an external inflow, lot-level profit or
-  repeatable forecast skill. No external contribution is listed, but the capital
-  ledger is not a complete on-chain flow audit. See [`notes/pnl_weekly.md`](notes/pnl_weekly.md).
-- Retain OpenAI NO19 and complete Clarity29/29; no add. OpenAI's current HLE
-  maximum is 53.6<55. Root retains .25 central/.15 stress/.38 upper; stress
-  favors exit, central/upper hold. These are planning sensitivities, not
-  calibration or signing-time quotes. Clarity payout floor $29 exceeds the
-  captured $28.56905 exit and $28.75863 idealized free-carry bound. Current
-  Clarity criteria were reread: first full-Senate final-passage vote, strict
-  >50/>58; no vote pays NO on both, while voice/unanimous passage pays YES on
-  both. Cloture, amendment, reconsideration and later votes are excluded.
-- Google Argon HLE55.6 and final YES on Gamma3072356 are persistent; 4.034750
-  losing NO tokens remain at zero, with no rebook or burn. Current HLE API and
-  frontend metric semantics match the 22:00 baseline across all 65 raw objects;
-  Diamond remains a separate selector. API Age3520s is cache age, not
-  publication time. No new held-source RSS/news alert appeared; three OpenAI
-  pages remain HTTP403 coverage gaps. Trump-out Gamma criteria and the separate
-  official release feed were reread; operative criteria and .97 NO prior are unchanged.
-- The 00:14 Treasury alert was checked against exact event79123, 4.4 NO and
-  4.5 YES. The pair remains nested under the captured wording, but the source
-  link filters 2025 while the criteria cover 2026. A five-share dry-run fails
-  the $1 YES-leg minimum; the fresh 15-share signed ceiling is $1.006510/share,
-  above the $1 conditional floor and .98 requested ceiling. No order or writer
-  change. This is not proof that every raw book walk is negative; see the
-  [pair capture](logs/checkin_20261016T0014/arb/report.md).
-- The Oct 16 discovery run completed 10 command types, selecting 3,032 unique
-  conditions; two received literal review and 3,030 remain unreviewed. Page and
-  market caps make this partial coverage, not a global absence claim. Its only
-  new public-tail opportunity alert was the Treasury pair. All 19 routine types
-  ran once; 18 returned rc0 and the audit's initial rc1 was followed by a final
-  rc0. The reporter's post-manifest error preserved all probes; none were rerun.
-  The final indexed audit is CLEAN4+1. Redeem-all found no winning rows, skipped
-  one losing/uncertain row and broadcast nothing.
-- Polygon block95602971: aUSDC122.092338 (+984 units), variable APY3.135704%;
-  CTF and pUSD unchanged. Hormuz point gas0.004734876 exceeds its $0.003571
-  payout; no resimulation. Four current daemons; heartbeat age40min is within
-  the 3600s hourly cadence, with no restart. Disk740.1211MiB. No numerical prior, decision
-  or position changed; ledger201/125 resolved/76 pending, next202. Manual route
-  and issuer-rotation blockers remain. The weekly/revalidation Telegram notice
-  was sent once (1150); no further notice is pending.
+- Retain OpenAI NO19 and complete Clarity29/29; no add. The official board's
+  OpenAI maximum is HLE53.6<55. Judgmental NO priors remain .25 central/.15
+  stress/.38 upper; stress favors the O19 exit, central/upper hold. Clarity's
+  $29 floor exceeds the $28.56905 captured exit and $28.75860729 idealized
+  free-carry bound. These are planning values, not calibrated probabilities or
+  signing-time quotes.
+- The HLE API and mounted bundle match the 00:14 source receipt across all65 raw
+  objects and the default-HLE / separate-Diamond selector semantics. Google Argon
+  is HLE55.6 / Diamond56.9; OpenAI max is 53.6. API Age2561s is cache age, not
+  publication time. Three direct OpenAI pages remain 403 coverage gaps. Five
+  held Gamma criteria/state fields, 256 Senate rows and Google article cores
+  are unchanged; AA remains57/44. Trump YES's +0.15pp Gamma move is an API price
+  snapshot, not an operative event fact. No new RSS item or sampled public alert
+  followed 00:17.
+- Gamma3072356 is finalized YES (fixed-block denominator1, YES1/NO0); 4.034750
+  losing NO tokens remain at zero, with no rebook or burn. Polygon block95607194
+  shows aUSDC122.093107 (+769 raw units) at variable APY3.138072%; pUSD/CTF
+  are unchanged. Hormuz dust's .003571 payout remains below the .004614534
+  current point-gas estimate; no resimulation or broadcast.
+- The capped discovery review selected3031 unique conditions; 1244 unique rows
+  were emitted, 1787 selected conditions were not emitted, and 3028 selected
+  conditions lack documented literal review. The exact rules for sports market
+  5504916 were read. Gamma YES/NO midpoints are .445/.555 against an unverified
+  Stake .500 proxy: Gamma YES .445 is 5.5pp below, and NO .555 is 5.5pp above,
+  that unverified proxy. The fixture URL/time and independent in-play state are
+  missing; the raw gap is below the ordinary .10 stress haircut. Treat this as a
+  verification lead only, with no forecast or entry. No current scanner candidate
+  exists for the Treasury pair; there was no new quote or dry-run. The 00:14
+  decision is historical; both carried criteria were unchanged.
+- All19 routine types ran once with rc0; 38 streams are timed and hashed, and the
+  final position audit is CLEAN4+1. No orders. Required redeem-all sweep found0/4 winning positions, skipped1, redemptions[];
+  no broadcast. Four current daemons remain; heartbeat age1580s is within its3600s cadence;
+  free disk is671.49MiB. No positions, priors or decisions changed. See the
+  [02:00 source report](logs/checkin_20261016T0200/sources/report.md),
+  [risk review](data/checkin_20261016T0200_root_judgment.json), and
+  [discovery review](data/checkin_20261016T0200_discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
