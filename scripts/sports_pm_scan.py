@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import math
 import sys
 
 import re
@@ -46,10 +47,21 @@ def validate_consensus_freshness(
     lim_hours: float,
     *,
     now: datetime.datetime | None = None,
+    expected_outcomes: list[str] | None = None,
+    market_context: dict | None = None,
 ) -> dict:
-    """Reject odds that are stale relative to a near-dated contract clock."""
-    if "yes_prob" not in consensus:
+    """Validate timestamped bookmaker odds, then derive a margin-free YES probability."""
+    if not isinstance(consensus, dict):
+        return {"error": "consensus payload is not an object"}
+    if "error" in consensus:
         return consensus
+    if any(key in consensus for key in ("yes_prob", "ai_probability", "model_probability")):
+        return {"error": "scalar/model probability payload is unverified; decimal odds required"}
+    if consensus.get("source_type") != "bookmaker_decimal_odds":
+        return {"error": "consensus source is not identified as bookmaker decimal odds"}
+    bookmaker = consensus.get("bookmaker")
+    if not isinstance(bookmaker, str) or not bookmaker.strip():
+        return {"error": "consensus omitted the named bookmaker"}
     source_url = consensus.get("source_url")
     if not isinstance(source_url, str) or not source_url.startswith(("http://", "https://")):
         return {"error": "consensus source omitted an auditable source_url"}
@@ -83,37 +95,121 @@ def validate_consensus_freshness(
     if age_hours > max_age_hours:
         return {"error": (f"consensus stale ({age_hours:.1f}h old; "
                           f"max {max_age_hours:.1f}h for this contract clock)")}
-    return consensus
+    context = market_context if isinstance(market_context, dict) else {}
+    context_question = context.get("question")
+    context_description = context.get("description") or ""
+    context_type = str(context.get("sportsMarketType") or "").casefold()
+    expected_names = [str(x) for x in (expected_outcomes or [])]
+    binary_yes_no = len(expected_names) == 2 and {x.casefold() for x in expected_names} == {"yes", "no"}
+    expected_type = None
+    if len(expected_names) == 3:
+        expected_type = "1x2"
+    elif len(expected_names) == 2 and not binary_yes_no:
+        expected_type = "two_way"
+    elif binary_yes_no:
+        # Gamma's binary outcomes alone do not reveal whether a football NO
+        # includes a draw. Infer only from trusted Gamma market type and rules.
+        context_rules = f"{context_question or ''} {context_description}".casefold()
+        has_draw_rule = bool(re.search(r"\b(draw|tie)\b", context_rules))
+        is_moneyline = context_type in {"moneyline", "money_line", "money line"}
+        is_football_period = bool(re.search(r"\b(90 minutes?|first 90|full time)\b", context_rules))
+        if is_moneyline and has_draw_rule and is_football_period:
+            expected_type = "1x2"
+        else:
+            return {"error": "Gamma context does not establish the bookmaker market type for binary YES/NO"}
+    if expected_type is None:
+        return {"error": "Gamma outcomes do not establish a supported bookmaker market type"}
+    market_type = consensus.get("market_type")
+    if market_type not in ("two_way", "1x2"):
+        return {"error": "consensus market type is missing or unsupported"}
+    if expected_type and market_type != expected_type:
+        return {"error": f"consensus market type {market_type!r} does not match expected {expected_type!r}"}
+    raw_odds = consensus.get("decimal_odds")
+    required_count = 3 if market_type == "1x2" else 2
+    if not isinstance(raw_odds, list) or len(raw_odds) != required_count:
+        return {"error": f"{market_type} consensus requires a complete outcome odds list"}
+    odds: dict[str, float] = {}
+    for row in raw_odds:
+        if not isinstance(row, dict):
+            return {"error": "decimal odds rows must include outcome and odds"}
+        name, value = row.get("outcome"), row.get("odds")
+        if not isinstance(name, str) or not name.strip() or name in odds:
+            return {"error": "decimal odds contain a missing or duplicate outcome"}
+        if row.get("bookmaker") != bookmaker:
+            return {"error": "decimal odds rows do not all identify the same named bookmaker"}
+        if (isinstance(value, bool) or not isinstance(value, (int, float))
+                or not math.isfinite(value) or value <= 1):
+            return {"error": f"decimal odds for {name!r} are invalid"}
+        odds[name] = float(value)
+    yes_outcomes = consensus.get("yes_outcomes")
+    if (not isinstance(yes_outcomes, list) or not yes_outcomes
+            or any(not isinstance(name, str) or name not in odds for name in yes_outcomes)
+            or len(set(yes_outcomes)) != len(yes_outcomes)
+            or len(yes_outcomes) == len(odds)):
+        return {"error": "YES outcome mapping must select a proper subset of the complete book market"}
+    mapping_note = consensus.get("mapping_note")
+    if not isinstance(mapping_note, str) or not mapping_note.strip():
+        return {"error": "consensus omitted the mapping from bookmaker outcomes to market YES"}
+    no_outcomes = [name for name in odds if name not in yes_outcomes]
+    context_question = (market_context or {}).get("question")
+    if market_context and not isinstance(context_question, str):
+        return {"error": "market context question is malformed"}
+    normalize = lambda value: "".join(ch.casefold() for ch in value if ch.isalnum())
+    if expected_type == "1x2" and binary_yes_no:
+        # A binary YES contract on a football winner has three bookmaker
+        # outcomes: its NO complement must include both draw and opponent.
+        if len(yes_outcomes) != 1 or len(no_outcomes) != 2:
+            return {"error": "binary YES on a 1x2 market must select one winner and retain two NO outcomes"}
+        draw_rows = [name for name in no_outcomes if re.search(r"\b(draw|tie)\b", name, re.I)]
+        yes_name = yes_outcomes[0]
+        question = context_question if isinstance(context_question, str) else ""
+        description = context_description if isinstance(context_description, str) else ""
+        trusted_text = f"{question} {description}"
+        if (not draw_rows or not re.search(r"\b(win|wins|beat|beats|defeat|defeats|winner)\b", question, re.I)):
+            return {"error": "1x2 YES/NO mapping is not established by Gamma question/rules"}
+        question_teams = [name for name in odds if name not in draw_rows
+                          and re.search(rf"(?<!\w){re.escape(name)}(?!\w)", question, re.I)]
+        if len(question_teams) != 1 or normalize(yes_name) != normalize(question_teams[0]):
+            return {"error": "1x2 YES side does not match the team named as winning in the Gamma question"}
+        opponent_names = [name for name in no_outcomes if name not in draw_rows]
+        if (len(opponent_names) != 1 or not re.search(
+                rf"(?<!\w){re.escape(opponent_names[0])}(?!\w)", trusted_text, re.I)):
+            return {"error": "1x2 opponent is not present in the Gamma question/rules"}
+    elif expected_type == "1x2":
+        if {normalize(name) for name in odds} != {normalize(name) for name in expected_names}:
+            return {"error": "bookmaker outcomes do not match the ordered Gamma 1x2 outcomes"}
+        if (len(yes_outcomes) != 1
+                or normalize(yes_outcomes[0]) != normalize(expected_names[0])):
+            return {"error": "bookmaker YES mapping does not match the first Gamma 1x2 outcome"}
+    elif expected_type == "two_way":
+        if {normalize(name) for name in odds} != {normalize(name) for name in expected_names}:
+            return {"error": "bookmaker outcomes do not match the ordered Gamma market outcomes"}
+        if (len(yes_outcomes) != 1
+                or normalize(yes_outcomes[0]) != normalize(expected_names[0])):
+            return {"error": "bookmaker YES mapping does not match the first Gamma market outcome"}
+    implied = {name: 1.0 / price for name, price in odds.items()}
+    total = sum(implied.values())
+    return {
+        "yes_prob": sum(implied[name] for name in yes_outcomes) / total,
+        "bookmaker": bookmaker.strip(),
+        "source": bookmaker.strip(),
+        "source_url": source_url,
+        "source_at": source_at.isoformat(),
+        "market_type": market_type,
+        "decimal_odds": [{"outcome": name, "odds": odds[name], "bookmaker": bookmaker} for name in odds],
+        "yes_outcomes": list(yes_outcomes),
+        "no_outcomes": no_outcomes,
+        "mapping_note": mapping_note,
+        "implied_probabilities": {name: implied[name] / total for name in odds},
+        "derivation": "reciprocal decimal odds normalized across this bookmaker's complete market",
+        "confidence": consensus.get("confidence", "unrated"),
+        "note": consensus.get("note", ""),
+    }
 
 
 def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] | None = None,
-                            timeout: int = 120) -> dict:
-    """Spawn a fast scoped worker to fetch bookie-consensus odds.
-
-    Returns {"yes_prob": float, "source": str, "confidence": "high|med|low",
-             "note": str} or {"error": "..."} on failure.
-
-    `yes_prob` is the probability of `outcomes[0]` winning (the side PM lists
-    first). For binary YES/NO markets that's the YES side. For categorical
-    2-team markets like "Spurs vs Thunder" with outcomes=["Spurs","Thunder"]
-    it's specifically the FIRST team's win probability — this is the fix for
-    the 2026-05-18 Spurs/Thunder false-positive (haiku returned Thunder=71%
-    favorite probability; script compared against PM Spurs=33.5% as if YES,
-    falsely reporting -37.5pp delta vs the true +4.5pp on Thunder).
-
-    Lesson source: 2026-05-09 operator directive — bookie consensus is the
-    single biggest mid-market alpha signal; Polymarket vs sharps-book deltas
-    > 3pp suggest mispricing. The fast profile keeps the scan bounded.
-    """
-    if outcomes and len(outcomes) == 2 and outcomes[0].lower() not in ("yes", "no"):
-        target_desc = (
-            f'the probability that "{outcomes[0]}" wins (NOT the favorite — '
-            f'specifically the {outcomes[0]} side; the other outcome is "{outcomes[1]}")'
-        )
-        json_key_desc = f'"{outcomes[0]} wins"'
-    else:
-        target_desc = "the YES side implied probability"
-        json_key_desc = "YES side wins"
+                            timeout: int = 120, market_context: dict | None = None) -> dict:
+    """Fetch one book's complete odds and derive a margin-free YES probability."""
 
     # Derivative-market guard (2026-07-30): a "Spread: Raków (-1.5)" question
     # answered with MONEYLINE odds produced a phantom -27.1pp delta (bookie
@@ -133,21 +229,25 @@ def fetch_bookie_consensus(question: str, lim_hours: float, outcomes: list[str] 
 
     now_utc = datetime.datetime.now(datetime.timezone.utc)
     max_age_hours = min(24.0, max(3.0, float(lim_hours) / 2.0))
-    prompt = f"""Find the CURRENT bookie-consensus implied probability for the following sports event/market.
+    prompt = f"""Find current named-bookmaker DECIMAL ODDS for the exact sports event/market below.
 
 Market question: {question}
+Polymarket outcomes in order: {json.dumps(outcomes or [])}
+Gamma market metadata/rules: {json.dumps(market_context or {}, ensure_ascii=False)}
 Resolves within: {lim_hours:.1f} hours
 Current UTC time: {now_utc.isoformat(timespec='seconds')}
 Maximum acceptable odds age: {max_age_hours:.1f} hours{deriv_clause}
 
-Search public sportsbook aggregators (Pinnacle, DraftKings, FanDuel, Bet365, etc.) or odds-comparison sites (oddsportal.com, oddschecker, ESPN BetTrend) for {target_desc}.
+Search for the exact market from one named sportsbook. Odds comparison sites are acceptable only when they show actual odds attributed to that book. Do not use an AI/model probability, predicted probability, consensus percentage, or a field labeled "AI Probability". Do not combine books or select cross-book best odds.
 
 DO NOT use Polymarket as a source — that's the venue we're comparing AGAINST and would create circular reasoning. If you can only find Polymarket odds, output the error case.
 
-FRESHNESS IS MANDATORY. A dated article or odds snapshot older than the maximum age is not current consensus, even if it is the newest search result. For a visibly live sportsbook/aggregator page, use the current check time as source_at and say "live page" in note. Otherwise use the page's actual published/updated timestamp. If neither can be established, output the error case.
+FRESHNESS IS MANDATORY. A dated article or odds snapshot older than the maximum age is not current. The page must show actual odds and a verifiable update/capture timestamp. For an explicitly live sportsbook page use current check time only if that page visibly shows these prices; otherwise provide its actual updated timestamp. If freshness cannot be established, output the error case.
 
-Output ONE line of JSON only, no preamble. The yes_prob value MUST be the probability that {json_key_desc} (range 0.0-1.0):
-{{"yes_prob": <0.0-1.0>, "source": "<which book or aggregator, NOT Polymarket>", "source_url": "<exact http(s) page containing the odds>", "source_at": "<ISO-8601 UTC timestamp>", "confidence": "high|med|low", "note": "<one-sentence sanity check confirming side and freshness>"}}
+Return complete decimal odds from ONE named bookmaker for every mutually exclusive outcome: use market_type "1x2" for a draw-permitting football home/draw/away market (all three required), or "two_way" for an exact two-outcome market (both required). State which literal bookmaker outcome(s) correspond to Polymarket YES and explain the mapping in mapping_note. NO is the complement. Each decimal_odds row must repeat the same bookmaker name. Decimal odds must be numeric and greater than 1. Never return a probability scalar.
+
+Output ONE line of JSON only, no preamble:
+{{"source_type":"bookmaker_decimal_odds","bookmaker":"<named book>","source_url":"<exact URL showing these odds>","source_at":"<ISO-8601 timestamp>","market_type":"1x2|two_way","decimal_odds":[{{"outcome":"<literal outcome>","odds":<decimal>,"bookmaker":"<same named book>"}}],"yes_outcomes":["<literal outcome(s) mapping to PM YES>"],"mapping_note":"<why these outcomes map to the exact PM question/YES>","confidence":"high|med|low","note":"<visible price and timestamp context>"}}
 
 If no non-Polymarket consensus is fetchable (event too obscure, props market with no public odds, etc.), output:
 {{"error": "<one-sentence reason>"}}
@@ -161,14 +261,40 @@ Be concise. ONE line only."""
         return {"error": f"agent exited {r.returncode}: {r.stderr[:100]}"}
 
     out = r.stdout.strip()
-    # Extract the first JSON object if the worker adds commentary.
-    m = re.search(r"\{[^{}]*\}", out)
-    if not m:
+    # Extract one balanced JSON object if the worker adds commentary; the
+    # evidence schema nests one object per bookmaker outcome.
+    start = out.find("{")
+    if start < 0:
         return {"error": "no JSON in agent output"}
+    depth = 0
+    end = None
+    in_string = escaped = False
+    for index in range(start, len(out)):
+        char = out[index]
+        if in_string:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+        elif char == '"':
+            in_string = True
+        elif char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                end = index + 1
+                break
+    if end is None:
+        return {"error": "no complete JSON object in agent output"}
     try:
         import json as _json
-        parsed = _json.loads(m.group(0))
-        return validate_consensus_freshness(parsed, lim_hours, now=now_utc)
+        parsed = _json.loads(out[start:end])
+        return validate_consensus_freshness(parsed, lim_hours, now=now_utc,
+                                            expected_outcomes=outcomes,
+                                            market_context=market_context)
     except Exception as e:
         return {"error": f"json parse: {e}"}
 
@@ -403,8 +529,17 @@ def main() -> int:
         print(f"# fetching bookie consensus for top {len(selected_rows)} pregame candidates "
               f"(~30s each via scoped worker); skipped {len(skipped_rows)} in-play", file=sys.stderr)
         for i, r in enumerate(selected_rows):
+            source_market = markets_by_id.get(str(r.get("id")), {})
+            market_context = {
+                "question": source_market.get("question"),
+                "description": source_market.get("description"),
+                "sportsMarketType": source_market.get("sportsMarketType"),
+                "outcomes": source_market.get("outcomes"),
+                "gameStartTime": source_market.get("gameStartTime"),
+            }
             cons = fetch_bookie_consensus(r["question"], r["days_to_resolve"] * 24,
-                                          outcomes=r.get("outcomes"))
+                                          outcomes=r.get("outcomes"),
+                                          market_context=market_context)
             r["consensus"] = cons
             if "yes_prob" in cons:
                 bookie_yes = float(cons["yes_prob"])

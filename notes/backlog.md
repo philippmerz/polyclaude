@@ -1,3 +1,32 @@
+## Oct-16 18:00 UTC light check — completed; holdings retained
+
+- Bankroll own-component window 2026-10-16T18:02:40.848469+00:00–2026-10-16T18:02:56.004271+00:00 UTC:
+  total$196.46, gas$5.88, trading midpoint/depth$190.58/$187.74, PM
+  midpoint/depth$33.35/$30.51, whole-account approximate depth$193.62, cost$31.46,
+  residual$18.69. Versus14:00 trading midpoint/depth −$.14/−$1.16. Sequential
+  rounded accounting; VM/API excluded, not cash profit.
+- Retain O NO19 and Clarity29/29; no add or prior/decision change. O priors
+  .25/.15/.38; receipt-time O GET .20/.27, fee-net exit$3.67840, ask.277884.
+  Clarity floor$29 exceeds pair exit$26.83184 and idealized carry$27.011584897.
+  These bounded scenarios do not prove optimality or execution availability.
+- Source17/17: 64 of65 full HLE objects unchanged; Argon supplementary
+  benchmarks changed but HLE55.6/Diamond56.9 did not. OpenAI max53.6<55;
+  bundle/default-HLE/Diamond semantics unchanged. Three direct OpenAI403 gaps.
+  Five Gamma criteria/state, Senate, AA57/44 and article cores unchanged; one
+  Gemini Notebook tips RSS item is context only. API Age is cache metadata.
+- G final YES1/NO0 at block95645607; no rebook/burn. aUSDC122.100144,
+  Aave3.19633957%; pUSD/CTF unchanged. Hormuz gas estimate.004567191608>
+  .003571 payout; no resimulation/broadcast. Routine19/allrc0,38 timed/hash
+  streams, CLEAN4+1; 76 pending decisions. One read-only health inspection
+  passed after one initial setup incident before inspection; four daemons current, heartbeat within
+  3600s, disk592.27MiB. No discovery/redeem-all/weekly rerun this light tick.
+- Sports source-validation fix is complete with27 focused tests passing.
+  Compatibility tests passed70 with one pre-existing text assertion failure
+  against unchanged lessons; evidence is in `logs/periodic_20261016T1800/engineering/`.
+  The worker's one-book output remains a source lead, not independent price
+  validation or calibrated consensus. Evidence: `data/periodic_20261016T1800_*.json` and
+  `logs/periodic_20261016T1800/sources/report.md`.
+
 ## Oct-16 14:00 UTC full check — complete; positions retained; sports source mismatch logged
 
 - Bankroll window14:02:03.334702–14:02:19.171545 UTC: total$196.74, gas$6.02,
