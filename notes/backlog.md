@@ -1,3 +1,9 @@
+## 2026-10-16 22:00 UTC — light check complete
+
+- Retain O NO19 and Clarity29/29; no add or prior change. O priors remain .25/.15/.38; stress favors exit, central/upper hold. Clarity full-pair exit/carry is currently unknown because C50Y exceeded the180s freshness guard; do not reuse18:00 economics. Manual issuer-account credential rotation remains blocked.
+- HLE Accuracy/Diamond and criteria are stable across65 models. Argon calibration error null→41.52 and Sol ART18.76 are auxiliary changes; OpenAI max53.6<55. Three OpenAI403s remain coverage gaps. No new timestamped sampled RSS/public alerts after18:02. See `data/periodic_20261016T2200_sources.json`.
+- Routine quiet; no full discovery, redeem-all or weekly review. The last discovery is dated14:00 and partial:3031 unique selected,3028 without documented literal review. Weekly nextOct23, monthlyNov12; next full check02:00 Oct17.
+
 ## Oct-16 18:00 UTC light check — completed; holdings retained
 
 - Bankroll own-component window 2026-10-16T18:02:40.848469+00:00–2026-10-16T18:02:56.004271+00:00 UTC:
@@ -4671,26 +4677,9 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-16 14:00:** G remains final YES1/NO0; losing4.034750
-NO shares remain at0 without rebook/burn. All65 HLE raw objects and mounted
-bundle/default-HLE/separate-Diamond semantics match10:00; Argon HLE55.6 /
-Diamond56.9, OpenAI max53.6<55. API Age2319s is cache metadata. Gamma3072352
-YES snapshot moved .750→.765 (+1.5pp) since10:00, with criteria unchanged.
-O NO19 retained; priors.25/.15/.38 unchanged. Stress favors exit, central/upper
-hold. Captured POST NO book .20/.27, full exit$3.67840, all-in ask.277884>.25;
-104.43s at capture, planning only. Three OpenAI403 coverage gaps remain.
-
-**Current Clarity review, Oct-16 14:00:** retain complete29/29 conditional on
-unchanged criteria; payout floor29. C50Y book paths aged643.83/644.16s and failed
-the180s guard, so current full-pair exit/carry are unknown. C58N-only exit net
-26.59462 at9.32s cannot price the pair. No source break, add, or demonstrated
-superior full-pair exit. Retention does not prove optimality.
-
-**Hormuz dust, Oct-16 14:00:** retain .003571 claim; point-gas estimate
-.004671710756 exceeds payout using dated175036-unit simulation/current gas/
-rounded FX. No new simulation or broadcast; estimate is not a current liquidation
-certificate.
-
+**Current HLE state, Oct-16 22:00:** G remains final YES1/NO0; losing4.034750 NO shares remain at0 without rebook/burn. Across65 HLE rows, identity/provider/release date, original HLE Accuracy and Diamond are unchanged;63 full objects unchanged and two have auxiliary changes: Argon calibration error null→41.52 and GPT-6.1 Sol ART18.76. Argon HLE55.6/Diamond56.9 and OpenAI max53.6<55 remain. Calibration is excluded by the literal held criteria. Mounted bundle/default-HLE/separate-Diamond semantics stable; API Age is cache metadata. Five Gamma criteria/state and sampled RSS/public alerts are unchanged/quiet after18:02; three direct OpenAI403s remain coverage gaps. O NO19 retained at priors.25/.15/.38; stress favors exit, central/upper hold. Receipt-time book .20/.27, exit$3.67840, all-in ask.277884; planning only. See `data/periodic_20261016T2200_sources.json` and source report.
+**Current Clarity review, Oct-16 22:00:** retain complete29/29 conditional on unchanged criteria and payout floor29. C50Y GET/POST aged1130.07/1130.54s and failed the180s guard. C58N-only exit net25.99560 at177.13s cannot price the full pair. Current pair exit/carry are unknown; do not reuse18:00 economics. No add or demonstrated superior complete-pair exit; retention is not proof of optimality.
+**Hormuz dust, Oct-16 22:00:** retain .003571 claim; point-gas estimate.004624628060 exceeds payout using dated175036-unit simulation/current gas/rounded FX. No new simulation or broadcast; estimate is not a current liquidation certificate.
 **Current discovery coverage, Oct-16 14:00:** all10 command types/allrc0;
 3031 unique conditions selected across capped primary/thin-tail pages. One exact
 current literal review plus two carried reviews;3028 current conditions still

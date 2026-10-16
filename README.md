@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 194 recorded observations from Apr-25
+The local performance CSV now has 195 recorded observations from Apr-25
 through Oct-16. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -73,61 +73,50 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-16 ~18:02 UTC
+## Last bankroll snapshot — 2026-10-16 ~22:02 UTC
 
-The bankroll call ran 18:02:40.848469–18:02:56.004271 UTC. These are rounded accounting marks,
-not cash profit, synchronized NAV or certified liquidation; VM/API costs are excluded.
+Bankroll window: 22:02:14.284937–22:02:29.997585 UTC. These rounded sequential
+marks are not cash profit, synchronized NAV or certified liquidation; VM/API
+costs are excluded.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $196.46 |
-| Gas token mark | $5.88 |
+| Total marked bankroll | $196.49 |
+| Gas token mark | $5.91 |
 | Trading midpoint / indicative depth | $190.58 / $187.74 |
 | PM midpoint / indicative depth | $33.35 / $30.51 |
-| Whole-account approximate depth | $193.62 |
+| Whole-account approximate depth | $193.65 |
 | Remaining open-position cost | $31.46 |
 | Settled accounting residual | $18.69 |
 
-Compared with 14:00, trading midpoint/depth changed −$0.14/−$1.16; rounded residual was
-unchanged. No asset, prior or decision changed.
+Trading midpoint and depth are flat versus18:00. Retain OpenAI NO19 and
+Clarity29/29, with no add or prior change. O NO priors remain .25 central, .15
+stress and .38 upper; stress favors exit, central/upper favor hold. The
+receipt-time O book was .20/.27, fee-net full exit $3.67840 and all-in ask
+.277884. Clarity's $29 floor remains conditional, but current full-pair exit and
+carry are unknown because C50Y failed the180s freshness guard; C58N alone does
+not price the pair. Neither capture is signing-time authority or proof of
+optimality.
 
-- Retain OpenAI NO19 and complete Clarity29/29, with no add. Judgmental O NO
-  priors remain .25 central/.15 stress/.38 upper; stress favors O19 exit, while
-  central/upper favor hold. The receipt-time O book was .20 bid/.27 ask, fee-net
-  full exit $3.67840, all-in ask .277884. This is planning, not signing-time
-  authority; refresh all execution checks before any order.
-- Clarity's conditional $29 floor exceeds captured pair exit $26.83184 and
-  idealized free-carry bound $27.011584897; retain29/29. C50Y, C58N and O books
-  were captured by GET at ages19.09s,74.27s and69.94s respectively. Carry uses
-  the live Aave point3.19633957%; this is not a calibrated joint distribution
-  or proof of global optimality.
-- The current HLE API has 65 rows. Compared with 14:00, 64 full model objects are
-  unchanged; Gemini 4 Argon gained supplementary benchmark fields, while its
-  original HLE55.6 and Diamond56.9 remain stable. OpenAI max remains53.6<55.
-  The mounted bundle, original-HLE default and separate-Diamond selector are
-  unchanged. API cache Age is not publication time; three direct OpenAI pages
-  returned403 and remain coverage gaps. The five held Gamma criteria/state, Senate
-  rows, AA57/44 and article cores are unchanged. A Gemini Notebook tips RSS item
-  is context only, not a qualifying HLE result.
-- Gamma3072356 remains final YES at fixed block95645607; denominator1, YES1/NO0.
-  The4.034750 losing NO tokens remain zero, without rebook or burn. Polygon
-  aUSDC is122.100144 (+1774 raw units); instantaneous Aave rate3.19633957%.
-  pUSD/CTF unchanged. Hormuz payout.003571 remains below point-gas estimate
-  .004567191608 using the prior175036-unit simulation/current gas/rounded FX;
-  no new simulation or broadcast.
-- Routine19 ran once, all rc0; 38 streams are timed/hashed and match the
-  manifest; position audit CLEAN4+1. Four current daemons; heartbeat1536.644s
-  is within3600s cadence, news state159.055s old, and disk592.27MiB. One
-  read-only health inspection completed; see the journal for capture detail.
-  No discovery, redeem-all, or weekly review was due.
-  The approved sports-source fix passed27 focused tests. It requires named,
-  timestamped complete odds from one book and rejects AI/model scalar inputs.
-  The worker's book still needs independent source verification. Root sent one
-  material Telegram update1153; no repeat.
-- Weekly next Oct23, monthly Nov12. Full evidence: `data/periodic_20261016T1800_risk.json`,
-  `data/periodic_20261016T1800_sources.json`, `data/periodic_20261016T1800_routine.json`, and
-  `logs/periodic_20261016T1800/sources/report.md`.
+HLE Accuracy, HLE-Diamond, model identity/provider/release dates are unchanged
+across65 rows. Two full objects changed only in auxiliary fields: Argon
+calibration error null→41.52 (not HLE Accuracy55.6 or Diamond56.9; excluded by
+criteria) and GPT-6.1 Sol ART18.76. OpenAI max remains53.6<55. Three direct
+OpenAI403 responses are coverage gaps. The mounted bundle defaults to original
+HLE and offers separate Diamond selection. Five held Gamma rules/state,
+Senate256, AA57/44 and article cores are unchanged; sampled RSS and public alert
+tails had no timestamped rows strictly after18:02. API Age is cache metadata.
+
+Gamma3072356 is final YES at block95655170; the4.034750 losing NO tokens remain
+zero, with no rebook or burn. Polygon aUSDC122.101913, Aave point3.16856688%;
+pUSD/CTF unchanged. Hormuz's .003571 dust payout remains below the .004624628060
+point-gas estimate; no resimulation or broadcast. Routine19/allrc0,38 streams
+timed/hashed, audit CLEAN4+1; four daemons current, heartbeat1489.96s within
+3600s cadence, news182.787s, disk577.79MiB. No discovery, redeem-all or weekly
+rerun. The last discovery is a dated14:00 capped slice, not current absence
+proof. Weekly nextOct23, monthlyNov12; next full check02:00 Oct17. See the dated
+[check journal](notes/journal.md) and [source report](logs/periodic_20261016T2200/sources/report.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
