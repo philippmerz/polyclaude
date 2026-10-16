@@ -1,3 +1,31 @@
+## Oct-16 10:00 UTC light check — complete; holdings retained; price flap reviewed
+
+- Bankroll window10:02:15.635299–10:02:29.853932 UTC: total$197.64, gas$6.01,
+  trading midpoint/depth$191.63/$189.47, PM midpoint/depth$34.41/$32.25,
+  whole approximate depth$195.48, cost$31.46, residual$18.69. Versus06:00,
+  midpoint/depth +$0.95/+$0.19; residual +$0.01 rounded carry, not cash profit.
+- Retain O NO19 and Clarity29/29; no add. Omax53.6<55; priors.25/.15/.38
+  unchanged. Stress favors O19 exit, central/upper hold. Clarity floor29 exceeds
+  captured exit28.56905/idealized carry28.75878752. Gamma O YES snapshot
+  .805→.750 (-5.5pp; volume$217, spread10pp); follow-up NO book .20/.28 and
+  fee-net exit3.67840. Wide-book flap, not source/criteria break or execution
+  certificate. G final YES1/NO0, 4.034750 losing NO tokens remain0; no rebook/burn.
+- Source17: 65 full HLE objects, bundle/metric semantics, five Gamma criteria,
+  Senate256, article cores, AA57/44 unchanged. Argon55.6, Omax53.6; Age2547s is
+  cache metadata. Three OpenAI403 gaps. No new RSS/sample alerts after06:02.
+- Routine19/allrc0,38 timed hashes,CLEAN4+1; orders/watch/Ostium/overdue quiet,
+  76 pending. One PRICE_MOVE processed. Health wrapper first rc2 before
+  inspection from wrong path; corrected stat-only check rc0. Initial stdout,
+  stderr and receipt were overwritten/not retained; main19 probes/38 streams
+  remain intact. Four daemons current; news34s, heartbeat1504s within3600s,
+  disk646.32MiB. Polygon95626379 aUSDC122.096609 (+1754 raw), APY3.1547537%;
+  pUSD/CTF unchanged. Hormuz .003571 payout below point gas.00465071582; no
+  resimulation. No full discovery, redeem-all or weekly rerun. WeeklyOct23,
+  monthlyNov12; one root Telegram1151 sent, no repeat.
+- Discovery remains the dated partial02:00 scan (3031 selected/3028 without
+  documented literal review); no new due item or current absence finding.
+  Evidence: data/periodic_20261016T1000_*.json and source/routine incident records.
+
 ## Oct-16 06:00 UTC light check — complete; holdings retained
 
 - Bankroll window06:02:05.185998–06:02:21.766006 UTC: total$196.71, gas$6.03,
@@ -4577,22 +4605,25 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-16 06:00:** G remains final YES1/NO0; losing4.034750
+**Current HLE state, Oct-16 10:00:** G remains final YES1/NO0; losing4.034750
 NO shares remain at0 without rebook/burn. All65 HLE raw objects and mounted
-bundle/default-HLE/separate-Diamond semantics match02:00; Argon is HLE55.6 /
-Diamond56.9 and OpenAI max53.6<55. API Age2532s is cache metadata. Retain O NO19;
-priors.25/.15/.38 unchanged. Stress favors exit, central/upper hold. Three
-OpenAI403 coverage gaps remain.
+bundle/default-HLE/separate-Diamond semantics match06:00; Argon is HLE55.6 /
+Diamond56.9 and OpenAI max53.6<55. API Age2547s is cache metadata. Gamma
+3072352 YES snapshot fell .805→.750, but the wide-book flap is not a source or
+criteria change. Separate NO book at10:04:52Z was .20/.28; captured fee-net full
+exit $3.67840. Retain O NO19; priors.25/.15/.38 unchanged. Stress favors exit,
+central/upper hold; ask .288064 exceeds central/stress bounds. Three OpenAI403
+coverage gaps remain.
 
-**Current Clarity review, Oct-16 06:00:** retain complete29/29; payout floor29
-exceeds captured exit28.56905 and idealized carry28.75828924. Exact first-full-
+**Current Clarity review, Oct-16 10:00:** retain complete29/29; payout floor29
+exceeds captured exit28.56905 and idealized carry28.75878752. Exact first-full-
 Senate-passage criteria and all256 Senate rows are unchanged; H.R.3633 cloture
 remains rejected49–50, not final passage. No add or independent leg trim.
 
-**Hormuz dust, Oct-16 06:00:** retain the .003571 claim; current point-gas
-estimate .00467002984 exceeds payout, using dated175036-unit simulation/current
-gas/rounded FX. No new simulation or broadcast; this remains an estimate, not a
-current liquidation certificate.
+**Hormuz dust, Oct-16 10:00:** retain .003571 claim; point-gas estimate
+.00465071582 exceeds payout using dated175036-unit simulation/current gas/
+rounded FX. No new simulation or broadcast; estimate is not a current
+liquidation certificate.
 
 **Current discovery coverage, Oct-16 02:00:** ten command types/allrc0;3031
 unique conditions selected,1245 emitted occurrences/1244 unique,1787 selected not
