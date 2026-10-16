@@ -1,3 +1,42 @@
+## Oct-16 00:17 UTC full check — completed; holdings retained, Treasury pair declined
+
+- Bankroll window 00:17:26.123609–00:17:42.244707 UTC: total $196.69, gas
+  $6.01, trading midpoint/depth $190.68/$189.28, PM midpoint/depth
+  $33.46/$32.06, whole approximate depth $195.29, cost $31.46, residual $18.68.
+  Flat versus 22:00; rounded accounting marks, not cash profit. Weekly Oct 9–16
+  change: trading midpoint +$10.60, depth +$12.44 over 6.926 days. The Gemini
+  $12.252260 net sale versus $2.96 opening mark explains most of the midpoint
+  bridge; not lot profit, external flow or forecast skill. Weekly report:
+  `notes/pnl_weekly.md`.
+- Retain O NO19 and Clarity29/29; no add. O HLE maximum53.6<55, root priors
+  .25/.15/.38 unchanged; stress exit, central/upper hold remains sensitivity.
+  Clarity floor29 > exit28.56905/idealized carry28.75863. Exact first-final-
+  passage criteria reread; 29/29 conditional payout structure unchanged.
+- Google Argon55.6 and resolved Gemini>=50 YES are persistent. HLE65 raw
+  objects/front-end metrics unchanged versus22:00; API Age3520s is cache age.
+  Trump-out Gamma rules and official feed reread; criteria and .97 NO unchanged.
+  Three OpenAI403 gaps persist. G final YES1/NO0, 4.034750 NO tokens remain at
+  zero; no loss rebook or burn. No new held-source news; only new opportunity
+  tail item was the Treasury pair alert.
+- Treasury pair event79123: buy NO4.4 / YES4.5 is structurally nested under the
+  captured < predicates, but source URL filters2025 while the criteria cover
+  2026. Five-share run fails the $1 YES notional minimum; fresh 15-share signed
+  cost1.006510/share exceeds both the $1 conditional floor and requested.98
+  ceiling. No order/writer change. It does not establish every raw depth walk
+  is negative. Evidence: `logs/checkin_20261016T0014/arb/report.md` and
+  `data/checkin_20261016T0014_root_judgment.json`.
+- Routine19 ran once: 18 rc0, audit first rc1 then final rc0; 38 streams with
+  timing/hashes. Reporter failed after the manifest; all probes were preserved
+  and none rerun. Final audit CLEAN4+1. Redeem-all: 0/4 winning, one skipped,
+  no broadcast. Discovery10 types/42-hash manifest, 3,032 selected, two literal
+  reviews/3,030 unreviewed; scans remain capped and partial.
+- Polygon95602971 inventory: aUSDC122.092338 (+984 units vs22:00); pUSD/CTF
+  unchanged. Aave APY3.135704%. Hormuz point gas0.004734876 > payout0.003571,
+  no resimulation. Four daemons; heartbeat40min is normal for hourly3600s,
+  no restart; disk740.1211MiB. Ledger201/125 resolved/76 pending/next202.
+  Telegram notice1150 sent once. Next full check02:00, weeklyOct23/monthlyNov12;
+  manual route/issuer blockers unchanged. No new timer or goal.
+
 ## Oct-15 22:00 light check — completed; positions retained, no new threshold transition
 
 - Bankroll window 22:02:21.906209–22:02:37.333890 UTC: total $196.71, gas
@@ -4480,36 +4519,36 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   Tests pass and the updated watcher is live. Capacity remains unresolved;
   latest checked free space is about 328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-15 18:00:** Polygon95588081 payout1/1/0;
-losing4034750units remain0/loss already recorded. All65 raw objects and frontend
-semantics stable versus14; O53.6<55, retainO19/noadd. Judgmental NO.25central/
-.15stress/.38upper unchanged; captured exit3.49303/W186.21, stress19exit.
-All201 decisions unchanged/next202; diagnostic10 raw-capture gap is documented above.
+**Current HLE state, Oct-16 00:17:** exact G final1/1/0 at Polygon95602971;
+losing4.034750 NO tokens remain0, loss already recorded.65 raw objects/frontend/
+metric unchanged versus22; O53.6<55, retainO19/noadd. Judgmental NO.25central/
+.15stress/.38upper unchanged; captured exit3.49303/W186.22. Central/upper hold,
+stress19exit; planning sensitivity is not calibrated probability/signing authority.
 
-**Current Clarity review, Oct-15 18:00:** matched29/29 floor29 includes no vote/
-voice passage;51–58 pays58. Exit28.56905/idealizedfreecarry28.76199<29;
-keep complete pair/noadd. Over58 YES Gamma snapshot−1pp is not an executable
-quote/passage fact. Prior Witt report reviewed/notifiedOct14 22; underlying
-email not independently authenticated. Settlement/platform risk remains.
+**Current Clarity review, Oct-16 00:17:** full29/29 pair preserves29 floor,
+including no vote/voice passage;51–58Yea pays58. Captured exit28.56905/
+idealized freecarry28.75863<29; keep pair/noadd, no supported independent trim.
+Trump and both Clarity criteria were reread after stale flags; dated provenance
+changed, all numerical forecasts/groups unchanged, final audit CLEAN4+1.
+Wittreport remains dated reporting, not a new passage fact. Settlement/platform
+risk persists; no inference from Gamma price snapshots.
 
-**Hormuz dust, Oct-15 18:00:** gas pointcost0.00461250>payout.003571,
-using dated175036 units/current gas/rounded FX. Retain; no new simulation or
-broadcast. ExactOct14 22:10 dry-run/210044limit and initial slug/metadata gap
-remain dated evidence; no fee-policy change.
+**Hormuz dust, Oct-16 00:17:** gas point.004734876>payout.003571 using dated
+175036units/current gas/rounded FX. Retain; no new simulation or broadcast.
+ExactOct14 22:10 dry-run/210044limit and initial slug metadata gap remain dated
+proof, not a current liquidation certificate.
 
-**Current discovery coverage, Oct-15 14:00:** primary1000/666eligible/80selected/
-586omitted; thin47063/3026/3000/26omitted; both pagecapped. Same-profile02baseline.
-1482emittedoccurrences/1475uniqueconditions,3049selectedunique/31shared;
-fourliteralreviews leave3045selectedunreviewed,1574notemitted. All rowproofs
-valid, not complete substantive review.10typesonce/allrc0;50artifacthashes.
-Snapshot default-binding error corrected via exact copiedcaptures/valid paths;
-currentlatest points to newthin output. Pre-run pointer unproven; no exactrestore
-claim, scanner rerun or financialhistory edit. ETH5593550 hourlymin2318 is not
-qualifying1m proof; broad volatility sensitivity and ordinaryhaircut reject both
-sides, size0DEC201/no numeric outcome forecast. OtherreviewedFed/ceasefire/MLB
-cases lack supported downsidebounds. Consistency20of324groups/8valid/12failed/
-149unquoted/0positive remains partial; no globalabsence claim. Silver prior
-minutequalificationunknown afterOct14Pyth419; no substitute/repeat/inference.
+**Current discovery coverage, Oct-16 00:14 trigger review:** all10 types once/rc0,
+42 artifact hashes; both primary/thin scans capped.3032 selected conditions,
+2303 emitted rows/2276 unique emitted; two Treasury literals reviewed by root,
+3030 selected remain substantively unreviewed. Row identity proofs are not full
+coverage. Shared snapshot pointer/target unchanged. Exact10y4.4NO/4.5YES pair:
+5-share cheap leg fails USD minimum; fresh15 signed worst-case1.006510 exceeds
+conditional1 floor and.98 requested ceiling. No order/writer change; no actual
+fill-loss or all-book-walk-negative claim. Shared2025-filtered link/2026 window,
+14-day fallback and sequential fill/rollback risks remain. Sports line lacks
+exact fixture/source proof and its48,385 volume misses50k trigger. Full evidence:
+data/checkin_20261016T0014_*.json. No exchange-wide absence assertion.
 
 **Consistency coverage follow-up, Oct-13 18:00:**14:03 failure was an intentional
 duplicate-event guard, not a proved implementation bug. Watcher rejects failed

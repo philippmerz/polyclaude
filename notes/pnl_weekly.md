@@ -1481,3 +1481,145 @@ Bounded discovery used 17 calls (nine network scanner/pair calls and eight offli
 ## Costs and next clocks
 
 VM/API costs remain unreconciled and excluded; a $0 cost assumption is not made. No off-chain benchmark or price checks were added; the retired stock/brokerage Sunday workflow remains retired. Weekly P&L is next due **Oct 16**; the monthly emergency-path and fee drill is due **Oct 12**. Credential-issuer rotation remains unverified, with no issuer route documented.
+
+
+# Week 2026-10-09 → 2026-10-16
+
+Ex-gas trading midpoint increased **$10.60 (+5.89%)** to **$190.68**;
+indicative fee-net depth increased **$12.44 (+7.03%)** to **$189.28**.
+This is a change in rounded sequential account estimates, before unreconciled
+VM/API costs. It is not audited realized profit or evidence of repeatable alpha.
+The comparison spans **6.9264 days**, from Oct9 02:03:23.556584 UTC to the
+Oct16 bankroll window **00:17:26.123609–00:17:42.244707 UTC**.
+
+## Whole-account performance
+
+| Measure | Oct9 opening | Oct16 close | Change |
+|---|---:|---:|---:|
+| Whole-account marked bankroll | $186.32 | $196.69 | +$10.37 |
+| Gas-token mark, excluded from trading | $6.24 | $6.01 | −$0.23 |
+| PM midpoint / indicative fee-net depth | $35.17 / $31.93 | $33.46 / $32.06 | −$1.71 / +$0.13 |
+| Ex-gas trading midpoint | $180.08 | $190.68 | +$10.60 (+5.89%) |
+| Ex-gas trading depth | $176.84 | $189.28 | +$12.44 (+7.03%) |
+| Whole-account approximate depth | $183.08 | $195.29 | +$12.21 |
+| Settled accounting residual | $22.55 | $18.68 | −$3.87; not a cash-profit measure |
+
+Trading depth is **+$19.28 / +11.34% versus $170 documented contributed capital**.
+No external contribution or withdrawal is documented during the comparison;
+the capital ledger is not an exhaustive on-chain flow audit. Internal cash moves
+are not new capital. Opening observation: performance CSV row148 and
+journal:26243; closing source: this run's authoritative bankroll receipt.
+
+## What drove the change
+
+- On Oct13, DEC195 sold **98.05 Gemini NO**: gross12.694290, fee0.442030,
+  **net12.252260 pUSD**. Receipt-backed pUSD rose10.319630→22.571890;
+  Gemini quantity fell102.084750→4.034750. Transaction status1/block95464732.
+  These are sale proceeds, not profit. The opening report valued the whole
+  Gemini holding at only2.96 against rounded cost16.18. Net sale cash minus that
+  opening mark explains approximately **9.29** of the **10.60 midpoint increase**;
+  the remaining≈1.31 mixes other marks, carry, conversion costs and rounding.
+  This is a component bridge, not lot-by-lot P&L; opening per-leg depth is unknown.
+- On Oct14 the exact Gemini≥50 condition finalized YES (denominator1/YES1/NO0).
+  Residual4.034750 NO pays0; its approximately0.64 allocated loss was already
+  recorded. It is not booked again this week/run, and no zero-recovery burn occurs.
+  A losing contract can still produce an improvement relative to an earlier
+  depressed mark when remaining bid liquidity is monetized; that does not make
+  the original bet a win or its repeated forecasts independent successes.
+- Oct12 converted37 pUSD to36.993907 nativeUSDC and supplied36.98 to Aave.
+  It was internal allocation, not an external deposit. Four prior zero-payout
+  token leftovers were separately burned; this recovered no stake and created no
+  new investment profit. Both operations and their costs remain in the journal.
+
+## Current risk and reviewed opportunity
+
+Retain OpenAI≥55 NO19, complete Clarity29/29, TrumpNO.33 and Hormuz.003571 claim.
+OpenAI remains53.6<55 on the captured original-HLE board; .25central/.15stress/
+.38upper are judgmental. Current captured exit3.49303; stress favors19-share exit,
+central/upper hold. This sensitivity is neither calibration nor signing authority.
+Clarity's same-criteria scenarios preserve29 floor, including no vote/voice
+passage, and58 if51–58 vote Yea. Captured exit28.56905 plus idealized constant-rate
+carry28.75863164 remains below29. Settlement/platform risks and unpriced bonus
+uncertainty remain. No independent-leg trim or new allocation was justified.
+
+The Oct16 00:14 Treasury4.4/4.5 alert was independently checked. The exact pair
+uses strict **<** thresholds and a common daily window. The five-share vetted
+preview failed because the cheap YES leg's signed notional was0.35, below the
+venue's1 minimum. A fresh15-share preview skipped at **signed worst-case cost
+1.006510/share**, exceeding both the submitted0.98 ceiling and the conditional
+1 payout floor. This is **not an observed fill cost or proof every possible raw
+book walk is negative**; the existing path did not certify a floor-positive order.
+No order or writer change followed. The shared2025-filtered source URL for a
+2026 window,14-day fallback, possible middle-band bonus and sequential FOK/
+rollback risk prevent treating the scanner observation as guaranteed cash.
+
+All10 discovery types ran once. Current selection contains3032 unique conditions;
+only this Treasury pair received literal root review, leaving3030 substantively
+unreviewed. Primary/thin scans are page-capped; batch identity proofs and sparse
+basket quotes do not establish exchange-wide absence. The sports consensus line
+lacked exact fixture/source proof and fell below the stated50k-volume trigger.
+No new win probability was invented from it.
+
+Current variable Aave supply quote is3.135704%. A cost-free constant-rate
+counterfactual on180.08 for6.9264days earns≈0.106;
+this is a sensitivity, not a measured passive return. Actual cash-sleeve carry is
+already in account values. Off-chain stock benchmarks/research remain retired.
+
+## Decisions, calibration and operations
+
+Six Oct14 resolution records (127,152,155,189,195,198) share **one Gemini contract
+outcome**, not six independent trials. Original forecasts, dates, sizes and
+losses remain intact; no new grading occurred. The aggregate ledger mixes
+operational and financial records, so its counts establish no new calibration
+pattern or forecasting skill. The quoted pending-size sum below is a historical
+record aggregate, not current deployed capital or a live portfolio-cap breach.
+
+Captured `decisions.py summary`:
+
+```text
+decisions total=201  resolved=125  pending=76
+
+by type:
+  scaffolding         total= 53  resolved= 39
+  open_position       total= 42  resolved= 33
+  size_change         total= 41  resolved= 19
+  skip                total= 34  resolved= 14
+  close_position      total= 25  resolved= 19
+  strategy_change     total=  5  resolved=  1
+  infra               total=  1  resolved=  0
+
+by confidence:
+  high      total=125  resolved= 83
+  medium    total= 63  resolved= 38
+  low       total= 10  resolved=  3
+  unknown   total=  3  resolved=  1
+
+pending capital (sum of sizes): $477.59
+
+lessons recorded: 109
+  • Zero market price or redeemable flag alone is insufficient. Prove final zero numerator and exact asset/condition/collateral, use an explicit loss-only mode, simulate and estimate, preserve unrelated claims, and verify receipt plus zero post-balance. Ordinary winning-claim sweeps still skip losing or uncertain rows.
+  • Sell versus hold uses current net proceeds and terminal states; report cash preserved separately from entry-basis P&L and residual loss.
+  • Preserve actual receipt fees and original forecasts. A single trade supports conservative quote math but does not establish every venue aggregation/rounding rule. Historical per-level optimizer certificates remain approximations for the corrected engine.
+  • Candidate size must meet actual venue minimum while preserving the feasible boundary inside a price level. Planning candidates still need identity/freshness/fees/precision/locks and actual execution verification before an order.
+  • Separate proposed UMA state from final payout proof; record final loss only after exact on-chain settlement, and avoid spending gas for zero recovery.
+```
+
+The initial criteria audit flagged Trump, then its next pass surfaced both
+Clarity legs' same8-day-old review. Current literal rules/sources were reread;
+only dated review/provenance metadata changed, with all numerical priors and
+other forecast fields preserved. Final audit is CLEAN4indexed+1deindexed.
+The heartbeat's≈40min state age is normal for its3600s poll; no restart.
+The routine reporter failed after preserving all19 probes/38 streams; receipts
+were reused and no probe was rerun to reconstruct metadata. Two necessary
+criteria-audit follow-ups remain separate. Mandatory redeem-all found0/4 winning,
+skipped1 losing/uncertain row and broadcast nothing.
+
+The already-condensed lessons guide was reviewed. Its tooling paragraph now
+requires exclusive, resolved capture paths and honest preservation after a
+post-probe reporting failure; all existing gates and evidence links remain.
+Historical Oct15 raw-capture damage remains documented and unrepaired.
+Next existing full check is02:00; weekly P&L next dueOct23/monthlyNov12.
+No extra timer, durable goal or idle follow-up was created.
+
+Evidence: current journal entry, `data/checkin_20261016T0014_weekly_facts.json`,
+`data/checkin_20261016T0014_root_judgment.json` and the preserved run receipts.

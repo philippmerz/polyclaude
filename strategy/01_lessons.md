@@ -1,6 +1,6 @@
 # Current lessons — compact onboarding
 
-Reviewed 2026-10-12. Read README, then the current philosophy and this guide.
+Reviewed 2026-10-16. Read README, then the current philosophy and this guide.
 [MANDATE.md](../MANDATE.md), [00_philosophy.md](00_philosophy.md) and
 [02_operations.md](02_operations.md) remain the authorities for scope, judgment
 and procedures. This guide preserves recurring failure lessons; it does not
@@ -171,9 +171,13 @@ and “Process & operator covenant.” Canonical records remain in notes/;
 - Scheduled runs execute the due check or trigger once, finish bounded safety
   follow-up and end. Cron and event watchers handle waiting. Do not create an
   indefinite goal, idle follow-up or extra timer because a check was quiet.
-- Inspect call paths before running tooling. Preserve unrelated worktree
-  changes and financial records. Stage owned changes explicitly; never reset
-  or restore a dirty tree wholesale to make an audit easier.
+- Inspect call paths before running tooling. For bounded probes, resolve and
+  verify the intended parent, then create a fresh capture directory with
+  `exist_ok=False` before requests; keep writes within it. If post-probe
+  processing fails, preserve receipts and mark lost metadata unknown instead
+  of rerunning completed probes or reconstructing it. Preserve unrelated
+  worktree changes and financial records. Stage owned changes explicitly;
+  never reset or restore a dirty tree wholesale to make an audit easier.
 - Manage each canonical daemon through its current control procedure and
   verify one process, resolved command/path, code version and progress. A
   stale PID, old command or superficial liveness signal is not a healthy

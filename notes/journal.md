@@ -30129,3 +30129,60 @@ Operations, preservation and closeout:
   routine JSON was ready, then completed after readiness without repeating an
   account probe. Ledger201/125/76/next202 unchanged. Evidence:
   data/periodic_20261015T2200_*.json; logs/periodic_20261015T2200/.
+
+## 2026-10-16 ~00:17 UTC — full check and weekly P&L; no Treasury entry
+
+- Bankroll window 00:17:26.123609–00:17:42.244707 UTC: whole marked $196.69,
+  gas $6.01, PM midpoint/depth $33.46/$32.06, open cost $31.46, residual
+  $18.68. Trading midpoint/depth $190.68/$189.28; whole approximate depth
+  $195.29. Trading marks are flat versus22:00. Residual is rounded
+  accounting/carry, not audited cash profit; VM/API excluded.
+- Weekly interval Oct9 02:03:23.556584–Oct16 00:17:42.244707 UTC, 6.926419 days.
+  Trading midpoint +$10.60 (+5.89% of $180.08), depth +$12.44 (+7.03% of
+  $176.84), before unreconciled VM/API costs. No contribution is documented;
+  capital ledger is not an exhaustive on-chain inflow audit. Oct13 converted
+  98.05 Gemini NO to $12.252260 net pUSD from $12.694290 gross, $0.442030 fee.
+  Opening mark was $2.96 against $16.18 cost. The approximate $9.292260
+  sale/mark bridge is not lot-level realized profit or repeatable forecast
+  skill; the sale relative to its opening mark does not establish calibration.
+  Full analysis is in `notes/pnl_weekly.md`.
+- Retain OpenAI NO19 and complete Clarity29/29; no add or numerical prior change.
+  O current named-source max53.6<55; judgmental .25 central/.15 stress/.38
+  upper unchanged. Stress favors exit19; central/upper hold, not calibrated or
+  signing-time authority. Clarity floor29 exceeds capture-time exit28.56905 and
+  idealized carry28.75863164. Trump-out Gamma criteria and the separate
+  official release feed were reread; operative criteria unchanged and NO prior remains .97. Clarity
+  criteria reread: first full Senate final-passage vote, strict >50/>58; no
+  vote NO on both, voice/unanimous passage YES on both; cloture, amendment,
+  reconsideration and later votes excluded. Review metadata updated only.
+- Treasury alert at00:14:08 triggered exact event79123: early NO on
+  `will-the-10-year-treasury-yield-dip-below-4pt4-before-2027`, late YES on
+  `will-the-10-year-treasury-yield-dip-below-4pt5-before-2027`. Shared strict
+  `<` criteria/source/deadline are structurally nested, though URL filter2025
+  conflicts with described2026 data window and remains a settlement-scope
+  caveat. Five-share dry-run failed the $1 YES minimum; fresh15 signed ceiling
+  $1.006510/share exceeds both conditional payout $1 and requested.98. No
+  order or writer change. This does not prove all raw book walks negative.
+- Gemini final YES denominator1/YES1/NO0. Losing4.034750 NO shares remain at0;
+  no rebook or burn. Polygon block95602971: aUSDC122.092338 (+984 units),
+  APY3.135704%; pUSD/CTF unchanged. Hormuz point gas0.004734876 exceeds
+  payout0.003571; no resimulation. No position or asset action.
+- Sources: 17 requests, 14 HTTP200 and three OpenAI403 gaps; 65 raw HLE objects
+  unchanged versus22:00, API age3520s is cache only. New opportunity-tail row
+  was the Treasury alert; no new held-source RSS/news. Discovery10 types/42
+  hashes, 3,032 selected, two literal reviews/3,030 unreviewed; partial scans.
+  Routine19 once, 18 rc0 and audit initial rc1 then final rc0; 38 timed hashed
+  streams. Reporter TypeError occurred post-manifest; receipts were preserved,
+  no probes rerun. Final audit CLEAN4+1. Redeem-all0/4 winners, one skipped,
+  no broadcast. Four daemons; heartbeat age40min normal for hourly cadence,
+  no restart; disk740.1211MiB. Decision ledger201/125/76/next202 unchanged.
+- Telegram weekly/revalidation message1150 sent once by root. No more notices,
+  extra timer or goal. Next full check02:00UTC; weeklyOct23, monthlyNov12.
+  Manual route/issuer-rotation blockers remain.
+
+Evidence: `data/checkin_20261016T0014_weekly_facts.json`,
+`data/checkin_20261016T0014_root_judgment.json`,
+`data/checkin_20261016T0014_risk.json`,
+`data/checkin_20261016T0014_sources.json`,
+`data/checkin_20261016T0014_discovery.json`,
+`logs/checkin_20261016T0014/`.

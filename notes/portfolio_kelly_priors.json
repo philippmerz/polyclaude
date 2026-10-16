@@ -161,9 +161,9 @@
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
-  "verified": "2026-10-08",
-  "criteria_read": "2026-10-08",
-  "current_assessment": "Oct-8 live criteria/source reread: exact description SHA-256 7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9 matches the Sep-30 source on every operative clause. Permanent cessation or a pre-cutoff resignation/removal announcement qualifies; temporary Section 3, unsustained Section 4 and impeachment without removal are excluded, while sustained Section 4 qualifies. Consensus credible reporting remains the resolution source; the any-period/permanent-removal textual tension is unchanged and remains interpretation risk. The captured White House releases feed includes Oct-7 President Trump activity with no qualifying cessation announcement in that feed; this is a limited-source observation, not proof of universal absence or a calibrated probability. Retain judgmental p_no=0.97; HOLD / NO ADD / NO FLIP for the remaining0.33 NO shares. Authenticated orders are empty; the historical zero-fill28-share maker order is no longer current. Historical Congress/medical claims were not newly reverified and are not promoted as current evidence.",
+  "verified": "2026-10-16",
+  "criteria_read": "2026-10-16",
+  "current_assessment": "Oct-16 first-hand criteria/source reread: exact Gamma description SHA-256 7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9 matches Oct-8 on every operative clause. Permanent cessation or an announcement before Dec31 11:59PM ET qualifies even if effective later; temporary Section3, unsustained Section4 and impeachment without removal are excluded; sustained Section4 qualifies. Consensus credible reporting remains the source, with unchanged any-period/permanent-removal textual tension. Current captured WhiteHouse releases feed has Oct15 publications and Oct14 President Trump activity; no qualifying cessation announcement among captured entries. Feed-limited evidence, not universal absence, fresh medical/Congress verification or calibrated probability. Keep judgmental p_no=.97, remaining.33NO HOLD/NO ADD; numerical risk and group settings unchanged.",
   "key_facts": [
    {
     "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
@@ -266,6 +266,18 @@
     "source": "https://www.whitehouse.gov/releases/",
     "source_date": "2026-10-07",
     "checked": "2026-10-08"
+   },
+   {
+    "claim": "SOURCE-DIFF Oct16: live Gamma description matches Oct8 SHA 7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9; all operative clauses, deadline, immediate announcement rule, exclusions, sustainedSection4 and consensus-reporting source unchanged. Retrieved snapshot is not a new criteria publication.",
+    "source": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027",
+    "checked": "2026-10-16",
+    "publication_date_unknown": true
+   },
+   {
+    "claim": "Captured WhiteHouse releases index carries Oct15 publications and Oct14 President Trump visits activity. No qualifying cessation announcement in those captured entries; not universal absence or new medical/Congress confirmation.",
+    "source": "https://www.whitehouse.gov/releases/",
+    "source_date": "2026-10-14",
+    "checked": "2026-10-16"
    }
   ]
  },
@@ -1174,7 +1186,7 @@
  "will-over-50-senators-vote-for-the-clarity-act-20260729193533307": {
   "p_yes": 0.5,
   "verified": "2026-10-08",
-  "criteria_read": "2026-10-08",
+  "criteria_read": "2026-10-16",
   "cluster": "clarity-act-senate-threshold-monotonicity",
   "rho_within": 1.0,
   "cluster_frac": 0.1463,
@@ -1186,7 +1198,7 @@
  "will-over-58-senators-vote-for-the-clarity-act-20260729193533309": {
   "p_no": 0.5,
   "verified": "2026-10-08",
-  "criteria_read": "2026-10-08",
+  "criteria_read": "2026-10-16",
   "cluster": "clarity-act-senate-threshold-monotonicity",
   "rho_within": 1.0,
   "cluster_frac": 0.1463,
