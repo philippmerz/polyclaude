@@ -1,88 +1,68 @@
 ---
-reviewed_at: "2026-10-17T17:22:55Z"
-valid_until: "2026-10-17T18:00:00Z"
+reviewed_at: "2026-10-17T18:12:24Z"
+valid_until: "2026-10-17T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 41908e0d9f1b3e30b8f9a33533a60536a70c222afcbc135ee8bd72e3c52da673
+  README.md: 61dee5fc01b57567b269a9c1b58c155533d672dbad5ed0fd45fa227d43800fc1
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: c031b04a7476fe916ea8e155fd797611848c890cab5ec1bc4507db1752ce8cf6
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 8a5b43f42faa5cace24ddf53b2e0553c835294b4c1775fc851e9cc6c175583cc
-  notes/backlog.md: f940722385cfd3698d34e11c44ec58b3420321d0f9c2349cfcbdd50cad548420
+  notes/backlog.md: c147b29876781c38b09084c185eb1f3ab26abc25dd8a4a37f28da0f3eeb30ba8
 ---
 
-# Current context — Oct 17 primary diagnostic and verified 14:00 trim
+# Current context — Oct 17 diagnostic and 18:00 check
 
-The finite primary-market diagnostic is complete: 3,000 first-pass screens,
-73 full literal/PDF reviews and 17 family investigations covering 42 rows at
-unequal depth. Of 255 source flags, 38 have family follow-up and 217 do not.
-Most rows remain unpriced; this is not 3,000 complete underwrites or proof that
-opportunities are absent. All broad screening was by the primary model in this
-chat. Two required new-strategy reviewers were used only for the lake follow-up.
+The finite primary-market diagnostic screened 3,000 distinct conditions. It
+included 73 full literal/shared-rule/PDF reviews and 17 family investigations
+at unequal depth. Of 255 source flags, only 38 had family follow-up; 217 remain
+without it, and 2,716 rows remain unpriced. This is not 3,000 fully underwritten
+rejections or evidence that opportunities are absent. See the [ledger](../research/2026-10-17-primary-market-review.csv), [audit](../research/2026-10-17-primary-market-review.json), and [checkpoint](market_review_checkpoint.json). Resume from the tracked checkpoint; append each completed batch/case before starting the next and refresh its hashes. The routing fix passed 47 focused checks; 971 frozen labels changed, not a gold-set accuracy or ROI result. No new opportunity research ran in the light check.
 
-Resume research from [the tracked checkpoint](market_review_checkpoint.json).
-The incremental screening ledger is
-`data/primary_review_20261017T1616/primary_reviews.jsonl` (3,000 records across
-17 batches); `progress.json` in that directory tracks completed batches.
-`followup_results.jsonl` now consolidates 17 existing cases, explicitly labeled
-as retrospective backfill. Append each new completed batch/case before the next;
-refresh the checkpoint. The frozen CSV/audit/rules provide tracked fallbacks.
-This tracking update adds no research, portfolio refresh or asset action.
+## Portfolio at 18:04 UTC
 
-Category routing is fixed: question-first token boundaries remove ETH/whether,
-generic dollar and primary-source boilerplate matches. All 47 focused checks
-passed. The original frozen sample changes 971 labels, without a gold-set accuracy
-or ROI claim. Routine selection had greatly exceeded documented full-review depth;
-the diagnostic does not isolate cheaper-model ability. No new entry, order,
-transfer, prior or financial-record change. Lake uncertainty failed underwriting;
-the Hormuz conditional floor does not establish a gated executable entry.
+Bankroll window 18:04:08.931921–18:04:24.094923 UTC: total $196.46, gas
+$5.82, trading midpoint/depth $190.64/$188.67, PM midpoint/depth $30.98/$29.01,
+approximate whole depth $194.49, open cost $29.86, residual $19.53. These are
+rounded sequential marks, not synchronized NAV or audited cash profit; VM/API
+costs are excluded. Since 14:00, trading midpoint/depth rose $0.23/$0.52 and
+residual $0.01.
 
-See the [ledger](../research/2026-10-17-primary-market-review.csv),
-[audit and case findings](../research/2026-10-17-primary-market-review.json), and
-[frozen rules](../research/2026-10-17-primary-market-review-rules.jsonl.gz).
-Closing status at 17:15 had no watch hits or UMA alerts; a 17:17 configured fetch
-found all 65 full HLE objects equal to 14:00. Public last-80 tails had no post-14:00
-rows. Disk was 367.49 MiB at 17:21, below warning and above critical; capacity is
-unresolved. Existing cadence handles the next 18:00 light check; no new loop.
+Retain OpenAI NO 9 and Clarity 29/29; no trade or prior change. OpenAI priors
+remain .25/.15/.38. Receipt-time O book .25/.28 accepted by GET at 51.76s;
+fee-net full exit $2.1825. Without carry, central/upper hold and stress exits all 9. Idealized free
+Aave carry selects a 5-share central trim by only 0.00000749 conditional
+log-growth; actual funding/deployment costs and joint-risk calibration are
+unproven, so retain all 9. This is not a global optimum. Clarity paired net exit $26.83184 and idealized free-carry exit
+$27.001514 remain below the conditional $29 floor; keep both legs, no add.
 
-Latest whole-account snapshot remains dated 14:17. Bankroll window: 2026-10-17T14:17:33.394116–14:17:49.150538 UTC.
-Total $196.27; gas $5.86; trading midpoint/depth $190.41/$188.15; PM midpoint/depth
-$30.75/$28.49; open cost $29.86; residual $19.52; approximate whole-account depth
-$194.01. These are rounded sequential marks; VM/API excluded, not synchronized NAV.
-Since 10:00, trading midpoint/depth +$0.07/+$0.21 and residual +$0.82. The 9-share
-OpenAI NO position remains after a verified FOK sale of 10 at $0.25: net $2.425
-after $0.075 fee, with no open order. Estimated gain is about $0.825 on $1.60 basis.
-Transaction was included at block 95694171; balances were verified at block 95694198. pUSD $24.996890; other known CTF
-balances unchanged.
+At block 95703276, pUSD was $24.996890, aUSDC $122.110518, and live Aave
+3.05530437%. Gemini 50 is final YES; 4.034750 losing NO shares remain held at
+zero payout/value, no rebook/burn. Retain
+the $0.003571 Hormuz claim: estimated point gas $0.00447662265 exceeds payout
+using the dated 175,036-unit simulation and rounded FX; no new simulation or
+broadcast.
 
-OpenAI priors remain 25% central/15% stress/38% upper. Conditional expected-log
-growth showed a tiny central trim advantage (+0.0003010064023148667 at W=$186.24),
-assuming distinct AI/Senate drivers; a one-point probability change or adverse
-correlation reverses it. Stress favored full exit, upper holding. This is not a
-calibrated joint risk model or a global optimum. Clarity 29/29 remains; full-pair
-exit/carry is unknown because C58 GET/POST were 406.837/407.099s old. The C50-only
-net quote ($0.83624 at 64.383s) does not price a pair. No add; keep the conditional
-$29 floor.
+## Bounded operations and sources
 
-The source check captured 17 requests once. All 65 full HLE objects match 10:00;
-the mounted bundle defaults to original HLE Accuracy, with Diamond separate. Argon
-is 55.6/56.9; OpenAI max is 53.6, below 55. Three direct OpenAI pages returned
-403 and remain coverage gaps. Five held Gamma criteria/state, Senate 256, article
-cores and AA 57/44 are unchanged. Sampled RSS/public tails had no timestamped rows
-after 10:02; API Age is cache metadata. Gemini’s final YES-market NO shares remain
-zero-payout. The $0.003571 Hormuz claim stays held; point gas estimate $0.004605
-uses captured gas/rounded FX and the dated simulation. No new simulation/broadcast.
+Routine 19 ran once with all rc 0; all 38 timed stream hashes verify. Protected
+8-file baseline matched and remained unchanged. Four daemons are current; at
+18:05 news age was 32s and heartbeat 1,613s within 3,600s cadence. Disk free
+341.88 MiB is below the 512 MiB warning and above the 128 MiB critical
+threshold; no cleanup/restart. Seventy-seven decisions are pending, none
+overdue.
 
-Discovery is dated Oct 17 at 14:00 and incomplete: 2,691 unique selected, 2,687
-without exact-literal review; 20/214 consistency groups requested, 7 live quotes
-validated, 13 failed and 194 unrequested. Two factual leads remain unvalidated:
-Rays–Guardians start times differ by eight minutes between Gamma and MLB;
-Saints–Giants lacks a timestamped consensus quote. No probability or entry
-inference. Routine 19/all rc 0, with 38 streams verified and four daemons current.
-Health at 14:02 showed heartbeat 1,447s/3,600s, news age 105s, disk 484.07 MiB
-below 512 MiB warning and above 128 MiB critical. The latest bounded cleanup census
-was 10:00 and found no safe candidate. Post-trade audit CLEAN after size-snapshot
-refresh; 77 decisions pending, none overdue. Weekly Oct 23/monthly Nov 12; next
-light 18:00. Manual issuer-account credential rotation remains blocked. The 14:00
-full check sent Telegram update 1155.
+The 17-request source pass returned 14 HTTP 200 and three direct OpenAI 403
+coverage gaps. All 65 full HLE objects match 14:00; the mounted page defaults
+to original HLE Accuracy, with Diamond separate. Argon is 55.6/56.9; OpenAI
+max is 53.6<55. Sampled held criteria, Senate 256, article cores and AA 57/44
+were stable; existing official pages added no new threshold evidence, and the
+OpenAI news-browser source remains a coverage gap. No new
+sampled RSS/public-tail rows appeared;
+this is bounded coverage, not universal absence. Two capture wrappers failed
+before probing; the third and first actual health sample succeeded. Weekly
+review Oct 23, monthly Nov 12, next light check 22:00. Manual issuer-account
+credential rotation remains blocked.
+
+Evidence: [18:00 risk](../data/periodic_20261017T1800_risk.json), [sources](../data/periodic_20261017T1800_sources.json), [routine](../data/periodic_20261017T1800_routine.json), [journal](journal.md), and [source report](../logs/periodic_20261017T1800/sources/report.md). Last discovery remains the capped 14:00 scan: 2,691 unique selected, 2,687 without documented exact-criteria review; the three-thousand-row diagnostic above is a separate dated sample.

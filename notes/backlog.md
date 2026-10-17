@@ -1,3 +1,9 @@
+## 2026-10-17 18:00 UTC — light check complete
+
+- Routine and root risk reviews are complete; no order, asset, prior or decision change. Retain OpenAI NO 9 and Clarity 29/29. Weekly P&L is next due Oct 23; monthly review Nov 12; next light check 22:00 UTC. Manual issuer-account credential rotation remains operator-only.
+- Disk free is 341.88 MiB, below the 512 MiB warning and above the 128 MiB critical threshold. No cleanup or restart was performed; capacity remains unresolved.
+- Current market source coverage remains bounded. Three direct OpenAI pages returned 403; sampled tails with no new rows do not establish market-wide absence. See `data/periodic_20261017T1800_risk.json` and `data/periodic_20261017T1800_sources.json`.
+
 ## 2026-10-17 ~17:22 UTC — primary diagnostic completed; review-depth gap measured
 
 - Completed 3,000 primary-model first-pass screens, 73 full literal/PDF reviews and 17 family investigations covering 42 rows at unequal depth. Of 255 source flags, 38 have family follow-up and 217 remain without it; 2,716 preliminary rows are unpriced. This is not 3,000 fully underwritten rejections. See the [ledger](../research/2026-10-17-primary-market-review.csv), [case audit](../research/2026-10-17-primary-market-review.json) and [frozen public rules](../research/2026-10-17-primary-market-review-rules.jsonl.gz).
