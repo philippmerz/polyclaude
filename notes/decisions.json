@@ -1,5 +1,5 @@
 {
-  "next_id": 202,
+  "next_id": 203,
   "decisions": [
     {
       "id": 1,
@@ -4278,6 +4278,26 @@
         "no-entry"
       ],
       "slug": "will-ethereum-dip-to-2300-october-12-18-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 202,
+      "timestamp": "2026-10-17T14:17:47Z",
+      "type": "size_change",
+      "thesis": "Reduced existing OpenAI HLE >=55 NO from 19 to 9 shares via one FOK SELL of 10 at 0.25; gross 2.50, fee 0.075, verified net 2.425 pUSD. At unchanged pNO 0.25, selling 10 improves conditional expected log growth by about 0.00030 using other terminal wealth of 186.24. Distinct AI-score and Senate-vote drivers support the stated conditional assumption; unknown joint weights and a one percentage point probability revision can reverse the result. This is a sizing decision with substantial model uncertainty. The C58 exit book was stale, so no complete Clarity liquidation comparison or action was made. Fresh named-source data, exact criteria, fees, venue and account gates passed at execution. Retained 9 shares preserve contingent upside.",
+      "confidence": "low",
+      "prediction": "Under the literal 2026 OpenAI HLE >=55 resolution criteria, NO has central probability 0.25 (stress 0.15, upper 0.38), unchanged. Retained 9 NO shares still carry binary loss risk. Evaluate the terminal payout at the stated deadline, with a January 2 review to allow the December 31 ET window to close.",
+      "size_usd": 2.425,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "OpenAI",
+        "HLE",
+        "resize",
+        "log-growth"
+      ],
+      "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

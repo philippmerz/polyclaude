@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 198 recorded observations from Apr-25
+The local performance CSV now has 199 recorded observations from Apr-25
 through Oct-17. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -73,62 +73,46 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-17 ~10:02 UTC
+## Last bankroll snapshot — 2026-10-17 ~14:17 UTC
 
-Bankroll own-component window: 2026-10-17T10:01:45.650781–10:02:01.359375 UTC.
-These are rounded sequential estimates, not cash profit, synchronized NAV or a
-certified liquidation; VM/API costs are excluded.
+Bankroll own-component window: 2026-10-17T14:17:33.394116–14:17:49.150538 UTC.
+These rounded sequential estimates are not synchronized NAV or a certified
+liquidation; VM/API costs are excluded.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $196.25 |
-| Separately funded gas | $5.91 |
-| Trading midpoint / indicative depth | $190.34 / $187.94 |
-| PM midpoint / indicative depth | $33.10 / $30.70 |
-| Whole-account approximate depth | $193.85 |
-| Remaining open-position cost | $31.46 |
-| Settled accounting residual | $18.70 |
+| Total marked bankroll | $196.27 |
+| Separately funded gas | $5.86 |
+| Trading midpoint / indicative depth | $190.41 / $188.15 |
+| PM midpoint / indicative depth | $30.75 / $28.49 |
+| Whole-account approximate depth | $194.01 |
+| Remaining open-position cost | $29.86 |
+| Settled accounting residual | $19.52 |
 
-Since 06:00, trading midpoint/depth changed −$0.10/flat; rounded residual rose
-$0.01. Retain OpenAI NO 19 and Clarity 29/29, with no add or prior change.
-O NO priors remain .25 central/.15 stress/.38 upper; central/upper favor holding
-and stress favors full exit. Receipt-time O POST book .21/.28, net 19-share exit
-$3.86391, all-in ask .288064 at 79.33s; planning only. Current Clarity pair
-exit/carry is unknown: C50Y GET/POST ages 233.20/233.52s failed the 180s guard,
-and C58N-only net exit $25.9956 at 102.22s does not price the pair. Keep 29/29
-under the unchanged conditional $29 floor; do not reuse 02:00 economics or claim
-global optimality.
+Since 10:00, trading midpoint/depth rose $0.07/$0.21 and residual rose $0.82 at
+cent precision. Against the pre-trade 14:00 mark, midpoint/depth fell $0.46/$0.53;
+the displayed OpenAI NO midpoint moved from $0.265 to $0.24 between sequential
+snapshots. On the 10-share sale, $2.425 net proceeds exceeded the recorded $1.60
+basis by about $0.825. The sale proceeds and residual movement are not a forecast
+or a synchronized return measure.
 
-The mounted HLE bundle defaults to original HLE Accuracy and offers a separate
-Diamond selector. All 65 full API objects match 06:00; Argon remains55.6/56.9 and
-OpenAI's maximum is53.6<55. Three direct OpenAI pages returned403 and remain
-coverage gaps. Five held Gamma criteria/state, 256 Senate rows, article cores and
-AA 57/44 are unchanged. RSS and sampled public alert tails had no timestamped
-rows strictly after 06:02; API Age 2778s is cache metadata. Gamma YES snapshots
-moved +0.5pp on C58, −1pp on O, and −0.1pp on Trump; these are not quotes.
+The OpenAI NO position is now 9 shares after a verified FOK sale of 10 at $0.25
+(gross $2.50, fee $0.075, net $2.425 pUSD). The order filled once; no open orders
+remained. The transaction is `0x8119f07f1ab1008f0afd5693553f2f387932a5f13bce897ade650dcd43916b12`, included at Polygon block 95694171; balances verified at block 95694198. The 25%/15%/38% priors were unchanged. The conditional expected-log-growth grid showed a small central trim advantage, about 0.00030, assuming AI results and Senate votes were distinct drivers; a one-point probability shift or adverse correlation reverses it. Stress favored a full exit and the upper case favored holding. This was a partial risk trim, not a source-thesis break or a calibrated joint optimum.
 
-Gamma 3072356 is final YES at Polygon block 95683957; its4.034750 losing NO units
-remain zero, with no rebook or burn. Polygon aUSDC 122.107119 (+1686 raw units),
-live Aave point 2.986757794%; pUSD/CTF unchanged. The .003571 Hormuz winning dust
-claim remains held: current point gas $0.004564816861 exceeds payout, using the
-dated 175036-unit simulation and current gas/rounded FX. No new simulation,
-repeat dry-run, signing or broadcast; no transaction or burn.
+Clarity remains 29/29, with no add. Its full-pair exit/carry is unknown: C58 GET/POST ages of 406.84/407.10 seconds exceeded the 180-second guard; the fresh C50-only net quote of $0.83624 at 64.38 seconds does not price both legs. Keep the conditional $29 floor and require a fresh paired quote before another decision.
 
-All 19 routine commands returned rc 0; all 38 streams timed/hashed, audit CLEAN 4+1. Four daemons
-current; heartbeat 1461.267s within 3600s cadence, news 54.598s. Disk 507.10 MiB is
-below 512 MiB warning and above 128 MiB critical. A bounded census found no safe
-disposable candidate; capacity remains unresolved. Keep the existing hourly
-guard; no deletion, rotation, restart or VM expansion. 76 decisions remain
-pending, none overdue. No discovery, redeem-all or weekly rerun was due or
-performed. The dated 02:00 capped discovery remains partial: 2997 unique
-conditions selected, 2994 without documented literal review. WTI 4936103 still has
-a resolver-source gap; no absence, probability or entry inference. Weekly
-next Oct 23, monthly Nov 12; next full check 14:00 UTC. Manual issuer-account
-credential rotation remains blocked. See the [check journal](notes/journal.md),
-[02:00 discovery audit](data/checkin_20261017T0200_discovery.json),
-[10:00 source report](logs/periodic_20261017T1000/sources/report.md), and
-[capacity census](logs/periodic_20261017T1000/backlog_review.json).
+The mounted HLE page still loads the same bundle/API, defaults to original HLE Accuracy and offers Diamond separately. All 65 raw objects match 10:00; Argon is 55.6 HLE / 56.9 Diamond and OpenAI maximum is 53.6, below 55. Three direct OpenAI pages returned 403 and remain coverage gaps. The five held Gamma criteria/state, 256 Senate rows, article cores and AA 57/44 are unchanged. RSS and each sampled last-80 public alert tail had no timestamped row strictly after 10:02; this is bounded coverage. API Age is cache metadata, not publication time.
+
+The Gemini 50 market is final YES, but its 4.034750 losing NO shares remain at zero payout; no rebook or burn. The 10-share OpenAI sale left pUSD at $24.996890 and the other verified CTF balances unchanged. The $0.003571 Hormuz claim remains held. The $0.004605 gas estimate uses the dated 175,036-unit simulation and captured gas/rounded FX; no new simulation or broadcast.
+
+All 19 routine commands returned zero; 38 streams are timed and hashed. The post-trade position audit is CLEAN after refreshing the recorded snapshot to 9 shares. Four daemons are current; the 14:02 health sample showed heartbeat age 1,447s within its 3,600s cadence, news age 105s, and 484.07 MiB disk space. That is below the 512 MiB warning and above the 128 MiB critical threshold. The prior bounded census found no safe disposable candidate; capacity remains unresolved and the hourly guard stays active. Seventy-seven decisions are pending, none overdue.
+
+The 14:00 discovery was capped and filtered: 2,691 unique selected conditions, with 2,687 lacking a documented exact-criteria review. It identified two factual leads, neither validated for entry: Rays–Guardians has an 8:00 PM ET Gamma start versus MLB's 8:08 PM listing; Saints–Giants lacked a timestamped consensus quote and the scanner returned no consensus. The consistency screen validated 7 of 20 requested groups; 194 eligible groups were not requested. These are coverage limits, not market-wide absence. No probability or entry inference follows.
+
+No new timestamped RSS or public alert-tail rows appeared after 10:02 in the bounded checks. Weekly review is next due Oct 23, monthly Nov 12, and the next light check is 18:00 UTC. Manual issuer-account credential rotation remains blocked. See the [check journal](notes/journal.md), [14:00 source report](logs/checkin_20261017T1400/sources/report.md), [14:00 discovery audit](data/checkin_20261017T1400_discovery.json), [post-trade verification](data/checkin_20261017T1400_posttrade.json), and [post-trade chain census](data/checkin_20261017T1400_posttrade_chain.json).
+
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
 Coinbase B20 AAPLc/MSFTc/NVDAc have small-ticket Slipstream quotes losing about
