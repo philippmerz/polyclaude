@@ -1,0 +1,159 @@
+{
+  "review_index": 39,
+  "condition_id": "0x9f92c824e88085fdcc9de0d37e2b5c76075c0b292b4d8640054038a4808c2c83",
+  "criteria_sha256": "593831b20e30f791dbc6e755d6ea6a466243b64d274e6e3eedd23f36763a43c5",
+  "status": "valued",
+  "literal_analysis": "Full CA04 rule read: party at all-House-call trigger; ballot-listed or identifiable affiliation; caucus fallback only when no major-party ballot label.",
+  "evidence": [
+    {
+      "url": "https://elections.yolocounty.gov/392/Federal",
+      "observed_utc": "2026-10-17T19:23:53.691641+00:00",
+      "finding": "Official November3 general-election top-two list, exact District4: Eric Jones DEM and Mike Thompson DEM. General write-ins expressly barred."
+    },
+    {
+      "url": "https://elections.saccounty.gov/us/en/campaign-services/candidate-report.html",
+      "observed_utc": "2026-10-17T19:23:53.691661+00:00",
+      "finding": "Independent official November3 roster, contest1387 District4, OnBallotYes, qualified MikeThompson and EricJones both Democratic."
+    },
+    {
+      "url": "https://www.sos.ca.gov/elections/primary-elections-california",
+      "observed_utc": "2026-10-17T19:23:53.691665+00:00",
+      "finding": "US congressional voter-nominated offices only top2; no independent or general write-in route. Party preference replaces affiliation terminology on ballots."
+    },
+    {
+      "url": "https://www.leginfo.ca.gov/pub/11-12/bill/asm/ab_1401-1450/ab_1413_bill_20120210_chaptered.html",
+      "observed_utc": "2026-10-17T19:23:53.691668+00:00",
+      "finding": "Chaptered amendment to8803: voter-nominated general vacancy not filled; deceased candidate stays onballot. Current code page access failed; not a full current legal opinion."
+    },
+    {
+      "url": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines",
+      "observed_utc": "2026-10-17T19:23:53.691669+00:00",
+      "finding": "Dec3 county certification and Dec11 StatementOfVote; not a promise of platform settlement date."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.995,
+    "low": 0.97,
+    "high": 0.9999,
+    "method": "Primary exhaustive-winner-set conditional proof with explicit residual contract tails",
+    "reasoning": "Two official exhaustive general rosters show only two Democratic labels; primary assigns.005 residual failure and documents.05 absolute entry reserve rather than unsupported K5.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:18.217+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.995,
+        "best_bid": 0.929,
+        "best_ask": 0.952,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.959,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.952,
+            "fee_usd": 0.018278400000000014
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.53828,
+        "fee_usd": 0.01828,
+        "break_even_probability_before_carry": 0.953828,
+        "break_even_probability_with_idealized_carry": 0.9581633876221856,
+        "central_expected_profit_usd": 0.411719999999999,
+        "default_10pp_stressed_profit_usd": -0.588280000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.895,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.263610000000002
+      },
+      "No": {
+        "probability": 0.0050000000000000044,
+        "best_bid": 0.048,
+        "best_ask": 0.071,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.959,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.071,
+            "fee_usd": 0.0263836
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.73639,
+        "fee_usd": 0.02639,
+        "break_even_probability_before_carry": 0.073639,
+        "break_even_probability_with_idealized_carry": 0.07397370773463363,
+        "central_expected_profit_usd": -0.68639,
+        "default_10pp_stressed_profit_usd": -0.73639,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.46171999999999996
+      }
+    }
+  },
+  "verdict": "Priority makerYES candidate~.930/10shares with documented5ppcase reserve; no order",
+  "reopen_condition": "Revalidate exact general rosters/affiliation and all live gates; invalidate on changed label/roster, source/adjudication issue or maker>=.940 after costs.",
+  "current_description_sha256": "83263075c131c6c47163e871cef6f0778e5e703560cc98c663d6fa72af9923f4",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "59612977470838074948464909700315170288027949156204275533786314290756636373275",
+    "85649439435283540963353259789574808391974184654598286999535025413851619071577"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0060",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0060.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0060.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0062",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/election_district_sources_correction_addendum.json"
+    ],
+    "independent_reviews": [
+      "ca04_skeptic.md",
+      "ca04_champion.md"
+    ],
+    "case_specific_edge_haircut": 0.05,
+    "haircut_is_not_measured_tail_exception": true,
+    "priority_followup": true
+  },
+  "evaluated_utc": "2026-10-17T19:23:53.993253+00:00",
+  "question": "Will the Democratic Party win the CA-04 House seat?",
+  "market_id": "1280957",
+  "valuation_author": "primary_operator",
+  "original_index": 39,
+  "report_sha256": "cc943b85ea7d3fbf311f8a86e60adc686f9b48ae87117b8f11198befbf1ae469"
+}

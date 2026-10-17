@@ -1,0 +1,155 @@
+{
+  "review_index": 36,
+  "condition_id": "0x0ce1ed3918472ef12ae8f3576357b34b31e3bdd6e5b3d0b86344172b2aec1425",
+  "criteria_sha256": "64f200f2a1541f765b72cc3f3ad6465b4809d2ca04cf99249d1213f2239cccd9",
+  "status": "valued",
+  "literal_analysis": "FullBinance1mHigh/Lowinclusiveever-touch versus strictspecificClose,ET/DSTwindowbound individually; prior-triggercoverageaudited.",
+  "evidence": [
+    {
+      "url": "https://api.binance.com/api/v3/klines",
+      "observed_utc": "2026-10-17T19:29:57.773392+00:00",
+      "finding": "Officialpublic1m/1d/1hOHLCreceipts, exactsymbol/time/fields andcompleteclosed-candlechecks in sourcepack."
+    },
+    {
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints",
+      "observed_utc": "2026-10-17T19:29:57.773432+00:00",
+      "finding": "OfficialOHLCschema; directfetch202gap preserved, officialdocswebaccessused in sources."
+    },
+    {
+      "url": "https://api.binance.com/api/v3/ticker/price",
+      "observed_utc": "2026-10-17T19:29:57.773435+00:00",
+      "finding": "Officialpointspot19:06:41–43UTC; not a historicfirst-touchproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.05,
+    "low": 0.005,
+    "high": 0.33,
+    "method": "Primary first-passage/terminal diffusion plus measuredsame-clock weekend regime sensitivity",
+    "reasoning": "Exactformula/model and primary blend weights in trackedmethod; uncertainty ranges span regimes,notcalibratedposteriors.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:18.217+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 1.37036,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.05,
+        "best_bid": 0.033,
+        "best_ask": 0.034,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.843,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.034,
+            "fee_usd": 0.022990800000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.36300000000000004,
+        "fee_usd": 0.023,
+        "break_even_probability_before_carry": 0.036300000000000006,
+        "break_even_probability_with_idealized_carry": 0.036304101813276424,
+        "central_expected_profit_usd": 0.13699999999999996,
+        "default_10pp_stressed_profit_usd": -0.36300000000000004,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.30066000000000004
+      },
+      "No": {
+        "probability": 0.95,
+        "best_bid": 0.966,
+        "best_ask": 0.967,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.843,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 2.51,
+            "price": 0.967,
+            "fee_usd": 0.0056067627000000045
+          },
+          {
+            "shares": 7.49,
+            "price": 0.968,
+            "fee_usd": 0.016240716800000016
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 9.699340000000001,
+        "fee_usd": 0.02185,
+        "break_even_probability_before_carry": 0.9699340000000001,
+        "break_even_probability_with_idealized_carry": 0.9700436002247509,
+        "central_expected_profit_usd": -0.19934000000000118,
+        "default_10pp_stressed_profit_usd": -1.1993400000000012,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.85,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.637
+      }
+    }
+  },
+  "verdict": "YES small central value, unsupported tail after uncertainty/minimum size; no entry",
+  "reopen_condition": "FreshBinancespot/exacteligiblecandles/regimeandmacro/tokennews; entryneedsactualsizedepth,funding,caps,identity,UMAandvettedwriter.",
+  "current_description_sha256": "d212a9a2a8879586beb246b19affdbb4eae8a5eb6c2df3312833cdc472cb4010",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "59849188672949694844760792601424295067912188460565501774787009534906119907491",
+    "75839561601475439266952149656859314041674189928822684396059197157736401358265"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0057",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0057.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0057.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0062",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/crypto_price_sources.json"
+    ],
+    "tracked_models": [
+      "models/crypto_diffusion.py",
+      "models/crypto_diffusion_results.json",
+      "models/crypto_weekend.py",
+      "models/crypto_weekend_results.json",
+      "models/crypto_primary_method.md"
+    ],
+    "position_change": "none"
+  },
+  "evaluated_utc": "2026-10-17T19:29:58.226373+00:00",
+  "question": "Will Ethereum reach $2,600 October 12-18?",
+  "market_id": "5593545",
+  "valuation_author": "primary_operator",
+  "original_index": 36,
+  "report_sha256": "a290f41110592d71c466f0cba36f2111b30fd79a802e7e05ca559b2db5a36f8f"
+}

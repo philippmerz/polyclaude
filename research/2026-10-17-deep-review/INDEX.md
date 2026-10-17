@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-17T19:22:09.611675+00:00
+Updated: 2026-10-17T19:34:52.374351+00:00
 
-**26/100 first-milestone valuations saved:** 26 valued; 0 blocked after in-depth review. 15 factual exclusions separately; 2959 pending.
+**53/100 first-milestone valuations saved:** 53 valued; 0 blocked after in-depth review. 15 factual exclusions separately; 2932 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -20,6 +20,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |9|[Will "Doing Life" be the #2 US Netflix movie this week?](evaluations/0009.md)|valued|Maker planning candidate: YES20c/10shares subject to fresh full gates; no order yet|
 |11|[Will the Fed increase interest rates by 25 bps after the October 2026 meeting?](evaluations/0011.md)|valued|No entry: YES has positive central EV but fails ordinary10pp stress; NO negative central EV.|
 |13|[Will Liverpool FC win on 2026-10-17?](evaluations/0013.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|14|[Will Anthropic have the best AI model at the end of December 2026?](evaluations/0014.md)|valued|NO central and default10pp edge; frontier-release uncertainty/December doctrine require follow-up, no order|
 |16|[Will "Animals" be the top US Netflix movie this week?](evaluations/0016.md)|valued|NO positive central tail arithmetic, unsupported floor; YES negative EV, no entry|
 |18|[Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?](evaluations/0018.md)|valued|YES central tail value; no supported probability floor at offered cost|
 |20|[Manchester City FC vs. Ipswich Town FC: O/U 3.5](evaluations/0020.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
@@ -31,23 +32,49 @@ Each report below is written before moving to the next evaluation. Related contr
 |29|[Ethereum Up or Down on October 17?](evaluations/0029.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |33|[Will Alphabet be the largest company in the world by market cap on October 31, 2026?](evaluations/0033.md)|valued|YES central earnings-tail lead; lower-bound/model support incomplete, no entry|
 |34|[Will Fulham FC win on 2026-10-17?](evaluations/0034.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|36|[Will Ethereum reach $2,600 October 12-18?](evaluations/0036.md)|valued|YES small central value, unsupported tail after uncertainty/minimum size; no entry|
 |37|[Will "Sacrifice" be the #2 US Netflix movie this week?](evaluations/0037.md)|valued|YES small central upside, uncertainty/minimum-size failure; no entry|
 |38|[Will Elon Musk post 140-164 tweets from October 15 to October 17, 2026?](evaluations/0038.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|39|[Will the Democratic Party win the CA-04 House seat?](evaluations/0039.md)|valued|Priority makerYES candidate~.930/10shares with documented5ppcase reserve; no order|
+|42|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 45% or higher?](evaluations/0042.md)|valued|YES positive central EV but fails10ppstress; no entry|
+|43|[Will Bitcoin dip to $78,000 October 12-18?](evaluations/0043.md)|valued|YES central value, uncertainty floor fails; no entry|
 |44|[Will "Sacrifice" be the top US Netflix movie this week?](evaluations/0044.md)|valued|Both asks negative central EV; no supported tail bid|
 |49|[Will Apple be the third-largest company in the world by market cap on October 31?](evaluations/0049.md)|valued|YES central rank-change lead; event-tail calibration needed, no entry|
+|50|[Will Bitcoin reach $100,000 by December 31, 2026?](evaluations/0050.md)|valued|YES positive central forecast, fails10ppstress/carry; no entry|
 |51|[Will "Doing Life" be the #2 global Netflix movie this week?](evaluations/0051.md)|valued|Priority maker-NO planning lead at.021/50shares; fresh gates required, no order|
 |53|[Bank of Japan increases interest rates by 50+ bps after the October 2026 meeting?](evaluations/0053.md)|valued|YES positive central tail arithmetic; unsupported floor and minimum size, no entry|
 |65|[Will "Animals" be the #2 US Netflix movie this week?](evaluations/0065.md)|valued|Both asks negative central EV; no entry|
+|70|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 50% or higher?](evaluations/0070.md)|valued|NO central/default-stress lead; metric/release and December uncertainty follow-up, no order|
+|71|[Will the price of Bitcoin be above $80,000 on October 18?](evaluations/0071.md)|valued|NO positive central value afterweekend correction, tail uncertainty preventsentry|
 |72|[Will "Transformers One" be the top US Netflix movie this week?](evaluations/0072.md)|valued|Both asks negative central EV; no entry|
 |76|[Will SV 07 Elversberg win on 2026-10-17?](evaluations/0076.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |79|[Will "Ice Age: Collision Course" be the #2 global Netflix movie this week?](evaluations/0079.md)|valued|YES central value, proxy/model error consumes robust edge; no entry|
 |85|[Will the highest temperature in Beijing be 15°C on October 17?](evaluations/0085.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |88|[Another Fed rate hike in 2026?](evaluations/0088.md)|valued|YES small central edge consumed by uncertainty/carry; no entry|
 |93|[Will "Norm: The Tale of Norm Macdonald" be the #2 US Netflix movie this week?](evaluations/0093.md)|valued|Both asks negative central EV; no supported maker entry|
+|99|[Will Bitcoin reach $95,000 in October?](evaluations/0099.md)|valued|YES central model value, no supported robustfloor; no entry|
 |100|[Will "Doing Life" be the top US Netflix movie this week?](evaluations/0100.md)|valued|Both asks negative central EV; no entry|
 |104|[Fulham FC vs. Hull City AFC: O/U 2.5](evaluations/0104.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |105|[Will "Instadocs: AI Gone Wild" be the #2 US Netflix show this week?](evaluations/0105.md)|valued|YES central model lead; unresolved category/rank mapping and error floor, no entry|
 |107|[Will "Animals" be the #2 global Netflix movie this week?](evaluations/0107.md)|valued|YES ask negative central EV, NO has no offer; no entry|
+|110|[Will XRP reach $2.60 by December 31, 2026?](evaluations/0110.md)|valued|Both asks negative central EV; no supported maker tailentry|
 |111|[Will Villarreal CF win on 2026-10-17?](evaluations/0111.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |118|[Will Paris Saint-Germain FC win on 2026-10-17?](evaluations/0118.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |120|[Will the price of Bitcoin be between $78,000 and $80,000 on October 17?](evaluations/0120.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|121|[Will "The Widower: 'Til Death Do Us Part" be the #2 US Netflix movie this week?](evaluations/0121.md)|valued|YES central lead, uncertainty/minimum-size failure individually; possible joint-union research|
+|126|[Will "Instadocs: AI Gone Wild" be the #2 global Netflix show this week?](evaluations/0126.md)|valued|YES low-price research lead; metric/category/probabilityfloor unresolved, no entry|
+|128|[Will "The Widower: 'Til Death Do Us Part" be the top US Netflix movie this week?](evaluations/0128.md)|valued|Both offered sides negative central EV; no entry|
+|135|[Will "Ice Age" be the #2 global Netflix movie this week?](evaluations/0135.md)|valued|YES ask negative central EV, NO offer unavailable; no entry|
+|148|[Will Anthropic have the best AI model at the end of October 2026?](evaluations/0148.md)|valued|NO central edge fails stressed all-in route; no entry|
+|149|[Will "Ice Age" be the #2 US Netflix movie this week?](evaluations/0149.md)|valued|YES central value, no supported individual robust floor; no entry|
+|156|[Will "Ice Age" be the top US Netflix movie this week?](evaluations/0156.md)|valued|Both asks negative central EV; no entry|
+|161|[Will Google have the best AI model at the end of December 2026?](evaluations/0161.md)|valued|YES central/default-stress lead; correlated AI/December uncertainty review needed, no order|
+|163|[Will "Transformers One" be the #2 global Netflix movie this week?](evaluations/0163.md)|valued|Both asks negative central EV; availability/model uncertainty remains, no entry|
+|177|[Will "Ice Age: Collision Course" be the #2 US Netflix movie this week?](evaluations/0177.md)|valued|YES central lead, failsindividualstress; possible joint-unionresearch|
+|184|[Will "Norm: The Tale of Norm Macdonald" be the top US Netflix movie this week?](evaluations/0184.md)|valued|Both asks nonpositive central EV; no entry|
+|189|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 50% or higher?](evaluations/0189.md)|valued|NO small central edge consumed by uncertainty; no entry|
+|191|[Will "Norm: The Tale of Norm Macdonald" be the #2 global Netflix movie this week?](evaluations/0191.md)|valued|YES negative central EV; NO nominal edge vanishes tocost/uncertainty; no entry|
+|205|[Will "Transformers One" be the #2 US Netflix movie this week?](evaluations/0205.md)|valued|Both asks negative central EV; no entry|
+|212|[Will "Ice Age: Dawn of the Dinosaurs" be the #2 global Netflix movie this week?](evaluations/0212.md)|valued|YES negative central EV, NO offereddepth absent; no entry|
+|217|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 45% or higher?](evaluations/0217.md)|valued|Priority makerNO research lead; release/protocol uncertainty and current gates outstanding|
+|226|[Will "Ice Age: Dawn of the Dinosaurs" be the #2 US Netflix movie this week?](evaluations/0226.md)|valued|Tiny YES central edge, unsupported floor/minimum-size exposure; no entry|

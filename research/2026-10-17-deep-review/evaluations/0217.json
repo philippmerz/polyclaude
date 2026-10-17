@@ -1,0 +1,153 @@
+{
+  "review_index": 217,
+  "condition_id": "0xd764d495ca5c66b64226ad960cb9e692952eefff00907c90ff1370a178f9ba5a",
+  "criteria_sha256": "26bc1261b16a6639a92d2997b8f3c64f66b7a55dea15df8902a4622279fc4eb2",
+  "status": "valued",
+  "literal_analysis": "Complete exact Arena snapshot or HLEever-by criteria read, thresholds/tie/source fallback bound individually.",
+  "evidence": [
+    {
+      "url": "https://arena.ai/blog/arena-leaderboard-dataset",
+      "observed_utc": "2026-10-17T19:27:53.935180+00:00",
+      "finding": "Official dataset provenance; text latest snapshotOct15 uses no-style control; precise20rows captured."
+    },
+    {
+      "url": "https://agi.safe.ai/",
+      "observed_utc": "2026-10-17T19:27:53.935226+00:00",
+      "finding": "Official HLE dashboard frontend binds HLEAccuracy toscores.hle; 18:04:46 snapshot65objects, cacheage2946s. Tool regime unspecified."
+    },
+    {
+      "url": "https://x.ai/news/grok-4-7",
+      "observed_utc": "2026-10-17T19:27:53.935230+00:00",
+      "finding": "OfficialSep21 release, not an official current HLE45/50 score."
+    },
+    {
+      "url": "https://forum.moonshot.ai/t/kimi-k3-is-here-our-most-capable-model/480",
+      "observed_utc": "2026-10-17T19:27:53.935233+00:00",
+      "finding": "OfficialJul22 announcement; registryJul16 distinct. No HLE score stated there."
+    },
+    {
+      "url": "https://www.anthropic.com/news",
+      "observed_utc": "2026-10-17T19:27:53.935236+00:00",
+      "finding": "Opus5.5Sep22,Sonnet5.5Sep28,Haiku5.5Oct7; no futurefirm date verified."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.64,
+    "low": 0.35,
+    "high": 0.88,
+    "method": "Primary release/score scenario model",
+    "reasoning": "See shared primary model for explicit branch weights; uncalibrated sparse-cadence uncertainty and both sides assessed.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:53.680+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.64,
+        "best_bid": 0.767,
+        "best_ask": 0.839,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 36.524,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.839,
+            "fee_usd": 0.05403160000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.444040000000001,
+        "fee_usd": 0.05404,
+        "break_even_probability_before_carry": 0.8444040000000002,
+        "break_even_probability_with_idealized_carry": 0.8496419956526184,
+        "central_expected_profit_usd": -2.0440400000000007,
+        "default_10pp_stressed_profit_usd": -3.0440400000000007,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.54,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.59851
+      },
+      "No": {
+        "probability": 0.36,
+        "best_bid": 0.161,
+        "best_ask": 0.233,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 36.524,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.233,
+            "fee_usd": 0.0714844
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.40149,
+        "fee_usd": 0.07149,
+        "break_even_probability_before_carry": 0.240149,
+        "break_even_probability_with_idealized_carry": 0.24163868908008562,
+        "central_expected_profit_usd": 1.1985099999999997,
+        "default_10pp_stressed_profit_usd": 0.1985100000000002,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.26,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.55596
+      }
+    }
+  },
+  "verdict": "Priority makerNO research lead; release/protocol uncertainty and current gates outstanding",
+  "reopen_condition": "Material qualifying release/officialscore/rank/filter/source change; freshquotes and fullportfolio/execution gates beforeentry.",
+  "current_description_sha256": "94041b0c51e84c0639361d466b91b50cce284c35ce923419b31066e7674ea76a",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "101458160507154147154727006163441637566778820887727496450606618587552915402475",
+    "15287851648318897252519913697847068052382014923256872911815372431943769240187"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0191",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0195",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0195.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0195.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/ai_market_sources.json",
+      "data/deep_review_20261017/ai_ipo_extension_sources.json"
+    ],
+    "tracked_method": "research/2026-10-17-deep-review/models/ai_primary_method.md",
+    "priority_followup": true
+  },
+  "evaluated_utc": "2026-10-17T19:27:57.175618+00:00",
+  "question": "Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 45% or higher?",
+  "market_id": "3072313",
+  "valuation_author": "primary_operator",
+  "original_index": 217,
+  "report_sha256": "3c224176e7ce6e51add9363a7c6f8dcdca1be56ed89ea8271c6d0aa58ce5e3c6"
+}

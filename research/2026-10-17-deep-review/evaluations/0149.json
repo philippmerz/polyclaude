@@ -1,0 +1,149 @@
+{
+  "review_index": 149,
+  "condition_id": "0x8e157cf23e8f882277100b63c8d2713ee805c0e08a5f2ac323d3278ae6270d5c",
+  "criteria_sha256": "31f95596c42b9b8c69f1c9550ae12334a2db67968ec2c059f2dab84aad40f98c",
+  "status": "valued",
+  "literal_analysis": "ExactnamedtitleandUSfilm/globalEnglishfilm/globalEnglishTVrank,Oct12–18viewingweek,Oct20expectedupdate,Oct23Otherfallback;completeindividualrulesread.",
+  "evidence": [
+    {
+      "url": "https://www.netflix.com/tudum/top10/united-states/films",
+      "observed_utc": "2026-10-17T19:33:45.457534+00:00",
+      "finding": "OfficialUSweeklyranktables forSep27,Oct4,Oct11;USviewsnotexposed."
+    },
+    {
+      "url": "https://www.netflix.com/tudum/top10/films",
+      "observed_utc": "2026-10-17T19:33:45.457581+00:00",
+      "finding": "OfficialglobalEnglishfilmweeklycounts;12timedtablesacross4scopes,notcurrentunpublishedweek."
+    },
+    {
+      "url": "https://www.netflix.com/tudum/top10/tv",
+      "observed_utc": "2026-10-17T19:33:45.457583+00:00",
+      "finding": "OfficialglobalEnglishTVpriorweekBelow17m/EastofEden12.6m;InstadocsnewOct12."
+    },
+    {
+      "url": "https://streamscope.app/netflix/history/2026-10-17",
+      "observed_utc": "2026-10-17T19:33:45.457585+00:00",
+      "finding": "SecondarydailyUSrankproxythroughOct17;Top10absenceiscensoringnotzero."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.035,
+    "low": 0.003,
+    "high": 0.16,
+    "method": "Primary coherentweeklyrank residual allocation with exacttitle/category binding",
+    "reasoning": "Explicitprimaryjointmass/viewmodelinsourcemethod; descriptiveproxiesnotviewcounts, broaduncalibratedscenario ranges.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 3,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.035,
+        "best_bid": 0.001,
+        "best_ask": 0.013,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 40.208,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.013,
+            "fee_usd": 0.006415499999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.13642,
+        "fee_usd": 0.00642,
+        "break_even_probability_before_carry": 0.013642000000000001,
+        "break_even_probability_with_idealized_carry": 0.013645374916769037,
+        "central_expected_profit_usd": 0.21358000000000002,
+        "default_10pp_stressed_profit_usd": -0.13642,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.0095
+      },
+      "No": {
+        "probability": 0.965,
+        "best_bid": 0.987,
+        "best_ask": 0.999,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 40.208,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.999,
+            "fee_usd": 0.0004995000000000005
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.9905,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.9990500000000001,
+        "break_even_probability_with_idealized_carry": 0.9992971566191253,
+        "central_expected_profit_usd": -0.34050000000000047,
+        "default_10pp_stressed_profit_usd": -1.3405000000000005,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.865,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.863579999999999
+      }
+    }
+  },
+  "verdict": "YES central value, no supported individual robust floor; no entry",
+  "reopen_condition": "Newofficialcategory/view/rankorcredibleviewcountmappingandfreshactualsizebook/funding/UMA/fullgates.",
+  "current_description_sha256": "795c2159822a6d0b0f4f7f39e31c94dc6184f4e0073679b94574fbfd633e0186",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "98118056208440774443235486251118402369434970374498898470509220881052859463560",
+    "105115026521451316463850615334773953443503903388352803807927595429226103908129"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0054",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/netflix_extension_sources.json",
+      "data/deep_review_20261017/netflix_sources.json",
+      "data/deep_review_20261017/netflix_followup_sources.json"
+    ],
+    "tracked_method": "models/netflix_extension_method.md",
+    "no_independent_leg_trade": true
+  },
+  "evaluated_utc": "2026-10-17T19:33:47.946708+00:00",
+  "question": "Will \"Ice Age\" be the #2 US Netflix movie this week?",
+  "market_id": "5713621",
+  "valuation_author": "primary_operator",
+  "original_index": 149,
+  "report_sha256": "f6ab0da743903b79c13cec7da2fd96462709a5cd59b51b479db1a66e5e7cbae2"
+}

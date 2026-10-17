@@ -1,0 +1,9 @@
+# Independent skeptical review: Netflix entries 9 and 51
+
+Both theses map secondary rank proxies to Netflix’s eventual weekly rank without a measured conversion. The settlement categories differ: case 9 is US films; case 51 is global English-language films. Keep those sources separate. Official Oct 12–18 weekly views were not published at the Oct 17 review; prior-week totals cannot identify this week’s margin. Netflix’s update is expected Oct 20, and missed-publication rules can extend or redirect settlement.
+
+For US case 9, Oct 12–16 daily ranks at #2 support persistence, but the Oct 17 #3 displacement is direct evidence of late-week competition. The 80% “ordinary persistence” regime is an uncalibrated weight; daily order does not reveal accumulated views. Check the Oct 16 releases and new entrant by same-window date and territory before concluding one lost day is harmless. StreamScope attributes its history to FlixPatrol, but it remains a proxy rather than Netflix’s weekly table.
+
+For global case 51, only three FlixPatrol daily points were captured; they are rank points (declining for Doing Life), not views. The 12m Doing Life median, 30.5m Animals median, retention multipliers and residual-film distribution have no validation against matched Netflix weeks. Missing days, territory coverage and English-film classification can change ordering; Top 10 absence is censoring, not zero demand. The 74% output and 40–97% range are not calibrated odds.
+
+The proposed YES9 maker near .27 (root-provided 19:19 dry-run: .26 bid/.54 ask) and NO51 near .021 sit one tick above bids in wide spreads. A fill may require negative information or a price move, so pre-fill edge is not fill-conditioned edge. Queue priority, fill rate and adverse-selection data are absent. The earlier .20 cap failure reinforces that a fresh dry-run is only a route check. Neither quote establishes robust executable advantage without updated sources and post-fill thesis rules.

@@ -1,0 +1,1275 @@
+{
+  "asof_utc": "2026-10-17T19:06:41+00:00",
+  "method": "Log-price Brownian first passage (reflection with drift) or single terminal marginal. Physical sensitivity, not risk-neutral quote or calibrated forecast. Zero log drift central; no historical mean extrapolation.",
+  "daily_return_statistics": {
+    "BTCUSDT": {
+      "20": {
+        "n": 20,
+        "mean_log_return": -0.0016969297271583028,
+        "sample_sd_daily": 0.013278046154085796,
+        "annualized_sd_365": 0.25367671558415034
+      },
+      "60": {
+        "n": 60,
+        "mean_log_return": 0.003914302264158805,
+        "sample_sd_daily": 0.022678179543857955,
+        "annualized_sd_365": 0.4332660118328715
+      },
+      "180": {
+        "n": 180,
+        "mean_log_return": 0.000559099578978817,
+        "sample_sd_daily": 0.01917990535432165,
+        "annualized_sd_365": 0.3664315772845849
+      }
+    },
+    "ETHUSDT": {
+      "20": {
+        "n": 20,
+        "mean_log_return": -0.00533311539492136,
+        "sample_sd_daily": 0.01895282319027185,
+        "annualized_sd_365": 0.36209317863199636
+      },
+      "60": {
+        "n": 60,
+        "mean_log_return": 0.0039373832741263996,
+        "sample_sd_daily": 0.03163659639656602,
+        "annualized_sd_365": 0.6044163254902312
+      },
+      "180": {
+        "n": 180,
+        "mean_log_return": 0.00038010339465404806,
+        "sample_sd_daily": 0.026494699244265688,
+        "annualized_sd_365": 0.5061805183292754
+      }
+    },
+    "XRPUSDT": {
+      "20": {
+        "n": 20,
+        "mean_log_return": -0.007619771157367763,
+        "sample_sd_daily": 0.01948981344504554,
+        "annualized_sd_365": 0.37235236304443864
+      },
+      "60": {
+        "n": 60,
+        "mean_log_return": 0.004469600189083213,
+        "sample_sd_daily": 0.0419793363592654,
+        "annualized_sd_365": 0.8020140950288747
+      },
+      "180": {
+        "n": 180,
+        "mean_log_return": -0.0003397180763631618,
+        "sample_sd_daily": 0.029615254633966585,
+        "annualized_sd_365": 0.5657986453391859
+      }
+    }
+  },
+  "cases": {
+    "36": {
+      "symbol": "ETHUSDT",
+      "spot": 2415.1,
+      "barrier": 2600,
+      "claim": "up",
+      "expiry_utc": "2026-10-19T04:00:00+00:00",
+      "remaining_days": 1.3703587962962962,
+      "sensitivities": [
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.01895282319027185,
+          "probability": 0.000884148992210479
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.01895282319027185,
+          "probability": 0.0010839156468871753
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.01895282319027185,
+          "probability": 0.0007188091971231085
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.028429234785407778,
+          "probability": 0.026645355542131436
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.028429234785407778,
+          "probability": 0.02917268937987852
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.028429234785407778,
+          "probability": 0.024305000872556597
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.0379056463805437,
+          "probability": 0.09641141493371717
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.0379056463805437,
+          "probability": 0.10145726598266148
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.0379056463805437,
+          "probability": 0.09155618539799387
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.03163659639656602,
+          "probability": 0.04637711227659942
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.03163659639656602,
+          "probability": 0.049899061594381594
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.03163659639656602,
+          "probability": 0.04305978796738864
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.04745489459484903,
+          "probability": 0.1841902593351359
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.04745489459484903,
+          "probability": 0.19028813981655962
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.04745489459484903,
+          "probability": 0.17822070976959398
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.06327319279313204,
+          "probability": 0.31926355007077595
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.06327319279313204,
+          "probability": 0.3251718681632083
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.06327319279313204,
+          "probability": 0.3134063873086005
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.026494699244265688,
+          "probability": 0.017381969452517923
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.026494699244265688,
+          "probability": 0.019293137569656955
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.026494699244265688,
+          "probability": 0.01563586214884457
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.03974204886639853,
+          "probability": 0.11281087692804158
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.03974204886639853,
+          "probability": 0.11817029903780743
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.03974204886639853,
+          "probability": 0.10763139984041098
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.052989398488531375,
+          "probability": 0.23433601669815785
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.052989398488531375,
+          "probability": 0.2405400981044788
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.052989398488531375,
+          "probability": 0.22822710780513597
+        }
+      ],
+      "central_baseline_60d_zero_drift": 0.04637711227659942
+    },
+    "43": {
+      "symbol": "BTCUSDT",
+      "spot": 81489.84,
+      "barrier": 78000,
+      "claim": "down",
+      "expiry_utc": "2026-10-19T04:00:00+00:00",
+      "remaining_days": 1.3703587962962962,
+      "sensitivities": [
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.004863759618254288
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.003782205979039506
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.006214117242501171
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.06047961920010323
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.054093412776671956
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.06744998131592328
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.15914273851914293
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.149473274795197
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.1692279587853888
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.09920534207977308
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.09102827425805507
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.10791893095293412
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.2717045672955761
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.2615332882994822
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.2820855869490348
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.4097354947759912
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.40104805266158133
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.4184819620578486
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.05124379221256382
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.045432913059030244
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.057639004606247206
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.19373066180402124
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.18365926239528915
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.20414762967792788
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.32970102120279543
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.319961370737024
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.3395736797009618
+        }
+      ],
+      "central_baseline_60d_zero_drift": 0.09920534207977308
+    },
+    "50": {
+      "symbol": "BTCUSDT",
+      "spot": 81489.84,
+      "barrier": 100000,
+      "claim": "up",
+      "expiry_utc": "2027-01-01T05:00:00+00:00",
+      "remaining_days": 75.41202546296296,
+      "sensitivities": [
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.07586570920935926
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.20824772898546606
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.0204243664358765
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.23662559261116356
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.3752301581501526
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.13369214104435065
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.3747573220230313
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.48813662557144955
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.27317029678917004
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.2986306299362109
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.4274914886287019
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.19285380514662465
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.48836208696652506
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.5751374514176331
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.4037639431146314
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.6032815982735731
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.6623792147418648
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.5428525483884046
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.21909103570405875
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.35974944911036566
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.11822095043398323
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.4126157619585311
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.5174248696045813
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.31553298759229176
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.5389019134458534
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.6134102893875908
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.4644346716239347
+        }
+      ],
+      "central_baseline_60d_zero_drift": 0.2986306299362109
+    },
+    "71": {
+      "symbol": "BTCUSDT",
+      "spot": 81489.84,
+      "barrier": 80000,
+      "claim": "terminal_above",
+      "expiry_utc": "2026-10-18T16:00:00+00:00",
+      "remaining_days": 0.8703587962962963,
+      "sensitivities": [
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.9318279443134787
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.9405970568412583
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.9220917569955742
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.839652209973843
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.8507999035488492
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.827973840672485
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.7717952548343676
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.7822759183959306
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.7610367825898525
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.8084302650784866
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.8194481733126222
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.7970099446583816
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.7195204624758933
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.7286856594659947
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.7102079598605567
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.668604547173399
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.6760322324728114
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.6611099431562664
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.848775487631893
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.8598925677325389
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.8370866866480624
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.7541047617564651
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.764204004917187
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.7437778718594144
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.6969323557844463
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.7053733445248092
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.6883848592480095
+        }
+      ],
+      "central_baseline_60d_zero_drift": 0.8084302650784866
+    },
+    "99": {
+      "symbol": "BTCUSDT",
+      "spot": 81489.84,
+      "barrier": 95000,
+      "claim": "up",
+      "expiry_utc": "2026-11-01T04:00:00+00:00",
+      "remaining_days": 14.370358796296296,
+      "sensitivities": [
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.002307021492939906
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.005319010960635286
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.013278046154085796,
+          "probability": 0.0009334691450944098
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.04218289312406808
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.06125920037419912
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.019917069231128695,
+          "probability": 0.028267728773024945
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.12756281230092786
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.15749162741928613
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.026556092308171592,
+          "probability": 0.10193533188960849
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.07436735030820066
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.09921933467372313
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.022678179543857955,
+          "probability": 0.05464181253866543
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.23421762549755504
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.2664535176609103
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.034017269315786934,
+          "probability": 0.20439896695931703
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.3723000309654506
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.4004390948977913
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.04535635908771591,
+          "probability": 0.3449599432368846
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.03487572152751726
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.052138924496117074
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.01917990535432165,
+          "probability": 0.02264471862039428
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.1595661236560742
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.1909971971984963
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.02876985803148247,
+          "probability": 0.13184126958966982
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.29147142069450094
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.32264129917871676
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.0383598107086433,
+          "probability": 0.2619215142147103
+        }
+      ],
+      "central_baseline_60d_zero_drift": 0.07436735030820066
+    },
+    "110": {
+      "symbol": "XRPUSDT",
+      "spot": 1.2978,
+      "barrier": 2.6,
+      "claim": "up",
+      "expiry_utc": "2027-01-01T05:00:00+00:00",
+      "remaining_days": 75.41202546296296,
+      "sensitivities": [
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.01948981344504554,
+          "probability": 4.0358408750291104e-05
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.01948981344504554,
+          "probability": 0.00022977337753259786
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.01948981344504554,
+          "probability": 5.9216736384224025e-06
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.029234720167568312,
+          "probability": 0.00620125723879863
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.029234720167568312,
+          "probability": 0.01347989653177473
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.029234720167568312,
+          "probability": 0.0026517261677740335
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.03897962689009108,
+          "probability": 0.04010079911983646
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.03897962689009108,
+          "probability": 0.06217825221953143
+        },
+        {
+          "lookback_days": 20,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.03897962689009108,
+          "probability": 0.024912923835017378
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.0419793363592654,
+          "probability": 0.05664643624762122
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.0419793363592654,
+          "probability": 0.08271952393768059
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.0419793363592654,
+          "probability": 0.0375952758917451
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.0629690045388981,
+          "probability": 0.20384036531404945
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.0629690045388981,
+          "probability": 0.24149186411803697
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.0629690045388981,
+          "probability": 0.17009498288544717
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.0839586727185308,
+          "probability": 0.3405827103733875
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.0839586727185308,
+          "probability": 0.37484238745726195
+        },
+        {
+          "lookback_days": 60,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.0839586727185308,
+          "probability": 0.30777263857265913
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.029615254633966585,
+          "probability": 0.006896985657597191
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.029615254633966585,
+          "probability": 0.014699841695132047
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.029615254633966585,
+          "probability": 0.00301429264446843
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.04442288195094988,
+          "probability": 0.07167370403052269
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.04442288195094988,
+          "probability": 0.10054108268462833
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 1.5,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.04442288195094988,
+          "probability": 0.04971749365437521
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.0,
+          "daily_vol": 0.05923050926793317,
+          "probability": 0.17673103929168169
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": 0.001,
+          "daily_vol": 0.05923050926793317,
+          "probability": 0.2140016782745555
+        },
+        {
+          "lookback_days": 180,
+          "vol_multiplier": 2.0,
+          "log_drift_per_day": -0.001,
+          "daily_vol": 0.05923050926793317,
+          "probability": 0.1440075852963454
+        }
+      ],
+      "central_baseline_60d_zero_drift": 0.05664643624762122
+    }
+  },
+  "limitations": [
+    "Daily closes are lagged to Oct16; no derivatives/options implied vols captured.",
+    "Continuous high/low barrier approximates final one-minute candle extremes, includes actual intra-minute trades but may miss missing/exchange-bad-data effects.",
+    "Historical daily volatility does not bound jumps, weekend regime, liquidations, fat tails, event shocks or momentum.",
+    "Past no-hit established separately; this model only conditions future prices.",
+    "370d first daily bar is pre-window for some claims; full closed returns still used solely for volatility, never as eligible trigger data."
+  ]
+}
