@@ -1,41 +1,25 @@
 # Candidate follow-up — dated, not an execution certificate
 
-**Latest material update, October17 20:52:56UTC:** two vetted post-only bids are
-LIVE, zero matched: case123 ME-02 YES10@.38,3.80pUSD; case32 CA-06 NO50@.03,
-1.50pUSD. Exact authenticated complete inventory and Polygon block95710019
-confirm zero candidate CTF shares, pUSD24.996890, total commitment5.30 and
-uncommitted19.696890. These are **pending commitments, not filled positions or
-realized gains**. OrderIDs and management rules are in
-[resting_orders](../../notes/resting_orders.md). DEC-0203/0204 appended.
+**Latest verified inventory: October17 22:15:59UTC.** Five LIVE post-only
+BUYs, all zero matched and zero candidate outcome balances: ME02YES10@.38,
+CA06NO50@.03,MT01YES10@.33,NY01YES10@.12,IPO158NO5@.62. Full pending12.90,
+uncommitted12.096890pUSD atPolygon95713340. These are commitments, not fills or
+profit. Exact order identities, management and receipts are in
+[resting orders](../../notes/resting_orders.md). DEC0203–0207 remain pending.
 
-Primary retained61%/15% after new source checks, ordinary10pp reserve,
-independent skeptic/champion and conservative shared-US-politics exposure.
-Both fresh entry dry runs passed price/caps; actual submissions each returned
-HTTP200/success/live, then complete authenticated orders and fixed-block
-balances/allowance/operator approval were independently checked. The broad
-adverse model scenarios can lose principal. Limits are38c and3c; neither crossed
-the ask. No funding transfer was needed. Source/identity corrections below and
-in CURRENT_REVISIONS are part of the current assessment.
+**Research proposal, October17 22:37UTC:** new Worlds150 LCK NO at a hypothetical
+30c post-only limit, at most five shares/1.50pUSD, is under independent
+champion/skeptic review. PrimaryP(NO)=.54 with15pp reserve, broadLCKYES25–80%
+specification range. The full-field GPR simulation is uncalibrated, especially
+game-versus-series mapping and shared regional form. Original2024 expected-result
+image uses600, not an assumed400. NamedFandomsource403 is a gap/noautomatic
+fallback. No sports order, prior or reservation. Case54GENNO shares the same
+title factor and is not an independent hedge/diversifier. Review actual
+play-in/Swiss-draw windows before any bid; nextmatchKC–MVKOct18 18:00UTC.
 
-The running watcher demonstrably processed all three newly configured feeds:
-PressHerald politics, BDN politics and GoogleNews's current exact-candidate
-CA-06 search. The initial tier2 filter correctly saw no exposure before these
-orders, while one summary also mislabeled the local race. Candidate-specific
-names/surnames are now tier1, routing future items directly to primary. This
-avoids relying on that small-model interpretation to retain important news.
-Existing cooldown/dedup and source gaps still apply; no restart/new timer.
-Initial review22:00UTC, earlier on a relevant item; cancel first if thesis is
-changed or uncertain, and pull before a known catalyst window.
-
-The newest direct CA-06 source is [CNN's October16 interview](https://transcripts.cnn.com/show/arena/date/2026-10-16/segment/01):
-asked about caucusing with Democrats, Kiley says he will caucus with neither
-side. Root read the captured context. It corroborates earlier reporting but
-does not fix his future all-House-call intent or supply the rule's missing
-neither-party fallback. Manchin's endorsement is not a new poll; the reported
-powder-mail investigation supplies no verified candidate injury/withdrawal.
-The original ILC report, prepared byMainFrame, is older September fieldwork.
-No new October quantitative poll was asserted. Source addendum:
-`data/deep_review_20261017/house_ca06_october_news_addendum.json`.
+The older Worlds standings source was2025, not current2026Swiss play. The
+corrected actual tournament115660540725177488 and dated receipts are in
+`lol_2026_playin_correction_addendum.json`; no future results entered the model.
 
 The following paragraphs are earlier dated tests, not today's live inventory.
 
@@ -138,3 +122,78 @@ error and appends an explicit correction. The primary model had already used
 the correct797k/19% history; it is unchanged. No ISRG order, prior or reservation
 has been created. Source packets `isrg_conference_followup.json` and official
 historical figures in `earnings_metric_history_sources.json` retain access gaps.
+
+
+## October17, 21:56 UTC — case158 latest source/model decision
+
+Read CURRENT_REVISIONS before its older18% report. Yahoo's unadjusted June12
+SPCX daily bar corroborates160.95 as a reliable secondary fallback; the exact
+exchange table is unavailable. New upside evidence plus removal of an
+unmeasured favorable rival discount raises primary YES to24% (NO76%, YESrange
+1–80%). This narrows the potential NO edge. Consider at most about$3.20 passive
+only after the22:00 checks, with ordinary10pp reserve and explicit carry/operation
+cost; no current IPO prior/order/reservation. The IPO news feed was added for
+baseline ingestion, without new timer/daemon; tier1 promotion is still pending.
+
+
+## October17 22:00 safety review and145 valuations
+
+Root retained all four exact House bids; authenticated complete inventory and
+fixed-block95712710 show LIVE/zero matched, both-outcome balances0,
+pUSD24.996890/pending9.80/free15.196890. No holdings or priors changed in the
+check. State-audit rc1 flags these four pending priors, not lost positions.
+KnownCA06powder and NRCCOct13debate alerts did not demonstrate a changed
+withdrawal/ballot/caucus fact. Revieweverytick/earlier material news, cancel first
+ifchanged/uncertain, pullbeforeknowncatalyst. Existing nextscheduledcheck02:00UTC.
+
+MNI case2 current37% revision is linked in CURRENT_REVISIONS; ten Spotifychildren
+are complete, noorder. GTA89current7% delayjudgment is saved independently;
+cheapYEScentralvalue failsordinaryuncertaintyreserve, NOalreadycentralnegative.
+No IPO/ISRG/Spotify order or reservation currently. IPO158currentYES24/NO76 is
+separate from immutable18/82; source fallback and stronger-demand branch remain
+explicit. A research probability is not signing-time authorization.
+
+
+## October17 22:16UTC — IPO small maker posted and independently verified
+
+**October17 22:15:59UTC — five LIVE post-only BUYs; all zero filled.**
+
+| Contract | Shares | Limit | Full pending risk |
+|---|---:|---:|---:|
+| ME-02 Democratic YES | 10 | .38 | $3.80 |
+| CA-06 Democratic NO | 50 | .03 | $1.50 |
+| MT-01 Democratic YES | 10 | .33 | $3.30 |
+| NY-01 Democratic YES | 10 | .12 | $1.20 |
+| Anthropic largest2026IPO cap NO | 5 | .62 | $3.10 |
+
+All five are LIVE/zero matched; both outcome balances on all five candidates
+are0 atPolygon95713340. pUSD24.996890, pending12.90, uncommitted12.096890;
+full authenticated pagination/reservations agree. Venueblocked=false/FI02,
+allowance/approval sufficient. New IPOorder
+`0x22dc43713b55396bed6dfe7983285ca79ca5167c1c8cbb0b377a0081db13a597`,
+market1321564/CID`0xe96dbaceb816e80063bec945a76ac915cba4341bdf1ef704f722bfc9054aad09`,
+NOasset`37461417265919800563099829598896496437436229231955379584818921535241120965562`.
+Use exactslug `will-anthropic-have-the-highest-ipo-market-cap-2026-673`.
+This is a commitment, **not a fill, holding or profit**. DEC-0207 records it.
+
+IPOcurrent primaryNO76%/YES24%, ordinary10ppreserve;5shares@.62 leave.70
+central/.20stressed expected gross before costs, not guaranteed returns.
+At75days currentconstant-Aavecarry sensitivity is about.02 and ordinaryopcost.05;
+stressed surplus is about.13. Maximum standalone loss3.10. Tiny manual sizing
+is far below Kelly because firstdaydemand/timing/shares/universe uncertainty is
+not calibrated. SharedconservativeAIcluster with O_HLE_NO9; no measuredhedge.
+Exactexchangehistoricalclose remains inaccessible; reliableYahoo unadjustedclose
+corroborates160.95 under literal fallback and SECbase shares imply~2.10456T.
+Stronger-demand branch retained, no favorable rival discount. Source/close and
+share-timestamp caveats are inCURRENT_REVISIONS; original18/82report staysdated.
+
+IPOfeed baseline30entries were seen byIDor72htitle before tier1promotion at
+22:09:51. A normalcycle completed22:14:39 after preceding22:09:32save/sleep,
+proving reloadafterpromotion. No newdaemon/timer/directstateedit. Broad issuer,
+Claude-maker and CEO terms bypass small-model filtering. **Review each tick and
+earlier material news; cancel first on changed/uncertain facts, pull before
+known filing/roadshow/pricing/first-trade information windows, and do not leave
+through the firstsession without revaluation.** No known exactnextdate proved.
+House management and prior exact order IDs remain in dated entries below.
+Proof: `data/deep_review_20261017/all_pilots_verified_2216.json`;
+execution log: `logs/deep_review_20261017/ipo_entry_execute_2215.log`.

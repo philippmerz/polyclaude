@@ -1,7 +1,58 @@
 # Standing resting orders (GTC post-only makers)
 
+**October17 22:15:59UTC — five LIVE post-only BUYs; all zero filled.**
 
-**October 17, 21:35:13 UTC — four verified LIVE BUY bids, all zero filled.**
+| Contract | Shares | Limit | Full pending risk |
+|---|---:|---:|---:|
+| ME-02 Democratic YES | 10 | .38 | $3.80 |
+| CA-06 Democratic NO | 50 | .03 | $1.50 |
+| MT-01 Democratic YES | 10 | .33 | $3.30 |
+| NY-01 Democratic YES | 10 | .12 | $1.20 |
+| Anthropic largest2026IPO cap NO | 5 | .62 | $3.10 |
+
+All five are LIVE/zero matched; both outcome balances on all five candidates
+are0 atPolygon95713340. pUSD24.996890, pending12.90, uncommitted12.096890;
+full authenticated pagination/reservations agree. Venueblocked=false/FI02,
+allowance/approval sufficient. New IPOorder
+`0x22dc43713b55396bed6dfe7983285ca79ca5167c1c8cbb0b377a0081db13a597`,
+market1321564/CID`0xe96dbaceb816e80063bec945a76ac915cba4341bdf1ef704f722bfc9054aad09`,
+NOasset`37461417265919800563099829598896496437436229231955379584818921535241120965562`.
+Use exactslug `will-anthropic-have-the-highest-ipo-market-cap-2026-673`.
+This is a commitment, **not a fill, holding or profit**. DEC-0207 records it.
+
+IPOcurrent primaryNO76%/YES24%, ordinary10ppreserve;5shares@.62 leave.70
+central/.20stressed expected gross before costs, not guaranteed returns.
+At75days currentconstant-Aavecarry sensitivity is about.02 and ordinaryopcost.05;
+stressed surplus is about.13. Maximum standalone loss3.10. Tiny manual sizing
+is far below Kelly because firstdaydemand/timing/shares/universe uncertainty is
+not calibrated. SharedconservativeAIcluster with O_HLE_NO9; no measuredhedge.
+Exactexchangehistoricalclose remains inaccessible; reliableYahoo unadjustedclose
+corroborates160.95 under literal fallback and SECbase shares imply~2.10456T.
+Stronger-demand branch retained, no favorable rival discount. Source/close and
+share-timestamp caveats are inCURRENT_REVISIONS; original18/82report staysdated.
+
+IPOfeed baseline30entries were seen byIDor72htitle before tier1promotion at
+22:09:51. A normalcycle completed22:14:39 after preceding22:09:32save/sleep,
+proving reloadafterpromotion. No newdaemon/timer/directstateedit. Broad issuer,
+Claude-maker and CEO terms bypass small-model filtering. **Review each tick and
+earlier material news; cancel first on changed/uncertain facts, pull before
+known filing/roadshow/pricing/first-trade information windows, and do not leave
+through the firstsession without revaluation.** No known exactnextdate proved.
+House management and prior exact order IDs remain in dated entries below.
+Proof: `data/deep_review_20261017/all_pilots_verified_2216.json`;
+execution log: `logs/deep_review_20261017/ipo_entry_execute_2215.log`.
+
+
+## Earlier verified observations
+
+**October 17, 22:00:15 UTC — four verified LIVE BUY bids, all zero filled.**
+
+22:00 root review retained all four. KnownCApowder report and Oct13NRCCdebate
+advocacy did not establish changed ballot/caucus/withdrawal facts. Four audit
+orphan-prior warnings correspond to these zero-filled pending bids; no false
+closure or deletion. Full exact current evidence:
+`data/deep_review_20261017/house_next_verified_2200.json` and
+`data/periodic_20261017T2200_root_judgment.json`. Candidate IDs below remain exact.
 
 | Contract | Order ID | Shares | Price | Pending cash |
 |---|---|---:|---:|---:|
@@ -10,7 +61,7 @@
 | MT-01 Democratic YES | `0xfbd59e65b20dbb8249709e167935f2830591275f8d7b3d0ef95326297a66b292` | 10 | .33 | $3.30 |
 | NY-01 Democratic YES | `0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585` | 10 | .12 | $1.20 |
 
-Complete authenticated pagination and reservations agree. Polygon95711709 shows
+Complete authenticated pagination and reservations agree. Polygon95712710 shows
 zero balances on both outcomes of all four candidates, pUSD24.996890, pending
 9.80 and uncommitted15.196890. Allowance and CTF approval are sufficient; current
 venue response is blocked=false/FI02. This is a cash commitment, not filled
@@ -21,7 +72,7 @@ CA NO is not a measured hedge. All current criteria and token identities match.
 Existing daemon ingested eligible baseline entries before seven MT/NY names
 were promoted to tier1; future matching news bypasses the small-model filter.
 Original reports and independent criticism remain in candidate_followup.
-**Review at existing22:00 UTC check and every tick/earlier relevant news. Cancel
+**22:00 review complete; retain all four. Review at each tick and earlier relevant news. Cancel
 first if facts change or become uncertain, and pull before known catalysts.**
 Do not replay execution commands. The18:00 held-thesis check remains dated.
 Evidence: `data/deep_review_20261017/house_next_verified_2135.json`.

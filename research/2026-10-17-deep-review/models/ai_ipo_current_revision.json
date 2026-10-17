@@ -1,0 +1,73 @@
+{
+  "author": "primary",
+  "calibrated": false,
+  "created": "2026-10-17",
+  "previous_p_yes": 0.18,
+  "current_p_yes": 0.24,
+  "current_p_no": 0.76,
+  "scenario_range_yes": [
+    0.01,
+    0.8
+  ],
+  "calculation": {
+    "anthropic_ipo": 0.7100000000000001,
+    "anthropic_listed_and_tradable": 0.7129000000000001,
+    "anthropic_highest_ipo_cap": 0.24160995568992577,
+    "spacex_base_first_day_cap_trillion": 2.10456049991625,
+    "rival_survival": 1.0,
+    "regimes": [
+      {
+        "name": "Orderly offering with some valuation concession",
+        "weight": 0.3825,
+        "completion": 0.95,
+        "offer_cap": 1.75,
+        "first_day_multiple": 1.12,
+        "log_sd": 0.23,
+        "close_cap_median": 1.9600000000000002,
+        "conditional_exceeds_spacex": 0.37850833186001465,
+        "ipo_mass": 0.363375,
+        "exceeds_spacex_mass": 0.13754046508963283
+      },
+      {
+        "name": "Weak demand, substantial price concession or delay",
+        "weight": 0.34,
+        "completion": 0.65,
+        "offer_cap": 1.5,
+        "first_day_multiple": 1.05,
+        "log_sd": 0.25,
+        "close_cap_median": 1.5750000000000002,
+        "conditional_exceeds_spacex": 0.1231454602991009,
+        "ipo_mass": 0.22100000000000003,
+        "exceeds_spacex_mass": 0.027215146726101303
+      },
+      {
+        "name": "Market, safety or governance interruption",
+        "weight": 0.1275,
+        "completion": 0.15,
+        "offer_cap": 1.25,
+        "first_day_multiple": 1.0,
+        "log_sd": 0.35,
+        "close_cap_median": 1.25,
+        "conditional_exceeds_spacex": 0.06831401908570223,
+        "ipo_mass": 0.019125,
+        "exceeds_spacex_mass": 0.001306505615014055
+      },
+      {
+        "name": "Stronger first-day demand scenario",
+        "weight": 0.15,
+        "completion": 0.71,
+        "offer_cap": 1.8,
+        "first_day_multiple": 1.3055555555555556,
+        "log_sd": 0.2,
+        "close_cap_median": 2.35,
+        "conditional_exceeds_spacex": 0.7093693733256112,
+        "ipo_mass": 0.1065,
+        "exceeds_spacex_mass": 0.07554783825917759
+      }
+    ]
+  },
+  "source_price_status": "Yahoo secondary daily unadjusted close corroborates160.95; Nasdaq narrative~2.1T agrees, exact exchange table unavailable. Literal reliable-source fallback accepted by primary.",
+  "reason": "New contrary investor outlook receives15% scenario weight; other regimes retain85%. Removing favorable but unmeasured rival-survival discount gives a conservative NO-entry value.",
+  "prior_timing_cases_28_199": "Rounded71% unchanged; new branch has71% completion so total completion remains71%.",
+  "action": "No order/prior/reservation yet; small passive candidate requires fresh gates and monitoring."
+}

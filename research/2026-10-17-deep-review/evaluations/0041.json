@@ -1,0 +1,106 @@
+{
+  "review_index": 41,
+  "condition_id": "0x9b5ae81c47ae2f34339ade263bfa390ced36dcd03bffcbe110d89cb31ab664cd",
+  "criteria_sha256": "1d8a4f81761ff19b87209df58c44aa2998a5db3ab907f4f21a2fe88d5cb968b0",
+  "status": "excluded_factual",
+  "literal_analysis": "FullBO3semifinal rule read: winningteam, canceled/notplayed/tie50-50, prestartwalkover50-50 versus afterstartforfeitwinner,14calendar-dayreschedulecutoff andHLTVpreferred2hourfallback/namebinding. Exactvenueclosed/nonaccepting makesnewentryunavailable; not a forecast.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5787759",
+      "observed_utc": "2026-10-17T22:19:50.974372+00:00",
+      "finding": "Exactcurrent venue closed=true/acceptingOrders=false, noheldshares or matchingorders. Completed source nowmatchesBetBoom2–1, but closurealone excludesnewentry. Gammaresolved is not an independentlyreadCTFpayout."
+    },
+    {
+      "url": "https://www.hltv.org/matches/2399415/falcons-vs-betboom-thunderpick-world-championship-2026",
+      "observed_utc": "2026-10-17T22:19:00Z",
+      "finding": "Primarycurrentnamedmatchpage reportsMatchover,Falcons1–2BetBoom; earlierLIVEconflictresolved."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Factualclosed/eliminatedcase; noforecastcounted."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactcurrent venue closed=true/acceptingOrders=false, noheldshares or matchingorders. Completed source nowmatchesBetBoom2–1, but closurealone excludesnewentry. Gammaresolved is not an independentlyreadCTFpayout.",
+    "current_quote_packet": "data/deep_review_20261017/esports_current_quote_verification.json"
+  },
+  "verdict": "Factualexclusion, separatefromsubstantivevaluations: Exactcurrent venue closed=true/acceptingOrders=false, noheldshares or matchingorders. Completed source nowmatchesBetBoom2–1, but closurealone excludesnewentry. Gammaresolved is not an independentlyreadCTFpayout.",
+  "reopen_condition": "Exacteligibleorderroute/reinstatement/sourcecorrection ormatchingholdingrequiringmanagement.",
+  "current_gamma": {
+    "id": "5787759",
+    "conditionId": "0x9b5ae81c47ae2f34339ade263bfa390ced36dcd03bffcbe110d89cb31ab664cd",
+    "slug": "cs2-fal2-bb3-2026-10-17",
+    "question": "Counter-Strike: Team Falcons vs BetBoom Team (BO3) - Thunderpick World Championship Playoffs",
+    "exact_frozen_criteria_match": true,
+    "mismatched_fields": [],
+    "closed": true,
+    "acceptingOrders": false,
+    "active": true,
+    "enableOrderBook": true,
+    "umaResolutionStatus": "resolved",
+    "umaResolution": null,
+    "resolved": null,
+    "outcomePrices": [
+      "0",
+      "1"
+    ],
+    "feesEnabled": true,
+    "feeSchedule": {
+      "exponent": 1,
+      "rate": 0.05,
+      "takerOnly": true,
+      "rebateRate": 0.15
+    },
+    "negRisk": false,
+    "orderMinSize": 5,
+    "orderPriceMinTickSize": 0.001,
+    "endDate": "2026-10-17T23:00:00Z"
+  },
+  "source_receipts": {
+    "gamma": {
+      "request_url": "https://gamma-api.polymarket.com/markets/5787759",
+      "method": "GET",
+      "started_utc": "2026-10-17T22:19:50.811496+00:00",
+      "received_utc": "2026-10-17T22:19:50.974372+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_bytes": 5533,
+      "raw_sha256": "3401a418aaf7760db8b4b4694731223f8a76a71c94f12b76a6be0f36ff1fa92a",
+      "gzip_path": "logs/deep_review_20261017/esports_current_quote_verification/gamma_5787759.body.json.gz",
+      "gzip_bytes": 2438,
+      "gzip_sha256": "7df2b33cd8f50d070c19dfe6b4bf33e3677f658ecde826327b76df56a700af83"
+    },
+    "account_target_only": {
+      "authenticated_order_proof": {
+        "path": "logs/deep_review_20261017/esports_current_quote_verification/private_account_proof.json",
+        "sha256": "b53331ab49b69b409a4fe8fed022f28131f3c7880bd762f730b0ab3ffaece2dd",
+        "mode": "0600",
+        "authenticated": true,
+        "pagination_complete": true,
+        "private_order_details_not_repeated_in_public_packet": true
+      },
+      "fixed_block_balance_proof": {
+        "path": "logs/deep_review_20261017/esports_current_quote_verification/private_balance_fixedblock_repair.json",
+        "sha256": "2bc02aacef42929edf45984f8cba6542d2d4f9f5438748c95866c30f23969473",
+        "mode": "0600",
+        "captured": true,
+        "chain_id": 137,
+        "block_number": 95713557,
+        "block_hash": "0x1356f503bf8a22f78202c46f894061b00e131573e137c21ebf1ea81bc8ff3993",
+        "scope": "only both outcomes for frozen cases 41 and 75"
+      },
+      "initial_balance_read": {
+        "path": "logs/deep_review_20261017/esports_current_quote_verification/private_account_proof.json",
+        "error_type": "ExtraDataLengthError",
+        "preserved": true
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T22:23:35.552617+00:00",
+  "question": "Counter-Strike: Team Falcons vs BetBoom Team (BO3) - Thunderpick World Championship Playoffs",
+  "market_id": "5787759",
+  "valuation_author": "primary_operator",
+  "original_index": 41,
+  "report_sha256": "73a66565a9b1c0f66b9b2301bc0d4a64af7c93712e36a34c84a12b602ffce472"
+}

@@ -30414,3 +30414,116 @@ facts. Source gaps/broad probabilities/common-wave risk remain. Last full
 held-thesis check is still18:00. First100 notification already delivered;
 continue the finite remaining queue and per-case persistence. Direct quota
 probe21:34:3%used/97%headroom.
+
+
+## 2026-10-17T22:04:41+00:00 —22:00 safety complete;145 primary valuations
+
+-145valued,1blocked,325factual exclusions,2529pending. Ten Spotifychildren
+saved onebeforethenext; MNI2dated revision now37%, with January1 calendar
+boundary and recovered sevenweeks explicit. Initial bad independent-imputation
+model was rejected before anycase/money; audit retains it. GTA89delay7% saved
+with its literal preorder exclusion/announcement branch and two-sided costs.
+IPO158current24/76 incorporates stronger-demand branch and reliable secondary
+firstclose fallback; exchange historical table remains inaccessible. No newmoney.
+-22:00routine19types ranonce:18rc0,auditrc1;38streams allhash/timingverified.
+Fourprior-orphan warnings bind to four LIVE zero-filled bids, no falseclosure
+or deletion. Eightfinancialrecord hashes unchanged; audit snapshot/holds also
+unchanged. Full inventory22:00:15/block95712710, bothsidesallcandidates0,
+pUSD24.996890/pending9.80/free15.196890; retain allfour tinycorrelated pilots.
+-KnownCApowder alert20:52 is Oct16recirculation, no verified withdrawal/ballot/
+caucus change; MT21:38alert is NRCCOct13partisandebateclaim, not electionresult
+or freshpoll. Root consumed both. Bounded feeds/officialpages reveal no new
+thesisbreak; Maine page links its ballot and Suffolk punctuation-normalized
+names match, rather than trusting literal-string falsemisses.
+-Bankroll196.37/gas5.76;tradingmid/depth190.61/188.56,PM30.94/28.89,
+whole indicative depth194.32,cost29.86,residual19.53. Rounded sequential marks,
+not synchronized NAV/cashprofit; VM/APIexcluded. Since18mid−.03/depth−.11,
+residualunchanged. SeparatepositionsPM30.80 reflects differentwindow.
+-Root retained OpenAIHLE NO9,prior.25/.15/.38; current23/26cPOSTbookage20s,
+fee-netexit2.00624,central/upperhold/stressexit9. Clarity29/29conditionalfloor
+unchanged; both books staleGET/POST340/423s, no current pairedexit claim.
+GfinalYES/losingNO4.034750zero/no burn; Hormuzdust.003571belowpointgas.00460968,
+no new simulation/broadcast. Fixedblock95712709,aUSDC122.112198,variableAave
+3.05351963%. FournewHousebids are commitments, not holdings/profit.
+-26sourceGETs/35integrityfilesverified.65HLEobjects, fiveGammafullrules,
+256Senaterows, articlecores/AAcomparisonunchanged. HLEOpenAImax53.6<55,
+Diamondseparate;3directOpenAI403gaps. Quotefinalassembly initiallyreadGfile
+before concurrentfinalityread completed; recoveredofflinefromallhashedoriginal
+captures/metadata, no repeatednetwork or fabricatedfreshness. Rootjudgment
+complete. Daemons4current; disk193.88MiBwarning, research180floor.81decisions,
+0overdue. Existingnextscheduledcheck02:00;weeklyOct23/monthlyNov12. Finite
+operatorreviewcontinues; no idle timer or durablegoal.
+
+
+## 2026-10-17T22:17:09+00:00 — tiny Anthropic IPO NO maker, independently verified
+
+**October17 22:15:59UTC — five LIVE post-only BUYs; all zero filled.**
+
+| Contract | Shares | Limit | Full pending risk |
+|---|---:|---:|---:|
+| ME-02 Democratic YES | 10 | .38 | $3.80 |
+| CA-06 Democratic NO | 50 | .03 | $1.50 |
+| MT-01 Democratic YES | 10 | .33 | $3.30 |
+| NY-01 Democratic YES | 10 | .12 | $1.20 |
+| Anthropic largest2026IPO cap NO | 5 | .62 | $3.10 |
+
+All five are LIVE/zero matched; both outcome balances on all five candidates
+are0 atPolygon95713340. pUSD24.996890, pending12.90, uncommitted12.096890;
+full authenticated pagination/reservations agree. Venueblocked=false/FI02,
+allowance/approval sufficient. New IPOorder
+`0x22dc43713b55396bed6dfe7983285ca79ca5167c1c8cbb0b377a0081db13a597`,
+market1321564/CID`0xe96dbaceb816e80063bec945a76ac915cba4341bdf1ef704f722bfc9054aad09`,
+NOasset`37461417265919800563099829598896496437436229231955379584818921535241120965562`.
+Use exactslug `will-anthropic-have-the-highest-ipo-market-cap-2026-673`.
+This is a commitment, **not a fill, holding or profit**. DEC-0207 records it.
+
+IPOcurrent primaryNO76%/YES24%, ordinary10ppreserve;5shares@.62 leave.70
+central/.20stressed expected gross before costs, not guaranteed returns.
+At75days currentconstant-Aavecarry sensitivity is about.02 and ordinaryopcost.05;
+stressed surplus is about.13. Maximum standalone loss3.10. Tiny manual sizing
+is far below Kelly because firstdaydemand/timing/shares/universe uncertainty is
+not calibrated. SharedconservativeAIcluster with O_HLE_NO9; no measuredhedge.
+Exactexchangehistoricalclose remains inaccessible; reliableYahoo unadjustedclose
+corroborates160.95 under literal fallback and SECbase shares imply~2.10456T.
+Stronger-demand branch retained, no favorable rival discount. Source/close and
+share-timestamp caveats are inCURRENT_REVISIONS; original18/82report staysdated.
+
+IPOfeed baseline30entries were seen byIDor72htitle before tier1promotion at
+22:09:51. A normalcycle completed22:14:39 after preceding22:09:32save/sleep,
+proving reloadafterpromotion. No newdaemon/timer/directstateedit. Broad issuer,
+Claude-maker and CEO terms bypass small-model filtering. **Review each tick and
+earlier material news; cancel first on changed/uncertain facts, pull before
+known filing/roadshow/pricing/first-trade information windows, and do not leave
+through the firstsession without revaluation.** No known exactnextdate proved.
+House management and prior exact order IDs remain in dated entries below.
+Proof: `data/deep_review_20261017/all_pilots_verified_2216.json`;
+execution log: `logs/deep_review_20261017/ipo_entry_execute_2215.log`.
+
+Current newresearch count147valued/1blocked/325excluded; active68pending. Exact publicquote archives12now rootround-trip/hash verified,12,827,256bytes reclaimed; manifest maps oldpaths and14writers refuseoverwrite. Currentbook/account preflight22:14:56 passed fresh1.5secondbooks and legal/identity/UMA/fee/cap/cash checks. Vettedhelper only; no raw bypass/transfer. The22:00fullheld review remains dated, this is a specific entry/accountverification. Telegram materialupdate follows.
+
+
+## 2026-10-17T22:37:27+00:00 — 150 primary valuations; Worlds identity correction and disk recovery
+
+Each new completed case was saved/indexed before the next. Current totals are
+150 valued,1 blocked,327 factual exclusions,2,522 pending. Two new Worlds cases
+use a full-field constrained Swiss/BO5 model, with explicit game/series/scale
+sensitivities and persistent region/team uncertainty. GEN14%/LCK46% are primary
+uncalibrated judgments, not Riot title forecasts. The original600-denominator
+GPR formula was visually verified; normal400 was not silently substituted.
+
+The supposed future-Swiss chronology conflict was a source identity error: the
+captured tournament113475452383887518 has2025timestamps. Correct2026id is
+115660540725177488; currentofficialschedule shows KC–MVK play-in finalOct18.
+Old packets are preserved and explicit correction linked. No sports money.
+A hypothetical LCK_NO5@30c (1.50cashrisk) is under new-strategy champion/skeptic
+review;15ppreserve survives captured prices, but parts of the broader adverse
+range lose. Research does not replace fresh all-gate execution checks.
+
+Git repack completed once with rc0, preserving refs/history/files, and free
+space rose fromabout191MiB to329MiB. Read-only rehearsal measured9,582,337-byte
+pack. No GC/prune or dependency/evidence deletion. SudoAPTclean was denied
+passwordrequired before mutation. Staticquotes remain losslessly archived with
+manifest and reader/writer guards. Newresearch stops below180MiB; warning512.
+Ledger audit476/476 hash/identity/index checks passed before the two Worlds
+records, and a final focused-commit audit follows. No financial state change
+since the separately recorded22:15:59 fifthIPO pendingbid.

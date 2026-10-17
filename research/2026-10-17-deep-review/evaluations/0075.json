@@ -1,0 +1,106 @@
+{
+  "review_index": 75,
+  "condition_id": "0x95f28c53ce4341c3856bf68aa651851e4dd286ab61aabf2452aa0617b9da884c",
+  "criteria_sha256": "5c69b1dda2ae64890ebcde50c5401dfb4e98b6a4622a15812afec70c928b8f47",
+  "status": "excluded_factual",
+  "literal_analysis": "Fullchampion rule read: highesttournamentwinner, postponement/cancellation/nochampionbyNov17ET=>Other, alphabeticaljointwinnertie. PrimarysourceHLTVevent; currentFalconssemifinallossinasingleeliminationbracket eliminateschampionship, notnecessarilythirdplace. Proposednotfinal; no currentNOask.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5609706",
+      "observed_utc": "2026-10-17T22:19:51.109243+00:00",
+      "finding": "Knowneliminatedteam; exactcurrentGammaYES/NOmid.0005/.9995 andproposedstatus; freshYESask.001 butnoYESbids, noNOasks. Noheldshares/orders. This is obviouseliminated-candidate irrelevance with noeligiblecurrentwinning-entry route, not an uncertainfutureevent screen."
+    },
+    {
+      "url": "https://www.hltv.org/matches/2399415/falcons-vs-betboom-thunderpick-world-championship-2026",
+      "observed_utc": "2026-10-17T22:19:00Z",
+      "finding": "Primarycurrentnamedmatchpage reportsMatchover,Falcons1–2BetBoom; earlierLIVEconflictresolved."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Factualclosed/eliminatedcase; noforecastcounted."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Knowneliminatedteam; exactcurrentGammaYES/NOmid.0005/.9995 andproposedstatus; freshYESask.001 butnoYESbids, noNOasks. Noheldshares/orders. This is obviouseliminated-candidate irrelevance with noeligiblecurrentwinning-entry route, not an uncertainfutureevent screen.",
+    "current_quote_packet": "data/deep_review_20261017/esports_current_quote_verification.json"
+  },
+  "verdict": "Factualexclusion, separatefromsubstantivevaluations: Knowneliminatedteam; exactcurrentGammaYES/NOmid.0005/.9995 andproposedstatus; freshYESask.001 butnoYESbids, noNOasks. Noheldshares/orders. This is obviouseliminated-candidate irrelevance with noeligiblecurrentwinning-entry route, not an uncertainfutureevent screen.",
+  "reopen_condition": "Exacteligibleorderroute/reinstatement/sourcecorrection ormatchingholdingrequiringmanagement.",
+  "current_gamma": {
+    "id": "5609706",
+    "conditionId": "0x95f28c53ce4341c3856bf68aa651851e4dd286ab61aabf2452aa0617b9da884c",
+    "slug": "will-falcons-win-the-thunderpick-world-championship-2026",
+    "question": "Will Falcons Win the Thunderpick World Championship 2026?",
+    "exact_frozen_criteria_match": true,
+    "mismatched_fields": [],
+    "closed": false,
+    "acceptingOrders": true,
+    "active": true,
+    "enableOrderBook": true,
+    "umaResolutionStatus": "proposed",
+    "umaResolution": null,
+    "resolved": null,
+    "outcomePrices": [
+      "0.0005",
+      "0.9995"
+    ],
+    "feesEnabled": true,
+    "feeSchedule": {
+      "exponent": 1,
+      "rate": 0.05,
+      "takerOnly": true,
+      "rebateRate": 0.15
+    },
+    "negRisk": true,
+    "orderMinSize": 5,
+    "orderPriceMinTickSize": 0.001,
+    "endDate": "2026-10-20T03:59:00Z"
+  },
+  "source_receipts": {
+    "gamma": {
+      "request_url": "https://gamma-api.polymarket.com/markets/5609706",
+      "method": "GET",
+      "started_utc": "2026-10-17T22:19:50.975018+00:00",
+      "received_utc": "2026-10-17T22:19:51.109243+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_bytes": 3758,
+      "raw_sha256": "f39c4df3682ea2a5c5776ba331e922a1b3f5856480bf8a4cf3a830f5061e3250",
+      "gzip_path": "logs/deep_review_20261017/esports_current_quote_verification/gamma_5609706.body.json.gz",
+      "gzip_bytes": 1762,
+      "gzip_sha256": "3a6e12fd0708af057f46aed7683f191f74b966729b6ceaa676bddcf658782078"
+    },
+    "account_target_only": {
+      "authenticated_order_proof": {
+        "path": "logs/deep_review_20261017/esports_current_quote_verification/private_account_proof.json",
+        "sha256": "b53331ab49b69b409a4fe8fed022f28131f3c7880bd762f730b0ab3ffaece2dd",
+        "mode": "0600",
+        "authenticated": true,
+        "pagination_complete": true,
+        "private_order_details_not_repeated_in_public_packet": true
+      },
+      "fixed_block_balance_proof": {
+        "path": "logs/deep_review_20261017/esports_current_quote_verification/private_balance_fixedblock_repair.json",
+        "sha256": "2bc02aacef42929edf45984f8cba6542d2d4f9f5438748c95866c30f23969473",
+        "mode": "0600",
+        "captured": true,
+        "chain_id": 137,
+        "block_number": 95713557,
+        "block_hash": "0x1356f503bf8a22f78202c46f894061b00e131573e137c21ebf1ea81bc8ff3993",
+        "scope": "only both outcomes for frozen cases 41 and 75"
+      },
+      "initial_balance_read": {
+        "path": "logs/deep_review_20261017/esports_current_quote_verification/private_account_proof.json",
+        "error_type": "ExtraDataLengthError",
+        "preserved": true
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T22:23:35.932934+00:00",
+  "question": "Will Falcons Win the Thunderpick World Championship 2026?",
+  "market_id": "5609706",
+  "valuation_author": "primary_operator",
+  "original_index": 75,
+  "report_sha256": "d060016c80a2ca08053119db76a05e84663a920c3028641813743157a424617d"
+}

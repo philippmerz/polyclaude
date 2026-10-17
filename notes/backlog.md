@@ -1,26 +1,51 @@
+## Research and capacity update — October17 22:37UTC
+
+150 valuations,1 blocked,327 factual exclusions and2,522 pending are saved.
+The Worlds source error is corrected: old standings tournament113475452383887518
+is2025, not future2026results. Actual2026tournament115660540725177488 has
+KC–MVK play-in final tomorrow. GEN14% and LCK46% are broad, uncalibrated primary
+forecasts with a15pp entry reserve. A tiny LCK NO30c proposal is under independent
+champion/skeptic review; no sports order/prior/reservation exists.
+
+Safe Git repack completed once, preserving refs/files/history and reclaiming
+about140MiB. Post-check disk329MiB, still below512MiB warning; no GC/prune,
+package removal or evidence deletion. The attemptedsudoAPTclean was denied
+before action. Public capture archives remain lossless, and180MiB research
+stop/128MiB critical guards remain. Ledger audit476/476 passed before the two
+new Worlds valuations. Current checkpoint and per-case hashes remain authority.
+
+## Current money update —October17 22:16UTC
+
+Five LIVE zero-filled bids now include Anthropic-largestIPO NO5@.62,3.10pUSD;
+all candidate balances0, pending12.90/free12.096890 atPolygon95713340.
+No filledIPOholding/profit. DEC0207/candidateprior24%YES/76%NO; nohedgeassumed
+with heldO_HLE_NO9. Newsdaemon postpromotionnormalcycle verified22:14:39.
+Cancel/revalue on materialfiling/offer/pricing/firsttrade/governance/rival news;
+pullbeforeknownwindows, revieweverytick. See resting_orders for exactIDs.
+150 valuations saved at22:37UTC;1 blocked,327 factual exclusions,2,522 pending.
+Worlds54/150 are complete; the LCK NO30c research proposal is under independent
+new-strategy review, with no sports order. Checkpoint overrides older counts.
+
 ## Active — primary in-depth review authorized October17
 
-First100 were reached20:31UTC and notified in chat/Telegram1163. At21:40UTC,
-134 valued,1 blocked,325 factual closed-market exclusions;2,540 pending.
-The checkpoint/ledger are authoritative after each case. Four verified LIVE
-post-only bids at21:35:13/block95711709 are ME-02YES10@.38, CA-06NO50@.03,
-MT-01YES10@.33 andNY-01YES10@.12. All zero matched and zero CTF balances;
-pending9.80, pUSD24.996890, uncommitted15.196890. DEC-0203–0206 are commitments,
-not fills or P&L. Review22:00UTC and earlier on relevant news; cancel first on
-changed/uncertain facts. All candidate names are tier1 in the existing daemon.
-No new timer or daemon. Exact identities, sources and management are in
-notes/resting_orders and research/2026-10-17-deep-review/candidate_followup.
+At22:04UTC:145valued,1blocked,325factual exclusions,2529pending. First100 was
+notified in chat/Telegram1163; continue the finite queue and save/index each
+case before the next. Checkpoint overrides dated narrative counts. MNIcurrent37%
+revision and ten Spotify children are complete; IPO-largestcurrent24%YES/76%NO
+supersedes18/82 for current entry analysis. Original observations stay immutable.
+The later22:16 update supersedes the old no-IPO-order state. No ISRG/Spotify
+order. Ready facts for Senate, Google/TIME and other pending cases
+diesel/pandemic and GTAalbum are in SOURCE_QUEUE; none is a small-model rejection.
 
-Five ISRG brackets and four AI IPO cases are newly valued. ISRG35%15–17.5 is
-only a candidate; the September conference reaffirmed the existing annual guide
-in a secondary transcript, not a Q3 guide. IPO-largest18% is provisional for
-entry while the exact SpaceX first close is checked: Nasdaq narrative says
-near160.95/first-session2.1T, not an explicit closing-price table. No IPO/ISRG
-order or prior. Read CURRENT_REVISIONS; preserve original dated reports.
-Spotify's seven missing MNI weeks were recovered, ready for a linked revision.
-Tesla case3 is disputed, blocking new entry. The325 exclusions are exact closed/
-resolved/no-new-order conditions, not cheap-model rejections of open markets.
-Continue the finite queue and per-case persistence; first100 is not completion.
+22:00light check complete: retain OpenAIHLE NO9/Clarity29pairs and four LIVE,
+zero-filled House bids; fullpending9.80/free15.196890, exact candidate balances0.
+The four orphan-prior warnings are those pending candidates, not missing holdings.
+Current Oexit2.00624; both Claritybooksstale, so no current pairedexit claim.
+KnownCApowder and partisanMTdebate alerts consumed; no demonstrated thesis break.
+Next existing scheduled check02:00UTC, weeklyOct23/monthlyNov12. Disk193.88MiB:
+bounded compressed evidence;180MiB new-research stop. Do not delete dependencies,
+private material or evidence. No timer/durablegoal. See latest rootjudgment,
+notes/resting_orders and candidate_followup for exact money/management.
 
 Review all 3,000 frozen conditions beyond clearly factual exclusions. Start with
 the original index order; common-source grouping is allowed, with each distinct

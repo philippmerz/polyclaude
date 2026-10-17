@@ -1330,5 +1330,34 @@
     "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
     "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
     "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
-  }
+  },
+ "will-anthropic-have-the-highest-ipo-market-cap-2026-673": {
+  "p_yes": 0.24,
+  "p_no": 0.76,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.7,
+  "cluster_frac": 0.05,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0xe96dbaceb816e80063bec945a76ac915cba4341bdf1ef704f722bfc9054aad09",
+  "market_id": "1321564",
+  "criteria_sha256": "af74aad95b40190289dc2a25fe684eba0633d25e5ee21cdda21c86f6efa07e01",
+  "rationale": "Primary current timing/first-close scenario revision24/76, exact full rules read, independent skeptic/champion read. Approx2.10456T SpaceX comparator uses SECbase shares and corroborated secondary unadjusted close; exactexchange historical table inaccessible. Strong-demandbranch retained; no unmeasured rival-survival discount. Uncalibrated, not guaranteed floor.",
+  "current_assessment": "Small passive NO pilot only, ordinary10pp reserve. Maxrawlimit.63, atmost5shares/about3.20pUSD; no order or position assumed by this prior. BroadYESrange.01-.80 is sensitivity, not a confidence interval.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0158.md",
+  "current_revision": "research/2026-10-17-deep-review/CURRENT_REVISIONS.md",
+  "tracked_model": "research/2026-10-17-deep-review/models/ai_ipo_current_revision.py",
+  "balanced_reviews": [
+   "logs/deep_review_20261017/ipo_cap_pilot_skeptic.md",
+   "logs/deep_review_20261017/ipo_cap_pilot_champion.md"
+  ],
+  "latest_source_packets": [
+   "data/deep_review_20261017/spacex_secondary_close_crosscheck.json",
+   "data/deep_review_20261017/ipo_monitoring_comptroller_letter_sources.json",
+   "data/deep_review_20261017/ipo_pilot_preflight.json"
+  ],
+  "next_scheduled_catalyst": "PublicS1/roadshow/offer-range/pricing/firsttrade/cancellation/safety-governance or rivalIPO news; no exactnextdateproved. Cancel/revalue on materialnewfacts and pull before any known information window, including first trading session. Before year-end confirm literal first-close treatment and settlement.",
+  "monitoring": "Existing29thIPO/valuationRSS; baseline30seen before broadAnthropic/Claude-maker/Dario-Amodei tier1promotion. Normalpostpromotioncycle must be verified before an order.",
+  "correlation_caveat": "Same conservative factor cluster as heldOpenAIHLE_NO9, not an IPO holding or measured hedge. Declared5%existingrisk buffer; current hardcaps must count full pending risk."
+ }
 }

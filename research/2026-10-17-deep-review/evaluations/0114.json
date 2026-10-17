@@ -1,0 +1,154 @@
+{
+  "review_index": 114,
+  "condition_id": "0x98d0143a95d4e2251866c205b154d3fdbfe315e2743c429c62332f0b6eb858f0",
+  "criteria_sha256": "cd5b36c1e021304d85c2a134f3c7211377de9e1cc31760cb15408989c9d31947",
+  "status": "valued",
+  "literal_analysis": "Byte-identical full US2026official#2 rules, alphabetical tie and January31ET Other fallback read; exact named recording/CID/tokens retained. Weekly/global/artist totals do not settle.",
+  "evidence": [
+    {
+      "url": "https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/",
+      "observed_utc": "2026-10-17T20:29:27+00:00",
+      "finding": "Prior official region-specific annual publication semantics, not2026 ranking."
+    },
+    {
+      "url": "https://newsroom.spotify.com/2025-12-05/wrapped-methodology-explained/",
+      "observed_utc": "2026-10-17T20:29:27+00:00",
+      "finding": "Personal2025 methodology; exact2026 aggregate cutoff not established."
+    },
+    {
+      "url": "https://kworb.net/spotify/track/3fRCAPMMZ8l8P9YKI6OCzD.html",
+      "observed_utc": "2026-10-17T20:29:27+00:00",
+      "finding": "Exact ID-specific US charted rows, absent dates and explicit below-Top200 observations retained separately."
+    },
+    {
+      "url": "https://open.spotify.com/track/3fRCAPMMZ8l8P9YKI6OCzD",
+      "observed_utc": "2026-10-17T20:29:27+00:00",
+      "finding": "Official recording title/credits/catalog metadata; later album dates may differ from original release."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.01,
+    "low": 0.0001,
+    "high": 0.35,
+    "method": "Primary joint US#2 cohort, recovered history, calendar adjustment, hypothetical cutoff and exceptional-method scenario model",
+    "reasoning": "Tracked54-ID model; explicit old-song vs low/pre-release history, censoring, future pace and alias uncertainty. Tail rounding is subjective; no empirical calibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 47,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.01,
+        "best_bid": 0.001,
+        "best_ask": 0.002,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 15.532,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.002,
+            "fee_usd": 0.000998
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.021,
+        "fee_usd": 0.001,
+        "break_even_probability_before_carry": 0.0021000000000000003,
+        "break_even_probability_with_idealized_carry": 0.0021081539678026737,
+        "central_expected_profit_usd": 0.079,
+        "default_10pp_stressed_profit_usd": -0.021,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.0095
+      },
+      "No": {
+        "probability": 0.99,
+        "best_bid": 0.998,
+        "best_ask": 0.999,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 15.532,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.999,
+            "fee_usd": 0.0004995000000000005
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.9905,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.9990500000000001,
+        "break_even_probability_with_idealized_carry": 1.0029291531110767,
+        "central_expected_profit_usd": -0.09050000000000047,
+        "default_10pp_stressed_profit_usd": -1.0905000000000005,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.89,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.979000000000001
+      }
+    }
+  },
+  "verdict": "Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations",
+  "reopen_condition": "OfficialUSannual/cutoff/aggregation evidence, complete missing history, a sustained large US surge or a different supported fee-net maker price requires primary revaluation.",
+  "current_description_sha256": "396e9b9a1c1e85cd902d97fe1b2ca73da8a3962fe92ac224ac11405597fce141",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "39851327054975417742709833827382414931646602088502894299858243765881062441191",
+    "108770057700725519695630790340474234860275405697195135648238949027490949142557"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0139",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0139.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0139.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/spotify_annual_sources.json",
+      "data/deep_review_20261017/spotify_early_history_addendum.json",
+      "data/deep_review_20261017/spotify_history_identity_followup.json",
+      "data/deep_review_20261017/spotify_release_chronology_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/spotify_joint_model.py",
+    "model_calibrated": false,
+    "default_probability_reserve": 0.1,
+    "shared_ranking_model": true
+  },
+  "evaluated_utc": "2026-10-17T21:54:22.482565+00:00",
+  "question": "Will Drop Dead – Olivia Rodrigo be the #2 song in the US for 2026?",
+  "market_id": "3211310",
+  "valuation_author": "primary_operator",
+  "original_index": 114,
+  "report_sha256": "cc84b660bdb165ebb67010f1801136c7885802920bc355b5f03bd81877938692"
+}

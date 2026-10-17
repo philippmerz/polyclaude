@@ -1,0 +1,156 @@
+{
+  "review_index": 54,
+  "condition_id": "0x98c266979031b3ee6c87ea5b8b671be0e242e13f9be4c123ff2c21ef46ff62c3",
+  "criteria_sha256": "9fc24648ebc087bfc1cc0293ad5f664aedff24e0ac79357735dab1fa90fde049",
+  "status": "valued",
+  "literal_analysis": "ExactGen.GWorlds2026champion,Otherifcanceled/postponed/nochampionNov28ET; alphabeticalmultiplewinner,Riotpreferred/credibleconsensusfallback. Oldstandingssourcewas2025andexplicitlycorrected.",
+  "evidence": [
+    {
+      "url": "https://lolesports.com/en-US/gpr/2026/current",
+      "observed_utc": "2026-10-17T22:34:49.990169+00:00",
+      "finding": "DatedOct17currentstrengthscores, notofficialtitleprobabilities; originalGPRmappinguncertaintyretained."
+    },
+    {
+      "url": "https://lolesports.com/en-US/leagues/wqs",
+      "observed_utc": "2026-10-17T22:34:49.990248+00:00",
+      "finding": "Exact2026tournament/currentplay-inmatches; olderstandingsidentifiedas2025, notfutureSwissresults."
+    },
+    {
+      "url": "https://cdn.sanity.io/files/dsfx7636/news_live/faa5ce974e58615911fbee931c6123e2785a8b46.pdf",
+      "observed_utc": "2026-10-17T22:34:49.990251+00:00",
+      "finding": "Original2026format/seed/draw/BOclausesreadandprojectedintotournamentsimulation."
+    },
+    {
+      "url": "https://lolesports.com/en-US/news/dev-diary-unveiling-the-global-power-rankings",
+      "observed_utc": "2026-10-17T22:34:49.990254+00:00",
+      "finding": "2024originalEloexpected-resultimage600denominator; notproofcurrent2026calibration."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.14,
+    "low": 0.05,
+    "high": 0.4,
+    "method": "Primary joint tournament simulation with explicit GPR unit/scale and persistent-form sensitivities",
+    "reasoning": "Current full-field constrained Swiss/BO5 model mixture givesGEN14.544%before1%exception/deadlineallowance; rounded14%, broad5–40%specificationrange, nooddsinput or calibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:20.223+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 43,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.14,
+        "best_bid": 0.3,
+        "best_ask": 0.31,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.923,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.31,
+            "fee_usd": 0.10694999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.20695,
+        "fee_usd": 0.10695,
+        "break_even_probability_before_carry": 0.320695,
+        "break_even_probability_with_idealized_carry": 0.32183404484090045,
+        "central_expected_profit_usd": -1.8069499999999998,
+        "default_10pp_stressed_profit_usd": -2.80695,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.04000000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.895
+      },
+      "No": {
+        "probability": 0.86,
+        "best_bid": 0.69,
+        "best_ask": 0.7,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.923,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.7,
+            "fee_usd": 0.10500000000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.10501,
+        "fee_usd": 0.10501,
+        "break_even_probability_before_carry": 0.710501,
+        "break_even_probability_with_idealized_carry": 0.7130245582048508,
+        "central_expected_profit_usd": 1.4949899999999996,
+        "default_10pp_stressed_profit_usd": 0.4949899999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.76,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.793049999999999
+      }
+    }
+  },
+  "verdict": "Bothsidesvalued; YESnegativecentral, NO70c failscase-specific15ppreserveafterfees/carry; <=69cpassiveNOresearchwatch, noorder.",
+  "reopen_condition": "Freshnextdraw/series/roster/patchorvalidatedstrengthmapping; materiallybetterpassiveNOwithindependentreview/currentgates.",
+  "current_description_sha256": "8fc8e5fb6cae19590bbdd0f002496a91b8be414b57dfc5511c912c4feab80c70",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "15907269680083135091620869613557617263613890890387514554477997501123964677519",
+    "82487289327586076731223934931200437075809701560479426984178227650142334617441"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0076",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0076.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0076.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0083",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/worlds_2026_method.md",
+    "tracked_model": "research/2026-10-17-deep-review/models/worlds_2026_model.py",
+    "source_packets": [
+      "data/deep_review_20261017/esports_current_sources.json",
+      "data/deep_review_20261017/lol_2026_seeding_sources_followup.json",
+      "data/deep_review_20261017/lol_2026_power_ratings_sources.json",
+      "data/deep_review_20261017/lol_2026_playin_correction_addendum.json"
+    ],
+    "source_identity_correction": "Originalstandings113475452383887518is2025,not2026; timestampsproveit.",
+    "case_specific_reserve_for_entry": 0.15,
+    "model_calibrated": false,
+    "priority_followup": true
+  },
+  "evaluated_utc": "2026-10-17T22:34:50.260794+00:00",
+  "question": "Will Gen.G win Worlds 2026?",
+  "market_id": "4397022",
+  "valuation_author": "primary_operator",
+  "original_index": 54,
+  "report_sha256": "0336f1e3a7a2f67ccbb03a8bd7d938c062a2debcaae984a6d73d28e304da47d1"
+}

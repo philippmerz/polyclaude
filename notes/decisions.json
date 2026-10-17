@@ -1,5 +1,5 @@
 {
-  "next_id": 207,
+  "next_id": 208,
   "decisions": [
     {
       "id": 1,
@@ -4378,6 +4378,26 @@
         "pending-zero-fill"
       ],
       "slug": "will-the-democratic-party-win-the-ny-01-house-seat",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 207,
+      "timestamp": "2026-10-17T22:17:09Z",
+      "type": "open_position",
+      "thesis": "Posted exact case158 post-only BUY NO5@.62, maximum3.10pUSD. Order 0x22dc43713b55396bed6dfe7983285ca79ca5167c1c8cbb0b377a0081db13a597. Primary currentYES24/NO76, ordinary10ppreserve, conservative same ai-ships-fast-short cluster as heldOpenAIHLE_NO9 (not IPO). Both independent reviews and original rules read; current share/close fallback and stronger-demand branch retained. Independently verified LIVE/zero matched and zero both-outcome CTF balances at Polygon95713340; total fivepending12.90/free12.096890. This is an unfilled cash commitment, not a purchased position or profit.",
+      "confidence": "medium",
+      "prediction": "Conditional on a genuine fill, P(NO)=.76 is uncalibrated primary judgment. Cancel first on material new S1/roadshow/price-range/pricing/firsttrade/governance/safety/rival evidence; pull before known information window and revieweverytick/earliernews. Do not grade an unfilled bid as an investment.",
+      "size_usd": 3.1,
+      "resolution_at": "2027-01-08",
+      "tags": [
+        "deep-review",
+        "maker",
+        "ai-ships-fast-short",
+        "pending-zero-fill"
+      ],
+      "slug": "will-anthropic-have-the-highest-ipo-market-cap-2026-673",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -1,0 +1,148 @@
+{
+  "review_index": 67,
+  "condition_id": "0x16248fb1d6b56e9b851f45fadb1e501c0a82c51a60c9808c6f51f052d3684820",
+  "criteria_sha256": "b8c041834eac177fcd5cbc9dbd263b1f0035ca1bd1494d089455c09c3ab6726c",
+  "status": "valued",
+  "literal_analysis": "PhysicalRussian-productiondiesel forUSdomesticuse afterexactcreationbyOct31ET; bunkers/reexport/transitexcluded; agreementORlicense qualification; nopostcreationloadingrequirement.",
+  "evidence": [
+    {
+      "url": "https://ofac.treasury.gov/media/937216/download?inline=",
+      "observed_utc": "2026-10-17T22:13:00Z",
+      "finding": "Full authorization and exception; permission is not physicalimport."
+    },
+    {
+      "url": "https://www.wwaytv3.com/possible-russian-diesel-shipment-to-wilmington-raises-concerns-among-ukrainian-americans/",
+      "observed_utc": "2026-10-17T22:13:00Z",
+      "finding": "Original localreport includesoperatorrepresentative identifyingfertilizer onnamedvessel, notdiesel."
+    },
+    {
+      "url": "https://www.inkl.com/news/no-this-oil-tanker-didnt-carry-russian-diesel-to-the-united-states",
+      "observed_utc": "2026-10-17T22:13:00Z",
+      "finding": "France24originalinterviewattribution in translatedrepublication supports samevesselcargo correction; notindependentfleetinventory."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.14,
+    "low": 0.02,
+    "high": 0.55,
+    "method": "Primary past-missed-import and prepared-versus-opportunistic qualifying-delivery tree",
+    "reasoning": "2%pastmiss;otherwise15%prepared×65%timely plus85%other×3.5%; noempiricalfleetcalibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:22.533+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 15,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.14,
+        "best_bid": 0.059,
+        "best_ask": 0.069,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 31.326,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.069,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.6900000000000001,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.069,
+        "break_even_probability_with_idealized_carry": 0.06908539235646785,
+        "central_expected_profit_usd": 0.7100000000000001,
+        "default_10pp_stressed_profit_usd": -0.29,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.04000000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.59
+      },
+      "No": {
+        "probability": 0.86,
+        "best_bid": 0.931,
+        "best_ask": 0.941,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 31.326,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.941,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.41,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.9410000000000001,
+        "break_even_probability_with_idealized_carry": 0.9421645537309601,
+        "central_expected_profit_usd": -0.8100000000000005,
+        "default_10pp_stressed_profit_usd": -1.8100000000000005,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.76,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.31
+      }
+    }
+  },
+  "verdict": "YES centralvaluepositive but failsordinary10ppreserve; NOcentralnegative. Future<=3cmaker/evidencewatchonly, noentry.",
+  "reopen_condition": "Verifiedspecificdieselcargo/USreceiver/origin/ETA/domesticdelivery, amendedlicense/agreement, primarysourcecorrection or deadline; actualshipmentnewsrequiresrevalue.",
+  "current_description_sha256": "bd936e4a0eccf2e8fb2031c6a27c9660e4f5bdf6abde5affacfa6055ba99d1cd",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "21066467540090098609907924879704517185185921738831690901320709657621226309874",
+    "2845197477927518611377148268122592327727731644032696056455781192842287643344"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0090",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0090.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0090.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0104",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/diesel_pandemic_sources.json",
+      "data/deep_review_20261017/diesel_shipping_followup.json"
+    ],
+    "tree_unrounded_p_yes": 0.144705,
+    "model_calibrated": false,
+    "named_rumor_vessel": "MINERVA ZEN",
+    "IMO": "9410909",
+    "named_vessel_cargo_evidence": "UANfertilizer, attributedoperator/data-providerstatements; no customsmanifest recovered"
+  },
+  "evaluated_utc": "2026-10-17T22:14:06.215279+00:00",
+  "question": "US imports Russian diesel by October 31?",
+  "market_id": "5476380",
+  "valuation_author": "primary_operator",
+  "original_index": 67,
+  "report_sha256": "5bc3bb7cafc68bd6c4b435c7b41707c4a9e6068e2bec19c0859ce9a773fac146"
+}

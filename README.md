@@ -64,18 +64,18 @@ blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-was sent in chat and Telegram. At21:40UTC,134 valuations,1 blocked review and325
-closed-market exclusions are saved;2,540 remain pending. At21:35:13UTC, four
-post-only bids are verified LIVE with zero fills: ME-02YES10@38c, CA-06NO50@3c,
-MT-01YES10@33c andNY-01YES10@12c, total pending commitment **$9.80**.
-Polygon95711709 confirms zero candidate shares; pUSD24.996890 and
-uncommitted15.196890. Read
-[current entry follow-up](research/2026-10-17-deep-review/candidate_followup.md),
-[current source corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md)
-and [resting-order management](notes/resting_orders.md). The IPO-capitalization
-candidate remains blocked for entry pending an exact historical-close check;
-no IPO/ISRG order exists. These commitments are separate from the older
-bankroll/held-thesis snapshot below; review at22:00UTC or earlier on news.
+was sent in chat and Telegram. At22:37UTC,150 valuations,1 blocked and327 factual
+exclusions are saved;2,522 remain pending. Every
+case updates the index before the next. Current MNI estimate37% and IPO-largest
+24%YES/76%NO are explicit uncalibrated judgments; original reports staydated.
+At22:15:59 five post-only bids were independently verified LIVE/zero matched:
+ME02YES10@38c,CA06NO50@3c,MT01YES10@33c,NY01YES10@12c,and
+Anthropic-largestIPO NO5@62c. Fullpending **$12.90**, uncommitted12.096890pUSD;
+all candidate outcome balances0. These are commitments, not purchases/profit.
+Read [current entry follow-up](research/2026-10-17-deep-review/candidate_followup.md),
+[current corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md), and
+[resting-order management](notes/resting_orders.md). No ISRG/Spotify order.
+Last fullheld-thesis review22:00; reviewbids eachtick/earlier materialnews.
 
 ## Mandate and constraints
 
@@ -97,59 +97,52 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-17 ~18:04 UTC
+## Last bankroll snapshot — 2026-10-17 ~22:00 UTC
 
-Bankroll own-component window: 2026-10-17T18:04:08.931921–18:04:24.094923 UTC.
-These rounded sequential estimates are not synchronized NAV or a certified
-liquidation; VM/API costs are excluded.
+Bankroll own-component window22:00:36–22:00:52UTC. Rounded sequential marks
+are not synchronized NAV or a freshness-certified liquidation; VM/API costs
+are excluded. The separate positions command marked PM at30.80 rather than
+bankroll's30.94 because its observation window differs.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $196.46 |
-| Separately funded gas | $5.82 |
-| Trading midpoint / indicative depth | $190.64 / $188.67 |
-| PM midpoint / indicative depth | $30.98 / $29.01 |
-| Whole-account approximate depth | $194.49 |
+| Total marked bankroll | $196.37 |
+| Separately funded gas | $5.76 |
+| Trading midpoint / indicative depth | $190.61 / $188.56 |
+| PM midpoint / indicative depth | $30.94 / $28.89 |
+| Whole-account approximate depth | $194.32 |
 | Remaining open-position cost | $29.86 |
 | Settled accounting residual | $19.53 |
 
-Since 14:00, trading midpoint/depth rose $0.23/$0.52 and the settled residual
-rose $0.01 at displayed precision. This is not a synchronized return measure.
+Since18:00, trading midpoint/depth changed−$0.03/−$0.11; settled residual is
+unchanged. Retain OpenAI HLE NO9 with priors25%/15%/38%; current23c/26c
+book passed at20.00s byPOST, fee-net full exit2.00624. The conditional central
+and upper cases hold; stress exits9. This is not calibrated joint optimization.
+Clarity29/29 retains its conditional29 floor, but both books failed180s on
+GETandPOST (about340/423s); there is **no current paired-exit price certificate**.
+Keep both/noadd. AtPolygon95712709, pUSD24.996890/aUSDC122.112198 and live
+variable Aave3.05351963%. Gemini50 is finalYES; losingNO4.034750 remains
+zero value/no burn. Retain Hormuz0.003571dust: point gas0.00460968 exceeds
+payout using dated175036units and roundedFX, not a new simulation.
 
-Retain OpenAI NO 9 shares and Clarity 29/29; no trade or prior change. OpenAI
-priors remain 25%/15%/38%. The receipt-time book was $0.25/$0.28, accepted by
-GET at 51.76 seconds; fee-net full exit was $2.1825. With no carry, central and upper cases favor holding while stress favors selling
-all 9. Idealized free Aave carry makes a 5-share central trim better by only
-0.00000749 conditional log-growth; actual funding/deployment costs and joint-risk
-calibration are unproven, so retain all 9. This is not a global optimum. Clarity's current paired
-net exit was $26.83184 against a conditional $29 floor; even idealized free,
-constant carry raises the exit only to $27.00151. Keep both legs and do not add.
+All26 sampled sources were captured/hashed;65HLE objects, five Gamma rules,
+256Senate rows and article/AA comparisons match18:00. OpenAI maximum53.6<55;
+Diamond is separate. Three direct OpenAI pages returned403 coverage gaps.
+Root consumed the knownCA06powder alert and Oct13partisanMTdebate release;
+neither established a ballot/withdrawal change. No universal no-news claim.
 
-At the fixed block, pUSD was $24.996890 and aUSDC $122.110518; live Aave rate
-was 3.05530437%. The Gemini 50 market is final YES; its 4.034750 losing NO shares remain held at
-zero payout/value, with no rebook or burn. Keep the $0.003571 Hormuz claim: the point gas
-estimate $0.00447662 exceeds payout using the dated 175,036-unit simulation
-and rounded FX; no new simulation or broadcast.
-
-The bounded source check made 17 GET requests: 14 returned HTTP 200 and three
-direct OpenAI pages returned 403, and the OpenAI news-browser source remains a
-coverage gap. Existing official pages added no new threshold evidence. All 65 HLE
-objects and sampled held criteria, Senate rows, article cores and AA 57/44 were
-stable. No new sampled RSS/public-tail rows appeared; this is bounded coverage. The completed 3,000-row diagnostic
-still has 217 source flags without follow-up and 2,716 unpriced rows; it does
-not establish that opportunities are absent. No discovery or research scan ran
-in this light check.
-
-All 19 routine commands returned zero; 38 timed streams were hash-verified and
-the position audit is CLEAN. Four daemons are current; heartbeat age was 1,613s
-within its 3,600s cadence and news-state age was 32s. Disk free was 341.88 MiB,
-below the 512 MiB warning and above the 128 MiB critical threshold; no cleanup
-or restart was performed. Seventy-seven decisions remain pending, none overdue.
-Weekly review is due Oct 23, monthly Nov 12, and the next light check is 22:00.
-Manual issuer-account credential rotation remains blocked. See the [18:00 check
-journal](notes/journal.md), [risk review](data/periodic_20261017T1800_risk.json),
-[source report](logs/periodic_20261017T1800/sources/report.md), [source summary](data/periodic_20261017T1800_sources.json), [routine receipts](data/periodic_20261017T1800_routine.json), [finality check](data/periodic_20261017T1800_G_finality.json), and [gas check](data/periodic_20261017T1800_hormuz_gas_rpc.json).
+Nineteen routine command types ran once;38timed streams verified. Eighteen
+returned0; state audit returned1 for four priors attached to verified LIVE,
+unfilled bids. These are expected pending-order judgments, not lost holdings;
+no prior deletion or false closure note. Eight financial records were unchanged.
+All four daemons are current; disk193.88MiB remains below512warning/above128
+critical.81decisions pending,0overdue. WeeklyOct23/monthlyNov12 remain due;
+next existing scheduled check02:00UTC. The finite in-depth review continues.
+See [root judgment](data/periodic_20261017T2200_root_judgment.json),
+[risk](data/periodic_20261017T2200_risk.json),
+[sources](data/periodic_20261017T2200_sources.json),
+[routine](data/periodic_20261017T2200_routine.json), and [journal](notes/journal.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

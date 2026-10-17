@@ -1,0 +1,163 @@
+{
+  "schema": "public_quote_capture_archive.v1",
+  "created_utc": "2026-10-17T22:06:22.750886+00:00",
+  "scope": "12 static public quote batch JSON captures; exact original payload bytes retained in deterministic gzip archives",
+  "compression": {
+    "format": "gzip",
+    "level": 6,
+    "mtime": 0,
+    "method": "gzip.compress"
+  },
+  "path_resolution": "The original .json path maps to archive_path. Immutable reports may retain original_path; this manifest records the archival mapping.",
+  "entry_count": 12,
+  "original_total_bytes": 15281192,
+  "archive_total_bytes": 2453936,
+  "bytes_reclaimed_after_original_removal": 12827256,
+  "hash_algorithm": "SHA-256 over exact original bytes and exact gzip archive bytes",
+  "entries": [
+    {
+      "original_path": "data/deep_review_20261017/quotes_0001_0120.json",
+      "archive_path": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+      "original_bytes": 2125702,
+      "original_sha256": "41b02de97901d533a593e9945fa7ccb093d57b50dc2d6ae64c3c27aa9e9bffb8",
+      "archive_bytes": 308560,
+      "archive_sha256": "178d116cdab5d6a689a62c6701b9d34370fe3558fcdff6cd19d5a7cba4f2bf20",
+      "original_index_start": 1,
+      "original_index_end": 120,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0001_0120.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_0121_0240.json",
+      "archive_path": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+      "original_bytes": 1234986,
+      "original_sha256": "6469e97e7085ec38de8b3d48eb36fd9d20600dee0a9ec4f4005ec88ba8ccf838",
+      "archive_bytes": 200054,
+      "archive_sha256": "1fe582e0fc3113dc2b082a120cf013ebfdc12e920309e127a7f788017f0ecfe2",
+      "original_index_start": 121,
+      "original_index_end": 240,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0121_0240.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_0241_0360.json",
+      "archive_path": "data/deep_review_20261017/quotes_0241_0360.json.gz",
+      "original_bytes": 1245605,
+      "original_sha256": "106337c9dbcb476f51f74fda0cd6ec04b77bc3ddb44e1714feb989184eed7abd",
+      "archive_bytes": 205171,
+      "archive_sha256": "70a0b2784c7fb4449efd35f00d753967dd179c961d9c258d97d1c20fda0f4e38",
+      "original_index_start": 241,
+      "original_index_end": 360,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0241_0360.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_0361_0480.json",
+      "archive_path": "data/deep_review_20261017/quotes_0361_0480.json.gz",
+      "original_bytes": 1182795,
+      "original_sha256": "d37b00773b6dc9efb785fa8816aa6c056382b65ed2ca4e622d0106ebe555242b",
+      "archive_bytes": 192998,
+      "archive_sha256": "793c516a9c432700827d101498f4be642c55b66883530b67972255f63fd4885f",
+      "original_index_start": 361,
+      "original_index_end": 480,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0361_0480.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_0481_0600.json",
+      "archive_path": "data/deep_review_20261017/quotes_0481_0600.json.gz",
+      "original_bytes": 1221572,
+      "original_sha256": "8e10f459eed70b2fbe69e0947ec83acc81390b2ddef984e0f022918754da6fa2",
+      "archive_bytes": 200497,
+      "archive_sha256": "048b5f3fb771b614d9b2c943919a5bd17f5b3d265d416211a17c9d6358491331",
+      "original_index_start": 481,
+      "original_index_end": 600,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0481_0600.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_0601_0720.json",
+      "archive_path": "data/deep_review_20261017/quotes_0601_0720.json.gz",
+      "original_bytes": 1161308,
+      "original_sha256": "10329353092f4f4e245d1f48246fc3af1912afafd2d90207899f3b9e88984e96",
+      "archive_bytes": 187950,
+      "archive_sha256": "b4d7617bdbe3384e259bbaf8c46a804574a96d94c0f4639277bc0fbe404a7272",
+      "original_index_start": 601,
+      "original_index_end": 720,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0601_0720.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_0721_0840.json",
+      "archive_path": "data/deep_review_20261017/quotes_0721_0840.json.gz",
+      "original_bytes": 1228179,
+      "original_sha256": "87f62ae1a8a7c6f67cc77a195501638f4f7465606435a4abf3a6d3ff1d7a64cc",
+      "archive_bytes": 201738,
+      "archive_sha256": "c5d23f3fcc4c9bd17feacc620b2cc58f12a44299dbc4225e6c2fbb752fe5b6a0",
+      "original_index_start": 721,
+      "original_index_end": 840,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0721_0840.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_0841_0960.json",
+      "archive_path": "data/deep_review_20261017/quotes_0841_0960.json.gz",
+      "original_bytes": 1216956,
+      "original_sha256": "99c834b018adf8a09d05cbf5322b86ca4ad8c0c7c393944fc4d5173ad4b3de30",
+      "archive_bytes": 197928,
+      "archive_sha256": "bffa12c4b123cfc936a0d589b5dec4e756b815977f44da0b9e77211b9d9e1b5a",
+      "original_index_start": 841,
+      "original_index_end": 960,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0841_0960.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_0961_1080.json",
+      "archive_path": "data/deep_review_20261017/quotes_0961_1080.json.gz",
+      "original_bytes": 1213142,
+      "original_sha256": "545931724a0e6f7c594c35edc64581c6a45b8d9fd91d1fc245c95b0a77d8aea2",
+      "archive_bytes": 198884,
+      "archive_sha256": "6501fb8232a2b10ada8a2ba8738d79beab4fada8403ef077ed220e719d9fd7ee",
+      "original_index_start": 961,
+      "original_index_end": 1080,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_0961_1080.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_1201_1320.json",
+      "archive_path": "data/deep_review_20261017/quotes_1201_1320.json.gz",
+      "original_bytes": 1137890,
+      "original_sha256": "5680040e5bfae06cd55cddbf5a9cc440f7f1184435f2397a048b3388e43bd372",
+      "archive_bytes": 184098,
+      "archive_sha256": "ad645d65f75dcdcf867479b4b6c64950d3cd0c30a3c8d626ffa985770cb34bfa",
+      "original_index_start": 1201,
+      "original_index_end": 1320,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_1201_1320.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_1561_1680.json",
+      "archive_path": "data/deep_review_20261017/quotes_1561_1680.json.gz",
+      "original_bytes": 1128134,
+      "original_sha256": "c656cd1e4afa6b64b0e4404ee22f28a896df4a7f02ef76dba5673ca9804226a0",
+      "archive_bytes": 180363,
+      "archive_sha256": "e53b99b0b1fec9037dd5facf04dc93ac605029905364f3f7676f2218c78c58d9",
+      "original_index_start": 1561,
+      "original_index_end": 1680,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_1561_1680.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_1921_2040.json",
+      "archive_path": "data/deep_review_20261017/quotes_1921_2040.json.gz",
+      "original_bytes": 1184923,
+      "original_sha256": "f8c1061052eba1798aabdfa5ee2b43bdd1d212fda9dd38910dff6a2774bd62a5",
+      "archive_bytes": 195695,
+      "archive_sha256": "b2761f2c2512f147ba27438488c553ca001ac56a38c510bd6bd62a5871562f31",
+      "original_index_start": 1921,
+      "original_index_end": 2040,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_1921_2040.json",
+      "round_trip_verified_before_write": true
+    }
+  ]
+}

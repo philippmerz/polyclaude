@@ -1,0 +1,145 @@
+{
+  "review_index": 198,
+  "condition_id": "0x40a8b496dfd17f0a1c80e6a818d621b793847a398dab8ddc4f0598126446a0d7",
+  "criteria_sha256": "9fdeb0d610a9556da4cca62c07f81e5372308c4d7187464b35a4a153a1737da3",
+  "status": "valued",
+  "literal_analysis": "Byte-identical full US2026official#2 rules, alphabetical tie and January31ET Other fallback read; exact named recording/CID/tokens retained. Weekly/global/artist totals do not settle.",
+  "evidence": [
+    {
+      "url": "https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/",
+      "observed_utc": "2026-10-17T20:29:27+00:00",
+      "finding": "Prior official region-specific annual publication semantics, not2026 ranking."
+    },
+    {
+      "url": "https://newsroom.spotify.com/2025-12-05/wrapped-methodology-explained/",
+      "observed_utc": "2026-10-17T20:29:27+00:00",
+      "finding": "Personal2025 methodology; exact2026 aggregate cutoff not established."
+    },
+    {
+      "url": "https://kworb.net/spotify/track/7J1uxwnxfQLu4APicE5Rnj.html",
+      "observed_utc": "2026-10-17T20:29:27+00:00",
+      "finding": "Exact ID-specific US charted rows, absent dates and explicit below-Top200 observations retained separately."
+    },
+    {
+      "url": "https://open.spotify.com/track/7J1uxwnxfQLu4APicE5Rnj",
+      "observed_utc": "2026-10-17T20:29:27+00:00",
+      "finding": "Official recording title/credits/catalog metadata; later album dates may differ from original release."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.005,
+    "low": 0.0001,
+    "high": 0.3,
+    "method": "Primary joint US#2 cohort, recovered history, calendar adjustment, hypothetical cutoff and exceptional-method scenario model",
+    "reasoning": "Tracked54-ID model; explicit old-song vs low/pre-release history, censoring, future pace and alias uncertainty. Tail rounding is subjective; no empirical calibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:49.567+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 47,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.005,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.408,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.001,
+            "fee_usd": 0.0004995
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.0105,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.0010500000000000002,
+        "break_even_probability_with_idealized_carry": 0.0010540769839013369,
+        "central_expected_profit_usd": 0.0395,
+        "default_10pp_stressed_profit_usd": -0.0105,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false
+      },
+      "No": {
+        "probability": 0.995,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.408,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": false,
+        "fills": [],
+        "filled_gross_shares": 0,
+        "taker_cost_usd": null,
+        "fee_usd": null,
+        "break_even_probability_before_carry": null,
+        "break_even_probability_with_idealized_carry": null,
+        "central_expected_profit_usd": null,
+        "default_10pp_stressed_profit_usd": null,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.895,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.9895
+      }
+    }
+  },
+  "verdict": "Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations",
+  "reopen_condition": "OfficialUSannual/cutoff/aggregation evidence, complete missing history, a sustained large US surge or a different supported fee-net maker price requires primary revaluation.",
+  "current_description_sha256": "396e9b9a1c1e85cd902d97fe1b2ca73da8a3962fe92ac224ac11405597fce141",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "108699525912600129006013822045605479741302630048737724289292693396526549598472",
+    "78952272960578378286167251757902449521394256643165032896110985498761252122297"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0149",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0152",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/spotify_annual_sources.json",
+      "data/deep_review_20261017/spotify_early_history_addendum.json",
+      "data/deep_review_20261017/spotify_history_identity_followup.json",
+      "data/deep_review_20261017/spotify_release_chronology_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/spotify_joint_model.py",
+    "model_calibrated": false,
+    "default_probability_reserve": 0.1,
+    "shared_ranking_model": true
+  },
+  "evaluated_utc": "2026-10-17T21:54:24.600714+00:00",
+  "question": "Will Billie Jean – Michael Jackson be the #2 song in the US for 2026?",
+  "market_id": "3211316",
+  "valuation_author": "primary_operator",
+  "original_index": 198,
+  "report_sha256": "a5fbd1d5e755f45408461b1586d8bc1a462bc6b37d2c93c0be3c8db812781704"
+}

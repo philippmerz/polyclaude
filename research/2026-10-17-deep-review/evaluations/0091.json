@@ -1,0 +1,148 @@
+{
+  "review_index": 91,
+  "condition_id": "0x4bb452108ef121f520eb536b0c55f71ed55916e2e6807e20ebadd1b4330662c5",
+  "criteria_sha256": "6f8b856fab46ba8a26544dcc3f860e2a61d06fb8dc36245f8f4f5fa1368448a2",
+  "status": "valued",
+  "literal_analysis": "Fullrule: featured/creditedartist on exactalbum, Rockstarpreferred/officialplatformfallback, actualNov26ETreleasefallback supersedes earliermetadata; radio/preorder do not count.",
+  "evidence": [
+    {
+      "url": "https://www.rockstargames.com/VI/music",
+      "observed_utc": "2026-10-17T22:06:12Z",
+      "finding": "Official34-track project and nine explicitly selected singles; not complete credits."
+    },
+    {
+      "url": "https://itunes.apple.com/lookup?id=6812476961&entity=song&country=us",
+      "observed_utc": "2026-10-17T22:06:12Z",
+      "finding": "Official exactUSalbum:34trackrecords,9named/25placeholders; unknowns notnegativecredits."
+    },
+    {
+      "url": "https://music.apple.com/us/album/grand-theft-auto-vi-the-album/6812476961",
+      "observed_utc": "2026-10-17T22:06:12Z",
+      "finding": "Official prerelease identity/date/copyright; metadata notactualdelivery."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.22,
+    "low": 0.03,
+    "high": 0.7,
+    "method": "Primary artist-selection prior, disclosure-conditioned odds and timely-release scenario",
+    "reasoning": "32%inclusionprior×65%unannouncedlikelihood gives23.42%conditional;94%timely/creditfactor gives22.018%, uncalibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:25.007+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 41,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.22,
+        "best_bid": 0.34,
+        "best_ask": 0.35,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 78.494,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.35,
+            "fee_usd": 0.11374999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.61375,
+        "fee_usd": 0.11375,
+        "break_even_probability_before_carry": 0.361375,
+        "break_even_probability_with_idealized_carry": 0.36259873197659265,
+        "central_expected_profit_usd": -1.4137499999999998,
+        "default_10pp_stressed_profit_usd": -2.4137500000000003,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.12,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.2878000000000003
+      },
+      "No": {
+        "probability": 0.78,
+        "best_bid": 0.65,
+        "best_ask": 0.66,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 78.494,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.66,
+            "fee_usd": 0.11220000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.712210000000001,
+        "fee_usd": 0.11221,
+        "break_even_probability_before_carry": 0.6712210000000001,
+        "break_even_probability_with_idealized_carry": 0.6734939701862622,
+        "central_expected_profit_usd": 1.08779,
+        "default_10pp_stressed_profit_usd": 0.08779000000000003,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.68,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.38625
+      }
+    }
+  },
+  "verdict": "NO centrally positive, but opaque-selection15ppreserve rejects capturedroute. Consider<=60csmallpassivewatch after bettercredits/currentgates; noentry.",
+  "reopen_condition": "Official fulltracklist, artistcredit, nextsingle, albumrelease/postponement or materially cheaperNOoffer; rulealias/producerforks requireprimaryreview.",
+  "current_description_sha256": "86cf3d37b6a61651666b58e05ed2b8b8c96d68299b68906aa21e7b5e8deb335c",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "30968267965929917155915745713721767812376110168688330391887559073490644049113",
+    "49924480705377791080325804911461698875393558665925826122788056692695656074361"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0115",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0115.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0115.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0125",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/gta_release_album_sources.json",
+      "data/deep_review_20261017/gta_album_credits_followup.json"
+    ],
+    "tree_unrounded_p_yes": 0.2201801801801802,
+    "entry_reserve_pp": 15,
+    "official_tracks_named": 9,
+    "official_tracks_placeholder": 25,
+    "model_calibrated": false
+  },
+  "evaluated_utc": "2026-10-17T22:08:41.511519+00:00",
+  "question": "Will The Weeknd be featured on GTA VI: The Album?",
+  "market_id": "4662690",
+  "valuation_author": "primary_operator",
+  "original_index": 91,
+  "report_sha256": "8f02670cae3e5d92c27d0a88742625a874f26fbff5dfb85daa1ec080d9069525"
+}

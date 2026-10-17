@@ -2,6 +2,18 @@
 
 Canonical evaluation files remain immutable observations. Read this file with the index and candidate follow-up before interpreting current probabilities or acting.
 
+**October17 21:54UTC — Spotify joint update, case2 and ten new children.**
+The current primary MNI US annual #2 estimate is **37%**, superseding the
+immutable case2's42% observation. All seven missing early weekly cells were
+recovered. The week labelled January1 includes six2025days, so weekly-window
+sums are not exact calendar2026 totals. The revised joint model preserves
+calendar allocation, cutoff, track-identity and unseen-competitor uncertainty.
+See [case2 dated revision](revisions/0002_20261017_spotify_history.md), the shared
+Spotify model/method/audit, and completed cases30,58,86,114,140,142,170,198,219,233.
+The MNI entry reserve is now15pp; neither side clears the captured offers.
+No Spotify order or canonical financial prior changed. Counts are144valued,
+1blocked,325factual exclusions,2530pending; checkpoint/index are authoritative.
+
 **October17~19:57UTC — cases81 NC11 and116 OH07: widen sensitivity ranges.** The reproducible national/PVI/poll-bias grid spans PYES.32927–.93384 forNC11 and.36354–.93500 forOH07. The initial narrative ranges.40–.90/.40–.95 were too narrow for that saved grid. The current primary ranges are **NC11 .30–.95; OH07 .35–.95**. Central70%/72% remain unchanged; these are sensitivity ranges, not confidence intervals or guarantees. No position/order was changed. The case81 plausibleNOlowerendpoint is therefore.05, not.10; neither provides a proven positive-entry floor at the oldNOquote. Balanced review is underway before any money moves.
 
 Actual guarded candidate-route observations and the Netflix coverage/cluster gaps are in [candidate_followup.md](candidate_followup.md). Those later observations supersede a report's original proposed price as a live entry claim, without erasing its dated quote/model record. No order had been placed at the19:57 observation; the20:52 update now records two LIVE zero-filled pilot bids.
@@ -115,3 +127,99 @@ that bounded factual gap. No IPO order, prior or reservation exists. Retain the
 dated research model as provisional; **do not execute case158 until this gap
 and current route/source checks are resolved**. Any new verified value must
 recompute the joint model and appear here; do not erase the original evidence.
+
+
+## October17, 21:56 UTC — IPO158 fallback corroboration and new primary value
+
+A single public Yahoo chart request returned the exact SPCX/USD June12 daily
+bar: unadjusted close160.9499969482, same adjusted close, America/New_York,
+timestamp13:30Z. Its timestamp marks the daily bar, not a13:30 closing auction.
+Nasdaq's explicit historical display/API remained unavailable. The frozen rule
+permits another reliable source when the exchange figure is not displayed;
+primary accepts this secondary historical-price fallback, corroborated by
+Nasdaq's approximate2.1T session account and issuer-filed share counts. It is
+not relabelled an exact primary-exchange record. The conditional audit remains
+about2.10456T using base shares; later full-option timing stays separate.
+Evidence: spacex_secondary_close_crosscheck.json / spacex_first_close_verification.json.
+
+A contrary anonymous investor outlook was also read
+([original interview](https://www.fortune.com/2026/10/15/anthropic-investor-ipo-financials/)).
+The revised primary model assigns15% weight to a stronger first-day demand
+scenario and retains85% of the prior regimes. That weight and the2.35T closing
+median/.20 log dispersion are judgments, not an announced price. It also removes
+the favorable but unmeasured6% rival-survival discount for NO underwriting.
+**Current primary case158 YES24% / NO76%, broad YES1–80%**, replacing18/82
+for current decisions. Timing cases28/199 remain rounded71%. Full reproducible
+calculation is models/ai_ipo_current_revision.py/json. Original reports remain
+dated, not rewritten. A maximum roughly$3.20 small maker follow-up may be
+considered after22:00 account/source checks; all current gates and monitoring
+remain necessary. No IPO or ISRG order/prior/reservation exists.
+
+
+## October17 22:10UTC — IPO158 candidate preflight; still no order
+
+Root read the original October14 NYCComptroller letter. It urges a pause and
+requests a response; it is not a displayed regulatory/judicial halt. It supports
+retaining the existing governance/delay branch, not an independent likelihood
+or proof of noIPO. Current24%YES/76%NO stays unchanged. All30eligibleIPOfeed
+baseline entries were seen by exactIDor72htitle before three issuer/CEO terms
+were promoted to tier1 at22:09:51; no stateedit/restart/newtimer. Normal later
+cycle reload still must be checked before a bid.
+
+Current22:09 preflight matched fullfrozenrules/tokens, open/nullUMA, FI02
+blockedfalse, both books~31seconds old and exactcompacttak er-only4%fee.
+There is no existingIPOposition/order; fourHousebids remain pending9.80,
+pUSD24.996890/free15.196890. Added exact candidateprior24/76 to the conservative
+ai-ships-fast-shortcluster with held O_HLE_NO9 (not anIPOholding). The vetted
+dryrun passed ordinary10ppreserve/caps at posted62c/max63c with3.15manualbudget;
+helper precision floors to2decimals behind62.4cbid, so execution would buy5gross
+shares/cost3.10ifactuallyposted. No signedorder or fill yet. Do not replaydryrun
+as execution aftercompaction. Source andaccount receipts are in
+`data/deep_review_20261017/ipo_pilot_preflight.json`; monitoring receipt and
+future orderverification, ifany, must be read separately. Placeholder sibling
+NOs are not fungible with Anthropic despite textualsimilarity warnings.
+
+
+## October17 22:16UTC — IPO small maker posted and independently verified
+
+**October17 22:15:59UTC — five LIVE post-only BUYs; all zero filled.**
+
+| Contract | Shares | Limit | Full pending risk |
+|---|---:|---:|---:|
+| ME-02 Democratic YES | 10 | .38 | $3.80 |
+| CA-06 Democratic NO | 50 | .03 | $1.50 |
+| MT-01 Democratic YES | 10 | .33 | $3.30 |
+| NY-01 Democratic YES | 10 | .12 | $1.20 |
+| Anthropic largest2026IPO cap NO | 5 | .62 | $3.10 |
+
+All five are LIVE/zero matched; both outcome balances on all five candidates
+are0 atPolygon95713340. pUSD24.996890, pending12.90, uncommitted12.096890;
+full authenticated pagination/reservations agree. Venueblocked=false/FI02,
+allowance/approval sufficient. New IPOorder
+`0x22dc43713b55396bed6dfe7983285ca79ca5167c1c8cbb0b377a0081db13a597`,
+market1321564/CID`0xe96dbaceb816e80063bec945a76ac915cba4341bdf1ef704f722bfc9054aad09`,
+NOasset`37461417265919800563099829598896496437436229231955379584818921535241120965562`.
+Use exactslug `will-anthropic-have-the-highest-ipo-market-cap-2026-673`.
+This is a commitment, **not a fill, holding or profit**. DEC-0207 records it.
+
+IPOcurrent primaryNO76%/YES24%, ordinary10ppreserve;5shares@.62 leave.70
+central/.20stressed expected gross before costs, not guaranteed returns.
+At75days currentconstant-Aavecarry sensitivity is about.02 and ordinaryopcost.05;
+stressed surplus is about.13. Maximum standalone loss3.10. Tiny manual sizing
+is far below Kelly because firstdaydemand/timing/shares/universe uncertainty is
+not calibrated. SharedconservativeAIcluster with O_HLE_NO9; no measuredhedge.
+Exactexchangehistoricalclose remains inaccessible; reliableYahoo unadjustedclose
+corroborates160.95 under literal fallback and SECbase shares imply~2.10456T.
+Stronger-demand branch retained, no favorable rival discount. Source/close and
+share-timestamp caveats are inCURRENT_REVISIONS; original18/82report staysdated.
+
+IPOfeed baseline30entries were seen byIDor72htitle before tier1promotion at
+22:09:51. A normalcycle completed22:14:39 after preceding22:09:32save/sleep,
+proving reloadafterpromotion. No newdaemon/timer/directstateedit. Broad issuer,
+Claude-maker and CEO terms bypass small-model filtering. **Review each tick and
+earlier material news; cancel first on changed/uncertain facts, pull before
+known filing/roadshow/pricing/first-trade information windows, and do not leave
+through the firstsession without revaluation.** No known exactnextdate proved.
+House management and prior exact order IDs remain in dated entries below.
+Proof: `data/deep_review_20261017/all_pilots_verified_2216.json`;
+execution log: `logs/deep_review_20261017/ipo_entry_execute_2215.log`.

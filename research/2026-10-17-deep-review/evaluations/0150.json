@@ -1,0 +1,159 @@
+{
+  "review_index": 150,
+  "condition_id": "0xbfc776a7f419fdc9bec5f026cb6bd115db75e22664f5d99873e4c330676015f8",
+  "criteria_sha256": "c1527272557d21ec3f51d96de24f2a580080d69b01d3adc176528995378299e4",
+  "status": "valued",
+  "literal_analysis": "ExactLCKleague-regionWorlds2026firstplace,OtherifnochampionDec31ET; namedFandomsource403gap/noexplicitfallback; notcitizenshiporGENfungiblepair.",
+  "evidence": [
+    {
+      "url": "https://lolesports.com/en-US/gpr/2026/current",
+      "observed_utc": "2026-10-17T22:35:31.206483+00:00",
+      "finding": "Datedcurrentfullfieldrankings; LCKhas4remainingteams, noautomaticchampionshipprobability."
+    },
+    {
+      "url": "https://lolesports.com/en-US/leagues/wqs",
+      "observed_utc": "2026-10-17T22:35:31.206522+00:00",
+      "finding": "Exact2026play-inobjects and priorinternationalseries distinguishfactualresultsfromfutureSwiss."
+    },
+    {
+      "url": "https://lolesports.com/en-GB/news/worlds-2026-primer",
+      "observed_utc": "2026-10-17T22:35:31.206525+00:00",
+      "finding": "Qualifiedteamsandseeding; regionmeansleagueidentity."
+    },
+    {
+      "url": "https://lol.fandom.com/wiki/2026_Season_World_Championship",
+      "observed_utc": "2026-10-17T22:35:31.206527+00:00",
+      "finding": "Namedliteralresolutionsource direct403, currenttableunverified; noautomaticfallbackassumed."
+    },
+    {
+      "url": "https://cdn.sanity.io/files/dsfx7636/news_live/faa5ce974e58615911fbee931c6123e2785a8b46.pdf",
+      "observed_utc": "2026-10-17T22:35:31.206529+00:00",
+      "finding": "BO1/BO3SwissandBO5knockoutdrawrulesread, sourceanddeadlinecontractdifferencesretained."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.46,
+    "low": 0.25,
+    "high": 0.8,
+    "method": "Primary dependent full-field tournament simulation; regional union projected from same champion draws",
+    "reasoning": "GPRunit/scale mixture withpersistentregion/teamshocks givesLCK46.016%;0.5%exception/source/deadlineallowance thenrounded46%, broad25–80%specificationrange. CurrentNOofferpositiveat15ppreservebutnotalladversecases.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.03,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 76,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.46,
+        "best_bid": 0.69,
+        "best_ask": 0.71,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.48,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.71,
+            "fee_usd": 0.061770000000000005
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.161779999999999,
+        "fee_usd": 0.06178,
+        "break_even_probability_before_carry": 0.716178,
+        "break_even_probability_with_idealized_carry": 0.720680006106327,
+        "central_expected_profit_usd": -2.561779999999999,
+        "default_10pp_stressed_profit_usd": -3.5617799999999997,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.36,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.83583
+      },
+      "No": {
+        "probability": 0.54,
+        "best_bid": 0.29,
+        "best_ask": 0.31,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.48,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.31,
+            "fee_usd": 0.06416999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.16417,
+        "fee_usd": 0.06417,
+        "break_even_probability_before_carry": 0.316417,
+        "break_even_probability_with_idealized_carry": 0.31840604639090514,
+        "central_expected_profit_usd": 2.2358300000000004,
+        "default_10pp_stressed_profit_usd": 1.2358300000000004,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.44000000000000006,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.83823
+      }
+    }
+  },
+  "verdict": "Bothsidesvalued; YESnegative, NO31c survives15ppreserve beforefreshentrychecks. Prioritytiny30cpost-onlyNOcandidate pendingindependentnew-classreview, noorder.",
+  "reopen_condition": "Independentstrength-mappingchallenge, currentFandom/officialstate, sourcecoveragebeforeanypassiveNO; everyactualdraw/match/rosterorpatchchangeinvalidatesoldforecast.",
+  "current_description_sha256": "d073794b934ddd1d21a7185929274e0e5040ac99936743fb4bab0d0d0737b1d4",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "71142357229322422344089572678224125547687709803011207827324848262016351952627",
+    "41852539340970627294572261541672153709430009321845187893526698172238523925204"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0055",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/worlds_2026_method.md",
+    "tracked_model": "research/2026-10-17-deep-review/models/worlds_2026_model.py",
+    "source_packets": [
+      "data/deep_review_20261017/lol_2026_power_ratings_sources.json",
+      "data/deep_review_20261017/lol_2026_playin_correction_addendum.json",
+      "data/deep_review_20261017/lol_2026_seeding_sources_followup.json"
+    ],
+    "case_specific_reserve_for_entry": 0.15,
+    "priority_followup": true,
+    "model_calibrated": false,
+    "proposed_future_maximum_pilot_cost": 1.5,
+    "proposal_is_not_live": true
+  },
+  "evaluated_utc": "2026-10-17T22:35:31.428265+00:00",
+  "question": "Will a team from LCK (South Korea) win LoL Worlds 2026?",
+  "market_id": "1059066",
+  "valuation_author": "primary_operator",
+  "original_index": 150,
+  "report_sha256": "0915513a4d45e67550bf0fa0a57decabcccf72777698449fcb3f1613eff0d154"
+}

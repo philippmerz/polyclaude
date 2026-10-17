@@ -1,0 +1,3867 @@
+{
+  "scope": "50 leading observed row-window totals plus all11 named children; incomplete candidate cohort, not full annual rank",
+  "source_asof": "2026-10-17; latest weekly label2026/10/15",
+  "calendar_boundary_caveat": "Jan1 weekly label includes Dec26-Jan1; full row is not seven2026 days. Root model separately handles boundary. Absent dates and censored streams are not zero.",
+  "rows": [
+    {
+      "track_id": "003vvx7Niy0yvhvHt4a68B",
+      "artist": "The Killers",
+      "title": "Mr. Brightside",
+      "weekly_ytd_charted_streams": 229549841,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 10,
+          "streams": 5135497,
+          "cell": "10 ( 5,135,497 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 8,
+          "streams": 5159373,
+          "cell": "8 ( 5,159,373 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0001",
+      "review_index": null,
+      "january1_chart_streams": 4267323,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 16,
+          "streams": 4267323,
+          "cell": "16 ( 4,267,323 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 17,
+          "streams": 4457191,
+          "cell": "17 ( 4,457,191 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 51,
+          "streams": 3783474,
+          "cell": "51 ( 3,783,474 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 69,
+          "streams": 3588869,
+          "cell": "69 ( 3,588,869 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 64,
+          "streams": 3804066,
+          "cell": "64 ( 3,804,066 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 93,
+          "streams": 3725344,
+          "cell": "93 ( 3,725,344 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0001.receipt.json",
+      "raw_sha256": "43370f777699c004828d76cc737b2319d7e2ebde3971b994ea4a5846350e1a70",
+      "full_rows_source": "data/deep_review_20261017/spotify_early_history_addendum.json",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 8,
+        "streams": 5159373,
+        "cell": "8 ( 5,159,373 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "03tqyYWC9Um2ZqU0ZN849H",
+      "artist": "Waka Flocka Flame",
+      "title": "No Hands",
+      "weekly_ytd_charted_streams": 122820140,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 101,
+          "streams": 2477379,
+          "cell": "101 ( 2,477,379 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 58,
+          "streams": 2789202,
+          "cell": "58 ( 2,789,202 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0002",
+      "review_index": null,
+      "january1_chart_streams": 2647876,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 83,
+          "streams": 2647876,
+          "cell": "83 ( 2,647,876 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 62,
+          "streams": 2956934,
+          "cell": "62 ( 2,956,934 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 163,
+          "streams": 2321374,
+          "cell": "163 ( 2,321,374 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 178,
+          "streams": 2424828,
+          "cell": "178 ( 2,424,828 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 155,
+          "streams": 2587831,
+          "cell": "155 ( 2,587,831 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0002.receipt.json",
+      "raw_sha256": "83ea51e6bfcfbb7575727a79303cdb7b55187832f8559e2ba7b25ec023b5cab1",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 58,
+        "streams": 2789202,
+        "cell": "58 ( 2,789,202 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "0eAuGrXyGFYwur9ARUe7LJ",
+      "artist": "Malcolm Todd",
+      "title": "Earrings",
+      "weekly_ytd_charted_streams": 252692021,
+      "weekly_charted_weeks": 41,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 4,
+          "streams": 6390953,
+          "cell": "4 ( 6,390,953 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 3,
+          "streams": 6497057,
+          "cell": "3 ( 6,497,057 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0015",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/08",
+          "rank": 166,
+          "streams": 2175781,
+          "cell": "166 ( 2,175,781 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/15",
+          "rank": 147,
+          "streams": 2442661,
+          "cell": "147 ( 2,442,661 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0015.receipt.json",
+      "raw_sha256": "2f742202e40533d6db75d778060ebe8250a404c9b81289b848aa15b87d79dfee",
+      "full_rows_source": "data/deep_review_20261017/spotify_early_history_addendum.json",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 3,
+        "streams": 6497057,
+        "cell": "3 ( 6,497,057 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "0kosUz0jePvjiz4ctmR6wL",
+      "artist": "Shakira",
+      "title": "Dai Dai",
+      "weekly_ytd_charted_streams": 25815618,
+      "weekly_charted_weeks": 9,
+      "weekly_censored_rows": 13,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02",
+        "2026/04/09",
+        "2026/04/16",
+        "2026/04/23",
+        "2026/04/30",
+        "2026/05/07",
+        "2026/05/14"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        }
+      },
+      "request_id": "track_req_0019",
+      "review_index": 140,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/07/02",
+          "rank": 187,
+          "streams": 2250435,
+          "cell": "187 ( 2,250,435 )",
+          "charted": true
+        },
+        {
+          "date": "2026/07/09",
+          "rank": 135,
+          "streams": 2478532,
+          "cell": "135 ( 2,478,532 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0019.receipt.json",
+      "raw_sha256": "ae091484f9a93807e808b24b2d0487efc69a4aa3f1f63a57fc088fc25ca4acb9",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": null,
+        "streams": null,
+        "cell": "--",
+        "charted": false
+      }
+    },
+    {
+      "track_id": "13HD3tYTiz8oSRxWzXEq7g",
+      "artist": "Ella Langley",
+      "title": "Be Her",
+      "weekly_ytd_charted_streams": 201569353,
+      "weekly_charted_weeks": 35,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 18,
+          "streams": 4179237,
+          "cell": "18 ( 4,179,237 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 15,
+          "streams": 4133343,
+          "cell": "15 ( 4,133,343 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0024",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/02/19",
+          "rank": 23,
+          "streams": 5149674,
+          "cell": "23 ( 5,149,674 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/26",
+          "rank": 23,
+          "streams": 4876532,
+          "cell": "23 ( 4,876,532 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0024.receipt.json",
+      "raw_sha256": "b82d37bbc17d3bc66ffd99bbac2f04e02534a0e5e9594c2b0ff642bfda742e4b",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 15,
+        "streams": 4133343,
+        "cell": "15 ( 4,133,343 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "1CPZ5BxNNd0n0nF4Orb9JS",
+      "artist": "HUNTR/X",
+      "title": "Golden",
+      "weekly_ytd_charted_streams": 116411144,
+      "weekly_charted_weeks": 33,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 115,
+          "streams": 2333765,
+          "cell": "115 ( 2,333,765 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 122,
+          "streams": 2305638,
+          "cell": "122 ( 2,305,638 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0028",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 24,
+          "streams": 5165888,
+          "cell": "24 ( 5,165,888 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 33,
+          "streams": 4954547,
+          "cell": "33 ( 4,954,547 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0028.receipt.json",
+      "raw_sha256": "b0977701607ce58af85db6267fd671cc14138d83293d7cc58f38890a0801f49b",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 122,
+        "streams": 2305638,
+        "cell": "122 ( 2,305,638 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "1DwscornXpj8fmOmYVlqZt",
+      "artist": "PinkPantheress",
+      "title": "Stateside + Zara Larsson",
+      "weekly_ytd_charted_streams": 208076485,
+      "weekly_charted_weeks": 41,
+      "weekly_censored_rows": 1,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 81,
+          "streams": 2584602,
+          "cell": "81 ( 2,584,602 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 80,
+          "streams": 2619349,
+          "cell": "80 ( 2,619,349 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0029",
+      "review_index": 142,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/08",
+          "rank": 153,
+          "streams": 2230045,
+          "cell": "153 ( 2,230,045 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/15",
+          "rank": 114,
+          "streams": 2678348,
+          "cell": "114 ( 2,678,348 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/11",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/18",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0029.receipt.json",
+      "raw_sha256": "da74e395d34ab4db06c4c6255e45e67017475797bcd10fa31ef2b84a2278f5f9",
+      "full_rows_source": "data/deep_review_20261017/spotify_early_history_addendum.json",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 80,
+        "streams": 2619349,
+        "cell": "80 ( 2,619,349 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "1VOSSXuWRcBj2rpfxNdX9v",
+      "artist": "Whiskey Myers",
+      "title": "Broken Window Serenade",
+      "weekly_ytd_charted_streams": 179348884,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 14,
+          "streams": 4653901,
+          "cell": "14 ( 4,653,901 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 11,
+          "streams": 4770994,
+          "cell": "11 ( 4,770,994 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0038",
+      "review_index": null,
+      "january1_chart_streams": 2886592,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 61,
+          "streams": 2886592,
+          "cell": "61 ( 2,886,592 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 63,
+          "streams": 2956373,
+          "cell": "63 ( 2,956,373 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 113,
+          "streams": 2693629,
+          "cell": "113 ( 2,693,629 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 108,
+          "streams": 2942867,
+          "cell": "108 ( 2,942,867 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 110,
+          "streams": 2974310,
+          "cell": "110 ( 2,974,310 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 152,
+          "streams": 2861746,
+          "cell": "152 ( 2,861,746 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0038.receipt.json",
+      "raw_sha256": "152d8941978d086e21d9af6aaabc3a98994a3d1efe9467e4189916d57421992d",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 11,
+        "streams": 4770994,
+        "cell": "11 ( 4,770,994 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "1osfLqL6L2iQsirRf83ded",
+      "artist": "Riley Green",
+      "title": "Worst Way",
+      "weekly_ytd_charted_streams": 119777806,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 74,
+          "streams": 2610857,
+          "cell": "74 ( 2,610,857 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 97,
+          "streams": 2471013,
+          "cell": "97 ( 2,471,013 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0044",
+      "review_index": null,
+      "january1_chart_streams": 2856656,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 64,
+          "streams": 2856656,
+          "cell": "64 ( 2,856,656 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 60,
+          "streams": 2976857,
+          "cell": "60 ( 2,976,857 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 88,
+          "streams": 2959045,
+          "cell": "88 ( 2,959,045 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 102,
+          "streams": 3013157,
+          "cell": "102 ( 3,013,157 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 135,
+          "streams": 2788405,
+          "cell": "135 ( 2,788,405 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 176,
+          "streams": 2706604,
+          "cell": "176 ( 2,706,604 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0044.receipt.json",
+      "raw_sha256": "46a8f41c36135495d7385e3133ce8f9e367a6c83b6044d16c83a158d3f3f6678",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 97,
+        "streams": 2471013,
+        "cell": "97 ( 2,471,013 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "1qbmS6ep2hbBRaEZFpn7BX",
+      "artist": "Olivia Dean",
+      "title": "Man I Need",
+      "weekly_ytd_charted_streams": 264560791,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 15,
+          "streams": 4581498,
+          "cell": "15 ( 4,581,498 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 9,
+          "streams": 5000426,
+          "cell": "9 ( 5,000,426 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0046",
+      "review_index": 2,
+      "january1_chart_streams": 7500127,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/29",
+          "rank": 5,
+          "streams": 6868031,
+          "cell": "5 ( 6,868,031 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/26",
+          "rank": 3,
+          "streams": 8085973,
+          "cell": "3 ( 8,085,973 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0046.receipt.json",
+      "raw_sha256": "fb0acdf481c489bea740d433661831f0bad67ec84fcdf8f88888c3191581f42f",
+      "full_rows_source": "data/deep_review_20261017/spotify_early_history_addendum.json",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 9,
+        "streams": 5000426,
+        "cell": "9 ( 5,000,426 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "20jbSiX29FDX4oQxBXyUEi",
+      "artist": "Ariana Grande",
+      "title": "hate that i made you love me",
+      "weekly_ytd_charted_streams": 127979936,
+      "weekly_charted_weeks": 20,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02",
+        "2026/04/09",
+        "2026/04/16",
+        "2026/04/23",
+        "2026/04/30",
+        "2026/05/07",
+        "2026/05/14",
+        "2026/05/21",
+        "2026/05/28"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 38,
+          "streams": 3458414,
+          "cell": "38 ( 3,458,414 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 40,
+          "streams": 3261323,
+          "cell": "40 ( 3,261,323 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0050",
+      "review_index": 233,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/06/04",
+          "rank": 1,
+          "streams": 13072563,
+          "cell": "1 ( 13,072,563 )",
+          "charted": true
+        },
+        {
+          "date": "2026/06/11",
+          "rank": 3,
+          "streams": 11112126,
+          "cell": "3 ( 11,112,126 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0050.receipt.json",
+      "raw_sha256": "b9422cb201feb354c485603d0736e20f46aa2a7762f12e0961f4902d1fcae8f1",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 40,
+        "streams": 3261323,
+        "cell": "40 ( 3,261,323 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "2A22iI0x4EYAVXNpKPhNEM",
+      "artist": "Ella Langley",
+      "title": "weren't for the wind",
+      "weekly_ytd_charted_streams": 189810059,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 36,
+          "streams": 3484387,
+          "cell": "36 ( 3,484,387 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 20,
+          "streams": 3812534,
+          "cell": "20 ( 3,812,534 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0054",
+      "review_index": null,
+      "january1_chart_streams": 4287607,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 15,
+          "streams": 4287607,
+          "cell": "15 ( 4,287,607 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 25,
+          "streams": 3919423,
+          "cell": "25 ( 3,919,423 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 58,
+          "streams": 3616854,
+          "cell": "58 ( 3,616,854 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 49,
+          "streams": 4254543,
+          "cell": "49 ( 4,254,543 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 53,
+          "streams": 4230504,
+          "cell": "53 ( 4,230,504 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 81,
+          "streams": 4069499,
+          "cell": "81 ( 4,069,499 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0054.receipt.json",
+      "raw_sha256": "85d3963778d0de3f2dab19a810ee7fc0937112d4b77a6075fd16c2365fc84e23",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 20,
+        "streams": 3812534,
+        "cell": "20 ( 3,812,534 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "2RkZ5LkEzeHGRsmDqKwmaJ",
+      "artist": "Alex Warren",
+      "title": "Ordinary",
+      "weekly_ytd_charted_streams": 128368993,
+      "weekly_charted_weeks": 33,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 49,
+          "streams": 3066204,
+          "cell": "49 ( 3,066,204 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 48,
+          "streams": 2989924,
+          "cell": "48 ( 2,989,924 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0064",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 18,
+          "streams": 5504835,
+          "cell": "18 ( 5,504,835 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 29,
+          "streams": 5452616,
+          "cell": "29 ( 5,452,616 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0064.receipt.json",
+      "raw_sha256": "a2a4e92cf65a27bf71e945b261e488874805f3f4fffae2fd9462228d79700763",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 48,
+        "streams": 2989924,
+        "cell": "48 ( 2,989,924 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "2SaWT781xr3hHLdbVt5DB7",
+      "artist": "Dexter and The Moonrocks",
+      "title": "Freakin\u2019 Out",
+      "weekly_ytd_charted_streams": 122469534,
+      "weekly_charted_weeks": 30,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 34,
+          "streams": 3517492,
+          "cell": "34 ( 3,517,492 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 31,
+          "streams": 3457577,
+          "cell": "31 ( 3,457,577 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0065",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/26",
+          "rank": 199,
+          "streams": 2311604,
+          "cell": "199 ( 2,311,604 )",
+          "charted": true
+        },
+        {
+          "date": "2026/04/02",
+          "rank": 148,
+          "streams": 2594434,
+          "cell": "148 ( 2,594,434 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0065.receipt.json",
+      "raw_sha256": "7283d8b3ea879c001e93b75c4af898cac110b6f88eb165bf4cd7f0e3b9dddf0d",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 31,
+        "streams": 3457577,
+        "cell": "31 ( 3,457,577 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "2UikqkwBv7aIvlixeVXHWt",
+      "artist": "Chris Stapleton",
+      "title": "You Should Probably Leave",
+      "weekly_ytd_charted_streams": 118027791,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 171,
+          "streams": 2118453,
+          "cell": "171 ( 2,118,453 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 144,
+          "streams": 2205760,
+          "cell": "144 ( 2,205,760 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0068",
+      "review_index": null,
+      "january1_chart_streams": 2878818,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 63,
+          "streams": 2878818,
+          "cell": "63 ( 2,878,818 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 76,
+          "streams": 2883835,
+          "cell": "76 ( 2,883,835 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 118,
+          "streams": 2640623,
+          "cell": "118 ( 2,640,623 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 121,
+          "streams": 2804732,
+          "cell": "121 ( 2,804,732 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 148,
+          "streams": 2640140,
+          "cell": "148 ( 2,640,140 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 192,
+          "streams": 2608797,
+          "cell": "192 ( 2,608,797 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0068.receipt.json",
+      "raw_sha256": "e39877a9674e23206fa8366d5dc122115e520f16764d56d567d5349b39764670",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 144,
+        "streams": 2205760,
+        "cell": "144 ( 2,205,760 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "2lpygKqzPFtItQ4ss3cgfb",
+      "artist": "Mac Miller",
+      "title": "Cinderella",
+      "weekly_ytd_charted_streams": 131656732,
+      "weekly_charted_weeks": 26,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02",
+        "2026/04/09",
+        "2026/04/16"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 20,
+          "streams": 4137536,
+          "cell": "20 ( 4,137,536 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 14,
+          "streams": 4147313,
+          "cell": "14 ( 4,147,313 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0076",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/04/23",
+          "rank": 134,
+          "streams": 2679725,
+          "cell": "134 ( 2,679,725 )",
+          "charted": true
+        },
+        {
+          "date": "2026/04/30",
+          "rank": 68,
+          "streams": 3472795,
+          "cell": "68 ( 3,472,795 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0076.receipt.json",
+      "raw_sha256": "34911ee0e873138b8bdc57f38ed243cfba6bef8e9cbced8ca7242984d50f1dfe",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 14,
+        "streams": 4147313,
+        "cell": "14 ( 4,147,313 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "36idurZmYRjJ56KQ8JD9bN",
+      "artist": "STELLA LEFTY",
+      "title": "Boston",
+      "weekly_ytd_charted_streams": 117809071,
+      "weekly_charted_weeks": 27,
+      "weekly_censored_rows": 1,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 21,
+          "streams": 4095052,
+          "cell": "21 ( 4,095,052 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 17,
+          "streams": 3992209,
+          "cell": "17 ( 3,992,209 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0085",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/04/16",
+          "rank": 91,
+          "streams": 2975068,
+          "cell": "91 ( 2,975,068 )",
+          "charted": true
+        },
+        {
+          "date": "2026/04/23",
+          "rank": 61,
+          "streams": 3404738,
+          "cell": "61 ( 3,404,738 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0085.receipt.json",
+      "raw_sha256": "f3ed80b516f959e73f3851a7fd1310f8dd72b81112faf27b0240a3020e0bc9e7",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 17,
+        "streams": 3992209,
+        "cell": "17 ( 3,992,209 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "3B4cjvGlPvyBLNG3AzEgkZ",
+      "artist": "Don Toliver",
+      "title": "E85",
+      "weekly_ytd_charted_streams": 182975936,
+      "weekly_charted_weeks": 37,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 86,
+          "streams": 2573876,
+          "cell": "86 ( 2,573,876 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 75,
+          "streams": 2660264,
+          "cell": "75 ( 2,660,264 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0087",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/02/05",
+          "rank": 7,
+          "streams": 7479427,
+          "cell": "7 ( 7,479,427 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/12",
+          "rank": 12,
+          "streams": 7069864,
+          "cell": "12 ( 7,069,864 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0087.receipt.json",
+      "raw_sha256": "48f7fffecc2ceb5df5a8261267161a02a157cd78fd6b0cf2b111de61683c6b40",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 75,
+        "streams": 2660264,
+        "cell": "75 ( 2,660,264 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "3fRCAPMMZ8l8P9YKI6OCzD",
+      "artist": "Olivia Rodrigo",
+      "title": "drop dead",
+      "weekly_ytd_charted_streams": 161079173,
+      "weekly_charted_weeks": 26,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02",
+        "2026/04/09",
+        "2026/04/16"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 31,
+          "streams": 3586542,
+          "cell": "31 ( 3,586,542 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 33,
+          "streams": 3426690,
+          "cell": "33 ( 3,426,690 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0098",
+      "review_index": 114,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/04/23",
+          "rank": 1,
+          "streams": 17590768,
+          "cell": "1 ( 17,590,768 )",
+          "charted": true
+        },
+        {
+          "date": "2026/04/30",
+          "rank": 3,
+          "streams": 10697346,
+          "cell": "3 ( 10,697,346 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0098.receipt.json",
+      "raw_sha256": "e7ff94de9d772cfebadd4d2ffd1ffece9916c8fe8ecd11bec0cb682a39b0db3d",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 33,
+        "streams": 3426690,
+        "cell": "33 ( 3,426,690 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "3fqwjXwUGN6vbzIwvyFMhx",
+      "artist": "Chris Stapleton",
+      "title": "Tennessee Whiskey",
+      "weekly_ytd_charted_streams": 115989930,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 84,
+          "streams": 2579371,
+          "cell": "84 ( 2,579,371 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 108,
+          "streams": 2374773,
+          "cell": "108 ( 2,374,773 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0099",
+      "review_index": null,
+      "january1_chart_streams": 2644154,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 84,
+          "streams": 2644154,
+          "cell": "84 ( 2,644,154 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 82,
+          "streams": 2829709,
+          "cell": "82 ( 2,829,709 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 149,
+          "streams": 2383251,
+          "cell": "149 ( 2,383,251 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 182,
+          "streams": 2388809,
+          "cell": "182 ( 2,388,809 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 191,
+          "streams": 2357248,
+          "cell": "191 ( 2,357,248 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0099.receipt.json",
+      "raw_sha256": "d741bc516827772344d65f1a59e8102119428153588b405db7993b950cbcfd7c",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 108,
+        "streams": 2374773,
+        "cell": "108 ( 2,374,773 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "3pAVk6Ydn0dcGpG8gDyxSJ",
+      "artist": "BigXthaPlug",
+      "title": "Hell At Night",
+      "weekly_ytd_charted_streams": 135355104,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 82,
+          "streams": 2581959,
+          "cell": "82 ( 2,581,959 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 59,
+          "streams": 2787019,
+          "cell": "59 ( 2,787,019 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0107",
+      "review_index": null,
+      "january1_chart_streams": 2734073,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 76,
+          "streams": 2734073,
+          "cell": "76 ( 2,734,073 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 69,
+          "streams": 2916690,
+          "cell": "69 ( 2,916,690 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 132,
+          "streams": 2554710,
+          "cell": "132 ( 2,554,710 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 126,
+          "streams": 2756021,
+          "cell": "126 ( 2,756,021 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 129,
+          "streams": 2816056,
+          "cell": "129 ( 2,816,056 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 166,
+          "streams": 2750515,
+          "cell": "166 ( 2,750,515 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0107.receipt.json",
+      "raw_sha256": "b8b8022deba3a462e31a4e1ce251a4729528d89118d4e21c0f2b5a1af80e2892",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 59,
+        "streams": 2787019,
+        "cell": "59 ( 2,787,019 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "3qhlB30KknSejmIvZZLjOD",
+      "artist": "Djo",
+      "title": "End of Beginning",
+      "weekly_ytd_charted_streams": 126310429,
+      "weekly_charted_weeks": 33,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 79,
+          "streams": 2590559,
+          "cell": "79 ( 2,590,559 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 74,
+          "streams": 2661556,
+          "cell": "74 ( 2,661,556 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0109",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 14,
+          "streams": 5964511,
+          "cell": "14 ( 5,964,511 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 23,
+          "streams": 5708187,
+          "cell": "23 ( 5,708,187 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0109.receipt.json",
+      "raw_sha256": "76d2ee6f1ec0432a4c18b04990dd65f14364c8b0a4f0f332427805eda1d6270f",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 74,
+        "streams": 2661556,
+        "cell": "74 ( 2,661,556 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "3sK8wGT43QFpWrvNQsrQya",
+      "artist": "Bad Bunny",
+      "title": "DtMF",
+      "weekly_ytd_charted_streams": 144022858,
+      "weekly_charted_weeks": 33,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 83,
+          "streams": 2580356,
+          "cell": "83 ( 2,580,356 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 106,
+          "streams": 2404887,
+          "cell": "106 ( 2,404,887 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0110",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 5,
+          "streams": 9107715,
+          "cell": "5 ( 9,107,715 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 9,
+          "streams": 8072369,
+          "cell": "9 ( 8,072,369 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0110.receipt.json",
+      "raw_sha256": "6c88ab2f05ba9657eca8e21f4969d7ca76c9252be72a9ff55e6556a31c64677a",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 106,
+        "streams": 2404887,
+        "cell": "106 ( 2,404,887 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "49j6SvuvWfbEKZKzsHCdLJ",
+      "artist": "Olivia Rodrigo",
+      "title": "stupid song",
+      "weekly_ytd_charted_streams": 136638884,
+      "weekly_charted_weeks": 18,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02",
+        "2026/04/09",
+        "2026/04/16",
+        "2026/04/23",
+        "2026/04/30",
+        "2026/05/07",
+        "2026/05/14",
+        "2026/05/21",
+        "2026/05/28",
+        "2026/06/04",
+        "2026/06/11"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 6,
+          "streams": 6334552,
+          "cell": "6 ( 6,334,552 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 4,
+          "streams": 6494190,
+          "cell": "4 ( 6,494,190 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0117",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/06/18",
+          "rank": 1,
+          "streams": 18337572,
+          "cell": "1 ( 18,337,572 )",
+          "charted": true
+        },
+        {
+          "date": "2026/06/25",
+          "rank": 1,
+          "streams": 11962430,
+          "cell": "1 ( 11,962,430 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0117.receipt.json",
+      "raw_sha256": "ca21e4cabd772f436609f2b16f539fec9675a31ddf3eaf51118a3b37818d93f4",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 4,
+        "streams": 6494190,
+        "cell": "4 ( 6,494,190 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "4KULAymBBJcPRpk1yO4dOG",
+      "artist": "Zach Bryan",
+      "title": "I Remember Everything",
+      "weekly_ytd_charted_streams": 124569311,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 92,
+          "streams": 2525390,
+          "cell": "92 ( 2,525,390 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 96,
+          "streams": 2471434,
+          "cell": "96 ( 2,471,434 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0124",
+      "review_index": null,
+      "january1_chart_streams": 3283421,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 38,
+          "streams": 3283421,
+          "cell": "38 ( 3,283,421 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 48,
+          "streams": 3333254,
+          "cell": "48 ( 3,333,254 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 69,
+          "streams": 3222906,
+          "cell": "69 ( 3,222,906 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 71,
+          "streams": 3477396,
+          "cell": "71 ( 3,477,396 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 85,
+          "streams": 3262603,
+          "cell": "85 ( 3,262,603 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 143,
+          "streams": 2963127,
+          "cell": "143 ( 2,963,127 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0124.receipt.json",
+      "raw_sha256": "8e5958df428519e1ebf379749750eca9dfb0a5d3a34ffdc4ff92289ddb9b6822",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 96,
+        "streams": 2471434,
+        "cell": "96 ( 2,471,434 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "4ck9vo0gEmjVHWUb5q2rYe",
+      "artist": "Noah Kahan",
+      "title": "The Great Divide",
+      "weekly_ytd_charted_streams": 133777294,
+      "weekly_charted_weeks": 37,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 149,
+          "streams": 2210816,
+          "cell": "149 ( 2,210,816 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 184,
+          "streams": 2048973,
+          "cell": "184 ( 2,048,973 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0129",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/02/05",
+          "rank": 1,
+          "streams": 12463096,
+          "cell": "1 ( 12,463,096 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/12",
+          "rank": 10,
+          "streams": 7561019,
+          "cell": "10 ( 7,561,019 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0129.receipt.json",
+      "raw_sha256": "a56c60c8fb3e1e3190a0dac130c1f13b512274503a1b3416815f7772e91df4ae",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 184,
+        "streams": 2048973,
+        "cell": "184 ( 2,048,973 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "4gfrYDtaRmp6HPvN80V2ob",
+      "artist": "Morgan Wallen",
+      "title": "I Got Better",
+      "weekly_ytd_charted_streams": 187693190,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 65,
+          "streams": 2754897,
+          "cell": "65 ( 2,754,897 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 56,
+          "streams": 2795159,
+          "cell": "56 ( 2,795,159 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0130",
+      "review_index": null,
+      "january1_chart_streams": 4462025,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 12,
+          "streams": 4462025,
+          "cell": "12 ( 4,462,025 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 14,
+          "streams": 4613455,
+          "cell": "14 ( 4,613,455 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 35,
+          "streams": 4537285,
+          "cell": "35 ( 4,537,285 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 40,
+          "streams": 4567377,
+          "cell": "40 ( 4,567,377 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 62,
+          "streams": 3863421,
+          "cell": "62 ( 3,863,421 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 87,
+          "streams": 3869397,
+          "cell": "87 ( 3,869,397 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0130.receipt.json",
+      "raw_sha256": "15ba574c4c37a09bcc55bc877c61819aa92310528bf8e5937087dfad33d1fcbb",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 56,
+        "streams": 2795159,
+        "cell": "56 ( 2,795,159 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "4wJ5Qq0jBN4ajy7ouZIV1c",
+      "artist": "ROS\u00c9",
+      "title": "APT.",
+      "weekly_ytd_charted_streams": 0,
+      "weekly_charted_weeks": 0,
+      "weekly_censored_rows": 33,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        }
+      },
+      "request_id": "track_req_0138",
+      "review_index": 86,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0138.receipt.json",
+      "raw_sha256": "6d7008a67c975eb258611ee8b4521663b64d0359d315a807f3c58684dd91e38c",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": null,
+        "streams": null,
+        "cell": "--",
+        "charted": false
+      }
+    },
+    {
+      "track_id": "514joG57v4yKTsfQmz7stz",
+      "artist": "Drake",
+      "title": "Janice STFU",
+      "weekly_ytd_charted_streams": 145732276,
+      "weekly_charted_weeks": 22,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02",
+        "2026/04/09",
+        "2026/04/16",
+        "2026/04/23",
+        "2026/04/30",
+        "2026/05/07",
+        "2026/05/14"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 25,
+          "streams": 3809153,
+          "cell": "25 ( 3,809,153 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 27,
+          "streams": 3545583,
+          "cell": "27 ( 3,545,583 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0140",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/05/21",
+          "rank": 1,
+          "streams": 17473760,
+          "cell": "1 ( 17,473,760 )",
+          "charted": true
+        },
+        {
+          "date": "2026/05/28",
+          "rank": 1,
+          "streams": 13687197,
+          "cell": "1 ( 13,687,197 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0140.receipt.json",
+      "raw_sha256": "f54d1c72575dad1070c12de7102adc61c1ffed4b478f70344c9c533360d1a49e",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 27,
+        "streams": 3545583,
+        "cell": "27 ( 3,545,583 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "53iuhJlwXhSER5J2IYYv1W",
+      "artist": "Taylor Swift",
+      "title": "The Fate of Ophelia",
+      "weekly_ytd_charted_streams": 129470286,
+      "weekly_charted_weeks": 35,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 50,
+          "streams": 3055472,
+          "cell": "50 ( 3,055,472 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 73,
+          "streams": 2663458,
+          "cell": "73 ( 2,663,458 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0141",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/29",
+          "rank": 7,
+          "streams": 5804115,
+          "cell": "7 ( 5,804,115 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/26",
+          "rank": 16,
+          "streams": 5177720,
+          "cell": "16 ( 5,177,720 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/25",
+          "rank": 39,
+          "streams": 7024455,
+          "cell": "39 ( 7,024,455 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0141.receipt.json",
+      "raw_sha256": "5425449fba33430946665fff6cb52ee89ea0d6252d3b2d3f233bf74797971853",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 73,
+        "streams": 2663458,
+        "cell": "73 ( 2,663,458 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "53qkszfgztIvkFyF31GfdQ",
+      "artist": "Fleetwood Mac",
+      "title": "Dreams - 2001 Remaster",
+      "weekly_ytd_charted_streams": 124082128,
+      "weekly_charted_weeks": 27,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02",
+        "2026/04/09"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 30,
+          "streams": 3594391,
+          "cell": "30 ( 3,594,391 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 25,
+          "streams": 3622946,
+          "cell": "25 ( 3,622,946 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0142",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/04/16",
+          "rank": 12,
+          "streams": 5914961,
+          "cell": "12 ( 5,914,961 )",
+          "charted": true
+        },
+        {
+          "date": "2026/04/23",
+          "rank": 12,
+          "streams": 6070374,
+          "cell": "12 ( 6,070,374 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0142.receipt.json",
+      "raw_sha256": "c2d7370f5496b3f708d7ca4028eb1672c4100426f3e2ad83a3b4d85669e4512e",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 25,
+        "streams": 3622946,
+        "cell": "25 ( 3,622,946 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "55pBIZO1cqoldeqpp5WR7H",
+      "artist": "Olivia Rodrigo",
+      "title": "the cure",
+      "weekly_ytd_charted_streams": 146351047,
+      "weekly_charted_weeks": 21,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19",
+        "2026/03/26",
+        "2026/04/02",
+        "2026/04/09",
+        "2026/04/16",
+        "2026/04/23",
+        "2026/04/30",
+        "2026/05/07",
+        "2026/05/14",
+        "2026/05/21"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 7,
+          "streams": 6103871,
+          "cell": "7 ( 6,103,871 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 5,
+          "streams": 6205681,
+          "cell": "5 ( 6,205,681 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0144",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/05/28",
+          "rank": 2,
+          "streams": 12270364,
+          "cell": "2 ( 12,270,364 )",
+          "charted": true
+        },
+        {
+          "date": "2026/06/04",
+          "rank": 4,
+          "streams": 9333074,
+          "cell": "4 ( 9,333,074 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0144.receipt.json",
+      "raw_sha256": "7df7a243b8482cff1aa7e372f2d0863bed396f671f5f71652609cd25fd438d8b",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 5,
+        "streams": 6205681,
+        "cell": "5 ( 6,205,681 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "58ge6dfP91o9oXMzq3XkIS",
+      "artist": "Arctic Monkeys",
+      "title": "505",
+      "weekly_ytd_charted_streams": 120835796,
+      "weekly_charted_weeks": 33,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 28,
+          "streams": 3680246,
+          "cell": "28 ( 3,680,246 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 28,
+          "streams": 3536063,
+          "cell": "28 ( 3,536,063 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0145",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 40,
+          "streams": 4049567,
+          "cell": "40 ( 4,049,567 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 51,
+          "streams": 3946511,
+          "cell": "51 ( 3,946,511 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0145.receipt.json",
+      "raw_sha256": "e22cbb43b9d343c8b22b9282083f6f60f064670613cebf40b198cad353af214b",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 28,
+        "streams": 3536063,
+        "cell": "28 ( 3,536,063 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "5BZsQlgw21vDOAjoqkNgKb",
+      "artist": "Justin Bieber",
+      "title": "DAISIES",
+      "weekly_ytd_charted_streams": 117229079,
+      "weekly_charted_weeks": 32,
+      "weekly_censored_rows": 1,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 189,
+          "streams": 2033783,
+          "cell": "189 ( 2,033,783 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0148",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 128,
+          "streams": 2659042,
+          "cell": "128 ( 2,659,042 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 131,
+          "streams": 2627350,
+          "cell": "131 ( 2,627,350 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0148.receipt.json",
+      "raw_sha256": "a4acbdb99089198c6718fbfc08597daac413d27da7a36b4221c57f3a269139a5",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 189,
+        "streams": 2033783,
+        "cell": "189 ( 2,033,783 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "5IMpnpD0tQVcqWlVIgtAtV",
+      "artist": "Bella Kay",
+      "title": "iloveitiloveitiloveit",
+      "weekly_ytd_charted_streams": 146026688,
+      "weekly_charted_weeks": 35,
+      "weekly_censored_rows": 3,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 127,
+          "streams": 2294552,
+          "cell": "127 ( 2,294,552 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 137,
+          "streams": 2230656,
+          "cell": "137 ( 2,230,656 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0149",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/02/19",
+          "rank": 70,
+          "streams": 3222844,
+          "cell": "70 ( 3,222,844 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/26",
+          "rank": 36,
+          "streams": 3903454,
+          "cell": "36 ( 3,903,454 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0149.receipt.json",
+      "raw_sha256": "f6aaab8398575f69bf6dd6b22e415ac1bd472603b93a06a94fd5f46d3d5c79a0",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 137,
+        "streams": 2230656,
+        "cell": "137 ( 2,230,656 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "5TRPicyLGbAF2LGBFbHGvO",
+      "artist": "Kanye West",
+      "title": "Flashing Lights",
+      "weekly_ytd_charted_streams": 117026746,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 102,
+          "streams": 2462281,
+          "cell": "102 ( 2,462,281 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 88,
+          "streams": 2552548,
+          "cell": "88 ( 2,552,548 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0155",
+      "review_index": null,
+      "january1_chart_streams": 2580964,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 93,
+          "streams": 2580964,
+          "cell": "93 ( 2,580,964 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 87,
+          "streams": 2742484,
+          "cell": "87 ( 2,742,484 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 151,
+          "streams": 2374102,
+          "cell": "151 ( 2,374,102 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 163,
+          "streams": 2513702,
+          "cell": "163 ( 2,513,702 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 152,
+          "streams": 2603509,
+          "cell": "152 ( 2,603,509 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 197,
+          "streams": 2542021,
+          "cell": "197 ( 2,542,021 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0155.receipt.json",
+      "raw_sha256": "168403f6c53600b4e3bedcfcd4020e5308d59252bc8039c7c91c4b556f6b9bf7",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 88,
+        "streams": 2552548,
+        "cell": "88 ( 2,552,548 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "5UWwZ5lm5PKu6eKsHAGxOk",
+      "artist": "Foo Fighters",
+      "title": "Everlong",
+      "weekly_ytd_charted_streams": 122921931,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 56,
+          "streams": 2905864,
+          "cell": "56 ( 2,905,864 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 62,
+          "streams": 2753040,
+          "cell": "62 ( 2,753,040 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0156",
+      "review_index": null,
+      "january1_chart_streams": 2293034,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 130,
+          "streams": 2293034,
+          "cell": "130 ( 2,293,034 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 113,
+          "streams": 2492683,
+          "cell": "113 ( 2,492,683 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 185,
+          "streams": 2218037,
+          "cell": "185 ( 2,218,037 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 179,
+          "streams": 2414736,
+          "cell": "179 ( 2,414,736 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 172,
+          "streams": 2432070,
+          "cell": "172 ( 2,432,070 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0156.receipt.json",
+      "raw_sha256": "1dd3c65e29ead3aec665d912573fe6615e7aa6c627116970bab602dc5a648f1c",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 62,
+        "streams": 2753040,
+        "cell": "62 ( 2,753,040 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "5y2ijHECwFYWqcAHKTZgzD",
+      "artist": "Bruno Mars",
+      "title": "Risk It All",
+      "weekly_ytd_charted_streams": 141007135,
+      "weekly_charted_weeks": 33,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 69,
+          "streams": 2673271,
+          "cell": "69 ( 2,673,271 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 84,
+          "streams": 2582355,
+          "cell": "84 ( 2,582,355 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0165",
+      "review_index": 58,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 1,
+          "streams": 12884594,
+          "cell": "1 ( 12,884,594 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 6,
+          "streams": 8768056,
+          "cell": "6 ( 8,768,056 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0165.receipt.json",
+      "raw_sha256": "2c5d1fe13d2cbb64f62cfc0d6493e8e30cab82d5556504639a06c7d08492a1f7",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 84,
+        "streams": 2582355,
+        "cell": "84 ( 2,582,355 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "68lbSrXDORS51pmyjZv712",
+      "artist": "BTS",
+      "title": "SWIM",
+      "weekly_ytd_charted_streams": 54589435,
+      "weekly_charted_weeks": 14,
+      "weekly_censored_rows": 16,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26",
+        "2026/03/05",
+        "2026/03/12",
+        "2026/03/19"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        }
+      },
+      "request_id": "track_req_0171",
+      "review_index": 170,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/26",
+          "rank": 4,
+          "streams": 8602691,
+          "cell": "4 ( 8,602,691 )",
+          "charted": true
+        },
+        {
+          "date": "2026/04/02",
+          "rank": 7,
+          "streams": 6566816,
+          "cell": "7 ( 6,566,816 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0171.receipt.json",
+      "raw_sha256": "02c7e82ae89eb20d95ceae85a0c42bf90ddba2279db019c9070699065fa9d1ea",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": null,
+        "streams": null,
+        "cell": "--",
+        "charted": false
+      }
+    },
+    {
+      "track_id": "6J5kc12BW5HuP3d7C3vvx8",
+      "artist": "Bad Bunny",
+      "title": "EoO",
+      "weekly_ytd_charted_streams": 130882293,
+      "weekly_charted_weeks": 37,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 167,
+          "streams": 2139126,
+          "cell": "167 ( 2,139,126 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 134,
+          "streams": 2246421,
+          "cell": "134 ( 2,246,421 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0174",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/02/05",
+          "rank": 29,
+          "streams": 4677124,
+          "cell": "29 ( 4,677,124 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/12",
+          "rank": 4,
+          "streams": 13152064,
+          "cell": "4 ( 13,152,064 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/11",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/18",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/25",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0174.receipt.json",
+      "raw_sha256": "97a995aa67bf0684daa6f20906a0bf7f61abda04a44ca369c3800ea631ad688f",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 134,
+        "streams": 2246421,
+        "cell": "134 ( 2,246,421 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "6LxSe8YmdPxy095Ux6znaQ",
+      "artist": "Drake",
+      "title": "Headlines",
+      "weekly_ytd_charted_streams": 132255059,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 87,
+          "streams": 2563057,
+          "cell": "87 ( 2,563,057 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 85,
+          "streams": 2577856,
+          "cell": "85 ( 2,577,856 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0177",
+      "review_index": null,
+      "january1_chart_streams": 3480026,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 28,
+          "streams": 3480026,
+          "cell": "28 ( 3,480,026 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 34,
+          "streams": 3595098,
+          "cell": "34 ( 3,595,098 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 90,
+          "streams": 2929920,
+          "cell": "90 ( 2,929,920 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 76,
+          "streams": 3450389,
+          "cell": "76 ( 3,450,389 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 70,
+          "streams": 3602688,
+          "cell": "70 ( 3,602,688 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 109,
+          "streams": 3405809,
+          "cell": "109 ( 3,405,809 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0177.receipt.json",
+      "raw_sha256": "a6138f669b79dd9b5cf37e50614c2937f6d59a705c0457bb9eedffe0ccf83332",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 85,
+        "streams": 2577856,
+        "cell": "85 ( 2,577,856 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "6QFCMUUq1T2Vf5sFUXcuQ7",
+      "artist": "Justin Bieber",
+      "title": "Beauty And A Beat",
+      "weekly_ytd_charted_streams": 124376294,
+      "weekly_charted_weeks": 27,
+      "weekly_censored_rows": 15,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 68,
+          "streams": 2704782,
+          "cell": "68 ( 2,704,782 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 60,
+          "streams": 2782396,
+          "cell": "60 ( 2,782,396 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0178",
+      "review_index": 219,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/04/16",
+          "rank": 8,
+          "streams": 6754312,
+          "cell": "8 ( 6,754,312 )",
+          "charted": true
+        },
+        {
+          "date": "2026/04/23",
+          "rank": 3,
+          "streams": 10267298,
+          "cell": "3 ( 10,267,298 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/11",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/18",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/25",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0178.receipt.json",
+      "raw_sha256": "45c4319ad26d0291aaf8e2614fc4b7d599dea1df69518dd62e7c127bcb034233",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 60,
+        "streams": 2782396,
+        "cell": "60 ( 2,782,396 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "6Qyc6fS4DsZjB2mRW9DsQs",
+      "artist": "The Goo Goo Dolls",
+      "title": "Iris",
+      "weekly_ytd_charted_streams": 135520358,
+      "weekly_charted_weeks": 34,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 33,
+          "streams": 3520365,
+          "cell": "33 ( 3,520,365 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 23,
+          "streams": 3646244,
+          "cell": "23 ( 3,646,244 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0179",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/29",
+          "rank": 24,
+          "streams": 4069850,
+          "cell": "24 ( 4,069,850 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/05",
+          "rank": 36,
+          "streams": 4334230,
+          "cell": "36 ( 4,334,230 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0179.receipt.json",
+      "raw_sha256": "cde0f44291ee77b21910639bd683ff110732cac8865944e11831ba9aabc1907a",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 23,
+        "streams": 3646244,
+        "cell": "23 ( 3,646,244 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "6f68Ac5tt5BQOpwr0BV9oN",
+      "artist": "Bruno Mars",
+      "title": "I Just Might",
+      "weekly_ytd_charted_streams": 171543550,
+      "weekly_charted_weeks": 40,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 160,
+          "streams": 2164861,
+          "cell": "160 ( 2,164,861 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 187,
+          "streams": 2039985,
+          "cell": "187 ( 2,039,985 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0185",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/15",
+          "rank": 2,
+          "streams": 10824750,
+          "cell": "2 ( 10,824,750 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/22",
+          "rank": 1,
+          "streams": 9996195,
+          "cell": "1 ( 9,996,195 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0185.receipt.json",
+      "raw_sha256": "0f7f0fc8ee7be51d55add6daddc221426ae34c65f2a9ee1cc4581ae93660398e",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 187,
+        "streams": 2039985,
+        "cell": "187 ( 2,039,985 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "6sGIMrtIzQjdzNndVxe397",
+      "artist": "Olivia Dean",
+      "title": "So Easy (To Fall In Love)",
+      "weekly_ytd_charted_streams": 161519274,
+      "weekly_charted_weeks": 35,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 54,
+          "streams": 2995983,
+          "cell": "54 ( 2,995,983 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 44,
+          "streams": 3110762,
+          "cell": "44 ( 3,110,762 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0188",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/29",
+          "rank": 10,
+          "streams": 5477139,
+          "cell": "10 ( 5,477,139 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/26",
+          "rank": 9,
+          "streams": 6817600,
+          "cell": "9 ( 6,817,600 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/25",
+          "rank": 57,
+          "streams": 5255501,
+          "cell": "57 ( 5,255,501 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0188.receipt.json",
+      "raw_sha256": "e379a54738d480bcd780faf185f8ee04250b564aab6be38d3b134bbd7b23c126",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 44,
+        "streams": 3110762,
+        "cell": "44 ( 3,110,762 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "70LcF31zb1H0PyJoS1Sx1r",
+      "artist": "Radiohead",
+      "title": "Creep",
+      "weekly_ytd_charted_streams": 114558489,
+      "weekly_charted_weeks": 33,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 46,
+          "streams": 3140451,
+          "cell": "46 ( 3,140,451 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 45,
+          "streams": 3092077,
+          "cell": "45 ( 3,092,077 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0190",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 35,
+          "streams": 4377046,
+          "cell": "35 ( 4,377,046 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 50,
+          "streams": 3969355,
+          "cell": "50 ( 3,969,355 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0190.receipt.json",
+      "raw_sha256": "c3c1e1d2fef4b42566ebdcc38928d17421f5e35219060e120dbb0ced6657beb1",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 45,
+        "streams": 3092077,
+        "cell": "45 ( 3,092,077 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "7AeM1BGYM7emrqmQn1PuWv",
+      "artist": "Morgan Wallen",
+      "title": "I'm The Problem",
+      "weekly_ytd_charted_streams": 130027070,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 120,
+          "streams": 2318243,
+          "cell": "120 ( 2,318,243 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 133,
+          "streams": 2250414,
+          "cell": "133 ( 2,250,414 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0197",
+      "review_index": null,
+      "january1_chart_streams": 3145538,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 46,
+          "streams": 3145538,
+          "cell": "46 ( 3,145,538 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 53,
+          "streams": 3167688,
+          "cell": "53 ( 3,167,688 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 68,
+          "streams": 3249587,
+          "cell": "68 ( 3,249,587 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 72,
+          "streams": 3477047,
+          "cell": "72 ( 3,477,047 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 92,
+          "streams": 3152941,
+          "cell": "92 ( 3,152,941 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 150,
+          "streams": 2905778,
+          "cell": "150 ( 2,905,778 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0197.receipt.json",
+      "raw_sha256": "25738609b9797987cbb867570cec99f7280fa065d1eb4f58f0584d8a5ddaac40",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 133,
+        "streams": 2250414,
+        "cell": "133 ( 2,250,414 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "7J1uxwnxfQLu4APicE5Rnj",
+      "artist": "Michael Jackson",
+      "title": "Billie Jean",
+      "weekly_ytd_charted_streams": 138946793,
+      "weekly_charted_weeks": 28,
+      "weekly_censored_rows": 5,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 53,
+          "streams": 3005604,
+          "cell": "53 ( 3,005,604 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 51,
+          "streams": 2937874,
+          "cell": "51 ( 2,937,874 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0200",
+      "review_index": 198,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 185,
+          "streams": 2320653,
+          "cell": "185 ( 2,320,653 )",
+          "charted": true
+        },
+        {
+          "date": "2026/04/16",
+          "rank": 184,
+          "streams": 2409772,
+          "cell": "184 ( 2,409,772 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0200.receipt.json",
+      "raw_sha256": "d0ff99a9dfeadf7ef10a00f15d9796106966e50b64063a3231f2e927d6699682",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 51,
+        "streams": 2937874,
+        "cell": "51 ( 2,937,874 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "7ghKr0pCYyPPyp7t1FH8k4",
+      "artist": "Childish Gambino",
+      "title": "Les",
+      "weekly_ytd_charted_streams": 114193603,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 80,
+          "streams": 2588121,
+          "cell": "80 ( 2,588,121 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 65,
+          "streams": 2739898,
+          "cell": "65 ( 2,739,898 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0206",
+      "review_index": null,
+      "january1_chart_streams": 2633990,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 88,
+          "streams": 2633990,
+          "cell": "88 ( 2,633,990 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 85,
+          "streams": 2754248,
+          "cell": "85 ( 2,754,248 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 124,
+          "streams": 2592754,
+          "cell": "124 ( 2,592,754 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 123,
+          "streams": 2795309,
+          "cell": "123 ( 2,795,309 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 119,
+          "streams": 2875927,
+          "cell": "119 ( 2,875,927 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 174,
+          "streams": 2713902,
+          "cell": "174 ( 2,713,902 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0206.receipt.json",
+      "raw_sha256": "7b7210b1dbf3e4e47b95c0afca6bec45b3e2c003df9516077bb0618339d3b720",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 65,
+        "streams": 2739898,
+        "cell": "65 ( 2,739,898 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "7qjZnBKE73H4Oxkopwulqe",
+      "artist": "sombr",
+      "title": "back to friends",
+      "weekly_ytd_charted_streams": 135206017,
+      "weekly_charted_weeks": 34,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 44,
+          "streams": 3257543,
+          "cell": "44 ( 3,257,543 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 39,
+          "streams": 3272041,
+          "cell": "39 ( 3,272,041 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0211",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/29",
+          "rank": 9,
+          "streams": 5583993,
+          "cell": "9 ( 5,583,993 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/05",
+          "rank": 23,
+          "streams": 5188435,
+          "cell": "23 ( 5,188,435 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0211.receipt.json",
+      "raw_sha256": "e58c01203ad111563775c51166d6d5f8cd62d230d8fc91b692fad91465cacd99",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 39,
+        "streams": 3272041,
+        "cell": "39 ( 3,272,041 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "7scFxt9VhL4FJwuPSfRlfN",
+      "artist": "Ella Langley",
+      "title": "Choosin' Texas",
+      "weekly_ytd_charted_streams": 424459100,
+      "weekly_charted_weeks": 42,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 3,
+          "streams": 8001246,
+          "cell": "3 ( 8,001,246 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 2,
+          "streams": 7615504,
+          "cell": "2 ( 7,615,504 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0213",
+      "review_index": null,
+      "january1_chart_streams": 5602015,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/01",
+          "rank": 6,
+          "streams": 5602015,
+          "cell": "6 ( 5,602,015 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/08",
+          "rank": 4,
+          "streams": 7443470,
+          "cell": "4 ( 7,443,470 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/04",
+          "rank": 28,
+          "streams": 4883409,
+          "cell": "28 ( 4,883,409 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/11",
+          "rank": 33,
+          "streams": 4982229,
+          "cell": "33 ( 4,982,229 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/18",
+          "rank": 32,
+          "streams": 5403310,
+          "cell": "32 ( 5,403,310 )",
+          "charted": true
+        },
+        {
+          "date": "2025/12/25",
+          "rank": 51,
+          "streams": 5603867,
+          "cell": "51 ( 5,603,867 )",
+          "charted": true
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0213.receipt.json",
+      "raw_sha256": "69d15982d54c2cfb38f296cbe2e99510910954cda6de69b3d0e3acc7c80e049a",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 2,
+        "streams": 7615504,
+        "cell": "2 ( 7,615,504 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "7so0lgd0zP2Sbgs2d7a1SZ",
+      "artist": "Lady Gaga",
+      "title": "Die With A Smile",
+      "weekly_ytd_charted_streams": 91091878,
+      "weekly_charted_weeks": 33,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05",
+        "2026/02/12",
+        "2026/02/19",
+        "2026/02/26"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 94,
+          "streams": 2507147,
+          "cell": "94 ( 2,507,147 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 68,
+          "streams": 2722000,
+          "cell": "68 ( 2,722,000 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0214",
+      "review_index": 30,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/03/05",
+          "rank": 48,
+          "streams": 3863584,
+          "cell": "48 ( 3,863,584 )",
+          "charted": true
+        },
+        {
+          "date": "2026/03/12",
+          "rank": 58,
+          "streams": 3547973,
+          "cell": "58 ( 3,547,973 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0214.receipt.json",
+      "raw_sha256": "a57e253c8e21cd0f9e41996167e88217eacde906eeb329d72609cfe3c1c75bcc",
+      "full_rows_source": "data/deep_review_20261017/spotify_early_history_addendum.json",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 68,
+        "streams": 2722000,
+        "cell": "68 ( 2,722,000 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "7tICCrK3CcyRFKza7yrR0z",
+      "artist": "sombr",
+      "title": "Homewrecker",
+      "weekly_ytd_charted_streams": 126105730,
+      "weekly_charted_weeks": 36,
+      "weekly_censored_rows": 0,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01",
+        "2026/01/08",
+        "2026/01/15",
+        "2026/01/22",
+        "2026/01/29",
+        "2026/02/05"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 110,
+          "streams": 2381421,
+          "cell": "110 ( 2,381,421 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 92,
+          "streams": 2495361,
+          "cell": "92 ( 2,495,361 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0215",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/02/12",
+          "rank": 22,
+          "streams": 5763925,
+          "cell": "22 ( 5,763,925 )",
+          "charted": true
+        },
+        {
+          "date": "2026/02/19",
+          "rank": 12,
+          "streams": 6296044,
+          "cell": "12 ( 6,296,044 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0215.receipt.json",
+      "raw_sha256": "a1aa2a907c35b99a9cf3cb97499a49f86442f82b5e3d6f0e0bf9b5e5e9f98010",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 92,
+        "streams": 2495361,
+        "cell": "92 ( 2,495,361 )",
+        "charted": true
+      }
+    },
+    {
+      "track_id": "7yNf9YjeO5JXUE3JEBgnYc",
+      "artist": "Dominic Fike",
+      "title": "Babydoll",
+      "weekly_ytd_charted_streams": 241010772,
+      "weekly_charted_weeks": 40,
+      "weekly_censored_rows": 1,
+      "weekly_ytd_absent_table_dates": [
+        "2026/01/01"
+      ],
+      "weekly_anchors": {
+        "2026/10/08": {
+          "date": "2026/10/08",
+          "rank": 24,
+          "streams": 3848511,
+          "cell": "24 ( 3,848,511 )",
+          "charted": true
+        },
+        "2026/10/15": {
+          "date": "2026/10/15",
+          "rank": 19,
+          "streams": 3927145,
+          "cell": "19 ( 3,927,145 )",
+          "charted": true
+        }
+      },
+      "request_id": "track_req_0220",
+      "review_index": null,
+      "january1_chart_streams": null,
+      "first_actual_ytd_rows": [
+        {
+          "date": "2026/01/15",
+          "rank": 187,
+          "streams": 2258434,
+          "cell": "187 ( 2,258,434 )",
+          "charted": true
+        },
+        {
+          "date": "2026/01/22",
+          "rank": 157,
+          "streams": 2330294,
+          "cell": "157 ( 2,330,294 )",
+          "charted": true
+        }
+      ],
+      "late_2025_rows": [
+        {
+          "date": "2025/12/11",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        },
+        {
+          "date": "2025/12/18",
+          "rank": null,
+          "streams": null,
+          "cell": "--",
+          "charted": false
+        }
+      ],
+      "receipt_path": "logs/deep_review_20261017/spotify_sources/track_req_0220.receipt.json",
+      "raw_sha256": "0b49dde804aef65363c92d0d6a0dacc4c10f132fb6f514d4ee5237cac2531842",
+      "full_rows_source": "data/deep_review_20261017/spotify_early_history_addendum.json",
+      "weekly_latest": {
+        "date": "2026/10/15",
+        "rank": 19,
+        "streams": 3927145,
+        "cell": "19 ( 3,927,145 )",
+        "charted": true
+      }
+    }
+  ]
+}

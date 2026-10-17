@@ -1,0 +1,147 @@
+{
+  "review_index": 68,
+  "condition_id": "0xfaa433e162e020c56c522acb2f9f7215ce6e4e4391c4fb42beba14275c0a43fe",
+  "criteria_sha256": "e57955e305fd6f50f911157e6a168a50f3c15e5f27fbff659d2f114422f66a55",
+  "status": "valued",
+  "literal_analysis": "ExactWHOdeclaresanydiseasepandemicin2026ET; notnecessarilynewpathogen, notPHEICorpreparednesstreaty, mustreadactualofficialcharacterization/reclassification; nosourceunavailablefallback.",
+  "evidence": [
+    {
+      "url": "https://www.who.int/groups/ihr-emergency-committee-regarding-the-epidemic-of-ebola-bundibugyo-virus-disease-in-the-drc-and-uganda",
+      "observed_utc": "2026-10-17T22:14:22Z",
+      "finding": "Current committee timeline: PHEICdetermination/continuation explicitlynotpandemicemergency; datedstatementnotcurrentglobalcensus."
+    },
+    {
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "observed_utc": "2026-10-17T22:14:22Z",
+      "finding": "OriginalOct10undeterminedpneumonia report,noidentifiedongoingtransmissionbasedonNFP; uncertaintyretained, nodeclaration."
+    },
+    {
+      "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020",
+      "observed_utc": "2026-10-17T22:14:22Z",
+      "finding": "Historicalofficialcharacterization helpsliteraldeclarationinterpretation, not2026event orfittedfrequency."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.03,
+    "low": 0.005,
+    "high": 0.2,
+    "method": "Primary rare-WHO-classification hazard and past-missed/terminology scenario",
+    "reasoning": "Judgmental0.4%missedpast, illustrative0.10annualfuturehazard over~75days plus0.6%terminologybranch; about3.03%, noempiricalcalibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:22.533+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 76,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.03,
+        "best_bid": 0.04,
+        "best_ask": 0.046,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.386,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.046,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.45999999999999996,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.046,
+        "break_even_probability_with_idealized_carry": 0.046289163142251004,
+        "central_expected_profit_usd": -0.15999999999999998,
+        "default_10pp_stressed_profit_usd": -0.45999999999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.4
+      },
+      "No": {
+        "probability": 0.97,
+        "best_bid": 0.954,
+        "best_ask": 0.96,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.386,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.96,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.6,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.96,
+        "break_even_probability_with_idealized_carry": 0.9660347090556731,
+        "central_expected_profit_usd": 0.09999999999999964,
+        "default_10pp_stressed_profit_usd": -0.9000000000000004,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.87,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.54
+      }
+    }
+  },
+  "verdict": "Bothsidesvalued; YEScentralnegative, NOtinycentralgrossfailscarry/opsandordinary10ppreserve; noentry.",
+  "reopen_condition": "NewofficialWHODG/emergencycommittee diseaseclassification, dated2026statement or clarifiedwording, majoroutbreakfacts or materiallycheaperNO; revaluebeforeanyorder.",
+  "current_description_sha256": "b662c5d5e1cf455aee379c5a77230f9b58b1c3e3a06bce509b2da5f8c5552db5",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "80671065454402118534970441822834492766941556283670671337094578358747393423487",
+    "97725463464398783289601242767642888481974268800885687422778902740478294103024"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0091",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0091.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0091.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0104",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/diesel_pandemic_sources.json",
+      "data/deep_review_20261017/who_declaration_followup.json",
+      "data/deep_review_20261017/who_history_primary_addendum.json"
+    ],
+    "unrounded_p_yes_sensitivity": 0.030310651813813195,
+    "model_calibrated": false,
+    "complete_announcement_absence_proved": false
+  },
+  "evaluated_utc": "2026-10-17T22:18:13.789776+00:00",
+  "question": "New pandemic in 2026?",
+  "market_id": "788518",
+  "valuation_author": "primary_operator",
+  "original_index": 68,
+  "report_sha256": "db6a6b5ef2f4696619d11f59132874cf6fca5aa5725db39a949f6cd883b7171b"
+}

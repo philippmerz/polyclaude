@@ -8,7 +8,7 @@ another. Check the live index before doing work; a fact packet is not completion
 | Pending cases | Local factual packet | What still needs primary work |
 |---|---|---|
 | 10,52,73; compounds12,26,80,169,185 | `data/deep_review_20261017/us_chambers_sources.json` | Full Senate state/seat and cross-chamber model; generic ballot is not control probability. D needs net4 for51 under current RepublicanVP tie rule. Do not multiply dependent national-error legs. |
-| 30,58,86,114,140,142,170,198,219,233 | `data/deep_review_20261017/spotify_annual_sources.json` | Read original case2 and its primary missing-week/cutoff model. Charted US YTD sums are lower bounds, not official annual ranks; retain censoring/track identity/cutoff uncertainty. No official aggregate2026Wrapped total/cutoff recovered. |
+| Completed30,58,86,114,140,142,170,198,219,233; revised2 | `data/deep_review_20261017/spotify_annual_sources.json`, `spotify_early_history_addendum.json`, `spotify_release_chronology_sources.json` | Ten children and dated MNI37% revision are complete. Read shared Spotify joint method/audit: January1 week straddles2025, absent rows are unknown, catalog dates can postdate original charts, and alternate recording totals cannot be assumed additive. No official2026 cutoff or aggregate ranking recovered; no order. |
 | Completed222,812,1262,1672,1983 | `data/deep_review_20261017/issuer_events_followup_sources.json`, `earnings_metric_history_sources.json` | All five ISRG procedure-growth brackets are complete. Da Vinci differs from Ion/combined; Oct20call20:30Z before22Z metadata. Whole-percent reported precision changes boundary mass. Conference addendum is in CURRENT_REVISIONS; no ISRG order. |
 | 56,63,77,98,147,203,210,224 | `data/deep_review_20261017/google_time_sources.json`, `google_2026_catalysts_sources.json` | Full rules and official methodology/catalysts retrieved. Google ranks growth, not total searches.2025cutoff is not confirmed2026policy; public normalized-series probes failed. TIME is editorial; its public poll does not select the winner. Primary must retain these gaps. |
 | Completed28,199,175,158 | same issuer packet plus `ai_ipo_extension_sources.json` | ConfidentialS1 is not completedIPO. Current issuer/SEC/Nasdaq checks do not prove listing absence; OpenAIdirect403. HighestIPOmarketcap needs all eligible issuers and metric, not last private mark. |
@@ -58,9 +58,9 @@ All five NVDAmargin brackets84,231,334,424,496 are complete. See the shared
 pairs preserve the H20charge; extra-adjusted/later restated metrics are not
 substituted. No earnings order has been placed.
 
-## Active money and immediate handoff priority
+## Earlier money snapshot — superseded by October17 22:15:59 below
 
-The existing22:00UTC safety check must review **ME02YES10@.38 andCA06NO50@.03**
+The then-upcoming22:00UTC safety check was to review **ME02YES10@.38 andCA06NO50@.03**
 LIVE post-only bids. Both zero-filled at20:52:56/block95710019; full pending
 5.30. Read [candidate follow-up](candidate_followup.md),
 [current corrections](CURRENT_REVISIONS.md) and
@@ -87,3 +87,65 @@ ai_ipo_current_timing_sources.json and ai_ipo_primary_addendum.json (direct403
 versus root-rendered attribution preserved). These are facts, not cheap-model
 probabilities or a new shortlist. Primary must read every exact rule and save
 individual reports before next-case work.
+
+## October17, 21:54 continuation
+
+144valuations,1blocked,325factual exclusions,2530pending. The ten Spotify
+children above are now complete; case2 current37% revision does not count as
+an additional valuation. Case158 currentYES24%/NO76% incorporates a stronger
+first-day demand branch; a Yahoo daily unadjusted close corroborates the
+Nasdaq narrative under the literal reliable-source fallback, while exact
+exchange historical close remains inaccessible. No IPO order/prior yet.
+Read CURRENT_REVISIONS before interpreting older18%/82% or provisional gaps.
+
+Additional ready **factual packets, still pending primary valuation**:
+`esports_current_sources.json` (41,75,54,150; HLTV stale LIVE/banner versus
+final-map conflict and Riot chronology conflict), `gta_release_album_sources.json`
+(89,91; currentNov19 schedule, nine selected singles are not the34-track roster),
+and `diesel_pandemic_sources.json` (67,68; authorization is not physical import,
+PHEIC is not an official pandemic declaration). No packet is an exclusion or
+a probability. Continue full queue, not just these sourced families.
+
+
+## October17 22:10 continuation —146 valued
+
+GTA89 and91 are complete, separately saved/indexed. GTA91Appleofficialcatalog
+has9namedcredits/25placeholders, not a fullroster;22%YES is an explicit
+uncalibratedartist-selection/disclosure/timelyrelease prior. A15ppentryreserve
+rejects the capturedNOroute;<=60csmallmaker remainsresearchwatchonly. Active67
+is investigating **actual** diesel delivery; permission/newsintentisnotshipment.
+
+All12publicdatedquotebatchJSONs were losslessly archived as`.json.gz` with
+root-verified original/decompressed hashes. Read [ARCHIVED_CAPTURES.json](ARCHIVED_CAPTURES.json)
+for legacy pathmapping. `case_tools` resolves/verifiesarchives; guarded collectors
+refuse archivedtargets beforeI/O. Do not recreateoldJSONpaths or editimmutable
+reports just to change their datedsourcepointer. Newrecords pointactualgzip.
+
+
+## October17 22:37 continuation — 150 valued
+
+WHO68 is complete (3%YES), diesel67 complete (14%YES), GTA89/91 complete
+(7%delay/22%artist). No orders on those conditions. CS2 cases41/75 are separately
+factual-excluded after exact current identity, final-result, UMA/book and zero
+account-balance checks; they do not count toward valuations.
+
+Worlds54/150 are complete (GEN14%/LCK46%, uncalibrated). **Correction:** the earlier
+standings capture is2025, not future2026Swiss results. The append-only
+`lol_2026_playin_correction_addendum.json` binds actual2026tournament
+115660540725177488 and five completed play-ins, with KC–MVK finalOct18. Current
+GPR scores are facts, not calibrated title probabilities. Primary modeled full
+Swiss/BO5 paths and explicit score-unit/scale sensitivities; see tracked
+worlds_2026_method/model/results. A tiny regional NO30c proposal is under
+independent new-strategy review, with no sports order/prior.
+
+Ready factual packet for **66/82 and132**: `ballon_cricket_sources.json` includes
+full exact rules, original award criteria/nominees and no verified Vini attendance
+plan, plus exactBCCI/ICC Oct17 fifthT20I no-result. Primary must read originals
+and current market/account state before any valuation or factual exclusion.
+These packets do not reject candidates. Google/Senate/Mojtaba remain pending.
+
+Five LIVE bids, zero-filled at22:15:59/block95713340, total12.90/free12.096890,
+include IPO158NO5@.62 in addition to four House bids. This supersedes older
+four/two-order snapshots, not their dated observations.22:00held-thesis review
+completed once; next existing scheduled check02:00. No newtimer. Staticquote
+archives and writer guards remain; safe Gitrepack completed22:29, disk329MiB.

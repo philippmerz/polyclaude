@@ -1,0 +1,147 @@
+{
+  "review_index": 89,
+  "condition_id": "0x652293940a98a7ec9b1d2b23fb9e8399728d1a461dce61523fa2fcce8d844e21",
+  "criteria_sha256": "5c45a5986c18e990d1b759b5923515129c0b4bf81c885eb85f37356520df54a2",
+  "status": "valued",
+  "literal_analysis": "Full rule read: announcement OR actual US nonrelease, either console counts, preorder/beta/leak excluded, ET deadline and credible-consensus fallback.",
+  "evidence": [
+    {
+      "url": "https://www.rockstargames.com/VI",
+      "observed_utc": "2026-10-17T22:01:00Z",
+      "finding": "Current official console release schedule and launch-trailer surface, not delivery or certification."
+    },
+    {
+      "url": "https://www.take2games.com/ir/news/take-two-interactive-software-inc-reports-results-fiscal-first-6",
+      "observed_utc": "2026-10-17T22:01:00Z",
+      "finding": "Original August7 company reaffirmation of November19, not guarantee."
+    },
+    {
+      "url": "https://www.take2games.com/ir/press-releases",
+      "observed_utc": "2026-10-17T22:01:00Z",
+      "finding": "Dated original schedule history and next announced results date; bounded index."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07,
+    "low": 0.01,
+    "high": 0.3,
+    "method": "Primary latent-readiness and qualifying-delay scenario tree",
+    "reasoning": "Explicit86/12/2 state weights and1.5/40/60% conditional qualifying-delay chances; no empirical calibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:25.007+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 34,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.07,
+        "best_bid": 0.03,
+        "best_ask": 0.035,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.23,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.035,
+            "fee_usd": 0.0168875
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.36689000000000005,
+        "fee_usd": 0.01689,
+        "break_even_probability_before_carry": 0.036689000000000006,
+        "break_even_probability_with_idealized_carry": 0.036791999174054076,
+        "central_expected_profit_usd": 0.33311,
+        "default_10pp_stressed_profit_usd": -0.36689000000000005,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.23188
+      },
+      "No": {
+        "probability": 0.9299999999999999,
+        "best_bid": 0.965,
+        "best_ask": 0.97,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.23,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 0.63,
+            "price": 0.97,
+            "fee_usd": 0.000916650000000001
+          },
+          {
+            "shares": 9.37,
+            "price": 0.976,
+            "fee_usd": 0.01097414400000001
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 9.76812,
+        "fee_usd": 0.0119,
+        "break_even_probability_before_carry": 0.976812,
+        "break_even_probability_with_idealized_carry": 0.9795542614191202,
+        "central_expected_profit_usd": -0.46812000000000076,
+        "default_10pp_stressed_profit_usd": -1.4681200000000008,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.83,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.63311
+      }
+    }
+  },
+  "verdict": "YES positive at central estimate but fails ordinary uncertainty reserve; NO negative at captured cost; no entry.",
+  "reopen_condition": "Official schedule/certification or actual availability, credible build issue, November9 results, or material quote changes; revalue before known catalysts.",
+  "current_description_sha256": "94b8bdc0afedb705bc25a9cc10065a7f7f76d9c1a98744fdfa3be040ee61b157",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "50225109718318658540280412494737610120319244416631769238081662045604870609068",
+    "78843465762942534439325485216626496263376463773713149868808423998036009560357"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0113",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0113.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0113.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0125",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/gta_release_album_sources.json",
+    "model_calibrated": false,
+    "tree_unrounded_p_yes": 0.0729
+  },
+  "evaluated_utc": "2026-10-17T22:02:37.896534+00:00",
+  "question": "GTA 6 launch postponed again?",
+  "market_id": "668591",
+  "valuation_author": "primary_operator",
+  "original_index": 89,
+  "report_sha256": "1eba22ff17e3cef98cf2edf83cb2439984f9475dba119da74378fb887f65f68a"
+}

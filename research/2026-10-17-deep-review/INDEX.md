@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-17T21:37:53.117792+00:00
+Updated: 2026-10-17T22:35:31.563066+00:00
 
-**134 valuations saved; first milestone100:** 134 valued; 1 blocked after in-depth review. 325 factual exclusions separately; 2540 pending.
+**150 valuations saved; first milestone100:** 150 valued; 1 blocked after in-depth review. 327 factual exclusions separately; 2522 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -38,6 +38,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |27|[Counter-Strike: FURIA vs Aurora Gaming (BO3) - Thunderpick World Championship Playoffs](evaluations/0027.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |28|[Anthropic IPO before 2027?](evaluations/0028.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |29|[Ethereum Up or Down on October 17?](evaluations/0029.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|30|[Will Die With A Smile – Lady Gaga & Bruno Mars be the #2 song in the US for 2026?](evaluations/0030.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |31|[Next White House Press Secretary announced by October 31, 2026?](evaluations/0031.md)|valued|YES has a small-maker price/model difference; new permanent appointment and monitoring checks required|
 |32|[Will the Democratic Party win the CA-06 House seat?](evaluations/0032.md)|valued|NO is a concrete small-maker research lead; poll provenance and future caucus binding need balanced review|
 |33|[Will Alphabet be the largest company in the world by market cap on October 31, 2026?](evaluations/0033.md)|valued|YES central earnings-tail lead; lower-bound/model support incomplete, no entry|
@@ -48,6 +49,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |38|[Will Elon Musk post 140-164 tweets from October 15 to October 17, 2026?](evaluations/0038.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |39|[Will the Democratic Party win the CA-04 House seat?](evaluations/0039.md)|valued|Priority makerYES candidate~.930/10shares with documented5ppcase reserve; no order|
 |40|[Strait of Hormuz traffic returns to normal by November 30?](evaluations/0040.md)|valued|YES central edge is consumed by 10pp reserve before carry; watch cheaper maker|
+|41|[Counter-Strike: Team Falcons vs BetBoom Team (BO3) - Thunderpick World Championship Playoffs](evaluations/0041.md)|excluded_factual|Factualexclusion, separatefromsubstantivevaluations: Exactcurrent venue closed=true/acceptingOrders=false, noheldshares or matchingorders. Completed source nowmatchesBetBoom2–1, but closurealone excludesnewentry. Gammaresolved is not an independentlyreadCTFpayout.|
 |42|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 45% or higher?](evaluations/0042.md)|valued|YES positive central EV but fails10ppstress; no entry|
 |43|[Will Bitcoin dip to $78,000 October 12-18?](evaluations/0043.md)|valued|YES central value, uncertainty floor fails; no entry|
 |44|[Will "Sacrifice" be the top US Netflix movie this week?](evaluations/0044.md)|valued|Both asks negative central EV; no supported tail bid|
@@ -59,18 +61,23 @@ Each report below is written before moving to the next evaluation. Related contr
 |50|[Will Bitcoin reach $100,000 by December 31, 2026?](evaluations/0050.md)|valued|YES positive central forecast, fails10ppstress/carry; no entry|
 |51|[Will "Doing Life" be the #2 global Netflix movie this week?](evaluations/0051.md)|valued|Priority maker-NO planning lead at.021/50shares; fresh gates required, no order|
 |53|[Bank of Japan increases interest rates by 50+ bps after the October 2026 meeting?](evaluations/0053.md)|valued|YES positive central tail arithmetic; unsupported floor and minimum size, no entry|
+|54|[Will Gen.G win Worlds 2026?](evaluations/0054.md)|valued|Bothsidesvalued; YESnegativecentral, NO70c failscase-specific15ppreserveafterfees/carry; <=69cpassiveNOresearchwatch, noorder.|
 |55|[US x Iran ceasefire continues through October 31?](evaluations/0055.md)|valued|Creation-window ambiguity and operational history assessed; neither side clears ordinary uncertainty reserve|
 |57|[Pete Hegseth out as Secretary of Defense by December 31?](evaluations/0057.md)|valued|NO central advantage fails10ppstress/carry; no entry|
+|58|[Will Risk It All – Bruno Mars be the #2 song in the US for 2026?](evaluations/0058.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |59|[Will the Republicans win the Texas Senate race in 2026?](evaluations/0059.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |60|[Will the Democratic Party win the WA-05 House seat?](evaluations/0060.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |61|[Strait of Hormuz traffic returns to normal by December 31?](evaluations/0061.md)|valued|YES price/model difference clears default reserve, but uncertainty and December hold-only prevent entry|
 |62|[Real Betis Balompié vs. FC Barcelona: O/U 3.5](evaluations/0062.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |65|[Will "Animals" be the #2 US Netflix movie this week?](evaluations/0065.md)|valued|Both asks negative central EV; no entry|
+|67|[US imports Russian diesel by October 31?](evaluations/0067.md)|valued|YES centralvaluepositive but failsordinary10ppreserve; NOcentralnegative. Future<=3cmaker/evidencewatchonly, noentry.|
+|68|[New pandemic in 2026?](evaluations/0068.md)|valued|Bothsidesvalued; YEScentralnegative, NOtinycentralgrossfailscarry/opsandordinary10ppreserve; noentry.|
 |69|[Mississippi State vs. LSU](evaluations/0069.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |70|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 50% or higher?](evaluations/0070.md)|valued|NO central/default-stress lead; metric/release and December uncertainty follow-up, no order|
 |71|[Will the price of Bitcoin be above $80,000 on October 18?](evaluations/0071.md)|valued|NO positive central value afterweekend correction, tail uncertainty preventsentry|
 |72|[Will "Transformers One" be the top US Netflix movie this week?](evaluations/0072.md)|valued|Both asks negative central EV; no entry|
 |74|[Will the Democratic Party win the FL-03 House seat?](evaluations/0074.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
+|75|[Will Falcons Win the Thunderpick World Championship 2026?](evaluations/0075.md)|excluded_factual|Factualexclusion, separatefromsubstantivevaluations: Knowneliminatedteam; exactcurrentGammaYES/NOmid.0005/.9995 andproposedstatus; freshYESask.001 butnoYESbids, noNOasks. Noheldshares/orders. This is obviouseliminated-candidate irrelevance with noeligiblecurrentwinning-entry route, not an uncertainfutureevent screen.|
 |76|[Will SV 07 Elversberg win on 2026-10-17?](evaluations/0076.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |78|[US-Iran Hormuz Agreement by October 31?](evaluations/0078.md)|valued|Mutual acceptance event valued; YES central difference fails normal uncertainty reserve|
 |79|[Will "Ice Age: Collision Course" be the #2 global Netflix movie this week?](evaluations/0079.md)|valued|YES central value, proxy/model error consumes robust edge; no entry|
@@ -78,9 +85,12 @@ Each report below is written before moving to the next evaluation. Related contr
 |83|[Florida Atlantic vs. Army](evaluations/0083.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |84|[NVIDIA (NVDA) Q3 adjusted gross margin 73% to 75%?](evaluations/0084.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |85|[Will the highest temperature in Beijing be 15°C on October 17?](evaluations/0085.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|86|[Will APT. – ROSÉ & Bruno Mars be the #2 song in the US for 2026?](evaluations/0086.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |87|[Will the U.S. invade Iran before 2027?](evaluations/0087.md)|valued|Neither offered side has positive central net economics; no entry|
 |88|[Another Fed rate hike in 2026?](evaluations/0088.md)|valued|YES small central edge consumed by uncertainty/carry; no entry|
+|89|[GTA 6 launch postponed again?](evaluations/0089.md)|valued|YES positive at central estimate but fails ordinary uncertainty reserve; NO negative at captured cost; no entry.|
 |90|[Will Newcastle United FC win on 2026-10-17?](evaluations/0090.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|91|[Will The Weeknd be featured on GTA VI: The Album?](evaluations/0091.md)|valued|NO centrally positive, but opaque-selection15ppreserve rejects capturedroute. Consider<=60csmallpassivewatch after bettercredits/currentgates; noentry.|
 |93|[Will "Norm: The Tale of Norm Macdonald" be the #2 US Netflix movie this week?](evaluations/0093.md)|valued|Both asks negative central EV; no supported maker entry|
 |94|[Putin out as President of Russia by December 31, 2026?](evaluations/0094.md)|valued|Tiny YES central tail value lacks robustfloor; no entry|
 |95|[Will the Republican Party win the GA-10 House seat?](evaluations/0095.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
@@ -95,6 +105,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |109|[Will the Democratic Party win the NH-02 House seat?](evaluations/0109.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |110|[Will XRP reach $2.60 by December 31, 2026?](evaluations/0110.md)|valued|Both asks negative central EV; no supported maker tailentry|
 |111|[Will Villarreal CF win on 2026-10-17?](evaluations/0111.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|114|[Will Drop Dead – Olivia Rodrigo be the #2 song in the US for 2026?](evaluations/0114.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |115|[Will the Republicans win the Michigan Senate race in 2026?](evaluations/0115.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |116|[Will the Democratic Party win the OH-07 House seat?](evaluations/0116.md)|valued|SmallmakerNO follow-up candidate; balancedreview andfullfreshgates outstanding|
 |117|[Susie Wiles out as White House Chief of Staff by December 31?](evaluations/0117.md)|valued|NO central edge, stressed margin too thin after costs/source uncertainty; no entry|
@@ -111,12 +122,15 @@ Each report below is written before moving to the next evaluation. Related contr
 |134|[Will the price of Ethereum be above $2,500 on October 17?](evaluations/0134.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |135|[Will "Ice Age" be the #2 global Netflix movie this week?](evaluations/0135.md)|valued|YES ask negative central EV, NO offer unavailable; no entry|
 |139|[Dota 2: LEGION vs Team Lynx - Game 1 Winner](evaluations/0139.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|140|[Will Dai Dai – Shakira & Burna Boy be the #2 song in the US for 2026?](evaluations/0140.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
+|142|[Will Stateside – PinkPantheress & Zara Larsson be the #2 song in the US for 2026?](evaluations/0142.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |143|[Israeli airspace closed by October 31, 2026?](evaluations/0143.md)|valued|Whole-FIR effective-closure event valued; source-history limits retained, neither side clears reserve|
 |144|[Will the Democratic Party win the FL-07 House seat?](evaluations/0144.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |145|[XRP Up or Down on October 17?](evaluations/0145.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |146|[Northwestern vs. Michigan State: O/U 49.5](evaluations/0146.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |148|[Will Anthropic have the best AI model at the end of October 2026?](evaluations/0148.md)|valued|NO central edge fails stressed all-in route; no entry|
 |149|[Will "Ice Age" be the #2 US Netflix movie this week?](evaluations/0149.md)|valued|YES central value, no supported individual robust floor; no entry|
+|150|[Will a team from LCK (South Korea) win LoL Worlds 2026?](evaluations/0150.md)|valued|Bothsidesvalued; YESnegative, NO31c survives15ppreserve beforefreshentrychecks. Prioritytiny30cpost-onlyNOcandidate pendingindependentnew-classreview, noorder.|
 |151|[Will the Democratic Party win the NV-04 House seat?](evaluations/0151.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |153|[Will Venezia FC win on 2026-10-17?](evaluations/0153.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |156|[Will "Ice Age" be the top US Netflix movie this week?](evaluations/0156.md)|valued|Both asks negative central EV; no entry|
@@ -129,6 +143,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |165|[Will the Republican Party win the NE-02 House seat?](evaluations/0165.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |166|[Romanian PM Bolojan out by October 31?](evaluations/0166.md)|valued|Timed personal-exit event valued; older dismissal and party pledge do not make YES already certain|
 |167|[Israel x Iran ceasefire continues through October 18?](evaluations/0167.md)|valued|Short-window survival valued; NO central difference fails ordinary uncertainty reserve|
+|170|[Will Swim – BTS be the #2 song in the US for 2026?](evaluations/0170.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |171|[Will Aleksandar Vučić – United Serbia win the most seats in the 2026 Serbian parliamentary election?](evaluations/0171.md)|valued|Exact ballot-list contest deeply valued with poll disagreement retained; no ordinary-reserved entry|
 |175|[OpenAI IPO before 2027?](evaluations/0175.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |176|[Will Together win the most seats in the 2026 Israeli legislative election?](evaluations/0176.md)|valued|Rare named-list event fully valued, including late-merger fork; point edge lacks a calibrated tail reserve|
@@ -142,6 +157,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |192|[Will Aleksandar Vučić be the next Prime Minister of Serbia?](evaluations/0192.md)|valued|Formal next-PM event valued separately from largest-list result; long fallback and normal reserve defeat captured asks|
 |193|[Will the Democratic Party win the NC-01 House seat?](evaluations/0193.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |195|[Spread: Galatasaray SK (-1.5)](evaluations/0195.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|198|[Will Billie Jean – Michael Jackson be the #2 song in the US for 2026?](evaluations/0198.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |199|[Will Anthropic IPO by December 31, 2026?](evaluations/0199.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |202|[Villarreal CF vs. Elche CF: O/U 0.5](evaluations/0202.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |205|[Will "Transformers One" be the #2 US Netflix movie this week?](evaluations/0205.md)|valued|Both asks negative central EV; no entry|
@@ -152,6 +168,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |215|[Will fewer than 170 ships transit the Bab el-Mandeb Strait between October 19-October 25?](evaluations/0215.md)|valued|NO maker around .78 is a concrete short-window watch; refresh data and test adverse regime before entry|
 |216|[Will Hamburger SV win on 2026-10-17?](evaluations/0216.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |217|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 45% or higher?](evaluations/0217.md)|valued|Priority makerNO research lead; release/protocol uncertainty and current gates outstanding|
+|219|[Will Beauty And A Beat – Justin Bieber & Nicki Minaj be the #2 song in the US for 2026?](evaluations/0219.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |220|[Will the Democrats win the New Hampshire Senate race in 2026?](evaluations/0220.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |221|[Will the Republican Party win the NY-22 House seat?](evaluations/0221.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |222|[Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 12.5% to 15%?](evaluations/0222.md)|valued|Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable|
@@ -160,6 +177,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |230|[Bologna FC 1909 vs. FC Internazionale Milano: O/U 2.5](evaluations/0230.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |231|[NVIDIA (NVDA) Q3 adjusted gross margin <71%?](evaluations/0231.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |232|[Will an AI lab announce another Millennium Prize solution by December 31, 2026?](evaluations/0232.md)|valued|Announcement event deeply valued; NO central difference lacks default reserve and December entry policy remains|
+|233|[Will hate that i made you love me – Ariana Grande be the #2 song in the US for 2026?](evaluations/0233.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |234|[Will the Democrats win the Michigan governor race in 2026?](evaluations/0234.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |237|[Will FC Internazionale Milano win on 2026-10-17?](evaluations/0237.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |240|[NATO x Russia military clash by October 31, 2026?](evaluations/0240.md)|valued|New attack-drone incident deeply assessed against exact exclusion; semantic/target uncertainty not a source-known arbitrage|

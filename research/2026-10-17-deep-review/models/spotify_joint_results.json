@@ -1,0 +1,255 @@
+{
+  "author": "primary",
+  "calibrated": false,
+  "seed": 202610172,
+  "draws_per_cutoff": 20000,
+  "source_asof": "2026-10-17, latest weekly label2026/10/15",
+  "cohort_size": 54,
+  "interpretation": "Annual official US#2 forecast from incomplete row-window proxy; scenario probabilities, not annual stream observations.",
+  "named_probabilities": {
+    "140": 0.002,
+    "142": 0.036844749999999996,
+    "2": 0.36916125,
+    "233": 0.006712750000000001,
+    "114": 0.007666,
+    "86": 0.0025000000000000005,
+    "58": 0.0044675,
+    "170": 0.005000000000000001,
+    "219": 0.0035000000000000005,
+    "198": 0.004,
+    "30": 0.005000000000000001
+  },
+  "unobserved_or_unmodeled_runner_up_mass": 0.1,
+  "exceptional_named_winner_mass": 0.05,
+  "total_modeled_mass": 0.9999999999999998,
+  "top_forecasts": [
+    {
+      "track_id": "0eAuGrXyGFYwur9ARUe7LJ",
+      "title": "Earrings",
+      "p": 0.43767775
+    },
+    {
+      "track_id": "1qbmS6ep2hbBRaEZFpn7BX",
+      "title": "Man I Need",
+      "p": 0.36916125
+    },
+    {
+      "track_id": "1DwscornXpj8fmOmYVlqZt",
+      "title": "Stateside + Zara Larsson",
+      "p": 0.036844749999999996
+    },
+    {
+      "track_id": "7scFxt9VhL4FJwuPSfRlfN",
+      "title": "Choosin' Texas",
+      "p": 0.00794325
+    },
+    {
+      "track_id": "3fRCAPMMZ8l8P9YKI6OCzD",
+      "title": "drop dead",
+      "p": 0.007666
+    },
+    {
+      "track_id": "20jbSiX29FDX4oQxBXyUEi",
+      "title": "hate that i made you love me",
+      "p": 0.006712750000000001
+    },
+    {
+      "track_id": "7so0lgd0zP2Sbgs2d7a1SZ",
+      "title": "Die With A Smile",
+      "p": 0.005000000000000001
+    },
+    {
+      "track_id": "68lbSrXDORS51pmyjZv712",
+      "title": "SWIM",
+      "p": 0.005000000000000001
+    },
+    {
+      "track_id": "5y2ijHECwFYWqcAHKTZgzD",
+      "title": "Risk It All",
+      "p": 0.0044675
+    },
+    {
+      "track_id": "7J1uxwnxfQLu4APicE5Rnj",
+      "title": "Billie Jean",
+      "p": 0.004
+    },
+    {
+      "track_id": "6QFCMUUq1T2Vf5sFUXcuQ7",
+      "title": "Beauty And A Beat",
+      "p": 0.0035000000000000005
+    },
+    {
+      "track_id": "7yNf9YjeO5JXUE3JEBgnYc",
+      "title": "Babydoll",
+      "p": 0.00304725
+    },
+    {
+      "track_id": "4wJ5Qq0jBN4ajy7ouZIV1c",
+      "title": "APT.",
+      "p": 0.0025000000000000005
+    },
+    {
+      "track_id": "55pBIZO1cqoldeqpp5WR7H",
+      "title": "the cure",
+      "p": 0.00226525
+    },
+    {
+      "track_id": "0kosUz0jePvjiz4ctmR6wL",
+      "title": "Dai Dai",
+      "p": 0.002
+    }
+  ],
+  "cutoff_scenarios": [
+    {
+      "label": "November15 hypothesis",
+      "days_from_Oct15": 31,
+      "weight": 0.7,
+      "conditional_runner_up_by_track": {
+        "1qbmS6ep2hbBRaEZFpn7BX": 0.4595,
+        "7scFxt9VhL4FJwuPSfRlfN": 0.0095,
+        "0eAuGrXyGFYwur9ARUe7LJ": 0.4801,
+        "1DwscornXpj8fmOmYVlqZt": 0.0394,
+        "55pBIZO1cqoldeqpp5WR7H": 0.0025,
+        "7yNf9YjeO5JXUE3JEBgnYc": 0.0025,
+        "3fRCAPMMZ8l8P9YKI6OCzD": 0.0018,
+        "20jbSiX29FDX4oQxBXyUEi": 0.002,
+        "5y2ijHECwFYWqcAHKTZgzD": 0.00065,
+        "49j6SvuvWfbEKZKzsHCdLJ": 0.00045,
+        "514joG57v4yKTsfQmz7stz": 0.0013,
+        "53qkszfgztIvkFyF31GfdQ": 0.0002,
+        "13HD3tYTiz8oSRxWzXEq7g": 0.0001
+      }
+    },
+    {
+      "label": "November30 hypothesis",
+      "days_from_Oct15": 46,
+      "weight": 0.2,
+      "conditional_runner_up_by_track": {
+        "0eAuGrXyGFYwur9ARUe7LJ": 0.56305,
+        "1qbmS6ep2hbBRaEZFpn7BX": 0.3869,
+        "7scFxt9VhL4FJwuPSfRlfN": 0.0094,
+        "3sK8wGT43QFpWrvNQsrQya": 5e-05,
+        "55pBIZO1cqoldeqpp5WR7H": 0.0026,
+        "1DwscornXpj8fmOmYVlqZt": 0.02675,
+        "3fRCAPMMZ8l8P9YKI6OCzD": 0.0022,
+        "7yNf9YjeO5JXUE3JEBgnYc": 0.0046,
+        "20jbSiX29FDX4oQxBXyUEi": 0.0019,
+        "514joG57v4yKTsfQmz7stz": 0.0011,
+        "49j6SvuvWfbEKZKzsHCdLJ": 0.0009,
+        "5y2ijHECwFYWqcAHKTZgzD": 0.00035,
+        "13HD3tYTiz8oSRxWzXEq7g": 5e-05,
+        "003vvx7Niy0yvhvHt4a68B": 0.0001,
+        "6sGIMrtIzQjdzNndVxe397": 5e-05
+      }
+    },
+    {
+      "label": "December31 hypothesis",
+      "days_from_Oct15": 77,
+      "weight": 0.1,
+      "conditional_runner_up_by_track": {
+        "1qbmS6ep2hbBRaEZFpn7BX": 0.29395,
+        "0eAuGrXyGFYwur9ARUe7LJ": 0.66235,
+        "7yNf9YjeO5JXUE3JEBgnYc": 0.00915,
+        "1DwscornXpj8fmOmYVlqZt": 0.01005,
+        "3fRCAPMMZ8l8P9YKI6OCzD": 0.0026,
+        "49j6SvuvWfbEKZKzsHCdLJ": 0.0022,
+        "7scFxt9VhL4FJwuPSfRlfN": 0.00815,
+        "003vvx7Niy0yvhvHt4a68B": 0.0012,
+        "55pBIZO1cqoldeqpp5WR7H": 0.00395,
+        "514joG57v4yKTsfQmz7stz": 0.0017,
+        "1VOSSXuWRcBj2rpfxNdX9v": 0.0008,
+        "5y2ijHECwFYWqcAHKTZgzD": 0.00025,
+        "13HD3tYTiz8oSRxWzXEq7g": 0.0009,
+        "20jbSiX29FDX4oQxBXyUEi": 0.00235,
+        "2A22iI0x4EYAVXNpKPhNEM": 5e-05,
+        "53qkszfgztIvkFyF31GfdQ": 0.0002,
+        "6sGIMrtIzQjdzNndVxe397": 0.0001,
+        "3sK8wGT43QFpWrvNQsrQya": 5e-05
+      }
+    }
+  ],
+  "sensitivities": [
+    {
+      "days": 31,
+      "unknown_scale": 0.5,
+      "alias_probability": 0,
+      "boundary_adjusted": true,
+      "conditional_named": {
+        "140": 0,
+        "142": 0,
+        "2": 0.491,
+        "233": 0.0024,
+        "114": 0.003,
+        "86": 0,
+        "58": 0,
+        "170": 0,
+        "219": 0,
+        "198": 0,
+        "30": 0
+      }
+    },
+    {
+      "days": 31,
+      "unknown_scale": 1.5,
+      "alias_probability": 0.3,
+      "boundary_adjusted": true,
+      "conditional_named": {
+        "140": 0,
+        "142": 0.0756,
+        "2": 0.4518,
+        "233": 0.001,
+        "114": 0.0008,
+        "86": 0,
+        "58": 0.0024,
+        "170": 0.0014,
+        "219": 0,
+        "198": 0,
+        "30": 0
+      }
+    },
+    {
+      "days": 77,
+      "unknown_scale": 1.5,
+      "alias_probability": 0.3,
+      "boundary_adjusted": true,
+      "conditional_named": {
+        "140": 0,
+        "142": 0.0194,
+        "2": 0.2912,
+        "233": 0.0002,
+        "114": 0.0006,
+        "86": 0,
+        "58": 0.002,
+        "170": 0,
+        "219": 0,
+        "198": 0,
+        "30": 0
+      }
+    },
+    {
+      "days": 31,
+      "unknown_scale": 1,
+      "alias_probability": 0.15,
+      "boundary_adjusted": false,
+      "conditional_named": {
+        "140": 0,
+        "142": 0.035,
+        "2": 0.6542,
+        "233": 0.0024,
+        "114": 0.0026,
+        "86": 0,
+        "58": 0.0006,
+        "170": 0,
+        "219": 0,
+        "198": 0,
+        "30": 0
+      }
+    }
+  ],
+  "parameter_caveats": [
+    "Missing dates never factual zero; censored counts imputed separately.",
+    "Jan1 weekly label contains six2025 days; calendar allocation is assumed, not actual daily data.",
+    "No exact official2026 aggregate cutoff or song-ID aggregation rule verified.",
+    "All version uplift, rare winner, unknown history and future-persistence distributions are subjective."
+  ]
+}
