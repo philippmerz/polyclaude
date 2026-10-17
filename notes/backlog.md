@@ -1,3 +1,11 @@
+## 2026-10-17 10:00 UTC — light check complete
+
+- Retain O NO 19 and Clarity 29/29; no add or prior change. O priors .25/.15/.38: central/upper hold, stress exits. Current full Clarity pair exit/carry is unknown: C50Y GET/POST exceeded the 180s freshness guard; C58N-only net exit $25.99560 does not price the pair.
+- All 65 HLE objects and metric semantics match 06:00; OpenAI max 53.6<55, with three direct OpenAI 403 coverage gaps. Five held Gamma criteria/state, 256 Senate, article cores and AA 57/44 unchanged. Sampled RSS/public-alert tails had no timestamped rows after 06:02; API Age is cache metadata.
+- Hormuz .003571 nonexpiring claim remains held; current point-gas estimate.004564816861 exceeds payout using the dated simulation. No repeat dry-run or broadcast.
+- Disk 507.10 MiB is below 512 warning and above 128 critical. The bounded census found no safe disposable candidate; capacity remains unresolved and the hourly guard remains. No deletion, rotation, restart or VM expansion; see `logs/periodic_20261017T1000/backlog_review.json`.
+- No discovery, redeem-all or weekly review was due or run. The last scan remains the dated, capped02:00 review:2997 unique conditions selected, 2994 without documented literal review. WTI 4936103 source gap is unchanged; do not repeat absent new input. Weekly next Oct 23, monthly Nov 12; next full check 14:00. Manual issuer-account credential rotation remains blocked.
+
 ## 2026-10-17 06:00 UTC — light check complete
 
 - Retain O NO 19 and Clarity 29/29; no add or prior change. O priors remain .25/.15/.38; central/upper hold and stress exits. Current C50Y books are stale, so full Clarity exit/carry is unknown; do not reuse 02:00 economics.
@@ -4689,13 +4697,18 @@ Reviewed during scheduled checks and when relevant to a concrete task; do not st
   repeat at most once every 24 hours. Hourly probes continue; critical
   space below 128 MiB and probe failures retain independent hourly alerts.
   Tests pass and the updated watcher is live. Capacity remains unresolved;
-  latest checked free space is about 328 MiB at Oct-4 14:03.
+  latest historical reading was about328 MiB at Oct-4 14:03.
 
-**Current HLE state, Oct-17 02:00:** G remains final YES1/NO0; 4.034750 losing NO shares remain at0 without rebook/burn. All65 full raw HLE objects match22:00, including Argon calibration error41.52/aux fields and Sol ART18.76. Original HLE Accuracy/Diamond and identity/provider/release fields remain stable: Argon55.6/56.9, OpenAI max53.6<55. Calibration is explicitly excluded by the held criteria. Mounted bundle URL/bytes and original-HLE-default/separate-Diamond semantics unchanged; API Age2839s is cache metadata. Five Gamma criteria/state, Senate256, article cores and AA57/44 pair unchanged. O-market YES snapshot +0.5pp is not an executable quote. RSS and sampled public last80 tails had zero timestamped rows after22:02; three OpenAI403s remain coverage gaps. O NO19 retained at priors.25/.15/.38; stress favors exit, central/upper hold. Receipt-time book .20/.26, fee-net exit3.67840, ask.267696; planning only. Evidence: `data/checkin_20261017T0200_sources.json` and source report.
+  **Oct-17 10:00 warning:** free space is 507.10 MiB, below 512 MiB warning and
+  above 128 MiB critical. The bounded census found no safe disposable candidate;
+  see `logs/periodic_20261017T1000/backlog_review.json`. Existing hourly guard
+  remains; no deletion, live-log rotation, restart or VM expansion.
 
-**Current Clarity review, Oct-17 02:00:** retain complete29/29 conditional on unchanged criteria and payout floor29. Fresh-at-receipt C50Y/C58N legs net.83624/25.99560; full pair exit26.83184 and idealized carry27.009369163. Quotes are receipt-time estimates, not signing authority; no add or global-optimality claim.
+**Current HLE state, Oct-17 10:00:** G is final YES1/NO0; 4.034750 losing NO shares remain at zero, with no rebook or burn. All 65 full raw HLE objects and mounted bundle/default original-HLE Accuracy/separate-Diamond semantics match 06:00. Argon 55.6/56.9; OpenAI max 53.6<55. Three direct OpenAI 403 pages are coverage gaps. Five Gamma criteria/state, 256 Senate rows, article cores and AA 57/44 unchanged. Sampled RSS/public tails had no timestamped rows after 06:02; API Age 2778s is cache metadata. C58 YES snapshot+0.5pp, O YES−1pp, Trump YES−0.1pp are not execution quotes. Evidence: `data/periodic_20261017T1000_sources.json` and `logs/periodic_20261017T1000/sources/report.md`.
 
-**Hormuz dust, Oct-17 02:00:** retain .003571 claim; point-gas estimate.004548648481 exceeds payout using dated175036-unit simulation/current gas/rounded FX. No new simulation or broadcast; not a liquidation certificate.
+**Current Clarity review, Oct-17 10:00:** Retain complete 29/29 under unchanged criteria and the conditional $29 floor. Current full-pair exit/carry is UNKNOWN: C50Y GET/POST ages 233.202/233.517s fail180s freshness; C58N-only net exit 25.99560 at 102.223s does not price the pair. Do not reuse 02:00 economics, add or claim optimality. Fresh quotes and all execution gates are required before action.
+
+**Hormuz dust, Oct-17 10:00:** Retain the .003571 nonexpiring winning claim. Current point gas $0.004564816861 exceeds payout using the dated 175036-unit simulation/current gas/rounded FX; no new simulation, repeat dry-run or broadcast. No fee override or burn.
 
 **Current discovery coverage, Oct-17 02:00:** ten command types/allrc0; capped primary/thin-tail snapshots selected3044 rows/2997 unique conditions (47 overlap). Batches emitted2280/2267 unique;730 selected conditions not emitted. One new exact-literal review plus two carried hash-matched reviews;2994 selected conditions lack documented literal review. This is partial filtered coverage, not venue-wide absence. WTI4936103 requires a final one-minute Pyth ICE CLL active-month candle HIGH≥$100 in October. Six bounded browser requests yielded no qualifying timestamped candle; authentication/loading are not proof of outage, and ICE/EIA substitutes are not literal. Three short follow-up excerpts are summaries rather than raw HTTP bodies. No probability or entry; no new watcher. Consistency scan was capped/incomplete:20/210 groups requested,167 legs,6 validated live quotes,14 attempted groups failed and190 eligible groups were not requested; no positive after depth. See `data/checkin_20261017T0200_root_judgment.json`, `data/checkin_20261017T0200_discovery.json`, and `logs/checkin_20261017T0200/discovery/source_checks/pyth_cll_followup/audit.json`.
 
