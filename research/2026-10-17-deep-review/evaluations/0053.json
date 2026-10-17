@@ -1,0 +1,158 @@
+{
+  "review_index": 53,
+  "condition_id": "0xe7bac65e95d998e489309619a6093d82082a33f766acd5eb55fd3179e43d2145",
+  "criteria_sha256": "9c8e34352fc7b8a0eed2eec7623a8755daa966f526308e5d11843d10fe5a122a",
+  "status": "valued",
+  "literal_analysis": "Oct30meeting changevsimmediatelypremeetingcall-rate policyanchor;50+bucket includesceil25 nonstandard>25;1.50basicloan notanchor; fallbackread.",
+  "evidence": [
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+      "observed_utc": "2026-10-17T19:01:17.258314+00:00",
+      "finding": "Sep18+25bp to1.25%effectiveSep24,vote7–2,dissenterswantedhold; separate1.5%lending facility not policy target upperanchor."
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi260918.pdf",
+      "observed_utc": "2026-10-17T19:01:17.258357+00:00",
+      "finding": "Full edited opinionstext includes conditionalacceleration and nohaste views; September intervalsinceJunealreadyshorter."
+    },
+    {
+      "url": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.htm",
+      "observed_utc": "2026-10-17T19:01:17.258360+00:00",
+      "finding": "August latestnational1.9headline1.7exfresh1.9exfreshenergy; Sepnationalnotyetpublished."
+    },
+    {
+      "url": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/pdf/kubu.pdf",
+      "observed_utc": "2026-10-17T19:01:17.258362+00:00",
+      "finding": "TokyoSep prelim2.7/2.7/3.0y/y; municipalpolicycompositioncaveat."
+    },
+    {
+      "url": "https://www.stat.go.jp/english/data/cpi/1582.html",
+      "observed_utc": "2026-10-17T19:01:17.258364+00:00",
+      "finding": "SepnationalCPI scheduledOct23 beforeMPM."
+    },
+    {
+      "url": "https://www.mhlw.go.jp/toukei/itiran/roudou/monthly/r08/2608p/dl/houdou2608p.pdf",
+      "observed_utc": "2026-10-17T19:01:17.258366+00:00",
+      "finding": "Augustprovisionalnominalwages+3.8%,scheduled+3.9; notfuturedecisionproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.015,
+    "low": 0.001,
+    "high": 0.08,
+    "method": "Additional-hike probability times rounded-large-step conditional probability",
+    "reasoning": "Subjective .20Octoberhike*.075hikeabove25afterrounding=.015; .001–.08wide range; ratespread/inflationguidance, not pollvotes or price-derived.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:20.223+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 12.4,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.015,
+        "best_bid": 0.005,
+        "best_ask": 0.006,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 118.074,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.006,
+            "fee_usd": 0.002982
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.06299,
+        "fee_usd": 0.00299,
+        "break_even_probability_before_carry": 0.006299000000000001,
+        "break_even_probability_with_idealized_carry": 0.006305443552649467,
+        "central_expected_profit_usd": 0.08700999999999999,
+        "default_10pp_stressed_profit_usd": -0.06299,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.047510000000000004
+      },
+      "No": {
+        "probability": 0.985,
+        "best_bid": 0.994,
+        "best_ask": 0.995,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 118.074,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.995,
+            "fee_usd": 0.0024875000000000023
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.95249,
+        "fee_usd": 0.00249,
+        "break_even_probability_before_carry": 0.9952489999999999,
+        "break_even_probability_with_idealized_carry": 0.9962670884792552,
+        "central_expected_profit_usd": -0.10248999999999953,
+        "default_10pp_stressed_profit_usd": -1.1024899999999995,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.885,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.937009999999999
+      }
+    }
+  },
+  "verdict": "YES positive central tail arithmetic; unsupported floor and minimum size, no entry",
+  "reopen_condition": "Oct23 national CPI or specific official BOJ size signal plus supported probabilityfloor/current executableminimumsize quote.",
+  "current_description_sha256": "77555493822421726919933f2d9f75cbe5e3a2179381c83c6840bf595b8ede48",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "7040953269855725259683190325580679402263028480316900522994079432824866497038",
+    "74406398109725907919800419927079518302344023612759064512484144417853162866634"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0075",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0075.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0075.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0083",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/macro_followup_sources.json",
+    "short_term_policy_rate_current": 1.25,
+    "separate_basic_loan_rate_not_anchor": 1.5,
+    "case_uncertainty": "unmeasured policy-size tail"
+  },
+  "evaluated_utc": "2026-10-17T19:01:17.522947+00:00",
+  "question": "Bank of Japan increases interest rates by 50+ bps after the October 2026 meeting?",
+  "market_id": "3251604",
+  "valuation_author": "primary_operator",
+  "original_index": 53,
+  "report_sha256": "9123cf77f1bc9d11eb7d4c6a9d9f5fa335604edbe795b9635a81c53a6544ef4d"
+}

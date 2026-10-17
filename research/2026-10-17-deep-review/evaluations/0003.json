@@ -1,0 +1,152 @@
+{
+  "review_index": 3,
+  "condition_id": "0xd4634d906b7eb6effdd16645e2cb08734e74af135abd9e4179397bdf3d54bf01",
+  "criteria_sha256": "003688324e07cad293799a0093ff77101862c10dcc0a1f18861417f807e0eff8",
+  "status": "valued",
+  "literal_analysis": "Alllive standingstart ownpower timer-or-official-specific-run-time andevent/continuationclausesread;noindependenttimerrequirementinvented;rolloutunverified.",
+  "evidence": [
+    {
+      "url": "https://www.youtube.com/watch?v=qt5p-_tE8d0",
+      "observed_utc": "2026-10-17T19:08:11.307379+00:00",
+      "finding": "OfficialTeslaOct15replayidentity;publicplaybacklogin-required,transcriptsempty;noframesverified."
+    },
+    {
+      "url": "https://x.com/i/broadcasts/1yKAPwNggRaxb",
+      "observed_utc": "2026-10-17T19:08:11.307425+00:00",
+      "finding": "OfficialTeslaeventmetadataonly;notseparate0.81specificrunpublication."
+    },
+    {
+      "url": "https://electrek.co/2026/10/15/an-updated-technical-look-at-teslas-kick-flipping-0-60-in-1s-next-gen-roadster/",
+      "observed_utc": "2026-10-17T19:08:11.307428+00:00",
+      "finding": "Recorded1.0thenlive0.81Tesla-attributed;timertrouble;rollout0.55targetnotestablishedforlive.81."
+    },
+    {
+      "url": "https://www.jalopnik.com/2288450/tesla-roadster-rereveal-new-design-production-plans-for-flying-car/",
+      "observed_utc": "2026-10-17T19:08:11.307430+00:00",
+      "finding": "Secondrunlive,Tesla-attributed0.81,noon-screentimer;officialspecificrunpathstillneedsevaluation."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5710779",
+      "observed_utc": "2026-10-17T19:08:11.307432+00:00",
+      "finding": "Currentexactmarketactive/notclosed,UMAaggregate disputed;statusarraynotpayoutproofandnoper-rounddetails."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.85,
+    "low": 0.4,
+    "high": 0.995,
+    "method": "Primary explicit timing-path interpretation and remaining-run-condition scenario",
+    "reasoning": "90%acceptreportedofficialspecific-live-runtime alternative*95%otherrequiredconditions=.855rounded.85;40–99.5%wideinterpretationrange. Price not evidence. Vetteddisputed-statusentryblocked.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:16.096+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 14,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.85,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 86.145,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": false,
+        "fills": [],
+        "filled_gross_shares": 0,
+        "taker_cost_usd": null,
+        "fee_usd": null,
+        "break_even_probability_before_carry": null,
+        "break_even_probability_with_idealized_carry": null,
+        "central_expected_profit_usd": null,
+        "default_10pp_stressed_profit_usd": null,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.75,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.9895
+      },
+      "No": {
+        "probability": 0.15000000000000002,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 86.145,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.001,
+            "fee_usd": 0.0004995
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.0105,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.0010500000000000002,
+        "break_even_probability_with_idealized_carry": 0.0010512127689662931,
+        "central_expected_profit_usd": 1.4895000000000003,
+        "default_10pp_stressed_profit_usd": 0.4895000000000002,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.05000000000000002,
+        "quote_is_current_execution_certificate": false
+      }
+    }
+  },
+  "verdict": "Apparent cheap NO under primary interpretation; current UMA dispute blocks entry",
+  "reopen_condition": "Obtain exact officialrun timing/starting evidence and oracle rationale; revalidate status/venue/no-bypass before anyneworder.",
+  "current_description_sha256": "e744d230a3c0ce06df766a287d95e0951d58253f3e7dd2ed6c4e6b29a5e180b7",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "94224717266604487114880056965368574473849199236933634123623009387278649619310",
+    "35844964571209293189705375573192622987165353620051954250277194725868296251701"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0023",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0023.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0023.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0041",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/tesla_alien_cap_sources.json",
+      "data/deep_review_20261017/tesla_run_followup.json",
+      "data/deep_review_20261017/tesla_reporting_sources.json"
+    ],
+    "current_uma_status": "disputed",
+    "current_metadata_observed_utc": "2026-10-17T19:00 source packet receipt",
+    "execution_hard_gate": "currentUMA disputed; no bypass",
+    "probability_confidence": "low/adjudication-sensitive",
+    "priority_followup": true
+  },
+  "evaluated_utc": "2026-10-17T19:08:11.605545+00:00",
+  "question": "Will the Tesla Roadster's 0-60 time be less than 1 second?",
+  "market_id": "5710779",
+  "valuation_author": "primary_operator",
+  "original_index": 3,
+  "report_sha256": "a62401162c67a984a8e5d4d858177e3cf8eb8840be5487c8cc3961cb15270178"
+}

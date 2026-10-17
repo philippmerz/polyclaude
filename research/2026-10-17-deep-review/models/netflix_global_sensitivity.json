@@ -1,0 +1,64 @@
+{
+  "author": "primary_operator",
+  "as_of": "2026-10-17",
+  "method": "Subjective weekly global-English-views sensitivity; NOT fitted forecasting probabilities",
+  "seed": 20261017,
+  "samples": 200000,
+  "names": [
+    "Animals",
+    "Doing Life",
+    "Ice Age: Collision Course",
+    "Ice Age",
+    "Sacrifice",
+    "Norm",
+    "Other highest film"
+  ],
+  "median_weekly_views_millions": [
+    30.5,
+    12,
+    8.4,
+    5.6,
+    4.5,
+    2,
+    7
+  ],
+  "log_sd": [
+    0.3,
+    0.22,
+    0.25,
+    0.3,
+    0.5,
+    0.55,
+    0.4
+  ],
+  "results": {
+    "1": {
+      "Animals": 0.991715,
+      "Doing Life": 0.00598,
+      "Ice Age: Collision Course": 0.00032,
+      "Ice Age": 2.5e-05,
+      "Sacrifice": 0.000585,
+      "Norm": 5e-06,
+      "Other highest film": 0.00137
+    },
+    "2": {
+      "Animals": 0.00782,
+      "Doing Life": 0.73884,
+      "Ice Age: Collision Course": 0.114845,
+      "Ice Age": 0.01144,
+      "Sacrifice": 0.027165,
+      "Norm": 0.000785,
+      "Other highest film": 0.099105
+    }
+  },
+  "source_anchor": "Prior officialglobal views23.8Animals(3releaseddays),18.2DoingLife(7),9.3CollisionCourse(7). Three actual partialdailyglobalpoint snapshots used only asordinalordering leads, not views.",
+  "parameter_derivation": "Animals23.8/3*7*.55\u224830.5; Doing18.2*.66\u224812; Collision9.3*.90\u22488.4; originalIce11.2*.50=5.6; Sacrifice4.5/Norm2/Othermax7 are subjective territorial/newrelease residual parameters, not observed estimates",
+  "limits": [
+    "No daily-global-to-weeklyviews calibration",
+    "Current global day observations incomplete; pointsnotviews",
+    "Sacrifice initial territorial restrictionUSFrance; mayhaveotherdistributionviewsunknown",
+    "Other highest entrant distribution is subjective",
+    "Official Instadocs categorical mapping is unclear against conflicting proxy; missing title classification risk trackedseparately",
+    "Not a probability floor or current execution certificate"
+  ]
+}

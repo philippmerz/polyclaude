@@ -1,0 +1,152 @@
+{
+  "review_index": 37,
+  "condition_id": "0x0c2a63d9adceb8defe05846e14380ca7e8f084e0eba6ff3909d2f0de0c755e1d",
+  "criteria_sha256": "5e68cf3ad1e53a092e65e55c5f4c83e3cc09c25e1f5fc263c852826b4f1e9228",
+  "status": "valued",
+  "literal_analysis": "Exact namedtitle/rank/category,Oct20expectedupdateofOct12–18week;titlealphabeticaltie;OtherfallbackOct23;allfullrulesread.",
+  "evidence": [
+    {
+      "url": "https://www.netflix.com/tudum/articles/top-10-october-5-2026",
+      "observed_utc": "2026-10-17T19:21:38.524449+00:00",
+      "finding": "PriorweekglobalEnglish anchors,notcurrentweekorUSweeklytotals."
+    },
+    {
+      "url": "https://www.netflix.com/tudum/top10/united-states/films",
+      "observed_utc": "2026-10-17T19:21:38.524470+00:00",
+      "finding": "OfficialpriorUSranktableinrenderedcapture;currentweekunpublishedatcutoff."
+    },
+    {
+      "url": "https://streamscope.app/netflix/history/2026-10-17",
+      "observed_utc": "2026-10-17T19:21:38.524473+00:00",
+      "finding": "SecondaryFlixPatrol-attributedUSdailyproxy;notweeklyviews;all13daysinpacket."
+    },
+    {
+      "url": "https://flixpatrol.com/top10/netflix/world/2026-10-16/",
+      "observed_utc": "2026-10-17T19:21:38.524476+00:00",
+      "finding": "GlobaldailyPOINTStranscriptonly,gaps/403notzero;notUSdataorofficialweeklyviews."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.025,
+    "low": 0.002,
+    "high": 0.12,
+    "method": "Primary three-regime US rank judgment",
+    "reasoning": ".80*.005+.15*.13+.05*.03=.025; subjective debut/surge/source branches.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:18.217+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 3.0,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.025,
+        "best_bid": 0.001,
+        "best_ask": 0.011,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.239,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.011,
+            "fee_usd": 0.0054395
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.11543999999999999,
+        "fee_usd": 0.00544,
+        "break_even_probability_before_carry": 0.011543999999999999,
+        "break_even_probability_with_idealized_carry": 0.011546855889105829,
+        "central_expected_profit_usd": 0.13456,
+        "default_10pp_stressed_profit_usd": -0.11543999999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.0095
+      },
+      "No": {
+        "probability": 0.975,
+        "best_bid": 0.989,
+        "best_ask": 0.999,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.239,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.999,
+            "fee_usd": 0.0004995000000000005
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.9905,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.9990500000000001,
+        "break_even_probability_with_idealized_carry": 0.9992971566191253,
+        "central_expected_profit_usd": -0.24050000000000082,
+        "default_10pp_stressed_profit_usd": -1.2405000000000008,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.875,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.88456
+      }
+    }
+  },
+  "verdict": "YES small central upside, uncertainty/minimum-size failure; no entry",
+  "reopen_condition": "Opening-week US weekly-view evidence materially changes the conditional surge branch.",
+  "current_description_sha256": "795c2159822a6d0b0f4f7f39e31c94dc6184f4e0073679b94574fbfd633e0186",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "115202916862107670805568567961177705938325147142869568466716305554309584893470",
+    "67459175048377836412780697434170548154694513759132865616247534256009851272567"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0058",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0058.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0058.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0062",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/netflix_sources.json",
+      "data/deep_review_20261017/netflix_followup_sources.json"
+    ],
+    "tracked_method": "research/2026-10-17-deep-review/models/netflix_method.md",
+    "model_calibrated": false,
+    "case_specific_reserve_for_entry": 0.2,
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-17T19:21:38.754388+00:00",
+  "question": "Will \"Sacrifice\" be the #2 US Netflix movie this week?",
+  "market_id": "5713623",
+  "valuation_author": "primary_operator",
+  "original_index": 37,
+  "report_sha256": "763d8d5f0df04a4e5ce86179292c5da859bde22543d69c3963e9d0b4b92b3b41"
+}

@@ -1,0 +1,157 @@
+{
+  "review_index": 9,
+  "condition_id": "0x692ffcc42978dd3940e9fb7093017b2e36641dfbce9c7fc564b192f806390af2",
+  "criteria_sha256": "9edc14d154637694b06739b6cb747bde9159d90d615638c5a15a55fe9c032abb",
+  "status": "valued",
+  "literal_analysis": "Exact namedtitle/rank/category,Oct20expectedupdateofOct12–18week;titlealphabeticaltie;OtherfallbackOct23;allfullrulesread.",
+  "evidence": [
+    {
+      "url": "https://www.netflix.com/tudum/articles/top-10-october-5-2026",
+      "observed_utc": "2026-10-17T19:15:35.647672+00:00",
+      "finding": "PriorweekglobalEnglish anchors,notcurrentweekorUSweeklytotals."
+    },
+    {
+      "url": "https://www.netflix.com/tudum/top10/united-states/films",
+      "observed_utc": "2026-10-17T19:15:35.647699+00:00",
+      "finding": "OfficialpriorUSranktableinrenderedcapture;currentweekunpublishedatcutoff."
+    },
+    {
+      "url": "https://streamscope.app/netflix/history/2026-10-17",
+      "observed_utc": "2026-10-17T19:15:35.647703+00:00",
+      "finding": "SecondaryFlixPatrol-attributedUSdailyproxy;notweeklyviews;all13daysinpacket."
+    },
+    {
+      "url": "https://flixpatrol.com/top10/netflix/world/2026-10-16/",
+      "observed_utc": "2026-10-17T19:15:35.647707+00:00",
+      "finding": "GlobaldailyPOINTStranscriptonly,gaps/403notzero;notUSdataorofficialweeklyviews."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.75,
+    "low": 0.4,
+    "high": 0.92,
+    "method": "Primary three-regime weekly-rank judgment",
+    "reasoning": ".80ordinary*.90Doingsecond+.15late-surge*.10+.05proxy/publication*.30=.75;40–92%range,20ppactualreserve.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:16.096+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 3.0,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.75,
+        "best_bid": 0.19,
+        "best_ask": 0.46,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.108,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 6.33,
+            "price": 0.46,
+            "fee_usd": 0.07861860000000001
+          },
+          {
+            "shares": 3.67,
+            "price": 0.54,
+            "fee_usd": 0.0455814
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 5.0178,
+        "fee_usd": 0.1242,
+        "break_even_probability_before_carry": 0.50178,
+        "break_even_probability_with_idealized_carry": 0.5019041361777135,
+        "central_expected_profit_usd": 2.4821999999999997,
+        "default_10pp_stressed_profit_usd": 1.4821999999999997,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.65,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.8230499999999998
+      },
+      "No": {
+        "probability": 0.25,
+        "best_bid": 0.54,
+        "best_ask": 0.81,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.108,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.81,
+            "fee_usd": 0.07694999999999998
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.176950000000001,
+        "fee_usd": 0.07695,
+        "break_even_probability_before_carry": 0.8176950000000002,
+        "break_even_probability_with_idealized_carry": 0.8178972909080382,
+        "central_expected_profit_usd": -5.6769500000000015,
+        "default_10pp_stressed_profit_usd": -6.6769500000000015,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.15,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.981450000000001
+      }
+    }
+  },
+  "verdict": "Maker planning candidate: YES20c/10shares subject to fresh full gates; no order yet",
+  "reopen_condition": "Freshweek/proxy/book/UMA/account validation; recompute20pp-stressed edge and adverse-fill terms; invalidate on demonstrated newcompetitor weekly dominance.",
+  "current_description_sha256": "795c2159822a6d0b0f4f7f39e31c94dc6184f4e0073679b94574fbfd633e0186",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "81751415198765447714651145803784364527952626503870447823236099441043722885493",
+    "38965511743652098418445786140889615359763928046856374134844536271252414453766"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0029",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0029.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0029.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0041",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/netflix_sources.json",
+      "data/deep_review_20261017/netflix_followup_sources.json"
+    ],
+    "tracked_method": "research/2026-10-17-deep-review/models/netflix_method.md",
+    "model_calibrated": false,
+    "case_specific_reserve_for_entry": 0.2,
+    "priority_followup": true
+  },
+  "evaluated_utc": "2026-10-17T19:15:35.931374+00:00",
+  "question": "Will \"Doing Life\" be the #2 US Netflix movie this week?",
+  "market_id": "5713619",
+  "valuation_author": "primary_operator",
+  "original_index": 9,
+  "report_sha256": "c109c26f7143b11a49fc585aebb7ac39add78c54ce97b07df247236176378e65"
+}

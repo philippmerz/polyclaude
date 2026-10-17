@@ -1,0 +1,158 @@
+{
+  "review_index": 7,
+  "condition_id": "0x5e4aa43999e84e017186157e4780bf85b94f75a6f41a8953d2677767a65ea258",
+  "criteria_sha256": "aaa19436b52f9ffa2f301576e925d78bb31fa5d50f0987647a4bc5a762158681",
+  "status": "valued",
+  "literal_analysis": "Exact company and rank/date at marketclose,consensuscredible reporting;Oct31Saturday assumesOct30lastregularclosewithfork;Alphabetclassesonecompany;allfullrulesread.",
+  "evidence": [
+    {
+      "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-06-01&todate=2026-10-16&limit=120",
+      "observed_utc": "2026-10-17T19:05:39.283493+00:00",
+      "finding": "90common fullClose/Last sessions Jun10–Oct16 forfive tickers retained; sourcepacket maps allfive official endpoint URLs."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+      "observed_utc": "2026-10-17T19:05:39.283531+00:00",
+      "finding": "AlphabetA/B/C shares,onecompany;quarterlycounts andB=Avaluationassumption explicit."
+    },
+    {
+      "url": "https://companiesmarketcap.com/",
+      "observed_utc": "2026-10-17T19:05:39.283534+00:00",
+      "finding": "Oct17currentworldleadercoverage withOct16prices; top4plusoutsiders; differing capmethods noted."
+    },
+    {
+      "url": "https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/",
+      "observed_utc": "2026-10-17T19:05:39.283537+00:00",
+      "finding": "IssuerconfirmsOct28aftercloseearnings."
+    },
+    {
+      "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx",
+      "observed_utc": "2026-10-17T19:05:39.283539+00:00",
+      "finding": "IssuerOct6announcementconfirmsOct28call;directcollector200,browsergap."
+    },
+    {
+      "url": "https://investor.apple.com/investor-relations/default.aspx",
+      "observed_utc": "2026-10-17T19:05:39.283541+00:00",
+      "finding": "Nov2callinrenderedcapture;outsideOct30insideDec31window."
+    },
+    {
+      "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/default.aspx",
+      "observed_utc": "2026-10-17T19:05:39.283542+00:00",
+      "finding": "No nextdatepostedatcapture;doesnotprovenoearlierannouncementpossible."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.005,
+    "low": 0.0002,
+    "high": 0.045,
+    "method": "Primary joint market-cap rank scenario with five sensitivity distributions",
+    "reasoning": "The joint10-session model gives Microsoft-first0.0215% Gaussian,0.1935% vector bootstrap,0.518% with explicit8%-SD earnings surprise,0.1645% Student-t5 and3.894% with widened event shocks. Central0.5% rounds the earnings model;0.02–4.5% is a subjective uncertainty envelope, not a measured tail bound. Other-company/FX/share-count changes can reduce Microsoft's chance or change rank conventions. The large sensitivity to earnings tails is the substantive finding. We do not infer zero probability from an empty empirical tail or infer0.2% from the ask.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:16.096+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 13.2,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.005,
+        "best_bid": null,
+        "best_ask": 0.002,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.005,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.002,
+            "fee_usd": 0.0007983999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.0208,
+        "fee_usd": 0.0008,
+        "break_even_probability_before_carry": 0.00208,
+        "break_even_probability_with_idealized_carry": 0.0020822650807034984,
+        "central_expected_profit_usd": 0.029200000000000004,
+        "default_10pp_stressed_profit_usd": -0.0208,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false
+      },
+      "No": {
+        "probability": 0.995,
+        "best_bid": 0.998,
+        "best_ask": null,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.005,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": false,
+        "fills": [],
+        "filled_gross_shares": 0,
+        "taker_cost_usd": null,
+        "fee_usd": null,
+        "break_even_probability_before_carry": null,
+        "break_even_probability_with_idealized_carry": null,
+        "central_expected_profit_usd": null,
+        "default_10pp_stressed_profit_usd": null,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.895,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.9792
+      }
+    }
+  },
+  "verdict": "YES central tail value; NO has no offer; no supported entry",
+  "reopen_condition": "Option-implied event-tail/issuer evidence and weekend binding, or cheaper supported maker price; scaled minimum-size book required.",
+  "current_description_sha256": "2c45ef9a21870e6b68a0188357f2bb66bbfb132529d3e0f7b23e0e218c3d92e7",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "65551018050494850631979721723833903572271001537197152262306127379076488916530",
+    "81146470016423609189401004994598192280551101097439652214723147351014107172612"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0027",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0027.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0027.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0041",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/market_cap_history_sources.json",
+    "tracked_model": "research/2026-10-17-deep-review/models/marketcap_model.py",
+    "tracked_inputs": "research/2026-10-17-deep-review/models/marketcap_inputs.json",
+    "tracked_outputs": "research/2026-10-17-deep-review/models/marketcap_results.json",
+    "tail_probability_calibrated": false,
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-17T19:05:39.674286+00:00",
+  "question": "Will Microsoft be the largest company in the world by market cap on October 31, 2026?",
+  "market_id": "5180415",
+  "valuation_author": "primary_operator",
+  "original_index": 7,
+  "report_sha256": "c0a6ecd6b5e82934c0a0c5460fa7353a0acab3da812ef1888c0048ef3e1c56d6"
+}

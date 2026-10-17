@@ -1,0 +1,152 @@
+{
+  "review_index": 25,
+  "condition_id": "0xffa0accb74987c0dc33a70eb3780c1da160206bcfb3ef5d16c1667bc5c459c78",
+  "criteria_sha256": "9456758822d82420859039938f3fed8368746922b3940ec4ca58db0c40bc36bb",
+  "status": "valued",
+  "literal_analysis": "12+ counted25bp cuts includes emergency throughDec31 and1–24bp roundsone; gross cuts not net; cannot rule out basedon two meetings.",
+  "evidence": [
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "observed_utc": "2026-10-17T19:00:01.500861+00:00",
+      "finding": "Current official table:0cuts2026, one25bp increase; history demonstrates emergency easing ability, not current likelihood."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
+      "observed_utc": "2026-10-17T19:00:01.500908+00:00",
+      "finding": "All six2026statements captured, baselineDec2025 checked; firstfivehold thenSep16hike; no captured subsequent emergency."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "observed_utc": "2026-10-17T19:00:01.500912+00:00",
+      "finding": "Current3.75–4 target with inflation concern."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "observed_utc": "2026-10-17T19:00:01.500914+00:00",
+      "finding": "Tightening-inclined yearend judgments, not probability sample."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "observed_utc": "2026-10-17T19:00:01.500916+00:00",
+      "finding": "HotSept CPI counterweight to rapid easing."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+      "observed_utc": "2026-10-17T19:00:01.500918+00:00",
+      "finding": "WeakSept jobs leaves crisis/reversal tail."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.003,
+    "low": 0.0001,
+    "high": 0.02,
+    "method": "Explicit severe-regime-break times counted-cut-sequence scenario",
+    "reasoning": "0observedYTDcuts. Subjective .03 severecrisis*.10 conditional12+countedsteps=.003; .0001–.02 sensitivity, no independent calibrated tail floor. Emergency/tinycut clauses prevent impossibility claim.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:18.217+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75.4,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.003,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 39.318,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.001,
+            "fee_usd": 0.0004995
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.0105,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.0010500000000000002,
+        "break_even_probability_with_idealized_carry": 0.0010565481919637164,
+        "central_expected_profit_usd": 0.019499999999999997,
+        "default_10pp_stressed_profit_usd": -0.0105,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false
+      },
+      "No": {
+        "probability": 0.997,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 39.318,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": false,
+        "fills": [],
+        "filled_gross_shares": 0,
+        "taker_cost_usd": null,
+        "fee_usd": null,
+        "break_even_probability_before_carry": null,
+        "break_even_probability_with_idealized_carry": null,
+        "central_expected_profit_usd": null,
+        "default_10pp_stressed_profit_usd": null,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.897,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.9895
+      }
+    }
+  },
+  "verdict": "Tiny YES central tail value; unsupported floor/minimum-size route, no NO offer",
+  "reopen_condition": "Primary systemic-stress/easing-sequence evidence, exact count recheck and supported executable minimum-size economics.",
+  "current_description_sha256": "d5fd02af7e03939d29bb8d9398514a5a29b1d4cba8aca47a3de5bdbba586e765",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "9348234470735473071085620208817441102005165766524508452759679947551704787649",
+    "27203305404978223030553317971682713734658336588968050686197281149875057661426"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0046",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0046.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0046.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0062",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/macro_followup_sources.json",
+    "confirmed_ytd_counted_cuts": 0,
+    "central_crisis_weight": 0.03,
+    "conditional_threshold_weight": 0.1,
+    "no_ask_NO": true
+  },
+  "evaluated_utc": "2026-10-17T19:00:01.753681+00:00",
+  "question": "Will 12 or more Fed rate cuts happen in 2026?",
+  "market_id": "616914",
+  "valuation_author": "primary_operator",
+  "original_index": 25,
+  "report_sha256": "fd8e27032c6d4242e77a85c0ba3876c7d2883a87b1ae214697b7c9f64ed97d40"
+}

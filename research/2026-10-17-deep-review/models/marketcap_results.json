@@ -1,0 +1,132 @@
+{
+  "primary_author": true,
+  "seed": 20261017,
+  "samples_per_method": 200000,
+  "input_dates": [
+    "06/10/2026",
+    "10/16/2026"
+  ],
+  "horizons_sessions": [
+    10,
+    52
+  ],
+  "zero_expected_log_return": "No recent-rally drift extrapolation; not risk-neutral option pricing. Holding shares fixed; dividends not added to market cap.",
+  "earnings_logshock_sd_short": [
+    0.03,
+    0,
+    0.08,
+    0.08
+  ],
+  "earnings_logshock_sd_long": [
+    0.1,
+    0.06,
+    0.08,
+    0.08
+  ],
+  "wide_jump_multiplier": 1.875,
+  "result": {
+    "10": {
+      "gaussian": {
+        "largest": {
+          "NVDA": 0.617875,
+          "AAPL": 0.38106,
+          "MSFT": 0.000215,
+          "Alphabet": 0.00085
+        },
+        "AAPL_exact_third": 0.01481
+      },
+      "vector_bootstrap": {
+        "largest": {
+          "NVDA": 0.612875,
+          "AAPL": 0.38433,
+          "MSFT": 0.001935,
+          "Alphabet": 0.00086
+        },
+        "AAPL_exact_third": 0.030805
+      },
+      "earnings_jumps": {
+        "largest": {
+          "NVDA": 0.603745,
+          "AAPL": 0.37622,
+          "MSFT": 0.00518,
+          "Alphabet": 0.014855
+        },
+        "AAPL_exact_third": 0.057005
+      },
+      "wide_jump_stress": {
+        "largest": {
+          "NVDA": 0.545535,
+          "AAPL": 0.344295,
+          "MSFT": 0.03894,
+          "Alphabet": 0.07123
+        },
+        "AAPL_exact_third": 0.13582
+      },
+      "student_t5": {
+        "largest": {
+          "NVDA": 0.64237,
+          "AAPL": 0.35314,
+          "MSFT": 0.001645,
+          "Alphabet": 0.002845
+        },
+        "AAPL_exact_third": 0.01727
+      }
+    },
+    "52": {
+      "gaussian": {
+        "largest": {
+          "NVDA": 0.51465,
+          "AAPL": 0.40898,
+          "MSFT": 0.03002,
+          "Alphabet": 0.04635
+        },
+        "AAPL_exact_third": 0.14002
+      },
+      "vector_bootstrap": {
+        "largest": {
+          "NVDA": 0.50939,
+          "AAPL": 0.410565,
+          "MSFT": 0.035335,
+          "Alphabet": 0.04471
+        },
+        "AAPL_exact_third": 0.13731
+      },
+      "earnings_jumps": {
+        "largest": {
+          "NVDA": 0.497795,
+          "AAPL": 0.39544,
+          "MSFT": 0.04315,
+          "Alphabet": 0.063615
+        },
+        "AAPL_exact_third": 0.156595
+      },
+      "wide_jump_stress": {
+        "largest": {
+          "NVDA": 0.46426,
+          "AAPL": 0.36946,
+          "MSFT": 0.0691,
+          "Alphabet": 0.09718
+        },
+        "AAPL_exact_third": 0.186465
+      },
+      "student_t5": {
+        "largest": {
+          "NVDA": 0.533215,
+          "AAPL": 0.403915,
+          "MSFT": 0.02568,
+          "Alphabet": 0.03719
+        },
+        "AAPL_exact_third": 0.11212
+      }
+    }
+  },
+  "limitations": [
+    "Only top4 priced jointly; other global contenders treated as explicit residual judgment in each report",
+    "Fixed quarterly shares and unlisted B=A assumption; exact resolution consensus can use different company aggregation",
+    "Independent earnings surprises with unknown real tails; empirical covariance can shift",
+    "Gaussian/bootstrap distributions not calibrated tail probabilities; short series cannot prove absence of unprecedented jumps",
+    "Studentt5 terminal scale is sensitivity, not calibrated dynamic process",
+    "Oct31 is Saturday: assume last regular Oct30 close; no explicit venue weekend clarification",
+    "52remainingDecsessions uses standard Thanksgiving/Christmas closures; extraordinary closure can differ"
+  ]
+}

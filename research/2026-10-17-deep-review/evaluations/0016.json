@@ -1,0 +1,152 @@
+{
+  "review_index": 16,
+  "condition_id": "0x6b03d29ef14f83ef45168b9dc8241613dc696048385f9417bb9190ac0150b237",
+  "criteria_sha256": "86a6f17065f46bc66aecd5f0f05e73956ee806940c49957f9f4559a384696bf9",
+  "status": "valued",
+  "literal_analysis": "Exact namedtitle/rank/category,Oct20expectedupdateofOct12–18week;titlealphabeticaltie;OtherfallbackOct23;allfullrulesread.",
+  "evidence": [
+    {
+      "url": "https://www.netflix.com/tudum/articles/top-10-october-5-2026",
+      "observed_utc": "2026-10-17T19:21:37.375358+00:00",
+      "finding": "PriorweekglobalEnglish anchors,notcurrentweekorUSweeklytotals."
+    },
+    {
+      "url": "https://www.netflix.com/tudum/top10/united-states/films",
+      "observed_utc": "2026-10-17T19:21:37.375377+00:00",
+      "finding": "OfficialpriorUSranktableinrenderedcapture;currentweekunpublishedatcutoff."
+    },
+    {
+      "url": "https://streamscope.app/netflix/history/2026-10-17",
+      "observed_utc": "2026-10-17T19:21:37.375382+00:00",
+      "finding": "SecondaryFlixPatrol-attributedUSdailyproxy;notweeklyviews;all13daysinpacket."
+    },
+    {
+      "url": "https://flixpatrol.com/top10/netflix/world/2026-10-16/",
+      "observed_utc": "2026-10-17T19:21:37.375385+00:00",
+      "finding": "GlobaldailyPOINTStranscriptonly,gaps/403notzero;notUSdataorofficialweeklyviews."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.965,
+    "low": 0.88,
+    "high": 0.995,
+    "method": "Primary ordinal persistence plus weekend/source hazard",
+    "reasoning": "US daily first on six observed current-week days plus prior official first supports.965, wide downside.88.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:16.096+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 3.0,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.965,
+        "best_bid": 0.977,
+        "best_ask": 0.989,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 141.477,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.989,
+            "fee_usd": 0.005439500000000005
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.89544,
+        "fee_usd": 0.00544,
+        "break_even_probability_before_carry": 0.9895440000000001,
+        "break_even_probability_with_idealized_carry": 0.9897888049141841,
+        "central_expected_profit_usd": -0.24544000000000032,
+        "default_10pp_stressed_profit_usd": -1.2454400000000003,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.865,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.758759999999999
+      },
+      "No": {
+        "probability": 0.03500000000000003,
+        "best_bid": 0.011,
+        "best_ask": 0.023,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 141.477,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.023,
+            "fee_usd": 0.011235499999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.24123999999999998,
+        "fee_usd": 0.01124,
+        "break_even_probability_before_carry": 0.024124,
+        "break_even_probability_with_idealized_carry": 0.024129968075951927,
+        "central_expected_profit_usd": 0.10876000000000033,
+        "default_10pp_stressed_profit_usd": -0.24123999999999998,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.10455999999999999
+      }
+    }
+  },
+  "verdict": "NO positive central tail arithmetic, unsupported floor; YES negative EV, no entry",
+  "reopen_condition": "New US weekly/daily evidence showing Animals loses lead, or a defensible measured tail bound.",
+  "current_description_sha256": "be4e4726210f95c3944a96bc995edcddd9cdcdcf7d3193c2da77bbaa0235545e",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "21731645335377042330644757310836510875268850200963711241449936804322965764155",
+    "67573564725755455722198913741102353630541906625502089762634504888943759267979"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0036",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0036.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0036.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0041",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/netflix_sources.json",
+      "data/deep_review_20261017/netflix_followup_sources.json"
+    ],
+    "tracked_method": "research/2026-10-17-deep-review/models/netflix_method.md",
+    "model_calibrated": false,
+    "case_specific_reserve_for_entry": 0.2,
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-17T19:21:37.644563+00:00",
+  "question": "Will \"Animals\" be the top US Netflix movie this week?",
+  "market_id": "5713602",
+  "valuation_author": "primary_operator",
+  "original_index": 16,
+  "report_sha256": "c4e3ff059bcc3f0c732a0e192aa6a56e9703d7184d979f0e7891399a6d642f85"
+}
