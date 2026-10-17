@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 195 recorded observations from Apr-25
-through Oct-16. Rounded reconstructions are labeled; unsupported historical
+The local performance CSV now has 196 recorded observations from Apr-25
+through Oct-17. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
 
@@ -19,7 +19,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only the
 repository's vetted execution paths.
 
-**Last maintained:** 2026-10-16. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-17. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -73,50 +73,60 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-16 ~22:02 UTC
+## Last bankroll snapshot — 2026-10-17 ~02:01 UTC
 
-Bankroll window: 22:02:14.284937–22:02:29.997585 UTC. These rounded sequential
-marks are not cash profit, synchronized NAV or certified liquidation; VM/API
-costs are excluded.
+Bankroll own-component window: 2026-10-17T02:01:40.279400+00:00–2026-10-17T02:01:57.810962+00:00. These rounded sequential marks are not
+cash profit, synchronized NAV or certified liquidation; VM/API costs are
+excluded.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $196.49 |
-| Gas token mark | $5.91 |
-| Trading midpoint / indicative depth | $190.58 / $187.74 |
-| PM midpoint / indicative depth | $33.35 / $30.51 |
-| Whole-account approximate depth | $193.65 |
+| Total marked bankroll | $196.37 |
+| Gas token mark | $5.88 |
+| Trading midpoint / indicative depth | $190.49 / $187.75 |
+| PM midpoint / indicative depth | $33.25 / $30.51 |
+| Whole-account approximate depth | $193.63 |
 | Remaining open-position cost | $31.46 |
 | Settled accounting residual | $18.69 |
 
-Trading midpoint and depth are flat versus18:00. Retain OpenAI NO19 and
-Clarity29/29, with no add or prior change. O NO priors remain .25 central, .15
-stress and .38 upper; stress favors exit, central/upper favor hold. The
-receipt-time O book was .20/.27, fee-net full exit $3.67840 and all-in ask
-.277884. Clarity's $29 floor remains conditional, but current full-pair exit and
-carry are unknown because C50Y failed the180s freshness guard; C58N alone does
-not price the pair. Neither capture is signing-time authority or proof of
-optimality.
+Versus22:00, trading midpoint changed −$0.09 and depth +$0.01; rounded residual
+was unchanged. Retain OpenAI NO19 and Clarity29/29, with no add or prior change.
+O NO judgmental priors remain .25 central/.15 stress/.38 upper; stress favors
+exit while central/upper favor holding. Receipt-time O book .20/.26, net19-share
+exit $3.67840, all-in ask .267696; planning only, revalidate before any order.
+The conditional Clarity29 floor exceeds fresh pair exit $26.83184 and idealized
+carry $27.009369163; no global-optimality claim.
 
-HLE Accuracy, HLE-Diamond, model identity/provider/release dates are unchanged
-across65 rows. Two full objects changed only in auxiliary fields: Argon
-calibration error null→41.52 (not HLE Accuracy55.6 or Diamond56.9; excluded by
-criteria) and GPT-6.1 Sol ART18.76. OpenAI max remains53.6<55. Three direct
-OpenAI403 responses are coverage gaps. The mounted bundle defaults to original
-HLE and offers separate Diamond selection. Five held Gamma rules/state,
-Senate256, AA57/44 and article cores are unchanged; sampled RSS and public alert
-tails had no timestamped rows strictly after18:02. API Age is cache metadata.
+The mounted HLE bundle defaults to original HLE Accuracy and offers a separate
+Diamond selector. All65 full raw API objects are unchanged versus22:00, including
+known Argon calibration error41.52/auxiliary fields and Sol ART18.76. Argon HLE
+55.6/Diamond56.9 and OpenAI max53.6<55; three direct OpenAI403 pages remain
+coverage gaps. Five held Gamma criteria/state unchanged; O-market YES snapshot
++0.5pp is not an executable quote. Senate256 rows, article cores, AA57/44 pair,
+RSS and sampled public alert tails are unchanged/quiet after22:02. API Age is
+cache metadata, not publication time.
 
-Gamma3072356 is final YES at block95655170; the4.034750 losing NO tokens remain
-zero, with no rebook or burn. Polygon aUSDC122.101913, Aave point3.16856688%;
-pUSD/CTF unchanged. Hormuz's .003571 dust payout remains below the .004624628060
-point-gas estimate; no resimulation or broadcast. Routine19/allrc0,38 streams
-timed/hashed, audit CLEAN4+1; four daemons current, heartbeat1489.96s within
-3600s cadence, news182.787s, disk577.79MiB. No discovery, redeem-all or weekly
-rerun. The last discovery is a dated14:00 capped slice, not current absence
-proof. Weekly nextOct23, monthlyNov12; next full check02:00 Oct17. See the dated
-[check journal](notes/journal.md) and [source report](logs/periodic_20261016T2200/sources/report.md).
+The Oct17 full scan selected3044 rows/2997 unique conditions; only one current
+literal review and two exact-hash carried reviews are documented, leaving2994
+without documented literal review. Coverage is capped and partial. WTI market
+4936103 literally requires a Pyth ICE CLL active-month one-minute candle HIGH
+≥$100; six bounded browser requests found no qualifying timestamped candle.
+Auth/Loading does not establish a source outage or permit the ICE fallback; no
+probability or entry conclusion. Details and coverage limits are in the dated
+journal and discovery audit.
+
+Gamma3072356 is final YES at Polygon block95664760; its4.034750 losing NO tokens
+remain zero, with no rebook or burn. aUSDC122.103676 (+1763 raw units), live Aave
+point3.17025824%; pUSD/CTF unchanged. Hormuz .003571 dust payout remains below
+.004548648481 point-gas estimate; no resimulation or broadcast. Routine19/allrc0,
+38 streams timed/hashed, audit CLEAN4+1; four daemons current, heartbeat1460.768s
+within3600s cadence, news214.747s, disk551.16MiB. Redeem-all found0/4 winners,
+skipped one row, result[] and no broadcast (not a dry-run). Weekly nextOct23,
+monthlyNov12; next light check06:00 UTC. Manual issuer-account credential
+rotation remains blocked. See the [check journal](notes/journal.md),
+[discovery audit](data/checkin_20261017T0200_discovery.json),
+and [source report](logs/checkin_20261017T0200/sources/report.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
