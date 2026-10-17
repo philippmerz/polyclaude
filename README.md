@@ -153,6 +153,8 @@ No new entry was justified by the detailed checks; no order was placed. See the
 [individual ledger](research/2026-10-17-primary-market-review.csv),
 [audit and case findings](research/2026-10-17-primary-market-review.json), and
 [frozen public rules](research/2026-10-17-primary-market-review-rules.jsonl.gz).
+The [review checkpoint](notes/market_review_checkpoint.json) indexes incremental
+local ledgers and the unresolved queue for resumption after compaction.
 
 The [Oct 12 opportunity-method review](research/2026-10-12-opportunity-method-review.md)
 fixed discovery filter ordering, exposed incomplete coverage, removed the failed

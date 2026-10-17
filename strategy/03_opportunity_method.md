@@ -48,6 +48,17 @@ of reconstructing a thesis from old prose. Source/criteria/cost changes invalida
 the relevant disposition. Filtered disappearance is not closure. No review record
 authorizes a later order or creates an idle scheduled follow-up.
 
+Save results during the work, before beginning the next batch or case. Append each
+completed screen batch to the run's JSONL ledger and refresh its progress file;
+append deeper case findings to a separate follow-up ledger. Keep a tracked
+checkpoint with exact ledger paths, counts, hashes, completed coverage and the
+remaining queue. Preserve prior valid observations and append dated revisions.
+After compaction, resume from those files and their exact instrument bindings.
+A final CSV export supplements these live records. Label any retrospective
+backfill explicitly, and keep checkpoint time separate from evidence freshness.
+The [current review checkpoint](../notes/market_review_checkpoint.json) indexes
+the completed Oct 17 diagnostic and its unresolved source flags.
+
 Triage first by whether a fact can change the decision:
 
 1. Can the project lawfully access the instrument, fund and exit it through a

@@ -3,11 +3,11 @@ reviewed_at: "2026-10-17T17:22:55Z"
 valid_until: "2026-10-17T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 9408c596256d26069bf13b9a5b95476ed7c885c0f12993fade0c6cd6373ddf51
+  README.md: 41908e0d9f1b3e30b8f9a33533a60536a70c222afcbc135ee8bd72e3c52da673
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: c031b04a7476fe916ea8e155fd797611848c890cab5ec1bc4507db1752ce8cf6
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
-  strategy/03_opportunity_method.md: 4e6c2bebe2886c741153c3ebccb6c0f689822a77b6582c6a9747b7cecc1f44f0
+  strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 8a5b43f42faa5cace24ddf53b2e0553c835294b4c1775fc851e9cc6c175583cc
   notes/backlog.md: f940722385cfd3698d34e11c44ec58b3420321d0f9c2349cfcbdd50cad548420
 ---
@@ -20,6 +20,15 @@ unequal depth. Of 255 source flags, 38 have family follow-up and 217 do not.
 Most rows remain unpriced; this is not 3,000 complete underwrites or proof that
 opportunities are absent. All broad screening was by the primary model in this
 chat. Two required new-strategy reviewers were used only for the lake follow-up.
+
+Resume research from [the tracked checkpoint](market_review_checkpoint.json).
+The incremental screening ledger is
+`data/primary_review_20261017T1616/primary_reviews.jsonl` (3,000 records across
+17 batches); `progress.json` in that directory tracks completed batches.
+`followup_results.jsonl` now consolidates 17 existing cases, explicitly labeled
+as retrospective backfill. Append each new completed batch/case before the next;
+refresh the checkpoint. The frozen CSV/audit/rules provide tracked fallbacks.
+This tracking update adds no research, portfolio refresh or asset action.
 
 Category routing is fixed: question-first token boundaries remove ETH/whether,
 generic dollar and primary-source boilerplate matches. All 47 focused checks
