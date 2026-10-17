@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 196 recorded observations from Apr-25
+The local performance CSV now has 197 recorded observations from Apr-25
 through Oct-17. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -73,61 +73,64 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-17 ~02:01 UTC
+## Last bankroll snapshot — 2026-10-17 ~06:02 UTC
 
-Bankroll own-component window: 2026-10-17T02:01:40.279400+00:00–2026-10-17T02:01:57.810962+00:00. These rounded sequential marks are not
-cash profit, synchronized NAV or certified liquidation; VM/API costs are
-excluded.
+Bankroll own-component window: 2026-10-17T06:01:55.261867–06:02:10.525994 UTC.
+These are rounded, sequential estimates, not cash profit, synchronized NAV or a
+certified liquidation; VM/API costs are excluded.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $196.37 |
-| Gas token mark | $5.88 |
-| Trading midpoint / indicative depth | $190.49 / $187.75 |
-| PM midpoint / indicative depth | $33.25 / $30.51 |
-| Whole-account approximate depth | $193.63 |
+| Total marked bankroll | $196.34 |
+| Separately funded gas | $5.90 |
+| Trading midpoint / indicative depth | $190.44 / $187.94 |
+| PM midpoint / indicative depth | $33.20 / $30.70 |
+| Whole-account approximate depth | $193.84 |
 | Remaining open-position cost | $31.46 |
 | Settled accounting residual | $18.69 |
 
-Versus22:00, trading midpoint changed −$0.09 and depth +$0.01; rounded residual
-was unchanged. Retain OpenAI NO19 and Clarity29/29, with no add or prior change.
-O NO judgmental priors remain .25 central/.15 stress/.38 upper; stress favors
-exit while central/upper favor holding. Receipt-time O book .20/.26, net19-share
-exit $3.67840, all-in ask .267696; planning only, revalidate before any order.
-The conditional Clarity29 floor exceeds fresh pair exit $26.83184 and idealized
-carry $27.009369163; no global-optimality claim.
+Since 02:00, trading midpoint/depth changed −$0.05/+$0.19; rounded residual
+was unchanged. Retain OpenAI NO 19 and Clarity 29/29, with no add or prior change.
+O NO priors remain .25 central/.15 stress/.38 upper; stress favors full exit,
+central/upper favor holding. Receipt-time O book .21/.26, fee-net 19-share exit
+$3.86391, all-in ask .267696; planning only, with a fresh rewalk required before
+any order. The current Clarity pair exit/carry is unknown because C50Y GET/POST
+books failed the 180-second freshness guard; the fresh C58N-only exit of $25.9956
+does not price the pair. Keep29/29 under the unchanged conditional $29 floor;
+do not reuse prior pair economics or claim global optimality.
 
-The mounted HLE bundle defaults to original HLE Accuracy and offers a separate
-Diamond selector. All65 full raw API objects are unchanged versus22:00, including
-known Argon calibration error41.52/auxiliary fields and Sol ART18.76. Argon HLE
-55.6/Diamond56.9 and OpenAI max53.6<55; three direct OpenAI403 pages remain
-coverage gaps. Five held Gamma criteria/state unchanged; O-market YES snapshot
-+0.5pp is not an executable quote. Senate256 rows, article cores, AA57/44 pair,
-RSS and sampled public alert tails are unchanged/quiet after22:02. API Age is
-cache metadata, not publication time.
+The mounted HLE bundle still defaults to original HLE Accuracy and offers a
+separate Diamond selector. All 65 full API objects match 02:00; Argon remains
+55.6 HLE Accuracy/56.9 Diamond and OpenAI's maximum is 53.6<55. Three direct
+OpenAI pages returned 403 and remain coverage gaps. Five held Gamma criteria/state,
+256 Senate rows, article cores and the AA 57/44 pair are unchanged. Sampled RSS
+and public alert tails had no timestamped entries strictly after 02:01; API Age
+is cache metadata, not
+publication time. Two Gamma price snapshots moved +0.5pp and −0.5pp; these are
+not executable quotes.
 
-The Oct17 full scan selected3044 rows/2997 unique conditions; only one current
-literal review and two exact-hash carried reviews are documented, leaving2994
-without documented literal review. Coverage is capped and partial. WTI market
-4936103 literally requires a Pyth ICE CLL active-month one-minute candle HIGH
-≥$100; six bounded browser requests found no qualifying timestamped candle.
-Auth/Loading does not establish a source outage or permit the ICE fallback; no
-probability or entry conclusion. Details and coverage limits are in the dated
-journal and discovery audit.
+Gamma 3072356 is final YES at Polygon block 95674364; its 4.034750 losing NO units
+remain zero, with no rebook or burn. Polygon aUSDC122.105433 (+1757 raw units),
+live Aave point3.037271803%; pUSD/CTF unchanged. The .003571 Hormuz winning dust
+claim passed one exact-asset standard-CTF dry-run (175036 gas estimate,
+210044 limit), with no signing or broadcast. The earlier captured gas/rounded-FX
+point implies $0.003255722159 gas against $0.003571 payout, only about $0.000315
+before broader costs; it is not a current inclusion-cost certificate. The
+buffered limit and code fee cap are envelopes, not expected actual costs. Retain
+the nonexpiring claim and lower-gas option; no fee override, transaction or burn.
 
-Gamma3072356 is final YES at Polygon block95664760; its4.034750 losing NO tokens
-remain zero, with no rebook or burn. aUSDC122.103676 (+1763 raw units), live Aave
-point3.17025824%; pUSD/CTF unchanged. Hormuz .003571 dust payout remains below
-.004548648481 point-gas estimate; no resimulation or broadcast. Routine19/allrc0,
-38 streams timed/hashed, audit CLEAN4+1; four daemons current, heartbeat1460.768s
-within3600s cadence, news214.747s, disk551.16MiB. Redeem-all found0/4 winners,
-skipped one row, result[] and no broadcast (not a dry-run). Weekly nextOct23,
-monthlyNov12; next light check06:00 UTC. Manual issuer-account credential
-rotation remains blocked. See the [check journal](notes/journal.md),
-[discovery audit](data/checkin_20261017T0200_discovery.json),
-and [source report](logs/checkin_20261017T0200/sources/report.md).
-
+Routine 19 ran with all return codes zero; all 38 streams were timed and hashed,
+and the audit is CLEAN 4+1. Four daemons current; heartbeat1466.742s within
+3600s cadence, news283.205s, disk526.59MiB. 76 decisions remain pending, none
+overdue. No discovery, redeem-all or weekly rerun was due or performed. The
+dated 02:00 capped discovery remains partial: 2,997 unique conditions selected,
+2,994 without documented literal review. WTI 4936103 still
+has a resolver-source gap; no absence, probability or entry inference. Weekly
+next Oct 23, monthly Nov 12; next light check is 10:00 UTC. Manual issuer-account
+credential rotation remains blocked. See the [check journal](notes/journal.md),
+[02:00 discovery audit](data/checkin_20261017T0200_discovery.json), and
+[06:00 source report](logs/periodic_20261017T0600/sources/report.md).
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
 Coinbase B20 AAPLc/MSFTc/NVDAc have small-ticket Slipstream quotes losing about

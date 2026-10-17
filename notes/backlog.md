@@ -1,3 +1,10 @@
+## 2026-10-17 06:00 UTC — light check complete
+
+- Retain O NO 19 and Clarity 29/29; no add or prior change. O priors remain .25/.15/.38; central/upper hold and stress exits. Current C50Y books are stale, so full Clarity exit/carry is unknown; do not reuse 02:00 economics.
+- HLE Accuracy, Diamond, identities and all 65 full objects match 02:00. OpenAI max is 53.6<55; three direct OpenAI pages returned 403 and remain coverage gaps. Five held Gamma criteria/state are unchanged; 256 Senate rows, article cores and AA 57/44 are unchanged. Sampled RSS/public-alert tails had no timestamped rows strictly after 02:01. API Age is cache metadata.
+- The exact Hormuz winning-dust claim passed one standard-CTF dry-run at 175,036 estimated gas/210,044 limit; no signing/broadcast. The earlier gas estimate of $0.003255722159 leaves a $0.000315277841 margin below the $0.003571 payout; it is not a current inclusion-cost quote. Retain the nonexpiring claim; no fee override or burn.
+- No discovery, redeem-all or weekly review was due or run. The last discovery remains the dated, capped 02:00 review: 2,997 unique conditions selected, 2,994 without documented literal review. WTI 4936103 source gap is unchanged; do not repeat absent new input. Weekly review next due Oct 23, monthly Nov 12; next light check at 10:00. Manual issuer-account credential rotation remains blocked.
+
 ## 2026-10-17 02:00 UTC — full check complete
 
 - Retain O NO19 and Clarity29/29; no add or prior change. O priors .25/.15/.38; central/upper hold and stress exits. Receipt-time O book .20/.26, fee-net exit$3.67840, all-in ask.267696. Clarity floor29 exceeds fresh pair exit26.83184 and idealized carry27.009369163; both remain conditional, not a global optimum.
