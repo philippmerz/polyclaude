@@ -1,16 +1,19 @@
 ---
-reviewed_at: "2026-10-17T18:12:24Z"
+reviewed_at: "2026-10-17T18:33:00Z"
 valid_until: "2026-10-17T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 61dee5fc01b57567b269a9c1b58c155533d672dbad5ed0fd45fa227d43800fc1
+  README.md: 7036353dbcc215daf6cb3ede467eaa02850e582684715cde0f611bcd4b6b81c4
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: c031b04a7476fe916ea8e155fd797611848c890cab5ec1bc4507db1752ce8cf6
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 8a5b43f42faa5cace24ddf53b2e0553c835294b4c1775fc851e9cc6c175583cc
-  notes/backlog.md: c147b29876781c38b09084c185eb1f3ab26abc25dd8a4a37f28da0f3eeb30ba8
+  notes/backlog.md: d0ea54a6cfb008a7d1e06472dd9fddd5a5eef8539ff3b78d073198b0d491d978
 ---
+
+**ACTIVE OPERATOR TASK:** Primary in-depth review of all 3,000 frozen conditions beyond clearly factual exclusions. Earlier screen labels are nonbinding. Save every completed case before starting another. Read [deep review checkpoint](deep_review_checkpoint.json), [protocol](../research/2026-10-17-deep-review/PROTOCOL.md), and [live index](../research/2026-10-17-deep-review/INDEX.md); those files carry current counts/active cases and override the old diagnostic completion status. Notify operator at first100 substantive reviews, distinguish valued/blocked/excluded, then continue unless steered. Facts may be delegated; valuations belong to primary. The portfolio snapshot below remains dated18:04.
+
 
 # Current context — Oct 17 diagnostic and 18:00 check
 

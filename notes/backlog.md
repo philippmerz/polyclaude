@@ -1,3 +1,14 @@
+## Active — primary in-depth review authorized October 17
+
+Review all 3,000 frozen conditions beyond clearly factual exclusions. Start with
+the original index order; common-source grouping is allowed, with each distinct
+contract valued explicitly. All old screen labels are nonbinding. Notify the
+operator at the first 100 substantive reviews and continue the authorized queue
+unless steered. Primary owns valuations; cheap assistants only collect facts.
+Save each case before beginning another. Resume from
+[the live checkpoint](deep_review_checkpoint.json) and
+[protocol](../research/2026-10-17-deep-review/PROTOCOL.md). No new timer or indefinite goal.
+
 ## 2026-10-17 18:00 UTC — light check complete
 
 - Routine and root risk reviews are complete; no order, asset, prior or decision change. Retain OpenAI NO 9 and Clarity 29/29. Weekly P&L is next due Oct 23; monthly review Nov 12; next light check 22:00 UTC. Manual issuer-account credential rotation remains operator-only.

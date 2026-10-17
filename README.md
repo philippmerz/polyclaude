@@ -53,6 +53,16 @@ Writing default for replies, handoffs and maintained documents:
   for comparisons and short headings for navigation; avoid cryptic shorthand
   and multi-topic bullets. Follow a specifically requested format when it differs.
 
+## Active in-depth review — Oct 17
+
+The operator authorized primary in-depth valuations across the frozen 3,000-market
+universe, retaining all candidates beyond clearly factual exclusions. The
+[live index](research/2026-10-17-deep-review/INDEX.md) and
+[resume checkpoint](notes/deep_review_checkpoint.json) update after each completed
+evaluation. The first 100 substantive reviews are an inspection milestone; valued,
+blocked and factual exclusions are reported separately. Earlier screens do not
+reject markets or count as completed valuations.
+
 ## Mandate and constraints
 
 - Reference trading capital: **$170**. Separately contributed gas is tracked
