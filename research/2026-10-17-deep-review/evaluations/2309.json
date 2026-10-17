@@ -1,0 +1,72 @@
+{
+  "review_index": 2309,
+  "condition_id": "0xe7d5fa9c71d1429fce8fdda8569dd007b1090ef75d9e0119f57bb2f004cd4709",
+  "criteria_sha256": "a24f4ee3920b8980f0844375ad6c5929bd916ad5918ddc5cd7493b5fe92490cc",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5721019",
+      "observed_utc": "2026-10-17T20:11:18.262+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00304",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00304.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00304.body.json.gz",
+      "start_utc": "2026-10-17T20:11:18.210+00:00",
+      "end_utc": "2026-10-17T20:11:18.262+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:18 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5721019",
+        "params": null
+      },
+      "raw_sha256": "57244d08bbb84c1516dc3e24109e6c6fa9fe8389ed209cb3289aa3959b2e52d7",
+      "gzip_sha256": "8d2bbe3cb5b3dca62f10fa810eee4efbe17bd3db7a61b5de35741fc90f6f5692",
+      "raw_bytes": 5329,
+      "gzip_bytes": 2350
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "98991585630436635825314563200411393284394353104455167540453940245105207018425",
+      "22126835340182771747296496954713289572214638082052730300093188440878583217945"
+    ],
+    "current_description_sha256": "f0d227a2f328b56aa95615aa0d52a678982df86b7fbb8cf95430bb3785288f1e"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:42.738995+00:00",
+  "question": "Will the highest temperature in Karachi be 37°C on October 17?",
+  "market_id": "5721019",
+  "valuation_author": "primary_operator",
+  "original_index": 2309,
+  "report_sha256": "251bf7cc2dc030779eb3b083f164cb6f75c5d769897bfc86997f3cbd9e29ee2b"
+}

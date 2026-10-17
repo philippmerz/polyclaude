@@ -1,0 +1,72 @@
+{
+  "review_index": 395,
+  "condition_id": "0x71ac8a80b2700dbcf4bb61e426ee032bbc508cbf4c98e09cd422be5b304b008b",
+  "criteria_sha256": "4532bc64ff94601dcc10d4742c753ae852362f58568eee552aa7dc37a0e697b9",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5721006",
+      "observed_utc": "2026-10-17T20:10:55.071+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00063",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00063.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00063.body.json.gz",
+      "start_utc": "2026-10-17T20:10:54.970+00:00",
+      "end_utc": "2026-10-17T20:10:55.071+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5721006",
+        "params": null
+      },
+      "raw_sha256": "d80315b14c7ca3e6d17d9eee99c14a7ea2c1361e0062dd3f4bb09706777d95b4",
+      "gzip_sha256": "4ea124ea5918b47ba3a3f5a526da4c6f469f5195b266b38ac5d9802935892d7e",
+      "raw_bytes": 5365,
+      "gzip_bytes": 2353
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "16970458875271159042797037672435757016488286401340359739348175853726886630050",
+      "93611337663752084893840111306345812319858719945866021488145334769677247776289"
+    ],
+    "current_description_sha256": "a38fef642a0b8bd5f63dd4243ae354f2cf2fa46c27c2e75758a6d7b6370e298e"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:20.632518+00:00",
+  "question": "Will the highest temperature in Qingdao be 23°C on October 17?",
+  "market_id": "5721006",
+  "valuation_author": "primary_operator",
+  "original_index": 395,
+  "report_sha256": "0d99b2f313f69b2757566b003563fa43b618f1f5812aa3e45cfc0fa2c5d7ec64"
+}

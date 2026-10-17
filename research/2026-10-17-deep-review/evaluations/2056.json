@@ -1,0 +1,72 @@
+{
+  "review_index": 2056,
+  "condition_id": "0xb348b22ca7eb2f4576c9bfc9a81318d05c3db0266d02c242a23a170b6ad7cdfb",
+  "criteria_sha256": "1b81731f608e925089a0c28a9d3bd99cde097a7fc55f830033955aad7346c4c8",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273601",
+      "observed_utc": "2026-10-17T20:11:13.915+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00257",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00257.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00257.body.json.gz",
+      "start_utc": "2026-10-17T20:11:13.802+00:00",
+      "end_utc": "2026-10-17T20:11:13.915+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:13 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5273601",
+        "params": null
+      },
+      "raw_sha256": "93a3aa89747044ccea3b8f9e2aedaccd0b1cd2234bcc081843d5246cfe12b28c",
+      "gzip_sha256": "dd50493293cbe85cdeeb10432b7685644f289b1a5f21672f7d037221fc4330b6",
+      "raw_bytes": 4698,
+      "gzip_bytes": 2106
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "79909335249729830972745191851090830003320367379886964434244262816575495340968",
+      "95301825867562227483165019030907112545816759577580813835623606682165253844644"
+    ],
+    "current_description_sha256": "19722c5eaa435ea0ea6ac79724c82138e29b20f8b0a98fe705d50893257e7f00"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:25.743305+00:00",
+  "question": "Will Barnet FC win on 2026-10-17?",
+  "market_id": "5273601",
+  "valuation_author": "primary_operator",
+  "original_index": 2056,
+  "report_sha256": "ab70b54ea4ad68f9b35c741e90817c22f5ce74c1a6e362e4f862333fa93482c4"
+}

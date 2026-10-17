@@ -1,0 +1,72 @@
+{
+  "review_index": 1956,
+  "condition_id": "0x3ef215aa6fa81ca475ba736670e7bad2808be83884ad7110fe908e83039559cd",
+  "criteria_sha256": "a96477a497a426db6ac78b7e6d9b6e42892b1d80c07e551f34c18d588178530f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5540584",
+      "observed_utc": "2026-10-17T20:11:12.416+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00246",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00246.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00246.body.json.gz",
+      "start_utc": "2026-10-17T20:11:12.320+00:00",
+      "end_utc": "2026-10-17T20:11:12.416+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:12 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5540584",
+        "params": null
+      },
+      "raw_sha256": "057e46a70bccc15dd6e25ecdf99941291d5652f4b63aad3de4b76cad4508120d",
+      "gzip_sha256": "cee5125960277cca167e7c9d9f7c1f673754d168721e0ce11d892fdfeec0c801",
+      "raw_bytes": 3324,
+      "gzip_bytes": 1543
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Bursaspor",
+      "Bahcesehir Koleji"
+    ],
+    "current_token_ids": [
+      "71126788097563445246314012831742890327101052605150022029199730754903593850627",
+      "104541306818902568657765289236342081904708734503414507941552457986942903691492"
+    ],
+    "current_description_sha256": "7cecb21ae84cffbc74d92ed0beebf19a687dd192c421d225303def469df16678"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:15.077941+00:00",
+  "question": "Bursaspor vs. Bahcesehir Koleji",
+  "market_id": "5540584",
+  "valuation_author": "primary_operator",
+  "original_index": 1956,
+  "report_sha256": "6476aac17f8c796c9d13ede686c8bb523f059da85d395f5f626e312a36b86e62"
+}

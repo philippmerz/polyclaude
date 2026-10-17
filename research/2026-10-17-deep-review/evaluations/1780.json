@@ -1,0 +1,72 @@
+{
+  "review_index": 1780,
+  "condition_id": "0x291b6faa20c8eed8663ca43cc01f9af2d8cde0fcefff6a57c7a3fe03f02a42ef",
+  "criteria_sha256": "ea1e487e73ee7414103ca39865677ad6ed3048e53989d9c22f08b904350b9368",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5610018",
+      "observed_utc": "2026-10-17T20:11:10.230+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00224",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00224.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00224.body.json.gz",
+      "start_utc": "2026-10-17T20:11:10.170+00:00",
+      "end_utc": "2026-10-17T20:11:10.230+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:10 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5610018",
+        "params": null
+      },
+      "raw_sha256": "05f085bc5ae06b124216d91ac8e61b23ab7e828a418b30fe9fb173056945d6e6",
+      "gzip_sha256": "d85fe41ec8213435fcf1b9fab16380b9620e8d436e284ecc7ab950b05a5dd435",
+      "raw_bytes": 4625,
+      "gzip_bytes": 2085
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "103009157160998094410120902005591635633576974925006822207354874902382885942905",
+      "89987355994379378042971338358545678513892498737127020575417471669111823405466"
+    ],
+    "current_description_sha256": "ebf031f598cdae2c91b5fc40cc1f74cce88b379b72f3c127b6e4a29f2bca281a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:08.679993+00:00",
+  "question": "Shabab Al Ahli Dubai vs. Al Ain FC: O/U 2.5",
+  "market_id": "5610018",
+  "valuation_author": "primary_operator",
+  "original_index": 1780,
+  "report_sha256": "40e330c148472455322826d92ae6448dfc42a34ffd82d9c515a30ac179285449"
+}

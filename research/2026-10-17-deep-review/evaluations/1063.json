@@ -1,0 +1,72 @@
+{
+  "review_index": 1063,
+  "condition_id": "0x8d1c41a067fbe91768b5fcd1db4d5b7883c186dc21b2045ce3720eb62492acc6",
+  "criteria_sha256": "23b79c2b58cdc1378eda8116be9ed2d7f6c70856acf60b5cf99c170c5c4fcf59",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5270721",
+      "observed_utc": "2026-10-17T20:11:01.706+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00137",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00137.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00137.body.json.gz",
+      "start_utc": "2026-10-17T20:11:01.650+00:00",
+      "end_utc": "2026-10-17T20:11:01.706+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:01 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5270721",
+        "params": null
+      },
+      "raw_sha256": "65ec01ba519968bb177f1ca4201266846318524e0e254521f286c20e833fbae5",
+      "gzip_sha256": "13793fe55aa1d04491dd27ae889861ad017aae42272800aebce63814c6090f8a",
+      "raw_bytes": 4797,
+      "gzip_bytes": 2142
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "85066789401350054447098519280796330474092917571459643632584202900310124033629",
+      "69831885062507053078075329919832561961140776542233019195128686985378083395016"
+    ],
+    "current_description_sha256": "1e57cfb04403483adfffbe8448458bdd302d9fbaa33135f68f229d0227d8df80"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:42.952181+00:00",
+  "question": "Will Palermo FC win on 2026-10-17?",
+  "market_id": "5270721",
+  "valuation_author": "primary_operator",
+  "original_index": 1063,
+  "report_sha256": "71583241994a1939a4c2bc2494b7c718cef4ff0e2689a9460246af70a9a81b51"
+}

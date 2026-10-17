@@ -1,0 +1,72 @@
+{
+  "review_index": 2792,
+  "condition_id": "0xf5c9a75728cc6e3c8925476c06b99b8f6d315d4049a0b0530bfd157c9998dd20",
+  "criteria_sha256": "fe71bafc0ad3dadc4e068b70c649bbec0556684792d47ffe58c98991ea3817dd",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5304504",
+      "observed_utc": "2026-10-17T20:11:24.437+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00360",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00360.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00360.body.json.gz",
+      "start_utc": "2026-10-17T20:11:24.329+00:00",
+      "end_utc": "2026-10-17T20:11:24.437+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:24 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5304504",
+        "params": null
+      },
+      "raw_sha256": "5db68180b154e9ac7c10551cbc1c441308be3bfff4f90f329fa8f78d9620555d",
+      "gzip_sha256": "9342d5363648ed804f28ca790b3c0965faabd9391e38c014855c271ae2c4333c",
+      "raw_bytes": 4719,
+      "gzip_bytes": 2126
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Virtus Entella",
+      "Calcio Padova"
+    ],
+    "current_token_ids": [
+      "92400268298193812844727138446082214036910160914789104079230877293578325999635",
+      "103092409997351586975592966290776991475968087589904620625438979931131609625437"
+    ],
+    "current_description_sha256": "36e583bcaa56220b081d15b9a8afef24509866317b1fc2621d27f1266df8ff81"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:57.269250+00:00",
+  "question": "Spread: Virtus Entella (-1.5)",
+  "market_id": "5304504",
+  "valuation_author": "primary_operator",
+  "original_index": 2792,
+  "report_sha256": "825dfeec6cc763320729453d93e14426a846615408b3c0e2c192992ed2a837d7"
+}

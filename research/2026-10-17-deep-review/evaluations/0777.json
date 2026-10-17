@@ -1,0 +1,72 @@
+{
+  "review_index": 777,
+  "condition_id": "0xcf1304e3985c20507f78b4c84da2293a5f817e9ea606ae9f36bc0214a71bff99",
+  "criteria_sha256": "cba5bc5a19b7406a11e8968920b64e223793bcde35c98085560a97e24593721e",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5266251",
+      "observed_utc": "2026-10-17T20:10:58.993+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00107",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00107.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00107.body.json.gz",
+      "start_utc": "2026-10-17T20:10:58.884+00:00",
+      "end_utc": "2026-10-17T20:10:58.993+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:58 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5266251",
+        "params": null
+      },
+      "raw_sha256": "4295dde10a8ef8ecb2af9918621dfa16ca868682e5a1d60fef897dc66f79994d",
+      "gzip_sha256": "655d2e5831aea9b454f2db51c87d960144a86779f922f7a410a22c004aa9bdb6",
+      "raw_bytes": 4842,
+      "gzip_bytes": 2187
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "56303473923199525802857655895210227969367994390025144007025642331973395534703",
+      "93087697699926361810989130668541542731885261274357345968243074455915522702292"
+    ],
+    "current_description_sha256": "98169e1bbce31348f8b98b23c5d4757d0bd17d7eda1b2a1263c39d2618e7eded"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:33.761812+00:00",
+  "question": "RC Strasbourg Alsace vs. Paris Saint-Germain FC: O/U 8.5 Total Corners",
+  "market_id": "5266251",
+  "valuation_author": "primary_operator",
+  "original_index": 777,
+  "report_sha256": "4ba4df2ee1cb3e2b509bc08612650461dcca7fb24759cb72beb5bcd7d17aff4b"
+}

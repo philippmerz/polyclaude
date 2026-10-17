@@ -1,0 +1,72 @@
+{
+  "review_index": 1940,
+  "condition_id": "0x79eb42359430862858ef89988bf12836d558a5ba3518ac4f6d6b93d01d8b386c",
+  "criteria_sha256": "7ccab2e1a2baca33543dd0cedb67cfd73abb9028e901b62aa716ae72ece34dd6",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5276404",
+      "observed_utc": "2026-10-17T20:11:12.016+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00242",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00242.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00242.body.json.gz",
+      "start_utc": "2026-10-17T20:11:11.943+00:00",
+      "end_utc": "2026-10-17T20:11:12.016+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:12 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5276404",
+        "params": null
+      },
+      "raw_sha256": "cb2afd3dc88bb487d648208f1a4da1dc1b91e9c1cf3c1b2301de46c6b5618431",
+      "gzip_sha256": "d62c873a5cc875641f7e892acff4ab44b349212cbd956f5a759180f52796d02e",
+      "raw_bytes": 4922,
+      "gzip_bytes": 2191
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "98663527629588231819569744542859449459878744480182536876643700368606621001707",
+      "98525002160102228262214398957549951006562580702196060332608977574891344934822"
+    ],
+    "current_description_sha256": "c2aeef663fd86b6617f2146425a8dbb91ead894eebfa7fa11219cd87859036d6"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:13.999424+00:00",
+  "question": "Birmingham City FC vs. Queens Park Rangers FC: O/U 2.5",
+  "market_id": "5276404",
+  "valuation_author": "primary_operator",
+  "original_index": 1940,
+  "report_sha256": "e9658d32e008b20fe7abeb923c38a26d6160fc34200c22c56f7c3df6e4815edf"
+}

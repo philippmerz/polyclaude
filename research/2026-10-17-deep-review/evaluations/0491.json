@@ -1,0 +1,72 @@
+{
+  "review_index": 491,
+  "condition_id": "0xec874659de41301150433f8bfd16b60b0b6754cd55c0f7bc0c1b6bb439ded8f4",
+  "criteria_sha256": "7588fc2ef85d3cd78a571b4225dcf6b9ae7abac5bf4f6b57e45d60594e5472a5",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720896",
+      "observed_utc": "2026-10-17T20:10:55.973+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00074",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00074.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00074.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.905+00:00",
+      "end_utc": "2026-10-17T20:10:55.973+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720896",
+        "params": null
+      },
+      "raw_sha256": "0d9fff7471d6b0d784d663b2abd2ac018db9aa1bfc3e6f188d003f31f9d59ef4",
+      "gzip_sha256": "536d4e83ecc4c111c2928a5a175d86926a132c1e991c35f9b7e27ea608c32b4a",
+      "raw_bytes": 5357,
+      "gzip_bytes": 2348
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "109474203105143675559725545753098759963066693303690635761592447082172508312004",
+      "78319104007376049085624483456152682334046571438794566359876720224749418244561"
+    ],
+    "current_description_sha256": "0f655ac15369636fd8a012da0b71fcd115aefa370455316515777d1699572ec0"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:23.594265+00:00",
+  "question": "Will the highest temperature in Shenzhen be 31°C on October 17?",
+  "market_id": "5720896",
+  "valuation_author": "primary_operator",
+  "original_index": 491,
+  "report_sha256": "83e4d9ca3efda1d172354130b10e2fd98646e959e9b36152b704af8584dc16e2"
+}

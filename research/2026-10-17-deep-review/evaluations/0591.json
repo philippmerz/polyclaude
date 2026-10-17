@@ -1,0 +1,72 @@
+{
+  "review_index": 591,
+  "condition_id": "0x0ef132a4044b5beb4476ac7e49cc4f5177c5275b31228a7064b9e5f7d95295da",
+  "criteria_sha256": "a17529b7259eabf46ae616850579199b3f438ccbf1f63e3e7fc1552d3b2052ba",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5251299",
+      "observed_utc": "2026-10-17T20:10:57.059+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00086",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00086.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00086.body.json.gz",
+      "start_utc": "2026-10-17T20:10:56.992+00:00",
+      "end_utc": "2026-10-17T20:10:57.059+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:57 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5251299",
+        "params": null
+      },
+      "raw_sha256": "0bed925b23576385b93f20ac748508be23e2dd1697146d3e29552ec6e1a3e950",
+      "gzip_sha256": "18fbc1cba5d4634ec67722d26e8468ed163f4f816de800425345e83e00cb16e3",
+      "raw_bytes": 4766,
+      "gzip_bytes": 2128
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "111836389268906459450318004082605162996109337108229326086247432463532458629224",
+      "11715309086559552386437849148177970394479214575171704228353273330723676068994"
+    ],
+    "current_description_sha256": "72f1677361c48277fc045faa1445e8398e7d83791a2a667945c6a35818fbfb06"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:27.141733+00:00",
+  "question": "Will Shandong Taishan FC win on 2026-10-17?",
+  "market_id": "5251299",
+  "valuation_author": "primary_operator",
+  "original_index": 591,
+  "report_sha256": "9ad5d2832d5846b183cdd57658d1554940f7d632c60cff60e52ddb067dd1275a"
+}

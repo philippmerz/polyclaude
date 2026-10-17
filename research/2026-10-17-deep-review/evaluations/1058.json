@@ -1,0 +1,72 @@
+{
+  "review_index": 1058,
+  "condition_id": "0xe6d32a026e1f52df84a7224341f7f90b4758a4b93acc962b284ba9f2150a81f6",
+  "criteria_sha256": "095a014496b5077d866dd94a6b53fbe9e679493c693cd62ffe1d840772bc5bab",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5304254",
+      "observed_utc": "2026-10-17T20:11:01.648+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00136",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00136.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00136.body.json.gz",
+      "start_utc": "2026-10-17T20:11:01.573+00:00",
+      "end_utc": "2026-10-17T20:11:01.648+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:01 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5304254",
+        "params": null
+      },
+      "raw_sha256": "34cf340c3ecae33d7250d4860640b009972529989e3a8cab37ecfe8d24bd2012",
+      "gzip_sha256": "172767fdb8b01174859b0097b9d453bbface453e5cfebc5ca88e42e68644a641",
+      "raw_bytes": 4839,
+      "gzip_bytes": 2164
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "103551356682209903345336411086136860876452180992358132126650442437939710205568",
+      "90490784839089773084307460132583696880724118523935268664480794357550630740007"
+    ],
+    "current_description_sha256": "7eba4612189bda0d6c81a31654bed11e3d5b88180623e8b1dcf42ad220885382"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:42.545312+00:00",
+  "question": "Mantova 1911 vs. Palermo FC: O/U 2.5",
+  "market_id": "5304254",
+  "valuation_author": "primary_operator",
+  "original_index": 1058,
+  "report_sha256": "43874f8295904714bc66e37df9627db06a1e848bebdc93098f11f33dca2fdd72"
+}

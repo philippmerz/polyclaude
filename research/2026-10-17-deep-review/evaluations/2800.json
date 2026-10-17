@@ -1,0 +1,72 @@
+{
+  "review_index": 2800,
+  "condition_id": "0x5b1d0a7a8171d27e2217eb38ebb1d8b69bfbce264419d718d411a4c09e117005",
+  "criteria_sha256": "c09a459e4295d95e32b76451a2a6c2ffcb7400a0862bcc5521825d92ba57ea12",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5456247",
+      "observed_utc": "2026-10-17T20:11:24.541+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00361",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00361.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00361.body.json.gz",
+      "start_utc": "2026-10-17T20:11:24.440+00:00",
+      "end_utc": "2026-10-17T20:11:24.541+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:24 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5456247",
+        "params": null
+      },
+      "raw_sha256": "a55d1864ac322f67953e6301a4a25cad7b08039105545451336c2743c41a7fec",
+      "gzip_sha256": "4f4fc22b4df76d0b401f3975fef4c71bbcf8d158d2c3f59b73ef1707461c1539",
+      "raw_bytes": 4840,
+      "gzip_bytes": 2206
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "66788549099615865155391173425173633515240791702545660600714541696551777809748",
+      "73306124495158133463364154168766874023226162546783240154139847733210296362534"
+    ],
+    "current_description_sha256": "2942a4a480ef948d8928643bb4f266d85c10823c8e1203bb0adc385e67fffd06"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:58.970508+00:00",
+  "question": "1st Half Exact Score: Everton FC 0 - 0 Chelsea FC?",
+  "market_id": "5456247",
+  "valuation_author": "primary_operator",
+  "original_index": 2800,
+  "report_sha256": "afd93457e6b92960153bac72325f00516a54fc78ed9192925db19a45c8753d0c"
+}

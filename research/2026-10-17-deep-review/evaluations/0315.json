@@ -1,0 +1,72 @@
+{
+  "review_index": 315,
+  "condition_id": "0x182c0d610318761256ed30914d28ca41cfdca7d151fe0eb00b0308bbf0a72a03",
+  "criteria_sha256": "45debe555166ea6887b8cbac09f7944ce25e03fee3dd08113b64974a19f0d1d7",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5816852",
+      "observed_utc": "2026-10-17T20:10:53.966+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00049",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00049.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00049.body.json.gz",
+      "start_utc": "2026-10-17T20:10:53.876+00:00",
+      "end_utc": "2026-10-17T20:10:53.966+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:53 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5816852",
+        "params": null
+      },
+      "raw_sha256": "3fa97d3c6abf9f4aba7d0b832fc1ff6eabeee9c4b050d26d71bcc217377c9bab",
+      "gzip_sha256": "731bac18ed1565a24670cba3b9b3df718eff1977eacf595c2c65c15fe2e31140",
+      "raw_bytes": 4528,
+      "gzip_bytes": 2018
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Heroic",
+      "100 Thieves"
+    ],
+    "current_token_ids": [
+      "12919193231436453154305939978452711635120269416328136034911728035666223685241",
+      "12943343105116253677619346975744463415089883958515304810325620434892134860312"
+    ],
+    "current_description_sha256": "f03ca112e9138fdf4d491043bc85eae51a29d47a0cb174e97cec52812842fb08"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:16.307620+00:00",
+  "question": "Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner",
+  "market_id": "5816852",
+  "valuation_author": "primary_operator",
+  "original_index": 315,
+  "report_sha256": "f1df284fe3154df262843d40eef2185b6f7f2bcace0a4c86fad62062b1bbe4dd"
+}

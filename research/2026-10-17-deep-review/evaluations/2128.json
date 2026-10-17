@@ -1,0 +1,72 @@
+{
+  "review_index": 2128,
+  "condition_id": "0x78ad94b9d197f4b4eb672eed5cc13e066ee4de6104f61fee74ca2682cdc6611d",
+  "criteria_sha256": "eac9a5d809b82218aa9ef44bef288b815131eb7d28ba861563cc7253a239717f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5268890",
+      "observed_utc": "2026-10-17T20:11:14.692+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00266",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00266.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00266.body.json.gz",
+      "start_utc": "2026-10-17T20:11:14.609+00:00",
+      "end_utc": "2026-10-17T20:11:14.692+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:14 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5268890",
+        "params": null
+      },
+      "raw_sha256": "094a2bfed43f91debcbd6b2c338abf7acb379ff589250771ac3b8c043932cd71",
+      "gzip_sha256": "7c45b2e70a2356970c59350104eb32665e8b6bf1a1e72f4db8ee07c6ff439ea1",
+      "raw_bytes": 4803,
+      "gzip_bytes": 2170
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "101367952672234711052235809262809582872512146455521212221798451519945077169710",
+      "93054474283828247333871507253736418997516148941147137073617921749435355783666"
+    ],
+    "current_description_sha256": "9ca62c006dfe0481f245be201df15f09befac32b78b49da838a149a58efb2ecb"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:40.761089+00:00",
+  "question": "Exact Score: RCD Espanyol de Barcelona 0 - 1 Club Atlético de Madrid?",
+  "market_id": "5268890",
+  "valuation_author": "primary_operator",
+  "original_index": 2128,
+  "report_sha256": "de8a87777e831514f16c2613043614cdc9ac07d6b31c80ba24c87ba327095fad"
+}

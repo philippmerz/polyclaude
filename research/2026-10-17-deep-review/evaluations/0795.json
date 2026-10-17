@@ -1,0 +1,72 @@
+{
+  "review_index": 795,
+  "condition_id": "0x920d0b39e52f5b2613aeffc903a408c4aed7369eec3f93a584f7c19e26383f24",
+  "criteria_sha256": "ec3e762c6e4825d8b5233bd4977d4de763c65e278c5634bf6ced2f73b087b127",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5276222",
+      "observed_utc": "2026-10-17T20:10:59.155+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00109",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00109.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00109.body.json.gz",
+      "start_utc": "2026-10-17T20:10:59.084+00:00",
+      "end_utc": "2026-10-17T20:10:59.155+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:59 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5276222",
+        "params": null
+      },
+      "raw_sha256": "cacfc78e2f6eaf3415b698eb3ca031bf5282e2f8a436af1bb876dbb046a09128",
+      "gzip_sha256": "d30cb1b3d4a74e9a07607c2bea2f1402f952300584a7a9eac24903e4740f9b61",
+      "raw_bytes": 4842,
+      "gzip_bytes": 2165
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "114972725044112883271380103528278340769732909428742409921082981705882111381123",
+      "85842915116546657029194305163195450719812917960759795545646421986132614958793"
+    ],
+    "current_description_sha256": "96d956bf211565d6ef3bae9efc7fb7bd36df825633995cf5f19484f6ffca3ede"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:34.501404+00:00",
+  "question": "Bristol City FC vs. Sheffield United FC: O/U 2.5",
+  "market_id": "5276222",
+  "valuation_author": "primary_operator",
+  "original_index": 795,
+  "report_sha256": "3f420c37b8b0b37e3836ec8fe6ae26a0a0c24b8c74fc1be73143f4adc040e34b"
+}

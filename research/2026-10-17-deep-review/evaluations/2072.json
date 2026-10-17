@@ -1,0 +1,72 @@
+{
+  "review_index": 2072,
+  "condition_id": "0xc0b073060f05b0294a5fd579c3cc686b392b41a595af88aaf8869aa77ac74b36",
+  "criteria_sha256": "a080b6e566c9339772392c59408a4cdc5c72ecdfee8fb7e349ad3fdce1b503d8",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264388",
+      "observed_utc": "2026-10-17T20:11:14.084+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00259",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00259.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00259.body.json.gz",
+      "start_utc": "2026-10-17T20:11:14.001+00:00",
+      "end_utc": "2026-10-17T20:11:14.084+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:14 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264388",
+        "params": null
+      },
+      "raw_sha256": "f552a657381dcb7d7bec168773768bbc556c43852ea3d5b8e4ca312622025d27",
+      "gzip_sha256": "a1c47369b7dd9f75f2be5f2cb3a5b7f150e48b7e39c9423322a2d0f9ccf3e453",
+      "raw_bytes": 4837,
+      "gzip_bytes": 2162
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "19843996968170909735949750214647417346908783670454440861938337363866633130568",
+      "52178569272155050221048260570337998118403874059307271679590076678476089388908"
+    ],
+    "current_description_sha256": "2e99fc5b8e2fa998426ce63588ee9f1a6d365d322f9e30f955be666ca1638a19"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:28.753790+00:00",
+  "question": "Fulham FC leading at halftime?",
+  "market_id": "5264388",
+  "valuation_author": "primary_operator",
+  "original_index": 2072,
+  "report_sha256": "6c7e8c4030905efb9f0dbfffbe52dae8c2a3f817fa1f229aed502594a5312a88"
+}

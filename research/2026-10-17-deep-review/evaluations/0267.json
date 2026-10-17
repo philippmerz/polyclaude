@@ -1,0 +1,72 @@
+{
+  "review_index": 267,
+  "condition_id": "0x673288efba5fa645e840440e3970412ec23247ca1a98b9af694f079b068a7d0e",
+  "criteria_sha256": "c88574a49cf90d0d07e3d579d4dedd5ea9dce35aaa6963da78591c840d79c1a7",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5349154",
+      "observed_utc": "2026-10-17T20:10:53.390+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00042",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00042.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00042.body.json.gz",
+      "start_utc": "2026-10-17T20:10:53.343+00:00",
+      "end_utc": "2026-10-17T20:10:53.390+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:53 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5349154",
+        "params": null
+      },
+      "raw_sha256": "dd5507b23fa6725baedf4d1d99240944ddd4385cefc9062e91ec5e89916356df",
+      "gzip_sha256": "ac1199fcc93836b974addb45d2c1a9c3f15179193ccb2534444d88a7ec4f1bbc",
+      "raw_bytes": 3611,
+      "gzip_bytes": 1632
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Charleston Southern",
+      "Clemson"
+    ],
+    "current_token_ids": [
+      "23284446733573988450215740479147256632904195313986055694311249554761188501751",
+      "89322165799416059275024941708581040385488636886791875227122873046573351635043"
+    ],
+    "current_description_sha256": "c54c9b10ac96394ceedf966c00e0a5d66e2f739f4c87883bbe5a23173d3bd5e5"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:14.368196+00:00",
+  "question": "Charleston Southern vs. Clemson",
+  "market_id": "5349154",
+  "valuation_author": "primary_operator",
+  "original_index": 267,
+  "report_sha256": "7639cd09cec84dbcb44cc487ca0e3c12edd76bc0a4deb123ea7a64d0f82a53e4"
+}

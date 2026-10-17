@@ -1,0 +1,72 @@
+{
+  "review_index": 891,
+  "condition_id": "0xca043698f63064355622ecc325babe5f56b55698c5b4c6637b1e6fb4c7a86d15",
+  "criteria_sha256": "b62095cd2d9030450b45480c2d5770fa4ec61683eb28fc5b289e174b7d466f38",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5266162",
+      "observed_utc": "2026-10-17T20:11:00.021+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00119",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00119.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00119.body.json.gz",
+      "start_utc": "2026-10-17T20:10:59.937+00:00",
+      "end_utc": "2026-10-17T20:11:00.021+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:00 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5266162",
+        "params": null
+      },
+      "raw_sha256": "43b46166836702bc6e32854f473b764c90361a2c5869f734665c10a4443db383",
+      "gzip_sha256": "12fa7ff4d80db77b28150ac3ae9deeab64144296b727bb79de96fd9a367cd11a",
+      "raw_bytes": 4864,
+      "gzip_bytes": 2167
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "52626349810343438518528162919185960614199339507377985926380264536796325409576",
+      "54884647206925737203467507378821726153412543525907757571552341085686446202480"
+    ],
+    "current_description_sha256": "949b456fe1911defef37e5bd6766723de45a234cfd1e187a3eedf6bfc7d89db2"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:37.546908+00:00",
+  "question": "Newcastle United FC vs. Aston Villa FC: O/U 10.5 Total Corners",
+  "market_id": "5266162",
+  "valuation_author": "primary_operator",
+  "original_index": 891,
+  "report_sha256": "19b62dfa8769d71df6fd1d10865174dd47635ea7fdfe08735c61c08a3069679f"
+}

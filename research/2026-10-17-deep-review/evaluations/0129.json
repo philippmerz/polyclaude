@@ -1,0 +1,139 @@
+{
+  "review_index": 129,
+  "condition_id": "0xa4b952e2e0ab85e2949b2f67190d10da6212e030993ad930f55b21adbefda2d3",
+  "criteria_sha256": "c4f68be7d572046cc98cd02a33d8ec05b8dd5bced5a51178d20f72ecdc70594b",
+  "status": "valued",
+  "literal_analysis": "Full exact frozen rule read, including creation/cutoff, official-announcement scope, actual control, effective wholeFIR closure, direct-force/militia/UAV exclusions and adjudication as applicable.",
+  "evidence": [
+    {
+      "url": "https://t.me/s/MKhamenei_en",
+      "observed_utc": "2026-10-17T20:49:16.874449+00:00",
+      "finding": "Public attributedOctober16 written messages, not private inbox and not independent de-facto-control proof."
+    },
+    {
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/08/28/iran-s-disfigured-supreme-leader-remains-invisible-six-months-into-an-existential-war",
+      "observed_utc": "2026-10-17T20:49:16.874468+00:00",
+      "finding": "Reuters attributed-source account within window, old at valuation and not an independent current appearance."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.08,
+    "low": 0.01,
+    "high": 0.35,
+    "method": "Primary explicit event/interpretation tree, retaining latent historical and future regime uncertainty",
+    "reasoning": "Saved iran_event_model.py inputs are primary assumptions, not fitted rates; full case report distinguishes exact payoff, dated sources, bounds and interpretation branches.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 18,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.08,
+        "best_bid": 0.018,
+        "best_ask": 0.024,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.155,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.024,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.24,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.024,
+        "break_even_probability_with_idealized_carry": 0.024035646436544274,
+        "central_expected_profit_usd": 0.56,
+        "default_10pp_stressed_profit_usd": -0.24,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.18
+      },
+      "No": {
+        "probability": 0.92,
+        "best_bid": 0.976,
+        "best_ask": 0.982,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.155,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.982,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.82,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.982,
+        "break_even_probability_with_idealized_carry": 0.9834585333619366,
+        "central_expected_profit_usd": -0.6199999999999992,
+        "default_10pp_stressed_profit_usd": -1.6199999999999992,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8200000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.76
+      }
+    }
+  },
+  "verdict": "Personal de-facto leadership tail valued, with latent/current-state uncertainty explicit",
+  "reopen_condition": "New qualifying official source/consensus, actual control/authority/target details or a material price/cost change requires a fresh primary review and full account/venue gates.",
+  "current_description_sha256": "124b16de324847cf3f1cace4004fe2b39a032f843f63c4c6aa245d83e3fbf485",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "76758908365678711322172114828022663697257752796914712513878834641665977747840",
+    "49234118435352323291730777734805386699990286390595415348937712915074904021022"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0010",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/iran_event_followup_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/iran_event_model.py",
+    "model_calibrated": false,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:49:17.075032+00:00",
+  "question": "Iran leadership change by October 31?",
+  "market_id": "3399450",
+  "valuation_author": "primary_operator",
+  "original_index": 129,
+  "report_sha256": "73ff7abd82b94e580ae784c13b6ffd991d78c0600e184c0854d0375f7f781c8e"
+}

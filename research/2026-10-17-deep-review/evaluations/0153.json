@@ -1,0 +1,72 @@
+{
+  "review_index": 153,
+  "condition_id": "0x31c3371b396c6af39e0387e5ea2b8c08a287d96eef37c52bd5ba6ba5808c8b93",
+  "criteria_sha256": "a985215307c0872c7048072851b0835b20a7c592a6aa6a669a017a4a6a533c9f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5258760",
+      "observed_utc": "2026-10-17T20:10:52.456+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00031",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00031.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00031.body.json.gz",
+      "start_utc": "2026-10-17T20:10:52.371+00:00",
+      "end_utc": "2026-10-17T20:10:52.456+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:52 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5258760",
+        "params": null
+      },
+      "raw_sha256": "57e0b5ef5944fa0510a39868ba37356f958a18a8c4ca18d0e1866c8bffddd591",
+      "gzip_sha256": "4d7bd1ac074fd0241df50e2d640c30b5415c746aff96a60b037cda973c3f6ffd",
+      "raw_bytes": 4745,
+      "gzip_bytes": 2129
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "36217965280171395113166850149773638445893992361242581851644843197169079755802",
+      "57676409490073414827738378165179332964281719295538740113753462011727741104448"
+    ],
+    "current_description_sha256": "ae14351d0ce0901518570574c438931c847d0325690ba4eafa8899f62000c4ff"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:11.484987+00:00",
+  "question": "Will Venezia FC win on 2026-10-17?",
+  "market_id": "5258760",
+  "valuation_author": "primary_operator",
+  "original_index": 153,
+  "report_sha256": "337b8ae1f38ccd8bc34beeeef57b7ef03cd0fe1b9c38f92985d63382974b1b94"
+}

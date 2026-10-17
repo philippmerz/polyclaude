@@ -1,0 +1,72 @@
+{
+  "review_index": 705,
+  "condition_id": "0x784fddcfa977f96de1ccb78bd24b49fa757e96d8f5c7e758db6363005f959c03",
+  "criteria_sha256": "03382c46e87da98a9d3d860d7ee660b39ca43fd91eea970dc1992fb0dfc6b23e",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271304",
+      "observed_utc": "2026-10-17T20:10:58.307+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00099",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00099.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00099.body.json.gz",
+      "start_utc": "2026-10-17T20:10:58.208+00:00",
+      "end_utc": "2026-10-17T20:10:58.307+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:58 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271304",
+        "params": null
+      },
+      "raw_sha256": "f53e702eb3c89850591cfb7800573059433eb0e3e41d8aa0deff3b1463d104bc",
+      "gzip_sha256": "4b01f32be58922d5dff4cb480a2e2882139da1816b52fa486119759d9d32fb33",
+      "raw_bytes": 4790,
+      "gzip_bytes": 2119
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "6416166605999775880055544461870399898944099167955433872839177271468194770313",
+      "14190040330961422762768635800734499105952924927870878858845489137317616377163"
+    ],
+    "current_description_sha256": "f5f72ad7ad84380fc2b8879da609a9fcf2d2d0b78cf07eb01344eb3fca842590"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:30.982306+00:00",
+  "question": "Will Sheffield Wednesday FC win on 2026-10-17?",
+  "market_id": "5271304",
+  "valuation_author": "primary_operator",
+  "original_index": 705,
+  "report_sha256": "3a864e030a6831da0efcdad0b22eb6edead123ce14e913e350f39f5b40c504b1"
+}

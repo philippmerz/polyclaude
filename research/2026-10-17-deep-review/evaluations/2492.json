@@ -1,0 +1,72 @@
+{
+  "review_index": 2492,
+  "condition_id": "0x3dec1e7dbb29f90ea76e40e657ff08d2164adb0c3eed53cb89b62e121dfd2b1a",
+  "criteria_sha256": "97a68de50d05336901892a45233de43860f1a8055b4b5d0a77816302ab39029f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5819327",
+      "observed_utc": "2026-10-17T20:11:20.510+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00327",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00327.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00327.body.json.gz",
+      "start_utc": "2026-10-17T20:11:20.452+00:00",
+      "end_utc": "2026-10-17T20:11:20.510+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:20 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5819327",
+        "params": null
+      },
+      "raw_sha256": "5995d0b3edb65e1b72abcf1ea4ae98df24025c3ec46445083fbdd68e33332072",
+      "gzip_sha256": "7cd64f14ca0932abb346881914f2952dee20f82b83c3298366d3b7939247847c",
+      "raw_bytes": 5344,
+      "gzip_bytes": 2369
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "HAVU",
+      "Phantom"
+    ],
+    "current_token_ids": [
+      "46998202365369020655061875341141687454180978840756902629094796055917736718193",
+      "43947372105947089425750993043218893522242032920824483566521928430465573028106"
+    ],
+    "current_description_sha256": "6043dfe9a54ab2c1bfe2f146e2e5591cf59d53162dc5ab88ba949fce028879af"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:16.016752+00:00",
+  "question": "Counter-Strike: HAVU vs Phantom (BO3) - Elisa BreakOut Series #2 Playoffs",
+  "market_id": "5819327",
+  "valuation_author": "primary_operator",
+  "original_index": 2492,
+  "report_sha256": "3aa1cb77b4da2491cb9cbf9b8648e251a8b32b47946e4fa0bde69c00d8d81fd6"
+}

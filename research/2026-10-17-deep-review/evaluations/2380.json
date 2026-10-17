@@ -1,0 +1,72 @@
+{
+  "review_index": 2380,
+  "condition_id": "0x2fca8ee768a0c9cc4de8ce341f493a0a1cb2ddf56f27806018f253b67ec06539",
+  "criteria_sha256": "d87d3ca3a4d2eca1dac676f8af5fc017a4df1feddcbc4e4ad20ab437dce1df73",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5266176",
+      "observed_utc": "2026-10-17T20:11:19.292+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00315",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00315.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00315.body.json.gz",
+      "start_utc": "2026-10-17T20:11:19.203+00:00",
+      "end_utc": "2026-10-17T20:11:19.292+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5266176",
+        "params": null
+      },
+      "raw_sha256": "04117e12bc8f7e237940ec836efeaa68e80d9950db0c56aa509e8ce05091b26f",
+      "gzip_sha256": "13eaf8dacc5605c8da27444a328386d121ec13cc3a2d03e2fc52b6e867e715be",
+      "raw_bytes": 4899,
+      "gzip_bytes": 2169
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "62557375767963649413185287907232641060537781543717054252358119350972982420479",
+      "100075910552105246146748815540192430978544171806531584376446832138425983414394"
+    ],
+    "current_description_sha256": "1c3c03b02e8d7b48d4e002641a868daf064c882aed32044ffb641557d74c76c9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:59.231233+00:00",
+  "question": "Fulham FC vs. Hull City AFC: O/U 10.5 Total Corners",
+  "market_id": "5266176",
+  "valuation_author": "primary_operator",
+  "original_index": 2380,
+  "report_sha256": "d89acd2b67d98ea64b7f94f646cf25b93bbffa4d96dbd31d3bc4c693586057a5"
+}

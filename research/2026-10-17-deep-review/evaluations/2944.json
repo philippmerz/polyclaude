@@ -1,0 +1,72 @@
+{
+  "review_index": 2944,
+  "condition_id": "0xb142f236d19d60757bb900a0fd7d2f66c72e0ddf99699488431c6af84d4292a3",
+  "criteria_sha256": "34c7d1053acfabc38364e840d15f13f5745865a0e958f9d001766fad59575c2c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5409397",
+      "observed_utc": "2026-10-17T20:11:26.709+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00380",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00380.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00380.body.json.gz",
+      "start_utc": "2026-10-17T20:11:26.624+00:00",
+      "end_utc": "2026-10-17T20:11:26.709+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:26 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5409397",
+        "params": null
+      },
+      "raw_sha256": "4283f4b8486b5067d917ebc504820d7e218731521abee6052faf9b2da7409a88",
+      "gzip_sha256": "d81f3d87284b61a8864d81307bbbff3d4a7c16216a8f9a426b3df8df6da0d2a9",
+      "raw_bytes": 4720,
+      "gzip_bytes": 2113
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "23098877182649903333802757955876163785525577756413407029636769274507374797775",
+      "57779995178527591144943767184080118720522475096973491549854393122817137959611"
+    ],
+    "current_description_sha256": "fb076dd1a4359d9678442070cd6ace887b2f1f66131122c318d36aa7c3be366d"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:23.014082+00:00",
+  "question": "Will Bedford Town FC win on 2026-10-17?",
+  "market_id": "5409397",
+  "valuation_author": "primary_operator",
+  "original_index": 2944,
+  "report_sha256": "87f537d0f9b0eb380bf5d64505c1336cb371f355aa6444de10e6e83939595c66"
+}

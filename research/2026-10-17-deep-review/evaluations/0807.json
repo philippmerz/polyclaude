@@ -1,0 +1,72 @@
+{
+  "review_index": 807,
+  "condition_id": "0x03f298b372df59598b1f5a617bc6f67563b7079cdb3d565684c446d37a8582e6",
+  "criteria_sha256": "2d2587fe36e270280b71ad7f77c4b0d13af6f32b96e9e9fde68ecbb81d93f412",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5775066",
+      "observed_utc": "2026-10-17T20:10:59.422+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00112",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00112.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00112.body.json.gz",
+      "start_utc": "2026-10-17T20:10:59.357+00:00",
+      "end_utc": "2026-10-17T20:10:59.422+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:59 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5775066",
+        "params": null
+      },
+      "raw_sha256": "7f3252604c639e373d20f0314296d4d0ba0ac06ec2c1cf273e28f4f80b29f5e9",
+      "gzip_sha256": "00aaa0b8d0822378557d11c32bfbc6fac390c09806648a11a2029e26f41f6421",
+      "raw_bytes": 5409,
+      "gzip_bytes": 2416
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "EAC Extra",
+      "RoundsGG"
+    ],
+    "current_token_ids": [
+      "30215368452092092389509006034458852697073741679641406791920985129241615299146",
+      "80362770571111316281127006826179766606693871736925702838452614071318286147288"
+    ],
+    "current_description_sha256": "7af65d90a9174e71b999661936b12d2f07f56eab175037d71dbde0ad586aecef"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:35.231040+00:00",
+  "question": "Counter-Strike: EAC Extra vs RoundsGG (BO3) - European Pro League Regular Playoffs",
+  "market_id": "5775066",
+  "valuation_author": "primary_operator",
+  "original_index": 807,
+  "report_sha256": "bbf311b27686e819e90a70a82a9372ad2d0be65ccb1f05a0ffa2fff75e333179"
+}

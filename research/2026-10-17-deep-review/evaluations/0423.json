@@ -1,0 +1,72 @@
+{
+  "review_index": 423,
+  "condition_id": "0x5f1575d9f5000d5b2d53f9d28b536d1dfcc31cebe6da39b4f346f2ff832725a6",
+  "criteria_sha256": "6f69d7a8fc5697e87405b6ab32998b837d0b9f1e01f696783dc5e8fa304b7e84",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5785853",
+      "observed_utc": "2026-10-17T20:10:55.484+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00068",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00068.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00068.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.441+00:00",
+      "end_utc": "2026-10-17T20:10:55.484+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5785853",
+        "params": null
+      },
+      "raw_sha256": "7144a163792a98352ff7304124c9be4a0cd1e76045c9f9bd4613d41f36f5d4c4",
+      "gzip_sha256": "0301bab8d3d5845b2b86c329fc5be9216f99059a1cd1d90afe31811fe2408aeb",
+      "raw_bytes": 4388,
+      "gzip_bytes": 1978
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "ENCE",
+      "Phantom"
+    ],
+    "current_token_ids": [
+      "29940444814620533882747839393819132347470397622101620651096324502639971263576",
+      "84217834044796791977992673558367446192947577866219327949690814278479043134833"
+    ],
+    "current_description_sha256": "8a17dc1120288e0908c5ed63548db58f464f2fecd7ea8d31b599d519b75514da"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:21.915552+00:00",
+  "question": "Counter-Strike: ENCE vs Phantom - Map 2 Winner",
+  "market_id": "5785853",
+  "valuation_author": "primary_operator",
+  "original_index": 423,
+  "report_sha256": "9932491aeaf71432015bf01f217fc99c2184673039685f5ec8cdae2ddace416b"
+}

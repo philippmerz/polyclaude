@@ -1,0 +1,72 @@
+{
+  "review_index": 2308,
+  "condition_id": "0xcd152bef6317f6427cae4120eae4423f1875468096ae97ffa54b7d2fb3a5c297",
+  "criteria_sha256": "71c0d114ec4b62cf88ff114a9e6eaf84d1d88ec73103369bc69ddb98ca0eb82e",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264789",
+      "observed_utc": "2026-10-17T20:11:18.209+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00303",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00303.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00303.body.json.gz",
+      "start_utc": "2026-10-17T20:11:18.109+00:00",
+      "end_utc": "2026-10-17T20:11:18.209+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:18 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264789",
+        "params": null
+      },
+      "raw_sha256": "80a8d53752e0d51d8d0a34886672bc8b2fab1876d3c26d035c9a73710b7e11b8",
+      "gzip_sha256": "0b7b5701c333088416a4c99b025ef20f41413d58885c3bada40974d6ff678f1f",
+      "raw_bytes": 4689,
+      "gzip_bytes": 2138
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "48350211762845485395558925757504668942945117229700280742868323978612633778979",
+      "77061165273949399442105605701791472832100349893763500236776553442230303798083"
+    ],
+    "current_description_sha256": "5e800b0d4fcfe212358253288d43824bd5ebfaa4345991ab5221b2f631a5b165"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:39.014984+00:00",
+  "question": "Exact Score: Watford FC 3 - 1 Charlton Athletic FC?",
+  "market_id": "5264789",
+  "valuation_author": "primary_operator",
+  "original_index": 2308,
+  "report_sha256": "49f56cc5da21a9db94bebaf0a61f0f177425929f16702944777381ca5ded6a00"
+}

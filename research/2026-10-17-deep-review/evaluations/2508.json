@@ -1,0 +1,72 @@
+{
+  "review_index": 2508,
+  "condition_id": "0xdb395666e9b2a4ce49cbd02b0e9e43589b59293f7f38435585729a4a949dd8fd",
+  "criteria_sha256": "ed72f59210085314bf3d42f88bbdce44b990737390db1d0fa0e8f1b7e9dfeb61",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273613",
+      "observed_utc": "2026-10-17T20:11:20.807+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00329",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00329.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00329.body.json.gz",
+      "start_utc": "2026-10-17T20:11:20.712+00:00",
+      "end_utc": "2026-10-17T20:11:20.807+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:20 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5273613",
+        "params": null
+      },
+      "raw_sha256": "2ff292a2406de30a74d38c588a80288d786039cdf0ec3be16fddbf04a4fa28cb",
+      "gzip_sha256": "c523cb27803fd7f97dd372e25ee2a56066599969504f317a185ef437b68b96df",
+      "raw_bytes": 4720,
+      "gzip_bytes": 2118
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "97648986377689310470090026788916165917029565949630654299034247177668755607395",
+      "86337953118749611329578607296737244399661647005315068474741394101195260092142"
+    ],
+    "current_description_sha256": "a65b8e75e1b1166a42da30ff0a90a442d1c6e48e44f1c0c99e3b958cf92f532f"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:17.508001+00:00",
+  "question": "Will Exeter City FC win on 2026-10-17?",
+  "market_id": "5273613",
+  "valuation_author": "primary_operator",
+  "original_index": 2508,
+  "report_sha256": "49a069390d064c44008c434e3ee3d75672237e9980355570b3f3b31edc06acc9"
+}

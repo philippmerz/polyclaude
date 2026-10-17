@@ -1,0 +1,72 @@
+{
+  "review_index": 393,
+  "condition_id": "0x7035a8032ef931f3fd0b5648cd6daa241c763eca7d66664f7d94a90d5980d3be",
+  "criteria_sha256": "d0b4bc41b7b3c47a56b46c0648f44e236c7f8ed4fe2ae22e7bfcd618e044bf92",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5785877",
+      "observed_utc": "2026-10-17T20:10:54.969+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00062",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00062.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00062.body.json.gz",
+      "start_utc": "2026-10-17T20:10:54.886+00:00",
+      "end_utc": "2026-10-17T20:10:54.969+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:54 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5785877",
+        "params": null
+      },
+      "raw_sha256": "996326fbd7c5c7e13988160f4136e92396fd386bcdbd11f22fbcc9c2454284a9",
+      "gzip_sha256": "fcdaa17bb557015cc157d1a82e52336991744b546a5408f25fad3269ab8454d3",
+      "raw_bytes": 4512,
+      "gzip_bytes": 1976
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yellow Submarine",
+      "Spirit Academy"
+    ],
+    "current_token_ids": [
+      "107397205271792613277791661981101832075664868639437737737132618136142970378340",
+      "52262553148040772235053782508150456084961845260910110410715940935523274021074"
+    ],
+    "current_description_sha256": "4bccad7f06276230eb23543cfc465e5f69c06d02b9773169565372d25c185c40"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:20.308104+00:00",
+  "question": "Dota 2: Yellow Submarine vs Spirit Academy - Game 2 Winner",
+  "market_id": "5785877",
+  "valuation_author": "primary_operator",
+  "original_index": 393,
+  "report_sha256": "28fa9ae1253cedacde7c97f1af570bf61f675a15cc1b2bd9b2dcf2818ef1dfb6"
+}

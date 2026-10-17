@@ -1,0 +1,72 @@
+{
+  "review_index": 1173,
+  "condition_id": "0xdf40fe4d570dc9dbb2a8bfb38dd747c218f123ab72b1eb2295b0dd0a62345e97",
+  "criteria_sha256": "78210340f8c4562bbc48b99671a8bb192bd8af1deb043d9271938cb73cae6e6a",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5816864",
+      "observed_utc": "2026-10-17T20:11:03.124+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00151",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00151.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00151.body.json.gz",
+      "start_utc": "2026-10-17T20:11:03.036+00:00",
+      "end_utc": "2026-10-17T20:11:03.124+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:03 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5816864",
+        "params": null
+      },
+      "raw_sha256": "7b786886b76abeb1f13b2296fe65b3a5de807b7b144e86a27a402a568a232d09",
+      "gzip_sha256": "3dbe4027f5fa347c76d2aa65719a9594f4a057cca88348eddd4fd6784521c6ba",
+      "raw_bytes": 5336,
+      "gzip_bytes": 2374
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "VP.Future",
+      "QUAZAR"
+    ],
+    "current_token_ids": [
+      "51655951178594459012636826813488485734341193578588465625302390898941948735781",
+      "3575952264161384396527868045403215772120530197142362965623771953409438114322"
+    ],
+    "current_description_sha256": "dd1433bc953760705616db29cd79196376075cedcdb595693e756e41ff3bcf55"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:47.398898+00:00",
+  "question": "Counter-Strike: VP.Future vs QUAZAR (BO3) - GLuck Yungstar Series #3 Playoffs",
+  "market_id": "5816864",
+  "valuation_author": "primary_operator",
+  "original_index": 1173,
+  "report_sha256": "a2cdf948afb2bc8a421102ba52bbb3b25ffbddc6d0296d94012a2e6c93e5bd7a"
+}

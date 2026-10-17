@@ -1,0 +1,72 @@
+{
+  "review_index": 1888,
+  "condition_id": "0x00147681abf16d5341e802c1de5fa04c5e36af3de4d5c08731669c53ad7738d2",
+  "criteria_sha256": "3355c449372169a943790324fea0be027b52a5bf56074df1b3cfc8ae4648725d",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273157",
+      "observed_utc": "2026-10-17T20:11:11.495+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00237",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00237.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00237.body.json.gz",
+      "start_utc": "2026-10-17T20:11:11.447+00:00",
+      "end_utc": "2026-10-17T20:11:11.495+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:11 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5273157",
+        "params": null
+      },
+      "raw_sha256": "641d2f251cd46a3e0da2b60ecad2f5ea7820811e6861bfd4f1005eb9205cfb25",
+      "gzip_sha256": "2c5bcfd736f91d05eb0a1494ee3ed3a30a3872f9f9a2ec9582ff9f7c339ee4a5",
+      "raw_bytes": 4682,
+      "gzip_bytes": 2091
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "99002980775467539885550615872565947063386785496023614553725153051799014144016",
+      "108196504390959300957899216148020114997675187446707012166151383031382494681160"
+    ],
+    "current_description_sha256": "d9ac3760cff46750f0a9fc3a6de9f1311e7721c47a5db3fa8a43f117d2b69ba9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:12.597572+00:00",
+  "question": "Will Aberdeen FC win on 2026-10-17?",
+  "market_id": "5273157",
+  "valuation_author": "primary_operator",
+  "original_index": 1888,
+  "report_sha256": "6ba5a883a1bb5e425a1b2d15a2ce9f9ac1b61361aecd9b09e8bb8123edb77e9b"
+}

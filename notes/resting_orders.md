@@ -1,5 +1,38 @@
 # Standing resting orders (GTC post-only makers)
 
+**October17 20:52:56UTC — two new small BUY commitments, zero filled.**
+Authenticated complete inventory contains exactly:
+
+| Contract | Order | Gross shares | Price | Full-fill commitment | Matched |
+|---|---|---:|---:|---:|---:|
+| ME-02 Democratic YES | `0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37` | 10 | .38 | $3.80 | 0 |
+| CA-06 Democratic NO | `0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd` | 50 | .03 | $1.50 | 0 |
+
+Both are verified LIVE post-only bids, **not filled positions**. At Polygon
+block95710019 both candidate outcome balances were zero; pUSD24.996890,
+full pending commitment5.30, uncommitted19.696890, required allowance/operator
+approval sufficient. Full-fill reservations remain in the vetted ledger.
+Primary probabilities61% ME-02YES and15% CA-06NO are uncalibrated judgments;
+ordinary10pp reserve and shared`us-politics`risk apply. DEC-0203/0204 record the
+commitments without booking unfilled P&L.
+
+ME-02's exact historical slug contains`me-01`:
+`will-the-democratic-party-win-the-me-01-house-seat-20260720160014016`.
+The full rule, current parentevent726881 and both CLOB tokens all independently
+identify **ME-02**, condition`0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4`.
+Do not replace it with an inferred district slug. CA-06 is market1280973,
+condition`0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2`.
+
+Review both at the existing22:00UTC check and every subsequent tick. Cancel
+first if a new poll/candidate/ballot/caucus fact changes fair value or creates
+doubt; pull before known outcome-release windows. New PressHerald/BDN feeds
+and a current CA-06 candidate-news feed were observed in the running daemon.
+Candidate names/surnames are promoted to tier1 so a small-model relevance
+filter does not discard their news. Existing dedup/cooldown limitations remain.
+No new daemon or schedule was created. Read the
+[research follow-up](../research/2026-10-17-deep-review/candidate_followup.md)
+and `data/deep_review_20261017/house_pilot_verified_state.json`.
+
 **Oct-1 02:00 check / DEC-0184 — TRUMP MAKER FILLED:** SELL 28 NO @ .97,
 order `0xa28cb275d1bbf7cf652c7a29460a5c14c10c3abbe58b149929843865ecd623c1`,
 matched at 01:55:12 UTC. Exhaustive authenticated maker trades and terminal

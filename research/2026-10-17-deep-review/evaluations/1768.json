@@ -1,0 +1,72 @@
+{
+  "review_index": 1768,
+  "condition_id": "0x9fe1aa73095733014d76d6e90cdfe6a4ffb0ca06805419ee9cf1fbfa30d28a38",
+  "criteria_sha256": "e4b5c6434a6928c6d1208057bd1405d4b64d9f062c4dec1bf419fe43881f0e02",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5274707",
+      "observed_utc": "2026-10-17T20:11:10.103+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00222",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00222.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00222.body.json.gz",
+      "start_utc": "2026-10-17T20:11:10.012+00:00",
+      "end_utc": "2026-10-17T20:11:10.103+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:10 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5274707",
+        "params": null
+      },
+      "raw_sha256": "de98ca8647cbb8406164eacd09230437cb304f8e80967330b884f2a34822b599",
+      "gzip_sha256": "dd5b8ab6faf19f2a453a1f06dc1374e96f4a62262d389151068ba266a109dc9f",
+      "raw_bytes": 4945,
+      "gzip_bytes": 2196
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "86062943195872694355947474372089453977466747192992621481997749852779740763573",
+      "57991600745137138777283446586226264305676317393367613937720840336043576551472"
+    ],
+    "current_description_sha256": "f9e4dcea0146b4fb6838e9d2c22aeb93ae7a3b26e1623d0c93ed34341fe15193"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:07.981563+00:00",
+  "question": "Accrington Stanley FC vs. Gillingham FC: O/U 2.5",
+  "market_id": "5274707",
+  "valuation_author": "primary_operator",
+  "original_index": 1768,
+  "report_sha256": "01de58a914c3e5e3e0cfcfdc0b422e1df099179812249e68f1333a025544dde3"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 993,
+  "condition_id": "0x80d607918517d775be9e78b87bf3e498d695353b1576cd2dfce3c300d31720f0",
+  "criteria_sha256": "07d5ddeb51e869ca7db92c2deb6fffe86432adda2665ecd440f1140f9e395d1a",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263953",
+      "observed_utc": "2026-10-17T20:11:00.777+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00126",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00126.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00126.body.json.gz",
+      "start_utc": "2026-10-17T20:11:00.714+00:00",
+      "end_utc": "2026-10-17T20:11:00.777+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:00 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263953",
+        "params": null
+      },
+      "raw_sha256": "7a5db05ff059a9cc2cea237e0210e60b7e5783eea8335ecdd9dbf706537476a8",
+      "gzip_sha256": "b1fe4894377e89e532e124fda46d149f86bd43ee84d9f29b472dd9727a9ba555",
+      "raw_bytes": 4804,
+      "gzip_bytes": 2129
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "83802019920437651712017669125548284502349320280708821314966115821383558063954",
+      "35941288143875476385284151783366689552092365167094374787712739242686181265952"
+    ],
+    "current_description_sha256": "aa904cfec55f9b1577264c0c1ebcc07a01161d0fabc88dd8b00909022f00ebc7"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:39.497160+00:00",
+  "question": "Will Birmingham City FC win on 2026-10-17?",
+  "market_id": "5263953",
+  "valuation_author": "primary_operator",
+  "original_index": 993,
+  "report_sha256": "4cecfe930a8a9378c9ddeb2b42a8184d10e2dc469af0b2087c0f260ab975532f"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 645,
+  "condition_id": "0xd2bd37d31e7e35f5601e4a36095aa25559db4451b56d829faa36eba3055ce062",
+  "criteria_sha256": "5303d312883f8690b02c52768664ba809e074278d945d0ee2bb90daacc103744",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5239732",
+      "observed_utc": "2026-10-17T20:10:57.472+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00091",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00091.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00091.body.json.gz",
+      "start_utc": "2026-10-17T20:10:57.454+00:00",
+      "end_utc": "2026-10-17T20:10:57.472+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:57 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5239732",
+        "params": null
+      },
+      "raw_sha256": "c1eb2205fb485da1ed1b63c897e2fa7f708987e5dce41257df46935f9b041adf",
+      "gzip_sha256": "67cc3aa4f32f1ecef8b31e197924a30bb60910418968afe82baebe4a61a4fa47",
+      "raw_bytes": 4467,
+      "gzip_bytes": 1986
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "49523913792189735480304575874867460611291807649930023609589486670610909741701",
+      "51212697913033579461042575429123673230448472930859043028860635912515311211769"
+    ],
+    "current_description_sha256": "eb17fbe1b42bdaea539a27b20ee0fff788681cb9771b63348228443e0738016f"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:28.918268+00:00",
+  "question": "Will Amed Sportif win on 2026-10-17?",
+  "market_id": "5239732",
+  "valuation_author": "primary_operator",
+  "original_index": 645,
+  "report_sha256": "a384a74e354ee1eef600dae666d0891199eeeef659b850fd48e4c809f282e04a"
+}

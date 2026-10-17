@@ -1,0 +1,72 @@
+{
+  "review_index": 62,
+  "condition_id": "0x1adeac1446c60ad8d6350e380eab951f7cdb0a05b2b58bd2bd7ba68412b8f5d2",
+  "criteria_sha256": "801dc2531e344b1b98dd330ac9bbf103f479c6bf709448d97af9dd9e895b0a72",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5269889",
+      "observed_utc": "2026-10-17T20:10:51.232+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00013",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00013.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00013.body.json.gz",
+      "start_utc": "2026-10-17T20:10:51.169+00:00",
+      "end_utc": "2026-10-17T20:10:51.232+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:51 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5269889",
+        "params": null
+      },
+      "raw_sha256": "f647825a079d830f8a93bd230b8d3598c1694fa09fd304217daaafb0c04d6dc1",
+      "gzip_sha256": "d772e688b02f271b97f298f008d84daf11e487e9743249a57cd16a13cf58ac52",
+      "raw_bytes": 4866,
+      "gzip_bytes": 2180
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "54402910696020561973455792197029712869845289974306316037718833446311400691073",
+      "69231696921588967811526377573325667827996659428011628810325095969376711928588"
+    ],
+    "current_description_sha256": "cb1846939ae18ea5614cbff87f01a01a09854c8e5e98e6042e43853de9991f52"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:08.423485+00:00",
+  "question": "Real Betis Balompié vs. FC Barcelona: O/U 3.5",
+  "market_id": "5269889",
+  "valuation_author": "primary_operator",
+  "original_index": 62,
+  "report_sha256": "a1dc41f2353a327e770639df9b276c904ca53ed95c3d74ad5ea5ddaea2d0b3b6"
+}

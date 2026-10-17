@@ -1,0 +1,72 @@
+{
+  "review_index": 160,
+  "condition_id": "0x4d72a30066ea5650e3f16d25ae1dbeecb4e8b18647d84919e53ab222b15c92d6",
+  "criteria_sha256": "c7a86434b7063f78772c6403e0787e4996e0676b7c6f512f2be8dbe59c9dbdf2",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5267711",
+      "observed_utc": "2026-10-17T20:10:52.536+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00032",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00032.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00032.body.json.gz",
+      "start_utc": "2026-10-17T20:10:52.458+00:00",
+      "end_utc": "2026-10-17T20:10:52.536+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:52 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5267711",
+        "params": null
+      },
+      "raw_sha256": "2b0bea26b39365b85bda89d8300a3a3c9d4bd4e401086a256163cce58ab13127",
+      "gzip_sha256": "5e527d0a5b03d3faa5302e94ea4de0b8a438a87b3ff2991fdcc1bdb13d23f438",
+      "raw_bytes": 4933,
+      "gzip_bytes": 2191
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "21084358789906512400326302771657810465853963907113478051351784724381456386129",
+      "39541704534441046442315754465116131704497541346724892374307571976640478413469"
+    ],
+    "current_description_sha256": "7dc7132f3b8fc617e6f0fb10efcffa90f1da588aec9cd427fd8d887738812cf8"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:11.784821+00:00",
+  "question": "Brentford FC vs. Liverpool FC: O/U 3.5",
+  "market_id": "5267711",
+  "valuation_author": "primary_operator",
+  "original_index": 160,
+  "report_sha256": "bceefc09243506c01644e48a3057831d72177647cbb57b244537c38d7fc59589"
+}

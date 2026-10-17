@@ -1,0 +1,72 @@
+{
+  "review_index": 2680,
+  "condition_id": "0xa2b41bbd5d192f4ec40bf97d54a5c672021ddd6cdc0828ed69af10f5db03eabf",
+  "criteria_sha256": "b3e6bd8c0098e7b45329eda12280ad67d226a4be525aafb146f9226170d44aef",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5687319",
+      "observed_utc": "2026-10-17T20:11:23.059+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00349",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00349.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00349.body.json.gz",
+      "start_utc": "2026-10-17T20:11:22.977+00:00",
+      "end_utc": "2026-10-17T20:11:23.059+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:23 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5687319",
+        "params": null
+      },
+      "raw_sha256": "1c640194c4ca524dd6872f99de8c3fa972298b0f2827d94c38b05c64c3e0eebd",
+      "gzip_sha256": "b77eb761e2e4c5041e51d2d29368bde1e38d287bb1f35133bb7434a671e7aaa0",
+      "raw_bytes": 4598,
+      "gzip_bytes": 2058
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "9180395340270133754471073395571866599782656443949167731532883699450592995420",
+      "104026862292483606431252778056139809828963944743341907622799247723827257097400"
+    ],
+    "current_description_sha256": "be64b61307c06887c3da81a2ba99d9b0ecd3a15154e534d8723e49bdad2784bd"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:44.015325+00:00",
+  "question": "FC Ingolstadt 04 vs. Rot-Weiss Essen: O/U 1.5",
+  "market_id": "5687319",
+  "valuation_author": "primary_operator",
+  "original_index": 2680,
+  "report_sha256": "457044081673075d4df83365002b404b42113252e3910ff708c2f4c4702f4f12"
+}

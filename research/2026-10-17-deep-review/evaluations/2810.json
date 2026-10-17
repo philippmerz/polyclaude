@@ -1,0 +1,72 @@
+{
+  "review_index": 2810,
+  "condition_id": "0x9b5ef99e7437bccf7cea388a8ae9b90678cdda6eb5ed534cfb49d691a755b0ed",
+  "criteria_sha256": "2734c175ca5a8371c305d981c38b24673c81918aeac04b3ca9d29f62534c97e6",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5611008",
+      "observed_utc": "2026-10-17T20:11:25.074+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00365",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00365.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00365.body.json.gz",
+      "start_utc": "2026-10-17T20:11:25.024+00:00",
+      "end_utc": "2026-10-17T20:11:25.074+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:25 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5611008",
+        "params": null
+      },
+      "raw_sha256": "a98842fab109545041bcf0d85f377158388c70dad808f0606ca4bf59c3735fee",
+      "gzip_sha256": "9edae69d1307d72136159f9af11e18b1cd9525e89159a94d6a3d3f420e3d080c",
+      "raw_bytes": 3966,
+      "gzip_bytes": 1827
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "25203788920141445431008856057926613980647180164216478368628288983976405813392",
+      "34910390437506072374474190117238519558177172037725934791720882160830281504863"
+    ],
+    "current_description_sha256": "a2fb873f10c33db59de4ee5b48e0be629592c7f88386ae7c87c92ec5d2969c55"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:03.506998+00:00",
+  "question": "Will Elon Musk post 165-189 tweets from October 15 to October 17, 2026?",
+  "market_id": "5611008",
+  "valuation_author": "primary_operator",
+  "original_index": 2810,
+  "report_sha256": "044517cbf80462f9eb8c0745a0895904d538c4b50b1256d150a1af50857ed3fa"
+}

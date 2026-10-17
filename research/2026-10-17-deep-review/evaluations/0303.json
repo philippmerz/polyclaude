@@ -1,0 +1,72 @@
+{
+  "review_index": 303,
+  "condition_id": "0x19223079c11a9be15c8c56c38930596443d86318bb93b6c0bd3275fe076fb769",
+  "criteria_sha256": "212a5dc7cf53280a8a87d86905c78c6a4cbe4d955670735dd18101329d8497b5",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5267013",
+      "observed_utc": "2026-10-17T20:10:53.875+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00048",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00048.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00048.body.json.gz",
+      "start_utc": "2026-10-17T20:10:53.793+00:00",
+      "end_utc": "2026-10-17T20:10:53.875+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:53 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5267013",
+        "params": null
+      },
+      "raw_sha256": "c93274ee86ad4341ee02d6779b8933e03682cac6d86971500b4d59b70653a3de",
+      "gzip_sha256": "75bd96a15628fa1804b27df4aa0de4616faabc12d2ff50207c3ab1ed40344fd1",
+      "raw_bytes": 4860,
+      "gzip_bytes": 2190
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "56555491701646444645565911532875711026476274560594999083924048579559860032189",
+      "103680566833777462577030859649364276102383932467640138265655791196254589271946"
+    ],
+    "current_description_sha256": "5975f1f581762e16959f9b3626387f51ba59ae271587814a322d15b8e897d974"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:15.983502+00:00",
+  "question": "FC Bayern München vs. RB Leipzig: O/U 4.5",
+  "market_id": "5267013",
+  "valuation_author": "primary_operator",
+  "original_index": 303,
+  "report_sha256": "7084d6b83798a040ab9b888959f8bacda6551095a097bccb53dcddf724dc8b52"
+}

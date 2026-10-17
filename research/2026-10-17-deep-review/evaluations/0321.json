@@ -1,0 +1,72 @@
+{
+  "review_index": 321,
+  "condition_id": "0xf59a48374efe6e95d189132788cc79c366fee6d7a77741034cc7ca87f09091dd",
+  "criteria_sha256": "6e51374af85cdadaf39ffda29ddf6a894c56d710a96db9270b9f41b04b087874",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5350056",
+      "observed_utc": "2026-10-17T20:10:54.036+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00050",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00050.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00050.body.json.gz",
+      "start_utc": "2026-10-17T20:10:53.968+00:00",
+      "end_utc": "2026-10-17T20:10:54.036+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:54 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5350056",
+        "params": null
+      },
+      "raw_sha256": "c240f6d4bc8de92f34b9d75277c1951eff82b8a5f5b2e5af43cb55c192b13974",
+      "gzip_sha256": "1a7bc6435d1308f63c7af4d0ce88604490a9bee85d9ef3d813ec13557e77e12a",
+      "raw_bytes": 3570,
+      "gzip_bytes": 1658
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "74305416411829726399219406627525124472944315615256974599349807678911834184580",
+      "13746391191329853640160765184587354093475319084885336501023435643798396729593"
+    ],
+    "current_description_sha256": "c410d6edb679f1b45d4448fe792ff9f01a00799bb60b1c806cfd156febc9b64b"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:16.609375+00:00",
+  "question": "Virginia vs. SMU: O/U 51.5",
+  "market_id": "5350056",
+  "valuation_author": "primary_operator",
+  "original_index": 321,
+  "report_sha256": "83c37ffa8e8b02e2ebea077d645f65cd5a2321d4f75ed2f56ce833a14b8a4a82"
+}

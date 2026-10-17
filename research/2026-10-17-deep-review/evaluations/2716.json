@@ -1,0 +1,72 @@
+{
+  "review_index": 2716,
+  "condition_id": "0xb212ab7187f535a6f3ba574eb889440bf6a38ca425e4d508e5ebadc236b69ee5",
+  "criteria_sha256": "3fc96a56c90d82f04e3972078e0cbabd19d6548de2ca39564a932295c5b3d084",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1735271",
+      "observed_utc": "2026-10-17T20:11:23.466+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00352",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00352.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00352.body.json.gz",
+      "start_utc": "2026-10-17T20:11:23.385+00:00",
+      "end_utc": "2026-10-17T20:11:23.466+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:23 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/1735271",
+        "params": null
+      },
+      "raw_sha256": "7c391dba4dfaedd6c8436fd97420aff70ecd206aca66eb7c6071559805ac52c9",
+      "gzip_sha256": "addacf919ded65d586d394076ce4836a12307dbc0787fa8fb06c77574c2c3169",
+      "raw_bytes": 3665,
+      "gzip_bytes": 1789
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "77439096844119904042622756240509935797339113868627311793163527283723452679980",
+      "6495608574945440974112257720249518920521194854754180872610209232840927887075"
+    ],
+    "current_description_sha256": "78d41609970e0c83a93f77d52403028aa352e20810884caa4b09a2c242343fab"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:47.212948+00:00",
+  "question": "Will Patrick Bailey win the 2026 NL Platinum Glove award?",
+  "market_id": "1735271",
+  "valuation_author": "primary_operator",
+  "original_index": 2716,
+  "report_sha256": "6c5c1b6bbcc752f5fb992d5129cf69b5c9d3e3260b2071760548175f8695a2ad"
+}

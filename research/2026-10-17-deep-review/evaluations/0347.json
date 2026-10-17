@@ -1,0 +1,72 @@
+{
+  "review_index": 347,
+  "condition_id": "0x8b0989561ef71c300d58ca7d9276d9ba5efc3dffb85c25192b633485421b3b99",
+  "criteria_sha256": "2f471c371082e320184ed5723404af0a11a141b0e083ee62e478bd349904d3c3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5742127",
+      "observed_utc": "2026-10-17T20:10:54.504+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00057",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00057.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00057.body.json.gz",
+      "start_utc": "2026-10-17T20:10:54.486+00:00",
+      "end_utc": "2026-10-17T20:10:54.504+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:54 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5742127",
+        "params": null
+      },
+      "raw_sha256": "6ac86089a013d086d90d088cf12b14b10ca3e3406b92df5b6e6d6c88d6f5327c",
+      "gzip_sha256": "65286f6f2bdae8f7bf8de408bf5aa3cb58c90f85f1e6335c8557198fac7d4863",
+      "raw_bytes": 3648,
+      "gzip_bytes": 1620
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Up",
+      "Down"
+    ],
+    "current_token_ids": [
+      "92136895571034897150345749352388278213787584126368908695478434661773493656704",
+      "21060107907113695206826590288377199940494882456158218764591858970971941015328"
+    ],
+    "current_description_sha256": "56a4c473ee90719242d09e250eeab6a9b14152220221a2e4f29b2412f3aa0b84"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:18.948959+00:00",
+  "question": "Solana Up or Down on October 17?",
+  "market_id": "5742127",
+  "valuation_author": "primary_operator",
+  "original_index": 347,
+  "report_sha256": "15e238a6c1bbaee852f4758f04395135757a183d6c6de9ff62102cef551e1b3d"
+}

@@ -1,0 +1,78 @@
+{
+  "calibrated": false,
+  "price_inputs": false,
+  "78": {
+    "raw_p_yes": 0.10899999999999999,
+    "recorded_p_yes": 0.109,
+    "range": [
+      0.03,
+      0.35
+    ],
+    "fresh_agreement": 0.09999999999999999,
+    "past_instrument_interpretation": 0.01
+  },
+  "15": {
+    "raw_p_yes": 0.13833,
+    "recorded_p_yes": 0.14,
+    "range": [
+      0.03,
+      0.45
+    ],
+    "end_given_agreement": 0.8,
+    "unilateral_end_given_no_agreement": 0.06,
+    "uncaptured_official_statement_remaining_mass": 0.005
+  },
+  "122": {
+    "raw_p_yes": 0.016471,
+    "recorded_p_yes": 0.02,
+    "range": [
+      0.001,
+      0.2
+    ],
+    "uncaptured_already_transferred": 0.002,
+    "ground_operation": 0.05,
+    "lasting_control_given_operation": 0.25,
+    "negotiated_actual_transfer": 0.002
+  },
+  "129": {
+    "raw_p_yes": 0.0832,
+    "recorded_p_yes": 0.08,
+    "range": [
+      0.01,
+      0.35
+    ],
+    "already_no_de_facto_control": 0.04,
+    "future_disjoint_attack_medical": 0.025,
+    "future_political_removal": 0.015,
+    "future_qualifying_announcement": 0.005
+  },
+  "143": {
+    "raw_p_yes": 0.09643999999999998,
+    "recorded_p_yes": 0.1,
+    "range": [
+      0.02,
+      0.4
+    ],
+    "unrecovered_historical_qualifying_closure": 0.02,
+    "escalation": 0.2,
+    "whole_FIR_closure_given_escalation": 0.35,
+    "whole_FIR_other_given_no_escalation": 0.01
+  },
+  "240": {
+    "raw_p_yes": 0.125632,
+    "recorded_p_yes": 0.13,
+    "range": [
+      0.02,
+      0.65
+    ],
+    "Romania_incident_qualifies": 0.08,
+    "future_distinct_encounter": 0.04,
+    "unrecovered_earlier_encounter_remaining_mass": 0.01
+  },
+  "limits": [
+    "All branch weights are uncalibrated primary judgments.",
+    "Past-event and interpretation uncertainty is explicit, not a claim of exhaustive absence.",
+    "No measured tail/K=5 exception; ordinary10pp decision stress retained.",
+    "Physical traffic, mutual agreement, US announcement, control and force-use are different events."
+  ]
+}

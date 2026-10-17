@@ -1,0 +1,72 @@
+{
+  "review_index": 2152,
+  "condition_id": "0xa176e8103edd323f67b25b21a04ef5405cd7509a7b501b3b1e603e82b44e2e6f",
+  "criteria_sha256": "e8d91e7a40dbff136f12965669f1e3ee910b603b52305ff062b8cd1061fee80f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5270696",
+      "observed_utc": "2026-10-17T20:11:15.122+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00271",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00271.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00271.body.json.gz",
+      "start_utc": "2026-10-17T20:11:15.032+00:00",
+      "end_utc": "2026-10-17T20:11:15.122+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:15 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5270696",
+        "params": null
+      },
+      "raw_sha256": "b02b30f928fa2f8d890786ee00e66b5fb42222f4575af31f1496c43899849407",
+      "gzip_sha256": "72530bc2e10a8442a8706af60651d8e9b715b0bb9377d89ac0ce4822462dc073",
+      "raw_bytes": 4718,
+      "gzip_bytes": 2116
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "87690292448481136262069209588894831705968311757239569328637724659152290714157",
+      "33835548564984012305696767317489172895649248573368726265688187411140799514644"
+    ],
+    "current_description_sha256": "754c5efc02b8ae5b0b20af1441faa33c6151e1ddfd728f3b0ee1e93d21899ff9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:46.968848+00:00",
+  "question": "Will Calcio Padova vs. Virtus Entella end in a draw?",
+  "market_id": "5270696",
+  "valuation_author": "primary_operator",
+  "original_index": 2152,
+  "report_sha256": "3091b7c4590844bdce34b38a7f9ad232234f2c2af8d759297db68a52046c0c67"
+}

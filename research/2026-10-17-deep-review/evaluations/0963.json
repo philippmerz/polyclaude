@@ -1,0 +1,72 @@
+{
+  "review_index": 963,
+  "condition_id": "0x9e89fe6c8ab39e13dd0730a9e25aa900b408e88a909ad6f1ff681385e6c40ce5",
+  "criteria_sha256": "e4973c40c12850096cf960ec2cc9dc1f814dc318d85c4d764484558605b59ad1",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5613228",
+      "observed_utc": "2026-10-17T20:11:00.710+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00125",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00125.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00125.body.json.gz",
+      "start_utc": "2026-10-17T20:11:00.615+00:00",
+      "end_utc": "2026-10-17T20:11:00.710+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:00 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5613228",
+        "params": null
+      },
+      "raw_sha256": "5f453d93fc8ebee3c1caf6413f440e21d621f73c66348779727dc2a27baf71d0",
+      "gzip_sha256": "7343ee3a7c0839f9463fa8dfcc8dea61667346ad900297e2eaee8ef6f23bcf73",
+      "raw_bytes": 4655,
+      "gzip_bytes": 2085
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "77399919379113399129081830861592506711981122535097664395996890583328398320381",
+      "110295259908064222217413261114941703733299241184725118698750375898534631333364"
+    ],
+    "current_description_sha256": "9e3021cc6ae22deabea8cba5e822e24f4f0b93469dbb03c20e3442900bfa8d71"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:39.106898+00:00",
+  "question": "Will KR Reykjavik win on 2026-10-17?",
+  "market_id": "5613228",
+  "valuation_author": "primary_operator",
+  "original_index": 963,
+  "report_sha256": "7f0724550c23e2e477b6325c12f991049d9b7537879113523414db6c79d1e1a6"
+}

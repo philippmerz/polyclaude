@@ -1,0 +1,72 @@
+{
+  "review_index": 2340,
+  "condition_id": "0x7014e5e2464fd961a76798937afbe7fca24dc9bf07db71389dc652aad5b22f4b",
+  "criteria_sha256": "abd7113cd6fe8b2f909b7a6fb06a8d6e9f1b1bd537bfefa2ac29ccf92ac90c67",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264061",
+      "observed_utc": "2026-10-17T20:11:18.638+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00309",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00309.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00309.body.json.gz",
+      "start_utc": "2026-10-17T20:11:18.552+00:00",
+      "end_utc": "2026-10-17T20:11:18.638+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:18 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264061",
+        "params": null
+      },
+      "raw_sha256": "91bef42e2758bbbff515dcad72f7c618a5e1c26496e13311dee64d579a546b67",
+      "gzip_sha256": "0887e5732ef552cbeeb190e94ec2617fa765c422aba4a05d3e004a7368e77b14",
+      "raw_bytes": 4722,
+      "gzip_bytes": 2119
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "66794284981678036885480612400573638558223006322291408486414108410295360500171",
+      "23993326999275302796924321855629604270845702407583806182880207648420080321896"
+    ],
+    "current_description_sha256": "667caac9b062996d9319bca2cc9cebd6b18c7083a62bbe7c8618fcd0f1a35fe5"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:51.220691+00:00",
+  "question": "1. FSV Mainz 05 leading at halftime?",
+  "market_id": "5264061",
+  "valuation_author": "primary_operator",
+  "original_index": 2340,
+  "report_sha256": "878ffe24b42275e396ea850fad6933efdcdc89dac0550f06811a8b2ce00c0529"
+}

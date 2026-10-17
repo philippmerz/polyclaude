@@ -1,0 +1,72 @@
+{
+  "review_index": 1008,
+  "condition_id": "0xc6049eacb981c967adb23174a6dc7fb8b5b0424d6753f9cacd9af3f2de65afdb",
+  "criteria_sha256": "d6e79ae6d93ea0a44befc7feebb3be632ed489ffb76c0f5d1c4e4fb73e572ea1",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5562481",
+      "observed_utc": "2026-10-17T20:11:01.220+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00131",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00131.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00131.body.json.gz",
+      "start_utc": "2026-10-17T20:11:01.130+00:00",
+      "end_utc": "2026-10-17T20:11:01.220+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:01 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5562481",
+        "params": null
+      },
+      "raw_sha256": "d54a187dc691d68d26bdc258eceab988bcf219595d682aeb34f782b6586f3199",
+      "gzip_sha256": "1b74c956340efff067861aeb9857796df8f5463d1cd3afc1d3851f69fadc585a",
+      "raw_bytes": 4685,
+      "gzip_bytes": 2100
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "44304009926522346373383096729349428541496949825781219218048417213018911511713",
+      "9440613942457259862743226274768273304910640331153493523800440873250387548300"
+    ],
+    "current_description_sha256": "bb2d1ce057c0e18ed6ec2f4213b997a2c01d45477501ac9909ad77c458531cfc"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:40.934370+00:00",
+  "question": "Will Falkenbergs FF win on 2026-10-17?",
+  "market_id": "5562481",
+  "valuation_author": "primary_operator",
+  "original_index": 1008,
+  "report_sha256": "0973b033fae81e4350bbffe7ef9c625c8715bee23238a22ec75b86be22e04012"
+}

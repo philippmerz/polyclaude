@@ -1,0 +1,72 @@
+{
+  "review_index": 1103,
+  "condition_id": "0x107f29cc28529b97c8f34317e1f0057d4c89817ddbfd7cf79b1825b4df93d1ab",
+  "criteria_sha256": "6a5849a7782627ee2243c206a18e721e1132573a04121a876029271f90832bc2",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5681565",
+      "observed_utc": "2026-10-17T20:11:02.313+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00142",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00142.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00142.body.json.gz",
+      "start_utc": "2026-10-17T20:11:02.201+00:00",
+      "end_utc": "2026-10-17T20:11:02.313+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:02 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5681565",
+        "params": null
+      },
+      "raw_sha256": "d61a1dfe44ec86552fdba6689bfbb3e614d1018af41f0cbe040ed38a1c22c817",
+      "gzip_sha256": "b60b8e42c02ee4cb7ef7ecaa99d32b589a6fd804cf1628ca87bbab516f201b88",
+      "raw_bytes": 4215,
+      "gzip_bytes": 1966
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Romania Women",
+      "Sweden Women"
+    ],
+    "current_token_ids": [
+      "98599497198896354693762446343694222681921938826494185605681633370374637360892",
+      "50001770370715069862139941479091605709511528349223472453366441908638079105248"
+    ],
+    "current_description_sha256": "66504ad70d7239652a795a021b7eb44e40f1db0f7a8343191d0483b904726605"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:44.554498+00:00",
+  "question": "ECA Women's European Cup T20: Romania Women vs Sweden Women",
+  "market_id": "5681565",
+  "valuation_author": "primary_operator",
+  "original_index": 1103,
+  "report_sha256": "763b24f009e2d29ab18ff1103830f5aa3be852efbb660bce19c151d21af34812"
+}

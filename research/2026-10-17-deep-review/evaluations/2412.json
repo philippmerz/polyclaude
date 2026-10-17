@@ -1,0 +1,72 @@
+{
+  "review_index": 2412,
+  "condition_id": "0xc8654b42a505dd21df1e2dc967c2ec8eb743e3678a2707476dc9ea15f84e40d9",
+  "criteria_sha256": "e7ea6aede97de08e4c76d4e3c69ea75c31414bda857a468406f1133928bc9c47",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273171",
+      "observed_utc": "2026-10-17T20:11:19.635+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00318",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00318.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00318.body.json.gz",
+      "start_utc": "2026-10-17T20:11:19.559+00:00",
+      "end_utc": "2026-10-17T20:11:19.635+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5273171",
+        "params": null
+      },
+      "raw_sha256": "6cffbdcd8d4666bc8bb2ca5edefb869f3b2b9b60a0ffeb0ecadb2287400d2873",
+      "gzip_sha256": "ead214c816d2c754b5fe802e76aac357212eb47d4e53f4d0d7cef8bccc2d7a34",
+      "raw_bytes": 4713,
+      "gzip_bytes": 2104
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "44288376987591768613740795060761019250067305509622024457318444328903014745772",
+      "49060488902914155679816450800023586603667788656386827761269178761059945549630"
+    ],
+    "current_description_sha256": "545bc6616c74b0f29c7c9110e594692aea6f371a250197026873f9f6b48e5dea"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:03.729057+00:00",
+  "question": "Will St Johnstone FC win on 2026-10-17?",
+  "market_id": "5273171",
+  "valuation_author": "primary_operator",
+  "original_index": 2412,
+  "report_sha256": "14f134a5cac3e6e5d7eb7751ca8d70ad6c2251404d8485c9eab6ea4dfd3c96b2"
+}

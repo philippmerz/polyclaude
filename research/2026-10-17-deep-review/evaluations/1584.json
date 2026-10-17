@@ -1,0 +1,72 @@
+{
+  "review_index": 1584,
+  "condition_id": "0x0f33148cd5230027b25cf9f03dd261d38649d913ca0dce69bd2ae49fcb34d723",
+  "criteria_sha256": "4e368841a0bcdd5fd739c38005af4884548c354a0b49fe4d28b2ace217ebb812",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720216",
+      "observed_utc": "2026-10-17T20:11:07.623+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00198",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00198.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00198.body.json.gz",
+      "start_utc": "2026-10-17T20:11:07.544+00:00",
+      "end_utc": "2026-10-17T20:11:07.623+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:07 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720216",
+        "params": null
+      },
+      "raw_sha256": "3ca5aad997c1b6c4f29d4592ccda6c1e8b2a313a7770e7e6a73f991d9701f614",
+      "gzip_sha256": "d00a25133376314199ffa73a917faba0684aee6dd79696c2be0795d3fd364d67",
+      "raw_bytes": 5354,
+      "gzip_bytes": 2353
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "66915048020947259384171800958476304981870779076585623325085599457535841837615",
+      "61667590340189527052900002843147570721438134891090054016238550295064166403026"
+    ],
+    "current_description_sha256": "94b04555b11606bd71c501f5fd6f9d568e944b6b8e23c2cc93cf6f4d867fa481"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:00.895205+00:00",
+  "question": "Will the lowest temperature in Seoul (Incheon) be 15°C on October 17?",
+  "market_id": "5720216",
+  "valuation_author": "primary_operator",
+  "original_index": 1584,
+  "report_sha256": "f559a3790b448f83494c9818b5670123f4444fdc9ae0dd1632ec8e306149cd5b"
+}

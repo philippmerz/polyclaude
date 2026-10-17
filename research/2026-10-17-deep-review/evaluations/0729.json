@@ -1,0 +1,72 @@
+{
+  "review_index": 729,
+  "condition_id": "0x6f04db2033a3415d1e67e0fb4e7e747a5e4e11c11fabb3f8e05fba63c59dc11b",
+  "criteria_sha256": "e388048c72da8c1e0a7d95067d26a3945ac0cd9857f85b9a78aeb118b29d7895",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5790409",
+      "observed_utc": "2026-10-17T20:10:58.544+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00102",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00102.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00102.body.json.gz",
+      "start_utc": "2026-10-17T20:10:58.483+00:00",
+      "end_utc": "2026-10-17T20:10:58.544+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:58 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5790409",
+        "params": null
+      },
+      "raw_sha256": "4ed084f5254115d5b6a8e1a7f3527bbd5afd4814106f49e42a4e57a7c086d01c",
+      "gzip_sha256": "2f65a85dabf3243f55f2c17835c56a425f218d88e3d466b6b620942d30ad6300",
+      "raw_bytes": 4470,
+      "gzip_bytes": 1989
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "by Owl Team",
+      "Nix Team"
+    ],
+    "current_token_ids": [
+      "101977565371341858013955132741171348358085796902358631709195776197681083232309",
+      "29205991759053902653702308784101921423317771418950264995661276586826187616627"
+    ],
+    "current_description_sha256": "3dbe8bd31865cd83896790e8226aed62eb3c41d88c561791de67c21e305700bb"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:32.220791+00:00",
+  "question": "Dota 2: by Owl Team vs Nix Team - Game 2 Winner",
+  "market_id": "5790409",
+  "valuation_author": "primary_operator",
+  "original_index": 729,
+  "report_sha256": "67053e716f228cab4782e4ef6fbb3a960d464070eb136d96678c9c25fbb50be7"
+}

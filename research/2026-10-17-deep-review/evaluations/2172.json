@@ -1,0 +1,72 @@
+{
+  "review_index": 2172,
+  "condition_id": "0xf15cf85d43b41e2855957af209f681a458a750b1d7f463799d8d49cacb87c5f2",
+  "criteria_sha256": "61cacc0b875e307a28baed23163e2605246c6582cf61952dee5d86e896c281c5",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5686715",
+      "observed_utc": "2026-10-17T20:11:15.358+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00274",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00274.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00274.body.json.gz",
+      "start_utc": "2026-10-17T20:11:15.284+00:00",
+      "end_utc": "2026-10-17T20:11:15.358+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:15 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5686715",
+        "params": null
+      },
+      "raw_sha256": "98e11760a585b2eeae8dd4fe11f4126473d064972c6fd6478d1772f88a74a370",
+      "gzip_sha256": "1e9bba5980c52db9891718d4e3e649a76591f09b226b6bb4f86955b64ad2776c",
+      "raw_bytes": 4413,
+      "gzip_bytes": 2000
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "79759937327386162043604359254814357533483789322448568195481966428060668914164",
+      "79596652541815552963491785747992320669107493643257063528917655382366080955801"
+    ],
+    "current_description_sha256": "bde9a8b7eb6a5af3cd94d0e30c6353210676af8bd1238749ddf6e86fb85c2ef9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:51.712418+00:00",
+  "question": "Will Rot-Weiss Essen win on 2026-10-17?",
+  "market_id": "5686715",
+  "valuation_author": "primary_operator",
+  "original_index": 2172,
+  "report_sha256": "327a0bd04951ac7b2a969af64c4eb3b6946dfdaed0e3af1236a09f1eb9f97641"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 585,
+  "condition_id": "0x1601a832c257c98b06e71ef47ae0fec6136d79cb480c6c96045eddc570ab7fc4",
+  "criteria_sha256": "2647c2d0d451fa3dfd3d4fdb890c22b19a33266003e609065408c93c19cc522c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264113",
+      "observed_utc": "2026-10-17T20:10:56.991+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00085",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00085.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00085.body.json.gz",
+      "start_utc": "2026-10-17T20:10:56.940+00:00",
+      "end_utc": "2026-10-17T20:10:56.991+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:56 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264113",
+        "params": null
+      },
+      "raw_sha256": "6885667d1ec37af15ec1813504971f8754daaa8ef47fc72a4418fe23f74fc6d6",
+      "gzip_sha256": "e573709b05b0e87680239ccfdc98bb933cb441795e9268bbe71742929cda569d",
+      "raw_bytes": 4799,
+      "gzip_bytes": 2130
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "95404843457696204739306639296195056495393957637149030336470052589675585440298",
+      "65870822841552134543265432172252039904037135189657232348123548232646604600532"
+    ],
+    "current_description_sha256": "8bda31078d095dd0804316a4c475a4ed4eced06e34f00d692ed0048fd9c38d1a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:26.760579+00:00",
+  "question": "Will West Ham United FC win on 2026-10-17?",
+  "market_id": "5264113",
+  "valuation_author": "primary_operator",
+  "original_index": 585,
+  "report_sha256": "d9c18a813fc7b55cedfa322622c36ebb1a987621b1521dc75cded8fe691fb867"
+}

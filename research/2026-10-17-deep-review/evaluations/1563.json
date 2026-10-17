@@ -1,0 +1,72 @@
+{
+  "review_index": 1563,
+  "condition_id": "0x3ee7f393bac56e852e9d8182a04fd916886ab7b548150fb661ce0ce2812a84bf",
+  "criteria_sha256": "6f93b3890fa44048b27396ec39fafab0e3685c5433466609f4956bed00c3393a",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5258794",
+      "observed_utc": "2026-10-17T20:11:07.312+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00194",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00194.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00194.body.json.gz",
+      "start_utc": "2026-10-17T20:11:07.238+00:00",
+      "end_utc": "2026-10-17T20:11:07.312+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:07 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5258794",
+        "params": null
+      },
+      "raw_sha256": "ca865c8e35a80cd81160c41bbec60cc061e4a5a661d78f13f89695d9f07bff11",
+      "gzip_sha256": "e1eea8318b5f576a2c7a4279e222db73f4e4bc0d7e4d57a91f1ead740c16da12",
+      "raw_bytes": 4748,
+      "gzip_bytes": 2128
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "16852241321182533225536385071354431605874628959970268819041768164832176617862",
+      "97874524296332384225561586766535278877656375874771699689881416933718718190084"
+    ],
+    "current_description_sha256": "78fd35d0390b31cd5b55c070b7b489a6eb4fb3038c13163e0770ecfc2e0643f4"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:59.496562+00:00",
+  "question": "Venezia FC vs. SSC Napoli: Draw at halftime?",
+  "market_id": "5258794",
+  "valuation_author": "primary_operator",
+  "original_index": 1563,
+  "report_sha256": "073a5689288f1ceee0837233ce60989f986c1c430d65ea9de447ab1ef80506ab"
+}

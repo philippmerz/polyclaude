@@ -1,0 +1,72 @@
+{
+  "review_index": 90,
+  "condition_id": "0x537bd7793380051eab764d2b689ebe46ee7a62f335d5c48e07cced1778212664",
+  "criteria_sha256": "8c5be9ffc5c8e302a17af5648507c7e6bb1ec303c23b165fbbf245d53fcd1d7a",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263923",
+      "observed_utc": "2026-10-17T20:10:51.524+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00018",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00018.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00018.body.json.gz",
+      "start_utc": "2026-10-17T20:10:51.504+00:00",
+      "end_utc": "2026-10-17T20:10:51.524+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:51 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263923",
+        "params": null
+      },
+      "raw_sha256": "bd80bc5d441b42d6471a4c5d93e2ce017e5b774f8a6c056ff97bc192dec76d9f",
+      "gzip_sha256": "6ba856f7a6487d095ad91b1c93655d8f4b88f603bdf1c467b97c9b6c074bcf82",
+      "raw_bytes": 4834,
+      "gzip_bytes": 2144
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "3909021025934081952961804958709226284380156167216885155243427785742886989350",
+      "60974744562055111007147529853284188711486909257118129070994284912886878121759"
+    ],
+    "current_description_sha256": "c740e765df921f7a6ad5ede6c1ad2a1e946b0b0c35e3c131b56eaf986adc6696"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:09.412119+00:00",
+  "question": "Will Newcastle United FC win on 2026-10-17?",
+  "market_id": "5263923",
+  "valuation_author": "primary_operator",
+  "original_index": 90,
+  "report_sha256": "8c26ea198ac0b2933a27c9b8580a91e58617650abf11dc3501ba138043364b50"
+}

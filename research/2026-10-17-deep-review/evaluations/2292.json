@@ -1,0 +1,72 @@
+{
+  "review_index": 2292,
+  "condition_id": "0xbe346cf537a9f0b30e67f1498665bd4da69067fc9f1a62d09acd6cf2e3229049",
+  "criteria_sha256": "3b9e483cc663097359e843294f34e87237590b9ab7e0f41c9a5a347d8bf6404d",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5791358",
+      "observed_utc": "2026-10-17T20:11:17.699+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00299",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00299.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00299.body.json.gz",
+      "start_utc": "2026-10-17T20:11:17.644+00:00",
+      "end_utc": "2026-10-17T20:11:17.699+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:17 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5791358",
+        "params": null
+      },
+      "raw_sha256": "5c963c4c6004a6346a742e3b69451864675e6f7d6f2d7a45c680cecc3ae45d31",
+      "gzip_sha256": "e9a8ebf7771e4eb614b1430c73c3d482cef7b77be0f72f19f05ce582a5d643cc",
+      "raw_bytes": 3762,
+      "gzip_bytes": 1710
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Lukko Rauma",
+      "Kiekko-Espoo"
+    ],
+    "current_token_ids": [
+      "80016462980293717332040393754335823665896924445898547309563288533487395564837",
+      "30121588491039103239492407321697378956063041457423019198762461121227153063587"
+    ],
+    "current_description_sha256": "2a0b39c857fd16f5720a0ba475f5172e7a86e9d1b68eac047f0ef66edea7460d"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:32.732934+00:00",
+  "question": "Lukko Rauma vs. Kiekko-Espoo",
+  "market_id": "5791358",
+  "valuation_author": "primary_operator",
+  "original_index": 2292,
+  "report_sha256": "abf83f289e70c008c1046d35d8cdd5fa08fefbd0dc075d22e8803c1046e91916"
+}

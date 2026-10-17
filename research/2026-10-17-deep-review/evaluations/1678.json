@@ -1,0 +1,72 @@
+{
+  "review_index": 1678,
+  "condition_id": "0x1878eb9e5c45687b2fc3db759a4c718d298e054609d1b538300495f36f08c564",
+  "criteria_sha256": "81a1a876c89f42b27f67e0f6ad878e6566355d61e3ec709f32c9dbaa4e65775f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273164",
+      "observed_utc": "2026-10-17T20:11:08.933+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00211",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00211.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00211.body.json.gz",
+      "start_utc": "2026-10-17T20:11:08.870+00:00",
+      "end_utc": "2026-10-17T20:11:08.933+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:08 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5273164",
+        "params": null
+      },
+      "raw_sha256": "d474d124bcf39041a9eac157c73d34fb0ced7fa51222e35ac35ee019ea15eee5",
+      "gzip_sha256": "8d78676764dc0939bd34318d6b984e7255baada1f397857b72e39314db2df44b",
+      "raw_bytes": 4778,
+      "gzip_bytes": 2141
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "40148845877334263722878837266103235780919700592105459951539574407872430955691",
+      "107341944792203130194073649066986775904359795026811989887543161436557916760849"
+    ],
+    "current_description_sha256": "c1c7d8b5ea7762e3c64bd7216ed30f8daa406f4524a0b21eb18e028888e1aae2"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:04.778436+00:00",
+  "question": "Will Hibernian FC win on 2026-10-17?",
+  "market_id": "5273164",
+  "valuation_author": "primary_operator",
+  "original_index": 1678,
+  "report_sha256": "d1540ab8b3093a6e5210e3d45eea4680494a9bd71f2003003c252990df7c3395"
+}

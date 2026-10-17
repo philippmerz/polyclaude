@@ -1,0 +1,72 @@
+{
+  "review_index": 567,
+  "condition_id": "0x442c9f751cb2a9eb7dd9b389a340700f7284c224f4e352c7188456aa8b21d567",
+  "criteria_sha256": "40837be606ff5a9092abe7272f9f4ca71f2a97df9ab9c70b3452cdb428b23da7",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5286793",
+      "observed_utc": "2026-10-17T20:10:56.744+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00082",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00082.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00082.body.json.gz",
+      "start_utc": "2026-10-17T20:10:56.665+00:00",
+      "end_utc": "2026-10-17T20:10:56.744+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:56 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5286793",
+        "params": null
+      },
+      "raw_sha256": "77286bf8ff4c3052e21efba117bc7abec8577bc6dc823fec768825f7987a046a",
+      "gzip_sha256": "ef8764e90ab69d5a348b7bb844970e9da9d986b3500d59d747980270e6c594ae",
+      "raw_bytes": 4894,
+      "gzip_bytes": 2177
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "115023362636066648776676543675623685000676320109576713951652871829765756993541",
+      "4455500375501003909333265264927597236119850897566262909246202268113015677503"
+    ],
+    "current_description_sha256": "fb0a05b7000a1be60607748d5a71d32469713ff8f7959345b21d22dbd96a18a3"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:25.648305+00:00",
+  "question": "Yunnan Yukun FC vs. Chongqing Tonglianglong FC: O/U 1.5",
+  "market_id": "5286793",
+  "valuation_author": "primary_operator",
+  "original_index": 567,
+  "report_sha256": "2487151fe77f535b38e03136a07e9a821c3777a31ece953f143761517b7e96c7"
+}

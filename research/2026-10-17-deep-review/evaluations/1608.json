@@ -1,0 +1,72 @@
+{
+  "review_index": 1608,
+  "condition_id": "0x2d73a0344248e109740e2a9e0e3f39ba8392149f4d31d24a3148bcdcdfd09337",
+  "criteria_sha256": "70cd0e5a959ce570d320f6fe4533015918e2d4541aac52238bab12e960f1b697",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5286762",
+      "observed_utc": "2026-10-17T20:11:08.162+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00203",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00203.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00203.body.json.gz",
+      "start_utc": "2026-10-17T20:11:08.055+00:00",
+      "end_utc": "2026-10-17T20:11:08.162+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:08 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5286762",
+        "params": null
+      },
+      "raw_sha256": "23a6c862b84cacc8f36e9699e2121729b49fd25a123600cd56971d7e130c5004",
+      "gzip_sha256": "5b7c2c639301fee4c3c21eeaa36c5cb2b285ab38aae7e3687c98159fbb818e15",
+      "raw_bytes": 4817,
+      "gzip_bytes": 2158
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Aalesunds FK",
+      "Kristiansund BK"
+    ],
+    "current_token_ids": [
+      "110611071036486059469416287181185813810738883640161858844787921943354224025736",
+      "63008895649026166182756144616617625706649163992016334499666651682140120905652"
+    ],
+    "current_description_sha256": "d737662e95b79bd123c90952a8d659fd24d529859c4617fa863040532241eee8"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:02.290442+00:00",
+  "question": "Spread: Aalesunds FK (-2.5)",
+  "market_id": "5286762",
+  "valuation_author": "primary_operator",
+  "original_index": 1608,
+  "report_sha256": "909e5ff37e706d504b8b1181c5dcc27e19b3bc1b2d78712efa9f42ceb3aec052"
+}

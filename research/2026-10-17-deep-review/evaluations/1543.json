@@ -1,0 +1,72 @@
+{
+  "review_index": 1543,
+  "condition_id": "0x2a5ff6f4aa42bfd54266a795ff3900665eab4315a8dc121235b70feeaa40d99c",
+  "criteria_sha256": "0b29edb2b5b24a4fe2fe9be15b3749c41134a2219ad98bf8642af0e12e99c5ab",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5792394",
+      "observed_utc": "2026-10-17T20:11:06.938+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00190",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00190.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00190.body.json.gz",
+      "start_utc": "2026-10-17T20:11:06.891+00:00",
+      "end_utc": "2026-10-17T20:11:06.938+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:06 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5792394",
+        "params": null
+      },
+      "raw_sha256": "a67d1ff0679302ebfc5d1b74dc8da436c32f6a76050c1be8fab151bfc0118796",
+      "gzip_sha256": "5b2d01019f2ffddba1cfdc9c0a853bcc5b143e0a89bb6b44b51852c93bf79c6c",
+      "raw_bytes": 4066,
+      "gzip_bytes": 1845
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Mwendwa Mbithi",
+      "Lucas Andrade Da Silva"
+    ],
+    "current_token_ids": [
+      "50985371836279387555921144668912984474999010399903092228733693746636400868153",
+      "33207278447406806052859204745811671123956935418747802441199422602630437820417"
+    ],
+    "current_description_sha256": "33afd62304a5c47ee1274a138b8d8cb325a3f5199a737502c7f07badc1a92026"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:58.473377+00:00",
+  "question": "M15 Quito: Mwendwa Mbithi vs Lucas Andrade Da Silva",
+  "market_id": "5792394",
+  "valuation_author": "primary_operator",
+  "original_index": 1543,
+  "report_sha256": "4b13bd5597b7a41de87aa6980ec87a327def17658861a5117c845b9cb039fe16"
+}

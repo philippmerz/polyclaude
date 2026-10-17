@@ -1,0 +1,72 @@
+{
+  "review_index": 2896,
+  "condition_id": "0x7707dab22e265f84aa16d948d674b1fdba6acc252e0d4ae1c8b4870d9d26b936",
+  "criteria_sha256": "699c7e878ae30e5b2cb4b24cf9ebc15c6a27bbe1cfa5e2a030894baca0ba413d",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5349980",
+      "observed_utc": "2026-10-17T20:11:26.283+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00377",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00377.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00377.body.json.gz",
+      "start_utc": "2026-10-17T20:11:26.222+00:00",
+      "end_utc": "2026-10-17T20:11:26.283+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:26 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5349980",
+        "params": null
+      },
+      "raw_sha256": "26879346d02942df509007eff85fb34816aba3bb56106053d68044d65b955f5c",
+      "gzip_sha256": "09f575611a0053c16ab9d4d7ca7a7ca89146fa0ea3e793f2700c4b5243b7efba",
+      "raw_bytes": 3631,
+      "gzip_bytes": 1645
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "New Haven",
+      "Robert Morris"
+    ],
+    "current_token_ids": [
+      "90214424303623231518525721745846701645532094987237239474206092392155228024729",
+      "104510662193894556553484180091664597640665342126485440508730609951504778538689"
+    ],
+    "current_description_sha256": "0e49cc76b914350a7d1872d37156b258dce89b52368b7720dd5497ba581a309a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:20.236337+00:00",
+  "question": "New Haven vs. Robert Morris",
+  "market_id": "5349980",
+  "valuation_author": "primary_operator",
+  "original_index": 2896,
+  "report_sha256": "851aa1ec6f07ea038254f8737f526b306f8653bfb7b8e87d4afec19e52525b8c"
+}

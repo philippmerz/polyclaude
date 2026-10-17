@@ -1,0 +1,72 @@
+{
+  "review_index": 609,
+  "condition_id": "0x7817f6a9ec5f30551069b52dc0156e19e1e20aeb26569c4bf362594177ddf7fd",
+  "criteria_sha256": "f138798f0a098bc8005a9c36b6609ab1dd0c9729cfc5ec543aa715d9c59fadd2",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5651029",
+      "observed_utc": "2026-10-17T20:10:57.391+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00089",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00089.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00089.body.json.gz",
+      "start_utc": "2026-10-17T20:10:57.288+00:00",
+      "end_utc": "2026-10-17T20:10:57.391+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:57 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5651029",
+        "params": null
+      },
+      "raw_sha256": "59c9b579689c1757f52327bc6f6fedfb8b42b3d68d8a8382ac6321b5d91bb168",
+      "gzip_sha256": "2ea5ae4a665a008ab04f326959843d1eb1ae68fa2625462e32de7690765f395e",
+      "raw_bytes": 4584,
+      "gzip_bytes": 2063
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "94418621888449917453057440562280826490545255298695036131886110171877060190553",
+      "57298602592045036915205949648249079784170602820876143098705471189624741896679"
+    ],
+    "current_description_sha256": "53362c686d7ef09efaa8f1d9c7c26ec825b6c6608101e74edc191afdcedf6243"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:28.218439+00:00",
+  "question": "LKP Motor Lublin vs. WKS Slask Wroclaw: O/U 2.5",
+  "market_id": "5651029",
+  "valuation_author": "primary_operator",
+  "original_index": 609,
+  "report_sha256": "70cd3f130161944d7e65bdce944a5787252411af96b9f46a73eaa0778d242a70"
+}

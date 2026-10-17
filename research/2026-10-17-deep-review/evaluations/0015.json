@@ -1,0 +1,146 @@
+{
+  "review_index": 15,
+  "condition_id": "0xcee04ba47d02f6c64642369b34193c355f64de1b9ae425c71ea4efef1989d271",
+  "criteria_sha256": "59aaa1c6c61f27f1d28d6680cb4efbc10261ae6858bb21e9c55420882ce8cfa7",
+  "status": "valued",
+  "literal_analysis": "Full exact frozen rule read, including creation/cutoff, official-announcement scope, actual control, effective wholeFIR closure, direct-force/militia/UAV exclusions and adjudication as applicable.",
+  "evidence": [
+    {
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4542098/us-forces-to-resume-naval-blockade-against-iran/",
+      "observed_utc": "2026-10-17T20:49:15.708292+00:00",
+      "finding": "OfficialJuly13 resumption, Iranian-port scope and continuing other transits."
+    },
+    {
+      "url": "https://www.axios.com/2026/10/16/iran-backed-militias-sending-money-irgc-centcom",
+      "observed_utc": "2026-10-17T20:49:15.708315+00:00",
+      "finding": "Commander traffic remarks and attributed continued-blockade/negotiation context, not a general-lift announcement."
+    },
+    {
+      "url": "https://www.tasnimnews.ir/en/news/2026/10/17/3725165/iran-offers-7-day-plan-to-reopen-hormuz",
+      "observed_utc": "2026-10-17T20:49:15.708318+00:00",
+      "finding": "Iranian conditional proposal, not a decided US announcement."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.14,
+    "low": 0.03,
+    "high": 0.45,
+    "method": "Primary explicit event/interpretation tree, retaining latent historical and future regime uncertainty",
+    "reasoning": "Saved iran_event_model.py inputs are primary assumptions, not fitted rates; full case report distinguishes exact payoff, dated sources, bounds and interpretation branches.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:16.096+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.14,
+        "best_bid": 0.05,
+        "best_ask": 0.07,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.165,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.07,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.7000000000000001,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.07,
+        "break_even_probability_with_idealized_carry": 0.07017336706433469,
+        "central_expected_profit_usd": 0.7000000000000001,
+        "default_10pp_stressed_profit_usd": -0.3,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.04000000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.5
+      },
+      "No": {
+        "probability": 0.86,
+        "best_bid": 0.93,
+        "best_ask": 0.95,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.165,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.95,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.5,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.95,
+        "break_even_probability_with_idealized_carry": 0.9523528387302564,
+        "central_expected_profit_usd": -0.9000000000000004,
+        "default_10pp_stressed_profit_usd": -1.9000000000000004,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.76,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.3
+      }
+    }
+  },
+  "verdict": "Official general-lift announcement valued separately from shipping/deal; neither ask clears normal reserve",
+  "reopen_condition": "New qualifying official source/consensus, actual control/authority/target details or a material price/cost change requires a fresh primary review and full account/venue gates.",
+  "current_description_sha256": "51f36153f7913d8c649a21b50289264eed15c4c2deb720be469893f83c7daae6",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "87712920673252297509200151045391015262449055764880659907762503287643101055970",
+    "77737603049704371401985143030203551130624520784925815473217168646825527075459"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0035",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0035.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0035.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0041",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/iran_event_followup_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/iran_event_model.py",
+    "model_calibrated": false,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:49:15.929014+00:00",
+  "question": "US announces end of Iranian blockade by October 31, 2026?",
+  "market_id": "3128888",
+  "valuation_author": "primary_operator",
+  "original_index": 15,
+  "report_sha256": "b4d1bf98f306ea080a4e4a4177db919bacaf896462606fdd3fb4e0b30226a34d"
+}

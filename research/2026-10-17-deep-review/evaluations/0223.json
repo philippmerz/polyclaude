@@ -1,0 +1,72 @@
+{
+  "review_index": 223,
+  "condition_id": "0xdaa229a6f4d44a36a5b6933be19af8ede9af34c82a38a3286784db0ee34147b1",
+  "criteria_sha256": "26a4669ab2feaadb4e4eface3f1c2c846cd478443ba3702fa770d05ff2044c34",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5239731",
+      "observed_utc": "2026-10-17T20:10:53.077+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00038",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00038.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00038.body.json.gz",
+      "start_utc": "2026-10-17T20:10:53.024+00:00",
+      "end_utc": "2026-10-17T20:10:53.077+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:53 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5239731",
+        "params": null
+      },
+      "raw_sha256": "6bddfb4c29c37ecb4ca28060bfff2807996bb4c301e92b5f561a7b1232efd2ae",
+      "gzip_sha256": "5140c45cdf2430ac6c76a164f0b7d7511a7d095669e9d6e1868c6a28591a8168",
+      "raw_bytes": 4704,
+      "gzip_bytes": 2102
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "53326774370830217320646785037026591305584481845608200965812016277487786987850",
+      "43150170660727726399920129156478518317289854184987372091399302033114150831844"
+    ],
+    "current_description_sha256": "5782ba0f66301384c949fb79fee84841e6bc9863b6f1980de4ba4c58450ae5d9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:13.345112+00:00",
+  "question": "Will Galatasaray SK win on 2026-10-17?",
+  "market_id": "5239731",
+  "valuation_author": "primary_operator",
+  "original_index": 223,
+  "report_sha256": "4197337b8796c579e30a272ca877771fc74558ddaa80e810b6f01ef9d2275975"
+}

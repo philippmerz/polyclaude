@@ -1,0 +1,72 @@
+{
+  "review_index": 680,
+  "condition_id": "0x34318e1b9a050745f08aaa706b9be8b2e6d3be2052da74a13d02feab320f755a",
+  "criteria_sha256": "edb95c8643fff4e9911a90d2e33d5dd17da2a9f945d371332776895f71f44bee",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5674574",
+      "observed_utc": "2026-10-17T20:10:57.997+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00096",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00096.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00096.body.json.gz",
+      "start_utc": "2026-10-17T20:10:57.880+00:00",
+      "end_utc": "2026-10-17T20:10:57.997+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:57 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5674574",
+        "params": null
+      },
+      "raw_sha256": "5f6ac42803e8160789272c7800e7d3c5ad8fdbd8eb6abfac14198ef00278f584",
+      "gzip_sha256": "977acee463b6c61abebe02b6a51ae3fd1e9cd363d75ec1ea28f7dc25cbd5c70a",
+      "raw_bytes": 3696,
+      "gzip_bytes": 1750
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "51903414180392773455901271818789452141209593459508334822232716925154525293321",
+      "41141583266486692794023756163177831152839037872267102826396967090478518688866"
+    ],
+    "current_description_sha256": "e0264fd16d9fc91a3a5f32ad4df94cc89d023dd0b50cd017bf5aa62603c33384"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:30.331143+00:00",
+  "question": "Will MrBeast say \"Sponsor\" or \"Sponsored\" during his next video?",
+  "market_id": "5674574",
+  "valuation_author": "primary_operator",
+  "original_index": 680,
+  "report_sha256": "0391224b567e111ea2551132d617c64f576c872daee6c591eb59325008ff3426"
+}

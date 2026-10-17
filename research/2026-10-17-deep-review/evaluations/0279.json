@@ -1,0 +1,72 @@
+{
+  "review_index": 279,
+  "condition_id": "0xe572b77607dec5a56e240983b7384a4945b34e4594f628b9f928ed7be7c79475",
+  "criteria_sha256": "d8c499267c6ace55e2f7b46dc6e4969781a014676ae21cceda607b40c3d29d3c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5267438",
+      "observed_utc": "2026-10-17T20:10:53.592+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00045",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00045.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00045.body.json.gz",
+      "start_utc": "2026-10-17T20:10:53.505+00:00",
+      "end_utc": "2026-10-17T20:10:53.592+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:53 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5267438",
+        "params": null
+      },
+      "raw_sha256": "7108aa912cf3dd87b5300e3a9b773cbb90ebd130e95a204c5c6410db4856ad99",
+      "gzip_sha256": "e1dbbb955445c69361f49f80c66018ef1442bcf957f82d4e1988182bb4022e7c",
+      "raw_bytes": 4834,
+      "gzip_bytes": 2154
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Paris Saint-Germain FC",
+      "RC Strasbourg Alsace"
+    ],
+    "current_token_ids": [
+      "50511254470974580696201441951011396842116782489501047201948895066422968213276",
+      "47204915141540527597133598643190035103717678863595374953824284101519166821219"
+    ],
+    "current_description_sha256": "76a3fa3eae8d8a9bdd6ed246e37ce462f2af7a6d79a4c6560b860d29614d139c"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:15.288379+00:00",
+  "question": "Spread: Paris Saint-Germain FC (-1.5)",
+  "market_id": "5267438",
+  "valuation_author": "primary_operator",
+  "original_index": 279,
+  "report_sha256": "c70f453046ea194ae9c62cfe2979faf48ba2486c8eb0cb901a68adee97055d40"
+}

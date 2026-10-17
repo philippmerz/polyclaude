@@ -1,0 +1,72 @@
+{
+  "review_index": 867,
+  "condition_id": "0x940c8beb472b342e5ec5cae34f2568703e647bb911784f85805cd0762154b50c",
+  "criteria_sha256": "1f5fe62d55d72f0f5e0284df371f3d84f7ac4ec2c6b3bf74ec647077af1ebd3b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264047",
+      "observed_utc": "2026-10-17T20:10:59.850+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00117",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00117.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00117.body.json.gz",
+      "start_utc": "2026-10-17T20:10:59.788+00:00",
+      "end_utc": "2026-10-17T20:10:59.850+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:59 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264047",
+        "params": null
+      },
+      "raw_sha256": "8097a7818a6573e060193eed2fc7244753639b31b7725e5d03eaafa609e79e79",
+      "gzip_sha256": "e5bab77eb53f14a52f829d812884976b2f067751b65a7f056e8a8ac372901666",
+      "raw_bytes": 4767,
+      "gzip_bytes": 2119
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "22926970066850541335035811193453505725495206460783750801096957892245109854224",
+      "35825815447757864329325007786848316972683429882626331827690074489032057892838"
+    ],
+    "current_description_sha256": "3155094dc6efe27da8ca5fb437a2a883ac5a202c32a73a455979a6d4c422176f"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:36.604648+00:00",
+  "question": "Will Bristol City FC win on 2026-10-17?",
+  "market_id": "5264047",
+  "valuation_author": "primary_operator",
+  "original_index": 867,
+  "report_sha256": "58198d9b3741ea87ee786ece2f9c517ab27053c76c7d796c97825021fdf839a8"
+}

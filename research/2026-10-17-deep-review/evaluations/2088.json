@@ -1,0 +1,72 @@
+{
+  "review_index": 2088,
+  "condition_id": "0x6f1bcf1033b1a4c3ef4e80ba5ad694cb4fd53c2d789a4a1de21f14045fd032b4",
+  "criteria_sha256": "a5025f604742463cc909b17cf0731b19fae9a4c0880693fbccec029816afd1ad",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5350121",
+      "observed_utc": "2026-10-17T20:11:14.167+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00261",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00261.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00261.body.json.gz",
+      "start_utc": "2026-10-17T20:11:14.105+00:00",
+      "end_utc": "2026-10-17T20:11:14.167+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:14 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5350121",
+        "params": null
+      },
+      "raw_sha256": "01435172adf82786b2bfd323358b0f6dc04713d38dd498be1e5fbc5475aee27c",
+      "gzip_sha256": "56597379e82417dc39259873eae96bb36d1223f336274d96f3dc7ebf342f2036",
+      "raw_bytes": 3610,
+      "gzip_bytes": 1636
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Hampton",
+      "Sacred Heart"
+    ],
+    "current_token_ids": [
+      "32210163163396546687905014454352868861387339349783930519154205569913712006606",
+      "108512532089881886934453831457579723266160135001210133885233939822146609896206"
+    ],
+    "current_description_sha256": "184980c5eec360987155b34e5b06a190ed7c0aeb6e82a3b52f869e438ec66077"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:33.005523+00:00",
+  "question": "Hampton vs. Sacred Heart",
+  "market_id": "5350121",
+  "valuation_author": "primary_operator",
+  "original_index": 2088,
+  "report_sha256": "ce1c057229201cf702c4ac8583bf77e64561346f306ea6bbac971c71950a8dd2"
+}

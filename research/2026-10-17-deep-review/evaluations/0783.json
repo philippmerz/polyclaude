@@ -1,0 +1,72 @@
+{
+  "review_index": 783,
+  "condition_id": "0x3d58c0167d813f991812e95f5eb9d223deea4f8d714cfbbafdf8cfd1499f6652",
+  "criteria_sha256": "ee5168595cd0d4fee570ee3d748d90471c083b44dddc552093c24579681358cd",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5790765",
+      "observed_utc": "2026-10-17T20:10:59.082+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00108",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00108.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00108.body.json.gz",
+      "start_utc": "2026-10-17T20:10:58.994+00:00",
+      "end_utc": "2026-10-17T20:10:59.082+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:59 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5790765",
+        "params": null
+      },
+      "raw_sha256": "6398bf01835fd92386c72f26f9a8b39ddf74a0d5638ccc1848fd669d033631e1",
+      "gzip_sha256": "0cd25f56128a099803f2fa24dc275d6da1a1475d194a605940b074a59c21190a",
+      "raw_bytes": 4243,
+      "gzip_bytes": 1912
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Nishesh Basavareddy",
+      "Edas Butvilas"
+    ],
+    "current_token_ids": [
+      "12318603051372180175064236968398623559293001885325757947291916214052138743111",
+      "4411016366255500724586702921038592992707899426323325849260753372023158464024"
+    ],
+    "current_description_sha256": "ef6adfe1e7b7db039794c51979de10bb8ceb717002c6e2202fd8aca5c5bfaa87"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:34.143780+00:00",
+  "question": "European Open, Qualification: Nishesh Basavareddy vs Edas Butvilas",
+  "market_id": "5790765",
+  "valuation_author": "primary_operator",
+  "original_index": 783,
+  "report_sha256": "7e053fc857f6aef4ed21d9ce5d7c9d88ae086a2e2083621b72bb01d1584d1912"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 693,
+  "condition_id": "0xbace7968fc27298a1677f81247023e3b56791f964479553209de8ea682e69504",
+  "criteria_sha256": "fc69bd732f666141d1212238ff94239c951ca4e7640395af0c5e4626ea8c7840",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264172",
+      "observed_utc": "2026-10-17T20:10:58.055+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00097",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00097.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00097.body.json.gz",
+      "start_utc": "2026-10-17T20:10:57.998+00:00",
+      "end_utc": "2026-10-17T20:10:58.055+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:58 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264172",
+        "params": null
+      },
+      "raw_sha256": "2e11ed580c68c40d4a3a192440a13302229774d1907ee91eb69f5d64bab8d887",
+      "gzip_sha256": "1eb5761f6c12019fadcf758740d8017be2315be94d6dc611de748c88e7125623",
+      "raw_bytes": 4789,
+      "gzip_bytes": 2116
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "85032325410809034623547989866202480992457095493153816614303828266681564514469",
+      "102885710858120903811178016658817580930867928451474338779805398971479801333772"
+    ],
+    "current_description_sha256": "bedf9d3dc039dd7f0563ec142dbe5cd3ef02f835a6ecb65344162a60e3500793"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:30.654898+00:00",
+  "question": "Will Stoke City FC win on 2026-10-17?",
+  "market_id": "5264172",
+  "valuation_author": "primary_operator",
+  "original_index": 693,
+  "report_sha256": "a6ec690d217597460047284a8ebb4ed30c187c853199f651f0a2204dec6f1148"
+}

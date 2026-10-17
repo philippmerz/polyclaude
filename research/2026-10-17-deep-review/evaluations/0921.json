@@ -1,0 +1,72 @@
+{
+  "review_index": 921,
+  "condition_id": "0xbc176070f40cf90d97dcf974b35b3770fd63030514032ffe877895adbfed1492",
+  "criteria_sha256": "6b5e6631cf9e8691d3a9656aa77249bfc4ccc4bb23ed60cb6f73da03988dc26c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263975",
+      "observed_utc": "2026-10-17T20:11:00.354+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00122",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00122.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00122.body.json.gz",
+      "start_utc": "2026-10-17T20:11:00.296+00:00",
+      "end_utc": "2026-10-17T20:11:00.354+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:00 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263975",
+        "params": null
+      },
+      "raw_sha256": "f7edf6e4dee6f55b56ee783bd742ea6ac1d7ba764b9ad1b181b5f039939bed17",
+      "gzip_sha256": "dbd7af51bcdd3736243a0e74abcf4dee5ddc5f0817070d7f8d823c7a226ada6e",
+      "raw_bytes": 4777,
+      "gzip_bytes": 2128
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "81818853722508636819428007890038016539066514230517819709063945085079017041415",
+      "67088824555797712715177671542936269253066460558221272240532706175389104521804"
+    ],
+    "current_description_sha256": "d1897c92cc0f1f8cd5a3196e071df94517f90f4eb18c75a68dba2b863a9acad7"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:38.332614+00:00",
+  "question": "Will West Bromwich Albion FC win on 2026-10-17?",
+  "market_id": "5263975",
+  "valuation_author": "primary_operator",
+  "original_index": 921,
+  "report_sha256": "2169e7b9e7f21fed14e8229bcc5c7b9b88b5023e2ee9aa1f0184395744a1807a"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 1673,
+  "condition_id": "0x950f3c490d29cc0580812e2bb1410fdcc44487bdf1d6cb49215356efab08cde6",
+  "criteria_sha256": "0cbf1ee1ed149ebc61d2e8673d4985492b2f36403db401d21a8f0034638d2716",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5610063",
+      "observed_utc": "2026-10-17T20:11:08.869+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00210",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00210.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00210.body.json.gz",
+      "start_utc": "2026-10-17T20:11:08.779+00:00",
+      "end_utc": "2026-10-17T20:11:08.869+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:08 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5610063",
+        "params": null
+      },
+      "raw_sha256": "abf653e314bb603fdb9ec919bac2351897b0fffcb16b6b8e398e1ffcaf03b4fb",
+      "gzip_sha256": "68d100519539d8bbd1659f8cab26aa81b0b819e64fd2d223509722569ec9529c",
+      "raw_bytes": 4548,
+      "gzip_bytes": 2048
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "81910245099280215519251535232525577181554596076096981946086408406424875089604",
+      "17375024446507235288331227292050901685486119211527845221765167332329713035342"
+    ],
+    "current_description_sha256": "a8382d6ad15f446faa185c99ec69efc2ccb189da9e0d91c9f60d2f14a35fcc69"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:04.430773+00:00",
+  "question": "Al-Nasr Dubai CSC vs. Hatta SC: O/U 1.5",
+  "market_id": "5610063",
+  "valuation_author": "primary_operator",
+  "original_index": 1673,
+  "report_sha256": "9dde30fbe3546d6759d575ed758b216be5c29a7bb31ce751fcec0be13a6b2700"
+}

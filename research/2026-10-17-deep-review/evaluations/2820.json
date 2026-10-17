@@ -1,0 +1,72 @@
+{
+  "review_index": 2820,
+  "condition_id": "0xdca1b40cfb32e5d75bb97afe59c4cef4b1f6a2a11cab3b8e7f6faaf5aaaf700a",
+  "criteria_sha256": "a9a9a21636bb4949e0a193a8f7455bf03afb4a5720734d5dd0f1ca17899eef0a",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5389403",
+      "observed_utc": "2026-10-17T20:11:25.169+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00366",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00366.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00366.body.json.gz",
+      "start_utc": "2026-10-17T20:11:25.075+00:00",
+      "end_utc": "2026-10-17T20:11:25.169+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:25 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5389403",
+        "params": null
+      },
+      "raw_sha256": "007601e6524c085191ec8c182e80c7d69bc7b3637c2f4eebca60fcd0a921402a",
+      "gzip_sha256": "875b5da5fa4c5bb792c13f223be5e9d7d826e0c4751069f499d9286fd0982813",
+      "raw_bytes": 4927,
+      "gzip_bytes": 2202
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "76522170903737867756609067489497539026101519033155673785578893924742740796765",
+      "26043109847602365314444315060149335558302908417569514178958098457527355338448"
+    ],
+    "current_description_sha256": "9741e9e94e11c29f082b7f22e5c177f40b0878630bf9586a791330a90601cc77"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:05.237905+00:00",
+  "question": "Chorley FC vs. Worcester City FC: Both Teams to Score",
+  "market_id": "5389403",
+  "valuation_author": "primary_operator",
+  "original_index": 2820,
+  "report_sha256": "4d305f4c5420923f065c6e8aafe451462bdbda194e532b6606ac4c5657de8d6d"
+}

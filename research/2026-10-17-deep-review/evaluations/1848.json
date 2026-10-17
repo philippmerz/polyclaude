@@ -1,0 +1,72 @@
+{
+  "review_index": 1848,
+  "condition_id": "0x6c70ffc63b046e6ad25a2c78fc02590b6688ff1e0ef710947fb80fffae66c1be",
+  "criteria_sha256": "8d07eb8e4671c19238b33b482b8d8e1b793d833ccfbdeae8b595b4adac99f0dc",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271315",
+      "observed_utc": "2026-10-17T20:11:11.187+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00234",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00234.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00234.body.json.gz",
+      "start_utc": "2026-10-17T20:11:11.114+00:00",
+      "end_utc": "2026-10-17T20:11:11.187+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:11 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271315",
+        "params": null
+      },
+      "raw_sha256": "2f4933118072b0d40570eee7acee4ed502890fbe5dfc0084d3d6e858381b70b5",
+      "gzip_sha256": "fb77a2c9116cef5c6832ae4280dad8fa70b128b564d73933a4f7755c7a98e1db",
+      "raw_bytes": 4669,
+      "gzip_bytes": 2099
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "19108730875741502931562986192491601876330334026257994044871891880156408579269",
+      "4891705888541128580810584983165697711033412211439708847528484390096839997122"
+    ],
+    "current_description_sha256": "9f023403bb029c0132b1a0957aeafb0fe7029a5e1a69722fa2f9fcdc6b8ca52a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:11.892153+00:00",
+  "question": "Will Reading FC win on 2026-10-17?",
+  "market_id": "5271315",
+  "valuation_author": "primary_operator",
+  "original_index": 1848,
+  "report_sha256": "5461f6ef828107298c4dff7a097f2ae2764e37b9ba32e595179ed7673833cb8d"
+}

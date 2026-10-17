@@ -1,0 +1,72 @@
+{
+  "review_index": 2600,
+  "condition_id": "0x93025cb02210b612e65eb632ac32337aa534d5f30e9201a9eef86fa144363c01",
+  "criteria_sha256": "a3ec7ff2331e2e493f2a9eec6b560ec3d2acd31eeb4668d9678982a2d12d2668",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5389104",
+      "observed_utc": "2026-10-17T20:11:21.902+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00340",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00340.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00340.body.json.gz",
+      "start_utc": "2026-10-17T20:11:21.804+00:00",
+      "end_utc": "2026-10-17T20:11:21.902+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:21 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5389104",
+        "params": null
+      },
+      "raw_sha256": "93dca20405e4dcac52b8d8853f2a7391221b0e65b42fbe71e8303184e09a228e",
+      "gzip_sha256": "7efee291675ced87c0c52e275f20b8b83d12564dc6c21553e8e0017d2078bb80",
+      "raw_bytes": 4834,
+      "gzip_bytes": 2172
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "964026768137231641577133772468086561364939920959908723213851781588601831037",
+      "22100886945766511783121595922072489157948648020083588768846319748493837598287"
+    ],
+    "current_description_sha256": "35baa8442056473efa0d8a2e1c96a93f516b1e28f8dfa93742147e6624c8f0f9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:33.720444+00:00",
+  "question": "Wimborne Town FC vs. Chelmsford City FC: O/U 2.5",
+  "market_id": "5389104",
+  "valuation_author": "primary_operator",
+  "original_index": 2600,
+  "report_sha256": "78264fd5d9d6622d29155eac0f8db78bb71f3c2f485f357294365b769dc1ac83"
+}

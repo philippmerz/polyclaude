@@ -1,0 +1,72 @@
+{
+  "review_index": 1582,
+  "condition_id": "0xcb41e0f59b5a273346d7bd95d3a5d8993ca9f0a66b48f76a4e0e3e6b0ed69ac6",
+  "criteria_sha256": "0b2904e2505152e8d418d616ec8437da2463034688d01a9ff1144ddcbf63d5da",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5674568",
+      "observed_utc": "2026-10-17T20:11:07.543+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00197",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00197.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00197.body.json.gz",
+      "start_utc": "2026-10-17T20:11:07.472+00:00",
+      "end_utc": "2026-10-17T20:11:07.543+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:07 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5674568",
+        "params": null
+      },
+      "raw_sha256": "7b0be12ccf518853c3f635f3fbf9b8650b088dc2bc0fecac45d6bdc276eef8f3",
+      "gzip_sha256": "3fdf3fbf9493b72ef07f9f7a22701b54e99019b7ae06e4da3bff50a4fb1b2d42",
+      "raw_bytes": 3367,
+      "gzip_bytes": 1632
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "165704413810537376545892747810352914466904862398521930553342661947383471878",
+      "77756234416646942171745217946417024632003730505600623283619571593202761299647"
+    ],
+    "current_description_sha256": "e0264fd16d9fc91a3a5f32ad4df94cc89d023dd0b50cd017bf5aa62603c33384"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:00.553426+00:00",
+  "question": "Will MrBeast say \"Feastable\" or \"Feastables\" during his next video?",
+  "market_id": "5674568",
+  "valuation_author": "primary_operator",
+  "original_index": 1582,
+  "report_sha256": "41b75c5732c504bf627c7e3694a7b9fb096aa8f5116a6f767f6ab1870f46ac7a"
+}

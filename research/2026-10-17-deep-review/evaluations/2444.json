@@ -1,0 +1,72 @@
+{
+  "review_index": 2444,
+  "condition_id": "0x707fed65797cd25f1c4e6fe865bf7719a30f58d8d186465cdaaa0228761773d3",
+  "criteria_sha256": "0d1518fa17d5892cff2d63570ba65eaf9edd9b95e0ca778d88ca658df5f54fd3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264999",
+      "observed_utc": "2026-10-17T20:11:19.909+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00321",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00321.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00321.body.json.gz",
+      "start_utc": "2026-10-17T20:11:19.818+00:00",
+      "end_utc": "2026-10-17T20:11:19.909+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264999",
+        "params": null
+      },
+      "raw_sha256": "8900d5d8ab6807312c1f86199057e15c596e533f4e43fa7dfbf518ad843b4b0e",
+      "gzip_sha256": "6486b69f51915970f25d0b13cea5cae2ffa689f856205501527b35e898c39200",
+      "raw_bytes": 4767,
+      "gzip_bytes": 2175
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "1334859662361291591986064508717888572051429067584197403019624395391764906878",
+      "45042804394869654048330267492754723929709025557446727304507945127851371020104"
+    ],
+    "current_description_sha256": "240855408bbda3f6971bef87d354daba52ae95060a485b91b659bb4ad16443c1"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:08.231045+00:00",
+  "question": "Exact Score: Wrexham AFC 0 - 2 Preston North End FC?",
+  "market_id": "5264999",
+  "valuation_author": "primary_operator",
+  "original_index": 2444,
+  "report_sha256": "eb7b815ee27057493e590b425b7df8958a57a30b75ecd8a436588cc829cdbe86"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 2284,
+  "condition_id": "0xea1be12fe736cf4a46d88a47c09939adfa198c10b09fe7c5527ab34a19c0fcf6",
+  "criteria_sha256": "0998fca61bcd3814922bec9043ff56bdb0fa6a707a66bd7a0c50b077aba7a825",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264850",
+      "observed_utc": "2026-10-17T20:11:17.643+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00298",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00298.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00298.body.json.gz",
+      "start_utc": "2026-10-17T20:11:17.576+00:00",
+      "end_utc": "2026-10-17T20:11:17.643+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:17 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264850",
+        "params": null
+      },
+      "raw_sha256": "ae2f7a8259353489b757715b0e621b3c8abf244e308ef5eac115649884106629",
+      "gzip_sha256": "8f40c1c55de34424cd2aa27b3e160ef6dd6cd5a7cdce57f3da2250bab100ad70",
+      "raw_bytes": 4701,
+      "gzip_bytes": 2116
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "35062016149010173298616482988271494063108238454882718646583258292919690173325",
+      "64554695093806462557906422228651728921293934537727582627739393520192627572938"
+    ],
+    "current_description_sha256": "78fd35d0390b31cd5b55c070b7b489a6eb4fb3038c13163e0770ecfc2e0643f4"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:31.229411+00:00",
+  "question": "FC Bayern München vs. RB Leipzig: Draw at halftime?",
+  "market_id": "5264850",
+  "valuation_author": "primary_operator",
+  "original_index": 2284,
+  "report_sha256": "64abf593032a21b44a9f575ac6c75a9fc6f765c36c4df5661eca4a7fdc6c2255"
+}

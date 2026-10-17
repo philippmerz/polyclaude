@@ -1,0 +1,72 @@
+{
+  "review_index": 669,
+  "condition_id": "0x90387acfa023dafb8a1278c9a415eca6d5ed395f1d736867c44b67329896fdbf",
+  "criteria_sha256": "446484560976ce78490805935c55810d65f06ba75de0ae69188fb7c8ddedd7b3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5600753",
+      "observed_utc": "2026-10-17T20:10:57.878+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00095",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00095.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00095.body.json.gz",
+      "start_utc": "2026-10-17T20:10:57.788+00:00",
+      "end_utc": "2026-10-17T20:10:57.878+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:57 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5600753",
+        "params": null
+      },
+      "raw_sha256": "5301b7f474e577a823aca1925a2e5822f3b45732859d7d34d54439055b139952",
+      "gzip_sha256": "b937de9e2f2700f6befeb3da009537281265bcfd8c749bd666b34d6420492b4f",
+      "raw_bytes": 4140,
+      "gzip_bytes": 1946
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Canada",
+      "Nepal"
+    ],
+    "current_token_ids": [
+      "62033216811200421958081196258270441326790318586403162819806491866871700750467",
+      "516112482158492438114877358640895740820692588276111580556606657725108711789"
+    ],
+    "current_description_sha256": "46b2acfa5d834829866dd6192047dcd7b32ca6d817ab86f36cb78725a932295b"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:29.986881+00:00",
+  "question": "Cricket World Cup League 2: Canada vs Nepal",
+  "market_id": "5600753",
+  "valuation_author": "primary_operator",
+  "original_index": 669,
+  "report_sha256": "0d58935cb979979190b34db0c67555e5087dfcf068408a42cb08ebcabe584f43"
+}

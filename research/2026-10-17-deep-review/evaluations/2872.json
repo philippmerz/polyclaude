@@ -1,0 +1,72 @@
+{
+  "review_index": 2872,
+  "condition_id": "0x0a1ead505843db997acd9260c4971c32f9507efeafaf53ffec38a9123e8265a0",
+  "criteria_sha256": "36aeadc67a8cbcbed85a132425229f102f0535a23c4cc01689ab6f3fd29148b9",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5274577",
+      "observed_utc": "2026-10-17T20:11:25.859+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00372",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00372.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00372.body.json.gz",
+      "start_utc": "2026-10-17T20:11:25.770+00:00",
+      "end_utc": "2026-10-17T20:11:25.859+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:25 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5274577",
+        "params": null
+      },
+      "raw_sha256": "167d35849158b6a70b7ed1c72e04b03fa515110881f937e0f451686fe43052b5",
+      "gzip_sha256": "62ef96bae57492f11d532801ba378af936ef71de913007cebc768cd3ab98ffe3",
+      "raw_bytes": 4802,
+      "gzip_bytes": 2154
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Salford City FC",
+      "Crawley Town FC"
+    ],
+    "current_token_ids": [
+      "78167152891145414365311417096888309670112378248684021531932099205866534579628",
+      "58885170661326293979383593922906121582819246295189685696251226265657713148318"
+    ],
+    "current_description_sha256": "7b73356b291c6762323fdb98d742d90f7a71b4cfda490dc702e9ba50f2e44652"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:12.712629+00:00",
+  "question": "Spread: Salford City FC (-2.5)",
+  "market_id": "5274577",
+  "valuation_author": "primary_operator",
+  "original_index": 2872,
+  "report_sha256": "42c937b78e3ad8897554a75c6fcd98e95d5aa51d2a1b253fec05d93a275748bc"
+}

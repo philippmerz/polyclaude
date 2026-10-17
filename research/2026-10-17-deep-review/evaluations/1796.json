@@ -1,0 +1,72 @@
+{
+  "review_index": 1796,
+  "condition_id": "0x99669103f29c526c0c9b1a063e20135680dd7845c076d48124cfe208f748c3dd",
+  "criteria_sha256": "4840666d9b04908f65eb7cefdaf50eb4f426d7f30655d6abdda10505a18082e4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271290",
+      "observed_utc": "2026-10-17T20:11:10.480+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00227",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00227.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00227.body.json.gz",
+      "start_utc": "2026-10-17T20:11:10.392+00:00",
+      "end_utc": "2026-10-17T20:11:10.480+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:10 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271290",
+        "params": null
+      },
+      "raw_sha256": "238ea867ac7eeb72c4e520bbd58241556845a0a7693b50728cfc917f8bfb8605",
+      "gzip_sha256": "e8670d5e8b727468fc148b015eac92d59a63ab7249b58e94fa0ba80406f4c13e",
+      "raw_bytes": 4685,
+      "gzip_bytes": 2121
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "41958654541430831628691358580428032988987893232315390145463898774103554287128",
+      "28062749360903130386331399624672439487885919025715823664166470467593577026477"
+    ],
+    "current_description_sha256": "9a5969498afeb7c3d5767638c9a1bcb26c5c57d73b9aa6c74254882f588dbf5a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:09.752674+00:00",
+  "question": "Will Luton Town FC win on 2026-10-17?",
+  "market_id": "5271290",
+  "valuation_author": "primary_operator",
+  "original_index": 1796,
+  "report_sha256": "e01dbedaa49a7aa9ff7dba592de58ea4a16a9016cb411209695b51428d670b06"
+}

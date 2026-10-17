@@ -1,0 +1,72 @@
+{
+  "review_index": 2884,
+  "condition_id": "0xd28af600ce7c41cc59f6db523ac2cf7a5a98dc45ae04cf0aad24d5c9ecfb0e34",
+  "criteria_sha256": "6a0c5771ba849c5b19de8b33774d3e816ffe1910b8a2fef5e605839f7b40ae87",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5687223",
+      "observed_utc": "2026-10-17T20:11:26.021+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00374",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00374.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00374.body.json.gz",
+      "start_utc": "2026-10-17T20:11:25.944+00:00",
+      "end_utc": "2026-10-17T20:11:26.021+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:26 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5687223",
+        "params": null
+      },
+      "raw_sha256": "5a627defb6445dbe90b525f3b57155683fe124b9fe3413b6e9482cad0d652519",
+      "gzip_sha256": "82eb19c09f4cc32c908be91910c15f556447f9c126d3860a3ebec4e037a80fca",
+      "raw_bytes": 4645,
+      "gzip_bytes": 2089
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "101980718758998984171188713814117619905555301868217156943856811883411908312735",
+      "108542443187565194492254144859112366280801222745452597728085926379331619623047"
+    ],
+    "current_description_sha256": "764a342391ceea4fd762417e561574a1b5197a039715a275954a2968ef265719"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:15.726975+00:00",
+  "question": "Alemannia Aachen vs. Hansa Rostock: O/U 4.5",
+  "market_id": "5687223",
+  "valuation_author": "primary_operator",
+  "original_index": 2884,
+  "report_sha256": "841a8e9b5f1555b152ac5bbc791637988e9c10b1b363a2696110417fa759104f"
+}

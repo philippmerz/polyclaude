@@ -1,0 +1,72 @@
+{
+  "review_index": 711,
+  "condition_id": "0xa9a11e44ef47340db8b115bc106d83488e37f24b2692d96cb349286c5a81d0d3",
+  "criteria_sha256": "77396f77bbb5ec26524fba22e32fba277d307335cad96f19eae9d74218d23bbe",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5268987",
+      "observed_utc": "2026-10-17T20:10:58.481+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00101",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00101.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00101.body.json.gz",
+      "start_utc": "2026-10-17T20:10:58.395+00:00",
+      "end_utc": "2026-10-17T20:10:58.481+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:58 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5268987",
+        "params": null
+      },
+      "raw_sha256": "0085e38c8dff33cdd28f7f708ed4e9bf6612309bdca2aaf28e9b436b24c118bf",
+      "gzip_sha256": "00fd4c905c5ad2a7b772c705ab39dea25df5a73223c9b7bebdb9937e0f16c5a0",
+      "raw_bytes": 4762,
+      "gzip_bytes": 2118
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "51491141709747755211233369977547833694310970189817991923178169071147566617724",
+      "48188729452430329779413536632880972074623895855702103751739359639947151106366"
+    ],
+    "current_description_sha256": "cdc227d614229a0522ccf2d832ed3afb3d248cf97e4827212fec7ca7d51f42a2"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:31.710250+00:00",
+  "question": "Elche CF leading at halftime?",
+  "market_id": "5268987",
+  "valuation_author": "primary_operator",
+  "original_index": 711,
+  "report_sha256": "9d9fc00feceb239f1d80d3f433a15f1fb7cdb4f3499ca03ca26339b9a3024911"
+}

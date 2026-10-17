@@ -1,0 +1,72 @@
+{
+  "review_index": 216,
+  "condition_id": "0xbacfa5429b80c0642737a857a3c11f72b8212bf10ae659d21d41e341a05bd225",
+  "criteria_sha256": "afefc2329c10ecb7ce828f651eba1fbb00e439c8b2707fc4b5b35aebbf7a0c7b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263902",
+      "observed_utc": "2026-10-17T20:10:53.022+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00037",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00037.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00037.body.json.gz",
+      "start_utc": "2026-10-17T20:10:52.956+00:00",
+      "end_utc": "2026-10-17T20:10:53.022+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:53 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263902",
+        "params": null
+      },
+      "raw_sha256": "4c55036b095a36d2ef9f7ba25b246fbbf771bc6a13cb6375be1755dbb40921de",
+      "gzip_sha256": "0ceaa3c27cfd907e44622d29f1ea5ead04a45711e83582c242361b280df19442",
+      "raw_bytes": 4750,
+      "gzip_bytes": 2129
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "24269068108929529830291118463729466833939370479621163351747402694990183313226",
+      "93091011603842440902150196629580794192965226283475028026564739694211007785620"
+    ],
+    "current_description_sha256": "628910e878cbd34201f3a4aff853b1bac129fcc20f81501776be740aeeed6a60"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:13.038313+00:00",
+  "question": "Will Hamburger SV win on 2026-10-17?",
+  "market_id": "5263902",
+  "valuation_author": "primary_operator",
+  "original_index": 216,
+  "report_sha256": "fade1ac5450132eefdc84deb00592863a136bda0bf29a632704a70549ce2f02e"
+}

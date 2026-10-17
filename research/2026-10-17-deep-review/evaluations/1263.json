@@ -1,0 +1,72 @@
+{
+  "review_index": 1263,
+  "condition_id": "0x912648b288a72a8ce65612f9a9738da81c60dd736846898166f7bcc50b4a59df",
+  "criteria_sha256": "db7e9f6090c90bc01b3ff44aea591dc7e5157dd2c3b70ddcad1c01338dd16963",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5276282",
+      "observed_utc": "2026-10-17T20:11:04.189+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00163",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00163.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00163.body.json.gz",
+      "start_utc": "2026-10-17T20:11:04.102+00:00",
+      "end_utc": "2026-10-17T20:11:04.189+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:04 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5276282",
+        "params": null
+      },
+      "raw_sha256": "1e5fb5ddf844dfb97c546d705ecbf7c2d0853a4baf29d004b15e198f860361ba",
+      "gzip_sha256": "df84ac0d9a13ca8289f0c8327026178952c566eb5c60f36e726e4ba9a145c8b3",
+      "raw_bytes": 4844,
+      "gzip_bytes": 2162
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "113625120747117153339373328254152787191686745578878793190147281515154201123297",
+      "24055053211484694832306227251138584228875589715530718170012222006360980209868"
+    ],
+    "current_description_sha256": "3823ebb8d4b5f5d3cb54b09e340bb44a5ec2423d55ff73e0bd3d9d0cbf4ee5ee"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:50.821250+00:00",
+  "question": "Southampton FC vs. Bolton Wanderers FC: O/U 0.5",
+  "market_id": "5276282",
+  "valuation_author": "primary_operator",
+  "original_index": 1263,
+  "report_sha256": "8869ce1fee86137d4a1f2680c3be6afa6ab78a88c6342a184d68ee77b9b47a82"
+}

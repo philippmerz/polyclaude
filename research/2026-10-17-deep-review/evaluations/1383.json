@@ -1,0 +1,72 @@
+{
+  "review_index": 1383,
+  "condition_id": "0x25ec90575fcefd700078475b1e2673df4c26b3c91ab99e90a68fa844557116f0",
+  "criteria_sha256": "92ce0f95932ce05503a3985d623ec18d168f4bf0ee8141424795661f900af320",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5269575",
+      "observed_utc": "2026-10-17T20:11:05.444+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00176",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00176.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00176.body.json.gz",
+      "start_utc": "2026-10-17T20:11:05.352+00:00",
+      "end_utc": "2026-10-17T20:11:05.444+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:05 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5269575",
+        "params": null
+      },
+      "raw_sha256": "b584a00b035895f639b68d96cff43b2560a230766e1c5d9a41aec408977ff5cf",
+      "gzip_sha256": "d94e05bfdcb487a54c064c85e09370295e0a7098eca676babe088b5384547dbd",
+      "raw_bytes": 3533,
+      "gzip_bytes": 1620
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "81830282840376049093585010669769595589886760266691915917231578705304824114866",
+      "37257156766240040687402873161024694667723984418888598293895354646622705882246"
+    ],
+    "current_description_sha256": "0b3d09c87f5ff78b064f4af7f8794e4c2db576fa8c243eee15af4c2ee6363e8e"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:54.603089+00:00",
+  "question": "Will ASM Clermont Auvergne win?",
+  "market_id": "5269575",
+  "valuation_author": "primary_operator",
+  "original_index": 1383,
+  "report_sha256": "3b557b228f105723f8a92a67b3b9b1b25661d766769f9be765ceda00d19bdd67"
+}

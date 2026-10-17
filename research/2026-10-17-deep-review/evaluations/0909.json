@@ -1,0 +1,72 @@
+{
+  "review_index": 909,
+  "condition_id": "0xabcb68284114cbefd86bc988a2510d3833ec02cd2253f2ba6f011c912d5cf051",
+  "criteria_sha256": "fabbd7d4f1e1781f3f168963f2718a64a8ce0f82b49a61bd82442a999afba2d4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5780377",
+      "observed_utc": "2026-10-17T20:11:00.295+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00121",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00121.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00121.body.json.gz",
+      "start_utc": "2026-10-17T20:11:00.189+00:00",
+      "end_utc": "2026-10-17T20:11:00.295+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:00 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5780377",
+        "params": null
+      },
+      "raw_sha256": "5d8f158c53110d7df61005edd9928b8f408c9fcdc85c9951cb9e6bd8d4ca2e54",
+      "gzip_sha256": "119953a9911475d73b83b5a65d648683fbee652bd9dfd36b5ab1d9bb1bca8688",
+      "raw_bytes": 4135,
+      "gzip_bytes": 1855
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Hunter/Siniakova",
+      "Errani/Paolini"
+    ],
+    "current_token_ids": [
+      "101974112250123757892429830466902635184926224837880866715136542355938798690314",
+      "36156912300889861487694517206070397609807361206846277903474864624575725520118"
+    ],
+    "current_description_sha256": "595fed83d6b7cefbf624c8aecc21cb184d55ed69a10cef9c8c479d406a31498a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:37.931234+00:00",
+  "question": "Wuhan Tennis Open (Doubles): Hunter/Siniakova vs Errani/Paolini",
+  "market_id": "5780377",
+  "valuation_author": "primary_operator",
+  "original_index": 909,
+  "report_sha256": "687ba685ff024102c4a4730ce0335bf8a8144c4cce1ee82aed6455b5637ba249"
+}

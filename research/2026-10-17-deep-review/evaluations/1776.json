@@ -1,0 +1,72 @@
+{
+  "review_index": 1776,
+  "condition_id": "0x0754b69aa12f1cafb9f217bd225e5b0611751eef2a78dce375ed4a18d614a42a",
+  "criteria_sha256": "800eeb4a615b4d6e5f2f5adc1ce9217f2addd6737f5d72ae2ef2358f5d866d48",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5276102",
+      "observed_utc": "2026-10-17T20:11:10.169+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00223",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00223.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00223.body.json.gz",
+      "start_utc": "2026-10-17T20:11:10.104+00:00",
+      "end_utc": "2026-10-17T20:11:10.169+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:10 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5276102",
+        "params": null
+      },
+      "raw_sha256": "beaead50cd54a79472fd769bf51ff2b8689c4d94b99b1f7b5ff19ede841c099b",
+      "gzip_sha256": "7645b0f23ab25d3f17d036480ecc7d85a2b72c9dda4165cc777d3975807cba33",
+      "raw_bytes": 4813,
+      "gzip_bytes": 2151
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "24036459042358757861221133993574147354349955780500682661559810746630371235100",
+      "110936193469855128498325986000501160023409254039170875681017325980626796413863"
+    ],
+    "current_description_sha256": "0e2816b231fad06c3e8ad4893207c3e6ced29c0b07342e552f2d8795ffb9c502"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:08.344135+00:00",
+  "question": "Derby County FC vs. Stoke City FC: O/U 2.5",
+  "market_id": "5276102",
+  "valuation_author": "primary_operator",
+  "original_index": 1776,
+  "report_sha256": "34d148621ba181ad3e4f4d738cbd1b7cb411d6d48deaa2cf7c859dbd1248a923"
+}

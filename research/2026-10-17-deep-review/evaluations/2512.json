@@ -1,0 +1,72 @@
+{
+  "review_index": 2512,
+  "condition_id": "0x7fad3ae148ec5e8e362f325eaef1b32f2c97ea05d81cf82ecb3c0334786b474f",
+  "criteria_sha256": "1926337ca35e42c2436f65782bd706708b1a6d76617d08c45ee7d77999230fc1",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5687775",
+      "observed_utc": "2026-10-17T20:11:20.895+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00330",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00330.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00330.body.json.gz",
+      "start_utc": "2026-10-17T20:11:20.808+00:00",
+      "end_utc": "2026-10-17T20:11:20.895+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:20 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5687775",
+        "params": null
+      },
+      "raw_sha256": "c2b38417c3a761e9fcee1ed27e2d39effd805ab0fd3c3d0764d184475c689699",
+      "gzip_sha256": "38622884eafe8487db7f9c10033f4d3ca82b887b055a24380bdb6c2b102e251e",
+      "raw_bytes": 4471,
+      "gzip_bytes": 2009
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "80902325574462841029937235522191547748893693047238288391019862701486787469471",
+      "10976116260104664725396563846559607729840588765591540896580885680550375229781"
+    ],
+    "current_description_sha256": "726593bc0067bf3cac0429a1494687182a9960f9f9b2939fb7be538cfcb9366f"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:18.986141+00:00",
+  "question": "Rayong FC leading at halftime?",
+  "market_id": "5687775",
+  "valuation_author": "primary_operator",
+  "original_index": 2512,
+  "report_sha256": "6b2c78b3b795f49d58931d22eaf996033718517eaa35ded55ac32e034ead7cb1"
+}

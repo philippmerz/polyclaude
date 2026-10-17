@@ -1,0 +1,72 @@
+{
+  "review_index": 2683,
+  "condition_id": "0xbbef773db5680dfc7901892482be5c4e2a3a73d3dfed19e1a736d2eb0433dc7d",
+  "criteria_sha256": "907deaeef41534d4ea7616e24ef86e17c2eea9621fe8f768d8b0559572fd1030",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5674578",
+      "observed_utc": "2026-10-17T20:11:23.147+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00350",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00350.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00350.body.json.gz",
+      "start_utc": "2026-10-17T20:11:23.060+00:00",
+      "end_utc": "2026-10-17T20:11:23.147+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:23 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5674578",
+        "params": null
+      },
+      "raw_sha256": "c128906ace0314710174cee4507abe4682aecdb3f4ff27fc5455911a0c6a922a",
+      "gzip_sha256": "fb1c65406097cd4e23aabaa7203955f3c01b566dec5030e81c47056868c56c07",
+      "raw_bytes": 3631,
+      "gzip_bytes": 1736
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "49272919637930765740302678312606154532709025232852983176436418058817879694525",
+      "44024964648074908832679061030044974393745710008077565739466831191046615105766"
+    ],
+    "current_description_sha256": "e0264fd16d9fc91a3a5f32ad4df94cc89d023dd0b50cd017bf5aa62603c33384"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:45.504400+00:00",
+  "question": "Will MrBeast say \"Africa\" during his next video?",
+  "market_id": "5674578",
+  "valuation_author": "primary_operator",
+  "original_index": 2683,
+  "report_sha256": "a1b03d26043314ee1fb2bb4835e66ff3dd914ce0569dab74a3c604a4a1a5d8c6"
+}

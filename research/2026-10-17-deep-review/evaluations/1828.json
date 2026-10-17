@@ -1,0 +1,72 @@
+{
+  "review_index": 1828,
+  "condition_id": "0xc498cb1cc88a6b21f8cbecc71994f466e1860c55e8ffbd1bf87aab7fc4f64eac",
+  "criteria_sha256": "f3721f2a4afc43e62d43d357c053a11774a74b293204e04820bd5a1969d156c7",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5652851",
+      "observed_utc": "2026-10-17T20:11:11.036+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00232",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00232.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00232.body.json.gz",
+      "start_utc": "2026-10-17T20:11:10.883+00:00",
+      "end_utc": "2026-10-17T20:11:11.036+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:11 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5652851",
+        "params": null
+      },
+      "raw_sha256": "29d9ca1cfcb6324a3b09642802d3e08fe7fc2be8c1eec388dd441044663e2493",
+      "gzip_sha256": "c71b72319a6c64a17f2d4ffbe8057a861cba033a23f750b3905da5268f0e1bc6",
+      "raw_bytes": 4495,
+      "gzip_bytes": 2006
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "115422971585134443345484347738384717388191025414692111997355688368719780137520",
+      "2875875822077494715825955740202316434093697536202120983794330922286614408929"
+    ],
+    "current_description_sha256": "754c5efc02b8ae5b0b20af1441faa33c6151e1ddfd728f3b0ee1e93d21899ff9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:11.146516+00:00",
+  "question": "Will Sivasspor vs. Sariyer SK end in a draw?",
+  "market_id": "5652851",
+  "valuation_author": "primary_operator",
+  "original_index": 1828,
+  "report_sha256": "0e1bbf7220586f535ac91e45bae3b138ad023f51733bd3a4269dddcbadbf6672"
+}

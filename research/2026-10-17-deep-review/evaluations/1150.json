@@ -1,0 +1,72 @@
+{
+  "review_index": 1150,
+  "condition_id": "0x4fab764b8cd1adcdbeacdb5814e7c6cca9c3a5b9dfb7255b0604772aae43ec2e",
+  "criteria_sha256": "abdaf9d1091bb27120446c4c49bcad27a64a21675fc6aa618f645407d7e1e755",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5362461",
+      "observed_utc": "2026-10-17T20:11:02.796+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00148",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00148.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00148.body.json.gz",
+      "start_utc": "2026-10-17T20:11:02.723+00:00",
+      "end_utc": "2026-10-17T20:11:02.796+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:02 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5362461",
+        "params": null
+      },
+      "raw_sha256": "11929f0a894abf938447d13d8f08914eca641297fdae1d4c4d82b28bef694491",
+      "gzip_sha256": "7b0dc241a7c038b0b91a5b656131ebd8ac0c1fab4e6c745ff1aeabff373535de",
+      "raw_bytes": 3815,
+      "gzip_bytes": 1806
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "92864933406736075728363845983298215995936470016321056485703211558790430864197",
+      "78506470423566779638089134853428296647256857039298949011448027066755634063171"
+    ],
+    "current_description_sha256": "d1d8954b588e8ea0dc86fa0441dc7a567043916bbb5e9529cd32283134b4259c"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:46.747698+00:00",
+  "question": "Will Zelenskyy post 100-119 posts from October 9 to October 16, 2026?",
+  "market_id": "5362461",
+  "valuation_author": "primary_operator",
+  "original_index": 1150,
+  "report_sha256": "79b460fd4b2a20b97c33e84d6a2daff284d0268a06e8b1de70bdf707b68abf51"
+}

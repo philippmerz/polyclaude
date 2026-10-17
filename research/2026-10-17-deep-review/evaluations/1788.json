@@ -1,0 +1,72 @@
+{
+  "review_index": 1788,
+  "condition_id": "0x7a40df1c3ae163a35bf9ca681b196acb22b7dacdc675c751cdb6e7ec175ebed8",
+  "criteria_sha256": "bf00be342014d3041a6d470c31838356bacc711928dc8b401c679766fccf13bc",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264426",
+      "observed_utc": "2026-10-17T20:11:10.303+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00225",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00225.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00225.body.json.gz",
+      "start_utc": "2026-10-17T20:11:10.232+00:00",
+      "end_utc": "2026-10-17T20:11:10.303+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:10 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264426",
+        "params": null
+      },
+      "raw_sha256": "8d0cdab94a19b0ce27547db04e60b47696896e2d47c9a4a300df5f121e35da04",
+      "gzip_sha256": "039cabdd4084e7d1a1e8805998741db8403b03177b879488b6bbb7503095b782",
+      "raw_bytes": 4814,
+      "gzip_bytes": 2159
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "52990889116557339231057825304248780633425475132558483644758942427088221037587",
+      "3805799431377222644913007923567513947774104064372186746974962062352769922293"
+    ],
+    "current_description_sha256": "4a043fb36564365b0414efe79d17d6623d3befa7c9464d7430a760c4b073c930"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:09.058519+00:00",
+  "question": "SV 07 Elversberg leading at halftime?",
+  "market_id": "5264426",
+  "valuation_author": "primary_operator",
+  "original_index": 1788,
+  "report_sha256": "a5cbd93de343a32e92d2ab6cdcf682ee6a4f562750a725929c9ae102817da0e3"
+}

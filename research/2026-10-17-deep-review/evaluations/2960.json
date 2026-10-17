@@ -1,0 +1,72 @@
+{
+  "review_index": 2960,
+  "condition_id": "0xcd8618c6c9eea8ca82e75bc4bec8cc22f27823d05630ecb24786219c0bf3fa5a",
+  "criteria_sha256": "5ceb521dbaca8daed58c332ad64bf4721614c1c3f1dafdde0bfd2a7e3cc5134c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5272751",
+      "observed_utc": "2026-10-17T20:11:27.061+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00382",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00382.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00382.body.json.gz",
+      "start_utc": "2026-10-17T20:11:26.958+00:00",
+      "end_utc": "2026-10-17T20:11:27.061+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:27 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5272751",
+        "params": null
+      },
+      "raw_sha256": "ece4eaf0f7d51f9638683f4e02260a7999f73c76e0d5f66e918916bad82a2226",
+      "gzip_sha256": "ac21926b0d5359446553d0c7e83f09b114d75578ae95aa72474ddb8fbb1aa4a8",
+      "raw_bytes": 4804,
+      "gzip_bytes": 2150
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Leyton Orient FC",
+      "Blackpool FC"
+    ],
+    "current_token_ids": [
+      "25756269137443354719813233786595019696029494310479993563144494113996126223506",
+      "92997907122585370847342468710530736137345039100808226332706618206301314300039"
+    ],
+    "current_description_sha256": "259063270b1bb96db443df10716ae4c546e44fb53ba392e8895e54e6483a8e83"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:24.720107+00:00",
+  "question": "Spread: Leyton Orient FC (-2.5)",
+  "market_id": "5272751",
+  "valuation_author": "primary_operator",
+  "original_index": 2960,
+  "report_sha256": "f0c0dfb47a422216652aaf66e8ad1d5ce0bd72f8dc4d16f9aa24a8321ccbe3b3"
+}

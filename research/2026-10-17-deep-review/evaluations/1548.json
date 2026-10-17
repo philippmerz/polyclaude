@@ -1,0 +1,72 @@
+{
+  "review_index": 1548,
+  "condition_id": "0x3cf5b0e545eb77682b34b11b343ac374f4eece86465fbef96bce619420b46b85",
+  "criteria_sha256": "a835afee9b923c97b294ea902f0067d4dd61a1aab172f26c02d812774b3fc440",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5246948",
+      "observed_utc": "2026-10-17T20:11:06.960+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00191",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00191.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00191.body.json.gz",
+      "start_utc": "2026-10-17T20:11:06.940+00:00",
+      "end_utc": "2026-10-17T20:11:06.960+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:06 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5246948",
+        "params": null
+      },
+      "raw_sha256": "b5f2a8b99ebc7b73390793a7e73b3a2d23ff09e03c833e05a0766f74e279a5b1",
+      "gzip_sha256": "6e871602169bd3a8c37fa317a833bdafea626a335ef4171be1894ad689f01dbf",
+      "raw_bytes": 4719,
+      "gzip_bytes": 2110
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "100531527499735078040075028531170181957834881125774999584268579723274884165934",
+      "32639380641695722173089855239767913904549899401745358672748483677747928087550"
+    ],
+    "current_description_sha256": "90c5a97ee9269602da794577709d5387a423f99a6f6e7242b37fcb9d3c717a69"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:58.801549+00:00",
+  "question": "Will NEOM SC win on 2026-10-17?",
+  "market_id": "5246948",
+  "valuation_author": "primary_operator",
+  "original_index": 1548,
+  "report_sha256": "2ef82c0fbe375985dfa1a51aeddb79a87dff4daac8243c9e40905cbf4c260b09"
+}

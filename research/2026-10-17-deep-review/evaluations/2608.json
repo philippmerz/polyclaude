@@ -1,0 +1,72 @@
+{
+  "review_index": 2608,
+  "condition_id": "0x26ff613d297151e9c7e7b44774ce10f78b3ca2023b5141f334937e4c6cbcffe2",
+  "criteria_sha256": "8e8cb74353454193732bdc5097dd80c05cc91e0fd513cc6a39917137d5609c99",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5272811",
+      "observed_utc": "2026-10-17T20:11:22.215+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00342",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00342.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00342.body.json.gz",
+      "start_utc": "2026-10-17T20:11:22.112+00:00",
+      "end_utc": "2026-10-17T20:11:22.215+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:22 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5272811",
+        "params": null
+      },
+      "raw_sha256": "424e7df268889ae3bc49dc9de49f36dfab33064d82c382fe854da7a55fadd711",
+      "gzip_sha256": "e564b2f72cebbdb9430c030e974430e8930129e340069bb3adbc75a2854f9839",
+      "raw_bytes": 4765,
+      "gzip_bytes": 2126
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Leicester City FC",
+      "Doncaster Rovers FC"
+    ],
+    "current_token_ids": [
+      "21847964948077476552813004230001017533844724251724787249012197994282807068725",
+      "104910889019152519320824657179205644583558457648134552921363219193444909710268"
+    ],
+    "current_description_sha256": "87f8ccd54a45791c4bdd5bd5ffb764f396e708e7dac1c304190f43bada0295d9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:35.266686+00:00",
+  "question": "Spread: Leicester City FC (-2.5)",
+  "market_id": "5272811",
+  "valuation_author": "primary_operator",
+  "original_index": 2608,
+  "report_sha256": "89cd81a73e32292119714bf68d947d35aa5d2307aa9ca9a90f02e759b5cdc730"
+}

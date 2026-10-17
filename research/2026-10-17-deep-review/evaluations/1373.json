@@ -1,0 +1,72 @@
+{
+  "review_index": 1373,
+  "condition_id": "0xf6eb86ca0dc335de71f5eaf8de8afdb729882c5bad64642f1dc951026d8987e9",
+  "criteria_sha256": "863ff5a9d1a8884a274f218ff220cdd2c06f323de1a3b9b2564e063fbac97b44",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5274647",
+      "observed_utc": "2026-10-17T20:11:05.350+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00175",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00175.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00175.body.json.gz",
+      "start_utc": "2026-10-17T20:11:05.262+00:00",
+      "end_utc": "2026-10-17T20:11:05.350+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:05 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5274647",
+        "params": null
+      },
+      "raw_sha256": "55fa56c4a4c421022b5bb0d1dba81b4d76a33f9659cdf80f84b2aa78221624d3",
+      "gzip_sha256": "f9ac312580469ed17280bc9a85ba75964a11480009673c07619f1231d848f00b",
+      "raw_bytes": 4808,
+      "gzip_bytes": 2168
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "80225936296194672597882465692892634232423018939411761517742013193837638172265",
+      "105269927987618054586159504827419357309422253307240443733074252505079887317629"
+    ],
+    "current_description_sha256": "275abda9e676e997b1258bc90a4b737c98181731ca3b2c68c1439d99f83b7a27"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:54.268995+00:00",
+  "question": "Colchester United FC vs. Exeter City FC: O/U 2.5",
+  "market_id": "5274647",
+  "valuation_author": "primary_operator",
+  "original_index": 1373,
+  "report_sha256": "c15f4e95c28a487e06e176b8b98ad8d63d4ef31e8cf907f077e4bbceeb2a6de1"
+}

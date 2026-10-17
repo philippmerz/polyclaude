@@ -1,0 +1,72 @@
+{
+  "review_index": 2180,
+  "condition_id": "0xa29edb19560166dce5c0b8e7aad1af943ffe25235a037cb870b59bf1a440d615",
+  "criteria_sha256": "ba72c75e3f3828c5d6ce3a89cccaa8fce76b0bc3a89cd91b7d8903995fe1d19b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5308814",
+      "observed_utc": "2026-10-17T20:11:15.531+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00276",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00276.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00276.body.json.gz",
+      "start_utc": "2026-10-17T20:11:15.462+00:00",
+      "end_utc": "2026-10-17T20:11:15.531+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:15 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5308814",
+        "params": null
+      },
+      "raw_sha256": "10c4c488f574dfa8e10aff0a43c688a8b992adfd9e0b8d69f55457ac7d15a6ee",
+      "gzip_sha256": "e19409dc17a43953dd42ac632207315df9fdddee8975dc93851e9cf8dfd9bd6f",
+      "raw_bytes": 4767,
+      "gzip_bytes": 2153
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "93438636543044997619169225097813107156528067095441622990472594622033486544202",
+      "24150344991066161891531721807485397131070829040138963940175927541932003591786"
+    ],
+    "current_description_sha256": "d3e9ce8e0dd410ac5ebfdf5ae553b9cf47c7c904090fc89c7294440479c2b443"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:54.999194+00:00",
+  "question": "Aberdeen FC vs. St Mirren FC: O/U 2.5",
+  "market_id": "5308814",
+  "valuation_author": "primary_operator",
+  "original_index": 2180,
+  "report_sha256": "2ec059eda4f3db83c809fac5c3a7e5c9c5fc2219f2239ed70f569b8cc7f6c2b9"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 2241,
+  "condition_id": "0xbd785f56f0a2f1cf04736a125b7aa06ba8ea6fc6740ba7f3d25fcd733f1a6c01",
+  "criteria_sha256": "d50ab6b445f577b7c6d68e8a7405d20af352e082061acb8a4db89f384329faaa",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720790",
+      "observed_utc": "2026-10-17T20:11:16.642+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00288",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00288.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00288.body.json.gz",
+      "start_utc": "2026-10-17T20:11:16.541+00:00",
+      "end_utc": "2026-10-17T20:11:16.642+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:16 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720790",
+        "params": null
+      },
+      "raw_sha256": "a0d5acb07fbefb888c0320984458a585cb707e504440bfc7132467bb00adcb0a",
+      "gzip_sha256": "d9b93a00c2ca8bc77ea36e53ea47ca7fddf631e0eacbaff92481d17ca5b86e03",
+      "raw_bytes": 5345,
+      "gzip_bytes": 2337
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "66798569735319562716641478900235587333361757269140785650452346854481047848479",
+      "108501901231103212704917045041917330275485014061562695524094748919982371135008"
+    ],
+    "current_description_sha256": "b1f676434f8c1f59cf120598460019134c93135e32b24c36789cab59658c48b9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:12.222278+00:00",
+  "question": "Will the highest temperature in Singapore be 33°C on October 17?",
+  "market_id": "5720790",
+  "valuation_author": "primary_operator",
+  "original_index": 2241,
+  "report_sha256": "ecf16cea167d50d5a6e8457d8993cc631eadb885923873ea64547c81ffb3f952"
+}

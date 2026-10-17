@@ -1,0 +1,72 @@
+{
+  "review_index": 2568,
+  "condition_id": "0x472d297bfb06238069381353d0f60e077f1cf6ac52ba2afce1c8f4298b63e09c",
+  "criteria_sha256": "3519fe67dd32eb403c9fde48a5af0287f4b69fadbcc8afa609b5b7f13c32f527",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5529005",
+      "observed_utc": "2026-10-17T20:11:21.730+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00338",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00338.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00338.body.json.gz",
+      "start_utc": "2026-10-17T20:11:21.619+00:00",
+      "end_utc": "2026-10-17T20:11:21.730+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:21 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5529005",
+        "params": null
+      },
+      "raw_sha256": "0a1649bb8649a2a9d9b43773e8b4704c935602a23bae82bb735c06882415c07c",
+      "gzip_sha256": "8e7063fef781675a773ded544c2278e99038a31cbcfe083477396a4e6df90fab",
+      "raw_bytes": 4481,
+      "gzip_bytes": 2059
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "9623699470188953778088076178073390812193945590792065965439650831449457147209",
+      "13491650235092531745616732819504604534107470780560890364945724093785319265271"
+    ],
+    "current_description_sha256": "10cc84d2ef36bc0fe955ff6502925fc444ab9faea08d70c078ae58ac0aab759e"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:30.518120+00:00",
+  "question": "Exact Score: Arsenal WFC 1 - 1 Birmingham City WFC?",
+  "market_id": "5529005",
+  "valuation_author": "primary_operator",
+  "original_index": 2568,
+  "report_sha256": "3f4cfba84c2808653655ab735a004819c2b3a15e018d462cd83229281b676979"
+}

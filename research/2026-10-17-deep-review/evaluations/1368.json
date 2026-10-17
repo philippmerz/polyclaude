@@ -1,0 +1,72 @@
+{
+  "review_index": 1368,
+  "condition_id": "0xc144a6f0fd45634d3154a1e2d1a525f573a73d2010e6cffc8d85d37f2889e781",
+  "criteria_sha256": "4edf0bc2fde92868ca79559b608b21fbee8b72ebf609958b8283ff2880fb4b9b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5242485",
+      "observed_utc": "2026-10-17T20:11:05.260+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00174",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00174.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00174.body.json.gz",
+      "start_utc": "2026-10-17T20:11:05.189+00:00",
+      "end_utc": "2026-10-17T20:11:05.260+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:05 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5242485",
+        "params": null
+      },
+      "raw_sha256": "de279d5d5949ea9b513c1667c3c450f70e7c010307048a9d00903b2b18287757",
+      "gzip_sha256": "b9a6db1c9369e06ffe423ae8c50ca1172f37bf4dc7539d29f5ad6a6cda9b198f",
+      "raw_bytes": 4740,
+      "gzip_bytes": 2117
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "99572544687482672655508057998512715859534287791300558111855183478408641452094",
+      "109558634442229459294695980644500548589566867898774864052061959974550143626601"
+    ],
+    "current_description_sha256": "b563371dae5e34b61a372661ec363f212e84042c36ae73e1d36227c9fd38e447"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:53.930871+00:00",
+  "question": "Will FK Fakel Voronezh win on 2026-10-17?",
+  "market_id": "5242485",
+  "valuation_author": "primary_operator",
+  "original_index": 1368,
+  "report_sha256": "02d09456b54e5e0d4664478ea6bd4e114aab3885d5bfb6dfda1a78f0122aba56"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 1248,
+  "condition_id": "0x4e447c1adb559d5d455794e6e108f09c0c63731e58fb3a7b014dc209a8ea973f",
+  "criteria_sha256": "4772f4b82c5b48e42540c63e6b376f98a7c4c6768f8c27723e0178f3cc710ccd",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5792119",
+      "observed_utc": "2026-10-17T20:11:03.804+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00159",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00159.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00159.body.json.gz",
+      "start_utc": "2026-10-17T20:11:03.749+00:00",
+      "end_utc": "2026-10-17T20:11:03.804+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:03 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5792119",
+        "params": null
+      },
+      "raw_sha256": "7825a8b0958da6b9aecd7d3468edae26d456baf2bd7ee0ce11add654bf2892c3",
+      "gzip_sha256": "1056e393adfa4042c78b7d4a1bcf3b24772942caedd92423e8140b3714599419",
+      "raw_bytes": 5354,
+      "gzip_bytes": 2379
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Lilmix",
+      "MORROW"
+    ],
+    "current_token_ids": [
+      "28624911582067564494946274515804010309615304146875244966179623772827030331834",
+      "56849278011451320920400551833791248634651680760353737481336773082089820992815"
+    ],
+    "current_description_sha256": "dad898802a3e6e0d5de66e5f3cb00395b6fb6c0b1b06f916342b184a234b7420"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:49.811029+00:00",
+  "question": "Counter-Strike: Lilmix vs MORROW (BO3) - CCT Europe Closed Qualifier: Series #12 Group C",
+  "market_id": "5792119",
+  "valuation_author": "primary_operator",
+  "original_index": 1248,
+  "report_sha256": "51ca7fcc0efa72ae657e04ee9872c63a6b1388b1bcfc6fa16bf99360599dbd56"
+}

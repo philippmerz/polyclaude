@@ -1,0 +1,72 @@
+{
+  "review_index": 2085,
+  "condition_id": "0xab128516152ad12c794180b4ca8bf66dea275511416fb9deb37eaa202330b993",
+  "criteria_sha256": "a2e385a9c6145bd335c1af6402ff699a71b807eae07f1304d36e17cbb361dd39",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5506691",
+      "observed_utc": "2026-10-17T20:11:14.103+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00260",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00260.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00260.body.json.gz",
+      "start_utc": "2026-10-17T20:11:14.085+00:00",
+      "end_utc": "2026-10-17T20:11:14.103+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:14 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5506691",
+        "params": null
+      },
+      "raw_sha256": "059bde1599e5bfabf437b63ace01b2cd990954bbf224340f4e00f3a9e0382427",
+      "gzip_sha256": "7c84498b7981cc978ddec754be01443ef57724cee67176ff67c27620b866c763",
+      "raw_bytes": 3533,
+      "gzip_bytes": 1664
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "95583176557195730390950049558084212229436823589630926214871208739392369701356",
+      "72585059024759033091111915162412895665354984756653421407724200128268582586922"
+    ],
+    "current_description_sha256": "1c27bfa87e1c4896178339e781cc68a24f145471680748e7228d8eb84b533e39"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:30.507091+00:00",
+  "question": "Will the price of Bitcoin be above $82,000 on October 17?",
+  "market_id": "5506691",
+  "valuation_author": "primary_operator",
+  "original_index": 2085,
+  "report_sha256": "d24367544f670d4c7328025e0e3949108d95ff9db6f4fbd65c2295190154212d"
+}

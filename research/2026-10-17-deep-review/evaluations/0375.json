@@ -1,0 +1,72 @@
+{
+  "review_index": 375,
+  "condition_id": "0x1f655f2392441feb10198f47601cc73c5feb4989bc5188069c6874a8c25534d2",
+  "criteria_sha256": "1fa56ce760c3f9b6869eff73e392015900e0fd1ccb07d7a81c638a0f8d9851c6",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5790755",
+      "observed_utc": "2026-10-17T20:10:54.789+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00060",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00060.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00060.body.json.gz",
+      "start_utc": "2026-10-17T20:10:54.718+00:00",
+      "end_utc": "2026-10-17T20:10:54.789+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:54 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5790755",
+        "params": null
+      },
+      "raw_sha256": "b45ffdc334a389460537547462ffe70c0a28eb082d9967ec0d382d68dbd4c279",
+      "gzip_sha256": "04c1f401f2976df4dc1eec9803bd5c59f3e5800010ec242a1a02294ea2e13817",
+      "raw_bytes": 4267,
+      "gzip_bytes": 1913
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Kimmer Coppejans",
+      "Andrea Guerrieri"
+    ],
+    "current_token_ids": [
+      "39736092139757841056783730290781969602188306115742790668824490279572793827574",
+      "115441908302036384377673088757160659933072368476656696542983124928161652068501"
+    ],
+    "current_description_sha256": "5610584506c6cae2a1275de875b8c6341acf982e14e7dba08453638d005dffaf"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:19.599104+00:00",
+  "question": "European Open, Qualification: Kimmer Coppejans vs Andrea Guerrieri",
+  "market_id": "5790755",
+  "valuation_author": "primary_operator",
+  "original_index": 375,
+  "report_sha256": "18c235eff830721e1083859375cff4774aac6694c7499af879d466a9113154ac"
+}

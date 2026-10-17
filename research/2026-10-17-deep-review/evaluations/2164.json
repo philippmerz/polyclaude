@@ -1,0 +1,72 @@
+{
+  "review_index": 2164,
+  "condition_id": "0x1014148460aa979bf48451a1e12211ccd91051a0d03a3b6a91fa32c5fd38f479",
+  "criteria_sha256": "79e078d5b7050034c86864edbd12c705cfc1e2321d638b96b3a330c85100974e",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1735320",
+      "observed_utc": "2026-10-17T20:11:15.283+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00273",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00273.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00273.body.json.gz",
+      "start_utc": "2026-10-17T20:11:15.198+00:00",
+      "end_utc": "2026-10-17T20:11:15.283+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:15 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/1735320",
+        "params": null
+      },
+      "raw_sha256": "4cb46888dcd7d45563ebc467b94ff28675620fcd5a6564af85369122f0d76b2a",
+      "gzip_sha256": "38795a9e31c369f1da7c83f1875b9f3e22f41b4623203c291b277896f11bc826",
+      "raw_bytes": 3734,
+      "gzip_bytes": 1793
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "100246384542883292829660975056634369403253372406654420270632394309426557476049",
+      "36683122172375178208730234068181327853059933757062501292281486633895673493716"
+    ],
+    "current_description_sha256": "26460ebd63a108fd3ee1a8425101b6cd653757ac15af989f648e0c1785257e42"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:50.007284+00:00",
+  "question": "Will Marcus Semien win the 2026 AL Platinum Glove award?",
+  "market_id": "1735320",
+  "valuation_author": "primary_operator",
+  "original_index": 2164,
+  "report_sha256": "4eeca1ceb9b8c967d91bb06fcd774322c164f6ce496b6ba13465df23d5f464e2"
+}

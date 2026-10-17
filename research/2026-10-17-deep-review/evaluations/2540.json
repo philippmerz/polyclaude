@@ -1,0 +1,72 @@
+{
+  "review_index": 2540,
+  "condition_id": "0x5e1016752d18c177d730d9cb4bb8303b543f6f3c0787bf856b134e06c4272f09",
+  "criteria_sha256": "debcc6cd60a0c2431d296db33a56ea6f3b164c51cd5aa803d3e47d24d02b71ed",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263988",
+      "observed_utc": "2026-10-17T20:11:21.143+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00333",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00333.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00333.body.json.gz",
+      "start_utc": "2026-10-17T20:11:21.069+00:00",
+      "end_utc": "2026-10-17T20:11:21.143+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:21 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263988",
+        "params": null
+      },
+      "raw_sha256": "b22d5e84fe5aad60ea1787ba3434f6f1508b4cb85e063fd2336a78ff2198f909",
+      "gzip_sha256": "86ed2ee7bf880a7b5050b4a7a31cdad1d4059a5f5d503dcef34b615160bcb21e",
+      "raw_bytes": 4888,
+      "gzip_bytes": 2206
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "104470045622955202376696780774379481075624371760947893815912520722733572253699",
+      "19008109672058479699094215256270650339937818412972875650850003307630961695541"
+    ],
+    "current_description_sha256": "0335e8e892144af5615f5863e09b2580d282899e7ea4d2ae7784498bf1cb9cd9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:23.493935+00:00",
+  "question": "Exact Score: RC Strasbourg Alsace 3 - 3 Paris Saint-Germain FC?",
+  "market_id": "5263988",
+  "valuation_author": "primary_operator",
+  "original_index": 2540,
+  "report_sha256": "755223acb1634c2f7d54d360ad4913da8aa3dada71453d945d84c8f7abf8f38e"
+}

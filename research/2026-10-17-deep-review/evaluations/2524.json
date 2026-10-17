@@ -1,0 +1,72 @@
+{
+  "review_index": 2524,
+  "condition_id": "0x6e5899f3db83e5a70394851f36d4f763d2feb27f55291d7a5641ad6e77bf1af4",
+  "criteria_sha256": "e7d20ac5425c5107879ed5e54f903405cdda039b7bb104e8cf84934c87bd7db3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5614366",
+      "observed_utc": "2026-10-17T20:11:21.067+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00332",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00332.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00332.body.json.gz",
+      "start_utc": "2026-10-17T20:11:20.982+00:00",
+      "end_utc": "2026-10-17T20:11:21.067+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:21 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5614366",
+        "params": null
+      },
+      "raw_sha256": "005887f38f31bcc962805b2908976eff8ce032598a9edc873fff0d33defb85a1",
+      "gzip_sha256": "26432f5e7c27edfe8834c163a21842f2cd77acfe9707373a52e1be7791d39374",
+      "raw_bytes": 4948,
+      "gzip_bytes": 2233
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "67510266604148799644771624411934594755480609143759524302836443905198992008127",
+      "49096360524021817823161171143459663785336080009363769158101830045125545429631"
+    ],
+    "current_description_sha256": "176ccee3e105bdd0d8d90e918cf89bc7fdd66319709f73fa74ff7a37d382b2a1"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:21.989143+00:00",
+  "question": "Keflavik IF vs. KR Reykjavik: 1st Half O/U 2.5",
+  "market_id": "5614366",
+  "valuation_author": "primary_operator",
+  "original_index": 2524,
+  "report_sha256": "7af266d6a88024c93c2f851cdb5168bec6d82701c90fab37cc53a05add73fe04"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 994,
+  "condition_id": "0x567b548b6117f09b8c28637e0fdde610c17fe9d1284eeb3f8a7125c6f0fcadd5",
+  "criteria_sha256": "ba66803faf10eca9ab17a5a5aca2790bfe405572e35cc8ad4dcb0abec9a55ca1",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5420212",
+      "observed_utc": "2026-10-17T20:11:00.841+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00127",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00127.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00127.body.json.gz",
+      "start_utc": "2026-10-17T20:11:00.778+00:00",
+      "end_utc": "2026-10-17T20:11:00.841+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:00 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5420212",
+        "params": null
+      },
+      "raw_sha256": "2943c8052e7b49f3b5b8a8ad9d50d78731d94151003f5993e6c7c88e1ada64ff",
+      "gzip_sha256": "945f0495a32e93d51462433783a16a3a1bd4ce2a020842999b3bc97877dc44c3",
+      "raw_bytes": 3732,
+      "gzip_bytes": 1792
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "10387521631758388907836743500497004441407101312854024436362136162449714976393",
+      "66417901089560188499589944255140714699631022362537949527582568303308548850645"
+    ],
+    "current_description_sha256": "1284ea5bce698f9f2cddbfca9b015454653aab053e247b6fb11e3d1ce9be2128"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:39.868328+00:00",
+  "question": "Will MrBeast Gaming's next video get 55 million or more views in week 1?",
+  "market_id": "5420212",
+  "valuation_author": "primary_operator",
+  "original_index": 994,
+  "report_sha256": "36d2d9106928a46cabc4d28b8b5c65c8a1c51af8247c5dae1193039a934721c1"
+}

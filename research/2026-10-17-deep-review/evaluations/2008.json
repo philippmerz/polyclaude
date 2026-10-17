@@ -1,0 +1,72 @@
+{
+  "review_index": 2008,
+  "condition_id": "0xa6ac6914a792b3c6d21b31ab62d2f853e2bade01e2b82e4bd42a312093593d83",
+  "criteria_sha256": "c2e55c560acd36afbfb39607812e92ccd1daede7b9a1351d686fec0acc54db3f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5686833",
+      "observed_utc": "2026-10-17T20:11:13.210+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00254",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00254.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00254.body.json.gz",
+      "start_utc": "2026-10-17T20:11:13.125+00:00",
+      "end_utc": "2026-10-17T20:11:13.210+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:13 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5686833",
+        "params": null
+      },
+      "raw_sha256": "4e9b695fa2f50fd4f8a088e30c83ec787c8f1e129f94ed1be7a66f64af0c4c45",
+      "gzip_sha256": "20b1f891642414a4bb31857c31844f77ae5a22aedb50727961f50ff0a1ac2944",
+      "raw_bytes": 4449,
+      "gzip_bytes": 1989
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "7768911486785401437011624507432447859923208165072594234308294918199225560573",
+      "38390430668877619485559433496310539360372906990448145020291939956241774995385"
+    ],
+    "current_description_sha256": "a081278dfc5211990357b687babac2ef3048bdca8540e2e6b4ff89e0e704e577"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:22.976740+00:00",
+  "question": "Will Alemannia Aachen win on 2026-10-17?",
+  "market_id": "5686833",
+  "valuation_author": "primary_operator",
+  "original_index": 2008,
+  "report_sha256": "164b4704dc528cc0d7d3d23a7eea245fb79ff561793f6b708ea0cc6f819e19de"
+}

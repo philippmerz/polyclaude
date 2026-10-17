@@ -1,0 +1,72 @@
+{
+  "review_index": 746,
+  "condition_id": "0x06a294f80cd2b95d0b4d4772b669ab7060776cab6e279b8bddfa29be6fbf0fc8",
+  "criteria_sha256": "c29c7da3d79adc8b74c4883456af92dce269b1dbb40adfdbfdfaaed96da9035e",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5609708",
+      "observed_utc": "2026-10-17T20:10:58.744+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00105",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00105.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00105.body.json.gz",
+      "start_utc": "2026-10-17T20:10:58.662+00:00",
+      "end_utc": "2026-10-17T20:10:58.744+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:58 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5609708",
+        "params": null
+      },
+      "raw_sha256": "d62ac9f1920a5681990a112d7fe1a339aefda3f2f45d90faca28adc45a8ece97",
+      "gzip_sha256": "0076261146c17c71bc148d444b779bd5a1883fdd41691dcc4f4fb706d6881c3a",
+      "raw_bytes": 3727,
+      "gzip_bytes": 1729
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "68935438253752753786115109067851646956848916969291348930302945724247885365120",
+      "92895414071742536319809076951279645143945951841809293939671978794818282966028"
+    ],
+    "current_description_sha256": "4fa0592c0cc5f205e8940fd0f59ab11a47cb6cf4e8d7119f8ea004f38f58f66f"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:33.383510+00:00",
+  "question": "Will Aurora Win the Thunderpick World Championship 2026?",
+  "market_id": "5609708",
+  "valuation_author": "primary_operator",
+  "original_index": 746,
+  "report_sha256": "f543ac9c2dcec755dcd737b9b2c0affa6f9bbe63830d1a86e1af19ded0c159ef"
+}

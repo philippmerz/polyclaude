@@ -1,0 +1,72 @@
+{
+  "review_index": 2417,
+  "condition_id": "0x3a6d39adffd141a6c02349aa0e99d6241a61ab96e754ea200496da440044845c",
+  "criteria_sha256": "e904e04135f33464202d74690ca28c69192e8cec0e3423c0bd21089840fd571f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5506714",
+      "observed_utc": "2026-10-17T20:11:19.816+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00320",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00320.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00320.body.json.gz",
+      "start_utc": "2026-10-17T20:11:19.731+00:00",
+      "end_utc": "2026-10-17T20:11:19.816+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5506714",
+        "params": null
+      },
+      "raw_sha256": "0500659d1dfd1612bd84d2cb81c42c50889c68ae35e5fa0db817aaca6eccd580",
+      "gzip_sha256": "7c53b136ac44677943fecfbe542f8e440b8df9670e06524271a9d6cde7062583",
+      "raw_bytes": 3465,
+      "gzip_bytes": 1643
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "22744823860194669353191539427267835091526371185826311113241911281108538857492",
+      "37904796711441007783480429335360957626219024246905851474369568386778147741210"
+    ],
+    "current_description_sha256": "976656871de3d36672b78524ea71520e81f2dc2cfeb9a229b094d22078aa5fbc"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:06.518344+00:00",
+  "question": "Will the price of Solana be above $100 on October 17?",
+  "market_id": "5506714",
+  "valuation_author": "primary_operator",
+  "original_index": 2417,
+  "report_sha256": "aa8d32d0b82f7851c0457750e447da6d1363e2975e62bfdf578037ea8f4d500a"
+}

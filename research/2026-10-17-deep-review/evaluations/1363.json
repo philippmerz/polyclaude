@@ -1,0 +1,72 @@
+{
+  "review_index": 1363,
+  "condition_id": "0x45ae6d148915222b2de08eaed3a7301eabd31e132ceb168c2db95526cc251b5f",
+  "criteria_sha256": "679fb98bd5eeeebc367ab909d83c685aaed7c8e99693abbc09c7489cb8e4d32b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273160",
+      "observed_utc": "2026-10-17T20:11:05.187+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00173",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00173.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00173.body.json.gz",
+      "start_utc": "2026-10-17T20:11:05.108+00:00",
+      "end_utc": "2026-10-17T20:11:05.187+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:05 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5273160",
+        "params": null
+      },
+      "raw_sha256": "b43292ab58c093f08ac26d761f5c4b2ac5decba5c89d98437050eec7de239c40",
+      "gzip_sha256": "9a2aad397fa18a843eef71832a25039ad663b77cab8dcf48c8aabb3a7bb979e2",
+      "raw_bytes": 4491,
+      "gzip_bytes": 1999
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "30394096200032759231706167834662951541672863699556812882027204761239185854984",
+      "38421234112245497102033746340479374676287638087384350576337562274330129710438"
+    ],
+    "current_description_sha256": "2f370ddde396df647acbb32a0a87b9789b7429456884281a403b0ff46e8ae160"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:53.605562+00:00",
+  "question": "Will FK Kudrivka win on 2026-10-17?",
+  "market_id": "5273160",
+  "valuation_author": "primary_operator",
+  "original_index": 1363,
+  "report_sha256": "19ca915d9b2026955c8afa3f654138272b59b27ef045a6714b5e383ec5c5dc43"
+}

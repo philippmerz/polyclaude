@@ -1,0 +1,72 @@
+{
+  "review_index": 1573,
+  "condition_id": "0x6796467cba7892f467731e5bd472d22de238abd32fb2da4fdbc8e2d3d5c08c82",
+  "criteria_sha256": "c729d0da42ad6035d525ea62686f7af87203259d5ce147c1f6eeec48336ee750",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264288",
+      "observed_utc": "2026-10-17T20:11:07.471+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00196",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00196.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00196.body.json.gz",
+      "start_utc": "2026-10-17T20:11:07.382+00:00",
+      "end_utc": "2026-10-17T20:11:07.471+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:07 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264288",
+        "params": null
+      },
+      "raw_sha256": "cb6923fb05bc1a8c5ba491e9184cc8f3a9a597deb07ca08d552b286e68c4fda1",
+      "gzip_sha256": "6727907686b80115e69cd56943fdf2584c04fb10336cdb511163cd8a43844c8e",
+      "raw_bytes": 4807,
+      "gzip_bytes": 2161
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "3992200247666505870105329471183223385643396052737847601537952623197067554639",
+      "102939446895417783693639141949628311545666269227249053596445150142519391475054"
+    ],
+    "current_description_sha256": "09f15032225d057f12a99339c8717d4141625245b430f4e1b7e8ddc3044a1cec"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:00.194964+00:00",
+  "question": "Exact Score: 1. FC Union Berlin 0 - 0 BV Borussia 09 Dortmund?",
+  "market_id": "5264288",
+  "valuation_author": "primary_operator",
+  "original_index": 1573,
+  "report_sha256": "2f694f788e76873e75e9b6beeb6b4eee28c878f410bdaa38aca1e464bc361253"
+}

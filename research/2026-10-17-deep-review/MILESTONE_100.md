@@ -1,5 +1,9 @@
 # First 100 primary valuations
 
+Later development: at20:52UTC, two small zero-filled post-only bids were verified
+LIVE; see [current follow-up](candidate_followup.md). The counts and no-order
+statement immediately below describe the20:31 milestone snapshot.
+
 October 17, 2026, 20:31 UTC. **100 conditions valued, 1 blocked after an
 in-depth investigation, 15 factual exclusions, 2,884 pending.** No trade has
 been placed from this review. Each completed case was saved immediately to an

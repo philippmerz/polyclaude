@@ -1,0 +1,72 @@
+{
+  "review_index": 2224,
+  "condition_id": "0xfc0c6a15e210c499c9ad2ad6cb37d7da56bf950cff6f3c8116e9bcb04ab53f9d",
+  "criteria_sha256": "3e86aee502c729ddeeced5e662ab27f09db0e2d581be433a7fc1fac4b9a7fa8d",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5707031",
+      "observed_utc": "2026-10-17T20:11:16.156+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00282",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00282.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00282.body.json.gz",
+      "start_utc": "2026-10-17T20:11:16.059+00:00",
+      "end_utc": "2026-10-17T20:11:16.156+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:16 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5707031",
+        "params": null
+      },
+      "raw_sha256": "de68953004d405997e5129c9ceb1f8fe912794b0477a74c282ed4995777bd537",
+      "gzip_sha256": "114318dd908753c17942460f42d7ebfe97e43deb9f8abe9ca9a7e0e29cf2fc80",
+      "raw_bytes": 4802,
+      "gzip_bytes": 2164
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "37408679397400088450065096447393308749934969606811011625704345081834269960070",
+      "91471669487931171825470736616754413091834425427541461142671344445643632292095"
+    ],
+    "current_description_sha256": "de33ff472f43a8920b31f3848fd52d29565292e8462cd51a1159d9e72f2d620c"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:02.962925+00:00",
+  "question": "FC Petrolul Ploieşti vs. Sepsi OSK: O/U 2.5",
+  "market_id": "5707031",
+  "valuation_author": "primary_operator",
+  "original_index": 2224,
+  "report_sha256": "28ef0582a07b66693e2d3a0e68dc95d5532f46dcd083c47baeff13d17de5f743"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 269,
+  "condition_id": "0x15368d92eb3a117280f0d064861a4603c8b61cd71d79c30bfeaf411e575de49e",
+  "criteria_sha256": "c0a5b30268bbfa32d7b4c9fdc89d454fec3349d9ef60f092d6e5d072998193d3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720778",
+      "observed_utc": "2026-10-17T20:10:53.448+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00043",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00043.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00043.body.json.gz",
+      "start_utc": "2026-10-17T20:10:53.391+00:00",
+      "end_utc": "2026-10-17T20:10:53.448+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:53 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720778",
+        "params": null
+      },
+      "raw_sha256": "9816fe6feb3e6fd9e8ce22bd79c4c251bdac75be60608ca268d7c12c954deb73",
+      "gzip_sha256": "8dbddf8ef12313aff5836c043375481d3549fd2e9808c0ea450166183ccdfd79",
+      "raw_bytes": 5377,
+      "gzip_bytes": 2350
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "8256288635271157090034038039728019146787604776779461523115101451019062923285",
+      "50356657047744993051564335257110878633543603731624165067737441188232291056869"
+    ],
+    "current_description_sha256": "0dfa76a903633871d33beaa64099c36f7084b853c49e4a79af8c549419f5c55a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:14.670580+00:00",
+  "question": "Will the highest temperature in Shanghai be 28°C on October 17?",
+  "market_id": "5720778",
+  "valuation_author": "primary_operator",
+  "original_index": 269,
+  "report_sha256": "c856d4ee38828a907e3db42dc89d99f87b027c613dd6713ff59663e4171dfdcc"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 1243,
+  "condition_id": "0xf71ed3d6eb43a01de2873121f172da2f4369e1a63f84272ef48a4012d4088bfa",
+  "criteria_sha256": "54102c1c9b1d13a78f1b2b1755cb81e5f8b23f12be2b311d48e3b79f1d40947a",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5266169",
+      "observed_utc": "2026-10-17T20:11:03.747+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00158",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00158.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00158.body.json.gz",
+      "start_utc": "2026-10-17T20:11:03.673+00:00",
+      "end_utc": "2026-10-17T20:11:03.747+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:03 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5266169",
+        "params": null
+      },
+      "raw_sha256": "ad48ffa9d31e2cf434c12ee631b28c4a9a80c55b00f98224478927b35d30e648",
+      "gzip_sha256": "99705dd865a4c91baf6bab90e60c1cda770d12d7a273f2995534ae0b2e4d7053",
+      "raw_bytes": 4881,
+      "gzip_bytes": 2181
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "111007195339873746197595813370396098481419792759881203616177582069221677432377",
+      "69117364794629985063702211892013520380217035017938292600877405774420638971759"
+    ],
+    "current_description_sha256": "f3fa5f32e8fbeccb738217d862ad5e16995540f9585413353ddd1cb2f86f7790"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:49.463305+00:00",
+  "question": "Manchester City FC vs. Ipswich Town FC: O/U 10.5 Total Corners",
+  "market_id": "5266169",
+  "valuation_author": "primary_operator",
+  "original_index": 1243,
+  "report_sha256": "06d37a5788ca48a60eb5da524e047e0632d1b6c1fc9f3d5e59343f5d0fff5db7"
+}

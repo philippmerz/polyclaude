@@ -1,0 +1,72 @@
+{
+  "review_index": 1233,
+  "condition_id": "0xa706d7318336c01212c57ac0d435ffdd7d8e5489dbc3d9dd0cb1dca7a74718f3",
+  "criteria_sha256": "aca03edb97eadc76a65d1144e51df9d0adbb0be3e845f3df7d64e7aeca543c0b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273614",
+      "observed_utc": "2026-10-17T20:11:03.593+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00156",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00156.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00156.body.json.gz",
+      "start_utc": "2026-10-17T20:11:03.511+00:00",
+      "end_utc": "2026-10-17T20:11:03.593+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:03 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5273614",
+        "params": null
+      },
+      "raw_sha256": "c77503e8068b710fec8636f022b582749f7feaff0882025b0ee6822e0fe0031d",
+      "gzip_sha256": "4665e9ff5d2f42fb2f23a1a297ab08c4ebbcbe3f26a0db9cf92151851e348e34",
+      "raw_bytes": 4723,
+      "gzip_bytes": 2123
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "68291495441816503680998920869290257696567048438184894436496129342147347391855",
+      "87502143256960810012492695851266040795728336814955647446703576102513366457214"
+    ],
+    "current_description_sha256": "5f9789d7dd8680328d12ca72b7fac2f5d8fcf5049be3e1aa2d20b8ab8070bd1e"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:48.770860+00:00",
+  "question": "Will Salford City FC win on 2026-10-17?",
+  "market_id": "5273614",
+  "valuation_author": "primary_operator",
+  "original_index": 1233,
+  "report_sha256": "a10632343c8ad0f2948318366d2b841f41c24417ff3efbb1fafa6d51b2857da9"
+}

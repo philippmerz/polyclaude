@@ -1,0 +1,72 @@
+{
+  "review_index": 525,
+  "condition_id": "0x010b4e678f7cce6cdb8efe6f68eb1ce4245cdc70a625e157324607c53b1a624b",
+  "criteria_sha256": "e52792f13e05e5066356bb4f00b0bd9d529522e0cc6c9b799d7d90909107f363",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5268814",
+      "observed_utc": "2026-10-17T20:10:56.180+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00076",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00076.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00076.body.json.gz",
+      "start_utc": "2026-10-17T20:10:56.114+00:00",
+      "end_utc": "2026-10-17T20:10:56.180+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:56 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5268814",
+        "params": null
+      },
+      "raw_sha256": "7293513081a4f8577e22203f5c50d0915daef2ec4ea4c3ad2a16b7f5961fc49e",
+      "gzip_sha256": "8d04e6ff99aa8b78c9d2c2fc0df2fc0c07ba960ed7b16aa341d31cf973dccc16",
+      "raw_bytes": 4773,
+      "gzip_bytes": 2144
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "22912581357351092501408550570782828781894954880834343113475881670082456525321",
+      "79880497418819600864636021041525981935898978371939782649464676481562042862453"
+    ],
+    "current_description_sha256": "73d293b92eeb9d4f26c759d3f889673cdb83fcde0688b718f70f68ea9e060306"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:23.933044+00:00",
+  "question": "ADO Den Haag vs. PSV: O/U 3.5",
+  "market_id": "5268814",
+  "valuation_author": "primary_operator",
+  "original_index": 525,
+  "report_sha256": "7051c5d3cd740364f0a1dfb1b4d5cb8e04dca93348ae635f62a67926c0cd762a"
+}

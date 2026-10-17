@@ -1,0 +1,72 @@
+{
+  "review_index": 2516,
+  "condition_id": "0xe33deca4cdf8a5a92d388878547653f66389e4296d54f5181410e898babfea21",
+  "criteria_sha256": "0c460ec986180909874dd5189ac6a798bd3ad917de5526c804e3a4069e194874",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5604689",
+      "observed_utc": "2026-10-17T20:11:20.981+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00331",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00331.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00331.body.json.gz",
+      "start_utc": "2026-10-17T20:11:20.897+00:00",
+      "end_utc": "2026-10-17T20:11:20.981+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:20 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5604689",
+        "params": null
+      },
+      "raw_sha256": "320f7f087d9a5688e37878a9d4b1308a0ccf8b4f991c5a71995814b7906d8f27",
+      "gzip_sha256": "b22ba8ff5d4da484cc5465ecac61441a9062888e3b6113c206acc1e637bd2f84",
+      "raw_bytes": 5480,
+      "gzip_bytes": 2423
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "RRQ Hoshi",
+      "Geek Fam ID"
+    ],
+    "current_token_ids": [
+      "29974053087796594344395644256633590152751317398028429784640404947613202328191",
+      "24112418602533423366565188638429310234801572063651163215886588588736559622758"
+    ],
+    "current_description_sha256": "64723e13a9200bbf8e630c98d83c221ff21af24c86a832fb458fbc125eff2033"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:20.470256+00:00",
+  "question": "Mobile Legends Bang Bang: RRQ Hoshi vs Geek Fam ID (BO3) - MPL Indonesia Regular Season",
+  "market_id": "5604689",
+  "valuation_author": "primary_operator",
+  "original_index": 2516,
+  "report_sha256": "36038460811b9e4d046a35a8421711251f537eac8179818999ace7e14d2a13fe"
+}

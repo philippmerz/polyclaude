@@ -1,0 +1,72 @@
+{
+  "review_index": 453,
+  "condition_id": "0x09e7642574dcd91d61d036546f33f956a6154f834ffbf85ed43417844064d383",
+  "criteria_sha256": "34715692834290b585eb1b0d471f8f829905cd64363680d78eeb4c8a40b1524e",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5234504",
+      "observed_utc": "2026-10-17T20:10:55.812+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00072",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00072.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00072.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.760+00:00",
+      "end_utc": "2026-10-17T20:10:55.812+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5234504",
+        "params": null
+      },
+      "raw_sha256": "aa608544073f0d0ee597ec8a13af4b3d940ee62eab1cdf21ee5294a844fe8f45",
+      "gzip_sha256": "efd05b9ff05754c379b00c618951f9c256a566302fec84e0976159369c690f0e",
+      "raw_bytes": 4667,
+      "gzip_bytes": 2113
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "18701127960841019886860760467749230904892117292201288725163843289413685795057",
+      "63815456968451188963799724724958034296516859399865856406708266866614558608616"
+    ],
+    "current_description_sha256": "c0f4e433556a3b34019fb0c7ac09d42c49ee0b54e7b551e21427e2c2ca51a749"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:22.864133+00:00",
+  "question": "Will PSV win on 2026-10-17?",
+  "market_id": "5234504",
+  "valuation_author": "primary_operator",
+  "original_index": 453,
+  "report_sha256": "085d02affdfd31b33f6cca0c60a68ef3fd66e684eb0fec6bc9bb92af982d4f50"
+}

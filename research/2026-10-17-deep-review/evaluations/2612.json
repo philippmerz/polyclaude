@@ -1,0 +1,72 @@
+{
+  "review_index": 2612,
+  "condition_id": "0x8c47893faf98bc59f38501deacaf1057cdd966f047a5d11f098624f695490819",
+  "criteria_sha256": "b52565617127f02adbf036cebee594f2153e9ad2d0a1060ba102ae6758fe55e0",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5608056",
+      "observed_utc": "2026-10-17T20:11:22.379+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00343",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00343.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00343.body.json.gz",
+      "start_utc": "2026-10-17T20:11:22.216+00:00",
+      "end_utc": "2026-10-17T20:11:22.379+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:22 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5608056",
+        "params": null
+      },
+      "raw_sha256": "8ffb1966577737c619b5c5f198111f3d49c4fc5dc1e79b14d223feae104708b4",
+      "gzip_sha256": "03037ff864fc599ee80f53cdc0866dea58ca7eff276a8f119d1fe793330e432c",
+      "raw_bytes": 4773,
+      "gzip_bytes": 2138
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "9942103504763473551337123879168813140074472067907137519348322009188001147700",
+      "32047396693765746097766492643306443208833102905981070399931608278502307340352"
+    ],
+    "current_description_sha256": "78fd35d0390b31cd5b55c070b7b489a6eb4fb3038c13163e0770ecfc2e0643f4"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:36.744171+00:00",
+  "question": "HJK Helsinki vs. IF Gnistan: Draw at halftime?",
+  "market_id": "5608056",
+  "valuation_author": "primary_operator",
+  "original_index": 2612,
+  "report_sha256": "c25843ed32b4a546b6c154ad20c2bc30e9d08c7320f9a12bd1f0c0abf3c0a34b"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 573,
+  "condition_id": "0x2bd9e0f333b947e08e765fd03aed23b20db96d9f63c3842c10842a5531296e27",
+  "criteria_sha256": "ee471672bf80105d2f4e8688e2116335ff42c1f11e87ea98305d8bbed4b874d3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5251202",
+      "observed_utc": "2026-10-17T20:10:56.836+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00083",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00083.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00083.body.json.gz",
+      "start_utc": "2026-10-17T20:10:56.746+00:00",
+      "end_utc": "2026-10-17T20:10:56.836+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:56 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5251202",
+        "params": null
+      },
+      "raw_sha256": "a6020a40c1303c8c930bab5c1b0a44d4e0ac0775b7fbdb59e2470f5434bf1751",
+      "gzip_sha256": "7cee1a49f87771ec17d44b3a1f6ed0c098e1c50a2dd4338e7aa939ea6d3d0f88",
+      "raw_bytes": 4757,
+      "gzip_bytes": 2128
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "40202398503666548298690047070514455936592915626686032200881440908618400297028",
+      "71457777822599012232531557077889190873118576743562214265827161604380748348424"
+    ],
+    "current_description_sha256": "737703f3a754ce50086fc1cd762b5d3c7cfadc08a4a3f803686d85c1e24706da"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:25.983713+00:00",
+  "question": "Will Liaoning Tieren FC win on 2026-10-17?",
+  "market_id": "5251202",
+  "valuation_author": "primary_operator",
+  "original_index": 573,
+  "report_sha256": "b545fef98ad748aa125920dea5f85c7e381c48ae9b547e300e7ab12845d67f53"
+}

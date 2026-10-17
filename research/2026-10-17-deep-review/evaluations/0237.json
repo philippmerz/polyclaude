@@ -1,0 +1,72 @@
+{
+  "review_index": 237,
+  "condition_id": "0x292ef31ae2aa1dc2579e032dc3122aeb5654e62a6a2f2d5a994a8008fda5fa99",
+  "criteria_sha256": "d18c8acd2a89b3514ca57f412e5b972045dab1d89dbfbb859075a9a06386843e",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5258767",
+      "observed_utc": "2026-10-17T20:10:53.215+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00040",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00040.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00040.body.json.gz",
+      "start_utc": "2026-10-17T20:10:53.159+00:00",
+      "end_utc": "2026-10-17T20:10:53.215+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:53 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5258767",
+        "params": null
+      },
+      "raw_sha256": "08a64caa50e6309794a386b0341300862bd0b46ec944f2fb9fcfa2ec153ab56b",
+      "gzip_sha256": "5043f6d1d9957bbc5eddd890ca927c78da3a8981cbbc02b415243ebe57e9fe81",
+      "raw_bytes": 4819,
+      "gzip_bytes": 2154
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "65427696485426828383050543056106831820675823053894535532135028878991938825887",
+      "61880294513265269563020244686614694652011155896033142328188156533738006354082"
+    ],
+    "current_description_sha256": "f930f0e5b9b2d5e0fe2ae6b44b09117b1d59eb087b51b4a79ea9cc9e9bf79c68"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:13.939307+00:00",
+  "question": "Will FC Internazionale Milano win on 2026-10-17?",
+  "market_id": "5258767",
+  "valuation_author": "primary_operator",
+  "original_index": 237,
+  "report_sha256": "c70554e5f8c7ec7519a3f8cb804368ee0ff229a0be28d75a899719382cddcbe5"
+}

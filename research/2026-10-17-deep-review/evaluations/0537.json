@@ -1,0 +1,72 @@
+{
+  "review_index": 537,
+  "condition_id": "0xf729ae84aa42bb19311a84b869f8e2a6fe502bcd77a7c9fa405d719e11212a79",
+  "criteria_sha256": "8a6c3f60629133d48fec2f8a829e541c3977e6d39cadeff0e8c9c97561e3eb1b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5776037",
+      "observed_utc": "2026-10-17T20:10:56.263+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00077",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00077.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00077.body.json.gz",
+      "start_utc": "2026-10-17T20:10:56.182+00:00",
+      "end_utc": "2026-10-17T20:10:56.263+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:56 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5776037",
+        "params": null
+      },
+      "raw_sha256": "295374499ae2a35687d154eede2feb28886bb3379755e931e8c1c0cbea0916cb",
+      "gzip_sha256": "c5b966d1b38568a2098466bfc822cb45e1db719157142a78fff309c04ede4a16",
+      "raw_bytes": 5538,
+      "gzip_bytes": 2429
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Betclic Apogee Esports",
+      "Team Nemesis"
+    ],
+    "current_token_ids": [
+      "7028348496494991910054986061704102294300948448497588824358596649885869154832",
+      "35176432158614352718648941271631685227605055484061607343024303443286773368988"
+    ],
+    "current_description_sha256": "ab74d8e5b2bd592771cc3afbdca94df164641c4ee43691861dcbc31bd55fe3de"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:24.277940+00:00",
+  "question": "Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs",
+  "market_id": "5776037",
+  "valuation_author": "primary_operator",
+  "original_index": 537,
+  "report_sha256": "229bb85a42702a714f68e7c2657dd07ad9bac5d231263a3d8eb8194381541ee0"
+}

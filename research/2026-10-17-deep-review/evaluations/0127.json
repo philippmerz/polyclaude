@@ -1,0 +1,72 @@
+{
+  "review_index": 127,
+  "condition_id": "0x9526cf7f6213e28239b08409a129a1351d84dfbe96dfee9c59a977ae333d2d81",
+  "criteria_sha256": "6468f459ed5166912bda481e46bf258ecb4090dd8d84b1121f8052380f44a092",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5733379",
+      "observed_utc": "2026-10-17T20:10:51.973+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00025",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00025.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00025.body.json.gz",
+      "start_utc": "2026-10-17T20:10:51.916+00:00",
+      "end_utc": "2026-10-17T20:10:51.973+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:51 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5733379",
+        "params": null
+      },
+      "raw_sha256": "b1d5f5392ced49238beee5c3d0b2e47ceac9f311ca1197929270e567db1f989d",
+      "gzip_sha256": "0ac8f7d43e9ae9cf5fe84306707fe70775c5ad0ae6c20eb45bd603dc5e3f1740",
+      "raw_bytes": 3454,
+      "gzip_bytes": 1616
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Up",
+      "Down"
+    ],
+    "current_token_ids": [
+      "29259283565346575602119400917062125461621849942536894340286010724490273642915",
+      "104583615714694716772851531423402360122627085142558971329875303567174162054189"
+    ],
+    "current_description_sha256": "f12af1f9136f0a8ef4a0afebfb494b99bc896b80d07fe508a2d42e8e2c7c0f73"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:09.988658+00:00",
+  "question": "Bitcoin Up or Down - October 17, 11AM ET",
+  "market_id": "5733379",
+  "valuation_author": "primary_operator",
+  "original_index": 127,
+  "report_sha256": "bc3cc11188ea732db12116157de3cdc19f130684745f29ad8e2ed5f4b09bd443"
+}

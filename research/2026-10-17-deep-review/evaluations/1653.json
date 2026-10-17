@@ -1,0 +1,72 @@
+{
+  "review_index": 1653,
+  "condition_id": "0x6d862171bbfc9b033dc9c7208b3ab862522bf4871c7d8d3a564967c9d04434da",
+  "criteria_sha256": "a27c5a762ac8b78a09f42eb8c1edfd25bae5e2bee33f46914646af004608e207",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264570",
+      "observed_utc": "2026-10-17T20:11:08.697+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00208",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00208.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00208.body.json.gz",
+      "start_utc": "2026-10-17T20:11:08.610+00:00",
+      "end_utc": "2026-10-17T20:11:08.697+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:08 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264570",
+        "params": null
+      },
+      "raw_sha256": "d4343b4e1ab7425c804fdf83ce4f6f4ec55bd511ae9ab6de507db02f43bdd051",
+      "gzip_sha256": "81ab629af182b32075e4dcfa52bccf452734714884cffa3a5e4d38c01efa34d1",
+      "raw_bytes": 4688,
+      "gzip_bytes": 2128
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "86653774529526782624860198177907337095779468617092972154624091102857031451125",
+      "19437315241055531516330568337203321708338472658425994716677974226407625975759"
+    ],
+    "current_description_sha256": "78fd35d0390b31cd5b55c070b7b489a6eb4fb3038c13163e0770ecfc2e0643f4"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:03.742978+00:00",
+  "question": "Hamburger SV vs. VfB Stuttgart: Draw at halftime?",
+  "market_id": "5264570",
+  "valuation_author": "primary_operator",
+  "original_index": 1653,
+  "report_sha256": "ea4974ad4d65b338ea873775f1c8c2c4af80bff0d182bd1c25239f7d01ee44d0"
+}

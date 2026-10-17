@@ -1,0 +1,72 @@
+{
+  "review_index": 2943,
+  "condition_id": "0xa9d38044eb1234ed64b02da1f31148021ae5a8ce12e804362def72060383da69",
+  "criteria_sha256": "ca6e624ea2524e03067e46fbd72d25e84333fae8cc03de6f289183966579a0ec",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5674567",
+      "observed_utc": "2026-10-17T20:11:26.623+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00379",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00379.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00379.body.json.gz",
+      "start_utc": "2026-10-17T20:11:26.559+00:00",
+      "end_utc": "2026-10-17T20:11:26.623+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:26 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5674567",
+        "params": null
+      },
+      "raw_sha256": "644d477b5cf6e9c9754af7e4ea94228cbc77dcf6c9bd8d5dfe9a96cb806715b9",
+      "gzip_sha256": "d3ab34e0e0230064439211205ee7718ed207b1be036189c3f3cbdb5f4b8e26ac",
+      "raw_bytes": 3713,
+      "gzip_bytes": 1731
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "808416056711594223298760332797480813984051258723275256386040169931692962992",
+      "61087305636069017600758219899713815347800499705180728704635969676606915105030"
+    ],
+    "current_description_sha256": "e0264fd16d9fc91a3a5f32ad4df94cc89d023dd0b50cd017bf5aa62603c33384"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:21.723765+00:00",
+  "question": "Will MrBeast say \"Dollar\" 10+ times during his next video?",
+  "market_id": "5674567",
+  "valuation_author": "primary_operator",
+  "original_index": 2943,
+  "report_sha256": "ac8f7fa062b65460b445479d0947134d352c2d140ffbe766ea46c14d70305e17"
+}

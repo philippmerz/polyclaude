@@ -1,0 +1,72 @@
+{
+  "review_index": 663,
+  "condition_id": "0x29d4cbc6e98ee1c9da47f1e3f78efddca3847f54a320d32f8a21de7ebc7adea3",
+  "criteria_sha256": "0f45835761ce4731b8145e9d656ddb853ae0444de9b9a77bac676aa1d344ebfc",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5251131",
+      "observed_utc": "2026-10-17T20:10:57.786+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00094",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00094.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00094.body.json.gz",
+      "start_utc": "2026-10-17T20:10:57.698+00:00",
+      "end_utc": "2026-10-17T20:10:57.786+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:57 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5251131",
+        "params": null
+      },
+      "raw_sha256": "6c29066aa02c8059518842620180c5c8741f0c495218567a64c8e5b63799247c",
+      "gzip_sha256": "c766ca415091bc98895a3b43ca8cfe14e53e767ff3bd820114ab0b57067ad124",
+      "raw_bytes": 4777,
+      "gzip_bytes": 2133
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "74750124604353033711922902447352464775180697169714829083085373801404640203593",
+      "14762633750864684418603366047403619879634620346888111270839543159814968718891"
+    ],
+    "current_description_sha256": "c57f95692b886c59626408540c2c87393c383f9f9bd0eb8ef1c8883f4a6abb87"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:29.659990+00:00",
+  "question": "Will Dalian Yingbo FC win on 2026-10-17?",
+  "market_id": "5251131",
+  "valuation_author": "primary_operator",
+  "original_index": 663,
+  "report_sha256": "bf9d835efb64d2e9b47658be4bbfed246e139961ccd2f9c5f61cf714fd29ed7a"
+}

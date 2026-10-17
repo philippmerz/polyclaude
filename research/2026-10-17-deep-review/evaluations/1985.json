@@ -1,0 +1,72 @@
+{
+  "review_index": 1985,
+  "condition_id": "0x0a6b9bfb3611f5c107cdbd7ff67fd81498d539bc26c7173493f6959dd8ae2eaa",
+  "criteria_sha256": "2451eb523c7d52b95843aa81993d68af74cced540936d337bce324379bdca645",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720267",
+      "observed_utc": "2026-10-17T20:11:12.678+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00249",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00249.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00249.body.json.gz",
+      "start_utc": "2026-10-17T20:11:12.593+00:00",
+      "end_utc": "2026-10-17T20:11:12.678+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:12 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720267",
+        "params": null
+      },
+      "raw_sha256": "e327548b4874236f0801f032b85c9a822dcbeb5bf4e0225e501e3bac4c50e9cb",
+      "gzip_sha256": "8149cb3c5e1129a9f627b178a511faecae5ffcd42bbd1d2fbc6c5be12bb7da2b",
+      "raw_bytes": 5323,
+      "gzip_bytes": 2334
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "102376084183303753742583051152178513408422089480475312504129563524952360055287",
+      "115774193461217930405384194687100814702217133331383149822792971811433274523825"
+    ],
+    "current_description_sha256": "fc5bdedddfdca314386728c73095fa54b0526b871ab7ab75043e5ba7526797ff"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:17.018613+00:00",
+  "question": "Will the lowest temperature in Tokyo be 18°C on October 17?",
+  "market_id": "5720267",
+  "valuation_author": "primary_operator",
+  "original_index": 1985,
+  "report_sha256": "a338df9e94038ac98078961f58fa31f53cd265e5150f70fb36166f7f9475c5a9"
+}

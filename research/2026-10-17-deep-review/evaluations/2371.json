@@ -1,0 +1,72 @@
+{
+  "review_index": 2371,
+  "condition_id": "0x2433c3617155bc89c107039727af34efa8f1bdaac93cff3784653bbecf63a801",
+  "criteria_sha256": "1e67c4c31c19d8e858758ec8ce35e52c80693175a05a53dd29179ced5501f910",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5674579",
+      "observed_utc": "2026-10-17T20:11:19.008+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00312",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00312.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00312.body.json.gz",
+      "start_utc": "2026-10-17T20:11:18.937+00:00",
+      "end_utc": "2026-10-17T20:11:19.008+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5674579",
+        "params": null
+      },
+      "raw_sha256": "e86351a07665386c2053efd0ef1a8c11fdbb6682d6724146cc929eaa9369221d",
+      "gzip_sha256": "d050090f4ce4e94b068a16891e84e6bf4c5870239ca1b858f892f67e8a415fe5",
+      "raw_bytes": 3321,
+      "gzip_bytes": 1621
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "103125298229654560738025639999202333886961935323104034909456098517807864336486",
+      "12044122820624961694609936772578460277619430779654613042548119735815251426438"
+    ],
+    "current_description_sha256": "e0264fd16d9fc91a3a5f32ad4df94cc89d023dd0b50cd017bf5aa62603c33384"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:54.477692+00:00",
+  "question": "Will no video be posted?",
+  "market_id": "5674579",
+  "valuation_author": "primary_operator",
+  "original_index": 2371,
+  "report_sha256": "271b9fe842f68ffe98df3773f30c798ee56b6d60280710db02fabf904229684e"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 1708,
+  "condition_id": "0x2913bed33c74dd8982c6f2155e706b60a8dc748eca5542c0a19f06bf8a529be9",
+  "criteria_sha256": "bab2c92de69c452298b6e074c5e7f3fd71260016ae45c7e99267cf8c031fd1b2",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5689132",
+      "observed_utc": "2026-10-17T20:11:09.333+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00214",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00214.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00214.body.json.gz",
+      "start_utc": "2026-10-17T20:11:09.249+00:00",
+      "end_utc": "2026-10-17T20:11:09.333+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:09 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5689132",
+        "params": null
+      },
+      "raw_sha256": "b6fd115b49550897f6ccd427210ce59c00a8e1b5914f6e33272f5c6bb9948d2a",
+      "gzip_sha256": "28a979ac8930a143a7333cb807b108b1fd0b57653f4dcb8e6591961d13a62758",
+      "raw_bytes": 4541,
+      "gzip_bytes": 2048
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "56434425358143523692179935663531075602494053191302917078115762632514623551841",
+      "100343220697639736044035126469287436395926385474038694637278816593343120601255"
+    ],
+    "current_description_sha256": "26680fd589a724f75b518972a56eab9fb90615d1b7bccab5bbca741b67447631"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:05.489932+00:00",
+  "question": "Bravo Ljubljana vs. NK Radomlje: O/U 2.5",
+  "market_id": "5689132",
+  "valuation_author": "primary_operator",
+  "original_index": 1708,
+  "report_sha256": "61dd0bef12b225129c790dc83436a4b448ae30267c2a2e64b69b2bf5fc6a3714"
+}

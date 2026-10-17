@@ -1,0 +1,72 @@
+{
+  "review_index": 2372,
+  "condition_id": "0xb9ccb34463d236145e6d19d402a782e353ce076db84f17e379d66ee34d535694",
+  "criteria_sha256": "740e77696ee7d6fffbd9b68d070a20d4b5d08281a2103a8c2fa24c009cc6b8d3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5348817",
+      "observed_utc": "2026-10-17T20:11:19.116+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00313",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00313.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00313.body.json.gz",
+      "start_utc": "2026-10-17T20:11:19.009+00:00",
+      "end_utc": "2026-10-17T20:11:19.116+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5348817",
+        "params": null
+      },
+      "raw_sha256": "a5664f10202e7e2613d59b2cd4cf93441f5bcb3337faeeefb0da5b978687504f",
+      "gzip_sha256": "783838c4336440198756f3254425828894c3d9c379f569731bff489da1bb54ed",
+      "raw_bytes": 3540,
+      "gzip_bytes": 1645
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "70991318574866233090090401403369564941780007483134383194864357940503787387704",
+      "81444749044433127385169922566752740428536023451630616364144218560494052924440"
+    ],
+    "current_description_sha256": "2dc64d27f5b95c78e50df108f45404c32a99a504f480ca54292a382f09d1b724"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:55.973925+00:00",
+  "question": "Central Connecticut State vs. Mercyhurst: O/U 53.5",
+  "market_id": "5348817",
+  "valuation_author": "primary_operator",
+  "original_index": 2372,
+  "report_sha256": "943f64de2d63f88f55f61fad62f2a2d9652c897e23b7e04290542bab0be9d0da"
+}

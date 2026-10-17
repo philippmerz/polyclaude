@@ -1,0 +1,72 @@
+{
+  "review_index": 2964,
+  "condition_id": "0x8fa8bb8477dbe67f34f0257113777f1533cb36c9185e7b018fc65c28b2980e2d",
+  "criteria_sha256": "f02b4942a49fccda765d3893f6f6674af0cbb57fea27e36abf0067d209762544",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271507",
+      "observed_utc": "2026-10-17T20:11:27.155+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00383",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00383.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00383.body.json.gz",
+      "start_utc": "2026-10-17T20:11:27.063+00:00",
+      "end_utc": "2026-10-17T20:11:27.155+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:27 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271507",
+        "params": null
+      },
+      "raw_sha256": "c5647a47afc17e6b678dcbbcb9e89e6e258cb1b9ce2d565fc3c9cbe3efd31ac9",
+      "gzip_sha256": "b1867173b0fa28fcd24e2bed861f25f76ba686b9a052321697fb0b9d67c0cbc8",
+      "raw_bytes": 4898,
+      "gzip_bytes": 2161
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "98756482931871029473589744472165408188651783358577527562055968898388262737112",
+      "12406182565782569212158648621048081012973946996402420279899068332602937634870"
+    ],
+    "current_description_sha256": "7d61487b0aa30ff33c3ee5a0efbab746ebd0bc2626d61769eb2ac5660188627d"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:26.019348+00:00",
+  "question": "Doncaster Rovers FC leading at halftime?",
+  "market_id": "5271507",
+  "valuation_author": "primary_operator",
+  "original_index": 2964,
+  "report_sha256": "3807579b147762f82ba8e2ab732e04b9937cb9068bd4571fdfca33aa84c3c0c2"
+}

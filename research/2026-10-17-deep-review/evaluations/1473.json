@@ -1,0 +1,72 @@
+{
+  "review_index": 1473,
+  "condition_id": "0x53bc01fb72d3b5e41a0f2d13e50b44f4031139109d9cbca9f06a8760f9591b2e",
+  "criteria_sha256": "892f72f401f824d3d30919e461610a679f2bffce7a79a98a2abbd84dc8467970",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5258811",
+      "observed_utc": "2026-10-17T20:11:06.325+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00184",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00184.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00184.body.json.gz",
+      "start_utc": "2026-10-17T20:11:06.255+00:00",
+      "end_utc": "2026-10-17T20:11:06.325+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:06 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5258811",
+        "params": null
+      },
+      "raw_sha256": "c1dc7bdcae85d2fd88cc0f90d2ed2a15389321260bd46dc425e43cf7680449fe",
+      "gzip_sha256": "bb8b1f652311a4f70932ce63fb41eaa122307d1cbb885a2b59e3ac836c5aa35d",
+      "raw_bytes": 4685,
+      "gzip_bytes": 2142
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "38160064773068814823733314037418736466508022908012473477131313502657786752054",
+      "36692986502749778726866456255497225242409406244485583598973268059410221908602"
+    ],
+    "current_description_sha256": "4d64848747dc45ed858b22a12b629c5e2375f9f9fe7439146ccbfe975c7d4790"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:56.675263+00:00",
+  "question": "Exact Score: Venezia FC 1 - 0 SSC Napoli?",
+  "market_id": "5258811",
+  "valuation_author": "primary_operator",
+  "original_index": 1473,
+  "report_sha256": "42e7bfd94c8d68b9bf5d8d92e4a29cad3185726a969b544ded8ff4073fcecb8e"
+}

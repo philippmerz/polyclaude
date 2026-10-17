@@ -1,0 +1,72 @@
+{
+  "review_index": 2740,
+  "condition_id": "0x825130b818c40dbfbe363731778122de8a51380306a50c70f05050e5d0642c4a",
+  "criteria_sha256": "846ee0e18cdc4ef205974835cd031cb91c80af073251245223493643d130f073",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5705802",
+      "observed_utc": "2026-10-17T20:11:23.833+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00356",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00356.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00356.body.json.gz",
+      "start_utc": "2026-10-17T20:11:23.738+00:00",
+      "end_utc": "2026-10-17T20:11:23.833+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:23 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5705802",
+        "params": null
+      },
+      "raw_sha256": "8761c886f8a28512ebe741f7eadeacc59c6dea6dac33d594bb9738d8a45e5cf0",
+      "gzip_sha256": "3abb60998bf1f967932194996028cddce2175f182b87303405f50e2cddc70f19",
+      "raw_bytes": 4763,
+      "gzip_bytes": 2153
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "92427359227695218045533277805713789252075643711763802199547440044793618796201",
+      "87193474502972270493022097561427794019437012926366623881588327241931933814636"
+    ],
+    "current_description_sha256": "2921bb536b04bfc9871a56c41b6c8a21fef06f411bdba68333ddaba35656ee6a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:52.968742+00:00",
+  "question": "FK Pardubice vs. FC Zlín: O/U 3.5",
+  "market_id": "5705802",
+  "valuation_author": "primary_operator",
+  "original_index": 2740,
+  "report_sha256": "8413e6fadc97a2d3a3e2e5be32f2d4a40c909ddb51d2cdaddef5e6b57d620012"
+}

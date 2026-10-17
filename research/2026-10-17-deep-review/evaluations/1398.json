@@ -1,0 +1,72 @@
+{
+  "review_index": 1398,
+  "condition_id": "0x91041abd0ac271c9480a8be42bf74a97d99d4e8b81d7074eaf976dfd02357b51",
+  "criteria_sha256": "33b4ab975e9ed5cfcd73829d16ceff2c5585f80d6513c041533d4cac393a5806",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5272942",
+      "observed_utc": "2026-10-17T20:11:05.553+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00177",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00177.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00177.body.json.gz",
+      "start_utc": "2026-10-17T20:11:05.445+00:00",
+      "end_utc": "2026-10-17T20:11:05.553+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:05 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5272942",
+        "params": null
+      },
+      "raw_sha256": "cf68c8d2b54674a98d474642c961e1d3c656ad844d1587e9831d5aa6fd18b226",
+      "gzip_sha256": "090abfbe0cd44a8270c5a39fc51a8cdba03ecfbe4eefecaebe692df5e576e4fb",
+      "raw_bytes": 4821,
+      "gzip_bytes": 2160
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "86041750615259854631090613905528247448039180860475635366087537335678583882579",
+      "55274774648564275053263629269524999406554160936169574495544105255898542315169"
+    ],
+    "current_description_sha256": "a2ec40b0226c6e1b8054f267290893a0f044ffe0b95a78eaf365e17728eaf64d"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:54.963302+00:00",
+  "question": "Stockport County FC vs. Bromley FC: O/U 3.5",
+  "market_id": "5272942",
+  "valuation_author": "primary_operator",
+  "original_index": 1398,
+  "report_sha256": "546f0777a4365dd65cb9c0dab762a62ccd11f00c38302a4d2f994a1318b3647b"
+}

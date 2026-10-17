@@ -1,0 +1,72 @@
+{
+  "review_index": 1143,
+  "condition_id": "0xb5a6347d935db82518a47062c151809e283a5b2a9d9a8dab8300dd7d2130022f",
+  "criteria_sha256": "c25169036e11fec27053b9804e7787a6672bca706b0a32d45604ccb12c592251",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5650327",
+      "observed_utc": "2026-10-17T20:11:02.665+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00146",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00146.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00146.body.json.gz",
+      "start_utc": "2026-10-17T20:11:02.593+00:00",
+      "end_utc": "2026-10-17T20:11:02.665+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:02 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5650327",
+        "params": null
+      },
+      "raw_sha256": "b038fcb47720cad20600f143234b5a92322189b20767c9959e998d8e125615a3",
+      "gzip_sha256": "e1e40713ba49f2e7f2258b5e5440f7397117914bed7c4d1dec7826f4adc1471d",
+      "raw_bytes": 4509,
+      "gzip_bytes": 2010
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "73840067549708308082391827703254417838354311885416087390723051736311214593490",
+      "85735871745582085595689151051719122312338247186854760187617827019889890728503"
+    ],
+    "current_description_sha256": "7f3c2662598532b5c4fcfed38f046111e96b3dd4fcf1613894c0ff8c7b3ec838"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:46.077173+00:00",
+  "question": "Will LKP Motor Lublin win on 2026-10-17?",
+  "market_id": "5650327",
+  "valuation_author": "primary_operator",
+  "original_index": 1143,
+  "report_sha256": "1dcbcee3890df742a345d181d70103f75d55c433b8b2613ec7735b42692e33cd"
+}

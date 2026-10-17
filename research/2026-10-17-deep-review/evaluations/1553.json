@@ -1,0 +1,72 @@
+{
+  "review_index": 1553,
+  "condition_id": "0xaef4aee8019cf732d8d7f0ef135a55a497faf6772c28db35723436d11cfd0720",
+  "criteria_sha256": "a2dd1cc99efcace4c24e15dd55bea731b34666be612fcbbe1a89ea2ecec38e7f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5315923",
+      "observed_utc": "2026-10-17T20:11:07.236+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00193",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00193.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00193.body.json.gz",
+      "start_utc": "2026-10-17T20:11:07.137+00:00",
+      "end_utc": "2026-10-17T20:11:07.236+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:07 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5315923",
+        "params": null
+      },
+      "raw_sha256": "e13c6240561dbff2f247bb2f4ce82ca3e30b6bf43919026ca76da11bc0a37533",
+      "gzip_sha256": "91342b52fa6ceaa75bfe2e4203f4057bdf040c3d73eb2d7ec2bc14560b6389f3",
+      "raw_bytes": 4839,
+      "gzip_bytes": 2132
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "59549009426171982626489433993813656167634796841088161647508792269950036858291",
+      "57168259741349266347585389730331296096836447818230173423219195561865448062687"
+    ],
+    "current_description_sha256": "76833c46f44e4b475deff2f3480d1ace5d48b7683522ea371689c9066a54db1d"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:59.151813+00:00",
+  "question": "FK Kudrivka vs. FSK Bukovyna Chernivtsi: FSK Bukovyna Chernivtsi O/U 2.5",
+  "market_id": "5315923",
+  "valuation_author": "primary_operator",
+  "original_index": 1553,
+  "report_sha256": "be46a13368a85a83f6bd129cfc04afdc607cb08cc1abc4af141b65ee522e036c"
+}

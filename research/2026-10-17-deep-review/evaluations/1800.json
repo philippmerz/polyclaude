@@ -1,0 +1,72 @@
+{
+  "review_index": 1800,
+  "condition_id": "0xcf644439a998b7517027739cd74998d0799c8721152a34c2ba7d5e10a879239c",
+  "criteria_sha256": "136f1d73871ae0570aa52e5235b3d877c9382678c630619e71d32791289a9d13",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5758996",
+      "observed_utc": "2026-10-17T20:11:10.557+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00228",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00228.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00228.body.json.gz",
+      "start_utc": "2026-10-17T20:11:10.481+00:00",
+      "end_utc": "2026-10-17T20:11:10.557+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:10 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5758996",
+        "params": null
+      },
+      "raw_sha256": "f4fd059078e0c649afca3639384431df668c3c4c0e6c08989ab251a2554797aa",
+      "gzip_sha256": "b789077f58a82cdc746b2d248b879d5b0b2462e32ecb6d8f5a487dad00c27bb1",
+      "raw_bytes": 4392,
+      "gzip_bytes": 1980
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "19925498213728390446463629916394659964460229827984621477835344278272488350826",
+      "12483775061280704898491590692825036053412909784836484438069081345501859106803"
+    ],
+    "current_description_sha256": "b6e8ef19a623dec101ec74ca565f19c3fde860c5d9d29f5c889f52c28d1b1b28"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:10.091164+00:00",
+  "question": "Will AC Carpi win on 2026-10-17?",
+  "market_id": "5758996",
+  "valuation_author": "primary_operator",
+  "original_index": 1800,
+  "report_sha256": "d8cff76e36e0832c19e493fbf9a25ad2f83fd2e05b149138021a9fd2d10a7bd8"
+}

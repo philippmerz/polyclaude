@@ -1,0 +1,72 @@
+{
+  "review_index": 134,
+  "condition_id": "0xd8d07d69c596345fc3869cbd8f213570b2923b9b8e42f1f73e7f1c3d32d36838",
+  "criteria_sha256": "514364cb3e54ea774a546a26edd96e0c5cbf827115c2eb3153b3497c58792448",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5506671",
+      "observed_utc": "2026-10-17T20:10:52.039+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00026",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00026.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00026.body.json.gz",
+      "start_utc": "2026-10-17T20:10:51.974+00:00",
+      "end_utc": "2026-10-17T20:10:52.039+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:52 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5506671",
+        "params": null
+      },
+      "raw_sha256": "7a9e001a0f6e41cda40ffa8bb40b188cc013589c38b4af6086c4fd8b8bdf6b17",
+      "gzip_sha256": "4ec498d54f2a9e8b9d1341c2f67ccf2107572473265950372f6a55555552d6a0",
+      "raw_bytes": 3502,
+      "gzip_bytes": 1655
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "86938482820166399492407207309106338038292574368258584060693191420043883303754",
+      "4214320234192014343499980988974275506815149651483367862142598557373470881175"
+    ],
+    "current_description_sha256": "70f35d44c30f0a45c1218d1961469f179eaea9b895ec826b73f21286bbe8af9b"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:10.284332+00:00",
+  "question": "Will the price of Ethereum be above $2,500 on October 17?",
+  "market_id": "5506671",
+  "valuation_author": "primary_operator",
+  "original_index": 134,
+  "report_sha256": "57efaae7ddadc7421431fd210c726d08a2567073ef70a54c002ac2d8dc619bfa"
+}

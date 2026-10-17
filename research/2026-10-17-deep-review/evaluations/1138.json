@@ -1,0 +1,72 @@
+{
+  "review_index": 1138,
+  "condition_id": "0xf1b517f228b74f455ae197f72a6bcbcb94a65e6eb04d5b12ae69827cfcf6dff8",
+  "criteria_sha256": "afe37342c74db3003f2e4ae6f86a73743d3aa2e5343fa676ed112d19fe440c57",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5705598",
+      "observed_utc": "2026-10-17T20:11:02.591+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00145",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00145.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00145.body.json.gz",
+      "start_utc": "2026-10-17T20:11:02.495+00:00",
+      "end_utc": "2026-10-17T20:11:02.591+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:02 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5705598",
+        "params": null
+      },
+      "raw_sha256": "75a299eff7efd494a00c6ba83f5d3b9d152c7c650643463dfaddeb2a4e24d66a",
+      "gzip_sha256": "a0502e57d15987ba3846d10b8f23a251128e703cd2abba0acfcba80d635a647d",
+      "raw_bytes": 4813,
+      "gzip_bytes": 2162
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "102359140611093066472836802228336379154712614615548486833215623374930103792442",
+      "68792360106342294361669922020469770094336203704150373868361284961415861183242"
+    ],
+    "current_description_sha256": "3c10cb900030cc5ca8cd9ebf310e95429a8e4bdc77e269c141b197a91a604b68"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:45.752206+00:00",
+  "question": "SK Slavia Praha vs. FC Hradec Králové: O/U 1.5",
+  "market_id": "5705598",
+  "valuation_author": "primary_operator",
+  "original_index": 1138,
+  "report_sha256": "dd01e5dbd47c9764743c4a2cc0ea3c2791a3df56a14d111d357b9fe0b6967ca4"
+}

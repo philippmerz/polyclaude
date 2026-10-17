@@ -1,0 +1,72 @@
+{
+  "review_index": 2473,
+  "condition_id": "0x4c131477d7ef1caaca7908f92e64ceb8d01e8db4a01817776e4639e3f4274f78",
+  "criteria_sha256": "c59e6072bbe463225962f2be297ea3ad7d547ba0aa46efd9626defd312b355cf",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720722",
+      "observed_utc": "2026-10-17T20:11:20.275+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00324",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00324.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00324.body.json.gz",
+      "start_utc": "2026-10-17T20:11:20.218+00:00",
+      "end_utc": "2026-10-17T20:11:20.275+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:20 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720722",
+        "params": null
+      },
+      "raw_sha256": "dda6d751167c786c6878c9d9e085bb061f4b7f3d822a9a2a15376ca06b1aa947",
+      "gzip_sha256": "db9e863115334e20d510723c8e9716ffcfbadd9b0f1bfd8b69fb6beb688db016",
+      "raw_bytes": 5365,
+      "gzip_bytes": 2358
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "104351749489646928382279926207459767020280066472779636460303173955893640633323",
+      "21459798764020208782030742032417342978780295570751089804013383194527092444736"
+    ],
+    "current_description_sha256": "8179b661a54f9e66697012e6ab08bd308b930849ecad44901a0ad2df4dbfb699"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:11.262873+00:00",
+  "question": "Will the highest temperature in Lucknow be 31°C on October 17?",
+  "market_id": "5720722",
+  "valuation_author": "primary_operator",
+  "original_index": 2473,
+  "report_sha256": "a794879c3ed5564c47fa763d9c590f8376bbdbfe83b93cd2aceb3703c173cdb9"
+}

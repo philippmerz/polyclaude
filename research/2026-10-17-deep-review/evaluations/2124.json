@@ -1,0 +1,72 @@
+{
+  "review_index": 2124,
+  "condition_id": "0x171372d6446dacd86cede629bfedbae7763b2881fd86eecae17172da6d9f3516",
+  "criteria_sha256": "33daf343c686bd5f35815a7d4ea7cf9213011bd749b8eeccffc74e8dde5056b7",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5790369",
+      "observed_utc": "2026-10-17T20:11:14.607+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00265",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00265.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00265.body.json.gz",
+      "start_utc": "2026-10-17T20:11:14.546+00:00",
+      "end_utc": "2026-10-17T20:11:14.607+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:14 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5790369",
+        "params": null
+      },
+      "raw_sha256": "8546399ffc9747f988ffce4e6882e415c62d14223e8ce7951633df044e83b7b9",
+      "gzip_sha256": "92432672819457fead71abe7e96b01e010da8586b4465af908b855d1197d06f6",
+      "raw_bytes": 3867,
+      "gzip_bytes": 1739
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "KalPa Hockey",
+      "Pelicans Lahti"
+    ],
+    "current_token_ids": [
+      "28410560049111225752307548660289848072567911818519742719643672645747198931172",
+      "31522325157523954823462098150419273277769822275072646641515354151322378600279"
+    ],
+    "current_description_sha256": "fb53cfb487f327658ec41ac0730275f1ba6295663a53d65846b6593fa96a2caa"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:39.227679+00:00",
+  "question": "KalPa Hockey vs. Pelicans Lahti",
+  "market_id": "5790369",
+  "valuation_author": "primary_operator",
+  "original_index": 2124,
+  "report_sha256": "ad76b6c14b522f876aa6fcb9bf4af8a27ee835493755270fa2579452a04b6f08"
+}

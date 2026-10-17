@@ -1,0 +1,72 @@
+{
+  "review_index": 1568,
+  "condition_id": "0xf6a35105082bf7a7978913b9476070cba38fc7980e6b5d97ba4fa24c202963a3",
+  "criteria_sha256": "6a14bb2a03c2681c18dd9150ee79f703172e26fec62cd460ec486c783767f1a5",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264448",
+      "observed_utc": "2026-10-17T20:11:07.380+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00195",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00195.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00195.body.json.gz",
+      "start_utc": "2026-10-17T20:11:07.314+00:00",
+      "end_utc": "2026-10-17T20:11:07.380+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:07 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264448",
+        "params": null
+      },
+      "raw_sha256": "bc59ba458fd0761ce1a52cbf68fe68ff98954dd1fd15d472a6d804b1a7761060",
+      "gzip_sha256": "b0840d29a2f6ba23ee5ea88ec0589fc3ab060d798878a1175a8ffb6c4772dc28",
+      "raw_bytes": 4762,
+      "gzip_bytes": 2179
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "66060219304473537112412100993860487070296502059704722042826074638694262788862",
+      "114976018622095355290713979137705451001063458050942301521835606773663883348950"
+    ],
+    "current_description_sha256": "51802a27af0458dea1296679e724946462bd74f2e7a12dbe3542b315d0ec0899"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:59.830581+00:00",
+  "question": "Exact Score: Fulham FC 1 - 3 Hull City AFC?",
+  "market_id": "5264448",
+  "valuation_author": "primary_operator",
+  "original_index": 1568,
+  "report_sha256": "9991e8d74b5297b8174406c8aeb15df61efe9006693089caa522dd846cac4a4c"
+}

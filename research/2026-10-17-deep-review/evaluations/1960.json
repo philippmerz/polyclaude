@@ -1,0 +1,72 @@
+{
+  "review_index": 1960,
+  "condition_id": "0xedf483fe88cd1c47e526edd4ff08a8aa1ddbaa29e2687729ee96d39219e02bde",
+  "criteria_sha256": "3b41a01f02f7c81893123c3663e2ae027a18880ecc9543e70a5a5f6f58d5fd0b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264871",
+      "observed_utc": "2026-10-17T20:11:12.501+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00247",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00247.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00247.body.json.gz",
+      "start_utc": "2026-10-17T20:11:12.417+00:00",
+      "end_utc": "2026-10-17T20:11:12.501+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:12 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264871",
+        "params": null
+      },
+      "raw_sha256": "73ae6833f378a31435019aafba33b49e27837e4924c5f6b94c6b05042da1851c",
+      "gzip_sha256": "8605e91f43e58cfadee611451140f9e5cec1b232e5977c03ce0875d06d44652b",
+      "raw_bytes": 4814,
+      "gzip_bytes": 2176
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "76228465706668150258457491717551097341662560979647208380878369845665318959123",
+      "50630426618062067580840095766738689174601646515609337443835591395188797654458"
+    ],
+    "current_description_sha256": "fb44e7a848a1c64f74af0e200c073079dd5e80b742ad12ccd095317c8dba2891"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:15.434089+00:00",
+  "question": "Exact Score: Millwall FC 0 - 2 Lincoln City FC?",
+  "market_id": "5264871",
+  "valuation_author": "primary_operator",
+  "original_index": 1960,
+  "report_sha256": "0306449387fa7840355f2604bec6be0704742e20f88821186284558f5fac5b4d"
+}

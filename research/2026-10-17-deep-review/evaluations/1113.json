@@ -1,0 +1,72 @@
+{
+  "review_index": 1113,
+  "condition_id": "0x05eb46122a1dab78125b0ab924c4eafd356584a2951ae49f35a52c56e8f72754",
+  "criteria_sha256": "3b0bcf6f7ca1a8a9aac3454e16445b62a130f0a36b2e7f965cb8c190f6697962",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5276524",
+      "observed_utc": "2026-10-17T20:11:02.389+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00143",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00143.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00143.body.json.gz",
+      "start_utc": "2026-10-17T20:11:02.315+00:00",
+      "end_utc": "2026-10-17T20:11:02.389+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:02 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5276524",
+        "params": null
+      },
+      "raw_sha256": "2cd542e6949164ce5d589a2b7926d630995ce5353beae04f9e08c9699d7899ba",
+      "gzip_sha256": "76622ccd438d4611cada3856c23e5f8e5a051b5e59fb6ea84743db999ee48dc2",
+      "raw_bytes": 4835,
+      "gzip_bytes": 2169
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "8756230159460486265223445519456296572510679306127333886707427470892369940513",
+      "114914527233504338326681557416055211969873323791198909203862702088467128875719"
+    ],
+    "current_description_sha256": "1f7988c1c4d531c1b77ec05a9ecbb844223f10f23a4884fc20baa2db57c255d8"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:45.043185+00:00",
+  "question": "Norwich City FC vs. Portsmouth FC: O/U 2.5",
+  "market_id": "5276524",
+  "valuation_author": "primary_operator",
+  "original_index": 1113,
+  "report_sha256": "6f31780e1b69ec83df1e633dcaca680a6cf64af6a4009f57a98eb682be9d1ec1"
+}

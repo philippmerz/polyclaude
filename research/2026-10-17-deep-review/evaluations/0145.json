@@ -1,0 +1,72 @@
+{
+  "review_index": 145,
+  "condition_id": "0x6cc55f77d2fea039731b2f683cd744c59d0c393b93e49dca41c7873ca0e14f67",
+  "criteria_sha256": "f426d3b534a50e9f89711db69fa0a5f1f137a11828f91970391e69e06001f47c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5742128",
+      "observed_utc": "2026-10-17T20:10:52.193+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00028",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00028.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00028.body.json.gz",
+      "start_utc": "2026-10-17T20:10:52.133+00:00",
+      "end_utc": "2026-10-17T20:10:52.193+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:52 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5742128",
+        "params": null
+      },
+      "raw_sha256": "e2ab8f3be15976b6c083285000a1bb97ae91d94a6b858f02c18f23409474783c",
+      "gzip_sha256": "15cffd93ce3b0fb6772893657c3c496630ad09304aae15e40e2691d9e3592f9c",
+      "raw_bytes": 3638,
+      "gzip_bytes": 1612
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Up",
+      "Down"
+    ],
+    "current_token_ids": [
+      "33885004053267493055491545171189310269812028167343527516088510357558637646140",
+      "40167227169081815003841625854199443338004157192449234625741303060736869739795"
+    ],
+    "current_description_sha256": "7aff1afc8e3af53a76fa7c50c8fb84d62035e348ff40f188225f01916d302825"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:10.884181+00:00",
+  "question": "XRP Up or Down on October 17?",
+  "market_id": "5742128",
+  "valuation_author": "primary_operator",
+  "original_index": 145,
+  "report_sha256": "b0de7bc2ee411b7af5cbecb63309b8e376f7cdcb83b9d5a49056c939c380a864"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 710,
+  "condition_id": "0x482ce0e4498e1b3f8d5a1d7b342ca23e32f79a3bb257521fabc8955625fff48d",
+  "criteria_sha256": "f4b17de50ba6ceea9676de3f696535e1cf9e5c1177a76812a436d6415dd1f3de",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5506732",
+      "observed_utc": "2026-10-17T20:10:58.394+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00100",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00100.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00100.body.json.gz",
+      "start_utc": "2026-10-17T20:10:58.308+00:00",
+      "end_utc": "2026-10-17T20:10:58.394+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:58 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5506732",
+        "params": null
+      },
+      "raw_sha256": "c33b39d3d5ab9ed277def3ce0bad127ab92a6fba8dc9e0327426727bb060c9ec",
+      "gzip_sha256": "ac126f8069b32c50489b3b496061ec1b5a27c7b055c5c1958b94b59945c9acd0",
+      "raw_bytes": 3307,
+      "gzip_bytes": 1628
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "93887898697745868353627974569535029880046886881751185345405760525401747974637",
+      "4896950062342556003221118906063213742825119972902250765649906089943052917228"
+    ],
+    "current_description_sha256": "70ba1d320da8a53bef79beeda020ef32c31bc75eb550c329a413cdf62acedd98"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:31.330851+00:00",
+  "question": "Will the price of XRP be above $0.90 on October 17?",
+  "market_id": "5506732",
+  "valuation_author": "primary_operator",
+  "original_index": 710,
+  "report_sha256": "9e20ff729f08d7b30a0704d8a764ef6dd6372818434766734abe6c0414d28c8b"
+}

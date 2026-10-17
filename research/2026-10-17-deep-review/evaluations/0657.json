@@ -1,0 +1,72 @@
+{
+  "review_index": 657,
+  "condition_id": "0xebbb46055e426288210264e8be0005944196b963f638c4d5d4af2257b9561935",
+  "criteria_sha256": "33d3ca43b575131578fd47b00fe551f49355bfcbed3daac2bf2527c163d7d039",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264012",
+      "observed_utc": "2026-10-17T20:10:57.696+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00093",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00093.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00093.body.json.gz",
+      "start_utc": "2026-10-17T20:10:57.639+00:00",
+      "end_utc": "2026-10-17T20:10:57.696+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:57 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264012",
+        "params": null
+      },
+      "raw_sha256": "af0244f25d326855abd16a36a27c7a4d763fb1161528a36cf28657ddaa37f0b4",
+      "gzip_sha256": "db813bc80189de589fc94ef11066d60277523c70072af8655212405298ab1a60",
+      "raw_bytes": 4754,
+      "gzip_bytes": 2110
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "111406384828016389980199007943803849758041952968837566995214043624030098843722",
+      "2627863068617685650097961440472766938450456544315952380747971290368143863689"
+    ],
+    "current_description_sha256": "b1c4416caef914c592e59b3d39d6748fc4ec2478d5ad5cf7c9b09fd6e42f6673"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:29.297930+00:00",
+  "question": "Will Southampton FC win on 2026-10-17?",
+  "market_id": "5264012",
+  "valuation_author": "primary_operator",
+  "original_index": 657,
+  "report_sha256": "29b2039412cbf287d6114ba95282fe4384a91fa00cffcafd472185b4ce05efa7"
+}

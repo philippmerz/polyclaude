@@ -1,0 +1,72 @@
+{
+  "review_index": 1423,
+  "condition_id": "0xb4d52cb422554c09897bdb582f8ec25b6d23e61e4df6ff448a9617fe5ec6489b",
+  "criteria_sha256": "47734cdd76eaa8bb259aa21cbd9d55fb9ab7416f4edac70ea3fb8fc1e912ffbe",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5349147",
+      "observed_utc": "2026-10-17T20:11:05.891+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00180",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00180.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00180.body.json.gz",
+      "start_utc": "2026-10-17T20:11:05.807+00:00",
+      "end_utc": "2026-10-17T20:11:05.891+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:05 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5349147",
+        "params": null
+      },
+      "raw_sha256": "c7a05d0c68dea409725e478f68f56862dee755bf773d0f2ad174166e4a2f5b9e",
+      "gzip_sha256": "c84d2ca51155b597971f4c79ec290b60cf3c7d6f722a701703f8273453313e8e",
+      "raw_bytes": 3556,
+      "gzip_bytes": 1661
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "93127329572189245672517634767946301660958210742802089065487457662473676373799",
+      "109302664545930166916968298107195023262427324149725894446210854999032505412142"
+    ],
+    "current_description_sha256": "39342d3df01383d12e1da2bbbd307dc899a132a05b11f572acd89fb82e79c16e"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:55.656252+00:00",
+  "question": "Rhode Island vs. Yale: O/U 49.5",
+  "market_id": "5349147",
+  "valuation_author": "primary_operator",
+  "original_index": 1423,
+  "report_sha256": "c561ea04d0784418ae1b0c9a8fd34028fb60171486221dd1d269c423f60cfe5d"
+}

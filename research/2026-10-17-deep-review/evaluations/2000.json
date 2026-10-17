@@ -1,0 +1,72 @@
+{
+  "review_index": 2000,
+  "condition_id": "0x026d31796f94e7de3bbc3702c950bcfc401fc10f02b7b7546571f037d03a4135",
+  "criteria_sha256": "75b2f7091d497a5bfd55c2f21f14815f434c9dc3c2e0599c8bb4fd7f8c9ff759",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264722",
+      "observed_utc": "2026-10-17T20:11:12.918+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00252",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00252.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00252.body.json.gz",
+      "start_utc": "2026-10-17T20:11:12.833+00:00",
+      "end_utc": "2026-10-17T20:11:12.918+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:12 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264722",
+        "params": null
+      },
+      "raw_sha256": "b078c6ac5c8f8c3d801eb2e0bbbda9ad322d6df00007a7fcbefb7a0e68a42635",
+      "gzip_sha256": "4342e94631f9dacecbf114f53e2f8bb4e12fdbf4431f5334e39cd384b64dbdbe",
+      "raw_bytes": 4763,
+      "gzip_bytes": 2151
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "73132874447809839416196892086676903629089803334767844736672719050867683874395",
+      "14315450436424040874736461461076488935154241213636724363689564338329437904567"
+    ],
+    "current_description_sha256": "54047e6e011b661869fd4a0d86bce9357d73b471253e4d155ccde0167afe0869"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:21.257168+00:00",
+  "question": "SC Paderborn 07 leading at halftime?",
+  "market_id": "5264722",
+  "valuation_author": "primary_operator",
+  "original_index": 2000,
+  "report_sha256": "588b2a77509203e1885690daa2302dfbb22ead5c07beda4b3f98e80272ba1503"
+}

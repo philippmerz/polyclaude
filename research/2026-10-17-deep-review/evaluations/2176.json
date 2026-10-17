@@ -1,0 +1,72 @@
+{
+  "review_index": 2176,
+  "condition_id": "0x0c20f2df613c375192991dfdf83a164bb5db58224f61ad6e3bfbfe396f906813",
+  "criteria_sha256": "76d177c484228c8262f44555a49f1b663ddfd2d41fde4c05e38c61895ec62c3c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5256252",
+      "observed_utc": "2026-10-17T20:11:15.460+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00275",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00275.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00275.body.json.gz",
+      "start_utc": "2026-10-17T20:11:15.359+00:00",
+      "end_utc": "2026-10-17T20:11:15.460+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:15 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5256252",
+        "params": null
+      },
+      "raw_sha256": "117a85fe260b576c6a6d5f4143b010a331ba768b1a69c90c5f6a7b3f62cd204b",
+      "gzip_sha256": "8c6c7b21de95936dbb1b8bce6e8ce850efb0d22370b2c975507974b0f1b3017f",
+      "raw_bytes": 4892,
+      "gzip_bytes": 2185
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "115226781363265917662257865604890077773767822229751586506350314631753548721371",
+      "89378136785613535446405896103619329853979978430638532968743407630274549210202"
+    ],
+    "current_description_sha256": "78145f62fb44d41b4896661a700ae7ee5166d33f431072c8a00a6605b9bdc3c6"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:53.469197+00:00",
+  "question": "FK Dinamo Makhachkala vs. FK Akron Tolyatti: O/U 2.5",
+  "market_id": "5256252",
+  "valuation_author": "primary_operator",
+  "original_index": 2176,
+  "report_sha256": "89ff6ae982d0a45edaab281289cf86a2f3187fa8350b19a2c9a367372f15bc69"
+}

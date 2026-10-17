@@ -1,0 +1,161 @@
+{
+  "review_index": 78,
+  "condition_id": "0x0038a19c5f1633b76e9fe194ac391959811cceb05652ba5c6796e37f045e573f",
+  "criteria_sha256": "62ae21c2ba4dfe3fe88266b3296cd79a2c0bf44e94e093fd685843f5c8d98c32",
+  "status": "valued",
+  "literal_analysis": "Full exact frozen rule read, including creation/cutoff, official-announcement scope, actual control, effective wholeFIR closure, direct-force/militia/UAV exclusions and adjudication as applicable.",
+  "evidence": [
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/06/president-trumps-iran-agreement-is-america-first-in-action/",
+      "observed_utc": "2026-10-17T20:49:15.090842+00:00",
+      "finding": "JuneMOU context; prior venue precedents prevent treating it as automatically sufficient."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/3701662",
+      "observed_utc": "2026-10-17T20:49:15.090874+00:00",
+      "finding": "Post-JuneSeptember agreement predecessor resolvedNO with matching core clauses; dated venue evidence, not independent on-chain finality."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/3324625",
+      "observed_utc": "2026-10-17T20:49:15.090878+00:00",
+      "finding": "Post-JuneAugust predecessor resolvedNO; full literal comparison in case1 audit."
+    },
+    {
+      "url": "https://www.tasnimnews.ir/en/news/2026/10/17/3725165/iran-offers-7-day-plan-to-reopen-hormuz",
+      "observed_utc": "2026-10-17T20:49:15.090880+00:00",
+      "finding": "Conditional Iranian plan, not bilateral acceptance."
+    },
+    {
+      "url": "https://www.axios.com/2026/10/16/iran-backed-militias-sending-money-irgc-centcom",
+      "observed_utc": "2026-10-17T20:49:15.090882+00:00",
+      "finding": "Attributed negotiation status; Iran response still awaited."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.109,
+    "low": 0.03,
+    "high": 0.35,
+    "method": "Primary explicit event/interpretation tree, retaining latent historical and future regime uncertainty",
+    "reasoning": "Saved iran_event_model.py inputs are primary assumptions, not fitted rates; full case report distinguishes exact payoff, dated sources, bounds and interpretation branches.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:22.533+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.109,
+        "best_bid": 0.072,
+        "best_ask": 0.086,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.743,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 5.0,
+            "price": 0.086,
+            "fee_usd": 0.0
+          },
+          {
+            "shares": 5.0,
+            "price": 0.087,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 0.8649999999999999,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.0865,
+        "break_even_probability_with_idealized_carry": 0.0867142321580707,
+        "central_expected_profit_usd": 0.2250000000000002,
+        "default_10pp_stressed_profit_usd": -0.7749999999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.008999999999999994,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.72
+      },
+      "No": {
+        "probability": 0.891,
+        "best_bid": 0.914,
+        "best_ask": 0.928,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.743,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.928,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.280000000000001,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.9280000000000002,
+        "break_even_probability_with_idealized_carry": 0.9302983519386085,
+        "central_expected_profit_usd": -0.370000000000001,
+        "default_10pp_stressed_profit_usd": -1.370000000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.791,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.135000000000002
+      }
+    }
+  },
+  "verdict": "Mutual acceptance event valued; YES central difference fails normal uncertainty reserve",
+  "reopen_condition": "New qualifying official source/consensus, actual control/authority/target details or a material price/cost change requires a fresh primary review and full account/venue gates.",
+  "current_description_sha256": "006054bf8f520adf2b201308594f01567b49b137388d04b28b95694420c413e0",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "62865105917534279918379008021805675209057971304971907560830989799715631254802",
+    "34930188808984385819094045071721684113443244598167278987586029070034847069969"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0101",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0101.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0101.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0104",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/iran_event_followup_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/iran_event_model.py",
+    "model_calibrated": false,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:49:15.319012+00:00",
+  "question": "US-Iran Hormuz Agreement by October 31?",
+  "market_id": "5074920",
+  "valuation_author": "primary_operator",
+  "original_index": 78,
+  "report_sha256": "0bb14ce165b57edc11bdc530631214f1ae73c6c37952aa7e586d90d715d07352"
+}

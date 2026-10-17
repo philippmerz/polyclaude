@@ -1,0 +1,72 @@
+{
+  "review_index": 2112,
+  "condition_id": "0xd0a07cc584abd4869201d91d4fc655f99cf01c175f2cec1d363937805e577c5d",
+  "criteria_sha256": "353e9d9dfd09805448e9c79fd11e377c11ce58867f005ce0a52f99a272096689",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5274827",
+      "observed_utc": "2026-10-17T20:11:14.465+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00263",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00263.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00263.body.json.gz",
+      "start_utc": "2026-10-17T20:11:14.378+00:00",
+      "end_utc": "2026-10-17T20:11:14.465+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:14 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5274827",
+        "params": null
+      },
+      "raw_sha256": "bbcf3833816a0d1051aa1f2de5ae11171d49768b0673e0f5dd190ea4b387487c",
+      "gzip_sha256": "c58e0826bf4be93668add9aa47222dcdb0ab9da73187010c6c47130df6f21131",
+      "raw_bytes": 4865,
+      "gzip_bytes": 2195
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "61562437821921027685483569334146510320383815905367611058278532695572284530311",
+      "101000033353914962274041194738709869656697967430406991787468705771074052230930"
+    ],
+    "current_description_sha256": "05df05c8769aa1b7583df4b29a2517a40aee304ca49199360bbe256c8d262f94"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:36.224467+00:00",
+  "question": "Port Vale FC vs. Chesterfield FC: O/U 2.5",
+  "market_id": "5274827",
+  "valuation_author": "primary_operator",
+  "original_index": 2112,
+  "report_sha256": "6ed97a52f703cd0c8f760618f3aae46e46055b3137977655a393b2e11b13e17b"
+}

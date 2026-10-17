@@ -1,0 +1,72 @@
+{
+  "review_index": 188,
+  "condition_id": "0x0647cae3ebfbf1da073813783cdf68b89d79eb39c1ce3bae43a4d407eb0bfb98",
+  "criteria_sha256": "129263a07be210e1daaaf05ee7e950df46248c9a805721a97dbc3f54c2dfb16f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5779504",
+      "observed_utc": "2026-10-17T20:10:52.595+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00033",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00033.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00033.body.json.gz",
+      "start_utc": "2026-10-17T20:10:52.539+00:00",
+      "end_utc": "2026-10-17T20:10:52.595+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:52 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5779504",
+        "params": null
+      },
+      "raw_sha256": "4ddb34a09a6a67a92abe071dae79c3df9a7d5ba864130e070f2ee62411f6645c",
+      "gzip_sha256": "ad7cefd3ca40c5500e2bf8d918b6b4f29672f6b5a1ee6ab96949d74c2887fccf",
+      "raw_bytes": 4157,
+      "gzip_bytes": 1897
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Jacob Fearnley",
+      "Luca Nardi"
+    ],
+    "current_token_ids": [
+      "21801451970788428818235078158764511715783000402883330700187226849303579187898",
+      "53470241574538465045996484330537055936929615882625983434576427093376072892626"
+    ],
+    "current_description_sha256": "e427e6a33141a75626925284867f4d837eb090e7c079c006e2040f761b9053c0"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:12.097708+00:00",
+  "question": "Olbia: Jacob Fearnley vs Luca Nardi",
+  "market_id": "5779504",
+  "valuation_author": "primary_operator",
+  "original_index": 188,
+  "report_sha256": "ea66ae672eca3355978f59075f359d6eb22cfa92b04042aab414fdf236a7176b"
+}

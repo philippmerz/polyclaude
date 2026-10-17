@@ -1,0 +1,72 @@
+{
+  "review_index": 1996,
+  "condition_id": "0x3df10b9a3ba5698ab6ee7d7b61b02dcb7f8d98220b28b9585c73afb7c2245d04",
+  "criteria_sha256": "86035db2095c8652b845a36ee8df47708331a1d56604a1f2808b483b8482052a",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5770928",
+      "observed_utc": "2026-10-17T20:11:12.832+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00251",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00251.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00251.body.json.gz",
+      "start_utc": "2026-10-17T20:11:12.733+00:00",
+      "end_utc": "2026-10-17T20:11:12.832+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:12 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5770928",
+        "params": null
+      },
+      "raw_sha256": "a60647354030942dfca553031d0024fc3c1d980461cc13544a43c0de4cadb7c6",
+      "gzip_sha256": "24683a7f24a3673aaecd1d5c4c9bbfe0776c5a2a359942f7e31abf4c8e73d01c",
+      "raw_bytes": 4486,
+      "gzip_bytes": 2016
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Guangxi Hengchen FC",
+      "Changchun Yatai"
+    ],
+    "current_token_ids": [
+      "92481983096390481646209927330216534651874758789054108674659958121498536155611",
+      "82501462869792132326349428996158085489160891475306622768716048991608477948968"
+    ],
+    "current_description_sha256": "5a7db3d7ec65acd7c480c9ba69df9f6955bd618976322ead49b15b0d2fdacb38"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:19.967293+00:00",
+  "question": "Spread: Guangxi Hengchen FC (-2.5)",
+  "market_id": "5770928",
+  "valuation_author": "primary_operator",
+  "original_index": 1996,
+  "report_sha256": "08ca02b5779f040fa0e1c23a3e9c399bacf446322e527dbbc3c6836007acd905"
+}

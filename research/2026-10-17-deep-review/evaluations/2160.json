@@ -1,0 +1,72 @@
+{
+  "review_index": 2160,
+  "condition_id": "0xbe631e6e1c743c222a91b20e00bb708382bdc272cbd74759877a78ba4152021f",
+  "criteria_sha256": "7f6148d7b91cbfe6f41764d63d3e9349882fd4cbcc085995d3e4be8b10636cf4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5308755",
+      "observed_utc": "2026-10-17T20:11:15.196+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00272",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00272.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00272.body.json.gz",
+      "start_utc": "2026-10-17T20:11:15.123+00:00",
+      "end_utc": "2026-10-17T20:11:15.196+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:15 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5308755",
+        "params": null
+      },
+      "raw_sha256": "ae9556fd0082d43ce24f6b5bf54b3b9611d0fa7eb4da56a0fa7c827221373159",
+      "gzip_sha256": "d12a44c58444c6987570edcb1f56ddfc0bbfff244f7c2e54093832b78391473f",
+      "raw_bytes": 4956,
+      "gzip_bytes": 2190
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "77479729824884946770295497908062135364284908143177151883344452447295758090628",
+      "76368112209896439589634707930162916292439491985482779156160455608439977741085"
+    ],
+    "current_description_sha256": "4939a3439b5a945ff62a0366ad8be6357b3162847445059a57f215d810c45d94"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:48.504601+00:00",
+  "question": "Hibernian FC vs. Falkirk FC: O/U 3.5",
+  "market_id": "5308755",
+  "valuation_author": "primary_operator",
+  "original_index": 2160,
+  "report_sha256": "8d8d000a9c6ee96afdc027d3bafc140c02b540f988d680fbfa0e65481088a1d6"
+}

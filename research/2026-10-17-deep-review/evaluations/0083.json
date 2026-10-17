@@ -1,0 +1,72 @@
+{
+  "review_index": 83,
+  "condition_id": "0xf093b6791f0e55f8c6a73c70c4f25ab1aae8b820c2079ba2b3714177866afdf9",
+  "criteria_sha256": "d200370130f98a84ca6ef07c38df1b413b0d1f23e0233e3607b3db51661b0c6d",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5349259",
+      "observed_utc": "2026-10-17T20:10:51.402+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00016",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00016.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00016.body.json.gz",
+      "start_utc": "2026-10-17T20:10:51.344+00:00",
+      "end_utc": "2026-10-17T20:10:51.402+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:51 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5349259",
+        "params": null
+      },
+      "raw_sha256": "5c0a3c86d440fa35ae1d3314e0a44f4d95fb5e4261ee58fe2eb0ad9c08403805",
+      "gzip_sha256": "073b0fc6f13ce3536b041f79480f4cf8eea9207fa8b40532a8daf9c56808dbb2",
+      "raw_bytes": 3602,
+      "gzip_bytes": 1635
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Florida Atlantic",
+      "Army"
+    ],
+    "current_token_ids": [
+      "13116185777859660510115285113924251674262700000919514023504109516849274821946",
+      "97114511955077586418924739052657463557910846704497117848109078097114406048846"
+    ],
+    "current_description_sha256": "f2999e27136d3b247cf2a7f5017086268038d6f50cfdef7c69333e7840bb55ac"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:09.113557+00:00",
+  "question": "Florida Atlantic vs. Army",
+  "market_id": "5349259",
+  "valuation_author": "primary_operator",
+  "original_index": 83,
+  "report_sha256": "d0915e4aa20a1d07b7082d235dbc618bd8a7a8c863e4df2c5630535b022c278d"
+}

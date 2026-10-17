@@ -1,0 +1,72 @@
+{
+  "review_index": 1343,
+  "condition_id": "0xc84624dce0f9486dd4355396f5a4661531b563e3534139c3ea5bbdce135fe951",
+  "criteria_sha256": "6a467b048b6aecbb28d53f1faa82cbe9438807ad3adb0c7f4777e22db2d10de4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5244377",
+      "observed_utc": "2026-10-17T20:11:04.875+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00170",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00170.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00170.body.json.gz",
+      "start_utc": "2026-10-17T20:11:04.795+00:00",
+      "end_utc": "2026-10-17T20:11:04.875+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:04 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5244377",
+        "params": null
+      },
+      "raw_sha256": "514241e710964279b9d632ce5530eea943cf8dcb599f2f0032c3dc08311395ce",
+      "gzip_sha256": "fbfa78a89b86f3ebd61d681de0bd86f8edf7b550128a539e6314e0a60d84fdc3",
+      "raw_bytes": 4682,
+      "gzip_bytes": 2110
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "49293622861298159552142888497928259961354554335013229428878870474336915633925",
+      "19976754572729679283027353121203836152570300431964289117930175465590866244092"
+    ],
+    "current_description_sha256": "691d5ec0fa26d1fd4d38c7e34879b39c4debaf65b479f1c45c52ea517d3cab72"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:52.919385+00:00",
+  "question": "Will SK Slavia Praha win on 2026-10-17?",
+  "market_id": "5244377",
+  "valuation_author": "primary_operator",
+  "original_index": 1343,
+  "report_sha256": "ff0111d0c9f81bc7a0c79382f373311cf7eefe6e3f726f65af69feab4af3399d"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 1688,
+  "condition_id": "0xa57490bb59237dd41b70cb3ca117ec02c281488e6be6f4d17303775284d8cef8",
+  "criteria_sha256": "88b42e61296f99181e94c923bbac44631f170e3a06cfbb777240444061b15882",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5272586",
+      "observed_utc": "2026-10-17T20:11:09.056+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00212",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00212.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00212.body.json.gz",
+      "start_utc": "2026-10-17T20:11:08.935+00:00",
+      "end_utc": "2026-10-17T20:11:09.056+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:09 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5272586",
+        "params": null
+      },
+      "raw_sha256": "d6079a091861c0a8188d8ccdb4cd7d751c346d6a1d4f0656e8a1662ab0c58032",
+      "gzip_sha256": "45937b5b819d79c53de357fbca5ec935066c11369fd9008caf54896947d06e13",
+      "raw_bytes": 4906,
+      "gzip_bytes": 2206
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "39657248888143476562139839457103849689422380796221428044983960465534188433402",
+      "80019933274319373128728128501519257347815819880422436975226949107833372554184"
+    ],
+    "current_description_sha256": "012a603d39d20e5a83e34385137da8311ace22ec2fc74613d727c5f5ac766182"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:05.117997+00:00",
+  "question": "Wycombe Wanderers FC vs. Notts County FC: Both Teams to Score",
+  "market_id": "5272586",
+  "valuation_author": "primary_operator",
+  "original_index": 1688,
+  "report_sha256": "73027c7dc5b6c4b27f214c66546887b3769ddcee8069e1a2a320a7a147ac460c"
+}

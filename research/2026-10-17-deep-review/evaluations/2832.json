@@ -1,0 +1,72 @@
+{
+  "review_index": 2832,
+  "condition_id": "0x3271e3895d5ea0df488291f20c0984132a6ca35614d07222eebd4474ac18439d",
+  "criteria_sha256": "af139f32ee2ecfc5e9951f6da5cccf3056c13960448cde6f2abf363c8b1da913",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264614",
+      "observed_utc": "2026-10-17T20:11:25.336+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00368",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00368.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00368.body.json.gz",
+      "start_utc": "2026-10-17T20:11:25.252+00:00",
+      "end_utc": "2026-10-17T20:11:25.336+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:25 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264614",
+        "params": null
+      },
+      "raw_sha256": "e98e1804084fd73428a5c378a4b432a821da5fb488c90e65f457d753ffc7988b",
+      "gzip_sha256": "3a5ddc846c6057d5b6fdcfd948ed92efdd690a31930733fe19b4fcabc139bffd",
+      "raw_bytes": 4715,
+      "gzip_bytes": 2154
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "111417826616356818892381798701642606279154777710770209377017890983225572881354",
+      "58717397016365636118677995884658991268459897401068775682888093516524012919437"
+    ],
+    "current_description_sha256": "7a0a06b01a778a3ac069258c878b6eb889b2fc447d69994e8d9d04f23cf266d6"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:08.016327+00:00",
+  "question": "Exact Score: Hamburger SV 1 - 0 VfB Stuttgart?",
+  "market_id": "5264614",
+  "valuation_author": "primary_operator",
+  "original_index": 2832,
+  "report_sha256": "fe91c90a313ce434d4b391319b0a42349156c7780b3f5a17b76f5c37c4b45694"
+}

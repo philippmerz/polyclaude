@@ -1,0 +1,72 @@
+{
+  "review_index": 1238,
+  "condition_id": "0x3cf1e8855acf96ddf6cbcb48042240489fecf57fffbdc6b7dd04aa2fee9c25b5",
+  "criteria_sha256": "60fb1e7148403e1193d750bf050eba494f6f8b25d6bceee8e7b2b2ae1fdbea7f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5296972",
+      "observed_utc": "2026-10-17T20:11:03.672+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00157",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00157.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00157.body.json.gz",
+      "start_utc": "2026-10-17T20:11:03.594+00:00",
+      "end_utc": "2026-10-17T20:11:03.672+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:03 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5296972",
+        "params": null
+      },
+      "raw_sha256": "dcd3422b602f2b5c2afc36ec81344ba8e6523b3ef3c3e9bacaf0906e2366b594",
+      "gzip_sha256": "b12fa77684176c49dd2fa72d04cdcd8f043017a8bdd69135c65c95367918cdc0",
+      "raw_bytes": 4646,
+      "gzip_bytes": 2084
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "61323762632389212006077461311609347993317797872951276248111438280509513398239",
+      "59858352089245023545536864862345854652636007159349197921102174331794579492063"
+    ],
+    "current_description_sha256": "89b1119a9ddf062faa23575773410b3436d983c4937d15853a1a800f242c8bba"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:49.104480+00:00",
+  "question": "SD Eibar vs. RCD Mallorca: O/U 1.5",
+  "market_id": "5296972",
+  "valuation_author": "primary_operator",
+  "original_index": 1238,
+  "report_sha256": "c285942695d44e382a0ed52d7e5aaf27d7a752a5852180585f92aadcdba07fe5"
+}

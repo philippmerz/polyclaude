@@ -1,0 +1,72 @@
+{
+  "review_index": 2544,
+  "condition_id": "0x5fba645a00353bf390a11b943d55dbb1f7d32a1e428a1662977436554d191fe2",
+  "criteria_sha256": "b162ae23826ec537fb129f394bdae0bb4fa1cc4e1f927aceaed634ad343a81f0",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5350378",
+      "observed_utc": "2026-10-17T20:11:21.213+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00334",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00334.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00334.body.json.gz",
+      "start_utc": "2026-10-17T20:11:21.144+00:00",
+      "end_utc": "2026-10-17T20:11:21.213+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:21 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5350378",
+        "params": null
+      },
+      "raw_sha256": "29dc4f62422b02ba3ecb3a3eaf6e74c67f70bae91e8d6ea71a3bfcbc38e3d55a",
+      "gzip_sha256": "4f3e2e99305494f1e88d6978ef79390e101c8e246eddee4796dd69930e41f4e2",
+      "raw_bytes": 3638,
+      "gzip_bytes": 1678
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "North Carolina A&T",
+      "Chicago State"
+    ],
+    "current_token_ids": [
+      "48196370002687722172737636726100163971616676985956515355813614247923589710942",
+      "17773668436235055279963738562672977793897439565932778927096496265971543979555"
+    ],
+    "current_description_sha256": "186894553b26e465ce882b33f26cb89e6ac0d7418e5fcd89c59e6756a5a9f931"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:24.989535+00:00",
+  "question": "Spread: North Carolina A&T (-14.5)",
+  "market_id": "5350378",
+  "valuation_author": "primary_operator",
+  "original_index": 2544,
+  "report_sha256": "117e61811078c7f224d14652ff06bc7a4aaa7ad9964269714cc781257448fdcf"
+}

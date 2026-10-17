@@ -1,0 +1,72 @@
+{
+  "review_index": 2732,
+  "condition_id": "0x10ac665ad780f2d47ade0c87b04e418c57b84589f631c85e2f565d8c46246909",
+  "criteria_sha256": "571e2959e82e2a11de4278f82f48f1989508ef6c0c5f0913a7fea74778510916",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5266217",
+      "observed_utc": "2026-10-17T20:11:23.737+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00355",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00355.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00355.body.json.gz",
+      "start_utc": "2026-10-17T20:11:23.652+00:00",
+      "end_utc": "2026-10-17T20:11:23.737+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:23 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5266217",
+        "params": null
+      },
+      "raw_sha256": "3d684c7b3c0dab3f478c5f891fd195a31b89e3363a57293a619050d62b66d524",
+      "gzip_sha256": "b90cf757c79a771ec424b27ffa010ee21676e52855622844423bf53bdc686dd8",
+      "raw_bytes": 4892,
+      "gzip_bytes": 2195
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "75728144588739626540479851095370938762506522229473834685699110838017527468471",
+      "74946730448775708672257745344240457091039730503769965608047891192777807691488"
+    ],
+    "current_description_sha256": "29482920a4bcd1ae3cb3c9ba5a7bae872fe6ae6dd63b360348413de578dd8baf"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:51.475016+00:00",
+  "question": "SV 07 Elversberg vs. FC Augsburg: O/U 9.5 Total Corners",
+  "market_id": "5266217",
+  "valuation_author": "primary_operator",
+  "original_index": 2732,
+  "report_sha256": "c50d7e2703903644afa86f8d5cfebf6411fbc3ed9fe1a824163587d52729e7c2"
+}

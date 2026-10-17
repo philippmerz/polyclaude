@@ -1,0 +1,72 @@
+{
+  "review_index": 2276,
+  "condition_id": "0x9103bc00900210e60375c142b54ab5740891190382310650a938d61e4a8040d0",
+  "criteria_sha256": "fa3f28f05e8474392fcde94dca5b79508c32d831cc2cdcbd92574939b69ce774",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273602",
+      "observed_utc": "2026-10-17T20:11:17.398+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00295",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00295.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00295.body.json.gz",
+      "start_utc": "2026-10-17T20:11:17.313+00:00",
+      "end_utc": "2026-10-17T20:11:17.398+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:17 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5273602",
+        "params": null
+      },
+      "raw_sha256": "5e7b753684737d4f112f73aa0227f9dabbdf0e92532b5930466639591fd94727",
+      "gzip_sha256": "1cb0111131e9d30d6295b6348ab6b8b64368738453076cc9dd172837649b941d",
+      "raw_bytes": 4726,
+      "gzip_bytes": 2122
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "58970393408495954510890137447621335208141637150374358710476242735917502867638",
+      "9286971529885998061971923382197117669915039117412812875490047464442122000231"
+    ],
+    "current_description_sha256": "41439bcc0129ba2c7d725416ee08943dc96e50d814c40c28a962f0fc315f138a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:25.730554+00:00",
+  "question": "Will Port Vale FC win on 2026-10-17?",
+  "market_id": "5273602",
+  "valuation_author": "primary_operator",
+  "original_index": 2276,
+  "report_sha256": "99f15d05b97236ea33c8fbb7dc3ab3a0c1910ca63db9ac7e56863d4fa908d1a5"
+}

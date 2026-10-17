@@ -1,0 +1,72 @@
+{
+  "review_index": 933,
+  "condition_id": "0x52cf064a4a5f67ac7992e774fe3d636bb1f0648b988b43dd53e018d863c7f8f1",
+  "criteria_sha256": "2d48f8f390c7797a45d67584199a631fa075d4199e433ea85673e85e49c41886",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263911",
+      "observed_utc": "2026-10-17T20:11:00.455+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00123",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00123.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00123.body.json.gz",
+      "start_utc": "2026-10-17T20:11:00.356+00:00",
+      "end_utc": "2026-10-17T20:11:00.455+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:00 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263911",
+        "params": null
+      },
+      "raw_sha256": "eebd7bd3f770e256b2a5f09cfa6762282ef44b2fab309f80711ebd2d44842e65",
+      "gzip_sha256": "1100dfa414f8df17c46d281050bac3950387853323bbe5685ad99304dbba627b",
+      "raw_bytes": 4728,
+      "gzip_bytes": 2116
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "62726609091602494248101910723755334173095843319676887164363703667702939532207",
+      "67330250112925419143757238103798764873911239168300331414261141312430300666108"
+    ],
+    "current_description_sha256": "754c5efc02b8ae5b0b20af1441faa33c6151e1ddfd728f3b0ee1e93d21899ff9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:38.728925+00:00",
+  "question": "Will Millwall FC vs. Lincoln City FC end in a draw?",
+  "market_id": "5263911",
+  "valuation_author": "primary_operator",
+  "original_index": 933,
+  "report_sha256": "e530359d18e452ec62a0ddae6481decfa9dbf08377899c4dc221061181fc221e"
+}

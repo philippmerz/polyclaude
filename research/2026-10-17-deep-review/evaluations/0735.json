@@ -1,0 +1,72 @@
+{
+  "review_index": 735,
+  "condition_id": "0xd4d0fd6343819e9f3090aac98c2ab3c2a97f58583b426f540054566e1b2cc8e9",
+  "criteria_sha256": "148189a0379b0dbf6b91fa08d18ead5d5afa628513afb636fbd6dbc52b532608",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5790782",
+      "observed_utc": "2026-10-17T20:10:58.661+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00104",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00104.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00104.body.json.gz",
+      "start_utc": "2026-10-17T20:10:58.599+00:00",
+      "end_utc": "2026-10-17T20:10:58.661+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:58 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5790782",
+        "params": null
+      },
+      "raw_sha256": "ad99996a4faa08abab70631789bd1948f769ad1940dc05ffa3aed33a1b04265c",
+      "gzip_sha256": "09f96970fd69dc55f024d37bc3e72e5b51e89ba6d0ac8ea3aa691bde7a376407",
+      "raw_bytes": 4259,
+      "gzip_bytes": 1903
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Nicolai Budkov Kjaer",
+      "Matteo Martineau"
+    ],
+    "current_token_ids": [
+      "39508840493938068874213304104759691472903582120790410713429550192984403496701",
+      "1690930376460041097708910118630260672768773479812469197372354270410105975141"
+    ],
+    "current_description_sha256": "39478618f08561bb5a51613791d6ecbc3924ef27162bf4b21558a8378475caaf"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:32.989553+00:00",
+  "question": "Roanne: Nicolai Budkov Kjaer vs Matteo Martineau",
+  "market_id": "5790782",
+  "valuation_author": "primary_operator",
+  "original_index": 735,
+  "report_sha256": "56f61b10d057fd1ddf9d4fddfd0fd7706e610ba2e65312083c55805649a56e35"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 2392,
+  "condition_id": "0x4da399ff2af78b1950894d801deba8d3487acd7c2b91a6113d1c66cc24071cbf",
+  "criteria_sha256": "646a232cc6fd8e8e9fffd81058d67cb5197ab7f9aa5bbc2d9a8ff532b8e31a9c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271316",
+      "observed_utc": "2026-10-17T20:11:19.345+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00316",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00316.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00316.body.json.gz",
+      "start_utc": "2026-10-17T20:11:19.293+00:00",
+      "end_utc": "2026-10-17T20:11:19.345+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271316",
+        "params": null
+      },
+      "raw_sha256": "1743582e9cd2858c01dfa9d0f4abddf877a3583d11d676bb4173f51b076c6488",
+      "gzip_sha256": "0a3e7d52038d1edabb9691f5609c642b3437f9641158d942b67d15d2b62df7f1",
+      "raw_bytes": 4734,
+      "gzip_bytes": 2113
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "106587289651971764474382787183963499010411085005095859766939209268647250674979",
+      "22903970235542434284723571143297528802219218903657467751067062625176821351248"
+    ],
+    "current_description_sha256": "514295a416584f33de3576eab4e8d38580e849f39925eea43e123e68ef61e12d"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:01.018113+00:00",
+  "question": "Will Bradford City AFC win on 2026-10-17?",
+  "market_id": "5271316",
+  "valuation_author": "primary_operator",
+  "original_index": 2392,
+  "report_sha256": "a7107c17f8233266ce56463a9faad81cbda6e0304e881e3b3b64128f060e71ee"
+}

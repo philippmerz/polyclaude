@@ -1,0 +1,72 @@
+{
+  "review_index": 2640,
+  "condition_id": "0xa09a8673016bd78c2fdce17ada6228aaf6c512f4f5d64e357a9eea4ef29ab65f",
+  "criteria_sha256": "0a4bf28b7a5119de79ba74f84871266a41d278f9e1acade389a7a40cd29677dd",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5272689",
+      "observed_utc": "2026-10-17T20:11:22.649+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00346",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00346.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00346.body.json.gz",
+      "start_utc": "2026-10-17T20:11:22.566+00:00",
+      "end_utc": "2026-10-17T20:11:22.649+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:22 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5272689",
+        "params": null
+      },
+      "raw_sha256": "5e70d49bc55ac36486a8e048af0e77c538b96a9c05e31127890f760c36bf10bf",
+      "gzip_sha256": "3bfe7531684ba59c3f114ecd466cfb75a7b3d8038ef0ddc609928d5a42dd8f17",
+      "raw_bytes": 4905,
+      "gzip_bytes": 2190
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Sheffield Wednesday FC",
+      "AFC Wimbledon"
+    ],
+    "current_token_ids": [
+      "21953308127709338274184074943856922954564171711392900211166970619024519942425",
+      "75514081867039784705857005612985198122108178056461023234666012653299333996147"
+    ],
+    "current_description_sha256": "3bffcefc1d95dac4a3f58b61a33e3d45a9653df114e1451bb092ac8b7af87ef1"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:41.226510+00:00",
+  "question": "Spread: Sheffield Wednesday FC (-1.5)",
+  "market_id": "5272689",
+  "valuation_author": "primary_operator",
+  "original_index": 2640,
+  "report_sha256": "d3f5dabd4131d15524548874bf1a19ad01bc5f26a2da7fb87d5bb049b21f91b6"
+}

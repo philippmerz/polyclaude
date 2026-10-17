@@ -1,0 +1,72 @@
+{
+  "review_index": 1023,
+  "condition_id": "0xd5646aa9d3fa8b721892cffe7c2eff534ef9b6a80f5166fcd960e08960f17d2c",
+  "criteria_sha256": "e7c05a0f13d7708382ec826820063450726c4af185b322a3880c6c1aba5f3719",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263932",
+      "observed_utc": "2026-10-17T20:11:01.349+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00133",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00133.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00133.body.json.gz",
+      "start_utc": "2026-10-17T20:11:01.294+00:00",
+      "end_utc": "2026-10-17T20:11:01.349+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:01 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263932",
+        "params": null
+      },
+      "raw_sha256": "31c1e26db78511afa228fa4887a0790d6944ab41ee093ae2692cbe3f068df0ea",
+      "gzip_sha256": "e3de7e21ad2fc3f3152d5c342023342a302086837af67aa4cd0d9a46ce220ce5",
+      "raw_bytes": 4748,
+      "gzip_bytes": 2120
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "92325158709864969039964212562438622223075770088538888444501442894733157454448",
+      "20907408292637668178573502956474783998965455171845323160058861578781382736403"
+    ],
+    "current_description_sha256": "ce6e4bc8f614ba66b3f4bbcb6de0ea4f821c6896b56fe3c9f8b3f06aa92c4f5a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:41.628522+00:00",
+  "question": "Will Wrexham AFC win on 2026-10-17?",
+  "market_id": "5263932",
+  "valuation_author": "primary_operator",
+  "original_index": 1023,
+  "report_sha256": "922e09216b95bf797e8b4b0290866ef13f71f9cf47ae8ed12d1e74c4d6a51e9c"
+}

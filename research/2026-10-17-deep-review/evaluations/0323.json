@@ -1,0 +1,72 @@
+{
+  "review_index": 323,
+  "condition_id": "0x6d5e4e34fe82a146f9d7f3a930836b29d7f81013ddcffae662d1b18827410836",
+  "criteria_sha256": "507cc4e2d13ffe66a8e83ce8b73f307e3a4187fa034b9978165ae019e69fc296",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720872",
+      "observed_utc": "2026-10-17T20:10:54.108+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00051",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00051.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00051.body.json.gz",
+      "start_utc": "2026-10-17T20:10:54.037+00:00",
+      "end_utc": "2026-10-17T20:10:54.108+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:54 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720872",
+        "params": null
+      },
+      "raw_sha256": "31b5efe411d8e555f06e267117173bc3d6fee1833fe9f6619376bd0b7bdbbe0d",
+      "gzip_sha256": "2bc20c7b51745ad45c8234e53a2d85528e525a6357bf30a7269abb500d9d2592",
+      "raw_bytes": 5351,
+      "gzip_bytes": 2336
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "18344742668746683326921707552113779911657816879043399172820284249916211975516",
+      "2523291226458320125866419105126061739719141251888036142559396932738332672461"
+    ],
+    "current_description_sha256": "c664426068618f655777e86d2ed02903b6ac359e403acc6d7d039e50cab583d2"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:16.916487+00:00",
+  "question": "Will the highest temperature in Wuhan be 29°C on October 17?",
+  "market_id": "5720872",
+  "valuation_author": "primary_operator",
+  "original_index": 323,
+  "report_sha256": "06a5e33ce4f7c87eb35b81f30a2011ead3a2ffbb82a1ad5adb5a21febc38032c"
+}

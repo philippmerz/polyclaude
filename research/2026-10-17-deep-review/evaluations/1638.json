@@ -1,0 +1,72 @@
+{
+  "review_index": 1638,
+  "condition_id": "0x07510fa3020ba02ca0bb868d89119eaf713ceb3e4164da194da39621a096c056",
+  "criteria_sha256": "98eccf267ebc976789b0cbd7772cc329174dfb3a7c620dc85bde129f502a9619",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5792491",
+      "observed_utc": "2026-10-17T20:11:08.421+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00206",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00206.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00206.body.json.gz",
+      "start_utc": "2026-10-17T20:11:08.365+00:00",
+      "end_utc": "2026-10-17T20:11:08.421+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:08 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5792491",
+        "params": null
+      },
+      "raw_sha256": "7711683d8999acd936bc8c75d47522ba013145d38f89408cfb464db929bec651",
+      "gzip_sha256": "9e83e4c76c527bf5aa063298476dbf15c4dbc8005e61ab59304f997eac12eadc",
+      "raw_bytes": 4055,
+      "gzip_bytes": 1836
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Ana Sofia Sanchez",
+      "Luna Maria Cinalli"
+    ],
+    "current_token_ids": [
+      "36015042585745865927269135665054852094297828295062389314368793363200008206340",
+      "85332547153464707389524562105049395547496625760155101200576582740990442523360"
+    ],
+    "current_description_sha256": "5d701eb8df22f9fd492eaa6638836d4f90ce1433b93d0a98d778cae6ebf7d6f5"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:03.386447+00:00",
+  "question": "W15 Maceio: Ana Sofia Sanchez vs Luna Maria Cinalli",
+  "market_id": "5792491",
+  "valuation_author": "primary_operator",
+  "original_index": 1638,
+  "report_sha256": "9cfdf14eef70dae1d4bef047ccab9219d6f09c54aff4d9964a8b993894b9683c"
+}

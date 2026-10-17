@@ -1,0 +1,72 @@
+{
+  "review_index": 1338,
+  "condition_id": "0x11e5f704fb5723dfbec3b47c829d1cb12dc3e99c5d7c9ff2cc53100a26ceea13",
+  "criteria_sha256": "8bfaed8638e2fd7acc6313434b21c059f2a98f08a86a2b632f326a2b99b91312",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5608052",
+      "observed_utc": "2026-10-17T20:11:04.794+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00169",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00169.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00169.body.json.gz",
+      "start_utc": "2026-10-17T20:11:04.775+00:00",
+      "end_utc": "2026-10-17T20:11:04.794+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:04 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5608052",
+        "params": null
+      },
+      "raw_sha256": "e263af5052cc4767e7762ec0212191e358e7cbfb52858a341ac7e961ec02f1fb",
+      "gzip_sha256": "505dfb9855977ddfecdc84dcaed20fbf8816d61a1795b18969d02d1a31487933",
+      "raw_bytes": 4698,
+      "gzip_bytes": 2109
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "76222178063091194885052557747243939889895367440091363533846286469460647459221",
+      "99433303070859179335441316000913367851009840091097700522555042776342056705174"
+    ],
+    "current_description_sha256": "2c8c2a37976e7a0126f4adfd350dbb722f139f1b7bc17fa4b826a59bd8cb4002"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:52.588703+00:00",
+  "question": "Will HJK Helsinki win on 2026-10-17?",
+  "market_id": "5608052",
+  "valuation_author": "primary_operator",
+  "original_index": 1338,
+  "report_sha256": "ef929c6ee3f574d4fb20b520b67e0e3d069ae437756bc7d3f753715f78ea58e1"
+}

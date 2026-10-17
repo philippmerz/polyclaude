@@ -1,0 +1,72 @@
+{
+  "review_index": 1613,
+  "condition_id": "0xb9d8bca291c2fe2451626aa3b415ea525aa48c7e246cf7a6f83a596c2ac43adf",
+  "criteria_sha256": "297bcc7f3f316817e468f90f3e1091742df3df86cbf071c0067d3903e97048ed",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271291",
+      "observed_utc": "2026-10-17T20:11:08.254+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00204",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00204.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00204.body.json.gz",
+      "start_utc": "2026-10-17T20:11:08.164+00:00",
+      "end_utc": "2026-10-17T20:11:08.254+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:08 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271291",
+        "params": null
+      },
+      "raw_sha256": "4c9a371a1331d49cd5de5075a3037e40764538e6e8499658c64dee859779d438",
+      "gzip_sha256": "0188cf94fc9b9194731519bc2e8d33ab0ec6bf390ce06ebe3c5c200138eec479",
+      "raw_bytes": 4783,
+      "gzip_bytes": 2117
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "18662702278650207993238630185668133282982651811885175885328752534601585988336",
+      "74977222374851174630046109745559160092187610236673620198292046573350272564285"
+    ],
+    "current_description_sha256": "6d9a453dccc6388ac3fb8029e3a2c71c75aa96d32025d756519424397ac56c39"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:02.668680+00:00",
+  "question": "Will Stockport County FC win on 2026-10-17?",
+  "market_id": "5271291",
+  "valuation_author": "primary_operator",
+  "original_index": 1613,
+  "report_sha256": "7517439e300dcdb85d6807c27e12a9838af842c3580db7780f6921aebab2aa73"
+}

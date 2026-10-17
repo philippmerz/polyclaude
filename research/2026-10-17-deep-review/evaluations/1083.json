@@ -1,0 +1,72 @@
+{
+  "review_index": 1083,
+  "condition_id": "0xefe9d6c2607f92c55a8b81ac5a3639d13f53241eebadad631d3b85c3a6465a0a",
+  "criteria_sha256": "ac808a34fc24e8d275a5e45ae02b4bf88600536af9648a4fef28367b8fe1b635",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5270706",
+      "observed_utc": "2026-10-17T20:11:01.863+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00138",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00138.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00138.body.json.gz",
+      "start_utc": "2026-10-17T20:11:01.708+00:00",
+      "end_utc": "2026-10-17T20:11:01.863+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:01 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5270706",
+        "params": null
+      },
+      "raw_sha256": "afa2fb92a876961d67a98414629a09f80bc5a102e3b9ff33ed8489c61e18dae3",
+      "gzip_sha256": "95241e5aa755f62238bfff7bd833caeb8a8019261b5c201f2a221798230d127b",
+      "raw_bytes": 4516,
+      "gzip_bytes": 2010
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "38708931596619117411088765462394799599965027933938586505785935044950321379900",
+      "110531676489638096821196625380650151080894983315856807391059578698223523764973"
+    ],
+    "current_description_sha256": "a2ecb4624c5d6808190d2bd8fb051f7eaa878dad837247f9831669d81233dada"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:43.378239+00:00",
+  "question": "Will Benevento Calcio win on 2026-10-17?",
+  "market_id": "5270706",
+  "valuation_author": "primary_operator",
+  "original_index": 1083,
+  "report_sha256": "49d7a42e6a45078947f367116d57b5bf72b66c9bb5e0387928c17d870d467fb2"
+}

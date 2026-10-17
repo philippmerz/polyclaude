@@ -1,0 +1,72 @@
+{
+  "review_index": 2548,
+  "condition_id": "0xaf718277f63ba77b10a83052e8d84ca6f9e432f0f0a522bc012b09cdf7f308e9",
+  "criteria_sha256": "6401c60c04b289a9f31727e030ad69345341746bbe4e8cedc8c5086f656a1d97",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5759494",
+      "observed_utc": "2026-10-17T20:11:21.305+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00335",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00335.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00335.body.json.gz",
+      "start_utc": "2026-10-17T20:11:21.214+00:00",
+      "end_utc": "2026-10-17T20:11:21.305+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:21 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5759494",
+        "params": null
+      },
+      "raw_sha256": "54fb88143bf1d219c56ad5e9f01647a2836524dbcbc2c16b18b67afc49bb666f",
+      "gzip_sha256": "d68abf9e3edee05c56c47c669b22c258a67d4d86886cf0446fe57962393d3119",
+      "raw_bytes": 4536,
+      "gzip_bytes": 2006
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "114228655704205489064300272344390287744314978722748648109541954035816650337476",
+      "53548303054729201606156341905820932095598255275415820992517913091253462371503"
+    ],
+    "current_description_sha256": "754c5efc02b8ae5b0b20af1441faa33c6151e1ddfd728f3b0ee1e93d21899ff9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:26.744076+00:00",
+  "question": "Will US Pianese vs. ASD Pineto Calcio end in a draw?",
+  "market_id": "5759494",
+  "valuation_author": "primary_operator",
+  "original_index": 2548,
+  "report_sha256": "d5f0f3ecf02c57ba99522b16c4a5b78cf791a4e6e1e45eb673d7ff645628b7d7"
+}

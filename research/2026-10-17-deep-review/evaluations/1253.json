@@ -1,0 +1,72 @@
+{
+  "review_index": 1253,
+  "condition_id": "0xae85b299831cf5f6fd7c9b669bb6aef7137c2b643a2be6e93f24c6183f520247",
+  "criteria_sha256": "24fa9b5f64af8f01b64ceb3d5f889bb1b9b5a7166882d37fbaea191d0060680d",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264537",
+      "observed_utc": "2026-10-17T20:11:04.037+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00161",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00161.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00161.body.json.gz",
+      "start_utc": "2026-10-17T20:11:03.963+00:00",
+      "end_utc": "2026-10-17T20:11:04.037+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:04 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264537",
+        "params": null
+      },
+      "raw_sha256": "a83be400d2588ed6381c9dbdce2caa7ca97d31d238d74c2c66f40caf50018ad7",
+      "gzip_sha256": "a1d0170129c79ce6b3117494d733038b904a837e03345c64f2f04d7e22c39248",
+      "raw_bytes": 4790,
+      "gzip_bytes": 2134
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "84257214330654467712990268468738764202855009248787435579740644813064487450412",
+      "72434210590736876915375066436885576638648914902029507366278200302241659067550"
+    ],
+    "current_description_sha256": "0052fe67197c971f450cf4569037068650b429cfca79ce98a5fc0e97d2f9e260"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:50.138372+00:00",
+  "question": "Manchester City FC leading at halftime?",
+  "market_id": "5264537",
+  "valuation_author": "primary_operator",
+  "original_index": 1253,
+  "report_sha256": "4e28732cc2286f48aa80c2228355b9f734e0cfcf9d957982c40a7e5453d0b9db"
+}

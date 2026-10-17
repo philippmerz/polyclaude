@@ -1,0 +1,72 @@
+{
+  "review_index": 1148,
+  "condition_id": "0x100bc41cc64bf879ff49a55bd8afb6314f4547c9daf920573ac2daf290d77155",
+  "criteria_sha256": "c93ae12ec567b601289af0c21a0bbf7900f3ba54dea5994c8ecb88672bbc37b2",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5268761",
+      "observed_utc": "2026-10-17T20:11:02.722+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00147",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00147.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00147.body.json.gz",
+      "start_utc": "2026-10-17T20:11:02.666+00:00",
+      "end_utc": "2026-10-17T20:11:02.722+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:02 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5268761",
+        "params": null
+      },
+      "raw_sha256": "5ceb7e52a853c50d6f035014d1ceb6291e8510875fcbcf101fe98dc587fe3baf",
+      "gzip_sha256": "a23781ce8cb8da0d738f293a9ef683c6fb29538fc581f454e739d937a6468f67",
+      "raw_bytes": 4523,
+      "gzip_bytes": 2018
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "3131342483696983048107848311116774723897876516421959921079462457328054778809",
+      "56667348661592154450918830857958949549461086417044464709334648517717377961151"
+    ],
+    "current_description_sha256": "5609994a7b2f3b59cc4d4e1a9fa0050a23e69c880fa5c01446ada745389af662"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:46.420884+00:00",
+  "question": "Will RCD Mallorca win on 2026-10-17?",
+  "market_id": "5268761",
+  "valuation_author": "primary_operator",
+  "original_index": 1148,
+  "report_sha256": "f09c454325f609d518cc429e651627bb09b40af794995d3bf12e91f68b2757da"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 2361,
+  "condition_id": "0xc248876747206e84ad51b54f79f1830ea4b64c8cc330848bd1bd7494ac49c3e8",
+  "criteria_sha256": "b4507dcbd1232e5b23abf4f87bfa1222267f213a02bcc22ed6decb4774c82a8a",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720963",
+      "observed_utc": "2026-10-17T20:11:18.936+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00311",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00311.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00311.body.json.gz",
+      "start_utc": "2026-10-17T20:11:18.836+00:00",
+      "end_utc": "2026-10-17T20:11:18.936+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:18 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720963",
+        "params": null
+      },
+      "raw_sha256": "a1be949418cc62d6a7ab99b55df03ae293b586015240ec4032bd25e79071d473",
+      "gzip_sha256": "0dfd04287cb6e565b58f57dddcd4dcf1ae53e3f8b12f1355e9f062ace125659c",
+      "raw_bytes": 5357,
+      "gzip_bytes": 2353
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "73560588708834205270664894569886990618359912543809585979519222123850009387301",
+      "16997486810613793253334381287751191326393365475754589526096193902128094350101"
+    ],
+    "current_description_sha256": "76b2c5f29e9a60541ace24fee9584e1799b0f72037814990bc03976deca41912"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:52.766364+00:00",
+  "question": "Will the highest temperature in Kuala Lumpur be 33°C on October 17?",
+  "market_id": "5720963",
+  "valuation_author": "primary_operator",
+  "original_index": 2361,
+  "report_sha256": "1944e14182a642fdfbc6df7cd9df2186e27899e99bef9bac37e91961719bd209"
+}

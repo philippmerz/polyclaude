@@ -1,0 +1,72 @@
+{
+  "review_index": 1820,
+  "condition_id": "0xc9931761660308ca31ce0b4369e78d35bb15c9dcb062d63a1a02426f6b89631c",
+  "criteria_sha256": "3a3acad0b777de7166e6a71a9a5271dc74bd8c254b27ef0814189e5df6db02df",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271309",
+      "observed_utc": "2026-10-17T20:11:10.881+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00231",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00231.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00231.body.json.gz",
+      "start_utc": "2026-10-17T20:11:10.816+00:00",
+      "end_utc": "2026-10-17T20:11:10.881+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:10 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271309",
+        "params": null
+      },
+      "raw_sha256": "5bef4b42520bfaa76d3c19cf8af7048163ec18716f71e02d45d5b47ed63d086c",
+      "gzip_sha256": "f1601bbe9bc62dcf7a0323d504a564e574340aab465b9d684a9a83aabe30f4c6",
+      "raw_bytes": 4802,
+      "gzip_bytes": 2141
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "21610232902837675614494830331053529200888420355151915241187748198028942788027",
+      "5856143608372007380935969268369924390578870217453524539968647469635649605897"
+    ],
+    "current_description_sha256": "b1cb889cb056a234166daf1130dd792f1612578b2f7460ebdadc1b75c9559e15"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:10.795272+00:00",
+  "question": "Will Huddersfield Town AFC win on 2026-10-17?",
+  "market_id": "5271309",
+  "valuation_author": "primary_operator",
+  "original_index": 1820,
+  "report_sha256": "9d273c8d08544c8520ff24802acdf65de5d42b40155eae972484c551163a85b0"
+}

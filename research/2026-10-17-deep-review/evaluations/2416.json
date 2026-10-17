@@ -1,0 +1,72 @@
+{
+  "review_index": 2416,
+  "condition_id": "0x812b8a318c858861ee2892f26fb72468d5d4c76453d51a9280126945eab35e95",
+  "criteria_sha256": "61edf73e77555f1b1faa2086a3281e02d1bf7b525c4897b3c9d4c9634559b91f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5734040",
+      "observed_utc": "2026-10-17T20:11:19.729+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00319",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00319.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00319.body.json.gz",
+      "start_utc": "2026-10-17T20:11:19.636+00:00",
+      "end_utc": "2026-10-17T20:11:19.729+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5734040",
+        "params": null
+      },
+      "raw_sha256": "ddc93c23f13a8a1936301c1beb3fa6052a7fd139d5ec7977ef637d1c5215d096",
+      "gzip_sha256": "728d143d743d658efb79c1728296a887d916e81a38eca20f92e0e0355db6bf21",
+      "raw_bytes": 3249,
+      "gzip_bytes": 1523
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "BC Siauliai",
+      "BC Rytas Vilnius"
+    ],
+    "current_token_ids": [
+      "62402516960472430829930351702168510666863134470994933727478580775450963331037",
+      "87469672403030206128215844956228040196726433494037054035295229795694788310351"
+    ],
+    "current_description_sha256": "cc2fdd613c8699470eeb979303fec4258ccfccefef52ae0fc02c8a8668f7b295"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:05.227187+00:00",
+  "question": "BC Siauliai vs. BC Rytas Vilnius",
+  "market_id": "5734040",
+  "valuation_author": "primary_operator",
+  "original_index": 2416,
+  "report_sha256": "3909900ce103b21e3dda1c0d59dc7c785e27722e263a33effb17ce42293a9c22"
+}

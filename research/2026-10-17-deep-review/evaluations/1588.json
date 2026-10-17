@@ -1,0 +1,72 @@
+{
+  "review_index": 1588,
+  "condition_id": "0xd3a526e741ff45a6860bc9a41750561c02df8bad22254c080a1dc168f9135bfa",
+  "criteria_sha256": "881fbeefd7ffd0ac2f5e1c330bbd26b82389b7723b8bd9ebb1176f35b20f5fe8",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5799491",
+      "observed_utc": "2026-10-17T20:11:07.699+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00199",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00199.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00199.body.json.gz",
+      "start_utc": "2026-10-17T20:11:07.625+00:00",
+      "end_utc": "2026-10-17T20:11:07.699+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:07 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5799491",
+        "params": null
+      },
+      "raw_sha256": "08e77b551f3e7c8d05946cb1c50e153ed9470d15a3a8d1c3a41415ef0263562c",
+      "gzip_sha256": "c7054b113739aea771a9fe2d6e0a9994100d865d1adef4e27060d9d4bf77e494",
+      "raw_bytes": 4074,
+      "gzip_bytes": 1846
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Dana Guzman",
+      "Sloane Stephens"
+    ],
+    "current_token_ids": [
+      "30091767398510130940793258106975480228599667209465248884074783497473169570621",
+      "65626536540412276881484460822335138835968687274027136495838605037671748850882"
+    ],
+    "current_description_sha256": "46de53d8f559085b3b0b528bd5ac7334555e9cdbdb4b439f1fc5c3b1a7be1c99"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:01.234889+00:00",
+  "question": "W100 Edmond, OK: Dana Guzman vs Sloane Stephens",
+  "market_id": "5799491",
+  "valuation_author": "primary_operator",
+  "original_index": 1588,
+  "report_sha256": "e716ac6429af5010a27e92b952577d564555c1d7f041d30bd88fd41d6e012e3d"
+}

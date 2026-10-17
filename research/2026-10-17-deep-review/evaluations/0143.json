@@ -1,0 +1,144 @@
+{
+  "review_index": 143,
+  "condition_id": "0x837c29e540247f039d6ba40d8b0ce8b9dfd5722167141ee4da4133faf529f681",
+  "criteria_sha256": "1f56a2c490bfdf8885f295500e43bede746cc00a6e6aa84aee5bdf13c2f860b2",
+  "status": "valued",
+  "literal_analysis": "Full exact frozen rule read, including creation/cutoff, official-announcement scope, actual control, effective wholeFIR closure, direct-force/militia/UAV exclusions and adjudication as applicable.",
+  "evidence": [
+    {
+      "url": "https://ext.iaa.gov.il/aeroinfo/AeroInfo.aspx?msgType=Notam",
+      "observed_utc": "2026-10-17T20:49:17.442083+00:00",
+      "finding": "Official current displayed notices; no separately validated full historical export."
+    },
+    {
+      "url": "https://safeairspace.net/summary/",
+      "observed_utc": "2026-10-17T20:49:17.442102+00:00",
+      "finding": "Aviation-risk context says currentFIRopen; not official closure authority or an exhaustive historical record."
+    },
+    {
+      "url": "https://www.tlvflights.com/en/airport-updates/",
+      "observed_utc": "2026-10-17T20:49:17.442105+00:00",
+      "finding": "Secondary reproduction of specific localized IAA notices; not a whole-FIR closure proof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.1,
+    "low": 0.02,
+    "high": 0.4,
+    "method": "Primary explicit event/interpretation tree, retaining latent historical and future regime uncertainty",
+    "reasoning": "Saved iran_event_model.py inputs are primary assumptions, not fitted rates; full case report distinguishes exact payoff, dated sources, bounds and interpretation branches.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 18,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.1,
+        "best_bid": 0.07,
+        "best_ask": 0.08,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.889,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.08,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.8,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.08,
+        "break_even_probability_with_idealized_carry": 0.08011882145514758,
+        "central_expected_profit_usd": 0.19999999999999996,
+        "default_10pp_stressed_profit_usd": -0.8,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.7000000000000001
+      },
+      "No": {
+        "probability": 0.9,
+        "best_bid": 0.92,
+        "best_ask": 0.93,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.889,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.93,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.3,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.93,
+        "break_even_probability_with_idealized_carry": 0.9313812994160907,
+        "central_expected_profit_usd": -0.3000000000000007,
+        "default_10pp_stressed_profit_usd": -1.3000000000000007,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.200000000000001
+      }
+    }
+  },
+  "verdict": "Whole-FIR effective-closure event valued; source-history limits retained, neither side clears reserve",
+  "reopen_condition": "New qualifying official source/consensus, actual control/authority/target details or a material price/cost change requires a fresh primary review and full account/venue gates.",
+  "current_description_sha256": "488c8a674358a9e78f6ea986df9b182b86d962bfd5b7dc278451fe599fe7640d",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "91219278813071406717237930212216851605529418582858781059341004513963937847269",
+    "30882215376605050003546724181517717752023153768871214822738929729850075089038"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0047",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/iran_event_followup_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/iran_event_model.py",
+    "model_calibrated": false,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:49:17.647241+00:00",
+  "question": "Israeli airspace closed by October 31, 2026?",
+  "market_id": "4599795",
+  "valuation_author": "primary_operator",
+  "original_index": 143,
+  "report_sha256": "6459f4b640587fa0b22c1c2c76205c4575b7de852e9898c8fd6c02e0d7ad4e6f"
+}

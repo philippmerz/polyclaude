@@ -1,0 +1,72 @@
+{
+  "review_index": 429,
+  "condition_id": "0x889e5ee38c76c755643f981b761ce71b70ec79e54160da2a46c9e38aa08bd25e",
+  "criteria_sha256": "b81ff21f6d8f97b90a618f520584555b31a1200c53e776c7f28ace104c6d4c26",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263922",
+      "observed_utc": "2026-10-17T20:10:55.534+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00069",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00069.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00069.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.486+00:00",
+      "end_utc": "2026-10-17T20:10:55.534+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263922",
+        "params": null
+      },
+      "raw_sha256": "ed7f922c70b3987cdd49e2a2d665fddc764f917ebf849ac8fa290751a0d07901",
+      "gzip_sha256": "145ff2040b0134b6b8380246420be4ca3143fd7a78ea4090261108fe94bec2f0",
+      "raw_bytes": 4773,
+      "gzip_bytes": 2136
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "44290645390992229486505883021274315073123016742933196558802899357316719191120",
+      "83518531407404092607539286760452170475098681480940515795715007964625360488071"
+    ],
+    "current_description_sha256": "754c5efc02b8ae5b0b20af1441faa33c6151e1ddfd728f3b0ee1e93d21899ff9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:22.230140+00:00",
+  "question": "Will SV Werder Bremen vs. SC Paderborn 07 end in a draw?",
+  "market_id": "5263922",
+  "valuation_author": "primary_operator",
+  "original_index": 429,
+  "report_sha256": "0157fa69ac8c59bd48aa34c3a3f479be5dd5d3fe651fdd7dcc74c808e1e906d3"
+}

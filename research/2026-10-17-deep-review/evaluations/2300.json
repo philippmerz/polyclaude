@@ -1,0 +1,72 @@
+{
+  "review_index": 2300,
+  "condition_id": "0x528bb7cbabf0e19eb02d8d7e8bd091bc1d70c926d41d5fab37aa8a26c923a59f",
+  "criteria_sha256": "be1bd2fb4b38e95976c97111e0dc787a508640ca58ac282eb0625e8075834168",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5286913",
+      "observed_utc": "2026-10-17T20:11:17.805+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00300",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00300.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00300.body.json.gz",
+      "start_utc": "2026-10-17T20:11:17.700+00:00",
+      "end_utc": "2026-10-17T20:11:17.805+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:17 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5286913",
+        "params": null
+      },
+      "raw_sha256": "47d7c206ead975bd1531ec7f1ec8fffdf74effabf9b461dd4ff48ecc9663a761",
+      "gzip_sha256": "b8904786350f3e77a77a8cd3d1792c6af11c12222b42634f25ae101799419090",
+      "raw_bytes": 4865,
+      "gzip_bytes": 2173
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Liaoning Tieren FC",
+      "Qingdao Hainiu FC"
+    ],
+    "current_token_ids": [
+      "83816578415071143403443080245972657467920830307699483877813654387594661936166",
+      "64242044461610917463276379812438246685814237463147320312477760403029958191905"
+    ],
+    "current_description_sha256": "b3f5279e419200bb0a0c40a69fe67607555a6b8a28c70db9052afffd1581e9be"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:34.022716+00:00",
+  "question": "Spread: Liaoning Tieren FC (-3.5)",
+  "market_id": "5286913",
+  "valuation_author": "primary_operator",
+  "original_index": 2300,
+  "report_sha256": "7f57436201b16fbc0c955fe3fc168cc8bbe9fd6e4c5e601d99f19bac8034afaa"
+}

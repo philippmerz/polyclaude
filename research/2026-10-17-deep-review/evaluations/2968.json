@@ -1,0 +1,72 @@
+{
+  "review_index": 2968,
+  "condition_id": "0xdd6edae5080276e9b5dc325fb383ec9e09379b496fe69e3a9c5429f572bd0095",
+  "criteria_sha256": "152cbf609480737a954b28eeb10585bdb1712c2b265e3371c736a94aee625510",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271764",
+      "observed_utc": "2026-10-17T20:11:27.240+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00384",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00384.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00384.body.json.gz",
+      "start_utc": "2026-10-17T20:11:27.156+00:00",
+      "end_utc": "2026-10-17T20:11:27.240+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:27 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271764",
+        "params": null
+      },
+      "raw_sha256": "f69ca5a62c44cb6394d4c97871b742f5962a89e07f1aefd552b7f116443822a2",
+      "gzip_sha256": "080209286cf97f4ea998aae4c277c6343dd59425dcad3dc7e3697de4afe47659",
+      "raw_bytes": 4757,
+      "gzip_bytes": 2165
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "90160442363665214938714464987036785358862767597400985620268847106306821507231",
+      "112669930980359927346186306351769471390187778082701050719451794561031530784013"
+    ],
+    "current_description_sha256": "8c6a6a93329aa07ff7263ef158b5e370ca144d18a723cf1bf62d757815f3bf7f"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:27.511447+00:00",
+  "question": "Exact Score: Wigan Athletic FC 3 - 3 Reading FC?",
+  "market_id": "5271764",
+  "valuation_author": "primary_operator",
+  "original_index": 2968,
+  "report_sha256": "34ac15194284b63809a5ff41b1fcd55ad36fed01b87d63ed6721effb6948306b"
+}

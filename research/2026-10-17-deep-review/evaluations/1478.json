@@ -1,0 +1,72 @@
+{
+  "review_index": 1478,
+  "condition_id": "0xcbd8e846db33086b7d1d7297dbe9e5d6e8c34be3ed27998f590a61d75b5186d9",
+  "criteria_sha256": "7bab12f83a635a7bd5ec56ead1a5b3953ebf9df3858bb72de62ad185cac7d164",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271310",
+      "observed_utc": "2026-10-17T20:11:06.422+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00185",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00185.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00185.body.json.gz",
+      "start_utc": "2026-10-17T20:11:06.326+00:00",
+      "end_utc": "2026-10-17T20:11:06.422+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:06 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271310",
+        "params": null
+      },
+      "raw_sha256": "74372adde1c8e55325c812f79eb58fd89f8dca869a76de67044d44b1cd726d8f",
+      "gzip_sha256": "113570d5c5fcb06d39fec85745274e13466777736d01e2052d2f6a30830bc6c8",
+      "raw_bytes": 4784,
+      "gzip_bytes": 2130
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "65702203707334933092722306177458423487960432630017516827342299320787071053121",
+      "28235200604394293796556090876935216354552220063558429273083144460612672731297"
+    ],
+    "current_description_sha256": "6fa59d3c146e884ca6c4d72853974d6d157356d5fbfbf9d44d46fe1cb8988469"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:57.050388+00:00",
+  "question": "Will Wycombe Wanderers FC win on 2026-10-17?",
+  "market_id": "5271310",
+  "valuation_author": "primary_operator",
+  "original_index": 1478,
+  "report_sha256": "08ed28085b7fb6f978395946ea46a7af85b5f8573cfe03da74d9a786f98f2a14"
+}

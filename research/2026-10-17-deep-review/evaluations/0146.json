@@ -1,0 +1,72 @@
+{
+  "review_index": 146,
+  "condition_id": "0x4cfc7903e743797aeeb084e2392e43c6b7775032eef6a92afd2f10fe0d51ec38",
+  "criteria_sha256": "943e03f93a1929aa391a8c9d35a266b0d141e12f1ff00873076fd2fc0633bdb3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5350283",
+      "observed_utc": "2026-10-17T20:10:52.251+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00029",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00029.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00029.body.json.gz",
+      "start_utc": "2026-10-17T20:10:52.194+00:00",
+      "end_utc": "2026-10-17T20:10:52.251+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:52 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5350283",
+        "params": null
+      },
+      "raw_sha256": "11485b09a4c18b43ae11f7984d0fd4a38221f66ae450ff58b46fefb2b5416e61",
+      "gzip_sha256": "1e59798f6b046bbe401ee52eb804288d4fccadfc1ca94a6a8477d899b0707d98",
+      "raw_bytes": 3526,
+      "gzip_bytes": 1634
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "89201338025952219315358685116923655746018720951219735483922641978635524025866",
+      "69989031063525403835369140237291696099870572983646377019376347559128961016607"
+    ],
+    "current_description_sha256": "997b11144f4b1c446449c57efce31dc2902f67cdaa3cc9cfa1ff6717f4722496"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:11.184798+00:00",
+  "question": "Northwestern vs. Michigan State: O/U 49.5",
+  "market_id": "5350283",
+  "valuation_author": "primary_operator",
+  "original_index": 146,
+  "report_sha256": "fd3ac520c1e46f2810d54ad90f1bf780a69cd20831e60d014a658f413f4febbe"
+}

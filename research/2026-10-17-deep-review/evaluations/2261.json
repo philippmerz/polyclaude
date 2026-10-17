@@ -1,0 +1,72 @@
+{
+  "review_index": 2261,
+  "condition_id": "0x824f6b6ebe69301b1d875a3c6964e26a459827997566c48389bdbcb3718802ec",
+  "criteria_sha256": "757377584acbf763ab83d7d085266b0d85fa24e2eedc6a54f327f42e2d50f467",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720999",
+      "observed_utc": "2026-10-17T20:11:16.999+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00291",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00291.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00291.body.json.gz",
+      "start_utc": "2026-10-17T20:11:16.931+00:00",
+      "end_utc": "2026-10-17T20:11:16.999+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:16 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720999",
+        "params": null
+      },
+      "raw_sha256": "2f2ccaf0f1f694f6cce2ea3e15f3d3c00c85b9d4f9ca3da98d3a70afd21f0db2",
+      "gzip_sha256": "696aae2d8eb1061f70408e4a76c44163d360c634904cace4caefe8f4d1ee861e",
+      "raw_bytes": 5360,
+      "gzip_bytes": 2349
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "12068524982156463894097994749447611576831985060926717235215170166298644995699",
+      "62845619218622661551791051716617128673935142141250694918391452768910087782031"
+    ],
+    "current_description_sha256": "28985177c75bbea7a192dc2617cb345e4420083d99b0a99de273b4737738d90a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:16.000068+00:00",
+  "question": "Will the highest temperature in Guangzhou be 35°C on October 17?",
+  "market_id": "5720999",
+  "valuation_author": "primary_operator",
+  "original_index": 2261,
+  "report_sha256": "5b605700c8deb23055f6dd63fd4e49b02d4a3884916a07c1af20490a0dab1d16"
+}

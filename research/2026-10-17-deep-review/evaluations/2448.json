@@ -1,0 +1,72 @@
+{
+  "review_index": 2448,
+  "condition_id": "0x620b9c4d93d50216c44ae9685bb8a955a0ee19eabe9b4a989fb47fb66f75b31c",
+  "criteria_sha256": "83a93fa3e089061c083d09bde772553c79ad28d707882c3207c56473adf80c67",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5786367",
+      "observed_utc": "2026-10-17T20:11:19.984+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00322",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00322.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00322.body.json.gz",
+      "start_utc": "2026-10-17T20:11:19.929+00:00",
+      "end_utc": "2026-10-17T20:11:19.984+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:19 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5786367",
+        "params": null
+      },
+      "raw_sha256": "895e8039e0290eeb4d3e7fee93102f93fc69581fab4032ea9b978281459b2d31",
+      "gzip_sha256": "681205a61f2f21768039747f21a0de1f636898bf209131b3bcef8d064cbc3009",
+      "raw_bytes": 4004,
+      "gzip_bytes": 1834
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Alan Wazny",
+      "Iannis Miletich"
+    ],
+    "current_token_ids": [
+      "25327742836979893988217412521115848235078313497144916617588877534213914708373",
+      "63594299047283537758818606718409038909257886190162627310590094137880313016841"
+    ],
+    "current_description_sha256": "1f14b3d71f3d159223af04213e6b479843925d8a777f3fbd88ebcff23afaef9c"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:40:09.727358+00:00",
+  "question": "M15 Bol: Alan Wazny vs Iannis Miletich",
+  "market_id": "5786367",
+  "valuation_author": "primary_operator",
+  "original_index": 2448,
+  "report_sha256": "893d0de0ac2eec22f1efa585826b70e1cad21026a6d0b4292f93168834cfac78"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 202,
+  "condition_id": "0x7f0cd327f07e2a54fd0abdc79dcbae22df42924cb57f8685cb9911719cdfac5c",
+  "criteria_sha256": "c7713a2bb75ecddb5f81a83bc7e59fb43590343587650717b0b7dc86865a01ca",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5270032",
+      "observed_utc": "2026-10-17T20:10:52.955+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00036",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00036.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00036.body.json.gz",
+      "start_utc": "2026-10-17T20:10:52.881+00:00",
+      "end_utc": "2026-10-17T20:10:52.955+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:52 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5270032",
+        "params": null
+      },
+      "raw_sha256": "7f89db79dc24f569d2dcf25b417d08f804d448fd7f847beb1f6498eb9b3d6833",
+      "gzip_sha256": "4dab7a9cd7c1120f43e4f20b7c9da365aa62d2e4252cccc9c19e22fa0db9a575",
+      "raw_bytes": 4863,
+      "gzip_bytes": 2174
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "100244311726754124459200547245716985591103268557946975537414638433688856786730",
+      "31968611906624360768704584108372768237181928806097954718193868891842985643107"
+    ],
+    "current_description_sha256": "a4d19e59c41d672ba2a3f556e55570000aa2631dd1283e152d193ecc66edcb5d"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:12.745326+00:00",
+  "question": "Villarreal CF vs. Elche CF: O/U 0.5",
+  "market_id": "5270032",
+  "valuation_author": "primary_operator",
+  "original_index": 202,
+  "report_sha256": "7b0d802ca77bed82e875654d4abaddfc7d4d20ebe6a704135ba5de9d964c5063"
+}

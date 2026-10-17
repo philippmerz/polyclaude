@@ -1,0 +1,72 @@
+{
+  "review_index": 413,
+  "condition_id": "0x5d30bb7a764342f115cbaefb9c650ddc9a8043d38a8d6fa0e1a99bdd2223d3c5",
+  "criteria_sha256": "738fce996b6965c82896e887e5ddf6590524d090483895f788b78410932590eb",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720842",
+      "observed_utc": "2026-10-17T20:10:55.439+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00067",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00067.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00067.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.344+00:00",
+      "end_utc": "2026-10-17T20:10:55.439+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5720842",
+        "params": null
+      },
+      "raw_sha256": "e4b44c3fce0dbdcb7cce2b66071f94f88729c4540f2243bdc1802f3c3b8542ba",
+      "gzip_sha256": "959ca62b223a1920b2248ec7fd9fec6491d46c6a8ba40a8b9e5c6b7a740cfc7f",
+      "raw_bytes": 5504,
+      "gzip_bytes": 2390
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "98060965416960052019595695437830524680378216860918053111431241792472719536480",
+      "99708403594114428697088407607939958226288198878159267891768268018828133219724"
+    ],
+    "current_description_sha256": "d9363a503669a162e8a899fe20b0247781c1c06521af93d8c372be0a9d2c6cb9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:21.611217+00:00",
+  "question": "Will the highest temperature in Taipei be 34°C on October 17?",
+  "market_id": "5720842",
+  "valuation_author": "primary_operator",
+  "original_index": 413,
+  "report_sha256": "bd057ccea654e1fd68775dd03e1906d2d8b6893047f4ac68fe4e1be1ba26e9da"
+}

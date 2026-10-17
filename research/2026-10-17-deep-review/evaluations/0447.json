@@ -1,0 +1,72 @@
+{
+  "review_index": 447,
+  "condition_id": "0x35e0cce3dcc5c0fd84e75d429850d356f8b9ab4c42a18e72577ac50d533aa97e",
+  "criteria_sha256": "f6cd07d433af190824e927f6f6b6e296ed95b46f43144de7f9fac587b7995ac3",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5349886",
+      "observed_utc": "2026-10-17T20:10:55.624+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00070",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00070.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00070.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.536+00:00",
+      "end_utc": "2026-10-17T20:10:55.624+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5349886",
+        "params": null
+      },
+      "raw_sha256": "7668ac1bae8b88f9b114dda005032535077687305838096ec8b690eb8d5e4bbd",
+      "gzip_sha256": "e4f8a49564d14a8ddd2316133cf257cb83d1b187e3d39a28f3267d5d619f0f28",
+      "raw_bytes": 3572,
+      "gzip_bytes": 1646
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Bowling Green",
+      "Ball State"
+    ],
+    "current_token_ids": [
+      "90932292511359212880214720184448547146309653774666757395169050973708458800153",
+      "62769404220522919466406133763884047997654246453160978026024764593087662070078"
+    ],
+    "current_description_sha256": "c49370ce477b4c8850bac14c4555647c50be450adbd7ad04284807825234539f"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:22.543067+00:00",
+  "question": "Spread: Bowling Green (-6.5)",
+  "market_id": "5349886",
+  "valuation_author": "primary_operator",
+  "original_index": 447,
+  "report_sha256": "da4e57993305b12d8f10349e81b237552a7337b39c1af6788793763d5ae5300d"
+}

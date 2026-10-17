@@ -1,0 +1,72 @@
+{
+  "review_index": 1892,
+  "condition_id": "0x3ac98df0825ddab9e7e376b1ec0635be32dbeb3e6dec464e2ab2e3a1307cc237",
+  "criteria_sha256": "70b96e8dba1c0c3755cda1239f1065a2f7758e49be4c0249f70e218bdac39513",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263939",
+      "observed_utc": "2026-10-17T20:11:11.558+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00238",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00238.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00238.body.json.gz",
+      "start_utc": "2026-10-17T20:11:11.496+00:00",
+      "end_utc": "2026-10-17T20:11:11.558+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:11 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263939",
+        "params": null
+      },
+      "raw_sha256": "7616f9f734f7abf7c243e682a3943342379d65efb54a0b02d6008e3ac181c9d9",
+      "gzip_sha256": "a71a0a04a8a150a893191b75d1fd702a1fc849d312344a3a982470711a36633b",
+      "raw_bytes": 4905,
+      "gzip_bytes": 2164
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "113785245194149605059860453985626111432519293039058645000110171193497028835499",
+      "79509576775423239868339240036447782503372929806475876400635701256302959279699"
+    ],
+    "current_description_sha256": "4decb8f51c28336540c91b3d0d5c4053add80bf28d9b38564df02b8ba7223507"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:12.957180+00:00",
+  "question": "RC Strasbourg Alsace leading at halftime?",
+  "market_id": "5263939",
+  "valuation_author": "primary_operator",
+  "original_index": 1892,
+  "report_sha256": "99b738e0f8f696dd77456b22f75ad4f9435445360350ea0c3f0f7a0211707c79"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 333,
+  "condition_id": "0x97a1c49554d6fcf7f80a288d3d16e14ec2ff80cda0e777002abc2c56e6972304",
+  "criteria_sha256": "72a293f7b28445890fdfe89bce9283ee8d30dbf9c4d9b727f266c2b3d3dd03c4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5281164",
+      "observed_utc": "2026-10-17T20:10:54.323+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00054",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00054.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00054.body.json.gz",
+      "start_utc": "2026-10-17T20:10:54.230+00:00",
+      "end_utc": "2026-10-17T20:10:54.323+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:54 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5281164",
+        "params": null
+      },
+      "raw_sha256": "bbfe858613ac165b3682b3f087662d53a9c5b882df00f7515f95245caa74976d",
+      "gzip_sha256": "b637f678be9f37dbaf33d57a155b2f956d518ea5ce3ffe70d046938c8ea33d2c",
+      "raw_bytes": 4563,
+      "gzip_bytes": 2052
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "5878492805291261279532605744696412540469224611739961001103173565105366595374",
+      "46986560341055976717696152244575848562588356356802551878037497634008994141355"
+    ],
+    "current_description_sha256": "32eb5f8bb0716ed0c0dd499ffffa6ef61263ff49101636f35041a64027a83eab"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:18.026342+00:00",
+  "question": "Amed Sportif vs. Konyaspor: O/U 2.5",
+  "market_id": "5281164",
+  "valuation_author": "primary_operator",
+  "original_index": 333,
+  "report_sha256": "feedb697141add1eab5ae21799b742f742942cd07cc1b3a38b63e336b9244d54"
+}

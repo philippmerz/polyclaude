@@ -1,0 +1,72 @@
+{
+  "review_index": 1752,
+  "condition_id": "0xf66d217b7ce639c194bd2649117cb75a916c981d415b9a3ac0ec7d2deda28ff8",
+  "criteria_sha256": "9a10830200d927b12cec9594a8f2f4c3365999f28f27b52df362c9fc034e2344",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5686793",
+      "observed_utc": "2026-10-17T20:11:09.910+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00220",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00220.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00220.body.json.gz",
+      "start_utc": "2026-10-17T20:11:09.834+00:00",
+      "end_utc": "2026-10-17T20:11:09.910+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:09 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5686793",
+        "params": null
+      },
+      "raw_sha256": "4c85fb9f12f7b79039aff2b078c839bb7d6fd17c78bac6eaab5a8187afebbc12",
+      "gzip_sha256": "d4769fed9ce83b95fb64bfc27331bec5bf2a408586983ef3ed462e4fa07f053f",
+      "raw_bytes": 4500,
+      "gzip_bytes": 2014
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "68268497441083937660821382129150915624342667904204405179030224837488634730209",
+      "57692610498650242126778676248554010519839979618052926701266698581121380977340"
+    ],
+    "current_description_sha256": "f3f9811882dff66f0433913b3356cfa586acc8de248c8624c815211272a6a312"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:07.262299+00:00",
+  "question": "Will SG Sonnenhof Grossaspach win on 2026-10-17?",
+  "market_id": "5686793",
+  "valuation_author": "primary_operator",
+  "original_index": 1752,
+  "report_sha256": "a13dd0cb3215f693385b0b2be5c2b25974d8fb87ec63ccad24e2e70c6d24bb61"
+}

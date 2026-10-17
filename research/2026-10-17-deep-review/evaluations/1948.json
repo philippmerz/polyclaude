@@ -1,0 +1,72 @@
+{
+  "review_index": 1948,
+  "condition_id": "0xd1614f0ffcd3214d3f89656ab98905b559d5761ef315af2ca7755ab3316ed533",
+  "criteria_sha256": "658cd45dced24d63a84e8d1b207bd9a53987c2d4ecbcdb0c5385259a1601c70f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5270687",
+      "observed_utc": "2026-10-17T20:11:12.118+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00244",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00244.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00244.body.json.gz",
+      "start_utc": "2026-10-17T20:11:12.073+00:00",
+      "end_utc": "2026-10-17T20:11:12.118+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:12 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5270687",
+        "params": null
+      },
+      "raw_sha256": "dedc3e0557cfdbc7c1af50af88576758fa4aec965a89c548d5eeb07e30507629",
+      "gzip_sha256": "c0a0d2e478ff730f36a5b5dfc3381cce65534c8b0ed01c1c762887200654a623",
+      "raw_bytes": 4692,
+      "gzip_bytes": 2114
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "92637199328177445465202615572259877142369283172327323271870434139301440698382",
+      "23047084170418655692041328280914277999301493732574437920613260230378510018598"
+    ],
+    "current_description_sha256": "754c5efc02b8ae5b0b20af1441faa33c6151e1ddfd728f3b0ee1e93d21899ff9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:14.722236+00:00",
+  "question": "Will Ascoli Calcio 1898 FC vs. Empoli FC end in a draw?",
+  "market_id": "5270687",
+  "valuation_author": "primary_operator",
+  "original_index": 1948,
+  "report_sha256": "37fc56887873884f91505db7b2a304d2da9bd463ef55df5986cf9739bc86dec8"
+}

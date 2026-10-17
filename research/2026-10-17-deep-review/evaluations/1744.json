@@ -1,0 +1,72 @@
+{
+  "review_index": 1744,
+  "condition_id": "0xd9cad0b24513a98294edcedef01811277982841a7f20764419f9102c5ecae4e3",
+  "criteria_sha256": "e448af6c500ead60141af0268f76f4b56d5ce6abd30667d0678f4cd585f63306",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5583232",
+      "observed_utc": "2026-10-17T20:11:09.546+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00217",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00217.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00217.body.json.gz",
+      "start_utc": "2026-10-17T20:11:09.454+00:00",
+      "end_utc": "2026-10-17T20:11:09.546+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:09 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5583232",
+        "params": null
+      },
+      "raw_sha256": "841817cb05743899f9dbb5dcc3b3ec25622ff85d772d8ff769abee5aaaadf8c4",
+      "gzip_sha256": "ddaf3ff16ab3923b45a85d1bc7be5982e2406954928a7534005f91c6a0dfaa69",
+      "raw_bytes": 4456,
+      "gzip_bytes": 1998
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "75460466619663181227337938939745701465461211925536577207050976538011111308896",
+      "3339902359286952036517787451614862165212389445429693509671651109435246351679"
+    ],
+    "current_description_sha256": "f023f8389adc2ea2453a15a5568ce8a95ab4f404aacefcb43aa24462c62621a3"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:06.580425+00:00",
+  "question": "Will Persija Jakarta win on 2026-10-17?",
+  "market_id": "5583232",
+  "valuation_author": "primary_operator",
+  "original_index": 1744,
+  "report_sha256": "ee2e7d5cb094f8932f54ba5f024bfcd4192748defc8ce402562bc553be504863"
+}

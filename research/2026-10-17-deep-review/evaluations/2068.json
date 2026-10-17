@@ -1,0 +1,72 @@
+{
+  "review_index": 2068,
+  "condition_id": "0xbed3b954377907c747282b9f021b3a485f19a27b577cc0aba702c6f822c0bff1",
+  "criteria_sha256": "d4c84165647baf53f1a1b71f6907fdc5184cdbdc4aee63480f47bdb4667e28f1",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5258900",
+      "observed_utc": "2026-10-17T20:11:13.999+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00258",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00258.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00258.body.json.gz",
+      "start_utc": "2026-10-17T20:11:13.916+00:00",
+      "end_utc": "2026-10-17T20:11:13.999+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:13 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5258900",
+        "params": null
+      },
+      "raw_sha256": "11c909a7b31bb8ef4b450f56a6d69c1fbe3788bc0e251e586c2a24156dac645a",
+      "gzip_sha256": "54ba792fe39645a8aa153ac4fa1fbd81188e0fa34de4bfab69da57066b714d37",
+      "raw_bytes": 4770,
+      "gzip_bytes": 2161
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "114992407981501910967466546241343469022299630047881866584630128562378650990203",
+      "82697488515537335623773295849123650959441975662758677716344139663164538217272"
+    ],
+    "current_description_sha256": "95e1d1244d80292203787513670dce95ce9b62cfcf28310281dbd0ccc97cfa4a"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:27.251490+00:00",
+  "question": "Exact Score: Bologna FC 1909 1 - 3 FC Internazionale Milano?",
+  "market_id": "5258900",
+  "valuation_author": "primary_operator",
+  "original_index": 2068,
+  "report_sha256": "c56522e2c5f105adec5d43a12014a37831b9af0cde2e189de02ad6629343e85f"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 2280,
+  "condition_id": "0x15b074479e47ee7ede2e29cea8910af7ee3d17bc5ccc56e38c369ff97478b339",
+  "criteria_sha256": "d8a33a5be190667abc9bf92a4a0c6d332c52d37238f48a295283455b683a7dce",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5687373",
+      "observed_utc": "2026-10-17T20:11:17.491+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00296",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00296.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00296.body.json.gz",
+      "start_utc": "2026-10-17T20:11:17.399+00:00",
+      "end_utc": "2026-10-17T20:11:17.491+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:17 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5687373",
+        "params": null
+      },
+      "raw_sha256": "d2bafedea0364853efe9298614f7991abbc656a3578ada10836cb9c35e72a8e2",
+      "gzip_sha256": "fc8788bc6d1697f2f141aa2da92ce17baa91dc13f172a600793506e9ced4446d",
+      "raw_bytes": 4484,
+      "gzip_bytes": 2043
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Tobol Kostanay",
+      "FC Zhenis"
+    ],
+    "current_token_ids": [
+      "112879343567303158103604200297584908712128623899887225935827589170954764210335",
+      "114579383950384306799931218296502721717539096043918089494390134379460592140460"
+    ],
+    "current_description_sha256": "f74e28fe66636e72b8fba6fd5aa2ca3f0bfd50d5919e2500b6af4321bad82fee"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:27.716270+00:00",
+  "question": "Spread: Tobol Kostanay (-1.5)",
+  "market_id": "5687373",
+  "valuation_author": "primary_operator",
+  "original_index": 2280,
+  "report_sha256": "38a502a7d5089fe2b1167c50d5af4be76b3d099d9468fa20e3410795da73b742"
+}

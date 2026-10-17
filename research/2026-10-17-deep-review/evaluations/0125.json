@@ -1,0 +1,72 @@
+{
+  "review_index": 125,
+  "condition_id": "0xcfa335c71ba0324ec5831981a5401e1f31bd3b6b4071bdfa1469fedf5b374ed5",
+  "criteria_sha256": "0fddc51c8e01f5edbbdcb9e450bb48e88417a5aba51d8583ec3be5a9b4cefc2f",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263936",
+      "observed_utc": "2026-10-17T20:10:51.915+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00024",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00024.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00024.body.json.gz",
+      "start_utc": "2026-10-17T20:10:51.895+00:00",
+      "end_utc": "2026-10-17T20:10:51.915+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:51 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263936",
+        "params": null
+      },
+      "raw_sha256": "979eee7e0f5c40efc3d01094d824e2bed2daa536772e5d31d727d5a2d274f8b7",
+      "gzip_sha256": "b3df216a1b514667ece781845490c932b33301aa900f424f162c344228f44798",
+      "raw_bytes": 4710,
+      "gzip_bytes": 2114
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "46644295835655556168617492011039480447657791575109928671089630484880164860424",
+      "42817088115406073736673124812886697384071530451387058422791199132143552370900"
+    ],
+    "current_description_sha256": "2fffa51c781077a84791fe0da6d4870d43d7cc61f53c4dbf6308e46be6a9edb2"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:09.701089+00:00",
+  "question": "Will RB Leipzig win on 2026-10-17?",
+  "market_id": "5263936",
+  "valuation_author": "primary_operator",
+  "original_index": 125,
+  "report_sha256": "1c156f864ee853b58b3eec0577eda7346725fbf6a03ca2cbb389e73687fb740f"
+}

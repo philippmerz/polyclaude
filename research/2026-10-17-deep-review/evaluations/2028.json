@@ -1,0 +1,72 @@
+{
+  "review_index": 2028,
+  "condition_id": "0xece75916d00d5e9d8eb0a28362831faa451ab0be0bb027b65779d9de89b25220",
+  "criteria_sha256": "6fbe1d2a8c329669616476314cd304a86c293955bcd693d87711cbd36a161606",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5274463",
+      "observed_utc": "2026-10-17T20:11:13.295+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00255",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00255.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00255.body.json.gz",
+      "start_utc": "2026-10-17T20:11:13.212+00:00",
+      "end_utc": "2026-10-17T20:11:13.295+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:13 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5274463",
+        "params": null
+      },
+      "raw_sha256": "b68adef3ff615402925fd62e0c19e725b4900a1e3d5209e8dbb141d08bc8d12d",
+      "gzip_sha256": "30441c1de62c0f3bf712fcb332604d237786fa927f343da5692c186633ad4bd4",
+      "raw_bytes": 4997,
+      "gzip_bytes": 2208
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "84773457116665726888175203729381174698818547528102666635543794841713128976941",
+      "59263419974283210653393647620295790896394482283286781891421873566710002541240"
+    ],
+    "current_description_sha256": "3a5139f1be6e4dd869af0c230312d14a33eee135bede6b81f7cd5ccfd7d954bb"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:24.267811+00:00",
+  "question": "Grimsby Town FC vs. Northampton Town FC: O/U 2.5",
+  "market_id": "5274463",
+  "valuation_author": "primary_operator",
+  "original_index": 2028,
+  "report_sha256": "f023432026d26f3b31bca1547b5f36d2e9ec2da6526f29a5a55cfca055cbcf64"
+}

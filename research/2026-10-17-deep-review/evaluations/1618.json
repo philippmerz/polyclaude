@@ -1,0 +1,72 @@
+{
+  "review_index": 1618,
+  "condition_id": "0xe9806c88ad53a6e21c1dff98f59d73498dffc8403c84f4fc30b9bb88deed1b6d",
+  "criteria_sha256": "ca3e8beb05117f68754119c08cb4d6464034b60224eb3fdc338c4d9faba20500",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5686920",
+      "observed_utc": "2026-10-17T20:11:08.363+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00205",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00205.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00205.body.json.gz",
+      "start_utc": "2026-10-17T20:11:08.256+00:00",
+      "end_utc": "2026-10-17T20:11:08.363+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:08 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5686920",
+        "params": null
+      },
+      "raw_sha256": "c48c23abdf31ecfc859cf8f8cdcdc01bd479f37ab4d79fb77ea65b3e3e10dbff",
+      "gzip_sha256": "21b0647d938af52d04c4d29573ac74dcb42eb19b801d9f1287ab3e4d194e1684",
+      "raw_bytes": 4472,
+      "gzip_bytes": 1984
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "10032550358426859808890405910013304301678973675160909126681721400045961058768",
+      "15059664723125958032173526127482729797251063435401461067147899277763051108810"
+    ],
+    "current_description_sha256": "d802e5e561ee10fd0778ccb62978689e90c767bb447a972792c21774fe496110"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:38:03.035037+00:00",
+  "question": "Will Tobol Kostanay win on 2026-10-17?",
+  "market_id": "5686920",
+  "valuation_author": "primary_operator",
+  "original_index": 1618,
+  "report_sha256": "1fc9f59a73dc916a57bb1edf11a8d880b3cb3fca3dbf2f9207d55fc8e024e046"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 195,
+  "condition_id": "0x3dd16763bb3b7a6275be7e18283353514f5e139a09014a6797a3a83ef3168a2e",
+  "criteria_sha256": "9da41d766b2f6d30acc8cdd511b3b9a6b225bcc5ee33333e1cc0c70000a84f31",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5281213",
+      "observed_utc": "2026-10-17T20:10:52.742+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00034",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00034.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00034.body.json.gz",
+      "start_utc": "2026-10-17T20:10:52.597+00:00",
+      "end_utc": "2026-10-17T20:10:52.742+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:52 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5281213",
+        "params": null
+      },
+      "raw_sha256": "dbdbd18234cce5e902b28b83ddac699ce7744829dd6545b5bcd1bb17a35cae59",
+      "gzip_sha256": "908e73fa9ab29f2fe476b82a23377a72e5bbada44d4f8804b940ec8aab8ba695",
+      "raw_bytes": 4741,
+      "gzip_bytes": 2132
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Galatasaray SK",
+      "Gençlerbirliği SK"
+    ],
+    "current_token_ids": [
+      "33253283437420390742742809140238840478141967047678013327918524100653918390322",
+      "68307641875118072665295363168212372588973431150575988333136236454897259592351"
+    ],
+    "current_description_sha256": "c0f71c8f7e6cee72db5803fad2004822e0feec2ef47dcf7e04b04774756c1f4e"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:12.453960+00:00",
+  "question": "Spread: Galatasaray SK (-1.5)",
+  "market_id": "5281213",
+  "valuation_author": "primary_operator",
+  "original_index": 195,
+  "report_sha256": "3f662418cc9c0f7ed591c7d1705a31cd54e2999a148cb6f31e7a737989a066be"
+}

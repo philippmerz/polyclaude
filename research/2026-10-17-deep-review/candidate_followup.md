@@ -1,5 +1,44 @@
 # Candidate follow-up — dated, not an execution certificate
 
+**Latest material update, October17 20:52:56UTC:** two vetted post-only bids are
+LIVE, zero matched: case123 ME-02 YES10@.38,3.80pUSD; case32 CA-06 NO50@.03,
+1.50pUSD. Exact authenticated complete inventory and Polygon block95710019
+confirm zero candidate CTF shares, pUSD24.996890, total commitment5.30 and
+uncommitted19.696890. These are **pending commitments, not filled positions or
+realized gains**. OrderIDs and management rules are in
+[resting_orders](../../notes/resting_orders.md). DEC-0203/0204 appended.
+
+Primary retained61%/15% after new source checks, ordinary10pp reserve,
+independent skeptic/champion and conservative shared-US-politics exposure.
+Both fresh entry dry runs passed price/caps; actual submissions each returned
+HTTP200/success/live, then complete authenticated orders and fixed-block
+balances/allowance/operator approval were independently checked. The broad
+adverse model scenarios can lose principal. Limits are38c and3c; neither crossed
+the ask. No funding transfer was needed. Source/identity corrections below and
+in CURRENT_REVISIONS are part of the current assessment.
+
+The running watcher demonstrably processed all three newly configured feeds:
+PressHerald politics, BDN politics and GoogleNews's current exact-candidate
+CA-06 search. The initial tier2 filter correctly saw no exposure before these
+orders, while one summary also mislabeled the local race. Candidate-specific
+names/surnames are now tier1, routing future items directly to primary. This
+avoids relying on that small-model interpretation to retain important news.
+Existing cooldown/dedup and source gaps still apply; no restart/new timer.
+Initial review22:00UTC, earlier on a relevant item; cancel first if thesis is
+changed or uncertain, and pull before a known catalyst window.
+
+The newest direct CA-06 source is [CNN's October16 interview](https://transcripts.cnn.com/show/arena/date/2026-10-16/segment/01):
+asked about caucusing with Democrats, Kiley says he will caucus with neither
+side. Root read the captured context. It corroborates earlier reporting but
+does not fix his future all-House-call intent or supply the rule's missing
+neither-party fallback. Manchin's endorsement is not a new poll; the reported
+powder-mail investigation supplies no verified candidate injury/withdrawal.
+The original ILC report, prepared byMainFrame, is older September fieldwork.
+No new October quantitative poll was asserted. Source addendum:
+`data/deep_review_20261017/house_ca06_october_news_addendum.json`.
+
+The following paragraphs are earlier dated tests, not today's live inventory.
+
 October17 19:19–19:22UTC. Case9's guarded read-only entry dry run found YESbid.260/ask.540 and would choose a .270 maker price. The initial hard cap.200 therefore rejected the run before the later account/gate branches; it did not submit or reserve an order. Its1.3h-old bankroll cache is not a fresh final funding check. Log: `logs/deep_review_20261017/entry_0009_dryrun_1919.log`.
 
 A .270 maker with primaryPYES.75 and20ppreserve remains a potential2pUSD entry (7integer shares costs1.89 if the route rounds down); no fill is assumed. Case51's NO.021/50shares is still a planning observation from18:35. Both are a new strategy class and need the commissioned independent skeptic/champion reviews plus primary decision and fresh final gates. The USfirst sibling named by the tool is not fungible withUSsecond; no substitution was made. No order has been placed. Original case records preserve their own quote times.

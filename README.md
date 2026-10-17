@@ -63,6 +63,17 @@ evaluation. The first 100 substantive reviews are an inspection milestone; value
 blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
+The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
+was sent in chat and Telegram. At20:49UTC,106 valuations,1 blocked review and325
+closed-market exclusions are saved;2,568 remain pending. At20:52:56UTC, two new
+post-only bids are verified LIVE with zero fills: ME-02YES10@38c andCA-06NO50@3c,
+total pending commitment **$5.30**. Polygon95710019 confirms zero new shares;
+pUSD24.996890 and uncommitted19.696890. Read
+[current entry follow-up](research/2026-10-17-deep-review/candidate_followup.md)
+and [resting-order management](notes/resting_orders.md). These commitments are
+separate from the older bankroll/held-thesis snapshot below; review at22:00UTC
+or earlier on relevant news.
+
 ## Mandate and constraints
 
 - Reference trading capital: **$170**. Separately contributed gas is tracked

@@ -1,12 +1,17 @@
 ## Active — primary in-depth review authorized October 17
 
-First100 completed valuations reached20:31UTC. One blocked review and15 factual
-exclusions are separate;2,884 remain pending. Read the
+First100 completed valuations reached20:31UTC and were notified in chat/Telegram1163.
+Current106 valued,1 blocked,325 factual closed-market exclusions;2,568 pending. Read the
 [first100 inspection report](../research/2026-10-17-deep-review/MILESTONE_100.md).
-ME-02 YES and CA-06 NO merit current small-maker entry review; both balanced
-critics are complete, but no order has yet been placed. The separate metadata
-refresh found325 closed/resolved/no-new-order rows to document as factual
-exclusions; it did not value or reject the2,675 open markets. Tesla case3 is
+ME-02YES10@.38 andCA-06NO50@.03 are now LIVE post-only orders, **zero matched**
+at20:52:56/block95710019;5.30 full pending commitment, pUSD24.996890/free19.696890.
+Both balanced critics and fresh source/account/venue checks completed. Recheck
+at existing22:00UTC or earlier on candidate/poll/caucus news; cancel first if
+changed/uncertain. Exact IDs in notes/resting_orders and candidate_followup.
+Three new feeds were observed in the current daemon; candidate names are tier1
+so the small-model relevance filter cannot discard their future items. No new
+timer/daemon. The separate metadata refresh's325 closed/resolved/no-new-order
+rows are all now indexed as factual exclusions; it did not reject the2,675 open markets. Tesla case3 is
 currently disputed and cannot be a new-entry candidate. Continue the finite
 queue and per-case persistence; don't mistake this milestone for task completion.
 

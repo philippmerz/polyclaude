@@ -1,0 +1,72 @@
+{
+  "review_index": 2268,
+  "condition_id": "0xe9b2c5f3a98a5289331fdc11639433e7f95bfe506d28c0e23ab030cab5fa5e4f",
+  "criteria_sha256": "338822de53a145e2867a840866db9245972498560df74091d69505fc0908ef59",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5264718",
+      "observed_utc": "2026-10-17T20:11:17.220+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00293",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00293.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00293.body.json.gz",
+      "start_utc": "2026-10-17T20:11:17.108+00:00",
+      "end_utc": "2026-10-17T20:11:17.220+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:17 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5264718",
+        "params": null
+      },
+      "raw_sha256": "e07b4744462cd64101a3e0e20b829ec7f418ab9b60d6469c1f7532e9b3a89742",
+      "gzip_sha256": "308aa7bc0980033dd6dbf7f1b105d33c17c6cf617d96ffd3c8c2b66952b34e06",
+      "raw_bytes": 4723,
+      "gzip_bytes": 2115
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "77982698692344176694190211573171821327081537195749935211214105464295658747536",
+      "14714480723832465011094792727251077607797218140710098808451903470128997762150"
+    ],
+    "current_description_sha256": "78fd35d0390b31cd5b55c070b7b489a6eb4fb3038c13163e0770ecfc2e0643f4"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:22.236668+00:00",
+  "question": "Watford FC vs. Charlton Athletic FC: Draw at halftime?",
+  "market_id": "5264718",
+  "valuation_author": "primary_operator",
+  "original_index": 2268,
+  "report_sha256": "de8a91bec0e5963a9801fdf7d4e8a88f55f7b419d9516bfde1b8afa74a379f4c"
+}

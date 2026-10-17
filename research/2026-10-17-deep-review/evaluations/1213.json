@@ -1,0 +1,72 @@
+{
+  "review_index": 1213,
+  "condition_id": "0x24ab9bf07f8658f8fe2e7d800535202934b1e0fef412cd9fafc6415c637e477d",
+  "criteria_sha256": "0d43e72e3758ee0871b2a1bfa2870551b73416ee062a60fda5e8bb1d864c40fc",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5563913",
+      "observed_utc": "2026-10-17T20:11:03.509+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00155",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00155.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00155.body.json.gz",
+      "start_utc": "2026-10-17T20:11:03.434+00:00",
+      "end_utc": "2026-10-17T20:11:03.509+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:03 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5563913",
+        "params": null
+      },
+      "raw_sha256": "70ebfaee249c8b9e943ef3ddf082f14afd83c4aad20beb605c98794769391a14",
+      "gzip_sha256": "394c5f2b7bbd9865c06f2c7c9c3e459d6aa8427dc4dd24ba43ad2a6140659a28",
+      "raw_bytes": 3330,
+      "gzip_bytes": 1572
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Luleå",
+      "HV71"
+    ],
+    "current_token_ids": [
+      "109175115067835469369174382984230838043746178495725728454168229823194779191083",
+      "47833913978351537561629487285041028883454814946679112996012743758161793282183"
+    ],
+    "current_description_sha256": "edfff9d760d3125eb3edb836342c2d5c738f7e4ff0e0bf6bc006f9e4c1b21923"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:48.441734+00:00",
+  "question": "SHL: Luleå vs. HV71",
+  "market_id": "5563913",
+  "valuation_author": "primary_operator",
+  "original_index": 1213,
+  "report_sha256": "2d446429a17334c0129dfae98148c5312aa20d70a87ff31c216a114d01e6ad80"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 2808,
+  "condition_id": "0xda2bba9ba42cfb101602973a0f3ed00a9e946e6ea60b65c379c4446489d6ff2c",
+  "criteria_sha256": "d06bd38b3247cbaf03776732c486438c2bd2a161b2eb9cacc66f92458b447d94",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5234553",
+      "observed_utc": "2026-10-17T20:11:25.021+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00364",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00364.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00364.body.json.gz",
+      "start_utc": "2026-10-17T20:11:24.933+00:00",
+      "end_utc": "2026-10-17T20:11:25.021+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:25 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5234553",
+        "params": null
+      },
+      "raw_sha256": "961b87bba0a082659078948de91d72071060de10b3ef707e98cc3e619f2a4941",
+      "gzip_sha256": "7c3785746877bfda879622adf2baf6476d6565e8e72f548a6c4dc301368d6116",
+      "raw_bytes": 4654,
+      "gzip_bytes": 2086
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "64923992265227440133125994701839921753914970985669487029196618191339217532484",
+      "108684136848819888651475127661935127273359487710265965758520560398489349781492"
+    ],
+    "current_description_sha256": "d8ebe43e03cbcca77246b6b22a2a3b875232b45319a8e031da95f16c17f9f773"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:41:02.009467+00:00",
+  "question": "PSV leading at halftime?",
+  "market_id": "5234553",
+  "valuation_author": "primary_operator",
+  "original_index": 2808,
+  "report_sha256": "135182962f024744fc66d2fe0d5f597932e70f51cf1bd906cf70ee2ef6f9eae1"
+}

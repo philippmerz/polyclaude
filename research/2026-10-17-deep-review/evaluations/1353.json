@@ -1,0 +1,72 @@
+{
+  "review_index": 1353,
+  "condition_id": "0x807b89d29239f9b063f0fea1132ad4fc81cb783ccf18ce079ad8f5ad6600eb71",
+  "criteria_sha256": "a173e435262809dbf7d9db561f2db00a6f326476a4b3b6fd7ab846916ed4d897",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5790770",
+      "observed_utc": "2026-10-17T20:11:05.106+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00172",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00172.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00172.body.json.gz",
+      "start_utc": "2026-10-17T20:11:05.054+00:00",
+      "end_utc": "2026-10-17T20:11:05.106+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:05 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5790770",
+        "params": null
+      },
+      "raw_sha256": "bd1cd1985466ebb77859c640398cc86d8534fa775150e449eb44a78f1359bddf",
+      "gzip_sha256": "c221f78aa93825210514bc81d128d767c211a7cfa6832d329fe214b4032439f9",
+      "raw_bytes": 4235,
+      "gzip_bytes": 1914
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Aziz Dougaz",
+      "Tom Gentzsch"
+    ],
+    "current_token_ids": [
+      "55624479498962878416663877793522699666448117036363068986202482871526420424605",
+      "87029437618729975344517374742200693721748113539115930819214153326876134825523"
+    ],
+    "current_description_sha256": "a3cd8eb4bb5a9e0e29f1997b2ba8d32a4e3b60475315a7ef5c7e0e61fc7222ec"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:53.250573+00:00",
+  "question": "European Open, Qualification: Aziz Dougaz vs Tom Gentzsch",
+  "market_id": "5790770",
+  "valuation_author": "primary_operator",
+  "original_index": 1353,
+  "report_sha256": "79ea19c0d5bbedfb08802fa81e48281a8dfbef957ced2c22dfef9f19c8bde6dd"
+}

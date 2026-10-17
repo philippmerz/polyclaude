@@ -1,0 +1,72 @@
+{
+  "review_index": 603,
+  "condition_id": "0x64332b5c42842f6efd44c49356b96f5c0970f21d701ef1e6bb31b3748eb4b000",
+  "criteria_sha256": "30ce204dc57c1f35f8d08196289d236767d94d2a5b9fab54dd21f8f24c342d5d",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263921",
+      "observed_utc": "2026-10-17T20:10:57.286+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00088",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00088.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00088.body.json.gz",
+      "start_utc": "2026-10-17T20:10:57.209+00:00",
+      "end_utc": "2026-10-17T20:10:57.286+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:57 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263921",
+        "params": null
+      },
+      "raw_sha256": "791cc91a29c98ad75a7804998cb73fe0461edd681281c3bf5b674af59255f4b5",
+      "gzip_sha256": "117e12fc6df4e7fb8b841f62253a137bef63c6143bd70fb01d3687c4d082a730",
+      "raw_bytes": 4737,
+      "gzip_bytes": 2110
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "14428999317583067953692246895752874804566376434437928794998061090524191610035",
+      "82233564686922379794738490082988074390348234717250587790675082218249009024445"
+    ],
+    "current_description_sha256": "9d36c8e66f667465b4a830d478254b8f5e73d6c389f11670f1cd48c7885946ed"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:27.850195+00:00",
+  "question": "Will Norwich City FC win on 2026-10-17?",
+  "market_id": "5263921",
+  "valuation_author": "primary_operator",
+  "original_index": 603,
+  "report_sha256": "55d32050b8cbaea6c40fe2437570572d75e91498cbaaf26b03e384c5a1aa37df"
+}

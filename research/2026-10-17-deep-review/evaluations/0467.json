@@ -1,0 +1,72 @@
+{
+  "review_index": 467,
+  "condition_id": "0x2dbc71419d4156c90323e0ceeb7dc207934b9b02e26062d1eecfcc583d87ab7a",
+  "criteria_sha256": "73b8b9bb43bd949f9ee28d7fc2b051ad65471b7ed46c8d50ef5f5dca263e33a0",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5721030",
+      "observed_utc": "2026-10-17T20:10:55.903+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00073",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00073.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00073.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.814+00:00",
+      "end_utc": "2026-10-17T20:10:55.903+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5721030",
+        "params": null
+      },
+      "raw_sha256": "169072fcc40a4bdac93bd66b3672950a4db903002908b6285303e81b5a37293f",
+      "gzip_sha256": "140078fbddcdd3b1485d80ca53c2cd2df6a53a807c5b5a7defaef29742a45d07",
+      "raw_bytes": 5318,
+      "gzip_bytes": 2341
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "43593021271681278976133678000158026208011335239331186419785854557797219896177",
+      "22363312959823228149688195071067067711668496756629157896188259902667540378964"
+    ],
+    "current_description_sha256": "f290409e611c4dd3fa61f158df8ac16ae436948e122f4f0d026d56e5e413b519"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:23.184405+00:00",
+  "question": "Will the highest temperature in Manila be 33°C on October 17?",
+  "market_id": "5721030",
+  "valuation_author": "primary_operator",
+  "original_index": 467,
+  "report_sha256": "0046ff23dd80ed7dd2f011342f7b59b0c7c461430bb90810ff2b76b3bca7bf00"
+}

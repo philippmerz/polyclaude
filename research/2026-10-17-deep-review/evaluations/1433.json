@@ -1,0 +1,72 @@
+{
+  "review_index": 1433,
+  "condition_id": "0x6da73287835d7f5eab7d1dad64306b13278ae1f98025bceef5e225a54550e06b",
+  "criteria_sha256": "43c0eb966ebe4b87ecbca7f21a9d24dd98e17aaeae42e2ca1ba39f581325a042",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5270684",
+      "observed_utc": "2026-10-17T20:11:05.986+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00181",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00181.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00181.body.json.gz",
+      "start_utc": "2026-10-17T20:11:05.892+00:00",
+      "end_utc": "2026-10-17T20:11:05.986+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:05 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5270684",
+        "params": null
+      },
+      "raw_sha256": "9a25f7778829e46ace6d33aa9c0d52a87c4a966a1a97e9341e471474e314575f",
+      "gzip_sha256": "c14258cdea3702d4d62d4c12f60a7ce3ebd85bf7adeffb38b82b49692b95ca41",
+      "raw_bytes": 4725,
+      "gzip_bytes": 2115
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "92121271833439351286133598169572304214368013861015655378146019094656959090202",
+      "66521326857893133329147928772616707107553290660571719869749127375510703964090"
+    ],
+    "current_description_sha256": "9ab07a8f13b96eff929bf59f7162976be4d0bf1d0f7a981493b4935371a871e2"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:55.989205+00:00",
+  "question": "Will Modena FC 2018 win on 2026-10-17?",
+  "market_id": "5270684",
+  "valuation_author": "primary_operator",
+  "original_index": 1433,
+  "report_sha256": "f95c5318161bb783593d47e45296fb934ce7d0fcea53e25513b55bfdcdc7a781"
+}

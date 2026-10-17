@@ -1,0 +1,72 @@
+{
+  "review_index": 405,
+  "condition_id": "0xc25c5391224ac8b5e8288693a755b15039a64a045fb55d4a59531544f0f645ef",
+  "criteria_sha256": "5a4ab5b43218873d94b4d87d41087ea55c4039daa6281a37848c5eabea7748cb",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263871",
+      "observed_utc": "2026-10-17T20:10:55.342+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00066",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00066.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00066.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.283+00:00",
+      "end_utc": "2026-10-17T20:10:55.342+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5263871",
+        "params": null
+      },
+      "raw_sha256": "1dede1ed48f5f701457220d9765745c45321c590a7fd56b9a7f64470088608b7",
+      "gzip_sha256": "ef251b7e01eeb4b10e04afd0da49c5f07be4aff77189e706fafdfa33a9bcadf9",
+      "raw_bytes": 4801,
+      "gzip_bytes": 2141
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "37203978777335969605683764689085907708504727581374464677354475841450627119696",
+      "24697401961618574064076014494062983500134415443871000625427687040137955143694"
+    ],
+    "current_description_sha256": "754c5efc02b8ae5b0b20af1441faa33c6151e1ddfd728f3b0ee1e93d21899ff9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:21.280002+00:00",
+  "question": "Will 1. FC Union Berlin vs. BV Borussia 09 Dortmund end in a draw?",
+  "market_id": "5263871",
+  "valuation_author": "primary_operator",
+  "original_index": 405,
+  "report_sha256": "bf7ddc9d1c4c7c17ff5e9849f2f0acda9fb9445db2d326aa36dc4c82df375a90"
+}

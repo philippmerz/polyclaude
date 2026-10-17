@@ -1,0 +1,72 @@
+{
+  "review_index": 399,
+  "condition_id": "0xf480bf1b4d25a9a90d0a2496d5167203d31ece141d397f6f32d0724900f4f19d",
+  "criteria_sha256": "a87f9f13c3e1dd40cd48afed2819aab1f383d8a326f9f9fe8d6fec64adcb97a4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5271301",
+      "observed_utc": "2026-10-17T20:10:55.149+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00064",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00064.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00064.body.json.gz",
+      "start_utc": "2026-10-17T20:10:55.072+00:00",
+      "end_utc": "2026-10-17T20:10:55.149+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:55 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5271301",
+        "params": null
+      },
+      "raw_sha256": "fcb6fa887c9999556567ff924d30e9d13ca481cd63d795a7afb6a7ddc133b1bd",
+      "gzip_sha256": "dd04e86f50ad01f137b2b84f180ac94a4591c005751ab56cddc47b6f72ee09a7",
+      "raw_bytes": 4756,
+      "gzip_bytes": 2106
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Yes",
+      "No"
+    ],
+    "current_token_ids": [
+      "41082569309716725561072854357112469069398994090621562172707341417427245903713",
+      "74184923042546930040416702674324611101420543697629283629712397059431425383198"
+    ],
+    "current_description_sha256": "1d47ad1fdb4c9254ab9ee60af03fed8db2740374ff494f1374636f8b16e720f9"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:20.955556+00:00",
+  "question": "Will Leyton Orient FC win on 2026-10-17?",
+  "market_id": "5271301",
+  "valuation_author": "primary_operator",
+  "original_index": 399,
+  "report_sha256": "507738ae0572f36eff6586de86fcbffd63bf38e91cc1022926fa593b538cbb70"
+}

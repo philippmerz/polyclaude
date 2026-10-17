@@ -1,0 +1,72 @@
+{
+  "review_index": 1278,
+  "condition_id": "0x6c2413886c3d29ceea384531b05da2284c0e664f82a106db31c0b4002de7eac0",
+  "criteria_sha256": "b9f9ddb6512bbf5093bee4d4f72511aae7e621b80cb42d4ba76504e460253e00",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5276346",
+      "observed_utc": "2026-10-17T20:11:04.451+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00166",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00166.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00166.body.json.gz",
+      "start_utc": "2026-10-17T20:11:04.382+00:00",
+      "end_utc": "2026-10-17T20:11:04.451+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:04 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5276346",
+        "params": null
+      },
+      "raw_sha256": "3c1ac7c81890980f01b05d2eba5eb1e3f15b17e71c8d41dd75557a964492fb51",
+      "gzip_sha256": "ca8dd741f555885d283dc4a2bf304c3b791ff8f96525730273fb1ddc2ec34aed",
+      "raw_bytes": 4966,
+      "gzip_bytes": 2206
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Over",
+      "Under"
+    ],
+    "current_token_ids": [
+      "71309516477599093893203445173984402488477708440463327352005817852733714470405",
+      "89884852352595299677807426867033584438817989606724333150551828302260022601249"
+    ],
+    "current_description_sha256": "faf93fa162c62ea5ce631c9f970028668665608f5d8ee47230ba736dd9ea959c"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:51.901665+00:00",
+  "question": "West Bromwich Albion FC vs. Blackburn Rovers FC: O/U 4.5",
+  "market_id": "5276346",
+  "valuation_author": "primary_operator",
+  "original_index": 1278,
+  "report_sha256": "3794042f828e4f7fccdf51ad443ae7121b34c72a0750889c00ae77522d241f98"
+}

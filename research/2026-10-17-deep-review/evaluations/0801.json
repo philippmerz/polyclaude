@@ -1,0 +1,72 @@
+{
+  "review_index": 801,
+  "condition_id": "0x011cefb6e5e680e8dce6f0859966781c8f16117feb8f1c887429c7bceccbb057",
+  "criteria_sha256": "d6a1d734596c9f12ff674408fa56fa9f07461dcbf047417024a394a2305dee3c",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5790503",
+      "observed_utc": "2026-10-17T20:10:59.356+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00111",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00111.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00111.body.json.gz",
+      "start_utc": "2026-10-17T20:10:59.314+00:00",
+      "end_utc": "2026-10-17T20:10:59.356+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:10:59 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5790503",
+        "params": null
+      },
+      "raw_sha256": "f6ef0227b506f65530a901094abf6063bde7d4122c0c6d5efe1418ea1bec5b06",
+      "gzip_sha256": "d80b3acd98c05f97b9a35f8fff5971f4ca1f6fd8821ca09f1bb8012cdd61851d",
+      "raw_bytes": 4478,
+      "gzip_bytes": 1985
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Stray Team",
+      "Stariy bog Team"
+    ],
+    "current_token_ids": [
+      "34908766917169093730408742710015315954845553243462365867263391607275209353098",
+      "82428098881899083158770616422890861005676410771640484737675081269608808018355"
+    ],
+    "current_description_sha256": "74471e01c47c97bf7a1b18d18ff7cd1b1ac964982d134510f72d3d363e37399f"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:37:34.852659+00:00",
+  "question": "Dota 2: Stray Team vs Stariy bog Team - Game 1 Winner",
+  "market_id": "5790503",
+  "valuation_author": "primary_operator",
+  "original_index": 801,
+  "report_sha256": "95e07a6c8a27368a1730fd244b89c6f8fcbe04fd0401f67bf93b9b751a7ae915"
+}

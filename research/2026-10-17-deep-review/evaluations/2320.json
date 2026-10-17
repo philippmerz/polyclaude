@@ -1,0 +1,72 @@
+{
+  "review_index": 2320,
+  "condition_id": "0x04ee7ce52d465ead7590550b72a092c00370f5cbc2ab4ec5fa2a23569cb5af91",
+  "criteria_sha256": "f3c1aac96704deef7ffea2d99346ba33d5f9f7590486fbd6a3bc0bdfb8fd5e59",
+  "status": "excluded_factual",
+  "literal_analysis": "Full exact question/description/outcomes/tokens preserved and matched; current closure/order nonacceptance is a factual new-entry exclusion independent of forecasting interpretation.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5793390",
+      "observed_utc": "2026-10-17T20:11:18.467+00:00",
+      "finding": "Exact identity and full payoff text match frozen; closed true, acceptingOrders false, scalar UMA resolved. No underlying winner or redeemability inferred."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "No available new entry; not a completed probability valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.",
+  "reopen_condition": "Exact venue condition reopens order acceptance, source correction, or matching inventory requires management.",
+  "source_receipts": {
+    "packet": "data/deep_review_20261017/universe_status_refresh.json",
+    "request": {
+      "request_id": "req_00307",
+      "receipt_path": "logs/deep_review_20261017/universe_status_refresh/req_00307.receipt.json",
+      "body_path": "logs/deep_review_20261017/universe_status_refresh/req_00307.body.json.gz",
+      "start_utc": "2026-10-17T20:11:18.421+00:00",
+      "end_utc": "2026-10-17T20:11:18.467+00:00",
+      "response_date": "Sat, 17 Oct 2026 20:11:18 GMT",
+      "http_status": 200,
+      "json_parse_status": "ok",
+      "request": {
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/5793390",
+        "params": null
+      },
+      "raw_sha256": "0e4aff6aed026a813eb3b8c17b443bfd56e322e2b8339626f02e7957d6d9c992",
+      "gzip_sha256": "b305453c8c911117a603b51a8f7737656dcc44e69fbebb428cd2d4f04f326d54",
+      "raw_bytes": 3806,
+      "gzip_bytes": 1709
+    },
+    "current_status": {
+      "closed": true,
+      "acceptingOrders": false,
+      "umaResolutionStatus": "resolved"
+    },
+    "current_outcomes": [
+      "Ilves Tampere",
+      "Jokerit Helsinki"
+    ],
+    "current_token_ids": [
+      "71258909901681393215606041961467654474242710019248957545489870708633834975783",
+      "68439653639691168077965328052071269175238313864239510564787137368886670497163"
+    ],
+    "current_description_sha256": "5fd45585b6caf5d6659c2f4702d593500cbe67f1399422d49dea3e11c30c4b15"
+  },
+  "portfolio_action": "none",
+  "extra": {
+    "primary_exclusion_rule": true,
+    "small_model_screen_used": false,
+    "positive_held_inventory_snapshot": "data/deep_review_20261017/pilot_live_positions.json"
+  },
+  "evaluated_utc": "2026-10-17T20:39:48.018558+00:00",
+  "question": "Ilves Tampere vs. Jokerit Helsinki",
+  "market_id": "5793390",
+  "valuation_author": "primary_operator",
+  "original_index": 2320,
+  "report_sha256": "e72eb071b0f5bee6c88f2936d35ed80827bf24da1b6eddd90079c8dd0d5901b4"
+}
