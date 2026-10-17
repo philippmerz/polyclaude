@@ -1,0 +1,150 @@
+{
+  "review_index": 259,
+  "condition_id": "0x40b2475e802d01b929cddd1124b8199d04989f1678bcf41d53fa75d7d917333d",
+  "criteria_sha256": "005db3aceb210c2c977e6acc3da881ab4eb6acab59843642cfc8a2573b349ba1",
+  "status": "valued",
+  "literal_analysis": "Full exact party-of-winner-at-all-House-calls rule, independent latest caucus intent and credible/FEC fallback read; exact frozen identity retained.",
+  "evidence": [
+    {
+      "url": "https://www.cookpolitical.com/cook-pvi",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "D+3 current partisan-share index, not win odds; source rating dates preserved."
+    },
+    {
+      "url": "https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.html",
+      "observed_utc": "2026-10-17T21:09:26.265613+00:00",
+      "finding": "Current2026boundary continuity/change separately checked; no oldFL/TXmargin reused."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T21:09:26.265642+00:00",
+      "finding": "Official2024counts independently read where unchanged boundaries; not a current vote forecast."
+    },
+    {
+      "url": "https://portal.ct.gov/-/media/sots/electionservices/town_ballots/2026/nov-ada-2026/danbury_sample_ada.pdf?hash=426708A2C9C8282FA4B731C2A4C56129&rev=02c8e5802ffa4aacaf4146178b67ef13",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "{\"source\": \"Danbury, CT Nov 3, 2026 sample ballot, page 1 (page index 0)\", \"facts\": [\"Heading identifies Congressional District 5 and office Representative in Congress.\", \"Jahana Hayes is listed Democratic and Working Families; Chris Shea Republican.\"], \"url\": \"https://portal.ct.gov/-/media/sots/electionservices/town_ballots/2026/nov-ada-2026/danbury_sample_ada.pdf?hash=426708A2C9C8282FA4B731C2A4C56129&rev=02c8e5802ffa4aacaf4146178b67ef13\", \"published_or_updated\": \"2026 November sample ballot posted on CT SOTS ballot page updated Oct 15, 2026.\"}"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.96,
+    "low": 0.6,
+    "high": 0.999,
+    "method": "Primary shared-national/PVI and official-candidate-history mixture, with actual poll likelihood only forMT01",
+    "reasoning": "Exact coefficients, model arithmetic and sensitivity grid in house_next_model.py/results; old maps, unknown ballots and unverified aggregatorpolls not inserted as facts.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0241_0360.json",
+    "quote_observed_utc": "2026-10-17T20:37:19.553+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.96,
+        "best_bid": 0.95,
+        "best_ask": 0.964,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 24.444,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.964,
+            "fee_usd": 0.013881600000000011
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.65389,
+        "fee_usd": 0.01389,
+        "break_even_probability_before_carry": 0.965389,
+        "break_even_probability_with_idealized_carry": 0.9697769352684069,
+        "central_expected_profit_usd": -0.05389000000000088,
+        "default_10pp_stressed_profit_usd": -1.0538900000000009,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.86,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.481
+      },
+      "No": {
+        "probability": 0.040000000000000036,
+        "best_bid": 0.036,
+        "best_ask": 0.05,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 24.444,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.05,
+            "fee_usd": 0.019
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.519,
+        "fee_usd": 0.019,
+        "break_even_probability_before_carry": 0.0519,
+        "break_even_probability_with_idealized_carry": 0.05213589852425325,
+        "central_expected_profit_usd": -0.11899999999999966,
+        "default_10pp_stressed_profit_usd": -0.519,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.34611
+      }
+    }
+  },
+  "verdict": "Both sides valued; captured asks do not clear ordinary uncertainty reserve",
+  "reopen_condition": "Current original poll/ballot/candidate/caucus or map evidence, an election call, or a materially different supported book requires revalidation.",
+  "current_description_sha256": "e002fe60aab24e2bbd6f0a61c7326580746d460a9068af5a8aed3b8f9cc97f9d",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "4102292012495276789306481274689776832735182662407154073320343951315418557612",
+    "62026405339730545488981915197487142097726510160430406716326552110735716725326"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0019",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0021",
+      "receipt_path": "logs/deep_review_20261017/quotes_0241_0360/req_0021.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0241_0360/req_0021.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/house_next_batch_sources.json",
+      "data/deep_review_20261017/house_next_primary_source_addendum.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/house_next_model.py",
+    "model_calibrated": false,
+    "candidate_followup_required_before_money": false,
+    "shared_cluster": "us-politics"
+  },
+  "evaluated_utc": "2026-10-17T21:09:26.556950+00:00",
+  "question": "Will the Democratic Party win the CT-05 House seat?",
+  "market_id": "942356",
+  "valuation_author": "primary_operator",
+  "original_index": 259,
+  "report_sha256": "9a78436a5151e372d3988a35003c54e3d681f9e92285eb23490a798e60fe4da3"
+}

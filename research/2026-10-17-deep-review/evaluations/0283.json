@@ -1,0 +1,150 @@
+{
+  "review_index": 283,
+  "condition_id": "0xe2bd695096385d8878a0e7b5e144b94c7a2320a027b0dfd551d4d5a7fc8bc267",
+  "criteria_sha256": "2ec5d8ca3fa83f381eb7763ab29445e88611cb1c90479110411ceecb9b25240f",
+  "status": "valued",
+  "literal_analysis": "Full exact party-of-winner-at-all-House-calls rule, independent latest caucus intent and credible/FEC fallback read; exact frozen identity retained.",
+  "evidence": [
+    {
+      "url": "https://www.cookpolitical.com/cook-pvi",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "D+1 current partisan-share index, not win odds; source rating dates preserved."
+    },
+    {
+      "url": "https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.html",
+      "observed_utc": "2026-10-17T21:09:28.633451+00:00",
+      "finding": "Current2026boundary continuity/change separately checked; no oldFL/TXmargin reused."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T21:09:28.633472+00:00",
+      "finding": "Official2024counts independently read where unchanged boundaries; not a current vote forecast."
+    },
+    {
+      "url": "https://nvsos.gov/sos/elections/election-information/2026-election-information",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "{\"status\": \"access_gap\", \"source\": \"Nevada Secretary of State 2026 Election Information page links certified general candidate list, but direct list retrieval failed in this session.\", \"url\": \"https://nvsos.gov/sos/elections/election-information/2026-election-information\", \"known_context\": \"Cook identifies incumbent Susie Lee (D); final general ballot list not accessed.\"}"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.92,
+    "low": 0.55,
+    "high": 0.999,
+    "method": "Primary shared-national/PVI and official-candidate-history mixture, with actual poll likelihood only forMT01",
+    "reasoning": "Exact coefficients, model arithmetic and sensitivity grid in house_next_model.py/results; old maps, unknown ballots and unverified aggregatorpolls not inserted as facts.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0241_0360.json",
+    "quote_observed_utc": "2026-10-17T20:37:27.150+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.92,
+        "best_bid": 0.93,
+        "best_ask": 0.95,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 25.885,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.95,
+            "fee_usd": 0.019000000000000017
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.51901,
+        "fee_usd": 0.01901,
+        "break_even_probability_before_carry": 0.951901,
+        "break_even_probability_with_idealized_carry": 0.9562276289236069,
+        "central_expected_profit_usd": -0.3190099999999987,
+        "default_10pp_stressed_profit_usd": -1.3190099999999987,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8200000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.27396
+      },
+      "No": {
+        "probability": 0.07999999999999996,
+        "best_bid": 0.05,
+        "best_ask": 0.07,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 25.885,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.07,
+            "fee_usd": 0.026040000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.7260500000000001,
+        "fee_usd": 0.02605,
+        "break_even_probability_before_carry": 0.072605,
+        "break_even_probability_with_idealized_carry": 0.07293500794515237,
+        "central_expected_profit_usd": 0.07394999999999952,
+        "default_10pp_stressed_profit_usd": -0.7260500000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.481
+      }
+    }
+  },
+  "verdict": "Both sides valued; captured asks do not clear ordinary uncertainty reserve",
+  "reopen_condition": "Current original poll/ballot/candidate/caucus or map evidence, an election call, or a materially different supported book requires revalidation.",
+  "current_description_sha256": "364bd4d9950591963586fc0b860f471c424899e1ff149be31296a340b94d22aa",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "94909040987536769270715360325201420589044604443243218743462043270034738802453",
+    "104735383839743917917907942165126496186842141398707250478626048318036570567935"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0089",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0241_0360/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0241_0360/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/house_next_batch_sources.json",
+      "data/deep_review_20261017/house_next_primary_source_addendum.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/house_next_model.py",
+    "model_calibrated": false,
+    "candidate_followup_required_before_money": false,
+    "shared_cluster": "us-politics"
+  },
+  "evaluated_utc": "2026-10-17T21:09:28.887144+00:00",
+  "question": "Will the Democratic Party win the NV-03 House seat?",
+  "market_id": "942894",
+  "valuation_author": "primary_operator",
+  "original_index": 283,
+  "report_sha256": "b864a9f21c2b3eb8a0eac70451b7661413680c27c18da374872a2f5a84e9b079"
+}

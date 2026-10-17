@@ -1,0 +1,80 @@
+{
+  "authority": "Primary uncalibrated scenario sensitivity; no prices or screening labels are inputs.",
+  "metric": "Q3 FY2027 official first-reported non-GAAP gross margin, most precise specified metric; not extra H20-excluding variant.",
+  "observed_original_guidance_actual_errors_pp": [
+    -10.0,
+    0.7,
+    0.1,
+    0.2,
+    0.0,
+    0.0
+  ],
+  "history_limit": "Q1FY26H20charge is real original reported-line loss, not replaced by71.3. SBCdefinition changesFY27; later comparative restatements do not replace original first reports. Six observations are not IID tail calibration.",
+  "central_inputs": {
+    "ordinary_weight": 0.85,
+    "ordinary_mu": 74.1,
+    "ordinary_sd": 0.7,
+    "downside_weight": 0.1,
+    "downside_mu": 70.5,
+    "downside_sd": 3,
+    "upside_weight": 0.05,
+    "upside_mu": 76,
+    "upside_sd": 1.25,
+    "missing_metric_or_late_fallback": 0.005,
+    "reported_precision_mix_tenths_full": [
+      0.8,
+      0.2
+    ]
+  },
+  "labels": [
+    "<71",
+    "71<=x<73",
+    "73<=x<75",
+    "75<=x<77",
+    "77<=x"
+  ],
+  "probabilities": [
+    0.060817106527592306,
+    0.06733574441018741,
+    0.7325748779035162,
+    0.12668824809798027,
+    0.012584023060723874
+  ],
+  "rounded_probabilities": [
+    0.06,
+    0.07,
+    0.73,
+    0.13,
+    0.01
+  ],
+  "sensitivity_grid_size": 729,
+  "sensitivity_ranges": [
+    [
+      0.018221741649534783,
+      0.1905396052810214
+    ],
+    [
+      0.0061503502978180425,
+      0.2663223443055836
+    ],
+    [
+      0.3931961982942299,
+      0.8941288012598163
+    ],
+    [
+      0.014712350515498636,
+      0.37666120163657013
+    ],
+    [
+      0.004406063063630754,
+      0.05339992230681556
+    ]
+  ],
+  "unmodeled_risks": [
+    "Unannounced export-control/inventory charge",
+    "Rubin product-ramp mix/cost change",
+    "Changed official non-GAAP definition or first-publication interpretation",
+    "Delayed or omitted metric with lowest-bracket fallback"
+  ],
+  "execution": "No order, canonical prior or reservation authority."
+}

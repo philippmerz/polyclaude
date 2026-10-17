@@ -1,0 +1,157 @@
+{
+  "review_index": 334,
+  "condition_id": "0xadf9ebf983672208c0a8fd957657db30784ade506a9b400b952860a3b5214682",
+  "criteria_sha256": "f2ad2a5ac448d9298f22324e5a857045d3607c92d6e64de997156bd9a835b7ef",
+  "status": "valued",
+  "literal_analysis": "Fullspecifiedofficialnon-GAAPmetric, firstpublication, highestreportedprecision, range-midpoint/higher-boundary/lowest-fallback/webcastclausesread; exactfamilyintervalboundariespreserved.",
+  "evidence": [
+    {
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/",
+      "observed_utc": "2026-10-17T21:15:21.674911+00:00",
+      "finding": "August26currentQ3FY27non-GAAPguide74±.5, actual75; noChinacomputerevenue; SBCdefinition/restatedcomparisonsseparate."
+    },
+    {
+      "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2026/",
+      "observed_utc": "2026-10-17T21:15:21.674930+00:00",
+      "finding": "Originalreportednon-GAAP61.0including4.5BH20charge; separate71.3excludingcharge doesnotreplacereportedline."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07,
+    "low": 0.001,
+    "high": 0.45,
+    "method": "Primary normalized common reported-margin regime mixture with explicit rounding and lowest-bracket fallback",
+    "reasoning": "Sharedmodel .85ordinary/.10downside/.05upside plus.005fallback; officialguide/historycontext but noIIDtailfit; allfivebrackets sum1.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0241_0360.json",
+    "quote_observed_utc": "2026-10-17T20:37:36.777+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 40,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.07,
+        "best_bid": 0.01,
+        "best_ask": 0.064,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.427,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 5.11,
+            "price": 0.064,
+            "fee_usd": 0.012244377600000002
+          },
+          {
+            "shares": 4.89,
+            "price": 0.065,
+            "fee_usd": 0.01188759
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 0.66903,
+        "fee_usd": 0.02414,
+        "break_even_probability_before_carry": 0.066903,
+        "break_even_probability_with_idealized_carry": 0.06712402022478332,
+        "central_expected_profit_usd": 0.030970000000000053,
+        "default_10pp_stressed_profit_usd": -0.66903,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.09604
+      },
+      "No": {
+        "probability": 0.9299999999999999,
+        "best_bid": 0.936,
+        "best_ask": 0.99,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.427,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.99,
+            "fee_usd": 0.003960000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.903970000000001,
+        "fee_usd": 0.00397,
+        "break_even_probability_before_carry": 0.9903970000000001,
+        "break_even_probability_with_idealized_carry": 0.9936688677423244,
+        "central_expected_profit_usd": -0.6039700000000021,
+        "default_10pp_stressed_profit_usd": -1.6039700000000021,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.83,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.33097
+      }
+    }
+  },
+  "verdict": "Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve",
+  "reopen_condition": "Newissuer/SECmetricguide, policy/charge/mixdisclosure, informed-move evidence, publicationtimeorchangedcostneedsfreshreview.",
+  "current_description_sha256": "e03c5a6366e99fa06f9087490f8c2a7d22c48b3df380f53abeca800527775a88",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "93159336399904931547987589937215347895354221247122468931088286964165600126745",
+    "94729784061791595742589681357835214230804931726623643420634841215849422353862"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0191",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0199",
+      "receipt_path": "logs/deep_review_20261017/quotes_0241_0360/req_0199.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0241_0360/req_0199.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/issuer_events_followup_sources.json",
+      "data/deep_review_20261017/earnings_metric_history_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/nvda_margin_model.py",
+    "model_calibrated": false,
+    "shared_metric_partition": [
+      "<71",
+      "71<=x<73",
+      "73<=x<75",
+      "75<=x<77",
+      "77<=x"
+    ],
+    "partition_unrounded_probabilities": [
+      0.060817106527592306,
+      0.06733574441018741,
+      0.7325748779035162,
+      0.12668824809798027,
+      0.012584023060723874
+    ]
+  },
+  "evaluated_utc": "2026-10-17T21:15:21.878862+00:00",
+  "question": "NVIDIA (NVDA) Q3 adjusted gross margin 71% to 73%?",
+  "market_id": "5730330",
+  "valuation_author": "primary_operator",
+  "original_index": 334,
+  "report_sha256": "538b54a3fdbfbb9f532098f9357e9360d2fa1d2cb61e4f120d6ecab766b14570"
+}

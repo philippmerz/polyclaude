@@ -1,0 +1,153 @@
+{
+  "review_index": 167,
+  "condition_id": "0x275caaeeb2715e0b56a8833a110e2a2d48697780972c41cc795f8947d4d53aaa",
+  "criteria_sha256": "0821e7ac9907db389d732611212bb4bcfca55a8c5fc6ac4c83cbba89871d4af7",
+  "status": "valued",
+  "literal_analysis": "Full exact creation-to-Oct18 23:59IRST bilateral actor/land-impact rule, weapon exclusions, territorial scope and three-calendar-day attribution extension read; Gamma endpoint differs7.5h.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5697537",
+      "observed_utc": "2026-10-17T21:04:04.139253+00:00",
+      "finding": "Exact creation/endDate and current literal identity; literalIRST endpoint overrides later metadata."
+    },
+    {
+      "url": "https://uk.marketscreener.com/news/netanyahu-says-israel-is-not-seeking-to-attack-iran-again-before-israel-election-ce785dd2df8dfe25",
+      "observed_utc": "2026-10-17T21:04:04.139273+00:00",
+      "finding": "Reuters13:06UTC Oct14 baseline and election restraint predate creation; repeat direct browser fetch failed."
+    },
+    {
+      "url": "https://www.idf.il/en/mini-sites/idf-press-releases-israel-at-war/",
+      "observed_utc": "2026-10-17T21:04:04.139276+00:00",
+      "finding": "Official bounded index, not exhaustive action history."
+    },
+    {
+      "url": "https://apnews.com/article/aaf6d7e5367f99869eaf4b419c66e0df",
+      "observed_utc": "2026-10-17T21:04:04.139278+00:00",
+      "finding": "Oct17 regional roundup includes maritime and Gaza incidents, not demonstrated eligible bilateral impact."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.96,
+    "low": 0.65,
+    "high": 0.998,
+    "method": "Primary two-stage survival judgment with separate unobserved historical and future qualifying-impact mass",
+    "reasoning": "Unobserved historical qualifying event2%; conditional future event2%; YES=.98*.98=.9604, rounded.96. Subjective not calibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 4,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.96,
+        "best_bid": 0.976,
+        "best_ask": 0.98,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.774,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.98,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.8,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.9800000000000001,
+        "break_even_probability_with_idealized_carry": 0.9803232717389865,
+        "central_expected_profit_usd": -0.20000000000000107,
+        "default_10pp_stressed_profit_usd": -1.200000000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.86,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.76
+      },
+      "No": {
+        "probability": 0.040000000000000036,
+        "best_bid": 0.02,
+        "best_ask": 0.024,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.774,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.024,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.24,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.024,
+        "break_even_probability_with_idealized_carry": 0.02400791685891395,
+        "central_expected_profit_usd": 0.16000000000000036,
+        "default_10pp_stressed_profit_usd": -0.24,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.2
+      }
+    }
+  },
+  "verdict": "Short-window survival valued; NO central difference fails ordinary uncertainty reserve",
+  "reopen_condition": "Official qualifying land impact, credible earlier in-window incident, new state attribution or a sufficiently different current book requires a fresh review.",
+  "current_description_sha256": "f1e7e8b4c4e645a22d12180d4dfd4f768bb6199e41aef5d5b516da594f0933dd",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "89934143411893138333951542357208271255449441787454915251869419003486856118425",
+    "63819349461678860562881015318611783191660953531231236397370090708499751082117"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0095",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/iran_ceasefire_historical_followup.json",
+      "data/deep_review_20261017/iran_ceasefire_primary_corrections.json"
+    ],
+    "literal_cutoff_utc": "2026-10-18T20:29:00Z",
+    "model_inputs": {
+      "unobserved_historical_event": 0.02,
+      "future_event_conditional": 0.02,
+      "survival_unrounded": 0.9604
+    },
+    "model_calibrated": false
+  },
+  "evaluated_utc": "2026-10-17T21:04:04.432087+00:00",
+  "question": "Israel x Iran ceasefire continues through October 18?",
+  "market_id": "5697537",
+  "valuation_author": "primary_operator",
+  "original_index": 167,
+  "report_sha256": "81b4ffb2fc6704366d0102837cda6c89dafa60eaf1c4b971f12b0baf5eee228a"
+}

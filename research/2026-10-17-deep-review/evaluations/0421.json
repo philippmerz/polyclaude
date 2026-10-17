@@ -1,0 +1,150 @@
+{
+  "review_index": 421,
+  "condition_id": "0x4fc8fa3232d953ba415ec7bfc2a494d8a01f7001b2e5c4e07fb4f4e4b931af32",
+  "criteria_sha256": "8fb83ecefe3c8e048643fbfe62efd357b09f1b4178d0077ddda98af9ffbac392",
+  "status": "valued",
+  "literal_analysis": "Full exact party-of-winner-at-all-House-calls rule, independent latest caucus intent and credible/FEC fallback read; exact frozen identity retained.",
+  "evidence": [
+    {
+      "url": "https://www.cookpolitical.com/cook-pvi",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "R+3 current partisan-share index, not win odds; source rating dates preserved."
+    },
+    {
+      "url": "https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.html",
+      "observed_utc": "2026-10-17T21:09:32.648722+00:00",
+      "finding": "Current2026boundary continuity/change separately checked; no oldFL/TXmargin reused."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T21:09:32.648746+00:00",
+      "finding": "Official2024counts independently read where unchanged boundaries; not a current vote forecast."
+    },
+    {
+      "url": "https://mi-boe.entellitrak.com/etk-mi-boe-prod/page.request.do?electionType=GEN&electionYear=2026&page=page.miboePublicReport",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "{\"source\": \"Michigan Department of State official 2026 November General Candidate Listing (current live listing; state SOS page links it).\", \"facts\": [\"4th District Representative in Congress: Sean McCann Democratic; Bill Huizenga Republican; Shafina Che Barnett Green.\"], \"url\": \"https://mi-boe.entellitrak.com/etk-mi-boe-prod/page.request.do?electionType=GEN&electionYear=2026&page=page.miboePublicReport\"}"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.59,
+    "low": 0.1,
+    "high": 0.97,
+    "method": "Primary shared-national/PVI and official-candidate-history mixture, with actual poll likelihood only forMT01",
+    "reasoning": "Exact coefficients, model arithmetic and sensitivity grid in house_next_model.py/results; old maps, unknown ballots and unverified aggregatorpolls not inserted as facts.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0361_0480.json",
+    "quote_observed_utc": "2026-10-17T20:59:58.287+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.59,
+        "best_bid": 0.49,
+        "best_ask": 0.51,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 20.162,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.51,
+            "fee_usd": 0.09996000000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.1999699999999995,
+        "fee_usd": 0.09997,
+        "break_even_probability_before_carry": 0.5199969999999999,
+        "break_even_probability_with_idealized_carry": 0.5223605168577287,
+        "central_expected_profit_usd": 0.7000299999999999,
+        "default_10pp_stressed_profit_usd": -0.2999699999999992,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.49,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.80004
+      },
+      "No": {
+        "probability": 0.41000000000000003,
+        "best_bid": 0.49,
+        "best_ask": 0.51,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 20.162,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.51,
+            "fee_usd": 0.09996000000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.1999699999999995,
+        "fee_usd": 0.09997,
+        "break_even_probability_before_carry": 0.5199969999999999,
+        "break_even_probability_with_idealized_carry": 0.5223605168577287,
+        "central_expected_profit_usd": -1.099969999999999,
+        "default_10pp_stressed_profit_usd": -2.099969999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.31000000000000005,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.80004
+      }
+    }
+  },
+  "verdict": "Both sides valued; captured asks do not clear ordinary uncertainty reserve",
+  "reopen_condition": "Current original poll/ballot/candidate/caucus or map evidence, an election call, or a materially different supported book requires revalidation.",
+  "current_description_sha256": "c381497dba009116921245ab0be6c2327d1d6f1d1c410009ab53eb7a5937a58e",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "87589942622377151969926487754686209154428462112404831103926040594864335734811",
+    "92718314777145262007643697287300437140247953777540919722864078868801795052277"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0133",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0155",
+      "receipt_path": "logs/deep_review_20261017/quotes_0361_0480/req_0155.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0361_0480/req_0155.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/house_next_batch_sources.json",
+      "data/deep_review_20261017/house_next_primary_source_addendum.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/house_next_model.py",
+    "model_calibrated": false,
+    "candidate_followup_required_before_money": false,
+    "shared_cluster": "us-politics"
+  },
+  "evaluated_utc": "2026-10-17T21:09:32.916966+00:00",
+  "question": "Will the Republican Party win the MI-04 House seat?",
+  "market_id": "942709",
+  "valuation_author": "primary_operator",
+  "original_index": 421,
+  "report_sha256": "69380e97b3f826a3da2ed45531db84bad3c273d0c7cd4911e2474d7850c8f0e4"
+}

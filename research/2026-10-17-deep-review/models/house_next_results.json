@@ -1,0 +1,463 @@
+{
+  "authority": "Primary uncalibrated judgment and source-sensitive margin model; not an automatic screen.",
+  "source": "Official House Clerk2024statistics PDF, pages are PDF page numbers; current Census continuity verified except redrawnFL/TX; same shared model assumptions as house_extension_method.md.",
+  "historical_returns": {
+    "CT05": {
+      "D": 180268,
+      "R": 157258,
+      "other": 79,
+      "page": 15,
+      "valid_votes": 337605,
+      "D_margin_pp": 6.815657351046341
+    },
+    "NV01": {
+      "D": 167885,
+      "R": 143650,
+      "other": 11364,
+      "page": 44,
+      "valid_votes": 322899,
+      "D_margin_pp": 7.505442878423284
+    },
+    "NV03": {
+      "D": 191304,
+      "R": 181084,
+      "other": 0,
+      "page": 44,
+      "valid_votes": 372388,
+      "D_margin_pp": 2.744449337787469
+    },
+    "MT01": {
+      "D": 143783,
+      "R": 168529,
+      "other": 9954,
+      "page": 42,
+      "valid_votes": 322266,
+      "D_margin_pp": -7.6787498526062326
+    },
+    "AZ01": {
+      "D": 208966,
+      "R": 225538,
+      "other": 0,
+      "page": 6,
+      "valid_votes": 434504,
+      "D_margin_pp": -3.814004013772025
+    },
+    "AZ02": {
+      "D": 184963,
+      "R": 221413,
+      "other": 55,
+      "page": 6,
+      "valid_votes": 406431,
+      "D_margin_pp": -8.96831196439248
+    },
+    "VA06": {
+      "D": 141612,
+      "R": 256933,
+      "other": 8490,
+      "page": 74,
+      "valid_votes": 407035,
+      "D_margin_pp": -28.33196162492169
+    },
+    "NY01": {
+      "D": 183540,
+      "R": 226285,
+      "other": 275,
+      "page": 48,
+      "valid_votes": 410100,
+      "D_margin_pp": -10.423067544501341
+    },
+    "MI04": {
+      "D": 184641,
+      "R": 234489,
+      "other": 6687,
+      "page": 36,
+      "valid_votes": 425817,
+      "D_margin_pp": -11.70643727234939
+    }
+  },
+  "cases": {
+    "259": {
+      "inputs": {
+        "district": "CT05",
+        "yes": "D",
+        "pvi": 3,
+        "inc": 2,
+        "adj": 0,
+        "other": 0.005,
+        "history_weight": 0.5,
+        "low": 0.6,
+        "high": 0.999,
+        "history": 6.815657351046341
+      },
+      "prior_D_mean": 14.8,
+      "updated_D_mean": 14.8,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 15.215657351046342,
+        "sd": 8,
+        "p_D": 0.9714116228537665,
+        "weight": 0.5
+      },
+      "p_D_before_other_affiliation": 0.9692869667461224,
+      "unrounded_p_yes": 0.9644405319123918,
+      "primary_p_yes": 0.96,
+      "scenario_range": [
+        0.6,
+        0.999
+      ],
+      "grid_min": 0.9008653968552115,
+      "grid_max": 0.9813397446508612
+    },
+    "265": {
+      "inputs": {
+        "district": "NV01",
+        "yes": "D",
+        "pvi": 2,
+        "inc": 2,
+        "adj": 0,
+        "other": 0.005,
+        "history_weight": 0.5,
+        "low": 0.6,
+        "high": 0.999,
+        "history": 7.505442878423284
+      },
+      "prior_D_mean": 13.2,
+      "updated_D_mean": 13.2,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 15.905442878423283,
+        "sd": 8,
+        "p_D": 0.9766041268418827,
+        "weight": 0.5
+      },
+      "p_D_before_other_affiliation": 0.9665070166582524,
+      "unrounded_p_yes": 0.9616744815749612,
+      "primary_p_yes": 0.96,
+      "scenario_range": [
+        0.6,
+        0.999
+      ],
+      "grid_min": 0.8934930266154818,
+      "grid_max": 0.9809207433521292
+    },
+    "271": {
+      "inputs": {
+        "district": "MT01",
+        "yes": "D",
+        "pvi": -5,
+        "inc": 0,
+        "adj": 0,
+        "other": 0.02,
+        "history_weight": 0.2,
+        "poll": -1,
+        "moe": 6,
+        "common": 4,
+        "age": 5.5,
+        "poll_bias": 0,
+        "low": 0.12,
+        "high": 0.85,
+        "history": -7.6787498526062326
+      },
+      "prior_D_mean": 0.0,
+      "updated_D_mean": -0.34955696740040365,
+      "updated_sd": 5.410169726263848,
+      "effective_poll_sd": 9.150649239682675,
+      "historical_component": {
+        "D_margin_mean": -0.02441249598661362,
+        "sd": 6.0228369514876015,
+        "p_D": 0.4983829630073774,
+        "weight": 0.2
+      },
+      "p_D_before_other_affiliation": 0.4794886531118826,
+      "unrounded_p_yes": 0.4698988800496449,
+      "primary_p_yes": 0.47,
+      "scenario_range": [
+        0.12,
+        0.85
+      ],
+      "grid_min": 0.18369090203430724,
+      "grid_max": 0.7697585901583055
+    },
+    "277": {
+      "inputs": {
+        "district": "AZ01",
+        "yes": "D",
+        "pvi": -1,
+        "inc": 0,
+        "adj": 0,
+        "other": 0.01,
+        "history_weight": 0.35,
+        "history_adjustment": 2,
+        "low": 0.35,
+        "high": 0.99,
+        "history": -3.814004013772025
+      },
+      "prior_D_mean": 6.4,
+      "updated_D_mean": 6.4,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 6.585995986227975,
+        "sd": 8,
+        "p_D": 0.7948169370344413,
+        "weight": 0.35
+      },
+      "p_D_before_other_affiliation": 0.811314544277151,
+      "unrounded_p_yes": 0.8032013988343795,
+      "primary_p_yes": 0.8,
+      "scenario_range": [
+        0.35,
+        0.99
+      ],
+      "grid_min": 0.5989055675904452,
+      "grid_max": 0.9199741068199225
+    },
+    "283": {
+      "inputs": {
+        "district": "NV03",
+        "yes": "D",
+        "pvi": 1,
+        "inc": 2,
+        "adj": 0,
+        "other": 0.005,
+        "history_weight": 0.5,
+        "low": 0.55,
+        "high": 0.999,
+        "history": 2.744449337787469
+      },
+      "prior_D_mean": 11.6,
+      "updated_D_mean": 11.6,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 11.144449337787469,
+        "sd": 8,
+        "p_D": 0.9181985967162699,
+        "weight": 0.5
+      },
+      "p_D_before_other_affiliation": 0.9293939877103841,
+      "unrounded_p_yes": 0.9247470177718321,
+      "primary_p_yes": 0.92,
+      "scenario_range": [
+        0.55,
+        0.999
+      ],
+      "grid_min": 0.8117562104411932,
+      "grid_max": 0.9696122270097243
+    },
+    "325": {
+      "inputs": {
+        "district": "AZ02",
+        "yes": "D",
+        "pvi": -7,
+        "inc": -2,
+        "adj": 0,
+        "other": 0.003,
+        "history_weight": 0.6,
+        "low": 0.01,
+        "high": 0.8,
+        "history": -8.96831196439248
+      },
+      "prior_D_mean": -5.200000000000001,
+      "updated_D_mean": -5.200000000000001,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": -0.5683119643924801,
+        "sd": 8,
+        "p_D": 0.4716833599563226,
+        "weight": 0.6
+      },
+      "p_D_before_other_affiliation": 0.3732446744621064,
+      "unrounded_p_yes": 0.3721249404387201,
+      "primary_p_yes": 0.37,
+      "scenario_range": [
+        0.01,
+        0.8
+      ],
+      "grid_min": 0.17156239727307093,
+      "grid_max": 0.6535142282209407
+    },
+    "337": {
+      "inputs": {
+        "district": "FL26",
+        "yes": "D",
+        "pvi": -7,
+        "inc": -2,
+        "adj": -1,
+        "other": 0.01,
+        "low": 0.001,
+        "high": 0.7
+      },
+      "prior_D_mean": -6.200000000000001,
+      "updated_D_mean": -6.200000000000001,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.18412670830302239,
+      "unrounded_p_yes": 0.18228544121999216,
+      "primary_p_yes": 0.18,
+      "scenario_range": [
+        0.001,
+        0.7
+      ],
+      "grid_min": 0.03543192997464079,
+      "grid_max": 0.5295730408286142
+    },
+    "373": {
+      "inputs": {
+        "district": "TX23",
+        "yes": "R",
+        "pvi": -7,
+        "inc": 0,
+        "adj": 0,
+        "other": 0.01,
+        "low": 0.2,
+        "high": 0.99
+      },
+      "prior_D_mean": -3.200000000000001,
+      "updated_D_mean": -3.200000000000001,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.3203377273425424,
+      "unrounded_p_yes": 0.672865649930883,
+      "primary_p_yes": 0.67,
+      "scenario_range": [
+        0.2,
+        0.99
+      ],
+      "grid_min": 0.296839093446234,
+      "grid_max": 0.9141083891518289
+    },
+    "385": {
+      "inputs": {
+        "district": "VA06",
+        "yes": "D",
+        "pvi": -12,
+        "inc": -2,
+        "adj": 1,
+        "other": 0.003,
+        "history_weight": 0.5,
+        "low": 0.001,
+        "high": 0.45,
+        "history": -28.33196162492169
+      },
+      "prior_D_mean": -12.200000000000003,
+      "updated_D_mean": -12.200000000000003,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": -19.93196162492169,
+        "sd": 8,
+        "p_D": 0.006360334239106008,
+        "weight": 0.5
+      },
+      "p_D_before_other_affiliation": 0.030012254188455295,
+      "unrounded_p_yes": 0.02992221742588993,
+      "primary_p_yes": 0.03,
+      "scenario_range": [
+        0.001,
+        0.45
+      ],
+      "grid_min": 0.010882728097892804,
+      "grid_max": 0.17382880051787972
+    },
+    "409": {
+      "inputs": {
+        "district": "NY01",
+        "yes": "D",
+        "pvi": -4,
+        "inc": -2,
+        "adj": -3,
+        "other": 0.005,
+        "history_weight": 0.6,
+        "history_adjustment": -2,
+        "low": 0.03,
+        "high": 0.85,
+        "history": -10.423067544501341
+      },
+      "prior_D_mean": -3.4000000000000004,
+      "updated_D_mean": -3.4000000000000004,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": -4.023067544501341,
+        "sd": 8,
+        "p_D": 0.30752311124481213,
+        "weight": 0.6
+      },
+      "p_D_before_other_affiliation": 0.310827653220415,
+      "unrounded_p_yes": 0.30927351495431293,
+      "primary_p_yes": 0.31,
+      "scenario_range": [
+        0.03,
+        0.85
+      ],
+      "grid_min": 0.12400338526502928,
+      "grid_max": 0.5702628983864771
+    },
+    "415": {
+      "inputs": {
+        "district": "TX25",
+        "yes": "R",
+        "pvi": -11,
+        "inc": -2,
+        "adj": 0,
+        "other": 0.005,
+        "low": 0.45,
+        "high": 0.9995
+      },
+      "prior_D_mean": -11.600000000000001,
+      "updated_D_mean": -11.600000000000001,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.051046649361176505,
+      "unrounded_p_yes": 0.9442085838856293,
+      "primary_p_yes": 0.94,
+      "scenario_range": [
+        0.45,
+        0.9995
+      ],
+      "grid_min": 0.6762639612941702,
+      "grid_max": 0.9836511640582231
+    },
+    "421": {
+      "inputs": {
+        "district": "MI04",
+        "yes": "R",
+        "pvi": -3,
+        "inc": -2,
+        "adj": 0,
+        "other": 0.005,
+        "history_weight": 0.6,
+        "history_adjustment": -1,
+        "low": 0.1,
+        "high": 0.97,
+        "history": -11.70643727234939
+      },
+      "prior_D_mean": 1.1999999999999993,
+      "updated_D_mean": 1.1999999999999993,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": -4.30643727234939,
+        "sd": 8,
+        "p_D": 0.29518336768618764,
+        "weight": 0.6
+      },
+      "p_D_before_other_affiliation": 0.40739439942992417,
+      "unrounded_p_yes": 0.5896425725672254,
+      "primary_p_yes": 0.59,
+      "scenario_range": [
+        0.1,
+        0.97
+      ],
+      "grid_min": 0.3544067348631818,
+      "grid_max": 0.8030037208265217
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "review_index": 271,
+  "condition_id": "0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f",
+  "criteria_sha256": "1ab09b2bb4670e5221aa26446d352a4a5537b2e00caecc17ae06bcd42c078c71",
+  "status": "valued",
+  "literal_analysis": "Full exact party-of-winner-at-all-House-calls rule, independent latest caucus intent and credible/FEC fallback read; exact frozen identity retained.",
+  "evidence": [
+    {
+      "url": "https://www.cookpolitical.com/cook-pvi",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "R+5 current partisan-share index, not win odds; source rating dates preserved."
+    },
+    {
+      "url": "https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.html",
+      "observed_utc": "2026-10-17T21:09:27.461339+00:00",
+      "finding": "Current2026boundary continuity/change separately checked; no oldFL/TXmargin reused."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T21:09:27.461361+00:00",
+      "finding": "Official2024counts independently read where unchanged boundaries; not a current vote forecast."
+    },
+    {
+      "url": "https://montanafreepress.org/2026/09/14/flint-forstag-in-dead-heat-for-house-seat/",
+      "observed_utc": "2026-10-17T21:09:27.461369+00:00",
+      "finding": "Original375RVMTFP/Rutgers41D42R5Lpoll, fieldAug27–Sep7; no current LVseries."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.47,
+    "low": 0.12,
+    "high": 0.85,
+    "method": "Primary shared-national/PVI and official-candidate-history mixture, with actual poll likelihood only forMT01",
+    "reasoning": "Exact coefficients, model arithmetic and sensitivity grid in house_next_model.py/results; old maps, unknown ballots and unverified aggregatorpolls not inserted as facts.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0241_0360.json",
+    "quote_observed_utc": "2026-10-17T20:37:23.188+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.47,
+        "best_bid": 0.33,
+        "best_ask": 0.34,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.172,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.34,
+            "fee_usd": 0.08975999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.4897600000000004,
+        "fee_usd": 0.08976,
+        "break_even_probability_before_carry": 0.34897600000000006,
+        "break_even_probability_with_idealized_carry": 0.35056218349517926,
+        "central_expected_profit_usd": 1.2102399999999989,
+        "default_10pp_stressed_profit_usd": 0.21023999999999976,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.37,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.2115600000000004
+      },
+      "No": {
+        "probability": 0.53,
+        "best_bid": 0.66,
+        "best_ask": 0.67,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.172,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.67,
+            "fee_usd": 0.08843999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.7884400000000005,
+        "fee_usd": 0.08844,
+        "break_even_probability_before_carry": 0.678844,
+        "break_even_probability_with_idealized_carry": 0.681929516335225,
+        "central_expected_profit_usd": -1.4884399999999998,
+        "default_10pp_stressed_profit_usd": -2.4884399999999998,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.43000000000000005,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.5102400000000005
+      }
+    }
+  },
+  "verdict": "Potential small passive YES source revalidation",
+  "reopen_condition": "Current original poll/ballot/candidate/caucus or map evidence, an election call, or a materially different supported book requires revalidation.",
+  "current_description_sha256": "fcebc820f56db10d1420a4a55a61eca8f6e8e5d10f46d1a65027f7d94e6fed17",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "94033987553817825990709512567031751048276730850154145976615728913102874968691",
+    "89249778688472138415584633654306240159785502169216857650010692296295315613845"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0054",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0066",
+      "receipt_path": "logs/deep_review_20261017/quotes_0241_0360/req_0066.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0241_0360/req_0066.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/house_next_batch_sources.json",
+      "data/deep_review_20261017/house_next_primary_source_addendum.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/house_next_model.py",
+    "model_calibrated": false,
+    "candidate_followup_required_before_money": true,
+    "shared_cluster": "us-politics"
+  },
+  "evaluated_utc": "2026-10-17T21:09:27.734148+00:00",
+  "question": "Will the Democratic Party win the MT-01 House seat?",
+  "market_id": "942843",
+  "valuation_author": "primary_operator",
+  "original_index": 271,
+  "report_sha256": "3edffb6f24f4c6c580bf7e928386bc44443027db75b04d880b5d486854af26d1"
+}

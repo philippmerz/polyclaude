@@ -1,0 +1,172 @@
+{
+  "review_index": 55,
+  "condition_id": "0x3738ad9665480991affe3ba286cd035516e17d1f8b7703e05088ec19c70c21a4",
+  "criteria_sha256": "9f80a705fbb60efe9ea18e1edee1b2fe66f566a43b006fe0e52bd2294c1763c8",
+  "status": "valued",
+  "literal_analysis": "Fullweapon/actor/territoryexclusionsand3dayattributionrule read. Noexpresscreationstart; matchingvenueprecedents examined andresidualretained. LiteralOct31IRSTcutoff20:29UTC.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4641065",
+      "observed_utc": "2026-10-17T21:10:28.105272+00:00",
+      "finding": "Exact current contract creation and description; start not express; literalIRST deadline differsmetadata."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/3700192",
+      "observed_utc": "2026-10-17T21:10:28.105290+00:00",
+      "finding": "Matching full description, currentGammaresolvedYESpredecessor; conflicting pluralstatus retained, nochainfinality."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/3700193",
+      "observed_utc": "2026-10-17T21:10:28.105293+00:00",
+      "finding": "SecondmatchingYESpredecessor after knownprecreationlandstrikes; supportsforwardwindowbutnotbindingprecedent."
+    },
+    {
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4559495/us-strikes-irgc-targets-after-attempted-iranian-attacks/",
+      "observed_utc": "2026-10-17T21:10:28.105295+00:00",
+      "finding": "OfficialJuly29strikesinIranprecedeAugustsiblingsandcurrentmarket."
+    },
+    {
+      "url": "https://t.me/s/U_S_CENTCOM",
+      "observed_utc": "2026-10-17T21:10:28.105297+00:00",
+      "finding": "PublicofficialOctober6dhowstatement; vessel/crewfacts, notprecisecoordinatesorlandimpact."
+    },
+    {
+      "url": "https://www.iranwatch.org/library/governments/united-states/executive-branch/department-defense/us-forces-disable-cargo-vessel-attempting-violate-blockade",
+      "observed_utc": "2026-10-17T21:10:28.105299+00:00",
+      "finding": "OfficialOctober10statementreproduction, aircraftmunitionhitsternintheGulfofOman."
+    },
+    {
+      "url": "https://apnews.com/article/trump-iran-war-midterms-attack-422b1799a1a06466279ac265f560e014",
+      "observed_utc": "2026-10-17T21:10:28.105301+00:00",
+      "finding": "October8futurepolicypledge, notindependentoperationhistory."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.79,
+    "low": 0.2,
+    "high": 0.98,
+    "method": "Primary interpretation × historical survival × future conditional regime survival",
+    "reasoning": "Adverse interpretation2%; missingpostcreationqualifyingaction10%; futurequalifyingaction=.75*.03+.20*.20+.05*.75=.10; survival=.7938 rounded.79. Notcalibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:20.223+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 18,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.79,
+        "best_bid": 0.8,
+        "best_ask": 0.81,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 5.737,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.81,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.100000000000001,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.8100000000000002,
+        "break_even_probability_with_idealized_carry": 0.8112030672333693,
+        "central_expected_profit_usd": -0.20000000000000107,
+        "default_10pp_stressed_profit_usd": -1.200000000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.6900000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.0
+      },
+      "No": {
+        "probability": 0.20999999999999996,
+        "best_bid": 0.19,
+        "best_ask": 0.2,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 5.737,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.2,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.0,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.2,
+        "break_even_probability_with_idealized_carry": 0.20029705363786893,
+        "central_expected_profit_usd": 0.09999999999999964,
+        "default_10pp_stressed_profit_usd": -0.9000000000000004,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.10999999999999996,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.9
+      }
+    }
+  },
+  "verdict": "Creation-window ambiguity and operational history assessed; neither side clears ordinary uncertainty reserve",
+  "reopen_condition": "Qualifyingdatedimpact/currenthistoricaloperationrecord, bindingwindowclarification, policyshiftorchangedcost requiresrevalidation.",
+  "current_description_sha256": "6241ff11d320d9cc6bff3df70c1d1690e213559f8d9952a23ca3f016c2dc6932",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "67102598924726349989742049657609063097299442010642912942032681022413402597017",
+    "114475889232765203212032217024645308497828327658421967586050553616813506019119"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0077",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0077.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0077.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0083",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/iran_ceasefire_historical_followup.json",
+      "data/deep_review_20261017/iran_ceasefire_primary_corrections.json",
+      "data/deep_review_20261017/us_iran_ceasefire_precedents.json"
+    ],
+    "literal_cutoff_utc": "2026-10-31T20:29:00Z",
+    "model_calibrated": false,
+    "primary_inputs": {
+      "adverse_start_interpretation": 0.02,
+      "unobserved_historical_event": 0.1,
+      "future_qualifying_action": 0.1,
+      "unrounded_survival": 0.7938
+    }
+  },
+  "evaluated_utc": "2026-10-17T21:10:28.414107+00:00",
+  "question": "US x Iran ceasefire continues through October 31?",
+  "market_id": "4641065",
+  "valuation_author": "primary_operator",
+  "original_index": 55,
+  "report_sha256": "40eac31af2c77aa4585d005fc6ffa0b0bae5f8872a2ee905dd43c750f96047a9"
+}

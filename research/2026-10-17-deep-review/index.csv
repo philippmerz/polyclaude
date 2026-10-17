@@ -53,7 +53,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 52,0x86bfb53af7250a40928975c551d12c185b762fa4ce0b40c6a64a50c946d72587,562794,Will the Republican Party control the Senate after the 2026 Midterm elections?,pending,,,,
 53,0xe7bac65e95d998e489309619a6093d82082a33f766acd5eb55fd3179e43d2145,3251604,Bank of Japan increases interest rates by 50+ bps after the October 2026 meeting?,valued,2026-10-17T19:01:17.522947+00:00,0.015,"YES positive central tail arithmetic; unsupported floor and minimum size, no entry",evaluations/0053.md
 54,0x98c266979031b3ee6c87ea5b8b671be0e242e13f9be4c123ff2c21ef46ff62c3,4397022,Will Gen.G win Worlds 2026?,pending,,,,
-55,0x3738ad9665480991affe3ba286cd035516e17d1f8b7703e05088ec19c70c21a4,4641065,US x Iran ceasefire continues through October 31?,pending,,,,
+55,0x3738ad9665480991affe3ba286cd035516e17d1f8b7703e05088ec19c70c21a4,4641065,US x Iran ceasefire continues through October 31?,valued,2026-10-17T21:10:28.414107+00:00,0.79,Creation-window ambiguity and operational history assessed; neither side clears ordinary uncertainty reserve,evaluations/0055.md
 56,0xe168981c04a53559e115f5d4c60c1f6b42df19415883583446943c2fdbe1318d,2965253,Will Chuck Norris be the #1 searched passing on Google this year?,pending,,,,
 57,0x0fcfcfc35d71424c0693c717d2e3bc9b8992910835d124d80cd2f01498f1d3dc,1811265,Pete Hegseth out as Secretary of Defense by December 31?,valued,2026-10-17T19:43:05.671111+00:00,0.15,NO central advantage fails10ppstress/carry; no entry,evaluations/0057.md
 58,0x2607cc8883192057333e739216b4e63a79bf13230c1e6b3ef2f1ad121f2d2388,3211308,Will Risk It All – Bruno Mars be the #2 song in the US for 2026?,pending,,,,
@@ -82,7 +82,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 81,0x7fd71c48a98bb515664cadb1f62cf1f27b770fe9cc1216571e183b982a48e42a,943542,Will the Democratic Party win the NC-11 House seat?,valued,2026-10-17T19:38:13.764265+00:00,0.7,SmallmakerNO follow-up candidate; balancedreview andfullfreshgates outstanding,evaluations/0081.md
 82,0xd2986625b0fb44c14b67cd32257ca63d386a70443697eb9bb3e4f71e11e79cc2,5777948,Will Vinícius Júnior attend the 2026 Ballon d'Or ceremony?,pending,,,,
 83,0xf093b6791f0e55f8c6a73c70c4f25ab1aae8b820c2079ba2b3714177866afdf9,5349259,Florida Atlantic vs. Army,excluded_factual,2026-10-17T20:37:09.113557+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0083.md
-84,0x467ef775ebe832ade5a37b54bfa571a2d2a4eae879cf8e91afebc3b3417d63b2,5730331,NVIDIA (NVDA) Q3 adjusted gross margin 73% to 75%?,pending,,,,
+84,0x467ef775ebe832ade5a37b54bfa571a2d2a4eae879cf8e91afebc3b3417d63b2,5730331,NVIDIA (NVDA) Q3 adjusted gross margin 73% to 75%?,valued,2026-10-17T21:15:22.460263+00:00,0.73,Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve,evaluations/0084.md
 85,0xab672afc72b856677255efc0f7ddefd8308269b9b4633a9ff8f3a177e4f21bcc,5720862,Will the highest temperature in Beijing be 15°C on October 17?,excluded_factual,2026-10-17T18:44:03.225519+00:00,,Factual exclusion: exact venue market closed to new orders; not an investment rejection.,evaluations/0085.md
 86,0xc591ad3f74fdc4482da73dc788d9fa63bc6b64cc11cb4191bc5ef4091e86b84a,3211309,Will APT. – ROSÉ & Bruno Mars be the #2 song in the US for 2026?,pending,,,,
 87,0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846,665374,Will the U.S. invade Iran before 2027?,valued,2026-10-17T19:43:06.223941+00:00,0.15,Neither offered side has positive central net economics; no entry,evaluations/0087.md
@@ -165,7 +165,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 164,0xaf874c80349379303164629c3962b1456f667ca1d44edf95e0474dd13483a4b3,629183,Will the Democrats win the Arizona governor race in 2026?,valued,2026-10-17T20:04:08.237475+00:00,0.82,"NO maker near .07 is a thin contrarian watch; current source, notional and risk checks required",evaluations/0164.md
 165,0xc733d85766ea9df81eb33ec52f7ba64610688401ebc823ae818f51d3cc7274de,942877,Will the Republican Party win the NE-02 House seat?,valued,2026-10-17T20:14:59.213197+00:00,0.08,Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs,evaluations/0165.md
 166,0x0e659adc20ce404c3cf897d7707186c62d1aa2a816dca6c2a7c9b6529a37ea9d,5177618,Romanian PM Bolojan out by October 31?,valued,2026-10-17T20:31:01.944403+00:00,0.92,Timed personal-exit event valued; older dismissal and party pledge do not make YES already certain,evaluations/0166.md
-167,0x275caaeeb2715e0b56a8833a110e2a2d48697780972c41cc795f8947d4d53aaa,5697537,Israel x Iran ceasefire continues through October 18?,pending,,,,
+167,0x275caaeeb2715e0b56a8833a110e2a2d48697780972c41cc795f8947d4d53aaa,5697537,Israel x Iran ceasefire continues through October 18?,valued,2026-10-17T21:04:04.432087+00:00,0.96,Short-window survival valued; NO central difference fails ordinary uncertainty reserve,evaluations/0167.md
 168,0x1f403ffb53e114cbc81c5f07a0f3971886c67b67af7c260f0117d3f63ba54af4,676743,Will Tesla be the largest company in the world by market cap on December 31?,pending,,,,
 169,0x00e73abe9d05640d676d232d6f64682e66f74a6858865d2bca3fc5a6e9f9fa68,5568258,Will there be a Hormuz agreement and the Democrats win the Senate?,pending,,,,
 170,0x0d563661a86bd05de77a938b8088e76a45f7306a762b647c81f720110c9ec568,3211315,Will Swim – BTS be the #2 song in the US for 2026?,pending,,,,
@@ -229,7 +229,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 228,0x334931805ae11470f59f662e303a65f7c196e2f934749b3fcf0540c959b27b5a,4178758,Will the 5-year Treasury yield dip below 4.50% before 2027?,pending,,,,
 229,0x4e96bc6fd2d52bc367e5e9fcce4ba2db29c6e6329d7a5bd612a6d5d5ebb56c20,5659994,Will Aleksei Sarana finish in the Top 8 of Titled Tuesday on October 20?,pending,,,,
 230,0x0445994a78397799480bd9692696adc821f28807cecf195e2cf001d0016bb96d,5267257,Bologna FC 1909 vs. FC Internazionale Milano: O/U 2.5,excluded_factual,2026-10-17T20:37:13.641368+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0230.md
-231,0xd33abae7d50f59db4cd3ce3826e9a20e663c73d174335fad4059f75a2b18bc92,5730329,NVIDIA (NVDA) Q3 adjusted gross margin <71%?,pending,,,,
+231,0xd33abae7d50f59db4cd3ce3826e9a20e663c73d174335fad4059f75a2b18bc92,5730329,NVIDIA (NVDA) Q3 adjusted gross margin <71%?,valued,2026-10-17T21:15:21.329877+00:00,0.06,Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve,evaluations/0231.md
 232,0xc2ea0e9bbe2da497f533cb1fecf389410c2095b1153b602fb81a7662f6ba7830,4383153,"Will an AI lab announce another Millennium Prize solution by December 31, 2026?",valued,2026-10-17T20:26:44.434101+00:00,0.16,Announcement event deeply valued; NO central difference lacks default reserve and December entry policy remains,evaluations/0232.md
 233,0x05f9ff2c698b28ab1ced03a48868393b284064b9ce39497381a7bab9c38de3c6,3211318,Will hate that i made you love me – Ariana Grande be the #2 song in the US for 2026?,pending,,,,
 234,0x76cface9f6df604ff32447bce58656b7a72b6659324d089c73a13a99f06c8aae,629464,Will the Democrats win the Michigan governor race in 2026?,valued,2026-10-17T20:04:10.537960+00:00,0.96,"Both sides valued; no entry after fees, default uncertainty reserve and carry",evaluations/0234.md
@@ -257,31 +257,31 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 256,0xf7569590d5ed9df4a0d4ae209b9e3f4d508c322a2c4f44d7ef56f009b3159a86,5598509,Will Z.ai have the second highest OpenRouter market share the week of October 12?,pending,,,,
 257,0x3b0107a80edd066fe987784d7ab5963c177888433efbec10689951c17320606c,1144471,Will Satoshi move any Bitcoin in 2026?,pending,,,,
 258,0xaceb2a1c91e5f68cda1ee3461af58795ed2fcad71d68d64f0c3458a7576a897f,5794258,"Will Elon Musk post 80-99 tweets from October 20 to October 27, 2026?",pending,,,,
-259,0x40b2475e802d01b929cddd1124b8199d04989f1678bcf41d53fa75d7d917333d,942356,Will the Democratic Party win the CT-05 House seat?,pending,,,,
+259,0x40b2475e802d01b929cddd1124b8199d04989f1678bcf41d53fa75d7d917333d,942356,Will the Democratic Party win the CT-05 House seat?,valued,2026-10-17T21:09:26.556950+00:00,0.96,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0259.md
 260,0x0f5fcde4109ac8d2672d822d50b8768696833baaf8959884c6016e2b0ad3e4a5,5166969,Will Alphabet be the third-largest company in the world by market cap on October 31?,pending,,,,
 261,0x9ffaaf5cd6b28355faafc7636c900ade4e9d67d2c64c511c197e82bd1a3a1ea9,5354642,Spread: Notre Dame (-10.5),pending,,,,
 262,0x62feb3ad1e330b8ea5499e2c37e9b7d29d737fee70d4473e2598326e0c60cabe,2977655,Will Timothée Chalamet be the #1 searched actor on Google this year?,pending,,,,
 263,0x79c409aa93ace90413eff65ef6fd22f68635ca899b1a7f75c868303d02005bc2,5767043,Will the highest temperature in Wuhan be 21°C on October 18?,pending,,,,
 264,0xe7743a393cd98bb7a7cd011361b74a0fd12bac3412643873f4661fcc431ed165,665243,NATO article 5 before 2027?,pending,,,,
-265,0x6bc9531fff87196aa1ced85050c8532b1bf75ac18e14a2949180b7d19171256a,942886,Will the Democratic Party win the NV-01 House seat?,pending,,,,
+265,0x6bc9531fff87196aa1ced85050c8532b1bf75ac18e14a2949180b7d19171256a,942886,Will the Democratic Party win the NV-01 House seat?,valued,2026-10-17T21:09:27.138350+00:00,0.96,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0265.md
 266,0xf034f3da3402772dc6ef9a165da8fb7fa193dab98bed8de2b23c91f348d0faad,3347919,Will the Bank of Brazil decrease the target for the Selic rate by 25 bps at the November meeting?,pending,,,,
 267,0x673288efba5fa645e840440e3970412ec23247ca1a98b9af694f079b068a7d0e,5349154,Charleston Southern vs. Clemson,excluded_factual,2026-10-17T20:37:14.368196+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0267.md
 268,0xb4401733eed8e257ceba7f6133de1793bb7d409d1e44864a789c31824460a374,5180417,"Will Apple be the largest company in the world by market cap on October 31, 2026?",pending,,,,
 269,0x15368d92eb3a117280f0d064861a4603c8b61cd71d79c30bfeaf411e575de49e,5720778,Will the highest temperature in Shanghai be 28°C on October 17?,excluded_factual,2026-10-17T20:37:14.670580+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0269.md
 270,0x9b81ac3d38c13736b221188a29ecbb2e7a814a1ab49a0abb0d9f24941f461994,5567026,Will oil be below $80 on November 2 and the Republicans win the Senate?,pending,,,,
-271,0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f,942843,Will the Democratic Party win the MT-01 House seat?,pending,,,,
+271,0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f,942843,Will the Democratic Party win the MT-01 House seat?,valued,2026-10-17T21:09:27.734148+00:00,0.47,Potential small passive YES source revalidation,evaluations/0271.md
 272,0xf97e2e2b845a3e5ce0646ce7563cca294f58b1c23affc38010386c08627075ac,3081965,Will the ECB announce no change at the October 2026 meeting?,pending,,,,
 273,0xcb5f5c852a2552a421a113f476934a1e7d5bf8674a05a20565d7813eefe770f0,5263847,Will 1. FSV Mainz 05 win on 2026-10-17?,excluded_factual,2026-10-17T20:37:14.974985+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0273.md
 274,0xccc84033ab481e4c1ed49fce3889e54a9f6c127b819a3bc17bbf2359d1e4c2bd,2431414,Will OpenAI have the best AI model at the end of December 2026?,pending,,,,
 275,0xc471650d86824b9990dbad861bdb416588a914bd88fffcee65ed8e5b843eaa93,5394325,"Will ""Street Fighter"" Opening Weekend Box Office be between 25m and 30m?",pending,,,,
 276,0xd1796c09d0d6f876f8580086ae9808ec991784e3a74b25a1830a25de71a78c96,567688,Netanyahu out by end of 2026?,pending,,,,
-277,0x0eda21c8b5651dba9fd69aad361e9d01481965e94241ac438486a16dab181344,942084,Will the Democratic Party win the AZ-01 House seat?,pending,,,,
+277,0x0eda21c8b5651dba9fd69aad361e9d01481965e94241ac438486a16dab181344,942084,Will the Democratic Party win the AZ-01 House seat?,valued,2026-10-17T21:09:28.319980+00:00,0.8,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0277.md
 278,0x440cc1b3d8e8d396db4caae7ba165fddd3a000bf9ce454694d59d78561a31295,5713706,"Will ""Love Is Blind: Boston"" be the #2 US Netflix show this week?",pending,,,,
 279,0xe572b77607dec5a56e240983b7384a4945b34e4594f628b9f928ed7be7c79475,5267438,Spread: Paris Saint-Germain FC (-1.5),excluded_factual,2026-10-17T20:37:15.288379+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0279.md
 280,0x55a5a4b50b7947482e95af8f638fa0b8d9a46740c5cd04c6799443e83565176a,676741,Will Apple be the largest company in the world by market cap on December 31?,pending,,,,
 281,0x79349ad97dd549e68b2b8f7ecacc60c9e3c118cd13311776adb37eacfe490687,5720940,Will the highest temperature in Amsterdam be 14°C on October 17?,pending,,,,
 282,0x968a1a79e001d49fa3ee1429e3b95eb01797587740f86d4e6becf3ab1b275bfb,631057,Will the Democrats win the Ohio Senate race in 2026?,pending,,,,
-283,0xe2bd695096385d8878a0e7b5e144b94c7a2320a027b0dfd551d4d5a7fc8bc267,942894,Will the Democratic Party win the NV-03 House seat?,pending,,,,
+283,0xe2bd695096385d8878a0e7b5e144b94c7a2320a027b0dfd551d4d5a7fc8bc267,942894,Will the Democratic Party win the NV-03 House seat?,valued,2026-10-17T21:09:28.887144+00:00,0.92,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0283.md
 284,0x54b726cd75da95b89ff361db35cdb4421b054fa27a730c544a1e63877ae2a363,5727075,"Will it rain in Seattle, WA on October 16?",pending,,,,
 285,0x283e63ad0d90d293be88ccea89bca34fe26c5a9563de7fe2e2e26d6481acbc0b,4761407,Senators vs. Flyers,pending,,,,
 286,0x579100804f34edc384d933b88ff8f403aa79bafd5018bb26f0a89285e1ddff29,676790,Mistral AI IPO before 2027?,pending,,,,
@@ -323,7 +323,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 322,0x358d73bc97d5b8b3012989f4a3d4ca8819ec7b45e0ccde5cdfbf1923ebf47f75,3072317,Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 65% or higher?,pending,,,,
 323,0x6d5e4e34fe82a146f9d7f3a930836b29d7f81013ddcffae662d1b18827410836,5720872,Will the highest temperature in Wuhan be 29°C on October 17?,excluded_factual,2026-10-17T20:37:16.916487+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0323.md
 324,0x0d9c9c308211e9008331e33be346c44c50da2d879ff6a739676ab553ea5b5297,5329577,Will Lula win the most votes in the second round of the Brazil presidential election from Amapá?,pending,,,,
-325,0x86b398869c0bbdd80f5636abf20ebd6a3f86cf2656a41f186de652a5826115b3,942117,Will the Democratic Party win the AZ-02 House seat?,pending,,,,
+325,0x86b398869c0bbdd80f5636abf20ebd6a3f86cf2656a41f186de652a5826115b3,942117,Will the Democratic Party win the AZ-02 House seat?,valued,2026-10-17T21:09:29.462538+00:00,0.37,Potential small passive YES source revalidation,evaluations/0325.md
 326,0xaea3d3c0be56a78de2a00d5741c0f939760e8ed482346370b3a80ffd2482b133,5648398,Amphenol (APH) Q3 organic sales growth 24% to 28%?,pending,,,,
 327,0x5b43e286189b0e0fccda58fe81fc5cc251f9386280e17115fd915e870b34db61,5276464,Wrexham AFC vs. Preston North End FC: O/U 2.5,excluded_factual,2026-10-17T20:37:17.301876+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0327.md
 328,0xb013c7a4b9470f2a153f55469c3bc7f39bed88e6a934b1849a322f1611058861,3251369,Will Nancy Guthrie be the #1 searched person on Google in the US this year?,pending,,,,
@@ -332,10 +332,10 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 331,0xad8766930faedb3abbe8e047e3290cc8e1981dc332ffadb6be80e5e0dee5faf8,5676703,Will the OpenAI spy be accused of working for Saudi Arabia by December 31?,pending,,,,
 332,0x11d01d09738f8831494c0f6a3b9712ccbc717ef01458208a8dab13779c5e0594,5155049,Will a 8.5+ earthquake occur worldwide by October 31?,pending,,,,
 333,0x97a1c49554d6fcf7f80a288d3d16e14ec2ff80cda0e777002abc2c56e6972304,5281164,Amed Sportif vs. Konyaspor: O/U 2.5,excluded_factual,2026-10-17T20:37:18.026342+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0333.md
-334,0xadf9ebf983672208c0a8fd957657db30784ade506a9b400b952860a3b5214682,5730330,NVIDIA (NVDA) Q3 adjusted gross margin 71% to 73%?,pending,,,,
+334,0xadf9ebf983672208c0a8fd957657db30784ade506a9b400b952860a3b5214682,5730330,NVIDIA (NVDA) Q3 adjusted gross margin 71% to 73%?,valued,2026-10-17T21:15:21.878862+00:00,0.07,Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve,evaluations/0334.md
 335,0x5302884c4e3fe5f702dd4db5b210ec22ee8559bf4afe1e2c4ce2857fdd208564,5720851,Will the highest temperature in Chongqing be 23°C on October 17?,excluded_factual,2026-10-17T20:37:18.342158+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0335.md
 336,0xaa5cdb6830cbfa2ca711b7cf93bd42cf4f8e062d44ea188c0b8ec1fb2924c083,1472548,Will Reza Pahlavi lead Iran in 2026?,pending,,,,
-337,0xe25b0be3d538078068d0bf2fd311bfbda4b07be31bee8ac4cdf1a0999d2bf328,1283137,Will the Democratic Party win the FL-26 House seat?,pending,,,,
+337,0xe25b0be3d538078068d0bf2fd311bfbda4b07be31bee8ac4cdf1a0999d2bf328,1283137,Will the Democratic Party win the FL-26 House seat?,valued,2026-10-17T21:09:30.027662+00:00,0.18,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0337.md
 338,0x7b65580e98a1d9276c1b6fe0856c26a888ca6ad16fcce602bc0acc3bbc8057b5,5776325,Will Meta (META) beat quarterly earnings?,pending,,,,
 339,0x53220908ec851cd294b9f02d78f7a70b094590cb89955b4877e72d5e14360c0c,4761442,Penguins vs. Golden Knights,pending,,,,
 340,0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6,4662688,Will Kodak Black be featured on GTA VI: The Album?,pending,,,,
@@ -371,7 +371,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 370,0x67adc22bcf8c1c7ff1a96cfa71d4221f5cc2ae6dc746989741d58bc8f3aa46f8,2431418,Will DeepSeek have the best AI model at the end of December 2026?,pending,,,,
 371,0xdc7c8ada1b8d28300cdc783578e8754d2570a3da067965be15bba638cb94f83a,2299953,Will Anthropic's valuation hit (HIGH) $2.5T by December 31?,pending,,,,
 372,0x1295040186326703b63b9c7d719f8c5bb88ee6fa9672e3924f90ef74ee7b0459,1812607,Will Olivia Chow win the 2026 Toronto mayoral election?,pending,,,,
-373,0xa9cd0c9ef05fd4d9654ee8d960a84c4d6b68761137484289c89400742b1c98d5,1284959,Will the Republican Party win the TX-23 House seat?,pending,,,,
+373,0xa9cd0c9ef05fd4d9654ee8d960a84c4d6b68761137484289c89400742b1c98d5,1284959,Will the Republican Party win the TX-23 House seat?,valued,2026-10-17T21:09:30.612127+00:00,0.67,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0373.md
 374,0x92dd1373e006f5b791263179e6f68382dffa56eb929501546f9514bc138491d1,2870624,"Will the Ornn B200 Index be at least $7.00 on December 31, 2026?",pending,,,,
 375,0x1f655f2392441feb10198f47601cc73c5feb4989bc5188069c6874a8c25534d2,5790755,"European Open, Qualification: Kimmer Coppejans vs Andrea Guerrieri",excluded_factual,2026-10-17T20:37:19.599104+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0375.md
 376,0x684e5b72d4e407695397a79ed75ef37273c2655ca2548791a4153233d3744696,676739,Will NVIDIA be the largest company in the world by market cap on December 31?,pending,,,,
@@ -383,7 +383,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 382,0xb6ae15a0ea806a324647b4155680e176c0340e0f4db48a5f139fb8675830ce2c,5326399,Will OpenRouter process less than 575T tokens from Sep 28 to Oct 25?,pending,,,,
 383,0xf691956d44187f9296718a26b10c03d3b85e3369e2098ab2188f765ef4dc97b7,1397270,"Will Russia capture Lyman by December 31, 2026?",pending,,,,
 384,0x84064fc8eaa80d257f8673867b0a3c84c1935aeb9fda5a74cecd14b3a2c8b94c,5609932,"Ilhan Omar arrested by December 31, 2026?",pending,,,,
-385,0x3a1ed604e5d128ea2deb23db1e6f2f1cd9cff31c9e8836ff1b2c840dcd0724ac,1285088,Will the Democratic Party win the VA-06 House seat?,pending,,,,
+385,0x3a1ed604e5d128ea2deb23db1e6f2f1cd9cff31c9e8836ff1b2c840dcd0724ac,1285088,Will the Democratic Party win the VA-06 House seat?,valued,2026-10-17T21:09:31.176531+00:00,0.03,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0385.md
 386,0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1,802374,"Pedro Sánchez out as PM of Spain by December 31, 2026?",pending,,,,
 387,0xf68035918f00868bded5f5c0bf8f68fb1f8d2956f592b1a720a813f8d568286b,5349745,Georgia State vs. James Madison,pending,,,,
 388,0x60871378e220231ae5382b0d42ba0f17b0f61b73f48aec88aebaa954ef98b34e,3072321,Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 60% or higher?,pending,,,,
@@ -407,22 +407,22 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 406,0xa3d91e6932c60ce2d59c0f269ccc03430faa7e3080634be508e0d6a3dcccf114,4425461,Will Alysa Liu rank in Google’s Top 5 Most Searched Athletes of 2026?,pending,,,,
 407,0xaedf6f3faabce2e95b0286856aee7cdad5eb075d00e4f9d8e68380169d108602,5720834,Will the highest temperature in Warsaw be 14°C on October 17?,pending,,,,
 408,0x95273f17dbd9cf6bb34fe0de5abdb0b0424a4d24e504a7c275ff99b48f10977d,5786298,Will commitments to the 1W public sale exceed $60M?,pending,,,,
-409,0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a,1284219,Will the Democratic Party win the NY-01 House seat?,pending,,,,
+409,0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a,1284219,Will the Democratic Party win the NY-01 House seat?,valued,2026-10-17T21:09:31.749294+00:00,0.31,Potential small passive YES source revalidation,evaluations/0409.md
 410,0xa287a0c300ca61611fd21e36ff8806090de9e2f0e6bcd2c61b32c73742e183a1,5730893,Will CrowdStrike Q3 net new ARR be above $440M?,pending,,,,
 411,0x3c810d6a2579cf23d4fba4935e930db1892f86f8027c236b3a71844c2ffed093,5255063,"UFC Fight Night: Mike Malott vs. Joaquin Buckley (Welterweight, Main Card)",pending,,,,
 412,0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41,3072315,Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 55% or higher?,pending,,,,
 413,0x5d30bb7a764342f115cbaefb9c650ddc9a8043d38a8d6fa0e1a99bdd2223d3c5,5720842,Will the highest temperature in Taipei be 34°C on October 17?,excluded_factual,2026-10-17T20:37:21.611217+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0413.md
 414,0x50b78cd83de62d75d504d7a184ba1171436628068b3c3d4dd0384e65d4a40d1b,629545,Will the Republicans win the New York governor race in 2026?,pending,,,,
-415,0x403e023ffba0c87b85b4c460de0b6bcb078c85a9691a7d47a884264ee2dfaceb,1284975,Will the Republican Party win the TX-25 House seat?,pending,,,,
+415,0x403e023ffba0c87b85b4c460de0b6bcb078c85a9691a7d47a884264ee2dfaceb,1284975,Will the Republican Party win the TX-25 House seat?,valued,2026-10-17T21:09:32.326887+00:00,0.94,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0415.md
 416,0xceb97ea935b3a028af06390154cb9acd876d35d28101510e0b576694400670e8,716907,Felix Protocol FDV above $800M one day after launch?,pending,,,,
 417,0x786a82f4f500e6dc23ed88b91351a4f0c9a9be135f932f0f284ce94dac273c8c,5351192,Spread: Presbyterian (-10.5),pending,,,,
 418,0x31877856abac118ebb9e8a64c5abac5c4455a56b7f2ac276c1dd3444929578df,3251341,Will Shohei Ohtani be the #1 searched person on Google in the US this year?,pending,,,,
 419,0x3da9388e2061fc87def9293ff10fb13fb6bdbbaa75b99875a4b7452f0e17099d,5720729,Will the highest temperature in Munich be 15°C or below on October 17?,pending,,,,
 420,0x4098b3710afb16557129a75f71aa49da2f04c34a0f613abbe14483ec2342525f,4881816,Will Atsumi Harasawa win the 2026 Yokohama mayoral election?,pending,,,,
-421,0x4fc8fa3232d953ba415ec7bfc2a494d8a01f7001b2e5c4e07fb4f4e4b931af32,942709,Will the Republican Party win the MI-04 House seat?,pending,,,,
+421,0x4fc8fa3232d953ba415ec7bfc2a494d8a01f7001b2e5c4e07fb4f4e4b931af32,942709,Will the Republican Party win the MI-04 House seat?,valued,2026-10-17T21:09:32.916966+00:00,0.59,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0421.md
 422,0x21ee027a604ded6a8a0ae8aa659568cb42d78e61157d9b91ca658b249fe44662,2872613,Will Clavicular wear a Yarmulke in 2026?,pending,,,,
 423,0x5f1575d9f5000d5b2d53f9d28b536d1dfcc31cebe6da39b4f346f2ff832725a6,5785853,Counter-Strike: ENCE vs Phantom - Map 2 Winner,excluded_factual,2026-10-17T20:37:21.915552+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0423.md
-424,0x9ef7cceac04313546753b5781d86981e2ea77e2872a66d28da88e8b4552fc88e,5730332,NVIDIA (NVDA) Q3 adjusted gross margin 75% to 77%?,pending,,,,
+424,0x9ef7cceac04313546753b5781d86981e2ea77e2872a66d28da88e8b4552fc88e,5730332,NVIDIA (NVDA) Q3 adjusted gross margin 75% to 77%?,valued,2026-10-17T21:15:22.989220+00:00,0.13,Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve,evaluations/0424.md
 425,0x5ee7ddbfc88ce9dfa2b5dfc8df258d85f26d93f1444c270f45c41563f942fb8f,5766884,Will the highest temperature in Wellington be 17°C on October 18?,pending,,,,
 426,0x431730cb44de808bcaf6109a98c4d93cf75677ada0b421d9a6a6bfa23baa67d2,5742126,"Will Elon Musk post 240+ tweets from October 17 to October 19, 2026?",pending,,,,
 427,0x3b4e5588525b157216ef93c7149e67f937f5dd386e2d88ab68949c27a6ff751e,1283472,Will the Republican Party win the IN-05 House seat?,pending,,,,
@@ -494,7 +494,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 493,0x4c8ceef9b9c0a27b6b4efa7c398ece4a5eeda76502f722de398c232abefe2ede,568116,"Will Trump be impeached by December 31, 2026?",pending,,,,
 494,0x01c0d4fd1fedde8810fa640947fd5523dd35889ec88146ac486384ba7581d3ce,5457295,United Airlines (UAL) Q3 consolidated passenger load factor 85%+?,pending,,,,
 495,0xeee07559885cad65cdef04c98036dc2944fd90e98ea471ea6dfca8797283d698,5343891,Wisconsin vs. UCLA,pending,,,,
-496,0xefc427531b0d2084dd5a685b373979f16475109209c3ba38cb4b4ba687267f1f,5730333,NVIDIA (NVDA) Q3 adjusted gross margin 77%+?,pending,,,,
+496,0xefc427531b0d2084dd5a685b373979f16475109209c3ba38cb4b4ba687267f1f,5730333,NVIDIA (NVDA) Q3 adjusted gross margin 77%+?,valued,2026-10-17T21:15:23.517743+00:00,0.01,Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve,evaluations/0496.md
 497,0x17bd8f0102d1f84e1fcf376e5026a2578c78d0454b5319e324e4ec4339444da2,5794314,"Will Ethereum reach $2,500 on October 17?",pending,,,,
 498,0xd59f25520a8c0ea44a9c9741a97c8c3d769e21f1479b9a14e1a9d475e91f522a,630884,Will the Republicans win the North Carolina Senate race in 2026?,pending,,,,
 499,0x29d75600ba2e46ce9dd262e813ee710a64c83c2e0c4edfa025019d00a46ae05b,5180509,Will the US confirm that aliens exist by October 31?,pending,,,,

@@ -1,0 +1,150 @@
+{
+  "review_index": 337,
+  "condition_id": "0xe25b0be3d538078068d0bf2fd311bfbda4b07be31bee8ac4cdf1a0999d2bf328",
+  "criteria_sha256": "7cbbc3ec68c7aa246810549278b55f7845b4ee78fc3e43c32c3001df0d214439",
+  "status": "valued",
+  "literal_analysis": "Full exact party-of-winner-at-all-House-calls rule, independent latest caucus intent and credible/FEC fallback read; exact frozen identity retained.",
+  "evidence": [
+    {
+      "url": "https://www.cookpolitical.com/cook-pvi",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "R+7 current partisan-share index, not win odds; source rating dates preserved."
+    },
+    {
+      "url": "https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.html",
+      "observed_utc": "2026-10-17T21:09:29.767456+00:00",
+      "finding": "Current2026boundary continuity/change separately checked; no oldFL/TXmargin reused."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T21:09:29.767478+00:00",
+      "finding": "Official2024counts independently read where unchanged boundaries; not a current vote forecast."
+    },
+    {
+      "url": "https://www.miamidade.gov/elections/library/2026-11-03-general-election-master-ballot.pdf",
+      "observed_utc": "2026-10-17T21:04:28.130530Z",
+      "finding": "{\"source\": \"Miami-Dade Supervisor of Elections official master ballot, Nov 3, 2026, page 1/page index 0; official master ballot announced Sep 22, 2026.\", \"facts\": [\"U.S. Representative, District 26: Mario Diaz-Balart REP; Nicole Locklin DEM; Deborah Ann Meidinger Hosey NPA.\"], \"url\": \"https://www.miamidade.gov/elections/library/2026-11-03-general-election-master-ballot.pdf\", \"publication_url\": \"https://www.miamidade.gov/global/release.page?Mduid_release=rel1790086753962743\"}"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.18,
+    "low": 0.001,
+    "high": 0.7,
+    "method": "Primary shared-national/PVI and official-candidate-history mixture, with actual poll likelihood only forMT01",
+    "reasoning": "Exact coefficients, model arithmetic and sensitivity grid in house_next_model.py/results; old maps, unknown ballots and unverified aggregatorpolls not inserted as facts.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0241_0360.json",
+    "quote_observed_utc": "2026-10-17T20:37:36.777+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.18,
+        "best_bid": 0.1,
+        "best_ask": 0.11,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 38.687,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.11,
+            "fee_usd": 0.03916
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.1391600000000002,
+        "fee_usd": 0.03916,
+        "break_even_probability_before_carry": 0.11391600000000002,
+        "break_even_probability_with_idealized_carry": 0.11443377680710665,
+        "central_expected_profit_usd": 0.6608399999999996,
+        "default_10pp_stressed_profit_usd": -0.33916000000000035,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.07999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.964
+      },
+      "No": {
+        "probability": 0.8200000000000001,
+        "best_bid": 0.89,
+        "best_ask": 0.9,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 38.687,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.9,
+            "fee_usd": 0.036
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.036,
+        "fee_usd": 0.036,
+        "break_even_probability_before_carry": 0.9036,
+        "break_even_probability_with_idealized_carry": 0.9077070887575189,
+        "central_expected_profit_usd": -0.8359999999999985,
+        "default_10pp_stressed_profit_usd": -1.8359999999999985,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.7200000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.86084
+      }
+    }
+  },
+  "verdict": "Both sides valued; captured asks do not clear ordinary uncertainty reserve",
+  "reopen_condition": "Current original poll/ballot/candidate/caucus or map evidence, an election call, or a materially different supported book requires revalidation.",
+  "current_description_sha256": "d90eae5ace0f5eb6f00a9a8fe4ef8db48170b04fdf02fd11cb1642e18d15392d",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "68490275142290425531406410186500399331308254159595156607764183181531392837189",
+    "60467526588072791564366516298359745362008674964873622410812426644752081639949"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0195",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0199",
+      "receipt_path": "logs/deep_review_20261017/quotes_0241_0360/req_0199.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0241_0360/req_0199.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/house_next_batch_sources.json",
+      "data/deep_review_20261017/house_next_primary_source_addendum.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/house_next_model.py",
+    "model_calibrated": false,
+    "candidate_followup_required_before_money": false,
+    "shared_cluster": "us-politics"
+  },
+  "evaluated_utc": "2026-10-17T21:09:30.027662+00:00",
+  "question": "Will the Democratic Party win the FL-26 House seat?",
+  "market_id": "1283137",
+  "valuation_author": "primary_operator",
+  "original_index": 337,
+  "report_sha256": "e14da0013fc517b34fc317df8fd4b45fc50e12347039b3b6309d419a2a95cb23"
+}
